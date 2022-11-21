@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.relList
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLAreaElement.relList`** read-only property reflects
@@ -24,7 +25,7 @@ changed.
 
 ## Value
 
-A string.
+A live {{domxref("DOMTokenList")}} of strings.
 
 ## Examples
 
@@ -32,13 +33,11 @@ A string.
 const areas = document.getElementsByTagName("area");
 const length = areas.length;
 
-for (let i = 0; i < length; i++) {
-  const list = areas[i].relList;
-  const listLength = list.length;
+for (const area of areas) {
   console.log("New area found.");
-  for (let j = 0; j < listLength; j++) {
-    console.log(list[j]);
-  }
+  area.relList.forEach((relValue) => {
+    console.log(relValue);
+  });
 }
 ```
 

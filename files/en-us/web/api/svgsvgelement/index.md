@@ -10,13 +10,14 @@ tags:
   - SVG DOM
 browser-compat: api.SVGSVGElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGSVGElement`** interface provides access to the properties of {{SVGElement("svg")}} elements, as well as methods to manipulate them. This interface contains also various miscellaneous commonly-used utility methods, such as matrix operations and the ability to control the time of redraw on visual rendering devices.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}} and also implements the ones from {{domxref("SVGFitToViewBox")}}._
 
@@ -32,17 +33,17 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("contentScriptType")}} attribute of the given {{SVGElement("svg")}} element.
 - {{domxref("SVGSVGElement.contentStyleType")}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("contentStyleType")}} attribute of the given {{SVGElement("svg")}} element.
-- {{domxref("SVGSVGElement.pixelUnitToMillimeterX")}} {{deprecated_inline}}
+- {{domxref("SVGSVGElement.pixelUnitToMillimeterX")}} {{Deprecated_Inline}}
   - : A float representing the size of the pixel unit (as defined by CSS2) along the x-axis of the viewport, which represents a unit somewhere in the range of 70dpi to 120dpi, and, on systems that support this, might actually match the characteristics of the target medium. On systems where it is impossible to know the size of a pixel, a suitable default pixel size is provided.
-- {{domxref("SVGSVGElement.pixelUnitToMillimeterY")}} {{deprecated_inline}}
+- {{domxref("SVGSVGElement.pixelUnitToMillimeterY")}} {{Deprecated_Inline}}
   - : A float representing the size of a pixel unit along the y-axis of the viewport.
-- {{domxref("SVGSVGElement.screenPixelToMillimeterX")}} {{deprecated_inline}}
+- {{domxref("SVGSVGElement.screenPixelToMillimeterX")}} {{Deprecated_Inline}}
   - : User interface (UI) events in DOM Level 2 indicate the screen positions at which the given UI event occurred. When the browser actually knows the physical size of a "screen unit", this float attribute will express that information; otherwise, user agents will provide a suitable default value (such as `.28mm`).
-- {{domxref("SVGSVGElement.screenPixelToMillimeterY")}} {{deprecated_inline}}
+- {{domxref("SVGSVGElement.screenPixelToMillimeterY")}} {{Deprecated_Inline}}
   - : Corresponding size of a screen pixel along the y-axis of the viewport.
-- {{domxref("SVGSVGElement.useCurrentView")}}
+- {{domxref("SVGSVGElement.useCurrentView")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The initial view (i.e., before magnification and panning) of the current innermost SVG document fragment can be either the "standard" view, i.e., based on attributes on the {{SVGElement("svg")}} element such as {{SVGAttr("viewBox")}}) or on a "custom" view (i.e., a hyperlink into a particular {{SVGElement("view")}} or other element). If the initial view is the "standard" view, then this attribute is `false`. If the initial view is a "custom" view, then this attribute is `true`.
-- {{domxref("SVGSVGElement.currentView")}}
+- {{domxref("SVGSVGElement.currentView")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
 
   - : An {{domxref("SVGViewSpec")}} defining the initial view (i.e., before magnification and panning) of the current innermost SVG document fragment. The meaning depends on the situation: If the initial view was a "standard" view, then:
 
@@ -69,11 +70,11 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGSVGElement.currentTranslate")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGPoint")}} representing the translation factor that takes into account user "magnification" corresponding to an outermost {{SVGElement("svg")}} element. The behavior is undefined for `<svg>` elements that are not at the outermost level.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent, {{domxref("SVGGraphicsElement")}} and also implements the ones from {{domxref("SVGFitToViewBox")}}._
 
-- {{domxref("SVGSVGElement.suspendRedraw()")}} {{deprecated_inline}}
+- {{domxref("SVGSVGElement.suspendRedraw()")}} {{Deprecated_Inline}}
 
   - : Takes a time-out value which indicates that redraw shall not occur until:
 
@@ -95,11 +96,11 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
 
     Note that multiple `suspendRedraw()` calls can be used at once, and that each such method call is treated independently of the other `suspendRedraw()` method calls.
 
-- {{domxref("SVGSVGElement.unsuspendRedraw()")}} {{deprecated_inline}}
+- {{domxref("SVGSVGElement.unsuspendRedraw()")}} {{Deprecated_Inline}}
   - : Cancels a specified `suspendRedraw()` by providing a unique suspend handle ID that was returned by a previous `suspendRedraw()` call.
-- {{domxref("SVGSVGElement.unsuspendRedrawAll()")}} {{deprecated_inline}}
+- {{domxref("SVGSVGElement.unsuspendRedrawAll()")}} {{Deprecated_Inline}}
   - : Cancels all currently active `suspendRedraw()` method calls. This method is most useful at the very end of a set of SVG DOM calls to ensure that all pending `suspendRedraw()` method calls have been cancelled.
-- {{domxref("SVGSVGElement.forceRedraw()")}} {{deprecated_inline}}
+- {{domxref("SVGSVGElement.forceRedraw()")}} {{Deprecated_Inline}}
   - : In rendering environments supporting interactivity, forces the user agent to immediately redraw all regions of the viewport that require updating.
 - {{domxref("SVGSVGElement.pauseAnimations()")}}
   - : Suspends (i.e., pauses) all currently running animations that are defined within the SVG document fragment corresponding to this {{SVGElement("svg")}} element, causing the animation clock corresponding to this document fragment to stand still until it is unpaused.

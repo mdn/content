@@ -12,6 +12,7 @@ tags:
   - TimeRanges
 browser-compat: api.TimeRanges.length
 ---
+
 {{APIRef("DOM")}}
 
 The **`TimeRanges.length`** read-only property returns the

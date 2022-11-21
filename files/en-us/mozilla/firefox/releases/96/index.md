@@ -2,11 +2,12 @@
 title: Firefox 96 for developers
 slug: Mozilla/Firefox/Releases/96
 tags:
-  - '96'
+  - "96"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 96 that affect developers. Firefox 96 was released on January 11, 2022.
@@ -57,7 +58,7 @@ No notable changes.
 
 #### Media, WebRTC, and Web Audio
 
-- A number of deprecated non-standard statistics fields have been removed from the [WebRTC Statistics API](/en-US/docs/Web/API/WebRTC_Statistics_API), including: `bitrateMean`, `bitrateStdDev`,`framerateMean`, `framerateStdDev`, and `droppedFrames`.
+- A number of deprecated non-standard statistics fields have been removed from the [WebRTC Statistics API](/en-US/docs/Web/API/WebRTC_Statistics_API), including: `bitrateMean`, `bitrateStdDev`, `framerateMean`, `framerateStdDev`, and `droppedFrames`.
   ({{bug(1367562)}}).
 
 ### WebDriver conformance (Marionette)

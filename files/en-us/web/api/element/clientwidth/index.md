@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.clientWidth
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.clientWidth`** property is zero for inline
@@ -30,7 +31,7 @@ A number.
 
 ## Examples
 
-![](dimensions-client.png)
+![An example element with large padding, border and margin. clientWidth is the inner width of the element including its padding, and excluding its margin, border, and vertical scrollbar.](dimensions-client.png)
 
 ## Specifications
 

@@ -9,8 +9,9 @@ tags:
   - Interface
   - Reference
   - Reporting API
-spec-urls: https://wicg.github.io/crash-reporting/#crashreportbody
+browser-compat: api.CrashReportBody
 ---
+
 {{SeeCompatTable}}{{APIRef("Reporting API")}}
 
 The `CrashReportBody` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents the body of a crash report (the return value of its {{domxref("Report.body")}} property).
@@ -19,7 +20,7 @@ A crash report is generated when a document becomes unusable due to the browser 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - `reason` {{experimental_inline}}
 
@@ -54,7 +55,7 @@ Some sample JSON might look like this:
 
 ## Browser compatibility
 
-This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
+{{Compat}}
 
 ## See also
 

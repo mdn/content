@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol.toStringTag
 ---
+
 {{JSRef}}
 
 The **`Symbol.toStringTag`** well-known symbol is a string valued property that is used in the creation of the default string description of an object. It is accessed internally by the {{jsxref("Object.prototype.toString()")}} method.
@@ -19,6 +20,8 @@ The **`Symbol.toStringTag`** well-known symbol is a string valued property that 
 ## Examples
 
 ### Default tags
+
+Some values do not have `Symbol.toStringTag`, but have special `toString()` representations. For a complete list, see {{jsxref("Object.prototype.toString()")}}.
 
 ```js
 Object.prototype.toString.call('foo');     // "[object String]"
@@ -32,6 +35,8 @@ Object.prototype.toString.call(null);      // "[object Null]"
 
 ### Built-in toStringTag symbols
 
+Most built-in objects provide their own `@@toStringTag` property. All built-in objects' `@@toStringTag` property is not writable, not enumerable, and configurable.
+
 ```js
 Object.prototype.toString.call(new Map());       // "[object Map]"
 Object.prototype.toString.call(function* () {}); // "[object GeneratorFunction]"
@@ -39,7 +44,7 @@ Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
 // ... and more
 ```
 
-### Custom classes default to object tag
+### Custom tag with toStringTag
 
 When creating your own class, JavaScript defaults to the "Object" tag:
 
@@ -48,8 +53,6 @@ class ValidatorClass {}
 
 Object.prototype.toString.call(new ValidatorClass()); // "[object Object]"
 ```
-
-### Custom tag with toStringTag
 
 Now, with the help of `toStringTag`, you are able to set your own custom tag:
 

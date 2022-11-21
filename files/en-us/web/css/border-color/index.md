@@ -1,6 +1,7 @@
 ---
 title: border-color
 slug: Web/CSS/border-color
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Borders
@@ -15,6 +16,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.border-color
 ---
+
 {{CSSRef}}
 
 The **`border-color`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the color of an element's border.
@@ -44,7 +46,7 @@ border-color: red;
 border-color: red #f015ca;
 
 /* top | left and right | bottom */
-border-color: red rgb(240,30,50,.7) green;
+border-color: red rgb(240, 30, 50, 0.7) green;
 
 /* top | right | bottom | left */
 border-color: red yellow green blue;
@@ -86,7 +88,8 @@ The `border-color` property may be specified using one, two, three, or four valu
 ```html
 <div id="justone">
   <p><code>border-color: red;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: red;</code></li>
     <li><code>border-bottom-color: red;</code></li>
     <li><code>border-left-color: red;</code></li>
@@ -94,7 +97,8 @@ The `border-color` property may be specified using one, two, three, or four valu
 </div>
 <div id="horzvert">
   <p><code>border-color: gold red;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: gold;</code></li>
+  <ul>
+    <li><code>border-top-color: gold;</code></li>
     <li><code>border-right-color: red;</code></li>
     <li><code>border-bottom-color: gold;</code></li>
     <li><code>border-left-color: red;</code></li>
@@ -102,7 +106,8 @@ The `border-color` property may be specified using one, two, three, or four valu
 </div>
 <div id="topvertbott">
   <p><code>border-color: red cyan gold;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
     <li><code>border-bottom-color: gold;</code></li>
     <li><code>border-left-color: cyan;</code></li>
@@ -110,7 +115,8 @@ The `border-color` property may be specified using one, two, three, or four valu
 </div>
 <div id="trbl">
   <p><code>border-color: red cyan black gold;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
     <li><code>border-bottom-color: black;</code></li>
     <li><code>border-left-color: gold;</code></li>

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.rel
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLAreaElement.rel`** property reflects the
@@ -26,9 +27,8 @@ A string.
 
 ```js
 const areas = document.getElementsByTagName("area");
-const length = areas.length;
-for (let i = 0; i < length; i++) {
-  alert(`Rel: ${areas[i].rel}`);
+for (const area of areas) {
+  console.log(`Rel: ${area.rel}`);
 }
 ```
 

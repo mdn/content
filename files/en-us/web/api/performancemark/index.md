@@ -10,28 +10,41 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceMark
 ---
-{{APIRef("User Timing API")}}
 
-**`PerformanceMark`** is an _abstract_ interface for {{domxref("PerformanceEntry")}} objects with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`mark`". Entries of this type are created by calling {{domxref("Performance.mark","performance.mark()")}} to add a _named_ {{domxref("DOMHighResTimeStamp")}} (the _mark_) to the browser's _performance timeline_.
+{{APIRef("Performance API")}}
+
+**`PerformanceMark`** is an interface for {{domxref("PerformanceEntry")}} objects with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`mark`".
+
+Entries of this type are typically created by calling {{domxref("Performance.mark","performance.mark()")}} to add a _named_ {{domxref("DOMHighResTimeStamp")}} (the _mark_) to the browser's performance timeline. To create a performance mark that isn't added to the browser's performance timeline, use the constructor.
 
 {{InheritanceDiagram}}
 
 {{AvailableInWorkers}}
 
-## Properties
+## Constructor
 
-This interface has no properties but it extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:
+- {{domxref("PerformanceMark.PerformanceMark", "PerformanceMark()")}}
+  - : Creates a new `PerformanceMark` object that isn't added to the browser's performance timeline.
 
-- {{domxref("PerformanceEntry.entryType")}}
+## Instance properties
+
+This interface extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:
+
+- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
   - : Returns "`mark`".
-- {{domxref("PerformanceEntry.name")}}
+- {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : Returns the name given to the mark when it was created via a call to {{domxref("Performance.mark()","performance.mark()")}}.
-- {{domxref("PerformanceEntry.startTime")}}
+- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("DOMHighResTimeStamp")}} when {{domxref("Performance.mark()","performance.mark()")}} was called.
-- {{domxref("PerformanceEntry.duration")}}
+- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
   - : Returns "`0`". (A mark has no _duration_.)
 
-## Methods
+This interface also supports the following properties:
+
+- {{domxref("PerformanceMark.detail")}} {{ReadOnlyInline}}
+  - : Returns arbitrary metadata that has been included in the mark upon construction.
+
+## Instance methods
 
 This interface has no methods.
 

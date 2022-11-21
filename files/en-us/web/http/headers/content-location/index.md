@@ -7,6 +7,7 @@ tags:
   - header
 browser-compat: http.headers.Content-Location
 ---
+
 {{HTTPSidebar}}
 
 The **`Content-Location`** header indicates an alternate
@@ -35,7 +36,7 @@ data returned. This distinction may seem abstract without [examples](#examples).
 
 ## Syntax
 
-```
+```http
 Content-Location: <url>
 ```
 
@@ -51,7 +52,7 @@ Content-Location: <url>
 ### Requesting data from a server in different formats
 
 Let's say a site's API can return data in {{glossary("JSON")}}, {{glossary("XML")}}, or
-[CSV](https://en.wikipedia.org/wiki/Comma-separated_values "Comma-separated values") formats. If the URL for a particular document
+[CSV](https://en.wikipedia.org/wiki/Comma-separated_values) formats. If the URL for a particular document
 is at `https://example.com/documents/foo`, the site could return different
 URLs for `Content-Location` depending on the request's
 {{HTTPHeader("Accept")}} header:
@@ -76,7 +77,7 @@ as {{HTTPHeader("Accept-Language")}}.
 
 Say you're creating a new blog post through a site's API:
 
-```
+```http
 POST /new/post
 Host: example.com
 Content-Type: text/markdown
@@ -86,9 +87,9 @@ Content-Type: text/markdown
 I made this through `example.com`'s API. I hope it worked.
 ```
 
-The site returns the published post in the response body. The server specifies  _where_ the new post is with the `Content-Location` header, indicating that this location refers to the content (the body) of this response:
+The site returns the published post in the response body. The server specifies _where_ the new post is with the `Content-Location` header, indicating that this location refers to the content (the body) of this response:
 
-```
+```http
 HTTP/1.1 201 Created
 Content-Type: text/markdown
 Content-Location: /my-first-blog-post
@@ -108,13 +109,13 @@ money to another user of a site.
 <form action="/send-payment" method="post">
   <p>
     <label>Who do you want to send the money to?
-      <input type="text" name="recipient">
+      <input type="text" name="recipient" />
     </label>
   </p>
 
   <p>
     <label>How much?
-      <input type="number" name="amount">
+      <input type="number" name="amount" />
     </label>
   </p>
 

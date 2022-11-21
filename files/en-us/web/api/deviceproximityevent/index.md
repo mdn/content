@@ -8,21 +8,23 @@ tags:
   - Proximity Events
   - Reference
   - Deprecated
+  - Non-standard
 browser-compat: api.DeviceProximityEvent
 ---
-{{APIRef("Proximity Events")}}{{deprecated_header}}
+
+{{APIRef("Proximity Events")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 > **Warning:** `DeviceProximityEvent` is not supported by any current major browser, and should not be used.
 
 The **`DeviceProximityEvent`** interface provides information about the distance of a nearby physical object using the proximity sensor of a device.
 
-## Properties
+## Instance properties
 
-- `DeviceProximityEvent.max` {{readonlyinline}}
+- `DeviceProximityEvent.max` {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The maximum sensing distance the sensor is able to report, in centimeters.
-- `DeviceProximityEvent.min` {{readonlyinline}}
+- `DeviceProximityEvent.min` {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The minimum sensing distance the sensor is able to report, in centimeters. Usually zero.
-- `DeviceProximityEvent.value` {{readonlyinline}}
+- `DeviceProximityEvent.value` {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The current device proximity, in centimeters.
 
 ## Examples

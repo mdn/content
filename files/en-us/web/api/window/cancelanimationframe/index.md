@@ -6,13 +6,13 @@ tags:
   - API
   - Animation
   - DOM
-  - Experimental
   - Method
   - Reference
   - Window
   - Polyfill
 browser-compat: api.Window.cancelAnimationFrame
 ---
+
 {{APIRef}}
 
 The **`window.cancelAnimationFrame()`** method cancels an
@@ -21,7 +21,7 @@ animation frame request previously scheduled through a call to
 
 ## Syntax
 
-```js
+```js-nolint
 cancelAnimationFrame(requestID)
 ```
 

@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.RegExp.@@split
 ---
+
 {{JSRef}}
 
 The **`[@@split]()`** method of a regular expression specifies how [`String.prototype.split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) should behave when the regular expression is passed in as the separator.
@@ -19,7 +20,7 @@ The **`[@@split]()`** method of a regular expression specifies how [`String.prot
 
 ## Syntax
 
-```js
+```js-nolint
 regexp[Symbol.split](str[, limit])
 ```
 
@@ -39,19 +40,21 @@ An {{jsxref("Array")}} containing substrings as its elements. Capturing groups a
 This method is called internally in {{jsxref("String.prototype.split()")}} when a `RegExp` is passed as the separator. For example, the following two examples return the same result.
 
 ```js
-'a-b-c'.split(/-/);
+"a-b-c".split(/-/);
 
-/-/[Symbol.split]('a-b-c');
+/-/[Symbol.split]("a-b-c");
 ```
 
 This method exists for customizing the behavior of `split()` in `RegExp` subclasses.
 
 The `RegExp.prototype[@@split]()` base method exhibits the following behaviors:
 
+- It starts by using [`@@species`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@species) to construct a new regexp, thus avoiding mutating the original regexp in any way.
 - The regexp's `g` ("global") flag is ignored, and the `y` ("sticky") flag is always applied even when it was not originally present.
 - If the target string is empty, and the regexp can match empty strings (for example, `/a?/`), an empty array is returned. Otherwise, if the regexp can't match an empty string, `[""]` is returned.
 - The matching proceeds by continuously calling `this.exec()`. Since the regexp is always sticky, this will move along the string, each time yielding a matching string, index, and any capturing groups.
 - For each match, the substring between the last matched string's end and the current matched string's beginning is first appended to the result array. Then, the capturing groups' values are appended one-by-one.
+- If the current match is an empty string, or if the regexp doesn't match at the current position (since it's sticky), the `lastIndex` would still be advanced — if the regex has the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag, it would advance by one Unicode codepoint; otherwise, it advances by one UTF-16 code unit.
 - If the regexp doesn't match the target string, the target string is returned as-is, wrapped in an array.
 - The returned array's length will never exceed the `limit` parameter, if provided, while trying to be as close as possible. Therefore, the last match and its capturing groups may not all be present in the returned array if the array is already filled.
 
@@ -65,9 +68,9 @@ different order of arguments.
 
 ```js
 const re = /-/g;
-const str = '2016-01-02';
+const str = "2016-01-02";
 const result = re[Symbol.split](str);
-console.log(result);  // ["2016", "01", "02"]
+console.log(result); // ["2016", "01", "02"]
 ```
 
 ### Using @@split in subclasses
@@ -83,8 +86,8 @@ class MyRegExp extends RegExp {
   }
 }
 
-const re = new MyRegExp('-');
-const str = '2016-01-02';
+const re = new MyRegExp("-");
+const str = "2016-01-02";
 const result = str.split(re); // String.prototype.split calls re[@@split].
 console.log(result); // ["(2016)", "(01)", "(02)"]
 ```

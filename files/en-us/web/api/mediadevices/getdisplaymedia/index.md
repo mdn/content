@@ -19,6 +19,7 @@ tags:
   - screen
 browser-compat: api.MediaDevices.getDisplayMedia
 ---
+
 {{DefaultAPISidebar("Screen Capture API")}}
 
 The {{domxref("MediaDevices")}} interface's
@@ -33,7 +34,7 @@ See [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_
 
 ## Syntax
 
-```js
+```js-nolint
 getDisplayMedia(constraints)
 ```
 
@@ -45,7 +46,7 @@ getDisplayMedia(constraints)
     a video track, the returned stream will have one even if no video track is expressly
     requested by the `constraints` object. For more details, see the [constraints](/en-US/docs/Web/API/MediaDevices/getUserMedia#parameters)
     section under the {{domxref("MediaDevices.getUserMedia()")}} method, as well
-    as the article [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints).
+    as the article [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints).
 
 ### Return value
 
@@ -84,9 +85,7 @@ audio track.
     `advanced` and any constraints which in turn have a member named
     `min` or `exact`.
 
-## Usage notes
-
-### Privacy and security
+## Security
 
 Because `getDisplayMedia()` could be used in nefarious ways, it can be a
 source of significant privacy and security concerns. For that reason, the specification
@@ -98,8 +97,7 @@ details measures browsers are required to take in order to fully support
   to generate output that matches the constraints.
 - The go-ahead permission to use `getDisplayMedia()` cannot be persisted
   for reuse. The user must be prompted for permission every time.
-- The call to `getDisplayMedia()` must be made from code which is running
-  in response to a user action, such as in an event handler.
+- [Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 - Browsers are encouraged to provide a warning to users about sharing displays or
   windows that contain browsers, and to keep a close eye on what other content might be
   getting captured and shown to other users.
@@ -142,7 +140,7 @@ add the video track from the stream.
 
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
 - [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}: Capturing media from a
   camera and/or microphone

@@ -6,12 +6,13 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 This page lists many of the general-purpose macros created for use on MDN.
-For additional how-to information on using these macros, see [Using macros](/en-US/docs/MDN/Structures/Macros).
+For additional how-to information on using these macros, see [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros).
 
-See [Other macros](/en-US/docs/MDN/Structures/Macros/Other) for information on macros that are infrequently used, are used only in special contexts, or are deprecated.
+See [Other macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Other) for information on macros that are infrequently used, are used only in special contexts, or are deprecated.
 
 ## Linking
 
@@ -30,7 +31,7 @@ This macro accepts one required parameter and one optional parameter:
 
 ### Linking to pages in references
 
-There are macros for locale-independent linking to pages in specific reference areas of MDN: Javascript, CSS, HTML elements, SVG etc.
+There are macros for locale-independent linking to pages in specific reference areas of MDN: JavaScript, CSS, HTML elements, SVG etc.
 
 The macros are easy to use.
 Minimally all you need to do is specify the name of the item to link to in the first argument.
@@ -160,7 +161,6 @@ Most macros will also take a second argument allowing you to change the display 
         <code>\{{HTTPStatus("404")}}</code> results in {{HTTPStatus("404")}}
       </td>
     </tr>
-    </tr>
   </tbody>
 </table>
 
@@ -184,10 +184,10 @@ The first parameter is for the previous article and the second is for the next a
 
 ### Live samples
 
-- [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) lets you embed the output of a code sample on a page, as described in [Live samples](/en-US/docs/MDN/Structures/Live_samples).
-- [`LiveSampleLink`](https://github.com/mdn/yari/blob/main/kumascript/macros/LiveSampleLink.ejs) creates a link to a page containing the output of a code sample on a page, as described in [Live samples](/en-US/docs/MDN/Structures/Live_samples).
+- [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) lets you embed the output of a code sample on a page, as described in [Live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples).
+- [`LiveSampleLink`](https://github.com/mdn/yari/blob/main/kumascript/macros/LiveSampleLink.ejs) creates a link to a page containing the output of a code sample on a page, as described in [Live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples).
 - [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs) allows to embed live samples from GitHub pages.
-  You can get more information at [GitHub live samples](/en-US/docs/MDN/Structures/Code_examples#github_live_samples).
+  You can get more information at [GitHub live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#github_live_samples).
 
 ## Sidebar generation
 
@@ -195,7 +195,7 @@ There are templates for almost every large collection of pages.
 They typically link back to the main page of the reference/guide/tutorial (this is often needed because our breadcrumbs sometimes can't do this) and put the article in the appropriate category.
 
 - [`CSSRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/CSSRef.ejs) generates the sidebar for CSS reference pages.
-- [`HTMLRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLRef.ejs) generates the sidebar for HTML reference pages.
+- [`HTMLSidebar`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLSidebar.ejs) generates the sidebar for HTML reference pages.
 - [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) generates the sidebar for Web API reference pages.
 
 ## General-purpose formatting
@@ -261,7 +261,7 @@ The templates should be placed directly underneath the main page title (or bread
 They can also be used to mark up a section on a page.
 
 - [`non-standard_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Header.ejs): `\{{Non-standard_Header}}` {{Non-standard_Header}}
-- [`SeeCompatTable`](https://github.com/mdn/yari/blob/main/kumascript/macros/SeeCompatTable.ejs) should be used on pages that document [experimental features](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental).
+- [`SeeCompatTable`](https://github.com/mdn/yari/blob/main/kumascript/macros/SeeCompatTable.ejs) should be used on pages that document [experimental features](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
   Example: `\{{SeeCompatTable}}` {{SeeCompatTable}}
 - [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
 - [`secureContext_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/secureContext_header.ejs).
@@ -273,14 +273,14 @@ They can also be used to mark up a section on a page.
 The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) macro inserts a localized note box indicating that a feature is available in a [Web worker](/en-US/docs/Web/API/Web_Workers_API) context.
 You can use the argument `notservice` to indicate that a feature works in web workers except for service workers.
 
-##### Syntax
+#### Syntax
 
 ```plain
 \{{AvailableInWorkers}}
 \{{AvailableInWorkers("notservice")}}
 ```
 
-##### Examples
+#### Examples
 
 {{AvailableInWorkers}}
 {{AvailableInWorkers("notservice")}}

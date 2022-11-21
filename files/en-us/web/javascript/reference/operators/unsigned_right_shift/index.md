@@ -9,15 +9,16 @@ tags:
   - Reference
 browser-compat: javascript.operators.unsigned_right_shift
 ---
+
 {{jsSidebar("Operators")}}
 
-The **unsigned right shift operator (`>>>`)** (zero-fill right shift) evaluates the left-hand operand as an unsigned number, and shifts the binary representation of that number by the number of bits, modulo 32, specified by the right-hand operand. Excess bits shifted off to the right are discarded, and zero bits are shifted in from the left. The sign bit becomes `0`, so the result is always non-negative. Unlike the other bitwise operators, zero-fill right shift returns an unsigned 32-bit integer.
+The **unsigned right shift (`>>>`)** (zero-fill right shift) operator evaluates the left-hand operand as an unsigned number, and shifts the binary representation of that number by the number of bits, modulo 32, specified by the right-hand operand. Excess bits shifted off to the right are discarded, and zero bits are shifted in from the left. The sign bit becomes `0`, so the result is always non-negative. Unlike the other bitwise operators, zero-fill right shift returns an unsigned 32-bit integer.
 
 {{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 a >>> b
 ```
 
@@ -72,7 +73,7 @@ The right operand will be converted to an unsigned 32-bit integer and then taken
 ### Using unsigned right shift
 
 ```js
- 9 >>> 2; // 2
+9 >>> 2; // 2
 -9 >>> 2; // 1073741821
 ```
 

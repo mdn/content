@@ -13,12 +13,10 @@ tags:
   - loaded
 browser-compat: api.FontFace.loaded
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
-The **`loaded`** read-only property of the
-{{domxref("FontFace")}} interface returns a {{jsxref('Promise')}} that resolves with the
-current `FontFace` object when the font specified in the object's constructor
-is done loading or rejects with a `SyntaxError`.
+The **`loaded`** read-only property of the {{domxref("FontFace")}} interface returns a {{jsxref('Promise')}} that resolves with the current `FontFace` object when the font specified in the object's constructor is done loading or rejects with a `SyntaxError`.
 
 ## Value
 

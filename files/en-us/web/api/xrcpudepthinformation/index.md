@@ -10,9 +10,11 @@ tags:
   - XR
   - AR
   - VR
+  - Experimental
 browser-compat: api.XRCPUDepthInformation
 ---
-{{APIRef("WebXR Device API")}} {{secureContext_header}}
+
+{{APIRef("WebXR Device API")}} {{secureContext_header}}{{SeeCompatTable}}
 
 The **`XRCPUDepthInformation`** interface contains depth information from the CPU (returned by {{domxref("XRFrame.getDepthInformation()")}}).
 
@@ -20,9 +22,9 @@ The **`XRCPUDepthInformation`** interface contains depth information from the CP
 
 This interface inherits properties from its parent, {{domxref("XRDepthInformation")}}.
 
-## Properties
+## Instance properties
 
-- {{domxref("XRCPUDepthInformation.data")}} {{ReadOnlyInline}}
+- {{domxref("XRCPUDepthInformation.data")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An {{jsxref("ArrayBuffer")}} containing depth-buffer information in raw format.
 - {{domxref("XRDepthInformation.height")}} {{ReadOnlyInline}}
   - : Contains the height of the depth buffer (number of rows).
@@ -33,9 +35,9 @@ This interface inherits properties from its parent, {{domxref("XRDepthInformatio
 - {{domxref("XRDepthInformation.width")}} {{ReadOnlyInline}}
   - : Contains the width of the depth buffer (number of columns).
 
-## Methods
+## Instance methods
 
-- {{domxref("XRCPUDepthInformation.getDepthInMeters()")}}
+- {{domxref("XRCPUDepthInformation.getDepthInMeters()")}} {{Experimental_Inline}}
   - : Returns the depth in meters at (x, y) in normalized view coordinates.
 
 ## Examples

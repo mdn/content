@@ -16,6 +16,7 @@ tags:
   - getAllResponseHeaders
 browser-compat: api.XMLHttpRequest.getAllResponseHeaders
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{domxref("XMLHttpRequest")}} method
@@ -31,7 +32,7 @@ is returned.
 
 ## Syntax
 
-```js
+```js-nolint
 getAllResponseHeaders()
 ```
 
@@ -48,7 +49,7 @@ happened, an empty string is returned.
 
 An example of what a raw header string looks like:
 
-```
+```http
 date: Fri, 08 Dec 2017 21:04:30 GMT\r\n
 content-encoding: gzip\r\n
 x-content-type-options: nosniff\r\n

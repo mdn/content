@@ -6,13 +6,14 @@ tags:
   - SVG
   - SVG:Tutorial
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}
 
 There are several basic shapes used for most SVG drawing. The purpose of these shapes is fairly obvious from their names. Some of the parameters that determine their position and size are given, but an element reference would probably contain more accurate and complete descriptions along with other properties that won't be covered in here. However, since they're used in most SVG documents, it's necessary to give them some sort of introduction.
 
 To insert a shape, you create an element in the document. Different elements correspond to different shapes and take different parameters to describe the size and position of those shapes. Some are slightly redundant in that they can be created by other shapes, but they're all there for your convenience and to keep your SVG documents as short and as readable as possible. All the basic shapes are shown in the following image.
 
-![Succesion of eight differents shapes and drawings. At the top left, a black outline square follow by a black rounded outline square. Below at the left, a red outline circle follow by a red outline ellipse. Below at the left a yellow line, follow by a yellow zigzag. Below the yellow lines, a green outline star and at the end of the image a blue wavy line.](shapes.png)
+![Succession of eight different shapes and drawings. At the top left, a black outline square follow by a black rounded outline square. Below at the left, a red outline circle follow by a red outline ellipse. Below at the left a yellow line, follow by a yellow zigzag. Below the yellow lines, a green outline star and at the end of the image a blue wavy line.](shapes.png)
 
 The code to generate that image looks something like this:
 
@@ -78,7 +79,7 @@ The {{SVGElement("circle")}} element draws a circle on the screen. It takes 3 ba
 
 ## Ellipse
 
-An {{SVGElement("ellipse")}} is a more general form of the {{SVGElement("circle")}} element, where you can scale the x and y radius (commonly referred to as the *semimajor* and *semiminor* axes in maths) of the circle separately.
+An {{SVGElement("ellipse")}} is a more general form of the {{SVGElement("circle")}} element, where you can scale the x and y radius (commonly referred to as the _semimajor_ and _semiminor_ axes in maths) of the circle separately.
 
 ```xml
 <ellipse cx="75" cy="75" rx="20" ry="5"/>

@@ -1,5 +1,5 @@
 ---
-title: 'HTML attribute: disabled'
+title: "HTML attribute: disabled"
 slug: Web/HTML/Attributes/disabled
 tags:
   - Attribute
@@ -55,61 +55,70 @@ If the element is `disabled`, then the element's value can not receive focus and
 
 ## Examples
 
-When form controls are disabled, many browsers will display them in a lighter, greyed-out color by default. Here are examples of a disabled checkbox, radio button, {{ HTMLElement("option") }} and {{ HTMLElement("optgroup") }}, as well as some form controls that are disabled via the disabled attribute set on the ancestor `{{ HTMLElement("fieldset")}}`  element. The {{ HTMLElement("option") }}s are disabled, but the {{ HTMLElement("select") }} itself is not. We could have disable the entire {{ HTMLElement("select") }} by adding the attribute to that element rather than its descendants.
+When form controls are disabled, many browsers will display them in a lighter, greyed-out color by default. Here are examples of a disabled checkbox, radio button, {{ HTMLElement("option") }} and {{ HTMLElement("optgroup") }}, as well as some form controls that are disabled via the disabled attribute set on the ancestor `{{ HTMLElement("fieldset")}}` element. The {{ HTMLElement("option") }}s are disabled, but the {{ HTMLElement("select") }} itself is not. We could have disable the entire {{ HTMLElement("select") }} by adding the attribute to that element rather than its descendants.
 
 ```html
 <fieldset>
   <legend>Checkboxes</legend>
-  <p><label>
-    <input type="checkbox" name="chbox" value="regular"> Regular
-  </label></p>
-  <p><label>
-    <input type="checkbox" name="chbox" value="disabled" disabled> disabled
-  </label></p>
+  <p>
+    <label>
+      <input type="checkbox" name="chbox" value="regular" /> Regular
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type="checkbox" name="chbox" value="disabled" disabled /> disabled
+    </label>
+  </p>
 </fieldset>
 
 <fieldset>
   <legend>Radio buttons</legend>
-  <p><label>
-    <input type="radio" name="radio" value="regular"> Regular
-  </label></p>
-  <p><label>
-    <input type="radio" name="radio" value="disabled" disabled> disabled
-  </label></p>
+  <p>
+    <label> <input type="radio" name="radio" value="regular" /> Regular </label>
+  </p>
+  <p>
+    <label>
+      <input type="radio" name="radio" value="disabled" disabled /> disabled
+    </label>
+  </p>
 </fieldset>
 
 <p>
- <label>Select an option:
-  <select>
-    <optgroup label="Group 1">
-      <option>Option 1.1</option>
-    </optgroup>
-    <optgroup label="Group 2">
-      <option>Option 2.1</option>
-      <option disabled>Option 2.2</option>
-      <option>Option 2.3</option>
-    </optgroup>
-    <optgroup label="Group 3" disabled>
-      <option>Disabled 3.1</option>
-      <option>Disabled 3.2</option>
-      <option>Disabled 3.3</option>
-    </optgroup>
-  </select>
- </label>
+  <label
+    >Select an option:
+    <select>
+      <optgroup label="Group 1">
+        <option>Option 1.1</option>
+      </optgroup>
+      <optgroup label="Group 2">
+        <option>Option 2.1</option>
+        <option disabled>Option 2.2</option>
+        <option>Option 2.3</option>
+      </optgroup>
+      <optgroup label="Group 3" disabled>
+        <option>Disabled 3.1</option>
+        <option>Disabled 3.2</option>
+        <option>Disabled 3.3</option>
+      </optgroup>
+    </select>
+  </label>
 </p>
 
 <fieldset disabled>
   <legend>Disabled fieldset</legend>
   <p>
-   <label>Name: <input type="name" name="radio" value="regular"> Regular </label>
+    <label>
+      Name: <input type="name" name="radio" value="regular" /> Regular
+    </label>
   </p>
   <p>
-   <label>Number: <input type="number"></label>
+    <label>Number: <input type="number" /></label>
   </p>
 </fieldset>
 ```
 
-{{EmbedLiveSample('Examples', 500, 300)}}
+{{EmbedLiveSample('Examples', 500, 450)}}
 
 ## Specifications
 

@@ -8,9 +8,11 @@ tags:
   - Reference
   - loadTime
   - LargestContentfulPaint
+  - Experimental
 browser-compat: api.LargestContentfulPaint.loadTime
 ---
-{{DefaultAPISidebar("Largest Contentful Paint API")}}
+
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`loadTime`** read-only property of the {{domxref("LargestContentfulPaint")}} interface returns the time that the element was loaded.
 

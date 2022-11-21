@@ -12,6 +12,7 @@ tags:
   - newTabPosition
 browser-compat: webextensions.api.browserSettings.newTabPosition
 ---
+
 {{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to control the position of newly opened tabs relative to already open tabs.
@@ -32,7 +33,9 @@ This code sets the value to "afterCurrent" and then logs the new value:
 
 ```js
 async function setAfterCurrent() {
-  let result = await browser.browserSettings.newTabPosition.set({value: "afterCurrent"});
+  let result = await browser.browserSettings.newTabPosition.set({
+    value: "afterCurrent",
+  });
   console.log(`Result: ${result}`);
   let newValue = await browser.browserSettings.newTabPosition.get({});
   console.log(`New value: ${newValue.value}`);

@@ -13,6 +13,7 @@ tags:
   - match
 browser-compat: api.Cache.match
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`match()`** method of the {{domxref("Cache")}} interface returns a {{jsxref("Promise")}} that resolves to the {{domxref("Response")}} associated with the first matching request in the {{domxref("Cache")}} object.
@@ -20,7 +21,7 @@ If no match is found, the {{jsxref("Promise")}} resolves to {{jsxref("undefined"
 
 ## Syntax
 
-```js
+```js-nolint
 match(request)
 match(request, options)
 ```
@@ -33,11 +34,11 @@ match(request, options)
 - `options` {{optional_inline}}
 
   - : An object that sets options for the `match` operation.
-     The available options are:
+    The available options are:
 
     - `ignoreSearch`
       - : A boolean value that specifies whether to
-        ignore the query string in the URL.  For example, if set to
+        ignore the query string in the URL. For example, if set to
         `true` the `?value=bar` part of
         `http://foo.com/?value=bar` would be ignored when performing a match.
         It defaults to `false`.
@@ -71,7 +72,7 @@ exception. Inside the `catch()` clause, `match()` is used to
 return the correct response.
 
 In this example, only HTML documents retrieved with the GET HTTP verb will be
-cached. If our `if()` condition is false, then this fetch handler won't
+cached. If our `if ()` condition is false, then this fetch handler won't
 intercept the request. If there are any other fetch handlers registered, they will get a
 chance to call `event.respondWith()`. If no fetch handlers call
 `event.respondWith()`, the request will be handled by the browser as if there
@@ -80,15 +81,19 @@ response with an response code in the 4xx or 5xx range, the `catch()` will
 NOT be called.
 
 ```js
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   // We only want to call event.respondWith() if this is a GET request for an HTML document.
-  if (event.request.method === 'GET' &&
-      event.request.headers.get('accept').includes('text/html')) {
-    console.log('Handling fetch event for', event.request.url);
+  if (
+    event.request.method === "GET" &&
+    event.request.headers.get("accept").includes("text/html")
+  ) {
+    console.log("Handling fetch event for", event.request.url);
     event.respondWith(
       fetch(event.request).catch((e) => {
-        console.error('Fetch failed; returning offline page instead.', e);
-        return caches.open(OFFLINE_CACHE).then((cache) => cache.match(OFFLINE_URL));
+        console.error("Fetch failed; returning offline page instead.", e);
+        return caches
+          .open(OFFLINE_CACHE)
+          .then((cache) => cache.match(OFFLINE_URL));
       })
     );
   }

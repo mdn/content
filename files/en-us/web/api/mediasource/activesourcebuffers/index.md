@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - MediaSource
   - MediaSourceExtensions
@@ -15,6 +14,7 @@ tags:
   - activeSourceBuffers
 browser-compat: api.MediaSource.activeSourceBuffers
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`activeSourceBuffers`** read-only property of the
@@ -30,7 +30,7 @@ for each of the active tracks.
 
 ## Examples
 
-The following snippet is based on a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.). The function `getMediaSource()`, which is not defined here, returns a `MediaSource`.
+The following snippet is based on a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation). The function `getMediaSource()`, which is not defined here, returns a `MediaSource`.
 
 ```js
 const mediaSource = getMediaSource();

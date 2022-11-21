@@ -1,6 +1,7 @@
 ---
 title: mask
 slug: Web/CSS/mask
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Masking
@@ -12,6 +13,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.mask
 ---
+
 {{CSSRef}}
 
 The **`mask`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) hides an element (partially or fully) by masking or clipping the image at specific points.

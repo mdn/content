@@ -9,17 +9,18 @@ tags:
   - Reference
 browser-compat: api.CanvasPattern
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`CanvasPattern`** interface represents an [opaque object](https://en.wikipedia.org/wiki/Opaque_data_type) describing a pattern, based on an image, a canvas, or a video, created by the {{domxref("CanvasRenderingContext2D.createPattern()")}} method.
 
 It can be used as a {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} or {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}.
 
-## Properties
+## Instance properties
 
 _As an opaque object, this has no exposed property._
 
-## Methods
+## Instance methods
 
 _There are no inherited method._
 

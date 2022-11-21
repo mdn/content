@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.validateProgram
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.validateProgram()`** method of the
@@ -19,7 +20,7 @@ used in the current WebGL state.
 
 ## Syntax
 
-```js
+```js-nolint
 validateProgram(program)
 ```
 

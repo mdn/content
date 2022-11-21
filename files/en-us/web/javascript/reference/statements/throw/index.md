@@ -8,9 +8,10 @@ tags:
   - Statement
 browser-compat: javascript.statements.throw
 ---
+
 {{jsSidebar("Statements")}}
 
-The **`throw` statement** throws a user-defined exception.
+The **`throw`** statement throws a user-defined exception.
 Execution of the current function will stop (the statements after `throw`
 won't be executed), and control will be passed to the first [`catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
 block in the call stack. If no `catch` block exists among caller functions,
@@ -20,8 +21,8 @@ the program will terminate.
 
 ## Syntax
 
-```js
-throw expression;
+```js-nolint
+throw expression
 ```
 
 - `expression`
@@ -136,11 +137,8 @@ function verifyZipCode(z) {
   try {
     z = new ZipCode(z);
   } catch (e) {
-    if (e instanceof ZipCodeFormatException) {
-      return ZIPCODE_INVALID;
-    } else {
-      return ZIPCODE_UNKNOWN_ERROR;
-    }
+    const isInvalidCode = e instanceof ZipCodeFormatException;
+    return isInvalidCode ? ZIPCODE_INVALID : ZIPCODE_UNKNOWN_ERROR;
   }
   return z;
 }

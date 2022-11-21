@@ -2,10 +2,10 @@
 title: HTTP header
 slug: Glossary/HTTP_header
 tags:
-  - Glossary
   - HTTP Header
   - WebMechanics
 ---
+
 An **HTTP header** is a field of an HTTP request or response that passes additional context and metadata about the request or response. For example, a request message can use headers to indicate it's preferred media formats, while a response can use header to indicate the media format of the returned body. Headers are case-insensitive, begin at the start of a line and are immediately followed by a `':'` and a header-dependent value. The value finishes at the next CRLF or at the end of the message.
 
 The HTTP and Fetch specifications refer to a number of header categories, including:
@@ -17,21 +17,21 @@ The HTTP and Fetch specifications refer to a number of header categories, includ
 
 A basic request with one header:
 
-```plain
+```http
 GET /example.http HTTP/1.1
 Host: example.com
 ```
 
 Redirects have mandatory headers ({{HTTPHeader("Location")}}):
 
-```plain
+```http
 302 Found
 Location: /NewPage.html
 ```
 
 A typical set of headers:
 
-```plain
+```http
 304 Not Modified
 Access-Control-Allow-Origin: *
 Age: 2318192

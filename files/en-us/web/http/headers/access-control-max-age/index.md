@@ -8,6 +8,7 @@ tags:
   - header
 browser-compat: http.headers.Access-Control-Max-Age
 ---
+
 {{HTTPSidebar}}
 
 The **`Access-Control-Max-Age`** response header indicates how long the results of a {{glossary("preflight request")}} (that is the information contained in the {{HTTPHeader("Access-Control-Allow-Methods")}} and {{HTTPHeader("Access-Control-Allow-Headers")}} headers) can be cached.
@@ -27,7 +28,7 @@ The **`Access-Control-Max-Age`** response header indicates how long the results 
 
 ## Syntax
 
-```
+```http
 Access-Control-Max-Age: <delta-seconds>
 ```
 
@@ -44,7 +45,7 @@ Access-Control-Max-Age: <delta-seconds>
 
 Cache results of a preflight request for 10 minutes:
 
-```
+```http
 Access-Control-Max-Age: 600
 ```
 

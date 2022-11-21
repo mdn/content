@@ -11,6 +11,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.search.search
 ---
+
 {{AddonSidebar()}}
 
 Perform a search using the search engine specified, or the default search engine if no search engine is specified.
@@ -23,7 +24,7 @@ To get the installed search engines, use {{WebExtAPIRef("search.get()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.search.search(
   searchProperties       // object
 )

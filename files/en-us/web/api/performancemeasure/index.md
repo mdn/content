@@ -10,7 +10,8 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceMeasure
 ---
-{{APIRef("User Timing API")}}
+
+{{APIRef("Performance API")}}
 
 **`PerformanceMeasure`** is an _abstract_ interface for {{domxref("PerformanceEntry")}} objects with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`measure`". Entries of this type are created by calling {{domxref("Performance.measure","performance.measure()")}} to add a _named_ {{domxref("DOMHighResTimeStamp")}} (the _measure_) between two _marks_ to the browser's _performance timeline_.
 
@@ -18,13 +19,12 @@ browser-compat: api.PerformanceMeasure
 
 {{AvailableInWorkers}}
 
-## Properties
+## Instance properties
 
 This interface defines:
 
-- `PerformanceMeasure.detail`
+- {{domxref("PerformanceMeasure.detail")}}
   - : Contains arbitrary metadata about the measure.
-    This may be passed in as a property of the {{domxref("Performance.measure()","performance.measure()")}} argument `MeasureOptions`.
 
 In addition, it extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:
 
@@ -37,7 +37,7 @@ In addition, it extends the following {{domxref("PerformanceEntry")}} properties
 - {{domxref("PerformanceEntry.duration")}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} that is the duration of the measure (typically, the measure's end mark timestamp minus its start mark timestamp).
 
-## Methods
+## Instance methods
 
 This interface has no methods.
 

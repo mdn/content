@@ -9,9 +9,10 @@ tags:
   - Reference
 browser-compat: javascript.operators.right_shift
 ---
+
 {{jsSidebar("Operators")}}
 
-The **right shift operator (`>>`)** returns the signed number represented by the result of performing a sign-extending shift of the binary representation of the first operand (evaluated as a [two's complement](https://en.wikipedia.org/wiki/Two's_complement) bit string) to the right by the number of bits, modulo 32, specified in the second operand. Excess bits shifted off to the right are discarded, and copies of the leftmost bit are shifted in from the left.
+The **right shift (`>>`)** operator returns the signed number represented by the result of performing a sign-extending shift of the binary representation of the first operand (evaluated as a [two's complement](https://en.wikipedia.org/wiki/Two's_complement) bit string) to the right by the number of bits, modulo 32, specified in the second operand. Excess bits shifted off to the right are discarded, and copies of the leftmost bit are shifted in from the left.
 
 The resulting binary representation is evaluated as a [two's complement](https://en.wikipedia.org/wiki/Two's_complement) bit string. So if the leftmost bit in the resulting binary representation is `1`, the resulting number is negative. Because the leftmost bit (the sign bit) of the result will always have the same value as the leftmost bit of the first operand, the sign of the resulting number is the same as the sign of the first operand, hence the name "sign-extending right shift" or "sign-filling right shift". This operation is also commonly referred to as an "arithmetic right shift".
 
@@ -19,7 +20,7 @@ The resulting binary representation is evaluated as a [two's complement](https:/
 
 ## Syntax
 
-```js
+```js-nolint
 a >> b
 ```
 
@@ -75,7 +76,7 @@ The right operand will be converted to an unsigned 32-bit integer and then taken
 ### Using right shift
 
 ```js
- 9 >> 2; //  2
+9 >> 2; // 2
 -9 >> 2; // -3
 ```
 
@@ -91,3 +92,4 @@ The right operand will be converted to an unsigned 32-bit integer and then taken
 
 - [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)
 - [Right shift assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)
+- [Unsigned right shift operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)

@@ -7,6 +7,7 @@ tags:
   - Beginner
   - WebGL
 ---
+
 {{GamesSidebar}}
 
 [Babylon.js](https://www.babylonjs.com/) is one of the most popular 3D game engines used by developers. As with any other 3D library it provides built-in functions to help you implement common 3D functionality more quickly. In this article we'll take you through the real basics of using Babylon.js, including setting up a development environment, structuring the necessary HTML, and writing the JavaScript code.
@@ -28,22 +29,30 @@ Here's the HTML structure we will use:
 
 ```html
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
     <title>MDN Games: Babylon.js demo</title>
     <style>
-        html,body,canvas { margin: 0; padding: 0; width: 100%; height: 100%; font-size: 0; }
+      html,
+      body,
+      canvas {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 0;
+      }
     </style>
-</head>
-<body>
-<script src="babylon.js"></script>
-<canvas id="render-canvas"></canvas>
-<script>
-    const canvas = document.getElementById("render-canvas");
-    /* all our JavaScript code goes here */
-</script>
-</body>
+  </head>
+  <body>
+    <script src="babylon.js"></script>
+    <canvas id="render-canvas"></canvas>
+    <script>
+      const canvas = document.getElementById("render-canvas");
+      /* all our JavaScript code goes here */
+    </script>
+  </body>
 </html>
 ```
 
@@ -78,8 +87,8 @@ To make the scene actually visible we have to render it. Add these lines at the 
 
 ```js
 function renderLoop() {
-    scene.render();
-};
+  scene.render();
+}
 engine.runRenderLoop(renderLoop);
 ```
 
@@ -90,7 +99,11 @@ We're using the engine's `runRenderLoop()` method to execute the `renderLoop()` 
 Now the setup code is in place we need to think about implementing the standard scene components: camera, light and objects. Let's start with the camera — add this line to your code below the scene creation and the line where we defined the `clearColor`.
 
 ```js
-const camera = new BABYLON.FreeCamera("camera", new BABYLON.Vector3(0, 0, -10), scene);
+const camera = new BABYLON.FreeCamera(
+  "camera",
+  new BABYLON.Vector3(0, 0, -10),
+  scene
+);
 ```
 
 There are many [cameras](https://doc.babylonjs.com/divingDeeper/cameras) available in Babylon.js; `FreeCamera` is the most basic and universal one. To initialize it you need to pass it three parameters: any name you want to use for it, the coordinates where you want it to be positioned in the 3D space, and the scene you want to add it to.
@@ -102,7 +115,11 @@ There are many [cameras](https://doc.babylonjs.com/divingDeeper/cameras) availab
 There are various [light sources](https://doc.babylonjs.com/divingDeeper/lights/lights_introduction#types-of-lights) available in Babylon.js. The most basic one is the `PointLight`, which works like a flashlight — shining a spotlight in a given direction. Add the following line below your camera definition:
 
 ```js
-const light = new BABYLON.PointLight("light", new BABYLON.Vector3(10, 10, 0), scene);
+const light = new BABYLON.PointLight(
+  "light",
+  new BABYLON.Vector3(10, 10, 0),
+  scene
+);
 ```
 
 The parameters are very similar to the previously defined camera: the name of the light, a position in 3D space and the scene to which the light is added.
@@ -115,11 +132,11 @@ Now the scene is properly rendering we can start adding 3D shapes to it. To spee
 const box = BABYLON.Mesh.CreateBox("box", 2, scene);
 ```
 
-A mesh is a way the engine creates geometric shapes, so material can be easily applied to them later on. In this case we're creating a box using the `Mesh.CreateBox` method with it's own name, a size of 2, and a declaration of which scene we want it added to.
+A mesh is a way the engine creates geometric shapes, so material can be easily applied to them later on. In this case we're creating a box using the `Mesh.CreateBox` method with its own name, a size of 2, and a declaration of which scene we want it added to.
 
 > **Note:** The size or position values (e.g. for the box size) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.
 
-If you save and refresh now, your object will look like a square, because it's facing the camera. The good thing about objects is that we can move them on the scene however we want, for example rotating and scaling. Let's apply a little bit of rotation to the box, so we can see more than one face — again, add these lines below the previous one:
+If you save and refresh now, your object will look like a square, because it's facing the camera. The good thing about objects is that we can move them on the scene however we want, for example rotating and scaling. Let's apply a little rotation to the box, so we can see more than one face — again, add these lines below the previous one:
 
 ```js
 box.rotation.x = -0.2;

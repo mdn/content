@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Date.now
 ---
+
 {{JSRef}}
 
 The static **`Date.now()`** method returns the number of
@@ -19,13 +20,13 @@ milliseconds elapsed since the [ECMAScript epoch](/en-US/docs/Web/JavaScript/Ref
 
 ## Syntax
 
-```js
+```js-nolint
 Date.now()
 ```
 
 ### Return value
 
-A {{jsxref("Number")}} representing the milliseconds elapsed since the UNIX epoch.
+A number representing the milliseconds elapsed since the [ECMAScript epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_ecmascript_epoch_and_timestamps).
 
 ## Examples
 
@@ -33,7 +34,7 @@ A {{jsxref("Number")}} representing the milliseconds elapsed since the UNIX epoc
 
 To offer protection against timing attacks and fingerprinting, the precision of
 `Date.now()` might get rounded depending on browser settings.
-In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by
+In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by
 default and defaults to 20µs in Firefox 59; in 60 it will be 2ms.
 
 ```js

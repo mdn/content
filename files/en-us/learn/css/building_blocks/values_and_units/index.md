@@ -15,6 +15,7 @@ tags:
   - units
   - values
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
 
 Every property used in CSS has a value type defining the set of values that are allowed for that property. Taking a look at any property page on MDN will help you understand the values associated with a value type that are valid for any particular property. In this lesson we will take a look at some of the most frequently used value types, and their most common values and units.
@@ -53,7 +54,7 @@ Every property used in CSS has a value type defining the set of values that are 
 
 In CSS specifications and on the property pages here on MDN you will be able to spot value types as they will be surrounded by angle brackets, such as [`<color>`](/en-US/docs/Web/CSS/color_value) or [`<length>`](/en-US/docs/Web/CSS/length). When you see the value type `<color>` as valid for a particular property, that means you can use any valid color as a value for that property, as listed on the [`<color>`](/en-US/docs/Web/CSS/color_value) reference page.
 
-> **Note:** You'll also see CSS value types referred to as _data types_. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value type. The term *value* refers to any particular expression supported by a value type that you choose to use.
+> **Note:** You'll also see CSS value types referred to as _data types_. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value type. The term _value_ refers to any particular expression supported by a value type that you choose to use.
 
 > **Note:** Yes, CSS value types tend to be denoted using angle brackets to differentiate them from CSS properties (e.g., the {{cssxref("color")}} property, versus the [`<color>`](/en-US/docs/Web/CSS/color_value) data type). You might get confused between CSS data types and HTML elements too, as they both use angle brackets, but this is unlikely — they are used in very different contexts.
 
@@ -62,7 +63,7 @@ In the following example, we have set the color of our heading using a keyword, 
 ```css
 h1 {
   color: black;
-  background-color: rgb(197,93,161);
+  background-color: rgb(197, 93, 161);
 }
 ```
 
@@ -146,15 +147,15 @@ The numeric type you will come across most frequently is [`<length>`](/en-US/doc
 
 The following are all **absolute** length units — they are not relative to anything else, and are generally considered to always be the same size.
 
-| Unit | Name                | Equivalent to        |
-| ---- | ------------------- | -------------------- |
+| Unit | Name                | Equivalent to            |
+| ---- | ------------------- | ------------------------ |
 | `cm` | Centimeters         | 1cm = 37.8px = 25.2/64in |
-| `mm` | Millimeters         | 1mm = 1/10th of 1cm  |
-| `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm   |
-| `in` | Inches              | 1in = 2.54cm = 96px  |
-| `pc` | Picas               | 1pc = 1/6th of 1in   |
-| `pt` | Points              | 1pt = 1/72nd of 1in  |
-| `px` | Pixels              | 1px = 1/96th of 1in  |
+| `mm` | Millimeters         | 1mm = 1/10th of 1cm      |
+| `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm       |
+| `in` | Inches              | 1in = 2.54cm = 96px      |
+| `pc` | Picas               | 1pc = 1/6th of 1in       |
+| `pt` | Points              | 1pt = 1/72nd of 1in      |
+| `px` | Pixels              | 1px = 1/96th of 1in      |
 
 Most of these units are more useful when used for print, rather than screen output. For example, we don't typically use `cm` (centimeters) on screen. The only value that you will commonly use is `px` (pixels).
 
@@ -266,7 +267,7 @@ To start with, we set 16px as the font size on the `<html>` element.
 
 **To recap, the rem unit means "The root element's font-size"** (rem stands for "root em"). The {{htmlelement("li")}} elements inside the {{htmlelement("ul")}} with a `class` of `rems` take their sizing from the root element (`<html>`). This means that each successive level of nesting does not keep getting larger.
 
-However, if you change the `<html>` `font-size` in the CSS you will see that everything else changes relative to it — both `rem`- and `em`-sized text.
+However, if you change the `<html>` `font-size` in the CSS you will see that everything else changes relative to it — both `rem` and `em` sized text.
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/em-rem.html", '100%', 1100)}}
 
@@ -388,7 +389,7 @@ In the following example we have positioned a background image 40px from the top
 
 Throughout the examples above, we've seen places where keywords are used as a value (for example `<color>` keywords like `red`, `black`, `rebeccapurple`, and `goldenrod`). These keywords are more accurately described as _identifiers_, a special value that CSS understands. As such they are not quoted — they are not treated as strings.
 
-There are places where you use strings in CSS. For example, [when specifying generated content](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#generating_content_with_before_and_after). In this case, the value is quoted to demonstrate that it is a string. In the below example we use unquoted color keywords along with a quoted generated content string.
+There are places where you use strings in CSS. For example, [when specifying generated content](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#generating_content_with_before_and_after). In this case, the value is quoted to demonstrate that it is a string. In the example below, we use unquoted color keywords along with a quoted generated content string.
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 600)}}
 

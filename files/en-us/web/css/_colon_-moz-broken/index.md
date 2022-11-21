@@ -1,6 +1,7 @@
 ---
-title: ':-moz-broken'
+title: ":-moz-broken"
 slug: Web/CSS/:-moz-broken
+page-type: css-pseudo-class
 tags:
   - CSS
   - CSS:Mozilla Extensions
@@ -11,6 +12,7 @@ tags:
   - Selector
 browser-compat: css.selectors.-moz-broken
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`:-moz-broken`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that matches elements representing broken image links.
@@ -28,7 +30,7 @@ The **`:-moz-broken`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web
 ### HTML
 
 ```html
-<img src="broken.jpg" alt="This image is broken. :-(">
+<img src="broken.jpg" alt="This image is broken. :-(" />
 ```
 
 ### CSS

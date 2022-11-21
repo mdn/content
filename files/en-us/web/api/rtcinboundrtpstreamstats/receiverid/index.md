@@ -20,6 +20,7 @@ tags:
   - receiverId
 browser-compat: api.RTCInboundRtpStreamStats.receiverId
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`receiverId`** property of the

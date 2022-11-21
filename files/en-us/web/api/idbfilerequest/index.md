@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.IDBFileRequest
 ---
+
 {{APIRef("IndexedDB")}}{{deprecated_header}}
 
 > **Note:** The three non-standard interfaces {{domxref("IDBMutableFile")}}, {{domxref("IDBFileHandle")}}, and {{domxref("IDBFileRequest")}} are [disabled by default](#browser_compatibility).
@@ -19,15 +20,15 @@ browser-compat: api.IDBFileRequest
 
 The **`IDBFileRequest`** interface provides some extra properties necessary for the {{domxref("IDBFileHandle")}} objects.
 
-## Properties
+## Instance properties
 
 _`IDBFileRequest` also inherits properties from the {{domxref("EventTarget")}} interface
 as well as the `then()` method from the defunct `DOMRequest` interface described below_.
 
-- {{domxref("IDBFileRequest.lockedFile")}} {{readonlyinline}}
+- {{domxref("IDBFileRequest.lockedFile")}} {{ReadOnlyInline}}
   - : The {{domxref("IDBMutableFile")}} object from which the request was started.
 
-## Methods
+## Instance methods
 
 - `DOMRequest.then()`
   - : Returns a `DOMRequest` and takes two callback functions, one for its success and one for its failure cases, as parameters.

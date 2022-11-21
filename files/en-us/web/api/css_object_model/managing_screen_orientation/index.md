@@ -9,13 +9,14 @@ tags:
   - Guide
   - Screen Orientation
 ---
+
 {{DefaultAPISidebar("Screen Orientation API")}}{{SeeCompatTable}}
 
-Screen orientation is something slightly different than [device orientation](/en-US/docs/Web/API/Events/Detecting_device_orientation). Even if a device doesn't have the capacity to detect its own orientation, a screen always has one. And if a device is able to know its orientation, it's good to have the ability to control the screen orientation in order to preserve or adapt the interface of a web application.
+The term _screen orientation_ refers to whether a browser [viewport](/en-US/docs/Glossary/Viewport) is in landscape mode (that is, the width of the viewport is greater than its height), or else in portrait mode (the height of the viewport is greater than its width)
 
-There are several ways to handle screen orientation, both with CSS and JavaScript. The first is the [orientation media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#orientation). This lets content adjust its layout using CSS, based on whether the browser window is in landscape mode (that is, its width is greater than its height) or portrait mode (its height is greater than its width).
+CSS provides the [`orientation`](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#orientation) media feature to allow adjusting layout based on screen orientation.
 
-The second way is the JavaScript Screen orientation API that can be used to get the current orientation of the screen itself and eventually lock it.
+The [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API) provides a programmatic JavaScript API for working with screen orientation — including the ability to lock the viewport to a specific orientation.
 
 ## Adjusting layout based on the orientation
 
@@ -30,7 +31,12 @@ Let's have an example with the following HTML code
   <li>C</li>
 </ul>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia nisi nec sem viverra vitae fringilla nulla ultricies. In ac est dolor, quis tincidunt leo. Cras commodo quam non tortor consectetur eget rutrum dolor ultricies. Ut interdum tristique dapibus. Nullam quis malesuada est.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia nisi nec
+  sem viverra vitae fringilla nulla ultricies. In ac est dolor, quis tincidunt
+  leo. Cras commodo quam non tortor consectetur eget rutrum dolor ultricies. Ut
+  interdum tristique dapibus. Nullam quis malesuada est.
+</p>
 ```
 
 CSS relies on the orientation media query to handle specific styles based on the screen orientation
@@ -80,7 +86,7 @@ li {
 Once we have some common styles we can start defining a special case for the orientation
 
 ```css
-/* For portrait, we want the tool bar on top */
+/* For portrait, we want the toolbar on top */
 
 @media screen and (orientation: portrait) {
   #toolbar {
@@ -88,7 +94,7 @@ Once we have some common styles we can start defining a special case for the ori
   }
 }
 
-/* For landscape, we want the tool bar stick on the left */
+/* For landscape, we want the toolbar stick on the left */
 
 @media screen and (orientation: landscape) {
   #toolbar {
@@ -152,13 +158,15 @@ screen.addEventListener("orientationchange", () => {
 
 ### Preventing orientation change
 
-Any web application can lock the screen to suits its own needs. The screen is locked using the {{domxref("Screen.lockOrientation()")}} method and unlocked using the {{domxref("Screen.unlockOrientation()")}}.
+Any web application can lock the screen to suits its own needs. The screen is locked using the {{domxref("ScreenOrientation.lock()", "screen.orientation.lock()")}} method and unlocked using the {{domxref("ScreenOrientation.unlock()", "screen.orientation.unlock()")}} method.
 
-The {{domxref("Screen.lockOrientation()")}} accepts a string (or series of strings) to define the kind of lock to apply. Accepted values are: `portrait-primary`, `portrait-secondary`, `landscape-primary`, `landscape-secondary`, `portrait`, `landscape` (See {{domxref("Screen.lockOrientation")}}  to know more about each of those values).
+The {{domxref("ScreenOrientation.lock()", "screen.orientation.lock()")}} method accepts one of the following values to define the kind of lock to apply: `any`, `natural`. `portrait-primary`, `portrait-secondary`, `landscape-primary`, `landscape-secondary`, `portrait`, and `landscape`:
 
 ```js
-screen.lockOrientation('landscape');
+{{domxref("ScreenOrientation.lock()", "screen.orientation.lock()")}} ;
 ```
+
+It returns a [promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves after the lock succeeds.
 
 > **Note:** A screen lock is web application dependent. If application A is locked to `landscape` and application B is locked to `portrait`, switching from application A to B or B to A will not fire an {{domxref("Window.orientationchange_event", "orientationchange")}} event because both applications will keep the orientation they had.
 >
@@ -166,9 +174,7 @@ screen.lockOrientation('landscape');
 
 ## See also
 
-- {{domxref("Screen.orientation")}}
-- {{domxref("Screen.lockOrientation()")}}
-- {{domxref("Screen.unlockOrientation()")}}
+- {{domxref("Screen.orientation", "screen.orientation")}}
+- {{domxref("ScreenOrientation")}}
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} event
 - [The orientation media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#orientation)
-- [A short introduction to media queries in Firefox 3.5](https://hacks.mozilla.org/2009/06/media-queries/)

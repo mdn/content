@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.USBDevice.opened
 ---
+
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
 The **`opened`** read only property of the

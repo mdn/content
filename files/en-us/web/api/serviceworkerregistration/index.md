@@ -13,6 +13,7 @@ tags:
   - Workers
 browser-compat: api.ServiceWorkerRegistration
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`ServiceWorkerRegistration`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) represents the service worker registration. You register a service worker to control one or more pages that share the same origin.
@@ -23,30 +24,30 @@ The lifetime of a service worker registration is beyond that of the `ServiceWork
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Also implements properties from its parent interface,_ {{domxref("EventTarget")}}.
 
-- {{domxref("ServiceWorkerRegistration.active")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerRegistration.active")}} {{ReadOnlyInline}}
   - : Returns a service worker whose state is `activating` or `activated`. This is initially set to `null`. An active worker will control a {{domxref("Client")}} if the client's URL falls within the scope of the registration (the `scope` option set when {{domxref("ServiceWorkerContainer.register")}} is first called.)
-- {{domxref("ServiceWorkerRegistration.index")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerRegistration.index")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a reference to the {{domxref("ContentIndex")}} interface, for managing indexed content for offline viewing.
-- {{domxref("ServiceWorkerRegistration.installing")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerRegistration.installing")}} {{ReadOnlyInline}}
   - : Returns a service worker whose state is `installing`. This is initially set to `null`.
-- {{domxref("ServiceWorkerRegistration.navigationPreload")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerRegistration.navigationPreload")}} {{ReadOnlyInline}}
   - : Returns the instance of {{domxref("NavigationPreloadManager")}} associated with the current service worker registration.
-- {{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerRegistration.pushManager")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("PushManager")}} interface for managing push subscriptions including subscribing, getting an active subscription, and accessing push permission status.
-- {{domxref("ServiceWorkerRegistration.scope")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerRegistration.scope")}} {{ReadOnlyInline}}
   - : Returns a unique identifier for a service worker registration. This must be on the same origin as the document that registers the {{domxref("ServiceWorker")}}.
-- {{domxref("ServiceWorkerRegistration.sync")}} {{non-standard_inline}} {{readonlyinline}}
+- {{domxref("ServiceWorkerRegistration.sync")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a reference to the {{domxref("SyncManager")}} interface, which manages background synchronization processes.
-- {{domxref("ServiceWorkerRegistration.waiting")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerRegistration.waiting")}} {{ReadOnlyInline}}
   - : Returns a service worker whose state is `installed`. This is initially set to `null`.
-- {{domxref("ServiceWorkerRegistration.updateViaCache")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerRegistration.updateViaCache")}} {{ReadOnlyInline}}
   - : Returns a string indicating what is the cache strategy to use when updating the service worker scripts. It can be one of the following: `imports`, `all`, or `none`.
 
-## Methods
+## Instance methods
 
 _Also implements methods from its parent interface,_ {{domxref("EventTarget")}}.
 
@@ -69,24 +70,28 @@ _Also implements methods from its parent interface,_ {{domxref("EventTarget")}}.
 In this example, the code first checks whether the browser supports service workers and if so registers one. Next, it adds an `updatefound` listener in which it uses the service worker registration to listen for further changes to the service worker's state. If the service worker hasn't changed since the last time it was registered, then the `updatefound` event will not be fired.
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js')
-  .then((registration) => {
-    registration.addEventListener('updatefound', () => {
-      // If updatefound is fired, it means that there's
-      // a new service worker being installed.
-      const installingWorker = registration.installing;
-      console.log('A new service worker is being installed:', installingWorker);
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/sw.js")
+    .then((registration) => {
+      registration.addEventListener("updatefound", () => {
+        // If updatefound is fired, it means that there's
+        // a new service worker being installed.
+        const installingWorker = registration.installing;
+        console.log(
+          "A new service worker is being installed:",
+          installingWorker
+        );
 
-      // You can listen for changes to the installing service worker's
-      // state via installingWorker.onstatechange
+        // You can listen for changes to the installing service worker's
+        // state via installingWorker.onstatechange
+      });
+    })
+    .catch((error) => {
+      console.error(`Service worker registration failed: ${error}`);
     });
-  })
-  .catch((error) => {
-    console.error(`Service worker registration failed: ${error}`);
-  });
 } else {
-  console.error('Service workers are not supported.');
+  console.error("Service workers are not supported.");
 }
 ```
 
@@ -101,7 +106,7 @@ if ('serviceWorker' in navigator) {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

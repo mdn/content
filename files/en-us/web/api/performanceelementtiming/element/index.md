@@ -8,9 +8,11 @@ tags:
   - Reference
   - element
   - PerformanceElementTiming
+  - Experimental
 browser-compat: api.PerformanceElementTiming.element
 ---
-{{DefaultAPISidebar("Element Timing")}}
+
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`element`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns an {{domxref("Element")}} which is a literal representation of the associated element.
 
@@ -24,7 +26,7 @@ In this example calling `entry.element` will log to the console
 `<img src="image.jpg" alt="a nice image" elementtiming="big-image">`.
 
 ```html
-<img src="image.jpg" alt="a nice image" elementtiming="big-image">
+<img src="image.jpg" alt="a nice image" elementtiming="big-image" />
 ```
 
 ```js

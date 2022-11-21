@@ -10,6 +10,7 @@ tags:
   - events
 browser-compat: api.ServiceWorkerGlobalScope.sync_event
 ---
+
 {{DefaultAPISidebar("Background Sync")}}
 
 The **`sync`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when the page (or worker) that registered the event with the {{domxref('SyncManager')}} is running and as soon as network connectivity is available.
@@ -28,7 +29,7 @@ onsync = (event) => { };
 
 ## Event type
 
-An {{domxref("SyncEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("SyncEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("SyncEvent")}}
 
@@ -36,9 +37,9 @@ An {{domxref("SyncEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
-- {{domxref("SyncEvent.tag")}} {{readonlyinline}}
+- {{domxref("SyncEvent.tag")}} {{ReadOnlyInline}}
   - : Returns the developer-defined identifier for this `SyncEvent`.
-- {{domxref("SyncEvent.lastChance")}} {{readonlyinline}}
+- {{domxref("SyncEvent.lastChance")}} {{ReadOnlyInline}}
   - : Returns `true` if the user agent will not make further synchronization attempts after the current attempt.
 
 ## Examples
@@ -71,7 +72,5 @@ self.onsync = (event) => {
 
 ## See also
 
-<ul>
- <li><a href="https://web.dev/periodic-background-sync/">Richer offline experiences with the Periodic Background Sync API</a></li>
- <li><a href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A Periodic Background Sync demo app</a></li>
-</ul>
+- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

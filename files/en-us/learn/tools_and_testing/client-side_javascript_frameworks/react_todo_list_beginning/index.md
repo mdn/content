@@ -12,6 +12,7 @@ tags:
   - Style
   - client-side
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 Let's say that we've been tasked with creating a proof-of-concept in React – an app that allows users to add, edit, and delete tasks they want to work on, and also mark tasks as complete without deleting them. This article will walk you through putting the basic `App` component structure and styling in place, ready for individual component definition and interactivity, which we'll add later.
@@ -73,7 +74,7 @@ Then, copy and paste the following commands into your terminal to delete some un
 # Move into the src directory of your project
 cd src
 # Delete a few files
-rm -- App.test.js App.css logo.svg serviceWorker.js setupTests.js
+rm -- App.test.js App.css logo.svg reportWebVitals.js setupTests.js
 # Move back up to the root of the project
 cd ..
 ```
@@ -85,13 +86,13 @@ Notes:
 
 ## Project starter code
 
-As a starting point for this project, we're going to provide two things: An `App()` function to replace the one you have now, and some CSS to style your app.
+As a starting point for this project, we're going to provide two things: an `App()` function to replace the one you have now, and some CSS to style your app.
 
 ### The JSX
 
 Copy the following snippet to your clipboard, then paste it into `App.js` so that it replaces the existing `App()` function:
 
-```js
+```jsx
 function App(props) {
   return (
     <div className="todoapp stack-large">
@@ -207,7 +208,7 @@ It's ugly, and doesn't function yet, but that's okay — we'll style it in a mom
 - We have a [`<form>`](/en-US/docs/Web/HTML/Element/form) element, with an [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text) for writing out a new task, and a button to submit the form.
 - We have an array of buttons that will be used to filter our tasks.
 - We have a heading that tells us how many tasks remain.
-- We have our 3 tasks, arranged in an un-ordered list. Each task is a list item ([`<li>`](/en-US/docs/Web/HTML/Element/li)), and has buttons to edit and delete it and a checkbox to check it off as done.
+- We have our 3 tasks, arranged in an unordered list. Each task is a list item ([`<li>`](/en-US/docs/Web/HTML/Element/li)), and has buttons to edit and delete it and a checkbox to check it off as done.
 
 The form will allow us to _make_ tasks; the buttons will let us _filter_ them; the heading and list are our way to _read_ them. The UI for _editing_ a task is conspicuously absent for now. That's okay – we'll write that later.
 
@@ -225,7 +226,7 @@ You may notice some unusual attributes here. For example:
 
 Here, `aria-pressed` tells assistive technology (like screen readers) that the button can be in one of two states: `pressed` or `unpressed`. Think of these as analogs for `on` and `off`. Setting a value of `true` means that the button is pressed by default.
 
-The class `visually-hidden` has no effect yet, because we have not included any CSS. Once we have put our styles in place, though, any element with this class will be hidden from sighted users and still available to screen reader users — this is because these words are not needed by sighted users; they are there to provide more information about what the button does for screenreader users that do not have the extra visual context to help them.
+The class `visually-hidden` has no effect yet, because we have not included any CSS. Once we have put our styles in place, though, any element with this class will be hidden from sighted users and still available to screen reader users — this is because these words are not needed by sighted users; they are there to provide more information about what the button does for screen reader users that do not have the extra visual context to help them.
 
 Further down, you can find our [`<ul>`](/en-US/docs/Web/HTML/Element/ul) element:
 
@@ -233,24 +234,23 @@ Further down, you can find our [`<ul>`](/en-US/docs/Web/HTML/Element/ul) element
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
-  aria-labelledby="list-heading"
->
+  aria-labelledby="list-heading">…</ul>
 ```
 
-The `role` attribute helps assistive technology explain what kind of element a tag represents. A `<ul>` is treated like a list by default, but the styles we're about to add will break that functionality. This role will restore the "list" meaning to the `<ul>`  element. If you want to learn more about why this is necessary, you can check out [Scott O'Hara's article, "Fixing Lists"](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html).
+The `role` attribute helps assistive technology explain what kind of element a tag represents. A `<ul>` is treated like a list by default, but the styles we're about to add will break that functionality. This role will restore the "list" meaning to the `<ul>` element. If you want to learn more about why this is necessary, you can check out [Scott O'Hara's article, "Fixing Lists"](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html).
 
 The `aria-labelledby` attribute tells assistive technologies that we're treating our list heading as the label that describes the purpose of the list beneath it. Making this association gives the list a more informative context, which could help screen reader users better understand the purpose of it.
 
 Finally, the labels and inputs in our list items have some attributes unique to JSX:
 
-```html
+```jsx
 <input id="todo-0" type="checkbox" defaultChecked={true} />
 <label className="todo-label" htmlFor="todo-0">
   Eat
 </label>
 ```
 
-The `defaultChecked` attribute in the `<input/ >`  tag tells React to check this checkbox initially. If we were to use `checked`, as we would in regular HTML, React would log some warnings into our browser console relating to handling events on the checkbox, which we want to avoid. Don't worry too much about this for now — we will cover this later on when we get to using events.
+The `defaultChecked` attribute in the `<input/ >` tag tells React to check this checkbox initially. If we were to use `checked`, as we would in regular HTML, React would log some warnings into our browser console relating to handling events on the checkbox, which we want to avoid. Don't worry too much about this for now — we will cover this later on when we get to using events.
 
 The `htmlFor` attribute corresponds to the `for` attribute used in HTML. We cannot use `for` as an attribute in JSX because `for` is a reserved word, so React uses `htmlFor` instead.
 
@@ -297,7 +297,7 @@ button {
   line-height: normal;
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
-  -webkit-appearance: none;
+  appearance: none;
 }
 button::-moz-focus-inner {
   border: 0;

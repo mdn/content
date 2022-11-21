@@ -1,6 +1,7 @@
 ---
 title: revert
 slug: Web/CSS/revert
+page-type: css-keyword
 tags:
   - CSS
   - CSS Cascade
@@ -13,6 +14,7 @@ tags:
   - revert
 browser-compat: css.types.global_keywords.revert
 ---
+
 {{CSSRef}}
 
 The **`revert`** CSS keyword reverts the cascaded value of the property from its current value to the value the property would have had if no changes had been made by the current **{{Glossary("style origin")}}** to the current element. Thus, it resets the property to its inherited value if it inherits from its parent or to the default value established by the user agent's stylesheet (or by user styles, if any exist). It can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}.
@@ -76,9 +78,7 @@ Reverting all values is useful in a situation where you've made several style ch
 ```html
 <h3>This will have custom styles</h3>
 <p>Just some text</p>
-<h3 style="all: revert">
-  This should be reverted to browser/user defaults.
-</h3>
+<h3 style="all: revert">This should be reverted to browser/user defaults.</h3>
 <p>Just some text</p>
 ```
 
@@ -118,9 +118,15 @@ Reverting effectively removes the value for the element you select with some rul
 #### CSS
 
 ```css
-section { color: darkgreen }
-p { color: red }
-section.with-revert { color: revert }
+section {
+  color: darkgreen;
+}
+p {
+  color: red;
+}
+section.with-revert {
+  color: revert;
+}
 ```
 
 Notice how paragraph still has a red color even though a color property for the section was reverted. Also note that both the header and plain text node are black. This is exactly the same as if `section { color: darkgreen }` would not exist for the second section.

@@ -3,9 +3,9 @@ title: Scope
 slug: Glossary/Scope
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
+
 The **scope** is the current context of execution in which {{glossary("value","values")}} and expressions are "visible" or can be referenced. If a {{glossary("variable")}} or expression is not in the current scope, it will not be available for use. Scopes can also be layered in a hierarchy, so that child scopes have access to parent scopes, but not vice versa.
 
 JavaScript has the following kinds of scopes:
@@ -20,20 +20,20 @@ In addition, variables declared with [`let`](/en-US/docs/Web/JavaScript/Referenc
 
 A {{glossary("function")}} creates a scope, so that (for example) a variable defined exclusively within the function cannot be accessed from outside the function or within other functions. For instance, the following is invalid:
 
-```js
+```js example-bad
 function exampleFunction() {
-  var x = "declared inside function";  // x can only be used in exampleFunction
+  const x = "declared inside function"; // x can only be used in exampleFunction
   console.log("Inside function");
   console.log(x);
 }
 
-console.log(x);  // Causes error
+console.log(x); // Causes error
 ```
 
 However, the following code is valid due to the variable being declared outside the function, making it global:
 
-```js
-var x = "declared outside function";
+```js example-good
+const x = "declared outside function";
 
 exampleFunction();
 
@@ -48,14 +48,14 @@ console.log(x);
 
 Blocks only scope `let` and `const` declarations, but not `var` declarations.
 
-```js
+```js example-good
 {
   var x = 1;
 }
 console.log(x); // 1
 ```
 
-```js
+```js example-bad
 {
   const x = 1;
 }
@@ -64,4 +64,4 @@ console.log(x); // ReferenceError: x is not defined
 
 ## See also
 
-- [Scope (computer science)](https://en.wikipedia.org/wiki/Scope_(computer_science)) on Wikipedia
+- [Scope (computer science)](<https://en.wikipedia.org/wiki/Scope_(computer_science)>) on Wikipedia

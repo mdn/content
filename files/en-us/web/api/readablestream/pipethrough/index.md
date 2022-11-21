@@ -11,6 +11,7 @@ tags:
   - pipeThrough
 browser-compat: api.ReadableStream.pipeThrough
 ---
+
 {{APIRef("Streams")}}
 
 The **`pipeThrough()`** method of the {{domxref("ReadableStream")}} interface provides a chainable way of piping the current stream through a transform stream or any other writable/readable pair.
@@ -19,7 +20,7 @@ Piping a stream will generally lock it for the duration of the pipe, preventing 
 
 ## Syntax
 
-```js
+```js-nolint
 pipeThrough(transformStream)
 pipeThrough(transformStream, options)
 ```
@@ -27,6 +28,7 @@ pipeThrough(transformStream, options)
 ### Parameters
 
 - `transformStream`
+
   - : A {{domxref("TransformStream")}} (or an object with the structure
     `{writable, readable}`) consisting of a readable stream and a writable
     stream working together to transform some data from one form to another. Data written
@@ -72,7 +74,7 @@ The `readable` side of the `transformStream`.
 
 ## Examples
 
-In the following example (see [Unpack chunks of a PNG](https://mdn.github.io/dom-examples/streams/png-transform-stream/) for the full code running live, and [png-transform-stream](https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream) for the source code), an image is fetched and its body retrieved as a {{domxref("ReadableStream")}}.
+In the following example (see [Unpack chunks of a PNG](https://mdn.github.io/dom-examples/streams/png-transform-stream/) for the full code running live, and [png-transform-stream](https://github.com/mdn/dom-examples/tree/main/streams/png-transform-stream) for the source code), an image is fetched and its body retrieved as a {{domxref("ReadableStream")}}.
 
 Next, we log the contents of the readable stream, use `pipeThrough()` to send it to a new function that creates a gray-scaled version of the stream, then log the new stream's contents too.
 

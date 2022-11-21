@@ -9,9 +9,11 @@ tags:
   - Property
   - Reference
   - TaskAttributionTiming
+  - Experimental
 browser-compat: api.TaskAttributionTiming.containerName
 ---
-{{SeeCompatTable}}{{APIRef("Long Tasks")}}
+
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`containerName`** readonly property of the
 {{domxref("TaskAttributionTiming")}} interface returns the container's `name`

@@ -1,5 +1,5 @@
 ---
-title: import
+title: import()
 slug: Web/JavaScript/Reference/Operators/import
 tags:
   - ECMAScript 2015
@@ -11,15 +11,16 @@ tags:
   - import
 browser-compat: javascript.operators.import
 ---
+
 {{jsSidebar("Operators")}}
 
-The `import()` call, commonly called _dynamic import_, is a function-like expression that allows loading an ECMAScript module asynchronously and dynamically into a potentially non-module environment.
+The **`import()`** syntax, commonly called _dynamic import_, is a function-like expression that allows loading an ECMAScript module asynchronously and dynamically into a potentially non-module environment.
 
 Unlike the [declaration-style counterpart](/en-US/docs/Web/JavaScript/Reference/Statements/import), dynamic imports are only evaluated when needed, and permits greater syntactic flexibility.
 
 ## Syntax
 
-```js
+```js-nolint
 import(moduleName)
 ```
 
@@ -32,7 +33,7 @@ The `import()` call is a syntax that closely resembles a function call, but `imp
 
 ### Return value
 
-It returns a promise which fulfills to an object containing all exports from `moduleName`, with the same shape as a namespace import (`import * as name from moduleName`): an object with `null` prototype, and the default export available as a key named `default`.
+It returns a promise which fulfills to an object containing all exports from `moduleName`, with the same shape as a namespace import (`import * as name from moduleName`): a [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed) object with [`null` prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). All keys are [enumerable](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) in lexicographic order (i.e. the default behavior of [`Array.prototype.sort()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#description)), with the default export available as a key called `default`.
 
 ## Description
 

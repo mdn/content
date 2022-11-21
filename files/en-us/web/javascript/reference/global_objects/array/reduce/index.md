@@ -13,6 +13,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.reduce
 ---
+
 {{JSRef}}
 
 The **`reduce()`** method executes a user-supplied "reducer" callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element.
@@ -30,46 +31,51 @@ The reducer walks through the array element-by-element, at each step adding the 
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
-reduce((previousValue, currentValue) => { /* … */ } )
-reduce((previousValue, currentValue, currentIndex) => { /* … */ } )
-reduce((previousValue, currentValue, currentIndex, array) => { /* … */ } )
+reduce((accumulator, currentValue) => { /* … */ })
+reduce((accumulator, currentValue, currentIndex) => { /* … */ })
+reduce((accumulator, currentValue, currentIndex, array) => { /* … */ })
 
-reduce((previousValue, currentValue) => { /* … */ } , initialValue)
-reduce((previousValue, currentValue, currentIndex) => { /* … */ } , initialValue)
-reduce((previousValue, currentValue, currentIndex, array) => { /* … */ }, initialValue)
+reduce((accumulator, currentValue) => { /* … */ }, initialValue)
+reduce((accumulator, currentValue, currentIndex) => { /* … */ }, initialValue)
+reduce((accumulator, currentValue, currentIndex, array) => { /* … */ }, initialValue)
 
 // Callback function
 reduce(callbackFn)
 reduce(callbackFn, initialValue)
 
 // Inline callback function
-reduce(function(previousValue, currentValue) { /* … */ })
-reduce(function(previousValue, currentValue, currentIndex) { /* … */ })
-reduce(function(previousValue, currentValue, currentIndex, array) { /* … */ })
+reduce(function (accumulator, currentValue) { /* … */ })
+reduce(function (accumulator, currentValue, currentIndex) { /* … */ })
+reduce(function (accumulator, currentValue, currentIndex, array) { /* … */ })
 
-reduce(function(previousValue, currentValue) { /* … */ }, initialValue)
-reduce(function(previousValue, currentValue, currentIndex) { /* … */ }, initialValue)
-reduce(function(previousValue, currentValue, currentIndex, array) { /* … */ }, initialValue)
+reduce(function (accumulator, currentValue) { /* … */ }, initialValue)
+reduce(function (accumulator, currentValue, currentIndex) { /* … */ }, initialValue)
+reduce(function (accumulator, currentValue, currentIndex, array) { /* … */ }, initialValue)
 ```
 
 ### Parameters
 
 - `callbackFn`
-  - : A "reducer" function called with the following arguments:
-    - `previousValue`
+
+  - : A function to execute for each element in the array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduce()`.
+
+    The function is called with the following arguments:
+
+    - `accumulator`
       - : The value resulting from the previous call to `callbackFn`. On first call, `initialValue` if specified, otherwise the value of `array[0]`.
     - `currentValue`
       - : The value of the current element. On first call, the value of `array[0]` if an `initialValue` was specified, otherwise the value of `array[1]`.
     - `currentIndex`
       - : The index position of `currentValue` in the array. On first call, `0` if `initialValue` was specified, otherwise `1`.
     - `array`
-      - : The array being traversed.
+      - : The array `reduce()` was called upon.
+
 - `initialValue` {{optional_inline}}
-  - : A value to which `previousValue` is initialized the first time the callback is called.
+  - : A value to which `accumulator` is initialized the first time the callback is called.
     If `initialValue` is specified, that also causes `currentValue` to be initialized to the first value in the array.
-    If `initialValue` is _not_ specified, `previousValue` is initialized to the first value in the array, and `currentValue` is initialized to the second value in the array.
+    If `initialValue` is _not_ specified, `accumulator` is initialized to the first value in the array, and `currentValue` is initialized to the second value in the array.
 
 ### Return value
 
@@ -83,22 +89,27 @@ The value that results from running the "reducer" callback function to completio
 
 ## Description
 
-The `reduce()` method takes two arguments: a callback function and an optional initial value.
-If an initial value is provided, `reduce()` calls the "reducer" callback function on each element in the array, in order. If no initial value is provided, `reduce()` calls the callback function on each element in the array after the first element.
+The `reduce()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It runs a "reducer" callback function over all elements in the array, in ascending-index order, and accumulates them into a single value. Every time, the return value of `callbackFn` is passed into `callbackFn` again on next invocation as `accumulator`. The final value of `accumulator` (which is the value returned from `callbackFn` on the final iteration of the array) becomes the return value of `reduce()`.
 
-`reduce()` returns the value that is returned from the callback function on the final iteration of the array.
+`callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
+
+Unlike other [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods), `reduce()` does not accept a `thisArg` argument. `callbackFn` is always called with `undefined` as `this`, which gets substituted with `globalThis` if `callbackFn` is non-strict.
+
+`reduce()` is a central concept in [functional programming](https://en.wikipedia.org/wiki/Functional_programming), where it's not possible to mutate any value, so in order to accumulate all values in an array, one must return a new accumulator value on every iteration. This convention propagates to JavaScript's `reduce()`: you should use [spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or other copying methods where possible to create new arrays and objects as the accumulator, rather than mutating the existing one. If you decided to mutate the accumulator instead of copying it, remember to still return the modified object in the callback, or the next iteration will receive undefined.
+
+`reduce()` does not mutate the array on which it is called, but the function provided as `callbackFn` can. Note, however, that the length of the array is saved _before_ the first invocation of `callbackFn`. Therefore:
+
+- `callbackFn` will not visit any elements added beyond the array's initial length when the call to `reduce()` began.
+- Changes to already-visited indexes do not cause `callbackFn` to be invoked on them again.
+- If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time that element gets visited. [Deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) elements are not visited.
+
+> **Warning:** Concurrent modifications of the kind described above frequently lead to hard-to-understand code and are generally to be avoided (except in special cases).
+
+The `reduce()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ### When to not use reduce()
 
-Recursive functions like `reduce()` can be powerful but sometimes difficult to understand, especially for less experienced JavaScript developers. If code becomes clearer when using other array methods, developers must weigh the readability tradeoff against the other benefits of using `reduce()`. In cases where `reduce()` is the best choice, documentation and semantic variable naming can help mitigate readability drawbacks.
-
-### Behavior during array mutations
-
-The `reduce()` method itself does not mutate the array it is used on. However, it is possible for code inside the callback function to mutate the array. These are the possible scenarios of array mutations and how `reduce()` behaves in these scenarios:
-
-- If elements are appended to the array _after_ `reduce()` begins to iterate over the array, the callback function does not iterate over the appended elements.
-- If existing elements of the array do get changed, the values passed to the callback function will be the values from the time that reduce() was first called on the array.
-- Array elements that are deleted _after_ the call to `reduce()` begins _and_ before being iterated over are not visited by `reduce()`.
+Recursive functions like `reduce()` can be powerful but sometimes difficult to understand, especially for less-experienced JavaScript developers. If code becomes clearer when using other array methods, developers must weigh the readability tradeoff against the other benefits of using `reduce()`. In cases where `reduce()` is the best choice, documentation and semantic variable naming can help mitigate readability drawbacks.
 
 ### Edge cases
 
@@ -113,16 +124,16 @@ const getMax = (a, b) => Math.max(a, b);
 
 // callback is invoked for each element in the array starting at index 0
 [1, 100].reduce(getMax, 50); // 100
-[    50].reduce(getMax, 10); // 50
+[50].reduce(getMax, 10); // 50
 
 // callback is invoked once for element at index 1
-[1, 100].reduce(getMax);     // 100
+[1, 100].reduce(getMax); // 100
 
 // callback is not invoked
-[    50].reduce(getMax);     // 50
-[      ].reduce(getMax, 1);  // 1
+[50].reduce(getMax); // 50
+[].reduce(getMax, 1); // 1
 
-[      ].reduce(getMax);     // TypeError
+[].reduce(getMax); // TypeError
 ```
 
 ## Examples
@@ -134,9 +145,11 @@ The code below shows what happens if we call `reduce()` with an array and no ini
 ```js
 const array = [15, 16, 17, 18, 19];
 
-function reducer(previous, current, index) {
-  const returns = previous + current;
-  console.log(`previous: ${previous}, current: ${current}, index: ${index}, returns: ${returns}`);
+function reducer(accumulator, currentValue, index) {
+  const returns = accumulator + currentValue;
+  console.log(
+    `accumulator: ${accumulator}, currentValue: ${currentValue}, index: ${index}, returns: ${returns}`,
+  );
   return returns;
 }
 
@@ -145,139 +158,35 @@ array.reduce(reducer);
 
 The callback would be invoked four times, with the arguments and return values in each call being as follows:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">
-        <code><var>callback</var></code> iteration
-      </th>
-      <th scope="col">
-        <code><var>previousValue</var></code>
-      </th>
-      <th scope="col">
-        <code><var>currentValue</var></code>
-      </th>
-      <th scope="col">
-        <code><var>currentIndex</var></code>
-      </th>
-      <th scope="col">
-        <code><var>array</var></code>
-      </th>
-      <th scope="col">return value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">first call</th>
-      <td><code>15</code></td>
-      <td><code>16</code></td>
-      <td><code>1</code></td>
-      <td><code>[15, 16, 17, 18, 19]</code></td>
-      <td><code>31</code></td>
-    </tr>
-    <tr>
-      <th scope="row">second call</th>
-      <td><code>31</code></td>
-      <td><code>17</code></td>
-      <td><code>2</code></td>
-      <td><code>[15, 16, 17, 18, 19]</code></td>
-      <td><code>48</code></td>
-    </tr>
-    <tr>
-      <th scope="row">third call</th>
-      <td><code>48</code></td>
-      <td><code>18</code></td>
-      <td><code>3</code></td>
-      <td><code>[15, 16, 17, 18, 19]</code></td>
-      <td><code>66</code></td>
-    </tr>
-    <tr>
-      <th scope="row">fourth call</th>
-      <td><code>66</code></td>
-      <td><code>19</code></td>
-      <td><code>4</code></td>
-      <td><code>[15, 16, 17, 18, 19]</code></td>
-      <td><code>85</code></td>
-    </tr>
-  </tbody>
-</table>
+|             | `accumulator`   | `currentValue` | `index` | Return value |
+| ----------- | --------------- | -------------- | ------- | ------------ |
+| First call  | `15`            | `16`           | `1`     | `31`         |
+| Second call | `31`            | `17`           | `2`     | `48`         |
+| Third call  | `48`            | `18`           | `3`     | `66`         |
+| Fourth call | `66`            | `19`           | `4`     | `85`         |
 
-The value returned by `reduce()` would be that of the last callback invocation (`85`).
+The `array` parameter never changes through the process — it's always `[15, 16, 17, 18, 19]`. The value returned by `reduce()` would be that of the last callback invocation (`85`).
 
 ### How reduce() works with an initial value
 
-Here we reduce the same array using the same algorithm, but with an `initialValue` of `10` passed the second argument to `reduce()`:
+Here we reduce the same array using the same algorithm, but with an `initialValue` of `10` passed as the second argument to `reduce()`:
 
 ```js
-[15, 16, 17, 18, 19].reduce((previousValue, currentValue) => previousValue + currentValue, 10)
+[15, 16, 17, 18, 19].reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  10,
+);
 ```
 
 The callback would be invoked five times, with the arguments and return values in each call being as follows:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">
-        <code><var>callback</var></code> iteration
-      </th>
-      <th scope="col">
-        <code><var>previousValue</var></code>
-      </th>
-      <th scope="col">
-        <code><var>currentValue</var></code>
-      </th>
-      <th scope="col">
-        <code><var>currentIndex</var></code>
-      </th>
-      <th scope="col">
-        <code><var>array</var></code>
-      </th>
-      <th scope="col">return value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">first call</th>
-      <td><code>10</code></td>
-      <td><code>15</code></td>
-      <td><code>0</code></td>
-      <td><code>[15, 16, 17, 18, 19]</code></td>
-      <td><code>25</code></td>
-    </tr>
-    <tr>
-      <th scope="row">second call</th>
-      <td><code>25</code></td>
-      <td><code>16</code></td>
-      <td><code>1</code></td>
-      <td><code>[15, 16, 17, 18, 19]</code></td>
-      <td><code>41</code></td>
-    </tr>
-    <tr>
-      <th scope="row">third call</th>
-      <td><code>41</code></td>
-      <td><code>17</code></td>
-      <td><code>2</code></td>
-      <td><code>[15, 16, 17, 18, 19]</code></td>
-      <td><code>58</code></td>
-    </tr>
-    <tr>
-      <th scope="row">fourth call</th>
-      <td><code>58</code></td>
-      <td><code>18</code></td>
-      <td><code>3</code></td>
-      <td><code>[15, 16, 17, 18, 19]</code></td>
-      <td><code>76</code></td>
-    </tr>
-    <tr>
-      <th scope="row">fifth call</th>
-      <td><code>76</code></td>
-      <td><code>19</code></td>
-      <td><code>4</code></td>
-      <td><code>[15, 16, 17, 18, 19]</code></td>
-      <td><code>95</code></td>
-    </tr>
-  </tbody>
-</table>
+|             | `accumulator`   | `currentValue` | `index` | Return value |
+| ----------- | --------------- | -------------- | ------- | ------------ |
+| First call  | `10`            | `15`           | `0`     | `25`         |
+| Second call | `25`            | `16`           | `1`     | `41`         |
+| Third call  | `41`            | `17`           | `2`     | `58`         |
+| Fourth call | `58`            | `18`           | `3`     | `76`         |
+| Fifth call  | `76`            | `19`           | `4`     | `95`         |
 
 The value returned by `reduce()` in this case would be `95`.
 
@@ -289,18 +198,22 @@ an `initialValue`, so that each item passes through your function.
 ```js
 const objects = [{ x: 1 }, { x: 2 }, { x: 3 }];
 const sum = objects.reduce(
-  (previousValue, currentValue) => previousValue + currentValue.x,
+  (accumulator, currentValue) => accumulator + currentValue.x,
   0,
 );
 
-console.log(sum); // logs 6
+console.log(sum); // 6
 ```
 
 ### Flatten an array of arrays
 
 ```js
-const flattened = [[0, 1], [2, 3], [4, 5]].reduce(
-  (previousValue, currentValue) => previousValue.concat(currentValue),
+const flattened = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+].reduce(
+  (accumulator, currentValue) => accumulator.concat(currentValue),
   [],
 );
 // flattened is [0, 1, 2, 3, 4, 5]
@@ -309,14 +222,14 @@ const flattened = [[0, 1], [2, 3], [4, 5]].reduce(
 ### Counting instances of values in an object
 
 ```js
-const names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+const names = ["Alice", "Bob", "Tiff", "Bruce", "Alice"];
 
 const countedNames = names.reduce((allNames, name) => {
-  allNames[name] ??= 0;
-  allNames[name]++;
-  // Remember to return the object, or the next iteration
-  // will receive undefined
-  return allNames;
+  const currCount = allNames[name] ?? 0;
+  return {
+    ...allNames,
+    [name]: currCount + 1,
+  };
 }, {});
 // countedNames is:
 // { 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 1 }
@@ -326,22 +239,22 @@ const countedNames = names.reduce((allNames, name) => {
 
 ```js
 const people = [
-  { name: 'Alice', age: 21 },
-  { name: 'Max', age: 20 },
-  { name: 'Jane', age: 20 },
+  { name: "Alice", age: 21 },
+  { name: "Max", age: 20 },
+  { name: "Jane", age: 20 },
 ];
 
 function groupBy(objectArray, property) {
   return objectArray.reduce((acc, obj) => {
     const key = obj[property];
-    acc[key] ??= [];
-    acc[key].push(obj);
-    return acc;
+    const curGroup = acc[key] ?? [];
+
+    return { ...acc, [key]: [...curGroup, obj] };
   }, {});
 }
 
-const groupedPeople = groupBy(people, 'age')
-// groupedPeople is:
+const groupedPeople = groupBy(people, "age");
+console.log(groupedPeople);
 // {
 //   20: [
 //     { name: 'Max', age: 20 },
@@ -351,25 +264,25 @@ const groupedPeople = groupBy(people, 'age')
 // }
 ```
 
-### Concatenating arrays contained in an array of objects using the spread operator and initialValue
+### Concatenating arrays contained in an array of objects using the spread syntax and initialValue
 
 ```js
 // friends - an array of objects
 // where object field "books" is a list of favorite books
 const friends = [
   {
-    name: 'Anna',
-    books: ['Bible', 'Harry Potter'],
+    name: "Anna",
+    books: ["Bible", "Harry Potter"],
     age: 21,
   },
   {
-    name: 'Bob',
-    books: ['War and peace', 'Romeo and Juliet'],
+    name: "Bob",
+    books: ["War and peace", "Romeo and Juliet"],
     age: 26,
   },
   {
-    name: 'Alice',
-    books: ['The Lord of the Rings', 'The Shining'],
+    name: "Alice",
+    books: ["The Lord of the Rings", "The Shining"],
     age: 18,
   },
 ];
@@ -377,11 +290,11 @@ const friends = [
 // allbooks - list which will contain all friends' books +
 // additional list contained in initialValue
 const allbooks = friends.reduce(
-  (previousValue, currentValue) => [...previousValue, ...currentValue.books],
-  ['Alphabet'],
+  (accumulator, currentValue) => [...accumulator, ...currentValue.books],
+  ["Alphabet"],
 );
-
-// allbooks = [
+console.log(allbooks);
+// [
 //   'Alphabet', 'Bible', 'Harry Potter', 'War and peace',
 //   'Romeo and Juliet', 'The Lord of the Rings',
 //   'The Shining'
@@ -393,33 +306,36 @@ const allbooks = friends.reduce(
 > **Note:** The same effect can be achieved with {{jsxref("Set")}} and {{jsxref("Array.from()")}} as `const arrayWithNoDuplicates = Array.from(new Set(myArray))` with better performance.
 
 ```js
-const myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd'];
-const myArrayWithNoDuplicates = myArray.reduce((previousValue, currentValue) => {
-  if (previousValue.indexOf(currentValue) === -1) {
-    previousValue.push(currentValue);
-  }
-  return previousValue;
-}, []);
+const myArray = ["a", "b", "a", "b", "c", "e", "e", "c", "d", "d", "d", "d"];
+const myArrayWithNoDuplicates = myArray.reduce(
+  (accumulator, currentValue) => {
+    if (!accumulator.includes(currentValue)) {
+      return [...accumulator, currentValue];
+    }
+    return accumulator;
+  },
+  [],
+);
 
 console.log(myArrayWithNoDuplicates);
 ```
 
 ### Replace .filter().map() with .reduce()
 
-Using {{jsxref("Array.filter()")}} then {{jsxref("Array.map()")}} traverses the array
+Using {{jsxref("Array/filter", "filter()")}} then {{jsxref("Array/map", "map()")}} traverses the array
 twice, but you can achieve the same effect while traversing only once with
-{{jsxref("Array.reduce()")}}, thereby being more efficient. (If you like `for` loops, you
-can filter and map while traversing once with {{jsxref("Array.forEach()")}}.)
+{{jsxref("Array/reduce", "reduce()")}}, thereby being more efficient. (If you like `for` loops, you
+can filter and map while traversing once with {{jsxref("Array/forEach", "forEach()")}}.)
 
 ```js
 const numbers = [-5, 6, 2, 0];
 
-const doubledPositiveNumbers = numbers.reduce((previousValue, currentValue) => {
+const doubledPositiveNumbers = numbers.reduce((accumulator, currentValue) => {
   if (currentValue > 0) {
     const doubled = currentValue * 2;
-    previousValue.push(doubled);
+    return [...accumulator, doubled];
   }
-  return previousValue;
+  return accumulator;
 }, []);
 
 console.log(doubledPositiveNumbers); // [12, 4]
@@ -457,9 +373,9 @@ function p2(a) {
   });
 }
 
-// function 3  - will be wrapped in a resolved promise by .then()
+// function 3 - will be wrapped in a resolved promise by .then()
 function f3(a) {
- return a * 3;
+  return a * 3;
 }
 
 // promise function 4
@@ -469,7 +385,7 @@ function p4(a) {
   });
 }
 
-const promiseArr = [p1, p2, f3, p4]
+const promiseArr = [p1, p2, f3, p4];
 runPromiseInSequence(promiseArr, 10).then(console.log); // 1200
 ```
 
@@ -482,10 +398,10 @@ const triple = (x) => 3 * x;
 const quadruple = (x) => 4 * x;
 
 // Function composition enabling pipe functionality
-const pipe = (...functions) => (initialValue) => functions.reduce(
-  (acc, fn) => fn(acc),
-  initialValue,
-);
+const pipe =
+  (...functions) =>
+  (initialValue) =>
+    functions.reduce((acc, fn) => fn(acc), initialValue);
 
 // Composed functions for multiplication of specific values
 const multiply6 = pipe(double, triple);
@@ -494,10 +410,34 @@ const multiply16 = pipe(quadruple, quadruple);
 const multiply24 = pipe(double, triple, quadruple);
 
 // Usage
-multiply6(6);   // 36
-multiply9(9);   // 81
+multiply6(6); // 36
+multiply9(9); // 81
 multiply16(16); // 256
 multiply24(10); // 240
+```
+
+### Using reduce() with sparse arrays
+
+`reduce()` skips missing elements in sparse arrays, but it does not skip `undefined` values.
+
+```js
+console.log([1, 2, , 4].reduce((a, b) => a + b)); // 7
+console.log([1, 2, undefined, 4].reduce((a, b) => a + b)); // NaN
+```
+
+### Calling reduce() on non-array objects
+
+The `reduce()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+};
+console.log(Array.prototype.reduce.call(arrayLike, (x, y) => x + y));
+// 9
 ```
 
 ## Specifications

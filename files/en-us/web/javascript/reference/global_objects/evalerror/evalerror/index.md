@@ -7,22 +7,28 @@ tags:
   - Reference
 browser-compat: javascript.builtins.EvalError.EvalError
 ---
+
 {{JSRef}}
 
-The **`EvalError`** constructor creates a new error regarding
-the global {{jsxref("Global_Objects/eval", "eval()")}} function. This exception is not
-thrown by JavaScript anymore, however the `EvalError` object remains for
-compatibility.
+The **`EvalError()`** constructor creates a new {{jsxref("EvalError")}} instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new EvalError()
 new EvalError(message)
 new EvalError(message, options)
 new EvalError(message, fileName)
 new EvalError(message, fileName, lineNumber)
+
+EvalError()
+EvalError(message)
+EvalError(message, options)
+EvalError(message, fileName)
+EvalError(message, fileName, lineNumber)
 ```
+
+> **Note:** `EvalError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `EvalError` instance.
 
 ### Parameters
 
@@ -32,7 +38,7 @@ new EvalError(message, fileName, lineNumber)
   - : An object that has the following properties:
     - `cause` {{optional_inline}}
       - : A property indicating the specific cause of the error.
-          When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
+        When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
 - `fileName` {{optional_inline}} {{non-standard_inline}}
   - : The name of the file containing the code that caused the exception
 - `lineNumber` {{optional_inline}} {{non-standard_inline}}
@@ -48,15 +54,15 @@ compatibility with earlier versions of the specification.
 
 ```js
 try {
-  throw new EvalError('Hello', 'someFile.js', 10);
+  throw new EvalError("Hello", "someFile.js", 10);
 } catch (e) {
   console.log(e instanceof EvalError); // true
-  console.log(e.message);              // "Hello"
-  console.log(e.name);                 // "EvalError"
-  console.log(e.fileName);             // "someFile.js"
-  console.log(e.lineNumber);           // 10
-  console.log(e.columnNumber);         // 0
-  console.log(e.stack);                // "@Scratchpad/2:2:9\n"
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "EvalError"
+  console.log(e.fileName); // "someFile.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 

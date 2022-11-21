@@ -12,10 +12,12 @@ tags:
   - Service worker API
   - ServiceWorker
   - Workers
+  - Deprecated
+  - Non-standard
 browser-compat: api.InstallEvent
 ---
-{{APIRef("Service Workers API")}}
-{{non-standard_header}}{{deprecated_header}}
+
+{{APIRef("Service Workers API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The parameter passed into the {{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}} handler, the `InstallEvent` interface represents an install action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}. As a child of {{domxref("ExtendableEvent")}}, it ensures that functional events such as {{domxref("FetchEvent")}} are not dispatched during installation.
 
@@ -25,17 +27,17 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
 ## Constructor
 
-- {{domxref("InstallEvent.InstallEvent", "InstallEvent()")}}
+- {{domxref("InstallEvent.InstallEvent", "InstallEvent()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Creates a new `InstallEvent` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
-- {{domxref("InstallEvent.activeWorker")}} {{readonlyInline}}
+- {{domxref("InstallEvent.activeWorker")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns the {{domxref("ServiceWorker")}} that is currently controlling the page.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 

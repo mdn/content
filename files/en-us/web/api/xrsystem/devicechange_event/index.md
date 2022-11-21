@@ -13,9 +13,11 @@ tags:
   - XR
   - XRSystem
   - devicechange
+  - Experimental
 browser-compat: api.XRSystem.devicechange_event
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 A **`devicechange`** event is fired on an {{DOMxRef("XRSystem")}} object whenever the availability of immersive XR devices has changed; for example, a VR headset or AR goggles have been connected or disconnected. It's a generic {{DOMxRef("Event")}} with no added properties.
 
@@ -54,11 +56,7 @@ if (navigator.xr) {
   navigator.xr.addEventListener("devicechange", (event) => {
     navigator.xr.isSessionSupported("immersive-vr")
     .then((immersiveOK) => {
-      if (immersiveOK) {
-        enableXRButton.disabled = false;
-      } else {
-        enableXRButton.disabled = true;
-      }
+      enableXRButton.disabled = !immersiveOK;
     });
   });
 }

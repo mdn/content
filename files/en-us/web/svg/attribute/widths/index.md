@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.font-face.widths
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`widths`** attribute indicates a list of range values, each followed by one or more {{Glossary("glyph")}} widths.
@@ -41,6 +42,7 @@ You can use this attribute with the following SVG elements:
 </table>
 
 - `<number>`
+
   - : This value is a comma-separated list of UCS range values as defined in [ISO 10646](https://www.iso.org/standard/29819.html), each followed by one or more glyph widths.
 
     If this attribute is used, the {{SVGAttr("units-per-em")}} attribute must also be used.

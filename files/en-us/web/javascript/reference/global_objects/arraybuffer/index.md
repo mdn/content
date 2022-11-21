@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.ArrayBuffer
 ---
+
 {{JSRef}}
 
 The **`ArrayBuffer`** object is used to represent a generic, fixed-length raw binary data buffer.
@@ -32,11 +33,13 @@ The [`ArrayBuffer()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayB
 
 ## Static methods
 
-- {{jsxref("ArrayBuffer.isView", "ArrayBuffer.isView(<var>arg</var>)")}}
+- {{jsxref("ArrayBuffer.isView()")}}
   - : Returns `true` if `arg` is one of the ArrayBuffer views, such as [typed array objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or a {{jsxref("DataView")}}. Returns `false` otherwise.
 
 ## Instance properties
 
+- `ArrayBuffer.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"ArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("ArrayBuffer.prototype.byteLength")}}
   - : The read-only size, in bytes, of the `ArrayBuffer`. This is established when the array is constructed and cannot be changed.
 

@@ -9,20 +9,21 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getTime
 ---
+
 {{JSRef}}
 
 The **`getTime()`** method returns the number of milliseconds
 since the [ECMAScript epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_ecmascript_epoch_and_timestamps).
 
 You can use this method to help assign a date and time to another {{jsxref("Date")}}
-object. This method is functionally equivalent to the {{jsxref("Date.valueof",
+object. This method is functionally equivalent to the {{jsxref("Date/valueof",
   "valueOf()")}} method.
 
 {{EmbedInteractiveExample("pages/js/date-gettime.html","shorter")}}
 
 ## Syntax
 
-```js
+```js-nolint
 getTime()
 ```
 
@@ -31,7 +32,7 @@ getTime()
 A number representing the milliseconds elapsed between 1 January 1970 00:00:00 UTC and
 the given date.
 
-## Reduced time precision
+## Description
 
 To offer protection against timing attacks and fingerprinting, the precision of
 `new Date().getTime()` might get rounded depending on browser settings. In

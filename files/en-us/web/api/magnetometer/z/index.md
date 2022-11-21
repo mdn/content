@@ -12,9 +12,11 @@ tags:
   - Sensor APIs
   - Sensors
   - z
+  - Experimental
 browser-compat: api.Magnetometer.z
 ---
-{{APIRef("Sensor API")}}
+
+{{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`z`** read-only property of the
 {{domxref("Magnetometer")}} interface returns a double-precision integer containing

@@ -4,30 +4,32 @@ slug: Web/API/VRFieldOfView
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Interface
   - Reference
   - VR
   - VRFieldOfView
   - Virtual Reality
   - WebVR
+  - Deprecated
+  - Non-standard
 browser-compat: api.VRFieldOfView
 ---
-{{APIRef("WebVR API")}}{{SeeCompatTable}}{{Deprecated_header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_header}}{{Non-standard_header}}
 
 The **`VRFieldOfView`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents a field of view defined by 4 different degree values describing the view from a center point.
 
 > **Note:** This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Properties
+## Instance properties
 
-- {{domxref("VRFieldOfView.upDegrees")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRFieldOfView.upDegrees")}} {{deprecated_inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : The number of degrees upwards that the field of view extends in.
-- {{domxref("VRFieldOfView.rightDegrees")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRFieldOfView.rightDegrees")}} {{deprecated_inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : The number of degrees to the right that the field of view extends in.
-- {{domxref("VRFieldOfView.downDegrees")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRFieldOfView.downDegrees")}} {{deprecated_inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : The number of degrees downwards that the field of view extends in.
-- {{domxref("VRFieldOfView.leftDegrees")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRFieldOfView.leftDegrees")}} {{deprecated_inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : The number of degrees to the left that the field of view extends in.
 
 ## Examples
@@ -37,7 +39,7 @@ const info = document.querySelector('p');
 const list = document.querySelector('ul');
 let vrDisplay;
 
-if(navigator.getVRDisplays) {
+if (navigator.getVRDisplays) {
     reportFieldOfView();
 } else {
   info.textContent = 'WebVR API not supported by this browser.'

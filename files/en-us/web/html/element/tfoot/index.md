@@ -11,7 +11,7 @@ tags:
 browser-compat: html.elements.tfoot
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<tfoot>`** [HTML](/en-US/docs/Web/HTML) element defines a set of rows summarizing the columns of the table.
 
@@ -46,11 +46,9 @@ The **`<tfoot>`** [HTML](/en-US/docs/Web/HTML) element defines a set of rows sum
         {{HTMLElement("caption")}},
         {{HTMLElement("colgroup")}}, {{HTMLElement("thead")}},
         {{HTMLElement("tbody")}}, or {{HTMLElement("tr")}}
-        element. Note that this is the requirement as of HTML5.<br />In HTML4,
-        the {{HTMLElement("tfoot")}} element cannot be placed after any
-        {{HTMLElement("tbody")}} and {{HTMLElement("tr")}}
-        element. Note that this directly contradicts the above normative
-        requirement from HTML5.
+        element. Note that this is the requirement in HTML.<br />Originally, in HTML4, the opposite was true: the {{HTMLElement("tfoot")}} element could not be placed after any
+        {{HTMLElement("tbody")}} or {{HTMLElement("tr")}}
+        element.
       </td>
     </tr>
     <tr>
@@ -84,7 +82,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 - {{htmlattrdef("align")}} {{deprecated_inline}}
 
-  - : This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
+  - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
 
     - `left`, aligning the content to the left of the cell
     - `center`, centering the content in the cell
@@ -97,7 +95,7 @@ The following attributes are deprecated and should not be used. They are documen
     > **Note:**
     >
     > - To achieve the same effect as the `left`, `center`, `right` or `justify` values, use the CSS {{cssxref("text-align")}} property on it.
-    > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the {{htmlattrxref("char", "tfoot")}} as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
+    > - To achieve the same effect as the `char` value, in CSS, you can use the value of the {{htmlattrxref("char", "tfoot")}} as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
 

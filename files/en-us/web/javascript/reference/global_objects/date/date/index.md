@@ -8,18 +8,16 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.Date
 ---
+
 {{JSRef}}
 
-Creates a JavaScript **`Date`**
-instance that represents a single moment in time in a platform-independent
-format. `Date` objects contain a `Number` that represents
-milliseconds since 1 January 1970 UTC.
+The **`Date()`** constructor can create a {{jsxref("Date")}} instance or return a string representing the current time.
 
 {{EmbedInteractiveExample("pages/js/date-constructor.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 new Date()
 new Date(value)
 new Date(dateString)
@@ -31,12 +29,11 @@ new Date(year, monthIndex, day, hours)
 new Date(year, monthIndex, day, hours, minutes)
 new Date(year, monthIndex, day, hours, minutes, seconds)
 new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
+
+Date()
 ```
 
-> **Note:** The only correct way to instantiate a new `Date`
-> object is by using the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. If you call the `Date`
-> object directly, such as `now = Date()`, the returned value is a string
-> rather than a `Date` object.
+> **Note:** `Date()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but with different effects. See [Return value](#return_value).
 
 ### Parameters
 
@@ -51,9 +48,10 @@ When no parameters are provided, the newly-created `Date` object represents the 
 - `value`
   - : An integer value representing the number of milliseconds since January 1, 1970, 00:00:00 UTC (the ECMAScript epoch, equivalent to the UNIX epoch), with leap seconds ignored. Keep in mind that most [UNIX Timestamp](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16) functions are only accurate to the nearest second.
 
-#### Timestamp string
+#### Date string
 
 - `dateString`
+
   - : A string value representing a date, in a format recognized by the {{jsxref("Date.parse()")}} method. (The ECMA262 spec specifies a [simplified version of ISO 8601](https://tc39.es/ecma262/#sec-date-time-string-format), but other formats can be implementation-defined, which commonly include [IETF-compliant RFC 2822 timestamps](https://datatracker.ietf.org/doc/html/rfc2822#page-14).)
 
     > **Note:** When parsing date strings with the `Date` constructor (and `Date.parse`, they are equivalent), always make sure that the input conforms to the ISO 8601 format (`YYYY-MM-DDTHH:mm:ss.sssZ`) — the parsing behavior with other formats is implementation-defined and may not work across all browsers. Support for [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822) format strings is by convention only. A library can help if many different formats are to be accommodated.
@@ -63,7 +61,9 @@ When no parameters are provided, the newly-created `Date` object represents the 
 #### Date object
 
 - `dateObject`
-  - : An existing `Date` object. This effectively makes a copy of the existing `Date` object with the same date and time. This is equivalent to using the `new Date(value)` constructor, where `value` can be obtained using the `valueOf()` method.
+  - : An existing `Date` object. This effectively makes a copy of the existing `Date` object with the same date and time. This is equivalent to `new Date(dateObject.valueOf())`, except the `valueOf()` method is not called.
+
+When one parameter is passed to the `Date()` constructor, `Date` instances are specially treated. All other values are [converted to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion). If the result is a string, it will be parsed as a date string. Otherwise, the resulting primitive is further coerced to a number and treated as a timestamp.
 
 #### Individual date and time component values
 
@@ -92,7 +92,7 @@ Similarly, if any parameter underflows, it "borrows" from the higher positions. 
 
 Calling `new Date()` (the `Date()` constructor) returns a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object. If called with an invalid date string, or if the date to be constructed will have a UNIX timestamp less than `-8,640,000,000,000,000` or greater than `8,640,000,000,000,000` milliseconds, it returns a `Date` object whose [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toString) method returns the literal string `Invalid Date`.
 
-Calling the `Date()` function (without the `new` keyword) returns a string representation of the current date and time, exactly as `new Date().toString()` does. Any arguments given in a `Date()` function call (without the `new` keyword) are ignored; regardless of whether it's called with an invalid date string — or even called wth any arbitrary object or other primitive as an argument — it always returns a string representation of the current date and time.
+Calling the `Date()` function (without the `new` keyword) returns a string representation of the current date and time, exactly as `new Date().toString()` does. Any arguments given in a `Date()` function call (without the `new` keyword) are ignored; regardless of whether it's called with an invalid date string — or even called with any arbitrary object or other primitive as an argument — it always returns a string representation of the current date and time.
 
 ## Examples
 
@@ -107,6 +107,28 @@ const birthday = new Date('1995-12-17T03:24:00')   // This is ISO-8601-compliant
 const birthday = new Date(1995, 11, 17)            // the month is 0-indexed
 const birthday = new Date(1995, 11, 17, 3, 24, 0)
 const birthday = new Date(628021800000)            // passing epoch timestamp
+```
+
+### Passing a non-Date, non-string, non-number value
+
+If the `Date()` constructor is called with one parameter which is not a `Date` instance, it will be coerced to a primitive and then checked whether it's a string. For example, `new Date(undefined)` is different from `new Date()`:
+
+```js
+console.log(new Date(undefined)); // Invalid Date
+```
+
+This is because `undefined` is already a primitive but not a string, so it will be coerced to a number, which is [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) and therefore not a valid timestamp. On the other hand, `null` will be coerced to `0`.
+
+```js
+console.log(new Date(null)); // 1970-01-01T00:00:00.000Z
+```
+
+[Arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) would be coerced to a string via [`Array.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString), which joins the elements with commas. However, the resulting string for any array with more than one element is not a valid ISO 8601 date string, so its parsing behavior would be implementation-defined. **Do not pass arrays to the `Date()` constructor.**
+
+```js
+console.log(new Date(["2020-06-19", "17:13"]));
+// 2020-06-19T17:13:00.000Z in Chrome, since it recognizes "2020-06-19,17:13"
+// "Invalid Date" in Firefox
 ```
 
 ## Specifications

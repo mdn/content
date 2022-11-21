@@ -9,6 +9,7 @@ tags:
   - URL
 browser-compat: http.data-url
 ---
+
 {{HTTPSidebar}}
 
 **Data URLs**, URLs prefixed with the `data:` scheme, allow content creators to embed small files inline in documents. They were formerly known as "data URIs" until that name was retired by the WHATWG.
@@ -37,14 +38,14 @@ A few examples:
   - : base64-encoded version of the above
 - `data:text/html,%3Ch1%3EHello%2C%20World%21%3C%2Fh1%3E`
   - : An HTML document with `<h1>Hello, World!</h1>`
-- `data:text/html,<script>alert('hi');</script>`
-  - : An HTML document that executes a JavaScript alert. Note that the closing script tag is required.
+- `data:text/html,%3Cscript%3Ealert%28%27hi%27%29%3B%3C%2Fscript%3E`
+  - : An HTML document with `<script>alert('hi');</script>` that executes a JavaScript alert. Note that the closing script tag is required.
 
 ## Encoding data into base64 format
 
 Base64 is a group of binary-to-text encoding schemes that represent binary data in an ASCII string format by translating it into a radix-64 representation. By consisting only of ASCII characters, base64 strings are generally url-safe, and that's why they can be used to encode data in Data URLs.
 
-### Encoding in Javascript
+### Encoding in JavaScript
 
 The Web APIs have native methods to encode or decode to base64: [Base64 encoding and decoding](/en-US/docs/Glossary/Base64).
 
@@ -66,7 +67,7 @@ base64 a.txt>b.txt
 
 ### Encoding on Microsoft Windows
 
-On Windows, [Convert.ToBase64String](https://docs.microsoft.com/en-us/dotnet/api/system.convert.tobase64string?view=net-5.0) from PowerShell can be used to perform the Base64 encoding:
+On Windows, [Convert.ToBase64String](https://docs.microsoft.com/dotnet/api/system.convert.tobase64string?view=net-5.0) from PowerShell can be used to perform the Base64 encoding:
 
 ```plain
 [convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("hello"))
@@ -85,13 +86,14 @@ bash$ echo -n hello | base64
 This section describes problems that commonly occur when creating and using `data` URLs.
 
 ```
-data:text/html,lots of text…<p><a name%3D"bottom">bottom</a>?arg=val
+data:text/html,lots of text…<p><a name%3D"bottom">bottom</a>?arg=val</p>
 ```
 
 This represents an HTML resource whose contents are:
 
 ```html
-lots of text…<p><a name="bottom">bottom</a>?arg=val
+lots of text…
+<p><a name="bottom">bottom</a>?arg=val</p>
 ```
 
 - Syntax

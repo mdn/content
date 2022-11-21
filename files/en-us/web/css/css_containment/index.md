@@ -1,6 +1,7 @@
 ---
 title: CSS Containment
 slug: Web/CSS/CSS_Containment
+page-type: css-module
 tags:
   - CSS
   - CSS Containment
@@ -11,12 +12,22 @@ browser-compat:
   - css.properties.contain
   - css.properties.content-visibility
 ---
+
 {{CSSRef}}
-The aim of the CSS Containment specification is to improve performance of web pages by allowing developers to isolate a subtree of the page from the rest of the page. If the browser knows that a part of the page is independent, rendering can be optimized and performance improved. The specification defines a single CSS property {{cssxref("contain")}}. This document describes the basic aims of the specification.
+
+The aim of the CSS Containment specification is to improve performance of web pages by allowing the browser to isolate a subtree of the page from the rest of the page.
+If the browser knows that a part of the page is independent, rendering can be optimized and performance improved.
+
+In addition, it lets developers indicate whether or not an element should render its contents at all, and whether it should render its contents when it is offscreen.
+This allows the user agent to apply containment on elements when appropriate, and potentially defer layout and rendering until it is actually needed.
+
+The specification defines the CSS properties {{cssxref("contain")}} and {{cssxref("content-visibility")}}.
+This document describes the basic aims of the specification.
+For details on CSS container queries, see [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries).
 
 ## Basic example
 
-Many webpages contain a number of sections which are independent of each other. For example a listing of article headlines and content, as in the mark-up below.
+Many webpages contain a number of sections which are independent of each other. For example a listing of article headlines and content, as in the markup below.
 
 ```html
 <h1>My blog</h1>
@@ -38,15 +49,21 @@ article {
 }
 ```
 
-Each article is independent of the other articles on the page, and so they have been given `contain: content` in order to indicate to the browser that this is the case. The browser can then use this information to make decisions about how to render the content. For example, it might not render articles that are outside the viewable area.
+Each article is independent of the other articles on the page, and so they have been given `contain: content` in order to indicate to the browser that this is the case.
+The browser can use this information to make decisions about how to render the content.
+For example, it might not render articles that are outside the viewable area.
 
-If we give each `<article>` the `contain` property with a value of `content`, when new elements are inserted the browser understands it does not need to relayout or repaint any area outside of the containing element's subtree, although if the `<article>` is styled such that its size depends on its contents (e.g. with `height: auto`), then the browser may need to account for its size changing.
+If we give each `<article>` the `contain` property with a value of `content`, when new elements are inserted the browser does not need to recalculate layout or repaint any area outside of the containing element's subtree.
+If the `<article>` is styled such that its size depends on its contents (e.g. with `height: auto`), then the browser may need to account for its size changing.
 
 We have told it by way of the `contain` property that each article is independent.
 
-The `content` value is shorthand for `contain: layout paint`. It tells the browser that the internal layout of the element is totally separate from the rest of the page, and that everything about the element is painted inside its bounds. Nothing can visibly overflow.
+The `content` value is shorthand for `contain: layout paint style`.
+It tells the browser that the internal layout of the element is totally separate from the rest of the page, and that everything about the element is painted inside its bounds. Nothing can visibly overflow.
 
-This information is something that is usually known, and in fact quite obvious, to the web developer creating the page. However browsers cannot guess at your intent and cannot assume that an article will be entirely self-contained. Therefore this property gives you a nice way to explain to the browser this fact, and allow it to make performance optimizations based on that knowledge.
+This information is something that is usually known, and in fact quite obvious, to the web developer creating the page.
+However browsers cannot guess at your intent and cannot assume that an article will be entirely self-contained.
+Therefore this property gives you a nice way to explain to the browser this fact, and allow it to make performance optimizations based on that knowledge.
 
 ## Key concepts and terminology
 
@@ -91,7 +108,8 @@ article {
 
 Size containment does not offer much in the way of performance optimizations when used on its own. However, it means that the size of the element's children cannot affect the size of the element itself — its size is computed as if it had no children.
 
-If you turn on `contain: size` you need to also specify the size of the element you have applied this to. It will end up being zero-sized in most cases, if you don't manually give it a size.
+If you turn on `contain: size` you need to also specify the size of the element you have applied this to using [`contain-intrinsic-size`](/en-US/docs/Web/CSS/contain-intrinsic-size) (or the equivalent longhand properties).
+It will end up being zero-sized in most cases, if you don't manually give it a size.
 
 ### Style containment
 
@@ -101,7 +119,8 @@ article {
 }
 ```
 
-Despite the name, style containment does not provide scoped styles such as you would get with the [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM). The main use case is to prevent situations where a [CSS Counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) could be changed in an element, which could then affect the rest of the tree.
+Despite the name, style containment does not provide scoped styles such as you would get with the [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM).
+The main use case is to prevent situations where a [CSS Counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) could be changed in an element, which could then affect the rest of the tree.
 
 Using `contain: style` would ensure that the {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties created new counters scoped to that subtree only.
 
@@ -116,19 +135,11 @@ There are two special values of contain:
 
 We encountered the first in the example above. Using `contain: content` turns on `layout` and `paint` containment. The specification describes this value as being "reasonably safe to apply widely". It does not apply `size` containment, so you would not be at risk of a box ending up zero-sized due to a reliance on the size of its children.
 
-To gain as much containment as possible use `contain: strict`, which behaves the same as `contain: size layout paint`, or perhaps the following to also add `style` containment in browsers that support it:
+To gain as much containment as possible use `contain: strict`, which behaves the same as `contain: size layout paint style`:
 
 ```css
 contain: strict;
-contain: strict style;
 ```
-
-## Reference
-
-### CSS Properties
-
-- {{cssxref("contain")}}
-- {{cssxref("content-visibility")}}
 
 ## Specifications
 
@@ -138,6 +149,11 @@ contain: strict style;
 
 {{Compat}}
 
-## External resources
+## See also
 
-- [An Introduction to CSS Containment](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/)
+- [Container queries](/en-US/docs/Web/CSS/CSS_Container_Queries)
+- {{Cssxref("@container")}}
+- {{Cssxref("contain")}}
+- {{Cssxref("container-name")}}
+- {{Cssxref("container-type")}}
+- {{cssxref("content-visibility")}}

@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.manifest_version
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -27,8 +28,6 @@ browser-compat: webextensions.manifest.manifest_version
 </table>
 
 This key specifies the version of manifest.json used by this extension.
-
-Currently, this must always be 2.
 
 ## Example
 

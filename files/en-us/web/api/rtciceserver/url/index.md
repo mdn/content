@@ -3,7 +3,6 @@ title: RTCIceServer.url
 slug: Web/API/RTCIceServer/url
 page-type: web-api-instance-property
 tags:
-  - Experimental
   - Deprecated
   - Property
   - RTCIceServer
@@ -12,6 +11,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCIceServer.url
 ---
+
 {{APIRef("WebRTC")}}{{deprecated_header}}
 
 The **obsolete** {{domxref("RTCIceServer")}} dictionary's
@@ -28,7 +28,7 @@ property instead.
 
 ## Syntax
 
-```js
+```js-nolint
 const iceServer = {
   // ...
   url: iceServerUrl,

@@ -11,6 +11,7 @@ tags:
   - Video
 browser-compat: api.HTMLMediaElement.seeked_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `seeked` event is fired when a seek operation completed, the current playback position has changed, and the Boolean `seeking` attribute is changed to `false`.

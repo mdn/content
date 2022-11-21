@@ -11,6 +11,7 @@ tags:
   - Transformation
   - case study
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Package_management","Learn/Tools_and_testing/Understanding_client-side_tools/Deployment", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
 In the final couple of articles in the series we will solidify your tooling knowledge by walking you through the process of building up a sample case study toolchain. We'll go all the way from setting up a sensible development environment and putting transformation tools in place to actually deploying your app on Netlify. In this article we'll introduce the case study, set up our development environment, and set up our code transformation tools.
@@ -219,39 +220,39 @@ Using the command line, we can create the project, install the initial tooling, 
 
 ### Initial setup
 
-OK, let's get the initial project setup out the way.
+OK, let's get the initial project setup out of the way.
 
 1. Start off by opening your terminal, and navigating to a place that you'll be able to find and get to easily. The Desktop perhaps, or your home or documents folder?
 2. Next, run the following commands to create a folder to keep your project in, and go inside the folder:
 
-    ```bash
-    mkdir will-it-miss
-    cd will-it-miss
-    ```
+   ```bash
+   mkdir will-it-miss
+   cd will-it-miss
+   ```
 
 3. Now we will create a new directory for all of our web site's development code to live in. Run the following now:
 
-    ```bash
-    mkdir src
-    ```
+   ```bash
+   mkdir src
+   ```
 
-    Code organization tends to be quite subjective from team to team. For this project, the source code will live in `src`.
+   Code organization tends to be quite subjective from team to team. For this project, the source code will live in `src`.
 
 4. Making sure you are inside the root of the `will-it-miss` directory, enter the following command to start git's source control functionality working on the directory:
 
-    ```bash
-    git init
-    ```
+   ```bash
+   git init
+   ```
 
-    This means that you'll now be able to start storing revisions to the folder's contents, saving it to a remote repository, etc. More on this later!
+   This means that you'll now be able to start storing revisions to the folder's contents, saving it to a remote repository, etc. More on this later!
 
 5. Next, enter the following command to turn your directory into an npm package, with the advantages that we discussed in the previous article:
 
-    ```bash
-    npm init --force
-    ```
+   ```bash
+   npm init --force
+   ```
 
-    This will create a default `package.json` file that we can configure later on if desired. The `--force` flag causes the command to instantly create a default `package.json` file without asking you all the usual questions about what contents you want it to have (as we saw previously). We only need the defaults for now, so this saves us a bit of time.
+   This will create a default `package.json` file that we can configure later on if desired. The `--force` flag causes the command to instantly create a default `package.json` file without asking you all the usual questions about what contents you want it to have (as we saw previously). We only need the defaults for now, so this saves us a bit of time.
 
 #### Getting the project code files
 
@@ -259,13 +260,13 @@ At this point, we'll get hold of the project's code files (HTML, CSS, JavaScript
 
 1. To get hold of the code files, visit <https://github.com/remy/mdn-will-it-miss> and download and unzip the contents of this repo onto your local drive somewhere. You can download the entire project as a zip file by selecting _Clone or download_ > _Download ZIP_.
 
-    ![The GitHub will it miss repo](github-will-it-miss.png)
+   ![The GitHub will it miss repo](github-will-it-miss.png)
 
 2. Now copy the contents of the project's `src` directory to your currently empty `src` directory.
 
 We have our project files in place. That's all we need to do for now!
 
-> **Note:** To set up the project on your local machine, go to the root directory of the unzipped folder, open a terminal in that location, and execute the `npm install` command in the terminal. This will install all of the project dependencies that are stored in the \`package.json\` file.
+> **Note:** To set up the project on your local machine, go to the root directory of the unzipped folder, open a terminal in that location, and execute the `npm install` command in the terminal. This will install all of the project dependencies that are stored in the `package.json` file.
 
 #### Installing our tools
 
@@ -288,72 +289,72 @@ In the root of the project (not in the `src` directory), we will add configurati
 1. First of all, create a file in the root of your `will-it-miss` directory called `.prettierrc.json`.
 2. To configure Prettier, give `.prettierrc.json` the following contents:
 
-    ```json
-    {
-      "singleQuote": true,
-      "trailingComma": "es5"
-    }
-    ```
+   ```json
+   {
+     "singleQuote": true,
+     "trailingComma": "es5"
+   }
+   ```
 
-    With these settings, when Prettier formats JavaScript for you it will use single quotes for all your quoted values, and it won't use trailing commas (a newer feature of ECMAScript that will cause errors in older browsers). You can find more about [configuring Prettier](https://prettier.io/docs/en/configuration.html) in its documentation.
+   With these settings, when Prettier formats JavaScript for you it will use single quotes for all your quoted values, and it won't use trailing commas (a newer feature of ECMAScript that will cause errors in older browsers). You can find more about [configuring Prettier](https://prettier.io/docs/en/configuration.html) in its documentation.
 
 3. Next up, we'll configure ESLint — create another file in the root of your `will-it-miss` directory called `.eslintrc.json`, and give it the following contents:
 
-    ```json
-    {
-      "env": {
-        "es6": true,
-        "browser": true
-      },
-      "extends": "eslint:recommended",
-      "parserOptions": {
-        "ecmaVersion": 6,
-        "sourceType": "module"
-      },
-      "rules": {
-        "no-console": 0
-      }
-    }
-    ```
+   ```json
+   {
+     "env": {
+       "es6": true,
+       "browser": true
+     },
+     "extends": "eslint:recommended",
+     "parserOptions": {
+       "ecmaVersion": 6,
+       "sourceType": "module"
+     },
+     "rules": {
+       "no-console": 0
+     }
+   }
+   ```
 
-    The above ESLint configuration says that we want to use the "recommended" ESLint settings, that we're going to allow usage of ES6 features (such as [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) or [`Set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set)), that we can use module [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statements, and that using [`console.log()`](/en-US/docs/Web/API/console/log) is allowed.
+   The above ESLint configuration says that we want to use the "recommended" ESLint settings, that we're going to allow usage of ES6 features (such as [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) or [`Set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set)), that we can use module [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statements, and that using [`console.log()`](/en-US/docs/Web/API/console/log) is allowed.
 
 4. However, in the project's source files we are using React JSX syntax (for your real projects you might use React or Vue or any other framework, or no framework at all!).
 
-    Putting JSX syntax in the middle of our JavaScript is going to cause ESLint to complain pretty quickly with the current configuration, so we'll need to add a little more configuration to the ESLint settings to get it to accept JSX features.
+   Putting JSX syntax in the middle of our JavaScript is going to cause ESLint to complain pretty quickly with the current configuration, so we'll need to add a little more configuration to the ESLint settings to get it to accept JSX features.
 
-    The final config file should look like this — add in the bolded parts and save it:
+   The final config file should look like this — add in the bolded parts and save it:
 
-    ```json
-    {
-      "env": {
-        "es6": true,
-        "browser": true
-      },
-      "extends": ["eslint:recommended", "plugin:react/recommended"],
-      "parserOptions": {
-        "ecmaVersion": 6,
-        "sourceType": "module",
-        "ecmaFeatures": {
-          "jsx": true
-        }
-      },
-      "plugins": ["react"],
-      "rules": {
-        "semi": "error",
-        "no-console": 0,
-        "react/jsx-uses-vars": "error"
-      }
-    }
-    ```
+   ```json
+   {
+     "env": {
+       "es6": true,
+       "browser": true
+     },
+     "extends": ["eslint:recommended", "plugin:react/recommended"],
+     "parserOptions": {
+       "ecmaVersion": 6,
+       "sourceType": "module",
+       "ecmaFeatures": {
+         "jsx": true
+       }
+     },
+     "plugins": ["react"],
+     "rules": {
+       "semi": "error",
+       "no-console": 0,
+       "react/jsx-uses-vars": "error"
+     }
+   }
+   ```
 
-    As the configuration now uses a plugin called "React", this development dependency also needs to be installed, so that the code is there to actually run that part of the linting process.
+   As the configuration now uses a plugin called "React", this development dependency also needs to be installed, so that the code is there to actually run that part of the linting process.
 
 5. Run the following terminal command in the root of your project folder:
 
-    ```bash
-    npm install --save-dev eslint-plugin-react
-    ```
+   ```bash
+   npm install --save-dev eslint-plugin-react
+   ```
 
 There's a complete [list of ESLint rules](https://eslint.org/docs/rules/) that you can tweak and configure to your heart's content and many companies and teams have published their [own ESLint configurations](https://www.npmjs.com/search?q=keywords:eslintconfig), which can sometimes be useful either to get inspiration or to select one that you feel suits your own standards. A forewarning though: ESLint configuration is a very deep rabbit hole!
 
@@ -392,15 +393,15 @@ Let's use the [postcss-preset-env](https://preset-env.cssdb.org/), which lets us
 1. Add a single file called `.postcssrc` to the root of your project directory.
 2. Add the following contents to the new file, which will automagically give us full access to the latest CSS features:
 
-    ```json
-    {
-      "plugins": {
-        "postcss-preset-env": {
-          "stage": 0
-        }
-      }
-    }
-    ```
+   ```json
+   {
+     "plugins": {
+       "postcss-preset-env": {
+         "stage": 0
+       }
+     }
+   }
+   ```
 
 That's all we need to do — remember that Parcel installs the dependencies for us by default!
 
@@ -414,22 +415,22 @@ To start working with our project, we'll run the Parcel server on the command li
 
 1. To start Parcel off in the background, go to your terminal and run the following command:
 
-    ```bash
-    npx parcel src/index.html
-    ```
+   ```bash
+   npx parcel src/index.html
+   ```
 
-    You should see an output like this (once the dependencies have been installed):
+   You should see an output like this (once the dependencies have been installed):
 
-    ```bash
-    Server running at http://localhost:1234
-    ✨  Built in 129ms.
-    ```
+   ```bash
+   Server running at http://localhost:1234
+   ✨  Built in 129ms.
+   ```
 
-    Parcel also installs the dependencies that we will use in our code, including react, react-dom, react-async-hook, date-fns, and format-number. This first run will therefore be longer than a typical run of Parcel.
+   Parcel also installs the dependencies that we will use in our code, including react, react-dom, react-async-hook, date-fns, and format-number. This first run will therefore be longer than a typical run of Parcel.
 
-    > **Note:** if you run Parcel on this project and are faced with an error that reads `Error: ENOENT: no such file or directory`, stop the process using <kbd>Ctrl</kbd> + <kbd>C</kbd> and then try re-running it.
+   > **Note:** if you run Parcel on this project and are faced with an error that reads `Error: ENOENT: no such file or directory`, stop the process using <kbd>Ctrl</kbd> + <kbd>C</kbd> and then try re-running it.
 
-    The server is now running on the URL that was printed (in this case localhost:1234).
+   The server is now running on the URL that was printed (in this case localhost:1234).
 
 2. Go to this URL in your browser and you will see the example app running!
 

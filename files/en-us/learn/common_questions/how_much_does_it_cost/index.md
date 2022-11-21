@@ -8,6 +8,9 @@ tags:
   - hosting
   - web development tools
 ---
+
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Getting involved on the Web isn't as cheap as it looks. In this article we discuss how much you may have to spend, and why.
 
 <table>
@@ -21,8 +24,8 @@ Getting involved on the Web isn't as cheap as it looks. In this article we discu
         >, the difference between
         <a
           href="/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines"
-          >a webpage, a website, etc</a
-        >., and what
+          >a webpage, a website, etc.</a
+        >, and what
         <a href="/en-US/docs/Learn/Common_questions/What_is_a_domain_name"
           >a domain name is</a
         >.
@@ -48,9 +51,9 @@ When launching a website, you may spend nothing, or your costs may go through th
 
 You likely have a text editor: such as, Notepad on Windows, Gedit on Linux, TextEdit on Mac. You'll have an easier time writing code if you choose an editor that color-codes, checks your syntax, and assists you with code structure.
 
-Many editors are free, for example [Atom](https://atom.io/), [Brackets](https://brackets.io/), [Bluefish](https://bluefish.openoffice.nl/index.html), [TextWrangler](https://www.barebones.com/products/textwrangler/), [Eclipse](https://www.eclipse.org/), [Netbeans](https://netbeans.apache.org//), and [Visual Studio Code](https://code.visualstudio.com/). Some, like [Sublime Text](https://www.sublimetext.com/), you can test as long as you like, but you're encouraged to pay. Some, like [PhpStorm](https://www.jetbrains.com/phpstorm/), can cost between a few dozen and 200 dollars, depending on the plan you purchase. Some of them, like [Microsoft Visual Studio](https://visualstudio.microsoft.com/), can cost hundreds, or thousands of dollars; though Visual Studio Community is free for individual developers or open source projects. Often, for-pay editors will have a trial version.
+Many editors are free, for example [Brackets](https://brackets.io/), [Bluefish](https://bluefish.openoffice.nl/index.html), [TextWrangler](https://www.barebones.com/products/textwrangler/), [Eclipse](https://www.eclipse.org/), [Netbeans](https://netbeans.apache.org//), and [Visual Studio Code](https://code.visualstudio.com/). Some, like [Sublime Text](https://www.sublimetext.com/), you can test as long as you like, but you're encouraged to pay. Some, like [PhpStorm](https://www.jetbrains.com/phpstorm/), can cost between a few dozen and 200 dollars, depending on the plan you purchase. Some of them, like [Microsoft Visual Studio](https://visualstudio.microsoft.com/), can cost hundreds, or thousands of dollars; though Visual Studio Community is free for individual developers or open source projects. Often, for-pay editors will have a trial version.
 
-To start, we suggest trying out several editors, to get a sense of which works best for you. If you're only writing simple {{Glossary("HTML")}}, {{Glossary("CSS")}}, and {{Glossary("Javascript")}}, go with a simple editor.
+To start, we suggest trying out several editors, to get a sense of which works best for you. If you're only writing simple {{Glossary("HTML")}}, {{Glossary("CSS")}}, and {{Glossary("JavaScript")}}, go with a simple editor.
 
 Price does not reliably reflect a text editor's quality or usefulness. You have to try it for yourself and decide if it meets your needs. For example, Sublime Text is cheap, but comes with many free plugins that can greatly extend its functionality.
 

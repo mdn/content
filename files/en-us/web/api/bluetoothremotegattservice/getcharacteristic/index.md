@@ -13,6 +13,7 @@ tags:
   - getCharacteristic()
 browser-compat: api.BluetoothRemoteGATTService.getCharacteristic
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothGATTService.getCharacteristic()`** method
@@ -22,7 +23,7 @@ returns a {{jsxref("Promise")}} to an instance of
 
 ## Syntax
 
-```js
+```js-nolint
 getCharacteristic(characteristic)
 ```
 

@@ -13,6 +13,7 @@ tags:
   - Calendars
 browser-compat: javascript.builtins.Intl.Locale.calendars
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale.prototype.calendars`** property is an accessor property which returns an array of one or more unique calendar identifiers for the `Locale`.
@@ -71,12 +72,12 @@ List supported calendars for a given `Locale`.
 
 ```js
 const arEG = new Intl.Locale("ar-EG");
-console.log(arEG.calendars); // logs ["gregory", "coptic", "islamic", "islamic-civil", "islamic-tbla"]
+console.log(arEG.calendars); // ["gregory", "coptic", "islamic", "islamic-civil", "islamic-tbla"]
 ```
 
 ```js
 const jaJP = new Intl.Locale("ja-JP");
-console.log(jaJP.calendars); // logs ["gregory", "japanese"]
+console.log(jaJP.calendars); // ["gregory", "japanese"]
 ```
 
 ## Specifications

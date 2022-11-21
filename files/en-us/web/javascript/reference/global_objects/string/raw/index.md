@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.raw
 ---
+
 {{JSRef}}
 
 The static **`String.raw()`** method is a tag function of [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals). This is similar to the `r` prefix in Python, or the `@` prefix in C# for string literals. It's used to get the raw string form of template literals — that is, substitutions (e.g. `${foo}`) are processed, but escape sequences (e.g. `\n`) are not.
@@ -18,7 +19,7 @@ The static **`String.raw()`** method is a tag function of [template literals](/e
 
 ## Syntax
 
-```js
+```js-nolint
 String.raw(strings, ...substitutions)
 
 String.raw`templateString`
@@ -64,7 +65,7 @@ String.raw`Hi\n${2+3}!`;
 
 String.raw`Hi\u000A!`;
 // 'Hi\\u000A!', same here, this time we will get the
-//  \, u, 0, 0, 0, A, 6 characters.
+// \, u, 0, 0, 0, A, 6 characters.
 // All kinds of escape characters will be ineffective
 // and backslashes will be present in the output string.
 // You can confirm this by checking the .length property
@@ -85,7 +86,7 @@ Many tools give special treatment to literals tagged by a particular name.
 ```js
 // Some formatters will format this literal's content as HTML
 const doc = html`<!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <title>Hello</title>
   </head>

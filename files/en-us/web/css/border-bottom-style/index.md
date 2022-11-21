@@ -1,6 +1,7 @@
 ---
 title: border-bottom-style
 slug: Web/CSS/border-bottom-style
+page-type: css-property
 tags:
   - CSS
   - CSS Borders
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.border-bottom-style
 ---
+
 {{CSSRef}}
 
 The **`border-bottom-style`** [CSS](/en-US/docs/Web/CSS) property sets the line style of an element's bottom {{cssxref("border")}}.
@@ -83,9 +85,10 @@ The `border-bottom-style` property is specified as a single keyword chosen from 
 /* Define look of the table */
 table {
   border-width: 3px;
-  background-color: #52E385;
+  background-color: #52e385;
 }
-tr, td {
+tr,
+td {
   padding: 3px;
 }
 

@@ -8,6 +8,7 @@ tags:
   - part 5
   - server-side
 ---
+
 The _Book detail page_ needs to display the information for a specific `Book` (identified using its automatically generated `_id` field value), along with information about each associated copy in the library (`BookInstance`). Wherever we display an author, genre, or book instance, these should be linked to the associated detail page for that item.
 
 ## Controller
@@ -99,7 +100,7 @@ Almost everything in this template has been demonstrated in previous sections.
 
 > **Note:** The list of genres associated with the book is implemented in the template as below. This adds a comma after every genre associated with the book except for the last one.
 >
-> ```plain
+> ```pug
 >   p #[strong Genre:]
 >     each val, index in book.genre
 >       a(href=val.url) #{val.name}

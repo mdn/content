@@ -13,23 +13,25 @@ tags:
   - WebVR
 browser-compat: api.GamepadHapticActuator
 ---
+
 {{APIRef("Gamepad API")}}{{securecontext_header}}
 
 The **`GamepadHapticActuator`** interface of the [Gamepad API](/en-US/docs/Web/API/Gamepad_API) represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware.
 
 This interface is accessible through the {{domxref("Gamepad.hapticActuators")}} property.
 
-## Properties
+## Instance properties
 
-- {{domxref("GamepadHapticActuator.type")}} {{readonlyInline}}
+- {{domxref("GamepadHapticActuator.type")}} {{ReadOnlyInline}}
   - : Returns an enum representing the type of the haptic hardware.
 
-## Methods
+## Instance methods
 
-- {{domxref("GamepadHapticActuator.pulse()")}} {{readonlyInline}}
+- {{domxref("GamepadHapticActuator.pulse()")}} {{ReadOnlyInline}}
+
   - : Makes the hardware pulse at a certain intensity for a specified duration.
 
-- {{domxref("GamepadHapticActuator.playEffect()")}} {{readonlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
+- {{domxref("GamepadHapticActuator.playEffect()")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Makes the hardware play a specific vibration pattern.
 
 ## Examples

@@ -12,9 +12,10 @@ tags:
   - Storage
   - XUL
 ---
+
 {{FirefoxSidebar}}
 
-[Firefox 3.5](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/3.5/releasenotes/) (_released June 30, 2009)_ introduces a number of new features, as well as additional and improved support for a wide variety of web standards.  This article offers an extensive list, with links to articles covering the major improvements.
+[Firefox 3.5](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/3.5/releasenotes/) (_released June 30, 2009)_ introduces a number of new features, as well as additional and improved support for a wide variety of web standards. This article offers an extensive list, with links to articles covering the major improvements.
 
 ## New developer features in Firefox 3.5
 
@@ -27,7 +28,7 @@ tags:
 - Offline resources in Firefox
   - : Firefox 3.5 now fully supports the HTML 5 offline resource specification.
 - [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
-  - : The HTML 5 drag and drop API allows support for dragging and dropping items within and between web sites.  This also provides a simpler API for use by extensions and Mozilla-based applications.
+  - : The HTML 5 drag and drop API allows support for dragging and dropping items within and between web sites. This also provides a simpler API for use by extensions and Mozilla-based applications.
 
 #### Newly-supported CSS features
 
@@ -38,9 +39,9 @@ tags:
 - {{ cssxref("::before") }} and {{ cssxref("::after") }} updated to CSS 2.1
   - : The `::before` and `::after` pseudo-elements have been updated to full CSS 2.1 support, adding support for the `position`, `float`, `list-style-*`, and some `display` properties.
 - `ch` units for length
-  - : The `ch` unit can now be used anywhere that accepts a [unit of length](/en-US/docs/Web/CSS/length#units).`1ch` is the width of the "0" (zero) character.
+  - : The `ch` unit can now be used anywhere that accepts a [unit of length](/en-US/docs/Web/CSS/length#units). `1ch` is the width of the "0" (zero) character.
 - {{ cssxref("opacity") }}
-  - : The`-moz-opacity` Mozilla extension to CSS has been removed in favor of the standard `opacity` property.
+  - : The `-moz-opacity` Mozilla extension to CSS has been removed in favor of the standard `opacity` property.
 - {{ cssxref("text-shadow") }}
   - : The `text-shadow` property, which allows web content to specify shadow effects to apply to text and text decorations, is now supported.
 - {{ cssxref("overflow-wrap") }}
@@ -68,7 +69,7 @@ tags:
 - New values for `-moz-appearance`
   - : The `-moz-win-glass` and `-moz-mac-unified-toolbar` values have been added to `-moz-appearance`.
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
-  - : Firefox 3.5 supports CSS transforms.  See {{ cssxref("transform", "-moz-transform") }} and {{ cssxref("transform-origin", "-moz-transform-origin") }} for details.
+  - : Firefox 3.5 supports CSS transforms. See {{ cssxref("transform", "-moz-transform") }} and {{ cssxref("transform-origin", "-moz-transform-origin") }} for details.
 - {{ cssxref(":nth-child") }}
 
   {{ cssxref(":nth-last-child") }}
@@ -119,12 +120,12 @@ tags:
 
 - Cross-site access controls for HTTP
   - : In Firefox 3.5, it's now possible for HTTP requests, including those made by [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest), to work across domains if the server supports it.
-- [Progress events for](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)[`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
+- [Progress events for `XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
   - : Progress events are now offered to enable extensions to monitor the progress of requests.
 - Improved Synchronous `XMLHttpRequest` support
   - : [DOM Timeout](https://bugzilla.mozilla.org/show_bug.cgi?id=340345) and [Input Events](https://bugzilla.mozilla.org/show_bug.cgi?id=333198) are now suppressed during a synchronous `XMLHttpRequest`.
 - Controlling DNS prefetching
-  - : Firefox 3.5 provides DNS prefetching, whereby it performs domain name resolution ahead of time for links included in the current page, in order to save time when links are actually clicked.  This article describes how you can tune your web site to disable prefetching, or to adjust how prefetching operates.
+  - : Firefox 3.5 provides DNS prefetching, whereby it performs domain name resolution ahead of time for links included in the current page, in order to save time when links are actually clicked. This article describes how you can tune your web site to disable prefetching, or to adjust how prefetching operates.
 
 #### New Canvas features
 
@@ -135,7 +136,7 @@ tags:
 - [`createImageData()`](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas#creating_an_imagedata_object)
   - : The canvas method `createImageData()` is now supported, allowing code to specifically create an `ImageData` object instead of requiring it to be done automatically. This can improve performance of other `ImageData` methods by preventing them from having to create the object.
 - `moz-opaque` attribute
-  - : Added the {{htmlattrxref("moz-opaque", "canvas")}} attribute, which lets the canvas know whether or not translucency will be a factor.  If the canvas knows there's no translucency, painting performance can be optimized. See also {{domxref("HTMLCanvasElement.mozOpaque")}}.
+  - : Added the {{htmlattrxref("moz-opaque", "canvas")}} attribute, which lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized. See also {{domxref("HTMLCanvasElement.mozOpaque")}}.
 
 #### New SVG features
 
@@ -157,7 +158,7 @@ tags:
 - The Element Traversal API is now supported by the DOM [Element](/en-US/docs/Web/API/Element) object.
 - HTML document nodes may now be cloned using [`cloneNode()`](/en-US/docs/Web/API/Node/cloneNode).
 - The non-standard `getBoxObjectFor()` DOM method has been removed. You should be using [`getBoundingClientRect()`](/en-US/docs/Web/API/Element/getBoundingClientRect) instead.
-- Dispatched DOM events can now be re-dispatched.  This makes Firefox 3.5 pass Acid 3 test 30.
+- Dispatched DOM events can now be re-dispatched. This makes Firefox 3.5 pass Acid 3 test 30.
 - Improvements have been made to DOM 2 Range handling.
 - In non-chrome scope, caught objects in exceptions are now the actual thrown object instead of an [`XPConnect`](https://web.archive.org/web/20210423135742/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Language_bindings/XPConnect) wrapper containing the thrown object.
 - SVG ID references are now live.
@@ -175,20 +176,20 @@ If you're an extension developer, you should start by reading [Updating extensio
 #### New components and functionality
 
 - [Supporting private browsing mode](https://web.archive.org/web/20191029190431/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/Supporting_private_browsing_mode)
-  - : Firefox 3.5 offers Private Browsing mode, which doesn't record the user's activities.  Extensions may support private browsing following the guidelines offered by this article.
+  - : Firefox 3.5 offers Private Browsing mode, which doesn't record the user's activities. Extensions may support private browsing following the guidelines offered by this article.
 - [Security changes in Firefox 3.5](/en-US/docs/Mozilla/Firefox/Releases/3.5/Security_changes)
   - : This article covers security-related changes in Firefox 3.5.
 - [Theme changes in Firefox 3.5](https://web.archive.org/web/20191004004454/https://developer.mozilla.org/en-US/docs/Archive/Themes/Theme_changes_in_Firefox_3.5)
   - : This article covers theme-related changes in Firefox 3.5.
 - Monitoring Wi-Fi access points
-  - : Code with UniversalXPConnect privileges can now monitor the list of available access points, getting information on their SSIDs, MAC addresses, and signal strength.  This can be used in tandem with Geolocation to offer Wi-Fi-based location service.
+  - : Code with UniversalXPConnect privileges can now monitor the list of available access points, getting information on their SSIDs, MAC addresses, and signal strength. This can be used in tandem with Geolocation to offer Wi-Fi-based location service.
 
 #### Notable changes and improvements
 
 - The XUL `textbox` widget now offers a `search` type, for use as search fields.
 - In order to support dragging and dropping tabs between windows, the `browser` widget now has a `swapDocShells()` method.
 - Added the `level` attribute to the `panel` element; this specifies whether panels appear on top of other applications, or just on top of the window the panel is contained within.
-- XUL elements now support the `clientHeight`,`clientWidth`,`scrollHeight`, and `scrollWidth` properties.
+- XUL elements now support the `clientHeight`, `clientWidth`, `scrollHeight`, and `scrollWidth` properties.
 - `keyset` now include a `disabled` attribute.
 - In addition, `keyset`s can now be removed using the node's [`removeChild()`](/en-US/docs/Web/API/Node/removeChild) method.
 - `mozIStorageStatement` had the `initialize()` method removed; consumers should use the `createStatement()` method instead to get a new statement object.
@@ -203,23 +204,23 @@ If you're an extension developer, you should start by reading [Updating extensio
 ### User experience
 
 - Location aware browsing
-  - : If you choose, you may allow Firefox 3.5 to share information about your current location with web sites.  Firefox 3.5 can use information about the network you're connected to in order to share your location. Of course, it asks for your permission before doing so, to ensure your privacy.
+  - : If you choose, you may allow Firefox 3.5 to share information about your current location with web sites. Firefox 3.5 can use information about the network you're connected to in order to share your location. Of course, it asks for your permission before doing so, to ensure your privacy.
 - Open audio and video support
   - : Firefox 3.5 supports embedded video and audio using the open Ogg format, as well as WAV for audio. No plugins, no confusing error messages about needing to install something or other that turns out not to be available on your platform anyway.
 - Local data storage
-  - : Web applications can now use Web Storage's local storage capabilities to store data on your computer.  This is great for anything from site preferences to more complex data.
+  - : Web applications can now use Web Storage's local storage capabilities to store data on your computer. This is great for anything from site preferences to more complex data.
 
 ### Security and privacy
 
 - Private Browsing
   - : Need to use someone else's computer? Switch on Private Browsing mode and nothing will be recorded about your session, including cookies, history, and any other potentially private information.
 - Better privacy controls
-  - : The Privacy preference pane has been completely redesigned to offer users more control over their private information. Users can choose to retain or discard anything including history information, cookies, downloads, and form field information.  In addition, users can specify whether or not to include history and/or bookmarks in the location bar's automated suggestions, so you can keep private web addresses from popping up unexpectedly while typing in the location bar.
+  - : The Privacy preference pane has been completely redesigned to offer users more control over their private information. Users can choose to retain or discard anything including history information, cookies, downloads, and form field information. In addition, users can specify whether or not to include history and/or bookmarks in the location bar's automated suggestions, so you can keep private web addresses from popping up unexpectedly while typing in the location bar.
 
 ### Performance
 
 - Faster JavaScript performance
-  - : JavaScript, the "J" in "AJAX," is sped up dramatically in Firefox 3.5 with the new TraceMonkey JavaScript engine.  Web applications are much faster than in Firefox 3.
+  - : JavaScript, the "J" in "AJAX," is sped up dramatically in Firefox 3.5 with the new TraceMonkey JavaScript engine. Web applications are much faster than in Firefox 3.
 - Faster page rendering
   - : Web content draws faster in Firefox 3.5, thanks to technologies such as "speculative parsing." Your users don't need to know what it means, other than "it makes things draw faster."
 

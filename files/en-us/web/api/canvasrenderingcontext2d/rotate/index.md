@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.rotate
 ---
+
 {{APIRef}}
 
 The
@@ -18,11 +19,11 @@ method of the Canvas 2D API adds a rotation to the transformation matrix.
 
 ## Syntax
 
-```js
+```js-nolint
 rotate(angle)
 ```
 
-![](canvas_grid_rotate.png)
+![Rectangular coordinate system with the rotation of the abscissa axis by the alpha angle](canvas_grid_rotate.png)
 
 ### Parameters
 
@@ -87,11 +88,11 @@ This example rotates a shape around its center point. To do this, the following 
 are applied to the matrix:
 
 1. First, {{domxref("CanvasRenderingContext2D.translate()", "translate()")}} moves the
-    matrix's origin to the shape's center.
+   matrix's origin to the shape's center.
 2. `rotate()` rotates the matrix by the desired amount.
 3. Finally, `translate()` moves the matrix's origin back to its starting
-    point. This is done by applying the values of the shape's center coordinates in a
-    negative direction.
+   point. This is done by applying the values of the shape's center coordinates in a
+   negative direction.
 
 #### HTML
 

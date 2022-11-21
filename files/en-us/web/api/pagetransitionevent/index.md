@@ -9,17 +9,18 @@ tags:
   - Reference
 browser-compat: api.PageTransitionEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`PageTransitionEvent`** event object is available inside handler functions for the [`pageshow`](/en-US/docs/Web/API/Window/pageshow_event) and [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) events, fired when a document is being loaded or unloaded.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("Event")}}._
 
-- {{domxref("PageTransitionEvent.persisted")}} {{readonlyInline}}
+- {{domxref("PageTransitionEvent.persisted")}} {{ReadOnlyInline}}
   - : Indicates if the document is loading from a cache.
 
 ## Example
@@ -28,9 +29,8 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 
 ```html
 <!DOCTYPE html>
-<html>
-<body>
-</body>
+<html lang="en-US">
+  <body></body>
 </html>
 ```
 

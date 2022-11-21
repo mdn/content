@@ -8,24 +8,23 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Object.Object
 ---
+
 {{JSRef}}
 
 The **`Object` constructor** turns the input into an object. Its behavior depends on the input's type.
 
-- If the value is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, it will create and
-  return an empty object.
-- Otherwise, it will return an object of a Type that corresponds to the given value.
-- If the value is an object already, it will return the value.
-
-When called in a non-constructor context, `Object` behaves identically to
-`new Object()`.
+- If the value is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, it creates and returns an empty object.
+- Otherwise, it returns an object of a Type that corresponds to the given value.
+- If the value is an object already, it returns the value.
 
 ## Syntax
 
-```js
-new Object()
+```js-nolint
 new Object(value)
+Object(value)
 ```
+
+> **Note:** `Object()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new object.
 
 ### Parameters
 
@@ -41,7 +40,7 @@ const o = new Object();
 o.foo = 42;
 
 console.log(o);
-// Object { foo: 42 }
+// { foo: 42 }
 ```
 
 ### Using Object given undefined and null types

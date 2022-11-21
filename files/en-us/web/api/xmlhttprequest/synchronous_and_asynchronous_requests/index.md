@@ -12,6 +12,7 @@ tags:
   - XMLHttpRequest
   - asynchronous
 ---
+
 {{domxref('XMLHttpRequest')}} supports both synchronous and asynchronous communications. In general, however, asynchronous requests should be preferred to synchronous requests for performance reasons.
 
 Synchronous requests block the execution of code which causes "freezing" on the screen and an unresponsive user experience.
@@ -137,9 +138,7 @@ Here, we're specifying a timeout of 2000 ms.
 
 ## Synchronous request
 
-{{deprecated_header}}
-
-Synchronous XHR requests often cause hangs on the web. But developers typically don't notice the problem because the hang only manifests with poor network conditions or when the remote server is slow to respond. Synchronous XHR is now in deprecation state. The recommendation is that developers move away from the synchronous API and instead use asynchronous requests.
+> **Warning:** Synchronous XHR requests often cause hangs on the web, especially with poor network conditions or when the remote server is slow to respond. Synchronous XHR is now deprecated and should be avoided in favor of asynchronous requests.
 
 All new XHR features such as `timeout` or `abort` are not allowed for synchronous XHR. Doing so will raise an `InvalidAccessError`.
 
@@ -168,11 +167,11 @@ One of the few cases in which a synchronous request does not usually block execu
 **`example.html`** (the main page):
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>MDN Example</title>
     <script>
       const worker = new Worker("myTask.js");
@@ -184,7 +183,7 @@ One of the few cases in which a synchronous request does not usually block execu
     </script>
   </head>
   <body>
-  …
+    …
   </body>
 </html>
 ```

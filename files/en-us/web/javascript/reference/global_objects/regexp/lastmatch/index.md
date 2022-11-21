@@ -11,6 +11,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.lastMatch
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 The non-standard **lastMatch** property is a static and read-only property of regular expressions that contains the last matched characters. `RegExp.$&` is an alias for this property.
@@ -29,9 +30,9 @@ You can not use the shorthand alias with the dot property accessor (`RegExp.$&`)
 
 ```js
 const re = /hi/g;
-re.test('hi there!');
+re.test("hi there!");
 RegExp.lastMatch; // "hi"
-RegExp['$&'];     // "hi"
+RegExp["$&"]; // "hi"
 ```
 
 ## Specifications

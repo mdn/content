@@ -12,6 +12,11 @@ tags:
   - XPath
   - XSLT
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/XPath")}}
+</section>
+
 This document describes the interface for using [XPath](/en-US/docs/Web/XPath) in JavaScript internally, in extensions, and from websites. Mozilla implements a fair amount of the [DOM 3 XPath](https://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226/), which means that XPath expressions can be run against both HTML and XML documents.
 
 The main interface to using XPath is the [evaluate](/en-US/docs/Web/API/Document/evaluate) function of the [document](/en-US/docs/Web/API/Document) object.
@@ -32,7 +37,7 @@ The [`evaluate()`](/en-US/docs/Web/API/Document/evaluate) method takes a total o
 - `contextNode`: A node in the document against which the `xpathExpression` should be evaluated, including any and all of its child nodes. The [document](/en-US/docs/Web/API/Document) node is the most commonly used.
 - `namespaceResolver`: A function that will be passed any namespace prefixes contained within `xpathExpression` which returns a string representing the namespace URI associated with that prefix. This enables conversion between the prefixes used in the XPath expressions and the possibly different prefixes used in the document. The function can be either:
 
-  - [Created](#implementing_a_default_namespace_resolver) by using the [`createNSResolver`](/en-US/docs/Web/API/Document/createNSResolver) method of a [`XPathEvaluator`](/en-US/docs/Web/API/XPathEvaluator) object. You should use this virtually all of the time.
+  - [Created](#implementing_a_default_namespace_resolver) by using the [`createNSResolver`](/en-US/docs/Web/API/Document/createNSResolver) method of a [`XPathEvaluator`](/en-US/docs/Web/API/XPathEvaluator) object. You should use this virtually all the time.
   - `null`, which can be used for HTML documents or when no namespace prefixes are used. Note that, if the `xpathExpression` contains a namespace prefix, this will result in a `DOMException` being thrown with the code `NAMESPACE_ERR`.
   - A custom user-defined function. See the [Using a User Defined Namespace Resolver](#implementing_a_user_defined_namespace_resolver) section in the appendix for details.
 
@@ -184,7 +189,7 @@ When the result type in the `resultType` parameter is specified as `ANY_TYPE`, t
 
 It could be any of the simple types (`NUMBER_TYPE, STRING_TYPE, BOOLEAN_TYPE`), **but**, if the returned result type is a node-set then it will **only** be an `UNORDERED_NODE_ITERATOR_TYPE`.
 
-To determine that type after evaluation, we use the `resultType` property of the `XPathResult` object. The [constant](#xpathresult_defined_constants) values of this property are defined in the appendix. None Yet =====Any_Type Example===== \<pre> \</pre>
+To determine that type after evaluation, we use the `resultType` property of the `XPathResult` object. The [constant](#xpathresult_defined_constants) values of this property are defined in the appendix.
 
 ## Examples
 
@@ -278,7 +283,7 @@ function nsResolver(prefix) {
 }
 ```
 
-Our call to `document.evaluate` would then looks like:
+Our call to `document.evaluate` would then look like:
 
 ```js
 document.evaluate('//xhtml:td/mathml:math', document, nsResolver, XPathResult.ANY_TYPE, null);

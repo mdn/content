@@ -2,10 +2,11 @@
 title: Firefox 54 for developers
 slug: Mozilla/Firefox/Releases/54
 tags:
-  - '54'
+  - "54"
   - Firefox
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 54 was released on June 13, 2017. This article lists key changes that are useful for web developers.
@@ -20,11 +21,11 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 ### CSS
 
 - {{cssxref("clip-path")}} now supports [basic shapes](/en-US/docs/Web/CSS/CSS_Shapes) ({{bug(1247229)}}).
-- Firefox's implementations of CSS Flexbox and CSS alignment now implement updated spec language for interactions between the properties {{cssxref("align-items")}} and {{cssxref("align-self")}}  as well as between {{cssxref("justify-items")}} and {{cssxref("justify-self")}} ({{bug(1340309)}}).
+- Firefox's implementations of CSS Flexbox and CSS alignment now implement updated spec language for interactions between the properties {{cssxref("align-items")}} and {{cssxref("align-self")}} as well as between {{cssxref("justify-items")}} and {{cssxref("justify-self")}} ({{bug(1340309)}}).
 - {{htmlelement("input")}} elements of types `checkbox` and `radio` with {{cssxref("appearance", "-moz-appearance")}}`: none;` set on them are now non-replaced elements, for compatibility with other browsers ({{bug(605985)}}).
 - Previously, an element styled with {{cssxref("display")}}: `inline-block` with a child element of type {{domxref("HTMLInputElement")}} styled with `display:block` had a wrong baseline ({{bug(1330962)}}). This is now fixed.
 - When Mozilla introduced dedicated content threads to Firefox (through the Electrolysis or e10s project), support for styling {{HTMLElement("option")}} elements was removed temporarily. Starting in Firefox 54, you can apply foreground and background colors to `<option>` elements again, using the {{cssxref("color")}} and {{cssxref("background-color")}} attributes. See {{bug(910022)}} for more information. Note that this is still disabled in Linux due to lack of contrast (see {{bug(1338283)}} for progress on this).
-- [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) now send the {{domxref("HTMLElement/animationcancel_event", "animationcancel")}} event as expected when an animation aborts prematurely ({{bug(1302648)}}).
+- [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) now send the {{domxref("Element/animationcancel_event", "animationcancel")}} event as expected when an animation aborts prematurely ({{bug(1302648)}}).
 - Transparent colors (i.e. those with an alpha channel of 0) were being serialized to the [`transparent` color keyword](/en-US/docs/Web/CSS/color_value#transparent_keyword) in certain situations; this has been fixed so that Firefox follows the spec (as well as other browsers' implementations). See ({{bug("1339394")}} for further information.
 - The proprietary `:-moz-table-border-nonzero` pseudo-class is no longer available to web content; it is now restricted to Firefox's internal UA stylesheet ({{bug(1341925)}}).
 - \[css-grid] Intrinsic content with overflow:auto overlaps in grid ({{bug(1348857)}}).
@@ -43,7 +44,7 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 - The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor now accepts a record containing strings as an init object ({{bug("1331580")}}).
 - Values returned in {{domxref("KeyboardEvent.key")}} for printable keys when the control key is also pressed have been corrected on macOS (except when the Command key is pressed) ({{bug(1342865)}}).
 - The `dom.workers.latestJSVersion` preference, which was mainly implemented to work around problems using [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) in workers (due to {{bug(855665)}}, which has since been fixed) has been removed (see {{bug(1219523)}}).
-- The {{domxref("event.timeStamp")}} property now returns a high-resolution monotonic time ({{domxref("DOMHighResTimeStamp")}}) instead of an epoch time ({{domxref("DOMTimeStamp")}}).
+- The {{domxref("event.timeStamp")}} property now returns a high-resolution monotonic time ({{domxref("DOMHighResTimeStamp")}}) instead of a value representing [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds.
 
 ### Web Workers and Service Workers
 
@@ -60,7 +61,7 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 
 #### General
 
-- 5.1 surround sound playback is now enabled by default on Windows, macOS, and Linux ({{bug(1334508)}}, {{bug(1321502)}} , and {{bug(1323659)}}).
+- 5.1 surround sound playback is now enabled by default on Windows, macOS, and Linux ({{bug(1334508)}}, {{bug(1321502)}}, and {{bug(1323659)}}).
 
 #### Media Capture and Streams API
 

@@ -6,6 +6,7 @@ tags:
   - Non-standard
   - Event
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{Non-standard_header()}}
@@ -13,8 +14,6 @@ tags:
 The **`mscandidatewindowhide`** event is thrown after the Input Method Editor (IME) candidate window closes and is fully hidden.
 
 This proprietary method is specific to Internet Explorer.
-
-> **Note:** Windows 8.1 and Windows 7 IMEs for certain languages on Internet Explorer for the desktop might not support this event. On Internet Explorer in the new Windows UI, this event is supported in Windows 8.1 IMEs of all languages.
 
 The handler of this event will see that the `isCandidateWindowVisible` method returns `false`, and no `ClientRect` object is returned from `getCandidateWindowClientRect()`.
 

@@ -18,7 +18,7 @@ tags:
 browser-compat: html.elements.abbr
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<abbr>`** [HTML](/en-US/docs/Web/HTML) element represents an abbreviation or acronym.
 
@@ -89,7 +89,7 @@ The optional {{htmlattrxref("title")}} attribute can provide an expansion for th
 
 This element only supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes). The {{htmlattrxref("title")}} attribute has a specific semantic meaning when used with the `<abbr>` element; it _must_ contain a full human-readable description or expansion of the abbreviation. This text is often presented by browsers as a tooltip when the mouse cursor is hovered over the element.
 
-Each `<abbr>` element you use is independent from all others; providing a `title` for one does not automatically attach the same expansion text to others with the same content text.
+Each `<abbr>` element you use is independent of all others; providing a `title` for one does not automatically attach the same expansion text to others with the same content text.
 
 ## Usage notes
 
@@ -157,8 +157,7 @@ Adding a {{htmlattrxref("title")}} attribute lets you provide an expansion or de
 #### HTML
 
 ```html
-<p>Ashok's joke made me <abbr title="Laugh Out Loud">LOL</abbr> big
-time.</p>
+<p>Ashok's joke made me <abbr title="Laugh Out Loud">LOL</abbr> big time.</p>
 ```
 
 #### Result
@@ -172,14 +171,16 @@ You can use `<abbr>` in tandem with {{HTMLElement("dfn")}} to more formally defi
 #### HTML
 
 ```html
-<p><dfn id="html"><abbr title="HyperText Markup Language">HTML</abbr>
-</dfn> is a markup language used to create the semantics and structure
-of a web page.</p>
+<p>
+  <dfn id="html"><abbr title="HyperText Markup Language">HTML</abbr> </dfn> is a
+  markup language used to create the semantics and structure of a web page.
+</p>
 
-<p>A <dfn id="spec">Specification</dfn>
-(<abbr>spec</abbr>) is a document that outlines
-in detail how a technology or API is intended to function and how it is
-accessed.</p>
+<p>
+  A <dfn id="spec">Specification</dfn> (<abbr>spec</abbr>) is a document that
+  outlines in detail how a technology or API is intended to function and how it
+  is accessed.
+</p>
 ```
 
 #### Result
@@ -190,12 +191,15 @@ accessed.</p>
 
 Spelling out the acronym or abbreviation in full the first time it is used on a page is beneficial for helping people understand it, especially if the content is technical or industry jargon.
 
-Only include a `title` if expanding the abbreviation or acronym in the text is not possible.  Having a difference between the announced word or phrase and what is displayed on the screen, especially if it's technical jargon the reader may not be familiar with, can be jarring.
+Only include a `title` if expanding the abbreviation or acronym in the text is not possible. Having a difference between the announced word or phrase and what is displayed on the screen, especially if it's technical jargon the reader may not be familiar with, can be jarring.
 
-#### Example
+### Example
 
 ```html
-<p>JavaScript Object Notation (<abbr>JSON</abbr>) is a lightweight data-interchange format.</p>
+<p>
+  JavaScript Object Notation (<abbr>JSON</abbr>) is a lightweight
+  data-interchange format.
+</p>
 ```
 
 This is especially helpful for people who are unfamiliar with the terminology or concepts discussed in the content, people who are new to the language, and people with cognitive concerns.

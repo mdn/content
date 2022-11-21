@@ -11,20 +11,21 @@ tags:
   - Reference
 browser-compat: api.HTMLDetailsElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLDetailsElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("details")}} elements.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDetailsElement.open")}}
   - : A boolean value reflecting the {{htmlattrxref("open", "details")}} HTML attribute, indicating whether or not the element's contents (not counting the {{HTMLElement("summary")}}) is to be shown to the user.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

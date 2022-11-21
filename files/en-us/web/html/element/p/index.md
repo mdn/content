@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.p
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<p>`** [HTML](/en-US/docs/Web/HTML) element represents a paragraph. Paragraphs are usually represented in visual media as blocks of text separated from adjacent blocks by blank lines and/or first-line indentation, but HTML paragraphs can be any structural grouping of related content, such as images or form fields.
 
@@ -101,14 +101,14 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 ### HTML
 
 ```html
-<p>This is the first paragraph of text.
-  This is the first paragraph of text.
-  This is the first paragraph of text.
-  This is the first paragraph of text.</p>
-<p>This is the second paragraph.
-  This is the second paragraph.
-  This is the second paragraph.
-  This is the second paragraph.</p>
+<p>
+  This is the first paragraph of text. This is the first paragraph of text. This
+  is the first paragraph of text. This is the first paragraph of text.
+</p>
+<p>
+  This is the second paragraph. This is the second paragraph. This is the second
+  paragraph. This is the second paragraph.
+</p>
 ```
 
 ### Result
@@ -150,8 +150,8 @@ p {
 }
 
 p.pilcrow {
-   text-indent: 0;
-   display: inline;
+  text-indent: 0;
+  display: inline;
 }
 p.pilcrow + p.pilcrow::before {
   content: " ¶ ";

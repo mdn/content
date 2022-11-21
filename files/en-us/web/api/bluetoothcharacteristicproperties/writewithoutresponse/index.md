@@ -14,6 +14,7 @@ tags:
   - writeWithoutResponse
 browser-compat: api.BluetoothCharacteristicProperties.writeWithoutResponse
 ---
+
 {{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`writeWithoutResponse`** read-only

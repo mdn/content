@@ -1,6 +1,7 @@
 ---
 title: counter-reset
 slug: Web/CSS/counter-reset
+page-type: css-property
 tags:
   - CSS
   - CSS Counter
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.counter-reset
 ---
+
 {{CSSRef}}
 
 The **`counter-reset`** [CSS](/en-US/docs/Web/CSS) property resets a [CSS counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) to a given value.

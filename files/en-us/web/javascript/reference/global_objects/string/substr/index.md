@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.substr
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`substr()`** method returns a portion of the string, starting at the specified index and extending for a given number of characters afterwards.
@@ -21,7 +22,7 @@ The **`substr()`** method returns a portion of the string, starting at the speci
 
 ## Syntax
 
-```js
+```js-nolint
 substr(start)
 substr(start, length)
 ```
@@ -55,16 +56,16 @@ Although you are encouraged to avoid using `substr()`, there is no trivial way t
 ### Using substr()
 
 ```js
-const aString = 'Mozilla';
+const aString = "Mozilla";
 
-console.log(aString.substr(0, 1));   // 'M'
-console.log(aString.substr(1, 0));   // ''
-console.log(aString.substr(-1, 1));  // 'a'
-console.log(aString.substr(1, -1));  // ''
-console.log(aString.substr(-3));     // 'lla'
-console.log(aString.substr(1));      // 'ozilla'
+console.log(aString.substr(0, 1)); // 'M'
+console.log(aString.substr(1, 0)); // ''
+console.log(aString.substr(-1, 1)); // 'a'
+console.log(aString.substr(1, -1)); // ''
+console.log(aString.substr(-3)); // 'lla'
+console.log(aString.substr(1)); // 'ozilla'
 console.log(aString.substr(-20, 2)); // 'Mo'
-console.log(aString.substr(20, 2));  // ''
+console.log(aString.substr(20, 2)); // ''
 ```
 
 ## Specifications

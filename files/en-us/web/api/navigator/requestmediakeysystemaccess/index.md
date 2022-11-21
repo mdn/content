@@ -17,6 +17,7 @@ tags:
   - requestMediaKeySystemAccess
 browser-compat: api.Navigator.requestMediaKeySystemAccess
 ---
+
 {{DefaultAPISidebar("Encrypted Media Extensions")}}
 
 The **`Navigator.requestMediaKeySystemAccess()`** method
@@ -34,7 +35,7 @@ returned {{domxref("MediaKeySystemAccess")}} object's
 
 ## Syntax
 
-```js
+```js-nolint
 requestMediaKeySystemAccess(keySystem, supportedConfigurations)
 ```
 
@@ -140,5 +141,5 @@ should be permitted, and therefore are valid requests.
 ## See also
 
 - [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API)
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)

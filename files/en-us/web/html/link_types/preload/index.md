@@ -14,14 +14,14 @@ browser-compat: html.elements.link.rel.preload
 
 The `preload` value of the {{htmlelement("link")}} element's {{htmlattrxref("rel", "link")}} attribute lets you declare fetch requests in the
 HTML's {{htmlelement("head")}}, specifying resources that your page will need very soon, which you want to start loading early in the page lifecycle,
-before browsers' main rendering machinery kicks in. This ensures they are available earlier and are less likely to block the page's render, improving performance.
+before browsers' main rendering machinery kicks in. This ensures they are available earlier and are less likely to block the page's render, improving performance. Even though the name contains the term _load_, it doesn't load and execute the script but only schedules it to be downloaded and cached with a higher priority.
 
 ## The basics
 
 You most commonly use `<link>` to load a CSS file to style your page with:
 
 ```html
-<link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="styles/main.css" />
 ```
 
 Here however, we will use a `rel` value of `preload`, which turns `<link>` into a preloader for any resource we want. You will also need to specify:
@@ -33,13 +33,13 @@ A simple example might look like this (see our [JS and CSS example source](https
 
 ```html
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>JS and CSS preload example</title>
 
-  <link rel="preload" href="style.css" as="style">
-  <link rel="preload" href="main.js" as="script">
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="preload" href="main.js" as="script" />
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -70,7 +70,7 @@ Many different content types can be preloaded. The possible `as` attribute value
 - `audio`: Audio file, as typically used in {{htmlelement("audio")}}.
 - `document`: An HTML document intended to be embedded by a {{htmlelement("frame")}} or {{htmlelement("iframe")}}.
 - `embed`: A resource to be embedded inside an {{htmlelement("embed")}} element.
-- `fetch`: Resource to be accessed by a fetch or XHR request, such as an ArrayBuffer or JSON file.
+- `fetch`: Resource to be accessed by a fetch or XHR request, such as an ArrayBuffer, WebAssembly/WASM binary, or JSON file.
 - `font`: Font file.
 - `image`: Image file.
 - `object`: A resource to be embedded inside an {{htmlelement("object")}} element.
@@ -82,6 +82,8 @@ Many different content types can be preloaded. The possible `as` attribute value
 
 > **Note:** `video` preloading is included in the Preload spec, but is not currently implemented by browsers.
 
+> **Note:** `font` and `fetch` preloading requires the `crossorigin` attribute to be set; see [CORS-enabled fetches](#cors-enabled_fetches) below.
+
 > **Note:** There's more detail about these values and the web features they expect to be consumed by in the Preload spec — see [link element extensions](https://w3c.github.io/preload/#link-element-extensions). Also note that the full list of values the `as` attribute can take is governed by the Fetch spec — see [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination).
 
 ## Including a MIME type
@@ -92,16 +94,19 @@ You can see an example of this in our video example (see the [full source code](
 
 ```html
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Video preload example</title>
 
-  <link rel="preload" href="sintel-short.mp4" as="video" type="video/mp4">
+  <link rel="preload" href="sintel-short.mp4" as="video" type="video/mp4" />
 </head>
 <body>
   <video controls>
-    <source src="sintel-short.mp4" type="video/mp4">
-    <source src="sintel-short.webm" type="video/webm">
-    <p>Your browser doesn't support HTML5 video. Here is a <a href="sintel-short.mp4">link to the video</a> instead.</p>
+    <source src="sintel-short.mp4" type="video/mp4" />
+    <source src="sintel-short.webm" type="video/webm" />
+    <p>
+      Your browser doesn't support HTML video. Here is a
+      <a href="sintel-short.mp4">link to the video</a> instead.
+    </p>
   </video>
 </body>
 ```
@@ -124,13 +129,23 @@ Let's use this case as an example. You can see the full [example source code on 
 
 ```html
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Web font example</title>
 
-  <link rel="preload" href="fonts/cicle_fina-webfont.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/zantroke-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link
+    rel="preload"
+    href="fonts/cicle_fina-webfont.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin />
+  <link
+    rel="preload"
+    href="fonts/zantroke-webfont.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin />
 
-  <link href="style.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" />
 </head>
 <body>
   …
@@ -147,13 +162,21 @@ Let's look at an example (see it on GitHub — [source code](https://github.com/
 
 ```html
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Responsive preload example</title>
 
-  <link rel="preload" href="bg-image-narrow.png" as="image" media="(max-width: 600px)">
-  <link rel="preload" href="bg-image-wide.png" as="image" media="(min-width: 601px)">
+  <link
+    rel="preload"
+    href="bg-image-narrow.png"
+    as="image"
+    media="(max-width: 600px)" />
+  <link
+    rel="preload"
+    href="bg-image-wide.png"
+    as="image"
+    media="(min-width: 601px)" />
 
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="main.css" />
 </head>
 <body>
   <header>
@@ -162,12 +185,12 @@ Let's look at an example (see it on GitHub — [source code](https://github.com/
 
   <script>
     const mediaQueryList = window.matchMedia("(max-width: 600px)");
-    const header = document.querySelector('header');
+    const header = document.querySelector("header");
 
     if (mediaQueryList.matches) {
-      header.style.backgroundImage = 'url(bg-image-narrow.png)';
+      header.style.backgroundImage = "url(bg-image-narrow.png)";
     } else {
-      header.style.backgroundImage = 'url(bg-image-wide.png)';
+      header.style.backgroundImage = "url(bg-image-wide.png)";
     }
   </script>
 </body>

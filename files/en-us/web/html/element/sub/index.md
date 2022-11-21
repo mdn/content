@@ -17,7 +17,7 @@ tags:
 browser-compat: html.elements.sub
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<sub>`** [HTML](/en-US/docs/Web/HTML) element specifies inline text which should be displayed as subscript for solely typographical reasons. Subscripts are typically rendered with a lowered baseline using smaller text.
 
@@ -88,7 +88,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 The `<sub>` element should be used only for typographical reasons—that is, to change the position of the text to comply with typographical conventions or standards, rather than solely for presentation or appearance purposes.
 
-For example, using `<sub>` to style the name of a company which uses altered baselines in their [wordmark](https://en.wikipedia.org/wiki/Wordmark) would not be appropriate; instead, CSS should be used (likely the {{cssxref("vertical-align")}} property, such as `vertical-align: sub` or, to more precisely control the baseline shift, `vertical-align: -25%`.
+For example, using `<sub>` to style the name of a company which uses altered baselines in their [wordmark](https://en.wikipedia.org/wiki/Wordmark) would not be appropriate; instead, CSS should be used. For example, you could use the {{cssxref("vertical-align")}} property with a declaration like `vertical-align: sub` or, to more precisely control the baseline shift, `vertical-align: -25%`.
 
 Appropriate use cases for `<sub>` include (but aren't necessarily limited to):
 
@@ -119,9 +119,10 @@ Appropriate use cases for `<sub>` include (but aren't necessarily limited to):
 Traditional footnotes are denoted using numbers which are rendered in subscript. This is a common use case for `<sub>`:
 
 ```html
-<p>According to the computations by Nakamura, Johnson, and
-Mason<sub>1</sub> this will result in the complete annihilation
-of both particles.</p>
+<p>
+  According to the computations by Nakamura, Johnson, and Mason<sub>1</sub> this
+  will result in the complete annihilation of both particles.
+</p>
 ```
 
 The resulting output looks like this:
@@ -133,8 +134,10 @@ The resulting output looks like this:
 In mathematics, families of variables related to the same concept (such as distances along the same axis) are represented using the same variable name with a subscript following. For example:
 
 ```html
-<p>The horizontal coordinates' positions along the X-axis are
-represented as <var>x<sub>1</sub></var> … <var>x<sub>n</sub></var>.</p>
+<p>
+  The horizontal coordinates' positions along the X-axis are represented as
+  <var>x<sub>1</sub></var> … <var>x<sub>n</sub></var>.
+</p>
 ```
 
 The resulting output:
@@ -148,9 +151,11 @@ When writing a chemical formula, such as H<sub>2</sub>0, the number of atoms of 
 Another example:
 
 ```html
-<p>Almost every developer's favorite molecule is
-C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, which is
-commonly known as "caffeine."</p>
+<p>
+  Almost every developer's favorite molecule is
+  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, which is commonly known
+  as "caffeine."
+</p>
 ```
 
 The output:
@@ -167,6 +172,6 @@ The output:
 
 ## See also
 
-- The {{HTMLElement("sup")}} HTML element that produces superscript. Note that you cannot use them both at the same time and you need to use [MathML](/en-US/docs/Web/MathML) to produce both a superscript directly above a subscript next to the chemical symbol of an element, representing its atomic number and its nuclear number.
+- The {{HTMLElement("sup")}} HTML element that produces superscript. Note that you cannot use `sup` and `sub` both at the same time: you need to use [MathML](/en-US/docs/Web/MathML) to produce both a superscript directly above a subscript next to the chemical symbol of an element, representing its atomic number and its nuclear number.
 - The [`<msub>`](/en-US/docs/Web/MathML/Element/msub), [`<msup>`](/en-US/docs/Web/MathML/Element/msup), and [`<msubsup>`](/en-US/docs/Web/MathML/Element/msubsup) MathML elements.
 - The CSS {{cssxref("vertical-align")}} property.

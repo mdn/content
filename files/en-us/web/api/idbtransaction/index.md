@@ -12,6 +12,7 @@ tags:
   - Storage
 browser-compat: api.IDBTransaction
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`IDBTransaction`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) provides a static, asynchronous transaction on a database using event handler attributes. All reading and writing of data is done within transactions. You use {{domxref("IDBDatabase")}} to start transactions, {{domxref("IDBTransaction")}} to set the mode of the transaction (e.g. is it `readonly` or `readwrite`), and you access an {{domxref("IDBObjectStore")}} to make a request. You can also use an `IDBTransaction` object to abort transactions.
@@ -50,20 +51,20 @@ Note that as of Firefox 40, IndexedDB transactions have relaxed durability guara
 
 If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}.
 
-## Properties
+## Instance properties
 
-- {{domxref("IDBTransaction.db")}} {{readonlyInline}}
+- {{domxref("IDBTransaction.db")}} {{ReadOnlyInline}}
   - : The database connection with which this transaction is associated.
-- {{domxref("IDBTransaction.durability")}} {{readonlyInline}}
+- {{domxref("IDBTransaction.durability")}} {{ReadOnlyInline}}
   - : Returns the durability hint the transaction was created with.
-- {{domxref("IDBTransaction.error")}} {{readonlyInline}}
+- {{domxref("IDBTransaction.error")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMException")}} indicating the type of error that occurred when there is an unsuccessful transaction. This property is `null` if the transaction is not finished, is finished and successfully committed, or was aborted with the {{domxref("IDBTransaction.abort()")}} function.
-- {{domxref("IDBTransaction.mode")}} {{readonlyInline}}
+- {{domxref("IDBTransaction.mode")}} {{ReadOnlyInline}}
   - : The mode for isolating access to data in the object stores that are in the scope of the transaction. The default value is [`readonly`](#const_read_only).
-- {{domxref("IDBTransaction.objectStoreNames")}} {{readonlyInline}}
+- {{domxref("IDBTransaction.objectStoreNames")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMStringList")}} of the names of {{domxref("IDBObjectStore")}} objects associated with the transaction.
 
-## Methods
+## Instance methods
 
 Inherits from: {{domxref("EventTarget")}}
 
@@ -129,16 +130,9 @@ Transactions can have one of three modes:
       <td>"versionchange" (2 in Chrome)</td>
       <td>
         Allows any operation to be performed, including ones that delete and
-        create object stores and indexes. This mode is for updating the version
-        number of transactions that were started using the
-        <a href="/en-US/docs/Web/API/IDBDatabase#setversion"
-          ><code>setVersion()</code></a
-        >
-        method of
-        <a href="/en-US/docs/Web/API/IDBDatabase">IDBDatabase</a> objects.
-        Transactions of this mode cannot run concurrently with other
-        transactions. Transactions in this mode are known as "upgrade
-        transactions."
+        create object stores and indexes. Transactions of this mode cannot run
+        concurrently with other transactions. Transactions in this mode are
+        known as "upgrade transactions."
       </td>
     </tr>
   </tbody>
@@ -152,7 +146,7 @@ const myIDBTransaction = window.IDBTransaction || window.webkitIDBTransaction ||
 
 ## Examples
 
-In the following code snippet, we open a read/write transaction on our database and add some data to an object store. Note also the functions attached to transaction event handlers to report on the outcome of the transaction opening in the event of success or failure. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+In the following code snippet, we open a read/write transaction on our database and add some data to an object store. Note also the functions attached to transaction event handlers to report on the outcome of the transaction opening in the event of success or failure. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 const note = document.getElementById('notifications');
@@ -220,4 +214,4 @@ function addData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

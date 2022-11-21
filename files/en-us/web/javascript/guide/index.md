@@ -4,8 +4,9 @@ slug: Web/JavaScript/Guide
 tags:
   - Guide
   - JavaScript
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 The JavaScript Guide shows you how to use [JavaScript](/en-US/docs/Web/JavaScript) and gives an overview of the language. If you need exhaustive information about a language feature, have a look at the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
@@ -52,8 +53,8 @@ Overview: [Loops and iteration](/en-US/docs/Web/JavaScript/Guide/Loops_and_itera
 - [`do...while`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#do...while_statement)
 - [`continue`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#continue_statement)
 - [`break`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#break_statement)
-- [`for..in`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement)
-- [`for..of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
+- [`for...in`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement)
+- [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
 
 ## Functions
 
@@ -121,9 +122,9 @@ Overview: [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_O
 
 ## Using classes
 
-Overview: [Using classes](/en-US/docs/Web/JavaScript/Using_Classes)
+Overview: [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes)
 
-- [Declaring a class](/en-US/docs/Web/JavaScript/Using_Classes#declaring_a_class)
+- [Declaring a class](/en-US/docs/Web/JavaScript/Guide/Using_Classes#declaring_a_class)
 - [Various class features](/en-US/docs/Web/JavaScript/Guide/Using_Classes#constructor)
 - [Extends and inheritance](/en-US/docs/Web/JavaScript/Guide/Using_Classes#extends_and_inheritance)
 - [Why classes?](/en-US/docs/Web/JavaScript/Guide/Using_Classes#why_classes)

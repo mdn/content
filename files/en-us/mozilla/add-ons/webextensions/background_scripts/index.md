@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/Background_scripts
 tags:
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 Background scripts or a background page enable you to monitor and react to events in the browser, such as navigating to a new page, removing a bookmark, or closing a tab.
@@ -49,7 +50,7 @@ This section describes how to implement a non-persistent background script.
 
 ### Specify the background scripts
 
-In your extension, you include a background script using the  [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) key in `manifest.json`. For Manifest V2 extensions, the `persistent` property must be set to `false` to create a non-persistent script. It can be omitted for Manifest V3 extensions or must be set to `false`.
+In your extension, you include a background script using the [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) key in `manifest.json`. For Manifest V2 extensions, the `persistent` property must be set to `false` to create a non-persistent script. It can be omitted for Manifest V3 extensions or must be set to `false`.
 
 ```json
 "background": {
@@ -60,28 +61,28 @@ In your extension, you include a background script using the  [`"background"`](/
 
 You can specify multiple background scripts. If you do, they run in the same context, just like scripts loaded into a web page.
 
-Instead of specifying background scripts, you can specify a background page. This has the added advantage of support for ES6 modules:
+Instead of specifying background scripts, you can specify a background page. This has the added advantage of support for ES modules:
 
-**manifest.json**
+- manifest.json
 
-```json
-"background": {
-  "page": "background-page.html",
-  "persistent": false
-}
-```
+  ```json
+  "background": {
+    "page": "background-page.html",
+    "persistent": false
+  }
+  ```
 
-**background-page.html**
+- background-page.html
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <script type="module" src="background-script.js"></script>
-  </head>
-</html>
-```
+  ```html
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <script type="module" src="background-script.js"></script>
+    </head>
+  </html>
+  ```
 
 You cannot specify background scripts and a background page.
 
@@ -118,7 +119,6 @@ browser.runtime.onInstalled.addListener(() => {
 browser.bookmarks.onCreated.addListener(() => {
   // do something
 });
-
 ```
 
 Do not register listeners asynchronously, as they will not be properly triggered. So, rather than:
@@ -155,8 +155,8 @@ Use APIs that support event filters to restrict listeners to the cases the exten
 
 ```js
 browser.webNavigation.onCompleted.addListener(() => {
-  alert("This is my favorite website!");
-}, {url: [{urlMatches : 'https://www.google.com/'}]});
+  console.log("This is my favorite website!");
+}, { url: [{ urlMatches : 'https://www.mozilla.org/' }] });
 ```
 
 ### React to listeners
@@ -226,7 +226,7 @@ In your extension's `manifest.json` file, change the persistent property of [`"b
 
 Listeners must be at the top-level to activate the background script if an event is triggered. Registered listeners may need to be restructured to the synchronous pattern, moved to the top-level, and unnested.
 
-```
+```js
 browser.runtime.onStartup.addListener(() => {
   // run startup function
 })

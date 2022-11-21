@@ -10,9 +10,10 @@ tags:
   - JavaScript
   - Logic
   - control
-  - l10n:priority
+  - "l10n:priority"
   - statements
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types",
   "Web/JavaScript/Guide/Loops_and_iteration")}}
@@ -56,31 +57,19 @@ while (x < 10) {
 
 Here, `{ x++; }` is the block statement.
 
-> **Note:** JavaScript before ECMAScript2015 (6th edition)
-> **does not** have block scope! In older JavaScript, variables introduced
-> within a block are scoped to the containing function or script, and the effects of
-> setting them persist beyond the block itself. In other words, _block statements do
-> not define a scope_.
->
-> "Standalone" blocks in JavaScript can produce completely different results from what
-> they would produce in C or Java. For example:
+> **Note:** [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)-declared variables are not block-scoped, but are scoped to the containing function or script, and the effects of setting them persist beyond the block itself. For example:
 >
 > ```js
 > var x = 1;
 > {
 >   var x = 2;
 > }
-> console.log(x); // outputs 2
+> console.log(x); // 2
 > ```
 >
-> This outputs `2` because the `var x` statement within the block
-> is in the same scope as the `var x` statement before the block. (In C or
-> Java, the equivalent code would have output `1`.)
+> This outputs `2` because the `var x` statement within the block is in the same scope as the `var x` statement before the block. (In C or Java, the equivalent code would have output `1`.)
 >
-> **Since ECMAScript2015**, the `let` and
-> `const` variable declarations are block-scoped. See the
-> {{jsxref("Statements/let", "let")}} and {{jsxref("Statements/const", "const")}}
-> reference pages for more information.
+> This scoping effect can be mitigated by using {{jsxref("Statements/let", "let")}} or {{jsxref("Statements/const", "const")}}.
 
 ## Conditional statements
 
@@ -345,13 +334,13 @@ block is skipped. The `finally` block executes after the `try` and
 The following example uses a `try...catch` statement. The example calls a
 function that retrieves a month name from an array based on the value passed to the
 function. If the value does not correspond to a month number
-(`1`–`12`), an exception is thrown with the value
+(`1` – `12`), an exception is thrown with the value
 `'InvalidMonthNo'` and the statements in the `catch` block set the
 `monthName` variable to `'unknown'`.
 
 ```js
 function getMonthName(mo) {
-  mo--; // Adjust month number for array index (1 = Jan, 12 = Dec)
+  mo--; // Adjust month number for array index (so that 0 = Jan, 11 = Dec)
   const months = [
     'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
     'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
@@ -492,7 +481,7 @@ try {
   console.log('caught outer "bogus"');
 }
 
-// OUTPUT
+// Logs:
 // caught inner "bogus"
 // false
 ```
@@ -504,9 +493,9 @@ You can nest one or more `try...catch` statements.
 If an inner `try` block does _not_ have a corresponding
 `catch` block:
 
-1. it *must* contain a `finally` block, and
+1. it _must_ contain a `finally` block, and
 2. the enclosing `try...catch` statement's `catch` block is
-    checked for a match.
+   checked for a match.
 
 For more information, see [nested try-blocks](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#nested_try-blocks)
 on the [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
@@ -531,17 +520,18 @@ For example:
 ```js
 function doSomethingErrorProne() {
   if (ourCodeMakesAMistake()) {
-    throw (new Error('The message'));
+    throw new Error('The message');
   } else {
-    doSomethingToGetAJavascriptError();
+    doSomethingToGetAJavaScriptError();
   }
 }
 
 try {
   doSomethingErrorProne();
-} catch (e) {               // NOW, we actually use `console.error()`
-  console.error(e.name);    // logs 'Error'
-  console.error(e.message); // logs 'The message', or a JavaScript error message
+} catch (e) {
+  // Now, we actually use `console.error()`
+  console.error(e.name); // 'Error'
+  console.error(e.message); // 'The message', or a JavaScript error message
 }
 ```
 

@@ -11,13 +11,14 @@ tags:
   - Experimental
 browser-compat: api.CookieStore.set
 ---
+
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 The **`set()`** method of the {{domxref("CookieStore")}} interface sets a cookie with the given name and value or options object. (See below.)
 
 ## Syntax
 
-```js
+```js-nolint
 set(name, value)
 set(options)
 ```
@@ -39,7 +40,7 @@ This method requires one of the following:
     - `value`
       - : A string with the value of the cookie.
     - `expires` {{Optional_Inline}}
-      - : A {{domxref("DOMTimeStamp")}} containing the expiration date of the cookie.
+      - : A timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds, containing the expiration date of the cookie.
     - `domain` {{Optional_Inline}}
       - : A string containing the domain of the cookie.
     - `path` {{Optional_Inline}}
@@ -78,7 +79,7 @@ cookieStore.set({
   name: "cookie1",
   value: "cookie1-value",
   expires: Date.now() + day,
-  domain: "example.com"
+  domain: "example.com",
 });
 ```
 

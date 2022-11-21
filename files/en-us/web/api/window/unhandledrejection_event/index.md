@@ -18,6 +18,7 @@ tags:
   - unhandledrejection
 browser-compat: api.Window.unhandledrejection_event
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`unhandledrejection`** event is sent to the global scope of a script when a JavaScript {{jsxref("Promise")}} that has no rejection handler is rejected; typically, this is the {{domxref("window")}}, but may also be a {{domxref("Worker")}}.
@@ -41,9 +42,9 @@ A {{domxref("PromiseRejectionEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-- {{domxref("PromiseRejectionEvent.promise")}} {{readonlyInline}}
+- {{domxref("PromiseRejectionEvent.promise")}} {{ReadOnlyInline}}
   - : The JavaScript {{jsxref("Promise")}} that was rejected.
-- {{domxref("PromiseRejectionEvent.reason")}} {{readOnlyInline}}
+- {{domxref("PromiseRejectionEvent.reason")}} {{ReadOnlyInline}}
   - : A value or {{jsxref("Object")}} indicating why the promise was rejected, as passed to {{jsxref("Promise.reject()")}}.
 
 ## Event handler aliases
@@ -57,6 +58,8 @@ In addition to the `Window` interface, the event handler property `onunhandledre
 ## Usage notes
 
 Allowing the `unhandledrejection` event to bubble will eventually result in an error message being output to the console. You can prevent this by calling {{domxref("Event.preventDefault", "preventDefault()")}} on the {{domxref("PromiseRejectionEvent")}}; see [Preventing default handling](#preventing_default_handling) below for an example.
+
+Because this event can leak data, {{jsxref("Promise")}} rejections that originate from a cross-origin script won't fire this event.
 
 ## Examples
 

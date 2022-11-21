@@ -10,6 +10,7 @@ tags:
   - Streams
 browser-compat: api.ByteLengthQueuingStrategy.ByteLengthQueuingStrategy
 ---
+
 {{APIRef("Streams")}}
 
 The **`ByteLengthQueuingStrategy()`**
@@ -18,16 +19,19 @@ instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new ByteLengthQueuingStrategy(highWaterMark)
 ```
 
 ### Parameters
 
+An object with the following property:
+
 - `highWaterMark`
-  - : An object containing a `highWaterMark` property. This is a non-negative
-    integer defining the total number of chunks that can be contained in the internal
-    queue before backpressure is applied.
+
+  - : The total number of bytes that can be contained in the internal queue before backpressure is applied.
+
+    Unlike [`CountQueuingStrategy()`](/en-US/docs/Web/API/CountQueuingStrategy/CountQueuingStrategy) where the `highWaterMark` parameter specifies a simple count of the number of chunks, with `ByteLengthQueuingStrategy()`, the `highWaterMark` parameter specifies a number of _bytes_ — specifically, given a stream of chunks, how many bytes worth of those chunks (rather than a count of how many of those chunks) can be contained in the internal queue before backpressure is applied.
 
 ### Return value
 
@@ -40,19 +44,22 @@ None.
 ## Examples
 
 ```js
-const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
+const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 * 1024 });
 
-const readableStream = new ReadableStream({
-  start(controller) {
-    // …
+const readableStream = new ReadableStream(
+  {
+    start(controller) {
+      // …
+    },
+    pull(controller) {
+      // …
+    },
+    cancel(err) {
+      console.log("stream error:", err);
+    },
   },
-  pull(controller) {
-    // …
-  },
-  cancel(err) {
-    console.log("stream error:", err);
-  }
-}, queuingStrategy);
+  queuingStrategy
+);
 
 const size = queuingStrategy.size(chunk);
 ```

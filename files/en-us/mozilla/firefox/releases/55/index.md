@@ -2,10 +2,11 @@
 title: Firefox 55 for developers
 slug: Mozilla/Firefox/Releases/55
 tags:
-  - '55'
+  - "55"
   - Firefox
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 55 was released on August 8, 2017. This article lists key changes that are useful for web developers.
@@ -70,7 +71,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 #### DOM events
 
 - The event types supported by the {{domxref("Document.createEvent()")}} method have been updated as per the latest DOM spec ({{bug(1251198)}}).
-- The {{domxref("MessageEvent.origin")}} property value is now of type `USVString`, not `DOMString`, and the {{domxref("MessageEvent.source")}} property now takes a `MessageEventSource` value (which can be a {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) ({{bug(1311324)}}).
+- The {{domxref("MessageEvent.origin")}} property value is now of type `USVString`, not `DOMString`, and the {{domxref("MessageEvent.source")}} property now takes a `MessageEventSource` value (which can be a {{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) ({{bug(1311324)}}).
 - The pinch-to-zoom gesture has now been mapped to the {{domxref("Element/wheel_event","wheel")}} event plus the + `Ctrl` key. This mapping was implemented to allow developers to implement simple zooming functionality using the pinch-to-zoom gesture on mobile screens/trackpads (mousewheel + `Ctrl` commonly zooms) ({{bug(1052253)}}).
 
 #### Selection API
@@ -103,7 +104,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 #### WebRTC
 
 - {{domxref("mediaDevices.getUserMedia", "getUserMedia()")}} now provides a stereo audio stream by default if the source device provides stereo sound; support to specifically request mono input will come in [Firefox 56](/en-US/docs/Mozilla/Firefox/Releases/56). This only works on desktop at this time; mobile Firefox does not currently support stereo audio input sources ({{bug(971528)}}).
-- The `getUserMedia()` [media capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints) `autoGainControl` and `noiseSuppression` now match the spec; formerly they were `moz`-prefixed ({{bug(1366415)}}).
+- The `getUserMedia()` [media capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints) `autoGainControl` and `noiseSuppression` now match the spec; formerly they were `moz`-prefixed ({{bug(1366415)}}).
 - When called with an empty constraints set, `getUserMedia()` was incorrectly returning `NotSupportedError` instead of `TypeError`. This has been fixed ({{bug(1349480)}}).
 - The following new WebRTC statistics are available: `framesEncoded`, `pliCount`, `nackCount`, and `firCount` ({{bug(1348657)}}).
 - The `RTCInboundRTPStreamStats` dictionary field formerly called `mozRtt` has been renamed to `roundTripTime` to match the specification; in addition, its behavior has been adjusted to match the standard: it contains a double-precision floating point value which estimates the round-trip time based on the RTCP timestamps in the RTCP Receiver Report, measured in seconds (following the algorithm described in {{RFC(3550, "", "6.4.1")}}). ({{bug(1344970)}}). However, please be aware that _this property is moving_ to a different dictionary (`RTCRemoteInboundRTPStreamStats`) soon ({{bug(1380555)}}).

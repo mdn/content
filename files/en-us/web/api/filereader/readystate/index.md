@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.FileReader.readyState
 ---
+
 {{APIRef("File API")}}
 
 The {{domxref("FileReader")}} **`readyState`** property provides the current state of the reading operation a `FileReader` is in. A `FileReader` exists in one of the following states:

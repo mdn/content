@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CSSStyleDeclaration
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSSStyleDeclaration`** interface represents an object that is a CSS declaration block, and exposes style information and various style-related methods and properties.
@@ -36,7 +37,7 @@ A `CSSStyleDeclaration` object can be exposed using three different APIs:
 - {{DOMxRef("CSSStyleDeclaration.named_properties", '<code>CSSStyleDeclaration</code> named properties', "", 1)}}
   - : Dashed and camel-cased attributes for all supported CSS properties.
 
-## Methods
+## Instance methods
 
 - {{DOMxRef("CSSStyleDeclaration.getPropertyPriority()")}}
   - : Returns the optional priority, "important".

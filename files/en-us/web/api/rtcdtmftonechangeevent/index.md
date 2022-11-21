@@ -11,17 +11,18 @@ tags:
   - events
 browser-compat: api.RTCDTMFToneChangeEvent
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCDTMFToneChangeEvent`** interface represents events sent to indicate that {{Glossary("DTMF")}} tones have started or finished playing. This interface is used by the [`tonechange`](/en-US/docs/Web/API/RTCDTMFSender/tonechange_event) event.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _In addition to the properties of {{domxref("Event")}}, this interface offers the following:_
 
-- {{domxref("RTCDTMFToneChangeEvent.tone")}} {{readOnlyInline}}
+- {{domxref("RTCDTMFToneChangeEvent.tone")}} {{ReadOnlyInline}}
   - : A string specifying the tone which has begun playing, or an empty string (`""`) if the previous tone has finished playing.
 
 ## Constructors
@@ -29,7 +30,7 @@ _In addition to the properties of {{domxref("Event")}}, this interface offers th
 - {{domxref("RTCDTMFToneChangeEvent.RTCDTMFToneChangeEvent()", "RTCDTMFToneChangeEvent()")}}
   - : Returns a new `RTCDTMFToneChangeEvent`. It takes two parameters, the first being a string representing the type of the event (always `"tonechange"`); the second a dictionary containing the initial state of the properties of the event.
 
-## Methods
+## Instance methods
 
 _Supports the methods defined in {{domxref("Event")}}. There are no additional methods._
 

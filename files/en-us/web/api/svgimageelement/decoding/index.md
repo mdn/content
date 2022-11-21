@@ -13,6 +13,7 @@ tags:
   - decoding
 browser-compat: api.SVGImageElement.decoding
 ---
+
 {{APIRef}}
 
 The **`decoding`** property of the {{domxref("SVGImageElement")}} interface represents a hint given to the browser on how it should decode the image.
@@ -46,4 +47,4 @@ img.src = 'img/logo.svg';
 
 ## See also
 
-- [\<img>: The Image Embed element](/en-US/docs/Web/HTML/Element/img)
+- [`<img>`: The Image Embed element](/en-US/docs/Web/HTML/Element/img)

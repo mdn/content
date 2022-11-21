@@ -16,11 +16,12 @@ tags:
   - paste
 browser-compat: api.ClipboardItem.presentationStyle
 ---
+
 {{DefaultAPISidebar("Clipboard API")}}
 
 The read-only
 **`presentationStyle`** property of the {{domxref("ClipboardItem")}}
-interface returns a {{jsxref("String")}} indicating how an item should be presented.
+interface returns a string indicating how an item should be presented.
 
 ## Value
 
@@ -36,11 +37,8 @@ async function getClipboardContents() {
     const clipboardItems = await navigator.clipboard.read();
 
     for (const clipboardItem of clipboardItems) {
-
       console.log(clipboardItem.presentationStyle);
-
     }
-
   } catch (err) {
     console.error(err.name, err.message);
   }

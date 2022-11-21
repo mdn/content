@@ -4,6 +4,7 @@ slug: Web/API/HTMLIFrameElement/src
 page-type: web-api-instance-property
 browser-compat: api.HTMLIFrameElement.src
 ---
+
 {{APIRef}}
 
 The **`HTMLIFrameElement.src`**
@@ -13,9 +14,9 @@ resource.
 
 ## Syntax
 
-```js
-refStr = iframeElt.src;
-iframeElt.src= refStr;
+```js-nolint
+refStr = iframeElt.src
+iframeElt.src= refStr
 ```
 
 ## Example

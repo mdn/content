@@ -9,9 +9,11 @@ tags:
   - Property
   - Reference
   - TaskAttributionTiming
+  - Experimental
 browser-compat: api.TaskAttributionTiming.containerSrc
 ---
-{{SeeCompatTable}}{{APIRef("Long Tasks")}}
+
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`containerSrc`** readonly property of the
 {{domxref("TaskAttributionTiming")}} interface returns the container's `src`

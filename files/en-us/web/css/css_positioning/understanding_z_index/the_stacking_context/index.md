@@ -1,6 +1,7 @@
 ---
 title: The stacking context
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
+page-type: guide
 tags:
   - Advanced
   - CSS
@@ -8,19 +9,20 @@ tags:
   - Reference
   - z-index
 ---
+
 {{CSSRef}}
 
 The **stacking context** is a three-dimensional conceptualization of HTML elements along an imaginary z-axis relative to the user, who is assumed to be facing the viewport or the webpage. HTML elements occupy this space in priority order based on element attributes.
 
-## The stacking context
+## Description
 
-In the previous part of this article, [Using z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index), we showed that the rendering order of certain elements is influenced by their `z-index` value. This occurs because these elements have special properties which cause them to form a _stacking context_.
+In the previous article of this guide, [Using z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index), we showed that the rendering order of certain elements is influenced by their `z-index` value. This occurs because these elements have special properties which cause them to form a _stacking context_.
 
 A stacking context is formed, anywhere in the document, by any element in the following scenarios:
 
 - Root element of the document (`<html>`).
 - Element with a {{cssxref("position")}} value `absolute` or `relative` and {{cssxref("z-index")}} value other than `auto`.
-- Element with a {{cssxref("position")}} value `fixed` or `sticky` (sticky for all mobile browsers, but not older desktop).
+- Element with a {{cssxref("position")}} value `fixed` or `sticky` (sticky for all mobile browsers, but not older desktop browsers).
 - Element that is a child of a [flex](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) container, with {{cssxref("z-index")}} value other than `auto`.
 - Element that is a child of a {{cssxref("grid")}} container, with {{cssxref("z-index")}} value other than `auto`.
 - Element with an {{cssxref("opacity")}} value less than `1` (See [the specification for opacity](https://www.w3.org/TR/css-color-3/#transparency)).
@@ -38,7 +40,7 @@ A stacking context is formed, anywhere in the document, by any element in the fo
 - Element with a {{cssxref("will-change")}} value specifying any property that would create a stacking context on non-initial value (see [this post](https://dev.opera.com/articles/css-will-change-property/)).
 - Element with a {{cssxref("contain")}} value of `layout`, or `paint`, or a composite value that includes either of them (i.e. `contain: strict`, `contain: content`).
 
-Within a stacking context, child elements are stacked according to the same rules previously explained. Importantly, the `z-index` values of its child stacking contexts only have meaning in this parent. Stacking contexts are treated atomically as a single unit in the parent stacking context.
+Within a stacking context, child elements are stacked according to the same rules explained just above. Importantly, the `z-index` values of its child stacking contexts only have meaning in this parent. Stacking contexts are treated atomically as a single unit in the parent stacking context.
 
 In summary:
 
@@ -48,7 +50,7 @@ In summary:
 
 > **Note:** The hierarchy of stacking contexts is a subset of the hierarchy of HTML elements because only certain elements create stacking contexts. We can say that elements that do not create their own stacking contexts are _assimilated_ by the parent stacking context.
 
-## The example
+## Example
 
 ![Example of stacking rules modified using z-index](understanding_zindex_04.png)
 
@@ -64,64 +66,77 @@ In this example, every positioned element creates its own stacking context, beca
     - DIV #5
     - DIV #6
 
-It is important to note that DIV #4, DIV #5 and DIV #6 are children of DIV #3, so stacking of those elements is completely resolved within DIV#3. Once stacking and rendering within DIV #3 is completed, the whole DIV #3 element is passed for stacking in the root element with respect to its sibling's DIV.
+It is important to note that DIV #4, DIV #5 and DIV #6 are children of DIV #3, so stacking of those elements is completely resolved within DIV #3. Once stacking and rendering within DIV #3 is completed, the whole DIV #3 element is passed for stacking in the root element with respect to its sibling's DIV.
 
-> **Note:**
->
-> - DIV #4 is rendered under DIV #1 because DIV #1's z-index (5) is valid within the stacking context of the root element, while DIV #4's z-index (6) is valid within the stacking context of DIV #3. So, DIV #4 is under DIV #1, because DIV #4 belongs to DIV #3, which has a lower z-index value.
-> - For the same reason DIV #2 (z-index 2) is rendered under DIV#5 (z-index 1) because DIV #5 belongs to DIV #3, which has an higher z-index value.
-> - DIV #3's z-index is 4, but this value is independent from z-index of DIV #4, DIV #5 and DIV #6, because it belongs to a different stacking context.
-> - An easy way to figure out the _rendering order_ of stacked elements along the Z axis is to think of it as a "version number" of sorts, where child elements are minor version numbers underneath their parent's major version numbers. This way we can easily see how an element with a z-index of 1 (DIV #5) is stacked above an element with a z-index of 2 (DIV #2), and how an element with a z-index of 6 (DIV #4) is stacked below an element with a z-index of 5 (DIV #1). In our example (sorted according to the final rendering order):
->
->   - Root
->
->     - DIV #2 - z-index is 2
->     - DIV #3 - z-index is 4
->
->       - DIV #5 - z-index is 1, stacked under an element with a z-index of 4, which results in a rendering order of 4.1
->       - DIV #6 - z-index is 3, stacked under an element with a z-index of 4, which results in a rendering order of 4.3
->       - DIV #4 - z-index is 6, stacked under an element with a z-index of 4, which results in a rendering order of 4.6
->
->     - DIV #1 - z-index is 5
+DIV #4 is rendered under DIV #1 because DIV #1's z-index (5) is valid within the stacking context of the root element, while DIV #4's z-index (6) is valid within the stacking context of DIV #3. So, DIV #4 is under DIV #1, because DIV #4 belongs to DIV #3, which has a lower z-index value.
 
-## Example
+For the same reason DIV #2 (`z-index`: 2) is rendered under DIV#5 (`z-index`: 1) because DIV #5 belongs to DIV #3, which has a higher z-index value.
+
+DIV #3's z-index is 4, but this value is independent from z-index of DIV #4, DIV #5 and DIV #6, because it belongs to a different stacking context.
+
+An easy way to figure out the _rendering order_ of stacked elements along the z-axis is to think of it as a "version number" of sorts, where child elements are minor version numbers underneath their parent's major version numbers. This way we can easily see how an element with a z-index of 1 (DIV #5) is stacked above an element with a z-index of 2 (DIV #2), and how an element with a z-index of 6 (DIV #4) is stacked below an element with a z-index of 5 (DIV #1).
+
+In our example (sorted according to the final rendering order):
+
+- Root
+
+  - DIV #2: (`z-index`: 2)
+  - DIV #3: (`z-index`: 4)
+
+    - DIV #5: (`z-index`: 1), stacked under an element (`z-index`: 4), which results in a rendering order of 4.1
+    - DIV #6: (`z-index`: 3), stacked under an element (`z-index`: 4), which results in a rendering order of 4.3
+    - DIV #4: (`z-index`: 6), stacked under an element (`z-index`: 4), which results in a rendering order of 4.6
+
+  - DIV #1: (`z-index`: 5)
 
 ### HTML
 
 ```html
 <div id="div1">
   <h1>Division Element #1</h1>
-  <code>position: relative;<br/>
-  z-index: 5;</code>
+  <code>
+    position: relative;<br />
+    z-index: 5;
+  </code>
 </div>
 
 <div id="div2">
   <h1>Division Element #2</h1>
-  <code>position: relative;<br/>
-  z-index: 2;</code>
+  <code>
+    position: relative;<br />
+    z-index: 2;
+  </code>
 </div>
 
 <div id="div3">
   <div id="div4">
     <h1>Division Element #4</h1>
-    <code>position: relative;<br/>
-    z-index: 6;</code>
+    <code>
+      position: relative;<br />
+      z-index: 6;
+    </code>
   </div>
 
   <h1>Division Element #3</h1>
-  <code>position: absolute;<br/>
-  z-index: 4;</code>
+  <code>
+    position: absolute;<br />
+    z-index: 4;
+  </code>
 
   <div id="div5">
     <h1>Division Element #5</h1>
-    <code>position: relative;<br/>
-    z-index: 1;</code>
+    <code>
+      position: relative;<br />
+      z-index: 1;
+    </code>
   </div>
 
   <div id="div6">
     <h1>Division Element #6</h1>
-    <code>position: absolute;<br/>
-    z-index: 3;</code>
+    <code>
+      position: absolute;<br />
+      z-index: 3;
+    </code>
   </div>
 </div>
 ```
@@ -197,7 +212,7 @@ h1 {
 }
 ```
 
-### Result
+## Result
 
 {{ EmbedLiveSample('Example', '100%', '396') }}
 

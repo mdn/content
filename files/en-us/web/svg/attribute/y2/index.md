@@ -8,6 +8,7 @@ spec-urls:
   - https://svgwg.org/svg2-draft/shapes.html#LineElementY2Attribute
   - https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementY2Attribute
 ---
+
 {{SVGRef}}
 
 The **`y2`** attribute is used to specify the second y-coordinate for drawing an SVG element that requires more than one coordinate. Elements that only need one coordinate use the {{SVGAttr("y")}} attribute instead.
@@ -20,14 +21,18 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-  <line x1="1" x2="9" y1="5" y2="1" stroke="red"   />
+  <line x1="1" x2="9" y1="5" y2="1" stroke="red" />
   <line x1="1" x2="9" y1="5" y2="5" stroke="green" />
-  <line x1="1" x2="9" y1="5" y2="9" stroke="blue"  />
+  <line x1="1" x2="9" y1="5" y2="9" stroke="blue" />
 </svg>
 ```
 
@@ -73,14 +78,18 @@ For {{SVGElement('line')}}, `y2` defines the y coordinate of the ending point of
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-  <line x1="1" x2="9" y1="5" y2="1" stroke="red"   />
+  <line x1="1" x2="9" y1="5" y2="1" stroke="red" />
   <line x1="1" x2="9" y1="5" y2="5" stroke="green" />
-  <line x1="1" x2="9" y1="5" y2="9" stroke="blue"  />
+  <line x1="1" x2="9" y1="5" y2="9" stroke="blue" />
 </svg>
 ```
 
@@ -88,7 +97,7 @@ html,body,svg { height:100% }
 
 ## linearGradient
 
-For {{SVGElement('linearGradient')}}, `y2` defines the y coordinate of the ending point of the *gradient vector* used to map the gradient stop values. The exact behavior of this attribute is influenced by the {{SVGAttr('gradientUnits')}} attributes
+For {{SVGElement('linearGradient')}}, `y2` defines the y coordinate of the ending point of the _gradient vector_ used to map the gradient stop values. The exact behavior of this attribute is influenced by the {{SVGAttr('gradientUnits')}} attributes
 
 <table class="properties">
   <tbody>
@@ -126,7 +135,11 @@ For {{SVGElement('linearGradient')}}, `y2` defines the y coordinate of the endin
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -136,20 +149,20 @@ html,body,svg { height:100% }
   corner of the bounding box of the shape it is applied to.
   -->
   <linearGradient y2="0%" id="g0">
-    <stop offset="5%"  stop-color="black" />
-    <stop offset="50%" stop-color="red"   />
+    <stop offset="5%" stop-color="black" />
+    <stop offset="50%" stop-color="red" />
     <stop offset="95%" stop-color="black" />
   </linearGradient>
 
-  <rect x="1"  y="1" width="8" height="8" fill="url(#g0)" />
+  <rect x="1" y="1" width="8" height="8" fill="url(#g0)" />
 
   <!--
   Here the gradient vector end at the bottom right
   corner of the bounding box of the shape it is applied to.
   -->
   <linearGradient y2="100%" id="g1">
-    <stop offset="5%"  stop-color="black" />
-    <stop offset="50%" stop-color="red"   />
+    <stop offset="5%" stop-color="black" />
+    <stop offset="50%" stop-color="red" />
     <stop offset="95%" stop-color="black" />
   </linearGradient>
 

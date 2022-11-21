@@ -12,28 +12,33 @@ tags:
   - Non-standard
   - Reference
 ---
+
 {{APIRef("UI Events")}}{{Non-standard_Header}}
 
 **`MSManipulationEvent`** provides contextual information when contact is made to the screen and an element is manipulated.
 
 This proprietary method is specific to Internet Explorer.
 
-### Events
+## Instance properties
 
-{{domxref("Element/MSManipulationStateChanged_event", "MSManipulationStateChanged")}}: Event fires when the state of an element being manipulated has changed.
+- `currentState` {{ReadOnlyInline}}
+  - : Returns the current state of a manipulation event.
+- `inertiaDestinationX` {{ReadOnlyInline}}
+  - : Represents the predicted horizontal scroll offset after the inertia phase completes.
+- `inertiaDestinationY` {{ReadOnlyInline}}
+  - : Represents the predicted vertical scroll offset after the inertia phase completes.
+- `lastState` {{ReadOnlyInline}}
+  - : Returns the last state after a manipulation change event.
 
-### Methods
+## Instance methods
 
-{{DOMxRef("MSManipulationEvent.initMSManipulationEvent()")}}: Used to create a manipulation event that can be called from JavaScript.
+- {{DOMxRef("MSManipulationEvent.initMSManipulationEvent()")}}
+  - : Used to create a manipulation event that can be called from JavaScript.
 
-### Properties
+## Events
 
-| Property                                      | Description                                                                          |
-| --------------------------------------------- | ------------------------------------------------------------------------------------ |
-| `currentState` {{ReadOnlyInline}}        | Returns the current state of a manipulation event.                                   |
-| `inertiaDestinationX` {{ReadOnlyInline}} | Represents the predicted horizontal scroll offset after the inertia phase completes. |
-| `inertiaDestinationY` {{ReadOnlyInline}} | Represents the predicted vertical scroll offset after the inertia phase completes.   |
-| `lastState` {{ReadOnlyInline}}           | Returns the last state after a manipulation change event.                            |
+- {{domxref("Element/MSManipulationStateChanged_event", "MSManipulationStateChanged")}}:
+  - : Event fires when the state of an element being manipulated has changed.
 
 ## Example
 

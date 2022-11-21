@@ -8,9 +8,11 @@ tags:
   - Reference
   - element
   - LargestContentfulPaint
+  - Experimental
 browser-compat: api.LargestContentfulPaint.element
 ---
-{{DefaultAPISidebar("Largest Contentful Paint API")}}
+
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`element`** read-only property of the {{domxref("LargestContentfulPaint")}} interface returns an object representing the {{domxref("Element")}} that is the largest contentful paint.
 

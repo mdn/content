@@ -7,6 +7,7 @@ tags:
   - NeedsUpdate
   - NeedsUpdate(HTTP/3)
 ---
+
 {{HTTPSidebar}}
 
 **HTTP** (HyperText Transfer Protocol) is the underlying protocol of the World Wide Web. Developed by Tim Berners-Lee and his team between 1989-1991, HTTP has gone through many changes that have helped maintain its simplicity while shaping its flexibility. Keep reading to learn how HTTP evolved from a protocol designed to exchange files in a semitrusted laboratory environment into a modern internet maze that carries images and videos in high resolution and 3D.
@@ -28,7 +29,7 @@ The HTTP protocol used in those early phases was very simple. It was later dubbe
 
 The initial version of HTTP had no version number; it was later called 0.9 to differentiate it from later versions. HTTP/0.9 was extremely simple: requests consisted of a single line and started with the only possible method {{HTTPMethod("GET")}} followed by the path to the resource. The full URL wasn't included as the protocol, server, and port weren't necessary once connected to the server.
 
-```
+```http
 GET /mypage.html
 ```
 
@@ -36,7 +37,7 @@ The response was extremely simple, too: it only consisted of the file itself.
 
 ```html
 <html>
-A very simple HTML page
+  A very simple HTML page
 </html>
 ```
 
@@ -53,7 +54,7 @@ HTTP/0.9 was very limited, but browsers and servers quickly made it more versati
 
 At this point in time, a typical request and response looked like this:
 
-```
+```http
 GET /mypage.html HTTP/1.0
 User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)
 
@@ -69,15 +70,15 @@ A page with an image
 
 It was followed by a second connection and a request to fetch the image (with the corresponding response):
 
-```
-  GET /myimage.gif HTTP/1.0
-  User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)
+```http
+GET /myimage.gif HTTP/1.0
+User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)
 
-  200 OK
-  Date: Tue, 15 Nov 1994 08:12:32 GMT
-  Server: CERN/3.0 libwww/2.17
-  Content-Type: text/gif
-  (image content)
+200 OK
+Date: Tue, 15 Nov 1994 08:12:32 GMT
+Server: CERN/3.0 libwww/2.17
+Content-Type: text/gif
+(image content)
 ```
 
 Between 1991-1995, these were introduced with a try-and-see approach. A server and a browser would add a feature and see if it got traction. Interoperability problems were common. In an effort to solve these issues, an informational document that described the common practices was published in November 1996. This was known as {{RFC(1945)}} and defined HTTP/1.0.
@@ -97,7 +98,7 @@ HTTP/1.1 clarified ambiguities and introduced numerous improvements:
 
 A typical flow of requests, all through one single connection, looked like this:
 
-```
+```http
 GET /en-US/docs/Glossary/Simple_header HTTP/1.1
 Host: developer.mozilla.org
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
@@ -181,24 +182,22 @@ The HTTP/2 protocol differs from HTTP/1.1 in a few ways:
 - It compresses headers. As these are often similar among a set of requests, this removes the duplication and overhead of data transmitted.
 - It allows a server to populate data in a client cache through a mechanism called the server push.
 
-Officially standardized in May 2015, HTTP/2 was incredibly successful. By May 2022, 46.4% of all websites used it (see [these stats](https://w3techs.com/technologies/details/ce-http2)). High-traffic websites showed the most rapid adoption in an effort to save on data transfer overhead and subsequent budgets.
+Officially standardized in May 2015, HTTP/2 use peaked in January 2022 at 46.9% of all websites (see [these stats](https://w3techs.com/technologies/details/ce-http2)). High-traffic websites showed the most rapid adoption in an effort to save on data transfer overhead and subsequent budgets.
 
 This rapid adoption was likely because HTTP/2 didn't require changes to websites and applications. To use it, only an up-to-date server that communicated with a recent browser was necessary. Only a limited set of groups was needed to trigger adoption, and as legacy browser and server versions were renewed, usage was naturally increased, without significant work for web developers.
 
 ## Post-HTTP/2 evolution
 
-HTTP hasn't stopped evolving since the release of HTTP/2. Like with HTTP/1.x, HTTP's extensibility is still being used to add new features. Notably, we can cite new extensions of the HTTP protocol that appeared in 2016:
+HTTP's extensibility is still being used to add new features. Notably, we can cite new extensions of the HTTP protocol that appeared in 2016:
 
 - Support for {{HTTPHeader("Alt-Svc")}} allowed the dissociation of the identification and the location of a given resource. This meant a smarter {{Glossary("CDN")}} caching mechanism.
-- The introduction of {{HTTPHeader("Client-Hints")}} allowed the browser or client to proactively communicate information about its requirements and hardware constraints to the server.
+- The introduction of [client hints](/en-US/docs/Web/HTTP/Client_hints) allowed the browser or client to proactively communicate information about its requirements and hardware constraints to the server.
 - The introduction of security-related prefixes in the {{HTTPHeader("Cookie")}} header helped guarantee that secure cookies couldn't be altered.
-
-This evolution of HTTP has lead to the creation of many applications and has driven the adoption of the protocol. The environment in which HTTP is used today is quite different from that of the early 1990s. HTTP's original design proved to be scalable, allowing the web to evolve over a quarter of a century. By fixing flaws and retaining the flexibility and extensibility that made HTTP such a success, the adoption of HTTP/2 points to a bright future for the protocol.
 
 ## HTTP/3 - HTTP over QUIC
 
-{{SeeCompatTable}}
+The next major version of HTTP, HTTP/3 has the same semantics as earlier versions of HTTP but uses {{Glossary("QUIC")}} instead of {{Glossary("TCP")}} for the transport layer portion. By October 2022, [26% of all websites were using HTTP/3](https://w3techs.com/technologies/details/ce-http3)).
 
-The next major version of HTTP, HTTP/3, will use {{Glossary("QUIC")}} instead {{Glossary("TCP")}}/{{Glossary("TLS")}} for the transport layer portion.
+QUIC is designed to provide much lower latency for HTTP connections. Like HTTP/2, it is a multiplexed protocol, but HTTP/2 runs over a single TCP connection, so packet loss detection and retransmission handled at the TCP layer can block all streams. QUIC runs multiple streams over {{Glossary("UDP")}} and implements packet loss detection and retransmission independently for each stream, so that if an error occurs, only the stream with data in that packet is blocked.
 
-See {{bug(1158011)}} for implementation status in Firefox.
+Defined in {{RFC("9114")}}, [HTTP/3 is supported by most major browsers](https://caniuse.com/http3) including Chromium (and its variants such as Chrome and Edge) and Firefox.

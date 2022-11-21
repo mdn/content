@@ -8,6 +8,7 @@ tags:
   - Gecko 1.9.2
   - Plugins
 ---
+
 {{FirefoxSidebar}}
 
 Several changes were made in Gecko 1.9.2 that may impact plug-in developers in particular. This article provides a list of those changes.

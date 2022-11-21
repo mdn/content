@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.reduceRight
 ---
+
 {{JSRef}}
 
 The **`reduceRight()`** method applies a function against an
@@ -22,11 +23,11 @@ See also {{jsxref("Array.prototype.reduce()")}} for left-to-right.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
-reduceRight((accumulator, currentValue) => { /* … */ } )
-reduceRight((accumulator, currentValue, index) => { /* … */ } )
-reduceRight((accumulator, currentValue, index, array) => { /* … */ } )
+reduceRight((accumulator, currentValue) => { /* … */ })
+reduceRight((accumulator, currentValue, index) => { /* … */ })
+reduceRight((accumulator, currentValue, index, array) => { /* … */ })
 reduceRight((accumulator, currentValue, index, array) => { /* … */ }, initialValue)
 
 // Callback function
@@ -34,17 +35,17 @@ reduceRight(callbackFn)
 reduceRight(callbackFn, initialValue)
 
 // Callback reducer function
-reduceRight(function(accumulator, currentValue) { /* … */ })
-reduceRight(function(accumulator, currentValue, index) { /* … */ })
-reduceRight(function(accumulator, currentValue, index, array){ /* … */ })
-reduceRight(function(accumulator, currentValue, index, array) { /* … */ }, initialValue)
+reduceRight(function (accumulator, currentValue) { /* … */ })
+reduceRight(function (accumulator, currentValue, index) { /* … */ })
+reduceRight(function (accumulator, currentValue, index, array) { /* … */ })
+reduceRight(function (accumulator, currentValue, index, array) { /* … */ }, initialValue)
 ```
 
 ### Parameters
 
 - `callbackFn`
 
-  - : Function to execute on each value in the array.
+  - : A function to execute for each element in the array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduce()`.
 
     The function is called with the following arguments:
 
@@ -70,10 +71,25 @@ The value that results from the reduction.
 
 ## Description
 
-`reduceRight` executes the callback function once for each element present
-in the array, excluding holes in the array, receiving four arguments: the initial value
-(or value from the previous callback call), the value of the current element, the
-current index, and the array over which iteration is occurring.
+The `reduceRight()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It runs a "reducer" callback function over all elements in the array, in descending-index order, and accumulates them into a single value.
+
+`callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
+
+Unlike other [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods), `reduce()` does not accept a `thisArg` argument. `callbackFn` is always called with `undefined` as `this`, which gets substituted with `globalThis` if `callbackFn` is non-strict.
+
+`reduceRight()` does not mutate the array on which it is called, but the function provided as `callbackFn` can. Note, however, that the length of the array is saved _before_ the first invocation of `callbackFn`. Therefore:
+
+- `callbackFn` will not visit any elements added beyond the array's initial length when the call to `reduceRight()` began.
+- Changes to already-visited indexes do not cause `callbackFn` to be invoked on them again.
+- If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time that element gets visited. [Deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) elements are not visited.
+
+> **Warning:** Concurrent modifications of the kind described above frequently lead to hard-to-understand code and are generally to be avoided (except in special cases).
+
+The `reduceRight()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
+
+## Examples
+
+### How reduceRight() works without an initial value
 
 The call to the reduceRight `callbackFn` would look something like
 this:
@@ -111,68 +127,18 @@ Some example run-throughs of the function would look like this:
 The callback would be invoked four times, with the arguments and return values in each
 call being as follows:
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">
-        <code><var>callback</var></code>
-      </th>
-      <th scope="col">
-        <code><var>accumulator</var></code>
-      </th>
-      <th scope="col">
-        <code><var>currentValue</var></code>
-      </th>
-      <th scope="col">
-        <code><var>index</var></code>
-      </th>
-      <th scope="col">
-        <code><var>array</var></code>
-      </th>
-      <th scope="col">return value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">first call</th>
-      <td><code>4</code></td>
-      <td><code>3</code></td>
-      <td><code>3</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>7</code></td>
-    </tr>
-    <tr>
-      <th scope="row">second call</th>
-      <td><code>7</code></td>
-      <td><code>2</code></td>
-      <td><code>2</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>9</code></td>
-    </tr>
-    <tr>
-      <th scope="row">third call</th>
-      <td><code>9</code></td>
-      <td><code>1</code></td>
-      <td><code>1</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>10</code></td>
-    </tr>
-    <tr>
-      <th scope="row">fourth call</th>
-      <td><code>10</code></td>
-      <td><code>0</code></td>
-      <td><code>0</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>10</code></td>
-    </tr>
-  </tbody>
-</table>
+|             | `accumulator` | `currentValue` | `index` | Return value |
+| ----------- | ------------- | -------------- | ------- | ------------ |
+| First call  | `4`           | `3`            | `3`     | `7`          |
+| Second call | `7`           | `2`            | `2`     | `9`          |
+| Third call  | `9`           | `1`            | `1`     | `10`         |
+| Fourth call | `10`          | `0`            | `0`     | `10`         |
 
-The value returned by `reduceRight` would be that of the last callback
-invocation (`10`).
+The `array` parameter never changes through the process — it's always `[0, 1, 2, 3, 4]`. The value returned by `reduceRight` would be that of the last callback invocation (`10`).
 
-And if you were to provide an `initialValue`, the result would
-look like this:
+### How reduceRight() works with an initial value
+
+Here we reduce the same array using the same algorithm, but with an `initialValue` of `10` passed as the second argument to `reduceRight()`:
 
 ```js
 [0, 1, 2, 3, 4].reduceRight(
@@ -181,75 +147,15 @@ look like this:
 );
 ```
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">
-        <code><var>callback</var></code>
-      </th>
-      <th scope="col">
-        <code><var>accumulator</var></code>
-      </th>
-      <th scope="col">
-        <code><var>currentValue</var></code>
-      </th>
-      <th scope="col">
-        <code><var>index</var></code>
-      </th>
-      <th scope="col">
-        <code><var>array</var></code>
-      </th>
-      <th scope="col">return value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">first call</th>
-      <td><code>10</code></td>
-      <td><code>4</code></td>
-      <td><code>4</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>14</code></td>
-    </tr>
-    <tr>
-      <th scope="row">second call</th>
-      <td><code>14</code></td>
-      <td><code>3</code></td>
-      <td><code>3</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>17</code></td>
-    </tr>
-    <tr>
-      <th scope="row">third call</th>
-      <td><code>17</code></td>
-      <td><code>2</code></td>
-      <td><code>2</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>19</code></td>
-    </tr>
-    <tr>
-      <th scope="row">fourth call</th>
-      <td><code>19</code></td>
-      <td><code>1</code></td>
-      <td><code>1</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>20</code></td>
-    </tr>
-    <tr>
-      <th scope="row">fifth call</th>
-      <td><code>20</code></td>
-      <td><code>0</code></td>
-      <td><code>0</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>20</code></td>
-    </tr>
-  </tbody>
-</table>
+|             | `accumulator` | `currentValue` | `index` | Return value |
+| ----------- | ------------- | -------------- | ------- | ------------ |
+| First call  | `10`          | `4`            | `4`     | `14`         |
+| Second call | `14`          | `3`            | `3`     | `17`         |
+| Third call  | `17`          | `2`            | `2`     | `19`         |
+| Fourth call | `19`          | `1`            | `1`     | `20`         |
+| Fifth call  | `20`          | `0`            | `0`     | `20`         |
 
-The value returned by `reduceRight` this time would be, of course,
-`20`.
-
-## Examples
+The value returned by `reduceRight` this time would be, of course, `20`.
 
 ### Sum up all values within an array
 
@@ -301,7 +207,7 @@ const div4 = (callback, x) => {
 };
 
 const computation = waterfall(add5, mult3, sub2, split, add, div4);
-computation(console.log, 5) // -> 14
+computation(console.log, 5) // Logs 14
 
 // same as:
 
@@ -352,6 +258,30 @@ console.log(compose(double, inc)(2)); // 6
 
 // using composition function
 console.log(compose(inc, double)(2)); // 5
+```
+
+### Using reduceRight() with sparse arrays
+
+`reduceRight()` skips missing elements in sparse arrays, but it does not skip `undefined` values.
+
+```js
+console.log([1, 2, , 4].reduceRight((a, b) => a + b)); // 7
+console.log([1, 2, undefined, 4].reduceRight((a, b) => a + b)); // NaN
+```
+
+### Calling reduceRight() on non-array objects
+
+The `reduceRight()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+};
+console.log(Array.prototype.reduceRight.call(arrayLike, (x, y) => x - y));
+// -1, which is 4 - 3 - 2
 ```
 
 ## Specifications

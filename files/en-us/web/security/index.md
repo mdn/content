@@ -6,6 +6,9 @@ tags:
   - Security
   - Web
 ---
+
+{{QuickLinksWithSubpages}}
+
 Ensuring that your website or open web application is secure is critical. Even simple bugs in your code can result in private information being leaked, and bad people are out there trying to find ways to steal data. The web security-oriented articles listed here provide information that may help you secure your site and its code from attacks and data theft.
 
 ## Content security
@@ -68,7 +71,7 @@ Ensuring that your website or open web application is secure is critical. Even s
 In [clickjacking](/en-US/docs/Glossary/Clickjacking), a user is fooled into clicking on a UI element that performs some action other than what the user expects.
 
 - [HTTP X-Frame-Options](/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
-  - : The **`X-Frame-Options`** [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether or not a browser should be allowed to render a page in a [`<frame>`](/en-US/docs/Web/HTML/Element/frame), [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), [`<embed>`](/en-US/docs/Web/HTML/Element/embed) or [`<object>`](/en-US/docs/Web/HTML/Element/object). Sites can use this to avoid [clickjacking](/en-US/docs/Glossary/Clickjacking) attacks, by ensuring that their content is not embedded into other sites.
+  - : The **`X-Frame-Options`** [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether a browser should be allowed to render a page in a [`<frame>`](/en-US/docs/Web/HTML/Element/frame), [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), [`<embed>`](/en-US/docs/Web/HTML/Element/embed) or [`<object>`](/en-US/docs/Web/HTML/Element/object). Sites can use this to avoid [clickjacking](/en-US/docs/Glossary/Clickjacking) attacks, by ensuring that their content is not embedded into other sites.
 - [CSP: frame-ancestors](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
   - : The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** directive specifies valid parents that may embed a page using {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or {{HTMLElement("applet")}}.
 
@@ -120,14 +123,9 @@ In [clickjacking](/en-US/docs/Glossary/Clickjacking), a user is fooled into clic
 - {{Glossary("SQL injection")}}
 - {{Glossary("Symmetric-key cryptography")}}
 - {{Glossary("TOFU")}}
-
-<!---->
-
 - {{Glossary("TLS")}}
 
 ## See also
 
 - [Security Blog](https://blog.mozilla.org/security/)
 - [@mozsec on Twitter](https://twitter.com/mozsec)
-
-{{QuickLinksWithSubpages}}

@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol.split
 ---
+
 {{JSRef}}
 
 The **`Symbol.split`** well-known symbol specifies the method that splits a string at the indices that match a regular expression. This function is called by the {{jsxref("String.prototype.split()")}} method.
@@ -24,13 +25,13 @@ For more information, see {{jsxref("RegExp.@@split", "RegExp.prototype[@@split](
 ```js
 class ReverseSplit {
   [Symbol.split](string) {
-    const array = string.split(' ');
+    const array = string.split(" ");
     return array.reverse();
   }
 }
 
-console.log('Another one bites the dust'.split(new ReverseSplit()));
-// expected output: [ "dust", "the", "bites", "one", "Another" ]
+console.log("Another one bites the dust".split(new ReverseSplit()));
+// [ "dust", "the", "bites", "one", "Another" ]
 ```
 
 ## Specifications

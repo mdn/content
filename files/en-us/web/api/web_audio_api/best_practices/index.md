@@ -8,6 +8,7 @@ tags:
   - Guide
   - Web Audio API
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 There's no strict right or wrong way when writing creative code. As long as you consider security, performance, and accessibility, you can adapt to your own style. In this article, we'll share a number of _best practices_ — guidelines, tips, and tricks for working with the Web Audio API.
@@ -22,7 +23,7 @@ Media elements have streaming support out of the box. The audio will start playi
 
 You will, however, have more control if you use a buffer node. You have to request the file and wait for it to load ([this section of our advanced article](/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques#Dial_up_%E2%80%94_loading_a_sound_sample) shows a good way to do it), but then you have access to the data directly, which means more precision, and more precise manipulation.
 
-If you're looking to work with audio from the user's camera or microphone you can access it via the [Media Stream API](/en-US/docs/Web/API/Media_Streams_API) and the {{domxref("MediaStreamAudioSourceNode")}} interface. This is good for WebRTC and situations where you might want to record or possibly analyze audio.
+If you're looking to work with audio from the user's camera or microphone you can access it via the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API) and the {{domxref("MediaStreamAudioSourceNode")}} interface. This is good for WebRTC and situations where you might want to record or possibly analyze audio.
 
 The last way is to generate your own sound, which can be done with either an {{domxref("OscillatorNode")}} or by creating a buffer and populating it with your own data. Check out the [tutorial here for creating your own instrument](/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques) for information on creating sounds with oscillators and buffers.
 

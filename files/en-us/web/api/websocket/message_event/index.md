@@ -9,6 +9,7 @@ tags:
   - message
 browser-compat: api.WebSocket.message_event
 ---
+
 {{APIRef}}
 
 The `message` event is fired when data is received through a `WebSocket`.
@@ -25,7 +26,7 @@ onmessage = (event) => { }
 
 ## Event type
 
-An {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MessageEvent")}}
 
@@ -33,15 +34,15 @@ An {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
-- {{domxref("MessageEvent.data", "data")}} {{readonlyInline}}
+- {{domxref("MessageEvent.data", "data")}} {{ReadOnlyInline}}
   - : The data sent by the message emitter.
-- {{domxref("MessageEvent.origin", "origin")}} {{readonlyInline}}
+- {{domxref("MessageEvent.origin", "origin")}} {{ReadOnlyInline}}
   - : A string representing the origin of the message emitter.
-- {{domxref("MessageEvent.lastEventId", "lastEventId")}} {{readonlyInline}}
+- {{domxref("MessageEvent.lastEventId", "lastEventId")}} {{ReadOnlyInline}}
   - : A string representing a unique ID for the event.
-- {{domxref("MessageEvent.source", "source")}} {{readonlyInline}}
+- {{domxref("MessageEvent.source", "source")}} {{ReadOnlyInline}}
   - : A `MessageEventSource` (which can be a {{domxref("Window")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
-- {{domxref("MessageEvent.ports", "ports")}} {{readonlyInline}}
+- {{domxref("MessageEvent.ports", "ports")}} {{ReadOnlyInline}}
   - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
 
 ## Examples

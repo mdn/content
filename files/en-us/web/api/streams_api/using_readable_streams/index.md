@@ -14,6 +14,7 @@ tags:
   - reader
   - tee
 ---
+
 {{apiref("Streams")}}
 
 As a JavaScript developer, programmatically reading and manipulating streams of data received over the network, chunk by chunk, is very useful! But how do you use the Streams API's readable stream functionality? This article explains the basics.
@@ -29,7 +30,7 @@ You can consume Fetch body objects as streams and create your own custom readabl
 
 ## Finding some examples
 
-We will look at various examples in this article, taken from our [dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams) repo. You can find the full source code there, as well as links to the examples.
+We will look at various examples in this article, taken from our [dom-examples/streams](https://github.com/mdn/dom-examples/tree/main/streams) repo. You can find the full source code there, as well as links to the examples.
 
 ## Consuming a fetch as a stream
 
@@ -37,7 +38,7 @@ The [Fetch API](/en-US/docs/Web/API/Fetch_API) allows you to fetch resources acr
 
 The {{domxref("Request.body")}} and {{domxref("Response.body")}} properties are available, which are getters exposing the body contents as a readable stream.
 
-As our [Simple stream pump](https://github.com/mdn/dom-examples/tree/master/streams/simple-pump) example shows ([see it live also](https://mdn.github.io/dom-examples/streams/simple-pump/)), exposing it is a matter of just accessing the `body` property of the response:
+As our [Simple stream pump](https://github.com/mdn/dom-examples/tree/main/streams/simple-pump) example shows ([see it live also](https://mdn.github.io/dom-examples/streams/simple-pump/)), exposing it is a matter of just accessing the `body` property of the response:
 
 ```js
 // Fetch the original image
@@ -242,7 +243,7 @@ readableStream
   .catch((err) => console.error(err));
 ```
 
-But a custom stream is still a `ReadableStream` instance, meaning you can attach a reader to it. As an example, have a look at our [Simple random stream demo](https://github.com/mdn/dom-examples/blob/master/streams/simple-random-stream/index.html) ([see it live also](https://mdn.github.io/dom-examples/streams/simple-random-stream/)), which creates a custom stream, enqueues some random strings into it, and then reads the data out of the stream again once the _Stop string generation_ button is pressed.
+But a custom stream is still a `ReadableStream` instance, meaning you can attach a reader to it. As an example, have a look at our [Simple random stream demo](https://github.com/mdn/dom-examples/blob/main/streams/simple-random-stream/index.html) ([see it live also](https://mdn.github.io/dom-examples/streams/simple-random-stream/)), which creates a custom stream, enqueues some random strings into it, and then reads the data out of the stream again once the _Stop string generation_ button is pressed.
 
 > **Note:** In order to consume a stream using {{domxref("FetchEvent.respondWith()")}}, the enqueued stream contents must be of type {{jsxref("Uint8Array")}}; for example, encoded using {{domxref("TextEncoder")}}.
 
@@ -323,7 +324,7 @@ Sometimes you might want to read a stream twice, simultaneously. This is achieve
 
 You might do this for example in a [ServiceWorker](/en-US/docs/Web/API/Service_Worker_API) if you want to fetch a response from the server and stream it to the browser, but also stream it to the Service Worker cache. Since a response body cannot be consumed more than once, and a stream can't be read by more than one reader at once, you'd need two copies to do this.
 
-We provide an example of this in our [Simple tee example](https://github.com/mdn/dom-examples/blob/master/streams/simple-tee-example/index.html) ([see it live also](https://mdn.github.io/dom-examples/streams/simple-tee-example/)). This example works much the same way as our Simple random stream, except that when the button is pressed to stop generating random strings, the custom stream is taken and teed, and both resulting streams are then read:
+We provide an example of this in our [Simple tee example](https://github.com/mdn/dom-examples/blob/main/streams/simple-tee-example/index.html) ([see it live also](https://mdn.github.io/dom-examples/streams/simple-tee-example/)). This example works much the same way as our Simple random stream, except that when the button is pressed to stop generating random strings, the custom stream is taken and teed, and both resulting streams are then read:
 
 ```js
 function teeStream() {
@@ -337,7 +338,7 @@ function teeStream() {
 
 Another feature of streams is the ability to pipe streams into one another (called a [pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains)). This involves two methods — {{domxref("ReadableStream.pipeThrough()")}}, which pipes a readable stream through a writer/reader pair to transform one data format into another, and {{domxref("ReadableStream.pipeTo()")}}, which pipes a readable stream to a writer acting as an end point for the pipe chain.
 
-We do have have a simple example called [Unpack Chunks of a PNG](https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream) ([see it live also](https://mdn.github.io/dom-examples/streams/png-transform-stream/)) that fetches an image as a stream, then pipes it through to a custom PNG transform stream that retrieves PNG chunks out of a binary data stream.
+We do have a simple example called [Unpack Chunks of a PNG](https://github.com/mdn/dom-examples/tree/main/streams/png-transform-stream) ([see it live also](https://mdn.github.io/dom-examples/streams/png-transform-stream/)) that fetches an image as a stream, then pipes it through to a custom PNG transform stream that retrieves PNG chunks out of a binary data stream.
 
 ```js
 // Fetch the original image

@@ -11,6 +11,7 @@ tags:
   - events
 browser-compat: api.SharedWorkerGlobalScope.connect_event
 ---
+
 {{APIRef}}
 
 The **`connect`** event is fired in shared workers at their {{domxref("SharedWorkerGlobalScope")}} when a new client connects.
@@ -29,7 +30,7 @@ onconnect = (event) => { };
 
 ## Event type
 
-An {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MessageEvent")}}
 
@@ -37,15 +38,15 @@ An {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 _This interface also inherits properties from its parent, {{domxref("Event")}}._
 
-- {{domxref("MessageEvent.data")}} {{readonlyInline}}
+- {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
   - : The data sent by the message emitter.
-- {{domxref("MessageEvent.origin")}} {{readonlyInline}}
+- {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
   - : A string representing the origin of the message emitter.
-- {{domxref("MessageEvent.lastEventId")}} {{readonlyInline}}
+- {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
   - : A string representing a unique ID for the event.
-- {{domxref("MessageEvent.source")}} {{readonlyInline}}
-  - : A `MessageEventSource` (which can be a {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
-- {{domxref("MessageEvent.ports")}} {{readonlyInline}}
+- {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
+  - : A `MessageEventSource` (which can be a {{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
+- {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
   - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
 
 ## Examples
@@ -67,7 +68,7 @@ self.onconnect = (e) => {
 }
 ```
 
-For a complete running example, see our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/).)
+For a complete running example, see our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/).)
 
 ### addEventListener equivalent
 

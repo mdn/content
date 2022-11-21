@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Notification.Notification
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`Notification()`** constructor creates a new
@@ -18,7 +19,7 @@ The **`Notification()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new Notification(title)
 new Notification(title, options)
 ```
@@ -73,17 +74,18 @@ new Notification(title, options)
         active until the user clicks or dismisses it, rather than closing automatically.
         The default value is `false`.
     - `actions`
+
       - : An array of actions to display in the notification. Each element in the array is an object with the following members:
 
-        - `action`:  A string identifying a user action to be displayed on the notification.
-        - `title`:  A string containing action text to be shown to the user.
-        - `icon`:  A string containing the URL of an icon to display with the action.
+        - `action`: A string identifying a user action to be displayed on the notification.
+        - `title`: A string containing action text to be shown to the user.
+        - `icon`: A string containing the URL of an icon to display with the action.
 
         Appropriate responses are built using `event.action` within the
         {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
 
     - `silent`
-      - :  A boolean value specifying whether the
+      - : A boolean value specifying whether the
         notification is silent (no sounds or vibrations issued), regardless of the device
         settings. The default is `false`, which means it won't be silent.
 

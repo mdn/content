@@ -10,13 +10,14 @@ tags:
   - TransformStreamDefaultController
 browser-compat: api.TransformStreamDefaultController.error
 ---
+
 {{DefaultAPISidebar("Streams API")}}
 
 The **`error()`** method of the {{domxref("TransformStreamDefaultController")}} interface errors both sides of the stream. Any further interactions with it will fail with the given error message, and any chunks in the queue will be discarded.
 
 ## Syntax
 
-```js
+```js-nolint
 error(reason)
 ```
 

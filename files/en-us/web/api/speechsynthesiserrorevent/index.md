@@ -4,7 +4,6 @@ slug: Web/API/SpeechSynthesisErrorEvent
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Interface
   - Reference
   - SpeechSynthesisErrorEvent
@@ -13,20 +12,21 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisErrorEvent
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Speech API")}}
 
 The **`SpeechSynthesisErrorEvent`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) contains information about any errors that occur while processing {{domxref("SpeechSynthesisUtterance")}} objects in the speech service.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _`SpeechSynthesisErrorEvent` extends the {{domxref("SpeechSynthesisEvent")}} interface, which inherits properties from its parent interface, {{domxref("Event")}}._
 
-- {{domxref("SpeechSynthesisErrorEvent.error")}} {{readonlyinline}}
+- {{domxref("SpeechSynthesisErrorEvent.error")}} {{ReadOnlyInline}}
   - : Returns an error code indicating what has gone wrong with a speech synthesis attempt.
 
-## Methods
+## Instance methods
 
 _`SpeechSynthesisErrorEvent` extends the {{domxref("SpeechSynthesisEvent")}} interface, which inherits methods from its parent interface, {{domxref("Event")}}._
 
@@ -49,7 +49,7 @@ inputForm.onsubmit = (event) => {
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
   for (let i = 0; i < voices.length ; i++) {
-    if(voices[i].name === selectedOption) {
+    if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
   }

@@ -5,6 +5,7 @@ tags:
   - Firefox 3
   - XUL
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 3 provides a number of new [XUL](/en-US/docs/XUL) elements, as well as improvements to existing elements. While this material is documented in detail elsewhere, this article provides a convenient list of these improvements as well as links to the detailed documentation.

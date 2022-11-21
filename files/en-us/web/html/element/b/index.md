@@ -14,7 +14,7 @@ tags:
 browser-compat: html.elements.b
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<b>`** [HTML](/en-US/docs/Web/HTML) element is used to draw the reader's attention to the element's contents, which are not otherwise granted special importance. This was formerly known as the Boldface element, and most browsers still draw the text in boldface. However, you should not use `<b>` for styling text; instead, you should use the CSS {{cssxref("font-weight")}} property to create boldface text, or the {{HTMLElement("strong")}} element to indicate that text is of special importance.
 
@@ -94,10 +94,11 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ```html
 <p>
-  This article describes several <b class="keywords">text-level</b> elements.
-  It explains their usage in an <b class="keywords">HTML</b> document.
+  This article describes several <b class="keywords">text-level</b> elements. It
+  explains their usage in an <b class="keywords">HTML</b> document.
 </p>
-Keywords are displayed with the default style of the <b>element, likely in bold.</b>
+Keywords are displayed with the default style of the
+<b>element, likely in bold.</b>
 ```
 
 ### Result

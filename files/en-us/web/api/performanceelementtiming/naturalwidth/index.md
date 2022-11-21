@@ -8,9 +8,11 @@ tags:
   - Reference
   - naturalWidth
   - PerformanceElementTiming
+  - Experimental
 browser-compat: api.PerformanceElementTiming.naturalWidth
 ---
-{{DefaultAPISidebar("Element Timing")}}
+
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`naturalWidth`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the intrinsic width of the image element.
 
@@ -23,7 +25,11 @@ An unsigned 32-bit integer (unsigned long) which is the intrinsic width of the i
 In this example the image file has a width of 1000px and a height of 750px. Calling `entry.naturalWidth` returns `1000`, that being the intrinsic width in pixels.
 
 ```html
-<img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage">
+<img
+  src="image.jpg"
+  alt="a nice image"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js

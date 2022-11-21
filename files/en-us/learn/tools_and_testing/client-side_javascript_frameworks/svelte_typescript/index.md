@@ -101,7 +101,7 @@ TypeScript's main advantages are:
 - Rich IDE support: Type information allows code editors and IDEs to offer features like code navigation, autocompletion, and smarter hints.
 - Safer refactoring: Types allows IDEs to know more about your code, and assist you while refactoring large portions of your code base.
 - Type inference: Enables you to take advantage of many TypeScript features even without declaring variable types.
-- Availability of new and future JavaScript features: TypeScript transpiles many recent [ES6 features](http://es6-features.org/) to plain old-school JavaScript, allowing you to use them even on user-agents that don't support them natively yet.
+- Availability of new and future JavaScript features: TypeScript transpiles many recent JavaScript features to plain old-school JavaScript, allowing you to use them even on user-agents that don't support them natively yet.
 
 TypeScript also has some disadvantages:
 
@@ -228,43 +228,43 @@ We'll define a `TodoType` type to see how TypeScript enforces that anything pass
 2. Add a `todo.type.ts` file inside it.
 3. Give `todo.type.ts` the following content:
 
-    ```ts
-    export type TodoType = {
-      id: number
-      name: string
-      completed: boolean
-    }
-    ```
+   ```ts
+   export type TodoType = {
+     id: number
+     name: string
+     completed: boolean
+   }
+   ```
 
-    > **Note:** The Svelte template uses [svelte-preprocess](https://github.com/sveltejs/svelte-preprocess) 4.0.0 to support TypeScript. From that version onward you have to use `export`/`import` type syntax to import types and interfaces. Check [this section of the troubleshooting guide](https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#how-do-i-import-interfaces-into-my-svelte-components-i-get-errors-after-transpilation) for more information.
+   > **Note:** The Svelte template uses [svelte-preprocess](https://github.com/sveltejs/svelte-preprocess) 4.0.0 to support TypeScript. From that version onward you have to use `export`/`import` type syntax to import types and interfaces. Check [this section of the troubleshooting guide](https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#how-do-i-import-interfaces-into-my-svelte-components-i-get-errors-after-transpilation) for more information.
 
 4. Now we'll use `TodoType` from our `Todo.svelte` component. First add the `lang="ts"` to our `<script>` tag.
 5. Let's `import` the type and use it to declare the `todo` property. Replace the `export let todo` line with the following:
 
-    ```ts
-    import type { TodoType } from "../types/todo.type";
+   ```ts
+   import type { TodoType } from "../types/todo.type";
 
-    export let todo: TodoType;
-    ```
+   export let todo: TodoType;
+   ```
 
-    > **Note:** Another reminder: When importing a `.ts` file, you have to omit the extension. Check the [`import` section](https://www.typescriptlang.org/docs/handbook/modules.html#import) of the TypeScript manual for more information.
+   > **Note:** Another reminder: When importing a `.ts` file, you have to omit the extension. Check the [`import` section](https://www.typescriptlang.org/docs/handbook/modules.html#import) of the TypeScript manual for more information.
 
 6. Now from `Todos.svelte` we will instantiate a `Todo` component with a literal object as its parameter before the call to the `MoreActions` component, like this:
 
-    ```html
-    <hr />
+   ```html
+   <hr />
 
-    <Todo todo={ { name: 'a new task with no id!', completed: false } } />
+   <Todo todo={ { name: 'a new task with no id!', completed: false } } />
 
-    <!-- MoreActions -->
-    <MoreActions {todos}
-    ```
+   <!-- MoreActions -->
+   <MoreActions {todos}
+   ```
 
 7. Add the `lang='ts'` to the `<script>` tag of the `Todos.svelte` component so that it knows to use the type checking we have specified.
 
-    We will get the following error:
+   We will get the following error:
 
-    ![type error in vscode, Todo Type object requires an id property.](08-vscode-structural-typing.png)
+   ![type error in vscode, Todo Type object requires an id property.](08-vscode-structural-typing.png)
 
 By now you should get an idea about the kind of assistance we can get from TypeScript when building Svelte projects.
 
@@ -306,45 +306,45 @@ Let's start with our `Alert.svelte` component.
 
 1. Add `lang="ts"` into your `Alert.svelte` component's `<script>` tag. You'll see some warnings in the output of the `check` script:
 
-    ```bash
-    $ npm run check -- --watch
-    > svelte-check "--watch"
+   ```bash
+   $ npm run check -- --watch
+   > svelte-check "--watch"
 
-    ./svelte-todo-typescript
-    Getting Svelte diagnostics...
-    ====================================
+   ./svelte-todo-typescript
+   Getting Svelte diagnostics...
+   ====================================
 
-    ./svelte-todo-typescript/src/components/Alert.svelte:8:7
-    Warn: Variable 'visible' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
-      let visible
+   ./svelte-todo-typescript/src/components/Alert.svelte:8:7
+   Warn: Variable 'visible' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
+     let visible
 
-    ./svelte-todo-typescript/src/components/Alert.svelte:9:7
-    Warn: Variable 'timeout' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
-      let timeout
+   ./svelte-todo-typescript/src/components/Alert.svelte:9:7
+   Warn: Variable 'timeout' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
+     let timeout
 
-    ./svelte-todo-typescript/src/components/Alert.svelte:11:28
-    Warn: Parameter 'message' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
-    Change = (message, ms) => {
+   ./svelte-todo-typescript/src/components/Alert.svelte:11:28
+   Warn: Parameter 'message' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
+   Change = (message, ms) => {
 
-    ./svelte-todo-typescript/src/components/Alert.svelte:11:37
-    Warn: Parameter 'ms' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
-    (message, ms) => {
-    ```
+   ./svelte-todo-typescript/src/components/Alert.svelte:11:37
+   Warn: Parameter 'ms' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
+   (message, ms) => {
+   ```
 
 2. You can fix these by specifying the corresponding types, like so:
 
-    ```ts
-    export let ms = 3000
+   ```ts
+   export let ms = 3000
 
-      let visible: boolean
-      let timeout: number
+     let visible: boolean
+     let timeout: number
 
-      const onMessageChange = (message: string, ms: number) => {
-        clearTimeout(timeout)
-        if (!message) {               // hide Alert if message is empty
-    ```
+     const onMessageChange = (message: string, ms: number) => {
+       clearTimeout(timeout)
+       if (!message) {               // hide Alert if message is empty
+   ```
 
-    > **Note:** There's no need to specify the `ms` type with `export let ms:number = 3000`, because TypeScript is already inferring it from its default value.
+   > **Note:** There's no need to specify the `ms` type with `export let ms:number = 3000`, because TypeScript is already inferring it from its default value.
 
 ### MoreActions.svelte
 
@@ -352,21 +352,21 @@ Now we'll do the same for the `MoreActions.svelte` component.
 
 1. Add the `lang='ts'` attribute, like before. TypeScript will warn us about the `todos` prop and the `t` variable in the call to `todos.filter((t) =>...)`.
 
-    ```
-    Warn: Variable 'todos' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
-      export let todos
+   ```
+   Warn: Variable 'todos' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
+     export let todos
 
-    Warn: Parameter 't' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
-      $: completedTodos = todos.filter((t) => t.completed).length
-    ```
+   Warn: Parameter 't' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
+     $: completedTodos = todos.filter((t) => t.completed).length
+   ```
 
 2. We will use the `TodoType` we already defined to tell TypeScript that `todos` is a `TodoType` array. Replace the `export let todos` line with the following:
 
-    ```ts
-    import type { TodoType } from "../types/todo.type";
+   ```ts
+   import type { TodoType } from "../types/todo.type";
 
-    export let todos: TodoType[];
-    ```
+   export let todos: TodoType[];
+   ```
 
 Notice that now TypeScript can infer that the `t` variable in `todos.filter((t) => t.completed)` is of type `TodoType`. Nevertheless, if we think it makes our code easier to read, we could specify it like this:
 
@@ -391,42 +391,42 @@ Now we'll take care of the `FilterButton` component.
 2. Create a `filter.enum.ts` file in the `types` folder.
 3. Give it the following contents:
 
-    ```ts
-    export enum Filter {
-      ALL = 'all',
-      ACTIVE = 'active',
-      COMPLETED = 'completed',
-    }
-    ```
+   ```ts
+   export enum Filter {
+     ALL = 'all',
+     ACTIVE = 'active',
+     COMPLETED = 'completed',
+   }
+   ```
 
 4. Now we will use this from the `FilterButton` component. Replace the content of the `FilterButton.svelte` file with the following:
 
-    ```html
-    <!-- components/FilterButton.svelte -->
-    <script lang='ts'>
-      import { Filter } from '../types/filter.enum'
+   ```html
+   <!-- components/FilterButton.svelte -->
+   <script lang='ts'>
+     import { Filter } from '../types/filter.enum'
 
-      export let filter: Filter = Filter.ALL
-    </script>
+     export let filter: Filter = Filter.ALL
+   </script>
 
-    <div class="filters btn-group stack-exception">
-      <button class="btn toggle-btn" class:btn__primary={filter === Filter.ALL} aria-pressed={filter === Filter.ALL} on:click={() => filter = Filter.ALL} >
-        <span class="visually-hidden">Show</span>
-        <span>All</span>
-        <span class="visually-hidden">tasks</span>
-      </button>
-      <button class="btn toggle-btn" class:btn__primary={filter === Filter.ACTIVE} aria-pressed={filter === Filter.ACTIVE} on:click={() => filter = Filter.ACTIVE} >
-        <span class="visually-hidden">Show</span>
-        <span>Active</span>
-        <span class="visually-hidden">tasks</span>
-      </button>
-      <button class="btn toggle-btn" class:btn__primary={filter === Filter.COMPLETED} aria-pressed={filter === Filter.COMPLETED} on:click={() => filter = Filter.COMPLETED} >
-        <span class="visually-hidden">Show</span>
-        <span>Completed</span>
-        <span class="visually-hidden">tasks</span>
-      </button>
-    </div>
-    ```
+   <div class="filters btn-group stack-exception">
+     <button class="btn toggle-btn" class:btn__primary={filter === Filter.ALL} aria-pressed={filter === Filter.ALL} on:click={() => filter = Filter.ALL} >
+       <span class="visually-hidden">Show</span>
+       <span>All</span>
+       <span class="visually-hidden">tasks</span>
+     </button>
+     <button class="btn toggle-btn" class:btn__primary={filter === Filter.ACTIVE} aria-pressed={filter === Filter.ACTIVE} on:click={() => filter = Filter.ACTIVE} >
+       <span class="visually-hidden">Show</span>
+       <span>Active</span>
+       <span class="visually-hidden">tasks</span>
+     </button>
+     <button class="btn toggle-btn" class:btn__primary={filter === Filter.COMPLETED} aria-pressed={filter === Filter.COMPLETED} on:click={() => filter = Filter.COMPLETED} >
+       <span class="visually-hidden">Show</span>
+       <span>Completed</span>
+       <span class="visually-hidden">tasks</span>
+     </button>
+   </div>
+   ```
 
 Here we are just importing the `Filter` enum and using it instead of the string values we used previously.
 
@@ -437,99 +437,107 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
 1. First, add the `lang='ts'` attribute to it, as before.
 2. Next, import the `Filter` enum. Add the following `import` statement below your existing ones:
 
-    ```js
-    import { Filter } from "../types/filter.enum";
-    ```
+   ```js
+   import { Filter } from "../types/filter.enum";
+   ```
 
 3. Now we will use it whenever we reference the current filter. Replace your two filter-related blocks with the following:
 
-    ```ts
-    let filter: Filter = Filter.ALL;
-    const filterTodos = (filter: Filter, todos) =>
-      filter === Filter.ACTIVE
-        ? todos.filter((t) => !t.completed)
-        : filter === Filter.COMPLETED
-        ? todos.filter((t) => t.completed)
-        : todos;
+   ```ts
+   let filter: Filter = Filter.ALL;
+   const filterTodos = (filter: Filter, todos) =>
+     filter === Filter.ACTIVE
+       ? todos.filter((t) => !t.completed)
+       : filter === Filter.COMPLETED
+       ? todos.filter((t) => t.completed)
+       : todos;
 
-    $: {
-      if (filter === Filter.ALL) $alert = "Browsing all todos";
-      else if (filter === Filter.ACTIVE) $alert = "Browsing active todos";
-      else if (filter === Filter.COMPLETED) $alert = "Browsing completed todos";
-    }
-    ```
+   $: {
+     if (filter === Filter.ALL) {
+       $alert = "Browsing all todos";
+     } else if (filter === Filter.ACTIVE) {
+       $alert = "Browsing active todos";
+     } else if (filter === Filter.COMPLETED) {
+       $alert = "Browsing completed todos";
+     }
+   }
+   ```
 
 4. `check` will still give us some warnings from `Todos.svelte`. Let's fix them.
 
-    Start by importing the `TodoType` and telling TypeScript that our `todos` variable is an array of `TodoType`. Replace `export let todos = []` with the following two lines:
+   Start by importing the `TodoType` and telling TypeScript that our `todos` variable is an array of `TodoType`. Replace `export let todos = []` with the following two lines:
 
-    ```ts
-    import type { TodoType } from "../types/todo.type";
+   ```ts
+   import type { TodoType } from "../types/todo.type";
 
-    export let todos: TodoType[] = [];
-    ```
+   export let todos: TodoType[] = [];
+   ```
 
 5. Next we'll specify all the missing types. The variable `todosStatus`, which we used to programmatically access the methods exposed by the `TodosStatus` component, is of type `TodosStatus`. And each `todo` will be of type `TodoType`.
 
-    Update your `<script>` section to look like this:
+   Update your `<script>` section to look like this:
 
-    ```ts
-    import FilterButton from './FilterButton.svelte'
-    import Todo from './Todo.svelte'
-    import MoreActions from './MoreActions.svelte'
-    import NewTodo from './NewTodo.svelte'
-    import TodosStatus from './TodosStatus.svelte'
-    import { alert } from '../stores'
+   ```ts
+   import FilterButton from './FilterButton.svelte'
+   import Todo from './Todo.svelte'
+   import MoreActions from './MoreActions.svelte'
+   import NewTodo from './NewTodo.svelte'
+   import TodosStatus from './TodosStatus.svelte'
+   import { alert } from '../stores'
 
-    import { Filter } from '../types/filter.enum'
+   import { Filter } from '../types/filter.enum'
 
-    import type { TodoType } from '../types/todo.type'
+   import type { TodoType } from '../types/todo.type'
 
-    export let todos: TodoType[] = []
+   export let todos: TodoType[] = []
 
-    let todosStatus: TodosStatus                   // reference to TodosStatus instance
+   let todosStatus: TodosStatus                   // reference to TodosStatus instance
 
-    $: newTodoId = todos.length > 0 ? Math.max(...todos.map((t) => t.id)) + 1 : 1
+   $: newTodoId = todos.length > 0 ? Math.max(...todos.map((t) => t.id)) + 1 : 1
 
-    function addTodo(name: string) {
-      todos = [...todos, { id: newTodoId, name, completed: false }]
-      $alert = `Todo '${name}' has been added`
-    }
+   function addTodo(name: string) {
+     todos = [...todos, { id: newTodoId, name, completed: false }]
+     $alert = `Todo '${name}' has been added`
+   }
 
-    function removeTodo(todo: TodoType) {
-      todos = todos.filter((t) => t.id !== todo.id)
-      todosStatus.focus()             // give focus to status heading
-      $alert = `Todo '${todo.name}' has been deleted`
-    }
+   function removeTodo(todo: TodoType) {
+     todos = todos.filter((t) => t.id !== todo.id)
+     todosStatus.focus()             // give focus to status heading
+     $alert = `Todo '${todo.name}' has been deleted`
+   }
 
-    function updateTodo(todo: TodoType) {
-      const i = todos.findIndex((t) => t.id === todo.id)
-      if (todos[i].name !== todo.name)            $alert = `todo '${todos[i].name}' has been renamed to '${todo.name}'`
-      if (todos[i].completed !== todo.completed)  $alert = `todo '${todos[i].name}' marked as ${todo.completed ? 'completed' : 'active'}`
-      todos[i] = { ...todos[i], ...todo }
-    }
+   function updateTodo(todo: TodoType) {
+     const i = todos.findIndex((t) => t.id === todo.id)
+     if (todos[i].name !== todo.name)            $alert = `todo '${todos[i].name}' has been renamed to '${todo.name}'`
+     if (todos[i].completed !== todo.completed)  $alert = `todo '${todos[i].name}' marked as ${todo.completed ? 'completed' : 'active'}`
+     todos[i] = { ...todos[i], ...todo }
+   }
 
-    let filter: Filter = Filter.ALL
-    const filterTodos = (filter: Filter, todos: TodoType[]) =>
-      filter === Filter.ACTIVE ? todos.filter((t) => !t.completed) :
-      filter === Filter.COMPLETED ? todos.filter((t) => t.completed) :
-      todos
+   let filter: Filter = Filter.ALL
+   const filterTodos = (filter: Filter, todos: TodoType[]) =>
+     filter === Filter.ACTIVE ? todos.filter((t) => !t.completed) :
+     filter === Filter.COMPLETED ? todos.filter((t) => t.completed) :
+     todos
 
-    $: {
-      if (filter === Filter.ALL)               $alert = 'Browsing all todos'
-      else if (filter === Filter.ACTIVE)       $alert = 'Browsing active todos'
-      else if (filter === Filter.COMPLETED)    $alert = 'Browsing completed todos'
-    }
+   $: {
+     if (filter === Filter.ALL) {
+       $alert = 'Browsing all todos';
+     } else if (filter === Filter.ACTIVE) {
+       $alert = 'Browsing active todos';
+     } else if (filter === Filter.COMPLETED) {
+       $alert = 'Browsing completed todos';
+     }
+   }
 
-    const checkAllTodos = (completed: boolean) => {
-      todos = todos.map((t) => ({...t, completed}))
-      $alert = `${completed ? 'Checked' : 'Unchecked'} ${todos.length} todos`
-    }
-    const removeCompletedTodos = () => {
-      $alert = `Removed ${todos.filter((t) => t.completed).length} todos`
-      todos = todos.filter((t) => !t.completed)
-    }
-    ```
+   const checkAllTodos = (completed: boolean) => {
+     todos = todos.map((t) => ({...t, completed}))
+     $alert = `${completed ? 'Checked' : 'Unchecked'} ${todos.length} todos`
+   }
+   const removeCompletedTodos = () => {
+     $alert = `Removed ${todos.filter((t) => t.completed).length} todos`
+     todos = todos.filter((t) => !t.completed)
+   }
+   ```
 
 ### TodosStatus.svelte
 
@@ -552,31 +560,31 @@ Let's fix it.
 1. Open the file `TodosStatus.svelte` and add the `lang='ts'` attribute.
 2. Then import the `TodoType` and declare the `todos` prop as an array of `TodoType`. Replace the first line of the `<script>` section with the following:
 
-    ```ts
-    import type { TodoType } from "../types/todo.type";
+   ```ts
+   import type { TodoType } from "../types/todo.type";
 
-    export let todos: TodoType[];
-    ```
+   export let todos: TodoType[];
+   ```
 
 3. We will also specify the `headingEl`, which we used to bind to the heading tag, as an `HTMLElement`. Update the `let headingEl` line with the following:
 
-    ```ts
-    let headingEl: HTMLElement;
-    ```
+   ```ts
+   let headingEl: HTMLElement;
+   ```
 
 4. Finally, you'll notice the following error reported, related to where we set the `tabindex` attribute. That's because TypeScript is type checking the `<h2>` element and expects `tabindex` to be of type `number`.
 
-    ![tabindex hint inside vs code, tabindex expects a type of number, not string](10-vscode-tabindex-hint.png)
+   ![tabindex hint inside vs code, tabindex expects a type of number, not string](10-vscode-tabindex-hint.png)
 
-    To fix it, replace `tabindex="-1"` with `tabindex={-1}`, like this:
+   To fix it, replace `tabindex="-1"` with `tabindex={-1}`, like this:
 
-    ```html
-    <h2 id="list-heading" bind:this="{headingEl}" tabindex="{-1}">
-      {completedTodos} out of {totalTodos} items completed
-    </h2>
-    ```
+   ```html
+   <h2 id="list-heading" bind:this="{headingEl}" tabindex="{-1}">
+     {completedTodos} out of {totalTodos} items completed
+   </h2>
+   ```
 
-    This way TypeScript can prevent us from incorrectly assigning it to a string variable.
+   This way TypeScript can prevent us from incorrectly assigning it to a string variable.
 
 ### NewTodo.svelte
 
@@ -585,15 +593,15 @@ Next we will take care of `NewTodo.svelte`.
 1. As usual, add the `lang='ts'` attribute.
 2. The warning will indicate that we have to specify a type for the `nameEl` variable. Set its type to `HTMLElement` like this:
 
-    ```ts
-    let nameEl: HTMLElement; // reference to the name input DOM node
-    ```
+   ```ts
+   let nameEl: HTMLElement; // reference to the name input DOM node
+   ```
 
 3. Last for this file, we need to specify the correct type for our `autofocus` variable. Update its definition like this:
 
-    ```ts
-    export let autofocus: boolean = false;
-    ```
+   ```ts
+   export let autofocus: boolean = false;
+   ```
 
 ### Todo.svelte
 
@@ -602,40 +610,40 @@ Now the only warnings that `npm run check` emits are triggered by calling the `T
 1. Open the `Todo.svelte` file, and add the `lang='ts'` attribute.
 2. Let's import the `TodoType`, and set the type of the `todo` prop. Replace the `export let todo` line with the following:
 
-    ```ts
-    import type { TodoType } from "../types/todo.type";
+   ```ts
+   import type { TodoType } from "../types/todo.type";
 
-    export let todo: TodoType;
-    ```
+   export let todo: TodoType;
+   ```
 
 3. The first warning we get is TypeScript telling us to define the type of the `update()` function's `updatedTodo` variable. This can be a little tricky because `updatedTodo` contains only the attributes of the `todo` that have been updated. That means it's not a complete `todo` — it only has a subset of a `todo`'s properties.
 
-    For these kinds of cases, TypeScript provides several [utility types](https://www.typescriptlang.org/docs/handbook/utility-types.html) to make it easier to apply these common transformations. What we need right now is the [`Partial<T>`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialt) utility, which allows us to represent all subsets of a given type. The partial utility returns a new type based on the type `T`, where every property of `T` is optional.
+   For these kinds of cases, TypeScript provides several [utility types](https://www.typescriptlang.org/docs/handbook/utility-types.html) to make it easier to apply these common transformations. What we need right now is the [`Partial<T>`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialt) utility, which allows us to represent all subsets of a given type. The partial utility returns a new type based on the type `T`, where every property of `T` is optional.
 
-    We'll use it in the `update()` function — update yours like so:
+   We'll use it in the `update()` function — update yours like so:
 
-    ```ts
-    function update(updatedTodo: Partial<TodoType>) {
-      todo = { ...todo, ...updatedTodo }; // applies modifications to todo
-      dispatch("update", todo); // emit update event
-    }
-    ```
+   ```ts
+   function update(updatedTodo: Partial<TodoType>) {
+     todo = { ...todo, ...updatedTodo }; // applies modifications to todo
+     dispatch("update", todo); // emit update event
+   }
+   ```
 
-    With this we are telling TypeScript that the `updatedTodo` variable will hold a subset of the `TodoType` properties.
+   With this we are telling TypeScript that the `updatedTodo` variable will hold a subset of the `TodoType` properties.
 
 4. Now svelte-check tells us that we have to define the type of our action function parameters:
 
-    ```bash
-    ./07-next-steps/src/components/Todo.svelte:45:24
-    Warn: Parameter 'node' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
-      const focusOnInit = (node) => node && typeof node.focus === 'function' && node.focus()
+   ```bash
+   ./07-next-steps/src/components/Todo.svelte:45:24
+   Warn: Parameter 'node' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
+     const focusOnInit = (node) => node && typeof node.focus === 'function' && node.focus()
 
-    ./07-next-steps/src/components/Todo.svelte:47:28
-    Warn: Parameter 'node' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
-      const focusEditButton = (node) => editButtonPressed && node.focus()
-    ```
+   ./07-next-steps/src/components/Todo.svelte:47:28
+   Warn: Parameter 'node' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
+     const focusEditButton = (node) => editButtonPressed && node.focus()
+   ```
 
-    We just have to define the node variable to be of type `HTMLElement`. In the two lines indicated above, replace the first instance of `node` with `node: HTMLElement`.
+   We just have to define the node variable to be of type `HTMLElement`. In the two lines indicated above, replace the first instance of `node` with `node: HTMLElement`.
 
 ### actions.js
 
@@ -643,25 +651,25 @@ Next we'll take care of the `actions.js` file.
 
 1. Rename it to `actions.ts` and add the type of the node parameter. It should end up looking like this:
 
-    ```ts
-    // actions.ts
-    export function selectOnFocus(node: HTMLInputElement) {
-      if (node && typeof node.select === "function") {
-        // make sure node is defined and has a select() method
-        const onFocus = () => node.select(); // event handler
-        node.addEventListener("focus", onFocus); // when node gets focus call onFocus()
-        return {
-          destroy: () => node.removeEventListener("focus", onFocus), // this will be executed when the node is removed from the DOM
-        };
-      }
-    }
-    ```
+   ```ts
+   // actions.ts
+   export function selectOnFocus(node: HTMLInputElement) {
+     if (node && typeof node.select === "function") {
+       // make sure node is defined and has a select() method
+       const onFocus = () => node.select(); // event handler
+       node.addEventListener("focus", onFocus); // when node gets focus call onFocus()
+       return {
+         destroy: () => node.removeEventListener("focus", onFocus), // this will be executed when the node is removed from the DOM
+       };
+     }
+   }
+   ```
 
 2. Now update `Todo.svelte` and `NewTodo.svelte` where we import the actions file. Remember that imports in TypeScript don't include the file extension. In each case it should end up like this:
 
-    ```js
-    import { selectOnFocus } from "../actions";
-    ```
+   ```js
+   import { selectOnFocus } from "../actions";
+   ```
 
 ### Migrating the stores to TypeScript
 
@@ -674,27 +682,27 @@ We'll start with `stores.js`.
 1. Rename the file to `stores.ts`.
 2. Set the type of our `initialTodos` array to `TodoType[]`. This is how the contents will end up:
 
-    ```ts
-    // stores.ts
-    import { writable } from "svelte/store";
-    import { localStore } from "./localStore.js";
-    import type { TodoType } from "./types/todo.type";
+   ```ts
+   // stores.ts
+   import { writable } from "svelte/store";
+   import { localStore } from "./localStore.js";
+   import type { TodoType } from "./types/todo.type";
 
-    export const alert = writable("Welcome to the To-Do list app!");
+   export const alert = writable("Welcome to the To-Do list app!");
 
-    const initialTodos: TodoType[] = [
-      { id: 1, name: "Visit MDN web docs", completed: true },
-      { id: 2, name: "Complete the Svelte Tutorial", completed: false },
-    ];
+   const initialTodos: TodoType[] = [
+     { id: 1, name: "Visit MDN web docs", completed: true },
+     { id: 2, name: "Complete the Svelte Tutorial", completed: false },
+   ];
 
-    export const todos = localStore("mdn-svelte-todo", initialTodos);
-    ```
+   export const todos = localStore("mdn-svelte-todo", initialTodos);
+   ```
 
 3. Remember to update the `import` statements in `App.svelte`, `Alert.svelte`, and `Todos.svelte`. Just remove the `.js` extension, like this:
 
-    ```js
-    import { todos } from "../stores";
-    ```
+   ```js
+   import { todos } from "../stores";
+   ```
 
 Now onto `localStore.js`.
 
@@ -707,59 +715,59 @@ import { localStore } from "./localStore";
 1. Start by renaming the file to `localStore.ts`.
 2. TypeScript is telling us to specify the type of the `key`, `initial`, and `value` variables. The first one is easy: the key of our local web storage should be a string.
 
-    But `initial` and `value` should be any object that could be converted to a valid JSON string with the [`JSON.stringify`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) method, meaning any JavaScript object with a couple limitations: for example, `undefined`, functions, and symbols are not valid JSON values.
+   But `initial` and `value` should be any object that could be converted to a valid JSON string with the [`JSON.stringify`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) method, meaning any JavaScript object with a couple limitations: for example, `undefined`, functions, and symbols are not valid JSON values.
 
-    So we'll create the type `JsonValue` to specify these conditions.
+   So we'll create the type `JsonValue` to specify these conditions.
 
-    Create the file `json.type.ts` in the `types` folder.
+   Create the file `json.type.ts` in the `types` folder.
 
 3. Give it the following content:
 
-    ```ts
-    export type JsonValue =
-      | string
-      | number
-      | boolean
-      | null
-      | JsonValue[]
-      | { [key: string]: JsonValue };
-    ```
+   ```ts
+   export type JsonValue =
+     | string
+     | number
+     | boolean
+     | null
+     | JsonValue[]
+     | { [key: string]: JsonValue };
+   ```
 
-    The `|` operator lets us declare variables that could store values of two or more types. A `JsonValue` could be a string, a number, a boolean, and so on. In this case we are also making use of recursive types to specify that a `JsonValue` can have an array of `JsonValue` and also an object with properties of type `JsonValue`.
+   The `|` operator lets us declare variables that could store values of two or more types. A `JsonValue` could be a string, a number, a boolean, and so on. In this case we are also making use of recursive types to specify that a `JsonValue` can have an array of `JsonValue` and also an object with properties of type `JsonValue`.
 
 4. We will import our `JsonValue` type and use it accordingly. Update your `localStore.ts` file like this:
 
-    ```ts
-    // localStore.ts
-    import { writable } from "svelte/store";
+   ```ts
+   // localStore.ts
+   import { writable } from "svelte/store";
 
-    import type { JsonValue } from "./types/json.type";
+   import type { JsonValue } from "./types/json.type";
 
-    export const localStore = (key: string, initial: JsonValue) => {
-      // receives the key of the local storage and an initial value
+   export const localStore = (key: string, initial: JsonValue) => {
+     // receives the key of the local storage and an initial value
 
-      const toString = (value: JsonValue) => JSON.stringify(value, null, 2); // helper function
-      const toObj = JSON.parse; // helper function
+     const toString = (value: JsonValue) => JSON.stringify(value, null, 2); // helper function
+     const toObj = JSON.parse; // helper function
 
-      if (localStorage.getItem(key) === null) {
-        // item not present in local storage
-        localStorage.setItem(key, toString(initial)); // initialize local storage with initial value
-      }
+     if (localStorage.getItem(key) === null) {
+       // item not present in local storage
+       localStorage.setItem(key, toString(initial)); // initialize local storage with initial value
+     }
 
-      const saved = toObj(localStorage.getItem(key)); // convert to object
+     const saved = toObj(localStorage.getItem(key)); // convert to object
 
-      const { subscribe, set, update } = writable(saved); // create the underlying writable store
+     const { subscribe, set, update } = writable(saved); // create the underlying writable store
 
-      return {
-        subscribe,
-        set: (value: JsonValue) => {
-          localStorage.setItem(key, toString(value)); // save also to local storage as a string
-          return set(value);
-        },
-        update,
-      };
-    };
-    ```
+     return {
+       subscribe,
+       set: (value: JsonValue) => {
+         localStorage.setItem(key, toString(value)); // save also to local storage as a string
+         return set(value);
+       },
+       update,
+     };
+   };
+   ```
 
 Now if we try to create a `localStore` with something that cannot be converted to JSON via `JSON.stringify()`, for example an object with a function as a property, VS Code/`validate` will complain about it:
 

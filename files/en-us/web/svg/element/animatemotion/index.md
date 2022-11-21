@@ -7,6 +7,7 @@ tags:
   - SVG Animation
 browser-compat: svg.elements.animateMotion
 ---
+
 {{SVGRef}}
 
 The SVG **`<animateMotion>`** element provides a way to define how an element moves along a motion path.
@@ -16,16 +17,27 @@ The SVG **`<animateMotion>`** element provides a way to define how an element mo
 ## Example
 
 ```css hidden
-html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
+html,
+body,
+svg {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
 ```
 
 ```html
 <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-  <path fill="none" stroke="lightgrey"
+  <path
+    fill="none"
+    stroke="lightgrey"
     d="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
 
   <circle r="5" fill="red">
-    <animateMotion dur="10s" repeatCount="indefinite"
+    <animateMotion
+      dur="10s"
+      repeatCount="indefinite"
       path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
   </circle>
 </svg>
@@ -41,13 +53,13 @@ html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
 
 - {{SVGAttr("keyPoints")}}
   - : This attribute indicate, in the range \[0,1], how far is the object along the path for each {{SVGAttr("keyTimes")}} associated values.
-    *Value type*: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number)\*; *Default value*: none; *Animatable*: **no**
+    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number)\*; _Default value_: none; _Animatable_: **no**
 - {{SVGAttr("path")}}
   - : This attribute defines the path of the motion, using the same syntax as the {{SVGAttr('d')}} attribute.
-    *Value type*: **\<string>**; *Default value*: none; *Animatable*: **no**
+    _Value type_: **\<string>**; _Default value_: none; _Animatable_: **no**
 - {{SVGAttr("rotate")}}
   - : This attribute defines a rotation applied to the element animated along a path, usually to make it pointing in the direction of the animation.
-    *Value type*: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number)|`auto`|`auto-reverse`; *Default value*: `0`; *Animatable*: **no**
+    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number)|`auto`|`auto-reverse`; _Default value_: `0`; _Animatable_: **no**
 
 > **Note:** For `<animateMotion>`, the default value for the {{SVGAttr("calcMode")}} attribute is `paced`.
 

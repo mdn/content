@@ -12,9 +12,11 @@ tags:
   - Virtual Reality
   - WebVR
   - canPresent
+  - Non-standard
 browser-compat: api.VRDisplayCapabilities.canPresent
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`canPresent`** read-only property of the {{domxref("VRDisplayCapabilities")}} interface returns a boolean value stating whether the VR display is capable of presenting content (e.g. through an HMD).
 

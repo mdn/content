@@ -6,6 +6,7 @@ tags:
   - Tutorial
   - WebGL
 ---
+
 {{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 Now that our sample program has a rotating 3D cube, let's map a texture onto it instead of having its faces be solid colors.
@@ -72,7 +73,7 @@ function loadTexture(gl, url) {
 }
 
 function isPowerOf2(value) {
-  return value & (value - 1) === 0;
+  return (value & (value - 1)) === 0;
 }
 ```
 
@@ -101,7 +102,7 @@ To load the image, add a call to our `loadTexture()` function within our `main()
 
 But also note: Browsers copy pixels from the loaded image in top-to-bottom order — from the top-left corner; but WebGL wants the pixels in bottom-to-top order — starting from the bottom-left corner. (For more details, see [Why is my WebGL texture upside-down?](https://jameshfisher.com/2020/10/22/why-is-my-webgl-texture-upside-down/).)
 
-So in order to prevent the resulting image texture from having the wrong orientation when rendered, we also need call [`pixelStorei()`](https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/pixelStorei) with the `gl.UNPACK_FLIP_Y_WEBGL` parameter set to `true` — to cause the pixels to be flipped into the bottom-to-top order that WebGL expects.
+So in order to prevent the resulting image texture from having the wrong orientation when rendered, we also need call [`pixelStorei()`](/en-US/docs/Web/API/WebGLRenderingContext/pixelStorei) with the `gl.UNPACK_FLIP_Y_WEBGL` parameter set to `true` — to cause the pixels to be flipped into the bottom-to-top order that WebGL expects.
 
 ```js
 // Load texture
@@ -281,7 +282,7 @@ At this point, the rotating cube should be good to go.
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample6/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/dom-examples/tree/master/webgl-examples/tutorial/sample6) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample6/)
+[View the complete code](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample6) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample6/)
 
 ## Cross-domain textures
 
@@ -291,12 +292,6 @@ Because WebGL now requires textures to be loaded from secure contexts, you can't
 
 See this [hacks.mozilla.org article](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) for an explanation of how to use CORS-approved images as WebGL textures.
 
-> **Note:** CORS support for WebGL textures and the `crossOrigin` attribute for image elements is implemented in {{Gecko("8.0")}}.
-
 Tainted (write-only) 2D canvases can't be used as WebGL textures. A 2D {{ HTMLElement("canvas") }} becomes tainted, for example, when a cross-domain image is drawn on it.
-
-> **Note:** CORS support for Canvas 2D `drawImage` is implemented in {{Gecko("9.0")}}. This means that using a cross-domain image with CORS approval does no longer taint the 2D canvas, so the 2D canvas remains usable as the source of a WebGL texture.
-
-> **Note:** CORS support for cross-domain videos and the `crossorigin` attribute for {{ HTMLElement("video") }} elements is implemented in {{Gecko("12.0")}}.
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

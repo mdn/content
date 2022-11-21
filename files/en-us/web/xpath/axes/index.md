@@ -8,7 +8,12 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
-{{ XsltRef() }} There are thirteen different axes in the [XPath](/en-US/docs/Web/XPath) specification. An axis represents a relationship to the context node, and is used to locate nodes relative to that node on the tree.
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/XPath")}}
+</section>
+
+There are thirteen different axes in the [XPath](/en-US/docs/Web/XPath) specification. An axis represents a relationship to the context node, and is used to locate nodes relative to that node on the tree.
 
 For further information on using XPath expressions, please see the [For Further Reading](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT#for_further_reading) section at the end of [Transforming XML with XSLT](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT) document. Also see the ['axes' section in the xpath spec](https://www.w3.org/TR/xpath-30/#axes).
 
@@ -21,7 +26,7 @@ For further information on using XPath expressions, please see the [For Further 
 - [child](/en-US/docs/Web/XPath/Axes/child)
   - : Indicates the children of the context node. If an XPath expression does not specify an axis, this is understood by default. Since only the root node or element nodes have children, any other use will select nothing.
 - [descendant](/en-US/docs/Web/XPath/Axes/descendant)
-  - : Indicates all of the children of the context node, and all of their children, and so forth. Attribute and namespace nodes are **not** included - the `parent` of an `attribute` node is an element node, but `attribute` nodes are not the children of their parents.
+  - : Indicates all the children of the context node, and all of their children, and so forth. Attribute and namespace nodes are **not** included - the `parent` of an `attribute` node is an element node, but `attribute` nodes are not the children of their parents.
 - [descendant-or-self](/en-US/docs/Web/XPath/Axes/descendant-or-self)
   - : Indicates the context node and all of its descendants. Attribute and namespace nodes are **not** included - the `parent` of an `attribute` node is an element node, but `attribute` nodes are not the children of their parents.
 - [following](/en-US/docs/Web/XPath/Axes/following)

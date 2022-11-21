@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.WorkerNavigator.product
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 The value of the **`WorkerNavigator.product`** property is always

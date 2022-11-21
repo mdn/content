@@ -8,8 +8,9 @@ tags:
   - Property
   - Reference
   - Reporting API
-spec-urls: https://w3c.github.io/reporting/#dom-report-body
+browser-compat: api.Report.body
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`body`** read-only property of the {{domxref("Report")}}
@@ -46,7 +47,7 @@ const observer = new ReportingObserver(([firstReport], observer) => {
 
 ## Browser compatibility
 
-This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
+{{Compat}}
 
 ## See also
 

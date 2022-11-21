@@ -11,13 +11,14 @@ tags:
   - Experimental
 browser-compat: api.CookieStore.get
 ---
+
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 The **`get()`** method of the {{domxref("CookieStore")}} interface returns a single cookie with the given name or options object. (See below.) The method will return the first matching cookie for the passed parameters.
 
 ## Syntax
 
-```js
+```js-nolint
 get(name)
 get(options)
 ```
@@ -52,9 +53,9 @@ A {{jsxref("Promise")}} that resolves with an object containing the first cookie
 - `path`
   - : A string containing the path of the cookie.
 - `expires`
-  - : A {{domxref("DOMTimeStamp")}} containing the expiration date of the cookie.
+  - : A timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds, containing the expiration date of the cookie.
 - `secure`
-  - : A {{jsxref("boolean")}} indicating whether the cookie is to be used in secure contexts only.
+  - : A boolean value indicating whether the cookie is to be used in secure contexts only.
 - `sameSite`
 
   - : One of the following [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) values:
@@ -78,11 +79,11 @@ A {{jsxref("Promise")}} that resolves with an object containing the first cookie
 In this example we return a cookie named "cookie1". If the cookie is found the result of the Promise is an object containing the details of a single cookie.
 
 ```js
-let cookie = cookieStore.get('cookie1');
+let cookie = cookieStore.get("cookie1");
 if (cookie) {
-    console.log(cookie);
+  console.log(cookie);
 } else {
-    console.log('Cookie not found');
+  console.log("Cookie not found");
 }
 ```
 

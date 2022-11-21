@@ -9,9 +9,10 @@ tags:
   - Reference
 browser-compat: javascript.operators.logical_or
 ---
+
 {{jsSidebar("Operators")}}
 
-The logical OR (`||`) operator (logical disjunction) for a set of operands
+The **logical OR (`||`)** (logical disjunction) operator for a set of operands
 is true if and only if one or more of its operands is true. It is typically used with
 boolean (logical) values. When it is, it returns a Boolean value. However,
 the `||` operator actually returns the value of one of the specified
@@ -22,7 +23,7 @@ non-Boolean value.
 
 ## Syntax
 
-```js
+```js-nolint
 expr1 || expr2
 ```
 
@@ -66,11 +67,17 @@ happens because the value of the operator is already determined after the evalua
 the first operand. See example:
 
 ```js
-function A(){ console.log('called A'); return false; }
-function B(){ console.log('called B'); return true; }
+function A() {
+  console.log('called A');
+  return false;
+}
+function B() {
+  console.log('called B');
+  return true;
+}
 
 console.log(B() || A());
-// logs "called B" due to the function call,
+// Logs "called B" due to the function call,
 // then logs true (which is the resulting value of the operator)
 ```
 
@@ -107,7 +114,7 @@ o10 = false || varObject // f || object returns varObject
 > **Note:** If you use this operator to provide a default value to some
 > variable, be aware that any _falsy_ value will not be used. If you only need to
 > filter out [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, consider using
-> [the nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator).
+> [the nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing).
 
 ### Conversion rules for booleans
 
@@ -166,7 +173,7 @@ is always equal to:
 
 ## See also
 
-- [The nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [The nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - {{jsxref("Boolean")}}
 - {{Glossary("Truthy")}}
 - {{Glossary("Falsy")}}

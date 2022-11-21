@@ -9,17 +9,16 @@ tags:
   - Primary Expression
 browser-compat: javascript.operators.async_function
 ---
+
 {{jsSidebar("Operators")}}
 
-The **`async function`** keyword can be used to define
-`async` functions inside expressions.
+The **`async function`** keywords can be used to define an async function inside an expression.
 
-You can also define async functions using an
-[async function statement](/en-US/docs/Web/JavaScript/Reference/Statements/async_function).
+You can also define async functions using an [async function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/async_function).
 
 ## Syntax
 
-```js
+```js-nolint
 async function (param0) {
   statements
 }
@@ -41,7 +40,7 @@ async function name(param0, param1, /* … ,*/ paramN) {
 }
 ```
 
-As of ES2015, you can also use [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+Async functions can also be defined with the [arrow syntax](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Parameters
 
@@ -68,24 +67,26 @@ function resolveAfter2Seconds(x) {
       resolve(x);
     }, 2000);
   });
-};
+}
 
-const add = async function (x) { // async function expression assigned to a variable
+// async function expression assigned to a variable
+const add = async function (x) {
   const a = await resolveAfter2Seconds(20);
   const b = await resolveAfter2Seconds(30);
   return x + a + b;
 };
 
 add(10).then((v) => {
-  console.log(v);  // prints 60 after 4 seconds.
+  console.log(v); // prints 60 after 4 seconds.
 });
 
-(async function (x) { // async function expression used as an IIFE
+// async function expression used as an IIFE
+(async function (x) {
   const p1 = resolveAfter2Seconds(20);
   const p2 = resolveAfter2Seconds(30);
-  return x + await p1 + await p2;
+  return x + (await p1) + (await p2);
 })(10).then((v) => {
-  console.log(v);  // prints 60 after 2 seconds.
+  console.log(v); // prints 60 after 2 seconds.
 });
 ```
 

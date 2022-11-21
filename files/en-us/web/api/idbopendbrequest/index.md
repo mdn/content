@@ -13,6 +13,7 @@ tags:
   - Storage
 browser-compat: api.IDBOpenDBRequest
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`IDBOpenDBRequest`** interface of the IndexedDB API provides access to the results of requests to open or delete databases (performed using {{domxref("IDBFactory.open")}} and {{domxref("IDBFactory.deleteDatabase")}}), using specific event handler attributes.
@@ -21,11 +22,11 @@ The **`IDBOpenDBRequest`** interface of the IndexedDB API provides access to the
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-_Also inherits methods from its parents {{domxref("IDBRequest")}} and {{domxref("EventTarget")}}_.
+_Also inherits properties from its parents {{domxref("IDBRequest")}} and {{domxref("EventTarget")}}_.
 
-## Methods
+## Instance methods
 
 _No methods, but inherits methods from its parents {{domxref("IDBRequest")}} and {{domxref("EventTarget")}}._
 
@@ -44,7 +45,7 @@ Events specific to this interface are:
 
 ## Example
 
-In the following example you can see the onupgradeneeded handler being used to update the database structure if a database with a higher version number is loaded. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+In the following example you can see the onupgradeneeded handler being used to update the database structure if a database with a higher version number is loaded. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
 
 ```js
 let db;
@@ -111,4 +112,4 @@ DBOpenRequest.onupgradeneeded = (event) => {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

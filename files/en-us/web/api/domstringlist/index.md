@@ -9,16 +9,17 @@ tags:
   - Reference
 browser-compat: api.DOMStringList
 ---
+
 {{ APIRef("DOM") }}
 
 A type returned by some APIs which contains a list of [DOMString](/en-US/docs/Web/API/DOMString) (strings).
 
-## Properties
+## Instance properties
 
 - {{domxref("DOMStringList.length")}} {{ReadOnlyInline}}
   - : Returns the length of the list.
 
-## Methods
+## Instance methods
 
 - {{domxref("DOMStringList.item()")}}
   - : Returns a string.

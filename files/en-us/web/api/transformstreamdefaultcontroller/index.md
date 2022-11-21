@@ -9,18 +9,19 @@ tags:
   - TransformStreamDefaultController
 browser-compat: api.TransformStreamDefaultController
 ---
-{{DefaultAPISidebar("Streams API")}}
+
+{{APIRef("Streams")}}
 
 The **`TransformStreamDefaultController`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides methods to manipulate the associated {{domxref("ReadableStream")}} and {{domxref("WritableStream")}}.
 
 When constructing a {{domxref("TransformStream")}}, the `TransformStreamDefaultController` is created. It therefore has no constructor. The way to get an instance of `TransformStreamDefaultController` is via the callback methods of {{domxref("TransformStream.TransformStream", "TransformStream()")}}.
 
-## Properties
+## Instance properties
 
-- {{domxref("TransformStreamDefaultController.desiredSize")}} {{readonlyinline}}
+- {{domxref("TransformStreamDefaultController.desiredSize")}} {{ReadOnlyInline}}
   - : Returns the desired size to fill the readable side of the stream's internal queue.
 
-## Methods
+## Instance methods
 
 - {{domxref("TransformStreamDefaultController.enqueue()")}}
   - : Enqueues a chunk (single piece of data) in the readable side of the stream.
@@ -37,19 +38,28 @@ In the following example, a transform stream passes through all chunks it receiv
 const transformContent = {
   start() {}, // required.
   async transform(chunk, controller) {
-    chunk = await chunk
+    chunk = await chunk;
     switch (typeof chunk) {
       case 'object':
         // just say the stream is done I guess
-        if (chunk === null) controller.terminate()
-        else if (ArrayBuffer.isView(chunk))
-          controller.enqueue(new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength))
-        else if (Array.isArray(chunk) && chunk.every((value) => typeof value === 'number'))
-          controller.enqueue(new Uint8Array(chunk))
-        else if (typeof chunk.valueOf === 'function' && chunk.valueOf() !== chunk)
-          this.transform(chunk.valueOf(), controller) // hack
-        else if ('toJSON' in chunk) this.transform(JSON.stringify(chunk), controller)
-        break
+        if (chunk === null) {
+          controller.terminate();
+        } else if (ArrayBuffer.isView(chunk)) {
+          controller.enqueue(new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength));
+        } else if (
+          Array.isArray(chunk) &&
+          chunk.every((value) => typeof value === 'number')
+        ) {
+          controller.enqueue(new Uint8Array(chunk));
+        } else if (
+          typeof chunk.valueOf === 'function' &&
+          chunk.valueOf() !== chunk
+        ) {
+          this.transform(chunk.valueOf(), controller); // hack
+        } else if ('toJSON' in chunk) {
+          this.transform(JSON.stringify(chunk), controller);
+        }
+        break;
       case 'symbol':
         controller.error("Cannot send a symbol as a chunk part")
         break

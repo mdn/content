@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "is not a function" occurs when there was an attempt to call a
@@ -85,9 +86,7 @@ const numbers = [1, 4, 9];
 
 numbers.map(function (num) {
   return num * 2;
-});
-
-// Array [2, 8, 18]
+}); // [2, 8, 18]
 ```
 
 ### Function shares a name with a pre-existing property

@@ -13,6 +13,7 @@ tags:
   - application/json
   - application/xml
 ---
+
 {{HTTPSidebar}}
 
 A **media type** (also known as a **Multipurpose Internet Mail Extensions or MIME type**) indicates the nature and format of a document, file, or assortment of bytes.
@@ -215,7 +216,7 @@ The optional [codecs parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) 
 
 The most commonly used MIME types used for web content are listed below.
 This isn't a complete list of all the types that may be available, however.
-See the [media container formats](/en-US/docs/Web/Media/Formats/Containers) guide for that.
+See the [media container formats guide](/en-US/docs/Web/Media/Formats/Containers) for that.
 
 | MIME type                                               | Audio or video type                                                                                                                                                                     |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -233,7 +234,7 @@ The `multipart/form-data` type can be used when sending the values of a complete
 As a multipart document format, it consists of different parts, delimited by a boundary (a string starting with a double dash `--`).
 Each part is its own entity with its own HTTP headers, {{HTTPHeader("Content-Disposition")}}, and {{HTTPHeader("Content-Type")}} for file uploading fields.
 
-```
+```http
 Content-Type: multipart/form-data; boundary=aBoundaryString
 (other headers associated with the multipart document as a whole)
 
@@ -254,10 +255,15 @@ Content-Disposition: form-data; name="myField"
 The following `<form>`:
 
 ```html
-<form action="http://localhost:8000/" method="post" enctype="multipart/form-data">
-  <label>Name: <input name="myTextField" value="Test"></label>
-  <label><input type="checkbox" name="myCheckBox"> Check</label>
-  <label>Upload file: <input type="file" name="myFile" value="test.txt"></label>
+<form
+  action="http://localhost:8000/"
+  method="post"
+  enctype="multipart/form-data">
+  <label>Name: <input name="myTextField" value="Test" /></label>
+  <label><input type="checkbox" name="myCheckBox" /> Check</label>
+  <label>
+    Upload file: <input type="file" name="myFile" value="test.txt"/>
+  </label>
   <button>Send the file</button>
 </form>
 ```
@@ -300,7 +306,7 @@ When the {{HTTPStatus("206", "206 Partial Content")}} status code is sent, this 
 requested ranges. Like other multipart types, the {{HTTPHeader("Content-Type")}} uses a `boundary` to separate the pieces.
 Each piece has a {{HTTPHeader("Content-Type")}} header with its actual type and a {{HTTPHeader("Content-Range")}} of the range it represents.
 
-```
+```http
 HTTP/1.1 206 Partial Content
 Accept-Ranges: bytes
 Content-Type: multipart/byteranges; boundary=3d6b6a416f9b5

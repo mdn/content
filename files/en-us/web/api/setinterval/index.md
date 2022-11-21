@@ -16,6 +16,7 @@ tags:
   - Polyfill
 browser-compat: api.setInterval
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`setInterval()`** method,
@@ -29,7 +30,7 @@ can remove it later by calling {{domxref("clearInterval",
 
 ## Syntax
 
-```js
+```js-nolint
 setInterval(code)
 setInterval(code, delay)
 
@@ -133,11 +134,7 @@ function changeColor() {
 
 function flashText() {
   const oElem = document.getElementById("my_box");
-  if (oElem.className === "go") {
-    oElem.className = "stop";
-  } else {
-    oElem.className = "go";
-  }
+  oElem.className = oElem.className === "go" ? "stop" : "go";
 }
 
 function stopTextColor() {
@@ -197,7 +194,7 @@ function in the legacy JavaScript.
 
 ### A possible solution
 
-All modern JavaScript runtimes (in browsers and elsewhere) support [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical `this` — allowing us to write `setInterval(() => this.myMethod)` if we're inside the `myArray` method.
+All modern JavaScript runtimes (in browsers and elsewhere) support [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical `this` — allowing us to write `setInterval(() => this.myMethod())` if we're inside the `myArray` method.
 
 If you need to support IE, use the [`Function.prototype.bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. That lets you easily bypass problems where it's unclear what `this` will be, depending on the context from which your function was called.
 

@@ -2,11 +2,12 @@
 title: Firefox 67 for developers
 slug: Mozilla/Firefox/Releases/67
 tags:
-  - '67'
+  - "67"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 67 that will affect developers. Firefox 67 was released on May 21, 2019.
@@ -125,7 +126,7 @@ _No changes._
 
 #### Bug fixes
 
-- `WebDriver:NewWindow` will no longer timeout because of `focus`-related inconsistencies across platforms ({{bug(1523234)}}).
+- `WebDriver:NewWindow` will no longer timeout because inconsistencies across platforms regarding the `focus` event ({{bug(1523234)}}).
 
 #### Others
 

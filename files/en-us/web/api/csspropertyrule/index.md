@@ -7,32 +7,32 @@ tags:
   - CSS
   - CSS Properties and Values API
   - CSSPropertyRule
-  - Experimental
   - Houdini
   - Interface
   - Reference
 browser-compat: api.CSSPropertyRule
 ---
+
 {{APIRef("CSS Properties and Values API")}}
 
 The **`CSSPropertyRule`** interface of the {{domxref('CSS_Properties_and_Values_API','','',' ')}} represents a single CSS {{cssxref("@property")}} rule.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
-- {{domxref("CSSPropertyRule.inherits")}} {{readonlyinline}}
+- {{domxref("CSSPropertyRule.inherits")}} {{ReadOnlyInline}}
   - : Returns the inherit flag of the custom property.
-- {{domxref("CSSPropertyRule.initialvalue")}} {{readonlyinline}}
+- {{domxref("CSSPropertyRule.initialvalue")}} {{ReadOnlyInline}}
   - : Returns the initial value of the custom property.
-- {{domxref("CSSPropertyRule.name")}} {{readonlyinline}}
+- {{domxref("CSSPropertyRule.name")}} {{ReadOnlyInline}}
   - : Returns the name of the custom property.
-- {{domxref("CSSPropertyRule.syntax")}} {{readonlyinline}}
+- {{domxref("CSSPropertyRule.syntax")}} {{ReadOnlyInline}}
   - : Returns the literal syntax of the custom property.
 
-## Methods
+## Instance methods
 
 _No specific methods; inherits methods from its ancestor {{domxref("CSSRule")}}._
 

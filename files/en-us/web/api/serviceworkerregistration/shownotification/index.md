@@ -4,7 +4,6 @@ slug: Web/API/ServiceWorkerRegistration/showNotification
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - NeedsExample
   - Reference
@@ -14,6 +13,7 @@ tags:
   - showNotification
 browser-compat: api.ServiceWorkerRegistration.showNotification
 ---
+
 {{APIRef("Service Workers API")}}
 
 The `showNotification()` method of the
@@ -24,7 +24,7 @@ service worker.
 
 ## Syntax
 
-```js
+```js-nolint
 showNotification(title)
 showNotification(title, options)
 ```
@@ -39,6 +39,7 @@ showNotification(title, options)
     properties:
 
     - `actions` {{experimental_inline}}
+
       - : An array of actions to display in the notification. Each element in the array is an object with the following members:
 
         - `action`
@@ -64,7 +65,7 @@ showNotification(title, options)
       - : Arbitrary data that you want to be associated with the
         notification. This can be of any data type.
     - `dir`
-      - : The direction of the notification; it can be `auto`,  `ltr` or `rtl`.
+      - : The direction of the notification; it can be `auto`, `ltr` or `rtl`.
     - `icon`
       - : a string containing the URL of an image to
         be used as an icon by the notification.
@@ -78,8 +79,8 @@ showNotification(title, options)
     - `renotify` {{experimental_inline}}
       - : A boolean that indicates whether to suppress vibrations
         and audible alerts when reusing a `tag` value.
-        If *options*'s `renotify` is true
-        and *options*'s `tag` is the empty string a TypeError will be
+        If _options_'s `renotify` is true
+        and _options_'s `tag` is the empty string a TypeError will be
         thrown. The default is `false`.
     - `requireInteraction` {{experimental_inline}}
       - : Indicates that on devices with sufficiently
@@ -89,18 +90,14 @@ showNotification(title, options)
         is `false`.
     - `silent`
       - : When set indicates that no sounds or vibrations should be
-        made. If *options*'s `silent` is true
-        and *options*'s `vibrate` is present a TypeError exception
+        made. If _options_'s `silent` is true
+        and _options_'s `vibrate` is present a TypeError exception
         will be thrown. The default value is `false`.
     - `tag`
       - : An ID for a given notification that allows you to find,
         replace, or remove the notification using a script if necessary.
     - `timestamp`
-      - : A {{domxref("DOMTimeStamp")}} representing the time when
-        the notification was created. It can be used to indicate the time at which a
-        notification is actual. For example, this could be in the past when a notification
-        is used for a message that couldn't immediately be delivered because the device
-        was offline, or in the future for a meeting that is about to start.
+      - : A timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds, representing the time associated with the notification. This could be in the past when a notification is used for a message that couldn't immediately be delivered because the device was offline, or in the future for a meeting that is about to start.
     - `vibrate` {{experimental_inline}}
       - : A vibration pattern to run with the display of the
         notification. A vibration pattern can be an array with as few as one member. The
@@ -116,17 +113,17 @@ A {{jsxref('Promise')}} that resolves to `undefined`.
 ## Examples
 
 ```js
-navigator.serviceWorker.register('sw.js');
+navigator.serviceWorker.register("sw.js");
 
 function showNotification() {
   Notification.requestPermission((result) => {
-    if (result === 'granted') {
+    if (result === "granted") {
       navigator.serviceWorker.ready.then((registration) => {
-        registration.showNotification('Vibration Sample', {
-          body: 'Buzz! Buzz!',
-          icon: '../images/touch/chrome-touch-icon-192x192.png',
+        registration.showNotification("Vibration Sample", {
+          body: "Buzz! Buzz!",
+          icon: "../images/touch/chrome-touch-icon-192x192.png",
           vibrate: [200, 100, 200, 100, 200, 100, 200],
-          tag: 'vibration-sample'
+          tag: "vibration-sample",
         });
       });
     }

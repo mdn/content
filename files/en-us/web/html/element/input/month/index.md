@@ -18,7 +18,7 @@ tags:
 browser-compat: html.elements.input.type_month
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`month`** create input fields that let the user enter a month and year allowing a month and year to be easily entered.
 The value is a string whose value is in the format "`YYYY-MM`", where `YYYY` is the four-digit year and `MM` is the month number.
@@ -92,7 +92,7 @@ You can set a default value for the input control by including a month and year 
 
 ```html
 <label for="bday-month">What month were you born in?</label>
-<input id="bday-month" type="month" name="bday-month" value="2001-06">
+ <input id="bday-month" type="month" name="bday-month" value="2001-06" />
 ```
 
 {{EmbedLiveSample('Setting_a_default_value', 600, 60)}}
@@ -107,7 +107,7 @@ You can also get and set the date value in JavaScript using the {{domxref("HTMLI
 
 ```html
 <label for="bday-month">What month were you born in?</label>
-<input id="bday-month" type="month" name="bday-month">
+<input id="bday-month" type="month" name="bday-month" />
 ```
 
 ```js
@@ -177,7 +177,7 @@ The simplest use of `<input type="month">` involves a basic {{HTMLElement("input
 ```html
 <form>
   <label for="bday-month">What month were you born in?</label>
-  <input id="bday-month" type="month" name="bday-month">
+  <input id="bday-month" type="month" name="bday-month" />
 </form>
 ```
 
@@ -191,8 +191,12 @@ In the following example we specify a minimum month of `1900-01` and a maximum m
 ```html
 <form>
   <label for="bday-month">What month were you born in?</label>
-  <input id="bday-month" type="month" name="bday-month"
-         min="1900-01" max="2013-12">
+  <input
+    id="bday-month"
+    type="month"
+    name="bday-month"
+    min="1900-01"
+    max="2013-12" />
 </form>
 ```
 
@@ -221,13 +225,20 @@ Let's look at an example; here we've set minimum and maximum dates, and also mad
 ```html
 <form>
   <div>
-    <label for="month">What month would you like to visit (June to Sept.)?</label>
-    <input id="month" type="month" name="month"
-           min="2022-06" max="2022-09" required>
+    <label for="month">
+      What month would you like to visit (June to Sept.)?
+    </label>
+    <input
+      id="month"
+      type="month"
+      name="month"
+      min="2022-06"
+      max="2022-09"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-      <input type="submit" value="Submit form">
+    <input type="submit" value="Submit form" />
   </div>
 </form>
 ```
@@ -242,7 +253,7 @@ Here's a screenshot for those of you who aren't using a supporting browser:
 ![Month required prompt on Chrome browser](month-required.png)
 
 Here's the CSS used in the above example.
-Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid.
+Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether the current value is valid.
 We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.
 
 ```css
@@ -259,15 +270,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -305,14 +316,21 @@ For example, try viewing the following demo in a browser that doesn't support `m
 ```html
 <form>
   <div>
-    <label for="month">What month would you like to visit (June to Sept.)?</label>
-    <input id="month" type="month" name="month"
-           min="2022-06" max="2022-09" required
-           pattern="[0-9]{4}-[0-9]{2}">
+    <label for="month">
+      What month would you like to visit (June to Sept.)?
+    </label>
+    <input
+      id="month"
+      type="month"
+      name="month"
+      min="2022-06"
+      max="2022-09"
+      required
+      pattern="[0-9]{4}-[0-9]{2}" />
     <span class="validity"></span>
   </div>
   <div>
-      <input type="submit" value="Submit form">
+    <input type="submit" value="Submit form" />
   </div>
 </form>
 ```
@@ -339,20 +357,20 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
 
-The best way to deal with dates in forms in a cross-browser way (until all of the major browsers have supported them for a while) is to get the user to enter the month and year in separate controls ({{htmlelement("select")}} elements being popular; see below for an implementation), or use JavaScript libraries such as the [jQuery date picker](https://jqueryui.com/datepicker/) plugin.
+The best way to deal with dates in forms in a cross-browser way (until all major browsers have supported them for a while) is to get the user to enter the month and year in separate controls ({{htmlelement("select")}} elements being popular; see below for an implementation), or use JavaScript libraries such as the [jQuery date picker](https://jqueryui.com/datepicker/) plugin.
 
 ## Examples
 
@@ -369,7 +387,7 @@ The form that requests the month and year looks like this:
 <form>
   <div class="nativeDatePicker">
     <label for="month-visit">What month would you like to visit us?</label>
-    <input type="month" id="month-visit" name="month-visit">
+    <input type="month" id="month-visit" name="month-visit" />
     <span class="validity"></span>
   </div>
   <p class="fallbackLabel">What month would you like to visit us?</p>
@@ -394,8 +412,7 @@ The form that requests the month and year looks like this:
       </span>
       <span>
         <label for="year">Year:</label>
-        <select id="year" name="year">
-        </select>
+        <select id="year" name="year"></select>
       </span>
     </div>
   </div>
@@ -422,15 +439,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -466,7 +483,7 @@ try {
   console.log(e.description);
 }
 
-// If it does, run the code inside the if() {} block
+// If it does, run the code inside the if () {} block
 if (test.type === 'text') {
   // Hide the native picker and show the fallback
   nativePicker.style.display = 'none';

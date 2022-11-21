@@ -8,6 +8,7 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object.getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 The **`Object.getOwnPropertyDescriptor()`** method returns an
@@ -20,7 +21,7 @@ configuration.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.getOwnPropertyDescriptor(obj, prop)
 ```
 
@@ -74,16 +75,18 @@ let o, d;
 
 o = { get foo() { return 17; } };
 d = Object.getOwnPropertyDescriptor(o, 'foo');
-// d is {
+console.log(d);
+// {
 //   configurable: true,
 //   enumerable: true,
-//   get: /*the getter function*/,
+//   get: [Function: get foo],
 //   set: undefined
 // }
 
 o = { bar: 42 };
 d = Object.getOwnPropertyDescriptor(o, 'bar');
-// d is {
+console.log(d);
+// {
 //   configurable: true,
 //   enumerable: true,
 //   value: 42,
@@ -92,7 +95,8 @@ d = Object.getOwnPropertyDescriptor(o, 'bar');
 
 o = { [Symbol.for('baz')]: 73 }
 d = Object.getOwnPropertyDescriptor(o, Symbol.for('baz'));
-// d is {
+console.log(d);
+// {
 //   configurable: true,
 //   enumerable: true,
 //   value: 73,
@@ -106,7 +110,8 @@ Object.defineProperty(o, 'qux', {
   enumerable: false
 });
 d = Object.getOwnPropertyDescriptor(o, 'qux');
-// d is {
+console.log(d);
+// {
 //   value: 8675309,
 //   writable: false,
 //   enumerable: false,

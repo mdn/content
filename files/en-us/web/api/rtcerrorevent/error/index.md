@@ -18,6 +18,7 @@ tags:
   - WebRTC Device API
 browser-compat: api.RTCErrorEvent.error
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The read-only {{domxref("RTCErrorEvent")}} property **`error`**

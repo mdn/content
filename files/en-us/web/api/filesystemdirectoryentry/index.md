@@ -14,6 +14,7 @@ tags:
   - Reference
 browser-compat: api.FileSystemDirectoryEntry
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The **`FileSystemDirectoryEntry`** interface of the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) represents a directory in a file system. It provides methods which make it possible to access and manipulate the files in a directory, as well as to access the entries within the directory.
@@ -50,11 +51,11 @@ function onFs(fs){
 window.requestFileSystem(TEMPORARY, 1024*1024 /*1MB*/, onFs, onError);
 ```
 
-## Properties
+## Instance properties
 
 _This interface has no properties of its own, but inherits properties from its parent interface, {{domxref("FileSystemEntry")}}._
 
-## Methods
+## Instance methods
 
 _This interface inherits methods from its parent interface, {{domxref("FileSystemEntry")}}._
 

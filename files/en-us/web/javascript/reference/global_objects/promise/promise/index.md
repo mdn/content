@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Promise.Promise
 ---
+
 {{JSRef}}
 
 The **`Promise`** constructor is primarily used to wrap functions that do not already support promises.
@@ -17,9 +18,11 @@ The **`Promise`** constructor is primarily used to wrap functions that do not al
 
 ## Syntax
 
-```js
+```js-nolint
 new Promise(executor)
 ```
+
+> **Note:** `Promise()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

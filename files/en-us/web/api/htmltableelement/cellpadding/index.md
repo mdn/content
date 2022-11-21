@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.HTMLTableElement.cellPadding
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 The **`HTMLTableElement.cellPadding`** property represents the

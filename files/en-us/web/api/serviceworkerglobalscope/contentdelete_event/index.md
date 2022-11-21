@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.ServiceWorkerGlobalScope.contentdelete_event
 ---
+
 {{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The **`contentdelete`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when an item is removed from the indexed content via the user agent.
@@ -30,16 +31,16 @@ oncontentdelete = (event) => { };
 
 ## Event type
 
-An {{domxref("ContentIndexEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("ContentIndexEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("ContentIndexEvent")}}
 
 ## Event properties
 
-_In addition to the properties listed below, this interface inherits the properties of its parent interface, {{domxref("ContentIndexEvent")}}._
+_In addition to the properties listed below, this interface inherits the properties of its parent interface, {{domxref("Event")}}._
 
 - {{domxref("ContentIndexEvent.id", "id")}} {{ReadOnlyInline}}
-  - : A {{jsxref('String')}} which identifies the deleted content index via it's `id`.
+  - : A string which identifies the deleted content index via it's `id`.
 
 ## Examples
 

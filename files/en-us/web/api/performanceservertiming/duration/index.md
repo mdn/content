@@ -9,7 +9,8 @@ tags:
   - ServerTiming
 browser-compat: api.PerformanceServerTiming.duration
 ---
-{{APIRef("Resource Timing API")}}
+
+{{APIRef("Performance API")}}
 
 The **`duration`** read-only property returns a double that
 contains the server-specified metric duration, or value `0.0`.

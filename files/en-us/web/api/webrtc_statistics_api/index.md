@@ -15,6 +15,7 @@ tags:
   - WebRTC Statistics API
 browser-compat: api.RTCStatsReport
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The WebRTC API has a vast array of statistics available, covering the entire breadth of the WebRTC connectivity system, from sender to receiver and peer to peer.
@@ -30,7 +31,7 @@ try {
   myPeerConnection = new RTCPeerConnection(pcOptions);
 
   statsInterval = setInterval(getConnectionStats, 1000);
-  /* add event handlers, etc */
+  /* add event handlers, etc. */
 } catch (err) {
   console.error(`Error creating RTCPeerConnection: ${err}`);
 }

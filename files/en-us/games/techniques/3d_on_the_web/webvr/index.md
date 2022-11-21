@@ -7,6 +7,7 @@ tags:
   - WebGL
   - WebVR
 ---
+
 {{GamesSidebar}}
 
 The concept of virtual reality in itself isn't new, but now we have the technology to have it working as it should be, and a JavaScript API to make use of it in web applications. This article introduced WebVR from the perspective of its use in games.
@@ -25,7 +26,7 @@ With the popularity of Oculus Rift and a lot of other devices in production comi
 
 The [WebVR API](/en-US/docs/Web/API/WebVR_API) is the central API for capturing information on VR Devices connected to a computer and headset position/orientation/velocity/acceleration information, and converting that into useful data you can use in your games and other applications.
 
-> **Note:** There are of course other APIs useful for creating games, for example [The Gamepad API](/en-US/docs/Web/API/Gamepad_API) for control inputs, and the [Device Orientation API](/en-US/docs/Web/Events/Detecting_device_orientation) for handling display orientation on mobile.
+> **Note:** There are of course other APIs useful for creating games, for example [The Gamepad API](/en-US/docs/Web/API/Gamepad_API) for control inputs, and the [Device Orientation API](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation) for handling display orientation on mobile.
 
 ### Browser support and spec status
 
@@ -51,8 +52,10 @@ navigator.getVRDevices().then((devices) => {
   }
   if (gHMD) {
     for (let i = 0; i < devices.length; ++i) {
-      if (devices[i] instanceof PositionSensorVRDevice
-         && devices[i].hardwareUnitId === gHMD.hardwareUnitId) {
+      if (
+        devices[i] instanceof PositionSensorVRDevice &&
+        devices[i].hardwareUnitId === gHMD.hardwareUnitId
+      ) {
         gPositionSensor = devices[i];
         break;
       }
@@ -64,8 +67,8 @@ navigator.getVRDevices().then((devices) => {
 This code will loop through the available devices and assign proper sensors to the headsets — the first `devices` array contains the connected devices, and a check is done to find the {{domxref("HMDVRDevice")}}, and assign it to the `gHMD` variable — using this you can set up the scene, getting the eye parameters, setting the field of view, etc. For example:
 
 ```js
-function setCustomFOV(up,right,down,left) {
-  const testFOV = new VRFieldOfView(up,right,down,left);
+function setCustomFOV(up, right, down, left) {
+  const testFOV = new VRFieldOfView(up, right, down, left);
 
   gHMD.setFieldOfView(testFOV, testFOV, 0.01, 10000.0);
 }
@@ -78,20 +81,14 @@ function setView() {
   const posState = gPositionSensor.getState();
 
   if (posState.hasPosition) {
-    posPara.textContent = 'Position: x' + roundToTwo(posState.position.x) + " y"
-                                + roundToTwo(posState.position.y) + " z"
-                                + roundToTwo(posState.position.z);
+    const format = (axis) => `${axis}${roundToTwo(posState.position[axis])}`;
+    posPara.textContent = `Position: ${axis("x")} ${axis("y")} ${axis("x")}`;
     xPos = -posState.position.x * WIDTH * 2;
     yPos = posState.position.y * HEIGHT * 2;
-    if(-posState.position.z > 0.01) {
-      zPos = -posState.position.z;
-    } else {
-      zPos = 0.01;
-    }
+    zPos = -posState.position.z > 0.01 ? -posState.position.z : 0.01;
   }
 
   // …
-
 }
 ```
 
@@ -101,7 +98,7 @@ For a full explanation and more details of the demo this is taken from, see [Usi
 
 The first WebVR experiments and demos used Three.js as it's probably the most popular 3D engine for the web. See the [VREffect](https://github.com/mrdoob/three.js/blob/ca521eb4af7554e760f14d8fe8b451c8ff34deb8/examples/js/effects/VREffect.js) and [VRControls](https://github.com/mrdoob/three.js/blob/abdd1713c606135bc35028c6021698b52f27872b/examples/js/controls/VRControls.js) functions available on the Three.js GitHub to help you implement and handle WebVR with Three.js.
 
-![A 3D representation of a landscape: it's a pinkish sunset, with a blue mountainous land in the background surronded by a mirror sea and a darker blue island in the second plan.](sechelt.jpg)
+![A 3D representation of a landscape: it's a pinkish sunset, with a blue mountainous land in the background surrounded by a mirror sea and a darker blue island in the second plan.](sechelt.jpg)
 
 Boris Smus has written about the concept of [Responsive WebVR](https://smus.com/responsive-vr/), where a single web game can be played on various devices like laptops without VR hardware, PCs with Oculus Rift, or smartphones inside Google Cardboard and still deliver a unique and valuable experience across all of them. It's like responsive design but applied to the VR world — write once and run in any VR headset, or without it. You can check the [WebVR Boilerplate](https://github.com/borismus/webvr-boilerplate) sources — it's a good example to start learning WebVR from, and a starting point for any web-based VR experience.
 

@@ -5,7 +5,6 @@ page-type: web-api-interface
 tags:
   - API
   - Audio
-  - Experimental
   - Extensions
   - Interface
   - MSE
@@ -16,9 +15,10 @@ tags:
   - Video
 browser-compat: api.MediaSource
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-The **`MediaSource`** interface of the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API) represents a source of media data for an {{domxref("HTMLMediaElement")}} object. A `MediaSource` object can be attached to a {{domxref("HTMLMediaElement")}} to be played in the user agent.
+{{APIRef("Media Source Extensions")}}
+
+The **`MediaSource`** interface of the {{domxref("Media Source Extensions API", "Media Source Extensions API", "", "nocode")}} represents a source of media data for an {{domxref("HTMLMediaElement")}} object. A `MediaSource` object can be attached to a {{domxref("HTMLMediaElement")}} to be played in the user agent.
 
 {{InheritanceDiagram}}
 
@@ -27,18 +27,25 @@ The **`MediaSource`** interface of the [Media Source Extensions API](/en-US/docs
 - {{domxref("MediaSource.MediaSource", "MediaSource()")}}
   - : Constructs and returns a new `MediaSource` object with no associated source buffers.
 
-## Properties
+## Instance properties
 
-- {{domxref("MediaSource.sourceBuffers")}} {{readonlyInline}}
-  - : Returns a {{domxref("SourceBufferList")}} object containing the list of {{domxref("SourceBuffer")}} objects associated with this `MediaSource`.
-- {{domxref("MediaSource.activeSourceBuffers")}} {{readonlyInline}}
-  - : Returns a {{domxref("SourceBufferList")}} object containing a subset of the {{domxref("SourceBuffer")}} objects contained within {{domxref("MediaSource.sourceBuffers")}} — the list of objects providing the selected video track,  enabled audio tracks, and shown/hidden text tracks.
-- {{domxref("MediaSource.readyState")}} {{readonlyInline}}
-  - : Returns an enum representing the state of the current `MediaSource`, whether it is not currently attached to a media element (`closed`), attached and ready to receive {{domxref("SourceBuffer")}} objects (`open`), or attached but the stream has been ended via {{domxref("MediaSource.endOfStream()")}} (`ended`.)
+- {{domxref("MediaSource.activeSourceBuffers")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("SourceBufferList")}} object containing a subset of the {{domxref("SourceBuffer")}} objects contained within {{domxref("MediaSource.sourceBuffers")}} — the list of objects providing the selected video track, enabled audio tracks, and shown/hidden text tracks.
 - {{domxref("MediaSource.duration")}}
   - : Gets and sets the duration of the current media being presented.
+- {{domxref("MediaSource.handle")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("MediaSourceHandle")}} object, a proxy for the `MediaSource` that can be transferred from a dedicated worker back to the main thread and attached to a media element via its {{domxref("HTMLMediaElement.srcObject")}} property.
+- {{domxref("MediaSource.readyState")}} {{ReadOnlyInline}}
+  - : Returns an enum representing the state of the current `MediaSource`, whether it is not currently attached to a media element (`closed`), attached and ready to receive {{domxref("SourceBuffer")}} objects (`open`), or attached but the stream has been ended via {{domxref("MediaSource.endOfStream()")}} (`ended`.)
+- {{domxref("MediaSource.sourceBuffers")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("SourceBufferList")}} object containing the list of {{domxref("SourceBuffer")}} objects associated with this `MediaSource`.
 
-## Methods
+## Static properties
+
+- {{domxref("MediaSource.canConstructInDedicatedWorker")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : A boolean; returns `true` if `MediaSource` worker support is implemented, providing a low-latency feature detection mechanism.
+
+## Instance methods
 
 _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
@@ -53,7 +60,12 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 - {{domxref("MediaSource.setLiveSeekableRange()")}}
   - : Sets the range that the user can seek to in the media element.
 
-### Events
+## Static methods
+
+- {{domxref("MediaSource.isTypeSupported()")}}
+  - : Returns a boolean value indicating if the given MIME type is supported by the current user agent — this is, if it can successfully create {{domxref("SourceBuffer")}} objects for that MIME type.
+
+## Events
 
 - {{domxref("MediaSource.sourceclose_event", "sourceclose")}}
   - : Fired when the `MediaSource` instance is not attached to a media element anymore.
@@ -62,12 +74,9 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 - {{domxref("MediaSource.sourceopen_event", "sourceopen")}}
   - : Fired when the `MediaSource` instance has been opened by a media element and is ready for data to be appended to the {{domxref("SourceBuffer")}} objects in {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}}.
 
-## Static methods
-
-- {{domxref("MediaSource.isTypeSupported()")}}
-  - : Returns a boolean value indicating if the given MIME type is supported by the current user agent — this is, if it can successfully create {{domxref("SourceBuffer")}} objects for that MIME type.
-
 ## Examples
+
+### Complete basic example
 
 The following simple example loads a video with {{domxref("XMLHttpRequest")}}, playing it as soon as it can. This example was written by Nick Desaulniers and can be [viewed live here](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (you can also [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation). The function `getMediaSource()`, which is not defined here, returns a `MediaSource`.
 
@@ -112,6 +121,27 @@ function fetchAB (url, cb) {
   };
   xhr.send();
 };
+```
+
+### Constructing a `MediaSource` in a worker and passing it to the main thread
+
+The `handle` property can be accessed inside a dedicated worker and the resulting `MediaSourceHandle` object is then transferred over to the main thread via a {{domxref("DedicatedWorkerGlobalScope.postMessage()", "postMessage()")}} call:
+
+```js
+let mediaSource = new MediaSource();
+let handle = mediaSource.handle;
+postMessage({arg: handle}, [handle]);
+
+// Fetch the media, buffer it, and pass it into the MediaSource
+```
+
+Over in the main thread, we receive the handle via a {{domxref("Worker.message_event", "message")}} event handler, attach it to a {{htmlelement("video")}} via its {{domxref("HTMLMediaElement.srcObject")}} property, and {{domxref("HTMLMediaElement.play()", "play")}} the video:
+
+```js
+worker.addEventListener('message', (msg) => {
+  video.srcObject = msg.data.arg;
+  video.play();
+})
 ```
 
 ## Specifications

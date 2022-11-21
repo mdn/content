@@ -10,6 +10,7 @@ tags:
   - getSelection
 browser-compat: api.Document.getSelection
 ---
+
 {{APIRef("DOM")}}
 
 The **`getSelection()`** property of
@@ -19,7 +20,7 @@ the caret.
 
 ## Syntax
 
-```js
+```js-nolint
 getSelection()
 ```
 

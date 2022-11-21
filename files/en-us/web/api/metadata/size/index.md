@@ -12,9 +12,11 @@ tags:
   - Reference
   - metadata
   - size
+  - Experimental
 browser-compat: api.Metadata.size
 ---
-{{APIRef("File and Directory Entries API")}}{{Non-standard_header}}
+
+{{APIRef("File and Directory Entries API")}}{{Non-standard_header}}{{SeeCompatTable}}
 
 The read-only **`size`** property of
 the {{domxref("Metadata")}} interface specifies the size, in bytes, of the referenced

@@ -11,9 +11,11 @@ tags:
   - VRDisplayEvent
   - Virtual Reality
   - WebVR
+  - Non-standard
 browser-compat: api.VRDisplayEvent
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`VRDisplayEvent`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents the event object of WebVR-related events (see the [list of WebVR window extensions](/en-US/docs/Web/API/WebVR_API#window)).
 
@@ -21,16 +23,16 @@ The **`VRDisplayEvent`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_
 
 ## Constructor
 
-- {{domxref("VRDisplayEvent.VRDisplayEvent", "VRDisplayEvent()")}} {{deprecated_inline}}
+- {{domxref("VRDisplayEvent.VRDisplayEvent", "VRDisplayEvent()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Creates a `VRDisplayEvent` object instance.
 
-## Properties
+## Instance properties
 
 _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Event")}}._
 
-- {{domxref("VRDisplayEvent.display")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRDisplayEvent.display")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : The {{domxref("VRDisplay")}} associated with this event.
-- {{domxref("VRDisplayEvent.reason")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRDisplayEvent.reason")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : A human-readable reason why the event was fired.
 
 ## Examples

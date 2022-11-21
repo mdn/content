@@ -12,6 +12,7 @@ tags:
   - Web Audio API
 browser-compat: api.BiquadFilterNode.BiquadFilterNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`BiquadFilterNode()`**
@@ -21,7 +22,7 @@ low-order filter.
 
 ## Syntax
 
-```js
+```js-nolint
 new BiquadFilterNode(context, options)
 ```
 
@@ -121,7 +122,7 @@ new BiquadFilterNode(context, options)
         {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
         definition depend on the value of `channelCountMode`.
     - `channelCountMode`
-      - : Represents an enumerated value describing the way channels must be matched between
+      - : Represents an [enumerated](/en-US/docs/Glossary/Enumerated) value describing the way channels must be matched between
         the node's inputs and outputs. (See {{domxref("AudioNode.channelCountMode")}} for more
         information including default values.)
     - `channelInterpretation`

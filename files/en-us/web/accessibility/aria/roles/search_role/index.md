@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: search role'
+title: "ARIA: search role"
 slug: Web/Accessibility/ARIA/Roles/search_role
 tags:
   - ARIA
@@ -12,6 +12,7 @@ spec-urls:
   - https://w3c.github.io/aria/#search
   - https://w3c.github.io/aria-practices/#aria_lh_search
 ---
+
 The `search` role is used to identify the search functionality; the section of the page used to search the page, site, or collection of sites.
 
 ```html
@@ -103,6 +104,6 @@ Screen readers will announce the type of role the landmark is. Because of this, 
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

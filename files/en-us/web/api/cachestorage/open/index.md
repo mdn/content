@@ -13,6 +13,7 @@ tags:
   - open
 browser-compat: api.CacheStorage.open
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`open()`** method of the
@@ -28,7 +29,7 @@ You can access `CacheStorage` through the global
 
 ## Syntax
 
-```js
+```js-nolint
 open(cacheName)
 ```
 
@@ -43,28 +44,30 @@ A {{jsxref("Promise")}} that resolves to the requested {{domxref("Cache")}} obje
 
 ## Examples
 
-This example is from the MDN [sw-test example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/)).
+This example is from the MDN [simple service worker example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) (see [simple service worker running live](https://bncb2v.csb.app/)).
 Here we wait for an {{domxref("InstallEvent")}} to fire, then runs
 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} to handle the install process for
 the app. This consists of calling `CacheStorage.open()` to create a new
 cache, then using {{domxref("Cache.addAll()")}} to add a series of assets to it.
 
 ```js
-self.addEventListener('install', (event) => {
+self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open('v1').then((cache) => {
-      return cache.addAll([
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
-      ]);
-    })
+    caches
+      .open("v1")
+      .then((cache) =>
+        cache.addAll([
+          "/",
+          "/index.html",
+          "/style.css",
+          "/app.js",
+          "/image-list.js",
+          "/star-wars-logo.jpg",
+          "/gallery/bountyHunters.jpg",
+          "/gallery/myLittleVader.jpg",
+          "/gallery/snowTroopers.jpg",
+        ])
+      )
   );
 });
 ```

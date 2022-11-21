@@ -6,6 +6,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 This article explains how to add and link to entries in the [MDN Web Docs glossary](/en-US/docs/Glossary).
@@ -39,7 +40,7 @@ Make sure anyone reading the description can immediately understand the defined 
 
 Add a few extra paragraphs if you must, but it's easy to find yourself writing an entire article.
 Writing an article is fine, but please don't create it in/for the glossary.
-If you aren't sure where to put your article, feel free to [reach out to discuss it](/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
+If you aren't sure where to put your article, feel free to [reach out to discuss it](/en-US/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
 
 There are a few simple guidelines to consider for writing a better glossary entry:
 
@@ -59,7 +60,7 @@ It is good practice to organize the links into three groups:
 
 - General knowledge
   - : These links provide higher-level information about the term or topic.
-    For example: a link to a relevant [Wikipedia](https://www.wikipedia.org/) page.
+    For example: a link to a relevant [Wikipedia](https://en.wikipedia.org/) page.
 - Technical reference
   - : These links offer in-depth technical information, on MDN Web Docs or other sites.
 - Learn about it

@@ -13,13 +13,14 @@ tags:
   - Reference
 browser-compat: api.DeviceMotionEvent.DeviceMotionEvent
 ---
+
 {{APIRef("Device Orientation Events")}}
 
 The **`DeviceMotionEvent()`** constructor creates a new {{DOMxRef("DeviceMotionEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new DeviceMotionEvent(type)
 new DeviceMotionEvent(type, options)
 ```

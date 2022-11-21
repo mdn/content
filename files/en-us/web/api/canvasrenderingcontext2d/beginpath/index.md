@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.beginPath
 ---
+
 {{APIRef}}
 
 The
@@ -22,7 +23,7 @@ this method when you want to create a new path.
 
 ## Syntax
 
-```js
+```js-nolint
 beginPath()
 ```
 

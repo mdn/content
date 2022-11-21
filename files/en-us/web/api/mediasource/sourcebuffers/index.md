@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - Media Source Extensions
   - MediaSource
@@ -15,7 +14,8 @@ tags:
   - sourceBuffers
 browser-compat: api.MediaSource.sourceBuffers
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+
+{{APIRef("Media Source Extensions")}}
 
 The **`sourceBuffers`** read-only property of the
 {{domxref("MediaSource")}} interface returns a {{domxref("SourceBufferList")}} object

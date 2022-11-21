@@ -11,11 +11,17 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D
 ---
+
 {{APIRef}}
 
-The **`CanvasRenderingContext2D`** interface, part of the [Canvas API](/en-US/docs/Web/API/Canvas_API), provides the 2D rendering context for the drawing surface of a {{HTMLElement("canvas")}} element. It is used for drawing shapes, text, images, and other objects.
+The **`CanvasRenderingContext2D`** interface, part of the [Canvas API](/en-US/docs/Web/API/Canvas_API), provides the 2D rendering context for the drawing surface of a {{HTMLElement("canvas")}} element.
+It is used for drawing shapes, text, images, and other objects.
 
-See the interface's properties and methods in the sidebar and below. The [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial) has more explanation, examples, and resources, as well.
+The interface's properties and methods are described in the reference section of this page.
+The [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial) has more explanation, examples, and resources, as well.
+
+For [`OffscreenCanvas`](/en-US/docs/Web/API/OffscreenCanvas), there is an equivalent interface that provides the rendering context.
+The offscreen rendering context inherits most of the same properties and methods as the `CanvasRenderingContext2D` and is described in more detail in the {{domxref("OffscreenCanvasRenderingContext2D")}} reference page.
 
 ## Basic example
 
@@ -28,8 +34,8 @@ To get a `CanvasRenderingContext2D` instance, you must first have an HTML `<canv
 To get the canvas' 2D rendering context, call {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} on the `<canvas>` element, supplying `'2d'` as the argument:
 
 ```js
-const canvas = document.getElementById('my-house');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("my-house");
+const ctx = canvas.getContext("2d");
 ```
 
 With the context in hand, you can draw anything you like. This code draws a house:
@@ -58,6 +64,11 @@ The resulting drawing looks like this:
 {{EmbedLiveSample("Basic_example", 700, 330)}}
 
 ## Reference
+
+### Context
+
+- {{domxref("CanvasRenderingContext2D.isContextLost()")}} {{Experimental_Inline}}
+  - : Returns `true` if the rendering context was lost.
 
 ### Drawing rectangles
 
@@ -105,13 +116,25 @@ The following methods and properties control how lines are drawn.
 The following properties control how text is laid out.
 
 - {{domxref("CanvasRenderingContext2D.font")}}
-  - : Font setting. Default value `10px sans-serif`.
+  - : Font setting. Default value `"10px sans-serif"`.
 - {{domxref("CanvasRenderingContext2D.textAlign")}}
   - : Text alignment setting. Possible values: `start` (default), `end`, `left`, `right`, `center`.
 - {{domxref("CanvasRenderingContext2D.textBaseline")}}
   - : Baseline alignment setting. Possible values: `top`, `hanging`, `middle`, `alphabetic` (default), `ideographic`, `bottom`.
 - {{domxref("CanvasRenderingContext2D.direction")}}
   - : Directionality. Possible values: `ltr`, `rtl`, `inherit` (default).
+- {{domxref("CanvasRenderingContext2D.letterSpacing")}} {{Experimental_Inline}}
+  - : Letter spacing. Default: `0px`.
+- {{domxref("CanvasRenderingContext2D.fontKerning")}}
+  - : Font kerning. Possible values: `auto` (default), `normal`, `none`.
+- {{domxref("CanvasRenderingContext2D.fontStretch")}} {{experimental_inline}}
+  - : Font stretch. Possible values: `ultra-condensed`, `extra-condensed`, `condensed`, `semi-condensed`, `normal` (default), `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`.
+- {{domxref("CanvasRenderingContext2D.fontVariantCaps")}} {{experimental_inline}}
+  - : Font variant caps. Possible values: `normal` (default), `small-caps`, `all-small-caps`, `petite-caps`, `all-petite-caps`, `unicase`, `titling-caps`.
+- {{domxref("CanvasRenderingContext2D.textRendering")}} {{experimental_inline}}
+  - : Text rendering. Possible values: `auto` (default), `optimizeSpeed`, `optimizeLegibility`, `geometricPrecision`.
+- {{domxref("CanvasRenderingContext2D.wordSpacing")}} {{experimental_inline}}
+  - : Word spacing. Default value: `0px`
 
 ### Fill and stroke styles
 
@@ -168,6 +191,8 @@ The following methods can be used to manipulate paths of objects.
   - : Adds an elliptical arc to the current path.
 - {{domxref("CanvasRenderingContext2D.rect()")}}
   - : Creates a path for a rectangle at position (x, y) with a size that is determined by _width_ and _height_.
+- {{domxref("CanvasRenderingContext2D.roundRect()")}}
+  - : Creates a path for a rounded rectangle with a specified position, width, height, and corner radii.
 
 ### Drawing paths
 
@@ -247,89 +272,15 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
   - : A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if it is not associated with a {{HTMLElement("canvas")}} element.
 - {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}
   - : Returns an object containing the actual context attributes. Context attributes can be requested with {{domxref("HTMLCanvasElement.getContext()")}}.
+- {{domxref("CanvasRenderingContext2D.reset()")}} {{Experimental_Inline}}
+  - : Resets the rendering context, including the backing buffer, the drawing state stack, path, and styles.
+- {{domxref("CanvasRenderingContext2D.isContextLost()")}} {{Experimental_Inline}}
+  - : Returns `true` if the rendering context was lost.
 
 ### Filters
 
 - {{domxref("CanvasRenderingContext2D.filter")}}
   - : Applies a CSS or SVG filter to the canvas, e.g., to change its brightness or blurriness.
-
-## Non-standard APIs
-
-### Blink and WebKit
-
-Most of these APIs are [deprecated and were removed shortly after Chrome 36](https://bugs.chromium.org/p/chromium/issues/detail?id=363198).
-
-- `CanvasRenderingContext2D.clearShadow()` {{non-standard_inline}} {{deprecated_inline}}
-  - : Removes all shadow settings like {{domxref("CanvasRenderingContext2D.shadowColor")}} and {{domxref("CanvasRenderingContext2D.shadowBlur")}}.
-- `CanvasRenderingContext2D.drawImageFromRect()` {{non-standard_inline}} {{deprecated_inline}}
-  - : This is redundant with an equivalent overload of `drawImage`.
-- `CanvasRenderingContext2D.setAlpha()` {{non-standard_inline}} {{deprecated_inline}}
-  - : Use {{domxref("CanvasRenderingContext2D.globalAlpha")}} instead.
-- `CanvasRenderingContext2D.setCompositeOperation()` {{non-standard_inline}} {{deprecated_inline}}
-  - : Use {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}} instead.
-- `CanvasRenderingContext2D.setLineWidth()` {{non-standard_inline}} {{deprecated_inline}}
-  - : Use {{domxref("CanvasRenderingContext2D.lineWidth")}} instead.
-- `CanvasRenderingContext2D.setLineJoin()` {{non-standard_inline}} {{deprecated_inline}}
-  - : Use {{domxref("CanvasRenderingContext2D.lineJoin")}} instead.
-- `CanvasRenderingContext2D.setLineCap()` {{non-standard_inline}} {{deprecated_inline}}
-  - : Use {{domxref("CanvasRenderingContext2D.lineCap")}} instead.
-- `CanvasRenderingContext2D.setMiterLimit()`  {{non-standard_inline}} {{deprecated_inline}}
-  - : Use {{domxref("CanvasRenderingContext2D.miterLimit")}} instead.
-- `CanvasRenderingContext2D.setStrokeColor()`  {{non-standard_inline}} {{deprecated_inline}}
-  - : Use {{domxref("CanvasRenderingContext2D.strokeStyle")}} instead.
-- `CanvasRenderingContext2D.setFillColor()` {{non-standard_inline}} {{deprecated_inline}}
-  - : Use {{domxref("CanvasRenderingContext2D.fillStyle")}} instead.
-- `CanvasRenderingContext2D.setShadow()`  {{non-standard_inline}} {{deprecated_inline}}
-  - : Use {{domxref("CanvasRenderingContext2D.shadowColor")}} and {{domxref("CanvasRenderingContext2D.shadowBlur")}} instead.
-- `CanvasRenderingContext2D.webkitLineDash` {{non-standard_inline}} {{deprecated_inline}}
-  - : Use {{domxref("CanvasRenderingContext2D.getLineDash()")}} and {{domxref("CanvasRenderingContext2D.setLineDash()")}} instead.
-- `CanvasRenderingContext2D.webkitLineDashOffset` {{non-standard_inline}} {{deprecated_inline}}
-  - : Use {{domxref("CanvasRenderingContext2D.lineDashOffset")}} instead.
-- `CanvasRenderingContext2D.webkitImageSmoothingEnabled` {{non-standard_inline}} {{deprecated_inline}}
-  - : Use {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}} instead.
-
-### Blink only
-
-- `CanvasRenderingContext2D.isContextLost()` {{non-standard_inline}}
-  - : Inspired by the same `WebGLRenderingContext` method it returns `true` if the Canvas context has been lost, or `false` if not.
-
-### WebKit only
-
-- `CanvasRenderingContext2D.webkitBackingStorePixelRatio` {{non-standard_inline}} {{deprecated_inline}}
-  - : The backing store size in relation to the canvas element. See [High DPI Canvas](https://www.html5rocks.com/en/tutorials/canvas/hidpi/).
-- `CanvasRenderingContext2D.webkitGetImageDataHD` {{non-standard_inline}} {{deprecated_inline}}
-  - : Intended for HD backing stores, but removed from canvas specifications.
-- `CanvasRenderingContext2D.webkitPutImageDataHD` {{non-standard_inline}} {{deprecated_inline}}
-  - : Intended for HD backing stores, but removed from canvas specifications.
-
-### Gecko only
-
-#### Prefixed APIs
-
-- `CanvasRenderingContext2D.mozImageSmoothingEnabled` {{non-standard_inline}}
-  - : See {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}.
-- `CanvasRenderingContext2D.mozTextStyle` {{non-standard_inline}} {{deprecated_inline}}
-  - : Introduced in Gecko 1.9, deprecated in favor of the {{domxref("CanvasRenderingContext2D.font")}} property.
-- `CanvasRenderingContext2D.mozDrawText()` {{non-standard_inline}} {{deprecated_inline}}
-  - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0. Use {{domxref("CanvasRenderingContext2D.strokeText()")}} or {{domxref("CanvasRenderingContext2D.fillText()")}} instead.
-- `CanvasRenderingContext2D.mozMeasureText()` {{non-standard_inline}} {{deprecated_inline}}
-  - : This method was introduced in Gecko 1.9 and is unimplemented starting with Gecko 7.0. Use {{domxref("CanvasRenderingContext2D.measureText()")}} instead.
-- `CanvasRenderingContext2D.mozPathText()` {{non-standard_inline}} {{deprecated_inline}}
-  - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0.
-- `CanvasRenderingContext2D.mozTextAlongPath()` {{non-standard_inline}} {{deprecated_inline}}
-  - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0.
-
-#### Internal APIs (chrome-context only)
-
-- {{domxref("CanvasRenderingContext2D.drawWindow()")}} {{Deprecated_Inline}} {{non-standard_inline}}
-  - : Renders a region of a window into the `canvas`. The contents of the window's viewport are rendered, ignoring viewport clipping and scrolling.
-- {{non-standard_inline}} `CanvasRenderingContext2D.demote()`
-  - : This causes a context that is currently using a hardware-accelerated backend to fallback to a software one. All state should be preserved.
-
-### Internet Explorer
-
-- `CanvasRenderingContext2D.msFillRule` {{non-standard_inline}}
-  - : The [fill rule](https://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t) to use. This must be one of `evenodd` or `nonzero` (default).
 
 ## Specifications
 
@@ -343,3 +294,4 @@ Most of these APIs are [deprecated and were removed shortly after Chrome 36](htt
 
 - {{domxref("HTMLCanvasElement")}}
 - {{HTMLElement("canvas")}}
+- {{domxref("OffscreenCanvas")}}

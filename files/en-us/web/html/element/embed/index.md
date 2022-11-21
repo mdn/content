@@ -7,7 +7,6 @@ tags:
   - External content
   - HTML
   - HTML embedded content
-  - HTML5
   - Plugins
   - Reference
   - Web
@@ -15,13 +14,13 @@ tags:
 browser-compat: html.elements.embed
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<embed>`** [HTML](/en-US/docs/Web/HTML) element embeds external content at the specified point in the document. This content is provided by an external application or other source of interactive content such as a browser plug-in.
 
 {{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
 
-> **Note:** This topic documents only the element that is defined as part of HTML5. It does not address earlier, non-standardized implementation of the element.
+> **Note:** This topic documents only the element that is defined as part of the [HTML Living Standard](https://html.spec.whatwg.org/#the-embed-element). It does not address earlier, non-standardized implementation of the element.
 
 Keep in mind that most modern browsers have deprecated and removed support for browser plug-ins, so relying upon `<embed>` is generally not wise if you want your site to be operable on the average user's browser.
 
@@ -47,7 +46,7 @@ Keep in mind that most modern browsers have deprecated and removed support for b
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
@@ -100,7 +99,12 @@ You can use the {{cssxref("object-position")}} property to adjust the positionin
 ## Examples
 
 ```html
-<embed type="video/quicktime" src="movie.mov" width="640" height="480" title="Title of my video">
+<embed
+  type="video/quicktime"
+  src="movie.mov"
+  width="640"
+  height="480"
+  title="Title of my video" />
 ```
 
 ## Accessibility concerns

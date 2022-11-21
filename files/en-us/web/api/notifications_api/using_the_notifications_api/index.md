@@ -12,13 +12,14 @@ tags:
   - Tutorial
 browser-compat: api.Notification
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The [Notifications API](/en-US/docs/Web/API/Notifications_API) lets a web page or app send notifications that are displayed outside the page at the system level; this lets web apps send information to a user even if the application is idle or in the background. This article looks at the basics of using this API in your own apps.
 
 Typically, system notifications refer to the operating system's standard notification mechanism: think for example of how a typical desktop system or mobile device broadcasts notifications.
 
-![](android-notification.png)
+![Android device notifications feed containing a list of several alerts from multiple sources.](android-notification.png)
 
 The system notification system will vary of course by platform and browser, but this is OK, and the Notifications API is written to be general enough for compatibility with most system notification systems.
 
@@ -26,7 +27,7 @@ The system notification system will vary of course by platform and browser, but 
 
 One of the most obvious use cases for web notifications is a web-based mail or IRC application that needs to notify the user when a new message is received, even if the user is doing something else with another application. Many examples of this now exist, such as [Slack](https://slack.com/).
 
-We've written a real world example — a to-do list app — to give more of an idea of how web notifications can be used. It stores data locally using [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) and notifies users when tasks are due using system notifications. [Download the To-do list code](https://github.com/mdn/to-do-notifications/tree/gh-pages), or [view the app running live](https://mdn.github.io/to-do-notifications/).
+We've written a real world example — a to-do list app — to give more of an idea of how web notifications can be used. It stores data locally using [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) and notifies users when tasks are due using system notifications. [Download the To-do list code](https://github.com/mdn/dom-examples/tree/main/to-do-notifications), or [view the app running live](https://mdn.github.io/dom-examples/to-do-notifications/).
 
 ## Requesting permission
 
@@ -198,9 +199,9 @@ window.addEventListener('load', () => {
   }
 
   button.addEventListener('click', () => {
-    // If the user agreed to get notified
-    // Let's try to send ten notifications
     if (Notification?.permission === "granted") {
+      // If the user agreed to get notified
+      // Let's try to send ten notifications
       let i = 0;
       // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
       const interval = setInterval(() => {
@@ -211,12 +212,10 @@ window.addEventListener('load', () => {
           clearInterval(interval);
         }
       }, 200);
-    }
-
-    // If the user hasn't told if they want to be notified or not
-    // Note: because of Chrome, we are not sure the permission property
-    // is set, therefore it's unsafe to check for the "default" value.
-    else if (Notification && Notification.permission !== "denied") {
+    } else if (Notification && Notification.permission !== "denied") {
+      // If the user hasn't told if they want to be notified or not
+      // Note: because of Chrome, we are not sure the permission property
+      // is set, therefore it's unsafe to check for the "default" value.
       Notification.requestPermission((status) => {
         // If the user said okay
         if (status === "granted") {
@@ -230,18 +229,13 @@ window.addEventListener('load', () => {
               clearInterval(interval);
             }
           }, 200);
-        }
-
-        // Otherwise, we can fallback to a regular modal alert
-        else {
+        } else {
+          // Otherwise, we can fallback to a regular modal alert
           alert("Hi!");
         }
       });
-    }
-
-    // If the user refuses to get notified
-    else {
-      // We can fallback to a regular modal alert
+    } else {
+      // If the user refuses to get notified, we can fallback to a regular modal alert
       alert("Hi!");
     }
   });

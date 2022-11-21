@@ -1,5 +1,5 @@
 ---
-title: 'Accessibility: What users can do to browse more safely'
+title: "Accessibility: What users can do to browse more safely"
 slug: Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely
 tags:
   - color
@@ -13,13 +13,18 @@ tags:
   - user settings
   - web animation
 ---
-This article discusses making web content accessible for those with vestibular disorders, and those who support them, by taking advantage of personalization and accessibility settings built into the operating systems.  Taking advantage of personalization settings can help prevent exposure to content leading to seizures and / or other physical reactions.
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
+
+This article discusses making web content accessible for those with vestibular disorders, and those who support them, by taking advantage of personalization and accessibility settings built into the operating systems. Taking advantage of personalization settings can help prevent exposure to content leading to seizures and / or other physical reactions.
 
 ## Personalization and accessibility settings
 
 From the article, "**[Understanding Success Criterion 2.3.1: Three Flashes or Below Threshold](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html)**"
 
-_"Flashing can be caused by the display, the computer rendering the image or by the content being rendered. The author has no control of the first two. They can be addressed by the design and speed of the display and computer"_
+> Flashing can be caused by the display, the computer rendering the image or by the content being rendered. The author has no control of the first two. They can be addressed by the design and speed of the display and computer
 
 ### Hardware and operating systems on many computers offer control that is not afforded to developers
 
@@ -79,7 +84,7 @@ In the Windows10 operating system, the user has an ability to turn off animation
 
 #### Grayscale
 
-Those who have suffered traumatic brain injury (TBI) may be highly sensitive to color; it can require such a great "investment of cognitive energy" on their part, there's no energy for other daily tasks. Enabling grayscale presentation of the content reduces the cognitive workload.  It may assist users with other disabilities, as well. An interesting discussion by users on the benefits of using grayscale may be found in the discussion thread, "[What is the "grayscale" setting for in accessibility options?](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)".   Of particular interest is a user who has Photosensitive Epilepsy, and uses it when feeling "seizure-y".
+Those who have suffered traumatic brain injury (TBI) may be highly sensitive to color; it can require such a great "investment of cognitive energy" on their part, there's no energy for other daily tasks. Enabling grayscale presentation of the content reduces the cognitive workload. It may assist users with other disabilities, as well. An interesting discussion by users on the benefits of using grayscale may be found in the discussion thread, "[What is the "grayscale" setting for in accessibility options?](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)". Of particular interest is a user who has Photosensitive Epilepsy, and uses it when feeling "seizure-y".
 
 Most Operating Systems have a way to let the user make an adjustment on the workstation. In the screenshot below, you can see an example of Windows 10 Accessibility Settings allowing for color filters to be selected. Grayscale is enabled when the color filters button is toggled "on"
 

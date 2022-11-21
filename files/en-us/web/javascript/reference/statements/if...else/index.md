@@ -10,15 +10,16 @@ tags:
   - if
 browser-compat: javascript.statements.if_else
 ---
+
 {{jsSidebar("Statements")}}
 
-The **`if`** statement executes a statement if a specified condition is {{Glossary("truthy")}}. If the condition is {{Glossary("falsy")}}, another statement in the optional `else` clause will be executed.
+The **`if...else`** statement executes a statement if a specified condition is {{Glossary("truthy")}}. If the condition is {{Glossary("falsy")}}, another statement in the optional `else` clause will be executed.
 
 {{EmbedInteractiveExample("pages/js/statement-ifelse.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 if (condition)
   statement1
 
@@ -30,7 +31,7 @@ else
 ```
 
 - `condition`
-  - : An [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#expressions) that is considered to be either {{Glossary("truthy")}} or {{Glossary("falsy")}}.
+  - : An expression that is considered to be either {{Glossary("truthy")}} or {{Glossary("falsy")}}.
 - `statement1`
   - : Statement that is executed if _condition_ is {{Glossary("truthy")}}. Can be any statement, including further nested `if` statements. To execute multiple statements, use a [block](/en-US/docs/Web/JavaScript/Reference/Statements/block) statement (`{ /* ... */ }`) to group those statements. To execute no statements, use an [empty](/en-US/docs/Web/JavaScript/Reference/Statements/Empty) statement.
 - `statement2`
@@ -107,9 +108,9 @@ function checkValue(a, b) {
   if (a === 1) {
     if (b === 2) {
       console.log("a is 1 and b is 2");
-    } else {
-      console.log("a is not 1");
     }
+  } else {
+    console.log("a is not 1");
   }
 }
 ```

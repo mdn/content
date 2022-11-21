@@ -1,6 +1,7 @@
 ---
 title: padding
 slug: Web/CSS/padding
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Padding
@@ -9,6 +10,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.padding
 ---
+
 {{CSSRef}}
 
 The **`padding`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the [padding area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#padding_area) on all four sides of an element at once.
@@ -34,10 +36,10 @@ This property is a shorthand for the following CSS properties:
 /* Apply to all four sides */
 padding: 1em;
 
-/* vertical | horizontal */
+/* top and bottom | left and right */
 padding: 5% 10%;
 
-/* top | horizontal | bottom */
+/* top | left and right | bottom */
 padding: 1em 2em 2em;
 
 /* top | right | bottom | left */

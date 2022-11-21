@@ -12,7 +12,8 @@ tags:
   - Sync
 browser-compat: api.ServiceWorkerRegistration.sync
 ---
-{{Non-standard_header}}{{APIRef("Service Workers API")}}
+
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 The **`sync`** property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the

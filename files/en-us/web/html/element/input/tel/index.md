@@ -16,9 +16,9 @@ tags:
 browser-compat: html.elements.input.type_tel
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
-{{HTMLElement("input")}} elements of type **`tel`** are used to let the user enter and edit a telephone number. Unlike [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) and [`<input type="url">`](/en-US/docs/Web/HTML/Element/input/url) , the input value is not automatically validated to a particular format before the form can be submitted, because formats for telephone numbers vary so much around the world.
+{{HTMLElement("input")}} elements of type **`tel`** are used to let the user enter and edit a telephone number. Unlike [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) and [`<input type="url">`](/en-US/docs/Web/HTML/Element/input/url), the input value is not automatically validated to a particular format before the form can be submitted, because formats for telephone numbers vary so much around the world.
 
 {{EmbedInteractiveExample("pages/tabbed/input-tel.html", "tabbed-standard")}}
 
@@ -98,7 +98,7 @@ The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constrain
 
 ### minlength
 
-The minimum number of characters (as UTF-16 code units) the user can enter into the telephone number field. This must be an non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the telephone number input has no minimum length.
+The minimum number of characters (as UTF-16 code units) the user can enter into the telephone number field. This must be a non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the telephone number input has no minimum length.
 
 The telephone number field will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long.
 
@@ -138,7 +138,7 @@ The following non-standard attributes are available to telephone number input fi
 
 ### autocorrect
 
-A Safari extension, the `autocorrect` attribute is a string which indicates whether or not to activate automatic correction while the user is editing this field. Permitted values are:
+A Safari extension, the `autocorrect` attribute is a string which indicates whether to activate automatic correction while the user is editing this field. Permitted values are:
 
 - `on`
   - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
@@ -171,7 +171,7 @@ In its most basic form, a tel input can be implemented like this:
 
 ```html
 <label for="telNo">Phone number:</label>
-<input id="telNo" name="telNo" type="tel">
+<input id="telNo" name="telNo" type="tel" />
 ```
 
 {{ EmbedLiveSample('A_simple_tel_input', 600, 40) }}
@@ -185,8 +185,7 @@ Sometimes it's helpful to offer an in-context hint as to what form the input dat
 Here, we have an `tel` input with the placeholder `123-4567-8901`. Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.
 
 ```html
-<input id="telNo" name="telNo" type="tel"
-       placeholder="123-4567-8901">
+<input id="telNo" name="telNo" type="tel" placeholder="123-4567-8901" />
 ```
 
 {{ EmbedLiveSample('Placeholders', 600, 40) }}
@@ -200,8 +199,7 @@ You can control not only the physical length of the input box, but also the mini
 The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the `tel` edit box is 20 characters wide:
 
 ```html
-<input id="telNo" name="telNo" type="tel"
-       size="20">
+<input id="telNo" name="telNo" type="tel" size="20" />
 ```
 
 {{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}
@@ -213,8 +211,13 @@ The `size` is separate from the length limitation on the entered telephone numbe
 The example below creates a 20-character wide telephone number entry box, requiring that the contents be no shorter than 9 characters and no longer than 14 characters.
 
 ```html
-<input id="telNo" name="telNo" type="tel"
-       size="20" minlength="9" maxlength="14">
+<input
+  id="telNo"
+  name="telNo"
+  type="tel"
+  size="20"
+  minlength="9"
+  maxlength="14" />
 ```
 
 {{EmbedLiveSample("Element_value_length", 600, 40) }}
@@ -228,8 +231,7 @@ The example below creates a 20-character wide telephone number entry box, requir
 As always, you can provide a default value for an `tel` input box by setting its {{htmlattrxref("value", "input")}} attribute:
 
 ```html
-<input id="telNo" name="telNo" type="tel"
-       value="333-4444-4444">
+<input id="telNo" name="telNo" type="tel" value="333-4444-4444" />
 ```
 
 {{EmbedLiveSample("Providing_a_single_default_using_the_value_attribute", 600, 40)}}
@@ -240,13 +242,13 @@ Taking it a step further, you can provide a list of default phone number values 
 
 ```html
 <label for="telNo">Phone number: </label>
-<input id="telNo" name="telNo" type="tel" list="defaultTels">
+<input id="telNo" name="telNo" type="tel" list="defaultTels" />
 
 <datalist id="defaultTels">
-  <option value="111-1111-1111">
-  <option value="122-2222-2222">
-  <option value="333-3333-3333">
-  <option value="344-4444-4444">
+  <option value="111-1111-1111"></option>
+  <option value="122-2222-2222"></option>
+  <option value="333-3333-3333"></option>
+  <option value="344-4444-4444"></option>
 </datalist>
 ```
 
@@ -262,7 +264,7 @@ Here's a screenshot of what that might look like:
 
 As we've touched on before, it's quite difficult to provide a one-size-fits-all client-side validation solution for phone numbers. So what can we do? Let's consider some options.
 
-> **Warning:** HTML form validation is _not_ a substitute for server-side scripts that ensure the entered data is in the proper format before it is allowed into the database.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
+> **Warning:** HTML form validation is _not_ a substitute for server-side scripts that ensure the entered data is in the proper format before it is allowed into the database. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
 
 ### Making telephone numbers required
 
@@ -272,7 +274,7 @@ You can make it so that an empty input is invalid and won't be submitted to the 
 <form>
   <div>
     <label for="telNo">Enter a telephone number (required): </label>
-    <input id="telNo" name="telNo" type="tel" required>
+    <input id="telNo" name="telNo" type="tel" required />
     <span class="validity"></span>
   </div>
   <div>
@@ -297,15 +299,16 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
-  position: absolute; content: '✖';
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
   padding-left: 5px;
   color: #8b0000;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
   color: #009000;
 }
@@ -324,9 +327,15 @@ In this example we'll use the same CSS as before, but our HTML is changed to loo
 ```html
 <form>
   <div>
-    <label for="telNo">Enter a telephone number (in the form xxx-xxx-xxxx): </label>
-    <input id="telNo" name="telNo" type="tel" required
-           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+    <label for="telNo">
+      Enter a telephone number (in the form xxx-xxx-xxxx):
+    </label>
+    <input
+      id="telNo"
+      name="telNo"
+      type="tel"
+      required
+      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
     <span class="validity"></span>
   </div>
   <div>
@@ -349,15 +358,16 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
-  position: absolute; content: '✖';
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
   padding-left: 5px;
   color: #8b0000;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
   color: #009000;
 }
@@ -371,7 +381,7 @@ Notice how the entered value is reported as invalid unless the pattern xxx-xxx-x
 
 In this example, we present a simple interface with a {{htmlelement("select")}} element that lets the user choose which country they're in, and a set of `<input type="tel">` elements to let them enter each part of their phone number; there is no reason why you can't have multiple `tel` inputs.
 
-Each input has a {{htmlattrxref("placeholder","input")}} attribute to show a hint to sighted users about what to enter into it, a {{htmlattrxref("pattern","input")}} to enforce a specific number of characters for the desired section, and an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute to contain a hint to be read out to screenreader users about what to enter into it.
+Each input has a {{htmlattrxref("placeholder","input")}} attribute to show a hint to sighted users about what to enter into it, a {{htmlattrxref("pattern","input")}} to enforce a specific number of characters for the desired section, and an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute to contain a hint to be read out to screen reader users about what to enter into it.
 
 ```html
 <form>
@@ -384,23 +394,38 @@ Each input has a {{htmlattrxref("placeholder","input")}} attribute to show a hin
     </select>
   </div>
   <div>
-    <p>Enter your telephone number: </p>
+    <p>Enter your telephone number:</p>
     <span class="areaDiv">
-      <input id="areaNo" name="areaNo" type="tel" required
-             placeholder="Area code" pattern="[0-9]{3}"
-             aria-label="Area code">
+      <input
+        id="areaNo"
+        name="areaNo"
+        type="tel"
+        required
+        placeholder="Area code"
+        pattern="[0-9]{3}"
+        aria-label="Area code" />
       <span class="validity"></span>
     </span>
     <span class="number1Div">
-      <input id="number1" name="number1" type="tel" required
-             placeholder="First part" pattern="[0-9]{3}"
-             aria-label="First part of number">
+      <input
+        id="number1"
+        name="number1"
+        type="tel"
+        required
+        placeholder="First part"
+        pattern="[0-9]{3}"
+        aria-label="First part of number" />
       <span class="validity"></span>
     </span>
     <span class="number2Div">
-      <input id="number2" name="number2" type="tel" required
-             placeholder="Second part" pattern="[0-9]{4}"
-             aria-label="Second part of number">
+      <input
+        id="number2"
+        name="number2"
+        type="tel"
+        required
+        placeholder="Second part"
+        pattern="[0-9]{4}"
+        aria-label="Second part of number" />
       <span class="validity"></span>
     </span>
   </div>
@@ -470,8 +495,8 @@ It makes you wonder if it is worth going to all this trouble on the client-side,
 
 ```css hidden
 div {
-margin-bottom: 10px;
-position: relative;
+  margin-bottom: 10px;
+  position: relative;
 }
 
 input[type="number"] {
@@ -482,15 +507,16 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
-  position: absolute; content: '✖';
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
   padding-left: 5px;
   color: #8b0000;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
   color: #009000;
 }

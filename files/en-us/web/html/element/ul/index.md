@@ -9,7 +9,7 @@ tags:
 browser-compat: html.elements.ul
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<ul>`** [HTML](/en-US/docs/Web/HTML) element represents an unordered list of items, typically rendered as a bulleted list.
 
@@ -86,13 +86,13 @@ The **`<ul>`** [HTML](/en-US/docs/Web/HTML) element represents an unordered list
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{ htmlattrdef("compact") }} {{Deprecated_inline}}
+- {{ htmlattrdef("compact") }} {{Deprecated_inline}} {{Non-standard_Inline}}
 
   - : This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the {{glossary("user agent")}}, and it doesn't work in all browsers.
 
     > **Warning:** Do not use this attribute, as it has been deprecated: use [CSS](/en-US/docs/Web/CSS) instead. To give a similar effect as the `compact` attribute, the CSS property {{cssxref("line-height")}} can be used with a value of `80%`.
 
-- {{ htmlattrdef("type") }} {{Deprecated_inline}}
+- {{ htmlattrdef("type") }} {{Deprecated_inline}} {{Non-standard_Inline}}
 
   - : This attribute sets the bullet style for the list. The values defined under HTML3.2 and the transitional version of HTML 4.0/4.01 are:
 
@@ -133,22 +133,25 @@ The above HTML will output:
 ```html
 <ul>
   <li>first item</li>
-  <li>second item
-  <!-- Look, the closing </li> tag is not placed here! -->
+  <li>
+    second item
+    <!-- Look, the closing </li> tag is not placed here! -->
     <ul>
       <li>second item first subitem</li>
-      <li>second item second subitem
-      <!-- Same for the second nested unordered list! -->
+      <li>
+        second item second subitem
+        <!-- Same for the second nested unordered list! -->
         <ul>
           <li>second item second subitem first sub-subitem</li>
           <li>second item second subitem second sub-subitem</li>
           <li>second item second subitem third sub-subitem</li>
         </ul>
-      </li> <!-- Closing </li> tag for the li that
+      </li>
+      <!-- Closing </li> tag for the li that
                   contains the third unordered list -->
       <li>second item third subitem</li>
     </ul>
-  <!-- Here is the closing </li> tag -->
+    <!-- Here is the closing </li> tag -->
   </li>
   <li>third item</li>
 </ul>
@@ -163,14 +166,15 @@ The above HTML will output:
 ```html
 <ul>
   <li>first item</li>
-  <li>second item
-  <!-- Look, the closing </li> tag is not placed here! -->
+  <li>
+    second item
+    <!-- Look, the closing </li> tag is not placed here! -->
     <ol>
       <li>second item first subitem</li>
       <li>second item second subitem</li>
       <li>second item third subitem</li>
     </ol>
-  <!-- Here is the closing </li> tag -->
+    <!-- Here is the closing </li> tag -->
   </li>
   <li>third item</li>
 </ul>

@@ -4,7 +4,6 @@ slug: Web/API/VideoPlaybackQuality/totalFrameDelay
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Media Source Extensions
   - Deprecated
   - Property
@@ -12,9 +11,11 @@ tags:
   - Video
   - VideoPlaybackQuality
   - totalFrameDelay
+  - Non-standard
 browser-compat: api.VideoPlaybackQuality.totalFrameDelay
 ---
-{{APIRef("Media Source Extensions")}}{{deprecated_header}}
+
+{{APIRef("Media Source Extensions")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`VideoPlaybackQuality.totalFrameDelay`** read-only
 property returns a `double` containing the sum of the frame delay since the

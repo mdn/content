@@ -15,6 +15,7 @@ tags:
   - generateCertificate
 browser-compat: api.RTCPeerConnection.generateCertificate
 ---
+
 {{APIRef("WebRTC")}}
 
 The static **`RTCPeerConnection.generateCertificate()`**
@@ -23,7 +24,7 @@ that resolves with the new {{domxref("RTCCertificate")}} once it's generated.
 
 ## Syntax
 
-```js
+```js-nolint
 generateCertificate(keygenAlgorithm) // static function
 ```
 
@@ -63,7 +64,7 @@ of the Web Crypto API's {{domxref("Algorithm")}} class's subclasses.
 ### Standard configurations
 
 All browsers are required to support the following two configurations. It's entirely
-possible that a browser's *default* settings may be different, but these are
+possible that a browser's _default_ settings may be different, but these are
 always supported.
 
 #### RSASSA-PKCS1-v1_5
@@ -88,10 +89,9 @@ let stdECDSACertificate = {
 
 ### Certificate expiration time
 
-By default the new certificate is configured with `expires` set to a
-{{domxref("DOMTimeStamp")}} value of 2592000000, or 30 days. The expiration time cannot
-exceed 31536000000, or 365 days. It's also useful to note that browsers may further
-restrict the expiration time of certificates if they choose.
+By default the new certificate is configured with `expires` set to a value of 2592000000 milliseconds, or 30 days.
+The expiration time cannot exceed 31536000000 milliseconds, or 365 days.
+It's also useful to note that browsers may further restrict the expiration time of certificates if they choose.
 
 ## Examples
 

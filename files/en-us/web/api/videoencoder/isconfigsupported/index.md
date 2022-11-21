@@ -8,15 +8,17 @@ tags:
   - Reference
   - isConfigSupported
   - VideoEncoder
+  - Experimental
 browser-compat: api.VideoEncoder.isConfigSupported
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`isConfigSupported()`** static method of the {{domxref("VideoEncoder")}} interface checks if the given config is supported (that is, if {{domxref("VideoEncoder")}} objects can be successfully configured with the given config).
 
 ## Syntax
 
-```js
+```js-nolint
 isConfigSupported(config)
 ```
 
@@ -29,9 +31,9 @@ isConfigSupported(config)
 
 A {{jsxref("Promise")}} that resolves with an object containing the following members:
 
-- `supported` {{optional_inline}}
+- `supported`
   - : A boolean value which is `true` if the given config is supported by the encoder.
-- `config` {{optional_inline}}
+- `config`
   - : A copy of the given config with all the fields recognized by the encoder.
 
 ### Exceptions

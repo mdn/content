@@ -8,16 +8,17 @@ tags:
   - part 6
   - server-side
 ---
+
 This subarticle shows how to define a page for creating `Author` objects.
 
 ## Import validation and sanitization methods
 
-As with the genre form, to use _express-validator_ we have to *require* the functions we want to use.
+As with the genre form, to use _express-validator_ we have to _require_ the functions we want to use.
 
 Open **/controllers/authorController.js**, and add the following lines at the top of the file:
 
 ```js
-const { body,validationResult } = require('express-validator');
+const { body, validationResult } = require("express-validator");
 ```
 
 ## Controller—get route
@@ -26,8 +27,8 @@ Find the exported `author_create_get()` controller method and replace it with th
 
 ```js
 // Display Author create form on GET.
-exports.author_create_get = function(req, res, next) {
-    res.render('author_form', { title: 'Create Author'});
+exports.author_create_get = (req, res, next) => {
+  res.render("author_form", { title: "Create Author" });
 };
 ```
 
@@ -38,44 +39,60 @@ Find the exported `author_create_post()` controller method, and replace it with 
 ```js
 // Handle Author create on POST.
 exports.author_create_post = [
+  // Validate and sanitize fields.
+  body("first_name")
+    .trim()
+    .isLength({ min: 1 })
+    .escape()
+    .withMessage("First name must be specified.")
+    .isAlphanumeric()
+    .withMessage("First name has non-alphanumeric characters."),
+  body("family_name")
+    .trim()
+    .isLength({ min: 1 })
+    .escape()
+    .withMessage("Family name must be specified.")
+    .isAlphanumeric()
+    .withMessage("Family name has non-alphanumeric characters."),
+  body("date_of_birth", "Invalid date of birth")
+    .optional({ checkFalsy: true })
+    .isISO8601()
+    .toDate(),
+  body("date_of_death", "Invalid date of death")
+    .optional({ checkFalsy: true })
+    .isISO8601()
+    .toDate(),
+  // Process request after validation and sanitization.
+  (req, res, next) => {
+    // Extract the validation errors from a request.
+    const errors = validationResult(req);
 
-    // Validate and sanitize fields.
-    body('first_name').trim().isLength({ min: 1 }).escape().withMessage('First name must be specified.')
-        .isAlphanumeric().withMessage('First name has non-alphanumeric characters.'),
-    body('family_name').trim().isLength({ min: 1 }).escape().withMessage('Family name must be specified.')
-        .isAlphanumeric().withMessage('Family name has non-alphanumeric characters.'),
-    body('date_of_birth', 'Invalid date of birth').optional({ checkFalsy: true }).isISO8601().toDate(),
-    body('date_of_death', 'Invalid date of death').optional({ checkFalsy: true }).isISO8601().toDate(),
-
-    // Process request after validation and sanitization.
-    (req, res, next) => {
-
-        // Extract the validation errors from a request.
-        const errors = validationResult(req);
-
-        if (!errors.isEmpty()) {
-            // There are errors. Render form again with sanitized values/errors messages.
-            res.render('author_form', { title: 'Create Author', author: req.body, errors: errors.array() });
-            return;
-        }
-        else {
-            // Data from form is valid.
-
-            // Create an Author object with escaped and trimmed data.
-            var author = new Author(
-                {
-                    first_name: req.body.first_name,
-                    family_name: req.body.family_name,
-                    date_of_birth: req.body.date_of_birth,
-                    date_of_death: req.body.date_of_death
-                });
-            author.save(function (err) {
-                if (err) { return next(err); }
-                // Successful - redirect to new author record.
-                res.redirect(author.url);
-            });
-        }
+    if (!errors.isEmpty()) {
+      // There are errors. Render form again with sanitized values/errors messages.
+      res.render("author_form", {
+        title: "Create Author",
+        author: req.body,
+        errors: errors.array(),
+      });
+      return;
     }
+    // Data from form is valid.
+
+    // Create an Author object with escaped and trimmed data.
+    const author = new Author({
+      first_name: req.body.first_name,
+      family_name: req.body.family_name,
+      date_of_birth: req.body.date_of_birth,
+      date_of_death: req.body.date_of_death,
+    });
+    author.save((err) => {
+      if (err) {
+        return next(err);
+      }
+      // Successful - redirect to new author record.
+      res.redirect(author.url);
+    });
+  },
 ];
 ```
 
@@ -93,13 +110,13 @@ The validation code demonstrates several new features:
   ```js
   [
     // Validate fields.
-    body('first_name')
+    body("first_name")
       .trim()
       .isLength({ min: 1 })
       .escape()
-      .withMessage('First name must be specified.')
+      .withMessage("First name must be specified.")
       .isAlphanumeric()
-      .withMessage('First name has non-alphanumeric characters.'),
+      .withMessage("First name has non-alphanumeric characters."),
     // …
   ];
   ```
@@ -108,7 +125,7 @@ The validation code demonstrates several new features:
 
   ```js
   [
-    body('date_of_birth', 'Invalid date of birth')
+    body("date_of_birth", "Invalid date of birth")
       .optional({ checkFalsy: true })
       .isISO8601()
       .toDate(),
@@ -130,9 +147,9 @@ block content
   form(method='POST' action='')
     div.form-group
       label(for='first_name') First Name:
-      input#first_name.form-control(type='text' placeholder='First name (Christian)' name='first_name' required='true' value=(undefined===author ? '' : author.first_name) )
+      input#first_name.form-control(type='text' placeholder='First name' name='first_name' required='true' value=(undefined===author ? '' : author.first_name) )
       label(for='family_name') Family Name:
-      input#family_name.form-control(type='text' placeholder='Family name (Surname)' name='family_name' required='true' value=(undefined===author ? '' : author.family_name))
+      input#family_name.form-control(type='text' placeholder='Family name' name='family_name' required='true' value=(undefined===author ? '' : author.family_name))
     div.form-group
       label(for='date_of_birth') Date of birth:
       input#date_of_birth.form-control(type='date' name='date_of_birth' value=(undefined===author ? '' : author.date_of_birth) )
@@ -145,7 +162,7 @@ block content
 
 The structure and behavior for this view is exactly the same as for the **genre_form.pug** template, so we won't describe it again.
 
-> **Note:** Some browsers don't support the input `type="date"`, so you won't get the datepicker widget or the default *`dd/mm/yyyy`* placeholder, but will instead get an empty plain text field. One workaround is to explicitly add the attribute `placeholder='dd/mm/yyyy'` so that on less capable browsers you will still get information about the desired text format.
+> **Note:** Some browsers don't support the input `type="date"`, so you won't get the datepicker widget or the default `dd/mm/yyyy` placeholder, but will instead get an empty plain text field. One workaround is to explicitly add the attribute `placeholder='dd/mm/yyyy'` so that on less capable browsers you will still get information about the desired text format.
 
 ### Challenge: Adding the date of death
 

@@ -8,17 +8,18 @@ tags:
   - Statement
 browser-compat: javascript.statements.var
 ---
+
 {{jsSidebar("Statements")}}
 
-The **`var` statement** declares a function-scoped or
+The **`var`** statement declares a function-scoped or
 globally-scoped variable, optionally initializing it to a value.
 
 {{EmbedInteractiveExample("pages/js/statement-var.html")}}
 
 ## Syntax
 
-```js
-var varname1 [= value1] [, varname2 [= value2] ... [, varnameN [= valueN]]];
+```js-nolint
+var varname1 [= value1] [, varname2 [= value2] ... [, varnameN [= valueN]]]
 ```
 
 - `varnameN`
@@ -66,7 +67,7 @@ foo();
 ```
 
 Variables declared using `var` are created before any code is executed in a
-process known as hoisting. Their initial value is `undefined`.
+process known as [hoisting](/en-US/docs/Glossary/Hoisting). Their initial value is `undefined`.
 
 ```js
 'use strict';
@@ -131,10 +132,7 @@ foo = 'f' // In non-strict mode, assumes you want to create a property named `fo
 Object.hasOwn(globalThis, 'foo') // true
 ```
 
-In ECMAScript 5, this behavior was changed for [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
-Assignment to an unqualified identifier in strict mode will result in a
-`ReferenceError`, to avoid the accidental creation of properties on the
-global object.
+In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), assignment to an unqualified identifier in strict mode will result in a `ReferenceError`, to avoid the accidental creation of properties on the global object.
 
 Note that the implication of the above, is that, contrary to popular misinformation,
 JavaScript does not have implicit or undeclared variables, it merely has a syntax that
@@ -145,7 +143,7 @@ looks like it does.
 Because `var` declarations are processed before any
 code is executed, declaring a variable anywhere in the code is equivalent to declaring
 it at the top. This also means that a variable can appear to be used before it's
-declared. This behavior is called "_hoisting_", as it appears that the variable
+declared. This behavior is called [_hoisting_](/en-US/docs/Glossary/Hoisting), as it appears that the variable
 declaration is moved to the top of the function or global code.
 
 ```js

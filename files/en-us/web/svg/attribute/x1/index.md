@@ -13,6 +13,7 @@ spec-urls:
   - https://svgwg.org/svg2-draft/shapes.html#LineElementX1Attribute
   - https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementX1Attribute
 ---
+
 {{SVGRef}}
 
 The **`x1`** attribute is used to specify the first x-coordinate for drawing an SVG element that requires more than one coordinate. Elements that only need one coordinate use the {{SVGAttr("x")}} attribute instead.
@@ -25,7 +26,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -78,14 +83,18 @@ For {{SVGElement('line')}}, `x1` defines the x coordinate of the starting point 
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-  <line x1="1" x2="5" y1="1" y2="9" stroke="red"   />
+  <line x1="1" x2="5" y1="1" y2="9" stroke="red" />
   <line x1="5" x2="5" y1="1" y2="9" stroke="green" />
-  <line x1="9" x2="5" y1="1" y2="9" stroke="blue"  />
+  <line x1="9" x2="5" y1="1" y2="9" stroke="blue" />
 </svg>
 ```
 
@@ -93,7 +102,7 @@ html,body,svg { height:100% }
 
 ## linearGradient
 
-For {{SVGElement('linearGradient')}}, `x1` defines the x coordinate of the starting point of the *gradient vector* used to map the gradient stop values. The exact behavior of this attribute is influenced by the {{SVGAttr('gradientUnits')}} attributes
+For {{SVGElement('linearGradient')}}, `x1` defines the x coordinate of the starting point of the _gradient vector_ used to map the gradient stop values. The exact behavior of this attribute is influenced by the {{SVGAttr('gradientUnits')}} attributes
 
 <table class="properties">
   <tbody>
@@ -131,7 +140,11 @@ For {{SVGElement('linearGradient')}}, `x1` defines the x coordinate of the start
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -141,18 +154,18 @@ html,body,svg { height:100% }
   bounding limit of the shape it is applied to
   -->
   <linearGradient x1="0%" id="g0">
-    <stop offset="0"    stop-color="black" />
+    <stop offset="0" stop-color="black" />
     <stop offset="100%" stop-color="red" />
   </linearGradient>
 
-  <rect x="1"  y="1" width="8" height="8" fill="url(#g0)" />
+  <rect x="1" y="1" width="8" height="8" fill="url(#g0)" />
 
   <!--
   Here the gradient vector start at 80% of the left
   bounding limit of the shape it is applied to
   -->
   <linearGradient x1="80%" id="g1">
-    <stop offset="0"    stop-color="black" />
+    <stop offset="0" stop-color="black" />
     <stop offset="100%" stop-color="red" />
   </linearGradient>
 

@@ -12,6 +12,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimationElement.targetElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGAnimationElement.targetElement`** property refers to

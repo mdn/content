@@ -10,13 +10,14 @@ tags:
   - parameters
 browser-compat: javascript.functions
 ---
+
 {{jsSidebar("Functions")}}
 
 Generally speaking, a function is a "subprogram" that can be _called_ by code
 external (or internal in the case of recursion) to the function. Like the program
 itself, a function is composed of a sequence of statements called the _function
 body_. Values can be _passed_ to a function, and the function
-will *return* a value.
+will _return_ a value.
 
 In JavaScript, functions are first-class objects, because they can have properties and
 methods just like any other object. What distinguishes them from other objects is that
@@ -165,7 +166,7 @@ When functions are used only once, a common pattern is an [IIFE (Immediately Inv
 
 IIFE are function expressions that are invoked as soon as the function is declared.
 
-### The generator function (function*) declaration
+### The generator function (function\*) declaration
 
 There is a special syntax for generator function declarations (see
 {{jsxref('Statements/function*', 'function* statement')}} for details):
@@ -183,7 +184,7 @@ function* name([param[, param[, ... param]]]) {
 - `statements`
   - : The statements comprising the body of the function.
 
-### The generator function (function*) expression
+### The generator function (function\*) expression
 
 A generator function expression is similar to and has the same syntax as a generator
 function declaration (see {{jsxref('Operators/function*', 'function* expression')}} for
@@ -317,9 +318,7 @@ The syntax for defining getters and setters uses the object literal syntax.
 
 ### Method definition syntax
 
-Starting with ECMAScript 2015, you are able to define own methods in a shorter syntax,
-similar to the getters and setters.
-See [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) for more information.
+In object literals, you are able to define own methods in a shorter syntax, similar to the getters and setters. See [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) for more information.
 
 ```js
 const obj = {
@@ -376,37 +375,34 @@ body. Attempting to use it outside the function's body results in an error (or g
 
 ```js
 const y = function x() {};
-alert(x); // throws an error
+console.log(x); // ReferenceError: x is not defined
 ```
 
-The function name also appears when the function is serialized via
-[`Function`'s toString method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString).
+The function name also appears when the function is serialized via its
+[`toString()` method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString).
 
 On the other hand, the variable the function is assigned to is limited only by its
 scope, which is guaranteed to include the scope in which the function is declared.
 
-As the 4th example shows, the function name can be different from the variable the
+As the `const y = function x() {}` example shows, the function name can be different from the variable the
 function is assigned to. They have no relation to each other. A function declaration
 also creates a variable with the same name as the function name. Thus, unlike those
 defined by function expressions, functions defined by function declarations can be
-accessed by their name in the scope they were defined in:
+accessed by their name in the scope they were defined in, as well as in their own body.
 
-A function defined by `new Function` does not have a function name.
-However, the serialized form of the function shows as if it has the name "anonymous".
-For example, `alert(new Function())` outputs:
+A function defined by `new Function` will dynamically have its source assembled, which is observable when you serialize it. For example, `console.log(new Function().toString())` gives:
 
 ```js
-function anonymous() {
+function anonymous(
+) {
+
 }
 ```
 
-Since the function actually does not have a name, `anonymous` is not a
-variable that can be accessed within the function. For example, the following would
-result in an error:
+This is the actual source used to compile the function. However, although the `Function()` constructor will create the function with name `anonymous`, this name is not added to the scope of the body. The body only ever has access to global variables. For example, the following would result in an error:
 
 ```js
-const foo = new Function("alert(anonymous);");
-foo();
+new Function("alert(anonymous);")();
 ```
 
 Unlike functions defined by function expressions or by the `Function`
@@ -414,7 +410,7 @@ constructor, a function defined by a function declaration can be used before the
 function declaration itself. For example:
 
 ```js
-foo(); // logs "FOO!"
+foo(); // Logs "FOO!"
 function foo() {
   console.log('FOO!');
 }
@@ -649,16 +645,16 @@ are no brackets "()" after the function name so the actual function is not calle
 
 ## See also
 
-- {{jsxref("Statements/function", "function statement")}}
-- {{jsxref("Operators/function", "function expression")}}
-- {{jsxref("Statements/function*", "function* statement")}}
-- {{jsxref("Operators/function*", "function* expression")}}
+- [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
+- [`function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+- [`function*` expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("Function")}}
 - {{jsxref("GeneratorFunction")}}
-- {{jsxref("Functions/Arrow_functions", "Arrow functions")}}
-- {{jsxref("Functions/Default_parameters", "Default parameters")}}
-- {{jsxref("Functions/rest_parameters", "Rest parameters")}}
-- {{jsxref("Functions/arguments", "Arguments object")}}
-- {{jsxref("Functions/get", "getter")}}
-- {{jsxref("Functions/set", "setter")}}
-- {{jsxref("Functions/Method_definitions", "Method definitions")}}
+- [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- [Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- [Default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+- [Method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
+- [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get)
+- [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+- [The `arguments` object](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)

@@ -160,7 +160,7 @@ Landing page
 
 Each page type that you will use in your project should have a page template for others to copy the structure from. You should decide on these early on.
 
-Please refer to our section on [page types](/en-us/docs/MDN/Writing_guidelines/Page_structures/Page_types). If additions need to be made, please liaise with your MDN Web Docs representative.
+Please refer to our section on [page types](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types). If additions need to be made, please liaise with your MDN Web Docs representative.
 
 ### Maintenance plan
 

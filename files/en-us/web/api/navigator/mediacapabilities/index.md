@@ -4,14 +4,14 @@ slug: Web/API/Navigator/mediaCapabilities
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Media
   - Media Capabilities API
   - MediaCapabilities
   - Navigator
 browser-compat: api.Navigator.mediaCapabilities
 ---
-{{SeeCompatTable}}
+
+{{APIRef("HTML DOM")}}
 
 The **`Navigator.mediaCapabilities`** read-only property
 returns a {{domxref("MediaCapabilities")}} object that can expose information about the
@@ -20,7 +20,7 @@ by the [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API).
 
 ## Syntax
 
-```js
+```js-nolint
 mediaCapabilitiesObj = globalObj.navigator.mediaCapabilities
 ```
 
@@ -58,5 +58,3 @@ navigator.mediaCapabilities.decodingInfo({
 
 - [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API)
 - {{domxref("Navigator")}}
-
-{{APIRef("HTML DOM")}}

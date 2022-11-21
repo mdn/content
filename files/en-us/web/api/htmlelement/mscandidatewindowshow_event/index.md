@@ -6,6 +6,7 @@ tags:
   - Non-standard
   - Event
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{Non-standard_header()}}
@@ -13,8 +14,6 @@ tags:
 The **`mscandidatewindowshow`** event is thrown immediately after the Input Method Editor (IME) candidate window is set to appear, but before it renders.
 
 This proprietary method is specific to Internet Explorer.
-
-> **Note:** Windows 8.1 and Windows 7 IMEs for certain languages on Internet Explorer for the desktop might not support this event. On Internet Explorer in the new Windows UI, this event is supported in Windows 8.1 IMEs of all languages.
 
 This event fires after the positioning information of the IME candidate window has been determined. You can obtain the positioning information using the [getCandidateWindowClientRect](/en-US/docs/Web/API/getCandidateWindowClientRect) method, and adjust your layout as needed to avoid any occlusions with the IME candidate window.
 
@@ -49,7 +48,7 @@ function candidateWindowShowHandler(e) {
 }
 ```
 
-When the IME candidate window changes position or closes, it fires  {{domxref("HTMLElement/mscandidatewindowupdate_event", "mscandidatewindowupdate")}} or {{domxref("HTMLElement/mscandidatewindowhide_event", "mscandidatewindowhide")}} events. Developers could listen to them and shift the suggestion UI accordingly.
+When the IME candidate window changes position or closes, it fires {{domxref("HTMLElement/mscandidatewindowupdate_event", "mscandidatewindowupdate")}} or {{domxref("HTMLElement/mscandidatewindowhide_event", "mscandidatewindowhide")}} events. Developers could listen to them and shift the suggestion UI accordingly.
 
 ## See also
 

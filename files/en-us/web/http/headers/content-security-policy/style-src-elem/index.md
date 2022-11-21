@@ -15,12 +15,12 @@ tags:
   - style-src-elem
 browser-compat: http.headers.Content-Security-Policy.style-src-elem
 ---
+
 {{HTTPSidebar}}
 
-The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
-**`style-src-elem`** directive
-specifies valid sources for stylesheets {{HTMLElement("style")}} elements and
-{{HTMLElement("link")}} elements with `rel="stylesheet"`.
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`style-src-elem`** directive specifies valid sources for stylesheet {{HTMLElement("style")}} elements and {{HTMLElement("link")}} elements with `rel="stylesheet"`.
+
+The directive does not set valid sources for inline style attributes; these are set using {{CSP("style-src-attr")}} (and valid sources for all styles may be set with {{CSP("style-src")}}).
 
 <table class="properties">
   <tbody>
@@ -36,9 +36,8 @@ specifies valid sources for stylesheets {{HTMLElement("style")}} elements and
       <th scope="row">{{CSP("default-src")}} fallback</th>
       <td>
         <p>
-          Yes. If this directive is absent, the user agent will look for
-          the {{CSP("style-src")}} directive, and if both of them are
-          absent, fallback to <code>default-src</code> directive.
+          Yes.
+          If this directive is absent, the user agent will look for the {{CSP("style-src")}} directive, and if both of them are absent, fall back to <code>default-src</code> directive.
         </p>
       </td>
     </tr>
@@ -69,7 +68,35 @@ Note that this same set of values can be used in all {{Glossary("fetch directive
 
 ## Examples
 
-TBD
+### Violation cases
+
+Given this CSP header:
+
+```http
+Content-Security-Policy: style-src-elem https://example.com/
+```
+
+…the following stylesheets are blocked and won't load:
+
+```html
+<link href="https://not-example.com/styles/main.css" rel="stylesheet" />
+
+<style>
+  #inline-style {
+    background: red;
+  }
+</style>
+
+<style>
+  @import url("https://not-example.com/styles/print.css") print;
+</style>
+```
+
+…as well as styles loaded using the {{HTTPHeader("Link")}} header:
+
+```http
+Link: <https://not-example.com/styles/stylesheet.css>;rel=stylesheet
+```
 
 ## Specifications
 

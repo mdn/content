@@ -15,11 +15,13 @@ tags:
   - style-src-attr
 browser-compat: http.headers.Content-Security-Policy.style-src-attr
 ---
+
 {{HTTPSidebar}}
 
-The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
-**`style-src-attr`** directive
-specifies valid sources for inline styles applied to individual DOM elements.
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`style-src-attr`** directive specifies valid sources for inline styles applied to individual DOM elements.
+
+The directive does not set valid sources for {{HTMLElement("style")}} elements and {{HTMLElement("link")}} elements with `rel="stylesheet"`.
+These are set using {{CSP("style-src-elem")}} (and valid sources for all styles may be set with {{CSP("style-src")}}).
 
 <table class="properties">
   <tbody>
@@ -35,8 +37,8 @@ specifies valid sources for inline styles applied to individual DOM elements.
       <th scope="row">{{CSP("default-src")}} fallback</th>
       <td>
         <p>
-          Yes. If this directive is absent, the user agent will look for the {{CSP("style-src")}} directive, and if both of them are
-          absent, fallback to <code>default-src</code> directive.
+          Yes.
+          If this directive is absent, the user agent will look for the {{CSP("style-src")}} directive, and if both of them are absent, fallback to <code>default-src</code> directive.
         </p>
       </td>
     </tr>
@@ -67,7 +69,34 @@ Note that this same set of values can be used in all {{Glossary("fetch directive
 
 ## Examples
 
-TBD
+### Violation cases
+
+Given this CSP header:
+
+```http
+Content-Security-Policy: script-src-attr 'none'
+```
+
+…the inline style applied to the element below not be applied:
+
+```html
+<div style="display:none">Foo</div>
+```
+
+The policy would also block any styles applied in JavaScript by setting the `style` attribute directly, or by setting {{domxref("CSSStyleDeclaration.cssText", "cssText")}}:
+
+```js
+document.querySelector('div').setAttribute('style', 'display:none;');
+document.querySelector('div').style.cssText = 'display:none;';
+```
+
+Style properties that are set directly on the element's {{domxref("HTMLElement/style", "style")}} property will not be blocked, allowing users to safely manipulate styles via JavaScript:
+
+```js
+document.querySelector('div').style.display = 'none';
+```
+
+Note that using JavaScript might independently be blocked using the {{CSP("script-src")}} CSP directive.
 
 ## Specifications
 

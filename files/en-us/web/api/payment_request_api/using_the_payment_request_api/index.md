@@ -9,6 +9,7 @@ tags:
   - Payment Request API
   - PaymentRequest
 ---
+
 {{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}
 
 The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) provides a browser-based method of connecting users and their preferred payment systems and platforms to merchants that they want to pay for goods and services. This article is a guide to making use of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API), with examples and suggested best practices.
@@ -17,7 +18,7 @@ The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) provides a br
 
 This section details the basics of using the Payment Request API to make a payment.
 
-> **Note:** The code snippets from this section are from our [Feature detect support demo](https://github.com/mdn/dom-examples/blob/master/payment-request/feature-detect-support.html).
+> **Note:** The code snippets from this section are from our [Feature detect support demo](https://github.com/mdn/dom-examples/blob/main/payment-request/feature-detect-support.html).
 
 ### Creating a new payment request object
 
@@ -130,7 +131,7 @@ if (window.PaymentRequest) {
       // the legacy web form checkout:
       window.location.href = '/legacy-web-form-checkout';
     });
-    
+
     // Every click on the checkout button should use a new instance of
     // PaymentRequest object, because PaymentRequest.show() can be
     // called only once per instance.
@@ -163,11 +164,7 @@ if (window.PaymentRequest) {
     buildShoppingCartDetails()
   );
   request.canMakePayment().then((canMakeAFastPayment) => {
-    if (canMakeAFastPayment) {
-      checkoutButton.textContent = "Fast Checkout with W3C";
-    } else {
-      checkoutButton.textContent = "Setup W3C Checkout";
-    }
+    checkoutButton.textContent = canMakeAFastPayment ? "Fast Checkout with W3C" : "Setup W3C Checkout";
   }).catch((error) => {
     // The user may have turned off the querying functionality in their
     // privacy settings. The website does not know whether they can make
@@ -191,7 +188,7 @@ const supportedPaymentMethods = [ /* supported methods */ ];
 
 let shouldCallPaymentRequest = true;
 let fallbackToLegacyOnPaymentRequestFailure = false;
-new PaymentRequest(supportedPaymentMethods, { 
+new PaymentRequest(supportedPaymentMethods, {
   total: { label: 'Stub', amount: { currency: 'USD', value: '0.01' } }
 })
   .canMakePayment()
@@ -199,7 +196,7 @@ new PaymentRequest(supportedPaymentMethods, {
     shouldCallPaymentRequest = result;
   }).catch((error) => {
     console.error(error);
-    
+
     // The user may have turned off query ability in their privacy settings.
     // Let's use PaymentRequest by default and fallback to legacy
     // web form based checkout.

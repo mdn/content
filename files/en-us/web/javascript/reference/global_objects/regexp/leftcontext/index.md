@@ -11,6 +11,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.leftContext
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 The non-standard **leftContext** property is a static and read-only property of regular expressions that contains the substring preceding the most recent match. `` RegExp.$` `` is an alias for this property.
@@ -29,9 +30,9 @@ You can not use the shorthand alias with the dot property accessor (`` RegExp.$`
 
 ```js
 const re = /world/g;
-re.test('hello world!');
+re.test("hello world!");
 RegExp.leftContext; // "hello "
-RegExp['$`'];       // "hello "
+RegExp["$`"]; // "hello "
 ```
 
 ## Specifications

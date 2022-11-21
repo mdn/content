@@ -1,6 +1,7 @@
 ---
-title: Flow Layout and Writing Modes
+title: Flow layout and writing modes
 slug: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes
+page-type: guide
 tags:
   - CSS
   - Flow Layout
@@ -8,11 +9,14 @@ tags:
   - Orientation
   - Writing-mode
 ---
+
+{{CSSRef}}
+
 The CSS 2.1 specification, which details how normal flow behaves, assumes a horizontal writing mode. [Layout](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow) properties should work in the same way in vertical writing modes. In this guide, we look at how flow layout behaves when used with different document writing modes.
 
 This is not a comprehensive guide to the use of writing modes in CSS, the aim here is to document the areas where flow layout interacts with writing modes in possibly unanticipated ways. The [external resources](#external_resources) and [see also](#see_also) sections of this document link to more writing modes resources.
 
-## The Writing Modes Specification
+## Writing modes specification
 
 The CSS Writing Modes Level 3 Specification defines the impact a change the document writing mode has on flow layout. In the writing modes introduction, [the specification says](https://drafts.csswg.org/css-writing-modes-3/#text-flow),
 
@@ -26,9 +30,9 @@ While certain languages will use a particular writing mode or text direction, we
 
 {{EmbedGHLiveSample("css-examples/flow/writing-modes/creative-use.html", '100%', 720)}}
 
-## The `writing-mode` property and block flow
+## Block flow direction
 
-The {{cssxref("writing-mode")}} property accepts the values `horizontal-tb`, `vertical-rl` and `vertical-lr`. These values control the direction that blocks flow on the page. The initial value is `horizontal-tb,` which is a top to bottom block flow direction with a horizontal inline direction. Left to right languages, such as English, and Right to left languages. such as Arabic, are all `horizontal-tb`.
+The {{cssxref("writing-mode")}} property accepts the values `horizontal-tb`, `vertical-rl` and `vertical-lr`. These values control the direction that blocks flow on the page. The initial value is `horizontal-tb,` which is a top to bottom block flow direction with a horizontal inline direction. Left to right languages, such as English, and Right to left languages, such as Arabic, are all `horizontal-tb`.
 
 The following example shows blocks using `horizontal-tb`.
 
@@ -42,7 +46,7 @@ The final example demonstrates the third possible value for `writing-mode` — `
 
 {{EmbedGHLiveSample("css-examples/flow/writing-modes/vertical-lr.html", '100%', 720)}}
 
-## Boxes with a different writing mode to their parent
+## Nested writing modes
 
 When a nested box is assigned a different writing mode to its parent, then an inline level box will display as if it has `display: inline-block`.
 
@@ -58,7 +62,7 @@ Replaced elements such as images will not change their orientation based on the 
 
 {{EmbedGHLiveSample("css-examples/flow/writing-modes/replaced.html", '100%', 720)}}
 
-## Logical Properties and Values
+## Logical properties and values
 
 Once you are working in writing modes other than `horizontal-tb` many of the properties and values that are mapped to the physical dimensions of the screen seem strange. For example, if you give a box a width of 100px, in `horizontal-tb` that would control the size in the inline direction. In `vertical-lr` it controls the size in the block direction because it does not rotate with the text.
 
@@ -77,9 +81,5 @@ In most cases, flow layout works as you would expect it to when changing the wri
 ## See also
 
 - [Writing Modes](/en-US/docs/Web/CSS/CSS_Writing_Modes)
-
-## External Resources
-
-- _[CSS Writing Modes](https://24ways.org/2016/css-writing-modes/)_, Jen Simmons on 24 Ways
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/CSS_Flow_Layout/")}}
+- [Writing Modes And CSS Layout](https://www.smashingmagazine.com/2019/08/writing-modes-layout/)
+- [CSS Writing Modes](https://24ways.org/2016/css-writing-modes/)

@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/45
 tags:
   - Firefox
 ---
+
 {{FirefoxSidebar}}
 
 To test the latest developer features of Firefox, install Firefox Developer Edition Firefox 45 was released on March 8, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -39,10 +40,10 @@ Highlights:
   - Resolved value of grid-template-columns,grid-template-rows in px units ({{bug(978212)}}).
   - The related feature {{cssxref("display")}}: contents has been supported since [Firefox 37](/en-US/docs/Mozilla/Firefox/Releases/37)
 
-- Implement full support for CSS Box Alignment for CSS Grid, support the missing values: `start`, `end`, `self-start`, `self-end`, `left`, `right`, `last-baseline`, `space-evenly`({{bug(1176782)}}).  CSS Box Alignment currently applies only to CSS Flexbox and CSS Grid.
+- Implement full support for CSS Box Alignment for CSS Grid, support the missing values: `start`, `end`, `self-start`, `self-end`, `left`, `right`, `last-baseline`, `space-evenly` ({{bug(1176782)}}). CSS Box Alignment currently applies only to CSS Flexbox and CSS Grid.
 - \[css-grid]\[css-flexbox] Implement grid/flex layout for \<fieldset> ({{bug(1230207)}}).
 - The `inline-start` and `inline-end` values have been added to {{cssxref("float")}} and {{cssxref("clear")}} ({{bug(1122918)}}). They are enabled by default on Nightly and Aurora (Dev edition), as well as on Firefox OS; to activate it on a release or beta version, you need to flip the `layout.css.float-logical-values.enabled` to `true`.
-- The {{cssxref("text-emphasis")}}, {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}}, and {{cssxref("text-emphasis-position")}} have been implemented; they are disabled by default (set `layout.css.text-emphasis.enabled`  to true to activate them ({{bug(1040668)}}).
+- The {{cssxref("text-emphasis")}}, {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}}, and {{cssxref("text-emphasis-position")}} have been implemented; they are disabled by default (set `layout.css.text-emphasis.enabled` to true to activate them ({{bug(1040668)}}).
 - Several `-webkit` prefixed properties and values have been added for web compatibility, behind the preference `layout.css.prefixes.webkit`, defaulting to `false`:
 
   - Added `-webkit-backface-visibility`, `-webkit-perspective` and `-webkit-perspective-origin` for web compatibility, behind the preference `layout.css.prefixes.webkit`, defaulting to `false` ({{bug(1179444)}}).
@@ -144,7 +145,7 @@ Starting in Firefox 45, search plugins located in the user's profile's `searchpl
 
 ### Other
 
-- WebIDL constructors could be called without the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator in chrome context.  Now such code will raise a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) as in Web content since Firefox 30. For example, `var req = XMLHttpRequest();` needs to be `var req = new XMLHttpRequest();`.
+- WebIDL constructors could be called without the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator in chrome context. Now such code will raise a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) as in Web content since Firefox 30. For example, `var req = XMLHttpRequest();` needs to be `var req = new XMLHttpRequest();`.
 
 ## Older versions
 

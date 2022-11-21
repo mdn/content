@@ -12,7 +12,7 @@ tags:
 browser-compat: html.elements.figure
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<figure>`** [HTML](/en-US/docs/Web/HTML) element represents self-contained content, potentially with an optional caption, which is specified using the {{HTMLElement("figcaption")}} element. The figure, its caption, and its contents are referenced as a single unit.
 
@@ -30,9 +30,9 @@ The **`<figure>`** [HTML](/en-US/docs/Web/HTML) element represents self-containe
         <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots"
-          >sectioning root</a
-        >, palpable content.
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content"
+          >palpable content</a
+        >.
       </td>
     </tr>
     <tr>
@@ -90,7 +90,6 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 ## Usage notes
 
 - Usually a `<figure>` is an image, illustration, diagram, code snippet, etc., that is referenced in the main flow of a document, but that can be moved to another part of the document or to an appendix without affecting the main flow.
-- Being a [sectioning root](/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots), the outline of the content of the `<figure>` element is excluded from the main outline of the document.
 - A caption can be associated with the `<figure>` element by inserting a {{HTMLElement("figcaption")}} inside it (as the first or the last child). The first `<figcaption>` element found in the figure is presented as the figure's caption.
 
 ## Examples
@@ -100,16 +99,12 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 ```html
 <!-- Just an image -->
 <figure>
-  <img
-  src="favicon-192x192.png"
-  alt="The beautiful MDN logo.">
+  <img src="favicon-192x192.png" alt="The beautiful MDN logo." />
 </figure>
 
 <!-- Image with a caption -->
 <figure>
-  <img
-  src="favicon-192x192.png"
-  alt="The beautiful MDN logo.">
+  <img src="favicon-192x192.png" alt="The beautiful MDN logo." />
   <figcaption>MDN Logo</figcaption>
 </figure>
 ```
@@ -142,9 +137,11 @@ function NavigatorExample() {
 
 ```html
 <figure>
-  <figcaption><cite>Edsger Dijkstra:</cite></figcaption>
-  <blockquote>If debugging is the process of removing software bugs,
-  then programming must be the process of putting them in.</blockquote>
+  <figcaption><b>Edsger Dijkstra:</b></figcaption>
+  <blockquote>
+    If debugging is the process of removing software bugs, then programming must
+    be the process of putting them in.
+  </blockquote>
 </figure>
 ```
 
@@ -155,14 +152,12 @@ function NavigatorExample() {
 ```html
 <figure>
   <p style="white-space:pre">
-Bid me discourse, I will enchant thine ear,
-  Or like a fairy trip upon the green,
-Or, like a nymph, with long dishevelled hair,
-  Dance on the sands, and yet no footing seen:
-Love is a spirit all compact of fire,
-  Not gross to sink, but light, and will aspire.</p>
-  <figcaption><cite>Venus and Adonis</cite>,
-    by William Shakespeare</figcaption>
+    Bid me discourse, I will enchant thine ear, Or like a fairy trip upon the
+    green, Or, like a nymph, with long dishevelled hair, Dance on the sands, and
+    yet no footing seen: Love is a spirit all compact of fire, Not gross to
+    sink, but light, and will aspire.
+  </p>
+  <figcaption><cite>Venus and Adonis</cite>, by William Shakespeare</figcaption>
 </figure>
 ```
 
