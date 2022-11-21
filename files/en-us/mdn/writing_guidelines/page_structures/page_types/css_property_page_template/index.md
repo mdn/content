@@ -121,9 +121,13 @@ This is an optional section to include a description of the property and explain
 
 `\{{CSSInfo}}`
 
+_Remember to remove the codes and backslash in the markdown file when using this macro call._
+
 ## Formal syntax
 
 `\{{CSSSyntax}}`
+
+_Remember to remove the codes and backslash in the markdown file when using this macro call._
 
 ## Examples
 
