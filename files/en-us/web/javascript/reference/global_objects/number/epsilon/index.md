@@ -28,7 +28,7 @@ Because `EPSILON` is a static property of {{jsxref("Number")}}, you always use i
 
 ### Testing equality
 
-Because floating point numbers are represented in binary, not decimal, they are not always exact. For example, `0.1 + 0.2` is not exactly equal to `0.3`:
+Any number encoding system occupying a finite number of bits, of whatever base you choose (eg. decimal or binary), will _necessarily_ be unable to represent all numbers exactly, because you are trying to represent an infinite number of points on a number line using a finite amount of memory. For example, a base-10 (decimal) numbering system cannot represent 1/3 exactly; and a base-2 (binary) numbering system cannot represent `0.1` exactly. Thus, for example, `0.1 + 0.2` is not exactly equal to `0.3`:
 
 ```js
 console.log(0.1 + 0.2); // 0.30000000000000004
