@@ -34,7 +34,7 @@ intercept(options)
 
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
-    - `handler`
+    - `handler` {{optional_inline}}
       - : A callback function that defines what the navigation handling behavior should be. This generally handles resource fetching, and returns a promise.
     - `focusReset` {{optional_inline}}
       - : Defines the navigation's focus behavior. This may take one of the following values:
