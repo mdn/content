@@ -23,6 +23,11 @@ The **`PerformanceLongTaskTiming`** interface of the [Long Tasks API](/en-US/doc
 - {{domxref("PerformanceLongTaskTiming.attribution")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a sequence of {{domxref('TaskAttributionTiming')}} instances.
 
+## Instance methods
+
+- {{domxref("PerformanceLongTaskTiming.toJSON()")}} {{Experimental_Inline}}
+  - : Returns a JSON representation of the `PerformanceLongTaskTiming` object.
+
 ## Specifications
 
 {{Specifications}}

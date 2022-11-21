@@ -333,7 +333,6 @@
         "DOMPoint",
         "DOMPointReadOnly",
         "DOMRect",
-        "DOMTimeStamp",
         "DOMTokenList",
         "Element",
         "Event",
@@ -822,6 +821,7 @@
       "overview": ["Media Source Extensions API"],
       "interfaces": [
         "MediaSource",
+        "MediaSourceHandle",
         "SourceBuffer",
         "SourceBufferList",
         "VideoPlaybackQuality"
@@ -842,6 +842,21 @@
       "interfaces": ["MediaRecorder", "MediaRecorderErrorEvent", "BlobEvent"],
       "methods": [],
       "properties": [],
+      "events": []
+    },
+    "Navigation API": {
+      "overview": ["Navigation API"],
+      "guides": [],
+      "interfaces": [
+        "NavigateEvent",
+        "Navigation",
+        "NavigationCurrentEntryChangeEvent",
+        "NavigationDestination",
+        "NavigationHistoryEntry",
+        "NavigationTransition"
+      ],
+      "methods": [],
+      "properties": ["Window.navigation"],
       "events": []
     },
     "Network Information API": {
@@ -1206,6 +1221,8 @@
         "ReadableStreamBYOBRequest",
         "ReadableStreamDefaultController",
         "ReadableStreamDefaultReader",
+        "TransformStream",
+        "TransformStreamDefaultController",
         "WritableStream",
         "WritableStreamDefaultController",
         "WritableStreamDefaultWriter"

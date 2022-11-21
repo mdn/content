@@ -77,7 +77,7 @@ The interface also supports the following properties which are listed in the ord
 ## Instance methods
 
 - {{domxref("PerformanceResourceTiming.toJSON()")}}
-  - : Returns a string that is the JSON representation of the {{domxref("PerformanceResourceTiming")}} object.
+  - : Returns a JSON representation of the `PerformanceResourceTiming` object.
 
 ## Example
 

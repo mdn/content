@@ -17,6 +17,8 @@ For example, consider an array called `emp`, which contains employees' names ind
 
 JavaScript does not have an explicit array data type. However, you can use the predefined `Array` object and its methods to work with arrays in your applications. The `Array` object has methods for manipulating arrays in various ways, such as joining, reversing, and sorting them. It has a property for determining the array length and other properties for use with regular expressions.
 
+We will be focusing on arrays in this article, but many of the same concepts apply to typed arrays as well, since arrays and typed arrays share many similar methods. For more information on typed arrays, see the [typed array reference](/en-US/docs/Web/JavaScript/Typed_arrays).
+
 ## Creating an array
 
 The following statements create equivalent arrays:
@@ -337,9 +339,8 @@ const sortFn = (a, b) => {
     return -1; // Negative number => a < b, a comes before b
   } else if (a[a.length - 1] > b[b.length - 1]) {
     return 1; // Positive number => a > b, a comes after b
-  } else if (a[a.length - 1] === b[b.length - 1]) {
-    return 0; // Zero => a = b, a and b keep their original order
   }
+  return 0; // Zero => a = b, a and b keep their original order
 }
 myArray.sort(sortFn);
 // sorts the array so that myArray = ["Wind","Fire","Rain"]
@@ -618,27 +619,5 @@ Array.prototype.forEach.call('a string', (chr) => {
   console.log(chr)
 })
 ```
-
-## Typed Arrays
-
-[JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) are array-like objects and provide a mechanism for accessing raw binary data. As you already know, {{jsxref("Array")}} objects grow and shrink dynamically and can have any JavaScript value. JavaScript engines perform optimizations so that these arrays are fast. However, as web applications become more and more powerful, adding features such as audio and video manipulation, access to raw data using [WebSockets](/en-US/docs/Web/API/WebSockets_API), and so forth, it has become clear that there are times when it would be helpful for JavaScript code to be able to quickly and easily manipulate raw binary data in typed arrays.
-
-Typed array objects share many of the same methods as arrays with similar semantics. However, they are conceptually not arrays and don't have all array methods.
-
-### Buffers and views: typed array architecture
-
-To achieve maximum flexibility and efficiency, JavaScript typed arrays split the implementation into _buffers_ and _views_. A buffer (implemented by the {{jsxref("ArrayBuffer")}} object) is an object representing a chunk of data; it has no format to speak of, and offers no mechanism for accessing its contents. In order to access the memory contained in a buffer, you need to use a view. A view provides a _context_ — that is, a data type, starting offset, and number of elements — that turns the data into an actual typed array.
-
-![A diagram showing how different typed arrays may be views of the same underlying buffer. Each one has a different element number and width.](typed_arrays.png)
-
-### ArrayBuffer
-
-The {{jsxref("ArrayBuffer")}} is a data type that is used to represent a generic, fixed-length binary data buffer. You can't directly manipulate the contents of an `ArrayBuffer`; instead, you create a typed array view or a {{jsxref("DataView")}} which represents the buffer in a specific format, and use that to read and write the contents of the buffer.
-
-### Typed array views
-
-Typed array views have self descriptive names and provide views for all the usual numeric types like `Int8`, `Uint32`, `Float64` and so forth. There is one special typed array view, {{jsxref("Uint8ClampedArray")}}, which clamps the values between `0` and `255`. This is useful for [Canvas data processing](/en-US/docs/Web/API/ImageData), for example.
-
-For more information, see [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) and the reference documentation for the different {{jsxref("TypedArray")}} objects.
 
 {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}

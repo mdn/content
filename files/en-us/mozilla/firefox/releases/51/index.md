@@ -77,7 +77,7 @@ tags:
 
 ### Canvas
 
-- The non-standard `CanvasRenderingContext2D.mozFillRule`() method has been removed; the fill rule can be defined using a parameter of the standard {{domxref("CanvasRenderingContext2D.fill()")}} method ({{bug(826619)}}).
+- The non-standard `CanvasRenderingContext2D.mozFillRule()` method has been removed; the fill rule can be defined using a parameter of the standard {{domxref("CanvasRenderingContext2D.fill()")}} method ({{bug(826619)}}).
 - The {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}} has been unprefixed ({{bug(768072)}})
 
 ### SVG
