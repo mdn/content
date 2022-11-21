@@ -44,7 +44,7 @@ The {{domxref("MutationRecord")}} is a read-only interface that represents an in
     - For `characterData`, it is the `CharacterData` node.
     - For `childList`, it is the node whose children changed.
 - {{domxref("MutationRecord.type")}} {{ReadOnlyInline}}
-  - : A string representing the type of mutation: `attributes` if the mutation was an attribute mutation, `characterData` if it was a mutation to a `CharacterData` node, and `"childList"` if it was a mutation to the tree of nodes.
+  - : A string representing the type of mutation: `attributes` if the mutation was an attribute mutation, `characterData` if it was a mutation to a `CharacterData` node, and `childList` if it was a mutation to the tree of nodes.
 
 ## Specifications
 
