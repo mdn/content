@@ -34,7 +34,7 @@ The boolean value `true` if the given value is a number with value {{jsxref("NaN
 
 ## Description
 
-Due to both equality operators, [`==`](/en-US/docs/Web/JavaScript/Reference/Operators/Equality) and [`===`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality), evaluating to `false` when checking if {{jsxref("NaN")}} _is_ {{jsxref("NaN")}}, the function `Number.isNaN()` provides a convenient way to check for equality with `NaN`. This situation is unlike all other possible value comparisons in JavaScript.
+The function `Number.isNaN()` provides a convenient way to check for equality with `NaN`. Note that you cannot test for equality with `NaN` using either the [`==`](/en-US/docs/Web/JavaScript/Reference/Operators/Equality) or [`===`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) operators, because unlike all other value comparisons in JavaScript, these evaluate to `false` whenever one operand is {{jsxref("NaN")}}, even if the other operand is also {{jsxref("NaN")}}.
 
 Since `x !== x` is only true for `NaN` among all possible JavaScript values, `Number.isNaN(x)` can also be replaced with a test for `x !== x`, despite the latter being less readable.
 
