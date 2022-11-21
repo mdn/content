@@ -40,4 +40,3 @@ Browser implementation is being discussed in <https://github.com/w3c/web-share/i
 
 - {{HTTPHeader('Permissions-Policy')}} header
 - [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)
-- [Using Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy/Using_Permissions_Policy)

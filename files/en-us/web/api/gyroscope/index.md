@@ -21,7 +21,7 @@ The **`Gyroscope`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_AP
 
 To use this sensor, the user must grant permission to the `'gyroscope'` device sensor through the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
-If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
+If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. Our [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) article contains implementation instructions.
 
 {{InheritanceDiagram}}
 

@@ -44,5 +44,3 @@ Default allow list for `screen-wake-lock` is `'self'`.
 - [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API)
 - {{HTTPHeader('Permissions-Policy')}} header
 - [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)
-- [Using Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy/Using_Permissions_Policy)
-- [Default value of the allow list](https://www.w3.org/TR/screen-wake-lock/#wake-locks)

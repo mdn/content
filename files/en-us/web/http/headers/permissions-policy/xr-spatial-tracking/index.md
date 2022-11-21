@@ -43,4 +43,3 @@ The default allowlist is `'self'`.
 - {{DOMxRef("XRSystem/requestSession","navigator.xr.requestSession()")}}, and {{DOMxRef("XRSystem/isSessionSupported","navigator.xr.isSessionSupported()")}} and {{domxref("XRSystem/devicechange_event", "devicechange")}} event on {{DOMxRef("Navigator.xr","navigator.xr")}}
 - {{HTTPHeader("Permissions-Policy")}} header
 - [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)
-- [Using Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy/Using_Permissions_Policy)

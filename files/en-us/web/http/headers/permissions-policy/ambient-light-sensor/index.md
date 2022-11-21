@@ -38,4 +38,3 @@ Default allow list for `ambient-light-sensor` is `'self'`.
 
 - {{HTTPHeader('Permissions-Policy')}} header
 - [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)
-- [Using Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy/Using_Permissions_Policy)

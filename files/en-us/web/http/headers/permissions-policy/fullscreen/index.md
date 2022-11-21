@@ -10,7 +10,7 @@ tags:
 browser-compat: http.headers.Permissions-Policy.fullscreen
 ---
 
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `fullscreen` directive controls whether the current document is allowed to use {{domxref('Element.requestFullscreen()')}}. When this policy is enabled, the returned {{jsxref('Promise')}} rejects with a {{jsxref('TypeError')}}.
 
@@ -69,4 +69,3 @@ iframe attributes can selectively enable features in certain frames, and not in 
 
 - {{HTTPHeader("Permissions-Policy")}} header
 - [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)
-- [Using Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy/Using_Permissions_Policy)

@@ -19,7 +19,7 @@ browser-compat: api.OrientationSensor
 
 The **`OrientationSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) is the base class for orientation sensors. This interface cannot be used directly. Instead it provides properties and methods accessed by interfaces that inherit from it.
 
-If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
+If a Permissions Policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. Our [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) article contains implementation instructions.
 
 {{InheritanceDiagram}}
 

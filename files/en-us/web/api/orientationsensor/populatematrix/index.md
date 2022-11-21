@@ -32,9 +32,9 @@ where:
 - Y = Vy \* sin(θ/2)
 - Z = Vz \* sin(θ/2)
 
-If a feature policy blocks use of a feature it is because your code is inconsistent
+If a Permissions Policy blocks use of a feature it is because your code is inconsistent
 with the policies set on your server. This is not something that would ever be shown to
-a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation
+a user. Our [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) article contains implementation
 instructions.
 
 ## Syntax

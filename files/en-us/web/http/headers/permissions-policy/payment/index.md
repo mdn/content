@@ -42,4 +42,3 @@ The `payment` feature's default allowlist value is `'self'`.
 
 - {{HTTPHeader("Permissions-Policy")}} header field
 - [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)
-- [Using Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy/Using_Permissions_Policy)

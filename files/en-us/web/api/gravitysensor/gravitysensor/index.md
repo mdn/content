@@ -51,7 +51,7 @@ new GravitySensor(options)
 - `SecurityError` {{domxref("DOMException")}}
   - : Use of this feature was blocked by a feature policy. If a feature policy blocks use of a feature,
     it is because your code is inconsistent with the policies set on your server.
-    This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
+    This is not something that would ever be shown to a user. Our [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) article contains implementation instructions.
 
 ## Specifications
 
