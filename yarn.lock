@@ -39,10 +39,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.16.tgz#5f240c77c68202ce91c81e97e9bc1156b21c4976"
   integrity sha512-VxxLd+kSq0Rspru9FpRUfHmRkm5DAEyrpmHvzPaFr0QmPrBhglP/tpggOPnsjENfp2WeBKqQ4r0NFyAFIW3Nug==
 
-"@mdn/yari@1.24.4":
-  version "1.24.4"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.24.4.tgz#fbe1ebf71ba5ec3fccc80057c39ff796055fbee2"
-  integrity sha512-KQlUCE+uD0jVPACfTiOOdCUVKk2nDbVwpyyRLV+mOXZ6xez3i+NteG7k99HPM7Ml5XqulMGx+UyivXUpW//cOA==
+"@mdn/yari@1.24.10":
+  version "1.24.10"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.24.10.tgz#708c5f87d423b2738116982090deb47c92ede03d"
+  integrity sha512-VepctNFnznXNBLzPtH89zjx+0RXoBCMQMFcwIEgnZwKtQ4C8u4WLxdTi06bxlvzLi6BfisQnEeQfJoLBfU6elw==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
@@ -55,6 +55,7 @@
     chalk "^4.1.2"
     cheerio "^1.0.0-rc.12"
     cli-progress "^3.11.2"
+    compare-versions "^5.0.1"
     compression "^1.7.4"
     cookie "^0.5.0"
     cookie-parser "^1.4.6"
@@ -970,6 +971,11 @@ commander@^9.3.0:
   version "9.4.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-9.4.0.tgz#bc4a40918fefe52e22450c111ecd6b7acce6f11c"
   integrity sha512-sRPT+umqkz90UA8M1yqYfnHlZA7fF6nSphDtxeywPZ49ysjxDQybzk13CL+mXekDRG92skbcqCLVovuCusNmFw==
+
+compare-versions@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/compare-versions/-/compare-versions-5.0.1.tgz#14c6008436d994c3787aba38d4087fabe858555e"
+  integrity sha512-v8Au3l0b+Nwkp4G142JcgJFh1/TUhdxut7wzD1Nq1dyp5oa3tXaqb03EXOAB6jS4gMlalkjAUPZBMiAfKUixHQ==
 
 compressible@~2.0.16:
   version "2.0.18"

@@ -14,7 +14,7 @@ tags:
 
 Apache .htaccess files allow users to configure directories of the web server they control without modifying the main configuration file.
 
-While this is useful it's important to note that using `.htaccess` files slows down Apache, so, if you have access to the main server configuration file (which is usually called \`httpd.conf\`), you should add this logic there under a `Directory` block.
+While this is useful it's important to note that using `.htaccess` files slows down Apache, so, if you have access to the main server configuration file (which is usually called `httpd.conf`), you should add this logic there under a `Directory` block.
 
 See [.htaccess](https://httpd.apache.org/docs/current/howto/htaccess.html) in the Apache HTTPD documentation site for more details about what .htaccess files can do.
 
@@ -239,7 +239,7 @@ Use [AddDefaultCharset](https://httpd.apache.org/docs/current/mod/core.html#addd
 
 ## Set the charset for specific media types
 
-Serve the following file types with the `charset` parameter set to \`UTF-8\` using the [AddCharset](https://httpd.apache.org/docs/current/mod/mod_mime.html#addcharset) directive available in `mod_mime`.
+Serve the following file types with the `charset` parameter set to `UTF-8` using the [AddCharset](https://httpd.apache.org/docs/current/mod/mod_mime.html#addcharset) directive available in `mod_mime`.
 
 ```apache
 <IfModule mod_mime.c>
@@ -389,7 +389,7 @@ Nonetheless, you should ensure that you send the `X-Frame-Options` header for al
 
 ## Content Security Policy (CSP)
 
-[CSP (Content Security Policy)](https://content-security-policy.com/) mitigates the risk of cross-site scripting and other content-injection attacks by setting a \`Content Security Policy\` which allows trusted sources of content for your website.
+[CSP (Content Security Policy)](https://content-security-policy.com/) mitigates the risk of cross-site scripting and other content-injection attacks by setting a `Content Security Policy` which allows trusted sources of content for your website.
 
 There is no policy that fits all websites, the example below is meant as guidelines for you to modify for your site.
 

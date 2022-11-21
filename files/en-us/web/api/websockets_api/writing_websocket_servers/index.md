@@ -138,7 +138,7 @@ const MASK = [1, 2, 3, 4]; // 4-byte mask
 const ENCODED = [105, 103, 111, 104, 110]; // encoded string "hello"
 
 // Create the byte Array of decoded payload
-const DECODED = Uint8Array.from(ENCODED, (elt, i) => elt ^ mask[i % 4]); // Perform an XOR on the mask
+const DECODED = Uint8Array.from(ENCODED, (elt, i) => elt ^ MASK[i % 4]); // Perform an XOR on the mask
 ```
 
 Now you can figure out what **DECODED** means depending on your application.
