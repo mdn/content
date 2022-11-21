@@ -111,7 +111,9 @@ function returns `true` if the element exists in the array:
 const fruits = ['apple', 'banana', 'mango', 'guava'];
 
 function checkAvailability(arr, val) {
-  return arr.some((arrVal) => val === arrVal);
+  return arr.some(function(arrVal) {
+    return val === arrVal;
+  });
 }
 
 checkAvailability(fruits, 'kela');   // false
