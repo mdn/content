@@ -79,7 +79,7 @@ When form fields are too small, placeholder text can get cropped in an undesirab
 
 ### Customized input field
 
-The following example highlights the Branch and ID code fields with a custom style.
+The following example highlights the Student ID field with a custom style.
 
 #### HTML
 
