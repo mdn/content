@@ -181,7 +181,7 @@ Because of this potential, a browser may opt to fudge the returned values in som
 
 ## User Agent Client Hints
 
-Some media queries have corresponding [User Agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) which represent the values of discrete headers as HTTP response headers. These headers include: {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}}, {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}, and {{HTTPHeader("Sec-CH-Save-Data")}}.
+Some media queries have corresponding [User Agent client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints), which are HTTP headers that request content that is already customized for the particular media requirement. These headers include: {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}}, {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}, and {{HTTPHeader("Sec-CH-Save-Data")}}.
 
 ## Formal syntax
 
