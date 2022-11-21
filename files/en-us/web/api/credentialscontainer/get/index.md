@@ -111,5 +111,5 @@ obtained, the Promise will resolve to null.
 
 ## See also
 
-- {{HTTPHeader("Feature-Policy")}} directive
-  {{HTTPHeader("Feature-Policy/publickey-credentials-get","publickey-credentials-get")}}
+- {{HTTPHeader("Permissions-Policy")}} directive
+  {{HTTPHeader("Permissions-Policy/publickey-credentials-get","publickey-credentials-get")}}

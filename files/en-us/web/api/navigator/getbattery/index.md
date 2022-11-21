@@ -21,7 +21,7 @@ system's battery. It returns a battery promise, which is resolved in a
 monitor the battery status. This implements the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API); see that
 documentation for additional details, a guide to using the API, and sample code.
 
-> **Note:** In some browsers access to this feature is controlled by the {{HTTPHeader("Feature-Policy")}} directive {{HTTPHeader("Feature-Policy/battery","battery")}}.
+> **Note:** In some browsers access to this feature is controlled by the {{HTTPHeader("Permissions-Policy")}} directive {{HTTPHeader("Permissions-Policy/battery","battery")}}.
 
 ## Syntax
 
@@ -53,7 +53,7 @@ This method doesn't throw true exceptions; instead, it rejects the returned prom
 
   - : No User Agent currently throws this exception, but the specification describes the following behaviors:
     > This document is not allowed to use this feature.
-    > For example, it might not be explicitly allowed or restricted via {{HTTPHeader("Feature-Policy")}} {{HTTPHeader("Feature-Policy/battery", "battery")}} feature.
+    > For example, it might not be explicitly allowed or restricted via {{HTTPHeader("Permissions-Policy")}} {{HTTPHeader("Permissions-Policy/battery", "battery")}} feature.
 
 ## Examples
 
@@ -86,5 +86,5 @@ For more examples and details, see [Battery Status API](/en-US/docs/Web/API/Batt
 ## See also
 
 - [Battery Status API](/en-US/docs/Web/API/Battery_Status_API)
-- `Feature-Policy` {{HTTPHeader("Feature-Policy/battery", "battery")}}
+- `Permissions-Policy` {{HTTPHeader("Permissions-Policy/battery", "battery")}}
   feature

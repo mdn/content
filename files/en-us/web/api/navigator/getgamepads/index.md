@@ -20,7 +20,7 @@ The **`Navigator.getGamepads()`** method returns an array of
 Elements in the array may be `null` if a gamepad disconnects during a
 session, so that the remaining gamepads retain the same index.
 
-Calls to this method will throw a `SecurityError` {{domxref('DOMException')}} if disallowed by the {{httpheader('Feature-Policy/gamepad','gamepad')}} [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy).
+Calls to this method will throw a `SecurityError` {{domxref('DOMException')}} if disallowed by the {{httpheader('Permissions-Policy/gamepad','gamepad')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ## Syntax
 

@@ -37,4 +37,3 @@ By default the policy is set to `*`, which means synchronous requests are allowe
 ## See also
 
 - [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)
-- [Using Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy/Using_Permissions_Policy)

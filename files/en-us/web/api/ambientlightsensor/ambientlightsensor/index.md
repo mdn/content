@@ -16,8 +16,6 @@ browser-compat: api.AmbientLightSensor.AmbientLightSensor
 
 The **`AmbientLightSensor()`** constructor creates a new {{domxref("AmbientLightSensor")}} object, which returns the current light level or illuminance of the ambient light around the hosting device.
 
-If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
-
 ## Syntax
 
 ```js-nolint

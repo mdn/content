@@ -37,7 +37,7 @@ The {{domxref("navigator.share()")}} method invokes the native sharing mechanism
 It requires {{Glossary("transient activation")}}, and hence must be triggered off a UI event like a button click.
 Further, the method must specify valid data that is supported for sharing by the native implementation.
 
-The Web Share API is gated by the [web-share](/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share) permission policy.
+The Web Share API is gated by the [web-share](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/web-share) Permissions Policy.
 If the policy is supported but has not been granted, both methods will indicate that the data is not sharable.
 
 ## Interfaces

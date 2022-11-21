@@ -24,10 +24,10 @@ Forbidden header names start with `Proxy-` or `Sec-`, or are one of the followin
 - {{HTTPHeader("Date")}}
 - {{HTTPHeader("DNT")}}
 - {{HTTPHeader("Expect")}}
-- {{HTTPHeader("Feature-Policy")}}
 - {{HTTPHeader("Host")}}
 - {{HTTPHeader("Keep-Alive")}}
 - {{HTTPHeader("Origin")}}
+- {{HTTPHeader("Permissions-Policy")}}
 - `Proxy-`
 - `Sec-`
 - {{HTTPHeader("Referer")}}

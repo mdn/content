@@ -38,7 +38,6 @@ Default allow list for `battery` is `'self'`.
 
 - {{HTTPHeader("Permissions-Policy")}} header
 - [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)
-- [Using Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy/Using_Permissions_Policy)
 - [Battery Status API](/en-US/docs/Web/API/Battery_Status_API)
 - {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}}
 - {{DOMxRef("BatteryManager")}}

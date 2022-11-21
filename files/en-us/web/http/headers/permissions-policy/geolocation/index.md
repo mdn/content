@@ -9,7 +9,7 @@ tags:
 browser-compat: http.headers.Permissions-Policy.geolocation
 ---
 
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header
 `geolocation` directive controls whether the current document is allowed to
@@ -80,4 +80,3 @@ even if those frames contain documents from the same origin.
 
 - {{HTTPHeader("Permissions-Policy")}} header
 - [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)
-- [Using Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy/Using_Permissions_Policy)

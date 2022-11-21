@@ -40,4 +40,3 @@ As of June 2019, the [spec draft](https://wicg.github.io/picture-in-picture/#fea
 
 - {{HTTPHeader("Permissions-Policy")}} header
 - [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)
-- [Using Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy/Using_Permissions_Policy)

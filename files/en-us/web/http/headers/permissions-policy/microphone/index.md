@@ -10,7 +10,7 @@ tags:
 browser-compat: http.headers.Permissions-Policy.microphone
 ---
 
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header
 `microphone` directive controls whether the current document is allowed to
@@ -43,4 +43,3 @@ Default allow list for `microphone` is `'self'`.
 
 - {{HTTPHeader("Permissions-Policy")}} header
 - [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)
-- [Using Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy/Using_Permissions_Policy)

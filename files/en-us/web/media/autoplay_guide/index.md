@@ -56,7 +56,7 @@ As a general rule, you can assume that media will be allowed to autoplay only if
 - The audio is muted or its volume is set to 0
 - The user has interacted with the site (by clicking, tapping, pressing keys, etc.)
 - If the site has been allowlisted; this may happen either automatically if the browser determines that the user engages with media frequently, or manually through preferences or other user interface features
-- If the autoplay feature policy is used to grant autoplay support to an {{HTMLElement("iframe")}} and its document.
+- If the autoplay [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) is used to grant autoplay support to an {{HTMLElement("iframe")}} and its document.
 
 Otherwise, the playback will likely be blocked. The exact situations that result in blocking, and the specifics of how sites become allowlisted vary from browser to browser, but the above are good guidelines to go by.
 
@@ -191,50 +191,50 @@ let playAttempt = setInterval(() => {
 
 In the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), a website or app can start playing audio using the `start()` method on a source node linked to the {{domxref("AudioContext")}}. Doing so outside the context of handling a user input event is subject to autoplay rules.
 
-## The autoplay feature policy
+## The autoplay Permissions Policy
 
-In addition to the browser-side management and control over autoplay functionality described above, a web server can also express its willingness to allow autoplay to function. The {{Glossary("HTTP")}} {{HTTPHeader("Feature-Policy")}} header's [`autoplay`](/en-US/docs/Web/HTTP/Headers/Feature-Policy/autoplay) directive is used to control which domains, if any, can be used to autoplay media. By default, the `autoplay` feature policy is set to `'self'` (_including the single quote characters_), indicating that autoplay is permitted as they're hosted on the same domain as the document.
+In addition to the browser-side management and control over autoplay functionality described above, a web server can also express its willingness to allow autoplay to function. The {{Glossary("HTTP")}} {{HTTPHeader("Permissions-Policy")}} header's [`autoplay`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/autoplay) directive is used to control which domains, if any, can be used to autoplay media. By default, the `autoplay` Permissions Policy is set to `self`, indicating that autoplay is permitted as they're hosted on the same domain as the document.
 
-You can also specify `'none'` to disable autoplay entirely, `'*'` to allow autoplay from all domains, or one or more specific origins from which media can be automatically played. These origins are separated by space characters.
+You can also specify an empty allowlist (`()`) to disable autoplay entirely, `*` to allow autoplay from all domains, or one or more specific origins from which media can be automatically played. These origins are separated by space characters.
 
-> **Note:** The specified feature policy applies to the document and every {{HTMLElement("iframe")}} nested within it, unless those frames include an {{htmlattrxref("allow", "iframe")}}, which sets a new feature policy for that frame and all frames nested within it.
+> **Note:** The specified Permissions Policy applies to the document and every {{HTMLElement("iframe")}} nested within it, unless those frames include an {{htmlattrxref("allow", "iframe")}}, which sets a new Permissions Policy for that frame and all frames nested within it.
 
-When using the {{htmlattrxref("allow", "iframe")}} attribute on an `<iframe>` to specify a feature policy for that frame and its nested frames, you can also specify the value `'src'` to allow autoplay of media only from the same domain as that specified by the frame's {{htmlattrxref("src", "iframe")}} attribute.
+When using the {{htmlattrxref("allow", "iframe")}} attribute on an `<iframe>` to specify a Permissions Policy for that frame and its nested frames, you can also specify the value `'src'` to allow autoplay of media only from the same domain as that specified by the frame's {{htmlattrxref("src", "iframe")}} attribute.
 
 ### Example: Allowing autoplay only from the document's domain
 
-To use the {{HTTPHeader("Feature-Policy")}} header to only allow media to autoplay from the document's {{Glossary("origin")}}:
+To use the {{HTTPHeader("Permissions-Policy")}} header to only allow media to autoplay from the document's {{Glossary("origin")}}:
 
 ```http
-Feature-Policy: autoplay 'self'
+Permissions-Policy: autoplay=(self)
 ```
 
 To do the same for an {{HTMLElement("iframe")}}:
 
 ```html
-<iframe src="mediaplayer.html" allow="autoplay 'src'"> </iframe>
+<iframe src="mediaplayer.html" allow="autoplay"> </iframe>
 ```
 
 ### Example: Allowing autoplay and fullscreen mode
 
-Adding [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) permission to the previous example results in a `Feature-Policy` header like the following if fullscreen access is allowed regardless of the domain; a domain restriction can be added as well as needed.
+Adding [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) permission to the previous example results in a `Permissions-Policy` header like the following if fullscreen access is allowed regardless of the domain; a domain restriction can be added as well as needed.
 
 ```http
-Feature-Policy: autoplay 'self'; fullscreen
+Permissions-Policy: autoplay=(self), fullscreen=(self)
 ```
 
 The same permissions, grated using the `<iframe>` element's `allow` property, look like this:
 
 ```html
-<iframe src="mediaplayer.html" allow="autoplay 'src'; fullscreen"> </iframe>
+<iframe src="mediaplayer.html" allow="autoplay; fullscreen"> </iframe>
 ```
 
 ### Example: Allowing autoplay from specific sources
 
-The `Feature-Policy` header to allow media to be played from both the document's (or `<iframe>`'s) own domain and `https://example.media` looks like this:
+The `Permissions-Policy` header to allow media to be played from both the document's (or `<iframe>`'s) own domain and `https://example.media` looks like this:
 
 ```http
-Feature-Policy: autoplay 'self' https://example.media
+Permissions-Policy: autoplay=(self "https://example.media")
 ```
 
 An {{HTMLElement("iframe")}} can be written to specify that this autoplay policy should be applied to itself and any child frames would be written thusly:
@@ -250,10 +250,10 @@ An {{HTMLElement("iframe")}} can be written to specify that this autoplay policy
 
 ### Example: Disabling autoplay
 
-Setting the `autoplay` feature policy to `'none'` disables autoplay entirely for the document or `<iframe>` and all nested frames. The HTTP header is:
+Setting the `autoplay` Permissions Policy to `()`/`none` disables autoplay entirely for the document or `<iframe>` and all nested frames. The HTTP header is:
 
 ```http
-Feature-Policy: autoplay 'none'
+Permissions-Policy: autoplay=()
 ```
 
 Using the `<iframe>`'s `allow` attribute:

@@ -54,7 +54,7 @@ The Picture-in-Picture API augments the {{DOMxRef("HTMLVideoElement")}}, {{DOMxR
 ### Instance properties on the Document interface
 
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
-  - : The `pictureInPictureEnabled` property tells you whether or not it is possible to engage picture-in-picture mode. This is `false` if picture-in-picture mode is not available for any reason (e.g. the [`"picture-in-picture"` feature](/en-US/docs/Web/HTTP/Headers/Feature-Policy/picture-in-picture) has been disallowed, or picture-in-picture mode is not supported).
+  - : The `pictureInPictureEnabled` property tells you whether or not it is possible to engage picture-in-picture mode. This is `false` if picture-in-picture mode is not available for any reason (e.g. the [`"picture-in-picture"` feature](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/picture-in-picture) has been disallowed, or picture-in-picture mode is not supported).
 
 ### Instance properties on the Document or ShadowRoot interfaces
 
@@ -82,9 +82,7 @@ The [`:picture-in-picture`](/en-US/docs/Web/CSS/:picture-in-picture) [CSS](/en-U
 
 ## Controlling access
 
-The availability of picture-in-picture mode can be controlled using [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy). The fullscreen mode feature is identified by the string `"picture-in-picture"`, with a default allow-list value of `"self"`, meaning that picture-in-picture mode is permitted in top-level document contexts, as well as to nested browsing contexts loaded from the same origin as the top-most document.
-
-See [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) to learn more about using Feature Policy to control access to an API.
+The availability of picture-in-picture mode can be controlled using [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy). The fullscreen mode feature is identified by the string `"picture-in-picture"`, with a default allowlist value of `"self"`, meaning that picture-in-picture mode is permitted in top-level document contexts, as well as to nested browsing contexts loaded from the same origin as the top-most document.
 
 ## Examples
 
