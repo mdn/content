@@ -17,7 +17,7 @@ A **character class escape** is an escape sequence that represents a set of char
 
 ## Description
 
-Unlike [escape characters](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_character), character class escapes represent a predefined _set_ of characters, much like a [character class](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class). The following character classes are supported:
+Unlike [character escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape), character class escapes represent a predefined _set_ of characters, much like a [character class](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class). The following character classes are supported:
 
 - `\d`
   - : Matches any digit character. Equivalent to `[0-9]`.
@@ -28,7 +28,7 @@ Unlike [escape characters](/en-US/docs/Web/JavaScript/Reference/Regular_expressi
 
 The uppercase forms `\D`, `\W`, and `\S` negates the match or `\d`, `\w`, and `\s`, respectively. They match any character that is not in the set of characters matched by the lowercase form.
 
-[Unicode character class escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape) start with `\p` and `\P`, but they are only supported in [unicode mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode). In non-unicode mode, they are [identity escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_character) for the `p` or `P` character.
+[Unicode character class escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape) start with `\p` and `\P`, but they are only supported in [unicode mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode). In non-unicode mode, they are [identity escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape) for the `p` or `P` character.
 
 Character class escapes can be used in [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class). However, using them as boundaries of character ranges is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) and you should not rely on it.
 
@@ -38,5 +38,5 @@ Character class escapes can be used in [character classes](/en-US/docs/Web/JavaS
 - [Regex reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Character class: `[...]`, `[^...]`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
 - [Unicode character class escape: `\p{...}`, `\P{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
-- [Escape character: `\n`, `\u{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_character)
+- [Character escape: `\n`, `\u{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)
 - [Disjunction: `|`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)

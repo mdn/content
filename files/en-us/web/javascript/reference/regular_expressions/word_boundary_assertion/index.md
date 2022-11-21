@@ -16,7 +16,7 @@ A **word boundary assertion** checks if the current position in the string is a 
 
 ## Description
 
-`\b` asserts that the current position in the string is a word boundary. `\B` negates the assertion: it asserts that the current position is not a word boundary. Both are _assertions_, so unlike other [escape characters](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_character) or [escape classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape), they don't consume any characters.
+`\b` asserts that the current position in the string is a word boundary. `\B` negates the assertion: it asserts that the current position is not a word boundary. Both are _assertions_, so unlike other [character escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape) or [character class escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape), `\b` and `\B` don't consume any characters.
 
 A word character includes the following:
 
@@ -60,4 +60,4 @@ hasThanks("Thanksgiving is around the corner."); // false
 - [Input boundary assertion: `^`, `$`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)
 - [Lookahead assertion: `(?=...)`, `(?!...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
 - [Lookbehind assertion: `(?<=...)`, `(?<!...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)
-- [Escape character: `\n`, `\u{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_character)
+- [Character escape: `\n`, `\u{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)

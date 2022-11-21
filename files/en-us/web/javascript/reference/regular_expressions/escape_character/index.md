@@ -1,11 +1,11 @@
 ---
-title: "Escape character: \\n, \\u{...}"
-slug: Web/JavaScript/Reference/Regular_expressions/Escape_character
+title: "Character escape: \\n, \\u{...}"
+slug: Web/JavaScript/Reference/Regular_expressions/Character_escape
 ---
 
 {{JsSidebar}}
 
-An **escape character** represents a character that may not be able to be conveniently represented in its literal form.
+A **character escape** represents a character that may not be able to be conveniently represented in its literal form.
 
 ## Syntax
 

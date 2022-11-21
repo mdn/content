@@ -25,7 +25,7 @@ A character class specifies a list of characters between square bracket and matc
 
 - A single character: matches the character itself.
 - A range of characters: matches any character in the inclusive range. The range is specified by two characters separated by a dash (`-`). The first character must be smaller in character value than the second character.
-- Escape sequences: `\b`, `\-`, [character class escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape), [Unicode character class escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape), and other [escape characters](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_character).
+- Escape sequences: `\b`, `\-`, [character class escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape), [Unicode character class escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape), and other [character escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape).
 
 These syntaxes can occur any number of times, and the character sets they represent are unioned. For example, `/[a-zA-Z0-9]/` matches any letter or digit.
 
@@ -68,5 +68,5 @@ The `^` prefix in a character class inverts the match. For example, `[^abc]` mat
 - [Regex reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Character class escape: `\d`, `\D`, `\w`, `\W`, `\s`, `\S`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)
 - [Unicode character class escape: `\p{...}`, `\P{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
-- [Escape character: `\n`, `\u{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_character)
+- [Character escape: `\n`, `\u{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)
 - [Disjunction: `|`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)

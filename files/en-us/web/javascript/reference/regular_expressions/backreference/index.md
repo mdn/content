@@ -21,7 +21,7 @@ A **backreference** refers to the submatch of a previous [capturing group](/en-U
 
 ## Description
 
-A backreference is a way to match the same text as previously matched by a capturing group. Capturing groups count from 1, so the first capturing group's result can be referenced with `\1`, the second with `\2`, and so on. `\0` is an [escape character](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_character) for the NUL character.
+A backreference is a way to match the same text as previously matched by a capturing group. Capturing groups count from 1, so the first capturing group's result can be referenced with `\1`, the second with `\2`, and so on. `\0` is a [character escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape) for the NUL character.
 
 In [case-insensitive](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) matching, the backreference may match text with different casing from the original text.
 

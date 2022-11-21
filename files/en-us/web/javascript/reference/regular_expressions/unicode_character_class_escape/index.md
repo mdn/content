@@ -28,7 +28,7 @@ A **unicode character class escape** is a kind of [character class escape](/en-U
 
 ## Description
 
-`\p` and `\P` are only supported in [unicode mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode). In non-unicode mode, they are [identity escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_character) for the `p` or `P` character.
+`\p` and `\P` are only supported in [unicode mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode). In non-unicode mode, they are [identity escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape) for the `p` or `P` character.
 
 Every Unicode character has a set of properties that describe it. For example, the character [`a`](https://util.unicode.org/UnicodeJsps/character.jsp?a=0061) has the `General_Category` property with value `Lowercase_Letter`, and the `Script` property with value `Latn`. The `\p` and `\P` escape sequences allow you to match a character based on its properties.
 
@@ -44,5 +44,5 @@ To compose multiple properties, see [pattern subtraction and intersection](/en-U
 - [Regex reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Character class: `[...]`, `[^...]`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
 - [Character class escape: `\d`, `\D`, `\w`, `\W`, `\s`, `\S`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)
-- [Escape character: `\n`, `\u{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Escape_character)
+- [Character escape: `\n`, `\u{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)
 - [Disjunction: `|`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
