@@ -15,7 +15,7 @@ browser-compat: http.headers.Sec-CH-Prefers-Color-Scheme
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`Sec-CH-Prefers-Color-Scheme`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the user's preference for light or dark color themes. A user indicates their preference through an operating system setting (e.g. light or dark mode) or a user agent setting.
+The **`Sec-CH-Prefers-Color-Scheme`** [user preference media feature client hint](/en-US/docs/Web/HTTP/Client_hints#user_preference_media_features_client_hints) request header provides the user's preference for light or dark color themes. A user indicates their preference through an operating system setting (for example, light or dark mode) or a user agent setting.
 
 If a server signals to a client via the {{httpheader("Accept-CH")}} header that it accepts `Sec-CH-Prefers-Color-Scheme`, the client can then respond with this header to indicate the user's preference for a specific color scheme. The server can send the client appropriately adapted content, for example, images or CSS, to display light text on dark background on subsequent rendered content.
 
@@ -51,7 +51,8 @@ Sec-CH-Prefers-Color-Scheme: <preference>
 
 - `<preference>`
 
-  - : The user agent's preference for dark or light content. This is often taken from the underlying operating system's setting. The value of this directive can be either `light` or `dark`. A string indicating the user preference, either `"light"` or `"dark"`.
+  - : A string indicating the user agent's preference for dark or light content: `"light"` or `"dark"`.
+    The value may originate from a corresponding setting in the underlying operating system.
 
 ## Examples
 
@@ -82,7 +83,7 @@ Host: example.com
 Sec-CH-Prefers-Color-Scheme: "dark"
 ```
 
-The client will include the header in subsequent requests in the current session unless the `Accept-CH` changes in responses to indicate that it is no longer supported by the server.
+The client will include the header in subsequent requests in the current session, unless the `Accept-CH` changes in responses to indicate that it is no longer supported by the server.
 
 ## Specifications
 
