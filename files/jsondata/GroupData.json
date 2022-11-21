@@ -844,6 +844,21 @@
       "properties": [],
       "events": []
     },
+    "Navigation API": {
+      "overview": ["Navigation API"],
+      "guides": [],
+      "interfaces": [
+        "NavigateEvent",
+        "Navigation",
+        "NavigationCurrentEntryChangeEvent",
+        "NavigationDestination",
+        "NavigationHistoryEntry",
+        "NavigationTransition"
+      ],
+      "methods": [],
+      "properties": ["Window.navigation"],
+      "events": []
+    },
     "Network Information API": {
       "overview": ["Network Information API"],
       "interfaces": ["NetworkInformation"],

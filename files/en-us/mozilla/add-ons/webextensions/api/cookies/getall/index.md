@@ -62,7 +62,7 @@ let getting = browser.cookies.getAll(
     - `secure` {{optional_inline}}
       - : A `boolean` — filters cookies by their `secure` property, allowing you to filter secure cookies vs. non-secure cookies.
     - `session` {{optional_inline}}
-      - : A `boolean`— filters the cookies by their `session` property, allowing you to filter session cookies vs. persistent cookies.
+      - : A `boolean` — filters the cookies by their `session` property, allowing you to filter session cookies vs. persistent cookies.
     - `storeId` {{optional_inline}}
       - : A `string` representing the cookie store to retrieve cookies from. If omitted, the current execution context's cookie store will be used.
     - `url` {{optional_inline}}
