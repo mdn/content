@@ -18,7 +18,7 @@ tags:
 browser-compat: api.NavigationDestination.key
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`key`** read-only property of the
 {{domxref("NavigationDestination")}} interface returns the {{domxref("NavigationHistoryEntry.key", "key")}} value of the destination {{domxref("NavigationHistoryEntry")}} if the {{domxref("NavigateEvent.navigationType")}} is `traverse`, or `null` otherwise.

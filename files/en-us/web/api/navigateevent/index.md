@@ -17,7 +17,7 @@ tags:
 browser-compat: api.NavigateEvent
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`NavigateEvent`** interface of the {{domxref("Navigation API", "Navigation API", "", "nocode")}} is the event object for the {{domxref("Navigation/navigate_event", "navigate")}} event, which fires when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated (this includes usage of {{domxref("History API", "History API", "", "nocode")}} features like {{domxref("History.go()")}}). `NavigateEvent` provides access to information about that navigation, and allows developers to intercept and control the navigation handling.
 

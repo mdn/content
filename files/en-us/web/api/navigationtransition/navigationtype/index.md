@@ -18,7 +18,7 @@ tags:
 browser-compat: api.NavigationTransition.navigationType
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`navigationType`** read-only property of the
 {{domxref("NavigationTransition")}} interface returns the type of the ongoing navigation.

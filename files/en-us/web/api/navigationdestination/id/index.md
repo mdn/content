@@ -18,7 +18,7 @@ tags:
 browser-compat: api.NavigationDestination.id
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`id`** read-only property of the
 {{domxref("NavigationDestination")}} interface returns the {{domxref("NavigationHistoryEntry.id", "id")}} value of the destination {{domxref("NavigationHistoryEntry")}} if the {{domxref("NavigateEvent.navigationType")}} is `traverse`, or `null` otherwise.

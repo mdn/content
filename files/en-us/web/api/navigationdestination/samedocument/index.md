@@ -18,7 +18,7 @@ tags:
 browser-compat: api.NavigationDestination.sameDocument
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`sameDocument`** read-only property of the
 {{domxref("NavigationDestination")}} interface returns `true` if the navigation is to the same `document` as the current {{domxref("Document")}} value, or `false` otherwise.
