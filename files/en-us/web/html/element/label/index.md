@@ -22,7 +22,7 @@ Associating a `<label>` with an {{htmlelement("input")}} element (or other contr
 - The label text is not only visually associated with its corresponding text input; it is programmatically associated with it too. This means that, for example, a screen reader will read out the label when the user is focused on the form input, making it easier for an assistive technology user to understand what data should be entered.
 - When a user clicks or touches/taps a label, the browser passes the focus to its associated input (the resulting event is also raised for the input). That increased hit area for focusing the input provides an advantage to anyone trying to activate it — including those using a touch-screen device.
 
-To explicitly associate the `<label>` with an `<input>` element, you need to give the `<input>` an `id` attribute. The `<label>` then needs a `for` attribute whose value is the same as the input's `id`.
+To explicitly associate a `<label>` element with an `<input>` element, you first need to add the `id` attribute to the `<input>` element. Next, you add the `for` attribute to the `<label>` element, where the value of `for' is the same as the `id` in the `<input>` element.
 
 Alternatively, you can nest the `<input>` directly inside the `<label>`, in which case the `for` and `id` attributes are not needed because the association is implicit:
 
@@ -65,7 +65,7 @@ There are no special styling considerations for `<label>` elements — structura
 
 ## Examples
 
-### Implicit label example
+### Defining an implicit label
 
 ```html
 <label>Click me <input type="text" /></label>
@@ -73,7 +73,7 @@ There are no special styling considerations for `<label>` elements — structura
 
 {{EmbedLiveSample('Simple_label_example', '200', '50', '')}}
 
-### Explicit label: using the "for" attribute
+### Defining an explicit label with the "for" attribute
 
 ```html
 <label for="username">Click me to focus on the input field</label>
