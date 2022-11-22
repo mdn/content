@@ -17,22 +17,24 @@ browser-compat: http.headers.Permissions-Policy.document-domain
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header
 `document-domain` directive controls whether the current document is
-allowed to set {{domxref("document.domain")}}. When this policy is disabled, attempting
+allowed to set {{domxref("document.domain")}}.
+
+Specifically, where a defined policy blocks use of this feature, attempting
 to set {{domxref("document.domain")}} will fail and cause a `SecurityError`
 {{domxref("DOMException")}} to be thrown.
 
 ## Syntax
 
 ```http
-Permissions-Policy: document-domain <allowlist>;
+Permissions-Policy: document-domain=<allowlist>;
 ```
 
 - \<allowlist>
-  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax).
+  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy` > Syntax](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax) for more details.
 
 ## Default policy
 
-Default allow list for `document-domain` is `*`.
+The default allowlist for `document-domain` is `*`.
 
 ## Specifications
 

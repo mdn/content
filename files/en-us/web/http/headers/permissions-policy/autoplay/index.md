@@ -17,26 +17,26 @@ browser-compat: http.headers.Permissions-Policy.autoplay
 The HTTP {{HTTPHeader("Permissions-Policy")}} header
 `autoplay` directive controls whether the current document is allowed to
 autoplay media requested through the {{domxref("HTMLMediaElement")}} interface.
-When this policy is enabled and there were no user gestures, the {{jsxref("Promise")}}
+
+Specifically, where a defined policy blocks use of this feature and there were no user gestures, the {{jsxref("Promise")}}
 returned by {{domxref("HTMLMediaElement.play()")}} will reject with
 a {{domxref("DOMException")}}. The {{htmlattrxref("autoplay", "audio")}} attribute on
 {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements will be ignored.
 
-For more details on autoplay and autoplay blocking, see the article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide).
+> **Note:** For more details on autoplay and autoplay blocking, see the article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide).
 
 ## Syntax
 
 ```http
-Permissions-Policy: autoplay <allowlist>;
+Permissions-Policy: autoplay=<allowlist>;
 ```
 
 - \<allowlist>
-  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax).
+  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy` > Syntax](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax) for more details.
 
 ## Default policy
 
-The default value in [Google Chrome](https://chromestatus.com/feature/5100524789563392) is
-`'self'`.
+The default allowlist for `autoplay` is `self`.
 
 ## Specifications
 

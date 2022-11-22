@@ -3,6 +3,7 @@ title: 'Permissions-Policy: geolocation'
 slug: Web/HTTP/Headers/Permissions-Policy/geolocation
 tags:
   - Permissions Policy
+  - Experimental
   - Geolocation
   - HTTP
   - header
@@ -13,7 +14,9 @@ browser-compat: http.headers.Permissions-Policy.geolocation
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header
 `geolocation` directive controls whether the current document is allowed to
-use the {{domxref('Geolocation')}} Interface. When this policy is enabled, calls to
+use the {{domxref('Geolocation')}} Interface.
+
+Specifically, where a defined policy blocks use of this feature, calls to
 {{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}} and
 {{domxref('Geolocation.watchPosition','watchPosition()')}} will cause those functions'
 callbacks to be invoked with a {{domxref('GeolocationPositionError')}} code of
@@ -26,15 +29,15 @@ accessing geolocation. This includes same-origin frames.
 ## Syntax
 
 ```http
-Permissions-Policy: geolocation <allowlist>;
+Permissions-Policy: geolocation=<allowlist>;
 ```
 
 - \<allowlist>
-  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax).
+  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy` > Syntax](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax) for more details.
 
 ## Default policy
 
-Default allow list for `geolocation` is `'self'`.
+The default allowlist for `geolocation` is `self`.
 
 ## Examples
 
@@ -45,7 +48,7 @@ except for its own origin and those whose origin is `https://example.com`. It
 can do so by delivering the following HTTP response header to define a Permissions Policy:
 
 ```http
-Permissions-Policy: geolocation 'self' https://example.com
+Permissions-Policy: geolocation=(self "https://example.com")
 ```
 
 ### With an \<iframe> element
@@ -55,7 +58,7 @@ frames, except for a specific \<iframe>. It can do so by delivering the followin
 HTTP response header to define a Permissions Policy:
 
 ```http
-Permissions-Policy: geolocation 'self'
+Permissions-Policy: geolocation=(self)
 ```
 
 Then include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the

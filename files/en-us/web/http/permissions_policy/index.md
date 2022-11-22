@@ -26,22 +26,24 @@ Examples of what you can do with Permissions Policy:
 
 - Change the default behavior of autoplay on mobile and third-party videos.
 - Restrict a site from using sensitive devices like the camera, microphone, or speakers.
-- Allow iframes to use the [fullscreen API](/en-US/docs/Web/API/Fullscreen_API).
+- Allow iframes to use the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API).
 - Stop items from being scripted if they are not visible in the viewport, to improve performance.
 
 > **Note:** Permissions Policy used to be called Feature Policy. The name has changed, and so has the HTTP header syntax, so bear this in in mind if you have used Feature Policy in the past. Chrome supports the {{HTTPHeader("Permissions-Policy")}} header since version 88, with `Feature-Policy` still being supported as an alias. The `<iframe allow=" ... ">` syntax has stayed the same. Non-Chromium browsers currently don't support {{HTTPHeader("Permissions-Policy")}}, but they do support policy usage through the `allow` attribute.
 
 ## Concepts and usage
 
-The web provides functionality and APIs that may have privacy or security risks if abused. In such cases, you may wish to strictly limit how functionality is used on a website. Permissions Policy allows you to control which origins can use which features, both on the top-level page and in embedded {{htmlelement("iframe")}}s. The aim is to enforce best practices for good user experiences and provide granular control over sensitive or powerful features.
+The web provides functionality and APIs that may have privacy or security risks if abused. In such cases, you may wish to strictly limit how functionality is used on a website. In each case, there should be an intuitive or non-breaking way for web developers to detect and handle cases where a feature is disabled.
 
-In each case, there should be an intuitive or non-breaking way for web developers to detect and handle cases where a feature is disabled. Newly introduced features may have an explicit API to signal the state. Existing features that later integrate with Permissions Policy will typically use existing mechanisms. Some approaches include:
+Some approaches include:
 
 - "Permission denied" is returned for JavaScript APIs that require user permission grants.
 - JavaScript APIs that provide access to features return `false` or throw an error.
 - Options that control the feature behavior have different default values.
 
-## Permission policy syntax
+> **Note:** Newly-introduced features may have an explicit API to signal the state. Existing features that later integrate with Permissions Policy will typically use existing mechanisms.
+
+Permissions Policy allows you to control which origins can use which features, both on the top-level page and in embedded {{htmlelement("iframe")}}s. The aim is to enforce best practices for good user experiences and provide granular control over _sensitive_ or [powerful features](https://w3c.github.io/permissions/#dfn-powerful-feature) (meaning features that a user is required to give express permission for usage of, before related code can be executed).
 
 To control each feature, you write a policy that consists of:
 
@@ -55,19 +57,32 @@ Permissions Policy provides two ways to specify policies:
 
 Scripts can programmatically query information about the feature policy via the {{DOMxRef("FeaturePolicy")}} object located at either {{DOMxRef("Document.featurePolicy")}} or {{DOMxRef("HTMLIFrameElement.featurePolicy")}}.
 
-### allowlists
+## Relationship with the Permissions API
+
+Permissions Policy and the {{domxref("Permissions API", "Permissions API", "", "nocode")}} are closely-related, but different. The features that have their permissions controlled by both these technologies overlap.
+
+- Permissions Policy allows developers to specify whether a feature can be used in a particular document (or embeded `<frame>`s within it). These are referred to as **policy-controlled** features — see the [list of Permissions Policy directives](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#directives).
+- The Permissions API provides a consistent, programmatic way to query the status of user-granted API permissions for powerful features attributed to the current document. For example, if permission to access a particular API has been granted or denied. These features are recorded in the [Permissions Registry](https://w3c.github.io/permissions-registry/).
+
+The identifying string used for each feature is kept consistent across both, for example, `geolocation` for the {{domxref("Geolocation API", "Geolocation API", "", "nocode")}}. Most of the API features in the Permissions Registry also have a corresponding Permissions Policy directive. One exception is the {{domxref("Notifications API", "Notifications API", "", "nocode")}}.
+
+In practical terms, when you set a Permissions Policy that blocks the use of a powerful feature, the user won't be asked for permission to use it, and the Permissions API {{domxref("Permissions.query", "query()")}} method will always return a {{domxref("PermissionStatus.state", "state")}} value of `denied`.
+
+See also [Permissions > Relationship to the Permissions Policy specification](https://w3c.github.io/permissions/#relationship-to-permissions-policy).
+
+## allowlists
 
 An allowlist is a list of origins that takes one or more of the following values contained in parentheses, separated by spaces:
 
 - `*`: The feature will be allowed in this document, and all nested browsing contexts (`<iframe>`s) regardless of their origin.
-- `()`: The feature is disabled in top-level and nested browsing contexts. The equivalent for `<iframe>` `allow` attributes is `'none'`.
-- `(self)`: The feature will be allowed in this document, and in all nested browsing contexts (`<iframe>`s) in the same origin only. The feature is not allowed in cross-origin documents in nested browsing contexts. `self` can be considered shorthand for `https://your-site.example.com`. The equivalent for `<iframe>` `allow` attributes is `'self'`.
-- `'src'`: The feature will be allowed in this `<iframe>`, as long as the document loaded into it comes from the same origin as the URL in its {{HTMLElement('iframe','src','#Attributes')}} attribute. This value is only used in the iframe `allow` attribute, and is the _default_ `allowlist` value.
-- (`"<origin>"`): The feature is allowed for specific origins (for example, `https://a.example.com`). Origins should be separated by spaces. Note that origins in `<iframe>` allow attributes are not quoted.
+- `()` (empty allowlist): The feature is disabled in top-level and nested browsing contexts. The equivalent for `<iframe>` `allow` attributes is `'none'`.
+- `self`: The feature will be allowed in this document, and in all nested browsing contexts (`<iframe>`s) in the same origin only. The feature is not allowed in cross-origin documents in nested browsing contexts. `self` can be considered shorthand for `https://your-site.example.com`. The equivalent for `<iframe>` `allow` attributes is `self`.
+- `src`: The feature will be allowed in this `<iframe>`, as long as the document loaded into it comes from the same origin as the URL in its {{HTMLElement('iframe','src','#Attributes')}} attribute. This value is only used in the `<iframe>` `allow` attribute, and is the _default_ `allowlist` value in `<iframe>`s.
+- `"<origin>"`: The feature is allowed for specific origins (for example, `"https://a.example.com"`). Origins should be separated by spaces. Note that origins in `<iframe>` allow attributes are not quoted.
 
-The values `*` and `()` may only be used on their own, while `(self)` and `(src)` may be used in combination with one or more origins.
+The values `*` and `()` may only be used on their own, while `self` and `src` may be used in combination with one or more origins.
 
-> **Note:** Directives have a default allowlist, which is always one of `*`, `self`, or `none` for the `Permissions-Policy` HTTP header. These are specified on the individual [directive reference pages](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#directives). For `<iframe>` `allow` attributes , the default behavior is always `src`.
+> **Note:** Directives have a default allowlist, which is always one of `*`, `self`, or `none` for the `Permissions-Policy` HTTP header, and governs the default behavior if they are not explicitly listed in a policy. These are specified on the individual [directive reference pages](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#directives). For `<iframe>` `allow` attributes , the default behavior is always `src`.
 
 Chrome 108 introduced the ability to include wildcards in Permissions Policy origins. This means that instead of having to explicitly specify several different subdomains in an allowlist, you can specify them all in a single origin with a wildcard.
 
@@ -87,19 +102,17 @@ You can specify
 
 allowlist examples:
 
-```http
-*
-()
-(self)
-(src)
-("https://a.example.com")
-("https://a.example.com" "https://b.example.com")
-(self "https://a.example.com" "https://b.example.com")
-(src "https://a.example.com" "https://b.example.com")
-("https://*.example.com")
-```
+- `*`
+- `()`
+- `(self)`
+- `(src)`
+- `("https://a.example.com")`
+- `("https://a.example.com" "https://b.example.com")`
+- `(self "https://a.example.com" "https://b.example.com")`
+- `(src "https://a.example.com" "https://b.example.com")`
+- `("https://*.example.com")`
 
-### `Permissions-Policy` header syntax
+## Permissions-Policy header syntax
 
 The general syntax looks like this:
 
@@ -131,7 +144,7 @@ Permissions-Policy: geolocation=(self https://example.com)
 Permissions-Policy: camera=*
 ```
 
-### `<iframe>` syntax
+## &lt;iframe&gt; syntax
 
 The general syntax looks like this:
 
@@ -145,7 +158,7 @@ So for example to block all access to geolocation, you would do this:
 <iframe src="https://example.com" allow="geolocation 'none'">
 ```
 
-To apply a policy to the current origin and a couple of others, you'd do this:
+To apply a policy to the current origin and others, you'd do this:
 
 ```html
 <iframe src="https://example.com" allow="geolocation 'self' https://a.example.com https://b.example.com">
@@ -159,7 +172,7 @@ Several features can be controlled at the same time by including a semi-colon-se
 <iframe src="https://example.com" allow="geolocation 'self' https://a.example.com https://b.example.com; fullscreen 'none'">
 ```
 
-It is worth giving the `src` value a special mention. We mentioned above that using this allowlist value will mean that the associated feature will be allowed in this `<iframe>`, as long as the document loaded into it comes from the same origin as the URL in its {{HTMLElement('iframe','src','#Attributes')}} attribute. This value is the _default_ `allowlist` value for `<iframe>` allowlists, so the following are equivalent:
+It is worth giving the `src` value a special mention. We mentioned above that using this allowlist value will mean that the associated feature will be allowed in this `<iframe>`, as long as the document loaded into it comes from the same origin as the URL in its {{HTMLElement('iframe','src','#Attributes')}} attribute. This value is the _default_ `allowlist` value for features listed in `allow`, so the following are equivalent:
 
 ```html
 <iframe src="https://example.com" allow="geolocation 'src'">

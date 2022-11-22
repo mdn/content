@@ -13,20 +13,22 @@ browser-compat: http.headers.Permissions-Policy.picture-in-picture
 
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-The HTTP {{HTTPHeader("Permissions-Policy")}} header `picture-in-picture` directive controls whether the current document is allowed to play a video in a Picture-in-Picture mode via the corresponding API.
+The HTTP {{HTTPHeader("Permissions-Policy")}} header `picture-in-picture` directive controls whether the current document is allowed to play a video in a {{domxref("Picture-in-Picture API", "Picture-in-Picture", "", "nocode")}} mode.
+
+Specifically, where a defined policy blocks use of this feature, {{domxref("HTMLVideoElement.requestPictureInPicture()")}} calls will throw a {{domxref("DOMException")}} of type `SecurityError`.
 
 ## Syntax
 
 ```http
-Permissions-Policy: picture-in-picture <allowlist>;
+Permissions-Policy: picture-in-picture=<allowlist>;
 ```
 
 - \<allowlist>
-  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax).
+  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy` > Syntax](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax) for more details.
 
 ## Default policy
 
-As of June 2019, the [spec draft](https://wicg.github.io/picture-in-picture/#feature-policy) and [Google Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=806249#c17) set default allow list to `*`.
+The default allowlist for `picture-in-picture` is `*`.
 
 ## Specifications
 

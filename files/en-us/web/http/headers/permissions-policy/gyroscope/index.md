@@ -14,18 +14,20 @@ browser-compat: http.headers.Permissions-Policy.gyroscope
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `gyroscope` directive controls whether the current document is allowed to gather information about the orientation of the device through the {{domxref("Gyroscope")}} interface.
 
+Specifically, where a defined policy blocks use of this feature, {{domxref("Gyroscope.Gyroscope", "Gyroscope()")}} constructor calls will throw a {{domxref("DOMException")}} of type `SecurityError`.
+
 ## Syntax
 
 ```http
-Permissions-Policy: gyroscope <allowlist>;
+Permissions-Policy: gyroscope=<allowlist>;
 ```
 
 - \<allowlist>
-  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax).
+  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy` > Syntax](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax) for more details.
 
 ## Default policy
 
-Default allow list for `gyroscope` is `'self'`.
+The default allowlist for `gyroscope` is `self`.
 
 ## Specifications
 
