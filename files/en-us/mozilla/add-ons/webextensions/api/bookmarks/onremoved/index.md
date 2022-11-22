@@ -46,7 +46,7 @@ Events have three functions:
     - `id`
       - : `string`. ID of the item that was removed.
     - `removeInfo`
-      - : [`object`](#removeinfo). More details about the removed item.
+      - : `object`. More details about the removed item. See the [removeInfo](#removeinfo_2) section for more details.
 
 ## Additional objects
 

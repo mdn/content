@@ -47,7 +47,7 @@ Events have three functions:
   - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
     - `selectInfo`
-      - : [`object`](#selectinfo).
+      - : `object`. See the [selectInfo](#selectinfo_2) section for more details.
 
 ## Additional objects
 
