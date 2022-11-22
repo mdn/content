@@ -14,20 +14,26 @@ browser-compat: http.headers.Permissions-Policy.xr-spatial-tracking
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The HTTP {{HTTPHeader("Permissions-Policy")}} header `xr-spatial-tracking` directive controls whether the current document is allowed to use the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API). This policy controls whether {{DOMxRef("XRSystem/requestSession","navigator.xr.requestSession()")}} can return {{DOMxRef("XRSession")}} that requires spatial tracking and whether user agent can indicate support for sessions supporting spatial tracking via {{DOMxRef("XRSystem/isSessionSupported","navigator.xr.isSessionSupported()")}} and {{domxref("MediaDevices/devicechange_event", "devicechange")}} event on {{DOMxRef("Navigator.xr","navigator.xr")}} object.
+The HTTP {{HTTPHeader("Permissions-Policy")}} header `xr-spatial-tracking` directive controls whether the current document is allowed to use the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API).
+
+Specifically, where a defined policy blocks usage of this feature:
+
+- {{DOMxRef("XRSystem/isSessionSupported","navigator.xr.isSessionSupported()")}} and {{DOMxRef("XRSystem/requestSession","navigator.xr.requestSession()")}} calls will return a {{jsxref("Promise")}} that rejects with a {{domxref("DOMException")}} of type `SecurityError`.
+
+- {{domxref("MediaDevices/devicechange_event", "devicechange")}} events are not fired on the {{DOMxRef("Navigator.xr","navigator.xr")}} object.
 
 ## Syntax
 
 ```http
-Permissions-Policy: xr-spatial-tracking <allowlist>;
+Permissions-Policy: xr-spatial-tracking=<allowlist>;
 ```
 
 - \<allowlist>
-  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax).
+  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy` > Syntax](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax) for more details.
 
 ## Default policy
 
-The default allowlist is `'self'`.
+The default allowlist for `xr-spatial-tracking` is `self`.
 
 ## Specifications
 

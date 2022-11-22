@@ -15,20 +15,22 @@ browser-compat: http.headers.Permissions-Policy.payment
 
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-The HTTP {{HTTPHeader("Permissions-Policy")}} header field's `payment` directive controls whether the current document is allowed to use the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API). When this policy is disabled, the {{DOMxRef("PaymentRequest()")}} constructor will throw a `SyntaxError` {{domxref("DOMException")}}.
+The HTTP {{HTTPHeader("Permissions-Policy")}} header field's `payment` directive controls whether the current document is allowed to use the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API).
+
+Specifically, where a defined policy blocks use of this feature, {{DOMxRef("PaymentRequest.PaymentRequest", "PaymentRequest()")}} constructor calls will throw a {{domxref("DOMException")}} of type `SecurityError`.
 
 ## Syntax
 
 ```http
-Permissions-Policy: payment <allowlist>;
+Permissions-Policy: payment=<allowlist>;
 ```
 
 - \<allowlist>
-  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax).
+  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy` > Syntax](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax) for more details.
 
 ## Default policy
 
-The `payment` feature's default allowlist value is `'self'`.
+The default allowlist for `payment` is `self`.
 
 ## Specifications
 

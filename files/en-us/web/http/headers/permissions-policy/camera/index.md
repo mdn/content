@@ -3,6 +3,7 @@ title: 'Permissions-Policy: camera'
 slug: Web/HTTP/Headers/Permissions-Policy/camera
 tags:
   - Directive
+  - Experimental
   - Permissions Policy
   - Permissions-Policy
   - HTTP
@@ -15,22 +16,22 @@ browser-compat: http.headers.Permissions-Policy.camera
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header
 `camera` directive controls whether the current document is allowed to use
-video input devices. When this policy is enabled, the {{jsxref("Promise")}} returned
-by {{domxref("MediaDevices.getUserMedia()")}} will reject with
-a `NotAllowedError` {{domxref("DOMException")}}.
+video input devices.
+
+Specifically, where a defined policy blocks use of this feature, {{domxref("MediaDevices.getUserMedia()")}} calls will return a {{jsxref("Promise")}} that rejects with a `NotAllowedError` {{domxref("DOMException")}}.
 
 ## Syntax
 
 ```http
-Permissions-Policy: camera <allowlist>;
+Permissions-Policy: camera=<allowlist>;
 ```
 
 - \<allowlist>
-  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax).
+  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy` > Syntax](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax) for more details.
 
 ## Default policy
 
-Default allow list for `camera` is `'self'`.
+The default allowlist for `camera` is `self`.
 
 ## Specifications
 

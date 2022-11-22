@@ -13,18 +13,20 @@ browser-compat: http.headers.Permissions-Policy.battery
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `battery` directive controls whether the current document is allowed to gather information about the battery of the device through the {{DOMxRef("BatteryManager")}} interface obtained via {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}}.
 
+Specifically, where a defined policy blocks use of this feature, {{domxref("Navigator.getBattery", "getBattery()")}} calls will return a {{jsxref("Promise")}} that rejects with a {{domxref("DOMException")}} of type `NotAllowedError`.
+
 ## Syntax
 
 ```http
-Permissions-Policy: battery <allowlist>;
+Permissions-Policy: battery=<allowlist>;
 ```
 
 - \<allowlist>
-  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax).
+  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy` > Syntax](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax) for more details.
 
 ## Default policy
 
-Default allow list for `battery` is `'self'`.
+The default allowlist for `battery` is `self`.
 
 ## Specifications
 

@@ -14,22 +14,24 @@ browser-compat: http.headers.Permissions-Policy.screen-wake-lock
 
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-The HTTP {{HTTPHeader("Permissions-Policy")}} header **`screen-wake-lock`** directive controls whether the current document is allowed to use [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) to indicate that device should not dim or turn off the screen.
+The HTTP {{HTTPHeader("Permissions-Policy")}} header **`screen-wake-lock`** directive controls whether the current document is allowed to use [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) to indicate that the device should not dim or turn off the screen.
+
+Specifically, where a defined policy blocks use of this feature, {{domxref("WakeLock.request()")}} calls will return a {{jsxref("Promise")}} that rejects with a {{domxref("DOMException")}} of type `NotAllowedError`.
 
 > **Note:** In earlier specification drafts this directive was called `wake-lock`.
 
 ## Syntax
 
 ```http
-Permissions-Policy: screen-wake-lock <allowlist>;
+Permissions-Policy: screen-wake-lock=<allowlist>;
 ```
 
 - \<allowlist>
-  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax).
+  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy` > Syntax](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax) for more details.
 
 ## Default policy
 
-Default allow list for `screen-wake-lock` is `'self'`.
+The default allowlist for `screen-wake-lock` is `self`.
 
 ## Specifications
 

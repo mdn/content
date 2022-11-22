@@ -14,20 +14,22 @@ browser-compat: http.headers.Permissions-Policy.midi
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The HTTP {{HTTPHeader("Permissions-Policy")}} header `midi` directive controls whether the current document is allowed to use the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API). When this policy is enabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMIDIAccess()")}} will reject with a `DOMException`.
+The HTTP {{HTTPHeader("Permissions-Policy")}} header `midi` directive controls whether the current document is allowed to use the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API).
+
+Specifically, where a defined policy blocks use of this feature, {{domxref("Navigator.requestMIDIAccess()")}} calls will return a {{jsxref("Promise")}} that rejects with a {{domxref("DOMException")}} of type `SecurityError`.
 
 ## Syntax
 
 ```http
-Permissions-Policy: midi <allowlist>;
+Permissions-Policy: midi=<allowlist>;
 ```
 
 - \<allowlist>
-  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax).
+  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy` > Syntax](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax) for more details.
 
 ## Default policy
 
-The allow list is `'self'`.
+The default allowlist for `midi` is `self`.
 
 ## Specifications
 

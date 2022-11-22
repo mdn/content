@@ -3,6 +3,7 @@ title: 'Permissions-Policy: display-capture'
 slug: Web/HTTP/Headers/Permissions-Policy/display-capture
 tags:
   - Directive
+  - Experimental
   - Permissions Policy
   - HTTP
   - Reference
@@ -19,15 +20,15 @@ If `display-capture` is disabled in a document, the document will not be able to
 ## Syntax
 
 ```http
-Permissions-Policy: display-capture <allowlist>;
+Permissions-Policy: display-capture=<allowlist>;
 ```
 
 - \<allowlist>
-  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax).
+  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy` > Syntax](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax) for more details.
 
 ## Default policy
 
-Default allow list for `display-capture` is `'self'`.
+The default allowlist for `display-capture` is `self`.
 
 ## Specifications
 

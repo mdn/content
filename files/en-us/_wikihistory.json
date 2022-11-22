@@ -103020,14 +103020,6 @@
     "modified": "2020-10-15T22:20:17.468Z",
     "contributors": ["bershanskiy"]
   },
-  "Web/HTTP/Headers/Permissions-Policy/layout-animations": {
-    "modified": "2020-10-15T22:20:14.846Z",
-    "contributors": ["bershanskiy"]
-  },
-  "Web/HTTP/Headers/Permissions-Policy/legacy-image-formats": {
-    "modified": "2020-10-15T22:20:12.416Z",
-    "contributors": ["bershanskiy"]
-  },
   "Web/HTTP/Headers/Permissions-Policy/magnetometer": {
     "modified": "2020-10-15T22:20:14.856Z",
     "contributors": ["bershanskiy"]
@@ -103039,10 +103031,6 @@
   "Web/HTTP/Headers/Permissions-Policy/midi": {
     "modified": "2020-10-15T22:10:24.122Z",
     "contributors": ["mfuji09", "bershanskiy", "fscholz"]
-  },
-  "Web/HTTP/Headers/Permissions-Policy/oversized-images": {
-    "modified": "2020-10-15T22:20:15.081Z",
-    "contributors": ["bershanskiy"]
   },
   "Web/HTTP/Headers/Permissions-Policy/payment": {
     "modified": "2020-10-15T22:10:32.310Z",
@@ -103066,18 +103054,6 @@
   "Web/HTTP/Headers/Permissions-Policy/screen-wake-lock": {
     "modified": "2020-10-15T22:31:49.481Z",
     "contributors": ["bershanskiy"]
-  },
-  "Web/HTTP/Headers/Permissions-Policy/sync-xhr": {
-    "modified": "2020-10-15T22:20:17.874Z",
-    "contributors": ["bershanskiy"]
-  },
-  "Web/HTTP/Headers/Permissions-Policy/unoptimized-images": {
-    "modified": "2020-10-15T22:20:17.915Z",
-    "contributors": ["bershanskiy"]
-  },
-  "Web/HTTP/Headers/Permissions-Policy/unsized-media": {
-    "modified": "2020-10-15T22:20:17.118Z",
-    "contributors": ["mozdevcontrib", "bershanskiy"]
   },
   "Web/HTTP/Headers/Permissions-Policy/usb": {
     "modified": "2020-10-15T22:20:16.110Z",
