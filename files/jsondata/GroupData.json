@@ -747,6 +747,11 @@
       "properties": [],
       "events": []
     },
+    "Keyboard API": {
+      "overview": ["Keyboard API"],
+      "interfaces": ["Keyboard", "KeyboardLayoutMap"],
+      "methods": ["Navigator.keyboard"]
+    },
     "Layout Instability API": {
       "overview": ["Layout Instability API"],
       "interfaces: ": ["LayoutShift", "LayoutShiftAttribution"],
@@ -842,6 +847,21 @@
       "interfaces": ["MediaRecorder", "MediaRecorderErrorEvent", "BlobEvent"],
       "methods": [],
       "properties": [],
+      "events": []
+    },
+    "Navigation API": {
+      "overview": ["Navigation API"],
+      "guides": [],
+      "interfaces": [
+        "NavigateEvent",
+        "Navigation",
+        "NavigationCurrentEntryChangeEvent",
+        "NavigationDestination",
+        "NavigationHistoryEntry",
+        "NavigationTransition"
+      ],
+      "methods": [],
+      "properties": ["Window.navigation"],
       "events": []
     },
     "Network Information API": {
@@ -1749,6 +1769,13 @@
       ],
       "methods": [],
       "properties": ["Navigator.hid"],
+      "events": []
+    },
+    "Web Locks API": {
+      "overview": ["Web Locks API"],
+      "interfaces": ["Lock", "LockManager"],
+      "methods": [],
+      "properties": [],
       "events": []
     },
     "Web MIDI API": {

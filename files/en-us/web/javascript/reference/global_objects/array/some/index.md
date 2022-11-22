@@ -104,21 +104,7 @@ provide a shorter syntax for the same test.
 
 ### Checking whether a value exists in an array
 
-To mimic the function of the `includes()` method, this custom
-function returns `true` if the element exists in the array:
-
-```js
-const fruits = ['apple', 'banana', 'mango', 'guava'];
-
-function checkAvailability(arr, val) {
-  return arr.some((arrVal) => val === arrVal);
-}
-
-checkAvailability(fruits, 'kela');   // false
-checkAvailability(fruits, 'banana'); // true
-```
-
-### Checking whether a value exists using an arrow function
+To mimic the function of the `includes()` method, this custom function returns `true` if the element exists in the array:
 
 ```js
 const fruits = ['apple', 'banana', 'mango', 'guava'];

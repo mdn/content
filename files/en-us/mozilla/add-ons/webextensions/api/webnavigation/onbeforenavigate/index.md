@@ -47,7 +47,7 @@ Events have three functions:
   - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
     - `details`
-      - : [`object`](#details). Details about the navigation event.
+      - : `object`. Details about the navigation event. See the [details](#details_2) section for more information.
 
 - `filter` {{optional_inline}}
   - : `object`. An object containing a single property `url`, which is an `Array` of {{WebExtAPIRef("events.UrlFilter")}} objects. If you include this parameter, then the event will fire only for transitions to URLs which match at least one `UrlFilter` in the array. If you omit this parameter, the event will fire for all transitions.
@@ -61,7 +61,7 @@ Events have three functions:
 - `url`
   - : `string`. The URL to which the given frame will navigate.
 - `processId`
-  - : `integer`. The ID of the process in which this tab is being rendered (This property is **not supported on Firefox** and it is **deprecated on Chrome**).
+  - : `integer`. The ID of the process in which this tab is being rendered (This property is **not supported on Firefox**, and it is **deprecated on Chrome**).
 - `frameId`
   - : `integer`. Frame in which the navigation is about to occur. `0` indicates that navigation happens in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.
 - `parentFrameId`
