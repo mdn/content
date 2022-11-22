@@ -96,11 +96,11 @@ Each food has a `type` and a `quantity`.
 
 ```js
 const inventory = [
-  { name: 'asparagus', type: 'vegetables', quantity: 5 },
-  { name: 'bananas', type: 'fruit', quantity: 0 },
-  { name: 'goat', type: 'meat', quantity: 23 },
-  { name: 'cherries', type: 'fruit', quantity: 5 },
-  { name: 'fish', type: 'meat', quantity: 22 }
+  { name: "asparagus", type: "vegetables", quantity: 5 },
+  { name: "bananas", type: "fruit", quantity: 0 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 5 },
+  { name: "fish", type: "meat", quantity: 22 },
 ];
 ```
 
@@ -136,7 +136,7 @@ Below is a very similar example that puts the items into `ok` or `restock` group
 
 ```js
 function myCallback({ quantity }) {
-  return quantity > 5 ? 'ok' : 'restock';
+  return quantity > 5 ? "ok" : "restock";
 }
 
 const result2 = inventory.group(myCallback);
