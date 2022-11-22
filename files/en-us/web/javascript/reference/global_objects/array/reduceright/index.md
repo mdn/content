@@ -143,7 +143,7 @@ Here we reduce the same array using the same algorithm, but with an `initialValu
 ```js
 [0, 1, 2, 3, 4].reduceRight(
   (accumulator, currentValue, index, array) => accumulator + currentValue,
-  10
+  10,
 );
 ```
 
@@ -179,11 +179,15 @@ const flattened = arrays.reduceRight((a, b) => a.concat(b), []);
 ### Run a list of asynchronous functions with callbacks in series each passing their results to the next
 
 ```js
-const waterfall = (...functions) => (callback, ...args) =>
-  functions.reduceRight(
-    (composition, fn) => (...results) => fn(composition, ...results),
-    callback,
-  )(...args);
+const waterfall =
+  (...functions) =>
+  (callback, ...args) =>
+    functions.reduceRight(
+      (composition, fn) =>
+        (...results) =>
+          fn(composition, ...results),
+      callback,
+    )(...args);
 
 const randInt = (max) => Math.floor(Math.random() * max);
 
@@ -207,7 +211,7 @@ const div4 = (callback, x) => {
 };
 
 const computation = waterfall(add5, mult3, sub2, split, add, div4);
-computation(console.log, 5) // Logs 14
+computation(console.log, 5); // Logs 14
 
 // same as:
 
