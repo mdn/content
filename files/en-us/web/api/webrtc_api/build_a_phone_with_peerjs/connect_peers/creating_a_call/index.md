@@ -4,7 +4,7 @@ slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Creating_a_call
 page-type: guide
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 {{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Create_a_peer_connection", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call")}}
 
@@ -13,24 +13,25 @@ Exciting times — now you're going to give your users the ability to create cal
 1. First of all, get a reference to the "Call" button that's defined in the HTML, by adding the following to the bottom of `script.js`:
 
    ```js
-   const callBtn = document.querySelector('.call-btn');
+   const callBtn = document.querySelector(".call-btn");
    ```
 
 2. When a caller clicks "Call" you'll want to ask them for the peer ID of the peer they want to call (which we will store in the `code` variable in `getStreamCode()`) and then you'll want to create a connection with that code. Add the following below your previous code:
 
    ```js
-   callBtn.addEventListener('click', () => {
+   callBtn.addEventListener("click", () => {
      getStreamCode();
      connectPeers();
      const call = peer.call(code, window.localStream); // A
 
-     call.on('stream', (stream) => { // B
+     call.on("stream", (stream) => {
+       // B
        window.remoteAudio.srcObject = stream; // C
        window.remoteAudio.autoplay = true; // D
        window.peerStream = stream; //E
        showConnectedContent(); //F    });
-     })
-   })
+     });
+   });
    ```
 
    Let's walk through this code:
