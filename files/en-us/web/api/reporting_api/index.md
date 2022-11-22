@@ -12,7 +12,7 @@ tags:
 spec-urls: https://w3c.github.io/reporting/#intro
 ---
 
-{{SeeCompatTable}}{{APIRef("Reporting API")}}
+{{SeeCompatTable}}{{DefaultAPISidebar("Reporting API")}}
 
 The Reporting API provides a generic reporting mechanism for web applications to use to make reports available based on various platform features (for example [Content Security Policy](/en-US/docs/Web/HTTP/CSP), [Feature-Policy](/en-US/docs/Web/HTTP/Headers/Feature-Policy), or feature deprecation reports) in a consistent manner.
 
@@ -84,9 +84,9 @@ In our [deprecation_report.html](https://mdn.github.io/dom-examples/reporting-ap
 
 ```js
 const options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
@@ -103,15 +103,9 @@ Later on in the example we deliberately use the deprecated version of {{domxref(
 
 ```js
 if (navigator.mozGetUserMedia) {
-  navigator.mozGetUserMedia(
-    constraints,
-    success,
-    failure);
+  navigator.mozGetUserMedia(constraints, success, failure);
 } else {
-  navigator.getUserMedia(
-    constraints,
-    success,
-    failure);
+  navigator.getUserMedia(constraints, success, failure);
 }
 ```
 
