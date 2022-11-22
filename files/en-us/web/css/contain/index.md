@@ -18,15 +18,15 @@ browser-compat: css.properties.contain
 
 {{CSSRef}}
 
-The **`contain`** [CSS](/en-US/docs/Web/CSS) property allows an author to indicate that an element and its contents are, as much as possible, _independent_ of the rest of the document tree.
-Containment allows the browser to calculate layout, style, paint, size, or any combination of them for a specific area of the DOM.
-Changes within an element with containment applied are not propagated outside of the contained element to the rest of the page, leading to performance benefits through fewer DOM re-renders.
+The **`contain`** [CSS](/en-US/docs/Web/CSS) property indicates that an element and its contents are, as much as possible, independent from the rest of the document tree.
+Containment allows the browser to calculate layout, style, paint, size, or any combination of these for a specific area of the DOM.
 
-{{EmbedInteractiveExample("pages/css/contain.html")}}
+Changes within an element with containment applied are not propagated outside of the contained element to the rest of the page.
+The main benefit of this is that the browser does not have to re-renders the DOM or page layout as often, leading to performance benefits.
 
-This property is useful on pages that contain a lot of widgets that are all independent, as it can be used to prevent each widget's internals from having side effects outside of the widget's bounding-box.
+Using the `contain` property is useful on pages with groups of elements that are supposed to be independent, as it can prevent element internals from having side effects outside of its bounding-box.
 
-> **Note:** If applied (with value: `layout`, `paint`, `strict` or `content`), this property creates:
+> **Note:** using `layout`, `paint`, `strict` or `content` values for this property creates:
 >
 > 1. A new [containing block](/en-US/docs/Web/CSS/Containing_block) (for the descendants whose {{cssxref("position")}} property is `absolute` or `fixed`).
 > 2. A new [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
@@ -58,29 +58,31 @@ contain: revert-layer;
 contain: unset;
 ```
 
-The `contain` property is specified as either one of the following:
-
-- Using a single `none`, `strict`, or `content` keyword.
-- Using one or more of `size` (or `inline-size`), `layout`, `style`, `paint` keywords in any order.
-
 ### Values
 
+The `contain` property can have any of the following values:
+
+- One of the keywords `none`, `strict`, or `content` **or**
+- One or more of the keywords `size` (or `inline-size`), `layout`, `style`, and `paint` in any order.
+
+The keywords have the following meanings:
+
 - `none`
-  - : Indicates the element renders as normal, with no containment applied.
+  - : The element renders as normal, with no containment applied.
 - `strict`
-  - : Indicates that all containment rules are applied to the element. This is equivalent to `contain: size layout paint style`.
+  - : All containment rules are applied to the element. This is equivalent to `contain: size layout paint style`.
 - `content`
-  - : Indicates that all containment rules except `size` are applied to the element. This is equivalent to `contain: layout paint style`.
+  - : All containment rules except `size` are applied to the element. This is equivalent to `contain: layout paint style`.
 - `size`
-  - : Indicates that size containment is applied to the element. The size of the element can be computed in isolation, ignoring the child elements. This value cannot be combined with `inline-size`.
+  - : Size containment is applied to the element. The size of the element can be computed in isolation, ignoring the child elements. This value cannot be combined with `inline-size`.
 - `inline-size`
-  - : Indicates that inline size containment is applied to the element. The inline size of the element can be computed in isolation, ignoring the child elements. This value cannot be combined with `size`.
+  - : Inline size containment is applied to the element. The inline size of the element can be computed in isolation, ignoring the child elements. This value cannot be combined with `size`.
 - `layout`
-  - : Indicates that the internal layout of the element is isolated from the rest of the page, that is, nothing outside the element affects its internal layout, and vice versa.
+  - : The internal layout of the element is isolated from the rest of the page. That means nothing outside the element affects its internal layout, and vice versa.
 - `style`
-  - : Indicates that, for properties that can have effects on more than just an element and its descendants, those effects don't escape the containing element. Counters and quotes are scoped to the element and its contents.
+  - : For properties that can have effects on more than just an element and its descendants, those effects don't escape the containing element. Counters and quotes are scoped to the element and its contents.
 - `paint`
-  - : Indicates that descendants of the element don't display outside its bounds. If the containing box is offscreen, the browser does not need to paint its contained elements — these must also be offscreen as they are contained completely by that box. And if a descendant overflows the containing element's bounds, then that descendant will be clipped to the containing element's border-box.
+  - : Descendants of the element don't display outside its bounds. If the containing box is offscreen, the browser does not need to paint its contained elements — these must also be offscreen as they are contained completely by that box. If a descendant overflows the containing element's bounds, then that descendant will be clipped to the containing element's border-box.
 
 ## Formal definition
 
@@ -92,24 +94,24 @@ The `contain` property is specified as either one of the following:
 
 ## Examples
 
-### Setting up a simple layout without containment
+### Preventing floats from escaping their containers
 
-The markup below consists of two articles, each with content:
+Consider the markup below with two `<article>` elements with an `<img>` with {{cssxref("float")}} style applied to each.
+When a float interferes with elements outside of a bounding box, a portion of the DOM tree is re-laid out or repainted, and this interferes with the layout of the second article:
 
 ```html
 <h1>My blog</h1>
 <article>
   <h2>Heading of a nice article</h2>
   <p>Content here.</p>
+  <img src="graphic.jpg" alt="Black cross on a gray background." />
 </article>
 <article>
   <h2>Another heading of another article</h2>
-  <img src="graphic.jpg" alt="photo" />
   <p>More content here.</p>
+  <img src="graphic.jpg" alt="Black cross on a gray background." />
 </article>
 ```
-
-Each `<article>` and `<img>` is given a border, and the images are floated:
 
 ```css
 img {
@@ -122,58 +124,21 @@ article {
 }
 ```
 
-{{EmbedGHLiveSample("css-examples/contain/simple-layout.html", '100%', 400)}}
-
-There is an issue because the floating element is laid out beyond the bottom of the article.
-
-### Adding an additional floating element
-
-In the previous example, if we insert another image at the bottom of the first article, a large portion of the DOM tree is re-laid out or repainted, and this interferes with the layout of the second article:
-
-```html
-<h1>My blog</h1>
-<article>
-  <h2>Heading of a nice article</h2>
-  <p>Content here.</p>
-  <img src="i-just-showed-up.jpg" alt="social" />
-</article>
-<article>
-  <h2>Another heading of another article</h2>
-  <img src="graphic.jpg" alt="photo" />
-  <p>More content here.</p>
-</article>
-```
-
-```css hidden
-img {
-  float: left;
-  border: 3px solid black;
-}
-
-article {
-  border: 1px solid black;
-}
-```
-
-Because of the way floats work, the first image ends up inside the area of the second article:
-
 {{EmbedGHLiveSample("css-examples/contain/float-interference.html", '100%', 400)}}
 
-### Fixing the layout with contain
-
-If we give each `article` the `contain` property with a value of `content`, when new elements are inserted, the browser only needs to recalculate the containing element's subtree, and not anything outside it:
+If we give each `<article>` the `contain` property with a value of `content`, when new elements are inserted, the browser only needs to recalculate the containing element's subtree, and not anything outside it:
 
 ```html hidden
 <h1>My blog</h1>
 <article>
   <h2>Heading of a nice article</h2>
   <p>Content here.</p>
-  <img src="i-just-showed-up.jpg" alt="social" />
+  <img src="graphic.jpg" alt="Black cross on a gray background." />
 </article>
 <article>
   <h2>Another heading of another article</h2>
-  <img src="graphic.jpg" alt="photo" />
   <p>More content here.</p>
+  <img src="graphic.jpg" alt="Black cross on a gray background." />
 </article>
 ```
 
@@ -189,44 +154,53 @@ article {
 }
 ```
 
-This also means that the first image no longer floats down to the second article, and instead stays inside its containing element's bounds:
+The images no longer float down into sibling articles, and instead stay inside the containing element's bounds:
 
 {{EmbedGHLiveSample("css-examples/contain/contain-fix.html", '100%', 500)}}
 
-### Using the style value for containment
+### Style containment
 
 Style containment scopes [counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) and [quotes](/en-US/docs/Web/CSS/quotes) to the contained element.
 For CSS counters, the `counter-increment` and `counter-set` properties are scoped to the element as if the element is at the root of the document.
+
+#### Containment and counters
+
 The example below takes a look at how counters work when style containment is applied:
 
+TODO - link to props
+
 ```html
-<h1>Introduction</h1>
-<h1>Background</h1>
-<div class="contain">
-  <h1>Contained counter</h1>
-</div>
-<h1>Conclusion</h1>
+<ul>
+  <li>Item A</li>
+  <li>Item B</li>
+  <li class="container">Item C</li>
+  <li>Item D</li>
+  <li>Item E</li>
+</ul>
 ```
 
 ```css
 body {
-  counter-reset: headings;
+  counter-reset: list-items;
 }
 
-h1::before {
-  counter-increment: headings;
-  content: counter(headings) ": ";
+li::before {
+  counter-increment: list-items;
+  content: counter(list-items) ": ";
 }
 
-.contain {
+.container {
   contain: style;
 }
 ```
 
-{{EmbedGHLiveSample("css-examples/contain/contain-style-counter.html", '100%', 500)}}
+Without containment, the counter would increment from 1 to 5 for each list item.
+Style containment causes the `counter-increment` to be scoped to the element's subtree and the counter begins again at 1:
 
-Without containment, the counter would increment from 1 to 4 for each heading.
-Style containment causes the `counter-increment` to be scoped to the element's subtree and the counter begins again at 1.
+{{EmbedLiveSample('Containment_and_counters', '100%', 140)}}
+
+#### Containment and quotes
+
 CSS quotes are similarly affected in that the [`content`](/en-US/docs/Web/CSS/content) values relating to quotes are scoped to the element:
 
 ```html
@@ -254,7 +228,7 @@ body {
 
 In this example, the close quote ignores the inner span because it has style containment applied:
 
-{{EmbedGHLiveSample("css-examples/contain/contain-style-quotes.html", '100%', 500)}}
+{{EmbedLiveSample('Containment_and_quotes', '100%', 50)}}
 
 ## Specifications
 
