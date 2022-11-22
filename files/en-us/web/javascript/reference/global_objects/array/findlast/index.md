@@ -94,10 +94,10 @@ This example shows how you might create a test based on the properties of array 
 
 ```js
 const inventory = [
-  { name: 'apples', quantity: 2 },
-  { name: 'bananas', quantity: 0 },
-  { name: 'fish', quantity: 1 },
-  { name: 'cherries', quantity: 5 }
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "fish", quantity: 1 },
+  { name: "cherries", quantity: 5 },
 ];
 
 // return true inventory stock is low
@@ -115,10 +115,10 @@ The previous example might be written using an arrow function and [object destru
 
 ```js
 const inventory = [
-  { name: 'apples', quantity: 2 },
-  { name: 'bananas', quantity: 0 },
-  { name: 'fish', quantity: 1 },
-  { name: 'cherries', quantity: 5 },
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "fish", quantity: 1 },
+  { name: "cherries", quantity: 5 },
 ];
 
 const result = inventory.findLast(({ quantity }) => quantity < 2);

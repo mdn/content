@@ -158,7 +158,7 @@ All of the `tabpanel` elements have `tabindex="0"` to make them tabbable, and al
 
 There are two things we need to do with JavaScript: we need to change focus and tab index of our `tab` elements with the right and left arrows, and we need to change the active `tab` and `tabpanel` when we click on a `tab`.
 
-To accomplish the first, we listen for the [`keydown`](/en-US/docs/Web/API/Element/keydown_event) event on the `tablist`. If the event's [`keyCode`](/en-US/docs/Web/API/KeyboardEvent/keyCode) is 39 for right arrow or 37 for the left arrow, we react to the event. We start by setting the `tabindex` of the current `tab` element to -1, making it no longer tabbable. Then, if the right arrow is being pressed, we increase our tab focus counter by one. If the counter is greater than the number of `tab` elements we have, we circle back to the first tab by setting that counter to 0. If the left arrow is being pressed, we decrease our tab focus counter by one, and if it is then less than 0, we set it to the number of `tab` elements minus one (to get to the last element). Finally, we set `focus` to the `tab` element whose index is equal to the tab focus counter, and set its `tabindex` to 0 to make it tabbable.
+To accomplish the first, we listen for the [`keydown`](/en-US/docs/Web/API/Element/keydown_event) event on the `tablist`. If the event's [`key`](/en-US/docs/Web/API/KeyboardEvent/key) is `ArrowRight` or `ArrowLeft`, we react to the event. We start by setting the `tabindex` of the current `tab` element to -1, making it no longer tabbable. Then, if the right arrow is being pressed, we increase our tab focus counter by one. If the counter is greater than the number of `tab` elements we have, we circle back to the first tab by setting that counter to 0. If the left arrow is being pressed, we decrease our tab focus counter by one, and if it is then less than 0, we set it to the number of `tab` elements minus one (to get to the last element). Finally, we set `focus` to the `tab` element whose index is equal to the tab focus counter, and set its `tabindex` to 0 to make it tabbable.
 
 To handle changing the active `tab` and `tabpanel`, we have a function that takes in the event, gets the element that triggered the event, the triggering element's parent element, and its grandparent element. We then find all tabs with `aria-selected="true"` inside the parent element and sets it to `false`, then sets the triggering element's `aria-selected` to `true`. After that, we find all `tabpanel` elements in the grandparent element, make them all `hidden`, and finally select the element whose `id` is equal to the triggering `tab`'s `aria-controls` and removes the `hidden` attribute, making it visible.
 
@@ -177,16 +177,16 @@ window.addEventListener("DOMContentLoaded", () => {
 
   tabList.addEventListener("keydown", (e) => {
     // Move right
-    if (e.keyCode === 39 || e.keyCode === 37) {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
       tabs[tabFocus].setAttribute("tabindex", -1);
-      if (e.keyCode === 39) {
+      if (e.key === 'ArrowRight') {
         tabFocus++;
         // If we're at the end, go to the start
         if (tabFocus >= tabs.length) {
           tabFocus = 0;
         }
         // Move left
-      } else if (e.keyCode === 37) {
+      } else if (e.key === 'ArrowLeft') {
         tabFocus--;
         // If we're at the start, move to the end
         if (tabFocus < 0) {
@@ -242,6 +242,7 @@ What are the related properties, and in what order will this attribute or proper
 ## See also
 
 - HTML {{HTMLElement('button')}} element
+- [KeyboardEvent.key](/en-US/docs/Web/API/KeyboardEvent/key)
 - [ARIA `tabpanel` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role)
 
 <section id="Quick_links">

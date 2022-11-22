@@ -17,7 +17,7 @@ tags:
 browser-compat: api.NavigationDestination
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`NavigationDestination`** interface of the {{domxref("Navigation API", "Navigation API", "", "nocode")}} represents the destination being navigated to in the current navigation.
 

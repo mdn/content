@@ -18,7 +18,7 @@ tags:
 browser-compat: api.Navigation.currentEntry
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`currentEntry`** read-only property of the
 {{domxref("Navigation")}} interface returns a {{domxref("NavigationHistoryEntry")}} object representing the location the user is currently navigated to right now.
