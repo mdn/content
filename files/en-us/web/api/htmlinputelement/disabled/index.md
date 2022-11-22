@@ -24,14 +24,14 @@ A boolean value.
 
 ```html
 <p>
-<label>
-  <input id="check-box" name="b" value="1" type="checkbox" disabled /> Check this box!
-</label>
+  <label>
+    <input id="check-box" name="b" value="1" type="checkbox" disabled /> Check this box!
+  </label>
 </p>
 <p>
-<label>
-  <input id="toggle-box" name="b" value="2" type="checkbox"> Enable the other checkbox.
-</label>
+  <label>
+    <input id="toggle-box" name="b" value="2" type="checkbox"> Enable the other checkbox.
+  </label>
 <p>
 ```
 
