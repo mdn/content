@@ -23,9 +23,9 @@
     "MD026": {
       "punctuation": ".,;:"
     },
-    // Consectutive Notes/Callouts currently don't conform with this rule
+    // Consecutive Notes/Callouts currently don't conform with this rule
     "MD028": false,
-    // Force orderd numbering to catch accidental list ending from indenting
+    // Force ordered numbering to catch accidental list ending from indenting
     "MD029": {
       "style": "ordered"
     },
