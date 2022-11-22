@@ -29,7 +29,7 @@ Conversely, a technology is no longer considered **experimental** if one or more
 - Its defining specification is unlikely to change in ways that will break the web.
 
 Usually, if a technology is supported across several major browsers, the specification will be stable, but this is not always the case.
-And some technologies might have a stable specification and be well-used, but not have native support in browsers ([IMSC](/en-US/docs/Related/IMSC), for example). <!-- need to revisit link -->
+On the other hand, some technologies might have a stable specification, but do not have native support in browsers. [IMSC](/en-US/docs/Related/IMSC) for example is used via a JavaScript polyfill. <!-- need to revisit link -->
 
 A feature or technology that is part of an active specification or standardization process and not marked **deprecated** is said to be on a **standards track**.
 
