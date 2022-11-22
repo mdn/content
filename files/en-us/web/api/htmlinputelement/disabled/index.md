@@ -30,7 +30,7 @@ A boolean value.
 </p>
 <p>
   <label>
-    <input id="toggle-box" name="b" value="2" type="checkbox"> Enable the other checkbox.
+    <input id="toggle-box" name="b" value="2" type="checkbox" /> Enable the other checkbox.
   </label>
 <p>
 ```
