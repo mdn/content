@@ -46,7 +46,7 @@ Events have three functions:
     - `tabId`
       - : `integer`. ID of the tab that closed.
     - `removeInfo`
-      - : [`object`](#removeinfo). The tab's window ID, and a boolean indicating whether the window is also being closed.
+      - : `object`. The tab's window ID, and a boolean indicating whether the window is also being closed. See the [removeInfo](#removeinfo_2) section for more details.
 
 ## Additional objects
 
