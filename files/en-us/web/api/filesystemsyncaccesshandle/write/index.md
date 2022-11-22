@@ -19,6 +19,8 @@ browser-compat: api.FileSystemSyncAccessHandle.write
 The **`write()`** method of the
 {{domxref("FileSystemSyncAccessHandle")}} interface writes the content of a specified buffer to the file associated with the handle, optionally at a given offset.
 
+Writes performed using {{domxref('FileSystemSyncAccessHandle.write()')}} are in-place, meaning that changes are written to the actual underlying file at the same time as they are written to the writer. This is not the case with other writing mechanisms available in the {{domxref("File System Access API", "File System Access API", "", "nocode")}} (e.g. {{domxref('FileSystemFileHandle.createWritable()')}}), where changes are not committed to disk until the writing stream is closed.
+
 ## Syntax
 
 ```js-nolint
@@ -31,7 +33,6 @@ write(buffer, FileSystemReadWriteOptions)
   - : An {{jsxref("ArrayBuffer")}} or `ArrayBufferView` (such as a {{jsxref("DataView")}}) representing the buffer to be written to the file.
 - `FileSystemReadWriteOptions` {{optional_inline}}
   - : An options object containing the following properties:
-
     - `at`
       - : A number representing the offset in bytes from the start of the file that the buffer should be written at.
 

@@ -19,6 +19,8 @@ browser-compat: api.FileSystemSyncAccessHandle.flush
 The **`flush()`** method of the
 {{domxref("FileSystemSyncAccessHandle")}} interface persists any changes made to the file associated with the handle via the {{domxref('FileSystemSyncAccessHandle.write', 'write()')}} method to disk.
 
+Bear in mind that you only need to call this method if you need the changes committed to disk at a specific time, otherwise you can leave the underlying operating system to handle this when it sees fit, which should be OK in most cases.
+
 ## Syntax
 
 ```js-nolint

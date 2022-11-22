@@ -63,7 +63,7 @@ onmessage = async (e) => {
 // …
 
   // Always close FileSystemSyncAccessHandle if done.
-  await accessHandle.close();
+  accessHandle.close();
 }
 ```
 

@@ -15,10 +15,6 @@ tags:
 browser-compat:
   - api.FileSystemHandle
   - api.FileSystemFileHandle
-  - api.FileSystemDirectoryHandle
-  - api.FileSystemSyncAccessHandle
-  - api.FileSystemWritableFileStream
-  - api.Window.showOpenFilePicker
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
@@ -33,16 +29,20 @@ Most of the interaction with files and directories is accomplished through handl
 
 The handles represent a file or directory on the user's system. You can first gain access to them by showing the user a file or directory picker. The methods which allow this are {{domxref('window.showOpenFilePicker')}} and {{domxref('window.showDirectoryPicker')}}. Once these are called, the file picker presents itself and the user selects either a file or directory. Once this happens successfully, a handle is returned. You can also gain access to file handles via the {{domxref('DataTransferItem.getAsFileSystemHandle()')}} method of the {{domxref('HTML Drag and Drop API')}}.
 
-{{domxref('FileSystemSyncAccessHandle')}} is also available, to define a high-performance handle for _synchronous_ read/write operations (the other handle types are asynchronous). The synchronous nature of this class brings performance advantages intended for use in contexts where asynchronous operations come with high overhead (e.g., [WebAssembly](/en-US/docs/WebAssembly)). Note that it is only usable inside dedicated [Web Workers](/en-US/docs/Web/API/Web_Workers_API), for files within the [origin private file system](https://fs.spec.whatwg.org/#origin-private-file-system).. {{domxref('FileSystemSyncAccessHandle')}} is accessed via the {{domxref('FileSystemFileHandle.createSyncAccessHandle', 'createSyncAccessHandle()')}} method.
+{{domxref('FileSystemSyncAccessHandle')}} is also available, to define a high-performance handle for _synchronous_ read/write operations (the other handle types are asynchronous). The synchronous nature of this class brings performance advantages intended for use in contexts where asynchronous operations come with high overhead (e.g., [WebAssembly](/en-US/docs/WebAssembly)). Note that it is only usable inside dedicated [Web Workers](/en-US/docs/Web/API/Web_Workers_API), for files within the [origin private file system](https://fs.spec.whatwg.org/#origin-private-file-system). {{domxref('FileSystemSyncAccessHandle')}} is accessed via the {{domxref('FileSystemFileHandle.createSyncAccessHandle', 'createSyncAccessHandle()')}} method.
+
+> **Note:** Writes performed using {{domxref('FileSystemSyncAccessHandle.write()')}} are in-place, meaning that changes are written to the actual underlying file at the same time as they are written to the writer. This is not the case with other writing mechanisms available in this API (e.g. {{domxref('FileSystemFileHandle.createWritable()')}}), where changes are not committed to disk until the writing stream is closed.
 
 Each handle provides its own functionality and there are a few differences depending on which one you are using (see the [interfaces](#interfaces) section for specific details). You then can access file data, or information (including children) of the directory selected.
 
 There is also "save" functionality:
 
 - In the case of the asynchronous handles, use the {{domxref('FileSystemWritableFileStream')}} interface. Once the data you'd like to save is in a format of {{domxref('Blob')}}, {{jsxref("String")}} object, string literal or {{jsxref('ArrayBuffer', 'buffer')}}, you can open a stream and save the data to a file. This can be the existing file or a new file.
-- In the case of the synchronous {{domxref('FileSystemSyncAccessHandle')}}, you write changes to a file using the {{domxref('FileSystemSyncAccessHandle.write', 'write()')}} method, then commit the changes to disk using {{domxref('FileSystemSyncAccessHandle.flush', 'flush()')}}.
+- In the case of the synchronous {{domxref('FileSystemSyncAccessHandle')}}, you write changes to a file using the {{domxref('FileSystemSyncAccessHandle.write', 'write()')}} method. You can optionally also call {{domxref('FileSystemSyncAccessHandle.flush', 'flush()')}} if you need the changes committed to disk at a specific time (otherwise you can leave the underlying operating system to handle this when it sees fit, which should be OK in most cases).
 
 This API opens up potential functionality the web has been lacking. Still, security has been of utmost concern when designing the API, and access to file/directory data is disallowed unless the user specifically permits it.
+
+> **Note:** The different exceptions that can be thrown when using the features of this API are listed on relevant pages as defined in the spec. However, the situation is made more complex by the interaction of the API and the underlying operating system. A proposal has been made to [list the error mappings in the spec](https://github.com/whatwg/fs/issues/57), which includes useful related information.
 
 ## Interfaces
 
@@ -53,7 +53,7 @@ This API opens up potential functionality the web has been lacking. Still, secur
 - {{domxref("FileSystemDirectoryHandle")}}
   - : provides a handle to a file system directory.
 - {{domxref("FileSystemSyncAccessHandle")}}
-  - : Provides a synchronous handle to a file system entry. The synchronous nature of the file reads and writes allows for higher performance for critical methods in contexts where asynchronous operations come with high overhead, e.g., [WebAssembly](/en-US/docs/WebAssembly). This class is only accessible inside dedicated [Web Workers](/en-US/docs/Web/API/Web_Workers_API) for files within the [origin private file system](https://fs.spec.whatwg.org/#origin-private-file-system).
+  - : Provides a synchronous handle to a file system entry, which operates in-place on a single file on disk. The synchronous nature of the file reads and writes allows for higher performance for critical methods in contexts where asynchronous operations come with high overhead, e.g., [WebAssembly](/en-US/docs/WebAssembly). This class is only accessible inside dedicated [Web Workers](/en-US/docs/Web/API/Web_Workers_API) for files within the [origin private file system](https://fs.spec.whatwg.org/#origin-private-file-system).
 - {{domxref("FileSystemWritableFileStream")}}
   - : is a {{domxref('WritableStream')}} object with additional convenience methods, which operates on a single file on disk.
 
@@ -205,7 +205,7 @@ onmessage = async (e) => {
   const accessHandle = await draftHandle.createSyncAccessHandle();
 
   // Get size of the file.
-  const fileSize = await accessHandle.getSize();
+  const fileSize = accessHandle.getSize();
   // Read file content to a buffer.
   const buffer = new DataView(new ArrayBuffer(fileSize));
   const readBuffer = accessHandle.read(buffer, { at: 0 });
@@ -216,12 +216,14 @@ onmessage = async (e) => {
   const writeBuffer = accessHandle.write(encodedMessage, { at: readBuffer });
 
   // Persist changes to disk.
-  await accessHandle.flush();
+  accessHandle.flush();
 
   // Always close FileSystemSyncAccessHandle if done.
-  await accessHandle.close();
+  accessHandle.close();
 }
 ```
+
+> **Note:** In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were wrongly specified as asynchronous methods. This has now been [amended](https://github.com/whatwg/fs/issues/7), but some browsers still support the asynchronous versions.
 
 ## Specifications
 
