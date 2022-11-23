@@ -22,7 +22,7 @@ The **`contain`** [CSS](/en-US/docs/Web/CSS) property indicates that an element 
 Containment allows the browser to calculate layout, style, paint, size, or any combination of these for a specific area of the DOM.
 
 Changes within an element with containment applied are not propagated outside of the contained element to the rest of the page.
-The main benefit of this is that the browser does not have to re-renders the DOM or page layout as often, leading to performance benefits.
+The main benefit of this is that the browser does not have to re-render the DOM or page layout as often, leading to performance benefits.
 
 Using the `contain` property is useful on pages with groups of elements that are supposed to be independent, as it can prevent element internals from having side effects outside of its bounding-box.
 
@@ -94,6 +94,31 @@ The keywords have the following meanings:
 
 ## Examples
 
+### Paint containment
+
+The following example shows how to use `contain: paint` to prevent an element's descendants from painting outside of its bounds.
+
+```css
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  margin: 10px;
+  font-size: 20px;
+}
+```
+
+```html
+<div style="contain: paint">
+  <p>This text will be clipped to the bounds of the box.</p>
+</div>
+<div>
+  <p>This text will not be clipped to the bounds of the box.</p>
+</div>
+```
+
+{{EmbedLiveSample("Paint_containment", "100%", 280)}}
+
 ### Preventing floats from escaping their containers
 
 Consider the markup below with two `<article>` elements with an `<img>` with {{cssxref("float")}} style applied to each.
@@ -161,13 +186,11 @@ The images no longer float down into sibling articles, and instead stay inside t
 ### Style containment
 
 Style containment scopes [counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) and [quotes](/en-US/docs/Web/CSS/quotes) to the contained element.
-For CSS counters, the `counter-increment` and `counter-set` properties are scoped to the element as if the element is at the root of the document.
+For CSS counters, the {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties are scoped to the element as if the element is at the root of the document.
 
 #### Containment and counters
 
 The example below takes a look at how counters work when style containment is applied:
-
-TODO - link to props
 
 ```html
 <ul>
@@ -195,7 +218,7 @@ li::before {
 ```
 
 Without containment, the counter would increment from 1 to 5 for each list item.
-Style containment causes the `counter-increment` to be scoped to the element's subtree and the counter begins again at 1:
+Style containment causes the {{cssxref("counter-increment")}} property to be scoped to the element's subtree and the counter begins again at 1:
 
 {{EmbedLiveSample('Containment_and_counters', '100%', 140)}}
 
@@ -204,18 +227,28 @@ Style containment causes the `counter-increment` to be scoped to the element's s
 CSS quotes are similarly affected in that the [`content`](/en-US/docs/Web/CSS/content) values relating to quotes are scoped to the element:
 
 ```html
+<!-- With style containment -->
 <span class="open-quote">
   outer
   <span style="contain: style;">
     <span class="open-quote"> inner </span>
   </span>
 </span>
-<span class="close-quote">close</span>
+<span class="close-quote"> close </span>
+<br />
+<!-- Without containment -->
+<span class="open-quote">
+  outer
+  <span>
+    <span class="open-quote"> inner </span>
+  </span>
+</span>
+<span class="close-quote"> close </span>
 ```
 
 ```css
 body {
-  quotes: "«" "»" "‹" "›";
+  quotes: "[" "]" "‹" "›";
 }
 .open-quote:before {
   content: open-quote;
@@ -226,7 +259,7 @@ body {
 }
 ```
 
-In this example, the close quote ignores the inner span because it has style containment applied:
+When containment is applied in this example, the first closing quote ignores the inner span and uses the outer span's closing quote instead:
 
 {{EmbedLiveSample('Containment_and_quotes', '100%', 50)}}
 
