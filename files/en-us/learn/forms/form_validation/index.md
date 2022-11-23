@@ -629,7 +629,7 @@ function showError() {
   } else if (email.validity.tooShort) {
     // If the data is too short,
     // display the following error message.
-    emailError.textContent = `Email should be at least ${email.minLength} characters; you entered ${email.value.length}.`;
+    emailError.textContent = `E-mail should be at least ${email.minLength} characters; you entered ${email.value.length}.`;
   }
 
   // Set the styling appropriately
