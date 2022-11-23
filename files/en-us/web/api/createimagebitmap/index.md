@@ -32,12 +32,15 @@ createImageBitmap(image, sx, sy, sw, sh, options)
 ### Parameters
 
 - `image`
-  - : An image source, which can be a 
-    {{domxref("HTMLImageElement")}}(or get from {{HTMLElement("img")}}), {{domxref("SVGImageElement")}}(or get from SVG
-    {{SVGElement("image")}}),
-    {{domxref("HTMLVideoElement")}}(or get from {{HTMLElement("video")}}),
-    {{domxref("HTMLCanvasElement")}}(or get from {{HTMLElement("canvas")}}), {{domxref("Blob")}}, {{domxref("ImageData")}},
-    {{domxref("ImageBitmap")}}, or {{domxref("OffscreenCanvas")}} object.
+  - : An image source, which can any one of the following:
+    - {{domxref("HTMLImageElement")}}
+    - {{domxref("SVGImageElement")}}
+    - {{domxref("HTMLVideoElement")}}
+    - {{domxref("HTMLCanvasElement")}}
+    - {{domxref("Blob")}}
+    - {{domxref("ImageData")}}
+    - {{domxref("ImageBitmap")}
+    - {{domxref("OffscreenCanvas")})
 - `sx`
   - : The x coordinate of the reference point of the rectangle from which the
     `ImageBitmap` will be extracted.
