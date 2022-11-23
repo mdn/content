@@ -19,13 +19,27 @@ Short description of this feature
 ## Syntax
 
 ```css
-
+/* basic syntax */
+override-colors: <index of color> <color>;
+/* using colour names */
+override-colors: 0 red;
+/* using hex-color */
+override-colors: 0 #f00;
+/* using rbg */
+override-colors: 0 rgb(255, 0, 0);
+/* overriding multiple colors */
+override-colors: 0 #f00, 1 #0f0, 2 #00f;
+/* overriding multiple colors with readability */
+override-colors:
+  0 #f00,
+  1 #0f0,
+  2 #00f;
 ```
 
 ### Values
 
-- `<family-name>`
-  - : Specifies the name of the font family.
+- `[ <integer [0,∞]> <absolute-color-base> ]`
+  - : Specifies the name of the font family. explain - reference <https://w3c.github.io/csswg-drafts/css-color-4/#typedef-absolute-color-base>
 
 ## Formal definition
 
@@ -80,11 +94,11 @@ The [Noto Color Emoji](https://fonts.google.com/noto/specimen/Noto+Color+Emoji/)
 @font-palette-values --red {
   font-family: "Noto Color Emoji";
   override-colors: 
-    0 rgba(74, 11, 0, 255), 
-    1 rgba(149, 22, 1, 255), 
-    2 rgba(183, 27, 1, 255), 
-    3 rgba(193, 28, 1, 255), 
-    4 rgba(230, 34, 1, 255);
+    0 rgb(74, 11, 0), 
+    1 rgb(149, 22, 1), 
+    2 rgb(183, 27, 1), 
+    3 rgb(193, 28, 1), 
+    4 rgb(230, 34, 1);
 }
 .red-hat {
   font-palette: --red;
@@ -94,6 +108,50 @@ The [Noto Color Emoji](https://fonts.google.com/noto/specimen/Noto+Color+Emoji/)
 #### Result
 
 {{EmbedLiveSample("Changing colors of emojis")}}
+
+### Changing a color in an alternate base-palette
+
+As an example, using [Rocher Color Font](https://www.harbortype.com/fonts/rocher-color/) one color in the font is overridden.
+
+#### HTML
+
+```html
+<h2 class="normal-palette">Normal Palette</h2>
+<h2 class="override-palette">Override Palette</h2>
+```
+
+#### CSS
+
+```css
+@font-face {
+  font-family: 'Rocher';
+  src: url('[path-to-font]/RocherColorGX.woff2') format('woff2'); 
+}
+h2 {
+  font-family: 'Rocher';
+}
+@font-palette-values --override-palette {
+  font-family: 'Rocher';
+  base-palette: 3;
+}
+@font-palette-values --override-palette {
+  font-family: 'Rocher';
+  base-palette: 3;
+  override-colors: 0 rebeccapurple;
+}
+.normal-palette {
+  font-palette: --normal-palette;
+}
+.override-palette {
+  font-palette: --override-palette;
+}
+```
+
+#### Result
+
+Example showing the color at `index` 0 being overriden in `base-palette: 3;` with `rebeccapurple`
+
+![Example showing base-palette and base-palette with 1 color overridden](override-base-palette-color.jpg)
 
 ## Specifications
 
