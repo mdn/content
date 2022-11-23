@@ -119,69 +119,78 @@ div {
 
 {{EmbedLiveSample("Paint_containment", "100%", 280)}}
 
-### Preventing floats from escaping their containers
+### Layout containment
 
-Consider the markup below with two `<article>` elements with an `<img>` with {{cssxref("float")}} style applied to each.
-When a float interferes with elements outside of a bounding box, a portion of the DOM tree is re-laid out or repainted, and this interferes with the layout of the second article:
+Consider the example below where card elements behave with and without `contain: layout` applied.
 
 ```html
-<h1>My blog</h1>
-<article>
-  <h2>Heading of a nice article</h2>
-  <p>Content here.</p>
-  <img src="graphic.jpg" alt="Black cross on a gray background." />
-</article>
-<article>
-  <h2>Another heading of another article</h2>
-  <p>More content here.</p>
-  <img src="graphic.jpg" alt="Black cross on a gray background." />
-</article>
+<div class="card" style="contain: layout;">
+  <h2>Card 1</h2>
+  <div class="fixed"><p>Fixed box 1</p></div>
+  <div class="float"><p>Float box 1</p></div>
+</div>
+<div class="card">
+  <h2>Card 2</h2>
+  <div class="fixed"><p>Fixed box 2</p></div>
+  <div class="float"><p>Float box 2</p></div>
+</div>
+<div class="card">
+  <h2>Card 3</h2>
+  <!-- ... -->
+</div>
+```
+
+```css hidden
+p {
+  margin: 4px;
+  padding: 4px;
+}
+
+h2 {
+  margin-bottom: 4px;
+  padding: 10px;
+}
+
+div {
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 gray;
+  padding: 6px;
+  margin: 6px;
+}
 ```
 
 ```css
-img {
+.card {
+  width: 70%;
+  height: 90px;
+}
+
+.fixed {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  background: coral;
+}
+
+.float {
   float: left;
-  border: 3px solid black;
-}
-
-article {
-  border: 1px solid black;
+  margin: 10px;
+  background: aquamarine;
 }
 ```
 
-{{EmbedGHLiveSample("css-examples/contain/float-interference.html", '100%', 400)}}
+The first card has layout containment applied, and its layout is isolated from the rest of the page.
+We can reuse this card in other places on the page without worrying about layout recalculation of the other elements.
+If floats overlap the card bounds, elements on the rest of the page are not affected.
+The browser only needs to recalculate the containing element's subtree, and not anything outside it.
+Additionally, the fixed box uses the card as a layout container to position itself.
 
-If we give each `<article>` the `contain` property with a value of `content`, when new elements are inserted, the browser only needs to recalculate the containing element's subtree, and not anything outside it:
+The second card has has no containment applied.
+The fixed box in this card instead uses the root element as layout context and so the box has a fixed position in the top right corner of the page.
+Another side effect is that the layout in the third card looks broken because of the float that overlaps the second card's bounds.
+A portion of the DOM tree needs to be recalculated, and this interferes with the rest of the page layout.
 
-```html hidden
-<h1>My blog</h1>
-<article>
-  <h2>Heading of a nice article</h2>
-  <p>Content here.</p>
-  <img src="graphic.jpg" alt="Black cross on a gray background." />
-</article>
-<article>
-  <h2>Another heading of another article</h2>
-  <p>More content here.</p>
-  <img src="graphic.jpg" alt="Black cross on a gray background." />
-</article>
-```
-
-```css
-img {
-  float: left;
-  border: 3px solid black;
-}
-
-article {
-  border: 1px solid black;
-  contain: content;
-}
-```
-
-The images no longer float down into sibling articles, and instead stay inside the containing element's bounds:
-
-{{EmbedGHLiveSample("css-examples/contain/contain-fix.html", '100%', 500)}}
+{{EmbedLiveSample("Layout_containment", "100%", 350)}}
 
 ### Style containment
 
@@ -220,7 +229,7 @@ li::before {
 Without containment, the counter would increment from 1 to 5 for each list item.
 Style containment causes the {{cssxref("counter-increment")}} property to be scoped to the element's subtree and the counter begins again at 1:
 
-{{EmbedLiveSample('Containment_and_counters', '100%', 140)}}
+{{EmbedLiveSample('Containment_and_counters', '100%', 130)}}
 
 #### Containment and quotes
 
