@@ -37,22 +37,6 @@ We should therefore replace all instances of the `\{{ warning }}` macro with the
 - [ ] Notify localization team leads of the change.
 ```
 
-## Opening an issue
-
-What info should be included
-What we accept and don't accept
-
-Discussions should be here
-
-<!-- content from elsewhere -->
-
-Priority:
-
-- `p0` Urgent: Something is broken and needs to be fixed immediately.
-- `p1` High priority: This is needed, but not something that's broken and affecting our users.
-- `p2` Medium priority: It would be great to get this done if there aren't any other high priority tasks, chances are this issue will escalate to high priority soon enough.
-- `p3` Low priority: This is a nice to have. Small chance of it escalating, but something we should consider.
-
 ## Make progress, not noise
 
 Think carefully about the way you handle communication in the project — make sure it is useful, and that it doesn't make other contributors jobs harder. Submitting pull requests to fix issues is great, but are they truly useful, and easy to review? Filing issues and joining in other conversations is fine, but are your issues and comments on topic, or are they just adding noise?

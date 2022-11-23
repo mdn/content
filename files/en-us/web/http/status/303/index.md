@@ -18,7 +18,7 @@ redirected page is always {{HTTPMethod("GET")}}.
 
 ## Status
 
-```
+```plain
 303 See Other
 ```
 

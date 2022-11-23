@@ -209,9 +209,9 @@ Key combinations must consist of 2 or 3 keys:
 2. **secondary modifier** (optional). If supplied, this must be either `"Shift"` or (for Firefox ≥ 63) any one of `"Ctrl"`, `"Alt"`, `"Command"`, or `"MacCtrl"`. Must not be the modifier already used as the main modifier.
 3. **key** (mandatory). This can be any one of:
 
-   - the letters `A`–`Z`
-   - the numbers `0`–`9`
-   - the function keys `F1`–`F12`
+   - the letters `A` – `Z`
+   - the numbers `0` – `9`
+   - the function keys `F1` – `F12`
    - `Comma`, `Period`, `Home`, `End`, `PageUp`, `PageDown`, `Space`, `Insert`, `Delete`, `Up`, `Down`, `Left`, `Right`
 
 The key is then given as a string containing the set of key values, in the order listed above, separated by "`+`". For example, `"Ctrl+Shift+Z"`.

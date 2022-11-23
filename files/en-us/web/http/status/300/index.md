@@ -21,7 +21,7 @@ header.
 
 ## Status
 
-```
+```plain
 300 Multiple Choices
 ```
 

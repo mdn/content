@@ -24,26 +24,26 @@ function. It returns true if, in the array, it finds an element for which the pr
 
 ```js-nolint
 // Arrow function
-some((element) => { /* … */ } )
-some((element, index) => { /* … */ } )
-some((element, index, array) => { /* … */ } )
+some((element) => { /* … */ })
+some((element, index) => { /* … */ })
+some((element, index, array) => { /* … */ })
 
 // Callback function
 some(callbackFn)
 some(callbackFn, thisArg)
 
 // Inline callback function
-some(function(element) { /* … */ })
-some(function(element, index) { /* … */ })
-some(function(element, index, array){ /* … */ })
-some(function(element, index, array) { /* … */ }, thisArg)
+some(function (element) { /* … */ })
+some(function (element, index) { /* … */ })
+some(function (element, index, array) { /* … */ })
+some(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
 
-  - : A function to test for each element.
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) to indicate the element passes the test, and a falsy value otherwise.
 
     The function is called with the following arguments:
 
@@ -55,45 +55,25 @@ some(function(element, index, array) { /* … */ }, thisArg)
       - : The array `some()` was called upon.
 
 - `thisArg` {{optional_inline}}
-  - : A value to use as `this` when executing `callbackFn`.
+  - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 
-`true` if the callback function returns a {{Glossary("truthy")}} value for
-at least one element in the array. Otherwise, `false`.
+`true` if the callback function returns a {{Glossary("truthy")}} value for at least one element in the array. Otherwise, `false`.
 
 ## Description
 
-The `some()` method executes the `callbackFn` function
-once for each element present in the array until it finds the one where
-`callbackFn` returns a _truthy_ value (a value that becomes
-true when converted to a Boolean). If such an element is found, `some()`
-immediately returns `true`. Otherwise, `some()` returns
-`false`.
+The `some()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array, until the `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value. If such an element is found, `some()` immediately returns `true` and stops iterating through the array. Otherwise, if `callbackFn` returns a [falsy](/en-US/docs/Glossary/Falsy) value for all elements, `some()` returns `false`.
+
+`some()` acts like the "there exists" quantifier in mathematics. In particular, for an empty array, it returns `false` for any condition.
 
 `callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
-`callbackFn` is invoked with three arguments: the value of the
-element, the index of the element, and the Array object being traversed.
+`some()` does not mutate the array on which it is called, but the function provided as `callbackFn` can. Note, however, that the length of the array is saved _before_ the first invocation of `callbackFn`. Therefore:
 
-If a `thisArg` parameter is provided to `some()`, it
-will be used as the callback's `this` value. Otherwise, the value
-{{jsxref("undefined")}} will be used as its `this` value. The
-`this` value ultimately observable by `callbackFn` is
-determined according to
-[the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
-
-`some()` does not mutate the array on which it is called.
-
-The range of elements processed by `some()` is set before the first
-invocation of `callbackFn`. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by `callbackFn`. If an existing, unvisited element of the array is
-changed by `callbackFn`, its value passed to the visiting
-`callbackFn` will be the value at the time that `some()`
-visits that element's index. Elements that are deleted are not visited.
-
-> **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
-
-`some()` acts like the "there exists" quantifier in mathematics. In particular, for an empty array, it returns `false` for any condition.
+- `callbackFn` will not visit any elements added beyond the array's initial length when the call to `some()` began.
+- Changes to already-visited indexes do not cause `callbackFn` to be invoked on them again.
+- If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time that element gets visited. [Deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) elements are not visited.
 
 The `some()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
@@ -108,7 +88,7 @@ function isBiggerThan10(element, index, array) {
   return element > 10;
 }
 
-[2, 5, 8, 1, 4].some(isBiggerThan10);  // false
+[2, 5, 8, 1, 4].some(isBiggerThan10); // false
 [12, 5, 8, 1, 4].some(isBiggerThan10); // true
 ```
 
@@ -118,56 +98,42 @@ function isBiggerThan10(element, index, array) {
 provide a shorter syntax for the same test.
 
 ```js
-[2, 5, 8, 1, 4].some((x) => x > 10);  // false
+[2, 5, 8, 1, 4].some((x) => x > 10); // false
 [12, 5, 8, 1, 4].some((x) => x > 10); // true
 ```
 
 ### Checking whether a value exists in an array
 
-To mimic the function of the `includes()` method, this custom
-function returns `true` if the element exists in the array:
+To mimic the function of the `includes()` method, this custom function returns `true` if the element exists in the array:
 
 ```js
-const fruits = ['apple', 'banana', 'mango', 'guava'];
+const fruits = ["apple", "banana", "mango", "guava"];
 
 function checkAvailability(arr, val) {
   return arr.some((arrVal) => val === arrVal);
 }
 
-checkAvailability(fruits, 'kela');   // false
-checkAvailability(fruits, 'banana'); // true
-```
-
-### Checking whether a value exists using an arrow function
-
-```js
-const fruits = ['apple', 'banana', 'mango', 'guava'];
-
-function checkAvailability(arr, val) {
-  return arr.some((arrVal) => val === arrVal);
-}
-
-checkAvailability(fruits, 'kela');   // false
-checkAvailability(fruits, 'banana'); // true
+checkAvailability(fruits, "kela"); // false
+checkAvailability(fruits, "banana"); // true
 ```
 
 ### Converting any value to Boolean
 
 ```js
-const TRUTHY_VALUES = [true, 'true', 1];
+const TRUTHY_VALUES = [true, "true", 1];
 
 function getBoolean(value) {
-  if (typeof value === 'string') {
+  if (typeof value === "string") {
     value = value.toLowerCase().trim();
   }
 
   return TRUTHY_VALUES.some((t) => t === value);
 }
 
-getBoolean(false);   // false
-getBoolean('false'); // false
-getBoolean(1);       // true
-getBoolean('true');  // true
+getBoolean(false); // false
+getBoolean("false"); // false
+getBoolean(1); // true
+getBoolean("true"); // true
 ```
 
 ### Using some() on sparse arrays
@@ -191,9 +157,8 @@ const arrayLike = {
   1: "b",
   2: "c",
 };
-console.log(
-  Array.prototype.some.call(arrayLike, (x) => typeof x === "number"),
-); // false
+console.log(Array.prototype.some.call(arrayLike, (x) => typeof x === "number"));
+// false
 ```
 
 ## Specifications

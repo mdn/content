@@ -36,7 +36,7 @@ The rendering process involves the following:
 
 1. We start with the {{SVGElement("svg")}} root element:
 
-   - a doctype declaration as known from (X)HTML should be left off because DTD based SVG validation leads to more problems than it solves
+   - a doctype declaration as known from (X)HTML should be left off because DTD based SVG validation leads to more problems than it solves.
    - before SVG 2, to identify the version of the SVG for other types of validation the `version` and `baseProfile` attributes should always be used instead. Both `version` and `baseProfile` attributes are deprecated in SVG 2.
    - as an XML dialect, SVG must always bind the namespaces correctly (in the xmlns attribute). See the [Namespaces Crash Course](/en-US/docs/Web/SVG/Namespaces_Crash_Course) page for more info.
 

@@ -154,7 +154,6 @@ This should give you a list of errors and other information.
 
 The error messages are usually helpful, but sometimes they are not so helpful; with a bit of practice you can work out how to interpret these to fix your code. Let's go through the error messages and see what they mean. You'll see that each message comes with a line and column number to help you to locate the error easily.
 
-- "Consider adding a `lang` attribute to the `html` start tag to declare the language of this document.": This is not an error but a warning. The [recommendation](https://www.w3.org/International/questions/qa-html-language-declarations) is to always define a language, and this warning explains how to do it.
 - "End tag `li` implied, but there were open elements" (2 instances): These messages indicate that an element is open that should be closed. The ending tag is implied, but not actually there. The line/column information points to the first line after the line where the closing tag should really be, but this is a good enough clue to see what is wrong.
 - "Unclosed element `strong`": This is really easy to understand — a {{htmlelement("strong")}} element is unclosed, and the line/column information points right to where it is.
 - "End tag `strong` violates nesting rules": This points out the incorrectly nested elements, and the line/column information points out where they are.

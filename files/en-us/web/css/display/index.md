@@ -18,6 +18,8 @@ The **`display`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is
 
 Formally, the **`display`** property sets an element's inner and outer _display types_. The outer type sets an element's participation in [flow layout](/en-US/docs/Web/CSS/CSS_Flow_Layout); the inner type sets the layout of children. Some values of `display` are fully defined in their own individual specifications; for example the detail of what happens when `display: flex` is declared is defined in the CSS Flexible Box Model specification.
 
+{{EmbedInteractiveExample("pages/css/display.html")}}
+
 ## Syntax
 
 The CSS `display` property is specified using keyword values.
