@@ -193,7 +193,7 @@ block content
 
 Much of this template will be familiar from our previous tutorials. First, we extend the **layout.pug** base template and override the `block` named '**content**'. We then have a heading with the `title` we passed in from the controller (via the `render()` method).
 
-Next, we have the pug code for our HTML form that uses the `POST` method to send the data to the server, and because the `action` is an empty string, will send the data to the same URL as the page.
+Next, we have the pug code for our HTML form that uses `method="POST"` to send the data to the server, and because the `action` is an empty string, will send the data to the same URL as the page.
 
 The form defines a single required field of type "text" called "name". The default _value_ of the field depends on whether the `genre` variable is defined. If called from the `GET` route it will be empty as this is a new form. If called from a `POST` route it will contain the (invalid) value originally entered by the user.
 
