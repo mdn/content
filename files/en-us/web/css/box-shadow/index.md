@@ -78,6 +78,7 @@ To specify multiple shadows, provide a comma-separated list of shadows.
   - : The {{cssxref("&lt;length&gt;")}} value specifies the horizontal distance. Negative values place the shadow to the left of the element. 
 - `<offset-y>`
   - : The {{cssxref("&lt;length&gt;")}} values specifies the vertical distance. Negative values place the shadow above the element. 
+
     If both `<offset-x>` and `<offset-y>` are set to `0`, the shadow is placed behind the element (and may generate a blur effect if `<blur-radius>` and/or `<spread-radius>` is set).
 - `<blur-radius>`
 
