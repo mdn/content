@@ -121,7 +121,7 @@ div {
 
 ### Layout containment
 
-Consider the example below where card elements behave with and without `contain: layout` applied.
+Consider the example below which shows how elements behave with and without layout containment applied:
 
 ```html
 <div class="card" style="contain: layout;">
@@ -229,7 +229,7 @@ li::before {
 Without containment, the counter would increment from 1 to 5 for each list item.
 Style containment causes the {{cssxref("counter-increment")}} property to be scoped to the element's subtree and the counter begins again at 1:
 
-{{EmbedLiveSample('Containment_and_counters', '100%', 130)}}
+{{EmbedLiveSample('Containment_and_counters', '100%', 140)}}
 
 #### Containment and quotes
 
@@ -270,7 +270,7 @@ body {
 
 When containment is applied in this example, the first closing quote ignores the inner span and uses the outer span's closing quote instead:
 
-{{EmbedLiveSample('Containment_and_quotes', '100%', 50)}}
+{{EmbedLiveSample('Containment_and_quotes', '100%', 40)}}
 
 ## Specifications
 
