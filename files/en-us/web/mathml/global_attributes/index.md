@@ -57,7 +57,7 @@ In addition to the basic MathML global attributes, the following global attribut
 
 - [`mathvariant`](/en-US/docs/Web/MathML/Global_attributes/mathvariant)
 
-  - A logical classes of token elements.
+  - : A logical classes of token elements.
 
 - [`nonce`](/en-US/docs/Web/HTML/Global_attributes/nonce)
 

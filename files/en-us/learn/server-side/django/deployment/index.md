@@ -371,7 +371,7 @@ pip3 install dj-database-url
 
 Open **/locallibrary/settings.py** and copy the following configuration into the bottom of the file:
 
-```plain
+```python
 # Update database configuration from $DATABASE_URL.
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)

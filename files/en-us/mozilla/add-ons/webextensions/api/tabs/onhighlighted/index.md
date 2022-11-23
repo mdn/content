@@ -46,7 +46,7 @@ Events have three functions:
   - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
     - `highlightInfo`
-      - : [`object`](#highlightinfo). ID(s) of the highlighted tabs, and ID of their window.
+      - : `object`. ID(s) of the highlighted tabs, and ID of their window. See the [highlightInfo](#highlightinfo_2) section for more details.
 
 ## Additional objects
 

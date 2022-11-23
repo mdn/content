@@ -49,7 +49,7 @@ for (const entry of list.entries()) {
 
 results in:
 
-```
+```plain
 Array [ 0, <p> ]
 Array [ 1, #text "hey" ]
 Array [ 2, <span> ]

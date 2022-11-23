@@ -125,7 +125,7 @@ The callback function is not invoked for the missing value at index 2.
 ### Converting a for loop to forEach
 
 ```js
-const items = ['item1', 'item2', 'item3'];
+const items = ["item1", "item2", "item3"];
 const copyItems = [];
 
 // before
@@ -235,10 +235,10 @@ Because element `four` is now at an earlier position in the array,
 `forEach()` does not make a copy of the array before iterating.
 
 ```js
-const words = ['one', 'two', 'three', 'four'];
+const words = ["one", "two", "three", "four"];
 words.forEach((word) => {
   console.log(word);
-  if (word === 'two') {
+  if (word === "two") {
     words.shift(); //'one' will delete from array
   }
 }); // one // two // four
@@ -262,7 +262,7 @@ const flatten = (arr) => {
     }
   });
   return result;
-}
+};
 
 // Usage
 const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]];

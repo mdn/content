@@ -21,6 +21,8 @@ The **`minlength`** attribute defines the minimum number of characters (as UTF-1
 
 The input will fail constraint validation if the length of the text value of the field is less than minlength UTF-16 code units long, with {{domxref('validityState.tooShort')}} returning `true`. Constraint validation is only applied when the value is changed by the user. Once submission fails, some browsers will display an error message indicating the minimum length required and the current length.
 
+{{EmbedInteractiveExample("pages/tabbed/attribute-minlength.html", "tabbed-shorter")}}
+
 ## Examples
 
 By adding `minlength="5"`, the value must either be empty or five characters or longer to be valid.

@@ -19,7 +19,7 @@ tags:
 
 ## Reason
 
-```
+```plain
 Reason: CORS preflight channel did not succeed
 ```
 

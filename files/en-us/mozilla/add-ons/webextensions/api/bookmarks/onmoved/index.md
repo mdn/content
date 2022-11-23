@@ -48,7 +48,7 @@ Events have three functions:
     - `id`
       - : `string`. ID of the item that was moved.
     - `moveInfo`
-      - : [`object`](#moveinfo). Object containing more details about the move.
+      - : `object`. Object containing more details about the move. See the [moveInfo](#moveinfo_2) section for more details.
 
 ## Additional objects
 

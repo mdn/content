@@ -55,12 +55,12 @@ The `includes()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global
 ### Using includes()
 
 ```js
-[1, 2, 3].includes(2)         // true
-[1, 2, 3].includes(4)         // false
-[1, 2, 3].includes(3, 3)      // false
-[1, 2, 3].includes(3, -1)     // true
-[1, 2, NaN].includes(NaN)     // true
-["1", "2", "3"].includes(3)   // false
+[1, 2, 3].includes(2); // true
+[1, 2, 3].includes(4); // false
+[1, 2, 3].includes(3, 3); // false
+[1, 2, 3].includes(3, -1); // true
+[1, 2, NaN].includes(NaN); // true
+["1", "2", "3"].includes(3); // false
 ```
 
 ### fromIndex is greater than or equal to the array length
@@ -69,10 +69,10 @@ If `fromIndex` is greater than or equal to the length of the
 array, `false` is returned. The array will not be searched.
 
 ```js
-const arr = ['a', 'b', 'c'];
+const arr = ["a", "b", "c"];
 
-arr.includes('c', 3)    // false
-arr.includes('c', 100)  // false
+arr.includes("c", 3); // false
+arr.includes("c", 100); // false
 ```
 
 ### Computed index is less than 0
@@ -87,12 +87,12 @@ be used as a position in the array at which to begin searching for
 // fromIndex is -100
 // computed index is 3 + (-100) = -97
 
-const arr = ['a', 'b', 'c'];
+const arr = ["a", "b", "c"];
 
-arr.includes('a', -100) // true
-arr.includes('b', -100) // true
-arr.includes('c', -100) // true
-arr.includes('a', -2)   // false
+arr.includes("a", -100); // true
+arr.includes("b", -100); // true
+arr.includes("c", -100); // true
+arr.includes("a", -2); // false
 ```
 
 ### Using includes() on sparse arrays
