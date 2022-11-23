@@ -46,18 +46,18 @@ A decimal number representing the code point value of the character at the given
 ### Using codePointAt()
 
 ```js
-'ABC'.codePointAt(0)                        // 65
-'ABC'.codePointAt(0).toString(16)           // 41
+"ABC".codePointAt(0); // 65
+"ABC".codePointAt(0).toString(16); // 41
 
-'😍'.codePointAt(0)                         // 128525
-'\ud83d\ude0d'.codePointAt(0)               // 128525
-'\ud83d\ude0d'.codePointAt(0).toString(16)  // 1f60d
+"😍".codePointAt(0); // 128525
+"\ud83d\ude0d".codePointAt(0); // 128525
+"\ud83d\ude0d".codePointAt(0).toString(16); // 1f60d
 
-'😍'.codePointAt(1)                         // 56845
-'\ud83d\ude0d'.codePointAt(1)               // 56845
-'\ud83d\ude0d'.codePointAt(1).toString(16)  // de0d
+"😍".codePointAt(1); // 56845
+"\ud83d\ude0d".codePointAt(1); // 56845
+"\ud83d\ude0d".codePointAt(1).toString(16); // de0d
 
-'ABC'.codePointAt(42)                       // undefined
+"ABC".codePointAt(42); // undefined
 ```
 
 ### Looping with codePointAt()
@@ -70,8 +70,8 @@ or an Array's [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/
 (or anything which correctly iterates UTF-16 surrogates) to iterate the string, using `codePointAt(0)` to get the code point of each element.
 
 ```js
-for (const codePoint of '\ud83d\udc0e\ud83d\udc71\u2764') {
-  console.log(codePoint.codePointAt(0).toString(16))
+for (const codePoint of "\ud83d\udc0e\ud83d\udc71\u2764") {
+  console.log(codePoint.codePointAt(0).toString(16));
 }
 // '1f40e', '1f471', '2764'
 ```
