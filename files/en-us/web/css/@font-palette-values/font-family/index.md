@@ -7,7 +7,6 @@ tags:
   - CSS Fonts
   - Color Fonts
   - CSS Descriptor
-  - CSS Property
   - Reference
 browser-compat: css.at-rules.font-palette-values.font-family
 ---
@@ -21,7 +20,7 @@ The [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) descriptor 
 ```css
 @font-palette-values --Dark-mode {
   font-family: "Bungee Spice";
-  /* other palette setting follow */
+  /* other palette settings follow */
 }
 ```
 
@@ -42,7 +41,7 @@ The `font-family` descriptor means that the settings that follow apply to the sp
 
 ## Examples
 
-### example
+### Naming syntax
 
 As an example when `font-family` descriptor is used in the [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) the value is identical in each instance, eg `"Bungee Spice"`.
 
@@ -73,7 +72,7 @@ h2.extra-spicy {
 
 #### Result
 
-{{EmbedLiveSample("Changing the default override-colors example")}}
+{{EmbedLiveSample("Naming syntax")}}
 
 ### Using the same identifier for multiple font-families example
 
