@@ -39,7 +39,7 @@ createImageBitmap(image, sx, sy, sw, sh, options)
     - {{domxref("HTMLCanvasElement")}}
     - {{domxref("Blob")}}
     - {{domxref("ImageData")}}
-    - {{domxref("ImageBitmap")}
+    - {{domxref("ImageBitmap")}}
     - {{domxref("OffscreenCanvas")})
 - `sx`
   - : The x coordinate of the reference point of the rectangle from which the
