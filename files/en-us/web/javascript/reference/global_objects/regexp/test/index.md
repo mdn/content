@@ -115,6 +115,15 @@ regex.test("barfoo"); // true
 regex.test("foobar"); //false
 
 // regex.lastIndex is at 0
+regex.test("foobarfoo"); // true
+
+// regex.lastIndex is at 3
+regex.test("foobarfoo"); // true
+
+// regex.lastIndex is at 9
+regex.test("foobarfoo"); // false
+
+// regex.lastIndex is at 0
 // (...and so on)
 ```
 
