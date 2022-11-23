@@ -50,7 +50,7 @@ The following example provides a function which returns the last element found i
 
 ```js
 // Our array with items
-const cart = ['apple', 'banana', 'pear'];
+const cart = ["apple", "banana", "pear"];
 
 // A function which returns the last item of a given array
 function returnLast(arr) {
@@ -62,7 +62,7 @@ const item1 = returnLast(cart);
 console.log(item1); // 'pear'
 
 // Add an item to our 'cart' array
-cart.push('orange');
+cart.push("orange");
 const item2 = returnLast(cart);
 console.log(item2); // 'orange'
 ```
@@ -73,10 +73,10 @@ This example compares different ways to select the penultimate (last but one) it
 
 ```js
 // Our array with items
-const colors = ['red', 'green', 'blue'];
+const colors = ["red", "green", "blue"];
 
 // Using length property
-const lengthWay = colors[colors.length-2];
+const lengthWay = colors[colors.length - 2];
 console.log(lengthWay); // 'green'
 
 // Using slice() method. Note an array is returned

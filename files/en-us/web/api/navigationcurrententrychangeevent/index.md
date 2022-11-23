@@ -29,16 +29,16 @@ This event fires after the navigation is committed, meaning that the visible URL
 
 ## Constructor
 
-- {{domxref("NavigationCurrentEntryChangeEvent.NavigationCurrentEntryChangeEvent", "NavigationCurrentEntryChangeEvent()")}}
+- {{domxref("NavigationCurrentEntryChangeEvent.NavigationCurrentEntryChangeEvent", "NavigationCurrentEntryChangeEvent()")}} {{Experimental_Inline}}
   - : Creates a new `NavigationCurrentEntryChangeEvent` object instance.
 
 ## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("Event")}}._
 
-- {{domxref("NavigationCurrentEntryChangeEvent.from", "from")}} {{ReadOnlyInline}}
+- {{domxref("NavigationCurrentEntryChangeEvent.from", "from")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the {{domxref("NavigationHistoryEntry")}} that was navigated from.
-- {{domxref("NavigationCurrentEntryChangeEvent.navigationType", "navigationType")}} {{ReadOnlyInline}}
+- {{domxref("NavigationCurrentEntryChangeEvent.navigationType", "navigationType")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the type of the navigation that resulted in the change.
 
 ## Examples

@@ -1323,7 +1323,9 @@ Firefox uses the following heuristics to determine the locale to validate the us
       <td>
         <ul>
           <li>
-            <code>type=button</code>: {{ARIARole("link")}},
+            <code>type=button</code>: {{ARIARole("checkbox")}},
+            {{ARIARole("combobox")}},
+            {{ARIARole("link")}},
             {{ARIARole("menuitem")}},
             {{ARIARole("menuitemcheckbox")}},
             {{ARIARole("menuitemradio")}},
