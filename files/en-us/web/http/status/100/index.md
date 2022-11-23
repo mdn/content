@@ -20,7 +20,7 @@ and receive a `100 Continue` status code in response before sending the body.
 
 ## Status
 
-```
+```plain
 100 Continue
 ```
 

@@ -23,11 +23,11 @@ The **`length`** read-only property of a string contains the length of the strin
 
 This property returns the number of code units in the string. JavaScript uses [UTF-16](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters) encoding, where each Unicode character may be encoded as one or two code units, so it's possible for the value returned by `length` to not match the actual number of Unicode characters in the string. For common scripts like Latin, Cyrillic, wellknown CJK characters, etc., this should not be an issue, but if you are working with certain scripts, such as emojis, [mathematical symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols), or obscure Chinese characters, you may need to account for the difference between code units and characters.
 
-The language specification requires strings to have a maximum length of 2<sup>53</sup> - 1 elements, which is the upper limit for [precise integers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER). However, a string with this length needs 16384TB of storage, which cannot fit in any reasonable device's memory, so implementations tend to lower the threshold, which allows the string's length to be conveniently stored in a 32-bit integer.
+The language specification requires strings to have a maximum length of 2<sup>53</sup> - 1 elements, which is the upper limit for [precise integers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER). However, a string with this length needs 16384TiB of storage, which cannot fit in any reasonable device's memory, so implementations tend to lower the threshold, which allows the string's length to be conveniently stored in a 32-bit integer.
 
-- In V8 (used by Chrome and Node), the maximum length is 2<sup>29</sup> - 24 (\~1GB). On 32-bit systems, the maximum length is 2<sup>28</sup> - 16 (\~512MB).
-- In Firefox, the maximum length is 2<sup>30</sup> - 2 (\~2GB). Before Firefox 65, the maximum length was 2<sup>28</sup> - 1 (\~512MB).
-- In Safari, the maximum length is 2<sup>31</sup> - 1 (\~4GB).
+- In V8 (used by Chrome and Node), the maximum length is 2<sup>29</sup> - 24 (\~1GiB). On 32-bit systems, the maximum length is 2<sup>28</sup> - 16 (\~512MiB).
+- In Firefox, the maximum length is 2<sup>30</sup> - 2 (\~2GiB). Before Firefox 65, the maximum length was 2<sup>28</sup> - 1 (\~512MiB).
+- In Safari, the maximum length is 2<sup>31</sup> - 1 (\~4GiB).
 
 For an empty string, `length` is 0.
 

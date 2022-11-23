@@ -35,7 +35,7 @@ open(options)
     - `dataBits` {{Optional_Inline}}
       - : An integer value of 7 or 8 indicating the number of data bits per frame. If not passed, defaults to 8.
     - `flowControl` {{Optional_Inline}}
-      - : The flow control type, either `"none"` or `"hardware"`. The default value is `"none:`.
+      - : The flow control type, either `"none"` or `"hardware"`. The default value is `"none"`.
     - `parity` {{Optional_Inline}}
       - : The parity mode, either `"none"`, `"even"`, or `"odd"`. The default value is `"none"`.
     - `stopBits` {{Optional_Inline}}

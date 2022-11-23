@@ -17,7 +17,7 @@ This status is similar to {{HTTPStatus("401")}}, but for the **`403 Forbidden`**
 
 ## Status
 
-```
+```plain
 403 Forbidden
 ```
 

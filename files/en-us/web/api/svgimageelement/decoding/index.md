@@ -47,4 +47,4 @@ img.src = 'img/logo.svg';
 
 ## See also
 
-- [\<img>: The Image Embed element](/en-US/docs/Web/HTML/Element/img)
+- [`<img>`: The Image Embed element](/en-US/docs/Web/HTML/Element/img)

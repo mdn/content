@@ -35,7 +35,7 @@ Elements targeted by this selector are:
 
 ## Syntax
 
-```
+```plain
 :indeterminate
 ```
 

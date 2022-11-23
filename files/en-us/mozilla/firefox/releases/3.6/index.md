@@ -206,7 +206,7 @@ The following assorted changes have been made:
 
 ### Changes in accessibility code
 
-- The `EVENT_REORDER`[accessibility event](/en-US/docs/XPCOM_Interface_Reference/nsIAccessibleEvent) is now sent when the children of frames and iframes change, as well as when the main document's children change. See {{bug(420845)}}.
+- The `EVENT_REORDER` [accessibility event](/en-US/docs/XPCOM_Interface_Reference/nsIAccessibleEvent) is now sent when the children of frames and iframes change, as well as when the main document's children change. See {{bug(420845)}}.
 - The `nsIAccessibleTable.selectRow()` now correctly removes any current selection before selecting the specified row.
 
 ## See also
