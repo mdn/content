@@ -42,7 +42,7 @@ A {{ domxref("TimeRanges") }} Object consists of the following properties:
 
 Without any user interaction there is usually only one time range, but if you jump about in the media more than one time range can appear, as illustrated by the below visualization. This represents two buffered time ranges — one spanning 0 to 5 seconds and the second spanning 15 to 19 seconds.
 
-```
+```plain
 ------------------------------------------------------
 |=============|                    |===========|     |
 ------------------------------------------------------

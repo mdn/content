@@ -266,13 +266,13 @@ Our grid works nicely, but it has a fixed width. We really want a flexible (flui
 
 The equation that turns a fixed width into a flexible percentage-based one is as follows.
 
-```
+```plain
 target / context = result
 ```
 
 For our column width, our **target width** is 60 pixels and our **context** is the 960 pixel wrapper. We can use the following to calculate a percentage.
 
-```
+```plain
 60 / 960 = 0.0625
 ```
 
@@ -280,7 +280,7 @@ We then move the decimal point 2 places giving us a percentage of 6.25%. So, in 
 
 We need to do the same with our gutter width:
 
-```
+```plain
 20 / 960 = 0.02083333333
 ```
 

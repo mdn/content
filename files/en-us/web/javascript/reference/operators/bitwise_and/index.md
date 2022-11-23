@@ -30,7 +30,7 @@ and ones). Numbers with more than 32 bits get their most significant bits discar
 example, the following integer with more than 32 bits will be converted to a 32-bit
 integer:
 
-```
+```plain
 Before: 11100110111110100000000000000110000000000001
 After:              10100000000000000110000000000001
 ```
@@ -50,7 +50,7 @@ The truth table for the AND operation is:
 | 1   | 0   | 0       |
 | 1   | 1   | 1       |
 
-```
+```plain
      9 (base 10) = 00000000000000000000000000001001 (base 2)
     14 (base 10) = 00000000000000000000000000001110 (base 2)
                    --------------------------------
