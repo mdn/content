@@ -216,7 +216,7 @@ The optional [codecs parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) 
 
 The most commonly used MIME types used for web content are listed below.
 This isn't a complete list of all the types that may be available, however.
-See the [media container formats](/en-US/docs/Web/Media/Formats/Containers) guide for that.
+See the [media container formats guide](/en-US/docs/Web/Media/Formats/Containers) for that.
 
 | MIME type                                               | Audio or video type                                                                                                                                                                     |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

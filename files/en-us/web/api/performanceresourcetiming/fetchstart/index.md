@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceResourceTiming.fetchStart
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}
 
 The **`fetchStart`** read-only property represents a
 {{domxref("DOMHighResTimeStamp","timestamp")}} immediately before the browser starts to

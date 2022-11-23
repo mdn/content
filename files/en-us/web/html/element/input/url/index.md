@@ -381,7 +381,7 @@ input:valid + span::after {
 
 {{EmbedLiveSample("Pattern_validation", 700, 150)}}
 
-First of all, the {{htmlattrxref("required", "input")}} attribute is specified, making it mandatory that a valid email address be provided.
+First of all, the {{htmlattrxref("required", "input")}} attribute is specified, making it mandatory that a valid URL be provided.
 
 Second, in the `url` input we set `pattern` to `".*\.myco\..*"`. This simple regular expression requests a string that has any number of characters, followed by a dot, followed by "myco", followed by a dot, followed by any number of characters. And because the browser runs both the standard URL filter _and_ our custom pattern against the specified text, we wind up with a validation which says "make sure this is a valid URL, and also in a Myco domain."
 

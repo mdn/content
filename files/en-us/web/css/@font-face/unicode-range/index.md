@@ -47,9 +47,7 @@ The purpose of this descriptor is to allow the font resources to be segmented so
 
 ## Formal syntax
 
-```
-<unicode-range>#
-```
+{{csssyntax}}
 
 ## Examples
 

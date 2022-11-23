@@ -61,7 +61,7 @@ These three tips can help you to decide whether to use a `Map` or an `Object`:
 
 ### WeakMap object
 
-A {{jsxref("WeakMap")}} is a collection of key/value pairs whose keys must be objects, with values of any arbitrary [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures#javascript_types), and which does not create strong references to its keys. That is, an object's presence as a key in a `WeakMap` does not prevent the object from being garbage collected. Once an object used as a key has been collected, its corresponding values in any `WeakMap` become candidates for garbage collection as well — as long as they aren't strongly referred to elsewhere.
+A {{jsxref("WeakMap")}} is a collection of key/value pairs whose keys must be objects, with values of any arbitrary [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures), and which does not create strong references to its keys. That is, an object's presence as a key in a `WeakMap` does not prevent the object from being garbage collected. Once an object used as a key has been collected, its corresponding values in any `WeakMap` become candidates for garbage collection as well — as long as they aren't strongly referred to elsewhere.
 
 The `WeakMap` API is essentially the same as the `Map` API. However, a `WeakMap` doesn't allow observing the liveness of its keys, which is why it doesn't allow enumeration. So there is no method to obtain a list of the keys in a `WeakMap`. If there were, the list would depend on the state of garbage collection, introducing non-determinism.
 
@@ -149,7 +149,7 @@ The use cases of `WeakSet` objects are limited. They will not leak memory, so it
 
 ## Key and value equality of Map and Set
 
-Both the key equality of `Map` objects and the value equality of `Set` objects are based on the [SameValueZero algorithm](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality)":
+Both the key equality of `Map` objects and the value equality of `Set` objects are based on the [SameValueZero algorithm](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality):
 
 - Equality works like the identity comparison operator `===`.
 - `-0` and `+0` are considered equal.

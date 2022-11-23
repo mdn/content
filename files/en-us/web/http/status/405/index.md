@@ -18,7 +18,7 @@ The server **must** generate an **`Allow`** header field in a 405 status code re
 
 ## Status
 
-```
+```plain
 405 Method Not Allowed
 ```
 

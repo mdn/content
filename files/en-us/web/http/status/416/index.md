@@ -18,7 +18,7 @@ Faced with this error, browsers usually either abort the operation (for example,
 
 ## Status
 
-```
+```plain
 416 Range Not Satisfiable
 ```
 

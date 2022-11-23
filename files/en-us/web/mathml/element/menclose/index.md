@@ -6,10 +6,11 @@ tags:
   - MathML Reference
   - MathML:Element
   - MathML:General Layout Schemata
+  - Non-standard
 browser-compat: mathml.elements.menclose
 ---
 
-{{MathMLRef}}
+{{MathMLRef}}{{Non-standard_header}}
 
 The **`<menclose>`** [MathML](/en-US/docs/Web/MathML) element renders its content inside an enclosing notation specified by the `notation` attribute.
 
@@ -17,7 +18,7 @@ The **`<menclose>`** [MathML](/en-US/docs/Web/MathML) element renders its conten
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
-- `notation`
+- `notation` {{Non-standard_Inline}}
 
   - : A list of notations, separated by white space, to apply to the child elements. The symbols are each drawn as if the others are not present, and therefore may overlap. Possible values are:
 

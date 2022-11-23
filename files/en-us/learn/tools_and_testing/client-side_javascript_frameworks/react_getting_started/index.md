@@ -45,7 +45,7 @@ In this article we will say hello to React. We'll discover a little bit of detai
       <td>
         <p>
           To set up a local React development environment, create a start app, and
-          understand the basics of how it works
+          understand the basics of how it works.
         </p>
       </td>
     </tr>
@@ -198,7 +198,7 @@ The **`public`** directory contains files that will be read by your browser whil
 
 The `public` directory will also be published when you build and deploy a production version of your app. We won't cover deployment in this tutorial, but you should be able to use a similar solution to that described in our [Deploying our app](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment) tutorial.
 
-The `package.json` file contains information about our project that Node.js/npm uses to keep it organized. This file is not unique to React applications; create-react-app merely populates it. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you can read [What is the file \`package.json\`? on NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/); we also talk about it in our [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) tutorial.
+The `package.json` file contains information about our project that Node.js/npm uses to keep it organized. This file is not unique to React applications; create-react-app merely populates it. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you can read [What is the file `package.json`? on NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/); we also talk about it in our [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) tutorial.
 
 ## Exploring our first React component — \<App/>
 
@@ -283,7 +283,7 @@ The `App` function returns a JSX expression. This expression defines what your b
 
 Some elements in the expression have attributes, which are written just like in HTML, following a pattern of `attribute="value"`. On line 3, the opening [`<div>`](/en-US/docs/Web/HTML/Element/div) tag has a `className` attribute. This is the same as the [`class`](/en-US/docs/Web/HTML/Global_attributes/class) attribute in HTML, but because JSX is JavaScript, we can't use the word `class` — it's reserved, meaning JavaScript already uses it for a specific purpose and it would cause problems here in our code. A few other HTML attributes are written differently in JSX than they are in HTML too, for the same kind of reason. We'll cover them as we encounter them.
 
-Take a moment to change the [`<p>`](/en-US/docs/Web/HTML/Element/p) tag on line 6 so that it reads "Hello, world!", then save your file. You'll notice that this change is immediately rendered in the development server running at `http://localhost:3000` in your browser. Now delete the [`<a>`](/en-US/docs/Web/HTML/Element/a) tag and save; the "Learn React" link will be gone.
+Take a moment to change the [`<p>`](/en-US/docs/Web/HTML/Element/p) tag on line 6 so that it reads "Hello, World!", then save your file. You'll notice that this change is immediately rendered in the development server running at `http://localhost:3000` in your browser. Now delete the [`<a>`](/en-US/docs/Web/HTML/Element/a) tag and save; the "Learn React" link will be gone.
 
 Your `App` component should now look like this:
 
@@ -390,7 +390,7 @@ function App() {
 }
 ```
 
-Change line 8 to use our `subject` variable instead of the word "world", like this:
+Change line 8 to use our `subject` variable instead of the word "World", like this:
 
 ```jsx
 function App() {
@@ -408,7 +408,7 @@ function App() {
 }
 ```
 
-When you save, your browser should display "Hello, React!" instead of "Hello, world!"
+When you save, your browser should display "Hello, React!" instead of "Hello, World!"
 
 Variables are convenient, but the one we've just set doesn't make great use of React's features. That's where props come in.
 

@@ -155,4 +155,4 @@ let key = await window.crypto.subtle.generateKey(
 ## See also
 
 - [Cryptographic key length recommendations](https://www.keylength.com/).
-- [NIST Transitioning the Use of Cryptographic Algorithms and Key Lengths](https://csrc.nist.gov/publications/detail/sp/800-131a/rev-1/archive/2015-11-06).
+- [NIST Transitioning the Use of Cryptographic Algorithms and Key Lengths](https://csrc.nist.gov/publications/detail/sp/800-131a/rev-2/final).
