@@ -23,7 +23,7 @@ for cases where another process or server handles the request, or for batch proc
 
 ## Status
 
-```
+```plain
 202 Accepted
 ```
 

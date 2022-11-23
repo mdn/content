@@ -65,7 +65,7 @@ Here we are:
 
 The complete output should be something like:
 
-```
+```plain
 Promise { <state>: "pending" }
 Started request…
 Received response: 200
@@ -212,7 +212,7 @@ Here, we're making three `fetch()` requests to three different URLs. If they all
 
 With the URLs we've provided, all the requests should be fulfilled, although for the second, the server will return `404` (Not Found) instead of `200` (OK) because the requested file does not exist. So the output should be:
 
-```
+```plain
 https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json: 200
 https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found: 404
 https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json: 200
@@ -238,7 +238,7 @@ Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
 
 Then we can expect the `catch()` handler to run, and we should see something like:
 
-```
+```plain
 Failed to fetch: TypeError: Failed to fetch
 ```
 

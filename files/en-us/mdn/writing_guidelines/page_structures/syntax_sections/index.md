@@ -19,7 +19,7 @@ Below the heading is a code block showing the feature's exact syntax, demarcated
 
 The example below shows the Markdown code for a typical Syntax section (for a JavaScript function):
 
-````
+````md
 ## Syntax
 
 ```js-nolint

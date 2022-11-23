@@ -31,7 +31,7 @@ As there are several ways to define the character encoding of a style sheet, the
 
 ## Syntax
 
-```
+```css
 @charset "UTF-8";
 @charset "iso-8859-15";
 ```
