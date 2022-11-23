@@ -31,7 +31,7 @@ Servers will often produce this status if:
 
 ## Status
 
-```
+```plain
 431 Request Header Fields Too Large
 ```
 

@@ -25,7 +25,7 @@ There are a few rare conditions when this might occur:
 
 ## Status
 
-```
+```plain
 414 URI Too Long
 ```
 
