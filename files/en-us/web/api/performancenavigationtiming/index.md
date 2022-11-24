@@ -12,7 +12,7 @@ tags:
 browser-compat: api.PerformanceNavigationTiming
 ---
 
-{{APIRef("Navigation Timing")}}
+{{APIRef("Performance API")}}
 
 The **`PerformanceNavigationTiming`** interface provides methods and properties to store and retrieve metrics regarding the browser's document navigation events. For example, this interface can be used to determine how much time it takes to load or unload a document.
 
@@ -70,7 +70,7 @@ The interface also supports the following properties:
 ## Instance methods
 
 - {{domxref("PerformanceNavigationTiming.toJSON()")}}
-  - : Returns a string that is the JSON representation of the {{domxref("PerformanceNavigationTiming")}} object.
+  - : Returns a JSON representation of the `PerformanceNavigationTiming` object.
 
 ## Specifications
 

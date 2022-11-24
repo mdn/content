@@ -515,7 +515,7 @@ class AuthorListViewTest(TestCase):
 
         for author_id in range(number_of_authors):
             Author.objects.create(
-                first_name=f'Christian {author_id}',
+                first_name=f'Dominique {author_id}',
                 last_name=f'Surname {author_id}',
             )
 

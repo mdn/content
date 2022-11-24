@@ -273,7 +273,7 @@ let rotateZMatrix = [
 
 [View on JSFiddle](https://jsfiddle.net/tatumcreative/9vr2dorz/)
 
-![](matrix-rotation.jpg)
+![An example of matrix rotation.](matrix-rotation.jpg)
 
 Here are a set of functions that return rotation matrices for rotating around each of the three axes. One big note is that there is no perspective applied, so it might not feel very 3D yet. The flatness is equivalent to when a camera zooms in really close onto an object in the distance — the sense of perspective disappears.
 
@@ -317,7 +317,7 @@ The order that matrices are multiplied in matters. When multiplying numbers, a \
 Another mind-bender is that matrix multiplication in WebGL and CSS needs to happen in the reverse order that the operations intuitively happen. For instance, to scale something down by 80%, move it down 200 pixels, and then rotate about the origin 90 degrees would look something like the following in pseudocode.
 
 ```plain
-  transformation = rotate * translate * scale
+transformation = rotate * translate * scale
 ```
 
 ### Composing multiple transformations

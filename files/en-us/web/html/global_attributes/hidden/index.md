@@ -68,7 +68,7 @@ In the _hidden until found_ state, the element is hidden but its content will be
 
 This enables a developer to collapse a section of content, but make it searchable and accessible via fragment navigation.
 
-Note that browsers typically implement _hidden until found_ using {{cssxref("content-visibility", "content-visibility: hidden")}}. This means that unlike elements in the _hidden_ state, elements in the _hidden until found_ state will have generated boxes, menaing that:
+Note that browsers typically implement _hidden until found_ using {{cssxref("content-visibility", "content-visibility: hidden")}}. This means that unlike elements in the _hidden_ state, elements in the _hidden until found_ state will have generated boxes, meaning that:
 
 - the element will participate in page layout
 - margin, borders, padding, and background for the element will be rendered.

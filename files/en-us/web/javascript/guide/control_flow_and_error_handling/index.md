@@ -64,7 +64,7 @@ Here, `{ x++; }` is the block statement.
 > {
 >   var x = 2;
 > }
-> console.log(x); // outputs 2
+> console.log(x); // 2
 > ```
 >
 > This outputs `2` because the `var x` statement within the block is in the same scope as the `var x` statement before the block. (In C or Java, the equivalent code would have output `1`.)
@@ -334,13 +334,13 @@ block is skipped. The `finally` block executes after the `try` and
 The following example uses a `try...catch` statement. The example calls a
 function that retrieves a month name from an array based on the value passed to the
 function. If the value does not correspond to a month number
-(`1`–`12`), an exception is thrown with the value
+(`1` – `12`), an exception is thrown with the value
 `'InvalidMonthNo'` and the statements in the `catch` block set the
 `monthName` variable to `'unknown'`.
 
 ```js
 function getMonthName(mo) {
-  mo--; // Adjust month number for array index (1 = Jan, 12 = Dec)
+  mo--; // Adjust month number for array index (so that 0 = Jan, 11 = Dec)
   const months = [
     'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
     'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
@@ -481,7 +481,7 @@ try {
   console.log('caught outer "bogus"');
 }
 
-// OUTPUT
+// Logs:
 // caught inner "bogus"
 // false
 ```
@@ -520,7 +520,7 @@ For example:
 ```js
 function doSomethingErrorProne() {
   if (ourCodeMakesAMistake()) {
-    throw (new Error('The message'));
+    throw new Error('The message');
   } else {
     doSomethingToGetAJavaScriptError();
   }
@@ -528,9 +528,10 @@ function doSomethingErrorProne() {
 
 try {
   doSomethingErrorProne();
-} catch (e) {               // NOW, we actually use `console.error()`
-  console.error(e.name);    // logs 'Error'
-  console.error(e.message); // logs 'The message', or a JavaScript error message
+} catch (e) {
+  // Now, we actually use `console.error()`
+  console.error(e.name); // 'Error'
+  console.error(e.message); // 'The message', or a JavaScript error message
 }
 ```
 

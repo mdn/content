@@ -14,6 +14,8 @@ browser-compat: css.properties.-webkit-text-fill-color
 
 The **`-webkit-text-fill-color`** CSS property specifies the fill [color](/en-US/docs/Web/CSS/color_value) of characters of text. If this property is not set, the value of the {{cssxref("color")}} property is used.
 
+## Syntax
+
 ```css
 /* <color> values */
 -webkit-text-fill-color: red;
@@ -25,8 +27,6 @@ The **`-webkit-text-fill-color`** CSS property specifies the fill [color](/en-US
 -webkit-text-fill-color: initial;
 -webkit-text-fill-color: unset;
 ```
-
-## Syntax
 
 ### Values
 

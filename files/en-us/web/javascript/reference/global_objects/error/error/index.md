@@ -55,10 +55,10 @@ When `Error` is used like a function, that is without {{JSxRef("Operators/new", 
 Therefore, a mere call to `Error` will produce the same output that constructing an `Error` object via the `new` keyword would.
 
 ```js
-const x = Error('I was created using a function call!')
+const x = Error("I was created using a function call!");
 
 // above has the same functionality as following
-const y = new Error('I was constructed via the "new" keyword!')
+const y = new Error('I was constructed via the "new" keyword!');
 ```
 
 ### Rethrowing an error with a cause
@@ -70,7 +70,7 @@ In this case you should pass the original error into the constructor for the new
 try {
   frameworkThatCanThrow();
 } catch (err) {
-  throw new Error('New error message', { cause: err });
+  throw new Error("New error message", { cause: err });
 }
 ```
 

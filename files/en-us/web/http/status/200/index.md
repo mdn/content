@@ -19,11 +19,11 @@ The meaning of a success depends on the HTTP request method:
 - {{HTTPMethod("POST")}}: The resource describing the result of the action is transmitted in the message body
 - {{HTTPMethod("TRACE")}}: The message body contains the request message as received by the server.
 
-The successful result of a {{HTTPMethod("PUT")}} or a {{HTTPMethod("DELETE")}} is often not a `200` `OK` but a {{HTTPStatus("204")}} `No Content` (or a {{HTTPStatus("201")}} `Created` when the resource is uploaded for the first time).
+The successful result of a {{HTTPMethod("PUT")}} or a {{HTTPMethod("DELETE")}} is often not a `200 OK` but a {{HTTPStatus("204")}} `No Content` (or a {{HTTPStatus("201")}} `Created` when the resource is uploaded for the first time).
 
 ## Status
 
-```
+```plain
 200 OK
 ```
 

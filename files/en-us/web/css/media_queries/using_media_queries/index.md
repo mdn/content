@@ -14,8 +14,7 @@ tags:
 
 {{CSSRef}}
 
-**Media queries** are useful when you want to modify your site or app depending on a device's general type (such as print vs. screen) or specific characteristics and parameters (such as screen resolution or browser {{glossary("viewport")}} width).
-
+**Media queries** allow you to apply CSS styles depending on a device's general type (such as print vs. screen) or other characteristics such as screen resolution or browser {{glossary("viewport")}} width.
 Media queries are used for the following:
 
 - To conditionally apply styles with the [CSS](/en-US/docs/Web/CSS) {{cssxref("@media")}} and {{cssxref("@import")}} [at-rules.](/en-US/docs/Web/CSS/At-rule)
@@ -34,6 +33,7 @@ Media queries are case-insensitive.
   The type is optional (assumed to be `all`) except when using the `not` or `only` logical operators.
 
 - [Media features](/en-US/docs/Web/CSS/@media#media_features) describe a specific characteristic of the {{glossary("user agent")}}, output device, or environment:
+
   - {{cssxref("@media/any-hover", "any-hover")}}
   - {{cssxref("@media/any-pointer", "any-pointer")}}
   - {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
@@ -301,6 +301,7 @@ For example, the following query tests for devices that have a monochrome displa
 ## See also
 
 - [@media](/en-US/docs/Web/CSS/@media)
+- [Container queries](/en-US/docs/Web/CSS/CSS_Container_Queries)
 - [Testing media queries programmatically](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
 - [CSS Animations Between Media Queries](https://davidwalsh.name/animate-media-queries)
 - [Extended Mozilla media features](/en-US/docs/Web/CSS/Mozilla_Extensions#media_features)

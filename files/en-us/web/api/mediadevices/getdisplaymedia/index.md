@@ -46,7 +46,7 @@ getDisplayMedia(constraints)
     a video track, the returned stream will have one even if no video track is expressly
     requested by the `constraints` object. For more details, see the [constraints](/en-US/docs/Web/API/MediaDevices/getUserMedia#parameters)
     section under the {{domxref("MediaDevices.getUserMedia()")}} method, as well
-    as the article [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints).
+    as the article [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints).
 
 ### Return value
 
@@ -140,7 +140,7 @@ add the video track from the stream.
 
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
 - [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}: Capturing media from a
   camera and/or microphone

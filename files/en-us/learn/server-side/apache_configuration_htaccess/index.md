@@ -10,9 +10,11 @@ tags:
   - Redirect
 ---
 
+{{LearnSidebar}}
+
 Apache .htaccess files allow users to configure directories of the web server they control without modifying the main configuration file.
 
-While this is useful it's important to note that using `.htaccess` files slows down Apache, so, if you have access to the main server configuration file (which is usually called \`httpd.conf\`), you should add this logic there under a `Directory` block.
+While this is useful it's important to note that using `.htaccess` files slows down Apache, so, if you have access to the main server configuration file (which is usually called `httpd.conf`), you should add this logic there under a `Directory` block.
 
 See [.htaccess](https://httpd.apache.org/docs/current/howto/htaccess.html) in the Apache HTTPD documentation site for more details about what .htaccess files can do.
 
@@ -114,7 +116,7 @@ The [Resource Timing Level 1](https://www.w3.org/TR/resource-timing/) specificat
 
 The [Timing-Allow-Origin](/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin) response header specifies origins that are allowed to see values of attributes retrieved via features of the Resource Timing API, which would otherwise be reported as zero due to cross-origin restrictions.
 
-If a resource isn't served with a `Timing-Allow-Origin` or if the header does not include the origin making the request some of the attributes of the `PerformanceResourceTiming` object will be set to zero.
+If a resource isn't served with a `Timing-Allow-Origin` or if the header does not include the origin, after making the request some attributes of the `PerformanceResourceTiming` object will be set to zero.
 
 ```apache
 <IfModule mod_headers.c>
@@ -157,7 +159,7 @@ For example, the filename extensions of content files often define the content's
 
 **Changing the metadata for a file does not change the value of the Last-Modified header. Thus, previously cached copies may still be used by a client or proxy, with the previous headers. If you change the metadata (language, content type, character set, or encoding) you may need to 'touch' affected files (updating their last modified date) to ensure that all visitors receive the corrected content headers.**
 
-### Serve resources with the proper media types (a.k.a MIME types)
+### Serve resources with the proper media types (a.k.a. MIME types)
 
 Associates media types with one or more extensions to make sure the resources will be served appropriately.
 
@@ -237,7 +239,7 @@ Use [AddDefaultCharset](https://httpd.apache.org/docs/current/mod/core.html#addd
 
 ## Set the charset for specific media types
 
-Serve the following file types with the `charset` parameter set to \`UTF-8\` using the [AddCharset](https://httpd.apache.org/docs/current/mod/mod_mime.html#addcharset) directive available in `mod_mime`.
+Serve the following file types with the `charset` parameter set to `UTF-8` using the [AddCharset](https://httpd.apache.org/docs/current/mod/mod_mime.html#addcharset) directive available in `mod_mime`.
 
 ```apache
 <IfModule mod_mime.c>
@@ -387,7 +389,7 @@ Nonetheless, you should ensure that you send the `X-Frame-Options` header for al
 
 ## Content Security Policy (CSP)
 
-[CSP (Content Security Policy)](https://content-security-policy.com/) mitigates the risk of cross-site scripting and other content-injection attacks by setting a \`Content Security Policy\` which allows trusted sources of content for your website.
+[CSP (Content Security Policy)](https://content-security-policy.com/) mitigates the risk of cross-site scripting and other content-injection attacks by setting a `Content Security Policy` which allows trusted sources of content for your website.
 
 There is no policy that fits all websites, the example below is meant as guidelines for you to modify for your site.
 
@@ -447,7 +449,7 @@ If a user types `example.com` in their browser, even if the server redirects the
 
 The following header ensures that a browser only connects to your server via HTTPS, regardless of what the users type in the browser's address bar.
 
-Be aware that Strict Transport Security is not revokable and you must ensure being able to serve the site over HTTPS for as long as you've specified in the `max-age` directive. If you don't have a valid TLS connection anymore (e.g. due to an expired TLS certificate) your visitors will see an error message even when attempting to connect over HTTP.
+Be aware that Strict Transport Security is not revokable, and you must ensure being able to serve the site over HTTPS for as long as you've specified in the `max-age` directive. If you don't have a valid TLS connection anymore (e.g. due to an expired TLS certificate) your visitors will see an error message even when attempting to connect over HTTP.
 
 ```apache
 <IfModule mod_headers.c>
@@ -616,7 +618,7 @@ Compress all output labeled with one of the following media types using the [Add
 
 ## Map extensions to media types
 
-Map the following filename extensions to the specified encoding type using [AddEncoding](https://httpd.apache.org/docs/current/mod/mod_mime.html#addencoding) so Apache can serve the file types with the appropriate `Content-Encoding` response header (this will NOT make Apache compress them!). If these files types would be served without an appropriate `Content-Encoding` response header, client applications (e.g.: browsers) wouldn't know that they first need to uncompress the response, and thus, wouldn't be able to understand the content.
+Map the following filename extensions to the specified encoding type using [AddEncoding](https://httpd.apache.org/docs/current/mod/mod_mime.html#addencoding) so Apache can serve the file types with the appropriate `Content-Encoding` response header (this will NOT make Apache compress them!). If these files types were served without an appropriate `Content-Encoding` response header, client applications (e.g.: browsers) wouldn't know that they first need to uncompress the response, and thus, wouldn't be able to understand the content.
 
 ```apache
 <IfModule mod_deflate.c>

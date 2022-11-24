@@ -11,7 +11,7 @@ tags:
 browser-compat: html.elements.col
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<col>`** [HTML](/en-US/docs/Web/HTML) element defines a column within a table and is used for defining common semantics on all common cells. It is generally found within a {{HTMLElement("colgroup")}} element.
 

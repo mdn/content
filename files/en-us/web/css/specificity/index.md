@@ -38,7 +38,7 @@ The selector weight categories are listed here in the order of decreasing specif
 
 Combinators, such as {{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Descendant_combinator), and {{CSSxRef("Column_combinator", "||")}}, may make a selector more specific in what is selected but they don't add any value to the specificity weight.
 
-The negation pseudo-class, {{CSSxRef(":not", ":not()")}}, itself has no weight. Neither does the {{CSSxRef(":is", ":is()")}} pseudo-class. The parameters in these selectors, however, do. The values of both come from the parameter in the list of parameters that has the highest specificity. The [`:not()` and `:is()` exceptions](#the-is-and-not-exceptions) are discussed below.
+The negation pseudo-class, {{CSSxRef(":not", ":not()")}}, itself has no weight. Neither do the {{CSSxRef(":is", ":is()")}} or the {{CSSxRef(":has", ":has()")}} pseudo-classes. The parameters in these selectors, however, do. The values of both come from the parameter in the list of parameters that has the highest specificity. The [`:not()`, `:is()` and `:has()` exceptions](#the-is-not-and-has-exceptions) are discussed below.
 
 #### Matching selector
 
@@ -116,9 +116,9 @@ input.myClass {
 }
 ```
 
-### The `:is()` and `:not()` exceptions
+### The `:is()`, `:not()` and `:has()` exceptions
 
-The matches-any pseudo-class {{CSSxRef(":is", ":is()")}} and the negation pseudo-class {{CSSxRef(":not", ":not()")}} are _not_ considered as pseudo-classes in the specificity weight calculation. They themselves don't add any weight to the specificity equation. However, the selector parameters passed into the pseudo-class parenthesis are part of the specificity algorithm; the weight of the matches-any and negation pseudo-class in the specificity value calculation is the weight of the parameter's [weight](#selector_weight_categories).
+The matches-any pseudo-class {{CSSxRef(":is", ":is()")}}, the relational pseudo-class {{CSSxRef(":has", ":has()")}}, and the negation pseudo-class {{CSSxRef(":not", ":not()")}} are _not_ considered as pseudo-classes in the specificity weight calculation. They themselves don't add any weight to the specificity equation. However, the selector parameters passed into the pseudo-class parenthesis are part of the specificity algorithm; the weight of the matches-any and negation pseudo-class in the specificity value calculation is the weight of the parameter's [weight](#selector_weight_categories).
 
 ```css
 p {
@@ -128,6 +128,14 @@ p {
   /* 0-0-1 */
 }
 
+h2:nth-last-of-type(n + 2) {
+  /* 0-1-1 */
+}
+h2:has(~ h2) {
+  /* 0-0-2 */
+}
+
+
 div.outer p {
   /* 0-1-2 */
 }
@@ -136,13 +144,16 @@ div:not(.inner) p {
 }
 ```
 
-Note that in the above CSS pairing, the specificity weight provided by the `:is()` and `:not()` pseudo-classes is the value of the selector parameter, not of the pseudo-class.
+Note that in the above CSS pairing, the specificity weight provided by the `:is()`, `:has()` and `:not()` pseudo-classes is the value of the selector parameter, not of the pseudo-class.
 
-Both of these pseudo-classes accept complex selector lists, a list of comma-separated selectors, as a parameter. This feature can be used to increase a selector's specificity:
+All three of these pseudo-classes accept complex selector lists, a list of comma-separated selectors, as a parameter. This feature can be used to increase a selector's specificity:
 
 ```css
 :is(p, #fakeId) {
   /* 1-0-0 */
+}
+h1:has(+ h2, > #fakeId) {
+  /* 1-0-1 */
 }
 p:not(#fakeId) {
   /* 1-0-1 */
@@ -154,7 +165,7 @@ div:not(.inner, #fakeId) p {
 
 In the above CSS code block, we have included `#fakeId` in the selectors. This `#fakeId` adds `1-0-0` to the specificity weight of each paragraph.
 
-Generally, you want to keep specificity down to a minimum, but if you need to increase an element's specificity for a particular reason, these two pseudo-classes can help.
+Generally, you want to keep specificity down to a minimum, but if you need to increase an element's specificity for a particular reason, these three pseudo-classes can help.
 
 ```css
 a:not(#fakeId#fakeId#fakeID) {
@@ -265,7 +276,7 @@ As a special case for increasing specificity, you can duplicate weights from the
 
 Use this sparingly, if at all. If using selector duplication, always comment your CSS.
 
-By using `:is()` and `:not()`, you can increase specificity even if you can't add an `id` to a parent element:
+By using `:is()` and `:not()` (and also `:has()`), you can increase specificity even if you can't add an `id` to a parent element:
 
 ```css
 :not(#fakeID#fakeId#fakeID) span {
@@ -310,7 +321,7 @@ All these methods are covered in preceding sections.
 
 If you're unable to remove `!important` flags from an authors style sheet, the only solution to overriding the important styles is by using `!important`. Creating a [cascade layer](/en-US/docs/Web/CSS/@layer) of important declaration overrides is an excellent solution. Two ways of doing this include:
 
-#### Method #1
+#### Method 1
 
 1. Create a separate, short style sheet containing only important declarations specifically overriding any important declarations you were unable to remove.
 2. Import this stylesheet as the first import in your CSS using `layer()`, including the `@import` statement, before linking to other stylesheets. This is to ensure that the important overrides is imported as the first layer.
@@ -321,7 +332,7 @@ If you're unable to remove `!important` flags from an authors style sheet, the o
 </style>
 ```
 
-#### Method #2
+#### Method 2
 
 1. At the beginning of your stylesheet declarations, create a named cascade layer, like so:
 

@@ -32,7 +32,7 @@ Strings can be created as primitives, from string literals, or as objects, using
 
 ```js
 const string1 = "A string primitive";
-const string2 = 'Also a string primitive';
+const string2 = "Also a string primitive";
 const string3 = `Yet another string primitive`;
 ```
 
@@ -53,13 +53,13 @@ There are two ways to access an individual character in a string. The first is t
 {{jsxref("String.prototype.charAt()", "charAt()")}} method:
 
 ```js
-'cat'.charAt(1) // gives value "a"
+"cat".charAt(1); // gives value "a"
 ```
 
 The other way is to treat the string as an array-like object, where individual characters correspond to a numerical index:
 
 ```js
-'cat'[1] // gives value "a"
+"cat"[1]; // gives value "a"
 ```
 
 When using bracket notation for character access, attempting to delete or assign a
@@ -72,14 +72,15 @@ In C, the `strcmp()` function is used for comparing strings. In JavaScript,
 you just use the [less-than and greater-than operators](/en-US/docs/Web/JavaScript/Reference/Operators):
 
 ```js
-const a = 'a';
-const b = 'b';
-if (a < b) { // true
-  console.log(`${a} is less than ${b}`)
+const a = "a";
+const b = "b";
+if (a < b) {
+  // true
+  console.log(`${a} is less than ${b}`);
 } else if (a > b) {
-  console.log(`${a} is greater than ${b}`)
+  console.log(`${a} is greater than ${b}`);
 } else {
-  console.log(`${a} and ${b} are equal.`)
+  console.log(`${a} and ${b} are equal.`);
 }
 ```
 
@@ -134,10 +135,10 @@ const strPrim2 = String(1); // Coerced into the string primitive "1"
 const strPrim3 = String(true); // Coerced into the string primitive "true"
 const strObj = new String(strPrim); // String with new returns a string wrapper object.
 
-console.log(typeof strPrim); // Logs "string"
-console.log(typeof strPrim2); // Logs "string"
-console.log(typeof strPrim3); // Logs "string"
-console.log(typeof strObj);  // Logs "object"
+console.log(typeof strPrim); // "string"
+console.log(typeof strPrim2); // "string"
+console.log(typeof strPrim3); // "string"
+console.log(typeof strObj); // "object"
 ```
 
 > **Warning:** You should rarely find yourself using `String` as a constructor.
@@ -148,10 +149,10 @@ using {{jsxref("Global_Objects/eval", "eval()")}}. Primitives passed to
 all other objects are, by returning the object. For example:
 
 ```js
-const s1 = '2 + 2';              // creates a string primitive
-const s2 = new String('2 + 2');  // creates a String object
-console.log(eval(s1));           // returns the number 4
-console.log(eval(s2));           // returns the string "2 + 2"
+const s1 = "2 + 2"; // creates a string primitive
+const s2 = new String("2 + 2"); // creates a String object
+console.log(eval(s1)); // returns the number 4
+console.log(eval(s2)); // returns the string "2 + 2"
 ```
 
 For these reasons, the code may break when it encounters `String` objects
@@ -162,7 +163,7 @@ A `String` object can always be converted to its primitive counterpart with
 the {{jsxref("String.prototype.valueOf()", "valueOf()")}} method.
 
 ```js
-console.log(eval(s2.valueOf()))  // returns the number 4
+console.log(eval(s2.valueOf())); // returns the number 4
 ```
 
 ### String coercion
@@ -176,7 +177,7 @@ Many built-in operations that expect strings first coerce their arguments to str
 - Numbers are converted with the same algorithm as [`toString(10)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
 - [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) are converted with the same algorithm as [`toString(10)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString).
 - [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) throw a {{jsxref("TypeError")}}.
-- Objects are first converted to a primitive by calling its [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"string"` as hint), `toString()`, and `valueOf()` methods, in that order. The resulting primitive is then converted to a string.
+- Objects are first [converted to a primitive](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) by calling its [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"string"` as hint), `toString()`, and `valueOf()` methods, in that order. The resulting primitive is then converted to a string.
 
 There are several ways to achieve nearly the same effect in JavaScript.
 
@@ -217,9 +218,10 @@ You can use the [`+`](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
 operator to append multiple strings together, like this:
 
 ```js
-const longString = "This is a very long string which needs " +
-                   "to wrap across multiple lines because " +
-                   "otherwise my code is unreadable."
+const longString =
+  "This is a very long string which needs " +
+  "to wrap across multiple lines because " +
+  "otherwise my code is unreadable.";
 ```
 
 Or you can use the backslash character (`\`) at the end of each line to
@@ -228,9 +230,10 @@ any other character after the backslash (except for a line break), or as an inde
 otherwise it will not work.
 
 ```js
-const longString = "This is a very long string which needs \
+const longString =
+  "This is a very long string which needs \
 to wrap across multiple lines because \
-otherwise my code is unreadable."
+otherwise my code is unreadable.";
 ```
 
 Both of the above methods result in identical strings.
@@ -444,12 +447,12 @@ used on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxr
 
 ```js
 const nullVar = null;
-nullVar.toString();       // TypeError: nullVar is null
-String(nullVar);          // "null"
+nullVar.toString(); // TypeError: nullVar is null
+String(nullVar); // "null"
 
 const undefinedVar = undefined;
-undefinedVar.toString();  // TypeError: undefinedVar is undefined
-String(undefinedVar);     // "undefined"
+undefinedVar.toString(); // TypeError: undefinedVar is undefined
+String(undefinedVar); // "undefined"
 ```
 
 ## Specifications

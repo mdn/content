@@ -15,7 +15,7 @@ tags:
 browser-compat: html.elements.input
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<input>`** [HTML](/en-US/docs/Web/HTML) element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and {{Glossary("user agent")}}. The `<input>` element is one of the most powerful and complex in all of HTML due to the sheer number of combinations of input types and attributes.
 
@@ -162,7 +162,7 @@ The available types are as follows:
       <td>{{HTMLElement("input/number", "number")}}</td>
       <td>
         A control for entering a number. Displays a spinner and adds default
-        validation when supported. Displays a numeric keypad in some devices
+        validation. Displays a numeric keypad in some devices
         with dynamic keypads.
       </td>
       <td id="examplenumber">
@@ -306,7 +306,7 @@ The available types are as follows:
       <th colspan="3">Obsolete values</th>
     </tr>
     <tr>
-      <td>`datetime`</td>
+      <td><code>datetime</code></td>
       <td>
         {{deprecated_inline}} A control for entering a date and time (hour, minute, second, and fraction of a second) based on UTC time zone.
       </td>
@@ -344,9 +344,9 @@ Attributes for the `<input>` element include the [global HTML attributes](/en-US
 | [`formtarget`](#formtarget)         | `image`, `submit`                                                       | Browsing context for form submission                                                  |
 | [`height`](#height)                 | `image`                                                                 | Same as height attribute for {{htmlelement('img')}}; vertical dimension               |
 | [`list`](#list)                     | all except `hidden`, `password`, `checkbox`, `radio`, and buttons       | Value of the id attribute of the {{htmlelement('datalist')}} of autocomplete options  |
-| [`max`](#max)                       | `date`, `month`, `week`, `time`, `datetime-local`, `range`              | Maximum value                                                                         |
+| [`max`](#max)                       | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`    | Maximum value                                                                         |
 | [`maxlength`](#maxlength)           | `text`, `search`, `url`, `tel`, `email`, `password`                     | Maximum length (number of characters) of `value`                                      |
-| [`min`](#min)                       | `date`, `month`, `week`, `time`, `datetime-local`, `range`              | Minimum value                                                                         |
+| [`min`](#min)                       | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`    | Minimum value                                                                         |
 | [`minlength`](#minlength)           | `text`, `search`, `url`, `tel`, `email`, `password`                     | Minimum length (number of characters) of `value`                                      |
 | [`multiple`](#multiple)             | `email`, `file`                                                         | Boolean. Whether to allow multiple values                                             |
 | [`name`](#name)                     | all                                                                     | Name of the form control. Submitted with the form as part of a name/value pair        |
@@ -356,7 +356,7 @@ Attributes for the `<input>` element include the [global HTML attributes](/en-US
 | [`required`](#required)             | all except `hidden`, `range`, `color`, and buttons                      | Boolean. A value is required or must be check for the form to be submittable          |
 | [`size`](#size)                     | `text`, `search`, `url`, `tel`, `email`, `password`                     | Size of the control                                                                   |
 | [`src`](#src)                       | `image`                                                                 | Same as `src` attribute for {{htmlelement('img')}}; address of image resource         |
-| [`step`](#step)                     | `date`, `month`, `week`, `time`, `datetime-local`, `range`              | Incremental values that are valid                                                     |
+| [`step`](#step)                     | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`    | Incremental values that are valid                                                     |
 | [`type`](#type)                     | all                                                                     | Type of form control                                                                  |
 | [`value`](#value)                   | all                                                                     | The initial value of the control                                                      |
 | [`width`](#width)                   | `image`                                                                 | Same as `width` attribute for {{htmlelement('img')}}                                  |
@@ -619,7 +619,7 @@ The following non-standard attributes are also available on some browsers. As a 
     <tr>
       <td><a href="#autocorrect"><code>autocorrect</code></a></td>
       <td>
-        A string indicating whether or not autocorrect is <code>on</code> or <code>off</code>. <strong>Safari only.</strong>
+        A string indicating whether autocorrect is <code>on</code> or <code>off</code>. <strong>Safari only.</strong>
       </td>
     </tr>
     <tr>
@@ -657,7 +657,7 @@ The following non-standard attributes are also available on some browsers. As a 
         <a href="#webkitdirectory"><code>webkitdirectory</code></a>
       </td>
       <td>
-        A Boolean indicating whether or not to only allow the user to choose a directory (or directories, if <a href="#multiple"><code>multiple</code></a> is also present)
+        A Boolean indicating whether to only allow the user to choose a directory (or directories, if <a href="#multiple"><code>multiple</code></a> is also present)
       </td>
     </tr>
   </tbody>
@@ -764,7 +764,7 @@ Inputs, being replaced elements, have a few features not applicable to non form 
       <td>{{Cssxref(":placeholder-shown")}}</td>
       <td>
         Element that is currently displaying <a href="#placeholder"><code>placeholder</code> text</a>,
-        including <code>&#x3C;input></code> and {{HTMLElement("textarea")}} elements with the <a href="#placeholder"><code>placeholder</code></a> attribute present that has, as of yet, no value.
+        including <code>&#x3C;input></code> and {{HTMLElement("textarea")}} elements with the <a href="#placeholder"><code>placeholder</code></a> attribute present that has, as yet, no value.
       </td>
     </tr>
     <tr>
@@ -1128,7 +1128,7 @@ function validate(input) {
 }
 ```
 
-The last line, setting the custom validity message to the empty string is vital. If the user makes an error, and the validity is set, it will fail to submit, even if all of the values are valid, until the message is `null`.
+The last line, setting the custom validity message to the empty string is vital. If the user makes an error, and the validity is set, it will fail to submit, even if all the values are valid, until the message is `null`.
 
 #### Custom validation error example
 
@@ -1323,7 +1323,9 @@ Firefox uses the following heuristics to determine the locale to validate the us
       <td>
         <ul>
           <li>
-            <code>type=button</code>: {{ARIARole("link")}},
+            <code>type=button</code>: {{ARIARole("checkbox")}},
+            {{ARIARole("combobox")}},
+            {{ARIARole("link")}},
             {{ARIARole("menuitem")}},
             {{ARIARole("menuitemcheckbox")}},
             {{ARIARole("menuitemradio")}},

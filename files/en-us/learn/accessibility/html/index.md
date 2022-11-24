@@ -63,7 +63,7 @@ But as you'll see in greater detail later on, it makes sense to use the correct 
 <button>Play video</button>
 ```
 
-Not only do HTML `<button>`s have some suitable styling applied by default (which you will probably want to override), they also have built-in keyboard accessibility — users can navigate between buttons using the <kbd>Tab</kbd> key and activate their selection using <kbd>Return</kbd> or <kbd>Enter</kbd>.
+Not only do HTML `<button>`s have some suitable styling applied by default (which you will probably want to override), they also have built-in keyboard accessibility — users can navigate between buttons using the <kbd>Tab</kbd> key and activate their selection using <kbd>Space</kbd>, <kbd>Return</kbd> or <kbd>Enter</kbd>.
 
 Semantic HTML doesn't take any longer to write than non-semantic (bad) markup if you do it consistently from the start of your project. Even better, semantic markup has other benefits beyond accessibility:
 
@@ -447,22 +447,22 @@ A basic data table can be written with very simple markup, for example:
   <tr>
     <td>Name</td>
     <td>Age</td>
-    <td>Gender</td>
+    <td>Pronouns</td>
   </tr>
   <tr>
     <td>Gabriel</td>
     <td>13</td>
-    <td>Male</td>
+    <td>he/him</td>
   </tr>
   <tr>
     <td>Elva</td>
     <td>8</td>
-    <td>Female</td>
+    <td>she/her</td>
   </tr>
   <tr>
     <td>Freida</td>
     <td>5</td>
-    <td>Female</td>
+    <td>she/her</td>
   </tr>
 </table>
 ```
@@ -472,7 +472,7 @@ But this has problems — there is no way for a screen reader user to associate 
 Now have a look at our [punk bands table example](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-complete.html) — you can see a few accessibility aids at work here:
 
 - Table headers are defined using {{htmlelement("th")}} elements — you can also specify if they are headers for rows or columns using the `scope` attribute. This gives you complete groups of data that can be consumed by screen readers as single units.
-- The {{htmlelement("caption")}} element and `<table>` `summary` attribute both do similar jobs — they act as alt text for a table, giving a screen reader user a useful quick summary of the table's contents. The `<caption>` element is generally preferred as it makes it's content accessible to sighted users too, who might also find it useful. You don't really need both.
+- The {{htmlelement("caption")}} element and the `<table>` element's `summary` attribute both do similar jobs — they act as alt text for a table, giving a screen reader user a useful quick summary of the table's contents. The `<caption>` element is generally preferred as it makes it's content accessible to sighted users too, who might also find it useful. You don't really need both.
 
 > **Note:** See our [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced) article for more details about accessible data tables.
 

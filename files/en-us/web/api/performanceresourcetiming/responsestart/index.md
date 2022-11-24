@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceResourceTiming.responseStart
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}
 
 The **`responseStart`** read-only property returns a
 {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser receives

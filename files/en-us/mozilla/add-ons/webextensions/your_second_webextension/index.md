@@ -149,10 +149,10 @@ The HTML file looks like this:
 
   <body>
     <div id="popup-content">
-      <div class="button beast">Frog</div>
-      <div class="button beast">Turtle</div>
-      <div class="button beast">Snake</div>
-      <div class="button reset">Reset</div>
+      <button>Frog</button>
+      <button>Turtle</button>
+      <button>Snake</button>
+      <button type="reset">Reset</button>
     </div>
     <div id="error-content" class="hidden">
       <p>Can't beastify this web page.</p>
@@ -163,13 +163,13 @@ The HTML file looks like this:
 </html>
 ```
 
-We have a [`<div>`](/en-US/docs/Web/HTML/Element/div) element with an ID of `"popup-content"` that contains an element for each animal choice. We have another `<div>` with an ID of `"error-content"` and a class `"hidden"`. We'll use that in case there's a problem initializing the popup.
+We have a [`<div>`](/en-US/docs/Web/HTML/Element/div) element with an ID of `"popup-content"` that contains a button for each animal choice and a reset button. We have another `<div>` with an ID of `"error-content"` and a class `"hidden"`. We'll use that in case there's a problem initializing the popup.
 
 Note that we include the CSS and JS files from this file, just like a web page.
 
 #### choose_beast.css
 
-The CSS fixes the size of the popup, ensures that the three choices fill the space, and gives them some basic styling. It also hides elements with `class="hidden"`: this means that our `"error-content"` `<div>` will be hidden by default.
+The CSS fixes the size of the popup, ensures that the three choices fill the space, and gives them some basic styling. It also hides elements with `class="hidden"`: this means that our `<div id="error-content"...` element will be hidden by default.
 
 ```css
 html,
@@ -181,27 +181,26 @@ body {
   display: none;
 }
 
-.button {
+button {
+  border: none;
+  width: 100%;
   margin: 3% auto;
   padding: 4px;
   text-align: center;
   font-size: 1.5em;
   cursor: pointer;
-}
-
-.beast:hover {
-  background-color: #CFF2F2;
-}
-
-.beast {
   background-color: #E5F2F2;
 }
 
-.reset {
+button:hover {
+  background-color: #CFF2F2;
+}
+
+button[type="reset"] {
   background-color: #FBFBC9;
 }
 
-.reset:hover {
+button[type="reset"]:hover {
   background-color: #EAEA9D;
 }
 ```
@@ -277,15 +276,15 @@ function listenForClicks() {
      * Get the active tab,
      * then call "beastify()" or "reset()" as appropriate.
      */
-    if (e.target.classList.contains("beast")) {
-      browser.tabs
-        .query({ active: true, currentWindow: true })
-        .then(beastify)
-        .catch(reportError);
-    } else if (e.target.classList.contains("reset")) {
+    if (e.target.type = "reset") {
       browser.tabs
         .query({ active: true, currentWindow: true })
         .then(reset)
+        .catch(reportError);
+    } else {
+      browser.tabs
+        .query({ active: true, currentWindow: true })
+        .then(beastify)
         .catch(reportError);
     }
   });
@@ -314,7 +313,7 @@ browser.tabs
 
 The place to start here is line 96. The popup script executes a content script in the active tab as soon as the popup is loaded, using the [`browser.tabs.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API. If executing the content script is successful, then the content script will stay loaded in the page until the tab is closed or the user navigates to a different page.
 
-A common reason the `browser.tabs.executeScript()` call might fail is that you can't execute content scripts in all pages. For example, you can't execute them in privileged browser pages like about:debugging, and you can't execute them on pages in the [addons.mozilla.org](https://addons.mozilla.org/) domain. If it does fail, `reportExecuteScriptError()` will hide the `"popup-content"` `<div>`, show the `"error-content"` `<div>`, and log an error to the [console](https://extensionworkshop.com/documentation/develop/debugging/).
+A common reason the `browser.tabs.executeScript()` call might fail is that you can't execute content scripts in all pages. For example, you can't execute them in privileged browser pages like about:debugging, and you can't execute them on pages in the [addons.mozilla.org](https://addons.mozilla.org/) domain. If it does fail, `reportExecuteScriptError()` will hide the `<div id="popup-content">` element, show the `<div id="error-content"...` element, and log an error to the [console](https://extensionworkshop.com/documentation/develop/debugging/).
 
 If executing the content script is successful, we call `listenForClicks()`. This listens for clicks on the popup.
 

@@ -33,10 +33,10 @@ The following script uses the {{jsxref("String.prototype.replace()", "replace()"
 
 ```js
 const re = /(\w+)\s(\w+)/;
-const str = 'John Smith';
-str.replace(re, '$2, $1'); // "Smith, John"
-RegExp.$1; // "John"
-RegExp.$2; // "Smith"
+const str = "Maria Cruz";
+str.replace(re, "$2, $1"); // "Cruz, Maria"
+RegExp.$1; // "Maria"
+RegExp.$2; // "Cruz"
 ```
 
 ### Using $n with RegExp.prototype.test()
@@ -44,8 +44,8 @@ RegExp.$2; // "Smith"
 The following script uses the {{jsxref("RegExp.prototype.test()", "test()")}} method of the {{jsxref("RegExp")}} instance to grab a number in a generic string.
 
 ```js
-const str = 'Test 24';
-const number = /(\d+)/.test(str) ? RegExp.$1 : '0';
+const str = "Test 24";
+const number = /(\d+)/.test(str) ? RegExp.$1 : "0";
 number; // "24"
 ```
 

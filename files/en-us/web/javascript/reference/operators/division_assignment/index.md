@@ -12,7 +12,7 @@ browser-compat: javascript.operators.division_assignment
 
 {{jsSidebar("Operators")}}
 
-The division assignment operator (`/=`) divides a variable by the value of
+The **division assignment (`/=`)** operator divides a variable by the value of
 the right operand and assigns the result to the variable.
 
 {{EmbedInteractiveExample("pages/js/expressions-division-assignment.html")}}
@@ -28,13 +28,12 @@ x /= y // x = x / y
 ### Using division assignment
 
 ```js
-// Assuming the following variable and that all operations are run in order
-//  bar = 5
+let bar = 5;
 
-bar /= 2     // 2.5
-bar /= 2     // 1.25
-bar /= 0     // Infinity
-bar /= 'foo' // NaN
+bar /= 2; // 2.5
+bar /= 2; // 1.25
+bar /= 0; // Infinity
+bar /= "foo"; // NaN
 ```
 
 ## Specifications

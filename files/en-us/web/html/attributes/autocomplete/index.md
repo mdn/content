@@ -38,6 +38,8 @@ For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute
 > 2. Be descendants of a `<form>` element
 > 3. The form to have a {{HTMLElement("input/submit", "submit")}} button
 
+{{EmbedInteractiveExample("pages/tabbed/attribute-autocomplete.html", "tabbed-shorter")}}
+
 ## Values
 
 - "`off`"
@@ -132,7 +134,7 @@ For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute
 - "`bday-year`"
   - : The year of a birth date.
 - "`sex`"
-  - : A gender identity (such as "Female", "Fa'afafine", "Male"), as freeform text without newlines.
+  - : A gender identity (such as "Female", "Fa'afafine", "Hijra", "Male", "Nonbinary"), as freeform text without newlines.
 - "`tel`"
 
   - : A full telephone number, including the country code. If you need to break the phone number up into its components, you can use these values for those fields:

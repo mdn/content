@@ -14,7 +14,7 @@ browser-compat: javascript.statements.class
 
 {{jsSidebar("Statements")}}
 
-The **class declaration** creates a new class
+The **`class`** declaration creates a new class
 with a given name using prototype-based inheritance.
 
 {{EmbedInteractiveExample("pages/js/statement-class.html")}}
@@ -35,7 +35,7 @@ class name [extends otherName] {
 The class body of a class declaration is executed in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). The
 `constructor` method is optional.
 
-Class declarations are not {{Glossary("Hoisting", "hoisted")}}
+Class declarations behave like [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) and are not {{Glossary("Hoisting", "hoisted")}}
 (unlike [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function)).
 
 ## Examples
@@ -52,7 +52,7 @@ keyword can be used.
 ```js
 class Rectangle {
   constructor(height, width) {
-    this.name = 'Rectangle';
+    this.name = "Rectangle";
     this.height = height;
     this.width = width;
   }
@@ -61,7 +61,7 @@ class Rectangle {
 class FilledRectangle extends Rectangle {
   constructor(height, width, color) {
     super(height, width);
-    this.name = 'Filled rectangle';
+    this.name = "Filled rectangle";
     this.color = color;
   }
 }
@@ -72,8 +72,8 @@ class FilledRectangle extends Rectangle {
 Re-declaring a class using the class declaration throws a {{jsxref("SyntaxError")}}.
 
 ```js example-bad
-class Foo {};
-class Foo {}; // Uncaught SyntaxError: Identifier 'Foo' has already been declared
+class Foo {}
+class Foo {} // Uncaught SyntaxError: Identifier 'Foo' has already been declared
 ```
 
 The same error is thrown when a class has been defined before using the class
@@ -81,7 +81,7 @@ expression.
 
 ```js example-bad
 let Foo = class {};
-class Foo {}; // Uncaught SyntaxError: Identifier 'Foo' has already been declared
+class Foo {} // Uncaught SyntaxError: Identifier 'Foo' has already been declared
 ```
 
 ## Specifications

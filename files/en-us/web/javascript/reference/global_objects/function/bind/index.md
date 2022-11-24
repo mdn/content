@@ -44,10 +44,11 @@ The `bind()` function creates a new _bound function_. Calling the bound function
 A bound function can be further bound by calling `boundFn.bind(thisArg, /* more args */)`, which creates another bound function `boundFn2`. The newly bound `thisArg` value is ignored, because the target function of `boundFn2`, which is `boundFn`, already has a bound `this`. When `boundFn2` is called, it would call `boundFn`, which in turn calls `fn`. The arguments that `fn` ultimately receives are, in order: the arguments bound by `boundFn`, arguments bound by `boundFn2`, and the arguments received by `boundFn2`.
 
 ```js
+"use strict"; // prevent `this` from being boxed into the wrapper object
+
 function log(...args) {
-  "use strict"; // prevent `this` from being boxed into the wrapper object
   console.log(this, ...args);
-};
+}
 const boundLog = log.bind("this value", 1, 2);
 const boundLog2 = boundLog.bind("new this value", 3, 4);
 boundLog2(5, 6); // "this value", 1, 2, 3, 4, 5, 6
@@ -111,19 +112,16 @@ const module = {
   },
 };
 
-module.getX();
-//  returns 81
+console.log(module.getX()); // 81
 
 const retrieveX = module.getX;
-retrieveX();
-//  returns 9; the function gets invoked at the global scope
+console.log(retrieveX()); // 9; the function gets invoked at the global scope
 
-//  Create a new function with 'this' bound to module
-//  New programmers might confuse the
-//  global variable 'x' with module's property 'x'
+// Create a new function with 'this' bound to module
+// New programmers might confuse the
+// global variable 'x' with module's property 'x'
 const boundGetX = retrieveX.bind(module);
-boundGetX();
-//  returns 81
+console.log(boundGetX()); // 81
 ```
 
 > **Note:** If you run this example in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) (e.g. in ECMAScript modules, or through the `"use strict"` directive), the global `this` value will be undefined, causing the `retrieveX` call to fail.
@@ -147,11 +145,9 @@ function addArguments(arg1, arg2) {
   return arg1 + arg2;
 }
 
-const list1 = list(1, 2, 3);
-//  [1, 2, 3]
+console.log(list(1, 2, 3)); // [1, 2, 3]
 
-const result1 = addArguments(1, 2);
-//  3
+console.log(addArguments(1, 2)); // 3
 
 // Create a function with a preset leading argument
 const leadingThirtySevenList = list.bind(null, 37);
@@ -159,18 +155,11 @@ const leadingThirtySevenList = list.bind(null, 37);
 // Create a function with a preset first argument.
 const addThirtySeven = addArguments.bind(null, 37);
 
-const list2 = leadingThirtySevenList();
-//  [37]
-
-const list3 = leadingThirtySevenList(1, 2, 3);
-//  [37, 1, 2, 3]
-
-const result2 = addThirtySeven(5);
-//  37 + 5 = 42
-
-const result3 = addThirtySeven(5, 10);
-//  37 + 5 = 42
-//  (the second argument is ignored)
+console.log(leadingThirtySevenList()); // [37]
+console.log(leadingThirtySevenList(1, 2, 3)); // [37, 1, 2, 3]
+console.log(addThirtySeven(5)); // 42
+console.log(addThirtySeven(5, 10)); // 42
+// (the second argument is ignored)
 ```
 
 ### With setTimeout()
@@ -193,7 +182,7 @@ class LateBloomer {
 
 const flower = new LateBloomer();
 flower.bloom();
-//  after 1 second, calls 'flower.declare()'
+// After 1 second, calls 'flower.declare()'
 ```
 
 You can also use [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) for this purpose.
@@ -244,8 +233,8 @@ The corollary is that you need not do anything special to create a bound functio
 const emptyObj = {};
 const YAxisPoint = Point.bind(emptyObj, 0 /*x*/);
 
-//  Can still be called as a normal function
-//  (although usually this is undesired)
+// Can still be called as a normal function
+// (although usually this is undesirable)
 YAxisPoint(13);
 
 // The modifications to `this` is now observable from the outside
@@ -292,7 +281,7 @@ With `bind()`, this can be simplified.
 In the following piece of code, `slice()` is a bound function to the {{jsxref("Function.prototype.call()")}}, with the `this` value set to {{jsxref("Array.prototype.slice()")}}. This means that additional `call()` calls can be eliminated:
 
 ```js
-//  same as "slice" in the previous example
+// Same as "slice" in the previous example
 const unboundSlice = Array.prototype.slice;
 const slice = Function.prototype.call.bind(unboundSlice);
 

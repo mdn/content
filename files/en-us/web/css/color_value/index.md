@@ -24,7 +24,7 @@ browser-compat: css.types.color
 {{CSSRef}}
 
 The **`<color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a color.
-A `<color>` may also include an [alpha-channel](https://en.wikipedia.org/wiki/Alpha_compositing) _transparency value_, indicating how the color should [composite](https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending) with its background.
+A `<color>` may also include an [alpha-channel](https://en.wikipedia.org/wiki/Alpha_compositing) _transparency value_, indicating how the color should [composite](https://www.w3.org/TR/compositing-1/#simplealphacompositing) with its background.
 
 A `<color>` can be defined in any of the following ways:
 
@@ -141,7 +141,7 @@ They are not limited to a specific color space, and can represent the entire spe
 
 In fact, LCH is the polar form of Lab. It is more human friendly than Lab, as its chroma and hue components specify qualities of the desired color, as opposed to mixing.
 It is similar to HSL in that way, although it is far more perceptually uniform.
-Unlike HSL that describes both `hsl(60 100% 50%)` `hsl(240 100% 50%)` as having the same lightness, LCH (and Lab) correctly ascribes different lightnesses to them:
+Unlike HSL that describes both `hsl(60 100% 50%)` and `hsl(240 100% 50%)` as having the same lightness, LCH (and Lab) correctly ascribes different lightnesses to them:
 the former (yellow) has an L of 97.6 and the latter (blue) an L of 29.6.
 Therefore, LCH can be used to create palettes across entirely different colors, with predictable results.
 Please note that LCH hue is not the same as HSL hue and LCH chroma is not the same as HSL saturation, although they do share some conceptual similarities.

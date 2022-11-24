@@ -68,6 +68,11 @@ The number of objects or their traversal order is immaterial, so a `WeakSet` is 
 - {{jsxref("WeakSet/WeakSet", "WeakSet()")}}
   - : Creates a new `WeakSet` object.
 
+## Instance properties
+
+- `WeakSet.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"WeakSet"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+
 ## Instance methods
 
 - {{jsxref("WeakSet.prototype.add()")}}
@@ -89,12 +94,12 @@ const bar = {};
 ws.add(foo);
 ws.add(bar);
 
-ws.has(foo);    // true
-ws.has(bar);    // true
+ws.has(foo); // true
+ws.has(bar); // true
 
 ws.delete(foo); // removes foo from the set
-ws.has(foo);    // false, foo has been removed
-ws.has(bar);    // true, bar is retained
+ws.has(foo); // false, foo has been removed
+ws.has(bar); // true, bar is retained
 ```
 
 Note that `foo !== bar`. While they are similar objects, _they are not **the same object**_. And so they are both added to the set.

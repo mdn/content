@@ -13,7 +13,7 @@ browser-compat: javascript.operators.yield
 
 {{jsSidebar("Operators")}}
 
-The `yield` keyword is used to pause and resume a [generator function](/en-US/docs/Web/JavaScript/Reference/Statements/function*).
+The **`yield`** operator is used to pause and resume a [generator function](/en-US/docs/Web/JavaScript/Reference/Statements/function*).
 
 {{EmbedInteractiveExample("pages/js/expressions-yield.html", "taller")}}
 
@@ -123,12 +123,12 @@ function* counter(value) {
 }
 
 const generatorFunc = counter(0);
-console.log(generatorFunc.next().value);   // 0
-console.log(generatorFunc.next().value);   // 1
-console.log(generatorFunc.next().value);   // 2
-console.log(generatorFunc.next().value);   // 3
+console.log(generatorFunc.next().value); // 0
+console.log(generatorFunc.next().value); // 1
+console.log(generatorFunc.next().value); // 2
+console.log(generatorFunc.next().value); // 3
 console.log(generatorFunc.next(10).value); // 14
-console.log(generatorFunc.next().value);   // 15
+console.log(generatorFunc.next().value); // 15
 console.log(generatorFunc.next(10).value); // 26
 ```
 

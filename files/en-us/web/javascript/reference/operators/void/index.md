@@ -12,7 +12,7 @@ browser-compat: javascript.operators.void
 
 {{jsSidebar("Operators")}}
 
-The **`void` operator** evaluates the given
+The **`void`** operator evaluates the given
 `expression` and then returns {{jsxref("undefined")}}.
 
 {{EmbedInteractiveExample("pages/js/expressions-voidoperator.html", "taller")}}
@@ -39,8 +39,8 @@ parentheses can help clarify the resolution of the expression following the
 `void` operator:
 
 ```js
-void 2 === '2';   // (void 2) === '2', returns false
-void (2 === '2'); // void (2 === '2'), returns undefined
+void 2 === "2"; // (void 2) === '2', returns false
+void (2 === "2"); // void (2 === '2'), returns undefined
 ```
 
 ## Examples
@@ -63,12 +63,12 @@ In order for the function to be parsed as an [expression](/en-US/docs/Web/JavaSc
 
 Of all the unary operators, `void` offers the best semantic, because it clearly signals that the return value of the function invocation should be discarded.
 
-```js
+```js-nolint
 void function () {
   console.log("Executed!");
 }();
 
-// Output: "Executed!"
+// Logs "Executed!"
 ```
 
 This is a bit longer than wrapping the function expression in parentheses, which has the same effect of forcing the `function` keyword to be parsed as the start of an expression instead of a statement.

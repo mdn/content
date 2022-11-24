@@ -216,16 +216,16 @@ The optional [codecs parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) 
 
 The most commonly used MIME types used for web content are listed below.
 This isn't a complete list of all the types that may be available, however.
-See the [media container formats](/en-US/docs/Web/Media/Formats/Containers) guide for that.
+See the [media container formats guide](/en-US/docs/Web/Media/Formats/Containers) for that.
 
-| MIME type                                               | Audio or video type                                                                                                                                                                     |
-| ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `audio/wave` `audio/wav` `audio/x-wav` `audio/x-pn-wav` | An audio file in the WAVE container format. The PCM audio codec (WAVE codec "1") is often supported, but other codecs have limited support (if any).                                    |
-| `audio/webm`                                            | An audio file in the WebM container format. Vorbis and Opus are the codecs officially supported by the WebM specification.                                                              |
-| `video/webm`                                            | A video file, possibly with audio, in the WebM container format. VP8 and VP9 are the most common video codecs; Vorbis and Opus the most common audio codecs.                            |
-| `audio/ogg`                                             | An audio file in the Ogg container format. Vorbis is the most common audio codec used in such a container; however, Opus is now supported by Ogg as well.                               |
-| `video/ogg`                                             | A video file, possibly with audio, in the Ogg container format. Theora is the usual video codec used within it; Vorbis is the usual audio codec, although Opus is becoming more common. |
-| `application/ogg`                                       | An audio or video file using the Ogg container format. Theora is the usual video codec used within it; Vorbis is the usual audio codec.                                                 |
+| MIME type                                                  | Audio or video type                                                                                                                                                                     |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `audio/wave`, `audio/wav`, `audio/x-wav`, `audio/x-pn-wav` | An audio file in the WAVE container format. The PCM audio codec (WAVE codec "1") is often supported, but other codecs have limited support (if any).                                    |
+| `audio/webm`                                               | An audio file in the WebM container format. Vorbis and Opus are the codecs officially supported by the WebM specification.                                                              |
+| `video/webm`                                               | A video file, possibly with audio, in the WebM container format. VP8 and VP9 are the most common video codecs; Vorbis and Opus the most common audio codecs.                            |
+| `audio/ogg`                                                | An audio file in the Ogg container format. Vorbis is the most common audio codec used in such a container; however, Opus is now supported by Ogg as well.                               |
+| `video/ogg`                                                | A video file, possibly with audio, in the Ogg container format. Theora is the usual video codec used within it; Vorbis is the usual audio codec, although Opus is becoming more common. |
+| `application/ogg`                                          | An audio or video file using the Ogg container format. Theora is the usual video codec used within it; Vorbis is the usual audio codec.                                                 |
 
 ### multipart/form-data
 

@@ -39,7 +39,7 @@ There are two ways to get a `WebAssembly.Memory` object. The first way is to con
 ```js
 const memory = new WebAssembly.Memory({
   initial: 10,
-  maximum: 100
+  maximum: 100,
 });
 ```
 
@@ -48,11 +48,12 @@ The following example (see [memory.html](https://github.com/mdn/webassembly-exam
 ```js
 const memory = new WebAssembly.Memory({
   initial: 10,
-  maximum: 100
+  maximum: 100,
 });
 
-WebAssembly.instantiateStreaming(fetch("memory.wasm"), { js: { mem: memory } })
-.then((obj) => {
+WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
+  js: { mem: memory },
+}).then((obj) => {
   const summands = new Uint32Array(memory.buffer);
   for (let i = 0; i < 10; i++) {
     summands[i] = i;
@@ -65,8 +66,7 @@ WebAssembly.instantiateStreaming(fetch("memory.wasm"), { js: { mem: memory } })
 The second way to get a WebAssembly.Memory object is to have it exported by a WebAssembly module. This memory can be accessed in the `exports` property of the WebAssembly instance (after the memory is exported within the Web Assembly module). The following example imports a memory exported from WebAssembly with the name `memory`, and then prints out the first element of the memory, interpreted as an {{jsxref("Uint32Array")}}.
 
 ```js
-WebAssembly.instantiateStreaming(fetch("memory.wasm"))
-.then((obj) => {
+WebAssembly.instantiateStreaming(fetch("memory.wasm")).then((obj) => {
   const values = new Uint32Array(obj.instance.exports.memory.buffer);
   console.log(values[0]);
 });
@@ -80,7 +80,7 @@ By default, WebAssembly memories are unshared. You can create a [shared memory](
 const memory = new WebAssembly.Memory({
   initial: 10,
   maximum: 100,
-  shared: true
+  shared: true,
 });
 ```
 

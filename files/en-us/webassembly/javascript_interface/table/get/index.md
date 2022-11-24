@@ -51,12 +51,11 @@ compiles and instantiates the loaded table.wasm byte code using the
 references stored in the exported table.
 
 ```js
-WebAssembly.instantiateStreaming(fetch('table.wasm'))
-  .then((obj) => {
-    const tbl = obj.instance.exports.tbl;
-    console.log(tbl.get(0)());  // 13
-    console.log(tbl.get(1)());  // 42
-  });
+WebAssembly.instantiateStreaming(fetch("table.wasm")).then((obj) => {
+  const tbl = obj.instance.exports.tbl;
+  console.log(tbl.get(0)()); // 13
+  console.log(tbl.get(1)()); // 42
+});
 ```
 
 Note how you've got to include a second function invocation operator at the end of the

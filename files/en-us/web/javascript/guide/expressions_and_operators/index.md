@@ -48,7 +48,7 @@ Despite `*` and `+` coming in different orders, both expressions would result in
 JavaScript has both _binary_ and _unary_ operators, and one special ternary operator, the conditional operator.
 A binary operator requires two operands, one before the operator and one after the operator:
 
-```
+```plain
 operand1 operator operand2
 ```
 
@@ -56,7 +56,7 @@ For example, `3 + 4` or `x * y`. This form is called an _infix_ binary operator,
 
 A unary operator requires a single operand, either before or after the operator:
 
-```
+```plain
 operator operand
 operand operator
 ```
@@ -88,7 +88,7 @@ There are also compound assignment operators that are shorthand for the operatio
 | [Bitwise OR assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)                     | `x \|= f()`        | `x = x \| f()`     |
 | [Logical AND assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)                   | `x &&= f()`        | `x && (x = f())`   |
 | [Logical OR assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)                     | `x \|\|= f()`      | `x \|\| (x = f())` |
-| [Logical nullish assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment)           | `x ??= f()`        | `x ?? (x = f())`   |
+| [Nullish coalescing assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)           | `x ??= f()`        | `x ?? (x = f())`   |
 
 ### Assigning to properties
 
@@ -569,7 +569,7 @@ Conceptually, the bitwise logical operators work as follows:
   Numbers with more than 32 bits get their most significant bits discarded.
   For example, the following integer with more than 32 bits will be converted to a 32-bit integer:
 
-  ```
+  ```plain
   Before: 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
   After:                 1010 0000 0000 0000 0110 0000 0000 0001
   ```
@@ -767,7 +767,7 @@ The rules of logic guarantee that these evaluations are always correct. Note tha
 _anything_ part of the above expressions is not evaluated, so any side effects of
 doing so do not take effect.
 
-Note that for the second case, in modern code you can use the [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) (`??`) that works like `||`, but it only returns the second expression, when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
+Note that for the second case, in modern code you can use the [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) (`??`) that works like `||`, but it only returns the second expression, when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
 or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined).
 It is thus the better alternative to provide defaults, when values like `''` or `0` are valid values for the first expression, too.
 

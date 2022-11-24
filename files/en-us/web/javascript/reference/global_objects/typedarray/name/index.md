@@ -28,17 +28,17 @@ The **`TypedArray.name`** property represents a string value of the typed array 
 ### Using name
 
 ```js
-Int8Array.name;         // "Int8Array"
-Uint8Array.name;        // "Uint8Array"
+Int8Array.name; // "Int8Array"
+Uint8Array.name; // "Uint8Array"
 Uint8ClampedArray.name; // "Uint8ClampedArray"
-Int16Array.name;        // "Int16Array"
-Uint16Array.name;       // "Uint16Array"
-Int32Array.name;        // "Int32Array"
-Uint32Array.name;       // "Uint32Array"
-Float32Array.name;      // "Float32Array"
-Float64Array.name;      // "Float64Array"
-BigInt64Array.name;     // "BigInt64Array"
-BigUint64Array.name;    // "BigUint64Array"
+Int16Array.name; // "Int16Array"
+Uint16Array.name; // "Uint16Array"
+Int32Array.name; // "Int32Array"
+Uint32Array.name; // "Uint32Array"
+Float32Array.name; // "Float32Array"
+Float64Array.name; // "Float64Array"
+BigInt64Array.name; // "BigInt64Array"
+BigUint64Array.name; // "BigUint64Array"
 ```
 
 ## Specifications

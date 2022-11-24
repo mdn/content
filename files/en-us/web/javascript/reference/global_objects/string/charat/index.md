@@ -42,7 +42,7 @@ A string representing the character (exactly one UTF-16 code unit) at the specif
 
 Characters in a string are indexed from left to right. The index of the first character
 is `0`, and the index of the last character—in a string called
-`stringName`—is `stringName.length - 1`. If
+`stringName` is `stringName.length - 1`. If
 the `index` you supply is out of this range, JavaScript returns an
 empty string.
 
@@ -57,7 +57,7 @@ The following example displays characters at different locations in the string
 "`Brave new world`":
 
 ```js
-const anyString = 'Brave new world';
+const anyString = "Brave new world";
 console.log(`The character at index 0   is '${anyString.charAt()}'`);
 // No index was provided, used 0 as default
 
@@ -89,7 +89,7 @@ provides a whole character, even if the string contains characters that are not 
 Basic Multi-lingual Plane.
 
 ```js
-const str = 'A\uD87E\uDC04Z';  // We could also use a non-BMP character directly
+const str = "A\uD87E\uDC04Z"; // We could also use a non-BMP character directly
 for (let i = 0; i < str.length; i++) {
   let chr;
   [chr, i] = getWholeCharAndI(str, i);
@@ -105,36 +105,36 @@ function getWholeCharAndI(str, i) {
   const code = str.charCodeAt(i);
 
   if (Number.isNaN(code)) {
-    return '';  // Position not found
+    return ""; // Position not found
   }
-  if (code < 0xD800 || code > 0xDFFF) {
-    return [str.charAt(i), i];  // Normal character, keeping 'i' the same
+  if (code < 0xd800 || code > 0xdfff) {
+    return [str.charAt(i), i]; // Normal character, keeping 'i' the same
   }
 
   // High surrogate (could change last hex to 0xDB7F to treat high private
   // surrogates as single characters)
-  if (0xD800 <= code && code <= 0xDBFF) {
-    if (str.length <= (i + 1)) {
-      throw new Error('High surrogate without following low surrogate');
+  if (0xd800 <= code && code <= 0xdbff) {
+    if (str.length <= i + 1) {
+      throw new Error("High surrogate without following low surrogate");
     }
-    const next = str.charCodeAt(i + 1)
-    if (next < 0xDC00 || next > 0xDFFF) {
-      throw new Error('High surrogate without following low surrogate');
+    const next = str.charCodeAt(i + 1);
+    if (next < 0xdc00 || next > 0xdfff) {
+      throw new Error("High surrogate without following low surrogate");
     }
     return [str.charAt(i) + str.charAt(i + 1), i + 1];
   }
 
   // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
   if (i === 0) {
-    throw new Error('Low surrogate without preceding high surrogate');
+    throw new Error("Low surrogate without preceding high surrogate");
   }
 
   const prev = str.charCodeAt(i - 1);
 
   // (could change last hex to 0xDB7F to treat high private surrogates
   // as single characters)
-  if (prev < 0xD800 || prev > 0xDBFF) {
-    throw new Error('Low surrogate without preceding high surrogate');
+  if (prev < 0xd800 || prev > 0xdbff) {
+    throw new Error("Low surrogate without preceding high surrogate");
   }
 
   // Return the next character instead (and increment)
@@ -165,12 +165,15 @@ function fixedCharAt(str, idx) {
   }
 
   if (idx >= str.length || idx < 0) {
-    return '';
+    return "";
   }
 
   let ret = str.charAt(idx);
 
-  if (/[\uD800-\uDBFF]/.test(ret) && /[\uDC00-\uDFFF]/.test(str.charAt(idx + 1))) {
+  if (
+    /[\uD800-\uDBFF]/.test(ret) &&
+    /[\uDC00-\uDFFF]/.test(str.charAt(idx + 1))
+  ) {
     // Go one further, since one of the "characters" is part of a surrogate pair
     ret += str.charAt(idx + 1);
   }

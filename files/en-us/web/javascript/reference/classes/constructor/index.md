@@ -232,12 +232,18 @@ class Square extends Polygon {
 
 ### Calling super in a constructor bound to a different prototype
 
-Here the prototype of `Square` class is changed, but the constructor of its base class, `Polygon`, is still called when a new instance of a square is created. For more information on why, see [the `super` reference](/en-US/docs/Web/JavaScript/Reference/Operators/super#methods_that_read_super.prop_do_not_behave_differently_when_bound_to_other_objects).
+`super()` calls the constructor that's the prototype of the current class. If you change the prototype of the current class itself, `super()` will call the constructor of the new prototype. Changing the prototype of the current class's `prototype` property doesn't affect which constructor `super()` calls.
 
 ```js
 class Polygon {
   constructor() {
     this.name = "Polygon";
+  }
+}
+
+class Rectangle {
+  constructor() {
+    this.name = "Rectangle";
   }
 }
 
@@ -247,17 +253,21 @@ class Square extends Polygon {
   }
 }
 
-class Rectangle {}
-
 // Make Square extend Rectangle (which is a base class) instead of Polygon
-Object.setPrototypeOf(Square.prototype, Rectangle.prototype);
-
-// Polygon is no longer part of Square's prototype chain
-console.log(Square.prototype instanceof Polygon); // false
-console.log(Square.prototype instanceof Rectangle); // true
+Object.setPrototypeOf(Square, Rectangle);
 
 const newInstance = new Square();
-console.log(newInstance.name); // Polygon
+
+// newInstance is still an instance of Polygon, because we didn't
+// change the prototype of Square.prototype, so the prototype chain
+// of newInstance is still
+//   newInstance --> Square.prototype --> Polygon.prototype
+console.log(newInstance instanceof Polygon); // true
+console.log(newInstance instanceof Rectangle); // false
+
+// However, because super() calls Rectangle as constructor, the name property
+// of newInstance is initialized with the logic in Rectangle
+console.log(newInstance.name); // Rectangle
 ```
 
 ## Specifications
@@ -275,4 +285,4 @@ console.log(newInstance.name); // Polygon
 - [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
 - {{jsxref("Classes")}}
 - [`Object.prototype.constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
-- [Class static initialization block](/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks)
+- [Static initialization block](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)

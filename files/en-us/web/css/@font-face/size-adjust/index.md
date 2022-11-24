@@ -37,9 +37,7 @@ All metrics associated with this font are scaled by the given percentage. This i
 
 ## Formal syntax
 
-```
-<percentage [0,∞]>
-```
+{{csssyntax}}
 
 ## Examples
 

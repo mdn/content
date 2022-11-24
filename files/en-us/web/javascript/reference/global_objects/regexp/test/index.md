@@ -65,7 +65,7 @@ Simple example that tests if `"hello"` is contained at the very beginning of
 a string, returning a boolean result.
 
 ```js
-const str = 'hello world!';
+const str = "hello world!";
 const result = /^hello/.test(str);
 
 console.log(result); // true
@@ -75,14 +75,14 @@ The following example logs a message which depends on the success of the test:
 
 ```js
 function testInput(re, str) {
-  const midstring = re.test(str) ? 'contains' : 'does not contain';
+  const midstring = re.test(str) ? "contains" : "does not contain";
   console.log(`${str} ${midstring} ${re.source}`);
 }
 ```
 
 ### Using test() on a regex with the "global" flag
 
-When a regex has the [global flag](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags_2) set,
+When a regex has the [global flag](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global) set,
 `test()` will advance the {{jsxref("RegExp/lastIndex", "lastIndex")}} of the regex.
 ({{jsxref("RegExp.prototype.exec()")}} also advances the `lastIndex` property.)
 
@@ -103,16 +103,25 @@ The following example demonstrates this behavior:
 const regex = /foo/g; // the "global" flag is set
 
 // regex.lastIndex is at 0
-regex.test('foo')     // true
+regex.test("foo"); // true
 
 // regex.lastIndex is now at 3
-regex.test('foo')     // false
+regex.test("foo"); // false
 
 // regex.lastIndex is at 0
-regex.test('barfoo')  // true
+regex.test("barfoo"); // true
 
 // regex.lastIndex is at 6
-regex.test('foobar')  //false
+regex.test("foobar"); // false
+
+// regex.lastIndex is at 0
+regex.test("foobarfoo"); // true
+
+// regex.lastIndex is at 3
+regex.test("foobarfoo"); // true
+
+// regex.lastIndex is at 9
+regex.test("foobarfoo"); // false
 
 // regex.lastIndex is at 0
 // (...and so on)

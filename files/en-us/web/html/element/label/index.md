@@ -1,5 +1,5 @@
 ---
-title: '<label>: The Input Label element'
+title: '<label>: The Label element'
 slug: Web/HTML/Element/label
 tags:
   - Element
@@ -11,18 +11,18 @@ tags:
 browser-compat: html.elements.label
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<label>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for an item in a user interface.
 
 {{EmbedInteractiveExample("pages/tabbed/label.html", "tabbed-shorter")}}
 
-Associating a `<label>` with an {{htmlelement("input")}} element offers some major advantages:
+Associating a `<label>` with a form control, such as {{htmlelement("input")}} or {{htmlelement("textarea")}} offers some major advantages:
 
 - The label text is not only visually associated with its corresponding text input; it is programmatically associated with it too. This means that, for example, a screen reader will read out the label when the user is focused on the form input, making it easier for an assistive technology user to understand what data should be entered.
 - When a user clicks or touches/taps a label, the browser passes the focus to its associated input (the resulting event is also raised for the input). That increased hit area for focusing the input provides an advantage to anyone trying to activate it — including those using a touch-screen device.
 
-To associate the `<label>` with an `<input>` element, you need to give the `<input>` an `id` attribute. The `<label>` then needs a `for` attribute whose value is the same as the input's `id`.
+To explicitly associate a `<label>` element with an `<input>` element, you first need to add the `id` attribute to the `<input>` element. Next, you add the `for` attribute to the `<label>` element, where the value of `for` is the same as the `id` in the `<input>` element.
 
 Alternatively, you can nest the `<input>` directly inside the `<label>`, in which case the `for` and `id` attributes are not needed because the association is implicit:
 
@@ -37,7 +37,7 @@ The form control that a label is labeling is called the _labeled control_ of the
 
 ```html
 <label for="username">Enter your username:</label>
-<input id="username" />
+<input id="username" name="username" type="text" />
 <label for="username">Forgot your username?</label>
 ```
 
@@ -65,7 +65,7 @@ There are no special styling considerations for `<label>` elements — structura
 
 ## Examples
 
-### Simple label example
+### Defining an implicit label
 
 ```html
 <label>Click me <input type="text" /></label>
@@ -73,7 +73,7 @@ There are no special styling considerations for `<label>` elements — structura
 
 {{EmbedLiveSample('Simple_label_example', '200', '50', '')}}
 
-### Using the "for" attribute
+### Defining an explicit label with the "for" attribute
 
 ```html
 <label for="username">Click me to focus on the input field</label>

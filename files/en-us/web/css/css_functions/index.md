@@ -33,6 +33,13 @@ The syntax starts with the **name of the functional notation**, followed by a le
 
 Functions can take multiple arguments, which are formatted similarly to CSS property values. Whitespace is allowed, but they are optional inside the parentheses. In some functional notations multiple arguments are separated by commas, while others use spaces.
 
+## Animation timeline functions
+
+This function can be used to provide the timeline for an animation.
+
+- {{cssxref("animation-timeline/scroll", "scroll()")}}
+  - : Sets the {{cssxref("animation-timeline")}} of an element to depend on scrollbar on a particular axis of either the nearest parent (with that scrollbar), or the root container.
+
 ## Transform functions
 
 These functions are used when the {{CSSxRef("&lt;transform-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Types) is used as a value of {{CSSxRef("transform")}} property.

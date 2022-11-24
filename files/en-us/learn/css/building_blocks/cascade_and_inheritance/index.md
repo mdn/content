@@ -171,7 +171,7 @@ Source order only matters when the specificity weight of the rules is the same, 
 
 You will often run into a situation where you know that a rule comes later in the stylesheet, but an earlier, conflicting rule is applied. This happens because the earlier rule has a **higher specificity** — it is more specific, and therefore, is being chosen by the browser as the one that should style the element.
 
-As we saw earlier in this lesson, a class selector has more weight than an element selector, so the properties defined in the class style block will override those applied to the element style block.
+As we saw earlier in this lesson, a class selector has more weight than an element selector, so the properties defined in the class style block will override those defined in the element style block.
 
 Something to note here is that although we are thinking about selectors and the rules that are applied to the text or component they select, it isn't the entire rule that is overwritten, only the properties that are declared in multiple places.
 
