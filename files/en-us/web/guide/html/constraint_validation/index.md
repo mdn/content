@@ -9,7 +9,7 @@ tags:
   - Selectors
 ---
 
-The creation of web forms has always been a complex task. While marking up the form itself is easy, checking whether each field has a valid and coherent value is more difficult, and informing the user about the problem may become a headache. [HTML5](/en-US/docs/Glossary/HTML5) introduced new mechanisms for forms: it added new semantic types for the {{ HTMLElement("input") }} element and _constraint validation_ to ease the work of checking the form content on the client side. Basic, usual constraints can be checked, without the need for JavaScript, by setting new attributes; more complex constraints can be tested using the [Constraint validation API](/en-US/docs/Web/API/Constraint_validation).
+The creation of web forms has always been a complex task. While marking up the form itself is easy, checking whether each field has a valid and coherent value is more difficult, and informing the user about the problem may become a headache. [HTML5](/en-US/docs/Glossary/HTML5) introduced new mechanisms for forms: it added new semantic types for the {{ HTMLElement("input") }} element and _constraint validation_ to ease the work of checking the form content on the client side. Basic, usual constraints can be checked, without the need for JavaScript, by setting new attributes; more complex constraints can be tested using the Constraint Validation API.
 
 For a basic introduction to these concepts, with examples, see the [Form validation tutorial](/en-US/docs/Learn/Forms/Form_validation).
 
@@ -319,11 +319,22 @@ First, we write a function checking the constraint itself:
 function checkZIP() {
   // For each country, defines the pattern that the ZIP has to follow
   const constraints = {
-    ch : [ '^(CH-)?\\d{4}$', "Switzerland ZIPs must have exactly 4 digits: e.g. CH-1950 or 1950" ],
-    fr : [ '^(F-)?\\d{5}$' , "France ZIPs must have exactly 5 digits: e.g. F-75012 or 75012" ],
-    de : [ '^(D-)?\\d{5}$' , "Germany ZIPs must have exactly 5 digits: e.g. D-12345 or 12345" ],
-    nl : [ '^(NL-)?\\d{4}\\s*([A-RT-Z][A-Z]|S[BCE-RT-Z])$',
-                    "Netherland ZIPs must have exactly 4 digits, followed by 2 letters except SA, SD and SS" ]
+    ch: [
+      "^(CH-)?\\d{4}$",
+      "Switzerland ZIPs must have exactly 4 digits: e.g. CH-1950 or 1950",
+    ],
+    fr: [
+      "^(F-)?\\d{5}$",
+      "France ZIPs must have exactly 5 digits: e.g. F-75012 or 75012",
+    ],
+    de: [
+      "^(D-)?\\d{5}$",
+      "Germany ZIPs must have exactly 5 digits: e.g. D-12345 or 12345",
+    ],
+    nl: [
+      "^(NL-)?\\d{4}\\s*([A-RT-Z][A-Z]|S[BCE-RT-Z])$",
+      "Netherland ZIPs must have exactly 4 digits, followed by 2 letters except SA, SD and SS",
+    ],
   };
 
   // Read the country id
@@ -354,7 +365,7 @@ Then we link it to the **onchange** event for the {{ HTMLElement("select") }} an
 window.onload = () => {
   document.getElementById("Country").onchange = checkZIP;
   document.getElementById("ZIP").oninput = checkZIP;
-}
+};
 ```
 
 ### Limiting the size of a file before its upload
@@ -381,10 +392,11 @@ function checkFileSize() {
 
   // If there is (at least) one file selected
   if (files.length > 0) {
-     if (files[0].size > 75 * 1024) { // Check the constraint
-       FS.setCustomValidity("The selected file must not be larger than 75 kB");
-       return;
-     }
+    if (files[0].size > 75 * 1024) {
+      // Check the constraint
+      FS.setCustomValidity("The selected file must not be larger than 75 kB");
+      return;
+    }
   }
   // No custom constraint violation
   FS.setCustomValidity("");
@@ -396,7 +408,7 @@ Finally we hook the method with the correct event:
 ```js
 window.onload = () => {
   document.getElementById("FS").onchange = checkFileSize;
-}
+};
 ```
 
 ## Visual styling of constraint validation
@@ -423,7 +435,7 @@ The {{cssxref(':valid')}} and {{cssxref(':invalid')}} [pseudo-classes](/en-US/do
 
 The following items can help with controlling the text of a constraint violation:
 
-- [element.setCustomValidity(message)](</en-US/docs/Web/API/Constraint_validation#element.setcustomvalidity(message)>) method on the following elements:
+- The `setCustomValidity(message)` method on the following elements:
 
   - {{HTMLElement("fieldset")}}. Note: Setting a custom validity message on fieldset elements will not prevent form submission in most browsers.
   - {{HTMLElement("input")}}
@@ -432,4 +444,4 @@ The following items can help with controlling the text of a constraint violation
   - Submit buttons (created with either a {{HTMLElement("button")}} element with the `submit` type, or an `input` element with the {{HTMLElement("input/submit", "submit")}} type. Other types of buttons do not participate in constraint validation.
   - {{HTMLElement("textarea")}}
 
-- The [`ValidityState`](/en-US/docs/Web/API/ValidityState) interface describes the object returned by the [validity](/en-US/docs/Web/API/Constraint_validation#validity) property of the element types listed above. It represents various ways that an entered value can be invalid. Together, they help explain why an element's value fails to validate, if it's not valid.
+- The [`ValidityState`](/en-US/docs/Web/API/ValidityState) interface describes the object returned by the `validity` property of the element types listed above. It represents various ways that an entered value can be invalid. Together, they help explain why an element's value fails to validate, if it's not valid.

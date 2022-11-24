@@ -1,5 +1,5 @@
 ---
-title: 'HTML attribute: step'
+title: "HTML attribute: step"
 slug: Web/HTML/Attributes/step
 tags:
   - Attribute
@@ -125,7 +125,7 @@ Provide instructions to help users understand how to complete the form and use i
 - [`max`](/en-US/docs/Web/HTML/Attributes/max)
 - [`min`](/en-US/docs/Web/HTML/Attributes/min)
 - [Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
-- [Constraint validation API](/en-US/docs/Web/API/Constraint_validation)
+- [Form validation](/en-US/docs/Learn/Forms/Form_validation)
 - {{domxref('validityState.stepMismatch')}}
 - {{cssxref(':out-of-range')}}
 - {{htmlelement('input')}}
