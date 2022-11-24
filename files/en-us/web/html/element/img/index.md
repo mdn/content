@@ -130,9 +130,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       - : Default: Signals automatic determination of fetch priority relative to other images.
 
 - {{htmlattrdef("height")}}
+
   - : The intrinsic height of the image, in pixels. Must be an integer without a unit.
 
-  > **Note:** Including `height` and [`width`](#attr-width) enables the aspect ratio of the image to be calculated by the browser prior to the image being loaded. This aspect ratio is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
+    > **Note:** Including `height` and [`width`](#attr-width) enables the aspect ratio of the image to be calculated by the browser prior to the image being loaded. This aspect ratio is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
+
 - {{htmlattrdef("ismap")}}
 
   - : This Boolean attribute indicates that the image is part of a [server-side map](https://en.wikipedia.org/wiki/Image_map#Server-side). If so, the coordinates where the user clicked on the image are sent to the server.
@@ -143,10 +145,12 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : Indicates how the browser should load the image:
 
-    - `eager`: Loads the image immediately, regardless of whether or not the image is currently within the visible viewport (this is the default value).
-    - `lazy`: Defers loading the image until it reaches a calculated distance from the viewport, as defined by the browser. The intent is to avoid the network and storage bandwidth needed to handle the image until it's reasonably certain that it will be needed. This generally improves the performance of the content in most typical use cases.
+    - `eager`
+      - : Loads the image immediately, regardless of whether or not the image is currently within the visible viewport (this is the default value).
+    - `lazy`
+      - : Defers loading the image until it reaches a calculated distance from the viewport, as defined by the browser. The intent is to avoid the network and storage bandwidth needed to handle the image until it's reasonably certain that it will be needed. This generally improves the performance of the content in most typical use cases.
 
-      > **Note:** Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.
+    > **Note:** Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.
 
 - {{htmlattrdef("referrerpolicy")}}
 

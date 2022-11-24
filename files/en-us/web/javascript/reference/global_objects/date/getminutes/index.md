@@ -37,7 +37,7 @@ based on the value of the {{jsxref("Global_Objects/Date", "Date")}} object
 `xmas95`.
 
 ```js
-const xmas95 = new Date('December 25, 1995 23:15:30');
+const xmas95 = new Date("December 25, 1995 23:15:30");
 const minutes = xmas95.getMinutes();
 
 console.log(minutes); // 15

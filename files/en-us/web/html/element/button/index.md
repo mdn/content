@@ -93,8 +93,8 @@ By default, HTML buttons are presented in a style resembling the platform the {{
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("checkbox")}}, {{ARIARole("link")}},
-        {{ARIARole("menuitem")}},
+        {{ARIARole("checkbox")}}, {{ARIARole("combobox")}},
+        {{ARIARole("link")}}, {{ARIARole("menuitem")}},
         {{ARIARole("menuitemcheckbox")}},
         {{ARIARole("menuitemradio")}}, {{ARIARole("option")}},
         {{ARIARole("radio")}}, {{ARIARole("switch")}},

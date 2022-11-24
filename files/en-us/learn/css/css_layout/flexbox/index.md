@@ -285,7 +285,7 @@ It's possible to create some pretty complex layouts with flexbox. It's perfectly
 
 The HTML for this is fairly simple. We've got a {{htmlelement("section")}} element containing three {{htmlelement("article")}}s. The third {{htmlelement("article")}} contains three {{htmlelement("div")}}s, and the first {{htmlelement("div")}} contains five {{htmlelement("button")}}s :
 
-```
+```plain
 section - article
           article
           article - div - button
