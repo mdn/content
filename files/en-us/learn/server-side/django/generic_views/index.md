@@ -506,7 +506,7 @@ Create the HTML file **/locallibrary/catalog/templates/catalog/book_detail.html*
 >
 > - Call the author model's `get_absolute_url()` method (this performs the same reversing operation):
 >
->   ```plain
+>   ```html
 >   <a href="\{{ book.author.get_absolute_url }}">\{{ book.author }}</a>
 >   ```
 >

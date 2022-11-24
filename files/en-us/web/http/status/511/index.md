@@ -25,7 +25,7 @@ Control (MAC) addresses.
 
 ## Status
 
-```
+```plain
 511 Network Authentication Required
 ```
 

@@ -134,7 +134,7 @@ It is no longer possible to access XPCOM objects from ChromeWorkers. XPConnect h
 - The `nsIDOMStorageWindow` interface has been merged into the `nsIDOMWindow` interface.
 - All members of the `nsIDOMWindowInternal` interface have been moved into the `nsIDOMWindow` interface. The interface itself (with no members) remains available for compatibility until Firefox 9.
 - In order to improve performance, callback handling for asynchronous Places database updates has been changed. See the new `mozIVisitInfoCallback.handleResult()` and `mozIVisitInfoCallback.handleError()` methods, which replace the old single method for both error and success condition handling.
-- The `nsIMemoryReporter` `KIND_MAPPED` attribute has been deprecated in favor of `KIND_NONHEAP`, new unit types `UNITS_COUNT_CUMULATIVE` and `UNITS_PERCENTAGE` have been added.
+- The `KIND_MAPPED` attribute of `nsIMemoryReporter` has been deprecated in favor of `KIND_NONHEAP`, new unit types `UNITS_COUNT_CUMULATIVE` and `UNITS_PERCENTAGE` have been added.
 - The `nsIMemoryReporterManager` interface has a new `explicit` attribute, which reports the total size of explicit memory allocations.
 - The `nsIMemoryReporterManager` interface has a new `resident` attribute, which reports the amount of physical memory used.
 - The `nsINetworkLinkService` interface has a new attribute, `linkType`. This attribute provides the type of network connection in use. All Operating Systems currently return `LINK_TYPE_UNKNOWN`. Android support was backed out due to perceived security concerns.

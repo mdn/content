@@ -21,7 +21,7 @@ information on how to authorize correctly.
 
 ## Status
 
-```
+```plain
 407 Proxy Authentication Required
 ```
 

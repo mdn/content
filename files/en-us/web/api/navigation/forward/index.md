@@ -18,7 +18,7 @@ tags:
 browser-compat: api.Navigation.forward
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`forward()`** method of the
 {{domxref("Navigation")}} interface navigates forwards by one entry in the navigation history.

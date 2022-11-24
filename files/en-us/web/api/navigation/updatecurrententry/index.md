@@ -18,7 +18,7 @@ tags:
 browser-compat: api.Navigation.updateCurrentEntry
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`updateCurrentEntry()`** method of the {{domxref("Navigation")}} interface updates the `state` of the {{domxref("Navigation.currentEntry","currentEntry")}}; used in cases where the state change will be independent from a navigation or reload.
 
@@ -45,7 +45,7 @@ None (`undefined`).
 - `DataCloneError` {{domxref("DOMException")}}
   - : Thrown if the `state` parameter had values included in it that are not structured-clonable.
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the {{domxref("Navigation.currentEntry")}} is `null`, i.e. there is no current history entry. This could occur for exaple if the current page is `about:blank`.
+  - : Thrown if the {{domxref("Navigation.currentEntry")}} is `null`, i.e. there is no current history entry. This could occur for example if the current page is `about:blank`.
 
 ## Examples
 

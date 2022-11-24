@@ -266,13 +266,13 @@ Our grid works nicely, but it has a fixed width. We really want a flexible (flui
 
 The equation that turns a fixed width into a flexible percentage-based one is as follows.
 
-```
+```plain
 target / context = result
 ```
 
 For our column width, our **target width** is 60 pixels and our **context** is the 960 pixel wrapper. We can use the following to calculate a percentage.
 
-```
+```plain
 60 / 960 = 0.0625
 ```
 
@@ -280,7 +280,7 @@ We then move the decimal point 2 places giving us a percentage of 6.25%. So, in 
 
 We need to do the same with our gutter width:
 
-```
+```plain
 20 / 960 = 0.02083333333
 ```
 
@@ -551,7 +551,7 @@ You can take a look in the skeleton.css file to see the CSS that is used when we
 }
 ```
 
-Elements can only be part of the grid if they are inside a row, so as with our earlier example we need an additional `<div>` or other element with a class of `row` nested between the `content` `<div>` and our actual content container `<div>`s. We've done this already as well.
+Elements can only be part of the grid if they are inside a row, so as with our earlier example we need an additional `<div>` or other element with a class of `row` nested between the content `<div>` elements and the container `<div>`. We've done this already as well.
 
 Now let's lay out the container boxes. Skeleton is based on a 12 column grid. The top line boxes all need classes of `one column` to make them span one column.
 

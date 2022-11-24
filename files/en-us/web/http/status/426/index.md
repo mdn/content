@@ -21,7 +21,7 @@ required protocol(s).
 
 ## Status
 
-```
+```plain
 426 Upgrade Required
 ```
 

@@ -54,7 +54,7 @@ Creates a new `DirectoryReaderSync` to read entries from this directory.
 
 #### Syntax
 
-```
+```js
 createReader()
 ```
 

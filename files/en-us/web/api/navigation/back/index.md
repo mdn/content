@@ -18,7 +18,7 @@ tags:
 browser-compat: api.Navigation.back
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`back()`** method of the
 {{domxref("Navigation")}} interface navigates backwards by one entry in the navigation history.
