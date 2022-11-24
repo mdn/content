@@ -27,6 +27,7 @@ An object of this type can be obtained by calling the {{domxref("window.performa
 _The `Performance` interface doesn't inherit any properties._
 
 - {{domxref("Performance.eventCounts")}} {{ReadOnlyInline}}
+
   - : An {{domxref("EventCounts")}} map containing the number of events which have been dispatched per event type.
 
 - {{domxref("Performance.navigation")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
@@ -66,6 +67,8 @@ _The `Performance` interface doesn't inherit any methods._
   - : Creates a {{domxref("DOMHighResTimeStamp","timestamp")}} in the browser's _performance entry buffer_ with the given name.
 - {{domxref("Performance.measure()")}}
   - : Creates a named {{domxref("DOMHighResTimeStamp","timestamp")}} in the browser's performance entry buffer between two specified marks (known as the _start mark_ and _end mark_, respectively).
+- {{domxref("Performance.measureUserAgentSpecificMemory()")}}
+  - : Estimates the memory usage of a web application including all its iframes and workers.
 - {{domxref("Performance.now()")}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the number of milliseconds elapsed since a reference instant.
 - {{domxref("Performance.setResourceTimingBufferSize()")}}
