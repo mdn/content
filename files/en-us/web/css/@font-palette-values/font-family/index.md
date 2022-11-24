@@ -76,7 +76,7 @@ h2.extra-spicy {
 
 ### Using the same identifier for multiple font-families example
 
-In this example we see the [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) set for 2 font-families and the [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/dashed-ident) is the same for each font-family. When setting the [font-palette](/en-us/docs/Web/CSS/font-palette) it can be done for all the elements at the same time. This may be done so that you can change the Color Fonts colors to match your sites branding.
+In this example we see the [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) set for 2 font-families and the [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/dashed-ident) is the same for each font-family. When setting the [font-palette](/en-US/docs/Web/CSS/font-palette) it can be done for all the elements at the same time. This may be done so that you can change the Color Fonts colors to match your sites branding.
 
 ```css
 @font-palette-values --Dark-Mode {
