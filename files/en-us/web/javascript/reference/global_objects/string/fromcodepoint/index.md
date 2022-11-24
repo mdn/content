@@ -57,23 +57,23 @@ must call it as `String.fromCodePoint()`, rather than as a method of a
 Valid input:
 
 ```js
-String.fromCodePoint(42);       // "*"
-String.fromCodePoint(65, 90);   // "AZ"
-String.fromCodePoint(0x404);    // "\u0404" === "Є"
-String.fromCodePoint(0x2F804);  // "\uD87E\uDC04"
-String.fromCodePoint(194564);   // "\uD87E\uDC04"
-String.fromCodePoint(0x1D306, 0x61, 0x1D307); // "\uD834\uDF06a\uD834\uDF07"
+String.fromCodePoint(42); // "*"
+String.fromCodePoint(65, 90); // "AZ"
+String.fromCodePoint(0x404); // "\u0404" === "Є"
+String.fromCodePoint(0x2f804); // "\uD87E\uDC04"
+String.fromCodePoint(194564); // "\uD87E\uDC04"
+String.fromCodePoint(0x1d306, 0x61, 0x1d307); // "\uD834\uDF06a\uD834\uDF07"
 ```
 
 Invalid input:
 
 ```js
-String.fromCodePoint('_');      // RangeError
+String.fromCodePoint("_"); // RangeError
 String.fromCodePoint(Infinity); // RangeError
-String.fromCodePoint(-1);       // RangeError
-String.fromCodePoint(3.14);     // RangeError
-String.fromCodePoint(3e-2);     // RangeError
-String.fromCodePoint(NaN);      // RangeError
+String.fromCodePoint(-1); // RangeError
+String.fromCodePoint(3.14); // RangeError
+String.fromCodePoint(3e-2); // RangeError
+String.fromCodePoint(NaN); // RangeError
 ```
 
 ### Compared to fromCharCode()
@@ -84,8 +84,8 @@ Instead, it requires the UTF-16 surrogate pair in order to return a supplementar
 character:
 
 ```js
-String.fromCharCode(0xD83C, 0xDF03); // Code Point U+1F303 "Night with
-String.fromCharCode(55356, 57091);   // Stars" === "\uD83C\uDF03"
+String.fromCharCode(0xd83c, 0xdf03); // Code Point U+1F303 "Night with
+String.fromCharCode(55356, 57091); // Stars" === "\uD83C\uDF03"
 ```
 
 `String.fromCodePoint()`, on the other hand, can return 4-byte supplementary
@@ -93,7 +93,7 @@ characters, as well as the more common 2-byte BMP characters, by specifying thei
 point (which is equivalent to the UTF-32 code unit):
 
 ```js
-String.fromCodePoint(0x1F303); // or 127747 in decimal
+String.fromCodePoint(0x1f303); // or 127747 in decimal
 ```
 
 ## Specifications
