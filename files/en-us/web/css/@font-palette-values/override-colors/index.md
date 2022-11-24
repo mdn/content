@@ -7,14 +7,13 @@ tags:
   - CSS Fonts
   - Color Fonts
   - CSS Descriptor
-  - CSS Property
   - Reference
 browser-compat: css.at-rules.font-palette-values.override-colors
 ---
 
 {{CSSRef}}
 
-Short description of this feature
+The [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) [descriptor](/en-US/docs/Glossary/Descriptor_(CSS)) **`override-colors`** is used to override colors in the chosen [base-palette](/en-US/docs/Web/CSS/@font-palette-values/base-palette) for a color font.
 
 ## Syntax
 
@@ -36,10 +35,16 @@ override-colors:
   2 #00f;
 ```
 
+The `override-colors` [descriptor](/en-US/docs/Glossary/Descriptor_(CSS)) takes a comma-separated list of the color index and new color value.
+
+The color index is zero-based and any [color value](/en-US/docs/Web/CSS/color_value) can be used.
+
+For each key/value pair of index/color the color with the index in the specified [base-palette](/en-US/docs/Web/CSS/@font-palette-values/base-palette) will be overwritten. If the color font does not have a color at the specified index it will be ignored.
+
 ### Values
 
 - `[ <integer [0,∞]> <absolute-color-base> ]`
-  - : Specifies the name of the font family. explain - reference <https://w3c.github.io/csswg-drafts/css-color-4/#typedef-absolute-color-base>
+  - : Specifies the index of a color in a [base-palette](/en-US/docs/Web/CSS/@font-palette-values/base-palette) and the color to overwrite it with.
 
 ## Formal definition
 

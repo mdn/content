@@ -14,7 +14,7 @@ browser-compat: css.at-rules.font-palette-values.base-palette
 
 {{CSSRef}}
 
-The [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) descriptor **`base-palette`** is used to specify which pre-defined palette should be used. If a `base-palette` is defined that does not exist then it will revert to the palette defined at index 0.
+The [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) [descriptor](/en-US/docs/Glossary/Descriptor_(CSS)) **`base-palette`** is used to specify which pre-defined palette should be used. If a `base-palette` is defined that does not exist then it will revert to the palette defined at index 0.
 
 ## Syntax
 
@@ -24,7 +24,7 @@ The [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) descriptor 
 }
 ```
 
-The `base-palette` is set using a zero based index of the font creators pre-defined palettes.
+The `base-palette` [descriptor](/en-US/docs/Glossary/Descriptor_(CSS)) is set using a zero-based index of the font creators pre-defined palettes.
 
 ### Values
 

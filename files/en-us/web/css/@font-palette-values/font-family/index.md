@@ -13,7 +13,7 @@ browser-compat: css.at-rules.font-palette-values.font-family
 
 {{CSSRef}}
 
-The [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) descriptor **`font-family`** is used to specify which font-family palette values are to be applied to. This need to match exactly the values used when setting the CSS [font-family](/en-US/docs/Web/CSS/font-family).
+The [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) [descriptor](/en-US/docs/Glossary/Descriptor_(CSS)) **`font-family`** is used to specify which font-family palette values are to be applied to. This need to match exactly the values used when setting the CSS [font-family](/en-US/docs/Web/CSS/font-family).
 
 ## Syntax
 
@@ -24,7 +24,7 @@ The [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) descriptor 
 }
 ```
 
-The `font-family` descriptor means that the settings that follow apply to the specified font-family. Other [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) can be set for other font-families using the same [&lt;dashed-ident&gt;s](/en-US/docs/Web/CSS/dashed-ident), which means if you have multiple Color Fonts you can use the same identifier for each.
+The `font-family` [descriptor](/en-US/docs/Glossary/Descriptor_(CSS)) means that the settings that follow apply to the specified font-family. Other [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) can be set for other font-families using the same [&lt;dashed-ident&gt;s](/en-US/docs/Web/CSS/dashed-ident), which means if you have multiple Color Fonts you can use the same identifier for each.
 
 ### Values
 
@@ -43,7 +43,7 @@ The `font-family` descriptor means that the settings that follow apply to the sp
 
 ### Naming syntax
 
-As an example when `font-family` descriptor is used in the [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) the value is identical in each instance, eg `"Bungee Spice"`.
+As an example when `font-family` [descriptor](/en-US/docs/Glossary/Descriptor_(CSS)) is used in the [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) the value is identical in each instance, eg `"Bungee Spice"`.
 
 #### HTML
 
