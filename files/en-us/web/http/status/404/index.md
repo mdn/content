@@ -19,7 +19,7 @@ If a resource is permanently removed, use the {{HTTPStatus("410")}} (Gone) statu
 
 ## Status
 
-```plain
+```http
 404 Not Found
 ```
 

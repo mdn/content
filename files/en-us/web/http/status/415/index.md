@@ -22,7 +22,7 @@ inspecting the data directly.
 
 ## Status
 
-```plain
+```http
 415 Unsupported Media Type
 ```
 

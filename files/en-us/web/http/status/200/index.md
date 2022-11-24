@@ -23,7 +23,7 @@ The successful result of a {{HTTPMethod("PUT")}} or a {{HTTPMethod("DELETE")}} i
 
 ## Status
 
-```plain
+```http
 200 OK
 ```
 

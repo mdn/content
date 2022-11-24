@@ -15,7 +15,7 @@ The HyperText Transfer Protocol (HTTP) **`451 Unavailable For Legal Reasons`** c
 
 ## Status
 
-```plain
+```http
 451 Unavailable For Legal Reasons
 ```
 

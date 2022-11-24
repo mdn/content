@@ -16,7 +16,7 @@ The HyperText Transfer Protocol (HTTP) **`502 Bad Gateway`** server error respon
 
 ## Status
 
-```plain
+```http
 502 Bad Gateway
 ```
 

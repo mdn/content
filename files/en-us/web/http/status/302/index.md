@@ -31,7 +31,7 @@ confirmation message such as: 'you successfully uploaded XYZ'.
 
 ## Status
 
-```plain
+```http
 302 Found
 ```
 
