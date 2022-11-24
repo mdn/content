@@ -79,7 +79,7 @@ direct match of the ASCII character set.
 The following example returns `65`, the Unicode value for A.
 
 ```js
-'ABC'.charCodeAt(0)  // returns 65
+"ABC".charCodeAt(0); // returns 65
 ```
 
 ### Fixing charCodeAt() to handle non-Basic-Multilingual-Plane characters if their presence earlier in the string is unknown
@@ -98,18 +98,18 @@ function fixedCharCodeAt(str, idx) {
   // High surrogate (could change last hex to 0xDB7F
   // to treat high private surrogates
   // as single characters)
-  if (0xD800 <= code && code <= 0xDBFF) {
+  if (0xd800 <= code && code <= 0xdbff) {
     hi = code;
     low = str.charCodeAt(idx + 1);
     if (isNaN(low)) {
-      throw 'High surrogate not followed by ' +
-        'low surrogate in fixedCharCodeAt()';
+      throw new Error(
+        "High surrogate not followed by low surrogate in fixedCharCodeAt()",
+      );
     }
-    return (
-      (hi - 0xD800) * 0x400) +
-      (low - 0xDC00) + 0x10000;
+    return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;
   }
-  if (0xDC00 <= code && code <= 0xDFFF) { // Low surrogate
+  if (0xdc00 <= code && code <= 0xdfff) {
+    // Low surrogate
     // We return false to allow loops to skip
     // this iteration since should have already handled
     // high surrogate above in the previous iteration
@@ -127,11 +127,11 @@ function fixedCharCodeAt(str, idx) {
 
 ```js
 function knownCharCodeAt(str, idx) {
-  str += '';
+  str += "";
   const end = str.length;
 
   const surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-  while ((surrogatePairs.exec(str)) !== null) {
+  while (surrogatePairs.exec(str) !== null) {
     const li = surrogatePairs.lastIndex;
     if (li - 2 < idx) {
       idx++;
@@ -146,13 +146,12 @@ function knownCharCodeAt(str, idx) {
 
   const code = str.charCodeAt(idx);
 
-  if (0xD800 <= code && code <= 0xDBFF) {
+  if (0xd800 <= code && code <= 0xdbff) {
     const hi = code;
     const low = str.charCodeAt(idx + 1);
     // Go one further, since one of the "characters"
     // is part of a surrogate pair
-    return ((hi - 0xD800) * 0x400) +
-      (low - 0xDC00) + 0x10000;
+    return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;
   }
   return code;
 }
