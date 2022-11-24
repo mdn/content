@@ -16,7 +16,7 @@ This error response is a generic "catch-all" response. Usually, this indicates t
 
 ## Status
 
-```
+```plain
 500 Internal Server Error
 ```
 

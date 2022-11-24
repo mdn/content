@@ -267,7 +267,7 @@ To start with, we set 16px as the font size on the `<html>` element.
 
 **To recap, the rem unit means "The root element's font-size"** (rem stands for "root em"). The {{htmlelement("li")}} elements inside the {{htmlelement("ul")}} with a `class` of `rems` take their sizing from the root element (`<html>`). This means that each successive level of nesting does not keep getting larger.
 
-However, if you change the `<html>` `font-size` in the CSS you will see that everything else changes relative to it — both `rem`- and `em`-sized text.
+However, if you change the `<html>` element's `font-size` in the CSS you will see that everything else changes relative to it — both `rem`- and `em`-sized text.
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/em-rem.html", '100%', 1100)}}
 

@@ -25,7 +25,7 @@ status code.
 
 ## Status
 
-```
+```plain
 203 Non-Authoritative Information
 ```
 

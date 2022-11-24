@@ -17,7 +17,7 @@ Conflicts are most likely to occur in response to a {{HTTPMethod("PUT")}} reques
 
 ## Status
 
-```
+```plain
 409 Conflict
 ```
 

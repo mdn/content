@@ -56,7 +56,7 @@ The listener function will be passed two parameters: a string `text`, and an {{W
 
 ## Examples
 
-This example interprets the user's input as a CSS property name and populates the drop-down list with one {{WebExtAPIRef("omnibox.SuggestResult")}} object for each CSS property matching the input. The `SuggestResult` `description` is the full name of the property, and the `content` is the MDN page for that property.
+This example interprets the user's input as a CSS property name and populates the drop-down list with one {{WebExtAPIRef("omnibox.SuggestResult")}} object for each CSS property matching the input. The `description` property of `SuggestResult` is the full name of the property, and the `content` is the MDN page for that property.
 
 The example also listens to {{WebExtAPIRef("omnibox.onInputEntered")}}, and opens the MDN page corresponding to the selection, according to the {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}} argument.
 

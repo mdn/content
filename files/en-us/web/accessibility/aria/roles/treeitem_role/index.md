@@ -60,15 +60,13 @@ A `treeitem` is required to have an accessible name. Generally, that name comes 
 - [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) role
   - : The root node for the hierarchical list of parent and child `treeitem` nodes that can expand and collapse
 - [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
-
   - : Identifies a set of `treeitem` child nodes.
-
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
   - : Set on the root `tree` and on `group` nodes that are parents of `treeitem` nodes, to indicate whether the tree view is expanded (`true`) or collapsed (`false`).
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
-  - Set to `true` or `false`, indicates a `treeitem` is selectable, and whether or not it is currently selected.
+  - : Set to `true` or `false`, indicates a `treeitem` is selectable, and whether or not it is currently selected.
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
-  - Set to `true` or `false`, indicates the `treeitem` can be checked, and whether or not it is currently checked.
+  - : Set to `true` or `false`, indicates the `treeitem` can be checked, and whether or not it is currently checked.
 
 ### Keyboard interactions
 

@@ -187,9 +187,8 @@ const arrayLike = {
   1: 7.3,
   2: 4,
 };
-console.log(
-  Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x)),
-); // 7.3
+console.log(Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x)));
+// 7.3
 ```
 
 ## Specifications

@@ -32,7 +32,7 @@ A string representing the given date in the [ISO 8601](https://en.wikipedia.org/
 ### Using toISOString()
 
 ```js
-const today = new Date('05 October 2011 14:48 UTC');
+const today = new Date("05 October 2011 14:48 UTC");
 
 console.log(today.toISOString()); // Returns 2011-10-05T14:48:00.000Z
 ```

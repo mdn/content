@@ -32,7 +32,7 @@ among them.
 
 ## Status
 
-```
+```plain
 406 Not Acceptable
 ```
 

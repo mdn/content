@@ -159,7 +159,7 @@ The URL `https://example.com/` will be redirected to `https://www.example.com/`,
 
 `RedirectMatch` does the same, but takes a {{glossary("regular expression")}} to define a collection of affected URLs:
 
-```
+```plain
 RedirectMatch ^/images/(.*)$ https://images.example.com/$1
 ```
 
@@ -167,7 +167,7 @@ All documents in the `images/` directory will redirect to a different domain.
 
 If you don't want a temporary redirect, an extra parameter (either the HTTP status code to use or the `permanent` keyword) can be used to set up a different redirect:
 
-```
+```plain
 Redirect permanent / https://www.example.com
 # …acts the same as:
 Redirect 301 / https://www.example.com
@@ -179,7 +179,7 @@ The [`mod_rewrite`](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) 
 
 In Nginx, you create a specific server block for the content you want to redirect:
 
-```
+```plain
 server {
   listen 80;
   server_name example.com;
@@ -189,7 +189,7 @@ server {
 
 To apply a redirect to a directory or only certain pages, use the `rewrite` directive:
 
-```
+```plain
 rewrite ^/images/(.*)$ https://images.example.com/$1 redirect;
 rewrite ^/images/(.*)$ https://images.example.com/$1 permanent;
 ```

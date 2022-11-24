@@ -304,7 +304,7 @@ Text tracks for displaying with HTML video need to be written in WebVTT, a text 
 
 A typical WebVTT file will look something like this:
 
-```
+```plain
 WEBVTT
 
 1
