@@ -13,13 +13,13 @@ browser-compat: api.Performance.measureUserAgentSpecificMemory
 
 {{APIRef("Performance API")}} {{SeeCompatTable}}
 
-The **`measureUserAgentSpecificMemory()`** method is used to estimate memory usage of web applications including all its iframes and workers.
+The **`measureUserAgentSpecificMemory()`** method is used to estimate the memory usage of a web application including all its iframes and workers.
 
 ## Description
 
-The browser automatically allocates memory when objects are created and frees it when they are not reachable anymore (garbage collection). This garbage collection (GC) is an approximation since the general problem of determining whether or not a specific piece of memory is still needed is impossible (see also [JavaScript Memory Management](/en-US/docs/Web/JavaScript/Memory_Management)). Developers need to make sure that objects are garbage collected, memory isn't leaked, and memory usage doesn't grow unnecessarily over time leading to slow and unresponsive web applications. Memory leaks are typically introduced by forgetting to unregister an event listener, not closing a worker, or accumulating objects in arrays, and more.
+The browser automatically allocates memory when objects are created and frees it when they are not reachable anymore (garbage collection). This garbage collection (GC) is an approximation since the general problem of determining whether or not a specific piece of memory is still needed is impossible (see also [JavaScript Memory Management](/en-US/docs/Web/JavaScript/Memory_Management)). Developers need to make sure that objects are garbage collected, memory isn't leaked, and memory usage doesn't grow unnecessarily over time leading to slow and unresponsive web applications. Memory leaks are typically introduced by forgetting to unregister an event listener, not closing a worker, accumulating objects in arrays, and more.
 
-The `measureUserAgentSpecificMemory()` API aggregates memory usage data to help you find memory leaks. It can be used for memory regression detection or for A/B testing features to evaluate their memory impact. Single calls of this method are less useful; the aggregation and periodical monitoring of aggregated memory usage data makes this API powerful.
+The `measureUserAgentSpecificMemory()` API aggregates memory usage data to help you find memory leaks. It can be used for memory regression detection or for A/B testing features to evaluate their memory impact. Rather than make single calls to this method, it's better to make periodic calls to track how memory usage changes over the duration of a session.
 
 The `byte` values this API returns aren't comparable across browsers or between different versions of the same browser as these are highly implementation dependent. Also, how `breakdown` and `attribution` arrays are provided is up to the browser as well. It is best to not hardcode any assumptions about this data. This API is rather meant to be called periodically (with a randomized interval) to aggregate data and analyze the difference between the samples.
 
@@ -46,13 +46,13 @@ A {{jsxref("Promise")}} that resolves to an object containing the following prop
     - `attribution`
       - : An {{jsxref("Array")}} of container elements of the JavaScript realms that use the memory. This object has the following properties:
         - `url`
-          - : If this attribution corresponds to a same-origin JavaScript realm, then this property contains realm's URL. Otherwise it is the string "cross-origin-url".
+          - : If this attribution corresponds to a same-origin JavaScript realm, then this property contains the realm's URL. Otherwise it is the string "cross-origin-url".
         - `container`
           - : An object describing the DOM element that contains this JavaScript realm. This object has the following properties:
             - `id`
               - : The `id` attribute of the container element.
             - `src`
-              - : The `src` attribute of the container element. If the container element is an {{HTMLLElement("object")}} element, then this field contains the value of the `data` attribute.
+              - : The `src` attribute of the container element. If the container element is an {{HTMLElement("object")}} element, then this field contains the value of the `data` attribute.
         - `scope`
           - : A string describing the type of the same-origin JavaScript realm. Either `"Window"`, `"DedicatedWorkerGlobalScope"`, `"SharedWorkerGlobalScope"`, `"ServiceWorkerGlobalScope"` or `"cross-origin-aggregated"` for the cross-origin case.
     - `types`
@@ -99,7 +99,7 @@ An example return value looks like this:
 
 ### Exceptions
 
-- {{domxref("SecurityError")}}
+- `SecurityError` {{domxref("DOMException")}}
   - : Thrown if the security requirements for preventing cross-origin information leaks aren't fulfilled.
 
 ## Security requirements
@@ -138,7 +138,7 @@ function runMemoryMeasurements() {
 }
 
 async function measureMemory() {
-  let memorySample = await performance.measureUserAgentSpecificMemory();
+  const memorySample = await performance.measureUserAgentSpecificMemory();
   console.log(memorySample);
   runMemoryMeasurements();
 }
