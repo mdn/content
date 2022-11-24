@@ -25,7 +25,7 @@ It accepts an integer as a value, with different results depending on the intege
 
   > **Warning:** Avoid using `tabindex` values greater than 0. Doing so makes it difficult for people who rely on assistive technology to navigate and operate page content. Instead, write the document with the elements in a logical sequence.
 
-If you set the `tabindex` attribute on a {{htmlelement("div")}}, then its child content cannot be scrolled with the arrow keys unless you set `tabindex` on the content, too. [Check out this fiddle to understand the scrolling effects of `tabindex`](https://jsfiddle.net/jainakshay/0b2q4Lgv/).
+The `tabindex` attribute must not be specified on {{htmlelement('dialog')}} elements and should not be used on non-interactive content. If you set the `tabindex` attribute on a {{htmlelement("div")}}, then its child content cannot be scrolled with the arrow keys unless you set `tabindex` on the content, too. [Check out this fiddle to understand the scrolling effects of `tabindex`](https://jsfiddle.net/jainakshay/0b2q4Lgv/).
 
 ## Accessibility concerns
 
@@ -47,4 +47,4 @@ Interactive components authored using non-interactive elements are not listed in
 
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes)
 - {{domxref("HTMLElement.tabIndex")}} that reflects this attribute
-- Accessibility problems with tabindex: see [Don't Use Tabindex Greater than 0](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html) by Adrian Roselli
+- Accessibility problems with `tabindex`: see [Don't Use Tabindex Greater than 0](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html) by Adrian Roselli

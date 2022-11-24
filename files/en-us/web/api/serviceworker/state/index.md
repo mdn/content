@@ -17,7 +17,7 @@ browser-compat: api.ServiceWorker.state
 The **`state`** read-only property of the
 {{domxref("ServiceWorker")}} interface returns a string representing the current state
 of the service worker. It can be one of the following values: `parsed`, `installing`,
-`installed,` `activating`, `activated`, or
+`installed`, `activating`, `activated`, or
 `redundant`.
 
 ## Value

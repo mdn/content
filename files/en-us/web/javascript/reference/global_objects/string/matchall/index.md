@@ -55,11 +55,13 @@ Without `matchAll()`, it's possible to use calls to [`regexp.exec()`](/en-US/doc
 
 ```js
 const regexp = /foo[a-z]*/g;
-const str = 'table football, foosball';
+const str = "table football, foosball";
 let match;
 
 while ((match = regexp.exec(str)) !== null) {
-  console.log(`Found ${match[0]} start=${match.index} end=${regexp.lastIndex}.`);
+  console.log(
+    `Found ${match[0]} start=${match.index} end=${regexp.lastIndex}.`,
+  );
 }
 // Found football start=6 end=14.
 // Found foosball start=16 end=24.
@@ -69,11 +71,15 @@ With `matchAll()` available, you can avoid the {{jsxref("Statements/while", "whi
 
 ```js
 const regexp = /foo[a-z]*/g;
-const str = 'table football, foosball';
+const str = "table football, foosball";
 const matches = str.matchAll(regexp);
 
 for (const match of matches) {
-  console.log(`Found ${match[0]} start=${match.index} end=${match.index + match[0].length}.`);
+  console.log(
+    `Found ${match[0]} start=${match.index} end=${
+      match.index + match[0].length
+    }.`,
+  );
 }
 // Found football start=6 end=14.
 // Found foosball start=16 end=24.
@@ -88,7 +94,7 @@ Array.from(str.matchAll(regexp), (m) => m[0]);
 
 ```js
 const regexp = /[a-c]/;
-const str = 'abc';
+const str = "abc";
 str.matchAll(regexp);
 // TypeError
 ```
@@ -98,7 +104,7 @@ str.matchAll(regexp);
 ```js
 const regexp = /[a-c]/g;
 regexp.lastIndex = 1;
-const str = 'abc';
+const str = "abc";
 Array.from(str.matchAll(regexp), (m) => `${regexp.lastIndex} ${m[0]}`);
 // [ "1 b", "1 c" ]
 ```
@@ -113,7 +119,7 @@ Capture groups are ignored when using {{jsxref("Global_Objects/String/match", "m
 
 ```js
 const regexp = /t(e)(st(\d?))/g;
-const str = 'test1test2';
+const str = "test1test2";
 
 str.match(regexp); // ['test1', 'test2']
 ```
@@ -139,7 +145,7 @@ const str = "Hmm, this is interesting.";
 str.matchAll({
   [Symbol.matchAll](str) {
     return [["Yes, it's interesting."]];
-  }
+  },
 }); // returns [["Yes, it's interesting."]]
 ```
 

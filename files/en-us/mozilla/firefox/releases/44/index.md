@@ -27,7 +27,7 @@ Highlights:
 
 ### CSS
 
-- `position:` `fixed;` now always creates a new stacking context ({{bug(1179288)}}).
+- `position: fixed;` now always creates a new stacking context ({{bug(1179288)}}).
 - The support of {{cssxref('@font-face/unicode-range', 'unicode-range')}} has been enabled by default ({{bug(1119062)}}).
 - Our experimental implementation of CSS Writing Modes has been updated to reflect the latest specification:
 

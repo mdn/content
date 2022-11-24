@@ -112,7 +112,16 @@ regex.test("foo"); // false
 regex.test("barfoo"); // true
 
 // regex.lastIndex is at 6
-regex.test("foobar"); //false
+regex.test("foobar"); // false
+
+// regex.lastIndex is at 0
+regex.test("foobarfoo"); // true
+
+// regex.lastIndex is at 3
+regex.test("foobarfoo"); // true
+
+// regex.lastIndex is at 9
+regex.test("foobarfoo"); // false
 
 // regex.lastIndex is at 0
 // (...and so on)
