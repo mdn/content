@@ -222,11 +222,9 @@ const flattened = [
 const names = ["Alice", "Bob", "Tiff", "Bruce", "Alice"];
 
 const countedNames = names.reduce((allNames, name) => {
-  const currCount = allNames[name] ?? 0;
-  return {
-    ...allNames,
-    [name]: currCount + 1,
-  };
+  const currentCount = allNames[name] ?? 0;
+  allNames[name] = currentCount + 1;
+  return allNames;
 }, {});
 // countedNames is:
 // { 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 1 }
@@ -244,9 +242,10 @@ const people = [
 function groupBy(objectArray, property) {
   return objectArray.reduce((acc, obj) => {
     const key = obj[property];
-    const curGroup = acc[key] ?? [];
-
-    return { ...acc, [key]: [...curGroup, obj] };
+    const currentGroup = acc[key] ?? [];
+    currentGroup.push(obj);
+    acc[key] = currentGroup;
+    return acc;
   }, {});
 }
 
@@ -287,7 +286,10 @@ const friends = [
 // allbooks - list which will contain all friends' books +
 // additional list contained in initialValue
 const allbooks = friends.reduce(
-  (accumulator, currentValue) => [...accumulator, ...currentValue.books],
+  (accumulator, currentValue) => {
+    accumulator.push(...currentValue.books);
+    return accumulator;
+  },
   ["Alphabet"],
 );
 console.log(allbooks);
@@ -306,7 +308,7 @@ console.log(allbooks);
 const myArray = ["a", "b", "a", "b", "c", "e", "e", "c", "d", "d", "d", "d"];
 const myArrayWithNoDuplicates = myArray.reduce((accumulator, currentValue) => {
   if (!accumulator.includes(currentValue)) {
-    return [...accumulator, currentValue];
+    accumulator.push(currentValue);
   }
   return accumulator;
 }, []);
@@ -327,7 +329,7 @@ const numbers = [-5, 6, 2, 0];
 const doubledPositiveNumbers = numbers.reduce((accumulator, currentValue) => {
   if (currentValue > 0) {
     const doubled = currentValue * 2;
-    return [...accumulator, doubled];
+    accumulator.push(doubled);
   }
   return accumulator;
 }, []);
