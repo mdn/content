@@ -333,7 +333,6 @@
         "DOMPoint",
         "DOMPointReadOnly",
         "DOMRect",
-        "DOMTimeStamp",
         "DOMTokenList",
         "Element",
         "Event",
@@ -748,6 +747,11 @@
       "properties": [],
       "events": []
     },
+    "Keyboard API": {
+      "overview": ["Keyboard API"],
+      "interfaces": ["Keyboard", "KeyboardLayoutMap"],
+      "methods": ["Navigator.keyboard"]
+    },
     "Layout Instability API": {
       "overview": ["Layout Instability API"],
       "interfaces: ": ["LayoutShift", "LayoutShiftAttribution"],
@@ -843,6 +847,21 @@
       "interfaces": ["MediaRecorder", "MediaRecorderErrorEvent", "BlobEvent"],
       "methods": [],
       "properties": [],
+      "events": []
+    },
+    "Navigation API": {
+      "overview": ["Navigation API"],
+      "guides": [],
+      "interfaces": [
+        "NavigateEvent",
+        "Navigation",
+        "NavigationCurrentEntryChangeEvent",
+        "NavigationDestination",
+        "NavigationHistoryEntry",
+        "NavigationTransition"
+      ],
+      "methods": [],
+      "properties": ["Window.navigation"],
       "events": []
     },
     "Network Information API": {
@@ -1207,6 +1226,8 @@
         "ReadableStreamBYOBRequest",
         "ReadableStreamDefaultController",
         "ReadableStreamDefaultReader",
+        "TransformStream",
+        "TransformStreamDefaultController",
         "WritableStream",
         "WritableStreamDefaultController",
         "WritableStreamDefaultWriter"
@@ -1750,6 +1771,13 @@
       "properties": ["Navigator.hid"],
       "events": []
     },
+    "Web Locks API": {
+      "overview": ["Web Locks API"],
+      "interfaces": ["Lock", "LockManager"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Web MIDI API": {
       "overview": ["Web MIDI API"],
       "interfaces": [
@@ -1787,7 +1815,8 @@
         "/docs/Web/API/WebRTC_API/Using_data_channels",
         "/docs/Web/API/WebRTC_API/Using_DTMF",
         "/docs/Web/API/WebRTC_API/adapter.js",
-        "/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample"
+        "/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample",
+        "/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs"
       ],
       "interfaces": [
         "RTCPeerConnection",

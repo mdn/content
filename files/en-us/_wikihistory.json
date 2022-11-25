@@ -26568,22 +26568,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/DOMTimeStamp": {
-    "modified": "2020-07-25T11:26:24.857Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "flimzy",
-      "Sebastianz",
-      "teoli",
-      "DomenicDenicola",
-      "kscarfone",
-      "FredB",
-      "Sheppy",
-      "ethertank",
-      "Brettz9"
-    ]
-  },
   "Web/API/DOMTokenList": {
     "modified": "2020-10-15T21:11:17.375Z",
     "contributors": [
@@ -93829,18 +93813,6 @@
     "modified": "2020-12-14T00:30:29.082Z",
     "contributors": ["Sheppy", "steffix.h2", "shing0608"]
   },
-  "Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC": {
-    "modified": "2019-10-04T10:20:42.970Z",
-    "contributors": [
-      "Sheppy",
-      "fscholz",
-      "teoli",
-      "Sebastianz",
-      "Jeremie",
-      "Laurentj",
-      "jesup"
-    ]
-  },
   "Web/Guide/Audio_and_video_delivery": {
     "modified": "2020-12-11T05:27:12.652Z",
     "contributors": [
@@ -125890,10 +125862,6 @@
     "modified": "2020-07-28T00:42:48.458Z",
     "contributors": ["lbd1607", "Sheppy", "rachelandrew"]
   },
-  "Web/Media/images/aspect_ratio_mapping": {
-    "modified": "2020-11-18T11:22:57.796Z",
-    "contributors": ["ramiy", "chrisdavidmills", "rachelandrew"]
-  },
   "Web/OpenSearch": {
     "modified": "2019-10-30T22:44:38.715Z",
     "contributors": [
@@ -131997,16 +131965,6 @@
       "kyuwoo-choi",
       "topicus",
       "BrainBuzzer"
-    ]
-  },
-  "WebAssembly/Caching_modules": {
-    "modified": "2020-09-19T15:39:46.216Z",
-    "contributors": [
-      "mfuji09",
-      "leela52452",
-      "chrisdavidmills",
-      "lukewagner",
-      "kingysu"
     ]
   },
   "WebAssembly/Concepts": {

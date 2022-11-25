@@ -20,9 +20,9 @@ Format-control characters have no visual representation but are used to control 
 
 | Code point | Name                  | Abbreviation | Description                                                                                                                                                                                                                    |
 | ---------- | --------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `U+200C`   | Zero width non-joiner | \<ZWNJ>      | Placed between characters to prevent being connected into ligatures in certain languages ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_non-joiner)).                                                                   |
-| `U+200D`   | Zero width joiner     | \<ZWJ>       | Placed between characters that would not normally be connected in order to cause the characters to be rendered using their connected form in certain languages ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_joiner)). |
-| `U+FEFF`   | Byte order mark       | \<BOM>       | Used at the start of the script to mark it as Unicode and the text's byte order ([Wikipedia](https://en.wikipedia.org/wiki/Byte_order_mark)).                                                                                  |
+| U+200C     | Zero width non-joiner | \<ZWNJ>      | Placed between characters to prevent being connected into ligatures in certain languages ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_non-joiner)).                                                                   |
+| U+200D     | Zero width joiner     | \<ZWJ>       | Placed between characters that would not normally be connected in order to cause the characters to be rendered using their connected form in certain languages ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_joiner)). |
+| U+FEFF     | Byte order mark       | \<BOM>       | Used at the start of the script to mark it as Unicode and the text's byte order ([Wikipedia](https://en.wikipedia.org/wiki/Byte_order_mark)).                                                                                  |
 
 In JavaScript source text, \<ZWNJ> and \<ZWJ> are treated as identifier parts, while \<BOM> (also called a zero-width no-break space \<ZWNBSP> when not at the start of text) is treated as whitespace.
 
@@ -30,14 +30,21 @@ In JavaScript source text, \<ZWNJ> and \<ZWJ> are treated as identifier parts, w
 
 [White space](/en-US/docs/Glossary/Whitespace) characters improve the readability of source text and separate tokens from each other. These characters are usually unnecessary for the functionality of the code. [Minification tools](https://en.wikipedia.org/wiki/Minification_%28programming%29) are often used to remove whitespace in order to reduce the amount of data that needs to be transferred.
 
-| Code point | Name                           | Abbreviation | Description                                                                                               | Escape sequence |
-| ---------- | ------------------------------ | ------------ | --------------------------------------------------------------------------------------------------------- | --------------- |
-| U+0009     | Character tabulation           | \<TAB>       | Horizontal tabulation                                                                                     | \t              |
-| U+000B     | Line tabulation                | \<VT>        | Vertical tabulation                                                                                       | \v              |
-| U+000C     | Form feed                      | \<FF>        | Page breaking control character ([Wikipedia](https://en.wikipedia.org/wiki/Page_break#Form_feed)).        | \f              |
-| U+0020     | Space                          | \<SP>        | Normal space                                                                                              |                 |
-| U+00A0     | No-break space                 | \<NBSP>      | Normal space, but no point at which a line may break                                                      |                 |
-| Others     | Other Unicode space characters | \<USP>       | [Spaces in Unicode on Wikipedia](https://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode) |                 |
+| Code point | Name                           | Abbreviation | Description                                                                                        | Escape sequence |
+| ---------- | ------------------------------ | ------------ | -------------------------------------------------------------------------------------------------- | --------------- |
+| U+0009     | Character tabulation           | \<TAB>       | Horizontal tabulation                                                                              | \t              |
+| U+000B     | Line tabulation                | \<VT>        | Vertical tabulation                                                                                | \v              |
+| U+000C     | Form feed                      | \<FF>        | Page breaking control character ([Wikipedia](https://en.wikipedia.org/wiki/Page_break#Form_feed)). | \f              |
+| U+0020     | Space                          | \<SP>        | Normal space                                                                                       |                 |
+| U+00A0     | No-break space                 | \<NBSP>      | Normal space, but no point at which a line may break                                               |                 |
+| U+FEFF     | Zero-width no-break space      | \<ZWNBSP>    | When not at the start of a script, the BOM marker is a normal whitespace character.                |                 |
+| Others     | Other Unicode space characters | \<USP>       | [Characters in the "Space_Separator" general category][space separator set]                        |                 |
+
+[space separator set]: https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BGeneral_Category%3DSpace_Separator%7D
+
+> **Note:** Of those [characters with the "White_Space" property but are not in the "Space_Separator" general category](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BWhite_Space%7D%26%5CP%7BGeneral_Category%3DSpace_Separator%7D), U+0009, U+000B, and U+000C are still treated as white space in JavaScript; U+0085 NEXT LINE has no special role; others become the set of [line terminators](#line_terminators).
+
+> **Note:** Changes to the Unicode standard used by the JavaScript engine may affect programs' behavior. For example, ES2016 upgraded the reference Unicode standard from 5.1 to 8.0.0, which caused U+180E MONGOLIAN VOWEL SEPARATOR to be moved from the "Space_Separator" category to the "Format (Cf)" category, and made it a non-whitespace. Subsequently, the result of [`"\u180E".trim().length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim) changed from `0` to `1`.
 
 ## Line terminators
 

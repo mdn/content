@@ -15,6 +15,10 @@ browser-compat: css.properties.image-orientation
 
 The **`image-orientation`** [CSS](/en-US/docs/Web/CSS) property specifies a layout-independent correction to the orientation of an image.
 
+{{EmbedInteractiveExample("pages/css/image-orientation.html")}}
+
+## Syntax
+
 ```css
 /* keyword values */
 image-orientation: none;
@@ -27,8 +31,6 @@ image-orientation: revert;
 image-orientation: revert-layer;
 image-orientation: unset;
 ```
-
-## Syntax
 
 ### Values
 

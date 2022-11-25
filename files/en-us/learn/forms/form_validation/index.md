@@ -198,8 +198,8 @@ Below are some examples to give you a basic idea of how they work.
 
 - `a` — Matches one character that is `a` (not `b`, not `aa`, and so on).
 - `abc` — Matches `a`, followed by `b`, followed by `c`.
-- `ab?c`—Matches `a`, optionally followed by a single `b`, followed by `c`. (`ac` or `abc`)
-- `ab*c`—Matches `a`, optionally followed by any number of `b`s, followed by `c`. (`ac`, `abc`, `abbbbbc`, and so on).
+- `ab?c` — Matches `a`, optionally followed by a single `b`, followed by `c`. (`ac` or `abc`)
+- `ab*c` — Matches `a`, optionally followed by any number of `b`s, followed by `c`. (`ac`, `abc`, `abbbbbc`, and so on).
 - `a|b` — Matches one character that is `a` or `b`.
 - `abc|xyz` — Matches exactly `abc` or exactly `xyz` (but not `abcxyz` or `a` or `y`, and so on).
 
@@ -442,7 +442,7 @@ The Constraint validation API makes the following properties available on the ab
 The Constraint Validation API also makes the following methods available on the above elements and the [`form`](/en-US/docs/Web/HTML/Element/form) element.
 
 - `checkValidity()`: Returns `true` if the element's value has no validity problems; `false` otherwise. If the element is invalid, this method also fires an [`invalid` event](/en-US/docs/Web/API/HTMLInputElement/invalid_event) on the element.
-- `reportValidity()`: Reports invalid field(s) using events. Useful in combination with `preventDefault()` in an `onSubmit` event handler
+- `reportValidity()`: Reports invalid field(s) using events. This method is useful in combination with `preventDefault()` in an `onSubmit` event handler.
 - `setCustomValidity(message)`: Adds a custom error message to the element; if you set a custom error message, the element is considered to be invalid, and the specified error is displayed. This lets you use JavaScript code to establish a validation failure other than those offered by the standard HTML validation constraints. The message is shown to the user when reporting the problem.
 
 #### Implementing a customized error message

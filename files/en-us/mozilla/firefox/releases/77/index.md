@@ -63,7 +63,7 @@ This article provides information about the changes in Firefox 77 that will affe
 - The {{WebExtAPIRef("tabs.duplicate")}} API now supports `duplicateProperties`, enabling the position and active status of a duplicated tab to be specified. ({{bug(1560218)}})
 - The {{WebExtAPIRef("permissions")}} API events {{WebExtAPIRef("permissions.onAdded")}} and {{WebExtAPIRef("permissions.onRemoved")}} are now supported. ({{bug(1444294)}})
 - Multiple `Content-Security-Policy` header changes requested in {{WebExtAPIRef("webRequest.onHeadersReceived")}} are merged. ({{bug(1462989 )}})
-- {{WebExtAPIRef("webRequest")}} events will no longer be triggered for `data:`-URLs. ({{bug(1631933)}})
+- {{WebExtAPIRef("webRequest")}} events will no longer be triggered for `data:` URLs. ({{bug(1631933)}})
 
 ### Manifest changes
 

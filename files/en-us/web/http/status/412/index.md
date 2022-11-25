@@ -22,7 +22,7 @@ cannot be made and this error response is sent back.
 
 ## Status
 
-```
+```plain
 412 Precondition Failed
 ```
 

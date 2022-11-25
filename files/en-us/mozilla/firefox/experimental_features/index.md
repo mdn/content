@@ -143,48 +143,6 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/E
   </tbody>
 </table>
 
-### Height & Width attributes for `<source>`
-
-HTML attributes for [height](/en-US/docs/Web/HTML/Element/source#attr-height) & [width](/en-US/docs/Web/HTML/Element/source#attr-width) ({{bug(1694741)}}).
-
-These attributes can be used in {{HTMLElement("source")}} elements when they are children of {{HTMLElement("picture")}} elements and help to eliminate layout shift.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>106</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>106</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>106</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>106</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.picture_source_dimension_attributes.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ## CSS
 
 ### Hex boxes to display stray control characters
@@ -677,6 +635,88 @@ See {{bug(1715546)}} for more details.
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>layout.css.font-tech.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Container query length units
+
+The CSS length units `cqw`, `cqh`, `cqi`, `cqb`, `cqmin`, `cqmax` are units of length relative to the size of a query container.
+For more information on these units, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) documentation ({{bug(1744231)}}).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.container-queries.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### round() math function
+
+The CSS [`round()`](/en-US/docs/Web/CSS/round) function is a math function that rounds a number (or the result of an expression) based on a selected rounding strategy.
+See {{bug(1764850)}} for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>108</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.round.enabled</code></td>
     </tr>
   </tbody>
 </table>
