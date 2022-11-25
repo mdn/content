@@ -18,7 +18,7 @@ indicates that the HTTP version used in the request is not supported by the serv
 ## Status
 
 ```http
-HTTP Version Not Supported
+505 HTTP Version Not Supported
 ```
 
 ## Specifications
