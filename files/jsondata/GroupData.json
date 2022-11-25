@@ -1815,7 +1815,8 @@
         "/docs/Web/API/WebRTC_API/Using_data_channels",
         "/docs/Web/API/WebRTC_API/Using_DTMF",
         "/docs/Web/API/WebRTC_API/adapter.js",
-        "/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample"
+        "/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample",
+        "/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs"
       ],
       "interfaces": [
         "RTCPeerConnection",
