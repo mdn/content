@@ -35,7 +35,7 @@ m dx dy
 
 In the following example there's only a point at (`10`, `10`). Note, though, that it wouldn't show up if a path was just drawn normally. For example:
 
-![](blank_path_area.png)
+![A red dot is drawn on a white sqare 10 pixels down and 10 pixels to the right. This dot would not normally show but is used as an example of where the cursor will start after the "Move To" command](blank_path_area.png)
 
 ```xml
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +70,7 @@ v dy
 
 An easy place to start is by drawing a shape. We will start with a rectangle (the same type that could be more easily made with a {{SVGElement("rect")}} element). It's composed of horizontal and vertical lines only.
 
-![](path_line_commands.png)
+![A square with black fill is drawn within a white square. The black square's edges begin at position (10,10), move horizontally to position (90,10), move vertically to position (90,90), move horizontally back to position (10,90), and finally move back to the original position (10, 10).](path_line_commands.png)
 
 ```xml
 <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
@@ -158,7 +158,7 @@ s dx2 dy2, dx dy
 
 An example of this syntax is shown below, and in the figure to the left the specified control points are shown in red, and the inferred control point in blue.
 
-![](shortcut_cubic_bézier_with_grid.png)
+![A smooth S-shaped curve is drawn from two Bézier curves. The second curve keeps the same slope of the control points as the first curve, which is reflected to the other side.](shortcut_cubic_bézier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -196,7 +196,7 @@ This shortcut looks at the previous control point used and infers a new one from
 
 This only works if the previous command was a `Q` or a `T` command. If not, then the control point is assumed to be the same as the previous point, and only lines will be drawn.
 
-![](shortcut_quadratic_bézier_with_grid.png)
+![Two quadratic curves form one smooth S-shaped curve. The second curve's control points are reflected across the horizontal axis](shortcut_quadratic_bézier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -263,7 +263,7 @@ If the start→end points are farther than the ellipse's `x` and `y` radius can 
 
 The four different paths mentioned above are determined by the next two parameter flags. As mentioned earlier, there are still two possible ellipses for the path to travel around and two different possible paths on both ellipses, giving four possible paths. The first parameter is the `large-arc-flag`. It determines if the arc should be greater than or less than 180 degrees; in the end, this flag determines which direction the arc will travel around a given circle. The second parameter is the `sweep-flag`. It determines if the arc should begin moving at positive angles or negative ones, which essentially picks which of the two circles will be traveled around. The example below shows all four possible combinations, along with the two circles for each case.
 
-![](svgarcs_flags.png)
+![Four examples are shown for each combination of large-arc-flag and sweep-flag for two circles overlapping, one in the top right, the other in the bottom left. For sweep-flag = 0, when large-arc-flag = 0, the interior arc of the top right circle is drawn, and when large-arc-flag = 1, the exterior arc of the bottom left circle is drawn. For sweep-flag = 1, when large-arc-flag = 0, the interior arc of the bottom left circle is drawn, and when large-arc-flag = 1, the exterior arc of the top right circle is drawn.](svgarcs_flags.png)
 
 ```xml
 <svg width="325" height="325" xmlns="http://www.w3.org/2000/svg">
