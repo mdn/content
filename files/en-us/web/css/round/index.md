@@ -18,13 +18,15 @@ browser-compat: css.types.round
 
 The **`round()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns a rounded number based on a selected rounding strategy.
 
+The function should be used with [custom CSS property](/en-US/docs/Web/CSS/--*) for either (or both) of the rounding value or interval; if these have fixed values then there is no need to use the `round()` method.
+
 ## Syntax
 
 ```css
 width: round(var(--width), 50px);
-width: round(up, 101, 10);
-width: round(down, 106, 10);
-margin: round(to-zero, -105, 10);
+width: round(up, 101px, var(--interval));
+width: round(down, var(--height), var(--interval));
+margin: round(to-zero, -105px, 10px);
 ```
 
 ### Parameter
@@ -74,6 +76,89 @@ The value of `valueToRound`, rounded to the nearest lower or higher integer mult
 ### Formal syntax
 
 {{CSSSyntax}}
+
+## Examples
+
+### Round positive values
+
+This example demonstrate how the `round()` function rounding strategies work for positive values.
+
+The `round()` values is used to set the height of four boxes (of five).
+The value to be rounded is between 100 px and 125 px in each case, and the rounding value is 25px in all cases.
+The height of the boxes is therefore either rounded up to 125 px or down to 100 px.
+
+#### HTML
+
+The HTML defines 5 `div` elements that will be rendered as boxes by the CSS.
+The elements contain text indicating the rounding strategy, initial value, and expected final height of the box (in brackets).
+
+```html
+<div class="box box-1">height: 100px</div>
+<div class="box box-2">up 101px (125px)</div>
+<div class="box box-3">down 122px (100px)</div>
+<div class="box box-4">to-zero 120px (100px)</div>
+<div class="box box-5">nearest 117px (125px)</div>
+```
+
+#### CSS
+
+```css hidden
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+```
+
+The CSS that is applied to all boxes is shown below.
+Note that we apply a [custom CSS property](/en-US/docs/Web/CSS/--*) named `--rounding-interval`, that we will use for the rounding interval.
+
+```css
+div.box {
+  width: 100px;
+  height: 100px;
+  background: lightblue;
+  padding: 5px;
+  --rounding-interval: 25px;
+}
+```
+
+The first `div` from the left doesn't have an specific CSS, so will have the default height of 100 px.
+The CSS for `div` two, three and four are shown below, which round, up, down, and to-zero respectively.
+
+```css
+div.box-2 {
+  height: round(up, 101px, var(--rounding-interval));
+}
+div.box-3 {
+  height: round(down, 122px, var(--rounding-interval));
+}
+div.box-4 {
+  height: round(to-zero,120px, var(--rounding-interval));
+}
+```
+
+Notice how above we indicate the rounding interval using `var()` and the custom CSS property `--rounding-interval`.
+You will normally use `round()` with custom properties for either or both of the rounding value or interval; if these values are fixed then there would be no need to use the `round()` method.
+
+The last box is set without specifying a rounding strategy, and hence defaults to `nearest`.
+In this case, the nearest interval to 117 px is 125px, so it will round up.
+Just for contrast, here we specified particular values for both the rounding value and interval.
+(As above, you would not normally use `round()` if you knew both values.)
+
+```css
+div.box-5 {
+  height: round(117px, 25px);
+}
+```
+
+#### Result
+
+If the browser supports the CSS `round()` function, you should see five columns with heights that are rounded as indicated by their contained text.
+
+{{EmbedLiveSample('Round positive values', '100%', '200px')}}
 
 ## Specifications
 
