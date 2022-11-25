@@ -9,6 +9,20 @@ tags:
   - Video
 ---
 
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
+  <ol>
+    <li class="toggle">
+      <details>
+        <summary>Guides</summary>
+        <ol>
+          {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
+        </ol>
+      </details>
+    </li>
+  </ol>
+</section>
+
 We can deliver audio and video on the web in a number of ways, ranging from 'static' media files to adaptive live streams. This article is intended as a starting point for exploring the various delivery mechanisms of web based media and compatibility with popular browsers.
 
 ## The Audio and Video Elements
@@ -226,7 +240,7 @@ See [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API) for more 
 
 The API supports use cases ranging from simple clear key decryption to high value video (given an appropriate user agent implementation). License/key exchange is controlled by the application, facilitating the development of robust playback applications supporting a range of content decryption and protection technologies.
 
-One of the principle uses of EME is to allow browsers to implement DRM ([Digital Rights Management](https://en.wikipedia.org/wiki/Digital_rights_management)), which helps to prevent web-based content (especially video) from being copied.
+One of the principal uses of EME is to allow browsers to implement DRM ([Digital Rights Management](https://en.wikipedia.org/wiki/Digital_rights_management)), which helps to prevent web-based content (especially video) from being copied.
 
 ### Adaptive Streaming
 
@@ -347,7 +361,7 @@ A few examples:
 
 ## Error handling
 
-Errors gets delivered to the child {{ HTMLElement("source") }} elements corresponding to the sources resulting in the error.
+Errors get delivered to the child {{ HTMLElement("source") }} elements corresponding to the sources resulting in the error.
 
 This lets you detect which sources failed to load, which may be useful. Consider this HTML:
 
