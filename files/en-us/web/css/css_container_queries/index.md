@@ -65,13 +65,13 @@ Specifically, this query will apply a larger font size for the card title if the
 
 ```css
 /* Default heading styles for the card title */
-.card h1 {
+.card h2 {
   font-size: 1em;
 }
 
 /* Container query applied if the container is larger than 700px */
 @container (min-width: 700px) {
-  .card h1 {
+  .card h2 {
     font-size: 2em;
   }
 }
