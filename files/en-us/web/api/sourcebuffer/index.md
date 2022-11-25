@@ -32,7 +32,7 @@ The **`SourceBuffer`** interface represents a chunk of media to be passed into a
   - : Returns the time ranges that are currently buffered in the `SourceBuffer`.
 - {{domxref("SourceBuffer.mode")}}
   - : Controls how the order of media segments in the `SourceBuffer` is handled, in terms of whether they can be appended in any order, or they have to be kept in a strict sequence.
-- {{domxref("SourceBuffer.textTracks")}} {{ReadOnlyInline}}
+- {{domxref("SourceBuffer.textTracks")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A list of the text tracks currently contained inside the `SourceBuffer`.
 - {{domxref("SourceBuffer.timestampOffset")}}
   - : Controls the offset applied to timestamps inside media segments that are subsequently appended to the `SourceBuffer`.
