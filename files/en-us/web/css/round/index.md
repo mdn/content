@@ -141,12 +141,11 @@ div.box-4 {
 ```
 
 Notice how above we indicate the rounding interval using `var()` and the custom CSS property `--rounding-interval`.
-You will normally use `round()` with custom properties for either or both of the rounding value or interval; if these values are fixed then there would be no need to use the `round()` method.
 
 The last box is set without specifying a rounding strategy, and hence defaults to `nearest`.
 In this case, the nearest interval to 117 px is 125px, so it will round up.
-Just for contrast, here we specified particular values for both the rounding value and interval.
-(As above, you would not normally use `round()` if you knew both values.)
+Just for contrast, here we specified hard coded values for both the rounding value and interval.
+While this is allowed, you wouldn't do this normally because there is no point rounding a number when you already know what the result must be.
 
 ```css
 div.box-5 {
