@@ -15,7 +15,7 @@ tags:
   - buffering
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 In this guide, we'll examine how to add a data channel to a peer connection, which can then be used to securely exchange arbitrary data; that is, any kind of data we wish, in any format we choose.
 
@@ -54,7 +54,7 @@ Then negotiate the connection out-of-band, using a web server or other means. Th
 
 ```js
 let dataChannel = pc.createDataChannel("MyApp Channel", {
-  negotiated: true
+  negotiated: true,
 });
 
 dataChannel.addEventListener("open", (event) => {

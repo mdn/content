@@ -19,7 +19,7 @@ tags:
   - WebRTC API
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 This article introduces the protocols on top of which the WebRTC API is built.
 
