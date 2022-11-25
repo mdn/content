@@ -20,7 +20,7 @@ The web includes a wide array of APIs that can be used from JavaScript to build 
 
 ## See also
 
-- [Web API interface reference](/en-US/docs/Web/API) (an index of all the interfaces comprising all of these APIs)
+- [Web API interface reference](/en-US/docs/Web/API) (an index of all interfaces comprising these APIs)
 - [Document Object Model](/en-US/docs/Web/API/Document_Object_Model) (DOM)
 - [Web API event reference](/en-US/docs/Web/Events)
 - [Learning web development](/en-US/docs/Learn)
