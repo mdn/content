@@ -70,11 +70,11 @@ Note that most images on the web, including in Google Images, are copyrighted. T
 
 ### Font
 
-To choose a font:
+In light of [the recent litigation with General Data Protection Regulation (GDPR) in January 2022](https://rewis.io/urteile/urteil/lhm-20-01-2022-3-o-1749320/), it is not recommended to use Google Fonts directly through Google's Content Delivery Network.
 
-1. Go to [Google Fonts](https://fonts.google.com/) and find one you like.
-2. Copy the lines of code Google gives you into your text editor to save for later.
-3. For more details about using Google Fonts, see [this page](https://developers.google.com/fonts/docs/getting_started)
+The workaround to keep using Google Fonts is to [download the font and host it locally](https://fonts.google.com/knowledge/using_type/self_hosting_web_fonts).
+
+For more details about using Google Fonts, see [this page](https://developers.google.com/fonts/docs/getting_started).
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 
