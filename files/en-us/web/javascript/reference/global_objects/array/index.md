@@ -177,7 +177,7 @@ Where `callbackFn` takes three arguments:
 - `index`
   - : The index of the current element being processed in the array.
 - `array`
-  - : The array `method()` was called upon.
+  - : The array that the method was called upon.
 
 What `callbackFn` is expected to return depends on the array method that was called.
 
