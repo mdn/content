@@ -18,7 +18,7 @@ The HyperText Transfer Protocol (HTTP) **`400 Bad Request`** response status cod
 
 ## Status
 
-```plain
+```http
 400 Bad Request
 ```
 

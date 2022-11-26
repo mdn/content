@@ -21,7 +21,7 @@ Caching-related headers that are sent along with this response should be taken c
 
 ## Status
 
-```plain
+```http
 503 Service Unavailable
 ```
 

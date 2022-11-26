@@ -16,7 +16,7 @@ The HTTP **`413 Payload Too Large`** response status code indicates that the req
 
 ## Status
 
-```plain
+```http
 413 Payload Too Large
 ```
 

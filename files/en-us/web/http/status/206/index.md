@@ -24,7 +24,7 @@ If several ranges are sent back, the {{HTTPHeader("Content-Type")}} is set to
 
 ## Status
 
-```plain
+```http
 206 Partial Content
 ```
 
