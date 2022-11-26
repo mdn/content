@@ -43,10 +43,6 @@ is empty if the stream contains no video tracks.
 > **Note:** The order of the tracks is not defined by the specification,
 > and may not be the same from one call to `getVideoTracks()` to another.
 
-Early versions of this API included a special `VideoStreamTrack` interface
-which was used as the type for each entry in the list of video streams; however, this
-has since been merged into the main {{domxref("MediaStreamTrack")}} interface.
-
 ## Examples
 
 The following example, extracted from [Chrome's
