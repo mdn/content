@@ -171,7 +171,7 @@ Using direct `eval()` suffers from multiple problems:
 
 - `eval()` executes the code it's passed with the privileges of the caller. If you run `eval()` with a string that could be affected by a malicious party, you may end up running malicious code on the user's machine with the permissions of your webpage / extension. More importantly, allowing third-party code to access the scope in which `eval()` was invoked (if it's a direct eval) can lead to possible attacks that reads or changes local variables.
 - `eval()` is slower than the alternatives, since it has to invoke the JavaScript interpreter, while many other constructs are optimized by modern JS engines.
-- Modern JavaScript interpreters convert JavaScript to machine code. This means that any concept of variable naming gets obliterated. Thus, any use of `eval()` will force the browser to do long expensive variable name lookups to figure out where the variable exists in the machine code and set its value. Additionally, new things can be introduced to that variable through `eval()` such as changing the type of that variable, forcing the browser to re-evaluate all of the generated machine code to compensate.
+- Modern JavaScript interpreters convert JavaScript to machine code. This means that any concept of variable naming gets obliterated. Thus, any use of `eval()` will force the browser to do long expensive variable name lookups to figure out where the variable exists in the machine code and set its value. Additionally, new things can be introduced to that variable through `eval()`, such as changing the type of that variable, forcing the browser to re-evaluate all of the generated machine code to compensate.
 - Minifiers give up on any minification if the scope is transitively depended on by `eval()`, because otherwise `eval()` cannot read the correct variable at runtime.
 
 There are many cases where the use of `eval()` or related methods can be optimized or avoided altogether.
@@ -218,9 +218,9 @@ However, using indirect `eval()` does not allow passing extra bindings other tha
 
 #### Using the Function() constructor
 
-The [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) constructor is very similar to the indirect eval example above: it also evaluates the JavaScript source passed to it in the global scope without reading or mutating any local bindings, and is therefore allows engines to do more optimizations than direct `eval()`.
+The [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) constructor is very similar to the indirect eval example above: it also evaluates the JavaScript source passed to it in the global scope without reading or mutating any local bindings, and therefore allows engines to do more optimizations than direct `eval()`.
 
-The difference between `eval()` and `Function()` is that the source string passed to `Function()` is parsed as function body, not as a script. There are a few nuances — for example, you can use `return` statements at the top level of a function body, but not in a script.
+The difference between `eval()` and `Function()` is that the source string passed to `Function()` is parsed as a function body, not as a script. There are a few nuances — for example, you can use `return` statements at the top level of a function body, but not in a script.
 
 The `Function()` constructor is useful if you wish to create local bindings within your eval source, by passing the variables as parameter bindings.
 
@@ -365,7 +365,7 @@ b = eval(str);
 console.log(`b is: ${b}`); // b is: 3
 ```
 
-The following example uses `eval()` to evaluate the string `str`. This string consists of JavaScript statements that assigns `z` a value of 42 if `x` is five, and assigns 0 to `z` otherwise. When the second statement is executed, `eval()` will cause these statements to be performed, and it will also evaluate the set of statements and return the value that is assigned to `z`, because the completion value of an assignment is the assigned value.
+The following example uses `eval()` to evaluate the string `str`. This string consists of JavaScript statements that assign `z` a value of 42 if `x` is five, and assign 0 to `z` otherwise. When the second statement is executed, `eval()` will cause these statements to be performed, and it will also evaluate the set of statements and return the value that is assigned to `z`, because the completion value of an assignment is the assigned value.
 
 ```js
 const x = 5;
