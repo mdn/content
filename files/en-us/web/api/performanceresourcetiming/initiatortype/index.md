@@ -63,7 +63,7 @@ The `initiatorType` property can have the following values, or `other` if none o
 - `video`
   - : If the request was initiated by a {{HTMLElement("video")}} element's `poster` or `src`.
 - `xmlhttprequest`
-  - : If the request was initiated by a {{domxref("XMLHttpRequest")}}.
+  - : If the request was initiated by an {{domxref("XMLHttpRequest")}}.
 
 ## Examples
 
