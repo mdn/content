@@ -25553,17 +25553,6 @@
       "fscholz"
     ]
   },
-  "Web/API/Constraint_validation": {
-    "modified": "2019-12-02T00:01:55.418Z",
-    "contributors": [
-      "perfmattersconf",
-      "estelle",
-      "Cuttsy27",
-      "cheyannagraham",
-      "jswisher",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/Contact_Picker_API": {
     "modified": "2020-10-15T22:34:42.280Z",
     "contributors": ["Rumyra"]
