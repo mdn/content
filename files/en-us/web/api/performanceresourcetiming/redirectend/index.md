@@ -67,7 +67,7 @@ resources.forEach((entry) => {
 
 If the value of the `redirectEnd` property is `0`, the resource might be a cross-origin request. To allow seeing cross-origin timing information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
 
-For example, to allow `https://developer.mozilla.org` to see timing resources, the cross-origin resource should sent:
+For example, to allow `https://developer.mozilla.org` to see timing resources, the cross-origin resource should send:
 
 ```http
 Timing-Allow-Origin: https://developer.mozilla.org
