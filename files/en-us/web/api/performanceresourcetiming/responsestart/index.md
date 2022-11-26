@@ -19,7 +19,7 @@ The **`responseStart`** read-only property returns a {{domxref("DOMHighResTimeSt
 The `responseStart` property can have the following values:
 
 - A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the first byte of the response from the server.
-- `0` if the resource instantaneously retrieved from a cache.
+- `0` if the resource was instantaneously retrieved from a cache.
 - `0` if the resource is a cross-origin request and no {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header is used.
 
 ## Examples
