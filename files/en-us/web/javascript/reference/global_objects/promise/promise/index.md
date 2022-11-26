@@ -27,11 +27,11 @@ new Promise(executor)
 ### Parameters
 
 - `executor`
-  - : A {{jsxref("function")}} to be executed by the constructor. It receives two functions as parameters: `resolutionFunc` and `rejectionFunc`. Any errors thrown in the `executor` will cause the promise to be rejected, and the return value will be neglected. The semantics of `executor` are detailed below.
+  - : A {{jsxref("function")}} to be executed by the constructor. It receives two functions as parameters: `resolveFunc` and `rejectFunc`. Any errors thrown in the `executor` will cause the promise to be rejected, and the return value will be neglected. The semantics of `executor` are detailed below.
 
 ### Return value
 
-When called via `new`, the `Promise` constructor returns a promise object. The promise object will become _resolved_ when either of the functions `resolutionFunc` or `rejectionFunc` are invoked. Note that if you call `resolutionFunc` or `rejectionFunc` and pass another `Promise` object as an argument, it can be said to be "resolved", but still not "settled". See the [Promise description](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#description) for more explanation.
+When called via `new`, the `Promise` constructor returns a promise object. The promise object will become _resolved_ when either of the functions `resolveFunc` or `rejectFunc` are invoked. Note that if you call `resolveFunc` or `rejectFunc` and pass another `Promise` object as an argument, it can be said to be "resolved", but still not "settled". See the [Promise description](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#description) for more explanation.
 
 ## Description
 
@@ -55,37 +55,37 @@ To take advantage of the readability improvement and language features offered b
 The `executor` is custom code that ties an outcome in a callback to a promise. You, the programmer, write the `executor`. Its signature is expected to be:
 
 ```js
-function executor(resolutionFunc, rejectionFunc) {
+function executor(resolveFunc, rejectFunc) {
   // Typically, some asynchronous operation that accepts a callback,
   // like the `readFile` function above
 }
 ```
 
-`resolutionFunc` and `rejectionFunc` are also functions, and you can give them whatever actual names you want. Their signatures are simple: they accept a single parameter of any type.
+`resolveFunc` and `rejectFunc` are also functions, and you can give them whatever actual names you want. Their signatures are simple: they accept a single parameter of any type.
 
 ```js
-resolutionFunc(value); // call on resolved
-rejectionFunc(reason); // call on rejected
+resolveFunc(value); // call on resolved
+rejectFunc(reason); // call on rejected
 ```
 
-The `value` parameter passed to `resolutionFunc` can be another promise object, in which case the newly constructed promise's state will be "locked in" to the promise passed (as part of the [resolution](#resolver_function) promise). The `rejectionFunc` has semantics close to the [`throw`](/en-US/docs/Web/JavaScript/Reference/Statements/throw) statement, so `reason` is typically an [`Error`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) instance. If either `value` or `reason` is omitted, the promise is fulfilled/rejected with `undefined`.
+The `value` parameter passed to `resolveFunc` can be another promise object, in which case the newly constructed promise's state will be "locked in" to the promise passed (as part of the [resolution](#resolver_function) promise). The `rejectFunc` has semantics close to the [`throw`](/en-US/docs/Web/JavaScript/Reference/Statements/throw) statement, so `reason` is typically an [`Error`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) instance. If either `value` or `reason` is omitted, the promise is fulfilled/rejected with `undefined`.
 
 The `executor`'s completion state has limited effect on the promise's state:
 
-- The `executor` return value is ignored. `return` statements within the `executor` merely impact control flow and alter whether a part of the function is executed, but do not have any impact on the promise's fulfillment value. If `executor` exits and it's impossible for `resolutionFunc` or `rejectionFunc` to be called in the future (for example, there are no async tasks scheduled), then the promise remains pending forever.
-- If an error is thrown in the `executor`, the promise is rejected, unless `resolutionFunc` or `rejectionFunc` has already been called.
+- The `executor` return value is ignored. `return` statements within the `executor` merely impact control flow and alter whether a part of the function is executed, but do not have any impact on the promise's fulfillment value. If `executor` exits and it's impossible for `resolveFunc` or `rejectFunc` to be called in the future (for example, there are no async tasks scheduled), then the promise remains pending forever.
+- If an error is thrown in the `executor`, the promise is rejected, unless `resolveFunc` or `rejectFunc` has already been called.
 
 > **Note:** The existence of pending promises does not prevent the program from exiting. If the event loop is empty, the program exits despite any pending promises (because those are necessarily forever-pending).
 
 Here's a summary of the typical flow:
 
-1. At the time when the constructor generates the new `Promise` object, it also generates a corresponding pair of functions for `resolutionFunc` and `rejectionFunc`; these are "tethered" to the `Promise` object.
-2. `executor` typically wraps some asynchronous operation which provides a callback-based API. The callback (the one passed to the original callback-based API) is defined within the `executor` code, so it has access to the `resolutionFunc` and `rejectionFunc`.
-3. The `executor` is called synchronously (as soon as the `Promise` is constructed) with the `resolutionFunc` and `rejectionFunc` functions as arguments.
-4. The code within the `executor` has the opportunity to perform some operation. The eventual completion of the asynchronous task is communicated with the promise instance via the side effect caused by `resolutionFunc` or `rejectionFunc`. The side effect is that the `Promise` object becomes "resolved".
-   - If `resolutionFunc` is called first, the value passed will be [resolved](#resolver_function). The promise may stay pending (in case another [thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) is passed), become fulfilled (in most cases where a non-thenable value is passed), or become rejected (in case of an invalid resolution value).
-   - If `rejectionFunc` is called first, the promise instantly becomes rejected.
-   - Once one of the resolving functions (`resolutionFunc` or `rejectionFunc`) is called, the promise stays resolved. Only the first call to `resolutionFunc` or `rejectionFunc` affects the promise's eventual state, and subsequent calls to either function can neither change the fulfillment value/rejection reason nor toggle its eventual state from "fulfilled" to "rejected" or opposite.
+1. At the time when the constructor generates the new `Promise` object, it also generates a corresponding pair of functions for `resolveFunc` and `rejectFunc`; these are "tethered" to the `Promise` object.
+2. `executor` typically wraps some asynchronous operation which provides a callback-based API. The callback (the one passed to the original callback-based API) is defined within the `executor` code, so it has access to the `resolveFunc` and `rejectFunc`.
+3. The `executor` is called synchronously (as soon as the `Promise` is constructed) with the `resolveFunc` and `rejectFunc` functions as arguments.
+4. The code within the `executor` has the opportunity to perform some operation. The eventual completion of the asynchronous task is communicated with the promise instance via the side effect caused by `resolveFunc` or `rejectFunc`. The side effect is that the `Promise` object becomes "resolved".
+   - If `resolveFunc` is called first, the value passed will be [resolved](#resolver_function). The promise may stay pending (in case another [thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) is passed), become fulfilled (in most cases where a non-thenable value is passed), or become rejected (in case of an invalid resolution value).
+   - If `rejectFunc` is called first, the promise instantly becomes rejected.
+   - Once one of the resolving functions (`resolveFunc` or `rejectFunc`) is called, the promise stays resolved. Only the first call to `resolveFunc` or `rejectFunc` affects the promise's eventual state, and subsequent calls to either function can neither change the fulfillment value/rejection reason nor toggle its eventual state from "fulfilled" to "rejected" or opposite.
    - If `executor` exits by throwing an error, then the promise is rejected. However, the error is ignored if one of the resolving functions has already been called (so that the promise is already resolved).
    - Resolving the promise does not necessarily cause the promise to become fulfilled or rejected (i.e. settled). The promise may still be pending because it's resolved with another thenable, but its eventual state will match that of the resolved thenable.
 5. Once the promise settles, it (asynchronously) invokes any further handlers associated through {{jsxref("Promise/then", "then()")}}, {{jsxref("Promise/catch", "catch()")}}, or {{jsxref("Promise/finally", "finally()")}}. The eventual fulfillment value or rejection reason is passed to the invocation of fulfillment and rejection handlers as an input parameter (see [Chained Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises)).
