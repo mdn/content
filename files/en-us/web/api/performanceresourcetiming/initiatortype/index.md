@@ -18,7 +18,7 @@ The **`initiatorType`** read-only property is a string representing the way a re
 
 ## Value
 
-The `initiatorType` property can have the following values or `other` if none of the conditions match.
+The `initiatorType` property can have the following values, or `other` if none of the conditions match.
 
 - `audio`
   - : If the request was initiated by an {{HTMLElement("audio")}} element's `src` attribute.
