@@ -21,7 +21,7 @@ There is no _end_ property for `requestStart`. To measure the request time, calc
 The `requestStart` property can have the following values:
 
 - A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the browser starts requesting the resource from the server.
-- `0` if the resource instantaneously retrieved from a cache.
+- `0` if the resource was instantaneously retrieved from a cache.
 - `0` if the resource is a cross-origin request and no {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header is used.
 
 ## Examples
@@ -49,7 +49,7 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({ type: "resource", buffered: true });
 ```
 
-Or using {{domxref("Performance.getEntriesByType()")}} which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
+Or using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
 
 ```js
 const resources = performance.getEntriesByType("resource");

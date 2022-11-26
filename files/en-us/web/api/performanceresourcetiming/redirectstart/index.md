@@ -51,7 +51,7 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({ type: "resource", buffered: true });
 ```
 
-Or using {{domxref("Performance.getEntriesByType()")}} which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
+Or using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
 
 ```js
 const resources = performance.getEntriesByType("resource");
@@ -67,7 +67,7 @@ resources.forEach((entry) => {
 
 If the value of the `redirectStart` property is `0`, the resource might be a cross-origin request. To allow seeing cross-origin timing information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
 
-For example, to allow `https://developer.mozilla.org` to see timing resources, the cross-origin resource should sent:
+For example, to allow `https://developer.mozilla.org` to see timing resources, the cross-origin resource should send:
 
 ```http
 Timing-Allow-Origin: https://developer.mozilla.org

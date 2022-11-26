@@ -14,7 +14,7 @@ browser-compat: api.PerformanceResourceTiming.fetchStart
 
 The **`fetchStart`** read-only property represents a {{domxref("DOMHighResTimeStamp","timestamp")}} immediately before the browser starts to fetch the resource.
 
-If there are HTTP redirects the property returns the time immediately before the user agent starts to fetch the final resource in the redirection.
+If there are HTTP redirects, the property returns the time immediately before the user agent starts to fetch the final resource in the redirection.
 
 Unlike many other `PerformanceResourceTiming` properties, the `fetchStart` property is available for cross-origin requests without the need of the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header.
 
@@ -48,7 +48,7 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({ type: "resource", buffered: true });
 ```
 
-Or using {{domxref("Performance.getEntriesByType()")}} which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
+Or using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
 
 ```js
 const resources = performance.getEntriesByType("resource");

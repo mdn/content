@@ -12,7 +12,7 @@ browser-compat: api.PerformanceResourceTiming.domainLookupEnd
 
 {{APIRef("Performance API")}}
 
-The **`domainLookupEnd`** read-only property returns the {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser finishes the domain name lookup for the resource.
+The **`domainLookupEnd`** read-only property returns the {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser finishes the domain-name lookup for the resource.
 
 If the user agent has the domain information in cache, {{domxref("PerformanceResourceTiming.domainLookupStart","domainLookupStart")}} and {{domxref("PerformanceResourceTiming.domainLookupEnd","domainLookupEnd")}} represent the times when the user agent starts and ends the domain data retrieval from the cache.
 
@@ -21,7 +21,7 @@ If the user agent has the domain information in cache, {{domxref("PerformanceRes
 The `domainLookupEnd` property can have the following values:
 
 - A {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the browser finishes the domain name lookup for the resource.
-- `0` if the resource instantaneously retrieved from a cache.
+- `0` if the resource was instantaneously retrieved from a cache.
 - `0` if the resource is a cross-origin request and no {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header is used.
 
 ## Examples
@@ -49,7 +49,7 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({ type: "resource", buffered: true });
 ```
 
-Or using {{domxref("Performance.getEntriesByType()")}} which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
+Or using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
 
 ```js
 const resources = performance.getEntriesByType("resource");
@@ -65,7 +65,7 @@ resources.forEach((entry) => {
 
 If the value of the `domainLookupEnd` property is `0`, the resource might be a cross-origin request. To allow seeing cross-origin timing information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
 
-For example, to allow `https://developer.mozilla.org` to see timing resources, the cross-origin resource should sent:
+For example, to allow `https://developer.mozilla.org` to see timing resources, the cross-origin resource should send:
 
 ```http
 Timing-Allow-Origin: https://developer.mozilla.org
