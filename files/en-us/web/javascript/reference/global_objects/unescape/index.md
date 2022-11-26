@@ -34,7 +34,7 @@ A new string in which certain characters have been unescaped.
 
 `unescape()` is a function property of the global object.
 
-The `unescape()` function replaces all escape sequences with the character that it represents. Specifically, it replaces all escape sequences of the form `%XX` or `%uXXXX` (where `X` represents one hexadecimal digit) with the character that has the hexadecimal value `XX`/`XXXX`. If the escape sequence is not a valid escape sequence (for example, if `%` is followed by one or no hex digit), it is left as-is.
+The `unescape()` function replaces any escape sequence with the character that it represents. Specifically, it replaces any escape sequence of the form `%XX` or `%uXXXX` (where `X` represents one hexadecimal digit) with the character that has the hexadecimal value `XX`/`XXXX`. If the escape sequence is not a valid escape sequence (for example, if `%` is followed by one or no hex digit), it is left as-is.
 
 > **Note:** This function was used mostly for URL encoding and is partly based on the escape format in {{rfc(1738)}}. The `unescape()` function does _not_ evaluate [escape sequences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences) in string literals. You can replace `\xXX` with `%XX` and `\uXXXX` with `%uXXXX` to get a string that can be handled by `unescape()`.
 
