@@ -72,7 +72,7 @@ The `value` parameter passed to `resolutionFunc` can be another promise object, 
 
 The `executor`'s completion state has limited effect on the promise's state:
 
-- The `executor` return value is ignored. `return` statements within the `executor` merely impacts control flow and alters whether a part of the function is executed, but does not have any impact on the promise's fulfillment value. If `executor` exits and it's impossible for `resolutionFunc` or `rejectionFunc` to be called in the future (for example, there are no async tasks scheduled), then the promise remains pending forever.
+- The `executor` return value is ignored. `return` statements within the `executor` merely impact control flow and alter whether a part of the function is executed, but do not have any impact on the promise's fulfillment value. If `executor` exits and it's impossible for `resolutionFunc` or `rejectionFunc` to be called in the future (for example, there are no async tasks scheduled), then the promise remains pending forever.
 - If an error is thrown in the `executor`, the promise is rejected, unless `resolutionFunc` or `rejectionFunc` has already been called.
 
 > **Note:** The existence of pending promises does not prevent the program from exiting. If the event loop is empty, the program exits despite any pending promises (because those are necessarily forever-pending).
