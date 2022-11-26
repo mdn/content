@@ -788,8 +788,7 @@
         "MediaTrackCapabilities",
         "MediaTrackConstraints",
         "MediaTrackSettings",
-        "MediaTrackSupportedConstraints",
-        "VideoStreamTrack"
+        "MediaTrackSupportedConstraints"
       ],
       "methods": [
         "HTMLCanvasElement.captureStream()",
