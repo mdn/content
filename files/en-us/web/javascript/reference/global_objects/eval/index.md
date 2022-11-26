@@ -22,21 +22,21 @@ The **`eval()`** function evaluates JavaScript code represented as a string and 
 ## Syntax
 
 ```js-nolint
-eval(string)
+eval(script)
 ```
 
 ### Parameters
 
-- `string`
+- `script`
   - : A string representing a JavaScript expression, statement, or sequence of statements. The expression can include variables and properties of existing objects. It will be parsed as a script, so [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations (which can only exist in modules) are not allowed.
 
 ### Return value
 
-The completion value of evaluating the given code. If the completion value is empty, {{jsxref("undefined")}} is returned. If `string` is not a string primitive, `eval()` returns the argument unchanged.
+The completion value of evaluating the given code. If the completion value is empty, {{jsxref("undefined")}} is returned. If `script` is not a string primitive, `eval()` returns the argument unchanged.
 
 ### Exceptions
 
-Throws any exception that occurs during evaluation of the code, including {{jsxref("SyntaxError")}} if `string` fails to be parsed as a script.
+Throws any exception that occurs during evaluation of the code, including {{jsxref("SyntaxError")}} if `script` fails to be parsed as a script.
 
 ## Description
 
