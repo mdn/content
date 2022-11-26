@@ -84,7 +84,7 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({ type: "resource", buffered: true });
 ```
 
-Or using {{domxref("Performance.getEntriesByType()")}} which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
+Or using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
 
 ```js
 const scripts = performance.getEntriesByType("resource").filter((entry) => {
