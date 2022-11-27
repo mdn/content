@@ -19,8 +19,6 @@ browser-compat: html.elements.input.type_email
 
 The input value is automatically validated to ensure that it's either empty or a properly-formatted e-mail address (or list of addresses) before the form can be submitted. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are automatically applied as appropriate to visually denote whether the current value of the field is a valid e-mail address or not.
 
-On browsers that don't support inputs of type `email`, a `email` input falls back to being a standard {{HTMLElement("input/text", "text")}} input.
-
 <table class="properties">
   <tbody>
     <tr>
