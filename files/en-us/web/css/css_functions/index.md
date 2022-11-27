@@ -209,7 +209,7 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
   - : The HSL color model defines a given color according to its hue, saturation, and lightness components. An optional alpha component represents the color's transparency.
 - {{CSSxRef("color_value/hsla", "hsla()")}}
   - : The HSL color model defines a given color according to its hue, saturation, and lightness components. The alpha component represents the color's transparency.
-- {{CSSxRef("color_value/hwb", "hwb()")}} {{Experimental_Inline}}
+- {{CSSxRef("color_value/hwb", "hwb()")}}
   - : HWB (short for Hue-Whiteness-Blackness) is another method of specifying colors, similar to HSL.
 - {{CSSxRef("color_value/lab", "lab()")}} {{Experimental_Inline}}
   - : Lab color is device-independent and specifies physical measurements of color.
@@ -247,11 +247,11 @@ The {{CSSxRef("&lt;image&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Types) 
 
 - {{CSSxRef("image/image","image()")}} {{Experimental_Inline}}
   - : Defines an {{CSSxRef("&lt;image&gt;")}} in a similar fashion to the {{CSSxRef("url", "url()")}} function, but with added functionality including specifying the image's directionality and fallback images for when the preferred image is not supported.
-- {{CSSxRef("image/image-set","image-set()")}} {{Experimental_Inline}}
+- {{CSSxRef("image/image-set","image-set()")}}
   - : Picks the most appropriate CSS image from a given set, primarily for high pixel density screens.
 - {{CSSxRef("cross-fade")}}
   - : Blends two or more images at a defined transparency.
-- {{CSSxRef("element")}}
+- {{CSSxRef("element")}} {{Experimental_Inline}}
   - : Defines an {{CSSxRef("&lt;image&gt;")}} value generated from an arbitrary HTML element.
 - {{CSSxRef("paint")}}
   - : Defines an {{CSSxRef("&lt;image&gt;")}} value generated with a PaintWorklet.
