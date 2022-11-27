@@ -267,7 +267,7 @@ Sometimes it makes sense to embed third-party content — like youtube videos an
 
 Besides security, you should also be aware of intellectual property issues. Most content is copyrighted, offline and online, even content you might not expect (for example, most images on [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)). Never display content on your webpage unless you own it or the owners have given you written, unequivocal permission. Penalties for copyright infringement are severe. Again, you can never be too cautious.
 
-If the content is licensed, you must obey the license terms. For example, the content on MDN is [licensed under CC-BY-SA](/en-US/docs/MDN/About#copyrights_and_licenses). That means, you must [credit us properly](https://wiki.creativecommons.org/wiki/Best_practices_for_attribution) when you quote our content, even if you make substantial changes.
+If the content is licensed, you must obey the license terms. For example, the content on MDN is [licensed under CC-BY-SA](/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license#documentation). That means, you must [credit us properly](https://wiki.creativecommons.org/wiki/Best_practices_for_attribution) when you quote our content, even if you make substantial changes.
 
 #### Use HTTPS
 
