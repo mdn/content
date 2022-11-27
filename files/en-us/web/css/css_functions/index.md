@@ -159,7 +159,7 @@ The math functions allow CSS numeric values to be written as mathematical expres
 - {{CSSxRef("log")}} {{Experimental_Inline}}
   - : Calculates the logarithm of a number.
 - {{CSSxRef("exp")}} {{Experimental_Inline}}
-  - : Calculatex `e` raised to the power of a number.
+  - : Calculates `e` raised to the power of a number.
 
 ### Sign-related functions
 
