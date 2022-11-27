@@ -248,9 +248,9 @@ The {{CSSxRef("&lt;image&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Types) 
 - {{CSSxRef("image/image","image()")}} {{Experimental_Inline}}
   - : Defines an {{CSSxRef("&lt;image&gt;")}} in a similar fashion to the {{CSSxRef("url", "url()")}} function, but with added functionality including specifying the image's directionality and fallback images for when the preferred image is not supported.
 - {{CSSxRef("image/image-set","image-set()")}} {{Experimental_Inline}}
-  - : A method of letting the browser pick the most appropriate CSS image from a given set, primarily for high pixel density screens.
+  - : Picks the most appropriate CSS image from a given set, primarily for high pixel density screens.
 - {{CSSxRef("cross-fade")}}
-  - : Can be used to blend two or more images at a defined transparency.
+  - : Blends two or more images at a defined transparency.
 - {{CSSxRef("element")}}
   - : Defines an {{CSSxRef("&lt;image&gt;")}} value generated from an arbitrary HTML element.
 - {{CSSxRef("paint")}}
