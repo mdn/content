@@ -33,13 +33,6 @@ The syntax starts with the **name of the functional notation**, followed by a le
 
 Functions can take multiple arguments, which are formatted similarly to CSS property values. Whitespace is allowed, but they are optional inside the parentheses. In some functional notations multiple arguments are separated by commas, while others use spaces.
 
-## Animation timeline functions
-
-This function can be used to provide the timeline for an animation.
-
-- {{cssxref("animation-timeline/scroll", "scroll()")}}
-  - : Sets the {{cssxref("animation-timeline")}} of an element to depend on scrollbar on a particular axis of either the nearest parent (with that scrollbar), or the root container.
-
 ## Transform functions
 
 These functions are used when the {{CSSxRef("&lt;transform-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Types) is used as a value of {{CSSxRef("transform")}} property.
@@ -267,23 +260,6 @@ CSS counter functions are generally used with the {{CSSxRef("content")}} propert
 - {{CSSxRef("symbols")}}
   - : Defines the counter styles inline, directly as the value of a property.
 
-## Font functions
-
-CSS font functions are used with the {{CSSxRef("font-variant-alternates")}} property to control the use of alternate glyphs.
-
-- {{CSSxRef("font-variant-alternates/stylistic", "stylistic()")}}
-  - : Enables stylistic alternates for individual characters. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `salt`, like `salt 2`.
-- {{CSSxRef("font-variant-alternates/styleset", "styleset()")}}
-  - : Enables stylistic alternatives for sets of characters. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `ssXY`, such as `ss02`.
-- {{CSSxRef("font-variant-alternates/character-variant", "character-variant()")}}
-  - : Enables specific stylistic alternatives for characters. It is similar to `styleset()`, but doesn't create coherent glyphs for a set of characters; individual characters will have independent and not necessarily coherent styles. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `cvXY`, such as `cv02`.
-- {{CSSxRef("font-variant-alternates/swash", "swash()")}}
-  - : Enables [swash](https://en.wikipedia.org/wiki/Swash_%28typography%29) glyphs. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType values `swsh` and `cswh`, such as `swsh 2` and `cswh 2`.
-- {{CSSxRef("font-variant-alternates/ornaments", "ornaments()")}}
-  - : Enables ornaments such as [fleurons](https://en.wikipedia.org/wiki/Fleuron_%28typography%29) and other dingbat glyphs. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `ornm`, such as `ornm 2`.
-- {{CSSxRef("font-variant-alternates/annotation", "annotation()")}}
-  - : Enables annotations such as circled digits or inverted characters. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `nalt`, such as `nalt 2`.
-
 ## Shape functions
 
 The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Types) represents a graphical shape. It is used in the {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}}, and {{CSSxRef("shape-outside")}} properties.
@@ -322,6 +298,30 @@ The following functions are used to define a [CSS Grid](/en-US/docs/Web/CSS/CSS_
   - : Defines a size range greater-than or equal-to _min_ and less-than or equal-to _max_.
 - {{CSSxRef("repeat")}}
   - : Represents a repeated fragment of the track list, allowing a large number of columns or rows that exhibit a recurring pattern.
+
+## Font functions
+
+CSS font functions are used with the {{CSSxRef("font-variant-alternates")}} property to control the use of alternate glyphs.
+
+- {{CSSxRef("font-variant-alternates/stylistic", "stylistic()")}}
+  - : Enables stylistic alternates for individual characters. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `salt`, like `salt 2`.
+- {{CSSxRef("font-variant-alternates/styleset", "styleset()")}}
+  - : Enables stylistic alternatives for sets of characters. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `ssXY`, such as `ss02`.
+- {{CSSxRef("font-variant-alternates/character-variant", "character-variant()")}}
+  - : Enables specific stylistic alternatives for characters. It is similar to `styleset()`, but doesn't create coherent glyphs for a set of characters; individual characters will have independent and not necessarily coherent styles. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `cvXY`, such as `cv02`.
+- {{CSSxRef("font-variant-alternates/swash", "swash()")}}
+  - : Enables [swash](https://en.wikipedia.org/wiki/Swash_%28typography%29) glyphs. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType values `swsh` and `cswh`, such as `swsh 2` and `cswh 2`.
+- {{CSSxRef("font-variant-alternates/ornaments", "ornaments()")}}
+  - : Enables ornaments such as [fleurons](https://en.wikipedia.org/wiki/Fleuron_%28typography%29) and other dingbat glyphs. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `ornm`, such as `ornm 2`.
+- {{CSSxRef("font-variant-alternates/annotation", "annotation()")}}
+  - : Enables annotations such as circled digits or inverted characters. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `nalt`, such as `nalt 2`.
+
+## Animation functions
+
+This function can be used to provide the timeline for an animation.
+
+- {{cssxref("animation-timeline/scroll", "scroll()")}} {{Experimental_Inline}}
+  - : Sets the {{cssxref("animation-timeline")}} of an element to depend on scrollbar on a particular axis of either the nearest parent (with that scrollbar), or the root container.
 
 ## Specifications
 
