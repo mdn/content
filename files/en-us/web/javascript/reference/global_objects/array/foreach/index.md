@@ -68,7 +68,7 @@ The `forEach()` method is an [iterative method](/en-US/docs/Web/JavaScript/Refer
 
 `forEach()` does not mutate the array on which it is called, but the function provided as `callbackFn` can. Note, however, that the length of the array is saved _before_ the first invocation of `callbackFn`. Therefore:
 
-- `callbackFn` will not visit any elements added beyond the array's initial length when the call to `every()` began.
+- `callbackFn` will not visit any elements added beyond the array's initial length when the call to `forEach()` began.
 - Changes to already-visited indexes do not cause `callbackFn` to be invoked on them again.
 - If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time that element gets visited. [Deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) elements are not visited.
 
