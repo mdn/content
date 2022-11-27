@@ -4,7 +4,6 @@ slug: Web/API/SpeechRecognitionEvent
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Interface
   - Reference
   - SpeechRecognitionEvent
@@ -14,7 +13,7 @@ tags:
 browser-compat: api.SpeechRecognitionEvent
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`SpeechRecognitionEvent`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents the event object for the {{domxref("SpeechRecognition.result_event", "result")}} and {{domxref("SpeechRecognition.nomatch_event", "nomatch")}} events, and contains all the data associated with an interim or final speech recognition result.
 

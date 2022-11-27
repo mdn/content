@@ -8,17 +8,16 @@ tags:
   - Reference
   - MediaStreamTrackProcessor
   - Experimental
-  - Non-standard
 browser-compat: api.MediaStreamTrackProcessor
 ---
 
-{{APIRef("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}{{Non-standard_Header}}
+{{APIRef("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}
 
 The **`MediaStreamTrackProcessor`** interface of the {{domxref('Insertable Streams for MediaStreamTrack API')}} consumes a {{domxref("MediaStreamTrack")}} object's source and generates a stream of media frames.
 
 ## Constructor
 
-- {{domxref("MediaStreamTrackProcessor.MediaStreamTrackProcessor", "MediaStreamTrackProcessor()")}} {{Experimental_Inline}} {{Non-standard_Inline}}
+- {{domxref("MediaStreamTrackProcessor.MediaStreamTrackProcessor", "MediaStreamTrackProcessor()")}} {{Experimental_Inline}}
   - : Creates a new `MediaStreamTrackProcessor` object.
 
 ## Instance properties
