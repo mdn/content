@@ -144,7 +144,7 @@ function updateTexture(gl, texture, video) {
 
 You've seen this code before. It's nearly identical to the image onload function in the previous example — except when we call `texImage2D()`, instead of passing an `Image` object, we pass in the {{ HTMLElement("video") }} element. WebGL knows how to pull the current frame out and use it as a texture.
 
-Next, we need to call these new functions from out `main()` function.
+Next, we need to call these new functions from our `main()` function.
 
 > **Note:** In your `main()` function, replace the call to `loadTexture()` with this code:
 
