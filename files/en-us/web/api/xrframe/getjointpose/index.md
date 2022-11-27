@@ -15,10 +15,11 @@ tags:
   - WebXR Device API
   - XRFrame
   - getJointPose
+  - Experimental
 browser-compat: api.XRFrame.getJointPose
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`getJointPose()`** method of the {{domxref("XRFrame")}} interface returns an {{domxref("XRJointPose")}} object providing the pose of a hand joint (see {{domxref("XRHand")}}) relative to a given base space.
 
