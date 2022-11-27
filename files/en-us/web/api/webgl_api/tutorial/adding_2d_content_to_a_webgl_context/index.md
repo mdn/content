@@ -21,7 +21,32 @@ Once you've successfully [created a WebGL context](/en-US/docs/Web/API/WebGL_API
 
 The complete source code for this project is [available on GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2).
 
-> **Note:** This project uses the [glMatrix](https://glmatrix.net/) library to perform its matrix operations, so you will need to include that in your project. We're loading a copy from a CDN in our HTML's {{HTMLElement("head")}}.
+## Including the glMatrix library
+
+This project uses the [glMatrix](https://glmatrix.net/) library to perform its matrix operations, so you will need to include that in your project. We're loading a copy from a CDN.
+
+> **Note:** Update your "index.html" so it looks like this:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WebGL Demo</title>
+    <link rel="stylesheet" href="./webgl.css" type="text/css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
+      integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="
+      crossorigin="anonymous"
+      defer></script>
+    <script src="webgl-demo.js" type="module" defer></script>
+  </head>
+
+  <body>
+    <canvas id="glcanvas" width="640" height="480"></canvas>
+  </body>
+</html>
+```
 
 ## Drawing the scene
 
@@ -45,15 +70,14 @@ The vertex shader can, as needed, also do things like determine the coordinates 
 
 Our vertex shader below receives vertex position values from an attribute we define called `aVertexPosition`. That position is then multiplied by two 4x4 matrices we provide called `uProjectionMatrix` and `uModelViewMatrix`; `gl_Position` is set to the result. For more info on projection and other matrixes [you might find this article useful](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html).
 
+> **Note:** Add this code to your `main()` function:
+
 ```js
 // Vertex shader program
-
 const vsSource = `
     attribute vec4 aVertexPosition;
-
     uniform mat4 uModelViewMatrix;
     uniform mat4 uProjectionMatrix;
-
     void main() {
       gl_Position = uProjectionMatrix * uModelViewMatrix * aVertexPosition;
     }
@@ -70,6 +94,8 @@ The **fragment shader** is called once for every pixel on each shape to be drawn
 
 In this case, we're returning white every time, since we're just drawing a white square, with no lighting in use.
 
+> **Note:** Add this code to your `main()` function:
+
 ```js
 const fsSource = `
     void main() {
@@ -81,6 +107,8 @@ const fsSource = `
 ### Initializing the shaders
 
 Now that we've defined the two shaders we need to pass them to WebGL, compile them, and link them together. The code below creates the two shaders by calling `loadShader()`, passing the type and source for the shader. It then creates a program, attaches the shaders and links them together. If compiling or linking fails the code displays an alert.
+
+> **Note:** Add these two functions to your "webgl-demo.js" script:
 
 ```js
 //
@@ -148,15 +176,22 @@ The `loadShader()` function takes as input the WebGL context, the shader type, a
 4. To check to be sure the shader successfully compiled, the shader parameter `gl.COMPILE_STATUS` is checked. To get its value, we call {{domxref("WebGLRenderingContext.getShaderParameter", "gl.getShaderParameter()")}}, specifying the shader and the name of the parameter we want to check (`gl.COMPILE_STATUS`). If that's `false`, we know the shader failed to compile, so show an alert with log information obtained from the compiler using {{domxref("WebGLRenderingContext.getShaderInfoLog", "gl.getShaderInfoLog()")}}, then delete the shader and return `null` to indicate a failure to load the shader.
 5. If the shader was loaded and successfully compiled, the compiled shader is returned to the caller.
 
-To use this code we call it like this
+> **Note:** Add this code to your `main()` function:
 
 ```js
+// Initialize a shader program; this is where all the lighting
+// for the vertices and so forth is established.
 const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
 ```
 
 After we've created a shader program we need to look up the locations that WebGL assigned to our inputs. In this case we have one attribute and two uniforms. Attributes receive values from buffers. Each iteration of the vertex shader receives the next value from the buffer assigned to that attribute. [Uniforms](/en-US/docs/Web/API/WebGL_API/Data#uniforms) are similar to JavaScript global variables. They stay the same value for all iterations of a shader. Since the attribute and uniform locations are specific to a single shader program we'll store them together to make them easy to pass around
 
+> **Note:** Add this code to your `main()` function:
+
 ```js
+// Collect all the info needed to use the shader program.
+// Look up which attribute our shader program is using
+// for aVertexPosition and look up uniform locations.
 const programInfo = {
   program: shaderProgram,
   attribLocations: {
@@ -171,33 +206,41 @@ const programInfo = {
 
 ## Creating the square plane
 
-Before we can render our square plane, we need to create the buffer that contains its vertex positions and put the vertex positions in it. We'll do that using a function we call `initBuffers()`; as we explore more advanced WebGL concepts, this routine will be augmented to create more — and more complex — 3D objects.
+Before we can render our square plane, we need to create the buffer that contains its vertex positions and put the vertex positions in it.
+
+We'll do that using a function we call `initBuffers()`, which we will implement in a separate [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules). As we explore more advanced WebGL concepts, this module will be augmented to create more — and more complex — 3D objects.
+
+> **Note:** Create a new file called "init-buffers.js", and give it the following contents:
 
 ```js
 function initBuffers(gl) {
-  // Create a buffer for the square's positions.
-
-  const positionBuffer = gl.createBuffer();
-
-  // Select the positionBuffer as the one to apply buffer
-  // operations to from here out.
-
-  gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
-
-  // Now create an array of positions for the square.
-
-  const positions = [1.0, 1.0, -1.0, 1.0, 1.0, -1.0, -1.0, -1.0];
-
-  // Now pass the list of positions into WebGL to build the
-  // shape. We do this by creating a Float32Array from the
-  // JavaScript array, then use it to fill the current buffer.
-
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
+  const positionBuffer = initPositionBuffer(gl);
 
   return {
     position: positionBuffer,
   };
 }
+
+function initPositionBuffer(gl) {
+  // Create a buffer for the square's positions.
+  const positionBuffer = gl.createBuffer();
+
+  // Select the positionBuffer as the one to apply buffer
+  // operations to from here out.
+  gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+
+  // Now create an array of positions for the square.
+  const positions = [1.0, 1.0, -1.0, 1.0, 1.0, -1.0, -1.0, -1.0];
+
+  // Now pass the list of positions into WebGL to build the
+  // shape. We do this by creating a Float32Array from the
+  // JavaScript array, then use it to fill the current buffer.
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
+
+  return positionBuffer;
+}
+
+export { initBuffers };
 ```
 
 This routine is pretty simplistic given the basic nature of the scene in this example. It starts by calling the `gl` object's {{domxref("WebGLRenderingContext.createBuffer()", "createBuffer()")}} method to obtain a buffer into which we'll store the vertex positions. This is then bound to the context by calling the {{domxref("WebGLRenderingContext.bindBuffer()", "bindBuffer()")}} method.
@@ -206,7 +249,9 @@ Once that's done, we create a JavaScript array containing the position for each 
 
 ## Rendering the scene
 
-Once the shaders are established, the locations are looked up, and the square plane's vertex positions put in a buffer, we can actually render the scene. Since we're not animating anything in this example, our `drawScene()` function is very simple. It uses a few utility routines we'll cover shortly.
+Once the shaders are established, the locations are looked up, and the square plane's vertex positions put in a buffer, we can actually render the scene. We'll do this in a `drawScene()` function that, again, we'll implement in a separate JavaScript module.
+
+> **Note:** Create a new file called "draw-scene.js", and give it the following contents:
 
 ```js
 function drawScene(gl, programInfo, buffers) {
@@ -242,7 +287,6 @@ function drawScene(gl, programInfo, buffers) {
 
   // Now move the drawing position a bit to where we want to
   // start drawing the square.
-
   mat4.translate(
     modelViewMatrix, // destination matrix
     modelViewMatrix, // matrix to translate
@@ -251,31 +295,12 @@ function drawScene(gl, programInfo, buffers) {
 
   // Tell WebGL how to pull out the positions from the position
   // buffer into the vertexPosition attribute.
-  {
-    const numComponents = 2; // pull out 2 values per iteration
-    const type = gl.FLOAT; // the data in the buffer is 32bit floats
-    const normalize = false; // don't normalize
-    const stride = 0; // how many bytes to get from one set of values to the next
-    // 0 = use type and numComponents above
-    const offset = 0; // how many bytes inside the buffer to start from
-    gl.bindBuffer(gl.ARRAY_BUFFER, buffers.position);
-    gl.vertexAttribPointer(
-      programInfo.attribLocations.vertexPosition,
-      numComponents,
-      type,
-      normalize,
-      stride,
-      offset
-    );
-    gl.enableVertexAttribArray(programInfo.attribLocations.vertexPosition);
-  }
+  setPositionAttribute(gl, buffers, programInfo);
 
   // Tell WebGL to use our program when drawing
-
   gl.useProgram(programInfo.program);
 
   // Set the shader uniforms
-
   gl.uniformMatrix4fv(
     programInfo.uniformLocations.projectionMatrix,
     false,
@@ -293,11 +318,56 @@ function drawScene(gl, programInfo, buffers) {
     gl.drawArrays(gl.TRIANGLE_STRIP, offset, vertexCount);
   }
 }
+
+// Tell WebGL how to pull out the positions from the position
+// buffer into the vertexPosition attribute.
+function setPositionAttribute(gl, buffers, programInfo) {
+  const numComponents = 2; // pull out 2 values per iteration
+  const type = gl.FLOAT; // the data in the buffer is 32bit floats
+  const normalize = false; // don't normalize
+  const stride = 0; // how many bytes to get from one set of values to the next
+  // 0 = use type and numComponents above
+  const offset = 0; // how many bytes inside the buffer to start from
+  gl.bindBuffer(gl.ARRAY_BUFFER, buffers.position);
+  gl.vertexAttribPointer(
+    programInfo.attribLocations.vertexPosition,
+    numComponents,
+    type,
+    normalize,
+    stride,
+    offset
+  );
+  gl.enableVertexAttribArray(programInfo.attribLocations.vertexPosition);
+}
+
+export { drawScene };
 ```
 
 The first step is to clear the canvas to our background color; then we establish the camera's perspective. We set a field of view of 45°, with a width to height ratio that matches the display dimensions of our canvas. We also specify that we only want objects between 0.1 and 100 units from the camera to be rendered.
 
 Then we establish the position of the square plane by loading the identity position and translating away from the camera by 6 units. After that, we bind the square's vertex buffer to the attribute the shader is using for `aVertexPosition` and we tell WebGL how to pull the data out of it. Finally we draw the object by calling the {{domxref("WebGLRenderingContext.drawArrays()", "drawArrays()")}} method.
+
+Finally, let's call `initBuffers()` and `drawScene()`.
+
+> **Note:** Add this code to the start of your "webgl-demo.js" file:
+
+```js
+import { initBuffers } from "./init-buffers.js";
+import { drawScene } from "./draw-scene.js";
+```
+
+> **Note:** Add this code to the end of your `main()` function:
+
+```js
+// Here's where we call the routine that builds all the
+// objects we'll be drawing.
+const buffers = initBuffers(gl);
+
+// Draw the scene
+drawScene(gl, programInfo, buffers);
+```
+
+The result should look like this:
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
