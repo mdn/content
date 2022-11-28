@@ -85,6 +85,7 @@
     "es": "Cualquier número de elementos descriptivos, {{SVGElement(\"script\")}} y de dos a cuatro elementos de {{SVGElement(\"stop\")}}.",
     "fr": "N'importe quelle quantité d'éléments descriptifs, {{SVGElement(\"script\")}} et de deux à quatre éléments {{SVGElement(\"stop\")}}.",
     "ja": "任意の数の説明的要素、 {{SVGElement(\"script\")}} および 2 から 4 個の {{SVGElement(\"stop\")}} 要素。",
+    "pt-BR": "Qualquer número de elementos descritivos, elementos {{SVGElement(\"script\")}} e de dois a quatro elementos {{SVGElement(\"stop\")}}.",
     "zh-CN": "任意数量的描述性元素、{{SVGElement(\"script\")}} 和 2 到 4 个 {{SVGElement(\"stop\")}} 元素。"
   },
   "anyNumberOfElementsWithMeshgradientElement": {
@@ -92,6 +93,7 @@
     "es": "Cualquier número de elementos de animación, elementos descriptivos, {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}}, y {{SVGElement(\"style\")}}, junto con cero o un {{SVGElement(\"meshgradient\")}} elemento.",
     "fr": "N'importe quelle quantité d'éléments d'animation ou d'éléments descriptifs ou d'éléments {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}}, et {{SVGElement(\"style\")}}, ainsi que zéro ou un élément {{SVGElement(\"meshgradient\")}}.",
     "ja": "任意の数のアニメーション要素、説明的要素、 {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}}, {{SVGElement(\"style\")}} の各要素と 0 個または 1 個の {{SVGElement(\"meshgradient\")}} 要素。",
+    "pt-BR": "Qualquer número de elementos de animação, elementos descritivos, elementos {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}}, e elementos {{SVGElement(\"style\")}}, juntamente com zero ou um elemento {{SVGElement(\"meshgradient\")}}.",
     "zh-CN": "任意数量的动画元素、描述性元素、{{SVGElement(\"mask\")}}、{{SVGElement(\"clipPath\")}}、{{SVGElement(\"marker\")}}、{{SVGElement(\"script\")}}、{{SVGElement(\"style\")}} 元素，以及 0 到 1 个 {{SVGElement(\"meshgradient\")}} 元素。"
   },
   "ariaAttributes": {
@@ -99,6 +101,7 @@
     "es": "Atributos ARIA",
     "fr": "Attributs ARIA",
     "ja": "ARIA 属性",
+    "pt-BR": "Atributos ARIA",
     "zh-CN": "ARIA 属性"
   },
   "basicShapeElement": {
@@ -196,6 +199,7 @@
     "es": "Filtrar atributos",
     "fr": "Attributs de filtre",
     "ja": "フィルター属性",
+    "pt-BR": "Filtros de atributos",
     "ru": "Атрибуты фильтров",
     "zh-CN": "滤镜属性"
   },
@@ -230,7 +234,8 @@
     "en-US": "Global event attributes",
     "es": "Atributos de eventos globales",
     "fr": "Attributs d'évènement globaux",
-    "ja": "グローバルイベント属性"
+    "ja": "グローバルイベント属性",
+    "pt-BR": "Atributos de eventos globais"
   },
   "gradientElement": {
     "en-US": "Gradient element",
@@ -282,6 +287,7 @@
     "es": "Información SVG en vista previa no disponible",
     "fr": "Informations SVG non disponibles en prévisualisation",
     "ja": "SVG info はプレビューでは利用できません",
+    "pt-BR": "Informação de pré-visualização de SVG não disponível",
     "zh-CN": "SVG 信息在预览中不可用"
   },
   "lightSourceElement": {
@@ -289,6 +295,7 @@
     "es": "Elemento fuente de luz",
     "fr": "Élément de source de lumière",
     "ja": "光源要素",
+    "pt-BR": "Elemento fonte de luz",
     "ru": "Источникм света",
     "zh-CN": "光源元素"
   },
@@ -297,6 +304,7 @@
     "es": "Elemento nunca renderizado",
     "fr": "Élément jamais rendu",
     "ja": "非描画要素",
+    "pt-BR": "Elemento nunca renderizado",
     "zh-CN": "非渲染元素"
   },
   "noCategory": {
@@ -313,6 +321,7 @@
     "es": "Elemento de servidor de pintura",
     "fr": "Élément du serveur de peinture",
     "ja": "ペイントサーバー要素",
+    "pt-BR": "Elemento de servidor de pintura",
     "zh-CN": "绘制服务器元素"
   },
   "permittedContent": {
@@ -338,6 +347,7 @@
     "es": "Elemento renderizable",
     "fr": "Élément pouvant être rendu",
     "ja": "描画可能要素",
+    "pt-BR": "Elemento renderizável",
     "zh-CN": "可渲染元素"
   },
   "shapeElement": {
@@ -381,6 +391,7 @@
     "es": "Atributos de estilo",
     "fr": "Attributs de style",
     "ja": "スタイル属性",
+    "pt-BR": "Atributos de estilo",
     "zh-CN": "样式属性"
   },
   "textContentChildElement": {
@@ -396,7 +407,8 @@
     "en-US": "Text content child elements",
     "es": "Elementos secundarios de contenido de texto",
     "fr": "Éléments enfants de conteneur de texte",
-    "ja": "テキストコンテンツの子要素"
+    "ja": "テキストコンテンツの子要素",
+    "pt-BR": "Elementos filhos de conteúdo de texto"
   },
   "textContentElement": {
     "en-US": "Text content element",
@@ -421,6 +433,7 @@
     "es": "Atributos de la función de transferencia",
     "fr": "Attributs de fonction de transfert",
     "ja": "変換関数属性",
+    "pt-BR": "Atributos de função de transferência",
     "ru": "Функция передачи атрибутов",
     "zh-CN": "变换函数属性"
   },
