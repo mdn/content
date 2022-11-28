@@ -1,6 +1,7 @@
 ---
-title: Intl.Segments.prototype[@@iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Segments/@@iterator
+title: Segments.prototype[@@iterator]()
+slug: >-
+  Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/@@iterator
 tags:
   - Internationalization
   - Intl
@@ -12,7 +13,7 @@ browser-compat: javascript.builtins.Intl.Segments.@@iterator
 
 {{JSRef}}
 
-The **`@@iterator`** method of a `Segments` object implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows `Intl.Segments` objects to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops. It returns an iterator that yields data about each segment.
+The **`@@iterator`** method of a `Segments` object implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows `Segments` objects to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops. It returns an iterator that yields data about each segment.
 
 {{EmbedInteractiveExample("pages/js/intl-segments-prototype-@@iterator.html")}}
 
@@ -24,7 +25,7 @@ segments[Symbol.iterator]()
 
 ### Return value
 
-A new iterable iterator object that yields data about each segment. Each yielded object has the same properties as the object returned by the [`containing()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments/containing) method.
+A new iterable iterator object that yields data about each segment. Each yielded object has the same properties as the object returned by the [`containing()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing) method.
 
 ## Examples
 
@@ -97,3 +98,5 @@ while (!result.done) {
 
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - [`Array.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter)
+- [`Intl.Segmenter.prototype.segment()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment)

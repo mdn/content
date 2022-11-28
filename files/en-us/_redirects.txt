@@ -7774,6 +7774,7 @@
 /en-US/docs/Web/API/ConstrainDouble	/en-US/docs/Web/API/MediaTrackConstraints
 /en-US/docs/Web/API/ConstrainLong	/en-US/docs/Web/API/MediaTrackConstraints
 /en-US/docs/Web/API/ConstrainULong	/en-US/docs/Web/API/MediaTrackConstraints
+/en-US/docs/Web/API/Constraint_validation	/en-US/docs/Learn/Forms/Form_validation
 /en-US/docs/Web/API/Constraint_validation/invalid_event	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Web/API/ConvolverNode.buffer	/en-US/docs/Web/API/ConvolverNode/buffer
 /en-US/docs/Web/API/ConvolverNode.normalize	/en-US/docs/Web/API/ConvolverNode/normalize
@@ -11738,6 +11739,7 @@
 /en-US/docs/Web/Guide/API/Vibration	/en-US/docs/Web/API/Vibration_API
 /en-US/docs/Web/Guide/API/WebRTC	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/Web/Guide/API/WebRTC/Introduction	/en-US/docs/Web/API/WebRTC_API
+/en-US/docs/Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/Web/Guide/API/WebRTC/Taking_webcam_photos	/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 /en-US/docs/Web/Guide/API/WebRTC/WebRTC_architecture	/en-US/docs/Web/API/WebRTC_API/Connectivity
 /en-US/docs/Web/Guide/API/WebRTC/WebRTC_basics	/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling
@@ -12170,6 +12172,9 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/Intl.RelativeTimeFormat.supportedLocalesOf()	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments/@@iterator	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/@@iterator
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments/containing	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/ListFormat	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/ListFormat/ListFormat	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/ListFormat/format	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
@@ -12726,7 +12731,7 @@
 /en-US/docs/WebRTC/Introduction	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/WebRTC/Introduction-redirect-1	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/WebRTC/MediaStream_API	/en-US/docs/Web/API/Media_Capture_and_Streams_API
-/en-US/docs/WebRTC/Peer-to-peer_communications_with_WebRTC	/en-US/docs/Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC
+/en-US/docs/WebRTC/Peer-to-peer_communications_with_WebRTC	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/WebRTC/Taking_webcam_photos	/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 /en-US/docs/WebRTC/WebRTC_reference	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/WebRTC/navigator.getUserMedia	/en-US/docs/Web/API/Navigator/getUserMedia

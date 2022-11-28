@@ -21,7 +21,7 @@ responds with the 510 status code.
 
 ## Status
 
-```plain
+```http
 510 Not Extended
 ```
 

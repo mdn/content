@@ -25553,17 +25553,6 @@
       "fscholz"
     ]
   },
-  "Web/API/Constraint_validation": {
-    "modified": "2019-12-02T00:01:55.418Z",
-    "contributors": [
-      "perfmattersconf",
-      "estelle",
-      "Cuttsy27",
-      "cheyannagraham",
-      "jswisher",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/Contact_Picker_API": {
     "modified": "2020-10-15T22:34:42.280Z",
     "contributors": ["Rumyra"]
@@ -93812,18 +93801,6 @@
   "Web/Guide/API": {
     "modified": "2020-12-14T00:30:29.082Z",
     "contributors": ["Sheppy", "steffix.h2", "shing0608"]
-  },
-  "Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC": {
-    "modified": "2019-10-04T10:20:42.970Z",
-    "contributors": [
-      "Sheppy",
-      "fscholz",
-      "teoli",
-      "Sebastianz",
-      "Jeremie",
-      "Laurentj",
-      "jesup"
-    ]
   },
   "Web/Guide/Audio_and_video_delivery": {
     "modified": "2020-12-11T05:27:12.652Z",
