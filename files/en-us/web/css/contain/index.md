@@ -21,6 +21,8 @@ browser-compat: css.properties.contain
 The **`contain`** [CSS](/en-US/docs/Web/CSS) property indicates that an element and its contents are, as much as possible, independent from the rest of the document tree.
 Containment allows the browser to calculate layout, style, paint, size, or any combination of these for a specific area of the DOM.
 
+{{EmbedInteractiveExample("pages/css/contain.html")}}
+
 Changes within an element with containment applied are not propagated outside of the contained element to the rest of the page.
 The main benefit of this is that the browser does not have to re-render the DOM or page layout as often, leading to performance benefits.
 
