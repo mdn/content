@@ -44,7 +44,7 @@ For more information on the definition of **deprecated**, see the [deprecated fl
 
 ## Obsolete
 
-On MDN Web Docs, the term **obsolete** was used to mark an API or technology that is not only no longer recommended but is also no longer implemented in browsers. The term was, however, confusing. It was similar to **deprecated** but its distinction from **deprecated** was not very helpful.
+On MDN Web Docs, the term **obsolete** was historically used to indicate an API or technology that is not only no longer recommended but is also no longer implemented in browsers. The distinction from **deprecated** is not very helpful.
 
 > **Note:** We do not use the term **obsolete** on MDN Web Docs anymore. If you come across any instances, they should be removed or replaced with the term **deprecated**.
 
