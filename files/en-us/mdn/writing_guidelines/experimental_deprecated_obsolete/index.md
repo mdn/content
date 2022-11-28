@@ -9,24 +9,27 @@ tags:
 
 {{MDNSidebar}}
 
-These terms are commonly associated with technologies and specifications and are used on MDN Web Docs to label a technology. These are also defined in our [Browser compatibility project](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information).
+These terms are commonly associated with technologies and specifications and are used on MDN Web Docs to label the status of a technology. For the definition of these terms, MDN Web Docs align with the [Browser Compatibility Data (BCD)](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information) repository.
+These terms are described below in the context of their use on MDN Web Docs.
 
 ## Experimental
 
-The term **experimental** can mean different things depending on the context you hear or read it in.
 When a technology is described as experimental on MDN Web Docs, it means that the technology is nascent and immature and is currently _in the process_ of being added to the web platform (or being considered for addition).
+Marking a technology as experimental indicates that readers should think carefully before using that technology in any kind of production project (i.e., a project that is not just a demo or experiment). Readers are [encouraged to try out experimental features](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information) and provide feedback to browser vendors and standards authors.
 
-For a technology that's marked **experimental**, one or both of the following conditions will be true:
+For a technology marked **experimental**, one or more of the following conditions apply:
 
-- It is implemented and enabled by default in _less than two_ modern major browser rendering engines.
+- It is implemented and enabled by default in _one and only one_ modern major browser rendering engine.
+- It is only supported by making configuration changes such through preferences or flags, regardless of the number of supported rendering engines.
 - Its defining specification is likely to change significantly in backwards-incompatible ways (i.e., it may break existing code that relies on the feature).
 
-If one or both of these conditions is true, then you should think carefully before you start using that technology in any kind of production project (i.e., a project that is not just a demo or experiment). You are however encouraged to try it out and provide feedback to browser vendors and standards authors. <!--taken from https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information -->
+The **experimental** status of a technology expires if one or more of the following conditions is met:
 
-Conversely, a technology is no longer considered **experimental** if one or more of the following conditions is true:
+- It is supported by default in _two or more_ major browser rendering engines.
+- It is supported by default by a browser rendering engine for two or more years and undergoes no major changes.
+- Its defining specification is unlikely to change in ways that will break compatibility.
 
-- It is implemented in two or more major browser rendering engines.
-- Its defining specification is unlikely to change in ways that will break the web.
+For examples of these conditions, see the [experimental flag](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-experimental) BCD documentation.
 
 Usually, if a technology is supported across several major browsers, the specification will be stable, but this is not always the case.
 On the other hand, some technologies might have a stable specification, but do not have native support in browsers. [IMSC](/en-US/docs/Related/IMSC) for example is used via a JavaScript polyfill. <!-- need to revisit link -->
@@ -36,6 +39,8 @@ A feature or technology that is part of an active specification or standardizati
 ## Deprecated
 
 The term **deprecated** on MDN Web Docs is used to mark an API or technology that is no longer recommended. A deprecated API or technology might be removed in the future or might only be kept for compatibility purposes and may still work. We recommend to avoid using the functionality marked as deprecated.
+
+For more information on the definition of **deprecated**, see the [deprecated flag](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-deprecated) BCD documentation.
 
 ## Obsolete
 
