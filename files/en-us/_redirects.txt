@@ -12172,6 +12172,9 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/Intl.RelativeTimeFormat.supportedLocalesOf()	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments/@@iterator	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/@@iterator
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments/containing	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/ListFormat	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/ListFormat/ListFormat	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/ListFormat/format	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
