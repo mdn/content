@@ -49,7 +49,7 @@ Events have three functions:
     - `tabId`
       - : `integer`. The ID of the tab that has become active.
     - `selectInfo`
-      - : [`object`](#selectinfo).
+      - : `object`. See the [selectInfo](#selectinfo_2) section for more details.
 
 ## Additional objects
 

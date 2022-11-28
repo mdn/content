@@ -69,7 +69,7 @@ particular XML documents. For example, in the qualified name
 </ecomm:business>
 ```
 
-> **Note:** While the property returns the case of the internal DOM storage, which is lower case, not that {{domxref("element.tagName","tagName")}} property returns upper case for HTML elements in HTML DOMs.
+> **Note:** While the property returns the case of the internal DOM storage, which is lower case, note that {{domxref("element.tagName","tagName")}} property returns upper case for HTML elements in HTML DOMs.
 
 ## Specifications
 

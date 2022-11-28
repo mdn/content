@@ -44,7 +44,7 @@ Events have three functions:
   - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
     - `ZoomChangeInfo`
-      - : [`object`](#zoomchangeinfo). Information about the zoom event.
+      - : `object`. Information about the zoom event. See the [ZoomChangeInfo](#zoomchangeinfo_2) section for more details.
 
 ## Additional objects
 

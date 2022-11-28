@@ -48,7 +48,7 @@ Events have three functions:
     - `tabId`
       - : `integer`. ID of the tab the user moved.
     - `moveInfo`
-      - : [`object`](#moveinfo). Information about the move.
+      - : `object`. Information about the move. See the [moveInfo](#moveinfo_2) section for more details.
 
 ## Additional objects
 

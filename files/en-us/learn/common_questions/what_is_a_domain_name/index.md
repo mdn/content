@@ -95,7 +95,7 @@ To find out whether a given domain name is available,
 - Go to a domain name registrar's website. Most of them provide a "whois" service that tells you whether a domain name is available.
 - Alternatively, if you use a system with a built-in shell, type a `whois` command into it, as shown here for `mozilla.org`:
 
-  ```
+  ```bash
   $ whois mozilla.org
   Domain Name:MOZILLA.ORG
   Domain ID: D1409563-LROR
@@ -124,7 +124,7 @@ As you can see, I can't register `mozilla.org` because the Mozilla Foundation ha
 
 On the other hand, let's see if I could register `afunkydomainname.org`:
 
-```
+```bash
 $ whois afunkydomainname.org
 NOT FOUND
 ```

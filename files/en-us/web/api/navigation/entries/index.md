@@ -18,7 +18,7 @@ tags:
 browser-compat: api.Navigation.entries
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`entries()`** method of the
 {{domxref("Navigation")}} interface returns an array of {{domxref("NavigationHistoryEntry")}} objects representing all existing history entries.

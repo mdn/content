@@ -17,7 +17,7 @@ tags:
 browser-compat: api.NavigateEvent.NavigateEvent
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`NavigateEvent()`** constructor creates a new
 {{domxref("NavigateEvent")}} object instance.

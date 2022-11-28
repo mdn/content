@@ -18,7 +18,7 @@ tags:
 browser-compat: api.NavigationTransition.from
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`from`** read-only property of the
 {{domxref("NavigationTransition")}} interface returns the {{domxref("NavigationHistoryEntry")}} that the transition is coming from.

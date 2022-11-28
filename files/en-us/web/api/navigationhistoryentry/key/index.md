@@ -18,7 +18,7 @@ tags:
 browser-compat: api.NavigationHistoryEntry.key
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`key`** read-only property of the
 {{domxref("NavigationHistoryEntry")}} interface returns the `key` of the history entry. This is a unique, UA-generated value that represents the history entry's slot in the entries list. It is used to navigate that particular slot via {{domxref("Navigation.traverseTo()")}}. The `key` will be reused by other entries that replace the entry in the list (that is, if the {{domxref("NavigateEvent.navigationType")}} is `replace`).

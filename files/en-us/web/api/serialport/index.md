@@ -33,7 +33,7 @@ Instances of this interface may be obtained by calling methods of the {{domxref(
 - {{domxref("SerialPort.forget()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves when the port closes and is forgotten.
 - {{domxref("SerialPort.getInfo()")}} {{Experimental_Inline}}
-  - : Returns a {{jsxref("Promise")}} that resolves with an object containing properties of the port.
+  - : Returns an object containing properties of the port.
 - {{domxref("SerialPort.open()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves when the port is opened. By default the port is opened with 8 data bits, 1 stop bit and no parity checking.
 - {{domxref("SerialPort.setSignals()")}} {{Experimental_Inline}}

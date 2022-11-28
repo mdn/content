@@ -16,7 +16,7 @@ tags:
 browser-compat: api.NavigationCurrentEntryChangeEvent.NavigationCurrentEntryChangeEvent
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`NavigationCurrentEntryChangeEvent()`** constructor creates a new
 {{domxref("NavigationCurrentEntryChangeEvent")}} object.

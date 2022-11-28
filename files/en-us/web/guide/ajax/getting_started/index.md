@@ -10,7 +10,7 @@ tags:
   - XMLHttpRequest
 ---
 
-{{DefaultAPISidebar("XMLHttpRequest")}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/Guide/AJAX")}}
 
 This article guides you through the AJAX basics and gives you some simple hands-on examples to get you started.
 

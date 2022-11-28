@@ -46,7 +46,7 @@ Events have three functions:
     - `id`
       - : `string`. ID of the folder whose children were reordered.
     - `reorderInfo`
-      - : [`object`](#reorderinfo). Object containing Additional objects.
+      - : `object`. Object containing Additional objects. See the [reorderInfo](#reorderinfo_2) section for more details.
 
 ## Additional objects
 

@@ -24,7 +24,7 @@ The first step is to create the {{ HTMLElement("video") }} element that we'll us
 let copyVideo = false;
 
 function setupVideo(url) {
-  const video = document.createElement('video');
+  const video = document.createElement("video");
 
   let playing = false;
   let timeupdate = false;
@@ -36,15 +36,23 @@ function setupVideo(url) {
   // Waiting for these 2 events ensures
   // there is data in the video
 
-  video.addEventListener('playing', () => {
-     playing = true;
-     checkReady();
-  }, true);
+  video.addEventListener(
+    "playing",
+    () => {
+      playing = true;
+      checkReady();
+    },
+    true
+  );
 
-  video.addEventListener('timeupdate', () => {
-     timeupdate = true;
-     checkReady();
-  }, true);
+  video.addEventListener(
+    "timeupdate",
+    () => {
+      timeupdate = true;
+      checkReady();
+    },
+    true
+  );
 
   video.src = url;
   video.play();
@@ -85,10 +93,18 @@ function initTexture(gl) {
   const border = 0;
   const srcFormat = gl.RGBA;
   const srcType = gl.UNSIGNED_BYTE;
-  const pixel = new Uint8Array([0, 0, 255, 255]);  // opaque blue
-  gl.texImage2D(gl.TEXTURE_2D, level, internalFormat,
-                width, height, border, srcFormat, srcType,
-                pixel);
+  const pixel = new Uint8Array([0, 0, 255, 255]); // opaque blue
+  gl.texImage2D(
+    gl.TEXTURE_2D,
+    level,
+    internalFormat,
+    width,
+    height,
+    border,
+    srcFormat,
+    srcType,
+    pixel
+  );
 
   // Turn off mips and set wrapping to clamp to edge so it
   // will work regardless of the dimensions of the video.
@@ -109,8 +125,14 @@ function updateTexture(gl, texture, video) {
   const srcFormat = gl.RGBA;
   const srcType = gl.UNSIGNED_BYTE;
   gl.bindTexture(gl.TEXTURE_2D, texture);
-  gl.texImage2D(gl.TEXTURE_2D, level, internalFormat,
-                srcFormat, srcType, video);
+  gl.texImage2D(
+    gl.TEXTURE_2D,
+    level,
+    internalFormat,
+    srcFormat,
+    srcType,
+    video
+  );
 }
 ```
 
@@ -121,27 +143,27 @@ Then in `main()` in place of the call to `loadTexture()` in the previous example
 In the definition of `render()` if `copyVideo` is true, then we call `updateTexture()` each time just before we call the `drawScene()` function.
 
 ```js
-  const texture = initTexture(gl);
+const texture = initTexture(gl);
 
-  const video = setupVideo('Firefox.mp4');
+const video = setupVideo("Firefox.mp4");
 
-  let then = 0;
+let then = 0;
 
-  // Draw the scene repeatedly
-  function render(now) {
-    now *= 0.001;  // convert to seconds
-    const deltaTime = now - then;
-    then = now;
+// Draw the scene repeatedly
+function render(now) {
+  now *= 0.001; // convert to seconds
+  const deltaTime = now - then;
+  then = now;
 
-    if (copyVideo) {
-      updateTexture(gl, texture, video);
-    }
-
-    drawScene(gl, programInfo, buffers, texture, deltaTime);
-
-    requestAnimationFrame(render);
+  if (copyVideo) {
+    updateTexture(gl, texture, video);
   }
+
+  drawScene(gl, programInfo, buffers, texture, deltaTime);
+
   requestAnimationFrame(render);
+}
+requestAnimationFrame(render);
 ```
 
 That's all there is to it!

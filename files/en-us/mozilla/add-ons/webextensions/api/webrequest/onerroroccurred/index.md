@@ -53,7 +53,7 @@ Events have three functions:
   - : A function that will be called when this event occurs. The function will be passed the following arguments:
 
     - `details`
-      - : [`object`](#details). Details about the request. See [`details`](#details_2) below.
+      - : `object`. Details about the request. See the [details](#details_2) section for more information.
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that will be sent to this listener.
@@ -147,7 +147,7 @@ Events have three functions:
     - `NS_ERROR_MALWARE_URI` indicating a malware URI.
     - `NS_ERROR_PHISHING_URI` indicating a phishing URI.
     - `NS_ERROR_TRACKING_URI` indicating a tracking URI.
-    - `NS_ERROR_UNWANTED_URI` indicating a unwanted URI.
+    - `NS_ERROR_UNWANTED_URI` indicating an unwanted URI.
     - `NS_ERROR_BLOCKED_URI` indicating a blocked URI.
     - `NS_ERROR_HARMFUL_URI` indicating a harmful URI.
     - `NS_ERROR_FINGERPRINTING` indicating a fingerprinting URI.

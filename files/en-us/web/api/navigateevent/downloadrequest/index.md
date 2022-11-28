@@ -19,7 +19,7 @@ tags:
 browser-compat: api.NavigateEvent.downloadRequest
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`downloadRequest`** read-only property of the
 {{domxref("NavigateEvent")}} interface returns the filename of the file requested for download, in the case of a download navigation (e.g. an {{htmlelement("a")}} or {{htmlelement("area")}} element with a `download` attribute), or `null` otherwise.

@@ -18,7 +18,7 @@ tags:
 browser-compat: api.Navigation.canGoForward
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`canGoForward`** read-only property of the
 {{domxref("Navigation")}} interface returns `true` if it is possible to navigate forwards in the navigation history
