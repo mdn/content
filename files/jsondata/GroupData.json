@@ -81,11 +81,7 @@
     },
     "Canvas API": {
       "overview": ["Canvas API"],
-      "guides": [
-        "/docs/Web/API/Canvas_API/Tutorial",
-        "/docs/Web/API/Canvas_API/A_basic_ray-caster",
-        "/docs/Web/API/Canvas_API/Manipulating_video_using_canvas"
-      ],
+      "guides": ["/docs/Web/API/Canvas_API/Manipulating_video_using_canvas"],
       "tutorial": [
         "/docs/Web/API/Canvas_API/Tutorial",
         "/docs/Web/API/Canvas_API/Tutorial/Basic_usage",
