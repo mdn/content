@@ -44,9 +44,12 @@ For more information on the definition of **deprecated**, see the [deprecated fl
 
 ## Obsolete
 
-On MDN Web Docs, the term **obsolete** was historically used to indicate an API or technology that is not only no longer recommended but is also no longer implemented in browsers. The distinction from **deprecated** is not very helpful.
+On MDN Web Docs, the term **obsolete** was historically used to indicate an API or technology that is not only no longer recommended but is also no longer implemented in browsers.
 
-> **Note:** We do not use the term **obsolete** on MDN Web Docs anymore. If you come across any instances, they should be removed or replaced with the term **deprecated**.
+The distinction between **obselete** and **deprecated** is not very helpful.
+We do not use the term **obsolete** on MDN Web Docs anymore.
+
+ > **Note:** If you come across any instance of **obselete**, they should be removed or replaced with the term **deprecated**.
 
 ## Guidelines for removing content
 
