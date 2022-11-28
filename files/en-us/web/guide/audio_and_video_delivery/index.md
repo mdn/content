@@ -184,7 +184,7 @@ To find out more, read our {{domxref("MediaDevices.getUserMedia")}} page.
 
 ## Mediastream Recording
 
-New standards are being rolled out to allow your browser to grab media from your mic or camera using `getUserMedia` and record it instantly using the new MediaRecorder API. You take the stream you receive from `getUserMedia`, pass it to a `MediaRecorder` object, take the resulting output and feed it to your audio or video source\*.
+New standards are being rolled out to allow your browser to grab media from your mic or camera using `getUserMedia` and record it instantly using the new MediaStream Recording API. You take the stream you receive from `getUserMedia`, pass it to a `MediaRecorder` object, take the resulting output and feed it to your audio or video source\*.
 
 The main mechanism is outlined below:
 
@@ -214,7 +214,7 @@ navigator.mediaDevices.getUserMedia({audio:true})
   });
 ```
 
-See [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API) for more details.
+See [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) for more details.
 
 ## Media Source Extensions (MSE)
 
@@ -505,7 +505,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 - [Writing Web Audio API code that works in every browser](/en-US/docs/Web/Guide/Audio_and_video_delivery/Web_Audio_API_cross_browser)
   - : A guide to writing cross browser Web Audio API code.
 - [Easy audio capture with the MediaRecorder API](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)
-  - : Explains the basics of using the MediaRecorder API to directly record a media stream.
+  - : Explains the basics of using the MediaStream Recording API to directly record a media stream.
 
 > **Note:** Firefox OS versions 1.3 and above support the [RTSP](https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol) protocol for streaming video delivery. A fallback solution for older versions would be to use `<video>` along with a suitable format for Gecko (such as WebM) to serve fallback content. More information will be published on this in good time.
 
@@ -515,6 +515,6 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 - [HTMLVideoElement API](/en-US/docs/Web/API/HTMLVideoElement)
 - [MediaSource API](/en-US/docs/Web/API/MediaSource)
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
-- [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)
+- [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)
 - [getUserMedia](/en-US/docs/Web/API/MediaDevices/getUserMedia)
 - [Event reference > Media](/en-US/docs/Web/Events#media)
