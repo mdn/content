@@ -111,7 +111,7 @@ Each fragment receives the interpolated color based on its position relative to 
 
 ## Drawing using the colors
 
-Next, you need to add code to look up the attribute location for the colors and setup that attribute for the shader program.
+Next, you need to add code to look up the attribute location for the colors and set up that attribute for the shader program.
 
 > **Note:** Update the `programInfo` declaration in your `main()` function like this:
 

@@ -11,7 +11,7 @@ tags:
 
 ## Making the square rotate
 
-In this example, we'll actually rotate our camera. By doing so, it will look as if we are rotating the square. The first thing we'll need is are variables in which to track the current rotation of the camera.
+In this example, we'll actually rotate our camera. By doing so, it will look as if we are rotating the square. First we'll need some variables in which to track the current rotation of the camera.
 
 > **Note:** Add this code at the start of your "webgl-demo.js" script:
 
@@ -62,9 +62,9 @@ function render(now) {
 requestAnimationFrame(render);
 ```
 
-This code uses `requestAnimationFrame` to ask the browser to call the function "`render`" on each frame. `requestAnimationFrame` passes us the time in milliseconds since the page loaded. We convert that to seconds and then subtract from it the last time to compute `deltaTime` which is the number of second since the last frame was rendered.
+This code uses `requestAnimationFrame` to ask the browser to call the function "`render`" on each frame. `requestAnimationFrame` passes us the time in milliseconds since the page loaded. We convert that to seconds and then subtract from it the last time to compute `deltaTime`, which is the number of second since the last frame was rendered.
 
-Finally we update `squareRotation`.
+Finally, we update `squareRotation`.
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample4/index.html', 670, 510) }}
 
