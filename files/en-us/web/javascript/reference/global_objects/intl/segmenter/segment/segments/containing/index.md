@@ -1,6 +1,7 @@
 ---
-title: Intl.Segments.prototype.containing()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Segments/containing
+title: Segments.prototype.containing()
+slug: >-
+  Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing
 tags:
   - Internationalization
   - Intl
@@ -12,7 +13,7 @@ browser-compat: javascript.builtins.Intl.Segments.containing
 
 {{JSRef}}
 
-The **`Intl.Segments.prototype.containing()`** method returns an object describing the segment in the string that includes the code unit at the specified index.
+The **`containing()`** method of a `Segments` object returns an object describing the segment in the string that includes the code unit at the specified index.
 
 {{EmbedInteractiveExample("pages/js/intl-segments-prototype-containing.html")}}
 
@@ -76,3 +77,8 @@ current = segments.containing(current.index + current.segment.length);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter)
+- [`Intl.Segmenter.prototype.segment()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment)

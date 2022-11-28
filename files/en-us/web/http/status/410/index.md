@@ -19,7 +19,7 @@ If you don't know whether this condition is temporary or permanent, a {{HTTPStat
 
 ## Status
 
-```plain
+```http
 410 Gone
 ```
 
