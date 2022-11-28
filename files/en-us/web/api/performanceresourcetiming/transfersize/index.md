@@ -55,11 +55,11 @@ resources.forEach((entry) => {
 });
 ```
 
-### Cross-origin timing information
+### Cross-origin content size information
 
-If the value of the `transferSize` property is `0` and wasn't loaded from a local cache, the resource might be a cross-origin request. To allow seeing cross-origin timing information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
+If the value of the `transferSize` property is `0` and wasn't loaded from a local cache, the resource might be a cross-origin request. To allow seeing cross-origin content size information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
 
-For example, to allow `https://developer.mozilla.org` to see timing resources, the cross-origin resource should send:
+For example, to allow `https://developer.mozilla.org` to see content sizes, the cross-origin resource should send:
 
 ```http
 Timing-Allow-Origin: https://developer.mozilla.org
