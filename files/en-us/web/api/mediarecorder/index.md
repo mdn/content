@@ -9,14 +9,13 @@ tags:
   - Media
   - Media Capture
   - Media Capture and Streams
-  - Media Recorder API
   - MediaRecorder
   - Reference
   - Video
 browser-compat: api.MediaRecorder
 ---
 
-{{APIRef("Media Recorder API")}}
+{{APIRef("MediaStream Recording")}}
 
 The **`MediaRecorder`** interface of the [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) provides functionality to easily record media. It is created using the {{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}} constructor.
 

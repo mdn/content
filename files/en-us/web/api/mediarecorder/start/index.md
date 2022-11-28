@@ -8,8 +8,6 @@ tags:
   - Media
   - Media Capture
   - MediaRecorder
-  - MediaStream Recording
-  - MediaStream Recording API
   - Method
   - NeedsExample
   - Recording Media
@@ -103,7 +101,7 @@ handler to respond to these errors.
 record.onclick = () => {
   mediaRecorder.start();
   console.log("recorder started");
-}
+};
 ```
 
 ## Specifications
