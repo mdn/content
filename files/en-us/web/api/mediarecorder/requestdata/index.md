@@ -20,7 +20,7 @@ browser-compat: api.MediaRecorder.requestData
 {{APIRef("MediaStream Recording")}}
 
 The **`MediaRecorder.requestData()`**
-method (part of the [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)) is used to raise a {{domxref("dataavailable")}} event containing a
+method (part of the [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)) is used to raise a {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event containing a
 {{domxref("Blob")}} object of the captured media as it was when the method was
 called. This can then be grabbed and manipulated as you wish.
 
