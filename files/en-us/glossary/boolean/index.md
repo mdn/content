@@ -1,12 +1,6 @@
 ---
 title: Boolean
 slug: Glossary/Boolean
-tags:
-  - Boolean
-  - CodingScripting
-  - JavaScript
-  - Programming Languages
-  - data types
 ---
 
 In computer science, a **Boolean** is a logical data type that can have only the values `true` or `false`.
