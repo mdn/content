@@ -20,13 +20,15 @@ Marking a technology as experimental indicates that readers should think careful
 For a technology marked **experimental**, one or more of the following conditions apply:
 
 - It is implemented and enabled by default in the release build of **only one** modern major browser rendering engine.
-- It is only supported by making configuration changes such through preferences or flags, regardless of the number of supported rendering engines.
+- It is only supported through configuration changes such as preferences or flags, regardless of the number of supported rendering engines.
 - Its defining specification is likely to change significantly in backwards-incompatible ways (i.e., it may break existing code that relies on the feature).
 
-The **experimental** status of a technology expires if one or more of the following conditions is met:
+> **Note:** A feature that is only released on one rendering engine is still considered experimental even if it is available on preview builds of other rendering engines (or by setting a preference or flag).
 
-- It is supported by default in _two or more_ major browser rendering engines.
-- It is supported by default by a browser rendering engine for two or more years and undergoes no major changes.
+The **experimental** status of a technology may expire if one or more of the following conditions is met:
+
+- It is supported by default in **two or more** major browser rendering engines.
+- It is supported by default by a single browser rendering engine for two or more years and undergoes no major changes.
 - Its defining specification is unlikely to change in ways that will break compatibility.
 
 For examples of these conditions, see the [experimental flag](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-experimental) BCD documentation.
@@ -45,11 +47,9 @@ For more information on the definition of **deprecated**, see the [deprecated fl
 ## Obsolete
 
 On MDN Web Docs, the term **obsolete** was historically used to indicate an API or technology that is not only no longer recommended but is also no longer implemented in browsers.
+Because the distinction between **obsolete** and **deprecated** is not very helpful, we do not use the term **obsolete** on MDN Web Docs anymore.
 
-The distinction between **obselete** and **deprecated** is not very helpful.
-We do not use the term **obsolete** on MDN Web Docs anymore.
-
- > **Note:** If you come across any instance of **obselete**, they should be removed or replaced with the term **deprecated**.
+> **Note:** If you come across any instance of **obsolete**, it should be removed or replaced with the term **deprecated**.
 
 ## Guidelines for removing content
 
