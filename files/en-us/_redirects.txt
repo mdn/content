@@ -62,7 +62,7 @@
 /en-US/docs/ARIA/widgets/overview	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/ARIA_Screen_Reader_Implementors_Guide	/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
 /en-US/docs/A_re-introduction_to_JavaScript	/en-US/docs/Web/JavaScript/Language_Overview
-/en-US/docs/About_JavaScript	/en-US/docs/Web/JavaScript/About_JavaScript
+/en-US/docs/About_JavaScript	/en-US/docs/Web/JavaScript
 /en-US/docs/About_WOFF	/en-US/docs/Web/Guide/WOFF
 /en-US/docs/About_the_Document_Object_Model	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/Accessibility	/en-US/docs/Web/Accessibility
@@ -4061,7 +4061,7 @@
 /en-US/docs/JavaScript	/en-US/docs/Web/JavaScript
 /en-US/docs/JavaScript,_the_DOM_and_the_BOM	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
 /en-US/docs/JavaScript/A_re-introduction_to_JavaScript	/en-US/docs/Web/JavaScript/Language_Overview
-/en-US/docs/JavaScript/About_JavaScript	/en-US/docs/Web/JavaScript/About_JavaScript
+/en-US/docs/JavaScript/About_JavaScript	/en-US/docs/Web/JavaScript
 /en-US/docs/JavaScript/Data_structures	/en-US/docs/Web/JavaScript/Data_structures
 /en-US/docs/JavaScript/DedicatedWorkerGlobalScope	/en-US/docs/Web/API/DedicatedWorkerGlobalScope
 /en-US/docs/JavaScript/Getting_Started	/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
@@ -4173,7 +4173,7 @@
 /en-US/docs/JavaScript/Memory_Management	/en-US/docs/Web/JavaScript/Memory_Management
 /en-US/docs/JavaScript/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /en-US/docs/JavaScript/Reference	/en-US/docs/Web/JavaScript/Reference
-/en-US/docs/JavaScript/Reference/About	/en-US/docs/Web/JavaScript/Reference/About
+/en-US/docs/JavaScript/Reference/About	/en-US/docs/Web/JavaScript/Reference
 /en-US/docs/JavaScript/Reference/Code_comments	/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /en-US/docs/JavaScript/Reference/Comments/Code_comments	/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /en-US/docs/JavaScript/Reference/Deprecated_Features	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
@@ -4729,7 +4729,7 @@
 /en-US/docs/JavaScript_API/navigator.mozApps.mgmt.removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
 /en-US/docs/JavaScript_Documention	/en-US/docs/Web/JavaScript
 /en-US/docs/JavaScript_Documention/A_re-introduction_to_JavaScript	/en-US/docs/Web/JavaScript/Language_Overview
-/en-US/docs/JavaScript_Documention/About_JavaScript	/en-US/docs/Web/JavaScript/About_JavaScript
+/en-US/docs/JavaScript_Documention/About_JavaScript	/en-US/docs/Web/JavaScript
 /en-US/docs/JavaScript_Documention/Data_structures	/en-US/docs/Web/JavaScript/Data_structures
 /en-US/docs/JavaScript_Documention/Getting_Started	/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 /en-US/docs/JavaScript_Documention/Glossary	/en-US/docs/Glossary
@@ -4833,7 +4833,7 @@
 /en-US/docs/JavaScript_Documention/Memory_Management	/en-US/docs/Web/JavaScript/Memory_Management
 /en-US/docs/JavaScript_Documention/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /en-US/docs/JavaScript_Documention/Reference	/en-US/docs/Web/JavaScript/Reference
-/en-US/docs/JavaScript_Documention/Reference/About	/en-US/docs/Web/JavaScript/Reference/About
+/en-US/docs/JavaScript_Documention/Reference/About	/en-US/docs/Web/JavaScript/Reference
 /en-US/docs/JavaScript_Documention/Reference/Code_comments	/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /en-US/docs/JavaScript_Documention/Reference/Deprecated_and_obsolete_features	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/JavaScript_Documention/Reference/Functions_and_function_scope	/en-US/docs/Web/JavaScript/Reference/Functions
@@ -11991,6 +11991,7 @@
 /en-US/docs/Web/Houdini/learn/CSS_Typed_OM	/en-US/docs/Web/API/CSS_Typed_OM_API/Guide
 /en-US/docs/Web/Houdini/learn/Houdini:_CSS_Painting_API	/en-US/docs/Web/API/CSS_Painting_API/Guide
 /en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/en-US/docs/Web/JavaScript/Language_Overview
+/en-US/docs/Web/JavaScript/About_JavaScript	/en-US/docs/Web/JavaScript
 /en-US/docs/Web/JavaScript/Base64_encoding_and_decoding	/en-US/docs/Glossary/Base64
 /en-US/docs/Web/JavaScript/DedicatedWorkerGlobalScope	/en-US/docs/Web/API/DedicatedWorkerGlobalScope
 /en-US/docs/Web/JavaScript/Equality_comparisons_and_when_to_use_them	/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
@@ -12103,6 +12104,7 @@
 /en-US/docs/Web/JavaScript/Microsoft_JavaScript_extensions/debugger	/en-US/docs/Web/JavaScript/Reference/Statements/debugger
 /en-US/docs/Web/JavaScript/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /en-US/docs/Web/JavaScript/Proxy_Auto-Configuration_(PAC)_file	/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
+/en-US/docs/Web/JavaScript/Reference/About	/en-US/docs/Web/JavaScript/Reference
 /en-US/docs/Web/JavaScript/Reference/Classes/Class_elements	/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /en-US/docs/Web/JavaScript/Reference/Classes/Class_fields	/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks	/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks
