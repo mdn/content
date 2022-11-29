@@ -50,6 +50,9 @@ roundRect(x, y, width, height, radii)
     If `width` is _negative_ the rounded rectangle is flipped horizontally, so the radius values that normally apply to the left corners are used on the right and vice versa.
     Similarly, when `height` is negative, the rounded rect is flipped vertically.
     The specified radii may be scaled (reduced) if any of the edges are shorter than the combined radius of the vertices on either end.
+    
+    The `radii` parameter can also be a [`DOMPointInit`](en-US/docs/Web/API/DOMPoint/fromPoint) object (basically any object with {x, y} properties) or a list of such objects, or a list mixing numbers and such objects.
+    - `{x: 0, y: 0}`
 
 ### Return value
 
