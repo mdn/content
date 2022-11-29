@@ -35,7 +35,7 @@ Functions can take multiple arguments, which are formatted similarly to CSS prop
 
 ## Transform functions
 
-These functions are used when the {{CSSxRef("&lt;transform-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Types) is used as a value of {{CSSxRef("transform")}} property.
+The {{CSSxRef("&lt;transform-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Types) represent appearance transformation. It is used as a value of {{CSSxRef("transform")}} property.
 
 ### Translate functions
 
