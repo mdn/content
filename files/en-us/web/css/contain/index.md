@@ -24,7 +24,7 @@ Containment enables isolating a subsection of the DOM, providing performance ben
 {{EmbedInteractiveExample("pages/css/contain.html")}}
 
 There are four types of CSS containment: size, layout, style, and paint, which are set on the container.
-The property is a space-separated list of a subset of the five standard values and / or one of the two shorthand values.
+The property is a space-separated list of a subset of the five standard values or one of the two shorthand values.
 Changes to the contained properties within the container are not propagated outside of the contained element to the rest of the page.
 The main benefit of containment is that the browser does not have to re-render the DOM or page layout as often, leading to small performance benefits during the rendering of static pages and greater performance benefits in more dynamic applications.
 
