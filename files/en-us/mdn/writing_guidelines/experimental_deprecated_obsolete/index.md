@@ -19,7 +19,7 @@ Marking a technology as experimental indicates that readers should think careful
 
 For a technology marked **experimental**, one or more of the following conditions apply:
 
-- It is implemented and enabled by default in _one and only one_ modern major browser rendering engine.
+- It is implemented and enabled by default in the release build of **only one** modern major browser rendering engine.
 - It is only supported by making configuration changes such through preferences or flags, regardless of the number of supported rendering engines.
 - Its defining specification is likely to change significantly in backwards-incompatible ways (i.e., it may break existing code that relies on the feature).
 
