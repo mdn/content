@@ -19,13 +19,14 @@ browser-compat: css.properties.contain
 {{CSSRef}}
 
 The **`contain`** [CSS](/en-US/docs/Web/CSS) property indicates that an element and its contents are, as much as possible, independent from the rest of the document tree.
-Containment enables isolating a subsection of the DOM, providing performance benefits by limiting calculations of layout, style, paint, size, or any combination to a DOM subtree rather than the entire page. Containment can also be used to scope CSS counters.
+Containment enables isolating a subsection of the DOM, providing performance benefits by limiting calculations of layout, style, paint, size, or any combination to a DOM subtree rather than the entire page. Containment can also be used to scope CSS counters and quotes.
 
 {{EmbedInteractiveExample("pages/css/contain.html")}}
 
-There are four types of CSS containment: size, layout,
-style, and paint, which are set on the container. The property is a space-separated list of a subset of the five standard values and / or one of the two shorthand values. Changes to the contained properties within the container are not propagated outside of the contained element to the rest of the page.
-The main benefit of containment is that the browser does not have to re-render the DOM or page layout as often, leading to small performance benefits during the rendering of static pages and greater performance benefits the more dynamic the application.
+There are four types of CSS containment: size, layout, style, and paint, which are set on the container.
+The property is a space-separated list of a subset of the five standard values and / or one of the two shorthand values.
+Changes to the contained properties within the container are not propagated outside of the contained element to the rest of the page.
+The main benefit of containment is that the browser does not have to re-render the DOM or page layout as often, leading to small performance benefits during the rendering of static pages and greater performance benefits in more dynamic applications.
 
 Using the `contain` property is useful on pages with groups of elements that are supposed to be independent, as it can prevent element internals from having side effects outside of its bounding-box.
 
@@ -67,7 +68,7 @@ The `contain` property can have any of the following values:
 
 - The keyword `none` **or**
 - One or more of the space-separated keywords `size` (or `inline-size`), `layout`, `style`, and `paint` in any order **or**
- - One of the shorthand values `strict` or `content`
+- One of the shorthand values `strict` or `content`
 
 The keywords have the following meanings:
 
