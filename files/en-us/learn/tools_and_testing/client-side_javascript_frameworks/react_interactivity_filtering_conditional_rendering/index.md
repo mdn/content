@@ -167,7 +167,7 @@ return <li className="todo">{isEditing ? editingTemplate : viewTemplate}</li>;
 
 Your browser should render all your tasks just like before. To see the editing template, you will have to change the default `isEditing` state from `false` to `true` in your code for now; we will look at making the edit button toggle this in the next section!
 
-## Toggling the <Todo /> templates
+## Toggling the `<Todo />` templates
 
 At long last, we are ready to make our final core feature interactive. To start with, we want to call `setEditing()` with a value of `true` when a user presses the "Edit" button in our `viewTemplate`, so that we can switch templates.
 
