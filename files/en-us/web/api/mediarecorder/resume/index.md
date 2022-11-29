@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Media Capture
-  - Media Recorder API
   - MediaRecorder
   - Method
   - Reference
@@ -62,7 +61,7 @@ pause.onclick = () => {
     mediaRecorder.resume();
     // resume recording
   }
-}
+};
 ```
 
 ## Specifications

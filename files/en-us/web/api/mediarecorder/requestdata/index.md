@@ -7,7 +7,6 @@ tags:
   - Audio
   - Media
   - Media Capture
-  - Media Recorder API
   - MediaRecorder
   - MediaStream Recording
   - Method
@@ -64,7 +63,7 @@ captureMedia.onclick = () => {
   // makes snapshot available of data so far
   // ondataavailable fires, then capturing continues
   // in new Blob
-}
+};
 ```
 
 ## Specifications

@@ -4,7 +4,6 @@ slug: Web/API/MediaRecorder/state
 page-type: web-api-instance-property
 tags:
   - API
-  - Media Recorder API
   - MediaRecording
   - Property
   - Reference
@@ -37,7 +36,7 @@ record.onclick = () => {
   console.log(mediaRecorder.state);
   // Will return "recording"
   console.log("recorder started");
-}
+};
 ```
 
 ## Specifications
