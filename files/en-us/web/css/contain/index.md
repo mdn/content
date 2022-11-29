@@ -19,12 +19,13 @@ browser-compat: css.properties.contain
 {{CSSRef}}
 
 The **`contain`** [CSS](/en-US/docs/Web/CSS) property indicates that an element and its contents are, as much as possible, independent from the rest of the document tree.
-Containment allows the browser to calculate layout, style, paint, size, or any combination of these for a specific area of the DOM.
+Containment enables isolating a subsection of the DOM, providing performance benefits by limiting calculations of layout, style, paint, size, or any combination to a DOM subtree rather than the entire page. Containment can also be used to scope CSS counters.
 
 {{EmbedInteractiveExample("pages/css/contain.html")}}
 
-Changes within an element with containment applied are not propagated outside of the contained element to the rest of the page.
-The main benefit of this is that the browser does not have to re-render the DOM or page layout as often, leading to performance benefits.
+There are four types of CSS containment: size, layout,
+style, and paint, which are set on the container. The property is a space-separated list of a subset of the five standard values and / or one of the two shorthand values. Changes to the contained properties within the container are not propagated outside of the contained element to the rest of the page.
+The main benefit of containment is that the browser does not have to re-render the DOM or page layout as often, leading to small performance benefits during the rendering of static pages and greater performance benefits the more dynamic the application.
 
 Using the `contain` property is useful on pages with groups of elements that are supposed to be independent, as it can prevent element internals from having side effects outside of its bounding-box.
 
@@ -64,8 +65,9 @@ contain: unset;
 
 The `contain` property can have any of the following values:
 
-- One of the keywords `none`, `strict`, or `content` **or**
-- One or more of the keywords `size` (or `inline-size`), `layout`, `style`, and `paint` in any order.
+- The keyword `none` **or**
+- One or more of the space-separated keywords `size` (or `inline-size`), `layout`, `style`, and `paint` in any order **or**
+ - One of the shorthand values `strict` or `content`
 
 The keywords have the following meanings:
 
@@ -76,13 +78,13 @@ The keywords have the following meanings:
 - `content`
   - : All containment rules except `size` are applied to the element. This is equivalent to `contain: layout paint style`.
 - `size`
-  - : Size containment is applied to the element. The size of the element can be computed in isolation, ignoring the child elements. This value cannot be combined with `inline-size`.
+  - : Size containment is applied to the element in both the inline and block directions. The size of the element can be computed in isolation, ignoring the child elements. This value cannot be combined with `inline-size`.
 - `inline-size`
   - : Inline size containment is applied to the element. The inline size of the element can be computed in isolation, ignoring the child elements. This value cannot be combined with `size`.
 - `layout`
-  - : The internal layout of the element is isolated from the rest of the page. That means nothing outside the element affects its internal layout, and vice versa.
+  - : The internal layout of the element is isolated from the rest of the page. This means nothing outside the element affects its internal layout, and vice versa.
 - `style`
-  - : For properties that can have effects on more than just an element and its descendants, those effects don't escape the containing element. Counters and quotes are scoped to the element and its contents.
+  - : For properties that can affect more than just an element and its descendants, the effects don't escape the containing element. Counters and quotes are scoped to the element and its contents.
 - `paint`
   - : Descendants of the element don't display outside its bounds. If the containing box is offscreen, the browser does not need to paint its contained elements — these must also be offscreen as they are contained completely by that box. If a descendant overflows the containing element's bounds, then that descendant will be clipped to the containing element's border-box.
 
@@ -184,13 +186,13 @@ div {
 The first card has layout containment applied, and its layout is isolated from the rest of the page.
 We can reuse this card in other places on the page without worrying about layout recalculation of the other elements.
 If floats overlap the card bounds, elements on the rest of the page are not affected.
-The browser only needs to recalculate the containing element's subtree, and not anything outside it.
+When the browser recalculates the containing element's subtree, only that element is recalculated. Nothing outside of the contained element needs to be recalculated.
 Additionally, the fixed box uses the card as a layout container to position itself.
 
-The second card has has no containment applied.
-The fixed box in this card instead uses the root element as layout context and so the box has a fixed position in the top right corner of the page.
-Another side effect is that the layout in the third card looks broken because of the float that overlaps the second card's bounds.
-A portion of the DOM tree needs to be recalculated, and this interferes with the rest of the page layout.
+The second card has no containment applied.
+The layout context for the fixed box in this card is the root element with the box having a fixed position in the top right corner of the page.
+Without containment, the layout in the third card looks broken because the float overlaps the second card's bounds.
+Without containment, when recalculation occurs, it is not limited to the container. This impacts performance and interferes with the rest of the page layout.
 
 {{EmbedLiveSample("Layout_containment", "100%", 350)}}
 
@@ -270,7 +272,7 @@ body {
 }
 ```
 
-When containment is applied in this example, the first closing quote ignores the inner span and uses the outer span's closing quote instead:
+Because of containment, the first closing quote ignores the inner span and uses the outer span's closing quote instead:
 
 {{EmbedLiveSample('Containment_and_quotes', '100%', 40)}}
 
