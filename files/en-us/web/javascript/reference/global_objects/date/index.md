@@ -158,36 +158,44 @@ The following examples show several ways to create JavaScript dates:
 > **Note:** When parsing date strings with the `Date` constructor (and `Date.parse`, they are equivalent), always make sure that the input conforms to the [ISO 8601 format](https://tc39.es/ecma262/#sec-date-time-string-format) (`YYYY-MM-DDTHH:mm:ss.sssZ`) — the parsing behavior with other formats is implementation-defined and may not work across all browsers. A library can help if many different formats are to be accommodated.
 
 ```js
-const today = new Date()
-const birthday = new Date('December 17, 1995 03:24:00') // DISCOURAGED: may not work in all runtimes
-const birthday2 = new Date('1995-12-17T03:24:00')   // This is ISO8601-compliant and will work reliably
-const birthday3 = new Date(1995, 11, 17)            // the month is 0-indexed
-const birthday4 = new Date(1995, 11, 17, 3, 24, 0)
-const birthday5 = new Date(628021800000)            // passing epoch timestamp
+const today = new Date();
+const birthday = new Date("December 17, 1995 03:24:00"); // DISCOURAGED: may not work in all runtimes
+const birthday2 = new Date("1995-12-17T03:24:00"); // This is ISO8601-compliant and will work reliably
+const birthday3 = new Date(1995, 11, 17); // the month is 0-indexed
+const birthday4 = new Date(1995, 11, 17, 3, 24, 0);
+const birthday5 = new Date(628021800000); // passing epoch timestamp
 ```
 
 ### Formats of toString method return values
 
 ```js
 const date = new Date("2020-05-12T23:50:21.817Z");
-date.toString()               // Tue May 12 2020 18:50:21 GMT-0500 (Central Daylight Time)
-date.toDateString()           // Tue May 12 2020
-date.toTimeString()           // 18:50:21 GMT-0500 (Central Daylight Time)
-date.toISOString()            // 2020-05-12T23:50:21.817Z
-date.toUTCString()            // Tue, 12 May 2020 23:50:21 GMT
-date.toGMTString()            // Tue, 12 May 2020 23:50:21 GMT
-date.toJSON()                 // 2020-05-12T23:50:21.817Z
-date.toLocaleString()         // 5/12/2020, 6:50:21 PM
-date.toLocaleDateString()     // 5/12/2020
-date.toLocaleTimeString()     // 6:50:21 PM
+date.toString(); // Tue May 12 2020 18:50:21 GMT-0500 (Central Daylight Time)
+date.toDateString(); // Tue May 12 2020
+date.toTimeString(); // 18:50:21 GMT-0500 (Central Daylight Time)
+date.toISOString(); // 2020-05-12T23:50:21.817Z
+date.toUTCString(); // Tue, 12 May 2020 23:50:21 GMT
+date.toGMTString(); // Tue, 12 May 2020 23:50:21 GMT
+date.toJSON(); // 2020-05-12T23:50:21.817Z
+date.toLocaleString(); // 5/12/2020, 6:50:21 PM
+date.toLocaleDateString(); // 5/12/2020
+date.toLocaleTimeString(); // 6:50:21 PM
 ```
 
 ### To get Date, Month and Year or Time
 
 ```js
 const date = new Date();
-const [month, day, year] = [date.getMonth(), date.getDate(), date.getFullYear()];
-const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSeconds()];
+const [month, day, year] = [
+  date.getMonth(),
+  date.getDate(),
+  date.getFullYear(),
+];
+const [hour, minutes, seconds] = [
+  date.getHours(),
+  date.getMinutes(),
+  date.getSeconds(),
+];
 ```
 
 ### Interpretation of two-digit years
@@ -196,12 +204,14 @@ const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSe
 
 ```js
 let date = new Date(98, 1); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
-date = new Date(22, 1);     // Wed Feb 01 1922 00:00:00 GMT+0000 (GMT)
-date = new Date("2/1/22");  // Tue Feb 01 2022 00:00:00 GMT+0000 (GMT)
+date = new Date(22, 1); // Wed Feb 01 1922 00:00:00 GMT+0000 (GMT)
+date = new Date("2/1/22"); // Tue Feb 01 2022 00:00:00 GMT+0000 (GMT)
 
 // Legacy method; always interprets two-digit year values as relative to 1900
-date.setYear(98); date.toString(); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
-date.setYear(22); date.toString(); // Wed Feb 01 1922 00:00:00 GMT+0000 (GMT)
+date.setYear(98);
+date.toString(); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
+date.setYear(22);
+date.toString(); // Wed Feb 01 1922 00:00:00 GMT+0000 (GMT)
 ```
 
 So, to create and get dates between the years `0` and `99`, instead use the preferred {{jsxref("Date.prototype.setFullYear()", "setFullYear()")}} and {{jsxref("Date.prototype.getFullYear()", "getFullYear()")}} methods:.
@@ -209,8 +219,10 @@ So, to create and get dates between the years `0` and `99`, instead use the pref
 ```js
 // Preferred method; never interprets any value as being a relative offset,
 // but instead uses the year value as-is
-date.setFullYear(98); date.getFullYear(); // 98 (not 1998)
-date.setFullYear(22); date.getFullYear(); // 22 (not 1922, not 2022)
+date.setFullYear(98);
+date.getFullYear(); // 98 (not 1998)
+date.setFullYear(22);
+date.getFullYear(); // 22 (not 1922, not 2022)
 ```
 
 ### Calculating elapsed time

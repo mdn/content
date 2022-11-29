@@ -65,6 +65,7 @@
     "es": "Métodos de instancia",
     "fr": "Méthodes d'instance",
     "ja": "インスタンスメソッド",
+    "pt-BR": "Métodos de instância",
     "zh-CN": "实例方法",
     "zh-TW": "實體方法"
   },
@@ -73,6 +74,7 @@
     "es": "Propiedades de instancia",
     "fr": "Propriétés d'instance",
     "ja": "インスタンスプロパティ",
+    "pt-BR": "Propriedades de instância",
     "zh-CN": "实例属性",
     "zh-TW": "實體屬性"
   },
@@ -150,6 +152,7 @@
     "es": "Métodos estáticos",
     "fr": "Méthodes statiques",
     "ja": "静的メソッド",
+    "pt-BR": "Métodos estáticos",
     "zh-CN": "静态方法",
     "zh-TW": "靜態方法"
   },
@@ -158,6 +161,7 @@
     "es": "Propiedades estáticas",
     "fr": "Propriétés statiques",
     "ja": "静的プロパティ",
+    "pt-BR": "Propriedades estáticas",
     "zh-CN": "静态属性",
     "zh-TW": "靜態屬性"
   },

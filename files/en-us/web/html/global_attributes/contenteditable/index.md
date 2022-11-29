@@ -45,4 +45,4 @@ You can set the color used to draw the text insertion {{Glossary("caret")}} with
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes)
 - {{domxref("HTMLElement.contentEditable")}} and {{domxref("HTMLElement.isContentEditable")}}
 - The CSS {{cssxref("caret-color")}} property
-- [`HTMLElement` `input` event](/en-US/docs/Web/API/HTMLElement/input_event)
+- [HTMLElement `input` event](/en-US/docs/Web/API/HTMLElement/input_event)

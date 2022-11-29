@@ -1,5 +1,5 @@
 ---
-title: 'HTML attribute: minlength'
+title: "HTML attribute: minlength"
 slug: Web/HTML/Attributes/minlength
 tags:
   - Attribute
@@ -62,5 +62,5 @@ input:invalid:focus {
 - [`size`](/en-US/docs/Web/HTML/Attributes/size)
 - [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern)
 - [Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
-- [Constraint validation API](/en-US/docs/Web/API/Constraint_validation)
+- [Form validation](/en-US/docs/Learn/Forms/Form_validation)
 - {{htmlelement('input')}}
