@@ -23,13 +23,13 @@ A string.
 
 ### Logging server timing entries
 
-Given a {{HTTPHeader("Server-Timing")}} header with the name `cache`:
+Server timing metrics require the server to send the {{HTTPHeader("Server-Timing")}} header. For example:
 
 ```http
 Server-Timing: cache;desc="Cache Read";dur=23.2
 ```
 
-You can use a {{domxref("PerformanceObserver")}} to watch for {{domxref("PerformanceServerTiming")}} entries as they are recorded.
+Then use a {{domxref("PerformanceObserver")}} to watch for {{domxref("PerformanceServerTiming")}} entries as they are recorded.
 
 ```js
 const observer = new PerformanceObserver((list) => {

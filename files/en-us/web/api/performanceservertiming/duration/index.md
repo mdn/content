@@ -12,7 +12,7 @@ browser-compat: api.PerformanceServerTiming.duration
 
 {{APIRef("Performance API")}}
 
-The **`duration`** read-only property returns a double that contains the server-specified metric duration, or value `0.0`.
+The **`duration`** read-only property returns a double that contains the server-specified metric duration, or the value `0.0`.
 
 ## Value
 
@@ -22,13 +22,13 @@ A number.
 
 ### Logging server timing entries
 
-Given a {{HTTPHeader("Server-Timing")}} header with a duration of `23.2`:
+Server timing metrics require the server to send the {{HTTPHeader("Server-Timing")}} header. For example:
 
 ```http
 Server-Timing: cache;desc="Cache Read";dur=23.2
 ```
 
-You can use a {{domxref("PerformanceObserver")}} to watch for {{domxref("PerformanceServerTiming")}} entries as they are recorded.
+Then use a {{domxref("PerformanceObserver")}} to watch for {{domxref("PerformanceServerTiming")}} entries as they are recorded.
 
 ```js
 const observer = new PerformanceObserver((list) => {

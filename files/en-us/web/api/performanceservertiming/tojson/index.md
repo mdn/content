@@ -34,13 +34,13 @@ A {{jsxref("JSON")}} object that is the serialization of the {{domxref("Performa
 
 ### Logging server timing entries
 
-Given this {{HTTPHeader("Server-Timing")}} header:
+Server timing metrics require the server to send the {{HTTPHeader("Server-Timing")}} header. For example:
 
 ```http
 Server-Timing: cache;desc="Cache Read";dur=23.2
 ```
 
-You can use a {{domxref("PerformanceObserver")}} to watch for {{domxref("PerformanceServerTiming")}} entries as they are recorded.
+Then use a {{domxref("PerformanceObserver")}} to watch for {{domxref("PerformanceServerTiming")}} entries as they are recorded.
 
 ```js
 const observer = new PerformanceObserver((list) => {
