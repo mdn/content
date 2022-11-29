@@ -6,7 +6,6 @@ tags:
   - API
   - Audio
   - Media Capture
-  - Media Recorder API
   - MediaRecorder
   - Event
   - Reference
@@ -15,7 +14,7 @@ tags:
 browser-compat: api.MediaRecorder.pause_event
 ---
 
-{{APIRef("Media Recorder API")}}
+{{APIRef("MediaStream Recording")}}
 
 The `pause` event is thrown as a result of the
 {{domxref("MediaRecorder.pause()")}} method being invoked.
@@ -45,17 +44,17 @@ pause.onclick = () => {
     mediaRecorder.resume();
     // resume recording
   }
-}
+};
 
 mediaRecorder.onpause = () => {
   // do something in response to
   // recording being paused
-}
+};
 
 mediaRecorder.onresume = () => {
   // do something in response to
   // recording being resumed
-}
+};
 ```
 
 ## Instance properties

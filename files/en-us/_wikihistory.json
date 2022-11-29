@@ -104719,42 +104719,6 @@
       "stav"
     ]
   },
-  "Web/JavaScript/About_JavaScript": {
-    "modified": "2020-03-12T19:35:23.320Z",
-    "contributors": [
-      "fscholz",
-      "dominicegginton",
-      "aplaskota",
-      "HMVisuality",
-      "Nooshu1234",
-      "chraiet",
-      "hadleyel",
-      "jsx",
-      "galambalazs",
-      "pierreneter",
-      "Saliene",
-      "Sheppy",
-      "xfq",
-      "claudepache",
-      "velvel53",
-      "ethertank",
-      "markg",
-      "Sonrisa",
-      "inma_610",
-      "Dhtmlkitchen@gmail.com",
-      "99corps",
-      "Cnmahj",
-      "MookyMa",
-      "Pd",
-      "George3",
-      "Dan Smith",
-      "Mgjbot",
-      "DavidCary",
-      "BenoitL",
-      "Hillman",
-      "Dria"
-    ]
-  },
   "Web/JavaScript/Closures": {
     "modified": "2020-12-11T05:04:54.583Z",
     "contributors": [
@@ -106492,33 +106456,6 @@
       "Marcoos",
       "Callek",
       "stav"
-    ]
-  },
-  "Web/JavaScript/Reference/About": {
-    "modified": "2020-03-12T19:36:12.835Z",
-    "contributors": [
-      "fscholz",
-      "Sheppy",
-      "kdex",
-      "ziyunfei",
-      "dbruant",
-      "arasbm",
-      "Huan",
-      "ethertank",
-      "Wladimir_Palant",
-      "jswisher",
-      "Vinícius Albuquerque",
-      "user01",
-      "Sevenspade",
-      "Cnmahj",
-      "BenoitL",
-      "Waldo",
-      "Nickolay",
-      "Mgjbot",
-      "Taken",
-      "George3",
-      "Marcoos",
-      "Dria"
     ]
   },
   "Web/JavaScript/Reference/Classes": {

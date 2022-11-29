@@ -6,7 +6,6 @@ tags:
   - API
   - Audio
   - Media Capture
-  - Media Recorder API
   - MediaRecorder
   - Event
   - Reference
@@ -15,7 +14,7 @@ tags:
 browser-compat: api.MediaRecorder.start_event
 ---
 
-{{APIRef("Media Recorder API")}}
+{{APIRef("MediaStream Recording")}}
 
 The `start` event is fired when
 {{domxref("MediaRecorder.start()")}} is called. At this point, the data
@@ -41,12 +40,12 @@ A generic {{domxref("Event")}}.
 record.onclick = () => {
   mediaRecorder.start();
   console.log("recorder started");
-}
+};
 
 mediaRecorder.onstart = () => {
   // do something in response to
   // recording being started
-}
+};
 ```
 
 ## Instance properties

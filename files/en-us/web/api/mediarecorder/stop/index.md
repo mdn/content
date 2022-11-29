@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Media Capture
-  - Media Recorder API
   - MediaRecorder
   - Method
   - Reference
@@ -56,7 +55,7 @@ is "inactive" — it makes no sense to stop media capture if it is already stopp
 stop.onclick = () => {
   mediaRecorder.stop();
   console.log("recorder stopped, data available");
-}
+};
 ```
 
 ## Specifications
