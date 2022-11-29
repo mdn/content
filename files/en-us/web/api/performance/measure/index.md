@@ -22,12 +22,18 @@ The named timestamp is referred to as a _measure_.
 
 ```js-nolint
 measure(measureName)
-measure(measureName, measureOptions)
 measure(measureName, startMark)
 measure(measureName, startMark, endMark)
+measure(measureName, measureOptions)
+measure(measureName, measureOptions, endMark)
 ```
 
 If only `measureName` is specified, the start timestamp is set to zero, and the end timestamp (which is used to calculate the duration) is the value that would be returned by {{domxref("Performance.now()")}}.
+
+You can use strings to identify {{domxref("PerformanceMark")}} objects as start and end marks.
+
+To only provide an `endMark`, you need to provide an empty `measureOptions` object:
+`performance.measure("myMeasure", {}, "myEndMarker")`.
 
 ### Parameters
 
@@ -37,24 +43,28 @@ If only `measureName` is specified, the start timestamp is set to zero, and the 
 
 - `measureOptions` {{optional_inline}}
 
-  - : An object that may contain measure options. If this object is given as a parameter, the `startMark` and `endMark` parameters must both be omitted.
+  - : An object that may contain measure options.
 
-    - `detail`
+    - `detail` {{optional_inline}}
       - : Arbitrary metadata to be included in the measure. Defaults to `null`. Must be [structured-clonable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
-    - `start`
-      - : Timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the start time, or string to be used as start mark.
-        If this represents the name of a start mark, then it is defined in the same way as `startMark`.
-    - `duration`
+    - `start` {{optional_inline}}
+
+      - : Timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the start time, or string that names a {{domxref("PerformanceMark")}} to use for the start time.
+
+        If this is a string naming a {{domxref("PerformanceMark")}}, then it is defined in the same way as `startMark`.
+
+    - `duration` {{optional_inline}}
       - : Duration between the start and end mark times. If omitted, this defaults to {{domxref("performance.now()")}}; the time that has elapsed since the context was created. If provided, you must also specify either `start` or `end` but not both.
-    - `end`
-      - : Timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the end time, or string to be used as end mark.
-        If this represents the name of an end mark, then it is defined in the same way as `endMark`.
+    - `end` {{optional_inline}}
+      - : Timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the end time, or string that names a {{domxref("PerformanceMark")}} to use for the end time.
+
+        If this is a string naming a {{domxref("PerformanceMark")}}, then it is defined in the same way as `endMark`.
 
 - `startMark` {{optional_inline}}
-  - : A string representing the name of the measure's starting mark.
-
+  - : A string naming a {{domxref("PerformanceMark")}} in the performance timeline. The {{domxref("PerformanceEntry.startTime")}} property of this mark will be used for calculating the measure.
 - `endMark` {{optional_inline}}
-  - : A string representing the name of the measure's ending mark.
+  - : A string naming a {{domxref("PerformanceMark")}} in the performance timeline. The {{domxref("PerformanceEntry.startTime")}} property of this mark will be used for calculating the measure.
+    If you want to pass this argument, you must also pass either `startMark` or an empty `measureOptions` object.
 
 ### Return value
 
@@ -130,7 +140,7 @@ To do more advanced measurements, you can pass a `measureOptions` parameter. For
 ```js
 performance.measure("login-click", {
   start: myClickEvent.timeStamp,
-  end: myMarker.startTime
+  end: myMarker.startTime,
 });
 ```
 
@@ -142,7 +152,7 @@ You can use the `details` property to provide additional information of any type
 performance.measure("login-click", {
   detail: { htmlElement: myElement.id },
   start: myClickEvent.timeStamp,
-  end: myMarker.startTime
+  end: myMarker.startTime,
 });
 ```
 
