@@ -142,7 +142,7 @@ The following table briefly describes these data types.
     <tr>
       <td>{{domxref("Node")}}</td>
       <td>
-        Every object located within a document is a node of some kind. In an
+        Every object located within a document is a node of some kind. In a
         HTML document, an object can be an element node but also a text node or
         attribute node.
       </td>
@@ -159,7 +159,7 @@ The following table briefly describes these data types.
         <code>element</code> objects implement the DOM
         <code>Element</code> interface and also the more basic
         <code>Node</code> interface, both of which are included together in this
-        reference. In an HTML document, elements are further enhanced by the
+        reference. In a HTML document, elements are further enhanced by the
         HTML DOM API's {{domxref("HTMLElement")}} interface as well as
         other interfaces describing capabilities of specific kinds of elements
         (for instance, {{domxref("HTMLTableElement")}} for
