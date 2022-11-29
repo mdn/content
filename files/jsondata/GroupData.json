@@ -797,16 +797,6 @@
       "properties": ["Navigator.mediaDevices"],
       "events": ["HTMLMediaElement: ended", "HTMLMediaElement: ratechange"]
     },
-    "Media Recorder API": {
-      "overview": ["Media Recorder API"],
-      "interfaces": ["MediaRecorder", "BlobEvent"],
-      "methods": [],
-      "properties": ["window.MediaRecorder"],
-      "events": [],
-      "dictionaries": ["MediaRecorderOptions", "BlobEventInit"],
-      "types": ["BitrateMode", "RecordingState"],
-      "callbacks": []
-    },
     "Media Session API": {
       "overview": ["Media Session API"],
       "interfaces": ["MediaMetadata", "MediaSession"],
