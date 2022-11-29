@@ -7,7 +7,6 @@ tags:
   - Audio
   - Media
   - MediaRecorder
-  - MediaRecorder API
   - MediaStream Recording
   - Property
   - Reference
@@ -48,18 +47,19 @@ about media types and how they're used in web content and by web browsers.
 
 ```js
 if (navigator.mediaDevices) {
-  console.log('getUserMedia supported.');
+  console.log("getUserMedia supported.");
 
   const constraints = { audio: true, video: true };
   const chunks = [];
 
-  navigator.mediaDevices.getUserMedia(constraints)
+  navigator.mediaDevices
+    .getUserMedia(constraints)
     .then((stream) => {
       const options = {
         audioBitsPerSecond: 128000,
         videoBitsPerSecond: 2500000,
-        mimeType: 'video/mp4'
-      }
+        mimeType: "video/mp4",
+      };
       const mediaRecorder = new MediaRecorder(stream, options);
       m = mediaRecorder;
 

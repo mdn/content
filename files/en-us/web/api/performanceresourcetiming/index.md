@@ -61,6 +61,8 @@ The interface also supports the following properties which are listed in the ord
   - : A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts requesting the resource from the server.
 - {{domxref('PerformanceResourceTiming.responseStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the first byte of the response from the server.
+- {{domxref('PerformanceResourceTiming.responseStatus')}} {{experimental_inline}} {{ReadOnlyInline}}
+  - : A number representing the HTTP response status code returned when fetching the resource.
 - {{domxref('PerformanceResourceTiming.responseEnd')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the last byte of the resource or immediately before the transport connection is closed, whichever comes first.
 - {{domxref('PerformanceResourceTiming.transferSize')}} {{ReadOnlyInline}}
