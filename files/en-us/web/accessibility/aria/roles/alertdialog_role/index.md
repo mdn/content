@@ -100,7 +100,6 @@ The code snippet above shows how to mark up an alert dialog that only provides a
 - [`Window.alert()`](/en-US/docs/Web/API/Window/alert)
 - [`Window.prompt()`](/en-US/docs/Web/API/Window/prompt)
 
-
 <section id="Quick_links">
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
