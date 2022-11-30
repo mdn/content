@@ -14,7 +14,7 @@ browser-compat: api.HTMLDialogElement.close_event
 
 {{ APIRef() }}
 
-The `close` event is fired on an `HTMLDialogElement` object when the dialog it represents has been closed.
+The `close` event is fired on an `HTMLDialogElement` object when the {{htmlelement("dialog")}} it represents has been closed.
 
 This event is not cancelable and does not bubble.
 
