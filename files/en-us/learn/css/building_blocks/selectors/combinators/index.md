@@ -112,7 +112,7 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-This is the last section in our lessons on selectors. Next, we'll move on to another important part of CSS — the [cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
+This is the last section in our lessons on selectors. Next, we'll move on to another important part of CSS — the [cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
 
