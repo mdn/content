@@ -42,7 +42,7 @@ encrypt(algorithm, key, data)
 
           Unless your application calls for a label, you can just omit this argument and it will not affect the security of the encryption operation.
 
-    - To use [AES-CBC](#aes-cbc) or [AES-GCM](#aes-gcm) pass an object with the properties given below: <!-- AesGcmParams dictionary in the spec -->
+    - To use [AES-CBC](#aes-cbc) pass an object with the properties given below: <!-- AesGcmParams dictionary in the spec -->
 
       - `name`
         - : A string indicating the name of the algorithm: `AES-CBC`, `AES-GCM`.
@@ -50,7 +50,31 @@ encrypt(algorithm, key, data)
         - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
           The initialization vector.
           Must be 16 bytes, unpredictable, and preferably cryptographically random.
-          However, it need not be secret (for example, it may be transmitted unencrypted along with the ciphertext).
+          However, it need not be secret (for example, it may be transmitted unencrypted along with the ciphertext). 
+
+    - To use [AES-GCM](#aes-gcm) pass an object with the properties given below: <!-- AesGcmParams dictionary in the spec -->
+
+      - `name`
+        - : A string indicating the name of the algorithm: `AES-CBC`, `AES-GCM`.
+      - `iv`
+        - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
+          The initialization vector.
+          Must be 16 bytes, unpredictable, and preferably cryptographically random.
+          However, it need not be secret (for example, it may be transmitted unencrypted along with the ciphertext). 
+       - `additionalData` {{optional_inline}}
+         - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}. This contains additional data that will not be encrypted but will be authenticated along with the encrypted data. If `additionalData` is given here then the same data must be given in the corresponding call to [`decrypt()`](/en-US/docs/Web/API/SubtleCrypto/decrypt): if the data given to the `decrypt()` call does not match the original data, the decryption will throw an exception. This gives you a way to authenticate associated data without having to encrypt it.
+
+           The bit length of `additionalData` must be smaller than `2^64 - 1`.
+
+           The `additionalData` property is optional and may be omitted without compromising the security of the encryption operation.
+
+      - `tagLength` {{optional_inline}}
+
+        - : A `Number`. This determines the size in bits of the authentication tag generated in the encryption operation and used for authentication in the corresponding decryption.
+
+           According to the [Web Crypto specification](https://www.w3.org/TR/WebCryptoAPI/#dfn-AesGcmParams) this must have one of the following values: 32, 64, 96, 104, 112, 120, or 128. The AES-GCM specification recommends that it should be 96, 104, 112, 120 or 128, although 32 or 64 bits may be acceptable in some applications: [Appendix C of the specification](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf#%5B%7B%22num%22%3A92%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C0%2C792%2Cnull%5D) provides additional guidance here.
+
+           `tagLength` is optional and defaults to 128 if it is not specified.
 
     - To use [AES-CTR](#aes-ctr), pass an object with the following properties: <!-- AesCtrParams dictionary in the spec -->
 
