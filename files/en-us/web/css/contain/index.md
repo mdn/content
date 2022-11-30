@@ -190,10 +190,11 @@ If floats overlap the card bounds, elements on the rest of the page are not affe
 When the browser recalculates the containing element's subtree, only that element is recalculated. Nothing outside of the contained element needs to be recalculated.
 Additionally, the fixed box uses the card as a layout container to position itself.
 
-The second card has no containment applied.
-The layout context for the fixed box in this card is the root element with the box having a fixed position in the top right corner of the page.
-Without containment, the layout in the third card looks broken because the float overlaps the second card's bounds.
-Without containment, when recalculation occurs, it is not limited to the container. This impacts performance and interferes with the rest of the page layout.
+The second and third cards have no containment.
+The layout context for the fixed box in the second card is the root element so the fixed box is positioned in the top right corner of the page.
+A float overlaps the second card's bounds causing the third card to have unexpected layout shift that's visible in the positioning of the `<h2>` element.
+When recalculation occurs, it is not limited to a container.
+This impacts performance and interferes with the rest of the page layout.
 
 {{EmbedLiveSample("Layout_containment", "100%", 350)}}
 
