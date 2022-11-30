@@ -309,7 +309,7 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree:
    git checkout -b deleting-a11y
    ```
 
-2. Run the `delete` command:
+2. Run the `yarn content delete` command:
 
    ```sh
    yarn content delete Learn/Accessibility --recursive
@@ -349,7 +349,7 @@ You may do this using the `yarn content add-redirect` command:
    git checkout -b deleting-a11y
    ```
 
-2. Add a redirect. The target page can a page on MDN or an external URL:
+2. Add a redirect with `yarn content add-redirect`. The target page can a page on MDN or an external URL:
 
    ```sh
    yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
