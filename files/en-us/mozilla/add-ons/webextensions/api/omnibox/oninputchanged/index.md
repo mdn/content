@@ -134,5 +134,3 @@ browser.omnibox.onInputEntered.addListener((url, disposition) => {
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/omnibox/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
