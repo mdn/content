@@ -231,7 +231,7 @@ There are a few things to keep in mind:
 
 ### Moving documents
 
-Moving one or more documents, or an entire tree of documents is made easier due to a special command that takes care of the details:
+Moving one or more documents, or an entire tree of documents is made easier with the `yarn content move` command that takes care of the details:
 
 ```sh
 yarn content move <from-slug> <to-slug> [locale]
@@ -287,8 +287,9 @@ yarn content delete <document-slug> [locale]
 > Don't delete directories from the repo, as `yarn content delete` also handles other necessary changes such as updating the `_wikihistory.json` file.
 
 To use `yarn content delete`, provide the slug of the document you'd like to delete (e.g., `Learn/Accessibility`), and the locale as an optional second argument (this defaults to `en-US`).
-If the document has child documents (i.e. it represents a document tree), you must specify the `-r, --recursive` option, or
-the command will fail.
+If the document has child documents (i.e. it represents a document tree), you must specify the `-r, --recursive` option or the command will fail.
+You may also use `--redirect` to redirect the deleted document to another document.
+An example of using `--redirect` is described in the step-by-step guide below.
 
 Say you want to delete the entire `/en-US/Learn/Accessibility` tree:
 
@@ -304,10 +305,16 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree:
    git checkout -b deleting-a11y
    ```
 
-2. Perform the delete:
+2. Run the `delete` command:
 
    ```sh
    yarn content delete Learn/Accessibility --recursive
+   ```
+
+   For convenience, you can [add a redirect](#redirecting-a-document) with this command:
+
+   ```sh
+   yarn content delete Learn/Accessibility --recursive --redirect MDN/Contribute
    ```
 
    > If the slug of the page you wish to delete contains special characters, include it in quotes:
@@ -316,9 +323,7 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree:
    > yarn content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"
    > ```
 
-3. [Add a redirect](#redirecting-a-document) (if needed).
-
-4. Commit all of the changes and push your branch to the remote:
+3. Commit all of the changes and push your branch to the remote:
 
    ```sh
    git add .
@@ -330,9 +335,9 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree:
 ### Redirecting a document
 
 If you are [moving a document](#moving-one-or-more-documents) as shown above you don't need to create a redirect.
-However, you may need to when [deleting a document](#deleting-a-document) or otherwise fixing up a broken link.
+However, you may need to after [deleting a document](#deleting-a-document) without the `--redirect` flag or when fixing a broken link.
 
-The best way to do this is to use the `yarn content add-redirect` command:
+You may do this using the `yarn content add-redirect` command:
 
 1. Start a fresh branch to work in:
 
@@ -346,7 +351,7 @@ The best way to do this is to use the `yarn content add-redirect` command:
    git checkout -b deleting-a11y
    ```
 
-2. Add a redirect. The target page can a page on MDN or an external URL.
+2. Add a redirect. The target page can a page on MDN or an external URL:
 
    ```sh
    yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
