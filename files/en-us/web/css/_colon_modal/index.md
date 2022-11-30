@@ -32,7 +32,7 @@ Examples of elements that will prevent user interaction with the rest of the pag
 
 ### Styling a modal dialog
 
-This example styles a modal dialog that opens when the "Update details" button is activated. This example has been built on top of the dialog element [example](/en-US/docs/Web/HTML/Element/dialog#advanced_example).
+This example styles a modal dialog that opens when the "Update details" button is activated. This example has been built on top of the {{HTMLElement('dialog')}} element [example](/en-US/docs/Web/HTML/Element/dialog#advanced_example).
 
 ```html hidden
 <!-- Simple modal dialog containing a form -->
@@ -81,10 +81,7 @@ const confirmBtn = favDialog.querySelector("#confirmBtn");
 // dialog contents by default.
 if (typeof favDialog.showModal !== "function") {
   favDialog.hidden = true;
-  /* a fallback script to allow this dialog/form to function
-     for legacy browsers that do not support <dialog>
-     could be provided here.
-  */
+  /* a fallback script */
 }
 // "Update details" button opens the <dialog> modally
 updateButton.addEventListener("click", () => {
@@ -92,7 +89,7 @@ updateButton.addEventListener("click", () => {
     favDialog.showModal();
   } else {
     outputBox.value =
-      "Sorry, the <dialog> API is not supported by this browser.";
+      "Sorry, the dialog API is not supported by this browser.";
   }
 });
 // "Favorite animal" input sets the value of the submit button
