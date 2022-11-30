@@ -10,70 +10,158 @@ tags:
 
 {{DefaultAPISidebar("Performance API")}}
 
-A fundamental requirement of web performance is a precise and consistent definition of _time._ The {{domxref("DOMHighResTimeStamp")}} type (a `double`) is used by all performance interfaces to hold such time values. Additionally, there must be a way to create a _timestamp_ for a specific point in time; this is done with the {{domxref("Performance.now","now()")}} method.
+While a web application is running, the browser collects data that records various aspects of its performance, such as:
 
-Web performance interfaces are defined in a [suite of standards](https://www.w3.org/wiki/Web_Performance/Publications). The _base_ interface for these standards is the {{domxref("Performance")}} interface and its methods and properties are extended by different standards. This guide describes how to use the {{domxref("Performance")}} interfaces that are defined in the [High-Resolution Time](https://w3c.github.io/hr-time/) standard. Other web performance guides (listed in the [See also](#see_also) section) describe how to use additional methods and properties of the {{domxref("Performance")}} interface.
+- how long event handlers take to run
+- how long it takes the browser to fetch resources such as images
+- which paint operations take a long time to execute
 
-## High precision timing
+The Performance API gives web developers access to these metrics, and also enables them to record their own custom metrics that are associated with various events or locations in the code.
 
-_High precision timing_ is achieved by using the {{domxref("DOMHighResTimeStamp")}} type for time values. The unit is milliseconds and should be accurate to 5 µs (microseconds). However, if the browser is unable to provide a time value accurate to 5 microseconds (because of hardware or software constraints, for example), the browser can represent the value as a time in milliseconds accurate to a millisecond.
+## Overview
 
-The following code example shows the use of {{domxref("DOMHighResTimeStamp")}} and the {{domxref("Performance.now","Performance.now()")}} method. The {{domxref("Performance.now","now()")}} method returns a _timestamp_ (of type {{domxref("DOMHighResTimeStamp")}}) that is a discrete point in time. By calling this method before and after a task, the time it takes to do the task can be measured.
+### Performance entries
+
+A single recorded performance metric is called a _performance entry_ and is represented by an instance of the {{domxref("PerformanceEntry")}} interface.
+
+The Performance API records various different types of performance metric, and the `PerformanceEntry` has an {{domxref("PerformanceEntry.entryType", "entryType")}} property which is a string describing the type of this performance entry:
+
+- `"element"` records how long it takes an element to load and render
+- `"event"` records how long it took the browser to start running an event handler in response to its trigger, and how long the event handler took to run
+- `"first-input"` records the {{Glossary("First input delay")}}
+- `"largest-contentful-paint"` records the largest paint during page load
+- `"layout-shift"` records a metric representing how much the page layout has shifted in each animation frame
+- `"longtask"` records tasks that took 50ms or more
+- `"mark"` records a custom timestamp made by the developer
+- `"measure"` records a custom measurement between two timestamps made by the developer
+- `"navigation"` records metrics associated with navigating to and initial load of the page
+- `"paint"` records key moments of rendering during page load
+- `"resource"` records how long it took the browser to fetch a resource
+
+#### Performance entry subclasses
+
+Particular entry types typically include extra type-specific data: for example, the `"resource"` type captures the time at which DNS lookup started and ended. So entries are represented by subclasses that extend the basic `PerformanceEntry` interface. For example, a `"resource"` entry is represented by an instance of {{domxref("PerformanceResourceTiming")}}, which inherits from `PerformanceEntry`, and which adds properties to record DNS lookup timestamps.
+
+The subclasses of `PerformanceEntry` also define the semantics of the properties belonging to `PerformanceEntry` itself: for example, `PerformanceEntry` has a {{domxref("PerformanceEntry.name", "name")}} property whose meaning depends on the subclass.
+
+The inheritance hierarchy for performance entries is shown below:
+
+![UML diagram of Performance APIs](diagram.svg)
+
+### Accessing performance entries
+
+You can access performance entries in one of two ways. The preferred way is to use the {{domxref("PerformanceObserver")}} interface, which is constructed with a callback function to be called when particular performancer entries are recorded. You then call its {{domxref("PerformanceObserver.observe", "observe")}} method, passing in the types to observe:
 
 ```js
-function calculate_time() {
-  let startTime;
-  let endTime;
-
-  startTime = performance.now();
-  do_task();
-  endTime = performance.now();
-
-  return (endTime - startTime);
-}
-```
-
-## Serializing the `Performance` object
-
-JSON serialization of the {{domxref("Performance")}} object is done via the {{domxref("Performance.toJSON","toJSON()")}} method. In the following example, JSON serialization for the {{domxref("Performance")}}, {{domxref("Performance.timing")}} and {{domxref("Performance.navigation")}} objects is printed in the `object` element.
-
-```js
-function print_json() {
-  const output = document.getElementsByTagName("output")[0];
-
-  if (window.performance.toJSON === undefined) {
-    output.textContent += `window.performance.toJSON() is NOT supported`;
-  } else {
-    const json = window.performance.toJSON();
-
-    // Print the performance object
-    output.textContent = `performance = ${JSON.stringify(json)} \n`;
-
-    // Print the performance.timing and performance.navigation objects
-    const timing = json.timing;
-    output.textContent += `performance.timing = ${JSON.stringify(timing)} \n`;
-
-    const navigation = json.navigation;
-    output.textContent += `performance.navigation = ${JSON.stringify(navigation)} \n`;
+function logEventDuration(entries) {
+  const events = entries.getEntriesByType("event");
+  for (const event of events) {
+    console.log(
+      `Event handler took: ${
+        event.processingEnd - event.processingStart
+      } milliseconds`
+    );
   }
 }
+
+const observer = new PerformanceObserver(logEventDuration);
+observer.observe({ entryTypes: ["event"] });
 ```
 
-## Specifications
+Alternatively, you can use the {{domxref("Performance.getEntries()")}}, {{domxref("Performance.getEntriesByName()")}}, and {{domxref("Performance.getEntriesByType()")}} methods to retrieve all performance entries for a page, or entries matching the given name or type.
 
-The interfaces described in this document are defined in the `High Resolution Time` standard which has two levels:
+```js
+const events = performance.getEntriesByType("event");
 
-- [High-Resolution Time Level 2](https://w3c.github.io/hr-time/); Editors Draft; Work In Progress
-- [High-Resolution Time](https://www.w3.org/TR/hr-time/); W3C Recommendation 17 December 2012
+for (const event of events) {
+  console.log(
+    `Event handler took: ${
+      event.processingEnd - event.processingStart
+    } milliseconds`
+  );
+}
+```
 
-## Interoperability
+The `PerformanceObserver` option is preferred because:
 
-As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/en-US/docs/Web/API/Performance#browser_compatibility) table, most of the {{domxref("Performance")}} interfaces are broadly implemented by desktop browsers.
+- The `getEntries*` methods will always return all relevant entries since the start of the timeline, so if you call it twice, you will see the same entries again and will need to filter out entries that you've seen before.
+- Observer notifications are delivered asynchronously, so the browser can dispatch them during idle time to minimise their performance impact.
 
-## See also
+## Performance entry types
 
-- {{domxref("Performance_API","Performance API Overview")}}
-- [A Primer for Web Performance Timing APIs](https://siusin.github.io/perf-timing-primer/)
-- [Graphic of Web Performance Layers](https://docs.google.com/document/d/1ZKW9N0cteHgK91SyYQONFuy2ZW6J4Oak398niTo232E/edit)
-- [CanIUse data for High-Resolution Time](https://caniuse.com/#search=high-resolution-time)
-- [Web Performance Standards Status and Roadmap](https://www.w3.org/wiki/Web_Performance/Publications)
+In the next sections we'll provide an overview of each of the entry types supported by the Performance API.
+
+### `"event"`
+
+The `"event"` performance entry type measures the latency of DOM events in your application: that is, the time between a user triggering an event and the application updating in response. Event latency is important to perceived performance in part because events are often tied to user actions: a user does something in the application and an event handler runs in response, so slow event handlers make an application feel unresponsive. Research suggests that [100 milliseconds is about the point where actions no longer feel instantaneous](https://www.nngroup.com/articles/response-times-3-important-limits/).
+
+The Performance API records two different aspects of event latency:
+
+- The time difference between the event being created (this is an approximation of the time the user input occurred) and the event handler being run. This is also called the event's _delay_.
+- The time the event handler itself takes to run.
+
+Event performance entries are recorded as instances of the {{domxref("PerformanceEventTiming")}} subclass of `PerformanceEntry`. This subclass adds {{domxref("PerformanceEventTiming.processingStart", "processingStart")}} and {{domxref("PerformanceEventTiming.processingEnd", "processingEnd")}} properties, that are timestamps recording the start and end of the event handler's execution.
+
+The {{domxref("PerformanceEventTiming")}} defines the {{domxref("PerformanceEntry.startTime")}} property to be the time that the event was created, and the {{domxref("PerformanceEntry.duration")}} property to be the total event latency, between the `startTime` and the next rendering paint, rounded to the nearest 8ms.
+
+Thus:
+
+- Event delay is `processingStart - startTime`.
+- Event handler execution time is `processingEnd - processingStart`.
+
+Only event types that are triggered by user actions are recorded in the Performance API: for the full list of event types that are recorded, see the documentation for the {{domxref("PerformanceEventTiming")}} interface.
+
+Also, by default, only events whose duration exceeds 104 ms are recorded, although this threshold can be changed in the API.
+
+#### Example
+
+In this example, we log the event target, delay, handler processing time, and total latency:
+
+```js
+function logEventDuration(entries) {
+  const events = entries.getEntriesByType("event");
+  for (const event of events) {
+    console.log(`Event target: ${event.target}`);
+    console.log(
+      `Event delay: ${event.processingStart - event.startTime} milliseconds`
+    );
+    console.log(
+      `Event handler: ${
+        event.processingEnd - event.processingStart
+      } milliseconds`
+    );
+    console.log(`Event latency: ${event.duration} milliseconds`);
+  }
+}
+
+const observer = new PerformanceObserver(logEventDuration);
+observer.observe({ entryTypes: ["event"] });
+```
+
+### `"resource"`
+
+### `"mark"` and `"measure"`
+
+The `"mark"` and `"measure"` performance entry types enable developers to explicitly instrument their code, to record timing information for operations that don't necessarily map to any of the built-in timing metrics.
+
+For example, you might want to measure how long it takes to log a user into the application.
+
+- _marks_ record individual timestamps. To record a mark, call {{domxref("Performance.mark()")}}. The entry type associated with a mark is {{domxref("PerformanceMark")}}.
+- _measures_ record a measurement between two timestamps: the timestamps can be marks or any other timestamp. To record a mark, call {{domxref("Performance.measure()")}}. The entry type associated with a mark is {{domxref("PerformanceMeasure")}}.
+
+#### Example
+
+In this example we record a mark when the user starts the login process, and take a measure when they finish:
+
+```js
+loginButton.addEventListener("click", () => {
+  performance.mark("start-login");
+  // start logging the user in
+});
+
+// fires when login is complete
+loggedInUser.addEventListener("load", () => {
+  // measure from the start to now
+  performance.measure("login-duration", "start-login");
+});
+```
