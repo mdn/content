@@ -270,7 +270,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     It is also used on `rel="preload"` link types, to make sure the browser only downloads file types that it supports.
 - {{HTMLAttrDef("blocking")}}
   - : This attribute explicitly indicates that certain operations should be blocked on the fetching of an external resource. The operations that are to be blocked must be a space-separated list of blocking attributes listed below.
-    - `render`: The rendering of content on the screen is blocked
+    - `render`: The rendering of content on the screen is blocked.
 
 ### Non-standard attributes
 
