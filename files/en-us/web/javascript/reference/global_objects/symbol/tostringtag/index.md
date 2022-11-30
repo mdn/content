@@ -35,7 +35,7 @@ Object.prototype.toString.call(null);      // "[object Null]"
 
 ### Built-in toStringTag symbols
 
-Most built-in objects provide their own `@@toStringTag` property. All built-in objects' `@@toStringTag` property is not writable, not enumerable, and configurable.
+Most built-in objects provide their own `@@toStringTag` property. All built-in objects' `@@toStringTag` property is not writable, not enumerable, and not configurable.
 
 ```js
 Object.prototype.toString.call(new Map());       // "[object Map]"
