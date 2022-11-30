@@ -64,12 +64,12 @@ Let's walk through an example:
 
 Every image, `![]` and `<img>`, must include `alt` text.
 Alt attributes should be short, providing all the relevant information the image conveys.
-When writing an alt attribute, think about the valuable information of the image and how you would relay that information to someone who can read the page's content but can't load images.
+When writing the image description, think about the valuable information of the image and how you would relay that information to someone who can read the page's content but can't load images.
 
-Make sure to create an alt attribute for an image based on its context.
+Make sure the alternative text for the image is based on its context.
 If the photo of Fluffy the dog is an avatar next to a review for Yuckymeat dog food, `alt="Fluffy"` is appropriate.
 If the same photo is part of Fluffy's animal rescue adoption page, the information conveyed in the image is relevant for prospective dog parents, such as `alt="Fluffy, a tri-color terrier with very short hair, with a tennis ball in her mouth."`.
-The surrounding text likely has Fluffy's size and breed, and you would not need to include it as it would be redundant.
+The surrounding text likely has Fluffy's size and breed, so including it would be redundant.
 Refrain from describing the image in too much detail: the prospective parent does not need to know if the dog is in- or outdoors or has a red collar and a blue leash.
 
 With screenshots, write what you learn from the image, don't detail the screenshot's contents, and omit information readers don't need or already know.
