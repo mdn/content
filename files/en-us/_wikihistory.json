@@ -11778,38 +11778,6 @@
       "Sheppy"
     ]
   },
-  "MDN/Tools/KumaScript": {
-    "modified": "2020-11-30T12:49:14.386Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "ExE-Boss",
-      "fscholz",
-      "wbamberg",
-      "AndreDea",
-      "jwhitlock",
-      "pcat",
-      "jswisher",
-      "Sebastianz",
-      "xfq",
-      "escattone",
-      "Sheppy",
-      "AFBarstow",
-      "florent.maitralain",
-      "maybe",
-      "trevorh",
-      "lmorchard",
-      "groovecoder",
-      "Nickolay",
-      "kscarfone",
-      "edymtt",
-      "ashish_dgp",
-      "ethertank",
-      "teoli",
-      "Inkbug",
-      "markg"
-    ]
-  },
   "MDN/Writing_guidelines/Howto/Document_a_CSS_property": {
     "modified": "2020-02-18T19:54:27.563Z",
     "contributors": [
