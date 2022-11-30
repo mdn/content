@@ -12,12 +12,9 @@ browser-compat: api.PerformanceResourceTiming.responseEnd
 
 {{APIRef("Performance API")}}
 
-The **`responseEnd`** read-only property returns a
-{{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser receives
-the last byte of the resource or immediately before the transport connection is closed,
-whichever comes first.
+The **`responseEnd`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser receives the last byte of the resource or immediately before the transport connection is closed, whichever comes first.
 
-{{AvailableInWorkers}}
+Unlike many other `PerformanceResourceTiming` properties, the `responseEnd` property is available for cross-origin requests without the need of the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header.
 
 ## Value
 
@@ -27,34 +24,39 @@ comes first.
 
 ## Examples
 
-In the following example, the value of the `*Start` and `*End`
-properties of all "`resource`"
-{{domxref("PerformanceEntry.entryType","type")}} events are logged.
+### Measuring time to fetch (without redirects)
+
+The `responseEnd` and {{domxref("PerformanceResourceTiming.fetchStart", "fetchStart")}} properties can be used to measure the overall time it took to fetch the final resource (without redirects). If you want to include redirects, the overall time to fetch is provided in the {{domxref("PerformanceEntry.duration", "duration")}} property.
 
 ```js
-function printPerformanceEntries() {
-  // Use getEntriesByType() to just get the "resource" events
-  performance.getEntriesByType("resource")
-    .forEach((entry) => {
-      printStartAndEndProperties(entry);
-    });
-}
+const timeToFetch = entry.responseEnd - entry.fetchStart;
+```
 
-function printStartAndEndProperties(perfEntry) {
-  // Print timestamps of the *start and *end properties
-  properties = ["connectStart", "connectEnd",
-                "domainLookupStart", "domainLookupEnd",
-                "fetchStart",
-                "redirectStart", "redirectEnd",
-                "requestStart",
-                "responseStart", "responseEnd",
-                "secureConnectionStart"];
+Using a {{domxref("PerformanceObserver")}}:
 
- for (const property of properties) {
-    // Log the property
-    console.log(`… ${property} = ${perfEntry[property] ?? "NOT supported"}`);
+```js
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    const timeToFetch = entry.responseEnd - entry.fetchStart;
+    if (timeToFetch > 0) {
+      console.log(`${entry.name}: Time to fetch: ${timeToFetch}ms`);
+    }
+  });
+});
+
+observer.observe({ type: "resource", buffered: true });
+```
+
+Or using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
+
+```js
+const resources = performance.getEntriesByType("resource");
+resources.forEach((entry) => {
+  const timeToFetch = entry.responseEnd - entry.fetchStart;
+  if (timeToFetch > 0) {
+    console.log(`${entry.name}: Time to fetch: ${timeToFetch}ms`);
   }
-}
+});
 ```
 
 ## Specifications

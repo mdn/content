@@ -35,7 +35,7 @@ m dx dy
 
 In the following example there's only a point at (`10`, `10`). Note, though, that it wouldn't show up if a path was just drawn normally. For example:
 
-![A red dot is drawn on a white sqare 10 pixels down and 10 pixels to the right. This dot would not normally show but is used as an example of where the cursor will start after the "Move To" command](blank_path_area.png)
+![A red dot is drawn on a white square 10 pixels down and 10 pixels to the right. This dot would not normally show but is used as an example of where the cursor will start after the "Move To" command](blank_path_area.png)
 
 ```xml
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">

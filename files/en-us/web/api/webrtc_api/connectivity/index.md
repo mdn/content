@@ -13,7 +13,7 @@ tags:
   - WebRTC
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 This article describes how the various WebRTC-related protocols interact with one another in order to create a connection and transfer data and/or media among peers.
 

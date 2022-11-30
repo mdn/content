@@ -266,7 +266,7 @@ console.log(b); // "MDN"
 
 If the source is loaded as a [module](/en-US/docs/Web/JavaScript/Guide/Modules) (for HTML, this means adding `type="module"` to the `<script>` tag), `this` is always `undefined` at the top level.
 
-If the source is executed with [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), `this` is the same as the enclosing context for direct eval, or `globalThis` (as if it's run in a separate global script) for indirect eval.
+If the source is executed with [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), `this` is the same as the enclosing context for [direct eval](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#direct_and_indirect_eval), or `globalThis` (as if it's run in a separate global script) for indirect eval.
 
 ```js
 function test() {

@@ -42,29 +42,43 @@ function loadTexture(gl, url) {
   const border = 0;
   const srcFormat = gl.RGBA;
   const srcType = gl.UNSIGNED_BYTE;
-  const pixel = new Uint8Array([0, 0, 255, 255]);  // opaque blue
-  gl.texImage2D(gl.TEXTURE_2D, level, internalFormat,
-                width, height, border, srcFormat, srcType,
-                pixel);
+  const pixel = new Uint8Array([0, 0, 255, 255]); // opaque blue
+  gl.texImage2D(
+    gl.TEXTURE_2D,
+    level,
+    internalFormat,
+    width,
+    height,
+    border,
+    srcFormat,
+    srcType,
+    pixel
+  );
 
   const image = new Image();
   image.onload = () => {
     gl.bindTexture(gl.TEXTURE_2D, texture);
-    gl.texImage2D(gl.TEXTURE_2D, level, internalFormat,
-                  srcFormat, srcType, image);
+    gl.texImage2D(
+      gl.TEXTURE_2D,
+      level,
+      internalFormat,
+      srcFormat,
+      srcType,
+      image
+    );
 
     // WebGL1 has different requirements for power of 2 images
     // vs non power of 2 images so check if the image is a
     // power of 2 in both dimensions.
     if (isPowerOf2(image.width) && isPowerOf2(image.height)) {
-       // Yes, it's a power of 2. Generate mips.
-       gl.generateMipmap(gl.TEXTURE_2D);
+      // Yes, it's a power of 2. Generate mips.
+      gl.generateMipmap(gl.TEXTURE_2D);
     } else {
-       // No, it's not a power of 2. Turn off mips and set
-       // wrapping to clamp to edge
-       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+      // No, it's not a power of 2. Turn off mips and set
+      // wrapping to clamp to edge
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
     }
   };
   image.src = url;
@@ -106,7 +120,7 @@ So in order to prevent the resulting image texture from having the wrong orienta
 
 ```js
 // Load texture
-const texture = loadTexture(gl, 'cubetexture.png');
+const texture = loadTexture(gl, "cubetexture.png");
 // Flip image pixels into the bottom-to-top order that WebGL expects.
 gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
 ```
@@ -116,51 +130,36 @@ gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
 At this point, the texture is loaded and ready to use. But before we can use it, we need to establish the mapping of the texture coordinates to the vertices of the faces of our cube. This replaces all the previously existing code for configuring colors for each of the cube's faces in `initBuffers()`.
 
 ```js
-  const textureCoordBuffer = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, textureCoordBuffer);
+const textureCoordBuffer = gl.createBuffer();
+gl.bindBuffer(gl.ARRAY_BUFFER, textureCoordBuffer);
 
-  const textureCoordinates = [
-    // Front
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0,
-    // Back
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0,
-    // Top
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0,
-    // Bottom
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0,
-    // Right
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0,
-    // Left
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0,
-  ];
+const textureCoordinates = [
+  // Front
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+  // Back
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+  // Top
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+  // Bottom
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+  // Right
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+  // Left
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+];
 
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(textureCoordinates),
-                gl.STATIC_DRAW);
+gl.bufferData(
+  gl.ARRAY_BUFFER,
+  new Float32Array(textureCoordinates),
+  gl.STATIC_DRAW
+);
 
-  // …
-  return {
-    position: positionBuffer,
-    textureCoord: textureCoordBuffer,
-    indices: indexBuffer,
-  };
+// …
+return {
+  position: positionBuffer,
+  textureCoord: textureCoordBuffer,
+  indices: indexBuffer,
+};
 ```
 
 First, this code creates a WebGL buffer into which we'll store the texture coordinates for each face, then we bind that buffer as the array we'll be writing into.
@@ -178,7 +177,7 @@ The shader program also needs to be updated to use the textures instead of solid
 We need to replace the vertex shader so that instead of fetching color data, it instead fetches the texture coordinate data.
 
 ```js
-  const vsSource = `
+const vsSource = `
     attribute vec4 aVertexPosition;
     attribute vec2 aTextureCoord;
 
@@ -201,7 +200,7 @@ The key change here is that instead of fetching the vertex color, we're fetching
 The fragment shader likewise needs to be updated:
 
 ```js
-  const fsSource = `
+const fsSource = `
     varying highp vec2 vTextureCoord;
 
     uniform sampler2D uSampler;
@@ -219,18 +218,18 @@ Instead of assigning a color value to the fragment's color, the fragment's color
 Because we changed an attribute and added a uniform we need to look up their locations
 
 ```js
-  const programInfo = {
-    program: shaderProgram,
-    attribLocations: {
-      vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),
-      textureCoord: gl.getAttribLocation(shaderProgram, 'aTextureCoord'),
-    },
-    uniformLocations: {
-      projectionMatrix: gl.getUniformLocation(shaderProgram, 'uProjectionMatrix'),
-      modelViewMatrix: gl.getUniformLocation(shaderProgram, 'uModelViewMatrix'),
-      uSampler: gl.getUniformLocation(shaderProgram, 'uSampler'),
-    },
-  };
+const programInfo = {
+  program: shaderProgram,
+  attribLocations: {
+    vertexPosition: gl.getAttribLocation(shaderProgram, "aVertexPosition"),
+    textureCoord: gl.getAttribLocation(shaderProgram, "aTextureCoord"),
+  },
+  uniformLocations: {
+    projectionMatrix: gl.getUniformLocation(shaderProgram, "uProjectionMatrix"),
+    modelViewMatrix: gl.getUniformLocation(shaderProgram, "uModelViewMatrix"),
+    uSampler: gl.getUniformLocation(shaderProgram, "uSampler"),
+  },
+};
 ```
 
 ## Drawing the textured cube
@@ -242,28 +241,35 @@ First, the code to specify the colors buffer is gone, replaced with this:
 ```js
 // tell webgl how to pull out the texture coordinates from buffer
 {
-    const num = 2; // every coordinate composed of 2 values
-    const type = gl.FLOAT; // the data in the buffer is 32-bit float
-    const normalize = false; // don't normalize
-    const stride = 0; // how many bytes to get from one set to the next
-    const offset = 0; // how many bytes inside the buffer to start from
-    gl.bindBuffer(gl.ARRAY_BUFFER, buffers.textureCoord);
-    gl.vertexAttribPointer(programInfo.attribLocations.textureCoord, num, type, normalize, stride, offset);
-    gl.enableVertexAttribArray(programInfo.attribLocations.textureCoord);
+  const num = 2; // every coordinate composed of 2 values
+  const type = gl.FLOAT; // the data in the buffer is 32-bit float
+  const normalize = false; // don't normalize
+  const stride = 0; // how many bytes to get from one set to the next
+  const offset = 0; // how many bytes inside the buffer to start from
+  gl.bindBuffer(gl.ARRAY_BUFFER, buffers.textureCoord);
+  gl.vertexAttribPointer(
+    programInfo.attribLocations.textureCoord,
+    num,
+    type,
+    normalize,
+    stride,
+    offset
+  );
+  gl.enableVertexAttribArray(programInfo.attribLocations.textureCoord);
 }
 ```
 
 Then add code to specify the texture to map onto the faces, just before draw:
 
 ```js
-  // Tell WebGL we want to affect texture unit 0
-  gl.activeTexture(gl.TEXTURE0);
+// Tell WebGL we want to affect texture unit 0
+gl.activeTexture(gl.TEXTURE0);
 
-  // Bind the texture to texture unit 0
-  gl.bindTexture(gl.TEXTURE_2D, texture);
+// Bind the texture to texture unit 0
+gl.bindTexture(gl.TEXTURE_2D, texture);
 
-  // Tell the shader we bound the texture to texture unit 0
-  gl.uniform1i(programInfo.uniformLocations.uSampler, 0);
+// Tell the shader we bound the texture to texture unit 0
+gl.uniform1i(programInfo.uniformLocations.uSampler, 0);
 ```
 
 WebGL provides a minimum of 8 texture units; the first of these is `gl.TEXTURE0`. We tell WebGL we want to affect unit 0. We then call {{domxref("WebGLRenderingContext.bindTexture()", "bindTexture()")}} which binds the texture to the `TEXTURE_2D` bind point of texture unit 0. We then tell the shader that for the `uSampler` use texture unit 0.

@@ -24,7 +24,7 @@ that the server refuses to accept the request without a defined
 
 ## Status
 
-```plain
+```http
 411 Length Required
 ```
 
