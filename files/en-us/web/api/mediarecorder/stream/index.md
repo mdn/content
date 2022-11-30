@@ -4,7 +4,6 @@ slug: Web/API/MediaRecorder/stream
 page-type: web-api-instance-property
 tags:
   - API
-  - Media Recorder API
   - MediaRecorder
   - Property
   - Reference
@@ -27,7 +26,7 @@ The MediaStream passed into the `MediaRecorder()` constructor when the
 
 ```js
 if (navigator.getUserMedia) {
-  console.log('getUserMedia supported.');
+  console.log("getUserMedia supported.");
   navigator.getUserMedia(
     // constraints - only audio needed for this app
     {

@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Media Capture
-  - Media Recorder API
   - MediaRecorder
   - Method
   - Reference
@@ -55,9 +54,9 @@ None ({{jsxref("undefined")}}).
 
 ```js
 pause.onclick = () => {
-    mediaRecorder.pause();
-    console.log("recording paused");
-}
+  mediaRecorder.pause();
+  console.log("recording paused");
+};
 ```
 
 ## Specifications

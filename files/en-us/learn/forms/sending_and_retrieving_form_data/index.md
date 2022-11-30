@@ -333,7 +333,7 @@ If you want to learn more about securing a web application, you can dig into the
 - [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
 - [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
 - [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- **Sending form data**
 
 ### Advanced Topics
 
