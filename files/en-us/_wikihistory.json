@@ -11810,22 +11810,6 @@
       "markg"
     ]
   },
-  "MDN/Tools/KumaScript/Troubleshooting": {
-    "modified": "2020-09-30T16:47:38.105Z",
-    "contributors": [
-      "chrisdavidmills",
-      "jwhitlock",
-      "wbamberg",
-      "asmforce",
-      "Sheppy",
-      "usernamealreadyis",
-      "jswisher",
-      "wyrewolwerowany",
-      "maybe",
-      "armukul",
-      "stephaniehobson"
-    ]
-  },
   "MDN/Writing_guidelines/Howto/Document_a_CSS_property": {
     "modified": "2020-02-18T19:54:27.563Z",
     "contributors": [
