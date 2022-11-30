@@ -138,8 +138,6 @@ const observer = new PerformanceObserver(logEventDuration);
 observer.observe({ entryTypes: ["event"] });
 ```
 
-### `"resource"`
-
 ### `"mark"` and `"measure"`
 
 The `"mark"` and `"measure"` performance entry types enable developers to explicitly instrument their code, to record timing information for operations that don't necessarily map to any of the built-in timing metrics.
