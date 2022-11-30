@@ -126,7 +126,7 @@ When passing a string to one of the `console` object's methods that accepts a st
 
 - `%O`
   - : Outputs a JavaScript object. Clicking the object name opens more information about it in the inspector.
-- `%o` 
+- `%o`
   - : Outputs a representation of a JavaScript object. Output formatting is implementation-specific and intended to provide the most useful information for the given context.
 - `%d` or `%i`
   - : Outputs an integer. Number formatting is supported, for example `console.log("Foo %.2d", 1.1)` will output the number as two significant figures with a leading 0: `Foo 01`.
