@@ -836,7 +836,7 @@ We'll cover [sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_f
 - [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
 - [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
 - [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
-- [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
+- **Client-side form validation**
 - [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### Advanced Topics
