@@ -5,6 +5,8 @@ tags:
   - Security
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 ## Purpose
 
 This document outlines a set of security guidelines that will generally apply to all client applications, such as Firefox and Thunderbird.
@@ -132,7 +134,7 @@ If so ensure they are safe and that no better alternatives are available.
 
    - Can user input change the meaning of messages?
    - Can user input force system messages off the visible screen?
-   - Can user input include special characters that can change the meaning of messages (eg Unicode right-to-left override U+202E)
+   - Can user input include special characters that can change the meaning of messages (e.g. Unicode right-to-left override U+202E)
 
 4. Can an attacker use the timing of dialogs to fool the user into clicking on something they didn't intend to?
 

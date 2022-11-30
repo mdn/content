@@ -15,7 +15,7 @@ tags:
 
 Firefox:
 
-```
+```plain
 CookieBlockedAll=Request to access cookies or storage on "X" was blocked because we are blocking all storage access requests.
 ```
 

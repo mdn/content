@@ -123,7 +123,7 @@ HWB colors are expressed through the functional `hwb()` notation.
 
 In _forced colors mode_ (detectable with the [forced-colors](/en-US/docs/Web/CSS/@media/forced-colors) media query), most colors are restricted into a user- and browser-defined palette. These system colors are exposed by the following keywords, which can be used to ensure that the rest of the page integrates well with the restricted palette. These values may also be used in other contexts, but are not widely supported by browsers.
 
-The keywords in the following list are defined by the CSS Color Module Level 4 specification: `ActiveText`, `ButtonBorder`, `ButtonFace`, `ButtonText`, `Canvas`, `CanvasText`, `Field`, `FieldText`, `GrayText`, `Highlight`, `HighlightText`, `LinkText`, `Mark`, `MarkText`, `VisitedText`.
+The keywords in the following list are defined by the CSS Color Module Level 4 specification: `AccentColor`, `AccentColorText`, `ActiveText`, `ButtonBorder`, `ButtonFace`, `ButtonText`, `Canvas`, `CanvasText`, `Field`, `FieldText`, `GrayText`, `Highlight`, `HighlightText`, `LinkText`, `Mark`, `MarkText`, `SelectedItem`, `SelectedItemText`, `VisitedText`.
 
 > **Note:** Note that these keywords are _case-insensitive_, but are listed here with mixed case for readability.
 
@@ -141,7 +141,7 @@ They are not limited to a specific color space, and can represent the entire spe
 
 In fact, LCH is the polar form of Lab. It is more human friendly than Lab, as its chroma and hue components specify qualities of the desired color, as opposed to mixing.
 It is similar to HSL in that way, although it is far more perceptually uniform.
-Unlike HSL that describes both `hsl(60 100% 50%)` `hsl(240 100% 50%)` as having the same lightness, LCH (and Lab) correctly ascribes different lightnesses to them:
+Unlike HSL that describes both `hsl(60 100% 50%)` and `hsl(240 100% 50%)` as having the same lightness, LCH (and Lab) correctly ascribes different lightnesses to them:
 the former (yellow) has an L of 97.6 and the latter (blue) an L of 29.6.
 Therefore, LCH can be used to create palettes across entirely different colors, with predictable results.
 Please note that LCH hue is not the same as HSL hue and LCH chroma is not the same as HSL saturation, although they do share some conceptual similarities.

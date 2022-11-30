@@ -130,7 +130,7 @@ console.log(object[bar]);
 
 It's typical when speaking of an object's properties to make a distinction between properties and methods. However, the property/method distinction is little more than a convention. A method is a property that can be called (for example, if it has a reference to a {{jsxref("Function")}} instance as its value).
 
-A method is not bound to the object that it is a property of. Specifically, `this` is not fixed in a method and does not necessarily refer to the object containing the method. Instead, `this` is "passed" by the function call. See [method binding](/en-US/docs/Web/JavaScript/Reference/Operators/this#method_binding).
+A method is not bound to the object that it is a property of. Specifically, `this` is not fixed in a method and does not necessarily refer to the object containing the method. Instead, `this` is "passed" by the function call. See [the reference for `this`](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
 ## Examples
 

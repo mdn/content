@@ -66,6 +66,8 @@ The **`USBDevice`** interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API
   - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("USBOutTransferResult")}} when a command or status operation has been transmitted from the USB device.
 - {{domxref("USBDevice.close()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves when all open interfaces are released and the device session has ended.
+- {{domxref("USBDevice.forget()")}} {{Experimental_Inline}}
+  - : Returns a {{jsxref("Promise")}} that resolves after all open interfaces are released, the device session has ended, and the permission is reset.
 - {{domxref("USBDevice.isochronousTransferIn()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("USBIsochronousInTransferResult")}} when time sensitive information has been transmitted to the USB device.
 - {{domxref("USBDevice.isochronousTransferOut()")}} {{Experimental_Inline}}

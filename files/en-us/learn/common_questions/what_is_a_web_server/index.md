@@ -94,9 +94,9 @@ HTTP provides clear rules for how a client and server communicate. We'll cover H
 
 On a web server, the HTTP server is responsible for processing and answering incoming requests.
 
-1. Upon receiving a request, an HTTP server first checks if the requested URL matches an existing file.
-2. If so, the web server sends the file content back to the browser. If not, an application server builds the necessary file.
-3. If neither process is possible, the web server returns an error message to the browser, most commonly {{HTTPStatus("404", "404 Not Found")}}.
+1. Upon receiving a request, an HTTP server checks if the requested URL matches an existing file.
+2. If so, the web server sends the file content back to the browser. If not, the server will check if it should generate a file dynamically for the request (see [Static vs. dynamic content](#static_vs._dynamic_content)).
+3. If neither of these options are possible, the web server returns an error message to the browser, most commonly {{HTTPStatus("404", "404 Not Found")}}.
    The 404 error is so common that some web designers devote considerable time and effort to designing 404 error pages.
    [![The MDN 404 page as an example of such error page](mdn-404.jpg)](/en-US/docs/Web/HTTP/Status/404)
 

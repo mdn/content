@@ -16,10 +16,7 @@ browser-compat: api.PerformanceObserver.disconnect
 
 {{APIRef("Performance API")}}
 
-The **`disconnect()`** method of the
-{{domxref('PerformanceObserver')}} interface is used to stop the performance observer
-from receiving any {{domxref("PerformanceEntry","performance entry", '', 'true')}}
-events.
+The **`disconnect()`** method of the {{domxref('PerformanceObserver')}} interface is used to stop the performance observer from receiving any {{domxref("PerformanceEntry","performance entry", '', 'true')}} events.
 
 ## Syntax
 
@@ -37,23 +34,21 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
+### Stopping a performance observer
+
+The following example disconnects the performance observer to disable receiving any more performance entry events.
+
 ```js
 const observer = new PerformanceObserver((list, obj) => {
   list.getEntries()
     .forEach((entry) => {
-      // Process "mark" and "frame" events
+      // Process "measure" events
+      // …
+      // Disable additional performance events
+      observer.disconnect();
     });
 });
-observer.observe({ entryTypes: ["mark", "frame"] });
-
-function perfObserver(list, observer) {
-  // Process the "measure" event
-  // …
-  // Disable additional performance events
-  observer.disconnect();
-}
-const observer2 = new PerformanceObserver(perfObserver);
-observer2.observe({ entryTypes: ["measure"] });
+observer.observe({ entryTypes: ["mark", "measure"] });
 ```
 
 ## Specifications

@@ -174,6 +174,23 @@ This selector could have also been written as:
 }
 ```
 
+### Logical operations
+
+The `:has()` relational selector can be used to check if one of the multiple features is true or if all the features are true.
+
+By using comma-separated values inside the `:has()` relational selector, you are checking to see if any of the parameters exist. `x:has(a, b)` will style `x` if descendant `a` OR `b` exists.
+
+By chaining together multiple `:has()` relational selectors together, you are checking to see if all of the parameters exist. `x:has(a):has(b)` will style `x` if descendant `a` AND `b` exist.
+
+```css
+body:has(video, audio) {
+  /* styles to apply if the content contains audio OR video */
+}
+body:has(video):has(audio) {
+  /* styles to apply if the content contains both audio AND video */
+}
+```
+
 ## Specifications
 
 {{Specifications}}

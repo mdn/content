@@ -50,11 +50,10 @@ const permissionToRemove = {
   permissions: ["history"]
 }
 
-function remove() {
+async function remove() {
   console.log("removing");
-  browser.permissions.remove(permissionToRemove).then((result) => {
-    console.log(result);
-  });
+  const removed = await browser.permissions.remove(permissionToRemove);
+  console.log(removed);
 }
 
 document.querySelector("#remove").addEventListener("click", remove);

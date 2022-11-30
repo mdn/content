@@ -23,38 +23,38 @@ The **`flatMap()`** method returns a new array formed by applying a given callba
 
 ```js-nolint
 // Arrow function
-flatMap((currentValue) => { /* … */ } )
-flatMap((currentValue, index) => { /* … */ } )
-flatMap((currentValue, index, array) => { /* … */ } )
+flatMap((element) => { /* … */ })
+flatMap((element, index) => { /* … */ })
+flatMap((element, index, array) => { /* … */ })
 
 // Callback function
 flatMap(callbackFn)
 flatMap(callbackFn, thisArg)
 
 // Inline callback function
-flatMap(function(currentValue) { /* … */ })
-flatMap(function(currentValue, index) { /* … */ })
-flatMap(function(currentValue, index, array){ /* … */ })
-flatMap(function(currentValue, index, array) { /* … */ }, thisArg)
+flatMap(function (element) { /* … */ })
+flatMap(function (element, index) { /* … */ })
+flatMap(function (element, index, array) { /* … */ })
+flatMap(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
 
-  - : Function that produces an element of the new Array.
+  - : A function to execute for each element in the array. It should return an array containing new elements of the new array, or a single non-array value to be added to the new array.
 
     The function is called with the following arguments:
 
-    - `currentValue`
+    - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
-      - : The array `flatMap` was called upon.
+      - : The array `flatMap()` was called upon.
 
 - `thisArg` {{optional_inline}}
-  - : Value to use as `this` when executing `callbackFn`.
+  - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 
@@ -63,12 +63,7 @@ by a depth of 1.
 
 ## Description
 
-See {{jsxref("Array.prototype.map()")}} for a detailed description of the callback
-function. The `flatMap` method is identical to a
-[`map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-followed by a call to
-[`flat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
-of depth 1.
+The `flatMap()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). See {{jsxref("Array.prototype.map()")}} for a detailed description of the callback function. The `flatMap()` method is identical to [`map(callbackFn, thisArg)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) followed by [`flat(1)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) — for each element, it produces an array of new elements, and concatenates the resulting arrays together to form a new array.
 
 The `flatMap()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties. However, the value returned from `callbackFn` must be an array if it is to be flattened.
 
@@ -83,7 +78,7 @@ arr.flatMap((x) => [x, x * 2]);
 // is equivalent to
 const n = arr.length;
 const acc = new Array(n * 2);
-for (let i = 0; i < n; i++){
+for (let i = 0; i < n; i++) {
   const x = arr[i];
   acc[i * 2] = x;
   acc[i * 2 + 1] = x * 2;
@@ -144,7 +139,7 @@ Return a 1-element array to keep the item, a multiple-element array to add items
 ```js
 // Let's say we want to remove all the negative numbers
 // and split the odd numbers into an even number and a 1
-const a = [5, 4, -3, 20, 17, -33, -4, 18]
+const a = [5, 4, -3, 20, 17, -33, -4, 18];
 //         |\  \  x   |  | \   x   x   |
 //        [4,1, 4,   20, 16, 1,       18]
 
@@ -162,8 +157,8 @@ console.log(result); // [4, 1, 4, 20, 16, 1, 18]
 The `callbackFn` won't be called for empty slots in the source array because `map()` doesn't, while `flat()` ignores empty slots in the returned arrays.
 
 ```js
-console.log([1, 2, , 4, 5].flatMap(x => [x, x * 2])); // [1, 2, 2, 4, 4, 8, 5, 10]
-console.log([1, 2, 3, 4].flatMap(x => [, x * 2])); // [2, 4, 6, 8]
+console.log([1, 2, , 4, 5].flatMap((x) => [x, x * 2])); // [1, 2, 2, 4, 4, 8, 5, 10]
+console.log([1, 2, 3, 4].flatMap((x) => [, x * 2])); // [2, 4, 6, 8]
 ```
 
 ### Calling flatMap() on non-array objects

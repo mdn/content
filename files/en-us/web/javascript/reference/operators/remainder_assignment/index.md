@@ -12,7 +12,7 @@ browser-compat: javascript.operators.remainder_assignment
 
 {{jsSidebar("Operators")}}
 
-The remainder assignment operator (`%=`) divides a variable by the value of
+The **remainder assignment (`%=`)** operator divides a variable by the value of
 the right operand and assigns the remainder to the variable.
 
 {{EmbedInteractiveExample("pages/js/expressions-remainder-assignment.html")}}

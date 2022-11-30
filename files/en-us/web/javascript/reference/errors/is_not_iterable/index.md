@@ -105,7 +105,7 @@ for (const [country, capital] of map.entries()) {
 
 ### Iterating over a generator
 
-[Generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generators)
+[Generator functions](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generator_functions)
 are functions you call to produce an iterable object.
 
 ```js example-bad
@@ -165,9 +165,9 @@ Array.from(myEmptyIterable);  // []
 
 ## See also
 
-- [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
+- [Iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
 - {{jsxref("Object.keys")}}
 - {{jsxref("Object.entries")}}
 - {{jsxref("Map")}}
-- [generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generators)
+- [Generator functions](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generator_functions)
 - [for...of](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)

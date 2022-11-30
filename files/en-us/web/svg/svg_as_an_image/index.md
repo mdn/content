@@ -16,7 +16,7 @@ SVG images can be used as an image format, in a number of contexts. Browsers sup
 - CSS {{cssxref("content")}}
 - SVG {{SVGElement("image")}} element
 - SVG {{SVGElement("feImage")}} element
-- Canvas [`drawImage`](/en-US/docs/Web/HTML/Canvas/Tutorial/Using_images#drawimage) function
+- Canvas [`drawImage`](/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images#drawing_images) function
 
 ### Restrictions
 

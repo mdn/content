@@ -149,7 +149,7 @@ There are also two directories inside our root — `pdfs` and `projects`. These 
   <p>Visit my <a href="projects/index.html">project homepage</a>.</p>
   ```
 
-- **Moving back up into parent directories**: If you wanted to include a hyperlink inside `projects/index.html` pointing to `pdfs/project-brief.pdf`, you'd have to go up a directory level, then back down into the `pdf` directory.
+- **Moving back up into parent directories**: If you wanted to include a hyperlink inside `projects/index.html` pointing to `pdfs/project-brief.pdf`, you'd have to go up a directory level, then back down into the `pdfs` directory.
   To go up a directory, use two dots — `..` — so the URL you would use is `../pdfs/project-brief.pdf`:
 
   ```html

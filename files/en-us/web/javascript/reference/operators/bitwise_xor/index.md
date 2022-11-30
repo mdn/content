@@ -12,7 +12,7 @@ browser-compat: javascript.operators.bitwise_xor
 
 {{jsSidebar("Operators")}}
 
-The bitwise XOR operator (`^`) returns a `1` in each bit position
+The **bitwise XOR (`^`)** operator returns a `1` in each bit position
 for which the corresponding bits of either but not both operands are `1`s.
 
 {{EmbedInteractiveExample("pages/js/expressions-bitwise-xor.html", "shorter")}}

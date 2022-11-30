@@ -329,7 +329,7 @@ console.log(red.values[0]); // 0; It's not 255 anymore, because the H value for 
 
 The user assumption that `values` means the RGB value suddenly collapses, and it may cause their logic to break. So, if you are an implementor of a class, you would want to hide the internal data structure of your instance from your user, both to keep the API clean and to prevent the user's code from breaking when you do some "harmless refactors". In classes, this is done through [_private fields_](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields).
 
-A private field is an identifier prefixed with `#` (the hash symbol). The hash is an integral part of the field's name. In order to refer to a private field anywhere in the class, you must _declare_ it in the class body. Apart from this, a private field is pretty much equivalent to a normal property.
+A private field is an identifier prefixed with `#` (the hash symbol). The hash is an integral part of the field's name, which means a private property can never have name clash with a public property. In order to refer to a private field anywhere in the class, you must _declare_ it in the class body (you can't create a private property on the fly). Apart from this, a private field is pretty much equivalent to a normal property.
 
 ```js
 class Color {
@@ -404,7 +404,7 @@ const crimson = new Color(220, 20, 60);
 red.redDifference(crimson); // 35
 ```
 
-However, if `anotherColor` is not a Color instance, `#values` won't exist. (Even if another class has an identically named `#values` private field, it's not referring to the same thing and cannot be accessed here.) In order to check beforehand whether the field exists, we can use an [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) check.
+However, if `anotherColor` is not a Color instance, `#values` won't exist. (Even if another class has an identically named `#values` private field, it's not referring to the same thing and cannot be accessed here.) Accessing a nonexistent private property throws an error instead of returning `undefined` like normal properties do. If you don't know if a private field exists on an object and you wish to access it without using `try`/`catch` to handle the error, you can use the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator.
 
 ```js
 class Color {
@@ -423,21 +423,52 @@ class Color {
 
 > **Note:** Keep in mind that the `#` is a special identifier syntax, and you can't use the field name as if it's a string. `"#values" in anotherColor` would look for a property name literally called `"#values"`, instead of a private field.
 
-Methods can be private as well.
+There are some limitations in using private properties: the same name can't be declared twice in a single class, and they can't be deleted. Both lead to early syntax errors.
 
-```js
-class Color {
-  #values;
-
-  constructor(r, g, b) {
-    this.#myPrivateMethod();
-    this.#values = [r, g, b];
-  }
-  #myPrivateMethod() {
-    // …
+```js example-bad
+class BadIdeas {
+  #firstName;
+  #firstName; // syntax error occurs here
+  #lastName;
+  constructor() {
+    delete this.#lastName; // also a syntax error
   }
 }
 ```
+
+Methods, [getters, and setters](#accessor_fields) can be private as well. They're useful when you have something complex that the class needs to do internally but no other part of the code should be allowed to call.
+
+For example, imagine creating [HTML custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) that should do something somewhat complicated when clicked/tapped/otherwise activated. Furthermore, the somewhat complicated things that happen when the element is clicked should be restricted to this class, because no other part of the JavaScript will (or should) ever access it.
+
+```js
+class Counter extends HTMLElement {
+  #xValue = 0;
+  constructor() {
+    super();
+    this.onclick = this.#clicked.bind(this);
+  }
+  get #x() {
+    return this.#xValue;
+  }
+  set #x(value) {
+    this.#xValue = value;
+    window.requestAnimationFrame(this.#render.bind(this));
+  }
+  #clicked() {
+    this.#x++;
+  }
+  #render() {
+    this.textContent = this.#x.toString();
+  }
+  connectedCallback() {
+    this.#render();
+  }
+}
+
+customElements.define("num-counter", Counter);
+```
+
+In this case, pretty much every field and method is private to the class. Thus, it presents an interface to the rest of the code that's essentially just like a built-in HTML element. No other part of the program has the power to affect any of the internals of `Counter`.
 
 ## Accessor fields
 
@@ -538,7 +569,7 @@ Static properties are very similar to their instance counterparts, except that:
 console.log(new Color(0, 0, 0).isValid); // undefined
 ```
 
-There is also a special construct called a [_static initialization block_](/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks), which is a block of code that runs when the class is first loaded.
+There is also a special construct called a [_static initialization block_](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks), which is a block of code that runs when the class is first loaded.
 
 ```js
 class MyClass {

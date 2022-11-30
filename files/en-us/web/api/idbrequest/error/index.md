@@ -44,9 +44,8 @@ in the exception object:
 In addition to the error codes sent to the {{ domxref("IDBRequest") }} object,
 asynchronous operations can also raise exceptions. The list describes problems that
 could occur when the request is being executed, but you might also encounter other
-problems when the request is being made. For example, if the request failed and the
-result is not available, the `InvalidStateError` exception
-is thrown.
+problems when the request is being made. For example, if the result is accessed
+while the request is not completed, the `InvalidStateError` exception is thrown.
 
 ## Examples
 

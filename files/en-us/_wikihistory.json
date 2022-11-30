@@ -2607,7 +2607,7 @@
     "modified": "2019-03-23T22:16:40.876Z",
     "contributors": ["teoli", "rachelandrew"]
   },
-  "Glossary/Grid_Rows": {
+  "Glossary/Grid_Row": {
     "modified": "2019-03-23T22:16:37.786Z",
     "contributors": ["teoli", "rachelandrew"]
   },
@@ -11825,10 +11825,6 @@
       "armukul",
       "stephaniehobson"
     ]
-  },
-  "MDN/Tools/Sample_server": {
-    "modified": "2020-09-30T16:47:39.734Z",
-    "contributors": ["chrisdavidmills", "wbamberg", "Sheppy", "jswisher"]
   },
   "MDN/Writing_guidelines/Howto/Document_a_CSS_property": {
     "modified": "2020-02-18T19:54:27.563Z",
@@ -25557,17 +25553,6 @@
       "fscholz"
     ]
   },
-  "Web/API/Constraint_validation": {
-    "modified": "2019-12-02T00:01:55.418Z",
-    "contributors": [
-      "perfmattersconf",
-      "estelle",
-      "Cuttsy27",
-      "cheyannagraham",
-      "jswisher",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/Contact_Picker_API": {
     "modified": "2020-10-15T22:34:42.280Z",
     "contributors": ["Rumyra"]
@@ -26572,22 +26557,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/DOMTimeStamp": {
-    "modified": "2020-07-25T11:26:24.857Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "flimzy",
-      "Sebastianz",
-      "teoli",
-      "DomenicDenicola",
-      "kscarfone",
-      "FredB",
-      "Sheppy",
-      "ethertank",
-      "Brettz9"
-    ]
-  },
   "Web/API/DOMTokenList": {
     "modified": "2020-10-15T21:11:17.375Z",
     "contributors": [
@@ -26876,38 +26845,6 @@
       "rolfedh",
       "AFBarstow"
     ]
-  },
-  "Web/API/DataTransfer/mozClearDataAt": {
-    "modified": "2020-10-15T21:40:08.445Z",
-    "contributors": ["chrisdavidmills", "fscholz", "rolfedh", "AFBarstow"]
-  },
-  "Web/API/DataTransfer/mozCursor": {
-    "modified": "2020-10-15T21:40:08.800Z",
-    "contributors": ["fscholz", "Sebastianz", "rolfedh", "AFBarstow"]
-  },
-  "Web/API/DataTransfer/mozGetDataAt": {
-    "modified": "2020-10-15T21:40:09.937Z",
-    "contributors": ["chrisdavidmills", "fscholz", "rolfedh", "AFBarstow"]
-  },
-  "Web/API/DataTransfer/mozItemCount": {
-    "modified": "2020-10-15T21:40:08.646Z",
-    "contributors": ["chrisdavidmills", "fscholz", "rolfedh", "AFBarstow"]
-  },
-  "Web/API/DataTransfer/mozSetDataAt": {
-    "modified": "2020-10-15T21:40:08.879Z",
-    "contributors": ["chrisdavidmills", "fscholz", "rolfedh", "AFBarstow"]
-  },
-  "Web/API/DataTransfer/mozSourceNode": {
-    "modified": "2020-10-15T21:40:08.759Z",
-    "contributors": ["fscholz", "rolfedh", "AFBarstow"]
-  },
-  "Web/API/DataTransfer/mozTypesAt": {
-    "modified": "2020-10-15T21:40:09.724Z",
-    "contributors": ["chrisdavidmills", "fscholz", "rolfedh", "AFBarstow"]
-  },
-  "Web/API/DataTransfer/mozUserCancelled": {
-    "modified": "2020-10-15T21:40:09.021Z",
-    "contributors": ["fscholz", "rolfedh", "AFBarstow"]
   },
   "Web/API/DataTransfer/setData": {
     "modified": "2020-10-15T21:40:08.494Z",
@@ -42585,21 +42522,6 @@
       "fscholz",
       "PushpitaPikuDey",
       "AFBarstow"
-    ]
-  },
-  "Web/API/HTML_Drag_and_Drop_API/Multiple_items": {
-    "modified": "2019-03-23T23:45:39.658Z",
-    "contributors": [
-      "SphinxKnight",
-      "PageYe",
-      "chrisdavidmills",
-      "AFBarstow",
-      "teoli",
-      "Ericp",
-      "sdwilsh",
-      "drry",
-      "Piro",
-      "Enn"
     ]
   },
   "Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types": {
@@ -93880,18 +93802,6 @@
     "modified": "2020-12-14T00:30:29.082Z",
     "contributors": ["Sheppy", "steffix.h2", "shing0608"]
   },
-  "Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC": {
-    "modified": "2019-10-04T10:20:42.970Z",
-    "contributors": [
-      "Sheppy",
-      "fscholz",
-      "teoli",
-      "Sebastianz",
-      "Jeremie",
-      "Laurentj",
-      "jesup"
-    ]
-  },
   "Web/Guide/Audio_and_video_delivery": {
     "modified": "2020-12-11T05:27:12.652Z",
     "contributors": [
@@ -104809,42 +104719,6 @@
       "stav"
     ]
   },
-  "Web/JavaScript/About_JavaScript": {
-    "modified": "2020-03-12T19:35:23.320Z",
-    "contributors": [
-      "fscholz",
-      "dominicegginton",
-      "aplaskota",
-      "HMVisuality",
-      "Nooshu1234",
-      "chraiet",
-      "hadleyel",
-      "jsx",
-      "galambalazs",
-      "pierreneter",
-      "Saliene",
-      "Sheppy",
-      "xfq",
-      "claudepache",
-      "velvel53",
-      "ethertank",
-      "markg",
-      "Sonrisa",
-      "inma_610",
-      "Dhtmlkitchen@gmail.com",
-      "99corps",
-      "Cnmahj",
-      "MookyMa",
-      "Pd",
-      "George3",
-      "Dan Smith",
-      "Mgjbot",
-      "DavidCary",
-      "BenoitL",
-      "Hillman",
-      "Dria"
-    ]
-  },
   "Web/JavaScript/Closures": {
     "modified": "2020-12-11T05:04:54.583Z",
     "contributors": [
@@ -106582,33 +106456,6 @@
       "Marcoos",
       "Callek",
       "stav"
-    ]
-  },
-  "Web/JavaScript/Reference/About": {
-    "modified": "2020-03-12T19:36:12.835Z",
-    "contributors": [
-      "fscholz",
-      "Sheppy",
-      "kdex",
-      "ziyunfei",
-      "dbruant",
-      "arasbm",
-      "Huan",
-      "ethertank",
-      "Wladimir_Palant",
-      "jswisher",
-      "Vinícius Albuquerque",
-      "user01",
-      "Sevenspade",
-      "Cnmahj",
-      "BenoitL",
-      "Waldo",
-      "Nickolay",
-      "Mgjbot",
-      "Taken",
-      "George3",
-      "Marcoos",
-      "Dria"
     ]
   },
   "Web/JavaScript/Reference/Classes": {
@@ -125941,10 +125788,6 @@
     "modified": "2020-07-28T00:42:48.458Z",
     "contributors": ["lbd1607", "Sheppy", "rachelandrew"]
   },
-  "Web/Media/images/aspect_ratio_mapping": {
-    "modified": "2020-11-18T11:22:57.796Z",
-    "contributors": ["ramiy", "chrisdavidmills", "rachelandrew"]
-  },
   "Web/OpenSearch": {
     "modified": "2019-10-30T22:44:38.715Z",
     "contributors": [
@@ -132048,16 +131891,6 @@
       "kyuwoo-choi",
       "topicus",
       "BrainBuzzer"
-    ]
-  },
-  "WebAssembly/Caching_modules": {
-    "modified": "2020-09-19T15:39:46.216Z",
-    "contributors": [
-      "mfuji09",
-      "leela52452",
-      "chrisdavidmills",
-      "lukewagner",
-      "kingysu"
     ]
   },
   "WebAssembly/Concepts": {

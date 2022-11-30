@@ -50,7 +50,7 @@ Events have three functions:
     - `tabId`
       - : `integer`. The ID of the updated tab.
     - `changeInfo`
-      - : [`object`](#changeinfo). Properties of the tab that changed. See [`changeInfo`](#changeinfo_2) below.
+      - : `object`. Properties of the tab that changed. See the [changeInfo](#changeinfo_2) section for more details.
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. The new state of the tab.
 

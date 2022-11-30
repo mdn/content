@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.WeakMap
 
 {{JSRef}}
 
-A **`WeakMap`** is a collection of key/value pairs whose keys must be objects, with values of any arbitrary [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures#javascript_types), and which does not create strong references to its keys. That is, an object's presence as a key in a `WeakMap` does not prevent the object from being garbage collected. Once an object used as a key has been collected, its corresponding values in any `WeakMap` become candidates for garbage collection as well — as long as they aren't strongly referred to elsewhere.
+A **`WeakMap`** is a collection of key/value pairs whose keys must be objects, with values of any arbitrary [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures), and which does not create strong references to its keys. That is, an object's presence as a key in a `WeakMap` does not prevent the object from being garbage collected. Once an object used as a key has been collected, its corresponding values in any `WeakMap` become candidates for garbage collection as well — as long as they aren't strongly referred to elsewhere.
 
 `WeakMap` allows associating data to objects in a way that doesn't prevent the key objects from being collected, even if the values reference the keys. However, a `WeakMap` doesn't allow observing the liveness of its keys, which is why it doesn't allow enumeration; if a `WeakMap` exposed any method to obtain a list of its keys, the list would depend on the state of garbage collection, introducing non-determinism. If you want to have a list of keys, you should use a {{jsxref("Map")}} rather than a `WeakMap`.
 
@@ -67,12 +67,12 @@ But because a `WeakMap` doesn't allow observing the liveness of its keys, its ke
 ### Using WeakMap
 
 ```js
-const wm1 = new WeakMap(),
-      wm2 = new WeakMap(),
-      wm3 = new WeakMap();
-const o1 = {},
-      o2 = function() {},
-      o3 = window;
+const wm1 = new WeakMap();
+const wm2 = new WeakMap();
+const wm3 = new WeakMap();
+const o1 = {};
+const o2 = function () {};
+const o3 = window;
 
 wm1.set(o1, 37);
 wm1.set(o2, 'azerty');
@@ -100,23 +100,24 @@ wm1.has(o1); // false
 
 ```js
 class ClearableWeakMap {
+  #wm;
   constructor(init) {
-    this._wm = new WeakMap(init);
+    this.#wm = new WeakMap(init);
   }
   clear() {
-    this._wm = new WeakMap();
+    this.#wm = new WeakMap();
   }
   delete(k) {
-    return this._wm.delete(k);
+    return this.#wm.delete(k);
   }
   get(k) {
-    return this._wm.get(k);
+    return this.#wm.get(k);
   }
   has(k) {
-    return this._wm.has(k);
+    return this.#wm.has(k);
   }
   set(k, v) {
-    this._wm.set(k, v);
+    this.#wm.set(k, v);
     return this;
   }
 }
@@ -196,6 +197,68 @@ thing.showPublic();
 thing.showPrivate();
 // 1
 ```
+
+### Associating metadata
+
+A {{jsxref("WeakMap")}} can be used to associate metadata with an object, without affecting the lifetime of the object itself. This is very similar to the private members example, since private members are also modelled as external metadata that doesn't participate in [prototypical inheritance](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+
+This use case can be extended to already-created objects. For example, on the web, we may want to associate extra data with a DOM element, which the DOM element may access later. A common approach is to attach the data as a property:
+
+```js
+const buttons = document.querySelectorAll(".button");
+buttons.forEach((button) => {
+  button.clicked = false;
+  button.addEventListener("click", () => {
+    button.clicked = true;
+    const currentButtons = [...document.querySelectorAll(".button")];
+    if (currentButtons.every((button) => button.clicked)) {
+      console.log("All buttons have been clicked!");
+    }
+  });
+});
+```
+
+This approach works, but it has a few pitfalls:
+
+- The `clicked` property is enumerable, so it will show up in [`Object.keys(button)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys), [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops, etc. This can be mitigated by using {{jsxref("Object.defineProperty()")}}, but that makes the code more verbose.
+- The `clicked` property is a normal string property, so it can be accessed and overwritten by other code. This can be mitigated by using a {{jsxref("Symbol")}} key, but the key would still be accessible via {{jsxref("Object.getOwnPropertySymbols()")}}.
+
+Using a `WeakMap` fixes these:
+
+```js
+const buttons = document.querySelectorAll(".button");
+const clicked = new WeakMap();
+buttons.forEach((button) => {
+  clicked.set(button, false);
+  buttons.addEventListener("click", () => {
+    clicked.set(button, true);
+    const currentButtons = [...document.querySelectorAll(".button")];
+    if (currentButtons.every((button) => clicked.get(button))) {
+      console.log("All buttons have been clicked!");
+    }
+  });
+});
+```
+
+Here, only code that has access to `clicked` knows the clicked state of each button, and external code can't modify the states. In addition, if any of the buttons gets removed from the DOM, the associated metadata will automatically get garbage-collected.
+
+### Caching
+
+You can associate objects passed to a function with the result of the function, so that if the same object is passed again, the cached result can be returned without re-executing the function. This is useful if the function is pure (i.e. it doesn't mutate any outside objects or cause other observable side effects).
+
+```js
+const cache = new WeakMap();
+function handleObjectValues(obj) {
+  if (cache.has(obj)) {
+    return cache.get(obj);
+  }
+  const result = Object.values(obj).map(heavyComputation);
+  cache.set(obj, result);
+  return result;
+}
+```
+
+This only works if your function's input is an object. Moreover, even if the input is never passed in again, the result still remains forever in the cache. A more effective way is to use a {{jsxref("Map")}} paired with {{jsxref("WeakRef")}} objects, which allows you to associate any type of input value with its respective (potentially large) computation result. See the [WeakRefs and FinalizationRegistry](/en-US/docs/Web/JavaScript/Memory_Management#weakrefs_and_finalizationregistry) example for more details.
 
 ## Specifications
 

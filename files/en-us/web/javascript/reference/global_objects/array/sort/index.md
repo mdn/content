@@ -128,10 +128,10 @@ sorted arrays. The numeric arrays are sorted without a compare function, then so
 using one.
 
 ```js
-const stringArray = ['Blue', 'Humpback', 'Beluga'];
+const stringArray = ["Blue", "Humpback", "Beluga"];
 const numberArray = [40, 1, 5, 200];
-const numericStringArray = ['80', '9', '700'];
-const mixedNumericArray = ['80', '9', '700', 40, 1, 5, 200];
+const numericStringArray = ["80", "9", "700"];
+const mixedNumericArray = ["80", "9", "700", 40, 1, 5, 200];
 
 function compareNumbers(a, b) {
   return a - b;
@@ -159,12 +159,12 @@ Arrays of objects can be sorted by comparing the value of one of their propertie
 
 ```js
 const items = [
-  { name: 'Edward', value: 21 },
-  { name: 'Sharpe', value: 37 },
-  { name: 'And', value: 45 },
-  { name: 'The', value: -12 },
-  { name: 'Magnetic', value: 13 },
-  { name: 'Zeros', value: 37 }
+  { name: "Edward", value: 21 },
+  { name: "Sharpe", value: 37 },
+  { name: "And", value: 45 },
+  { name: "The", value: -12 },
+  { name: "Magnetic", value: 13 },
+  { name: "Zeros", value: 37 },
 ];
 
 // sort by value
@@ -194,7 +194,7 @@ For sorting strings with non-ASCII characters, i.e. strings with accented charac
 appear in the right order.
 
 ```js
-const items = ['réservé', 'premier', 'communiqué', 'café', 'adieu', 'éclair'];
+const items = ["réservé", "premier", "communiqué", "café", "adieu", "éclair"];
 items.sort((a, b) => a.localeCompare(b));
 
 // items is ['adieu', 'café', 'communiqué', 'éclair', 'premier', 'réservé']
@@ -212,12 +212,12 @@ temporary array to achieve the right order.
 
 ```js
 // the array to be sorted
-const data = ['delta', 'alpha', 'charlie', 'bravo'];
+const data = ["delta", "alpha", "charlie", "bravo"];
 
 // temporary array holds objects with position and sort-value
 const mapped = data.map((v, i) => {
   return { i, value: someSlowOperation(v) };
-})
+});
 
 // sorting the mapped array containing the reduced values
 mapped.sort((a, b) => {
@@ -265,10 +265,10 @@ For example, say you had a list of students alongside their grades. Note that th
 
 ```js
 const students = [
-  { name: "Alex",   grade: 15 },
+  { name: "Alex", grade: 15 },
   { name: "Devlin", grade: 15 },
-  { name: "Eagle",  grade: 13 },
-  { name: "Sam",    grade: 14 }
+  { name: "Eagle", grade: 13 },
+  { name: "Sam", grade: 14 },
 ];
 ```
 
@@ -282,10 +282,10 @@ The `students` variable will then have the following value:
 
 ```js
 [
-  { name: "Eagle",  grade: 13 },
-  { name: "Sam",    grade: 14 },
-  { name: "Alex",   grade: 15 }, // original maintained for similar grade (stable sorting)
-  { name: "Devlin", grade: 15 }  // original maintained for similar grade (stable sorting)
+  { name: "Eagle", grade: 13 },
+  { name: "Sam", grade: 14 },
+  { name: "Alex", grade: 15 }, // original maintained for similar grade (stable sorting)
+  { name: "Devlin", grade: 15 }, // original maintained for similar grade (stable sorting)
 ];
 ```
 
@@ -295,10 +295,10 @@ Before version 10 (or ECMAScript 2019), sort stability was not guaranteed, meani
 
 ```js
 [
-  { name: "Eagle",  grade: 13 },
-  { name: "Sam",    grade: 14 },
+  { name: "Eagle", grade: 13 },
+  { name: "Sam", grade: 14 },
   { name: "Devlin", grade: 15 }, // original order not maintained
-  { name: "Alex",   grade: 15 }  // original order not maintained
+  { name: "Alex", grade: 15 }, // original order not maintained
 ];
 ```
 
@@ -310,7 +310,7 @@ For example, consider this code:
 
 ```js
 const arr = [3, 1, 4, 1, 5, 9];
-const compareFn = (a, b) => a > b ? 1 : 0;
+const compareFn = (a, b) => (a > b ? 1 : 0);
 arr.sort(compareFn);
 ```
 
@@ -320,7 +320,7 @@ However, if the `compareFn` function is changed slightly so that it returns `-1`
 
 ```js
 const arr = [3, 1, 4, 1, 5, 9];
-const compareFn = (a, b) => a > b ? -1 : 0;
+const compareFn = (a, b) => (a > b ? -1 : 0);
 arr.sort(compareFn);
 ```
 

@@ -39,7 +39,7 @@ HTML allows us to specify subtitles for a video using the {{ htmlelement("track"
 
 The files that contain the actual subtitle data are simple text files that follow a specified format, in this case the [Web Video Text Tracks](/en-US/docs/Web/API/WebVTT_API) (WebVTT) format. The [WebVTT specification](https://w3c.github.io/webvtt/) is still being worked on, but major parts of it are stable so we can use it today.
 
-Video providers (such as the [Blender Foundation](https://www.blender.org/about/foundation/)) provide captions and subtitles in a text format with their videos, but they're usually in the SubRip Text (SRT) format. These can be easily converted to WebVTT using an online converter such as [srt2vtt](https://atelier.u-sub.net/srt2vtt/).
+Video providers (such as the [Blender Foundation](https://www.blender.org/about/foundation/)) provide captions and subtitles in a text format with their videos, but they're usually in the SubRip Text (SRT) format. These can be easily converted to WebVTT using an online converter.
 
 ## Modifications to the HTML and CSS
 
@@ -326,27 +326,5 @@ These browsers have similar implementations again: subtitles are enabled by defa
 
 ## Plugins
 
-If, after reading through this article you decide that you can't be bothered to do all of this and want someone else to do it for you, there are plenty of plugins out there that offer caption and subtitle support that you can use.
-
-- [plyr.io](https://plyr.io)
-  - : This modern video player implements subtitles in both SRT and WebVTT file formats.
-- [Playr](https://www.delphiki.com/html5/playr/)
-  - : This small plugin implements subtitles, captions, and chapters as well as both WebVTT and SRT file formats.
-- [Flowplayer](https://flowplayer.com/features/html5-player)
-  - : HTML player supporting WebVTT.
-- [jwplayer](https://www.jwplayer.com/)
-  - : This video player is very extensive and does a lot more than support video captions. It supports the WebVTT, SRT and DFXP formats.
-- [MediaElement.js](https://www.mediaelementjs.com/)
-  - : Another complete video player that also support video captions, albeit only in SRT format.
-- [LeanBack Player](https://www.leanbackplayer.com/)
-  - : Yet another video player that supports WebVTT captions as well as providing other standard player functionality.
-- [SublimeVideo](https://www.sublimevideo.net/)
-  - : This player also supports captions through WebVTT and SRT files.
-- [Video.js](https://videojs.com/)
-  - : Supports WebVTT video subtitles.
-- [Radiant Media Player](https://www.radiantmediaplayer.com)
-  - : Supports multi-languages WebVTT closed captions
-- [AblePlayer](https://ableplayer.github.io/ableplayer/)
-  - : Supports multi-languages WebVTT closed captions along with a clickable, interactive transcript for audio and video
-
-> **Note:** You can find an excellent list of HTML Video Players and their current "state" at [HTML Video Player Comparison](https://videosws.praegnanz.de/).
+There are also many open-source and commercial HTML video-player plugins that offer caption and subtitle support that you can use instead of rolling your own.
+You can search for those on the web using search terms like _"HTML video player plugin"_.

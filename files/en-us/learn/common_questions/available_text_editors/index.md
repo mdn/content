@@ -68,17 +68,6 @@ Here are some popular editors:
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://atom.io/">Atom</a></td>
-      <td>MIT/BSD</td>
-      <td>Free</td>
-      <td>Windows, Mac, Linux</td>
-      <td>
-        <a href="https://github.com/atom/atom/issues" rel="external">GitHub Issues</a>
-      </td>
-      <td><a href="https://atom.io/docs/latest/">Online Manual</a></td>
-      <td><a href="https://atom.io/packages">Yes</a></td>
-    </tr>
-    <tr>
       <td><a href="http://bluefish.openoffice.nl">Bluefish</a></td>
       <td>GPL 3</td>
       <td>Free</td>

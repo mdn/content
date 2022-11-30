@@ -12,7 +12,7 @@ browser-compat: javascript.operators.spread
 
 {{jsSidebar("Operators")}}
 
-**Spread syntax** (`...`) allows an iterable, such as an array or string, to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected. In an object literal, the spread syntax enumerates the properties of an object and adds the key-value pairs to the object being created.
+The **spread (`...`)** syntax allows an iterable, such as an array or string, to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected. In an object literal, the spread syntax enumerates the properties of an object and adds the key-value pairs to the object being created.
 
 Spread syntax looks exactly like rest syntax. In a way, spread syntax is the opposite of rest syntax. Spread syntax "expands" an array into its elements, while rest syntax collects multiple elements and "condenses" them into a single element. See [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) and [rest property](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#rest_property).
 
@@ -122,7 +122,7 @@ arr2.push(4);
 //  arr remains unaffected
 ```
 
-> **Note:** Spread syntax effectively goes one level deep while copying an array. Therefore, it may be unsuitable for copying multidimensional arrays. The same is true with {{jsxref("Object.assign()")}} — no native operation in JavaScript does a deep clone.
+> **Note:** Spread syntax effectively goes one level deep while copying an array. Therefore, it may be unsuitable for copying multidimensional arrays. The same is true with {{jsxref("Object.assign()")}} — no native operation in JavaScript does a deep clone. The web API method {{domxref("structuredClone()")}} allows deep copying values of certain [supported types](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types).
 >
 > ```js example-bad
 > const a = [[1], [2], [3]];

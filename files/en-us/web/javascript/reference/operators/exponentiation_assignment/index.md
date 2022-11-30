@@ -12,7 +12,7 @@ browser-compat: javascript.operators.exponentiation_assignment
 
 {{jsSidebar("Operators")}}
 
-The exponentiation assignment operator (`**=`) raises the value of a
+The **exponentiation assignment (`**=`)** operator raises the value of a
 variable to the power of the right operand.
 
 {{EmbedInteractiveExample("pages/js/expressions-exponentiation-assignment.html")}}

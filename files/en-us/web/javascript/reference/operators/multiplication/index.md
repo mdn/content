@@ -11,7 +11,7 @@ browser-compat: javascript.operators.multiplication
 
 {{jsSidebar("Operators")}}
 
-The multiplication operator (`*`) produces the product of the operands.
+The **multiplication (`*`)** operator produces the product of the operands.
 
 {{EmbedInteractiveExample("pages/js/expressions-multiplication.html")}}
 

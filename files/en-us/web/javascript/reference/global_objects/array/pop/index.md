@@ -46,7 +46,7 @@ The following code creates the `myFish` array containing four elements, then
 removes its last element.
 
 ```js
-const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+const myFish = ["angel", "clown", "mandarin", "sturgeon"];
 
 const popped = myFish.pop();
 
@@ -101,13 +101,13 @@ const collection = {
     // Returning what pop returns; that is
     // the removed element.
     return [].pop.call(this);
-  }
-}
+  },
+};
 
 collection.addElements(10, 20, 30);
-console.log(collection.length);  // 3
+console.log(collection.length); // 3
 collection.removeElement();
-console.log(collection.length);  // 2
+console.log(collection.length); // 2
 ```
 
 ## Specifications

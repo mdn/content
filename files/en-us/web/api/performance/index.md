@@ -27,6 +27,7 @@ An object of this type can be obtained by calling the {{domxref("window.performa
 _The `Performance` interface doesn't inherit any properties._
 
 - {{domxref("Performance.eventCounts")}} {{ReadOnlyInline}}
+
   - : An {{domxref("EventCounts")}} map containing the number of events which have been dispatched per event type.
 
 - {{domxref("Performance.navigation")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
@@ -41,7 +42,7 @@ _The `Performance` interface doesn't inherit any properties._
 
     > **Note:** Not available in workers.
 
-- {{domxref("Performance.memory")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- {{domxref("Performance.memory")}} {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : A _non-standard_ extension added in Chrome, this property provides an object with basic memory usage information. _You **should not use** this non-standard API._
 - {{domxref("Performance.timeOrigin")}} {{ReadOnlyInline}}
   - : Returns the high resolution timestamp of the start time of the performance measurement.
@@ -66,12 +67,14 @@ _The `Performance` interface doesn't inherit any methods._
   - : Creates a {{domxref("DOMHighResTimeStamp","timestamp")}} in the browser's _performance entry buffer_ with the given name.
 - {{domxref("Performance.measure()")}}
   - : Creates a named {{domxref("DOMHighResTimeStamp","timestamp")}} in the browser's performance entry buffer between two specified marks (known as the _start mark_ and _end mark_, respectively).
+- {{domxref("Performance.measureUserAgentSpecificMemory()")}} {{Experimental_Inline}}
+  - : Estimates the memory usage of a web application including all its iframes and workers.
 - {{domxref("Performance.now()")}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the number of milliseconds elapsed since a reference instant.
 - {{domxref("Performance.setResourceTimingBufferSize()")}}
   - : Sets the browser's resource timing buffer size to the specified number of "`resource`" {{domxref("PerformanceEntry.entryType","type")}} {{domxref("PerformanceEntry","performance entry")}} objects.
 - {{domxref("Performance.toJSON()")}}
-  - : A jsonizer returning a JSON object representing the `Performance` object.
+  - : Returns a JSON representation of the `Performance` object.
 
 ## Events
 

@@ -289,7 +289,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
           unescaped character equivalents in regular expressions. However, in
           regular expressions with the
           <a
-            href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags_2"
+            href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags"
             >unicode flag</a
           >, these will cause an <em>invalid identity escape</em> error. This is
           done to ensure backward compatibility with existing code that uses new

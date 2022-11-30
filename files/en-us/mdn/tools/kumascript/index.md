@@ -103,7 +103,7 @@ KumaScript templates are processed by an [embedded JavaScript template engine](h
   - It is an error to include semicolons inside these blocks.
 
 - Anything inside a `<% %>` block is interpreted as JavaScript. This can include loops, conditionals, etc.
-- Nothing inside a `<% %>` block can ever contribute to the output stream. But, you can transition from JS mode to output mode using `<% %>`—for example:
+- Nothing inside a `<% %>` block can ever contribute to the output stream. But, you can transition from JS mode to output mode using `<% %>` — for example:
 
   ```js
   <% for (let i = 0; i < $0; i++) { %>

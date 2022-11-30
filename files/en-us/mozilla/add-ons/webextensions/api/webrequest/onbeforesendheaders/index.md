@@ -30,7 +30,7 @@ It is possible for extensions to conflict here. If two extensions listen to `onB
 
 Not all headers actually sent are always included in `requestHeaders`. In particular, headers related to caching (for example, `Cache-Control`, `If-Modified-Since`, `If-None-Match`) are never sent. Also, behavior here may differ across browsers.
 
-According to the specification, header names are case-insensitive. This means that be to sure of matching a particular header, the listener should lowercase the name before comparing it:
+According to the specification, header names are case-insensitive. This means that to match a particular header, the listener should lowercase the name before comparing it:
 
 ```js
 for (const header of e.requestHeaders) {
@@ -72,7 +72,7 @@ Events have three functions:
   - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
     - `details`
-      - : [`object`](#details). Details of the request. This will include request headers if you have included `"requestHeaders"` in `extraInfoSpec`.
+      - : `object`. Details of the request. This will include request headers if you have included `"requestHeaders"` in `extraInfoSpec`. See the [details](#details_2) section for more information.
 
     Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If `"blocking"` is specified in the `extraInfoSpec` parameter, the event listener should return a `BlockingResponse` object, and can set its `requestHeaders` property.
 
