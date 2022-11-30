@@ -35,9 +35,9 @@ Listen for the user executing commands that you have registered using the [`comm
 - {{WebExtAPIRef("commands.onCommand")}}
   - : Fired when a command is executed using its associated keyboard shortcut.
 
-## Browser compatibility
-
 {{WebExtExamples("h2")}}
+
+## Browser compatibility
 
 {{Compat}}
 
