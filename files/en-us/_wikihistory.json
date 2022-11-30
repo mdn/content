@@ -11768,16 +11768,6 @@
       "KadirTopal"
     ]
   },
-  "MDN/Tools": {
-    "modified": "2020-09-30T16:47:37.562Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "ExE-Boss",
-      "jswisher",
-      "Sheppy"
-    ]
-  },
   "MDN/Writing_guidelines/Howto/Document_a_CSS_property": {
     "modified": "2020-02-18T19:54:27.563Z",
     "contributors": [
