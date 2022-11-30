@@ -414,7 +414,7 @@ In this section we will look at the different ways to do this.
 
 ### The Constraint Validation API
 
-Most browsers support the [Constraint Validation API](/en-US/docs/Web/API/Constraint_validation), which consists of a set of methods and properties available on the following form element DOM interfaces:
+The Constraint Validation API consists of a set of methods and properties available on the following form element DOM interfaces:
 
 - [`HTMLButtonElement`](/en-US/docs/Web/API/HTMLButtonElement) (represents a [`<button>`](/en-US/docs/Web/HTML/Element/button) element)
 - [`HTMLFieldSetElement`](/en-US/docs/Web/API/HTMLFieldSetElement) (represents a [`<fieldset>`](/en-US/docs/Web/HTML/Element/fieldset) element)
@@ -423,7 +423,7 @@ Most browsers support the [Constraint Validation API](/en-US/docs/Web/API/Constr
 - [`HTMLSelectElement`](/en-US/docs/Web/API/HTMLSelectElement) (represents a [`<select>`](/en-US/docs/Web/HTML/Element/select) element)
 - [`HTMLTextAreaElement`](/en-US/docs/Web/API/HTMLTextAreaElement) (represents a [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea) element)
 
-The Constraint validation API makes the following properties available on the above elements.
+The Constraint Validation API makes the following properties available on the above elements.
 
 - `validationMessage`: Returns a localized message describing the validation constraints that the control doesn't satisfy (if any). If the control is not a candidate for constraint validation (`willValidate` is `false`) or the element's value satisfies its constraints (is valid), this will return an empty string.
 - `validity`: Returns a `ValidityState` object that contains several properties describing the validity state of the element. You can find full details of all the available properties in the {{domxref("ValidityState")}} reference page; below is listed a few of the more common ones:
@@ -456,7 +456,7 @@ These automated messages have two drawbacks:
 
 ![Example of an error message with Firefox in French on an English page](error-firefox-win7.png)
 
-Customizing these error messages is one of the most common use cases of the [constraint validation API](/en-US/docs/Web/API/Constraint_validation).
+Customizing these error messages is one of the most common use cases of the Constraint Validation API.
 Let's work through a simple example of how to do this.
 
 We'll start with some simple HTML (feel free to put this in a blank HTML file; use a fresh copy of [fruit-start.html](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html) as a basis, if you like):
@@ -653,8 +653,6 @@ Here is the live result:
 > **Note:** You can find this example live on GitHub as [detailed-custom-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/detailed-custom-validation.html). See also the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/detailed-custom-validation.html).
 
 The constraint validation API gives you a powerful tool to handle form validation, letting you have enormous control over the user interface above and beyond what you can do with HTML and CSS alone.
-
-> **Note:** For further information, see our [Constraint validation guide](/en-US/docs/Web/Guide/HTML/Constraint_validation), and the [Constraint Validation API](/en-US/docs/Web/API/Constraint_validation) reference.
 
 ### Validating forms without a built-in API
 

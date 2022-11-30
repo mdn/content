@@ -32,7 +32,7 @@ The next example logs an object to the console, with the object's fields expanda
 console.dir(someObject);
 ```
 
-See {{SectionOnPage("/en-US/docs/Web/API/console", "Usage")}} for more thorough examples.
+For more examples, see the [Examples](/en-US/docs/Web/API/console#examples) section of the [`console`](/en-US/docs/Web/API/console) article.
 
 ## Specifications
 

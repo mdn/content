@@ -788,8 +788,7 @@
         "MediaTrackCapabilities",
         "MediaTrackConstraints",
         "MediaTrackSettings",
-        "MediaTrackSupportedConstraints",
-        "VideoStreamTrack"
+        "MediaTrackSupportedConstraints"
       ],
       "methods": [
         "HTMLCanvasElement.captureStream()",
@@ -797,16 +796,6 @@
       ],
       "properties": ["Navigator.mediaDevices"],
       "events": ["HTMLMediaElement: ended", "HTMLMediaElement: ratechange"]
-    },
-    "Media Recorder API": {
-      "overview": ["Media Recorder API"],
-      "interfaces": ["MediaRecorder", "BlobEvent"],
-      "methods": [],
-      "properties": ["window.MediaRecorder"],
-      "events": [],
-      "dictionaries": ["MediaRecorderOptions", "BlobEventInit"],
-      "types": ["BitrateMode", "RecordingState"],
-      "callbacks": []
     },
     "Media Session API": {
       "overview": ["Media Session API"],
@@ -1815,7 +1804,8 @@
         "/docs/Web/API/WebRTC_API/Using_data_channels",
         "/docs/Web/API/WebRTC_API/Using_DTMF",
         "/docs/Web/API/WebRTC_API/adapter.js",
-        "/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample"
+        "/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample",
+        "/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs"
       ],
       "interfaces": [
         "RTCPeerConnection",

@@ -4,7 +4,7 @@ slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Build_the_server
 page-type: guide
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 {{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers")}}
 
@@ -14,17 +14,17 @@ In this article we'll set up the server for our phone app. The server file will 
 2. You'll need to start your code by requiring the peer server at the top of the `server.js` file, to ensure that we have access to the peer server:
 
    ```js
-   const {ExpressPeerServer} = require('peer');
+   const { ExpressPeerServer } = require("peer");
    ```
 
 3. You then need to actually create the peer server. Add the following code below your previous line:
 
    ```js
    const peerServer = ExpressPeerServer(server, {
-       proxied: true,
-       debug: true,
-       path: '/myapp',
-       ssl: {}
+     proxied: true,
+     debug: true,
+     path: "/myapp",
+     ssl: {},
    });
    ```
 
@@ -36,18 +36,18 @@ In this article we'll set up the server for our phone app. The server file will 
 
    ```js
    const express = require("express");
-   const http = require('http');
-   const path = require('path');
+   const http = require("http");
+   const path = require("path");
    const app = express();
    const server = http.createServer(app);
-   const { ExpressPeerServer } = require('peer');
+   const { ExpressPeerServer } = require("peer");
    const port = process.env.PORT || "8000";
 
    const peerServer = ExpressPeerServer(server, {
-       proxied: true,
-       debug: true,
-       path: '/myapp',
-       ssl: {}
+     proxied: true,
+     debug: true,
+     path: "/myapp",
+     ssl: {},
    });
 
    app.use(peerServer);
@@ -55,7 +55,7 @@ In this article we'll set up the server for our phone app. The server file will 
    app.use(express.static(path.join(__dirname)));
 
    app.get("/", (request, response) => {
-       response.sendFile(`${__dirname}/index.html`);
+     response.sendFile(`${__dirname}/index.html`);
    });
 
    server.listen(port);
