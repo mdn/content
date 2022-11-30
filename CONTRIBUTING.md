@@ -277,19 +277,23 @@ Let's say you want to move the entire `/en-US/Learn/Accessibility` tree to `/en-
 
 ### Deleting a document
 
-Deleting documents or a tree of documents is easy with the help of the `yarn content delete` command:
+Deleting documents or a tree of documents is easy with the help of the `yarn content delete` command.
+**Don't manually delete directories** from the repository as `yarn content delete` handles other necessary changes such as updating the `_wikihistory.json` file.
 
 ```sh
 yarn content delete <document-slug> [locale]
 ```
 
-> **Important:** you need to use the `yarn content delete` command to delete MDN documents.
-> Don't delete directories from the repo, as `yarn content delete` also handles other necessary changes such as updating the `_wikihistory.json` file.
-
 To use `yarn content delete`, provide the slug of the document you'd like to delete (e.g., `Learn/Accessibility`), and the locale as an optional second argument (this defaults to `en-US`).
+If the slug of the page you wish to delete contains special characters, include it in quotes:
+
+```sh
+yarn content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"
+```
+
 If the document has child documents (i.e. it represents a document tree), you must specify the `-r, --recursive` option or the command will fail.
-You may also use `--redirect` to redirect the deleted document to another document.
-An example of using `--redirect` is described in the step-by-step guide below.
+You may also use `--redirect` to redirect the deleted document or a list of deleted documents.
+An example of using `--redirect` is described in the steps below.
 
 Say you want to delete the entire `/en-US/Learn/Accessibility` tree:
 
@@ -311,17 +315,11 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree:
    yarn content delete Learn/Accessibility --recursive
    ```
 
-   For convenience, you can [add a redirect](#redirecting-a-document) with this command:
+   For convenience, you can [add a redirect](#redirecting-a-document) with this command for each deleted document to a specified slug:
 
    ```sh
-   yarn content delete Learn/Accessibility --recursive --redirect MDN/Contribute
+   yarn content delete Learn/Accessibility --recursive --redirect Web/Accessibility
    ```
-
-   > If the slug of the page you wish to delete contains special characters, include it in quotes:
-   >
-   > ```sh
-   > yarn content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"
-   > ```
 
 3. Commit all of the changes and push your branch to the remote:
 
