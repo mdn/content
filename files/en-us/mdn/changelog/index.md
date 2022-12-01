@@ -11,6 +11,15 @@ tags:
 
 This document provides a record of MDN content processes, constructs, and best practices that have changed, and when they changed. It is useful to allow regular contributors to check in and see what has changed about the process of creating content for MDN.
 
+## October 2022
+
+The [MDN project documentation](/en-US/docs/MDN) is refreshed and organized under two main categories:
+
+- **Writing:** Documentation about how to write for MDN, what we document, definitions of experimental, style guidelines and so on are found under the [Writing guidelines](/en-US/docs/MDN/Writing_guidelines) pages.
+- **Community:** Information about open source etiquette, discussions, processes for pull requests and issues, users and teams, and general hints for contributors are found under the [Community](/en-US/docs/MDN/Community) pages.
+
+For more details on what has changed, see the [Revamp of MDN Web Docs Contribution Docs](https://hacks.mozilla.org/2022/10/revamp-of-mdn-web-docs-contribution-docs/) blog post published to Mozilla Hacks.
+
 ## November 2021
 
 Conversion to Markdown is done, so remove the old CSS style guide and redirect to the Markdown in MDN page.
