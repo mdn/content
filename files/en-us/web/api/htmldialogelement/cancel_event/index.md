@@ -18,6 +18,8 @@ The **`cancel`** event fires on a {{HTMLElement("dialog")}} when the user instru
 
 This event does not bubble.
 
+When a `<dialog>` is dismissed with the <kbd>Esc</kbd> key, both the `cancel` and {{domxref("HTMLDialogElement/close_event", "close")}} events are fired.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
