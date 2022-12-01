@@ -190,32 +190,32 @@ The {{CSSxRef("&lt;filter-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/C
 
 The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Types) specifies different color representations.
 
+- {{CSSxRef("color_value/rgb", "rgb()")}}
+  - : Defines a given color according to its red, green, and blue components.
+- {{CSSxRef("color_value/rgba", "rgba()")}}
+  - : Defines a given color according to its red, green, blue and alpha (transparency) components.
+- {{CSSxRef("color_value/hsl", "hsl()")}}
+  - : Defines a given color according to its hue, saturation, and lightness components.
+- {{CSSxRef("color_value/hsla", "hsla()")}}
+  - : Defines a given color according to its hue, saturation, lightness and alpha (transparency) components.
+- {{CSSxRef("color_value/hwb", "hwb()")}}
+  - : Defines a given color according to its hue, whiteness and blackness components.
+- {{CSSxRef("color_value/lch", "lch()")}} {{Experimental_Inline}}
+  - : Defines a given color according to its lightness, chroma and hue components.
+- {{CSSxRef("color_value/oklch", "oklch()")}} {{Experimental_Inline}}
+  - : Defines a given color according to its lightness, chroma, hue and alpha (transparency) components.
+- {{CSSxRef("color_value/lab", "lab()")}} {{Experimental_Inline}}
+  - : Defines a given color according to its lightness, a-axis distance and b-axis distance in the lab colorspace.
+- {{CSSxRef("color_value/oklab", "oklab()")}} {{Experimental_Inline}}
+  - : Defines a given color according to its lightness, a-axis distance, b-axis distance in the lab colorspace and alpha (transparency).
 - {{CSSxRef("color_value/color", "color()")}} {{Experimental_Inline}}
-  - : Allows a color to be set in the specified colorspace (instead of the implicit sRGB colorspace that most of the other color functions operate in).
+  - : Specifies a particular, specified colorspace rather than the implicit sRGB colorspace.
 - {{CSSxRef("color_value/color-mix", "color-mix()")}} {{Experimental_Inline}}
-  - : Takes two {{CSSxRef("color_value","color")}} values and returns the result of mixing them in a given colorspace by a given amount.
+  - : Mixes two color values in a given colorspace by a given amount. 
 - {{CSSxRef("color_value/color-contrast", "color-contrast()")}} {{Experimental_Inline}}
-  - : Takes a {{CSSxRef("color_value","color")}} value and compares it to a list of other {{CSSxRef("color_value","color")}} values, selecting the one with the highest contrast from the list.
+  - : Selects the highest color contrast from a list of colors, compare to a base color value.
 - {{CSSxRef("color_value/device-cmyk", "device-cmyk()")}} {{Experimental_Inline}}
   - : Defines CMYK colors in a device-independent way.
-- {{CSSxRef("color_value/hsl", "hsl()")}}
-  - : The HSL color model defines a given color according to its hue, saturation, and lightness components. An optional alpha component represents the color's transparency.
-- {{CSSxRef("color_value/hsla", "hsla()")}}
-  - : The HSL color model defines a given color according to its hue, saturation, and lightness components. The alpha component represents the color's transparency.
-- {{CSSxRef("color_value/hwb", "hwb()")}}
-  - : HWB (short for Hue-Whiteness-Blackness) is another method of specifying colors, similar to HSL.
-- {{CSSxRef("color_value/lab", "lab()")}} {{Experimental_Inline}}
-  - : Lab color is device-independent and specifies physical measurements of color.
-- {{CSSxRef("color_value/lch", "lch()")}} {{Experimental_Inline}}
-  - : LCH color is device-independent and specifies color using polar coordinates for chroma and hue.
-- {{CSSxRef("color_value/oklab", "oklab()")}} {{Experimental_Inline}}
-  - : OKLab color is device-independent and specifies physical measurements of color.
-- {{CSSxRef("color_value/oklch", "oklch()")}} {{Experimental_Inline}}
-  - : OKLCH color is device-independent and specifies color using polar coordinates for chroma and hue.
-- {{CSSxRef("color_value/rgb", "rgb()")}}
-  - : The RGB color model defines a given color according to its red, green, and blue components. An optional alpha component represents the color's transparency.
-- {{CSSxRef("color_value/rgba", "rgba()")}}
-  - : The RGB color model defines a given color according to its red, green, and blue components. The alpha component represents the color's transparency.
 
 ## Image functions
 
