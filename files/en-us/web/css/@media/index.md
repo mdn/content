@@ -166,8 +166,8 @@ You can also combine multiple media queries into a single rule by separating the
     Each query in a comma-separated list is treated separately from the others
     Thus, if any of the queries in a list is `true`, the entire media statement returns `true`.
     In other words, lists behave like a logical `or` operator.
-- `or` 
-  - : Equivalent to the `,` operator. Added in Media Queries Level 4. 
+- `or`
+  - : Equivalent to the `,` operator. Added in Media Queries Level 4.
 
 ## Accessibility concerns
 
