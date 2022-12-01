@@ -67,7 +67,7 @@ In August 2008, the Mozilla Developer Center switched to [MindTouch DekiWiki](ht
 
 Time: _0:26:08 - 0:31:50_ and _0:43:52 - 0:51:35_
 
-[Kuma](https://github.com/mdn/kuma), forked from [Kitsune](https://github.com/mozilla/kitsune) in early 2011 and launched on August 3, 2012, is a Mozilla-built wiki platform based on Django with its own [KumaScript](/en-US/docs/MDN/Tools/KumaScript) macro system which uses Node.js.
+[Kuma](https://github.com/mdn/kuma), forked from [Kitsune](https://github.com/mozilla/kitsune) in early 2011 and launched on August 3, 2012, is a Mozilla-built wiki platform based on Django with its own [KumaScript](https://github.com/mdn/yari/tree/main/docs/kumascript) macro system which uses Node.js.
 
 With the code living on GitHub, the community started to contribute to MDN's CMS as well. From now on, hacking on MDN includes both writing documentation and Kuma coding.
 
