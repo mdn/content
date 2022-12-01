@@ -39,7 +39,7 @@ None ({{jsxref("undefined")}}).
 
 The following example shows a simple button that, when clicked, opens a
 {{htmlelement("dialog")}} containing a form via the `showModal()` method.
-From there you can click the _Cancel_ button to close the dialog (via the
+From there you can click the _X_ button to close the dialog (via the
 {{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit
 button.
 
@@ -47,6 +47,7 @@ button.
 <!-- Simple pop-up dialog box, containing a form -->
 <dialog id="favDialog">
   <form method="dialog">
+    <button id="close" aria-label="close" novalidate>X</button>
     <section>
       <p>
         <label for="favAnimal">Favorite animal:</label>
@@ -59,7 +60,7 @@ button.
       </p>
     </section>
     <menu>
-      <button id="cancel" type="reset">Cancel</button>
+      <button type="reset">Reset</button>
       <button type="submit">Confirm</button>
     </menu>
   </form>
@@ -72,7 +73,7 @@ button.
 <script>
   (() => {
     const updateButton = document.getElementById("updateDetails");
-    const cancelButton = document.getElementById("cancel");
+    const closeButton = document.getElementById("close");
     const dialog = document.getElementById("favDialog");
     dialog.returnValue = "favAnimal";
 
@@ -90,14 +91,16 @@ button.
       openCheck(dialog);
     });
 
-    // Form cancel button closes the dialog box
-    cancelButton.addEventListener("click", () => {
+    // Form close button closes the dialog box
+    closeButton.addEventListener("click", () => {
       dialog.close("animalNotChosen");
       openCheck(dialog);
     });
   })();
 </script>
 ```
+
+If the "X" button was of `type="submit"`, the dialog would have closed without requiring JavaScript. A form submission closes the `<dialog>` it is nested in (no `.close()` function required) if the [form's method is `dialog`](/en-US/docs/Web/HTML/Element/form#attr-method).
 
 > **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/main/htmldialogelement-basic/index.html)
 > ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
