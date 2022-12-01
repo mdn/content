@@ -14,7 +14,7 @@ browser-compat: api.HTMLDialogElement.close_event
 
 {{ APIRef() }}
 
-The `close` event is fired on an `HTMLDialogElement` object when the dialog it represents has been closed.
+The `close` event is fired on an `HTMLDialogElement` object when the dialog it represents has been closed whether via the <kbd>escape</kbd> key, the [`HTMLDialogElement.close()` method](/en-US/docs/Web/API/HTMLDialogElement/close), or by submitting a form via the [`dialog`](/en-US/docs/Web/HTML/Element/form#attr-method) method.
 
 This event is not cancelable and does not bubble.
 
@@ -40,7 +40,10 @@ A generic {{domxref("Event")}}.
 
 ```html
 <dialog class="example-dialog">
-  <button class="close" type="reset">Close</button>
+  <form method="dialog">
+     <button>Close via method="dialog"</button>
+  </form>
+  <button class="close">Close via .close() method</button>
 </dialog>
 
 <button class="open-dialog">Open dialog</button>
