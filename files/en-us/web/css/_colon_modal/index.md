@@ -81,7 +81,7 @@ const confirmBtn = favDialog.querySelector("#confirmBtn");
 // dialog contents by default.
 if (typeof favDialog.showModal !== "function") {
   favDialog.hidden = true;
-  /* a fallback script */
+  // Your fallback script
 }
 // "Update details" button opens the <dialog> modally
 updateButton.addEventListener("click", () => {
