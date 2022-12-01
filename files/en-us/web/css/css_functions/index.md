@@ -211,7 +211,7 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
 - {{CSSxRef("color_value/color", "color()")}} {{Experimental_Inline}}
   - : Specifies a particular, specified colorspace rather than the implicit sRGB colorspace.
 - {{CSSxRef("color_value/color-mix", "color-mix()")}} {{Experimental_Inline}}
-  - : Mixes two color values in a given colorspace by a given amount. 
+  - : Mixes two color values in a given colorspace by a given amount.
 - {{CSSxRef("color_value/color-contrast", "color-contrast()")}} {{Experimental_Inline}}
   - : Selects the highest color contrast from a list of colors, compare to a base color value.
 - {{CSSxRef("color_value/device-cmyk", "device-cmyk()")}} {{Experimental_Inline}}
