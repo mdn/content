@@ -102,6 +102,10 @@ button.
 
 If the "X" button was of `type="submit"`, the dialog would have closed without requiring JavaScript. A form submission closes the `<dialog>` it is nested in (no `.close()` function required) if the [form's method is `dialog`](/en-US/docs/Web/HTML/Element/form#attr-method).
 
+### Result
+
+{{ EmbedLiveSample('Examples', '100%', '200px') }}
+
 > **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/main/htmldialogelement-basic/index.html)
 > ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
