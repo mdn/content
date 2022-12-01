@@ -71,8 +71,8 @@ dialog.addEventListener('close', (event) => {
 
 const openDialog = document.querySelector('.open-dialog');
 openDialog.addEventListener('click', () => {
-      dialog.showModal();
-      result.textContent = '';
+  dialog.showModal();
+  result.textContent = "";
 });
 
 const closeButton = document.querySelector('.close');
