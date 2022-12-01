@@ -1,6 +1,6 @@
 ---
-title: MDN contribution changelog
-slug: MDN/Contribute/Changelog
+title: MDN Web Docs changelog
+slug: MDN/Changelog
 tags:
   - Changelog
   - Contribute
