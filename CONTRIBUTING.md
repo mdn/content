@@ -91,7 +91,7 @@ See the [Creating a pull request](#creating-a-pull-request) for more details on 
 If you're not certain of the changes that you want to make, get in touch with us!
 You can [chat with us](https://chat.mozilla.org/#/room/#mdn:mozilla.org) or [file an issue](https://github.com/mdn/content/issues).
 
-> **Tip:** You can click the **Source on GitHub** link at the bottom of an MDN page to jump directly to the page source on GitHub.
+> **Note** You can click the **Source on GitHub** link at the bottom of an MDN page to jump directly to the page source on GitHub.
 
 ### Forking and cloning the repository
 
@@ -191,7 +191,8 @@ To edit files and track your changes, you should use feature branches.
 Feature branches are created from the `main` branch and should be named after the feature you're working on.
 This will make it easier to submit a pull request for your changes.
 
-> **Note:** Open a discussion if your changes will contain large, complex or structural changes.
+> **Note**
+> Open a discussion if your changes will contain large, complex or structural changes.
 > Ask for feedback before embarking on large tasks.
 
 1. When the server is running, make the changes you would like to make to one or more `index.md` files.
@@ -237,9 +238,9 @@ Moving one or more documents, or an entire tree of documents is made easier with
 yarn content move <from-slug> <to-slug> [locale]
 ```
 
-> **Important:** `yarn content move` automatically adds redirect rules for moved content.
-> Don't edit the `_redirects.txt` file manually!
-> If you need to add a redirect without moving a file, talk to us about it.
+> **Warning**
+> Don't edit the `_redirects.txt` file manually.
+> If you need to add a redirect without moving a file, ask the MDN Web Docs team first.
 
 To use `yarn content move`, provide the slug of the document you'd like to move (e.g., `Learn/Accessibility`), and the slug of its new location (e.g., `Learn/A11y`).
 The locale of the existing document can be provided as an optional third argument (this defaults to `en-US`).
@@ -278,24 +279,23 @@ Let's say you want to move the entire `/en-US/Learn/Accessibility` tree to `/en-
 ### Deleting a document
 
 Deleting documents or a tree of documents is easy with the help of the `yarn content delete` command.
-**Don't manually delete directories** from the repository as `yarn content delete` handles other necessary changes such as updating the `_wikihistory.json` file.
+
+> **Warning**
+> Don't manually delete directories from the repository: `yarn content delete` handles other necessary changes such as updating the `_wikihistory.json` file.
 
 ```sh
-yarn content delete <document-slug> [locale]
+yarn content delete <document-slug> [locale] --redirect <redirect-slug-or-url>
 ```
 
 To use `yarn content delete`, provide the slug of the document you'd like to delete (e.g., `Learn/Accessibility`), and the locale as an optional second argument (this defaults to `en-US`).
 If the slug of the page you wish to delete contains special characters, include it in quotes:
 
 ```sh
-yarn content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"
+yarn content delete "Glossary/Round_Trip_Time_(RTT)" --redirect Glossary/Latency
 ```
 
 If the document has child documents (i.e. it represents a document tree), you must specify the `-r, --recursive` option or the command will fail.
-You may also use `--redirect` to redirect the deleted document or a list of deleted documents.
-An example of using `--redirect` is described in the steps below.
-
-Say you want to delete the entire `/en-US/Learn/Accessibility` tree:
+Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect all the deleted documents to `Web/Accessibility`:
 
 1. Starting from a fresh branch:
 
@@ -309,17 +309,15 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree:
    git checkout -b deleting-a11y
    ```
 
-2. Run the `yarn content delete` command:
-
-   ```sh
-   yarn content delete Learn/Accessibility --recursive
-   ```
-
-   For convenience, you can [add a redirect](#redirecting-a-document) with this command for each deleted document to a specified slug:
+2. Run the `yarn content delete` command and redirect all deleted documents:
 
    ```sh
    yarn content delete Learn/Accessibility --recursive --redirect Web/Accessibility
    ```
+
+   > **Warning**
+   > You must add a redirect when deleting documents.
+   > If you choose add a redirect manually, see [Redirecting a document](#redirecting-a-document) to specify a URL per document.
 
 3. Commit all of the changes and push your branch to the remote:
 
