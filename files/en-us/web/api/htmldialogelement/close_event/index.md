@@ -44,6 +44,7 @@ A generic {{domxref("Event")}}.
      <button>Close via method="dialog"</button>
   </form>
   <button class="close">Close via .close() method</button>
+  <p>Or hit the <kbd>Esc</kbd> key</p>
 </dialog>
 
 <button class="open-dialog">Open dialog</button>
@@ -70,12 +71,8 @@ dialog.addEventListener('close', (event) => {
 
 const openDialog = document.querySelector('.open-dialog');
 openDialog.addEventListener('click', () => {
-  if (typeof dialog.showModal === 'function') {
       dialog.showModal();
       result.textContent = '';
-  } else {
-      result.textContent = 'The dialog API is not supported by this browser';
-  }
 });
 
 const closeButton = document.querySelector('.close');
@@ -86,7 +83,7 @@ closeButton.addEventListener('click', () => {
 
 #### Result
 
-{{ EmbedLiveSample('Live_example', '100%', '100px') }}
+{{ EmbedLiveSample('Live_example', '100%', '200px') }}
 
 ## Specifications
 
