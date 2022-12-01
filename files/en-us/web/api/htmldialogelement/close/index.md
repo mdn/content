@@ -15,7 +15,7 @@ browser-compat: api.HTMLDialogElement.close
 {{ APIRef("HTML DOM") }}
 
 The **`close()`** method of the {{domxref("HTMLDialogElement")}}
-interface closes the dialog. An optional string may be passed as an
+interface closes the {{htmlelement("dialog")}}. An optional string may be passed as an
 argument, updating the `returnValue` of the dialog.
 
 ## Syntax
