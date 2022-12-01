@@ -14,9 +14,9 @@ browser-compat: javascript.builtins.RegExp.compile
 
 {{JSRef}} {{deprecated_header}}
 
-> **Note:** The `compile()` method is deprecated and is only specified for compatibility reasons. You can just use the [`RegExp()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) constructor to achieve the same effect. Using `compile()` causes the otherwise immutable regex source and flags to become mutable, which may break user expectations.
+> **Note:** The `compile()` method is only specified for compatibility reasons. Using `compile()` causes the otherwise immutable regex source and flags to become mutable, which may break user expectations. You can use the [`RegExp()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) constructor to construct a new regular expression object instead.
 
-The deprecated **`compile()`** method of a `RegExp` object is used to recompile a regular expression with new source and flags after the `RegExp` object has already been created.
+The **`compile()`** method of a `RegExp` object is used to recompile a regular expression with new source and flags after the `RegExp` object has already been created.
 
 ## Syntax
 

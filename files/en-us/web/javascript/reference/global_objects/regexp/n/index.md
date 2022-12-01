@@ -16,7 +16,7 @@ browser-compat: javascript.builtins.RegExp.n
 
 > **Note:** All `RegExp` static properties that expose the last match state globally are deprecated. See [deprecated RegExp features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) for more information.
 
-The deprecated **`RegExp.$1, …, RegExp.$9`** static accessor properties return parenthesized substring matches.
+The **`RegExp.$1, …, RegExp.$9`** static accessor properties return parenthesized substring matches.
 
 ## Description
 
