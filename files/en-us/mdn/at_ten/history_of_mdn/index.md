@@ -17,7 +17,7 @@ In this talk from 2015, several contributors of the MDN project look at the past
 </pre><pre class="brush: css hidden">body{margin-top:8px;}
 </pre></div>
 
-{{ EmbedLiveSample('audio', '100%', '70px', '', '', 'no-buttons') }}
+{{ EmbedLiveSample('audio', '100%', '70px') }}
 
 ![The Berlin Office](11073502_781006205281080_8135317797319228200_o-600x400.jpg)
 
@@ -93,7 +93,7 @@ Different browser vendors have joined every once in a while to help shape this p
 
 Time: _0:36:55 - 0:43:52_
 
-Localization is a big part of the Mozilla community; it is a component of almost every project and product. Using Kuma, MDN is also very localizable and suited for the needs of [our l10n community](/en-US/docs/MDN/Contribute/Localize). The W3C specifications and other resources describing the Web's functionality have no direct goals, and have communities that provide specs in multiple languages. Especially for beginners, MDN is the first step to explore web technologies, so it's our aim to be there for everyone. MDN has a broad audience and aims to include not only native English speakers. It is appreciated all around the globe.
+Localization is a big part of the Mozilla community; it is a component of almost every project and product. Using Kuma, MDN is also very localizable and suited for the needs of [our l10n community](/en-US/docs/MDN/Community/Contributing/Translated_content). The W3C specifications and other resources describing the Web's functionality have no direct goals, and have communities that provide specs in multiple languages. Especially for beginners, MDN is the first step to explore web technologies, so it's our aim to be there for everyone. MDN has a broad audience and aims to include not only native English speakers. It is appreciated all around the globe.
 
 ### Learning Area
 
