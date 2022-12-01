@@ -68,17 +68,12 @@ candidates match. Otherwise, the condition descriptor may take one of two forms:
   is double the standard density, you can give the pixel density descriptor
   `2x` or `2.0x`.
 
-You may mix and match the two types of descriptor. You must not, however, provide
-multiple image candidate strings that specify the same descriptor. All of the following
-are valid image candidate strings:
-
 ```plain
-"images/team-photo.jpg 1x, images/team-photo-retina.jpg 2x, images/team-photo-full.jpg 2048w"
+"images/team-photo.jpg 1x, images/team-photo-retina.jpg 2x"
 ```
 
 This string provides versions of an image to be used at the standard pixel density
-(`1x`) as well as double that pixel density (`2x`). Also available
-is a version of the image for use at a width of 2048 pixels (`2048w`).
+(`1x`) as well as double that pixel density (`2x`).
 
 ```plain
 "header640.png 640w, header960.png 960w, header1024.png 1024w, header.png"
