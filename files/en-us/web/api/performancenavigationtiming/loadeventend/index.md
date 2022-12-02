@@ -12,40 +12,36 @@ browser-compat: api.PerformanceNavigationTiming.loadEventEnd
 
 {{APIRef("Performance API")}}
 
-The **`loadEventEnd`** read-only property returns a
-{{domxref("DOMHighResTimeStamp","timestamp")}} which is equal to the time when the load
-event of the current document is completed.
+The **`loadEventEnd`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} which is equal to the time when the load event of the current document is completed.
 
 ## Value
 
-A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time when the load
-event of the current document is completed.
+A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time when the load event of the current document is completed.
 
 ## Examples
 
-The following example illustrates this property's usage.
+### Measuring document loading time
+
+The following example measures how long it takes to load a document.
 
 ```js
-function printNavTimingData() {
-  // Use getEntriesByType() to just get the "navigation" events
-  performance.getEntriesByType("navigation")
-    .forEach((p, i) => {
-      console.log(`= Navigation entry[${i}]`);
+const resources = performance.getEntriesByType("navigation");
+resources.forEach((entry) => {
+  const loadingTime = entry.loadEventEnd - entry.loadEventStart;
+  if (loadingTime > 0) {
+    console.log(`${entry.name}:
+      Document loading time: ${loadingTime}ms`);
+  }
+});
+```
 
-      // DOM Properties
-      console.log(`DOM content loaded = ${p.domContentLoadedEventEnd - p.domContentLoadedEventStart}`);
-      console.log(`DOM complete = ${p.domComplete}`);
-      console.log(`DOM interactive = ${p.domInteractive}`);
+This is especially useful if a (potentially long-running) [`load`](/en-US/docs/Web/API/Window/load_event) event is used.
 
-      // Document load and unload time
-      console.log(`document load = ${p.loadEventEnd - p.loadEventStart}`);
-      console.log(`document unload = ${p.unloadEventEnd - p.unloadEventStart}`);
-
-      // Other properties
-      console.log(`type = ${p.type}`);
-      console.log(`redirectCount = ${p.redirectCount}`);
-    });
-}
+```js
+window.addEventListener("load", (event) => {
+  // Some code the browser must run
+  // when loading the document
+});
 ```
 
 ## Specifications
@@ -55,3 +51,7 @@ function printNavTimingData() {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [`load`](/en-US/docs/Web/API/Window/load_event) event

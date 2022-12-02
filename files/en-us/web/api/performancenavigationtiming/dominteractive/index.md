@@ -12,42 +12,29 @@ browser-compat: api.PerformanceNavigationTiming.domInteractive
 
 {{APIRef("Performance API")}}
 
-The **`domInteractive`** read-only property returns a
-{{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the
-time immediately before the user agent sets the current document readiness of the
-current document to [interactive](https://html.spec.whatwg.org/multipage/syntax.html#the-end).
+The **`domInteractive`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the time immediately before the user agent sets the current document readiness of the current document to [`interactive`](/en-US/docs/Web/API/Document/readyState).
+
+> **Note:** This property is **not** {{Glossary("Time to interactive")}} (TTI). This property refers to the time when DOM construction is finished and interaction to it from JavaScript is possible. See also the `interactive` state of {{domxref("Document.readyState")}} which corresponds to this property.
+
+Measuring DOM processing time may not be consequential unless your site has a very large HTML source to a construct a Document Object Model from.
+
+If there is no parser-blocking JavaScript then the [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event (see [`domContentLoadedEventStart`](/en-US/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventStart) for the timestamp) will fire immediately after `domInteractive`.
 
 ## Value
 
-A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to
-the time immediately before the user agent sets the current document readiness of the
-current document to [interactive](https://html.spec.whatwg.org/multipage/syntax.html#the-end).
+A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the time immediately before the user agent sets the current document readiness of the current document to [`interactive`](/en-US/docs/Web/API/Document/readyState).
 
 ## Examples
 
-The following example illustrates this property's usage.
+### Logging DOM interaction time
+
+The following example logs the time when the DOM construction has finished and interaction with it is possible.
 
 ```js
-function printNavTimingData() {
-  // Use getEntriesByType() to just get the "navigation" events
-  performance.getEntriesByType("navigation")
-    .forEach((p, i) => {
-      console.log(`= Navigation entry[${i}]`);
-
-      // DOM Properties
-      console.log(`DOM content loaded = ${p.domContentLoadedEventEnd - p.domContentLoadedEventStart}`);
-      console.log(`DOM complete = ${p.domComplete}`);
-      console.log(`DOM interactive = ${p.domInteractive}`);
-
-      // Document load and unload time
-      console.log(`document load = ${p.loadEventEnd - p.loadEventStart}`);
-      console.log(`document unload = ${p.unloadEventEnd - p.unloadEventStart}`);
-
-      // Other properties
-      console.log(`type = ${p.type}`);
-      console.log(`redirectCount = ${p.redirectCount}`);
-    });
-}
+const resources = performance.getEntriesByType("navigation");
+resources.forEach((entry) => {
+  console.log(entry.domInteractive);
+});
 ```
 
 ## Specifications
@@ -57,3 +44,7 @@ function printNavTimingData() {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Document.readyState")}}

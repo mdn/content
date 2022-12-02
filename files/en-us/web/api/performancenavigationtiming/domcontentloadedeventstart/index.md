@@ -12,42 +12,27 @@ browser-compat: api.PerformanceNavigationTiming.domContentLoadedEventStart
 
 {{APIRef("Performance API")}}
 
-The **`domContentLoadedEventStart`** read-only property returns
-a {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to
-the time immediately before the user agent fires the [DOMContentLoaded](https://html.spec.whatwg.org/multipage/syntax.html#the-end)
-event at the current document.
+The **`domContentLoadedEventStart`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the time immediately before the user agent fires the [DOMContentLoaded](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event at the current document.
+
+Typically frameworks and libraries wait for the `DOMContentLoaded` event before starting to run their code. We can use the `domContentLoadedEventStart` and the [`domContentLoadedEventEnd`](/en-US/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventEnd) properties to calculate how long this takes to run.
 
 ## Value
 
-A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to
-the time immediately before the user agent fires the [DOMContentLoaded](https://html.spec.whatwg.org/multipage/syntax.html#the-end)
-event at the current document.
+A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the time immediately before the user agent fires the [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event at the current document.
 
 ## Examples
 
-The following example illustrates this property's usage.
+### Measuring `DOMContentLoaded` processing time
+
+The following example measures how long it takes process the [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event.
 
 ```js
-function printNavTimingData() {
-  // Use getEntriesByType() to just get the "navigation" events
-  performance.getEntriesByType("navigation")
-    .forEach((p, i) => {
-      console.log(`= Navigation entry[${i}]`);
-
-      // DOM Properties
-      console.log(`DOM content loaded = ${p.domContentLoadedEventEnd - p.domContentLoadedEventStart}`);
-      console.log(`DOM complete = ${p.domComplete}`);
-      console.log(`DOM interactive = ${p.domInteractive}`);
-
-      // Document load and unload time
-      console.log(`document load = ${p.loadEventEnd - p.loadEventStart}`);
-      console.log(`document unload = ${p.unloadEventEnd - p.unloadEventStart}`);
-
-      // Other properties
-      console.log(`type = ${p.type}`);
-      console.log(`redirectCount = ${p.redirectCount}`);
-    });
-}
+const resources = performance.getEntriesByType("navigation");
+resources.forEach((entry) => {
+  const domContentLoadedTime = entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart;
+   console.log(`${entry.name}: DOMContentLoaded processing time: ${domContentLoadedTime}ms`);
+  }
+});
 ```
 
 ## Specifications
@@ -57,3 +42,7 @@ function printNavTimingData() {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [DOMContentLoaded](/en-US/docs/Web/API/Document/DOMContentLoaded_event)

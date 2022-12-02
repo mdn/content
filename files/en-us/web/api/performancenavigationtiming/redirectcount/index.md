@@ -12,42 +12,40 @@ browser-compat: api.PerformanceNavigationTiming.redirectCount
 
 {{APIRef("Performance API")}}
 
-The **`redirectCount`** property returns a
-{{domxref("DOMHighResTimeStamp","timestamp")}} representing the number of redirects
-since the last non-redirect navigation under the current browsing context.
+The **`redirectCount`** read-only property returns number representing the amount of redirects since the last non-redirect navigation in the current browsing context.
 
-This property is {{ReadOnlyInline}}.
+The higher the amount of redirects on a page, the higher is the page load time. You want to avoid multiple redirects to improve the performance of your web page.
+
+The {{domxref("PerformanceResourceTiming.redirectStart", "redirectStart")}} and {{domxref("PerformanceResourceTiming.redirectEnd", "redirectEnd")}} properties can be used to measure redirection time. Note that they will return `0` for cross-origin redirects.
+
+Note that client side redirects, such as `<meta http-equiv="refresh" content="0; url=https://example.com/">` are not considered here.
 
 ## Value
 
-A number representing the number of redirects since the last non-redirect navigation
-under the current browsing context.
+The `redirectCount` property can have the following values:
+
+- A number representing the amount of redirects since the last non-redirect navigation in the current browsing context.
+- `0` if the redirect is cross-origin.
 
 ## Examples
 
-The following example illustrates this property's usage.
+### Logging entries with redirects
+
+The following example checks if there are one or more redirects and logs the entry's name and the redirection time if available.
 
 ```js
-function printNavTimingData() {
-  // Use getEntriesByType() to just get the "navigation" events
-  performance.getEntriesByType("navigation")
-    .forEach((p, i) => {
-      console.log(`= Navigation entry[${i}]`);
-
-      // DOM Properties
-      console.log(`DOM content loaded = ${p.domContentLoadedEventEnd - p.domContentLoadedEventStart}`);
-      console.log(`DOM complete = ${p.domComplete}`);
-      console.log(`DOM interactive = ${p.domInteractive}`);
-
-      // Document load and unload time
-      console.log(`document load = ${p.loadEventEnd - p.loadEventStart}`);
-      console.log(`document unload = ${p.unloadEventEnd - p.unloadEventStart}`);
-
-      // Other properties
-      console.log(`type = ${p.type}`);
-      console.log(`redirectCount = ${p.redirectCount}`);
-    });
-}
+const resources = performance.getEntriesByType("navigation");
+resources.forEach((entry) => {
+  const name = entry.name;
+  const redirectCount = entry.redirectCount;
+  const redirectTime = entry.redirectEnd - entry.redirectStart;
+  if (redirectCount > 0) {
+    console.log(`${name}: Redirect count: ${redirectCount}`);
+    if (redirectTime > 0) {
+      console.log(`${name}: Redirect time: ${redirectTime}ms`);
+    }
+  }
+});
 ```
 
 ## Specifications
@@ -57,3 +55,8 @@ function printNavTimingData() {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("PerformanceResourceTiming.redirectStart")}}
+- {{domxref("PerformanceResourceTiming.redirectEnd")}}

@@ -12,42 +12,40 @@ browser-compat: api.PerformanceNavigationTiming.unloadEventStart
 
 {{APIRef("Performance API")}}
 
-The **`unloadEventStart`** read-only property returns a
-{{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the
-time immediately before the user agent starts the unload event of the previous document.
-If there is no previous document, this property returns `0`.
+The **`unloadEventStart`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the time immediately before the user agent starts the unload event of the previous document.
 
 ## Value
 
-A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to
-the time immediately before the user agent starts the unload event of the previous
-document.
+The `unloadEventStart` property can have the following values:
+
+- A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the time immediately before the user agent starts the unload event of the previous document.
+- `0` if there is no previous document.
+- `0` if the previous page was on another origin.
 
 ## Examples
 
-The following example illustrates this property's usage.
+### Measuring document unloading time
+
+The following example measures how long it takes to unload a document.
 
 ```js
-function printNavTimingData() {
-  // Use getEntriesByType() to just get the "navigation" events
-  performance.getEntriesByType("navigation")
-    .forEach((p, i) => {
-      console.log(`= Navigation entry[${i}]`);
+const resources = performance.getEntriesByType("navigation");
+resources.forEach((entry) => {
+  const unloadingTime = entry.unloadEventEnd - entry.unloadEventStart;
+  if (unloadingTime > 0) {
+    console.log(`${entry.name}:
+      Document unloading time: ${unloadingTime}ms`);
+  }
+});
+```
 
-      // DOM Properties
-      console.log(`DOM content loaded = ${p.domContentLoadedEventEnd - p.domContentLoadedEventStart}`);
-      console.log(`DOM complete = ${p.domComplete}`);
-      console.log(`DOM interactive = ${p.domInteractive}`);
+This is especially useful if a (potentially long-running) [`unload`](/en-US/docs/Web/API/Window/unload_event) event is used.
 
-      // Document load and unload time
-      console.log(`document load = ${p.loadEventEnd - p.loadEventStart}`);
-      console.log(`document unload = ${p.unloadEventEnd - p.unloadEventStart}`);
-
-      // Other properties
-      console.log(`type = ${p.type}`);
-      console.log(`redirectCount = ${p.redirectCount}`);
-    });
-}
+```js
+window.addEventListener("unload", (event) => {
+  // Some code the browser must run
+  // before it can navigate to the next page
+});
 ```
 
 ## Specifications
@@ -57,3 +55,7 @@ function printNavTimingData() {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [`unload`](/en-US/docs/Web/API/Window/unload_event) event
