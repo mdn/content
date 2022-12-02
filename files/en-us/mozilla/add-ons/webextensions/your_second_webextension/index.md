@@ -149,10 +149,10 @@ The HTML file looks like this:
 
   <body>
     <div id="popup-content">
-      <button>Frog</button>
-      <button>Turtle</button>
-      <button>Snake</button>
-      <button type="reset">Reset</button>
+      <button class="button beast">Frog</button>
+      <button class="button beast">Turtle</button>
+      <button class="button beast">Snake</button>
+      <button class="button reset">Reset</button>
     </div>
     <div id="error-content" class="hidden">
       <p>Can't beastify this web page.</p>
@@ -172,8 +172,7 @@ Note that we include the CSS and JS files from this file, just like a web page.
 The CSS fixes the size of the popup, ensures that the three choices fill the space, and gives them some basic styling. It also hides elements with `class="hidden"`: this means that our `<div id="error-content"...` element will be hidden by default.
 
 ```css
-html,
-body {
+html, body {
   width: 100px;
 }
 
@@ -181,7 +180,7 @@ body {
   display: none;
 }
 
-button {
+.button {
   border: none;
   width: 100%;
   margin: 3% auto;
@@ -189,18 +188,21 @@ button {
   text-align: center;
   font-size: 1.5em;
   cursor: pointer;
-  background-color: #E5F2F2;
 }
 
-button:hover {
+.beast:hover {
   background-color: #CFF2F2;
 }
 
-button[type="reset"] {
+.beast {
+  background-color: #E5F2F2;
+}
+
+.reset {
   background-color: #FBFBC9;
 }
 
-button[type="reset"]:hover {
+.reset:hover {
   background-color: #EAEA9D;
 }
 ```
@@ -276,15 +278,15 @@ function listenForClicks() {
      * Get the active tab,
      * then call "beastify()" or "reset()" as appropriate.
      */
-    if (e.target.type === "reset") {
-      browser.tabs
-        .query({ active: true, currentWindow: true })
-        .then(reset)
-        .catch(reportError);
-    } else {
+    if (e.target.classList.contains("beast")) {
       browser.tabs
         .query({ active: true, currentWindow: true })
         .then(beastify)
+        .catch(reportError);
+    } else if (e.target.classList.contains("reset")) {
+      browser.tabs
+        .query({ active: true, currentWindow: true })
+        .then(reset)
         .catch(reportError);
     }
   });
