@@ -91,7 +91,7 @@ See the [Creating a pull request](#creating-a-pull-request) for more details on 
 If you're not certain of the changes that you want to make, get in touch with us!
 You can [chat with us](https://chat.mozilla.org/#/room/#mdn:mozilla.org) or [file an issue](https://github.com/mdn/content/issues).
 
-> **Note** You can click the **Source on GitHub** link at the bottom of an MDN page to jump directly to the page source on GitHub.
+> **Note:** You can click the **Source on GitHub** link at the bottom of an MDN page to jump directly to the page source on GitHub.
 
 ### Forking and cloning the repository
 
@@ -232,7 +232,7 @@ There are a few things to keep in mind:
 
 ### Moving documents
 
-Moving one or more documents, or an entire tree of documents is made easier with the `yarn content move` command that takes care of the details:
+Moving one or more documents (or an entire tree of documents), is made easier with the "move" command. This moves the file and fixes up redirects automatically:
 
 ```sh
 yarn content move <from-slug> <to-slug> [locale]
@@ -316,8 +316,8 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
    ```
 
    > **Warning**
-   > You must add a redirect when deleting documents.
-   > If you choose add a redirect manually, see [Redirecting a document](#redirecting-a-document) to specify a URL per document.
+   > You should always add a redirect when deleting documents. If there is no obvious alternative, redirect to the nearest "parent" of the deleted topic.
+   > If you forget to redirect when deleting a file, you can do it afterwards: see [Redirecting a document](#redirecting-a-document).
 
 3. Commit all of the changes and push your branch to the remote:
 
@@ -331,7 +331,7 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
 ### Redirecting a document
 
 If you are [moving a document](#moving-one-or-more-documents) as shown above you don't need to create a redirect.
-However, you may need to after [deleting a document](#deleting-a-document) without the `--redirect` flag or when fixing a broken link.
+However, you may need to do so when fixing a broken link, or after [deleting a document](#deleting-a-document) without the `--redirect` flag.
 
 You may do this using the `yarn content add-redirect` command:
 
