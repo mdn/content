@@ -232,7 +232,8 @@ There are a few things to keep in mind:
 
 ### Moving documents
 
-Moving one or more documents (or an entire tree of documents), is made easier with the "move" command. This moves the file and fixes up redirects automatically:
+Moving one or more documents (or an entire tree of documents), is made easier with the `yarn content move` command.
+This moves the file and fixes up redirects automatically:
 
 ```sh
 yarn content move <from-slug> <to-slug> [locale]
@@ -240,7 +241,7 @@ yarn content move <from-slug> <to-slug> [locale]
 
 > **Warning**
 > Don't edit the `_redirects.txt` file manually.
-> If you need to add a redirect without moving a file, ask the MDN Web Docs team first.
+> See the [Redirecting a document](#redirecting-a-document) section for more information.
 
 To use `yarn content move`, provide the slug of the document you'd like to move (e.g., `Learn/Accessibility`), and the slug of its new location (e.g., `Learn/A11y`).
 The locale of the existing document can be provided as an optional third argument (this defaults to `en-US`).
@@ -281,7 +282,7 @@ Let's say you want to move the entire `/en-US/Learn/Accessibility` tree to `/en-
 Deleting documents or a tree of documents is easy with the help of the `yarn content delete` command.
 
 > **Warning**
-> Don't manually delete directories from the repository: `yarn content delete` handles other necessary changes such as updating the `_wikihistory.json` file.
+> Don't manually delete directories from the repository: the `delete` command handles other necessary changes such as updating the `_wikihistory.json` file.
 
 ```sh
 yarn content delete <document-slug> [locale] --redirect <redirect-slug-or-url>
