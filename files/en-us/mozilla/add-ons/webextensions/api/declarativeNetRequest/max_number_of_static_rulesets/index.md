@@ -1,40 +1,24 @@
 ---
-title: declarativeNetRequest.updateEnabledRulesets
-slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/updateEnabledRulesets
+title: declarativeNetRequest.MAX_NUMBER_OF_STATIC_RULESETS
+slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/MAX_NUMBER_OF_STATIC_RULESETS
 tags:
+  - MAX_NUMBER_OF_STATIC_RULESETS
   - API
   - Add-ons
   - Extensions
   - Reference
   - WebExtensions
-  - Function
+  - Property
   - declarativeNetRequest
-  - updateEnabledRulesets
-browser-compat: webextensions.api.declarativeNetRequest.updateEnabledRulesets
+  - MAX_NUMBER_OF_STATIC_RULESETS
+browser-compat: webextensions.api.declarativeNetRequest.MAX_NUMBER_OF_STATIC_RULESETS
 ---
 
 {{AddonSidebar()}}
 
-Activate or deactivate [static rulesets]().
+The maximum number of static `Rulesets` an extension can specify as part of the [`"rule_resources"`](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/rule_resources) manifest key.
 
-> **Note:** This API is available in Manifest V3 or higher.
-
-## Syntax
-
-```js-nolint
-let updatedRulesets = browser.declarativeNetRequest.updateEnabledRulesets(
-    options                // object
-);
-```
-
-### Parameters
-
-- `options`
-  - : {{WebExtAPIRef("declarativeNetRequest.UpdateRuleOptions")}}. Details of the rules to add or delete from session or dynamic rules.
-
-### Return value
-
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) If the request was successful, the promise is fulfilled with no arguments. If the request failed, the promise is rejected with an error message.
+Its value is `50`.
 
 {{WebExtExamples}}
 
@@ -42,9 +26,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) If th
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#method-updateEnabledRulesets) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#property-MAX_NUMBER_OF_STATIC_RULESETS) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

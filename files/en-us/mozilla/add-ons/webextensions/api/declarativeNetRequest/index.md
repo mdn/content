@@ -54,20 +54,24 @@ host permissions
 
 ## Properties
 
+- {{WebExtAPIRef("declarativeNetRequest.DYNAMIC_RULESET_ID")}}
+  - : Ruleset ID for the dynamic rules added by the extension.
+- {{WebExtAPIRef("declarativeNetRequest.GETMATCHEDRULES_QUOTA_INTERVAL")}}
+  - : The time interval within which {{WebExtAPIRef("declarativeNetRequest.MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL")}} {{WebExtAPIRef("declarativeNetRequest.getMatchedRules")}} calls can be made.
 - {{WebExtAPIRef("declarativeNetRequest.GUARANTEED_MINIMUM_STATIC_RULES")}}
-  - : Returns the number of static rules an extension can enable before the global static rule limit is reached.
-
-Todo
-
-- DYNAMIC_RULESET_ID
-- GETMATCHEDRULES_QUOTA_INTERVAL
-- GUARANTEED_MINIMUM_STATIC_RULES
-- MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL
-- MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES
-- MAX_NUMBER_OF_ENABLED_STATIC_RULESETS
-- MAX_NUMBER_OF_REGEX_RULES
-- MAX_NUMBER_OF_STATIC_RULESETS
-- SESSION_RULESET_ID
+  - : The minimum number of static rules guaranteed to an extension across its enabled static rulesets.
+- {{WebExtAPIRef("declarativeNetRequest.MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL")}}
+  - : The number of times {{WebExtAPIRef("declarativeNetRequest.getMatchedRules")}} can be called within a period of {{WebExtAPIRef("declarativeNetRequest.GETMATCHEDRULES_QUOTA_INTERVAL")}}.
+- {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}}
+  - : The maximum number of combined dynamic and session scoped rules an extension can add.
+- {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_ENABLED_STATIC_RULESETS")}}
+  - : The maximum number of static `Rulesets` an extension can enable.
+- {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_REGEX_RULES")}}
+  - : The maximum number of regular expression rules that an extension can add.
+- {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_STATIC_RULESETS")}}
+  - : The maximum number of static `Rulesets` an extension can specify as part of the [`"rule_resources"`](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/rule_resources) manifest key.
+- {{WebExtAPIRef("declarativeNetRequest.SESSION_RULESET_ID")}}
+  - : The ruleset ID for the session-scoped rules added by the extension.
 
 ## Functions
 
@@ -103,7 +107,7 @@ Todo
 
 Todo
 
--e updateSessionRulest
+- updateSessionRulest
 
 ## Events
 
