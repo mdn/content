@@ -9,9 +9,9 @@ tags:
 
 {{MDNSidebar}}
 
-The [Yari](https://github.com/mdn/yari/tree/main/docs/what-yari-does.md) platform on which MDN runs provides a macro system, [KumaScript](/en-US/docs/MDN/Tools/KumaScript), which makes it possible to automate certain tasks. This article provides information on how to invoke MDN's macros within articles.
+The [Yari](https://github.com/mdn/yari/tree/main/docs/what-yari-does.md) platform on which MDN runs provides a macro system, [KumaScript](https://github.com/mdn/yari/tree/main/docs/kumascript), which makes it possible to automate certain tasks. This article provides information on how to invoke MDN's macros within articles.
 
-The [KumaScript guide](/en-US/docs/MDN/Tools/KumaScript) provides an in-depth look at how to use macros on MDN, so this section is more of a brief overview.
+The [KumaScript guide](https://github.com/mdn/yari/blob/main/docs/kumascript/README.md) provides an in-depth look at how to use macros on MDN, so this section is more of a brief overview.
 
 ## How macros are implemented
 
@@ -31,7 +31,7 @@ A few notes about macro calls:
 - Parameters are separated by commas.
 - If there are no parameters, you may leave out the parentheses entirely; `\{{macroname()}}` and `\{{macroname}}` are identical.
 - Numeric parameters can be in quotes, or not. It's up to you (however, if you have a version number with multiple decimals in it, it needs to be in quotes).
-- If you get errors, review your code carefully. If you still can't figure out what's going on, see [Troubleshooting KumaScript errors](/en-US/docs/MDN/Tools/KumaScript/Troubleshooting) for help.
+- If you get errors, review your code carefully. If you still can't figure out what's going on, see [Troubleshooting KumaScript errors](https://github.com/mdn/yari/blob/main/docs/kumascript/troubleshooting-errors.md) for help.
 
 Macros are heavily cached; for any set of input values (both parameters and environmental values such as the URL for which the macro was run), the results are stored and reused. This means that the macro is only actually run when the inputs change.
 

@@ -44,19 +44,18 @@ console.log("b");
 
 The following properties are deprecated. This does not affect their use in [replacement strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace):
 
-| Property                                          | Description                                               |
-| ------------------------------------------------- | --------------------------------------------------------- |
-| {{jsxref("RegExp/n", "$1-$9")}}                   | Parenthesized substring matches, if any.                  |
-| {{jsxref("RegExp.input", "$_")}}                  | See `input`.                                              |
-| {{jsxref("RegExp.lastMatch", "$&amp;")}}          | See `lastMatch`.                                          |
-| {{jsxref("RegExp.lastParen", "$+")}}              | See `lastParen`.                                          |
-| {{jsxref("RegExp.leftContext", "$`")}}            | See `leftContext`.                                        |
-| {{jsxref("RegExp.rightContext", "$'")}}           | See `rightContext`.                                       |
-| {{jsxref("RegExp.input", "input")}}               | The string against which a regular expression is matched. |
-| {{jsxref("RegExp.lastMatch", "lastMatch")}}       | The last matched characters.                              |
-| {{jsxref("RegExp.lastParen", "lastParen")}}       | The last parenthesized substring match, if any.           |
-| {{jsxref("RegExp.leftContext", "leftContext")}}   | The substring preceding the most recent match.            |
-| {{jsxref("RegExp.rightContext", "rightContext")}} | The substring following the most recent match.            |
+- {{jsxref("RegExp/n", "$1–$9")}}
+  - : Parenthesized substring matches, if any.
+- {{jsxref("RegExp.input", "input, $_")}}
+  - : The string against which a regular expression is matched.
+- {{jsxref("RegExp.lastMatch", "lastMatch, $&amp;")}}
+  - : The last matched substring.
+- {{jsxref("RegExp.lastParen", "lastParen, $+")}}
+  - : The last parenthesized substring match, if any.
+- {{jsxref("RegExp.leftContext", "leftContext, $`")}}
+  - : The substring preceding the most recent match.
+- {{jsxref("RegExp.rightContext", "rightContext, $'")}}
+  - : The substring following the most recent match.
 
 > **Warning:** Avoid using these static properties, as they can cause [issues when interacting with external code](https://github.com/tc39/proposal-regexp-legacy-features/blob/master/subclass-restriction-motivation.md#legacy-static-properties-regexp1-etc)!
 

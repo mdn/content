@@ -513,7 +513,7 @@ tag`string text ${expression} string text`
 
 ## Automatic semicolon insertion
 
-Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements)'s syntax definition requires semicolons (`;`) at the end. They include:
+Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements)' syntax definitions require semicolons (`;`) at the end. They include:
 
 - [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const)
 - Expression statements
@@ -598,7 +598,7 @@ a = b;
 ++c;
 ```
 
-Here the `return` statement returns `undefined`, and the `a + b` becomes an unreachable statement.
+Here, the `return` statement returns `undefined`, and the `a + b` becomes an unreachable statement.
 
 ```js-nolint
 return
