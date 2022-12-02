@@ -11768,64 +11768,6 @@
       "KadirTopal"
     ]
   },
-  "MDN/Tools": {
-    "modified": "2020-09-30T16:47:37.562Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "ExE-Boss",
-      "jswisher",
-      "Sheppy"
-    ]
-  },
-  "MDN/Tools/KumaScript": {
-    "modified": "2020-11-30T12:49:14.386Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "ExE-Boss",
-      "fscholz",
-      "wbamberg",
-      "AndreDea",
-      "jwhitlock",
-      "pcat",
-      "jswisher",
-      "Sebastianz",
-      "xfq",
-      "escattone",
-      "Sheppy",
-      "AFBarstow",
-      "florent.maitralain",
-      "maybe",
-      "trevorh",
-      "lmorchard",
-      "groovecoder",
-      "Nickolay",
-      "kscarfone",
-      "edymtt",
-      "ashish_dgp",
-      "ethertank",
-      "teoli",
-      "Inkbug",
-      "markg"
-    ]
-  },
-  "MDN/Tools/KumaScript/Troubleshooting": {
-    "modified": "2020-09-30T16:47:38.105Z",
-    "contributors": [
-      "chrisdavidmills",
-      "jwhitlock",
-      "wbamberg",
-      "asmforce",
-      "Sheppy",
-      "usernamealreadyis",
-      "jswisher",
-      "wyrewolwerowany",
-      "maybe",
-      "armukul",
-      "stephaniehobson"
-    ]
-  },
   "MDN/Writing_guidelines/Howto/Document_a_CSS_property": {
     "modified": "2020-02-18T19:54:27.563Z",
     "contributors": [
