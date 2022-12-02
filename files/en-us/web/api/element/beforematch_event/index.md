@@ -44,8 +44,6 @@ In this example we have:
 
 We also have some JavaScript that listens for the `beforematch` event firing on the hidden until found element. The event handler changes the text content of the box.
 
-If your browser does not support the `"until-found"` enumerated value of the `hidden` attribute, the second `<div>` will be hidden as `hidden` was boolean prior to the addition of the `until-found` value.
-
 #### HTML
 
 ```html
@@ -102,6 +100,8 @@ Clicking the "Go to hidden content" button navigates to the hidden-until-found e
 To run the example again, click "Reload".
 
 {{EmbedLiveSample("Using beforematch", "", 300)}}
+
+If your browser does not support the `"until-found"` enumerated value of the `hidden` attribute, the second `<div>` will be hidden as `hidden` was boolean prior to the addition of the `until-found` value.
 
 ## Specifications
 
