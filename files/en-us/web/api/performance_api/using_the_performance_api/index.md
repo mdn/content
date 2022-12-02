@@ -13,7 +13,7 @@ tags:
 While a web application is running, the browser collects data that records various aspects of its performance, such as:
 
 - how long event handlers take to run
-- how long it takes the browser to fetch resources such as images
+- how long it takes the browser to fetch resources such as images, videos, fonts, and scripts
 - which paint operations take a long time to execute
 
 The Performance API gives web developers access to these metrics, and also enables them to record their own custom metrics that are associated with various events or locations in the code.
