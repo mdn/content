@@ -81,9 +81,6 @@ button.
 
 {{ EmbedLiveSample('Examples', '100%', '200px') }}
 
-> **Note:** You can find an expanded verion on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/main/htmldialogelement-basic/index.html)
-> ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
-
 ## Specifications
 
 {{Specifications}}
