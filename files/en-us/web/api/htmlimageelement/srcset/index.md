@@ -79,7 +79,7 @@ This string provides versions of an image to be used at the standard pixel densi
 (undescribed, assigned a default of `1x`) as well as double that pixel density (`2x`).
 
 When an image element's `srcset` contains "x" descriptors, browsers also consider the
-the URL in the {{domxref("HTMLImageElement.src", "src")}} attribute (if present) as a 
+the URL in the {{domxref("HTMLImageElement.src", "src")}} attribute (if present) as a
 candidate, and assign it a default descriptor of `1x`.
 
 ```plain
