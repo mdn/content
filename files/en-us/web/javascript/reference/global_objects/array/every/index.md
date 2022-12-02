@@ -17,6 +17,8 @@ The **`every()`** method tests whether
 all elements in the array pass the test implemented by the provided function. It
 returns a Boolean value.
 
+> **Note:** **Warning**: Invoking this method with an empty array will return `true` regardless of the condition!
+
 {{EmbedInteractiveExample("pages/js/array-every.html","shorter")}}
 
 ## Syntax
