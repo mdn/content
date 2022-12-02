@@ -44,9 +44,18 @@ Particular entry types typically include extra type-specific data: for example, 
 
 The subclasses of `PerformanceEntry` also define the semantics of the properties belonging to `PerformanceEntry` itself: for example, `PerformanceEntry` has a {{domxref("PerformanceEntry.name", "name")}} property whose meaning depends on the subclass.
 
-The inheritance hierarchy for performance entries is shown below:
+The following interfaces inherit from `PerformanceEntry`:
 
-![UML diagram of Performance APIs](diagram.svg)
+- {{domxref("LargestContentfulPaint")}}
+- {{domxref("PerformanceElementTiming")}}
+- {{domxref("PerformanceEventTiming")}}
+- {{domxref("PerformanceLongTaskTiming")}}
+- {{domxref("PerformanceMark")}}
+- {{domxref("PerformanceMeasure")}}
+- {{domxref("PerformancePaintTiming")}}
+- {{domxref("PerformanceResourceTiming")}}
+  - {{domxref("PerformanceNavigationTiming")}} inherits from `PerformanceResourceTiming`
+- {{domxref("TaskAttributionTiming")}}
 
 ### Accessing performance entries
 
