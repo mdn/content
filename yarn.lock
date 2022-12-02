@@ -39,10 +39,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.20.tgz#feebfdc8420d3744a2f5df3afac6ea7843ea27d1"
   integrity sha512-8FIjbB+NcHzU6Uk+8Kqpio8gkjrOROxYczwybI/fKI+Vr4d0pymm2hh+F/lTIAk3NWfyDCyNwldhzj/GAYutdg==
 
-"@mdn/yari@1.27.6":
-  version "1.27.6"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.27.6.tgz#204438a455027e3664da4d84de8cf5d2be0222ef"
-  integrity sha512-uYD+uuG3+whPQmNOvZ6294YBKl80fDhiR+r/MQLE9CjY8/I0H0LoTQTg8X+CdLTqTWocG+fQYRecjLr9odmFQQ==
+"@mdn/yari@1.27.8":
+  version "1.27.8"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.27.8.tgz#4785b7d2a135c6bde4d01ae1107df203170bdc71"
+  integrity sha512-gZvg0SJ/EKEgf95RQnpMDB5poGKpE5Z/WZKvPKaeJZRkW2WO+V0O47Y7u9BQOLShL30qauD1rgLZ0yAoqXjudQ==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
@@ -58,7 +58,7 @@
     compression "^1.7.4"
     cookie "^0.5.0"
     cookie-parser "^1.4.6"
-    css-tree "^2.2.1"
+    css-tree "^2.3.0"
     dayjs "^1.11.6"
     dexie "^3.2.2"
     dotenv "^16.0.3"
@@ -1132,12 +1132,12 @@ css-tree@^1.1.2:
     mdn-data "2.0.14"
     source-map "^0.6.1"
 
-css-tree@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/css-tree/-/css-tree-2.2.1.tgz#36115d382d60afd271e377f9c5f67d02bd48c032"
-  integrity sha512-OA0mILzGc1kCOCSJerOeqDxDQ4HOh+G8NbOJFOTgOCzpw7fCBubk0fEyxp8AgOL/jvLgYA/uV0cMbe43ElF1JA==
+css-tree@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/css-tree/-/css-tree-2.3.0.tgz#a0122cbc85305576df92ac528fb079c8217a15b2"
+  integrity sha512-1rg0LiK2MFi4R3/lVvnRokEWTZb30ljSAe5x+0HHkZ+OqZaAeiP8g8Eh91VmkyCtQn9vMgQRiaTDYgLBt+2Qyw==
   dependencies:
-    mdn-data "2.0.28"
+    mdn-data "2.0.30"
     source-map-js "^1.0.1"
 
 css-what@^4.0.0:
@@ -3329,12 +3329,7 @@ mdn-data@2.0.14:
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.14.tgz#7113fc4281917d63ce29b43446f701e68c25ba50"
   integrity sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==
 
-mdn-data@2.0.28:
-  version "2.0.28"
-  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.28.tgz#5ec48e7bef120654539069e1ae4ddc81ca490eba"
-  integrity sha512-aylIc7Z9y4yzHYAJNuESG3hfhC+0Ibp/MAMiaOZgNv4pmEdFyfZhhhny4MNiAfWdBQ1RQ2mfDWmM1x8SvGyp8g==
-
-mdn-data@^2.0.30:
+mdn-data@2.0.30, mdn-data@^2.0.30:
   version "2.0.30"
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.30.tgz#ce4df6f80af6cfbe218ecd5c552ba13c4dfa08cc"
   integrity sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==
