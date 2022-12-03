@@ -178,41 +178,41 @@ Let's look at a few other options we have when defining our logic (see our [Fetc
 
 1. The {{domxref("Response.Response","Response()")}} constructor allows you to create a custom response. In this case, we are just returning a simple text string:
 
-   ```js
-   new Response("Hello from your friendly neighborhood service worker!");
-   ```
+    ```js
+    new Response("Hello from your friendly neighborhood service worker!");
+    ```
 
 2. This more complex `Response` below shows that you can optionally pass a set of headers in with your response, emulating standard HTTP response headers. Here we are just telling the browser what the content type of our synthetic response is:
 
-   ```js
-   new Response(
-     "<p>Hello from your friendly neighborhood service worker!</p>",
-     {
-       headers: { "Content-Type": "text/html" },
-     }
-   );
-   ```
+    ```js
+    new Response(
+      "<p>Hello from your friendly neighborhood service worker!</p>",
+      {
+        headers: { "Content-Type": "text/html" },
+      }
+    );
+    ```
 
 3. If a match wasn't found in the cache, you could tell the browser to use {{domxref("fetch()")}} to get the default network request for that resource, to get the new resource from the network if it is available:
 
-   ```js
-   fetch(event.request);
-   ```
+    ```js
+    fetch(event.request);
+    ```
 
 4. If a match wasn't found in the cache, and the network isn't available, you could just match the request with some kind of default fallback page as a response using {{domxref("CacheStorage.match","match()")}}, like this:
 
-   ```js
-   caches.match("./fallback.html");
-   ```
+    ```js
+    caches.match("./fallback.html");
+    ```
 
 5. You can retrieve a lot of information about each request with the properties of the {{domxref("Request")}} object given by the {{domxref("FetchEvent")}}:
 
-   ```js
-   event.request.url;
-   event.request.method;
-   event.request.headers;
-   event.request.body;
-   ```
+    ```js
+    event.request.url;
+    event.request.method;
+    event.request.headers;
+    event.request.body;
+    ```
 
 ## Recovering failed requests
 
