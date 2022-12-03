@@ -42,7 +42,7 @@ input:invalid {
 }
 ```
 
-{{EmbedLiveSample("Examples", 300, 40)}}
+{{EmbedLiveSample("Examples", 300, 200)}}
 
 Until text is entered into each of the above `<input>` elements each produce a `valueMissing` because the values are missing.
 
