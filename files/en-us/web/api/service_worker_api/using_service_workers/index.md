@@ -2,12 +2,6 @@
 title: Using Service Workers
 slug: Web/API/Service_Worker_API/Using_Service_Workers
 page-type: guide
-tags:
-  - Guide
-  - Service
-  - ServiceWorker
-  - Workers
-  - basics
 ---
 
 {{DefaultAPISidebar("Service Workers API")}}
