@@ -86,6 +86,8 @@ input:out-of-range + label::after {
 
 {{EmbedLiveSample('Examples', 600, 140)}}
 
+> **Note:** An empty `<input>` does not count as out of range, and will not be selected using the `:out-of-range` pseudo-class selector. The [`:blank`](/en-US/docs/Web/CSS/:blank) pseudo-class exists to select blank inputs, although at the time of writing this is experimental and not well-supported. You could also use the `required` attribute and the [`:invalid`](/en-US/docs/Web/CSS/:invalid) pseudo-class to provide more general logic and styling for making inputs mandatory (`:invalid` will style blank _and_ out-of-range inputs).
+
 ## Specifications
 
 {{Specifications}}
