@@ -166,7 +166,7 @@ fileSelect.addEventListener("click", (e) => {
 }, false);
 ```
 
-You can style the button for opening the new file picker as you wish.
+You can style the {{HTMLElement("button")}} however you wish.
 
 ## Using a label element to trigger a hidden file input element
 
