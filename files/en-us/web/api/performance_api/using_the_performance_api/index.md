@@ -35,7 +35,7 @@ function calculate_time() {
 
 ## Serializing the `Performance` object
 
-JSON serialization of the {{domxref("Performance")}} object is done via the {{domxref("Performance.toJSON","toJSON()")}} method. In the following example, JSON serialization for the {{domxref("Performance")}}, {{domxref("Performance.timing")}} and {{domxref("Performance.navigation")}} objects is printed in the `object` element.
+JSON serialization of the {{domxref("Performance")}} object is done via the {{domxref("Performance.toJSON","toJSON()")}} method. In the following example, JSON serialization for the {{domxref("Performance")}}, {{domxref("Performance.timing")}} and {{domxref("Performance.navigation")}} objects is printed in the `output` element.
 
 ```js
 function print_json() {
