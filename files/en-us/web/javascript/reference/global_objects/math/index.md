@@ -73,7 +73,7 @@ Unlike many other global objects, `Math` is not a constructor. All properties an
 - {{jsxref("Math.cosh()")}}
   - : Returns the hyperbolic cosine of `x`.
 - {{jsxref("Math.exp()")}}
-  - : Returns e<sup>x</sup>, where x is the argument, and e is Euler's constant (`2.718`…, the base of the natural logarithm).
+  - : Returns e<sup>x</sup>, where x is the argument, and e is Euler's number (`2.718`…, the base of the natural logarithm).
 - {{jsxref("Math.expm1()")}}
   - : Returns subtracting `1` from `exp(x)`.
 - {{jsxref("Math.floor()")}}
