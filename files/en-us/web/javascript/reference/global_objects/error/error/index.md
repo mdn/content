@@ -38,14 +38,11 @@ Error(message, fileName, lineNumber)
 - `options` {{optional_inline}}
   - : An object that has the following properties:
     - `cause` {{optional_inline}}
-      - : A property indicating the specific cause of the error.
-        When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
+      - : A value indicating the specific cause of the error, reflected in the {{jsxref("Error/cause", "cause")}} property. When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
 - `fileName` {{optional_inline}} {{non-standard_inline}}
-  - : The path to the file that raised this error.
-    Defaults to the name of the file containing the code that called the `Error()` constructor.
+  - : The path to the file that raised this error, reflected in the {{jsxref("Error/fileName", "fileName")}} property. Defaults to the name of the file containing the code that called the `Error()` constructor.
 - `lineNumber` {{optional_inline}} {{non-standard_inline}}
-  - : The line number in which error was raised inside the file.
-    Defaults to the line number containing the `Error()` constructor invocation.
+  - : The line number within the file on which the error was raised, reflected in the {{jsxref("Error/lineNumber", "lineNumber")}} property. Defaults to the line number containing the `Error()` constructor invocation.
 
 ## Examples
 
@@ -76,23 +73,22 @@ try {
 
 For a more detailed example see [Error > Differentiate between similar errors](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#differentiate_between_similar_errors).
 
-### Omit options argument
+### Omitting options argument
 
-If you omitted passing options object or passed it as a primitive value or passed it as an object but has no cause property, javascript will not create a cause property inside the created object,
-so if you tried to read the cause property, it will result `undefined` because the created error doesn't have a property with this name.
+JavaScript only tries to read `options.cause` if `options` is an object — this avoids ambiguity with the other non-standard `Error(message, fileName, lineNumber)` signature, which requires the second parameter to be a string. If you omit `options`, pass a primitive value as `options`, or pass an object without the `cause` property, then the created `Error` object will have no `cause` property.
 
 ```js
-//passing an object that doesn't contain a cause property
-let Err = new Error("New error message", {details:"http error"});
-console.log(Err.cause) //undefined 
+// Omitting options 
+const error1 = new Error("Error message");
+console.log("cause" in error1); // false
 
-//passing primitive value 
-Err = new Error("New error message", "");
-console.log(Err.cause) //undefined 
+// Passing a primitive value 
+const error2 = new Error("Error message", "");
+console.log("cause" in error2); // false
 
-//omitting it 
-Err =new Error("New error message");
-console.log(Err.cause) //undefined 
+// Passing an object without a cause property
+const error3 = new Error("Error message", { details: "http error" });
+console.log("cause" in error3); // false
 ```
 
 ## Specifications
