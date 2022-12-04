@@ -78,27 +78,21 @@ For a more detailed example see [Error > Differentiate between similar errors](/
 
 ### Omit options argument
 
-If you omitted passing options object or passed it as a primitive value or passed it as an object but has no cause property, javascript will not create a cause property inside the created object.
+If you omitted passing options object or passed it as a primitive value or passed it as an object but has no cause property, javascript will not create a cause property inside the created object,
+so if you tried to read the cause property, it will result `undefined` because the created error doesn't have a property with this name.
 
 ```js
-try {
-  //passing an object that doesn't contain a cause property
-  throw new Error("New error message", {details:"http error"});
-} catch (err) {
-  console.log(err.cause) // undefined because it doesn't exist in the err instance
-}
-try {
-  //passing primitive value 
-  throw new Error("New error message", "");
-} catch (err) {
-  console.log(err.cause) // undefined
-}
-try {
-  //omitting it 
-  throw new Error("New error message");
-} catch (err) {
-  console.log(err.cause) // undefined
-}
+//passing an object that doesn't contain a cause property
+let Err = new Error("New error message", {details:"http error"});
+console.log(Err.cause) //undefined 
+
+//passing primitive value 
+Err = new Error("New error message", "");
+console.log(Err.cause) //undefined 
+
+//omitting it 
+Err =new Error("New error message");
+console.log(Err.cause) //undefined 
 ```
 
 ## Specifications
