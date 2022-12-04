@@ -17,7 +17,7 @@ browser-compat: api.USBDevice.controlTransferIn
 
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
-The **`controlTransferIn()`** method of the {{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves with a {{domxref("USBInTransferResult")}} when a command or status request has been transmitted to (received by) the USB device.
+The **`controlTransferIn()`** method of the {{domxref("USBDevice")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("USBInTransferResult")}} when a command or status request has been transmitted to (received by) the USB device.
 
 ## Syntax
 
