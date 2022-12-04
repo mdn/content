@@ -5445,6 +5445,7 @@
 /en-US/docs/MDN/Contribute/Guidelines/Writing_style_guide	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 /en-US/docs/MDN/Contribute/Help_beginners	/en-US/docs/MDN/Community/Learn_forum
 /en-US/docs/MDN/Contribute/How_to_document_a_CSS_property	/en-US/docs/MDN/Writing_guidelines/Howto/Document_a_CSS_property
+/en-US/docs/MDN/Contribute/Howto	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data	https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md
 /en-US/docs/MDN/Contribute/Howto/Compatibility_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables
 /en-US/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples
@@ -5458,6 +5459,7 @@
 /en-US/docs/MDN/Contribute/Howto/Notices	/en-US/docs/MDN/Writing_guidelines/Page_structures
 /en-US/docs/MDN/Contribute/Howto/Report_a_problem	/en-US/docs/MDN/Community/Issues
 /en-US/docs/MDN/Contribute/Howto/Tag	/en-US/docs/MDN/Writing_guidelines/Howto/Tag
+/en-US/docs/MDN/Contribute/Howto/Update_the_CSS_JSON_DB	https://github.com/mdn/data/blob/main/docs/updating_css_json.md
 /en-US/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/en-US/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_Glossary
 /en-US/docs/MDN/Contribute/Howto/Write_an_API_reference	/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference
 /en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file	/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file

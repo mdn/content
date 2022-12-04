@@ -705,6 +705,13 @@
       "properties": [],
       "events": []
     },
+    "Idle Detection API": {
+      "overview": ["Idle Detection API"],
+      "interfaces": ["IdleDetector"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Image Capture API": {
       "overview": ["MediaStream Image Capture API"],
       "interfaces": ["ImageCapture"],
@@ -1399,6 +1406,19 @@
         "Element: touchcancel"
       ]
     },
+    "Trusted Types API": {
+      "overview": ["Trusted Types API"],
+      "interfaces": [
+        "TrustedHTML",
+        "TrustedScript",
+        "TrustedScriptURL",
+        "TrustedTypePolicy",
+        "TrustedTypePolicyFactory"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "UI Events": {
       "overview": ["UI Events"],
       "guides": [
@@ -1459,6 +1479,13 @@
       "overview": ["URL Pattern API"],
       "interfaces": ["URLPattern"],
       "methods": [],
+      "properties": [],
+      "events": []
+    },
+    "User-Agent Client Hints API": {
+      "overview": ["User-Agent Client Hints API"],
+      "interfaces": ["NavigatorUAData"],
+      "methods": ["Navigator.userAgentData"],
       "properties": [],
       "events": []
     },
@@ -1783,6 +1810,13 @@
       "properties": [],
       "events": []
     },
+    "Web NFC API": {
+      "overview": ["Web NFC API"],
+      "interfaces": ["NDEFMessage", "NDEFReader", "NDEFRecord"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Web Notifications": {
       "overview": ["Notifications API"],
       "guides": ["/docs/Web/API/Notifications_API/Using_the_Notifications_API"],
@@ -1988,6 +2022,13 @@
         "WorkerLocation",
         "WorkerNavigator"
       ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
+    "WebOTP API": {
+      "overview": ["WebOTP API"],
+      "interfaces": ["OTPCredential"],
       "methods": [],
       "properties": [],
       "events": []

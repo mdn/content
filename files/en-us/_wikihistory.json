@@ -11717,32 +11717,6 @@
       "Mars"
     ]
   },
-  "MDN/Contribute/Howto": {
-    "modified": "2020-12-14T11:30:11.910Z",
-    "contributors": [
-      "sideshowbarker",
-      "justusromijn",
-      "khizarbhatti080",
-      "ExE-Boss",
-      "wbamberg",
-      "Sheppy",
-      "jswisher",
-      "klez",
-      "Brian102413"
-    ]
-  },
-  "MDN/Contribute/Howto/Update_the_CSS_JSON_DB": {
-    "modified": "2019-03-23T22:47:20.816Z",
-    "contributors": [
-      "wbamberg",
-      "Sebastianz",
-      "d4rkne55",
-      "mrstork",
-      "prayash",
-      "jswisher",
-      "teoli"
-    ]
-  },
   "MDN/Contribute/Processes": {
     "modified": "2020-09-30T15:17:09.733Z",
     "contributors": ["wbamberg", "david_ross", "jswisher", "Sheppy"]
