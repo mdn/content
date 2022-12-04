@@ -20,7 +20,9 @@ The **`open`** property of the
 
 ## Value
 
-A boolean value representing the state of the {{htmlattrxref("open", "details")}} HTML attribute. `true` means it is set, and therefore the details, including the summary and the additional information, are to be shown to the user. `false` means it not set, with only the summary being shown.
+A boolean value.
+
+The boolean value represents the state of the {{htmlattrxref("open", "details")}} HTML attribute. The value of `true` means it is set with both the summary and the additional information shown to the user. The `false` value means it not set, with only the summary shown.
 
 ## Specifications
 
