@@ -100,6 +100,7 @@ try {
   console.log(err.cause) // undefined
 }
 ```
+
 ## Specifications
 
 {{Specifications}}
