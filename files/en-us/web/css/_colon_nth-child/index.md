@@ -45,7 +45,7 @@ Note that, in the `element:nth-child()` syntax, the child count includes childre
     - `B` is an integer offset,
     - `n` is all nonnegative integers, starting from 0.
 
-    It can be read as the `An+B`-th element of a list. The index of the first element, counting from the start, is `1`. The values `A` and `B` must both be {{cssxref("&lt;integer&gt;")}}s.
+    It can be read as the `An+B`-th element of a list. The values `A` and `B` must both be {{cssxref("&lt;integer&gt;")}}s.
 
 ## Examples
 
