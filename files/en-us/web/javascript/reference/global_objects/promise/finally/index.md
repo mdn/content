@@ -55,7 +55,7 @@ The `finally()` method is very similar to calling {{jsxref("Promise/then", "then
 
 Like {{jsxref("Promise/catch", "catch()")}}, `finally()` internally calls the `then` method on the object upon which it was called. If `onFinally` is not a function, `then()` is called with `onFinally` as both arguments — which, for {{jsxref("Promise.prototype.then()")}}, means that no useful handler is attached. Otherwise, `then()` is called with two internally created functions, which behave like the following:
 
-> **Warning:** This is only for demonstration and is not a polyfill.
+> **Warning:** This is only for demonstration purposes and is not a polyfill.
 
 ```js
 promise.then(
