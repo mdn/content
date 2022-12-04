@@ -307,10 +307,10 @@ Promises solve a fundamental flaw with the callback pyramid of doom, by catching
 
 If a promise rejection event is not handled by any handler, it bubbles to the top of the call stack, and the host needs to surface it. On the web, whenever a promise is rejected, one of two events is sent to the global scope (generally, this is either the [`window`](/en-US/docs/Web/API/Window) or, if being used in a web worker, it's the [`Worker`](/en-US/docs/Web/API/Worker) or other worker-based interface). The two events are:
 
-- [`rejectionhandled`](/en-US/docs/Web/API/Window/rejectionhandled_event)
-  - : Sent when a promise is rejected, after that rejection has been handled by the executor's `reject` function.
 - [`unhandledrejection`](/en-US/docs/Web/API/Window/unhandledrejection_event)
   - : Sent when a promise is rejected but there is no rejection handler available.
+- [`rejectionhandled`](/en-US/docs/Web/API/Window/rejectionhandled_event)
+  - : Sent when a handler is attached to a rejected promise that has already caused an `unhandledrejection` event.
 
 In both cases, the event (of type [`PromiseRejectionEvent`](/en-US/docs/Web/API/PromiseRejectionEvent)) has as members a [`promise`](/en-US/docs/Web/API/PromiseRejectionEvent/promise) property indicating the promise that was rejected, and a [`reason`](/en-US/docs/Web/API/PromiseRejectionEvent/reason) property that provides the reason given for the promise to be rejected.
 
