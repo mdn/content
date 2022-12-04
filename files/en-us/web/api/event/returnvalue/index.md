@@ -45,3 +45,4 @@ The value of `returnValue` is the opposite of the value returned by
 ## See also
 
 - {{domxref("HTMLDialogElement.returnValue")}}: the return value for the {{HTMLElement("dialog")}}.
+-
