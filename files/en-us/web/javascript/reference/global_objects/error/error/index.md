@@ -76,6 +76,30 @@ try {
 
 For a more detailed example see [Error > Differentiate between similar errors](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#differentiate_between_similar_errors).
 
+### Omit options argument
+
+If you omitted passing options object or passed it as a primitive value or passed it as an object but has no cause property, javascript will not create a cause property inside the created object.
+
+```js
+try {
+  //passing an object that doesn't contain a cause property
+  throw new Error("New error message", {details:"http error"});
+} catch (err) {
+  console.log(err.cause) // undefined because it doesn't exist in the err instance
+}
+try {
+  //passing primitive value 
+  throw new Error("New error message", "");
+} catch (err) {
+  console.log(err.cause) // undefined
+}
+try {
+  //omitting it 
+  throw new Error("New error message");
+} catch (err) {
+  console.log(err.cause) // undefined
+}
+```
 ## Specifications
 
 {{Specifications}}
