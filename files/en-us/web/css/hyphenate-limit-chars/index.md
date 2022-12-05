@@ -17,6 +17,8 @@ The **`hyphenate-limit-chars`** [CSS](/en-US/docs/Web/CSS) property provides fin
 
 {{EmbedInteractiveExample("pages/css/hyphenate-limit-chars.html")}}
 
+In the interactive example above, the default minimum word length setting of `hyphenate-limit-chars` is too large for either of the long words to be hyphenated, therefore it looks untidy. However, by choosing the other value option, that limit is brought down so that both of the long words are hyphenated, making for a neater layout.
+
 ## Syntax
 
 ```css
