@@ -66,6 +66,7 @@ As an example when `font-family` [descriptor](/en-US/docs/Glossary/Descriptor_(C
 h2 {
   font-family: "Bungee Spice";
 }
+
 h2.extra-spicy {
   font-palette: --bungee-extra-spicy;
 }
