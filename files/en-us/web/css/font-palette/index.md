@@ -21,9 +21,9 @@ The **`font-palette`** [CSS](/en-US/docs/Web/CSS) property allows specifying one
 ```css
 /* Using a font-defined palette */
 font-palette: normal;
+
 /* Using a user-defined palette */
 font-palette: --one;
-```
 
 ### Values
 
