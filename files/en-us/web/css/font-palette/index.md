@@ -42,7 +42,7 @@ font-palette: --one;
 
 ## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Examples
 
