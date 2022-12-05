@@ -22,7 +22,7 @@ contains(string)
 
 ### Return value
 
-A boolean indicating if the given string is in the list.
+A boolean indicating whether the given string is in the list.
 
 ### Exceptions
 
