@@ -107,17 +107,17 @@ Note that several of the {{JSxRef("RegExp")}} properties have both long and shor
 
 - {{jsxref("RegExp.@@species", "get RegExp[@@species]")}}
   - : The constructor function that is used to create derived objects.
-- {{JSxRef("RegExp.n", "RegExp.$1-$9")}}
-  - : The legacy read-only static properties that contain parenthesized substring matches.
-- {{JSxRef("RegExp.input", "RegExp.input ($_)")}} {{Non-standard_Inline}}
-  - : A static read-only property that contains the last string against which a regular expression was successfully matched.
-- {{JSxRef("RegExp.lastMatch", "RegExp.lastMatch ($&)")}} {{Non-standard_Inline}}
-  - : A static read-only property that contains the last matched characters.
-- {{JSxRef("RegExp.lastParen", "RegExp.lastParen ($+)")}} {{Non-standard_Inline}}
-  - : A static property that contains the last parenthesized substring match.
-- {{JSxRef("RegExp.leftContext", "RegExp.leftContext ($`)")}} {{Non-standard_Inline}}
+- {{JSxRef("RegExp.n", "RegExp.$1, …, RegExp.$9")}} {{deprecated_inline}}
+  - : Static read-only properties that contain parenthesized substring matches.
+- {{JSxRef("RegExp.input", "RegExp.input ($_)")}} {{deprecated_inline}}
+  - : A static property that contains the last string against which a regular expression was successfully matched.
+- {{JSxRef("RegExp.lastMatch", "RegExp.lastMatch ($&)")}} {{deprecated_inline}}
+  - : A static read-only property that contains the last matched substring.
+- {{JSxRef("RegExp.lastParen", "RegExp.lastParen ($+)")}} {{deprecated_inline}}
+  - : A static read-only property that contains the last parenthesized substring match.
+- {{JSxRef("RegExp.leftContext", "RegExp.leftContext ($`)")}} {{deprecated_inline}}
   - : A static read-only property that contains the substring preceding the most recent match.
-- {{JSxRef("RegExp.rightContext", "RegExp.rightContext ($')")}} {{Non-standard_Inline}}
+- {{JSxRef("RegExp.rightContext", "RegExp.rightContext ($')")}} {{deprecated_inline}}
   - : A static read-only property that contains the substring following the most recent match.
 
 ## Instance properties

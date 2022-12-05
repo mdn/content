@@ -16,7 +16,7 @@ browser-compat: api.HTMLDialogElement.open
 
 The **`open`** property of the
 {{domxref("HTMLDialogElement")}} interface is a boolean value reflecting the
-{{htmlattrxref("open", "dialog")}} HTML attribute, indicating whether the dialog is
+{{htmlattrxref("open", "dialog")}} HTML attribute, indicating whether the {{htmlelement("dialog")}} is
 available for interaction.
 
 ## Value
