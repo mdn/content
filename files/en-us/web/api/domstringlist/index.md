@@ -30,7 +30,7 @@ This interface is used in [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) and in 
 - {{domxref("DOMStringList.item()")}}
   - : Returns a string from the list with the given index.
 - {{domxref("DOMStringList.contains()")}}
-  - : Returns a boolean indicating if the given string is in the list.
+  - : Returns a boolean indicating whether the given string is in the list.
 
 ## Specifications
 
