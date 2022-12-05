@@ -29,7 +29,7 @@ The `base-palette` [descriptor](/en-US/docs/Glossary/Descriptor_(CSS)) is set us
 ### Values
 
 - `<index>`
-  - : Specifies the index of the pre-defined base-palette to use.
+  - : Specifies the index of the pre-defined palette to use.
 
 ## Formal definition
 
