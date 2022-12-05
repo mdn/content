@@ -232,8 +232,8 @@ There are a few things to keep in mind:
 
 ### Moving documents
 
-Moving one or more documents (or an entire tree of documents), is made easier with the `yarn content move` command.
-This moves the file and fixes up redirects automatically:
+Moving one or more documents (or an entire tree of documents) is made easier with the `yarn content move` command.
+This command moves the file and fixes up redirects automatically. You can use this command as shown below:
 
 ```sh
 yarn content move <from-slug> <to-slug> [locale]
@@ -289,16 +289,16 @@ yarn content delete <document-slug> [locale] --redirect <redirect-slug-or-url>
 ```
 
 To use `yarn content delete`, provide the slug of the document you'd like to delete (e.g., `Learn/Accessibility`), and the locale as an optional second argument (this defaults to `en-US`).
-If the slug of the page you wish to delete contains special characters, include it in quotes:
+If the slug of the page you wish to delete contains special characters, include it in quotes. For example:
 
 ```sh
 yarn content delete "Glossary/Round_Trip_Time_(RTT)" --redirect Glossary/Latency
 ```
 
-If the document has child documents (i.e. it represents a document tree), you must specify the `-r, --recursive` option or the command will fail.
-Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect all the deleted documents to `Web/Accessibility`:
+If the document has child documents (i.e., the document represents a document tree), you must specify the `-r, --recursive` option, else the command will fail.
+Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect all the deleted documents to `Web/Accessibility`. You can perform the following steps:
 
-1. Starting from a fresh branch:
+1. Start from a fresh branch.
 
    ```sh
    cd ~/repos/content
@@ -310,17 +310,17 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
    git checkout -b deleting-a11y
    ```
 
-2. Run the `yarn content delete` command and redirect all deleted documents:
+2. Run the `yarn content delete` command and redirect all deleted documents.
 
    ```sh
    yarn content delete Learn/Accessibility --recursive --redirect Web/Accessibility
    ```
 
-   > **Warning**
+   > **Warning:**
    > You should always add a redirect when deleting documents. If there is no obvious alternative, redirect to the nearest "parent" of the deleted topic.
-   > If you forget to redirect when deleting a file, you can do it afterwards: see [Redirecting a document](#redirecting-a-document).
+   > If you forget to redirect when deleting a file, you can do it afterwards. See the [Redirecting a document](#redirecting-a-document) section.
 
-3. Commit all of the changes and push your branch to the remote:
+3. Commit all of the changes and push your branch to the remote.
 
    ```sh
    git add .
@@ -332,9 +332,9 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
 ### Redirecting a document
 
 If you are [moving a document](#moving-one-or-more-documents) as shown above you don't need to create a redirect.
-However, you may need to do so when fixing a broken link, or after [deleting a document](#deleting-a-document) without the `--redirect` flag.
+However, you may need to do so when fixing a broken link or after [deleting a document](#deleting-a-document) without the `--redirect` flag.
 
-You may do this using the `yarn content add-redirect` command:
+You may do this by using the `yarn content add-redirect` command.
 
 1. Start a fresh branch to work in:
 
@@ -348,7 +348,7 @@ You may do this using the `yarn content add-redirect` command:
    git checkout -b deleting-a11y
    ```
 
-2. Add a redirect with `yarn content add-redirect`. The target page can a page on MDN or an external URL:
+2. Add a redirect with `yarn content add-redirect`. The target page can be a page on MDN or an external URL:
 
    ```sh
    yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
