@@ -199,7 +199,7 @@ employee.address.city = "Noida"; // attributes of child object can be modified
 console.log(employee.address.city); // "Noida"
 ```
 
-To make an object immutable, recursively freeze each property which is of type object
+To make an object immutable, recursively freeze each non-primitive property
 (deep freeze). Use the pattern on a case-by-case basis based on your design when you
 know the object contains no [cycles](<https://en.wikipedia.org/wiki/Cycle_(graph_theory)>) in the reference
 graph, otherwise an endless loop will be triggered. An enhancement to
@@ -211,14 +211,13 @@ risk of freezing an object that shouldn't be frozen, such as \[window].
 ```js
 function deepFreeze(object) {
   // Retrieve the property names defined on object
-  const propNames = Object.getOwnPropertyNames(object);
+  const propNames = Reflect.ownKeys(object);
 
   // Freeze properties before freezing self
-
   for (const name of propNames) {
     const value = object[name];
 
-    if (value && typeof value === "object") {
+    if ((value && typeof value === "object") || typeof value === "function") {
       deepFreeze(value);
     }
   }
