@@ -89,6 +89,7 @@ In this example, two [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-va
   font-family: Bixa;
   /* palette settings for Bixa */
 }
+
 h1, h2 {
   font-palette: --Dark-Mode;
 }
