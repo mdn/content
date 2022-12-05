@@ -26,24 +26,43 @@ The `unloadEventStart` property can have the following values:
 
 ### Measuring `unload` event handler time
 
-The following example measures how long it takes to process the `unload` event handler.
+The `unloadEventStart` property can be used to measure how long it takes process the[`unload`](/en-US/docs/Web/API/Window/unload_event) event handler.
 
-```js
-const resources = performance.getEntriesByType("navigation");
-resources.forEach((entry) => {
-  const unloadEventTime = entry.unloadEventEnd - entry.unloadEventStart;
-  if (unloadEventTime > 0) {
-    console.log(`${entry.name}:
-      unload event handler time: ${unloadEventTime}ms`);
-  }
-});
-```
-
-This is especially useful to measure the time of long running [`unload`](/en-US/docs/Web/API/Window/load_event) event handlers.
+This is useful to measure the time of long running [`unload`](/en-US/docs/Web/API/Window/load_event) event handlers.
 
 ```js
 window.addEventListener("unload", (event) => {
   // Some long running code
+});
+```
+
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `navigation` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
+
+```js
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    const unloadEventTime = entry.unloadEventEnd - entry.unloadEventStart;
+    if (unloadEventTime > 0) {
+      console.log(
+        `${entry.name}: unload event handler time: ${unloadEventTime}ms`
+      );
+    }
+  });
+});
+
+observer.observe({ type: "navigation", buffered: true });
+```
+
+Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `navigation` performance entries present in the browser's performance timeline at the time you call this method:
+
+```js
+const entries = performance.getEntriesByType("navigation");
+entries.forEach((entry) => {
+  const loadEventTime = entry.unloadEventEnd - entry.unloadEventStart;
+  if (unloadEventTime > 0) {
+    console.log(`${entry.name}:
+      load event handler time: ${unloadEventTime}ms`);
+  }
 });
 ```
 

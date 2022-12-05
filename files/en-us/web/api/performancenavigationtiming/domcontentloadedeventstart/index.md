@@ -24,11 +24,29 @@ A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before th
 
 ### Measuring `DOMContentLoaded` event handler time
 
-The following example measures how long it takes process the [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event handler.
+The `domContentLoadedEventStart` property can be used to measure how long it takes process the [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event handler.
+
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `navigation` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
 
 ```js
-const resources = performance.getEntriesByType("navigation");
-resources.forEach((entry) => {
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    const domContentLoadedTime =
+      entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart;
+    console.log(
+      `${entry.name}: DOMContentLoaded processing time: ${domContentLoadedTime}ms`
+    );
+  });
+});
+
+observer.observe({ type: "navigation", buffered: true });
+```
+
+Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `navigation` performance entries present in the browser's performance timeline at the time you call this method:
+
+```js
+const entries = performance.getEntriesByType("navigation");
+entries.forEach((entry) => {
   const domContentLoadedTime =
     entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart;
   console.log(

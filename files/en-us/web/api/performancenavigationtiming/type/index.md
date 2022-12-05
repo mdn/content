@@ -35,19 +35,34 @@ The `type` property can have the following values:
 
 ### Logging reload navigation
 
-The following example checks whether the navigation was of type `reload` and logs the entry to the console.
+The `type` property can be used to check whether the navigation was of type `reload`. You could collect these `reload` entries in a server-side endpoint to determine which pages of your site gets reloaded the most, or collect all navigation types and determine what percent of users go back and forward, for example.
+
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `navigation` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
 
 ```js
-const resources = performance.getEntriesByType("navigation");
-resources.forEach((entry) => {
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    if (entry.type === "reload") {
+      console.log(`${entry.name} was reloaded!`);
+      console.log(entry);
+    }
+  });
+});
+
+observer.observe({ type: "navigation", buffered: true });
+```
+
+Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `navigation` performance entries present in the browser's performance timeline at the time you call this method:
+
+```js
+const entries = performance.getEntriesByType("navigation");
+entries.forEach((entry) => {
   if (entry.type === "reload") {
     console.log(`${entry.name} was reloaded!`);
     console.log(entry);
   }
 });
 ```
-
-You could collect `reload` entries in a server-side endpoint to determine which pages of your site gets reloaded the most, or collect all navigation types and determine what percent of users go back and forward, for example.
 
 ## Specifications
 

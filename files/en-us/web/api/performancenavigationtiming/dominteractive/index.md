@@ -28,12 +28,28 @@ A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before th
 
 ### Logging DOM interaction time
 
-The following example logs the time when the DOM construction has finished and interaction with it is possible.
+The `domInteractive` property can be used to log the time when the DOM construction has finished and interaction with it is possible.
+
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `navigation` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
 
 ```js
-const resources = performance.getEntriesByType("navigation");
-resources.forEach((entry) => {
-  console.log(entry.domInteractive);
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    console.log(
+      `${entry.name}: domInteractive time: ${entry.domInteractive}ms`
+    );
+  });
+});
+
+observer.observe({ type: "navigation", buffered: true });
+```
+
+Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `navigation` performance entries present in the browser's performance timeline at the time you call this method:
+
+```js
+const entries = performance.getEntriesByType("navigation");
+entries.forEach((entry) => {
+  console.log(`${entry.name}: domInteractive time: ${entry.domInteractive}ms`);
 });
 ```
 
