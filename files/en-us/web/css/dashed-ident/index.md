@@ -25,11 +25,11 @@ The syntax of `<dashed-ident>` is similar to CSS identifiers (such as property n
 
 The double dash at the beginning of the string makes them easily identifiable when reading through a CSS code block.
 
-### CSS custom properties
+## Examples
 
-When `<dashed-ident>` is used for [CSS Custom Properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties), the property is declared first and then used within a [CSS var() function](/en-US/docs/Web/CSS/var).
+### Using with CSS custom properties
 
-#### Example
+When `<dashed-ident>` is used with [CSS custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties), the property is declared first and then used within a [CSS var() function](/en-US/docs/Web/CSS/var).
 
 ```css
 html {
