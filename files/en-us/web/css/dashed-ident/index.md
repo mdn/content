@@ -79,6 +79,7 @@ When `<dashed-ident>` is used with the [@font-palette-values](/en-US/docs/Web/CS
   base-palette: 1;
   override-colors: 0 #ff0000;
 }
+
 h1, h2, h3, h4 {
   font-palette: --my-palette;
 }
