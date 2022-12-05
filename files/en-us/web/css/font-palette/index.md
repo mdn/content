@@ -46,7 +46,7 @@ font-palette: --one;
 
 ## Examples
 
-### Dark mode example
+### Specifying a dark palette
 
 ```css
 @media (prefers-color-scheme: dark) {
