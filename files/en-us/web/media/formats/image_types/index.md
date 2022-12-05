@@ -70,7 +70,7 @@ The image file formats that are most commonly used on the web are listed below.
           It offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency, etc.
           Note that when using AVIF, you should include fallbacks to formats with better browser support (i.e. using the
           <code><a href="/en-US/docs/Web/HTML/Element/picture">&#x3C;picture></a></code> element).<br />
-          <strong>Supported:</strong> Chrome, Opera, Firefox (still images only: animated images not implemented).
+          <strong>Supported:</strong> Chrome, Opera, Safari, Firefox (still images only: animated images not implemented).
         </p>
       </td>
     </tr>
