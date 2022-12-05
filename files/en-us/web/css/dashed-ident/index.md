@@ -61,6 +61,7 @@ When `<dashed-ident>` is used with the [@color-profile](/en-US/docs/Web/CSS/@col
 @color-profile --my-color-profile {
   src: url("https://example.org/SWOP2006_Coated5v2.icc");
 }
+
 .header {
   background-color: color(--my-color-profile 0% 70% 20% 0%);
 }
