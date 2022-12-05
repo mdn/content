@@ -41,7 +41,7 @@ The `base-palette` [descriptor](/en-US/docs/Glossary/Descriptor_(CSS)) is set us
 
 ## Examples
 
-### Changing the base-palette
+### Changing the default palette in a font
 
 As an example, using [Rocher Color Font](https://www.harbortype.com/fonts/rocher-color/) and switching the default base-palette to an alternate pre-defined palette.
 
