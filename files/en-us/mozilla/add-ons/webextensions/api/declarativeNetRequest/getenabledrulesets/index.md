@@ -1,6 +1,6 @@
 ---
-title: declarativeNetRequest.isRegexSupported
-slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/isRegexSupported
+title: declarativeNetRequest.getEnabledRulesets
+slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/getEnabledRulesets
 tags:
   - API
   - Add-ons
@@ -9,46 +9,29 @@ tags:
   - WebExtensions
   - Function
   - declarativeNetRequest
-  - isRegexSupported
-browser-compat: webextensions.api.declarativeNetRequest.isRegexSupported
+  - getEnabledRulesets
+browser-compat: webextensions.api.declarativeNetRequest.getEnabledRulesets
 ---
 
 {{AddonSidebar()}}
 
-Checks if a regular expression is supported as a {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}}`.regexFilter` rule condition.
+Returns the IDs for the set of activated static rulesets.
 
 > **Note:** This API is available in Manifest V3 or higher.
 
 ## Syntax
 
 ```js-nolint
-let count = browser.declarativeNetRequest.isRegexSupported(
-    RegexOptions                // object
-);
+let rulesetIds = browser.declarativeNetRequest.getEnabledRulesets();
 ```
 
 ### Parameters
 
-- `RegexOptions`
-
-  - : An object containing the regular expression to check.
-    - `isCaseSensitive` {{optional_inline}}
-      - : `boolean` Whether the regex specified is case sensitive. Default is `true`.
-    - `regex`
-      - : `string` The regular expresson to check.
-    - `requireCapturing` {{optional_inline}}
-      - : `boolean` Whether the regex specified requires capturing. Capturing is only required for redirect rules that specify a regexSubstition action. The default is false.
+This function takes no parameters.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an object with these properties:
-
-- `isSupported`
-  - : `boolean` Whether the regular expression is supported.
-- `reason` {{optional_inline}}
-  - : `string` Specifies the reason why the regular expression is not supported. Possible values are `"syntaxError"` and `"memoryLimitExceeded"`. Only provided if `isSupported` is false.
-
-If the request fails, the promise is rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with an array of string containing static rulesets IDs. If no rules are active, the array is empty. If the request fails, the promise is rejected with an error message.
 
 ## Examples
 
@@ -58,7 +41,7 @@ If the request fails, the promise is rejected with an error message.
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#method-isRegexSupported) API.
+> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#method-getEnabledRulesets) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

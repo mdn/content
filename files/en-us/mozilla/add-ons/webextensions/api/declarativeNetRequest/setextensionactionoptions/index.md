@@ -15,7 +15,7 @@ browser-compat: webextensions.api.declarativeNetRequest.setExtensionActionOption
 
 {{AddonSidebar()}}
 
-Configures if the action count for tabs should be displayed as the extension action's badge text and provides a way for that action count to be incremented.
+Configures whether the action count for tabs is displayed as the extension action's badge text and provides a way for the action count to be incremented.
 
 > **Note:** This API is available in Manifest V3 or higher.
 
@@ -37,12 +37,14 @@ let count = browser.declarativeNetRequest.setExtensionActionOptions();
       - : An object containing aetails of how the tab's action count should be adjusted.
         - `increment`
           - : `number` The amount to increment the tab's action count by. Negative values decrement the count.
-        - `tabId` tabId
+        - `tabId`
           - : `number` The tab to update the action count for.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an ….
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with no arguments. If the request fails, the promise is rejected with an error message.
+
+## Examples
 
 {{WebExtExamples}}
 

@@ -15,14 +15,14 @@ browser-compat: webextensions.api.declarativeNetRequest.getDynamicRules
 
 {{AddonSidebar()}}
 
-Returns the current set of dynamic rules for the extension.
+Returns the set of dynamic rules for the extension.
 
 > **Note:** This API is available in Manifest V3 or higher.
 
 ## Syntax
 
 ```js-nolint
-let count = browser.declarativeNetRequest.getDynamicRules();
+let gettingDynamicRules = browser.declarativeNetRequest.getDynamicRules();
 ```
 
 ### Parameters
@@ -31,34 +31,9 @@ This function takes no parameters.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) is fulfilled with an array of [`Rule`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms/Alarm) objects. Each of these represents a rule that belongs to the extension. If no rules are active, the array is empty.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) is fulfilled with an array of {{WebExtAPIRef("declarativeNetRequest.Rule")}} objects. Each of these represents a rule that belongs to the extension. If no rules are active, the array is empty. If the request fails, the promise is rejected with an error message.
 
 ## Examples
-
-The following example uses the `getTargetElement` method to get the element referred to by the `info.targetElementId` property and then removes it.
-
-```js
-browser.menus.create({
-  title: "Remove element",
-  documentUrlPatterns: ["*://*/*"],
-  contexts: [
-    "audio",
-    "editable",
-    "frame",
-    "image",
-    "link",
-    "page",
-    "password",
-    "video",
-  ],
-  onclick(info, tab) {
-    browser.tabs.executeScript(tab.id, {
-      frameId: info.frameId,
-      code: `browser.menus.getTargetElement(${info.targetElementId}).remove();`,
-    });
-  },
-});
-```
 
 {{WebExtExamples}}
 
@@ -66,7 +41,7 @@ browser.menus.create({
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#event-onRuleMatchedDebug) API.
+> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#method-getDynamicRules) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

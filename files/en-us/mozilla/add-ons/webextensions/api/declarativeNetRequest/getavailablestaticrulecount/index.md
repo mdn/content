@@ -15,7 +15,7 @@ browser-compat: webextensions.api.declarativeNetRequest.getAvailableStaticRuleCo
 
 {{AddonSidebar()}}
 
-Returns the number of static rules that can be enabled before the global static rule limit is reached.
+Returns the number of static rules that can be activated before the global static rule limit is reached.
 
 > **Note:** This API is available in Manifest V3 or higher.
 
@@ -31,34 +31,9 @@ This function takes no parameters.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with a number that indicates how many static rules can enable before the global static rule limit is reached.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with a number that indicates how many static rules can enable before the global static rule limit is reached. If the request fails, the promise is rejected with an error message.
 
 ## Examples
-
-The following example uses the `getTargetElement` method to get the element referred to by the `info.targetElementId` property and then removes it.
-
-```js
-browser.menus.create({
-  title: "Remove element",
-  documentUrlPatterns: ["*://*/*"],
-  contexts: [
-    "audio",
-    "editable",
-    "frame",
-    "image",
-    "link",
-    "page",
-    "password",
-    "video",
-  ],
-  onclick(info, tab) {
-    browser.tabs.executeScript(tab.id, {
-      frameId: info.frameId,
-      code: `browser.menus.getTargetElement(${info.targetElementId}).remove();`,
-    });
-  },
-});
-```
 
 {{WebExtExamples}}
 
@@ -66,7 +41,7 @@ browser.menus.create({
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#event-onRuleMatchedDebug) API.
+> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#method-getAvailableStaticRuleCount) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

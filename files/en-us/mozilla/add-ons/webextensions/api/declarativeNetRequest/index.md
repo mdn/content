@@ -78,36 +78,25 @@ host permissions
 - {{WebExtAPIRef("declarativeNetRequest.getAvailableStaticRuleCount()")}}
   - : Returns the number of static rules an extension can enable before the global static rule limit is reached.
 - {{WebExtAPIRef("declarativeNetRequest.getDynamicRules()")}}
-  - : Returns ...
-
-Todo
-
-- getEnabledRulesets
-
+  - : Returns the set of dynamic rules for the extension.
+- {{WebExtAPIRef("declarativeNetRequest.getEnabledRulesets()")}}
+  - : Returns the IDs for the set of enabled static rulesets.
 - {{WebExtAPIRef("declarativeNetRequest.getMatchedRules()")}}
   - : Returns all the rules matched for the extension.
-
-Todo
-
-- getSessionRules
-
+- {{WebExtAPIRef("declarativeNetRequest.getSessionRules()")}}
+  - : Returns the set of session scoped rules for the extension.
 - {{WebExtAPIRef("declarativeNetRequest.isRegexSupported()")}}
   - : Checks if a regular expression is supported as a {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}}`.regexFilter` rule condition.
 - {{WebExtAPIRef("declarativeNetRequest.setExtensionActionOptions()")}}
   - : Configures how the action count for tabs are handled.
 - {{WebExtAPIRef("declarativeNetRequest.testMatchOutcome()")}}
   - : Checks if any of the extension's `declarativeNetRequest` rules would match a hypothetical request.
-
-Todo
-
-- updateDynamicRules
-
+- {{WebExtAPIRef("declarativeNetRequest.updateDynamicRules()")}}
+  - : Modifies the active set of dynamic rules for the extension.
 - {{WebExtAPIRef("declarativeNetRequest.updateEnabledRulesets()")}}
-  - : Activates or deactivates [static rulesets]().
-
-Todo
-
-- updateSessionRulest
+  - : Updates the set of active static rulesets for the extension.
+- {{WebExtAPIRef("declarativeNetRequest.updateSessionRuleset()")}}
+  - : Modifies the set of session scoped rules for the extension.
 
 ## Events
 

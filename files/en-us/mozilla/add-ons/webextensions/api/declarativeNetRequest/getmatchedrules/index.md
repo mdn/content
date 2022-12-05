@@ -15,14 +15,16 @@ browser-compat: webextensions.api.declarativeNetRequest.getMatchedRules
 
 {{AddonSidebar()}}
 
-Returns all the rules matched for the extension. Callers can optionally filter the list of matched rules by specifying a `filter`. This method is only available to extensions with the `"declarativeNetRequestFeedback"` permission or that have the `"activeTab"` permission granted for the `tabId` specified in `filter`. Rules not associated with an active document that were matched more than five minutes ago are returned.
+Returns all the rules matched for the extension. Callers can filter the list of matched rules by specifying a `filter`. This method is only available to extensions with the `"declarativeNetRequestFeedback"` permission or that have the `"activeTab"` permission granted for the `tabId` specified in `filter`. Rules not associated with an active document that were matched more than five minutes ago are returned.
 
 > **Note:** This API is available in Manifest V3 or higher.
 
 ## Syntax
 
 ```js-nolint
-let count = browser.declarativeNetRequest.getMatchedRules();
+let gettingMatchedRules = browser.declarativeNetRequest.getMatchedRules(
+    filter                // object
+);
 ```
 
 ### Parameters
@@ -39,15 +41,16 @@ let count = browser.declarativeNetRequest.getMatchedRules();
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an object with these properties:
 
-- `rulesMatchedInfo`
+- `rule`
+  - : {{WebExtAPIRef("declarativeNetRequest.MatchedRule")}}. Details of a matched rule.
+- `tabId`
+  - : `number` The `tabId` of the tab the request originated from if the tab is still active. Otherwise, `-1`.
+- `timeStamp`
+  - : `number` The time the rule was matched. Timestamps correspond to the Javascript convention for times, i.e. the number of milliseconds since the epoch.
 
-  - : An object containing the rules matching the specified filter.
-    - `rule`
-      - : {{WebExtAPIRef("declarativeNetRequest.MatchedRule")}}. Details of a matched rule.
-    - `tabId`
-      - : `number` The `tabId` of the tab the request originated from if the tab is still active. Otherwise, `-1`.
-    - `timeStamp`
-      - : `number` The time the rule was matched. Timestamps correspond to the Javascript convention for times, i.e. the number of milliseconds since the epoch.
+If no rules are matched, the object is empty. If the request fail, the promise is rejected with an error message
+
+## Examples
 
 {{WebExtExamples}}
 
@@ -55,7 +58,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#event-onRuleMatchedDebug) API.
+> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#method-getMatchedRules) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

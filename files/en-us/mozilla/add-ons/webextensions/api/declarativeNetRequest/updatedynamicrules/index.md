@@ -1,6 +1,6 @@
 ---
-title: declarativeNetRequest.isRegexSupported
-slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/isRegexSupported
+title: declarativeNetRequest.updateDynamicRules
+slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/updateDynamicRules
 tags:
   - API
   - Add-ons
@@ -9,46 +9,37 @@ tags:
   - WebExtensions
   - Function
   - declarativeNetRequest
-  - isRegexSupported
-browser-compat: webextensions.api.declarativeNetRequest.isRegexSupported
+  - updateDynamicRules
+browser-compat: webextensions.api.declarativeNetRequest.updateDynamicRules
 ---
 
 {{AddonSidebar()}}
 
-Checks if a regular expression is supported as a {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}}`.regexFilter` rule condition.
+Modifies the set of dynamic rules for the extension. The rules with IDs listed in options.removeRuleIds are first removed, and then the rules given in options.addRules are added. Note that:
+
+- This update happens as an atomic operation: either all specified rules are added and removed, or an error is returned.
+- These rules are persisted across browser sessions and across extension updates.
+- Static rules specified as part of the extension package can not be removed using this function.
+- {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}} is the maximum number of dynamic and session rules an extension can add.
 
 > **Note:** This API is available in Manifest V3 or higher.
 
 ## Syntax
 
 ```js-nolint
-let count = browser.declarativeNetRequest.isRegexSupported(
-    RegexOptions                // object
+let updatedRules = browser.declarativeNetRequest.updateDynamicRules(
+    options                // object
 );
 ```
 
 ### Parameters
 
-- `RegexOptions`
-
-  - : An object containing the regular expression to check.
-    - `isCaseSensitive` {{optional_inline}}
-      - : `boolean` Whether the regex specified is case sensitive. Default is `true`.
-    - `regex`
-      - : `string` The regular expresson to check.
-    - `requireCapturing` {{optional_inline}}
-      - : `boolean` Whether the regex specified requires capturing. Capturing is only required for redirect rules that specify a regexSubstition action. The default is false.
+- `options`
+  - : {{WebExtAPIRef("declarativeNetRequest.UpdateRuleOptions")}}. Details of the rules to add or delete from the dynamic rules.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an object with these properties:
-
-- `isSupported`
-  - : `boolean` Whether the regular expression is supported.
-- `reason` {{optional_inline}}
-  - : `string` Specifies the reason why the regular expression is not supported. Possible values are `"syntaxError"` and `"memoryLimitExceeded"`. Only provided if `isSupported` is false.
-
-If the request fails, the promise is rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) If the request was successful, the promise is fulfilled with no arguments. If the request fails, the promise is rejected with an error message.
 
 ## Examples
 
@@ -58,7 +49,7 @@ If the request fails, the promise is rejected with an error message.
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#method-isRegexSupported) API.
+> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#method-updateDynamicRules) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

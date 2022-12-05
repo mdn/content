@@ -15,19 +15,21 @@ browser-compat: webextensions.api.declarativeNetRequest.testMatchOutcome
 
 {{AddonSidebar()}}
 
-Checks if any of the extension's `declarativeNetRequest` rules would match a hypothetical request. Only available for [temporarily loaded extensions](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), as this is only intended to be used during extension development.
+Checks if any of the extension's `declarativeNetRequest` rules would match a hypothetical request. Only available for [temporarily loaded extensions](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), as this is intended to be used during extension development.
 
 > **Note:** This API is available in Manifest V3 or higher.
 
 ## Syntax
 
 ```js-nolint
-let count = browser.declarativeNetRequest.testMatchOutcome();
+let count = browser.declarativeNetRequest.testMatchOutcome(
+    rules                // array
+);
 ```
 
 ### Parameters
 
-- `testMatchRequestDetails,`
+- `testMatchRequestDetails`
 
   - : An object containing the match rules to test.
     - `initiator` {{optional_inline}}
@@ -45,11 +47,12 @@ let count = browser.declarativeNetRequest.testMatchOutcome();
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an object with these properties:
 
-- `testMatchOutcomeResult`
+- `matchedRules`
+  - : {{WebExtAPIRef("declarativeNetRequest.MatchedRule")}}. Details of the rules (if any) that match the hypothetical request.
 
-  - : An object containing the rules the matching test.
-    - `matchedRules`
-      - : {{WebExtAPIRef("declarativeNetRequest.MatchedRule")}}. Details of the rules (if any) that match the hypothetical request.
+If no rules match, the object is empty. If the request fails, the promise is rejected with an error message.
+
+## Examples
 
 {{WebExtExamples}}
 

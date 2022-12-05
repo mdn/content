@@ -15,7 +15,7 @@ browser-compat: webextensions.api.declarativeNetRequest.updateEnabledRulesets
 
 {{AddonSidebar()}}
 
-Activate or deactivate [static rulesets]().
+Updates the extension's set of static rulesets. The rulesets with IDs listed in `options.disableRulesetIds` are first deactivated, and then the rulesets listed in `options.enableRulesetIds` are activated. Note that the set of enabled static rulesets persists across sessions but not across extension updates, i.e. the `rule_resources` manifest key determines the set of enabled static rulesets on each extension update.
 
 > **Note:** This API is available in Manifest V3 or higher.
 
@@ -30,11 +30,18 @@ let updatedRulesets = browser.declarativeNetRequest.updateEnabledRulesets(
 ### Parameters
 
 - `options`
-  - : {{WebExtAPIRef("declarativeNetRequest.UpdateRuleOptions")}}. Details of the rules to add or delete from session or dynamic rules.
+
+  - : An object detailing the rulesets to activate or deactivate in the extension's static rulesets.
+    - `disableRulesetIds` {{optional_inline}}
+      - : An array of `string`. IDs of static Rulesets to deactivated.
+    - `enableRulesetIds` {{optional_inline}}
+      - : An array of `string`. IDs of static Rulesets to activated.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) If the request was successful, the promise is fulfilled with no arguments. If the request failed, the promise is rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) If the request was successful, the promise is fulfilled with no arguments. If the request fails, the promise is rejected with an error message.
+
+## Examples
 
 {{WebExtExamples}}
 
