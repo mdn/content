@@ -58,7 +58,7 @@ For each key/value pair of index/color the color with the index in the specified
 
 ### Changing colors of emojis
 
-The [Noto Color Emoji](https://fonts.google.com/noto/specimen/Noto+Color+Emoji/) font, is a color font which you can override the colors to match the sites brand.
+This example shows how to override colors in the [Noto Color Emoji](https://fonts.google.com/noto/specimen/Noto+Color+Emoji/) color font to match your site's brand.
 
 #### HTML
 
