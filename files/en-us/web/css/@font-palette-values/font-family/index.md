@@ -93,6 +93,7 @@ In this example, two [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-va
 h1, h2 {
   font-palette: --Dark-Mode;
 }
+
 h1 {
   font-family: "Bungee Spice";
 }
