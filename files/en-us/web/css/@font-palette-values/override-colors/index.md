@@ -13,7 +13,7 @@ browser-compat: css.at-rules.font-palette-values.override-colors
 
 {{CSSRef}}
 
-The [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) [descriptor](/en-US/docs/Glossary/Descriptor_(CSS)) **`override-colors`** is used to override colors in the chosen [base-palette](/en-US/docs/Web/CSS/@font-palette-values/base-palette) for a color font.
+The **`override-colors`** CSS [descriptor](/en-US/docs/Glossary/Descriptor_(CSS)) is used to override colors in the chosen [base-palette](/en-US/docs/Web/CSS/@font-palette-values/base-palette) for a color font.
 
 ## Syntax
 
