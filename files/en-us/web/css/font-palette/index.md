@@ -34,7 +34,7 @@ font-palette: --one;
 - `dark`
   - : Specifies the first palette in the font that matches 'dark' to be used for the font. Some fonts contain metadata that identify a palette as applicable for a dark (close to black) background. If a font does not have this metadata, the value behaves as `normal`.
 - `<palette-identifier>`
-  - : This allows the user to choose their own values for the font palette by using the [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) [At-rules](/en-US/docs/Web/CSS/At-rule) and is identified using the [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/dashed-ident) format.
+  - : Allows you to specify your own values for the font palette by using the [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) at-rule. This value is specified using the [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/dashed-ident) format.
 
 ## Formal definition
 
