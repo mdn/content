@@ -45,6 +45,7 @@ h1, h4 {
 h2, h5 {
   color: var(--secondary-color);
 }
+
 h3, h6 {
   color: var(--tertiary-color);
 }
