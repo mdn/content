@@ -62,6 +62,7 @@ As an example when `font-family` [descriptor](/en-US/docs/Glossary/Descriptor_(C
     0 DarkRed,
     1 Red;
 }
+
 h2 {
   font-family: "Bungee Spice";
 }
