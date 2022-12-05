@@ -7,7 +7,7 @@ browser-compat: api.DOMStringList.contains
 
 {{APIRef("DOM")}}
 
-The **`contains()`** method returns boolean indicating if the given string is in the list.
+The **`contains()`** method returns a boolean indicating whether the given string is in the list.
 
 ## Syntax
 
