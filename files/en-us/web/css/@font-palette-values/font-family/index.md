@@ -41,7 +41,7 @@ The `font-family` [descriptor](/en-US/docs/Glossary/Descriptor_(CSS)) means that
 
 ## Examples
 
-### Naming syntax
+### Using matching family names
 
 As an example when `font-family` [descriptor](/en-US/docs/Glossary/Descriptor_(CSS)) is used in the [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) the value is identical in each instance, eg `"Bungee Spice"`.
 
