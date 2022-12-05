@@ -132,8 +132,6 @@ In addition to methods to read and alter individual components of the local date
   - : Converts a date to a string following the ISO 8601 Extended Format.
 - {{jsxref("Date.prototype.toJSON()")}}
   - : Returns a string representing the {{jsxref("Date")}} using {{jsxref("Date.prototype.toISOString()", "toISOString()")}}. Intended for use by {{jsxref("JSON.stringify()")}}.
-- {{jsxref("Date.prototype.toGMTString()")}} {{Deprecated_Inline}}
-  - : Returns a string representing the {{jsxref("Date")}} based on the GMT (UTC) time zone. Use {{jsxref("Date.prototype.toUTCString()", "toUTCString()")}} instead.
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
   - : Returns a string with a locality sensitive representation of the date portion of this date based on system settings.
 - {{jsxref("Date.prototype.toLocaleString()")}}
@@ -175,7 +173,6 @@ date.toDateString(); // Tue May 12 2020
 date.toTimeString(); // 18:50:21 GMT-0500 (Central Daylight Time)
 date.toISOString(); // 2020-05-12T23:50:21.817Z
 date.toUTCString(); // Tue, 12 May 2020 23:50:21 GMT
-date.toGMTString(); // Tue, 12 May 2020 23:50:21 GMT
 date.toJSON(); // 2020-05-12T23:50:21.817Z
 date.toLocaleString(); // 5/12/2020, 6:50:21 PM
 date.toLocaleDateString(); // 5/12/2020
