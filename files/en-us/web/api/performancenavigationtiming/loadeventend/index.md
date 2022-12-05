@@ -12,35 +12,34 @@ browser-compat: api.PerformanceNavigationTiming.loadEventEnd
 
 {{APIRef("Performance API")}}
 
-The **`loadEventEnd`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} which is equal to the time when the load event of the current document is completed.
+The **`loadEventEnd`** read-only property returns a {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the current document's [`load`](/en-US/docs/Web/API/Window/load_event) event handler completes.
 
 ## Value
 
-A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time when the load event of the current document is completed.
+A {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the current document's [`load`](/en-US/docs/Web/API/Window/load_event) event handler completes.
 
 ## Examples
 
-### Measuring document loading time
+### Measuring `load` event handler time
 
-The following example measures how long it takes to load a document.
+The following example measures how long it takes to process the `load` event handler.
 
 ```js
 const resources = performance.getEntriesByType("navigation");
 resources.forEach((entry) => {
-  const loadingTime = entry.loadEventEnd - entry.loadEventStart;
-  if (loadingTime > 0) {
+  const loadEventTime = entry.loadEventEnd - entry.loadEventStart;
+  if (loadEventTime > 0) {
     console.log(`${entry.name}:
-      Document loading time: ${loadingTime}ms`);
+      load event handler time: ${loadEventTime}ms`);
   }
 });
 ```
 
-This is especially useful if a (potentially long-running) [`load`](/en-US/docs/Web/API/Window/load_event) event is used.
+This is especially useful to measure the time of long running [`load`](/en-US/docs/Web/API/Window/load_event) event handlers.
 
 ```js
 window.addEventListener("load", (event) => {
-  // Some code the browser must run
-  // when loading the document
+  // Some long running code
 });
 ```
 

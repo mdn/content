@@ -12,13 +12,13 @@ browser-compat: api.PerformanceNavigationTiming.domComplete
 
 {{APIRef("Performance API")}}
 
-The **`domComplete`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the time immediately before the user agent sets the current document readiness of the current document to [`complete`](/en-US/docs/Web/API/Document/readyState).
+The **`domComplete`** read-only property returns a {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the user agent sets the document's [`readyState`](/en-US/docs/Web/API/Document/readyState) to `"complete"`.
 
 See also the `complete` state of {{domxref("Document.readyState")}} which corresponds to this property and refers to the state in which the document and all sub-resources have finished loading. The state also indicates that the {{domxref("Window/load_event", "load")}} event is about to fire.
 
 ## Value
 
-A {{domxref("DOMHighResTimeStamp","timestamp")}} representing a time value equal to the time immediately before the user agent sets the current document readiness of the current document to [`complete`](/en-US/docs/Web/API/Document/readyState).
+A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the user agent sets the document's [`readyState`](/en-US/docs/Web/API/Document/readyState) to `"complete"`.
 
 ## Examples
 

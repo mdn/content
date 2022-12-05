@@ -12,7 +12,7 @@ browser-compat: api.PerformanceNavigationTiming.domInteractive
 
 {{APIRef("Performance API")}}
 
-The **`domInteractive`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the time immediately before the user agent sets the current document readiness of the current document to [`interactive`](/en-US/docs/Web/API/Document/readyState).
+The **`domInteractive`** read-only property returns a {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the user agent sets the document's [`readyState`](/en-US/docs/Web/API/Document/readyState) to `"interactive"`.
 
 > **Note:** This property is **not** {{Glossary("Time to interactive")}} (TTI). This property refers to the time when DOM construction is finished and interaction to it from JavaScript is possible. See also the `interactive` state of {{domxref("Document.readyState")}} which corresponds to this property.
 
@@ -22,7 +22,7 @@ If there is no parser-blocking JavaScript then the [`DOMContentLoaded`](/en-US/d
 
 ## Value
 
-A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the time immediately before the user agent sets the current document readiness of the current document to [`interactive`](/en-US/docs/Web/API/Document/readyState).
+A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the user agent sets the document's [`readyState`](/en-US/docs/Web/API/Document/readyState) to `"interactive"`.
 
 ## Examples
 

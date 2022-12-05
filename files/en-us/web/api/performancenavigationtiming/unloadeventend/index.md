@@ -12,39 +12,38 @@ browser-compat: api.PerformanceNavigationTiming.unloadEventEnd
 
 {{APIRef("Performance API")}}
 
-The **`unloadEventEnd`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the time immediately after the user agent finishes the unload event of the previous document.
+The **`unloadEventEnd`** read-only property returns a {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the current document's [`unload`](/en-US/docs/Web/API/Window/unload_event) event handler completes.
 
 ## Value
 
 The `unloadEventEnd` property can have the following values:
 
-- A {{domxref("DOMHighResTimeStamp","timestamp")}} representing a time value equal to the time immediately after the user agent finishes the unload event of the previous document.
+- A {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the current document's [`unload`](/en-US/docs/Web/API/Window/unload_event) event handler completes.
 - `0` if there is no previous document.
 - `0` if the previous page was on another origin.
 
 ## Examples
 
-### Measuring document unloading time
+### Measuring `unload` event handler time
 
-The following example measures how long it takes to unload a document.
+The following example measures how long it takes to process the `unload` event handler.
 
 ```js
 const resources = performance.getEntriesByType("navigation");
 resources.forEach((entry) => {
-  const unloadingTime = entry.unloadEventEnd - entry.unloadEventStart;
-  if (unloadingTime > 0) {
+  const unloadEventTime = entry.unloadEventEnd - entry.unloadEventStart;
+  if (unloadEventTime > 0) {
     console.log(`${entry.name}:
-      Document unloading time: ${unloadingTime}ms`);
+      unload event handler time: ${unloadEventTime}ms`);
   }
 });
 ```
 
-This is especially useful if a (potentially long-running) [`unload`](/en-US/docs/Web/API/Window/unload_event) event is used.
+This is especially useful to measure the time of long running [`unload`](/en-US/docs/Web/API/Window/load_event) event handlers.
 
 ```js
 window.addEventListener("unload", (event) => {
-  // Some code the browser must run
-  // before it can navigate to the next page
+  // Some long running code
 });
 ```
 
