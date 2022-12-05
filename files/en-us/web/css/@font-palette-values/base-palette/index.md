@@ -74,6 +74,7 @@ h2 {
   font-family: 'Rocher';
   base-palette: 5;
 }
+
 .two {
   font-palette: --two;
 }
