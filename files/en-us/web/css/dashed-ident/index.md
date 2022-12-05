@@ -37,6 +37,7 @@ html {
   --secondary-color: blue;
   --tertiary-color: green;
 }
+
 h1, h4 {
   color: var(--primary-color);
 }
