@@ -14,9 +14,8 @@ browser-compat: api.HTMLDialogElement.close
 
 {{ APIRef("HTML DOM") }}
 
-The **`close()`** method of the {{domxref("HTMLDialogElement")}}
-interface closes the {{htmlelement("dialog")}}. An optional string may be passed as an
-argument, updating the `returnValue` of the dialog.
+The **`close()`** method of the {{domxref("HTMLDialogElement")}} interface closes the {{htmlelement("dialog")}}.
+An optional string may be passed as an argument, updating the `returnValue` of the dialog.
 
 ## Syntax
 
@@ -28,8 +27,7 @@ close(returnValue)
 ### Parameters
 
 - `returnValue` {{optional_inline}}
-  - : A string representing an updated value for the
-    {{domxref("HTMLDialogElement.returnValue")}} of the dialog.
+  - : A string representing an updated value for the {{domxref("HTMLDialogElement.returnValue")}} of the dialog.
 
 ### Return value
 
@@ -37,11 +35,8 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The following example shows a simple button that, when clicked, opens a
-{{htmlelement("dialog")}} containing a form via the `showModal()` method.
-From there you can click the _X_ button to close the dialog (via the
-{{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit
-button.
+The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} containing a form via the `showModal()` method.
+From there you can click the _X_ button to close the dialog (via the {{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit button.
 
 ```html
 <!-- Simple pop-up dialog box, containing a form -->
@@ -100,12 +95,12 @@ button.
 </script>
 ```
 
-If the "X" button was of `type="submit"`, the dialog would have closed without requiring JavaScript. A form submission closes the `<dialog>` it is nested within if the [form's method is `dialog`](/en-US/docs/Web/HTML/Element/form#attr-method), so no "close" button is required.
+If the "X" button was of `type="submit"`, the dialog would have closed without requiring JavaScript.
+A form submission closes the `<dialog>` it is nested within if the [form's method is `dialog`](/en-US/docs/Web/HTML/Element/form#attr-method), so no "close" button is required.
 
 ### Result
 
 {{ EmbedLiveSample('Examples', '100%', '200px') }}
-
 
 ## Specifications
 
