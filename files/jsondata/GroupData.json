@@ -1099,19 +1099,19 @@
     "Screen Capture API": {
       "overview": ["Screen Capture API"],
       "guides": ["/docs/Web/API/Screen_Capture_API/Using_Screen_Capture"],
-      "interfaces": [],
+      "interfaces": ["CaptureController"],
       "dictionaries": [],
       "methods": ["MediaDevices.getDisplayMedia()"],
       "properties": [
         "MediaTrackConstraints.cursor",
         "MediaTrackConstraints.displaySurface",
         "MediaTrackConstraints.logicalSurface",
+        "MediaTrackConstraints.suppressLocalAudioPlayback",
         "MediaTrackSettings.cursor",
         "MediaTrackSettings.displaySurface",
         "MediaTrackSettings.logicalSurface",
-        "MediaTrackSupportedConstraints.cursor",
-        "MediaTrackSupportedConstraints.displaySurface",
-        "MediaTrackSupportedConstraints.logicalSurface"
+        "MediaTrackSettings.suppressLocalAudioPlayback",
+        "MediaTrackSupportedConstraints"
       ],
       "types": ["CursorCaptureConstraintSet", "DisplayCaptureSurfaceType"],
       "events": []

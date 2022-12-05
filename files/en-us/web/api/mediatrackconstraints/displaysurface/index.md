@@ -54,14 +54,14 @@ to this:
 let mayHaveBackdropFlag = false;
 let displaySurface = displayStream.getVideoTracks()[0].getSettings().displaySurface;
 
-if (displaySurface === "monitor" || displaySurface ==="application") {
+if (displaySurface === "monitor" || displaySurface ==="window") {
   mayHaveBackdropFlag = true;
 }
 ```
 
 Following this code, `mayHaveBackdrop` is `true` if the display
 surface contained in the stream is of type `monitor` or
-`application`; either of these _may_ have non-content backdrop areas.
+`window`; either of these _may_ have non-content backdrop areas.
 Later code can use this flag to determine whether or not to perform special processing,
 such as to remove or replace the backdrop, or to "cut" the individual display areas out
 of the received frames of video.
@@ -72,8 +72,6 @@ Here are some example constraints objects for `getDisplayMedia()` that make
 use of the `displaySurface` property. In addition, see
 {{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for a complete example showing how constraints are used.
-
-TBD
 
 ## Specifications
 
