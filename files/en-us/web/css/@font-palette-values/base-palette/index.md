@@ -78,6 +78,7 @@ h2 {
 .two {
   font-palette: --two;
 }
+
 .five {
   font-palette: --five;
 }
