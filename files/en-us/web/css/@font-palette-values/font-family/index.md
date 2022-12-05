@@ -84,6 +84,7 @@ In this example, two [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-va
   font-family: "Bungee Spice";
   /* palette settings for Bungee Spice */
 }
+
 @font-palette-values --Dark-Mode {
   font-family: Bixa;
   /* palette settings for Bixa */
