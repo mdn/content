@@ -117,7 +117,7 @@ This example shows how to override colors in the [Noto Color Emoji](https://font
 
 ### Changing a color in an alternate base-palette
 
-As an example, using [Rocher Color Font](https://www.harbortype.com/fonts/rocher-color/) one color in the font is overridden.
+Using [Rocher Color Font](https://www.harbortype.com/fonts/rocher-color/), this example shows how to override one color in the font.
 
 #### HTML
 
