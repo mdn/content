@@ -30,7 +30,8 @@ With service workers, the following steps are generally observed for basic set u
 2. If successful, the service worker is executed in a {{domxref("ServiceWorkerGlobalScope") }}; this is basically a special kind of worker context, running off the main script execution thread, with no DOM access.
 3. The service worker is now ready to process events.
 4. Installation of the worker is attempted when service worker-controlled pages are accessed subsequently. An `install` event is always the first one sent to a service worker (this can be used to start the process of populating an IndexedDB, and caching site assets). During this step, the application is preparing to make everything available for use offline.
-5. When the `oninstall` handler completes, the service worker is considered installed.
+5. When the `oninstall` handler completes, the service worker is considered installed. However, it does not control the pages: pages using other service workers must be closed before it can be activated.
+    >**Note:** Waiting for other pages to be closed can be bypassed with [`skipWaiting()`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting).
 6. Next is activation. When the service worker is installed, it then receives an `activate` event. The primary use of `onactivate` is for cleanup of resources used in previous versions of a service worker script.
 7. The service worker will now control pages, but only those opened after the `register()` is successful. In other words, documents will have to be reloaded to actually be controlled, because a document starts life with or without a service worker and maintains that for its lifetime.
 
@@ -38,13 +39,13 @@ With service workers, the following steps are generally observed for basic set u
 
 Here is a summary of the available service worker events:
 
-- `install`
-- `activate`
-- `message`
+- [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event)
+- [`activate`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event)
+- [`message`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/message_event)
 - Functional events
-  - `fetch`
-  - `sync`
-  - `push`
+  - [`fetch`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event)
+  - [`sync`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/sync_event)
+  - [`push`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/push_event)
 
 ## Demo
 
@@ -172,7 +173,7 @@ Now you've got your site assets cached, you need to tell service workers to do s
 
     `caches.match(event.request)` allows us to match each resource requested from the network with the equivalent resource available in the cache, if there is a matching one available. The matching is done via URL and various headers, just like with normal HTTP requests.
 
-![Fetch event diagram](sw-fetch.png)
+![Fetch event diagram](sw-fetch.svg)
 
 Let's look at a few other options we have when defining our logic (see our [Fetch API documentation](/en-US/docs/Web/API/Fetch_API) for more information about {{domxref("Request")}} and {{domxref("Response")}} objects.)
 
@@ -436,6 +437,8 @@ Note that in this example we download and cache the same data for the resource w
 ## Updating your service worker
 
 If your service worker has previously been installed, but then a new version of the worker is available on refresh or page load, the new version is installed in the background, but not yet activated. It is only activated when there are no longer any pages loaded that are still using the old service worker. As soon as there are no more such pages still loaded, the new service worker activates.
+
+>**Note:** It is possible to bypass this by using [`Clients.claim()`](/en-US/docs/Web/API/Clients/claim).
 
 You'll want to update your `install` event listener in the new service worker to something like this (notice the new version number):
 
