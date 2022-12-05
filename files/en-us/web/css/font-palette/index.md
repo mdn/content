@@ -28,7 +28,7 @@ font-palette: --one;
 ### Values
 
 - `normal`
-  - : User-Agents display the color font with the default palette or default glyph colorization (set by the font maker).
+  - : Specifies the default color palette or the default glyph colorization (set by the font maker) to be used for the font. With this setting, the palette in the font at index 0 is rendered.
 - `light`
   - : Some fonts contain metadata that identify a palette as applicable for a light (close to white) background. When this value is selected then the first palette that match `light` will be used. If the font does not have this metadata then the value behaves as `normal`.
 - `dark`
