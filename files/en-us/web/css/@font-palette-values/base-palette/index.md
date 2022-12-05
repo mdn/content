@@ -60,6 +60,7 @@ As an example, using [Rocher Color Font](https://www.harbortype.com/fonts/rocher
   font-family: 'Rocher';
   src: url('[path-to-font]/RocherColorGX.woff2') format('woff2'); 
 }
+
 h2 {
   font-family: 'Rocher';
 }
