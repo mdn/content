@@ -41,6 +41,7 @@ html {
 h1, h4 {
   color: var(--primary-color);
 }
+
 h2, h5 {
   color: var(--secondary-color);
 }
