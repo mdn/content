@@ -34,6 +34,11 @@ None.
 
 A {{jsxref('Promise')}} that fulfills with a {{domxref("FileSystemDirectoryHandle")}} object.
 
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the user agent is not able to map the requested directory to the local OPFS.
+
 ## Examples
 
 ```js
