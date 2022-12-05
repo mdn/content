@@ -279,7 +279,7 @@ Let's say you want to move the entire `/en-US/Learn/Accessibility` tree to `/en-
 
 ### Deleting a document
 
-Similar to moving files, you can delete documents or a tree of documents easily by using the `yarn content delete` command. 
+Similar to moving files, you can delete documents or a tree of documents easily by using the `yarn content delete` command.
 
 > **Warning:**
 > Don't delete files or directories from the repository manually; the `yarn content delete` command handles the necessary changes such as updating the `_wikihistory.json` file.
