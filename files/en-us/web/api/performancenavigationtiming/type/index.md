@@ -35,7 +35,7 @@ The `type` property can have the following values:
 
 ### Logging reload navigation
 
-The following example checks if the navigation was of type `reload` and logs the entry to the console.
+The following example checks whether the navigation was of type `reload` and logs the entry to the console.
 
 ```js
 const resources = performance.getEntriesByType("navigation");
@@ -47,7 +47,7 @@ resources.forEach((entry) => {
 });
 ```
 
-You could collect `reload` entries in a sever-side endpoint to determine which pages of your site gets reloaded the most, or collect all navigation types and determine what percent of users go back-and-forth, for example.
+You could collect `reload` entries in a server-side endpoint to determine which pages of your site gets reloaded the most, or collect all navigation types and determine what percent of users go back and forward, for example.
 
 ## Specifications
 

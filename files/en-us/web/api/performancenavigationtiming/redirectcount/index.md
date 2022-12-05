@@ -12,9 +12,9 @@ browser-compat: api.PerformanceNavigationTiming.redirectCount
 
 {{APIRef("Performance API")}}
 
-The **`redirectCount`** read-only property returns number representing the amount of redirects since the last non-redirect navigation in the current browsing context.
+The **`redirectCount`** read-only property returns a number representing the number of redirects since the last non-redirect navigation in the current browsing context.
 
-The higher the amount of redirects on a page, the higher is the page load time. You want to avoid multiple redirects to improve the performance of your web page.
+The higher the number of redirects on a page, the longer the page load time. To improve the performance of your web page, avoid multiple redirects.
 
 The {{domxref("PerformanceResourceTiming.redirectStart", "redirectStart")}} and {{domxref("PerformanceResourceTiming.redirectEnd", "redirectEnd")}} properties can be used to measure redirection time. Note that they will return `0` for cross-origin redirects.
 
@@ -24,7 +24,7 @@ Note that client side redirects, such as `<meta http-equiv="refresh" content="0;
 
 The `redirectCount` property can have the following values:
 
-- A number representing the amount of redirects since the last non-redirect navigation in the current browsing context.
+- A number representing the number of redirects since the last non-redirect navigation in the current browsing context.
 - `0` if the redirect is cross-origin.
 
 ## Examples
