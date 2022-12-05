@@ -106,7 +106,6 @@ If the "X" button was of `type="submit"`, the dialog would have closed without r
 
 {{ EmbedLiveSample('Examples', '100%', '200px') }}
 
-> ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
 ## Specifications
 
