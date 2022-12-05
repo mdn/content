@@ -5,7 +5,7 @@ page-type: web-api-instance-property
 browser-compat: api.DOMStringList.length
 ---
 
-{{ APIRef("Touch Events") }}
+{{APIRef("DOM")}}
 
 The read-only **`length`** property indicates the number of strings in the {{domxref("DOMStringList")}}.
 
