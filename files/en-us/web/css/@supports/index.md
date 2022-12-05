@@ -182,11 +182,7 @@ Multiple disjunctions can be juxtaposed without the need of more parentheses. Th
 
 ## Formal syntax
 
-```
-@supports <supports-condition> {
-  <stylesheet>
-}
-```
+{{csssyntax}}
 
 ## Examples
 
@@ -204,7 +200,7 @@ Multiple disjunctions can be juxtaposed without the need of more parentheses. Th
 ### Testing for the support of a given CSS property or a prefixed version
 
 ```css
-@supports ((text-stroke: 10px) or (-webkit-text-stroke: 10px) {
+@supports (text-stroke: 10px) or (-webkit-text-stroke: 10px) {
   /* CSS applied when text-stroke, prefixed or not, is supported */
 }
 ```

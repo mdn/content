@@ -219,7 +219,7 @@ We are choosing to use Railway for several reasons:
 
 - Railway has a [starter plan](https://docs.railway.app/reference/plans#starter-plan) free tier that is _really_ free, albeit with some limitations.
   The fact that it is affordable for all developers is really important to MDN!
-- Railway takes care of most of the the infrastructure so you don't have to.
+- Railway takes care of most of the infrastructure so you don't have to.
   Not having to worry about servers, load balancers, reverse proxies, and so on, makes it much easier to get started.
 - Railway has a [focus on developer experience for development and deployment](https://docs.railway.app/reference/compare-to-heroku), which leads to a faster and softer learning curve than many other alternatives.
 - The skills and concepts you will learn when using Railway are transferrable.
@@ -385,7 +385,7 @@ Open **package.json**, and add this information as an **engines > node** section
   // …
 ```
 
-Note that are other ways to provision the node version on Railway, but we're using **package.json** because this approach is widely supported by many services.
+Note that there are other ways to provision the node version on Railway, but we're using **package.json** because this approach is widely supported by many services.
 Note also that Railway will not necessarily use the precise version of node that you specify.
 Where possible it will use a version that has the same major version number.
 

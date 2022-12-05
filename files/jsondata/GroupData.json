@@ -339,7 +339,6 @@
         "DOMPoint",
         "DOMPointReadOnly",
         "DOMRect",
-        "DOMTimeStamp",
         "DOMTokenList",
         "Element",
         "Event",
@@ -456,6 +455,7 @@
         "FileSystemHandle",
         "FileSystemFileHandle",
         "FileSystemDirectoryHandle",
+        "FileSystemSyncAccessHandle",
         "FileSystemWritableFileStream"
       ],
       "methods": [
@@ -712,6 +712,13 @@
       "properties": [],
       "events": []
     },
+    "Idle Detection API": {
+      "overview": ["Idle Detection API"],
+      "interfaces": ["IdleDetector"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Image Capture API": {
       "overview": ["MediaStream Image Capture API"],
       "interfaces": ["ImageCapture"],
@@ -754,6 +761,11 @@
       "properties": [],
       "events": []
     },
+    "Keyboard API": {
+      "overview": ["Keyboard API"],
+      "interfaces": ["Keyboard", "KeyboardLayoutMap"],
+      "methods": ["Navigator.keyboard"]
+    },
     "Layout Instability API": {
       "overview": ["Layout Instability API"],
       "interfaces: ": ["LayoutShift", "LayoutShiftAttribution"],
@@ -790,8 +802,7 @@
         "MediaTrackCapabilities",
         "MediaTrackConstraints",
         "MediaTrackSettings",
-        "MediaTrackSupportedConstraints",
-        "VideoStreamTrack"
+        "MediaTrackSupportedConstraints"
       ],
       "methods": [
         "HTMLCanvasElement.captureStream()",
@@ -799,16 +810,6 @@
       ],
       "properties": ["Navigator.mediaDevices"],
       "events": ["HTMLMediaElement: ended", "HTMLMediaElement: ratechange"]
-    },
-    "Media Recorder API": {
-      "overview": ["Media Recorder API"],
-      "interfaces": ["MediaRecorder", "BlobEvent"],
-      "methods": [],
-      "properties": ["window.MediaRecorder"],
-      "events": [],
-      "dictionaries": ["MediaRecorderOptions", "BlobEventInit"],
-      "types": ["BitrateMode", "RecordingState"],
-      "callbacks": []
     },
     "Media Session API": {
       "overview": ["Media Session API"],
@@ -828,6 +829,7 @@
       "overview": ["Media Source Extensions API"],
       "interfaces": [
         "MediaSource",
+        "MediaSourceHandle",
         "SourceBuffer",
         "SourceBufferList",
         "VideoPlaybackQuality"
@@ -848,6 +850,21 @@
       "interfaces": ["MediaRecorder", "MediaRecorderErrorEvent", "BlobEvent"],
       "methods": [],
       "properties": [],
+      "events": []
+    },
+    "Navigation API": {
+      "overview": ["Navigation API"],
+      "guides": [],
+      "interfaces": [
+        "NavigateEvent",
+        "Navigation",
+        "NavigationCurrentEntryChangeEvent",
+        "NavigationDestination",
+        "NavigationHistoryEntry",
+        "NavigationTransition"
+      ],
+      "methods": [],
+      "properties": ["Window.navigation"],
       "events": []
     },
     "Network Information API": {
@@ -1212,6 +1229,8 @@
         "ReadableStreamBYOBRequest",
         "ReadableStreamDefaultController",
         "ReadableStreamDefaultReader",
+        "TransformStream",
+        "TransformStreamDefaultController",
         "WritableStream",
         "WritableStreamDefaultController",
         "WritableStreamDefaultWriter"
@@ -1394,6 +1413,19 @@
         "Element: touchcancel"
       ]
     },
+    "Trusted Types API": {
+      "overview": ["Trusted Types API"],
+      "interfaces": [
+        "TrustedHTML",
+        "TrustedScript",
+        "TrustedScriptURL",
+        "TrustedTypePolicy",
+        "TrustedTypePolicyFactory"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "UI Events": {
       "overview": ["UI Events"],
       "guides": [
@@ -1454,6 +1486,13 @@
       "overview": ["URL Pattern API"],
       "interfaces": ["URLPattern"],
       "methods": [],
+      "properties": [],
+      "events": []
+    },
+    "User-Agent Client Hints API": {
+      "overview": ["User-Agent Client Hints API"],
+      "interfaces": ["NavigatorUAData"],
+      "methods": ["Navigator.userAgentData"],
       "properties": [],
       "events": []
     },
@@ -1755,6 +1794,13 @@
       "properties": ["Navigator.hid"],
       "events": []
     },
+    "Web Locks API": {
+      "overview": ["Web Locks API"],
+      "interfaces": ["Lock", "LockManager"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Web MIDI API": {
       "overview": ["Web MIDI API"],
       "interfaces": [
@@ -1768,6 +1814,13 @@
         "MIDIConnectionEvent"
       ],
       "methods": ["Navigator.requestMIDIAccess()"],
+      "properties": [],
+      "events": []
+    },
+    "Web NFC API": {
+      "overview": ["Web NFC API"],
+      "interfaces": ["NDEFMessage", "NDEFReader", "NDEFRecord"],
+      "methods": [],
       "properties": [],
       "events": []
     },
@@ -1792,7 +1845,8 @@
         "/docs/Web/API/WebRTC_API/Using_data_channels",
         "/docs/Web/API/WebRTC_API/Using_DTMF",
         "/docs/Web/API/WebRTC_API/adapter.js",
-        "/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample"
+        "/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample",
+        "/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs"
       ],
       "interfaces": [
         "RTCPeerConnection",
@@ -1975,6 +2029,13 @@
         "WorkerLocation",
         "WorkerNavigator"
       ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
+    "WebOTP API": {
+      "overview": ["WebOTP API"],
+      "interfaces": ["OTPCredential"],
       "methods": [],
       "properties": [],
       "events": []

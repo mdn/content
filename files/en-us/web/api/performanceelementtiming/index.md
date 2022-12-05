@@ -41,7 +41,7 @@ The **`PerformanceElementTiming`** interface of the {{domxref('Element Timing AP
 ## Instance methods
 
 - {{domxref("PerformanceElementTiming.toJSON()")}} {{Experimental_Inline}}
-  - : Generates a JSON description of the object.
+  - : Returns a JSON representation of the `PerformanceElementTiming` object.
 
 ## Examples
 

@@ -25,9 +25,9 @@ See also {{jsxref("Array.prototype.reduce()")}} for left-to-right.
 
 ```js-nolint
 // Arrow function
-reduceRight((accumulator, currentValue) => { /* … */ } )
-reduceRight((accumulator, currentValue, index) => { /* … */ } )
-reduceRight((accumulator, currentValue, index, array) => { /* … */ } )
+reduceRight((accumulator, currentValue) => { /* … */ })
+reduceRight((accumulator, currentValue, index) => { /* … */ })
+reduceRight((accumulator, currentValue, index, array) => { /* … */ })
 reduceRight((accumulator, currentValue, index, array) => { /* … */ }, initialValue)
 
 // Callback function
@@ -35,17 +35,17 @@ reduceRight(callbackFn)
 reduceRight(callbackFn, initialValue)
 
 // Callback reducer function
-reduceRight(function(accumulator, currentValue) { /* … */ })
-reduceRight(function(accumulator, currentValue, index) { /* … */ })
-reduceRight(function(accumulator, currentValue, index, array){ /* … */ })
-reduceRight(function(accumulator, currentValue, index, array) { /* … */ }, initialValue)
+reduceRight(function (accumulator, currentValue) { /* … */ })
+reduceRight(function (accumulator, currentValue, index) { /* … */ })
+reduceRight(function (accumulator, currentValue, index, array) { /* … */ })
+reduceRight(function (accumulator, currentValue, index, array) { /* … */ }, initialValue)
 ```
 
 ### Parameters
 
 - `callbackFn`
 
-  - : Function to execute on each value in the array.
+  - : A function to execute for each element in the array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduce()`.
 
     The function is called with the following arguments:
 
@@ -71,12 +71,25 @@ The value that results from the reduction.
 
 ## Description
 
-`reduceRight` executes the callback function once for each element present
-in the array, excluding holes in the array, receiving four arguments: the initial value
-(or value from the previous callback call), the value of the current element, the
-current index, and the array over which iteration is occurring.
+The `reduceRight()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It runs a "reducer" callback function over all elements in the array, in descending-index order, and accumulates them into a single value.
 
 `callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
+
+Unlike other [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods), `reduce()` does not accept a `thisArg` argument. `callbackFn` is always called with `undefined` as `this`, which gets substituted with `globalThis` if `callbackFn` is non-strict.
+
+`reduceRight()` does not mutate the array on which it is called, but the function provided as `callbackFn` can. Note, however, that the length of the array is saved _before_ the first invocation of `callbackFn`. Therefore:
+
+- `callbackFn` will not visit any elements added beyond the array's initial length when the call to `reduceRight()` began.
+- Changes to already-visited indexes do not cause `callbackFn` to be invoked on them again.
+- If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time that element gets visited. [Deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) elements are not visited.
+
+> **Warning:** Concurrent modifications of the kind described above frequently lead to hard-to-understand code and are generally to be avoided (except in special cases).
+
+The `reduceRight()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
+
+## Examples
+
+### How reduceRight() works without an initial value
 
 The call to the reduceRight `callbackFn` would look something like
 this:
@@ -123,13 +136,14 @@ call being as follows:
 
 The `array` parameter never changes through the process — it's always `[0, 1, 2, 3, 4]`. The value returned by `reduceRight` would be that of the last callback invocation (`10`).
 
-And if you were to provide an `initialValue`, the result would
-look like this:
+### How reduceRight() works with an initial value
+
+Here we reduce the same array using the same algorithm, but with an `initialValue` of `10` passed as the second argument to `reduceRight()`:
 
 ```js
 [0, 1, 2, 3, 4].reduceRight(
   (accumulator, currentValue, index, array) => accumulator + currentValue,
-  10
+  10,
 );
 ```
 
@@ -142,10 +156,6 @@ look like this:
 | Fifth call  | `20`          | `0`            | `0`     | `20`         |
 
 The value returned by `reduceRight` this time would be, of course, `20`.
-
-The `reduceRight()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
-
-## Examples
 
 ### Sum up all values within an array
 
@@ -169,11 +179,15 @@ const flattened = arrays.reduceRight((a, b) => a.concat(b), []);
 ### Run a list of asynchronous functions with callbacks in series each passing their results to the next
 
 ```js
-const waterfall = (...functions) => (callback, ...args) =>
-  functions.reduceRight(
-    (composition, fn) => (...results) => fn(composition, ...results),
-    callback,
-  )(...args);
+const waterfall =
+  (...functions) =>
+  (callback, ...args) =>
+    functions.reduceRight(
+      (composition, fn) =>
+        (...results) =>
+          fn(composition, ...results),
+      callback,
+    )(...args);
 
 const randInt = (max) => Math.floor(Math.random() * max);
 
@@ -197,7 +211,7 @@ const div4 = (callback, x) => {
 };
 
 const computation = waterfall(add5, mult3, sub2, split, add, div4);
-computation(console.log, 5) // Logs 14
+computation(console.log, 5); // Logs 14
 
 // same as:
 

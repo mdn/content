@@ -24,7 +24,7 @@ An example of a cross-origin request: the front-end JavaScript code served from 
 
 For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts. For example, `XMLHttpRequest` and the [Fetch API](/en-US/docs/Web/API/Fetch_API) follow the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy). This means that a web application using those APIs can only request resources from the same origin the application was loaded from unless the response from other origins includes the right CORS headers.
 
-![](cors_principle.png)
+![Diagrammatic representation of CORS mechanism](cors_principle.png)
 
 The CORS mechanism supports secure cross-origin requests and data transfers between browsers and servers. Modern browsers use CORS in APIs such as `XMLHttpRequest` or [Fetch](/en-US/docs/Web/API/Fetch_API) to mitigate the risks of cross-origin HTTP requests.
 
@@ -106,7 +106,7 @@ xhr.send();
 
 This operation performs a simple exchange between the client and the server, using CORS headers to handle the privileges:
 
-![](simple-req.png)
+![Diagram of simple CORS GET request](simple-req.png)
 
 Let's look at what the browser will send to the server in this case:
 

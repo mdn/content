@@ -364,7 +364,7 @@ One of the most potentially confusing parts is the tangle of standard and custom
 
 ### ToDoItem.vue
 
-`checkbox` `<input>` listens for `change` event.
+The `<input>` of `type="checkbox"` listens for `change` events.
 **Result**: `checkbox-changed` event emitted when the checkbox is checked/unchecked (which is then listened for inside `App.vue`; see above).
 
 "Edit" `<button>` listens for `click` event.

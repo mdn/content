@@ -123,26 +123,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_Inline}}
 
-  - : This attribute defines the background color of each cell in a column. It consists of a 6-digit hexadecimal code as defined in [sRGB](https://www.w3.org/Graphics/Color/sRGB) and is prefixed by '#'. This attribute may be used with one of sixteen predefined color strings:
-
-    - `black` = "#000000"
-    - `green` = "#008000"
-    - `silver` = "#C0C0C0"
-    - `lime` = "#00FF00"
-    - `gray` = "#808080"
-    - `olive` = "#808000"
-    - `white` = "#FFFFFF"
-    - `yellow` = "#FFFF00"
-    - `maroon` = "#800000"
-    - `navy` = "#000080"
-    - `red` = "#FF0000"
-    - `blue` = "#0000FF"
-    - `purple` = "#800080"
-    - `teal` = "#008080"
-    - `fuchsia` = "#FF00FF"
-    - `aqua` = "#00FFFF"
-
-    > **Note:** Do not use this attribute, as it is non-standard and only implemented in some versions of Microsoft Internet Explorer: The {{HTMLElement("th")}} element should be styled using [CSS](/en-US/docs/Web/CSS). To create a similar effect use the {{cssxref("background-color")}} property in CSS instead.
+  - : This attribute defines the background color of each cell in a column. It consists of a 6-digit hexadecimal code as defined in [sRGB](https://www.w3.org/Graphics/Color/sRGB) and is prefixed by '#'.
 
 - {{htmlattrdef("char")}} {{deprecated_inline}}
 

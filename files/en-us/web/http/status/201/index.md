@@ -22,7 +22,7 @@ request.
 
 ## Status
 
-```
+```http
 201 Created
 ```
 

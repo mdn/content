@@ -44,10 +44,11 @@ The `bind()` function creates a new _bound function_. Calling the bound function
 A bound function can be further bound by calling `boundFn.bind(thisArg, /* more args */)`, which creates another bound function `boundFn2`. The newly bound `thisArg` value is ignored, because the target function of `boundFn2`, which is `boundFn`, already has a bound `this`. When `boundFn2` is called, it would call `boundFn`, which in turn calls `fn`. The arguments that `fn` ultimately receives are, in order: the arguments bound by `boundFn`, arguments bound by `boundFn2`, and the arguments received by `boundFn2`.
 
 ```js
+"use strict"; // prevent `this` from being boxed into the wrapper object
+
 function log(...args) {
-  "use strict"; // prevent `this` from being boxed into the wrapper object
   console.log(this, ...args);
-};
+}
 const boundLog = log.bind("this value", 1, 2);
 const boundLog2 = boundLog.bind("new this value", 3, 4);
 boundLog2(5, 6); // "this value", 1, 2, 3, 4, 5, 6
@@ -263,7 +264,7 @@ console.log(new BoundDerived() instanceof Derived); // true
 
 ### Transforming methods to utility functions
 
-`bind()` is also helpful in cases where you want to transform a method which requires a specific `this` value to a plain utility function that accepts the previous `this` parameter as a normal parameter.
+`bind()` is also helpful in cases where you want to transform a method which requires a specific `this` value to a plain utility function that accepts the previous `this` parameter as a normal parameter. This is similar to how general-purpose utility functions work: instead of calling `array.map(callback)`, you use `map(array, callback)`, which avoids mutating `Array.prototype`, and allows you to use `map` with array-like objects that are not arrays (for example, [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)).
 
 Take {{jsxref("Array.prototype.slice()")}}, for example, which you want to use for converting an array-like object to a real array. You could create a shortcut like this:
 
@@ -275,9 +276,7 @@ const slice = Array.prototype.slice;
 slice.call(arguments);
 ```
 
-With `bind()`, this can be simplified.
-
-In the following piece of code, `slice()` is a bound function to the {{jsxref("Function.prototype.call()")}}, with the `this` value set to {{jsxref("Array.prototype.slice()")}}. This means that additional `call()` calls can be eliminated:
+Note that you can't save `slice.call` and call it as a plain function, because the `call()` method also reads its `this` value, which is the function it should call. In this case, you can use `bind()` to bind the value of `this` for `call()`. In the following piece of code, `slice()` is a bound version of {{jsxref("Function.prototype.call()")}}, with the `this` value bound to {{jsxref("Array.prototype.slice()")}}. This means that additional `call()` calls can be eliminated:
 
 ```js
 // Same as "slice" in the previous example

@@ -14,10 +14,12 @@ This page lists features of JavaScript that are deprecated (that is, still avail
 
 ## Deprecated features
 
-These deprecated features can still be used, but should be used with caution because they are expected to be removed entirely sometime in the future. You should work to remove their use from your code.
+These deprecated features can still be used, but should be used with caution because they are not required to be implemented by every JavaScript engine. You should work to remove their use from your code.
 
 Some of these deprecated features are listed in the [Annex B](https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers) section of the ECMAScript specification. This section is described as normative optional — that is, web browser hosts must implement these features, while non-web hosts may not. These features are likely stable because removing them will cause backward compatibility issues and break legacy websites. (JavaScript has the design goal of "don't break the web".) Still, they are not cross-platform portable and may not be supported by all analysis tools, so you are advised to not use them, as the introduction of Annex B states:
 
+> … All of the language features and behaviors specified in this annex have one or more undesirable characteristics and in the absence of legacy usage would be removed from this specification. …
+>
 > … Programmers should not use or assume the existence of these features and behaviors when writing new ECMAScript code. …
 
 Some others, albeit in the main spec body, are also marked as normative optional and should not be depended on.
@@ -42,19 +44,18 @@ console.log("b");
 
 The following properties are deprecated. This does not affect their use in [replacement strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace):
 
-| Property                                          | Description                                               |
-| ------------------------------------------------- | --------------------------------------------------------- |
-| {{jsxref("RegExp/n", "$1-$9")}}                   | Parenthesized substring matches, if any.                  |
-| {{jsxref("RegExp.input", "$_")}}                  | See `input`.                                              |
-| {{jsxref("RegExp.lastMatch", "$&amp;")}}          | See `lastMatch`.                                          |
-| {{jsxref("RegExp.lastParen", "$+")}}              | See `lastParen`.                                          |
-| {{jsxref("RegExp.leftContext", "$`")}}            | See `leftContext`.                                        |
-| {{jsxref("RegExp.rightContext", "$'")}}           | See `rightContext`.                                       |
-| {{jsxref("RegExp.input", "input")}}               | The string against which a regular expression is matched. |
-| {{jsxref("RegExp.lastMatch", "lastMatch")}}       | The last matched characters.                              |
-| {{jsxref("RegExp.lastParen", "lastParen")}}       | The last parenthesized substring match, if any.           |
-| {{jsxref("RegExp.leftContext", "leftContext")}}   | The substring preceding the most recent match.            |
-| {{jsxref("RegExp.rightContext", "rightContext")}} | The substring following the most recent match.            |
+- {{jsxref("RegExp/n", "$1–$9")}}
+  - : Parenthesized substring matches, if any.
+- {{jsxref("RegExp.input", "input, $_")}}
+  - : The string against which a regular expression is matched.
+- {{jsxref("RegExp.lastMatch", "lastMatch, $&amp;")}}
+  - : The last matched substring.
+- {{jsxref("RegExp.lastParen", "lastParen, $+")}}
+  - : The last parenthesized substring match, if any.
+- {{jsxref("RegExp.leftContext", "leftContext, $`")}}
+  - : The substring preceding the most recent match.
+- {{jsxref("RegExp.rightContext", "rightContext, $'")}}
+  - : The substring following the most recent match.
 
 > **Warning:** Avoid using these static properties, as they can cause [issues when interacting with external code](https://github.com/tc39/proposal-regexp-legacy-features/blob/master/subclass-restriction-motivation.md#legacy-static-properties-regexp1-etc)!
 

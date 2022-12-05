@@ -27,7 +27,7 @@ The `translate()` method adds a translation transformation to the current
 matrix by moving the canvas and its origin `x` units horizontally and
 `y` units vertically on the grid.
 
-![](canvas_grid_translate.png)
+![A canvas's origin moved on the x and y axes based on the values of the translate method.](canvas_grid_translate.png)
 
 ### Parameters
 

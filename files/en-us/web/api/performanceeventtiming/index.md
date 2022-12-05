@@ -117,7 +117,7 @@ The following event types are exposed by the Event Timing API:
   </tbody>
 </table>
 
-Note that that the following events are not included in the list because they are continuous events and no meaningful event counts or performance metrics can be obtained at this point: {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/pointermove_event", "pointermove")}},
+Note that the following events are not included in the list because they are continuous events and no meaningful event counts or performance metrics can be obtained at this point: {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/pointermove_event", "pointermove")}},
 {{domxref("HTMLElement/pointerrawupdate_event", "pointerrawupdate")}}, {{domxref("Element/touchmove_event", "touchmove")}}, {{domxref("Element/wheel_event", "wheel")}}, {{domxref("HTMLElement/drag_event", "drag")}}.
 
 To get a list of all exposed events, you can also look up keys in the {{domxref("performance.eventCounts")}} map:
@@ -159,7 +159,7 @@ This interface also supports the following properties:
 ## Instance methods
 
 - {{domxref("PerformanceEventTiming.toJSON()")}}
-  - : Converts the PerformanceEventTiming object to JSON.
+  - : Returns a JSON representation of the `PerformanceEventTiming` object.
 
 ## Examples
 

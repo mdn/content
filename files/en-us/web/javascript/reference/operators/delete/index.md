@@ -16,7 +16,7 @@ browser-compat: javascript.operators.delete
 
 {{jsSidebar("Operators")}}
 
-The **`delete` operator** removes a property from an object. If the property's value is an object and there are no more references to the object, the object held by that property is eventually released automatically.
+The **`delete`** operator removes a property from an object. If the property's value is an object and there are no more references to the object, the object held by that property is eventually released automatically.
 
 {{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}
 

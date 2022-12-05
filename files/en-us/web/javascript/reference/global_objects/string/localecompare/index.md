@@ -81,13 +81,13 @@ When comparing large numbers of strings, such as in sorting large arrays, it is 
 
 ```js
 // The letter "a" is before "c" yielding a negative value
-'a'.localeCompare('c'); // -2 or -1 (or some other negative value)
+"a".localeCompare("c"); // -2 or -1 (or some other negative value)
 
 // Alphabetically the word "check" comes after "against" yielding a positive value
-'check'.localeCompare('against'); // 2 or 1 (or some other positive value)
+"check".localeCompare("against"); // 2 or 1 (or some other positive value)
 
 // "a" and "a" are equivalent yielding a neutral value of zero
-'a'.localeCompare('a'); // 0
+"a".localeCompare("a"); // 0
 ```
 
 ### Sort an array
@@ -95,8 +95,8 @@ When comparing large numbers of strings, such as in sorting large arrays, it is 
 `localeCompare()` enables case-insensitive sorting for an array.
 
 ```js
-const items = ['réservé', 'Premier', 'Cliché', 'communiqué', 'café', 'Adieu'];
-items.sort((a, b) => a.localeCompare(b, 'fr', { ignorePunctuation: true }));
+const items = ["réservé", "Premier", "Cliché", "communiqué", "café", "Adieu"];
+items.sort((a, b) => a.localeCompare(b, "fr", { ignorePunctuation: true }));
 // ['Adieu', 'café', 'Cliché', 'communiqué', 'Premier', 'réservé']
 ```
 
@@ -112,9 +112,9 @@ requirement that illegal language tags are rejected) and look for a
 ```js
 function localeCompareSupportsLocales() {
   try {
-    'foo'.localeCompare('bar', 'i');
+    "foo".localeCompare("bar", "i");
   } catch (e) {
-    return e.name === 'RangeError';
+    return e.name === "RangeError";
   }
   return false;
 }
@@ -128,8 +128,8 @@ make sure to specify that language (and possibly some fallback languages) using 
 `locales` argument:
 
 ```js
-console.log('ä'.localeCompare('z', 'de')); // a negative value: in German, ä sorts before z
-console.log('ä'.localeCompare('z', 'sv')); // a positive value: in Swedish, ä sorts after z
+console.log("ä".localeCompare("z", "de")); // a negative value: in German, ä sorts before z
+console.log("ä".localeCompare("z", "sv")); // a positive value: in Swedish, ä sorts after z
 ```
 
 ### Using options
@@ -139,10 +139,10 @@ The results provided by `localeCompare()` can be customized using the
 
 ```js
 // in German, ä has a as the base letter
-console.log('ä'.localeCompare('a', 'de', { sensitivity: 'base' })); // 0
+console.log("ä".localeCompare("a", "de", { sensitivity: "base" })); // 0
 
 // in Swedish, ä and a are separate base letters
-console.log('ä'.localeCompare('a', 'sv', { sensitivity: 'base' })); // a positive value
+console.log("ä".localeCompare("a", "sv", { sensitivity: "base" })); // a positive value
 ```
 
 ### Numeric sorting

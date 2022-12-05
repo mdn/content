@@ -62,7 +62,7 @@
 /en-US/docs/ARIA/widgets/overview	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/ARIA_Screen_Reader_Implementors_Guide	/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
 /en-US/docs/A_re-introduction_to_JavaScript	/en-US/docs/Web/JavaScript/Language_Overview
-/en-US/docs/About_JavaScript	/en-US/docs/Web/JavaScript/About_JavaScript
+/en-US/docs/About_JavaScript	/en-US/docs/Web/JavaScript
 /en-US/docs/About_WOFF	/en-US/docs/Web/Guide/WOFF
 /en-US/docs/About_the_Document_Object_Model	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/Accessibility	/en-US/docs/Web/Accessibility
@@ -1210,7 +1210,7 @@
 /en-US/docs/DOM/DOMString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 /en-US/docs/DOM/DOMStringList	/en-US/docs/Web/API/DOMStringList
 /en-US/docs/DOM/DOMStringMap	/en-US/docs/Web/API/DOMStringMap
-/en-US/docs/DOM/DOMTimeStamp	/en-US/docs/Web/API/DOMTimeStamp
+/en-US/docs/DOM/DOMTimeStamp	/en-US/docs/Glossary/Unix_time
 /en-US/docs/DOM/DOMTokenList	/en-US/docs/Web/API/DOMTokenList
 /en-US/docs/DOM/DOM_Mutation_Observers	/en-US/docs/Web/API/MutationObserver
 /en-US/docs/DOM/DOM_Reference	/en-US/docs/Web/API/Document_Object_Model
@@ -2743,7 +2743,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/DOMString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 /en-US/docs/Document_Object_Model_(DOM)/DOMStringList	/en-US/docs/Web/API/DOMStringList
 /en-US/docs/Document_Object_Model_(DOM)/DOMStringMap	/en-US/docs/Web/API/DOMStringMap
-/en-US/docs/Document_Object_Model_(DOM)/DOMTimeStamp	/en-US/docs/Web/API/DOMTimeStamp
+/en-US/docs/Document_Object_Model_(DOM)/DOMTimeStamp	/en-US/docs/Glossary/Unix_time
 /en-US/docs/Document_Object_Model_(DOM)/DOMTokenList	/en-US/docs/Web/API/DOMTokenList
 /en-US/docs/Document_Object_Model_(DOM)/DOM_event_handlers	/en-US/docs/Web/Events/Event_handlers
 /en-US/docs/Document_Object_Model_(DOM)/DeviceAcceleration	/en-US/docs/Web/API/DeviceMotionEventAcceleration
@@ -3413,7 +3413,6 @@
 /en-US/docs/DragDrop/DataTransfer	/en-US/docs/Web/API/DataTransfer
 /en-US/docs/DragDrop/Drag_Operations	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /en-US/docs/DragDrop/Drag_and_Drop	/en-US/docs/Web/API/HTML_Drag_and_Drop_API
-/en-US/docs/DragDrop/Dragging_and_Dropping_Multiple_Items	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items
 /en-US/docs/DragDrop/Recommended_Drag_Types	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
 /en-US/docs/Drawing_Graphics_with_Canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Drawing_text_using_a_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text
@@ -3600,6 +3599,7 @@
 /en-US/docs/Glossary/Empty_element	/en-US/docs/Glossary/Void_element
 /en-US/docs/Glossary/Error	/en-US/docs/Glossary/Exception
 /en-US/docs/Glossary/Global_attribute	/en-US/docs/Web/HTML/Global_attributes
+/en-US/docs/Glossary/Grid_Rows	/en-US/docs/Glossary/Grid_Row
 /en-US/docs/Glossary/Hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
 /en-US/docs/Glossary/Header	/en-US/docs/Glossary/HTTP_header
 /en-US/docs/Glossary/IMAP4	/en-US/docs/Glossary/IMAP
@@ -4061,7 +4061,7 @@
 /en-US/docs/JavaScript	/en-US/docs/Web/JavaScript
 /en-US/docs/JavaScript,_the_DOM_and_the_BOM	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
 /en-US/docs/JavaScript/A_re-introduction_to_JavaScript	/en-US/docs/Web/JavaScript/Language_Overview
-/en-US/docs/JavaScript/About_JavaScript	/en-US/docs/Web/JavaScript/About_JavaScript
+/en-US/docs/JavaScript/About_JavaScript	/en-US/docs/Web/JavaScript
 /en-US/docs/JavaScript/Data_structures	/en-US/docs/Web/JavaScript/Data_structures
 /en-US/docs/JavaScript/DedicatedWorkerGlobalScope	/en-US/docs/Web/API/DedicatedWorkerGlobalScope
 /en-US/docs/JavaScript/Getting_Started	/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
@@ -4173,7 +4173,7 @@
 /en-US/docs/JavaScript/Memory_Management	/en-US/docs/Web/JavaScript/Memory_Management
 /en-US/docs/JavaScript/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /en-US/docs/JavaScript/Reference	/en-US/docs/Web/JavaScript/Reference
-/en-US/docs/JavaScript/Reference/About	/en-US/docs/Web/JavaScript/Reference/About
+/en-US/docs/JavaScript/Reference/About	/en-US/docs/Web/JavaScript/Reference
 /en-US/docs/JavaScript/Reference/Code_comments	/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /en-US/docs/JavaScript/Reference/Comments/Code_comments	/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /en-US/docs/JavaScript/Reference/Deprecated_Features	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
@@ -4729,7 +4729,7 @@
 /en-US/docs/JavaScript_API/navigator.mozApps.mgmt.removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
 /en-US/docs/JavaScript_Documention	/en-US/docs/Web/JavaScript
 /en-US/docs/JavaScript_Documention/A_re-introduction_to_JavaScript	/en-US/docs/Web/JavaScript/Language_Overview
-/en-US/docs/JavaScript_Documention/About_JavaScript	/en-US/docs/Web/JavaScript/About_JavaScript
+/en-US/docs/JavaScript_Documention/About_JavaScript	/en-US/docs/Web/JavaScript
 /en-US/docs/JavaScript_Documention/Data_structures	/en-US/docs/Web/JavaScript/Data_structures
 /en-US/docs/JavaScript_Documention/Getting_Started	/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 /en-US/docs/JavaScript_Documention/Glossary	/en-US/docs/Glossary
@@ -4833,7 +4833,7 @@
 /en-US/docs/JavaScript_Documention/Memory_Management	/en-US/docs/Web/JavaScript/Memory_Management
 /en-US/docs/JavaScript_Documention/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /en-US/docs/JavaScript_Documention/Reference	/en-US/docs/Web/JavaScript/Reference
-/en-US/docs/JavaScript_Documention/Reference/About	/en-US/docs/Web/JavaScript/Reference/About
+/en-US/docs/JavaScript_Documention/Reference/About	/en-US/docs/Web/JavaScript/Reference
 /en-US/docs/JavaScript_Documention/Reference/Code_comments	/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /en-US/docs/JavaScript_Documention/Reference/Deprecated_and_obsolete_features	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/JavaScript_Documention/Reference/Functions_and_function_scope	/en-US/docs/Web/JavaScript/Reference/Functions
@@ -5396,6 +5396,7 @@
 /en-US/docs/MDC:How_to_Help	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN/About	/en-US/docs/MDN/Writing_guidelines
 /en-US/docs/MDN/At_ten/Contributing_to_MDN	/en-US/docs/MDN/Contribute
+/en-US/docs/MDN/Contribute/Changelog	/en-US/docs/MDN/Changelog
 /en-US/docs/MDN/Contribute/Code_sample_guidelines	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 /en-US/docs/MDN/Contribute/Content	/en-US/docs/MDN/Writing_guidelines
 /en-US/docs/MDN/Contribute/Content/Content_blocks	/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
@@ -5444,6 +5445,7 @@
 /en-US/docs/MDN/Contribute/Guidelines/Writing_style_guide	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 /en-US/docs/MDN/Contribute/Help_beginners	/en-US/docs/MDN/Community/Learn_forum
 /en-US/docs/MDN/Contribute/How_to_document_a_CSS_property	/en-US/docs/MDN/Writing_guidelines/Howto/Document_a_CSS_property
+/en-US/docs/MDN/Contribute/Howto	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data	https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md
 /en-US/docs/MDN/Contribute/Howto/Compatibility_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables
 /en-US/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples
@@ -5457,6 +5459,7 @@
 /en-US/docs/MDN/Contribute/Howto/Notices	/en-US/docs/MDN/Writing_guidelines/Page_structures
 /en-US/docs/MDN/Contribute/Howto/Report_a_problem	/en-US/docs/MDN/Community/Issues
 /en-US/docs/MDN/Contribute/Howto/Tag	/en-US/docs/MDN/Writing_guidelines/Howto/Tag
+/en-US/docs/MDN/Contribute/Howto/Update_the_CSS_JSON_DB	https://github.com/mdn/data/blob/main/docs/updating_css_json.md
 /en-US/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/en-US/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_Glossary
 /en-US/docs/MDN/Contribute/Howto/Write_an_API_reference	/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference
 /en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file	/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
@@ -5469,6 +5472,7 @@
 /en-US/docs/MDN/Contribute/Processes/Locating_browser-specific_information	https://github.com/mdn/browser-compat-data/blob/main/docs/matching-browser-releases/index.md
 /en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_version	https://github.com/mdn/browser-compat-data/blob/main/docs/matching-browser-releases/index.md
 /en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_versiosn	https://github.com/mdn/browser-compat-data/blob/main/docs/matching-browser-releases/index.md
+/en-US/docs/MDN/Contribute/Processes/Short_surveys	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN/Contribute/Sample_app_coding_guidelines	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 /en-US/docs/MDN/Contribute/Sample_server	/en-US/docs/MDN
 /en-US/docs/MDN/Contribute/Structures	/en-US/docs/MDN/Writing_guidelines/Page_structures
@@ -5510,10 +5514,10 @@
 /en-US/docs/MDN/Contribute/Style_guide/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Contribute/Tagging	/en-US/docs/MDN/Writing_guidelines/Howto/Tag
 /en-US/docs/MDN/Contribute/Tasks	/en-US/docs/MDN/Community/Contributing/Getting_started
-/en-US/docs/MDN/Contribute/Tools	/en-US/docs/MDN/Tools
+/en-US/docs/MDN/Contribute/Tools	https://github.com/mdn/yari/tree/main/docs
 /en-US/docs/MDN/Contribute/Tools/Document_parameters	/en-US/docs/MDN
-/en-US/docs/MDN/Contribute/Tools/KumaScript	/en-US/docs/MDN/Tools/KumaScript
-/en-US/docs/MDN/Contribute/Tools/KumaScript/Troubleshooting	/en-US/docs/MDN/Tools/KumaScript/Troubleshooting
+/en-US/docs/MDN/Contribute/Tools/KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
+/en-US/docs/MDN/Contribute/Tools/KumaScript/Troubleshooting	https://github.com/mdn/yari/tree/main/docs/kumascript/troubleshooting-errors.md
 /en-US/docs/MDN/Contribute/Tools/Sample_server	/en-US/docs/MDN
 /en-US/docs/MDN/Contribute/Where_is_everything	/en-US/docs/MDN/Community/Contributing/Our_repositories
 /en-US/docs/MDN/Doc_status/NSPR	https://firefox-source-docs.mozilla.org/nspr/index.html
@@ -5535,15 +5539,15 @@
 /en-US/docs/MDN/Guidelines/Video	/en-US/docs/MDN/Writing_guidelines/Howto/Images_media
 /en-US/docs/MDN/Guidelines/Writing_style_guide	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 /en-US/docs/MDN/JavaScript	/en-US/docs/Web/JavaScript
-/en-US/docs/MDN/Kuma	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
-/en-US/docs/MDN/Kuma/API	/en-US/docs/MDN
-/en-US/docs/MDN/Kuma/Changelog	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
-/en-US/docs/MDN/Kuma/Contributing	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
-/en-US/docs/MDN/Kuma/Contributing/Getting_started	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
-/en-US/docs/MDN/Kuma/Contributing/Help_wanted	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
-/en-US/docs/MDN/Kuma/Introduction_to_KumaScript	/en-US/docs/MDN/Tools/KumaScript
-/en-US/docs/MDN/Kuma/Tools	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
-/en-US/docs/MDN/Kuma/Troubleshooting_KumaScript_errors	/en-US/docs/MDN/Tools/KumaScript/Troubleshooting
+/en-US/docs/MDN/Kuma	https://github.com/mdn/yari/tree/main/docs
+/en-US/docs/MDN/Kuma/API	https://github.com/mdn/yari/tree/main/docs
+/en-US/docs/MDN/Kuma/Changelog	https://github.com/mdn/yari/tree/main/docs
+/en-US/docs/MDN/Kuma/Contributing	https://github.com/mdn/yari/tree/main/docs
+/en-US/docs/MDN/Kuma/Contributing/Getting_started	https://github.com/mdn/yari/tree/main/docs
+/en-US/docs/MDN/Kuma/Contributing/Help_wanted	https://github.com/mdn/yari/tree/main/docs
+/en-US/docs/MDN/Kuma/Introduction_to_KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
+/en-US/docs/MDN/Kuma/Tools	https://github.com/mdn/yari/tree/main/docs
+/en-US/docs/MDN/Kuma/Troubleshooting_KumaScript_errors	https://github.com/mdn/yari/tree/main/docs/kumascript/troubleshooting-errors.md
 /en-US/docs/MDN/MDN_Product_Advisory_Board/Members	/en-US/docs/MDN/MDN_Product_Advisory_Board
 /en-US/docs/MDN/MDN_Product_Avisory_Board	/en-US/docs/MDN/MDN_Product_Advisory_Board
 /en-US/docs/MDN/MDN_Product_Avisory_Board/Members	/en-US/docs/MDN/MDN_Product_Advisory_Board
@@ -5577,15 +5581,18 @@
 /en-US/docs/MDN/Structures/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
 /en-US/docs/MDN/Structures/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Structures/Syntax_sections	/en-US/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections
+/en-US/docs/MDN/Tools	https://github.com/mdn/yari/tree/main/docs
 /en-US/docs/MDN/Tools/Document_parameters	/en-US/docs/MDN
+/en-US/docs/MDN/Tools/KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
+/en-US/docs/MDN/Tools/KumaScript/Troubleshooting	https://github.com/mdn/yari/tree/main/docs/kumascript/troubleshooting-errors.md
 /en-US/docs/MDN/Tools/Sample_server	/en-US/docs/MDN
 /en-US/docs/MDN/Tools/Unsupported_GET_API	/en-US/docs/MDN
-/en-US/docs/MDN/User_guide	/en-US/docs/MDN/Tools
-/en-US/docs/MDN/User_guide/Troubleshooting_KumaScript_errors	/en-US/docs/MDN/Tools/KumaScript/Troubleshooting
+/en-US/docs/MDN/User_guide	https://github.com/mdn/yari/tree/main/docs
+/en-US/docs/MDN/User_guide/Troubleshooting_KumaScript_errors	https://github.com/mdn/yari/tree/main/docs/kumascript/troubleshooting-errors.md
 /en-US/docs/MDN/Writing_guidelines/Creating_moving_deleting	/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /en-US/docs/MDN/Writing_guidelines/Research_technology	/en-US/docs/MDN/Writing_guidelines/Howto/Research_technology
 /en-US/docs/MDN/Writing_guidelines/What_we_write/Inclusion_criteria	/en-US/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion
-/en-US/docs/MDN/Yari	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
+/en-US/docs/MDN/Yari	https://github.com/mdn/yari/tree/main/docs
 /en-US/docs/MDN_at_ten	/en-US/docs/MDN/At_ten
 /en-US/docs/MDN_at_ten/Contributing_to_MDN	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN_at_ten/History	/en-US/docs/MDN/At_ten/History_of_MDN
@@ -7774,6 +7781,7 @@
 /en-US/docs/Web/API/ConstrainDouble	/en-US/docs/Web/API/MediaTrackConstraints
 /en-US/docs/Web/API/ConstrainLong	/en-US/docs/Web/API/MediaTrackConstraints
 /en-US/docs/Web/API/ConstrainULong	/en-US/docs/Web/API/MediaTrackConstraints
+/en-US/docs/Web/API/Constraint_validation	/en-US/docs/Learn/Forms/Form_validation
 /en-US/docs/Web/API/Constraint_validation/invalid_event	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Web/API/ConvolverNode.buffer	/en-US/docs/Web/API/ConvolverNode/buffer
 /en-US/docs/Web/API/ConvolverNode.normalize	/en-US/docs/Web/API/ConvolverNode/normalize
@@ -7833,8 +7841,7 @@
 /en-US/docs/Web/API/DOMPointInit/z	/en-US/docs/web/api/DOMPoint/z
 /en-US/docs/Web/API/DOMPointReadOnly/DOMPoint.x	/en-US/docs/Web/API/DOMPointReadOnly/x
 /en-US/docs/Web/API/DOMReadOnlyMatrix	/en-US/docs/Web/API/DOMMatrixReadOnly
-/en-US/docs/Web/API/DOMString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
-/en-US/docs/Web/API/DOMString/binary	/en-US/docs/Web/API/btoa
+/en-US/docs/Web/API/DOMTimeStamp	/en-US/docs/Glossary/Unix_time
 /en-US/docs/Web/API/DOMTokenList/DOMTokenList.add()	/en-US/docs/Web/API/DOMTokenList/add
 /en-US/docs/Web/API/DataTransfer/clearData()	/en-US/docs/Web/API/DataTransfer/clearData
 /en-US/docs/Web/API/DataTransfer/getData()	/en-US/docs/Web/API/DataTransfer/getData
@@ -8071,6 +8078,7 @@
 /en-US/docs/Web/API/EncryptedMediaExtensions	/en-US/docs/Web/API/Encrypted_Media_Extensions_API
 /en-US/docs/Web/API/EncryptedMediaExtensions_API	/en-US/docs/Web/API/Encrypted_Media_Extensions_API
 /en-US/docs/Web/API/Entry	/en-US/docs/Web/API/FileSystemEntry
+/en-US/docs/Web/API/EpochTimeStamp	/en-US/docs/Glossary/Unix_time
 /en-US/docs/Web/API/ErrorEvent.error	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
 /en-US/docs/Web/API/Event.Event	/en-US/docs/Web/API/Event/Event
 /en-US/docs/Web/API/Event.initEvent()	/en-US/docs/Web/API/Event/initEvent
@@ -11738,6 +11746,7 @@
 /en-US/docs/Web/Guide/API/Vibration	/en-US/docs/Web/API/Vibration_API
 /en-US/docs/Web/Guide/API/WebRTC	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/Web/Guide/API/WebRTC/Introduction	/en-US/docs/Web/API/WebRTC_API
+/en-US/docs/Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/Web/Guide/API/WebRTC/Taking_webcam_photos	/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 /en-US/docs/Web/Guide/API/WebRTC/WebRTC_architecture	/en-US/docs/Web/API/WebRTC_API/Connectivity
 /en-US/docs/Web/Guide/API/WebRTC/WebRTC_basics	/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling
@@ -11828,7 +11837,6 @@
 /en-US/docs/Web/Guide/HTML/Content_Editable	/en-US/docs/Web/HTML/Global_attributes/contenteditable
 /en-US/docs/Web/Guide/HTML/Drag_and_drop	/en-US/docs/Web/API/HTML_Drag_and_Drop_API
 /en-US/docs/Web/Guide/HTML/Drag_operations	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
-/en-US/docs/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items
 /en-US/docs/Web/Guide/HTML/Editable_content	/en-US/docs/Web/HTML/Global_attributes/contenteditable
 /en-US/docs/Web/Guide/HTML/Element	/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started
 /en-US/docs/Web/Guide/HTML/Email_links	/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#E-mail_links
@@ -11990,6 +11998,7 @@
 /en-US/docs/Web/Houdini/learn/CSS_Typed_OM	/en-US/docs/Web/API/CSS_Typed_OM_API/Guide
 /en-US/docs/Web/Houdini/learn/Houdini:_CSS_Painting_API	/en-US/docs/Web/API/CSS_Painting_API/Guide
 /en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/en-US/docs/Web/JavaScript/Language_Overview
+/en-US/docs/Web/JavaScript/About_JavaScript	/en-US/docs/Web/JavaScript
 /en-US/docs/Web/JavaScript/Base64_encoding_and_decoding	/en-US/docs/Glossary/Base64
 /en-US/docs/Web/JavaScript/DedicatedWorkerGlobalScope	/en-US/docs/Web/API/DedicatedWorkerGlobalScope
 /en-US/docs/Web/JavaScript/Equality_comparisons_and_when_to_use_them	/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
@@ -12091,6 +12100,7 @@
 /en-US/docs/Web/JavaScript/Guide/The_legacy_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Guide/Using_native_JSON	/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON
 /en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals	/en-US/docs/Web/JavaScript/Guide/Grammar_and_types
+/en-US/docs/Web/JavaScript/Guide/Working_With_Private_Class_Features	/en-US/docs/Web/JavaScript/Guide/Using_Classes#private_fields
 /en-US/docs/Web/JavaScript/Guide/iterable	/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
 /en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript	/en-US/docs/Learn/JavaScript/Objects
 /en-US/docs/Web/JavaScript/Introduction_to_using_XPath_in_JavaScript	/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
@@ -12101,8 +12111,10 @@
 /en-US/docs/Web/JavaScript/Microsoft_JavaScript_extensions/debugger	/en-US/docs/Web/JavaScript/Reference/Statements/debugger
 /en-US/docs/Web/JavaScript/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /en-US/docs/Web/JavaScript/Proxy_Auto-Configuration_(PAC)_file	/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
+/en-US/docs/Web/JavaScript/Reference/About	/en-US/docs/Web/JavaScript/Reference
 /en-US/docs/Web/JavaScript/Reference/Classes/Class_elements	/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /en-US/docs/Web/JavaScript/Reference/Classes/Class_fields	/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
+/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks	/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks
 /en-US/docs/Web/JavaScript/Reference/Code_comments	/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /en-US/docs/Web/JavaScript/Reference/Data_types	/en-US/docs/Web/JavaScript/Data_structures
 /en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
@@ -12169,6 +12181,9 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/Intl.RelativeTimeFormat.supportedLocalesOf()	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments/@@iterator	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/@@iterator
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments/containing	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/ListFormat	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/ListFormat/ListFormat	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/ListFormat/format	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
@@ -12379,6 +12394,7 @@
 /en-US/docs/Web/MathML/Fonts/Test	/en-US/docs/Web/MathML/Fonts
 /en-US/docs/Web/MathML/Index	/en-US/docs/Web/MathML
 /en-US/docs/Web/Media/Formats/Guide_to_codecs_for_audio_on_the_web	/en-US/docs/Web/Media/Formats/Audio_codecs
+/en-US/docs/Web/Media/images/aspect_ratio_mapping	/en-US/docs/Learn/Performance/Multimedia
 /en-US/docs/Web/Media_Queries	/en-US/docs/Web/CSS/Media_Queries
 /en-US/docs/Web/Performance/Populating_the_page:_how_browsers_work	/en-US/docs/Web/Performance/How_browsers_work
 /en-US/docs/Web/Performance/Time_to_interactive	/en-US/docs/Glossary/Time_to_interactive
@@ -12697,8 +12713,6 @@
 /en-US/docs/WebAssembly/API/Table/grow	/en-US/docs/WebAssembly/JavaScript_interface/Table/grow
 /en-US/docs/WebAssembly/API/Table/length	/en-US/docs/WebAssembly/JavaScript_interface/Table/length
 /en-US/docs/WebAssembly/API/Table/set	/en-US/docs/WebAssembly/JavaScript_interface/Table/set
-/en-US/docs/WebAssembly/Caching_WebAssembly	/en-US/docs/WebAssembly/Caching_modules
-/en-US/docs/WebAssembly/Caching_WebAssembly_IndexedDB	/en-US/docs/WebAssembly/Caching_modules
 /en-US/docs/WebAssembly/Exported_function_exotic_objects	/en-US/docs/WebAssembly/Exported_functions
 /en-US/docs/WebAssembly/Exported_wasm_functions	/en-US/docs/WebAssembly/Exported_functions
 /en-US/docs/WebAssembly/Fetching_WebAssembly_bytecode	/en-US/docs/WebAssembly/Loading_and_running
@@ -12726,7 +12740,7 @@
 /en-US/docs/WebRTC/Introduction	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/WebRTC/Introduction-redirect-1	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/WebRTC/MediaStream_API	/en-US/docs/Web/API/Media_Capture_and_Streams_API
-/en-US/docs/WebRTC/Peer-to-peer_communications_with_WebRTC	/en-US/docs/Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC
+/en-US/docs/WebRTC/Peer-to-peer_communications_with_WebRTC	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/WebRTC/Taking_webcam_photos	/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 /en-US/docs/WebRTC/WebRTC_reference	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/WebRTC/navigator.getUserMedia	/en-US/docs/Web/API/Navigator/getUserMedia

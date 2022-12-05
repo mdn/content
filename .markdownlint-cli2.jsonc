@@ -23,9 +23,9 @@
     "MD026": {
       "punctuation": ".,;:"
     },
-    // Consectutive Notes/Callouts currently don't conform with this rule
+    // Consecutive Notes/Callouts currently don't conform with this rule
     "MD028": false,
-    // Force orderd numbering to catch accidental list ending from indenting
+    // Force ordered numbering to catch accidental list ending from indenting
     "MD029": {
       "style": "ordered"
     },
@@ -138,6 +138,13 @@
           "skipCode": true
         },
         {
+          "name": "nbsp",
+          "message": "Don't use no-break spaces",
+          "searchPattern": "/ /g",
+          "replace": " ",
+          "skipCode": false
+        },
+        {
           "name": "m-dash",
           "message": "Don't use '--'. Use m-dash — instead",
           "search": " -- ",
@@ -176,6 +183,13 @@
           "message": "Character is stuck to definition description marker",
           "searchPattern": "/- :(\\w)/g",
           "replace": "- : $1",
+          "skipCode": true
+        },
+        {
+          "name": "fqdn-moz-links",
+          "message": "Don't use developer.mozilla.org for links",
+          "search": "](https://developer.mozilla.org/",
+          "replace": "](/",
           "skipCode": true
         }
       ]

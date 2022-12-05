@@ -14,9 +14,7 @@ browser-compat: api.PerformanceServerTiming.toJSON
 
 {{APIRef("Performance API")}}
 
-The **`toJSON()`** method of the
-{{domxref("PerformanceServerTiming")}} interface returns a string that
-is the JSON representation of the {{domxref('PerformanceServerTiming')}} object.
+The **`toJSON()`** method of the {{domxref("PerformanceServerTiming")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("PerformanceServerTiming")}} object.
 
 ## Syntax
 
@@ -30,11 +28,43 @@ None.
 
 ### Return value
 
-A {{domxref('DomString')}} containing JSON.
+A {{jsxref("JSON")}} object that is the serialization of the {{domxref("PerformanceServerTiming")}} object.
 
-### Exceptions
+## Examples
 
-None.
+### Logging server timing entries
+
+Server timing metrics require the server to send the {{HTTPHeader("Server-Timing")}} header. For example:
+
+```http
+Server-Timing: cache;desc="Cache Read";dur=23.2
+```
+
+Then use a {{domxref("PerformanceObserver")}} to watch for {{domxref("PerformanceServerTiming")}} entries as they are recorded.
+
+```js
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    entry.serverTiming.forEach((serverEntry) => {
+      console.log(serverEntry.toJSON());
+    });
+  });
+});
+
+observer.observe({ entryTypes: ["resource", "navigation"] });
+```
+
+This would log a JSON object like so:
+
+```json
+{
+  "name": "cache",
+  "duration": 23.2,
+  "description": "Cache Read"
+}
+```
+
+To get a JSON string, you can use [`JSON.stringify(serverEntry)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) directly; it will call `toJSON()` automatically.
 
 ## Specifications
 

@@ -49,7 +49,7 @@ Intl.NumberFormat(locales, options)
         `"gujr"`, `"guru"`, `"hanidec"`, `"hmng"`, `"hmnp"`, `"java"`,
         `"kali"`, `"khmr"`, `"knda"`, `"lana"`, `"lanatham"`, `"laoo"`,
         `"latn"`, `"lepc"`, `"limb"`, `"mathbold"`, `"mathdbl"`, `"mathmono"`,
-        `"mathsanb"`, `mathsans"`, `"mlym"`, `"modi"`, `"mong"`, `"mroo"`,
+        `"mathsanb"`, `"mathsans"`, `"mlym"`, `"modi"`, `"mong"`, `"mroo"`,
         `"mtei"`, `"mymr"`, `"mymrshan"`, `"mymrtlng"`, `"newa"`, `"nkoo"`,
         `"olck"`, `"orya"`, `"osma"`, `"rohg"`, `"saur"`, `"segment"`,
         `"shrd"`, `"sind"`, `"sinh"`, `"sora"`, `"sund"`, `"takr"`, `"talu"`, `"tamldec"`, `"telu"`,

@@ -29,6 +29,11 @@ The **`TaskAttributionTiming`** interface of the [Long Tasks API](/en-US/docs/We
 - {{domxref('TaskAttributionTiming.containerName')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the container's `name` attribute.
 
+## Instance methods
+
+- {{domxref("TaskAttributionTiming.toJSON()")}} {{Experimental_Inline}}
+  - : Returns a JSON representation of the `TaskAttributionTiming` object.
+
 ## Specifications
 
 {{Specifications}}

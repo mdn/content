@@ -93,13 +93,13 @@ event is always able to propagate across shadow boundaries. Second, you'll notic
 difference in the value of `composedPath` for the two elements. The
 `<open-shadow>` element's composed path is this:
 
-```
+```plain
 Array [ p, ShadowRoot, open-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
 ```
 
 Whereas the `<closed-shadow>` element's composed path is a follows:
 
-```
+```plain
 Array [ closed-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
 ```
 

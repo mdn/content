@@ -20,7 +20,7 @@ These are same origin because they have the same scheme (`http`) and hostname (`
 
 These are same origin because a server delivers HTTP content through port 80 by default:
 
-- `http://Example.com:80`
+- `http://example.com:80`
 - `http://example.com`
 
 These are not same origin because they use different schemes:

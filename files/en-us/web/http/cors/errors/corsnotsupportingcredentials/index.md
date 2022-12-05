@@ -21,7 +21,7 @@ tags:
 
 ## Reason
 
-```
+```plain
 Reason: Credential is not supported if the CORS header 'Access-Control-Allow-Origin' is '*'
 ```
 

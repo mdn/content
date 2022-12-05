@@ -433,9 +433,7 @@ Keep the following dos and don'ts in mind while creating headings for subsection
 
 - **Don't create single subsections.** Don't subdivide a topic into a single subtopic.
   It's either two subheadings or more or none at all.
-- **Don't use styles, classes, or macros within headings.** This includes the {{HTMLElement("code")}} element for code terms.
-  So don't format the heading as "Using the `SuperAmazingThing` interface".
-  It should instead just be "Using the SuperAmazingThing interface".
+- **Don't use inline styles, classes, or macros within headings.** However, you can use backticks to indicate code terms (e.g. "Using `FooBar` interface").
 - **Don't create "bumping heads".** These are headings followed immediately by a subheading, with no content text in between them.
   This doesn't look good and leaves readers without any explanatory text at the beginning of the outer section.
 
@@ -525,7 +523,7 @@ Keep the following guidelines in mind when writing titles:
   - **Group logically**: Make sure all related subsections are grouped together logically under a higher level heading. Naming titles of various sections can help you in this exercise.
   - **Keep titles short**: Shorter titles are easier to scan in text and in table of contents.
   - **Keep titles specific**: Use the title to convey the specific information that will be covered in the section. For example, for a section introducing HTML elements, use the title "HTML elements" instead of "Introduction" or "Overview".
-  - **Keep titles focussed**: Use the title to convey one objective—a single idea or a concept that will be covered in that section. For that purpose, as far as possible, try not to use the conjunction "and" in a title.
+  - **Keep titles focused**: Use the title to convey one objective—a single idea or a concept that will be covered in that section. For that purpose, as far as possible, try not to use the conjunction "and" in a title.
   - **Use parallel construction**: Use similar language for titles at the same heading level. For example, if a `###` heading level title uses gerunds, that is, words ending in "-ing", such as "Installing", then try to write all titles at that heading level using gerunds. If a title starts with an imperative verb, such as "Use", "Configure", then write all titles at that heading level starting with an imperative verb.
   - **Avoid common term in lower-level heading**: Do not repeat the text in the title of a higher-level heading in lower-level titles. For example, in a section titled "Commas", name the title of a subsection "After introductory clauses" instead of "Commas after introductory clauses".
   - **Don't begin with article**: Avoid starting titles with articles "a", "an", or "the".
