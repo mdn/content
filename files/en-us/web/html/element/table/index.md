@@ -13,7 +13,7 @@ tags:
 browser-compat: html.elements.table
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<table>`** [HTML](/en-US/docs/Web/HTML) element represents tabular data — that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data.
 
@@ -625,7 +625,7 @@ This helps people navigating with the aid of assistive technology such as a scre
 
 ### Scoping rows and columns
 
-The {{htmlattrxref("scope", "th")}} attribute on header elements is redundant in simple contexts, because scope is inferred. However, some assistive technologies may fail to draw correct inferences, so specifying header scope may improve user experiences. In complex tables, scope can be specified so as to provide necessary information about the cells related to a header.
+The {{htmlattrxref("scope", "th")}} attribute on header elements is redundant in simple contexts, because scope is inferred. However, some assistive technologies may fail to draw correct inferences, so specifying header scope may improve user experiences. In complex tables, scope can be specified to provide necessary information about the cells related to a header.
 
 #### Example
 

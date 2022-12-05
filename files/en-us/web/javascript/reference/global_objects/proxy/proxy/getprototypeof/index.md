@@ -50,10 +50,11 @@ This trap can intercept these operations:
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Operators/instanceof", "instanceof")}}
 
+Or any other operation that invokes the `[[GetPrototypeOf]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
+
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a
-{{jsxref("TypeError")}}:
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
 - `getPrototypeOf()` method must return an object or `null`.
 - If `target` is not extensible,

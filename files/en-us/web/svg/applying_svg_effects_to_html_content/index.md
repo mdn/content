@@ -284,4 +284,6 @@ The SVG is then imported from a file named `resources.svg`, using the clip path 
 ## See also
 
 - [SVG](/en-US/docs/Web/SVG)
-- [SVG Effects for HTML Content](https://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (blog post)
+- {{CSSXref('clip-path')}} property
+- {{CSSXref('mask')}} property
+- [Shapes in clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)

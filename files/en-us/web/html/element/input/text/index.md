@@ -15,7 +15,7 @@ tags:
 browser-compat: html.elements.input.type_text
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`text`** create basic single-line text fields.
 
@@ -97,7 +97,7 @@ The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constrain
 
 ### `minlength`
 
-The minimum number of characters (as UTF-16 code units) the user can enter into the `text` input. This must be an non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the `text` input has no minimum length.
+The minimum number of characters (as UTF-16 code units) the user can enter into the `text` input. This must be a non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the `text` input has no minimum length.
 
 The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.
 
@@ -133,7 +133,7 @@ This does _not_ set a limit on how many characters the user can enter into the f
 
 ### `spellcheck`
 
-`spellcheck` is a global attribute which is used to indicate whether or not to enable spell checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
+`spellcheck` is a global attribute which is used to indicate whether to enable spell checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
 
 - `false`
   - : Disable spell checking for this element.
@@ -152,7 +152,7 @@ The following non-standard attributes are also available on some browsers. As a 
 
 ### `autocorrect`
 
-A Safari extension, the `autocorrect` attribute is a string which indicates whether or not to activate automatic correction while the user is editing this field. Permitted values are:
+A Safari extension, the `autocorrect` attribute is a string which indicates whether to activate automatic correction while the user is editing this field. Permitted values are:
 
 - `on`
   - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
@@ -213,7 +213,7 @@ You can see how the placeholder is rendered below:
 
 {{EmbedLiveSample("Setting_placeholders", 600, 80)}}
 
-The placeholder is typically rendered in a lighter color than the element's foreground color, and automatically vanishes when the user begins to enter text into the field (or whenever the field has a value set programmatically by setting its `value` attribute.
+The placeholder is typically rendered in a lighter color than the element's foreground color, and automatically vanishes when the user begins to enter text into the field (or whenever the field has a value set programmatically by setting its `value` attribute).
 
 ### Physical input element size
 

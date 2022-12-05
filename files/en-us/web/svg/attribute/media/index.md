@@ -71,6 +71,7 @@ svg {
 </table>
 
 - `<media-query-list>`
+
   - : This value holds a media query that needs to match in order for the style sheet to be applied.
 
     If not specified, the style sheet is applied unconditionally.

@@ -13,7 +13,7 @@ tags:
 browser-compat: html.elements.sup
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<sup>`** [HTML](/en-US/docs/Web/HTML) element specifies inline text which is to be displayed as superscript for solely typographical reasons. Superscripts are usually rendered with a raised baseline using smaller text.
 
@@ -163,6 +163,6 @@ The output:
 
 ## See also
 
-- The {{HTMLElement("sub")}} HTML element that produces subscripts. Note that you cannot use them both at the same time and you need to use [MathML](/en-US/docs/Web/MathML) to produce both a superscript and a subscript next to the chemical symbol of an element, representing its atomic number and its nuclear number.
+- The {{HTMLElement("sub")}} HTML element that produces subscripts. Note that you cannot use `sub` and `sup` at the same time: you need to use [MathML](/en-US/docs/Web/MathML) to produce both a superscript and a subscript next to the chemical symbol of an element, representing its atomic number and its nuclear number.
 - The [`<msub>`](/en-US/docs/Web/MathML/Element/msub), [`<msup>`](/en-US/docs/Web/MathML/Element/msup), and [`<msubsup>`](/en-US/docs/Web/MathML/Element/msubsup) MathML elements.
 - The CSS {{cssxref("vertical-align")}} property.

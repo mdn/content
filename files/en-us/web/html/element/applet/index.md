@@ -12,7 +12,7 @@ tags:
 browser-compat: html.elements.applet
 ---
 
-{{HTMLRef}}{{Deprecated_Header}}
+{{HTMLSidebar}}{{Deprecated_Header}}
 
 The obsolete **HTML Applet Element** (**`<applet>`**) embeds a Java applet into the document; this element has been deprecated in favor of {{HTMLElement("object")}}.
 

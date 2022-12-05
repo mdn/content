@@ -13,7 +13,7 @@ browser-compat: javascript.statements.for
 
 {{jsSidebar("Statements")}}
 
-The **for statement** creates a loop that consists of three optional expressions, enclosed in parentheses and separated by semicolons, followed by a statement (usually a [block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block)) to be executed in the loop.
+The **`for`** statement creates a loop that consists of three optional expressions, enclosed in parentheses and separated by semicolons, followed by a statement (usually a [block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block)) to be executed in the loop.
 
 {{EmbedInteractiveExample("pages/js/statement-for.html")}}
 
@@ -122,7 +122,7 @@ while (i <= 3) {
 }
 ```
 
-### Lexical declarations in the initialization block is scoped to the for loop
+### Lexical declarations in the initialization block
 
 Declaring a variable within the initialization block has important differences from declaring it in the upper [scope](/en-US/docs/Glossary/Scope), especially when creating a [closure](/en-US/docs/Web/JavaScript/Closures) within the loop body. For example, for the code below:
 
@@ -158,9 +158,48 @@ for (var i = 0; i < 3; i++) {
 // Logs 3, 3, 3
 ```
 
-The scoping effect of the initialization block can be understood as if the declaration happens within the loop body, but just happens to be accessible within the `condition` and `afterthought` parts.
+The scoping effect of the initialization block can be understood as if the declaration happens within the loop body, but just happens to be accessible within the `condition` and `afterthought` parts. More precisely, `let` declarations are special-cased by `for` loops — if `initialization` is a `let` declaration, then every time, after the loop body is evaluated, the following happens:
 
-### Using for without a statement
+1. A new lexical scope is created with new `let`-declared variables.
+2. The binding values from the last iteration are used to re-initialize the new variables.
+3. `afterthought` is evaluated in the new scope.
+
+So re-assigning the new variables within `afterthought` does not affect the bindings from the previous iteration.
+
+Creating closures allows you to get hold of a binding during any particular iteration. This explains why closures created within the `initialization` section do not get updated by re-assignments of `i` in the `afterthought`.
+
+```js
+for (let i = 0, getI = () => i; i < 3; i++) {
+  console.log(getI());
+}
+// Logs 0, 0, 0
+```
+
+This does not log "0, 1, 2", like what would happen if `getI` is declared in the loop body. This is because `getI` is not re-evaluated on each iteration — rather, the function is created once and closes over the `i` variable, which refers to the variable declared when the loop was first initialized. Subsequent updates to the value of `i` actually create new variables called `i`, which `getI` does not see. A way to fix this is to re-compute `getI` every time `i` updates:
+
+```js
+for (let i = 0, getI = () => i; i < 3; i++, getI = () => i) {
+  console.log(getI());
+}
+// Logs 0, 1, 2
+```
+
+In fact, you can capture the initial binding of the `i` variable and re-assign it later, and this updated value will not be visible to the loop body, which sees the next new binding of `i`.
+
+```js
+for (
+  let i = 0, getI = () => i, incrementI = () => i++;
+  getI() < 3;
+  incrementI()
+) {
+  console.log(i);
+}
+// Logs 0, 0, 0
+```
+
+This logs "0, 0, 0", because the `i` variable in each loop evaluation is actually a separate variable, but `getI` and `incrementI` both read and write the _initial_ binding of `i`, not what was subsequently declared.
+
+### Using for without a body
 
 The following `for` cycle calculates the offset position of a node in the `afterthought` section, and therefore it does not require the use of a `statement` section, a semicolon is used instead.
 
@@ -177,16 +216,18 @@ function showOffsetPos(id) {
   ); // semicolon
 
   console.log(
-    `Offset position of '${id}' element:\n left: ${left}px;\n top: ${top}px;`,
+    `Offset position of "${id}" element:
+left: ${left}px;
+top: ${top}px;`,
   );
 }
 
 showOffsetPos("content");
 
-// Output:
-// "Offset position of "content" element:
+// Logs:
+// Offset position of "content" element:
 // left: 0px;
-// top: 153px;"
+// top: 153px;
 ```
 
 Note that the semicolon after the `for` statement is mandatory, because it stands as an [empty statement](/en-US/docs/Web/JavaScript/Reference/Statements/Empty). Otherwise, the `for` statement acquires the following `console.log` line as its `statement` section, which makes the `log` execute multiple times.

@@ -64,8 +64,7 @@ let Rectangle = class {
     this.width = width;
   }
 };
-console.log(Rectangle.name);
-// output: "Rectangle"
+console.log(Rectangle.name); // "Rectangle"
 
 // named
 Rectangle = class Rectangle2 {
@@ -74,8 +73,7 @@ Rectangle = class Rectangle2 {
     this.width = width;
   }
 };
-console.log(Rectangle.name);
-// output: "Rectangle2"
+console.log(Rectangle.name); // "Rectangle2"
 ```
 
 > **Note:** Class **expressions** must be declared before they can be used (they are subject to the same hoisting restrictions as described in the [class declarations](#class_declarations) section).
@@ -99,7 +97,7 @@ A constructor can use the `super` keyword to call the constructor of the super c
 
 ### Static initialization blocks
 
-[Class `static` initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks) allow flexible initialization of [class `static` properties](#static_methods_and_properties) including the evaluation of statements during initialization, and granting access to private scope.
+[Static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks) allow flexible initialization of [static properties](#static_methods_and_properties) including the evaluation of statements during initialization, and granting access to private scope.
 
 Multiple static blocks can be declared, and these can be interleaved with the declaration of static properties and methods (all static items are evaluated in declaration order).
 

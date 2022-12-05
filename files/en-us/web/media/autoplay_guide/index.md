@@ -20,6 +20,8 @@ tags:
   - play
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
+
 Automatically starting the playback of audio (or videos with audio tracks) immediately upon page load can be an unwelcome surprise to users. While autoplay of media serves a useful purpose, it should be used carefully and only when needed. In order to give users control over this, browsers often provide various forms of autoplay blocking. In this guide, we'll cover autoplay functionality in the various media and Web Audio APIs, including a brief overview of how to use autoplay and how to work with browsers to handle autoplay blocking gracefully.
 
 Autoplay blocking is _not_ applied to {{HTMLElement("video")}} elements when the source media does not have an audio track, or if the audio track is muted. Media with an active audio track are considered to be **audible**, and autoplay blocking applies to them. **Inaudible** media are not affected by autoplay blocking.
@@ -58,13 +60,13 @@ As a general rule, you can assume that media will be allowed to autoplay only if
 
 Otherwise, the playback will likely be blocked. The exact situations that result in blocking, and the specifics of how sites become allowlisted vary from browser to browser, but the above are good guidelines to go by.
 
-For details, see the auto-play policies for [Google Chrome](https://developer.chrome.com/blog/autoplay/) and [WebKit](https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/).
+For details, see the autoplay policies for [Google Chrome](https://developer.chrome.com/blog/autoplay/) and [WebKit](https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/).
 
 > **Note:** Put another way, playback of any media that includes audio is generally blocked if the playback is programmatically initiated in a tab which has not yet had any user interaction. Browsers may additionally choose to block under other circumstances.
 
 ## Autoplay of media elements
 
-Now that we've covered what autoplay is and what can prevent autoplay from being allowed, we'll look at how your web site or app can automatically play media upon page load, how to detect when autoplay fails to occur, and tips for coping when autoplay is denied by the browser.
+Now that we've covered what autoplay is and what can prevent autoplay from being allowed, we'll look at how your website or app can automatically play media upon page load, how to detect when autoplay fails to occur, and tips for coping when autoplay is denied by the browser.
 
 ### The autoplay attribute
 
@@ -187,7 +189,7 @@ let playAttempt = setInterval(() => {
 
 ## Autoplay using the Web Audio API
 
-In the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), a web site or app can start playing audio using the `start()` method on a source node linked to the {{domxref("AudioContext")}}. Doing so outside the context of handling a user input event is subject to autoplay rules.
+In the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), a website or app can start playing audio using the `start()` method on a source node linked to the {{domxref("AudioContext")}}. Doing so outside the context of handling a user input event is subject to autoplay rules.
 
 ## The autoplay feature policy
 
@@ -286,19 +288,19 @@ Browsers may have preferences that control the way autoplay works, or how autopl
 ### Firefox
 
 - `media.allowed-to-play.enabled`
-  - : A Boolean preference which specifies whether or not the {{domxref("HTMLMediaElement.allowedToPlay")}} property is exposed to the web. This is currently `false` by default (except in nightly builds, where it's `true` by default). If this is `false`, the `allowedToPlay` property is missing from the `HTMLMediaElement` interface, and is thus not present on either {{HTMLElement("audio")}} or {{HTMLElement("video")}} elements.
+  - : A Boolean preference which specifies whether the {{domxref("HTMLMediaElement.allowedToPlay")}} property is exposed to the web. This is currently `false` by default (except in nightly builds, where it's `true` by default). If this is `false`, the `allowedToPlay` property is missing from the `HTMLMediaElement` interface, and is thus not present on either {{HTMLElement("audio")}} or {{HTMLElement("video")}} elements.
 - `media.autoplay.allow-extension-background-pages`
   - : This Boolean preference, if `true`, allows browser extensions' background scripts to autoplay audio media. Setting this value to `false` disables this capability. The default value is `true`.
 - `media.autoplay.allow-muted`
   - : A Boolean preference which if `true` (the default) allows audio media which is currently muted to be automatically played. If this has been changed to `false`, media with an audio track will not be permitted to play even if muted.
 - `media.autoplay.block-webaudio`
-  - : A Boolean preference which indicates whether or not to apply autoplay blocking to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API). The default is `false`, except on Nightly where it is `true`.
+  - : A Boolean preference which indicates whether to apply autoplay blocking to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API). The default is `false`, except on Nightly where it is `true`.
 - `media.autoplay.default`
   - : An integer preference which specifies whether per-domain configuration for autoplay support by default is allowed (`0`), blocked (`1`), or prompt-on-use (`2`). The default value is `0`.
 - `media.autoplay.enabled.user-gestures-needed` (Nightly builds only)
-  - : A Boolean preference which controls whether or not detection of user gestures is allowed to override the setting of `media.autoplay.default`. If `media.autoplay.default` is _not_ set to `0` (autoplay allowed by default), this preference being `true` allows autoplay of media with audio tracks anyway if the page has been activated by user gestures, and media that isn't audible is not restricted at all.
+  - : A Boolean preference which controls whether detection of user gestures is allowed to override the setting of `media.autoplay.default`. If `media.autoplay.default` is _not_ set to `0` (autoplay allowed by default), this preference being `true` allows autoplay of media with audio tracks anyway if the page has been activated by user gestures, and media that isn't audible is not restricted at all.
 - `media.block-autoplay-until-in-foreground`
-  - : A Boolean preference which indicates whether or not media playback is blocked when started on a background tab. The default value, `true`, means that even when otherwise available, autoplay won't take place until after a tab is brought to the foreground. This prevents the distracting situation in which a tab begins playing sound and the user can't find the tab among all their tabs and windows.
+  - : A Boolean preference which indicates whether media playback is blocked when started on a background tab. The default value, `true`, means that even when otherwise available, autoplay won't take place until after a tab is brought to the foreground. This prevents the distracting situation in which a tab begins playing sound and the user can't find the tab among all their tabs and windows.
 
 ## See also
 

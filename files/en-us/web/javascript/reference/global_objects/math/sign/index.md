@@ -46,10 +46,10 @@ Because `sign()` is a static method of `Math`, you always use it as `Math.sign()
 ### Using Math.sign()
 
 ```js
-Math.sign(3); //  1
+Math.sign(3); // 1
 Math.sign(-3); // -1
 Math.sign("-3"); // -1
-Math.sign(0); //  0
+Math.sign(0); // 0
 Math.sign(-0); // -0
 Math.sign(NaN); // NaN
 Math.sign("foo"); // NaN

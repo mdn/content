@@ -54,6 +54,7 @@ CSS selectors can be grouped into the following categories based on the type of 
     **Example:** `#toc` will match the element that has `id="toc"`.
 
 - [Attribute selector](/en-US/docs/Web/CSS/Attribute_selectors)
+
   - : Selects all elements that have the given attribute.
 
     **Syntax:** `[attr]` `[attr=value]` `[attr~=value]` `[attr|=value]` `[attr^=value]` `[attr$=value]` `[attr*=value]`
@@ -63,6 +64,7 @@ CSS selectors can be grouped into the following categories based on the type of 
 ## Grouping selectors
 
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
+
   - : The `,` selector is a grouping method that selects all the matching nodes.
 
     **Syntax:** `A, B`
@@ -101,9 +103,10 @@ CSS selectors can be grouped into the following categories based on the type of 
 
     **Syntax:** `A + B`
 
-    **Example:** `h2 + p` will match the first {{HTMLElement("p")}} element that _immediately_ follow an {{HTMLElement("h2")}} element.
+    **Example:** `h2 + p` will match the first {{HTMLElement("p")}} element that _immediately_ follows an {{HTMLElement("h2")}} element.
 
 - [Column combinator](/en-US/docs/Web/CSS/Column_combinator) {{Experimental_Inline}}
+
   - : The `||` combinator selects nodes which belong to a column.
 
     **Syntax:** `A || B`
@@ -119,6 +122,7 @@ CSS selectors can be grouped into the following categories based on the type of 
     **Example:** `a:visited` will match all {{HTMLElement("a")}} elements that have been visited by the user.
 
 - [Pseudo elements](/en-US/docs/Web/CSS/Pseudo-elements)
+
   - : The `::` pseudo represent entities that are not included in HTML.
 
     **Example:** `p::first-line` will match the first line of all {{HTMLElement("p")}} elements.
@@ -128,9 +132,11 @@ CSS selectors can be grouped into the following categories based on the type of 
 The term 'selector' can refer to one of the following:
 
 - Simple selector
+
   - : A selector with a single component, such as a single id selector or type selector, that's not used in combination with or contains any other selector component or combinator. A given element is said to match a simple selector when that simple selector accurately describes the element. All [basic selectors](#basic_selectors), attributes, and single [pseudo-classes and pseudo-elements](#pseudo-classes_and_pseudo-elements) are simple selectors.
 
 - Compound selector
+
   - : A sequence of [simple selectors](#simple_selector) that are not separated by a [combinator](#combinators). A compound selector represents a set of simultaneous conditions on a single element. A given element is said to match a compound selector when the element matches all the simple selectors in the compound selector.
 
     In a compound selector, the [type selector](/en-US/docs/Web/CSS/Type_selectors) or a [universal selector](/en-US/docs/Web/CSS/Universal_selectors) in a compound selector must come first in the sequence of selectors. Only one type selector or universal selector is allowed in the sequence. Since whitespace represents the [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator), no whitespace is allowed between the simple selectors in a compound selector.
@@ -138,6 +144,7 @@ The term 'selector' can refer to one of the following:
     **Example:** `a#selected {...}`
 
 - Complex selector
+
   - : A sequence of one or more simple and/or [compound selectors](#compound_selector) that are separated by [combinators](#combinators). A complex selector represents a set of simultaneous conditions on a set of elements. These conditions apply in the context of relationships described by the combinators. A given element is said to match a complex selector when the element matches compound selectors and the combinators between the compound selectors.
 
     **Examples:** `a#selected > .icon {...}`, `.box h2 + p {...}`, `a .icon {...}`
@@ -149,6 +156,7 @@ The term 'selector' can refer to one of the following:
     **Examples:** `+ div#topic > #reference {...}`, `> .icon {...}`
 
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
+
   - : A comma-separated list of [simple](#simple_selector), [compound](#compound_selector), or [complex](#complex_selector) selectors. If the constituent selector type of a selector list is important but unspecified, it is called a _complex selector list_. A given element is said to match a selector list when the element matches any (at least one) of the selectors in that selector list. Read more about when a selector list is deemed [invalid](/en-US/docs/Web/CSS/Selector_list#invalid_selector_list) and how to construct a [forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list).
 
     **Example:** `#main, article.heading {...}`

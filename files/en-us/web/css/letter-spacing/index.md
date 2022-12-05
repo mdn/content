@@ -116,3 +116,4 @@ Some written languages should not have any letter spacing applied. For instance,
 ## See also
 
 - {{cssxref("font-kerning")}}
+- {{cssxref("word-spacing")}}

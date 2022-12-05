@@ -13,7 +13,7 @@ tags:
 browser-compat: html.elements.time
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<time>`** [HTML](/en-US/docs/Web/HTML) element represents a specific period in time. It may include the `datetime` attribute to translate dates into machine-readable format, allowing for better search engine results or custom features such as reminders.
 
@@ -91,7 +91,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
 ## Usage notes
 
-This element is for presenting dates and times in a machine readable format. For example, this can help a user agent offer to add an event to a user's calendar.
+This element is for presenting dates and times in a machine-readable format. For example, this can help a user agent offer to add an event to a user's calendar.
 
 This element should not be used for dates prior to the introduction of the Gregorian calendar (due to complications in calculating those dates).
 

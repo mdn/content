@@ -39,7 +39,7 @@ new Intl.PluralRules(locales, options)
       - : The locale matching algorithm to use. Possible values are
         `"lookup"` and `"best fit"`; the default is
         `"best fit"`. For information about this option, see the
-        {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
+        {{jsxref("Global_Objects/Intl", "Intl", "#locale_identification_and_negotiation", 1)}} page.
     - `type`
 
       - : The type to use. Possible values are:
@@ -92,14 +92,11 @@ plural forms, e.g. "dog" and "dogs".
 ```js
 const pr = new Intl.PluralRules();
 
-pr.select(0);
-// → 'other' if in US English locale
+pr.select(0); // 'other' if in US English locale
 
-pr.select(1);
-// → 'one' if in US English locale
+pr.select(1); // 'one' if in US English locale
 
-pr.select(2);
-// → 'other' if in US English locale
+pr.select(2); // 'other' if in US English locale
 ```
 
 ### Using options

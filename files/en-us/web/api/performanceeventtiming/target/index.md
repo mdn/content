@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceEventTiming.target
 ---
 
-{{APIRef}}
+{{APIRef("Performance API")}}
 
 The read-only **`target`** property returns the associated event's last [`target`](/en-US/docs/Web/API/Event/target) which is the node onto which the event was last dispatched.
 
@@ -37,7 +37,7 @@ const observer = new PerformanceObserver((list) => {
 });
 
 // Register the observer for events
-observer.observe({entryTypes: ["event"]});
+observer.observe({type: "event", buffered: true});
 ```
 
 ## Specifications

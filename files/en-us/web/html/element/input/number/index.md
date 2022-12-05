@@ -14,7 +14,7 @@ tags:
 browser-compat: html.elements.input.type_number
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`number`** are used to let the user enter a number. They include built-in validation to reject non-numerical entries.
 

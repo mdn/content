@@ -13,7 +13,7 @@ tags:
 browser-compat: api.PerformanceEventTiming
 ---
 
-{{APIRef}}
+{{APIRef("Performance API")}}
 
 The `PerformanceEventTiming` interface of the Event Timing API provides insights into the latency of certain event types triggered by user interaction.
 
@@ -23,7 +23,7 @@ This API enables visibility into slow events by providing event timestamps and d
 
 This API is particularly useful for measuring the {{Glossary("first input delay")}} (FID): the time from the point when a user first interacts with your app to the point when the browser is actually able to respond to that interaction.
 
-You typically work with `PerformanceEventTiming` objects by creating a {{domxref("PerformanceObserver")}} instance and then calling its [`observe()`](/en-US/docs/Web/API/PerformanceObserver/observe) method, passing in `"event"` or `"first-input"` as the value of the [`entryType`](/en-US/docs/Web/API/PerformanceEntry/entryType) option. The `PerformanceObserver` object's callback will then be called with a list of `PerformanceEventTiming` objects which you can analyze. See the [example below](#getting_event_timing_information) for more.
+You typically work with `PerformanceEventTiming` objects by creating a {{domxref("PerformanceObserver")}} instance and then calling its [`observe()`](/en-US/docs/Web/API/PerformanceObserver/observe) method, passing in `"event"` or `"first-input"` as the value of the [`type`](/en-US/docs/Web/API/PerformanceEntry/entryType) option. The `PerformanceObserver` object's callback will then be called with a list of `PerformanceEventTiming` objects which you can analyze. See the [example below](#getting_event_timing_information) for more.
 
 By default, `PerformanceEventTiming` entries are exposed when their `duration` is 104ms or greater. Research suggests that user input that is not handled within 100ms is considered slow and 104ms is the first multiple of 8 greater than 100ms (for security reasons, this API is rounded to the nearest multiple of 8ms).
 However, you can set the {{domxref("PerformanceObserver")}} to a different threshold using the `durationThreshold` option in the [`observe()`](/en-US/docs/Web/API/PerformanceObserver/observe) method.
@@ -117,7 +117,7 @@ The following event types are exposed by the Event Timing API:
   </tbody>
 </table>
 
-Note that that the following events are not included in the list because they are continuous events and no meaningful event counts or performance metrics can be obtained at this point: {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/pointermove_event", "pointermove")}},
+Note that the following events are not included in the list because they are continuous events and no meaningful event counts or performance metrics can be obtained at this point: {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/pointermove_event", "pointermove")}},
 {{domxref("HTMLElement/pointerrawupdate_event", "pointerrawupdate")}}, {{domxref("Element/touchmove_event", "touchmove")}}, {{domxref("Element/wheel_event", "wheel")}}, {{domxref("HTMLElement/drag_event", "drag")}}.
 
 To get a list of all exposed events, you can also look up keys in the {{domxref("performance.eventCounts")}} map:
@@ -159,13 +159,13 @@ This interface also supports the following properties:
 ## Instance methods
 
 - {{domxref("PerformanceEventTiming.toJSON()")}}
-  - : Converts the PerformanceEventTiming object to JSON.
+  - : Returns a JSON representation of the `PerformanceEventTiming` object.
 
 ## Examples
 
 ### Getting event timing information
 
-To get event timing information, create a {{domxref("PerformanceObserver")}} instance and then call its [`observe()`](/en-US/docs/Web/API/PerformanceObserver/observe) method, passing in `"event"` or `"first-input"` as the value of the [`entryType`](/en-US/docs/Web/API/PerformanceEntry/entryType) option. The `PerformanceObserver` object's callback will then be called with a list of `PerformanceEventTiming` objects which you can analyze.
+To get event timing information, create a {{domxref("PerformanceObserver")}} instance and then call its [`observe()`](/en-US/docs/Web/API/PerformanceObserver/observe) method, passing in `"event"` or `"first-input"` as the value of the [`type`](/en-US/docs/Web/API/PerformanceEntry/entryType) option. You also need to set `buffered` to `true` to get access to events the user agent buffered while constructing the document. The `PerformanceObserver` object's callback will then be called with a list of `PerformanceEventTiming` objects which you can analyze.
 
 ```js
 const observer = new PerformanceObserver((list) => {
@@ -186,13 +186,13 @@ const observer = new PerformanceObserver((list) => {
 });
 
 // Register the observer for events
-observer.observe({entryTypes: ["event"]});
+observer.observe({type: "event", buffered: true});
 ```
 
 You can also set a different [`durationThreshold`](/en-US/docs/Web/API/PerformanceObserver/observe#durationthreshold). The default is 104ms and the minimum possible duration threshold is 16ms.
 
 ```js
-observer.observe({entryTypes: ["event"], durationThreshold: 16});
+observer.observe({type: "event", durationThreshold: 16, buffered: true});
 ```
 
 ### Reporting the First Input Delay (FID)

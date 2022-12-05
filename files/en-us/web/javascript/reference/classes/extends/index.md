@@ -61,7 +61,8 @@ class ChildClass extends ParentClass {}
 > function ParentClass() {}
 > ParentClass.prototype = 3;
 > console.log(Object.getPrototypeOf(new ParentClass()));
-> // Logs "[Object: null prototype] {}": not actually a number!
+> // [Object: null prototype] {}
+> // Not actually a number!
 > ```
 
 `extends` will set the prototype for both `ChildClass` and `ChildClass.prototype`.

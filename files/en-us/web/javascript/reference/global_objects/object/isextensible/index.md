@@ -43,19 +43,19 @@ Objects are extensible by default: they can have new properties added to them, a
 ```js
 // New objects are extensible.
 const empty = {};
-Object.isExtensible(empty); // === true
+Object.isExtensible(empty); // true
 
 // They can be made un-extensible
 Object.preventExtensions(empty);
-Object.isExtensible(empty); // === false
+Object.isExtensible(empty); // false
 
 // Sealed objects are by definition non-extensible.
 const sealed = Object.seal({});
-Object.isExtensible(sealed); // === false
+Object.isExtensible(sealed); // false
 
 // Frozen objects are also by definition non-extensible.
 const frozen = Object.freeze({});
-Object.isExtensible(frozen); // === false
+Object.isExtensible(frozen); // false
 ```
 
 ### Non-object argument

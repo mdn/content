@@ -68,12 +68,15 @@ These resources are created by forward-thinking companies and web developers who
     The aim here is to provide you with a toolkit for writing competent CSS and help you understand all the essential theory, before moving on to more specific disciplines like [text styling](/en-US/docs/Learn/CSS/Styling_text) and [CSS layout](/en-US/docs/Learn/CSS/CSS_layout).
 
 - [Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+
   - : Target HTML elements, including based on element state, with CSS.
 
 - [Specificity](/en-US/docs/Web/CSS/Specificity)
+
   - : Understanding the browser algorithm to determine which CSS declarations get applied to an element when there are competing declarations, with a [specificity quiz](https://estelle.github.io/CSS/selectors/exercises/specificity.html)
 
 - [Cascade & Inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+
   - : The cascade, specificity, and inheritance control how CSS is applied to HTML and how conflicts between style declarations are resolved.
 
 - [Styling text](/en-US/docs/Learn/CSS/Styling_text)
@@ -126,7 +129,7 @@ These resources are created by forward-thinking companies and web developers who
   - : A recap of the JavaScript programming language aimed at intermediate-level developers.
 - [Eloquent JavaScript](https://eloquentjavascript.net/)
   - : A comprehensive guide to intermediate and advanced JavaScript methodologies.
-- [Speaking JavaScript](http://speakingjs.com/es5/)
+- [Speaking JavaScript](https://exploringjs.com/es5/)
   - : For programmers who want to learn JavaScript quickly and properly, and for JavaScript programmers who want to deepen their skills and/or look up specific topics.
 - [Essential JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
   - : An introduction to essential JavaScript design patterns.

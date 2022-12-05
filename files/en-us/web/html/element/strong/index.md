@@ -16,7 +16,7 @@ tags:
 browser-compat: html.elements.strong
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<strong>`** [HTML](/en-US/docs/Web/HTML) element indicates that its contents have strong importance, seriousness, or urgency. Browsers typically render the contents in bold type.
 

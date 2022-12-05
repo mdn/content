@@ -124,10 +124,11 @@ As a rule, do:
 Don't:
 
 - Try to cram multiple fixes into a single pull request. It makes it a lot harder to review, and raises suspicions (some people might think you are trying to hide some malicious code in between the valid changes).
+- Unnecessarily add or remove line breaks on pages that follow a certain formatting style.
 
 ## Deployment timeline
 
-After your pull request is merged to [`mdn/content`](https://github.com/mdn/content), it can take up to 48 hours before your changes are live on the [production site](https://developer.mozilla.org/), but it's usually quicker.
+After your pull request is merged to [`mdn/content`](https://github.com/mdn/content), it can take up to 48 hours before your changes are live on the [production site](/), but it's usually quicker.
 The site build runs every 24 hours at around 19:00 US/Eastern time, and is deployed immediately after.
 When deploys succeed, it can take up to 24 hours for the CDN to invalidate caches and serve new content.
 

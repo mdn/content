@@ -12,7 +12,7 @@ tags:
 browser-compat: api.Performance.timeOrigin
 ---
 
-{{APIRef("High Resolution Time")}}
+{{APIRef("Performance API")}}
 
 The **`timeOrigin`** read-only property of the
 {{domxref("Performance")}} interface returns the high resolution timestamp of the

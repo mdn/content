@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.meta.name
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The {{htmlelement("meta")}} element can be used to provide document metadata in terms of name-value pairs, with the {{htmlattrxref("name", "meta")}} attribute giving the metadata name, and the {{htmlattrxref("content", "meta")}} attribute giving the value.
 
@@ -145,7 +145,7 @@ The CSS Device Adaptation specification defines the following metadata name:
         <td><code>width</code></td>
         <td>A positive integer number, or the text <code>device-width</code></td>
         <td>
-          Defines the pixel width of the viewport that you want the web site to be
+          Defines the pixel width of the viewport that you want the website to be
           rendered at.
         </td>
       </tr>

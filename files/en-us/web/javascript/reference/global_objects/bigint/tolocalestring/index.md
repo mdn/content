@@ -67,8 +67,8 @@ with default options is returned.
 ```js
 const bigint = 3500n;
 
-bigint.toLocaleString();
-// Displays "3,500" if in U.S. English locale
+console.log(bigint.toLocaleString());
+// "3,500" if in U.S. English locale
 ```
 
 ### Using `locales`
@@ -83,24 +83,24 @@ const bigint = 123456789123456789n;
 
 // German uses period for thousands
 console.log(bigint.toLocaleString('de-DE'));
-// → 123.456.789.123.456.789
+// 123.456.789.123.456.789
 
 // Arabic in most Arabic speaking countries uses Eastern Arabic digits
 console.log(bigint.toLocaleString('ar-EG'));
-// → ١٢٣٬٤٥٦٬٧٨٩٬١٢٣٬٤٥٦٬٧٨٩
+// ١٢٣٬٤٥٦٬٧٨٩٬١٢٣٬٤٥٦٬٧٨٩
 
 // India uses thousands/lakh/crore separators
 console.log(bigint.toLocaleString('en-IN'));
-// → 1,23,45,67,89,12,34,56,789
+// 1,23,45,67,89,12,34,56,789
 
 // the nu extension key requests a numbering system, e.g. Chinese decimal
 console.log(bigint.toLocaleString('zh-Hans-CN-u-nu-hanidec'));
-// → 一二三,四五六,七八九,一二三,四五六,七八九
+// 一二三,四五六,七八九,一二三,四五六,七八九
 
 // when requesting a language that may not be supported, such as
 // Balinese, include a fallback language, in this case Indonesian
 console.log(bigint.toLocaleString(['ban', 'id']));
-// → 123.456.789.123.456.789
+// 123.456.789.123.456.789
 ```
 
 ### Using `options`
@@ -113,15 +113,15 @@ const bigint = 123456789123456789n;
 
 // request a currency format
 console.log(bigint.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
-// → 123.456.789.123.456.789,00 €
+// 123.456.789.123.456.789,00 €
 
 // the Japanese yen doesn't use a minor unit
 console.log(bigint.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))
-// → ￥123,456,789,123,456,789
+// ￥123,456,789,123,456,789
 
 // limit to three significant digits
 console.log(bigint.toLocaleString('en-IN', { maximumSignificantDigits: 3 }));
-// → 1,23,00,00,00,00,00,00,000
+// 1,23,00,00,00,00,00,00,000
 ```
 
 ## Specifications

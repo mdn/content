@@ -25,6 +25,11 @@ When memory is shared, multiple threads can read and write the same data in memo
 
 The `wait()` and `notify()` methods are modeled on Linux futexes ("fast user-space mutex") and provide ways for waiting until a certain condition becomes true and are typically used as blocking constructs.
 
+## Static properties
+
+- `Atomics[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Atomics"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+
 ## Static methods
 
 - {{jsxref("Atomics.add()")}}

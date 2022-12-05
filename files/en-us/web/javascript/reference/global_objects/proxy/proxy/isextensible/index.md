@@ -49,10 +49,11 @@ This trap can intercept these operations:
 - {{jsxref("Object.isExtensible()")}}
 - {{jsxref("Reflect.isExtensible()")}}
 
+Or any other operation that invokes the `[[IsExtensible]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
+
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a
-{{jsxref("TypeError")}}:
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
 - `Object.isExtensible(proxy)` must return the same value as
   `Object.isExtensible(target)`.

@@ -53,19 +53,17 @@ Object.getOwnPropertyNames('foo');
 
 ```js
 const arr = ['a', 'b', 'c'];
-console.log(Object.getOwnPropertyNames(arr).sort()); // .sort() is an array method.
-// logs ["0", "1", "2", "length"]
+console.log(Object.getOwnPropertyNames(arr).sort());
+// ["0", "1", "2", "length"]
 
 // Array-like object
 const obj = { 0: 'a', 1: 'b', 2: 'c' };
-console.log(Object.getOwnPropertyNames(obj).sort()); // .sort() is an array method.
-// logs ["0", "1", "2"]
+console.log(Object.getOwnPropertyNames(obj).sort());
+// ["0", "1", "2"]
 
-// Logging property names and values using forEach()
 Object.getOwnPropertyNames(obj).forEach((val, idx, array) => {
   console.log(`${val} -> ${obj[val]}`);
 });
-// logs
 // 0 -> a
 // 1 -> b
 // 2 -> c
@@ -79,8 +77,7 @@ const myObj = Object.create({}, {
 });
 myObj.foo = 1;
 
-console.log(Object.getOwnPropertyNames(my_obj).sort());
-// logs ["foo", "getFoo"]
+console.log(Object.getOwnPropertyNames(my_obj).sort()); // ["foo", "getFoo"]
 ```
 
 If you want only the enumerable properties, see {{jsxref("Object.keys()")}} or use a {{jsxref("Statements/for...in", "for...in")}} loop (note that this will also return enumerable properties found along the prototype chain for the object unless the latter is filtered with {{jsxref("Object.hasOwn()", "hasOwn()")}}).

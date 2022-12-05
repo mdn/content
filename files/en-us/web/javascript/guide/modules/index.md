@@ -481,7 +481,7 @@ import { Square, Circle, Triangle } from './modules/shapes.js';
 
 A recent addition to JavaScript modules functionality is dynamic module loading. This allows you to dynamically load modules only when they are needed, rather than having to load everything up front. This has some obvious performance advantages; let's read on and see how it works.
 
-This new functionality allows you to call {{JSxRef("Statements/import", "import()", "#Dynamic_Imports")}} as a function, passing it the path to the module as a parameter. It returns a {{JSxRef("Promise")}}, which fulfills with a module object (see [Creating a module object](#creating_a_module_object)) giving you access to that object's exports, e.g.
+This new functionality allows you to call [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) as a function, passing it the path to the module as a parameter. It returns a {{JSxRef("Promise")}}, which fulfills with a module object (see [Creating a module object](#creating_a_module_object)) giving you access to that object's exports. For example:
 
 ```js
 import('./modules/myModule.js')

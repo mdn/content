@@ -44,9 +44,9 @@ The **`Intl.Collator`** object enables language-sensitive string comparison.
 The following example demonstrates the different potential results for a string occurring before, after, or at the same level as another:
 
 ```js
-console.log(new Intl.Collator().compare("a", "c")); // → a negative value
-console.log(new Intl.Collator().compare("c", "a")); // → a positive value
-console.log(new Intl.Collator().compare("a", "a")); // → 0
+console.log(new Intl.Collator().compare("a", "c")); // -1, or some other negative value
+console.log(new Intl.Collator().compare("c", "a")); // 1, or some other positive value
+console.log(new Intl.Collator().compare("a", "a")); // 0
 ```
 
 Note that the results shown in the code above can vary between browsers and browser versions. This is because the values are implementation-specific. That is, the specification requires only that the before and after values are negative and positive.
@@ -58,11 +58,11 @@ The results provided by [`Intl.Collator.prototype.compare()`](/en-US/docs/Web/Ja
 ```js
 // in German, ä sorts with a
 console.log(new Intl.Collator("de").compare("ä", "z"));
-// → a negative value
+// -1, or some other negative value
 
 // in Swedish, ä sorts after z
 console.log(new Intl.Collator("sv").compare("ä", "z"));
-// → a positive value
+// 1, or some other positive value
 ```
 
 ### Using options
@@ -72,11 +72,11 @@ The results provided by [`Intl.Collator.prototype.compare()`](/en-US/docs/Web/Ja
 ```js
 // in German, ä has a as the base letter
 console.log(new Intl.Collator("de", { sensitivity: "base" }).compare("ä", "a"));
-// → 0
+// 0
 
 // in Swedish, ä and a are separate base letters
 console.log(new Intl.Collator("sv", { sensitivity: "base" }).compare("ä", "a"));
-// → a positive value
+// 1, or some other positive value
 ```
 
 ## Specifications

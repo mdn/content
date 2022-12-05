@@ -19,7 +19,7 @@ browser-compat:
   - api.TaskAttributionTiming
 ---
 
-{{DefaultAPISidebar("Long Tasks")}}
+{{DefaultAPISidebar("Performance API")}}
 
 ## Motivation
 

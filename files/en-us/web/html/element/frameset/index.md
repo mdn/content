@@ -10,11 +10,11 @@ tags:
 browser-compat: html.elements.frameset
 ---
 
-{{HTMLRef}}{{Deprecated_header}}
+{{HTMLSidebar}}{{Deprecated_header}}
 
 The **`<frameset>`** [HTML](/en-US/docs/Web/HTML) element is used to contain {{HTMLElement("frame")}} elements.
 
-> **Note:** Because the use of frames is now discouraged in favor of using {{HTMLElement("iframe")}}, this element is not typically used by modern web sites.
+> **Note:** Because the use of frames is now discouraged in favor of using {{HTMLElement("iframe")}}, this element is not typically used by modern websites.
 
 ## Attributes
 

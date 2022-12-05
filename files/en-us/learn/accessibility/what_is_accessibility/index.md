@@ -84,7 +84,7 @@ Deaf and hard-of-hearing people also represent a significant userbase — "466 m
 
 ### People with mobility impairments
 
-These people have disabilities concerning movement, which might involve purely physical issues (such as loss of limb or paralysis), or neurological/genetic disorders that lead to weakness or loss of control in limbs. Some people might have difficulty making the exact hand movements required to use a mouse, while others might be more severely affected, perhaps being significantly paralyzed to the point where they need to use a [head pointer](https://www.performancehealth.com/baseball-cap-head-pointer) to interact with computers.
+These people have disabilities concerning movement, which might involve purely physical issues (such as loss of limb or paralysis), or neurological/genetic disorders that lead to weakness or loss of control in limbs. Some people might have difficulty making the exact hand movements required to use a mouse, while others might be more severely affected, perhaps being significantly paralyzed to the point where they need to use a [head pointer](https://www.performancehealth.com/adjustable-headpointer) to interact with computers.
 
 This kind of disability can also be a result of old age, rather than any specific trauma or condition, and it could also result from hardware limitations — some users might not have a mouse.
 

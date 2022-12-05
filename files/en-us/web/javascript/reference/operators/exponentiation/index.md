@@ -11,7 +11,7 @@ browser-compat: javascript.operators.exponentiation
 
 {{jsSidebar("Operators")}}
 
-The exponentiation operator (`**`) returns the result of raising the first
+The **exponentiation (`**`)** operator returns the result of raising the first
 operand to the power of the second operand. It is equivalent to {{jsxref("Math.pow()")}},
 except it also accepts [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) as operands.
 

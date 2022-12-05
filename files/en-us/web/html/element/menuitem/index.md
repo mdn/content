@@ -18,7 +18,7 @@ tags:
 browser-compat: html.elements.menuitem
 ---
 
-{{HTMLRef}}{{Deprecated_Header}}{{Non-standard_header}}
+{{HTMLSidebar}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`<menuitem>`** [HTML](/en-US/docs/Web/HTML) element represents a command that a user is able to invoke through a popup menu. This includes context menus, as well as menus that might be attached to a menu button.
 

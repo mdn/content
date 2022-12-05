@@ -62,10 +62,7 @@ When range is specified as integers, the value `infinite` can be used to denote 
 
 ## Formal syntax
 
-```
-[ [ <integer> | infinite ]{2} ]# |
-auto
-```
+{{csssyntax}}
 
 ## Examples
 

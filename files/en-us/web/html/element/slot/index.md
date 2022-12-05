@@ -12,7 +12,7 @@ tags:
 browser-compat: html.elements.slot
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<slot>`** [HTML](/en-US/docs/Web/HTML) element—part of the [Web Components](/en-US/docs/Web/Web_Components) technology suite—is a placeholder inside a web component that you can fill with your own markup, which lets you create separate DOM trees and present them together.
 

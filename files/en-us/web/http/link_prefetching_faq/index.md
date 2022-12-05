@@ -11,6 +11,8 @@ tags:
   - Web Development
 ---
 
+{{HTTPSidebar}}
+
 Link prefetching is a browser mechanism, which utilizes browser idle time to download or _prefetch_ documents that the user might visit in the near future. A web page provides a set of prefetching hints to the browser, and after the browser is finished loading the page, it begins silently prefetching specified documents and stores them in its cache. When the user visits one of the prefetched documents, it can be served up quickly out of the browser's cache.
 
 ### What are the prefetching hints?

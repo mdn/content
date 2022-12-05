@@ -31,7 +31,7 @@ A lexical variable was accessed before it was initialized.
 This happens within any block statement, when variables declared with [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) or [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) are accessed before the line in which they are declared has been executed.
 
 Note that it is the execution order of access and variable declaration that matters, not the order in which the lines appear in the code.
-For more information see: [Temporal Dead Zone and errors with let](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let).
+For more information, see the description of [Temporal Dead Zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz).
 
 Note also that this issue does not occur for variables declared using `var`, because they are initialized with a default value of `undefined` when they are [hoisted](/en-US/docs/Glossary/Hoisting).
 

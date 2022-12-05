@@ -43,6 +43,10 @@ set(typedarray, targetOffset)
     array. If this value is omitted, 0 is assumed (that is, the source array will
     overwrite values in the target array starting at index 0).
 
+### Return value
+
+{{jsxref("undefined")}}.
+
 ### Exceptions
 
 - {{jsxref("RangeError")}}

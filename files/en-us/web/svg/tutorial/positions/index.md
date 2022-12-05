@@ -20,7 +20,7 @@ In this article, we examine how Scalable Vector Graphics (SVG) represents the po
 
 For all elements, SVG uses a coordinate system or **grid** system similar to the one used by [canvas](/en-US/docs/Web/API/Canvas_API) (and by a whole lot of other computer drawing routines). That is, the top left corner of the document is considered to be the point (0,0), or point of origin. Positions are then measured in pixels from the top left corner, with the positive x direction being to the right, and the positive y direction being to the bottom.
 
-![](canvas_default_grid.png)
+![X, Y coordinate grid with a blue box in the middle.](canvas_default_grid.png)
 
 Note that this is slightly different than the way you're taught to graph as a kid (y axis is flipped). However, this is the same way elements in HTML are positioned (By default, LTR documents are considered not the RTL documents which position X from right-to-left).
 

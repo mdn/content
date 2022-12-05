@@ -13,7 +13,7 @@ browser-compat: javascript.operators.super
 
 {{jsSidebar("Operators")}}
 
-The **super** keyword is used to access properties on an object literal or class's [[Prototype]], or invoke a superclass's constructor.
+The **`super`** keyword is used to access properties on an object literal or class's [[Prototype]], or invoke a superclass's constructor.
 
 The `super.prop` and `super[expr]` expressions are valid in any [method definition](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) in both [classes](/en-US/docs/Web/JavaScript/Reference/Classes) and [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer). The `super(...args)` expression is valid in class constructors.
 
@@ -39,7 +39,7 @@ The `super` keyword can be used in two ways: as a "function call" (`super(...arg
 > };
 > ```
 
-In the constructor body of a derived class (with `extends`), the `super` keyword may appear as a "function call" (`super(...args)`), which must be called before the `this` keyword is used, and before the constructor returns. It calls the parent class's constructor and binds the parent class's public fields, after which the derived class's constructor can further access and modify `this`.
+In the [constructor](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) body of a derived class (with `extends`), the `super` keyword may appear as a "function call" (`super(...args)`), which must be called before the `this` keyword is used, and before the constructor returns. It calls the parent class's constructor and binds the parent class's public fields, after which the derived class's constructor can further access and modify `this`.
 
 The "property lookup" form can be used to access methods and properties of an object literal's or class's [[Prototype]]. Within a class's body, the reference of `super` can be either the superclass's constructor itself, or the constructor's `prototype`, depending on whether the execution context is instance creation or class initialization. See the Examples section for more details.
 
@@ -139,9 +139,7 @@ Here, `extendedField` is `undefined` instead of 10, because `baseField` is defin
 
 ### Deleting super properties will throw an error
 
-You cannot use the [delete operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete) and
-`super.prop` or `super[expr]` to delete a parent class' property,
-it will throw a {{jsxref("ReferenceError")}}.
+You cannot use the [`delete` operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete) and `super.prop` or `super[expr]` to delete a parent class' property — it will throw a {{jsxref("ReferenceError")}}.
 
 ```js
 class Base {
@@ -158,7 +156,7 @@ new Derived().delete(); // ReferenceError: invalid delete involving 'super'.
 
 ### Using super.prop in object literals
 
-Super can also be used in the [object initializer / literal](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) notation. In this example, two objects define a method. In the second object, `super` calls the first object's method. This works with the help of {{jsxref("Object.setPrototypeOf()")}} with which we are able to set the prototype of `obj2` to `obj1`, so that `super` is able to find `method1` on `obj1`.
+Super can also be used in the [object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) notation. In this example, two objects define a method. In the second object, `super` calls the first object's method. This works with the help of {{jsxref("Object.setPrototypeOf()")}} with which we are able to set the prototype of `obj2` to `obj1`, so that `super` is able to find `method1` on `obj1`.
 
 ```js
 const obj1 = {
@@ -174,7 +172,7 @@ const obj2 = {
 }
 
 Object.setPrototypeOf(obj2, obj1);
-obj2.method2(); // logs "method 1"
+obj2.method2(); // Logs "method 1"
 ```
 
 ### Methods that read super.prop do not behave differently when bound to other objects
@@ -212,13 +210,13 @@ const child = {
 };
 
 Object.setPrototypeOf(child, parent1);
-child.myParent(); // logs "1"
+child.myParent(); // Logs "1"
 
 const myParent = child.myParent;
-myParent(); // still logs "1"
+myParent(); // Still logs "1"
 
 const anotherChild = { __proto__: parent2, myParent };
-anotherChild.myParent(); // still logs "1"
+anotherChild.myParent(); // Still logs "1"
 ```
 
 Only resetting the entire inheritance chain will change the reference of `super`.
@@ -247,7 +245,29 @@ Object.setPrototypeOf(Extended, AnotherBase);
 console.log(Extended.staticGetX()); // Now logs "4"
 ```
 
-### Setting super.prop will set the property on this instead
+### Calling methods from super
+
+When calling `super.prop` as a function, the `this` value inside the `prop` function is the current `this`, not the object that `super` points to. For example, the `super.getName()` call logs `"Extended"`, despite the code looking like it's equivalent to `Base.getName()`.
+
+```js
+class Base {
+  static getName() {
+    console.log(this.name);
+  }
+}
+
+class Extended extends Base {
+  static getName() {
+    super.getName();
+  }
+}
+
+Extended.getName(); // Logs "Extended"
+```
+
+This is especially important when interacting with [static private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields#private_static_fields).
+
+### Setting super.prop sets the property on this instead
 
 Setting properties of `super`, such as `super.x = 1`, behaves like `Reflect.set(Object.getPrototypeOf(objectLiteral), "x", 1, this)`. This is one of the cases where understanding `super` as simply "reference of the prototype object" falls short, because it actually sets the property on `this` instead.
 

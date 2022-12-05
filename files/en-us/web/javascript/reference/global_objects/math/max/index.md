@@ -49,9 +49,9 @@ Because `max()` is a static method of `Math`, you always use it as `Math.max()`,
 ### Using Math.max()
 
 ```js
-Math.max(10, 20); //  20
+Math.max(10, 20); // 20
 Math.max(-10, -20); // -10
-Math.max(-10, 20); //  20
+Math.max(-10, 20); // 20
 ```
 
 ### Getting the maximum element of an array

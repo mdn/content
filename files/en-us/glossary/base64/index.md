@@ -26,7 +26,7 @@ In JavaScript there are two functions respectively for decoding and encoding Bas
 
 The algorithm used by `atob()` and `btoa()` is specified in [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648), section 4.
 
-Note that `btoa()` expects to be passed binary data, and will throw an exception if the given string contains any characters whose UTF-16 representation occupies more than one byte. For more details, see the documentation for [`btoa()`](/en-US/docs/Web/API/btoa).
+> **Note:** `btoa()` expects to be passed binary data, and will throw an exception if the given string contains any characters whose UTF-16 representation occupies more than one byte.
 
 ## Encoded size increase
 
@@ -43,7 +43,7 @@ Since JavaScript strings are 16-bit-encoded strings, in most browsers calling `w
 
 Here are the two possible methods.
 
-### Solution #1 – escaping the string before encoding it
+### Solution 1 – escaping the string before encoding it
 
 ```js
 function utf8_to_b64(str) {
@@ -79,7 +79,7 @@ b64EncodeUnicode("✓ à la mode"); // "JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl
 UnicodeDecodeB64("JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"); // "✓ à la mode"
 ```
 
-### Solution #2 – rewriting `atob()` and `btoa()` using `TypedArray`s and UTF-8
+### Solution 2 – rewriting `atob()` and `btoa()` using `TypedArray`s and UTF-8
 
 > **Note:** The following code is also useful to get an [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) from a Base64 string and/or vice versa ([see below](#appendix_decode_a_base64_string_to_uint8array_or_arraybuffer)).
 

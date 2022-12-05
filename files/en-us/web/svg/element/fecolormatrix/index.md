@@ -14,7 +14,7 @@ The **`<feColorMatrix>`** SVG filter element changes colors based on a transform
 
 > **Note:** The prime symbol **`'`** is used in mathematics indicate the result of a transformation.
 
-```
+```plain
 | R' |     | r1 r2 r3 r4 r5 |   | R |
 | G' |     | g1 g2 g3 g4 g5 |   | G |
 | B' |  =  | b1 b2 b3 b4 b5 | * | B |
@@ -43,7 +43,7 @@ It is the sum of:
 
 These specified amounts can be any real number, though the final **R'** will be clamped between 0 and 1. The same goes for **G'**, **B'**, and **A'**.
 
-```
+```plain
 R'      =      r1 * R      +        r2 * G      +       r3 * B      +       r4 * A       +       r5
 New red = [ r1 * old red ] + [ r2 * old green ] + [ r3 * old Blue ] + [ r4 * old Alpha ] + [ shift of r5 ]
 ```
@@ -52,7 +52,7 @@ If, say, we want to make a completely black image redder, we can make the `r5` a
 
 An **identity matrix** looks like this:
 
-```
+```plain
      R G B A W
 R' | 1 0 0 0 0 |
 G' | 0 1 0 0 0 |

@@ -11,7 +11,7 @@ browser-compat: javascript.operators.subtraction
 
 {{jsSidebar("Operators")}}
 
-The subtraction operator (`-`) subtracts the two operands, producing their
+The **subtraction (`-`)** operator subtracts the two operands, producing their
 difference.
 
 {{EmbedInteractiveExample("pages/js/expressions-subtraction.html")}}

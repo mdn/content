@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.data
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<data>`** [HTML](/en-US/docs/Web/HTML) element links a given piece of content with a machine-readable translation. If the content is time- or date-related, the {{HTMLElement("time")}} element must be used.
 

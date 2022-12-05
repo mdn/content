@@ -32,13 +32,13 @@ The default `Array` properties that are ignored for `with` statement-binding pur
 - [`keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/keys)
 - [`values()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values)
 
-`Array.prototype[@@unscopables]` is an empty object only containing all the above property names with the value `true`. Its prototype is `null`, so `Object.prototype` properties like [`toString`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) won't accidentally be made unscopable, and a `toString()` within the `with` statement will continue to be called on the array.
+`Array.prototype[@@unscopables]` is an empty object only containing all the above property names with the value `true`. Its [prototype is `null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects), so `Object.prototype` properties like [`toString`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) won't accidentally be made unscopable, and a `toString()` within the `with` statement will continue to be called on the array.
 
 See {{jsxref("Symbol.unscopables")}} for how to set unscopable properties for your own objects.
 
 {{js_property_attributes(0,0,1)}}
 
-## Example
+## Examples
 
 Imagine the `keys.push('something')` call below is in code that was written prior to ECMAScript 2015.
 

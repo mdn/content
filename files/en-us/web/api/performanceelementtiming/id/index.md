@@ -12,7 +12,7 @@ tags:
 browser-compat: api.PerformanceElementTiming.id
 ---
 
-{{APIRef("Element Timing")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`id`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the {{htmlattrxref("id")}} of the associated element.
 

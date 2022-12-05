@@ -72,6 +72,7 @@ svg {
 - `auto`
   - : This value indicates that the spacing between {{Glossary("glyph", "glyphs")}} is adjusted based on kerning tables that are included in the font that will be used.
 - `<length>`
+
   - : If a length is provided, then auto-kerning is disabled. Instead, inter-character spacing is set to the given length.
 
     If a length is provided without a unit identifier (e.g., an unqualified number such as 128), the length is processed as a width value in the current user coordinate system. If a unit identifier (e.g., `0.25em` or `1%`) is provided, then the length is converted into a corresponding value in the current user coordinate system.

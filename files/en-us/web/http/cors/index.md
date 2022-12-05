@@ -24,7 +24,7 @@ An example of a cross-origin request: the front-end JavaScript code served from 
 
 For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts. For example, `XMLHttpRequest` and the [Fetch API](/en-US/docs/Web/API/Fetch_API) follow the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy). This means that a web application using those APIs can only request resources from the same origin the application was loaded from unless the response from other origins includes the right CORS headers.
 
-![](cors_principle.png)
+![Diagrammatic representation of CORS mechanism](cors_principle.png)
 
 The CORS mechanism supports secure cross-origin requests and data transfers between browsers and servers. Modern browsers use CORS in APIs such as `XMLHttpRequest` or [Fetch](/en-US/docs/Web/API/Fetch_API) to mitigate the risks of cross-origin HTTP requests.
 
@@ -106,7 +106,7 @@ xhr.send();
 
 This operation performs a simple exchange between the client and the server, using CORS headers to handle the privileges:
 
-![](simple-req.png)
+![Diagram of simple CORS GET request](simple-req.png)
 
 Let's look at what the browser will send to the server in this case:
 
@@ -169,7 +169,7 @@ xhr.send("<person><name>Arun</name></person>");
 
 The example above creates an XML body to send with the `POST` request. Also, a non-standard HTTP `X-PINGOTHER` request header is set. Such headers are not part of HTTP/1.1, but are generally useful to web applications. Since the request uses a `Content-Type` of `text/xml`, and since a custom header is set, this request is preflighted.
 
-![](preflight_correct.png)
+![Diagram of a request that is preflighted](preflight_correct.png)
 
 > **Note:** As described below, the actual `POST` request does not include the `Access-Control-Request-*` headers; they are needed only for the `OPTIONS` request.
 
@@ -302,7 +302,7 @@ function callOtherDomain() {
 
 Line 7 shows the flag on {{domxref("XMLHttpRequest")}} that has to be set in order to make the invocation with Cookies, namely the `withCredentials` boolean value. By default, the invocation is made without Cookies. Since this is a simple `GET` request, it is not preflighted but the browser will **reject** any response that does not have the {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` header, and **not** make the response available to the invoking web content.
 
-![](cred-req-updated.png)
+![Diagram of a simple GET request with Access-Control-Allow-Credentials](cred-req-updated.png)
 
 Here is a sample exchange between client and server:
 

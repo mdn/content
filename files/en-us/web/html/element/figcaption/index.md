@@ -9,7 +9,7 @@ tags:
 browser-compat: html.elements.figcaption
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<figcaption>`** [HTML](/en-US/docs/Web/HTML) element represents a caption or legend describing the rest of the contents of its parent {{HTMLElement("figure")}} element.
 

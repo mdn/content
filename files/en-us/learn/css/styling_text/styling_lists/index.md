@@ -228,7 +228,7 @@ ul li {
 
 Here we've done the following:
 
-- Set the {{cssxref("padding-left")}} of the {{htmlelement("ul")}} down from the default `40px` to `20px`, then set the same amount on the list items. This is so that, overall, the list items are still lined up with the order list items and the description list descriptions, but the list items have some padding for the background images to sit inside. If we didn't do this, the background images would overlap with the list item text, which would look messy.
+- Set the {{cssxref("padding-left")}} of the {{htmlelement("ul")}} down from the default `40px` to `20px`, then set the same amount on the list items. This is so that, overall, the list items are still lined up with the ordered list items and the description list descriptions, but the list items have some padding for the background images to sit inside. If we didn't do this, the background images would overlap with the list item text, which would look messy.
 - Set the {{cssxref("list-style-type")}} to `none`, so that no bullet appears by default. We're going to use {{cssxref("background")}} properties to handle the bullets instead.
 - Inserted a bullet onto each unordered list item. The relevant properties are as follows:
 

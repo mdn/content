@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceMark.PerformanceMark
 ---
 
-{{APIRef("User Timing API")}}
+{{APIRef("Performance API")}}
 
 The **`PerformanceMark()`** constructor creates a {{domxref("DOMHighResTimeStamp","timestamp")}} with the given name.
 

@@ -10,18 +10,14 @@ tags:
 browser-compat: api.Performance.getEntries
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}
 
-The **`getEntries()`** method returns a list of all
-{{domxref("PerformanceEntry")}} objects for the page. The list's members
-(_entries_) can be created by making performance _marks_ or
-_measures_ (for example by calling the {{domxref("Performance.mark","mark()")}}
-method) at explicit points in time. If you are only interested in performance entries of
-certain types or that have certain names, see {{domxref("Performance.getEntriesByType",
-  "getEntriesByType()")}} and {{domxref("Performance.getEntriesByName",
-  "getEntriesByName()")}}.
+The **`getEntries()`** method returns an array of all {{domxref("PerformanceEntry")}} objects currently present in the performance timeline.
 
-{{AvailableInWorkers}}
+If you are only interested in performance entries of certain types or that have certain names, see {{domxref("Performance.getEntriesByType", "getEntriesByType()")}} and {{domxref("Performance.getEntriesByName", "getEntriesByName()")}}.
+
+> **Note:** This method does not notify you about new performance entries; you will only get entries that are present in the performance timeline at the time you call this method.
+> To receive notifications about entries as they become available, use a {{domxref("PerformanceObserver")}}.
 
 ## Syntax
 
@@ -35,70 +31,36 @@ None.
 
 ### Return value
 
-- entries
-  - : An array of {{domxref("PerformanceEntry")}} objects. The items will be in
-    chronological order based on the entries'
-    {{domxref("PerformanceEntry.startTime","startTime")}}.
+An {{jsxref("Array")}} of {{domxref("PerformanceEntry")}} objects. The items will be in chronological order based on the entries' {{domxref("PerformanceEntry.startTime","startTime")}}.
 
 ## Examples
 
+### Logging all performance markers and measures
+
+Assuming you created your own {{domxref("PerformanceMark")}} and {{domxref("PerformanceMeasure")}} objects at appropriate places in your code, you might want to log all them to the console like this:
+
 ```js
-function usePerformanceEntryMethods() {
-  console.log("PerformanceEntry tests…");
+// Example markers/measures
+performance.mark("login-started");
+performance.mark("login-finished");
+performance.mark("form-sent");
+performance.mark("video-loaded");
+performance.measure(
+   "login-duration",
+   "login-started",
+   "login-finished"
+ );
 
-  if (performance.mark === undefined) {
-    console.error("The property performance.mark is not supported");
-    return;
-  }
+const entries = performance.getEntries();
 
-  // Create some performance entries via the mark() method
-  performance.mark("Begin");
-  do_work(50000);
-  performance.mark("End");
-  performance.mark("Begin");
-  do_work(100000);
-  performance.mark("End");
-  do_work(200000);
-  performance.mark("End");
-
-  // Use getEntries() to iterate through the each entry
-  performance.getEntries()
-    .forEach((entry, i) => {
-      console.log(`Entry[${i}]`);
-      checkPerformanceEntry(entry);
-    });
-
-  // Use getEntriesByType() to get all "mark" entries
-  performance.getEntriesByType("mark")
-    .forEach((entry, i) => {
-      console.log(`Mark only entry[${i}]:`);
-      checkPerformanceEntry(entry);
-    });
-
-  // Use getEntriesByName() to get all "mark" entries named "Begin"
-  performance.getEntriesByName("Begin", "mark")
-    .forEach((entry, i) => {
-      console.log(`Mark and Begin entry[${i}]:`);
-      checkPerformanceEntry(entry);
-    });
-}
-
-function checkPerformanceEntry(obj) {
-  const properties = ["name", "entryType", "startTime", "duration"];
-  const methods = ["toJSON"];
-
-  // Check each property
-  properties.forEach((property) => {
-    const supported = property in obj;
-    console.log(`…${property} = ${supported ? obj[property] : "Not supported"}`);
-  });
-
-  // Check each method
-  methods.forEach((method) => {
-    const supported = typeof obj[method] === "function";
-    console.log(`…${method} = ${supported ? JSON.stringify(obj[method]()) : "Not supported"}`);
-  });
-}
+entries.forEach((entry) => {
+  if (entry.entryType === "mark") {
+    console.log(`${entry.name}'s startTime: ${entry.startTime}`);
+  };
+  if (entry.entryType === "measure") {
+    console.log(`${entry.name}'s duration: ${entry.duration}`);
+  };
+});
 ```
 
 ## Specifications
@@ -108,3 +70,8 @@ function checkPerformanceEntry(obj) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Performance.getEntriesByType()")}}
+- {{domxref("Performance.getEntriesByName()")}}

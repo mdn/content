@@ -78,8 +78,8 @@ If you really want to create a `Symbol` wrapper object, you can use the
 ```js
 const sym = Symbol("foo");
 const symObj = Object(sym);
-typeof sym; // => "symbol"
-typeof symObj; // => "object"
+typeof sym; // "symbol"
+typeof symObj; // "object"
 ```
 
 ## Specifications

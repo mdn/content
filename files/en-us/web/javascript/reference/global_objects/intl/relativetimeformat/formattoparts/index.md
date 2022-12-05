@@ -51,12 +51,14 @@ const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
 // Format relative time using the day unit
 rtf.formatToParts(-1, "day");
-// > [{ type: "literal", value: "yesterday"}]
+// [{ type: "literal", value: "yesterday"}]
 
 rtf.formatToParts(100, "day");
-// > [{ type: "literal", value: "in " },
-// >  { type: "integer", value: "100", unit: "day" },
-// >  { type: "literal", value: " days" }]
+// [
+//   { type: "literal", value: "in " },
+//   { type: "integer", value: "100", unit: "day" },
+//   { type: "literal", value: " days" }
+// ]
 ```
 
 ## Specifications

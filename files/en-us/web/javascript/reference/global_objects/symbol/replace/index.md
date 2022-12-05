@@ -32,8 +32,7 @@ class CustomReplacer {
   }
 }
 
-console.log("football".replace(new CustomReplacer("foo")));
-// expected output: "#!@?tball"
+console.log("football".replace(new CustomReplacer("foo"))); // "#!@?tball"
 ```
 
 ## Specifications

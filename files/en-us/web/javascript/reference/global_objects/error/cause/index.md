@@ -14,7 +14,7 @@ The **`cause`** property indicates the specific original cause of an error.
 
 It is used when catching and re-throwing an error with a more-specific or useful error message in order to still have access to the original error.
 
-## Value
+## Description
 
 This is the value that was passed to the [`Error()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error) in the `options.cause` argument.
 

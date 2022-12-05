@@ -76,8 +76,7 @@ f(2);
 
 console.log(`returned: ${g.arguments}`);
 
-// Output
-
+// Logs:
 // before: 1
 // before: 0
 // after: 0

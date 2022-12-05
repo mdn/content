@@ -81,5 +81,5 @@ toggleTrackButton.addEventListener("click", () => {
 
 - Related events: [`addtrack`](/en-US/docs/Web/API/AudioTrackList/addtrack_event), [`removetrack`](/en-US/docs/Web/API/AudioTrackList/removetrack_event)
 - This event on [`VideoTrackList`](/en-US/docs/Web/API/VideoTrackList) targets: [`change`](/en-US/docs/Web/API/VideoTrackList/change_event)
-- [Media Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)

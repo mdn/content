@@ -61,8 +61,8 @@ The {{jsxref("String")}} object is a wrapper around the string primitive data ty
 
 ```js
 const foo = new String('foo'); // Creates a String object
-console.log(foo); // Displays: [String: 'foo']
-typeof foo; // Returns 'object'
+console.log(foo); // [String: 'foo']
+typeof foo; // 'object'
 ```
 
 You can call any of the methods of the `String` object on a string literal value—JavaScript automatically converts the string literal to a temporary `String` object, calls the method, then discards the temporary `String` object. You can also use the `length` property with a string literal.
@@ -303,7 +303,7 @@ const germanPhonebook = new Intl.Collator('de-DE-u-co-phonebk');
 
 // as if sorting ["Hochberg", "Hoenigswald", "Holzman"]:
 console.log(names.sort(germanPhonebook.compare).join(', '));
-// logs "Hochberg, Hönigswald, Holzman"
+// "Hochberg, Hönigswald, Holzman"
 ```
 
 Some German words conjugate with extra umlauts, so in dictionaries it's sensible to order ignoring umlauts (except when ordering words differing _only_ by umlauts: _schon_ before _schön_).
@@ -313,7 +313,7 @@ const germanDictionary = new Intl.Collator('de-DE-u-co-dict');
 
 // as if sorting ["Hochberg", "Honigswald", "Holzman"]:
 console.log(names.sort(germanDictionary.compare).join(', '));
-// logs "Hochberg, Holzman, Hönigswald"
+// "Hochberg, Holzman, Hönigswald"
 ```
 
 For more information about the {{jsxref("Intl")}} API, see also [Introducing the JavaScript Internationalization API](https://hacks.mozilla.org/2014/12/introducing-the-javascript-internationalization-api/).

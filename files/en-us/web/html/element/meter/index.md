@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.meter
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<meter>`** [HTML](/en-US/docs/Web/HTML) element represents either a scalar value within a known range or a fractional value.
 

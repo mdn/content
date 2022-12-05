@@ -40,7 +40,7 @@ const o = new Object();
 o.foo = 42;
 
 console.log(o);
-// Object { foo: 42 }
+// { foo: 42 }
 ```
 
 ### Using Object given undefined and null types

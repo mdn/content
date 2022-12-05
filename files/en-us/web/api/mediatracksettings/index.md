@@ -22,7 +22,7 @@ browser-compat: api.MediaTrackSettings
 
 The **`MediaTrackSettings`** dictionary is used to return the current values configured for each of a {{domxref("MediaStreamTrack")}}'s settings. These values will adhere as closely as possible to any constraints previously described using a {{domxref("MediaTrackConstraints")}} object and set using {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}}, and will adhere to the default constraints for any properties whose constraints haven't been changed, or whose customized constraints couldn't be matched.
 
-To learn more about how constraints and settings work, see [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints).
+To learn more about how constraints and settings work, see [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints).
 
 ## Instance properties
 

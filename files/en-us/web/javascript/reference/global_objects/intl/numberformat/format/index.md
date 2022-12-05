@@ -64,7 +64,7 @@ The code below shows how to format the roubles currency for a Russian locale:
 const options = { style: 'currency', currency: 'RUB' };
 const numberFormat = new Intl.NumberFormat('ru-RU', options);
 console.log(numberFormat.format(654321.987));
-// → "654 321,99 ₽"
+// "654 321,99 ₽"
 ```
 
 ### Using format with map
@@ -78,7 +78,7 @@ const a = [123456.789, 987654.321, 456789.123];
 const numberFormat = new Intl.NumberFormat('es-ES');
 const formatted = a.map((n) => numberFormat.format(n));
 console.log(formatted.join('; '));
-// → "123.456,789; 987.654,321; 456.789,123"
+// "123.456,789; 987.654,321; 456.789,123"
 ```
 
 ### Using format with a string
@@ -90,11 +90,11 @@ const numberFormat = new Intl.NumberFormat("en-US");
 
 // Here the value is converted to a Number
 console.log(numberFormat.format(987654321987654321))
-// → 987,654,321,987,654,300
+// 987,654,321,987,654,300
 
 // Here we use a string and don't lose precision
 console.log(numberFormat.format("987654321987654321"));
-// → 987,654,321,987,654,321
+// 987,654,321,987,654,321
 ```
 
 We can also use the general "E" exponent syntax for decimal strings: `#.#E#`.
@@ -104,11 +104,11 @@ The code below creates a {{jsxref("BigInt")}}, coerces it to a string with the s
 const numberFormat = new Intl.NumberFormat("en-US");
 const bigNum = 1000000000000000110000n;
 console.log(numberFormat.format(bigNum));
-// → "1,000,000,000,000,000,110,000"
+// "1,000,000,000,000,000,110,000"
 
 // Format as a string using the `E` syntax:
 console.log(numberFormat.format(`${bigNum}E-6`));
-// → "1,000,000,000,000,000.11"
+// "1,000,000,000,000,000.11"
 ```
 
 ## Specifications

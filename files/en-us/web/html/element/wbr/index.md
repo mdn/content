@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.wbr
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<wbr>`** [HTML](/en-US/docs/Web/HTML) element represents a word break opportunity—a position within text where the browser may optionally break a line, though its line-breaking rules would not otherwise create a break at that location.
 

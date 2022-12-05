@@ -18,7 +18,7 @@ tags:
 browser-compat: html.elements.input.type_submit
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`submit`** are rendered as buttons. When the {{domxref("Element/click_event", "click")}} event occurs (typically because the user clicked the button), the {{Glossary("user agent")}} attempts to submit the form to the server.
 
@@ -122,7 +122,7 @@ This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTM
 
 ### formtarget
 
-A string which specifies a name or keyword that indicates where to display the response received after submitting the form. The string must be the name of a **browsing context** (that is, a tab, window, or {{HTMLElement("iframe")}}. A value specified here overrides any target given by the {{htmlattrxref("target", "form")}} attribute on the {{HTMLElement("form")}} that owns this input.
+A string which specifies a name or keyword that indicates where to display the response received after submitting the form. The string must be the name of a **browsing context** (that is, a tab, window, or {{HTMLElement("iframe")}}). A value specified here overrides any target given by the {{htmlattrxref("target", "form")}} attribute on the {{HTMLElement("form")}} that owns this input.
 
 In addition to the actual names of tabs, windows, or inline frames, there are a few special keywords that can be used:
 
@@ -167,11 +167,11 @@ Try entering some text into the text field, and then submitting the form.
 
 Upon submitting, the data name/value pair gets sent to the server. In this instance, the string will be `text=usertext`, where "usertext" is the text entered by the user, encoded to preserve special characters. Where and how the data is submitted depends on the configuration of the `<form>`; see [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data) for more details.
 
-### Adding a submit keyboard shortcut
+### Adding a keyboard shortcut to a submit button
 
 Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a submit button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the [`accesskey`](/en-US/docs/Web/HTML/Global_attributes/accesskey) global attribute.
 
-In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination. In order to avoid conflicts with the user agent's own keyboard shortcuts, different modifier keys are used for access keys than for other shortcuts on the host computer. See [`accesskey`](/en-US/docs/Web/HTML/Global_attributes/accesskey) for further details.
+In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination). In order to avoid conflicts with the user agent's own keyboard shortcuts, different modifier keys are used for access keys than for other shortcuts on the host computer. See [`accesskey`](/en-US/docs/Web/HTML/Global_attributes/accesskey) for further details.
 
 Here's the previous example with the <kbd>s</kbd> access key added:
 
@@ -189,7 +189,7 @@ Here's the previous example with the <kbd>s</kbd> access key added:
 
 For example, in Firefox for Mac, pressing <kbd>Control</kbd>-<kbd>Option</kbd>-<kbd>S</kbd> triggers the Send button, while Chrome on Windows uses <kbd>Alt</kbd>+<kbd>S</kbd>.
 
-{{EmbedLiveSample("Adding_a_submit_keyboard_shortcut", 650, 100)}}
+{{EmbedLiveSample("Adding_a_keyboard_shortcut_to_a_submit_button", 650, 100)}}
 
 The problem with the above example is that the user will not know what the access key is! This is especially true since the modifiers are typically non-standard to avoid conflicts. When building a site, be sure to provide this information in a way that doesn't interfere with the site design (for example by providing an easily accessible link that points to information on what the site access keys are). Adding a tooltip to the button (using the [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute) can also help, although it's not a complete solution for accessibility purposes.
 

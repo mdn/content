@@ -18,7 +18,7 @@ browser-compat: javascript.operators.object_initializer
 
 {{JsSidebar("Operators")}}
 
-Objects can be initialized using [`new Object()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object), [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create), or using the _literal_ notation (_initializer_ notation). An object initializer is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`).
+An **object initializer** is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`). Objects can also be initialized using [`new Object()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object) or [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create).
 
 {{EmbedInteractiveExample("pages/js/expressions-objectinitializer.html", "taller")}}
 
@@ -253,10 +253,10 @@ const obj1 = { foo: 'bar', x: 42 };
 const obj2 = { foo: 'baz', y: 13 };
 
 const clonedObj = { ...obj1 };
-// Object { foo: "bar", x: 42 }
+// { foo: "bar", x: 42 }
 
 const mergedObj = { ...obj1, ...obj2 };
-// Object { foo: "baz", x: 42, y: 13 }
+// { foo: "baz", x: 42, y: 13 }
 ```
 
 > **Warning:** Note that {{jsxref("Object.assign()")}} triggers [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set), whereas the spread syntax doesn't!

@@ -18,7 +18,7 @@ tags:
 browser-compat: html.elements.kbd
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<kbd>`** [HTML](/en-US/docs/Web/HTML) element represents a span of inline text denoting textual user input from a keyboard, voice input, or any other text entry device. By convention, the {{Glossary("user agent")}} defaults to rendering the contents of a `<kbd>` element using its default monospace font, although this is not mandated by the HTML standard.
 

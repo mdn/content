@@ -11,7 +11,7 @@ browser-compat: javascript.operators.remainder
 
 {{jsSidebar("Operators")}}
 
-The remainder operator (`%`) returns the remainder left over when one
+The **remainder (`%`)** operator returns the remainder left over when one
 operand is divided by a second operand. It always takes the sign of the dividend.
 
 {{EmbedInteractiveExample("pages/js/expressions-remainder.html")}}
@@ -35,10 +35,10 @@ Note that while in most languages, '%' is a remainder operator, in some (e.g. [P
 ### Remainder with positive dividend
 
 ```js
- 13 % 5  //  3
- 1 % -2 //  1
- 1 % 2  //  1
- 2 % 3  //  2
+13 % 5  // 3
+1 % -2 // 1
+1 % 2  // 1
+2 % 3  // 2
 5.5 % 2 // 1.5
 ```
 

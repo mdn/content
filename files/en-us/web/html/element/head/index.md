@@ -11,7 +11,7 @@ tags:
 browser-compat: html.elements.head
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<head>`** [HTML](/en-US/docs/Web/HTML) element contains machine-readable information ({{glossary("metadata")}}) about the document, like its [title](/en-US/docs/Web/HTML/Element/title), [scripts](/en-US/docs/Web/HTML/Element/script), and [style sheets](/en-US/docs/Web/HTML/Element/style).
 

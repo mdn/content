@@ -14,7 +14,7 @@ browser-compat: javascript.operators.comma
 
 {{jsSidebar("Operators")}}
 
-The **comma operator** (**`,`**) evaluates each of
+The **comma (`,`)** operator evaluates each of
 its operands (from left to right) and returns the value of the last operand. This lets
 you create a compound expression in which multiple expressions are evaluated, with the
 compound expression's final value being the value of the rightmost of its member
@@ -35,7 +35,7 @@ expr1, expr2, expr3/* , … */
   - : One or more expressions, the last of which is returned as the value of the compound
     expression.
 
-## Usage notes
+## Description
 
 You can use the comma operator when you want to include multiple expressions in a
 location that requires a single expression. The most common usage of this operator is to

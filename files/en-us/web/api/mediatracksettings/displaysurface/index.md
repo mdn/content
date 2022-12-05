@@ -60,7 +60,7 @@ Not all user agents support all of these surface types.
 
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
 - [Using the screen capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
-- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaDevices.getDisplayMedia()")}}
 - {{domxref("MediaStreamTrack.getConstraints()")}}
 - {{domxref("MediaStreamTrack.applyConstraints()")}}

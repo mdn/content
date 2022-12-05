@@ -12,7 +12,7 @@ tags:
 browser-compat: api.LargestContentfulPaint.id
 ---
 
-{{APIRef("Largest Contentful Paint API")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`id`** read-only property of the {{domxref("LargestContentfulPaint")}} interface returns the ID of the element that is the largest contentful paint.
 

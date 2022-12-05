@@ -13,7 +13,7 @@ tags:
 browser-compat: api.PerformancePaintTiming
 ---
 
-{{DefaultAPISidebar("Paint Timing API")}}
+{{DefaultAPISidebar("Performance API")}}
 
 The **Paint Timing API** provides [perceived performance](/en-US/docs/Learn/Performance/Perceived_performance) data that allows you to know exactly how long a user waits, after navigating to your page, before seeing any of the page content at all (which may not yet be the main content) first starting to appear. More specifically, it allows you to know exactly when, during page load, {{Glossary("first paint")}} and {{Glossary("first contentful paint")}} occur.
 

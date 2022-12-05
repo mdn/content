@@ -40,15 +40,15 @@ const str1 = "bar\nexample foo example";
 
 const regex1 = /bar.example/s;
 
-console.log(regex1.dotAll); // Output: true
+console.log(regex1.dotAll); // true
 
-console.log(str1.replace(regex1, "")); // Output: foo example
+console.log(str1.replace(regex1, "")); // foo example
 
 const str2 = "bar\nexample foo example";
 
 const regex2 = /bar.example/;
 
-console.log(regex2.dotAll); // Output: false
+console.log(regex2.dotAll); // false
 
 console.log(str2.replace(regex2, ""));
 // bar
@@ -65,7 +65,7 @@ console.log(str2.replace(regex2, ""));
 
 ## See also
 
-- [Polyfill of `dotAll` `RegExp` flag in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of the `dotAll` flag in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{JSxRef("RegExp.prototype.lastIndex")}}
 - {{JSxRef("RegExp.prototype.global")}}
 - {{JSxRef("RegExp.prototype.hasIndices")}}

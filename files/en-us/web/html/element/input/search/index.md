@@ -12,7 +12,7 @@ tags:
 browser-compat: html.elements.input.type_search
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`search`** are text fields designed for the user to enter search queries into. These are functionally identical to [`text`](/en-US/docs/Web/HTML/Element/input/text) inputs, but may be styled differently by the {{Glossary("user agent")}}.
 
@@ -128,7 +128,7 @@ This does _not_ set a limit on how many characters the user can enter into the f
 
 ### spellcheck
 
-`spellcheck` is a global attribute which is used to indicate whether or not to enable spell checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
+`spellcheck` is a global attribute which is used to indicate whether to enable spell checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
 
 - `false`
   - : Disable spell checking for this element.
@@ -147,7 +147,7 @@ The following non-standard attributes are available to search input fields. As a
 
 ### autocorrect
 
-A Safari extension, the `autocorrect` attribute is a string which indicates whether or not to activate automatic correction while the user is editing this field. Permitted values are:
+A Safari extension, the `autocorrect` attribute is a string which indicates whether to activate automatic correction while the user is editing this field. Permitted values are:
 
 - `on`
   - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.

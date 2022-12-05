@@ -13,7 +13,7 @@ tags:
 browser-compat: api.TaskAttributionTiming.containerName
 ---
 
-{{APIRef("Long Tasks")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`containerName`** readonly property of the
 {{domxref("TaskAttributionTiming")}} interface returns the container's `name`

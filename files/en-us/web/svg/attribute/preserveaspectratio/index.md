@@ -268,7 +268,9 @@ Its value is made of one or two keywords: A required alignment value and an opti
     - **xMaxYMax** - Force uniform scaling.
       Align the `<min-x>+<width>` of the element's {{ SVGAttr("viewBox") }} with the maximum X value of the viewport.
       Align the `<min-y>+<height>` of the element's {{ SVGAttr("viewBox") }} with the maximum Y value of the viewport.
+
 - Meet or slice reference
+
   - : The meet or slice reference is optional and, if provided, must be one of the following keywords:
 
     - **meet** (_the default_) - Scale the graphic such that:
@@ -278,6 +280,7 @@ Its value is made of one or two keywords: A required alignment value and an opti
       - the {{ SVGAttr("viewBox") }} is scaled up as much as possible, while still meeting the other criteria
 
       In this case, if the aspect ratio of the graphic does not match the viewport, some of the viewport will extend beyond the bounds of the {{ SVGAttr("viewBox") }} (i.e., the area into which the {{ SVGAttr("viewBox") }} will draw will be smaller than the viewport).
+
     - **slice** - Scale the graphic such that:
 
       - aspect ratio is preserved

@@ -94,9 +94,9 @@ export default myFunction;
 // export individual features as default
 export default function () { /* … */ }
 export default class { /* … */ }
-
-// each export overwrites the previous one
 ```
+
+> **Note:** Names for export declarations must be distinct from each other. Having exports with duplicate names or using more than one `default` export will result in a {{jsxref("SyntaxError")}} and prevent the module from being evaluated.
 
 The `export default` syntax allows any expression.
 

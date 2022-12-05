@@ -12,7 +12,7 @@ tags:
 browser-compat: api.PerformanceElementTiming.element
 ---
 
-{{APIRef("Element Timing")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`element`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns an {{domxref("Element")}} which is a literal representation of the associated element.
 

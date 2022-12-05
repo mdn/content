@@ -15,7 +15,7 @@ tags:
 browser-compat: html.elements.caption
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<caption>`** [HTML](/en-US/docs/Web/HTML) element specifies the caption (or title) of a table.
 

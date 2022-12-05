@@ -288,7 +288,7 @@ To fix this, we need to return a `<Todo />` component from our `map()` function 
   const taskList = props.tasks.map((task) => <Todo />);
 ```
 
-Look again at your app; now our tasks look more like they used to, but they're missing the names of the tasks themselves. Remember that each task we map over has the `id`, `name`, and `checked` properties we want to pass into our `<Todo />` component. If we put that knowledge together, we get code like this:
+Look again at your app; now our tasks look more like they used to, but they're missing the names of the tasks themselves. Remember that each task we map over has the `id`, `name`, and `completed` properties we want to pass into our `<Todo />` component. If we put that knowledge together, we get code like this:
 
 ```jsx
 const taskList = props.tasks.map((task) => (

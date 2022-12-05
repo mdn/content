@@ -211,10 +211,7 @@ commonly present these side-by-side:
 
 ```js
 const df = new Intl.DateTimeFormat("zh-u-ca-chinese", {year: "numeric"});
-df.format(Date.UTC(2012, 11, 17, 3, 0, 42));
-
-// return value
-// 2012壬辰年
+df.format(Date.UTC(2012, 11, 17, 3, 0, 42)); // 2012壬辰年
 ```
 
 This also makes it possible to mix locale and calendar in both `format`:
@@ -222,10 +219,7 @@ This also makes it possible to mix locale and calendar in both `format`:
 ```js
 const df = new Intl.DateTimeFormat("en-u-ca-chinese", { year: "numeric" });
 const date = Date.UTC(2012, 11, 17, 3, 0, 42);
-df.format(date);
-
-// return value
-// 2012(ren-chen)
+df.format(date); // 2012(ren-chen)
 ```
 
 And `formatToParts`:
@@ -234,9 +228,7 @@ And `formatToParts`:
 const opts = { month: "numeric", day: "numeric", year: "numeric" };
 const df = new Intl.DateTimeFormat("en-u-ca-chinese", opts);
 const date = Date.UTC(2012, 11, 17, 3);
-df.formatToParts(date)
-
-// return value
+df.formatToParts(date);
 // [
 //   { type: 'month', value: '11' },
 //   { type: 'literal', value: '/' },

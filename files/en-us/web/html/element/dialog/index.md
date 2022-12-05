@@ -12,7 +12,7 @@ tags:
 browser-compat: html.elements.dialog
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<dialog>`** [HTML](/en-US/docs/Web/HTML) element represents a dialog box or other interactive component, such as a dismissible alert, inspector, or subwindow.
 
@@ -91,7 +91,7 @@ When implementing a dialog, it is important to consider the most appropriate pla
 
 Ensure a mechanism is provided to allow users to close a dialog. The most robust way to ensure all users can close a dialog is to include an explicit button to do so. For instance, a confirmation, cancel or close button as appropriate. Additionally, for those using a device with a keyboard, the <kbd>Escape</kbd> key is commonly expected to close modal dialogs as well. By default, a `<dialog>` invoked by the `showModal()` method will allow for its dismissal by the <kbd>Escape</kbd>. A non-modal dialog does not dismiss via the <kbd>Escape</kbd> key by default, and depending on what the non-modal dialog represents, it may not be desired for this behavior. If multiple modal dialogs are open, <kbd>Escape</kbd> should only close the last shown dialog.
 
-The `<dialog>` element is exposed by browsers similarly to custom dialogs using the ARIA [role="dialog"](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) attribute. `<dialog>` elements invoked by the `showModal()` method will have an implicit [aria-modal="true"](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal), where as `<dialog>` elements invoked by the `show()` method, or rendered by use of the `open` attribute or changing the default `display` of a `<dialog>` will be exposed as `[aria-modal="false"]`. It is recommended to use the appropriate `showModal()` or `show()` method to render dialogs.
+The `<dialog>` element is exposed by browsers similarly to custom dialogs using the ARIA [role="dialog"](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) attribute. `<dialog>` elements invoked by the `showModal()` method will have an implicit [aria-modal="true"](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal), whereas `<dialog>` elements invoked by the `show()` method, or rendered by use of the `open` attribute or changing the default `display` of a `<dialog>` will be exposed as `[aria-modal="false"]`. It is recommended to use the appropriate `showModal()` or `show()` method to render dialogs.
 
 Ensure your dialog implementation doesn't break expected default behaviors and follows proper labeling recommendations.
 

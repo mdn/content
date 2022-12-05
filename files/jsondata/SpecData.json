@@ -1626,7 +1626,7 @@
   },
   "Trusted Types": {
     "name": "Trusted Types",
-    "url": "https://w3c.github.io/webappsec-trusted-types/dist/spec/",
+    "url": "https://w3c.github.io/trusted-types/dist/spec/",
     "status": "ED"
   },
   "UI Events": {

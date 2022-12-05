@@ -234,6 +234,7 @@ Interactive content is a subset of flow content that includes elements that are 
 - {{HTMLElement("keygen")}} {{deprecated_inline}}
 - {{HTMLElement("label")}}
 - {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+
 Some elements belong to this category only under specific conditions:
 
 - {{HTMLElement("audio")}}, if the {{htmlattrxref("controls", "audio")}} attribute is present

@@ -77,9 +77,11 @@ svg {
 </table>
 
 - `<length-percentage>`
+
   - : A length represents a distance along the path measured in the current user coordinate system for the {{SVGElement("textPath")}} element.
 
     If a percentage is given, then the start offset represents a percentage distance along the entire path. Thus, `0%` indicates the start point of the path and `100%` indicates the end point of the path.
+
 - `<number>`
   - : This value indicates a distance along the path measured in the current user coordinate system for the `<textPath>` element.
 

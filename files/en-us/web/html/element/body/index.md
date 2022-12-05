@@ -11,7 +11,7 @@ tags:
 browser-compat: html.elements.body
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<body>`** [HTML](/en-US/docs/Web/HTML) element represents the content of an HTML document. There can be only one `<body>` element in a document.
 
@@ -95,7 +95,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : Color of text for hyperlinks when selected.
     **Do not use this attribute! Use the CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":active")}} pseudo-class instead.**
 - {{htmlattrdef("background")}} {{deprecated_inline}}
-  - : URI of a image to use as a background.
+  - : URI of an image to use as a background.
     **Do not use this attribute! Use the CSS {{cssxref("background")}} property on the element instead.**
 - {{htmlattrdef("bgcolor")}} {{deprecated_inline}}
   - : Background color for the document.

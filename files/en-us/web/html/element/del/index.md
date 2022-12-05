@@ -12,7 +12,7 @@ tags:
 browser-compat: html.elements.del
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<del>`** [HTML](/en-US/docs/Web/HTML) element represents a range of text that has been deleted from a document. This can be used when rendering "track changes" or source code diff information, for example. The {{HTMLElement("ins")}} element can be used for the opposite purpose: to indicate text that has been added to the document.
 

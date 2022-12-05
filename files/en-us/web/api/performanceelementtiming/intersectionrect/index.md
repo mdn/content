@@ -12,7 +12,7 @@ tags:
 browser-compat: api.PerformanceElementTiming.intersectionRect
 ---
 
-{{APIRef("Element Timing")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`intersectionRect`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the rectangle of the element within the viewport.
 

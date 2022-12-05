@@ -15,7 +15,7 @@ tags:
   - Web Performance
 ---
 
-{{DefaultAPISidebar("Resource Timing API")}}
+{{DefaultAPISidebar("Performance API")}}
 
 The **Resource Timing API** provides a way to retrieve and analyze detailed network timing data regarding the loading of an application's _resource(s)_. An application can use the timing metrics to determine, for example, the length of time it takes to fetch a specific resource such as an {{domxref("XMLHttpRequest")}}, {{SVGElement("SVG","SVG element")}}, image, script, etc.).
 

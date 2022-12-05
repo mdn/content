@@ -31,7 +31,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.contentDocument")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Document")}}, the active document in the inline frame's nested browsing context.
 - {{domxref("HTMLIFrameElement.contentWindow")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("WindowProxy")}}, the window proxy for the nested browsing context.
+  - : Returns a {{glossary("WindowProxy")}}, the window proxy for the nested browsing context.
 - {{domxref("HTMLIFrameElement.csp")}} {{Experimental_Inline}}
   - : Specifies the Content Security Policy that an embedded document must agree to enforce upon itself.
 - {{domxref("HTMLIFrameElement.fetchPriority")}} {{Experimental_Inline}}

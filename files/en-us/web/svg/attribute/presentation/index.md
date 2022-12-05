@@ -93,7 +93,7 @@ SVG presentation attributes are CSS properties that can be used as attributes on
     _Value_: **`none`**|[\<FuncIRI>](/en-US/docs/Web/SVG/Content_type#funciri)|`inherit`; _Animatable_: **Yes**
 - {{SVGAttr('clip-rule')}}
   - : It indicates how to determine what side of a path is inside a shape in order to know how a {{SVGElement('clipPath')}} should clip its target.
-    _Value_: **`nonezero`**|`evenodd`|`inherit`; _Animatable_: **Yes**
+    _Value_: **`nonzero`**|`evenodd`|`inherit`; _Animatable_: **Yes**
 - {{SVGAttr('color')}}
   - : It provides a potential indirect value (`currentcolor`) for the `fill`, `stroke`, `stop-color`, `flood-color` and `lighting-color` presentation attributes.
     _Value_: [\<color>](/en-US/docs/Web/SVG/Content_type#color)|`inherit`; _Animatable_: **Yes**
@@ -114,7 +114,7 @@ SVG presentation attributes are CSS properties that can be used as attributes on
     _Value_: [\<FuncIRI>](/en-US/docs/Web/SVG/Content_type#funciri)|[\<keywords>](/en-US/docs/Web/CSS/cursor#values)|`inherit`; _Animatable_: **Yes**
 - {{SVGAttr('d')}}
   - : It defines a path to be drawn.
-    _Value_: [path()](/en-US/docs/Web/CSS/path\(\))|`none`
+    _Value_: [path()](/en-US/docs/Web/CSS/path)|`none`
 - {{SVGAttr('direction')}}
   - : It specifies the base writing direction of text.
     _Value_: **`ltr`**|`rtl`|`inherit`; _Animatable_: **Yes**

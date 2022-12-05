@@ -18,7 +18,7 @@ tags:
 browser-compat: html.elements.address
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<address>`** [HTML](/en-US/docs/Web/HTML) element indicates that the enclosed HTML provides contact information for a person or people, or for an organization.
 

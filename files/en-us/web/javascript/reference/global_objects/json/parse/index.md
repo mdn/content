@@ -45,7 +45,7 @@ The {{jsxref("Object")}}, {{jsxref("Array")}}, string, number, boolean, or `null
 
 ## Description
 
-`JSON.parse()` parses a JSON string according to the [JSON grammar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON#full_json_grammar), then evaluates the string as if it's a JavaScript expression. The only instance where a piece of JSON text represents a different value from the same JavaScript expression is when dealing with the `"__proto__"` key — see [Object literal syntax vs. JSON](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#object_literal_syntax_vs._json).
+`JSON.parse()` parses a JSON string according to the [JSON grammar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON#full_json_grammar), then evaluates the string as if it's a JavaScript expression. The only instance where a piece of JSON text represents a different value from the same JavaScript expression is when dealing with the `"__proto__"` key — see [Object literal syntax vs. JSON](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#object_literal_syntax_vs._json).
 
 ### The reviver parameter
 
@@ -79,14 +79,12 @@ JSON.parse(
       ? value * 2 // return value * 2 for numbers
       : value, // return everything else unchanged
 );
-
 // { p: 10 }
 
 JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
-  console.log(key); // log the current property name, the last is "".
-  return value; // return the unchanged property value.
+  console.log(key);
+  return value;
 });
-
 // 1
 // 2
 // 4

@@ -41,7 +41,7 @@ This method is usually called internally by JavaScript and not explicitly in cod
 
 ```js
 const x = new String("Hello world");
-console.log(x.valueOf()); // Displays 'Hello world'
+console.log(x.valueOf()); // 'Hello world'
 ```
 
 ## Specifications

@@ -9,7 +9,7 @@ tags:
 browser-compat: html.elements.hr
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<hr>`** [HTML](/en-US/docs/Web/HTML) element represents a thematic break between paragraph-level elements: for example, a change of scene in a story, or a shift of topic within a section.
 

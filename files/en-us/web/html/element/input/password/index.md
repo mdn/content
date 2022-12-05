@@ -17,7 +17,7 @@ tags:
 browser-compat: html.elements.input.type_password
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 `<input>` elements of type **`password`** provide a way for the user to securely enter a password.
 
@@ -105,7 +105,7 @@ The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constrain
 
 ### minlength
 
-The minimum number of characters (as UTF-16 code units) the user can enter into the password entry field. This must be an non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the password input has no minimum length.
+The minimum number of characters (as UTF-16 code units) the user can enter into the password entry field. This must be a non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the password input has no minimum length.
 
 The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long.
 

@@ -16,6 +16,8 @@ The **`size`** attribute defines the width of the {{htmlelement('input')}} and t
 
 The `size` attribute has no impact on constraint validation.
 
+{{EmbedInteractiveExample("pages/tabbed/attribute-size.html", "tabbed-standard")}}
+
 ## Examples
 
 By adding `size` on some input types, the width of the input can be controlled. Adding size on a select changes the height, defining how many options are visible in the closed state.

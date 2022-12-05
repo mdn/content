@@ -341,7 +341,7 @@ In HTML, link types indicate the relationship between two documents, in which on
       </td>
       <td>
         Indicates that the current document is represented by the person to which
-        the me value links. The me value is commonly used in distributed forms
+        the `me` value links. The `me` value is commonly used in distributed forms
         of verification such as <a href="https://microformats.org/wiki/RelMeAuth">
         RelMeAuth</a>.
       </td>
@@ -504,7 +504,7 @@ In HTML, link types indicate the relationship between two documents, in which on
       </td>
       <td>
         Provides a hint to the browser suggesting that it open a connection to
-        the linked web site in advance, without disclosing any private
+        the linked website in advance, without disclosing any private
         information or downloading any content, so that when the link is
         followed the linked content can be fetched more quickly.
       </td>

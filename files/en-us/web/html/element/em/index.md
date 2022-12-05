@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.em
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<em>`** [HTML](/en-US/docs/Web/HTML) element marks text that has stress emphasis. The `<em>` element can be nested, with each level of nesting indicating a greater degree of emphasis.
 

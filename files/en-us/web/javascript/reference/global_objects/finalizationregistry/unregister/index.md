@@ -35,7 +35,7 @@ A boolean value that is `true` if at least one cell was unregistered and `false`
 - {{jsxref("TypeError")}}
   - : Thrown when `unregisterToken` is not an object.
 
-## Notes
+## Description
 
 When a target object has been reclaimed, it is no longer registered in the registry.
 There is no need to call `unregister` in your cleanup callback. Only call

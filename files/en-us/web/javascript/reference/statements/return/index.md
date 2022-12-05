@@ -103,7 +103,7 @@ function counter() {
 
 counter();
 
-// Output:
+// Logs:
 // 1A
 // 1B
 // 2A

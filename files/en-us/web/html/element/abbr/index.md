@@ -18,7 +18,7 @@ tags:
 browser-compat: html.elements.abbr
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<abbr>`** [HTML](/en-US/docs/Web/HTML) element represents an abbreviation or acronym.
 
@@ -89,7 +89,7 @@ The optional {{htmlattrxref("title")}} attribute can provide an expansion for th
 
 This element only supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes). The {{htmlattrxref("title")}} attribute has a specific semantic meaning when used with the `<abbr>` element; it _must_ contain a full human-readable description or expansion of the abbreviation. This text is often presented by browsers as a tooltip when the mouse cursor is hovered over the element.
 
-Each `<abbr>` element you use is independent from all others; providing a `title` for one does not automatically attach the same expansion text to others with the same content text.
+Each `<abbr>` element you use is independent of all others; providing a `title` for one does not automatically attach the same expansion text to others with the same content text.
 
 ## Usage notes
 

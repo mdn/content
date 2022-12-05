@@ -1,5 +1,5 @@
 ---
-title: 'HTML attribute: maxlength'
+title: "HTML attribute: maxlength"
 slug: Web/HTML/Attributes/maxlength
 tags:
   - Attribute
@@ -27,6 +27,8 @@ Any `maxlength` value must be greater than or equal to the value of [`minlength`
 
 While the browser will generally prevent user from entering more text than the maxlength attribute allows, should the length be longer than the maxlength allows, the read-only {{domxref("ValidityState.tooLong", "tooLong")}} property of a {{domxref("ValidityState")}} object will be true.
 
+{{EmbedInteractiveExample("pages/tabbed/attribute-maxlength.html", "tabbed-shorter")}}
+
 ## Examples
 
 ```html
@@ -49,5 +51,5 @@ While the browser will generally prevent user from entering more text than the m
 - [`size`](/en-US/docs/Web/HTML/Attributes/size)
 - [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern)
 - [Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
-- [Constraint validation API](/en-US/docs/Web/API/Constraint_validation)
+- [Form validation](/en-US/docs/Learn/Forms/Form_validation)
 - {{htmlelement('input')}}

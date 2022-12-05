@@ -48,9 +48,11 @@ This trap can intercept these operations:
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
 - {{jsxref("Reflect.getOwnPropertyDescriptor()")}}
 
+Or any other operation that invokes the `[[GetOwnProperty]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
+
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a {{jsxref("TypeError")}}:
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
 - `getOwnPropertyDescriptor()` must return an object or `undefined`.
 - A property cannot be reported as non-existent, if it exists as a non-configurable own property of the target object.

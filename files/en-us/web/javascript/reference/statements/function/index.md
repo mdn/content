@@ -11,7 +11,7 @@ browser-compat: javascript.statements.function
 
 {{jsSidebar("Statements")}}
 
-The **function declaration** (function statement) defines a function with
+The **`function`** declaration defines a function with
 the specified parameters.
 
 You can also define functions using the {{jsxref("Function")}} constructor and a
@@ -116,7 +116,7 @@ Function declarations in JavaScript are [hoisted](/en-US/docs/Glossary/Hoisting)
 global scope. You can use the function before you declared it:
 
 ```js
-hoisted(); // logs "foo"
+hoisted(); // Logs "foo"
 
 function hoisted() {
   console.log('foo');

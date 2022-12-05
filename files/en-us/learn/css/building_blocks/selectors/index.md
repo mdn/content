@@ -12,7 +12,7 @@ tags:
   - id
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
 
 In {{Glossary("CSS")}}, selectors are used to target the {{glossary("HTML")}} elements on our web pages that we want to style. There are a wide variety of CSS selectors available, allowing for fine-grained precision when selecting elements to style. In this article and its sub-articles we'll run through the different types in great detail, seeing how they work.
 
@@ -45,13 +45,13 @@ In {{Glossary("CSS")}}, selectors are used to target the {{glossary("HTML")}} el
 
 ## What is a selector?
 
-You have met selectors already. A CSS selector is the first part of a CSS Rule. It is a pattern of elements and other terms that tell the browser which HTML elements should be selected to have the CSS property values inside the rule applied to them. The element or elements which are selected by the selector are referred to as the _subject of the selector_.
+A CSS selector is the first part of a CSS Rule. It is a pattern of elements and other terms that tell the browser which HTML elements should be selected to have the CSS property values inside the rule applied to them. The element or elements which are selected by the selector are referred to as the _subject of the selector_.
 
 ![Some code with the h1 highlighted.](selector.png)
 
-In earlier articles you met some different selectors, and learned that there are selectors that target the document in different ways — for example by selecting an element such as `h1`, or a class such as `.special`.
+In other articles you may have met some different selectors, and learned that there are selectors that target the document in different ways — for example by selecting an element such as `h1`, or a class such as `.special`.
 
-In CSS, selectors are defined in the CSS Selectors specification; like any other part of CSS they need to have support in browsers for them to work. The majority of selectors that you will come across are defined in the [Level 3 Selectors specification](https://www.w3.org/TR/selectors-3/), which is a mature specification, therefore you will find excellent browser support for these selectors.
+In CSS, selectors are defined in the CSS Selectors specification; like any other part of CSS they need to have support in browsers for them to work. The majority of selectors that you will come across are defined in the [Level 3 Selectors specification](https://www.w3.org/TR/selectors-3/) and [Level 4 Selectors specification](https://www.w3.org/TR/selectors-4/), which are both mature specifications, therefore you will find excellent browser support for these selectors.
 
 ## Selector lists
 
@@ -69,9 +69,8 @@ h1 {
 
 I could also combine these into a selector list, by adding a comma between them.
 
-```css
-h1,
-.special {
+```css-nolint
+h1, .special {
   color: blue;
 }
 ```
@@ -186,17 +185,18 @@ In this article we've introduced CSS selectors, which enable you to target parti
 
 For a complete list of selectors, see our [CSS selectors reference](/en-US/docs/Web/CSS/CSS_Selectors).
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
+{{NextMenu("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
 
 ## In this module
 
-- [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 - [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
 
   - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
   - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
   - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
   - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+
+- [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 
 - [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
 - [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

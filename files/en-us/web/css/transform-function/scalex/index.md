@@ -171,7 +171,7 @@ div {
 - {{cssxref("scale")}}
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("transform-origin")}}
-- Other ndividual transform properties:
+- Other individual transform properties:
   - {{cssxref("translate")}}
   - {{cssxref("rotate")}}
   - Note: there is no `skew` property

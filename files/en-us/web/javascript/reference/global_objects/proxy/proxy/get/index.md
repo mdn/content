@@ -51,13 +51,13 @@ value.
 This trap can intercept these operations:
 
 - Property access: `proxy[foo]` and `proxy.bar`
-- Inherited property access: `Object.create(proxy)[foo]`
 - {{jsxref("Reflect.get()")}}
+
+Or any other operation that invokes the `[[Get]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
 
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a
-{{jsxref("TypeError")}}:
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
 - The value reported for a property must be the same as the value of the corresponding
   target object property if the target object property is a non-writable,

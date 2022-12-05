@@ -55,7 +55,7 @@ const options = {
 };
 const dateTimeFormat = new Intl.DateTimeFormat("sr-RS", options);
 console.log(dateTimeFormat.format(new Date()));
-// → "недеља, 7. април 2013."
+// "недеља, 7. април 2013."
 ```
 
 ### Using format with map
@@ -71,7 +71,7 @@ const options = { year: "numeric", month: "long" };
 const dateTimeFormat = new Intl.DateTimeFormat("pt-BR", options);
 const formatted = a.map(dateTimeFormat.format);
 console.log(formatted.join("; "));
-// → "setembro de 2012; dezembro de 2012; abril de 2012"
+// "setembro de 2012; dezembro de 2012; abril de 2012"
 ```
 
 ### Avoid comparing formatted date values to static values

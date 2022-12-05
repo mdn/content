@@ -15,7 +15,7 @@ tags:
 browser-compat: html.elements.shadow
 ---
 
-{{Deprecated_Header}}{{Non-standard_header}}
+{{HTMLSidebar}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`<shadow>`** [HTML](/en-US/docs/Web/HTML) element—an obsolete part of the [Web Components](/en-US/docs/Web/Web_Components) technology suite—was intended to be used as a shadow DOM {{glossary("insertion point")}}. You might have used it if you have created multiple shadow roots under a shadow host. It is not useful in ordinary HTML.
 
@@ -118,5 +118,3 @@ This element is no longer defined by any specifications.
 
 - [Web Components](/en-US/docs/Web/Web_Components)
 - {{HTMLElement("content")}}, {{HTMLElement("slot")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}
-
-{{HTMLRef}}

@@ -781,8 +781,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
 
     - `gl.UNSIGNED_SHORT`
     - `gl.UNSIGNED_INT`
-    - `ext.UNSIGNED_INT_24_8_WEBGL` (constant provided by the
-        extension)
+    - `ext.UNSIGNED_INT_24_8_WEBGL` (constant provided by the extension)
 
     - When using the {{domxref("OES_texture_float")}} extension:
 

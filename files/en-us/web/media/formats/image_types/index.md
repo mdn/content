@@ -531,7 +531,7 @@ GIF supports simple animation, in which following an initial full-size frame, a 
 GIF has been extremely popular for decades, due to its simplicity and compatibility.
 Its animation support caused a resurgence in its popularity in the social media era, when animated GIFs began to be widely used for short "videos", memes, and other simple animation sequences.
 
-Another popular feature of GIF is support for [interlacing](https://en.wikipedia.org/wiki/Interlacing_(bitmaps)), where rows of pixels are stored out of order so that partially-received files can be displayed in lower quality.
+Another popular feature of GIF is support for [interlacing](<https://en.wikipedia.org/wiki/Interlacing_(bitmaps)>), where rows of pixels are stored out of order so that partially-received files can be displayed in lower quality.
 This is particularly useful when network connections are slow.
 
 GIF is a good choice for simple images and animations, although converting full color images to GIF can result in unsatisfactory dithering.
@@ -623,7 +623,7 @@ Typically, modern content should use [PNG](#png_portable_network_graphics) for l
 ### ICO (Microsoft Windows icon)
 
 The ICO (Microsoft Windows icon) file format was designed by Microsoft for desktop icons of Windows systems.
-However, early versions of Internet Explorer introduced the ability for a web site to provide a ICO file named `favicon.ico` in a web site's root directory to specify a **[favicon](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site)** — an icon to be displayed in the Favorites menu, and other places where an iconic representation of the site would be useful.
+However, early versions of Internet Explorer introduced the ability for a web site to provide an ICO file named `favicon.ico` in a web site's root directory to specify a **[favicon](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site)** — an icon to be displayed in the Favorites menu, and other places where an iconic representation of the site would be useful.
 
 An ICO file can contain multiple icons, and begins with a directory listing details about each.
 Following the directory comes the data for the icons.
