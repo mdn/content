@@ -64,6 +64,7 @@ As an example, using [Rocher Color Font](https://www.harbortype.com/fonts/rocher
 h2 {
   font-family: 'Rocher';
 }
+
 @font-palette-values --two {
   font-family: 'Rocher';
   base-palette: 2;
