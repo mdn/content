@@ -98,6 +98,7 @@ h1, h2 {
 h1 {
   font-family: "Bungee Spice";
 }
+
 h2 {
   font-family: Bixa;
 }
