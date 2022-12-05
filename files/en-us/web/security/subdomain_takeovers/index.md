@@ -24,7 +24,7 @@ An attacker sets up a virtual host for a subdomain name you bought on the hostin
 
 Suppose you control the domain example.com. You want to add a blog at blog.example.com, and you decide to use a hosting provider who maintains a blogging platform. (For "blog", you can substitute "e-commerce platform", "customer service platform", or any other "cloud-based" virtual hosting scenario.) The process you go through might look like this:
 
-1. You register the name "blog.example.com" with a domain registrar.
+1. You register the name "blog.example.com" with a domain register.
 2. You set up DNS records to direct browsers that want to access blog.example.com so that they go to the virtual host.
 3. You create a virtual host at the hosting provider.
 
