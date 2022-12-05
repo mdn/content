@@ -60,7 +60,7 @@ The following example displays a button to open a {{htmlelement("dialog")}} cont
     const openDialog = document.getElementById("openDialog");
     const dialog = document.getElementById("favDialog");
     const text = document.getElementById("text");
-    const text = document.querySelector("[type='reset']");
+    const reset = document.querySelector("[type='reset']");
     dialog.returnValue = "initialValue";
 
     function openCheck(dialog) {
