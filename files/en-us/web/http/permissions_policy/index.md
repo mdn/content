@@ -66,7 +66,7 @@ Permissions Policy and the {{domxref("Permissions API", "Permissions API", "", "
 
 The identifying string used for each feature is kept consistent across both, for example, `geolocation` for the {{domxref("Geolocation API", "Geolocation API", "", "nocode")}}. Most of the API features in the Permissions Registry also have a corresponding Permissions Policy directive. One exception is the {{domxref("Notifications API", "Notifications API", "", "nocode")}}.
 
-In practical terms, when you set a Permissions Policy that blocks the use of a powerful feature, the user won't be asked for permission to use it, and the Permissions API {{domxref("Permissions.query", "query()")}} method will always return a {{domxref("PermissionStatus.state", "state")}} value of `denied`.
+Generally when a Permissions Policy blocks the use of a powerful feature, the user won't even be asked for permission to use it, and the Permissions API {{domxref("Permissions.query", "query()")}} method will return a {{domxref("PermissionStatus.state", "state")}} value of `denied`.
 
 See also [Permissions > Relationship to the Permissions Policy specification](https://w3c.github.io/permissions/#relationship-to-permissions-policy).
 
