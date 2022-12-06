@@ -21,7 +21,7 @@ browser-compat: api.FeaturePolicy
 
 The `FeaturePolicy` interface represents the set of policies applied to the current execution context.
 
-## FeaturePolicy Methods
+## Instance methods
 
 - {{DOMxRef("FeaturePolicy.allowsFeature")}} {{Experimental_Inline}}
   - : Returns a Boolean that indicates whether or not a particular feature is enabled in the specified context.
