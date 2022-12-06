@@ -4315,7 +4315,7 @@
 /en-US/docs/JavaScript/Reference/Global_Objects/Date/setYear	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setYear
 /en-US/docs/JavaScript/Reference/Global_Objects/Date/toDateString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toDateString
 /en-US/docs/JavaScript/Reference/Global_Objects/Date/toDateString-redirect-1	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toDateString
-/en-US/docs/JavaScript/Reference/Global_Objects/Date/toGMTString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toGMTString
+/en-US/docs/JavaScript/Reference/Global_Objects/Date/toGMTString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 /en-US/docs/JavaScript/Reference/Global_Objects/Date/toISOString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString
 /en-US/docs/JavaScript/Reference/Global_Objects/Date/toJSON	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toJSON
 /en-US/docs/JavaScript/Reference/Global_Objects/Date/toLocaleDateString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
@@ -4915,7 +4915,7 @@
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/Date/setUTCSeconds	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/Date/setYear	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setYear
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/Date/toDateString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toDateString
-/en-US/docs/JavaScript_Documention/Reference/Global_Objects/Date/toGMTString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toGMTString
+/en-US/docs/JavaScript_Documention/Reference/Global_Objects/Date/toGMTString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/Date/toISOString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/Date/toJSON	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toJSON
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/Date/toLocaleDateString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
@@ -12150,6 +12150,7 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date()	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/constructor	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toGMTString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toSource	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toString
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/DateTimeFormat	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
