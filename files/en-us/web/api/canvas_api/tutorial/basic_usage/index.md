@@ -10,7 +10,7 @@ tags:
   - Tutorial
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}
 
 Let's start this tutorial by looking at the {{HTMLElement("canvas")}} {{Glossary("HTML")}} element itself. At the end of this page, you will know how to set up a canvas 2D context and have drawn a first example in your browser.
 
@@ -61,8 +61,8 @@ The {{HTMLElement("canvas")}} element creates a fixed-size drawing surface that 
 The canvas is initially blank. To display something, a script first needs to access the rendering context and draw on it. The {{HTMLElement("canvas")}} element has a method called {{domxref("HTMLCanvasElement.getContext", "getContext()")}}, used to obtain the rendering context and its drawing functions. `getContext()` takes one parameter, the type of context. For 2D graphics, such as those covered by this tutorial, you specify `"2d"` to get a {{domxref("CanvasRenderingContext2D")}}.
 
 ```js
-const canvas = document.getElementById('tutorial');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("tutorial");
+const ctx = canvas.getContext("2d");
 ```
 
 The first line in the script retrieves the node in the DOM representing the {{HTMLElement("canvas")}} element by calling the {{domxref("document.getElementById()")}} method. Once you have the element node, you can access the drawing context using its `getContext()` method.
@@ -72,10 +72,10 @@ The first line in the script retrieves the node in the DOM representing the {{HT
 The fallback content is displayed in browsers which do not support {{HTMLElement("canvas")}}. Scripts can also check for support programmatically by testing for the presence of the `getContext()` method. Our code snippet from above becomes something like this:
 
 ```js
-const canvas = document.getElementById('tutorial');
+const canvas = document.getElementById("tutorial");
 
 if (canvas.getContext) {
-  const ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext("2d");
   // drawing code here
 } else {
   // canvas-unsupported code here

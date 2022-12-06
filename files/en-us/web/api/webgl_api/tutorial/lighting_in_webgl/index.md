@@ -21,8 +21,6 @@ tags:
 
 As should be clear by now, WebGL doesn't have much built-in knowledge. It just runs two functions you supply — a vertex shader and a fragment shader — and expects you to write creative functions to get the results you want. In other words, if you want lighting you have to calculate it yourself. Fortunately, it's not all that hard to do, and this article will cover some of the basics.
 
-> **Note:** This example uses the [glMatrix](https://glmatrix.net/) library to perform its matrix and vertex math. You'll need to include it if you create your own project based on this code. Our sample loads a copy from a CDN in our HTML's {{HTMLElement("head")}}.
-
 ## Simulating lighting and shading in 3D
 
 Although going into detail about the theory behind simulated lighting in 3D graphics is far beyond the scope of this article, it's helpful to know a bit about how it works. Instead of discussing it in depth here, take a look at the article on [Phong shading](https://en.wikipedia.org/wiki/Phong_shading) at Wikipedia, which provides a good overview of the most commonly used lighting model or if you'd like to see a WebGL based explanation [see this article](https://webglfundamentals.org/webgl/lessons/webgl-3d-lighting-point.html).
@@ -48,33 +46,51 @@ Then we update the vertex shader to adjust the color of each vertex, taking into
 
 The first thing we need to do is generate the array of normals for all the vertices that comprise our cube. Since a cube is a very simple object, this is easy to do; obviously for more complex objects, calculating the normals will be more involved.
 
+> **Note:** Add this function to your "init-buffer.js" module:
+
 ```js
-const normalBuffer = gl.createBuffer();
-gl.bindBuffer(gl.ARRAY_BUFFER, normalBuffer);
+function initNormalBuffer(gl) {
+  const normalBuffer = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, normalBuffer);
 
-const vertexNormals = [
-  // Front
-  0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0,
+  const vertexNormals = [
+    // Front
+    0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0,
 
-  // Back
-  0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0,
+    // Back
+    0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0,
 
-  // Top
-  0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0,
+    // Top
+    0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0,
 
-  // Bottom
-  0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0,
+    // Bottom
+    0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0,
 
-  // Right
-  1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0,
+    // Right
+    1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0,
 
-  // Left
-  -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0,
-];
+    // Left
+    -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0,
+  ];
 
-gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertexNormals), gl.STATIC_DRAW);
+  gl.bufferData(
+    gl.ARRAY_BUFFER,
+    new Float32Array(vertexNormals),
+    gl.STATIC_DRAW
+  );
 
-// …
+  return normalBuffer;
+}
+```
+
+This should look pretty familiar by now; we create a new buffer, bind it to be the buffer we're working with, then send along our array of vertex normals into the buffer by calling `bufferData()`.
+
+As before, we have updated `initBuffers()` to call our new function, and to return the buffer it created.
+
+> **Note:** At the end of your `initBuffers()` function, add the following code, replacing the existing `return` statement:
+
+```js
+const normalBuffer = initNormalBuffer(gl);
 
 return {
   position: positionBuffer,
@@ -84,14 +100,14 @@ return {
 };
 ```
 
-This should look pretty familiar by now; we create a new buffer, bind it to be the buffer we're working with, then send along our array of vertex normals into the buffer by calling `bufferData()`.
+Then we add the code to the "draw-scene.js" module to bind the normals array to a shader attribute so the shader code can get access to it.
 
-Then we add the code to `drawScene()` to bind the normals array to a shader attribute so the shader code can get access to it:
+> **Note:** Add this function to your "draw-scene.js" module:
 
 ```js
 // Tell WebGL how to pull out the normals from
 // the normal buffer into the vertexNormal attribute.
-{
+function setNormalAttribute(gl, buffers, programInfo) {
   const numComponents = 3;
   const type = gl.FLOAT;
   const normalize = false;
@@ -110,15 +126,25 @@ Then we add the code to `drawScene()` to bind the normals array to a shader attr
 }
 ```
 
-Finally, we need to update the code that builds the uniform matrices to generate and deliver to the shader a **normal matrix**, which is used to transform the normals when dealing with the current orientation of the cube in relation to the light source:
+> **Note:** Add this line to the `drawScene()` function of your "draw-scene.js" module, just before the `gl.useProgram()` line:
+
+```js
+setNormalAttribute(gl, buffers, programInfo);
+```
+
+Finally, we need to update the code that builds the uniform matrices to generate and deliver to the shader a **normal matrix**, which is used to transform the normals when dealing with the current orientation of the cube in relation to the light source.
+
+> **Note:** Add the following code to the `drawScene()` function of your "draw-scene.js" module, just after the three `mat4.rotate()` calls:
 
 ```js
 const normalMatrix = mat4.create();
 mat4.invert(normalMatrix, modelViewMatrix);
 mat4.transpose(normalMatrix, normalMatrix);
+```
 
-// …
+> **Note:** Add the following code to the `drawScene()` function of your "draw-scene.js" module, just after the two previous `gl.uniformMatrix4fv()` calls:
 
+```js
 gl.uniformMatrix4fv(
   programInfo.uniformLocations.normalMatrix,
   false,
@@ -132,7 +158,9 @@ Now that all the data the shaders need is available to them, we need to update t
 
 ### The vertex shader
 
-The first thing to do is update the vertex shader so it generates a shading value for each vertex based on the ambient lighting as well as the directional lighting. Let's take a look at the code:
+The first thing to do i,s update the vertex shader so it generates a shading value for each vertex based on the ambient lighting as well as the directional lighting.
+
+> **Note:** Update the `vsSource` declaration in your `main()` function like this:
 
 ```js
 const vsSource = `
@@ -173,7 +201,9 @@ Once the amount of directional lighting is computed, we can generate the lightin
 
 ### The fragment shader
 
-The fragment shader now needs to be updated to take into account the lighting value computed by the vertex shader:
+The fragment shader now needs to be updated to take into account the lighting value computed by the vertex shader.
+
+> **Note:** Update the `fsSource` declaration in your `main()` function like this:
 
 ```js
 const fsSource = `
@@ -193,6 +223,8 @@ const fsSource = `
 Here we fetch the color of the texel, just like we did in the previous example, but before setting the color of the fragment, we multiply the texel's color by the lighting value to adjust the texel's color to take into account the effect of our light sources.
 
 The only thing left is to look up the location of the `aVertexNormal` attribute and the `uNormalMatrix` uniform.
+
+> **Note:** Update the `programInfo` declaration in your `main()` function like this:
 
 ```js
 const programInfo = {
