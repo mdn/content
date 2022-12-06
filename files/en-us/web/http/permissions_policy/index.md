@@ -43,7 +43,7 @@ Some approaches include:
 
 > **Note:** Newly-introduced features may have an explicit API to signal the state. Existing features that later integrate with Permissions Policy will typically use existing mechanisms.
 
-Permissions Policy allows you to control which origins can use which features, both on the top-level page and in embedded {{htmlelement("iframe")}}s. The aim is to enforce best practices for good user experiences and provide granular control over _sensitive_ or [powerful features](https://w3c.github.io/permissions/#dfn-powerful-feature) (meaning features that a user is required to give express permission for usage of, before related code can be executed).
+Permissions Policy allows you to control which origins can use which features, both on the top-level page and in embedded {{htmlelement("iframe")}}s. The aim is to enforce best practices for good user experiences and provide granular control over _sensitive_ or _powerful_ features (meaning features that a user is required to give express permission for usage of, before related code can be executed).
 
 To control each feature, you write a policy that consists of:
 
