@@ -1,6 +1,6 @@
 ---
 title: Constraint validation
-slug: Web/Guide/HTML/Constraint_validation
+slug: Web/HTML/Constraint_validation
 tags:
   - CSS
   - Guide
@@ -8,6 +8,8 @@ tags:
   - NeedsContent
   - Selectors
 ---
+
+{{HTMLSidebar}}
 
 The creation of web forms has always been a complex task. While marking up the form itself is easy, checking whether each field has a valid and coherent value is more difficult, and informing the user about the problem may become a headache. [HTML5](/en-US/docs/Glossary/HTML5) introduced new mechanisms for forms: it added new semantic types for the {{ HTMLElement("input") }} element and _constraint validation_ to ease the work of checking the form content on the client side. Basic, usual constraints can be checked, without the need for JavaScript, by setting new attributes; more complex constraints can be tested using the Constraint Validation API.
 
@@ -278,7 +280,7 @@ Calling `checkValidity()` is called _statically_ validating the constraints, whi
 > **Note:**
 >
 > - If the {{ htmlattrxref("novalidate", "form") }} attribute is set on the {{ HTMLElement("form") }} element, interactive validation of the constraints doesn't happen.
-> - Calling the `submit()` method on the [`HTMLFormElement`](/en-US/docs/Web/API/HTMLFormElement) interface doesn't trigger a constraint validation. In other words, this method sends the form data to the server even if doesn't satisfy the constraints. Call the `click()` method on a submit button instead.
+> - Calling the `submit()` method on the [`HTMLFormElement`](/en-US/docs/Web/API/HTMLFormElement) interface doesn't trigger a constraint validation. In other words, this method sends the form data to the server even if it doesn't satisfy the constraints. Call the `click()` method on a submit button instead.
 
 ## Complex constraints using the Constraint Validation API
 
@@ -403,7 +405,7 @@ function checkFileSize() {
 }
 ```
 
-Finally we hook the method with the correct event:
+Finally, we hook the method with the correct event:
 
 ```js
 window.onload = () => {

@@ -3649,7 +3649,7 @@
 /en-US/docs/HTML/Canvas/Tutorial	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/HTML/Canvas/Tutorial/Basic_animations	/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
 /en-US/docs/HTML/Content_Editable	/en-US/docs/Web/HTML/Global_attributes/contenteditable
-/en-US/docs/HTML/Content_categories	/en-US/docs/Web/Guide/HTML/Content_categories
+/en-US/docs/HTML/Content_categories	/en-US/docs/Web/HTML/Content_categories
 /en-US/docs/HTML/Controlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/HTML/Element	/en-US/docs/Web/HTML/Element
 /en-US/docs/HTML/Element/HTMLHeadElement	/en-US/docs/Web/API/HTMLHeadElement
@@ -3898,7 +3898,7 @@
 /en-US/docs/HTML/Forms_in_HTML	/en-US/docs/Learn/Forms
 /en-US/docs/HTML/Forms_in_HTML5	/en-US/docs/Learn/Forms
 /en-US/docs/HTML/Global_attributes	/en-US/docs/Web/HTML/Global_attributes
-/en-US/docs/HTML/HTML5/Constraint_validation	/en-US/docs/Web/Guide/HTML/Constraint_validation
+/en-US/docs/HTML/HTML5/Constraint_validation	/en-US/docs/Web/HTML/Constraint_validation
 /en-US/docs/HTML/HTML5/Forms_in_HTML5	/en-US/docs/Learn/Forms
 /en-US/docs/HTML/HTML5/HTML5_Parser	/en-US/docs/Learn/HTML
 /en-US/docs/HTML/HTML5/HTML5_Tags_List	/en-US/docs/Web/HTML/Element
@@ -5296,7 +5296,7 @@
 /en-US/docs/Learn/HTML/Introduction_to_HTML/The_HTML_head	/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 /en-US/docs/Learn/HTML/Tables/Structing_planet_data	/en-US/docs/Learn/HTML/Tables/Structuring_planet_data
 /en-US/docs/Learn/HTML/Write_a_simple_page_in_HTML	/en-US/docs/Learn/Getting_started_with_the_web
-/en-US/docs/Learn/HTML/XHTML	/en-US/docs/Web/Guide/HTML/XHTML
+/en-US/docs/Learn/HTML/XHTML	/en-US/docs/Glossary/XHTML
 /en-US/docs/Learn/How_TCP_IP_works	/en-US/docs/Learn/Common_questions/How_does_the_Internet_work
 /en-US/docs/Learn/How_much_does_it_cost	/en-US/docs/Learn/Common_questions/How_much_does_it_cost
 /en-US/docs/Learn/How_networks_talk_with_each_other	/en-US/docs/Learn/Common_questions/How_does_the_Internet_work
@@ -11834,7 +11834,9 @@
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Transformations	/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Using_images	/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images
+/en-US/docs/Web/Guide/HTML/Constraint_validation	/en-US/docs/Web/HTML/Constraint_validation
 /en-US/docs/Web/Guide/HTML/Content_Editable	/en-US/docs/Web/HTML/Global_attributes/contenteditable
+/en-US/docs/Web/Guide/HTML/Content_categories	/en-US/docs/Web/HTML/Content_categories
 /en-US/docs/Web/Guide/HTML/Drag_and_drop	/en-US/docs/Web/API/HTML_Drag_and_Drop_API
 /en-US/docs/Web/Guide/HTML/Drag_operations	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /en-US/docs/Web/Guide/HTML/Editable_content	/en-US/docs/Web/HTML/Global_attributes/contenteditable
@@ -11861,7 +11863,7 @@
 /en-US/docs/Web/Guide/HTML/Forms/The_native_form_widgets	/en-US/docs/Learn/Forms/Basic_native_form_controls
 /en-US/docs/Web/Guide/HTML/Forms_in_HTML	/en-US/docs/Learn/Forms
 /en-US/docs/Web/Guide/HTML/HTML5	/en-US/docs/Glossary/HTML5
-/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation	/en-US/docs/Web/Guide/HTML/Constraint_validation
+/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation	/en-US/docs/Web/HTML/Constraint_validation
 /en-US/docs/Web/Guide/HTML/HTML5/Forms_in_HTML5	/en-US/docs/Learn/Forms
 /en-US/docs/Web/Guide/HTML/HTML5/HTML5_Parser	/en-US/docs/Learn/HTML
 /en-US/docs/Web/Guide/HTML/HTML5/HTML5_Tags_List	/en-US/docs/Web/HTML/Element
@@ -11878,6 +11880,7 @@
 /en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video	/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/Guide/HTML/Using_data_attributes	/en-US/docs/Learn/HTML/Howto/Use_data_attributes
+/en-US/docs/Web/Guide/HTML/XHTML	/en-US/docs/Glossary/XHTML
 /en-US/docs/Web/Guide/Index	/en-US/docs/Web/Guide
 /en-US/docs/Web/Guide/Mobile/Separate_sites	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Guide/Needs_categorization/Functions_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
@@ -11896,7 +11899,6 @@
 /en-US/docs/Web/HTML/Canvas/Tutorial	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Web/HTML/Canvas/Tutorial/Basic_animations	/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
 /en-US/docs/Web/HTML/Content_Editable	/en-US/docs/Web/HTML/Global_attributes/contenteditable
-/en-US/docs/Web/HTML/Content_categories	/en-US/docs/Web/Guide/HTML/Content_categories
 /en-US/docs/Web/HTML/Controlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/Web/HTML/Controlling_spell_checking_in_HTML_formsControlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video	/en-US/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
@@ -11945,7 +11947,7 @@
 /en-US/docs/Web/HTML/Inline_elemente	/en-US/docs/Web/HTML/Inline_elements
 /en-US/docs/Web/HTML/Inline_elmements	/en-US/docs/Web/HTML/Inline_elements
 /en-US/docs/Web/HTML/Introduction	/en-US/docs/Learn/HTML/Introduction_to_HTML
-/en-US/docs/Web/HTML/Kinds_of_HTML_content	/en-US/docs/Web/Guide/HTML/Content_categories
+/en-US/docs/Web/HTML/Kinds_of_HTML_content	/en-US/docs/Web/HTML/Content_categories
 /en-US/docs/Web/HTML/Link_types/Link_types:_noopener	/en-US/docs/Web/HTML/Link_types/noopener
 /en-US/docs/Web/HTML/Manipulating_video_using_canvas	/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
 /en-US/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/en-US/docs/Glossary/speculative_parsing
