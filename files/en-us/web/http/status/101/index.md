@@ -22,7 +22,7 @@ indicate the protocol it switched to. The process is described in the following 
 
 ## Status
 
-```plain
+```http
 101 Switching Protocols
 ```
 

@@ -33,7 +33,7 @@ An object implementing `FormData` can directly be used in a {{jsxref("Statements
 - {{domxref("FormData.delete()")}}
   - : Deletes a key/value pair from a `FormData` object.
 - {{domxref("FormData.entries()")}}
-  - : Returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) iterates through all key/value pairs contained in the `FormData`.
+  - : Returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) that iterates through all key/value pairs contained in the `FormData`.
 - {{domxref("FormData.get()")}}
   - : Returns the first value associated with a given key from within a `FormData` object.
 - {{domxref("FormData.getAll()")}}
@@ -45,7 +45,7 @@ An object implementing `FormData` can directly be used in a {{jsxref("Statements
 - {{domxref("FormData.set()")}}
   - : Sets a new value for an existing key inside a `FormData` object, or adds the key/value if it does not already exist.
 - {{domxref("FormData.values()")}}
-  - : Returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) iterates through all values contained in the `FormData`.
+  - : Returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) that iterates through all values contained in the `FormData`.
 
 ## Specifications
 

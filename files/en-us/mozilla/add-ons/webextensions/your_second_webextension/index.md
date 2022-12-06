@@ -276,7 +276,7 @@ function listenForClicks() {
      * Get the active tab,
      * then call "beastify()" or "reset()" as appropriate.
      */
-    if (e.target.type = "reset") {
+    if (e.target.type === "reset") {
       browser.tabs
         .query({ active: true, currentWindow: true })
         .then(reset)

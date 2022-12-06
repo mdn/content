@@ -11717,32 +11717,6 @@
       "Mars"
     ]
   },
-  "MDN/Contribute/Howto": {
-    "modified": "2020-12-14T11:30:11.910Z",
-    "contributors": [
-      "sideshowbarker",
-      "justusromijn",
-      "khizarbhatti080",
-      "ExE-Boss",
-      "wbamberg",
-      "Sheppy",
-      "jswisher",
-      "klez",
-      "Brian102413"
-    ]
-  },
-  "MDN/Contribute/Howto/Update_the_CSS_JSON_DB": {
-    "modified": "2019-03-23T22:47:20.816Z",
-    "contributors": [
-      "wbamberg",
-      "Sebastianz",
-      "d4rkne55",
-      "mrstork",
-      "prayash",
-      "jswisher",
-      "teoli"
-    ]
-  },
   "MDN/Contribute/Processes": {
     "modified": "2020-09-30T15:17:09.733Z",
     "contributors": ["wbamberg", "david_ross", "jswisher", "Sheppy"]
@@ -11766,64 +11740,6 @@
       "alispivak",
       "Sheppy",
       "KadirTopal"
-    ]
-  },
-  "MDN/Tools": {
-    "modified": "2020-09-30T16:47:37.562Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "ExE-Boss",
-      "jswisher",
-      "Sheppy"
-    ]
-  },
-  "MDN/Tools/KumaScript": {
-    "modified": "2020-11-30T12:49:14.386Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "ExE-Boss",
-      "fscholz",
-      "wbamberg",
-      "AndreDea",
-      "jwhitlock",
-      "pcat",
-      "jswisher",
-      "Sebastianz",
-      "xfq",
-      "escattone",
-      "Sheppy",
-      "AFBarstow",
-      "florent.maitralain",
-      "maybe",
-      "trevorh",
-      "lmorchard",
-      "groovecoder",
-      "Nickolay",
-      "kscarfone",
-      "edymtt",
-      "ashish_dgp",
-      "ethertank",
-      "teoli",
-      "Inkbug",
-      "markg"
-    ]
-  },
-  "MDN/Tools/KumaScript/Troubleshooting": {
-    "modified": "2020-09-30T16:47:38.105Z",
-    "contributors": [
-      "chrisdavidmills",
-      "jwhitlock",
-      "wbamberg",
-      "asmforce",
-      "Sheppy",
-      "usernamealreadyis",
-      "jswisher",
-      "wyrewolwerowany",
-      "maybe",
-      "armukul",
-      "stephaniehobson"
     ]
   },
   "MDN/Writing_guidelines/Howto/Document_a_CSS_property": {
@@ -25551,17 +25467,6 @@
       "Puddingsan",
       "Sheppy",
       "fscholz"
-    ]
-  },
-  "Web/API/Constraint_validation": {
-    "modified": "2019-12-02T00:01:55.418Z",
-    "contributors": [
-      "perfmattersconf",
-      "estelle",
-      "Cuttsy27",
-      "cheyannagraham",
-      "jswisher",
-      "chrisdavidmills"
     ]
   },
   "Web/API/Contact_Picker_API": {
@@ -93813,18 +93718,6 @@
     "modified": "2020-12-14T00:30:29.082Z",
     "contributors": ["Sheppy", "steffix.h2", "shing0608"]
   },
-  "Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC": {
-    "modified": "2019-10-04T10:20:42.970Z",
-    "contributors": [
-      "Sheppy",
-      "fscholz",
-      "teoli",
-      "Sebastianz",
-      "Jeremie",
-      "Laurentj",
-      "jesup"
-    ]
-  },
   "Web/Guide/Audio_and_video_delivery": {
     "modified": "2020-12-11T05:27:12.652Z",
     "contributors": [
@@ -104742,42 +104635,6 @@
       "stav"
     ]
   },
-  "Web/JavaScript/About_JavaScript": {
-    "modified": "2020-03-12T19:35:23.320Z",
-    "contributors": [
-      "fscholz",
-      "dominicegginton",
-      "aplaskota",
-      "HMVisuality",
-      "Nooshu1234",
-      "chraiet",
-      "hadleyel",
-      "jsx",
-      "galambalazs",
-      "pierreneter",
-      "Saliene",
-      "Sheppy",
-      "xfq",
-      "claudepache",
-      "velvel53",
-      "ethertank",
-      "markg",
-      "Sonrisa",
-      "inma_610",
-      "Dhtmlkitchen@gmail.com",
-      "99corps",
-      "Cnmahj",
-      "MookyMa",
-      "Pd",
-      "George3",
-      "Dan Smith",
-      "Mgjbot",
-      "DavidCary",
-      "BenoitL",
-      "Hillman",
-      "Dria"
-    ]
-  },
   "Web/JavaScript/Closures": {
     "modified": "2020-12-11T05:04:54.583Z",
     "contributors": [
@@ -106515,33 +106372,6 @@
       "Marcoos",
       "Callek",
       "stav"
-    ]
-  },
-  "Web/JavaScript/Reference/About": {
-    "modified": "2020-03-12T19:36:12.835Z",
-    "contributors": [
-      "fscholz",
-      "Sheppy",
-      "kdex",
-      "ziyunfei",
-      "dbruant",
-      "arasbm",
-      "Huan",
-      "ethertank",
-      "Wladimir_Palant",
-      "jswisher",
-      "Vinícius Albuquerque",
-      "user01",
-      "Sevenspade",
-      "Cnmahj",
-      "BenoitL",
-      "Waldo",
-      "Nickolay",
-      "Mgjbot",
-      "Taken",
-      "George3",
-      "Marcoos",
-      "Dria"
     ]
   },
   "Web/JavaScript/Reference/Classes": {
@@ -111747,26 +111577,6 @@
       "evilpie",
       "Dikrib",
       "Sevenspade"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Date/toGMTString": {
-    "modified": "2020-10-25T02:22:44.250Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "SphinxKnight",
-      "Saem",
-      "jameshkramer",
-      "eduardoboucas",
-      "Mingun",
-      "Sheppy",
-      "sheshbabu",
-      "evilpie",
-      "Dikrib",
-      "Ptak82",
-      "Maian",
-      "Prodoc",
-      "Dria"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Date/toISOString": {
