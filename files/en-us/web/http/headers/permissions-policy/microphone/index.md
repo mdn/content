@@ -13,9 +13,7 @@ browser-compat: http.headers.Permissions-Policy.microphone
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The HTTP {{HTTPHeader("Permissions-Policy")}} header
-`microphone` directive controls whether the current document is allowed to
-use audio input devices.
+The HTTP {{HTTPHeader("Permissions-Policy")}} header `microphone` directive controls whether the current document is allowed to use audio input devices.
 
 Specifically, where a defined policy blocks use of this feature, {{domxref("MediaDevices.getUserMedia()")}} calls will return a {{jsxref("Promise")}}
 that rejects with a `NotAllowedError` {{domxref("DOMException")}}.
