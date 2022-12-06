@@ -74,7 +74,7 @@ h2.extra-spicy {
 
 #### Result
 
-{{EmbedLiveSample("Naming syntax")}}
+{{EmbedLiveSample("Using matching family names")}}
 
 ### Using the same identifier for multiple font-families example
 
