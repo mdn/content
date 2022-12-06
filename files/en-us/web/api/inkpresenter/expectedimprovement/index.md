@@ -15,7 +15,7 @@ browser-compat: api.InkPresenter.expectedImprovement
 
 {{APIRef("Ink API")}}{{SeeCompatTable}}
 
-The **`expectedImprovement`** read-only property of the {{domxref("InkPresenter")}} interface returns a value, in milliseconds, indicating the perceived latency improvements that can be expected using this presenter.
+The **`expectedImprovement`** read-only property of the {{domxref("InkPresenter")}} interface returns a value, in milliseconds, indicating the latency improvement that can be expected using this presenter.
 
 ### Value
 
