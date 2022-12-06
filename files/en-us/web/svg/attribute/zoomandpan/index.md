@@ -1,6 +1,7 @@
 ---
 title: zoomAndPan
 slug: Web/SVG/Attribute/zoomAndPan
+page-type: SVG Attribute
 tags:
   - Deprecated
   - SVG

@@ -1,6 +1,7 @@
 ---
 title: arabic-form
 slug: Web/SVG/Attribute/arabic-form
+page-type: SVG Attribute
 tags:
   - Deprecated
   - SVG

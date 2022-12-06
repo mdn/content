@@ -1,6 +1,7 @@
 ---
 title: mode
 slug: Web/SVG/Attribute/mode
+page-type: SVG Attribute
 tags:
   - Filters
   - SVG

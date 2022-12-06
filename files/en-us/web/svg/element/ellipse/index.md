@@ -1,6 +1,7 @@
 ---
 title: <ellipse>
 slug: Web/SVG/Element/ellipse
+page-type: SVG element
 tags:
   - Element
   - Reference

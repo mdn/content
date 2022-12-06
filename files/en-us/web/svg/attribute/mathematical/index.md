@@ -1,6 +1,7 @@
 ---
 title: mathematical
 slug: Web/SVG/Attribute/mathematical
+page-type: SVG Attribute
 tags:
   - Deprecated
   - SVG

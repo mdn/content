@@ -1,6 +1,7 @@
 ---
 title: markerWidth
 slug: Web/SVG/Attribute/markerWidth
+page-type: SVG Attribute
 tags:
   - NeedsExample
   - SVG

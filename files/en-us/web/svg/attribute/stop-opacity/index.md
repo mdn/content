@@ -1,6 +1,7 @@
 ---
 title: stop-opacity
 slug: Web/SVG/Attribute/stop-opacity
+page-type: SVG Attribute
 tags:
   - NeedsExample
   - SVG

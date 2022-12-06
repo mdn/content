@@ -1,6 +1,7 @@
 ---
 title: <pattern>
 slug: Web/SVG/Element/pattern
+page-type: SVG element
 tags:
   - Element
   - SVG

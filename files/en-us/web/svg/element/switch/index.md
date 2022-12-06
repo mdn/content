@@ -1,6 +1,7 @@
 ---
 title: <switch>
 slug: Web/SVG/Element/switch
+page-type: SVG element
 tags:
   - Element
   - NeedsExample

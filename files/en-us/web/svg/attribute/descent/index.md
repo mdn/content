@@ -1,6 +1,7 @@
 ---
 title: descent
 slug: Web/SVG/Attribute/descent
+page-type: SVG Attribute
 tags:
   - Deprecated
   - SVG

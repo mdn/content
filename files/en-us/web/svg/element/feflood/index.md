@@ -1,6 +1,7 @@
 ---
 title: <feFlood>
 slug: Web/SVG/Element/feFlood
+page-type: SVG element
 tags:
   - Element
   - SVG

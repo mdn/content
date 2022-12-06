@@ -1,6 +1,7 @@
 ---
 title: ascent
 slug: Web/SVG/Attribute/ascent
+page-type: SVG Attribute
 tags:
   - Deprecated
   - NeedsExample

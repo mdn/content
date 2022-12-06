@@ -1,6 +1,7 @@
 ---
 title: <feDisplacementMap>
 slug: Web/SVG/Element/feDisplacementMap
+page-type: SVG element
 tags:
   - Element
   - SVG

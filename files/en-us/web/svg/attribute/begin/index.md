@@ -1,6 +1,7 @@
 ---
 title: begin
 slug: Web/SVG/Attribute/begin
+page-type: SVG Attribute
 tags:
   - NeedsCompatTable
   - SVG

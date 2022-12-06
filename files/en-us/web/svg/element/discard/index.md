@@ -1,6 +1,7 @@
 ---
 title: <discard>
 slug: Web/SVG/Element/discard
+page-type: SVG element
 tags:
   - Element
   - NeedsExample

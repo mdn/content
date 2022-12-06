@@ -1,6 +1,7 @@
 ---
 title: stroke-dashoffset
 slug: Web/SVG/Attribute/stroke-dashoffset
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

@@ -1,6 +1,7 @@
 ---
 title: <symbol>
 slug: Web/SVG/Element/symbol
+page-type: SVG element
 tags:
   - SVG
   - SVG Container

@@ -1,6 +1,7 @@
 ---
 title: underline-position
 slug: Web/SVG/Attribute/underline-position
+page-type: SVG Attribute
 tags:
   - Attribute
   - Reference

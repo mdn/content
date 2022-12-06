@@ -1,6 +1,7 @@
 ---
 title: <feComposite>
 slug: Web/SVG/Element/feComposite
+page-type: SVG element
 tags:
   - Element
   - NeedsExample

@@ -1,6 +1,7 @@
 ---
 title: <feSpotLight>
 slug: Web/SVG/Element/feSpotLight
+page-type: SVG element
 tags:
   - Element
   - NeedsBrowserCompatibility

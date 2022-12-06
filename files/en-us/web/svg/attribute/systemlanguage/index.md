@@ -1,6 +1,7 @@
 ---
 title: systemLanguage
 slug: Web/SVG/Attribute/systemLanguage
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

@@ -1,6 +1,7 @@
 ---
 title: stdDeviation
 slug: Web/SVG/Attribute/stdDeviation
+page-type: SVG Attribute
 tags:
   - Filters
   - SVG

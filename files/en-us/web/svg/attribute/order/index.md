@@ -1,6 +1,7 @@
 ---
 title: order
 slug: Web/SVG/Attribute/order
+page-type: SVG Attribute
 tags:
   - Filters
   - SVG

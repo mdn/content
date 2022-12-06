@@ -1,6 +1,7 @@
 ---
 title: <script>
 slug: Web/SVG/Element/script
+page-type: SVG element
 tags:
   - Element
   - Reference

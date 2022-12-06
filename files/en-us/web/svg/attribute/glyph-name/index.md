@@ -1,6 +1,7 @@
 ---
 title: glyph-name
 slug: Web/SVG/Attribute/glyph-name
+page-type: SVG Attribute
 tags:
   - Deprecated
   - SVG

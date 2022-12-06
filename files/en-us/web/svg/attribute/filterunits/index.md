@@ -1,6 +1,7 @@
 ---
 title: filterUnits
 slug: Web/SVG/Attribute/filterUnits
+page-type: SVG Attribute
 tags:
   - NeedsExample
   - SVG

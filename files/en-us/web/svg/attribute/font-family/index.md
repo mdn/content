@@ -1,6 +1,7 @@
 ---
 title: font-family
 slug: Web/SVG/Attribute/font-family
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

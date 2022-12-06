@@ -1,6 +1,7 @@
 ---
 title: <feFuncB>
 slug: Web/SVG/Element/feFuncB
+page-type: SVG element
 tags:
   - Element
   - NeedsExample

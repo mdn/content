@@ -1,6 +1,7 @@
 ---
 title: amplitude
 slug: Web/SVG/Attribute/amplitude
+page-type: SVG Attribute
 tags:
   - NeedsCompatTable
   - SVG

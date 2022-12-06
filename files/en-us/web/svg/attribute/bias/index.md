@@ -1,6 +1,7 @@
 ---
 title: bias
 slug: Web/SVG/Attribute/bias
+page-type: SVG Attribute
 tags:
   - Filters
   - NeedsExample

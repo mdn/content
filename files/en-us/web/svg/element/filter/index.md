@@ -1,6 +1,7 @@
 ---
 title: <filter>
 slug: Web/SVG/Element/filter
+page-type: SVG element
 tags:
   - Element
   - Reference

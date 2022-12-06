@@ -1,6 +1,7 @@
 ---
 title: word-spacing
 slug: Web/SVG/Attribute/word-spacing
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

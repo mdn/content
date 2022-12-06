@@ -1,6 +1,7 @@
 ---
 title: xlink:href
 slug: Web/SVG/Attribute/xlink:href
+page-type: SVG Attribute
 tags:
   - NeedsCompatTable
   - SVG

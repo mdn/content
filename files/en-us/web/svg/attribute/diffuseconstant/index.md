@@ -1,6 +1,7 @@
 ---
 title: diffuseConstant
 slug: Web/SVG/Attribute/diffuseConstant
+page-type: SVG Attribute
 tags:
   - Filters
   - SVG

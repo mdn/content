@@ -1,6 +1,7 @@
 ---
 title: <metadata>
 slug: Web/SVG/Element/metadata
+page-type: SVG element
 tags:
   - Element
   - SVG

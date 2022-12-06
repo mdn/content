@@ -1,6 +1,7 @@
 ---
 title: <feTile>
 slug: Web/SVG/Element/feTile
+page-type: SVG element
 tags:
   - Element
   - NeedsBrowserCompatibility

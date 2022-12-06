@@ -1,6 +1,7 @@
 ---
 title: SVG Styling Attributes
 slug: Web/SVG/Attribute/Styling
+page-type: SVG Attribute
 tags:
   - Attribute
   - Beginner

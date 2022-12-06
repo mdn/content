@@ -1,6 +1,7 @@
 ---
 title: path
 slug: Web/SVG/Attribute/path
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

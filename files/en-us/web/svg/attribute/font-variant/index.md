@@ -1,6 +1,7 @@
 ---
 title: font-variant
 slug: Web/SVG/Attribute/font-variant
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

@@ -1,6 +1,7 @@
 ---
 title: <mpath>
 slug: Web/SVG/Element/mpath
+page-type: SVG element
 tags:
   - Element
   - NeedsExample

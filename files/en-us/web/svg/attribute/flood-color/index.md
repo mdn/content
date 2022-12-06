@@ -1,6 +1,7 @@
 ---
 title: flood-color
 slug: Web/SVG/Attribute/flood-color
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

@@ -1,6 +1,7 @@
 ---
 title: k1
 slug: Web/SVG/Attribute/k1
+page-type: SVG Attribute
 tags:
   - Filters
   - SVG

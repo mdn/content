@@ -1,6 +1,7 @@
 ---
 title: repeatDur
 slug: Web/SVG/Attribute/repeatDur
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

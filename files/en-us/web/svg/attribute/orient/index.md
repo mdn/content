@@ -1,6 +1,7 @@
 ---
 title: orient
 slug: Web/SVG/Attribute/orient
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attr

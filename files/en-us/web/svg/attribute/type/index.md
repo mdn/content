@@ -1,6 +1,7 @@
 ---
 title: type
 slug: Web/SVG/Attribute/type
+page-type: SVG Attribute
 tags:
   - NeedsCompatTable
   - NeedsExample

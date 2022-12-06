@@ -1,6 +1,7 @@
 ---
 title: pointsAtZ
 slug: Web/SVG/Attribute/pointsAtZ
+page-type: SVG Attribute
 tags:
   - Filters
   - SVG

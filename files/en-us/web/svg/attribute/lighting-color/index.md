@@ -1,6 +1,7 @@
 ---
 title: lighting-color
 slug: Web/SVG/Attribute/lighting-color
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

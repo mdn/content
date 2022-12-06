@@ -1,6 +1,7 @@
 ---
 title: min
 slug: Web/SVG/Attribute/min
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

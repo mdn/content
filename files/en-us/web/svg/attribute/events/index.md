@@ -1,6 +1,7 @@
 ---
 title: SVG Event Attributes
 slug: Web/SVG/Attribute/Events
+page-type: SVG Attribute
 tags:
   - Advanced
   - Attribute

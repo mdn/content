@@ -1,6 +1,7 @@
 ---
 title: SVG Core Attributes
 slug: Web/SVG/Attribute/Core
+page-type: SVG Attribute
 tags:
   - Attribute
   - Intermediate

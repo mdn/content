@@ -1,6 +1,7 @@
 ---
 title: seed
 slug: Web/SVG/Attribute/seed
+page-type: SVG Attribute
 tags:
   - Filters
   - SVG

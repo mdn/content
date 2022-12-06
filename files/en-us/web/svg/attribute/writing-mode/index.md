@@ -1,6 +1,7 @@
 ---
 title: writing-mode
 slug: Web/SVG/Attribute/writing-mode
+page-type: SVG Attribute
 tags:
   - NeedsExample
   - SVG

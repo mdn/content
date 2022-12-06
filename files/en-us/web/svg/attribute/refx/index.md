@@ -1,6 +1,7 @@
 ---
 title: refX
 slug: Web/SVG/Attribute/refX
+page-type: SVG Attribute
 tags:
   - NeedsBrowserCompatibility
   - NeedsExample

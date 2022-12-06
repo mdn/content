@@ -1,6 +1,7 @@
 ---
 title: <line>
 slug: Web/SVG/Element/line
+page-type: SVG element
 tags:
   - Element
   - Reference

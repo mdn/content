@@ -1,6 +1,7 @@
 ---
 title: radius
 slug: Web/SVG/Attribute/radius
+page-type: SVG Attribute
 tags:
   - Filters
   - NeedsExample

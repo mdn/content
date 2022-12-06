@@ -1,6 +1,7 @@
 ---
 title: x-height
 slug: Web/SVG/Attribute/x-height
+page-type: SVG Attribute
 tags:
   - Deprecated
   - SVG

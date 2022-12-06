@@ -1,6 +1,7 @@
 ---
 title: elevation
 slug: Web/SVG/Attribute/elevation
+page-type: SVG Attribute
 tags:
   - Filters
   - SVG

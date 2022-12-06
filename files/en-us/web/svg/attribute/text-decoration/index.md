@@ -1,6 +1,7 @@
 ---
 title: text-decoration
 slug: Web/SVG/Attribute/text-decoration
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

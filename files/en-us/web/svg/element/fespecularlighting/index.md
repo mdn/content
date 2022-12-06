@@ -1,6 +1,7 @@
 ---
 title: <feSpecularLighting>
 slug: Web/SVG/Element/feSpecularLighting
+page-type: SVG element
 tags:
   - Element
   - NeedsBrowserCompatibility

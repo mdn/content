@@ -1,6 +1,7 @@
 ---
 title: edgeMode
 slug: Web/SVG/Attribute/edgeMode
+page-type: SVG Attribute
 tags:
   - Filters
   - NeedsCompatTable

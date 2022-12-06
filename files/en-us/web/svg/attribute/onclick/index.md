@@ -1,6 +1,7 @@
 ---
 title: onclick
 slug: Web/SVG/Attribute/onclick
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

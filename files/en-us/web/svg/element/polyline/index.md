@@ -1,6 +1,7 @@
 ---
 title: <polyline>
 slug: Web/SVG/Element/polyline
+page-type: SVG element
 tags:
   - Element
   - Reference

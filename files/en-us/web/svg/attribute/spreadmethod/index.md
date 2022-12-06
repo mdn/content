@@ -1,6 +1,7 @@
 ---
 title: spreadMethod
 slug: Web/SVG/Attribute/spreadMethod
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

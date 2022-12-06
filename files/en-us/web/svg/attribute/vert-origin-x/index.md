@@ -1,6 +1,7 @@
 ---
 title: vert-origin-x
 slug: Web/SVG/Attribute/vert-origin-x
+page-type: SVG Attribute
 tags:
   - Deprecated
   - SVG

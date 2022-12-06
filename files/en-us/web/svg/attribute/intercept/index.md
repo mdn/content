@@ -1,6 +1,7 @@
 ---
 title: intercept
 slug: Web/SVG/Attribute/intercept
+page-type: SVG Attribute
 tags:
   - NeedsCompatTable
   - SVG

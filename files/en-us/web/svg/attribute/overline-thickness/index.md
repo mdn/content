@@ -1,6 +1,7 @@
 ---
 title: overline-thickness
 slug: Web/SVG/Attribute/overline-thickness
+page-type: SVG Attribute
 tags:
   - Attribute
   - Reference

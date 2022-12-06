@@ -1,6 +1,7 @@
 ---
 title: gradientUnits
 slug: Web/SVG/Attribute/gradientUnits
+page-type: SVG Attribute
 tags:
   - NeedsCompatTable
   - NeedsExample

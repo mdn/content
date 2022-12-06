@@ -1,6 +1,7 @@
 ---
 title: opacity
 slug: Web/SVG/Attribute/opacity
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

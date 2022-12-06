@@ -1,6 +1,7 @@
 ---
 title: accent-height
 slug: Web/SVG/Attribute/accent-height
+page-type: SVG Attribute
 tags:
   - Deprecated
   - NeedsExample

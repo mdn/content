@@ -1,6 +1,7 @@
 ---
 title: x2
 slug: Web/SVG/Attribute/x2
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

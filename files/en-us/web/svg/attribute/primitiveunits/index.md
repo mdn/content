@@ -1,6 +1,7 @@
 ---
 title: primitiveUnits
 slug: Web/SVG/Attribute/primitiveUnits
+page-type: SVG Attribute
 tags:
   - NeedsExample
   - SVG

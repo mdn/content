@@ -1,6 +1,7 @@
 ---
 title: fy
 slug: Web/SVG/Attribute/fy
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

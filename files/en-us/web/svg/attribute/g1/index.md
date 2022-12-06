@@ -1,6 +1,7 @@
 ---
 title: g1
 slug: Web/SVG/Attribute/g1
+page-type: SVG Attribute
 tags:
   - Deprecated
   - SVG

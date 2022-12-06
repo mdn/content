@@ -1,6 +1,7 @@
 ---
 title: tableValues
 slug: Web/SVG/Attribute/tableValues
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

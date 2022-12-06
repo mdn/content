@@ -1,6 +1,7 @@
 ---
 title: accumulate
 slug: Web/SVG/Attribute/accumulate
+page-type: SVG Attribute
 tags:
   - NeedsCompatTable
   - NeedsExample

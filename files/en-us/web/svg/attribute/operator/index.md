@@ -1,6 +1,7 @@
 ---
 title: operator
 slug: Web/SVG/Attribute/operator
+page-type: SVG Attribute
 tags:
   - Filters
   - NeedsCompatTable

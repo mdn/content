@@ -1,6 +1,7 @@
 ---
 title: <marker>
 slug: Web/SVG/Element/marker
+page-type: SVG element
 tags:
   - Element
   - SVG

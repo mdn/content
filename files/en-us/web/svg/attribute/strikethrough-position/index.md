@@ -1,6 +1,7 @@
 ---
 title: strikethrough-position
 slug: Web/SVG/Attribute/strikethrough-position
+page-type: SVG Attribute
 tags:
   - Attribute
   - Reference

@@ -1,6 +1,7 @@
 ---
 title: font-size
 slug: Web/SVG/Attribute/font-size
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

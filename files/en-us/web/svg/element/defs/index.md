@@ -1,6 +1,7 @@
 ---
 title: <defs>
 slug: Web/SVG/Element/defs
+page-type: SVG element
 tags:
   - SVG
   - SVG Container

@@ -1,6 +1,7 @@
 ---
 title: markerUnits
 slug: Web/SVG/Attribute/markerUnits
+page-type: SVG Attribute
 tags:
   - NeedsExample
   - SVG

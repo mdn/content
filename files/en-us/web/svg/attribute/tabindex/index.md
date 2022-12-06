@@ -1,6 +1,7 @@
 ---
 title: tabindex
 slug: Web/SVG/Attribute/tabindex
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

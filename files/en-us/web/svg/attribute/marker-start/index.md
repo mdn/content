@@ -1,6 +1,7 @@
 ---
 title: marker-start
 slug: Web/SVG/Attribute/marker-start
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

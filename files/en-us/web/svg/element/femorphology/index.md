@@ -1,6 +1,7 @@
 ---
 title: <feMorphology>
 slug: Web/SVG/Element/feMorphology
+page-type: SVG element
 tags:
   - Element
   - NeedsBrowserCompatibility

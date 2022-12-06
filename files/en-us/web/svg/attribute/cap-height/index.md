@@ -1,6 +1,7 @@
 ---
 title: cap-height
 slug: Web/SVG/Attribute/cap-height
+page-type: SVG Attribute
 tags:
   - Deprecated
   - SVG

@@ -1,6 +1,7 @@
 ---
 title: 'SVG attribute: crossorigin'
 slug: Web/SVG/Attribute/crossorigin
+page-type: SVG Attribute
 tags:
   - Advanced
   - Attribute

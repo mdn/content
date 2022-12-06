@@ -1,6 +1,7 @@
 ---
 title: keyPoints
 slug: Web/SVG/Attribute/keyPoints
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

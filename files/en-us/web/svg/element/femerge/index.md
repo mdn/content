@@ -1,6 +1,7 @@
 ---
 title: <feMerge>
 slug: Web/SVG/Element/feMerge
+page-type: SVG element
 tags:
   - Element
   - Reference

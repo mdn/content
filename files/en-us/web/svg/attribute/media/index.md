@@ -1,6 +1,7 @@
 ---
 title: media
 slug: Web/SVG/Attribute/media
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

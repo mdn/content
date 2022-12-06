@@ -1,6 +1,7 @@
 ---
 title: k
 slug: Web/SVG/Attribute/k
+page-type: SVG Attribute
 tags:
   - Deprecated
   - SVG

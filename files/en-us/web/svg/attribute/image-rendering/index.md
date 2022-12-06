@@ -1,6 +1,7 @@
 ---
 title: image-rendering
 slug: Web/SVG/Attribute/image-rendering
+page-type: SVG Attribute
 tags:
   - NeedsExample
   - SVG

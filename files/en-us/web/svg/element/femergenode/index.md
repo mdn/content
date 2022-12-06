@@ -1,6 +1,7 @@
 ---
 title: <feMergeNode>
 slug: Web/SVG/Element/feMergeNode
+page-type: SVG element
 tags:
   - Element
   - NeedsContent

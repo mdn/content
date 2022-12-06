@@ -1,6 +1,7 @@
 ---
 title: <cursor>
 slug: Web/SVG/Element/cursor
+page-type: SVG element
 tags:
   - Deprecated
   - Element

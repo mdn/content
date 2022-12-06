@@ -1,6 +1,7 @@
 ---
 title: numOctaves
 slug: Web/SVG/Attribute/numOctaves
+page-type: SVG Attribute
 tags:
   - Filters
   - SVG

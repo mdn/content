@@ -1,6 +1,7 @@
 ---
 title: gradientTransform
 slug: Web/SVG/Attribute/gradientTransform
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

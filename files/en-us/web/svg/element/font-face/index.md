@@ -1,6 +1,7 @@
 ---
 title: <font-face>
 slug: Web/SVG/Element/font-face
+page-type: SVG element
 tags:
   - Deprecated
   - Element

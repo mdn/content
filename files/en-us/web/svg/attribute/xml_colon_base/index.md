@@ -1,6 +1,7 @@
 ---
 title: xml:base
 slug: Web/SVG/Attribute/xml:base
+page-type: SVG Attribute
 tags:
   - Deprecated
   - SVG

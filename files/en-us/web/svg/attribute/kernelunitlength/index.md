@@ -1,6 +1,7 @@
 ---
 title: kernelUnitLength
 slug: Web/SVG/Attribute/kernelUnitLength
+page-type: SVG Attribute
 tags:
   - Filters
   - NeedsCompatTable

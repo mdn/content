@@ -1,6 +1,7 @@
 ---
 title: clip-rule
 slug: Web/SVG/Attribute/clip-rule
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

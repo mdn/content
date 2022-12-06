@@ -1,6 +1,7 @@
 ---
 title: vert-adv-y
 slug: Web/SVG/Attribute/vert-adv-y
+page-type: SVG Attribute
 tags:
   - Deprecated
   - SVG

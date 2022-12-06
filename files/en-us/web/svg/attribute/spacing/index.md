@@ -1,6 +1,7 @@
 ---
 title: spacing
 slug: Web/SVG/Attribute/spacing
+page-type: SVG Attribute
 tags:
   - NeedsExample
   - SVG

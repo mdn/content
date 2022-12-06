@@ -1,6 +1,7 @@
 ---
 title: <fePointLight>
 slug: Web/SVG/Element/fePointLight
+page-type: SVG element
 tags:
   - Element
   - Reference

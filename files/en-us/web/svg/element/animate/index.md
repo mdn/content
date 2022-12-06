@@ -1,6 +1,7 @@
 ---
 title: <animate>
 slug: Web/SVG/Element/animate
+page-type: SVG element
 tags:
   - Element
   - SVG

@@ -1,6 +1,7 @@
 ---
 title: <stop>
 slug: Web/SVG/Element/stop
+page-type: SVG element
 tags:
   - Element
   - Reference

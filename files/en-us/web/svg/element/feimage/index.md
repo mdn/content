@@ -1,6 +1,7 @@
 ---
 title: <feImage>
 slug: Web/SVG/Element/feImage
+page-type: SVG element
 tags:
   - Element
   - SVG

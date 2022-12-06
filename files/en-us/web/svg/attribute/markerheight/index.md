@@ -1,6 +1,7 @@
 ---
 title: markerHeight
 slug: Web/SVG/Attribute/markerHeight
+page-type: SVG Attribute
 tags:
   - NeedsExample
   - SVG

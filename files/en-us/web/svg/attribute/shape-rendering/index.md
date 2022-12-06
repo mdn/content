@@ -1,6 +1,7 @@
 ---
 title: shape-rendering
 slug: Web/SVG/Attribute/shape-rendering
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

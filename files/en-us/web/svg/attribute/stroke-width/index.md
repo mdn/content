@@ -1,6 +1,7 @@
 ---
 title: stroke-width
 slug: Web/SVG/Attribute/stroke-width
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

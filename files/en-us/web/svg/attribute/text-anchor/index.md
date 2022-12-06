@@ -1,6 +1,7 @@
 ---
 title: text-anchor
 slug: Web/SVG/Attribute/text-anchor
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

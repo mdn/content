@@ -1,6 +1,7 @@
 ---
 title: <polygon>
 slug: Web/SVG/Element/polygon
+page-type: SVG element
 tags:
   - Element
   - Reference

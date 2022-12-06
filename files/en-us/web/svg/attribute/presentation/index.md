@@ -1,6 +1,7 @@
 ---
 title: SVG Presentation Attributes
 slug: Web/SVG/Attribute/Presentation
+page-type: SVG Attribute
 tags:
   - Attribute
   - Beginner

@@ -1,6 +1,7 @@
 ---
 title: fill
 slug: Web/SVG/Attribute/fill
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

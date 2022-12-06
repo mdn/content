@@ -1,6 +1,7 @@
 ---
 title: stroke-dasharray
 slug: Web/SVG/Attribute/stroke-dasharray
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

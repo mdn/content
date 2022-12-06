@@ -1,6 +1,7 @@
 ---
 title: width
 slug: Web/SVG/Attribute/width
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

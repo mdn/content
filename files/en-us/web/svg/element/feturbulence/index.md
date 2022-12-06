@@ -1,6 +1,7 @@
 ---
 title: <feTurbulence>
 slug: Web/SVG/Element/feTurbulence
+page-type: SVG element
 tags:
   - Element
   - SVG

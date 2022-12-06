@@ -1,6 +1,7 @@
 ---
 title: viewTarget
 slug: Web/SVG/Attribute/viewTarget
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

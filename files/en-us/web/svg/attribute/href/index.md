@@ -1,6 +1,7 @@
 ---
 title: href
 slug: Web/SVG/Attribute/href
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

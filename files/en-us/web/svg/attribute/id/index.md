@@ -1,6 +1,7 @@
 ---
 title: id
 slug: Web/SVG/Attribute/id
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

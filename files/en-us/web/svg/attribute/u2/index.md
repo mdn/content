@@ -1,6 +1,7 @@
 ---
 title: u2
 slug: Web/SVG/Attribute/u2
+page-type: SVG Attribute
 tags:
   - Deprecated
   - SVG

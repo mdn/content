@@ -1,6 +1,7 @@
 ---
 title: <feBlend>
 slug: Web/SVG/Element/feBlend
+page-type: SVG element
 tags:
   - Element
   - SVG

@@ -1,6 +1,7 @@
 ---
 title: <clipPath>
 slug: Web/SVG/Element/clipPath
+page-type: SVG element
 tags:
   - Element
   - Reference

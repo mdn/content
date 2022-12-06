@@ -1,6 +1,7 @@
 ---
 title: <radialGradient>
 slug: Web/SVG/Element/radialGradient
+page-type: SVG element
 tags:
   - Element
   - SVG

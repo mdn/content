@@ -1,6 +1,7 @@
 ---
 title: <foreignObject>
 slug: Web/SVG/Element/foreignObject
+page-type: SVG element
 tags:
   - Element
   - Reference

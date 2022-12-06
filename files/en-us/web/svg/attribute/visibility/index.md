@@ -1,6 +1,7 @@
 ---
 title: visibility
 slug: Web/SVG/Attribute/visibility
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

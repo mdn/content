@@ -1,6 +1,7 @@
 ---
 title: <view>
 slug: Web/SVG/Element/view
+page-type: SVG element
 tags:
   - Element
   - NeedsExample

@@ -1,6 +1,7 @@
 ---
 title: z
 slug: Web/SVG/Attribute/z
+page-type: SVG Attribute
 tags:
   - Filters
   - SVG

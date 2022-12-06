@@ -1,6 +1,7 @@
 ---
 title: yChannelSelector
 slug: Web/SVG/Attribute/yChannelSelector
+page-type: SVG Attribute
 tags:
   - Filters
   - SVG

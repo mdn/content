@@ -1,6 +1,7 @@
 ---
 title: 'y'
 slug: Web/SVG/Attribute/y
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

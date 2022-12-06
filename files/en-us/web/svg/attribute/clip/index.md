@@ -1,6 +1,7 @@
 ---
 title: clip
 slug: Web/SVG/Attribute/clip
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

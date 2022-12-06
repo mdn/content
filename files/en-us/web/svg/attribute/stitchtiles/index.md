@@ -1,6 +1,7 @@
 ---
 title: stitchTiles
 slug: Web/SVG/Attribute/stitchTiles
+page-type: SVG Attribute
 tags:
   - Filters
   - SVG

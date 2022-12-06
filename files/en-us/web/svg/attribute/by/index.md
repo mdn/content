@@ -1,6 +1,7 @@
 ---
 title: by
 slug: Web/SVG/Attribute/by
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

@@ -1,6 +1,7 @@
 ---
 title: additive
 slug: Web/SVG/Attribute/additive
+page-type: SVG Attribute
 tags:
   - NeedsCompatTable
   - NeedsExample

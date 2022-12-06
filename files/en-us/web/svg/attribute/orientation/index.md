@@ -1,6 +1,7 @@
 ---
 title: orientation
 slug: Web/SVG/Attribute/orientation
+page-type: SVG Attribute
 tags:
   - Deprecated
   - SVG

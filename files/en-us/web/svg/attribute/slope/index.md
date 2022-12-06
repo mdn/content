@@ -1,6 +1,7 @@
 ---
 title: slope
 slug: Web/SVG/Attribute/slope
+page-type: SVG Attribute
 tags:
   - Deprecated
   - SVG

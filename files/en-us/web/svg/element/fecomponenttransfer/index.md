@@ -1,6 +1,7 @@
 ---
 title: <feComponentTransfer>
 slug: Web/SVG/Element/feComponentTransfer
+page-type: SVG element
 tags:
   - Element
   - SVG

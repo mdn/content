@@ -1,6 +1,7 @@
 ---
 title: <feGaussianBlur>
 slug: Web/SVG/Element/feGaussianBlur
+page-type: SVG element
 tags:
   - Element
   - SVG

@@ -1,6 +1,7 @@
 ---
 title: fr
 slug: Web/SVG/Attribute/fr
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

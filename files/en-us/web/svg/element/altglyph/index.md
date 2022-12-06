@@ -1,6 +1,7 @@
 ---
 title: <altGlyph>
 slug: Web/SVG/Element/altGlyph
+page-type: SVG element
 tags:
   - Deprecated
   - Element

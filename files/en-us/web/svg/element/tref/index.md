@@ -1,6 +1,7 @@
 ---
 title: <tref>
 slug: Web/SVG/Element/tref
+page-type: SVG element
 tags:
   - Element
   - Reference

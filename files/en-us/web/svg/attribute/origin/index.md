@@ -1,6 +1,7 @@
 ---
 title: origin
 slug: Web/SVG/Attribute/origin
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

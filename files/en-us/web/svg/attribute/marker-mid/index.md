@@ -1,6 +1,7 @@
 ---
 title: marker-mid
 slug: Web/SVG/Attribute/marker-mid
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

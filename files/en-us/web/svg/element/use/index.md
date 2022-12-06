@@ -1,6 +1,7 @@
 ---
 title: <use>
 slug: Web/SVG/Element/use
+page-type: SVG element
 tags:
   - Element
   - Reference

@@ -1,6 +1,7 @@
 ---
 title: specularConstant
 slug: Web/SVG/Attribute/specularConstant
+page-type: SVG Attribute
 tags:
   - Filters
   - SVG

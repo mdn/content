@@ -1,6 +1,7 @@
 ---
 title: filter
 slug: Web/SVG/Attribute/filter
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

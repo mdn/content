@@ -1,6 +1,7 @@
 ---
 title: horiz-origin-y
 slug: Web/SVG/Attribute/horiz-origin-y
+page-type: SVG Attribute
 tags:
   - Deprecated
   - SVG

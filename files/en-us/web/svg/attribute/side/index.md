@@ -1,6 +1,7 @@
 ---
 title: side
 slug: Web/SVG/Attribute/side
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

@@ -1,6 +1,7 @@
 ---
 title: clipPathUnits
 slug: Web/SVG/Attribute/clipPathUnits
+page-type: SVG Attribute
 tags:
   - SVG
   - SVG Attribute

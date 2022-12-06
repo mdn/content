@@ -1,6 +1,7 @@
 ---
 title: <feOffset>
 slug: Web/SVG/Element/feOffset
+page-type: SVG element
 tags:
   - Element
   - SVG

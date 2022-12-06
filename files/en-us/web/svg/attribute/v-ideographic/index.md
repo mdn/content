@@ -1,6 +1,7 @@
 ---
 title: v-ideographic
 slug: Web/SVG/Attribute/v-ideographic
+page-type: SVG Attribute
 tags:
   - Deprecated
   - SVG

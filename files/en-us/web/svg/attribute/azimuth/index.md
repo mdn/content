@@ -1,6 +1,7 @@
 ---
 title: azimuth
 slug: Web/SVG/Attribute/azimuth
+page-type: SVG Attribute
 tags:
   - Filters
   - SVG
