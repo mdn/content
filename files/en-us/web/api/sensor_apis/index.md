@@ -100,7 +100,9 @@ try {
 
 ### Permissions and Permissions Policy
 
-Sensor readings may not be taken unless the user grants permission to a specific sensor type. Do this using the [Permissions API](/en-US/docs/Web/API/Permissions_API). A brief example, shown below, requests permission before attempting to use the sensor.
+Sensor readings may not be taken unless the user grants permission to a specific sensor type using the [Permissions API](/en-US/docs/Web/API/Permissions_API) and/or if access is not blocked by the server {{httpheader('Permissions-Policy')}}.
+
+The example below shows how to request user-permission before attempting to use the sensor.
 
 ```js
 navigator.permissions.query({ name: "accelerometer" }).then((result) => {
