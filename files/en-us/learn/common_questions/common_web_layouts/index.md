@@ -65,7 +65,7 @@ These elements are quite common in all form factors, but they can be laid out di
 
 The real fun begins when you start mixing them all together:
 
-![Example of mixed layout: Main on top and asides beneath it side by side.](1-col-layout-alt.png) ![Example of a mixed layout: Main on the left column and asides stack on top of each other on the right column](2-col-layout-left-alt.png) ![Example of a mixed layout: one aside on the left column and main in the right column with a aside beneath main.](2-col-layout-mix.png) ![Example of a mixed layout: Main on the left of the first row and one aside on the right of that same row, a second aside covering the whole second row.](2-col-layout-mix-alt.png)…
+![Example of mixed layout: Main on top and asides beneath it side by side.](1-col-layout-alt.png) ![Example of a mixed layout: Main on the left column and asides stack on top of each other on the right column](2-col-layout-left-alt.png) ![Example of a mixed layout: one aside on the left column and main in the right column with an aside beneath main.](2-col-layout-mix.png) ![Example of a mixed layout: Main on the left of the first row and one aside on the right of that same row, a second aside covering the whole second row.](2-col-layout-mix-alt.png)…
 
 These are just examples and you're quite free to lay things out as you want. You may notice that, while the content can move around on the screen, we always keep the header (1) on top and the footer (2) at the bottom. Also, the main content (A) matters most, so give it most of the space.
 
