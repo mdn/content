@@ -17,37 +17,6 @@ The read-only **`valueMissing`** property of a **[`ValidityState`](/en-US/docs/W
 
 If the `required` attribute is set, and no {{HTMLElement("option")}} is selected or a `<textarea>` or user-editable `<input>` is empty, the `valueMissing` property will be `true`. The property is only `true` if the field is required and has no value; if the field is not required, or if the field is required and has a value, the value is `false`.
 
-## Examples
-
-Given the following:
-
-```html
-<p>
-  <label>
-    Enter a username:
-    <input type="text" name="username" required />
-  </label>
-</p>
-<p>
-  <label>
-    Enter your password:
-    <input type="password" name="password" required />
-  </label>
-</p>
-```
-
-```css
-input:invalid {
-  border: red solid 3px;
-}
-```
-
-{{EmbedLiveSample("Examples", 300, 200)}}
-
-Until text is entered into each of the above `<input>` elements each produce a `valueMissing` because the values are missing.
-
-If the form control is `required` but is empty, `validityState.valueMissing` will be `true`.
-
 ## Specifications
 
 {{Specifications}}
