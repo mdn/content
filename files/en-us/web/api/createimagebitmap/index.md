@@ -32,7 +32,7 @@ createImageBitmap(image, sx, sy, sw, sh, options)
 ### Parameters
 
 - `image`
-  - : An image source, which can any one of the following:
+  - : An image source, which can be any one of the following:
     - {{domxref("HTMLImageElement")}}
     - {{domxref("SVGImageElement")}}
     - {{domxref("HTMLVideoElement")}}
