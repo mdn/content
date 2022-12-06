@@ -42,7 +42,7 @@ Permissions-Policy: gamepad=(self "https://example.com")
 
 ### With an \<iframe> element
 
-FastCorp Inc. wants to disable `gamepad` for all cross-origin child frames, except for a specific \<iframe>.
+FastCorp Inc. wants to disable `gamepad` for all cross-origin child frames, except for a specific `<iframe>`.
 It can do so by delivering the following HTTP response header to define a Permissions Policy:
 
 ```http
