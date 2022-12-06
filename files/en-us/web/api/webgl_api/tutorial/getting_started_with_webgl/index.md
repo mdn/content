@@ -21,24 +21,42 @@ It's worth noting here that this series of articles introduces WebGL itself; how
 
 ## Preparing to render in 3D
 
-The first thing you need in order to use WebGL for rendering is a canvas. The HTML fragment below declares a canvas that our sample will draw into.
+First, create two new files:
+
+- "index.html"
+- "webgl-demo.js"
+
+The "index.html" file should contain the following:
 
 ```html
-<body>
-  <canvas id="glCanvas" width="640" height="480"></canvas>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WebGL Demo</title>
+    <script src="webgl-demo.js" type="module" defer></script>
+  </head>
+
+  <body>
+    <canvas id="glcanvas" width="640" height="480"></canvas>
+  </body>
+</html>
 ```
+
+Note that this declares a canvas that our sample will draw into.
 
 ### Preparing the WebGL context
 
-The `main()` function in our JavaScript code, is called when our script is loaded. Its purpose is to set up the WebGL context and start rendering content.
+Add the following code to the "webgl-demo.js" file:
 
 ```js
+main();
+
 //
 // start here
 //
 function main() {
-  const canvas = document.querySelector("#glCanvas");
+  const canvas = document.querySelector("#glcanvas");
   // Initialize the GL context
   const gl = canvas.getContext("webgl");
 
@@ -55,9 +73,9 @@ function main() {
   // Clear the color buffer with specified clear color
   gl.clear(gl.COLOR_BUFFER_BIT);
 }
-
-window.onload = main;
 ```
+
+The `main()` function is called when our script is loaded. Its purpose is to set up the WebGL context and start rendering content.
 
 The first thing we do here is obtain a reference to the canvas, assigning it to a variable named `canvas`.
 

@@ -415,7 +415,7 @@ This article has covered the older input types — the original set introduced i
 
 - [Your first form](/en-US/docs/Learn/Forms/Your_first_form)
 - [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
+- **Basic native form controls**
 - [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
 - [Other form controls](/en-US/docs/Learn/Forms/Other_form_controls)
 - [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
