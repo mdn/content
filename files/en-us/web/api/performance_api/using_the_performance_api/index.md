@@ -18,9 +18,7 @@ While a web application is running, the browser collects data that records vario
 
 The Performance API gives web developers access to these metrics, and also enables them to record their own custom metrics that are associated with various events or locations in the code.
 
-## Overview
-
-### Performance entries
+## Performance entries
 
 A single recorded performance metric is called a _performance entry_ and is represented by an instance of the {{domxref("PerformanceEntry")}} interface.
 
@@ -38,7 +36,7 @@ The Performance API records various different types of performance metric, and t
 - `"paint"` records key moments of rendering during page load
 - `"resource"` records how long it took the browser to fetch a resource
 
-#### Performance entry subclasses
+### Performance entry subclasses
 
 Particular entry types typically include extra type-specific data: for example, the `"resource"` type captures the time at which DNS lookup started and ended. So entries are represented by subclasses that extend the basic `PerformanceEntry` interface. For example, a `"resource"` entry is represented by an instance of {{domxref("PerformanceResourceTiming")}}, which inherits from `PerformanceEntry`, and which adds properties to record DNS lookup timestamps.
 
@@ -57,7 +55,7 @@ The following interfaces inherit from `PerformanceEntry`:
   - {{domxref("PerformanceNavigationTiming")}} inherits from `PerformanceResourceTiming`
 - {{domxref("TaskAttributionTiming")}}
 
-### Accessing performance entries
+## Accessing performance entries
 
 You can access performance entries in one of two ways. The preferred way is to use the {{domxref("PerformanceObserver")}} interface, which is constructed with a callback function to be called when particular performancer entries are recorded. You then call its {{domxref("PerformanceObserver.observe", "observe")}} method, passing in the types to observe:
 
@@ -96,11 +94,11 @@ The `PerformanceObserver` option is preferred because:
 - The `getEntries*` methods will always return all relevant entries since the start of the timeline, so if you call it twice, you will see the same entries again and will need to filter out entries that you've seen before.
 - Observer notifications are delivered asynchronously, so the browser can dispatch them during idle time to minimise their performance impact.
 
-## Performance entry types
+In the rest of this page we'll provide an overview of each of the entry types supported by the Performance API.
 
-In the next sections we'll provide an overview of each of the entry types supported by the Performance API.
+## `element`
 
-### `"event"`
+## `event`
 
 The `"event"` performance entry type measures the latency of DOM events in your application: that is, the time between a user triggering an event and the application updating in response. Event latency is important to perceived performance in part because events are often tied to user actions: a user does something in the application and an event handler runs in response, so slow event handlers make an application feel unresponsive. Research suggests that [100 milliseconds is about the point where actions no longer feel instantaneous](https://www.nngroup.com/articles/response-times-3-important-limits/).
 
@@ -122,7 +120,7 @@ Only event types that are triggered by user actions are recorded in the Performa
 
 Also, by default, only events whose duration exceeds 104 ms are recorded, although this threshold can be changed in the API.
 
-#### Example
+### Example
 
 In this example, we log the event target, delay, handler processing time, and total latency:
 
@@ -147,7 +145,15 @@ const observer = new PerformanceObserver(logEventDuration);
 observer.observe({ entryTypes: ["event"] });
 ```
 
-### `"mark"` and `"measure"`
+## `first-input`
+
+## `largest-contentful-paint`
+
+## `layout-shift`
+
+## `longtask`
+
+## `mark` and `measure`
 
 The `"mark"` and `"measure"` performance entry types enable developers to explicitly instrument their code, to record timing information for operations that don't necessarily map to any of the built-in timing metrics.
 
@@ -156,7 +162,7 @@ For example, you might want to measure how long it takes to log a user into the 
 - _marks_ record individual timestamps. To record a mark, call {{domxref("Performance.mark()")}}. The entry type associated with a mark is {{domxref("PerformanceMark")}}.
 - _measures_ record a measurement between two timestamps: the timestamps can be marks or any other timestamp. To record a mark, call {{domxref("Performance.measure()")}}. The entry type associated with a mark is {{domxref("PerformanceMeasure")}}.
 
-#### Example
+### Example
 
 In this example we record a mark when the user starts the login process, and take a measure when they finish:
 
@@ -172,3 +178,11 @@ loggedInUser.addEventListener("load", () => {
   performance.measure("login-duration", "start-login");
 });
 ```
+
+## `navigation`
+
+## `paint`
+
+## `resource`
+
+THe `"resource"` entry type measures how long it takes to load an external resource such as an image, video, script or iframe.
