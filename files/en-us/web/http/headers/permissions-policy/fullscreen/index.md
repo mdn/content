@@ -46,7 +46,7 @@ Permissions-Policy: fullscreen=(self "https://example.com")
 
 ### With an \<iframe> element
 
-FastCorp Inc. wants to disable `fullscreen` for all cross-origin child frames, except for a specific \<iframe>. It can do so by delivering the following HTTP response header to define a Permissions Policy:
+FastCorp Inc. wants to disable `fullscreen` for all cross-origin child frames, except for a specific `<iframe>`. It can do so by delivering the following HTTP response header to define a Permissions Policy:
 
 ```http
 Permissions-Policy: fullscreen=(self)
