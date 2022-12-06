@@ -31,7 +31,7 @@ The **`InkPresenter`** interface of the [Ink API](/en-US/docs/Web/API/Ink_API) p
 ## Instance methods
 
 - {{domxref("InkPresenter.updateInkTrailStartPoint", "updateInkTrailStartPoint()")}} {{Experimental_Inline}}
-  - : Indicates which {{domxref("PointerEvent")}} was used as the last rendering point for the current frame, allowing the OS-level compositor to render an ink trail between that and the next point in the next animation frame.
+  - : Passes the {{domxref("PointerEvent")}} that was used as the last rendering point for the current frame, allowing the OS-level compositor to render an ink trail between that and the next point in the next animation frame.
 
 ## Example
 
