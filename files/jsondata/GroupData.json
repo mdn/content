@@ -81,10 +81,21 @@
     },
     "Canvas API": {
       "overview": ["Canvas API"],
-      "guides": [
+      "guides": ["/docs/Web/API/Canvas_API/Manipulating_video_using_canvas"],
+      "tutorial": [
         "/docs/Web/API/Canvas_API/Tutorial",
-        "/docs/Web/API/Canvas_API/A_basic_ray-caster",
-        "/docs/Web/API/Canvas_API/Manipulating_video_using_canvas"
+        "/docs/Web/API/Canvas_API/Tutorial/Basic_usage",
+        "/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes",
+        "/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors",
+        "/docs/Web/API/Canvas_API/Tutorial/Drawing_text",
+        "/docs/Web/API/Canvas_API/Tutorial/Using_images",
+        "/docs/Web/API/Canvas_API/Tutorial/Transformations",
+        "/docs/Web/API/Canvas_API/Tutorial/Compositing",
+        "/docs/Web/API/Canvas_API/Tutorial/Basic_animations",
+        "/docs/Web/API/Canvas_API/Tutorial/Advanced_animations",
+        "/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas",
+        "/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas",
+        "/docs/Web/API/Canvas_API/Tutorial/Finale"
       ],
       "interfaces": [
         "CanvasGradient",

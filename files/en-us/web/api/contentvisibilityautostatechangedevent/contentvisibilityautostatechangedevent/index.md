@@ -9,7 +9,7 @@ tags:
 browser-compat: api.ContentVisibilityAutoStateChangedEvent.ContentVisibilityAutoStateChangedEvent
 ---
 
-{{APIRef("CSS Containment")}}{{seecompattable}}
+{{APIRef("CSS Containment")}}{{SeeCompatTable}}
 
 The **`ContentVisibilityAutoStateChangedEvent()`** constructor creates a new {{domxref("ContentVisibilityAutoStateChangedEvent")}} object instance.
 
