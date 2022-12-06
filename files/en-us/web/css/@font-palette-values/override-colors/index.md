@@ -44,7 +44,7 @@ The `override-colors` [descriptor](/en-US/docs/Glossary/Descriptor_(CSS)) takes 
 
 The color index is zero-based and any [color value](/en-US/docs/Web/CSS/color_value) can be used.
 
-For each key/value pair of index/color the color with the index in the specified [base-palette](/en-US/docs/Web/CSS/@font-palette-values/base-palette) will be overwritten. If the color font does not have a color at the specified index it will be ignored.
+For each key-value pair of index and color, the color with the index in the specified [base-palette](/en-US/docs/Web/CSS/@font-palette-values/base-palette) will be overwritten. If the color font does not have a color at the specified index, it will be ignored.
 
 ### Values
 
