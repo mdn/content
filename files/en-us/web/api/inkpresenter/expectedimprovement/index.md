@@ -24,9 +24,14 @@ A number.
 ## Example
 
 ```js
-const ink = navigator.ink;
-let presenter = await ink.requestPresenter({presentationArea: canvas});
-console.log(presenter.expectedImprovement);
+async function inkInit() {
+  const ink = navigator.ink;
+  let presenter = await ink.requestPresenter({presentationArea: canvas});
+  console.log(presenter.expectedImprovement);
+
+  //...
+
+}
 ```
 
 ## Specifications

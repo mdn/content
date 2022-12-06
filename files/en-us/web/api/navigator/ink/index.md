@@ -25,8 +25,13 @@ An {{domxref('Ink')}} object.
 ## Example
 
 ```js
-const ink = navigator.ink;
-let presenter = await ink.requestPresenter({presentationArea: canvas});
+async function inkInit() {
+  const ink = navigator.ink;
+  let presenter = await ink.requestPresenter({presentationArea: canvas});
+
+  //...
+
+}
 ```
 
 ## Specifications

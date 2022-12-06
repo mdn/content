@@ -14,7 +14,7 @@ browser-compat: api.Ink.requestPresenter
 
 {{APIRef("Ink API")}}{{SeeCompatTable}}
 
-The **`requestPresenter()`** method of the {{domxref("Ink")}} interface provides access to {{domxref("InkPresenter")}} objects for the application to use to render ink strokes.
+The **`requestPresenter()`** method of the {{domxref("Ink")}} interface returns a {{jsxref("Promise")}} that fulfills with an {{domxref("InkPresenter")}} object to handle rendering strokes.
 
 ## Syntax
 
@@ -35,14 +35,19 @@ A {{jsxref("Promise")}} that resolves to an {{domxref("InkPresenter")}} object i
 
 ### Exceptions
 
-- `Error`
+- `Error` {{domxref("DOMException")}}
   - : An error is thrown and the operation is aborted if `presentationArea` is not a valid {{domxref("Element")}}, or is not in the same document as the associated {{domxref("Ink")}} object.
 
 ## Example
 
 ```js
-const ink = navigator.ink;
-let presenter = await ink.requestPresenter({presentationArea: canvas});
+async function inkInit() {
+  const ink = navigator.ink;
+  let presenter = await ink.requestPresenter({presentationArea: canvas});
+
+  //...
+
+}
 ```
 
 ## Specifications

@@ -23,13 +23,18 @@ The **`Ink`** interface of the [Ink API](/en-US/docs/Web/API/Ink_API) provides a
 ## Instance methods
 
 - {{domxref("Ink.requestPresenter", "requestPresenter()")}} {{Experimental_Inline}}
-  - : Creates a new {{domxref("InkPresenter")}} object to handle rendering strokes.
+  - : Returns a {{jsxref("Promise")}} that fulfills with an {{domxref("InkPresenter")}} object to handle rendering strokes.
 
 ## Example
 
 ```js
-const ink = navigator.ink;
-let presenter = await ink.requestPresenter({presentationArea: canvas});
+async function inkInit() {
+  const ink = navigator.ink;
+  let presenter = await ink.requestPresenter({presentationArea: canvas});
+
+  //...
+
+}
 ```
 
 ## Specifications
