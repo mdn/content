@@ -41,7 +41,6 @@ The omnibox API provides the extension a way to customize the suggestions displa
 
 ## Events
 
-
 - {{WebExtAPIRef("omnibox.onDeleteSuggestion")}}
   - : Fired when the user deletes one of your extension's suggestions.
 - {{WebExtAPIRef("omnibox.onInputStarted")}}
