@@ -24,7 +24,8 @@ The omnibox API provides the extension a way to customize the suggestions displa
 3. Optionally, the extension can call {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}} to define the first suggestion that will be displayed in the address bar drop-down.
 4. As the user continues to type characters after this, the extension will get {{WebExtAPIRef("omnibox.onInputChanged")}} events. The event listener will be passed the current value the user has typed, and will be able to populate the address bar drop-down with suggestions. If the extension set a default suggestion using {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, then this will appear first in the drop-down.
 5. If the user accepts a suggestion, the extension will get an {{WebExtAPIRef("omnibox.onInputEntered")}} event. The event listener will be passed the accepted suggestion.
-6. If the user dismisses the drop-down, the extension will get an {{WebExtAPIRef("omnibox.onInputCancelled")}} event.
+6. If the user deletes a suggestion, the extension will get an {{WebExtAPIRef("omnibox.onDeleteSuggestion")}} event. The event listener will be passed the deleted suggestion.
+7. If the user dismisses the drop-down, the extension will get an {{WebExtAPIRef("omnibox.onInputCancelled")}} event.
 
 ## Types
 
@@ -40,6 +41,9 @@ The omnibox API provides the extension a way to customize the suggestions displa
 
 ## Events
 
+
+- {{WebExtAPIRef("omnibox.onDeleteSuggestion")}}
+  - : Fired when the user deletes one of your extension's suggestions.
 - {{WebExtAPIRef("omnibox.onInputStarted")}}
   - : Fired when the user focuses the address bar and types your extension's omnibox keyword, followed by a space.
 - {{WebExtAPIRef("omnibox.onInputChanged")}}
