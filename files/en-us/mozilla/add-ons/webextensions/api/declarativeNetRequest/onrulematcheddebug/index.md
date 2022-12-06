@@ -15,7 +15,7 @@ browser-compat: webextensions.api.declarativeNetRequest.onRuleMatchedDebug
 
 {{AddonSidebar()}}
 
-Fired when a rule is matched with a request. Only available for [temporarily loaded extensions](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) with the "declarativeNetRequestFeedback" permission, as this is intended for debugging purposes only.
+Fired when a rule is matched with a request. Only available for [temporarily loaded extensions](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) with the `"declarativeNetRequestFeedback"` permission, as this is intended for debugging purposes only.
 
 > **Note:** This API is available in Manifest V3 or higher.
 
