@@ -19,7 +19,7 @@ browser-compat: api.FeaturePolicy
 
 {{APIRef("Feature Policy")}}{{SeeCompatTable}}
 
-The `FeaturePolicy` interface represents the set of policies applied to the current execution context.
+The `FeaturePolicy` interface represents the set of [Permissions Policies](/en-US/docs/Web/HTTP/Permissions_Policy) applied to the current execution context.
 
 ## Instance methods
 
@@ -30,7 +30,7 @@ The `FeaturePolicy` interface represents the set of policies applied to the curr
 - {{DOMxRef("FeaturePolicy.allowedFeatures")}} {{Experimental_Inline}}
   - : Returns a list of names of all features supported by the User Agent and allowed by the Permissions Policy. Note that features appearing on this list might still be behind a user permission.
 - {{DOMxRef("FeaturePolicy.getAllowlistForFeature")}} {{Experimental_Inline}}
-  - : Returns the Allow list for the specified feature.
+  - : Returns the allow for the specified feature.
 
 ## Specifications
 

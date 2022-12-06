@@ -18,7 +18,7 @@ browser-compat: api.Gyroscope.y
 {{APIRef("Sensor API")}}
 
 The **`y`** read-only property of the
-{{domxref("Gyroscope")}} interface returns a double precision integer containing the
+{{domxref("Gyroscope")}} interface returns a number specifying the
 angular velocity of the device along its y-axis.
 
 ## Value

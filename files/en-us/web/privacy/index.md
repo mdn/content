@@ -143,8 +143,6 @@ There are several web technologies and features at play to manage privacy and se
   </tbody>
 </table>
 
-Not all of these are generally directly used within code; notably, the [Permissions API](/en-US/docs/Web/API/Permissions_API), [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), and the {{htmlattrxref("allow", "iframe")}} attribute on {{HTMLElement("iframe")}} elements are primary tools directly used by code to help secure a site and its content.
-
 ## Keeping personal data safe
 
 ## Managing site permissions

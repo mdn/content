@@ -14,7 +14,7 @@ browser-compat: api.FeaturePolicy.getAllowlistForFeature
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
 The **`getAllowlistForFeature()`**
-method of the {{DOMxRef("FeaturePolicy")}} interface enables querying of the allow list for a specific feature for the current Permissions Policy.
+method of the {{DOMxRef("FeaturePolicy")}} interface enables querying of the allowlist for a specific feature for the current Permissions Policy.
 
 ## Syntax
 
@@ -30,7 +30,7 @@ A specific feature name must be specified.
 
 ### Return value
 
-An [Allow list](/en-US/docs/Web/HTTP/Permissions_Policy/#allowlists) for the
+An [allowlist](/en-US/docs/Web/HTTP/Permissions_Policy/#allowlists) for the
 specified feature.
 
 ## Errors
@@ -45,10 +45,10 @@ The following example prints all the origins that are allowed to use Camera API 
 Permissions Policy. Please note that Camera API might also be restricted by the [Permissions API](/en-US/docs/Web/API/Permissions_API), if the user did not grant the corresponding permission.
 
 ```js
-// First, get the Permissions Policy object
+// First, get the FeaturePolicy object
 const featurePolicy = document.featurePolicy
 
-// Then query feature for specific
+// Query for specific feature
 const allowlist = featurePolicy.getAllowlistForFeature("camera")
 
 for (const origin of allowlist) {

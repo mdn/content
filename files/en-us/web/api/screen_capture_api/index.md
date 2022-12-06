@@ -90,7 +90,7 @@ The following dictionaries are defined by the Screen Capture API.
 <iframe allow="display-capture" src="/some-other-document.html">…</iframe>
 ```
 
-The default allow list is `self`, which lets any content within the same origin use Screen Capture.
+The default allowlist is `self`, which lets any content within the same origin use Screen Capture.
 
 ## Specifications
 

@@ -20,7 +20,7 @@ Specifically, where a defined policy blocks usage of this feature:
 
 - {{DOMxRef("XRSystem/isSessionSupported","navigator.xr.isSessionSupported()")}} and {{DOMxRef("XRSystem/requestSession","navigator.xr.requestSession()")}} calls will return a {{jsxref("Promise")}} that rejects with a {{domxref("DOMException")}} of type `SecurityError`.
 
-- {{domxref("MediaDevices/devicechange_event", "devicechange")}} events are not fired on the {{DOMxRef("Navigator.xr","navigator.xr")}} object.
+- {{domxref("XRSystem/devicechange_event", "devicechange")}} events are not fired on the {{DOMxRef("Navigator.xr","navigator.xr")}} object.
 
 ## Syntax
 

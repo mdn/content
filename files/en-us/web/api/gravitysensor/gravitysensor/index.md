@@ -49,9 +49,7 @@ new GravitySensor(options)
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy). 
-     This indicates that use of this code is inconsistent with the policies set on your server.
-    This is not something that would ever be shown to a user. Our [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) article contains implementation instructions.
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ## Specifications
 

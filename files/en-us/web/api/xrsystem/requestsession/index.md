@@ -85,8 +85,7 @@ following:
     specified `sessionMode`; this can also be thrown if any of the
     _required_ options are unsupported.
 - `SecurityError` {{domxref("DOMException")}}
-  - : Returned if permission to enter the specified XR mode is denied. This can happen for a number
-    of reasons, which are covered in more detail in [Permissions and security](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security).
+  - : Returned if permission to enter the specified XR mode is denied. This can happen for several reasons, which are covered in more detail in [Permissions and security](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security).
 
 ## Session features
 

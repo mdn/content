@@ -18,8 +18,6 @@ The HTTP {{HTTPHeader("Permissions-Policy")}} header **`screen-wake-lock`** dire
 
 Specifically, where a defined policy blocks use of this feature, {{domxref("WakeLock.request()")}} calls will return a {{jsxref("Promise")}} that rejects with a {{domxref("DOMException")}} of type `NotAllowedError`.
 
-> **Note:** In earlier specification drafts this directive was called `wake-lock`.
-
 ## Syntax
 
 ```http

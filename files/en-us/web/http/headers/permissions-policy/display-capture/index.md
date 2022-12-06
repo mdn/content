@@ -15,7 +15,7 @@ browser-compat: http.headers.Permissions-Policy.display-capture
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `display-capture` directive controls whether or not the document is permitted to use [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API), that is, {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} to capture the screen's contents.
 
-If `display-capture` is disabled in a document, the document will not be able to initiate screen capture via {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}.
+If `display-capture` is disabled in a document, the document will not be able to initiate screen capture via {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} and will throw a `NotAllowedError` exception.
 
 ## Syntax
 

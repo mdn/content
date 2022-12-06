@@ -52,7 +52,7 @@ Permissions-Policy: <directive> <allowlist>
 
     > **Note:** Directives have a default allowlist, which is always one of `*`, `self`, or `none` for the `Permissions-Policy` HTTP header, and governs the default behavior if they are not explicitly listed in a policy. These are specified on the individual [directive reference pages](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#directives). For `<iframe>` `allow` attributes , the default behavior is always `src`.
 
-Chrome 108 introduced the ability to include wildcards in Permissions Policy origins. This means that instead of having to explicitly specify several different subdomains in an allowlist, you can specify them all in a single origin with a wildcard.
+Where supported, you can include wildcards in Permissions Policy origins. This means that instead of having to explicitly specify several different subdomains in an allowlist, you can specify them all in a single origin with a wildcard.
 
 So instead of
 
@@ -67,98 +67,6 @@ You can specify
 ```
 
 > **Note:** `"https://*.example.com"` does not match `"https://example.com"`.
-
-## Examples
-
-### Basic usage
-
-#### Permissions-Policy header
-
-To allow all origins access to geolocation, you would do this:
-
-```http
-Permissions-Policy: geolocation=*
-```
-
-Or to allow access to a subset of origins, you'd do this:
-
-```http
-Permissions-Policy: geolocation=(self "https://a.example.com" "https://b.example.com")
-```
-
-Several features can be controlled at the same time by sending the header with a comma-separated list of policies, or by sending a separate header for each policy.
-
-For example, the following are equivalent:
-
-```http
-Permissions-Policy: picture-in-picture=(), geolocation=(self https://example.com), camera=*;
-
-Permissions-Policy: picture-in-picture=()
-Permissions-Policy: geolocation=(self https://example.com)
-Permissions-Policy: camera=*
-```
-
-#### iframes
-
-To allow all origins access to geolocation, you would do this:
-
-```html
-<iframe src="https://example.com" allow="geolocation *">
-```
-
-To apply a policy to the current origin and others, you'd do this:
-
-```html
-<iframe src="https://example.com" allow="geolocation 'self' https://a.example.com https://b.example.com">
-```
-
-This is important: By default, if an `<iframe>` navigates to another origin, the policy is not applied to the origin that the `<iframe>` navigates to. By listing the origin that the `<iframe>` navigates to in the `allow` attribute, the Permissions Policy that was applied to the original `<iframe>` will be applied to the origin the `<iframe>` navigates to.
-
-Several features can be controlled at the same time by including a semi-colon-separated list of policy directives inside the `allow` attribute.
-
-```html
-<iframe src="https://example.com" allow="geolocation 'self' https://a.example.com https://b.example.com; fullscreen 'none'">
-```
-
-It is worth giving the `src` value a special mention. We mentioned above that using this allowlist value will mean that the associated feature will be allowed in this `<iframe>`, as long as the document loaded into it comes from the same origin as the URL in its {{HTMLElement('iframe','src','#Attributes')}} attribute. This value is the _default_ `allowlist` value for features listed in `allow`, so the following are equivalent:
-
-```html
-<iframe src="https://example.com" allow="geolocation 'src'">
-
-<iframe src="https://example.com" allow="geolocation">
-```
-
-### Denying access to powerful features
-
-SecureCorp Inc. wants to disable Microphone and Geolocation APIs in its application. It can do so using the following response header:
-
-```http
-Permissions-Policy: microphone=(), geolocation=()
-```
-
-By specifying `()` for the origin list, the specified features will be disabled for all browsing contexts (this includes all `<iframe>`s), regardless of their origin.
-
-### Combining HTTP header and `<iframe>` policies
-
-As mentioned above, for an `<iframe>` to have a feature enabled its allowed origin must also be in the allowlist for the parent page. Because of this inheritance behavior, it is a good idea to specify the widest acceptable support for a feature in the HTTP header, and then specify the subset of support you need in each `<iframe>`.
-
-For example, let's say that we wanted to enable geolocation usage on our own origin, and in embedded content coming from our trusted ad network. We could set up the page-wide Permissions Policy like this:
-
-```http
-Permissions-Policy: geolocation=(self https://trusted-ad-network.com)
-```
-
-Over in our ad `<iframe>`s, we could set access to the `https://trusted-ad-network.com` origin like this:
-
-```html
-<iframe src="https://trusted-ad-network.com" allow="geolocation">
-```
-
-If a different origin ended up getting loaded into `<iframe>`, it would not have access to geolocation:
-
-```html
-<iframe src="https://rogue-origin-example.com" allow="geolocation">
-```
 
 ## Directives
 
@@ -246,6 +154,98 @@ If a different origin ended up getting loaded into `<iframe>`, it would not have
 
 - {{httpheader("Permissions-Policy/xr-spatial-tracking", "xr-spatial-tracking")}} {{Experimental_Inline}}
   - : Controls whether or not the current document is allowed to use the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) to interact with a WebXR session.
+
+## Examples
+
+### Basic usage
+
+#### Permissions-Policy header
+
+To allow all origins access to geolocation, you would do this:
+
+```http
+Permissions-Policy: geolocation=*
+```
+
+Or to allow access to a subset of origins, you'd do this:
+
+```http
+Permissions-Policy: geolocation=(self "https://a.example.com" "https://b.example.com")
+```
+
+Several features can be controlled at the same time by sending the header with a comma-separated list of policies, or by sending a separate header for each policy.
+
+For example, the following are equivalent:
+
+```http
+Permissions-Policy: picture-in-picture=(), geolocation=(self https://example.com), camera=*;
+
+Permissions-Policy: picture-in-picture=()
+Permissions-Policy: geolocation=(self https://example.com)
+Permissions-Policy: camera=*
+```
+
+#### iframes
+
+For an `<iframe>` to have a feature enabled its allowed origin must also be in the allowlist for the parent page. Because of this [inheritance behavior](/en-US/docs/Web/HTTP/Permissions_Policy#inheritance_of_policies_for_embedded_content), it is a good idea to specify the widest acceptable support for a feature in the HTTP header, and then specify the subset of support you need in each `<iframe>`.
+
+To allow all origins access to geolocation, you would do this:
+
+```html
+<iframe src="https://example.com" allow="geolocation *">
+```
+
+To apply a policy to the current origin and others, you'd do this:
+
+```html
+<iframe src="https://example.com" allow="geolocation 'self' https://a.example.com https://b.example.com">
+```
+
+This is important: By default, if an `<iframe>` navigates to another origin, the policy is not applied to the origin that the `<iframe>` navigates to. By listing the origin that the `<iframe>` navigates to in the `allow` attribute, the Permissions Policy that was applied to the original `<iframe>` will be applied to the origin the `<iframe>` navigates to.
+
+Several features can be controlled at the same time by including a semi-colon-separated list of policy directives inside the `allow` attribute.
+
+```html
+<iframe src="https://example.com" allow="geolocation 'self' https://a.example.com https://b.example.com; fullscreen 'none'">
+```
+
+It is worth giving the `src` value a special mention. We mentioned above that using this allowlist value will mean that the associated feature will be allowed in this `<iframe>`, as long as the document loaded into it comes from the same origin as the URL in its {{HTMLElement('iframe','src','#Attributes')}} attribute. This value is the _default_ `allowlist` value for features listed in `allow`, so the following are equivalent:
+
+```html
+<iframe src="https://example.com" allow="geolocation 'src'">
+
+<iframe src="https://example.com" allow="geolocation">
+```
+
+### Denying access to powerful features
+
+SecureCorp Inc. wants to disable Microphone (for example {{domxref("MediaDevices.getUserMedia()")}}) and {{domxref("Geolocation")}} APIs in its application. It can do so using the following response header:
+
+```http
+Permissions-Policy: microphone=(), geolocation=()
+```
+
+By specifying `()` for the origin list, the specified features will be disabled for all browsing contexts (this includes all `<iframe>`s), regardless of their origin.
+
+### Combining HTTP header and `<iframe>` policies
+
+For example, let's say that we wanted to enable geolocation usage on our own origin, and in embedded content coming from our trusted ad network. We could set up the page-wide Permissions Policy like this:
+
+```http
+Permissions-Policy: geolocation=(self https://trusted-ad-network.com)
+```
+
+Over in our ad `<iframe>`s, we could set access to the `https://trusted-ad-network.com` origin like this:
+
+```html
+<iframe src="https://trusted-ad-network.com" allow="geolocation">
+```
+
+If a different origin ended up getting loaded into `<iframe>`, it would not have access to geolocation:
+
+```html
+<iframe src="https://rogue-origin-example.com" allow="geolocation">
+```
 
 ## Specifications
 

@@ -43,17 +43,13 @@ information about the battery's state.
 
 This method doesn't throw true exceptions; instead, it rejects the returned promise, passing into it a {{domxref("DOMException")}} whose `name` is one of the following:
 
+- `NotAllowedError` {{domxref("DOMException")}}
+
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+
 - `SecurityError`
 
-  - : The User Agent does not expose battery information to insecure contexts and this method was called from insecure context.
-
-    > **Note:** Old versions of some User Agents might allow use of this feature in insecure contexts.
-
-- `NotAllowedError`
-
-  - : No User Agent currently throws this exception, but the specification describes the following behaviors:
-    > This document is not allowed to use this feature.
-    > For example, it might not be explicitly allowed or restricted via {{HTTPHeader("Permissions-Policy")}} {{HTTPHeader("Permissions-Policy/battery", "battery")}} feature.
+  - : The User Agent does not expose battery information to insecure contexts and this method was called from an insecure context.
 
 ## Examples
 

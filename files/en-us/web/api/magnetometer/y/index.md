@@ -19,7 +19,7 @@ browser-compat: api.Magnetometer.y
 {{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`y`** read-only property of the
-{{domxref("Magnetometer")}} interface returns a double precision integer containing
+{{domxref("Magnetometer")}} interface returns a number specifying
 the magnetic field around the device's y-axis.
 
 ## Value

@@ -22,6 +22,11 @@ document, as used by the [same-origin policy](/en-US/docs/Web/Security/Same-orig
 
 A string.
 
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+
 ## Examples
 
 ### Getting the domain
