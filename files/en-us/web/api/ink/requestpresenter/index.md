@@ -26,7 +26,7 @@ requestPresenter(param)
 
 - `param` {{optional_inline}}
   - : An `InkPresenterParam` object that contains the following property:
-    - `presentationArea`
+    - `presentationArea` {{optional_inline}}
       - : An {{domxref("Element")}} inside which rendering of ink strokes is confined (the element's border box, to be precise). If `param` is not included, or `presentationArea` is set to `null`, ink rendering is confined to the containing viewport by default.
 
 ### Return value
