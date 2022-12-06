@@ -93914,50 +93914,6 @@
       "ethertank"
     ]
   },
-  "Web/Guide/HTML/Content_categories": {
-    "modified": "2020-10-18T10:42:38.994Z",
-    "contributors": [
-      "mfuji09",
-      "arshadrr",
-      "alattalatta",
-      "kenj115188",
-      "andryanmiller",
-      "madmadi",
-      "chrisdavidmills",
-      "instructorc",
-      "unclesamnumberone",
-      "Tigt",
-      "Sheppy",
-      "VynceMontgomery",
-      "SphinxKnight",
-      "lovefield",
-      "vichavens",
-      "Fizco",
-      "anubes19",
-      "knod",
-      "marie-ototoi",
-      "teoli",
-      "Aleksej",
-      "markg",
-      "Aslam.Sayyed",
-      "Jeremie",
-      "systemovich",
-      "kscarfone",
-      "ethertank",
-      "moreati",
-      "Potappo",
-      "keoki.zee",
-      "bashkas",
-      "MatrixFrog",
-      "xaky",
-      "fscholz",
-      "jswisher"
-    ]
-  },
-  "Web/Guide/HTML/XHTML": {
-    "modified": "2020-05-04T01:55:36.323Z",
-    "contributors": ["mfuji09", "sideshowbarker"]
-  },
   "Web/Guide/Houdini": {
     "modified": "2020-07-16T03:51:08.991Z",
     "contributors": [
@@ -94663,6 +94619,46 @@
       "myakura",
       "Sephr",
       "louisremi"
+    ]
+  },
+  "Web/HTML/Content_categories": {
+    "modified": "2020-10-18T10:42:38.994Z",
+    "contributors": [
+      "mfuji09",
+      "arshadrr",
+      "alattalatta",
+      "kenj115188",
+      "andryanmiller",
+      "madmadi",
+      "chrisdavidmills",
+      "instructorc",
+      "unclesamnumberone",
+      "Tigt",
+      "Sheppy",
+      "VynceMontgomery",
+      "SphinxKnight",
+      "lovefield",
+      "vichavens",
+      "Fizco",
+      "anubes19",
+      "knod",
+      "marie-ototoi",
+      "teoli",
+      "Aleksej",
+      "markg",
+      "Aslam.Sayyed",
+      "Jeremie",
+      "systemovich",
+      "kscarfone",
+      "ethertank",
+      "moreati",
+      "Potappo",
+      "keoki.zee",
+      "bashkas",
+      "MatrixFrog",
+      "xaky",
+      "fscholz",
+      "jswisher"
     ]
   },
   "Web/HTML/Date_and_time_formats": {
