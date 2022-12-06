@@ -1,6 +1,6 @@
 ---
 title: Content categories
-slug: Web/Guide/HTML/Content_categories
+slug: Web/HTML/Content_categories
 tags:
   - Advanced
   - Guide
@@ -8,6 +8,8 @@ tags:
   - NeedsUpdate
   - Web
 ---
+
+{{HTMLSidebar}}
 
 Most [HTML](/en-US/docs/Web/HTML) elements are a member of one or more **content categories** — these categories group elements that share common characteristics. This is a loose grouping (it doesn't actually create a relationship among elements of these categories), but they help define and describe the categories' shared behavior and their associated rules, especially when you come upon their intricate details. It's also possible for elements to not be a member of _any_ of these categories.
 
@@ -25,7 +27,7 @@ There are three types of content categories:
 
 ### Metadata content
 
-Elements belonging to the _metadata content_ category modify the presentation or the behavior of the rest of the document, set up links to other documents, or convey other _out of band_ information.
+Elements belonging to the _metadata content_ category modify the presentation or the behavior of the rest of the document, set up links to other documents, or convey other _out-of-band_ information.
 
 Elements belonging to this category are {{HTMLElement("base")}}, {{HTMLElement("command")}} {{deprecated_inline}}, {{HTMLElement("link")}}, {{HTMLElement("meta")}}, {{HTMLElement("noscript")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} and {{HTMLElement("title")}}.
 
