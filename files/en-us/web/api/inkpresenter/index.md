@@ -24,7 +24,7 @@ The **`InkPresenter`** interface of the [Ink API](/en-US/docs/Web/API/Ink_API) p
 ## Instance properties
 
 - {{domxref("InkPresenter.expectedImprovement", "expectedImprovement")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : Returns a value, in milliseconds, indicating the perceived latency improvements that can be expected using this presenter.
+  - : Returns a value, in milliseconds, indicating the latency improvement that can be expected using this presenter.
 - {{domxref("InkPresenter.presentationArea", "presentationArea")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Element")}} inside which rendering of ink strokes is confined.
 
