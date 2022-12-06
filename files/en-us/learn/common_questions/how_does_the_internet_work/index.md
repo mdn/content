@@ -9,7 +9,7 @@ tags:
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
 
-This article discusses what the Internet is and how it works.
+This article discusses what is the Internet and how it works.
 
 <table>
   <tbody>
