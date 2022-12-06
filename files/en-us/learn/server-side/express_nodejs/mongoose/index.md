@@ -568,7 +568,7 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 10. From the Cluster0 _Overview_ screen click the **Connect** button.
     ![Configure connection after setting up a cluster in MongoDB Atlas.](mongodb_atlas_-_connectbutton.jpg)
 
-11. This will open the _Connect to Cluster_ screen. Click the **Connect your application** option.
+11. This will open the _Connect to Cluster_ screen. Click the **Connect to your application** - **MongoDB Drivers** option.
     ![Choose a connection type when connecting with MongoDB Atlas.](mongodb_atlas_-_chooseaconnectionmethod.jpg)
 
 12. You will now be shown the _Connect_ screen.
