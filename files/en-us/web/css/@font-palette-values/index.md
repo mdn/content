@@ -30,11 +30,11 @@ The [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/dashed-ident) is a user defined i
 ### Descriptors
 
 - [font-family](/en-US/docs/Web/CSS/@font-palette-values/font-family)
-  - : Specifies the name of the font family, that this palette can be applied to.
+  - : Specifies the name of the font family that this palette can be applied to.
 - [base-palette](/en-US/docs/Web/CSS/@font-palette-values/base-palette)
-  - : Specifies the name or index of the base-palette to use.
+  - : Specifies the name or index of the base-palette, created by the font-maker, to use.
 - [override-colors](/en-US/docs/Web/CSS/@font-palette-values/override-colors)
-  - : Specifies the colors to override, this is a comma separated list with color index and new value.
+  - : Specifies the colors in the base palette to override.
 
 ## Formal definition
 
