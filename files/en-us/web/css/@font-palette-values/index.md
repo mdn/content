@@ -12,7 +12,7 @@ browser-compat: css.at-rules.font-palette-values
 
 {{CSSRef}}
 
-The **`@font-palette-values`** allows a user to defined a [font-palette](/en-US/docs/Web/CSS/font-palette) which can be used to change the default colors within a **Color Font**.
+The **`@font-palette-values`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) allows you to customize the default values of [font-palette](/en-US/docs/Web/CSS/font-palette) created by the font-maker.
 
 ## Syntax
 
