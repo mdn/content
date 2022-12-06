@@ -24,9 +24,11 @@ The extension's {{WebExtAPIRef("omnibox.onInputChanged")}} event listener is pas
 Values of this type are objects. They have the following properties:
 
 - `content`
-  - : This is the value that will appear in the address bar itself when the user highlights this suggestion in the drop-down list. This is also the string sent to the {{WebExtAPIRef("omnibox.onInputEntered")}} event listener if the user selects this suggestion. If the string is the same as what the user has already typed, this entry will not appear in the drop-down list.
+  - : `String`. This is the value that will appear in the address bar itself when the user highlights this suggestion in the drop-down list. This is also the string sent to the {{WebExtAPIRef("omnibox.onInputEntered")}} event listener if the user selects this suggestion. If the string is the same as what the user has already typed, this entry will not appear in the drop-down list.
+- `deletable` {{optional_inline}}
+  - `Boolean`. Whether or not the suggestion can be deleted by the user.
 - `description`
-  - : This is the string that's displayed in the address bar's drop-down list.
+  - : `String`. This is the value that's displayed in the address bar's drop-down list.
 
 ## Browser compatibility
 
