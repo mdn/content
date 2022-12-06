@@ -331,7 +331,7 @@ For example, this line in the HTTP headers will enable Screen Capture API for th
 Permissions-Policy: display-capture=(self)
 ```
 
-If you're performing screen capture within an `<iframe>`, you can request permission just for that frame, which is clearly more secure than requesting a more general permission:
+If you're performing screen capture within an `<iframe>`, you can request permission just for that frame, which is clearly more secure than requesting permission more generally:
 
 ```html
 <iframe src="https://mycode.example.net/etc" allow="display-capture"> </iframe>
