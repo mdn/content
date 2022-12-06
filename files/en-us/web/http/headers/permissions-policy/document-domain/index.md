@@ -29,7 +29,7 @@ to set {{domxref("document.domain")}} will fail and cause a `SecurityError`
 Permissions-Policy: document-domain=<allowlist>;
 ```
 
-- \<allowlist>
+- `<allowlist>`
   - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy` > Syntax](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax) for more details.
 
 ## Default policy
