@@ -25,7 +25,7 @@ Specifically, where a defined policy blocks use of this feature, {{DOMxRef("Paym
 Permissions-Policy: payment=<allowlist>;
 ```
 
-- \<allowlist>
+- `<allowlist>`
   - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy` > Syntax](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax) for more details.
 
 ## Default policy
