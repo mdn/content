@@ -47,7 +47,7 @@ hyphenate-limit-chars: revert-layer;
 hyphenate-limit-chars: unset;
 ```
 
-The `hyphenate-limit-chars` property takes 1–3 values, which can be numeric or `auto`, as explained below.
+The `hyphenate-limit-chars` property takes 1–3 values that can be numeric or `auto`, as explained below.
 
 ### Values
 
