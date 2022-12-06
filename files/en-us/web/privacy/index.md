@@ -123,9 +123,9 @@ There are several web technologies and features at play to manage privacy and se
     <tr>
       <td><a href="/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</a></td>
       <td>
-        Lets web developers selectively enable, disable, and modify the behavior
-        of certain features and APIs both for a document and for subdocuments
-        loaded in {{HTMLElement("iframe")}}s via the {{HTTPHeader("Permissions-Policy")}} HTTP header. The {{htmlattrxref("allow", "iframe")}} attribute can be used to set Permissions Policies on individual {{HTMLElement("iframe")}}s.
+        Lets web servers selectively enable or disable features and APIs, both for a document and for subdocuments
+        loaded in {{HTMLElement("iframe")}}s via the {{HTTPHeader("Permissions-Policy")}} HTTP header.
+        The {{htmlattrxref("allow", "iframe")}} attribute can be used to set Permissions Policies on individual {{HTMLElement("iframe")}}s.
       </td>
     </tr>
     <tr>
