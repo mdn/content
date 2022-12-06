@@ -21,7 +21,7 @@ system's battery. It returns a battery promise, which is resolved in a
 monitor the battery status. This implements the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API); see that
 documentation for additional details, a guide to using the API, and sample code.
 
-> **Note:** In some browsers access to this feature is controlled by the {{HTTPHeader("Permissions-Policy")}} directive {{HTTPHeader("Permissions-Policy/battery","battery")}}.
+> **Note:** Access to this feature may be controlled by the {{HTTPHeader("Permissions-Policy")}} directive {{HTTPHeader("Permissions-Policy/battery","battery")}}.
 
 ## Syntax
 
