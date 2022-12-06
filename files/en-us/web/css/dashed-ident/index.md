@@ -89,7 +89,7 @@ h1, h2, h3, h4 {
 
 ## Browser compatibility
 
-_As this type is not a real type but a convenience type used to simplify the definition of other CSS syntax._
+_As this type is not a real type but a convenience type used to simplify the definition of other CSS syntax, there is no browser compatibility information as such._
 
 ## See also
 
