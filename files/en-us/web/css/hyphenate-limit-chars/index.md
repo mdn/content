@@ -60,7 +60,7 @@ The `hyphenate-limit-chars` property takes 1–3 values that can be numeric or `
 
 If `auto` is set for any of the values, the user agent will choose an appropriate value for the current layout. Unless the user agent can calculate a better value, the following default values will be used:
 
-- Minimum hyphenated word length: 5
+- Minimum word length to allow hyphenation: 5
 - Minimum number of characters before the hyphen: 2
 - Minimum number of characters after the hyphen: 2
 
