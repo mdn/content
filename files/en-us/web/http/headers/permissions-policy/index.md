@@ -98,7 +98,7 @@ Permissions-Policy: geolocation=(self https://example.com)
 Permissions-Policy: camera=*
 ```
 
-#### &lt;iframe&gt;s
+#### iframes
 
 To allow all origins access to geolocation, you would do this:
 
