@@ -15,7 +15,7 @@ tags:
   - WebRTC API
 ---
 
-{{APIRef("WebRTC")}}
+{{DefaultAPISidebar("WebRTC")}}
 
 In order to more fully support audio/video conferencing, [WebRTC](/en-US/docs/Web/API/WebRTC_API) supports sending {{Glossary("DTMF")}} to the remote peer on an {{domxref("RTCPeerConnection")}}. This article offers a brief high-level overview of how DTMF works over WebRTC, then provides a guide for everyday developers about how to send DTMF over an `RTCPeerConnection`. The DTMF system is often referred to as "touch tone," after an old trade name for the system.
 
@@ -85,12 +85,12 @@ let hasAddTrack = false;
 
 let mediaConstraints = {
   audio: true,
-  video: false
+  video: false,
 };
 
 let offerOptions = {
   offerToReceiveAudio: 1,
-  offerToReceiveVideo: 0
+  offerToReceiveVideo: 0,
 };
 
 let dialButton = null;
@@ -135,7 +135,7 @@ When the dial button is clicked, `connectAndDial()` is called. This starts build
 function connectAndDial() {
   callerPC = new RTCPeerConnection();
 
-  hasAddTrack = (callerPC.addTrack !== undefined);
+  hasAddTrack = callerPC.addTrack !== undefined;
 
   callerPC.onicecandidate = handleCallerIceEvent;
   callerPC.onnegotiationneeded = handleCallerNegotiationNeeded;
@@ -152,9 +152,10 @@ function connectAndDial() {
     receiverPC.onaddstream = handleReceiverAddStreamEvent;
   }
 
-  navigator.mediaDevices.getUserMedia(mediaConstraints)
-  .then(gotStream)
-  .catch((err) => log(err.message));
+  navigator.mediaDevices
+    .getUserMedia(mediaConstraints)
+    .then(gotStream)
+    .catch((err) => log(err.message));
 }
 ```
 
@@ -183,17 +184,21 @@ function gotStream(stream) {
       audioTracks.forEach((track) => callerPC.addTrack(track, stream));
     }
   } else {
-    log("Your browser doesn't support RTCPeerConnection.addTrack(). Falling " +
-        "back to the <strong>deprecated</strong> addStream() method…");
+    log(
+      "Your browser doesn't support RTCPeerConnection.addTrack(). Falling " +
+        "back to the <strong>deprecated</strong> addStream() method…"
+    );
     callerPC.addStream(stream);
   }
 
   if (callerPC.getSenders) {
     dtmfSender = callerPC.getSenders()[0].dtmf;
   } else {
-    log("Your browser doesn't support RTCPeerConnection.getSenders(), so " +
+    log(
+      "Your browser doesn't support RTCPeerConnection.getSenders(), so " +
         "falling back to use <strong>deprecated</strong> createDTMFSender() " +
-        "instead.");
+        "instead."
+    );
     dtmfSender = callerPC.createDTMFSender(audioTracks[0]);
   }
 
@@ -259,8 +264,9 @@ function handleCallerIceEvent(event) {
   if (event.candidate) {
     log(`Adding candidate to receiver: ${event.candidate.candidate}`);
 
-    receiverPC.addIceCandidate(new RTCIceCandidate(event.candidate))
-    .catch((err) => log(`Error adding candidate to receiver: ${err}`));
+    receiverPC
+      .addIceCandidate(new RTCIceCandidate(event.candidate))
+      .catch((err) => log(`Error adding candidate to receiver: ${err}`));
   } else {
     log("Caller is out of candidates.");
   }
@@ -296,28 +302,31 @@ When the calling {{domxref("RTCPeerConnection")}} begins to receive media (after
 ```js
 function handleCallerNegotiationNeeded() {
   log("Negotiating…");
-  callerPC.createOffer(offerOptions)
-  .then((offer) => {
-    log(`Setting caller's local description: ${offer.sdp}`);
-    return callerPC.setLocalDescription(offer);
-  })
-  .then(() => {
-    log("Setting receiver's remote description to the same as caller's local");
-    return receiverPC.setRemoteDescription(callerPC.localDescription)
-  })
-  .then(() => {
-    log("Creating answer");
-    return receiverPC.createAnswer();
-  })
-  .then((answer) => {
-    log(`Setting receiver's local description to ${answer.sdp}`);
-    return receiverPC.setLocalDescription(answer);
-  })
-  .then(() => {
-    log("Setting caller's remote description to match");
-    return callerPC.setRemoteDescription(receiverPC.localDescription);
-  })
-  .catch((err) => log(`Error during negotiation: ${err.message}`));
+  callerPC
+    .createOffer(offerOptions)
+    .then((offer) => {
+      log(`Setting caller's local description: ${offer.sdp}`);
+      return callerPC.setLocalDescription(offer);
+    })
+    .then(() => {
+      log(
+        "Setting receiver's remote description to the same as caller's local"
+      );
+      return receiverPC.setRemoteDescription(callerPC.localDescription);
+    })
+    .then(() => {
+      log("Creating answer");
+      return receiverPC.createAnswer();
+    })
+    .then((answer) => {
+      log(`Setting receiver's local description to ${answer.sdp}`);
+      return receiverPC.setLocalDescription(answer);
+    })
+    .then(() => {
+      log("Setting caller's remote description to match");
+      return callerPC.setRemoteDescription(receiverPC.localDescription);
+    })
+    .catch((err) => log(`Error during negotiation: ${err.message}`));
 }
 ```
 
@@ -356,8 +365,9 @@ function handleReceiverIceEvent(event) {
   if (event.candidate) {
     log(`Adding candidate to caller: ${event.candidate.candidate}`);
 
-    callerPC.addIceCandidate(new RTCIceCandidate(event.candidate))
-    .catch((err) => log(`Error adding candidate to caller: ${err}`));
+    callerPC
+      .addIceCandidate(new RTCIceCandidate(event.candidate))
+      .catch((err) => log(`Error adding candidate to caller: ${err}`));
   } else {
     log("Receiver is out of candidates.");
   }

@@ -49,7 +49,7 @@ const x = {
   },
 };
 
-x.value ??= 2;
+x.value ||= 2;
 ```
 
 In fact, if `x` is truthy, `y` is not evaluated at all.

@@ -1,5 +1,5 @@
 ---
-title: non-normative
+title: Non-normative
 slug: Glossary/non-normative
 tags:
   - Infrastructure
