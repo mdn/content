@@ -48,6 +48,8 @@ The [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/dashed-ident) is a user defined i
 
 ### Changing the default override-colors example
 
+This example shows how you can change some or all of the colors in a color font.
+
 #### HTML
 
 ```html
