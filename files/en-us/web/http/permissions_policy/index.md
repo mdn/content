@@ -55,7 +55,7 @@ Permissions Policy provides two ways to specify policies:
 - The {{httpheader("Permissions-Policy")}} HTTP header, to control feature usage in received responses and any embedded content within the page (which includes {{htmlelement("iframe")}}s).
 - The {{htmlelement("iframe")}} [`allow`](/en-US/docs/Web/HTML/Element/iframe#attributes) attribute, to control feature usage only in specific {{htmlelement("iframe")}}s.
 
-Scripts can programmatically query information about the feature policy via the {{DOMxRef("FeaturePolicy")}} object located at either {{DOMxRef("Document.featurePolicy")}} or {{DOMxRef("HTMLIFrameElement.featurePolicy")}}.
+Scripts can programmatically query information about the permission policy via the {{DOMxRef("FeaturePolicy")}} object located at either {{DOMxRef("Document.featurePolicy")}} or {{DOMxRef("HTMLIFrameElement.featurePolicy")}}.
 
 ## Relationship with the Permissions API
 
