@@ -43,7 +43,7 @@ Other palette values that follow apply only to the specified font family. You ca
 
 ### Using matching family names
 
-As an example when `font-family` [descriptor](/en-US/docs/Glossary/Descriptor_(CSS)) is used in the [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) the value is identical in each instance, eg `"Bungee Spice"`.
+In this example, when the `font-family` descriptor is used in the [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) at-rule, the same value is used for the `font-family`, as when it is declared.
 
 #### HTML
 
