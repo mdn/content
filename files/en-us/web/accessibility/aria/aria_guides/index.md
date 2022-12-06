@@ -27,23 +27,23 @@ tags:
   </ol>
 </section>
 
-Accessible Rich Internet Applications (**ARIA**) defines ways to make the Web more accessible to people with disabilities.
-This page lists guides that can help improve accessibility, such as designing tables and forms, keyboard-navigation, testing, and more.
+Accessible Rich Internet Applications (**ARIA**) define ways to make the web more accessible to people with disabilities.
+This page lists the guides that you can use to help improve the accessibility of web page features such as tables, forms, and keyboard-navigation.
 
 - [Designing accessible forms](https://www.w3.org/WAI/tutorials/forms/)
-- [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
+- [Understanding WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
+- [Creating keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
 - [Using ARIA for labels with embedded fields inside them](/en-US/docs/Web/Accessibility/ARIA/forms/Multipart_labels)
-- [Managing Focus in Composite Widgets](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/) (`aria-activedescendant` vs roving tabindex)
-- [How to test ARIA](https://www.w3.org/WAI/test-evaluate/)
+- [Managing focus in composite widgets](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/) (`aria-activedescendant` vs roving tabindex)
+- [Testing ARIA](https://www.w3.org/WAI/test-evaluate/)
 - [Displaying accessible tables](https://www.w3.org/WAI/tutorials/tables/)
 
 ## See also
 
-The following references are helpful for common accessibility use case
+The following references are helpful for common accessibility use cases:
 
 - [Labeling widgets](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
-- [Landmark Roles](/en-US/docs/Web/Accessibility/ARIA/Roles/landmark_role)
+- [Landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles/landmark_role)
 - [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
 - [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [ARIA: presentation role](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role)
