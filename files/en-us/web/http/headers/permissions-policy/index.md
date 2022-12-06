@@ -15,7 +15,7 @@ browser-compat: http.headers.Permissions-Policy
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The HTTP **`Permissions-Policy`** header provides a mechanism to allow and deny the use of browser features in its own frame, and in content within any {{HTMLElement("iframe")}} elements in the document.
+The HTTP **`Permissions-Policy`** header provides a mechanism to allow and deny the use of browser features in a document or within any {{HTMLElement("iframe")}} elements in the document.
 
 For more information, see the main [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) article.
 
