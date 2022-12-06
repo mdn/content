@@ -28,7 +28,7 @@ requestPresenter(event, style)
 - `event` {{optional_inline}}
   - : A {{domxref("PointerEvent")}}.
 - `style`
-  - : An `InkTrailStyle` object that contains the following properties:
+  - : An object defining the trail style, which contains the following properties:
     - `color`
       - : A {{jsxref("String")}} containing a valid CSS color code, indicating the color the presenter will use when rendering the ink trail.
     - `diameter`
