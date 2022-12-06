@@ -61,8 +61,8 @@ Scripts can programmatically query information about the permission policy via t
 
 Permissions Policy and the {{domxref("Permissions API", "Permissions API", "", "nocode")}} are closely-related, but different. The features that have their permissions controlled by both these technologies overlap.
 
-- Permissions Policy allows developers to specify whether a feature can be used in a particular document (or embeded `<frame>`s within it). These are referred to as **policy-controlled** features — see the [list of Permissions Policy directives](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#directives).
-- The Permissions API provides a consistent, programmatic way to query the status of user-granted API permissions for powerful features attributed to the current document. For example, if permission to access a particular API has been granted or denied. These features are recorded in the [Permissions Registry](https://w3c.github.io/permissions-registry/).
+- Permissions Policy allows a server to set whether a feature can be used in a particular document (or embedded `<frame>`s within it). These are referred to as **policy-controlled** features — see the [list of Permissions Policy directives](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#directives).
+- The Permissions API gates access to features based on user-granted permissions. These features are recorded in the [Permissions Registry](https://w3c.github.io/permissions-registry/).
 
 The identifying string used for each feature is kept consistent across both, for example, `geolocation` for the {{domxref("Geolocation API", "Geolocation API", "", "nocode")}}. Most of the API features in the Permissions Registry also have a corresponding Permissions Policy directive. One exception is the {{domxref("Notifications API", "Notifications API", "", "nocode")}}.
 
