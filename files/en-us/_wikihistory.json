@@ -111579,26 +111579,6 @@
       "Sevenspade"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Date/toGMTString": {
-    "modified": "2020-10-25T02:22:44.250Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "SphinxKnight",
-      "Saem",
-      "jameshkramer",
-      "eduardoboucas",
-      "Mingun",
-      "Sheppy",
-      "sheshbabu",
-      "evilpie",
-      "Dikrib",
-      "Ptak82",
-      "Maian",
-      "Prodoc",
-      "Dria"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Date/toISOString": {
     "modified": "2020-10-25T02:16:36.789Z",
     "contributors": [
