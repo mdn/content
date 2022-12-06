@@ -55,8 +55,6 @@ h3, h6 {
 
 When `<dashed-ident>` is used with the [@color-profile](/en-US/docs/Web/CSS/@color-profile) at-rule, the at-rule is declared first and then used within a [CSS color() function](/en-US/docs/Web/CSS/color_value/color).
 
-#### Example
-
 ```css
 @color-profile --my-color-profile {
   src: url("https://example.org/SWOP2006_Coated5v2.icc");
@@ -70,8 +68,6 @@ When `<dashed-ident>` is used with the [@color-profile](/en-US/docs/Web/CSS/@col
 ### Using with @font-palette-values
 
 When `<dashed-ident>` is used with the [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) at-rule, the at-rule is declared first and then used as the value for the [font-palette](/en-US/docs/Web/CSS/font-palette) property.
-
-#### Example
 
 ```css
 @font-palette-values --my-palette {
