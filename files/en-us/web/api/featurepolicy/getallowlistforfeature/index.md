@@ -14,8 +14,7 @@ browser-compat: api.FeaturePolicy.getAllowlistForFeature
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
 The **`getAllowlistForFeature()`**
-method of the {{DOMxRef("FeaturePolicy")}} interface allows query of the allow list for a
-specific feature for the current Permissions Policy.
+method of the {{DOMxRef("FeaturePolicy")}} interface enables querying of the allow list for a specific feature for the current Permissions Policy.
 
 ## Syntax
 
