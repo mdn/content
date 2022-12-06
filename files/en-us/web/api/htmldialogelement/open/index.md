@@ -37,63 +37,49 @@ From there you can click the _Cancel_ button to close the dialog (via the
 button.
 
 ```html
-<!-- Simple pop-up dialog box, containing a form -->
-<dialog id="favDialog">
+<!-- Simple pop-up dialog box -->
+<dialog id="dialog">
   <form method="dialog">
-    <section>
-      <p>
-        <label for="favAnimal">Favorite animal:</label>
-        <select id="favAnimal" name="favAnimal">
-          <option></option>
-          <option>Brine shrimp</option>
-          <option>Red panda</option>
-          <option>Spider monkey</option>
-        </select>
-      </p>
-    </section>
-    <menu>
-      <button id="cancel" type="reset">Cancel</button>
-      <button type="submit">Confirm</button>
-    </menu>
+      <button type="submit">Close</button>
   </form>
 </dialog>
 
-<menu>
-  <button id="updateDetails">Update details</button>
-</menu>
+<p>
+  <button id="openDialog">Open Dialog</button>
+</p>
+<p id="dialogStatus"></p>
 
 <script>
   (() => {
-    const updateButton = document.getElementById("updateDetails");
-    const cancelButton = document.getElementById("cancel");
-    const dialog = document.getElementById("favDialog");
-    dialog.returnValue = "favAnimal";
+    const openDialog = document.getElementById("openDialog");
+    const dialog = document.getElementById("dialog");
+    const text = document.getElementById("dialogStatus");
 
     function openCheck(dialog) {
       if (dialog.open) {
-        console.log("Dialog open");
+        text.innerText = "Dialog open";
       } else {
-        console.log("Dialog closed");
+        text.innerText = "Dialog closed";
       }
     }
 
     // Update button opens a modal dialog
-    updateButton.addEventListener("click", () => {
+    openDialog.addEventListener("click", () => {
       dialog.showModal();
       openCheck(dialog);
     });
 
-    // Form cancel button closes the dialog box
-    cancelButton.addEventListener("click", () => {
-      dialog.close("animalNotChosen");
+    dialog.addEventListener("close", () => {
       openCheck(dialog);
     });
+
   })();
 </script>
 ```
 
-> **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/main/htmldialogelement-basic/index.html)
-> ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
+### Result
+
+{{ EmbedLiveSample('Examples', '100%', '200px') }}
 
 ## Specifications
 
