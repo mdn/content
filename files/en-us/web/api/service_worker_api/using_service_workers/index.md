@@ -32,7 +32,7 @@ With service workers, the following steps are generally observed for basic set u
     >**Note:** Waiting for other pages to be closed can be bypassed with [`skipWaiting()`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting).
 4. Next is activation. When the service worker is installed, it then receives an `activate` event. The primary use of `onactivate` is for cleanup of resources used in previous versions of a service worker script.
 5. The service worker will now control pages, but only those opened after the `register()` is successful. In other words, documents will have to be reloaded to actually be controlled, because a document starts life with or without a service worker and maintains that for its lifetime.
-6. Whenever a new version of a service worker is fetched, this cycle happens again and the remainings of the previous version are cleaned during the new version's activation.
+6. Whenever a new version of a service worker is fetched, this cycle happens again and the remains of the previous version are cleaned during the new version's activation.
 
 ![lifecycle diagram](sw-lifecycle.svg)
 
@@ -138,7 +138,7 @@ self.addEventListener("install", (event) => {
 
 1. Here we add an `install` event listener to the service worker (hence `self`), and then chain a [`ExtendableEvent.waitUntil()`](/en-US/docs/Web/API/ExtendableEvent/waitUntil) method onto the event — this ensures that the service worker will not install until the code inside `waitUntil()` has successfully occurred.
 2. Inside `addResourcesToCache()` we use the [`caches.open()`](/en-US/docs/Web/API/CacheStorage/open) method to create a new cache called `v1`, which will be version 1 of our site resources cache. Then we call a function `addAll()` on the created cache, which for its parameter takes an array of origin-relative URLs to all the resources you want to cache.
-3. If the promise is rejected, the install fails, and the worker won't do anything. This is OK, as you can fix your code and then try again the next time registration occurs.
+3. If the promise is rejected, the installation fails, and the worker won't do anything. This is OK, as you can fix your code and then try again the next time registration occurs.
 4. After a successful installation, the service worker activates. This doesn't have much of a distinct use the first time your service worker is installed/activated, but it means more when the service worker is updated (see the [Updating your service worker](#updating_your_service_worker) section later on.)
 
 > **Note:** [The Web Storage API (`localStorage`)](/en-US/docs/Web/API/Web_Storage_API) works in a similar way to service worker cache, but it is synchronous, so not allowed in service workers.
@@ -149,7 +149,7 @@ self.addEventListener("install", (event) => {
 
 Now you've got your site assets cached, you need to tell service workers to do something with the cached content. This is easily done with the `fetch` event.
 
-1. A `fetch` event fires every time any resource controlled by a service worker is fetched, which includes the documents inside the specified scope, and any resources referenced in those documents (for example if `index.html` makes a cross origin request to embed an image, that still goes through its service worker.)
+1. A `fetch` event fires every time any resource controlled by a service worker is fetched, which includes the documents inside the specified scope, and any resources referenced in those documents (for example if `index.html` makes a cross-origin request to embed an image, that still goes through its service worker.)
 
 2. You can attach a `fetch` event listener to the service worker, then call the `respondWith()` method on the event to hijack our HTTP responses and update them with your own content.
 
@@ -218,7 +218,7 @@ Let's look at a few other options we have when defining our logic (see our [Fetc
 
 So `caches.match(event.request)` is great when there is a match in the service worker cache, but what about cases when there isn't a match? If we didn't provide any kind of failure handling, our promise would resolve with `undefined` and we wouldn't get anything returned.
 
-After testing the response from the cache, we can fallback on a regular network request:
+After testing the response from the cache, we can fall back on a regular network request:
 
 ```js
 const cacheFirst = async (request) => {
