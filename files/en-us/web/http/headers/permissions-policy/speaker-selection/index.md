@@ -13,7 +13,7 @@ browser-compat: http.headers.Permissions-Policy.speaker-selection
 
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-The HTTP {{HTTPHeader("Permissions-Policy")}} header `speaker-selection` directive controls whether the current document is allowed to enumerate and select audio output devices (speakers, headphones, etc.).
+The HTTP {{HTTPHeader("Permissions-Policy")}} header `speaker-selection` directive controls whether the current document is allowed to enumerate and select audio output devices (speakers, headphones, and so on).
 
 Specifically, where a defined policy blocks use of this feature:
 

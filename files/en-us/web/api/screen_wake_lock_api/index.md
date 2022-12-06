@@ -124,6 +124,8 @@ You can find the [complete code on GitHub here](https://github.com/mdn/dom-examp
 
 Access to the Screen Wake Lock API is controlled by the [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) directive {{HTTPHeader("Permissions-Policy/screen-wake-lock","screen-wake-lock")}}.
 
+The default allowlist for `screen-wake-lock` is `self`.
+
 ## Specifications
 
 {{Specifications}}

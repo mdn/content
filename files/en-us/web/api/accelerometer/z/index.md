@@ -19,7 +19,7 @@ browser-compat: api.Accelerometer.z
 
 {{APIRef("Sensor API")}}{{SeeCompatTable}}
 
-The **`z`** read-only property of the {{domxref("Accelerometer")}} interface returns a double precision integer containing the acceleration of the device along its z-axis.
+The **`z`** read-only property of the {{domxref("Accelerometer")}} interface returns a number specifying the acceleration of the device along its z-axis.
 
 ## Value
 

@@ -45,6 +45,11 @@ new RelativeOrientationSensor(options)
       - : Either `'device'` or
         `'screen'`. The default is `'device'`.
 
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+
 ## Specifications
 
 {{Specifications}}

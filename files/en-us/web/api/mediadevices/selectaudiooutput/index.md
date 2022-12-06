@@ -49,7 +49,7 @@ The object describes the user-selected audio output device.
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Returned if the current page has not been granted the {{HTTPHeader("Permissions-Policy/speaker-selection","speaker-selection")}} permission or the user closed the selection prompt without choosing a device.
+  - : Returned if a `speaker-selection` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) is used to block use of audio outputs (in addition the popup for selecting an audio output won't be displayed), or the user closed the selection prompt without choosing a device.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Returned if there are no available audio output devices.
 - `InvalidStateError` {{domxref("DOMException")}}

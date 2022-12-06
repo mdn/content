@@ -49,7 +49,7 @@ A {{jsxref("Promise")}} that resolves with `undefined`, or rejected with one of 
 The {{jsxref("Promise")}} may be rejected with one of the following `DOMException` values:
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : The [web-share](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/web-share) permission has not been granted, or the window does not have {{Glossary("transient activation")}}, or a file share is being blocked due to security considerations.
+  - : A `web-share` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) has been used to block the use of this feature, the window does not have {{Glossary("transient activation")}}, or a file share is being blocked due to security considerations.
 - {{jsxref("TypeError")}}
 
   - : The specified share data cannot be validated. Possible reasons include:

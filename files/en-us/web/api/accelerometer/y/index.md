@@ -19,7 +19,7 @@ browser-compat: api.Accelerometer.y
 
 {{APIRef("Sensor API")}}{{SeeCompatTable}}
 
-The **`y`** read-only property of the {{domxref("Accelerometer")}} interface returns a double precision integer containing the acceleration of the device along its y-axis.
+The **`y`** read-only property of the {{domxref("Accelerometer")}} interface returns a number specifying the acceleration of the device along its y-axis.
 
 ## Value
 
