@@ -19,7 +19,7 @@ This property provides you with fine-grained control over hyphenation in text. T
 
 {{EmbedInteractiveExample("pages/css/hyphenate-limit-chars.html")}}
 
-In the interactive example above, the default minimum word length setting of `hyphenate-limit-chars` is too large for either of the long words to be hyphenated, therefore it looks untidy. However, by choosing the other value option, that limit is brought down so that both of the long words are hyphenated, making for a neater layout.
+In the interactive example above, the default minimum word length setting of `hyphenate-limit-chars` is too large for either of the long words to be hyphenated, and so the output looks untidy. However, by choosing the other value option, the minimum word length limit is reduced. This allows both the long words to be hyphenated, making for a neater layout.
 
 ## Syntax
 
