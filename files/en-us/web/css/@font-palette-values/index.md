@@ -78,6 +78,8 @@ p {
 
 #### Result
 
+When overriding colors of the normal or base-palette at index 0 you do not need to declare which base-palette to use. This should only be done when overriding a different base-palette. If you are overriding all the colors then there is also no need to specify the base-palette to use.
+
 {{EmbedLiveSample("Changing the default override-colors example")}}
 
 ## Specifications
