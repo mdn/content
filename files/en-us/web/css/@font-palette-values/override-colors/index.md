@@ -20,14 +20,19 @@ The **`override-colors`** CSS [descriptor](/en-US/docs/Glossary/Descriptor_(CSS)
 ```css
 /* basic syntax */
 override-colors: <index of color> <color>;
+
 /* using colour names */
 override-colors: 0 red;
+
 /* using hex-color */
 override-colors: 0 #f00;
+
 /* using rbg */
 override-colors: 0 rgb(255, 0, 0);
+
 /* overriding multiple colors */
 override-colors: 0 #f00, 1 #0f0, 2 #00f;
+
 /* overriding multiple colors with readability */
 override-colors:
   0 #f00,
