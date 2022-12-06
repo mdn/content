@@ -31,7 +31,7 @@ a {{domxref("DOMException")}}. The {{htmlattrxref("autoplay", "audio")}} attribu
 Permissions-Policy: autoplay=<allowlist>;
 ```
 
-- \<allowlist>
+- `<allowlist>`
   - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy` > Syntax](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax) for more details.
 
 ## Default policy
