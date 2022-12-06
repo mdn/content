@@ -46,7 +46,7 @@ The [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/dashed-ident) is a user defined i
 
 ## Examples
 
-### Changing the default override-colors example
+### Overriding colors in an existing palette
 
 This example shows how you can change some or all of the colors in a color font.
 
@@ -80,7 +80,7 @@ p {
 
 When overriding colors of the normal or base-palette at index 0 you do not need to declare which base-palette to use. This should only be done when overriding a different base-palette. If you are overriding all the colors then there is also no need to specify the base-palette to use.
 
-{{EmbedLiveSample("Changing the default override-colors example")}}
+{{EmbedLiveSample("Overriding colors in an existing palette")}}
 
 ## Specifications
 
