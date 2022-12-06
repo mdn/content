@@ -24,12 +24,12 @@ The [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) [descriptor
 }
 ```
 
-The `font-family` [descriptor](/en-US/docs/Glossary/Descriptor_(CSS)) means that the settings that follow apply to the specified font-family. Other [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) can be set for other font-families using the same [&lt;dashed-ident&gt;s](/en-US/docs/Web/CSS/dashed-ident), which means if you have multiple Color Fonts you can use the same identifier for each.
+Other palette values that follow apply only to the specified font family. You can create [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) for other font families by using the same [&lt;dashed-ident&gt;s](/en-US/docs/Web/CSS/dashed-ident). This means that if you have multiple Color Fonts and can use the same identifier for each.
 
 ### Values
 
 - `<family-name>`
-  - : Specifies the name of the font family.
+  - : Specifies the name of the [font-family](/en-US/docs/Web/CSS/font-family).
 
 ## Formal definition
 
