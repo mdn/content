@@ -261,9 +261,9 @@ In the example above, the response is [fresh](/en-US/docs/Web/HTTP/Caching#fresh
 
 After a period of time, the stored response became [stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) normally. This means that the client will receive an error response as-is if the origin server sends it.
 
-## Request Directives
+### Request Directives
 
-### `no-cache`
+#### `no-cache`
 
 The `no-cache` request directive asks caches to validate the response with the origin server before reuse.
 
@@ -275,7 +275,7 @@ Cache-Control: no-cache
 
 Browsers usually add `no-cache` to requests when users are **force reloading** a page.
 
-### `no-store`
+#### `no-store`
 
 The `no-store` request directive allows a client to request that caches refrain from storing the request and corresponding response — even if the origin server's response could be stored.
 
@@ -285,7 +285,7 @@ Cache-Control: no-store
 
 Note that the major browsers do not support requests with `no-store`.
 
-### `max-age`
+#### `max-age`
 
 The `max-age=N` request directive indicates that the client allows a stored response that is generated on the origin server within _N_ seconds — where _N_ may be any non-negative integer (including `0`).
 
@@ -309,7 +309,7 @@ If the `max-age` value isn't non-negative (for example, `-1`) or isn't an intege
 
 In other words, for any `max-age` value that isn't an integer or isn't non-negative, the caching behavior that's encouraged is to treat the value as if it were `0`.
 
-### `max-stale`
+#### `max-stale`
 
 The `max-stale=N` request directive indicates that the client allows a stored response that is [stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) within _N_ seconds.
 
@@ -323,7 +323,7 @@ Clients can use this header when the origin server is down or too slow and can a
 
 Note that the major browsers do not support requests with `max-stale`.
 
-### `min-fresh`
+#### `min-fresh`
 
 The `min-fresh=N` request directive indicates that the client allows a stored response that is [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) for at least _N_ seconds.
 
@@ -337,11 +337,11 @@ Clients can use this header when the user requires the response to not only be [
 
 Note that the major browsers do not support requests with `min-fresh`.
 
-### `no-transform`
+#### `no-transform`
 
 Same meaning that `no-transform` has for a response, but for a request instead.
 
-### `only-if-cached`
+#### `only-if-cached`
 
 The client indicates that cache should obtain an already-cached response. If a cache has stored a response, it's reused.
 

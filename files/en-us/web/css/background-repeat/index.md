@@ -218,7 +218,7 @@ div {
 /* Multiple images */
 .seven {
   background-image: url(starsolid.gif),
-    url(https://developer.mozilla.org/static/img/favicon32.png);
+    url(favicon32.png);
   background-repeat: repeat-x, repeat-y;
   height: 144px;
 }

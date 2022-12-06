@@ -80,7 +80,7 @@ The {{jsxref("RegExp/compile", "compile()")}} method is deprecated. Construct a 
 ### Date
 
 - The {{jsxref("Global_Objects/Date/getYear", "getYear()")}} and {{jsxref("Global_Objects/Date/setYear", "setYear()")}} methods are affected by the Year-2000-Problem and have been subsumed by {{jsxref("Global_Objects/Date/getFullYear", "getFullYear")}} and {{jsxref("Global_Objects/Date/setFullYear", "setFullYear")}}.
-- The {{jsxref("Global_Objects/Date/toGMTString", "toGMTString()")}} method is deprecated. Use {{jsxref("Global_Objects/Date/toUTCString", "toUTCString()")}} instead.
+- The `toGMTString()` method is deprecated. Use {{jsxref("Global_Objects/Date/toUTCString", "toUTCString()")}} instead.
 
 ### Escape sequences
 
