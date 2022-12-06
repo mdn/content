@@ -13,16 +13,20 @@ tags:
 
 In this demonstration, we build upon the previous example by replacing our static textures with the frames of an mp4 video file that's playing. This is actually pretty easy to do and fun to watch, so let's get started. You can use similar code to use any sort of data (such as a {{ HTMLElement("canvas") }}) as the source for your textures.
 
-> **Note:** This example uses the [glMatrix](https://glmatrix.net/) library to perform its matrix and vertex math. You'll need to include it if you create your own project based on this code. Our sample loads a copy from a CDN in our HTML's {{HTMLElement("head")}}.
-
 ## Getting access to the video
 
-The first step is to create the {{ HTMLElement("video") }} element that we'll use to retrieve the video frames:
+The first step is to create the {{ HTMLElement("video") }} element that we'll use to retrieve the video frames.
+
+> **Note:** Add this declaration to that start of your "webgl-demo.js" script:
 
 ```js
 // will set to true when video can be copied to texture
 let copyVideo = false;
+```
 
+> **Note:** Add this function your "webgl-demo.js" script:
+
+```js
 function setupVideo(url) {
   const video = document.createElement("video");
 
@@ -75,7 +79,9 @@ The video must be loaded from a secure source in order to be used to provide tex
 
 ## Using the video frames as a texture
 
-The next change is to `initTexture()`, which becomes much simpler, since it no longer needs to load an image file. Instead, all it does is create an empty texture object, put a single pixel in it, and set its filtering for later use:
+The next change is to initialize the texture, which becomes much simpler, since we no longer need to load an image file. Instead, we create an empty texture object, put a single pixel in it, and set its filtering for later use.
+
+> **Note:** Replace the `loadTexture()` function in "webgl-demo.js" with the following code:
 
 ```js
 function initTexture(gl) {
@@ -116,7 +122,7 @@ function initTexture(gl) {
 }
 ```
 
-Here's what the `updateTexture()` function looks like; this is where the real work is done:
+> **Note:** Add the following function to "webgl-demo.js":
 
 ```js
 function updateTexture(gl, texture, video) {
@@ -138,33 +144,38 @@ function updateTexture(gl, texture, video) {
 
 You've seen this code before. It's nearly identical to the image onload function in the previous example — except when we call `texImage2D()`, instead of passing an `Image` object, we pass in the {{ HTMLElement("video") }} element. WebGL knows how to pull the current frame out and use it as a texture.
 
-Then in `main()` in place of the call to `loadTexture()` in the previous example, we call `initTexture()` followed by `setupVideo()` .
+Next, we need to call these new functions from our `main()` function.
 
-In the definition of `render()` if `copyVideo` is true, then we call `updateTexture()` each time just before we call the `drawScene()` function.
+> **Note:** In your `main()` function, replace the call to `loadTexture()` with this code:
 
 ```js
 const texture = initTexture(gl);
-
 const video = setupVideo("Firefox.mp4");
+```
 
-let then = 0;
+> **Note:** You'll also need to download the [Firefox.mp4](https://github.com/mdn/dom-examples/blob/main/webgl-examples/tutorial/sample8/Firefox.mp4) file to the same local directory as your JavaScript files.
 
+> **Note:** In your `main()` function, replace the `render()` function with this:
+
+```js
 // Draw the scene repeatedly
 function render(now) {
   now *= 0.001; // convert to seconds
-  const deltaTime = now - then;
+  deltaTime = now - then;
   then = now;
 
   if (copyVideo) {
     updateTexture(gl, texture, video);
   }
 
-  drawScene(gl, programInfo, buffers, texture, deltaTime);
+  drawScene(gl, programInfo, buffers, texture, cubeRotation);
+  cubeRotation += deltaTime;
 
   requestAnimationFrame(render);
 }
-requestAnimationFrame(render);
 ```
+
+If `copyVideo` is true, we call `updateTexture()` just before we call the `drawScene()` function.
 
 That's all there is to it!
 
