@@ -23,7 +23,7 @@ Specifically, where a defined policy blocks WebHID usage, the {{domxref("Navigat
 Permissions-Policy: hid=<allowlist>;
 ```
 
-- \<allowlist>
+- `<allowlist>`
   - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy` > Syntax](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax) for more details.
 
 ## Default policy
