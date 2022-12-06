@@ -12,16 +12,16 @@ tags:
 
 Having created a square plane in the [previous demonstration](/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context), the next obvious step is to add a splash of color to it. We can do this by revising the shaders.
 
-> **Note:** This example uses the glMatrix library to perform its matrix and vertex math. You'll need to include it if you create your own project based on this code. Our sample loads a copy from a CDN in our HTML's {{HTMLElement("head")}}.
-
 ## Applying color to the vertices
 
 In WebGL objects are built using sets of vertices, each of which has a position and a color. By default, all other pixels' colors (and all its other attributes, including position) are computed using interpolation, automatically creating smooth gradients. Previously, our vertex shader didn't apply any specific colors to the vertices. Between this and the fragment shader assigning the fixed color of white to each pixel, the entire square was rendered as solid white.
 
-Let's say we want to render a gradient in which each corner of the square is a different color: red, blue, green, and white. The first thing to do is to establish these colors for the four vertices. To do this, we first need to create an array of vertex colors, then store it into a WebGL buffer. We'll do that by adding the following code to our `initBuffers()` function:
+Let's say we want to render a gradient in which each corner of the square is a different color: red, blue, green, and white. The first thing to do is to establish these colors for the four vertices. To do this, we first need to create an array of vertex colors, then store it into a WebGL buffer.
+
+> **Note:** Add the following function to your `init-buffers.js` module:
 
 ```js
-function initBuffers() {
+function initColorBuffer(gl) {
   const colors = [
     1.0,
     1.0,
@@ -45,18 +45,32 @@ function initBuffers() {
   gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW);
 
-  return {
-    position: positionBuffer,
-    color: colorBuffer,
-  };
+  return colorBuffer;
 }
 ```
 
 This code starts by creating a JavaScript array containing four 4-value vectors, one for each vertex color. Then a new WebGL buffer is allocated to store these colors, and the array is converted into floats and stored into the buffer.
 
-To use these colors, the vertex shader needs to be updated to pull the appropriate color from the color buffer:
+Of course, we also need to call this new function from `initBuffers()`, and return the new buffer it creates.
+
+> **Note:** At the end of your `initBuffers()` function, add the following code, replacing the existing `return` statement:
 
 ```js
+const colorBuffer = initColorBuffer(gl);
+
+return {
+  position: positionBuffer,
+  color: colorBuffer,
+};
+```
+
+To use these colors, the vertex shader needs to be updated to pull the appropriate color from the color buffer.
+
+> **Note:** Update the `vsSource` declaration in your `main()` function like this:
+
+```js
+// Vertex shader program
+
 const vsSource = `
     attribute vec4 aVertexPosition;
     attribute vec4 aVertexColor;
@@ -77,19 +91,13 @@ The key difference here is that for each vertex, we pass its color using a `vary
 
 ## Coloring the fragments
 
-As a refresher, here's what our fragment shader looked like previously:
+In order to pick up the interpolated color for each pixel, we need to change the fragment shader to fetch the value from the `vColor` varying.
+
+> **Note:** Update the `fsSource` declaration in your `main()` function like this:
 
 ```js
-const fsSource = `
-    void main() {
-      gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
-    }
-  `;
-```
+// Fragment shader program
 
-In order to pick up the interpolated color for each pixel, we need to change this to fetch the value from the `vColor` varying:
-
-```js
 const fsSource = `
     varying lowp vec4 vColor;
 
@@ -103,25 +111,36 @@ Each fragment receives the interpolated color based on its position relative to 
 
 ## Drawing using the colors
 
-Next, it's necessary to add code to look up the attribute location for the colors and setup that attribute for the shader program:
+Next, you need to add code to look up the attribute location for the colors and set up that attribute for the shader program.
+
+> **Note:** Update the `programInfo` declaration in your `main()` function like this:
 
 ```js
+// Collect all the info needed to use the shader program.
+// Look up which attributes our shader program is using
+// for aVertexPosition, aVertexColor and also
+// look up uniform locations.
 const programInfo = {
   program: shaderProgram,
   attribLocations: {
     vertexPosition: gl.getAttribLocation(shaderProgram, "aVertexPosition"),
     vertexColor: gl.getAttribLocation(shaderProgram, "aVertexColor"),
   },
-  // …
+  uniformLocations: {
+    projectionMatrix: gl.getUniformLocation(shaderProgram, "uProjectionMatrix"),
+    modelViewMatrix: gl.getUniformLocation(shaderProgram, "uModelViewMatrix"),
+  },
 };
 ```
 
-Then, `drawScene()` can have the following added to it so it actually uses these colors when drawing the square:
+Next, `drawScene()` needs to use these colors when drawing the square.
+
+> **Note:** Add the following function to your `draw-scene.js` module:
 
 ```js
 // Tell WebGL how to pull out the colors from the color buffer
 // into the vertexColor attribute.
-{
+function setColorAttribute(gl, buffers, programInfo) {
   const numComponents = 4;
   const type = gl.FLOAT;
   const normalize = false;
@@ -139,6 +158,14 @@ Then, `drawScene()` can have the following added to it so it actually uses these
   gl.enableVertexAttribArray(programInfo.attribLocations.vertexColor);
 }
 ```
+
+> **Note:** Call the `setColorAttribute()` function from `drawScene()`, right before the `gl.useProgram()` call:
+
+```js
+setColorAttribute(gl, buffers, programInfo);
+```
+
+The result should now look like this:
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample3/index.html', 670, 510) }}
 

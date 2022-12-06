@@ -1,0 +1,22 @@
+---
+title: DOMStringList.length
+slug: Web/API/DOMStringList/length
+page-type: web-api-instance-property
+browser-compat: api.DOMStringList.length
+---
+
+{{APIRef("DOM")}}
+
+The read-only **`length`** property indicates the number of strings in the {{domxref("DOMStringList")}}.
+
+## Value
+
+A {{jsxref("Number")}}.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

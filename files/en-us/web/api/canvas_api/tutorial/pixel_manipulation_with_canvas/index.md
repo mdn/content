@@ -9,7 +9,7 @@ tags:
   - Tutorial
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
 
 Until now we haven't looked at the actual pixels of our canvas. With the `ImageData` object you can directly read and write a data array to manipulate pixel data. We will also look into how image smoothing (anti-aliasing) can be controlled and how to save images from your canvas.
 
@@ -217,10 +217,17 @@ With the help of the {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(
 We get the position of the mouse and crop an image of 5 pixels left and above to 5 pixels right and below. Then we copy that one over to another canvas and resize the image to the size we want it to. In the zoom canvas we resize a 10×10 pixel crop of the original canvas to 200×200.
 
 ```js
-zoomctx.drawImage(canvas,
-                  Math.min(Math.max(0, x - 5), img.width - 10),
-                  Math.min(Math.max(0, y - 5), img.height - 10),
-                  10, 10, 0, 0, 200, 200);
+zoomctx.drawImage(
+  canvas,
+  Math.min(Math.max(0, x - 5), img.width - 10),
+  Math.min(Math.max(0, y - 5), img.height - 10),
+  10,
+  10,
+  0,
+  0,
+  200,
+  200
+);
 ```
 
 Zoom example:
@@ -255,12 +262,17 @@ function draw(img) {
   pixelatedZoomCtx.msImageSmoothingEnabled = false;
 
   const zoom = (ctx, x, y) => {
-    ctx.drawImage(canvas,
-        Math.min(Math.max(0, x - 5), img.width - 10),
-        Math.min(Math.max(0, y - 5), img.height - 10),
-        10, 10,
-        0, 0,
-        200, 200);
+    ctx.drawImage(
+      canvas,
+      Math.min(Math.max(0, x - 5), img.width - 10),
+      Math.min(Math.max(0, y - 5), img.height - 10),
+      10,
+      10,
+      0,
+      0,
+      200,
+      200
+    );
   };
 
   canvas.addEventListener("mousemove", (event) => {

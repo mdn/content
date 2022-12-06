@@ -51,7 +51,7 @@ svg {
     </marker>
   </defs>
 
-  <!-- Coordinate axes with a arrowhead in both direction -->
+  <!-- Coordinate axes with an arrowhead in both directions -->
   <polyline
     points="10,10 10,90 90,90"
     fill="none"
