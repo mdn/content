@@ -26,7 +26,7 @@ Service workers are enabled by default in all modern browsers. To run code using
 
 With service workers, the following steps are generally observed for basic set up:
 
-1. The service worker URL is fetched and registered via {{domxref("serviceWorkerContainer.register()")}}. If successful, the service worker is executed in a {{domxref("ServiceWorkerGlobalScope") }}; this is basically a special kind of worker context, running off the main script execution thread, with no DOM access. The service worker is now ready to process events.
+1. The service worker URL is fetched and registered via [`serviceWorkerContainer.register()`](/en-US/docs/Web/API/ServiceWorkerContainer/register). If successful, the service worker is executed in a [`ServiceWorkerGlobalScope`](/en-US/docs/Web/API/ServiceWorkerGlobalScope); this is basically a special kind of worker context, running off the main script execution thread, with no DOM access. The service worker is now ready to process events.
 2. Installation of the worker is attempted when service worker-controlled pages are accessed subsequently. An `install` event is always the first one sent to a service worker (this can be used to start the process of populating an IndexedDB, and caching site assets). During this step, the application is preparing to make everything available for use offline.
 3. When the `oninstall` handler completes, the service worker is considered installed. However, it does not control the pages: pages using other service workers must be closed before it can be activated.
     >**Note:** Waiting for other pages to be closed can be bypassed with [`skipWaiting()`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting).
@@ -84,7 +84,7 @@ registerServiceWorker();
 ```
 
 1. The `if`-block performs a feature detection test to make sure service workers are supported before trying to register one.
-2. Next, we use the {{domxref("ServiceWorkerContainer.register()") }} function to register the service worker for this site, which is just a JavaScript file residing inside our app (note this is the file's URL relative to the origin, not the JS file that references it.)
+2. Next, we use the [`ServiceWorkerContainer.register()`](/en-US/docs/Web/API/ServiceWorkerContainer/register) function to register the service worker for this site, which is just a JavaScript file residing inside our app (note this is the file's URL relative to the origin, not the JS file that references it.)
 3. The `scope` parameter is optional, and can be used to specify the subset of your content that you want the service worker to control. In this case, we have specified '`'/'`, which means all content under the app's origin. If you leave it out, it will default to this value anyway, but we specified it here for illustration purposes.
 
 This registers a service worker, which runs in a worker context, and therefore has no DOM access. You then run code in the service worker outside of your normal pages to control their loading.
@@ -109,7 +109,7 @@ This could be for the following reasons:
 
 After your service worker is registered, the browser will attempt to install then activate the service worker for your page/site.
 
-The `install` event is fired when an install is successfully completed. The `install` event is generally used to populate your browser's offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker's storage API — {{domxref("cache")}} — a global object on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser's standard cache, but it is specific to your domain. It persists until you tell it not to.
+The `install` event is fired when an install is successfully completed. The `install` event is generally used to populate your browser's offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker's storage API — [`cache`](/fr/docs/Web/API/Cache) — a global object on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser's standard cache, but it is specific to your domain. It persists until you tell it not to.
 
 Here's how our service worker handles the `install` event:
 
@@ -136,7 +136,7 @@ self.addEventListener("install", (event) => {
 });
 ```
 
-1. Here we add an `install` event listener to the service worker (hence `self`), and then chain a {{domxref("ExtendableEvent.waitUntil()") }} method onto the event — this ensures that the service worker will not install until the code inside `waitUntil()` has successfully occurred.
+1. Here we add an `install` event listener to the service worker (hence `self`), and then chain a [`ExtendableEvent.waitUntil()`](/en-US/docs/Web/API/ExtendableEvent/waitUntil) method onto the event — this ensures that the service worker will not install until the code inside `waitUntil()` has successfully occurred.
 2. Inside `addResourcesToCache()` we use the [`caches.open()`](/en-US/docs/Web/API/CacheStorage/open) method to create a new cache called `v1`, which will be version 1 of our site resources cache. Then we call a function `addAll()` on the created cache, which for its parameter takes an array of origin-relative URLs to all the resources you want to cache.
 3. If the promise is rejected, the install fails, and the worker won't do anything. This is OK, as you can fix your code and then try again the next time registration occurs.
 4. After a successful installation, the service worker activates. This doesn't have much of a distinct use the first time your service worker is installed/activated, but it means more when the service worker is updated (see the [Updating your service worker](#updating_your_service_worker) section later on.)
@@ -174,9 +174,9 @@ Now you've got your site assets cached, you need to tell service workers to do s
 
 ![Fetch event diagram](sw-fetch.svg)
 
-Let's look at a few other options we have when defining our logic (see our [Fetch API documentation](/en-US/docs/Web/API/Fetch_API) for more information about {{domxref("Request")}} and {{domxref("Response")}} objects.)
+Let's look at a few other options we have when defining our logic (see our [Fetch API documentation](/en-US/docs/Web/API/Fetch_API) for more information about [`Request`](/en-US/docs/Web/API/Request) and [`Response`](/en-US/docs/Web/API/Response) objects.)
 
-1. The {{domxref("Response.Response","Response()")}} constructor allows you to create a custom response. In this case, we are just returning a simple text string:
+1. The [`Response()`](/en-US/docs/Web/API/Response/Response) constructor allows you to create a custom response. In this case, we are just returning a simple text string:
 
     ```js
     new Response("Hello from your friendly neighborhood service worker!");
@@ -193,19 +193,19 @@ Let's look at a few other options we have when defining our logic (see our [Fetc
     );
     ```
 
-3. If a match wasn't found in the cache, you could tell the browser to use {{domxref("fetch()")}} to get the default network request for that resource, to get the new resource from the network if it is available:
+3. If a match wasn't found in the cache, you could tell the browser to use [`fetch()`](/en-US/docs/Web/API/fetch) to get the default network request for that resource, to get the new resource from the network if it is available:
 
     ```js
     fetch(event.request);
     ```
 
-4. If a match wasn't found in the cache, and the network isn't available, you could just match the request with some kind of default fallback page as a response using {{domxref("CacheStorage.match","match()")}}, like this:
+4. If a match wasn't found in the cache, and the network isn't available, you could just match the request with some kind of default fallback page as a response using [`match()`](/en-US/docs/Web/API/CacheStorage/match), like this:
 
     ```js
     caches.match("./fallback.html");
     ```
 
-5. You can retrieve a lot of information about each request with the properties of the {{domxref("Request")}} object given by the {{domxref("FetchEvent")}}:
+5. You can retrieve a lot of information about each request with the properties of the [`Request`](/en-US/docs/Web/API/Request) object given by the [`FetchEvent`](/en-US/docs/Web/API/FetchEvent):
 
     ```js
     event.request.url;
@@ -315,11 +315,11 @@ self.addEventListener("fetch", (event) => {
 
 We have opted for this fallback image because the only updates that are likely to fail are new images, as everything else is depended on for installation in the `install` event listener we saw earlier.
 
-## Service Worker Navigation Preload
+## Service Worker navigation preload
 
 If enabled, the [navigation preload](/en-US/docs/Web/API/NavigationPreloadManager) feature starts downloading resources as soon as the fetch request is made, and in parallel with service worker activation. This ensures that download starts immediately on navigation to a page, rather than having to wait until the service worker is activated. That delay happens relatively rarely, but is unavoidable when it does happen, and may be significant.
 
-First the feature must be enabled during service worker activation, using {{domxref("NavigationPreloadManager.enable()", "registration.navigationPreload.enable()")}}:
+First the feature must be enabled during service worker activation, using [`registration.navigationPreload.enable()`](/en-US/docs/Web/API/NavigationPreloadManager/enable):
 
 ```js
 const enableNavigationPreload = async () => {
@@ -334,7 +334,7 @@ self.addEventListener("activate", (event) => {
 });
 ```
 
-Then use {{domxref("FetchEvent.preloadResponse", "event.preloadResponse")}} to wait for the preloaded resource to finish downloading in the `fetch` event handler.
+Then use [`event.preloadResponse`](/en-US/docs/Web/API/FetchEvent/preloadResponse) to wait for the preloaded resource to finish downloading in the `fetch` event handler.
 
 Continuing the example from the previous sections, we insert the code to wait for the preloaded resource after the cache check, and before fetching from the network if that doesn't succeed.
 
