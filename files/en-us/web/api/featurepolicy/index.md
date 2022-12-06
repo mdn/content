@@ -26,7 +26,7 @@ The `FeaturePolicy` interface represents the set of policies applied to the curr
 - {{DOMxRef("FeaturePolicy.allowsFeature")}} {{Experimental_Inline}}
   - : Returns a Boolean that indicates whether or not a particular feature is enabled in the specified context.
 - {{DOMxRef("FeaturePolicy.features")}} {{Experimental_Inline}}
-  - : Returns a list of names of all features supported by the User Agent. Features whose names appear on the list might not be allowed by the Permissions Policy of the current execution context and/or might not be accessible because of users' permissions.
+  - : Returns a list of names of all features supported by the User Agent. Features whose names appear on the list might not be allowed by the Permissions Policy of the current execution context and/or might be restricted by user-granted permissions.
 - {{DOMxRef("FeaturePolicy.allowedFeatures")}} {{Experimental_Inline}}
   - : Returns a list of names of all features supported by the User Agent and allowed by the Permissions Policy. Note that features appearing on this list might still be behind a user permission.
 - {{DOMxRef("FeaturePolicy.getAllowlistForFeature")}} {{Experimental_Inline}}
