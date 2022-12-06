@@ -26,16 +26,15 @@ Service workers are enabled by default in all modern browsers. To run code using
 
 With service workers, the following steps are generally observed for basic set up:
 
-1. The service worker URL is fetched and registered via {{domxref("serviceWorkerContainer.register()")}}.
-2. If successful, the service worker is executed in a {{domxref("ServiceWorkerGlobalScope") }}; this is basically a special kind of worker context, running off the main script execution thread, with no DOM access.
-3. The service worker is now ready to process events.
-4. Installation of the worker is attempted when service worker-controlled pages are accessed subsequently. An `install` event is always the first one sent to a service worker (this can be used to start the process of populating an IndexedDB, and caching site assets). During this step, the application is preparing to make everything available for use offline.
-5. When the `oninstall` handler completes, the service worker is considered installed. However, it does not control the pages: pages using other service workers must be closed before it can be activated.
+1. The service worker URL is fetched and registered via {{domxref("serviceWorkerContainer.register()")}}. If successful, the service worker is executed in a {{domxref("ServiceWorkerGlobalScope") }}; this is basically a special kind of worker context, running off the main script execution thread, with no DOM access. The service worker is now ready to process events.
+2. Installation of the worker is attempted when service worker-controlled pages are accessed subsequently. An `install` event is always the first one sent to a service worker (this can be used to start the process of populating an IndexedDB, and caching site assets). During this step, the application is preparing to make everything available for use offline.
+3. When the `oninstall` handler completes, the service worker is considered installed. However, it does not control the pages: pages using other service workers must be closed before it can be activated.
     >**Note:** Waiting for other pages to be closed can be bypassed with [`skipWaiting()`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting).
-6. Next is activation. When the service worker is installed, it then receives an `activate` event. The primary use of `onactivate` is for cleanup of resources used in previous versions of a service worker script.
-7. The service worker will now control pages, but only those opened after the `register()` is successful. In other words, documents will have to be reloaded to actually be controlled, because a document starts life with or without a service worker and maintains that for its lifetime.
+4. Next is activation. When the service worker is installed, it then receives an `activate` event. The primary use of `onactivate` is for cleanup of resources used in previous versions of a service worker script.
+5. The service worker will now control pages, but only those opened after the `register()` is successful. In other words, documents will have to be reloaded to actually be controlled, because a document starts life with or without a service worker and maintains that for its lifetime.
+6. Whenever a new version of a service worker is fetched, this cycle happens again and the remainings of the previous version are cleaned during the new version's activation.
 
-![lifecycle diagram](sw-lifecycle.png)
+![lifecycle diagram](sw-lifecycle.svg)
 
 Here is a summary of the available service worker events:
 
