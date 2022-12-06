@@ -54,7 +54,7 @@ Permissions-Policy: geolocation=(self "https://example.com")
 ### With an \<iframe> element
 
 FastCorp Inc. wants to disable `geolocation` for all cross-origin child
-frames, except for a specific \<iframe>. It can do so by delivering the following
+frames, except for a specific `<iframe>`. It can do so by delivering the following
 HTTP response header to define a Permissions Policy:
 
 ```http
