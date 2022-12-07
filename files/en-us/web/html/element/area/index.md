@@ -15,7 +15,7 @@ browser-compat: html.elements.area
 
 {{HTMLSidebar}}
 
-The **`<area>`** [HTML](/en-US/docs/Web/HTML) element defines an area inside an image map that has predefined clickable areas. An _image map_ allows geometric areas on an image to be associated with {{Glossary("Hyperlink", "hypertext link")}}.
+The **`<area>`** [HTML](/en-US/docs/Web/HTML) element defines an area inside an image map that has predefined clickable areas. An _image map_ allows geometric areas on an image to be associated with {{Glossary("Hyperlink", "hypertext links")}}.
 
 This element is used only within a {{HTMLElement("map")}} element.
 
