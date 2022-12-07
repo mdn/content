@@ -124,7 +124,13 @@ const gdmOptions = {
 }
 ```
 
-In this example the cursor will always be visible in the capture, and the audio track should ideally have noise suppression and echo cancellation features enabled, as well as an ideal audio sample rate of 44.1kHz. In addition, the app is hinting to the user agent that it should provide a control during screen-sharing to allow the user to dynamically switch the shared tab, and hide the current tab from the list of options presented to the user when capture is requested.
+In this example the cursor will always be visible in the capture, and the display surface captured is to be the whole window. The audio track should ideally have noise suppression and echo cancellation features enabled, as well as an ideal audio sample rate of 44.1kHz, and supression of local audio playback.
+
+In addition, the app is hinting to the user agent that it should:
+
+- Provide a control during screen sharing to allow the user to dynamically switch the shared tab.
+- Hide the current tab from the list of options presented to the user when capture is requested.
+- Not include the system audio among the possible audio sources offered to the user.
 
 Capturing audio is always optional, and even when web content requests a stream with both audio and video, the returned {{domxref("MediaStream")}} may still have only one video track, with no audio.
 

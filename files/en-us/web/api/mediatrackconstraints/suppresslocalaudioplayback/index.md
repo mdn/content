@@ -38,8 +38,6 @@ object with an `ideal` field, that field's Boolean value indicates an ideal
 setting for the local audio playback suppression feature; if it can't be met, then the request will
 result in an error.
 
-`exact` values are not permitted in constraints used in {{domxref("MediaDevices.getDisplayMedia()")}} calls, but they are in constraints used in {{domxref("MediaStreamTrack.applyConstraints()")}} calls.
-
 ## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints", "Example: Constraint exerciser")}} for an example.

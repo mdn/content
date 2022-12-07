@@ -46,22 +46,20 @@ video {{domxref("MediaStreamTrack")}}, then checking the value of the returned
 {{domxref("MediaTrackSettings")}} object's
 {{domxref("MediaTrackSettings.displaySurface", "displaySurface")}} object.
 
-For example, if your app needs to know that the surface being shared is a monitor or
-window—meaning that there's possibly a non-content backdrop—it can use code similar
+For example, if your app needs to know when the surface being shared is a monitor — meaning that there's possibly a non-content backdrop being captured — it can use code similar
 to this:
 
 ```js
 let mayHaveBackdropFlag = false;
 let displaySurface = displayStream.getVideoTracks()[0].getSettings().displaySurface;
 
-if (displaySurface === "monitor" || displaySurface ==="window") {
+if (displaySurface === "monitor") {
   mayHaveBackdropFlag = true;
 }
 ```
 
 Following this code, `mayHaveBackdrop` is `true` if the display
-surface contained in the stream is of type `monitor` or
-`window`; either of these _may_ have non-content backdrop areas.
+surface contained in the stream is of type `monitor`.
 Later code can use this flag to determine whether or not to perform special processing,
 such as to remove or replace the backdrop, or to "cut" the individual display areas out
 of the received frames of video.
