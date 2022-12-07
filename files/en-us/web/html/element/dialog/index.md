@@ -85,17 +85,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Accessibility considerations
 
-The native HTML `<dialog>` should be used in creating modal dialog as it provides many accessiblity features that must be replicated if using other elements for a similar purpose.
+The native HTML `<dialog>` element should be used in creating modal dialogs as it provides usability and accessiblity features that must be replicated if using other elements for a similar purpose. Use the appropriate `.showModal()` or `.show()` method to render dialogs. If creating a custom dialog implementation, ensure all expected default behaviors are supported and proper labeling recommendations are followed.
 
 When implementing a dialog, it is important to consider the most appropriate place to set user focus. Explicitly indicating the initial focus placement by use of the [autofocus](/en-US/docs/Web/HTML/Global_attributes/autofocus) attribute will help ensure initial focus is set to the element deemed the best initial focus placement for any particular dialog. When in doubt, as it may not always be known where initial focus could be set within a dialog, particularly for instances where a dialog's content is dynamically rendered when invoked, then if necessary authors may decide focusing the `<dialog>` element itself would provide the best initial focus placement. When using {{domxref("HTMLDialogElement.showModal()")}} to open a `<dialog>`, focus is set on the first nested focusable element.
 
 Ensure a mechanism is provided to allow users to close a dialog. The most robust way to ensure all users can close a dialog is to include an explicit button to do so. For instance, a confirmation, cancel or close button as appropriate. Additionally, for those using a device with a keyboard, the <kbd>Escape</kbd> key is commonly expected to close modal dialogs as well. By default, a `<dialog>` invoked by the `showModal()` method will allow for its dismissal by the <kbd>Escape</kbd>. A non-modal dialog does not dismiss via the <kbd>Escape</kbd> key by default, and depending on what the non-modal dialog represents, it may not be desired for this behavior. If multiple modal dialogs are open, <kbd>Escape</kbd> should only close the last shown dialog. When using `<dialog>`, this behavior is provided by the browser.
 
 The `<dialog>` element is exposed by browsers similarly to custom dialogs using the ARIA [role="dialog"](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) attribute. `<dialog>` elements invoked by the `showModal()` method will have an implicit [aria-modal="true"](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal), whereas `<dialog>` elements invoked by the `show()` method, or rendered by use of the `open` attribute or changing the default `display` of a `<dialog>` will be exposed as `[aria-modal="false"]`. When implementing modal dialogs, everything other than the `<dialog>` and its contents should be rendered inert using the [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert) attribute. When using `<dialog>` along with the `HTMLDialogElement.showModal()` method, this behavior is provided by the browser.
-
-Use the appropriate `showModal()` or `show()` method to render dialogs.
-
-Ensure any custom dialog implementation don't break expected default behaviors and follow proper labeling recommendations.
 
 ## Usage notes
 
