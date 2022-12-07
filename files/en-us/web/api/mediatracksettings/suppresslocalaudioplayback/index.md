@@ -27,9 +27,8 @@ The below function sets up the constraints object specifying the options for the
 
 ```js
 async function capture() {
-  let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
-  let displayMediaOptions = {
-    video: {},
+  const supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
+  const displayMediaOptions = {
     audio: {}
   };
 

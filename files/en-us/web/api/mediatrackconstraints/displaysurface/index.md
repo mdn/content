@@ -47,7 +47,7 @@ video {{domxref("MediaStreamTrack")}}, then checking the value of the returned
 {{domxref("MediaTrackSettings.displaySurface", "displaySurface")}} object.
 
 For example, if your app needs to know that the surface being shared is a monitor or
-application—meaning that there's possibly a non-content backdrop—it can use code similar
+window—meaning that there's possibly a non-content backdrop—it can use code similar
 to this:
 
 ```js

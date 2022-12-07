@@ -158,8 +158,6 @@ These constraints apply to the `video` property of the object passed into {{domx
 
   - : A [`ConstrainDOMString`](#constraindomstring) which specifies the types of display surface that may be selected by the user. This may be a single one of the following strings, or a list of them to allow multiple source surfaces:
 
-    - `application`
-      - : The stream contains all of the windows of the application chosen by the user rendered into the one video track.
     - `browser`
       - : The stream contains the contents of a single browser tab selected by the user.
     - `monitor`
@@ -169,6 +167,9 @@ These constraints apply to the `video` property of the object passed into {{domx
 
 - {{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}}
   - : A [`ConstrainBoolean`](#constrainboolean) value which may contain a single Boolean value or a set of them, indicating whether or not to allow the user to choose source surfaces which do not directly correspond to display areas. These may include backing buffers for windows to allow capture of window contents that are hidden by other windows in front of them, or buffers containing larger documents that need to be scrolled through to see the entire contents in their windows.
+
+- {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback", "suppressLocalAudioPlayback")}}
+  - : A [`ConstrainBoolean`](#constrainboolean) value describing the requested or mandatory constraints placed upon the value of the {{domxref("MediaTrackSettings.suppressLocalAudioPlayback","suppressLocalAudioPlayback")}} constrainable property. This property controls whether the audio playing in a tab will continue to be played out of a user's local speakers when the tab is captured.
 
 ## Specifications
 

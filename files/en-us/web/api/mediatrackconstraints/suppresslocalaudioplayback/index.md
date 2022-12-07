@@ -27,12 +27,18 @@ this is unnecessary since browsers will ignore any constraints they're unfamilia
 
 ## Value
 
+`true`/`false`, or a [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) object.
+
 If this value is a simple `true` or `false`, the user agent will
 attempt to obtain media with local audio playback enabled or disabled as specified, if
-possible, but will not fail if this can't be done. If, instead, the value is given as an
-object with an `exact` field, that field's Boolean value indicates a required
-setting for the noise suppression feature; if it can't be met, then the request will
+possible, but will not fail if this can't be done.
+
+If, instead, the value is given as a [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) object
+object with an `ideal` field, that field's Boolean value indicates an ideal
+setting for the local audio playback suppression feature; if it can't be met, then the request will
 result in an error.
+
+`exact` values are not permitted in constraints used in {{domxref("MediaDevices.getDisplayMedia()")}} calls, but they are in constraints used in {{domxref("MediaStreamTrack.applyConstraints()")}} calls.
 
 ## Examples
 

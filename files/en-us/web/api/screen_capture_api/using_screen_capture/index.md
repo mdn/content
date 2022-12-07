@@ -109,15 +109,18 @@ This allows the user total freedom to select whatever they want, within the limi
 ```js
 const gdmOptions = {
   video: {
-    cursor: "always"
+    cursor: "always",
+    displaySurface: "window"
   },
   audio: {
     echoCancellation: true,
     noiseSuppression: true,
     sampleRate: 44100
+    suppressLocalAudioPlayback: true
   },
-  surfaceSwitching: true,
-  selfBrowserSurface: false
+  surfaceSwitching: "include",
+  selfBrowserSurface: "exclude",
+  systemAudio: "exclude"
 }
 ```
 
