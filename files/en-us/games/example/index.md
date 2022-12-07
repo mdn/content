@@ -1,6 +1,6 @@
 ---
 title: Examples
-slug: Games/Examples
+slug: Games/Example
 tags:
   - Demos
   - Example
@@ -14,8 +14,6 @@ This page lists a number of impressive web technology demos for you to get inspi
 
 ## Free/demo games
 
-- [Tanx](https://tanx.io/)
-  - : A multiplayer tank battle game, created with [PlayCanvas](https://playcanvas.com/).
 - [Hyper Vanguard Force](https://robertsspaceindustries.com/comm-link/transmission/14704-Hyper-Vanguard-Force)
   - : A neat vertically scrolling space shooter.
 - [Swooop](https://playcanv.as/p/JtL2iqIH)
@@ -44,6 +42,8 @@ This page lists a number of impressive web technology demos for you to get inspi
   - : A WebGL and asm.js-based multiplayer online shooter, developed by Nom Nom Games and Trendy entertainment.
 - [Solitaire](https://online-solitaire.com/mozilla-foundation)
   - : A classic solitaire game in the style and colors of the Mozilla Foundation. Built with ReactJS, Firebase and Greensock for animations.
+
+![This is an example image](test.jpg)
 
 ## Commercial games
 

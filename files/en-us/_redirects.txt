@@ -3516,6 +3516,7 @@
 /en-US/docs/Gamepad_API	/en-US/docs/Web/API/Gamepad_API
 /en-US/docs/Games-redirect-1	/en-US/docs/Games
 /en-US/docs/Games/Anatomy_of_a_vIdeo_game	/en-US/docs/Games/Anatomy
+/en-US/docs/Games/Examples	/en-US/docs/Games/Example
 /en-US/docs/Games/Index	/en-US/docs/Games
 /en-US/docs/Games/Introduction/Introduction_3D	/en-US/docs/Games/Techniques/3D_on_the_web
 /en-US/docs/Games/Introduction_to_HTML5_Game_Development_(summary)	/en-US/docs/Games/Introduction_to_HTML5_Game_Development
