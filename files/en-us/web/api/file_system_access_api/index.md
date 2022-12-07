@@ -47,7 +47,7 @@ This API opens up potential functionality the web has been lacking. Still, secur
 ## Interfaces
 
 - {{domxref("FileSystemHandle")}}
-  - : The **`FileSystemHandle`** interface is an object which represents an entry. Multiple handles can represent the same entry. For the most part you do not work with `FileSystemEntry` directly but rather it's child interfaces {{domxref('FileSystemFileEntry')}} and {{domxref('FileSystemDirectoryEntry')}}.
+  - : The **`FileSystemHandle`** interface is an object which represents an entry. Multiple handles can represent the same entry. For the most part you do not work with `FileSystemHandle` directly but rather its child interfaces {{domxref('FileSystemFileHandle')}} and {{domxref('FileSystemDirectoryHandle')}}.
 - {{domxref("FileSystemFileHandle")}}
   - : Provides a handle to a file system entry.
 - {{domxref("FileSystemDirectoryHandle")}}
