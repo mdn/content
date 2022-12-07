@@ -7,7 +7,6 @@ tags:
   - CSS Fonts
   - CSS Property
   - Reference
-  - recipe:css-property
 browser-compat: css.properties.font-variant-emoji
 ---
 
@@ -19,8 +18,6 @@ Traditionally this was done by appending a _Variation Selector_, either `U+FE0E`
 
 Only emojis listed as contributing to a [Unicode emoji presentation sequence](http://www.unicode.org/emoji/charts/emoji-variants.html) are affected by this property.
 
-{{EmbedInteractiveExample("pages/css/font-variant-emoji.html")}}
-
 ## Syntax
 
 ```css
@@ -29,9 +26,16 @@ font-variant-emoji: normal;
 font-variant-emoji: text;
 font-variant-emoji: emoji;
 font-variant-emoji: unicode;
+
+/* Global values */
+font-variant-emoji: inherit;
+font-variant-emoji: initial;
+font-variant-emoji: revert;
+font-variant-emoji: revert-layer;
+font-variant-emoji: unset;
 ```
 
-The `font-variant-emoji` property is specified as one of the keyword values listed below.
+The `font-variant-emoji` property is specified using a single keyword value from the list below.
 
 ### Values
 
@@ -51,6 +55,72 @@ The `font-variant-emoji` property is specified as one of the keyword values list
 ## Formal syntax
 
 {{CSSSyntax}}
+
+## Examples
+
+### Changing the way an emoji is displayed
+
+In this example show how you can render an emoji in its `text` or `emoji` presentation.
+
+#### HTML
+
+```html hidden
+<p class="nosupport">Your Browser does not support <code>font-variant-emoji</code>. This image shows how it is rendered with support.</p>
+<img class="nosupport" src="./font-variant-emoji-example.jpg" alt="a telephone emoji show as text, black and white next to a telephone emoji shown as emoji full color and graphical representation">
+```
+
+```html
+<section class="emojis">
+  <div class="emoji">
+    <h2>text presentation</h2>
+    <div class="text-presentation">☎</div>
+  </div>
+  <div class="emoji">
+    <h2>emoji presentation</h2>
+    <div class="emoji-presentation">☎</div>
+  </div>
+</section>
+```
+
+#### CSS
+
+```css hidden
+@supports (font-variant-emoji:emoji) {
+  .nosupport {
+    display: none;
+  }
+  .emojis {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .emoji > div {
+    font-size: 2rem;
+  }
+}
+
+@supports not (font-variant-emoji:emoji) {
+  .emojis {
+    display: none;
+  }
+}
+
+
+```
+
+```css
+.text-presentation {
+  font-variant-emoji: text;
+}
+
+.emoji-presentation {
+  font-variant-emoji: emoji;
+}
+```
+
+#### Result
+
+{{ EmbedLiveSample('Changing the way an emoji is displayed') }}
 
 ## Specifications
 
