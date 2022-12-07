@@ -18,7 +18,7 @@ A third key paint moment is provided by the {{domxref("LargestContentfulPaint")}
 
 - {{Glossary("Largest contentful paint")}} (LCP): Render time of the largest image or text block visible within the viewport, recorded from when the page first begins to load.
 
-The data this API provides helps you minimize the time that users have to wait before they can see the site's content start to appear. You can make the site feel more engaging and responsive (better performing) for your users.
+The data this API provides helps you minimize the time that users have to wait before they can see the site's content start to appear. Decreasing the time until these key paint moments make sites feel more responsive, performant, and engaging for your users.
 
 Like other Performance APIs, this API extends {{domxref("PerformanceEntry")}}.
 
