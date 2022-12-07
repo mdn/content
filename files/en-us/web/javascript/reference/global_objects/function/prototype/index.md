@@ -18,6 +18,8 @@ A {{jsxref("Function")}} object's **`prototype`** property is used when the func
 
 > **Note:** The `prototype` property of [classes](/en-US/docs/Web/JavaScript/Reference/Classes) is not writable.
 
+> **Note:** The `prototype` properties of [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*) and [async generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*) are not writable but are configurable.
+
 ## Description
 
 When a function is called with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), the constructor's `prototype` property will become the resulting object's prototype.

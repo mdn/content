@@ -1728,7 +1728,6 @@
     "WebGL": {
       "overview": ["WebGL API"],
       "guides": [
-        "/docs/Web/API/WebGL_API/Tutorial",
         "/docs/Web/API/WebGL_API/Constants",
         "/docs/Web/API/WebGL_API/Types",
         "/docs/Web/API/WebGL_API/WebGL_model_view_projection",
@@ -1739,6 +1738,17 @@
         "/docs/Web/API/WebGL_API/Data",
         "/docs/Web/API/WebGL_API/Matrix_math_for_the_web",
         "/docs/Web/API/WebGL_API/Using_Extensions"
+      ],
+      "tutorial": [
+        "/docs/Web/API/WebGL_API/Tutorial",
+        "/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL",
+        "/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context",
+        "/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL",
+        "/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL",
+        "/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL",
+        "/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL",
+        "/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL",
+        "/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL"
       ],
       "interfaces": [
         "WebGLRenderingContext",

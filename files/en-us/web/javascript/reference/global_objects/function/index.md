@@ -87,10 +87,9 @@ While this code works in web browsers, `f1()` will produce a `ReferenceError` in
 
 ## See also
 
-- {{jsxref("Functions", "Functions and function scope", "", 1)}}
-- {{jsxref("Statements/function", "function")}} statement
-- {{jsxref("Operators/function", "function")}} expression
-- {{jsxref("Statements/function*", "function*")}} statement
-- {{jsxref("Operators/function*", "function*")}} expression
+- [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
 - {{jsxref("AsyncFunction")}}
+- {{jsxref("AsyncGeneratorFunction")}}
 - {{jsxref("GeneratorFunction")}}
+- {{jsxref("Functions", "Functions", "", 1)}}
