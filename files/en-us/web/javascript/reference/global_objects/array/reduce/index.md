@@ -75,7 +75,7 @@ reduce(function (accumulator, currentValue, currentIndex, array) { /* … */ }, 
 - `initialValue` {{optional_inline}}
   - : A value to which `accumulator` is initialized the first time the callback is called.
     If `initialValue` is specified, that also causes `currentValue` to be initialized to the first value in the array.
-    If `initialValue` is _not_ specified, `accumulator` is initialized to the first value in the array, and `currentValue` is initialized to the second value in the array.
+    If `initialValue` is _not_ specified, `accumulator` is initialized to the first value in the array, and `currentValue` is initialized to the second value in the array. If `reduce()` is called on an empty array without providing an `initialValue`, an error will occur.
 
 ### Return value
 
