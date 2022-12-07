@@ -25,6 +25,7 @@ object representing the url pattern defined by the parameters.
 ```js-nolint
 new URLPattern(input)
 new URLPattern(input, baseURL)
+new URLPattern(input, options)
 new URLPattern(input, baseURL, options)
 ```
 
@@ -131,7 +132,7 @@ console.log(pattern.test('https://events.com/2022/Feb/xc44rsz')); // true
 
 ## Usage notes
 
-The `URLPattern` constructor's input URLs can take two forms — a
+The `URLPattern` constructor's input pattern can take two forms — a
 pattern object, or a pattern string and optional baseURL.
 
 ```js
@@ -143,13 +144,13 @@ new URLPattern(pattern, baseURL);
 The first type of constructor takes an object that describes the
 URLs that should be matched by specifying patterns for each individual URL part.
 Its members can be any of `protocol`, `username`, `password`, `hostname`,
-`port`, `pathname`, `search`, `hash`, or `baseURL`. If the baseURL property is
+`port`, `pathname`, `search`, `hash`, or `baseURL`. If the `baseURL` property is
 provided it will be parsed as a URL and used to populate any other properties
-that are missing. If the baseURL property is missing, then any other missing
+that are missing. If the `baseURL` property is missing, then any other missing
 properties default to the pattern `*` wildcard, accepting any input.
 
 The second type of constructor takes a URL string that contains
-patterns embedded in it. The URL string may be relative if a base URL is
+patterns embedded in it. The URL string may be relative if a `baseURL` is
 provided as the second argument. Note that it may be necessary to escape some
 characters in the URL string if it is ambiguous whether the character is
 separating different URL components or is part of a pattern. For
