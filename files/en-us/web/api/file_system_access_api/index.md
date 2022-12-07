@@ -44,13 +44,11 @@ Each handle provides its own functionality and there are a few differences depen
 
 The [origin private file system (OPFS)](https://fs.spec.whatwg.org/#origin-private-file-system) is a storage endpoint private to the origin of the page, providing optional access to a special kind of file that is highly optimized for performance, for example, by offering in-place and exclusive write access to a file's content.
 
-Files in the OPFS differ from the files that you'd select using a picker. Storing data in the OPFS is similar to storing data in any other browser-provided storage mechanism that's private to the origin of the page (e.g. the {{domxref("IndexedDB API", "IndexedDB API", "", "nocode")}}).
+Storing data in the OPFS is similar to storing data in any other browser-provided storage mechanism that's private to the origin of the page (for example the {{domxref("IndexedDB API", "IndexedDB API", "", "nocode")}}). This means that files in the OPFS differ from files selected using a picker in the following ways:
 
-This means that:
-
-- Permission prompts are not required to access the files in the OPFS.
-- Clearing data for the site deletes the entire OPFS (which isn't the case for non-OPFS files).
-- The OFPS is subject to quota restrictions (again, not the case for non-OPFS files).
+- Permission prompts are not required to access files in the OPFS.
+- Clearing data for the site deletes the OPFS.
+- The OFPS is subject to browser quota restrictions.
 
 Files can be manipulated inside the OPFS via a three-step process:
 
