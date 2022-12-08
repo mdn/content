@@ -33,7 +33,7 @@ A `TypeError` may be thrown when:
   - : Error message. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.name", "TypeError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.cause", "TypeError.prototype.cause")}}
+- {{jsxref("Error.prototype.cause", "Cause")}}
   - : Error cause. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.fileName", "TypeError.prototype.fileName")}} {{non-standard_inline}}
   - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.

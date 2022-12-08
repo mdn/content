@@ -32,7 +32,7 @@ Example cases are mostly when something is too large, e.g.:
   - : Error message. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.name", "InternalError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.cause", "InternalError.prototype.cause")}}
+- {{jsxref("Error.prototype.cause", "Cause")}}
   - : Error cause. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.fileName", "InternalError.prototype.fileName")}} {{Non-standard_Inline}}
   - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
