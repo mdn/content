@@ -9,7 +9,7 @@ tags:
   - WebGL
 ---
 
-{{WebGLSidebar("Tutorial") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 In this demonstration, we build upon the previous example by replacing our static textures with the frames of an mp4 video file that's playing. This is actually pretty easy to do and fun to watch, so let's get started. You can use similar code to use any sort of data (such as a {{ HTMLElement("canvas") }}) as the source for your textures.
 

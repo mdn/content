@@ -25,12 +25,12 @@ The `secureConnectionStart` property can have the following values:
 
 ## Examples
 
-### Measuring SSL negotiation time
+### Measuring TLS negotiation time
 
-The `secureConnectionStart` and {{domxref("PerformanceResourceTiming.requestStart", "requestStart")}} properties can be used to measure how long it takes for the SSL negotiation to happen.
+The `secureConnectionStart` and {{domxref("PerformanceResourceTiming.requestStart", "requestStart")}} properties can be used to measure how long it takes for the TLS negotiation to happen.
 
 ```js
-const ssl = entry.requestStart - entry.secureConnectionStart;
+const tls = entry.requestStart - entry.secureConnectionStart;
 ```
 
 Using a {{domxref("PerformanceObserver")}}:
@@ -38,9 +38,9 @@ Using a {{domxref("PerformanceObserver")}}:
 ```js
 const observer = new PerformanceObserver((list) => {
   list.getEntries().forEach((entry) => {
-    const ssl = entry.requestStart - entry.secureConnectionStart;
-    if (ssl > 0) {
-      console.log(`${entry.name}: SSL negotiation duration: ${ssl}ms`);
+    const tls = entry.requestStart - entry.secureConnectionStart;
+    if (tls > 0) {
+      console.log(`${entry.name}: TLS negotiation duration: ${tls}ms`);
     }
   });
 });
@@ -53,9 +53,9 @@ Or using {{domxref("Performance.getEntriesByType()")}}, which only shows `resour
 ```js
 const resources = performance.getEntriesByType("resource");
 resources.forEach((entry) => {
-  const ssl = entry.requestStart - entry.secureConnectionStart;
-  if (ssl > 0) {
-    console.log(`${entry.name}: SSL negotiation duration: ${ssl}ms`);
+  const tls = entry.requestStart - entry.secureConnectionStart;
+  if (tls > 0) {
+    console.log(`${entry.name}: TLS negotiation duration: ${tls}ms`);
   }
 });
 ```
