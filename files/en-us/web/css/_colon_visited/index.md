@@ -35,7 +35,7 @@ For privacy reasons, browsers strictly limit which styles you can apply using th
 ## Syntax
 
 ```
-selector:visited
+:visited
 ```
 
 ## Examples
