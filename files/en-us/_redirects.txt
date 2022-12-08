@@ -9137,6 +9137,7 @@
 /en-US/docs/Web/API/OverconstrainedError/name	/en-US/docs/Web/API/DOMException/name
 /en-US/docs/Web/API/PaintWorklet/PaintWorklet.devicePixelRatio	/en-US/docs/Web/API/PaintWorklet/devicePixelRatio
 /en-US/docs/Web/API/PaintWorklet/devicePizelRatio	/en-US/docs/Web/API/PaintWorklet/devicePixelRatio
+/en-US/docs/Web/API/Paint_Timing_API	/en-US/docs/Web/API/PerformancePaintTiming
 /en-US/docs/Web/API/PannerNode.coneInnerAngle	/en-US/docs/Web/API/PannerNode/coneInnerAngle
 /en-US/docs/Web/API/PannerNode.coneOuterAngle	/en-US/docs/Web/API/PannerNode/coneOuterAngle
 /en-US/docs/Web/API/PannerNode.coneOuterGain	/en-US/docs/Web/API/PannerNode/coneOuterGain

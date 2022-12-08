@@ -639,10 +639,11 @@ See {{bug(1715546)}} for more details.
   </tbody>
 </table>
 
-### Container query length units
+### Container queries
 
-The CSS length units `cqw`, `cqh`, `cqi`, `cqb`, `cqmin`, `cqmax` are units of length relative to the size of a query container.
-For more information on these units, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) documentation ({{bug(1744231)}}).
+Container queries allow you to apply CSS styles to elements based on the size of their container as opposed to the size of the viewport or other device characteristics.
+The CSS length units `cqw`, `cqh`, `cqi`, `cqb`, `cqmin`, `cqmax` are units of length relative to the size of a query container and are supported as part of this functionality.
+For more information, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) page and the [Container query length units](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) section ({{bug(1744231)}}, {{bug(1801123)}}).
 
 <table>
   <thead>
@@ -655,8 +656,8 @@ For more information on these units, see the [CSS Container Queries](/en-US/docs
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>108</td>
-      <td>No</td>
+      <td>109</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>

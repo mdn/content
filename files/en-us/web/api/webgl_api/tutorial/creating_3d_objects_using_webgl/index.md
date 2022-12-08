@@ -12,7 +12,7 @@ tags:
   - rendering
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
 
 Let's take our square plane into three dimensions by adding five more faces to create a cube. To do this efficiently, we're going to switch from drawing using the vertices directly by calling the {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} method to using the vertex array as a table, and referencing individual vertices in that table to define the positions of each face's vertices, by calling {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}}.
 
