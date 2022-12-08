@@ -28,7 +28,7 @@ The properties of this interface allow you to calculate certain resource timing 
 - Measuring DNS lookup time (`domainLookupEnd` - `domainLookupStart`)
 - Measuring redirection time (`redirectEnd` - `redirectStart`)
 - Measuring request time (`responseStart` - `requestStart`)
-- Measuring SSL negotiation time (`requestStart` - `secureConnectionStart`)
+- Measuring TLS negotiation time (`requestStart` - `secureConnectionStart`)
 - Measuring time to fetch (without redirects) (`responseEnd` - `fetchStart`)
 - Measuring ServiceWorker processing time (`fetchStart` - `workerStart`)
 - Checking if content was compressed (`decodedBodySize` should not be `encodedBodySize`)
