@@ -14,7 +14,7 @@ The **`cause`** property indicates the specific original cause of an error.
 
 It is used when catching and re-throwing an error with a more-specific or useful error message in order to still have access to the original error.
 
-> **Note:** This property is created directly to instances by the engine using defineProperty, it is not a property of Error's prototype that all instances will inherit but it is created conditionally according to the way you called the Error constructor see:[omitting options argument](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error#omitting_options_argument).
+> **Note:** This property is created directly to instances by the engine, it is not a property of Error's prototype that all instances will inherit but it is created conditionally according to the way you called the Error constructor see:[omitting options argument](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error#omitting_options_argument).
 
 ## Description
 
