@@ -1,6 +1,6 @@
 ---
-title: declarativeNetRequest.updateSessionRuleset
-slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/updateSessionRuleset
+title: declarativeNetRequest.updateSessionRules
+slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/updateSessionRules
 tags:
   - API
   - Add-ons
@@ -9,8 +9,8 @@ tags:
   - WebExtensions
   - Function
   - declarativeNetRequest
-  - updateSessionRulest
-browser-compat: webextensions.api.declarativeNetRequest.updateSessionRuleset
+  - updateSessionRules
+browser-compat: webextensions.api.declarativeNetRequest.updateSessionRules
 ---
 
 {{AddonSidebar()}}
@@ -19,14 +19,14 @@ Modifies the set of scoped rules for the extension. The rules with IDs listed in
 
 - This update happens as an atomic operation: either all specified rules are added and removed, or an error is returned.
 - These rules are not persisted across browser sessions and are backed in memory.
-- {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}} is the maximum number of dynamic and session rules an extension can add.
+- {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES","MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}} is the maximum number of dynamic and session rules an extension can add.
 
 > **Note:** This API is available in Manifest V3 or higher.
 
 ## Syntax
 
 ```js-nolint
-let updatedRuleset = browser.declarativeNetRequest.updateSessionRuleset(
+let updatedRuleset = browser.declarativeNetRequest.updateSessionRules(
     options                // object
 );
 ```
@@ -48,7 +48,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) If th
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#method-updateSessionRuleset) API.
+> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#method-updateSessionRules) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
