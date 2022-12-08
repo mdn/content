@@ -18,7 +18,11 @@ The global **`globalThis`** property contains the [global `this`](/en-US/docs/We
 
 {{EmbedInteractiveExample("pages/js/globalprops-globalthis.html","shorter")}}
 
-{{JS_Property_Attributes(1, 0, 1)}}
+## Value
+
+The global `this` object.
+
+{{js_property_attributes(1, 0, 1)}}
 
 > **Note:** The `globalThis` property is configurable and writable so that code authors can hide it when executing untrusted code and prevent exposing the global object.
 

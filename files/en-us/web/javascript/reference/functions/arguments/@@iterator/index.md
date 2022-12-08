@@ -15,8 +15,6 @@ The **`@@iterator`** method of the [`arguments`](/en-US/docs/Web/JavaScript/Refe
 
 The initial value of this property is the same function object as the initial value of the {{jsxref("Array.prototype.values")}} property (and also the same as [`Array.prototype[@@iterator]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)).
 
-{{js_property_attributes(1, 0, 1)}}
-
 ## Syntax
 
 ```js-nolint
