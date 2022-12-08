@@ -12,7 +12,7 @@ browser-compat: api.PerformanceResourceTiming.connectEnd
 
 {{APIRef("Performance API")}}
 
-The **`connectEnd`** read-only property returns the {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser finishes establishing the connection to the server to retrieve the resource. The timestamp value includes the time interval to establish the transport connection, as well as other time intervals such as SSL handshake and [SOCKS](https://en.wikipedia.org/wiki/SOCKS) authentication.
+The **`connectEnd`** read-only property returns the {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser finishes establishing the connection to the server to retrieve the resource. The timestamp value includes the time interval to establish the transport connection, as well as other time intervals such as TLS handshake and [SOCKS](https://en.wikipedia.org/wiki/SOCKS) authentication.
 
 ## Value
 

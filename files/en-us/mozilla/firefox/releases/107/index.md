@@ -29,6 +29,7 @@ No notable changes
   This allows a user agent to determine the size of an element without needing to render its child elements.
   The shorthand properties [`contain-intrinsic-width`](/en-US/docs/Web/CSS/contain-intrinsic-width) and [`contain-intrinsic-height`](/en-US/docs/Web/CSS/contain-intrinsic-height) are also supported, along with the [logical properties](/en-US/docs/Web/CSS/CSS_Logical_Properties) [`contain-intrinsic-block-size`](/en-US/docs/Web/CSS/contain-intrinsic-block-size) and [`contain-intrinsic-inline-size`](/en-US/docs/Web/CSS/contain-intrinsic-inline-size).
   ({{bug(1597529)}}).
+- Color font is now supported via the [font-palette](/en-US/docs/Web/CSS/font-palette) property ({{bug(1791558)}}). Support has also been added for the [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) CSS at-rule and its descriptors [font-family](/en-US/docs/Web/CSS/@font-palette-values/font-family), [base-palette](/en-US/docs/Web/CSS/@font-palette-values/base-palette), and [override-colors](/en-US/docs/Web/CSS/@font-palette-values/override-colors). Together they help to define the color palette ({{bug(1791558)}}).
 
 ### JavaScript
 
