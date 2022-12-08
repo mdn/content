@@ -28,7 +28,7 @@ The properties of this interface allow you to calculate certain resource timing 
 - Measuring DNS lookup time (`domainLookupEnd` - `domainLookupStart`)
 - Measuring redirection time (`redirectEnd` - `redirectStart`)
 - Measuring request time (`responseStart` - `requestStart`)
-- Measuring SSL negotiation time (`requestStart` - `secureConnectionStart`)
+- Measuring TLS negotiation time (`requestStart` - `secureConnectionStart`)
 - Measuring time to fetch (without redirects) (`responseEnd` - `fetchStart`)
 - Measuring ServiceWorker processing time (`fetchStart` - `workerStart`)
 - Checking if content was compressed (`decodedBodySize` should not be `encodedBodySize`)
@@ -53,7 +53,7 @@ This interface extends the following {{domxref("PerformanceEntry")}} properties 
 
 ### Timestamps
 
-The interface supports the following timestamp properties which you can see in the diagram and and are listed in the order in which they are recorded for the fetching of a resource. An alphabetical listing is shown in the navigation, at left.
+The interface supports the following timestamp properties which you can see in the diagram and are listed in the order in which they are recorded for the fetching of a resource. An alphabetical listing is shown in the navigation, at left.
 
 ![Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a resource](timestamp-diagram.svg)
 

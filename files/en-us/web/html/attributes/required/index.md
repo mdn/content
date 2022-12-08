@@ -74,7 +74,7 @@ Provide an indication to users informing them the form control is required. Ensu
 
 ## See also
 
-- {{cssxref('validityState.valueMissing')}}
+- {{domxref('validityState.valueMissing')}}
 - {{cssxref(':required')}} and {{cssxref(':optional')}}
 - {{htmlelement('input')}}
 - {{htmlelement('select')}}

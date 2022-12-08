@@ -16,7 +16,7 @@ browser-compat: api.FileSystemSyncAccessHandle
 
 The **`FileSystemSyncAccessHandle`** interface of the {{domxref("File System Access API", "File System Access API", "", "nocode")}} represents a synchronous handle to a file system entry. The synchronous nature of the file reads and writes allows for higher performance for critical methods in contexts where asynchronous operations come with high overhead, e.g., [WebAssembly](/en-US/docs/WebAssembly).
 
-This class is only accessible inside dedicated [Web Workers](/en-US/docs/Web/API/Web_Workers_API) for files within the [origin private file system](https://fs.spec.whatwg.org/#origin-private-file-system).
+This class is only accessible inside dedicated [Web Workers](/en-US/docs/Web/API/Web_Workers_API) for files within the [origin private file system](/en-US/docs/Web/API/File_System_Access_API#origin_private_file_system).
 
 The interface is accessed through the {{domxref('FileSystemFileHandle.createSyncAccessHandle()')}} method.
 

@@ -473,7 +473,8 @@
         "window.showOpenFilePicker()",
         "window.showSaveFilePicker()",
         "window.showDirectoryPicker()",
-        "DataTransferItem.getAsFileSystemHandle()"
+        "DataTransferItem.getAsFileSystemHandle()",
+        "StorageManager.getDirectory()"
       ],
       "properties": [],
       "events": []
@@ -935,7 +936,6 @@
         "/docs/Web/API/User_timing_API",
         "/docs/Web/API/User_timing_API/Using_the_User_Timing_API",
         "/docs/Web/API/Element_timing_API",
-        "/docs/Web/API/Paint_timing_API",
         "/docs/Web/API/Largest_Contentful_Paint_API"
       ],
       "interfaces": [
