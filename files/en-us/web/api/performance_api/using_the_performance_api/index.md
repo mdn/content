@@ -236,8 +236,6 @@ To receive this, the server must send a {{HTTPHeader("Server-Timing")}} response
 
 Any metrics sent will appear in the {{domxref("PerformanceResourceTiming.serverTiming")}} property.
 
-By default, server timing metrics for cross-origin requests will not be included, unless the server also sends a {{HTTPHeader("Timing-Allow-Origin")}} response header along with the resource, listing the requester's origin.
-
 ### Additional properties
 
 Apart from timings, the `PerformanceResourceTiming` object includes extra properties to help understand characteristics of the resource load:
@@ -253,3 +251,68 @@ Apart from timings, the `PerformanceResourceTiming` object includes extra proper
 - the {{domxref("PerformanceResourceTiming.responseStatus", "status code the server returned for the resource", "", 1)}}
 
 - an identifier for the {{domxref("PerformanceResourceTiming.nextHopProtocol", "version of HTTP used to fetch the resource", "", 1)}}
+
+#### Cross-origin resource loads
+
+By default, most of the information in a resource timing entry is not exposed for cross-origin resource loads: the property values are set to zero.
+
+To receive complete information for a cross-origin resource load, the server must send a {{HTTPHeader("Timing-Allow-Origin")}} response header along with the resource, listing the requester's origin.
+
+### Examples
+
+#### Listing all resource loads
+
+The following code lists the initiator type and URL for every resource load. Note that we use `buffered: true` to ensure we don't miss resource loads that happened before this code was executed.
+
+```js
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    const url = new URL(entry.name);
+    console.log(`${entry.initiatorType} : ${url.pathname}`);
+  });
+});
+
+observer.observe({ type: "resource", buffered: true });
+```
+
+If you open <https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html> and paste this code into the console, you will see something like:
+
+```
+link : /learning-area/css/styling-text/web-fonts/web-font-finished.css
+css : /learning-area/css/styling-text/web-fonts/fonts/cicle_fina-webfont.woff2
+css : /learning-area/css/styling-text/web-fonts/fonts/zantroke-webfont.woff2
+```
+
+The `"link"` entry is for the styesheet that this page loads, and the two `"css"` entries are for the [fonts loaded by the stylesheet](https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.css).
+
+#### Listing resource timings
+
+The following code lists the total time taken to load each resource, and durations for various parts of the load operation:
+
+- domain name lookup
+- connection establishment
+- time between starting to send the request and starting to receive the response
+- time to receive the response from first byte to last byte
+
+```js
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    console.log(`${entry.initiatorType} : ${entry.name}`);
+    console.log(`Total time: ${entry.duration}`);
+    console.log(
+      `Domain name lookup: ${entry.domainLookupEnd - entry.domainLookupStart}`
+    );
+    console.log(
+      `Connection establishment: ${entry.connectEnd - entry.connectStart}`
+    );
+    console.log(
+      `Waiting for response: ${entry.responseStart - entry.requestStart}`
+    );
+    console.log(
+      `Receiving response: ${entry.responseEnd - entry.responseStart}`
+    );
+  });
+});
+
+observer.observe({ type: "resource", buffered: true });
+```
