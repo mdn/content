@@ -49,7 +49,7 @@ font-palette: --one;
 
 ### Specifying a dark palette
 
-This example allows you to use the first palette marked as *dark* (works best on a near black background) by the font-maker.
+This example allows you to use the first palette marked as _dark_ (works best on a near black background) by the font-maker.
 
 ```css
 @media (prefers-color-scheme: dark) {
