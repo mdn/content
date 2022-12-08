@@ -1,6 +1,7 @@
 ---
 title: surfaceScale
 slug: Web/SVG/Attribute/surfaceScale
+page-type: svg-attribute
 tags:
   - Filters
   - NeedsCompatTable
