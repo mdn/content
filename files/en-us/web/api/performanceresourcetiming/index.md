@@ -91,7 +91,7 @@ Additionally, this interface exposes the following properties containing more in
 - {{domxref('PerformanceResourceTiming.encodedBodySize')}} {{ReadOnlyInline}}
   - : A number representing the size (in octets) received from the fetch (HTTP or cache), of the payload body, before removing any applied content encodings.
 - {{domxref('PerformanceResourceTiming.initiatorType')}} {{ReadOnlyInline}}
-  - : A string representing the type of resource that initiated the performance entry.
+  - : A string representing the web platform feature that initiated the performance entry.
 - {{domxref('PerformanceResourceTiming.nextHopProtocol')}} {{ReadOnlyInline}}
   - : A string representing the network protocol used to fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
 - {{domxref('PerformanceResourceTiming.renderBlockingStatus')}} {{ReadOnlyInline}}
