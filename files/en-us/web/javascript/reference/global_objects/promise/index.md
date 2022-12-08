@@ -125,8 +125,8 @@ const promiseC = promiseA.then(handleFulfilled2, handleRejected2);
 An action can be assigned to an already "settled" promise. In that case, the action (if appropriate) will be performed at the first asynchronous opportunity. Note that promises are guaranteed to be asynchronous. Therefore, an action for an already "settled" promise will occur only after the stack has cleared and a clock-tick has passed. The effect is much like that of `setTimeout(action,10)`.
 
 ```js
-const promiseA = new Promise((resolutionFunc, rejectionFunc) => {
-  resolutionFunc(777);
+const promiseA = new Promise((resolve, reject) => {
+  resolve(777);
 });
 // At this point, "promiseA" is already settled.
 promiseA.then((val) => console.log("asynchronous logging has val:", val));
@@ -257,7 +257,7 @@ This example shows diverse techniques for using Promise capabilities and diverse
 
 The example function `tetheredGetNumber()` shows that a promise generator will utilize `reject()` while setting up an asynchronous call, or within the call-back, or both. The function `promiseGetWord()` illustrates how an API function might generate and return a promise in a self-contained manner.
 
-Note that the function `troubleWithGetNumber()` ends with a `throw`. That is forced because a promise chain goes through all the `.then()` promises, even after an error, and without the `throw`, the error would seem "fixed". This is a hassle, and for this reason, it is common to omit `rejectionFunc` throughout the chain of `.then()` promises, and just have a single `rejectionFunc` in the final `catch()`.
+Note that the function `troubleWithGetNumber()` ends with a `throw`. That is forced because a promise chain goes through all the `.then()` promises, even after an error, and without the `throw`, the error would seem "fixed". This is a hassle, and for this reason, it is common to omit `onRejected` throughout the chain of `.then()` promises, and just have a single `onRejected` in the final `catch()`.
 
 This code can be run under NodeJS. Comprehension is enhanced by seeing the errors actually occur. To force more errors, change the `threshold` values.
 

@@ -101,12 +101,12 @@ Calling the `Date()` function (without the `new` keyword) returns a string repre
 The following examples show several ways to create JavaScript dates:
 
 ```js
-const today = new Date()
-const birthday = new Date('December 17, 1995 03:24:00') // DISCOURAGED: may not work in all runtimes
-const birthday = new Date('1995-12-17T03:24:00')   // This is ISO-8601-compliant and will work reliably
-const birthday = new Date(1995, 11, 17)            // the month is 0-indexed
-const birthday = new Date(1995, 11, 17, 3, 24, 0)
-const birthday = new Date(628021800000)            // passing epoch timestamp
+const today = new Date();
+const birthday = new Date("December 17, 1995 03:24:00"); // DISCOURAGED: may not work in all runtimes
+const birthday = new Date("1995-12-17T03:24:00"); // This is ISO-8601-compliant and will work reliably
+const birthday = new Date(1995, 11, 17); // the month is 0-indexed
+const birthday = new Date(1995, 11, 17, 3, 24, 0);
+const birthday = new Date(628021800000); // passing epoch timestamp
 ```
 
 ### Passing a non-Date, non-string, non-number value

@@ -13,7 +13,7 @@ browser-compat: api.MediaStream
 page-type: web-api-overview
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The **Media Capture and Streams** API, often called the **Media Streams API** or **MediaStream API**, is an API related to [WebRTC](/en-US/docs/Web/API/WebRTC_API) which provides support for streaming audio and video data.
 
@@ -50,8 +50,6 @@ In these reference articles, you'll find the fundamental information you'll need
 - {{domxref("NavigatorUserMediaError")}}
 - {{domxref("OverconstrainedError")}}
 - {{domxref("URL")}}
-
-Early versions of the Media Capture and Streams API specification included separate `AudioStreamTrack` and `VideoStreamTrack` interfaces—each based upon {{domxref("MediaStreamTrack")}}—which represented streams of those types. These no longer exist, and you should update any existing code to instead use `MediaStreamTrack` directly.
 
 ## Events
 

@@ -4,7 +4,7 @@ slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call
 page-type: guide
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 {{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Creating_a_call", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call")}}
 
@@ -13,8 +13,8 @@ Now our users can make a call, but they can't answer one. Let's add the next pie
 1. The peerJS framework makes the `.on('call')` event available to use so let's use it here. Add this to the bottom of `script.js`:
 
    ```js
-   peer.on('call', (call) => {
-     const answerCall = confirm("Do you want to answer?")
+   peer.on("call", (call) => {
+     const answerCall = confirm("Do you want to answer?");
    });
    ```
 
@@ -27,13 +27,14 @@ Now our users can make a call, but they can't answer one. Let's add the next pie
 2. Let's flesh out this event listener. Update it as follows:
 
    ```js
-   peer.on('call', (call) => {
-     const answerCall = confirm("Do you want to answer?")
+   peer.on("call", (call) => {
+     const answerCall = confirm("Do you want to answer?");
 
-     if (answerCall){
-       call.answer(window.localStream) // A
+     if (answerCall) {
+       call.answer(window.localStream); // A
        showConnectedContent(); // B
-       call.on('stream', (stream) => { // C
+       call.on("stream", (stream) => {
+         // C
          window.remoteAudio.srcObject = stream;
          window.remoteAudio.autoplay = true;
          window.peerStream = stream;

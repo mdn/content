@@ -7,7 +7,6 @@ tags:
   - Audio
   - Media
   - MediaRecorder
-  - MediaRecorder API
   - MediaStream Recording
   - Property
   - Reference
@@ -48,18 +47,19 @@ about media types and how they're used in web content and by web browsers.
 
 ```js
 if (navigator.mediaDevices) {
-  console.log('getUserMedia supported.');
+  console.log("getUserMedia supported.");
 
   const constraints = { audio: true, video: true };
   const chunks = [];
 
-  navigator.mediaDevices.getUserMedia(constraints)
+  navigator.mediaDevices
+    .getUserMedia(constraints)
     .then((stream) => {
       const options = {
         audioBitsPerSecond: 128000,
         videoBitsPerSecond: 2500000,
-        mimeType: 'video/mp4'
-      }
+        mimeType: "video/mp4",
+      };
       const mediaRecorder = new MediaRecorder(stream, options);
       m = mediaRecorder;
 
@@ -94,7 +94,7 @@ by `m.mimeType` would then be
 
 ## See also
 
-- [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Using the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [The "codecs" parameter in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
 - [Web Dictaphone](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder +
   getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone).)

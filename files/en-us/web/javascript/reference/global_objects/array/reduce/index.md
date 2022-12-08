@@ -158,12 +158,12 @@ array.reduce(reducer);
 
 The callback would be invoked four times, with the arguments and return values in each call being as follows:
 
-|             | `accumulator`   | `currentValue` | `index` | Return value |
-| ----------- | --------------- | -------------- | ------- | ------------ |
-| First call  | `15`            | `16`           | `1`     | `31`         |
-| Second call | `31`            | `17`           | `2`     | `48`         |
-| Third call  | `48`            | `18`           | `3`     | `66`         |
-| Fourth call | `66`            | `19`           | `4`     | `85`         |
+|             | `accumulator` | `currentValue` | `index` | Return value |
+| ----------- | ------------- | -------------- | ------- | ------------ |
+| First call  | `15`          | `16`           | `1`     | `31`         |
+| Second call | `31`          | `17`           | `2`     | `48`         |
+| Third call  | `48`          | `18`           | `3`     | `66`         |
+| Fourth call | `66`          | `19`           | `4`     | `85`         |
 
 The `array` parameter never changes through the process — it's always `[15, 16, 17, 18, 19]`. The value returned by `reduce()` would be that of the last callback invocation (`85`).
 
@@ -180,13 +180,13 @@ Here we reduce the same array using the same algorithm, but with an `initialValu
 
 The callback would be invoked five times, with the arguments and return values in each call being as follows:
 
-|             | `accumulator`   | `currentValue` | `index` | Return value |
-| ----------- | --------------- | -------------- | ------- | ------------ |
-| First call  | `10`            | `15`           | `0`     | `25`         |
-| Second call | `25`            | `16`           | `1`     | `41`         |
-| Third call  | `41`            | `17`           | `2`     | `58`         |
-| Fourth call | `58`            | `18`           | `3`     | `76`         |
-| Fifth call  | `76`            | `19`           | `4`     | `95`         |
+|             | `accumulator` | `currentValue` | `index` | Return value |
+| ----------- | ------------- | -------------- | ------- | ------------ |
+| First call  | `10`          | `15`           | `0`     | `25`         |
+| Second call | `25`          | `16`           | `1`     | `41`         |
+| Third call  | `41`          | `17`           | `2`     | `58`         |
+| Fourth call | `58`          | `18`           | `3`     | `76`         |
+| Fifth call  | `76`          | `19`           | `4`     | `95`         |
 
 The value returned by `reduce()` in this case would be `95`.
 
@@ -212,10 +212,7 @@ const flattened = [
   [0, 1],
   [2, 3],
   [4, 5],
-].reduce(
-  (accumulator, currentValue) => accumulator.concat(currentValue),
-  [],
-);
+].reduce((accumulator, currentValue) => accumulator.concat(currentValue), []);
 // flattened is [0, 1, 2, 3, 4, 5]
 ```
 
@@ -307,15 +304,12 @@ console.log(allbooks);
 
 ```js
 const myArray = ["a", "b", "a", "b", "c", "e", "e", "c", "d", "d", "d", "d"];
-const myArrayWithNoDuplicates = myArray.reduce(
-  (accumulator, currentValue) => {
-    if (!accumulator.includes(currentValue)) {
-      return [...accumulator, currentValue];
-    }
-    return accumulator;
-  },
-  [],
-);
+const myArrayWithNoDuplicates = myArray.reduce((accumulator, currentValue) => {
+  if (!accumulator.includes(currentValue)) {
+    return [...accumulator, currentValue];
+  }
+  return accumulator;
+}, []);
 
 console.log(myArrayWithNoDuplicates);
 ```

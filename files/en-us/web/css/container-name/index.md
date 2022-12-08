@@ -14,7 +14,7 @@ browser-compat: css.properties.container-name
 {{CSSRef}}
 
 The **container-name** [CSS](/en-US/docs/Web/CSS) property specifies a list of query container names used by the [@container](/en-US/docs/Web/CSS/@container) at-rule in a [container query](/en-US/docs/Web/CSS/CSS_Container_Queries).
-A queried element will use the nearest ancestor with a containment context to determine the container size.
+A container query will apply styles to elements based on the size of the nearest ancestor with a containment context.
 When a containment context is given a name, it can be specifically targeted using the {{Cssxref("@container")}} at-rule instead of the nearest ancestor with containment.
 
 ## Syntax
@@ -36,36 +36,52 @@ container-name: <container-name>;
 
 ### Using a container name
 
-Given the following HTML example which is a card component with an image, a title, and some text:
+Given the following HTML example which is a card component with an image, a title, author details, and some text:
 
 ```html
-<div class="container">
-  <div class="card">
-    <img src="image.png" alt="Cat with two different color eyes" />
+<div class="card">
+  <div class="post-meta">
     <h2>Card title</h2>
-    <p>Card content</p>
+    <img src="image.png" alt="Cat with two different color eyes" />
+    <p>Author <a href="https://example.com">website</a> details.</p>
+  </div>
+  <div class="post-excerpt">
+    <p>
+      A preview of my <a href="https://example.com">blog post</a> about cats.
+    </p>
   </div>
 </div>
 ```
 
-First create a container context using `container-type`, then add the `container-name` property.
+To create a containment context, add the `container-type` property to an element in CSS.
+The following example creates two containment contexts, one for the card meta information and one for the post excerpt:
 
-> **Note:** A shorthand syntax for this declaration is described in the {{cssxref("container")}} page.
+> **Note:** A shorthand syntax for these declarations are described in the {{cssxref("container")}} page.
 
 ```css
-.container {
+.post-meta {
   container-type: inline-size;
-  container-name: sidebar;
+}
+
+.post-excerpt {
+  container-type: inline-size;
+  container-name: excerpt;
 }
 ```
 
-You can then target that container by name using the {{cssxref("@container")}} at-rule.
-The following example will hide list items in child elements of a containment context named `sidebar` when the container is less than 500px wide:
+Writing a container query via the {{Cssxref("@container")}} at-rule will apply styles to the elements of the container when the query evaluates to true.
+The following example has two container queries, one that will apply only to the contents of the `.post-excerpt` element and one that will apply to both the `.post-meta` and `.post-excerpt` contents:
 
 ```css
-@container sidebar (max-width: 500px) {
-  li {
-    visibility: hidden;
+@container excerpt (min-width: 400px) {
+  a {
+    font-family: monospace;
+  }
+}
+
+@container (min-width: 400px) {
+  p {
+    font-size: 2rem;
   }
 }
 ```
@@ -77,16 +93,17 @@ For more information on writing container queries, see the [CSS Container Querie
 You can also provide multiple names to a container context separated by a space:
 
 ```css
-.container {
+.post-meta {
   container-type: inline-size;
-  container-name: sidebar nav;
+  container-name: meta card;
 }
 ```
 
-This will allow you to target the container using either name in the {{cssxref("@container")}} at-rule:
+This will allow you to target the container using either name in the {{cssxref("@container")}} at-rule.
+This is useful if you want to target the same container with multiple container queries where either condition could be true:
 
 ```css
-@container sidebar (max-width: 500px) {
+@container meta (max-width: 500px) {
   li {
     visibility: hidden;
   }

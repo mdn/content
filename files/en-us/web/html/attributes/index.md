@@ -1421,6 +1421,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("command") }},
         {{ HTMLElement("embed") }},
         {{ HTMLElement("object") }},
+        {{ HTMLElement("ol") }},
         {{ HTMLElement("script") }},
         {{ HTMLElement("source") }},
         {{ HTMLElement("style") }}, {{ HTMLElement("menu") }},

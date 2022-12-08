@@ -35,6 +35,11 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 - {{domxref("AudioEncoder.dequeue_event", "dequeue")}} {{Experimental_Inline}}
   - : Fires to signal a decrease in {{domxref("AudioEncoder.encodeQueueSize")}}.
 
+## Static methods
+
+- {{domxref("AudioEncoder.isConfigSupported()")}} {{Experimental_Inline}}
+  - : Returns a promise indicating whether the provided `AudioEncoderConfig` is supported.
+
 ## Instance methods
 
 _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._

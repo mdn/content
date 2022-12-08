@@ -23,10 +23,9 @@ This article provides information about the changes in Firefox 108 that will aff
 
 ### CSS
 
-- Trigonometric functions are enabled with the `layout.css.trig.enabled` preference set to `true` by default.
-  This allows the use of `sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, and `atan2()` functions within the CSS [`calc()`](/en-US/docs/Web/CSS/calc) function.
-  Additionally, a CSS [`<calc-constant>`](/en-US/docs/Web/CSS/calc-constant) type is implemented to allow for well-known constants such as `pi` and `e` within the `calc()` function ({{bug(1774589)}}, {{bug(1682444)}}).
-
+- [Trigonometric functions](/en-US/docs/Web/CSS/CSS_Functions#trigonometric_functions) are now enabled with the `layout.css.trig.enabled` preference set to `true` by default.
+  This allows the use of `sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, and `atan2()` functions ({{bug(1774589)}}, {{bug(1787070)}}).
+- CSS [`<calc-constant>`](/en-US/docs/Web/CSS/calc-constant) type is implemented to allow for well-known constants such as `pi` and `e` within [math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) ({{bug(1682444)}}, {{bug(1787070)}}).
 - Container query length units are now supported via the the `layout.css.container-queries.enabled` preference, which is set to `false` by default.
   Setting this preference to `true` allows the use of `cqw`, `cqh`, `cqi`, `cqb`, `cqmin`, and `cqmax` units of length which are relative to the size of a query container.
   For more information on these units, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) documentation ({{bug(1744231)}}).
@@ -57,7 +56,7 @@ This article provides information about the changes in Firefox 108 that will aff
 #### Media, WebRTC, and Web Audio
 
 - The [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) is now available in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts).
-  Users must grants permission by accepting a prompt to install a [Site Permission Add-On](https://support.mozilla.org/en-US/kb/site-permission-addons).
+  Calls to [`navigator.requestMIDIAccess()`](/en-US/docs/Web/API/Navigator/requestMIDIAccess) will prompt users with active MIDI devices to install a [Site Permission Add-On](https://support.mozilla.org/en-US/kb/site-permission-addons), which is required to enable the API.
   For more information see {{bug(1795025)}}.
 
 #### Removals

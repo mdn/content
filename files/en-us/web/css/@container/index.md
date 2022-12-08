@@ -149,7 +149,7 @@ Given the following HTML example which is a card component with an image, a titl
 ```html
 <div class="container">
   <div class="card">
-    <img src="image.png" alt="An awesome picture of a cat" />
+    <img src="image.png" alt="Cat with two different color eyes" />
     <h2>Card title</h2>
     <p>Card content</p>
   </div>

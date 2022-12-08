@@ -25,7 +25,7 @@ status code.
 
 ## Status
 
-```
+```http
 203 Non-Authoritative Information
 ```
 

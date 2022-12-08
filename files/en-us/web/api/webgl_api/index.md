@@ -1,5 +1,5 @@
 ---
-title: 'WebGL: 2D and 3D graphics for the web'
+title: "WebGL: 2D and 3D graphics for the web"
 slug: Web/API/WebGL_API
 page-type: web-api-overview
 tags:
@@ -19,7 +19,7 @@ browser-compat:
   - api.WebGL2RenderingContext
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 **WebGL** (Web Graphics Library) is a JavaScript API for rendering high-performance interactive 3D and 2D graphics within any compatible web browser without the use of plug-ins. WebGL does so by introducing an API that closely conforms to OpenGL ES 2.0 that can be used in HTML {{HTMLElement("canvas")}} elements. This conformance makes it possible for the API to take advantage of hardware graphics acceleration provided by the user's device.
 

@@ -14,7 +14,7 @@ browser-compat: api.USB.disconnect_event
 
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
-The **`connect`** event of the {{DOMxRef("USB")}} interface is fired whenever a paired device is disconnected.
+The **`disconnect`** event of the {{DOMxRef("USB")}} interface is fired whenever a paired device is disconnected.
 
 ## Syntax
 
