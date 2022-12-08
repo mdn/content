@@ -385,7 +385,7 @@ Open **package.json**, and add this information as an **engines > node** section
   // …
 ```
 
-Note that are other ways to provision the node version on Railway, but we're using **package.json** because this approach is widely supported by many services.
+Note that there are other ways to provision the node version on Railway, but we're using **package.json** because this approach is widely supported by many services.
 Note also that Railway will not necessarily use the precise version of node that you specify.
 Where possible it will use a version that has the same major version number.
 

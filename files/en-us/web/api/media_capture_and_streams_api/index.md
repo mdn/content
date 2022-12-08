@@ -51,8 +51,6 @@ In these reference articles, you'll find the fundamental information you'll need
 - {{domxref("OverconstrainedError")}}
 - {{domxref("URL")}}
 
-Early versions of the Media Capture and Streams API specification included separate `AudioStreamTrack` and `VideoStreamTrack` interfaces—each based upon {{domxref("MediaStreamTrack")}}—which represented streams of those types. These no longer exist, and you should update any existing code to instead use `MediaStreamTrack` directly.
-
 ## Events
 
 - {{domxref("MediaStream/addtrack_event", "addtrack")}}

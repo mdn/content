@@ -28,7 +28,7 @@ Unlike many other global objects, `Math` is not a constructor. All properties an
 - `Math[@@toStringTag]`
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Math"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("Math.E")}}
-  - : Euler's constant and the base of natural logarithms; approximately `2.718`.
+  - : Euler's number and the base of natural logarithms; approximately `2.718`.
 - {{jsxref("Math.LN2")}}
   - : Natural logarithm of `2`; approximately `0.693`.
 - {{jsxref("Math.LN10")}}
@@ -73,7 +73,7 @@ Unlike many other global objects, `Math` is not a constructor. All properties an
 - {{jsxref("Math.cosh()")}}
   - : Returns the hyperbolic cosine of `x`.
 - {{jsxref("Math.exp()")}}
-  - : Returns e<sup>x</sup>, where x is the argument, and e is Euler's constant (`2.718`…, the base of the natural logarithm).
+  - : Returns e<sup>x</sup>, where x is the argument, and e is Euler's number (`2.718`…, the base of the natural logarithm).
 - {{jsxref("Math.expm1()")}}
   - : Returns subtracting `1` from `exp(x)`.
 - {{jsxref("Math.floor()")}}

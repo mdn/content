@@ -23,7 +23,7 @@ A 204 response is cacheable by default (an {{HTTPHeader("ETag")}} header is incl
 
 ## Status
 
-```plain
+```http
 204 No Content
 ```
 

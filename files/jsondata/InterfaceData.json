@@ -1804,10 +1804,6 @@
       "inh": "",
       "impl": []
     },
-    "InteractionCounts": {
-      "inh": "",
-      "impl": []
-    },
     "IntersectionObserver": {
       "inh": "",
       "impl": []

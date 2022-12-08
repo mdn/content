@@ -639,10 +639,11 @@ See {{bug(1715546)}} for more details.
   </tbody>
 </table>
 
-### Container query length units
+### Container queries
 
-The CSS length units `cqw`, `cqh`, `cqi`, `cqb`, `cqmin`, `cqmax` are units of length relative to the size of a query container.
-For more information on these units, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) documentation ({{bug(1744231)}}).
+Container queries allow you to apply CSS styles to elements based on the size of their container as opposed to the size of the viewport or other device characteristics.
+The CSS length units `cqw`, `cqh`, `cqi`, `cqb`, `cqmin`, `cqmax` are units of length relative to the size of a query container and are supported as part of this functionality.
+For more information, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) page and the [Container query length units](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) section ({{bug(1744231)}}, {{bug(1801123)}}).
 
 <table>
   <thead>
@@ -655,8 +656,8 @@ For more information on these units, see the [CSS Container Queries](/en-US/docs
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>108</td>
-      <td>No</td>
+      <td>109</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -2003,90 +2004,6 @@ The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP respo
       <th>Preference name</th>
       <td colspan="2">
         <code>privacy.clearsitedata.cache.enabled</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-### CSP "script-src-elem" and "script-src-attr" directives
-
-The [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP header directives [`script-src-elem`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem) and [`script-src-attr`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-attr) specify valid sources for JavaScript `<script>` elements, and for inline script event handlers like `onclick`, respectively ({{bug(1529337)}}).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>105</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>105</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>105</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>105</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>security.csp.script-src-attr-elem.enabled</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-### CSP "style-src-elem" and "style-src-attr" directives
-
-The [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP header directives [`style-src-elem`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-elem) and [`style-src-attr`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-attr) specify valid sources for stylesheet `<style>` elements and `<link>` elements with `rel="stylesheet"`, and for styles applied to individual elements, respectively ({{bug(1529338)}}).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>105</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>105</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>105</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>105</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>security.csp.style-src-attr-elem.enabled</code>
       </td>
     </tr>
   </tbody>

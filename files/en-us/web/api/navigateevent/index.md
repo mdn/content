@@ -25,39 +25,39 @@ The **`NavigateEvent`** interface of the {{domxref("Navigation API", "Navigation
 
 ## Constructor
 
-- {{domxref("NavigateEvent.NavigateEvent", "NavigateEvent()")}}
+- {{domxref("NavigateEvent.NavigateEvent", "NavigateEvent()")}} {{Experimental_Inline}}
   - : Creates a new `NavigateEvent` object instance.
 
 ## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("Event")}}._
 
-- {{domxref("NavigateEvent.canIntercept", "canIntercept")}} {{ReadOnlyInline}}
+- {{domxref("NavigateEvent.canIntercept", "canIntercept")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `true` if the navigation can be intercepted, or `false` otherwise (e.g. you can't intercept a cross-origin navigation).
-- {{domxref("NavigateEvent.destination", "destination")}} {{ReadOnlyInline}}
+- {{domxref("NavigateEvent.destination", "destination")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("NavigationDestination")}} object representing the destination being navigated to.
-- {{domxref("NavigateEvent.downloadRequest", "downloadRequest")}} {{ReadOnlyInline}}
+- {{domxref("NavigateEvent.downloadRequest", "downloadRequest")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the filename of the file requested for download, in the case of a download navigation (e.g. an {{htmlelement("a")}} or {{htmlelement("area")}} element with a `download` attribute), or `null` otherwise.
-- {{domxref("NavigateEvent.formData", "formData")}} {{ReadOnlyInline}}
+- {{domxref("NavigateEvent.formData", "formData")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the {{domxref("FormData")}} object representing the submitted data in the case of a `POST` form submission, or `null` otherwise.
-- {{domxref("NavigateEvent.hashChange", "hashChange")}} {{ReadOnlyInline}}
+- {{domxref("NavigateEvent.hashChange", "hashChange")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `true` if the navigation is a fragment navigation (i.e. to a fragment identifier in the same document), or `false` otherwise.
-- {{domxref("NavigateEvent.info", "info")}} {{ReadOnlyInline}}
+- {{domxref("NavigateEvent.info", "info")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the `info` data value passed by the initiating navigation operation (e.g. {{domxref("Navigation.back()")}}, or {{domxref("Navigation.navigate()")}}), or `undefined` if no `info` data was passed.
-- {{domxref("NavigateEvent.navigationType", "navigationType")}} {{ReadOnlyInline}}
+- {{domxref("NavigateEvent.navigationType", "navigationType")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the type of the navigation — `push`, `reload`, `replace`, or `traverse`.
-- {{domxref("NavigateEvent.signal", "signal")}} {{ReadOnlyInline}}
+- {{domxref("NavigateEvent.signal", "signal")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an {{domxref("AbortSignal")}}, which will become aborted if the navigation is cancelled (e.g. by the user pressing the browser's "Stop" button, or another navigation starting and thus cancelling the ongoing one).
-- {{domxref("NavigateEvent.userInitiated", "userInitiated")}} {{ReadOnlyInline}}
+- {{domxref("NavigateEvent.userInitiated", "userInitiated")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `true` if the navigation was initiated by the user (e.g. by clicking a link, submitting a form, or pressing the browser's "Back"/"Forward" buttons), or `false` otherwise.
 
 ## Instance methods
 
 _Inherits methods from its parent, {{DOMxRef("Event")}}._
 
-- {{domxref("NavigateEvent.intercept", "intercept()")}}
+- {{domxref("NavigateEvent.intercept", "intercept()")}} {{Experimental_Inline}}
   - : Intercepts this navigation, turning it into a same-document navigation to the {{domxref("NavigationDestination.url", "destination")}} URL. It can accept a handler function that defines what the navigation handling behavior should be, plus `focusReset` and `scroll` options to control behavior as desired.
-- {{domxref("NavigateEvent.scroll", "scroll()")}}
+- {{domxref("NavigateEvent.scroll", "scroll()")}} {{Experimental_Inline}}
   - : Can be called to manually trigger the browser-driven scrolling behavior that occurs in response to the navigation, if you want it to happen before the navigation handling has completed.
 
 ## Examples
