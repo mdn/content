@@ -185,45 +185,71 @@ loggedInUser.addEventListener("load", () => {
 
 ## `resource`
 
-The `"resource"` entry type measures how long it takes to load an external resource such as an image, video, script, or iframe.
+The `"resource"` entry type measures how long it takes to load an external resource. External resources include:
+
+- media files such as video, audio, images, and icons
+- web fonts
+- scripts and stylesheets
+- resources loaded using {{domxref("fetch()")}} or {{domxref("XMLHttpRequest")}}
+- content embedded using elements such as {{HTMLElement("iframe")}} or {{HTMLElement("object")}}
 
 Each resource is represented by a single {{domxref("PerformanceResourceTiming")}} object.
 
-### Types of resource
+### Resource initiators
 
-The type of resource that a given entry represents is indicated by the {{domxref("PerformanceResourceTiming.initiatorType")}} property. This can be any of:
+Resource loads are initiated by some web platform feature, such as an HTML {{HTMLElement("img")}} element with a `src` attribute, or a CSS {{cssxref("background")}} property whose value uses a {{cssxref("url()")}}.
+
+Each `PerformanceResourceTiming` object indicates the feature that initiated the request with its {{domxref("PerformanceResourceTiming.initiatorType", "initiatorType")}} property.
 
 ### Resource loading timeline
 
-For each resourse, the entry records a sequence of timestamps that measure the various stages of loading a resource, enabing you to understand where time is being spent. In order, the sequence includes the following steps:
+Each resource entry contains a sequence of timestamps that measure the various stages of loading that resource, enabling you to understand where time is being spent. In order, the sequence includes the following stages:
 
-- Redirection
+- **Redirection**
 
   - : The {{domxref("PerformanceResourceTiming.redirectStart", "start", "", 1)}} and {{domxref("PerformanceResourceTiming.redirectEnd", "end", "", 1)}} times for all redirects.
 
-- Service worker processing
+- **Service worker processing**
 
   - : The {{domxref("PerformanceResourceTiming.workerStart", "time at which a service worker is started", "", 1)}} if one is not already running, or the time a {{domxref("FetchEvent")}} is dispatched if a service worker is already running.
 
-- Domain name resolution
+- **Domain name resolution**
 
   - : Timestamps for {{domxref("PerformanceResourceTiming.domainLookupStart", "domain lookup start", "", 1)}} and {{domxref("PerformanceResourceTiming.domainLookupEnd", "domain lookup end", "", 1)}}.
 
-- Connection handshake ({{Glossary("TCP")}} / {{Glossary("TLS")}} or {{Glossary("QUIC")}})
+- **Connection handshake**
 
-  - : Timestamps for establishing the transport connection, including {{domxref("PerformanceResourceTiming.connectStart", "starting the connection handshake", "", 1)}}, {{domxref("PerformanceResourceTiming.secureConnectionStart", "starting the secure connection handshake", "", 1)}}, and {{domxref("PerformanceResourceTiming.connectEnd", "completing the connection handshake", "", 1)}}.
+  - : Timestamps for establishing the transport connection ({{Glossary("TCP")}} / {{Glossary("TLS")}} or {{Glossary("QUIC")}}), including {{domxref("PerformanceResourceTiming.connectStart", "starting the connection handshake", "", 1)}}, {{domxref("PerformanceResourceTiming.secureConnectionStart", "starting the secure connection handshake", "", 1)}}, and {{domxref("PerformanceResourceTiming.connectEnd", "completing the connection handshake", "", 1)}}.
 
-- Sending a request
+- **Sending a request**
 
-  - : thing
+  - : The time the browser {{domxref("PerformanceResourceTiming.requestStart", "starts requesting the resource", "", 1)}} from the server.
 
-- Receiving a response
-  - : thing
+- **Receiving a response**
+  - : The time the browser receives the {{domxref("PerformanceResourceTiming.responseStart", "first response byte", "", 1)}} and the {{domxref("PerformanceResourceTiming.responseEnd", "last response byte", "", 1)}} from the server.
 
-thing
+### Additional properties
 
-- the start and end time of any redirects that occur before fetching the resource can begin
-- the time a service worker was started or a {{domxref("FetchEvent")}} was dispatched for an existing service worker
-- the time the browser starts to fetch the resource
-- the start and end of domain name lookup
-- the start,
+Apart from timings, the `PerformanceResourceTiming` object includes extra properties to help understand characteristics of the resource load:
+
+- size information, including:
+
+  - the {{domxref("PerformanceResourceTiming.transferSize", "transfer size of the response header and body", "", 1)}}
+  - the {{domxref("PerformanceResourceTiming.encodedBodySize", "size of the encoded (for example, compressed) body", "", 1)}}
+  - the {{domxref("PerformanceResourceTiming.decodedBodySize", "size of the decoded body", "", 1)}}.
+
+- whether the resource might be {{domxref("PerformanceResourceTiming.renderBlockingStatus", "render-blocking", "", 1)}}: meaning that the browser needs to download and evaluate the resource before rendering the page.
+
+- the {{domxref("PerformanceResourceTiming.responseStatus", "status code the server returned for the resource", "", 1)}}
+
+- an identifier for the {{domxref("PerformanceResourceTiming.nextHopProtocol", "version of HTTP used to fetch the resource", "", 1)}}
+
+### Server timings
+
+Finally, the `PerformanceResourceTiming` object may include timing information about the server side of a resource load.
+
+To receive this, the server must send a {{HTTPHeader("Server-Timing")}} response header along with the resource. This contains one or more metrics, each of which may have a name, a description, and a numeric value. The name typically refers to some operation (such as a cache read) and the value represents the time taken for the operation. However, the specific metrics sent and their attributes are entirely server-defined.
+
+Any metrics sent will appear in the {{domxref("PerformanceResourceTiming.serverTiming")}} property.
+
+By default server timing metrics for cross-origin requests will not be included, unless the server also sends a {{HTTPHeader("Timing-Allow-Origin")}} response header along with the resource, listing the requester's origin.
