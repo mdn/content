@@ -193,7 +193,7 @@ The `"resource"` entry type measures how long it takes to load an external resou
 - resources loaded using {{domxref("fetch()")}} or {{domxref("XMLHttpRequest")}}
 - content embedded using elements such as {{HTMLElement("iframe")}} or {{HTMLElement("object")}}
 
-Each resource is represented by a single {{domxref("PerformanceResourceTiming")}} object.
+Each resource is represented by a single {{domxref("PerformanceResourceTiming")}} object. The {{domxref("PerformanceEntry.name", "name")}} property is the resource's URL.
 
 ### Resource initiators
 
@@ -228,6 +228,16 @@ Each resource entry contains a sequence of timestamps that measure the various s
 - **Receiving a response**
   - : The time the browser receives the {{domxref("PerformanceResourceTiming.responseStart", "first response byte", "", 1)}} and the {{domxref("PerformanceResourceTiming.responseEnd", "last response byte", "", 1)}} from the server.
 
+### Server timings
+
+The `PerformanceResourceTiming` object may also include timing information about the server side of a resource load.
+
+To receive this, the server must send a {{HTTPHeader("Server-Timing")}} response header along with the resource. This contains one or more metrics, each of which may have a name, a description, and a numeric value. The name typically refers to some operation (such as a cache read) and the value represents the time taken for the operation. However, the specific metrics sent and their attributes are entirely server-defined.
+
+Any metrics sent will appear in the {{domxref("PerformanceResourceTiming.serverTiming")}} property.
+
+By default, server timing metrics for cross-origin requests will not be included, unless the server also sends a {{HTTPHeader("Timing-Allow-Origin")}} response header along with the resource, listing the requester's origin.
+
 ### Additional properties
 
 Apart from timings, the `PerformanceResourceTiming` object includes extra properties to help understand characteristics of the resource load:
@@ -243,13 +253,3 @@ Apart from timings, the `PerformanceResourceTiming` object includes extra proper
 - the {{domxref("PerformanceResourceTiming.responseStatus", "status code the server returned for the resource", "", 1)}}
 
 - an identifier for the {{domxref("PerformanceResourceTiming.nextHopProtocol", "version of HTTP used to fetch the resource", "", 1)}}
-
-### Server timings
-
-Finally, the `PerformanceResourceTiming` object may include timing information about the server side of a resource load.
-
-To receive this, the server must send a {{HTTPHeader("Server-Timing")}} response header along with the resource. This contains one or more metrics, each of which may have a name, a description, and a numeric value. The name typically refers to some operation (such as a cache read) and the value represents the time taken for the operation. However, the specific metrics sent and their attributes are entirely server-defined.
-
-Any metrics sent will appear in the {{domxref("PerformanceResourceTiming.serverTiming")}} property.
-
-By default server timing metrics for cross-origin requests will not be included, unless the server also sends a {{HTTPHeader("Timing-Allow-Origin")}} response header along with the resource, listing the requester's origin.
