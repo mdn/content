@@ -7,7 +7,7 @@ tags:
   - Extensions
   - Reference
   - WebExtensions
-  - Function
+  - Method
   - declarativeNetRequest
   - testMatchOutcome
 browser-compat: webextensions.api.declarativeNetRequest.testMatchOutcome

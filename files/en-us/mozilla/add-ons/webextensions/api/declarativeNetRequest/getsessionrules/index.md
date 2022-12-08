@@ -7,7 +7,7 @@ tags:
   - Extensions
   - Reference
   - WebExtensions
-  - Function
+  - Method
   - declarativeNetRequest
   - getSessionRules
 browser-compat: webextensions.api.declarativeNetRequest.getSessionRules

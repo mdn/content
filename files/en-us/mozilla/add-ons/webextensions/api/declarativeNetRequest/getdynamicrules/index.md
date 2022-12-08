@@ -7,7 +7,7 @@ tags:
   - Extensions
   - Reference
   - WebExtensions
-  - Function
+  - Method
   - declarativeNetRequest
   - getDynamicRules
 browser-compat: webextensions.api.declarativeNetRequest.getDynamicRules

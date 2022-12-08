@@ -7,7 +7,7 @@ tags:
   - Extensions
   - Reference
   - WebExtensions
-  - Function
+  - Method
   - declarativeNetRequest
   - getAvailableStaticRuleCount
 browser-compat: webextensions.api.declarativeNetRequest.getAvailableStaticRuleCount

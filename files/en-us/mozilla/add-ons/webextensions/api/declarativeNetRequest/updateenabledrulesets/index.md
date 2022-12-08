@@ -7,7 +7,7 @@ tags:
   - Extensions
   - Reference
   - WebExtensions
-  - Function
+  - Method
   - declarativeNetRequest
   - updateEnabledRulesets
 browser-compat: webextensions.api.declarativeNetRequest.updateEnabledRulesets

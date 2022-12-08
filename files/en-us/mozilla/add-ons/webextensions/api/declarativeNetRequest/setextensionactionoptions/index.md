@@ -7,7 +7,7 @@ tags:
   - Extensions
   - Reference
   - WebExtensions
-  - Function
+  - Method
   - declarativeNetRequest
   - setExtensionActionOptions
 browser-compat: webextensions.api.declarativeNetRequest.setExtensionActionOptions

@@ -7,7 +7,7 @@ tags:
   - Extensions
   - Reference
   - WebExtensions
-  - Function
+  - Method
   - declarativeNetRequest
   - isRegexSupported
 browser-compat: webextensions.api.declarativeNetRequest.isRegexSupported

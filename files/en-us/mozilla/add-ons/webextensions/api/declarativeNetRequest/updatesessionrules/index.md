@@ -7,7 +7,7 @@ tags:
   - Extensions
   - Reference
   - WebExtensions
-  - Function
+  - Method
   - declarativeNetRequest
   - updateSessionRules
 browser-compat: webextensions.api.declarativeNetRequest.updateSessionRules
