@@ -85,7 +85,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Accessibility considerations
 
-The native HTML `<dialog>` element should be used in creating modal dialogs as it provides usability and accessiblity features that must be replicated if using other elements for a similar purpose. Use the appropriate `.showModal()` or `.show()` method to render dialogs. If creating a custom dialog implementation, ensure all expected default behaviors are supported and proper labeling recommendations are followed.
+The native HTML `<dialog>` element should be used in creating modal dialogs as it provides usability and accessibility features that must be replicated if using other elements for a similar purpose. Use the appropriate `.showModal()` or `.show()` method to render dialogs. If creating a custom dialog implementation, ensure all expected default behaviors are supported and proper labeling recommendations are followed.
 
 When implementing a dialog, it is important to consider the most appropriate place to set user focus. Explicitly indicating the initial focus placement by use of the [autofocus](/en-US/docs/Web/HTML/Global_attributes/autofocus) attribute will help ensure initial focus is set to the element deemed the best initial focus placement for any particular dialog. When in doubt, as it may not always be known where initial focus could be set within a dialog, particularly for instances where a dialog's content is dynamically rendered when invoked, then if necessary authors may decide focusing the `<dialog>` element itself would provide the best initial focus placement. When using {{domxref("HTMLDialogElement.showModal()")}} to open a `<dialog>`, focus is set on the first nested focusable element.
 
@@ -95,7 +95,7 @@ The `<dialog>` element is exposed by browsers similarly to custom dialogs using 
 
 ## Usage notes
 
-- {{HTMLElement("form")}} elements can close a `<dialog>` if they have the attribute `method="dialog"` or if the button used to sumbit the form has `formmethod="dialog"` set. In this case, the state of the form controls are saved, not sumbitted, the `<dialog>` closes, and the {{domxref("HTMLDialogElement.returnValue", "returnValue")}} property gets set to the `value` of the button that was used to save the form's state.
+- {{HTMLElement("form")}} elements can close a `<dialog>` if they have the attribute `method="dialog"` or if the button used to submit the form has `formmethod="dialog"` set. In this case, the state of the form controls are saved, not submitted, the `<dialog>` closes, and the {{domxref("HTMLDialogElement.returnValue", "returnValue")}} property gets set to the `value` of the button that was used to save the form's state.
 - The {{cssxref('::backdrop')}} CSS pseudo-element can be used to style the backdrop that is displayed behind a `<dialog>` element when the dialog is displayed with {{domxref("HTMLDialogElement.showModal()")}}. For example, to dim unreachable content behind the modal dialog.
 
 ## Examples
