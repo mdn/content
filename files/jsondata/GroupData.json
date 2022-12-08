@@ -473,7 +473,8 @@
         "window.showOpenFilePicker()",
         "window.showSaveFilePicker()",
         "window.showDirectoryPicker()",
-        "DataTransferItem.getAsFileSystemHandle()"
+        "DataTransferItem.getAsFileSystemHandle()",
+        "StorageManager.getDirectory()"
       ],
       "properties": [],
       "events": []
