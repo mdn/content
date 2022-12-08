@@ -364,7 +364,7 @@ console.log(pattern.test('https://events.com/2022/feb/xc44rsz')); // true
 console.log(pattern.test('https://events.com/2022/Feb/xc44rsz')); // false
 ```
 
-Setting the `ignoreCase` option to `true` in the constructor switches all matching operations to case insensitive for the given pattern:
+Setting the `ignoreCase` option to `true` in the constructor switches all matching operations to case-insensitive for the given pattern:
 
 ```js
 // Case-insensitive matching
