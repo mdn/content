@@ -4477,7 +4477,7 @@
 /en-US/docs/JavaScript/Reference/Global_Objects/Object/lookupSetter	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
 /en-US/docs/JavaScript/Reference/Global_Objects/Object/preventExtensions	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 /en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
-/en-US/docs/JavaScript/Reference/Global_Objects/Object/proto	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto
+/en-US/docs/JavaScript/Reference/Global_Objects/Object/proto	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__proto__
 /en-US/docs/JavaScript/Reference/Global_Objects/Object/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
 /en-US/docs/JavaScript/Reference/Global_Objects/Object/prototype-redirect-1	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
 /en-US/docs/JavaScript/Reference/Global_Objects/Object/seal	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal
@@ -5017,7 +5017,7 @@
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/Object/lookupSetter	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/Object/preventExtensions	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/Object/propertyIsEnumerable	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
-/en-US/docs/JavaScript_Documention/Reference/Global_Objects/Object/proto	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto
+/en-US/docs/JavaScript_Documention/Reference/Global_Objects/Object/proto	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__proto__
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/Object/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/Object/seal	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/Object/toLocaleString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
@@ -12226,11 +12226,11 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/resolvedOptions	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/supportedLocalesOf	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object.assign()	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
-/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__proto__	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineGetter	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineSetter	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/lookupGetter	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/lookupSetter	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__proto__
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
