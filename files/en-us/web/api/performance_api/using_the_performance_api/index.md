@@ -185,4 +185,45 @@ loggedInUser.addEventListener("load", () => {
 
 ## `resource`
 
-THe `"resource"` entry type measures how long it takes to load an external resource such as an image, video, script or iframe.
+The `"resource"` entry type measures how long it takes to load an external resource such as an image, video, script, or iframe.
+
+Each resource is represented by a single {{domxref("PerformanceResourceTiming")}} object.
+
+### Types of resource
+
+The type of resource that a given entry represents is indicated by the {{domxref("PerformanceResourceTiming.initiatorType")}} property. This can be any of:
+
+### Resource loading timeline
+
+For each resourse, the entry records a sequence of timestamps that measure the various stages of loading a resource, enabing you to understand where time is being spent. In order, the sequence includes the following steps:
+
+- Redirection
+
+  - : The {{domxref("PerformanceResourceTiming.redirectStart", "start", "", 1)}} and {{domxref("PerformanceResourceTiming.redirectEnd", "end", "", 1)}} times for all redirects.
+
+- Service worker processing
+
+  - : The {{domxref("PerformanceResourceTiming.workerStart", "time at which a service worker is started", "", 1)}} if one is not already running, or the time a {{domxref("FetchEvent")}} is dispatched if a service worker is already running.
+
+- Domain name resolution
+
+  - : Timestamps for {{domxref("PerformanceResourceTiming.domainLookupStart", "domain lookup start", "", 1)}} and {{domxref("PerformanceResourceTiming.domainLookupEnd", "domain lookup end", "", 1)}}.
+
+- Connection handshake ({{Glossary("TCP")}} / {{Glossary("TLS")}} or {{Glossary("QUIC")}})
+
+  - : Timestamps for establishing the transport connection, including {{domxref("PerformanceResourceTiming.connectStart", "starting the connection handshake", "", 1)}}, {{domxref("PerformanceResourceTiming.secureConnectionStart", "starting the secure connection handshake", "", 1)}}, and {{domxref("PerformanceResourceTiming.connectEnd", "completing the connection handshake", "", 1)}}.
+
+- Sending a request
+
+  - : thing
+
+- Receiving a response
+  - : thing
+
+thing
+
+- the start and end time of any redirects that occur before fetching the resource can begin
+- the time a service worker was started or a {{domxref("FetchEvent")}} was dispatched for an existing service worker
+- the time the browser starts to fetch the resource
+- the start and end of domain name lookup
+- the start,
