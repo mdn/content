@@ -30,6 +30,6 @@
     "lint-staged": "13.1.0",
     "markdownlint-cli2": "0.5.1",
     "markdownlint-rule-search-replace": "1.0.5",
-    "prettier": "2.8.0"
+    "prettier": "2.8.1"
   }
 }
