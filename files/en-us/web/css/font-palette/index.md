@@ -24,6 +24,7 @@ font-palette: normal;
 
 /* Using a user-defined palette */
 font-palette: --one;
+```
 
 ### Values
 
