@@ -13,7 +13,7 @@ browser-compat: css.at-rules.import
 
 {{CSSRef}}
 
-The **`@import`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is used to import style rules from other stylesheets. An `@import` rule _must_ occur at the top of stylesheet before any declarations, otherwise it will be ignored.  
+The **`@import`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is used to import style rules from other valid stylesheets. An `@import` rule _must_ be defined at the top of stylesheet, before any other at-rule and style declaration, else it will be ignored.
 
 ## Syntax
 
