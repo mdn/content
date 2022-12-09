@@ -185,7 +185,7 @@ A submit button with the attribute `formaction` set, but without an associated f
 
 If your buttons are not for submitting form data to a server, be sure to set their `type` attribute to `button`. Otherwise they will try to submit form data and to load the (nonexistent) response, possibly destroying the current state of the document.
 
-Although not required, an activated button can also perform a programmable action using [JavaScript](/en-US/docs/Learn/JavaScript), such as removing an item from a list.
+While `<button type="button">` has no default behavior, event handlers can be scripted to trigger behaviors.  An activated button can perform programmable actions using [JavaScript](/en-US/docs/Learn/JavaScript), such as removing an item from a list.
 
 ## Example
 
