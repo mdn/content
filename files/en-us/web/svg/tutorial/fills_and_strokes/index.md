@@ -32,7 +32,7 @@ In addition, you can specify the opacity of either the `fill` or `stroke` separa
 
 In addition to its color properties, there are a few other attributes available to control the way a stroke is drawn on a line.
 
-![](svg_stroke_linecap_example.png)
+![The stroke-linecap attribute changes the look of these stroke's ends](svg_stroke_linecap_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -55,7 +55,7 @@ There are three possible values for `stroke-linecap`:
 
 Use `stroke-linejoin` to control how the joint between two line segments is drawn.
 
-![](svg_stroke_linejoin_example.png)
+![The stroke-linejoin attribute changes the look at the point where two lines join.](svg_stroke_linejoin_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -75,7 +75,7 @@ Each of these polylines has two segments. The joint where the two meet is contro
 
 Finally, you can also use dashed line types on a stroke by specifying the `stroke-dasharray` attribute.
 
-![](svg_stroke_dasharray_example.png)
+![Shows two custom lines using different stroke-dasharray attributes.](svg_stroke_dasharray_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
