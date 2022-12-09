@@ -22,7 +22,7 @@ Returns the active set of session scoped rules for the extension.
 ## Syntax
 
 ```js-nolint
-let sessionScopedRules = browser.declarativeNetRequest.getSessionRules();
+let sessionRules = await browser.declarativeNetRequest.getSessionRules();
 ```
 
 ### Parameters

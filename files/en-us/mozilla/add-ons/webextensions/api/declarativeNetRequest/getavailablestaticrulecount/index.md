@@ -22,7 +22,7 @@ Returns the number of static rules that can be activated before the global stati
 ## Syntax
 
 ```js-nolint
-let count = browser.declarativeNetRequest.getAvailableStaticRuleCount();
+let count = await browser.declarativeNetRequest.getAvailableStaticRuleCount();
 ```
 
 ### Parameters

@@ -22,7 +22,7 @@ Returns the IDs for the set of activated static rulesets.
 ## Syntax
 
 ```js-nolint
-let rulesetIds = browser.declarativeNetRequest.getEnabledRulesets();
+let rulesetIds = await browser.declarativeNetRequest.getEnabledRulesets();
 ```
 
 ### Parameters
