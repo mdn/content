@@ -1,6 +1,6 @@
 ---
 title: Object.prototype.__proto__
-slug: Web/JavaScript/Reference/Global_Objects/Object/proto
+slug: Web/JavaScript/Reference/Global_Objects/Object/__proto__
 tags:
   - Deprecated
   - ECMAScript 2015
@@ -16,11 +16,9 @@ browser-compat: javascript.builtins.Object.proto
 
 > **Warning:** Changing the `[[Prototype]]` of an object is, by the nature of how modern JavaScript engines optimize property accesses, currently a very slow operation in every browser and JavaScript engine. In addition, the effects of altering inheritance are subtle and far-flung, and are not limited to the time spent in the `obj.__proto__ = ...` statement, but may extend to **_any_** code that has access to any object whose `[[Prototype]]` has been altered. You can read more in [JavaScript engine fundamentals: optimizing prototypes](https://mathiasbynens.be/notes/prototypes).
 
-> **Warning:** While `Object.prototype.__proto__` is supported today in most browsers, its existence and exact behavior has only been standardized as a legacy feature to ensure compatibility for web browsers. For better support, use {{JSxRef("Object.getPrototypeOf()")}} and {{JSxRef("Object.setPrototypeOf()")}} instead.
+> **Note:** The use of `__proto__` is controversial and discouraged. Its existence and exact behavior have only been standardized as a legacy feature to ensure web compatibility, while it presents several security issues and footguns. For better support, prefer {{JSxRef("Object.getPrototypeOf()")}}/{{JSxRef("Reflect.getPrototypeOf()")}} and {{JSxRef("Object.setPrototypeOf()")}}/{{JSxRef("Reflect.setPrototypeOf()")}} instead.
 
-The `__proto__` property of `Object.prototype` is an accessor property (a getter function and a setter function) that exposes the internal `[[Prototype]]` (either an object or {{JSxRef("Operators/null", "null")}}) of the object through which it is accessed.
-
-The use of `__proto__` is controversial and discouraged. It was never originally included in the ECMAScript language spec, but modern browsers implemented it anyway. Its semantics are standardized for compatibility with web browsers, so it will be supported into the future — nevertheless, it is deprecated in favor of {{JSxRef("Object.getPrototypeOf")}}/{{JSxRef("Reflect.getPrototypeOf")}} and {{JSxRef("Object.setPrototypeOf")}}/{{JSxRef("Reflect.setPrototypeOf")}} (though still, setting the `[[Prototype]]` of an object is a slow operation that should be avoided if performance is a concern).
+The **`__proto__`** accessor property of `Object.prototype` exposes the [`[[Prototype]]`](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) (either an object or {{jsxref("Operators/null", "null")}}) of this object.
 
 The `__proto__` property can also be used in an object literal definition to set the object `[[Prototype]]` on creation, as an alternative to {{JSxRef("Object.create()")}}. See: [object initializer / literal syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer). That syntax is standard and optimized for in implementations, and quite different from `Object.prototype.__proto__`.
 
