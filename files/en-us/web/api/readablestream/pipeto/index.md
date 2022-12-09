@@ -71,6 +71,7 @@ fetch('png-logo.png')
 ```
 
 Same but using await:
+
 ```js
 // Fetch the original image
 let response = await fetch('png-logo.png')
