@@ -71,7 +71,7 @@ The `initiatorType` property can have the following values, or `other` if none o
 
 The `initiatorType` property can be used to get specific resource timing entries only. For example, only those that were initiated by {{HTMLElement("script")}} elements.
 
-Using a {{domxref("PerformanceObserver")}}:
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `resource` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
 
 ```js
 const observer = new PerformanceObserver((list) => {
@@ -84,7 +84,7 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({ type: "resource", buffered: true });
 ```
 
-Or using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
+Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
 
 ```js
 const scripts = performance.getEntriesByType("resource").filter((entry) => {
