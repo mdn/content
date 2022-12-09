@@ -23,7 +23,7 @@ Both audio and video may be recorded, separately or together. This article aims 
 
 ![An image of the Web dictaphone sample app - a sine wave sound visualization, then record and stop buttons, then an audio jukebox of recorded tracks that can be played back.](web-dictaphone.png)
 
-To demonstrate basic usage of the MediaRecorder API, we have built a web-based dictaphone. It allows you to record snippets of audio and then play them back. It even gives you a visualization of your device's sound input, using the Web Audio API. We'll concentrate on the recording and playback functionality for this article.
+To demonstrate basic usage of the MediaStream Recording API, we have built a web-based dictaphone. It allows you to record snippets of audio and then play them back. It even gives you a visualization of your device's sound input, using the Web Audio API. We'll concentrate on the recording and playback functionality for this article.
 
 You can see this [demo running live](https://mdn.github.io/dom-examples/media/web-dictaphone/), or [grab the source code](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone) on GitHub.
 
@@ -117,7 +117,7 @@ input[type="checkbox"]:checked ~ aside {
 
 ## Basic app setup
 
-To grab the media stream we want to capture, we use `getUserMedia()`. We then use the MediaRecorder API to record the stream, and output each recorded snippet into the source of a generated {{htmlelement("audio")}} element so it can be played back.
+To grab the media stream we want to capture, we use `getUserMedia()`. We then use the MediaStream Recording API to record the stream, and output each recorded snippet into the source of a generated {{htmlelement("audio")}} element so it can be played back.
 
 We'll declare some variables for the record and stop buttons, and the {{htmlelement("article")}} that will contain the generated audio players:
 
@@ -162,7 +162,7 @@ The whole thing is wrapped in a test that checks whether `getUserMedia` is suppo
 
 ## Capturing the media stream
 
-Once `getUserMedia` has created a media stream successfully, you create a new Media Recorder instance with the `MediaRecorder()` constructor and pass it the stream directly. This is your entry point into using the MediaRecorder API — the stream is now ready to be captured into a {{domxref("Blob")}}, in the default encoding format of your browser.
+Once `getUserMedia` has created a media stream successfully, you create a new Media Recorder instance with the `MediaRecorder()` constructor and pass it the stream directly. This is your entry point into using the MediaStream Recording API — the stream is now ready to be captured into a {{domxref("Blob")}}, in the default encoding format of your browser.
 
 ```js
 const mediaRecorder = new MediaRecorder(stream);
@@ -273,6 +273,6 @@ Finally, we set an `onclick` handler on the delete button to be a function that 
 
 ## See also
 
-- [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API) landing page
+- [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) landing page
 - {{domxref("Navigator.getUserMedia()")}}
 - [MediaRecorder API now supported by 65% of your website users](https://blog.addpipe.com/media-recorder-api-is-now-supported-by-65-of-all-desktop-internet-users/)

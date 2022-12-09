@@ -41,7 +41,7 @@ const observer = new PerformanceObserver((list) => {
   });
 });
 
-observer.observe({ entryTypes: ["resource"] });
+observer.observe({ type: "resource", buffered: true });
 ```
 
 This would log a JSON object like so:
@@ -66,6 +66,7 @@ This would log a JSON object like so:
   "secureConnectionStart": 110.80000001192093,
   "requestStart": 117.30000001192093,
   "responseStart": 120.40000000596046,
+  "responseStatus": 200,
   "responseEnd": 122.40000000596046,
   "transferSize": 0,
   "encodedBodySize": 880,

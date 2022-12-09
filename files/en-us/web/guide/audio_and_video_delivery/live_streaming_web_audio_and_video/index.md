@@ -1,12 +1,14 @@
 ---
-title: Live streaming web audio and video
+title: Livestreaming web audio and video
 slug: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 tags:
   - Guide
   - adaptive streaming
 ---
 
-Live streaming technology is often employed to relay live events such as sports, concerts and more generally TV and Radio programmes that are output live. Often shortened to just streaming, live streaming is the process of transmitting media 'live' to computers and devices. This is a fairly complex and nascent subject with a lot of variables, so in this article, we'll introduce you to the subject and let you know how you can get started.
+{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
+
+Livestreaming technology is often employed to relay live events such as sports, concerts and more generally TV and Radio programmes that are output live. Often shortened to just streaming, livestreaming is the process of transmitting media 'live' to computers and devices. This is a fairly complex and nascent subject with a lot of variables, so in this article, we'll introduce you to the subject and let you know how you can get started.
 
 The key consideration when streaming media to a browser is the fact that rather than playing a finite file we are relaying a file that is being created on the fly and has no pre-determined start or end.
 
@@ -14,11 +16,11 @@ The key consideration when streaming media to a browser is the fact that rather 
 
 In this case, we are using static media to describe media that is represented by a file, whether it be an mp3 or WebM file. This file sits on a server and can be delivered — like most other files — to the browser. This is often known as a progressive download.
 
-Live streamed media lacks a finite start and end time as rather than a static file, it is a stream of data that the server passes on down the line to the browser and is often adaptive (see below). Usually, we require different formats and special server-side software to achieve this.
+Livestreamed media lacks a finite start and end time as rather as a static file, it is a stream of data that the server passes on down the line to the browser and is often adaptive (see below). Usually, we require different formats and special server-side software to achieve this.
 
 ## Adaptive streaming
 
-One of the main priorities for live streaming is to keep the player synchronized with the stream: adaptive streaming is a technique for doing this in the case of low bandwidth. The idea is that the data transfer rate is monitored and if it looks like it's not keeping up, we drop down to a lower bandwidth (and consequently lower quality) stream. In order to have this capability, we need to use formats that facilitate this. Live streaming formats generally allow adaptive streaming by breaking streams into a series of small segments and making those segments available at different qualities and bit rates.
+One of the main priorities for livestreaming is to keep the player synchronized with the stream: adaptive streaming is a technique for doing this in the case of low bandwidth. The idea is that the data transfer rate is monitored and if it looks like it's not keeping up, we drop down to a lower bandwidth (and consequently lower quality) stream. In order to have this capability, we need to use formats that facilitate this. Livestreaming formats generally allow adaptive streaming by breaking streams into a series of small segments and making those segments available at different qualities and bit rates.
 
 ## Streaming Audio and Video on Demand
 
@@ -76,7 +78,7 @@ For example, [you could implement MPEG-DASH using JavaScript while offloading th
 
 ## Video Streaming File Formats
 
-A couple of HTTP-based live streaming video formats are beginning to see support across browsers.
+A couple of HTTP-based livestreaming video formats are beginning to see support across browsers.
 
 > **Note:** You can find a guide to encoding HLS and MPEG-DASH for use on the web at [Setting up adaptive streaming media sources](/en-US/docs/Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources).
 

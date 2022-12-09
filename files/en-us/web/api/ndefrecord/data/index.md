@@ -10,7 +10,7 @@ tags:
 browser-compat: api.NDEFRecord.data
 ---
 
-{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 The **`data`**
 property of the {{DOMxRef("NDEFRecord")}} interface returns a
@@ -35,17 +35,17 @@ selecting a record based on its {{domxref("NDEFRecord.mediaType",
 
 ```js
 const ndef = new NDEFReader();
-  await ndef.scan();
-  ndef.onreading = (event) => {
-    const decoder = new TextDecoder();
-    for (const record of event.message.records) {
-      if (record.mediaType === "application/json") {
-        const json = JSON.parse(decoder.decode(record.data));
-        const article =/^[aeio]/i.test(json.title) ? "an" : "a";
-        console.log(`${json.name} is ${article} ${json.title}`);
-      }
+await ndef.scan();
+ndef.onreading = (event) => {
+  const decoder = new TextDecoder();
+  for (const record of event.message.records) {
+    if (record.mediaType === "application/json") {
+      const json = JSON.parse(decoder.decode(record.data));
+      const article = /^[aeio]/i.test(json.title) ? "an" : "a";
+      console.log(`${json.name} is ${article} ${json.title}`);
     }
-  };
+  }
+};
 ```
 
 ## Specifications

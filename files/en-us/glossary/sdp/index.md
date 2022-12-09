@@ -13,7 +13,7 @@ tags:
 
 Here is a typical SDP message:
 
-```
+```plain
 v=0
 o=alice 2890844526 2890844526 IN IP4 host.anywhere.com
 s=

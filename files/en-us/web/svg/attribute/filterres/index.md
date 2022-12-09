@@ -1,6 +1,7 @@
 ---
 title: filterRes
 slug: Web/SVG/Attribute/filterRes
+page-type: svg-attribute
 tags:
   - NeedsExample
   - SVG

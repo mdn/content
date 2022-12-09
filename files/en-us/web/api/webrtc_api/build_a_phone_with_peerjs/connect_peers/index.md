@@ -4,7 +4,7 @@ slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers
 page-type: guide
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 {{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Build_the_server", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission")}}
 
@@ -14,11 +14,16 @@ In the last article we set up our server, but it doesn't do anything yet because
 2. We need to create a peer object with an ID. The ID will be used to connect two peers together and if you don't create one, one will be assigned to the peer. Add the following to `script.js`:
 
    ```js
-   const peer = new Peer(`${Math.floor(Math.random() * 2 ** 18).toString(36).padStart(4, 0)}`, {
+   const peer = new Peer(
+     `${Math.floor(Math.random() * 2 ** 18)
+       .toString(36)
+       .padStart(4, 0)}`,
+     {
        host: location.hostname,
        debug: 1,
-       path: '/myapp'
-   });
+       path: "/myapp",
+     }
+   );
    ```
 
 3. You'll then need to attach the peer to the window so that it's accessible. Add the following line below your previous code:

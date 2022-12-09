@@ -129,7 +129,7 @@ These resources are created by forward-thinking companies and web developers who
   - : A recap of the JavaScript programming language aimed at intermediate-level developers.
 - [Eloquent JavaScript](https://eloquentjavascript.net/)
   - : A comprehensive guide to intermediate and advanced JavaScript methodologies.
-- [Speaking JavaScript](http://speakingjs.com/es5/)
+- [Speaking JavaScript](https://exploringjs.com/es5/)
   - : For programmers who want to learn JavaScript quickly and properly, and for JavaScript programmers who want to deepen their skills and/or look up specific topics.
 - [Essential JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
   - : An introduction to essential JavaScript design patterns.

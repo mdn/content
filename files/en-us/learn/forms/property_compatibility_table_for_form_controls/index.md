@@ -3278,4 +3278,4 @@ See the `{{htmlelement("input/image", "image")}}` input type:
 - [How to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls)
 - [HTML forms in legacy browsers](/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
 - [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [Property compatibility table for form widgets](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- **Property compatibility table for form widgets**

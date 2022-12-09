@@ -1,6 +1,7 @@
 ---
 title: units-per-em
 slug: Web/SVG/Attribute/units-per-em
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG
