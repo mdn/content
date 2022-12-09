@@ -199,7 +199,7 @@ Each resource is represented by a single {{domxref("PerformanceResourceTiming")}
 
 Resource loads are initiated by some web platform feature, such as an HTML {{HTMLElement("img")}} element with a `src` attribute, or a CSS {{cssxref("background")}} property whose value uses a {{cssxref("url()")}}.
 
-Each `PerformanceResourceTiming` object indicates the feature that initiated the request with its {{domxref("PerformanceResourceTiming.initiatorType", "initiatorType")}} property.
+Each `PerformanceResourceTiming` object includes an {{domxref("PerformanceResourceTiming.initiatorType", "initiatorType")}} property which indicates the feature that initiated the request.
 
 ### Resource loading timeline
 
@@ -224,6 +224,8 @@ Each resource entry contains a sequence of timestamps that measure the various s
 - **Sending a request**
 
   - : The time the browser {{domxref("PerformanceResourceTiming.requestStart", "starts requesting the resource", "", 1)}} from the server.
+
+    The time between this timestamp and the first received byte of the response includes any time that the server takes to process the request and prepare the response. See [Server timings](#server_timings) for how to get more insight into this part of the timeline.
 
 - **Receiving a response**
   - : The time the browser receives the {{domxref("PerformanceResourceTiming.responseStart", "first response byte", "", 1)}} and the {{domxref("PerformanceResourceTiming.responseEnd", "last response byte", "", 1)}} from the server.
@@ -252,7 +254,7 @@ Apart from timings, the `PerformanceResourceTiming` object includes extra proper
 
 - an identifier for the {{domxref("PerformanceResourceTiming.nextHopProtocol", "version of HTTP used to fetch the resource", "", 1)}}
 
-#### Cross-origin resource loads
+### Cross-origin resource loads
 
 By default, most of the information in a resource timing entry is not exposed for cross-origin resource loads: the property values are set to zero.
 
