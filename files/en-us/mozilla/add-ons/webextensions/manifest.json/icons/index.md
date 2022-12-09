@@ -61,7 +61,7 @@ The keys in the `icons` object specify the icon size in px, values specify the r
 
 ## SVG
 
-You can use SVG and the browser will scale your icon appropriately. There are currently two caveats though:
+You can use SVG and the browser will scale your icon appropriately. There are currently three caveats though:
 
 1. You need to specify a viewBox in the image. E.g.:
 
@@ -83,6 +83,8 @@ You can use SVG and the browser will scale your icon appropriately. There are cu
      "96": "icon.svg"
    }
    ```
+
+3. Chromium based browsers does not [support SVG icons](https://bugs.chromium.org/p/chromium/issues/detail?id=29683).
 
 > **Note:** Remember to include the `xmlns` attribute when creating the SVG. Otherwise, Firefox won't be able to display the icon.
 
