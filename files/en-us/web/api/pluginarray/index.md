@@ -18,6 +18,8 @@ The `PluginArray` interface is used to store a list of {{DOMxRef("Plugin")}} obj
 
 > **Note:** Own properties of `PluginArray` objects are no longer enumerable in the latest browser versions.
 
+> **Note:** This interface is a legacy type that existed because of a [historical accident](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156) and only kept for not breaking the code that have already used it. Modern APIs use Types that wrap around ECMAScript array types so you can treat them like an ECMAScript array, and at the same time impose additional semantics on their usage like making their items read-only.
+
 ## Instance properties
 
 - {{DOMxRef("PluginArray.length")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
