@@ -16,7 +16,7 @@ browser-compat: webextensions.api.declarativeNetRequest.DYNAMIC_RULESET_ID
 
 {{AddonSidebar()}}
 
-Ruleset ID for the dynamic rules added by the extension.
+Ruleset ID for the dynamic rules added by the extension using {{WebExtAPIRef("declarativeNetRequest.updateDynamicRules","updateDynamicRules")}}.
 
 Its value is `"_dynamic"`.
 

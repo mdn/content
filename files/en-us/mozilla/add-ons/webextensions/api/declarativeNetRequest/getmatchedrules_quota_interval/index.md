@@ -16,7 +16,7 @@ browser-compat: webextensions.api.declarativeNetRequest.GETMATCHEDRULES_QUOTA_IN
 
 {{AddonSidebar()}}
 
-The time interval within which {{WebExtAPIRef("declarativeNetRequest.MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL")}} {{WebExtAPIRef("declarativeNetRequest.getMatchedRules")}} calls can be made, specified in minutes. Additional calls fail immediately and set {{WebExtAPIRef("runtime.lastError")}}. {{WebExtAPIRef("declarativeNetRequest.getMatchedRules")}} calls associated with a user gesture are exempt from the quota.
+The time interval within which {{WebExtAPIRef("declarativeNetRequest.MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL")}} {{WebExtAPIRef("declarativeNetRequest.getMatchedRules")}} calls can be made, specified in minutes. Additional calls fail immediately and result in a promise rejection. Calls associated with a user gesture are exempt from the quota.
 
 Its value is `10`.
 

@@ -16,6 +16,8 @@ browser-compat: webextensions.api.declarativeNetRequest
 
 This API enables extensions to obtain information about and modify declarative rules that block or modify network requests. The use of declarative rules means that extensions don't intercept and view the content of requests, providing more privacy.
 
+## Permissions
+
 To use this API, an extension must request the `"declarativeNetRequest"` or `"declarativeNetRequestWithHostAccess"` [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
 The `"declarativeNetRequest"` permission allows extensions to block and upgrade requests without any [host permissions](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions). Host permissions are required if the extension wants to redirect a request or modify headers on a request. The `"declarativeNetRequestWithHostAccess"` permission requires host permissions to the request URL and initiator to act on a request.
@@ -302,8 +304,6 @@ To illustrate how this rule set affects requests, consider:
 
 ## Types
 
-- {{WebExtAPIRef("declarativeNetRequest.DomainType")}}
-  - : Indicates whether a request is first or third party to the frame that it originated in.
 - {{WebExtAPIRef("declarativeNetRequest.MatchedRule")}}
   - : Details of a matched rule.
 - {{WebExtAPIRef("declarativeNetRequest.ModifyHeaderInfo")}}
