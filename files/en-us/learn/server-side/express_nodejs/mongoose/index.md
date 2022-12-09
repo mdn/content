@@ -757,7 +757,7 @@ That's it. We now have all models for the site set up!
 
 In order to test the models (and to create some example books and other items that we can use in our next articles) we'll now run an _independent_ script to create items of each type:
 
-1. Download (or otherwise create) the file [populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/main/populatedb.js) inside your _express-locallibrary-tutorial_ directory (in the same level as `package.json`).
+1. Download (or otherwise create) the file [populatedb.js](https://raw.githack.com/mdn/express-locallibrary-tutorial/main/populatedb.js) inside your _express-locallibrary-tutorial_ directory (in the same level as `package.json`).
 
    > **Note:** You don't need to know how `populatedb.js` works; it just adds sample data into the database.
 
