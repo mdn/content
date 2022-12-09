@@ -18,55 +18,6 @@ The **`<rp>`** [HTML](/en-US/docs/Web/HTML) element is used to provide fall-back
 
 {{EmbedInteractiveExample("pages/tabbed/rp.html", "tabbed-shorter")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>None.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>Text</td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>
-        The end tag can be omitted if the element is immediately followed by an
-        {{HTMLElement("rt")}} or another <code>&#x3C;rp></code> element,
-        or if there is no more content in the parent element.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        A {{HTMLElement("ruby")}} element. <code>&#x3C;rp></code> must
-        be positioned immediately before or after an
-        {{HTMLElement("rt")}} element.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>Any</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Attributes
 
 This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
@@ -115,6 +66,57 @@ body {
 ```
 
 {{EmbedLiveSample("Without_ruby_support", 600, 60)}}
+
+## Technical Summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>Text</td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>
+        The end tag can be omitted if the element is immediately followed by an
+        {{HTMLElement("rt")}} or another <code>&#x3C;rp></code> element,
+        or if there is no more content in the parent element.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        A {{HTMLElement("ruby")}} element. <code>&#x3C;rp></code> must
+        be positioned immediately before or after an
+        {{HTMLElement("rt")}} element.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

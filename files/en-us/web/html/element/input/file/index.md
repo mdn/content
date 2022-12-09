@@ -21,51 +21,6 @@ browser-compat: html.elements.input.type_file
 
 {{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
-      <td>
-        A string representing the path to the selected
-        file.
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Supported common attributes</strong></td>
-      <td>{{htmlattrxref("required", "input")}}</td>
-    </tr>
-    <tr>
-      <td><strong>Additional Attributes</strong></td>
-      <td>
-        <a href="#accept" aria-current="page"><code>accept</code></a>,
-        <a href="#capture" aria-current="page"><code>capture</code></a>,
-        <a href="#multiple" aria-current="page"><code>multiple</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td><code>files</code> and <code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM interface</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Value
 
 A file input's {{htmlattrxref("value", "input")}} attribute contains a string that represents the path to the selected file(s). If no file is selected yet, the value is an empty string (`""`). When the user selected multiple files, the `value` represents the first file in the list of files they selected. The other files can be identified using the [input's `HTMLInputElement.files` property](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#getting_information_about_selected_files).
@@ -434,6 +389,53 @@ function returnFileSize(number) {
 The example looks like this; have a play:
 
 {{EmbedLiveSample('Examples', '100%', 200)}}
+
+## Technical Summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>
+        A string representing the path to the selected
+        file.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>{{htmlattrxref("required", "input")}}</td>
+    </tr>
+    <tr>
+      <td><strong>Additional Attributes</strong></td>
+      <td>
+        <a href="#accept" aria-current="page"><code>accept</code></a>,
+        <a href="#capture" aria-current="page"><code>capture</code></a>,
+        <a href="#multiple" aria-current="page"><code>multiple</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td><code>files</code> and <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}}
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 
