@@ -32,11 +32,15 @@ A {{domxref("CSSRule")}}.
 
 ## Examples
 
-In the following example the first item in the {{domxref("CSSRuleList")}} named `myRules` is printed to the console.
+In the following example we assume that `myRules` list has only three items.
 
 ```js
 let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]);
+console.log(myRules.item(0)); // returns the first CSSRule item in this list
+
+//accessing non existed element using this method will return null instead of undefined 
+console.log(myRules.item(5)) // returns null
+console.log(myRules[5]) // returns undefined
 ```
 
 ## Specifications
