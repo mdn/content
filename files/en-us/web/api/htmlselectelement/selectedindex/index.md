@@ -55,6 +55,16 @@ selectElem.addEventListener('change', () => {
 
 {{EmbedLiveSample("Examples", "200px", "120px")}}
 
+### Retrieving the Currently Selected Option
+
+```js
+const selectElem = document.getElementById('select')
+selectElem.addEventListener('change', () => {
+  const index = selectElem.selectedIndex;
+  const selectedOption = selectElem.options[selectedIndex];
+})
+```
+
 ## Specifications
 
 {{Specifications}}
