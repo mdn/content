@@ -70,7 +70,7 @@ This article provides information about the changes in Firefox 108 that will aff
 #### WebDriver BiDi
 
 - Following a [change in the specification](https://github.com/w3c/webdriver-bidi/pull/259), log entry level `"warning"` was renamed to `"warn"` ({{bug(1797115)}})
-- When using `script.evaluate` and `script.callFunction` with a sandbox name equal to an empty string, the evaluation will be done using the default realm ({{bug(1793589)}})
+- When using `script.evaluate` and `script.callFunction` with a sandbox name equal to an empty string, the evaluation will now be done using the default realm ({{bug(1793589)}})
 - Added support for the `browsingContext.domContentLoaded` event ({{bug(1756610)}})
 
 #### Marionette
