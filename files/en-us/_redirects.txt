@@ -8075,6 +8075,7 @@
 /en-US/docs/Web/API/ElementTraversal.lastElementChild	/en-US/docs/Web/API/Element/lastElementChild
 /en-US/docs/Web/API/ElementTraversal.nextElementSibling	/en-US/docs/Web/API/Element/nextElementSibling
 /en-US/docs/Web/API/ElementTraversal.previousElementSibling	/en-US/docs/Web/API/Element/previousElementSibling
+/en-US/docs/Web/API/Element_Timing_API	/en-US/docs/Web/API/PerformanceElementTiming
 /en-US/docs/Web/API/EncryptedMediaExtensions	/en-US/docs/Web/API/Encrypted_Media_Extensions_API
 /en-US/docs/Web/API/EncryptedMediaExtensions_API	/en-US/docs/Web/API/Encrypted_Media_Extensions_API
 /en-US/docs/Web/API/Entry	/en-US/docs/Web/API/FileSystemEntry
