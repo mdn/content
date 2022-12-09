@@ -34,19 +34,19 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@^5.2.20":
-  version "5.2.20"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.20.tgz#feebfdc8420d3744a2f5df3afac6ea7843ea27d1"
-  integrity sha512-8FIjbB+NcHzU6Uk+8Kqpio8gkjrOROxYczwybI/fKI+Vr4d0pymm2hh+F/lTIAk3NWfyDCyNwldhzj/GAYutdg==
+"@mdn/browser-compat-data@^5.2.21":
+  version "5.2.21"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.21.tgz#535c53750735e226ef6dce6e63bf5988aa2b1385"
+  integrity sha512-xpQpnRfaEbNMlHoOhXt6rz22zOzAtdSPMcYZJpyG1HkL4qV3aEOfK+VQrQGvaj8eBVqvLgv/GVh0i3KsysIh7g==
 
-"@mdn/yari@1.27.23":
-  version "1.27.23"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.27.23.tgz#0abc4a9ba84fa5ef66c08ae9fcd1590ad959f132"
-  integrity sha512-II3wB1/5IlxYtuQb0sy1Gp3tCGlC1uxfRy33hN9InWNZsapm3+HlOq3hjGUmyrUv8np3kc+QxUV1rYRa4/dbEA==
+"@mdn/yari@1.27.26":
+  version "1.27.26"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.27.26.tgz#8b27d9af1570ab5ae0916236e0c72dae61f7b43f"
+  integrity sha512-9Mr5u0VpC8MV7G2Rex7LPr1i8KA0O/TV2QtkoiFhakFVyJlKugRiP9PhYynPjd9Def7AwL82KlA25yhksMQzLg==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
-    "@mdn/browser-compat-data" "^5.2.20"
+    "@mdn/browser-compat-data" "^5.2.21"
     "@mozilla/glean" "1.3.0"
     "@use-it/interval" "^1.0.0"
     "@webref/css" "^5.4.4"

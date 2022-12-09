@@ -1,6 +1,7 @@
 ---
 title: <rect>
 slug: Web/SVG/Element/rect
+page-type: svg-element
 tags:
   - Element
   - Reference

@@ -1,6 +1,7 @@
 ---
 title: SVG Tutorial
 slug: Web/SVG/Tutorial
+page-type: guide
 tags:
   - Intermediate
   - NeedsContent
