@@ -70,6 +70,16 @@ fetch('png-logo.png')
 .then((rs) => rs.pipeTo(new FinalDestinationStream()))
 ```
 
+Same but using await:
+```js
+// Fetch the original image
+let response = await fetch('png-logo.png')
+// Retrieve its body as ReadableStream
+let body = await response.body
+let rs = await body.pipeThrough(new PNGTransformStream())
+await rs.pipeTo(new FinalDestinationStream())
+```
+
 ## Specifications
 
 {{Specifications}}
