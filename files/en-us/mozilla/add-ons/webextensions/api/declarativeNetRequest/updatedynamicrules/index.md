@@ -33,7 +33,12 @@ let updatedRules = browser.declarativeNetRequest.updateDynamicRules(
 ### Parameters
 
 - `options`
-  - : {{WebExtAPIRef("declarativeNetRequest.UpdateRuleOptions")}}. Details of the rules to add or delete from the dynamic rules.
+
+  - : An object containing details of the rules to add or delete from the dynamic rules.
+    - `addRules` {{optional_inline}}
+      - : An array of {{WebExtAPIRef("declarativeNetRequest.Rule")}}. Details of the rules to add.
+    - `removeRuleIds` {{optional_inline}}
+      - : An array of `number`. IDs of the rules to remove. Any invalid IDs are ignored.
 
 ### Return value
 

@@ -320,8 +320,6 @@ To illustrate how this rule set affects requests, consider:
   - : An object defining the condition under which a rule is triggered.
 - {{WebExtAPIRef("declarativeNetRequest.Ruleset")}}
   - : An object containing details of a static ruleset.
-- {{WebExtAPIRef("declarativeNetRequest.UpdateRuleOptions")}}
-  - : An object containing lists of rules to add or delete.
 - {{WebExtAPIRef("declarativeNetRequest.URLTransform")}}
   - : An object containing details of a URL transformation to perform.
 
