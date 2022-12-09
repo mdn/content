@@ -26,8 +26,6 @@ Its value is `"_session"`.
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#property-SESSION_RULESET_ID) API.
-
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
 //

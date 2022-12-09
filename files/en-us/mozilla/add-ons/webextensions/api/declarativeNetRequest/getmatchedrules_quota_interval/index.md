@@ -26,8 +26,6 @@ Its value is `10`.
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#property-GETMATCHEDRULES_QUOTA_INTERVAL) API.
-
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
 //

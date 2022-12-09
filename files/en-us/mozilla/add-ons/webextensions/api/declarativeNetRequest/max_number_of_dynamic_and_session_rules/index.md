@@ -26,8 +26,6 @@ Its value is `5000`.
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#property-MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES) API.
-
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
 //

@@ -17,8 +17,6 @@ browser-compat: webextensions.api.declarativeNetRequest.getMatchedRules
 
 Returns all the rules matched for the extension. Callers can filter the list of matched rules by specifying a `filter`. This method is only available to extensions with the `"declarativeNetRequestFeedback"` permission or that have the `"activeTab"` permission granted for the `tabId` specified in `filter`. Rules not associated with an active document that were matched more than five minutes ago are returned.
 
-> **Note:** This API is available in Manifest V3 or higher.
-
 ## Syntax
 
 ```js-nolint
@@ -57,10 +55,6 @@ If no rules are matched, the object is empty. If the request fail, the promise i
 ## Browser compatibility
 
 {{Compat}}
-
-> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#method-getMatchedRules) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

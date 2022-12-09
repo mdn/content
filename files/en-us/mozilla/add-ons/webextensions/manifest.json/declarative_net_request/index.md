@@ -22,7 +22,7 @@ browser-compat: webextensions.manifest.declarative_net_request
     </tr>
     <tr>
       <th scope="row">Manifest version</th>
-      <td>3</td>
+      <td>2</td>
     </tr>
     <tr>
       <th scope="row">Example</th>

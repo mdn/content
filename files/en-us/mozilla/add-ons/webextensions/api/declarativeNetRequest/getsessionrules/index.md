@@ -17,8 +17,6 @@ browser-compat: webextensions.api.declarativeNetRequest.getSessionRules
 
 Returns the active set of session scoped rules for the extension.
 
-> **Note:** This API is available in Manifest V3 or higher.
-
 ## Syntax
 
 ```js-nolint
@@ -40,10 +38,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfi
 ## Browser compatibility
 
 {{Compat}}
-
-> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#method-getSessionRules) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

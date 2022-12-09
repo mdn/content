@@ -17,8 +17,6 @@ browser-compat: webextensions.api.declarativeNetRequest.updateEnabledRulesets
 
 Updates the extension's set of static rulesets. The rulesets with IDs listed in `options.disableRulesetIds` are first deactivated, and then the rulesets listed in `options.enableRulesetIds` are activated. Note that the set of enabled static rulesets persists across sessions but not across extension updates, i.e. the `rule_resources` manifest key determines the set of enabled static rulesets on each extension update.
 
-> **Note:** This API is available in Manifest V3 or higher.
-
 ## Syntax
 
 ```js-nolint
@@ -48,10 +46,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) If th
 ## Browser compatibility
 
 {{Compat}}
-
-> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#method-updateEnabledRulesets) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -100,9 +100,9 @@ These permissions are available in Manifest V2 and above unless otherwise noted:
 - `contextualIdentities`
 - `cookies`
 - `debugger`
-- `declarativeNetRequest` (Manifest V3 and above)
-- `declarativeNetRequestFeedback` (Manifest V3 and above)
-- `declarativeNetRequestWithHostAccess` (Manifest V3 and above)
+- `declarativeNetRequest`
+- `declarativeNetRequestFeedback`
+- `declarativeNetRequestWithHostAccess`
 - `dns`
 - `downloads`
 - `downloads.open`

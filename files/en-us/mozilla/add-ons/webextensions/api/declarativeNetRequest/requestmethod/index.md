@@ -25,10 +25,6 @@ Values of this type are strings. Possible values are: `"connect"`, `"delete"`, `
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#type-RequestMethod) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
-
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
 //

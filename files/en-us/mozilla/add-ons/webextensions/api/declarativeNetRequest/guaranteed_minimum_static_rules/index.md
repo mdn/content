@@ -26,8 +26,6 @@ Its value is `30000` on Chrome.
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#property-GUARANTEED_MINIMUM_STATIC_RULES) API.
-
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
 //

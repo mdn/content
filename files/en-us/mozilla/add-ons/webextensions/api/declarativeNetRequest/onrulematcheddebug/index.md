@@ -17,8 +17,6 @@ browser-compat: webextensions.api.declarativeNetRequest.onRuleMatchedDebug
 
 Fired when a rule is matched with a request. Only available for [temporarily loaded extensions](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) with the `"declarativeNetRequestFeedback"` permission, as this is intended for debugging purposes only.
 
-> **Note:** This API is available in Manifest V3 or higher.
-
 ## Syntax
 
 ```js-nolint
@@ -80,10 +78,6 @@ Events have three functions:
 ## Browser compatibility
 
 {{Compat}}
-
-> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#event-onRuleMatchedDebug) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

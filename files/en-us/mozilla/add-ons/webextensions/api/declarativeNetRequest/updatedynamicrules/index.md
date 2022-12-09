@@ -22,8 +22,6 @@ Modifies the set of dynamic rules for the extension. The rules with IDs listed i
 - Static rules specified as part of the extension package can not be removed using this function.
 - {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}} is the maximum number of dynamic and session rules an extension can add.
 
-> **Note:** This API is available in Manifest V3 or higher.
-
 ## Syntax
 
 ```js-nolint
@@ -48,10 +46,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) If th
 ## Browser compatibility
 
 {{Compat}}
-
-> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#method-updateDynamicRules) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

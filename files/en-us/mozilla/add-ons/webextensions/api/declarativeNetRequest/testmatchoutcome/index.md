@@ -17,8 +17,6 @@ browser-compat: webextensions.api.declarativeNetRequest.testMatchOutcome
 
 Checks if any of the extension's `declarativeNetRequest` rules would match a hypothetical request. Only available for [temporarily loaded extensions](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), as this is intended to be used during extension development.
 
-> **Note:** This API is available in Manifest V3 or higher.
-
 ## Syntax
 
 ```js-nolint
@@ -59,10 +57,6 @@ If no rules match, the object is empty. If the request fails, the promise is rej
 ## Browser compatibility
 
 {{Compat}}
-
-> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#event-onRuleMatchedDebug) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

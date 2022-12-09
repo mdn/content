@@ -22,8 +22,6 @@ The `"declarativeNetRequest"` permission allows extensions to block and upgrade 
 
 The `"declarativeNetRequestFeedback"` permission is required to use {{WebExtAPIRef("declarativeNetRequest.getmatchedrules","getmatchedrules")}} and {{WebExtAPIRef("declarativeNetRequest.onRuleMatchedDebug","onRuleMatchedDebug")}} as they return information on declarative rules matched.
 
-> **Note:** This API is available in Manifest V3 or higher.
-
 ## Rules
 
 The declarative rules are defined by four fields:
@@ -385,10 +383,6 @@ To illustrate how this rule set affects requests, consider:
 ## Browser compatibility
 
 {{Compat}}
-
-> **Note:** This API is based on Chromium's [`chrome.declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

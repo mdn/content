@@ -34,7 +34,7 @@ These are the `manifest.json` keys; these keys are available in Manifest V2 and 
 - [commands](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)
 - [content_scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts)
 - [content_security_policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy)
-- [declarative_net_request](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) (Manifest V3 and above)
+- [declarative_net_request](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request)
 - [default_locale](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale)
 - [description](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description)
 - [developer](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer)
