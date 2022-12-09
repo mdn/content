@@ -36,11 +36,11 @@ In the following example we assume that `myRules` list has only three items.
 
 ```js
 let myRules = document.styleSheets[0].cssRules;
-console.log(myRules.item(0)); // returns the first CSSRule item in this list
+console.log(myRules.item(0)); // prints the first CSSRule item in this list
 
-//accessing non existed element using this method will return null instead of undefined 
-console.log(myRules.item(5)) // returns null
-console.log(myRules[5]) // returns undefined
+//accessing non existed item using this method will return null instead of undefined
+console.log(myRules.item(5)) // null
+console.log(myRules[5]) // undefined
 ```
 
 ## Specifications
