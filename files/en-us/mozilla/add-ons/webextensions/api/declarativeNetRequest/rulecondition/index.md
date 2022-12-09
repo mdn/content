@@ -39,7 +39,7 @@ Values of this type are objects. They contain these properties:
     - The entries must consist of only ASCII characters.
     - Use [punycode](https://en.wikipedia.org/wiki/Punycode) encoding for internationalized domains.
 - `excludedRequestMethods` {{optional_inline}}
-  - : An array of {{WebExtAPIRef("declarativeNetRequest.RequestMethod")}}. List of request methods that the rule does not match on. Only one of [`requestMethods`](#requestmethods) and `excludedRequestMethods` should be specified. If neither of them is specified, all request methods are matched.
+  - : An array of `string`. List of request methods that the rule does not match on. Only one of [`requestMethods`](#requestmethods) and `excludedRequestMethods` should be specified. If neither of them is specified, all request methods are matched.
 - `excludedResourceTypes` {{optional_inline}}
   - : An array of {{WebExtAPIRef("declarativeNetRequest.ResourceType")}}. List of resource types that the rule does not match on. Only one of [`resourceTypes`](#resourcetypes) and `excludedResourceTypes` should be specified. If neither of them is specified, all resource types except `"main_frame"` are blocked.
 - `excludedTabIds` {{optional_inline}}
@@ -62,7 +62,7 @@ Values of this type are objects. They contain these properties:
     - The entries must consist of only ASCII characters.
     - Use [punycode](https://en.wikipedia.org/wiki/Punycode) encoding for internationalized domains.
 - `requestMethods` {{optional_inline}}
-  - : An array of {{WebExtAPIRef("declarativeNetRequest.RequestMethod")}}. List of HTTP request methods that the rule matches. An empty list is not allowed. Specifying a `requestMethods` rule condition also excludes non-HTTP(s) requests, whereas specifying [`excludedRequestMethods`](#excludedpequestmethods) does not.
+  - : An array of `string`. List of HTTP request methods that the rule matches. An empty list is not allowed. Specifying a `requestMethods` rule condition also excludes non-HTTP(s) requests, whereas specifying [`excludedRequestMethods`](#excludedpequestmethods) does not.
 - `resourceTypes` {{optional_inline}}
   - : An array of {{WebExtAPIRef("declarativeNetRequest.ResourceType")}}. List of resource types that the rule matches with. An empty list is not allowed. This must be specified for `"allowAllRequests"` rules and may only include the `"sub_frame"` and `"main_frame"` resource types.
 - `tabIds` {{optional_inline}}

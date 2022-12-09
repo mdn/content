@@ -310,8 +310,6 @@ To illustrate how this rule set affects requests, consider:
   - : The request headers to modify for the request.
 - {{WebExtAPIRef("declarativeNetRequest.Redirect")}}
   - : Details of how the redirect should be performed. Only valid for redirect rules.
-- {{WebExtAPIRef("declarativeNetRequest.RequestMethod")}}
-  - : The HTTP request method of a network request.
 - {{WebExtAPIRef("declarativeNetRequest.ResourceType")}}
   - : The resource type of a request.
 - {{WebExtAPIRef("declarativeNetRequest.Rule")}}

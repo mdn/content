@@ -33,7 +33,7 @@ let count = browser.declarativeNetRequest.testMatchOutcome(
     - `initiator` {{optional_inline}}
       - : A `string`. The initiator URL (if any) for the hypothetical request.
     - `method` {{optional_inline}}
-      - : {{WebExtAPIRef("declarativeNetRequest.RequestMethod")}}. Standard HTTP method of the hypothetical request. Defaults to `"get"` for HTTP requests and is ignored for non-HTTP requests.
+      - : {A `string`. The ttandard HTTP method of the hypothetical request. Defaults to `"get"` for HTTP requests and is ignored for non-HTTP requests.
     - `tabId` {{optional_inline}}
       - : A `number`. The ID of the tab the hypothetical request takes place in. Does not need to correspond to a real tab ID. Default is `-1`, meaning that the request isn't related to a tab.
     - `type`
