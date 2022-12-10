@@ -14,7 +14,7 @@ browser-compat: css.selectors.visited
 
 {{CSSRef}}
 
-The **`:visited`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) applies once the link has been visited by the user. For privacy reasons, the styles that can be modified using this selector are very limited. The `:visited` pseudo-class applies only {{htmlelement("a")}} and {{htmlelement("area")}} elements that have an `href` attribute. 
+The **`:visited`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) applies once the link has been visited by the user. For privacy reasons, the styles that can be modified using this selector are very limited. The `:visited` pseudo-class applies only {{htmlelement("a")}} and {{htmlelement("area")}} elements that have an `href` attribute.
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-visited.html", "tabbed-shorter")}}
 
