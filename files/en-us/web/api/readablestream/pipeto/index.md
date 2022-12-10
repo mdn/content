@@ -73,12 +73,14 @@ fetch('png-logo.png')
 Same but using await:
 
 ```js
-// Fetch the original image
-let response = await fetch('png-logo.png')
-// Retrieve its body as ReadableStream
-let body = await response.body
-let rs = await body.pipeThrough(new PNGTransformStream())
-await rs.pipeTo(new FinalDestinationStream())
+(async () => {
+  // Fetch the original image
+  const response = await fetch("png-logo.png");
+  // Retrieve its body as ReadableStream
+  response.body
+    .pipeThrough(new PNGTransformStream())
+    .pipeTo(new FinalDestinationStream());
+})();
 ```
 
 ## Specifications
