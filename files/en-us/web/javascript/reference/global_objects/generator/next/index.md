@@ -107,7 +107,7 @@ g.next(1);
 // "{ value: null, done: false }"
 g.next(2);
 // 2
-// "{ value: null, done: false }"
+// "{ value: 2, done: false }"
 ```
 
 ## Specifications
