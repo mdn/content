@@ -364,7 +364,7 @@ Binary number syntax uses a leading zero followed by a lowercase or uppercase La
 
 #### Octal
 
-Octal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "O" (`0o` or `0O)`. If the digit after the `0o` is outside the range (01234567), the following {{jsxref("SyntaxError")}} is thrown: "missing octal digits after '0o'". If a digit outside the octal range (i.e. 8 or 9) is used further along in the numeric literal, then the following {{jsxref("SyntaxError")}} is thrown: "unexpected token: numeric literal".
+Octal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "O" (`0o` or `0O)`. Any character after the `0o` that is outside the range (01234567) will terminate the literal sequence.
 
 ```js-nolint
 0O755 // 493
