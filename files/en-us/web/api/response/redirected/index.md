@@ -50,8 +50,6 @@ fetch("awesome-picture.jpg")
   });
 ```
 
-
-
 ### Disallowing redirects
 
 Because using redirected to manually filter out redirects can allow forgery of redirects, you should instead set the redirect mode to `"error"` in the `init` parameter when calling {{domxref("fetch()")}}, like this:
