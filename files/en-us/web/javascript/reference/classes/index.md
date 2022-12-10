@@ -258,7 +258,7 @@ class Rectangle {
 }
 ```
 
-We don't need keywords like `let`, `const`, or `var` to declare fields.
+Class fields are like object properties, not variables, so we don't use keywords.
 
 By declaring fields up-front, class definitions become more self-documenting, and the fields are always present.
 
