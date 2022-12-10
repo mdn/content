@@ -23,7 +23,7 @@ An array of HTTP headers. Each header is represented as an object with two prope
 An `array` of `object`s. Each object has the following properties:
 
 - `name`
-  - : `string`. Name of the HTTP header.
+  - : `string`. Name of the HTTP header, in lowercase (e.g. `"content-length"`, not `"Content-Length"`).
 - `value` {{optional_inline}}
   - : `string`. Value of the HTTP header if it can be represented by UTF-8. Either this property or `binaryValue` must be present.
 - `binaryValue` {{optional_inline}}
