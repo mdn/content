@@ -373,7 +373,7 @@ Octal number syntax uses a leading zero followed by a lowercase or uppercase Lat
 
 #### Hexadecimal
 
-Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X`). If the digit after 0x is outside the range (0123456789ABCDEF), the following {{jsxref("SyntaxError")}} is thrown: "missing hexadecimal digits after '0x'". If an [`ID_Start`](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) character outside the hexadecimal range is used further along in the numeric literal, then the following {{jsxref("SyntaxError")}} is thrown: "identifier starts immediately after numeric literal".
+Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X`). Any character after the `0x` that is outside the range (0123456789ABCDEF) will terminate the literal sequence.
 
 ```js-nolint
 0xFFFFFFFFFFFFFFFFF // 295147905179352830000
