@@ -6,10 +6,11 @@ tags:
   - JavaScript
   - Property
   - arguments
+  - Deprecated
 browser-compat: javascript.functions.arguments.callee
 ---
 
-{{jsSidebar("Functions")}}
+{{jsSidebar("Functions")}}{{Deprecated_Header}}
 
 The **`arguments.callee`** property contains the currently executing function.
 

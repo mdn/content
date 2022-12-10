@@ -304,7 +304,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fires on an element that is in the [_hidden until found_](/en-US/docs/Web/HTML/Global_attributes/hidden) state, when the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
 - {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
   - : Fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the currently open modal dialog. The browser fires this event when the user presses the <kbd>Esc</kbd> key to close the modal dialog.
-- {{domxref("Element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}}
+- {{domxref("Element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} {{Experimental_Inline}}
   - : Fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_Containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents).
 - {{domxref("Element/error_event", "error")}}
   - : Fired when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
