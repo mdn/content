@@ -258,7 +258,7 @@ class Rectangle {
 }
 ```
 
-Class fields are like object properties, not variables, so we don't use keywords.
+Class fields are like object properties, not variables, so we don't use keywords to declare them.
 
 By declaring fields up-front, class definitions become more self-documenting, and the fields are always present.
 
