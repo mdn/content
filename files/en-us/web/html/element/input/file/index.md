@@ -86,7 +86,7 @@ For instance, there are a number of ways Microsoft Word files can be identified,
 <input
   type="file"
   id="docpicker"
-  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+  accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
 ```
 
 ### capture
