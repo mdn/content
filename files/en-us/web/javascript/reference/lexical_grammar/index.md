@@ -354,7 +354,7 @@ The decimal exponential literal is specified by the following format: `beN`; whe
 
 #### Binary
 
-Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (`0b` or `0B`). If the digit after the `0b` is not 0 or 1, the following {{jsxref("SyntaxError")}} is thrown: "missing binary digits after '0b'". If a digit other than 0 or 1 is used further along in the numeric literal, then the following {{jsxref("SyntaxError")}} is thrown: "unexpected token: numeric literal".
+Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (`0b` or `0B`). Any character after the `0b` that is not 0 or 1 will terminate the literal sequence.
 
 ```js-nolint
 0b10000000000000000000000000000000 // 2147483648
