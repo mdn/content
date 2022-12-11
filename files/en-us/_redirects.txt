@@ -8747,6 +8747,7 @@
 /en-US/docs/Web/API/KeyframeEffectReadOnly/getKeyframes	/en-US/docs/Web/API/KeyframeEffect/getKeyframes
 /en-US/docs/Web/API/KeyframeEffectReadOnly/iterationComposite	/en-US/docs/Web/API/KeyframeEffect/iterationComposite
 /en-US/docs/Web/API/KeyframeEffectReadOnly/target	/en-US/docs/Web/API/KeyframeEffect/target
+/en-US/docs/Web/API/Largest_Contentful_Paint_API	/en-US/docs/Web/API/LargestContentfulPaint
 /en-US/docs/Web/API/LinearAccelerationSensor/x	/en-US/docs/Web/API/Accelerometer/x
 /en-US/docs/Web/API/LinearAccelerationSensor/y	/en-US/docs/Web/API/Accelerometer/y
 /en-US/docs/Web/API/LinearAccelerationSensor/z	/en-US/docs/Web/API/Accelerometer/z
