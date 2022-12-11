@@ -14,7 +14,7 @@ The **`DOMTokenList`** interface represents a set of space-separated tokens. Suc
 
 A `DOMTokenList` is indexed beginning with `0` as with JavaScript {{jsxref("Array")}} objects. `DOMTokenList` is always case-sensitive.
 
-> **Note:** This interface is a legacy type that existed because of a [historical accident](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156) and only kept for not breaking the code that have already used it. Modern APIs use Types that wrap around ECMAScript array types so you can treat them like an ECMAScript array, and at the same time impose additional semantics on their usage like making their items read-only.
+> **Note:** This interface is a legacy type that exists because of a [historical accident](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156) and is only continues to be supported in order not to break code that's already using it. Modern APIs use types that wrap around ECMAScript array types so you can treat them like ECMAScript arrays, and at the same time impose additional semantics on their usage (such as making their items read-only).
 
 ## Instance properties
 
