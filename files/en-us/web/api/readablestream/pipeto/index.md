@@ -70,7 +70,7 @@ fetch('png-logo.png')
 .then((rs) => rs.pipeTo(new FinalDestinationStream()))
 ```
 
-Same but using await:
+The same example, but using {{jsxref("Operators/await", "await")}}:
 
 ```js
 (async () => {
