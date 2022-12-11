@@ -22,6 +22,66 @@ The **`<div>`** [HTML](/en-US/docs/Web/HTML) element is the generic container fo
 
 As a "pure" container, the `<div>` element does not inherently represent anything. Instead, it's used to group content so it can be easily styled using the {{htmlattrxref("class")}} or {{htmlattrxref("id")}} attributes, marking a section of a document as being written in a different language (using the {{htmlattrxref("lang")}} attribute), and so on.
 
+## Attributes
+
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+> **Note:** The `align` attribute is obsolete; do not use it anymore. Instead, you should use CSS properties or techniques such as [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) or [CSS Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) to align and position `<div>` elements on the page.
+
+## Usage notes
+
+- The `<div>` element should be used only when no other semantic element (such as {{HTMLElement("article")}} or {{HTMLElement("nav")}}) is appropriate.
+
+## Accessibility concerns
+
+The `<div>` element has [an implicit role of `generic`](https://www.w3.org/TR/wai-aria-1.2/#generic), and not none. This may affect certain ARIA combination declarations that expect a direct descendant element with a certain role to function properly.
+
+## Examples
+
+### A simple example
+
+```html
+<div>
+  <p>
+    Any kind of content here. Such as &lt;p&gt;, &lt;table&gt;. You name it!
+  </p>
+</div>
+```
+
+The result looks like this:
+
+{{EmbedLiveSample("A_simple_example", 650, 60)}}
+
+### A styled example
+
+This example creates a shadowed box by applying a style to the `<div>` using CSS. Note the use of the {{htmlattrxref("class")}} attribute on the `<div>` to apply the style named `"shadowbox"` to the element.
+
+#### HTML
+
+```html
+<div class="shadowbox">
+  <p>Here's a very interesting note displayed in a lovely shadowed box.</p>
+</div>
+```
+
+#### CSS
+
+```css
+.shadowbox {
+  width: 15em;
+  border: 1px solid #333;
+  box-shadow: 8px 8px 5px #444;
+  padding: 8px 12px;
+  background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("A_styled_example", 650, 120)}}
+
+## Technical Summary
+
 <table class="properties">
   <tbody>
     <tr>
@@ -81,64 +141,6 @@ As a "pure" container, the `<div>` element does not inherently represent anythin
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-> **Note:** The `align` attribute is obsolete; do not use it anymore. Instead, you should use CSS properties or techniques such as [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) or [CSS Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) to align and position `<div>` elements on the page.
-
-## Usage notes
-
-- The `<div>` element should be used only when no other semantic element (such as {{HTMLElement("article")}} or {{HTMLElement("nav")}}) is appropriate.
-
-## Accessibility concerns
-
-The `<div>` element has [an implicit role of `generic`](https://www.w3.org/TR/wai-aria-1.2/#generic), and not none. This may affect certain ARIA combination declarations that expect a direct descendant element with a certain role to function properly.
-
-## Examples
-
-### A simple example
-
-```html
-<div>
-  <p>
-    Any kind of content here. Such as &lt;p&gt;, &lt;table&gt;. You name it!
-  </p>
-</div>
-```
-
-The result looks like this:
-
-{{EmbedLiveSample("A_simple_example", 650, 60)}}
-
-### A styled example
-
-This example creates a shadowed box by applying a style to the `<div>` using CSS. Note the use of the {{htmlattrxref("class")}} attribute on the `<div>` to apply the style named `"shadowbox"` to the element.
-
-#### HTML
-
-```html
-<div class="shadowbox">
-  <p>Here's a very interesting note displayed in a lovely shadowed box.</p>
-</div>
-```
-
-#### CSS
-
-```css
-.shadowbox {
-  width: 15em;
-  border: 1px solid #333;
-  box-shadow: 8px 8px 5px #444;
-  padding: 8px 12px;
-  background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
-}
-```
-
-#### Result
-
-{{EmbedLiveSample("A_styled_example", 650, 120)}}
 
 ## Specifications
 
