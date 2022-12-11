@@ -13,9 +13,13 @@ browser-compat: javascript.builtins.Math.LN2
 
 The **`Math.LN2`** property represents the natural logarithm of 2, approximately 0.693:
 
+{{EmbedInteractiveExample("pages/js/math-ln2.html","shorter")}}
+
+## Value
+
 <math display="block"><semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝙻𝙽𝟸</mi><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>0.693</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN2}} = \ln(2) \approx 0.693</annotation></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-ln2.html","shorter")}}{{js_property_attributes(0, 0, 0)}}
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 

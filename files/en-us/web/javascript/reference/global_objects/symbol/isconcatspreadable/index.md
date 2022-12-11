@@ -16,14 +16,18 @@ The **`Symbol.isConcatSpreadable`** well-known symbol is used to configure if an
 
 {{EmbedInteractiveExample("pages/js/symbol-isconcatspreadable.html")}}
 
+## Value
+
+The well-known symbol `@@isConcatSpreadable`.
+
+{{js_property_attributes(0, 0, 0)}}
+
 ## Description
 
 The `@@isConcatSpreadable` symbol (`Symbol.isConcatSpreadable`) can be defined as an own or inherited property and its value is a boolean. It can control behavior for arrays and array-like objects:
 
 - For array objects, the default behavior is to spread (flatten) elements. `Symbol.isConcatSpreadable` can avoid flattening in these cases.
 - For array-like objects, the default behavior is no spreading or flattening. `Symbol.isConcatSpreadable` can force flattening in these cases.
-
-{{js_property_attributes(0,0,0)}}
 
 ## Examples
 

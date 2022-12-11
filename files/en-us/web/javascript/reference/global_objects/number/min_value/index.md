@@ -12,7 +12,13 @@ browser-compat: javascript.builtins.Number.MIN_VALUE
 
 The **`Number.MIN_VALUE`** property represents the smallest positive numeric value representable in JavaScript.
 
-{{EmbedInteractiveExample("pages/js/number-min-value.html")}}{{js_property_attributes(0, 0, 0)}}
+{{EmbedInteractiveExample("pages/js/number-min-value.html")}}
+
+## Value
+
+2<sup>-1074</sup>, or `5E-324`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 

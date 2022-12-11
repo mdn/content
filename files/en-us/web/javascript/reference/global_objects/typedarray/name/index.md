@@ -13,7 +13,13 @@ browser-compat: javascript.builtins.TypedArray.name
 
 The **`TypedArray.name`** property represents a string value of the typed array constructor name.
 
-{{EmbedInteractiveExample("pages/js/typedarray-name.html","shorter")}}{{js_property_attributes(0,0,0)}}
+{{EmbedInteractiveExample("pages/js/typedarray-name.html","shorter")}}
+
+## Value
+
+A string whose value depends on the type of `TypedArray`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 
