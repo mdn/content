@@ -95,7 +95,7 @@ console.log(x); // 6 (right-most)
 
 ### Processing and then returning
 
-Another example that one could make with comma operator is processing before returning. As stated, only the last element will be returned but all others are going to be evaluated as well. So, one could do:
+Another example that one could make with the comma operator is processing before returning. As stated, only the last element will be returned but all others are going to be evaluated as well. So, one could do:
 
 ```js-nolint
 function myFunc() {
