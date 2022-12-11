@@ -25,7 +25,10 @@ These properties are defined on `Function.prototype` and shared by all `Function
   - : Represents the arguments passed to this function. For [strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), arrow, async, and generator functions, accessing the `arguments` property throws a {{jsxref("TypeError")}}. Use the {{jsxref("Functions/arguments", "arguments")}} object inside function closures instead.
 - {{jsxref("Function.prototype.caller")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Represents the function that invoked this function. For [strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), arrow, async, and generator functions, accessing the `caller` property throws a {{jsxref("TypeError")}}.
-- {{jsxref("Function.prototype.displayName")}} {{Non-standard_Inline}} {{Optional_Inline}}
+
+These properties are own properties of each `Function` instance.
+
+- {{jsxref("Function/displayName", "displayName")}} {{Non-standard_Inline}} {{Optional_Inline}}
   - : The display name of the function.
 - {{jsxref("Function/length", "length")}}
   - : Specifies the number of arguments expected by the function.

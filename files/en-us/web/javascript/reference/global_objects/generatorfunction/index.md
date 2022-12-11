@@ -19,6 +19,8 @@ In JavaScript, every generator function is actually a `GeneratorFunction` object
 const GeneratorFunction = function* () {}.constructor;
 ```
 
+`GeneratorFunction` is a subclass of {{jsxref("Function")}}.
+
 ## Constructor
 
 - {{jsxref("GeneratorFunction/GeneratorFunction", "GeneratorFunction()")}}
