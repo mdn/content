@@ -332,7 +332,7 @@ However, if you add that `process.on` listener but don't also have code within i
 
 There are four [composition tools](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_concurrency) for running asynchronous operations concurrently: {{jsxref("Promise.all()")}}, {{jsxref("Promise.allSettled()")}}, {{jsxref("Promise.any()")}}, and {{jsxref("Promise.race()")}}.
 
-We can start operations in parallel and wait for them all to finish like this:
+We can start operations at the same time and wait for them all to finish like this:
 
 ```js
 Promise.all([func1(), func2(), func3()]).then(([result1, result2, result3]) => {
