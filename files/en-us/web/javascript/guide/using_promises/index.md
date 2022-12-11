@@ -342,7 +342,7 @@ Promise.all([func1(), func2(), func3()]).then(([result1, result2, result3]) => {
 
 If one of the promises in the array rejects, `Promise.all()` immediately rejects the returned promise and aborts the other operations. This may cause unexpected state or behavior. {{jsxref("Promise.allSettled()")}} is another composition tool that ensures all operations are complete before resolving.
 
-Since javascript is a single-threaded language, these methods all run promises in concurrent manner — a sequence of promises are started simultaneously and do not wait for each other, they are just independent operations executing at once. Sequential composition is possible using some clever JavaScript:
+These methods all run promises concurrently — a sequence of promises are started simultaneously and do not wait for each other. Sequential composition is possible using some clever JavaScript:
 
 ```js
 [func1, func2, func3]
@@ -391,7 +391,7 @@ for (const f of [func1, func2, func3]) {
 /* use last result (i.e. result3) */
 ```
 
-However, before you compose promises sequentially, consider if it's really necessary — it's always better to run promises in parallel way since concurrency will be maintained and they won't unnecessarily block each other unless one promise's execution depends on another's result.
+However, before you compose promises sequentially, consider if it's really necessary — it's always better to run promises concurrently so that they don't unnecessarily block each other unless one promise's execution depends on another's result.
 
 ## Creating a Promise around an old callback API
 
