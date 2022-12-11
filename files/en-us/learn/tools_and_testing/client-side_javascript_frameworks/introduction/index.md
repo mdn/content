@@ -266,10 +266,10 @@ You should seriously consider the support matrix and DSLs of a framework when ma
 
 | Framework | Browser support                     | Preferred DSL | Supported DSLs         | Citation |
 | --------- | ----------------------------------- | ------------- | ---------------------- | -------- |
-| Angular   | Modern                              | TypeScript    | HTML-based; TypeScript | <cite>[official docs](https://angular.io/guide/browser-support)</cite> |
-| React     | Modern                              | JSX           | JSX; TypeScript        | <cite>[official docs](https://reactjs.org/docs/react-dom.html#browser-support)</cite> |
-| Vue       | Modern (IE9+ in Vue 2)              | HTML-based    | HTML-based, JSX, Pug   | <cite>[official docs](https://cli.vuejs.org/guide/browser-compatibility.html)</cite> |
-| Ember     | Modern (IE9+ in Ember version 2.18) | Handlebars    | Handlebars, TypeScript | <cite>[official docs](https://guides.emberjs.com/v3.3.0/templates/handlebars-basics/)</cite> |
+| Angular   | Modern                              | TypeScript    | HTML-based; TypeScript | [official docs](https://angular.io/guide/browser-support) |
+| React     | Modern                              | JSX           | JSX; TypeScript        | [official docs](https://reactjs.org/docs/react-dom.html#browser-support) |
+| Vue       | Modern (IE9+ in Vue 2)              | HTML-based    | HTML-based, JSX, Pug   | [official docs](https://cli.vuejs.org/guide/browser-compatibility.html) |
+| Ember     | Modern (IE9+ in Ember version 2.18) | Handlebars    | Handlebars, TypeScript | [official docs](https://guides.emberjs.com/v3.3.0/templates/handlebars-basics/) |
 
 > **Note:** DSLs we've described as "HTML-based" do not have official names. They are not really true DSLs, but they are non-standard HTML, so we believe they are worth highlighting.
 
