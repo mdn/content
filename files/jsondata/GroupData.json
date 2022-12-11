@@ -574,7 +574,6 @@
         "HTMLIFrameElement",
         "HTMLImageElement",
         "HTMLInputElement",
-        "HTMLKeygenElement",
         "HTMLLabelElement",
         "HTMLLegendElement",
         "HTMLLIElement",
