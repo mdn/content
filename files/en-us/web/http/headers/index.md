@@ -132,10 +132,8 @@ Network client hints allow a server to choose what information is sent based on 
   - : The {{Glossary("effective connection type")}} ("network profile") that best matches the connection's latency and bandwidth. This is part of the [Network Information API](/en-US/docs/Web/API/Network_Information_API).
 - {{HTTPHeader("RTT")}}
   - : Application layer round trip time (RTT) in milliseconds, which includes the server processing time. This is part of the [Network Information API](/en-US/docs/Web/API/Network_Information_API).
-- {{HTTPHeader("Sec-CH-Save-Data")}} {{experimental_inline}}
-  - : A boolean that indicates the user agent's preference for reduced data usage.
-- {{HTTPHeader("Save-Data")}} {{deprecated_inline}}
-  - : A boolean that indicates the user agent's preference for reduced data usage.
+- {{HTTPHeader("Save-Data")}} {{experimental_inline}}
+  - : A string `on` that indicates the user agent's preference for reduced data usage.
 
 ## Conditionals
 
