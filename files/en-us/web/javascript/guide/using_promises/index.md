@@ -228,7 +228,7 @@ doSomething()
 // Forgot to terminate chain with a catch!
 ```
 
-The first mistake is to not chain things together properly. This happens when we create a new promise but forget to return it. As a consequence, the chain is broken — or rather, we have two independent chains racing. This means `doFourthThing()` won't wait for `doSomethingElse()` or `doThirdThing()` to finish, and will run in parallel with them — which is likely unintended. Separate chains also have separate error handling, leading to uncaught errors.
+The first mistake is to not chain things together properly. This happens when we create a new promise but forget to return it. As a consequence, the chain is broken — or rather, we have two independent chains racing. This means `doFourthThing()` won't wait for `doSomethingElse()` or `doThirdThing()` to finish, and will run concurrently with them — which is likely unintended. Separate chains also have separate error handling, leading to uncaught errors.
 
 The second mistake is to nest unnecessarily, enabling the first mistake. Nesting also limits the scope of inner error handlers, which—if unintended—can lead to uncaught errors. A variant of this is the [promise constructor anti-pattern](https://stackoverflow.com/questions/23803743/what-is-the-explicit-promise-construction-antipattern-and-how-do-i-avoid-it), which combines nesting with redundant use of the promise constructor to wrap code that already uses promises.
 
@@ -332,7 +332,7 @@ However, if you add that `process.on` listener but don't also have code within i
 
 There are four [composition tools](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_concurrency) for running asynchronous operations concurrently: {{jsxref("Promise.all()")}}, {{jsxref("Promise.allSettled()")}}, {{jsxref("Promise.any()")}}, and {{jsxref("Promise.race()")}}.
 
-We can start operations in parallel and wait for them all to finish like this:
+We can start operations at the same time and wait for them all to finish like this:
 
 ```js
 Promise.all([func1(), func2(), func3()]).then(([result1, result2, result3]) => {
@@ -342,7 +342,7 @@ Promise.all([func1(), func2(), func3()]).then(([result1, result2, result3]) => {
 
 If one of the promises in the array rejects, `Promise.all()` immediately rejects the returned promise and aborts the other operations. This may cause unexpected state or behavior. {{jsxref("Promise.allSettled()")}} is another composition tool that ensures all operations are complete before resolving.
 
-These methods all run promises in parallel — a sequence of promises are started simultaneously and do not wait for each other. Sequential composition is possible using some clever JavaScript:
+These methods all run promises concurrently — a sequence of promises are started simultaneously and do not wait for each other. Sequential composition is possible using some clever JavaScript:
 
 ```js
 [func1, func2, func3]
@@ -391,7 +391,7 @@ for (const f of [func1, func2, func3]) {
 /* use last result (i.e. result3) */
 ```
 
-However, before you compose promises sequentially, consider if it's really necessary — it's always better to run promises in parallel so that they don't unnecessarily block each other unless one promise's execution depends on another's result.
+However, before you compose promises sequentially, consider if it's really necessary — it's always better to run promises concurrently so that they don't unnecessarily block each other unless one promise's execution depends on another's result.
 
 ## Creating a Promise around an old callback API
 
