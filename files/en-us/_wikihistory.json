@@ -42199,54 +42199,6 @@
     "modified": "2020-10-26T16:07:26.648Z",
     "contributors": ["germain"]
   },
-  "Web/API/HTMLVideoElement/msFrameStep": {
-    "modified": "2019-03-18T21:32:29.188Z",
-    "contributors": ["ExE-Boss", "mattwojo", "erikadoyle"]
-  },
-  "Web/API/HTMLVideoElement/msHorizontalMirror": {
-    "modified": "2019-03-18T21:32:20.772Z",
-    "contributors": ["ExE-Boss", "mattwojo", "erikadoyle"]
-  },
-  "Web/API/HTMLVideoElement/msInsertVideoEffect": {
-    "modified": "2019-03-18T21:32:15.675Z",
-    "contributors": ["ExE-Boss", "mattwojo", "erikadoyle"]
-  },
-  "Web/API/HTMLVideoElement/msIsBoxed": {
-    "modified": "2019-03-18T21:32:17.989Z",
-    "contributors": ["mattwojo", "erikadoyle"]
-  },
-  "Web/API/HTMLVideoElement/msIsLayoutOptimalForPlayback": {
-    "modified": "2019-03-18T21:32:31.838Z",
-    "contributors": ["ExE-Boss", "mattwojo", "erikadoyle"]
-  },
-  "Web/API/HTMLVideoElement/msSetVideoRectangle": {
-    "modified": "2019-03-18T21:32:25.024Z",
-    "contributors": ["mattwojo", "erikadoyle"]
-  },
-  "Web/API/HTMLVideoElement/msStereo3DPackingMode": {
-    "modified": "2019-03-18T21:32:23.028Z",
-    "contributors": ["mattwojo", "erikadoyle"]
-  },
-  "Web/API/HTMLVideoElement/msStereo3DRenderMode": {
-    "modified": "2019-03-18T21:32:19.338Z",
-    "contributors": ["mattwojo", "erikadoyle"]
-  },
-  "Web/API/HTMLVideoElement/msZoom": {
-    "modified": "2019-03-18T21:32:22.688Z",
-    "contributors": ["ExE-Boss", "mattwojo", "erikadoyle"]
-  },
-  "Web/API/HTMLVideoElement/onMSVideoFormatChanged": {
-    "modified": "2019-03-18T21:32:26.382Z",
-    "contributors": ["mattwojo", "erikadoyle"]
-  },
-  "Web/API/HTMLVideoElement/onMSVideoFrameStepCompleted": {
-    "modified": "2019-03-18T21:32:22.349Z",
-    "contributors": ["mattwojo", "erikadoyle"]
-  },
-  "Web/API/HTMLVideoElement/onMSVideoOptimalLayoutChanged": {
-    "modified": "2019-03-18T21:32:14.445Z",
-    "contributors": ["mattwojo", "erikadoyle"]
-  },
   "Web/API/HTMLVideoElement/requestPictureInPicture": {
     "modified": "2020-10-25T11:13:29.865Z",
     "contributors": ["chrisdavidmills", "germain"]
