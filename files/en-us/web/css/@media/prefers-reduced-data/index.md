@@ -84,5 +84,4 @@ body {
 
 ## See also
 
-- {{HTTPHeader("Sec-CH-Save-Data")}} HTTP Header [User Agent Client Hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
 - {{HTTPHeader("Save-Data")}} HTTP header
