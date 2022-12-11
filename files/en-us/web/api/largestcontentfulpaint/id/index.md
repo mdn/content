@@ -18,7 +18,7 @@ The **`id`** read-only property of the {{domxref("LargestContentfulPaint")}} int
 
 ## Value
 
-A string containing the ID of the element or empty string if there is no such ID.
+A string containing the ID of the element, or the empty string if there is no such ID.
 
 ## Examples
 
