@@ -25,8 +25,6 @@ It accepts an integer as a value, with different results depending on the intege
 
   > **Warning:** It is recommended that developers use only 0 and -1 as `tabindex` values. Avoid using `tabindex` values greater than 0 and css-properties that can change the order of focusable html-elements ([Ordering flex items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)). Doing so makes it difficult for people who rely on using keyboard for navigation or assistive technology to navigate and operate page content. Instead, write the document with the elements in a logical sequence.
 
-The `tabindex` attribute must not be specified on {{htmlelement("dialog")}} elements and should not be used on non-interactive content. If you set the `tabindex` attribute on a {{htmlelement("div")}}, then its child content cannot be scrolled with the arrow keys unless you set `tabindex` on the content, too. [Check out this fiddle to understand the scrolling effects of `tabindex`](https://jsfiddle.net/jainakshay/0b2q4Lgv/).
-
 ## Accessibility concerns
 
 Avoid using the `tabindex` attribute in conjunction with non-[interactive content](/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content) to make something intended to be interactive focusable by keyboard input. An example of this would be using a {{HTMLElement("div")}} element to describe a button, instead of the {{HTMLElement("button")}} element.
