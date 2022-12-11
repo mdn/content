@@ -50,7 +50,7 @@ This interface extends the following {{domxref("PerformanceEntry")}} properties 
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the value of this entry's {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} if it is not `0`, otherwise the value of this entry's {{domxref("LargestContentfulPaint.loadTime", "loadTime")}}.
 - {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns `0` as `duration` is not applicable to this interface.
+  - : Returns `0`, as `duration` is not applicable to this interface.
 
 It also supports the following properties:
 
