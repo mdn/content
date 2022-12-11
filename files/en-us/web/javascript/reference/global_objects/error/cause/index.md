@@ -1,5 +1,5 @@
 ---
-title: Error.prototype.cause
+title: "Error: cause"
 slug: Web/JavaScript/Reference/Global_Objects/Error/cause
 tags:
   - JavaScript

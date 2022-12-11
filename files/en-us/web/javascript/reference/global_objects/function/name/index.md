@@ -1,5 +1,5 @@
 ---
-title: Function.prototype.name
+title: "Function: name"
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
 tags:
   - ECMAScript 2015

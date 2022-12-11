@@ -1,5 +1,5 @@
 ---
-title: Function.prototype.displayName
+title: "Function: displayName"
 slug: Web/JavaScript/Reference/Global_Objects/Function/displayName
 tags:
   - Function
