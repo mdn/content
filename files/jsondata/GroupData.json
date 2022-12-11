@@ -934,8 +934,7 @@
         "/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API",
         "/docs/Web/API/User_timing_API",
         "/docs/Web/API/User_timing_API/Using_the_User_Timing_API",
-        "/docs/Web/API/Element_timing_API",
-        "/docs/Web/API/Largest_Contentful_Paint_API"
+        "/docs/Web/API/Element_timing_API"
       ],
       "interfaces": [
         "EventCounts",
