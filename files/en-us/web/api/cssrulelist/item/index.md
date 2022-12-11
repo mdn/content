@@ -32,7 +32,7 @@ A {{domxref("CSSRule")}}.
 
 ## Examples
 
-In the following example we assume that the `myRules` list has three items only.
+In the following example, we assume that the `myRules` list has three items only.
 
 ```js
 let myRules = document.styleSheets[0].cssRules;
