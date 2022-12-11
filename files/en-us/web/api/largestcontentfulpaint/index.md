@@ -78,7 +78,7 @@ _This interface also inherits methods from {{domxref("PerformanceEntry")}}._
 
 ### Observing the largest contentful paint
 
-In the following example an observer is registered to get the largest contentful paint while the page is loading. The `buffered` flag is used to access data from before observer creation.
+In the following example, an observer is registered to get the largest contentful paint while the page is loading. The `buffered` flag is used to access data from before observer creation.
 
 The LCP API analyzes all content it finds (including content that is removed from the DOM). When new largest content is found, it creates a new entry. It stops searching for larger content when scroll or input events occur, since these events likely introduce new content on the website. Thus the LCP is the last performance entry reported by the observer.
 
