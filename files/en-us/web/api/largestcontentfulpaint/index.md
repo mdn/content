@@ -102,7 +102,7 @@ For example, to allow `https://developer.mozilla.org` to see `renderTime`, the c
 Timing-Allow-Origin: https://developer.mozilla.org
 ```
 
-Like in the code example, you can use {{domxref("PerformanceEntry.startTime", "startTime")}} which returns the value of the entry's {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} if it is not `0`, and otherwise the value of this entry's {{domxref("LargestContentfulPaint.loadTime", "loadTime")}}. However, it is recommended to set the {{HTTPHeader("Timing-Allow-Origin")}} header so that the metrics will be more accurate.
+Like in the code example, you can use {{domxref("PerformanceEntry.startTime", "startTime")}}, which returns the value of the entry's {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} if it is not `0`, and otherwise the value of this entry's {{domxref("LargestContentfulPaint.loadTime", "loadTime")}}. However, it is recommended to set the {{HTTPHeader("Timing-Allow-Origin")}} header so that the metrics will be more accurate.
 
 If you use `startTime`, you can flag any inaccuracies by checking if `renderTime` was used:
 
