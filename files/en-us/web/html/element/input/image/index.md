@@ -23,45 +23,6 @@ browser-compat: html.elements.input.type_image
 
 {{EmbedInteractiveExample("pages/tabbed/input-image.html", "tabbed-standard")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
-      <td>None — the <code>value</code> attribute should not be specified.</td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>None.</td>
-    </tr>
-    <tr>
-      <td><strong>Supported common attributes</strong></td>
-      <td>
-        <a href="/en-US/docs/Web/HTML/Element/input#alt"><code>alt</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#src"><code>src</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#width"><code>width</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#height"><code>height</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#formaction"><code>formaction</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#formenctype"><code>formenctype</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#formmethod"><code>formmethod</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#formmethod"><code>formnovalidate</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#formtarget"><code>formtarget</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td>None.</td>
-    </tr>
-    <tr>
-      <td><strong>DOM interface</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>None.</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Value
 
 `<input type="image">` elements do not accept `value` attributes. The path to the image to be displayed is specified in the `src` attribute.
@@ -332,6 +293,47 @@ label {
 ```
 
 Here, `object-position` is configured to draw the image in the top-right corner of the element, while `object-fit` is set to `contain`, which indicates that the image should be drawn at the largest size that will fit within the element's box without altering its aspect ratio. Note the visible grey background of the element still visible in the area not covered by the image.
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>None — the <code>value</code> attribute should not be specified.</td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Element/input#alt"><code>alt</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#src"><code>src</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#width"><code>width</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#height"><code>height</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#formaction"><code>formaction</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#formenctype"><code>formenctype</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#formmethod"><code>formmethod</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#formmethod"><code>formnovalidate</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#formtarget"><code>formtarget</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>None.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

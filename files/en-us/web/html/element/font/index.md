@@ -31,6 +31,8 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
 This element implements the {{domxref("HTMLFontElement")}} interface.
 
+<!-- ## Technical summary -->
+
 ## Specifications
 
 {{Specifications}}
