@@ -18,7 +18,11 @@ For more information, see {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matc
 
 {{EmbedInteractiveExample("pages/js/symbol-matchall.html")}}
 
-{{js_property_attributes(0,0,0)}}
+## Value
+
+The well-known symbol `@@matchAll`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Examples
 

@@ -56,9 +56,9 @@ The following example uses `indexOf()` to locate values in an array.
 
 ```js
 const array = [2, 9, 9];
-array.indexOf(2);     // 0
-array.indexOf(7);     // -1
-array.indexOf(9, 2);  // 2
+array.indexOf(2); // 0
+array.indexOf(7); // -1
+array.indexOf(9, 2); // 2
 array.indexOf(2, -1); // -1
 array.indexOf(2, -3); // 0
 ```
@@ -67,8 +67,8 @@ array.indexOf(2, -3); // 0
 
 ```js
 const indices = [];
-const array = ['a', 'b', 'a', 'c', 'a', 'd'];
-const element = 'a';
+const array = ["a", "b", "a", "c", "a", "d"];
+const element = "a";
 let idx = array.indexOf(element);
 while (idx !== -1) {
   indices.push(idx);
@@ -81,7 +81,7 @@ console.log(indices);
 ### Finding if an element exists in the array or not and updating the array
 
 ```js
-function updateVegetablesCollection (veggies, veggie) {
+function updateVegetablesCollection(veggies, veggie) {
   if (veggies.indexOf(veggie) === -1) {
     veggies.push(veggie);
     console.log(`New veggies collection is: ${veggies}`);
@@ -90,11 +90,11 @@ function updateVegetablesCollection (veggies, veggie) {
   }
 }
 
-const veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
+const veggies = ["potato", "tomato", "chillies", "green-pepper"];
 
-updateVegetablesCollection(veggies, 'spinach');
+updateVegetablesCollection(veggies, "spinach");
 // New veggies collection is: potato,tomato,chillies,green-pepper,spinach
-updateVegetablesCollection(veggies, 'spinach');
+updateVegetablesCollection(veggies, "spinach");
 // spinach already exists in the veggies collection.
 ```
 

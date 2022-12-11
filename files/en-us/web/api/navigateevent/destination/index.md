@@ -19,7 +19,7 @@ tags:
 browser-compat: api.NavigateEvent.destination
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`destination`** read-only property of the
 {{domxref("NavigateEvent")}} interface returns a {{domxref("NavigationDestination")}} object representing the destination being navigated to.

@@ -116,6 +116,7 @@ Tags in this category include:
   - : The API only works in certified code.
 
 These tags are no excuse to leave out the [browser compatibility table](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) in your article! That should always be present.
+For more information on the definitions of **deprecated** and **experimental**, see the [Experimental, deprecated, and obsolete](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) documentation.
 
 ## Skill-level tags
 

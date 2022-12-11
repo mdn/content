@@ -1804,10 +1804,6 @@
       "inh": "",
       "impl": []
     },
-    "InteractionCounts": {
-      "inh": "",
-      "impl": []
-    },
     "IntersectionObserver": {
       "inh": "",
       "impl": []
@@ -4022,10 +4018,6 @@
     },
     "XRMediaBinding": {
       "inh": "",
-      "impl": []
-    },
-    "XRPermissionStatus": {
-      "inh": "PermissionStatus",
       "impl": []
     },
     "XRPose": {

@@ -17,7 +17,7 @@ tags:
 browser-compat: api.BlobEvent
 ---
 
-{{APIRef("Media Recorder API")}}
+{{APIRef("MediaStream Recording")}}
 
 The **`BlobEvent`** interface represents events associated with a {{domxref("Blob")}}. These blobs are typically, but not necessarily, associated with media content.
 

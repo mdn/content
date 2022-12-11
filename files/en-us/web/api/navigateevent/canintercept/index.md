@@ -19,7 +19,7 @@ tags:
 browser-compat: api.NavigateEvent.canIntercept
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`canIntercept`** read-only property of the
 {{domxref("NavigateEvent")}} interface returns `true` if the navigation can be intercepted and have its URL rewritten, or `false` otherwise

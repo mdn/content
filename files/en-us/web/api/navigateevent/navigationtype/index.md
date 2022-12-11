@@ -19,7 +19,7 @@ tags:
 browser-compat: api.NavigateEvent.navigationType
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`navigationType`** read-only property of the
 {{domxref("NavigateEvent")}} interface returns the type of the navigation — `push`, `reload`, `replace`, or `traverse`.

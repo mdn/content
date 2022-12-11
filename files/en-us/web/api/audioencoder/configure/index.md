@@ -63,7 +63,7 @@ const init = {
 let config = {
   codec: "opus",
   sampleRate: 44100,
-  numberOfCannels: 2,
+  numberOfChannels: 2,
   bitrate: 128_000, // 128 kbps
 };
 

@@ -1,6 +1,7 @@
 ---
 title: transform-origin
 slug: Web/SVG/Attribute/transform-origin
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

@@ -15,6 +15,8 @@ The **`hyphenate-character`** [CSS](/en-US/docs/Web/CSS) property sets the chara
 
 Both automatic and soft hyphens are displayed according to the specified hyphenate-character value.
 
+{{EmbedInteractiveExample("pages/css/hyphenate-character.html")}}
+
 ## Syntax
 
 The value either sets the string to use instead of a hyphen, or indicates that the user agent should select an appropriate string based on the current typographic conventions (default).

@@ -18,7 +18,7 @@ tags:
 browser-compat: api.NavigationHistoryEntry.id
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`id`** read-only property of the
 {{domxref("NavigationHistoryEntry")}} interface returns the `id` of the history entry. This is a unique, UA-generated value that always represents a specific history entry, useful to correlate it with an external resource such as a storage cache.

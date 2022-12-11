@@ -17,38 +17,6 @@ browser-compat: html.elements.input.type_hidden
 
 {{HTMLElement("input")}} elements of type **`hidden`** let web developers include data that cannot be seen or modified by users when a form is submitted. For example, the ID of the content that is currently being ordered or edited, or a unique security token. Hidden inputs are completely invisible in the rendered page, and there is no way to make it visible in the page's content.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
-      <td>
-        A string representing the value of the hidden
-        data you want to pass back to the server.
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>None.</td>
-    </tr>
-    <tr>
-      <td><strong>Supported Common Attributes</strong></td>
-      <td>{{htmlattrxref("autocomplete", "input")}}</td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td><code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM interface</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>None.</td>
-    </tr>
-  </tbody>
-</table>
-
 > **Note:** The {{domxref("HTMLElement/input_event", "input")}} and {{domxref("HTMLElement/change_event", "change")}} events do not apply to this input type. Hidden inputs cannot be focused even using JavaScript (e.g. `hiddenInput.focus()`).
 
 ## Value
@@ -167,6 +135,40 @@ When submitted, the form data sent to the server will look something like this:
 `title=My+excellent+blog+post&content=This+is+the+content+of+my+excellent+blog+post.+I+hope+you+enjoy+it!&postId=34657`
 
 Even though the hidden input cannot be seen at all, its data is still submitted.
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>
+        A string representing the value of the hidden
+        data you want to pass back to the server.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <td><strong>Supported Common Attributes</strong></td>
+      <td>{{htmlattrxref("autocomplete", "input")}}</td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td><code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>None.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

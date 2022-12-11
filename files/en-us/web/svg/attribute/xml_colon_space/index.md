@@ -1,6 +1,7 @@
 ---
 title: xml:space
 slug: Web/SVG/Attribute/xml:space
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

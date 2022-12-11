@@ -18,7 +18,7 @@ tags:
 browser-compat: api.Navigation.reload
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`reload()`** method of the
 {{domxref("Navigation")}} interface reloads the current URL, updating any provided state in the history entries list.

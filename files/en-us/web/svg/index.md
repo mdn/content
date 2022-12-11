@@ -1,6 +1,7 @@
 ---
-title: 'SVG: Scalable Vector Graphics'
+title: "SVG: Scalable Vector Graphics"
 slug: Web/SVG
+page-type: landing-page
 tags:
   - 2D Graphics
   - Graphics

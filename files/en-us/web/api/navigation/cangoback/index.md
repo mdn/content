@@ -18,7 +18,7 @@ tags:
 browser-compat: api.Navigation.canGoBack
 ---
 
-{{APIRef("Navigation API")}}{{seecompattable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`canGoBack`** read-only property of the
 {{domxref("Navigation")}} interface returns `true`
