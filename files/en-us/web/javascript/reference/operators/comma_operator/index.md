@@ -37,7 +37,7 @@ Because all expressions except the last are evaluated and then discarded, these 
 
 The comma operator has the lowest [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) of all operators. If you want to incorporate a comma-joined expression into a bigger expression, you must parenthesize it.
 
-The comma operator is fully different from commas used as syntactic separators in other locations, which include:
+The comma operator is completely different from commas used as syntactic separators in other locations, which include:
 
 - Elements in array initializers (`[1, 2, 3]`)
 - Properties in [object initializers](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) (`{ a: 1, b: 2 }`)
