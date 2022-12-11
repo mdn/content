@@ -16,7 +16,13 @@ The **`Symbol.split`** well-known symbol specifies the method that splits a stri
 
 For more information, see {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} and {{jsxref("String.prototype.split()")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-split.html")}}{{js_property_attributes(0,0,0)}}
+{{EmbedInteractiveExample("pages/js/symbol-split.html")}}
+
+## Value
+
+The well-known symbol `@@split`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Examples
 

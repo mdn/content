@@ -10,15 +10,19 @@ browser-compat: javascript.builtins.Error.cause
 
 {{JSRef}}
 
-The **`cause`** property indicates the specific original cause of an error.
+The **`cause`** data property of an {{jsxref("Error")}} instance indicates the specific original cause of the error.
 
 It is used when catching and re-throwing an error with a more-specific or useful error message in order to still have access to the original error.
 
+## Value
+
+The value that was passed to the [`Error()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error) constructor in the `options.cause` argument. It may not be present.
+
+{{js_property_attributes(1, 0, 1)}}
+
 ## Description
 
-This is the value that was passed to the [`Error()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error) in the `options.cause` argument.
-
-The value can be of any type. You should not make assumptions that the error you caught has an `Error` as its `cause`, in the same way that you cannot be sure the variable bound in the `catch` statement is an `Error` either. The "Providing structured data as the error cause" example below shows a case where a non-error is deliberately provided as the cause.
+The value of `cause` can be of any type. You should not make assumptions that the error you caught has an `Error` as its `cause`, in the same way that you cannot be sure the variable bound in the `catch` statement is an `Error` either. The "Providing structured data as the error cause" example below shows a case where a non-error is deliberately provided as the cause.
 
 ## Examples
 
