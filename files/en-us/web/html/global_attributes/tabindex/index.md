@@ -25,6 +25,8 @@ It accepts an integer as a value, with different results depending on the intege
 
   > **Warning:** It is recommended that developers use only 0 and -1 as `tabindex` values. Avoid using `tabindex` values greater than 0 and css-properties that can change the order of focusable html-elements ([Ordering flex items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)). Doing so makes it difficult for people who rely on using keyboard for navigation or assistive technology to navigate and operate page content. Instead, write the document with the elements in a logical sequence.
 
+Some focusable html-elements are determined (by [user agent](/en-US/docs/Glossary/User_agent) under hood) to have `tabindex` default value equals 0. These elements are an {{HTMLElement("a")}} and {{HTMLElement("area")}} with `href` attribute, {{HTMLElement("button")}}, {{HTMLElement("frame")}} {{deprecated_inline}}, {{HTMLElement("iframe")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}, or SVG {{SVGElement("a")}} element, or is a {{HTMLElement("summary")}} element that is a summary for its parent {{HTMLElement("details")}}. Developers shouldn't add the `tabindex` attribute to these elements only if they are going to change the default behavior.
+
 ## Accessibility concerns
 
 Avoid using the `tabindex` attribute in conjunction with non-[interactive content](/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content) to make something intended to be interactive focusable by keyboard input. An example of this would be using a {{HTMLElement("div")}} element to describe a button, instead of the {{HTMLElement("button")}} element.
