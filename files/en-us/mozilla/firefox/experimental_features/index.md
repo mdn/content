@@ -1921,11 +1921,10 @@ This also changes the console warning; if the upgrade succeeds, the message indi
   </tbody>
 </table>
 
-### Feature policy
+### Permissions Policy / Feature policy
 
-[Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to CSP but controls features instead of security behavior.
-
-> **Note:** The `Feature-Policy` header has now been renamed to `Permissions-Policy` in the spec, and this article will eventually be updated to reflect that change.
+[Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to CSP but controls features instead of security behavior.
+Note that this is implemented in Firefox as "**Feature Policy**, the name used in an earlier version of the specification.
 
 <table>
   <thead>

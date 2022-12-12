@@ -25,7 +25,7 @@ _The `GeolocationPositionError` interface doesn't inherit any property._
 
     | Value | Associated constant    | Description                                                                                                            |
     | ----- | ---------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-    | `1`   | `PERMISSION_DENIED`    | The acquisition of the geolocation information failed because the page didn't have the permission to do it.            |
+    | `1`   | `PERMISSION_DENIED`    | The acquisition of the geolocation information failed because the page didn't have the necessary permissions, for example because it is blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)            |
     | `2`   | `POSITION_UNAVAILABLE` | The acquisition of the geolocation failed because at least one internal source of position returned an internal error. |
     | `3`   | `TIMEOUT`              | The time allowed to acquire the geolocation was reached before the information was obtained.                           |
 
