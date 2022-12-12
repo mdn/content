@@ -23,12 +23,11 @@ The possible values of the `channelCountMode` enumerated value, and their meanin
 - `max`
   - : The number of channels is equal to the maximum number of channels of all connections.
     In this case, `channelCount` is ignored and only up-mixing happens.
-    
+
     The following AudioNode children default to this value: {{domxref("GainNode")}}, {{domxref("DelayNode")}}, {{domxref("ScriptProcessorNode")}}, {{domxref("BiquadFilterNode")}}, {{domxref("WaveShaperNode")}}.
-    
 - `clamped-max`
   - : The number of channels is equal to the maximum number of channels of all connections, clamped to the value of `channelCount`.
-  
+
     The following AudioNode children default to this value: {{domxref("PannerNode")}}, {{domxref("ConvolverNode")}}, {{domxref("DynamicsCompressorNode")}}
 - `explicit`
   - :	The number of channels is defined by the value of `channelCount`.
