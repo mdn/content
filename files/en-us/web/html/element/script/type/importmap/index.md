@@ -65,7 +65,7 @@ import { name as squareName, draw } from "./modules/shapes/square.js";
 import { name as circleName } from "https://example.com/shapes/circle.js";
 ```
 
-An import map allows developers to provide a mapping for text that might appear in the module specifier string, with corresponding values that will replace the modifier when the browser resolves the specifier into an absolute URL.
+Import maps allow developers to specify (almost) any text they want in the module specifier; the map provides a corresponding value that will replace the text when the address of the module is resolved.
 
 ### Bare modules
 
