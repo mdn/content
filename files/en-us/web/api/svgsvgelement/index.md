@@ -29,8 +29,6 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given {{SVGElement("svg")}} element.
 - {{domxref("SVGSVGElement.height")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given {{SVGElement("svg")}} element.
-- {{domxref("SVGSVGElement.contentScriptType")}}
-  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("contentScriptType")}} attribute of the given {{SVGElement("svg")}} element.
 - {{domxref("SVGSVGElement.contentStyleType")}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("contentStyleType")}} attribute of the given {{SVGElement("svg")}} element.
 - {{domxref("SVGSVGElement.pixelUnitToMillimeterX")}} {{Deprecated_Inline}}
@@ -85,13 +83,13 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
     To suspend redraw actions as a collection of SVG DOM changes occur, precede the changes to the SVG DOM with a method call similar to:
 
     ```js
-    const suspendHandleID = suspendRedraw(maxWaitMilliseconds)
+    const suspendHandleID = suspendRedraw(maxWaitMilliseconds);
     ```
 
     and follow the changes with a method call similar to:
 
     ```js
-    unsuspendRedraw(suspendHandleID)
+    unsuspendRedraw(suspendHandleID);
     ```
 
     Note that multiple `suspendRedraw()` calls can be used at once, and that each such method call is treated independently of the other `suspendRedraw()` method calls.

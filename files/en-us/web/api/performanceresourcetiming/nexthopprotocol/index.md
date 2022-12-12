@@ -36,7 +36,7 @@ The `nextHopProtocol` property can have the following values:
 
 The `nextHopProtocol` property can be used to see resources that don't use the HTTP/2 or HTTP/3 protocols.
 
-Example using a {{domxref("PerformanceObserver")}}, which notifies of new `resource` performance entries as they are recorded in the browser's performance timeline:
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `resource` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
 
 ```js
 const observer = new PerformanceObserver((list) => {

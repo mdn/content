@@ -1,6 +1,7 @@
 ---
 title: glyphRef
 slug: Web/SVG/Attribute/glyphRef
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG

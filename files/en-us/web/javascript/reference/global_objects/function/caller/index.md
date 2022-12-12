@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Function.caller
 
 {{JSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-A {{jsxref("Function")}} object's **`caller`** property accessor property represents the function that invoked the specified function. For [strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), async function, and generator function callers, accessing the `caller` property throws an exception.
+The **`caller`** accessor property of {{jsxref("Function")}} instances represents the function that invoked this function. For [strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), arrow, async, and generator functions, accessing the `caller` property throws a {{jsxref("TypeError")}}.
 
 ## Description
 

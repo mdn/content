@@ -17,7 +17,11 @@ The well-known symbol **`Symbol.species`** specifies a function-valued property 
 
 {{EmbedInteractiveExample("pages/js/symbol-species.html")}}
 
-{{js_property_attributes(0,0,0)}}
+## Value
+
+The well-known symbol `@@species`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 

@@ -49,10 +49,6 @@ jobs:
           # filter out files that are not attachments
           GIT_DIFF_FILES=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(png|jpeg|jpg|gif|svg|webp)$" | xargs)
           echo "GIT_DIFF_FILES=${GIT_DIFF_FILES}" >> $GITHUB_ENV
-
-          # filter out files that are not _redirects.txt
-          GIT_DIFF_REDIRECTS=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*/_redirects\.txt$" | xargs)
-          echo "GIT_DIFF_REDIRECTS=${GIT_DIFF_REDIRECTS}" >> $GITHUB_ENV
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -144,9 +140,3 @@ jobs:
 
           export CONTENT_ROOT=$(pwd)/files
           yarn filecheck ${{ env.GIT_DIFF_FILES }}
-
-      - name: Validate redirects
-        if: ${{ env.GIT_DIFF_REDIRECTS }}
-        run: |
-          echo ${{ env.GIT_DIFF_REDIRECTS }}
-          yarn content validate-redirects
