@@ -17,13 +17,13 @@ browser-compat: html.elements.script.type.importmap
 
 The **`importmap`** value of the [`type`](/en-US/docs/Web/HTML/Element/script/type) attribute of the [`<script>` element](/en-US/docs/Web/HTML/Element/script) indicates that the body of the element contains an import map.
 
-An import map is a JSON object that allows developers to control what URLs are fetch when importing a [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules).
-It provides a mapping between text that might appear in the module specifier in the [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import) or [`import()` operator](/en-US/docs/Web/JavaScript/Reference/Operators/import), and corresponding values that will replace the text when the specifier is resolved into an absolute URL.
+An import map is a JSON object that allows developers to control how the browser resolves module specifiers when importing [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules).
+It provides a mapping between text that the developer wants to use in a module specifier in the [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import) or [`import()` operator](/en-US/docs/Web/JavaScript/Reference/Operators/import), and corresponding values that will replace the text when the specifier is resolved into an absolute URL.
 The JSON object must conform to the [Import map JSON representation format](#import_map_json_representation).
 
 Note that the import map applies only to module specifiers in the [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import) or [`import()` operator](/en-US/docs/Web/JavaScript/Reference/Operators/import); it does not apply to the path specified in the `src` attribute of a `<script>` element.
 
-For more information see the guide: [Javascript module resolution in Browsers](/en-US/docs/Web/JavaScript/Guide/Modules/Javascript_Modules_in_Browsers).
+For more information see the guide: [JavaScript modules > Importing modules using import maps](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps).
 
 ## Syntax
 
@@ -47,7 +47,7 @@ An [`error` event](/en-US/docs/Web/API/Element/error_event) is fired at script e
 
 Browsers generate console warnings for cases where invalid JSON is processed:
 
-- Top level keys other than `imports` or `scopes`,
+- Top level keys other than `imports` or `scopes`.
 - Module specifier maps where a key has a trailing backslash, but the corresponding value does not.
 - Empty module specifier keys.
 - Addresses that are not strings, or which cannot be resolved to an address.
@@ -55,10 +55,10 @@ Browsers generate console warnings for cases where invalid JSON is processed:
 
 ## Description
 
-When importing a JavaScript module [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules), both the [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`import()` operator](/en-US/docs/Web/JavaScript/Reference/Operators/import) have a "module specifier" that indicates the module to be imported.
+When importing a [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules), both the [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`import()` operator](/en-US/docs/Web/JavaScript/Reference/Operators/import) have a "module specifier" that indicates the module to be imported.
 A browser must be able to resolve this specifier to an absolute URL in order to be able to import the module.
 
-For example, the following statements in a module `<script>` element import elements from the module specifier "./modules/shapes/square.js", which is a path relative to the base URL of the document, and the module specifier "https://example.com/shapes/circle.js", which is an absolute path to an URL.
+For example, the following statements import elements from the module specifier "./modules/shapes/square.js", which is a path relative to the base URL of the document, and the module specifier "https://example.com/shapes/circle.js", which is an absolute URL.
 
 ```js
 import { name as squareName, draw } from "./modules/shapes/square.js";
@@ -114,7 +114,7 @@ import { name as squareName, draw } from "shapes/circle.js";
 ### Paths in the module specifier map key
 
 The module specifier does not have to be a bare module.
-It can also be an URL path, an URL, or a relative URL path that starts with `/`, `./`, or `../`.
+It can also be a URL path, an absolute URL, or a relative URL path that starts with `/`, `./`, or `../`.
 
 ```json
 {
@@ -127,19 +127,16 @@ It can also be an URL path, an URL, or a relative URL path that starts with `/`,
 }
 ```
 
-<!-- 
-Note that relative module specifier keys (that use `/`, `./`, and `../`) are applied to the module specifier after post-canonicalization of the modifier.
-So `import "./foo/../js/app.mjs"` would first be canonicalized to `import "./js/app.mjs"` before matching.
-Therefore they don't have to match the literal text in the module specifier. 
--->
+If there are several module specifier keys in a module specifier map that might match, then the most specific key will be selected (i.e. the one with the longer path/value).
 
-Note that if there are several module specifier keys in the module specifier map that might match, then the most specific key will be selected (i.e. the one with the longer path/value).
+Note that a module specifier of `./foo/../js/app.js` would be resolved to `./js/app.js` before matching.
+This means that a module specifier key of `./js/app.js` would match the module specifier even though they are not exactly the same.
 
-### Scoped maps
+### Scoped module specifier maps
 
 You can use the `scopes` key to provide mappings that are only used if the script importing the module contains a particular URL path.
 If the URL of the loading script matches the supplied path, the mapping associated with the scope will be used.
-This allows different versions of module to be used depending on what code is doing the importing.
+This allows different versions of the module to be used depending on what code is doing the importing.
 
 For example, the map below will only use the scoped map if the loading module has a URL that includes the path: "/modules/customshapes/".
 
@@ -173,10 +170,10 @@ The import map must be a valid JSON object that can define at most two optional 
 
   - : The value is a "module specifier map", which provides the mappings between module specifier text that might appear in an `import` statement or `import()` operator, and the text that will replace it when the modifier is resolved.
 
-    This is the fallback map that is searched for matching module specifiers no matches no `scopes` path URLs match, or if module specifier maps in matching `scopes` paths do not contain a key that matches the module specifier.
+    This is the fallback map that is searched for matching module specifiers if no `scopes` path URLs match, or if module specifier maps in matching `scopes` paths do not contain a key that matches the module specifier.
 
     - `<module specifier map>`
-      - : A "module specifier map" is a valid JSON object where the _keys_ are text that may be present in the module specifier when importing a module, and the corresponding _values> are the URLs or paths that will replace this text when the module specifier is resolved to an address.
+      - : A "module specifier map" is a valid JSON object where the _keys_ are text that may be present in the module specifier when importing a module, and the corresponding _values_ are the URLs or paths that will replace this text when the module specifier is resolved to an address.
 
         The modifier specifier map JSON object has the following properties:
 
@@ -187,7 +184,7 @@ The import map must be a valid JSON object that can define at most two optional 
         - If multiple keys can match the module specifier, the most specific key is used (in other words a specifier "olive/branch/" would match before "olive/").
 
 - `scopes` {{optional_inline}}
-  - : Scopes define path-specific [module specifier maps](#module_specifier_map), allowing the map that is used to depend on the path of the code importing the module.
+  - : Scopes define path-specific [module specifier maps](#module_specifier_map), allowing the choice of map to depend on the path of the code importing the module.
 
     The scopes object is a valid JSON object where each property is a `<scope key>`, which is an URL path, with a corresponding value that is a `<module specifier map>`.
 
@@ -207,8 +204,7 @@ The import map must be a valid JSON object that can define at most two optional 
 
 ## See also
 
-- [Javascript module resolution in Browsers](/en-US/docs/Web/JavaScript/Guide/Modules/Javascript_Modules_in_Browsers)
-- [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules).
-- [`<script>` HTML element > `type` attribute](/en-US/docs/Web/HTML/Element/script#attr-type)
+- [JavaScript modules > Importing modules using import maps](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps)
+- [The `type` attribute of HTML `<script>` elements](/en-US/docs/Web/HTML/Element/script#attr-type)
 - [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import)
 - [`import()` operator](/en-US/docs/Web/JavaScript/Reference/Operators/import)

@@ -132,9 +132,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This attribute specifies the URI of an external script; this can be used as an alternative to embedding a script directly within a document.
 - [**`type`**](/en-US/docs/Web/HTML/Element/script/type)
 
-  - : This attribute indicates the type of script represented. The value of this attribute will be in one of the following:
+  - : This attribute indicates the type of script represented.
+    The value of this attribute will be one of the following:
 
-    - **Omitted, empty string, or a JavaScript MIME type**
+    - **Attribute is not set (default), an empty string, or a JavaScript MIME type**
       - : Indicates that the script is a "classic script", containing JavaScript code.
         Authors are encouraged to omit the attribute if the script refers to JavaScript code rather than specify a MIME type.
         JavaScript MIME types are [listed in the IANA media types specification](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types).
@@ -146,8 +147,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
         Unlike classic scripts, module scripts require the use of the CORS protocol for cross-origin fetching.
     - [`importmap`](/en-US/docs/Web/HTML/Element/script/type/importmap)
       - : This value indicates that the body of the element contains an import map.
-        This is a JSON object that developers can use to control the URLs that are fetched when importing modules.
-        For more information see the guide: [Javascript module resolution in Browsers](/en-US/docs/Web/JavaScript/Guide/Modules/Javascript_Modules_in_Browsers).
+        The import map is a JSON object that developers can use to control how the browser resolves module specifiers when importing [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps).
     - **Any other value**
       - : The embedded content is treated as a data block, and won't be processed by the browser.
         Developers must use a valid MIME type that is not a JavaScript MIME type to denote data blocks.
@@ -209,7 +209,7 @@ import { name as circleName } from "https://example.com/shapes/circle.js";
 ```
 
 An import map allows you to provide a mapping that, if matched, can replace the text in the module specifier.
-For example, the import map below defines keys `square` and `circle` that can be used as an alias for the module specifiers shown above.
+In the example below, the import map below defines keys `square` and `circle` that can be used as an alias for the module specifiers shown above.
 
 ```html
 <script type="importmap">
@@ -229,7 +229,7 @@ import { name as squareName, draw } from "square";
 import { name as circleName } from "circle";
 ```
 
-For more examples of what you can do with import maps see: [Import maps: Javascript module resolution in Browsers](/en-US/docs/Web/HTML/script_import_maps).
+For more examples of what you can do with import maps see: [JavaScript modules > Importing modules using import maps](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps).
 
 ### Embedding data in HTML
 
