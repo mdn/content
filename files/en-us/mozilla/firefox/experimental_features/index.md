@@ -1648,10 +1648,10 @@ See these bugs for details: {{bug(1556362)}}, {{bug(1556373)}}, {{bug(1556365)}}
   </tbody>
 </table>
 
-#### Document and element scrollend events
+#### Document and Element scrollend events
 
 The `scrollend` event indicates that the user has completed scrolling in {{domxref("Element")}} and {{domxref("Document")}} objects.
-For more information, see the [Element scrollend event](/en-US/docs/Web/API/Element/scrollend_event) and [Document scrollend event](/en-US/docs/Web/API/Document/scrollend_event) documentation ({{bug(1797013)}}, {{bug(1803435)}}).
+For more information, see [Element: `scrollend` event](/en-US/docs/Web/API/Element/scrollend_event) and [Document: `scrollend` event](/en-US/docs/Web/API/Document/scrollend_event) ({{bug(1797013)}}, {{bug(1803435)}}).
 
 <table>
   <thead>
