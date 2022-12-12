@@ -139,6 +139,9 @@ becomes
 
 You can see such lines in action in [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js).
 
+> **Note:** In some module systems, you can use a module specifier like `modules/square` that isn't a relative or absolute path, and that doesn't have a file extension.
+> This kind of specifier can be used in a browser environment if you first define an [import map](#importing_modules_using_import_maps).
+
 Once you've imported the features into your script, you can use them just like they were defined inside the same file. The following is found in `main.js`, below the import lines:
 
 ```js
