@@ -168,8 +168,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 Scripts without {{HTMLAttrxRef("async", "script")}}, {{HTMLAttrxRef("defer", "script")}} or `type="module"` attributes, as well as inline scripts without the `type="module"` attribute, are fetched and executed immediately, before the browser continues to parse the page.
 
-The script should be served with the `text/javascript` MIME type, but browsers are lenient and only block them if the script is served with an image type (`image/*`), a video type (`video/*`), an audio (`audio/*`) type, or `text/csv`.
-If the script is blocked, an {{domxref("Element/error_event", "error")}} is sent to the element, if not a {{domxref("Element/load_event", "load")}} event is sent.
+The script should be served with the `text/javascript` MIME type, but browsers are lenient and only block them if the script is served with an image type (`image/*`), a video type (`video/*`), an audio type (`audio/*`), or `text/csv`.
+If the script is blocked, an {{domxref("Element/error_event", "error")}} event is sent to the element; otherwise, a {{domxref("Element/load_event", "load")}} event is sent.
 
 ## Examples
 
@@ -201,7 +201,7 @@ Browsers that support the `module` value for the {{htmlattrxref("type", "script"
 ### Importing modules with importmap
 
 When importing modules in scripts, browsers that don't support the [`importmap`](#importmap) value for the {{htmlattrxref("type", "script")}} attribute must set a module specifier that can be resolved to an absolute URL.
-For example, below the first module specifier ("./shapes/square.js") resolves relative to the base URL of the document, while the second is an absolute URL.
+In the example below, the first module specifier ("./shapes/square.js") resolves relative to the base URL of the document, while the second is an absolute URL.
 
 ```js
 import { name as squareName, draw } from "./shapes/square.js";
@@ -209,7 +209,7 @@ import { name as circleName } from "https://example.com/shapes/circle.js";
 ```
 
 An import map allows you to provide a mapping that, if matched, can replace the text in the module specifier.
-In the example below, the import map below defines keys `square` and `circle` that can be used as an alias for the module specifiers shown above.
+The import map below defines keys `square` and `circle` that can be used as aliases for the module specifiers shown above.
 
 ```html
 <script type="importmap">
@@ -222,14 +222,14 @@ In the example below, the import map below defines keys `square` and `circle` th
 </script>
 ```
 
-This allows us to import bare modules in our scripts:
+This allows us to import modules using names in the module specifier (rather than absolute or relative URLs).
 
 ```js
 import { name as squareName, draw } from "square";
 import { name as circleName } from "circle";
 ```
 
-For more examples of what you can do with import maps see: [JavaScript modules > Importing modules using import maps](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps).
+For more examples of what you can do with import maps, see the [Importing modules using import maps](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps) section in the JavaScript modules guide.
 
 ### Embedding data in HTML
 

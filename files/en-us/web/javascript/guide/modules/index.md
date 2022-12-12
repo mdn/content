@@ -122,8 +122,8 @@ import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
 You use the {{JSxRef("Statements/import", "import")}} statement, followed by a comma-separated list of the features you want to import wrapped in curly braces, followed by the keyword `from`, followed by the _module specifier_.
 
 The _module specifier_ provides a string that the JavaScript environment can resolve to a path to the module file.
-On a browser this could be a path relative to the site root, which for our `basic-modules` example would be `/js-examples/module-examples/basic-modules`.
-However here we are instead using the dot (`.`) syntax to mean "the current location", followed by the path beyond that to the file we are trying to find. This is much better than writing out the entire relative path each time, as it is shorter, and it makes the URL portable — the example will still work if you move it to a different location in the site hierarchy.
+In a browser, this could be a path relative to the site root, which for our `basic-modules` example would be `/js-examples/module-examples/basic-modules`.
+However, here we are instead using the dot (`.`) syntax to mean "the current location", followed by the relative path to the file we are trying to find. This is much better than writing out the entire absolute path each time, as relative paths are shorter and make the URL portable — the example will still work if you move it to a different location in the site hierarchy.
 
 So for example:
 
