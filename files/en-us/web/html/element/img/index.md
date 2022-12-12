@@ -118,6 +118,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `auto`
       - : Default: no preference for the decoding mode. The browser decides what is best for the user.
 
+- {{htmlattrdef("elementtiming")}}
+
+  - : Marks the image for observation by the {{domxref("PerformanceElementTiming")}} API. The value given becomes an identifier for the observed image element. See also the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute page.
+
 - {{htmlattrdef("fetchpriority")}} {{experimental_inline}}
 
   - : Provides a hint of the relative priority to use when fetching the image. Allowed values:
