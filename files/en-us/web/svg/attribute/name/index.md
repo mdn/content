@@ -1,6 +1,7 @@
 ---
 title: name
 slug: Web/SVG/Attribute/name
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG

@@ -1,6 +1,7 @@
 ---
 title: Texts
 slug: Web/SVG/Tutorial/Texts
+page-type: guide
 tags:
   - Intermediate
   - SVG

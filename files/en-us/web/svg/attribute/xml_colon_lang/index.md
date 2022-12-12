@@ -1,6 +1,7 @@
 ---
 title: xml:lang
 slug: Web/SVG/Attribute/xml:lang
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

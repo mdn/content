@@ -64,7 +64,7 @@ The {{domxref("AudioTrack.language", "language")}} is in standard ({{RFC(5646)}}
 
 ## Example
 
-See [`AudioTrack.label`](/en-US/docs/Web/API/AudioTrack/label#example) for a simple example that shows how to get a array of track kinds and labels for a specified media element, filtered by kind.
+See [`AudioTrack.label`](/en-US/docs/Web/API/AudioTrack/label#example) for a simple example that shows how to get an array of track kinds and labels for a specified media element, filtered by kind.
 
 ## Specifications
 
