@@ -15,8 +15,7 @@ browser-compat: api.Navigator.ink
 
 {{SeeCompatTable}}{{APIRef("Ink API")}}
 
-The **`ink`** read-only property
-of the {{domxref("Navigator")}} interface returns an {{domxref("Ink")}} object for the current document, providing access to [Ink API](/en-US/docs/Web/API/Ink_API) functionality.
+The **`ink`** read-only property of the {{domxref("Navigator")}} interface returns an {{domxref("Ink")}} object for the current document, providing access to [Ink API](/en-US/docs/Web/API/Ink_API) functionality.
 
 ## Value
 

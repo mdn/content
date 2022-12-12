@@ -17,7 +17,7 @@ browser-compat: api.Ink
 
 The Ink API allows browsers to directly make use of available OS-level compositors when drawing pen stokes in an inking app feature, thereby reducing latency and increasing performance.
 
-## Concepts and Usage
+## Concepts and usage
 
 Inking on the web refers to app features that involve using [pointer events](/en-US/docs/Web/API/Pointer_events) to draw a smooth pen stroke — for example, a drawing app or document signing feature.
 
