@@ -17,7 +17,7 @@ A string.
 
 ### Logging the value of `elementTiming`
 
-In this example an {{HTMLElement("image")}} element is set to being observed by adding the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute.
+In this example, adding the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute to the {{HTMLElement("img")}} element sets the image to be observed.
 
 ```html
 <img
@@ -27,7 +27,7 @@ In this example an {{HTMLElement("image")}} element is set to being observed by 
   id="myImage" />
 ```
 
-You can get the string provided to the `elementtiming` HTML attribute by calling `el.elementTiming`.
+You can get the string value of the `elementtiming` HTML attribute by calling `el.elementTiming`.
 
 ```js
 const el = document.getElementById("myImage");
