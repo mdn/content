@@ -1,5 +1,5 @@
 ---
-title: 'RTCDTMFSender: tonechange event'
+title: "RTCDTMFSender: tonechange event"
 slug: Web/API/RTCDTMFSender/tonechange_event
 page-type: web-api-event
 tags:
@@ -14,7 +14,7 @@ tags:
 browser-compat: api.RTCDTMFSender.tonechange_event
 ---
 
-{{WebRTCSidebar}}
+{{APIRef("WebRTC")}}
 
 The **`tonechange`** event is sent to an {{domxref("RTCDTMFSender")}} by the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) to indicate when {{Glossary("DTMF")}} tones previously queued for sending (by calling {{domxref("RTCDTMFSender.insertDTMF()")}}) begin and end.
 
@@ -27,9 +27,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('tonechange', (event) => { });
+addEventListener("tonechange", (event) => {});
 
-ontonechange = (event) => { };
+ontonechange = (event) => {};
 ```
 
 ## Event type
@@ -52,14 +52,18 @@ This example establishes a handler for the [`tonechange`](/en-US/docs/Web/API/RT
 This can be done using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-dtmfSender.addEventListener("tonechange", (ev) => {
-  let tone = ev.tone;
-  if (tone === "") {
-    tone = "&lt;none&gt;";
-  }
+dtmfSender.addEventListener(
+  "tonechange",
+  (ev) => {
+    let tone = ev.tone;
+    if (tone === "") {
+      tone = "&lt;none&gt;";
+    }
 
-  document.getElementById("playingTone").innerText = tone;
-}, false);
+    document.getElementById("playingTone").innerText = tone;
+  },
+  false
+);
 ```
 
 You can also just set the `ontonechange` event handler property directly:
@@ -68,7 +72,7 @@ You can also just set the `ontonechange` event handler property directly:
 dtmfSender.ontonechange = (ev) => {
   let tone = ev.tone;
   if (tone === "") {
-    tone = "&lt;none&gt;"
+    tone = "&lt;none&gt;";
   }
 
   document.getElementById("playingTone").innerText = tone;

@@ -12,15 +12,19 @@ browser-compat: javascript.builtins.NaN
 
 The global **`NaN`** property is a value representing Not-A-Number.
 
-{{js_property_attributes(0, 0, 0)}}
-
 {{EmbedInteractiveExample("pages/js/globalprops-nan.html")}}
+
+## Value
+
+The same number value as {{jsxref("Number.NaN")}}.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 
 `NaN` is a property of the _global object_. In other words, it is a variable in global scope.
 
-The initial value of `NaN` is Not-A-Number — the same as the value of {{jsxref("Number.NaN")}}. In modern browsers, `NaN` is a non-configurable, non-writable property. Even when this is not the case, avoid overriding it. It is rather rare to use `NaN` in a program.
+In modern browsers, `NaN` is a non-configurable, non-writable property. Even when this is not the case, avoid overriding it.
 
 There are five different types of operations that return `NaN`:
 

@@ -22,7 +22,7 @@ status code, user authentication can allow access to the resource.
 
 ## Status
 
-```
+```http
 401 Unauthorized
 ```
 

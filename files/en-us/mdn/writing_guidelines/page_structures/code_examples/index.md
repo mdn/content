@@ -94,7 +94,7 @@ If you write a live sample in the "Examples" section, provide a descriptive H3 h
 
 For example:
 
-````
+````md
 ## Examples
 
 ### Styling a paragraph
@@ -132,7 +132,7 @@ To achieve this you can hide any code blocks which are note relevant with the `h
 
 Using the example above but hiding the HTML code would look like this:
 
-````
+````md
 ## Examples
 
 ### Styling a paragraph

@@ -38,6 +38,8 @@ For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute
 > 2. Be descendants of a `<form>` element
 > 3. The form to have a {{HTMLElement("input/submit", "submit")}} button
 
+{{EmbedInteractiveExample("pages/tabbed/attribute-autocomplete.html", "tabbed-shorter")}}
+
 ## Values
 
 - "`off`"

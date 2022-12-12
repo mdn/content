@@ -15,6 +15,16 @@ The **`<figcaption>`** [HTML](/en-US/docs/Web/HTML) element represents a caption
 
 {{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
 
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Examples
+
+Please see the {{HTMLElement("figure")}} page for examples on `<figcaption>`.
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
@@ -65,14 +75,6 @@ The **`<figcaption>`** [HTML](/en-US/docs/Web/HTML) element represents a caption
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Examples
-
-Please see the {{HTMLElement("figure")}} page for examples on `<figcaption>`.
 
 ## Specifications
 

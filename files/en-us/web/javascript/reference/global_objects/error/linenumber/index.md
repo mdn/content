@@ -12,7 +12,13 @@ browser-compat: javascript.builtins.Error.lineNumber
 
 {{JSRef}} {{non-standard_header}}
 
-The **`lineNumber`** property contains the line number in the file that raised this error.
+The **`lineNumber`** data property of an {{jsxref("Error")}} instance contains the line number in the file that raised this error.
+
+## Value
+
+A positive integer.
+
+{{js_property_attributes(1, 0, 1)}}
 
 ## Examples
 

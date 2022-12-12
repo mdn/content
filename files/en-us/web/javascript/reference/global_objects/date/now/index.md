@@ -13,8 +13,7 @@ browser-compat: javascript.builtins.Date.now
 
 {{JSRef}}
 
-The static **`Date.now()`** method returns the number of
-milliseconds elapsed since January 1, 1970 00:00:00 UTC.
+The static **`Date.now()`** method returns the number of milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_ecmascript_epoch_and_timestamps), which is defined as the midnight at the beginning of January 1, 1970, UTC.
 
 {{EmbedInteractiveExample("pages/js/date-now.html")}}
 
@@ -26,7 +25,7 @@ Date.now()
 
 ### Return value
 
-A number representing the milliseconds elapsed since the [ECMAScript epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_ecmascript_epoch_and_timestamps).
+A number representing the number of milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_ecmascript_epoch_and_timestamps), which is defined as the midnight at the beginning of January 1, 1970, UTC.
 
 ## Examples
 
@@ -39,7 +38,7 @@ default and defaults to 20µs in Firefox 59; in 60 it will be 2ms.
 
 ```js
 // reduced time precision (2ms) in Firefox 60
-Date.now()
+Date.now();
 // 1519211809934
 // 1519211810362
 // 1519211811670

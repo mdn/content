@@ -279,7 +279,7 @@ Let's have a look at how Modernizr works in terms of selectively applying CSS.
    <html lang="en-us" class="no-js">…</html>
    ```
 
-At this point, try loading your page, and you'll get an idea of how Modernizr works for CSS features. If you look at the DOM inspector of your browser's developer tools, you'll see that Modernizr has updated your `<html>` `class` value like so:
+At this point, try loading your page, and you'll get an idea of how Modernizr works for CSS features. If you look at the DOM inspector of your browser's developer tools, you'll see that Modernizr has updated the `class` attribute of your `<html>` element like so:
 
 ```html
 <html

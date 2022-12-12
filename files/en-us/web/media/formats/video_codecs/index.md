@@ -366,7 +366,7 @@ Aliasing is a general term for anything that upon being reconstructed from the e
       </td>
       <td>
         <a href="stroboscopic-effect.gif"
-          ><img alt="" src="stroboscopic-effect.gif"
+          ><img alt="Turning wheel due to aliasing causing a wagon wheel effect." src="stroboscopic-effect.gif"
         /></a>
       </td>
     </tr>
@@ -438,7 +438,7 @@ Compression of video generally works by comparing two frames and recording the d
   <tbody>
     <tr>
       <td><img alt="Original frame of video" src="motion-comp-orig.jpg" /></td>
-      <td><img alt="" src="motion-comp-diff.jpg" /></td>
+      <td><img alt="Differences between the first frame and the following frame." src="motion-comp-diff.jpg" /></td>
       <td>
         <img
           alt="Differences between the frames after shifting two pixels right"

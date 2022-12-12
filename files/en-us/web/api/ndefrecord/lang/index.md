@@ -10,7 +10,7 @@ tags:
 browser-compat: api.NDEFRecord.lang
 ---
 
-{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 The **`lang`**
 property of the {{DOMxRef("NDEFRecord")}} interface returns the language of

@@ -27,7 +27,7 @@ For details on CSS container queries, see [CSS Container Queries](/en-US/docs/We
 
 ## Basic example
 
-Many webpages contain a number of sections which are independent of each other. For example a listing of article headlines and content, as in the markup below.
+Many webpages contain several sections which are independent of each other. For example a listing of article headlines and content, as in the markup below.
 
 ```html
 <h1>My blog</h1>
@@ -49,9 +49,7 @@ article {
 }
 ```
 
-Each article is independent of the other articles on the page, and so they have been given `contain: content` in order to indicate to the browser that this is the case.
-The browser can use this information to make decisions about how to render the content.
-For example, it might not render articles that are outside the viewable area.
+Each article is independent of the other articles on the page, and so they have been given `contain: content` to indicate to the browser that this is the case. The browser can then use this information to make decisions about how to render the content. For example, it might not render articles that are outside the viewable area.
 
 If we give each `<article>` the `contain` property with a value of `content`, when new elements are inserted the browser does not need to recalculate layout or repaint any area outside of the containing element's subtree.
 If the `<article>` is styled such that its size depends on its contents (e.g. with `height: auto`), then the browser may need to account for its size changing.
@@ -67,9 +65,11 @@ Therefore this property gives you a nice way to explain to the browser this fact
 
 ## Key concepts and terminology
 
-This specification defines only one property, the {{cssxref("contain")}} property. The values for this property indicate the type of containment that you want to apply to that element.
+### `contain` values
 
-### Layout containment
+The values for the {{cssxref("contain")}} property indicate the type of containment that you want to apply to that element.
+
+#### Layout containment
 
 ```css
 article {
@@ -86,7 +86,7 @@ In addition:
 - The layout container will be a containing block for `absolute`/`fixed` position descendants.
 - The containing box creates a stacking context, therefore {{cssxref("z-index")}} can be used.
 
-### Paint containment
+#### Paint containment
 
 ```css
 article {
@@ -98,7 +98,7 @@ Paint containment essentially clips the box to the padding edge of the principal
 
 Another advantage is that if the containing box is offscreen, the browser does not need to paint its contained elements — these must also be offscreen as they are contained completely by that box.
 
-### Size containment
+#### Size containment
 
 ```css
 article {
@@ -111,7 +111,7 @@ Size containment does not offer much in the way of performance optimizations whe
 If you turn on `contain: size` you need to also specify the size of the element you have applied this to using [`contain-intrinsic-size`](/en-US/docs/Web/CSS/contain-intrinsic-size) (or the equivalent longhand properties).
 It will end up being zero-sized in most cases, if you don't manually give it a size.
 
-### Style containment
+#### Style containment
 
 ```css
 article {
@@ -126,7 +126,7 @@ Using `contain: style` would ensure that the {{cssxref("counter-increment")}} an
 
 > **Note:** `style` containment is "at-risk" in the spec and may not be supported everywhere (it's not currently supported in Firefox).
 
-### Special values
+#### Special values
 
 There are two special values of contain:
 
@@ -141,6 +141,44 @@ To gain as much containment as possible use `contain: strict`, which behaves the
 contain: strict;
 ```
 
+### `content-visibility`
+
+{{cssxref("content-visibility")}} controls whether or not an element renders its contents at all, along with forcing a strong set of containments, allowing user agents to potentially omit large swathes of layout and rendering work until it becomes needed. Basically it enables the user agent to skip an element's rendering work (including layout and painting) until it is needed — which makes the initial page load much faster.
+
+Its possible values are:
+
+- `visible`: The default behavior — an element's contents are laid out and rendered as normal.
+- `hidden`: The element skips its contents. The skipped contents must not be accessible to user agent features such as find-in-page, tab-order navigation, etc., nor be selectable or focusable.
+- `auto`: The element turns on layout containment, style containment, and paint containment. If the element is not relevant to the user, it also skips its contents. Unlike `hidden`, the skipped contents must still be available as normal to user-agent features such as find-in-page, tab order navigation, etc., and must be focusable and selectable as normal.
+
+### Relevant to the user
+
+The specification refers to the concept of [relevant to the user](https://www.w3.org/TR/css-contain-2/#relevant-to-the-user). An element that is relevant to the user should be rendered, as it visible, and/or being interacted with by the user.
+
+To be precise, an element is relevant to the user if any of the following are true:
+
+- The element appears in the viewport, or a user-agent-defined margin around the viewport (50% of the viewport dimensions, to give the app time to prepare for when the element visibility changes).
+- The element or its contents receive focus.
+- The element or its contents are selected, for example by dragging over the text with the mouse cursor or by some other highlight operation.
+- The element or its contents are placed in the top layer.
+
+### Skips its contents
+
+The specification refers to the concept of [skips its contents](https://www.w3.org/TR/css-contain-2/#skips-its-contents). This means that the element referred to is not relevant to the user and will not be rendered to improve performance.
+
+To be precise, when an element skips its contents:
+
+- It has layout, style, paint, and size containment turned on.
+- Its contents are not painted, as if {{cssxref("visibility", "visibility: hidden")}} was set on it.
+- Its contents do not receive pointer events, as if {{cssxref("pointer-events", "pointer-events: none")}} was set on it.
+
+## Reference
+
+### CSS Properties
+
+- {{cssxref("contain")}}
+- {{cssxref("content-visibility")}}
+
 ## Specifications
 
 {{Specifications}}
@@ -151,9 +189,5 @@ contain: strict;
 
 ## See also
 
-- [Container queries](/en-US/docs/Web/CSS/CSS_Container_Queries)
-- {{Cssxref("@container")}}
-- {{Cssxref("contain")}}
-- {{Cssxref("container-name")}}
-- {{Cssxref("container-type")}}
-- {{cssxref("content-visibility")}}
+- [An Introduction to CSS Containment](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/)
+- The {{domxref("element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event
