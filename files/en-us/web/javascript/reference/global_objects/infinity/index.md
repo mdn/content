@@ -12,15 +12,19 @@ browser-compat: javascript.builtins.Infinity
 
 The global property **`Infinity`** is a numeric value representing infinity.
 
-{{js_property_attributes(0,0,0)}}
-
 {{EmbedInteractiveExample("pages/js/globalprops-infinity.html")}}
+
+## Value
+
+The same number value as {{jsxref("Number.POSITIVE_INFINITY")}}.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 
 `Infinity` is a property of the _global object_. In other words, it is a variable in global scope.
 
-The initial value of `Infinity` is {{jsxref("Number.POSITIVE_INFINITY")}}. The value `Infinity` (positive infinity) is greater than any other number.
+The value `Infinity` (positive infinity) is greater than any other number.
 
 This value behaves slightly differently than mathematical infinity; see {{jsxref("Number.POSITIVE_INFINITY")}} for details.
 

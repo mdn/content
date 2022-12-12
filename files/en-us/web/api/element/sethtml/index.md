@@ -34,7 +34,7 @@ setHTML(input, options)
   - : A string defining HTML to be sanitized.
 - `options` {{optional_inline}}
 
-  - : A options object with the following optional parameters:
+  - : An options object with the following optional parameters:
 
     - `sanitizer`
       - : A {{domxref("Sanitizer")}} object which defines what elements of the input will be sanitized.

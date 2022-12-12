@@ -1,6 +1,7 @@
 ---
 title: preserveAlpha
 slug: Web/SVG/Attribute/preserveAlpha
+page-type: svg-attribute
 tags:
   - Filters
   - SVG

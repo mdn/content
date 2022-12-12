@@ -11,11 +11,15 @@ browser-compat: javascript.builtins.Function.displayName
 
 {{JSRef}} {{non-standard_header}}
 
-A {{jsxref("Function")}} object's optional **`displayName`** property returns the display name of the function.
+The optional **`displayName`** property of a {{jsxref("Function")}} instance specifies the display name of the function.
+
+## Value
+
+The `displayName` property is not initially present on any function — it's added by the code authors. For the purpose of display, it should be a string.
 
 ## Description
 
-The `displayName` property is not initially present on any function — it's added by the code authors. If present, it may be preferred by consoles and profilers over the {{jsxref("Function/name", "name")}} property to be displayed as the name of a function.
+The `displayName` property, if present, may be preferred by consoles and profilers over the {{jsxref("Function/name", "name")}} property to be displayed as the name of a function.
 
 Among browsers, only the Firefox console utilizes this property. React devtools also use the [`displayName`](https://reactjs.org/docs/higher-order-components.html#convention-wrap-the-display-name-for-easy-debugging) property when displaying the component tree.
 

@@ -1,6 +1,7 @@
 ---
 title: Patterns
 slug: Web/SVG/Tutorial/Patterns
+page-type: guide
 tags:
   - Advanced
   - SVG
