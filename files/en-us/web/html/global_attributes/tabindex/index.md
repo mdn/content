@@ -10,7 +10,7 @@ browser-compat: html.global_attributes.tabindex
 
 {{HTMLSidebar("Global_attributes")}}
 
-The **`tabindex`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) indicates that its element can be focused, and where it participates in sequential keyboard navigation (usually with the <kbd>Tab</kbd> key, hence the name).
+The **`tabindex`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) allows developers to make html-elements focusable, allow or prevent them from being sequentially focusable (usually with the <kbd>Tab</kbd> key, hence the name), and determine their relative ordering for sequential focus navigation.
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-tabindex.html","tabbed-standard")}}
 
