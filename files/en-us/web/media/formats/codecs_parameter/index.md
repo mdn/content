@@ -24,9 +24,9 @@ For that reason, the `codecs` parameter can be added to the MIME type describing
 
 This guide briefly examines the syntax of the media type `codecs` parameter and how it's used with the MIME type string to provide details about the contents of audio or video media beyond indicating the container type.
 
-## Basic MIME media types
+## Container format MIME types
 
-A basic MIME media type is expressed by stating the type of media (`audio`, `video`, etc.), then a slash character (`/`), then the container format used to contain the media:
+The MIME type for a container format is expressed by stating the type of media (`audio`, `video`, etc.), then a slash character (`/`), then the format used to contain the media:
 
 - `audio/mpeg`
   - : An audio file using the [MPEG](/en-US/docs/Web/Media/Formats/Containers#mpeg) file type, such as an MP3.
