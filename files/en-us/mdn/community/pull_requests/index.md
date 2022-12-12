@@ -13,20 +13,22 @@ tags:
 This document describes how contributors make changes to MDN Web Docs and how the changes are reviewed and land on the site.
 Content changes to MDN Web Docs include:
 
-- **Day-to-day improvements:** for the documentation of APIs, CSS properties, platform updates and content additions.
+- **Day-to-day improvements** for the documentation of APIs, CSS properties, platform updates and content additions.
   This is usually done by MDN Web Docs staff working for Mozilla, Google, Open Web Docs, Samsung, but also by community volunteers.
-- **Minor fixes:** and small updates to the site for fixing typos, grammatical issues, and technical inaccuracies.
+- **Minor fixes** and small updates to the site for fixing typos, grammatical issues, and technical inaccuracies.
   These issues are usually found by readers of MDN Web Docs.
-- **Content bug fixes:** usually done by volunteers to close issues on the `mdn/content` repo.
+- **Content bug fixes**, usually done by volunteers to close [issues on the `mdn/content` repository](https://github.com/mdn/content/issues).
 
 Regardless of how content changes are done, they are submitted as pull requests on GitHub.
 The content changes go through the following stages before they are published on MDN Web Docs:
 
-1. **Submission:** As a pull request author, you [submit changes via opening a pull request](#opening-a-pull-request).
-2. **Review:** Your changes are reviewed by [MDN members and volunteers](#pull-request-review-process).
-3. **Publishing:** Updated content goes live within a day of merging via a site rebuild once every 24 hours.
+1. **Submitting changes:** As a pull request author, you [submit changes via opening a pull request](#opening-a-pull-request). See the sections [Before you start](#before-you-start), [Open a pull request](#open-a-pull-request), and (After you open a pull request)(#after-you-open-a-pull-request) to learn more about our processes.
+2. **Reviewing changes:** Your changes are reviewed by [MDN members and volunteers](#pull-request-review-process). See the section [Pull request review process](#pull-request-review-process) for more details.
+3. **Viewing published changes:** Content updated on `mdn/content` goes live within a day of merging via a site rebuild once every 24 hours.
 
-## Before you start
+## Submitting changes
+
+### Before you start
 
 Before you start work on MDN, please go through the recommendations and guidelines listed below.
 
@@ -56,7 +58,7 @@ All participants must follow our [Code of Conduct](https://github.com/mdn/conten
 Be polite and constructive when opening pull requests, writing review comments, interacting with the PR author or other community members.
 If anyone has engaged in behavior that is potentially illegal or makes you or someone else feel unsafe, unwelcome, or uncomfortable, you are encouraged to [report it](https://www.mozilla.org/en-US/about/governance/policies/participation/reporting/).
 
-## Opening a pull request
+### Open a pull request
 
 When you're ready to open a pull request, follow these guidelines:
 
@@ -92,9 +94,9 @@ When you're ready to open a pull request, follow these guidelines:
 
 ## Pull request review process
 
-We add reviewers automatically based on a `CODEOWNERS` file but, if there is a specific person you want to request review from, manually [request a review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review).
-We also use auto-labeling on pull requests to help triage.
-Maintainers will triage pull requests and add any additional labels, such as `needs-info` or `on-hold`, if needed based on context.
+Reviewer(s) are automatically assigned when you open a pull request based on a `CODEOWNERS` file, but if there is a specific person you want to request review from, you can [request a review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review) manually.
+We also use auto-labeling on pull requests to help us triage them.
+Maintainers can further triage pull requests and add any additional labels, such as `needs-info` or `on-hold`, if needed based on context.
 
 If you want to review a pull request but are not listed as a reviewer, you may add yourself as one.
 It's polite to check with existing reviewers first by commenting on the pull request that you intend to start a review.
@@ -110,7 +112,6 @@ The MDN Web Docs team uses reviewers and assignees to track the status of pull r
 
 A pull request reviewer or assignee is responsible for merging the changes.
 
-### If you are asked to review a pull request
 
 Before you start with a review, check the pull request description to make sure no one specific should review it.
 Ensure that all continuous integration (CI) tasks have been completed successfully and that there are no merge conflicts.
@@ -143,7 +144,7 @@ It's recommended to use [comments with suggestions](https://docs.github.com/en/p
 When submitting your review you have three options, **approve**, **comment**, or **request changes**.
 The following sections explain when to use each option.
 
-#### Request changes
+### Requesting changes
 
 Use the request changes option when the feedback you provided _needs_ to be addressed by the author and re-reviewed by the reviewer before the pull request can be approved and merged.
 
@@ -171,15 +172,15 @@ If you are still not sure or if you think the content is suspicious, reach out t
 
 Reviewers are encouraged to read the following articles for help with common reviewer tasks:
 
-- [The Art of Closing: How to closing an unfinished or rejected pull request](https://blog.jessfraz.com/post/the-art-of-closing/)
-- [Kindness and Code Reviews: Improving the Way We Give Feedback](https://product.voxmedia.com/2018/8/21/17549400/kindness-and-code-reviews-improving-the-way-we-give-feedback)
-- [Code Review Guidelines for Humans: Examples of good and back feedback](https://phauer.com/2018/code-review-guidelines/#code-reviews-guidelines-for-the-reviewer)
+- [The Art of Closing](https://blog.jessfraz.com/post/the-art-of-closing/) explains how to close an unfinished or rejected pull request
+- [Kindness and Code Reviews: Improving the Way We Give Feedback](https://product.voxmedia.com/2018/8/21/17549400/kindness-and-code-reviews-improving-the-way-we-give-feedback) gives useful hints to give feedback
+- [Code Review Guidelines for the Reviewer](https://phauer.com/2018/code-review-guidelines/#code-reviews-guidelines-for-the-reviewer) provides examples of good and bad feedback
 
-## Timelines
+### Guidelines for turnaround times for authors and reviewers
 
-This section provides details for expected turnaround times while reviewing pull requests if you're a reviewer and while responding to review comments if you're a pull request author.
+This section provides details for expected turnaround times while responding to review comments if you're a pull request author and while reviewing pull requests if you're a reviewer.
 
-- **Reviews**:
+- **Reviewing**:
   The pull request reviewer should be able to review the changes in 2 weeks or less.
   In the 2 weeks after a pull request is open, the reviewer can:
   - Leave a comment about when they can start reviewing the pull request
@@ -190,7 +191,7 @@ This section provides details for expected turnaround times while reviewing pull
   - Commit the changes and merge the PR
   - Close the PR
 
-## External reviewers
+### External reviewers
 
 Some PRs on the MDN content repo relate to specific work by browser vendors or organizations with defined authors and reviewers.
 The author will include the username of the reviewer in a line at the bottom of the pull request description in these cases, for example:
