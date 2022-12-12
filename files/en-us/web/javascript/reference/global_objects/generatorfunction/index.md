@@ -19,6 +19,8 @@ In JavaScript, every generator function is actually a `GeneratorFunction` object
 const GeneratorFunction = function* () {}.constructor;
 ```
 
+{{EmbedInteractiveExample("pages/js/functionasterisk-function.html")}}
+
 ## Constructor
 
 - {{jsxref("GeneratorFunction/GeneratorFunction", "GeneratorFunction()")}}
