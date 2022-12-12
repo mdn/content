@@ -89,10 +89,8 @@ grid-row-end: unset;
 
 ```html
 <div class="wrapper">
-  <div class="box1">One</div>
   <div class="box2">Two</div>
   <div class="box3">Three</div>
-  <div class="box4">Four</div>
   <div class="box5">Five</div>
 </div>
 ```
@@ -108,7 +106,6 @@ grid-row-end: unset;
 
 .box1 {
   grid-column-start: 1;
-  grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 3;
 }
