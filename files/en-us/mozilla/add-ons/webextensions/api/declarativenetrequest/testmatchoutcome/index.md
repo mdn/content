@@ -15,7 +15,7 @@ browser-compat: webextensions.api.declarativeNetRequest.testMatchOutcome
 
 {{AddonSidebar()}}
 
-Checks if any of the extension's `declarativeNetRequest` rules would match a hypothetical request. Only available for [temporarily loaded extensions](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), as this is intended to be used during extension development.
+Checks if any of the extension's `declarativeNetRequest` rules would match a hypothetical request. Only available while testing, as this is intended to be used during extension development. See [Browser compatibility](#browser-compatibility) for details on how testing is enabled in each browser.
 
 ## Syntax
 
@@ -33,7 +33,7 @@ let count = browser.declarativeNetRequest.testMatchOutcome(
     - `initiator` {{optional_inline}}
       - : A `string`. The initiator URL (if any) for the hypothetical request.
     - `method` {{optional_inline}}
-      - : {A `string`. The ttandard HTTP method of the hypothetical request. Defaults to `"get"` for HTTP requests and is ignored for non-HTTP requests.
+      - : A `string`. The standard HTTP method of the hypothetical request. Defaults to `"get"` for HTTP requests and is ignored for non-HTTP requests.
     - `tabId` {{optional_inline}}
       - : A `number`. The ID of the tab the hypothetical request takes place in. Does not need to correspond to a real tab ID. Default is `-1`, meaning that the request isn't related to a tab.
     - `type`

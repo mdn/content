@@ -18,7 +18,7 @@ browser-compat: webextensions.api.declarativeNetRequest.updateSessionRules
 Modifies the set of scoped rules for the extension. The rules with IDs listed in `options.removeRuleIds` are first removed, and then the rules given in `options.addRules` are added. Note that:
 
 - This update happens as an atomic operation: either all specified rules are added and removed, or an error is returned.
-- These rules are not persisted across browser sessions and are backed in memory.
+- These rules are not persisted across browser sessions.
 - {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES","MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}} is the maximum number of dynamic and session rules an extension can add.
 
 ## Syntax

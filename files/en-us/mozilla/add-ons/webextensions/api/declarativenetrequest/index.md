@@ -91,10 +91,10 @@ Rules are organized into rulesets:
 
 - **static rulesets**: collections of rules defined with the [`"declarative_net_request"`](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) manifest key and stored in the extension. An extension can enable and disable static rulesets using {{WebExtAPIRef("declarativeNetRequest.updateEnabledRulesets","updateEnabledRulesets")}}. The set of enabled static rulesets is persisted across sessions but not across extension updates. The static rulesets enabled on extension installation and update are determined by the content of the `"declarative_net_request"` manifest key.
 - **dynamic ruleset**: rules added or removed using {{WebExtAPIRef("declarativeNetRequest.updateDynamicRules","updateDynamicRules")}}. These rules persist across sessions and extension updates.
-- **session ruleset**: rules added or removed using {{WebExtAPIRef("declarativeNetRequest.updateSessionRules","updateSessionRules")}}. These rules do not persist across browser sessions; they are backed in memory by the browser.
+- **session ruleset**: rules added or removed using {{WebExtAPIRef("declarativeNetRequest.updateSessionRules","updateSessionRules")}}. These rules do not persist across browser sessions.
 
 > **Note:**
-> Errors and warnings about invalid static rules are only displayed for [temporarily loaded extensions](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/). Invalid static rules in permanently installed extensions are ignored. Therefore, it's important to verify that your static rulesets are valid by testing with a temporarily loaded version of your extension.
+> Errors and warnings about invalid static rules are only displayed during [testing](#testing). Invalid static rules in permanently installed extensions are ignored. Therefore, it's important to verify that your static rulesets are valid by testing.
 
 ## Limits
 
@@ -134,6 +134,12 @@ If multiple `modifyHeaders` rules specify the same header, the resulting modific
 - If a rule has been appended to a header, then lower-priority rules can only append to that header. `set` and `remove` operations are not permitted.
 - If a rule has set a header, lower priority rules cannot further modify the header, except for `append` rules from the same extension.
 - If a rule has removed a header, lower priority rules cannot further modify the header.
+
+## Testing
+
+{{WebExtAPIRef("declarativeNetRequest.getmatchedrules","getmatchedrules")}} and {{WebExtAPIRef("declarativeNetRequest.onRuleMatchedDebug","onRuleMatchedDebug")}} are available to assist with testing rules and rulesets. These APIs require the `"declarativeNetRequestFeedback"` [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). In addition:
+
+- in Chrome, these APIs are only available to unpacked extensions.
 
 ## Comparison with the webRequest API
 
@@ -372,7 +378,7 @@ To illustrate how this rule set affects requests, consider:
 ## Events
 
 - {{WebExtAPIRef("declarativeNetRequest.onRuleMatchedDebug")}}
-  - : Fired when a rule is matched with a request when debugging a temporarily installed extension with the "declarativeNetRequestFeedback" permission.
+  - : Fired when a rule is matched with a request when debugging an extension with the "declarativeNetRequestFeedback" permission.
 
 {{WebExtExamples("h2")}}
 
