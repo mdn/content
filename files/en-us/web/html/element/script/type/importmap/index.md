@@ -43,15 +43,7 @@ An [`error` event](/en-US/docs/Web/API/Element/error_event) is fired at script e
 - `TypeError`
   - : The import map definition is not a JSON object, the `importmap` key is defined but its value is not a JSON object, or the `scopes` key is defined but its value is not a JSON object.
 
-### Warnings
-
-Browsers generate console warnings for cases where invalid JSON is processed:
-
-- Top level keys other than `imports` or `scopes`.
-- Module specifier maps where a key has a trailing backslash, but the corresponding value does not.
-- Empty module specifier keys.
-- Addresses that are not strings, or which cannot be resolved to an address.
-- Addresses that are prefixes that cannot be resolved to an absolute address.
+Browsers generate console warnings for other cases where the import map JSON does not conform to the [import map](#import_map_json_representation) schema.
 
 ## Description
 
