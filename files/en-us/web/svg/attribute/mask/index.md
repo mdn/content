@@ -1,6 +1,7 @@
 ---
 title: mask
 slug: Web/SVG/Attribute/mask
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

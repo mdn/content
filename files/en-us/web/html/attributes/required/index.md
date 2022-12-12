@@ -32,7 +32,7 @@ Because a read-only field cannot have a value, `required` does not have any effe
 
 ### Usability
 
-When including the `required` attribute, provide a visible indication near the control informing the user that the {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("textarea")}} is required. In addition, target required form controls with the {{cssxref(':required')}} pseudo-class, styling them in a way to indicate they are required. This improves usability for sighted users. Assistive technology should inform the user that the form control in mandatory based on the required attribute, but adding `aria-required="true"` doesn't hurt, in case the browser / screen reader combination does not support `required` yet.
+When including the `required` attribute, provide a visible indication near the control informing the user that the {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("textarea")}} is required. In addition, target required form controls with the {{cssxref(':required')}} pseudo-class, styling them in a way to indicate they are required. This improves usability for sighted users. Assistive technology should inform the user that the form control is mandatory based on the required attribute, but adding `aria-required="true"` doesn't hurt, in case the browser / screen reader combination does not support `required` yet.
 
 ### Constraint validation
 

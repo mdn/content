@@ -1,6 +1,7 @@
 ---
 title: in
 slug: Web/SVG/Attribute/in
+page-type: svg-attribute
 tags:
   - Filters
   - NeedsCompatTable

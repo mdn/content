@@ -14,9 +14,15 @@ The **`Number.NaN`** property represents Not-A-Number, which is equivalent to {{
 
 {{EmbedInteractiveExample("pages/js/number-nan.html", "taller")}}
 
-Because `NaN` is a static property of {{jsxref("Number")}}, you always use it as `Number.NaN`, rather than as a property of a number value.
+## Value
+
+The number value {{jsxref("NaN")}}.
 
 {{js_property_attributes(0, 0, 0)}}
+
+## Description
+
+Because `NaN` is a static property of {{jsxref("Number")}}, you always use it as `Number.NaN`, rather than as a property of a number value.
 
 ## Examples
 

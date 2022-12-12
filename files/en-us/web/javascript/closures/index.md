@@ -159,12 +159,12 @@ document.getElementById('size-16').onclick = size16;
 ```
 
 ```html
-<a href="#" id="size-12">12</a>
-<a href="#" id="size-14">14</a>
-<a href="#" id="size-16">16</a>
+<button id="size-12">12</button>
+<button id="size-14">14</button>
+<button id="size-16">16</button>
 ```
 
-Run the code using [JSFiddle](https://jsfiddle.net/vnkuZ/7726/).
+Run the code using [JSFiddle](https://jsfiddle.net/hotae160/).
 
 ## Emulating private methods with closures
 

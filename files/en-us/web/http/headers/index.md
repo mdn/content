@@ -288,10 +288,10 @@ _Learn more about CORS [here](/en-US/docs/Glossary/CORS)._
   - : Allows web developers to experiment with policies by monitoring, but not enforcing, their effects. These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP `POST` request to the specified URI.
 - {{HTTPHeader("Expect-CT")}}
   - : Allows sites to opt in to reporting and/or enforcement of Certificate Transparency requirements, which prevents the use of misissued certificates for that site from going unnoticed. When a site enables the Expect-CT header, they are requesting that Chrome check that any certificate for that site appears in public CT logs.
-- {{HTTPHeader("Feature-Policy")}}
-  - : Provides a mechanism to allow and deny the use of browser features in its own frame, and in iframes that it embeds.
 - {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
   - : Provides a mechanism to allow web applications to isolate their origins.
+- {{HTTPHeader("Permissions-Policy")}}
+  - : Provides a mechanism to allow and deny the use of browser features in a web site's own frame, and in {{htmlelement("iframe")}}s that it embeds.
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})
   - : Force communication using HTTPS instead of HTTP.
 - {{HTTPHeader("Upgrade-Insecure-Requests")}}

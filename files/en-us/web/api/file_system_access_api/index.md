@@ -48,7 +48,7 @@ Storing data in the OPFS is similar to storing data in any other browser-provide
 
 - Permission prompts are not required to access files in the OPFS.
 - Clearing data for the site deletes the OPFS.
-- The OFPS is subject to browser quota restrictions.
+- The OPFS is subject to browser quota restrictions.
 
 Files can be manipulated inside the OPFS via a three-step process:
 
