@@ -119,9 +119,11 @@ Once you've exported some features out of your module, you need to import them i
 import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
 ```
 
-You use the {{JSxRef("Statements/import", "import")}} statement, followed by a comma-separated list of the features you want to import wrapped in curly braces, followed by the keyword `from`, followed by the path to the module file — a path relative to the site root, which for our `basic-modules` example would be `/js-examples/module-examples/basic-modules`.
+You use the {{JSxRef("Statements/import", "import")}} statement, followed by a comma-separated list of the features you want to import wrapped in curly braces, followed by the keyword `from`, followed by the _module specifier_.
 
-However, we've written the path a bit differently — we are using the dot (`.`) syntax to mean "the current location", followed by the path beyond that to the file we are trying to find. This is much better than writing out the entire relative path each time, as it is shorter, and it makes the URL portable — the example will still work if you move it to a different location in the site hierarchy.
+The _module specifier_ provides a string that the JavaScript environment can resolve to a path to the module file.
+On a browser this could be a path relative to the site root, which for our `basic-modules` example would be `/js-examples/module-examples/basic-modules`.
+However here we are instead using the dot (`.`) syntax to mean "the current location", followed by the path beyond that to the file we are trying to find. This is much better than writing out the entire relative path each time, as it is shorter, and it makes the URL portable — the example will still work if you move it to a different location in the site hierarchy.
 
 So for example:
 
@@ -137,8 +139,6 @@ becomes
 
 You can see such lines in action in [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js).
 
-> **Note:** In some module systems, you can omit the file extension and the leading `/`, `./`, or `../` (e.g. `'modules/square'`). This doesn't work in the browser environment, as that can lead to multiple network roundtrips.
-
 Once you've imported the features into your script, you can use them just like they were defined inside the same file. The following is found in `main.js`, below the import lines:
 
 ```js
@@ -151,6 +151,36 @@ reportPerimeter(square1.length, reportList);
 ```
 
 > **Note:** Although imported features are available in the file, they are read only views of the feature that was exported. You cannot change the variable that was imported, but you can still modify properties similar to `const`. Additionally, these features are imported as live bindings, meaning that they can change in value even if you cannot modify the binding unlike `const`.
+
+### Importing bare names
+
+On some JavaScript environments you can use bare names for the module specifier.
+This works because the environment is able to determine the install location of its dependencies.
+For example, in NodeJS you might use the following syntax to import the "square" module.
+
+```js
+import { name, draw, reportArea, reportPerimeter } from 'square';
+```
+
+To do the same kind of thing in a browser you would need to define an [import map](/en-US/docs/Web/HTML/Element/script/type/importmap) before any other scripts are loaded.
+The import map for "square" might look like this:
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "square": "./modules/square.js"
+    }
+  }
+</script>
+```
+
+The map is used by the browser to resolve the bare name "square" to an absolute URL.
+More precisely, the import map defines the property named `square` and an associated value `./modules/square.js`.
+When `square` is used as a module specifier, the browser substitutes it with `./modules/square.js`, and then resolves the URL.
+
+Import maps can map both module names and URL paths, and can be scoped to only apply based on the URL path of the file that imports the script.
+For more information see [Javascript module resolution in Browsers](/en-US/docs/Web/JavaScript/Guide/Modules/Javascript_Modules_in_Browsers)
 
 ## Applying the module to your HTML
 
@@ -633,9 +663,10 @@ Here are a few tips that may help you if you are having trouble getting your mod
 
 ## See also
 
+- [Javascript module resolution in Browsers](/en-US/docs/Web/JavaScript/Guide/Modules/Javascript_Modules_in_Browsers)
 - [Using JavaScript modules on the web](https://v8.dev/features/modules#mjs), by Addy Osmani and Mathias Bynens
 - [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- Axel Rauschmayer's book [Exploring JS: Modules](https://exploringjs.com/es6/ch_modules.html)
+- [Exploring JS: Modules](https://exploringjs.com/es6/ch_modules.html), Book by Axel Rauschmayer
 
 {{Previous("Web/JavaScript/Guide/Meta_programming")}}
