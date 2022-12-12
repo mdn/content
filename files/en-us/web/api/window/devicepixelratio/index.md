@@ -106,15 +106,19 @@ The JavaScript code creates the media query that monitors the device resolution 
 checks the value of `devicePixelRatio` any time it changes.
 
 ```js
-let pixelRatioBox = document.querySelector(".pixel-ratio");
+let remove = null;
 
 const updatePixelRatio = () => {
-  let pr = window.devicePixelRatio;
-  let prString = (pr * 100).toFixed(0);
-  pixelRatioBox.innerText = `${prString}% (${pr.toFixed(2)})`;
-  matchMedia(`(resolution: ${pr}dppx)`).addEventListener("change", updatePixelRatio, { once: true })
-}
+  if(remove != null) {
+      remove();
+  }
+  let mqString = `(resolution: ${window.devicePixelRatio}dppx)`;
+  let media = matchMedia(mqString);
+  media.addListener(updatePixelRatio);
+  remove = function() {media.removeListener(updatePixelRatio)};
 
+  console.log("devicePixelRatio: " + window.devicePixelRatio);
+}
 updatePixelRatio();
 ```
 

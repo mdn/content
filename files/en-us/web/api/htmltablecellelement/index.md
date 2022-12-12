@@ -66,7 +66,7 @@ _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}
 - {{domxref("HTMLTableCellElement.ch")}} {{deprecated_inline}}
   - : A string containing one single character. This character is the one to align all the cell of a column on. It reflects the {{htmlattrxref("char", "td")}} and default to the decimal points associated with the language, e.g. `'.'` for English, or `','` for French. This property was optional and was not very well supported.
 - {{domxref("HTMLTableCellElement.chOff")}} {{deprecated_inline}}
-  - : A string containing a integer indicating how many characters must be left at the right (for left-to-right scripts; or at the left for right-to-left scripts) of the character defined by `HTMLTableCellElement.ch`. This property was optional and was not very well supported.
+  - : A string containing an integer indicating how many characters must be left at the right (for left-to-right scripts; or at the left for right-to-left scripts) of the character defined by `HTMLTableCellElement.ch`. This property was optional and was not very well supported.
 - {{domxref("HTMLTableCellElement.height")}} {{deprecated_inline}}
   - : A string containing a length of pixel of the hinted height of the cell. It reflects the obsolete {{htmlattrxref("height", "td")}} attribute.
 - {{domxref("HTMLTableCellElement.noWrap")}} {{deprecated_inline}}

@@ -1,6 +1,7 @@
 ---
 title: SVG animation with SMIL
 slug: Web/SVG/SVG_animation_with_SMIL
+page-type: guide
 tags:
   - Animation
   - Firefox 4

@@ -45,7 +45,7 @@ oncurrententrychange = (event) => {};
 
 ## Event type
 
-An {{domxref("NavigationCurrentEntryChangeEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("NavigationCurrentEntryChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("NavigationCurrentEntryChangeEvent")}}
 

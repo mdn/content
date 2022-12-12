@@ -60,7 +60,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - If `mode` is not one of the accepted values, a `gl.INVALID_ENUM` error is thrown.
-- If `offset` is a invalid multiple of the size of the given type, a `gl.INVALID_OPERATION` error is thrown.
+- If `offset` is an invalid multiple of the size of the given type, a `gl.INVALID_OPERATION` error is thrown.
 - If `count` or `primcount` are negative, a `gl.INVALID_VALUE` error is thrown.
 
 ## Examples

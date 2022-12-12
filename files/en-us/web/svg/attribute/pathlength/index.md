@@ -1,6 +1,7 @@
 ---
 title: pathLength
 slug: Web/SVG/Attribute/pathLength
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

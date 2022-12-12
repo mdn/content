@@ -354,7 +354,7 @@ The decimal exponential literal is specified by the following format: `beN`; whe
 
 #### Binary
 
-Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (`0b` or `0B`). If the digits after the `0b` are not 0 or 1, the following {{jsxref("SyntaxError")}} is thrown: "Missing binary digits after 0b".
+Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (`0b` or `0B`). Any character after the `0b` that is not 0 or 1 will terminate the literal sequence.
 
 ```js-nolint
 0b10000000000000000000000000000000 // 2147483648
@@ -364,7 +364,7 @@ Binary number syntax uses a leading zero followed by a lowercase or uppercase La
 
 #### Octal
 
-Octal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "O" (`0o` or `0O)`. If the digits after the `0o` are outside the range (01234567), the following {{jsxref("SyntaxError")}} is thrown: "Missing octal digits after 0o".
+Octal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "O" (`0o` or `0O)`. Any character after the `0o` that is outside the range (01234567) will terminate the literal sequence.
 
 ```js-nolint
 0O755 // 493
@@ -373,7 +373,7 @@ Octal number syntax uses a leading zero followed by a lowercase or uppercase Lat
 
 #### Hexadecimal
 
-Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X`). If the digits after 0x are outside the range (0123456789ABCDEF), the following {{jsxref("SyntaxError")}} is thrown: "Identifier starts immediately after numeric literal".
+Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X`). Any character after the `0x` that is outside the range (0123456789ABCDEF) will terminate the literal sequence.
 
 ```js-nolint
 0xFFFFFFFFFFFFFFFFF // 295147905179352830000
@@ -513,7 +513,7 @@ tag`string text ${expression} string text`
 
 ## Automatic semicolon insertion
 
-Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements)'s syntax definition requires semicolons (`;`) at the end. They include:
+Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements)' syntax definitions require semicolons (`;`) at the end. They include:
 
 - [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const)
 - Expression statements
@@ -598,7 +598,7 @@ a = b;
 ++c;
 ```
 
-Here the `return` statement returns `undefined`, and the `a + b` becomes an unreachable statement.
+Here, the `return` statement returns `undefined`, and the `a + b` becomes an unreachable statement.
 
 ```js-nolint
 return

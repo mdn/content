@@ -17,6 +17,83 @@ The **`<section>`** [HTML](/en-US/docs/Web/HTML) element represents a generic st
 
 {{EmbedInteractiveExample("pages/tabbed/section.html", "tabbed-standard")}}
 
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Usage notes
+
+As mentioned above, `<section>` is a generic sectioning element, and should only be used if there isn't a more specific element to represent it. As an example, a navigation menu should be wrapped in a {{htmlelement("nav")}} element, but a list of search results or a map display and its controls don't have specific elements, and could be put inside a `<section>`.
+
+Also consider these cases:
+
+- If the contents of the element represent a standalone, atomic unit of content that makes sense syndicated as a standalone piece (e.g. a blog post or blog comment, or a newspaper article), the {{HTMLElement("article")}} element would be a better choice.
+- If the contents represent useful tangential information that works alongside the main content, but is not directly part of it (like related links, or an author bio), use an {{HTMLElement("aside")}}.
+- If the contents represent the main content area of a document, use {{HTMLElement("main")}}.
+- If you are only using the element as a styling wrapper, use a {{HTMLElement("div")}} instead.
+
+To reiterate, each `<section>` should be identified, typically by including a heading ({{HTMLElement('h1')}} - {{HTMLElement('h6')}} element) as a child of the `<section>` element, wherever possible. See below for examples of where you might see a `<section>` without a heading.
+
+## Examples
+
+### Simple usage example
+
+#### Before
+
+```html
+<div>
+  <h2>Heading</h2>
+  <p>Bunch of awesome content</p>
+</div>
+```
+
+#### After
+
+```html
+<section>
+  <h2>Heading</h2>
+  <p>Bunch of awesome content</p>
+</section>
+```
+
+### Using a section without a heading
+
+Circumstances where you might see `<section>` used without a heading are typically found in web application/UI sections rather than in traditional document structures. In a document, it doesn't really make any sense to have a separate section of content without a heading to describe its contents. Such headings are useful for all readers, but particularly useful for users of assistive technologies like screen readers, and they are also good for SEO.
+
+Consider however a secondary navigation mechanism. If the global navigation is already wrapped in a `<nav>` element, you could conceivably wrap a previous/next menu in a `<section>`:
+
+```html
+<section>
+  <a href="#">Previous article</a>
+  <a href="#">Next article</a>
+</section>
+```
+
+Or what about some kind of button bar for controlling your app? This might not necessarily want a heading, but it is still a distinct section of the document:
+
+```html
+<section>
+  <button class="reply">Reply</button>
+  <button class="reply-all">Reply to all</button>
+  <button class="fwd">Forward</button>
+  <button class="del">Delete</button>
+</section>
+```
+
+Make sure to use some assistive technology and screen-reader-friendly CSS to hide it, like so:
+
+```css
+.hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+```
+
+Depending on the content, including a heading could also be good for SEO, so it is an option to consider.
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
@@ -96,81 +173,6 @@ The **`<section>`** [HTML](/en-US/docs/Web/HTML) element represents a generic st
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Usage notes
-
-As mentioned above, `<section>` is a generic sectioning element, and should only be used if there isn't a more specific element to represent it. As an example, a navigation menu should be wrapped in a {{htmlelement("nav")}} element, but a list of search results or a map display and its controls don't have specific elements, and could be put inside a `<section>`.
-
-Also consider these cases:
-
-- If the contents of the element represent a standalone, atomic unit of content that makes sense syndicated as a standalone piece (e.g. a blog post or blog comment, or a newspaper article), the {{HTMLElement("article")}} element would be a better choice.
-- If the contents represent useful tangential information that works alongside the main content, but is not directly part of it (like related links, or an author bio), use an {{HTMLElement("aside")}}.
-- If the contents represent the main content area of a document, use {{HTMLElement("main")}}.
-- If you are only using the element as a styling wrapper, use a {{HTMLElement("div")}} instead.
-
-To reiterate, each `<section>` should be identified, typically by including a heading ({{HTMLElement('h1')}} - {{HTMLElement('h6')}} element) as a child of the `<section>` element, wherever possible. See below for examples of where you might see a `<section>` without a heading.
-
-## Examples
-
-### Simple usage example
-
-#### Before
-
-```html
-<div>
-  <h2>Heading</h2>
-  <p>Bunch of awesome content</p>
-</div>
-```
-
-#### After
-
-```html
-<section>
-  <h2>Heading</h2>
-  <p>Bunch of awesome content</p>
-</section>
-```
-
-### Using a section without a heading
-
-Circumstances where you might see `<section>` used without a heading are typically found in web application/UI sections rather than in traditional document structures. In a document, it doesn't really make any sense to have a separate section of content without a heading to describe its contents. Such headings are useful for all readers, but particularly useful for users of assistive technologies like screen readers, and they are also good for SEO.
-
-Consider however a secondary navigation mechanism. If the global navigation is already wrapped in a `<nav>` element, you could conceivably wrap a previous/next menu in a `<section>`:
-
-```html
-<section>
-  <a href="#">Previous article</a>
-  <a href="#">Next article</a>
-</section>
-```
-
-Or what about some kind of button bar for controlling your app? This might not necessarily want a heading, but it is still a distinct section of the document:
-
-```html
-<section>
-  <button class="reply">Reply</button>
-  <button class="reply-all">Reply to all</button>
-  <button class="fwd">Forward</button>
-  <button class="del">Delete</button>
-</section>
-```
-
-Make sure to use some assistive technology and screen-reader-friendly CSS to hide it, like so:
-
-```css
-.hidden {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
-```
-
-Depending on the content, including a heading could also be good for SEO, so it is an option to consider.
 
 ## Specifications
 
