@@ -8,15 +8,13 @@ browser-compat: javascript.builtins.AsyncGeneratorFunction
 
 The **`AsyncGeneratorFunction`** object provides methods for [async generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*). In JavaScript, every async generator function is actually an `AsyncGeneratorFunction` object.
 
-There is no global object with the name `AsyncGeneratorFunction`, but you can create a `AsyncGeneratorFunction()` constructor.
-
-{{EmbedInteractiveExample("pages/js/async-functionasterisk-function.html")}}
-
-## Syntax
+Note that `AsyncGeneratorFunction` is _not_ a global object. It can be obtained with the following code:
 
 ```js
 const AsyncGeneratorFunction = async function* () {}.constructor;
 ```
+
+{{EmbedInteractiveExample("pages/js/async-functionasterisk-function.html")}}
 
 ## Constructor
 
