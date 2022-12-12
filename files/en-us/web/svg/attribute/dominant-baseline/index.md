@@ -1,6 +1,7 @@
 ---
 title: dominant-baseline
 slug: Web/SVG/Attribute/dominant-baseline
+page-type: svg-attribute
 tags:
   - Reference
   - SVG

@@ -121,7 +121,7 @@ console.log(midpoint(3, 1, 4, 1, 5)); // 3
 
 ## Properties
 
-- {{jsxref("Functions/arguments/callee", "arguments.callee")}}
+- {{jsxref("Functions/arguments/callee", "arguments.callee")}} {{Deprecated_Inline}}
   - : Reference to the currently executing function that the arguments belong to. Forbidden in strict mode.
 - {{jsxref("Functions/arguments/length", "arguments.length")}}
   - : The number of arguments that were passed to the function.

@@ -10,7 +10,13 @@ browser-compat: javascript.builtins.Error.message
 
 {{JSRef}}
 
-The **`message`** property is a human-readable description of the error.
+The **`message`** data property of an {{jsxref("Error")}} instance is a human-readable description of the error.
+
+## Value
+
+A string corresponding to the value passed to the [`Error()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error) constructor as the first argument.
+
+{{js_property_attributes(1, 0, 1)}}
 
 ## Description
 

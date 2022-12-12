@@ -15,7 +15,13 @@ browser-compat: javascript.builtins.Symbol.toStringTag
 
 The **`Symbol.toStringTag`** well-known symbol is a string valued property that is used in the creation of the default string description of an object. It is accessed internally by the {{jsxref("Object.prototype.toString()")}} method.
 
-{{EmbedInteractiveExample("pages/js/symbol-tostringtag.html")}}{{js_property_attributes(0,0,0)}}
+{{EmbedInteractiveExample("pages/js/symbol-tostringtag.html")}}
+
+## Value
+
+The well-known symbol `@@toStringTag`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Examples
 
