@@ -157,7 +157,7 @@ The import map must be a valid JSON object that can define at most two optional 
 
 - `imports` {{optional_inline}}
 
-  - : The value is a "module specifier map", which provides the mappings between module specifier text that might appear in an `import` statement or `import()` operator, and the text that will replace it when the specifier is resolved.
+  - : The value is a [module specifier map](#module_specifier_map), which provides the mappings between module specifier text that might appear in an `import` statement or `import()` operator, and the text that will replace it when the specifier is resolved.
 
     This is the fallback map that is searched for matching module specifiers if no `scopes` path URLs match, or if module specifier maps in matching `scopes` paths do not contain a key that matches the module specifier.
 
