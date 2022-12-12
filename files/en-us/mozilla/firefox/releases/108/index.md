@@ -51,6 +51,10 @@ This article provides information about the changes in Firefox 108 that will aff
 
 ### APIs
 
+- [Import maps](/en-US/docs/Web/HTML/Element/script/type/importmap) are now supported.
+  These allow more flexible and ergonomic module specifiers when importing [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules).
+  ({{bug(1795647)}}).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
