@@ -11,6 +11,10 @@ tags:
   - Web
 ---
 
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
+</section>
+
 Whether you're just getting started with Web development, or are just expanding your horizons into new realms of Web awesomeness, the links here should help you get started.
 
 For another (overlapping) set of links to learning resources, see the [MDN Learning](/en-US/docs/Learn) pages.

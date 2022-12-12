@@ -15,7 +15,7 @@ tags:
   - WebRTC
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 [WebRTC](/en-US/docs/Web/API/WebRTC_API) allows real-time, peer-to-peer, media exchange between two devices. A connection is established through a discovery and negotiation process called **signaling**. This tutorial will guide you through building a two-way video-call.
 
@@ -233,7 +233,7 @@ When the user clicks on a username they want to call, the `invite()` function is
 ```js
 const mediaConstraints = {
   audio: true, // We want an audio track
-  video: true // And we want a video track
+  video: true, // And we want a video track
 };
 
 function invite(evt) {
@@ -243,17 +243,22 @@ function invite(evt) {
     const clickedUsername = evt.target.textContent;
 
     if (clickedUsername === myUsername) {
-      alert("I'm afraid I can't let you talk to yourself. That would be weird.");
+      alert(
+        "I'm afraid I can't let you talk to yourself. That would be weird."
+      );
       return;
     }
 
     targetUsername = clickedUsername;
     createPeerConnection();
 
-    navigator.mediaDevices.getUserMedia(mediaConstraints)
+    navigator.mediaDevices
+      .getUserMedia(mediaConstraints)
       .then((localStream) => {
         document.getElementById("local_video").srcObject = localStream;
-        localStream.getTracks().forEach((track) => myPeerConnection.addTrack(track, localStream));
+        localStream
+          .getTracks()
+          .forEach((track) => myPeerConnection.addTrack(track, localStream));
       })
       .catch(handleGetUserMediaError);
   }
@@ -284,10 +289,12 @@ If the promise returned by `getUserMedia()` concludes in a failure, our `handleG
 
 ```js
 function handleGetUserMediaError(e) {
-  switch(e.name) {
+  switch (e.name) {
     case "NotFoundError":
-      alert("Unable to open your call because no camera and/or microphone" +
-            "were found.");
+      alert(
+        "Unable to open your call because no camera and/or microphone" +
+          "were found."
+      );
       break;
     case "SecurityError":
     case "PermissionDeniedError":
@@ -313,19 +320,22 @@ The `createPeerConnection()` function is used by both the caller and the callee 
 ```js
 function createPeerConnection() {
   myPeerConnection = new RTCPeerConnection({
-      iceServers: [     // Information about ICE servers - Use your own!
-        {
-          urls: "stun:stun.stunprotocol.org"
-        }
-      ]
+    iceServers: [
+      // Information about ICE servers - Use your own!
+      {
+        urls: "stun:stun.stunprotocol.org",
+      },
+    ],
   });
 
   myPeerConnection.onicecandidate = handleICECandidateEvent;
   myPeerConnection.ontrack = handleTrackEvent;
   myPeerConnection.onnegotiationneeded = handleNegotiationNeededEvent;
   myPeerConnection.onremovetrack = handleRemoveTrackEvent;
-  myPeerConnection.oniceconnectionstatechange = handleICEConnectionStateChangeEvent;
-  myPeerConnection.onicegatheringstatechange = handleICEGatheringStateChangeEvent;
+  myPeerConnection.oniceconnectionstatechange =
+    handleICEConnectionStateChangeEvent;
+  myPeerConnection.onicegatheringstatechange =
+    handleICEGatheringStateChangeEvent;
   myPeerConnection.onsignalingstatechange = handleSignalingStateChangeEvent;
 }
 ```
@@ -361,14 +371,15 @@ Once the caller has created its {{domxref("RTCPeerConnection")}}, created a medi
 
 ```js
 function handleNegotiationNeededEvent() {
-  myPeerConnection.createOffer()
+  myPeerConnection
+    .createOffer()
     .then((offer) => myPeerConnection.setLocalDescription(offer))
     .then(() => {
       sendToServer({
         name: myUsername,
         target: targetUsername,
         type: "video-offer",
-        sdp: myPeerConnection.localDescription
+        sdp: myPeerConnection.localDescription,
       });
     })
     .catch(reportError);
@@ -413,13 +424,16 @@ function handleVideoOfferMsg(msg) {
 
   const desc = new RTCSessionDescription(msg.sdp);
 
-  myPeerConnection.setRemoteDescription(desc)
+  myPeerConnection
+    .setRemoteDescription(desc)
     .then(() => navigator.mediaDevices.getUserMedia(mediaConstraints))
     .then((stream) => {
       localStream = stream;
       document.getElementById("local_video").srcObject = localStream;
 
-      localStream.getTracks().forEach((track) => myPeerConnection.addTrack(track, localStream));
+      localStream
+        .getTracks()
+        .forEach((track) => myPeerConnection.addTrack(track, localStream));
     })
     .then(() => myPeerConnection.createAnswer())
     .then((answer) => myPeerConnection.setLocalDescription(answer))
@@ -428,7 +442,7 @@ function handleVideoOfferMsg(msg) {
         name: myUsername,
         target: targetUsername,
         type: "video-answer",
-        sdp: myPeerConnection.localDescription
+        sdp: myPeerConnection.localDescription,
       };
 
       sendToServer(msg);
@@ -459,7 +473,7 @@ function handleICECandidateEvent(event) {
     sendToServer({
       type: "new-ice-candidate",
       target: targetUsername,
-      candidate: event.candidate
+      candidate: event.candidate,
     });
   }
 }
@@ -486,8 +500,7 @@ The signaling server delivers each ICE candidate to the destination peer using w
 function handleNewICECandidateMsg(msg) {
   const candidate = new RTCIceCandidate(msg.candidate);
 
-  myPeerConnection.addIceCandidate(candidate)
-    .catch(reportError);
+  myPeerConnection.addIceCandidate(candidate).catch(reportError);
 }
 ```
 
@@ -549,7 +562,7 @@ function hangUpCall() {
   sendToServer({
     name: myUsername,
     target: targetUsername,
-    type: "hang-up"
+    type: "hang-up",
   });
 }
 ```
@@ -618,7 +631,7 @@ There are a number of additional events you can set listeners for which notifyin
 
 ```js
 function handleICEConnectionStateChangeEvent(event) {
-  switch(myPeerConnection.iceConnectionState) {
+  switch (myPeerConnection.iceConnectionState) {
     case "closed":
     case "failed":
       closeVideoCall();
@@ -637,12 +650,12 @@ Similarly, we watch for {{domxref("RTCPeerConnection.signalingstatechange_event"
 
 ```js
 function handleSignalingStateChangeEvent(event) {
-  switch(myPeerConnection.signalingState) {
+  switch (myPeerConnection.signalingState) {
     case "closed":
       closeVideoCall();
       break;
   }
-};
+}
 ```
 
 > **Note:** The `closed` signaling state has been deprecated in favor of the `closed` {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}}. We are watching for it here to add a bit of backward compatibility.

@@ -28,17 +28,9 @@ This interface requires a secure context.
 ## Instance properties
 
 - {{domxref("IdleDetector.userState")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-
-  - : Returns a string indicating whether the users has interacted with either the screen or the device since the call to `start()`.
-
-  - : Returns either `"active"` to indicate that the user has interacted with the
-    device within the threshold provided to `start()` or `"idle"` if they have not.
-    This attribute returns `null` before `start()` is called.
-
+  - : Returns a string indicating whether the users has interacted with either the screen or the device within the threshold provided to `start()`, one of `"active"` or `"idle"`. This attribute returns `null` before `start()` is called.
 - {{domxref("IdleDetector.screenState")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a string indicating whether the screen is locked, one of
-    `"locked"` or `"unlocked"`. This attribute returns `null` before `start()`
-    is called.
+  - : Returns a string indicating whether the screen is locked, one of `"locked"` or `"unlocked"`. This attribute returns `null` before `start()` is called.
 
 ## Events
 

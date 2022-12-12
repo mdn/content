@@ -45,6 +45,7 @@ function execRecursively(fn, subject, _refs = new WeakSet()) {
     for (const key in subject) {
       execRecursively(fn, subject[key], _refs);
     }
+    _refs.delete(subject);
   }
 }
 

@@ -60,7 +60,7 @@ In the following example, `match()` is used to find `"Chapter"` followed by one 
 The regular expression includes the `i` flag so that upper/lower case differences will be ignored.
 
 ```js
-const str = 'For more information, see Chapter 3.4.5.1';
+const str = "For more information, see Chapter 3.4.5.1";
 const re = /see (chapter \d+(\.\d)*)/i;
 const found = str.match(re);
 
@@ -82,7 +82,7 @@ In the match result above, `'see Chapter 3.4.5.1'` is the whole match. `'Chapter
 The following example demonstrates the use of the global flag and ignore-case flag with `match()`. All letters `A` through `E` and `a` through `e` are returned, each its own element in the array.
 
 ```js
-const str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+const str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 const regexp = /[A-E]/gi;
 const matches = str.match(regexp);
 
@@ -97,7 +97,7 @@ console.log(matches);
 In browsers which support named capturing groups, the following code captures `"fox"` or `"cat"` into a group named `animal`:
 
 ```js
-const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
+const paragraph = "The quick brown fox jumps over the lazy dog. It barked.";
 
 const capturingRegex = /(?<animal>fox|cat) jumps over/;
 const found = paragraph.match(capturingRegex);
@@ -109,7 +109,7 @@ console.log(found.groups); // {animal: "fox"}
 ```js
 const str = "Nothing will come of nothing.";
 
-str.match();   // returns [""]
+str.match(); // returns [""]
 ```
 
 ### Using match() with a non-RegExp implementing @@match
@@ -122,7 +122,7 @@ const str = "Hmm, this is interesting.";
 str.match({
   [Symbol.match](str) {
     return ["Yes, it's interesting."];
-  }
+  },
 }); // returns ["Yes, it's interesting."]
 ```
 
@@ -131,17 +131,19 @@ str.match({
 When the `regexp` parameter is a string or a number, it is implicitly converted to a {{jsxref("RegExp")}} by using `new RegExp(regexp)`.
 
 ```js
-const str1 = "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.";
-const str2 = "My grandfather is 65 years old and My grandmother is 63 years old.";
+const str1 =
+  "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.";
+const str2 =
+  "My grandfather is 65 years old and My grandmother is 63 years old.";
 const str3 = "The contract was declared null and void.";
-str1.match("number");   // "number" is a string. returns ["number"]
-str1.match(NaN);        // the type of NaN is the number. returns ["NaN"]
-str1.match(Infinity);   // the type of Infinity is the number. returns ["Infinity"]
-str1.match(+Infinity);  // returns ["Infinity"]
-str1.match(-Infinity);  // returns ["-Infinity"]
-str2.match(65);         // returns ["65"]
-str2.match(+65);        // A number with a positive sign. returns ["65"]
-str3.match(null);       // returns ["null"]
+str1.match("number"); // "number" is a string. returns ["number"]
+str1.match(NaN); // the type of NaN is the number. returns ["NaN"]
+str1.match(Infinity); // the type of Infinity is the number. returns ["Infinity"]
+str1.match(+Infinity); // returns ["Infinity"]
+str1.match(-Infinity); // returns ["-Infinity"]
+str2.match(65); // returns ["65"]
+str2.match(+65); // A number with a positive sign. returns ["65"]
+str3.match(null); // returns ["null"]
 ```
 
 This may have unexpected results if special characters are not properly escaped.

@@ -110,7 +110,7 @@ Also consider these cases:
 - If the contents of the element represent a standalone, atomic unit of content that makes sense syndicated as a standalone piece (e.g. a blog post or blog comment, or a newspaper article), the {{HTMLElement("article")}} element would be a better choice.
 - If the contents represent useful tangential information that works alongside the main content, but is not directly part of it (like related links, or an author bio), use an {{HTMLElement("aside")}}.
 - If the contents represent the main content area of a document, use {{HTMLElement("main")}}.
-- If you are only using the element as a styling wrapper, use a {{HTMLElement("div")}}. An unwritten rule is that a `<section>` should logically appear in the outline of a document.
+- If you are only using the element as a styling wrapper, use a {{HTMLElement("div")}} instead.
 
 To reiterate, each `<section>` should be identified, typically by including a heading ({{HTMLElement('h1')}} - {{HTMLElement('h6')}} element) as a child of the `<section>` element, wherever possible. See below for examples of where you might see a `<section>` without a heading.
 
@@ -153,18 +153,6 @@ Or what about some kind of button bar for controlling your app? This might not n
 
 ```html
 <section>
-  <button class="reply">Reply</button>
-  <button class="reply-all">Reply to all</button>
-  <button class="fwd">Forward</button>
-  <button class="del">Delete</button>
-</section>
-```
-
-Sections with no headings do not appear in the document outline. If you did want to force the inclusion of such an HTML block inside the document outline but not affect the visual output in any way, you could include a heading but hide it:
-
-```html
-<section>
-  <h2 class="hidden">Controls</h2>
   <button class="reply">Reply</button>
   <button class="reply-all">Reply to all</button>
   <button class="fwd">Forward</button>

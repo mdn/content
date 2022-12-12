@@ -19,7 +19,7 @@ tags:
 
 ## Reason
 
-```
+```plain
 Reason: expected 'true' in CORS header 'Access-Control-Allow-Credentials'
 ```
 

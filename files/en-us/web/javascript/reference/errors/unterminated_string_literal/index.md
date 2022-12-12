@@ -16,7 +16,7 @@ The JavaScript error "unterminated string literal" occurs when there is an unter
 
 ## Message
 
-```
+```plain
 SyntaxError: Unterminated string constant (Edge)
 SyntaxError: unterminated string literal (Firefox)
 ```

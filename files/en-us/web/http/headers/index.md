@@ -240,6 +240,8 @@ _Learn more about CORS [here](/en-US/docs/Glossary/CORS)._
 
 - {{HTTPHeader("Location")}}
   - : Indicates the URL to redirect a page to.
+- {{HTTPHeader("Refresh")}}
+  - : Directs the browser to reload the page or redirect to another. Takes the same value as the `meta` element with [`http-equiv="refresh"`](/en-US/docs/Web/HTML/Element/meta#attr-http-equiv).
 
 ## Request context
 

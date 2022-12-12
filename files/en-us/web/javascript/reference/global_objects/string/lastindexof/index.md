@@ -51,14 +51,14 @@ The index of the last occurrence of `searchString` found, or `-1` if not found.
 Strings are zero-indexed: The index of a string's first character is `0`, and the index of a string's last character is the length of the string minus 1.
 
 ```js
-'canal'.lastIndexOf('a');     // returns 3
-'canal'.lastIndexOf('a', 2);  // returns 1
-'canal'.lastIndexOf('a', 0);  // returns -1
-'canal'.lastIndexOf('x');     // returns -1
-'canal'.lastIndexOf('c', -5); // returns 0
-'canal'.lastIndexOf('c', 0);  // returns 0
-'canal'.lastIndexOf('');      // returns 5
-'canal'.lastIndexOf('', 2);   // returns 2
+"canal".lastIndexOf("a"); // returns 3
+"canal".lastIndexOf("a", 2); // returns 1
+"canal".lastIndexOf("a", 0); // returns -1
+"canal".lastIndexOf("x"); // returns -1
+"canal".lastIndexOf("c", -5); // returns 0
+"canal".lastIndexOf("c", 0); // returns 0
+"canal".lastIndexOf(""); // returns 5
+"canal".lastIndexOf("", 2); // returns 2
 ```
 
 ### Case-sensitivity
@@ -67,7 +67,7 @@ The `lastIndexOf()` method is case sensitive. For example, the following
 expression returns `-1`:
 
 ```js
-'Blue Whale, Killer Whale'.lastIndexOf('blue'); // returns -1
+"Blue Whale, Killer Whale".lastIndexOf("blue"); // returns -1
 ```
 
 ## Examples
@@ -79,10 +79,10 @@ The following example uses {{jsxref("String.prototype.indexOf()", "indexOf()")}}
 "`Brave, Brave New World`".
 
 ```js
-const anyString = 'Brave, Brave New World';
+const anyString = "Brave, Brave New World";
 
-console.log(anyString.indexOf('Brave')); // 0
-console.log(anyString.lastIndexOf('Brave')); // 7
+console.log(anyString.indexOf("Brave")); // 0
+console.log(anyString.lastIndexOf("Brave")); // 7
 ```
 
 ## Specifications

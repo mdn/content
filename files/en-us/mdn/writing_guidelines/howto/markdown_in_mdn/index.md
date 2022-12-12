@@ -45,7 +45,7 @@ In GFM and CommonMark, authors can use "code fences" to demarcate `<pre>` blocks
 
 It's permissible for the info string to contain multiple words, like:
 
-````plain
+````md
 ```fee fi fo fum
 // some example code
 ```
@@ -101,7 +101,7 @@ On MDN, writers will use code fences for example code blocks. They must specify 
 
 For example:
 
-````plain
+````md
 ```js
 const greeting = "I will get JavaScript syntax highlighting";
 ```
@@ -134,7 +134,7 @@ Writers will be able to supply any one of the following additional words, which 
 
 For example:
 
-````plain
+````md
 ```js example-good
 const greeting = "I'm a good example";
 ```
@@ -183,7 +183,7 @@ Because the text "Note:" or "Warning:" also appears in the rendered output, it h
 
 #### Note
 
-```plain
+```md
 > **Note:** This is how you write a note.
 >
 > It can have multiple lines.
@@ -206,7 +206,7 @@ This HTML will be rendered as a highlighted box:
 
 #### Warnings
 
-```plain
+```md
 > **Warning:** This is how you write a warning.
 >
 > It can have multiple paragraphs.
@@ -229,7 +229,7 @@ This HTML will be rendered as a highlighted box:
 
 #### Callouts
 
-```plain
+```md
 > **Callout:** **This is how you write a callout.**
 >
 > It can have multiple paragraphs.
@@ -256,7 +256,7 @@ This HTML will be rendered as a highlighted box:
 
 For example, if we want to use "Warnung" for "Warning" in German, then in German pages we would write:
 
-```plain
+```md
 > **Warnung:** So schreibt man eine Warnung.
 ```
 
@@ -272,7 +272,7 @@ And this will produce:
 
 This example contains a code block.
 
-````plain
+````md
 > **Note:** This is how you write a note.
 >
 > It can contain code blocks.
@@ -325,7 +325,7 @@ Each of these top-level GFM `<li>` elements will be transformed into a `<dt>`/`<
 
 For example, this is a `<dl>`:
 
-````plain
+````md
 - term1
     - : My description of term1
 
@@ -389,7 +389,7 @@ Definition lists written using this syntax must consist of pairs of `<dt>`/`<dd>
 
 As a workaround for cases where an author needs to associate multiple `<dt>` items with a single `<dd>`, consider providing them as a single `<dt>` that holds multiple terms, separated by commas, like this:
 
-```plain
+```md
 - `param1`, `param2`, `param3`
     - : My description of params 1, 2, and 3
 ```
@@ -416,7 +416,7 @@ In GFM table syntax, authors can omit leading and trailing pipes for rows. MDN a
 
 That is, MDN authors must use this style:
 
-```plain
+```md
 | Heading 1 | Heading 2 | Heading 3 |
 |-----------|-----------|-----------|
 | cell 1    | cell 2    | cell 3    |
@@ -425,7 +425,7 @@ That is, MDN authors must use this style:
 
 and not this style:
 
-```plain
+```md
 Heading 1 | Heading 2 | Heading 3
  --- | --- | ---
 cell 1    | cell 2    | cell 3
@@ -489,10 +489,10 @@ Even when a table could be written in GFM it is sometimes better to use HTML, be
 
 In GFM this will look like:
 
-```plain
-  | A heading 1        | A heading 2                                                                                                                                         | A heading 3        | A heading 4                                                                                                                                                              | A heading 5        | A heading 6        |
-  | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------ | ------------------ |
-  | Something shortish | Something much longer that really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format. | Something shortish | Another cell with lots of text in it, that also really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format. | Something shortish | Something shortish |
+```md
+| A heading 1        | A heading 2                                                                                                                                         | A heading 3        | A heading 4                                                                                                                                                              | A heading 5        | A heading 6        |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------ | ------------------ |
+| Something shortish | Something much longer that really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format. | Something shortish | Another cell with lots of text in it, that also really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format. | Something shortish | Something shortish |
 ```
 
 In a case like this it would be better to use HTML.
@@ -566,7 +566,7 @@ This issue was resolved in <https://github.com/mdn/content/issues/3923>.
 
 Writers will be able to include KumaScript macro calls in prose content:
 
-```plain
+```md
 The **`margin`** [CSS](/en-US/docs/Web/CSS) property
 sets the margin area on all four sides of an element. It is a shorthand for
 \{{cssxref("margin-top")}}, \{{cssxref("margin-right")}}, \{{cssxref("margin-bottom")}},

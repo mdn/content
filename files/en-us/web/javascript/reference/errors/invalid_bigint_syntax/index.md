@@ -14,7 +14,7 @@ The JavaScript exception "invalid BigInt syntax" occurs when a string value is b
 
 ## Message
 
-```
+```plain
 SyntaxError: Cannot convert x to a BigInt (V8-based)
 SyntaxError: invalid BigInt syntax (Firefox)
 SyntaxError: Failed to parse String to BigInt (Safari)

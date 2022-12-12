@@ -530,7 +530,7 @@ In the next article of this module, we will explore the different [UI pseudo-cla
 - [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
 - [Other form controls](/en-US/docs/Learn/Forms/Other_form_controls)
 - [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
+- **Advanced form styling**
 - [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
 - [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
 - [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)

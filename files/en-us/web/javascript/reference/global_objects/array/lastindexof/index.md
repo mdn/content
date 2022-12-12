@@ -56,10 +56,10 @@ The following example uses `lastIndexOf` to locate values in an array.
 
 ```js
 const numbers = [2, 5, 9, 2];
-numbers.lastIndexOf(2);     // 3
-numbers.lastIndexOf(7);     // -1
-numbers.lastIndexOf(2, 3);  // 3
-numbers.lastIndexOf(2, 2);  // 0
+numbers.lastIndexOf(2); // 3
+numbers.lastIndexOf(7); // -1
+numbers.lastIndexOf(2, 3); // 3
+numbers.lastIndexOf(2, 2); // 0
 numbers.lastIndexOf(2, -2); // 0
 numbers.lastIndexOf(2, -1); // 3
 ```
@@ -72,12 +72,12 @@ to another array as they are found.
 
 ```js
 const indices = [];
-const array = ['a', 'b', 'a', 'c', 'a', 'd'];
-const element = 'a';
+const array = ["a", "b", "a", "c", "a", "d"];
+const element = "a";
 let idx = array.lastIndexOf(element);
 while (idx !== -1) {
   indices.push(idx);
-  idx = (idx > 0 ? array.lastIndexOf(element, idx - 1) : -1);
+  idx = idx > 0 ? array.lastIndexOf(element, idx - 1) : -1;
 }
 
 console.log(indices);
