@@ -21,6 +21,8 @@ const GeneratorFunction = function* () {}.constructor;
 
 `GeneratorFunction` is a subclass of {{jsxref("Function")}}.
 
+{{EmbedInteractiveExample("pages/js/functionasterisk-function.html")}}
+
 ## Constructor
 
 - {{jsxref("GeneratorFunction/GeneratorFunction", "GeneratorFunction()")}}

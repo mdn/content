@@ -16,6 +16,8 @@ const AsyncGeneratorFunction = async function* () {}.constructor;
 
 `AsyncGeneratorFunction` is a subclass of {{jsxref("Function")}}.
 
+{{EmbedInteractiveExample("pages/js/async-functionasterisk-function.html")}}
+
 ## Constructor
 
 - {{jsxref("AsyncGeneratorFunction/AsyncGeneratorFunction", "AsyncGeneratorFunction()")}}
