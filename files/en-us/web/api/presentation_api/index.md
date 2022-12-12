@@ -152,7 +152,7 @@ Setting `presentation.defaultRequest` allows the page to specify the `Presentati
 
 ### Monitor connection's state and exchange data
 
-In `presentation.html`:
+In `controller.html`:
 
 ```html
 <button id="disconnectBtn" style="display: none;">Disconnect</button>
