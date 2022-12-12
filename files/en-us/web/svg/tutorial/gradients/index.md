@@ -1,6 +1,7 @@
 ---
 title: Gradients in SVG
 slug: Web/SVG/Tutorial/Gradients
+page-type: guide
 tags:
   - Intermediate
   - SVG

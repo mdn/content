@@ -258,7 +258,7 @@ class Rectangle {
 }
 ```
 
-We don't need keywords like `let`, `const`, or `var` to declare fields.
+Class fields are similar to object properties, not variables, so we don't use keywords such as `const` to declare them. In JavaScript, [private fields](#private_field_declarations) use a special identifier syntax, so modifier keywords like `public` and `private` should not be used either.
 
 By declaring fields up-front, class definitions become more self-documenting, and the fields are always present.
 

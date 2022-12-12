@@ -1,6 +1,7 @@
 ---
 title: transform
 slug: Web/SVG/Attribute/transform
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

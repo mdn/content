@@ -11,7 +11,11 @@ browser-compat: javascript.functions.arguments.length
 
 {{jsSidebar("Functions")}}
 
-The **`arguments.length`** property contains the number of arguments passed to the function.
+The **`arguments.length`** data property contains the number of arguments passed to the function.
+
+## Value
+
+A non-negative integer.
 
 {{js_property_attributes(1, 0, 1)}}
 

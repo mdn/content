@@ -1,6 +1,7 @@
 ---
 title: xChannelSelector
 slug: Web/SVG/Attribute/xChannelSelector
+page-type: svg-attribute
 tags:
   - Filters
   - NeedsExample

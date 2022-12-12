@@ -74,7 +74,7 @@ The possible values of `channelCountMode` and their meanings are:
 
 ## Value
 
-A enumerated value representing a [channelCountMode](https://webaudio.github.io/web-audio-api/#idl-def-ChannelCountMode).
+An enumerated value representing a [channelCountMode](https://webaudio.github.io/web-audio-api/#idl-def-ChannelCountMode).
 
 ## Examples
 
