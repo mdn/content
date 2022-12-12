@@ -146,6 +146,7 @@ For example, the map below will only use the scoped map if the loading module ha
 }
 </script>
 ```
+
 If multiple scopes match the referrer URL, then the most specific scope path is used (the scope key name with the longest name).
 The browser falls back to the next most specific scoped path if there is no matching specifier, and so on, eventually falling back to the module specifier map in the `imports` key.
 
