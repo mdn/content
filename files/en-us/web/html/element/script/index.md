@@ -200,7 +200,7 @@ Browsers that support the `module` value for the {{htmlattrxref("type", "script"
 
 ### Importing modules with importmap
 
-When importing modules in scripts, browsers that don't support the [`importmap`](#importmap) value for the {{htmlattrxref("type", "script")}} attribute must set a module specifier that can be resolved to an absolute URL.
+When importing modules in scripts, if you don't use the [`type=importmap`](#importmap) feature, then each module must be imported using a module specifier that is either an absolute or relative URL.
 In the example below, the first module specifier ("./shapes/square.js") resolves relative to the base URL of the document, while the second is an absolute URL.
 
 ```js
