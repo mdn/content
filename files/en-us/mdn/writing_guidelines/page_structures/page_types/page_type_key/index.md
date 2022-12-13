@@ -87,4 +87,4 @@ This section lists `page-type` values for pages under [Web/JavaScript](/en-US/do
 - `javascript-statement`: a statement, like [`switch`](/en-US/docs/Web/JavaScript/Reference/Statements/switch).
 - `javascript-static-accessor-property`: a static accessor property, like [`RegExp.lastMatch`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch).
 - `javascript-static-data-property`: a static data property, like [`Math.E`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/E).
-- `javascript-static-method`: a staticx method, like [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
+- `javascript-static-method`: a static method, like [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
