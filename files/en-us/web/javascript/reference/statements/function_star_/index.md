@@ -1,6 +1,7 @@
 ---
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
+page-type: javascript-statement
 tags:
   - ECMAScript 2015
   - Function

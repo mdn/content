@@ -1,6 +1,7 @@
 ---
 title: import.meta
 slug: Web/JavaScript/Reference/Operators/import.meta
+page-type: javascript-language-feature
 tags:
   - JavaScript
   - Language feature

@@ -1,6 +1,7 @@
 ---
 title: Atomics.isLockFree()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
+page-type: javascript-static-method
 tags:
   - Atomics
   - JavaScript

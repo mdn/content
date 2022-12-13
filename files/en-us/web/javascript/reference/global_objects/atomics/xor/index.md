@@ -1,6 +1,7 @@
 ---
 title: Atomics.xor()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/xor
+page-type: javascript-static-method
 tags:
   - Atomics
   - JavaScript

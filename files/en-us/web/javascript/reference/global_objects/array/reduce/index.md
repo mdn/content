@@ -1,6 +1,7 @@
 ---
 title: Array.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
+page-type: javascript-instance-method
 tags:
   - Array
   - Array method

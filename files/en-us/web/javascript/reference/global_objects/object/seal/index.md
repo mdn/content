@@ -1,6 +1,7 @@
 ---
 title: Object.seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
+page-type: javascript-static-method
 tags:
   - ECMAScript 5
   - JavaScript

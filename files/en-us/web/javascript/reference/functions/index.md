@@ -1,6 +1,7 @@
 ---
 title: Functions
 slug: Web/JavaScript/Reference/Functions
+page-type: guide
 tags:
   - Function
   - Functions

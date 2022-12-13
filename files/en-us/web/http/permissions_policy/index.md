@@ -187,7 +187,7 @@ It is worth giving the `src` value a special mention. We mentioned above that us
 <iframe src="https://example.com" allow="geolocation">
 ```
 
-> **Note:** As you'll have noticed, the syntax for `<iframe>` policies is a bit different to the syntax for `Permissions-Policy` headers. The former still uses the same syntax as the older Feature Policy specification, which was superceded by Permissions Policy.
+> **Note:** As you'll have noticed, the syntax for `<iframe>` policies is a bit different to the syntax for `Permissions-Policy` headers. The former still uses the same syntax as the older Feature Policy specification, which was superseded by Permissions Policy.
 
 ## Inheritance of policies for embedded content
 

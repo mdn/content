@@ -1,6 +1,7 @@
 ---
 title: Math.acosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
+page-type: javascript-static-method
 tags:
   - JavaScript
   - Math

@@ -1,6 +1,7 @@
 ---
 title: Generator.prototype.throw()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - Generator

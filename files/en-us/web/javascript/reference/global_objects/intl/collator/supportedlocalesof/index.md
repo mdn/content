@@ -1,6 +1,7 @@
 ---
 title: Intl.Collator.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
+page-type: javascript-static-method
 tags:
   - Collator
   - Internationalization

@@ -1,6 +1,7 @@
 ---
 title: Symbol() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
+page-type: javascript-constructor
 tags:
   - Constructor
   - JavaScript

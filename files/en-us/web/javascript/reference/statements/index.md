@@ -1,6 +1,7 @@
 ---
 title: Statements and declarations
 slug: Web/JavaScript/Reference/Statements
+page-type: landing-page
 tags:
   - JavaScript
   - Landing page

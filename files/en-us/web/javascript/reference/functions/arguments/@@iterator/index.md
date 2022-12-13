@@ -1,6 +1,7 @@
 ---
 title: arguments[@@iterator]()
 slug: Web/JavaScript/Reference/Functions/arguments/@@iterator
+page-type: javascript-instance-method
 tags:
   - Functions
   - JavaScript

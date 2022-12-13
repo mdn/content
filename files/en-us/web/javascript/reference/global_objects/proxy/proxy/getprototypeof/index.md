@@ -1,6 +1,7 @@
 ---
 title: handler.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript

@@ -1,6 +1,7 @@
 ---
 title: URIError
 slug: Web/JavaScript/Reference/Global_Objects/URIError
+page-type: javascript-class
 tags:
   - Class
   - JavaScript
