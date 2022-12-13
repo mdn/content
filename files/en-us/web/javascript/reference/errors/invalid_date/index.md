@@ -1,6 +1,7 @@
 ---
 title: 'RangeError: invalid date'
 slug: Web/JavaScript/Reference/Errors/Invalid_date
+page-type: javascript-error
 tags:
   - Error
   - Errors

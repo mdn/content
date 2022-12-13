@@ -1,6 +1,7 @@
 ---
 title: Assertions
 slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
+page-type: guide
 tags:
   - Assertions
   - Guide

@@ -1,6 +1,7 @@
 ---
 title: Lexical grammar
 slug: Web/JavaScript/Reference/Lexical_grammar
+page-type: guide
 tags:
   - Guide
   - JavaScript
