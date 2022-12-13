@@ -18,6 +18,10 @@ For more information, see {{jsxref("RegExp.@@match", "RegExp.prototype[@@match](
 
 {{EmbedInteractiveExample("pages/js/symbol-match.html", "taller")}}
 
+## Value
+
+The well-known symbol `@@match`.
+
 {{js_property_attributes(0, 0, 0)}}
 
 ## Description

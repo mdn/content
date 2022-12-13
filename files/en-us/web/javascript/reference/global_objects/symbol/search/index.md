@@ -16,7 +16,13 @@ The **`Symbol.search`** well-known symbol specifies the method that returns the 
 
 For more information, see {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}} and {{jsxref("String.prototype.search()")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-search.html")}}{{js_property_attributes(0,0,0)}}
+{{EmbedInteractiveExample("pages/js/symbol-search.html")}}
+
+## Value
+
+The well-known symbol `@@search`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Examples
 

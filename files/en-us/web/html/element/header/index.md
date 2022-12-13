@@ -15,6 +15,57 @@ The **`<header>`** [HTML](/en-US/docs/Web/HTML) element represents introductory 
 
 {{EmbedInteractiveExample("pages/tabbed/header.html", "tabbed-standard")}}
 
+## Usage notes
+
+The `<header>` element has an identical meaning to the site-wide [`banner`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role) landmark role, unless nested within sectioning content. Then, the `<header>` element is not a landmark.
+
+The `<header>` element can define a global site header, described as a `banner` in the accessibility tree. It usually includes a logo, company name, search feature, and possibly the global navigation or a slogan. It is generally located at the top of the page.
+
+Otherwise, it is a `section` in the accessibility tree, and usually contain the surrounding section's heading (an `h1` – `h6` element) and optional subheading, but this is **not** required.
+
+### Historical Usage
+
+The `<header>` element originally existed at the very beginning of HTML for headings. It is seen in [the very first website](http://info.cern.ch/). At some point, headings became [`<h1>` through `<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements), allowing `<header>` to be free to fill a different role.
+
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Examples
+
+### Page Header
+
+```html
+<header>
+  <h1>Main Page Title</h1>
+  <img src="mdn-logo-sm.png" alt="MDN logo" />
+</header>
+```
+
+### Article Header
+
+```html
+<article>
+  <header>
+    <h2>The Planet Earth</h2>
+    <p>
+      Posted on Wednesday, <time datetime="2017-10-04">4 October 2017</time> by
+      Jane Smith
+    </p>
+  </header>
+  <p>
+    We live on a planet that's blue and green, with so many things still unseen.
+  </p>
+  <p><a href="https://example.com/the-planet-earth/">Continue reading…</a></p>
+</article>
+```
+
+## Accessibility
+
+The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role) landmark when its context is the {{HTMLElement('body')}} element. The HTML header element is not considered a banner landmark when it is descendant of an {{HTMLElement('article')}}, {{HTMLElement('aside')}}, {{HTMLElement('main')}}, {{HTMLElement('nav')}}, or {{HTMLElement('section')}} element.
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
@@ -113,55 +164,6 @@ The **`<header>`** [HTML](/en-US/docs/Web/HTML) element represents introductory 
     </tr>
   </tbody>
 </table>
-
-## Usage notes
-
-The `<header>` element has an identical meaning to the site-wide [`banner`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role) landmark role, unless nested within sectioning content. Then, the `<header>` element is not a landmark.
-
-The `<header>` element can define a global site header, described as a `banner` in the accessibility tree. It usually includes a logo, company name, search feature, and possibly the global navigation or a slogan. It is generally located at the top of the page.
-
-Otherwise, it is a `section` in the accessibility tree, and usually contain the surrounding section's heading (an `h1` – `h6` element) and optional subheading, but this is **not** required.
-
-### Historical Usage
-
-The `<header>` element originally existed at the very beginning of HTML for headings. It is seen in [the very first website](http://info.cern.ch/). At some point, headings became [`<h1>` through `<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements), allowing `<header>` to be free to fill a different role.
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Examples
-
-### Page Header
-
-```html
-<header>
-  <h1>Main Page Title</h1>
-  <img src="mdn-logo-sm.png" alt="MDN logo" />
-</header>
-```
-
-### Article Header
-
-```html
-<article>
-  <header>
-    <h2>The Planet Earth</h2>
-    <p>
-      Posted on Wednesday, <time datetime="2017-10-04">4 October 2017</time> by
-      Jane Smith
-    </p>
-  </header>
-  <p>
-    We live on a planet that's blue and green, with so many things still unseen.
-  </p>
-  <p><a href="https://example.com/the-planet-earth/">Continue reading…</a></p>
-</article>
-```
-
-## Accessibility
-
-The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role) landmark when its context is the {{HTMLElement('body')}} element. The HTML header element is not considered a banner landmark when it is descendant of an {{HTMLElement('article')}}, {{HTMLElement('aside')}}, {{HTMLElement('main')}}, {{HTMLElement('nav')}}, or {{HTMLElement('section')}} element.
 
 ## Specifications
 

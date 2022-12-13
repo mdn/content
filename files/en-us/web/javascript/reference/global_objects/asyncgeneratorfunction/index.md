@@ -14,6 +14,8 @@ Note that `AsyncGeneratorFunction` is _not_ a global object. It can be obtained 
 const AsyncGeneratorFunction = async function* () {}.constructor;
 ```
 
+{{EmbedInteractiveExample("pages/js/async-functionasterisk-function.html")}}
+
 ## Constructor
 
 - {{jsxref("AsyncGeneratorFunction/AsyncGeneratorFunction", "AsyncGeneratorFunction()")}}

@@ -14,14 +14,14 @@ spec-urls: https://w3c.github.io/reporting/#intro
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Reporting API")}}
 
-The Reporting API provides a generic reporting mechanism for web applications to use to make reports available based on various platform features (for example [Content Security Policy](/en-US/docs/Web/HTTP/CSP), [Feature-Policy](/en-US/docs/Web/HTTP/Headers/Feature-Policy), or feature deprecation reports) in a consistent manner.
+The Reporting API provides a generic reporting mechanism for web applications to use to make reports available based on various platform features (for example [Content Security Policy](/en-US/docs/Web/HTTP/CSP), [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy), or feature deprecation reports) in a consistent manner.
 
 ## Concepts and usage
 
-There are a number of different features and problems on the web platform that generate information useful to web developers when they are trying to fix bugs or improve their websites in other ways. Such information can include:
+There are several different features and problems on the web platform that generate information useful to web developers when they are trying to fix bugs or improve their websites in other ways. Such information can include:
 
 - [Content Security Policy](/en-US/docs/Web/HTTP/CSP) violations.
-- [Feature-Policy](/en-US/docs/Web/HTTP/Headers/Feature-Policy) violations.
+- [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) violations.
 - Deprecated feature usage (when you are using something that will stop working soon in browsers).
 - Occurrence of crashes.
 - Occurrence of user-agent interventions (when the browser blocks something your code is trying to do because it is deemed a security risk for example, or just plain annoying, like auto-playing audio).
@@ -131,4 +131,4 @@ Chrome is also working on an implementation: [information about Chrome implement
 ## See also
 
 - [Content Security Policy](/en-US/docs/Web/HTTP/CSP)
-- [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy)
+- [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy)

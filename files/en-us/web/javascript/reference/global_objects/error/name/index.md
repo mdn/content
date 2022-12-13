@@ -10,7 +10,13 @@ browser-compat: javascript.builtins.Error.name
 
 {{JSRef}}
 
-The **`name`** property represents a name for the type of error. The initial value is "Error".
+The **`name`** data property of `Error.prototype` is shared by all {{jsxref("Error")}} instances. It represents the name for the type of error. For `Error.prototype.name`, the initial value is `"Error"`. Subclasses like {{jsxref("TypeError")}} and {{jsxref("SyntaxError")}} provide their own `name` properties.
+
+## Value
+
+A string. For `Error.prototype.name`, the initial value is `"Error"`.
+
+{{js_property_attributes(1, 0, 1)}}
 
 ## Description
 

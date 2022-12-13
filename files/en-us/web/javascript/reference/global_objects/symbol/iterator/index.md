@@ -16,6 +16,12 @@ The well-known **`Symbol.iterator`** symbol specifies the default iterator for a
 
 {{EmbedInteractiveExample("pages/js/symbol-iterator.html")}}
 
+## Value
+
+The well-known symbol `@@iterator`.
+
+{{js_property_attributes(0, 0, 0)}}
+
 ## Description
 
 Whenever an object needs to be iterated (such as at the beginning of a `for...of` loop), its `@@iterator` method is called with no arguments, and the returned **iterator** is used to obtain the values to be iterated.
@@ -29,8 +35,6 @@ Some built-in types have a default iteration behavior, while other types (such a
 - {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}
 
 See also [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) for more information.
-
-{{js_property_attributes(0,0,0)}}
 
 ## Examples
 
