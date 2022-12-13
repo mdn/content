@@ -1,6 +1,7 @@
 ---
 title: Intl.Locale.prototype.calendars
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendars
+page-type: javascript-instance-accessor-property
 tags:
   - Internationalization
   - Intl

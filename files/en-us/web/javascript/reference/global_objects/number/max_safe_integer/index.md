@@ -1,6 +1,7 @@
 ---
 title: Number.MAX_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
+page-type: javascript-static-data-property
 tags:
   - ECMAScript 2015
   - JavaScript

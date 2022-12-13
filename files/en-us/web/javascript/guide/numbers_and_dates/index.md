@@ -1,6 +1,7 @@
 ---
 title: Numbers and dates
 slug: Web/JavaScript/Guide/Numbers_and_dates
+page-type: guide
 tags:
   - Calculation
   - Dates

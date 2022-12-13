@@ -1,6 +1,7 @@
 ---
 title: DataView.prototype.setFloat64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat64
+page-type: javascript-instance-method
 tags:
   - DataView
   - JavaScript

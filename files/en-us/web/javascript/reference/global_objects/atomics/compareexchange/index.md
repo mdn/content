@@ -1,6 +1,7 @@
 ---
 title: Atomics.compareExchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange
+page-type: javascript-static-method
 tags:
   - Atomics
   - JavaScript

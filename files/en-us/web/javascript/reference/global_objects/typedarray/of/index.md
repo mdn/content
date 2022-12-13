@@ -1,6 +1,7 @@
 ---
 title: TypedArray.of()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/of
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript

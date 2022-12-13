@@ -1,6 +1,7 @@
 ---
 title: 'SyntaxError: missing ) after argument list'
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
+page-type: javascript-error
 tags:
   - Error
   - Errors

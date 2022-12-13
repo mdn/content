@@ -1,6 +1,7 @@
 ---
 title: Intl.Collator.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
+page-type: javascript-instance-method
 tags:
   - Collator
   - Internationalization

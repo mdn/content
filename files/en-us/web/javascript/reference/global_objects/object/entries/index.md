@@ -1,6 +1,7 @@
 ---
 title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
+page-type: javascript-static-method
 tags:
   - JavaScript
   - Method

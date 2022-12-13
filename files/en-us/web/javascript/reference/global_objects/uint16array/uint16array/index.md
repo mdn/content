@@ -1,6 +1,7 @@
 ---
 title: Uint16Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array
+page-type: javascript-constructor
 tags:
   - Constructor
   - JavaScript

@@ -1,6 +1,7 @@
 ---
 title: Using promises
 slug: Web/JavaScript/Guide/Using_promises
+page-type: guide
 tags:
   - Guide
   - Intermediate
