@@ -74,7 +74,7 @@ Other [attributes](/en-US/docs/Web/HTML/Element/meta#attributes) that are availa
 
 ## The effect of interactive UI widgets
 
-Interative UI widgets of the browser can influence the size of the page’s viewports. The most common such UI widget is a virtual keyboard. To control which resize behavior the browser should use, set the `interactive-widget` property.
+Interactive UI widgets of the browser can influence the size of the page's viewports. The most common such UI widget is a virtual keyboard. To control which resize behavior the browser should use, set the `interactive-widget` property.
 
 Allowed values are:
 
