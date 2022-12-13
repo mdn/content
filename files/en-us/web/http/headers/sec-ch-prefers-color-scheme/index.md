@@ -17,7 +17,7 @@ browser-compat: http.headers.Sec-CH-Prefers-Color-Scheme
 
 The **`Sec-CH-Prefers-Color-Scheme`** [user preference media feature client hint](/en-US/docs/Web/HTTP/Client_hints#user_preference_media_features_client_hints) request header provides the user's preference for light or dark color themes. A user indicates their preference through an operating system setting (for example, light or dark mode) or a user agent setting.
 
-If a server signals to a client via the {{httpheader("Accept-CH")}} header that it accepts `Sec-CH-Prefers-Color-Scheme`, the client can then respond with this header to indicate the user's preference for a specific color scheme. The server can send the client appropriately adapted content, for example, images or CSS, to display light text on dark background on subsequent rendered content.
+If a server signals to a client via the {{httpheader("Accept-CH")}} header that it accepts `Sec-CH-Prefers-Color-Scheme`, the client can then respond with this header to indicate the user's preference for a specific color scheme. The server can send the client appropriately adapted content including images or CSS to display a light or dark mode for subsequent rendered content.
 
 This header is modeled on the {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} media query.
 
