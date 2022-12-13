@@ -45413,20 +45413,6 @@
     "modified": "2020-10-15T22:07:42.503Z",
     "contributors": ["sideshowbarker", "Wuzzel", "jpmedley"]
   },
-  "Web/API/Long_Tasks_API": {
-    "modified": "2020-10-15T21:54:38.944Z",
-    "contributors": [
-      "bradley27783",
-      "Wind1808",
-      "wbamberg",
-      "Sheppy",
-      "estelle",
-      "greglockwood",
-      "fscholz",
-      "tocretpa",
-      "jpmedley"
-    ]
-  },
   "Web/API/MIDIAccess": {
     "modified": "2020-10-15T21:35:25.882Z",
     "contributors": [
