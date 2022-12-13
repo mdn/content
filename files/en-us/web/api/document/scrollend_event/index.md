@@ -34,7 +34,7 @@ A generic {{domxref("Event")}}.
 
 ### Using Document `scrollend` with an event listener
 
-The following example shows how to use the `scrollend` with an event listener to detect when the user has stopped scrolling the document.
+The following example shows how to use the `scrollend` event with an event listener to detect when the user has stopped scrolling the document.
 In the example, there is content in the embedded iframe that is taller and wider than the iframe itself, so scrolling within the iframe in both directions is possible.
 When the user stops scrolling, the `scrollend` event fires:
 
