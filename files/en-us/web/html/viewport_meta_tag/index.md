@@ -47,6 +47,8 @@ The basic properties of the "viewport" `<meta>` tag include:
   - : Controls how much zoom in is allowed on the page. Any value less than 3 fails accessibility. Minimum: `0.1`. Maximum: `10`. Default: `10`. Negative values: ignored.
 - `user-scalable`
   - : Controls whether zoom in and zoom out actions are allowed on the page. Valid values: `0`, `1`, `yes`, or `no`. Default: `1`, which is the same as `yes`. Setting the value to `0`, which is the same as `no`, is against Web Content Accessibility Guidelines (WCAG).
+- `interactive-widget`
+  - : Specifies the effect that interactive UI widgets, such as a virtual keyboard, have on the page's viewports. Valid values: `resizes-visual`, `resizes-content`, or `overlays-content`. Default: `resizes-visual`.
 
 > **Warning:** Usage of `user-scalable=no` can cause accessibility issues to users with visual impairments such as low vision. [WCAG](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) requires a minimum of 2x scaling; however, the best practice is to enable a 5x zoom.
 
@@ -70,6 +72,21 @@ For pages that set an initial or maximum scale, this means the `width` property 
 
 Other [attributes](/en-US/docs/Web/HTML/Element/meta#attributes) that are available are `minimum-scale`, `maximum-scale`, and `user-scalable`. These properties affect the initial scale and width, as well as limiting changes in zoom level.
 
+## The effect of interactive UI widgets
+
+Interactive UI widgets of the browser can influence the size of the page's viewports. The most common such UI widget is a virtual keyboard. To control which resize behavior the browser should use, set the `interactive-widget` property.
+
+Allowed values are:
+
+- `resizes-visual`
+  - : The {{Glossary("visual viewport")}} gets resized by the interactive widget.
+- `resizes-content`
+  - : The {{Glossary("viewport")}} gets resized by the interactive widget.
+- `overlays-content`
+  - : Neither the {{Glossary("viewport")}} nor the {{Glossary("visual viewport")}} gets resized by the interactive widget.
+
+When the {{Glossary("viewport")}} gets resized, the initial [containing block](/en-US/docs/Web/CSS/Containing_block) also gets resized, thereby affecting the computed size of [viewport units](/en-US/docs/Web/CSS/length#viewport-percentage_lengths).
+
 ## Common viewport sizes for mobile and tablet devices
 
 If you want to know what mobile and tablet devices have which viewport widths, there is a comprehensive list of [mobile and tablet viewport sizes here](https://experienceleague.adobe.com/docs/target/using/experiences/vec/mobile-viewports.html). This gives information such as viewport width on portrait and landscape orientation as well as physical screen size, operating system and the pixel density of the device.
@@ -77,3 +94,7 @@ If you want to know what mobile and tablet devices have which viewport widths, t
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- Article: [Prepare for viewport resize behavior changes coming to Chrome on Android](https://developer.chrome.com/blog/viewport-resize-behavior/)
