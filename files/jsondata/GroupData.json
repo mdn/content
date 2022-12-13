@@ -784,13 +784,6 @@
       "interfaces": ["Keyboard", "KeyboardLayoutMap"],
       "methods": ["Navigator.keyboard"]
     },
-    "Layout Instability API": {
-      "overview": ["Layout Instability API"],
-      "interfaces: ": ["LayoutShift", "LayoutShiftAttribution"],
-      "methods": [],
-      "properties": [],
-      "events": []
-    },
     "Media Capabilities API": {
       "overview": ["Media Capabilities API"],
       "guides": [
@@ -946,6 +939,8 @@
       "interfaces": [
         "EventCounts",
         "LargestContentfulPaint",
+        "LayoutShift",
+        "LayoutShiftAttribution",
         "Performance",
         "PerformanceEntry",
         "PerformanceElementTiming",

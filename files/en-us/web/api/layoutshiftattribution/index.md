@@ -15,9 +15,9 @@ tags:
 browser-compat: api.LayoutShiftAttribution
 ---
 
-{{APIRef("Layout Instability API")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
-The `LayoutShiftAttribution` interface of the [Layout Instability API](/en-US/docs/Web/API/Layout_Instability_API) provides debugging information about elements which have shifted.
+The `LayoutShiftAttribution` interface provides debugging information about elements which have shifted.
 
 Instances of `LayoutShiftAttribution` are returned in an array by calling {{domxref("LayoutShift.sources")}}.
 
@@ -41,7 +41,9 @@ The following example finds the element that is causing the largest layout shift
 
 ```js
 function getCLSDebugTarget(entries) {
-  const largestEntry = entries.reduce((a, b) => a && a.value > b.value ? a : b);
+  const largestEntry = entries.reduce((a, b) =>
+    a && a.value > b.value ? a : b
+  );
   if (largestEntry?.sources?.length) {
     const largestSource = largestEntry.sources.reduce((a, b) => {
       const area = (el) => el.previousRect.width * el.previousRect.height;

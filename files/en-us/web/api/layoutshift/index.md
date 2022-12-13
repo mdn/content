@@ -14,9 +14,15 @@ tags:
 browser-compat: api.LayoutShift
 ---
 
-{{APIRef("Layout Instability API")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
-The `LayoutShift` interface of the [Layout Instability API](/en-US/docs/Web/API/Layout_Instability_API) provides insights into the stability of web pages based on movements of the elements on the page.
+The `LayoutShift` interface of the provides insights into the stability of web pages based on movements of the elements on the page.
+
+## Description
+
+A layout shift happens when any element that is visible in the viewport changes its start position between two frames. These elements are described as being **unstable**, and contribute to a poor [Cumulative Layout Shift (CLS)](https://web.dev/cls/) score, indicating a lack of visual stability.
+
+The Layout Instability API provides a way to measure and report on these layout shifts. All tools for debugging layout shifts, including those in DevTools, use this API. The API can also be used to observe and debug layout shifts by logging the information to the console, to send the data to a server endpoint, or to Google Analytics.
 
 {{InheritanceDiagram}}
 
@@ -49,24 +55,24 @@ try {
   let cumulativeLayoutShiftScore = 0;
 
   const observer = new PerformanceObserver((list) => {
-  for (const entry of list.getEntries()) {
-    // Only count layout shifts without recent user input.
-    if (!entry.hadRecentInput) {
-      cumulativeLayoutShiftScore += entry.value;
+    for (const entry of list.getEntries()) {
+      // Only count layout shifts without recent user input.
+      if (!entry.hadRecentInput) {
+        cumulativeLayoutShiftScore += entry.value;
+      }
     }
-  }
   });
 
-  observer.observe({type: 'layout-shift', buffered: true});
+  observer.observe({ type: "layout-shift", buffered: true });
 
-  document.addEventListener('visibilitychange', () => {
-  if (document.visibilityState === 'hidden') {
-    // Force any pending records to be dispatched.
-    observer.takeRecords();
-    observer.disconnect();
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") {
+      // Force any pending records to be dispatched.
+      observer.takeRecords();
+      observer.disconnect();
 
-    console.log('CLS:', cumulativeLayoutShiftScore);
-  }
+      console.log("CLS:", cumulativeLayoutShiftScore);
+    }
   });
 } catch (e) {
   // Do nothing if the browser doesn't support this API.
