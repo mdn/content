@@ -1,6 +1,7 @@
 ---
 title: Segments.prototype.containing()
 slug: >-
+page-type: javascript-instance-method
   Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing
 tags:
   - Internationalization

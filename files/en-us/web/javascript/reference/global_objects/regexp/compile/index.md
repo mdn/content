@@ -1,6 +1,7 @@
 ---
 title: RegExp.prototype.compile()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
+page-type: javascript-instance-method
 tags:
   - Deprecated
   - JavaScript

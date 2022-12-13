@@ -1,6 +1,7 @@
 ---
 title: Intl.NumberFormat.prototype.formatRangeToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRangeToParts
+page-type: javascript-instance-method
 tags:
   - Internationalization
   - Intl

@@ -1,6 +1,7 @@
 ---
 title: Intl.RelativeTimeFormat.prototype.resolvedOptions()
 slug: >-
+page-type: javascript-instance-method
   Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions
 tags:
   - Internationalization
