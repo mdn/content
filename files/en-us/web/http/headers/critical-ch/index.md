@@ -14,7 +14,7 @@ browser-compat: http.headers.Critical-CH
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`Critical-CH`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user_preference_media_features_client_hints) response header is used along with {{HttpHeader("Accept-CH")}} to specify that accepted client hints are also [critical client hints](/en-US/docs/Web/HTTP/Client_hints#critical_client_hints).
+The **`Critical-CH`** [client hint](/en-US/docs/Web/HTTP/Client_hints) response header is used along with {{HttpHeader("Accept-CH")}} to specify that accepted client hints are also [critical client hints](/en-US/docs/Web/HTTP/Client_hints#critical_client_hints).
 
 User agents receiving a response with `Critical-CH` must check if the indicated critical headers were sent in the original request. If not, the user agent will retry the request along with the critical headers rather than render the page. This approach ensures that client preferences set using critical client hints are always used, even if not included in the first request, or following server configuration changes.
 
