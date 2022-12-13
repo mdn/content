@@ -1,6 +1,7 @@
 ---
 title: eval()
 slug: Web/JavaScript/Reference/Global_Objects/eval
+page-type: javascript-function
 tags:
   - Evaluating JavaScript
   - JavaScript

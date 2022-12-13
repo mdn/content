@@ -1,6 +1,7 @@
 ---
 title: Object.prototype.__proto__
 slug: Web/JavaScript/Reference/Global_Objects/Object/proto
+page-type: javascript-instance-accessor-property
 tags:
   - Deprecated
   - ECMAScript 2015
