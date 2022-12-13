@@ -14,6 +14,8 @@ browser-compat: javascript.builtins.Symbol.valueOf
 
 The **`valueOf()`** method returns the primitive value of a Symbol object.
 
+{{EmbedInteractiveExample("pages/js/symbol-prototype-valueof.html")}}
+
 ## Syntax
 
 ```js-nolint

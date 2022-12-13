@@ -1,5 +1,5 @@
 ---
-title: Using Promises
+title: Using promises
 slug: Web/JavaScript/Guide/Using_promises
 tags:
   - Guide
