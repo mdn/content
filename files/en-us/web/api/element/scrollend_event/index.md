@@ -18,7 +18,7 @@ For detecting when scrolling inside a Document is complete, see the {{domxref("D
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}} or set an event handler property.
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
 addEventListener("scrollend", (event) => {});
