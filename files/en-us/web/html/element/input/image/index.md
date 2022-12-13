@@ -316,7 +316,7 @@ Here, `object-position` is configured to draw the image in the top-right corner 
         <a href="/en-US/docs/Web/HTML/Element/input#formaction"><code>formaction</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#formenctype"><code>formenctype</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#formmethod"><code>formmethod</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#formmethod"><code>formnovalidate</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#formnovalidate"><code>formnovalidate</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#formtarget"><code>formtarget</code></a>
       </td>
     </tr>
