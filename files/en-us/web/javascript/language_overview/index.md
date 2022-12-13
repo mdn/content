@@ -1,6 +1,7 @@
 ---
 title: JavaScript language overview
 slug: Web/JavaScript/Language_Overview
+page-type: guide
 tags:
   - Guide
   - Intermediate

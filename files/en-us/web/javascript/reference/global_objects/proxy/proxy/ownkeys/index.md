@@ -1,6 +1,7 @@
 ---
 title: handler.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript

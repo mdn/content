@@ -26,8 +26,6 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 
 - {{domxref("SVGImageElement.href")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given {{SVGElement("image")}} element.
-- {{domxref("SVGImageElement.crossOrigin")}}
-  - : A string corresponding to the {{SVGAttr("crossorigin")}} attribute of the given {{SVGElement("image")}} element.
 - {{domxref("SVGImageElement.decoding")}}
   - : A string representing a hint given to the browser on how it should decode the image.
 - {{domxref("SVGImageElement.height")}} {{ReadOnlyInline}}

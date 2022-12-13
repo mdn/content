@@ -1,6 +1,7 @@
 ---
 title: <glyph>
 slug: Web/SVG/Element/glyph
+page-type: svg-element
 tags:
   - Element
   - Reference

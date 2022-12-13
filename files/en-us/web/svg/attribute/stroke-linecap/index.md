@@ -1,6 +1,7 @@
 ---
 title: stroke-linecap
 slug: Web/SVG/Attribute/stroke-linecap
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

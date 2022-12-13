@@ -1,6 +1,7 @@
 ---
 title: String.fromCodePoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript

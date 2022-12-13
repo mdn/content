@@ -1,6 +1,7 @@
 ---
 title: restart
 slug: Web/SVG/Attribute/restart
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

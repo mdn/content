@@ -21,14 +21,14 @@ The {{domxref("element/contentvisibilityautostatechanged_event", "contentvisibil
 
 ## Constructor
 
-- {{domxref("ContentVisibilityAutoStateChangedEvent.ContentVisibilityAutoStateChangedEvent", "ContentVisibilityAutoStateChangedEvent()")}}
+- {{domxref("ContentVisibilityAutoStateChangedEvent.ContentVisibilityAutoStateChangedEvent", "ContentVisibilityAutoStateChangedEvent()")}} {{Experimental_Inline}}
   - : Creates a new `ContentVisibilityAutoStateChangedEvent` object instance.
 
 ## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("Event")}}._
 
-- {{domxref("ContentVisibilityAutoStateChangedEvent.skipped", "skipped")}} {{ReadOnlyInline}}
+- {{domxref("ContentVisibilityAutoStateChangedEvent.skipped", "skipped")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `true` if the user agent is skipping the element's rendering, or `false` otherwise.
 
 ## Examples

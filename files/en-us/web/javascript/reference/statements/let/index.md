@@ -1,6 +1,7 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
+page-type: javascript-statement
 tags:
   - ECMAScript 2015
   - JavaScript

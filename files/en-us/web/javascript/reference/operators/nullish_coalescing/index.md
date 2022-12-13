@@ -1,6 +1,7 @@
 ---
 title: Nullish coalescing operator (??)
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature

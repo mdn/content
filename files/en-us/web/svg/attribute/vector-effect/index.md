@@ -1,6 +1,7 @@
 ---
 title: vector-effect
 slug: Web/SVG/Attribute/vector-effect
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

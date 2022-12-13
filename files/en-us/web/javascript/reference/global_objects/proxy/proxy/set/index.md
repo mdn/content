@@ -1,6 +1,7 @@
 ---
 title: handler.set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript

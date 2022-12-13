@@ -1,6 +1,7 @@
 ---
 title: Bitwise XOR assignment (^=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment
+page-type: javascript-operator
 tags:
   - Assignment operator
   - JavaScript

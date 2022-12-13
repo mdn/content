@@ -1,6 +1,7 @@
 ---
 title: Number.isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
+page-type: javascript-static-method
 tags:
   - JavaScript
   - Method

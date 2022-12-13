@@ -1,6 +1,7 @@
 ---
 title: Operator precedence
 slug: Web/JavaScript/Reference/Operators/Operator_Precedence
+page-type: guide
 tags:
   - Guide
   - JavaScript
