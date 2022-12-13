@@ -49,7 +49,7 @@ The operands in the expression may be any {{cssxref("&lt;length&gt;")}} syntax v
 - Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables _may_ be treated as if `auto` had been specified.
 - It is permitted to nest `calc()` functions, in which case the inner ones are treated as simple parentheses.
 - For lengths, you can't use `0` to mean `0px` (or another length unit); instead, you must use the version with the unit: `margin-top: calc(0px + 20px);` is valid, while `margin-top: calc(0 + 20px);` is invalid.
-- The `calc()` function cannot directly substitute the numeric value for percentage types, for instance `calc(100 / 4)%` is invalid, while `calc(100% / 4)` is valid.
+- The `calc()` function cannot directly substitute the numeric value for percentage types; for instance `calc(100 / 4)%` is invalid, while `calc(100% / 4)` is valid.
 
 ### Formal syntax
 
