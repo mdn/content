@@ -1,6 +1,7 @@
 ---
 title: Intl.Locale.prototype.hourCycle
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle
+page-type: javascript-instance-accessor-property
 tags:
   - Internationalization
   - Intl

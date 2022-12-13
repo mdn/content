@@ -1,6 +1,7 @@
 ---
 title: arguments.callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
+page-type: javascript-instance-data-property
 tags:
   - Functions
   - JavaScript
