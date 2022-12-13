@@ -1,6 +1,7 @@
 ---
 title: throw
 slug: Web/JavaScript/Reference/Statements/throw
+page-type: javascript-statement
 tags:
   - Exception
   - JavaScript

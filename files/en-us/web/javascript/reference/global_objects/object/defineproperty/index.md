@@ -1,6 +1,7 @@
 ---
 title: Object.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
+page-type: javascript-static-method
 tags:
   - ECMAScript 5
   - JavaScript

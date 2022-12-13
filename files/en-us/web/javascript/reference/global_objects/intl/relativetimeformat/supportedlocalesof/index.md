@@ -1,6 +1,7 @@
 ---
 title: Intl.RelativeTimeFormat.supportedLocalesOf()
 slug: >-
+page-type: javascript-static-method
   Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf
 tags:
   - Internationalization

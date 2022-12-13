@@ -1,6 +1,7 @@
 ---
 title: Math.floor()
 slug: Web/JavaScript/Reference/Global_Objects/Math/floor
+page-type: javascript-static-method
 tags:
   - JavaScript
   - Math

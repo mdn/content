@@ -1,6 +1,7 @@
 ---
 title: Object.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
+page-type: javascript-static-method
 tags:
   - ECMAScript 5
   - JavaScript

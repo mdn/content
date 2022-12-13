@@ -1,6 +1,7 @@
 ---
 title: The arguments object
 slug: Web/JavaScript/Reference/Functions/arguments
+page-type: javascript-language-feature
 tags:
   - Functions
   - JavaScript

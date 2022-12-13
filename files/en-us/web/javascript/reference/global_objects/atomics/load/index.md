@@ -1,6 +1,7 @@
 ---
 title: Atomics.load()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/load
+page-type: javascript-static-method
 tags:
   - Atomics
   - JavaScript
