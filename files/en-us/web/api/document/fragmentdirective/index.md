@@ -20,7 +20,7 @@ A {{domxref("FragmentDirective")}} object.
 
 ## Examples
 
-Try running the following in Chrome devtools, in a tab with matched text fragments:
+Try running the following in a supporting browser's devtools, in a tab with one or more matched text fragments:
 
 ```js
 document.fragmentDirective
