@@ -1,8 +1,8 @@
 ---
 title: FinalizationRegistry() constructor
 slug: >-
-page-type: javascript-constructor
   Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
+page-type: javascript-constructor
 tags:
   - Constructor
   - FinalizationRegistry

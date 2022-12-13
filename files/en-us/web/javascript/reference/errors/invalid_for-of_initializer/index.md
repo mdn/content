@@ -1,8 +1,8 @@
 ---
 title: >-
   SyntaxError: a declaration in the head of a for-of loop can't have an
-page-type: javascript-error
   initializer
+page-type: javascript-error
 slug: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
 tags:
   - Error

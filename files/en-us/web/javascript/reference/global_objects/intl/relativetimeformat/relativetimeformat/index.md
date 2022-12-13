@@ -1,8 +1,8 @@
 ---
 title: Intl.RelativeTimeFormat() constructor
 slug: >-
-page-type: javascript-constructor
   Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat
+page-type: javascript-constructor
 tags:
   - Constructor
   - Internationalization
