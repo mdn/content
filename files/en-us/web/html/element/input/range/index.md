@@ -391,6 +391,12 @@ input[type="range"][orient="vertical"] {
         and {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
       </td>
     </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td>
+        {{ARIARole("slider")}}
+      </td>
+    </tr>
   </tbody>
 </table>
 

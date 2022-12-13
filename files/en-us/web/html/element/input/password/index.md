@@ -179,7 +179,7 @@ As with other textual entry controls, you can use the {{domxref("HTMLInputElemen
 ```js
 document.getElementById("selectAll").onclick = () => {
   document.getElementById("userPassword").select();
-}
+};
 ```
 
 #### Result
@@ -244,7 +244,7 @@ const current = document.getElementById("current");
 
 ssn.oninput = (event) => {
   current.textContent = ssn.value;
-}
+};
 ```
 
 #### Result
@@ -301,6 +301,10 @@ ssn.oninput = (event) => {
         and
         {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
       </td>
+    </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
     </tr>
   </tbody>
 </table>
