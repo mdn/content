@@ -53,7 +53,7 @@ You can also get and set the value in JavaScript using the input element's {{dom
 
 ```js
 const weekControl = document.querySelector('input[type="week"]');
-weekControl.value = '2017-W45';
+weekControl.value = "2017-W45";
 ```
 
 ## Additional attributes
@@ -293,32 +293,32 @@ The other part of the code that may be of interest is the feature detection code
 
 ```js
 // Get UI elements
-const nativePicker = document.querySelector('.nativeWeekPicker');
-const fallbackPicker = document.querySelector('.fallbackWeekPicker');
-const fallbackLabel = document.querySelector('.fallbackLabel');
+const nativePicker = document.querySelector(".nativeWeekPicker");
+const fallbackPicker = document.querySelector(".fallbackWeekPicker");
+const fallbackLabel = document.querySelector(".fallbackLabel");
 
-const yearSelect = document.querySelector('#year');
-const weekSelect = document.querySelector('#fallbackWeek');
+const yearSelect = document.querySelector("#year");
+const weekSelect = document.querySelector("#fallbackWeek");
 
 // Hide fallback initially
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
+fallbackPicker.style.display = "none";
+fallbackLabel.style.display = "none";
 
 // Test whether a new date input falls back to a text input or not
-const test = document.createElement('input');
+const test = document.createElement("input");
 
 try {
-  test.type = 'week';
+  test.type = "week";
 } catch (e) {
   console.log(e.description);
 }
 
 // If it does, run the code inside the if () {} block
-if ( test.type === 'text') {
+if (test.type === "text") {
   // Hide the native picker and show the fallback
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
+  nativePicker.style.display = "none";
+  fallbackPicker.style.display = "block";
+  fallbackLabel.style.display = "block";
 
   // populate the weeks dynamically
   populateWeeks();
@@ -327,8 +327,8 @@ if ( test.type === 'text') {
 function populateWeeks() {
   // Populate the week select with 52 weeks
   for (let i = 1; i <= 52; i++) {
-    const option = document.createElement('option');
-    option.textContent = (i < 10) ? `0${i}` : i;
+    const option = document.createElement("option");
+    option.textContent = i < 10 ? `0${i}` : i;
     weekSelect.appendChild(option);
   }
 }
@@ -381,6 +381,10 @@ function populateWeeks() {
         {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
         and {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
       </td>
+    </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
     </tr>
   </tbody>
 </table>
