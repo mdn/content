@@ -20,6 +20,8 @@ The **`<image>`** [HTML](/en-US/docs/Web/HTML) element is an ancient and poorly 
 
 Some browsers will attempt to automatically convert this into an {{HTMLElement("img")}} element, and may succeed if the {{htmlattrxref("src", "img")}} attribute is specified as well.
 
+<!-- ## Technical summary -->
+
 ## Specifications
 
 This does not appear to have been part of any formal specification.

@@ -1,6 +1,7 @@
 ---
 title: Remainder assignment (%=)
 slug: Web/JavaScript/Reference/Operators/Remainder_assignment
+page-type: javascript-operator
 tags:
   - Assignment operator
   - JavaScript

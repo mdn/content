@@ -1,6 +1,7 @@
 ---
 title: Array.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
+page-type: javascript-instance-method
 tags:
   - Array
   - ECMAScript 5

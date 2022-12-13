@@ -1,6 +1,7 @@
 ---
 title: keySplines
 slug: Web/SVG/Attribute/keySplines
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

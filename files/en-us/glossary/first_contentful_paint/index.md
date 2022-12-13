@@ -15,6 +15,6 @@ _The First Contentful Paint_ time stamp is when the browser first rendered any t
 
 - [First paint](/en-US/docs/Glossary/First_paint)
 - [`PerformancePaintTiming`](/en-US/docs/Web/API/PerformancePaintTiming)
-- [Largest Contentful API](/en-US/docs/Web/API/Largest_Contentful_Paint_API)
+- [Largest Contentful Paint](/en-US/docs/Glossary/Largest_contentful_paint)
 - [First meaningful paint](/en-US/docs/Glossary/first_meaningful_paint)
 - [First Contentful Paint](https://web.dev/fcp/) at web.dev

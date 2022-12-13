@@ -1,6 +1,7 @@
 ---
 title: Symbol.toPrimitive
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
+page-type: javascript-static-data-property
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -15,7 +16,11 @@ The **`Symbol.toPrimitive`** well-known symbol specifies a method that accepts a
 
 {{EmbedInteractiveExample("pages/js/symbol-toprimitive.html")}}
 
-{{js_property_attributes(0,0,0)}}
+## Value
+
+The well-known symbol `@@toPrimitive`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 

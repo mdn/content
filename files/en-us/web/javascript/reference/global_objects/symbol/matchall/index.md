@@ -1,6 +1,7 @@
 ---
 title: Symbol.matchAll
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
+page-type: javascript-static-data-property
 tags:
   - JavaScript
   - Property
@@ -18,7 +19,11 @@ For more information, see {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matc
 
 {{EmbedInteractiveExample("pages/js/symbol-matchall.html")}}
 
-{{js_property_attributes(0,0,0)}}
+## Value
+
+The well-known symbol `@@matchAll`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Examples
 

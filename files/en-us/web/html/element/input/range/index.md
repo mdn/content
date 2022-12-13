@@ -25,54 +25,6 @@ Because this kind of widget is imprecise, it should only be used if the control'
 
 If the user's browser doesn't support type `range`, it will fall back and treat it as a `{{HTMLElement('input/text', 'text')}}` input.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
-      <td>
-        A string containing the string representation
-        of the selected numeric value; use
-        {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}}
-        to get the value as a number.
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Supported common attributes</strong></td>
-      <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("max", "input")}},
-        {{htmlattrxref("min", "input")}}, and
-        {{htmlattrxref("step", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td>
-        <code>list</code>, <code>value</code>, and <code>valueAsNumber</code>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>DOM interface</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
-        and {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ### Validation
 
 There is no pattern validation available; however, the following forms of automatic validation are performed:
@@ -341,6 +293,56 @@ input[type="range"] {
 ```
 
 {{EmbedLiveSample("Putting_it_all_together", 200, 200)}}
+
+## Technical Summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>
+        A string containing the string representation
+        of the selected numeric value; use
+        {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}}
+        to get the value as a number.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+        {{htmlattrxref("autocomplete", "input")}},
+        {{htmlattrxref("list", "input")}},
+        {{htmlattrxref("max", "input")}},
+        {{htmlattrxref("min", "input")}}, and
+        {{htmlattrxref("step", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td>
+        <code>list</code>, <code>value</code>, and <code>valueAsNumber</code>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
+        and {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

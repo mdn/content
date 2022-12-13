@@ -12,7 +12,7 @@ tags:
 
 {{LearnSidebar}}
 
-There are some cases where the available native HTML form controls may seem like they are not enough. For example, if you need to [perform advanced styling](/en-US/docs/Learn/Forms/Advanced_form_styling) on some controls such as the {{HTMLElement("select")}} element or if you want to provide custom behaviors, you may consider building your own controls.
+There are some cases where the available native HTML form controls may seem like they are not enough. For example, if you need to [perform advanced styling](/en-US/docs/Learn/Forms/Advanced_form_styling) on some controls such as the {{HTMLElement("select")}} element, or if you want to provide custom behaviors, you may consider building your own controls.
 
 In this article, we will discuss how to build a custom control. To that end, we will work with an example: rebuilding the {{HTMLElement("select")}} element. We will also discuss how, when, and whether building your own control makes sense, and what to consider when building a control is a requirement.
 
@@ -73,7 +73,8 @@ Another fun example: what will happen if the user hits the up or down arrow keys
 
 We have to think a little further: what about the escape key? Pressing <kbd>Esc</kbd> key closes an open select. Remember, if you want to provide the same functionality as the existing native {{htmlelement('select')}}, it should behave the exact same way as the select for all users, from keyboard to mouse to touch to screen reader, and any other input device.
 
-In our example, the missing specifications are obvious so we will handle them, but it can be a real problem for exotic new controls. When it comes to standardized elements, of which the {{htmlelement('select')}} is one, the specification authors spent an inordinate amount of time specifying all interactions for every use case for every input device. Creating new controls is not that easy, especially if you are creating something that has not been done before, and therefore which nobody has the slightest idea of what the expected behaviors and interactions are. At least select has been done before, so we know how it should behave!
+In our example, the missing specifications are obvious so we will handle them, but it can be a real problem for exotic new controls. When it comes to standardized elements, of which the {{htmlelement('select')}} is one, the specification authors spent an inordinate amount of time specifying all interactions for every use case for every input device. Creating new controls is not that easy, especially if you are creating something that has not been done before, and therefore
+nobody has the slightest idea of what the expected behaviors and interactions are. At least select has been done before, so we know how it should behave!
 
 Designing new interactions is generally only an option for very large industry players who have enough reach that an interaction they create can become a standard. For example, Apple introduced the scroll wheel with the iPod in 2001. They had the market share to successfully introduce a completely new way of interacting with a device, something most device companies can't do.
 
@@ -87,11 +88,11 @@ It is best not to invent new user interactions. For any interaction you do add, 
 
 ## Defining the HTML structure and (some) semantics
 
-Now that the control's basic functionality has been decided upon, it's time to start building it. The first step is to define its HTML structure and to give it some basic semantics. Here is what we need to rebuild a {{HTMLElement("select")}} element:
+Now that the control's basic functionality has been decided upon, it's time to start building it. The first step is to define its HTML structure and give it some basic semantics. Here is what we need to rebuild a {{HTMLElement("select")}} element:
 
 ```html
 <!-- This is our main container for our control.
-     The tabindex attribute is what allows the user to focus the control.
+     The tabindex attribute is what allows the user to focus on the control.
      We'll see later that it's better to set it through JavaScript. -->
 <div class="select" tabindex="0">
   <!-- This container will be used to display the current value of the control -->
@@ -331,8 +332,8 @@ Before starting, it's important to remember **JavaScript in the browser is an un
 - The user has turned off JavaScript: This is unusual; very few people turn off JavaScript nowadays.
 - The script did not load: This is one of the most common cases, especially in the mobile world where the network is not very reliable.
 - The script is buggy: You should always consider this possibility.
-- The script is in conflict with a third party script: This can happen with tracking scripts or any bookmarklets the user uses.
-- The script is in conflict with, or is affected by, a browser extension (such as Firefox's [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) extension) or Chrome's [ScriptBlock](https://chrome.google.com/webstore/detail/scriptblock/hcdjknjpbnhdoabbngpmfekaecnpajba).
+- The script conflicts with a third-party script: This can happen with tracking scripts or any bookmarklets the user uses.
+- The script conflicts with, or is affected by, a browser extension (such as Firefox's [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) extension) or Chrome's [ScriptBlock](https://chrome.google.com/webstore/detail/scriptblock/hcdjknjpbnhdoabbngpmfekaecnpajba).
 - The user is using a legacy browser, and one of the features you require is not supported: This will happen frequently when you make use of cutting-edge APIs.
 - The user is interacting with the content before the JavaScript has been fully downloaded, parsed, and executed.
 
@@ -506,7 +507,7 @@ function highlightOption(select, option) {
 };
 ```
 
-You need these in order to handle the various states of the custom control.
+You need these to handle the various states of custom control.
 
 Next, we bind these functions to the appropriate events:
 
@@ -687,7 +688,7 @@ But wait a second, are we really done?
 
 We have built something that works and though we're far from a fully-featured select box, it works nicely. But what we've done is nothing more than fiddle with the DOM. It has no real semantics, and even though it looks like a select box, from the browser's point of view it isn't one, so assistive technologies won't be able to understand it's a select box. In short, this pretty new select box isn't accessible!
 
-Fortunately, there is a solution and it's called [ARIA](/en-US/docs/Web/Accessibility/ARIA). ARIA stands for "Accessible Rich Internet Application", and it's [a W3C specification](https://www.w3.org/TR/wai-aria/) specifically designed for what we are doing here: making web applications and custom controls accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states and properties as though the element we've just devised was the native element it tries to pass for. Using these attributes can be done by editing the HTML markup. We also update the ARIA attributes via JavaScript as the user updates their selected value.
+Fortunately, there is a solution and it's called [ARIA](/en-US/docs/Web/Accessibility/ARIA). ARIA stands for "Accessible Rich Internet Application", and it's [a W3C specification](https://www.w3.org/TR/wai-aria/) specifically designed for what we are doing here: making web applications and custom controls accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states, and properties as though the element we've just devised was the native element it tries to pass for. Using these attributes can be done by editing the HTML markup. We also update the ARIA attributes via JavaScript as the user updates their selected value.
 
 ### The `role` attribute
 
@@ -713,7 +714,7 @@ To support the [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role
 </div>
 ```
 
-> **Note:** Including both the `role` attribute and a `class` attribute is not necessary. Instead of using `.option` use the `[role="option"]` [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in your CSS .
+> **Note:** Including both the `role` attribute and a `class` attribute is not necessary. Instead of using `.option` use the `[role="option"]` [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in your CSS.
 
 ### The `aria-selected` attribute
 
@@ -825,7 +826,7 @@ We'll do a little styling of the radio button list (not the legend/fieldset) to 
 }
 ```
 
-With no JavaScript, and just a little bit of CSS, we are able to style the list of radio buttons to display only the checked item. When the focus is within the `<ul>` in the `<fieldset>`, the list opens up, and the up and down (and left and right) arrows work to select the previous and next items. Try it out:
+With no JavaScript, and just a little bit of CSS, we can style the list of radio buttons to display only the checked item. When the focus is within the `<ul>` in the `<fieldset>`, the list opens up, and the up and down (and left and right) arrows work to select the previous and next items. Try it out:
 
 {{EmbedLiveSample("An_alternative_approach_Using_radio_buttons",200,240)}}
 

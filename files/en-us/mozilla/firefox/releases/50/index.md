@@ -62,7 +62,7 @@ tags:
 
 ### Networking
 
-- When a error has happened during an asynchronous {{domxref("XMLHttpRequest")}}, the {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} method now returns an empty string ({{bug(1286744)}}).
+- When an error has happened during an asynchronous {{domxref("XMLHttpRequest")}}, the {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} method now returns an empty string ({{bug(1286744)}}).
 - Instead of returning a `NetworkError`, asynchronous {{domxref("XMLHttpRequest")}} that fails for CORS or other network constraints now raises an {{domxref("XMLHttpRequest/error_event", "error")}} that can be caught like any other error ({{bug(709991)}}).
 - {{domxref("XMLHttpRequest.getResponseHeader()")}} and {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} now also return empty headers by default. This can be controlled via the preference `network.http.keep_empty_response_headers_as_empty_string` ({{bug(918721)}}).
 - The `only-if-cached` option has been added to [`Request.cache`](/en-US/docs/Web/API/Request/cache) ({{bug(1272436)}}).

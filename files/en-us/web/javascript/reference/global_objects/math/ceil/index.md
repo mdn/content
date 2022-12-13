@@ -1,6 +1,7 @@
 ---
 title: Math.ceil()
 slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
+page-type: javascript-static-method
 tags:
   - JavaScript
   - Math

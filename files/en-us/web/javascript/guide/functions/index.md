@@ -1,6 +1,7 @@
 ---
 title: Functions
 slug: Web/JavaScript/Guide/Functions
+page-type: guide
 tags:
   - Beginner
   - Functions
