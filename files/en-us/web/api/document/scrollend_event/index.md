@@ -90,7 +90,7 @@ document.addEventListener("scrollend", (event) => {
 
 ### Using `onscrollend` event handler property
 
-The following example shows how to use `scrollend` event handler property to detect when the user has stopped scrolling the document.
+The following example shows how to use the `scrollend` event handler property to detect when the user has stopped scrolling the document.
 In the example, there is content in the embedded iframe that is taller and wider than the iframe itself, so scrolling within the iframe in both directions is possible.
 This builds on the first example, but uses `document.onscrollend` instead of an event listener:
 
