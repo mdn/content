@@ -16,7 +16,7 @@ browser-compat: api.LayoutShift
 
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
-The `LayoutShift` interface of the provides insights into the stability of web pages based on movements of the elements on the page.
+The `LayoutShift` interface of the provides insights into the layout stability of web pages based on movements of the elements on the page.
 
 ## Description
 
