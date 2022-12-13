@@ -83,7 +83,7 @@ Allowed values are:
 - `resizes-content`
   - : The {{Glossary("Viewport")}} gets resized by the interactive widget.
 - `overlays-content`
-  - : Nor the {{Glossary("Viewport")}} nor the {{Glossary("Visual viewport")}} gets resized by the interactive widget.
+  - : Neither the {{Glossary("Viewport")}} nor the {{Glossary("Visual viewport")}} gets resized by the interactive widget.
 
 When the {{Glossary("Viewport")}} gets resized the initial [containing block](/en-US/docs/Web/CSS/Containing_block) also gets resized, thereby affecting the computed size of [viewport units](/en-US/docs/Web/CSS/length#viewport-percentage_lengths).
 
