@@ -79,7 +79,7 @@ This section lists `page-type` values for pages under [Web/JavaScript](/en-US/do
 - `javascript-function`: a built-in function that isn't an object method, like [`encodeuri()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI).
 - `javascript-global-property`: a global property like [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN).
 - `javascript-instance-accessor-property`: an accessor property on an object instance, like [`Map.prototype.size`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/size).
-- `javascript-instance-data-property`: a data property on an object instance, like `Array`'s [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length).
+- `javascript-instance-data-property`: a data property on an object instance, like the [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length) property of `Array`.
 - `javascript-instance-method`: a method on an object instance, like [`Array.prototype.at()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at).
 - `javascript-language-feature`: a part of JavaScript syntax not fitting into another category, like [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters).
 - `javascript-namespace`: an object that is not instantiable and has only static members, like [`Math`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math).
