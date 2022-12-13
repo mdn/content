@@ -1,6 +1,7 @@
 ---
 title: Using classes
 slug: Web/JavaScript/Guide/Using_Classes
+page-type: guide
 tags:
   - Guide
   - Intermediate

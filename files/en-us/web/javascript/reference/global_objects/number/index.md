@@ -1,6 +1,7 @@
 ---
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
+page-type: javascript-class
 tags:
   - Class
   - JavaScript

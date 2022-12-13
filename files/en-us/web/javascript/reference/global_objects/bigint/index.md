@@ -1,6 +1,7 @@
 ---
 title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
+page-type: javascript-class
 tags:
   - BigInt
   - Class

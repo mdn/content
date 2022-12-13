@@ -1,6 +1,7 @@
 ---
 title: GeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
+page-type: javascript-class
 tags:
   - Constructor
   - ECMAScript 2015

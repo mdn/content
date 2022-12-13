@@ -1,6 +1,7 @@
 ---
 title: Grammar and types
 slug: Web/JavaScript/Guide/Grammar_and_types
+page-type: guide
 tags:
   - Guide
   - JavaScript
