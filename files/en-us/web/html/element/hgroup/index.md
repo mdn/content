@@ -11,7 +11,7 @@ browser-compat: html.elements.hgroup
 
 {{HTMLSidebar}}
 
-The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a heading and related content. It groups a single [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element with one or more [`<p>`](/en-US/docs/Web/HTML/Element/p).
+The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a heading and related content. It groups a single [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element with no or more [`<p>`](/en-US/docs/Web/HTML/Element/p).
 
 {{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
 
@@ -68,11 +68,9 @@ The `<hgroup>` presently has no strong accessibility semantics. The content of t
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        Zero or more {{HTMLElement("p")}} elements, followed by one
-        {{HTMLElement("h1")}}, {{HTMLElement("h2")}},
-        {{HTMLElement("h3")}}, {{HTMLElement("h4")}},
-        {{HTMLElement("h5")}}, or {{HTMLElement("h6")}} element,
-        followed by zero or more {{HTMLElement("p")}} elements.
+        One heading element({{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, 
+        {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, or {{HTMLElement("h6")}}),
+        followed by no or more {{HTMLElement("p")}} elements.
       </td>
     </tr>
     <tr>
