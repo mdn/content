@@ -1,6 +1,7 @@
 ---
 title: AsyncFunction() constructor
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction/AsyncFunction
+page-type: javascript-constructor
 tags:
   - Constructor
   - JavaScript

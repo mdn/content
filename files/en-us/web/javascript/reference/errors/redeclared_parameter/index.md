@@ -1,6 +1,7 @@
 ---
 title: 'SyntaxError: redeclaration of formal parameter "x"'
 slug: Web/JavaScript/Reference/Errors/Redeclared_parameter
+page-type: javascript-error
 tags:
   - Error
   - Errors

@@ -1,6 +1,7 @@
 ---
 title: Object.prototype.constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
+page-type: javascript-instance-data-property
 tags:
   - JavaScript
   - Object

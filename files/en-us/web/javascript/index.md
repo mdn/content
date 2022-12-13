@@ -1,6 +1,7 @@
 ---
 title: JavaScript
 slug: Web/JavaScript
+page-type: guide
 tags:
   - JavaScript
   - Landing
