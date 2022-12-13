@@ -18,6 +18,8 @@ The **`Critical-CH`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints
 
 User agents receiving a response with `Critical-CH` must check if the indicated critical headers were sent in the original request. If not, the user agent will retry the request along with the critical headers rather than render the page. This approach ensures that client preferences set using critical client hints are always used, even if not included in the first request, or following server configuration changes.
 
+Each header listed in the `Critical-CH` header should also be present in the `Accept-CH` and `Vary` headers.
+
 <table class="properties">
   <tbody>
     <tr>
