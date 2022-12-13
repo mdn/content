@@ -26,7 +26,7 @@ that was invoked to cause the form to be submitted.
 
 An element, indicating the element that sent
 the {{domxref("HTMLFormElement.submit_event", "submit")}} event to the form. While this
-is often an {{HTMLElement("input")}} element whose {{htmlattrxref("type","input")}} is `submit` or a {{HTMLElement("button")}} element whose {{htmlattrxref("type","input")}} is `submit`, it could be some other element which has initiated a
+is often an {{HTMLElement("input")}} element whose {{htmlattrxref("type","input")}} is `submit` or a {{HTMLElement("button")}} element whose {{htmlattrxref("type","button")}} is `submit` (or unspecified), it could be some other element which has initiated a
 submission process.
 
 If the submission was not triggered by a button of some kind, the value of `submitter` is `null`.
