@@ -143,7 +143,7 @@ This is one of the oddities of HTML.
 The `<input>` tag is a {{glossary("void element")}}, meaning that it doesn't need a closing tag.
 {{HTMLElement("textarea")}} is not a void element, meaning it should be closed with the proper ending tag.
 This has an impact on a specific feature of forms: the way you define the default value.
-To define the default value of an {{HTMLElement("input")}} element you have to use the [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute like this:
+To define the default value of an {{HTMLElement("input")}} element you have to use the {{htmlattrxref("value","input")}} attribute like this:
 
 ```html
 <input type="text" value="by default this element is filled with this text" />

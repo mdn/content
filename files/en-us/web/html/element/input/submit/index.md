@@ -35,8 +35,8 @@ browser-compat: html.elements.input.type_submit
     <tr>
       <td><strong>Supported common attributes</strong></td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Element/input#type"><code>type</code></a> and
-        <a href="/en-US/docs/Web/HTML/Element/input#value"><code>value</code></a>
+        {{htmlattrxref("type","input")}} and
+        {{htmlattrxref("value","input")}}
       </td>
     </tr>
     <tr>
@@ -56,7 +56,7 @@ browser-compat: html.elements.input.type_submit
 
 ## Value
 
-An `<input type="submit">` element's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string which is displayed as the button's label. Buttons do not have a true value otherwise.
+An `<input type="submit">` element's {{htmlattrxref("value","input")}} attribute contains a string which is displayed as the button's label. Buttons do not have a true value otherwise.
 
 ### Setting the value attribute
 
@@ -93,7 +93,7 @@ A string that identifies the encoding method to use when submitting the form dat
 - `application/x-www-form-urlencoded`
   - : This, the default value, sends the form data as a string after URL encoding the text using an algorithm such as {{jsxref("encodeURI", "encodeURI()")}}.
 - `multipart/form-data`
-  - : Uses the {{domxref("FormData")}} API to manage the data, allowing for files to be submitted to the server. You _must_ use this encoding type if your form includes any {{HTMLElement("input")}} elements of [`type`](/en-US/docs/Web/HTML/Element/input#type) `file` ([`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)).
+  - : Uses the {{domxref("FormData")}} API to manage the data, allowing for files to be submitted to the server. You _must_ use this encoding type if your form includes any {{HTMLElement("input")}} elements of {{htmlattrxref("type","input")}} `file` ([`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)).
 - `text/plain`
   - : Plain text; mostly useful only for debugging, so you can easily see the data that's to be submitted.
 

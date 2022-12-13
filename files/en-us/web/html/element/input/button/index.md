@@ -26,7 +26,7 @@ browser-compat: html.elements.input.type_button
 
 ### Button with a value
 
-An `<input type="button">` elements' [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string that is used as the button's label.
+An `<input type="button">` elements' {{htmlattrxref("value","input")}} attribute contains a string that is used as the button's label.
 
 ```html
 <input type="button" value="Click Me" />
@@ -316,8 +316,8 @@ draw();
     <tr>
       <td><strong>Supported common attributes</strong></td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Element/input#type"><code>type</code></a> and
-        <a href="/en-US/docs/Web/HTML/Element/input#value"><code>value</code></a>
+        {{htmlattrxref("type","input")}} and
+        {{htmlattrxref("value","input")}}
       </td>
     </tr>
     <tr>

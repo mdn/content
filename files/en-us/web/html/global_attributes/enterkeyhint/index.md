@@ -28,7 +28,7 @@ represents what the user should do next; typical actions are: sending text, inse
 If no `enterkeyhint` attribute is provided, the user agent might use contextual information from the
 [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode),
 [`type`](/en-US/docs/Web/HTML/Element/input#input_types),
-or [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern)
+or {{htmlattrxref("pattern","input")}}
 attributes to display a suitable enter key label (or icon).
 
 ### Values
@@ -108,5 +108,5 @@ The `enterkeyhint` attribute is an [enumerated](/en-US/docs/Glossary/Enumerated)
 - [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) global attribute
 - [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute
 - [`type`](/en-US/docs/Web/HTML/Element/input#input_types) and
-  [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attributes on
+  {{htmlattrxref("pattern","input")}} attributes on
   [`<input>`](/en-US/docs/Web/HTML/Element/input) elements
