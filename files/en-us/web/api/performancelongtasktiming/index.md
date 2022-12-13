@@ -96,3 +96,7 @@ observer.observe({ type: "longtask", buffered: true });
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("TaskAttributionTiming")}}
