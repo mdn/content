@@ -149,10 +149,10 @@ The HTML file looks like this:
 
   <body>
     <div id="popup-content">
-      <button class="button beast">Frog</button>
-      <button class="button beast">Turtle</button>
-      <button class="button beast">Snake</button>
-      <button class="button reset">Reset</button>
+      <button>Frog</button>
+      <button>Turtle</button>
+      <button>Snake</button>
+      <button type="reset">Reset</button>
     </div>
     <div id="error-content" class="hidden">
       <p>Can't beastify this web page.</p>
@@ -180,7 +180,7 @@ html, body {
   display: none;
 }
 
-.button {
+button {
   border: none;
   width: 100%;
   margin: 3% auto;
@@ -188,21 +188,18 @@ html, body {
   text-align: center;
   font-size: 1.5em;
   cursor: pointer;
-}
-
-.beast:hover {
-  background-color: #CFF2F2;
-}
-
-.beast {
   background-color: #E5F2F2;
 }
 
-.reset {
+button:hover {
+  background-color: #CFF2F2;
+}
+
+button[type="reset"] {
   background-color: #FBFBC9;
 }
 
-.reset:hover {
+button[type="reset"]:hover {
   background-color: #EAEA9D;
 }
 ```
@@ -278,15 +275,17 @@ function listenForClicks() {
      * Get the active tab,
      * then call "beastify()" or "reset()" as appropriate.
      */
-    if (e.target.classList.contains("beast")) {
-      browser.tabs
-        .query({ active: true, currentWindow: true })
-        .then(beastify)
-        .catch(reportError);
-    } else if (e.target.classList.contains("reset")) {
-      browser.tabs
-        .query({ active: true, currentWindow: true })
+    if (e.target.tagName !== "BUTTON" || !e.target.closest("#popup-content")) {
+      // Ignore when click is not on a button within <div id="popup-content">.
+      return;
+    } 
+    if (e.target.type === "reset") {
+      browser.tabs.query({active: true, currentWindow: true})
         .then(reset)
+        .catch(reportError);
+    } else {
+      browser.tabs.query({active: true, currentWindow: true})
+        .then(beastify)
         .catch(reportError);
     }
   });
@@ -319,8 +318,9 @@ A common reason the `browser.tabs.executeScript()` call might fail is that you c
 
 If executing the content script is successful, we call `listenForClicks()`. This listens for clicks on the popup.
 
-- If the click was on a button with `class="beast"`, then we call `beastify()`.
-- If the click was on a button with `class="reset"`, then we call `reset()`.
+- If the click was not on a button in the popup, we ignore it and do nothing.
+- If the click was on a button with `type="reset"`, then we call `reset()`.
+- If the click was on any other button in the popup, then we call `beastify()`.
 
 The `beastify()` function does three things:
 
