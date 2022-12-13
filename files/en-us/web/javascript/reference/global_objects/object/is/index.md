@@ -1,6 +1,7 @@
 ---
 title: Object.is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
+page-type: javascript-static-method
 tags:
   - Comparison
   - Condition

@@ -1,6 +1,7 @@
 ---
 title: Object initializer
 slug: Web/JavaScript/Reference/Operators/Object_initializer
+page-type: javascript-language-feature
 tags:
   - ECMAScript 2015
   - JSON

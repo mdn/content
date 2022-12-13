@@ -1,6 +1,7 @@
 ---
 title: Atomics.add()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/add
+page-type: javascript-static-method
 tags:
   - Atomics
   - JavaScript

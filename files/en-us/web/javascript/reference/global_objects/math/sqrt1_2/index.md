@@ -1,6 +1,7 @@
 ---
 title: Math.SQRT1_2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
+page-type: javascript-static-data-property
 tags:
   - JavaScript
   - Math

@@ -1,6 +1,7 @@
 ---
 title: String.fromCharCode()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
+page-type: javascript-static-method
 tags:
   - JavaScript
   - Method

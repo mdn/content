@@ -1,6 +1,7 @@
 ---
 title: class
 slug: Web/JavaScript/Reference/Statements/class
+page-type: javascript-statement
 tags:
   - Classes
   - Declaration

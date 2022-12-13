@@ -1,6 +1,7 @@
 ---
 title: Optional chaining (?.)
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
+page-type: javascript-operator
 tags:
   - Chaining
   - JavaScript

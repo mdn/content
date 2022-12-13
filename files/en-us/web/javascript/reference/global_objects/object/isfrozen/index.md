@@ -1,6 +1,7 @@
 ---
 title: Object.isFrozen()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
+page-type: javascript-static-method
 tags:
   - ECMAScript 5
   - JavaScript
