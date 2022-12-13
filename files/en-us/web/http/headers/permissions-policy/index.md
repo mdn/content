@@ -119,6 +119,9 @@ You can specify
 - {{httpheader('Permissions-Policy/idle-detection','idle-detection')}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to use the {{domxref("Idle Detection API", "Idle Detection API", "", "nocode")}} to detect when users are interacting with their devices, for example to report "available"/"away" status in chat applications.
 
+- {{httpheader('Permissions-Policy/local-fonts','local-fonts')}} {{Experimental_Inline}}
+  - : Controls whether the current document is allowed to gather data on the user's locally-installed fonts via the {{DOMxRef("Window.queryLocalFonts()")}} method (see also the {{domxref("Local Font Access API", "Local Font Access API", "", "nocode")}}).
+
 - {{httpheader('Permissions-Policy/magnetometer','magnetometer')}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to gather information about the orientation of the device through the {{DOMxRef("Magnetometer")}} interface.
 

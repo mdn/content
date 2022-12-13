@@ -229,6 +229,8 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Opens the Print Dialog to print the current document.
 - {{domxref("Window.prompt()")}}
   - : Returns the text entered by the user in a prompt dialog.
+- {{DOMxRef("Window.queryLocalFonts()")}}
+  - : Returns a {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} objects representing the font faces available locally.
 - {{domxref("Window.requestAnimationFrame()")}}
   - : Tells the browser that an animation is in progress, requesting that the browser schedule a repaint of the window for the next animation frame.
 - {{domxref("Window.requestIdleCallback()")}}
