@@ -28,6 +28,8 @@ It accepts an integer as a value, with different results depending on the intege
 
 Some focusable html-elements are determined (by [user agent](/en-US/docs/Glossary/User_agent) under hood) to have `tabindex` default value equals 0. These elements are an {{HTMLElement("a")}} and {{HTMLElement("area")}} with `href` attribute, {{HTMLElement("button")}}, {{HTMLElement("frame")}} {{deprecated_inline}}, {{HTMLElement("iframe")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}, or SVG {{SVGElement("a")}} element, or is a {{HTMLElement("summary")}} element that is a summary for its parent {{HTMLElement("details")}}. Developers shouldn't add the `tabindex` attribute to these elements only if they are going to change the default behavior.
 
+> **Warning:** The tabindex attribute must not be used on the {{HTMLElement("dialog")}} element.
+
 ## Accessibility concerns
 
 Avoid using the `tabindex` attribute in conjunction with non-[interactive content](/en-US/docs/Web/HTML/Content_categories#interactive_content) to make something intended to be interactive focusable by keyboard input. An example of this would be using a {{HTMLElement("div")}} element to describe a button, instead of the {{HTMLElement("button")}} element.
