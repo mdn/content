@@ -2,8 +2,8 @@
 title: >-
   SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //#
   instead
-page-type: javascript-error
 slug: Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma
+page-type: javascript-error
 tags:
   - Error
   - Errors
