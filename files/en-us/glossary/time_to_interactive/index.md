@@ -13,7 +13,7 @@ TTI, proposed by the Web Incubator Community Group in 2018, is intended to provi
 
 #### Caveat
 
-TTI is derived by leveraging information from the {{domxref("Long Tasks API")}}. Although available in some performance monitoring tools, TTI is not a part of any official web specification at the time of writing.
+TTI is derived by leveraging information from the [Long Task API](/en-US/docs/Web/API/PerformanceLongTaskTiming). Although available in some performance monitoring tools, TTI is not a part of any official web specification at the time of writing.
 
 ## See also
 

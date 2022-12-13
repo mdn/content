@@ -16,7 +16,7 @@ browser-compat: api.TaskAttributionTiming
 
 The **`TaskAttributionTiming`** interface returns information about the work involved in a long task and its associate frame context. The frame context, also called the container, is the iframe, embed or object that is being implicated, on the whole, for a long task.
 
-You usually work with `TaskAttributionTiming` objects when observing [long tasks](/en-US/Web/API/PerformanceLongTaskTiming).
+You usually work with `TaskAttributionTiming` objects when observing [long tasks](/en-US/docs/Web/API/PerformanceLongTaskTiming).
 
 `TaskAttributionTiming` inherits from {{domxref("PerformanceEntry")}}.
 
