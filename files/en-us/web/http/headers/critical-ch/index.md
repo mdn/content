@@ -14,9 +14,9 @@ browser-compat: http.headers.Critical-CH
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`Critical-CH`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user_preference_media_features_client_hints) response header is used along with {{HttpHeader("Accept-CH")}} to specify that accepted client hints are also [critical client hints](/en-US/docs/Web/HTTP/Client_hints#critical_client_hints) (a header in `Critical-CH` must also appear in `Accept-CH`).
+The **`Critical-CH`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user_preference_media_features_client_hints) response header is used along with {{HttpHeader("Accept-CH")}} to specify that accepted client hints are also [critical client hints](/en-US/docs/Web/HTTP/Client_hints#critical_client_hints).
 
-User agents receiving a response with `Critical-CH` must check if the indicated critical headers were sent in the original request. If not, the user agent will retry the request along with the critical headers rather than render the page. This approach ensures that client preferences set using critical client hints are always used, even if not included in the first request, or if the server configuration changes.
+User agents receiving a response with `Critical-CH` must check if the indicated critical headers were sent in the original request. If not, the user agent will retry the request along with the critical headers rather than render the page. This approach ensures that client preferences set using critical client hints are always used, even if not included in the first request, or following server configuration changes.
 
 <table class="properties">
   <tbody>
@@ -43,7 +43,7 @@ Critical-CH: <ch-list>
 
 - `<ch-list>`
 
-  - : A list of one or more comma-delimited client hint headers that the server considers critical client hints.
+  - : A list of one or more comma-delimited client hint headers that the server considers to be critical client hints.
 
 ## Examples
 
@@ -64,7 +64,8 @@ Vary: Sec-CH-Prefers-Reduced-Motion
 Critical-CH: Sec-CH-Prefers-Reduced-Motion
 ```
 
-> **Note:** We've also specified `Sec-CH-Prefers-Reduced-Motion` in the {{httpheader("Vary")}} header to indicate to the browser that the served content will differ based on this header value, even if the URL stays the same, so the browser shouldn't just use an existing cached response but instead should cache this response separately. Each header listed in the `Critical-CH` header should also be present in the `Accept-CH` and `Vary` headers.
+> **Note:** We've also specified `Sec-CH-Prefers-Reduced-Motion` in the {{httpheader("Vary")}} header to indicate that responses should be separately cached based on the value of this header (even if the URL stays the same). 
+> Each header listed in the `Critical-CH` header should also be present in the `Accept-CH` and `Vary` headers.
 
 The client automatically retries the request (due to `Critical-CH` being specified above), telling the server via `Sec-CH-Prefers-Reduced-Motion` that it has a user preference for reduced-motion animations:
 
