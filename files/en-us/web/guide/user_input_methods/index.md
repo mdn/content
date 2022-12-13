@@ -139,14 +139,14 @@ Here is an example that allows a section of content to be dragged.
 
 in which we:
 
-- Set the [`draggable`](/en-US/docs/Web/HTML/Global_attributes#draggable) attribute to true on the element that you wish to make draggable
+- Set the {{htmlattrxref("draggable")}} attribute to true on the element that you wish to make draggable
 - Add a listener for the [`dragstart`](/en-US/docs/Web/API/Document/dragstart_event) event and set the drag data within this listener
 
 > **Note:** You can find more information in the [MDN Drag & Drop documentation](/en-US/docs/Web/API/HTML_Drag_and_Drop_API).
 
 #### contentEditable
 
-In open web apps any DOM element can be made directly editable using the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute.
+In open web apps any DOM element can be made directly editable using the {{htmlattrxref("contenteditable")}} attribute.
 
 ```css hidden
 div {

@@ -17,7 +17,7 @@ Firefox 20 was released on April, 2nd 2013. This article provides information ab
 ### HTML
 
 - Support for the {{htmlattrxref("download", "a")}} attribute on the {{HTMLElement("a")}} and {{HTMLElement("area")}} element has been added ({{bug("676619")}}).
-- The value `auto` for the [global attribute](/en-US/docs/Web/HTML/Global_attributes) [`dir`](/en-US/docs/Web/HTML/Global_attributes#dir) has been implemented ({{bug("548206")}}).
+- The value `auto` for the [global attribute](/en-US/docs/Web/HTML/Global_attributes) {{htmlattrxref("dir")}} has been implemented ({{bug("548206")}}).
 - The [global attribute](/en-US/docs/Web/HTML/Global_attributes) [contextmenu](/en-US/docs/Web/HTML/Global_attributes/contextmenu) now works on Firefox for Android ({{bug("736321")}}).
 
 ### JavaScript
