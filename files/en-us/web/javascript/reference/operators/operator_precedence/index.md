@@ -264,7 +264,7 @@ Several notes about the table:
         {{jsxref("Operators/Property_Accessors", "Computed Member
                 Access","#Bracket_notation", 1)}}
       </td>
-      <td>n/a</td>
+      <td>left-to-right</td>
       <td><code>… [ … ]</code></td>
     </tr>
     <tr>
@@ -276,7 +276,7 @@ Several notes about the table:
       <td>
         <a href="/en-US/docs/Web/JavaScript/Guide/Functions">Function Call</a>
       </td>
-      <td>n/a</td>
+      <td>left-to-right</td>
       <td>
         <code>… ( … )</code>
       </td>
@@ -672,7 +672,7 @@ Several notes about the table:
           >Arrow (=>)</a
         >
       </td>
-      <td rowspan="4">n/a</td>
+      <td rowspan="4">right-to-left</td>
       <td><code>… => …</code></td>
     </tr>
     <tr>
