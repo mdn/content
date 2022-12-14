@@ -126,19 +126,19 @@ The math functions allow CSS numeric values to be written as mathematical expres
 
 ### Trigonometric functions
 
-- {{CSSxRef("sin")}} {{Experimental_Inline}}
+- {{CSSxRef("sin")}}
   - : Calculates the trigonometric sine of a number.
-- {{CSSxRef("cos")}} {{Experimental_Inline}}
+- {{CSSxRef("cos")}}
   - : Calculates the trigonometric cosine of a number.
-- {{CSSxRef("tan")}} {{Experimental_Inline}}
+- {{CSSxRef("tan")}}
   - : Calculates the trigonometric tangent of a number.
-- {{CSSxRef("asin")}} {{Experimental_Inline}}
+- {{CSSxRef("asin")}}
   - : Calculates the trigonometric inverse sine of a number.
-- {{CSSxRef("acos")}} {{Experimental_Inline}}
+- {{CSSxRef("acos")}}
   - : Calculates the trigonometric inverse cosine of a number.
-- {{CSSxRef("atan")}} {{Experimental_Inline}}
+- {{CSSxRef("atan")}}
   - : Calculates the trigonometric inverse tangent of a number.
-- {{CSSxRef("atan2")}} {{Experimental_Inline}}
+- {{CSSxRef("atan2")}}
   - : Calculates the trigonometric inverse tangent of two-numbers in a plane.
 
 ### Exponential functions
