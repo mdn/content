@@ -20,22 +20,35 @@ The `LayoutShift` interface of the provides insights into the layout stability o
 
 ## Description
 
-A layout shift happens when any element that is visible in the viewport changes its start position between two frames. These elements are described as being **unstable**, and contribute to a poor [Cumulative Layout Shift (CLS)](https://web.dev/cls/) score, indicating a lack of visual stability.
+A layout shift happens when any element that is visible in the viewport changes its position between two frames. These elements are described as being **unstable**, and contribute to a poor {{Glossary("Cumulative Layout Shift")}} (CLS) score, indicating a lack of visual stability.
 
-The Layout Instability API provides a way to measure and report on these layout shifts. All tools for debugging layout shifts, including those in DevTools, use this API. The API can also be used to observe and debug layout shifts by logging the information to the console, to send the data to a server endpoint, or to Google Analytics.
+The Layout Instability API provides a way to measure and report on these layout shifts. All tools for debugging layout shifts, including those in browser's developer tools, use this API. The API can also be used to observe and debug layout shifts by logging the information to the console, to send the data to a server endpoint, or to web page analytics.
 
 {{InheritanceDiagram}}
 
 ## Instance properties
 
+This interface extends the following {{domxref("PerformanceEntry")}} properties for `layout-shift` performance entry types by qualifying them as follows:
+
+- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Always returns `0` (the concept of duration does not apply to layout shifts).
+- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Always returns `"layout-shift"`
+- {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Always returns `"layout-shift"`
+- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time when the layout shift started.
+
+This interface also supports the following properties:
+
 - {{domxref("LayoutShift.value")}} {{Experimental_Inline}}
-  - : Returns the `impact fraction` (fraction of the viewport that was shifted) times the `distance fraction` (distance moved as a fraction of viewport).
+  - : Returns the layout shift score calculated by the impact fraction (fraction of the viewport that was shifted) times the distance fraction (distance moved as a fraction of viewport).
 - {{domxref("LayoutShift.hadRecentInput")}} {{Experimental_Inline}}
-  - : Returns `true` if there was a user input in the past 500 milliseconds.
+  - : Returns `true` if {{domxref("LayoutShift.lastInputTime", "lastInputTime")}} is less than 500 milliseconds in the past.
 - {{domxref("LayoutShift.lastInputTime")}} {{Experimental_Inline}}
-  - : Returns the time of the most recent user input.
+  - : Returns the time of the most recent excluding input or `0` if no excluding input has occurred.
 - {{domxref("LayoutShift.sources")}} {{Experimental_Inline}}
-  - : Returns an array of {{domxref('LayoutShiftAttribution')}} objects with information on the elements that were shifted.
+  - : Returns an array of {{domxref("LayoutShiftAttribution")}} objects with information on the elements that were shifted.
 
 ## Instance methods
 
@@ -44,39 +57,43 @@ The Layout Instability API provides a way to measure and report on these layout 
 
 ## Examples
 
+### Logging the current CLS score
+
 The following example shows how to capture layout shifts and log them to the console.
 
-Note that in this example data is only sent to the server when the user leaves the tab.
-
 ```js
-// Catch errors since some browsers throw when using the new `type` option.
-// https://bugs.webkit.org/show_bug.cgi?id=209216
-try {
-  let cumulativeLayoutShiftScore = 0;
+let cumulativeLayoutShiftScore = 0;
 
-  const observer = new PerformanceObserver((list) => {
-    for (const entry of list.getEntries()) {
-      // Only count layout shifts without recent user input.
-      if (!entry.hadRecentInput) {
-        cumulativeLayoutShiftScore += entry.value;
+const observer = new PerformanceObserver((list) => {
+  for (const entry of list.getEntries()) {
+    // Count layout shifts without recent user input only
+    if (!entry.hadRecentInput) {
+      cumulativeLayoutShiftScore += entry.value;
+      console.log("Current CLS value:", cumulativeLayoutShiftScore, entry);
+      if (entry.sources) {
+        for (const { node, curRect, prevRect } of entry.sources)
+          console.log("Shift source:", node, { curRect, prevRect });
       }
     }
-  });
+  }
+});
 
-  observer.observe({ type: "layout-shift", buffered: true });
+observer.observe({ type: "layout-shift", buffered: true });
+```
 
-  document.addEventListener("visibilitychange", () => {
-    if (document.visibilityState === "hidden") {
-      // Force any pending records to be dispatched.
-      observer.takeRecords();
-      observer.disconnect();
+### Measuring the final CLS score
 
-      console.log("CLS:", cumulativeLayoutShiftScore);
-    }
-  });
-} catch (e) {
-  // Do nothing if the browser doesn't support this API.
-}
+The final CLS score is taken at the time of the [`visibilitychange` event](/en-US/docs/Web/API/Document/visibilitychange_event) for which you can add an event handler.
+
+```js
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "hidden") {
+    // Force any pending records to be dispatched
+    observer.takeRecords();
+    observer.disconnect();
+    console.log("CLS:", cumulativeLayoutShiftScore);
+  }
+});
 ```
 
 ## Specifications
@@ -86,3 +103,8 @@ try {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("LayoutShiftAttribution")}}
+- {{Glossary("Cumulative Layout Shift")}}
