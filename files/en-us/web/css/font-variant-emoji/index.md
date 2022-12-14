@@ -38,7 +38,7 @@ The `font-variant-emoji` property is specified using a single keyword value from
 ### Values
 
 - `normal`
-  - : This keyword allows the User Agent (browser) to choose how to display the emoji, this often follows the operating system setting.
+  - : Allows a browser to choose how to display the emoji. This often follows the operating system setting.
 - `text`
   - : This keyword renders the emoji as if it were using the unicode text variation selector (`U+FE0E`).
 - `emoji`
