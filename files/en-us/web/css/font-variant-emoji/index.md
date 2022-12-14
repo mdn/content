@@ -12,11 +12,9 @@ browser-compat: css.properties.font-variant-emoji
 
 {{CSSRef}}
 
-The **`font-variant-emoji`** allows web authors to set a default presentation style for displaying emojis.
+The **`font-variant-emoji`** [CSS](/en-US/docs/Web/CSS) property specifies the default presentation style for displaying emojis.
 
-Traditionally this was done by appending a _Variation Selector_, either `U+FE0E` for text or `U+FE0F` for emoji, to the emoji codepoint.
-
-Only emojis listed as contributing to a [Unicode emoji presentation sequence](http://www.unicode.org/emoji/charts/emoji-variants.html) are affected by this property.
+Traditionally, this was done by appending a _Variation Selector_, `U+FE0E` for text and `U+FE0F` for emoji, to the emoji codepoint. Only emojis listed as contributing to a [Unicode emoji presentation sequence](http://www.unicode.org/emoji/charts/emoji-variants.html) are affected by this property.
 
 ## Syntax
 
