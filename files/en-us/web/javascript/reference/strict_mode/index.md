@@ -1,6 +1,7 @@
 ---
 title: Strict mode
 slug: Web/JavaScript/Reference/Strict_mode
+page-type: guide
 tags:
   - ECMAScript 5
   - Guide

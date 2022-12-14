@@ -1,6 +1,7 @@
 ---
 title: JavaScript data types and data structures
 slug: Web/JavaScript/Data_structures
+page-type: guide
 tags:
   - Beginner
   - Guide

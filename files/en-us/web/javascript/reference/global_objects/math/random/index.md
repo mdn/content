@@ -1,6 +1,7 @@
 ---
 title: Math.random()
 slug: Web/JavaScript/Reference/Global_Objects/Math/random
+page-type: javascript-static-method
 tags:
   - JavaScript
   - Math

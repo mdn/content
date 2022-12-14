@@ -1,6 +1,7 @@
 ---
 title: Atomics.store()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/store
+page-type: javascript-static-method
 tags:
   - Atomics
   - JavaScript

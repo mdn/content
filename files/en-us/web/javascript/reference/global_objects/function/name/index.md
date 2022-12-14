@@ -1,6 +1,7 @@
 ---
 title: Function.prototype.name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
+page-type: javascript-instance-data-property
 tags:
   - ECMAScript 2015
   - Function

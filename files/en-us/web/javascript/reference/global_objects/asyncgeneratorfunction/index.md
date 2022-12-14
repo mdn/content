@@ -1,6 +1,7 @@
 ---
 title: AsyncGeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction
+page-type: javascript-class
 browser-compat: javascript.builtins.AsyncGeneratorFunction
 ---
 
@@ -13,6 +14,8 @@ Note that `AsyncGeneratorFunction` is _not_ a global object. It can be obtained 
 ```js
 const AsyncGeneratorFunction = async function* () {}.constructor;
 ```
+
+{{EmbedInteractiveExample("pages/js/async-functionasterisk-function.html")}}
 
 ## Constructor
 

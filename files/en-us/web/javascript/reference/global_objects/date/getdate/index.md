@@ -1,6 +1,7 @@
 ---
 title: Date.prototype.getDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
+page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript

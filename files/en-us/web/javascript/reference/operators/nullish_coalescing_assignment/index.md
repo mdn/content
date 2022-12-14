@@ -1,6 +1,7 @@
 ---
 title: Nullish coalescing assignment (??=)
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
+page-type: javascript-operator
 tags:
   - Assignment operator
   - JavaScript

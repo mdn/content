@@ -1,6 +1,7 @@
 ---
 title: 'SyntaxError: invalid assignment left-hand side'
 slug: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
+page-type: javascript-error
 tags:
   - Error
   - Errors

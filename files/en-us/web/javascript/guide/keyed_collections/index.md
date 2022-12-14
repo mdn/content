@@ -1,6 +1,7 @@
 ---
 title: Keyed collections
 slug: Web/JavaScript/Guide/Keyed_collections
+page-type: guide
 tags:
   - Collections
   - Guide

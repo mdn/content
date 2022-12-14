@@ -1,6 +1,7 @@
 ---
 title: WeakSet
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet
+page-type: javascript-class
 tags:
   - Class
   - ECMAScript 2015

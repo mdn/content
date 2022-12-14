@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.length
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/length
+page-type: javascript-instance-accessor-property
 tags:
   - JavaScript
   - Property

@@ -101655,36 +101655,6 @@
       "fscholz"
     ]
   },
-  "Web/HTTP/Feature_Policy": {
-    "modified": "2020-10-18T22:29:08.695Z",
-    "contributors": [
-      "hamishwillee",
-      "mfuji09",
-      "Malvoz",
-      "old_morfey13",
-      "Sheppy",
-      "jpchase",
-      "leela52452",
-      "bershanskiy",
-      "ashleybooniphone",
-      "fscholz",
-      "jpmedley"
-    ]
-  },
-  "Web/HTTP/Feature_Policy/Using_Feature_Policy": {
-    "modified": "2020-10-01T23:00:16.945Z",
-    "contributors": [
-      "hamishwillee",
-      "Malvoz",
-      "Sheppy",
-      "chrisdavidmills",
-      "clelland",
-      "jpchase",
-      "fscholz",
-      "mfuji09",
-      "jpmedley"
-    ]
-  },
   "Web/HTTP/Headers": {
     "modified": "2020-11-16T08:22:37.817Z",
     "contributors": [
@@ -102450,147 +102420,6 @@
     "modified": "2020-10-15T21:48:40.215Z",
     "contributors": ["mfuji09", "fscholz", "Malvoz", "AndrzejSala", "meridius"]
   },
-  "Web/HTTP/Headers/Feature-Policy": {
-    "modified": "2020-10-15T22:07:47.010Z",
-    "contributors": [
-      "hamishwillee",
-      "mfuji09",
-      "sideshowbarker",
-      "bershanskiy",
-      "Malvoz",
-      "jpchase",
-      "Sheppy",
-      "pwdst",
-      "fscholz",
-      "jpmedley"
-    ]
-  },
-  "Web/HTTP/Headers/Feature-Policy/accelerometer": {
-    "modified": "2020-10-15T22:20:16.702Z",
-    "contributors": ["bershanskiy"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/ambient-light-sensor": {
-    "modified": "2020-10-15T22:20:15.626Z",
-    "contributors": ["verde79", "bershanskiy"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/autoplay": {
-    "modified": "2020-10-15T22:10:28.577Z",
-    "contributors": ["bershanskiy", "Sheppy", "fscholz"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/battery": {
-    "modified": "2020-10-15T22:24:54.886Z",
-    "contributors": ["mfuji09", "Malvoz", "bershanskiy"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/camera": {
-    "modified": "2020-10-15T22:10:24.420Z",
-    "contributors": ["bershanskiy", "Sheppy", "fscholz"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/display-capture": {
-    "modified": "2020-10-15T22:18:20.836Z",
-    "contributors": ["sideshowbarker", "bershanskiy", "Sheppy"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/document-domain": {
-    "modified": "2020-10-15T22:11:41.981Z",
-    "contributors": ["bershanskiy", "chrisdavidmills", "sideshowbarker"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/encrypted-media": {
-    "modified": "2020-10-15T22:10:28.002Z",
-    "contributors": ["mfuji09", "bershanskiy", "fscholz"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/fullscreen": {
-    "modified": "2020-10-15T22:07:59.873Z",
-    "contributors": [
-      "chrisdavidmills",
-      "bershanskiy",
-      "fscholz",
-      "mfuji09",
-      "jpmedley"
-    ]
-  },
-  "Web/HTTP/Headers/Feature-Policy/geolocation": {
-    "modified": "2020-10-15T22:07:59.720Z",
-    "contributors": ["fscholz", "mfuji09", "jpmedley", "jpchase"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/gyroscope": {
-    "modified": "2020-10-15T22:20:17.468Z",
-    "contributors": ["bershanskiy"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/layout-animations": {
-    "modified": "2020-10-15T22:20:14.846Z",
-    "contributors": ["bershanskiy"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/legacy-image-formats": {
-    "modified": "2020-10-15T22:20:12.416Z",
-    "contributors": ["bershanskiy"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/magnetometer": {
-    "modified": "2020-10-15T22:20:14.856Z",
-    "contributors": ["bershanskiy"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/microphone": {
-    "modified": "2020-10-15T22:08:02.300Z",
-    "contributors": ["fscholz", "mfuji09", "jpmedley"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/midi": {
-    "modified": "2020-10-15T22:10:24.122Z",
-    "contributors": ["mfuji09", "bershanskiy", "fscholz"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/oversized-images": {
-    "modified": "2020-10-15T22:20:15.081Z",
-    "contributors": ["bershanskiy"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/payment": {
-    "modified": "2020-10-15T22:10:32.310Z",
-    "contributors": ["mfuji09", "bershanskiy", "equalsJeffH", "fscholz"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/picture-in-picture": {
-    "modified": "2020-10-15T22:20:13.631Z",
-    "contributors": ["bershanskiy"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/publickey-credentials-get": {
-    "modified": "2020-10-15T22:21:51.682Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "bershanskiy",
-      "Sarayutppr",
-      "chrisdavidmills",
-      "Malvoz"
-    ]
-  },
-  "Web/HTTP/Headers/Feature-Policy/screen-wake-lock": {
-    "modified": "2020-10-15T22:31:49.481Z",
-    "contributors": ["bershanskiy"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/sync-xhr": {
-    "modified": "2020-10-15T22:20:17.874Z",
-    "contributors": ["bershanskiy"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/unoptimized-images": {
-    "modified": "2020-10-15T22:20:17.915Z",
-    "contributors": ["bershanskiy"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/unsized-media": {
-    "modified": "2020-10-15T22:20:17.118Z",
-    "contributors": ["mozdevcontrib", "bershanskiy"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/usb": {
-    "modified": "2020-10-15T22:20:16.110Z",
-    "contributors": ["bershanskiy"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/web-share": {
-    "modified": "2020-12-10T15:06:45.009Z",
-    "contributors": [
-      "bershanskiy",
-      "chrisdavidmills",
-      "hamishwillee",
-      "ericwilligers"
-    ]
-  },
-  "Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking": {
-    "modified": "2020-10-15T22:24:55.820Z",
-    "contributors": ["Manishearth", "sideshowbarker", "bershanskiy"]
-  },
   "Web/HTTP/Headers/Forwarded": {
     "modified": "2020-10-15T21:51:50.833Z",
     "contributors": [
@@ -102721,6 +102550,123 @@
       "fscholz",
       "teoli"
     ]
+  },
+  "Web/HTTP/Headers/Permissions-Policy": {
+    "modified": "2020-10-15T22:07:47.010Z",
+    "contributors": [
+      "hamishwillee",
+      "mfuji09",
+      "sideshowbarker",
+      "bershanskiy",
+      "Malvoz",
+      "jpchase",
+      "Sheppy",
+      "pwdst",
+      "fscholz",
+      "jpmedley"
+    ]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/accelerometer": {
+    "modified": "2020-10-15T22:20:16.702Z",
+    "contributors": ["bershanskiy"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/ambient-light-sensor": {
+    "modified": "2020-10-15T22:20:15.626Z",
+    "contributors": ["verde79", "bershanskiy"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/autoplay": {
+    "modified": "2020-10-15T22:10:28.577Z",
+    "contributors": ["bershanskiy", "Sheppy", "fscholz"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/battery": {
+    "modified": "2020-10-15T22:24:54.886Z",
+    "contributors": ["mfuji09", "Malvoz", "bershanskiy"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/camera": {
+    "modified": "2020-10-15T22:10:24.420Z",
+    "contributors": ["bershanskiy", "Sheppy", "fscholz"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/display-capture": {
+    "modified": "2020-10-15T22:18:20.836Z",
+    "contributors": ["sideshowbarker", "bershanskiy", "Sheppy"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/document-domain": {
+    "modified": "2020-10-15T22:11:41.981Z",
+    "contributors": ["bershanskiy", "chrisdavidmills", "sideshowbarker"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/encrypted-media": {
+    "modified": "2020-10-15T22:10:28.002Z",
+    "contributors": ["mfuji09", "bershanskiy", "fscholz"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/fullscreen": {
+    "modified": "2020-10-15T22:07:59.873Z",
+    "contributors": [
+      "chrisdavidmills",
+      "bershanskiy",
+      "fscholz",
+      "mfuji09",
+      "jpmedley"
+    ]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/geolocation": {
+    "modified": "2020-10-15T22:07:59.720Z",
+    "contributors": ["fscholz", "mfuji09", "jpmedley", "jpchase"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/gyroscope": {
+    "modified": "2020-10-15T22:20:17.468Z",
+    "contributors": ["bershanskiy"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/magnetometer": {
+    "modified": "2020-10-15T22:20:14.856Z",
+    "contributors": ["bershanskiy"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/microphone": {
+    "modified": "2020-10-15T22:08:02.300Z",
+    "contributors": ["fscholz", "mfuji09", "jpmedley"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/midi": {
+    "modified": "2020-10-15T22:10:24.122Z",
+    "contributors": ["mfuji09", "bershanskiy", "fscholz"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/payment": {
+    "modified": "2020-10-15T22:10:32.310Z",
+    "contributors": ["mfuji09", "bershanskiy", "equalsJeffH", "fscholz"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/picture-in-picture": {
+    "modified": "2020-10-15T22:20:13.631Z",
+    "contributors": ["bershanskiy"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/publickey-credentials-get": {
+    "modified": "2020-10-15T22:21:51.682Z",
+    "contributors": [
+      "sideshowbarker",
+      "fscholz",
+      "bershanskiy",
+      "Sarayutppr",
+      "chrisdavidmills",
+      "Malvoz"
+    ]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/screen-wake-lock": {
+    "modified": "2020-10-15T22:31:49.481Z",
+    "contributors": ["bershanskiy"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/usb": {
+    "modified": "2020-10-15T22:20:16.110Z",
+    "contributors": ["bershanskiy"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/web-share": {
+    "modified": "2020-12-10T15:06:45.009Z",
+    "contributors": [
+      "bershanskiy",
+      "chrisdavidmills",
+      "hamishwillee",
+      "ericwilligers"
+    ]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/xr-spatial-tracking": {
+    "modified": "2020-10-15T22:24:55.820Z",
+    "contributors": ["Manishearth", "sideshowbarker", "bershanskiy"]
   },
   "Web/HTTP/Headers/Pragma": {
     "modified": "2020-10-15T21:48:41.171Z",
@@ -103401,6 +103347,36 @@
       "arosenberg01",
       "tanya-marfel",
       "teoli"
+    ]
+  },
+  "Web/HTTP/Permissions_Policy": {
+    "modified": "2020-10-18T22:29:08.695Z",
+    "contributors": [
+      "hamishwillee",
+      "mfuji09",
+      "Malvoz",
+      "old_morfey13",
+      "Sheppy",
+      "jpchase",
+      "leela52452",
+      "bershanskiy",
+      "ashleybooniphone",
+      "fscholz",
+      "jpmedley"
+    ]
+  },
+  "Web/HTTP/Permissions_Policy/Using_Feature_Policy": {
+    "modified": "2020-10-01T23:00:16.945Z",
+    "contributors": [
+      "hamishwillee",
+      "Malvoz",
+      "Sheppy",
+      "chrisdavidmills",
+      "clelland",
+      "jpchase",
+      "fscholz",
+      "mfuji09",
+      "jpmedley"
     ]
   },
   "Web/HTTP/Protocol_upgrade_mechanism": {

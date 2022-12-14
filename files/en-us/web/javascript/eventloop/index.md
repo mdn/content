@@ -1,6 +1,7 @@
 ---
 title: The event loop
 slug: Web/JavaScript/EventLoop
+page-type: guide
 tags:
   - Advanced
   - Event Loop
