@@ -22,7 +22,7 @@ new CustomEvent(type, options)
 ### Parameters
 
 - `type`
-  - : A string providing the name of the event. Event names are case sensitive.
+  - : A string providing the name of the event. Event names are case-sensitive.
 - `options` {{optional_inline}}
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
     - `detail` {{optional_inline}}
