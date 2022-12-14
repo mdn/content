@@ -181,7 +181,7 @@ In `controller.html`:
       connection !== newConnection &&
       connection.state !== "closed"
     ) {
-      connection.onclosed = undefined;
+      connection.onclose = undefined;
       connection.close();
     }
 
