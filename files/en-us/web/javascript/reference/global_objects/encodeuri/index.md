@@ -1,6 +1,7 @@
 ---
 title: encodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURI
+page-type: javascript-function
 tags:
   - Encoding
   - JavaScript

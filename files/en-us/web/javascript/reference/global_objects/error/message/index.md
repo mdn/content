@@ -1,6 +1,7 @@
 ---
 title: Error.prototype.message
 slug: Web/JavaScript/Reference/Global_Objects/Error/message
+page-type: javascript-instance-data-property
 tags:
   - JavaScript
   - Property

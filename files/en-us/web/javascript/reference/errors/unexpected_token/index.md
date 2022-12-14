@@ -1,6 +1,7 @@
 ---
 title: 'SyntaxError: Unexpected token'
 slug: Web/JavaScript/Reference/Errors/Unexpected_token
+page-type: javascript-error
 tags:
   - Error
   - Errors

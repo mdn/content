@@ -47,7 +47,8 @@ The equipment may also include an accelerometer, barometer, or other sensors whi
 
 - {{domxref("navigator.xr")}}
 - {{domxref("XRSystem")}}
-- `Feature-Policy`: [`xr-spatial-tracking`](/en-US/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking)
+- {{domxref("XRPermissionStatus")}}
+- `Permissions-Policy`: [`xr-spatial-tracking`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/xr-spatial-tracking)
 
 ### Session
 

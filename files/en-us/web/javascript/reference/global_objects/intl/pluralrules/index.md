@@ -1,6 +1,7 @@
 ---
 title: Intl.PluralRules
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
+page-type: javascript-class
 tags:
   - Class
   - Internationalization

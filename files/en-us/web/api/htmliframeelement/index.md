@@ -47,7 +47,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.name")}}
   - : A string that reflects the {{htmlattrxref("name", "iframe")}} HTML attribute, containing a name by which to refer to the frame.
 - {{domxref("HTMLIFrameElement.featurePolicy")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns the {{domxref("FeaturePolicy")}} interface which provides a simple API for introspecting the feature policies applied to a specific document.
+  - : Returns the {{domxref("FeaturePolicy")}} interface which provides a simple API for introspecting the [Permissions Policies](/en-US/docs/Web/HTTP/Permissions_Policy) applied to a specific document.
 - {{domxref("HTMLIFrameElement.referrerPolicy")}}
   - : A string that reflects the {{htmlattrxref("referrerPolicy", "iframe")}} HTML attribute indicating which referrer to use when fetching the linked resource.
 - {{domxref("HTMLIFrameElement.sandbox")}}

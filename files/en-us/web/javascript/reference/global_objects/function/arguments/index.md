@@ -1,6 +1,7 @@
 ---
 title: Function.prototype.arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
+page-type: javascript-instance-accessor-property
 tags:
   - Deprecated
   - Function
