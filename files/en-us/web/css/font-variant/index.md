@@ -50,7 +50,7 @@ font-variant: unset;
 - `normal`
   - : Specifies a normal font face. Each longhand property has an initial value of `normal`.
 - `none`
-  - : Sets the value of the [`font-variant-ligatures`](/en-US/docs/Web/CSS/font-variant-ligatures) to `none` and the values of the other longhand property as `normal`, their initial value.
+  - : Sets the value of the [`font-variant-ligatures`](/en-US/docs/Web/CSS/font-variant-ligatures) as `none` and the values of the other longhand properties as `normal`, their initial value.
 - `<common-lig-values>`, `<discretionary-lig-values>`, `<historical-lig-values>`, `<contextual-alt-values>`
   - : Specifies the keywords related to the [`font-variant-ligatures`](/en-US/docs/Web/CSS/font-variant-ligatures) longhand property. The possible values are `common-ligatures`, `no-common-ligatures`, `discretionary-ligatures`, `no-discretionary-ligatures`, `historical-ligatures`, `no-historical-ligatures`, `contextual`, and `no-contextual`.
 - `stylistic()`, `historical-forms`, `styleset()`, `character-variant()`, `swash()`, `ornaments()`, `annotation()`
