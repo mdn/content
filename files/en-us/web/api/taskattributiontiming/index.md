@@ -27,7 +27,7 @@ You usually work with `TaskAttributionTiming` objects when observing [long tasks
 This interface extends the following {{domxref("PerformanceEntry")}} properties for event timing performance entry types by qualifying them as follows:
 
 - {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Always returns `0` as `duration` is not applicable for this interface.
+  - : Always returns `0`, as `duration` is not applicable for this interface.
 - {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Always returns `taskattribution`.
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}} {{Experimental_Inline}}
