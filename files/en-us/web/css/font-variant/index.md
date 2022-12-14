@@ -48,7 +48,7 @@ font-variant: unset;
 ### Values
 
 - `normal`
-  - : Specifies a normal font face; each of the longhand properties has an initial value of normal. Longhand properties of `font-variant` are: [`font-variant-caps`](/en-US/docs/Web/CSS/font-variant-caps), [`font-variant-numeric`](/en-US/docs/Web/CSS/font-variant-numeric), [`font-variant-alternates`](/en-US/docs/Web/CSS/font-variant-alternates), [`font-variant-ligatures`](/en-US/docs/Web/CSS/font-variant-ligatures), [`font-variant-east-asian`](/en-US/docs/Web/CSS/font-variant-east-asian), [`font-variant-position`](/en-US/docs/Web/CSS/font-variant-position) and [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji).
+  - : Specifies a normal font face. Each longhand property has an initial value of `normal`.
 - `none`
   - : Sets the value of the [`font-variant-ligatures`](/en-US/docs/Web/CSS/font-variant-ligatures) to `none` and the values of the other longhand property as `normal`, their initial value.
 - `<common-lig-values>`, `<discretionary-lig-values>`, `<historical-lig-values>`, `<contextual-alt-values>`
