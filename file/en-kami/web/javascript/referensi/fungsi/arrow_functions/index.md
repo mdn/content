@@ -3,7 +3,7 @@ title: Arrow function expressions
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
 page-type: javascript-language-feature
 tags:
-  - ECMAScript 2015
+  - ECMAScript 2022
   - Functions
   - Intermediate
   - JavaScript
