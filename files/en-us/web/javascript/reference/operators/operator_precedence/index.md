@@ -672,11 +672,12 @@ Several notes about the table:
           >Arrow (=>)</a
         >
       </td>
-      <td rowspan="4">right-to-left</td>
+      <td>right-to-left</td>
       <td><code>… => …</code></td>
     </tr>
     <tr>
       <td>{{jsxref("Operators/yield", "yield")}}</td>
+      <td rowspan="3">n/a</td>
       <td><code>yield …</code></td>
     </tr>
     <tr>
