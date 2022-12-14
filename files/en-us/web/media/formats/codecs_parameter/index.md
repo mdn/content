@@ -24,9 +24,9 @@ For that reason, the `codecs` parameter can be added to the MIME type describing
 
 This guide briefly examines the syntax of the media type `codecs` parameter and how it's used with the MIME type string to provide details about the contents of audio or video media beyond indicating the container type.
 
-## General syntax
+## Container format MIME types
 
-A basic MIME media type is expressed by stating the type of media (`audio`, `video`, etc.), then a slash character (`/`), then the container format used to contain the media:
+The MIME type for a container format is expressed by stating the type of media (`audio`, `video`, etc.), then a slash character (`/`), then the format used to contain the media:
 
 - `audio/mpeg`
   - : An audio file using the [MPEG](/en-US/docs/Web/Media/Formats/Containers#mpeg) file type, such as an MP3.
@@ -37,9 +37,11 @@ A basic MIME media type is expressed by stating the type of media (`audio`, `vid
 - `video/quicktime`
   - : A video file in Apple's [QuickTime](/en-US/docs/Web/Media/Formats/Containers#quicktime) format. As noted elsewhere, this format was once commonly used on the web but no longer is, since it required a plugin to use.
 
-However, each of these MIME types is vague. All of these file types support a variety of codecs, and those codecs may have any number of profiles, levels, and other configuration factors. For this reason, you can add the `codecs` parameter to the media type.
+However, each of these MIME types is vague. All of these file types support a variety of codecs, and those codecs may have any number of profiles, levels, and other configuration factors. For this reason, you may want to include the `codecs` parameter along with the media type.
 
-To do so, append a semicolon (`;`) followed by `codecs=` and then the string describing the format of the contents of the file. Some media types only let you specify the names of the codecs to use, while others allow you to specify various constraints on those codecs as well. You can specify multiple codecs by separating them with commas.
+## Basic syntax
+
+You can add the `codecs` parameter to the media type. To do so, append a semicolon (`;`) followed by `codecs=` and then the string describing the format of the contents of the file. Some media types only let you specify the names of the codecs to use, while others allow you to specify various constraints on those codecs as well. You can specify multiple codecs by separating them with commas.
 
 - `audio/ogg; codecs=vorbis`
   - : An [Ogg](/en-US/docs/Web/Media/Formats/Containers#ogg) file containing a [Vorbis](/en-US/docs/Web/Media/Formats/Audio_codecs#vorbis) audio track.

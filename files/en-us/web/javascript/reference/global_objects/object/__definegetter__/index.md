@@ -1,6 +1,7 @@
 ---
 title: Object.prototype.__defineGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
+page-type: javascript-instance-method
 tags:
   - Deprecated
   - JavaScript

@@ -1,6 +1,7 @@
 ---
 title: super
 slug: Web/JavaScript/Reference/Operators/super
+page-type: javascript-language-feature
 tags:
   - Classes
   - ECMAScript 2015

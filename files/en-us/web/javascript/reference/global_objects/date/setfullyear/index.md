@@ -1,6 +1,7 @@
 ---
 title: Date.prototype.setFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
+page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript

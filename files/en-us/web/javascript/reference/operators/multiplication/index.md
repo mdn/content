@@ -1,6 +1,7 @@
 ---
 title: Multiplication (*)
 slug: Web/JavaScript/Reference/Operators/Multiplication
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature

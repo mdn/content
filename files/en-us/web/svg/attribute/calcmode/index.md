@@ -1,6 +1,7 @@
 ---
 title: calcMode
 slug: Web/SVG/Attribute/calcMode
+page-type: svg-attribute
 tags:
   - NeedsCompatTable
   - NeedsExample

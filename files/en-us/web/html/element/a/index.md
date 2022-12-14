@@ -30,7 +30,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - {{HTMLAttrDef("download")}}
 
-  - : Causes the browser to treat the linked URL as a download. Can be used with or without a value:
+  - : Causes the browser to treat the linked URL as a download. Can be used with or without a `filename` value:
 
     - Without a value, the browser will suggest a filename/extension, generated from various sources:
 
@@ -38,7 +38,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
       - The final segment in the URL [path](/en-US/docs/Web/API/URL/pathname)
       - The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), or {{domxref("Blob.type")}} for a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL))
 
-    - Defining a value suggests it as the filename. `/` and `\` characters are converted to underscores (`_`). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary.
+    - `filename`: defining a value suggests it as the filename. `/` and `\` characters are converted to underscores (`_`). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary.
 
     > **Note:**
     >
@@ -115,104 +115,6 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
   - : The shape of the hyperlink's region in an image map.
 
     > **Note:** Use the {{HTMLElement("area")}} element for image maps instead.
-
-## Properties
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >,
-        <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
-          >interactive content</a
-        >, palpable content.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model"
-          >Transparent</a
-        >, except that no descendant may be
-        <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
-          >interactive content</a
-        > or an
-        <a href="/en-US/docs/Web/HTML/Element/a"
-          >a</a
-        > element, and no descendant may have a specified
-        <a
-          href="/en-US/docs/Web/HTML/Global_attributes/tabindex"
-          >tabindex</a
-        > attribute.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >, or any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >flow content</a
-        >, but not other <code>&#x3C;a></code> elements.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        {{ARIARole("link")}} when <code>href</code> attribute is
-        present, otherwise
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >no corresponding role</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>
-        <p>When <code>href</code> attribute is present:</p>
-        <ul>
-          <li>{{ARIARole("button")}}</li>
-          <li>{{ARIARole("checkbox")}}</li>
-          <li>{{ARIARole("menuitem")}}</li>
-          <li>{{ARIARole("menuitemcheckbox")}}</li>
-          <li>{{ARIARole("menuitemradio")}}</li>
-          <li>{{ARIARole("option")}}</li>
-          <li>{{ARIARole("radio")}}</li>
-          <li>{{ARIARole("switch")}}</li>
-          <li>{{ARIARole("tab")}}</li>
-          <li>{{ARIARole("treeitem")}}</li>
-        </ul>
-        <p>When <code>href</code> attribute is not present:</p>
-        <ul>
-          <li>any</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{DOMxRef("HTMLAnchorElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Examples
 
@@ -489,6 +391,104 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
 
 - [Hand tremors and the giant-button-problem](https://axesslab.com/hand-tremors/)
 
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >,
+        <a
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
+          >interactive content</a
+        >, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model"
+          >Transparent</a
+        >, except that no descendant may be
+        <a
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
+          >interactive content</a
+        > or an
+        <a href="/en-US/docs/Web/HTML/Element/a"
+          >a</a
+        > element, and no descendant may have a specified
+        <a
+          href="/en-US/docs/Web/HTML/Global_attributes/tabindex"
+          >tabindex</a
+        > attribute.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >, or any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >flow content</a
+        >, but not other <code>&#x3C;a></code> elements.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        {{ARIARole("link")}} when <code>href</code> attribute is
+        present, otherwise
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >no corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>
+        <p>When <code>href</code> attribute is present:</p>
+        <ul>
+          <li>{{ARIARole("button")}}</li>
+          <li>{{ARIARole("checkbox")}}</li>
+          <li>{{ARIARole("menuitem")}}</li>
+          <li>{{ARIARole("menuitemcheckbox")}}</li>
+          <li>{{ARIARole("menuitemradio")}}</li>
+          <li>{{ARIARole("option")}}</li>
+          <li>{{ARIARole("radio")}}</li>
+          <li>{{ARIARole("switch")}}</li>
+          <li>{{ARIARole("tab")}}</li>
+          <li>{{ARIARole("treeitem")}}</li>
+        </ul>
+        <p>When <code>href</code> attribute is not present:</p>
+        <ul>
+          <li>any</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{DOMxRef("HTMLAnchorElement")}}</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Specifications
 
 {{Specifications}}
@@ -500,4 +500,6 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
 ## See also
 
 - {{HTMLElement("link")}} is similar to `<a>`, but for metadata hyperlinks that are invisible to users.
-- {{CSSxRef(":link")}} is a CSS pseudo-class that will match `<a>` elements with valid `href` attributes.
+- {{CSSxRef(":visited")}} is a CSS pseudo-class that will match `<a>` elements with URL in `href` attribute that was visited by the user in the past.
+- {{CSSxRef(":link")}} is a CSS pseudo-class that will match `<a>` elements with URL in `href` attribute that was not yet visited by the user.
+- {{CSSxRef(":any-link")}} is a CSS pseudo-class that will match `<a>` elements with `href` attribute.

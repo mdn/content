@@ -1,6 +1,7 @@
 ---
 title: direction
 slug: Web/SVG/Attribute/direction
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

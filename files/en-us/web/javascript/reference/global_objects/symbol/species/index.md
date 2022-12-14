@@ -1,6 +1,7 @@
 ---
 title: Symbol.species
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
+page-type: javascript-static-data-property
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -17,7 +18,11 @@ The well-known symbol **`Symbol.species`** specifies a function-valued property 
 
 {{EmbedInteractiveExample("pages/js/symbol-species.html")}}
 
-{{js_property_attributes(0,0,0)}}
+## Value
+
+The well-known symbol `@@species`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 
