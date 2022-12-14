@@ -1,6 +1,7 @@
 ---
 title: Promise.allSettled()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
+page-type: javascript-static-method
 tags:
   - JavaScript
   - Method

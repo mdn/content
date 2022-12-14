@@ -1,6 +1,7 @@
 ---
 title: Basic shapes
 slug: Web/SVG/Tutorial/Basic_Shapes
+page-type: guide
 tags:
   - Beginner
   - SVG

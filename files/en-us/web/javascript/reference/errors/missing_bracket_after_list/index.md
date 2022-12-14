@@ -1,6 +1,7 @@
 ---
 title: 'SyntaxError: missing ] after element list'
 slug: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
+page-type: javascript-error
 tags:
   - Error
   - Errors

@@ -1,6 +1,7 @@
 ---
 title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - ECMAScript 5

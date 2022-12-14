@@ -1,6 +1,7 @@
 ---
 title: Math.fround()
 slug: Web/JavaScript/Reference/Global_Objects/Math/fround
+page-type: javascript-static-method
 tags:
   - ES6
   - JavaScript

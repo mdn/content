@@ -1,6 +1,7 @@
 ---
 title: Math.log1p()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log1p
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript

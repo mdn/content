@@ -19,7 +19,7 @@ The extension must request the `"nativeMessaging"` [permission](/en-US/docs/Mozi
 
 After installing, the extension can exchange JSON messages with the native application. Use a set of functions in the {{WebExtAPIRef("runtime")}} API. On the native app side, messages are received using standard input (`stdin`) and sent using standard output (`stdout`).
 
-![](native-messaging.png)
+![Application flow: the native app JSON file resides on the users computer, providing resource inforamation to the native application. The read and write functions of the native application interact with the browser extension's runtime events.](native-messaging.png)
 
 Support for native messaging in extensions is mostly compatible with Chrome, with two main differences:
 

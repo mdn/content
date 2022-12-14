@@ -1,6 +1,7 @@
 ---
 title: unescape()
 slug: Web/JavaScript/Reference/Global_Objects/unescape
+page-type: javascript-function
 tags:
   - Deprecated
   - JavaScript

@@ -1,6 +1,7 @@
 ---
 title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
+page-type: javascript-static-method
 tags:
   - Array
   - ECMAScript 2015

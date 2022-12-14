@@ -1,6 +1,7 @@
 ---
 title: 'SyntaxError: missing } after property list'
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
+page-type: javascript-error
 tags:
   - Error
   - Errors

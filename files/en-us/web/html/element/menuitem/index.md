@@ -24,46 +24,6 @@ The **`<menuitem>`** [HTML](/en-US/docs/Web/HTML) element represents a command t
 
 A command can either be defined explicitly, with a textual label and optional icon to describe its appearance, or alternatively as an _indirect command_ whose behavior is defined by a separate element. Commands can also optionally include a checkbox or be grouped to share radio buttons. (Menu items for indirect commands gain checkboxes or radio buttons when defined against elements `<input type="checkbox">` and `<input type="radio">`.)
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>None.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>None; it is a {{Glossary("void element")}}.</td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>Must have a start tag and must not have an end tag.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        The {{HTMLElement("menu")}} element, where that element is in
-        the <em>popup menu</em> state. (If specified, the
-        <code>type</code> attribute of the {{HTMLElement("menu")}}
-        element must be <code>popup</code>; if missing, the parent element of
-        the {{HTMLElement("menu")}} must itself be a
-        {{HTMLElement("menu")}} in the <em>popup menu</em> state.)
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{DOMxRef("HTMLMenuItemElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes); in particular `title` can be used to describe the command, or provide usage hints.
@@ -132,6 +92,48 @@ div {
 ### Result
 
 {{EmbedLiveSample("Example", '100%', 80)}}
+
+## Technical Summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>None; it is a {{Glossary("void element")}}.</td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>Must have a start tag and must not have an end tag.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        The {{HTMLElement("menu")}} element, where that element is in
+        the <em>popup menu</em> state. (If specified, the
+        <code>type</code> attribute of the {{HTMLElement("menu")}}
+        element must be <code>popup</code>; if missing, the parent element of
+        the {{HTMLElement("menu")}} must itself be a
+        {{HTMLElement("menu")}} in the <em>popup menu</em> state.)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{DOMxRef("HTMLMenuItemElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

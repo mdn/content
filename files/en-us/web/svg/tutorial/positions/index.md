@@ -1,6 +1,7 @@
 ---
 title: Positions
 slug: Web/SVG/Tutorial/Positions
+page-type: guide
 tags:
   - Beginner
   - Coordinate systems
