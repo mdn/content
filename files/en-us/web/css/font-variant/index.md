@@ -60,7 +60,7 @@ font-variant: unset;
 - `<numeric-figure-values>`, `<numeric-spacing-values>`, `<numeric-fraction-values>`, `ordinal`, `slashed-zero`
   - : Specifies the keywords related to the [`font-variant-numeric`](/en-US/docs/Web/CSS/font-variant-numeric) longhand property. The possible values are: `lining-nums`, `oldstyle-nums`, `proportional-nums`, `tabular-nums`, `diagonal-fractions`, `stacked-fractions`, `ordinal`, and `slashed-zero`.
 - `<east-asian-variant-values>`, `<east-asian-width-values>`, `ruby`
-  - : Specifies the keywords related to the [`font-variant-east-asian`](/en-US/docs/Web/CSS/font-variant-east-asian) longhand property. The possible values are: `jis78`, `jis83`, `jis90`, `jis04`, `simplified`, `traditional`, `full-width`, `proportional-width`, `ruby`.
+  - : Specifies the keywords related to the [`font-variant-east-asian`](/en-US/docs/Web/CSS/font-variant-east-asian) longhand property. The possible values are `jis78`, `jis83`, `jis90`, `jis04`, `simplified`, `traditional`, `full-width`, `proportional-width`, and `ruby`.
 - `sub`, `super`
   - : Specifies the keywords and functions related to the [`font-variant-position`](/en-US/docs/Web/CSS/font-variant-position) longhand property.
 - `text`, `emoji`, `unicode`
