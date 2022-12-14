@@ -52,7 +52,7 @@ font-variant: unset;
 - `none`
   - : Sets the value of the [`font-variant-ligatures`](/en-US/docs/Web/CSS/font-variant-ligatures) to `none` and the values of the other longhand property as `normal`, their initial value.
 - `<common-lig-values>`, `<discretionary-lig-values>`, `<historical-lig-values>`, `<contextual-alt-values>`
-  - : Specifies the keywords related to the [`font-variant-ligatures`](/en-US/docs/Web/CSS/font-variant-ligatures) longhand property. The possible values are: `common-ligatures`, `no-common-ligatures`, `discretionary-ligatures`, `no-discretionary-ligatures`, `historical-ligatures`, `no-historical-ligatures`, `contextual`, and `no-contextual`.
+  - : Specifies the keywords related to the [`font-variant-ligatures`](/en-US/docs/Web/CSS/font-variant-ligatures) longhand property. The possible values are `common-ligatures`, `no-common-ligatures`, `discretionary-ligatures`, `no-discretionary-ligatures`, `historical-ligatures`, `no-historical-ligatures`, `contextual`, and `no-contextual`.
 - `stylistic()`, `historical-forms`, `styleset()`, `character-variant()`, `swash()`, `ornaments()`, `annotation()`
   - : Specifies the keywords and functions related to the [`font-variant-ligatures`](/en-US/docs/Web/CSS/font-variant-ligatures) longhand property.
 - `small-caps`, `all-small-caps`, `petite-caps`, `all-petite-caps`, `unicase`, `titling-caps`
