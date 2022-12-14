@@ -58,7 +58,7 @@ font-variant: unset;
 - `small-caps`, `all-small-caps`, `petite-caps`, `all-petite-caps`, `unicase`, `titling-caps`
   - : Specifies the keywords and functions related to the [`font-variant-caps`](/en-US/docs/Web/CSS/font-variant-caps) longhand property.
 - `<numeric-figure-values>`, `<numeric-spacing-values>`, `<numeric-fraction-values>`, `ordinal`, `slashed-zero`
-  - : Specifies the keywords related to the [`font-variant-numeric`](/en-US/docs/Web/CSS/font-variant-numeric) longhand property. The possible values are: `lining-nums`, `oldstyle-nums`, `proportional-nums`, `tabular-nums`, `diagonal-fractions`, `stacked-fractions`, `ordinal`, and `slashed-zero`.
+  - : Specifies the keywords related to the [`font-variant-numeric`](/en-US/docs/Web/CSS/font-variant-numeric) longhand property. The possible values are `lining-nums`, `oldstyle-nums`, `proportional-nums`, `tabular-nums`, `diagonal-fractions`, `stacked-fractions`, `ordinal`, and `slashed-zero`.
 - `<east-asian-variant-values>`, `<east-asian-width-values>`, `ruby`
   - : Specifies the keywords related to the [`font-variant-east-asian`](/en-US/docs/Web/CSS/font-variant-east-asian) longhand property. The possible values are `jis78`, `jis83`, `jis90`, `jis04`, `simplified`, `traditional`, `full-width`, `proportional-width`, and `ruby`.
 - `sub`, `super`
@@ -113,10 +113,3 @@ p.small {
 - [`text-transform`](/en-US/docs/Web/CSS/text-transform)
 - [`text-combine-upright`](/en-US/docs/Web/CSS/text-combine-upright)
 - [`text-orientation`](/en-US/docs/Web/CSS/text-orientation)
-- [`font-variant-alternates`](/en-US/docs/Web/CSS/font-variant-alternates)
-- [`font-variant-caps`](/en-US/docs/Web/CSS/font-variant-caps)
-- [`font-variant-east-asian`](/en-US/docs/Web/CSS/font-variant-east-asian)
-- [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji)
-- [`font-variant-ligatures`](/en-US/docs/Web/CSS/font-variant-ligatures)
-- [`font-variant-numeric`](/en-US/docs/Web/CSS/font-variant-numeric)
-- [`font-variant-position`](/en-US/docs/Web/CSS/font-variant-position)
