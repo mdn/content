@@ -128,7 +128,7 @@ This example shows how you can render an emoji in its `text` or `emoji` presenta
 
 {{Compat}}
 
-## See Also
+## See also
 
 - [font-variant](/en-US/docs/Web/CSS/font-variant)
 - [font-variant-alternates](/en-US/docs/Web/CSS/font-variant-alternates)
