@@ -42,7 +42,7 @@ The `font-variant-emoji` property is specified using a single keyword value from
 - `text`
   - : Renders the emoji as if it were using the unicode text variation selector (`U+FE0E`).
 - `emoji`
-  - : This keyword renders the emoji as if it were using the unicode emoji variation selector (`U+FE0F`).
+  - : Renders the emoji as if it were using the unicode emoji variation selector (`U+FE0F`).
 - `unicode`
   - : This keyword renders the emoji in accordance with the [Emoji_Presentation properties](https://www.unicode.org/reports/tr51/tr51-23.html#Emoji_Presentation). If the `U+FE0E` or `U+FE0F` variation selector is present then this will override this setting.
 
