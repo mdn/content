@@ -16,11 +16,13 @@ The **`tabindex`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) al
 
 It accepts an integer as a value, with different results depending on the integer's value:
 
-- A _negative value_ (the exact negative value doesn't actually matter, usually `tabindex="-1"`) means that the element is not reachable via sequential keyboard navigation, but could be focused with JavaScript (by calling the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method) or visually by clicking with the mouse.
+  > **Note:** If an HTML element renders and has `tabindex` attribute with any valid integer's value, so this element can be focused with JavaScript (by calling the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method) or visually by clicking with the mouse.
+
+- A _negative value_ (the exact negative value doesn't actually matter, usually `tabindex="-1"`) means that the element is not reachable via sequential keyboard navigation.
 
   > **Note:** `tabindex="-1"` may be useful for elements that should not be navigated to directly using the <kbd>Tab</kbd> key, but need to have keyboard focus set to them. Examples include a modal dialog window that should be focused when it is opened, or a form submission error message that should be immediately focused when an errant form is submitted.
 
-- `tabindex="0"` means that the element should be focusable in sequential keyboard navigation, after any positive tabindex values and its order is defined by the document's source order. The element could be focused with JavaScript (by calling the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method) or visually by clicking with the mouse.
+- `tabindex="0"` means that the element should be focusable in sequential keyboard navigation, after any positive tabindex values and its order is defined by the document's source order.
 - A _positive value_ means the element should be focusable in sequential keyboard navigation, with its order defined by the value of the number. That is, `tabindex="4"` is focused before `tabindex="5"` and `tabindex="0"`, but after `tabindex="3"`. If multiple elements share the same positive `tabindex` value, their order relative to each other follows their position in the document source. The maximum value for `tabindex` is 32767.
 - If the `tabindex` value is omitted the user agent will decide whether the element is focusable.
 
