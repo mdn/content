@@ -19,7 +19,7 @@ Traditionally, this was done by appending a _Variation Selector_, `U+FE0E` for t
 ## Syntax
 
 ```css
-/* Keyword Values */
+/* Keyword values */
 font-variant-emoji: normal;
 font-variant-emoji: text;
 font-variant-emoji: emoji;
