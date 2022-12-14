@@ -12,7 +12,6 @@ browser-compat: api.Element.scroll_event
 ---
 
 {{APIRef}}
-{{SeeCompatTable}}
 
 The **`scroll`** event fires when an element has been scrolled.
 To detect when scrolling has completed, see the {{domxref("Element/scrollend_event", "Element: scrollend event")}}.
