@@ -1,6 +1,7 @@
 ---
 title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
+page-type: javascript-namespace
 tags:
   - JSON
   - JavaScript

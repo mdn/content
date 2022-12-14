@@ -1,6 +1,7 @@
 ---
 title: Atomics.and()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/and
+page-type: javascript-static-method
 tags:
   - Atomics
   - JavaScript

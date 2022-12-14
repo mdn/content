@@ -1,6 +1,7 @@
 ---
 title: Symbol.replace
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
+page-type: javascript-static-data-property
 tags:
   - ECMAScript 2015
   - JavaScript

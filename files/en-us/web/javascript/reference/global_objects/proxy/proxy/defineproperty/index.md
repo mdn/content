@@ -1,6 +1,7 @@
 ---
 title: handler.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript

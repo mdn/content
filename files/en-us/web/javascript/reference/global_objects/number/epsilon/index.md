@@ -1,6 +1,7 @@
 ---
 title: Number.EPSILON
 slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
+page-type: javascript-static-data-property
 tags:
   - ECMAScript 2015
   - JavaScript

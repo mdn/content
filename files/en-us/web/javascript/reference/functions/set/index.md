@@ -1,6 +1,7 @@
 ---
 title: setter
 slug: Web/JavaScript/Reference/Functions/set
+page-type: javascript-language-feature
 tags:
   - ECMAScript 5
   - Functions

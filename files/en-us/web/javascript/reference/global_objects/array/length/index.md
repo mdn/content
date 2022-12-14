@@ -1,6 +1,7 @@
 ---
 title: Array.prototype.length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
+page-type: javascript-instance-data-property
 tags:
   - Array
   - JavaScript

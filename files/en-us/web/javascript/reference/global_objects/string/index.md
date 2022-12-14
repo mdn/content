@@ -1,6 +1,7 @@
 ---
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
+page-type: javascript-class
 tags:
   - Class
   - ECMAScript 2015

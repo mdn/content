@@ -1,6 +1,7 @@
 ---
 title: Template literals (Template strings)
 slug: Web/JavaScript/Reference/Template_literals
+page-type: javascript-language-feature
 tags:
   - ECMAScript 2015
   - Guide

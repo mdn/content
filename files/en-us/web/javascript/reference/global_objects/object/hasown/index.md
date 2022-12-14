@@ -1,6 +1,7 @@
 ---
 title: Object.hasOwn()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
+page-type: javascript-static-method
 tags:
   - JavaScript
   - Method
