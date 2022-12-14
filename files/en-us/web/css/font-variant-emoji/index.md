@@ -58,7 +58,7 @@ The `font-variant-emoji` property is specified using a single keyword value from
 
 ### Changing the way an emoji is displayed
 
-In this example show how you can render an emoji in its `text` or `emoji` presentation.
+This example shows how you can render an emoji in its `text` or `emoji` presentation.
 
 #### HTML
 
