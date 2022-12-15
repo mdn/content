@@ -13,11 +13,11 @@ tags:
 The success and growth of the MDN Web Docs project is, in large part, due to our community of contributors. There are also employees, contractors, and a network of partners who are dedicated to the health, growth, and maintenance of the project as a whole. There are also some individuals who have committed a portion of their time to assist with the daily tasks of running MDN Web Docs. To manage all these different groups, the project relies heavily on [roles](#roles) and [teams](#teams) within our [GitHub organization](https://github.com/mdn). A list of the members of the organization can be [found here](https://github.com/orgs/mdn/people).
 
 Community contributions help this open source project immensely.
-In return, contributors can use their work on this project to demonstrate their writing and technical skills as well as their ability to collaborate in team settings and engage with people from diverse backgrounds. This section describes the different roles you can assume while volunteering on the MDN Web Docs project.
+Contributors can use their work on MDN Web Docs to show their writing, technical, and collaboration skills, and the ability to work with people from diverse backgrounds. This section describes the roles you can take on while volunteering on the MDN Web Docs project.
 
 The contributor roadmap is a step-by-step journey from one role to the next as you take on more responsibilities in the project.
 With the advancement in the contributor roadmap, you could serve more than one role at the same time.
-In some cases, such as with the [Invited experts](#invited_expert) role, it's possible to skip the stepwise progression and assume a role directly if you've demonstrated expertise in a particular area.
+Roles such as [Invited experts](#invited_expert) can be directly obtained if you've demonstrated expertise in a particular area.
 
 ## Roles
 
@@ -27,9 +27,9 @@ You must satisfy the requirements of a contributor while working on this project
 
 ### Contributor
 
-Contributors, or _community participants_, engage with the project and its community by contributing their time, skills, opinions, and ideas.
+Contributors, or _community participants_, add to the project with their time, skills, opinions, and ideas.
 Contributors work on the project directly and add value to it.
-The criteria for what counts as a contribution is not limited to writing or testing code, but also includes creating and updating documentation, researching, fixing bugs, and helping other community members.
+Apart from writing and testing code, contributions include creating and updating documentation, researching, fixing bugs, and helping other community members.
 
 Depending on the frequency of your contributions, you can be someone who contributes occasionally or an active contributor.
 If you demonstrate a large impact on the project, you may be nominated as a [spotlight contributor](#spotlight_contributor) or be promoted to an [organization member](#organization_member).
@@ -52,8 +52,8 @@ As a contributor, you can get involved with the project by engaging in the follo
 
 To be a contributor, you must follow:
 
-- [Mozilla's code of conduct](CODE_OF_CONDUCT.md)
-- [MDN's contribution guidelines](CONTRIBUTING.md)
+- [Mozilla's code of conduct](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md)
+- [MDN's contribution guidelines](https://github.com/mdn/mdn-community/blob/main/CONTRIBUTING.md)
 
 **Privileges:**
 
@@ -195,7 +195,7 @@ Community managers have a distinct role in many respects.
 Community managers share many of the same responsibilities as a [maintainer](#maintainer).
 In addition, community managers have the following responsibilities:
 
-- Addressing reports of violation of code of conduct and deciding on the appropriate action.
+- Addressing reports of violation of [Mozilla's code of conduct](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md)) and deciding on the appropriate action.
 - Organizing and running community events.
 - Organizing community-related project meetings.
 - Determining media strategies to promote the MDN project.
@@ -216,10 +216,9 @@ See who can be a [maintainer](#maintainer).
 
 To nominate someone as a maintainer, open an issue on GitHub:
 
-1. Go to [`Issues`](https://github.com/mdn/mdn/issues) in the `mdn/mdn` repository.
-2. Click **New issue** button on the right.
-3. Under 'Nominate a maintainer', click the **Get started** button.
-4. Fill in the form with details of the contributions of the person you are nominating and submit the form.
+1. On the `Issues` tab in the `mdn/mdn` repository, click the [**New issue**](https://github.com/mdn/mdn/issues/new/choose) button on the right.
+2. Under 'Nominate a maintainer', click the **Get started** button.
+3. Fill in the form with details of the contributions of the person you are nominating and submit the form.
 
 <!--
 TODO: Update links in these steps
@@ -236,10 +235,9 @@ TODO: Edit the section after updating the links
 See who can be a [spotlight contributor](#spotlight_contributor).
 To nominate someone as a spotlight contributor, open an issue on GitHub:
 
-1. Go to [`Issues`](https://github.com/mdn/mdn/issues) in the `mdn/mdn` repository.
-2. Click **New issue** button on the right.
-3. Under 'Nominate a spotlight contributor', click the **Get started** button.
-4. Fill in the form with details of the contributions of the person you are nominating and submit the form.
+1. On the `Issues` tab in the `mdn/mdn` repository, click the [**New issue**](https://github.com/mdn/mdn/issues/new/choose) button on the right.
+2. Under 'Nominate a spotlight contributor', click the **Get started** button.
+3. Fill in the form with details of the contributions of the person you are nominating and submit the form.
 
 The MDN team will get in touch with the nominated person to get their information to be published on the [website](/en-US/) under "Contributor Spotlight".
 
@@ -249,10 +247,9 @@ See who can be an [invited expert](#invited_expert).
 
 To nominate someone as an invited expert, open an issue on GitHub:
 
-1. Go to [`Issues`](https://github.com/mdn/mdn/issues) in the `mdn/mdn` repository.
-2. Click **New issue** button on the right.
-3. Under 'Nominate an invited expert', click the **Get started** button.
-4. Fill in the form with details of the contributions of the person you are nominating and submit the form.
+1. On the `Issues` tab in the `mdn/mdn` repository, click the [**New issue**](https://github.com/mdn/mdn/issues/new/choose) button on the right.
+2. Under 'Nominate an invited expert', click the **Get started** button.
+3. Fill in the form with details of the contributions of the person you are nominating and submit the form.
 
 <!--
 TODO: Revisit this PR process
@@ -286,12 +283,12 @@ Contact the community team about moving to emeritus status or reducing your cont
 ### Getting demoted involuntarily
 
 Involuntary removal/demotion of a contributor happens when responsibilities and requirements aren't being met.
-This may include repeated patterns of inactivity, a period of failing to meet the requirements of the role, or a violation of the [code of conduct](CODE_OF_CONDUCT.md).
+This may include repeated patterns of inactivity, a period of failing to meet the requirements of the role, or a violation of the [code of conduct](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md).
 This process is essential because it protects the community and its deliverables while also opening up opportunities for new contributors to step in.
 
 During a maintainers meeting, a participant can ask to demote or remove a contributor.
-In addition, the participant is responsible for adding supporting information to the meeting agenda.
-Finally, the matter will be discussed and brought to a vote by all maintainers and community managers.
+The participant should provide supporting information for the demotion request.
+After discussion, maintainers and community managers will vote on the matter to make a decision.
 
 Please communicate with the community team to avoid the above process should your time commitments change.
 In these cases, you can instead proactively choose to step down for a while or move to [emeritus status](#gaining-emeritus-status).
