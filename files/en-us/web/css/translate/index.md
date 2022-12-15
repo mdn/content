@@ -63,51 +63,57 @@ translate: unset;
 
 ## Examples
 
-### HTML
+### Translating an element on hover
+
+This example shows how to use the `translate` property to move an element in three axes.
+The first box is moved along the X axis and the second box is moved along the X and Y axes.
+The third box is moved along the X, Y and Z axes and has the appearance of moving toward the viewer because of the addition of {{cssxref('perspective')}} and {{cssxref('transform-style')}} to the parent element.
+
+#### HTML
 
 ```html
-<div>
-  <p class="translate">Translation</p>
+<div class="wrapper">
+  <div class="box" id="box1">translate X</div>
+  <div class="box" id="box2">translate X,Y</div>
+  <div class="box" id="box3">translate X,Y,Z</div>
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
-* {
-  box-sizing: border-box;
+.wrapper {
+  perspective: 100px;
+  transform-style: preserve-3d;
 }
 
-html {
-  font-family: sans-serif;
-}
-
-div {
-  width: 150px;
-  margin: 0 auto;
-}
-
-p {
-  padding: 10px 5px;
-  border: 3px solid black;
-  border-radius: 20px;
-  width: 150px;
-  font-size: 1.2rem;
+.box {
+  float: left;
+  margin: 10px;
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
   text-align: center;
+  transition: 0.5s ease-in-out;
+  border: 3px dotted;
 }
 
-.translate {
-  transition: translate 1s;
+#box1:hover {
+  translate: 20px;
 }
 
-div:hover .translate {
-  translate: 200px 50px;
+#box2:hover {
+  translate: 20px 20px;
+}
+
+#box3:hover {
+  translate: 5px 5px 30px;
 }
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('Using_translate_in_three_axes', '100%', 200)}}
 
 ## Specifications
 
