@@ -1,6 +1,7 @@
 ---
 title: Symbol.toStringTag
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
+page-type: javascript-static-data-property
 tags:
   - ECMAScript 2015
   - JavaScript

@@ -1,6 +1,7 @@
 ---
 title: do...while
 slug: Web/JavaScript/Reference/Statements/do...while
+page-type: javascript-statement
 tags:
   - JavaScript
   - Language feature

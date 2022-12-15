@@ -76,7 +76,7 @@ This section lists `page-type` values for pages under [Web/JavaScript](/en-US/do
 - `javascript-class`: a definition of a built-in object, like [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
 - `javascript-constructor`: an object constructor, like [`Array()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array).
 - `javascript-error`: an error, like [RangeError: invalid array length](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_array_length).
-- `javascript-function`: a built-in function that isn't an object method, like [`encodeuri()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI).
+- `javascript-function`: a built-in function that isn't an object method, like [`encodeURI()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI).
 - `javascript-global-property`: a global property like [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN).
 - `javascript-instance-accessor-property`: an accessor property on an object instance, like [`Map.prototype.size`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/size).
 - `javascript-instance-data-property`: a data property on an object instance, like the [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length) property of `Array`.

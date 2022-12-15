@@ -1,6 +1,7 @@
 ---
 title: getter
 slug: Web/JavaScript/Reference/Functions/get
+page-type: javascript-language-feature
 tags:
   - ECMAScript 2015
   - ECMAScript 5

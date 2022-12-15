@@ -1,6 +1,7 @@
 ---
 title: Object.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
+page-type: javascript-static-method
 tags:
   - ECMAScript 5
   - JavaScript

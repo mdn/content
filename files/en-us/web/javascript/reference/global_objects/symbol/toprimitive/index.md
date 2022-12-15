@@ -1,6 +1,7 @@
 ---
 title: Symbol.toPrimitive
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
+page-type: javascript-static-data-property
 tags:
   - ECMAScript 2015
   - JavaScript

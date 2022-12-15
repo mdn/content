@@ -1,6 +1,7 @@
 ---
 title: Math.LOG2E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
+page-type: javascript-static-data-property
 tags:
   - JavaScript
   - Math
