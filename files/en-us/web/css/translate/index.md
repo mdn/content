@@ -113,7 +113,7 @@ The third box is moved along the X, Y and Z axes and has the appearance of movin
 
 #### Result
 
-{{EmbedLiveSample('Using_translate_in_three_axes', '100%', 200)}}
+{{EmbedLiveSample("Translating_an_element_on_hover", "100%", 175)}}
 
 ## Specifications
 

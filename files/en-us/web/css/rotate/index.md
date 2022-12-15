@@ -110,7 +110,7 @@ The first box rotates 90 degrees on the Z axis hover, the second rotates 180 deg
 
 #### Result
 
-{{EmbedLiveSample("Example", "100%", 150)}}
+{{EmbedLiveSample("Rotating_an_element_on_hover", "100%", 150)}}
 
 ## Specifications
 

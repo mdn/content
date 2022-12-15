@@ -82,7 +82,7 @@ The second box has two `scale` values which scales the element along the X and Y
 ```css
 .box {
   float: left;
-  margin: 10px;
+  margin: 20px;
   height: 100px;
   width: 100px;
   line-height: 100px;
