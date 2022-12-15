@@ -105,8 +105,8 @@ import { name as squareName, draw } from "shapes/circle.js";
 
 ### Paths in the module specifier map key
 
-The module specifier does not have to be a bare module.
-It can also be a URL path, an absolute URL, or a relative URL path that starts with `/`, `./`, or `../`.
+Module specifier keys do not have to be single word names ("bare names").
+They can also contain or end with path separators, or be absolute URLs, or be relative URL paths that start with `/`, `./`, or `../`.
 
 ```json
 {
