@@ -73,7 +73,7 @@ It is an object with the following properties:
     - "theme"
 
 - `updateUrl`
-  - : `string`. URL for updates to this add-on, taken from the manifest.json [applications](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key.
+  - : `string`. URL for updates to this add-on, taken from the manifest.json [browser_specific_settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key.
 - `version`
   - : `string`. Version of this add-on, taken from the manifest.json [version](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) key.
 - `versionName`
