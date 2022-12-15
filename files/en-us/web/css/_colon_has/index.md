@@ -14,7 +14,7 @@ browser-compat: css.selectors.has
 
 {{CSSRef}}
 
-The functional **`:has()`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element if any of the [relative selectors](/en-US/docs/Web/CSS/CSS_Selectors#relative_selector) that are passed as an argument match at least one element when anchored against this element. This pseudo-class presents a way of selecting a parent element or a previous sibling element with respect to a reference element by taking a [forgiving relative selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_relative_selector_list) as an argument.
+The functional **`:has()`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element if any of the [relative selectors](/en-US/docs/Web/CSS/CSS_Selectors#relative_selector) that are passed as an argument match at least one element when anchored against this element. This pseudo-class presents a way of selecting a parent element or a previous sibling element with respect to a reference element by taking a [relative selector list](/en-US/docs/Web/CSS/Selector_list#relative_selector_list) as an argument.
 
 ```css
 /* Selects an h1 heading with a
