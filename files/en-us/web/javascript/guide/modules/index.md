@@ -179,17 +179,17 @@ For example, the import map below defines keys `module/square` and `circle` that
 </script>
 ```
 
-With this import map a script can now use `module/square` and `circle` as module specifiers:
+With this import map, a script can now use `module/square` and `circle` as module specifiers:
 
 ```js
 import { name as squareName, draw } from "module/square";
 import { name as circleName } from "circle";
 ```
 
-The browser matches the module specifier in the import with a module specifier map key in the import map, in this case `circle` and `module/square`, and replaces matched keys with their associated values.
+The browser matches the module specifier in the import with a module specifier map key in the import map — in this case, `circle` and `module/square` — and replaces matched keys with their associated values.
 Note that mapped relative address values are first resolved to absolute URL addresses using the [base URL](/en-US/docs/Web/HTML/Element/base) of the document containing the import map.
 
-Import maps allow modules to be imported using bare module names, similar to how they are imported with Node.js, and can also simulate importing modules from packages, and using modules without file extensions.
+Import maps allow modules to be imported using bare module names (as in Node.js), and can also simulate importing modules from packages, both with and without file extensions.
 They also allow particular versions of a library to be imported, based on the path of the script that is importing the module.
 
 More generally, import maps let developers write more ergonomic import code, and make it easier to manage the different versions and dependencies of modules used by a site.
@@ -202,7 +202,7 @@ This works because the environment can resolve module names to a standard locati
 For example, in Node.js you might use the following syntax to import the "square" module.
 
 ```js
-import { name, draw, reportArea, reportPerimeter } from 'square';
+import { name, draw, reportArea, reportPerimeter } from "square";
 ```
 
 A bare name will throw a `TypeError` on a browser that does not [support import maps](/en-US/docs/Web/HTML/Element/script/type/importmap#browser_compatibility), because the browser has no way to resolve the module name to a URL.
@@ -233,7 +233,7 @@ This allows the remapping of a whole set of import URLs from one location to ano
 It can also be used to emulate working with "packages and modules", such as you might see in the Node ecosystem.
 
 > **Note:** The trailing `/` indicates that the module specifier key can be substituted as _part_ of a module specifier.
-> If this is not present the browser will only match (and substitute) the whole module specifier key.
+> If this is not present, the browser will only match (and substitute) the whole module specifier key.
 
 #### Packages of modules
 
@@ -275,12 +275,12 @@ This may be useful if you want to remap a module that has absolute paths to a re
 
 Ecosystems like Node use package managers such as npm to manage modules and their dependencies.
 The package manager ensures that each module is separated from other modules and their dependencies.
-As a result, while a complex application might include the same module multiple times, and in several different versions, users do not need to think about this complexity.
+As a result, while a complex application might include the same module multiple times with several different versions in different parts of the module graph, users do not need to think about this complexity.
 
-> **Note:** You can do the same kind of thing using relative paths, but that forces a particular structure on your project, and means that you can't use bare module names, and so on.
+> **Note:** You can also achieve version management using relative paths, but this is subpar because, among other things, this forces a particular structure on your project, and prevents you from using bare module names.
 
 Import maps similarly allow you to have multiple versions of dependencies in your application and refer to them using the same module specifier.
-The way this works is that the `scopes` key allows you to provide module specifier maps that will be used depending on the path of the script that is performing the import.
+You implement this with the `scopes` key, which allows you to provide module specifier maps that will be used depending on the path of the script performing the import.
 The example below demonstrates this.
 
 ```json
@@ -297,7 +297,7 @@ The example below demonstrates this.
 ```
 
 With this mapping, if a script with an URL that contains `/node_modules/dependency/` imports `coolmodule`, the version in `/node_modules/some/other/location/coolmodule/index.js` will be used.
-If `coolmodule` is imported from a script with a non-matching scope path, then the "module specifier map" in `imports` will be used instead, mapping to the version in `/node_modules/coolmodule/index.js"`. The map in `imports` would also be used as a fallback if there was no matching specifier in the scoped map.
+The map in `imports` is used as a fallback if there is no matching scope in the scoped map, or the matching scopes don't contain a matching specifier. For example, if `coolmodule` is imported from a script with a non-matching scope path, then the module specifier map in `imports` will be used instead, mapping to the version in `/node_modules/coolmodule/index.js`.
 
 Note that the path used to select a scope does not affect how the address is resolved.
 The value in the mapped path does not have to have to match the scopes path, and relative paths are still resolved to the base URL of the script that contains the import map.
@@ -326,8 +326,8 @@ An import map like the one below then provides a mapping to the actual script fi
 }
 ```
 
-If `dependency_script` changes then we have to update the import map to reflect the changed name of the module.
-We don't have to update `main_script` that depends on it, because the `main_script` import code does not change.
+If `dependency_script` changes, then its hash contained in the file name changes as well. In this case, we only need to update the import map to reflect the changed name of the module.
+We don't have to update the source of any JavaScript code that depends on it, because the specifier in the import statement does not change.
 
 ### Dynamic import
 
@@ -337,13 +337,12 @@ This has the same restrictions as for static imports: the import must happen bef
 
 ### Feature detection
 
-You can check support for import maps using the [`HTMLScriptElement.supports()`](http://localhost:5042/en-US/docs/Web/API/HTMLScriptElement/supports) static method (which is itself broadly supported):
+You can check support for import maps using the [`HTMLScriptElement.supports()`](/en-US/docs/Web/API/HTMLScriptElement/supports) static method (which is itself broadly supported):
 
 ```js
-if (HTMLScriptElement.supports && HTMLScriptElement.supports("importmap")) {
+if (HTMLScriptElement.supports?.("importmap")) {
   console.log("Browser supports import maps.");
 }
-```
 
 ## Applying the module to your HTML
 
