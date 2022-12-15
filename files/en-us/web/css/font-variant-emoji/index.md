@@ -12,16 +12,14 @@ browser-compat: css.properties.font-variant-emoji
 
 {{CSSRef}}
 
-The **`font-variant-emoji`** allows web authors to set a default presentation style for displaying emojis.
+The **`font-variant-emoji`** [CSS](/en-US/docs/Web/CSS) property specifies the default presentation style for displaying emojis.
 
-Traditionally this was done by appending a _Variation Selector_, either `U+FE0E` for text or `U+FE0F` for emoji, to the emoji codepoint.
-
-Only emojis listed as contributing to a [Unicode emoji presentation sequence](http://www.unicode.org/emoji/charts/emoji-variants.html) are affected by this property.
+Traditionally, this was done by appending a _Variation Selector_, `U+FE0E` for text and `U+FE0F` for emoji, to the emoji codepoint. Only emojis listed as contributing to a [Unicode emoji presentation sequence](http://www.unicode.org/emoji/charts/emoji-variants.html) are affected by this property.
 
 ## Syntax
 
 ```css
-/* Keyword Values */
+/* Keyword values */
 font-variant-emoji: normal;
 font-variant-emoji: text;
 font-variant-emoji: emoji;
@@ -40,13 +38,13 @@ The `font-variant-emoji` property is specified using a single keyword value from
 ### Values
 
 - `normal`
-  - : This keyword allows the User Agent (browser) to choose how to display the emoji, this often follows the operating system setting.
+  - : Allows a browser to choose how to display the emoji. This often follows the operating system setting.
 - `text`
-  - : This keyword renders the emoji as if it were using the unicode text variation selector (`U+FE0E`).
+  - : Renders the emoji as if it were using the unicode text variation selector (`U+FE0E`).
 - `emoji`
-  - : This keyword renders the emoji as if it were using the unicode emoji variation selector (`U+FE0F`).
+  - : Renders the emoji as if it were using the unicode emoji variation selector (`U+FE0F`).
 - `unicode`
-  - : This keyword renders the emoji in accordance with the [Emoji_Presentation properties](https://www.unicode.org/reports/tr51/tr51-23.html#Emoji_Presentation). If the `U+FE0E` or `U+FE0F` variation selector is present then this will override this setting.
+  - : Renders the emoji in accordance with the [Emoji presentation properties](https://www.unicode.org/reports/tr51/tr51-23.html#Emoji_Presentation). If the `U+FE0E` or `U+FE0F` variation selector is present, then it will override this value setting.
 
 ## Formal definition
 
@@ -60,7 +58,7 @@ The `font-variant-emoji` property is specified using a single keyword value from
 
 ### Changing the way an emoji is displayed
 
-In this example show how you can render an emoji in its `text` or `emoji` presentation.
+This example shows how you can render an emoji in its `text` or `emoji` presentation.
 
 #### HTML
 
@@ -122,6 +120,16 @@ In this example show how you can render an emoji in its `text` or `emoji` presen
 
 {{ EmbedLiveSample('Changing the way an emoji is displayed') }}
 
+## Accessibility concerns
+
+While the use of emojis may seem fun, you should consider their impact on accessibility, specifically for users with visual and cognitive impairments. Consider the following factors while using emojis:
+
+- Display on screen-readers: Screen-readers will read out the alt text of an emoji. Keep this in mind to consider the position of an emoji in the content. Repeated and overuse of emojis will have a detrimental effect on screen-reader users. It is better to use emojis than emoticons; emoticons will be read out as punctuation characters.
+
+- Contrast with background: When using emojis, consider their colors and how that will work with the background color, especially if you have background colors that can change, such as light/dark modes.
+
+- Intent of use: Do not use emojis to replace words because your understanding of the emoji meaning may differ from that of the users'. Also consider that emojis might have different meanings in different cultures and geographies. Our recommendation is to preferably limit usage to commonly known emojis.
+
 ## Specifications
 
 {{Specifications}}
@@ -130,7 +138,7 @@ In this example show how you can render an emoji in its `text` or `emoji` presen
 
 {{Compat}}
 
-## See Also
+## See also
 
 - [font-variant](/en-US/docs/Web/CSS/font-variant)
 - [font-variant-alternates](/en-US/docs/Web/CSS/font-variant-alternates)
@@ -138,3 +146,4 @@ In this example show how you can render an emoji in its `text` or `emoji` presen
 - [font-variant-east-asian](/en-US/docs/Web/CSS/font-variant-east-asian)
 - [font-variant-ligatures](/en-US/docs/Web/CSS/font-variant-ligatures)
 - [font-variant-numeric](/en-US/docs/Web/CSS/font-variant-numeric)
+- [Emojis and accessibility: How to use them properly](https://uxdesign.cc/emojis-in-accessibility-how-to-use-them-properly-66b73986b803)

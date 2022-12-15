@@ -143,7 +143,7 @@ th {
 
 {{Compat}}
 
-## See Also
+## See also
 
 - [`font-variant`](/en-US/docs/Web/CSS/font-variant)
 - [`font-variant-alternates`](/en-US/docs/Web/CSS/font-variant-alternates)
