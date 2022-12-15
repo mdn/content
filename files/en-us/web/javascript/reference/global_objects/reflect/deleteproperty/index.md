@@ -1,6 +1,7 @@
 ---
 title: Reflect.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript

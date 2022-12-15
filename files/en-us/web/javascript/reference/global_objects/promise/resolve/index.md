@@ -1,6 +1,7 @@
 ---
 title: Promise.resolve()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript

@@ -1,6 +1,7 @@
 ---
 title: Number.prototype.toPrecision()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method

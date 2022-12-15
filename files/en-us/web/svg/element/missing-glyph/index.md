@@ -1,6 +1,7 @@
 ---
 title: <missing-glyph>
 slug: Web/SVG/Element/missing-glyph
+page-type: svg-element
 tags:
   - Deprecated
   - Element

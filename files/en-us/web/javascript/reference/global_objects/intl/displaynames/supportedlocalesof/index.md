@@ -1,6 +1,7 @@
 ---
 title: Intl.DisplayNames.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/supportedLocalesOf
+page-type: javascript-static-method
 tags:
   - DisplayNames
   - Internationalization

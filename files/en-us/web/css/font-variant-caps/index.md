@@ -119,7 +119,7 @@ Large sections of text set with a `font-variant` value of `all-small-caps` or `a
 
 {{Compat}}
 
-## See Also
+## See also
 
 - [`font-variant`](/en-US/docs/Web/CSS/font-variant)
 - [`font-variant-alternates`](/en-US/docs/Web/CSS/font-variant-alternates)

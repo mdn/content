@@ -851,7 +851,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are darker grey with icons and text in white. Inside the selected tab a animated loading indicator is red." src="theme-tab_loading.gif" /></p>
+        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are darker grey with icons and text in white. Inside the selected tab an animated loading indicator is red." src="theme-tab_loading.gif" /></p>
       </td>
     </tr>
     <tr>

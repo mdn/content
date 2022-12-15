@@ -1,6 +1,7 @@
 ---
 title: xlink:arcrole
 slug: Web/SVG/Attribute/xlink:arcrole
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG

@@ -1,6 +1,7 @@
 ---
 title: Intl.PluralRules.prototype.selectRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange
+page-type: javascript-instance-method
 tags:
   - Internationalization
   - Intl

@@ -639,10 +639,11 @@ See {{bug(1715546)}} for more details.
   </tbody>
 </table>
 
-### Container query length units
+### Container queries
 
-The CSS length units `cqw`, `cqh`, `cqi`, `cqb`, `cqmin`, `cqmax` are units of length relative to the size of a query container.
-For more information on these units, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) documentation ({{bug(1744231)}}).
+Container queries allow you to apply CSS styles to elements based on the size of their container as opposed to the size of the viewport or other device characteristics.
+The CSS length units `cqw`, `cqh`, `cqi`, `cqb`, `cqmin`, `cqmax` are units of length relative to the size of a query container and are supported as part of this functionality.
+For more information, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) page and the [Container query length units](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) section ({{bug(1744231)}}, {{bug(1801123)}}).
 
 <table>
   <thead>
@@ -655,8 +656,8 @@ For more information on these units, see the [CSS Container Queries](/en-US/docs
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>108</td>
-      <td>No</td>
+      <td>109</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -1688,6 +1689,49 @@ See these bugs for details: {{bug(1556362)}}, {{bug(1556373)}}, {{bug(1556365)}}
   </tbody>
 </table>
 
+#### Document and Element scrollend events
+
+The `scrollend` event indicates that the user has completed scrolling in {{domxref("Element")}} and {{domxref("Document")}} objects.
+For more information, see [Element: `scrollend` event](/en-US/docs/Web/API/Element/scrollend_event) and [Document: `scrollend` event](/en-US/docs/Web/API/Document/scrollend_event) ({{bug(1797013)}}, {{bug(1803435)}}).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>109</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td>
+        <code>apz.scrollend-event.content.enabled</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ### Payment Request API
 
 #### Primary payment handling
@@ -1961,11 +2005,10 @@ This also changes the console warning; if the upgrade succeeds, the message indi
   </tbody>
 </table>
 
-### Feature policy
+### Permissions Policy / Feature policy
 
-[Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to CSP but controls features instead of security behavior.
-
-> **Note:** The `Feature-Policy` header has now been renamed to `Permissions-Policy` in the spec, and this article will eventually be updated to reflect that change.
+[Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to CSP but controls features instead of security behavior.
+Note that this is implemented in Firefox as "**Feature Policy**, the name used in an earlier version of the specification.
 
 <table>
   <thead>

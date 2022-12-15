@@ -1,6 +1,7 @@
 ---
 title: widths
 slug: Web/SVG/Attribute/widths
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG

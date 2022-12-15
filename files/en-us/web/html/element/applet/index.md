@@ -18,56 +18,6 @@ The obsolete **HTML Applet Element** (**`<applet>`**) embeds a Java applet into 
 
 Use of Java applets on the Web is deprecated; most browsers no longer support use of plug-ins, including the Java plug-in.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#embedded_content"
-          >embedded content</a
-        >, interactive content, palpable content.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        Zero or more {{HTMLElement("param")}} elements, then
-        <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model"
-          >transparent</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>None; both the starting and ending tag are mandatory.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#embedded_content"
-          >embedded content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{DOMxRef("HTMLAppletElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Attributes
 
 - {{HTMLAttrDef("align")}} {{Deprecated_Inline}}
@@ -118,6 +68,58 @@ Use of Java applets on the Web is deprecated; most browsers no longer support us
 ```
 
 {{EmbedLiveSample("Example", "100%", 300)}}
+
+## Technical Summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#embedded_content"
+          >embedded content</a
+        >, interactive content, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        Zero or more {{HTMLElement("param")}} elements, then
+        <a
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model"
+          >transparent</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>None; both the starting and ending tag are mandatory.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#embedded_content"
+          >embedded content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{DOMxRef("HTMLAppletElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 
