@@ -16,9 +16,9 @@ browser-compat: api.VirtualKeyboard.hide
 
 The **`hide()`** method of the {{domxref("VirtualKeyboard")}} interface programmatically hides the on-screen virtual keyboard. This is useful when the page needs to implement its own virtual keyboard logic by using the {{domxref("VirtualKeyboard_API", "VirtualKeyboard API")}}.
 
-The method only works if the currently focused element is a form control, such as a text `input`, or if the focused element is `contenteditable`.
+This method only works if the currently-focused element is a form control — such as an {{htmlelement("input")}} or {{htmlelement("textarea")}} element — or if the focused element is {{htmlattrxref("contenteditable")}}.
 
-The `hide()` method always returns `undefined` but triggers a {{domxref("VirtualKeyboard.geometrychange_event", "geometrychange")}} event.
+The `hide()` method always returns `undefined` and triggers a {{domxref("VirtualKeyboard.geometrychange_event", "geometrychange")}} event.
 
 ## Syntax
 
@@ -34,6 +34,35 @@ None.
 
 Undefined.
 
+## Example
+
+The code snippet below shows how to use the `virtualkeyboardpolicy` attribute to prevent the browser from showing the virtual keyboard on click of tap. The code also uses the `navigator.virtualKeyboard.show()` and `navigator.virtualKeyboard.hide()` methods to show and hide the virtual keyboard when a button is clicked:
+
+```js
+<div contenteditable virtualkeyboardpolicy="manual" id="editor"></div>
+<button id="edit-button">Edit</button>
+<script>
+  if ("virtualKeyboard" in navigator) {
+    const editor = document.getElementById("editor");
+    const editButton = document.getElementById("edit-button");
+    let isEditing = false;
+
+    editButton.addEventListener("click", () => {
+      if (isEditing) {
+        navigator.virtualKeyboard.hide();
+        editButton.textContent = "Edit";
+      } else {
+        editor.focus();
+        navigator.virtualKeyboard.show();
+        editButton.textContent = "Save changes";
+      }
+
+      isEditing = !isEditing;
+    });
+  }
+</script>
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -41,3 +70,8 @@ Undefined.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("VirtualKeyboard_API", "The VirtualKeyboard API", "", "nocode")}}
+- [Full control with the VirtualKeyboard API](https://developer.chrome.com/docs/web-platform/virtual-keyboard/)

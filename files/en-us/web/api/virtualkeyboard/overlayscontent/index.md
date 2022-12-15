@@ -16,11 +16,13 @@ browser-compat: api.VirtualKeyboard.overlaysContent
 
 The **`overlaysContent`** property of the VirtualKeyboard interface can be used to opt-out of the automatic way in which browsers handle on-screen virtual keyboards by reducing the size of the viewport to make space for them.
 
-By setting the `overlaysContent` property to `true`, the browser no longer resizes the viewport when the virtual keyboard appears. The virtual keyboard overlays the content of the web page and developers can adapt the page layout by using the {{domxref("VirtualKeyboard_API", "Virtual Keyboard API")}}.
+If the `overlaysContent` property is set to `true`, the browser no longer resizes the viewport when the virtual keyboard appears. The virtual keyboard instead overlays the content of the web page, and you can adapt the page layout as appropriate using the {{domxref("VirtualKeyboard_API", "Virtual Keyboard API")}} and your own custom CSS and JavaScript.
 
 ## Value
 
-The `overlaysContent` property is a Boolean whose value is `false` by default, and can be set to `true` to opt-out of the browser automatic handling of the on-screen virtual keyboard.
+A boolean. `false` by default, set it to `true` to opt out of the browser's automatic handling of the on-screen virtual keyboard.
+
+## Example
 
 ```js
 if ("virtualKeyboard" in navigator) {
@@ -36,3 +38,8 @@ if ("virtualKeyboard" in navigator) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("VirtualKeyboard_API", "The VirtualKeyboard API", "", "nocode")}}
+- [Full control with the VirtualKeyboard API](https://developer.chrome.com/docs/web-platform/virtual-keyboard/)

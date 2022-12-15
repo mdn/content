@@ -14,15 +14,15 @@ browser-compat: api.VirtualKeyboard.boundingRect
 
 {{APIRef("VirtualKeyboard API")}}{{SeeCompatTable}}
 
-The **`boundingRect`** property of the VirtualKeyboard interface contains a {{domxref("DOMRect")}} which indicates the position and size of the on-screen virtual keyboard which overlays the web page.
+The **`boundingRect`** property of the {{domxref("VirtualKeyboard")}} interface contains a {{domxref("DOMRect")}} indicating the position and size of the on-screen virtual keyboard that overlays the web page.
 
-An on-screen virtual keyboard can overlay the viewport in which a web page is displayed when the VirtualKeyboard API is used to prevent the browser from resizing the viewport automatically. To learn more about this, see {{domxref("VirtualKeyboard_API", "Virtual Keyboard API")}}.
+The on-screen virtual keyboard will overlay the viewport when the {{domxref("VirtualKeyboard_API", "Virtual Keyboard API", "", "nocode")}} is used to prevent the browser from resizing the viewport automatically. This is done by setting the {{domxref("VirtualKeyboard.overlaysContent", "overlaysContent")}} property to `true`.
 
 ## Value
 
 A {{domxref("DOMRect")}} which indicates the position and size of the virtual keyboard in the viewport.
 
-The `x`, `y`, `width`, and `height` coordinates of the rectangle are useful to re-position content in the webpage that needs to be visible even when the virtual keyboard is displayed.
+The `x`, `y`, `width`, and `height` coordinates of the rectangle are useful to reposition content in the webpage that needs to be visible even when the virtual keyboard is displayed.
 
 ```js
 const { x, y, width, height } = navigator.virtualKeyboard.boundingRect;
@@ -35,3 +35,8 @@ const { x, y, width, height } = navigator.virtualKeyboard.boundingRect;
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("VirtualKeyboard_API", "The VirtualKeyboard API", "", "nocode")}}
+- [Full control with the VirtualKeyboard API](https://developer.chrome.com/docs/web-platform/virtual-keyboard/)

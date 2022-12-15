@@ -16,11 +16,9 @@ browser-compat: api.VirtualKeyboard
 
 The **`VirtualKeyboard`** interface of the [VirtualKeyboard API](/en-US/docs/Web/API/VirtualKeyboard_API) is useful on devices that have on-screen virtual keyboards, such as tablets, mobile phones, or other devices where a hardware keyboard may not be available.
 
-The `VirtualKeyboard` interface makes it possible to opt-out of the automatic way browsers handle on-screen virtual keyboards by reducing the height of the viewport to make room for the virtual keyboard.
+The `VirtualKeyboard` interface makes it possible to opt-out of the automatic way browsers handle on-screen virtual keyboards by reducing the height of the viewport to make room for the virtual keyboard. You can prevent the browser from changing the size of the viewport, detect the position and size of the virtual keyboard — adapting the layout of your web page as a follow-up — and programmatically show or hide the virtual keyboard.
 
-By using the `VirtualKeyboard` interface, you can prevent the browser from changing the size of the viewport, detect the position and size of the virtual keyboard, to adapt the layout of your web page, and programmatically show or hide the virtual keyboard.
-
-You access the `VirtualKeyboard` interface by using `navigator.virtualKeyboard`.
+You access the `VirtualKeyboard` interface by using {{domxref("navigator.virtualKeyboard")}}.
 
 {{InheritanceDiagram}}
 
@@ -31,7 +29,7 @@ _The `VirtualKeyboard` interface doesn't inherit any properties._
 - {{DOMxRef("VirtualKeyboard.boundingRect")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMRect")}} that describes the geometry of the virtual keyboard.
 - {{DOMxRef("VirtualKeyboard.overlaysContent")}}
-  - : A {{jsxref('Boolean')}} to choose if the browser should stop automatically handling the on-screen virtual keyboard.
+  - : A {{jsxref('Boolean')}} that defines whether the browser should stop handling the on-screen virtual keyboard.
 
 ### Events
 
@@ -68,3 +66,8 @@ if("virtualKeyboard" in navigator) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("VirtualKeyboard_API", "The VirtualKeyboard API", "", "nocode")}}
+- [Full control with the VirtualKeyboard API](https://developer.chrome.com/docs/web-platform/virtual-keyboard/)
