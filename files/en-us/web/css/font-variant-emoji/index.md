@@ -146,3 +146,4 @@ While the use of emojis may seem fun, you should consider their impact on access
 - [font-variant-east-asian](/en-US/docs/Web/CSS/font-variant-east-asian)
 - [font-variant-ligatures](/en-US/docs/Web/CSS/font-variant-ligatures)
 - [font-variant-numeric](/en-US/docs/Web/CSS/font-variant-numeric)
+- [Emojis and accessibility: How to use them properly](https://uxdesign.cc/emojis-in-accessibility-how-to-use-them-properly-66b73986b803)
