@@ -34,19 +34,19 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@^5.2.21":
-  version "5.2.21"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.21.tgz#535c53750735e226ef6dce6e63bf5988aa2b1385"
-  integrity sha512-xpQpnRfaEbNMlHoOhXt6rz22zOzAtdSPMcYZJpyG1HkL4qV3aEOfK+VQrQGvaj8eBVqvLgv/GVh0i3KsysIh7g==
+"@mdn/browser-compat-data@^5.2.22":
+  version "5.2.22"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.22.tgz#923decc221c0d0e85698d7b188c04df396152f0f"
+  integrity sha512-138HAHVx1E1DtrIPaa7/iQ8aFTQcpbWqsbF/YTS/hAPwQOvHRdfcSKsgzKOTgAi4RJ0Vz1Y9B/2FVgs/8cSx8A==
 
-"@mdn/yari@1.27.37":
-  version "1.27.37"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.27.37.tgz#08e467a9afe7a8499884b45ab23374811020e4c0"
-  integrity sha512-O5oaBIzoVxNB8oFfDc8evSqofqdWLf0T2tNruWe44UFSRCUDO+klHzD0pOkonDGUE7jJgjaWN19eIJksruWfQw==
+"@mdn/yari@1.27.40":
+  version "1.27.40"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.27.40.tgz#413a77e52b95f0a054a3b764603d69c168d0e108"
+  integrity sha512-9C3ALsKlxxVOurcINJDhf6KUI8MLhCLfUOoSrWuuuBmFvXFl90x/pYZJT41v4dzA/7UFomvUReFR1s2MYodl9w==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
-    "@mdn/browser-compat-data" "^5.2.21"
+    "@mdn/browser-compat-data" "^5.2.22"
     "@mozilla/glean" "1.3.0"
     "@use-it/interval" "^1.0.0"
     "@webref/css" "^5.4.4"
@@ -59,7 +59,7 @@
     compression "^1.7.4"
     cookie "^0.5.0"
     cookie-parser "^1.4.6"
-    css-tree "^2.3.0"
+    css-tree "^2.3.1"
     dayjs "^1.11.7"
     dexie "^3.2.2"
     dotenv "^16.0.3"
@@ -1133,10 +1133,10 @@ css-tree@^1.1.2:
     mdn-data "2.0.14"
     source-map "^0.6.1"
 
-css-tree@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/css-tree/-/css-tree-2.3.0.tgz#a0122cbc85305576df92ac528fb079c8217a15b2"
-  integrity sha512-1rg0LiK2MFi4R3/lVvnRokEWTZb30ljSAe5x+0HHkZ+OqZaAeiP8g8Eh91VmkyCtQn9vMgQRiaTDYgLBt+2Qyw==
+css-tree@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/css-tree/-/css-tree-2.3.1.tgz#10264ce1e5442e8572fc82fbe490644ff54b5c20"
+  integrity sha512-6Fv1DV/TYw//QF5IzQdqsNDjx/wc8TrMBZsqjL9eW01tWb7R7k/mq+/VXfJCl7SoD5emsJop9cOByJZfs8hYIw==
   dependencies:
     mdn-data "2.0.30"
     source-map-js "^1.0.1"
