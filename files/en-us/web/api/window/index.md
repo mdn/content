@@ -445,7 +445,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 - {{domxref("Window/vrdisplayactivate_event", "vrdisplayactivate")}}
   - : Fired when a VR display becomes available to be presented to, for example if an HMD has been moved to bring it out of standby, or woken up by being put on.
     Also available via the {{domxref("Window/onvrdisplayactivate", "onvrdisplayactivate")}} property.
-- {{domxref("Window/vrdisplayblur_event", "vrdisplayblur")}}
+- {{domxref("Window/vrdisplayblur_event", "vrdisplayblur")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Fired when presentation to a VR display has been paused for some reason by the browser, OS, or VR hardware.
     Also available via the {{domxref("Window/onvrdisplayblur", "onvrdisplayblur")}} property.
 - {{domxref("Window/vrdisplayconnect_event", "vrdisplayconnect")}}
@@ -457,7 +457,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 - {{domxref("Window/vrdisplaydisconnect_event", "vrdisplaydisconnect")}}
   - : Fired when a compatible VR display is disconnected from the computer.
     Also available via the {{domxref("Window/onvrdisplaydisconnect", "onvrdisplaydisconnect")}} property.
-- {{domxref("Window/vrdisplayfocus_event", "vrdisplayfocus")}}
+- {{domxref("Window/vrdisplayfocus_event", "vrdisplayfocus")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Fired when presentation to a VR display has resumed after being blurred.
     Also available via the {{domxref("Window/onvrdisplayfocus", "onvrdisplayfocus")}} property.
 - {{domxref("Window/vrdisplaypresentchange_event", "vrdisplaypresentchange")}}
