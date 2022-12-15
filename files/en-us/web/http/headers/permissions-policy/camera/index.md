@@ -3,7 +3,6 @@ title: 'Permissions-Policy: camera'
 slug: Web/HTTP/Headers/Permissions-Policy/camera
 tags:
   - Directive
-  - Experimental
   - Permissions Policy
   - Permissions-Policy
   - HTTP
@@ -12,7 +11,7 @@ tags:
 browser-compat: http.headers.Permissions-Policy.camera
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header
 `camera` directive controls whether the current document is allowed to use
