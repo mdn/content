@@ -250,7 +250,6 @@ For example:
 
 - If you're on a low bandwidth connection, click a link, and then a multiple megabyte download starts unexpectedly.
 
-
 Let's look at some examples, to see what kind of text can be used here:
 
 ```html
