@@ -133,7 +133,7 @@ In our [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS) arti
 
 ## What happens if a browser encounters CSS it doesn't understand?
 
-The [browser support section of the what is browser support lesson](/en-US/docs/Learn/CSS/First_steps/What_is_CSS#browser_support) mentioned that browsers do not necessarily implement new CSS features at the same time. In addition, many people are not using the latest version of a browser. Given that CSS is being developed all the time, and is therefore ahead of what browsers can recognize, you might wonder what happens if a browser encounters a CSS selector or declaration it doesn't recognize.
+The ["Browser support information" section in the "What is CSS" article](/en-US/docs/Learn/CSS/First_steps/What_is_CSS#browser_support_information) mentioned that browsers do not necessarily implement new CSS features at the same time. In addition, many people are not using the latest version of a browser. Given that CSS is being developed all the time, and is therefore ahead of what browsers can recognize, you might wonder what happens if a browser encounters a CSS selector or declaration it doesn't recognize.
 
 The answer is that it does nothing, and just moves on to the next bit of CSS!
 
