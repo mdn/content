@@ -21,6 +21,8 @@ If `true`, when a non-focusable part of the shadow DOM is clicked, the first foc
 
 The property value is set using the `delegatesFocus` property of the object passed to {{domxref("Element.attachShadow()")}}).
 
+If another element than the first one should receive focus, it should be given the `autofocus` attribute.
+
 ## Examples
 
 ```js
