@@ -1,6 +1,7 @@
 ---
 title: <feDiffuseLighting>
 slug: Web/SVG/Element/feDiffuseLighting
+page-type: svg-element
 tags:
   - Element
   - SVG

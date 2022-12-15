@@ -1,6 +1,7 @@
 ---
 title: Math.log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
+page-type: javascript-static-method
 tags:
   - JavaScript
   - Math

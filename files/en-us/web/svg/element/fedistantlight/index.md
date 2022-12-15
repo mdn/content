@@ -1,6 +1,7 @@
 ---
 title: <feDistantLight>
 slug: Web/SVG/Element/feDistantLight
+page-type: svg-element
 tags:
   - Element
   - Filters

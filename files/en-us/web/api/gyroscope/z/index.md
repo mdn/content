@@ -18,12 +18,8 @@ browser-compat: api.Gyroscope.z
 {{APIRef("Sensor API")}}
 
 The **`z`** read-only property of the
-{{domxref("Gyroscope")}} interface returns a double precision integer containing the
-angular velocity of the device along the its z axis.
-
-If a feature policy blocks use of a feature it is because your code is inconsistent
-with the policies set on your server. This is not something that would ever be shown to
-a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
+{{domxref("Gyroscope")}} interface returns a number specifying the
+angular velocity of the device along its z-axis.
 
 ## Value
 

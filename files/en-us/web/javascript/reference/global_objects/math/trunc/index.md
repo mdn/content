@@ -1,6 +1,7 @@
 ---
 title: Math.trunc()
 slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript

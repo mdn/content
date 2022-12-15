@@ -1,6 +1,7 @@
 ---
 title: JavaScript modules
 slug: Web/JavaScript/Guide/Modules
+page-type: guide
 tags:
   - Guide
   - JavaScript

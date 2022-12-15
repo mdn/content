@@ -1,6 +1,7 @@
 ---
 title: Symbol.match
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
+page-type: javascript-static-data-property
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -17,6 +18,10 @@ The **`Symbol.match`** well-known symbol specifies the matching of a regular exp
 For more information, see {{jsxref("RegExp.@@match", "RegExp.prototype[@@match]()")}} and {{jsxref("String.prototype.match()")}}.
 
 {{EmbedInteractiveExample("pages/js/symbol-match.html", "taller")}}
+
+## Value
+
+The well-known symbol `@@match`.
 
 {{js_property_attributes(0, 0, 0)}}
 

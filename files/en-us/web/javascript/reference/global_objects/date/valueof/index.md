@@ -1,6 +1,7 @@
 ---
 title: Date.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Date/valueOf
+page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript

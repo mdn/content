@@ -1,6 +1,7 @@
 ---
 title: return
 slug: Web/JavaScript/Reference/Statements/return
+page-type: javascript-statement
 tags:
   - JavaScript
   - Language feature

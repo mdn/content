@@ -17,6 +17,16 @@ The **`<legend>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for
 
 {{EmbedInteractiveExample("pages/tabbed/legend.html", "tabbed-standard")}}
 
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Examples
+
+See {{HTMLElement("form")}} for examples on `<legend>`.
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
@@ -67,14 +77,6 @@ The **`<legend>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Examples
-
-See {{HTMLElement("form")}} for examples on `<legend>`.
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: RegExp.leftContext ($`)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/leftContext
+page-type: javascript-static-accessor-property
 tags:
   - JavaScript
   - Deprecated

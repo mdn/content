@@ -1,6 +1,7 @@
 ---
 title: baseFrequency
 slug: Web/SVG/Attribute/baseFrequency
+page-type: svg-attribute
 tags:
   - Filters
   - SVG

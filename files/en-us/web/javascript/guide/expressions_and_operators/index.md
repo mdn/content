@@ -1,6 +1,7 @@
 ---
 title: Expressions and operators
 slug: Web/JavaScript/Guide/Expressions_and_Operators
+page-type: guide
 tags:
   - Beginner
   - Expressions

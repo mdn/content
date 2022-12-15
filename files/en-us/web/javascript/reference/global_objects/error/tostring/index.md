@@ -1,6 +1,7 @@
 ---
 title: Error.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toString
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method

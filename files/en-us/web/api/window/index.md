@@ -301,8 +301,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Moves the window one document forward in the history. This method is deprecated; you should instead use {{domxref("History.forward", "window.history.forward()")}}.
 - {{domxref("Window.home()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Returns the browser to the home page.
-- {{domxref("Window.openDialog()")}} {{Non-standard_Inline}}
-  - : Opens a new dialog window.
 - {{domxref("Window.releaseEvents()")}} {{Deprecated_Inline}}
   - : Releases the window from trapping events of a specific type.
 - {{domxref("Window.showModalDialog()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
@@ -334,10 +332,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fired when a display is able to be presented to.
 - {{domxref("Window.vrdisplaydeactivate_event", "vrdisplaydeactivate")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Fired when a display can no longer be presented to.
-- {{domxref("Window.vrdisplayblur_event", "vrdisplayblur")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired when presentation to a display has been paused for some reason by the browser, OS, or VR hardware.
-- {{domxref("Window.vrdisplayfocus_event", "vrdisplayfocus")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired when presentation to a display has resumed after being blurred.
 - {{domxref("Window.vrdisplaypresentchange_event", "vrdisplaypresentchange")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Fired when the presenting state of a VR device changes — i.e. goes from presenting to not presenting, or vice versa.
 
@@ -469,12 +463,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 - {{domxref("Window/vrdisplaypresentchange_event", "vrdisplaypresentchange")}}
   - : Fired when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.
     Also available via the {{domxref("Window/onvrdisplaypresentchange", "onvrdisplaypresentchange")}} property.
-- {{domxref("Window/vrdisplaypointerrestricted_event", "vrdisplaypointerrestricted")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired when the VR display's pointer input is restricted to consumption via a [pointerlocked element](/en-US/docs/Web/API/Pointer_Lock_API).
-    Also available via the {{domxref("Window/onvrdisplaypointerrestricted", "onvrdisplaypointerrestricted")}} property.
-- {{domxref("Window/vrdisplaypointerunrestricted_event", "vrdisplaypointerunrestricted")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired when the VR display's pointer input is no longer restricted to consumption via a [pointerlocked element](/en-US/docs/Web/API/Pointer_Lock_API).
-    Also available via the {{domxref("Window/onvrdisplaypointerunrestricted", "onvrdisplaypointerunrestricted")}} property.
 
 ## Interfaces
 

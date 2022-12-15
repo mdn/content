@@ -1,6 +1,7 @@
 ---
 title: Intl.NumberFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
+page-type: javascript-class
 tags:
   - Class
   - Internationalization
