@@ -27,7 +27,7 @@ To implement this, we will:
 
 You could visualize the overall structure of the extension like this:
 
-![The manifest.json file includes icons, browser actions, including popups, and web accessible resources. The choosebeast javascript popup resource calls in the beastify script.](untitled-1.png)
+![The manifest.json file includes icons, browser actions, including popups, and web accessible resources. The choose beast javascript popup resource calls in the beastify script.](untitled-1.png)
 
 It's a simple extension, but shows many of the basic concepts of the WebExtensions API:
 
