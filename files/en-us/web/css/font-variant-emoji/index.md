@@ -122,21 +122,13 @@ This example shows how you can render an emoji in its `text` or `emoji` presenta
 
 ## Accessibility concerns
 
-While the use of emojis may be fun you should consider their impact on accessibility, specifically for users with visual and cognitive impairments.
+While the use of emojis may seem fun, you should consider their impact on accessibility, specifically for users with visual and cognitive impairments. Consider the following factors while using emojis:
 
-- [Emojis and accessibility: How to use them properly](https://uxdesign.cc/emojis-in-accessibility-how-to-use-them-properly-66b73986b803)
+- Display on screen-readers: Screen-readers will read out the alt text of an emoji. Keep this in mind to consider the position of an emoji in the content. Repeated and overuse of emojis will have a detrimental effect on screen-reader users. It is better to use emojis than emoticons; emoticons will be read out as punctuation characters.
 
-### Screen-readers
+- Contrast with background: When using emojis, consider their colors and how that will work with the background color, especially if you have background colors that can change, such as light/dark modes.
 
-Consider the position of an emoji in the content as screen-readers will read out the alt text of an emoji. Repeated and over-use of emojis will have a detrimental effect on screen-reader users. It is better to use emoji than emoticons which would be read out as punctuation characters.
-
-### Contrast
-
-When using emojis you should consider their colors and how that will work with the background color, especially if you have background colors that can change such as light/dark modes.
-
-### Meaning of emojis
-
-Do not use emojis to replace words as your understanding of the meaning may differ from the users. Use commonly known emojis that and consider that emojis will have different meanings in different cultures.
+- Intent of use: Do not use emojis to replace words because your understanding of the emoji meaning may differ from that of the users'. Also consider that emojis might have different meanings in different cultures and geographies. Our recommendation is to preferably limit usage to commonly known emojis.
 
 ## Specifications
 
