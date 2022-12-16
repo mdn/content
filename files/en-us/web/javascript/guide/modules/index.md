@@ -220,6 +220,16 @@ This can reduce the effort required to use the same JavaScript libraries in both
 
 The following sections expand on the various features outlined above.
 
+### Feature detection
+
+You can check support for import maps using the [`HTMLScriptElement.supports()`](/en-US/docs/Web/API/HTMLScriptElement/supports) static method (which is itself broadly supported):
+
+```js
+if (HTMLScriptElement.supports?.("importmap")) {
+  console.log("Browser supports import maps.");
+}
+```
+
 ### Importing modules as bare names
 
 In some JavaScript environments you can use bare names for the module specifier.
@@ -353,21 +363,6 @@ An import map like the one below then provides a mapping to the actual script fi
 
 If `dependency_script` changes, then its hash contained in the file name changes as well. In this case, we only need to update the import map to reflect the changed name of the module.
 We don't have to update the source of any JavaScript code that depends on it, because the specifier in the import statement does not change.
-
-### Dynamic import
-
-Import maps also work with [dynamic imports](#dynamic_module_loading) (see section below).
-
-This has the same restrictions as for static imports: the import must happen before any other module importing has started, and the module specifier must be resolvable to an absolute URL address for a module.
-
-### Feature detection
-
-You can check support for import maps using the [`HTMLScriptElement.supports()`](/en-US/docs/Web/API/HTMLScriptElement/supports) static method (which is itself broadly supported):
-
-```js
-if (HTMLScriptElement.supports?.("importmap")) {
-  console.log("Browser supports import maps.");
-}
 
 ## Applying the module to your HTML
 
