@@ -1,6 +1,7 @@
 ---
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
+page-type: javascript-language-feature
 tags:
   - Classes
   - ECMAScript 2015

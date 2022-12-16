@@ -1,6 +1,7 @@
 ---
 title: Date.parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
+page-type: javascript-static-method
 tags:
   - Date
   - JavaScript

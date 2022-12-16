@@ -1,6 +1,7 @@
 ---
 title: get Map[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
+page-type: javascript-static-accessor-property
 tags:
   - ECMAScript 2015
   - JavaScript

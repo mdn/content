@@ -33,9 +33,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("allow")}}
 
-  - : Specifies a [feature policy](/en-US/docs/Web/HTTP/Feature_Policy) for the `<iframe>`. The policy defines what features are available to the `<iframe>` based on the origin of the request (e.g. access to the microphone, camera, battery, web-share API, etc.).
+  - : Specifies a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) for the `<iframe>`. The policy defines what features are available to the `<iframe>` (for example, access to the microphone, camera, battery, web-share, etc.) based on the origin of the request.
 
-    For more information and examples see: [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) > [The iframe allow attribute](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy#the_iframe_allow_attribute).
+      > **Note:** A Permissions Policy specified by the `allow` attribute implements a further restriction on top of the policy specified in the {{httpheader("Permissions-Policy")}} header. It doesn't replace it.
 
 - {{htmlattrdef("allowfullscreen")}}
 

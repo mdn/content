@@ -29,6 +29,7 @@ This article provides information about the changes in Firefox 108 that will aff
 - Container query length units are now supported via the the `layout.css.container-queries.enabled` preference, which is set to `false` by default.
   Setting this preference to `true` allows the use of `cqw`, `cqh`, `cqi`, `cqb`, `cqmin`, and `cqmax` units of length which are relative to the size of a query container.
   For more information on these units, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) documentation ({{bug(1744231)}}).
+- The [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji) property is now supported via the `layout.css.font-variant-emoji.enabled` preference, which is set to `false` by default. This property allows you to set a default presentation style for displaying emojis ({{bug(1461589)}}).
 
 #### Removals
 
@@ -56,7 +57,7 @@ This article provides information about the changes in Firefox 108 that will aff
 #### Media, WebRTC, and Web Audio
 
 - The [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) is now available in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts).
-  Calls to [`navigator.requestMIDIAccess()`](/en-US/docs/Web/API/Navigator/requestMIDIAccess) will prompt users with active MIDI devices to install a [Site Permission Add-On](https://support.mozilla.org/en-US/kb/site-permission-addons), which is required to enable the API.
+  Calls to [`navigator.requestMIDIAccess()`](/en-US/docs/Web/API/Navigator/requestMIDIAccess) will prompt users with active MIDI devices to install a [Site Permission Add-On](https://support.mozilla.org/en-US/kb/site-permission-add-ons), which is required to enable the API.
   For more information see {{bug(1795025)}}.
 
 #### Removals

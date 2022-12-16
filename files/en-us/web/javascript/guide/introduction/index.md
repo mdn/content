@@ -1,6 +1,7 @@
 ---
 title: Introduction
 slug: Web/JavaScript/Guide/Introduction
+page-type: guide
 tags:
   - Beginner
   - Guide

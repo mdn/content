@@ -1,6 +1,7 @@
 ---
 title: Equality comparisons and sameness
 slug: Web/JavaScript/Equality_comparisons_and_sameness
+page-type: guide
 tags:
   - Comparison
   - Equality

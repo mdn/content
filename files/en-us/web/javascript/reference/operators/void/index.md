@@ -1,6 +1,7 @@
 ---
 title: void operator
 slug: Web/JavaScript/Reference/Operators/void
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature

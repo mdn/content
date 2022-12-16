@@ -568,19 +568,21 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 10. From the Cluster0 _Overview_ screen click the **Connect** button.
     ![Configure connection after setting up a cluster in MongoDB Atlas.](mongodb_atlas_-_connectbutton.jpg)
 
-11. This will open the _Connect to Cluster_ screen. Click the **Connect your application** option.
+11. This will open the _Connect to Cluster_ screen.
+    Click the **Connect your application** option.
     ![Choose a connection type when connecting with MongoDB Atlas.](mongodb_atlas_-_chooseaconnectionmethod.jpg)
 
 12. You will now be shown the _Connect_ screen.
     ![Choose the Short SRV connection when setting up a connection on MongoDB Atlas.](mongodb_atlas_-_connectforshortsrv.jpg)
 
+    - Select the Node driver and version as shown.
     - Click the **Copy** icon to copy the connection string.
     - Paste this in your local text editor.
     - Update the password with your user's password.
-    - Replace `myFirstDatabase` with `local_library`.
     - Save the file containing this string somewhere safe.
 
-You have now created the database, and have a URL (with username and password) that can be used to access it. This will look something like: `mongodb+srv://your_user_name:your_password@cluster0.upbx7.mongodb.net/local_library?retryWrites=true&w=majority`
+You have now created the database, and have a URL (with username and password) that can be used to access it.
+This will look something like: `mongodb+srv://your_user_name:your_password@cluster0.lz91hw2.mongodb.net/?retryWrites=true&w=majority`
 
 ## Install Mongoose
 

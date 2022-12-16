@@ -1,6 +1,7 @@
 ---
 title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
+page-type: javascript-class
 tags:
   - Class
   - JavaScript
