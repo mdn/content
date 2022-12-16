@@ -19,9 +19,15 @@ The **`delegatesFocus`** read-only property of the {{domxref("ShadowRoot")}} int
 
 If `true`, when a non-focusable part of the shadow DOM is clicked, the first focusable part is given focus, and the shadow host is given any available `:focus` styling.
 
-The property value is set using the `delegatesFocus` property of the object passed to {{domxref("Element.attachShadow()")}}).
+Focus is of particular importance for keyboard users (which includes most screen reader users). In certain cases it may be undesirable to focus the first focusable element; for instance if that element is not part of the tabbing order (e.g. an element with `tabindex="-1"`).
 
+Focusing the first element inside the shadow DOM makes sense but there are exceptions where it would be problematic. For instance when there are elements with tabindex="-1" it may be preferable to focus the element with tabindex="0" (not the first focusable element, but the first tabbable element). This in order to avoid confusion for keyboard users.
+
+An example where this happens is with the roving tabindex technique 
 If another element than the first one should receive focus, it should be given the `autofocus` attribute.
+
+
+The property value is set using the `delegatesFocus` property of the object passed to {{domxref("Element.attachShadow()")}}).
 
 ## Examples
 
