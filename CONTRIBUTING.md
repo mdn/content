@@ -385,7 +385,7 @@ During reviews, you may be asked to answer questions about your work or to make 
 This is a common part of the process of making changes in open source projects.
 There are some important rules of etiquette to remember that will help during the review stage.
 
-1. **Check tests** that are run automatically run for pull requests (see [.github/workflows](.github/workflows)).
+1. **Check tests** that are run automatically for pull requests (see [.github/workflows](.github/workflows)).
    If one or more of these tests fail, you must fix them.
    Your pull request will not be approved and merged if there are failing tests.
    If you don't know how to resolve the underlying issue(s), you can ask for help.
