@@ -164,36 +164,60 @@ import { name as squareName, draw } from "./shapes/square.js";
 import { name as circleName } from "https://example.com/shapes/circle.js";
 ```
 
-[Import maps](/en-US/docs/Web/HTML/Element/script/type/importmap) allow developers to specify (almost) any text they want in the module specifier; the map provides a corresponding value that will replace the text when the address of the module is resolved.
+[Import maps](/en-US/docs/Web/HTML/Element/script/type/importmap) allow developers to instead specify almost any text they want in the module specifier when importing a module; the map provides a corresponding value that will replace the text when the module URL is resolved.
 
-For example, the import map below defines keys `module/square` and `circle` that have values corresponding to the module specifiers used above.
+For example, the `imports` key in the import map below defines a "module specifier map" JSON object where the property names can be used as module specifiers, and the corresponding values will be substituted when the browser resolves the module URL.
+The values must be absolute or relative URLs.
+Relative URLs are resolved to absolute URL addresses using the [base URL](/en-US/docs/Web/HTML/Element/base) of the document containing the import map.
 
 ```html
 <script type="importmap">
   {
     "imports": {
-      "module/square": "./shapes/square.js",
-      "circle": "https://example.com/shapes/circle.js"
+      "shapes": "./shapes/square.js",
+      "shapes/square": "./modules/shapes/square.js",
+      "https://example.com/shapes/": "/shapes/square/",
+      "https://example.com/shapes/square.js": "./shapes/square.js",
+      "../shapes/square": "./shapes/square.js",
     }
   }
 </script>
 ```
 
-With this import map, a script can now use `module/square` and `circle` as module specifiers:
+The import map is defined using a [JSON object](/en-US/docs/Web/HTML/Element/script/type/importmap#import_map_json_representation) inside a `<script>` element with the `type` attribute set to [`importmap`](/en-US/docs/Web/HTML/Element/script/type/importmap).
+There can only be one import map in the document, and because it is used to resolve which modules are loaded in both static and dynamic imports, it must be declared before any `<script>` elements that import modules.
+
+With this map you can now use the property names above as module specifiers.
+If there is no trailing forward slash on the module specifier key then the whole module specifier key is matched and substituted.
+For example, below we match bare module names, and remap a URL to another path.
 
 ```js
-import { name as squareName, draw } from "module/square";
-import { name as circleName } from "circle";
+// Bare module names as module specifiers
+import { name as squareNameOne } from "shapes";
+import { name as squareNameTwo } from "shapes/square";
+
+// Remap a URL to another URL
+import { name as squareNameThree } from "https://example.com/shapes/moduleshapes/square.js";
 ```
 
-The browser matches the module specifier in the import with a module specifier map key in the import map — in this case, `circle` and `module/square` — and replaces matched keys with their associated values.
-Note that mapped relative address values are first resolved to absolute URL addresses using the [base URL](/en-US/docs/Web/HTML/Element/base) of the document containing the import map.
+If the module specifier has a trailing forward slash then the value must have one as well, and the key is matched as a "path prefix".
+This allows remapping of whole classes of URLs.
+
+```js
+// Remap a URL as a prefix ( https://example.com/shapes/)
+import { name as squareNameFour } from "https://example.com/shapes/square.js";
+```
+
+It is possible for multiple keys in an import map to be valid matches for a module specifier.
+For example, a module specifier of `shapes/circle/` could match the module specifier keys `shapes/` and `shapes/circle/`.
+In this case the browser will select the most specific (longest) matching module specifier key.
 
 Import maps allow modules to be imported using bare module names (as in Node.js), and can also simulate importing modules from packages, both with and without file extensions.
-They also allow particular versions of a library to be imported, based on the path of the script that is importing the module.
-
-More generally, import maps let developers write more ergonomic import code, and make it easier to manage the different versions and dependencies of modules used by a site.
+While not shown above, they also allow particular versions of a library to be imported, based on the path of the script that is importing the module.
+Generally they let developers write more ergonomic import code, and make it easier to manage the different versions and dependencies of modules used by a site.
 This can reduce the effort required to use the same JavaScript libraries in both browser and server.
+
+The following sections expand on the various features outlined above.
 
 ### Importing modules as bare names
 
