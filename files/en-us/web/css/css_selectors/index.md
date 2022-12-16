@@ -151,7 +151,7 @@ The term 'selector' can refer to one of the following:
 
 - Relative selector
 
-  - : A selector that represents an element relative to one or more [anchor elements](/en-US/docs/Web/CSS/Pseudo-classes) preceded by a combinator. Relative selectors that don't begin with an explicit [combinator](#combinators) have an implied [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator).
+  - : A selector that represents an element relative to one or more [anchor elements](/en-US/docs/Web/HTML/Element/a) preceded by a combinator. Relative selectors that don't begin with an explicit [combinator](#combinators) have an implied [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator).
 
     **Examples:** `+ div#topic > #reference {...}`, `> .icon {...}`
 

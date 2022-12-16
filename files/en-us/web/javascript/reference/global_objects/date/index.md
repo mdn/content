@@ -1,6 +1,7 @@
 ---
 title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
+page-type: javascript-class
 tags:
   - Class
   - Date

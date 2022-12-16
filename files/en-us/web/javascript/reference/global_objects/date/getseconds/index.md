@@ -1,6 +1,7 @@
 ---
 title: Date.prototype.getSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
+page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript

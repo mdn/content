@@ -8788,6 +8788,7 @@
 /en-US/docs/Web/API/LockedFile/truncate	/en-US/docs/Web/API/IDBFileHandle/truncate
 /en-US/docs/Web/API/LockedFile/write	/en-US/docs/Web/API/IDBFileHandle/write
 /en-US/docs/Web/API/LongRange	/en-US/docs/Web/API/MediaTrackConstraints
+/en-US/docs/Web/API/Long_Tasks_API	/en-US/docs/Web/API/PerformanceLongTaskTiming
 /en-US/docs/Web/API/MIDIAccess/onstatechange	/en-US/docs/Web/API/MIDIAccess/statechange_event
 /en-US/docs/Web/API/MIDIInput/onmidimessage	/en-US/docs/Web/API/MIDIInput/midimessage_event
 /en-US/docs/Web/API/MIDIPort/onstatechange	/en-US/docs/Web/API/MIDIPort/statechange_event

@@ -1,6 +1,7 @@
 ---
 title: Method definitions
 slug: Web/JavaScript/Reference/Functions/Method_definitions
+page-type: javascript-language-feature
 tags:
   - ECMAScript 2015
   - Functions

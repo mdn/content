@@ -1,6 +1,7 @@
 ---
 title: Symbol.species
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
+page-type: javascript-static-data-property
 tags:
   - ECMAScript 2015
   - JavaScript

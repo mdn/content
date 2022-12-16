@@ -1,6 +1,7 @@
 ---
 title: delete operator
 slug: Web/JavaScript/Reference/Operators/delete
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature

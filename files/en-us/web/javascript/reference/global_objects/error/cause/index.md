@@ -1,6 +1,7 @@
 ---
 title: Error.prototype.cause
 slug: Web/JavaScript/Reference/Global_Objects/Error/cause
+page-type: javascript-instance-data-property
 tags:
   - JavaScript
   - Property

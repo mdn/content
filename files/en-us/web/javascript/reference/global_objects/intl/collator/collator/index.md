@@ -1,6 +1,7 @@
 ---
 title: Intl.Collator() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
+page-type: javascript-constructor
 tags:
   - Collator
   - Constructor

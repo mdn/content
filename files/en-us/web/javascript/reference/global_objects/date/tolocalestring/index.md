@@ -1,6 +1,7 @@
 ---
 title: Date.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
+page-type: javascript-instance-method
 tags:
   - Date
   - Internationalization

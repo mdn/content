@@ -1,6 +1,7 @@
 ---
 title: Symbol.hasInstance
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
+page-type: javascript-static-data-property
 tags:
   - ECMAScript 2015
   - JavaScript

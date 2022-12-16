@@ -16,7 +16,7 @@ tags:
 browser-compat: http.headers.Permissions-Policy
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{HTTPSidebar}}
 
 **Permissions Policy** provides mechanisms for web developers to explicitly declare what functionality can and cannot be used on a web site. You define a set of "policies" that restrict what APIs the site's code can access or modify the browser's default behavior for certain features. This allows you to enforce best practices, even as the codebase evolves — as well as more safely compose third-party content.
 
@@ -187,7 +187,7 @@ It is worth giving the `src` value a special mention. We mentioned above that us
 <iframe src="https://example.com" allow="geolocation">
 ```
 
-> **Note:** As you'll have noticed, the syntax for `<iframe>` policies is a bit different to the syntax for `Permissions-Policy` headers. The former still uses the same syntax as the older Feature Policy specification, which was superceded by Permissions Policy.
+> **Note:** As you'll have noticed, the syntax for `<iframe>` policies is a bit different to the syntax for `Permissions-Policy` headers. The former still uses the same syntax as the older Feature Policy specification, which was superseded by Permissions Policy.
 
 ## Inheritance of policies for embedded content
 
