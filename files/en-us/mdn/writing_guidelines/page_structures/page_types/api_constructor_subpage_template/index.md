@@ -25,8 +25,6 @@ browser-compat: path.to.feature.NameOfTheConstructor
 > slug: Web/API/NameOfTheParentInterface/NameOfTheParentInterface
 > page-type: web-api-constructor
 > tags:
->   - Constructor
->   - Reference
 >   - Experimental
 >   - Deprecated
 >   - Non-standard
@@ -45,10 +43,7 @@ browser-compat: path.to.feature.NameOfTheConstructor
 > - **page-type**
 >   - : The `page-type` key for Web/API constructors is always `web-api-constructor`.
 > - **tags**
->   - : Always include the following tags: **API**, **Reference**, **Constructor**.
->
->     Include the following tags as appropriate:
->
+>   - : Include the following tags (if appropriate):
 >     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** if it isn't on a standards track.
 >     - Special requirements: **Secure context** (if it is available in a secure context only)
 >

@@ -22,8 +22,6 @@ The page front matter in the pages on MDN Web Docs comprises of the YAML headers
 > slug: Web/API/NameOfTheInterface
 > page-type: web-api-interface
 > tags:
->   - Reference
->   - Interface
 >   - Experimental
 >   - Deprecated
 >   - Non-standard
@@ -38,10 +36,7 @@ The page front matter in the pages on MDN Web Docs comprises of the YAML headers
 > - **page-type**
 >   - : The `page-type` key for Web/API interfaces is always `web-api-interface`.
 > - **tags**
->   - : Always include the following tags: **API**, **Reference**, **Interface**.
->
->     Include the following tags as appropriate:
->
+>   - : Include the following tags (if appropriate):
 >     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** if it isn't on a standards track.
 >     - Special requirements: **Secure context** (if it is available in a secure context only)
 > - **browser-compat**

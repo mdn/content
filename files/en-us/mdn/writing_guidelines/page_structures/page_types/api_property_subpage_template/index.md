@@ -25,8 +25,6 @@ browser-compat: path.to.feature.NameOfTheProperty
 > slug: Web/API/NameOfTheParentInterface/NameOfTheProperty
 > page-type: web-api-instance-property OR web-api-static-property
 > tags:
->   - Property
->   - Reference
 >   - Experimental
 >   - Deprecated
 >   - Non-standard
@@ -44,13 +42,9 @@ browser-compat: path.to.feature.NameOfTheProperty
 > - **page-type**
 >   - : The `page-type` key for Web/API properties is either `web-api-instance-property` (for instance properties) or `web-api-static-property` (for static properties).
 > - **tags**
->   - : Always include the following tags: **API**, **Reference**, **Property**.
->
->     Include the following tags as appropriate:
->
+>   - : Include the following tags (if appropriate):
 >     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** if it isn't on a standards track.
 >     - Special requirements: **Secure context** (if it is available in a secure context only)
->
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `path.to.feature.NameOfTheProperty` with the query string for the property in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
