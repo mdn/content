@@ -49,7 +49,7 @@ encrypt(algorithm, key, data)
       - `iv`
         - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
           The initialization vector.
-          Must be 16 bytes, unpredictable, and preferably cryptographically random.
+          Must be 16 bytes for AES-CBC, 12 bytes for AES-GCM, unpredictable, and preferably cryptographically random.
           However, it need not be secret (for example, it may be transmitted unencrypted along with the ciphertext).
 
     - To use [AES-CTR](#aes-ctr), pass an object with the following properties: <!-- AesCtrParams dictionary in the spec -->
