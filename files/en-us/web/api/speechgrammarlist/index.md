@@ -20,7 +20,6 @@ The **`SpeechGrammarList`** interface of the [Web Speech API](/en-US/docs/Web/AP
 
 Grammar is defined using [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**.) Other formats may also be supported in the future.
 
-
 ## Constructor
 
 - {{domxref("SpeechGrammarList.SpeechGrammarList", "SpeechGrammarList()")}} {{Experimental_Inline}}

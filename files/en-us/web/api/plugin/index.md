@@ -19,7 +19,6 @@ The `Plugin` interface provides information about a browser plugin.
 
 > **Note:** Own properties of `Plugin` objects are no longer enumerable in the latest browser versions.
 
-
 ## Instance properties
 
 - {{domxref("Plugin.description")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
