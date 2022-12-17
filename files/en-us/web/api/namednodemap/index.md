@@ -16,8 +16,6 @@ A `NamedNodeMap` object is _live_ and will thus be auto-updated if changes are m
 
 > **Note:** Although called `NamedNodeMap`, this interface doesn't deal with {{domxref("Node")}} objects but with {{domxref("Attr")}} objects, which are a specialized class of {{domxref("Node")}} objects.
 
-> **Note:** This interface was an [attempt to create an unmodifiable list](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156) and only continues to be supported to not break code that's already using it. Modern APIs use types that wrap around ECMAScript array types instead, so you can treat them like ECMAScript arrays, and at the same time impose additional semantics on their usage (such as making their items read-only).
-
 ## Instance properties
 
 _This interface doesn't inherit any property._
