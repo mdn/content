@@ -53,7 +53,7 @@ For security concerns, there are certain built-in objects that are designed to h
 ```js
 Object.isExtensible(Object.prototype); // true; you can add more properties
 Object.setPrototypeOf(Object.prototype, {}); // TypeError: Immutable prototype object '#<Object>' cannot have their prototype set
-Object.setPrototypeOf(Object.prototype, Object.getPrototypeOf(Object.prototype)) // No error; the prototype chain is not modified
+Object.setPrototypeOf(Object.prototype, null); // No error; the prototype of `Object.prototype` is already `null`
 ```
 
 ## Examples
