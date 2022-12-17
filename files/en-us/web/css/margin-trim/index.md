@@ -38,14 +38,6 @@ margin-trim: unset;
 
 - `none`
   - : Margins are not trimmed by the container.
-- `in-flow`
-
-  - : For in-flow boxes contained by this box, block-axis margins adjacent to the box's edges are truncated to zero.
-
-    It also truncates any margins collapsed with such a margin.
-
-- `all`
-  - : Trims the margins of in-flow boxes and floats whose margins coincide with the container's content edge.
 
 ## Formal definition
 
