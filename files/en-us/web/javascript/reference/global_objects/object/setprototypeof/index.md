@@ -39,7 +39,8 @@ The specified object.
 
 - {{jsxref("TypeError")}}
   - : Thrown if one of the following conditions is met:
-    - The `obj` parameter is [non-extensible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible), or it's an [immutable prototype exotic object](https://tc39.es/ecma262/#sec-immutable-prototype-exotic-objects), such as `Object.prototype` or [`window`](/en-US/docs/Web/API/Window).
+    - The `obj` parameter is [non-extensible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible), or it's an [immutable prototype exotic object](https://tc39.es/ecma262/#sec-immutable-prototype-exotic-objects), such as `Object.prototype` or [`window`](/en-US/docs/Web/API/Window), but the engine will check if you passed the exact current `obj` prototype as a second parameter no errors will be thrown,
+    and The function will return `obj` as it is. 
     - The `prototype` parameter is not an object or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 ## Description
@@ -53,6 +54,7 @@ For security concerns, there are certain built-in objects that are designed to h
 ```js
 Object.isExtensible(Object.prototype); // true; you can add more properties
 Object.setPrototypeOf(Object.prototype, {}); // TypeError: Immutable prototype object '#<Object>' cannot have their prototype set
+Object.setPrototypeOf(Object.prototype, Object.getPrototypeOf(Object.prototype)) // No errors as you pass the same current prototype of Object.prototype, and Object.prototype will be returned as it is.
 ```
 
 ## Examples
