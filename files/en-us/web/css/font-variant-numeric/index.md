@@ -13,7 +13,7 @@ browser-compat: css.properties.font-variant-numeric
 
 {{CSSRef}}
 
-The **`font-variant-numeric`** CSS property controls the usage of alternate glyphs for numbers, fractions, and ordinal markers.
+La propiedad **`font-variant-numeric`** de CSS controla el uso de glifos alternativos para números, fracciones, y marcadores ordinales.
 
 {{EmbedInteractiveExample("pages/css/font-variant-numeric.html")}}
 
@@ -39,63 +39,63 @@ font-variant-numeric: revert-layer;
 font-variant-numeric: unset;
 ```
 
-This property can take one of two forms:
+Esta propiedad puede tomar una de las siguientes dos formas: 
 
-- either the keyword value `normal`
-- or one or more of the other values listed below, space-separated, in any order.
+- o bien el valor de la palabra clave `normal`
+- o uno o más de los valores listados debajo, separados por espacios, en cualquier orden.
 
 ### Values
 
 - `normal`
-  - : This keyword leads to the deactivation of the use of such alternate glyphs.
+  - : Esta palabra clave conduce a la desactivación del so de tales glifos alternativos.
 - `ordinal`
-  - : This keyword forces the use of special glyphs for the ordinal markers, like 1st, 2nd, 3rd, 4th in English or a 1a in Italian. It corresponds to the OpenType values `ordn`.
+  - : Esta palabra clave fuerza el uso de glifos especiales para los marcadores ordinales, como 1º, 2º, 3º, 4º en inglés o 1a en italiano. Corresponde a los valores OpenType `ordn`.
 - `slashed-zero`
-  - : This keyword forces the use of a 0 with a slash; this is useful when a clear distinction between O and 0 is needed. It corresponds to the OpenType values `zero`.
+  - : Esta palabra clave fuerza el uso de un 0 con una barra inclinada; esto es útil cuando se necesita una distinción clara entre O y 0. Corresponde a los valores de OpenType `cero`.
 - _\<numeric-figure-values_>
 
-  - : These values control the figures used for numbers. Two values are possible:
+  - : Estos valores controlan las cifras utilizadas para los números. Dos valores son posibles:
 
-    - `lining-nums` activating the set of figures where numbers are all lying on the baseline. It corresponds to the OpenType values `lnum`.
-    - `oldstyle-nums` activating the set of figures where some numbers, like 3, 4, 7, 9 have descenders. It corresponds to the OpenType values `onum`.
+    - `lining-nums` activan el conjunto de figuras donde los números están todos en la línea de base. Corresponde a los valores OpenType `lnum`.
+    - `oldstyle-nums` activando el conjunto de cifras donde algunos números, como 3, 4, 7, 9 tienen descendientes. Corresponde a los valores OpenType `onum`.
 
 - _\<numeric-spacing-values_>
 
-  - : These values controls the sizing of figures used for numbers. Two values are possible:
+  - : Estos valores controlan el tamaño de las cifras utilizadas para los números. Dos valores son posibles:
 
-    - `proportional-nums` activating the set of figures where numbers are not all of the same size. It corresponds to the OpenType values `pnum`.
-    - `tabular-nums` activating the set of figures where numbers are all of the same size, allowing them to be easily aligned like in tables. It corresponds to the OpenType values `tnum`.
+    - `números-proporcionales` activan el conjunto de cifras donde los números no son todos del mismo tamaño. Corresponde a los valores de OpenType `pnum`.
+    - `tabular-nums` activan el conjunto de cifras donde los números son todos del mismo tamaño, lo que permite alinearlos fácilmente como en las tablas. Corresponde a los valores OpenType `tnum`.
 
 - _\<numeric-fraction-values_>
 
-  - : These values controls the glyphs used to display fractions. Two values are possible:
+  - : Estos valores controlan los glifos utilizados para mostrar fracciones. Dos valores son posibles:
 
-    - `diagonal-fractions` activating the set of figures where the numerator and denominator are made smaller and separated by a slash. It corresponds to the OpenType values `frac`.
-    - `stacked-fractions` activating the set of figures where the numerator and denominator are made smaller, stacked and separated by a horizontal line. It corresponds to the OpenType values `afrc`.
+    - `fracciones-diagonales` activando el conjunto de cifras donde el numerador y el denominador se hacen más pequeños y separados por una barra. Corresponde a los valores OpenType `frac`.
+    - `fracciones-apiladas` activando el conjunto de cifras donde el numerador y el denominador se hacen más pequeños, apilados y separados por una línea horizontal. Corresponde a los valores OpenType `afrc`.
 
-## Formal definition
+## Definición formal 
 
 {{cssinfo}}
 
-## Formal syntax
+## Sintaxis formal 
 
 {{csssyntax}}
 
-## Examples
+## Ejemplos
 
-### Setting ordinal numeric forms
+### Configuración de formas numéricas ordinales
 
 {{EmbedGHLiveSample("css-examples/font-features/font-variant-numeric-example.html", '100%', 600)}}
 
-## Specifications
+## Especificaciones
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad del navegador
 
 {{Compat}}
 
-## See also
+## Ver también
 
 - [`font-variant`](/en-US/docs/Web/CSS/font-variant)
 - [`font-variant-alternates`](/en-US/docs/Web/CSS/font-variant-alternates)
