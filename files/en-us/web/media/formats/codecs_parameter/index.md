@@ -997,6 +997,7 @@ You can also use the codecs parameter when specifying a MIME media type to the {
 ## See also
 
 - [Web media technologies](/en-US/docs/Web/Media)
+- The {{HTMLElement("source")}} element, child of the {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements 
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
 - [Guide to audio codecs used on the web](/en-US/docs/Web/Media/Formats/Audio_codecs)
 - [Guide to video codecs used on the web](/en-US/docs/Web/Media/Formats/Video_codecs)
