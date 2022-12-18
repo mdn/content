@@ -63,7 +63,7 @@ By default, font requests are delayed until the render tree is constructed, whic
 
 It is possible to override the default behavior and preload web font resources using `<link rel="preload">`, the [CSS font-display property](/en-US/docs/Web/CSS/@font-face/font-display), and the [Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API).
 
-See also: [Element Link](/en-US/docs/Web/HTML/Element/link)
+See also: [Element Link](/en-US/docs/Web/HTML/Element/link).
 
 ### Images and iframes
 
@@ -83,7 +83,7 @@ You can determine if a given image has finished loading by examining the value o
 
 **Polyfill**
 Include this polyfill to provide support for older and currently incompatible browsers:
-[loading-attribute-polyfill](https://github.com/mfranzke/loading-attribute-polyfill)
+[loading-attribute-polyfill](https://github.com/mfranzke/loading-attribute-polyfill).
 
 **Intersection Observer API**
 [Intersection Observers](/en-US/docs/Web/API/IntersectionObserver) allow the user to know when an observed element enters or exits the browser's viewport.
