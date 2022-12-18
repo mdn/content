@@ -118,7 +118,7 @@ Think carefully about the way you handle communication in the project — make s
 As a rule, do:
 
 - Fix one issue per PR — it may be slightly more work for you, but it is much easier to review a single clear fix.
-- Ask questions using other mechanisms like [chat rooms](https://chat.mozilla.org/#/room/#mdn:mozilla.org) or [forums](<(https://discourse.mozilla.org/c/mdn/236)>) if you are not sure whether something is useful or have a simple question.
+- Ask questions using other mechanisms like [chat rooms](https://chat.mozilla.org/#/room/#mdn:mozilla.org) or [forums](https://discourse.mozilla.org/c/mdn/236) if you are not sure whether something is useful or have a simple question.
 - Read the [contributor documentation]() and [how to write documentation]() first to try to answer the question yourself before filing a pr.
 
 Don't:
