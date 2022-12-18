@@ -2,5 +2,5 @@
   "recommendations": [
     "DavidAnson.vscode-markdownlint",
     "esbenp.prettier-vscode"
-  ]
+  ].vscode/extensions.json
 }
