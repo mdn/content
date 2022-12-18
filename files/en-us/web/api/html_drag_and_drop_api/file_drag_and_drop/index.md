@@ -84,7 +84,7 @@ function dropHandler(ev) {
 
 ## Prevent the browser's default drag behavior
 
-The following {{domxref("HTMLElement/dragover_event", "dragover")}} event handler calls {{domxref("Event.preventDefault","preventDefault()")}} to turn off the browser's default drag and drop handler. 
+The following {{domxref("HTMLElement/dragover_event", "dragover")}} event handler calls {{domxref("Event.preventDefault","preventDefault()")}} to turn off the browser's default drag and drop handler.
 
 ```js
 function dragOverHandler(ev) {
