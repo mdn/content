@@ -131,7 +131,7 @@ When planning your project, factor accessibility testing into your testing regim
 
 - Is my date picker widget usable by people using screen readers?
 - If content updates dynamically, do visually impaired people know about it?
-- Are my UI buttons accessible using the keyboard and on-touch interfaces?
+- Are my UI buttons accessible to both keyboard and touch interface users?
 
 You can and should keep a note of potential problem areas in your content that will need work to make it accessible, make sure it is tested thoroughly, and think about solutions/alternatives. Text content (as you'll see in the next article) is easy, but what about your multimedia content, and your whizzy 3D graphics? You should look at your project budget and think about what solutions you have available to make such content accessible. Having all your multimedia content transcribed is one option which, while expensive, is possible.
 
