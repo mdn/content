@@ -24,7 +24,7 @@ supplied values.
 ## Syntax
 
 ```js-nolint
-parseAll(property, value)
+parseAll(property, cssText)
 ```
 
 ### Parameters
