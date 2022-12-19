@@ -40,7 +40,7 @@ The Microsoft Edge `month` control looks like this:
 ## Value
 
 A string representing the value of the month and year entered into the input, in the form YYYY-MM (four or more digit year, then a hyphen ("`-`"), followed by the two-digit month).
-The format of the month string used by this input type is described in [Format of a valid local month string](/en-US/docs/Web/HTML/Date_and_time_formats#format_of_a_valid_local_month_string).
+The format of the month string used by this input type is described in [Local date and time strings](/en-US/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings).
 
 ### Setting a default value
 

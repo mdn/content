@@ -61,9 +61,7 @@ window.onunhandledrejection = (event) => {
 
 ## See also
 
-- [Promise
-    rejection events](/en-US/docs/Web/JavaScript/Guide/Using_promises#promise
-____rejection_events)
+- [Promise rejection events](/en-US/docs/Web/JavaScript/Guide/Using_promises#promise_rejection_events)
 - {{jsxref("Promise")}}
 - {{domxref("PromiseRejectionEvent")}}
 - {{domxref("Window.rejectionhandled_event", "rejectionhandled")}}

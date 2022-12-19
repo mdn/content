@@ -66,9 +66,7 @@ None ({{jsxref("undefined")}}).
     using the `EOR` (End of Record) flag to indicate when a received message is
     the last piece of a multi-part object sent using `send()`. For more
     information about message size restrictions, see
-    [Understanding
-    message size limits](/en-US/docs/Web/API/WebRTC_API/Using_data_channels#understanding
-____message_size_limits).
+    [Understanding message size limits](/en-US/docs/Web/API/WebRTC_API/Using_data_channels#understanding_message_size_limits).
 
 ## Examples
 

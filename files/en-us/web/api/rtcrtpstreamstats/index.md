@@ -47,7 +47,7 @@ _The `RTCRtpStreamStats` dictionary is based on {{domxref("RTCStats")}}, and inh
 #### Obsolete fields
 
 - {{domxref("RTCRtpStreamStats.kind", "mediaType")}} {{Deprecated_Inline}}
-  - : Renamed to {{domxref("RTCRtpStreamStats.kind", "kind")}} in the specification in February 2018. See [Browser Compatibility", "code](/en-US/docs/Web/API/RTCRtpStreamStats/kind#browser_compatibility",_"code) to determine when browsers made the transition.
+  - : Renamed to {{domxref("RTCRtpStreamStats.kind", "kind")}} in the specification in February 2018. See [Browser Compatibility](/en-US/docs/Web/API/RTCRtpStreamStats/kind#browser_compatibility) to determine when browsers made the transition.
 
 ### Local-only measurements
 
