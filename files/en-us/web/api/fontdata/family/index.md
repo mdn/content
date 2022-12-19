@@ -15,7 +15,7 @@ browser-compat: api.FontData.family
 
 The **`family`** read-only property of the {{domxref("FontData")}} interface returns the family of the font face.
 
-This is the name used when referring to the font family from code, for example in the {{cssxref("font-family")}} property or in places within the {{cssxref("@font-face")}} at-rule such as the `local()` function.
+This is the name used when referring to the font family from code, for example, in the {{cssxref("font-family")}} property or in places within the {{cssxref("@font-face")}} at-rule such as the `local()` function.
 
 Examples include:
 
