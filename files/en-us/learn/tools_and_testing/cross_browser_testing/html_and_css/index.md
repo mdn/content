@@ -121,7 +121,7 @@ Some problems can be solved by just taking advantage of the natural way in which
 
 Unrecognized HTML elements are treated by the browser as anonymous inline elements (effectively inline elements with no semantic value, similar to {{htmlelement("span")}} elements). You can still refer to them by their names, and style them with CSS, for example — you just need to make sure they are behaving as you want them to. Style them just as you would any other element, including setting the `display` property to something other than `inline` if needed.
 
-More complex elements like HTML [`<video>`](/en-US/docs/Web/HTML/Element/video), [`<audio>`](/en-US/docs/Web/HTML/Element/audio), [`<picture>`](/en-US/docs/Web/HTML/Element/picture), [`<object>`](/en-US/docs/Web/HTML/Element/object),and [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) (and other features besides) have natural mechanisms for fallbacks to be added incase the resources linked to are not supported. You can add fallback content in between the opening and closing tags, and non-supporting browsers will effectively ignore the outer element and run the nested content.
+More complex elements like HTML [`<video>`](/en-US/docs/Web/HTML/Element/video), [`<audio>`](/en-US/docs/Web/HTML/Element/audio), [`<picture>`](/en-US/docs/Web/HTML/Element/picture), [`<object>`](/en-US/docs/Web/HTML/Element/object), and [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) (and other features besides) have natural mechanisms for fallbacks to be added in case the resources linked to are not supported. You can add fallback content in between the opening and closing tags, and non-supporting browsers will effectively ignore the outer element and run the nested content.
 
 For example:
 
