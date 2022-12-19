@@ -117,7 +117,12 @@ The `indexOf()` method takes an item as an argument and will either return the i
 const birds = ['Parrot', 'Falcon', 'Owl'];
 console.log(birds.indexOf('Owl'));   //  2
 console.log(birds.indexOf('Rabbit')); // -1
+
+const cars=['Toyota','Ford','Toyota];
+console.log(cars.indexOf('Toyota')); // 0
 ```
+
+> **Note:** The `indexOf()` method returns the **first index** at which a given element can be found in the array, or -1 if it is not present.
 
 ## Adding items
 
