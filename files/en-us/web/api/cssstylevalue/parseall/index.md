@@ -24,14 +24,14 @@ supplied values.
 ## Syntax
 
 ```js-nolint
-parseAll(property, cssText)
+parseAll(property, value)
 ```
 
 ### Parameters
 
 - `property`
   - : A CSS property to set.
-- `cssText`
+- `value`
   - : A comma-separated string containing one or more values that apply to the provided
     property.
 
