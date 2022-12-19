@@ -22,7 +22,7 @@ The **`LaunchParams`** interface is used when implementing custom launch navigat
 - {{domxref("LaunchParams.files")}} {{readonlyinline}}{{Experimental_Inline}}
   - : Returns a read-only array of {{domxref("FileSystemHandle")}} objects representing any files passed along with the launch navigation via the [`POST`](/en-US/docs/Web/HTTP/Methods/POST) method.
 - {{domxref("LaunchParams.targetURL")}} {{readonlyinline}}{{Experimental_Inline}}
-  - : Returns the URL of the launch.
+  - : Returns the target URL of the launch.
 
 ## Examples
 
