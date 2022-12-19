@@ -28,7 +28,7 @@ queryLocalFonts(options)
 - `options` {{optional_inline}}
   - : Contains optional configuration parameters. Currently only one property is defined:
     - `postscriptNames`
-      - : An array of font postscript names. If this is specified, only fonts with postscript names matching those in the array will be included in the results.
+      - : An array of font PostScript names. If this is specified, only fonts with PostScript names matching those in the array will be included in the results.
 
 ### Return value
 
