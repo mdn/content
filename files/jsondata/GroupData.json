@@ -791,6 +791,13 @@
       "properties": [],
       "events": []
     },
+    "Local Font Access API": {
+      "overview": ["Local Font Access API"],
+      "interfaces": ["FontData"],
+      "methods": ["Window.queryLocalFonts()"],
+      "properties": [],
+      "events": []
+    },
     "Media Capabilities API": {
       "overview": ["Media Capabilities API"],
       "guides": [
