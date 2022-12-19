@@ -56,8 +56,7 @@ then begins the process of selecting and loading an appropriate media resource g
 options specified in the {{HTMLElement("audio")}} or {{HTMLElement("video")}} element
 and its {{htmlattrxref("src", "video")}} attribute or child {{HTMLElement("source")}}
 element(s). This is described in more detail in
-{{SectionOnPage("/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content",
-  "Supporting multiple formats")}}.
+[Supporting multiple formats](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#supporting_multiple_formats).
 
 The process of aborting any ongoing activities will cause any outstanding
 {{jsxref("Promise")}}s returned by {{domxref("HTMLMediaElement.play", "play()")}} being

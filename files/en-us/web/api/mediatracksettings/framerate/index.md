@@ -40,8 +40,9 @@ track's frame rate, in frames per second.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See [Example:
+  Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example:
+__constraint_exerciser) for an example.
 
 ## Specifications
 

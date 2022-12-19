@@ -33,7 +33,7 @@ Some browsers may resort to a text-only input element that validates that the re
 
 ## Value
 
-A string representing the value of the date entered into the input. The format of the date and time value used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Local date and time strings")}}.
+A string representing the value of the date entered into the input. The format of the date and time value used by this input type is described in [Local date and time strings](/en-US/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings).
 
 You can set a default value for the input by including a date and time inside the {{htmlattrxref("value", "input")}} attribute, like so:
 

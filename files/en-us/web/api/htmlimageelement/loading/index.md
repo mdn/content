@@ -123,5 +123,6 @@ function addImageToList(url) {
 - [Web performance](/en-US/docs/Learn/Performance) in the MDN Learning Area
 - [Lazy loading](/en-US/docs/Web/Performance/Lazy_loading) in the MDN web
   performance guide
-- {{SectionOnPage("/en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages", "Use
-    lazy loading for images")}}
+- [Use
+    lazy loading for images](/en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages#use
+____lazy_loading_for_images)

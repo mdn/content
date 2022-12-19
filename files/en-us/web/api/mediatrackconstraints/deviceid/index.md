@@ -58,8 +58,9 @@ the same source for multiple calls to {{domxref("MediaDevices.getUserMedia",
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See [Example:
+  Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example:
+__constraint_exerciser) for an example.
 
 ## Specifications
 

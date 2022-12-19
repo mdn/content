@@ -49,7 +49,7 @@ functionality enabled or `false` if echo cancellation is disabled.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints", "Example: Constraint exerciser")}} for an example.
+See [Example: Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example:_constraint_exerciser) for an example.
 
 ## Specifications
 

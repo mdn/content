@@ -40,4 +40,4 @@ These macros have been replace by other ways of doing the same thing, and should
 
 ### Linking
 
-- The [`SectionOnPage`](https://github.com/mdn/yari/blob/main/kumascript/macros/SectionOnPage.ejs) macro creates a phrase that links to both the name of a section and the article containing that section. For example, `\{{SectionOnPage("/en-US/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}` outputs the following: _{{SectionOnPage("/en-US/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}_.
+- The [`SectionOnPage`](https://github.com/mdn/yari/blob/main/kumascript/macros/SectionOnPage.ejs) macro creates a phrase that links to both the name of a section and the article containing that section. For example, `\[Changes for Web developers](/en-US/docs/Mozilla/Firefox/Releases/21#changes_for_web_developers)` outputs the following: _[Changes for Web developers](/en-US/docs/Mozilla/Firefox/Releases/21#changes_for_web_developers)_.

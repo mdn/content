@@ -173,7 +173,7 @@ On top of simplifying the sound through psychoacoustic analysis, codecs use othe
 
 Importantly, codecs do all the hard work for you. It's why so much engineering and scientific study goes into the creation of new algorithms and codecs. All you need to do is consider the options and your use case, then choose the appropriate codec for your needs.
 
-> **Note:** For a more detailed guide to choosing audio codecs, see {{SectionOnPage("/en-US/docs/Web/Media/Formats/Audio_codecs", "Choosing an audio codec")}}.
+> **Note:** For a more detailed guide to choosing audio codecs, see [Choosing an audio codec](/en-US/docs/Web/Media/Formats/Audio_codecs#choosing_an_audio_codec).
 
 ## Lossless encoder parameters
 

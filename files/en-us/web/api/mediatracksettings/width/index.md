@@ -38,7 +38,7 @@ An integer value indicating the width, in pixels, of the video track as currentl
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints", "Example: Constraint exerciser")}} for an example.
+See [Example: Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example:_constraint_exerciser) for an example.
 
 ## Specifications
 

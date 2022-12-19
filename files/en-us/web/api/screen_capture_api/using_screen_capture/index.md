@@ -97,7 +97,7 @@ While display capture is in effect, the machine which is sharing screen contents
 
 {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} is most commonly used to capture video of a user's screen (or parts thereof). However, {{Glossary("user agent", "user agents")}} may allow the capture of audio along with the video content. The source of this audio might be the selected window, the entire computer's audio system, or the user's microphone (or a combination of all of the above).
 
-Before starting a project that will require sharing of audio, be sure to check the {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getDisplayMedia", "Browser compatibility", "code")}} to see if the browsers you wish compatibility with have support for audio in captured screen streams.
+Before starting a project that will require sharing of audio, be sure to check the [Browser compatibility", "code](/en-US/docs/Web/API/MediaDevices/getDisplayMedia#browser_compatibility",_"code) to see if the browsers you wish compatibility with have support for audio in captured screen streams.
 
 To request that the screen be shared with included audio, the options passed into `getDisplayMedia()` might look like this:
 
