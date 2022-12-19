@@ -355,7 +355,7 @@ First, some HTML:
     </datalist>
   </p>
   <p>
-    <label for="t2">What's your e-mail address?</label>
+    <label for="t2">What's your email address?</label>
     <input type="email" id="t2" name="email">
   </p>
   <p>
@@ -464,7 +464,7 @@ We'll start with some simple HTML (feel free to put this in a blank HTML file; u
 ```html
 <form>
   <label for="mail">
-    I would like you to provide me with an e-mail address:
+    I would like you to provide me with an email address:
   </label>
   <input type="email" id="mail" name="mail" />
   <button>Submit</button>
@@ -478,7 +478,7 @@ const email = document.getElementById("mail");
 
 email.addEventListener("input", (event) => {
   if (email.validity.typeMismatch) {
-    email.setCustomValidity("I am expecting an e-mail address!");
+    email.setCustomValidity("I am expecting an email address!");
     email.reportValidity();
   } else {
     email.setCustomValidity("");
@@ -621,15 +621,15 @@ function showError() {
   if (email.validity.valueMissing) {
     // If the field is empty,
     // display the following error message.
-    emailError.textContent = "You need to enter an e-mail address.";
+    emailError.textContent = "You need to enter an email address.";
   } else if (email.validity.typeMismatch) {
     // If the field doesn't contain an email address,
     // display the following error message.
-    emailError.textContent = "Entered value needs to be an e-mail address.";
+    emailError.textContent = "Entered value needs to be an email address.";
   } else if (email.validity.tooShort) {
     // If the data is too short,
     // display the following error message.
-    emailError.textContent = `E-mail should be at least ${email.minLength} characters; you entered ${email.value.length}.`;
+    emailError.textContent = `Email should be at least ${email.minLength} characters; you entered ${email.value.length}.`;
   }
 
   // Set the styling appropriately
@@ -768,7 +768,7 @@ const emailRegExp =
 // explicitly set the valid/invalid class on our email field
 window.addEventListener("load", () => {
   // Here, we test if the field is empty (remember, the field is not required)
-  // If it is not, we check if its content is a well-formed e-mail address.
+  // If it is not, we check if its content is a well-formed email address.
   const isValid = email.value.length === 0 || emailRegExp.test(email.value);
   email.className = isValid ? "valid" : "invalid";
 });
@@ -792,7 +792,7 @@ form.addEventListener("submit", (event) => {
   const isValid = email.value.length === 0 || emailRegExp.test(email.value);
   if (!isValid) {
     email.className = "invalid";
-    error.textContent = "I expect an e-mail, darling!";
+    error.textContent = "I expect an email, darling!";
     error.className = "error active";
   } else {
     email.className = "valid";

@@ -373,7 +373,7 @@ Prior to the introduction of the [`let`](/en-US/docs/Web/JavaScript/Reference/St
 
 ```html
 <p id="help">Helpful notes will appear here</p>
-<p>E-mail: <input type="text" id="email" name="email" /></p>
+<p>Email: <input type="text" id="email" name="email" /></p>
 <p>Name: <input type="text" id="name" name="name" /></p>
 <p>Age: <input type="text" id="age" name="age" /></p>
 ```
@@ -385,7 +385,7 @@ function showHelp(help) {
 
 function setupHelp() {
   var helpText = [
-    { id: 'email', help: 'Your e-mail address' },
+    { id: 'email', help: 'Your email address' },
     { id: 'name', help: 'Your full name' },
     { id: 'age', help: 'Your age (you must be over 16)' },
   ];
@@ -425,7 +425,7 @@ function makeHelpCallback(help) {
 
 function setupHelp() {
   var helpText = [
-    { id: 'email', help: 'Your e-mail address' },
+    { id: 'email', help: 'Your email address' },
     { id: 'name', help: 'Your full name' },
     { id: 'age', help: 'Your age (you must be over 16)' },
   ];
@@ -452,7 +452,7 @@ function showHelp(help) {
 
 function setupHelp() {
   var helpText = [
-    { id: 'email', help: 'Your e-mail address' },
+    { id: 'email', help: 'Your email address' },
     { id: 'name', help: 'Your full name' },
     { id: 'age', help: 'Your age (you must be over 16)' },
   ];
@@ -479,7 +479,7 @@ function showHelp(help) {
 
 function setupHelp() {
   const helpText = [
-    { id: 'email', help: 'Your e-mail address' },
+    { id: 'email', help: 'Your email address' },
     { id: 'name', help: 'Your full name' },
     { id: 'age', help: 'Your age (you must be over 16)' },
   ];
@@ -506,7 +506,7 @@ function showHelp(help) {
 
 function setupHelp() {
   var helpText = [
-    { id: 'email', help: 'Your e-mail address' },
+    { id: 'email', help: 'Your email address' },
     { id: 'name', help: 'Your full name' },
     { id: 'age', help: 'Your age (you must be over 16)' },
   ];

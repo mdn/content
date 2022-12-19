@@ -369,7 +369,7 @@ You can then step up a gear, using an API to access functionality programmatical
 #### Getting started with LambdaTest
 
 1. Let's get started by [signing up on LambdaTest](https://accounts.lambdatest.com/register) for free.
-2. Sign in. This should happen automatically after you verify your e-mail address.
+2. Sign in. This should happen automatically after you verify your email address.
 
 > **Note:** Unlike other cloud-based cross browser testing service providers, LambdaTest offers a freemium account where you get lifetime access to their platform. The only difference between their premium and their freemium plan is on the amount of consumption. For automation testing through their Selenium Grid, LambdaTest offers 60 minutes per month of free testing.
 
@@ -396,7 +396,7 @@ Once you sign in to LambdaTest, you will be routed to the LambdaTest Dashboard. 
 Let's get started with a Sauce Labs Trial.
 
 1. Create a Sauce Labs trial account.
-2. Sign in. This should happen automatically after you verify your e-mail address.
+2. Sign in. This should happen automatically after you verify your email address.
 
 #### The basics: Manual tests
 
@@ -482,7 +482,7 @@ We'll cover actually running automated Sauce Lab tests in the next article.
 Let's get started with a BrowserStack Trial.
 
 1. Create a [BrowserStack trial account](https://www.browserstack.com/users/sign_up).
-2. Sign in. This should happen automatically after you verify your e-mail address.
+2. Sign in. This should happen automatically after you verify your email address.
 3. When you first sign in, you should be on the Live testing page; if not, click the _Live_ link in the top nav menu.
 4. If you are on Firefox or Chrome, you'll be prompted to Install a browser extension in a dialog titled "Enable Local Testing" — click the _Install_ button to proceed. On other browsers you'll still be able to use some of the features (generally via Flash), but you might not get the full experience.
 
@@ -700,7 +700,7 @@ We'll cover actually running automated BrowserStack tests in the next article.
 Let's get started with a TestingBot Trial.
 
 1. Create a [TestingBot trial account](https://testingbot.com/users/sign_up).
-2. Sign in. This should happen automatically after you verify your e-mail address.
+2. Sign in. This should happen automatically after you verify your email address.
 
 #### The basics: Manual tests
 
