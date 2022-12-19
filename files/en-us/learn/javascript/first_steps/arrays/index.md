@@ -118,7 +118,7 @@ const birds = ['Parrot', 'Falcon', 'Owl'];
 console.log(birds.indexOf('Owl'));   //  2
 console.log(birds.indexOf('Rabbit')); // -1
 
-const cars=['Toyota','Ford','Toyota];
+const cars=['Toyota','Ford','Toyota'];
 console.log(cars.indexOf('Toyota')); // 0
 ```
 
