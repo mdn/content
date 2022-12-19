@@ -4020,6 +4020,10 @@
       "inh": "",
       "impl": []
     },
+    "XRPermissionStatus": {
+      "inh": "PermissionStatus",
+      "impl": []
+    },
     "XRPose": {
       "inh": "",
       "impl": []

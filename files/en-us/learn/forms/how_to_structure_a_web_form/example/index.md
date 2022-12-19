@@ -58,7 +58,7 @@ This the example for a basic payment form for the article [How to structure an H
     </p>
     <p>
       <label for="mail">
-        <span>E-mail: </span>
+        <span>Email: </span>
         <strong><span aria-label="required">*</span></strong>
       </label>
       <input type="email" id="mail" name="usermail" />

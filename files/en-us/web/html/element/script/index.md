@@ -24,20 +24,12 @@ The **`<script>`** [HTML](/en-US/docs/Web/HTML) element is used to embed executa
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
-          >Metadata content</a
-        >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >Phrasing content</a
-        >.
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content">Metadata content</a>,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a>.
       </td>
     </tr>
     <tr>
@@ -51,21 +43,14 @@ The **`<script>`** [HTML](/en-US/docs/Web/HTML) element is used to embed executa
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
-          >metadata content</a
-        >, or any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >.
+        Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content">metadata content</a>,
+        or any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a>
       </td>
     </tr>
     <tr>
@@ -145,15 +130,28 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("src")}}
   - : This attribute specifies the URI of an external script; this can be used as an alternative to embedding a script directly within a document.
-- {{htmlattrdef("type")}}
+- [**`type`**](/en-US/docs/Web/HTML/Element/script/type)
 
-  - : This attribute indicates the type of script represented. The value of this attribute will be in one of the following categories:
+  - : This attribute indicates the type of script represented.
+    The value of this attribute will be one of the following:
 
-    - **Omitted or a JavaScript MIME type:** This indicates the script is JavaScript. The HTML specification urges authors to omit the attribute rather than provide a redundant MIME type. In earlier browsers, this identified the scripting language of the embedded or imported (via the `src` attribute) code. JavaScript MIME types are [listed in the specification](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types).
-    - **`module`:** Causes the code to be treated as a JavaScript module. The processing of the script contents is deferred. The `charset` and `defer` attributes have no effect.
-      For information on using `module`, see our [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide.
-      Unlike classic scripts, module scripts require the use of the CORS protocol for cross-origin fetching.
-    - **Any other value:** The embedded content is treated as a data block which won't be processed by the browser. Developers must use a valid MIME type that is not a JavaScript MIME type to denote data blocks. The `src` attribute will be ignored.
+    - **Attribute is not set (default), an empty string, or a JavaScript MIME type**
+      - : Indicates that the script is a "classic script", containing JavaScript code.
+        Authors are encouraged to omit the attribute if the script refers to JavaScript code rather than specify a MIME type.
+        JavaScript MIME types are [listed in the IANA media types specification](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types).
+    - `module`
+      - : This value causes the code to be treated as a JavaScript module.
+        The processing of the script contents is deferred.
+        The `charset` and `defer` attributes have no effect.
+        For information on using `module`, see our [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide.
+        Unlike classic scripts, module scripts require the use of the CORS protocol for cross-origin fetching.
+    - [`importmap`](/en-US/docs/Web/HTML/Element/script/type/importmap)
+      - : This value indicates that the body of the element contains an import map.
+        The import map is a JSON object that developers can use to control how the browser resolves module specifiers when importing [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps).
+    - **Any other value**
+      - : The embedded content is treated as a data block, and won't be processed by the browser.
+        Developers must use a valid MIME type that is not a JavaScript MIME type to denote data blocks.
+        All of the other attributes will be ignored, including the `src` attribute.
 
 - {{htmlattrdef("blocking")}}
   - : This attribute explicitly indicates that certain operations should be blocked on the fetching of the script. The operations that are to be blocked must be a space-separated list of blocking attributes listed below.
@@ -170,7 +168,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 Scripts without {{HTMLAttrxRef("async", "script")}}, {{HTMLAttrxRef("defer", "script")}} or `type="module"` attributes, as well as inline scripts without the `type="module"` attribute, are fetched and executed immediately, before the browser continues to parse the page.
 
-The script should be served with the `text/javascript` MIME type, but browsers are lenient and only block them if the script is served with an image type (`image/*`); a video type (`video/*`); an audio (`audio/*`) type; or `text/csv`. If the script is blocked, an {{domxref("Element/error_event", "error")}} is sent to the element, if not a {{domxref("Element/load_event", "load")}} event is sent.
+The script should be served with the `text/javascript` MIME type, but browsers are lenient and only block them if the script is served with an image type (`image/*`), a video type (`video/*`), an audio type (`audio/*`), or `text/csv`.
+If the script is blocked, an {{domxref("Element/error_event", "error")}} event is sent to the element; otherwise, a {{domxref("Element/load_event", "load")}} event is sent.
 
 ## Examples
 
@@ -198,6 +197,39 @@ Browsers that support the `module` value for the {{htmlattrxref("type", "script"
 <script type="module" src="main.js"></script>
 <script nomodule src="fallback.js"></script>
 ```
+
+### Importing modules with importmap
+
+When importing modules in scripts, if you don't use the [`type=importmap`](#importmap) feature, then each module must be imported using a module specifier that is either an absolute or relative URL.
+In the example below, the first module specifier ("./shapes/square.js") resolves relative to the base URL of the document, while the second is an absolute URL.
+
+```js
+import { name as squareName, draw } from "./shapes/square.js";
+import { name as circleName } from "https://example.com/shapes/circle.js";
+```
+
+An import map allows you to provide a mapping that, if matched, can replace the text in the module specifier.
+The import map below defines keys `square` and `circle` that can be used as aliases for the module specifiers shown above.
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "square": "./shapes/square.js",
+      "circle": "https://example.com/shapes/circle.js"
+    }
+  }
+</script>
+```
+
+This allows us to import modules using names in the module specifier (rather than absolute or relative URLs).
+
+```js
+import { name as squareName, draw } from "square";
+import { name as circleName } from "circle";
+```
+
+For more examples of what you can do with import maps, see the [Importing modules using import maps](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps) section in the JavaScript modules guide.
 
 ### Embedding data in HTML
 
@@ -237,14 +269,6 @@ so that the script doesn't block parsing but is guaranteed to be evaluated befor
 ## Browser compatibility
 
 {{Compat}}
-
-### Compatibility notes
-
-In older browsers that don't support the `async` attribute, parser-inserted scripts block the parser; script-inserted scripts execute asynchronously in IE and WebKit, but synchronously in Opera and pre-4 Firefox. In Firefox 4, the `async` DOM property defaults to `true` for script-created scripts, so the default behavior matches the behavior of IE and WebKit.
-
-To request script-inserted external scripts be executed in the insertion order in browsers where the `document.createElement("script").async` evaluates to `true` (such as Firefox 4), set `async="false"` on the scripts you want to maintain order.
-
-> **Warning:** Never call `document.write()` from an async script. In Firefox 3.6, calling `document.write()` has an unpredictable effect. In Firefox 4, calling `document.write()` from an async script has no effect (other than printing a warning to the error console).
 
 ## See also
 
