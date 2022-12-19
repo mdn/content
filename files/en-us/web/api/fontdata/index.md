@@ -23,7 +23,7 @@ The **`FontData`** interface of the {{domxref("Local Font Access API", "Local Fo
 - {{domxref('FontData.fullName')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the full name of the font face.
 - {{domxref('FontData.postscriptName')}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns the postscript name of the font face.
+  - : Returns the PostScript name of the font face.
 - {{domxref('FontData.style')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the style of the font face.
 
