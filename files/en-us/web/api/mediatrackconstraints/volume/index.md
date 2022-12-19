@@ -50,7 +50,7 @@ satisfied and will result in failure.
 
 ## Examples
 
-See [Example: Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example:_constraint_exerciser) for an example.
+See [Example: Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) for an example.
 
 ## Browser compatibility
 
