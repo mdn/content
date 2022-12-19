@@ -43,7 +43,7 @@ A {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} o
 
 ## Examples
 
-For a working live demo, see [Font Select Demo](https://local-font-access.glitch.me/demo/) by Thomas Steiner.
+For a working live demo, see [Font Select Demo](https://local-font-access.glitch.me/demo/).
 
 ### Font enumeration
 
