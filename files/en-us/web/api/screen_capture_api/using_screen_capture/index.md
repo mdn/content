@@ -67,7 +67,7 @@ You can then use the captured stream, `captureStream`, for anything that accepts
 
 ### Visible vs logical display surfaces
 
-For the purposes of the Screen Capture API, a **display surface** is any content object that can be selected by the API for sharing purposes. Sharing surfaces include the contents of a browser tab, a complete window, all of the windows of an application combined into a single surface, and a monitor (or group of monitors combined together into one surface).
+For the purposes of the Screen Capture API, a **display surface** is any content object that can be selected by the API for sharing purposes. Sharing surfaces include the contents of a browser tab, a complete window, and a monitor (or group of monitors combined together into one surface).
 
 There are two types of display surface. A **visible display surface** is a surface which is entirely visible on the screen, such as the frontmost window or tab, or the entire screen.
 
@@ -77,15 +77,11 @@ A user agent might allow the capture of the entire content of an obscured window
 
 ### Options and constraints
 
-The constraints object passed into {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} is an object which is used to configuring the resulting stream.
+The options object passed into {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} is used to set options for the resulting stream.
 
-> **Note:** Unlike most uses of constraints in media APIs, here it's solely used to define the stream configuration, and _not_ to filter the available choices.
+The `video` and `audio` objects passed into the options object can also hold additional constraints particular to those media tracks. See [Properties of shared screen tracks](/en-US/docs/Web/API/MediaTrackConstraints#instance_properties_of_shared_screen_tracks) for details about additional constraints for configuring a screen-capture stream that are added to {{domxref("MediaTrackConstraints")}}, {{domxref("MediaTrackSupportedConstraints")}}, and {{domxref("MediaTrackSettings")}}).
 
-See [Properties of shared screen tracks](/en-US/docs/Web/API/MediaTrackConstraints#properties_of_shared_screen_tracks) for details about additional constraints for configuring a screen-capture stream that are added to {{domxref("MediaTrackConstraints")}}, {{domxref("MediaTrackSupportedConstraints")}}, and {{domxref("MediaTrackSettings")}}).
-
-None of the constraints are applied in any way until after the content to capture has been selected. The constraints alter what you see in the resulting stream.
-
-For example, if you specify a {{domxref("MediaTrackConstraints.width", "width")}} constraint for the video, it's applied by scaling the video after the user selects the area to share. It doesn't establish a restriction on the size of the source itself.
+None of the constraints are applied in any way until after the content to capture has been selected. The constraints alter what you see in the resulting stream. For example, if you specify a {{domxref("MediaTrackConstraints.width", "width")}} constraint for the video, it's applied by scaling the video after the user selects the area to share. It doesn't establish a restriction on the size of the source itself.
 
 > **Note:** Constraints _never_ cause changes to the list of sources available for capture by the Screen Sharing API. This ensures that web applications can't force the user to share specific content by restricting the source list until only one item is left.
 
@@ -108,26 +104,34 @@ const gdmOptions = {
 }
 ```
 
-This allows the user total freedom to select whatever they want, within the limits of what the user agent supports. This could be refined further by specifying additional information for each of `audio` and `video`:
+This allows the user total freedom to select whatever they want, within the limits of what the user agent supports. This could be refined further by specifying additional options, and constraints inside the `audio` and `video` objects:
 
 ```js
 const gdmOptions = {
   video: {
-    cursor: "always"
+    displaySurface: "window"
   },
   audio: {
     echoCancellation: true,
     noiseSuppression: true,
     sampleRate: 44100
-  }
+    suppressLocalAudioPlayback: true
+  },
+  surfaceSwitching: "include",
+  selfBrowserSurface: "exclude",
+  systemAudio: "exclude"
 }
 ```
 
-In this example the cursor will always be visible in the capture, and the audio track should ideally have noise suppression and echo cancellation features enabled, as well as an ideal audio sample rate of 44.1kHz.
+In this example the display surface captured is to be the whole window. The audio track should ideally have noise suppression and echo cancellation features enabled, as well as an ideal audio sample rate of 44.1kHz, and supression of local audio playback.
+
+In addition, the app is hinting to the user agent that it should:
+
+- Provide a control during screen sharing to allow the user to dynamically switch the shared tab.
+- Hide the current tab from the list of options presented to the user when capture is requested.
+- Not include the system audio among the possible audio sources offered to the user.
 
 Capturing audio is always optional, and even when web content requests a stream with both audio and video, the returned {{domxref("MediaStream")}} may still have only one video track, with no audio.
-
-> **Note:** Some properties are not widely implemented and might not be used by the engine. `cursor`, for example, [has limited support](/en-US/docs/Web/API/MediaTrackConstraints#browser_compatibility).
 
 ## Using the captured stream
 
@@ -159,9 +163,7 @@ There isn't all that much code needed in order to make this work, and if you're 
 
 First, some constants are set up to reference the elements on the page to which we'll need access: the {{HTMLElement("video")}} into which the captured screen contents will be streamed, a box into which logged output will be drawn, and the start and stop buttons that will turn on and off capture of screen imagery.
 
-The object `displayMediaOptions` contains the constraints to pass into `getDisplayMedia()`; here, the {{domxref("MediaTrackConstraints.cursor", "cursor")}} property is set to `always`, indicating that the mouse cursor should always be included in the captured media.
-
-> **Note:** Some properties are not widely implemented and might not be used by the engine. `cursor`, for example, [has limited support](/en-US/docs/Web/API/MediaTrackConstraints#browser_compatibility).
+The object `displayMediaOptions` contains the options to pass into `getDisplayMedia()`; here, the {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} property is set to `window`, indicating that the whole window should be captured.
 
 Finally, event listeners are established to detect user clicks on the start and stop buttons.
 
@@ -175,7 +177,7 @@ const stopElem = document.getElementById("stop");
 
 const displayMediaOptions = {
   video: {
-    cursor: "always"
+    displaySurface: "window"
   },
   audio: false
 };
