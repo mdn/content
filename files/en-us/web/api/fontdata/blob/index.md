@@ -31,7 +31,7 @@ A {{jsxref("Promise")}} that fulfills with a {{domxref("Blob")}} containing the 
 
 ## Examples
 
-The `blob()` method provides access to low-level [SFNT](https://en.wikipedia.org/wiki/SFNT) data — this is a font file format that can contain other font formats, such as PostScript, TrueType, OpenType, Web Open Font Format (WOFF).
+The `blob()` method provides access to low-level [SFNT](https://en.wikipedia.org/wiki/SFNT) data — this is a font file format that can contain other font formats, such as PostScript, TrueType, OpenType, or Web Open Font Format (WOFF).
 
 ```js
 async function computeOutlineFormat() {
