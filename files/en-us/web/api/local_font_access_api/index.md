@@ -46,7 +46,7 @@ In terms of privacy and security:
 
 ## Examples
 
-For a working live demo, see [Font Select Demo](https://local-font-access.glitch.me/demo/) by Thomas Steiner.
+For a working live demo, see [Font Select Demo](https://local-font-access.glitch.me/demo/).
 
 ### Feature detection
 
