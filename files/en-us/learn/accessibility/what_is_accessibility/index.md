@@ -47,7 +47,7 @@ You might also think of accessibility as treating everyone the same, and giving 
 
 Accessibility is the right thing to do. Providing accessible sites is part of the law in some countries, which can open up some significant markets that otherwise would not be able to use your services or buy your products.
 
-Building accessible sites benefit everyone:
+Building accessible sites benefits everyone:
 
 - Semantic HTML, which improves accessibility, also improves SEO, making your site more findable.
 - Caring about accessibility demonstrates good ethics and morals, which improves your public image.
@@ -99,7 +99,7 @@ Cognitive impairment refers to a broad range of disabilities, from people with i
 A good foundation of accessibility for people with cognitive impairments includes:
 
 - Delivering content in more than one way, such as by text-to-speech or by video.
-- Easily understood the content, such as text written using plain-language standards.
+- Easily understood content, such as text written using plain-language standards.
 - Focusing attention on important content.
 - Minimizing distractions, such as unnecessary content or advertisements.
 - Consistent webpage layout and navigation.
