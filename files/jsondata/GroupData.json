@@ -2038,6 +2038,19 @@
       "properties": ["Window.sessionStorage", "Window.localStorage"],
       "events": ["Window: storage"]
     },
+    "WebTransport API": {
+      "overview": ["WebTransport API"],
+      "guides": [],
+      "interfaces": [
+        "WebTransport",
+        "WebTransportBidirectionalStream",
+        "WebTransportDatagramDuplexStream",
+        "WebTransportError"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Web Workers API": {
       "overview": ["Web Workers API"],
       "guides": [
