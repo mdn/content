@@ -240,9 +240,8 @@ For example, in Node.js you might use the following syntax to import the "square
 import { name, draw, reportArea, reportPerimeter } from "square";
 ```
 
-A bare name will throw a `TypeError` on a browser that does not [support import maps](/en-US/docs/Web/HTML/Element/script/type/importmap#browser_compatibility), because the browser has no way to resolve the module name to a URL.
+To use bare names on a browser you need an import map, which provides the information needed by the browser to resolve module specifiers to URLs (JavaScript will throw a `TypeError` if it attempts to import a module specifier that can't be resolved to a module location).
 
-Using an import map we can provide the information needed by a browser to resolve the URL.
 Below you can see a map that defines a `square` module specifier key, which in this case maps to a relative address value.
 
 ```html
