@@ -14,7 +14,7 @@ browser-compat:
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Local Font Access API")}}
 
-The **Local Font Access API** provides a mechanism to access the user's locally installed font data — both higher-level details such as names, styles, and families and the raw bytes of the underlying font files.
+The **Local Font Access API** provides a mechanism to access the user's locally installed font data — this includes higher-level details such as names, styles, and families, as well as the raw bytes of the underlying font files.
 
 ## Concepts and usage
 
@@ -58,7 +58,7 @@ if ('queryLocalFonts' in window) {
 
 ### Font enumeration
 
-The following snippet will query for all available fonts, and log metadata. This could be used for example to populate a font-picker control.
+The following snippet will query for all available fonts, and log metadata. This could be used, for example, to populate a font-picker control.
 
 ```js
 async function logFontData() {

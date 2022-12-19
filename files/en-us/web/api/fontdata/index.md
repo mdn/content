@@ -38,7 +38,7 @@ For a working live demo, see [Font Select Demo](https://local-font-access.glitch
 
 ### Font enumeration
 
-The following snippet will query for all available fonts, and log metadata. This could be used for example to populate a font-picker control.
+The following snippet will query for all available fonts, and log metadata. This could be used, for example, to populate a font-picker control.
 
 ```js
 async function logFontData() {
