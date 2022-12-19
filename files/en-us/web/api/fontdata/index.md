@@ -34,7 +34,7 @@ The **`FontData`** interface of the {{domxref("Local Font Access API", "Local Fo
 
 ## Examples
 
-For a working live demo, see [Font Select Demo](https://local-font-access.glitch.me/demo/) by Thomas Steiner.
+For a working live demo, see [Font Select Demo](https://local-font-access.glitch.me/demo/).
 
 ### Font enumeration
 
