@@ -8,7 +8,6 @@ tags:
   - HTML interactive elements
   - Reference
   - Web
-  - polyfill
 browser-compat: html.elements.dialog
 ---
 
@@ -196,4 +195,4 @@ It is important to provide a mechanism to close a dialog within the `dialog` ele
 - The {{domxref("HTMLDialogElement/cancel_event", "cancel")}} event
 - [HTML forms guide](/en-US/docs/Learn/Forms).
 - The {{cssxref("::backdrop")}} pseudo-element
-- [dialog-polyfill](https://github.com/GoogleChrome/dialog-polyfill)
+- [Using HTML Dialog](https://12daysofweb.dev/2022/dialog/)
