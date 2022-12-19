@@ -260,38 +260,34 @@ TODO: Revisit this PR process
 - Once the pull request is approved, the new Invited Expert is added to the [invited-experts team](https://github.com/orgs/mdn/teams/invited-experts) and the appropriate topic team.
 -->
 
-### Stepping down voluntarily
+### Stepping down or applying for emeritus status
 
-Participants must be active to set an example and show commitment to the project.
-Conversely, inactivity harms the project as it may lead to unexpected delays, contributor attrition, and a loss of trust in the project.
+Life happens and your commitment levels as a contributor could change over time. Depending on your situation, you might want to:
 
-Inactivity is measured by:
+- Take a break from the project temporarily.
+- Downgrade to a less-demanding role.
+- Step away from the project completely (apply for an emeritus status).
 
-- Periods of no contributions for longer than six months.
-- Periods of no communication for longer than three months.
+In all these situations, feel free to discuss your situation and current commitment levels with the [MDN team](#contact-the-mdn-team).
 
-Consequences of being inactive include:
+### Demoting or removing inactive contributors
 
-- Involuntary removal or demotion
-- Being asked to move to [emeritus status](#gaining-emeritus-status)
+A contributor can be demoted or removed as a contributor when responsibilities and requirements aren't being met, including repeated patterns of inactivity or a violation of the [code of conduct](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md).
 
-### Gaining emeritus status
+Demotion or removal of a contributor is proposed by a participant during a maintainers meeting.
+The participant provides supporting information for the demotion or removal request.
+After discussion, maintainers and community managers vote on the matter to make a decision.
 
-If and when contributors' commitment levels change, contributors can consider stepping down (moving down the contributor ladder) vs moving to emeritus status (completely stepping away from the project).
-Contact the community team about moving to emeritus status or reducing your contributor level.
+Removing inactive contributors protects the project and its deliverables and also opens up opportunities for new contributors to step in.
 
-### Getting demoted involuntarily
+We define inactivity as:
 
-Involuntary removal/demotion of a contributor happens when responsibilities and requirements aren't being met.
-This may include repeated patterns of inactivity, a period of failing to meet the requirements of the role, or a violation of the [code of conduct](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md).
-This process is essential because it protects the community and its deliverables while also opening up opportunities for new contributors to step in.
+- No contributions to the project for at least six months.
+- No response to communication for at least three months.
 
-During a maintainers meeting, a participant can ask to demote or remove a contributor.
-The participant should provide supporting information for the demotion request.
-After discussion, maintainers and community managers will vote on the matter to make a decision.
+Inactivity harms the project; it may lead to unexpected delays, contributor attrition, and a loss of trust in the project. Contributors must be active to set an example and show commitment to the project.
 
-Please communicate with the community team to avoid the above process should your time commitments change.
-In these cases, you can instead proactively choose to step down for a while or move to [emeritus status](#gaining-emeritus-status).
+Please communicate with the community team to avoid demotion or removal should your time commitments change; instead you can proactively choose to [step down for a while or move to emeritus status](#stepping-down-or-applying-for-emeritus-status).
 
 ## Teams
 
