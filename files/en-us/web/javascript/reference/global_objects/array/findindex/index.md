@@ -1,6 +1,7 @@
 ---
 title: Array.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
+page-type: javascript-instance-method
 tags:
   - Array
   - JavaScript
@@ -120,7 +121,7 @@ const arrayLike = {
   2: 4,
 };
 console.log(
-  Array.prototype.findIndex.call(arrayLike, (x) => !Number.isInteger(x)),
+  Array.prototype.findIndex.call(arrayLike, (x) => !Number.isInteger(x))
 ); // 1
 ```
 

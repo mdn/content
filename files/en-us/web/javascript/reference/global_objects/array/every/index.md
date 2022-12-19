@@ -1,6 +1,7 @@
 ---
 title: Array.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
+page-type: javascript-instance-method
 tags:
   - Array
   - ECMAScript 5
@@ -181,7 +182,7 @@ const arrayLike = {
   2: "c",
 };
 console.log(
-  Array.prototype.every.call(arrayLike, (x) => typeof x === "string"),
+  Array.prototype.every.call(arrayLike, (x) => typeof x === "string")
 ); // true
 ```
 

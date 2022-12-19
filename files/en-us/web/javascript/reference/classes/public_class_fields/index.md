@@ -1,6 +1,7 @@
 ---
 title: Public class fields
 slug: Web/JavaScript/Reference/Classes/Public_class_fields
+page-type: javascript-language-feature
 tags:
   - Classes
   - JavaScript
@@ -47,7 +48,7 @@ accessed again from the class constructor.
 
 ```js
 class ClassWithStaticField {
-  static staticField = 'static field';
+  static staticField = "static field";
 }
 
 console.log(ClassWithStaticField.staticField); // "static field"
@@ -60,7 +61,7 @@ class ClassWithStaticField {
   static staticField;
 }
 
-console.log(Object.hasOwn(ClassWithStaticField, 'staticField')); // true
+console.log(Object.hasOwn(ClassWithStaticField, "staticField")); // true
 console.log(ClassWithStaticField.staticField); // "undefined"
 ```
 
@@ -69,11 +70,11 @@ prototype chain.
 
 ```js
 class ClassWithStaticField {
-  static baseStaticField = 'base field';
+  static baseStaticField = "base field";
 }
 
 class SubClassWithStaticField extends ClassWithStaticField {
-  static subStaticField = 'sub class field';
+  static subStaticField = "sub class field";
 }
 
 console.log(SubClassWithStaticField.subStaticField); // "sub class field"
@@ -86,10 +87,12 @@ also reference it by name, and use `super` to get the superclass constructor
 
 ```js
 class ClassWithStaticField {
-  static baseStaticField = 'base static field';
+  static baseStaticField = "base static field";
   static anotherBaseStaticField = this.baseStaticField;
 
-  static baseStaticMethod() { return 'base static method output'; }
+  static baseStaticMethod() {
+    return "base static method output";
+  }
 }
 
 class SubClassWithStaticField extends ClassWithStaticField {
@@ -113,7 +116,7 @@ constructor body runs), or just after `super()` returns in a subclass.
 
 ```js
 class ClassWithInstanceField {
-  instanceField = 'instance field';
+  instanceField = "instance field";
 }
 
 const instance = new ClassWithInstanceField();
@@ -128,17 +131,17 @@ class ClassWithInstanceField {
 }
 
 const instance = new ClassWithInstanceField();
-console.assert(Object.hasOwn(instance, 'instanceField'));
+console.assert(Object.hasOwn(instance, "instanceField"));
 console.log(instance.instanceField); // "undefined"
 ```
 
 Like properties, field names may be computed.
 
 ```js
-const PREFIX = 'prefix';
+const PREFIX = "prefix";
 
 class ClassWithComputedFieldName {
-  [`${PREFIX}Field`] = 'prefixed field';
+  [`${PREFIX}Field`] = "prefixed field";
 }
 
 const instance = new ClassWithComputedFieldName();
@@ -151,9 +154,11 @@ the superclass prototype using `super`.
 
 ```js
 class ClassWithInstanceField {
-  baseInstanceField = 'base field';
+  baseInstanceField = "base field";
   anotherBaseInstanceField = this.baseInstanceField;
-  baseInstanceMethod() { return 'base method output'; }
+  baseInstanceMethod() {
+    return "base method output";
+  }
 }
 
 class SubClassWithInstanceField extends ClassWithInstanceField {
@@ -172,11 +177,11 @@ Because instance fields of a class are added before the respective constructor r
 
 ```js
 class ClassWithInstanceField {
-  instanceField = 'instance field';
+  instanceField = "instance field";
 
   constructor() {
     console.log(this.instanceField);
-    this.instanceField = 'new value';
+    this.instanceField = "new value";
   }
 }
 
@@ -189,7 +194,7 @@ However, because instance fields of a derived class are defined after `super()` 
 ```js
 class Base {
   constructor() {
-    console.log('Base constructor:', this.field);
+    console.log("Base constructor:", this.field);
   }
 }
 
@@ -197,7 +202,7 @@ class Derived extends Base {
   field = 1;
   constructor() {
     super();
-    console.log('Derived constructor:', this.field);
+    console.log("Derived constructor:", this.field);
   }
 }
 
@@ -245,7 +250,7 @@ objects.
 ```js
 class ClassWithStaticMethod {
   static staticMethod() {
-    return 'static method has been called.';
+    return "static method has been called.";
   }
 }
 
@@ -263,7 +268,7 @@ As the name implies, public instance methods are methods available on class inst
 ```js
 class ClassWithPublicInstanceMethod {
   publicMethod() {
-    return 'hello world';
+    return "hello world";
   }
 }
 
@@ -279,9 +284,9 @@ You may make use of generator, async, and async generator functions.
 
 ```js
 class ClassWithFancyMethods {
-  *generatorMethod() { }
-  async asyncMethod() { }
-  async *asyncGeneratorMethod() { }
+  *generatorMethod() {}
+  async asyncMethod() {}
+  async *asyncGeneratorMethod() {}
 }
 ```
 
@@ -291,7 +296,7 @@ call methods from the superclass.
 
 ```js
 class BaseClass {
-  msg = 'hello world';
+  msg = "hello world";
   basePublicMethod() {
     return this.msg;
   }
@@ -313,19 +318,19 @@ public instance getter or setter.
 
 ```js
 class ClassWithGetSet {
-  #msg = 'hello world';
+  #msg = "hello world";
   get msg() {
     return this.#msg;
   }
   set msg(x) {
     this.#msg = `hello ${x}`;
- }
+  }
 }
 
 const instance = new ClassWithGetSet();
 console.log(instance.msg); // "hello world"
 
-instance.msg = 'cake';
+instance.msg = "cake";
 console.log(instance.msg); // "hello cake"
 ```
 

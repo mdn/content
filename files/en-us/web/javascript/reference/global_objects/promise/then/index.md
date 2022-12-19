@@ -1,6 +1,7 @@
 ---
 title: Promise.prototype.then()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/then
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -77,7 +78,7 @@ p1.then(
   },
   (reason) => {
     console.error(reason); // Error!
-  },
+  }
 );
 ```
 
@@ -104,7 +105,7 @@ Promise.resolve("foo")
           string += "bar";
           resolve(string);
         }, 1);
-      }),
+      })
   )
   // 2. receive "foobar", register a callback function to work on that string
   // and print it to the console, but not before returning the unworked on
@@ -121,7 +122,7 @@ Promise.resolve("foo")
   // previous then block.
   .then((string) => {
     console.log(
-      "Last Then: oops... didn't bother to instantiate and return a promise in the prior then so the sequence may be a bit surprising",
+      "Last Then: oops... didn't bother to instantiate and return a promise in the prior then so the sequence may be a bit surprising"
     );
 
     // Note that `string` will not have the 'baz' bit of it at this point. This
@@ -168,7 +169,7 @@ Promise.resolve()
     },
     (error) => {
       console.error(`onRejected function called: ${error.message}`);
-    },
+    }
   );
 ```
 
@@ -194,7 +195,7 @@ In all other cases, the returned promise eventually fulfills. In the following e
 Promise.reject()
   .then(
     () => 99,
-    () => 42,
+    () => 42
   ) // onRejected returns 42 which is wrapped in a fulfilled Promise
   .then((solution) => console.log(`Resolved with ${solution}`)); // Fulfilled with 42
 ```
@@ -225,7 +226,7 @@ p2.then(
   (e) => {
     // not called
     console.error("rejected", e);
-  },
+  }
 );
 
 const p3 = p1.then(() => {
@@ -239,7 +240,7 @@ p3.then(
   },
   (e) => {
     console.error("rejected", e); // "rejected", 'Error'
-  },
+  }
 );
 ```
 
@@ -282,7 +283,7 @@ const thenProm = resolvedProm.then((value) => {
   console.log(
     `this gets called after the end of the main stack. the value received is: ${value}, the value returned is: ${
       value + 1
-    }`,
+    }`
   );
   return value + 1;
 });

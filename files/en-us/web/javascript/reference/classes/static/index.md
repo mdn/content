@@ -1,6 +1,7 @@
 ---
 title: static
 slug: Web/JavaScript/Reference/Classes/static
+page-type: javascript-language-feature
 tags:
   - Classes
   - ECMAScript 2015
@@ -46,8 +47,8 @@ The following example demonstrates several things:
 
 ```js
 class Triple {
-  static customName = 'Tripler';
-  static description = 'I triple any number you provide';
+  static customName = "Tripler";
+  static description = "I triple any number you provide";
   static calculate(n = 1) {
     return n * 3;
   }
@@ -55,25 +56,25 @@ class Triple {
 
 class SquaredTriple extends Triple {
   static longDescription;
-  static description = 'I square the triple of any number you provide';
+  static description = "I square the triple of any number you provide";
   static calculate(n) {
     return super.calculate(n) * super.calculate(n);
   }
 }
 
-console.log(Triple.description);            // 'I triple any number you provide'
-console.log(Triple.calculate());            // 3
-console.log(Triple.calculate(6));           // 18
+console.log(Triple.description); // 'I triple any number you provide'
+console.log(Triple.calculate()); // 3
+console.log(Triple.calculate(6)); // 18
 
 const tp = new Triple();
 
-console.log(SquaredTriple.calculate(3));    // 81 (not affected by parent's instantiation)
-console.log(SquaredTriple.description);     // 'I square the triple of any number you provide'
+console.log(SquaredTriple.calculate(3)); // 81 (not affected by parent's instantiation)
+console.log(SquaredTriple.description); // 'I square the triple of any number you provide'
 console.log(SquaredTriple.longDescription); // undefined
-console.log(SquaredTriple.customName);      // 'Tripler'
+console.log(SquaredTriple.customName); // 'Tripler'
 
 // This throws because calculate() is a static member, not an instance member.
-console.log(tp.calculate());                // 'tp.calculate is not a function'
+console.log(tp.calculate()); // 'tp.calculate is not a function'
 ```
 
 ### Calling static members from another static method
@@ -82,7 +83,7 @@ In order to call a static method or property within another static method of the
 
 ```js
 class StaticMethodCall {
-  static staticProperty = 'static property';
+  static staticProperty = "static property";
   static staticMethod() {
     return `Static method and ${this.staticProperty} has been called`;
   }
@@ -115,9 +116,9 @@ class StaticMethodCall {
     console.log(this.constructor.staticMethod()); // 'static method has been called.'
   }
 
-  static staticProperty = 'static property';
+  static staticProperty = "static property";
   static staticMethod() {
-    return 'static method has been called.';
+    return "static method has been called.";
   }
 }
 ```

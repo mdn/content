@@ -1,6 +1,7 @@
 ---
 title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
+page-type: javascript-class
 tags:
   - Class
   - ECMAScript 2015
@@ -229,8 +230,8 @@ Therefore, this appears to work in a way:
 
 ```js example-bad
 const wrongMap = new Map();
-wrongMap['bla'] = 'blaa';
-wrongMap['bla2'] = 'blaaa2';
+wrongMap["bla"] = "blaa";
+wrongMap["bla2"] = "blaaa2";
 
 console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
@@ -240,24 +241,24 @@ structure. It uses the feature of the generic object. The value of 'bla' is not
 stored in the Map for queries. Other operations on the data fail:
 
 ```js example-bad
-wrongMap.has('bla')    // false
-wrongMap.delete('bla') // false
-console.log(wrongMap)  // Map { bla: 'blaa', bla2: 'blaaa2' }
+wrongMap.has("bla"); // false
+wrongMap.delete("bla"); // false
+console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
 
 The correct usage for storing data in the Map is through the `set(key, value)`
 method.
 
 ```js example-good
-const contacts = new Map()
-contacts.set('Jessie', {phone: "213-555-1234", address: "123 N 1st Ave"})
-contacts.has('Jessie') // true
-contacts.get('Hilary') // undefined
-contacts.set('Hilary', {phone: "617-555-4321", address: "321 S 2nd St"})
-contacts.get('Jessie') // {phone: "213-555-1234", address: "123 N 1st Ave"}
-contacts.delete('Raymond') // false
-contacts.delete('Jessie') // true
-console.log(contacts.size) // 1
+const contacts = new Map();
+contacts.set("Jessie", { phone: "213-555-1234", address: "123 N 1st Ave" });
+contacts.has("Jessie"); // true
+contacts.get("Hilary"); // undefined
+contacts.set("Hilary", { phone: "617-555-4321", address: "321 S 2nd St" });
+contacts.get("Jessie"); // {phone: "213-555-1234", address: "123 N 1st Ave"}
+contacts.delete("Raymond"); // false
+contacts.delete("Jessie"); // true
+console.log(contacts.size); // 1
 ```
 
 ## Constructor
@@ -309,14 +310,14 @@ console.log(contacts.size) // 1
 ```js
 const myMap = new Map();
 
-const keyString = 'a string';
+const keyString = "a string";
 const keyObj = {};
-const keyFunc = function() {};
+const keyFunc = function () {};
 
 // setting the values
 myMap.set(keyString, "value associated with 'a string'");
-myMap.set(keyObj, 'value associated with keyObj');
-myMap.set(keyFunc, 'value associated with keyFunc');
+myMap.set(keyObj, "value associated with keyObj");
+myMap.set(keyFunc, "value associated with keyFunc");
 
 console.log(myMap.size); // 3
 
@@ -325,9 +326,9 @@ console.log(myMap.get(keyString)); // "value associated with 'a string'"
 console.log(myMap.get(keyObj)); // "value associated with keyObj"
 console.log(myMap.get(keyFunc)); // "value associated with keyFunc"
 
-console.log(myMap.get('a string')); // "value associated with 'a string'", because keyString === 'a string'
+console.log(myMap.get("a string")); // "value associated with 'a string'", because keyString === 'a string'
 console.log(myMap.get({})); // undefined, because keyObj !== {}
-console.log(myMap.get(function() {})); // undefined, because keyFunc !== function () {}
+console.log(myMap.get(function () {})); // undefined, because keyFunc !== function () {}
 ```
 
 ### Using NaN as Map keys
@@ -338,12 +339,12 @@ not equal to itself (`NaN !== NaN` is true), the following example works because
 
 ```js
 const myMap = new Map();
-myMap.set(NaN, 'not a number');
+myMap.set(NaN, "not a number");
 
 myMap.get(NaN);
 // "not a number"
 
-const otherNaN = Number('foo');
+const otherNaN = Number("foo");
 myMap.get(otherNaN);
 // "not a number"
 ```
@@ -354,8 +355,8 @@ Maps can be iterated using a `for...of` loop:
 
 ```js
 const myMap = new Map();
-myMap.set(0, 'zero');
-myMap.set(1, 'one');
+myMap.set(0, "zero");
+myMap.set(1, "one");
 
 for (const [key, value] of myMap) {
   console.log(`${key} = ${value}`);
@@ -398,12 +399,15 @@ myMap.forEach((value, key) => {
 ### Relation with Array objects
 
 ```js
-const kvArray = [['key1', 'value1'], ['key2', 'value2']];
+const kvArray = [
+  ["key1", "value1"],
+  ["key2", "value2"],
+];
 
 // Use the regular Map constructor to transform a 2D key-value Array into a map
 const myMap = new Map(kvArray);
 
-console.log(myMap.get('key1')); // "value1"
+console.log(myMap.get("key1")); // "value1"
 
 // Use Array.from() to transform a map into a 2D key-value Array
 console.log(Array.from(myMap)); // Will show you exactly the same Array as kvArray
@@ -420,9 +424,7 @@ console.log(Array.from(myMap.keys())); // ["key1", "key2"]
 Just like `Array`s, `Map`s can be cloned:
 
 ```js
-const original = new Map([
-  [1, 'one'],
-]);
+const original = new Map([[1, "one"]]);
 
 const clone = new Map(original);
 
@@ -436,14 +438,14 @@ Maps can be merged, maintaining key uniqueness:
 
 ```js
 const first = new Map([
-  [1, 'one'],
-  [2, 'two'],
-  [3, 'three'],
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
 ]);
 
 const second = new Map([
-  [1, 'uno'],
-  [2, 'dos'],
+  [1, "uno"],
+  [2, "dos"],
 ]);
 
 // Merge two maps. The last repeated key wins.
@@ -459,18 +461,18 @@ Maps can be merged with Arrays, too:
 
 ```js
 const first = new Map([
-  [1, 'one'],
-  [2, 'two'],
-  [3, 'three'],
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
 ]);
 
 const second = new Map([
-  [1, 'uno'],
-  [2, 'dos'],
+  [1, "uno"],
+  [2, "dos"],
 ]);
 
 // Merge maps with an array. The last repeated key wins.
-const merged = new Map([...first, ...second, [1, 'eins']]);
+const merged = new Map([...first, ...second, [1, "eins"]]);
 
 console.log(merged.get(1)); // eins
 console.log(merged.get(2)); // dos

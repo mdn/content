@@ -1,6 +1,7 @@
 ---
 title: Promise.prototype.catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -91,7 +92,7 @@ p1.then((value) => {
   })
   .then(
     () => console.log("after a catch the chain is restored"),
-    () => console.log("Not fired due to the catch"),
+    () => console.log("Not fired due to the catch")
   );
 
 // The following behaves the same as above
@@ -104,7 +105,7 @@ p1.then((value) => {
   })
   .then(
     () => console.log("after a catch the chain is restored"),
-    () => console.log("Not fired due to the catch"),
+    () => console.log("Not fired due to the catch")
   );
 ```
 
@@ -169,7 +170,7 @@ p2.then(
   (reason) => {
     console.log("next promise's onRejected");
     console.log(reason);
-  },
+  }
 );
 ```
 

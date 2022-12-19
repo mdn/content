@@ -1,6 +1,7 @@
 ---
 title: Map.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Map/delete
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -40,10 +41,10 @@ delete(key)
 
 ```js
 const myMap = new Map();
-myMap.set('bar', 'foo');
+myMap.set("bar", "foo");
 
-console.log(myMap.delete('bar')); // Returns true. Successfully removed.
-console.log(myMap.has('bar')); // Returns false. The "bar" element is no longer present.
+console.log(myMap.delete("bar")); // Returns true. Successfully removed.
+console.log(myMap.has("bar")); // Returns false. The "bar" element is no longer present.
 ```
 
 ## Specifications

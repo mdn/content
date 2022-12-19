@@ -1,6 +1,7 @@
 ---
 title: Generator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - Generator
@@ -20,7 +21,7 @@ The **`return()`** method of a generator acts as if a `return` statement is inse
 <!-- We don't usually add the "generatorObject" subject for methods. However, it is necessary here, because "return" is a keyword, so otherwise it's invalid syntax. -->
 
 ```js
-generatorObject.return(value)
+generatorObject.return(value);
 ```
 
 ### Parameters
@@ -58,9 +59,9 @@ function* gen() {
 
 const g = gen();
 
-g.next();        // { value: 1, done: false }
-g.return('foo'); // { value: "foo", done: true }
-g.next();        // { value: undefined, done: true }
+g.next(); // { value: 1, done: false }
+g.return("foo"); // { value: "foo", done: true }
+g.next(); // { value: undefined, done: true }
 ```
 
 If `return(value)` is called on a generator that is already in "completed" state, the generator will remain in "completed" state.
@@ -96,7 +97,7 @@ function* gen() {
     yield 2;
     yield 3;
   } finally {
-    yield 'cleanup';
+    yield "cleanup";
   }
 }
 
@@ -104,20 +105,20 @@ const g1 = gen();
 g1.next(); // { value: 1, done: false }
 
 // Execution is suspended before the try...finally.
-g1.return('early return'); // { value: 'early return', done: true }
+g1.return("early return"); // { value: 'early return', done: true }
 
 const g2 = gen();
 g2.next(); // { value: 1, done: false }
 g2.next(); // { value: 2, done: false }
 
 // Execution is suspended within the try...finally.
-g2.return('early return'); // { value: 'cleanup', done: false }
+g2.return("early return"); // { value: 'cleanup', done: false }
 
 // The completion value is preserved
 g2.next(); // { value: 'early return', done: true }
 
 // Generator is in the completed state
-g2.return('not so early return'); // { value: 'not so early return', done: true }
+g2.return("not so early return"); // { value: 'not so early return', done: true }
 ```
 
 The return value of the finally block can also become the `value` of the result returned from the `return` call.
@@ -127,13 +128,13 @@ function* gen() {
   try {
     yield 1;
   } finally {
-    return 'cleanup';
+    return "cleanup";
   }
 }
 
 const g1 = gen();
 g1.next(); // { value: 1, done: false }
-g1.return('early return'); // { value: 'cleanup', done: true }
+g1.return("early return"); // { value: 'cleanup', done: true }
 ```
 
 ## Specifications

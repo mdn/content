@@ -1,6 +1,7 @@
 ---
 title: Intl.Locale.prototype.weekInfo
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/weekInfo
+page-type: javascript-instance-accessor-property
 tags:
   - Internationalization
   - Intl
@@ -36,10 +37,10 @@ const af = new Intl.Locale("af");
 console.log(af.weekInfo); // { firstDay: 7, weekend: [6, 7], minimalDays: 1 }
 
 const enGB = new Intl.Locale("en-GB");
-console.log(enGB.weekInfo) // { firstDay: 1, weekend: [6, 7], minimalDays: 4 }
+console.log(enGB.weekInfo); // { firstDay: 1, weekend: [6, 7], minimalDays: 4 }
 
 const msBN = new Intl.Locale("ms-BN");
-console.log(msBN.weekInfo) // { firstDay: 7, weekend: [5, 7], minimalDays: 1 }
+console.log(msBN.weekInfo); // { firstDay: 7, weekend: [5, 7], minimalDays: 1 }
 // Brunei weekend is Friday and Sunday but not Saturday
 ```
 

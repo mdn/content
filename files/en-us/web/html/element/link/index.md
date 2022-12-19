@@ -1,5 +1,5 @@
 ---
-title: '<link>: The External Resource Link element'
+title: "<link>: The External Resource Link element"
 slug: Web/HTML/Element/link
 tags:
   - Element
@@ -26,7 +26,7 @@ To link an external stylesheet, you'd include a `<link>` element inside your {{H
 <link href="main.css" rel="stylesheet" />
 ```
 
-This simple example provides the path to the stylesheet inside an `href` attribute, and a `rel` attribute with a value of `stylesheet`. The `rel` stands for "relationship", and is probably one of the key features of the `<link>` element — the value denotes how the item being linked to is related to the containing document.
+This simple example provides the path to the stylesheet inside an `href` attribute, and a `rel` attribute with a value of `stylesheet`. The `rel` stands for "relationship", and is one of the key features of the `<link>` element — the value denotes how the item being linked to is related to the containing document.
 As you'll see from our [Link types](/en-US/docs/Web/HTML/Link_types) reference, there are many kinds of relationship.
 
 There are a number of other common types you'll come across. For example, a link to the site's favicon:
@@ -398,7 +398,7 @@ You can include `render` token inside a `blocking` attribute;
 the rendering of the page will be blocked till the resource is fetched. For example:
 
 ```html
-<link blocking="render" href="critical-font.woff2" as="font">
+<link blocking="render" href="critical-font.woff2" as="font" />
 ```
 
 ## Technical summary

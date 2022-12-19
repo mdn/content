@@ -37,7 +37,7 @@ A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}}.
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Returned if there is no permission to use the requested device.
+  - : Returned if a `speaker-selection` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) is used to block use of audio outputs.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Returned if the `deviceId` does not match any audio output device.
 - `AbortError` {{domxref("DOMException")}}
@@ -47,8 +47,8 @@ A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}}.
 
 ```js
 const devices = await navigator.mediaDevices.enumerateDevices();
-const audioDevice = devices.find((device) => device.kind === 'audiooutput');
-const audio = document.createElement('audio');
+const audioDevice = devices.find((device) => device.kind === "audiooutput");
+const audio = document.createElement("audio");
 await audio.setSinkId(audioDevice.deviceId);
 console.log(`Audio is being played on ${audio.sinkId}`);
 ```

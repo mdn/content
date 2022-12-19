@@ -1,6 +1,7 @@
 ---
 title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
+page-type: javascript-static-method
 tags:
   - ECMAScript 5
   - JSON
@@ -77,7 +78,7 @@ JSON.parse(
   (key, value) =>
     typeof value === "number"
       ? value * 2 // return value * 2 for numbers
-      : value, // return everything else unchanged
+      : value // return everything else unchanged
 );
 // { p: 10 }
 
@@ -107,17 +108,15 @@ const map = new Map([
   [3, "three"],
 ]);
 
-const jsonText = JSON.stringify(
-  map,
-  (key, value) => (value instanceof Map ? Array.from(value.entries()) : value),
+const jsonText = JSON.stringify(map, (key, value) =>
+  value instanceof Map ? Array.from(value.entries()) : value
 );
 
 console.log(jsonText);
 // [[1,"one"],[2,"two"],[3,"three"]]
 
-const map2 = JSON.parse(
-  jsonText,
-  (key, value) => (key === "" ? new Map(value) : value),
+const map2 = JSON.parse(jsonText, (key, value) =>
+  key === "" ? new Map(value) : value
 );
 
 console.log(map2);

@@ -1,6 +1,7 @@
 ---
 title: Quantifiers
 slug: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
+page-type: guide
 tags:
   - Guide
   - JavaScript
@@ -165,8 +166,8 @@ const loooongWord = /\b\w{13,}\b/g;
 const sentence = "Why do I have to learn multiplication table?";
 
 console.table(sentence.match(singleLetterWord)); // ["I"]
-console.table(sentence.match(notSoLongWord));    // [ "Why", "do", "have", "to", "learn", "table" ]
-console.table(sentence.match(loooongWord));      // ["multiplication"]
+console.table(sentence.match(notSoLongWord)); // [ "Why", "do", "have", "to", "learn", "table" ]
+console.table(sentence.match(loooongWord)); // ["multiplication"]
 ```
 
 ### Optional character

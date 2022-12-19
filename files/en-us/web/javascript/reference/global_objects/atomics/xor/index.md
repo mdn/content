@@ -1,6 +1,7 @@
 ---
 title: Atomics.xor()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/xor
+page-type: javascript-static-method
 tags:
   - Atomics
   - JavaScript
@@ -79,7 +80,7 @@ const ta = new Uint8Array(sab);
 ta[0] = 5;
 
 Atomics.xor(ta, 0, 1); // returns 5, the old value
-Atomics.load(ta, 0);  // 4
+Atomics.load(ta, 0); // 4
 ```
 
 ## Specifications

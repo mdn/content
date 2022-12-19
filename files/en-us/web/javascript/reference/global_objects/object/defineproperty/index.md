@@ -1,6 +1,7 @@
 ---
 title: Object.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
+page-type: javascript-static-method
 tags:
   - ECMAScript 5
   - JavaScript
@@ -113,29 +114,29 @@ options explicitly, or point to [`null`](/en-US/docs/Web/JavaScript/Reference/Op
 const obj = {};
 // 1. Using a null prototype: no inherited properties
 const descriptor = Object.create(null);
-descriptor.value = 'static';
+descriptor.value = "static";
 
 // not enumerable, not configurable, not writable as defaults
-Object.defineProperty(obj, 'key', descriptor);
+Object.defineProperty(obj, "key", descriptor);
 
 // 2. Being explicit by using a throw-away object literal with all attributes present
-Object.defineProperty(obj, 'key2', {
+Object.defineProperty(obj, "key2", {
   enumerable: false,
   configurable: false,
   writable: false,
-  value: 'static'
+  value: "static",
 });
 
 // 3. Recycling same object
 function withValue(value) {
-  const d = withValue.d || (
-    withValue.d = {
+  const d =
+    withValue.d ||
+    (withValue.d = {
       enumerable: false,
       writable: false,
       configurable: false,
       value,
-    }
-  );
+    });
 
   // avoiding duplicate operation for assigning value
   if (d.value !== value) d.value = value;
@@ -143,7 +144,7 @@ function withValue(value) {
   return d;
 }
 // and
-Object.defineProperty(obj, 'key', withValue('static'));
+Object.defineProperty(obj, "key", withValue("static"));
 
 // if freeze is available, prevents adding or
 // removing the object prototype properties
@@ -170,22 +171,26 @@ const o = {}; // Creates a new object
 
 // Example of an object property added
 // with defineProperty with a data property descriptor
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 37,
   writable: true,
   enumerable: true,
-  configurable: true
+  configurable: true,
 });
 // 'a' property exists in the o object and its value is 37
 
 // Example of an object property added
 // with defineProperty with an accessor property descriptor
 let bValue = 38;
-Object.defineProperty(o, 'b', {
-  get() { return bValue; },
-  set(newValue) { bValue = newValue; },
+Object.defineProperty(o, "b", {
+  get() {
+    return bValue;
+  },
+  set(newValue) {
+    bValue = newValue;
+  },
   enumerable: true,
-  configurable: true
+  configurable: true,
 });
 o.b; // 38
 // 'b' property exists in the o object and its value is 38
@@ -193,9 +198,11 @@ o.b; // 38
 // unless o.b is redefined
 
 // You cannot try to mix both:
-Object.defineProperty(o, 'conflict', {
+Object.defineProperty(o, "conflict", {
   value: 0x9f91102,
-  get() { return 0xdeadbeef; }
+  get() {
+    return 0xdeadbeef;
+  },
 });
 // throws a TypeError: value appears
 // only in data descriptors,
@@ -214,9 +221,9 @@ property is said to be "non-writable". It cannot be reassigned.
 ```js
 const o = {}; // Creates a new object
 
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 37,
-  writable: false
+  writable: false,
 });
 
 console.log(o.a); // 37
@@ -227,9 +234,9 @@ console.log(o.a); // 37; the assignment didn't work
 
 // strict mode
 (() => {
-  'use strict';
+  "use strict";
   const o = {};
-  Object.defineProperty(o, 'b', {
+  Object.defineProperty(o, "b", {
     value: 2,
     writable: false,
   });
@@ -251,26 +258,26 @@ up in a {{jsxref("Statements/for...in", "for...in")}} loop and
 
 ```js
 const o = {};
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 1,
-  enumerable: true
+  enumerable: true,
 });
-Object.defineProperty(o, 'b', {
+Object.defineProperty(o, "b", {
   value: 2,
-  enumerable: false
+  enumerable: false,
 });
-Object.defineProperty(o, 'c', {
-  value: 3
+Object.defineProperty(o, "c", {
+  value: 3,
 }); // enumerable defaults to false
 o.d = 4; // enumerable defaults to true
-         // when creating a property by setting it
-Object.defineProperty(o, Symbol.for('e'), {
+// when creating a property by setting it
+Object.defineProperty(o, Symbol.for("e"), {
   value: 5,
-  enumerable: true
+  enumerable: true,
 });
-Object.defineProperty(o, Symbol.for('f'), {
+Object.defineProperty(o, Symbol.for("f"), {
   value: 6,
-  enumerable: false
+  enumerable: false,
 });
 
 for (const i in o) {
@@ -280,20 +287,20 @@ for (const i in o) {
 
 Object.keys(o); // ['a', 'd']
 
-o.propertyIsEnumerable('a'); // true
-o.propertyIsEnumerable('b'); // false
-o.propertyIsEnumerable('c'); // false
-o.propertyIsEnumerable('d'); // true
-o.propertyIsEnumerable(Symbol.for('e')); // true
-o.propertyIsEnumerable(Symbol.for('f')); // false
+o.propertyIsEnumerable("a"); // true
+o.propertyIsEnumerable("b"); // false
+o.propertyIsEnumerable("c"); // false
+o.propertyIsEnumerable("d"); // true
+o.propertyIsEnumerable(Symbol.for("e")); // true
+o.propertyIsEnumerable(Symbol.for("f")); // false
 
-const p = { ...o }
-p.a // 1
-p.b // undefined
-p.c // undefined
-p.d // 4
-p[Symbol.for('e')] // 5
-p[Symbol.for('f')] // undefined
+const p = { ...o };
+p.a; // 1
+p.b; // undefined
+p.c; // undefined
+p.d; // 4
+p[Symbol.for("e")]; // 5
+p[Symbol.for("f")]; // undefined
 ```
 
 #### Configurable attribute
@@ -306,45 +313,49 @@ When it is `false`, but `writable` is `true`, `value` can still be changed, and 
 
 ```js
 const o = {};
-Object.defineProperty(o, 'a', {
-  get() { return 1; },
+Object.defineProperty(o, "a", {
+  get() {
+    return 1;
+  },
   configurable: false,
 });
 
-Object.defineProperty(o, 'a', {
-  configurable: true
+Object.defineProperty(o, "a", {
+  configurable: true,
 }); // throws a TypeError
-Object.defineProperty(o, 'a', {
-  enumerable: true
+Object.defineProperty(o, "a", {
+  enumerable: true,
 }); // throws a TypeError
-Object.defineProperty(o, 'a', {
-  set() {}
+Object.defineProperty(o, "a", {
+  set() {},
 }); // throws a TypeError (set was undefined previously)
-Object.defineProperty(o, 'a', {
-  get() { return 1; }
+Object.defineProperty(o, "a", {
+  get() {
+    return 1;
+  },
 }); // throws a TypeError
 // (even though the new get does exactly the same thing)
-Object.defineProperty(o, 'a', {
-  value: 12
+Object.defineProperty(o, "a", {
+  value: 12,
 }); // throws a TypeError // ('value' can be changed when 'configurable' is false but not in this case due to 'get' accessor)
 
 console.log(o.a); // 1
 delete o.a; // Nothing happens
 console.log(o.a); // 1
 
-Object.defineProperty(o, 'b', {
+Object.defineProperty(o, "b", {
   writable: true,
   configurable: false,
 });
 console.log(o.b); // undefined
-Object.defineProperty(o, 'b', {
+Object.defineProperty(o, "b", {
   value: 1,
 }); // Even when configurable is false, because the object is writable, we may still replace the value
 console.log(o.b); // 1
-Object.defineProperty(o, 'b', {
+Object.defineProperty(o, "b", {
   writable: false,
 });
-Object.defineProperty(o, 'b', {
+Object.defineProperty(o, "b", {
   value: 1,
 }); // TypeError: because the property is neither writable nor configurable, it cannot be modified
 ```
@@ -364,21 +375,21 @@ const o = {};
 
 o.a = 1;
 // is equivalent to:
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 1,
   writable: true,
   configurable: true,
-  enumerable: true
+  enumerable: true,
 });
 
 // On the other hand,
-Object.defineProperty(o, 'a', { value: 1 });
+Object.defineProperty(o, "a", { value: 1 });
 // is equivalent to:
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 1,
   writable: false,
   configurable: false,
-  enumerable: false
+  enumerable: false,
 });
 ```
 
@@ -393,15 +404,15 @@ function Archiver() {
   let temperature = null;
   const archive = [];
 
-  Object.defineProperty(this, 'temperature', {
+  Object.defineProperty(this, "temperature", {
     get() {
-      console.log('get!');
+      console.log("get!");
       return temperature;
     },
     set(value) {
       temperature = value;
       archive.push({ val: temperature });
-    }
+    },
   });
 
   this.getArchive = () => archive;
@@ -419,19 +430,19 @@ In this example, a getter always returns the same value.
 ```js
 const pattern = {
   get() {
-    return 'I always return this string, whatever you have assigned';
+    return "I always return this string, whatever you have assigned";
   },
   set() {
-    this.myname = 'this is my name string';
+    this.myname = "this is my name string";
   },
 };
 
 function TestDefineSetAndGet() {
-  Object.defineProperty(this, 'myproperty', pattern);
+  Object.defineProperty(this, "myproperty", pattern);
 }
 
 const instance = new TestDefineSetAndGet();
-instance.myproperty = 'test';
+instance.myproperty = "test";
 console.log(instance.myproperty);
 // I always return this string, whatever you have assigned
 
@@ -446,8 +457,7 @@ these methods use a variable to store the value, this value will be shared by al
 objects.
 
 ```js
-function MyClass() {
-}
+function MyClass() {}
 
 let value;
 Object.defineProperty(MyClass.prototype, "x", {
@@ -456,7 +466,7 @@ Object.defineProperty(MyClass.prototype, "x", {
   },
   set(x) {
     value = x;
-  }
+  },
 });
 
 const a = new MyClass();
@@ -470,8 +480,7 @@ This can be fixed by storing the value in another property. In `get` and
 or modify the property.
 
 ```js
-function MyClass() {
-}
+function MyClass() {}
 
 Object.defineProperty(MyClass.prototype, "x", {
   get() {
@@ -479,7 +488,7 @@ Object.defineProperty(MyClass.prototype, "x", {
   },
   set(x) {
     this.storedX = x;
-  }
+  },
 });
 
 const a = new MyClass();
@@ -493,13 +502,12 @@ on a prototype. However, if a non-writable value property is inherited, it still
 prevents from modifying the property on the object.
 
 ```js
-function MyClass() {
-}
+function MyClass() {}
 
 MyClass.prototype.x = 1;
 Object.defineProperty(MyClass.prototype, "y", {
   writable: false,
-  value: 1
+  value: 1,
 });
 
 const a = new MyClass();

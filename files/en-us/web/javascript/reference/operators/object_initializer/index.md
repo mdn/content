@@ -1,6 +1,7 @@
 ---
 title: Object initializer
 slug: Web/JavaScript/Reference/Operators/Object_initializer
+page-type: javascript-language-feature
 tags:
   - ECMAScript 2015
   - JSON
@@ -72,7 +73,7 @@ JSON is a _strict subset_ of the object literal syntax, meaning that every valid
 
 ```js
 console.log(JSON.parse('{ "__proto__": {} }')); // { __proto__: {} }
-console.log({ "__proto__": {} }); // {} (with {} as prototype)
+console.log({ __proto__: {} }); // {} (with {} as prototype)
 ```
 
 ## Examples
@@ -91,7 +92,7 @@ The following code creates an object with three properties and the keys are `"fo
 
 ```js
 const object = {
-  foo: 'bar',
+  foo: "bar",
   age: 42,
   baz: { myProp: 12 },
 };
@@ -102,10 +103,10 @@ const object = {
 Once you have created an object, you might want to read or change them. Object properties can be accessed by using the dot notation or the bracket notation. (See [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) for detailed information.)
 
 ```js
-object.foo // "bar"
-object['age'] // 42
-object.baz          // {myProp: 12}
-object.baz.myProp   //12
+object.foo; // "bar"
+object["age"]; // 42
+object.baz; // {myProp: 12}
+object.baz.myProp; //12
 ```
 
 ### Property definitions
@@ -113,7 +114,7 @@ object.baz.myProp   //12
 We have already learned how to notate properties using the initializer syntax. Oftentimes, there are variables in your code that you would like to put into an object. You will see code like this:
 
 ```js
-const a = 'foo';
+const a = "foo";
 const b = 42;
 const c = {};
 
@@ -127,7 +128,7 @@ const o = {
 There is a shorter notation available to achieve the same:
 
 ```js
-const a = 'foo';
+const a = "foo";
 const b = 42;
 const c = {};
 
@@ -151,7 +152,7 @@ In ECMAScript 5 strict mode code, duplicate property names were considered a {{j
 
 ```js
 function haveES2015DuplicatePropertySemantics() {
-  'use strict';
+  "use strict";
   try {
     ({ prop: 1, prop: 2 });
 
@@ -233,7 +234,7 @@ const obj = {
 console.log(obj); // A,B,C: "Hello"
 console.log(obj["A,B,C"]); // "Hello"
 
-const param = 'size';
+const param = "size";
 const config = {
   [param]: 12,
   [`mobile${param.charAt(0).toUpperCase()}${param.slice(1)}`]: 4,
@@ -249,8 +250,8 @@ Object literals support the [spread syntax](/en-US/docs/Web/JavaScript/Reference
 Shallow-cloning (excluding `prototype`) or merging objects is now possible using a shorter syntax than {{jsxref("Object.assign()")}}.
 
 ```js
-const obj1 = { foo: 'bar', x: 42 };
-const obj2 = { foo: 'baz', y: 13 };
+const obj1 = { foo: "bar", x: 42 };
+const obj2 = { foo: "baz", y: 13 };
 
 const clonedObj = { ...obj1 };
 // { foo: "bar", x: 42 }
@@ -273,12 +274,12 @@ const obj2 = { __proto__: null };
 console.log(Object.getPrototypeOf(obj2) === null);
 
 const protoObj = {};
-const obj3 = { '__proto__': protoObj };
+const obj3 = { __proto__: protoObj };
 console.log(Object.getPrototypeOf(obj3) === protoObj);
 
-const obj4 = { __proto__: 'not an object or null' };
+const obj4 = { __proto__: "not an object or null" };
 console.log(Object.getPrototypeOf(obj4) === Object.prototype);
-console.log(!Object.hasOwn(obj4, '__proto__'));
+console.log(!Object.hasOwn(obj4, "__proto__"));
 ```
 
 Only a single prototype setter is permitted in an object literal. Multiple prototype setters are a syntax error.
@@ -286,17 +287,21 @@ Only a single prototype setter is permitted in an object literal. Multiple proto
 Property definitions that do not use "colon" notation are not prototype setters. They are property definitions that behave identically to similar definitions using any other name.
 
 ```js
-const __proto__ = 'variable';
+const __proto__ = "variable";
 
 const obj1 = { __proto__ };
 console.log(Object.getPrototypeOf(obj1) === Object.prototype);
-console.log(Object.hasOwn(obj1, '__proto__'));
-console.log(obj1.__proto__ === 'variable');
+console.log(Object.hasOwn(obj1, "__proto__"));
+console.log(obj1.__proto__ === "variable");
 
-const obj2 = { __proto__() { return 'hello'; } };
-console.log(obj2.__proto__() === 'hello');
+const obj2 = {
+  __proto__() {
+    return "hello";
+  },
+};
+console.log(obj2.__proto__() === "hello");
 
-const obj3 = { ['__prot' + 'o__']: 17 };
+const obj3 = { ["__prot" + "o__"]: 17 };
 console.log(obj3.__proto__ === 17);
 ```
 

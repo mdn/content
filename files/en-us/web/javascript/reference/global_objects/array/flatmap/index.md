@@ -1,6 +1,7 @@
 ---
 title: Array.prototype.flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
+page-type: javascript-instance-method
 tags:
   - Array
   - JavaScript
@@ -180,7 +181,7 @@ console.log(
   Array.prototype.flatMap.call(arrayLike, (x) => ({
     length: 1,
     0: x,
-  })),
+  }))
 );
 // [ { '0': 1, length: 1 }, { '0': 2, length: 1 }, { '0': 3, length: 1 } ]
 ```

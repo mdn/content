@@ -427,7 +427,7 @@ The {{cssxref(':required')}} and {{cssxref(':optional')}} [pseudo-classes](/en-U
 
 #### :placeholder-shown CSS pseudo-class
 
-See {{cssxref(':placeholder-shown')}}
+See {{cssxref(':placeholder-shown')}}.
 
 #### :valid :invalid CSS pseudo-classes
 

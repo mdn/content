@@ -68,6 +68,8 @@ In case of an error, the returned {{jsxref('Promise')}} is rejected with a
     browser, or none of the configurations specified by
     `supportedConfigurations` can be satisfied (if, for example, none of the
     `codecs` specified in `contentType` are available).
+- `SecurityError` {{domxref("DOMException")}}
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 - {{jsxref("TypeError")}}`
   - : Either `keySystem` is an empty string or the
     `supportedConfigurations` array is empty.
@@ -94,17 +96,14 @@ For example:
 ```js example-bad
 const clearKeyOptions = [
   {
-    initDataTypes: ['keyids', 'webm'],
-    audioCapabilities: [
-      { contentType: 'audio/webm' }
-    ],
-    videoCapabilities: [
-      { contentType: 'video/webm' }
-    ]
-  }
+    initDataTypes: ["keyids", "webm"],
+    audioCapabilities: [{ contentType: "audio/webm" }],
+    videoCapabilities: [{ contentType: "video/webm" }],
+  },
 ];
 
-navigator.requestMediaKeySystemAccess('org.w3.clearkey', clearKeyOptions)
+navigator
+  .requestMediaKeySystemAccess("org.w3.clearkey", clearKeyOptions)
   .then((keySystemAccess) => {
     /* use the access to get create keys */
   });
@@ -117,19 +116,20 @@ warning to console, because `"codecs"` is not included in the
 ```js example-good
 const clearKeyOptions = [
   {
-    initDataTypes: ['keyids', 'webm'],
+    initDataTypes: ["keyids", "webm"],
     audioCapabilities: [
       { contentType: 'audio/webm; codecs="opus"' },
-      { contentType: 'audio/webm; codecs="vorbis"' }
+      { contentType: 'audio/webm; codecs="vorbis"' },
     ],
     videoCapabilities: [
       { contentType: 'video/webm; codecs="vp9"' },
-      { contentType: 'video/webm; codecs="vp8"' }
-    ]
-  }
+      { contentType: 'video/webm; codecs="vp8"' },
+    ],
+  },
 ];
 
-navigator.requestMediaKeySystemAccess('org.w3.clearkey', clearKeyOptions)
+navigator
+  .requestMediaKeySystemAccess("org.w3.clearkey", clearKeyOptions)
   .then((keySystemAccess) => {
     /* use the access to get create keys */
   });

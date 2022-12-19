@@ -1,6 +1,7 @@
 ---
 title: Number.MIN_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
+page-type: javascript-static-data-property
 tags:
   - JavaScript
   - Number

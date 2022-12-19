@@ -1,6 +1,7 @@
 ---
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
+page-type: javascript-statement
 tags:
   - JavaScript
   - Language feature
@@ -73,11 +74,11 @@ If `break` is omitted, execution will proceed to the next `case` clause, even to
 const foo = 0;
 switch (foo) {
   case -1:
-    console.log('negative 1');
+    console.log("negative 1");
     break;
   case 0: // Value of foo matches this criteria; execution starts from here
     console.log(0);
-    // Forgotten break! Execution falls through
+  // Forgotten break! Execution falls through
   case 1: // no break statement in 'case 0:' so this case will run as well
     console.log(1);
     break; // Break encountered; will not continue into 'case 2:'
@@ -85,7 +86,7 @@ switch (foo) {
     console.log(2);
     break;
   default:
-    console.log('default');
+    console.log("default");
 }
 // Logs 0 and 1
 ```
@@ -97,18 +98,18 @@ You can use other control-flow statements to replace `break`, such as a [`return
 The `case` and `default` clauses are like [labels](/en-US/docs/Web/JavaScript/Reference/Statements/label): they indicate possible places that control flow may jump to. However, they don't create lexical [scopes](/en-US/docs/Glossary/Scope) themselves (neither do they automatically break out — as demonstrated above). For example:
 
 ```js example-bad
-const action = 'say_hello';
+const action = "say_hello";
 switch (action) {
-  case 'say_hello':
-    const message = 'hello';
+  case "say_hello":
+    const message = "hello";
     console.log(message);
     break;
-  case 'say_hi':
-    const message = 'hi';
+  case "say_hi":
+    const message = "hi";
     console.log(message);
     break;
   default:
-    console.log('Empty action received.');
+    console.log("Empty action received.");
 }
 ```
 
@@ -117,20 +118,23 @@ This example will output the error "Uncaught SyntaxError: Identifier 'message' h
 To fix this, whenever you need to use `let` or `const` declarations in a `case` clause, wrap it in a block.
 
 ```js
-const action = 'say_hello';
+const action = "say_hello";
 switch (action) {
-  case 'say_hello': { // added brackets
-    const message = 'hello';
+  case "say_hello": {
+    // added brackets
+    const message = "hello";
     console.log(message);
     break;
   } // added brackets
-  case 'say_hi': { // added brackets
-    const message = 'hi';
+  case "say_hi": {
+    // added brackets
+    const message = "hi";
     console.log(message);
     break;
   } // added brackets
-  default: { // added brackets
-    console.log('Empty action received.');
+  default: {
+    // added brackets
+    console.log("Empty action received.");
   } // added brackets
 }
 ```
@@ -145,21 +149,21 @@ In the following example, if `expr` evaluates to `Bananas`, the program matches 
 
 ```js
 switch (expr) {
-  case 'Oranges':
-    console.log('Oranges are $0.59 a pound.');
+  case "Oranges":
+    console.log("Oranges are $0.59 a pound.");
     break;
-  case 'Apples':
-    console.log('Apples are $0.32 a pound.');
+  case "Apples":
+    console.log("Apples are $0.32 a pound.");
     break;
-  case 'Bananas':
-    console.log('Bananas are $0.48 a pound.');
+  case "Bananas":
+    console.log("Bananas are $0.48 a pound.");
     break;
-  case 'Cherries':
-    console.log('Cherries are $3.00 a pound.');
+  case "Cherries":
+    console.log("Cherries are $3.00 a pound.");
     break;
-  case 'Mangoes':
-  case 'Papayas':
-    console.log('Mangoes and papayas are $2.79 a pound.');
+  case "Mangoes":
+  case "Papayas":
+    console.log("Mangoes and papayas are $2.79 a pound.");
     break;
   default:
     console.log(`Sorry, we are out of ${expr}.`);
@@ -179,10 +183,10 @@ switch (foo) {
     console.log(2);
     break; // it encounters this break so will not continue into 'default:'
   default:
-    console.log('default')
-    // fall-through
+    console.log("default");
+  // fall-through
   case 1:
-    console.log('1');
+    console.log("1");
 }
 ```
 
@@ -195,17 +199,17 @@ This method takes advantage of the fact that if there is no `break` below a `cas
 The following is an example of a single operation sequential `case` statement, where four different values perform exactly the same.
 
 ```js
-const Animal = 'Giraffe';
+const Animal = "Giraffe";
 switch (Animal) {
-  case 'Cow':
-  case 'Giraffe':
-  case 'Dog':
-  case 'Pig':
-    console.log('This animal is not extinct.');
+  case "Cow":
+  case "Giraffe":
+  case "Dog":
+  case "Pig":
+    console.log("This animal is not extinct.");
     break;
-  case 'Dinosaur':
+  case "Dinosaur":
   default:
-    console.log('This animal is extinct.');
+    console.log("This animal is extinct.");
 }
 ```
 
@@ -213,27 +217,27 @@ The following is an example of a multiple-operation sequential `case` clause, wh
 
 ```js
 const foo = 1;
-let output = 'Output: ';
+let output = "Output: ";
 switch (foo) {
   case 0:
-    output += 'So ';
+    output += "So ";
   case 1:
-    output += 'What ';
-    output += 'Is ';
+    output += "What ";
+    output += "Is ";
   case 2:
-    output += 'Your ';
+    output += "Your ";
   case 3:
-    output += 'Name';
+    output += "Name";
   case 4:
-    output += '?';
+    output += "?";
     console.log(output);
     break;
   case 5:
-    output += '!';
+    output += "!";
     console.log(output);
     break;
   default:
-    console.log('Please pick a number from 0 to 5!');
+    console.log("Please pick a number from 0 to 5!");
 }
 ```
 
@@ -254,9 +258,9 @@ The output from this example:
 You may often find yourself doing a series of [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) matches.
 
 ```js
-if ('fetch' in globalThis) {
+if ("fetch" in globalThis) {
   // Fetch a resource with fetch
-} else if ('XMLHttpRequest' in globalThis) {
+} else if ("XMLHttpRequest" in globalThis) {
   // Fetch a resource with XMLHttpRequest
 } else {
   // Fetch a resource with some custom AJAX logic
@@ -267,10 +271,10 @@ This pattern is not doing a sequence of `===` comparisons, but you can still con
 
 ```js
 switch (true) {
-  case 'fetch' in globalThis:
+  case "fetch" in globalThis:
     // Fetch a resource with fetch
     break;
-  case 'XMLHttpRequest' in globalThis:
+  case "XMLHttpRequest" in globalThis:
     // Fetch a resource with XMLHttpRequest
     break;
   default:
@@ -284,15 +288,15 @@ The `switch (true)` pattern as an alternative to `if...else` is especially usefu
 ```js
 switch (true) {
   case isSquare(shape):
-    console.log('This shape is a square.');
-    // Fall-through, since a square is a rectangle as well!
+    console.log("This shape is a square.");
+  // Fall-through, since a square is a rectangle as well!
   case isRectangle(shape):
-    console.log('This shape is a rectangle.');
+    console.log("This shape is a rectangle.");
   case isQuadrilateral(shape):
-    console.log('This shape is a quadrilateral.');
+    console.log("This shape is a quadrilateral.");
     break;
   case isCircle(shape):
-    console.log('This shape is a circle.');
+    console.log("This shape is a circle.");
     break;
 }
 ```

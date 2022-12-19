@@ -1,6 +1,7 @@
 ---
 title: Array.prototype.findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
+page-type: javascript-instance-method
 tags:
   - Array
   - JavaScript
@@ -121,7 +122,7 @@ const arrayLike = {
   2: 4,
 };
 console.log(
-  Array.prototype.findLastIndex.call(arrayLike, (x) => Number.isInteger(x)),
+  Array.prototype.findLastIndex.call(arrayLike, (x) => Number.isInteger(x))
 ); // 2
 ```
 

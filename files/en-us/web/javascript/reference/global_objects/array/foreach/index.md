@@ -1,6 +1,7 @@
 ---
 title: Array.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
+page-type: javascript-instance-method
 tags:
   - Array
   - ECMAScript 5
@@ -104,7 +105,7 @@ To run a series of asynchronous operations sequentially or concurrently, see [pr
 ### Using forEach() on sparse arrays
 
 ```js
-const arraySparse = [1, 3, /* empty */, 7];
+const arraySparse = [1, 3 /* empty */, , 7];
 let numCallbackRuns = 0;
 
 arraySparse.forEach((element) => {

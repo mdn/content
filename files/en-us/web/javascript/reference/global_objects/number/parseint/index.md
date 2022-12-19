@@ -1,6 +1,7 @@
 ---
 title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -52,7 +53,7 @@ This method has the same functionality as the global {{jsxref("parseInt",
   "parseInt()")}} function:
 
 ```js
-Number.parseInt === parseInt // true
+Number.parseInt === parseInt; // true
 ```
 
 Its purpose is modularization of globals. Please see

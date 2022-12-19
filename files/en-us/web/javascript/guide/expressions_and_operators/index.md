@@ -1,6 +1,7 @@
 ---
 title: Expressions and operators
 slug: Web/JavaScript/Guide/Expressions_and_Operators
+page-type: guide
 tags:
   - Beginner
   - Expressions
@@ -88,7 +89,7 @@ There are also compound assignment operators that are shorthand for the operatio
 | [Bitwise OR assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)                     | `x \|= f()`        | `x = x \| f()`     |
 | [Logical AND assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)                   | `x &&= f()`        | `x && (x = f())`   |
 | [Logical OR assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)                     | `x \|\|= f()`      | `x \|\| (x = f())` |
-| [Nullish coalescing assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)           | `x ??= f()`        | `x ?? (x = f())`   |
+| [Nullish coalescing assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)     | `x ??= f()`        | `x ?? (x = f())`   |
 
 ### Assigning to properties
 
@@ -130,11 +131,11 @@ For more complex assignments, the [destructuring assignment](/en-US/docs/Web/Jav
 object literals.
 
 ```js
-const foo = ['one', 'two', 'three'];
+const foo = ["one", "two", "three"];
 
 // without destructuring
-const one   = foo[0];
-const two   = foo[1];
+const one = foo[0];
+const two = foo[1];
 const three = foo[2];
 
 // with destructuring
@@ -174,13 +175,13 @@ let x;
 const y = (x = f()); // Or equivalently: const y = x = f();
 console.log(y); // Logs the return value of the assignment x = f().
 
-console.log(x = f()); // Logs the return value directly.
+console.log((x = f())); // Logs the return value directly.
 
 // An assignment expression can be nested in any place
 // where expressions are generally allowed,
 // such as array literals' elements or as function calls' arguments.
-console.log([ 0, x = f(), 0 ]);
-console.log(f(0, x = f(), 0));
+console.log([0, (x = f()), 0]);
+console.log(f(0, (x = f()), 0));
 ```
 
 The evaluation result matches the expression to the right of the `=` sign in the
@@ -207,12 +208,12 @@ For example, assume that the following functions `f` and `g`
 and the variables `x` and `y` have been declared:
 
 ```js
-function f () {
-  console.log('F!');
+function f() {
+  console.log("F!");
   return 2;
 }
-function g () {
-  console.log('G!');
+function g() {
+  console.log("G!");
   return 3;
 }
 let x, y;
@@ -221,9 +222,9 @@ let x, y;
 Consider these three examples:
 
 ```js
-y = x = f()
-y = [ f(), x = g() ]
-x[f()] = g()
+y = x = f();
+y = [f(), (x = g())];
+x[f()] = g();
 ```
 
 #### Evaluation example 1
@@ -315,7 +316,7 @@ In particular, putting a variable chain in a [`const`][], [`let`][], or [`var`][
 For example:
 
 ```js
-const z = y = x = f();
+const z = (y = x = f());
 ```
 
 This statement seemingly declares the variables `x`, `y`, and `z`.
@@ -726,25 +727,25 @@ The following code shows examples of the `&&` (logical AND)
 operator.
 
 ```js
-const a1 =  true && true; // t && t returns true
-const a2 =  true && false; // t && f returns false
+const a1 = true && true; // t && t returns true
+const a2 = true && false; // t && f returns false
 const a3 = false && true; // f && t returns false
-const a4 = false && (3 === 4); // f && f returns false
-const a5 = 'Cat' && 'Dog'; // t && t returns Dog
-const a6 = false && 'Cat'; // f && t returns false
-const a7 = 'Cat' && false; // t && f returns false
+const a4 = false && 3 === 4; // f && f returns false
+const a5 = "Cat" && "Dog"; // t && t returns Dog
+const a6 = false && "Cat"; // f && t returns false
+const a7 = "Cat" && false; // t && f returns false
 ```
 
 The following code shows examples of the || (logical OR) operator.
 
 ```js
-const o1 =  true || true; // t || t returns true
+const o1 = true || true; // t || t returns true
 const o2 = false || true; // f || t returns true
-const o3 =  true || false; // t || f returns true
-const o4 = false || (3 === 4); // f || f returns false
-const o5 = 'Cat' || 'Dog'; // t || t returns Cat
-const o6 = false || 'Cat'; // f || t returns Cat
-const o7 = 'Cat' || false; // t || f returns Cat
+const o3 = true || false; // t || f returns true
+const o4 = false || 3 === 4; // f || f returns false
+const o5 = "Cat" || "Dog"; // t || t returns Cat
+const o6 = false || "Cat"; // f || t returns Cat
+const o7 = "Cat" || false; // t || f returns Cat
 ```
 
 The following code shows examples of the ! (logical NOT) operator.
@@ -752,7 +753,7 @@ The following code shows examples of the ! (logical NOT) operator.
 ```js
 const n1 = !true; // !t returns false
 const n2 = !false; // !f returns true
-const n3 = !'Cat'; // !t returns false
+const n3 = !"Cat"; // !t returns false
 ```
 
 ### Short-circuit evaluation
@@ -817,7 +818,7 @@ In addition to the comparison operators, which can be used on string values, the
 For example,
 
 ```js
-console.log('my ' + 'string'); // console logs the string "my string".
+console.log("my " + "string"); // console logs the string "my string".
 ```
 
 The shorthand assignment operator `+=` can also be used to concatenate strings.
@@ -825,8 +826,8 @@ The shorthand assignment operator `+=` can also be used to concatenate strings.
 For example,
 
 ```js
-let mystring = 'alpha';
-mystring += 'bet'; // evaluates to "alphabet" and assigns this value to mystring.
+let mystring = "alpha";
+mystring += "bet"; // evaluates to "alphabet" and assigns this value to mystring.
 ```
 
 ## Conditional (ternary) operator
@@ -837,7 +838,7 @@ The operator can have one of two values based on a condition.
 The syntax is:
 
 ```js
-condition ? val1 : val2
+condition ? val1 : val2;
 ```
 
 If `condition` is true, the operator has the value of `val1`.
@@ -846,7 +847,7 @@ Otherwise it has the value of `val2`. You can use the conditional operator anywh
 For example,
 
 ```js
-const status = age >= 18 ? 'adult' : 'minor';
+const status = age >= 18 ? "adult" : "minor";
 ```
 
 This statement assigns the value "adult" to the variable `status` if
@@ -869,7 +870,7 @@ const x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 const a = [x, x, x, x, x];
 
 for (let i = 0, j = 9; i <= j; i++, j--) {
-//                                ^
+  //                                ^
   console.log(`a[${i}][${j}]= ${a[i][j]}`);
 }
 ```
@@ -898,7 +899,7 @@ The `delete` operator returns `true` if the operation is possible; it returns `f
 ```js
 delete Math.PI; // returns false (cannot delete non-configurable properties)
 
-const myObj = {h: 4};
+const myObj = { h: 4 };
 delete myObj.h; // returns true (can delete user-defined properties)
 ```
 
@@ -915,7 +916,7 @@ To actually manipulate the array, use the various array methods such as [`splice
 The [`typeof` operator](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) is used in either of the following ways:
 
 ```js
-typeof operand
+typeof operand;
 ```
 
 The `typeof` operator returns a string indicating the type of the unevaluated operand.
@@ -925,21 +926,21 @@ The parentheses are optional.
 Suppose you define the following variables:
 
 ```js
-const myFun = new Function('5 + 2');
-const shape = 'round';
+const myFun = new Function("5 + 2");
+const shape = "round";
 const size = 1;
-const foo = ['Apple', 'Mango', 'Orange'];
+const foo = ["Apple", "Mango", "Orange"];
 const today = new Date();
 ```
 
 The `typeof` operator returns the following results for these variables:
 
 ```js
-typeof myFun;       // returns "function"
-typeof shape;       // returns "string"
-typeof size;        // returns "number"
-typeof foo;         // returns "object"
-typeof today;       // returns "object"
+typeof myFun; // returns "function"
+typeof shape; // returns "string"
+typeof size; // returns "number"
+typeof foo; // returns "object"
+typeof today; // returns "object"
 typeof doesntExist; // returns "undefined"
 ```
 
@@ -954,8 +955,8 @@ typeof null; // returns "object"
 For a number or string, the `typeof` operator returns the following results:
 
 ```js
-typeof 62;            // returns "number"
-typeof 'Hello world'; // returns "string"
+typeof 62; // returns "number"
+typeof "Hello world"; // returns "string"
 ```
 
 For property values, the `typeof` operator returns the type of value the
@@ -963,27 +964,27 @@ property contains:
 
 ```js
 typeof document.lastModified; // returns "string"
-typeof window.length;         // returns "number"
-typeof Math.LN2;              // returns "number"
+typeof window.length; // returns "number"
+typeof Math.LN2; // returns "number"
 ```
 
 For methods and functions, the `typeof` operator returns results as follows:
 
 ```js
-typeof blur;        // returns "function"
-typeof eval;        // returns "function"
-typeof parseInt;    // returns "function"
+typeof blur; // returns "function"
+typeof eval; // returns "function"
+typeof parseInt; // returns "function"
 typeof shape.split; // returns "function"
 ```
 
 For predefined objects, the `typeof` operator returns results as follows:
 
 ```js
-typeof Date;     // returns "function"
+typeof Date; // returns "function"
 typeof Function; // returns "function"
-typeof Math;     // returns "object"
-typeof Option;   // returns "function"
-typeof String;   // returns "function"
+typeof Math; // returns "object"
+typeof Option; // returns "function"
+typeof String; // returns "function"
 ```
 
 ### void
@@ -991,8 +992,8 @@ typeof String;   // returns "function"
 The [`void` operator](/en-US/docs/Web/JavaScript/Reference/Operators/void) is used in either of the following ways:
 
 ```js
-void (expression)
-void expression
+void expression;
+void expression;
 ```
 
 The `void` operator specifies an expression to be evaluated without returning a value. `expression` is a JavaScript expression to evaluate.
@@ -1008,7 +1009,7 @@ The [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) returns `
 The syntax is:
 
 ```js
-propNameOrNumber in objectName
+propNameOrNumber in objectName;
 ```
 
 where `propNameOrNumber` is a string, numeric, or symbol expression representing a property name or array index, and `objectName` is the name of an object.
@@ -1017,23 +1018,23 @@ The following examples show some uses of the `in` operator.
 
 ```js
 // Arrays
-const trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
-0 in trees;        // returns true
-3 in trees;        // returns true
-6 in trees;        // returns false
-'bay' in trees;    // returns false (you must specify the index number,
-                   // not the value at that index)
-'length' in trees; // returns true (length is an Array property)
+const trees = ["redwood", "bay", "cedar", "oak", "maple"];
+0 in trees; // returns true
+3 in trees; // returns true
+6 in trees; // returns false
+"bay" in trees; // returns false (you must specify the index number,
+// not the value at that index)
+"length" in trees; // returns true (length is an Array property)
 
 // built-in objects
-'PI' in Math;          // returns true
-const myString = new String('coral');
-'length' in myString;  // returns true
+"PI" in Math; // returns true
+const myString = new String("coral");
+"length" in myString; // returns true
 
 // Custom objects
-const mycar = { make: 'Honda', model: 'Accord', year: 1998 };
-'make' in mycar;  // returns true
-'model' in mycar; // returns true
+const mycar = { make: "Honda", model: "Accord", year: 1998 };
+"make" in mycar; // returns true
+"model" in mycar; // returns true
 ```
 
 ### instanceof
@@ -1042,7 +1043,7 @@ The [`instanceof` operator](/en-US/docs/Web/JavaScript/Reference/Operators/insta
 if the specified object is of the specified object type. The syntax is:
 
 ```js
-objectName instanceof objectType
+objectName instanceof objectType;
 ```
 
 where `objectName` is the name of the object to compare to `objectType`, and `objectType` is an object type, such as {{jsxref("Date")}} or {{jsxref("Array")}}.
@@ -1070,16 +1071,16 @@ In general, `this` refers to the calling object in a method.
 Use `this` either with the dot or the bracket notation:
 
 ```js
-this['propertyName']
-this.propertyName
+this["propertyName"];
+this.propertyName;
 ```
 
 Suppose a function called `validate` validates an object's `value` property, given the object and the high and low values:
 
 ```js
 function validate(obj, lowval, hival) {
-  if ((obj.value < lowval) || (obj.value > hival)) {
-    console.log('Invalid Value!');
+  if (obj.value < lowval || obj.value > hival) {
+    console.log("Invalid Value!");
   }
 }
 ```
@@ -1103,16 +1104,20 @@ const b = 2;
 const c = 3;
 
 // default precedence
-a + b * c     // 7
+a + b * c; // 7
 // evaluated by default like this
-a + (b * c)   // 7
+a +
+  (b * c)(
+    // 7
 
-// now overriding precedence
-// addition before multiplication
-(a + b) * c   // 9
+    // now overriding precedence
+    // addition before multiplication
+    a + b
+  ) *
+    c; // 9
 
 // which is equivalent to
-a * c + b * c // 9
+a * c + b * c; // 9
 ```
 
 ### new

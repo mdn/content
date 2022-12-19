@@ -227,28 +227,31 @@ a {
 ##### JavaScript
 
 ```js
-const canvas = document.querySelector('canvas');
-const c = canvas.getContext('2d');
-c.fillStyle = 'hotpink';
+const canvas = document.querySelector("canvas");
+const c = canvas.getContext("2d");
+c.fillStyle = "hotpink";
 
 function draw(x, y) {
   if (isDrawing) {
     c.beginPath();
-    c.arc(x, y, 10, 0, Math.PI*2);
+    c.arc(x, y, 10, 0, Math.PI * 2);
     c.closePath();
     c.fill();
   }
 }
 
-canvas.addEventListener('mousemove', (event) =>
+canvas.addEventListener("mousemove", (event) =>
   draw(event.offsetX, event.offsetY)
 );
-canvas.addEventListener('mousedown', () => isDrawing = true);
-canvas.addEventListener('mouseup', () => isDrawing = false);
+canvas.addEventListener("mousedown", () => (isDrawing = true));
+canvas.addEventListener("mouseup", () => (isDrawing = false));
 
-document.querySelector('a').addEventListener('click', (event) =>
-  event.target.href = canvas.toDataURL()
-);
+document
+  .querySelector("a")
+  .addEventListener(
+    "click",
+    (event) => (event.target.href = canvas.toDataURL())
+  );
 ```
 
 ##### Result
@@ -272,9 +275,7 @@ Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Link_t
 A sadly common mistake is to only link the words "click here" or "here":
 
 ```html example-bad
-<p>
-  Learn more about our products <a href="/products">here</a>.
-</p>
+<p>Learn more about our products <a href="/products">here</a>.</p>
 ```
 
 #### Strong link text
@@ -282,9 +283,7 @@ A sadly common mistake is to only link the words "click here" or "here":
 Luckily, this is an easy fix, and it's actually shorter than the inaccessible version!
 
 ```html example-good
-<p>
-  Learn more <a href="/products">about our products</a>.
-</p>
+<p>Learn more <a href="/products">about our products</a>.</p>
 ```
 
 Assistive software has shortcuts to list all links on a page. However, strong link text benefits all users — the "list all links" shortcut emulates how sighted users quickly scan pages.
@@ -500,4 +499,6 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
 ## See also
 
 - {{HTMLElement("link")}} is similar to `<a>`, but for metadata hyperlinks that are invisible to users.
-- {{CSSxRef(":link")}} is a CSS pseudo-class that will match `<a>` elements with valid `href` attributes.
+- {{CSSxRef(":visited")}} is a CSS pseudo-class that will match `<a>` elements with URL in `href` attribute that was visited by the user in the past.
+- {{CSSxRef(":link")}} is a CSS pseudo-class that will match `<a>` elements with URL in `href` attribute that was not yet visited by the user.
+- {{CSSxRef(":any-link")}} is a CSS pseudo-class that will match `<a>` elements with `href` attribute.

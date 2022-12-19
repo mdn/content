@@ -27,7 +27,7 @@ To implement this, we will:
 
 You could visualize the overall structure of the extension like this:
 
-![](untitled-1.png)
+![The manifest.json file includes icons, browser actions, including popups, and web accessible resources. The choose beast javascript popup resource calls in the beastify script.](untitled-1.png)
 
 It's a simple extension, but shows many of the basic concepts of the WebExtensions API:
 
@@ -64,9 +64,7 @@ Now create a new file called "manifest.json", and give it the following contents
     "48": "icons/beasts-48.png"
   },
 
-  "permissions": [
-    "activeTab"
-  ],
+  "permissions": ["activeTab"],
 
   "browser_action": {
     "default_icon": "icons/beasts-32.png",
@@ -189,19 +187,19 @@ button {
   text-align: center;
   font-size: 1.5em;
   cursor: pointer;
-  background-color: #E5F2F2;
+  background-color: #e5f2f2;
 }
 
 button:hover {
-  background-color: #CFF2F2;
+  background-color: #cff2f2;
 }
 
 button[type="reset"] {
-  background-color: #FBFBC9;
+  background-color: #fbfbc9;
 }
 
 button[type="reset"]:hover {
-  background-color: #EAEA9D;
+  background-color: #eaea9d;
 }
 ```
 
@@ -248,7 +246,7 @@ function listenForClicks() {
         let url = beastNameToURL(e.target.textContent);
         browser.tabs.sendMessage(tabs[0].id, {
           command: "beastify",
-          beastURL: url
+          beastURL: url,
         });
       });
     }

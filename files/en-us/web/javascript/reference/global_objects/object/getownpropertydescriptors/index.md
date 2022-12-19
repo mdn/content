@@ -1,6 +1,7 @@
 ---
 title: Object.getOwnPropertyDescriptors()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
+page-type: javascript-static-method
 tags:
   - JavaScript
   - Method
@@ -88,12 +89,9 @@ superclass.prototype = {
   // Define the superclass constructor, methods, and properties here
 };
 function subclass() {}
-subclass.prototype = Object.create(
-  superclass.prototype,
-  {
-    // Define the subclass constructor, methods, and properties here
-  }
-);
+subclass.prototype = Object.create(superclass.prototype, {
+  // Define the subclass constructor, methods, and properties here
+});
 ```
 
 ## Specifications

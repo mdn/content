@@ -1,6 +1,7 @@
 ---
 title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
+page-type: javascript-static-method
 tags:
   - ECMAScript 5
   - JavaScript
@@ -157,7 +158,7 @@ o2 = Object.create(
       enumerable: true,
       configurable: true,
     },
-  },
+  }
 );
 // This is not equivalent to:
 // o2 = Object.create({ p: 42 })

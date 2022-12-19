@@ -1,6 +1,7 @@
 ---
 title: Promise.prototype.finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method
@@ -63,7 +64,7 @@ promise.then(
   (reason) =>
     Promise.resolve(onFinally()).then(() => {
       throw reason;
-    }),
+    })
 );
 ```
 

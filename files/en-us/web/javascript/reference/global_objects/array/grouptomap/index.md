@@ -1,6 +1,7 @@
 ---
 title: Array.prototype.groupToMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/groupToMap
+page-type: javascript-instance-method
 tags:
   - Array
   - groupToMap
@@ -121,7 +122,7 @@ The returned `result` object is a `Map` so we need to call `get()` with the key 
 const restock = { restock: true };
 const sufficient = { restock: false };
 const result = inventory.groupToMap(({ quantity }) =>
-  quantity < 6 ? restock : sufficient,
+  quantity < 6 ? restock : sufficient
 );
 console.log(result.get(restock));
 // [{ name: "bananas", type: "fruit", quantity: 5 }]

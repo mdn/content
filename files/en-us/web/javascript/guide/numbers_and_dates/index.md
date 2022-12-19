@@ -1,6 +1,7 @@
 ---
 title: Numbers and dates
 slug: Web/JavaScript/Guide/Numbers_and_dates
+page-type: guide
 tags:
   - Calculation
   - Dates
@@ -33,13 +34,13 @@ You can use four types of number literals: decimal, binary, octal, and hexadecim
 ### Decimal numbers
 
 ```js
-1234567890
-42
+1234567890;
+42;
 
 // Caution when using leading zeros:
 
-0888 // 888 parsed as decimal
-0777 // parsed as octal in non-strict mode (511 in decimal)
+0888; // 888 parsed as decimal
+0777; // parsed as octal in non-strict mode (511 in decimal)
 ```
 
 Note that decimal literals can start with a zero (`0`) followed by another decimal digit, but if every digit after the leading `0` is smaller than 8, the number gets parsed as an octal number.
@@ -49,9 +50,9 @@ Note that decimal literals can start with a zero (`0`) followed by another decim
 Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (`0b` or `0B`). If the digits after the `0b` are not 0 or 1, the following {{jsxref("SyntaxError")}} is thrown: "Missing binary digits after 0b".
 
 ```js
-const FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+const FLT_SIGNBIT = 0b10000000000000000000000000000000; // 2147483648
 const FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-const FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
+const FLT_MANTISSA = 0b00000000011111111111111111111111; // 8388607
 ```
 
 ### Octal numbers
@@ -76,17 +77,17 @@ const m = 0644; // 420
 Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X`). If the digits after 0x are outside the range (0123456789ABCDEF), the following {{jsxref("SyntaxError")}} is thrown: "Identifier starts immediately after numeric literal".
 
 ```js
-0xFFFFFFFFFFFFFFFFF // 295147905179352830000
-0x123456789ABCDEF   // 81985529216486900
-0XA                 // 10
+0xfffffffffffffffff; // 295147905179352830000
+0x123456789abcdef; // 81985529216486900
+0xa; // 10
 ```
 
 ### Exponentiation
 
 ```js
-1E3   // 1000
-2e6   // 2000000
-0.1e2 // 10
+1e3; // 1000
+2e6; // 2000000
+0.1e2; // 10
 ```
 
 ## Number object
@@ -138,13 +139,13 @@ The `Number` prototype provides methods for retrieving information from `Number`
 The built-in {{jsxref("Math")}} object has properties and methods for mathematical constants and functions. For example, the `Math` object's `PI` property has the value of pi (3.141…), which you would use in an application as
 
 ```js
-Math.PI
+Math.PI;
 ```
 
 Similarly, standard mathematical functions are methods of `Math`. These include trigonometric, logarithmic, exponential, and other functions. For example, if you want to use the trigonometric function sine, you would write
 
 ```js
-Math.sin(1.56)
+Math.sin(1.56);
 ```
 
 Note that all trigonometric methods of `Math` take arguments in radians.
@@ -363,7 +364,7 @@ With the "get" and "set" methods you can get and set seconds, minutes, hours, da
 For example, suppose you define the following date:
 
 ```js
-const Xmas95 = new Date('December 25, 1995');
+const Xmas95 = new Date("December 25, 1995");
 ```
 
 Then `Xmas95.getMonth()` returns 11, and `Xmas95.getFullYear()` returns 1995.
@@ -387,7 +388,7 @@ The `parse` method is useful for assigning values from date strings to existing 
 
 ```js
 const ipoDate = new Date();
-ipoDate.setTime(Date.parse('Aug 9, 1995'));
+ipoDate.setTime(Date.parse("Aug 9, 1995"));
 ```
 
 ### Example

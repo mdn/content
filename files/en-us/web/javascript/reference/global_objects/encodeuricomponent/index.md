@@ -1,6 +1,7 @@
 ---
 title: encodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
+page-type: javascript-function
 tags:
   - JavaScript
   - Method
@@ -86,11 +87,10 @@ The more recent [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986) reserve
 
 ```js
 function encodeRFC3986URIComponent(str) {
-  return encodeURIComponent(str)
-    .replace(
-      /[!'()*]/g,
-      (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`
-    );
+  return encodeURIComponent(str).replace(
+    /[!'()*]/g,
+    (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`
+  );
 }
 ```
 

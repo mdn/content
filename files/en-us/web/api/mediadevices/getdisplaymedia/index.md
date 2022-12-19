@@ -68,8 +68,7 @@ audio track.
     {{domxref("document")}} in whose context `getDisplayMedia()` was called is
     not fully active; for example, perhaps it is not the frontmost tab.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Returned if the permission to access a screen area was denied by the user, or the current browsing
-    instance is not permitted access to screen sharing.
+  - : Returned if the permission to access a screen area was denied by the user (for example by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)), or the current browsing instance is not permitted access to screen sharing.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Returned if no sources of screen video are available for capture.
 - `NotReadableError` {{domxref("DOMException")}}
@@ -114,7 +113,9 @@ async function startCapture(displayMediaOptions) {
   let captureStream;
 
   try {
-    captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+    captureStream = await navigator.mediaDevices.getDisplayMedia(
+      displayMediaOptions
+    );
   } catch (err) {
     console.error(`Error: ${err}`);
   }

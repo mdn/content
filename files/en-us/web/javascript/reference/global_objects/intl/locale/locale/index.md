@@ -1,6 +1,7 @@
 ---
 title: Intl.Locale() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
+page-type: javascript-constructor
 tags:
   - Constructor
   - Internationalization
@@ -46,7 +47,7 @@ At its very simplest, the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} cons
 a locale identifier string as its argument:
 
 ```js
-const us = new Intl.Locale('en-US');
+const us = new Intl.Locale("en-US");
 ```
 
 ### Using the Locale constructor with an options object

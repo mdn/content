@@ -1,6 +1,7 @@
 ---
 title: Object.prototype.__proto__
 slug: Web/JavaScript/Reference/Global_Objects/Object/proto
+page-type: javascript-instance-accessor-property
 tags:
   - Deprecated
   - ECMAScript 2015
@@ -61,7 +62,7 @@ const circle = new Circle();
 shape.__proto__ = circle;
 
 // Get the object prototype
-console.log(shape.__proto__ === Circle);  // false
+console.log(shape.__proto__ === Circle); // false
 ```
 
 ```js

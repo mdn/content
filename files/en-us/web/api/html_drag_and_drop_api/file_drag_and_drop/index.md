@@ -47,7 +47,7 @@ Lastly, an application may want to style the drop target element to visually ind
 }
 ```
 
-> **Note:** `dragstart` and `dragend` events are not fired when dragging a file into the browser from the OS.
+> **Note:** {{domxref("HTMLElement/dragstart_event", "dragstart")}} and {{domxref("HTMLElement/dragend_event", "dragend")}} events are not fired when dragging a file into the browser from the OS. To detect when OS files are dragged into the browser, use {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {{domxref("HTMLElement/dragleave_event", "dragleave")}}.
 
 ## Process the drop
 
@@ -59,7 +59,7 @@ Note that in this example, any drag item that is not a file is ignored.
 
 ```js
 function dropHandler(ev) {
-  console.log('File(s) dropped');
+  console.log("File(s) dropped");
 
   // Prevent default behavior (Prevent file from being opened)
   ev.preventDefault();
@@ -68,7 +68,7 @@ function dropHandler(ev) {
     // Use DataTransferItemList interface to access the file(s)
     [...ev.dataTransfer.items].forEach((item, i) => {
       // If dropped items aren't files, reject them
-      if (item.kind === 'file') {
+      if (item.kind === "file") {
         const file = item.getAsFile();
         console.log(`… file[${i}].name = ${file.name}`);
       }
@@ -88,7 +88,7 @@ The following {{domxref("HTMLElement/dragover_event", "dragover")}} event handle
 
 ```js
 function dragOverHandler(ev) {
-  console.log('File(s) in drop zone');
+  console.log("File(s) in drop zone");
 
   // Prevent default behavior (Prevent file from being opened)
   ev.preventDefault();

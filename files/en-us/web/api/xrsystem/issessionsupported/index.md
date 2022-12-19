@@ -1,5 +1,5 @@
 ---
-title: 'XRSystem: isSessionSupported()'
+title: "XRSystem: isSessionSupported()"
 slug: Web/API/XRSystem/isSessionSupported
 page-type: web-api-instance-method
 tags:
@@ -58,8 +58,7 @@ returned promise, passing to the rejection handler a {{domxref("DOMException")}}
 `name` is one of the following strings.
 
 - `SecurityError`
-  - : The document's origin does not have permission to use the
-    `xr-spatial-tracking` [feature policy](/en-US/docs/Web/HTTP/Feature_Policy).
+  - : Use of this feature is blocked by an `xr-spatial-tracking` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ## Examples
 
@@ -76,11 +75,10 @@ down the WebXR session.
 
 ```js
 if (navigator.xr) {
-  navigator.xr.isSessionSupported('immersive-vr')
-  .then((isSupported) => {
+  navigator.xr.isSessionSupported("immersive-vr").then((isSupported) => {
     if (isSupported) {
-      userButton.addEventListener('click', onButtonClicked);
-      userButton.textContent = 'Enter XR';
+      userButton.addEventListener("click", onButtonClicked);
+      userButton.textContent = "Enter XR";
       userButton.disabled = false;
     }
   });
@@ -88,8 +86,7 @@ if (navigator.xr) {
 
 function onButtonClicked() {
   if (!xrSession) {
-    navigator.xr.requestSession('immersive-vr')
-    .then((session) => {
+    navigator.xr.requestSession("immersive-vr").then((session) => {
       xrSession = session;
       // onSessionStarted() not shown for reasons of brevity and clarity.
       onSessionStarted(xrSession);

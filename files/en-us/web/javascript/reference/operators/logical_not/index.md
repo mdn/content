@@ -1,6 +1,7 @@
 ---
 title: Logical NOT (!)
 slug: Web/JavaScript/Reference/Operators/Logical_NOT
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
@@ -51,10 +52,10 @@ Even though the `!` operator can be used with operands that are not Boolean valu
 The following code shows examples of the `!` (logical NOT) operator.
 
 ```js
-n1 = !true               // !t returns false
-n2 = !false              // !f returns true
-n3 = !''                 // !f returns true
-n4 = !'Cat'              // !t returns false
+n1 = !true; // !t returns false
+n2 = !false; // !f returns true
+n3 = !""; // !f returns true
+n4 = !"Cat"; // !t returns false
 ```
 
 ### Double NOT (`!!`)
@@ -68,12 +69,12 @@ The same conversion can be done through the {{jsxref("Global_Objects/Boolean/Boo
   "Boolean")}} function.
 
 ```js
-n1 = !!true                   // !!truthy returns true
-n2 = !!{}                     // !!truthy returns true: any object is truthy...
-n3 = !!(new Boolean(false))   // ...even Boolean objects with a false .valueOf()!
-n4 = !!false                  // !!falsy returns false
-n5 = !!""                     // !!falsy returns false
-n6 = !!Boolean(false)         // !!falsy returns false
+n1 = !!true; // !!truthy returns true
+n2 = !!{}; // !!truthy returns true: any object is truthy...
+n3 = !!new Boolean(false); // ...even Boolean objects with a false .valueOf()!
+n4 = !!false; // !!falsy returns false
+n5 = !!""; // !!falsy returns false
+n6 = !!Boolean(false); // !!falsy returns false
 ```
 
 ### Converting between NOTs
@@ -81,13 +82,13 @@ n6 = !!Boolean(false)         // !!falsy returns false
 The following operation involving **booleans**:
 
 ```js
-!!bCondition
+!!bCondition;
 ```
 
 is always equal to:
 
 ```js
-bCondition
+bCondition;
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: Array.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
+page-type: javascript-instance-method
 tags:
   - Array
   - ECMAScript 5
@@ -172,7 +173,7 @@ console.log(
   [1, , 3].map((x, index) => {
     console.log(`Visit ${index}`);
     return x * 2;
-  }),
+  })
 );
 // Visit 0
 // Visit 2

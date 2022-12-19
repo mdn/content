@@ -1,6 +1,7 @@
 ---
 title: Number() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Number/Number
+page-type: javascript-constructor
 tags:
   - Constructor
   - JavaScript
@@ -41,12 +42,12 @@ When `Number` is called as a function, it [coerces the parameter to a number pri
 ### Creating Number objects
 
 ```js
-const a = new Number('123'); // a === 123 is false
-const b = Number('123');     // b === 123 is true
-a instanceof Number;         // is true
-b instanceof Number;         // is false
-typeof a // "object"
-typeof b // "number"
+const a = new Number("123"); // a === 123 is false
+const b = Number("123"); // b === 123 is true
+a instanceof Number; // is true
+b instanceof Number; // is false
+typeof a; // "object"
+typeof b; // "number"
 ```
 
 ### Using Number() to convert a BigInt to a number

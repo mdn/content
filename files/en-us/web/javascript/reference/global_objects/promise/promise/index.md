@@ -1,6 +1,7 @@
 ---
 title: Promise() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
+page-type: javascript-constructor
 tags:
   - Constructor
   - JavaScript
@@ -132,7 +133,7 @@ new Promise((resolve, reject) => {
   try {
     thenable.then(
       (value) => resolve(value),
-      (reason) => reject(reason),
+      (reason) => reject(reason)
     );
   } catch (e) {
     reject(e);
@@ -178,7 +179,7 @@ const pendingResolved = new Promise((resolveOuter, rejectOuter) => {
       setTimeout(() => {
         resolveInner("inner");
       }, 100);
-    }),
+    })
   );
 });
 ```

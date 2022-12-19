@@ -1,6 +1,7 @@
 ---
 title: Intl.NumberFormat() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
+page-type: javascript-constructor
 tags:
   - Constructor
   - Internationalization
@@ -261,7 +262,7 @@ Normally, `Intl.NumberFormat()` can be called with or without [`new`](/en-US/doc
 const formatter = Intl.NumberFormat.call(
   { __proto__: Intl.NumberFormat.prototype },
   "en-US",
-  { notation: "scientific" },
+  { notation: "scientific" }
 );
 console.log(Object.getOwnPropertyDescriptors(formatter));
 // {
@@ -496,7 +497,7 @@ console.log(
 );
 // {
 //   …
-//   minimumIntegerDigits: 1, 
+//   minimumIntegerDigits: 1,
 //   minimumFractionDigits: 2,
 //   maximumFractionDigits: 3,
 //   …

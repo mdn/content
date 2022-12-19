@@ -1,6 +1,7 @@
 ---
 title: JavaScript language overview
 slug: Web/JavaScript/Language_Overview
+page-type: guide
 tags:
   - Guide
   - Intermediate
@@ -769,7 +770,8 @@ fs.readFile(filename)
   .then((content) => {
     // What to do when the file is read
     console.log(content);
-  }).catch((err) => {
+  })
+  .catch((err) => {
     throw err;
   });
 // Code here will be executed while the file is waiting to be read

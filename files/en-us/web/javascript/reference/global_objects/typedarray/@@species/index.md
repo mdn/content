@@ -1,6 +1,7 @@
 ---
 title: get TypedArray[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
+page-type: javascript-static-accessor-property
 tags:
   - JavaScript
   - Property
@@ -19,7 +20,7 @@ The **`TypedArray[@@species]`** accessor property returns the constructor used t
 ## Syntax
 
 ```js
-TypedArray[Symbol.species]
+TypedArray[Symbol.species];
 ```
 
 ### Return value

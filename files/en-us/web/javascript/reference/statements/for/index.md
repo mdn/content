@@ -1,6 +1,7 @@
 ---
 title: for
 slug: Web/JavaScript/Reference/Statements/for
+page-type: javascript-statement
 tags:
   - JavaScript
   - Language feature
@@ -67,7 +68,7 @@ for (let i = "start" in window ? window.start : 0; i < 9; i++) {
 
 ```js example-good
 // Parenthesize the whole initializer
-for (let i = ("start" in window ? window.start : 0); i < 9; i++) {
+for (let i = ("start" in window) ? window.start : 0; i < 9; i++) {
   console.log(i);
 }
 
@@ -218,7 +219,7 @@ function showOffsetPos(id) {
   console.log(
     `Offset position of "${id}" element:
 left: ${left}px;
-top: ${top}px;`,
+top: ${top}px;`
   );
 }
 

@@ -1,6 +1,7 @@
 ---
-title: 'SyntaxError: missing : after property id'
+title: "SyntaxError: missing : after property id"
 slug: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
+page-type: javascript-error
 tags:
   - Error
   - Errors
@@ -34,7 +35,7 @@ When creating objects with the [object initializer](/en-US/docs/Web/JavaScript/R
 a colon (`:`) separates keys and values for the object's properties.
 
 ```js
-const obj = { propertyKey: 'value' };
+const obj = { propertyKey: "value" };
 ```
 
 ## Examples
@@ -53,12 +54,12 @@ Correct would be to use a colon, or to use square brackets to assign a new prope
 after the object has been created already.
 
 ```js example-good
-const obj = { propertyKey: 'value' };
+const obj = { propertyKey: "value" };
 
 // or alternatively
 
 const obj = {};
-obj['propertyKey'] = 'value';
+obj["propertyKey"] = "value";
 ```
 
 ### Computed properties
@@ -74,7 +75,7 @@ const obj = { 'b'+'ar': 'foo' };
 Put the expression in brackets `[]`:
 
 ```js example-good
-const obj = { ['b'+'ar']: 'foo' };
+const obj = { ["b" + "ar"]: "foo" };
 ```
 
 ## See also

@@ -1,6 +1,7 @@
 ---
 title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
+page-type: javascript-static-method
 tags:
   - JavaScript
   - Method
@@ -62,7 +63,7 @@ const myObj = Object.create(
         return this.foo;
       },
     },
-  },
+  }
 );
 myObj.foo = "bar";
 console.log(Object.entries(myObj)); // [ ['foo', 'bar'] ]

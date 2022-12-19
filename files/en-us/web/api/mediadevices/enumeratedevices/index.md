@@ -31,9 +31,9 @@ None.
 
 ### Return value
 
-A {{ jsxref("Promise") }} that receives an array of {{domxref("MediaDeviceInfo")}} objects when the promise is fulfilled.
-Each object in the array describes one of the available media input and output devices (only device-types for which permission has been granted are "available").
-The order is significant - the default capture devices will be listed first.
+A {{ jsxref("Promise") }} that receives an array of {{domxref("MediaDeviceInfo")}} objects when the promise is fulfilled. Each object in the array describes one of the available media input and output devices. The order is significant — the default capture devices will be listed first.
+
+Only device types for which permission has been granted are "available". Also note that if a `speaker-selection` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) is used to block use of audio outputs, they won't be available in the list.
 
 If enumeration fails, the promise is rejected.
 
@@ -46,7 +46,8 @@ if (!navigator.mediaDevices?.enumerateDevices) {
   console.log("enumerateDevices() not supported.");
 } else {
   // List cameras and microphones.
-  navigator.mediaDevices.enumerateDevices()
+  navigator.mediaDevices
+    .enumerateDevices()
     .then((devices) => {
       devices.forEach((device) => {
         console.log(`${device.kind}: ${device.label} id = ${device.deviceId}`);
