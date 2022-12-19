@@ -42,20 +42,38 @@ encrypt(algorithm, key, data)
 
           Unless your application calls for a label, you can just omit this argument and it will not affect the security of the encryption operation.
 
-    - To use [AES-CBC](#aes-cbc) or [AES-GCM](#aes-gcm) pass an object with the properties given below: <!-- AesGcmParams dictionary in the spec -->
+    - To use [AES-GCM](#aes-gcm), pass an object with the properties given below: <!-- AesGcmParams dictionary in the spec -->
 
       - `name`
-        - : A string indicating the name of the algorithm: `AES-CBC`, `AES-GCM`.
+        - : A string. This should be set to `AES-GCM`.
       - `iv`
         - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
           The initialization vector.
-          Must be 16 bytes for AES-CBC, 12 bytes for AES-GCM, unpredictable, and preferably cryptographically random.
+          The AES-GCM specification recommends that the IV should be 96 bits long, and typically contains bits from a random number generator.
+          However, it need not be secret (for example, it may be transmitted unencrypted along with the ciphertext).
+          See [AesGcmParams](/en-US/docs/Web/API/AesGcmParams) for more information.
+      - `additionalData` {{optional_inline}}
+        - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
+          This contains additional data that will not be encrypted but will be authenticated along with the encrypted data.
+          See [AesGcmParams](/en-US/docs/Web/API/AesGcmParams) for more information.
+      - `tagLength` {{optional_inline}}
+        - : A `Number`. This determines the size in bits of the authentication tag generated in the encryption operation and used for authentication in the corresponding decryption.
+          See [AesGcmParams](/en-US/docs/Web/API/AesGcmParams) for more information.
+
+    - To use [AES-CBC](#aes-cbc) pass an object with the properties given below: <!-- AesCbcParams dictionary in the spec -->
+
+      - `name`
+        - : A string. This should be set to `AES-CBC`.
+      - `iv`
+        - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
+          The initialization vector.
+          This must be 16 bytes long (the AES block size), unpredictable, and preferably cryptographically random.
           However, it need not be secret (for example, it may be transmitted unencrypted along with the ciphertext).
 
     - To use [AES-CTR](#aes-ctr), pass an object with the following properties: <!-- AesCtrParams dictionary in the spec -->
 
       - `name`
-        - : A string indicating the name of the algorithm: `AES-CTR`.
+        - : A string. This should be set to `AES-CTR`.
       - `counter`
         - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} — the initial value of the counter block.
           This must be 16 bytes long (the AES block size).
