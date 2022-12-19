@@ -27,6 +27,8 @@ if ('launchQueue' in window && 'targetURL' in window.LaunchParams.prototype) {
   window.launchQueue.setConsumer(launchParams => {
     if (launchParams.targetURL) {
       const params = new URL(launchParams.targetURL).searchParams;
+
+      // Assuming a music player app that gets the to-be-played track passed.
       const track = params.get('track');
       if (track) {
         audio.src = track;
