@@ -1103,7 +1103,6 @@
       "dictionaries": [],
       "methods": ["MediaDevices.getDisplayMedia()"],
       "properties": [
-        "MediaTrackConstraints.cursor",
         "MediaTrackConstraints.displaySurface",
         "MediaTrackConstraints.logicalSurface",
         "MediaTrackConstraints.suppressLocalAudioPlayback",
@@ -1111,7 +1110,9 @@
         "MediaTrackSettings.displaySurface",
         "MediaTrackSettings.logicalSurface",
         "MediaTrackSettings.suppressLocalAudioPlayback",
-        "MediaTrackSupportedConstraints"
+        "MediaTrackSupportedConstraints.displaySurface",
+        "MediaTrackSupportedConstraints.logicalSurface",
+        "MediaTrackSupportedConstraints.suppressLocalAudioPlayback"
       ],
       "types": ["CursorCaptureConstraintSet", "DisplayCaptureSurfaceType"],
       "events": []

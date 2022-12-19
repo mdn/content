@@ -27,20 +27,23 @@ this is unnecessary since browsers will ignore any constraints they're unfamilia
 
 ## Value
 
-`true`/`false`, or a [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) object.
+A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) value.
 
 If this value is a simple `true` or `false`, the user agent will
 attempt to obtain media with local audio playback enabled or disabled as specified, if
 possible, but will not fail if this can't be done.
 
-If, instead, the value is given as a [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) object
-object with an `ideal` field, that field's Boolean value indicates an ideal
+If the value is given as `ideal`, that field's boolean value indicates an ideal
 setting for the local audio playback suppression feature; if it can't be met, then the request will
 result in an error.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints", "Example: Constraint exerciser")}} for an example.
+```js
+let isLocalAudioSuppressed = displayStream.getVideoTracks()[0].getSettings().suppressLocalAudioPlayback;
+```
+
+See [Example: Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) for an example that allows you to play with media track constraints.
 
 ## Specifications
 

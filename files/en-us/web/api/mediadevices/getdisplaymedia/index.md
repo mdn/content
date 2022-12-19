@@ -33,6 +33,7 @@ See [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_
 ## Syntax
 
 ```js-nolint
+getDisplayMedia()
 getDisplayMedia(options)
 ```
 
@@ -40,22 +41,22 @@ getDisplayMedia(options)
 
 - `options` {{optional_inline}}
   - : An optional object specifying requirements for the returned {{domxref("MediaStream")}}. The options for `getDisplayMedia()` work in the same as the [constraints](/en-US/docs/Web/API/MediaDevices/getUserMedia#parameters) for the {{domxref("MediaDevices.getUserMedia()")}} method, although in that case only `audio` and `video` can be specified. The list of possible option properties for `getDisplayMedia()` is as follows:
-    - `video`
-      - : A boolean; a value of `true` indicates that the returned {{domxref("MediaStream")}} will contain a video track. Be aware that, since `getDisplayMedia()` requires a video track, the returned stream will have one even if no video track is expressly requested. If the `video` property is explicitly given a value of `false`, the returned {{jsxref("Promise")}} will reject with a `TypeError`.
+    - `video` {{optional_inline}}
+      - : A boolean or a {{domxref("MediaTrackConstraints")}} instance; the default value is `true`. If this option is omitted or set to `true`, the stream will contain a video track A value of `true` indicates that the returned {{domxref("MediaStream")}} will contain a video track. Since `getDisplayMedia()` requires a video track, if this option is set to `false` the promise will reject with a `TypeError`.
     - `audio` {{optional_inline}}
-      - : A boolean; a value of `true` indicates that the returned {{domxref("MediaStream")}} will contain an audio track, if audio is supported and available for the display surface chosen by the user.
+      - : A boolean or a {{domxref("MediaTrackConstraints")}} instance; the default value is `false`. A value of `true` indicates that the returned {{domxref("MediaStream")}} will contain an audio track, if audio is supported and available for the display surface chosen by the user.
     - `controller` {{optional_inline}}
-      - : A {{domxref("CaptureController")}} object instance containing methods that can be used to further manipulate the capture session.
+      - : A {{domxref("CaptureController")}} object instance containing methods that can be used to further manipulate the capture session. The default value is `undefined`.
     - `preferCurrentTab` {{non-standard_inline}} {{optional_inline}}
-      - : A boolean; a value of `true` instructs the browser to offer the current tab as the most prominent capture source, i.e. as a separate "This Tab" option in the "Choose what to share" options presented to the user. This is useful as many app types generally just want to share the current tab. For example, a slide deck app might want to let the user stream the current tab containing the presentation to a virtual conference.
+      - : A boolean; a value of `true` instructs the browser to offer the current tab as the most prominent capture source, i.e. as a separate "This Tab" option in the "Choose what to share" options presented to the user. This is useful as many app types generally just want to share the current tab. For example, a slide deck app might want to let the user stream the current tab containing the presentation to a virtual conference. The default value is `false`.
     - `selfBrowserSurface` {{optional_inline}}
-      - : An enumerated value specifying whether the browser should allow the user to select the current tab for capture. This helps to avoid the "infinite hall of mirrors" effect experienced when a video conferencing app inadvertently shares its own display. Possible values are `include`, which hints that the browser should include the current tab in the choices offered for capture, and `exclude`, which hints that it should be excluded.
+      - : An enumerated value specifying whether the browser should allow the user to select the current tab for capture. This helps to avoid the "infinite hall of mirrors" effect experienced when a video conferencing app inadvertently shares its own display. Possible values are `include`, which hints that the browser should include the current tab in the choices offered for capture, and `exclude`, which hints that it should be excluded. The default value is `include`.
     - `surfaceSwitching` {{optional_inline}}
-      - : An enumerated value specifying whether the browser should display a control to allow the user to dynamically switch the shared tab during screen-sharing. This is much more convenient than having to go through the whole sharing process again each time a user wants to switch the shared tab. Possible values are `include`, which hints that the browser should include the control, and `exclude`, which hints that it should not be shown.
+      - : An enumerated value specifying whether the browser should display a control to allow the user to dynamically switch the shared tab during screen-sharing. This is much more convenient than having to go through the whole sharing process again each time a user wants to switch the shared tab. Possible values are `include`, which hints that the browser should include the control, and `exclude`, which hints that it should not be shown. The default value is `exclude`.
     - `systemAudio` {{optional_inline}}
-      - : An enumerated value specifying whether the browser should include the system audio among the possible audio sources offered to the user. Possible values are `include`, which hints that the browser should include the system audio in the list of choices, and `exclude`, which hints that it should be excluded.
+      - : An enumerated value specifying whether the browser should include the system audio among the possible audio sources offered to the user. Possible values are `include`, which hints that the browser should include the system audio in the list of choices, and `exclude`, which hints that it should be excluded. The default value is `include`.
 
-  > **Note:** See the article [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints) for a lot more detail on how these options work.
+> **Note:** See the article [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints) for a lot more detail on how these options work.
 
 ### Return value
 

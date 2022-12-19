@@ -65,20 +65,20 @@ The Screen Capture API adds properties to the following dictionaries defined by 
 - {{domxref("MediaTrackSettings.displaySurface")}}
   - : A string indicating what type of display surface is currently being captured. The value is one of `browser`, `monitor`, or `window`.
 - {{domxref("MediaTrackSettings.logicalSurface")}}
-  - : A Boolean value, which is `true` if the video being captured doesn't directly correspond to a single onscreen display area.
+  - : A boolean value, which is `true` if the video being captured doesn't directly correspond to a single onscreen display area.
 - {{domxref("MediaTrackSettings.suppressLocalAudioPlayback")}}
-  - : A Boolean value, which is `true` if the audio being captured is not played out of the user's local speakers.
+  - : A boolean value, which is `true` if the audio being captured is not played out of the user's local speakers.
 
 ### MediaTrackSupportedConstraints
 
 - {{domxref("MediaTrackSupportedConstraints.cursor")}}
-  - : A Boolean, which is `true` if the user agent and device support the {{domxref("MediaTrackConstraints.cursor")}} constraint.
+  - : A boolean, which is `true` if the user agent and device support the {{domxref("MediaTrackConstraints.cursor")}} constraint.
 - {{domxref("MediaTrackSupportedConstraints.displaySurface")}}
-  - : A Boolean, which is `true` if the current environment supports the {{domxref("MediaTrackConstraints.displaySurface")}} constraint.
+  - : A boolean, which is `true` if the current environment supports the {{domxref("MediaTrackConstraints.displaySurface")}} constraint.
 - {{domxref("MediaTrackSupportedConstraints.logicalSurface")}}
-  - : A Boolean, which is `true` if the current environment supports the constraint {{domxref("MediaTrackConstraints.logicalSurface")}}.
+  - : A boolean, which is `true` if the current environment supports the constraint {{domxref("MediaTrackConstraints.logicalSurface")}}.
 - {{domxref("MediaTrackSupportedConstraints.suppressLocalAudioPlayback")}}
-  - : A Boolean, which is `true` if the current environment supports the constraint {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback")}}.
+  - : A boolean, which is `true` if the current environment supports the constraint {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback")}}.
 
 ## Feature Policy validation
 

@@ -30,7 +30,7 @@ setFocusBehavior(focusBehavior)
 
 ### Return value
 
-`Undefined`.
+None (`undefined`).
 
 ### Exceptions
 

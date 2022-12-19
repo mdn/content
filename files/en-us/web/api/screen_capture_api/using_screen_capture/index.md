@@ -79,7 +79,7 @@ A user agent might allow the capture of the entire content of an obscured window
 
 The options object passed into {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} is used to set options for the resulting stream.
 
-The `video` and `audio` objects pased in to the options object can also hold additional constraints particular to those media tracks. See [Properties of shared screen tracks](/en-US/docs/Web/API/MediaTrackConstraints#properties_of_shared_screen_tracks) for details about additional constraints for configuring a screen-capture stream that are added to {{domxref("MediaTrackConstraints")}}, {{domxref("MediaTrackSupportedConstraints")}}, and {{domxref("MediaTrackSettings")}}).
+The `video` and `audio` objects passed into the options object can also hold additional constraints particular to those media tracks. See [Properties of shared screen tracks](/en-US/docs/Web/API/MediaTrackConstraints#instance_properties_of_shared_screen_tracks) for details about additional constraints for configuring a screen-capture stream that are added to {{domxref("MediaTrackConstraints")}}, {{domxref("MediaTrackSupportedConstraints")}}, and {{domxref("MediaTrackSettings")}}).
 
 None of the constraints are applied in any way until after the content to capture has been selected. The constraints alter what you see in the resulting stream. For example, if you specify a {{domxref("MediaTrackConstraints.width", "width")}} constraint for the video, it's applied by scaling the video after the user selects the area to share. It doesn't establish a restriction on the size of the source itself.
 
@@ -109,7 +109,6 @@ This allows the user total freedom to select whatever they want, within the limi
 ```js
 const gdmOptions = {
   video: {
-    cursor: "always",
     displaySurface: "window"
   },
   audio: {
@@ -124,7 +123,7 @@ const gdmOptions = {
 }
 ```
 
-In this example the cursor will always be visible in the capture, and the display surface captured is to be the whole window. The audio track should ideally have noise suppression and echo cancellation features enabled, as well as an ideal audio sample rate of 44.1kHz, and supression of local audio playback.
+In this example the display surface captured is to be the whole window. The audio track should ideally have noise suppression and echo cancellation features enabled, as well as an ideal audio sample rate of 44.1kHz, and supression of local audio playback.
 
 In addition, the app is hinting to the user agent that it should:
 
@@ -133,8 +132,6 @@ In addition, the app is hinting to the user agent that it should:
 - Not include the system audio among the possible audio sources offered to the user.
 
 Capturing audio is always optional, and even when web content requests a stream with both audio and video, the returned {{domxref("MediaStream")}} may still have only one video track, with no audio.
-
-> **Note:** Some properties are not widely implemented and might not be used by the engine. `cursor`, for example, [has limited support](/en-US/docs/Web/API/MediaTrackConstraints#browser_compatibility).
 
 ## Using the captured stream
 
@@ -166,9 +163,7 @@ There isn't all that much code needed in order to make this work, and if you're 
 
 First, some constants are set up to reference the elements on the page to which we'll need access: the {{HTMLElement("video")}} into which the captured screen contents will be streamed, a box into which logged output will be drawn, and the start and stop buttons that will turn on and off capture of screen imagery.
 
-The object `displayMediaOptions` contains the options to pass into `getDisplayMedia()`; here, the {{domxref("MediaTrackConstraints.cursor", "cursor")}} property is set to `always`, indicating that the mouse cursor should always be included in the captured media.
-
-> **Note:** Some properties are not widely implemented and might not be used by the engine. `cursor`, for example, [has limited support](/en-US/docs/Web/API/MediaTrackConstraints#browser_compatibility).
+The object `displayMediaOptions` contains the options to pass into `getDisplayMedia()`; here, the {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} property is set to `window`, indicating that the whole window should be captured.
 
 Finally, event listeners are established to detect user clicks on the start and stop buttons.
 
@@ -182,7 +177,7 @@ const stopElem = document.getElementById("stop");
 
 const displayMediaOptions = {
   video: {
-    cursor: "always"
+    displaySurface: "window"
   },
   audio: false
 };

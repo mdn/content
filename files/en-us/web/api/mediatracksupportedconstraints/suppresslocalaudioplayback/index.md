@@ -19,11 +19,11 @@ The supported constraints list is obtained by calling {{domxref("MediaDevices.ge
 
 ## Value
 
-A Boolean value which is `true` if the {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback", "suppressLocalAudioPlayback")}} constraint is supported by the device and user agent.
+A boolean value which is `true` if the {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback", "suppressLocalAudioPlayback")}} constraint is supported by the device and user agent.
 
 ## Examples
 
-The below function sets up the constraints object specifying the options for the call to {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}. It adds the `suppressLocalAudioPlayback` constraint (requesting that captured audio is not played out of the user's local speakers) only if it is known to be supported by the browser. Capturing is then started by calling `getDisplayMedia()` and attaching the returned stream to the video element referenced by the variable `videoElem`.
+The function below sets up the options object for the call to {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}. It adds the `suppressLocalAudioPlayback` constraint (requesting that captured audio is not played out of the user's local speakers) only if it is known to be supported by the browser. Capturing is then started by calling `getDisplayMedia()` and attaching the returned stream to the video element referenced by the variable `videoElem`.
 
 ```js
 async function capture() {
