@@ -244,12 +244,11 @@ Other tips:
 
 ### Linking to non-HTML resources — leave clear signposts
 
-When linking to a resource that will be downloaded (like a PDF or Word document), streamed (like video or audio), or has another potentially unexpected effect (opens a popup window, or loads a Flash movie), you should add clear wording to reduce any confusion.
+When linking to a resource that will be downloaded (like a PDF or Word document), streamed (like video or audio), or has another potentially unexpected effect (opens a popup window), you should add clear wording to reduce any confusion.
 
 For example:
 
 - If you're on a low bandwidth connection, click a link, and then a multiple megabyte download starts unexpectedly.
-- If you don't have the Flash player installed, click a link, and then suddenly get taken to a page that requires Flash.
 
 Let's look at some examples, to see what kind of text can be used here:
 
@@ -263,12 +262,6 @@ Let's look at some examples, to see what kind of text can be used here:
 <p>
   <a href="https://www.example.com/video-stream/" target="_blank">
     Watch the video (stream opens in separate tab, HD quality)
-  </a>
-</p>
-
-<p>
-  <a href="https://www.example.com/car-game">
-    Play the car game (requires Flash)
   </a>
 </p>
 ```
