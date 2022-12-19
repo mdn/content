@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator
-page-type: javascript-instance-method
 tags:
   - Iterator
   - JavaScript

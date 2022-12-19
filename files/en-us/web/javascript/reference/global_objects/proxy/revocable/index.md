@@ -1,7 +1,6 @@
 ---
 title: Proxy.revocable()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
-page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -57,7 +56,7 @@ const revocable = Proxy.revocable(
     get(target, name) {
       return `[[${name}]]`;
     },
-  }
+  },
 );
 const proxy = revocable.proxy;
 console.log(proxy.foo); // "[[foo]]"

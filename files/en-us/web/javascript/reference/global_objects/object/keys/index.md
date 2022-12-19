@@ -1,7 +1,6 @@
 ---
 title: Object.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
-page-type: javascript-static-method
 tags:
   - ECMAScript 5
   - JavaScript
@@ -65,7 +64,7 @@ const myObj = Object.create(
         return this.foo;
       },
     },
-  }
+  },
 );
 myObj.foo = 1;
 console.log(Object.keys(myObj)); // ['foo']

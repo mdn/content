@@ -1,7 +1,6 @@
 ---
 title: Intl.PluralRules.prototype.select()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select
-page-type: javascript-instance-method
 tags:
   - Internationalization
   - Intl

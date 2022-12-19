@@ -31,7 +31,7 @@ parseAll(property, value)
 
 - `property`
   - : A CSS property to set.
-- `value`
+- `cssText`
   - : A comma-separated string containing one or more values that apply to the provided
     property.
 

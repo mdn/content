@@ -1,7 +1,6 @@
 ---
 title: DataView.prototype.setBigUint64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setBigUint64
-page-type: javascript-instance-method
 tags:
   - BigInt
   - DataView

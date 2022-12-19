@@ -1,7 +1,6 @@
 ---
 title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/parseInt
-page-type: javascript-function
 tags:
   - JavaScript
   - Method

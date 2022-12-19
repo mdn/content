@@ -152,7 +152,7 @@ Setting `presentation.defaultRequest` allows the page to specify the `Presentati
 
 ### Monitor connection's state and exchange data
 
-In `controller.html`:
+In `presentation.html`:
 
 ```html
 <button id="disconnectBtn" style="display: none;">Disconnect</button>
@@ -181,7 +181,7 @@ In `controller.html`:
       connection !== newConnection &&
       connection.state !== "closed"
     ) {
-      connection.onclose = undefined;
+      connection.onclosed = undefined;
       connection.close();
     }
 

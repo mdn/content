@@ -1,7 +1,6 @@
 ---
 title: RegExp.prototype.ignoreCase
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
-page-type: javascript-instance-accessor-property
 tags:
   - JavaScript
   - Property

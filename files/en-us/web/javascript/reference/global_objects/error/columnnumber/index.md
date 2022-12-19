@@ -1,7 +1,6 @@
 ---
 title: Error.prototype.columnNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
-page-type: javascript-instance-data-property
 tags:
   - JavaScript
   - Non-standard

@@ -1,7 +1,6 @@
 ---
 title: get RegExp[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@species
-page-type: javascript-static-accessor-property
 tags:
   - JavaScript
   - Property

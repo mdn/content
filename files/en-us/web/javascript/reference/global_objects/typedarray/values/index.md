@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
-page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - Iterator

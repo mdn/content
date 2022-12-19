@@ -1,7 +1,6 @@
 ---
 title: FinalizationRegistry.prototype.unregister()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/unregister
-page-type: javascript-instance-method
 tags:
   - FinalizationRegistry
   - JavaScript

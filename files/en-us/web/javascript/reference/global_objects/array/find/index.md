@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
-page-type: javascript-instance-method
 tags:
   - Array
   - ECMAScript 2015

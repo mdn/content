@@ -1,7 +1,6 @@
 ---
 title: Map() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Map/Map
-page-type: javascript-constructor
 tags:
   - Constructor
   - JavaScript
@@ -39,9 +38,9 @@ new Map(iterable)
 
 ```js
 const myMap = new Map([
-  [1, "one"],
-  [2, "two"],
-  [3, "three"],
+  [1, 'one'],
+  [2, 'two'],
+  [3, 'three'],
 ]);
 ```
 

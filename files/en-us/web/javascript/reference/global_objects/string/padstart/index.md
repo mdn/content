@@ -1,7 +1,6 @@
 ---
 title: String.prototype.padStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/padStart
-page-type: javascript-instance-method
 tags:
   - Advanced
   - Intermediate

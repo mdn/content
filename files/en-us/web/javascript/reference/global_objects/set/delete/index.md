@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
-page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript

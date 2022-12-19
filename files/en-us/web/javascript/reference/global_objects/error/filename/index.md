@@ -1,7 +1,6 @@
 ---
 title: Error.prototype.fileName
 slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
-page-type: javascript-instance-data-property
 tags:
   - JavaScript
   - Non-standard

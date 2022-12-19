@@ -154,7 +154,7 @@ For example, here's a manifest for the `ping_pong` native application:
   "description": "Example host for native messaging",
   "path": "/path/to/native-messaging/app/ping_pong.py",
   "type": "stdio",
-  "allowed_extensions": ["ping_pong@example.org"]
+  "allowed_extensions": [ "ping_pong@example.org" ]
 }
 ```
 
@@ -183,7 +183,7 @@ The managed storage manifest contains a single JSON object with the following pr
           <code
             ><a
               href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings"
-              >browser_specific_settings</a
+              >applications</a
             ></code
           >
           key.
@@ -223,7 +223,8 @@ For example:
   "name": "favourite-color-examples@mozilla.org",
   "description": "ignored",
   "type": "storage",
-  "data": {
+  "data":
+  {
     "color": "management thinks it should be blue!"
   }
 }
@@ -232,7 +233,7 @@ For example:
 Given this JSON manifest, the `favourite-color-examples@mozilla.org` extension could access the data using code like this:
 
 ```js
-let storageItem = browser.storage.managed.get("color");
+let storageItem = browser.storage.managed.get('color');
 storageItem.then((res) => {
   console.log(`Managed color is: ${res.color}`);
 });
@@ -320,7 +321,7 @@ The PKCS #11 manifest is a file containing a JSON object with the following prop
             <code
               ><a
                 href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings"
-                >browser_specific_settings</a
+                >applications</a
               ></code
             >
             key in your extension's <code>manifest.json</code> file, so you can

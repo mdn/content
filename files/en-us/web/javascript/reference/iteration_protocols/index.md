@@ -1,7 +1,6 @@
 ---
 title: Iteration protocols
 slug: Web/JavaScript/Reference/Iteration_protocols
-page-type: guide
 tags:
   - ECMAScript 2015
   - Guide

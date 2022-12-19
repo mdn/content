@@ -1,7 +1,6 @@
 ---
 title: get Promise[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Promise/@@species
-page-type: javascript-static-accessor-property
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -20,7 +19,7 @@ The **`Promise[@@species]`** accessor property returns the constructor used to c
 ## Syntax
 
 ```js
-Promise[Symbol.species];
+Promise[Symbol.species]
 ```
 
 ### Return value

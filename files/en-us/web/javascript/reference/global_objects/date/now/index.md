@@ -1,7 +1,6 @@
 ---
 title: Date.now()
 slug: Web/JavaScript/Reference/Global_Objects/Date/now
-page-type: javascript-static-method
 tags:
   - Date
   - JavaScript

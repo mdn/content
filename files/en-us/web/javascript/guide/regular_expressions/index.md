@@ -1,7 +1,6 @@
 ---
 title: Regular expressions
 slug: Web/JavaScript/Guide/Regular_Expressions
-page-type: guide
 tags:
   - Guide
   - Intermediate
@@ -34,7 +33,7 @@ You construct a regular expression in one of two ways:
 - Or calling the constructor function of the {{jsxref("RegExp")}} object, as follows:
 
   ```js
-  const re = new RegExp("ab+c");
+  const re = new RegExp('ab+c');
   ```
 
   Using the constructor function provides runtime compilation of the regular expression.
@@ -184,7 +183,7 @@ If escape strings are not already part of your pattern you can add them using {{
 
 ```js
 function escapeRegExp(string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
 }
 ```
 
@@ -221,13 +220,13 @@ In the following example, the script uses the `exec()` method to find a match in
 
 ```js
 const myRe = /d(b+)d/g;
-const myArray = myRe.exec("cdbbdbsbz");
+const myArray = myRe.exec('cdbbdbsbz');
 ```
 
 If you do not need to access the properties of the regular expression, an alternative way of creating `myArray` is with this script:
 
 ```js
-const myArray = /d(b+)d/g.exec("cdbbdbsbz");
+const myArray = /d(b+)d/g.exec('cdbbdbsbz');
 // similar to 'cdbbdbsbz'.match(/d(b+)d/g); however,
 // 'cdbbdbsbz'.match(/d(b+)d/g) outputs [ "dbbd" ]
 // while /d(b+)d/g.exec('cdbbdbsbz') outputs [ 'dbbd', 'bb', index: 1, input: 'cdbbdbsbz' ]
@@ -238,8 +237,8 @@ const myArray = /d(b+)d/g.exec("cdbbdbsbz");
 If you want to construct the regular expression from a string, yet another alternative is this script:
 
 ```js
-const myRe = new RegExp("d(b+)d", "g");
-const myArray = myRe.exec("cdbbdbsbz");
+const myRe = new RegExp('d(b+)d', 'g');
+const myArray = myRe.exec('cdbbdbsbz');
 ```
 
 With these scripts, the match succeeds and returns the array and updates the properties shown in the following table.
@@ -304,7 +303,7 @@ For example, assume you have this script:
 
 ```js
 const myRe = /d(b+)d/g;
-const myArray = myRe.exec("cdbbdbsbz");
+const myArray = myRe.exec('cdbbdbsbz');
 console.log(`The value of lastIndex is ${myRe.lastIndex}`);
 
 // "The value of lastIndex is 5"
@@ -313,7 +312,7 @@ console.log(`The value of lastIndex is ${myRe.lastIndex}`);
 However, if you have this script:
 
 ```js
-const myArray = /d(b+)d/g.exec("cdbbdbsbz");
+const myArray = /d(b+)d/g.exec('cdbbdbsbz');
 console.log(`The value of lastIndex is ${/d(b+)d/g.lastIndex}`);
 
 // "The value of lastIndex is 0"
@@ -346,7 +345,7 @@ const re = /pattern/flags;
 or
 
 ```js
-const re = new RegExp("pattern", "flags");
+const re = new RegExp('pattern', 'flags');
 ```
 
 Note that the flags are an integral part of a regular expression. They cannot be added or removed later.
@@ -355,7 +354,7 @@ For example, `re = /\w+\s/g` creates a regular expression that looks for one or 
 
 ```js
 const re = /\w+\s/g;
-const str = "fee fi fo fum";
+const str = 'fee fi fo fum';
 const myArray = str.match(re);
 console.log(myArray);
 
@@ -371,7 +370,7 @@ const re = /\w+\s/g;
 with:
 
 ```js
-const re = new RegExp("\\w+\\s", "g");
+const re = new RegExp('\\w+\\s', 'g');
 ```
 
 and get the same result.
@@ -384,7 +383,7 @@ If the `m` flag is used, `^` and `$` match at the start or end of any line withi
 {{jsxref("RegExp.prototype.exec()")}} method with the `g` flag returns each match and its position iteratively.
 
 ```js
-const str = "fee fi fo fum";
+const str = 'fee fi fo fum';
 const re = /\w+\s/g;
 
 console.log(re.exec(str)); // ["fee ", index: 0, input: "fee fi fo fum"]
@@ -406,7 +405,7 @@ The "u" flag is used to create "unicode" regular expressions; that is, regular e
 For example, the following regular expression might be used to match against an arbitrary unicode "word":
 
 ```js
-/\p{L}*/u;
+/\p{L}*/u
 ```
 
 There are a number of other differences between unicode and non-unicode regular expressions that one should be aware of:
@@ -459,9 +458,9 @@ The regular expression looks for:
 #### JavaScript
 
 ```js
-const form = document.querySelector("#form");
-const input = document.querySelector("#phone");
-const output = document.querySelector("#output");
+const form = document.querySelector('#form');
+const input = document.querySelector('#phone');
+const output = document.querySelector('#output');
 
 const re = /^(?:\d{3}|\(\d{3}\))([-/.])\d{3}\1\d{4}$/;
 
@@ -473,7 +472,7 @@ function testInfo(phoneInput) {
     : `${phoneInput.value} isn't a phone number with area code!`;
 }
 
-form.addEventListener("submit", (event) => {
+form.addEventListener('submit', (event) => {
   event.preventDefault();
   testInfo(input);
 });

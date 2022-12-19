@@ -1,7 +1,6 @@
 ---
-title: "SyntaxError: illegal character"
+title: 'SyntaxError: illegal character'
 slug: Web/JavaScript/Reference/Errors/Illegal_character
-page-type: javascript-error
 tags:
   - Error
   - Errors
@@ -57,7 +56,7 @@ This should work:
 ```js example-good
 "This is actually a string";
 42 - 13;
-const foo = "bar";
+const foo = 'bar';
 ```
 
 Some editors and IDEs will notify you or at least use a slightly different highlighting for it, but not all. When something like this happens to your code and you're not able to find the source of the problem, it's often best to just delete the problematic line and retype it.
@@ -74,7 +73,7 @@ const colors = ['#000', #333', '#666'];
 Add the missing quote for `'#333'`.
 
 ```js example-good
-const colors = ["#000", "#333", "#666"];
+const colors = ['#000', '#333', '#666'];
 ```
 
 ### Hidden characters

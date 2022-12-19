@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
-page-type: javascript-instance-method
 tags:
   - Array
   - JavaScript

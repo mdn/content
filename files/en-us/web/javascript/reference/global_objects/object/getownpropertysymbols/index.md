@@ -1,7 +1,6 @@
 ---
 title: Object.getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
-page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -44,17 +43,17 @@ As all objects have no own symbol properties initially, `Object.getOwnPropertySy
 
 ```js
 const obj = {};
-const a = Symbol("a");
-const b = Symbol.for("b");
+const a = Symbol('a');
+const b = Symbol.for('b');
 
-obj[a] = "localSymbol";
-obj[b] = "globalSymbol";
+obj[a] = 'localSymbol';
+obj[b] = 'globalSymbol';
 
 const objectSymbols = Object.getOwnPropertySymbols(obj);
 
 console.log(objectSymbols.length); // 2
-console.log(objectSymbols); // [Symbol(a), Symbol(b)]
-console.log(objectSymbols[0]); // Symbol(a)
+console.log(objectSymbols);        // [Symbol(a), Symbol(b)]
+console.log(objectSymbols[0]);     // Symbol(a)
 ```
 
 ## Specifications

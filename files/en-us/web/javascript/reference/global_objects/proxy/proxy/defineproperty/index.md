@@ -1,7 +1,6 @@
 ---
 title: handler.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
-page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -80,18 +79,15 @@ If the following invariants are violated, the trap throws a {{jsxref("TypeError"
 The following code traps {{jsxref("Object.defineProperty()")}}.
 
 ```js
-const p = new Proxy(
-  {},
-  {
-    defineProperty(target, prop, descriptor) {
-      console.log(`called: ${prop}`);
-      return true;
-    },
+const p = new Proxy({}, {
+  defineProperty(target, prop, descriptor) {
+    console.log(`called: ${prop}`);
+    return true;
   }
-);
+});
 
 const desc = { configurable: true, enumerable: true, value: 10 };
-Object.defineProperty(p, "a", desc); // "called: a"
+Object.defineProperty(p, 'a', desc); // "called: a"
 ```
 
 When calling {{jsxref("Object.defineProperty()")}} or
@@ -107,20 +103,17 @@ usable (non-standard properties will be ignored):
 - `set`
 
 ```js
-const p = new Proxy(
-  {},
-  {
-    defineProperty(target, prop, descriptor) {
-      console.log(descriptor);
-      return Reflect.defineProperty(target, prop, descriptor);
-    },
+const p = new Proxy({}, {
+  defineProperty(target, prop, descriptor) {
+    console.log(descriptor);
+    return Reflect.defineProperty(target, prop, descriptor);
   }
-);
+});
 
-Object.defineProperty(p, "name", {
-  value: "proxy",
-  type: "custom",
-}); // { value: 'proxy' }
+Object.defineProperty(p, 'name', {
+  value: 'proxy',
+  type: 'custom'
+});  // { value: 'proxy' }
 ```
 
 ## Specifications

@@ -1,7 +1,6 @@
 ---
 title: String.prototype.replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
-page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method

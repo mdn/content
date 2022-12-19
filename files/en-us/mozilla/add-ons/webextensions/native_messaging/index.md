@@ -19,7 +19,7 @@ The extension must request the `"nativeMessaging"` [permission](/en-US/docs/Mozi
 
 After installing, the extension can exchange JSON messages with the native application. Use a set of functions in the {{WebExtAPIRef("runtime")}} API. On the native app side, messages are received using standard input (`stdin`) and sent using standard output (`stdout`).
 
-![Application flow: the native app JSON file resides on the users computer, providing resource information to the native application. The read and write functions of the native application interact with the browser extension's runtime events.](native-messaging.png)
+![](native-messaging.png)
 
 Support for native messaging in extensions is mostly compatible with Chrome, with two main differences:
 
@@ -41,6 +41,7 @@ Example `manifest.json` file:
 
 ```json
 {
+
   "description": "Native messaging example add-on",
   "manifest_version": 2,
   "name": "Native messaging example",
@@ -65,6 +66,7 @@ Example `manifest.json` file:
   },
 
   "permissions": ["nativeMessaging"]
+
 }
 ```
 
@@ -88,7 +90,7 @@ For example, here's a manifest for the `"ping_pong"` native application:
   "description": "Example host for native messaging",
   "path": "/path/to/native-messaging/app/ping_pong.py",
   "type": "stdio",
-  "allowed_extensions": ["ping_pong@example.org"]
+  "allowed_extensions": [ "ping_pong@example.org" ]
 }
 ```
 
@@ -110,7 +112,7 @@ In the example above, the native application is a Python script. It can be diffi
   "description": "Example host for native messaging",
   "path": "c:\\path\\to\\native-messaging\\app\\ping_pong_win.bat",
   "type": "stdio",
-  "allowed_extensions": ["ping_pong@example.org"]
+  "allowed_extensions": [ "ping_pong@example.org" ]
 }
 ```
 
@@ -223,7 +225,9 @@ On a click on the browser action, send the app a message.
 */
 browser.browserAction.onClicked.addListener(() => {
   console.log("Sending:  ping");
-  let sending = browser.runtime.sendNativeMessage("ping_pong", "ping");
+  let sending = browser.runtime.sendNativeMessage(
+    "ping_pong",
+    "ping");
   sending.then(onResponse, onError);
 });
 ```
@@ -242,60 +246,62 @@ You can quickly get started sending and receiving messages with this NodeJS code
 #!/usr/local/bin/node
 
 (() => {
-  let payloadSize = null;
 
-  // A queue to store the chunks as we read them from stdin.
-  // This queue can be flushed when `payloadSize` data has been read
-  let chunks = [];
+    let payloadSize = null;
 
-  // Only read the size once for each payload
-  const sizeHasBeenRead = () => Boolean(payloadSize);
+    // A queue to store the chunks as we read them from stdin.
+    // This queue can be flushed when `payloadSize` data has been read
+    let chunks = [];
 
-  // All the data has been read, reset everything for the next message
-  const flushChunksQueue = () => {
-    payloadSize = null;
-    chunks.splice(0);
-  };
+    // Only read the size once for each payload
+    const sizeHasBeenRead = () => Boolean(payloadSize);
 
-  const processData = () => {
-    // Create one big buffer with all the chunks
-    const stringData = Buffer.concat(chunks);
+    // All the data has been read, reset everything for the next message
+    const flushChunksQueue = () => {
+        payloadSize = null;
+        chunks.splice(0);
+    };
 
-    // The browser will emit the size as a header of the payload,
-    // if it hasn't been read yet, do it.
-    // The next time we'll need to read the payload size is when all of the data
-    // of the current payload has been read (i.e. data.length >= payloadSize + 4)
-    if (!sizeHasBeenRead()) {
-      payloadSize = stringData.readUInt32LE(0);
-    }
+    const processData = () => {
+        // Create one big buffer with all the chunks
+        const stringData = Buffer.concat(chunks);
 
-    // If the data we have read so far is >= to the size advertised in the header,
-    // it means we have all of the data sent.
-    // We add 4 here because that's the size of the bytes that hold the payloadSize
-    if (stringData.length >= payloadSize + 4) {
-      // Remove the header
-      const contentWithoutSize = stringData.slice(4, payloadSize + 4);
+        // The browser will emit the size as a header of the payload,
+        // if it hasn't been read yet, do it.
+        // The next time we'll need to read the payload size is when all of the data
+        // of the current payload has been read (i.e. data.length >= payloadSize + 4)
+        if (!sizeHasBeenRead()) {
+            payloadSize = stringData.readUInt32LE(0);
+        }
 
-      // Reset the read size and the queued chunks
-      flushChunksQueue();
+        // If the data we have read so far is >= to the size advertised in the header,
+        // it means we have all of the data sent.
+        // We add 4 here because that's the size of the bytes that hold the payloadSize
+        if (stringData.length >= (payloadSize + 4)) {
+            // Remove the header
+            const contentWithoutSize = stringData.slice(4, (payloadSize + 4));
 
-      const json = JSON.parse(contentWithoutSize);
-      // Do something with the data…
-    }
-  };
+            // Reset the read size and the queued chunks
+            flushChunksQueue();
 
-  process.stdin.on("readable", () => {
-    // A temporary variable holding the nodejs.Buffer of each
-    // chunk of data read off stdin
-    let chunk = null;
+            const json = JSON.parse(contentWithoutSize);
+            // Do something with the data…
+         }
+    };
 
-    // Read all of the available data
-    while ((chunk = process.stdin.read()) !== null) {
-      chunks.push(chunk);
-    }
+    process.stdin.on('readable', () => {
+        // A temporary variable holding the nodejs.Buffer of each
+        // chunk of data read off stdin
+        let chunk = null;
 
-    processData();
-  });
+        // Read all of the available data
+        while ((chunk = process.stdin.read()) !== null) {
+            chunks.push(chunk);
+        }
+
+        processData();
+
+    });
 })();
 ```
 

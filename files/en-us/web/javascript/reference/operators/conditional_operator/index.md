@@ -1,7 +1,6 @@
 ---
 title: Conditional (ternary) operator
 slug: Web/JavaScript/Reference/Operators/Conditional_Operator
-page-type: javascript-operator
 tags:
   - Conditional
   - Decision
@@ -62,10 +61,10 @@ One common usage is to handle a value that may be `null`:
 const greeting = (person) => {
   const name = person ? person.name : "stranger";
   return `Howdy, ${name}`;
-};
+}
 
-console.log(greeting({ name: "Alice" })); // "Howdy, Alice"
-console.log(greeting(null)); // "Howdy, stranger"
+console.log(greeting({ name: "Alice" }));  // "Howdy, Alice"
+console.log(greeting(null));             // "Howdy, stranger"
 ```
 
 ### Conditional chains
@@ -74,13 +73,10 @@ The ternary operator is right-associative, which means it can be "chained" in th
 
 ```js
 function example() {
-  return condition1
-    ? value1
-    : condition2
-    ? value2
-    : condition3
-    ? value3
-    : value4;
+  return condition1 ? value1
+        : condition2 ? value2
+        : condition3 ? value3
+        : value4;
 }
 ```
 

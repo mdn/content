@@ -1,7 +1,6 @@
 ---
 title: Uint32Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint32Array
-page-type: javascript-class
 tags:
   - Class
   - Uint32Array

@@ -1,7 +1,6 @@
 ---
 title: Object.getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
-page-type: javascript-static-method
 tags:
   - ECMAScript 5
   - JavaScript
@@ -41,10 +40,10 @@ An array of strings that corresponds to the properties found directly in the giv
 In ES5, if the argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be coerced to an object.
 
 ```js
-Object.getOwnPropertyNames("foo");
+Object.getOwnPropertyNames('foo');
 // TypeError: "foo" is not an object (ES5 code)
 
-Object.getOwnPropertyNames("foo");
+Object.getOwnPropertyNames('foo');
 // ["0", "1", "2", "length"]  (ES2015 code)
 ```
 
@@ -53,12 +52,12 @@ Object.getOwnPropertyNames("foo");
 ### Using Object.getOwnPropertyNames()
 
 ```js
-const arr = ["a", "b", "c"];
+const arr = ['a', 'b', 'c'];
 console.log(Object.getOwnPropertyNames(arr).sort());
 // ["0", "1", "2", "length"]
 
 // Array-like object
-const obj = { 0: "a", 1: "b", 2: "c" };
+const obj = { 0: 'a', 1: 'b', 2: 'c' };
 console.log(Object.getOwnPropertyNames(obj).sort());
 // ["0", "1", "2"]
 
@@ -70,17 +69,12 @@ Object.getOwnPropertyNames(obj).forEach((val, idx, array) => {
 // 2 -> c
 
 // non-enumerable property
-const myObj = Object.create(
-  {},
-  {
-    getFoo: {
-      value() {
-        return this.foo;
-      },
-      enumerable: false,
-    },
+const myObj = Object.create({}, {
+  getFoo: {
+    value() { return this.foo; },
+    enumerable: false,
   }
-);
+});
 myObj.foo = 1;
 
 console.log(Object.getOwnPropertyNames(my_obj).sort()); // ["foo", "getFoo"]
@@ -98,7 +92,7 @@ function ChildClass() {
   this.prop = 5;
   this.method = function () {};
 }
-ChildClass.prototype = new ParentClass();
+ChildClass.prototype = new ParentClass;
 ChildClass.prototype.prototypeMethod = function () {};
 
 console.log(Object.getOwnPropertyNames(new ChildClass()));

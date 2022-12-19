@@ -1,7 +1,6 @@
 ---
 title: ArrayBuffer.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
-page-type: javascript-instance-method
 tags:
   - ArrayBuffer
   - JavaScript

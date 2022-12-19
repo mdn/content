@@ -1,7 +1,6 @@
 ---
 title: Math.sign()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sign
-page-type: javascript-static-method
 tags:
   - JavaScript
   - Math

@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
-page-type: javascript-instance-method
 tags:
   - Array
   - JavaScript

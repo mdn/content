@@ -52,7 +52,7 @@ A {{jsxref("Promise")}} that resolves with a list of cookies for the given name 
 In this example we use `getAll()` with no parameters. This returns all of the cookies for this context as an array of objects.
 
 ```js
-let cookies = await cookieStore.getAll();
+let cookies = cookieStore.getAll();
 if (cookies) {
   console.log(cookies);
 } else {

@@ -1,7 +1,6 @@
 ---
 title: Deprecated and obsolete features
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
-page-type: guide
 tags:
   - Deprecated
   - Guide

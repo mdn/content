@@ -46,7 +46,6 @@ vertexAttribPointer(index, size, type, normalized, stride, offset)
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
     the following values are available additionally:
-
     - `gl.HALF_FLOAT`: 16-bit IEEE floating point number
     - `gl.INT`: 32-bit signed binary integer
     - `gl.UNSIGNED_INT`: 32-bit unsigned binary integer
@@ -89,7 +88,7 @@ None ({{jsxref("undefined")}}).
   the ARRAY_BUFFER target.
 - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, a
   `gl.INVALID_OPERATION` error is thrown if this vertex attribute is defined
-  as an integer in the vertex shader (e.g. `uvec4` or `ivec4`,
+  as a integer in the vertex shader (e.g. `uvec4` or `ivec4`,
   instead of `vec4`).
 
 ## Description

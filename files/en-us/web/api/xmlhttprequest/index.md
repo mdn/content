@@ -139,3 +139,4 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
   - [Fetch API](/en-US/docs/Web/API/Fetch_API)
 
 - [New Tricks in XMLHttpRequest2 (2011)](https://web.dev/xhr2/)
+- Feature-Policy directive {{httpheader("Feature-Policy/sync-xhr", "sync-xhr")}}

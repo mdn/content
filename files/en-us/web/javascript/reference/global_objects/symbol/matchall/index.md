@@ -1,7 +1,6 @@
 ---
 title: Symbol.matchAll
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
-page-type: javascript-static-data-property
 tags:
   - JavaScript
   - Property

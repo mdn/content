@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
-page-type: javascript-instance-method
 tags:
   - Array
   - ECMAScript 5

@@ -1,7 +1,6 @@
 ---
 title: Comma operator (,)
 slug: Web/JavaScript/Reference/Operators/Comma_Operator
-page-type: javascript-operator
 tags:
   - Comma
   - Compound
@@ -51,14 +50,13 @@ The comma operator is completely different from commas used as syntactic separat
 In fact, although some of these places accept almost all expressions, they don't accept comma-joined expressions because that would be ambiguous with the syntactic comma separators. In this case, you must parenthesize the comma-joined expression. For example, the following is a `const` declaration that declares two variables, where the comma is not the comma operator:
 
 ```js
-const a = 1,
-  b = 2;
+const a = 1, b = 2;
 ```
 
 It is different from the following, where `b = 2` is an [assignment expression](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment), not a declaration. The value of `a` is `2`, the return value of the assignment, while the value of `1` is discarded:
 
 ```js
-const a = (1, (b = 2));
+const a = (1, b = 2);
 ```
 
 Comma operators cannot appear as [trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas).
@@ -71,7 +69,7 @@ If `a` is a 2-dimensional array with 10 elements on each side, the following cod
 
 ```js
 const a = Array.from({ length: 10 }, () =>
-  Array.from({ length: 10 }, Math.random)
+  Array.from({ length: 10 }, Math.random),
 ); // A 10×10 array of random numbers
 
 for (let i = 0, j = 9; i <= 9; i++, j--) {
@@ -111,7 +109,7 @@ This is especially useful for one-line [arrow functions](/en-US/docs/Web/JavaScr
 
 ```js
 let sum = 0;
-const squares = [1, 2, 3, 4, 5].map((x) => ((sum += x), x * x));
+const squares = [1, 2, 3, 4, 5].map((x) => (sum += x, x * x));
 console.log(squares); // [1, 4, 9, 16, 25]
 console.log(sum); // 15
 ```
@@ -129,7 +127,7 @@ const obj = {
 };
 
 obj.method(); // "obj"
-obj.method(); // "obj" (the grouping operator still returns the reference)
+(obj.method)(); // "obj" (the grouping operator still returns the reference)
 (0, obj.method)(); // undefined (the comma operator returns a new value)
 ```
 
@@ -141,7 +139,7 @@ globalThis.isDirectEval = false;
 {
   const isDirectEval = true;
   console.log(eval("isDirectEval")); // true
-  console.log(eval("isDirectEval")); // true (the grouping operator still returns a reference to `eval`)
+  console.log((eval)("isDirectEval")); // true (the grouping operator still returns a reference to `eval`)
   console.log((0, eval)("isDirectEval")); // false (the comma operator returns a new value)
 }
 ```

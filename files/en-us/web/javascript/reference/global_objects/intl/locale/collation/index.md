@@ -1,7 +1,6 @@
 ---
 title: Intl.Locale.prototype.collation
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation
-page-type: javascript-instance-accessor-property
 tags:
   - Internationalization
   - Intl

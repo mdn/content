@@ -36,9 +36,7 @@ async function startCapture(displayMediaOptions) {
   let captureStream = null;
 
   try {
-    captureStream = await navigator.mediaDevices.getDisplayMedia(
-      displayMediaOptions
-    );
+    captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
   } catch (err) {
     console.error(`Error: ${err}`);
   }
@@ -52,12 +50,8 @@ You can write this code either using an asynchronous function and the [`await`](
 
 ```js
 function startCapture(displayMediaOptions) {
-  return navigator.mediaDevices
-    .getDisplayMedia(displayMediaOptions)
-    .catch((err) => {
-      console.error(`Error:${err}`);
-      return null;
-    });
+ return navigator.mediaDevices.getDisplayMedia(displayMediaOptions)
+    .catch((err) => { console.error(`Error:${err}`); return null; });
 }
 ```
 
@@ -110,8 +104,8 @@ To request that the screen be shared with included audio, the options passed int
 ```js
 const gdmOptions = {
   video: true,
-  audio: true,
-};
+  audio: true
+}
 ```
 
 This allows the user total freedom to select whatever they want, within the limits of what the user agent supports. This could be refined further by specifying additional information for each of `audio` and `video`:
@@ -119,14 +113,14 @@ This allows the user total freedom to select whatever they want, within the limi
 ```js
 const gdmOptions = {
   video: {
-    cursor: "always",
+    cursor: "always"
   },
   audio: {
     echoCancellation: true,
     noiseSuppression: true,
-    sampleRate: 44100,
-  },
-};
+    sampleRate: 44100
+  }
+}
 ```
 
 In this example the cursor will always be visible in the capture, and the audio track should ideally have noise suppression and echo cancellation features enabled, as well as an ideal audio sample rate of 44.1kHz.
@@ -181,27 +175,19 @@ const stopElem = document.getElementById("stop");
 
 const displayMediaOptions = {
   video: {
-    cursor: "always",
+    cursor: "always"
   },
-  audio: false,
+  audio: false
 };
 
 // Set event listeners for the start and stop buttons
-startElem.addEventListener(
-  "click",
-  (evt) => {
-    startCapture();
-  },
-  false
-);
+startElem.addEventListener("click", (evt) => {
+  startCapture();
+}, false);
 
-stopElem.addEventListener(
-  "click",
-  (evt) => {
-    stopCapture();
-  },
-  false
-);
+stopElem.addEventListener("click", (evt) => {
+  stopCapture();
+}, false);
 ```
 
 ##### Logging content
@@ -209,13 +195,10 @@ stopElem.addEventListener(
 To make logging of errors and other issues easy, this example overrides certain {{domxref("console")}} methods to output their messages to the {{HTMLElement("pre")}} block whose ID is `log`.
 
 ```js
-console.log = (msg) => (logElem.innerHTML += `${msg}<br>`);
-console.error = (msg) =>
-  (logElem.innerHTML += `<span class="error">${msg}</span><br>`);
-console.warn = (msg) =>
-  (logElem.innerHTML += `<span class="warn">${msg}<span><br>`);
-console.info = (msg) =>
-  (logElem.innerHTML += `<span class="info">${msg}</span><br>`);
+console.log = (msg) => logElem.innerHTML += `${msg}<br>`;
+console.error = (msg) => logElem.innerHTML += `<span class="error">${msg}</span><br>`;
+console.warn = (msg) => logElem.innerHTML += `<span class="warn">${msg}<span><br>`;
+console.info = (msg) => logElem.innerHTML += `<span class="info">${msg}</span><br>`;
 ```
 
 This allows us to use the familiar {{domxref("console.log()")}}, {{domxref("console.error()")}}, and so on to log information to the log box in the document.
@@ -229,9 +212,7 @@ async function startCapture() {
   logElem.innerHTML = "";
 
   try {
-    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(
-      displayMediaOptions
-    );
+    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
     dumpOptionsInfo();
   } catch (err) {
     console.error(`Error: ${err}`);
@@ -342,15 +323,15 @@ The final product looks like this. If your browser supports Screen Capture API, 
 
 ## Security
 
-In order to function when [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) is enabled, you will need the `display-capture` permission. This can be done using the {{HTTPHeader("Permissions-Policy")}} {{Glossary("HTTP")}} header or—if you're using the Screen Capture API in an {{HTMLElement("iframe")}}, the `<iframe>` element's {{htmlattrxref("allow", "iframe")}} attribute.
+In order to function when [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) is enabled, you will need the `display-capture` permission. This can be done using the {{HTTPHeader("Feature-Policy")}} {{Glossary("HTTP")}} header or—if you're using the Screen Capture API in an {{HTMLElement("iframe")}}, the `<iframe>` element's {{htmlattrxref("allow", "iframe")}} attribute.
 
 For example, this line in the HTTP headers will enable Screen Capture API for the document and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same origin:
 
 ```http
-Permissions-Policy: display-capture=(self)
+Feature-Policy: display-capture 'self'
 ```
 
-If you're performing screen capture within an `<iframe>`, you can request permission just for that frame, which is clearly more secure than requesting permission more generally:
+If you're performing screen capture within an `<iframe>`, you can request permission just for that frame, which is clearly more secure than requesting a more general permission:
 
 ```html
 <iframe src="https://mycode.example.net/etc" allow="display-capture"> </iframe>

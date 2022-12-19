@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.toLocaleDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
-page-type: javascript-instance-method
 tags:
   - Date
   - IANA Timezone Format

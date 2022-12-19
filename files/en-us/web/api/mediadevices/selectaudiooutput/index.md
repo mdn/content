@@ -49,7 +49,7 @@ The object describes the user-selected audio output device.
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Returned if a `speaker-selection` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) is used to block use of audio outputs (in addition the popup for selecting an audio output won't be displayed), or the user closed the selection prompt without choosing a device.
+  - : Returned if the current page has not been granted the {{HTTPHeader("Feature-Policy/speaker-selection","speaker-selection")}} permission or the user closed the selection prompt without choosing a device.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Returned if there are no available audio output devices.
 - `InvalidStateError` {{domxref("DOMException")}}
@@ -57,7 +57,7 @@ The object describes the user-selected audio output device.
 
 ## Security
 
-[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element for this feature to work.
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 Access to audio output devices is gated by the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 The prompt will not be displayed if the `speaker-selection` permission has not been granted.
@@ -68,9 +68,9 @@ Here's an example of using `selectAudioOutput()`, within a function that is trig
 It outputs the selected [device IDs](/en-US/docs/Web/API/MediaDeviceInfo/deviceId) and labels (if available) or an error message.
 
 ```js
-document.querySelector("#myButton").addEventListener("click", () => {
+document.querySelector('#myButton').addEventListener('click', () => {
   if (!navigator.mediaDevices.selectAudioOutput) {
-    console.log("selectAudioOutput() not supported.");
+    console.log('selectAudioOutput() not supported.');
     return;
   }
 

@@ -1,7 +1,6 @@
 ---
 title: import
 slug: Web/JavaScript/Reference/Statements/import
-page-type: javascript-statement
 tags:
   - ECMAScript 2015
   - JavaScript

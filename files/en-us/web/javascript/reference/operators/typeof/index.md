@@ -1,7 +1,6 @@
 ---
 title: typeof
 slug: Web/JavaScript/Reference/Operators/typeof
-page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature

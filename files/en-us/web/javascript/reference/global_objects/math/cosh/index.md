@@ -1,7 +1,6 @@
 ---
 title: Math.cosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cosh
-page-type: javascript-static-method
 tags:
   - JavaScript
   - Math

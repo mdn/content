@@ -1,7 +1,6 @@
 ---
 title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
-page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method

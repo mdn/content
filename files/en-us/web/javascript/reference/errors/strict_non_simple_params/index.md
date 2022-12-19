@@ -1,7 +1,6 @@
 ---
 title: 'SyntaxError: "use strict" not allowed in function with non-simple parameters'
 slug: Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
-page-type: javascript-error
 tags:
   - Error
   - Errors
@@ -63,7 +62,7 @@ entire script or enclosing function is also okay to be in strict mode, you can m
 `"use strict"` directive outside of the function:
 
 ```js example-good
-"use strict";
+'use strict';
 function sum(a = 1, b = 2) {
   return a + b;
 }
@@ -84,8 +83,8 @@ const sum = function sum([a, b]) {
 This can be converted to the following expression:
 
 ```js example-good
-const sum = (function () {
-  "use strict";
+const sum = (function() {
+  'use strict';
   return function sum([a, b]) {
     return a + b;
   };
@@ -109,7 +108,7 @@ This can be converted to the following expression:
 
 ```js example-good
 const callback = (() => {
-  "use strict";
+  'use strict';
   return (...args) => {
     return this.run(args);
   };

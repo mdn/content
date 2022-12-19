@@ -1,7 +1,6 @@
 ---
 title: WeakSet() constructor
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet
-page-type: javascript-constructor
 tags:
   - Constructor
   - JavaScript

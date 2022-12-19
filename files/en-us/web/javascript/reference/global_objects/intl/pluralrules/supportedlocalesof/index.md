@@ -1,7 +1,6 @@
 ---
 title: Intl.PluralRules.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/supportedLocalesOf
-page-type: javascript-static-method
 tags:
   - Internationalization
   - Intl
@@ -68,9 +67,9 @@ adequate match for Balinese since most Balinese speakers also understand Indones
 and therefore return the Balinese language tag as well.
 
 ```js
-const locales = ["ban", "id-u-co-pinyin", "de-ID"];
-const options = { localeMatcher: "lookup" };
-console.log(Intl.PluralRules.supportedLocalesOf(locales, options).join(", "));
+const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
+const options = { localeMatcher: 'lookup' };
+console.log(Intl.PluralRules.supportedLocalesOf(locales, options).join(', '));
 // "id-u-co-pinyin, de-ID"
 ```
 

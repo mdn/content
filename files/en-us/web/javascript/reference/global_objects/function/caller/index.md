@@ -1,7 +1,6 @@
 ---
 title: Function.prototype.caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
-page-type: javascript-instance-accessor-property
 tags:
   - Function
   - JavaScript

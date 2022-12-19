@@ -1,7 +1,6 @@
 ---
 title: BigInt64Array
 slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array
-page-type: javascript-class
 tags:
   - BigInt
   - BigInt64Array
@@ -72,9 +71,7 @@ const z = new BigInt64Array(buffer, 8, 4);
 console.log(z.byteOffset); // 8
 
 // From an iterable
-const iterable = (function* () {
-  yield* [1n, 2n, 3n];
-})();
+const iterable = function*() { yield* [1n, 2n, 3n]; }();
 const bigint64FromIterable = new BigInt64Array(iterable);
 console.log(bigint64FromIterable);
 // BigInt64Array [1n, 2n, 3n]

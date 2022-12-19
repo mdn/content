@@ -1,7 +1,6 @@
 ---
 title: Array.prototype[@@unscopables]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
-page-type: javascript-instance-data-property
 tags:
   - Array
   - ECMAScript 2015

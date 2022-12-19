@@ -1,7 +1,6 @@
 ---
 title: this
 slug: Web/JavaScript/Reference/Operators/this
-page-type: javascript-language-feature
 tags:
   - JavaScript
   - Language feature

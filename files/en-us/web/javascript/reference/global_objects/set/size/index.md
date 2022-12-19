@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.size
 slug: Web/JavaScript/Reference/Global_Objects/Set/size
-page-type: javascript-instance-accessor-property
 tags:
   - ECMAScript 2015
   - JavaScript

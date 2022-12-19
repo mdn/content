@@ -1,7 +1,6 @@
 ---
 title: Math.atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
-page-type: javascript-static-method
 tags:
   - JavaScript
   - Math

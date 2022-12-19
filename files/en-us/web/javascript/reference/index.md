@@ -1,7 +1,6 @@
 ---
 title: JavaScript reference
 slug: Web/JavaScript/Reference
-page-type: landing-page
 tags:
   - Code
   - ECMAScript

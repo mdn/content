@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.findLast()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
-page-type: javascript-instance-method
 tags:
   - Array
   - JavaScript
@@ -201,7 +200,7 @@ const arrayLike = {
   2: 4,
 };
 console.log(
-  Array.prototype.findLast.call(arrayLike, (x) => Number.isInteger(x))
+  Array.prototype.findLast.call(arrayLike, (x) => Number.isInteger(x)),
 ); // 4
 ```
 

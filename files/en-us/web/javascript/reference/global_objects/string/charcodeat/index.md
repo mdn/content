@@ -1,7 +1,6 @@
 ---
 title: String.prototype.charCodeAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
-page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method
@@ -104,7 +103,7 @@ function fixedCharCodeAt(str, idx) {
     low = str.charCodeAt(idx + 1);
     if (isNaN(low)) {
       throw new Error(
-        "High surrogate not followed by low surrogate in fixedCharCodeAt()"
+        "High surrogate not followed by low surrogate in fixedCharCodeAt()",
       );
     }
     return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;

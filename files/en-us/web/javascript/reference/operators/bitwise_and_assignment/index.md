@@ -1,7 +1,6 @@
 ---
 title: Bitwise AND assignment (&=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND_assignment
-page-type: javascript-operator
 tags:
   - Assignment operator
   - JavaScript

@@ -1,7 +1,6 @@
 ---
 title: AsyncGeneratorFunction() constructor
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction/AsyncGeneratorFunction
-page-type: javascript-constructor
 tags:
   - Constructor
   - ECMAScript 2018

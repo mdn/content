@@ -1,7 +1,6 @@
 ---
 title: Classes
 slug: Web/JavaScript/Reference/Classes
-page-type: guide
 tags:
   - Classes
   - Constructors
@@ -144,7 +143,7 @@ class Polygon {
   }
 }
 
-const pentagon = new Polygon(1, 2, 3, 4, 5);
+const pentagon = new Polygon(1,2,3,4,5);
 
 console.log([...pentagon.getSides()]); // [1,2,3,4,5]
 ```
@@ -174,11 +173,11 @@ class Point {
 const p1 = new Point(5, 5);
 const p2 = new Point(10, 10);
 p1.displayName; // undefined
-p1.distance; // undefined
+p1.distance;    // undefined
 p2.displayName; // undefined
-p2.distance; // undefined
+p2.distance;    // undefined
 
-console.log(Point.displayName); // "Point"
+console.log(Point.displayName);      // "Point"
 console.log(Point.distance(p1, p2)); // 7.0710678118654755
 ```
 
@@ -202,7 +201,7 @@ obj.speak(); // the Animal object
 const speak = obj.speak;
 speak(); // undefined
 
-Animal.eat(); // class Animal
+Animal.eat() // class Animal
 const eat = Animal.eat;
 eat(); // undefined
 ```
@@ -211,15 +210,15 @@ If we rewrite the above using traditional function-based syntax in non–strict 
 In strict mode, autobinding will not happen; the value of `this` remains as passed.
 
 ```js
-function Animal() {}
+function Animal() { }
 
 Animal.prototype.speak = function () {
   return this;
-};
+}
 
 Animal.eat = function () {
   return this;
-};
+}
 
 const obj = new Animal();
 const speak = obj.speak;
@@ -316,7 +315,7 @@ class Dog extends Animal {
   }
 }
 
-const d = new Dog("Mitzie");
+const d = new Dog('Mitzie');
 d.speak(); // Mitzie barks.
 ```
 
@@ -331,7 +330,7 @@ function Animal(name) {
 
 Animal.prototype.speak = function () {
   console.log(`${this.name} makes a noise.`);
-};
+}
 
 class Dog extends Animal {
   speak() {
@@ -339,7 +338,7 @@ class Dog extends Animal {
   }
 }
 
-const d = new Dog("Mitzie");
+const d = new Dog('Mitzie');
 d.speak(); // Mitzie barks.
 
 // For similar methods, the child's method takes precedence over parent's method
@@ -352,7 +351,7 @@ If you want to inherit from a regular object, you can instead use {{jsxref("Obje
 const Animal = {
   speak() {
     console.log(`${this.name} makes a noise.`);
-  },
+  }
 };
 
 class Dog {
@@ -364,7 +363,7 @@ class Dog {
 // If you do not do this you will get a TypeError when you invoke speak
 Object.setPrototypeOf(Dog.prototype, Animal);
 
-const d = new Dog("Mitzie");
+const d = new Dog('Mitzie');
 d.speak(); // Mitzie makes a noise.
 ```
 
@@ -379,16 +378,14 @@ The {{jsxref("Symbol.species")}} symbol lets you do this:
 ```js
 class MyArray extends Array {
   // Overwrite species to the parent Array constructor
-  static get [Symbol.species]() {
-    return Array;
-  }
+  static get [Symbol.species]() { return Array; }
 }
 
 const a = new MyArray(1, 2, 3);
 const mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array); // true
+console.log(mapped instanceof Array);   // true
 ```
 
 ## Super class calls with `super`
@@ -414,7 +411,7 @@ class Lion extends Cat {
   }
 }
 
-const l = new Lion("Fuzzy");
+const l = new Lion('Fuzzy');
 l.speak();
 // Fuzzy makes a noise.
 // Fuzzy roars.
@@ -429,22 +426,20 @@ The functionality must be provided by the superclass.
 A function with a superclass as input and a subclass extending that superclass as output can be used to implement mix-ins in ECMAScript:
 
 ```js
-const calculatorMixin = (Base) =>
-  class extends Base {
-    calc() {}
-  };
+const calculatorMixin = (Base) => class extends Base {
+  calc() { }
+};
 
-const randomizerMixin = (Base) =>
-  class extends Base {
-    randomize() {}
-  };
+const randomizerMixin = (Base) => class extends Base {
+  randomize() { }
+};
 ```
 
 A class that uses these mix-ins can then be written like this:
 
 ```js
-class Foo {}
-class Bar extends calculatorMixin(randomizerMixin(Foo)) {}
+class Foo { }
+class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
 ```
 
 ## Re-running a class definition

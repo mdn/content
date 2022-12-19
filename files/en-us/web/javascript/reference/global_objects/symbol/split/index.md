@@ -1,7 +1,6 @@
 ---
 title: Symbol.split
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
-page-type: javascript-static-data-property
 tags:
   - ECMAScript 2015
   - JavaScript

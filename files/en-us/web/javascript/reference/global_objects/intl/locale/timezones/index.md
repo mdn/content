@@ -1,7 +1,6 @@
 ---
 title: Intl.Locale.prototype.timeZones
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/timeZones
-page-type: javascript-instance-accessor-property
 tags:
   - Internationalization
   - Intl

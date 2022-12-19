@@ -1,7 +1,6 @@
 ---
-title: "SyntaxError: test for equality (==) mistyped as assignment (=)?"
+title: 'SyntaxError: test for equality (==) mistyped as assignment (=)?'
 slug: Web/JavaScript/Reference/Errors/Equal_as_assign
-page-type: javascript-error
 tags:
   - Error
   - Errors
@@ -42,7 +41,7 @@ because the assignment can be confused with equality when glancing over the code
 example, do not use the following code:
 
 ```js example-bad
-if ((x = y)) {
+if (x = y) {
   // do the right thing
 }
 ```

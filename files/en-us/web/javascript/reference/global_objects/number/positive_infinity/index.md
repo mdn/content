@@ -1,7 +1,6 @@
 ---
 title: Number.POSITIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
-page-type: javascript-static-data-property
 tags:
   - JavaScript
   - Number

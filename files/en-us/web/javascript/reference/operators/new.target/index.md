@@ -1,7 +1,6 @@
 ---
 title: new.target
 slug: Web/JavaScript/Reference/Operators/new.target
-page-type: javascript-language-feature
 tags:
   - Classes
   - ECMAScript 2015

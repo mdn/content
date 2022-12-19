@@ -1,7 +1,6 @@
 ---
 title: Map.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
-page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - Iterator

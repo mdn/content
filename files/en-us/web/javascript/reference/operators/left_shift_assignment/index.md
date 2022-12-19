@@ -1,7 +1,6 @@
 ---
 title: Left shift assignment (<<=)
 slug: Web/JavaScript/Reference/Operators/Left_shift_assignment
-page-type: javascript-operator
 tags:
   - Assignment operator
   - JavaScript

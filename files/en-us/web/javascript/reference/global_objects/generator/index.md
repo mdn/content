@@ -1,7 +1,6 @@
 ---
 title: Generator
 slug: Web/JavaScript/Reference/Global_Objects/Generator
-page-type: javascript-class
 tags:
   - Class
   - ECMAScript 2015

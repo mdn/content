@@ -1,7 +1,6 @@
 ---
 title: String.prototype.link()
 slug: Web/JavaScript/Reference/Global_Objects/String/link
-page-type: javascript-instance-method
 tags:
   - Deprecated
   - HTML wrapper methods

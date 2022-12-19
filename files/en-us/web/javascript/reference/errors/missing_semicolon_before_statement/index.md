@@ -1,7 +1,6 @@
 ---
-title: "SyntaxError: missing ; before statement"
+title: 'SyntaxError: missing ; before statement'
 slug: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
-page-type: javascript-error
 tags:
   - Error
   - Errors
@@ -56,7 +55,7 @@ You can use double quotes, or escape the apostrophe:
 ```js example-good
 const foo = "Tom's bar";
 // OR
-const foo = "Tom's bar";
+const foo = 'Tom\'s bar';
 ```
 
 ### Declaring properties with var
@@ -76,10 +75,10 @@ Instead, omit the `var` keyword:
 
 ```js example-good
 const obj = {};
-obj.foo = "hi";
+obj.foo = 'hi';
 
 const array = [];
-array[0] = "there";
+array[0] = 'there';
 ```
 
 ### Bad keywords

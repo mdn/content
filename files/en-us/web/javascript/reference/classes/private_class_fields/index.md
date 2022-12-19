@@ -1,7 +1,6 @@
 ---
 title: Private class features
 slug: Web/JavaScript/Reference/Classes/Private_class_fields
-page-type: javascript-language-feature
 tags:
   - Classes
   - Private

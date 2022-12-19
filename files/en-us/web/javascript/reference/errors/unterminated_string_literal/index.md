@@ -1,7 +1,6 @@
 ---
-title: "SyntaxError: unterminated string literal"
+title: 'SyntaxError: unterminated string literal'
 slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
-page-type: javascript-error
 tags:
   - Error
   - Errors
@@ -58,10 +57,9 @@ a backslash, or [template literals](/en-US/docs/Web/JavaScript/Reference/Templat
 The `+` operator variant looks like this:
 
 ```js example-good
-const longString =
-  "This is a very long string which needs " +
-  "to wrap across multiple lines because " +
-  "otherwise my code is unreadable.";
+const longString = 'This is a very long string which needs ' +
+                   'to wrap across multiple lines because ' +
+                   'otherwise my code is unreadable.';
 ```
 
 Or you can use the backslash character ("\\") at the end of each line to indicate that
@@ -70,10 +68,9 @@ character after the backslash (except for a line break), or as an indent; otherw
 will not work. That form looks like this:
 
 ```js example-good
-const longString =
-  "This is a very long string which needs \
+const longString = 'This is a very long string which needs \
 to wrap across multiple lines because \
-otherwise my code is unreadable.";
+otherwise my code is unreadable.';
 ```
 
 Another possibility is to use [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals).

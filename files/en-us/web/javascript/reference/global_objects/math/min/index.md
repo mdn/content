@@ -1,7 +1,6 @@
 ---
 title: Math.min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
-page-type: javascript-static-method
 tags:
   - JavaScript
   - Lowest Number

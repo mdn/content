@@ -1,7 +1,6 @@
 ---
 title: Infinity
 slug: Web/JavaScript/Reference/Global_Objects/Infinity
-page-type: javascript-global-property
 tags:
   - JavaScript
   - Property

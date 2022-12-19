@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength
-page-type: javascript-instance-accessor-property
 tags:
   - JavaScript
   - Property

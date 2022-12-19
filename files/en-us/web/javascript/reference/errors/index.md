@@ -1,7 +1,6 @@
 ---
 title: JavaScript error reference
 slug: Web/JavaScript/Reference/Errors
-page-type: javascript-error
 tags:
   - Debugging
   - Errors

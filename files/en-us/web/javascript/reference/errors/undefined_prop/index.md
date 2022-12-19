@@ -1,7 +1,6 @@
 ---
 title: 'ReferenceError: reference to undefined property "x"'
 slug: Web/JavaScript/Reference/Errors/Undefined_prop
-page-type: javascript-error
 tags:
   - Error
   - Errors
@@ -55,12 +54,12 @@ const foo = {};
 
 // Define the bar property
 
-foo.bar = "moon";
+foo.bar = 'moon';
 console.log(foo.bar); // "moon"
 
 // Test to be sure bar exists before accessing it
 
-if (Object.hasOwn(foo, "bar")) {
+if (Object.hasOwn(foo, 'bar')) {
   console.log(foo.bar);
 }
 ```

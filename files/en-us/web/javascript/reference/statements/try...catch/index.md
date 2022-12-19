@@ -1,7 +1,6 @@
 ---
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
-page-type: javascript-statement
 tags:
   - Exception
   - JavaScript

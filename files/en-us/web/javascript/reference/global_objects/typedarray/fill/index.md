@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
-page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript

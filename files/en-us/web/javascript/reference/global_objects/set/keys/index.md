@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Set/keys
-page-type: javascript-instance-method
 tags:
   - Reference
   - ECMAScript 2015

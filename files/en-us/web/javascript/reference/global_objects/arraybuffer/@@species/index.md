@@ -1,7 +1,6 @@
 ---
 title: get ArrayBuffer[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
-page-type: javascript-static-accessor-property
 tags:
   - ArrayBuffer
   - JavaScript
@@ -19,7 +18,7 @@ The **`ArrayBuffer[@@species]`** accessor property returns the constructor used 
 ## Syntax
 
 ```js
-ArrayBuffer[Symbol.species];
+ArrayBuffer[Symbol.species]
 ```
 
 ### Return value

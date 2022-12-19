@@ -117,7 +117,7 @@ The key here is that text can be converted to other forms that people with disab
             >Backgrounds</a
           >). If you have to include an image via an
           {{htmlelement("img")}} element, give it a blank alt
-          (<code>alt=""</code>). Otherwise, screen readers may try to read out
+          (`alt=""`). Otherwise, screen readers may try to read out
           the filepath, etc.
         </p>
         <p>

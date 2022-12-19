@@ -1,7 +1,6 @@
 ---
 title: void operator
 slug: Web/JavaScript/Reference/Operators/void
-page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
@@ -88,7 +87,9 @@ value is {{jsxref("undefined")}}. The `void` operator can be used to return
 `undefined`. For example:
 
 ```html
-<a href="javascript:void(0);"> Click here to do nothing </a>
+<a href="javascript:void(0);">
+  Click here to do nothing
+</a>
 
 <a href="javascript:void(document.body.style.backgroundColor='green');">
   Click here for green background

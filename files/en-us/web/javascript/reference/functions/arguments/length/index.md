@@ -1,7 +1,6 @@
 ---
 title: arguments.length
 slug: Web/JavaScript/Reference/Functions/arguments/length
-page-type: javascript-instance-data-property
 tags:
   - Functions
   - JavaScript

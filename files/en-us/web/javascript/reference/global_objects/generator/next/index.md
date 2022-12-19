@@ -1,7 +1,6 @@
 ---
 title: Generator.prototype.next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
-page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - Generator
@@ -62,10 +61,10 @@ function* gen() {
 }
 
 const g = gen(); // "Generator { }"
-g.next(); // "Object { value: 1, done: false }"
-g.next(); // "Object { value: 2, done: false }"
-g.next(); // "Object { value: 3, done: false }"
-g.next(); // "Object { value: undefined, done: true }"
+g.next();      // "Object { value: 1, done: false }"
+g.next();      // "Object { value: 2, done: false }"
+g.next();      // "Object { value: 3, done: false }"
+g.next();      // "Object { value: undefined, done: true }"
 ```
 
 ### Using next() with a list
@@ -79,13 +78,13 @@ function* getPage(list, pageSize = 1) {
   }
 }
 
-const list = [1, 2, 3, 4, 5, 6, 7, 8];
-const page = getPage(list, 3); // Generator { }
+const list = [1, 2, 3, 4, 5, 6, 7, 8]
+const page = getPage(list, 3);            // Generator { }
 
-page.next(); // { value: [1, 2, 3], done: false }
-page.next(); // { value: [4, 5, 6], done: false }
-page.next(); // { value: [7, 8], done: false }
-page.next(); // { value: undefined, done: true }
+page.next();                              // { value: [1, 2, 3], done: false }
+page.next();                              // { value: [4, 5, 6], done: false }
+page.next();                              // { value: [7, 8], done: false }
+page.next();                              // { value: undefined, done: true }
 ```
 
 ### Sending values to the generator

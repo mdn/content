@@ -1,7 +1,6 @@
 ---
 title: Math.imul()
 slug: Web/JavaScript/Reference/Global_Objects/Math/imul
-page-type: javascript-static-method
 tags:
   - JavaScript
   - Math

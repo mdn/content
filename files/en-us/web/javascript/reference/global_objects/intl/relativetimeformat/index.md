@@ -1,7 +1,6 @@
 ---
 title: Intl.RelativeTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
-page-type: javascript-class
 tags:
   - Class
   - Internationalization

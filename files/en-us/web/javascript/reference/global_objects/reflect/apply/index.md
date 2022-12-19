@@ -1,7 +1,6 @@
 ---
 title: Reflect.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
-page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript

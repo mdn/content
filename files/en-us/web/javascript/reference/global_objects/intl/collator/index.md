@@ -1,7 +1,6 @@
 ---
 title: Intl.Collator
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator
-page-type: javascript-class
 tags:
   - Class
   - Collator

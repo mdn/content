@@ -1,7 +1,6 @@
 ---
 title: Arrow function expressions
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
-page-type: javascript-language-feature
 tags:
   - ECMAScript 2015
   - Functions
@@ -79,7 +78,7 @@ Let's decompose a traditional anonymous function down to the simplest arrow func
 (a) => a + 100;
 
 // 3. Remove the parameter parentheses
-(a) => a + 100;
+a => a + 100;
 ```
 
 In the example above, both the parentheses around the parameter and the braces around the function body may be omitted. However, they can only be omitted in certain cases.
@@ -99,7 +98,7 @@ const a = 4;
 const b = 2;
 
 // Traditional anonymous function (no parameters)
-(function () {
+(function() {
   return a + b + 100;
 });
 
@@ -194,13 +193,13 @@ obj.c(); // logs 10, Object { /* … */ }
 Another example involving {{jsxref("Object.defineProperty()")}}:
 
 ```js
-"use strict";
+'use strict';
 
 const obj = {
   a: 10,
 };
 
-Object.defineProperty(obj, "b", {
+Object.defineProperty(obj, 'b', {
   get: () => {
     console.log(this.a, typeof this.a, this); // undefined 'undefined' Window { /* … */ } (or the global object)
     return this.a + 10; // represents global object 'Window', therefore 'this.a' returns 'undefined'
@@ -215,7 +214,7 @@ class C {
   a = 1;
   autoBoundMethod = () => {
     console.log(this.a);
-  };
+  }
 }
 
 const c = new C();
@@ -302,15 +301,22 @@ const func = (a, b, c)
 For the purpose of formatting, you may put the line break after the arrow or use parentheses/braces around the function body, as shown below. You can also put line breaks between parameters.
 
 ```js
-const func = (a, b, c) => 1;
+const func = (a, b, c) =>
+  1;
 
-const func2 = (a, b, c) => 1;
+const func2 = (a, b, c) => (
+  1
+);
 
 const func3 = (a, b, c) => {
   return 1;
 };
 
-const func4 = (a, b, c) => 1;
+const func4 = (
+  a,
+  b,
+  c,
+) => 1;
 ```
 
 ### Precedence of arrow
@@ -338,15 +344,15 @@ callback = callback || (() => {});
 // An empty arrow function returns undefined
 const empty = () => {};
 
-(() => "foobar")();
+(() => 'foobar')();
 // Returns "foobar"
 // (this is an Immediately Invoked Function Expression)
 
-const simple = (a) => (a > 15 ? 15 : a);
+const simple = (a) => a > 15 ? 15 : a;
 simple(16); // 15
 simple(10); // 10
 
-const max = (a, b) => (a > b ? a : b);
+const max = (a, b) => a > b ? a : b;
 
 // Easy array filtering, mapping, etc.
 const arr = [5, 6, 13, 0, 1, 18, 23];
@@ -363,7 +369,7 @@ const double = arr.map((v) => v * 2);
 // More concise promise chains
 promise
   .then((a) => {
-    // …
+  // …
   })
   .then((b) => {
     // …
@@ -429,8 +435,7 @@ With traditional function expressions, code like this does not work as expected:
 const obj = {
   count: 10,
   doSomethingLater() {
-    setTimeout(function () {
-      // the function executes on the window scope
+    setTimeout(function () { // the function executes on the window scope
       this.count++;
       console.log(this.count);
     }, 300);

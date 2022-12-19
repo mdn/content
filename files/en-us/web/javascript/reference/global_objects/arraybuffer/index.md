@@ -1,7 +1,6 @@
 ---
 title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-page-type: javascript-class
 tags:
   - ArrayBuffer
   - Class

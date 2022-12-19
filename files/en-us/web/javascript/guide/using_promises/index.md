@@ -1,7 +1,6 @@
 ---
 title: Using promises
 slug: Web/JavaScript/Guide/Using_promises
-page-type: guide
 tags:
   - Guide
   - Intermediate
@@ -46,19 +45,11 @@ A common need is to execute two or more asynchronous operations back to back, wh
 
 ```js
 doSomething(function (result) {
-  doSomethingElse(
-    result,
-    function (newResult) {
-      doThirdThing(
-        newResult,
-        function (finalResult) {
-          console.log(`Got the final result: ${finalResult}`);
-        },
-        failureCallback
-      );
-    },
-    failureCallback
-  );
+  doSomethingElse(result, function (newResult) {
+    doThirdThing(newResult, function (finalResult) {
+      console.log(`Got the final result: ${finalResult}`);
+    }, failureCallback);
+  }, failureCallback);
 }, failureCallback);
 ```
 
@@ -148,7 +139,7 @@ doSomething()
       .then((res) => res.json())
       .then((data) => {
         listOfIngredients.push(data);
-      })
+      }),
   )
   .then(() => {
     console.log(listOfIngredients);
@@ -178,7 +169,7 @@ doSomethingCritical()
   .then((result) =>
     doSomethingOptional(result)
       .then((optionalResult) => doSomethingExtraNice(optionalResult))
-      .catch((e) => {})
+      .catch((e) => {}),
   ) // Ignore if optional stuff fails; proceed.
   .then(() => moreCriticalStuff())
   .catch((e) => console.error(`Critical failure: ${e.message}`));

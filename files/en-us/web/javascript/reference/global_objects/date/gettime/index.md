@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
-page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript

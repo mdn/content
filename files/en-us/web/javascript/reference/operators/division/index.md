@@ -1,7 +1,6 @@
 ---
 title: Division (/)
 slug: Web/JavaScript/Reference/Operators/Division
-page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature

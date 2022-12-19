@@ -1,7 +1,6 @@
 ---
 title: String.prototype.fontcolor()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
-page-type: javascript-instance-method
 tags:
   - Deprecated
   - HTML wrapper methods
@@ -52,7 +51,7 @@ console.log(`${worldString.fontcolor("red")} is red in this line`);
 // '<font color="red">Hello, world</font> is red in this line'
 
 console.log(
-  `${worldString.fontcolor("FF00")} is red in hexadecimal in this line`
+  `${worldString.fontcolor("FF00")} is red in hexadecimal in this line`,
 );
 // '<font color="FF00">Hello, world</font> is red in hexadecimal in this line'
 ```

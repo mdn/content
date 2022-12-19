@@ -1,7 +1,6 @@
 ---
 title: RangeError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/RangeError/RangeError
-page-type: javascript-constructor
 tags:
   - Constructor
   - JavaScript

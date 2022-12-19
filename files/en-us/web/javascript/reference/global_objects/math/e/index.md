@@ -1,7 +1,6 @@
 ---
 title: Math.E
 slug: Web/JavaScript/Reference/Global_Objects/Math/E
-page-type: javascript-static-data-property
 tags:
   - JavaScript
   - Math

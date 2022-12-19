@@ -1,7 +1,6 @@
 ---
 title: RegExp.prototype.source
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/source
-page-type: javascript-instance-accessor-property
 tags:
   - JavaScript
   - Property

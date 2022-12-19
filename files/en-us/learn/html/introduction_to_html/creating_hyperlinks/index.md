@@ -87,9 +87,7 @@ The title contains additional information about the link, such as which kind of 
   <a
     href="https://www.mozilla.org/en-US/"
     title="The best place to find more information about Mozilla's
-          mission and how to contribute"
-    >the Mozilla homepage</a
-  >.
+          mission and how to contribute">the Mozilla homepage</a>.
 </p>
 ```
 
@@ -221,16 +219,18 @@ Let's look at a specific example:
 **Good** link text: [Download Firefox](https://www.mozilla.org/en-US/firefox/new/?redirect_source=firefox-com)
 
 ```html example-good
-<p><a href="https://www.mozilla.org/firefox/"> Download Firefox </a></p>
+<p><a href="https://www.mozilla.org/firefox/">
+  Download Firefox
+</a></p>
 ```
 
 **Bad** link text: [Click here](https://www.mozilla.org/firefox/) to download Firefox
 
 ```html example-bad
-<p>
-  <a href="https://www.mozilla.org/firefox/"> Click here </a> to download
-  Firefox
-</p>
+<p><a href="https://www.mozilla.org/firefox/">
+  Click here
+</a>
+to download Firefox</p>
 ```
 
 Other tips:
@@ -244,11 +244,12 @@ Other tips:
 
 ### Linking to non-HTML resources — leave clear signposts
 
-When linking to a resource that will be downloaded (like a PDF or Word document), streamed (like video or audio), or has another potentially unexpected effect (opens a popup window), you should add clear wording to reduce any confusion.
+When linking to a resource that will be downloaded (like a PDF or Word document), streamed (like video or audio), or has another potentially unexpected effect (opens a popup window, or loads a Flash movie), you should add clear wording to reduce any confusion.
 
 For example:
 
 - If you're on a low bandwidth connection, click a link, and then a multiple megabyte download starts unexpectedly.
+- If you don't have the Flash player installed, click a link, and then suddenly get taken to a page that requires Flash.
 
 Let's look at some examples, to see what kind of text can be used here:
 
@@ -262,6 +263,12 @@ Let's look at some examples, to see what kind of text can be used here:
 <p>
   <a href="https://www.example.com/video-stream/" target="_blank">
     Watch the video (stream opens in separate tab, HD quality)
+  </a>
+</p>
+
+<p>
+  <a href="https://www.example.com/car-game">
+    Play the car game (requires Flash)
   </a>
 </p>
 ```

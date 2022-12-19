@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getYear
-page-type: javascript-instance-method
 tags:
   - Date
   - Deprecated

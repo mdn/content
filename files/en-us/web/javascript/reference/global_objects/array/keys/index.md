@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
-page-type: javascript-instance-method
 tags:
   - Array
   - ECMAScript 2015

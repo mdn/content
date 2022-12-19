@@ -51,12 +51,7 @@ When applying the same styles to elements matching different criteria, grouping 
 This example shows grouping selectors in a single line using a comma-separated list.
 
 ```css
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: helvetica;
 }
 ```
@@ -76,7 +71,7 @@ h1 + p {
 
 ## Valid and invalid selector lists
 
-An invalid selector represents, and therefore matches, nothing. When a selector list contains an invalid selector, the entire style block is ignored, except for the {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes that accept [forgiving selector lists](#forgiving-selector-list).
+An invalid selector represents, and therefore matches, nothing. When a selector list contains an invalid selector, the entire style block is ignored, except for functional pseudo-classes that accept forgiving selector lists.
 
 ### Invalid selector list
 
@@ -97,9 +92,7 @@ h3 {
 ```
 
 ```css
-h1,
-h2:invalid-pseudo,
-h3 {
+h1, h2:invalid-pseudo, h3 {
   font-family: sans-serif;
 }
 ```
@@ -132,9 +125,9 @@ h3 {
 
 The difference between the two is that the specificity of `:is()` is its most specific argument, whereas the `:where()` selector and the forgiving selector list parameter do not add any specificity weight.
 
-### Relative selector list
+### Forgiving relative selector list
 
-A relative selector list is a comma-separated selector list parsed as [relative selectors](/en-US/docs/Web/CSS/CSS_Selectors#relative_selector), which begin with an explicit or implied combinator.
+A forgiving relative selector list is similar to the [forgiving selector list](#forgiving_selector_list); it just parses the list components as [relative selectors](/en-US/docs/Web/CSS/CSS_Selectors#relative_selector), which begin with an explicit or implied combinator.
 
 ```css
 h2:has(+ p, > ul::after, + ul.red) {
@@ -142,7 +135,7 @@ h2:has(+ p, > ul::after, + ul.red) {
 }
 ```
 
-In the above, an `h2` that is immediately followed by a `<p>` or a `<ul class="red">`, will be italic. Pseudo-elements and the `:has()` selector are not valid within a [`:has()`](/en-US/docs/Web/CSS/:has) relative selector list parameter.
+In the above, an `h2` that is immediately followed by a `<p>` or a `<ul class="red">`, will be italic. While pseudo-elements are not valid in the [`:has()`](/en-US/docs/Web/CSS/:has) forgiving relative selector list parameter, because the list is forgiving, it doesn't "break" the selector.
 
 ## Specifications
 
@@ -154,7 +147,5 @@ In the above, an `h2` that is immediately followed by a `<p>` or a `<ul class="r
 
 ## See also
 
-- The [`:is()`](/en-US/docs/Web/CSS/:is) and [`:where()`](/en-US/docs/Web/CSS/:where) pseudo-classes accept forgiving selector lists.
-- The [`:not()`](/en-US/docs/Web/CSS/:not) pseudo-class accepts a regular selector list
-- The [`:has()`](/en-US/docs/Web/CSS/:has) pseudo-class accepts a relative selector list.
+- The [`:is()`](/en-US/docs/Web/CSS/:is), [`:where()`](/en-US/docs/Web/CSS/:where), [`:not()`](/en-US/docs/Web/CSS/:not), and [`:has()`](/en-US/docs/Web/CSS/:has) pseudo-classes accept forgiving selector lists.
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors)

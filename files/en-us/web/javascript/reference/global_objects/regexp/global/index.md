@@ -1,7 +1,6 @@
 ---
 title: RegExp.prototype.global
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
-page-type: javascript-instance-accessor-property
 tags:
   - JavaScript
   - Property
@@ -39,8 +38,8 @@ const str1 = str.replace(regex, "");
 console.log(str1); // example
 
 const regex1 = /foo/;
-const str2 = str.replace(regex1, "");
-console.log(str2); // examplefoo
+const str2 = str.replace(regex1, '');
+console.log(str2);  // examplefoo
 ```
 
 ## Specifications

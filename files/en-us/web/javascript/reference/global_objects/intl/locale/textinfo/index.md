@@ -1,7 +1,6 @@
 ---
 title: Intl.Locale.prototype.textInfo
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/textInfo
-page-type: javascript-instance-accessor-property
 tags:
   - Internationalization
   - Intl

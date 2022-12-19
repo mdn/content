@@ -1,7 +1,6 @@
 ---
 title: RangeError
 slug: Web/JavaScript/Reference/Global_Objects/RangeError
-page-type: javascript-class
 tags:
   - Class
   - JavaScript

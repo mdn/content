@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.group()
 slug: Web/JavaScript/Reference/Global_Objects/Array/group
-page-type: javascript-instance-method
 tags:
   - Array
   - JavaScript

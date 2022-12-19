@@ -101,11 +101,6 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("Credential")}} instance 
 matches the provided parameters. If a single Credential cannot be unambiguously
 obtained, the Promise will resolve to null.
 
-### Exceptions
-
-- `SecurityError` {{domxref("DOMException")}}
-  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
-
 ## Specifications
 
 {{Specifications}}
@@ -116,5 +111,5 @@ obtained, the Promise will resolve to null.
 
 ## See also
 
-- {{HTTPHeader("Permissions-Policy")}} directive
-  {{HTTPHeader("Permissions-Policy/publickey-credentials-get","publickey-credentials-get")}}
+- {{HTTPHeader("Feature-Policy")}} directive
+  {{HTTPHeader("Feature-Policy/publickey-credentials-get","publickey-credentials-get")}}

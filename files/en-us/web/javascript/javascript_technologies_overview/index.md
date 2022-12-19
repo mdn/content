@@ -1,7 +1,6 @@
 ---
 title: JavaScript technologies overview
 slug: Web/JavaScript/JavaScript_technologies_overview
-page-type: guide
 tags:
   - Beginner
   - DOM

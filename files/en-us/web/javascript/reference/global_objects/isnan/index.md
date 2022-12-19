@@ -1,7 +1,6 @@
 ---
 title: isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/isNaN
-page-type: javascript-function
 tags:
   - JavaScript
   - Method

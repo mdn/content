@@ -1,7 +1,6 @@
 ---
 title: Error.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toString
-page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method
@@ -66,7 +65,7 @@ e2.name = undefined;
 console.log(e2.toString()); // "Error: fatal error"
 
 const e3 = new Error("fatal error");
-e3.name = "";
+e3.name = '';
 console.log(e3.toString()); // "fatal error"
 
 const e4 = new Error("fatal error");

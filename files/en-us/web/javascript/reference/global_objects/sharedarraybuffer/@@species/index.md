@@ -1,7 +1,6 @@
 ---
 title: get SharedArrayBuffer[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/@@species
-page-type: javascript-static-accessor-property
 tags:
   - SharedArrayBuffer
   - JavaScript

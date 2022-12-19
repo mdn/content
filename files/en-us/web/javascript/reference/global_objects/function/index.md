@@ -1,7 +1,6 @@
 ---
 title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
-page-type: javascript-class
 tags:
   - Class
   - Function

@@ -1,7 +1,6 @@
 ---
-title: "SyntaxError: invalid assignment left-hand side"
+title: 'SyntaxError: invalid assignment left-hand side'
 slug: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
-page-type: javascript-error
 tags:
   - Error
   - Errors
@@ -55,10 +54,12 @@ the string concatenation, the plus (`+`) operator is needed.
 
 ```js example-good
 if (Math.PI + 1 === 3 || Math.PI + 1 === 4) {
-  console.log("no way!");
+  console.log('no way!');
 }
 
-const str = "Hello, " + "from the " + "other side!";
+const str = 'Hello, '
++ 'from the '
++ 'other side!';
 ```
 
 ## See also

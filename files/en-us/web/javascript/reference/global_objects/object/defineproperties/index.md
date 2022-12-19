@@ -1,7 +1,6 @@
 ---
 title: Object.defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
-page-type: javascript-static-method
 tags:
   - ECMAScript 5
   - JavaScript
@@ -86,14 +85,14 @@ The object that was passed to the function.
 ```js
 const obj = {};
 Object.defineProperties(obj, {
-  property1: {
+  'property1': {
     value: true,
-    writable: true,
+    writable: true
   },
-  property2: {
-    value: "Hello",
-    writable: false,
-  },
+  'property2': {
+    value: 'Hello',
+    writable: false
+  }
   // etc. etc.
 });
 ```

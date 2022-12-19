@@ -1,7 +1,6 @@
 ---
 title: String.raw()
 slug: Web/JavaScript/Reference/Global_Objects/String/raw
-page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript

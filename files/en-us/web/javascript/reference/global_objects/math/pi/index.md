@@ -1,7 +1,6 @@
 ---
 title: Math.PI
 slug: Web/JavaScript/Reference/Global_Objects/Math/PI
-page-type: javascript-static-data-property
 tags:
   - JavaScript
   - Math

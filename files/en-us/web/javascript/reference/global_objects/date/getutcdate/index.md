@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
-page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript

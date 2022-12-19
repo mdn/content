@@ -1,7 +1,6 @@
 ---
 title: return
 slug: Web/JavaScript/Reference/Statements/return
-page-type: javascript-statement
 tags:
   - JavaScript
   - Language feature
@@ -60,7 +59,7 @@ The `return` statement is affected by
 No line terminator is allowed between the `return` keyword and the expression.
 
 ```js example-bad
-return;
+return
 a + b;
 ```
 
@@ -79,7 +78,9 @@ The console will warn "unreachable code after return statement".
 To avoid this problem (to prevent ASI), you could use parentheses:
 
 ```js
-return a + b;
+return (
+  a + b
+);
 ```
 
 ## Examples
@@ -90,15 +91,14 @@ A function immediately stops at the point where `return` is called.
 
 ```js
 function counter() {
-  for (let count = 1; ; count++) {
-    // infinite loop
+  for (let count = 1; ; count++) {  // infinite loop
     console.log(`${count}A`); // until 5
     if (count === 5) {
       return;
     }
-    console.log(`${count}B`); // until 4
+    console.log(`${count}B`);  // until 4
   }
-  console.log(`${count}C`); // never appears
+  console.log(`${count}C`);  // never appears
 }
 
 counter();
@@ -121,9 +121,7 @@ See also the article about [Closures](/en-US/docs/Web/JavaScript/Closures).
 
 ```js
 function magic() {
-  return function calc(x) {
-    return x * 42;
-  };
+  return function calc(x) { return x * 42; };
 }
 
 const answer = magic();

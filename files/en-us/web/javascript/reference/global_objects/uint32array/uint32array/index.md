@@ -1,7 +1,6 @@
 ---
 title: Uint32Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Uint32Array/Uint32Array
-page-type: javascript-constructor
 tags:
   - Constructor
   - JavaScript

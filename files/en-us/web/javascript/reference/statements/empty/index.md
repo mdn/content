@@ -1,7 +1,6 @@
 ---
 title: empty
 slug: Web/JavaScript/Reference/Statements/Empty
-page-type: javascript-statement
 tags:
   - JavaScript
   - Language feature

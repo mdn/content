@@ -1,7 +1,6 @@
 ---
 title: label
 slug: Web/JavaScript/Reference/Statements/label
-page-type: javascript-statement
 tags:
   - JavaScript
   - Language feature
@@ -50,10 +49,10 @@ can't use `let` as a label name. It will throw a {{jsxref("SyntaxError")}}
 ```js
 let i, j;
 
-loop1: for (i = 0; i < 3; i++) {
-  //The first for statement is labeled "loop1"
-  loop2: for (j = 0; j < 3; j++) {
-    //The second for statement is labeled "loop2"
+loop1:
+for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
+  loop2:
+  for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
     if (i === 1 && j === 1) {
       continue loop1;
     }
@@ -82,7 +81,8 @@ that passes all the tests.
 let itemsPassed = 0;
 let i, j;
 
-top: for (i = 0; i < items.length; i++) {
+top:
+for (i = 0; i < items.length; i++) {
   for (j = 0; j < tests.length; j++) {
     if (!tests[j].pass(items[i])) {
       continue top;
@@ -98,10 +98,10 @@ top: for (i = 0; i < items.length; i++) {
 ```js
 let i, j;
 
-loop1: for (i = 0; i < 3; i++) {
-  //The first for statement is labeled "loop1"
-  loop2: for (j = 0; j < 3; j++) {
-    //The second for statement is labeled "loop2"
+loop1:
+for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
+  loop2:
+  for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
     if (i === 1 && j === 1) {
       break loop1;
     }
@@ -127,7 +127,8 @@ items pass all tests.
 let allPass = true;
 let i, j;
 
-top: for (i = 0; i < items.length; i++) {
+top:
+for (i = 0; i < items.length; i++) {
   for (j = 0; j < tests.length; j++) {
     if (!tests[j].pass(items[i])) {
       allPass = false;
@@ -144,11 +145,11 @@ make use of non-loop labels.
 
 ```js
 foo: {
-  console.log("face");
+  console.log('face');
   break foo;
-  console.log("this will not be executed");
+  console.log('this will not be executed');
 }
-console.log("swap");
+console.log('swap');
 
 // this will log:
 
@@ -168,7 +169,7 @@ In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) code,
 however, this will throw a {{jsxref("SyntaxError")}}:
 
 ```js example-bad
-"use strict";
+'use strict';
 L: function F() {}
 // SyntaxError: functions cannot be labelled
 ```

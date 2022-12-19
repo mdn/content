@@ -1,7 +1,6 @@
 ---
 title: String.prototype.big()
 slug: Web/JavaScript/Reference/Global_Objects/String/big
-page-type: javascript-instance-method
 tags:
   - Deprecated
   - HTML wrapper methods

@@ -1,7 +1,6 @@
 ---
 title: Method definitions
 slug: Web/JavaScript/Reference/Functions/Method_definitions
-page-type: javascript-language-feature
 tags:
   - ECMAScript 2015
   - Functions
@@ -115,7 +114,7 @@ The shorthand syntax also supports [computed property names](/en-US/docs/Web/Jav
 
 ```js
 const bar = {
-  foo0: function () {
+  foo0: function() {
     return 0;
   },
   foo1() {

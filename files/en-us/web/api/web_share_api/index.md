@@ -37,7 +37,7 @@ The {{domxref("navigator.share()")}} method invokes the native sharing mechanism
 It requires {{Glossary("transient activation")}}, and hence must be triggered off a UI event like a button click.
 Further, the method must specify valid data that is supported for sharing by the native implementation.
 
-The Web Share API is gated by the [web-share](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/web-share) Permissions Policy.
+The Web Share API is gated by the [web-share](/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share) permission policy.
 If the policy is supported but has not been granted, both methods will indicate that the data is not sharable.
 
 ## Interfaces
@@ -54,21 +54,21 @@ The code below shows how you can share a link using {{domxref("navigator.share()
 
 ```js
 const shareData = {
-  title: "MDN",
-  text: "Learn web development on MDN!",
-  url: "https://developer.mozilla.org",
-};
+  title: 'MDN',
+  text: 'Learn web development on MDN!',
+  url: 'https://developer.mozilla.org'
+}
 
-const btn = document.querySelector("button");
-const resultPara = document.querySelector(".result");
+const btn = document.querySelector('button');
+const resultPara = document.querySelector('.result');
 
 // Share must be triggered by "user activation"
-btn.addEventListener("click", async () => {
+btn.addEventListener('click', async () => {
   try {
-    await navigator.share(shareData);
-    resultPara.textContent = "MDN shared successfully";
+    await navigator.share(shareData)
+    resultPara.textContent = 'MDN shared successfully'
   } catch (err) {
-    resultPara.textContent = `Error: ${err}`;
+    resultPara.textContent = `Error: ${err}`
   }
 });
 ```

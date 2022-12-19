@@ -1,7 +1,6 @@
 ---
 title: Property accessors
 slug: Web/JavaScript/Reference/Operators/Property_Accessors
-page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature

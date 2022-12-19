@@ -1,7 +1,6 @@
 ---
 title: Math.LN10
 slug: Web/JavaScript/Reference/Global_Objects/Math/LN10
-page-type: javascript-static-data-property
 tags:
   - JavaScript
   - Math

@@ -1,7 +1,6 @@
 ---
 title: Uint8Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array
-page-type: javascript-class
 tags:
   - Class
   - Uint8Array

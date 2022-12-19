@@ -1,7 +1,6 @@
 ---
 title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
-page-type: javascript-static-method
 tags:
   - Array
   - ECMAScript 5

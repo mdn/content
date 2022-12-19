@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
-page-type: javascript-instance-method
 tags:
   - Array
   - Beginner

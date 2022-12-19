@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/at
-page-type: javascript-instance-method
 tags:
   - TypedArray
   - TypedArrays

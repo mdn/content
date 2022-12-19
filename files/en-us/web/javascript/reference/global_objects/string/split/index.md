@@ -1,7 +1,6 @@
 ---
 title: String.prototype.split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
-page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method
@@ -98,7 +97,7 @@ function splitString(stringToSplit, separator) {
     "The array has ",
     arrayOfStrings.length,
     " elements: ",
-    arrayOfStrings.join(" / ")
+    arrayOfStrings.join(" / "),
   );
 }
 

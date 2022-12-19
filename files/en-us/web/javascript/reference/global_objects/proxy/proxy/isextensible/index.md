@@ -1,7 +1,6 @@
 ---
 title: handler.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
-page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript

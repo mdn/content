@@ -2,7 +2,6 @@
 title: Segments.prototype[@@iterator]()
 slug: >-
   Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/@@iterator
-page-type: javascript-instance-method
 tags:
   - Internationalization
   - Intl

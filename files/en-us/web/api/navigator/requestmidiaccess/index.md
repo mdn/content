@@ -44,13 +44,13 @@ A {{jsxref('Promise')}} that resolves with a [`MIDIAccess`](/en-US/docs/Web/API/
 ### Exceptions
 
 - `AbortError` {{domxref("DOMException")}}
-  - : Thrown if the document or page is closed due to user navigation.
+  - : If the document or page is closed due to user navigation.
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the underlying system raises any errors.
+  - : If the underlying system raises any errors.
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if the feature or options are not supported by the system.
+  - : If the feature or options are not supported by the system.
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the user or system denies the application from creating a [MIDIAccess](/en-US/docs/Web/API/MIDIAccess) object with the requested options, or if the document is not allowed to use the feature (for example, because of a [Permission Policy](/en-US/docs/Web/HTTP/Feature_Policy), or because the user previously denied a permission request).
+  - : If the user or system denies the application from creating a [MIDIAccess](/en-US/docs/Web/API/MIDIAccess) object with the requested options, or if the document is not allowed to use the feature (for example, an iframe without the correct [Permission Policy](/en-US/docs/Web/HTTP/Feature_Policy), or when the user has previously denied a permissions access to the feature).
 
 ## Examples
 

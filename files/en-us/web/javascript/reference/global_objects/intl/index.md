@@ -1,7 +1,6 @@
 ---
 title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
-page-type: javascript-namespace
 tags:
   - Internationalization
   - Intl
@@ -111,9 +110,7 @@ const date = new Date("2012-05-24");
 
 function log(locale) {
   console.log(
-    `${new Intl.DateTimeFormat(locale).format(date)} ${new Intl.NumberFormat(
-      locale
-    ).format(count)}`
+    `${new Intl.DateTimeFormat(locale).format(date)} ${new Intl.NumberFormat(locale).format(count)}`
   );
 }
 

@@ -193,16 +193,17 @@ function logURL(requestDetails) {
   console.log(`Loading: ${requestDetails.url}`);
 }
 
-browser.webRequest.onBeforeRequest.addListener(logURL, {
-  urls: ["<all_urls>"],
-});
+browser.webRequest.onBeforeRequest.addListener(
+  logURL,
+  {urls: ["<all_urls>"]}
+);
 ```
 
-This code cancels requests for images that are made to URLs under "https\://developer.mozilla.org/" (to see the effect, visit any page on MDN that contains images, such as [webRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)):
+This code cancels requests for images that are made to URLs under "https\://mdn.mozillademos.org/" (to see the effect, visit any page on MDN that contains images, such as [webRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)):
 
 ```js
 // match pattern for the URLs to redirect
-let pattern = "https://developer.mozilla.org/*";
+let pattern = "https://mdn.mozillademos.org/*";
 
 // cancel function returns an object
 // which contains a property `cancel` set to `true`
@@ -215,16 +216,16 @@ function cancel(requestDetails) {
 // passing the filter argument and "blocking"
 browser.webRequest.onBeforeRequest.addListener(
   cancel,
-  { urls: [pattern], types: ["image"] },
+  {urls: [pattern], types: ["image"]},
   ["blocking"]
 );
 ```
 
-This code replaces, by redirection, all network requests for images that are made to URLs under "https\://developer.mozilla.org/" (to see the effect, visit any page on MDN that contains images, such as [webRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)):
+This code replaces, by redirection, all network requests for images that are made to URLs under "https\://mdn.mozillademos.org/" (to see the effect, visit any page on MDN that contains images, such as [webRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)):
 
 ```js
 // match pattern for the URLs to redirect
-let pattern = "https://developer.mozilla.org/*";
+let pattern = "https://mdn.mozillademos.org/*";
 
 // redirect function
 // returns an object with a property `redirectURL`
@@ -232,8 +233,7 @@ let pattern = "https://developer.mozilla.org/*";
 function redirect(requestDetails) {
   console.log(`Redirecting: ${requestDetails.url}`);
   return {
-    redirectUrl:
-      "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif",
+    redirectUrl: "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif"
   };
 }
 
@@ -241,7 +241,7 @@ function redirect(requestDetails) {
 // passing the filter argument and "blocking"
 browser.webRequest.onBeforeRequest.addListener(
   redirect,
-  { urls: [pattern], types: ["image"] },
+  {urls:[pattern], types:["image"]},
   ["blocking"]
 );
 ```
@@ -250,11 +250,10 @@ This code is exactly like the previous example, except that the listener handles
 
 ```js
 // match pattern for the URLs to redirect
-let pattern = "https://developer.mozilla.org/*";
+let pattern = "https://mdn.mozillademos.org/*";
 
 // URL we will redirect to
-let redirectUrl =
-  "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif";
+let redirectUrl = "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif";
 
 // redirect function returns a Promise
 // which is resolved with the redirect URL when a timer expires
@@ -271,7 +270,7 @@ function redirectAsync(requestDetails) {
 // passing the filter argument and "blocking"
 browser.webRequest.onBeforeRequest.addListener(
   redirectAsync,
-  { urls: [pattern], types: ["image"] },
+  {urls: [pattern], types: ["image"]},
   ["blocking"]
 );
 ```
@@ -279,7 +278,7 @@ browser.webRequest.onBeforeRequest.addListener(
 Another example, that redirects all images to a data URL:
 
 ```js
-let pattern = "https://developer.mozilla.org/*";
+let pattern = "https://mdn.mozillademos.org/*";
 
 let image = `
   <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
@@ -295,7 +294,7 @@ function listener(details) {
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  { urls: [pattern], types: ["image"] },
+  {urls: [pattern], types: ["image"]},
   ["blocking"]
 );
 ```
@@ -304,10 +303,10 @@ Here's another version:
 
 ```js
 function randomColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  return `#${Math.floor(Math.random()*16777215).toString(16)}`;
 }
 
-const pattern = "https://developer.mozilla.org/*";
+const pattern = "https://mdn.mozillademos.org/*";
 
 let image = `
   <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
@@ -322,7 +321,7 @@ function listener(details) {
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  { urls: [pattern], types: ["image"] },
+  {urls: [pattern], types: ["image"]},
   ["blocking"]
 );
 ```

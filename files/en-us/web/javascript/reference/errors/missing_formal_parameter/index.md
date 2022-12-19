@@ -1,7 +1,6 @@
 ---
-title: "SyntaxError: missing formal parameter"
+title: 'SyntaxError: missing formal parameter'
 slug: Web/JavaScript/Reference/Errors/Missing_formal_parameter
-page-type: javascript-error
 tags:
   - Error
   - Errors
@@ -69,15 +68,15 @@ You will need to use identifiers in function declarations:
 ```js example-good
 function square(number) {
   return number * number;
-}
+};
 
 function greet(greeting) {
   return greeting;
-}
+};
 
 function log(arg) {
-  console.log(arg);
-}
+  console.log(arg)
+};
 ```
 
 You can then call these functions with the arguments you like:
@@ -87,7 +86,7 @@ square(2); // 4
 
 greet("Howdy"); // "Howdy"
 
-log({ obj: "value" }); // { obj: "value" }
+log({obj: "value"}); // { obj: "value" }
 ```
 
 ## See also

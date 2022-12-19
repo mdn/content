@@ -1,7 +1,6 @@
 ---
 title: break
 slug: Web/JavaScript/Reference/Statements/break
-page-type: javascript-statement
 tags:
   - JavaScript
   - Language feature

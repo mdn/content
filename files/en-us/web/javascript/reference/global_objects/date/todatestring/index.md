@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.toDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
-page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript

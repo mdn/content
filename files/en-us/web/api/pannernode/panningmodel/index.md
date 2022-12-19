@@ -23,7 +23,7 @@ The possible values are:
 
 ## Value
 
-An enum — see [`PanningModelType`](https://webaudio.github.io/web-audio-api/#idl-def-PanningModelType).
+A enum — see [`PanningModelType`](https://webaudio.github.io/web-audio-api/#idl-def-PanningModelType).
 
 ## Examples
 

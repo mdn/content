@@ -1,7 +1,6 @@
 ---
-title: "SyntaxError: identifier starts immediately after numeric literal"
+title: 'SyntaxError: identifier starts immediately after numeric literal'
 slug: Web/JavaScript/Reference/Errors/Identifier_after_number
-page-type: javascript-error
 tags:
   - Error
   - Errors
@@ -55,7 +54,7 @@ alert(1.foo);
 You will need to rename your variable to avoid the leading number.
 
 ```js example-good
-const life1 = "foo";
+const life1 = 'foo';
 const foo = life1;
 ```
 

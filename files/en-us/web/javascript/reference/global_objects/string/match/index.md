@@ -1,7 +1,6 @@
 ---
 title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
-page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method

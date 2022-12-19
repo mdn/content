@@ -1,7 +1,6 @@
 ---
 title: String.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
-page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method

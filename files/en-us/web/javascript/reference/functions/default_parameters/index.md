@@ -1,7 +1,6 @@
 ---
 title: Default parameters
 slug: Web/JavaScript/Reference/Functions/Default_parameters
-page-type: javascript-language-feature
 tags:
   - ECMAScript 2015
   - Functions
@@ -181,7 +180,7 @@ function withDefaults(
   d = go(),
   e = this,
   f = arguments,
-  g = this.value
+  g = this.value,
 ) {
   return [a, b, c, d, e, f, g];
 }

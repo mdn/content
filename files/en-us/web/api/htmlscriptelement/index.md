@@ -70,10 +70,6 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 _No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-## Events
-
-_No specific events; inherits events from its parent, {{domxref("HTMLElement")}}._
-
 ## Examples
 
 ### Dynamically importing scripts
@@ -90,13 +86,8 @@ function loadError(oError) {
 function prefixScript(url, onloadFunction) {
   const newScript = document.createElement("script");
   newScript.onerror = loadError;
-  if (onloadFunction) {
-    newScript.onload = onloadFunction;
-  }
-  document.currentScript.parentNode.insertBefore(
-    newScript,
-    document.currentScript
-  );
+  if (onloadFunction) { newScript.onload = onloadFunction; }
+  document.currentScript.parentNode.insertBefore(newScript, document.currentScript);
   newScript.src = url;
 }
 ```
@@ -111,9 +102,7 @@ function loadError(oError) {
 function affixScriptToHead(url, onloadFunction) {
   const newScript = document.createElement("script");
   newScript.onerror = loadError;
-  if (onloadFunction) {
-    newScript.onload = onloadFunction;
-  }
+  if (onloadFunction) { newScript.onload = onloadFunction; }
   document.head.appendChild(newScript);
   newScript.src = url;
 }
@@ -123,9 +112,7 @@ Sample usage:
 
 ```js
 affixScriptToHead("myScript1.js");
-affixScriptToHead("myScript2.js", () => {
-  alert('The script "myScript2.js" has been correctly loaded.');
-});
+affixScriptToHead("myScript2.js", () => { alert("The script \"myScript2.js\" has been correctly loaded."); });
 ```
 
 ### Checking if a script type is supported
@@ -136,10 +123,10 @@ The example below shows how to check for module support, using the existence of 
 
 ```js
 function checkModuleSupport() {
-  if ("supports" in HTMLScriptElement) {
-    return HTMLScriptElement.supports("module");
+  if ('supports' in HTMLScriptElement) {
+    return HTMLScriptElement.supports('module');
   }
-  return "noModule" in document.createElement("script");
+  return 'noModule' in document.createElement('script');
 }
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: Working with objects
 slug: Web/JavaScript/Guide/Working_with_Objects
-page-type: guide
 tags:
   - Beginner
   - Comparing object

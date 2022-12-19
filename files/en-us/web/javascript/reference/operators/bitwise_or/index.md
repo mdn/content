@@ -1,7 +1,6 @@
 ---
 title: Bitwise OR (|)
 slug: Web/JavaScript/Reference/Operators/Bitwise_OR
-page-type: javascript-operator
 tags:
   - Bitwise operator
   - JavaScript

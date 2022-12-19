@@ -1,7 +1,6 @@
 ---
 title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
-page-type: javascript-instance-method
 tags:
   - Expressions
   - JavaScript
