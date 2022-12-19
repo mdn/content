@@ -100,7 +100,7 @@ For example, let's first create a test directory to allow us to play without fea
    ```
 
 3. This second command will ask you many questions to find out the information required to set up the project; you can just select the defaults for now.
-4. Once all the questions have been asked, it will ask you if the information entered is OK. type `yes` and press Enter/Return and npm will generate a `package.json` file in your directory.
+4. Once all the questions have been asked, it will ask you if the information entered is OK. Type `yes` and press Enter/Return and npm will generate a `package.json` file in your directory.
 
 This file is basically a config file for the project. You can customize it later, but for now it'll look something like this:
 
