@@ -232,9 +232,9 @@ if (HTMLScriptElement.supports?.("importmap")) {
 
 ### Importing modules as bare names
 
-In some JavaScript environments you can use bare names for the module specifier.
+In some JavaScript environments, such as Node.js, you can use bare names for the module specifier.
 This works because the environment can resolve module names to a standard location in the file system.
-For example, in Node.js you might use the following syntax to import the "square" module.
+For example, you might use the following syntax to import the "square" module.
 
 ```js
 import { name, draw, reportArea, reportPerimeter } from "square";
