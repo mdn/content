@@ -44,6 +44,8 @@ A {{domxref("WritableStream")}} object.
 
 Use the `createUnidirectionalStream()` method to get a reference to a {{domxref("WritableStream")}}. From this you can {{domxref("WritableStream.getWriter", "get a writer", "", "nocode")}} to allow data to be written to the stream and sent to the server.
 
+Use the {{domxref("WritableStreamDefaultWriter.close", "close()")}} method of the resulting {{domxref("WritableStreamDefaultWriter")}} to close the associated HTTP/3 connection. The browser tries to send all pending data before actually closing the associated connection.
+
 ```js
 async function writeData() {
   const stream = await transport.createUnidirectionalStream();
@@ -60,6 +62,22 @@ async function writeData() {
     console.error(`An error occurred: ${error}`);
   }
 }
+```
+
+You can also use {{domxref("WritableStreamDefaultWriter.abort()")}} to abruptly terminate the stream. When using `abort()`, the browser may discard any pending data that hasn't yet been sent.
+
+```js
+// ...
+
+const stream = await transport.createUnidirectionalStream();
+const writer = ws.getWriter();
+
+// ...
+
+writer.write(...);
+writer.write(...);
+await writer.abort();
+// Not all the data may have been written.
 ```
 
 ## Specifications

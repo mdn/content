@@ -32,18 +32,22 @@ async function initTransport(url) {
   // Initialize transport connection
   const transport = new WebTransport(url);
 
-  // Respond to connection closing
+  // The connection can be used once ready fulfills
+  await transport.ready;
+
+  // ...
+}
+
+// ...
+
+async function closeTransport(transport) {
+    // Respond to connection closing
   try {
     await transport.closed;
     console.log(`The HTTP/3 connection to ${url} closed gracefully.`);
   } catch(error) {
     console.error(`The HTTP/3 connection to ${url} closed due to ${error}.`);
   }
-
-  // The connection can be used once ready fulfills
-  await transport.ready;
-
-  // ...
 }
 ```
 
