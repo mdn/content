@@ -13,7 +13,7 @@ browser-compat: api.FontData.postscriptName
 
 {{APIRef("Local Font Access API")}}{{SeeCompatTable}}
 
-The **`postscriptName`** read-only property of the {{domxref("FontData")}} interface returns the postscript name of the font face.
+The **`postscriptName`** read-only property of the {{domxref("FontData")}} interface returns the PostScript name of the font face.
 
 This is the name used to uniquely identify the postscript font, and is generally an unbroken sequence of characters that includes the font's name and style.
 
