@@ -158,8 +158,6 @@ async function receiveUnidirectional() {
 }
 ```
 
-NOTE, NEED TO FIND OUT WHETHER THE CHUNKS ACTUALLY ARE WebTransportReceiveStream S, OR JUST READABLESTREAM OBJECTS, AS I'M NOT SURE RIGHT NOW. IT IS PRETTY DIFFICULT TO TEST THIS
-
 #### Bidirectional transmission
 
 To open a bidirectional stream from a user agent, you use the {{domxref("WebTransport.createBidirectionalStream()")}} method to get a reference to a {{domxref("WebTransportBidirectionalStream")}}. In the same way as the {{domxref("WebTransportDatagramDuplexStream")}}, this contains `readable` and `writable` properties returning references to `ReadableStream` and `WritableStream` instances, which can be used to read from and write to the server.
