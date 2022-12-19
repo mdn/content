@@ -1094,6 +1094,15 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
+        <code><a href="/en-US/docs/Web/HTML/Element/video#attr-playsinline">playsinline</a></code>
+      </td>
+      <td>
+        {{ HTMLElement("video") }}
+      </td>
+      <td>A Boolean attribute indicating that the video is to be played "inline"; that is, within the element's playback area. Note that the absence of this attribute does not imply that the video will always be played in fullscreen.</td>
+    </tr>
+    <tr>
+      <td>
         <code><a href="/en-US/docs/Web/HTML/Element/video#attr-poster">poster</a></code>
       </td>
       <td>{{ HTMLElement("video") }}</td>

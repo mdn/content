@@ -578,15 +578,17 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
     - Select the Node driver and version as shown.
     - Click the **Copy** icon to copy the connection string.
     - Paste this in your local text editor.
-    - Update the password with your user's password.
+    - Update the username and password with your user's password.
+    - Insert the database name "local_library" in the path before the options (`...mongodb.net/local_library?retryWrites...`)
     - Save the file containing this string somewhere safe.
 
 You have now created the database, and have a URL (with username and password) that can be used to access it.
-This will look something like: `mongodb+srv://your_user_name:your_password@cluster0.lz91hw2.mongodb.net/?retryWrites=true&w=majority`
+This will look something like: `mongodb+srv://your_user_name:your_password@cluster0.lz91hw2.mongodb.net/local_library?retryWrites=true&w=majority`
 
 ## Install Mongoose
 
-Open a command prompt and navigate to the directory where you created your [skeleton Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website). Enter the following command to install Mongoose (and its dependencies) and add it to your **package.json** file, unless you have already done so when reading the [Mongoose Primer](#installing_mongoose_and_mongodb) above.
+Open a command prompt and navigate to the directory where you created your [skeleton Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website).
+Enter the following command to install Mongoose (and its dependencies) and add it to your **package.json** file, unless you have already done so when reading the [Mongoose Primer](#installing_mongoose_and_mongodb) above.
 
 ```bash
 npm install mongoose

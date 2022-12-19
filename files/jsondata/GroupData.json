@@ -791,6 +791,13 @@
       "properties": [],
       "events": []
     },
+    "Local Font Access API": {
+      "overview": ["Local Font Access API"],
+      "interfaces": ["FontData"],
+      "methods": ["Window.queryLocalFonts()"],
+      "properties": [],
+      "events": []
+    },
     "Media Capabilities API": {
       "overview": ["Media Capabilities API"],
       "guides": [
@@ -2037,6 +2044,19 @@
       "methods": [],
       "properties": ["Window.sessionStorage", "Window.localStorage"],
       "events": ["Window: storage"]
+    },
+    "WebTransport API": {
+      "overview": ["WebTransport API"],
+      "guides": [],
+      "interfaces": [
+        "WebTransport",
+        "WebTransportBidirectionalStream",
+        "WebTransportDatagramDuplexStream",
+        "WebTransportError"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
     },
     "Web Workers API": {
       "overview": ["Web Workers API"],
