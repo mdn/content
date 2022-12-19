@@ -1,6 +1,7 @@
 ---
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
+page-type: javascript-class
 tags:
   - Class
   - JavaScript

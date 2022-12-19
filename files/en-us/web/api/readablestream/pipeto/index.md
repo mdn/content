@@ -70,6 +70,19 @@ fetch('png-logo.png')
 .then((rs) => rs.pipeTo(new FinalDestinationStream()))
 ```
 
+The same example, but using {{jsxref("Operators/await", "await")}}:
+
+```js
+(async () => {
+  // Fetch the original image
+  const response = await fetch("png-logo.png");
+  // Retrieve its body as ReadableStream
+  response.body
+    .pipeThrough(new PNGTransformStream())
+    .pipeTo(new FinalDestinationStream());
+})();
+```
+
 ## Specifications
 
 {{Specifications}}

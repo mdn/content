@@ -1,6 +1,7 @@
 ---
 title: Date.now()
 slug: Web/JavaScript/Reference/Global_Objects/Date/now
+page-type: javascript-static-method
 tags:
   - Date
   - JavaScript
@@ -38,7 +39,7 @@ default and defaults to 20µs in Firefox 59; in 60 it will be 2ms.
 
 ```js
 // reduced time precision (2ms) in Firefox 60
-Date.now()
+Date.now();
 // 1519211809934
 // 1519211810362
 // 1519211811670

@@ -17,13 +17,7 @@ browser-compat: api.Gyroscope.y
 
 {{APIRef("Sensor API")}}
 
-The **`y`** read-only property of the
-{{domxref("Gyroscope")}} interface returns a double precision integer containing the
-angular velocity of the device along the its y axis.
-
-If a feature policy blocks use of a feature it is because your code is inconsistent
-with the policies set on your server. This is not something that would ever be shown to
-a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
+The **`y`** read-only property of the {{domxref("Gyroscope")}} interface returns a number specifying the angular velocity of the device along its y-axis.
 
 ## Value
 

@@ -1,6 +1,7 @@
 ---
 title: Intl.Segmenter.prototype.segment()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment
+page-type: javascript-instance-method
 tags:
   - Internationalization
   - Intl
@@ -29,7 +30,7 @@ segment(input)
 
 ### Return value
 
-A new iterable [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) object containing the segments of the input string, using the segmenter's locale and granularity.
+A new iterable [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) object containing the segments of the input string, using the segmenter's locale and granularity.
 
 ## Examples
 

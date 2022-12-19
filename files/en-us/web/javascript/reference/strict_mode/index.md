@@ -1,6 +1,7 @@
 ---
 title: Strict mode
 slug: Web/JavaScript/Reference/Strict_mode
+page-type: guide
 tags:
   - ECMAScript 5
   - Guide
@@ -275,7 +276,7 @@ console.assert(x === 17);
 console.assert(evalX === 42);
 ```
 
-Whether the string passed to `eval()` is evaluated in strict mode depends on how `eval()` is invoked (direct eval or indirect eval). See the [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) reference page for more information.
+Whether the string passed to `eval()` is evaluated in strict mode depends on how `eval()` is invoked ([direct eval or indirect eval](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#direct_and_indirect_eval)).
 
 #### Block-scoped function declarations
 

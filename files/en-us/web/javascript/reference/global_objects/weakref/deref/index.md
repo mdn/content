@@ -1,6 +1,7 @@
 ---
 title: WeakRef.prototype.deref()
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef/deref
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method

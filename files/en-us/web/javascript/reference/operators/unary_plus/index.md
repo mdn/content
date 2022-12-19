@@ -1,6 +1,7 @@
 ---
 title: Unary plus (+)
 slug: Web/JavaScript/Reference/Operators/Unary_plus
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature

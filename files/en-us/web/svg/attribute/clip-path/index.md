@@ -1,6 +1,7 @@
 ---
 title: clip-path
 slug: Web/SVG/Attribute/clip-path
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

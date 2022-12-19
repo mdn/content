@@ -1,6 +1,7 @@
 ---
 title: WeakMap.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript

@@ -1,6 +1,7 @@
 ---
 title: Math.log2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log2
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript

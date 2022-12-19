@@ -46,6 +46,8 @@ Though the purpose of this tag is purely for the convenience of the author, its 
 
 It is therefore recommended that web authors either explicitly style this element, or accept some cross-browser variation.
 
+<!-- ## Technical summary -->
+
 ## Specifications
 
 {{Specifications}}

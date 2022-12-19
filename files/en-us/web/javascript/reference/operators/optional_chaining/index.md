@@ -1,6 +1,7 @@
 ---
 title: Optional chaining (?.)
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
+page-type: javascript-operator
 tags:
   - Chaining
   - JavaScript
@@ -99,7 +100,7 @@ However, if there is a property with such a name which is not a function, using 
 > you have to use `?.` at this position as
 > well: `someInterface?.customMethod?.()`.
 
-`eval?.()` is the shortest way to enter _indirect eval_ mode. For more information, see the [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#description) reference page.
+`eval?.()` is the shortest way to enter [_indirect eval_](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#direct_and_indirect_eval) mode.
 
 ### Optional chaining with expressions
 

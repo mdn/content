@@ -23,7 +23,7 @@ The Screen Capture API introduces additions to the existing Media Capture and St
 
 The Screen Capture API is relatively simple to use. Its sole method is {{domxref("MediaDevices.getDisplayMedia()")}}, whose job is to ask the user to select a screen or portion of a screen to capture in the form of a {{domxref("MediaStream")}}.
 
-To start capturing video from the screen, you call `getDisplayMedia()` on the instance of `Media` `navigator.mediaDevices`:
+To start capturing video from the screen, you call `getDisplayMedia()` on `navigator.mediaDevices`:
 
 ```js
 captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
@@ -80,17 +80,15 @@ The Screen Capture API adds properties to the following dictionaries defined by 
 - {{domxref("MediaTrackSupportedConstraints.suppressLocalAudioPlayback")}}
   - : A boolean, which is `true` if the current environment supports the constraint {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback")}}.
 
-## Feature Policy validation
+## Permissions Policy validation
 
-{{Glossary("User agent", "User agents")}} that support Feature Policy (either using HTTP's {{HTTPHeader("Feature-Policy")}} header or the {{HTMLElement("iframe")}} attribute {{htmlattrxref("allow", "iframe")}}) can specify a desire to use the Screen Capture API using the policy control directive `display-capture`:
+{{Glossary("User agent", "User agents")}} that support [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) (either using the HTTP {{HTTPHeader("Permissions-Policy")}} header or the {{HTMLElement("iframe")}} attribute {{htmlattrxref("allow", "iframe")}}) can specify a desire to use the Screen Capture API using the directive `display-capture`:
 
 ```html
 <iframe allow="display-capture" src="/some-other-document.html">…</iframe>
 ```
 
-The default allow list is `self`, which lets the any content within the document use Screen Capture.
-
-See [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) for a more in-depth explanation of how Feature Policy is used.
+The default allowlist is `self`, which lets any content within the same origin use Screen Capture.
 
 ## Specifications
 

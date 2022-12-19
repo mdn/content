@@ -1,6 +1,7 @@
 ---
 title: 'URIError: malformed URI sequence'
 slug: Web/JavaScript/Reference/Errors/Malformed_URI
+page-type: javascript-error
 tags:
   - Error
   - Errors

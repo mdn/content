@@ -17,6 +17,28 @@ The **`<head>`** [HTML](/en-US/docs/Web/HTML) element contains machine-readable 
 
 > **Note:** `<head>` primarily holds information for machine processing, not human-readability. For human-visible information, like top-level headings and listed authors, see the {{HTMLElement("header")}} element.
 
+## Attributes
+
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+- {{htmlattrdef("profile")}} {{deprecated_inline}} {{Non-standard_Inline}}
+  - : The {{glossary("URI")}}s of one or more metadata profiles, separated by {{Glossary("whitespace", "white space")}}.
+
+## Example
+
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Document title</title>
+  </head>
+</html>
+```
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
@@ -74,30 +96,6 @@ The **`<head>`** [HTML](/en-US/docs/Web/HTML) element contains machine-readable 
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-- {{htmlattrdef("profile")}} {{deprecated_inline}} {{Non-standard_Inline}}
-  - : The {{glossary("URI")}}s of one or more metadata profiles, separated by {{Glossary("whitespace", "white space")}}.
-
-## Example
-
-```html
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Document title</title>
-  </head>
-</html>
-```
-
-## Notes
-
-HTML5-compliant browsers automatically create a `<head>` element if its tags are omitted in the markup. [This auto-creation is not guaranteed in ancient browsers](https://www.stevesouders.com/blog/2010/05/12/autohead-my-first-browserscope-user-test/).
 
 ## Specifications
 
