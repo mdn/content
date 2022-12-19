@@ -14,7 +14,7 @@ browser-compat: api.LaunchParams.targetURL
 
 {{APIRef()}}{{SeeCompatTable}}
 
-The **`targetURL`** read-only property of the {{domxref("LaunchParams")}} interface returns the URL of the associated web app launch.
+The **`targetURL`** read-only property of the {{domxref("LaunchParams")}} interface returns the target URL of the associated web app launch.
 
 ## Value
 
