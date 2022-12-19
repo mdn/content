@@ -21,7 +21,7 @@ tags:
 
 ## Getting Started with SVG
 
-**Scalable Vector Graphics (SVG)** are an [XML](/en-US/docs/Web/XML)-based markup language for describing two-dimensional based [vector graphics](https://en.wikipedia.org/wiki/Vector_graphics).
+**Scalable Vector Graphics (SVG)** is an [XML](/en-US/docs/Web/XML)-based markup language for describing two-dimensional based [vector graphics](https://en.wikipedia.org/wiki/Vector_graphics).
 
 As such, it's a text-based, open Web standard for describing images that can be rendered cleanly at any size and are designed specifically to work well with other web standards including [CSS](/en-US/docs/Web/CSS), [DOM](/en-US/docs/Web/API/Document_Object_Model), [JavaScript](/en-US/docs/Web/JavaScript), and [SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL). SVG is, essentially, to graphics what [HTML](/en-US/docs/Web/HTML) is to text.
 
