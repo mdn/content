@@ -46,6 +46,16 @@ canvas.requestPointerLock()
 
 > **Note:** If a user has exited pointer lock via the [default unlock gesture](https://w3c.github.io/pointerlock/#dfn-default-unlock-gesture), or pointer lock has not previously been entered for this document, an event generated as a result of an [engagement gesture](https://w3c.github.io/pointerlock/#dfn-engagement-gesture) must be received by the document before [`requestPointerLock`](https://w3c.github.io/pointerlock/#dom-element-requestpointerlock) will succeed. (from <https://w3c.github.io/pointerlock/#extensions-to-the-element-interface>)
 
+Operating systems enable mouse acceleration by default, which is useful when you sometimes want slow precise movement (think about you might use a graphics package), but also want to move great distances with a faster mouse movement (think about scrolling, and selecting several files). For some first-person perspective games however, raw mouse input data is preferred for controlling camera rotation — where the same distance movement, fast or slow, results in the same rotation. This results in a better gaming experience and higher accuracy, according to professional gamers.
+
+To disable OS-level mouse acceleration and access raw mouse input, you can set the `unadjustedMovement` to `true`:
+
+```js
+  canvas.requestPointerLock({
+    unadjustedMovement: true,
+  });
+```
+
 ### pointerLockElement and exitPointerLock()
 
 The Pointer lock API also extends the {{domxref("Document")}} interface, adding both a new property and a new method. The new property is used for accessing the currently locked element (if any), and is named {{domxref("Document.pointerLockElement","pointerLockElement")}} and the new method on {{domxref("Document")}} is {{domxref("Document.exitPointerLock","exitPointerLock()")}} and, as the name implies, it is used to exit the pointer lock.
