@@ -18,7 +18,7 @@ The **`node`** read-only property of the {{domxref("LayoutShiftAttribution")}} i
 
 ## Value
 
-A {{domxref("node")}}.
+A {{domxref("Node")}}.
 
 ## Examples
 

@@ -23,7 +23,7 @@ Instances of `LayoutShiftAttribution` are returned in an array by calling {{domx
 
 ## Instance properties
 
-- {{domxref("LayoutShiftAttribution.Node")}} {{ReadOnlyInline}}
+- {{domxref("LayoutShiftAttribution.node")}} {{ReadOnlyInline}}
   - : Returns the element that has shifted (null if it has been removed).
 - {{domxref("LayoutShiftAttribution.previousRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("DOMRectReadOnly")}} object representing the position of the element before the shift.
