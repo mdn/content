@@ -91,7 +91,7 @@ Implementations following the specification invoke resize events before paint (t
 
 **ResizeObserver loop completed with undelivered notifications.**
 
-Note that this only prevents user agent lockup, not the infinite loop itself. For example, the following code will cause the width of `divElem` to grow indefinitely, with the above error message in the console repeating every frame:
+Note that this only prevents user-agent lockup, not the infinite loop itself. For example, the following code will cause the width of `divElem` to grow indefinitely, with the above error message in the console repeating every frame:
 
 ```js
 const divElem = document.querySelector('body > div');
