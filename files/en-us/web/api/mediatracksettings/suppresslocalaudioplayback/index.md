@@ -11,7 +11,7 @@ tags:
 browser-compat: api.MediaTrackSettings.suppressLocalAudioPlayback
 ---
 
-{{APIRef("Media Capture and Streams")}}{{seecompattable}}
+{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's **`suppressLocalAudioPlayback`** property controls whether the audio playing in a tab will continue to be played out of a user's local speakers when the tab is captured.
 

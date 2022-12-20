@@ -13,7 +13,7 @@ tags:
 browser-compat: api.WebTransportBidirectionalStream.readable
 ---
 
-{{APIRef("WebTransport API")}}{{seecompattable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`readable`** read-only property of the {{domxref("WebTransportBidirectionalStream")}} interface returns a {{domxref("ReadableStream")}} instance that can be used to reliably read incoming data.
 

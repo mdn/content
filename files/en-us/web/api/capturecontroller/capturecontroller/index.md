@@ -10,7 +10,7 @@ tags:
 browser-compat: api.CaptureController.setFocusBehavior
 ---
 
-{{APIRef("Screen Capture API")}}{{seecompattable}}
+{{APIRef("Screen Capture API")}}{{SeeCompatTable}}
 
 The {{domxref("CaptureController")}} constructor creates a new `CaptureController` object instance.
 

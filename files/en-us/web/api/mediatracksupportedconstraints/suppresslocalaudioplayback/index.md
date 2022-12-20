@@ -11,7 +11,7 @@ tags:
 browser-compat: api.MediaTrackSupportedConstraints.suppressLocalAudioPlayback
 ---
 
-{{APIRef("Media Capture and Streams")}}{{seecompattable}}
+{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's **`suppressLocalAudioPlayback`** property indicates whether or not the {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback", "suppressLocalAudioPlayback")}} constraint is supported by the user agent and the device on which the content is being used.
 
