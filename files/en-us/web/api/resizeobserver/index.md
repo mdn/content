@@ -87,7 +87,7 @@ checkbox.addEventListener('change', () => {
 
 ## Observation Errors
 
-Implementations following the specification invoke resize events before paint (i.e. Before the frame is presented to the user). If there was any resize event, style and layout are re-evaluated, which, in turn, may trigger more resize events. Infinite loops from cyclic dependencies are addressed by only processing elements deeper in the DOM each iteration. Resize events not meeting this condition are deferred to the next paint, and an error event is fired on the {{domxref('Window')}} object, with the well-defined message string:
+Implementations following the specification invoke resize events before paint (that is, before the frame is presented to the user). If there was any resize event, style and layout are re-evaluated — which in turn may trigger more resize events. Infinite loops from cyclic dependencies are addressed by only processing elements deeper in the DOM during each iteration. Resize events that don't meet that condition are deferred to the next paint, and an error event is fired on the {{domxref('Window')}} object, with the well-defined message string:
 
 **ResizeObserver loop completed with undelivered notifications.**
 
