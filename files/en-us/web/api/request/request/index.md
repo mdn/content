@@ -89,15 +89,14 @@ new Request(input, options)
 
     ```js
     const oldRequest = new Request(
-      'https://github.com/mdn/content/issues/12959',
-      { headers: { 'From': 'webmaster@example.org' } },
+      "https://github.com/mdn/content/issues/12959",
+      { headers: { From: "webmaster@example.org" } }
     );
     oldRequest.headers.get("From"); // "webmaster@example.org"
-    const newRequest = new Request(
-      oldRequest,
-      { headers: { 'From': 'developer@example.org' } },
-    );
-    newRequest.headers.get('From'); // "developer@example.org"
+    const newRequest = new Request(oldRequest, {
+      headers: { From: "developer@example.org" },
+    });
+    newRequest.headers.get("From"); // "developer@example.org"
     ```
 
 ## Errors
@@ -131,9 +130,9 @@ handled properly, then create an Object URL of it and display it in an
 {{htmlelement("img")}} element.
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest)
   .then((response) => response.blob())
@@ -147,19 +146,19 @@ In our [Fetch Request with init example](https://github.com/mdn/dom-examples/tre
 invoke `fetch()`:
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
 const myHeaders = new Headers();
-myHeaders.append('Content-Type', 'image/jpeg');
+myHeaders.append("Content-Type", "image/jpeg");
 
 const myOptions = {
-  method: 'GET',
+  method: "GET",
   headers: myHeaders,
-  mode: 'cors',
-  cache: 'default',
+  mode: "cors",
+  cache: "default",
 };
 
-const myRequest = new Request('flowers.jpg', myOptions);
+const myRequest = new Request("flowers.jpg", myOptions);
 
 fetch(myRequest).then((response) => {
   // ...
@@ -179,15 +178,15 @@ You can also use an object literal as `headers` in `myOptions`.
 
 ```js
 const myOptions = {
-  method: 'GET',
+  method: "GET",
   headers: {
-    'Content-Type': 'image/jpeg',
+    "Content-Type": "image/jpeg",
   },
-  mode: 'cors',
-  cache: 'default',
+  mode: "cors",
+  cache: "default",
 };
 
-const myRequest = new Request('flowers.jpg', myOptions);
+const myRequest = new Request("flowers.jpg", myOptions);
 ```
 
 You may also pass a {{domxref("Request")}} object to the `Request()`

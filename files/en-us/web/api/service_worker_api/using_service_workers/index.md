@@ -150,24 +150,24 @@ Now you've got your site assets cached, you need to tell service workers to do s
 
 2. You can attach a `fetch` event listener to the service worker, then call the `respondWith()` method on the event to hijack our HTTP responses and update them with your own content.
 
-    ```js
-    self.addEventListener("fetch", (event) => {
-      event
-        .respondWith
-        // custom content goes here
-        ();
-    });
-    ```
+   ```js
+   self.addEventListener("fetch", (event) => {
+     event
+       .respondWith
+       // custom content goes here
+       ();
+   });
+   ```
 
 3. We could start by responding with the resource whose URL matches that of the network request, in each case:
 
-    ```js
-    self.addEventListener("fetch", (event) => {
-      event.respondWith(caches.match(event.request));
-    });
-    ```
+   ```js
+   self.addEventListener("fetch", (event) => {
+     event.respondWith(caches.match(event.request));
+   });
+   ```
 
-    `caches.match(event.request)` allows us to match each resource requested from the network with the equivalent resource available in the cache, if there is a matching one available. The matching is done via URL and various headers, just like with normal HTTP requests.
+   `caches.match(event.request)` allows us to match each resource requested from the network with the equivalent resource available in the cache, if there is a matching one available. The matching is done via URL and various headers, just like with normal HTTP requests.
 
 ![Fetch event diagram](sw-fetch.svg)
 
@@ -279,7 +279,7 @@ If enabled, the [navigation preload](/en-US/docs/Web/API/NavigationPreloadManage
 First the feature must be enabled during service worker activation, using [`registration.navigationPreload.enable()`](/en-US/docs/Web/API/NavigationPreloadManager/enable):
 
 ```js
-self.addEventListener('activate', (event) => {
+self.addEventListener("activate", (event) => {
   event.waitUntil(self.registration?.navigationPreload.enable());
 });
 ```
@@ -387,7 +387,7 @@ Note that in this example we download and cache the same data for the resource w
 
 If your service worker has previously been installed, but then a new version of the worker is available on refresh or page load, the new version is installed in the background, but not yet activated. It is only activated when there are no longer any pages loaded that are still using the old service worker. As soon as there are no more such pages still loaded, the new service worker activates.
 
->**Note:** It is possible to bypass this by using [`Clients.claim()`](/en-US/docs/Web/API/Clients/claim).
+> **Note:** It is possible to bypass this by using [`Clients.claim()`](/en-US/docs/Web/API/Clients/claim).
 
 You'll want to update your `install` event listener in the new service worker to something like this (notice the new version number):
 
