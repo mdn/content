@@ -12,7 +12,7 @@ tags:
 browser-compat: api.WebTransportDatagramDuplexStream.outgoingMaxAge
 ---
 
-{{APIRef("WebTransport API")}}{{seecompattable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`outgoingMaxAge`** property of the {{domxref("WebTransportDatagramDuplexStream")}} interface gets or sets the maximum age for outgoing datagrams, in milliseconds.
 

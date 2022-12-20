@@ -123,7 +123,7 @@ const gdmOptions = {
 }
 ```
 
-In this example the display surface captured is to be the whole window. The audio track should ideally have noise suppression and echo cancellation features enabled, as well as an ideal audio sample rate of 44.1kHz, and supression of local audio playback.
+In this example the display surface captured is to be the whole window. The audio track should ideally have noise suppression and echo cancellation features enabled, as well as an ideal audio sample rate of 44.1kHz, and suppression of local audio playback.
 
 In addition, the app is hinting to the user agent that it should:
 

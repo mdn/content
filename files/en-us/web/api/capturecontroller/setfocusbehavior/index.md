@@ -11,7 +11,7 @@ tags:
 browser-compat: api.CaptureController.setFocusBehavior
 ---
 
-{{APIRef("Screen Capture API")}}{{seecompattable}}
+{{APIRef("Screen Capture API")}}{{SeeCompatTable}}
 
 The {{domxref("CaptureController")}} interface's **`setFocusBehavior()`** method controls whether the captured tab or window will be focused when an associated {{domxref("MediaDevices.getDisplayMedia()")}} {{jsxref("Promise")}} fulfills, or whether the focus will remain with the tab containing the capturing app.
 

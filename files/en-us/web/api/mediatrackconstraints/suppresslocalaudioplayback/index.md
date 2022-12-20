@@ -16,7 +16,7 @@ tags:
 browser-compat: api.MediaTrackConstraints.suppressLocalAudioPlayback
 ---
 
-{{APIRef("Media Capture and Streams")}}{{seecompattable}}
+{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's **`suppressLocalAudioPlayback`** property is a [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) describing the requested or mandatory constraints placed upon the value of the {{domxref("MediaTrackSettings.suppressLocalAudioPlayback","suppressLocalAudioPlayback")}} constrainable property. This property controls whether the audio playing in a tab will continue to be played out of a user's local speakers when the tab is captured.
 
