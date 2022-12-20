@@ -41,7 +41,7 @@ In the [previous article](/en-US/docs/Learn/Forms/Basic_native_form_controls) we
 
 Because HTML form control appearance may be quite different from a designer's specifications, web developers sometimes build their own custom form controls. We cover this in an advanced tutorial: [How to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls).
 
-## E-mail address field
+## Email address field
 
 This type of field is set using the value `email` for the {{htmlattrxref("type","input")}} attribute:
 

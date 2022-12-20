@@ -13,7 +13,7 @@ browser-compat:
   - api.WebTransport
 ---
 
-{{seecompattable}}{{DefaultAPISidebar("WebTransport API")}}{{SecureContext_Header}}
+{{SeeCompatTable}}{{DefaultAPISidebar("WebTransport API")}}{{SecureContext_Header}}
 
 The **WebTransport API** provides a modern update to {{domxref("WebSockets API", "WebSockets", "", "nocode")}}, transmitting data between client and server using [HTTP/3 Transport](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/). WebTransport provides support for multiple streams, unidirectional streams, and out-of-order delivery. It enables reliable transport via {{domxref("Streams API", "streams", "", "nocode")}} and unreliable transport via UDP-like datagrams.
 

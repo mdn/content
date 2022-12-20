@@ -13,21 +13,21 @@ browser-compat: html.elements.input.type_email
 
 {{HTMLSidebar}}
 
-{{HTMLElement("input")}} elements of type **`email`** are used to let the user enter and edit an e-mail address, or, if the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attribute is specified, a list of e-mail addresses.
+{{HTMLElement("input")}} elements of type **`email`** are used to let the user enter and edit an email address, or, if the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attribute is specified, a list of email addresses.
 
 {{EmbedInteractiveExample("pages/tabbed/input-email.html", "tabbed-shorter")}}
 
-The input value is automatically validated to ensure that it's either empty or a properly-formatted e-mail address (or list of addresses) before the form can be submitted. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are automatically applied as appropriate to visually denote whether the current value of the field is a valid e-mail address or not.
+The input value is automatically validated to ensure that it's either empty or a properly-formatted email address (or list of addresses) before the form can be submitted. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are automatically applied as appropriate to visually denote whether the current value of the field is a valid email address or not.
 
 ## Value
 
-The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a string which is automatically validated as conforming to e-mail syntax. More specifically, there are three possible value formats that will pass validation:
+The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a string which is automatically validated as conforming to email syntax. More specifically, there are three possible value formats that will pass validation:
 
 1. An empty string ("") indicating that the user did not enter a value or that the value was removed.
-2. A single properly-formed e-mail address. This doesn't necessarily mean the e-mail address exists, but it is at least formatted correctly. In simple terms, this means `username@domain` or `username@domain.tld`. There's more to it than that, of course; see [Validation](#validation) for a {{Glossary("regular expression")}} that matches the e-mail address validation algorithm.
-3. If and only if the {{htmlattrxref("multiple", "input")}} attribute is specified, the value can be a list of properly-formed comma-separated e-mail addresses. Any trailing and leading whitespace is removed from each address in the list.
+2. A single properly-formed email address. This doesn't necessarily mean the email address exists, but it is at least formatted correctly. In simple terms, this means `username@domain` or `username@domain.tld`. There's more to it than that, of course; see [Validation](#validation) for a {{Glossary("regular expression")}} that matches the email address validation algorithm.
+3. If and only if the {{htmlattrxref("multiple", "input")}} attribute is specified, the value can be a list of properly-formed comma-separated email addresses. Any trailing and leading whitespace is removed from each address in the list.
 
-See [Validation](#validation) for details on how e-mail addresses are validated to ensure that they're formatted properly.
+See [Validation](#validation) for details on how email addresses are validated to ensure that they're formatted properly.
 
 ## Additional attributes
 
@@ -51,9 +51,9 @@ The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constrain
 
 ### multiple
 
-A Boolean attribute which, if present, indicates that the user can enter a list of multiple e-mail addresses, separated by commas and, optionally, whitespace characters. See [Allowing multiple e-mail addresses](#allowing_multiple_e-mail_addresses) for an example, or [HTML attribute: multiple](/en-US/docs/Web/HTML/Attributes/multiple) for more details.
+A Boolean attribute which, if present, indicates that the user can enter a list of multiple email addresses, separated by commas and, optionally, whitespace characters. See [Allowing multiple email addresses](#allowing_multiple_email_addresses) for an example, or [HTML attribute: multiple](/en-US/docs/Web/HTML/Attributes/multiple) for more details.
 
-> **Note:** Normally, if you specify the {{htmlattrxref("required", "input")}} attribute, the user must enter a valid e-mail address for the field to be considered valid. However, if you add the `multiple` attribute, a list of zero e-mail addresses (an empty string, or one which is entirely whitespace) is a valid value. In other words, the user does not have to enter even one e-mail address when `multiple` is specified, regardless of the value of `required`.
+> **Note:** Normally, if you specify the {{htmlattrxref("required", "input")}} attribute, the user must enter a valid email address for the field to be considered valid. However, if you add the `multiple` attribute, a list of zero email addresses (an empty string, or one which is entirely whitespace) is a valid value. In other words, the user does not have to enter even one email address when `multiple` is specified, regardless of the value of `required`.
 
 ### pattern
 
@@ -87,15 +87,15 @@ This does _not_ set a limit on how many characters the user can enter into the f
 
 ## Using email inputs
 
-E-mail addresses are among the most frequently-inputted textual data forms on the web; they're used when logging into websites, when requesting information, to allow order confirmation, for webmail, and so forth. As such, the `email` input type can make your job as a web developer much easier since it can help simplify your work when building the user interface and logic for e-mail addresses. When you create an email input with the proper `type` value, `email`, you get automatic validation that the entered text is at least in the correct form to potentially be a legitimate e-mail address. This can help avoid cases in which the user mistypes their address, or provides an invalid address.
+Email addresses are among the most frequently-inputted textual data forms on the web; they're used when logging into websites, when requesting information, to allow order confirmation, for webmail, and so forth. As such, the `email` input type can make your job as a web developer much easier since it can help simplify your work when building the user interface and logic for email addresses. When you create an email input with the proper `type` value, `email`, you get automatic validation that the entered text is at least in the correct form to potentially be a legitimate email address. This can help avoid cases in which the user mistypes their address, or provides an invalid address.
 
-It's important, however, to note that this is not enough to ensure that the specified text is an e-mail address which actually exists, corresponds to the user of the site, or is acceptable in any other way. It ensures that the value of the field is properly formatted to be an e-mail address.
+It's important, however, to note that this is not enough to ensure that the specified text is an email address which actually exists, corresponds to the user of the site, or is acceptable in any other way. It ensures that the value of the field is properly formatted to be an email address.
 
-> **Note:** It's also crucial to remember that a user can tinker with your HTML behind the scenes, so your site _must not_ use this validation for any security purposes. You _must_ verify the e-mail address on the server side of any transaction in which the provided text may have any security implications of any kind.
+> **Note:** It's also crucial to remember that a user can tinker with your HTML behind the scenes, so your site _must not_ use this validation for any security purposes. You _must_ verify the email address on the server side of any transaction in which the provided text may have any security implications of any kind.
 
 ### A simple email input
 
-Currently, all browsers which implement this element implement it as a standard text input field with basic validation features. The specification does, however, allow browsers latitude on this. For example, the element could be integrated with the user's device's built-in address book to allow picking e-mail addresses from that list. In its most basic form, an `email` input can be implemented like this:
+Currently, all browsers which implement this element implement it as a standard text input field with basic validation features. The specification does, however, allow browsers latitude on this. For example, the element could be integrated with the user's device's built-in address book to allow picking email addresses from that list. In its most basic form, an `email` input can be implemented like this:
 
 ```html
 <input id="emailAddress" type="email" />
@@ -103,19 +103,19 @@ Currently, all browsers which implement this element implement it as a standard 
 
 {{ EmbedLiveSample('A_simple_email_input', 600, 40) }}
 
-Notice that it's considered valid when empty and when a single validly-formatted e-mail address is entered, but is otherwise not considered valid. By adding the {{htmlattrxref("required", "input")}} attribute, only validly-formed e-mail addresses are allowed; the input is no longer considered valid when empty.
+Notice that it's considered valid when empty and when a single validly-formatted email address is entered, but is otherwise not considered valid. By adding the {{htmlattrxref("required", "input")}} attribute, only validly-formed email addresses are allowed; the input is no longer considered valid when empty.
 
-### Allowing multiple e-mail addresses
+### Allowing multiple email addresses
 
-By adding the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) Boolean attribute, the input can be configured to accept multiple e-mail addresses.
+By adding the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) Boolean attribute, the input can be configured to accept multiple email addresses.
 
 ```html
 <input id="emailAddress" type="email" multiple />
 ```
 
-{{ EmbedLiveSample('Allowing_multiple_e-mail_addresses', 600, 40) }}
+{{ EmbedLiveSample('Allowing multiple email addresses', 600, 40) }}
 
-The input is now considered valid when a single e-mail address is entered, or when any number of e-mail addresses separated by commas and, optionally, some number of whitespace characters are present.
+The input is now considered valid when a single email address is entered, or when any number of email addresses separated by commas and, optionally, some number of whitespace characters are present.
 
 > **Note:** When `multiple` is used, the value _is_ allowed to be empty.
 
@@ -162,9 +162,9 @@ The physical size of the input box can be controlled using the {{htmlattrxref("s
 
 #### Element value length
 
-The `size` is separate from the length limitation on the entered e-mail address itself so that you can have fields fit in a small space while still allowing longer e-mail address strings to be entered. You can specify a minimum length, in characters, for the entered e-mail address using the {{htmlattrxref("minlength", "input")}} attribute; similarly, use {{htmlattrxref("maxlength", "input")}} to set the maximum length of the entered e-mail address.
+The `size` is separate from the length limitation on the entered email address itself so that you can have fields fit in a small space while still allowing longer email address strings to be entered. You can specify a minimum length, in characters, for the entered email address using the {{htmlattrxref("minlength", "input")}} attribute; similarly, use {{htmlattrxref("maxlength", "input")}} to set the maximum length of the entered email address.
 
-The example below creates a 32 character-wide e-mail address entry box, requiring that the contents be no shorter than 3 characters and no longer than 64 characters.
+The example below creates a 32 character-wide email address entry box, requiring that the contents be no shorter than 3 characters and no longer than 64 characters.
 
 ```html
 <input type="email" size="32" minlength="3" maxlength="64" />
@@ -186,7 +186,7 @@ As always, you can provide a default value for an `email` input box by setting i
 
 #### Offering suggested values
 
-Taking it a step further, you can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used e-mail addresses more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The `list` attribute specifies the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each `option`'s `value` is the corresponding suggested value for the email entry box.
+Taking it a step further, you can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used email addresses more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The `list` attribute specifies the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each `option`'s `value` is the corresponding suggested value for the email entry box.
 
 ```html
 <input type="email" size="40" list="defaultEmails" />
@@ -202,17 +202,17 @@ Taking it a step further, you can provide a list of default options from which t
 
 {{EmbedLiveSample("Offering_suggested_values", 600, 40)}}
 
-With the {{HTMLElement("datalist")}} element and its {{HTMLElement("option")}}s in place, the browser will offer the specified values as potential values for the e-mail address; this is typically presented as a popup or drop-down menu containing the suggestions. While the specific user experience may vary from one browser to another, typically clicking in the edit box presents a drop-down of the suggested e-mail addresses. Then, as the user types, the list is filtered to show only matching values. Each typed character narrows down the list until the user makes a selection or types a custom value.
+With the {{HTMLElement("datalist")}} element and its {{HTMLElement("option")}}s in place, the browser will offer the specified values as potential values for the email address; this is typically presented as a popup or drop-down menu containing the suggestions. While the specific user experience may vary from one browser to another, typically clicking in the edit box presents a drop-down of the suggested email addresses. Then, as the user types, the list is filtered to show only matching values. Each typed character narrows down the list until the user makes a selection or types a custom value.
 
 ## Validation
 
-There are two levels of content validation available for `email` inputs. First, there's the standard level of validation offered to all {{HTMLElement("input")}}s, which automatically ensures that the contents meet the requirements to be a valid e-mail address. But there's also the option to add additional filtering to ensure that your own specialized needs are met, if you have any.
+There are two levels of content validation available for `email` inputs. First, there's the standard level of validation offered to all {{HTMLElement("input")}}s, which automatically ensures that the contents meet the requirements to be a valid email address. But there's also the option to add additional filtering to ensure that your own specialized needs are met, if you have any.
 
 > **Warning:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format.It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it completely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
 
 ### Basic validation
 
-Browsers automatically provide validation to ensure that only text that matches the standard format for Internet e-mail addresses is entered into the input box. Browsers use an algorithm equivalent to the following regular expression:
+Browsers automatically provide validation to ensure that only text that matches the standard format for Internet email addresses is entered into the input box. Browsers use an algorithm equivalent to the following regular expression:
 
 ```js
 /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
@@ -220,15 +220,15 @@ Browsers automatically provide validation to ensure that only text that matches 
 
 To learn more about how form validation works and how to take advantage of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether the current value is valid, see [Form data validation](/en-US/docs/Learn/Forms/Form_validation).
 
-> **Note:** There are known specification issues related to international domain names and the validation of e-mail addresses in HTML. See [W3C bug 15489](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489) for details.
+> **Note:** There are known specification issues related to international domain names and the validation of email addresses in HTML. See [W3C bug 15489](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489) for details.
 
 ### Pattern validation
 
-If you need the entered e-mail address to be restricted further than just "any string that looks like an e-mail address," you can use the {{htmlattrxref("pattern", "input")}} attribute to specify a {{Glossary("regular expression")}} the value must match for it to be valid. If the {{htmlattrxref("multiple", "input")}} attribute is specified, each individual item in the comma-delineated list of values must match the {{Glossary("regular expression")}}.
+If you need the entered email address to be restricted further than just "any string that looks like an email address," you can use the {{htmlattrxref("pattern", "input")}} attribute to specify a {{Glossary("regular expression")}} the value must match for it to be valid. If the {{htmlattrxref("multiple", "input")}} attribute is specified, each individual item in the comma-delineated list of values must match the {{Glossary("regular expression")}}.
 
-For example, let's say you're building a page for employees of Best Startup Ever, Inc. which will let them contact their IT department for help. In our simplified form, the user needs to enter their e-mail address and a message describing the problem they need help with. We want to ensure that not only does the user provide a valid e-mail address, but for security purposes, we require that the address be an internal corporate e-mail address.
+For example, let's say you're building a page for employees of Best Startup Ever, Inc. which will let them contact their IT department for help. In our simplified form, the user needs to enter their email address and a message describing the problem they need help with. We want to ensure that not only does the user provide a valid email address, but for security purposes, we require that the address be an internal corporate email address.
 
-Since inputs of type `email` validate against both the standard e-mail address validation _and_ the specified {{htmlattrxref("pattern", "input")}}, you can implement this easily. Let's see how:
+Since inputs of type `email` validate against both the standard email address validation _and_ the specified {{htmlattrxref("pattern", "input")}}, you can implement this easily. Let's see how:
 
 ```css hidden
 body {
@@ -255,7 +255,7 @@ label::after {
 ```html
 <form>
   <div class="emailBox">
-    <label for="emailAddress">Your e-mail address</label><br />
+    <label for="emailAddress">Your email address</label><br />
     <input
       id="emailAddress"
       type="email"
@@ -264,7 +264,7 @@ label::after {
       required
       placeholder="username@beststartupever.com"
       pattern=".+@beststartupever\.com"
-      title="Please provide only a Best Startup Ever corporate e-mail address" />
+      title="Please provide only a Best Startup Ever corporate email address" />
   </div>
 
   <div class="messageBox">
@@ -282,29 +282,29 @@ label::after {
 
 {{EmbedLiveSample("Pattern_validation", 700, 300)}}
 
-Our {{HTMLElement("form")}} contains one {{HTMLElement("input")}} of type `email` for the user's e-mail address, a {{HTMLElement("textarea")}} to enter their message for IT into, and an `<input>` of type [`"submit"`](/en-US/docs/Web/HTML/Element/input/submit), which creates a button to submit the form. Each text entry box has a {{HTMLElement("label")}} associated with it to let the user know what's expected of them.
+Our {{HTMLElement("form")}} contains one {{HTMLElement("input")}} of type `email` for the user's email address, a {{HTMLElement("textarea")}} to enter their message for IT into, and an `<input>` of type [`"submit"`](/en-US/docs/Web/HTML/Element/input/submit), which creates a button to submit the form. Each text entry box has a {{HTMLElement("label")}} associated with it to let the user know what's expected of them.
 
-Let's take a closer look at the e-mail address entry box. Its {{htmlattrxref("size", "input")}} and {{htmlattrxref("maxlength", "input")}} attributes are both set to 64 in order to show room for 64 characters worth of e-mail address, and to limit the number of characters actually entered to a maximum of 64. The {{htmlattrxref("required", "input")}} attribute is specified, making it mandatory that a valid e-mail address be provided.
+Let's take a closer look at the email address entry box. Its {{htmlattrxref("size", "input")}} and {{htmlattrxref("maxlength", "input")}} attributes are both set to 64 in order to show room for 64 characters worth of email address, and to limit the number of characters actually entered to a maximum of 64. The {{htmlattrxref("required", "input")}} attribute is specified, making it mandatory that a valid email address be provided.
 
-An appropriate {{htmlattrxref("placeholder", "input")}} is provided—`username@beststartupever.com`—to demonstrate what constitutes a valid entry. This string demonstrates both that an e-mail address should be entered, and suggests that it should be a corporate beststartupever.com account. This is in addition to the fact that using type `email` will validate the text to ensure that it's formatted like an e-mail address. If the text in the input box isn't an e-mail address, you'll get an error message that looks something like this:
+An appropriate {{htmlattrxref("placeholder", "input")}} is provided—`username@beststartupever.com`—to demonstrate what constitutes a valid entry. This string demonstrates both that an email address should be entered, and suggests that it should be a corporate beststartupever.com account. This is in addition to the fact that using type `email` will validate the text to ensure that it's formatted like an email address. If the text in the input box isn't an email address, you'll get an error message that looks something like this:
 
 ![Invalid email address in error state with a popout from the input reading 'please enter an email address'.](enter-valid-email-address.png)
 
-If we left things at that, we would at least be validating on legitimate e-mail addresses. But we want to go one step farther: we want to make sure that the e-mail address is in fact in the form "_username_@beststartupever.com". This is where we'll use {{htmlattrxref("pattern", "input")}}. We set `pattern` to `.+@beststartupever.com`. This simple regular expression requests a string that consists of at least one character of any kind, then an "@" followed by the domain name "beststartupever.com".
+If we left things at that, we would at least be validating on legitimate email addresses. But we want to go one step farther: we want to make sure that the email address is in fact in the form "_username_@beststartupever.com". This is where we'll use {{htmlattrxref("pattern", "input")}}. We set `pattern` to `.+@beststartupever.com`. This simple regular expression requests a string that consists of at least one character of any kind, then an "@" followed by the domain name "beststartupever.com".
 
-Note that this is not even close to an adequate filter for valid e-mail addresses; it would allow things such as " @beststartupever.com" (note the leading space) or "@@beststartupever.com", neither of which is valid. However, the browser runs both the standard e-mail address filter _and_ our custom pattern against the specified text. As a result, we wind up with a validation which says "make sure this resembles a valid e-mail address, and if it is, make sure it's also a beststartupever.com address."
+Note that this is not even close to an adequate filter for valid email addresses; it would allow things such as " @beststartupever.com" (note the leading space) or "@@beststartupever.com", neither of which is valid. However, the browser runs both the standard email address filter _and_ our custom pattern against the specified text. As a result, we wind up with a validation which says "make sure this resembles a valid email address, and if it is, make sure it's also a beststartupever.com address."
 
-It's advisable to use the {{htmlattrxref("title")}} attribute along with `pattern`. If you do, the `title` _must_ describe the pattern. That is, it should explain what format the data should take on, rather than any other information. That's because the `title` may be displayed or spoken as part of a validation error message. For example, the browser might present the message "The entered text doesn't match the required pattern." followed by your specified `title`. If your `title` is something like "E-mail address", the result would be the message "The entered text doesn't match the required pattern. E-mail address", which isn't very good.
+It's advisable to use the {{htmlattrxref("title")}} attribute along with `pattern`. If you do, the `title` _must_ describe the pattern. That is, it should explain what format the data should take on, rather than any other information. That's because the `title` may be displayed or spoken as part of a validation error message. For example, the browser might present the message "The entered text doesn't match the required pattern." followed by your specified `title`. If your `title` is something like "Email address", the result would be the message "The entered text doesn't match the required pattern. Email address", which isn't very good.
 
-That's why, instead, we specify the string "Please provide only a Best Startup Ever corporate e-mail address" By doing that, the resulting full error message might be something like "The entered text doesn't match the required pattern. Please provide only a Best Startup Ever corporate e-mail address."
+That's why, instead, we specify the string "Please provide only a Best Startup Ever corporate email address" By doing that, the resulting full error message might be something like "The entered text doesn't match the required pattern. Please provide only a Best Startup Ever corporate email address."
 
-![A valid email address, but the input is in error state with a popout from the input reading 'The entered text doesn't match the required pattern. Please provide only a Best Startup Ever corporate e-mail address.'](email-pattern-match-bad.png)
+![A valid email address, but the input is in error state with a popout from the input reading 'The entered text doesn't match the required pattern. Please provide only a Best Startup Ever corporate email address.'](email-pattern-match-bad.png)
 
 > **Note:** If you run into trouble while writing your validation regular expressions and they're not working properly, check your browser's console; there may be helpful error messages there to aid you in solving the problem.
 
 ## Examples
 
-Here we have an email input with the ID `emailAddress` which is allowed to be up to a maximum of 256 characters long. The input box itself is physically 64 characters wide, and displays the text `user@example.gov` as a placeholder anytime the field is empty. In addition, by using the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attribute, the box is configured to allow the user to enter zero or more e-mail addresses, separated by commas, as described in [Allowing multiple e-mail addresses](#allowing_multiple_e-mail_addresses). As a final touch, the [`list`](/en-US/docs/Web/HTML/Attributes/list) attribute contains the ID of a {{HTMLElement("datalist")}} whose {{HTMLElement("option")}}s specify a set of suggested values the user can choose from.
+Here we have an email input with the ID `emailAddress` which is allowed to be up to a maximum of 256 characters long. The input box itself is physically 64 characters wide, and displays the text `user@example.gov` as a placeholder anytime the field is empty. In addition, by using the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attribute, the box is configured to allow the user to enter zero or more email addresses, separated by commas, as described in [Allowing multiple email addresses](#allowing_multiple_email_addresses). As a final touch, the [`list`](/en-US/docs/Web/HTML/Attributes/list) attribute contains the ID of a {{HTMLElement("datalist")}} whose {{HTMLElement("option")}}s specify a set of suggested values the user can choose from.
 
 As an added touch, the {{HTMLElement("label")}} element is used to establish a label for the email entry box, with its {{htmlattrxref("for", "label")}} attribute referencing the `emailAddress` ID of the {{HTMLElement("input")}} element. By associating the two elements in this way, clicking on the label will focus the input element.
 
@@ -337,7 +337,7 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A string representing an e-mail address, or
+        A string representing an email address, or
         empty
       </td>
     </tr>
