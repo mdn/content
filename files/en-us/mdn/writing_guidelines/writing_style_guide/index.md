@@ -142,7 +142,7 @@ The following checklist is good to keep in mind while writing and reviewing cont
 
   - **Avoid stubs**: Obviously, if the article is a stub or is missing content, add it. We try to avoid outright "stub" pages on MDN web Docs, although they do exist, but there are plenty of pages that are missing large portions of their content.
   - **Review page structure**: Review the page to ensure that it's structured properly for the [type of page](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types) it is <!--link to be revised-->. Be sure every section that it should have is present and has appropriate content.
-  - **Ensure completeness**: Review sections to ensure that no information is missing. Ensure that all parameters listed and explained. Ensure that any exceptions are covered — this is a particularly common place where content is missing.
+  - **Ensure completeness**: Review sections to ensure that no information is missing. Ensure that all parameters are listed and explained. Ensure that any exceptions are covered — this is a particularly common place where content is missing.
   - **Ensure all concepts are fully fleshed-out**: It's easy to give a quick explanation of something, but make sure that all the nuances are covered. Are there special cases? Are there any known restrictions that the reader might need to know about?
   - **Add examples**: There should be examples covering all parameters or at least the parameters (or properties, or attributes) that users from the beginner-through-intermediate range are likely to use, as well as any advanced ones that require extra explanation. Each example should be preceded with an overview of what the example will do, what additional knowledge might be needed to understand it, and so forth. After the example (or interspersed among pieces of the example) should be text explaining how the code works. Don't skimp on the details and the handling of errors in examples. Keep in mind that users _will_ copy and paste your example to use in their own projects, and your code _will_ wind up used on production sites! See our [code example guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide) for more useful information. <!--link to be revised-->
   - **Explain use cases**: If there are particularly common use cases for the feature being described, talk about them! Instead of assuming that a user will figure out that the method being documented can be used to solve a common development problem, actually add a section about that use case with an example and text explaining how the example works.
@@ -157,7 +157,7 @@ Other than writing grammatically correct sentences in English, we recommend you 
 
 ### Abbreviations and acronyms
 
-An abbreviation is a shortened version of a longer word, while an acronym is a new word created using the first letter of each word from a phrase. This section describes are guidelines for abbreviations and acronyms.
+An abbreviation is a shortened version of a longer word, while an acronym is a new word created using the first letter of each word from a phrase. This section describes guidelines for abbreviations and acronyms.
 
 - **Expansions**: On the first mention of a term on a page, expand acronyms that are likely to be unfamiliar to users. When in doubt, expand it—or better yet, link it to the article or [glossary](/en-US/docs/Glossary) entry describing the technology.
 
@@ -222,7 +222,7 @@ Keyboard keys should use sentence-style capitalization, not all-caps capitalizat
 For example, "<kbd>Enter</kbd>" not "<kbd>ENTER</kbd>".
 The only exception is that you can use "<kbd>ESC</kbd>" to abbreviate the "<kbd>Escape</kbd>" key.
 
-Certain words should always be capitalized (such as trademarks which include capital letters), or words derived from the name of a person (unless it's being used within code, and code's syntax requires lower-casing).
+Certain words should always be capitalized, such as trademarks that include capital letters or words that derive from the name of a person (unless the word is being used within code and the code syntax requires lower-casing).
 Some examples include:
 
 - Boolean (named for English mathematician and logician [George Boole](https://en.wikipedia.org/wiki/George_Boole))
@@ -380,7 +380,7 @@ A page on MDN Web Docs can contain more than one code example. The following lis
 
 - Each piece of example code should include:
   - **Heading**: A short `###` (`<h3>`) heading to describe the scenario being demonstrated through the code example. For example, "Using offset printing" and "Reverting to style in previous layer".
-  - **Description**: A short description preceding the example code that states the specifics of the example to which you want to draw reader's attention. For example, "In the example below, two cascade layers are defined in the CSS, `base` and `special`."
+  - **Description**: A short description preceding the example code that states the specifics of the example to which you want to draw the reader's attention. For example, "In the example below, two cascade layers are defined in the CSS, `base` and `special`."
   - **Result explanation**: An explanation after the example code that describes the result and how the code works.
 - In general, the code example should not only demonstrate the syntax of the feature and how it is used, but also highlight the purpose and situations in which a web developer might want or need to use the feature.
 - If you are working with a large piece of example code, it may make sense to break it up into smaller logical parts so that they can be described individually.
@@ -439,7 +439,7 @@ Keep the following dos and don'ts in mind while creating headings for subsection
 
 ### Images and other media
 
-If you include images or other media in on a page, follow these guidelines:
+If you include images or other media on a page, follow these guidelines:
 
 - Make sure the media license allows you to use them. Try to use media that has a very permissive license such as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) or at least one that is compatible with our general content license — [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
 - For images, run them through <https://tinypng.com> or <https://imageoptim.com> to reduce the page weight.
@@ -450,7 +450,7 @@ If you include images or other media in on a page, follow these guidelines:
 
 Lists should be formatted and structured consistently across all pages.
 Individual list items should be written with suitable punctuation, regardless of the list format.
-However, depending on the type of list you are creating, you will want to adjust your writing as described in the sections below. In both the cases, include a lead-in sentence that describes the information in the list.
+However, depending on the type of list you are creating, you will want to adjust your writing as described in the sections below. In both cases, include a lead-in sentence that describes the information in the list.
 
 - **Bulleted lists**: Bulleted lists should be used to group related pieces of concise information. Each item in the list should follow a similar sentence structure. Phrases and sentences in bulleted lists should include standard punctuation. A period must appear at the end of each sentence in a bulleted list, including the item's final sentence, just as would be expected in a paragraph.
 
