@@ -42,7 +42,7 @@ self.addEventListener("connect", (event) => {
     const workerTaskEnd = performance.now();
   };
 
-  // Send worker-relative timestamps to window context
+  // Convert worker-relative timestamps to absolute timestamps, then send to the window
   port.postMessage({
     startTime: workerTaskStart + performance.timeOrigin,
     endTime: workerTaskEnd + performance.timeOrigin,
@@ -55,7 +55,7 @@ In main.js
 ```js
 const worker = new SharedWorker("worker.js");
 worker.port.addEventListener("message", (event) => {
-  // Translate worker-relative timestamps into window's time origin
+  // Convert absolute timestamps into window-relative timestamps
   const workerTaskStart = event.data.startTime - performance.timeOrigin;
   const workerTaskEnd = event.data.endTime - performance.timeOrigin;
 
