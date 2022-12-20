@@ -334,7 +334,7 @@ The list below describes some of the common situations where we need to be aware
 Hyphenated compounds should be used when the last letter of the prefix is a vowel and is the same as the first letter of the root.
 
 - **Correct**: email, re-elect, co-op
-- **Incorrect**: e-mail, reelect, coop
+- **Incorrect**: e&#45;mail, reelect, coop
 
 ### Spelling
 
