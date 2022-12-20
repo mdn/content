@@ -33,7 +33,7 @@ To account for the different time origins in window and worker contexts, you can
 In worker.js
 
 ```js
-onconnect = function (event) {
+self.addEventListener("connect", (event) => {
   const port = event.ports[0];
 
   port.onmessage = function (event) {
@@ -47,21 +47,21 @@ onconnect = function (event) {
     startTime: workerTaskStart + performance.timeOrigin,
     endTime: workerTaskEnd + performance.timeOrigin,
   });
-};
+});
 ```
 
 In main.js
 
 ```js
 const worker = new SharedWorker("worker.js");
-worker.port.onmessage = function (event) {
+worker.port.addEventListener("message", (event) => {
   // Translate worker-relative timestamps into window's time origin
   const workerTaskStart = event.data.startTime - performance.timeOrigin;
   const workerTaskEnd = event.data.endTime - performance.timeOrigin;
 
   console.log("Worker task start: ", workerTaskStart);
   console.log("Worker task end: ", workerTaskEnd);
-};
+});
 ```
 
 ## Specifications
