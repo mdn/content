@@ -39,7 +39,8 @@ scroll(options)
     - `left`
       - : Specifies the number of pixels along the X axis to scroll the window or element.
     - `behavior`
-      - : Specifies whether the scrolling should animate smoothly (`smooth`), or happen instantly in a single jump (`auto`, the default value).
+      - : `auto` (default): The scrolling happens with the same value of style [scroll-behavior](/en-US/docs/Web/CSS/scroll-behavior), which is set or inherited on the scrolling element.
+      - : `smooth`:The scrolling animates smoothly.
 
 ### Return value
 
