@@ -29,7 +29,7 @@ open(url, target, windowFeatures)
 
 - `url` {{optional_inline}}
 
-  - : A string indicating the URL or path of the resource to be loaded. If an empty string (`""`) is specified or this parameter is omitted, a blank page is opened into the targeted browsing context.
+  - : A string indicating the URL or path of the resource to be loaded. If an empty string (`''`) is specified or this parameter is omitted, a blank page is opened into the targeted browsing context.
 
 - `target` {{optional_inline}}
 
