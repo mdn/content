@@ -147,10 +147,6 @@
     "Contact Picker API": {
       "overview": ["Contact Picker API"],
       "interfaces": ["ContactsManager"],
-      "methods": [
-        "ContactsManager.select()",
-        "ContactsManager.getProperties()"
-      ],
       "properties": ["Navigator.contacts"],
       "events": []
     },
