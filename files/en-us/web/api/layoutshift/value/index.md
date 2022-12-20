@@ -9,13 +9,13 @@ tags:
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}
 
-The **`value`** readonly property of the {{domxref("LayoutShift")}} interface returns the layout shift score calculated by the impact fraction (fraction of the viewport that was shifted) times the distance fraction (distance moved as a fraction of viewport).
+The **`value`** read-only property of the {{domxref("LayoutShift")}} interface returns the layout shift score calculated as the impact fraction (fraction of the viewport that was shifted) multiplied by the distance fraction (distance moved as a fraction of viewport).
 
 ## Value
 
 A number between `0.0` and `1.0` indicating the layout shift score.
 
-It is calculated by the impact fraction (fraction of the viewport that was shifted) times the distance fraction (distance moved as a fraction of viewport).
+It is calculated as the impact fraction (fraction of the viewport that was shifted) multiplied by the distance fraction (distance moved as a fraction of viewport).
 
 ```plain
 layout shift score = impact fraction * distance fraction

@@ -31,8 +31,8 @@ const observer = new PerformanceObserver((list) => {
       cumulativeLayoutShiftScore += entry.value;
       console.log("Current CLS value:", cumulativeLayoutShiftScore, entry);
       if (entry.sources) {
-        for (const { node, curRect, prevRect } of entry.sources)
-          console.log("Shift source:", node, { curRect, prevRect });
+        for (const { node, currentRect, previousRect } of entry.sources)
+          console.log("Shift source:", node, { currentRect, previousRect });
       }
     }
   }

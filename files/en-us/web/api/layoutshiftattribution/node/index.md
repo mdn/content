@@ -14,7 +14,7 @@ browser-compat: api.LayoutShiftAttribution.node
 
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
-The **`node`** read-only property of the {{domxref("LayoutShiftAttribution")}} interface returns a {{domxref("node")}} representing the object that has shifted.
+The **`node`** read-only property of the {{domxref("LayoutShiftAttribution")}} interface returns a {{domxref("Node")}} representing the object that has shifted.
 
 ## Value
 

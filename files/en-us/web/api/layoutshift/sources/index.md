@@ -9,7 +9,7 @@ tags:
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}
 
-The **`sources`** readonly property of the {{domxref("LayoutShift")}} interface returns an array of {{domxref("LayoutShiftAttribution")}} objects that indicate the DOM elements that moved during the layout shift.
+The **`sources`** read-only property of the {{domxref("LayoutShift")}} interface returns an array of {{domxref("LayoutShiftAttribution")}} objects that indicate the DOM elements that moved during the layout shift.
 
 ## Value
 

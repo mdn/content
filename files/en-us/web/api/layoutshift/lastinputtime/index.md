@@ -9,11 +9,11 @@ tags:
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}
 
-The **`lastInputTime`** readonly property of the {{domxref("LayoutShift")}} interface returns the time of the most recent excluding input or `0` if no excluding input has occurred.
+The **`lastInputTime`** read-only property of the {{domxref("LayoutShift")}} interface returns the time of the most recent excluding input or `0` if no excluding input has occurred.
 
-Excluding inputs are:
+Layout shifts are only bad if the user wasn't expecting them. So the [Cumulative Layout Shift (CLS)](/en-US/docs/Glossary/Cumulative_Layout_Shift) metric excludes shifts that occurred soon after certain user interactions. These interactions are called _excluding inputs_. Excluding inputs are:
 
-- Any events which signals a user's active interactive with the document ([`mousedown`](/en-US/docs/Web/API/Element/mousedown_event), [`keydown`](/en-US/docs/Web/API/Element/keydown_event), [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event))
+- Any events which signal a user's active interactive with the document: ([`mousedown`](/en-US/docs/Web/API/Element/mousedown_event), [`keydown`](/en-US/docs/Web/API/Element/keydown_event), and [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event))
 - Any events which directly changes the size of the viewport.
 - [`change`](/en-US/docs/Web/API/HTMLElement/change_event) events.
 
