@@ -123,7 +123,7 @@ The service worker does not install until the code inside `waitUntil` is execute
 
 `caches` is a special {{domxref("CacheStorage")}} object available in the scope of the given Service Worker to enable saving data — saving to [web storage](/en-US/docs/Web/API/Web_Storage_API) won't work, because web storage is synchronous. With Service Workers, we use the Cache API instead.
 
-Here, we open a cache with a given name, then add all the files our app uses to the cache, so they are available next time it loads (identified by request URL).
+Here, we open a cache with a given name, then add all the files our app uses to the cache, so they are available next time it loads. Resources are identified by their request URL, which is relative to the worker's {{domxref("WorkerGlobalScope.location", "location", "", 1)}}.
 
 You may notice we haven't cached `game.js`. This is the file that contains the data we use when displaying our games. In reality this data would most likely come from an API endpoint or database and caching the data would mean updating it periodically when there was network connectivity. We won't go into that here, but the {{domxref('Web Periodic Background Synchronization API','Periodic Background Sync API')}} is good further reading on this topic.
 

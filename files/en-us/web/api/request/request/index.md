@@ -29,8 +29,7 @@ new Request(input, options)
 
   - : Defines the resource that you wish to fetch. This can either be:
 
-    - A string containing the direct URL of the resource you want to
-      fetch.
+    - A string containing the URL of the resource you want to fetch. The URL may be relative to the base URL, which is the document's {{domxref("Node.baseURI", "baseURI")}} in a window context, or {{domxref("WorkerGlobalScope.location")}} in a worker context.
     - A {{domxref("Request")}} object, effectively creating a copy. Note the following
       behavioral updates to retain security while making the constructor less likely to
       throw exceptions:
