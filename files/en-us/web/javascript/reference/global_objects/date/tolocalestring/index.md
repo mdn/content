@@ -163,18 +163,11 @@ Most of the time, the formatting returned by `toLocaleString()` is
 consistent. However, this might change in the future, and isn't guaranteed for all
 languages; output variations are by design, and allowed by the specification.
 
-Most notably, the IE and Edge browsers insert bidirectional control characters around
+Most notably, the IE browsers insert bidirectional control characters around
 dates, so the output text will flow properly when concatenated with other text.
 
 For this reason, you cannot expect to be able to compare the results of
-`toLocaleString()` to a static value:
-
-```js example-bad
-"1/1/2019, 01:00:00" ===
-  new Date("2019-01-01T01:00:00Z").toLocaleString("en-US");
-// true in Firefox and others
-// false in IE and Edge
-```
+`toLocaleString()` to a static value.
 
 > **Note:** See also this
 > [StackOverflow thread](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)
