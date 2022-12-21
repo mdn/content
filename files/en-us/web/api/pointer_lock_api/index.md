@@ -79,7 +79,6 @@ if (document.pointerLockElement === canvas) {
 The {{domxref("Document.exitPointerLock()")}} method is used to exit pointer lock, and like {{domxref("Element.requestPointerLock","requestPointerLock")}}, works asynchronously using the {{domxref("Document/pointerlockchange_event", "pointerlockchange")}} and {{domxref("Document/pointerlockerror_event", "pointerlockerror")}} events, which you'll see more about below.
 
 ```js
-// Attempt to unlock
 document.exitPointerLock();
 ```
 
@@ -149,8 +148,6 @@ canvas.onclick = () => {
 Now for the dedicated pointer lock event listener: `pointerlockchange`. When this occurs, we run a function called `lockChangeAlert()` to handle the change.
 
 ```js
-// pointer lock event listener
-
 document.addEventListener('pointerlockchange', lockChangeAlert, false);
 ```
 
