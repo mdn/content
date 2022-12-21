@@ -52,6 +52,8 @@ A string representing the given date according to language-specific conventions.
 
 In implementations with `Intl.DateTimeFormat`, this is equivalent to `new Intl.DateTimeFormat(locales, options).format(date)`.
 
+> **Note:** Most of the time, the formatting returned by `toLocaleString()` is consistent. However, the output may vary with time, language, and implementation — output variations are by design and allowed by the specification. You should not compare the results of `toLocaleString()` to static values.
+
 ## Examples
 
 ### Using toLocaleString()
@@ -156,13 +158,6 @@ console.log(date.toLocaleString("en-US", options));
 console.log(date.toLocaleString("en-US", { hour12: false }));
 // "12/19/2012, 19:00:00"
 ```
-
-### Avoid comparing formatted date values to static values
-
-Most of the time, the formatting returned by `toLocaleString()` is
-consistent. However, this might change in the future, and isn't guaranteed for all
-languages; output variations are by design, and allowed by the specification.
-You should not compare the results of `toLocaleString()` to static values.
 
 ## Specifications
 
