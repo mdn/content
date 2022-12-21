@@ -1,6 +1,7 @@
 ---
 title: void operator
 slug: Web/JavaScript/Reference/Operators/void
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
@@ -12,7 +13,7 @@ browser-compat: javascript.operators.void
 
 {{jsSidebar("Operators")}}
 
-The **`void` operator** evaluates the given
+The **`void`** operator evaluates the given
 `expression` and then returns {{jsxref("undefined")}}.
 
 {{EmbedInteractiveExample("pages/js/expressions-voidoperator.html", "taller")}}

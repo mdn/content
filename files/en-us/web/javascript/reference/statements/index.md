@@ -1,6 +1,7 @@
 ---
 title: Statements and declarations
 slug: Web/JavaScript/Reference/Statements
+page-type: landing-page
 tags:
   - JavaScript
   - Landing page
@@ -73,9 +74,9 @@ For an alphabetical listing see the sidebar on the left.
 
 ### Others
 
-- {{jsxref("Statements/Empty", "Empty","",1)}}
+- {{jsxref("Statements/Empty", "Empty", "", 1)}}
   - : An empty statement is used to provide no statement, although the JavaScript syntax would expect one.
-- {{jsxref("Statements/block", "Block","",1)}}
+- {{jsxref("Statements/block", "Block", "", 1)}}
   - : A block statement is used to group zero or more statements. The block is delimited by a pair of curly brackets.
 - {{jsxref("Statements/debugger", "debugger")}}
   - : Invokes any available debugging functionality. If no debugging functionality is available, this statement has no effect.
@@ -85,7 +86,7 @@ For an alphabetical listing see the sidebar on the left.
   - : Used to import functions exported from an external module, another script.
 - {{jsxref("Statements/label", "label", "", 1)}}
   - : Provides a statement with an identifier that you can refer to using a `break` or `continue` statement.
-- {{jsxref("Statements/with", "with")}}
+- {{jsxref("Statements/with", "with")}} {{Deprecated_Inline}}
   - : Extends the scope chain for a statement.
 
 ## Difference between statements and declarations

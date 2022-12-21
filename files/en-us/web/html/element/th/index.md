@@ -24,55 +24,6 @@ The **`<th>`** [HTML](/en-US/docs/Web/HTML) element defines a cell as header of 
 
 {{EmbedInteractiveExample("pages/tabbed/th.html","tabbed-taller")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>None.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >, but with no header, footer, sectioning content, or heading content
-        descendants.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>
-        The start tag is mandatory.<br />The end tag may be omitted, if it is
-        immediately followed by a {{HTMLElement("th")}} or
-        {{HTMLElement("td")}} element or if there are no more data in its
-        parent element.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>A {{HTMLElement("tr")}} element.</td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        {{ARIARole("columnheader")}} or {{ARIARole("rowheader")}}
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>Any</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLTableCellElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
@@ -163,6 +114,57 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ## Examples
 
 See {{HTMLElement("table")}} for examples on `<th>`.
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >, but with no header, footer, sectioning content, or heading content
+        descendants.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>
+        The start tag is mandatory.<br />The end tag may be omitted, if it is
+        immediately followed by a {{HTMLElement("th")}} or
+        {{HTMLElement("td")}} element or if there are no more data in its
+        parent element.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>A {{HTMLElement("tr")}} element.</td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        {{ARIARole("columnheader")}} or {{ARIARole("rowheader")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLTableCellElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

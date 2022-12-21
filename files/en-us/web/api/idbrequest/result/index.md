@@ -18,7 +18,7 @@ browser-compat: api.IDBRequest.result
 
 The **`result`** read-only property of the
 {{domxref("IDBRequest")}} interface returns the result of the request. If the request
-failed and the result is not available, an `InvalidStateError` exception is
+is not completed, the result is not available and an `InvalidStateError` exception is
 thrown.
 
 {{AvailableInWorkers}}

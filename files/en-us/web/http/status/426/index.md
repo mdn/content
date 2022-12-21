@@ -21,7 +21,7 @@ required protocol(s).
 
 ## Status
 
-```
+```http
 426 Upgrade Required
 ```
 

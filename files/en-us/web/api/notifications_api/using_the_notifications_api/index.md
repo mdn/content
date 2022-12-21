@@ -208,9 +208,9 @@ window.addEventListener('load', () => {
         // Thanks to the tag, we should only see the "Hi! 9" notification
         const n = new Notification(`Hi! ${i}`, {tag: 'soManyNotification'});
         if (i === 9) {
-          i++;
           clearInterval(interval);
         }
+        i++;
       }, 200);
     } else if (Notification && Notification.permission !== "denied") {
       // If the user hasn't told if they want to be notified or not
@@ -225,9 +225,9 @@ window.addEventListener('load', () => {
             // Thanks to the tag, we should only see the "Hi! 9" notification
             const n = new Notification(`Hi! ${i}`, {tag: 'soManyNotification'});
             if (i === 9) {
-              i++;
               clearInterval(interval);
             }
+            i++;
           }, 200);
         } else {
           // Otherwise, we can fallback to a regular modal alert

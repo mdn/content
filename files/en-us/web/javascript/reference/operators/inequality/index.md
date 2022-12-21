@@ -1,6 +1,7 @@
 ---
 title: Inequality (!=)
 slug: Web/JavaScript/Reference/Operators/Inequality
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
@@ -11,7 +12,7 @@ browser-compat: javascript.operators.inequality
 
 {{jsSidebar("Operators")}}
 
-The inequality operator (`!=`) checks whether its two operands are not
+The **inequality (`!=`)** operator checks whether its two operands are not
 equal, returning a Boolean result.
 Unlike the [strict inequality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality) operator,
 it attempts to convert and compare operands that are of different types.

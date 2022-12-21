@@ -59,7 +59,7 @@ where `<policy-directive>` consists of:
     > you should use the {{CSP("frame-src")}} and {{CSP("worker-src")}} directives, respectively.
 
 - {{CSP("connect-src")}}
-  - : Restricts the URLs which can be loaded using script interfaces
+  - : Restricts the URLs which can be loaded using script interfaces.
 - {{CSP("default-src")}}
   - : Serves as a fallback for the other {{Glossary("Fetch directive", "fetch
     directives")}}.
@@ -170,7 +170,7 @@ Reporting directives control the reporting process of CSP violations. See also t
 - {{CSP("require-trusted-types-for")}} {{experimental_inline}}
   - : Enforces [Trusted Types](https://w3c.github.io/trusted-types/dist/spec/) at the DOM XSS injection sinks.
 - {{CSP("trusted-types")}} {{experimental_inline}}
-  - : Used to specify an allow-list of [Trusted Types](https://w3c.github.io/trusted-types/dist/spec/)
+  - : Used to specify an allowlist of [Trusted Types](https://w3c.github.io/trusted-types/dist/spec/)
     policies. Trusted Types allows applications to lock down DOM XSS injection sinks to
     only accept non-spoofable, typed values in place of strings.
 - {{CSP("upgrade-insecure-requests")}}

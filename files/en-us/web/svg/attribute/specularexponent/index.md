@@ -1,6 +1,7 @@
 ---
 title: specularExponent
 slug: Web/SVG/Attribute/specularExponent
+page-type: svg-attribute
 tags:
   - Filters
   - SVG

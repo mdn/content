@@ -1,6 +1,7 @@
 ---
 title: Less than or equal (<=)
 slug: Web/JavaScript/Reference/Operators/Less_than_or_equal
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
@@ -11,7 +12,7 @@ browser-compat: javascript.operators.less_than_or_equal
 
 {{jsSidebar("Operators")}}
 
-The less than or equal operator (`<=`) returns `true` if the left operand is less than or equal to the right operand, and `false` otherwise.
+The **less than or equal (`<=`)** operator returns `true` if the left operand is less than or equal to the right operand, and `false` otherwise.
 
 {{EmbedInteractiveExample("pages/js/expressions-less-than-or-equal.html")}}
 

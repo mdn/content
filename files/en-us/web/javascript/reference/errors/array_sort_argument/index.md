@@ -1,6 +1,7 @@
 ---
 title: 'TypeError: invalid Array.prototype.sort argument'
 slug: Web/JavaScript/Reference/Errors/Array_sort_argument
+page-type: javascript-error
 tags:
   - Error
   - Errors

@@ -71,7 +71,7 @@ want to start the curve at the middle of the \[-1.0; 1.0] range.
 The second and subsequent values are sine and cosine components. You can think of it as
 the result of a Fourier transform, where you get frequency domain values from time
 domain value. Here, with `createPeriodicWave()`, you specify the frequencies,
-and the browser performs a an inverse Fourier transform to get a time domain buffer for
+and the browser performs an inverse Fourier transform to get a time domain buffer for
 the frequency of the oscillator. Here, we only set one component at full volume (1.0) on
 the fundamental tone, so we get a sine wave.
 

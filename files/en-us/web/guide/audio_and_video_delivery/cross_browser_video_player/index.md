@@ -8,6 +8,8 @@ tags:
   - full screen
 ---
 
+{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
+
 This article describes a simple HTML video player that uses the Media and Fullscreen APIs and works across most major desktop and mobile browsers. As well as working fullscreen, the player features custom controls rather than just using the browser defaults. The player controls themselves won't be styled beyond the basics required to get them working; full styling of the player will be taken care of in a future article.
 
 ## Working example
@@ -103,7 +105,7 @@ HTML comes with a JavaScript [Media API](/en-US/docs/Web/API/HTMLMediaElement) t
 
 Before dealing with the individual buttons, a number of initialization calls are required.
 
-To begin with, it's a good idea to first check if the browser actually supports the {{ htmlelement("video") }} element and to only setup the custom controls if it does. This is done by checking if a created {{ htmlelement("video") }} element supports [the `canPlayType()` method](https://html.spec.whatwg.org/multipage/media.html#dom-navigator-canplaytype), which any supported HTML {{ htmlelement("video") }} element should.
+To begin with, it's a good idea to first check if the browser actually supports the {{ htmlelement("video") }} element and to only set up the custom controls if it does. This is done by checking if a created {{ htmlelement("video") }} element supports [the `canPlayType()` method](https://html.spec.whatwg.org/multipage/media.html#dom-navigator-canplaytype), which any supported HTML {{ htmlelement("video") }} element should.
 
 ```js
 const supportsVideo = !!document.createElement('video').canPlayType;
@@ -158,7 +160,7 @@ playpause.addEventListener('click', (e) => {
 });
 ```
 
-When a `click` event is detected on the play/pause button, the handler first of all checks if the video is currently paused or has ended (via the Media API's `paused` and `ended` attributes); if so, it uses the `play()` method to playback the video. Otherwise the video must be playing, so it is paused using the `pause()` method.
+When a `click` event is detected on the play/pause button, the handler first of all checks if the video is currently paused or has ended (via the Media API's `paused` and `ended` attributes); if so, it uses the `play()` method to play back the video. Otherwise the video must be playing, so it is paused using the `pause()` method.
 
 ### Stop
 
@@ -263,7 +265,7 @@ This piece of code uses the clicked position to (roughly) work out where in the 
 
 The Fullscreen API should be straight forward to use: the user clicks a button, if the video is in fullscreen mode: cancel it, otherwise enter fullscreen mode.
 
-Alas it has been implemented in browsers in a number of weird and wonderful ways which requires a lot of extra code to check for various prefixed versions of attributes and methods so as to call the right one.
+Alas it has been implemented in browsers in a number of weird and wonderful ways which requires a lot of extra code to check for various prefixed versions of attributes and methods to call the right one.
 
 The visibility of the fullscreen button depends on whether the browser supports the Fullscreen API and that it is enabled:
 

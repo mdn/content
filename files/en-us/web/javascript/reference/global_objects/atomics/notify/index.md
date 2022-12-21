@@ -1,6 +1,7 @@
 ---
 title: Atomics.notify()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
+page-type: javascript-static-method
 tags:
   - Atomics
   - JavaScript

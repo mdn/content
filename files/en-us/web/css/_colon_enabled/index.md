@@ -20,7 +20,7 @@ The **`:enabled`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS
 
 ## Syntax
 
-```
+```plain
 :enabled
 ```
 

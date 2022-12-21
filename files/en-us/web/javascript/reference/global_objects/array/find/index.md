@@ -1,6 +1,7 @@
 ---
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
+page-type: javascript-instance-method
 tags:
   - Array
   - ECMAScript 2015
@@ -187,9 +188,8 @@ const arrayLike = {
   1: 7.3,
   2: 4,
 };
-console.log(
-  Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x)),
-); // 7.3
+console.log(Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x)));
+// 7.3
 ```
 
 ## Specifications

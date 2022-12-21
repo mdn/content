@@ -353,6 +353,26 @@ there are some pattern representations that parse to the same underlying
 meaning, like `foo` and `{foo}`. Such cases are normalized to the simplest form.
 In this case `{foo}` gets changed to `foo`.
 
+## Case sensitivity
+
+The URL Pattern API treats many parts of the URL as case-sensitive by default when matching. In contrast, many client-side JavaScript frameworks use case-insensitive URL matching. An `ignoreCase` option is available on the {{domxref("URLPattern.URLPattern", "URLPattern()")}} constructor to enable case-insensitive matching if desired.
+
+```js
+// Case-sensitive matching by default
+const pattern = new URLPattern('https://events.com/2022/feb/*');
+console.log(pattern.test('https://events.com/2022/feb/xc44rsz')); // true
+console.log(pattern.test('https://events.com/2022/Feb/xc44rsz')); // false
+```
+
+Setting the `ignoreCase` option to `true` in the constructor switches all matching operations to case-insensitive for the given pattern:
+
+```js
+// Case-insensitive matching
+const pattern = new URLPattern('https://events.com/2022/feb/*', { ignoreCase : true });
+console.log(pattern.test('https://events.com/2022/feb/xc44rsz')); // true
+console.log(pattern.test('https://events.com/2022/Feb/xc44rsz')); // true
+```
+
 ## Examples
 
 ### Filter on a specific URL component

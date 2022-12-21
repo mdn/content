@@ -1,6 +1,7 @@
 ---
 title: super
 slug: Web/JavaScript/Reference/Operators/super
+page-type: javascript-language-feature
 tags:
   - Classes
   - ECMAScript 2015
@@ -13,7 +14,7 @@ browser-compat: javascript.operators.super
 
 {{jsSidebar("Operators")}}
 
-The **super** keyword is used to access properties on an object literal or class's [[Prototype]], or invoke a superclass's constructor.
+The **`super`** keyword is used to access properties on an object literal or class's [[Prototype]], or invoke a superclass's constructor.
 
 The `super.prop` and `super[expr]` expressions are valid in any [method definition](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) in both [classes](/en-US/docs/Web/JavaScript/Reference/Classes) and [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer). The `super(...args)` expression is valid in class constructors.
 

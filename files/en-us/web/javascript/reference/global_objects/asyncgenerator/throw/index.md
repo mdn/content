@@ -1,6 +1,7 @@
 ---
 title: AsyncGenerator.prototype.throw()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator/throw
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2018
   - AsyncGenerator

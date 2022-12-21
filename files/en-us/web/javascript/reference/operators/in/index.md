@@ -1,6 +1,7 @@
 ---
 title: in operator
 slug: Web/JavaScript/Reference/Operators/in
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
@@ -11,7 +12,7 @@ browser-compat: javascript.operators.in
 
 {{jsSidebar("Operators")}}
 
-The **`in` operator** returns `true` if the specified property is in the specified object or its prototype chain.
+The **`in`** operator returns `true` if the specified property is in the specified object or its prototype chain.
 
 {{EmbedInteractiveExample("pages/js/expressions-inoperator.html")}}
 

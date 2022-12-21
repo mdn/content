@@ -1,6 +1,7 @@
 ---
 title: Object initializer
 slug: Web/JavaScript/Reference/Operators/Object_initializer
+page-type: javascript-language-feature
 tags:
   - ECMAScript 2015
   - JSON
@@ -18,7 +19,7 @@ browser-compat: javascript.operators.object_initializer
 
 {{JsSidebar("Operators")}}
 
-Objects can be initialized using [`new Object()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object), [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create), or using the _literal_ notation (_initializer_ notation). An object initializer is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`).
+An **object initializer** is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`). Objects can also be initialized using [`new Object()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object) or [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create).
 
 {{EmbedInteractiveExample("pages/js/expressions-objectinitializer.html", "taller")}}
 

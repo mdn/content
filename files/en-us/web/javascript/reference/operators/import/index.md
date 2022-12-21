@@ -1,6 +1,7 @@
 ---
-title: import
+title: import()
 slug: Web/JavaScript/Reference/Operators/import
+page-type: javascript-operator
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -14,7 +15,7 @@ browser-compat: javascript.operators.import
 
 {{jsSidebar("Operators")}}
 
-The `import()` call, commonly called _dynamic import_, is a function-like expression that allows loading an ECMAScript module asynchronously and dynamically into a potentially non-module environment.
+The **`import()`** syntax, commonly called _dynamic import_, is a function-like expression that allows loading an ECMAScript module asynchronously and dynamically into a potentially non-module environment.
 
 Unlike the [declaration-style counterpart](/en-US/docs/Web/JavaScript/Reference/Statements/import), dynamic imports are only evaluated when needed, and permits greater syntactic flexibility.
 

@@ -1,6 +1,7 @@
 ---
 title: class
 slug: Web/JavaScript/Reference/Statements/class
+page-type: javascript-statement
 tags:
   - Classes
   - Declaration
@@ -14,7 +15,7 @@ browser-compat: javascript.statements.class
 
 {{jsSidebar("Statements")}}
 
-The **class declaration** creates a new class
+The **`class`** declaration creates a new class
 with a given name using prototype-based inheritance.
 
 {{EmbedInteractiveExample("pages/js/statement-class.html")}}

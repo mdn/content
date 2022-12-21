@@ -1,6 +1,7 @@
 ---
 title: Intl.Segmenter
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter
+page-type: javascript-class
 tags:
   - Internationalization
   - Intl
@@ -31,8 +32,7 @@ The **`Intl.Segmenter`** object enables locale-sensitive text segmentation, enab
 - [`Intl.Segmenter.prototype.resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions)
   - : Returns a new object with properties reflecting the locale and granularity options computed during initialization of this `Intl.Segmenter` object.
 - [`Intl.Segmenter.prototype.segment()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment)
-  - : Returns a new iterable [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) instance
-    representing the segments of a string according to the locale and granularity of this `Intl.Segmenter` instance.
+  - : Returns a new iterable [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) instance representing the segments of a string according to the locale and granularity of this `Intl.Segmenter` instance.
 
 ## Examples
 

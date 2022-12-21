@@ -1,6 +1,7 @@
 ---
 title: Reflect.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript

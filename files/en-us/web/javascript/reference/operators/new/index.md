@@ -1,6 +1,7 @@
 ---
 title: new operator
 slug: Web/JavaScript/Reference/Operators/new
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
@@ -12,7 +13,7 @@ browser-compat: javascript.operators.new
 
 {{jsSidebar("Operators")}}
 
-The **`new` operator** lets developers create an instance of a user-defined object type or of one of the built-in object types that has a constructor function.
+The **`new`** operator lets developers create an instance of a user-defined object type or of one of the built-in object types that has a constructor function.
 
 {{EmbedInteractiveExample("pages/js/expressions-newoperator.html")}}
 

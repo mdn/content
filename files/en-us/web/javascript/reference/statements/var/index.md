@@ -1,6 +1,7 @@
 ---
 title: var
 slug: Web/JavaScript/Reference/Statements/var
+page-type: javascript-statement
 tags:
   - JavaScript
   - Language feature
@@ -11,7 +12,7 @@ browser-compat: javascript.statements.var
 
 {{jsSidebar("Statements")}}
 
-The **`var` statement** declares a function-scoped or
+The **`var`** statement declares a function-scoped or
 globally-scoped variable, optionally initializing it to a value.
 
 {{EmbedInteractiveExample("pages/js/statement-var.html")}}

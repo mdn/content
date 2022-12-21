@@ -19,7 +19,7 @@ tags:
 
 ## Reason
 
-```
+```plain
 Reason: CORS header 'Access-Control-Allow-Origin' does not match 'xyz'
 ```
 

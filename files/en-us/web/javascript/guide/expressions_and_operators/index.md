@@ -1,6 +1,7 @@
 ---
 title: Expressions and operators
 slug: Web/JavaScript/Guide/Expressions_and_Operators
+page-type: guide
 tags:
   - Beginner
   - Expressions
@@ -48,7 +49,7 @@ Despite `*` and `+` coming in different orders, both expressions would result in
 JavaScript has both _binary_ and _unary_ operators, and one special ternary operator, the conditional operator.
 A binary operator requires two operands, one before the operator and one after the operator:
 
-```
+```plain
 operand1 operator operand2
 ```
 
@@ -56,7 +57,7 @@ For example, `3 + 4` or `x * y`. This form is called an _infix_ binary operator,
 
 A unary operator requires a single operand, either before or after the operator:
 
-```
+```plain
 operator operand
 operand operator
 ```
@@ -569,7 +570,7 @@ Conceptually, the bitwise logical operators work as follows:
   Numbers with more than 32 bits get their most significant bits discarded.
   For example, the following integer with more than 32 bits will be converted to a 32-bit integer:
 
-  ```
+  ```plain
   Before: 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
   After:                 1010 0000 0000 0000 0110 0000 0000 0001
   ```

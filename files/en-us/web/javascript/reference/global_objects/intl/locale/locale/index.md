@@ -1,6 +1,7 @@
 ---
 title: Intl.Locale() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
+page-type: javascript-constructor
 tags:
   - Constructor
   - Internationalization

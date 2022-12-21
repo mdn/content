@@ -1,6 +1,7 @@
 ---
 title: await
 slug: Web/JavaScript/Reference/Operators/await
+page-type: javascript-operator
 tags:
   - Function
   - JavaScript
@@ -12,7 +13,7 @@ browser-compat: javascript.operators.await
 
 {{jsSidebar("Operators")}}
 
-The `await` operator is used to wait for a {{jsxref("Promise")}} and get its fulfillment value. It can only be used inside an [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) or at the top level of a [module](/en-US/docs/Web/JavaScript/Guide/Modules).
+The **`await`** operator is used to wait for a {{jsxref("Promise")}} and get its fulfillment value. It can only be used inside an [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) or at the top level of a [module](/en-US/docs/Web/JavaScript/Guide/Modules).
 
 ## Syntax
 

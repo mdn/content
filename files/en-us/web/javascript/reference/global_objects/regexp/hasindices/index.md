@@ -1,6 +1,7 @@
 ---
 title: RegExp.prototype.hasIndices
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
+page-type: javascript-instance-accessor-property
 tags:
   - JavaScript
   - Property

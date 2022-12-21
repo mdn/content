@@ -198,8 +198,8 @@ Below are some examples to give you a basic idea of how they work.
 
 - `a` — Matches one character that is `a` (not `b`, not `aa`, and so on).
 - `abc` — Matches `a`, followed by `b`, followed by `c`.
-- `ab?c`—Matches `a`, optionally followed by a single `b`, followed by `c`. (`ac` or `abc`)
-- `ab*c`—Matches `a`, optionally followed by any number of `b`s, followed by `c`. (`ac`, `abc`, `abbbbbc`, and so on).
+- `ab?c` — Matches `a`, optionally followed by a single `b`, followed by `c`. (`ac` or `abc`)
+- `ab*c` — Matches `a`, optionally followed by any number of `b`s, followed by `c`. (`ac`, `abc`, `abbbbbc`, and so on).
 - `a|b` — Matches one character that is `a` or `b`.
 - `abc|xyz` — Matches exactly `abc` or exactly `xyz` (but not `abcxyz` or `a` or `y`, and so on).
 
@@ -355,7 +355,7 @@ First, some HTML:
     </datalist>
   </p>
   <p>
-    <label for="t2">What's your e-mail address?</label>
+    <label for="t2">What's your email address?</label>
     <input type="email" id="t2" name="email">
   </p>
   <p>
@@ -414,7 +414,7 @@ In this section we will look at the different ways to do this.
 
 ### The Constraint Validation API
 
-Most browsers support the [Constraint Validation API](/en-US/docs/Web/API/Constraint_validation), which consists of a set of methods and properties available on the following form element DOM interfaces:
+The Constraint Validation API consists of a set of methods and properties available on the following form element DOM interfaces:
 
 - [`HTMLButtonElement`](/en-US/docs/Web/API/HTMLButtonElement) (represents a [`<button>`](/en-US/docs/Web/HTML/Element/button) element)
 - [`HTMLFieldSetElement`](/en-US/docs/Web/API/HTMLFieldSetElement) (represents a [`<fieldset>`](/en-US/docs/Web/HTML/Element/fieldset) element)
@@ -423,7 +423,7 @@ Most browsers support the [Constraint Validation API](/en-US/docs/Web/API/Constr
 - [`HTMLSelectElement`](/en-US/docs/Web/API/HTMLSelectElement) (represents a [`<select>`](/en-US/docs/Web/HTML/Element/select) element)
 - [`HTMLTextAreaElement`](/en-US/docs/Web/API/HTMLTextAreaElement) (represents a [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea) element)
 
-The Constraint validation API makes the following properties available on the above elements.
+The Constraint Validation API makes the following properties available on the above elements.
 
 - `validationMessage`: Returns a localized message describing the validation constraints that the control doesn't satisfy (if any). If the control is not a candidate for constraint validation (`willValidate` is `false`) or the element's value satisfies its constraints (is valid), this will return an empty string.
 - `validity`: Returns a `ValidityState` object that contains several properties describing the validity state of the element. You can find full details of all the available properties in the {{domxref("ValidityState")}} reference page; below is listed a few of the more common ones:
@@ -442,7 +442,7 @@ The Constraint validation API makes the following properties available on the ab
 The Constraint Validation API also makes the following methods available on the above elements and the [`form`](/en-US/docs/Web/HTML/Element/form) element.
 
 - `checkValidity()`: Returns `true` if the element's value has no validity problems; `false` otherwise. If the element is invalid, this method also fires an [`invalid` event](/en-US/docs/Web/API/HTMLInputElement/invalid_event) on the element.
-- `reportValidity()`: Reports invalid field(s) using events. Useful in combination with `preventDefault()` in an `onSubmit` event handler
+- `reportValidity()`: Reports invalid field(s) using events. This method is useful in combination with `preventDefault()` in an `onSubmit` event handler.
 - `setCustomValidity(message)`: Adds a custom error message to the element; if you set a custom error message, the element is considered to be invalid, and the specified error is displayed. This lets you use JavaScript code to establish a validation failure other than those offered by the standard HTML validation constraints. The message is shown to the user when reporting the problem.
 
 #### Implementing a customized error message
@@ -456,7 +456,7 @@ These automated messages have two drawbacks:
 
 ![Example of an error message with Firefox in French on an English page](error-firefox-win7.png)
 
-Customizing these error messages is one of the most common use cases of the [constraint validation API](/en-US/docs/Web/API/Constraint_validation).
+Customizing these error messages is one of the most common use cases of the Constraint Validation API.
 Let's work through a simple example of how to do this.
 
 We'll start with some simple HTML (feel free to put this in a blank HTML file; use a fresh copy of [fruit-start.html](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html) as a basis, if you like):
@@ -464,7 +464,7 @@ We'll start with some simple HTML (feel free to put this in a blank HTML file; u
 ```html
 <form>
   <label for="mail">
-    I would like you to provide me with an e-mail address:
+    I would like you to provide me with an email address:
   </label>
   <input type="email" id="mail" name="mail" />
   <button>Submit</button>
@@ -478,7 +478,7 @@ const email = document.getElementById("mail");
 
 email.addEventListener("input", (event) => {
   if (email.validity.typeMismatch) {
-    email.setCustomValidity("I am expecting an e-mail address!");
+    email.setCustomValidity("I am expecting an email address!");
     email.reportValidity();
   } else {
     email.setCustomValidity("");
@@ -621,11 +621,11 @@ function showError() {
   if (email.validity.valueMissing) {
     // If the field is empty,
     // display the following error message.
-    emailError.textContent = "You need to enter an e-mail address.";
+    emailError.textContent = "You need to enter an email address.";
   } else if (email.validity.typeMismatch) {
     // If the field doesn't contain an email address,
     // display the following error message.
-    emailError.textContent = "Entered value needs to be an e-mail address.";
+    emailError.textContent = "Entered value needs to be an email address.";
   } else if (email.validity.tooShort) {
     // If the data is too short,
     // display the following error message.
@@ -653,8 +653,6 @@ Here is the live result:
 > **Note:** You can find this example live on GitHub as [detailed-custom-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/detailed-custom-validation.html). See also the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/detailed-custom-validation.html).
 
 The constraint validation API gives you a powerful tool to handle form validation, letting you have enormous control over the user interface above and beyond what you can do with HTML and CSS alone.
-
-> **Note:** For further information, see our [Constraint validation guide](/en-US/docs/Web/Guide/HTML/Constraint_validation), and the [Constraint Validation API](/en-US/docs/Web/API/Constraint_validation) reference.
 
 ### Validating forms without a built-in API
 
@@ -770,7 +768,7 @@ const emailRegExp =
 // explicitly set the valid/invalid class on our email field
 window.addEventListener("load", () => {
   // Here, we test if the field is empty (remember, the field is not required)
-  // If it is not, we check if its content is a well-formed e-mail address.
+  // If it is not, we check if its content is a well-formed email address.
   const isValid = email.value.length === 0 || emailRegExp.test(email.value);
   email.className = isValid ? "valid" : "invalid";
 });
@@ -794,7 +792,7 @@ form.addEventListener("submit", (event) => {
   const isValid = email.value.length === 0 || emailRegExp.test(email.value);
   if (!isValid) {
     email.className = "invalid";
-    error.textContent = "I expect an e-mail, darling!";
+    error.textContent = "I expect an email, darling!";
     error.className = "error active";
   } else {
     email.className = "valid";
@@ -838,7 +836,7 @@ We'll cover [sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_f
 - [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
 - [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
 - [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
-- [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
+- **Client-side form validation**
 - [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### Advanced Topics

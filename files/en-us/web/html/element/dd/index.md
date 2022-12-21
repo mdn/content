@@ -21,6 +21,19 @@ The **`<dd>`** [HTML](/en-US/docs/Web/HTML) element provides the description, de
 
 {{EmbedInteractiveExample("pages/tabbed/dd.html", "tabbed-standard")}}
 
+## Attributes
+
+This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+- {{htmlattrdef("nowrap")}} {{Non-standard_inline}} {{Deprecated_Inline}}
+  - : If the value of this attribute is set to `yes`, the definition text will not wrap. The default value is `no`.
+
+## Examples
+
+For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web/HTML/Element/dl#examples).
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
@@ -72,17 +85,6 @@ The **`<dd>`** [HTML](/en-US/docs/Web/HTML) element provides the description, de
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-- {{htmlattrdef("nowrap")}} {{Non-standard_inline}} {{Deprecated_Inline}}
-  - : If the value of this attribute is set to `yes`, the definition text will not wrap. The default value is `no`.
-
-## Examples
-
-For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web/HTML/Element/dl#examples).
 
 ## Specifications
 

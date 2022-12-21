@@ -1,6 +1,7 @@
 ---
 title: font-style
 slug: Web/SVG/Attribute/font-style
+page-type: svg-attribute
 tags:
   - CSS
   - Font Style
