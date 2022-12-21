@@ -57,6 +57,35 @@ canvas.addEventListener("click", async () => {
 });
 ```
 
+## Handling promise and non-promise versions of requestPointerLock()
+
+The above code snippet will still work in browsers that do not support the promise-based version of `requestPointerLock()` or the `unadjustedMovement` option — the [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) operator is permitted in front of a function that does not return a promise, and the options object will just be ignored in non-supporting browsers.
+
+However, this could be confusing, and has other potential side-effects (for example, trying to use `requestPointerLock().then()` would throw an error in non-supporting browsers), so you may want to handle this explicitly using code along the following lines:
+
+```js
+function requestPointerLockWithUnadjustedMovement() {
+  const promise = myTargetElement.requestPointerLock({
+    unadjustedMovement: true,
+  });
+
+  if (!promise) {
+    console.log("disabling mouse acceleration is not supported");
+    return;
+  }
+
+  return promise
+    .then(() => console.log("pointer is locked"))
+    .catch((error) => {
+      if (error.name === "NotSupportedError") {
+        // Some platforms may not support unadjusted movement.
+        // You can request again a regular pointer lock.
+        return myTargetElement.requestPointerLock();
+      }
+    });
+}
+```
+
 ### pointerLockElement and exitPointerLock()
 
 The Pointer lock API also extends the {{domxref("Document")}} interface, adding a new property and a new method:
@@ -148,6 +177,8 @@ canvas.addEventListener("click", async () => {
   }
 });
 ```
+
+> **Note:** The above snippet works in browsers that don't support the promise version of `requestPointerLock()`. See [Handling promise and non-promise versions of requestPointerLock()](#handling_promise_and_non-promise_versions_of_requestpointerlock) for an explanation.
 
 Now for the dedicated pointer lock event listener: `pointerlockchange`. When this occurs, we run a function called `lockChangeAlert()` to handle the change.
 
