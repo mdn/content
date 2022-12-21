@@ -43,6 +43,8 @@ Traditionally, the Intl API used strings to represent locales, just as Unicode d
   - : Returns whether case is taken into account for the locale's collation rules.
 - {{jsxref("Intl/Locale/collation", "Intl.Locale.prototype.collation")}}
   - : Returns the collation type for the `Locale`, which is used to order strings according to the locale's rules.
+- {{jsxref("Intl/Locale/collations", "Intl.Locale.prototype.collations")}}
+  - : Returns an {{jsxref("Array")}} of the collation types for the `Locale`.
 - {{jsxref("Intl/Locale/hourCycle", "Intl.Locale.prototype.hourCycle")}}
   - : Returns the time keeping format convention used by the locale.
 - {{jsxref("Intl/Locale/hourCycles", "Intl.Locale.prototype.hourCycles")}}
