@@ -17,7 +17,7 @@ The **`webdriver`** read-only property
 of the {{domxref("navigator")}} interface indicates whether the user agent is
 controlled by automation.
 
-It defines a standard way for cooperating user agents to inform the document that it
+It defines a standard way for co-operating user agents to inform the document that it
 is controlled by [WebDriver](/en-US/docs/Web/WebDriver), for example, so that
 alternate code paths can be triggered during automation.
 
