@@ -13,7 +13,7 @@ tags:
 browser-compat: api.WebTransportError.source
 ---
 
-{{APIRef("WebTransport API")}}{{seecompattable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`source`** read-only property of the {{domxref("WebTransportError")}} interface returns an enumerated value indicating the source of the error.
 

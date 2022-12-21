@@ -59,7 +59,7 @@ where `<policy-directive>` consists of:
     > you should use the {{CSP("frame-src")}} and {{CSP("worker-src")}} directives, respectively.
 
 - {{CSP("connect-src")}}
-  - : Restricts the URLs which can be loaded using script interfaces
+  - : Restricts the URLs which can be loaded using script interfaces.
 - {{CSP("default-src")}}
   - : Serves as a fallback for the other {{Glossary("Fetch directive", "fetch
     directives")}}.

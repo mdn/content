@@ -8,22 +8,21 @@ tags:
   - HTML DOM
   - HTMLInputElement
   - Property
-  - NeedsCompatTable
   - Reference
 browser-compat: api.HTMLInputElement.files
 ---
 
 {{APIRef("File and Directory Entries API")}}
 
-The **`HTMLInputElement.files`** is a property that allows you to access the {{domxref("FileList")}} selected with the [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file) element.
+The **`HTMLInputElement.files`** property allows you to access the {{domxref("FileList")}} selected with the [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file) element.
 
 ## Value
 
-An instance of {{domxref("FileList")}} or `null` if the **`HTMLInputElement`** is not of `type="file"`.
+A {{domxref("FileList")}} object listing the selected files, if any, or `null` if the **`HTMLInputElement`** is not of `type="file"`.
 
 ## Examples
 
-The example below shows how you can access the **`HTMLInputElement.files`** property and log the files' name selected by the user.
+The example below shows how you can access the **`HTMLInputElement.files`** property and log the name, date modified, size, and type of each file selected by the user.
 
 ### HTML
 
@@ -40,10 +39,14 @@ Therefore it's safe to iterate through it with {{JSxref("Statements/for...of", "
 ```js
 const fileInput = document.getElementById("files");
 
-console.log(fileInput.files instanceof FileList); // true
+console.log(fileInput.files instanceof FileList); // true even if empty
 
 for (const file of fileInput.files) {
   console.log(file.name); // prints file name
+  let fileDate = new Date(file.lastModified);
+  console.log(fileDate.toLocaleDateString()); // prints legible date
+  console.log((file.size < 1000)? file.size : Math.round(file.size / 1000) + "KB");
+  console.log(file.type); // prints MIME type
 }
 ```
 
@@ -54,3 +57,7 @@ for (const file of fileInput.files) {
 ## Browser compatibility
 
 {{ Compat }}
+
+## See also
+
+- {{domxref("DataTransferItem.files")}}
