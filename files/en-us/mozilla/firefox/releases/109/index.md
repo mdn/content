@@ -56,6 +56,8 @@ This article provides information about the changes in Firefox 109 that will aff
 
 ## Changes for add-on developers
 
+- The default [Content Security Policy (CSP)](/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) for Manifest V3 extensions has been updated to include `upgrade-insecure-requests`. This means that, by default, all user data requests are upgraded to use `https:`. Extensions that need to use `http:` can do so by overriding the default CSP using the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json key ({{bug(1797086)}}).
+
 ### Removals
 
 ### Other
