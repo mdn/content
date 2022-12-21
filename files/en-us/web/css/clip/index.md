@@ -53,6 +53,28 @@ clip: unset;
 
 ### Clipping an image
 
+#### HTML
+
+```html
+<p class="dotted-border">
+  <img
+    src="macarons.png"
+    title="Original graphic" />
+  <img
+    id="top-left"
+    src="macarons.png"
+    title="Graphic clipped to upper left" />
+  <img
+    id="middle"
+    src="macarons.png"
+    title="Graphic clipped towards middle" />
+  <img
+    id="bottom-right"
+    src="macarons.png"
+    title="Graphic clipped to bottom right" />
+</p>
+```
+
 #### CSS
 
 ```css
@@ -84,28 +106,6 @@ clip: unset;
   left: 140px;
   clip: rect(200px, 390px, 290px, 260px);
 }
-```
-
-#### HTML
-
-```html
-<p class="dotted-border">
-  <img
-    src="macarons.png"
-    title="Original graphic" />
-  <img
-    id="top-left"
-    src="macarons.png"
-    title="Graphic clipped to upper left" />
-  <img
-    id="middle"
-    src="macarons.png"
-    title="Graphic clipped towards middle" />
-  <img
-    id="bottom-right"
-    src="macarons.png"
-    title="Graphic clipped to bottom right" />
-</p>
 ```
 
 #### Result
