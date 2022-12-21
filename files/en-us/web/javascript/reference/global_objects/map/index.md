@@ -82,7 +82,7 @@ cases:
           <a href="https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md">
             object injection attacks
           </a>. Like the accidental keys issue, this can also be mitigated by using
-          a `null`-prototype object.
+          a <code>null</code>-prototype object.
         </p>
       </td>
     </tr>
