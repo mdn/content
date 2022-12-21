@@ -1,13 +1,13 @@
 ---
 title: Transferable objects
-slug: Glossary/Transferable_objects
+slug: Web/API/Web_Workers_API/Transferable_objects
+page-type: guide
 tags:
   - Transferable
   - Serializable
   - Structured clone
   - Workers
 ---
-
 **Transferable objects** are objects that own resources that can be _transferred_ from one context to another, ensuring that the resources are only available in one context at a time.
 Following a transfer, the original object is no longer usable; it no longer points to the transferred resource, and any attempt to read or write the object will throw an exception.
 

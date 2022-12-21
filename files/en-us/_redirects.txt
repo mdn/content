@@ -3620,6 +3620,7 @@
 /en-US/docs/Glossary/Spartan	/en-US/docs/Glossary/Microsoft_Edge
 /en-US/docs/Glossary/Static_property	/en-US/docs/Glossary/property/JavaScript
 /en-US/docs/Glossary/Symbol	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol
+/en-US/docs/Glossary/Transferable_objects	/en-US/docs/Web/API/Web_Workers_API/Transferable_objects
 /en-US/docs/Glossary/Transmission_Control_Protocol_(TCP)	/en-US/docs/Glossary/TCP
 /en-US/docs/Glossary/URI/www_vs_non-www_URLs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 /en-US/docs/Glossary/WWW	/en-US/docs/Glossary/World_Wide_Web
