@@ -137,13 +137,15 @@ let x = 50;
 let y = 50;
 ```
 
-Next we set up an event listener to run the `requestPointerLock()` method on the canvas when it is clicked, which initiates pointer lock.
+Next we set up an event listener to run the `requestPointerLock()` method on the canvas when it is clicked, which initiates pointer lock. The `document.pointerLockElement` check is to see if there is already an active pointer lock — we don't want to keep calling `requestPointerLock()` on the canvas every time we click inside it if we already have pointer lock.
 
 ```js
 canvas.addEventListener("click", async () => {
-  await canvas.requestPointerLock({
-    unadjustedMovement: true
-  });
+  if(!document.pointerLockElement) {
+    await canvas.requestPointerLock({
+      unadjustedMovement: true,
+    });
+  }
 });
 ```
 
