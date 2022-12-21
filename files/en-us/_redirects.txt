@@ -11879,7 +11879,7 @@
 /en-US/docs/Web/Guide/HTML/Drag_operations	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /en-US/docs/Web/Guide/HTML/Editable_content	/en-US/docs/Web/HTML/Global_attributes/contenteditable
 /en-US/docs/Web/Guide/HTML/Element	/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started
-/en-US/docs/Web/Guide/HTML/Email_links	/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#E-mail_links
+/en-US/docs/Web/Guide/HTML/Email_links	/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_links
 /en-US/docs/Web/Guide/HTML/Event_attributes	/en-US/docs/Learn/JavaScript/Building_blocks/Events#Inline_event_handlers_—_don't_use_these
 /en-US/docs/Web/Guide/HTML/Forms	/en-US/docs/Learn/Forms
 /en-US/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms	/en-US/docs/Learn/Forms/Advanced_form_styling

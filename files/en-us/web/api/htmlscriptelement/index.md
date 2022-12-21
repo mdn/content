@@ -70,6 +70,10 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 _No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
+## Events
+
+_No specific events; inherits events from its parent, {{domxref("HTMLElement")}}._
+
 ## Examples
 
 ### Dynamically importing scripts
