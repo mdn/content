@@ -78,10 +78,11 @@ cases:
       <td>
         <p>
           Setting user-provided key-value pairs on an <code>Object</code> 
-          may allow an attacker to override the objects prototype, which
+          may allow an attacker to override the object's prototype, which
+          can lead to
           <a href="https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md">
-            can lead to a remote code execution vulnerability
-          </a>.
+            object injection attacks
+          </a>. This can also be mitigated by using a `null`-prototype object.
         </p>
       </td>
     </tr>
