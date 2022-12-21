@@ -27,7 +27,7 @@ This article starts the module off with a good look at what accessibility is —
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
-      <td>Basic computer literacy, a basic understanding of HTML and CSS.</td>
+      <td>Basic computer literacy, and a basic understanding of HTML and CSS.</td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
@@ -68,7 +68,7 @@ People with visual impairments include people with blindness, low-level vision, 
 - Free products, like [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (Chrome), and [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
 - Software built into the operating system, like [VoiceOver](https://www.apple.com/accessibility/vision/) (macOS, iPadOS, iOS), [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) (Windows), [ChromeVox](https://www.chromevox.com/) (on Chrome OS), and [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
-It is a good idea to familiarize yourself with screen readers; you should also set up a screen reader and have a play around with it, to get an idea of how it works. See our [cross-browser testing screen readers guide](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen_readers) for more details on using them. The below video also provides a brief example of what the experience is like.
+It is a good idea to familiarize yourself with screen readers; you should also set up a screen reader and play around with it, to get an idea of how it works. See our [cross-browser testing screen readers guide](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen_readers) for more details on using them. The below video also provides a brief example of what the experience is like.
 
 {{EmbedYouTube("IK97XMibEws")}}
 
@@ -111,7 +111,7 @@ A good foundation of accessibility for people with cognitive impairments include
 ### Notes
 
 - Designing with [cognitive accessibility](/en-US/docs/Web/Accessibility/Cognitive_accessibility) will lead to good design practices. They will benefit everyone.
-- Many people with cognitive impairments also have physical disabilities. Websites must conform with the W3C's [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), including [cognitive accessibility guidelines](/en-US/docs/Web/Accessibility/Cognitive_accessibility#guidelines).
+- Many people with cognitive impairments also have physical disabilities. Websites must conform to the W3C's [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), including [cognitive accessibility guidelines](/en-US/docs/Web/Accessibility/Cognitive_accessibility#guidelines).
 - The W3C's [Cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/) produces web accessibility guidelines for people with cognitive impairments.
 - WebAIM has a [Cognitive page](https://webaim.org/articles/cognitive/) of relevant information and resources.
 - The United States Centers for Disease Control estimate that, as of 2018, 1 in 4 US citizens have a disability and, of them, [cognitive impairment is the most common for young people](https://www.cdc.gov/media/releases/2018/p0816-disability.html).
@@ -131,7 +131,7 @@ When planning your project, factor accessibility testing into your testing regim
 
 - Is my date picker widget usable by people using screen readers?
 - If content updates dynamically, do visually impaired people know about it?
-- Are my UI buttons accessible using the keyboard and on touch interfaces?
+- Are my UI buttons accessible to both keyboard and touch interface users?
 
 You can and should keep a note of potential problem areas in your content that will need work to make it accessible, make sure it is tested thoroughly, and think about solutions/alternatives. Text content (as you'll see in the next article) is easy, but what about your multimedia content, and your whizzy 3D graphics? You should look at your project budget and think about what solutions you have available to make such content accessible. Having all your multimedia content transcribed is one option which, while expensive, is possible.
 
