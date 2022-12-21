@@ -80,7 +80,7 @@ In the [Unicode locale string spec](https://www.unicode.org/reports/tr35/), coll
 
 ```js
 const locale = new Intl.Locale("zh-Hant-u-co-zhuyin");
-console.log(locale.collations); // Prints ["zhuyin"]
+console.log(locale.collations); // ["zhuyin"]
 ```
 
 ### Adding a collation type via the configuration object argument
@@ -89,7 +89,7 @@ The {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor has an optiona
 
 ```js
 const locale = new Intl.Locale("zh-Hant", { collations: "zhuyin" });
-console.log(locale.collations); // Prints ["zhuyin"]
+console.log(locale.collations); // ["zhuyin"]
 ```
 
 ### Obtaining supported collation types
@@ -98,7 +98,7 @@ List supported `collation` types for a given `Locale`.
 
 ```js
 const locale = new Intl.Locale("zh")
-console.log(locale.collations); // Prints ["pinyin", "stroke", "zhuyin", "emoji", "eor"]
+console.log(locale.collations); // ["pinyin", "stroke", "zhuyin", "emoji", "eor"]
 ```
 
 ## Specifications
