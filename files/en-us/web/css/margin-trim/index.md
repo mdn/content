@@ -38,6 +38,12 @@ margin-trim: unset;
 
 - `none`
   - : Margins are not trimmed by the container.
+- `block`
+
+  - : Computes to 'block-start block-end'.
+
+- `inline`
+  - : Computes to 'inline-start inline-end'
 
 ## Formal definition
 
