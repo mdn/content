@@ -162,16 +162,7 @@ console.log(date.toLocaleString("en-US", { hour12: false }));
 Most of the time, the formatting returned by `toLocaleString()` is
 consistent. However, this might change in the future, and isn't guaranteed for all
 languages; output variations are by design, and allowed by the specification.
-
-Most notably, the IE browsers insert bidirectional control characters around
-dates, so the output text will flow properly when concatenated with other text.
-
-For this reason, you cannot expect to be able to compare the results of
-`toLocaleString()` to a static value.
-
-> **Note:** See also this
-> [StackOverflow thread](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)
-> for more details and examples.
+You should not compare the results of `toLocaleString()` to static values.
 
 ## Specifications
 
