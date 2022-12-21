@@ -38,7 +38,9 @@ requestPointerLock(options)
 
 ### Return value
 
-A promise that returns {{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
+
+Note that some browsers support an asynchronous version, which returns a promise that resolves with {{jsxref("undefined")}}.
 
 ## Examples
 
@@ -47,7 +49,7 @@ An obvious use for pointer lock is an online game, when you want your mouse move
 To enable pointer lock, you would get the user to interact with the UI in some way, perhaps by pressing a button, or the game canvas itself.
 
 ```js
-canvas.addEventListener('click', async () => {
+canvas.addEventListener("click", async () => {
   await canvas.requestPointerLock();
 });
 ```
@@ -57,7 +59,7 @@ Operating systems enable mouse acceleration by default, which is useful when you
 To disable OS-level mouse acceleration and access raw mouse input, you can set the `unadjustedMovement` to `true`:
 
 ```js
-canvas.addEventListener('click', async () => {
+canvas.addEventListener("click", async () => {
   await canvas.requestPointerLock({
     unadjustedMovement: true
   });
