@@ -38,9 +38,9 @@ requestPointerLock(options)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
-Note that some browsers support an asynchronous version, which returns a promise that resolves with {{jsxref("undefined")}}.
+> **Note:** Some browsers do not yet support the promise version of `requestPointerLock()`, just the older synchronous version.
 
 ## Examples
 
