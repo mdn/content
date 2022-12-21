@@ -50,10 +50,8 @@ Ensuring that your website or open web application is secure is critical. Even s
 
 - [Referer header policy: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns)
   - : There are privacy and security risks associated with the [Referer HTTP header](/en-US/docs/Web/HTTP/Headers/Referer). This article describes them and offers advice on mitigating those risks.
-- Robots.txt
-  - : to be written
-- Site maps
-  - : to be written
+- [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless)
+  - : Iframe credentialless provides a mechanism for developers to load third-party resources in {{htmlelement("iframe")}}s using a new, ephemeral context that does not have access to the parent context's shared storage and credentials. In return, the {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not.
 
 ## Integrity
 
