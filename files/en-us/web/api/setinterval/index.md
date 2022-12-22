@@ -31,14 +31,14 @@ can remove it later by calling {{domxref("clearInterval",
 ## Syntax
 
 ```js-nolint
-setInterval(code)
-setInterval(code, delay)
+var intervalID = setInterval(code)
+var intervalID = setInterval(code, delay)
 
-setInterval(func)
-setInterval(func, delay)
-setInterval(func, delay, arg0)
-setInterval(func, delay, arg0, arg1)
-setInterval(func, delay, arg0, arg1, /* … ,*/ argN)
+var intervalID = setInterval(func)
+var intervalID = setInterval(func, delay)
+var intervalID = setInterval(func, delay, arg0)
+var intervalID = setInterval(func, delay, arg0, arg1)
+var intervalID = setInterval(func, delay, arg0, arg1, /* … ,*/ argN)
 ```
 
 ### Parameters
