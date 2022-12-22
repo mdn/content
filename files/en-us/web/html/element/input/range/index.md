@@ -315,7 +315,7 @@ input[type="range"] {
 }
 ```
 
-{{EmbedLiveSample("writing-mode_bt-lr", 200, 200)}}
+{{EmbedLiveSample("writing-mode_bt-lr", 200, 40)}}
 
 #### Putting it all together
 
