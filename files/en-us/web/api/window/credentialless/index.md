@@ -9,10 +9,12 @@ tags:
   - Read-Only
   - Reference
   - Window
+  - Experimental
+  - Non-standard
 browser-compat: api.Window.credentialless
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}{{SeeCompatTable}}{{Non-standard_header}}
 
 The **`window.credentialless`** read-only property returns a boolean that indicates whether the current document was loaded inside a credentialless {{htmlelement("iframe")}}, meaning that it is loaded in a new, ephemeral context.
 

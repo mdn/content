@@ -59,7 +59,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : This property indicates whether the current window is closed or not.
 - {{domxref("Window.console")}} {{ReadOnlyInline}}
   - : Returns a reference to the console object which provides access to the browser's debugging console.
-- {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Returns a boolean that indicates whether the current document was loaded inside a credentialless {{htmlelement("iframe")}}. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for more details.
 - {{domxref("Window.customElements")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("CustomElementRegistry")}} object, which can be used to register new [custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) and get information about previously registered custom elements.
@@ -231,7 +231,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Opens the Print Dialog to print the current document.
 - {{domxref("Window.prompt()")}}
   - : Returns the text entered by the user in a prompt dialog.
-- {{DOMxRef("Window.queryLocalFonts()")}}
+- {{DOMxRef("Window.queryLocalFonts()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} objects representing the font faces available locally.
 - {{domxref("Window.requestAnimationFrame()")}}
   - : Tells the browser that an animation is in progress, requesting that the browser schedule a repaint of the window for the next animation frame.

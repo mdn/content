@@ -3,11 +3,12 @@ title: IFrame credentialless
 slug: Web/Security/IFrame_credentialless
 tags:
   - Experimental
+  - Non-standard
 spec-urls: https://wicg.github.io/anonymous-iframe/
 browser-compat: html.elements.iframe.credentialless
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}{{SeeCompatTable}}{{Non-standard_header}}
 
 **Iframe credentialless** provides a mechanism for developers to load third-party resources in {{htmlelement("iframe")}}s using a new, ephemeral context that does not have access to the parent context's shared storage and credentials. In return, the {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not.
 
