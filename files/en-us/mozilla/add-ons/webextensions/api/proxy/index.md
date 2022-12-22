@@ -11,6 +11,8 @@ browser-compat: webextensions.api.proxy
 
 {{AddonSidebar}}
 
+> **Note:** The proxy permission requires "strict_min_version" to be set to "91.1.0" or above. Please update your [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) version to specify a minimum Firefox version.
+
 Use the proxy API to proxy web requests. You can use the {{WebExtAPIRef("proxy.onRequest")}} event listener to intercept web requests, and return an object that describes whether and how to proxy them.
 
 The advantage of the {{WebExtAPIRef("proxy.onRequest")}} approach is that the code that implements your proxy policy runs in your extension's background script, so it gets full access to the WebExtension APIs available to your extension (including, for example, access to your extension's [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage) and networking APIs like [`dns`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/dns)).
