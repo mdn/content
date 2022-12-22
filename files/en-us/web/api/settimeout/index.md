@@ -23,14 +23,14 @@ piece of code once the timer expires.
 ## Syntax
 
 ```js-nolint
-setTimeout(code)
-setTimeout(code, delay)
+var timeoutID = setTimeout(code)
+var timeoutID = setTimeout(code, delay)
 
-setTimeout(functionRef)
-setTimeout(functionRef, delay)
-setTimeout(functionRef, delay, param1)
-setTimeout(functionRef, delay, param1, param2)
-setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
+var timeoutID = setTimeout(functionRef)
+var timeoutID = setTimeout(functionRef, delay)
+var timeoutID = setTimeout(functionRef, delay, param1)
+var timeoutID = setTimeout(functionRef, delay, param1, param2)
+var timeoutID = setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parameters
