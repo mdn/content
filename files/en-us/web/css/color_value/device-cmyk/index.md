@@ -14,7 +14,7 @@ browser-compat: css.types.color.device-cmyk
 
 {{CSSRef}}
 
-The **`device-cmyk()`** functional notation is used to express CMYK colors in a device independent way, specifying the cyan, magenta, yellow, and black components.
+The **`device-cmyk()`** functional notation is used to express CMYK colors in a device dependent way, specifying the cyan, magenta, yellow, and black components.
 
 This approach to color is useful when creating material to be output to a particular printer, when the output for particular ink combinations is known. CSS processors may attempt to approximate the color, however the end result is likely to be different to the printed result.
 
