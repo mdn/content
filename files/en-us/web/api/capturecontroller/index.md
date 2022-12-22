@@ -19,12 +19,12 @@ A `CaptureController` object is associated with a capture session by passing it 
 
 ## Constructor
 
-- {{ domxref("CaptureController.CaptureController", "CaptureController()") }}
+- {{ domxref("CaptureController.CaptureController", "CaptureController()") }} {{Experimental_Inline}}
   - : Creates a new `CaptureController` object instance.
 
 ## Instance methods
 
-- {{ domxref("CaptureController.setFocusBehavior", "setFocusBehavior()") }}
+- {{ domxref("CaptureController.setFocusBehavior", "setFocusBehavior()") }} {{Experimental_Inline}}
   - : Controls whether the captured tab or window will be focused or whether the focus will remain with the tab containing the capturing app.
 
 ## Examples
