@@ -11,8 +11,6 @@ browser-compat: webextensions.api.proxy
 
 {{AddonSidebar}}
 
-> **Note:** The proxy permission requires "strict_min_version" to be set to "91.1.0" or above. Please update your [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) version to specify a minimum Firefox version.
-
 Use the proxy API to proxy web requests. You can use the {{WebExtAPIRef("proxy.onRequest")}} event listener to intercept web requests, and return an object that describes whether and how to proxy them.
 
 The advantage of the {{WebExtAPIRef("proxy.onRequest")}} approach is that the code that implements your proxy policy runs in your extension's background script, so it gets full access to the WebExtension APIs available to your extension (including, for example, access to your extension's [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage) and networking APIs like [`dns`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/dns)).
@@ -22,6 +20,8 @@ Apart from this API, extensions can also use the [`browserSettings.proxyConfig`]
 Google Chrome provides [an extension API also called "proxy"](https://developer.chrome.com/docs/extensions/reference/proxy/) which is functionally similar to this API, in that extensions can use it to implement a proxying policy. However, the design of the Chrome API is completely different to this API. Because this API is incompatible with the Chrome `proxy` API, this API is only available through the `browser` namespace.
 
 To use this API you need to have the "proxy" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). Also, where you want to intercept requests, you also need [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the URLs of intercepted requests.
+
+> **Note:** The "proxy" permission requires `"strict_min_version"` to be set to "91.1.0" or above. To use this permission, add or update the [`"browser_specific_settings"`](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in your [manifest.json](/docs/Mozilla/Add-ons/WebExtensions/manifest.json) to specify a minimum Firefox version.
 
 > **Note:** The browser can make speculative connections, where it determines that a request to a URI may be coming soon. This type of connection does not provide valid tab information, so request details such as `tabId`, `frameId`, `parentFrameId`, etc. are inaccurate. These connections have a {{WebExtAPIRef("webRequest.ResourceType")}} of `speculative`.
 
