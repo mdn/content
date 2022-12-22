@@ -62,9 +62,9 @@ The {{CSSxRef("@property")}} at-rule allows you to register an advanced custom p
 
 ### Houdini API references
 
-[CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API)
-[CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)
-[CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
+- [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)
+- [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
 - {{domxref("Worklet")}} reference
 
 ### Houdini guides
