@@ -41,7 +41,8 @@ test(str)
 ### Returns
 
 `true` if there is a match between the regular expression and the string
-`str`. Otherwise, `false`.
+`str`. `false` if the `str` parameter is `null` or `undefined`. Otherwise, `false`.
+
 
 ## Description
 
