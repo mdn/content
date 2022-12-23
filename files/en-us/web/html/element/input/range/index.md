@@ -116,7 +116,7 @@ For example, to ask the user for a value between -10 and 10, you can use:
 
 ### Setting the value's granularity
 
-By default, the granularity, is 1, meaning that the value is always an integer. You can change the {{htmlattrxref("step")}} attribute to control the granularity. For example, If you need a value between 5 and 10, accurate to two decimal places, you should set the value of `step` to 0.5:
+By default, the granularity, is 1, meaning that the value is always an integer. You can change the {{htmlattrxref("step")}} attribute to control the granularity. For example, If you need a value to be halfway between 5 and 10 you should set the value of `step` to 0.5:
 
 #### Setting the step attribute
 
@@ -134,7 +134,7 @@ If you want to accept any value regardless of how many decimal places it extends
 
 ```html
 <input id="pi_input" type="range" min="0" max="3.14" step="any" />
-<p>Value: <span id="value">1.57</span></p>
+<p>Value: <output id="value"></output></p>
 ```
 
 ##### JavaScript
@@ -142,6 +142,7 @@ If you want to accept any value regardless of how many decimal places it extends
 ```js
 const value = document.querySelector("#value")
 const input = document.querySelector("#pi_input")
+value.textContent = input.value
 input.addEventListener("input", (event) => {
   value.textContent = event.target.value
 })
@@ -176,7 +177,7 @@ To add tick marks to a range control, include the `list` attribute, giving it th
 
 ### Using the same datalist for multiple range controls
 
-To help you from repeating code you can reuse that same {{HTMLElement("datalist")}} for multiple `<input type="range">` elements, and other  {{HTMLElement("input")}} types.
+To help you from repeating code you can reuse that same {{HTMLElement("datalist")}} for multiple `<input type="range">` elements, and other {{HTMLElement("input")}} types.
 
 > **Note:** If you also want to [show the labels](#adding_labels) as in the example below then you would need a `datalist` for each range input.
 
