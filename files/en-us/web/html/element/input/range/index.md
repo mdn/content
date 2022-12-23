@@ -327,7 +327,7 @@ We keep the `orient` attribute with a value of `vertical` for Firefox:
 <input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
 ```
 
-We target just the inputs with a type of range & orient of vertical, changing the writing mode from the default to `bt-lr`, or bottom-to-top and left-to-right, for Edge and Internet Explorer, and add `appearance: slider-vertical` which is supported in Blink and Webkit browsers:
+We target just the `input`s with a `type` of `range` and `orient` set to `vertical`, changing the `writing-mode` from the default to `bt-lr`, or bottom-to-top and left-to-right, for pre-Blink versions of Edge, and add `appearance: slider-vertical` which is supported in Blink and Webkit browsers:
 
 ```css
 input[type="range"][orient="vertical"] {
