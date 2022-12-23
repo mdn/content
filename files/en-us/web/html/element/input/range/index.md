@@ -205,7 +205,7 @@ To help you from repeating code you can reuse that same {{HTMLElement("datalist"
 
 ### Adding labels
 
-You can label tick marks by giving the `<option>` elements `label` attributes. However, you must use CSS to show the labels and to position them correctly. Here's one way you could do this.
+You can label tick marks by giving the `<option>` elements `label` attributes. However, the label content will not be displayed by default. You can use CSS to show the labels and to position them correctly. Here's one way you could do this.
 
 #### HTML
 
