@@ -16,7 +16,7 @@ tags:
 
 ## Precedence And Associativity
 
-Consider an expression describable by the representation below, where both `OP1` and `OP2` are fill-in-the-blanks for OPerators.
+Consider an expression describable by the representation below, where both `OP1` and `OP2` are fill-in-the-blanks for operators.
 
 ```plain
 a OP1 b OP2 c
