@@ -93,7 +93,8 @@ If you want to look at all the special characters that can be used in regular ex
         <code>\D</code>, <code>\f</code>, <code>\n</code>, <code>\r</code>,
         <code>\s</code>, <code>\S</code>, <code>\t</code>, <code>\v</code>,
         <code>\w</code>, <code>\W</code>, <code>\0</code>, <code>\xhh</code>,
-        <code>\uhhhh</code>, <code>\uhhhhh</code>, <code>[\b]</code>
+        <code>\uhhhh</code>, <code>\uhhhhh</code>, <code>[\b]</code>,
+        <code>[xyz]</code>, <code>[^xyz]</code>,
       </td>
       <td>
         <p>
@@ -122,8 +123,7 @@ If you want to look at all the special characters that can be used in regular ex
     <tr>
       <td>
         <code>(x)</code>, <code>(?:x)</code>, <code>(?&#x3C;Name>x)</code>,
-        <code>x|y</code>, <code>[xyz]</code>, <code>[^xyz]</code>,
-        <code>\<em>Number</em></code>
+        <code>x|y</code>, <code>\<em>Number</em></code>
       </td>
       <td>
         <p>
