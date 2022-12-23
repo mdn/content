@@ -192,10 +192,10 @@ To help you from repeating code you can reuse that same {{HTMLElement("datalist"
 
 <datalist id="values">
   <option value="0" label="0"></option>
-  <option value="25" label="0"></option>
-  <option value="50" label="0"></option>
-  <option value="75" label="0"></option>
-  <option value="100" label="0"></option>
+  <option value="25" label="25"></option>
+  <option value="50" label="50"></option>
+  <option value="75" label="75"></option>
+  <option value="100" label="100"></option>
 </datalist>
 ```
 
