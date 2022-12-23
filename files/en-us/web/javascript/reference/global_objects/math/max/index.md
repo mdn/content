@@ -33,7 +33,7 @@ Math.max(value0, value1, /* … ,*/ valueN)
 ### Parameters
 
 - `value1`, `value2`, … , `valueN`
-  - : Zero or more numbers among which the largest value will be selected and returned.
+  - : Zero or more numbers among which the largest value will be selected and returned. Non-number values provided will be coerced into a number before being compared to the other parameters.
 
 ### Return value
 
