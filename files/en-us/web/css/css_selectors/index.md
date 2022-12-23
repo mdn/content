@@ -167,6 +167,6 @@ See the [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes#specifications) and [p
 
 ## See also
 
-- [`:has` Pseudo Class](/en-US/docs/Web/CSS/:has)
+- [`:has()` pseudo class](/en-US/docs/Web/CSS/:has)
 - [CSS Specificity](/en-US/docs/Web/CSS/Specificity)
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
