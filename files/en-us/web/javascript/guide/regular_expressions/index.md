@@ -94,7 +94,7 @@ If you want to look at all the special characters that can be used in regular ex
         <code>\s</code>, <code>\S</code>, <code>\t</code>, <code>\v</code>,
         <code>\w</code>, <code>\W</code>, <code>\0</code>, <code>\xhh</code>,
         <code>\uhhhh</code>, <code>\uhhhhh</code>, <code>[\b]</code>,
-        <code>[xyz]</code>, <code>[^xyz]</code>,
+        <code>[xyz]</code>, <code>[^xyz]</code>
       </td>
       <td>
         <p>
