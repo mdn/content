@@ -149,7 +149,7 @@ input.addEventListener("input", (event) => {
 
 {{EmbedLiveSample("Setting_step_to_any", 600, 75)}}
 
-This example lets the user select any value between 0 and π without any restriction on the fractional part of the value selected. The JavaScript is used to show how the value is changing as the range is interacted with.
+This example lets the user select any value between 0 and π without any restriction on the fractional part of the value selected. JavaScript is used to show how the value changes as the user interacts with the range.
 
 ### Adding tick marks
 
