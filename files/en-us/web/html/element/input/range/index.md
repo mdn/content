@@ -176,7 +176,7 @@ To add tick marks to a range control, include the `list` attribute, giving it th
 
 ### Using the same datalist for multiple range controls
 
-To help you from repeating code you can reuse that same {{HTMLElement("datalist")}} for multiple `<input type="range">` elements.
+To help you from repeating code you can reuse that same {{HTMLElement("datalist")}} for multiple `<input type="range">` elements, and other  {{HTMLElement("input")}} types.
 
 > **Note:** If you also want to [show the labels](#adding_labels) as in the example below then you would need a `datalist` for each range input.
 
