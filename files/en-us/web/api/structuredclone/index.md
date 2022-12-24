@@ -108,14 +108,11 @@ const mushrooms1 = {
 
 const mushrooms2 = structuredClone(mushrooms1);
 
-mushrooms2["amanita"].push("pantherina");
-mushrooms1["amanita"].pop();
+mushrooms2.amanita.push("pantherina");
+mushrooms1.amanita.pop();
 
-console.log(mushrooms2["amanita"]);
-//"muscaria", "virosa", "pantherina"
-
-console.log(mushrooms1["amanita"]);
-//"muscaria"
+console.log(mushrooms2.amanita); // ["muscaria", "virosa", "pantherina"]
+console.log(mushrooms1.amanita); // ["muscaria"]
 ```
 
 ### Transferring an object
