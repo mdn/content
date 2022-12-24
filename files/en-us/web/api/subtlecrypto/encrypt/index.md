@@ -42,27 +42,27 @@ encrypt(algorithm, key, data)
 
           Unless your application calls for a label, you can just omit this argument and it will not affect the security of the encryption operation.
 
-    - To use [AES-CBC](#aes-cbc) pass an object with the properties given below: <!-- AesGcmParams dictionary in the spec -->
+    - To use [AES-CBC](#aes-cbc) pass an object with the properties given below: <!-- AesCbcParams dictionary in the spec -->
 
       - `name`
-        - : A string indicating the name of the algorithm: `AES-CBC`, `AES-GCM`.
+        - : A string indicating the name of the algorithm: `AES-CBC`.
       - `iv`
         - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
           The initialization vector.
           Must be 16 bytes, unpredictable, and preferably cryptographically random.
-          However, it need not be secret (for example, it may be transmitted unencrypted along with the ciphertext). 
+          However, it need not be secret (for example, it may be transmitted unencrypted along with the ciphertext).
 
     - To use [AES-GCM](#aes-gcm) pass an object with the properties given below: <!-- AesGcmParams dictionary in the spec -->
 
       - `name`
-        - : A string indicating the name of the algorithm: `AES-CBC`, `AES-GCM`.
+        - : A string indicating the name of the algorithm: `AES-GCM`.
       - `iv`
         - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
           The initialization vector.
           Must be 16 bytes, unpredictable, and preferably cryptographically random.
-          However, it need not be secret (for example, it may be transmitted unencrypted along with the ciphertext). 
-       - `additionalData` {{optional_inline}}
-         - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}. This contains additional data that will not be encrypted but will be authenticated along with the encrypted data. If `additionalData` is given here then the same data must be given in the corresponding call to [`decrypt()`](/en-US/docs/Web/API/SubtleCrypto/decrypt): if the data given to the `decrypt()` call does not match the original data, the decryption will throw an exception. This gives you a way to authenticate associated data without having to encrypt it.
+          However, it need not be secret (for example, it may be transmitted unencrypted along with the ciphertext).
+      - `additionalData` {{optional_inline}}
+        - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}. This contains additional data that will not be encrypted but will be authenticated along with the encrypted data. If `additionalData` is given here then the same data must be given in the corresponding call to [`decrypt()`](/en-US/docs/Web/API/SubtleCrypto/decrypt): if the data given to the `decrypt()` call does not match the original data, the decryption will throw an exception. This gives you a way to authenticate associated data without having to encrypt it.
 
            The bit length of `additionalData` must be smaller than `2^64 - 1`.
 
