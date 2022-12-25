@@ -44,6 +44,8 @@ Note that this is equivalent to the following {{Cssxref("Attribute_selectors", "
 [class~=class_name] { style properties }
 ```
 
+> **Note:** A selector with a class name repeated, such as `.class_name.class_name`, will match an element with that same class, even if the element only has the class once. It will however increase [specificity](/en-US/docs/Web/CSS/Specificity).
+
 ## Examples
 
 ### CSS
