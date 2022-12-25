@@ -29,9 +29,9 @@ width: calc(100px * rem(5.5, 2)); // 150px
 
 margin: rem(-18px, 5px); // -3px
 
+rotate: rem(200deg, 30deg);  // 20deg
 rotate: rem(140deg, -90deg); // 50deg
-rotate: rem(140deg, -90deg); // 50deg
-rotate: rem(140deg, -90deg); // 50deg
+rotate: rem(-90deg, 20deg);  // -10deg
 ```
 
 ### Parameter
