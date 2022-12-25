@@ -39,10 +39,10 @@ rotate: rem(140deg, -90deg); // 50deg
 The `rem(dividend, divisor)` function accepts two comma-separated values as its parameters. Both parameters must have the same type, or else the function is invalid.
 
 - `dividend`
-  - : A calculation that resolves to a  {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}} representing the dividend.
-  
+  - : A calculation that resolves to a {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}} representing the dividend.
+
 - `divisor`
-  - : A calculation that resolves to a  {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}} representing the divisor.
+  - : A calculation that resolves to a {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}} representing the divisor.
 
 ### Return value
 
