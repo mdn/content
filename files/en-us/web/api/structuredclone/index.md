@@ -99,7 +99,7 @@ const transferred = structuredClone(
 
 ### Cloning an object
 
-In this example we clone an object with one member, which is an array. After cloning, changes to each object do not affect the other object.
+In this example, we clone an object with one member, which is an array. After cloning, changes to each object do not affect the other object.
 
 ```js
 const mushrooms1 = {
