@@ -63,25 +63,7 @@ If a given animation time offset is duplicated, all keyframes in the `@keyframes
 
 Properties that aren't specified in every keyframe are interpolated if possible — properties that can't be interpolated are dropped from the animation. For example:
 
-```css
-@keyframes identifier {
-  0% {
-    top: 0;
-    left: 0;
-  }
-  30% {
-    top: 50px;
-  }
-  68%,
-  72% {
-    left: 50px;
-  }
-  100% {
-    top: 100px;
-    left: 100%;
-  }
-}
-```
+
 
 Here, the {{ cssxref("top") }} property animates using the `0%`, `30%`, and `100%` keyframes, and {{ cssxref("left") }} animates using the `0%`, `68%`, `72%` and `100%` keyframes.
 
