@@ -349,7 +349,7 @@ As support is not yet comprehensive (and has little historical depth) you should
     <tr>
       <th scope="row">Browser compatibility</th>
       <td>
-        Chrome 85, Opera 71, and Firefox 93.
+        Chrome 85, Opera 71, Firefox 93, and Safari 16.1.
         <ul>
           <li>
             Firefox 93 supports still images, with colorspace support for both full and limited range colors, image transforms for mirroring and rotation.
