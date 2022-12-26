@@ -168,7 +168,7 @@ It can be simplified as:
 inset: 0 20px 0 20px;
 ```
 
-Just like margins an paddings, the inset values are ordered clockwise - top, right, bottom, then left (TRBL).
+Just like margins and paddings, the inset values are ordered clockwise - top, right, bottom, then left (TRBL).
 
 ## The universal shorthand property
 
