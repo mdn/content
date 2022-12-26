@@ -52,7 +52,7 @@ The default content security policy for extensions using Manifest V2 is:
 While for extensions using Manifest V3, the default content security policy is:
 
 ```
-"script-src 'self'; object-src 'self'; upgrade-insecure-requests;"
+"script-src 'self'; upgrade-insecure-requests;"
 ```
 
 These policies are applied to any extension that has not explicitly set its own content security policy using the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json key. It has the following consequences:
@@ -61,7 +61,7 @@ These policies are applied to any extension that has not explicitly set its own 
 - [The extension is not allowed to evaluate strings as JavaScript.](#eval_and_friends)
 - [Inline JavaScript is not executed.](#inline_javascript)
 - [WebAssembly cannot be used by default.](#webassembly)
-- in Manifest V3 extensions, user data requests to `http:` are automatically upgraded to use `https:`. Extensions that need to make `http:` requests can opt-out of this behavior by overriding the default CSP using the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json key.
+- Due to presence of {{CSP("upgrade-insecure-requests")}} in the default CSP of Manifest V3 extensions, network requests to `http:` are automatically upgraded to use `https:`. Extensions that need to make `http:` or `ws:` requests can opt-out of this behavior by overriding the default CSP using the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json key with a policy that excludes the `upgrade-insecure-requests` directive.
 
 ### Location of script and object resources
 
