@@ -61,7 +61,7 @@ These policies are applied to any extension that has not explicitly set its own 
 - [The extension is not allowed to evaluate strings as JavaScript.](#eval_and_friends)
 - [Inline JavaScript is not executed.](#inline_javascript)
 - [WebAssembly cannot be used by default.](#webassembly)
-- Due to presence of {{CSP("upgrade-insecure-requests")}} in the default CSP of Manifest V3 extensions, network requests to `http:` are automatically upgraded to use `https:`. Extensions that need to make `http:` or `ws:` requests can opt-out of this behavior by overriding the default CSP using the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json key with a policy that excludes the `upgrade-insecure-requests` directive.
+- [Insecure network requests are upgraded in Manifest V3.](#upgrade_insecure_network_requests_in_manifest_v3)
 
 ### Location of script and object resources
 
@@ -119,6 +119,12 @@ From Firefox 102 and Chrome 103, `'wasm-unsafe-eval'` can be included in the [`c
 Manifest V2 extensions in Firefox can use WebAssembly without `'wasm-unsafe-eval'` in their CSP for backward compatibility. However, this behavior isn't guaranteed, see {{bug(1770909)}}. Extensions using WebAssembly are therefore encouraged to declare `'wasm-unsafe-eval'` in their CSP.
 
 For Chrome, extensions cannot use WebAssembly in version 101 or earlier. In 102, extensions can use WebAssembly (the same behavior as Firefox 101 and earlier). From version 103, extensions can use WebAssembly if they include `'wasm-unsafe-eval'` in the `content_security_policy` in the manifest key.
+
+### Upgrade insecure network requests in Manifest V3
+
+Extensions should use `https:` and `wss:` when communicating with external servers. To support this, the default Manifest V3 CSP includes the {{CSP("upgrade-insecure-requests")}} directive. This directive automatically upgraded network requests to `http:` to use `https:`.
+
+Manifest V3 Extensions that need to make `http:` or `ws:` requests can opt out of this behavior by overriding the default CSP using the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json key with a policy that excludes the `upgrade-insecure-requests` directive. However, to comply with the [security requirements](https://extensionworkshop.com/documentation/publish/add-on-policies/#security-compliance-and-blocking) of the Add-on Policies, all user data must be transmitted securely.
 
 ## CSP for content scripts
 
