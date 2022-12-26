@@ -136,9 +136,7 @@ int32View2[0] = 42;
 console.log(int32View2[0]);
 
 // Create an array from the original buffer
-// throws with:
-// "attempting to access detached ArrayBuffer" or
-// "Cannot perform Construct on a detached ArrayBuffer"
+// throws a TypeError
 const int32View1 = new Int32Array(object1.buffer);
 ```
 
