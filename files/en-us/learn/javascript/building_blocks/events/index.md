@@ -86,13 +86,13 @@ button {
 The JavaScript looks like so:
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function random(number) {
-  return Math.floor(Math.random() * (number+1));
+  return Math.floor(Math.random() * (number + 1));
 }
 
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
 });
@@ -131,13 +131,13 @@ You don't need to understand anything about other such environments at this stag
 The recommended mechanism for adding event handlers in web pages is the [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function random(number) {
-  return Math.floor(Math.random() * (number+1));
+  return Math.floor(Math.random() * (number + 1));
 }
 
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
 });
@@ -150,10 +150,10 @@ Inside the `addEventListener()` function, we specify two parameters: the name of
 It is fine to make the handler function a separate named function, like this:
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function random(number) {
-  return Math.floor(Math.random() * (number+1));
+  return Math.floor(Math.random() * (number + 1));
 }
 
 function changeBackground() {
@@ -161,7 +161,7 @@ function changeBackground() {
   document.body.style.backgroundColor = rndCol;
 }
 
-btn.addEventListener('click', changeBackground);
+btn.addEventListener("click", changeBackground);
 ```
 
 ### Listening for other events
@@ -183,7 +183,7 @@ Some events, such as `click`, are available on nearly any element. Others are mo
 If you've added an event handler using `addEventListener()`, you can remove it again using the [`removeEventListener()`](/en-US/docs/Web/API/EventTarget/removeEventListener) method. For example, this would remove the `changeBackground()` event handler:
 
 ```js
-btn.removeEventListener('click', changeBackground);
+btn.removeEventListener("click", changeBackground);
 ```
 
 Event handlers can also be removed by passing an {{domxref("AbortSignal")}} to {{domxref("EventTarget/addEventListener()", "addEventListener()")}} and then later calling {{domxref("AbortController/abort()", "abort()")}} on the controller owning the `AbortSignal`.
@@ -192,10 +192,14 @@ For example, to add an event handler that we can remove with an `AbortSignal`:
 ```js
 const controller = new AbortController();
 
-btn.addEventListener('click', () => {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-  document.body.style.backgroundColor = rndCol;
-}, { signal: controller.signal }); // pass an AbortSignal to this handler
+btn.addEventListener(
+  "click",
+  () => {
+    const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    document.body.style.backgroundColor = rndCol;
+  },
+  { signal: controller.signal }
+); // pass an AbortSignal to this handler
 ```
 
 Then the event handler created by the code above can be removed like this:
@@ -212,8 +216,8 @@ Also, the ability to remove event handlers allows you to have the same button pe
 By making more than one call to {{domxref("EventTarget/addEventListener()", "addEventListener()")}}, providing different handlers, you can have multiple handlers for a single event:
 
 ```js
-myElement.addEventListener('click', functionA);
-myElement.addEventListener('click', functionB);
+myElement.addEventListener("click", functionA);
+myElement.addEventListener("click", functionB);
 ```
 
 Both functions would now run when the element is clicked.
@@ -236,25 +240,25 @@ This is called an _event handler property_. To listen for the event, you can ass
 For example, we could rewrite the random-color example like this:
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function random(number) {
-  return Math.floor(Math.random() * (number+1));
+  return Math.floor(Math.random() * (number + 1));
 }
 
 btn.onclick = () => {
   const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
-}
+};
 ```
 
 You can also set the handler property to a named function:
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function random(number) {
-  return Math.floor(Math.random() * (number+1));
+  return Math.floor(Math.random() * (number + 1));
 }
 
 function bgChange() {
@@ -268,8 +272,8 @@ btn.onclick = bgChange;
 With event handler properties, you can't add more than one handler for a single event. For example, you can call `addEventListener('click', handler)` on an element multiple times, with different functions specified in the second argument:
 
 ```js
-element.addEventListener('click', function1);
-element.addEventListener('click', function2);
+element.addEventListener("click", function1);
+element.addEventListener("click", function2);
 ```
 
 This is impossible with event handler properties because any subsequent attempts to set the property will overwrite earlier ones:
@@ -313,10 +317,10 @@ One button is OK, but what if you had 100 buttons? You'd have to add 100 attribu
 With JavaScript, you could easily add an event handler function to all the buttons on the page no matter how many there were, using something like this:
 
 ```js
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll("button");
 
 for (const button of buttons) {
-  button.addEventListener('click', bgChange);
+  button.addEventListener("click", bgChange);
 }
 ```
 
@@ -331,10 +335,10 @@ This is called the **event object**, and it is automatically passed to event han
 For example, let's rewrite our random color example again slightly:
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function random(number) {
-  return Math.floor(Math.random() * (number+1));
+  return Math.floor(Math.random() * (number + 1));
 }
 
 function bgChange(e) {
@@ -343,7 +347,7 @@ function bgChange(e) {
   console.log(e);
 }
 
-btn.addEventListener('click', bgChange);
+btn.addEventListener("click", bgChange);
 ```
 
 > **Note:** You can find the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-eventobject.html) for this example on GitHub (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
@@ -372,7 +376,10 @@ Some event objects add extra properties that are relevant to that particular typ
 ```js
 const textBox = document.querySelector("#textBox");
 const output = document.querySelector("#output");
-textBox.addEventListener('keydown', (event) => output.textContent = `You pressed "${event.key}".`);
+textBox.addEventListener(
+  "keydown",
+  (event) => (output.textContent = `You pressed "${event.key}".`)
+);
 ```
 
 ```css hidden
@@ -424,15 +431,15 @@ Now some JavaScript — here we implement a very simple check inside a handler f
 If they are, we call the [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) function on the event object — which stops the form submission — and then display an error message in the paragraph below our form to tell the user what's wrong:
 
 ```js
-const form = document.querySelector('form');
-const fname = document.getElementById('fname');
-const lname = document.getElementById('lname');
-const para = document.querySelector('p');
+const form = document.querySelector("form");
+const fname = document.getElementById("fname");
+const lname = document.getElementById("lname");
+const para = document.querySelector("p");
 
-form.addEventListener('submit', (e) => {
-  if (fname.value === '' || lname.value === '') {
+form.addEventListener("submit", (e) => {
+  if (fname.value === "" || lname.value === "") {
     e.preventDefault();
-    para.textContent = 'You need to fill in both names!';
+    para.textContent = "You need to fill in both names!";
   }
 });
 ```
@@ -462,13 +469,13 @@ Consider a web page like this:
 Here the button is inside another element, a {{HTMLElement("div")}} element. We say that the `<div>` element here is the **parent** of the element it contains. What happens if we add a click event handler to the parent, then click the button?
 
 ```js
-const output = document.querySelector('#output');
+const output = document.querySelector("#output");
 function handleClick(e) {
   output.textContent += `You clicked on a ${e.currentTarget.tagName} element\n`;
 }
 
-const container = document.querySelector('#container');
-container.addEventListener('click', handleClick);
+const container = document.querySelector("#container");
+container.addEventListener("click", handleClick);
 ```
 
 {{ EmbedLiveSample('Setting a listener on a parent element', '100%', 200, "", "") }}
@@ -497,17 +504,17 @@ What happens if we add event listeners to the button _and_ the parent?
 Let's try adding click event handlers to the button, its parent (the `<div>`), and the {{HTMLElement("body")}} element that contains both of them:
 
 ```js
-const output = document.querySelector('#output');
+const output = document.querySelector("#output");
 function handleClick(e) {
   output.textContent += `You clicked on a ${e.currentTarget.tagName} element\n`;
 }
 
-const container = document.querySelector('#container');
-const button = document.querySelector('button');
+const container = document.querySelector("#container");
+const button = document.querySelector("button");
 
-document.body.addEventListener('click', handleClick);
-container.addEventListener('click', handleClick);
-button.addEventListener('click', handleClick);
+document.body.addEventListener("click", handleClick);
+container.addEventListener("click", handleClick);
+button.addEventListener("click", handleClick);
 ```
 
 {{ EmbedLiveSample('Bubbling example', '100%', 200, "", "") }}
@@ -562,7 +569,7 @@ It includes:
 - a `<div>` element which initially has a `class="hidden"` attribute
 - a `<video>` element nested inside the `<div>` element.
 
- We're using CSS to hide elements with the `"hidden"` class set.
+We're using CSS to hide elements with the `"hidden"` class set.
 
 ```css hidden
 div {
@@ -586,13 +593,13 @@ div video {
 The JavaScript looks like this:
 
 ```js
-const btn = document.querySelector('button');
-const box = document.querySelector('div');
-const video = document.querySelector('video');
+const btn = document.querySelector("button");
+const box = document.querySelector("div");
+const video = document.querySelector("video");
 
-btn.addEventListener('click', () => box.classList.remove('hidden'));
-video.addEventListener('click', () => video.play());
-box.addEventListener('click', () => box.classList.add('hidden'));
+btn.addEventListener("click", () => box.classList.remove("hidden"));
+video.addEventListener("click", () => video.play());
+box.addEventListener("click", () => box.classList.add("hidden"));
 ```
 
 This adds three `'click'` event listeners:
@@ -617,18 +624,18 @@ The [`Event`](/en-US/docs/Web/API/Event) object has a function available on it c
 We can fix our current problem by changing the JavaScript to this:
 
 ```js
-const btn = document.querySelector('button');
-const box = document.querySelector('div');
-const video = document.querySelector('video');
+const btn = document.querySelector("button");
+const box = document.querySelector("div");
+const video = document.querySelector("video");
 
-btn.addEventListener('click', () => box.classList.remove('hidden'));
+btn.addEventListener("click", () => box.classList.remove("hidden"));
 
-video.addEventListener('click', (event) => {
+video.addEventListener("click", (event) => {
   event.stopPropagation();
   video.play();
 });
 
-box.addEventListener('click', () => box.classList.add('hidden'));
+box.addEventListener("click", () => box.classList.add("hidden"));
 ```
 
 All we're doing here is calling `stopPropagation()` on the event object in the handler for the `<video>` element's `'click'` event. This will stop that event from bubbling up to the box. Now try clicking the button and then the video:
@@ -640,8 +647,13 @@ All we're doing here is calling `stopPropagation()` on the event object in the h
 
 <div class="hidden">
   <video>
-    <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm" type="video/webm">
-    <p>Your browser doesn't support HTML video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+    <source
+      src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm"
+      type="video/webm" />
+    <p>
+      Your browser doesn't support HTML video. Here is a
+      <a href="rabbit320.mp4">link to the video</a> instead.
+    </p>
   </video>
 </div>
 ```
@@ -683,17 +695,17 @@ This example is just like the [bubbling example](#Bubbling_example) we saw earli
 ```
 
 ```js
-const output = document.querySelector('#output');
+const output = document.querySelector("#output");
 function handleClick(e) {
   output.textContent += `You clicked on a ${e.currentTarget.tagName} element\n`;
 }
 
-const container = document.querySelector('#container');
-const button = document.querySelector('button');
+const container = document.querySelector("#container");
+const button = document.querySelector("button");
 
-document.body.addEventListener('click', handleClick, { capture: true });
-container.addEventListener('click', handleClick, { capture: true });
-button.addEventListener('click', handleClick);
+document.body.addEventListener("click", handleClick, { capture: true });
+container.addEventListener("click", handleClick, { capture: true });
+button.addEventListener("click", handleClick);
 ```
 
 {{ EmbedLiveSample('Event capture', '100%', 200, "", "") }}
@@ -753,7 +765,7 @@ Now in JavaScript, we could add a click event handler for every tile. But a much
 
 ```js
 function random(number) {
-  return Math.floor(Math.random()*number);
+  return Math.floor(Math.random() * number);
 }
 
 function bgChange() {
@@ -761,9 +773,12 @@ function bgChange() {
   return rndCol;
 }
 
-const container = document.querySelector('#container');
+const container = document.querySelector("#container");
 
-container.addEventListener('click', (event) => event.target.style.backgroundColor = bgChange());
+container.addEventListener(
+  "click",
+  (event) => (event.target.style.backgroundColor = bgChange())
+);
 ```
 
 The output is as follows (try clicking around on it):
