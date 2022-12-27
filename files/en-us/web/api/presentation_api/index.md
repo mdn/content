@@ -257,10 +257,10 @@ In the `controller.html` file:
 
 ```html
 <script>
-  connection.send("{string: '你好，世界!', lang: 'zh-CN'}");
-  connection.send("{string: 'こんにちは、世界!', lang: 'ja'}");
-  connection.send("{string: '안녕하세요, 세계!', lang: 'ko'}");
-  connection.send("{string: 'Hello, world!', lang: 'en-US'}");
+  connection.send('{"string": "你好，世界!", "lang": "zh-CN"}');
+  connection.send('{"string": "こんにちは、世界!", "lang": "ja"}');
+  connection.send('{"string": "안녕하세요, 세계!", "lang": "ko"}');
+  connection.send('{"string": "Hello, world!", "lang": "en-US"}');
 </script>
 ```
 
@@ -273,7 +273,7 @@ In the `presentation.html` file:
     const spanElt = document.createElement("SPAN");
     spanElt.lang = messageObj.lang;
     spanElt.textContent = messageObj.string;
-    document.appendChild(spanElt);
+    document.body.appendChild(spanElt);
   };
 </script>
 ```
