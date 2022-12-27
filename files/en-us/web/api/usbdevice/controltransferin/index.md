@@ -43,8 +43,7 @@ controlTransferIn(setup, length)
       - : The interface number of the recipient.
 
 - `length`
-  - : The maximum number of bytes to read from the device.
-  - The actual data is in the {{domxref("USBInTransferResult")}} in the resolved Promise.
+  - : The maximum number of bytes to read from the device. The actual data is in the {{domxref("USBInTransferResult")}} in the resolved Promise.
 
 ### Return value
 

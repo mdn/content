@@ -23,7 +23,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - {{htmlattrdef("align")}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : Sets the alignment of the rule on the page. If no value is specified, the default value is `left`.
-- {{htmlattrdef("color")}} {{Non-standard_inline}} {{Deprecated_Inline}}
+- {{htmlattrdef("color")}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : Sets the color of the rule through color name or hexadecimal value.
 - {{htmlattrdef("noshade")}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : Sets the rule to have no shading.

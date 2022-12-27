@@ -228,7 +228,7 @@ function strToUTF8Arr(sDOMStr) {
   for (let nMapIdx = 0; nMapIdx < nStrLen; nMapIdx++) {
     nChr = sDOMStr.codePointAt(nMapIdx);
 
-    if (nChr > 65536) {
+    if (nChr >= 0x10000) {
       nMapIdx++;
     }
 

@@ -14,7 +14,7 @@ browser-compat: css.types.color.oklab
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`oklab()`** functional notation expresses a given color in the Oklab color space, which attempts to mimic how color is perceived by the human eye. The `oklab()` works with a Cartesian coordinate system on the OKlab color space, the a- and b-axes. If you want a polar color system, chroma and hue, use {{cssxref("oklch", "oklch()")}}.
+The **`oklab()`** functional notation expresses a given color in the Oklab color space, which attempts to mimic how color is perceived by the human eye. The `oklab()` works with a Cartesian coordinate system on the OKlab color space, the a- and b-axes. If you want a polar color system, chroma and hue, use {{cssxref("color_value/oklch", "oklch()")}}.
 
 Oklab is a perceptual color space and is useful to:
 

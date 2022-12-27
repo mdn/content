@@ -29,7 +29,7 @@ The combination above has two possible interpretations:
 a OP1 (b OP2 c)
 ```
 
-Which one the language decides to adopt depends on the identity of `OP1` ad `OP2`.
+Which one the language decides to adopt depends on the identity of `OP1` and `OP2`.
 
 If `OP1` and `OP2` have different precedence levels (see the table below), the operator with the higher _precedence_ goes first and associativity does not matter. Observe how multiplication has higher precedence than addition and executed first, even though addition is written first in the code.
 

@@ -39,7 +39,7 @@ Regardless of how a content change is done, they will be submitted as
 
 1. Different MDN staff members and volunteers have been assigned as "topic
    review owners", meaning that when a pull request comes in related to a
-   particular topic area of the site (e.g. the CSS reference, or the learning area), it will be assigned to that area's topic review owner(s) and they will receive an e-mail notification asking for a review. This is being handled using a [CODEOWNERS](https://github.com/mdn/content/blob/main/.github/CODEOWNERS) file, in which particular content directories are assigned to the topics review owner's GitHub usernames.
+   particular topic area of the site (e.g. the CSS reference, or the learning area), it will be assigned to that area's topic review owner(s) and they will receive an email notification asking for a review. This is being handled using a [CODEOWNERS](https://github.com/mdn/content/blob/main/.github/CODEOWNERS) file, in which particular content directories are assigned to the topics review owner's GitHub usernames.
 2. Once the review has been done and the pull request has been approved, the
    reviewer should also merge the pull request.
 3. The site will be rebuilt once every 24 hours to ensure that the content
@@ -118,7 +118,7 @@ Think carefully about the way you handle communication in the project — make s
 As a rule, do:
 
 - Fix one issue per PR — it may be slightly more work for you, but it is much easier to review a single clear fix.
-- Ask questions using other mechanisms like [chat rooms](https://chat.mozilla.org/#/room/#mdn:mozilla.org) or [forums](<(https://discourse.mozilla.org/c/mdn/236)>) if you are not sure whether something is useful or have a simple question.
+- Ask questions using other mechanisms like [chat rooms](https://chat.mozilla.org/#/room/#mdn:mozilla.org) or [forums](https://discourse.mozilla.org/c/mdn/236) if you are not sure whether something is useful or have a simple question.
 - Read the [contributor documentation]() and [how to write documentation]() first to try to answer the question yourself before filing a pr.
 
 Don't:
