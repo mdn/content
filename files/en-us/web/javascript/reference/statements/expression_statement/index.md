@@ -117,7 +117,7 @@ function range2(start, end) {
 }
 ```
 
-> **Warning:** This only demonstrates a capability of the language. Excessive use of expression statements as a substitution of control flow statements can make code much less readable.
+> **Warning:** This only demonstrates a capability of the language. Excessive use of expression statements as a substitute for control-flow statements can make code much less readable.
 
 ## Specifications
 
