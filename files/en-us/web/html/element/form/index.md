@@ -52,8 +52,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("name")}}
   - : The name of the form. The value must not be the empty string, and must be unique among the `form` elements in the forms collection that it is in, if any.
+
 - {{htmlattrdef("rel")}}
-  - : Creates a hyperlink or annotation depending on the value, see the [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute for details.
+  - : Controls the annotations and what kinds of links the form creates. Annotations include [`external`](/en-US/docs/Web/HTML/Attributes/rel#attr-external), [`nofollow`](/en-US/docs/Web/HTML/Attributes/rel#attr-nofollow), [`opener`](/en-US/docs/Web/HTML/Attributes/rel#attr-opener), [`noopener`](/en-US/docs/Web/HTML/Attributes/rel#attr-noopener), and [`noreferrer`](/en-US/docs/Web/HTML/Attributes/rel#attr-noreferrer). Link types include [`help`](/en-US/docs/Web/HTML/Attributes/rel#attr-help), [`prev`](/en-US/docs/Web/HTML/Attributes/rel#attr-prev), [`next`](/en-US/docs/Web/HTML/Attributes/rel#attr-next), [`search`](/en-US/docs/Web/HTML/Attributes/rel#attr-search), and [`license`](/en-US/docs/Web/HTML/Attributes/rel#attr-license). The [`rel`](/en-US/docs/Web/HTML/Attributes/rel) value is a space-seperated list of these enumerated values.
 
 ### Attributes for form submission
 
@@ -89,13 +90,11 @@ The following attributes control behavior during form submission.
   - : Indicates where to display the response after submitting the form. It is a name/keyword for a _browsing context_ (for example, tab, window, or iframe). The following keywords have special meanings:
 
     - `_self` (default): Load into the same browsing context as the current one.
-    - `_blank`: Load into a new unnamed browsing context.
+    - `_blank`: Load into a new unnamed browsing context. This provides the same behavior as setting [`rel="noopener"`](#attr-rel) which does not set [`window.opener`](/en-US/docs/Web/API/Window/opener).
     - `_parent`: Load into the parent browsing context of the current one. If no parent, behaves the same as `_self`.
     - `_top`: Load into the top-level browsing context (i.e., the browsing context that is an ancestor of the current one and has no parent). If no parent, behaves the same as `_self`.
 
     This value can be overridden by a {{htmlattrxref("formtarget", "button")}} attribute on a {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) element.
-
-    > **Note:** Setting `target="_blank"` on `<form>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) which does not set `window.opener`.
 
 ## Examples
 
