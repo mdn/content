@@ -1,6 +1,7 @@
 ---
 title: Intl.ListFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/supportedLocalesOf
+page-type: javascript-static-method
 tags:
   - Internationalization
   - Intl

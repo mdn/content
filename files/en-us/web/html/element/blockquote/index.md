@@ -21,6 +21,43 @@ The **`<blockquote>`** [HTML](/en-US/docs/Web/HTML) element indicates that the e
 
 {{EmbedInteractiveExample("pages/tabbed/blockquote.html","tabbed-standard")}}
 
+## Attributes
+
+This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+- {{htmlattrdef("cite")}}
+  - : A URL that designates a source document or message for the information quoted. This attribute is intended to point to information explaining the context or the reference for the quote.
+
+## Usage notes
+
+To change the indentation applied to the quoted text, use the {{Glossary("CSS")}} {{cssxref("margin-left")}} and/or {{cssxref("margin-right")}} properties, or the {{cssxref("margin")}} shorthand property.
+
+To include shorter quotes inline rather than in a separate block, use the {{HTMLElement("q")}} (Quotation) element.
+
+## Example
+
+This example demonstrates the use of the `<blockquote>` element to quote a passage from {{RFC(1149)}}, _A Standard for the Transmission of IP Datagrams on Avian Carriers_.
+
+```html
+<blockquote cite="https://datatracker.ietf.org/doc/html/rfc1149">
+  <p>
+    Avian carriers can provide high delay, low throughput, and low altitude
+    service. The connection topology is limited to a single point-to-point path
+    for each carrier, used with standard carriers, but many carriers can be used
+    without significant interference with each other, outside early spring.
+    This is because of the 3D ether space available to the carriers, in contrast
+    to the 1D ether used by IEEE802.3. The carriers have an intrinsic collision
+    avoidance system, which increases availability.
+  </p>
+</blockquote>
+```
+
+The output from this HTML snippet looks like this:
+
+{{EmbedLiveSample("Example", 640, 180)}}
+
+## Technical Summary
+
 <table class="properties">
   <tbody>
     <tr>
@@ -74,41 +111,6 @@ The **`<blockquote>`** [HTML](/en-US/docs/Web/HTML) element indicates that the e
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-- {{htmlattrdef("cite")}}
-  - : A URL that designates a source document or message for the information quoted. This attribute is intended to point to information explaining the context or the reference for the quote.
-
-## Usage notes
-
-To change the indentation applied to the quoted text, use the {{Glossary("CSS")}} {{cssxref("margin-left")}} and/or {{cssxref("margin-right")}} properties, or the {{cssxref("margin")}} shorthand property.
-
-To include shorter quotes inline rather than in a separate block, use the {{HTMLElement("q")}} (Quotation) element.
-
-## Example
-
-This example demonstrates the use of the `<blockquote>` element to quote a passage from {{RFC(1149)}}, _A Standard for the Transmission of IP Datagrams on Avian Carriers_.
-
-```html
-<blockquote cite="https://datatracker.ietf.org/doc/html/rfc1149">
-  <p>
-    Avian carriers can provide high delay, low throughput, and low altitude
-    service. The connection topology is limited to a single point-to-point path
-    for each carrier, used with standard carriers, but many carriers can be used
-    without significant interference with each other, outside early spring.
-    This is because of the 3D ether space available to the carriers, in contrast
-    to the 1D ether used by IEEE802.3. The carriers have an intrinsic collision
-    avoidance system, which increases availability.
-  </p>
-</blockquote>
-```
-
-The output from this HTML snippet looks like this:
-
-{{EmbedLiveSample("Example", 640, 180)}}
 
 ## Specifications
 

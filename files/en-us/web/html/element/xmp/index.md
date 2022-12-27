@@ -30,6 +30,8 @@ This element has no other attributes than the [global attributes](/en-US/docs/We
 
 This element implements the {{domxref('HTMLElement')}} interface.
 
+<!-- ## Technical summary -->
+
 ## Specifications
 
 {{Specifications}}

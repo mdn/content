@@ -1,6 +1,7 @@
 ---
 title: import()
 slug: Web/JavaScript/Reference/Operators/import
+page-type: javascript-operator
 tags:
   - ECMAScript 2015
   - JavaScript

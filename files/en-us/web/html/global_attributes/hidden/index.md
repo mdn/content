@@ -150,7 +150,7 @@ Note that although the content of the element is hidden, the element still has a
 
 Clicking the "Go to hidden content" button navigates to the hidden until found element. The `beforematch` event fires, the text content is updated, and the element content is displayed.
 
-To run the example again, click "Reload".
+To run the example again, click "Reset".
 
 {{EmbedLiveSample("Using until-found", "", 400)}}
 

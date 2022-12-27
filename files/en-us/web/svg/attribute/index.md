@@ -1,6 +1,7 @@
 ---
 title: SVG Attribute reference
 slug: Web/SVG/Attribute
+page-type: landing-page
 tags:
   - Drawing
   - Landing

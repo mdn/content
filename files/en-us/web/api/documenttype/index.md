@@ -20,12 +20,8 @@ The **`DocumentType`** interface represents a {{domxref("Node")}} containing a d
 
 _Inherits properties from its parent, {{domxref("Node")}}._
 
-- {{domxref("DocumentType.internalSubset")}} {{ReadOnlyInline}} {{deprecated_inline}}
-  - : A string of the internal subset, or `null` if there is none. Eg `"<!ELEMENT foo (bar)>"`.
 - {{domxref("DocumentType.name")}} {{ReadOnlyInline}}
   - : A string, eg `"html"` for `<!DOCTYPE HTML>`.
-- {{domxref("DocumentType.notations")}} {{ReadOnlyInline}} {{deprecated_inline}}
-  - : A {{domxref("NamedNodeMap")}} with notations declared in the DTD.
 - {{domxref("DocumentType.publicId")}} {{ReadOnlyInline}}
   - : A string, eg `"-//W3C//DTD HTML 4.01//EN"`, now and empty string for HTML.
 - {{domxref("DocumentType.systemId")}} {{ReadOnlyInline}}

@@ -1,6 +1,7 @@
 ---
 title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
+page-type: javascript-namespace
 tags:
   - Internationalization
   - Intl

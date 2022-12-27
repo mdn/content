@@ -1,6 +1,7 @@
 ---
 title: Array.prototype.pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
+page-type: javascript-instance-method
 tags:
   - Array
   - JavaScript

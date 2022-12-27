@@ -1,6 +1,7 @@
 ---
 title: 'TypeError: "x" is (not) "y"'
 slug: Web/JavaScript/Reference/Errors/Unexpected_type
+page-type: javascript-error
 tags:
   - Error
   - Errors

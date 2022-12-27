@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/map
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript

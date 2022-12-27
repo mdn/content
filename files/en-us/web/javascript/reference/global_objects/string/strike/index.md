@@ -1,6 +1,7 @@
 ---
 title: String.prototype.strike()
 slug: Web/JavaScript/Reference/Global_Objects/String/strike
+page-type: javascript-instance-method
 tags:
   - Deprecated
   - HTML wrapper methods

@@ -1,6 +1,7 @@
 ---
 title: Filter effects
 slug: Web/SVG/Tutorial/Filter_effects
+page-type: guide
 tags:
   - Advanced
   - NeedsContent

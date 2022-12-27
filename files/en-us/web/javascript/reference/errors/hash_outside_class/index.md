@@ -1,6 +1,7 @@
 ---
 title: 'SyntaxError: Unexpected ''#'' used outside of class body'
 slug: Web/JavaScript/Reference/Errors/Hash_outside_class
+page-type: javascript-error
 tags:
   - Error
   - JavaScript

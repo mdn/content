@@ -1,6 +1,7 @@
 ---
 title: Regular expressions
 slug: Web/JavaScript/Guide/Regular_Expressions
+page-type: guide
 tags:
   - Guide
   - Intermediate

@@ -41,7 +41,7 @@ const observer = new PerformanceObserver((list) => {
   });
 });
 
-observer.observe({ entryTypes: ["resource"] });
+observer.observe({ type: "resource", buffered: true });
 ```
 
 This would log a JSON object like so:

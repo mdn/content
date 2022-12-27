@@ -578,7 +578,7 @@ function handleError(reason) {
 
 Here you can see the complete example in action.
 
-{{EmbedLiveSample("Example_Constraint_exerciser", 650, 800, "", "", "", "microphone; camera")}}
+{{EmbedLiveSample("Example_Constraint_exerciser", 650, 800)}}
 
 ## Specifications
 

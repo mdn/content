@@ -1,6 +1,7 @@
 ---
 title: Intl.supportedValuesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf
+page-type: javascript-static-method
 tags:
   - Internationalization
   - Intl

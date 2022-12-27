@@ -393,11 +393,12 @@ Where possible it will use a version that has the same major version number.
 
 So far in this tutorial, we've used a single database that is hard-coded into **app.js**. Normally we'd like to be able to have a different database for production and development, so next we'll modify the LocalLibrary website to get the database URI from the OS environment (if it has been defined), and otherwise use our development database.
 
-Open **app.js** and find the line that sets the MongoDB connection variable. It will look something like this:
+Open **app.js** and find the line that sets the MongoDB connection variable.
+It will look something like this:
 
 ```js
 const mongoDB =
-  "mongodb+srv://your_user:your_password@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true";
+  "mongodb+srv://your_user_name:your_password@cluster0.lz91hw2.mongodb.net/local_library?retryWrites=true&w=majority";
 ```
 
 Replace the line with the following code that uses `process.env.MONGODB_URI` to get the connection string from an environment variable named `MONGODB_URI` if has been set (use your own database URL instead of the placeholder below.)
@@ -405,7 +406,7 @@ Replace the line with the following code that uses `process.env.MONGODB_URI` to 
 ```js
 // Set up mongoose connection
 const dev_db_url =
-  "mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true";
+  "mongodb+srv://your_user_name:your_password@cluster0.lz91hw2.mongodb.net/local_library?retryWrites=true&w=majority";
 const mongoDB = process.env.MONGODB_URI || dev_db_url;
 ```
 

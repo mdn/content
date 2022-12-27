@@ -1,6 +1,7 @@
 ---
 title: Object.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
+page-type: javascript-static-method
 tags:
   - ECMAScript 5
   - JavaScript

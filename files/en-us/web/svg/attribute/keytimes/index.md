@@ -1,6 +1,7 @@
 ---
 title: keyTimes
 slug: Web/SVG/Attribute/keyTimes
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute
