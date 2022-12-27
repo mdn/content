@@ -20,7 +20,7 @@ expression;
 
 ## Description
 
-Apart from the [dedicated statement syntaxes](/en-US/docs/Web/JavaScript/Reference/Statements), you can also use almost any [expression](/en-US/docs/Web/JavaScript/Reference/Operators) as a statement on its own. The expression statement syntax requires a semicolon at the end, but the [automatic semicolon insertion](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) process may insert one for you if the lack of semicolon results in invalid syntax.
+Apart from the [dedicated statement syntaxes](/en-US/docs/Web/JavaScript/Reference/Statements), you can also use almost any [expression](/en-US/docs/Web/JavaScript/Reference/Operators) as a statement on its own. The expression statement syntax requires a semicolon at the end, but the [automatic semicolon insertion](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) process may insert one for you if the lack of a semicolon results in invalid syntax.
 
 Because the expression is evaluated and then discarded, the result of the expression is not available. Therefore, the expression must have some side effect for it to be useful. Expression statements are commonly:
 
