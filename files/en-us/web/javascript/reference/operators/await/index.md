@@ -298,7 +298,7 @@ async function noAwait() {
 }
 ```
 
-However, consider the case where `someAsyncTask` asynchronously throws an error.
+However, consider the case where `lastAsyncTask` asynchronously throws an error.
 
 ```js
 async function lastAsyncTask() {
