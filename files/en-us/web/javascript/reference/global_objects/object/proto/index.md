@@ -46,7 +46,7 @@ The `__proto__` getter function exposes the value of the internal `[[Prototype]]
 
 The `__proto__` setter allows the `[[Prototype]]` of an object to be mutated. The value provided must be an object or {{JSxRef("Operators/null", "null")}}. Providing any other value will do nothing.
 
-The `__proto__` property is a simple accessor property on `Object.prototype` consisting of a getter and setter function. A property access for `__proto__` that eventually consults `Object.prototype` will find this property, but an access that does not consult `Object.prototype` will not. If some other `__proto__` property is found before `Object.prototype` is consulted, that property will hide the one found on `Object.prototype`. 
+The `__proto__` property is a simple accessor property on `Object.prototype` consisting of a getter and setter function. A property access for `__proto__` that eventually consults `Object.prototype` will find this property, but an access that does not consult `Object.prototype` will not. If some other `__proto__` property is found before `Object.prototype` is consulted, that property will hide the one found on `Object.prototype`.
 
 > **Note:** Unlike {{JSxRef("Object.getPrototypeOf()")}} and {{JSxRef("Object.setPrototypeOf()")}} ( which are always available in `Object` as static properties, and always reflect the `[[prototype]]` internal property ),
 the `__proto__` property doesn't exist as a property in some cases, and as a result doesn't reflect `[[prototype]]` property.
