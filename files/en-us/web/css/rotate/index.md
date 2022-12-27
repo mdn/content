@@ -86,13 +86,12 @@ The first box rotates 90 degrees on the Z axis hover, the second rotates 180 deg
 ```css
 .box {
   display: inline-block;
-  margin: 10px;
-  height: 100px;
-  width: 100px;
-  line-height: 100px;
+  margin: 1em;
+  min-width: 6.5em;
+  line-height: 6.5em;
   text-align: center;
   transition: 1s ease-in-out;
-  border: 3px dotted;
+  border: 0.25em dotted;
 }
 
 #box1:hover {
