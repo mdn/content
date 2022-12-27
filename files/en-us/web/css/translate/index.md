@@ -84,6 +84,8 @@ The third box is moved along the X, Y and Z axes and has the appearance of movin
 ```css
 .wrapper {
   perspective: 100px;
+  display: inline-flex;
+  gap: 1em;
   transform-style: preserve-3d;
 }
 
