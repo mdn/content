@@ -67,15 +67,15 @@ translate: unset;
 
 This example shows how to use the `translate` property to move an element in three axes.
 The first box is moved along the X axis and the second box is moved along the X and Y axes.
-The third box is moved along the X, Y and Z axes and has the appearance of moving toward the viewer because of the addition of {{cssxref('perspective')}} and {{cssxref('transform-style')}} to the parent element.
+The third box is moved along the X, Y and Z axes and has the appearance of moving toward the viewer because of the addition of {{cssxref('perspective')}} to the parent element.
 
 #### HTML
 
 ```html
 <div class="wrapper">
-  <div class="box" id="box1">translate X</div>
-  <div class="box" id="box2">translate X,Y</div>
-  <div class="box" id="box3">translate X,Y,Z</div>
+  <div id="box1">translate X</div>
+  <div id="box2">translate X,Y</div>
+  <div id="box3">translate X,Y,Z</div>
 </div>
 ```
 
@@ -86,20 +86,14 @@ The third box is moved along the X, Y and Z axes and has the appearance of movin
   perspective: 100px;
   display: inline-flex;
   gap: 1em;
-  transform-style: preserve-3d;
 }
-
-.box {
-  float: left;
-  margin: 10px;
-  height: 100px;
-  width: 100px;
-  line-height: 100px;
+.wrapper > div {
+  width: 7em;
+  line-height: 7em;
   text-align: center;
   transition: 0.5s ease-in-out;
   border: 3px dotted;
 }
-
 #box1:hover {
   translate: 20px;
 }
