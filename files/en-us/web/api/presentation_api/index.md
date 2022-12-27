@@ -236,8 +236,8 @@ In `presentation.html`:
 
 ```js
 const addConnection = (connection) => {
-  window.onmessage = (message) => {
-    if (message.data === "Say hello") window.send("hello");
+  connection.onmessage = (message) => {
+    if (message.data === "Say hello") connection.send("hello");
   };
 };
 
