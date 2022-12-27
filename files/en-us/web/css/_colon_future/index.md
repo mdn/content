@@ -74,6 +74,6 @@ This is the third caption
 
 ## See also
 
-- [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API)
 - {{cssxref(":current")}}
 - {{cssxref(":past")}}
+- [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API)
