@@ -23,7 +23,7 @@ A string.
 ## Examples
 
 ```js
-if ('launchQueue' in window && 'targetURL' in window.LaunchParams.prototype) {
+if ('launchQueue' in window) {
   window.launchQueue.setConsumer(launchParams => {
     if (launchParams.targetURL) {
       const params = new URL(launchParams.targetURL).searchParams;

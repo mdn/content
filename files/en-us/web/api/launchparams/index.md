@@ -27,7 +27,7 @@ The **`LaunchParams`** interface is used when implementing custom launch navigat
 ## Examples
 
 ```js
-if ('launchQueue' in window && 'targetURL' in window.LaunchParams.prototype) {
+if ('launchQueue' in window) {
   window.launchQueue.setConsumer(launchParams => {
     if (launchParams.targetURL) {
       const params = new URL(launchParams.targetURL).searchParams;

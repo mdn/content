@@ -40,10 +40,10 @@ The `launch_handler` member defines values that control the launch of a web appl
   <tbody>
     <tr>
       <td><code>client_mode</code></td>
-      <td><p>A string that specifies the context in which the app should be loaded when launched. Possible values are:</p>
+      <td><p>A string, or comma-separated list of strings, which specifies the context in which the app should be loaded when launched. Possible values are:</p>
       <dl>
         <dt><code>auto</code></dt>
-        <dd>The user agent decides what context makes sense for the platform to load the app in. For example, <code>navigate-existing</code> might make more sense on mobile, where single app instances are commonplace, whereas <code>navigate-new</code> might make more sense in a desktop context.</dd>
+        <dd>The user agent decides what context makes sense for the platform to load the app in. For example, <code>navigate-existing</code> might make more sense on mobile, where single app instances are commonplace, whereas <code>navigate-new</code> might make more sense in a desktop context. This is the default value used if the provided values are invalid.</dd>
         <dt><code>focus-existing</code></dt>
         <dd>If the app is already loaded in a web app client, it is brought into focus but not navigated to the launch target URL. Instead, the target URL is made available via {{domxref("Window.launchQueue")}} to allow custom launch navigation handling to be implemented. If the app is not already loaded in a web app client, <code>navigate-new</code> behavior is used instead.</dd>
         <dt><code>navigate-existing</code></dt>
@@ -61,6 +61,10 @@ The `launch_handler` member defines values that control the launch of a web appl
 ```json
 "launch_handler": {
     "client_mode": "focus-existing"
+}
+
+"launch_handler": {
+    "client_mode": "focus-existing, auto"
 }
 ```
 

@@ -13,7 +13,7 @@ browser-compat: api.LaunchQueue
 
 {{APIRef()}}{{SeeCompatTable}}
 
-The **`LaunchQueue`** interface is available via the {{domxref("Window.launchQueue")}} property. When a [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA) is launched with a valid [`launch_handler`](/en-US/docs/Web/Manifest/launch_handler) `client_mode` value, {{domxref("LaunchQueue")}} provides access to functionality that allows custom launch navigation handling to be implemented in the PWA.
+The **`LaunchQueue`** interface is available via the {{domxref("Window.launchQueue")}} property. When a [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA) is launched with a [`launch_handler`](/en-US/docs/Web/Manifest/launch_handler) `client_mode` value set, {{domxref("LaunchQueue")}} provides access to functionality that allows custom launch navigation handling to be implemented in the PWA. This functionality is controlled by the properties of the {{domxref("LaunchParams")}} object passed into the {{domxref("LaunchQueue.setConsumer", "setConsumer()")}} callback function.
 
 {{InheritanceDiagram}}
 
@@ -25,7 +25,7 @@ The **`LaunchQueue`** interface is available via the {{domxref("Window.launchQue
 ## Examples
 
 ```js
-if ('launchQueue' in window && 'targetURL' in window.LaunchParams.prototype) {
+if ('launchQueue' in window) {
   window.launchQueue.setConsumer(launchParams => {
     if (launchParams.targetURL) {
       const params = new URL(launchParams.targetURL).searchParams;

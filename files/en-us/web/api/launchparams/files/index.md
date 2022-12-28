@@ -23,7 +23,7 @@ A read-only array of {{domxref("FileSystemHandle")}} objects.
 ## Examples
 
 ```js
-if ('launchQueue' in window && 'targetURL' in window.LaunchParams.prototype) {
+if ('launchQueue' in window) {
   window.launchQueue.setConsumer(launchParams => {
     if (launchParams.files) {
       const files = launchParams.files;
