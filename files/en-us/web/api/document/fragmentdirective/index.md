@@ -10,7 +10,7 @@ tags:
 browser-compat: api.Document.fragmentDirective
 ---
 
-{{APIRef}}{{seecompattable}}
+{{APIRef}}{{SeeCompatTable}}
 
 The **`fragmentDirective`** read-only property of the {{domxref("Document")}} interface returns the {{domxref("FragmentDirective")}} for the current document.
 

@@ -15,13 +15,15 @@ browser-compat: javascript.builtins.Intl.Locale.collations
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.collations`** property is an accessor property that returns an array of one or more [collation types](https://www.unicode.org/reports/tr35/tr35-collation.html#CLDR_collation) for the `Locale`.
+The **`Intl.Locale.prototype.collations`** accessor property returns a list of one or more [collation types](https://www.unicode.org/reports/tr35/tr35-collation.html#CLDR_collation) for the `Locale`.
 
 ## Description
 
-Collation is the process of ordering strings of characters. It is used whenever strings must be sorted and placed into a certain order, from search query results to ordering records in a database. While the idea of placing strings in order might seem trivial, the idea of order can vary from region to region and language to language. The array returned by `collations` helps to make it easier for JavaScript programmers to access the collation types used by a particular locale.
+Collation is the process of ordering strings of characters. It is used whenever strings must be sorted and placed into a certain order, from search query results to ordering records in a database. While the idea of placing strings in order might seem trivial, the idea of order can vary from region to region and language to language. The `collations` property returns an array of all collation types commonly used for the `Locale`, sorted in alphabetical order, with the `standard` and `search` values always excluded. If the `Locale` already has a [`collation`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation), then the returned array contains that single value.
 
-Below is a table with the available collation types, adapted from the [Unicode collation specification](https://github.com/unicode-org/cldr/blob/2dd06669d833823e26872f249aa304bc9d9d2a90/common/bcp47/collation.xml).
+Below is a list of the supported collation types, adapted from the [Unicode collation specification](https://github.com/unicode-org/cldr/blob/2dd06669d833823e26872f249aa304bc9d9d2a90/common/bcp47/collation.xml).
+
+### Supported collation types
 
 - `big5han`
   - : Pinyin ordering for Latin, big5 charset ordering for CJK characters (for Chinese)
@@ -72,32 +74,12 @@ Below is a table with the available collation types, adapted from the [Unicode c
 
 ## Examples
 
-Like other locale subtags, the collation type can be added to the {{jsxref("Intl/Locale", "Intl.Locale")}} object via the locale string, or a configuration object argument to the constructor.
-
-### Adding a collation type via the locale string
-
-In the [Unicode locale string spec](https://www.unicode.org/reports/tr35/), collation types are locale key "extension subtags". These subtags add additional data about the locale, and are added to locale identifiers by using the `-u` extension. Thus, the collation type can be added to the initial locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. To add the collation type, first add the `-u` extension to the string. Next, add the `-co` extension to indicate that you are adding a collation type. Finally, add the collation to the string.
-
-```js
-const locale = new Intl.Locale("zh-Hant-u-co-zhuyin");
-console.log(locale.collations); // ["zhuyin"]
-```
-
-### Adding a collation type via the configuration object argument
-
-The {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor has an optional configuration object argument, which can contain any of several extension types, including collations types. Set the `collations` property of the configuration object to your desired collations type, and then pass it into the constructor.
-
-```js
-const locale = new Intl.Locale("zh-Hant", { collations: "zhuyin" });
-console.log(locale.collations); // ["zhuyin"]
-```
-
 ### Obtaining supported collation types
 
-List supported `collation` types for a given `Locale`.
+If the `Locale` object doesn't have a `collation` already, the `collations` property lists all commonly-used collation types for the given `Locale`. For examples of explicitly setting a `collation`, see [`collation` examples](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation#examples).
 
 ```js
-const locale = new Intl.Locale("zh")
+const locale = new Intl.Locale("zh");
 console.log(locale.collations); // ["pinyin", "stroke", "zhuyin", "emoji", "eor"]
 ```
 
@@ -112,3 +94,4 @@ console.log(locale.collations); // ["pinyin", "stroke", "zhuyin", "emoji", "eor"
 ## See also
 
 - {{jsxref("Intl.Locale")}}
+- [`Intl.Locale.prototype.collation`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation)
