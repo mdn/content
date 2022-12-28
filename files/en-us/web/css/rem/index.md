@@ -23,15 +23,21 @@ The **`rem()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Fu
 ## Syntax
 
 ```css
-width: calc(100px * rem(21, 2));  // 100px
-width: calc(100px * rem(14, 5));  // 400px
-width: calc(100px * rem(5.5, 2)); // 150px
+// Unitless values
+line-height: rem(21, 2);  // 1
+line-height: rem(14, 5);  // 4
+line-height: rem(5.5, 2); // 1.5
 
-margin: rem(-18px, 5px); // -3px
+// Unit based values
+margin: rem(14%, 3%);   // 2%
+margin: rem(18px, 5px); // 3px
+margin: rem(25vw, 7vw); // 4vw
 
+// Negative/positive values
 rotate: rem(200deg, 30deg);  // 20deg
 rotate: rem(140deg, -90deg); // 50deg
 rotate: rem(-90deg, 20deg);  // -10deg
+rotate: rem(-90deg, -20deg); // -10deg
 ```
 
 ### Parameter
@@ -50,6 +56,7 @@ Returns a {{CSSxREF("&lt;number&gt;")}} representing the remainder, that is, the
 
 - If `divisor` is `0`, the result is `NaN`.
 - If `dividend` is `infinite`, the result is `NaN`.
+- If `dividend` is positive the result is positive (`0⁺`), and if `dividend` is negative the result is negative (`0⁻`).
 
 ### Formal syntax
 
