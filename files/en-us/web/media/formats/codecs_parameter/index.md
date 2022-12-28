@@ -938,3 +938,4 @@ You can also use the codecs parameter when specifying a MIME media type to the {
 - [Guide to audio codecs used on the web](/en-US/docs/Web/Media/Formats/Audio_codecs)
 - [Guide to video codecs used on the web](/en-US/docs/Web/Media/Formats/Video_codecs)
 - [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs)
+- [Getting the correct HTML codecs parameter for an AV1 video](https://jakearchibald.com/2022/html-codecs-parameter-for-av1/)

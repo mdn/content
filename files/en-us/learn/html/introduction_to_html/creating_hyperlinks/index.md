@@ -304,7 +304,7 @@ The finished example should look similar to the following page:
 
 > **Note:** If you get stuck, or aren't sure if you have got it right, you can check the [navigation-menu-marked-up](https://github.com/mdn/learning-area/tree/main/html/introduction-to-html/navigation-menu-marked-up) directory to see the correct answer.
 
-## E-mail links
+## Email links
 
 It's possible to create links or buttons that, when clicked, open a new outgoing email message rather than linking to a resource or page.
 This is done using the {{HTMLElement("a")}} element and the `mailto:` URL scheme.

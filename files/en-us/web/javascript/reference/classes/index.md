@@ -15,78 +15,70 @@ browser-compat: javascript.classes
 
 {{JsSidebar("Classes")}}
 
-Classes are a template for creating objects.
-They encapsulate data with code to work on that data.
-Classes in JS are built on prototypes but also have some syntax and semantics that are not shared with ES5 class-like semantics.
+Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on [prototypes](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) but also have some syntax and semantics that are unique to classes.
+
+For more examples and explanations, see the [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes) guide.
 
 ## Defining classes
 
-Classes are in fact "special {{jsxref("Functions", "functions", "", "true")}}", and just as you can define {{jsxref("Operators/function", "function expressions", "", "true")}} and {{jsxref("Statements/function", "function declarations", "", "true")}}, the class syntax has two components: {{jsxref("Operators/class", "class expressions", "", "true")}} and {{jsxref("Statements/class", "class declarations", "", "true")}}.
-
-### Class declarations
-
-One way to define a class is using a **class declaration**.
-To declare a class, you use the `class` keyword with the name of the class ("Rectangle" here).
+Classes are in fact "special [functions](/en-US/docs/Web/JavaScript/Reference/Functions)", and just as you can define [function expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function) and [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function), a class can be defined in two ways: a [class expression](/en-US/docs/Web/JavaScript/Reference/Operators/class) or a [class declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class).
 
 ```js
+// Declaration
 class Rectangle {
   constructor(height, width) {
     this.height = height;
     this.width = width;
   }
 }
-```
 
-#### Hoisting
-
-An important difference between **function declarations** and **class declarations** is that while functions can be called in code that appears before they are defined, classes must be defined before they can be constructed.
-Code like the following will throw a {{jsxref("ReferenceError")}}:
-
-```js example-bad
-const p = new Rectangle(); // ReferenceError
-
-class Rectangle {}
-```
-
-This occurs because while the class is {{Glossary("Hoisting", "hoisted")}} its values are not initialized.
-
-### Class expressions
-
-A **class expression** is another way to define a class.
-Class expressions can be named or unnamed.
-The name given to a named class expression is local to the class's body.
-However, it can be accessed via the {{jsxref("Function/name", "name")}} property.
-
-```js
-// unnamed
-let Rectangle = class {
+// Expression; the class is anonymous but assigned to a variable
+const Rectangle = class {
   constructor(height, width) {
     this.height = height;
     this.width = width;
   }
 };
-console.log(Rectangle.name); // "Rectangle"
 
-// named
-Rectangle = class Rectangle2 {
+// Expression; the class has its own name
+const Rectangle = class Rectangle2 {
   constructor(height, width) {
     this.height = height;
     this.width = width;
   }
 };
-console.log(Rectangle.name); // "Rectangle2"
 ```
 
-> **Note:** Class **expressions** must be declared before they can be used (they are subject to the same hoisting restrictions as described in the [class declarations](#class_declarations) section).
+Like function expressions, class expressions may be anonymous, or have a name that's different from the variable that it's assigned to. However, unlike function declarations, class declarations have the same [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) restrictions as `let` or `const` and behave as if they are [not hoisted](/en-US/docs/Web/JavaScript/Guide/Using_Classes#class_declaration_hoisting).
 
-## Class body and method definitions
+## Class body
 
-The body of a class is the part that is in curly brackets `{}`.
-This is where you define class members, such as methods or constructor.
+The body of a class is the part that is in curly brackets `{}`. This is where you define class members, such as methods or constructor.
 
-### Strict mode
+The body of a class is executed in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) even without the `"use strict"` directive.
 
-The body of a class is executed in {{jsxref("Strict_mode", "strict mode", "", "true")}}, i.e., code written here is subject to stricter syntax for increased performance, some otherwise silent errors will be thrown, and certain keywords are reserved for future versions of ECMAScript.
+A class element can be characterized by three aspects:
+
+- Kind: Getter, setter, method, or field
+- Location: Static or instance
+- Visibility: Public or private
+
+Together, they add up to 16 possible combinations. To divide the reference more logically and avoid overlapping content, the different elements are introduced in detail in different pages:
+
+- [Method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
+  - : Public instance method
+- [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get)
+  - : Public instance getter
+- [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+  - : Public instance setter
+- [Public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
+  - : Public instance field
+- [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static)
+  - : Public static method, getter, setter, and field
+- [Private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
+  - : Everything that's private
+
+In addition, there are two special class element syntaxes: [`constructor`](#constructor) and [static initialization blocks](#static_initialization_blocks), with their own references.
 
 ### Constructor
 
@@ -149,11 +141,11 @@ const pentagon = new Polygon(1,2,3,4,5);
 console.log([...pentagon.getSides()]); // [1,2,3,4,5]
 ```
 
-### Static methods and properties
+### Static methods and fields
 
-The {{jsxref("Classes/static", "static", "", "true")}} keyword defines a static method or property for a class.
-Static members (properties and methods) are called without instantiating their class and **cannot** be called through a class instance.
-Static methods are often used to create utility functions for an application, whereas static properties are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
+The {{jsxref("Classes/static", "static")}} keyword defines a static method or field for a class.
+Static properties (fields and methods) are defined on the class itself instead of each instance.
+Static methods are often used to create utility functions for an application, whereas static fields are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
 
 ```js
 class Point {

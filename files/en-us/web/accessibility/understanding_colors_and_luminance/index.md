@@ -101,7 +101,7 @@ Our perception of contrast is not only affected by surrounding elements and the 
 
 In a typical eye exam for acuity (ability to focus), legibility at a particular level means getting three out of five letters correct. This is wholly insufficient for fluent, easy reading.
 
-"Normal" print is usually considered 11.5pt to 12pt, this is equivalent of 16px on screen. And this is for normal vision. To relate this to real world visual acuity, if you think of an eye doctor's chart, and focusing on a capital E. If that E is at the legibility or acuity limit for 20/20 vision, and that is at full contrast, it is equivalent to a Helvetica capital E that is 3.9px on screen, meaning a 5.5px CSS font-size. (In print, this is a 4pt font on coated paper).
+"Normal" print is usually considered 11.5pt to 12pt, this is equivalent of 16px on screen. And this is for normal vision. To relate this to real-world visual acuity, if you think of an eye doctor's chart, and focusing on a capital E. If that E is at the legibility or acuity limit for 20/20 vision, and that is at full contrast, it is equivalent to a Helvetica capital E that is 3.9px on screen, meaning a 5.5px CSS font-size. (In print, this is a 4pt font on coated paper).
 
 This is the minimum for "just making out" letters at \~70% accuracy. That is legibility, not readability. For readability, the lower case [x-height](https://kazdesignworks.com/graphic-design-terms-x-height-and-cap-height/) needs to be a minimum of twice that [cap height](https://kazdesignworks.com/graphic-design-terms-x-height-and-cap-height/). This is called the critical font size for readability.
 

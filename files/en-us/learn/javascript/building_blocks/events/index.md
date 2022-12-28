@@ -46,12 +46,7 @@ This won't be an exhaustive study; just what you need to know at this stage.
 ## A series of fortunate events
 
 As mentioned above, **events** are actions or occurrences that happen in the system you are programming — the system produces (or "fires") a signal of some kind when an event occurs, and provides a mechanism by which an action can be automatically taken (that is, some code running) when the event occurs.
-For example, in an airport, when the runway is clear for take off, a signal is communicated to the pilot.
-As a result, the plane can safely take off.
-
-![Image displaying signal for plane to take-off](mdn-mozilla-events-runway.png)
-
-In the case of the Web, events are fired inside the browser window, and tend to be attached to a specific item that resides in it. This might be a single element, a set of elements, the HTML document loaded in the current tab, or the entire browser window.
+Events are fired inside the browser window, and tend to be attached to a specific item that resides in it. This might be a single element, a set of elements, the HTML document loaded in the current tab, or the entire browser window.
 There are many different types of events that can occur.
 
 For example:
@@ -551,7 +546,7 @@ The HTML looks like this:
 <div class="hidden">
   <video>
     <source
-      src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm"
+      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
       type="video/webm" />
     <p>
       Your browser doesn't support HTML video. Here is a
@@ -645,7 +640,7 @@ All we're doing here is calling `stopPropagation()` on the event object in the h
 
 <div class="hidden">
   <video>
-    <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm" type="video/webm">
+    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
     <p>Your browser doesn't support HTML video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
   </video>
 </div>

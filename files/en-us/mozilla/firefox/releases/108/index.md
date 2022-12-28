@@ -19,8 +19,6 @@ This article provides information about the changes in Firefox 108 that will aff
 - The {{HTMLElement("source")}} element supports [`height`](/en-US/docs/Web/HTML/Element/source#attr-height) & [`width`](/en-US/docs/Web/HTML/Element/source#attr-width) attributes when it is a child of a {{HTMLElement("picture")}} element.
   This functionality can be configured via the `dom.picture_source_dimension_attributes.enabled` preference which is now set to `true` by default ({{bug(1795953)}}).
 
-#### Removals
-
 ### CSS
 
 - [Trigonometric functions](/en-US/docs/Web/CSS/CSS_Functions#trigonometric_functions) are now enabled with the `layout.css.trig.enabled` preference set to `true` by default.
@@ -31,11 +29,9 @@ This article provides information about the changes in Firefox 108 that will aff
   For more information on these units, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) documentation ({{bug(1744231)}}).
 - The [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji) property is now supported via the `layout.css.font-variant-emoji.enabled` preference, which is set to `false` by default. This property allows you to set a default presentation style for displaying emojis ({{bug(1461589)}}).
 
-#### Removals
-
 ### JavaScript
 
-#### Removals
+No notable changes
 
 ### HTTP
 
@@ -44,11 +40,9 @@ This article provides information about the changes in Firefox 108 that will aff
 - [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP header directives [`script-src-elem`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem) and [`script-src-attr`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-attr) are now supported.
   A server can use these to specify valid sources for JavaScript `<script>` elements, and for inline script event handlers like `onclick`, respectively ({{bug(1529337)}}).
 
-#### Removals
-
 ### Security
 
-#### Removals
+No notable changes
 
 ### APIs
 
@@ -58,17 +52,17 @@ This article provides information about the changes in Firefox 108 that will aff
 
 #### DOM
 
+No notable changes
+
 #### Media, WebRTC, and Web Audio
 
 - The [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) is now available in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts).
   Calls to [`navigator.requestMIDIAccess()`](/en-US/docs/Web/API/Navigator/requestMIDIAccess) will prompt users with active MIDI devices to install a [Site Permission Add-On](https://support.mozilla.org/en-US/kb/site-permission-add-ons), which is required to enable the API.
   For more information see {{bug(1795025)}}.
 
-#### Removals
-
 ### WebAssembly
 
-#### Removals
+No notable changes
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -88,10 +82,6 @@ This article provides information about the changes in Firefox 108 that will aff
 ## Changes for add-on developers
 
 - Firefox now issues a warning when an extension is installed if its [version number](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) doesn't follow the recommended format ({{bug(1793925)}}).
-
-### Removals
-
-### Other
 
 ## Older versions
 
