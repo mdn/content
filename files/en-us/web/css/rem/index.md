@@ -31,7 +31,7 @@ line-height: rem(5.5, 2); /* 1.5 */
 /* Unit based values */
 margin: rem(14%, 3%);   /* 2% */
 margin: rem(18px, 5px); /* 3px */
-margin: rem(25vw, 7vw); /* 4vw */
+margin: rem(25vmin, 7vmin); /* 4vmin */
 
 /* Negative/positive values */
 rotate: rem(200deg, 30deg);  /* 20deg */
@@ -52,7 +52,7 @@ The `rem(dividend, divisor)` function accepts two comma-separated values as its 
 
 ### Return value
 
-Returns a {{CSSxREF("&lt;number&gt;")}} representing the remainder, that is, the operation left over.
+Returns a {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}} (the same type as the parameters) representing the remainder, that is, the operation left over.
 
 - If `divisor` is `0`, the result is `NaN`.
 - If `dividend` is `infinite`, the result is `NaN`.
