@@ -29,6 +29,7 @@ html,
 body,
 svg {
   height: 100%;
+  line-height: 0;
 }
 svg:not(:root) {
   display: inline-block;
