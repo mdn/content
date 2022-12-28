@@ -226,7 +226,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
         </tr>
         <tr style="cursor: row-resize">
           <td><code>row-resize</code></td>
-          <td><img src="row-resize.gif" "alt="two narrow parallel horizontal lines with a small arrow pointing up and another pointing down" /></td>
+          <td><img src="row-resize.gif" alt="two narrow parallel horizontal lines with a small arrow pointing up and another pointing down" /></td>
           <td>
             The item/row can be resized vertically.
             Often rendered as arrows pointing up and down with a horizontal bar separating them.
