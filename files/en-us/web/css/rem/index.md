@@ -23,21 +23,21 @@ The **`rem()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Fu
 ## Syntax
 
 ```css
-// Unitless values
-line-height: rem(21, 2);  // 1
-line-height: rem(14, 5);  // 4
-line-height: rem(5.5, 2); // 1.5
+/* Unitless values */
+line-height: rem(21, 2);  /* 1 */
+line-height: rem(14, 5);  /* 4 */
+line-height: rem(5.5, 2); /* 1.5 */
 
-// Unit based values
-margin: rem(14%, 3%);   // 2%
-margin: rem(18px, 5px); // 3px
-margin: rem(25vw, 7vw); // 4vw
+/* Unit based values */
+margin: rem(14%, 3%);   /* 2% */
+margin: rem(18px, 5px); /* 3px */
+margin: rem(25vw, 7vw); /* 4vw */
 
-// Negative/positive values
-rotate: rem(200deg, 30deg);  // 20deg
-rotate: rem(140deg, -90deg); // 50deg
-rotate: rem(-90deg, 20deg);  // -10deg
-rotate: rem(-90deg, -20deg); // -10deg
+/* Negative/positive values */
+rotate: rem(200deg, 30deg);  /* 20deg */
+rotate: rem(140deg, -90deg); /* 50deg */
+rotate: rem(-90deg, 20deg);  /* -10deg */
+rotate: rem(-55deg, -15deg); /* -10deg */
 ```
 
 ### Parameter
