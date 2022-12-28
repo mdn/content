@@ -479,7 +479,6 @@ const email = document.getElementById("mail");
 email.addEventListener("input", (event) => {
   if (email.validity.typeMismatch) {
     email.setCustomValidity("I am expecting an email address!");
-    email.reportValidity();
   } else {
     email.setCustomValidity("");
   }
@@ -488,9 +487,9 @@ email.addEventListener("input", (event) => {
 
 Here we store a reference to the email input, then add an event listener to it that runs the contained code each time the value inside the input is changed.
 
-Inside the contained code, we check whether the email input's `validity.typeMismatch` property returns `true`, meaning that the contained value doesn't match the pattern for a well-formed email address. If so, we call the {{domxref("HTMLInputElement.setCustomValidity()","setCustomValidity()")}} method with a custom message which is displayed by calling {{domxref("HTMLInputElement.reportValidity","reportValidity()")}}. This renders the input invalid, so that when you try to submit the form, submission fails and the custom error message is displayed.
+Inside the contained code, we check whether the email input's `validity.typeMismatch` property returns `true`, meaning that the contained value doesn't match the pattern for a well-formed email address. If so, we call the {{domxref("HTMLInputElement.setCustomValidity()","setCustomValidity()")}} method with a custom message. This renders the input invalid, so that when you try to submit the form, submission fails and the custom error message is displayed.
 
-If the `validity.typeMismatch` property returns `false`, we call the `setCustomValidity()` method an empty string. This renders the input valid, so the form will submit.
+If the `validity.typeMismatch` property returns `false`, we call the `setCustomValidity()` method with an empty string. This renders the input valid, so the form will submit.
 
 You can try it out below:
 
