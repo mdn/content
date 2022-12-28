@@ -1,6 +1,7 @@
 ---
 title: ':current'
 slug: Web/CSS/:current
+page-type: css-pseudo-class
 browser-compat: css.selectors.current
 ---
 {{CSSRef}}
