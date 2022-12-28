@@ -65,6 +65,10 @@ A "typical website" could be structured something like this:
 
 ![a simple website structure example featuring a main heading, navigation menu, main content, side bar, and footer.](sample-website.png)
 
+> **Note:** The image above illustrates the main sections of a document, which you can define with HTML. However, the _appearance_ of the page shown here - including the layout, colors, and fonts - is achieved by applying [CSS](/en-US/docs/Learn/CSS) to the HTML.
+>
+> In this module we're not teaching CSS, but once you have an understanding of the basics of HTML, try diving into our [CSS first steps](/en-US/docs/Learn/CSS/First_steps) module to start learning how to style your site.
+
 ## HTML for structuring content
 
 The simple example shown above isn't pretty, but it is perfectly fine for illustrating a typical website layout example. Some websites have more columns, some are a lot more complex, but you get the idea. With the right CSS, you could use pretty much any elements to wrap around the different sections and get it looking how you wanted, but as discussed before, we need to respect semantics and **use the right element for the right job**.
@@ -219,8 +223,8 @@ Sometimes you'll come across a situation where you can't find an ideal semantic 
   The King walked drunkenly back to his room at 01:00, the beer doing nothing to
   aid him as he staggered through the door
   <span class="editor-note">
-    [Editor's note: At this point in the play, the lights should be down low]
-  </span>.
+    [Editor's note: At this point in the play, the lights should be down low] </span
+  >.
 </p>
 ```
 
@@ -234,8 +238,8 @@ In this case, the editor's note is supposed to merely provide extra direction fo
   <ul>
     <li>
       <p>
-        <a href=""><strong>Silver earrings</strong></a>:
-        $99.95.
+        <a href=""><strong>Silver earrings</strong></a
+        >: $99.95.
       </p>
       <img src="../products/3333-0985/thumb.png" alt="Silver earrings" />
     </li>
