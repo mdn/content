@@ -25,7 +25,7 @@ browser-compat: api.Window.requestAnimationFrame
 
 The **`window.requestAnimationFrame()`** method tells the
 browser that you wish to perform an animation and requests that the browser calls a
-specified function to update an animation before the next repaint. It can also be used in asynchronous JavaScript programmning as a way to wait for the browser to update the DOM and repaint the screen.
+specified function to update an animation before the next repaint. It can also be used in asynchronous JavaScript programming as a way to yield to the browser to update the DOM and repaint the screen.
 
 The method takes a callback as an argument to be invoked before the repaint.
 
@@ -79,6 +79,8 @@ assumptions about its value. You can pass this value to
 
 ## Examples
 
+### Using requestAnimationFrame() to programmatically animate elements
+
 In this example, an element is animated for 2 seconds (2000 milliseconds). The element
 moves at a speed of 0.1px/ms to the right, so its relative position (in CSS pixels) can
 be calculated in function of the time elapsed since the start of the animation (in
@@ -114,25 +116,27 @@ function step(timestamp) {
 window.requestAnimationFrame(step);
 ```
 
-In this example, an async function waits for the DOM to update and the screen to repaint.
+### Using requestAnimationFrame() to 
+
+In this example, an async function waits for the DOM to update and the screen to repaint. Because in an event loop, all [microtasks](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) are always processed before other tasks in queue, we need to use `requestAnimationFrame()` to yield to the browser for a repaint before continuing with the `alert()` call, which is going to block further code execution.
 
 ```js
-async function Main()
-  {
-  element.innerHTML="some text";
-  await YieldForFrame();
-  await YieldForFrame();
+function yieldForFrame() {
+  // Turn the callback-based requestAnimationFrame() API into an awaitable promise
+  return new Promise((resolve) => {
+    requestAnimationFrame(resolve);
+  });
+}
+
+async function main() {
+  document.querySelector("output").innerText = "some text";
+  // If we don't yield to the browser, the browser won't have a chance to repaint
+  await yieldForFrame();
+  await yieldForFrame();
   alert("Pausing with screen showing 'some text'.");
-  }
-  
-function YieldForFrame()
-	{
-	// Create Promise for use with 'await'
-	return new Promise(function(resolve, reject)
-		{
-		requestAnimationFrame(resolve);
-		});
-	} // YieldForFrame
+}
+
+main();
 ```
 
 ## Specifications
