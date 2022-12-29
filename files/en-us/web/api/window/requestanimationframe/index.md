@@ -25,8 +25,9 @@ browser-compat: api.Window.requestAnimationFrame
 
 The **`window.requestAnimationFrame()`** method tells the
 browser that you wish to perform an animation and requests that the browser calls a
-specified function to update an animation before the next repaint. The method takes a
-callback as an argument to be invoked before the repaint.
+specified function to update an animation before the next repaint. It can also be used in asynchronous JavaScript programmning as a way to wait for the browser to update the DOM and repaint the screen.
+
+The method takes a callback as an argument to be invoked before the repaint.
 
 > **Note:** Your callback routine must itself call
 > `requestAnimationFrame()` again if you want to animate another frame at the
@@ -111,6 +112,27 @@ function step(timestamp) {
 }
 
 window.requestAnimationFrame(step);
+```
+
+In this example, an async function waits for the DOM to update and the screen to repaint.
+
+```js
+async function Main()
+  {
+  element.innerHTML="some text";
+  await YieldForFrame();
+  await YieldForFrame();
+  alert("Pausing with screen showing 'some text'.");
+  }
+  
+function YieldForFrame()
+	{
+	// Create Promise for use with 'await'
+	return new Promise(function(resolve, reject)
+		{
+		requestAnimationFrame(resolve);
+		});
+	} // YieldForFrame
 ```
 
 ## Specifications
