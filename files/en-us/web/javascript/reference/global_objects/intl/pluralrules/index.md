@@ -33,7 +33,7 @@ The **`Intl.PluralRules`** object enables plural-sensitive formatting and plural
   - : Returns a new object with properties reflecting the locale and collation options computed during initialization of the object.
 - {{jsxref("Intl/PluralRules/select", "Intl.PluralRules.prototype.select()")}}
   - : Returns a string indicating which plural rule to use for locale-aware formatting.
-- {{jsxref("Intl/PluralRules/selectRange", "Intl.PluralRules.prototype.selectRange()")}} {{experimental_inline}}
+- {{jsxref("Intl/PluralRules/selectRange", "Intl.PluralRules.prototype.selectRange()")}}
   - : This method receives two values and returns a string indicating which plural rule to use for locale-aware formatting.
 
 ## Examples
