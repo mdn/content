@@ -98,16 +98,16 @@ that hostname by using the {{ htmlattrxref("rel","link") }} attribute on the {{
   HTMLElement("link") }} element with a [link type](/en-US/docs/Web/HTML/Link_types) of `dns-prefetch`:
 
 ```html
-<link rel="dns-prefetch" href="https://www.mozilla.org/contribute/" />
+<link rel="dns-prefetch" href="https://www.mozilla.org" />
 ```
 
-In this example, the domain name `www.mozilla.org/contribute` will be pre-resolved.
+In this example, the domain name `www.mozilla.org` will be pre-resolved.
 
 Similarly, the link element can be used to resolve hostnames without providing a
 complete URL, but only, by preceding the hostname with two slashes:
 
 ```html
-<link rel="dns-prefetch" href="//www.mozilla.org/contribute/" />
+<link rel="dns-prefetch" href="//www.mozilla.org" />
 ```
 
 Forced prefetching of hostnames might be useful, for example, on the homepage of a site

@@ -14,7 +14,7 @@ browser-compat: javascript.functions.method_definitions
 
 {{JsSidebar("Functions")}}
 
-**Method definition** is a shorter syntax for defining a function property in an object initializer.
+**Method definition** is a shorter syntax for defining a function property in an object initializer. It can also be used in [classes](/en-US/docs/Web/JavaScript/Reference/Classes).
 
 {{EmbedInteractiveExample("pages/js/functions-definitions.html")}}
 
@@ -109,9 +109,48 @@ const obj = {
 console.log(obj.b()); // "foo"
 ```
 
+### Method definitions in classes
+
+You can use the exact same syntax to define public instance methods that are available on class instances. In classes, you don't need the comma separator between methods.
+
+```js
+class ClassWithPublicInstanceMethod {
+  publicMethod() {
+    return "hello world";
+  }
+}
+
+const instance = new ClassWithPublicInstanceMethod();
+console.log(instance.publicMethod()); // "hello world"
+```
+
+Public instance methods are defined on the `prototype` property of the class and are thus shared by all instances of the class. They are writable, non-enumerable, and configurable.
+
+Inside instance methods, [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) and [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super) work like in normal methods. Usually, `this` refers to the instance itself. In subclasses, `super` lets you access the prototype of the object that the method is attached to, allowing you to call methods from the superclass.
+
+```js
+class BaseClass {
+  msg = "hello world";
+  basePublicMethod() {
+    return this.msg;
+  }
+}
+
+class SubClass extends BaseClass {
+  subPublicMethod() {
+    return super.basePublicMethod();
+  }
+}
+
+const instance = new SubClass();
+console.log(instance.subPublicMethod()); // "hello world"
+```
+
+Static methods and private methods use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) pages.
+
 ### Computed property names
 
-The shorthand syntax also supports [computed property names](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names).
+The method syntax also supports [computed property names](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names).
 
 ```js
 const bar = {
