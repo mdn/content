@@ -3187,10 +3187,10 @@ markdownlint-rule-helpers@~0.17.2:
   resolved "https://registry.yarnpkg.com/markdownlint-rule-helpers/-/markdownlint-rule-helpers-0.17.2.tgz#64d6e8c66e497e631b0e40cf1cef7ca622a0b654"
   integrity sha512-XaeoW2NYSlWxMCZM2B3H7YTG6nlaLfkEZWMBhr4hSPlq9MuY2sy83+Xr89jXOqZMZYjvi5nBCGoFh7hHoPKZmA==
 
-markdownlint-rule-search-replace@1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/markdownlint-rule-search-replace/-/markdownlint-rule-search-replace-1.0.5.tgz#20cc1681e3c162dd43d19614e3d1515e75cf0299"
-  integrity sha512-PXpHZuZrqaPA0kpkPSsTPVndxtoM+wgG95V9vzL5sZl+SQUp8hJIHSqOnNJOwd85ykgjbnripZYf0IN40ADkdw==
+markdownlint-rule-search-replace@1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/markdownlint-rule-search-replace/-/markdownlint-rule-search-replace-1.0.6.tgz#c93fe70c74ecb2d66dd79fc002cf46f46f17aed0"
+  integrity sha512-w2dWPz7QnaYbMMOfkaVZmP0E3z7taPyKTouechZUWL7pIdyoDT2MXXYDwjMtEPQ7DUrYXbBiIvIBDvXs8/6m7A==
   dependencies:
     markdownlint-rule-helpers "~0.17.2"
 
