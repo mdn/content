@@ -105,8 +105,6 @@
     "MD040": false,
     // See https://github.com/mdn/content/pull/20026, as macros currently break this
     "MD042": false,
-    // Tracked as part of https://github.com/mdn/content/pull/19334
-    "MD045": false,
     "MD046": {
       "style": "fenced"
     },

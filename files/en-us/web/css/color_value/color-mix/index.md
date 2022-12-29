@@ -34,6 +34,10 @@ color-mix(in srgb, #34c9eb 20%, white);
 
     `<percentage>` is the percentage of that color to mix.
 
+### Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 ### HTML

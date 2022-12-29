@@ -64,7 +64,7 @@ In this article, we'll build a simple contact form. Let's make a rough sketch.
 
 ![The form to build, roughly sketch](form-sketch-low.jpg)
 
-Our form will contain three text fields and one button. We are asking the user for their name, their e-mail and the message they want to send. Hitting the button will send their data to a web server.
+Our form will contain three text fields and one button. We are asking the user for their name, their email and the message they want to send. Hitting the button will send their data to a web server.
 
 ## Active learning: Implementing our form HTML
 
@@ -94,7 +94,7 @@ For now, add the above {{htmlelement("form")}} element into your HTML {{htmlelem
 Our contact form is not complex: the data entry portion contains three text fields, each with a corresponding {{HTMLelement("label")}}:
 
 - The input field for the name is a {{HTMLelement("input/text", "single-line text field")}}.
-- The input field for the e-mail is an {{HTMLelement("input/email", "input of type email")}}: a single-line text field that accepts only e-mail addresses.
+- The input field for the email is an {{HTMLelement("input/email", "input of type email")}}: a single-line text field that accepts only email addresses.
 - The input field for the message is a {{HTMLelement("textarea")}}; a multiline text field.
 
 In terms of HTML code we need something like the following to implement these form widgets:
@@ -107,7 +107,7 @@ In terms of HTML code we need something like the following to implement these fo
       <input type="text" id="name" name="user_name" />
     </li>
     <li>
-      <label for="mail">E-mail:</label>
+      <label for="mail">Email:</label>
       <input type="email" id="mail" name="user_email" />
     </li>
     <li>
@@ -133,7 +133,7 @@ You'll find more about this in the [Basic native form controls](/en-US/docs/Lear
 
 - In our simple example, we use the value {{HTMLelement("input/text", "text")}} for the first input — the default value for this attribute.
   It represents a basic single-line text field that accepts any kind of text input.
-- For the second input, we use the value {{HTMLelement("input/email", "email")}}, which defines a single-line text field that only accepts a well-formed e-mail address.
+- For the second input, we use the value {{HTMLelement("input/email", "email")}}, which defines a single-line text field that only accepts a well-formed email address.
   This turns a basic text field into a kind of "intelligent" field that will perform some validation checks on the data typed by the user.
   It also causes a more appropriate keyboard layout for entering email addresses (e.g. with an @ symbol by default) to appear on devices with dynamic keyboards, like smartphones.
   You'll find out more about form validation in the [client-side form validation](/en-US/docs/Learn/Forms/Form_validation) article later on.
@@ -286,7 +286,7 @@ Let's look at some of our form code again:
       <input type="text" id="name" name="user_name" />
     </li>
     <li>
-      <label for="mail">E-mail:</label>
+      <label for="mail">Email:</label>
       <input type="email" id="mail" name="user_email" />
     </li>
     <li>
@@ -319,7 +319,7 @@ Congratulations, you've built your first web form. It looks like this live:
   </div>
 
   <div>
-    <label for="mail">E-mail:</label>
+    <label for="mail">Email:</label>
     <input type="email" id="mail" name="user_email" />
   </div>
 

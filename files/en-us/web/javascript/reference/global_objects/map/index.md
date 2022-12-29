@@ -71,6 +71,22 @@ cases:
       </td>
     </tr>
     <tr>
+      <th scope="row">Security</th>
+      <td>
+        A <code>Map</code> is safe to use with user-provided keys and values.
+      </td>
+      <td>
+        <p>
+          Setting user-provided key-value pairs on an <code>Object</code> may allow
+          an attacker to override the object's prototype, which can lead to
+          <a href="https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md">
+            object injection attacks
+          </a>. Like the accidental keys issue, this can also be mitigated by using
+          a <code>null</code>-prototype object.
+        </p>
+      </td>
+    </tr>
+    <tr>
       <th scope="row">Key Types</th>
       <td>
         A <code>Map</code>'s keys can be any value (including functions,

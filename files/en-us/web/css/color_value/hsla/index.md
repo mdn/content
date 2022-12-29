@@ -42,6 +42,10 @@ hsla(235 100% 50% / 1); /* CSS Colors 4 space-separated values */
 - Functional notation: `hsla(H S L[ / A])`
   - : CSS Colors Level 4 adds support for space-separated values in the functional notation.
 
+### Formal syntax
+
+{{csssyntax("hsl")}}
+
 ## Specifications
 
 {{Specifications}}

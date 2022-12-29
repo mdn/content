@@ -35,17 +35,7 @@ timeLog(label)
 
 ### Return value
 
-If no label parameter included:
-
-```
-default: 1042ms
-```
-
-If an existing `label` is included:
-
-```
-timer name: 1242ms
-```
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
