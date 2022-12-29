@@ -135,7 +135,7 @@ h2:has(+ p, + ul.red) {
 }
 ```
 
-In the above, an `h2` that is immediately followed by a `<p>` or a `<ul class="red">`, will be italic. Note that pseudo-elements and the `:has()` selector are not valid within a [`:has()`](/en-US/docs/Web/CSS/:has) relative selector list parameter.
+In the above example, the italic style will be applied to any `h2` heading that is immediately followed by `<p>` or `<ul class="red">`. Note that pseudo-elements and the `:has()` selector are not valid within the [`:has()`](/en-US/docs/Web/CSS/:has) relative selector list.
 
 ## Specifications
 
