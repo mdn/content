@@ -28,17 +28,17 @@ Object.defineProperty(obj, prop, descriptor)
 - `obj`
   - : The object on which to define the property.
 - `prop`
-  - : The name or {{jsxref("Symbol")}} of the property to be defined or modified.
+  - : A string or {{jsxref("Symbol")}} specifying the key of the property to be defined or modified.
 - `descriptor`
   - : The descriptor for the property being defined or modified.
 
 ### Return value
 
-The object that was passed to the function.
+The object that was passed to the function, with the specified property added or modified.
 
 ## Description
 
-This method allows a precise addition to or modification of a property on an object. Normal property addition through assignment creates properties which show up during property enumeration ({{jsxref("Statements/for...in", "for...in")}} loop or {{jsxref("Object.keys")}} method), whose values may be changed, and which may be {{jsxref("Operators/delete", "deleted", "", 1)}}. This method allows these extra details to be changed from their defaults. By default, properties added using `Object.defineProperty()` are not writable, not enumerable, and not configurable.
+`Object.defineProperty()` allows a precise addition to or modification of a property on an object. Normal property addition through [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) creates properties which show up during property enumeration ({{jsxref("Statements/for...in", "for...in")}}, {{jsxref("Object.keys()")}}, etc.), whose values may be changed, and which may be {{jsxref("Operators/delete", "deleted", "", 1)}}. This method allows these extra details to be changed from their defaults. By default, properties added using `Object.defineProperty()` are not writable, not enumerable, and not configurable. In addition, `Object.defineProperty()` uses the [`[[DefineOwnProperty]]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) internal method, instead of [`[[Set]]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set), so it does not invoke [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set) even when the property is already present.
 
 Property descriptors present in objects come in two main flavors: data descriptors and accessor descriptors. A **data descriptor** is a property that has a value, which may or may not be writable. An **accessor descriptor** is a property described by a getter-setter pair of functions. A descriptor must be one of these two flavors; it cannot be both.
 
@@ -62,7 +62,7 @@ A **data descriptor** also has the following optional keys:
 - `value`
   - : The value associated with the property. Can be any valid JavaScript value (number, object, function, etc.). **Defaults to {{jsxref("undefined")}}.**
 - `writable`
-  - : `true` if the value associated with the property may be changed with an {{jsxref("Operators#assignment_operators", "assignment operator", "", 1)}}. **Defaults to `false`.**
+  - : `true` if the value associated with the property may be changed with an [assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators). **Defaults to `false`.**
 
 An **accessor descriptor** also has the following optional keys:
 
@@ -71,10 +71,9 @@ An **accessor descriptor** also has the following optional keys:
 - `set`
   - : A function which serves as a setter for the property, or {{jsxref("undefined")}} if there is no setter. When the property is assigned, this function is called with one argument (the value being assigned to the property) and with `this` set to the object through which the property is assigned. **Defaults to {{jsxref("undefined")}}.**
 
-If a descriptor has neither of `value`, `writable`, `get` and `set` keys, it is treated as a data descriptor. If a descriptor has both \[`value` or `writable`] and \[`get` or `set`] keys, an exception is thrown.
+If a descriptor has none of `value`, `writable`, `get` and `set` keys, it is treated as a data descriptor. If a descriptor has both \[`value` or `writable`] and \[`get` or `set`] keys, an exception is thrown.
 
-Bear in mind that these attributes are not necessarily the descriptor's own properties. Inherited properties will be considered as well. In order to ensure these defaults are preserved, you might freeze existing objects in the descriptor object's prototype chain upfront, specify all options explicitly, or point to [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) with {{jsxref("Object.create",
-  "Object.create(null)")}}.
+Bear in mind that these attributes are not necessarily the descriptor's own properties. Inherited properties will be considered as well. In order to ensure these defaults are preserved, you might freeze existing objects in the descriptor object's prototype chain upfront, specify all options explicitly, or point to [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) with {{jsxref("Object.create", "Object.create(null)")}}.
 
 ```js
 const obj = {};
@@ -179,7 +178,7 @@ When modifying an existing property, the current property configuration determin
 
 #### Writable attribute
 
-When the `writable` property attribute is set to `false`, the property is said to be "non-writable". It cannot be reassigned.
+When the `writable` property attribute is set to `false`, the property is said to be "non-writable". It cannot be reassigned. Trying to write into the non-writable property doesn't change it, and results in an error in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 
 ```js
 const o = {}; // Creates a new object
@@ -208,11 +207,9 @@ console.log(o.a); // 37; the assignment didn't work
 })();
 ```
 
-As seen in the example, trying to write into the non-writable property doesn't change it but doesn't throw an error either.
-
 #### Enumerable attribute
 
-The `enumerable` property attribute defines whether the property is picked by {{jsxref("Object.assign()")}} or [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) operator. For non-{{jsxref("Global_Objects/Symbol", "Symbol")}} properties it also defines whether it shows up in a {{jsxref("Statements/for...in", "for...in")}} loop and {{jsxref("Object.keys()")}} or not.
+The `enumerable` property attribute defines whether the property is picked by {{jsxref("Object.assign()")}} or [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) operator. For non-{{jsxref("Global_Objects/Symbol", "Symbol")}} properties, it also defines whether it shows up in a {{jsxref("Statements/for...in", "for...in")}} loop and {{jsxref("Object.keys()")}} or not. For more information, see [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties).
 
 ```js
 const o = {};
@@ -227,8 +224,7 @@ Object.defineProperty(o, "b", {
 Object.defineProperty(o, "c", {
   value: 3,
 }); // enumerable defaults to false
-o.d = 4; // enumerable defaults to true
-// when creating a property by setting it
+o.d = 4; // enumerable defaults to true when creating a property by setting it
 Object.defineProperty(o, Symbol.for("e"), {
   value: 5,
   enumerable: true,
@@ -265,7 +261,7 @@ p[Symbol.for("f")]; // undefined
 
 The `configurable` attribute controls at the same time whether the property can be deleted from the object and whether its attributes (other than `value` and `writable`) can be changed.
 
-When it is `false`, but `writable` is `true`, `value` can still be changed, and `writable` can still be toggled from `true` to `false`; when it is `true`, but `writable` is `false`, `value` may still be replaced with `defineProperty` (but not with assignment operators), and `writable` may be toggled.
+This example illustrates a non-configurable accessor property.
 
 ```js
 const o = {};
@@ -293,12 +289,20 @@ Object.defineProperty(o, "a", {
 // (even though the new get does exactly the same thing)
 Object.defineProperty(o, "a", {
   value: 12,
-}); // throws a TypeError // ('value' can be changed when 'configurable' is false but not in this case due to 'get' accessor)
+}); // throws a TypeError
+// ('value' can be changed when 'configurable' is false, but only when the property is a writable data property)
 
 console.log(o.a); // 1
-delete o.a; // Nothing happens
+delete o.a; // Nothing happens; throws in strict mode
 console.log(o.a); // 1
+```
 
+If the `configurable` attribute of `o.a` had been `true`, none of the errors would be thrown and the property would be deleted at the end.
+
+This example illustrates a non-configurable but writable data property. The property's `value` can still be changed, and `writable` can still be toggled from `true` to `false`.
+
+```js
+const o = {};
 Object.defineProperty(o, "b", {
   writable: true,
   configurable: false,
@@ -308,15 +312,46 @@ Object.defineProperty(o, "b", {
   value: 1,
 }); // Even when configurable is false, because the object is writable, we may still replace the value
 console.log(o.b); // 1
+o.b = 2; // We can change the value with assignment operators as well
+console.log(o.b); // 2
+// Toggle the property's writability
 Object.defineProperty(o, "b", {
   writable: false,
 });
 Object.defineProperty(o, "b", {
   value: 1,
 }); // TypeError: because the property is neither writable nor configurable, it cannot be modified
+// At this point, there's no way to further modify 'b'
+// or restore its writability
 ```
 
-If the `configurable` attribute of `o.a` had been `true`, none of the errors would be thrown and the property would be deleted at the end.
+This example illustrates a configurable but non-writable data property. The property's `value` may still be replaced with `defineProperty` (but not with assignment operators), and `writable` may be toggled.
+
+```js
+const o = {};
+Object.defineProperty(o, "b", {
+  writable: false,
+  configurable: true,
+});
+Object.defineProperty(o, "b", {
+  value: 1,
+}); // We can replace the value with defineProperty
+console.log(o.b); // 1
+o.b = 2; // throws TypeError in strict mode: cannot change a non-writable property's value with assignment
+```
+
+This example illustrates a non-configurable and non-writable data property. There's no way to update any attribute of the property, including its `value`.
+
+```js
+const o = {};
+Object.defineProperty(o, "b", {
+  writable: false,
+  configurable: false,
+});
+Object.defineProperty(o, "b", {
+  value: 1,
+}); // TypeError: because the property is neither writable nor configurable, it cannot be modified
+```
 
 ### Adding properties and default values
 
@@ -345,7 +380,7 @@ Object.defineProperty(o, "a", {
 });
 ```
 
-### Custom Setters and Getters
+### Custom setters and getters
 
 The example below shows how to implement a self-archiving object. When `temperature` property is set, the `archive` array gets a log entry.
 
