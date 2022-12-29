@@ -1,5 +1,5 @@
 ---
-title: Contributor roles and teams
+title: Roles and teams on MDN
 slug: MDN/Community/Users_teams
 page-type: mdn-community-guide
 tags:
@@ -10,20 +10,20 @@ tags:
 
 {{MDNSidebar}}
 
-The success and growth of the MDN Web Docs project is, in large part, due to our community of contributors. There are also employees, contractors, and a network of partners who are dedicated to the health, growth, and maintenance of the project as a whole. There are also some individuals who have committed a portion of their time to assist with the daily tasks of running MDN Web Docs. To manage all these different groups, the project relies heavily on [roles](#roles) and [teams](#teams) within our [GitHub organization](https://github.com/mdn). A list of the members of the organization can be [found here](https://github.com/orgs/mdn/people).
+The success and growth of the MDN Web Docs project is, in large part, due to our community of contributors. There are also employees, contractors, and a network of partners who are dedicated to the health, growth, and maintenance of the project as a whole. There are also some individuals who have committed a portion of their time to assist with the daily tasks of running MDN Web Docs. To manage all these different groups, the project relies heavily on [roles](#roles) and [teams](#teams) in the [MDN organization on GitHub](https://github.com/mdn). A list of the members of the organization can be [found here](https://github.com/orgs/mdn/people).
 
 Community contributions help this open source project immensely.
 Contributors can use their work on MDN Web Docs to show their writing, technical, and collaboration skills, and the ability to work with people from diverse backgrounds. This section describes the roles you can take on while volunteering on the MDN Web Docs project.
 
-The contributor roadmap is a step-by-step journey from one role to the next as you take on more responsibilities in the project.
-With the advancement in the contributor roadmap, you could serve more than one role at the same time.
-Roles such as [Invited experts](#invited_expert) can be directly obtained if you've demonstrated expertise in a particular area.
-
 ## Roles
+
+In the MDN Web Docs project, you can take on the role of a [contributor](#contributor), an [organization member](#organization_member), a [maintainer](#maintainer), or an [owner](#owner). The progression from one role to the next is a step-by-step journey.
+With the advancement in your responsibilities, you could serve more than one role at the same time.
+Roles such as [invited expert](#invited_expert) can be directly obtained if you've demonstrated expertise in a particular area.
 
 Irrespective of the role you take on in this project, you are always a [contributor](#contributor).
 A **contributor** is the base role and all other roles are built on top of it.
-You must satisfy the requirements of a contributor while working on this project in any capacity.
+So while working on this project in any capacity, you must satisfy the requirements of the contributor role.
 
 ### Contributor
 
@@ -34,7 +34,7 @@ Apart from writing and testing code, contributions include creating and updating
 Depending on the frequency of your contributions, you can be someone who contributes occasionally or an active contributor.
 If you demonstrate a large impact on the project, you may be nominated as a [spotlight contributor](#spotlight_contributor) or be promoted to an [organization member](#organization_member).
 
-If you're new here and you would like to become a contributor, take a look at our [contribution guidelines](./CONTRIBUTING.md) and the [repositories in the MDN GitHub organization](https://github.com/orgs/mdn/repositories).
+If you're new here and you would like to become a contributor, take a look at our [contribution guide](https://github.com/mdn/content/blob/main/CONTRIBUTING.md) and the [repositories in the MDN GitHub organization](https://github.com/orgs/mdn/repositories).
 
 As a contributor, you can get involved with the project by engaging in the following activities:
 
@@ -74,6 +74,9 @@ To be an organization member, you must meet one or more of the following require
 - Opened two or more pull requests that have been merged that resolve two or more issues.
 - Contributed to MDN Web Docs projects for at least two months.
 - Contributed actively to at least one project area.
+
+The following two requirements are mandatory:
+
 - Enabled [two-factor authentication](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication) for your GitHub account.
 - Enabled [signed commits](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits).
 
@@ -145,9 +148,16 @@ Owners can:
 - Add and remove collaborators to specific repositories as needed.
 - Add repositories (as fresh projects or transfers) as needed.
 
-## Specialized roles
+### Summary of the roles
 
-We have defined some contributor roles that have more nuanced responsibilities and have special eligibility conditions.
+||[Contributor](#contributor)|[Organization member](#organization_member)|[Maintainer](#maintainer)|[Owner](#owner)|
+|:-|:-|:-|:-|:-|
+|Requirements|Follow the code of conduct and contribution guidelines|- Enable 2FA for GitHub account<br>- Enable signed commits<br><br>One or more of:<br>- Resolve two or more issues<br>- Contribute for at least two months<br>- Active contribution in a project area|One or more of:<br>- Invited expert for at least six months<br>- Knowledge across multiple project areas<br>- Act towards overall health of the project<br>- Mentor other contributors<br>- Spend at least 16 hours per month on the project<br>- Attend community meetings|Limited to Mozilla staff|
+|Privileges|- Invitations to contributor events<br>- Eligibility to become an organization member|Access rights at organization level|Approve and merge pull requests|- Manage access of different roles to various repositories<br>- Add or archive repositories and projects|
+
+## Special roles
+
+Some contributor roles have more nuanced responsibilities and have special eligibility conditions. These include [spotlight contributor](#spotlight_contributor), [invited expert](#invited_expert), and [community manager](#community_manager).
 
 ### Spotlight contributor
 
@@ -334,7 +344,7 @@ To become a member of a team, you must:
 
 - Agree to abide by our [Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
 - Agree to Mozilla's [Commit Access Requirements](https://www.mozilla.org/en-US/about/governance/policies/commit/requirements/).
-- Set up [two-factor authentication](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication) on your GitHub account.
+- Set up [two-factor authentication](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication) (2FA) on your GitHub account.
 
 <!--
 TODO: Update this process because currently there is no issue category on mdn/mdn to request for getting added to a team
