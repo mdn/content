@@ -116,7 +116,7 @@ function step(timestamp) {
 window.requestAnimationFrame(step);
 ```
 
-### Using requestAnimationFrame() to 
+### Using requestAnimationFrame() to wait for the browser to repaint
 
 In this example, an async function waits for the DOM to update and the screen to repaint. Because in an event loop, all [microtasks](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) are always processed before other tasks in queue, we need to use `requestAnimationFrame()` to yield to the browser for a repaint before continuing with the `alert()` call, which is going to block further code execution.
 
