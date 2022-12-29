@@ -224,7 +224,7 @@ Sometimes you'll come across a situation where you can't find an ideal semantic 
   aid him as he staggered through the door
   <span class="editor-note">
     [Editor's note: At this point in the play, the lights should be down low]
-</span>.
+  </span>.
 </p>
 ```
 
