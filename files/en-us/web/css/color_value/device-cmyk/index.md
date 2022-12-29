@@ -36,6 +36,10 @@ device-cmyk(0 81% 81% 30% / .5, rgb(178 34 34));
 
     `<color>` is an optional fallback {{cssxref("&lt;color&gt;")}} to use if the user agent does not know how to translate the CMYK color to RGB.
 
+### Formal syntax
+
+{{csssyntax}}
+
 ## Specifications
 
 {{Specifications}}

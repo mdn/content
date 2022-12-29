@@ -48,6 +48,10 @@ oklab(59.69% 0.1007 0.1191 / 0.5);
 - alpha
   - : A {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity), representing the transparency (or alpha channel) of the color.
 
+### Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 ### Green with oklab()
