@@ -29438,17 +29438,6 @@
       "JesseW"
     ]
   },
-  "Web/API/Document/origin": {
-    "modified": "2020-10-17T12:13:28.412Z",
-    "contributors": [
-      "mfuji09",
-      "sideshowbarker",
-      "mfluehr",
-      "fscholz",
-      "teoli",
-      "ziyunfei"
-    ]
-  },
   "Web/API/Document/paste_event": {
     "modified": "2020-10-15T22:16:13.117Z",
     "contributors": ["mfuji09", "wbamberg"]
@@ -32744,10 +32733,6 @@
       "kscarfone",
       "Masayuki"
     ]
-  },
-  "Web/API/Element/msContentZoom_event": {
-    "modified": "2020-10-15T22:06:04.039Z",
-    "contributors": ["wbamberg", "ExE-Boss", "mattwojo", "erikadoyle"]
   },
   "Web/API/Element/msGetRegionContent": {
     "modified": "2019-03-18T21:28:47.734Z",
@@ -37882,10 +37867,6 @@
   "Web/API/HTMLCanvasElement/height": {
     "modified": "2020-10-15T21:30:10.819Z",
     "contributors": ["fscholz", "nmve", "erikadoyle", "Nexii", "teoli"]
-  },
-  "Web/API/HTMLCanvasElement/mozFetchAsStream": {
-    "modified": "2020-10-15T21:30:12.007Z",
-    "contributors": ["fscholz", "nmve"]
   },
   "Web/API/HTMLCanvasElement/mozOpaque": {
     "modified": "2020-10-15T21:30:14.002Z",

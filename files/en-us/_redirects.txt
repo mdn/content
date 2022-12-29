@@ -7959,6 +7959,7 @@
 /en-US/docs/Web/API/Document/onselectionchange	/en-US/docs/Web/API/Document/selectionchange_event
 /en-US/docs/Web/API/Document/onsubmit	/en-US/docs/Web/API/HTMLFormElement/submit_event
 /en-US/docs/Web/API/Document/onvisibilitychange	/en-US/docs/Web/API/Document/visibilitychange_event
+/en-US/docs/Web/API/Document/origin	/en-US/docs/Web/API/origin
 /en-US/docs/Web/API/Document/pointercancel_event	/en-US/docs/Web/API/Element/pointercancel_event
 /en-US/docs/Web/API/Document/pointerdown_event	/en-US/docs/Web/API/Element/pointerdown_event
 /en-US/docs/Web/API/Document/pointerenter_event	/en-US/docs/Web/API/Element/pointerenter_event
@@ -8349,7 +8350,6 @@
 /en-US/docs/Web/API/HTMLButtonElement/click	/en-US/docs/Web/API/HTMLElement/click
 /en-US/docs/Web/API/HTMLCanvasElement.getContext	/en-US/docs/Web/API/HTMLCanvasElement/getContext
 /en-US/docs/Web/API/HTMLCanvasElement.height	/en-US/docs/Web/API/HTMLCanvasElement/height
-/en-US/docs/Web/API/HTMLCanvasElement.mozFetchAsStream	/en-US/docs/Web/API/HTMLCanvasElement/mozFetchAsStream
 /en-US/docs/Web/API/HTMLCanvasElement.mozGetAsFile	/en-US/docs/Web/API/HTMLCanvasElement
 /en-US/docs/Web/API/HTMLCanvasElement.mozOpaque	/en-US/docs/Web/API/HTMLCanvasElement/mozOpaque
 /en-US/docs/Web/API/HTMLCanvasElement.toBlob	/en-US/docs/Web/API/HTMLCanvasElement/toBlob
@@ -8796,7 +8796,6 @@
 /en-US/docs/Web/API/MSCandidateWindowHide	/en-US/docs/Web/API/HTMLElement/mscandidatewindowhide_event
 /en-US/docs/Web/API/MSCandidateWindowShow	/en-US/docs/Web/API/HTMLElement/mscandidatewindowshow_event
 /en-US/docs/Web/API/MSCandidateWindowUpdate	/en-US/docs/Web/API/HTMLElement/mscandidatewindowupdate_event
-/en-US/docs/Web/API/MSContentZoom	/en-US/docs/Web/API/Element/msContentZoom_event
 /en-US/docs/Web/API/MSLaunchUri	/en-US/docs/Web/API/Navigator/msLaunchUri
 /en-US/docs/Web/API/MSManipulationStateChanged	/en-US/docs/Web/API/Element/MSManipulationStateChanged_event
 /en-US/docs/Web/API/MSRangeCollection	/en-US/docs/Web/API/Element/msGetRegionContent
@@ -9724,7 +9723,6 @@
 /en-US/docs/Web/API/Touch.screenX	/en-US/docs/Web/API/Touch/screenX
 /en-US/docs/Web/API/Touch.screenY	/en-US/docs/Web/API/Touch/screenY
 /en-US/docs/Web/API/Touch/InitMSManipulationEvent	/en-US/docs/Web/API/MSManipulationEvent/initMSManipulationEvent
-/en-US/docs/Web/API/Touch/MSContentZoom	/en-US/docs/Web/API/Element/msContentZoom_event
 /en-US/docs/Web/API/Touch/MSManipulationEvent	/en-US/docs/Web/API/MSManipulationEvent
 /en-US/docs/Web/API/Touch/MSManipulationStateChanged	/en-US/docs/Web/API/Element/MSManipulationStateChanged_event
 /en-US/docs/Web/API/Touch/MSManipulationStateChanged_	/en-US/docs/Web/API/Element/MSManipulationStateChanged_event
@@ -10348,7 +10346,7 @@
 /en-US/docs/Web/API/document.onoffline	/en-US/docs/Web/API/Window/offline_event
 /en-US/docs/Web/API/document.ononline	/en-US/docs/Web/API/Window/online_event
 /en-US/docs/Web/API/document.open	/en-US/docs/Web/API/Document/open
-/en-US/docs/Web/API/document.origin	/en-US/docs/Web/API/Document/origin
+/en-US/docs/Web/API/document.origin	/en-US/docs/Web/API/origin
 /en-US/docs/Web/API/document.plugins	/en-US/docs/Web/API/Document/plugins
 /en-US/docs/Web/API/document.pointerLockElement	/en-US/docs/Web/API/Document/pointerLockElement
 /en-US/docs/Web/API/document.preferredStyleSheetSet	/en-US/docs/Web/API/Document/preferredStyleSheetSet
@@ -11647,7 +11645,6 @@
 /en-US/docs/Web/Events/mouseover	/en-US/docs/Web/API/Element/mouseover_event
 /en-US/docs/Web/Events/mouseup	/en-US/docs/Web/API/Element/mouseup_event
 /en-US/docs/Web/Events/mousewheel	/en-US/docs/Web/API/Element/mousewheel_event
-/en-US/docs/Web/Events/msContentZoom	/en-US/docs/Web/API/Element/msContentZoom_event
 /en-US/docs/Web/Events/mute	/en-US/docs/Web/API/MediaStreamTrack/mute_event
 /en-US/docs/Web/Events/negotiationneeded	/en-US/docs/Web/API/RTCPeerConnection/negotiationneeded_event
 /en-US/docs/Web/Events/nomatch	/en-US/docs/Web/API/SpeechRecognition/nomatch_event
