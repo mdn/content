@@ -54,7 +54,7 @@ The `list-style-type` property may be defined as any one of:
 
 - a `<custom-ident>` value,
 - a `symbols()` value,
-- a `<string>` value,
+- a `<string>` value, or
 - the keyword `none`.
 
 Note that:
