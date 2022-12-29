@@ -33,6 +33,10 @@ hsl(hue, saturation, lightness)
 hsl(hue, saturation, lightness, alpha)
 ```
 
+The `hsl()` function accepts three space-separated values, representing respectively `hue`, `saturation`, and `lightness`. Optionally it may also be given a slash `/` followed by a fourth value, representing `alpha`.
+
+The function also accepts a legacy syntax in which all four values are separated with commas.
+
 ### Values
 
 - `hue`
@@ -56,32 +60,71 @@ hsl(hue, saturation, lightness, alpha)
 
 ## Examples
 
+### Using `hsl()` with `conic-gradient()`
+
 The `hsl()` function works well with [`conic-gradient()`](/en-US/docs/Web/CSS/gradient/conic-gradient) as both deal with angles.
 
 ```html hidden
 <div></div>
 ```
 
+#### CSS
+
 ```css
 div {
   width: 100px;
   height: 100px;
   background: conic-gradient(
-    hsl(360, 100%, 50%),
-    hsl(315, 100%, 50%),
-    hsl(270, 100%, 50%),
-    hsl(225, 100%, 50%),
-    hsl(180, 100%, 50%),
-    hsl(135, 100%, 50%),
-    hsl(90, 100%, 50%),
-    hsl(45, 100%, 50%),
-    hsl(0, 100%, 50%)
+    hsl(360 100% 50%),
+    hsl(315 100% 50%),
+    hsl(270 100% 50%),
+    hsl(225 100% 50%),
+    hsl(180 100% 50%),
+    hsl(135 100% 50%),
+    hsl(90 100% 50%),
+    hsl(45 100% 50%),
+    hsl(0 100% 50%)
   );
   clip-path: circle(closest-side);
 }
 ```
 
-{{EmbedLiveSample('Examples', '100%', '140px')}}
+#### Result
+
+{{EmbedLiveSample('Using hsl() with conic-gradient(), ', '100%', '140px')}}
+
+### Comma-separated syntax
+
+For legacy reasons, the `hsl()` function accepts a form in which all values are separated using commas.
+
+#### HTML
+
+```html
+<div class="space-separated"></div>
+<div class="comma-separated"></div>
+```
+
+#### CSS
+
+```css
+div {
+  width: 100px;
+  height: 50px;
+  margin: 1rem;
+}
+
+div.space-separated {
+  background-color: hsl(0 100% 50% / 50%);
+}
+
+div.comma-separated {
+  background-color: hsl(0, 100%, 50%, 50%);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Comma-separated syntax, ', '100%', '150px')}}
 
 ## Specifications
 

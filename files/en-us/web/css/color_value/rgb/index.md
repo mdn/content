@@ -19,29 +19,75 @@ The **`rgb()`** functional notation expresses a color according to its red, gree
 
 {{EmbedInteractiveExample("pages/css/function-rgb.html")}}
 
-> **Note:** CSS Colors Level 4 made some changes to `rgb()`. In browsers that support the standard {{cssxref("color_value/rgba","rgba()")}} is an alias for `rgb()`, they accept the same parameters and behave the same way.
->
-> The Level 4 specification also allows for space-separated in addition to comma-separated values.
-
 ## Syntax
 
 ```css
-rgb(255, 255, 255) /* white */
-rgb(255, 255, 255,.5) /* white with 50% opacity */
-rgb(255 255 255) /* CSS Colors 4 space-separated values */
-rgb(255 255 255 / .5); /* white with 50% opacity, using CSS Colors 4 space-separated values */
+/* Syntax with space-separated values */
+rgb(255 255 255)
+rgb(255 255 255 / .5)
+
+/* Syntax with comma-separated values */
+rgb(255, 255, 255)
+rgb(255, 255, 255, .5)
 ```
+
+The `rgb()` function accepts three space-separated values, representing respectively values for `red`, `green`, and `blue`. Optionally it may also be given a slash `/` followed by a fourth value, representing `alpha`.
+
+The function also accepts a legacy syntax in which all four values are separated with commas.
 
 ### Values
 
-- Functional notation: `rgb(R, G, B[, A])`
-  - : `R` (red), `G` (green), and `B` (blue) can be either {{cssxref("&lt;number&gt;")}}s or {{cssxref("&lt;percentage&gt;")}}s, where the number `255` corresponds to `100%`. `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
-- Functional notation: `rgb(R G B[ / A])`
-  - : CSS Colors Level 4 adds support for space-separated values in the functional notation.
+- `red`
+  - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value, or the keyword `none`, representing the value of the red component.
+- `green`
+  - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value, or the keyword `none`, representing the value of the green component.
+- `blue`
+  - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value, or the keyword `none`, representing the value of the blue component.
+- `alpha`
+  - : A {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}} representing opacity, where the number `1` corresponds to `100%` (full opacity).
 
 ### Formal syntax
 
 {{csssyntax}}
+
+## Examples
+
+### Comma-separated syntax
+
+For legacy reasons, the `rgb()` function accepts a form in which all values are separated using commas.
+
+#### HTML
+
+```html
+<div class="space-separated"></div>
+<div class="comma-separated"></div>
+```
+
+#### CSS
+
+```css
+div {
+  width: 100px;
+  height: 50px;
+  margin: 1rem;
+}
+
+div.space-separated {
+  background-color: rgb(255 0 0 / 0.5);
+}
+
+div.comma-separated {
+  background-color: rgb(255, 0, 0, 0.5);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Comma-separated syntax, ', '100%', '150px')}}
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 
