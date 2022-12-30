@@ -314,7 +314,7 @@ const obj5 = {
 };
 const obj6 = {
   ["__proto__"]: 17,
-  ["__proto__"]: "hello" ,
+  ["__proto__"]: "hello",
   __proto__: null,
 }; // {__proto__: "hello"} (with null as prototype)
 const obj7 =  {
