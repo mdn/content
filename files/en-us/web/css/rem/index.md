@@ -16,9 +16,9 @@ browser-compat: css.types.rem
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`rem()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns a remainder (with the same sign as the dividend) when dividing one number by another. The remainder is a left over when one operand is divided by a second operand. It always takes the sign of the dividend.
+The **`rem()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns a remainder (with the same sign as the dividend) when dividing one number by another. The remainder is a leftover when one operand is divided by a second operand. It always takes the sign of the dividend.
 
-> When dividing 12 by 5, the result is 10 with a remainder of 2. The full calculation is `12 / 5 = 10 (2)`. The `rem()` function returns the reminder.
+> When dividing 12 by 5, the result is 10 with a remainder of 2. The full calculation is `12 / 5 = 10 (2)`. The `rem()` function returns the remainder.
 
 ## Syntax
 
@@ -52,7 +52,7 @@ The `rem(dividend, divisor)` function accepts two comma-separated values as its 
 
 ### Return value
 
-Returns a {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}} (the same type as the parameters) representing the remainder, that is, the operation left over.
+Returns a {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}} (corresponds to the parameters' type) representing the remainder, that is, the operation leftover.
 
 - If `divisor` is `0`, the result is `NaN`.
 - If `dividend` is `infinite`, the result is `NaN`.
