@@ -60,7 +60,7 @@ margin-trim: unset;
   - : Margin between the container's edge and the first inline child is trimmed to zero.
 
 - `inline-end`
-  - : Margin between the container's edge and the last inline child will be truncated to zero.
+  - : Margin between the container's edge and the last inline child is trimmed to zero.
 
 ## Formal definition
 
