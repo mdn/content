@@ -48,7 +48,7 @@ This example demonstrates using the `<i>` element to mark text that is in anothe
 
 ```html
 <p>
-  The Latin phrase <i>Veni, vidi, vici</i> is often mentioned in music, art, and
+  The Latin phrase <i lang="la">Veni, vidi, vici</i> is often mentioned in music, art, and
   literature.
 </p>
 ```
