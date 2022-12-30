@@ -23,7 +23,7 @@ If the property is inherited, or does not exist, the method returns `false`.
 ## Syntax
 
 ```js-nolint
-hasOwn(instance, prop)
+Object.hasOwn(obj, prop)
 ```
 
 ### Parameters
