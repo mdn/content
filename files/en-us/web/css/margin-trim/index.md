@@ -44,7 +44,7 @@ margin-trim: unset;
   - : Margins are not trimmed by the container.
 
 - `block`
-  - : Container truncate the margins provided to the block children where they adjoin the container's edge, without affecting the margins provided to the container.
+  - : Margins provided to the block children where they adjoin the container's edges are trimmed to zero without affecting the margins provided to the container.
 
 - `block-start`
   - : Margins of the first block child with container's edge will be trimmed to zero.
