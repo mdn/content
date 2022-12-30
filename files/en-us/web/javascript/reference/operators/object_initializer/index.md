@@ -276,7 +276,7 @@ const obj1 = {};
 console.log(Object.getPrototypeOf(obj1) === Object.prototype); // true
 
 const obj2 = { __proto__: null };
-console.log(Object.getPrototypeOf(obj2) === null); // true
+console.log(Object.getPrototypeOf(obj2)); // null
 
 const protoObj = {};
 const obj3 = { "__proto__": protoObj };
@@ -297,10 +297,10 @@ const __proto__ = "variable";
 const obj1 = { __proto__ };
 console.log(Object.getPrototypeOf(obj1) === Object.prototype); // true
 console.log(Object.hasOwn(obj1, "__proto__")); // true
-console.log(obj1.__proto__ === "variable"); // true
+console.log(obj1.__proto__); // "variable"
 
 const obj2 = { __proto__() { return "hello"; } };
-console.log(obj2.__proto__() === "hello"); // true
+console.log(obj2.__proto__()); // "hello"
 
 const obj3 = { ["__proto__"]: 17 };
 console.log(obj3.__proto__); // 17
