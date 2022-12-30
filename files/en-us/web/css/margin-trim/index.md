@@ -23,8 +23,12 @@ The `margin-trim` property allows the container to trim the margins of its child
 
 ```css
 margin-trim: none;
-margin-trim: in-flow;
-margin-trim: all;
+margin-trim: block;
+margin-trim: block-start;
+margin-trim: block-end;
+margin-trim: inline;
+margin-trim: inline-start;
+margin-trim: inline-end;
 
 /* Global values */
 margin-trim: inherit;
@@ -38,12 +42,25 @@ margin-trim: unset;
 
 - `none`
   - : Margins are not trimmed by the container.
-- `block`
 
-  - : Computes to 'block-start block-end'.
+- `block`
+  - : Container truncate the margins provided to the block children where they adjoin the container's edge, without affecting the margins provided to the container.
+
+- `block-start`
+  - : Margins of the first block child with container's edge will be trimmed to zero.
+
+- `block-end`
+
+  - : Margins of last block child with the container's edge will be truncated to zero.
 
 - `inline`
-  - : Computes to 'inline-start inline-end'
+  - : Container truncate the margins provided to the inline children where they adjoin the container's edge, without affecting spacing at the beginning and end of the       row.
+
+- `inline-start`
+  - : Margins between the container's edge and the first inline child will be truncated to zero.
+
+- `inline-end`
+  - : Margin between the container's edge and the last inline child will be truncated to zero.
 
 ## Formal definition
 
@@ -75,6 +92,7 @@ article > span {
   text-align: center;
   padding: 10px;
   margin-right: 20px;
+  margin-left: 30px;
 }
 ```
 
@@ -83,6 +101,7 @@ The problem here is that you'd end up with 20px too much spacing at the right of
 ```css
 span:last-child {
   margin-right: 0;
+  margin-left: 0;
 }
 ```
 
@@ -90,7 +109,16 @@ It is a pain having to write another rule to achieve this, and it is also not ve
 
 ```css
 article {
-  margin-trim: in-flow;
+  margin-trim: inline-end;
+  /* … */
+}
+```
+
+Similarly, to remove left margins with the container's edge:
+
+```css
+article {
+  margin-trim: inline-start;
   /* … */
 }
 ```
