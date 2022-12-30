@@ -57,7 +57,7 @@ margin-trim: unset;
   - : Margins provided to the inline children where they adjoin the container's edges are trimmed to zero, without affecting the spacing at the beginning and end of the row.
 
 - `inline-start`
-  - : Margins between the container's edge and the first inline child will be truncated to zero.
+  - : Margin between the container's edge and the first inline child is trimmed to zero.
 
 - `inline-end`
   - : Margin between the container's edge and the last inline child will be truncated to zero.
