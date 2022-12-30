@@ -43,7 +43,7 @@ rotate: rem(-55deg, -15deg); /* -10deg */
 
 ### Parameter
 
-The `rem(dividend, divisor)` function accepts two comma-separated values as its parameters. Both parameters must have the same type, or else the function is invalid.
+The `rem(dividend, divisor)` function accepts two comma-separated values as its parameters. Both parameters must have the same type for the function to be valid.
 
 - `dividend`
   - : A calculation that resolves to a {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}} representing the dividend.
