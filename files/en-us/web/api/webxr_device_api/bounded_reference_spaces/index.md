@@ -21,7 +21,7 @@ There are many uses for bounded reference spaces, including projects such as vir
 
 ## Introduction
 
-A bounded reference space is one which represents an XR environment in which the user is able to move around physically in the real world while being tracked by the XR hardware, with their movements being then transposed into the simulation. The boundaries established by the bounded reference space, then, represent the edges of the safely passable, tracked space in the user's real world environment that are available for their movement while in the simulation.
+A bounded reference space is one which represents an XR environment in which the user is able to move around physically in the real world while being tracked by the XR hardware, with their movements being then transposed into the simulation. The boundaries established by the bounded reference space, then, represent the edges of the safely passable, tracked space in the user's real-world environment that are available for their movement while in the simulation.
 
 ### Requirements
 
