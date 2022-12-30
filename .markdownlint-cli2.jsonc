@@ -189,7 +189,7 @@
           "skipCode": true
         },
         {
-          "name": "bad-spelling",
+          "name": "incorrect-spelling",
           "message": "Incorrect spelling",
           "searchPattern": ["/e-mail/ig"],
           "replace": ["email"],
