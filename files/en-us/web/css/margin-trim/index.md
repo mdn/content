@@ -114,7 +114,7 @@ article {
 }
 ```
 
-Similarly, to remove left margins with the container's edge:
+Similarly, to remove left margin with the container's edge:
 
 ```css
 article {
