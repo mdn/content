@@ -48,6 +48,11 @@ The function also accepts a legacy syntax in which all four values are separated
 - `alpha`
   - : A {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}} representing opacity, where the number `1` corresponds to `100%` (full opacity).
 
+For the color component values `red`, `green`, and `blue`, it is not permissible to mix percentages and numbers, so:
+
+- if any color component value is a number, then all color component values must be numbers or `none`
+- if any color component value is a percentage, then all color component values must be percentages or `none`.
+
 ### Formal syntax
 
 {{csssyntax}}
