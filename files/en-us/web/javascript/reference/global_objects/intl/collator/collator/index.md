@@ -126,19 +126,17 @@ Intl.Collator(locales, options)
       - : Whether numeric collation should be used, such that "1" < "2" <
         "10". Possible values are `true` and `false`; the
         default is `false`.
-
-        > **Note:** This option can also be set through the `kn` Unicode
-        > extension key; if both are provided, this `options`
-        > property takes precedence.
+        This option can also be set through the `kn` Unicode
+        extension key; if both are provided, this `options`
+        property takes precedence.
 
     - `caseFirst`
 
       - : Whether upper case or lower case should sort first. Possible values are
         `"upper"`, `"lower"`, or `"false"` (use the locale's default).
-
-        > **Note:** This option can also be set through the `kf` Unicode
-        > extension key; if both are provided, this `options`
-        > property takes precedence.
+        This option can also be set through the `kf` Unicode
+        extension key; if both are provided, this `options`
+        property takes precedence.
 
     - `collation`
 
