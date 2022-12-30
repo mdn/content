@@ -51,7 +51,7 @@ margin-trim: unset;
 
 - `block-end`
 
-  - : Margins of last block child with the container's edge will be truncated to zero.
+  - : Margin of last block child with the container's edge is trimmed to zero.
 
 - `inline`
   - : Container truncate the margins provided to the inline children where they adjoin the container's edge, without affecting spacing at the beginning and end of the       row.
