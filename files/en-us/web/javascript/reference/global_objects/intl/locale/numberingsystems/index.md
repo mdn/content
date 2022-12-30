@@ -17,11 +17,15 @@ browser-compat: javascript.builtins.Intl.Locale.numberingSystems
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.numberingSystems`** property is an accessor property that returns one or more unique numbering system identifiers according to the [numeral system](https://en.wikipedia.org/wiki/Numeral_system) used by the `Locale`.
+The **`Intl.Locale.prototype.numberingSystems`** accessor property returns a list of one or more unique [numbering system](https://en.wikipedia.org/wiki/Numeral_system) identifiers for the `Locale`.
 
 ## Description
 
-A numeral system is a system for expressing numbers. The `numberingSystem` property helps to represent the different numeral systems used by various countries, regions, and cultures around the world. As with most internationalization schemas, the numeral systems that can be represented in a `Locale` object by `numberingSystem` are standardized by Unicode. A table of the standard Unicode numeral systems can be seen below.
+A numeral system is a system for expressing numbers. The `numberingSystems` property returns an array of all numbering systems commonly used for the `Locale`, sorted in descending preference. If the `Locale` already has a [`numberingSystem`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem), then the returned array contains that single value.
+
+A table of the standard Unicode numeral systems can be seen below.
+
+### Supported numbering system types
 
 | Value    | Description                                                                |
 | -------- | -------------------------------------------------------------------------- |
@@ -114,11 +118,9 @@ A numeral system is a system for expressing numbers. The `numberingSystem` prope
 
 ## Examples
 
-### Obtaining supported `numberingSystem` values via the locale string
+### Obtaining supported numbering systems
 
-In the [Unicode locale string spec](https://www.unicode.org/reports/tr35/), the values that `numberingSystem` represents correspond to the key `nu`. `nu` is considered a locale string "extension subtag". These subtags add additional data about the locale, and are added to locale identifiers by first adding the `-u` key. To set the `numberingSystem` value via the string argument to the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor, first add the `-u` extension key. Next, add the `-nu` extension key to indicate that you are adding a value for `numberingSystem`. Finally, add the `numberingSystem` value to the string.
-
-List supported number system for a given `Locale`.
+If the `Locale` object doesn't have a `numberingSystem` already, the `numberingSystems` property lists all commonly-used numbering systems for the given `Locale`. For examples of explicitly setting a `numberingSystem`, see [`numberingSystem` examples](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem#examples).
 
 ```js
 const arEG = new Intl.Locale("ar-EG");
@@ -140,5 +142,6 @@ console.log(ja.numberingSystems); // ["latn"]
 
 ## See also
 
-- {{jsxref("Intl/Locale", "Intl.Locale")}}
+- {{jsxref("Intl.Locale")}}
+- [`Intl.Locale.prototype.numberingSystem`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem)
 - [Details on the standard Unicode numeral systems](https://github.com/unicode-org/cldr/blob/main/common/supplemental/numberingSystems.xml)

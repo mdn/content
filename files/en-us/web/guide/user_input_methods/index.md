@@ -86,7 +86,7 @@ When dealing with devices that incorporate multiple forms of input, like mouse, 
 
 #### Pointer lock
 
-In some cases, typically game development, you might need to access mouse events even when the cursor goes past the boundary of the browser or screen: the {{domxref("Pointer_Lock_API")}} gives you full control of the pointing device.
+In some cases, typically game development, you might need to access mouse events even when the cursor goes past the boundary of the browser or screen: the [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API) gives you full control of the pointing device.
 
 This is the code to request pointer lock on an `element`:
 
@@ -94,7 +94,7 @@ This is the code to request pointer lock on an `element`:
 element.requestPointerLock();
 ```
 
-> **Note:** For a full tutorial and reference, read our {{domxref("Pointer_Lock_API")}} page.
+> **Note:** For a full tutorial and reference, read our [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API) page.
 
 #### Screen Orientation
 
@@ -183,7 +183,7 @@ div {
 - {{domxref("MouseEvent")}}
 - {{domxref("KeyboardEvent")}}
 - [Touch events](/en-US/docs/Web/API/Touch_events)
-- {{domxref("Pointer_Lock_API")}}
+- [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API)
 - [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 - [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
 - [Drag & Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)

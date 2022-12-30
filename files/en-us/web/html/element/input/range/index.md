@@ -75,9 +75,9 @@ This value must be less than or equal to the value of the [`max`](/en-US/docs/We
 
 The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
 
-A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)). See the [Setting step to "any"](#setting_step_to_any) example for how this works in supported browsers.
+A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)). See the [Setting step to `any`](#setting_step_to_any) example for how this works in supported browsers.
 
-> **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring to round up numbers when there are two equally close options.
+> **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring to round numbers up when there are two equally close options.
 
 The default stepping value for `range` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer; for example, if you set `min` to -10 and `value` to 1.5, then a `step` of 1 will allow only values such as 1.5, 2.5, 3.5,… in the positive direction and -0.5, -1.5, -2.5,… in the negative direction. See the [HTML `step` attribute](/en-US/docs/Web/HTML/Attributes/step).
 
@@ -116,7 +116,7 @@ For example, to ask the user for a value between -10 and 10, you can use:
 
 ### Setting the value's granularity
 
-By default, the granularity, is 1, meaning that the value is always an integer. You can change the {{htmlattrxref("step")}} attribute to control the granularity. For example, If you need a value between 5 and 10, accurate to two decimal places, you should set the value of `step` to 0.5:
+By default, the granularity, is 1, meaning that the value is always an integer. You can change the {{htmlattrxref("step")}} attribute to control the granularity. For example, If you need a value to be halfway between 5 and 10 you should set the value of `step` to 0.5:
 
 #### Setting the step attribute
 
@@ -134,7 +134,7 @@ If you want to accept any value regardless of how many decimal places it extends
 
 ```html
 <input id="pi_input" type="range" min="0" max="3.14" step="any" />
-<p>Value: <span id="value">1.57</span></p>
+<p>Value: <output id="value"></output></p>
 ```
 
 ##### JavaScript
@@ -142,6 +142,7 @@ If you want to accept any value regardless of how many decimal places it extends
 ```js
 const value = document.querySelector("#value")
 const input = document.querySelector("#pi_input")
+value.textContent = input.value
 input.addEventListener("input", (event) => {
   value.textContent = event.target.value
 })
@@ -149,7 +150,7 @@ input.addEventListener("input", (event) => {
 
 {{EmbedLiveSample("Setting_step_to_any", 600, 75)}}
 
-This example lets the user select any value between 0 and π without any restriction on the fractional part of the value selected. The JavaScript is used to show how the value is changing as the range is interacted with.
+This example lets the user select any value between 0 and π without any restriction on the fractional part of the value selected. JavaScript is used to show how the value changes as the user interacts with the range.
 
 ### Adding tick marks
 
@@ -176,7 +177,7 @@ To add tick marks to a range control, include the `list` attribute, giving it th
 
 ### Using the same datalist for multiple range controls
 
-To help you from repeating code you can reuse that same {{HTMLElement("datalist")}} for multiple `<input type="range">` elements.
+To help you from repeating code you can reuse that same {{HTMLElement("datalist")}} for multiple `<input type="range">` elements, and other {{HTMLElement("input")}} types.
 
 > **Note:** If you also want to [show the labels](#adding_labels) as in the example below then you would need a `datalist` for each range input.
 
@@ -192,10 +193,10 @@ To help you from repeating code you can reuse that same {{HTMLElement("datalist"
 
 <datalist id="values">
   <option value="0" label="0"></option>
-  <option value="25" label="0"></option>
-  <option value="50" label="0"></option>
-  <option value="75" label="0"></option>
-  <option value="100" label="0"></option>
+  <option value="25" label="25"></option>
+  <option value="50" label="50"></option>
+  <option value="75" label="75"></option>
+  <option value="100" label="100"></option>
 </datalist>
 ```
 
@@ -205,7 +206,7 @@ To help you from repeating code you can reuse that same {{HTMLElement("datalist"
 
 ### Adding labels
 
-You can label tick marks by giving the `<option>` elements `label` attributes. However, you must use CSS to show the labels and to position them correctly. Here's one way you could do this.
+You can label tick marks by giving the `<option>` elements `label` attributes. However, the label content will not be displayed by default. You can use CSS to show the labels and to position them correctly. Here's one way you could do this.
 
 #### HTML
 
@@ -327,7 +328,7 @@ We keep the `orient` attribute with a value of `vertical` for Firefox:
 <input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
 ```
 
-We target just the inputs with a type of range & orient of vertical, changing the writing mode from the default to `bt-lr`, or bottom-to-top and left-to-right, for Edge and Internet Explorer, and add `appearance: slider-vertical` which is supported in Blink and Webkit browsers:
+We target just the `input`s with a `type` of `range` and `orient` set to `vertical`, changing the `writing-mode` from the default to `bt-lr`, or bottom-to-top and left-to-right, for pre-Blink versions of Edge, and add `appearance: slider-vertical` which is supported in Blink and Webkit browsers:
 
 ```css
 input[type="range"][orient="vertical"] {
