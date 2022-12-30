@@ -13,11 +13,15 @@ browser-compat: api.crossOriginIsolated
 {{APIRef()}}
 
 The global **`crossOriginIsolated`** read-only property returns a boolean value that
-indicates whether a {{JSxRef("SharedArrayBuffer")}} can be sent via a
-{{DOMxRef("Window.postMessage()")}} call.
+indicates whether the website is in cross origin isolation state. That state mitigates the risk of side-channel attacks and unlocks a few capabilities:
 
-This value is dependent on any {{HTTPHeader("Cross-Origin-Opener-Policy")}} and
-{{HTTPHeader("Cross-Origin-Embedder-Policy")}} headers present in the response.
+- {{JSxRef("SharedArrayBuffer")}} can be created and sent via a {{DOMxRef("Window.postMessage()")}} call.
+- {{DOMxRef("Performance.now()")}} offers better precision.
+- {{DOMxRef("Performance.measureUserAgentSpecificMemory()")}} can be accessed.
+
+> **Warning:** Isolated state prevents assigning value to {{DOMxRef("Document.domain")}}.
+
+Website is in cross-origin isolated state, when response header {{HTTPHeader("Cross-Origin-Opener-Policy")}} has value `same-origin` and {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header has value `require-corp` or `credentialless`.
 
 ## Value
 
