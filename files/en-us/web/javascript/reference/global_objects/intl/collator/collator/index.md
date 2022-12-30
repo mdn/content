@@ -160,9 +160,9 @@ Intl.Collator(locales, options)
         - `unihan` (Chinese, Japanese, and Korean; not available in Chrome or Edge)
         - `zhuyin` (Chinese)
 
-        > **Note:** This option can also be set through the `co` Unicode
-        > extension key; if both are provided, this `options`
-        > property takes precedence.
+        This option can also be set through the `co` Unicode
+        extension key; if both are provided, this `options`
+        property takes precedence.
 
 ## Examples
 
