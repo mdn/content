@@ -134,8 +134,7 @@ Intl.Collator(locales, options)
     - `caseFirst`
 
       - : Whether upper case or lower case should sort first. Possible values are
-        `"upper"`, `"lower"`, or `"false"` (use
-        the locale's default).
+        `"upper"`, `"lower"`, or `"false"` (use the locale's default).
 
         > **Note:** This option can also be set through the `kf` Unicode
         > extension key; if both are provided, this `options`
