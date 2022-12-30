@@ -39,19 +39,12 @@ The function also accepts a legacy syntax in which all four values are separated
 
 ### Values
 
-- `red`
-  - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value, or the keyword `none`, representing the value of the red component.
-- `green`
-  - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value, or the keyword `none`, representing the value of the green component.
-- `blue`
-  - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value, or the keyword `none`, representing the value of the blue component.
-- `alpha`
-  - : A {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}} representing opacity, where the number `1` corresponds to `100%` (full opacity).
+- Values for `red`, `green`, `blue` represent color channels and may each be a {{cssxref("&lt;number&gt;")}} clamped between 0 and 255 or a {{cssxref("&lt;percentage&gt;")}}, or the keyword `none`. For color channel values, it is not permissible to mix percentages and numbers, so:
 
-For the color component values `red`, `green`, and `blue`, it is not permissible to mix percentages and numbers, so:
+  - if any color channel value is a number, then all color channel values must be numbers or `none`
+  - if any color channel value is a percentage, then all color channel values must be percentages or `none`.
 
-- if any color component value is a number, then all color component values must be numbers or `none`
-- if any color component value is a percentage, then all color component values must be percentages or `none`.
+- The value for `alpha` is a {{cssxref("&lt;number&gt;")}} clamped between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}. It represents opacity, where the number `1` corresponds to `100%` (full opacity). It defaults to 100%.
 
 ### Formal syntax
 
