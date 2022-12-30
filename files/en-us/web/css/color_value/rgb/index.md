@@ -19,6 +19,8 @@ The **`rgb()`** functional notation expresses a color according to its red, gree
 
 {{EmbedInteractiveExample("pages/css/function-rgb.html")}}
 
+> **Note:** The legacy {{cssxref("color_value/rgba", "rgba()")}} syntax is an alias for `rgb()`, accepting the same parameters and behaving in the same way.
+
 ## Syntax
 
 ```css

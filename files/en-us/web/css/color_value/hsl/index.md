@@ -21,6 +21,8 @@ The **`hsl()`** functional notation expresses an {{glossary("RGB", "sRGB")}} col
 
 Defining _complementary colors_ with `hsl()` can be done with a single formula, as they are positioned on the same diameter of the {{glossary("color wheel")}}. If `theta` is the angle of a color, its complementary one will have `180deg-theta` as its _hue_ coordinate.
 
+> **Note:** The legacy {{cssxref("color_value/hsla", "hsla()")}} syntax is an alias for `hsl()`, accepting the same parameters and behaving in the same way.
+
 ## Syntax
 
 ```css
