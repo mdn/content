@@ -23,15 +23,16 @@ The **`rem()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Fu
 ## Syntax
 
 ```css
-/* Unitless values */
+/* Unitless <number> */
 line-height: rem(21, 2);  /* 1 */
 line-height: rem(14, 5);  /* 4 */
 line-height: rem(5.5, 2); /* 1.5 */
 
-/* Unit based values */
-margin: rem(14%, 3%);   /* 2% */
-margin: rem(18px, 5px); /* 3px */
-margin: rem(25vmin, 7vmin); /* 4vmin */
+/* Unit based <percentage> and <dimension> */
+margin: rem(14%, 3%);       /* 2% */
+margin: rem(18px, 5px);     /* 3px */
+margin: rem(10rem, 6rem);   /* 4rem */
+margin: rem(26vmin, 7vmin); /* 5vmin */
 
 /* Negative/positive values */
 rotate: rem(200deg, 30deg);  /* 20deg */
