@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat.supportedLocalesOf
 
 {{JSRef}}
 
-The **`Intl.DateTimeFormat.supportedLocalesOf()`** method
+The **`Intl.DateTimeFormat.supportedLocalesOf()`** static method
 returns an array containing those of the provided locales that are supported in date
 and time formatting without having to fall back to the runtime's default locale.
 

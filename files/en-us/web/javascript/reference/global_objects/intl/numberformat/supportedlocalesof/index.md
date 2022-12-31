@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.Intl.NumberFormat.supportedLocalesOf
 
 {{JSRef}}
 
-The **`Intl.NumberFormat.supportedLocalesOf()`** method returns
+The **`Intl.NumberFormat.supportedLocalesOf()`** static method returns
 an array containing those of the provided locales that are supported in number
 formatting without having to fall back to the runtime's default locale.
 

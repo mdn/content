@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Math.imul
 
 {{JSRef}}
 
-The **`Math.imul()`** function returns the result of the C-like 32-bit multiplication of the two parameters.
+The **`Math.imul()`** static method returns the result of the C-like 32-bit multiplication of the two parameters.
 
 {{EmbedInteractiveExample("pages/js/math-imul.html")}}
 

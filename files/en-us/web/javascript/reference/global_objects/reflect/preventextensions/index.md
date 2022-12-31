@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Reflect.preventExtensions
 
 {{JSRef}}
 
-The static **`Reflect.preventExtensions()`** method prevents new properties from ever being added to an object (i.e., prevents future extensions to the object). It is similar to {{jsxref("Object.preventExtensions()")}}, but with [some differences](#difference_with_object.preventextensions).
+The **`Reflect.preventExtensions()`** static method prevents new properties from ever being added to an object (i.e., prevents future extensions to the object). It is similar to {{jsxref("Object.preventExtensions()")}}, but with [some differences](#difference_with_object.preventextensions).
 
 {{EmbedInteractiveExample("pages/js/reflect-preventextensions.html")}}
 
