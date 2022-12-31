@@ -74,10 +74,10 @@ The [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) keyword refers
 
 Broadly speaking, JavaScript has four kinds of functions:
 
-- Regular functions: can return anything; always runs to completion after invocation
-- Generator functions: returns a [`Generator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) object; can be paused and resumed with the [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) operator
-- Async functions: returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise); can be paused and resumed with the [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) operator
-- Async generator functions: returns an [`AsyncGenerator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator) object; both the `await` and `yield` operators can be used
+- Regular function: can return anything; always runs to completion after invocation
+- Generator function: returns a [`Generator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) object; can be paused and resumed with the [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) operator
+- Async function: returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise); can be paused and resumed with the [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) operator
+- Async generator function: returns an [`AsyncGenerator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator) object; both the `await` and `yield` operators can be used
 
 For every kind of function, there are three ways to define it:
 
@@ -128,7 +128,7 @@ All syntaxes do approximately the same thing, but there are some subtle behavior
 - The `Function()` constructor cannot access any local variables — it only has access to the global scope.
 - The `Function()` constructor causes runtime compilation and is often slower than other syntaxes.
 
-For `function` expressions, there is a distinction between the function name and the variable the function is assigned to. The function name cannot be changed, while the variable the function is assigned to can be reassigned. The function name can be different from the variable the function is assigned to — they have no relation to each other. The function name can be used only within the function's body. Attempting to use it outside the function's body results in an error (or get another value, if the same name is declared elsewhere). For example:
+For `function` expressions, there is a distinction between the function name and the variable the function is assigned to. The function name cannot be changed, while the variable the function is assigned to can be reassigned. The function name can be different from the variable the function is assigned to — they have no relation to each other. The function name can be used only within the function's body. Attempting to use it outside the function's body results in an error (or gets another value, if the same name is declared elsewhere). For example:
 
 ```js
 const y = function x() {};
@@ -183,7 +183,7 @@ myFunc();
 // 5 (for 'cons' by Function constructor (global scope))
 ```
 
-Functions defined by function expressions and function declarations are parsed only once, while those defined by the `Function` constructor parses the string passed to it each and every time the constructor is called. Although a function expression creates a closure every time, the function body is not reparsed, so function expressions are still faster than `new Function(...)`. Therefore the `Function` constructor should generally be avoided whenever possible.
+Functions defined by function expressions and function declarations are parsed only once, while a function defined by the `Function` constructor parses the string passed to it each and every time the constructor is called. Although a function expression creates a closure every time, the function body is not reparsed, so function expressions are still faster than `new Function(...)`. Therefore the `Function` constructor should generally be avoided whenever possible.
 
 A function declaration may be unintentionally turned into a function expression when it appears in an expression context.
 
@@ -311,7 +311,7 @@ if (shouldDefineZero) {
 }
 ```
 
-The semantics of this in strict mode is well-specified — `zero` only ever exists within that scope of the `if` block. If `shouldDefineZero` is false, then `zero` should never be defined, since the block never executes. However, historically, this was left unspecified, so different browsers implemented it differently in non-strict mode. For more information, see the [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function#block-level_function_declaration) reference.
+The semantics of this in strict mode are well-specified — `zero` only ever exists within that scope of the `if` block. If `shouldDefineZero` is false, then `zero` should never be defined, since the block never executes. However, historically, this was left unspecified, so different browsers implemented it differently in non-strict mode. For more information, see the [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function#block-level_function_declaration) reference.
 
 A safer way to define functions conditionally is to assign a function expression to a variable:
 
