@@ -18,7 +18,7 @@ browser-compat: css.types.rem
 
 The **`rem()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns a remainder (with the same sign as the dividend) when dividing one number by another. The remainder is a leftover when one operand is divided by a second operand. It always takes the sign of the dividend.
 
-> When dividing 27 by 5, the result is 25 with a remainder of 2. The full calculation is `27 / 5 = 5 * 5 + 2`. The `rem(27, 5)` function returns the remainder of `2`.
+> When dividing 27 by 5, the result is 5 with a remainder of 2. The full calculation is `27 / 5 = 5 * 5 + 2`. The `rem(27, 5)` function returns the remainder of `2`.
 
 ## Syntax
 
