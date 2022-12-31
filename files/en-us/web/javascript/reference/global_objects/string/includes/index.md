@@ -34,7 +34,7 @@ includes(searchString, position)
 
 ### Return value
 
-**`true`** if the search string is found anywhere within the given string, including when `searchString` is an empty string; otherwise, **`false`** if not.
+**`true`** if the search string is found anywhere within the given string, including when `searchString` is an empty string; otherwise, **`false`**.
 
 ### Exceptions
 
