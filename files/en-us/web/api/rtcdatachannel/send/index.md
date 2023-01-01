@@ -73,7 +73,7 @@ None ({{jsxref("undefined")}}).
 
 In this example, a routine called `sendMessage()` is created; it accepts an
 object as input and sends to the remote peer, over the {{domxref("RTCDataChannel")}}, a
-JSON string with the specified object and a time stamp.
+JSON string with the specified object and a timestamp.
 
 ```js
 const pc = new RTCPeerConnection();
