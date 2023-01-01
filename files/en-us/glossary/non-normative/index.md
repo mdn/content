@@ -1,6 +1,6 @@
 ---
 title: Non-normative
-slug: Glossary/non-normative
+slug: Glossary/Non-normative
 tags:
   - Infrastructure
   - Specification

@@ -1,6 +1,6 @@
 ---
 title: LTR (Left To Right)
-slug: Glossary/ltr
+slug: Glossary/LTR
 tags:
   - Composing
   - Localization
