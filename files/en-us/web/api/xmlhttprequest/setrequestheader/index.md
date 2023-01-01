@@ -38,6 +38,7 @@ header with the type `"*/*"` is sent with the request when
 For security reasons, some headers can only be controlled by the user agent. These
 headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}}
 and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.
+These calls will be ignored without warning or error.
 
 > **Note:** For your custom fields, you may encounter a "**not
 > allowed by Access-Control-Allow-Headers in preflight response**" exception
