@@ -233,18 +233,18 @@ The book detail page will display information about a specific book, accessed us
 
 ### URL mapping
 
-Open **/catalog/urls.py** and add the path named '**book-detail**' shown below.
+Open **/catalog/urls.py** and add the path named '**book_detail**' shown below.
 This `path()` function defines a pattern, associated generic class-based detail view, and a name.
 
 ```python
 urlpatterns = [
     path('', views.index, name='index'),
     path('books/', views.BookListView.as_view(), name='books'),
-    path('book/<int:pk>', views.BookDetailView.as_view(), name='book-detail'),
+    path('book/<int:pk>', views.BookDetailView.as_view(), name='book_detail'),
 ]
 ```
 
-For the _book-detail_ path the URL pattern uses a special syntax to capture the specific id of the book that we want to see.
+For the _book_detail_ path the URL pattern uses a special syntax to capture the specific id of the book that we want to see.
 The syntax is very simple: angle brackets define the part of the URL to be captured, enclosing the name of the variable that the view can use to access the captured data.
 For example, **\<something>**, will capture the marked pattern and pass the value to the view as a variable "something". You can optionally precede the variable name with a [converter specification](https://docs.djangoproject.com/en/4.0/topics/http/urls/#path-converters) that defines the type of data (int, str, slug, uuid, path).
 
@@ -263,7 +263,7 @@ The pattern matching provided by `path()` is simple and useful for the (very com
 This method is used just like `path()` except that it allows you to specify a pattern using a [Regular expression](https://docs.python.org/3/library/re.html). For example, the previous path could have been written as shown below:
 
 ```python
-re_path(r'^book/(?P<pk>\d+)$', views.BookDetailView.as_view(), name='book-detail'),
+re_path(r'^book/(?P<pk>\d+)$', views.BookDetailView.as_view(), name='book_detail'),
 ```
 
 _Regular expressions_ are an incredibly powerful pattern mapping tool. They are, frankly, quite unintuitive and can be intimidating for beginners. Below is a very short primer!
