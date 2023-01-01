@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Object.isSealed
 
 {{JSRef}}
 
-The **`Object.isSealed()`** method determines if an object is
+The **`Object.isSealed()`** static method determines if an object is
 sealed.
 
 {{EmbedInteractiveExample("pages/js/object-issealed.html")}}
