@@ -80,7 +80,7 @@ Many content types can be preloaded. The possible `as` attribute values are:
 - `worker`: A JavaScript web worker or shared worker.
 - `video`: Video file, as typically used in {{htmlelement("video")}}.
 
-> **Note:** `video` preloading is included in the Preload spec, but is not currently implemented by browsers.
+> **Note:** `video` preloading is included in the Preload spec, but is only implemented in `firefox` and `opera` browsers, not available in `chrome` and `safari`.
 
 > **Note:** `font` and `fetch` preloading requires the `crossorigin` attribute to be set; see [CORS-enabled fetches](#cors-enabled_fetches) below.
 
