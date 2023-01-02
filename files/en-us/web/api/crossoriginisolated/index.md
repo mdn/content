@@ -21,7 +21,7 @@ indicates whether the website is in cross origin isolation state. That state mit
 
 > **Warning:** Isolated state prevents assigning value to {{DOMxRef("Document.domain")}}.
 
-Website is in cross-origin isolated state, when response header {{HTTPHeader("Cross-Origin-Opener-Policy")}} has value `same-origin` and {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header has value `require-corp` or `credentialless`.
+A website is in a cross-origin isolated state, when the response header {{HTTPHeader("Cross-Origin-Opener-Policy")}} has the value `same-origin` and the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header has the value `require-corp` or `credentialless`.
 
 ## Value
 
