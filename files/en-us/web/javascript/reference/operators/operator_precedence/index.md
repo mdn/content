@@ -278,7 +278,6 @@ Several notes about the table:
     </tr>
     <tr>
       <td>{{jsxref("Operators/new","new")}} (with argument list)</td>
-      <td>n/a</td>
       <td><code>new … ( … )</code></td>
     </tr>
     <tr>
