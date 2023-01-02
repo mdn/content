@@ -17,7 +17,7 @@ browser-compat: api.VirtualKeyboard.geometrychange_event
 The **`geometrychange`** event of the {{domxref("VirtualKeyboard")}}
 interface fires when the on-screen virtual keyboard is toggled between shown and hidden states.
 
-The `geometrychange` event is useful to detect when the virtual keyboard appears and disappears, so you can adjust the layout as appropriate. This is necessary when using the {{domxref("VirtualKeyboard_API", "Virtual Keyboard API")}} to disable the browser's default automatic resizing of the viewport when the virtual keyboard is shown and hidden.
+The `geometrychange` event is useful to detect when the virtual keyboard appears and disappears, so you can adjust the layout as appropriate. This is necessary when using the {{domxref("VirtualKeyboard_API", "Virtual Keyboard API", "", "nocode")}} to disable the browser's default automatic resizing of the viewport when the virtual keyboard is shown and hidden.
 
 ## Syntax
 

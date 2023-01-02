@@ -16,7 +16,7 @@ browser-compat: api.VirtualKeyboard
 
 The **`VirtualKeyboard`** interface of the [VirtualKeyboard API](/en-US/docs/Web/API/VirtualKeyboard_API) is useful on devices that have on-screen virtual keyboards, such as tablets, mobile phones, or other devices where a hardware keyboard may not be available.
 
-The `VirtualKeyboard` interface makes it possible to opt-out of the automatic way browsers handle on-screen virtual keyboards by reducing the height of the viewport to make room for the virtual keyboard. You can prevent the browser from changing the size of the viewport, detect the position and size of the virtual keyboard — adapting the layout of your web page as a follow-up — and programmatically show or hide the virtual keyboard.
+The `VirtualKeyboard` interface makes it possible to opt out of the automatic way browsers handle on-screen virtual keyboards by reducing the height of the viewport to make room for the virtual keyboard. You can prevent the browser from changing the size of the viewport, detect the position and size of the virtual keyboard — adapting the layout of your web page as a follow-up — and programmatically show or hide the virtual keyboard.
 
 You access the `VirtualKeyboard` interface by using {{domxref("navigator.virtualKeyboard")}}.
 
@@ -47,7 +47,7 @@ _The `VirtualKeyboard` interface doesn't inherit any methods_.
 
 ## Example
 
-The following example demonstrates how to opt-out of the automatic virtual keyboard behavior, and detect the geometry of the virtual keyboard in the web page:
+The following example demonstrates how to opt out of the automatic virtual keyboard behavior, and detect the geometry of the virtual keyboard in the web page:
 
 ```js
 if("virtualKeyboard" in navigator) {

@@ -36,7 +36,7 @@ Undefined.
 
 ## Example
 
-The code snippet below shows how to use the `virtualkeyboardpolicy` attribute to prevent the browser from showing the virtual keyboard on click of tap. The code also uses the `navigator.virtualKeyboard.show()` and `navigator.virtualKeyboard.hide()` methods to show and hide the virtual keyboard when a button is clicked:
+The code snippet below shows how to use the `virtualkeyboardpolicy` attribute to prevent the browser from showing the virtual keyboard on click or tap. The code also uses the `navigator.virtualKeyboard.show()` and `navigator.virtualKeyboard.hide()` methods to show and hide the virtual keyboard when a button is clicked:
 
 ```js
 <div contenteditable virtualkeyboardpolicy="manual" id="editor"></div>

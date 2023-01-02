@@ -24,7 +24,7 @@ The figure below illustrates the difference in viewport height and scroll positi
 
 More complex applications or specific devices such as multi-screen mobile phones may require more control of the layout when the virtual keyboard appears.
 
-The figure below shows what happens on a dual-screen device when the virtual keyboard appears on just one of the two screens. The viewport becomes smaller on both screens, to accommodate for the virtual keyboard, leaving wasted space on the screen where the virtual keyboard is not displayed.
+The figure below shows what happens on a dual-screen device when the virtual keyboard appears on just one of the two screens. The viewport becomes smaller on both screens to accommodate for the virtual keyboard, leaving wasted space on the screen where the virtual keyboard is not displayed.
 
 ![A dual-screen device, with its virtual keyboard displayed on one screen, showing that the webpage can only use the vertical space that remains after the keyboard was displayed, even if that leaves empty space on the other screen](dual-screen.png)
 
@@ -95,7 +95,7 @@ By default, elements using the {{htmlattrxref("contenteditable")}} attribute als
 
 Set the {{htmlattrxref("virtualkeyboardpolicy")}} attribute to `manual` to prevent the default handling of the virtual keyboard in the browser, and instead handle it yourself by using the {{domxref("VirtualKeyboard")}} interface's `show()` and `hide()` methods.
 
-The code snippet below shows how to use the `virtualkeyboardpolicy` attribute and use the `navigator.virtualKeyboard.show()` method to show the virtual keyboard on double-click instead:
+The code snippet below shows how to use the `virtualkeyboardpolicy` attribute and the `navigator.virtualKeyboard.show()` method to show the virtual keyboard on double-click instead:
 
 ```html
 <div contenteditable virtualkeyboardpolicy="manual" id="editor"></div>

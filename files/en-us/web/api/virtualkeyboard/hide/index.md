@@ -14,7 +14,7 @@ browser-compat: api.VirtualKeyboard.hide
 
 {{APIRef("VirtualKeyboard API")}}{{SeeCompatTable}}
 
-The **`hide()`** method of the {{domxref("VirtualKeyboard")}} interface programmatically hides the on-screen virtual keyboard. This is useful when the page needs to implement its own virtual keyboard logic by using the {{domxref("VirtualKeyboard_API", "VirtualKeyboard API")}}.
+The **`hide()`** method of the {{domxref("VirtualKeyboard")}} interface programmatically hides the on-screen virtual keyboard. This is useful when the page needs to implement its own virtual keyboard logic by using the {{domxref("VirtualKeyboard_API", "VirtualKeyboard API", "", "nocode")}}.
 
 This method only works if the currently-focused element is a form control — such as an {{htmlelement("input")}} or {{htmlelement("textarea")}} element — or if the focused element is {{htmlattrxref("contenteditable")}}.
 
@@ -36,7 +36,7 @@ Undefined.
 
 ## Example
 
-The code snippet below shows how to use the `virtualkeyboardpolicy` attribute to prevent the browser from showing the virtual keyboard on click of tap. The code also uses the `navigator.virtualKeyboard.show()` and `navigator.virtualKeyboard.hide()` methods to show and hide the virtual keyboard when a button is clicked:
+The code snippet below shows how to use the `virtualkeyboardpolicy` attribute to prevent the browser from showing the virtual keyboard on click or tap. The code also uses the `navigator.virtualKeyboard.show()` and `navigator.virtualKeyboard.hide()` methods to show and hide the virtual keyboard when a button is clicked:
 
 ```js
 <div contenteditable virtualkeyboardpolicy="manual" id="editor"></div>
