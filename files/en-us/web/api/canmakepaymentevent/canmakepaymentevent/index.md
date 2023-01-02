@@ -31,8 +31,12 @@ new CanMakePaymentEvent(type)
 A developer would not use this constructor manually. A new `CanMakePaymentEvent` object is constructed when a handler is invoked as a result of the {{domxref("ServiceWorkerGlobalScope.canmakepayment_event", "canmakepayment")}} event firing.
 
 ```js
-self.addEventListener("canmakepayment", function(e) {
-  e.respondWith(true);
+self.addEventListener("canmakepayment", e => {
+  e.respondWith(new Promise((resolve, reject) => {
+    someAppSpecificLogic()
+    .then(result => { resolve(result); })
+    .catch(error => { reject(error); });
+  }));
 });
 ```
 

@@ -31,7 +31,7 @@ A `PaymentCurrencyAmount` object. This object contains the following properties:
 ## Examples
 
 ```js
-self.addEventListener('paymentrequest', async e => {
+self.addEventListener('paymentrequest', e => {
   console.log(e.total);
 });
 ```

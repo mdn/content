@@ -40,7 +40,7 @@ This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and
 - {{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}}
   - : Occurs when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.
 - {{domxref("ServiceWorkerGlobalScope.canmakepayment_event", "canmakepayment")}}
-  - : Fired on a payment app when it has been successfully registered to signal that it is ready to handle payments.
+  - : Fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls {{domxref("PaymentRequest.PaymentRequest", "new PaymentRequest()")}}.
 - {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}} {{Experimental_Inline}}
   - : Occurs when an item is removed from the {{domxref("ContentIndex", "Content Index")}}.
 - {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}}

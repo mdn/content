@@ -13,7 +13,7 @@ browser-compat: api.PaymentManager.enableDelegations
 
 {{APIRef("Payment Handler API")}}{{SeeCompatTable}}
 
-The **`enableDelegations()`** method of the {{domxref("PaymentManager")}} interface delegates responsibility for providing various parts of the required payment information to the payment app rather than collecting it from within the merchant website.
+The **`enableDelegations()`** method of the {{domxref("PaymentManager")}} interface delegates responsibility for providing various parts of the required payment information to the payment app rather than collecting it from the browser (for example, via autofill).
 
 ## Syntax
 

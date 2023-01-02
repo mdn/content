@@ -14,7 +14,7 @@ browser-compat: api.ServiceWorkerGlobalScope.canmakepayment_event
 
 {{APIRef("Payment Handler API")}}{{SeeCompatTable}}
 
-The **`canmakepayment`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired on a payment app when it has been successfully registered to signal that it is ready to handle payments.
+The **`canmakepayment`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls {{domxref("PaymentRequest.PaymentRequest", "new PaymentRequest()")}}.
 
 ## Syntax
 
@@ -34,13 +34,19 @@ A {{domxref("CanMakePaymentEvent")}}. Inherits from {{domxref("ExtendableEvent")
 
 ## Examples
 
-When a payment app's service worker has been successfully registered, a `canmakepayment` event is fired on it. The service worker can then use the {{domxref("CanMakePaymentEvent.respondWith()")}} method to respond appropriately:
+The `canmakepayment` event is fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls {{domxref("PaymentRequest.PaymentRequest", "new PaymentRequest()")}}. The service worker can then use the {{domxref("CanMakePaymentEvent.respondWith()")}} method to respond appropriately:
 
 ```js
-self.addEventListener("canmakepayment", function(e) {
-  e.respondWith(true);
+self.addEventListener("canmakepayment", e => {
+  e.respondWith(new Promise((resolve, reject) => {
+    someAppSpecificLogic()
+    .then(result => { resolve(result); })
+    .catch(error => { reject(error); });
+  }));
 });
 ```
+
+`respondWith()` returns a {{jsxref("Promise")}} that resolves with a boolean value to signal that the service worker is ready to handle a payment request (`true`), or not (`false`).
 
 ## Specifications
 

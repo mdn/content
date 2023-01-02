@@ -13,7 +13,7 @@ browser-compat: api.CanMakePaymentEvent.respondWith
 
 {{APIRef("Payment Handler API")}}{{SeeCompatTable}}
 
-The **`respondWith()`** method of the {{domxref("CanMakePaymentEvent")}} interface enables the service worker to respond appropriately once registered to signal that it is ready to handle payments.
+The **`respondWith()`** method of the {{domxref("CanMakePaymentEvent")}} interface enables the service worker to respond appropriately to signal whether it is ready to handle payments.
 
 ## Syntax
 
@@ -24,7 +24,7 @@ respondWith(response)
 ### Parameters
 
 - `response`
-  - : A {{jsxref("Promise")}} that resolves with a boolean value. At the time of writing, the value is always `true`.
+  - : A {{jsxref("Promise")}} that resolves with a boolean value to signal that it is ready to handle a payment request (`true`), or not (`false`).
 
 ### Return value
 
@@ -32,11 +32,13 @@ None (`undefined`).
 
 ## Examples
 
-When a `CanMakePaymentEvent` is received, the service worker always returns `true`.
-
 ```js
-self.addEventListener("canmakepayment", function(e) {
-  e.respondWith(true);
+self.addEventListener("canmakepayment", e => {
+  e.respondWith(new Promise((resolve, reject) => {
+    someAppSpecificLogic()
+    .then(result => { resolve(result); })
+    .catch(error => { reject(error); });
+  }));
 });
 ```
 

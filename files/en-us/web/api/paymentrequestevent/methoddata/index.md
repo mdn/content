@@ -32,7 +32,7 @@ An array of `PaymentMethodData` objects. Each object contains the following prop
 ## Examples
 
 ```js
-self.addEventListener('paymentrequest', async e => {
+self.addEventListener('paymentrequest', e => {
   console.log(e.methodData);
 });
 ```

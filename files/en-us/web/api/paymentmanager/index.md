@@ -28,7 +28,7 @@ It is accessed via the {{domxref("ServiceWorkerRegistration.paymentManager")}} p
 ## Instance methods
 
 - {{domxref("PaymentManager.enableDelegations", "enableDelegations()")}} {{Experimental_Inline}}
-  - : Delegates responsibility for providing various parts of the required payment information to the payment app rather than collecting it from within the merchant website.
+  - : Delegates responsibility for providing various parts of the required payment information to the payment app rather than collecting it from the browser (for example, via autofill).
 
 ## Examples
 
