@@ -134,7 +134,7 @@ Note that variables may hold values that have different [data types](/en-US/docs
         This is a sequence of text known as a string. To signify that the value
         is a string, enclose it in single or double quote marks.
       </td>
-      <td><code>let myVariable = 'Bob';</code> or <code>let myVariable = "Bob";</code></td>
+      <td><code>let myVariable = 'Bob';</code> or <br/><code>let myVariable = "Bob";</code></td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Number")}}</th>
