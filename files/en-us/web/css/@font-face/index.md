@@ -126,7 +126,7 @@ It's common to use both `url()` and `local()` together, so that the user's insta
 
 If the `local()` function is provided, specifying a font name to look for on the user's device, and if the {{Glossary("user agent")}} finds a match, that local font is used. Otherwise, the font resource specified using the `url()` function is downloaded and used.
 
-Browsers attempt to load resources in their list declaration order, so usually `local()` should be written before `url()`. Also, `local()` is not just a helper for `url()`, they are equal and both are optional, a rule block containing only one or more `local()` without `url()` is possible.
+Browsers attempt to load resources in their list declaration order, so usually `local()` should be written before `url()`. Both functions are optional, so a rule block containing only one or more `local()` without `url()` is possible.
 Further, if a more specific `format()` or `tech()` is desired, these should be specified _before_ the bare version, which would otherwise be tried first.
 
 By allowing authors to provide their own fonts, `@font-face` makes it possible to design content without being limited to the so-called "web-safe" fonts (that is, the fonts which are so common that they're considered to be universally available). The ability to specify the name of a locally-installed font to look for and use makes it possible to customize the font beyond the basics while making it possible to do so without relying on an Internet connection.
