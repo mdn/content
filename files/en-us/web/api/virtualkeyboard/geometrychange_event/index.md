@@ -26,7 +26,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 ```js
 navigator.virtualKeyboard.addEventListener('geometrychange', (event) => { });
 
-navigator.virtualKeyboard.ongemoetrychange = (event) => { };
+navigator.virtualKeyboard.ongeometrychange = (event) => { };
 ```
 
 ## Event type
