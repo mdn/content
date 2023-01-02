@@ -28,10 +28,14 @@ A boolean value.
 ## Examples
 
 ```js
+const myWorker = new Worker('worker.js');
+
 if (crossOriginIsolated) {
-  // Post SharedArrayBuffer
+  const buffer = new SharedArrayBuffer(16);
+  myWorker.postMessage(buffer);
 } else {
-  // Do something else
+  const buffer = new ArrayBuffer(16);
+  myWorker.postMessage(buffer);
 }
 ```
 
