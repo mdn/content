@@ -1,5 +1,5 @@
 ---
-title: gzip compression
+title: GZip compression
 slug: Glossary/GZip_compression
 tags:
   - compression

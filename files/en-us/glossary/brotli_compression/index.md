@@ -1,6 +1,6 @@
 ---
 title: Brotli
-slug: Glossary/brotli_compression
+slug: Glossary/Brotli_compression
 tags:
   - Brotli
   - Reference
