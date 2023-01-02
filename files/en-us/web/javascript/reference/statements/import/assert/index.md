@@ -9,7 +9,7 @@ browser-compat: javascript.statements.import.import_assertions
 
 {{jsSidebar("Statements")}}
 
-The **import assertion** feature tell the host to do after-the-fact checks about a module's metadata, making the host optionally throw if the assertion fails. It's supported in [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations, [`export...from`](/en-US/docs/Web/JavaScript/Reference/Statements/export#re-exporting_aggregating) declarations, and dynamic [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import).
+The **import assertion** feature tells the host to do after-the-fact checks about a module's metadata, making the host optionally throw if the assertion fails. It's supported in [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations, [`export...from`](/en-US/docs/Web/JavaScript/Reference/Statements/export#re-exporting_aggregating) declarations, and dynamic [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import).
 
 ## Syntax
 
@@ -37,13 +37,13 @@ export { exports } from "module-name" assert { key: "data", key2: "data2", /* �
 ### Parameters
 
 - `keyN`
-  - : One assertion key. Can be an identifier or a string literal — similar to what you can use in an [object literal](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer), except for number literals and computed properties.
+  - : An assertion key. Can be an identifier or a string literal — similar to what you can use in an [object literal](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer), except for number literals and computed properties.
 - `"dataN"`
-  - : One assertion value. Must be a string literal.
+  - : An assertion value. Must be a string literal.
 
 ## Description
 
-Import assertions allow hosts to do additional checks about the module that has just been loaded. The primary motivation was to ensure that modules that are expected to be JSON are always parsed as JSON (in other words, to ensure that they are never executed with the privilege of JS code).
+Import assertions allow hosts to do additional checks about the module that has just been loaded. The primary use case is to ensure that modules that are expected to be JSON are always parsed as JSON (in other words, to ensure that they are never executed with the privilege of JS code).
 
 Consider the following statement:
 
@@ -78,7 +78,7 @@ Therefore, the code above should be re-written as:
 import data from "https://example.com/data.json" assert { type: "json" };
 ```
 
-This does NOT change how the module is interpreted. The host already knows to parse the module as JSON given the MIME type. It only uses the assertion to do _after-the-fact_ checking that the `data.json` module is, in fact, a JSON module. For example, if the response header changes to `Content-Type: text/javascript` instead, the program will fail:
+This does **not** change how the module is interpreted. The host already knows to parse the module as JSON given the MIME type. It only uses the assertion to do _after-the-fact_ checking that the `data.json` module is, in fact, a JSON module. For example, if the response header changes to `Content-Type: text/javascript` instead, the program will fail:
 
 ```
 Failed to load module script: Expected a JSON module script but the server responded with a MIME type of "text/javascript". Strict MIME type checking is enforced for module scripts per HTML spec.
@@ -90,10 +90,10 @@ The assertion syntax is designed to be extensible — although only `type` is kn
 
 ```js
 // Likely does nothing...
-import data from "https://example.com/module.js" assert { this: "looks good" };
+import data from "https://example.com/module.js" assert { version: "2.0.0" };
 ```
 
-This likely does nothing unless your host understands that key. The assertion:
+This likely does nothing unless your host understands what do to with the `version` key. The assertion:
 
 - Does not affect the module's behavior. What the importer has asserted about the module is not available to the module being imported. (For example, it's not part of [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta).) Only the host can read and validate the assertion.
 - Does not affect how the host interprets the module. For example, the host will not decide to parse a module as JSON if it has already decided that the module contains JavaScript — via MIME type in browsers or extensions in Node.js — even when there's a `type: "json"` assertion. It would simply fail the import.
