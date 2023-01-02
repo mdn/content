@@ -145,5 +145,5 @@ Note that all event interfaces have names which end in "Event".
 ## See also
 
 - Types of events available: [Event reference](/en-US/docs/Web/Events)
-- [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets) (`target` vs `currentTarget` vs `relatedTarget` vs `originalTarget`)
+- [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets) (`target` vs. `currentTarget` vs. `relatedTarget` vs. `originalTarget`)
 - [Creating and triggering custom events](/en-US/docs/Web/Events/Creating_and_triggering_events)

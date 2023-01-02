@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Promise.race
 
 {{JSRef}}
 
-The **`Promise.race()`** method takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise settles with the eventual state of the first promise that settles.
+The **`Promise.race()`** static method takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise settles with the eventual state of the first promise that settles.
 
 {{EmbedInteractiveExample("pages/js/promise-race.html", "taller")}}
 

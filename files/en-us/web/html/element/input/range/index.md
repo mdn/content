@@ -53,9 +53,9 @@ In addition to the attributes shared by all {{HTMLElement("input")}} elements, r
 
 ### list
 
-The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
+The value of the `list` attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
 
-See the [range control with hash marks](#a_range_control_with_hash_marks) below for an example of how the options on a range are denoted in supported browsers.
+See the [adding tick marks](#adding_tick_marks) below for an example of how the options on a range are denoted in supported browsers.
 
 ### max
 
@@ -69,13 +69,15 @@ The lowest value in the range of permitted values. If the {{htmlattrxref("value"
 
 This value must be less than or equal to the value of the [`max`](/en-US/docs/Web/HTML/Attributes/max) attribute. See the HTML [`min`](/en-US/docs/Web/HTML/Attributes/min) attribute.
 
+> **Note:** If the `min` and `max` values are equal or the `max` value is lower than the `min` value the user will not be able to interact with the range.
+
 ### step
 
 The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
 
-A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
+A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)). See the [Setting step to "any"](#setting_step_to_any) example for how this works in supported browsers.
 
-> **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
+> **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring to round up numbers when there are two equally close options.
 
 The default stepping value for `range` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer; for example, if you set `min` to -10 and `value` to 1.5, then a `step` of 1 will allow only values such as 1.5, 2.5, 3.5,… in the positive direction and -0.5, -1.5, -2.5,… in the negative direction. See the [HTML `step` attribute](/en-US/docs/Web/HTML/Attributes/step).
 
@@ -85,7 +87,7 @@ The default stepping value for `range` inputs is 1, allowing only integers to be
 
 Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the `orient` attribute defines the orientation of the range slider. Values include `horizontal`, meaning the range is rendered horizontally, and `vertical`, where the range is rendered vertically.
 
-> **Note:** The following input attributes do not apply to the input range: `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, `src`, and `width`. Any of these attributes, if included, will be ignored.
+> **Note:** The following input attributes do not apply to the input range: `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, and `src`. Any of these attributes, if included, will be ignored.
 
 ## Examples
 
@@ -114,12 +116,12 @@ For example, to ask the user for a value between -10 and 10, you can use:
 
 ### Setting the value's granularity
 
-By default, the granularity, is 1, meaning that the value is always an integer. You can change the {{htmlattrxref("step")}} attribute to control the granularity. For example, If you need a value between 5 and 10, accurate to two decimal places, you should set the value of `step` to 0.01:
+By default, the granularity, is 1, meaning that the value is always an integer. You can change the {{htmlattrxref("step")}} attribute to control the granularity. For example, If you need a value to be halfway between 5 and 10 you should set the value of `step` to 0.5:
 
 #### Setting the step attribute
 
 ```html
-<input type="range" min="5" max="10" step="0.01" />
+<input type="range" min="5" max="10" step="0.5" />
 ```
 
 {{EmbedLiveSample("Setting_the_step_attribute", 600, 40)}}
@@ -128,25 +130,39 @@ By default, the granularity, is 1, meaning that the value is always an integer. 
 
 If you want to accept any value regardless of how many decimal places it extends to, you can specify a value of `any` for the {{htmlattrxref("step", "input")}} attribute:
 
+##### HTML
+
 ```html
-<input type="range" min="0" max="3.14" step="any" />
+<input id="pi_input" type="range" min="0" max="3.14" step="any" />
+<p>Value: <output id="value"></output></p>
 ```
 
-{{EmbedLiveSample("Setting_step_to_any", 600, 40)}}
+##### JavaScript
 
-This example lets the user select any value between 0 and π without any restriction on the fractional part of the value selected.
+```js
+const value = document.querySelector("#value")
+const input = document.querySelector("#pi_input")
+value.textContent = input.value
+input.addEventListener("input", (event) => {
+  value.textContent = event.target.value
+})
+```
 
-### Adding hash marks
+{{EmbedLiveSample("Setting_step_to_any", 600, 75)}}
 
-To add hash marks to a range control, include the `list` attribute, giving it the `id` of a {{HTMLElement("datalist")}} element which defines a series of hash marks on the control. Each point is represented using an {{HTMLElement("option")}} element with its {{htmlattrxref("value", "option")}} set to the range's value at which a mark should be drawn.
+This example lets the user select any value between 0 and π without any restriction on the fractional part of the value selected. JavaScript is used to show how the value changes as the user interacts with the range.
+
+### Adding tick marks
+
+To add tick marks to a range control, include the `list` attribute, giving it the `id` of a {{HTMLElement("datalist")}} element which defines a series of tick marks on the control. Each point is represented using an {{HTMLElement("option")}} element with its {{htmlattrxref("value", "option")}} set to the range's value at which a mark should be drawn.
 
 #### HTML
 
 ```html
 <label for="temp">Choose a comfortable temperature:</label><br />
-<input type="range" id="temp" name="temp" list="tickmarks" />
+<input type="range" id="temp" name="temp" list="markers" />
 
-<datalist id="tickmarks">
+<datalist id="markers">
   <option value="0"></option>
   <option value="25"></option>
   <option value="50"></option>
@@ -157,19 +173,48 @@ To add hash marks to a range control, include the `list` attribute, giving it th
 
 #### Result
 
-{{EmbedLiveSample("Adding hash marks")}}
+{{EmbedLiveSample("Adding tick marks", 600, 50)}}
+
+### Using the same datalist for multiple range controls
+
+To help you from repeating code you can reuse that same {{HTMLElement("datalist")}} for multiple `<input type="range">` elements, and other {{HTMLElement("input")}} types.
+
+> **Note:** If you also want to [show the labels](#adding_labels) as in the example below then you would need a `datalist` for each range input.
+
+#### HTML
+
+```html
+<label for="temp">Temperature for room 1:</label><br />
+<input type="range" id="temp" name="temp" list="values" /><br />
+<label for="temp">Temperature for room 2:</label><br />
+<input type="range" id="temp" name="temp" list="values" /><br />
+<label for="temp">Temperature for room 3:</label><br />
+<input type="range" id="temp" name="temp" list="values" />
+
+<datalist id="values">
+  <option value="0" label="0"></option>
+  <option value="25" label="25"></option>
+  <option value="50" label="50"></option>
+  <option value="75" label="75"></option>
+  <option value="100" label="100"></option>
+</datalist>
+```
+
+#### Result
+
+{{EmbedLiveSample("Using the same datalist for multiple range controls")}}
 
 ### Adding labels
 
-You can label hash marks by giving the `<option>` elements `label` attributes. However, you must use CSS to show the labels and to position them correctly. Here's one way you could do this.
+You can label tick marks by giving the `<option>` elements `label` attributes. However, the label content will not be displayed by default. You can use CSS to show the labels and to position them correctly. Here's one way you could do this.
 
 #### HTML
 
 ```html
 <label for="temp">Choose a comfortable temperature:</label><br />
-<input type="range" id="temp" name="temp" list="tickmarks" />
+<input type="range" id="temp" name="temp" list="values" />
 
-<datalist id="tickmarks">
+<datalist id="values">
   <option value="0" label="very cold!"></option>
   <option value="25" label="cool"></option>
   <option value="50" label="medium"></option>
@@ -217,7 +262,7 @@ Consider this range control:
 <input type="range" id="volume" min="0" max="11" value="7" step="1" />
 ```
 
-{{EmbedLiveSample("Horizontal_range_control", 200, 200)}}
+{{EmbedLiveSample("Horizontal_range_control", 200, 40)}}
 
 This control is horizontal (at least on most if not all major browsers; others might vary).
 
@@ -271,7 +316,7 @@ input[type="range"] {
 }
 ```
 
-{{EmbedLiveSample("writing-mode_bt-lr", 200, 200)}}
+{{EmbedLiveSample("writing-mode_bt-lr", 200, 40)}}
 
 #### Putting it all together
 
@@ -283,10 +328,10 @@ We keep the `orient` attribute with a value of `vertical` for Firefox:
 <input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
 ```
 
-We target just the inputs with a type of range, changing the writing mode from the default to `bt-lr`, or bottom-to-top and left-to-right, for Edge and Internet Explorer, and add `appearance: slider-vertical` which is supported in Blink and Webkit browsers:
+We target just the `input`s with a `type` of `range` and `orient` set to `vertical`, changing the `writing-mode` from the default to `bt-lr`, or bottom-to-top and left-to-right, for pre-Blink versions of Edge, and add `appearance: slider-vertical` which is supported in Blink and Webkit browsers:
 
 ```css
-input[type="range"] {
+input[type="range"][orient="vertical"] {
   writing-mode: bt-lr;
   appearance: slider-vertical;
 }

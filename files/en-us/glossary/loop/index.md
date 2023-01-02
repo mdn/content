@@ -1,6 +1,6 @@
 ---
 title: Loop
-slug: Glossary/loop
+slug: Glossary/Loop
 tags:
   - CodingScripting
   - control flow
