@@ -108,7 +108,7 @@ knotBSphere.intersectsSphere(otherSphere);
 Unfortunately this test is not implemented in Three.js, but we can patch Sphere to implement a [Sphere vs. AABB intersection](/en-US/docs/Games/Techniques/3D_collision_detection) algorithm.
 
 ```js
-// expand THREE.js Sphere to support collision tests vs Box3
+// expand THREE.js Sphere to support collision tests vs. Box3
 // we are creating a vector outside the method scope to
 // avoid spawning a new instance of Vector3 on every check
 
@@ -145,7 +145,7 @@ The advantages of using this helper are:
 - It **takes into account the child meshes** when computing the size of the bounding box, so the original mesh and all its children are wrapped.
 - We can easily debug collisions by **rendering** the `Mesh`es that `BoxHelper` creates. By default they are created with a `LineBasicMaterial` material (a three.js material for drawing wireframe-style geometries).
 
-The main disadvantage is that it **only creates box bounding volumes**, so if you need spheres vs AABB tests you need to create your own `Sphere` objects.
+The main disadvantage is that it **only creates box bounding volumes**, so if you need spheres vs. AABB tests you need to create your own `Sphere` objects.
 
 To use it, we need to create a new `BoxHelper` instance and supply the geometry and — optionally — a color that will be used for the wireframe material. We also need to add the newly created object to the `three.js` scene in order to render it. We assume our scene variable to be called `scene`.
 
@@ -178,9 +178,9 @@ box3.setFromObject(knotBoxHelper);
 Performing **collision tests** is done in the same way as explained in the above section — we use our Box3 object in the same way as described above.
 
 ```js
-// box vs box
+// box vs. box
 box3.intersectsBox(otherBox3);
-// box vs point
+// box vs. point
 box3.containsPoint(point.position);
 ```
 
