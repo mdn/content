@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Intl.getCanonicalLocales
 
 {{JSRef}}
 
-The **`Intl.getCanonicalLocales()`** method returns an array
+The **`Intl.getCanonicalLocales()`** static method returns an array
 containing the canonical locale names. Duplicates will be omitted and elements will be
 validated as structurally valid language tags.
 

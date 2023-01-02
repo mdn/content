@@ -125,7 +125,7 @@ p {
 
 {{Compat}}
 
-## See Also
+## See also
 
 - [`font-variant`](/en-US/docs/Web/CSS/font-variant)
 - [`font-variant-caps`](/en-US/docs/Web/CSS/font-variant-caps)

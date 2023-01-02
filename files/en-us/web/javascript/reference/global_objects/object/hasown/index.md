@@ -23,12 +23,12 @@ If the property is inherited, or does not exist, the method returns `false`.
 ## Syntax
 
 ```js-nolint
-hasOwn(instance, prop)
+Object.hasOwn(obj, prop)
 ```
 
 ### Parameters
 
-- `instance`
+- `obj`
   - : The JavaScript object instance to test.
 - `prop`
   - : The {{jsxref("String")}} name or [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) of the property to test.

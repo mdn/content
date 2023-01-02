@@ -56,6 +56,8 @@ This article provides information about the changes in Firefox 109 that will aff
 
 ## Changes for add-on developers
 
+- Manifest V3 is now supported with the ability to sign and release Manifest V3 extensions on AMO. See the [Manifest v3 signing available November 21 on Firefox Nightly](https://blog.mozilla.org/addons/2022/11/17/manifest-v3-signing-available-november-21-on-firefox-nightly/) blog post for more information.
+
 ### Removals
 
 ### Other

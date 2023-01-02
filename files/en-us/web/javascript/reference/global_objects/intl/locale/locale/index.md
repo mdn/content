@@ -36,8 +36,7 @@ new Intl.Locale(tag, options)
 - `tag`
   - : The Unicode locale identifier string.
 - `options`
-  - : An object that contains configuration for the Locale. Keys are Unicode locale tags,
-    values are valid Unicode tag values.
+  - : An object that contains configuration for the Locale. Keys are Unicode locale tags, values are valid Unicode tag values. Option values here take priority over extension keys in the locale identifier.
 
 ## Examples
 
@@ -60,7 +59,7 @@ into the constructor:
 
 ```js
 const locale = new Intl.Locale("en-US", { hourCycle: "h12" });
-console.log(locale.hourCycle); // Prints "h12"
+console.log(locale.hourCycle); // "h12"
 ```
 
 ## Specifications

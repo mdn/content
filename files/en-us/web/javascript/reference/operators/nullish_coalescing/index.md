@@ -36,7 +36,7 @@ It is not possible to combine both the AND (`&&`) and OR operators (`||`) direct
 
 ```js example-bad
 null || undefined ?? "foo"; // raises a SyntaxError
-true || undefined ?? "foo"; // raises a SyntaxError
+true && undefined ?? "foo"; // raises a SyntaxError
 ```
 
 Instead, provide parenthesis to explicitly indicate precedence:

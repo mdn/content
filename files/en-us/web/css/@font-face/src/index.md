@@ -44,6 +44,8 @@ src: local(font), url(path/to/font.svg) format("svg"), url(path/to/font.woff)
 - `<font-face-name>`
   - : Specifies the full name or postscript name of a locally-installed font face using the `local()` function, which uniquely identifies a single font face within a larger family. The name can optionally be enclosed in quotes.
 
+> **Note:** The {{domxref("Local Font Access API", "Local Font Access API", "", "nocode")}} can be used to access the user's locally installed font data — this includes higher-level details such as names, styles, and families, as well as the raw bytes of the underlying font files.
+
 ## Description
 
 The value of this descriptor is a prioritized, comma-separated list of external references or locally-installed font face names. When a font is needed the {{glossary("user agent")}} iterates over the set of references listed using the first one it can successfully activate. Fonts containing invalid data or local font faces that are not found are ignored and the user agent loads the next font in the list.

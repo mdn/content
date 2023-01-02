@@ -41,7 +41,7 @@ while (condition)
     the `do...while`.
 
     Note: Use the {{jsxref("Statements/break", "break")}} statement to stop a loop before `condition` evaluates
-    to true.
+    to false.
 
 ## Examples
 

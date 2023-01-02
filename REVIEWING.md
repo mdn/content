@@ -25,7 +25,7 @@ out-of-date. This is being handled as follows:
    review owners", meaning that when a pull request comes in related to a
    particular topic area of the site (e.g. the CSS reference, or the learning
    area), it will be assigned to that area's topic review owner(s) and they
-   will receive an e-mail notification asking for a review. This is being
+   will receive an email notification asking for a review. This is being
    handled using a [CODEOWNERS](https://github.com/mdn/content/blob/main/.github/CODEOWNERS)
    file, in which particular content directories are assigned to the topics
    review owner's GitHub usernames.
@@ -100,11 +100,11 @@ inappropriate, than it is to follow every guideline to the letter.
    assigned already. In such cases, the PR should be linked to an issue
    that explains all these details. If you are not sure, ask the submitter
    if they need a review of the content, and where the rationale behind the
-   change is explained. Ping our team on [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) to ask for help if you are still not sure, or if you think the
-   content is suspicious.
+   change is explained. Ping our team on [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) to ask for help if you are still not sure, or
+   if you think the content is suspicious.
 
-Note: You may encounter merge conflicts as you review pull requests, if a
-another pull request that touches some of the same files got merged before
+Note: You may encounter merge conflicts as you review pull requests, if another
+pull request that touches some of the same files got merged before
 the one you are reviewing.
 [Addressing merge conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts)
 is a useful resource to help you. Feel free also to ask your team(s) for help

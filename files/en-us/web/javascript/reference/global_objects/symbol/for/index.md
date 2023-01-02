@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Symbol.for
 
 {{JSRef}}
 
-The **`Symbol.for(key)`** method searches for existing symbols
+The **`Symbol.for()`** static method searches for existing symbols
 in a runtime-wide symbol registry with the given key and returns it if found. Otherwise
 a new symbol gets created in the global symbol registry with this key.
 

@@ -37,6 +37,10 @@ rgba(255 255 255 / 50%); /* CSS Colors 4 space-separated values by percentage */
 - Functional notation: `rgba(R G B[ / A])`
   - : CSS Colors Level 4 adds support for space-separated values in the functional notation.
 
+### Formal syntax
+
+{{csssyntax("rgb")}}
+
 ## Specifications
 
 {{Specifications}}

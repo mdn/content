@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Reflect.has
 
 {{JSRef}}
 
-The static **`Reflect.has()`** method works like the [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in)
+The **`Reflect.has()`** static method works like the [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in)
 as a function.
 
 {{EmbedInteractiveExample("pages/js/reflect-has.html")}}

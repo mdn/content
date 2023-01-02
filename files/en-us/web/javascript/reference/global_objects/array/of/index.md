@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Array.of
 
 {{JSRef}}
 
-The **`Array.of()`** method creates a new `Array`
+The **`Array.of()`** static method creates a new `Array`
 instance from a variable number of arguments, regardless of number or type of the
 arguments.
 

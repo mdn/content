@@ -39,6 +39,10 @@ rgb(255 255 255 / .5); /* white with 50% opacity, using CSS Colors 4 space-separ
 - Functional notation: `rgb(R G B[ / A])`
   - : CSS Colors Level 4 adds support for space-separated values in the functional notation.
 
+### Formal syntax
+
+{{csssyntax}}
+
 ## Browser compatibility
 
 {{Compat}}
