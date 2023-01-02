@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Object.isFrozen
 
 {{JSRef}}
 
-The **`Object.isFrozen()`** determines if an object is
+The **`Object.isFrozen()`** static method determines if an object is
 {{jsxref("Object.freeze()", "frozen", "", 1)}}.
 
 {{EmbedInteractiveExample("pages/js/object-isfrozen.html")}}

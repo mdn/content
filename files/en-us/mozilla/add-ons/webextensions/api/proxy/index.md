@@ -21,6 +21,8 @@ Google Chrome provides [an extension API also called "proxy"](https://developer.
 
 To use this API you need to have the "proxy" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). Also, where you want to intercept requests, you also need [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the URLs of intercepted requests.
 
+> **Note:** The "proxy" permission requires `"strict_min_version"` to be set to "91.1.0" or above. To use this permission, add or update the [`"browser_specific_settings"`](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in your [manifest.json](/docs/Mozilla/Add-ons/WebExtensions/manifest.json) to specify a minimum Firefox version.
+
 > **Note:** The browser can make speculative connections, where it determines that a request to a URI may be coming soon. This type of connection does not provide valid tab information, so request details such as `tabId`, `frameId`, `parentFrameId`, etc. are inaccurate. These connections have a {{WebExtAPIRef("webRequest.ResourceType")}} of `speculative`.
 
 ## Types

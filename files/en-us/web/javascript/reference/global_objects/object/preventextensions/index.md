@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Object.preventExtensions
 
 {{JSRef}}
 
-The **`Object.preventExtensions()`** method prevents new
+The **`Object.preventExtensions()`** static method prevents new
 properties from ever being added to an object (i.e. prevents future extensions to the
 object). It also prevents the object's prototype from being re-assigned.
 

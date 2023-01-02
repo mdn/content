@@ -89,11 +89,13 @@ If you want to look at all the special characters that can be used in regular ex
   <tbody>
     <tr>
       <td>
-        <code>\</code>, <code>.</code>, <code>\cX</code>, <code>\d</code>,
-        <code>\D</code>, <code>\f</code>, <code>\n</code>, <code>\r</code>,
-        <code>\s</code>, <code>\S</code>, <code>\t</code>, <code>\v</code>,
-        <code>\w</code>, <code>\W</code>, <code>\0</code>, <code>\xhh</code>,
-        <code>\uhhhh</code>, <code>\uhhhhh</code>, <code>[\b]</code>
+        <code>[xyz]</code>, <code>[^xyz]</code>, <code>.</code>,
+        <code>\d</code>, <code>\D</code>, <code>\w</code>, <code>\W</code>,
+        <code>\s</code>, <code>\S</code>, <code>\t</code>, <code>\r</code>,
+        <code>\n</code>, <code>\v</code>, <code>\f</code>, <code>[\b]</code>,
+        <code>\0</code>, <code>\c<em>X</em></code>, <code>\x<em>hh</em></code>,
+        <code>\u<em>hhhh</em></code>, <code>\u<em>{hhhh}</em></code>,
+        <code><em>x</em>|<em>y</em></code>
       </td>
       <td>
         <p>
@@ -106,9 +108,9 @@ If you want to look at all the special characters that can be used in regular ex
     </tr>
     <tr>
       <td>
-        <code>^</code>, <code>$</code>, <code>x(?=y)</code>,
-        <code>x(?!y)</code>, <code>(?&#x3C;=y)x</code>,
-        <code>(?&#x3C;!y)x</code>, <code>\b</code>, <code>\B</code>
+        <code>^</code>, <code>$</code>, <code>\b</code>, <code>\B</code>,
+        <code>x(?=y)</code>, <code>x(?!y)</code>, <code>(?&#x3C;=y)x</code>,
+        <code>(?&#x3C;!y)x</code>
       </td>
       <td>
         <p>
@@ -121,9 +123,8 @@ If you want to look at all the special characters that can be used in regular ex
     </tr>
     <tr>
       <td>
-        <code>(x)</code>, <code>(?:x)</code>, <code>(?&#x3C;Name>x)</code>,
-        <code>x|y</code>, <code>[xyz]</code>, <code>[^xyz]</code>,
-        <code>\<em>Number</em></code>
+        <code>(<em>x</em>)</code>, <code>(?&#x3C;Name>x)</code>, <code>(?:<em>x</em>)</code>,
+        <code>\<em>n</em></code>, <code>\k&#x3C;Name></code>
       </td>
       <td>
         <p>
@@ -136,9 +137,9 @@ If you want to look at all the special characters that can be used in regular ex
     </tr>
     <tr>
       <td>
-        <code>*</code>, <code>+</code>, <code>?</code>,
-        <code>x{<em>n</em>}</code>, <code>x{<em>n</em>,}</code>,
-        <code>x{<em>n</em>,<em>m</em>}</code>
+        <code><em>x</em>*</code>, <code><em>x</em>+</code>, <code><em>x</em>?</code>,
+        <code><em>x</em>{<em>n</em>}</code>, <code><em>x</em>{<em>n</em>,}</code>,
+        <code><em>x</em>{<em>n</em>,<em>m</em>}</code>
       </td>
       <td>
         <p>

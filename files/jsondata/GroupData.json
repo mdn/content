@@ -1523,6 +1523,13 @@
       "properties": [],
       "events": []
     },
+    "VirtualKeyboard API": {
+      "overview": ["VirtualKeyboard API"],
+      "interfaces": ["VirtualKeyboard"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Visual Viewport": {
       "overview": ["Visual Viewport API"],
       "interfaces": ["VisualViewport"],
