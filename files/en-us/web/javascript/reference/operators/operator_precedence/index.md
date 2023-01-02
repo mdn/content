@@ -256,15 +256,24 @@ Several notes about the table:
         {{jsxref("Operators/Property_Accessors", "Member Access", "#Dot_notation",
                 1)}}
       </td>
-      <td>left-to-right</td>
+      <td rowspan="2">left-to-right</td>
       <td><code>… . …</code></td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining"
+          >Optional chaining</a
+        >
+      </td>
+      <td><code>… ?. …</code></td>
     </tr>
     <tr>
       <td>
         {{jsxref("Operators/Property_Accessors", "Computed Member
                 Access","#Bracket_notation", 1)}}
       </td>
-      <td>left-to-right</td>
+      <td rowspan="3">n/a</td>
       <td><code>… [ … ]</code></td>
     </tr>
     <tr>
@@ -276,27 +285,15 @@ Several notes about the table:
       <td>
         <a href="/en-US/docs/Web/JavaScript/Guide/Functions">Function Call</a>
       </td>
-      <td>left-to-right</td>
       <td>
         <code>… ( … )</code>
       </td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining"
-          >Optional chaining</a
-        >
-      </td>
-      <td>left-to-right</td>
-      <td><code>… ?. …</code></td>
     </tr>
     <tr>
       <td>16</td>
       <td>
         {{jsxref("Operators/new","new")}} (without argument list)
       </td>
-      <td>n/a</td>
       <td><code>new …</code></td>
     </tr>
     <tr>
@@ -586,7 +583,7 @@ Several notes about the table:
           >Logical OR (||)</a
         >
       </td>
-      <td>left-to-right</td>
+      <td rowspan="2">left-to-right</td>
       <td><code>… || …</code></td>
     </tr>
     <tr>
@@ -596,7 +593,6 @@ Several notes about the table:
           >Nullish coalescing operator (??)</a
         >
       </td>
-      <td>left-to-right</td>
       <td><code>… ?? …</code></td>
     </tr>
     <tr>
