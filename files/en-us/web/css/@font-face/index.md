@@ -62,10 +62,10 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
   - : Specifies font resources.
 
     A comma-separated list representing the resource fallback order, where each resource is specified using `url()` or `local()`.
-    The first resource in the list that loads successfully will be used, and subsequent items dropped/ignored.
+    The first resource in the list that loads successfully will be used and subsequent items are ignored.
     If multiple `src` descriptors are set, only the last declared rule that is able to load a resource is applied.
 
-    > **Note:** Items that the browser considers invalid are dropped.
+    > **Note:** Items that the browser considers invalid are ignored.
     > Some browsers will ignore the whole descriptor if any item is invalid, even if only one item is invalid.
     > This may affect design of your fallbacks.
 
