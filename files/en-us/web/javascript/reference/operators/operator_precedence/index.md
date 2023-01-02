@@ -256,30 +256,8 @@ Several notes about the table:
         {{jsxref("Operators/Property_Accessors", "Member Access", "#Dot_notation",
                 1)}}
       </td>
-      <td>left-to-right</td>
+      <td rowspan="2">left-to-right</td>
       <td><code>… . …</code></td>
-    </tr>
-    <tr>
-      <td>
-        {{jsxref("Operators/Property_Accessors", "Computed Member
-                Access","#Bracket_notation", 1)}}
-      </td>
-      <td>n/a</td>
-      <td><code>… [ … ]</code></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Operators/new","new")}} (with argument list)</td>
-      <td>n/a</td>
-      <td><code>new … ( … )</code></td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/en-US/docs/Web/JavaScript/Guide/Functions">Function Call</a>
-      </td>
-      <td>n/a</td>
-      <td>
-        <code>… ( … )</code>
-      </td>
     </tr>
     <tr>
       <td>
@@ -288,8 +266,27 @@ Several notes about the table:
           >Optional chaining</a
         >
       </td>
-      <td>left-to-right</td>
       <td><code>… ?. …</code></td>
+    </tr>
+    <tr>
+      <td>
+        {{jsxref("Operators/Property_Accessors", "Computed Member
+                Access","#Bracket_notation", 1)}}
+      </td>
+      <td rowspan="3">n/a</td>
+      <td><code>… [ … ]</code></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Operators/new","new")}} (with argument list)</td>
+      <td><code>new … ( … )</code></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/en-US/docs/Web/JavaScript/Guide/Functions">Function Call</a>
+      </td>
+      <td>
+        <code>… ( … )</code>
+      </td>
     </tr>
     <tr>
       <td>16</td>
@@ -586,7 +583,7 @@ Several notes about the table:
           >Logical OR (||)</a
         >
       </td>
-      <td>left-to-right</td>
+      <td rowspan="2">left-to-right</td>
       <td><code>… || …</code></td>
     </tr>
     <tr>
@@ -596,7 +593,6 @@ Several notes about the table:
           >Nullish coalescing operator (??)</a
         >
       </td>
-      <td>left-to-right</td>
       <td><code>… ?? …</code></td>
     </tr>
     <tr>
@@ -672,11 +668,12 @@ Several notes about the table:
           >Arrow (=>)</a
         >
       </td>
-      <td rowspan="4">n/a</td>
+      <td>right-to-left</td>
       <td><code>… => …</code></td>
     </tr>
     <tr>
       <td>{{jsxref("Operators/yield", "yield")}}</td>
+      <td rowspan="3">n/a</td>
       <td><code>yield …</code></td>
     </tr>
     <tr>
