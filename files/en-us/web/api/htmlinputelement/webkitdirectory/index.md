@@ -18,7 +18,7 @@ browser-compat: api.HTMLInputElement.webkitdirectory
 {{APIRef("File and Directory Entries API")}}
 
 The **`HTMLInputElement.webkitdirectory`** is a property
-that reflects the {{htmlattrxref("webkitdirectory", "input")}} HTML attribute
+that reflects the [`webkitdirectory`](/en-US/docs/Web/HTML/Element/input/file#webkitdirectory) HTML attribute
 and indicates that the {{HTMLElement("input")}} element should let the user select directories instead of files.
 When a directory is selected, the directory and its entire hierarchy of contents are included in the set of selected items.
 The selected file system entries can be obtained using the {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} property.

@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Reflect.get
 
 {{JSRef}}
 
-The static **`Reflect.get()`** method works like getting a
+The **`Reflect.get()`** static method works like getting a
 property from an object (`target[propertyKey]`) as a function.
 
 {{EmbedInteractiveExample("pages/js/reflect-get.html")}}

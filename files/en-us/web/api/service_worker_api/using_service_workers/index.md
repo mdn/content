@@ -152,10 +152,7 @@ Now you've got your site assets cached, you need to tell service workers to do s
 
    ```js
    self.addEventListener("fetch", (event) => {
-     event
-       .respondWith
-       // custom content goes here
-       ();
+     event.respondWith(/* custom content goes here */);
    });
    ```
 

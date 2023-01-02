@@ -34,7 +34,7 @@ endsWith(searchString, endPosition)
 
 ### Return value
 
-**`true`** if the given characters are found at the end of the string; otherwise, **`false`**.
+**`true`** if the given characters are found at the end of the string, including when `searchString` is an empty string; otherwise, **`false`**.
 
 ### Exceptions
 

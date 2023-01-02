@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Math.atan2
 
 {{JSRef}}
 
-The **`Math.atan2()`** function returns the angle in the plane (in radians) between the positive x-axis and the ray from (0, 0) to the point (x, y), for `Math.atan2(y, x)`.
+The **`Math.atan2()`** static method returns the angle in the plane (in radians) between the positive x-axis and the ray from (0, 0) to the point (x, y), for `Math.atan2(y, x)`.
 
 {{EmbedInteractiveExample("pages/js/math-atan2.html")}}
 

@@ -1,6 +1,6 @@
 ---
 title: Advance measure
-slug: Glossary/advance_measure
+slug: Glossary/Advance_measure
 tags:
   - Accessibility
 ---

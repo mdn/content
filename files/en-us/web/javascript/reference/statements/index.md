@@ -78,6 +78,8 @@ For an alphabetical listing see the sidebar on the left.
   - : An empty statement is used to provide no statement, although the JavaScript syntax would expect one.
 - {{jsxref("Statements/block", "Block", "", 1)}}
   - : A block statement is used to group zero or more statements. The block is delimited by a pair of curly brackets.
+- {{jsxref("Statements/Expression_statement", "Expression statement", "", 1)}}
+  - : An expression statement evaluates an expression and discards its result. It allows the expression to perform side effects, such as executing a function or updating a variable.
 - {{jsxref("Statements/debugger", "debugger")}}
   - : Invokes any available debugging functionality. If no debugging functionality is available, this statement has no effect.
 - {{jsxref("Statements/export", "export")}}
