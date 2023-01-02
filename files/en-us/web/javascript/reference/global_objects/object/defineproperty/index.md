@@ -73,7 +73,7 @@ An **accessor descriptor** also has the following optional keys:
 
 If a descriptor has none of `value`, `writable`, `get` and `set` keys, it is treated as a data descriptor. If a descriptor has both \[`value` or `writable`] and \[`get` or `set`] keys, an exception is thrown.
 
-Bear in mind that these attributes are not necessarily the descriptor's own properties. Inherited properties will be considered as well. In order to ensure these defaults are preserved, you might freeze existing objects in the descriptor object's prototype chain upfront, specify all options explicitly, or point to [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) with {{jsxref("Object.create", "Object.create(null)")}}.
+These attributes are not necessarily the descriptor's own properties. Inherited properties will be considered as well. In order to ensure these defaults are preserved, you might freeze existing objects in the descriptor object's prototype chain upfront, specify all options explicitly, or point to [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) with {{jsxref("Object.create", "Object.create(null)")}}.
 
 ```js
 const obj = {};
@@ -178,7 +178,7 @@ When modifying an existing property, the current property configuration determin
 
 #### Writable attribute
 
-When the `writable` property attribute is set to `false`, the property is said to be "non-writable". It cannot be reassigned. Trying to write into the non-writable property doesn't change it, and results in an error in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
+When the `writable` property attribute is `false`, the property is said to be "non-writable". It cannot be reassigned. Trying to write to a non-writable property doesn't change it and results in an error in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 
 ```js
 const o = {}; // Creates a new object
@@ -259,7 +259,7 @@ p[Symbol.for("f")]; // undefined
 
 #### Configurable attribute
 
-The `configurable` attribute controls at the same time whether the property can be deleted from the object and whether its attributes (other than `value` and `writable`) can be changed.
+The `configurable` attribute controls whether the property can be deleted from the object and whether its attributes (other than `value` and `writable`) can be changed.
 
 This example illustrates a non-configurable accessor property.
 
@@ -293,7 +293,7 @@ Object.defineProperty(o, "a", {
 // ('value' can be changed when 'configurable' is false, but only when the property is a writable data property)
 
 console.log(o.a); // 1
-delete o.a; // Nothing happens; throws in strict mode
+delete o.a; // Nothing happens; throws an error in strict mode
 console.log(o.a); // 1
 ```
 
