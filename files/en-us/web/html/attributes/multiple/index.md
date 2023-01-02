@@ -25,7 +25,7 @@ When `multiple` is set on the {{HTMLElement("input/email", "email")}} input type
 <input type="email" multiple name="emails" id="emails" />
 ```
 
-If and only if the `multiple` attribute is specified, the value can be a list of properly-formed comma-separated e-mail addresses. Any trailing and leading whitespace is removed from each address in the list.
+If and only if the `multiple` attribute is specified, the value can be a list of properly-formed comma-separated email addresses. Any trailing and leading whitespace is removed from each address in the list.
 
 When `multiple` is set on the {{HTMLElement("input/file", "file")}} input type, the user can select one or more files. The user can choose multiple files from the file picker in any way that their chosen platform allows (e.g. by holding down <kbd>Shift</kbd> or <kbd>Control</kbd>, and then clicking).
 
@@ -89,7 +89,7 @@ input:invalid {
 }
 ```
 
-If and only if the `multiple` attribute is specified, the value can be a list of properly-formed comma-separated e-mail addresses. Any trailing and leading whitespace is removed from each address in the list. If the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute is present, at least one email address is required.
+If and only if the `multiple` attribute is specified, the value can be a list of properly-formed comma-separated email addresses. Any trailing and leading whitespace is removed from each address in the list. If the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute is present, at least one email address is required.
 
 Some browsers support the appearance of the [`list`](/en-US/docs/Web/HTML/Attributes/list) of options from the associated {{htmlelement('datalist')}} for subsequent email addresses when `multiple` is present. Others do not.
 
@@ -191,4 +191,4 @@ There are a few ways to select multiple options in a `<select>` element with a `
 
 - {{htmlelement('input')}}
 - {{htmlelement('select')}}
-- [Allowing multiple e-mail addresses](/en-US/docs/Web/HTML/Element/input/email#allowing_multiple_e-mail_addresses)
+- [Allowing multiple email addresses](/en-US/docs/Web/HTML/Element/input/email#allowing_multiple_email_addresses)

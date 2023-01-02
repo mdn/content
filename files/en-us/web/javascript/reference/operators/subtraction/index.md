@@ -1,6 +1,7 @@
 ---
 title: Subtraction (-)
 slug: Web/JavaScript/Reference/Operators/Subtraction
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature

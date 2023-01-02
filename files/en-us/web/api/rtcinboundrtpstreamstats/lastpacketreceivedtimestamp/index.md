@@ -10,7 +10,7 @@ tags:
   - RTP
   - Reference
   - Time
-  - Time stamp
+  - Timestamp
   - WebRTC
   - WebRTC API
   - lastPacketReceivedTimestamp

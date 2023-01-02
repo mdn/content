@@ -18,7 +18,7 @@ tags:
   - WebGL API
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 Shader programs have access to three kinds of data storage, each of which has a specific use case. Each kind of variable is accessible by one or both types of shader program (depending on the data store type) and possibly by the site's JavaScript code, depending on the specific type of variable.
 
@@ -37,14 +37,14 @@ There are three kinds of "variable" or data storage available in GLSL, each of w
 ```js
 // init colors
 const vertexColors = [
-  vec4(0.0, 0.0, 0.0, 1.0),  // black
-  vec4(1.0, 0.0, 0.0, 1.0),  // red
-  vec4(1.0, 1.0, 0.0, 1.0),  // yellow
-  vec4(0.0, 1.0, 0.0, 1.0),  // green
-  vec4(0.0, 0.0, 0.0, 1.0),  // black
-  vec4(1.0, 0.0, 0.0, 1.0),  // red
-  vec4(1.0, 1.0, 0.0, 1.0),  // yellow
-  vec4(0.0, 1.0, 0.0, 1.0),  // green
+  vec4(0.0, 0.0, 0.0, 1.0), // black
+  vec4(1.0, 0.0, 0.0, 1.0), // red
+  vec4(1.0, 1.0, 0.0, 1.0), // yellow
+  vec4(0.0, 1.0, 0.0, 1.0), // green
+  vec4(0.0, 0.0, 0.0, 1.0), // black
+  vec4(1.0, 0.0, 0.0, 1.0), // red
+  vec4(1.0, 1.0, 0.0, 1.0), // yellow
+  vec4(0.0, 1.0, 0.0, 1.0), // green
 ];
 const cBuffer = gl.createBuffer();
 ```

@@ -1,6 +1,7 @@
 ---
 title: Bitwise XOR (^)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR
+page-type: javascript-operator
 tags:
   - Bitwise operator
   - JavaScript

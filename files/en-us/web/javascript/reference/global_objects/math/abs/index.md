@@ -1,6 +1,7 @@
 ---
 title: Math.abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
+page-type: javascript-static-method
 tags:
   - JavaScript
   - Math
@@ -11,7 +12,7 @@ browser-compat: javascript.builtins.Math.abs
 
 {{JSRef}}
 
-The **`Math.abs()`** function returns the absolute value of a number.
+The **`Math.abs()`** static method returns the absolute value of a number.
 
 {{EmbedInteractiveExample("pages/js/math-abs.html")}}
 

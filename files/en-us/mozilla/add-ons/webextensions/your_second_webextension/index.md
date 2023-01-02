@@ -27,7 +27,7 @@ To implement this, we will:
 
 You could visualize the overall structure of the extension like this:
 
-![](untitled-1.png)
+![The manifest.json file includes icons, browser actions, including popups, and web accessible resources. The choose beast javascript popup resource calls in the beastify script.](untitled-1.png)
 
 It's a simple extension, but shows many of the basic concepts of the WebExtensions API:
 
@@ -276,7 +276,7 @@ function listenForClicks() {
      * Get the active tab,
      * then call "beastify()" or "reset()" as appropriate.
      */
-    if (e.target.type = "reset") {
+    if (e.target.type === "reset") {
       browser.tabs
         .query({ active: true, currentWindow: true })
         .then(reset)

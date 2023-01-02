@@ -1,6 +1,7 @@
 ---
 title: isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/isFinite
+page-type: javascript-function
 tags:
   - Functions
   - JavaScript

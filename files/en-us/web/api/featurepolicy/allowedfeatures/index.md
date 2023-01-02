@@ -6,8 +6,8 @@ tags:
   - API
   - Directive
   - Feature Policy
-  - Feature-Policy
   - FeaturePolicy
+  - Permissions-Policy
   - Reference
   - Experimental
 browser-compat: api.FeaturePolicy.allowedFeatures
@@ -17,8 +17,8 @@ browser-compat: api.FeaturePolicy.allowedFeatures
 
 The **`allowedFeatures()`** method of
 the {{DOMxRef("FeaturePolicy")}} interface returns a list of directive names of all
-features allowed by the feature policy.enables introspection of individual directives
-of the Feature Policy it is run on. As such, `allowedFeatures()` method
+features allowed by the [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy). This enables introspection of individual directives
+of the Permissions Policy it is run on. As such, `allowedFeatures()` method
 returns a subset of directives returned by {{DOMxRef("FeaturePolicy.features",
     "features()")}}.
 
@@ -34,8 +34,8 @@ None.
 
 ### Return value
 
-An array of strings representing the Feature Policy directive names that are allowed by
-the Feature Policy this method is called on.
+An array of strings representing the Permissions Policy directive names that are allowed by
+the Permissions Policy this method is called on.
 
 ## Example
 
@@ -44,7 +44,7 @@ note that these features might be restricted by the Permissions API, if the user
 grant the corresponding permission yet.
 
 ```js
-// First, get the Feature Policy object
+// First, get the Permissions Policy object
 const featurePolicy = document.featurePolicy
 
 // Then query feature for specific

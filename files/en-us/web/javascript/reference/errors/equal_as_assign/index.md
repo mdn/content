@@ -1,6 +1,7 @@
 ---
 title: 'SyntaxError: test for equality (==) mistyped as assignment (=)?'
 slug: Web/JavaScript/Reference/Errors/Equal_as_assign
+page-type: javascript-error
 tags:
   - Error
   - Errors

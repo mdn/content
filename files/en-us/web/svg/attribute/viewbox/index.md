@@ -1,6 +1,7 @@
 ---
 title: viewBox
 slug: Web/SVG/Attribute/viewBox
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute
@@ -28,6 +29,7 @@ html,
 body,
 svg {
   height: 100%;
+  vertical-align: top;
 }
 svg:not(:root) {
   display: inline-block;

@@ -1,6 +1,7 @@
 ---
 title: method
 slug: Web/SVG/Attribute/method
+page-type: svg-attribute
 tags:
   - Experimental
   - NeedsExample

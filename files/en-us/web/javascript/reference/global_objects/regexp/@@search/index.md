@@ -1,6 +1,7 @@
 ---
 title: RegExp.prototype[@@search]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method

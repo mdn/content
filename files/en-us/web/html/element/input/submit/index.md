@@ -141,7 +141,7 @@ This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTM
 
 `<input type="submit">` buttons are used to submit forms. If you want to create a custom button and then customize the behavior using JavaScript, you need to use [`<input type="button">`](/en-US/docs/Web/HTML/Element/input/button), or better still, a {{htmlelement("button")}} element.
 
-If you choose to use `<button>` elements to create the buttons in your form, keep this in mind: if there's only one `<button>` inside the {{HTMLElement("form")}}, that button will be treated as the "submit" button. So you should be in the habit of expressly specifying which button is the submit button.
+If you choose to use `<button>` elements to create the buttons in your form, keep this in mind: If the `<button>` is inside a {{HTMLElement("form")}}, that button will be treated as the "submit" button. So you should be in the habit of expressly specifying which button is the submit button.
 
 ### A simple submit button
 

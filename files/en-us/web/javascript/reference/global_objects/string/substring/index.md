@@ -1,6 +1,7 @@
 ---
 title: String.prototype.substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method
@@ -12,7 +13,7 @@ browser-compat: javascript.builtins.String.substring
 
 {{JSRef}}
 
-The **`substring()`** method returns the part of the `string` between the start and end indexes, or to the end of the string.
+The **`substring()`** method returns the part of the `string` from the start index up to and excluding the end index, or to the end of the string if no end index is supplied.
 
 {{EmbedInteractiveExample("pages/js/string-substring.html")}}
 

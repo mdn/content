@@ -35,7 +35,7 @@ the creation of the `PublicKeyCredential` instance).
 
 An {{jsxref("ArrayBuffer")}} object which is an opaque identifier for the current user.
 This is not human-readable and does **not** contain any personally
-identifying information (e.g. username, e-mail, phone number, etc.)
+identifying information (e.g. username, email, phone number, etc.)
 
 ## Examples
 

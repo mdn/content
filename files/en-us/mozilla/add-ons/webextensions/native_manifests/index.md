@@ -183,7 +183,7 @@ The managed storage manifest contains a single JSON object with the following pr
           <code
             ><a
               href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings"
-              >applications</a
+              >browser_specific_settings</a
             ></code
           >
           key.
@@ -321,7 +321,7 @@ The PKCS #11 manifest is a file containing a JSON object with the following prop
             <code
               ><a
                 href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings"
-                >applications</a
+                >browser_specific_settings</a
               ></code
             >
             key in your extension's <code>manifest.json</code> file, so you can

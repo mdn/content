@@ -197,8 +197,6 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just before the `Element`.
 - {{DOMxRef("Element.closest()")}}
   - : Returns the {{DOMxRef("Element")}} which is the closest ancestor of the current element (or the current element itself) which matches the selectors given in parameter.
-- {{DOMxRef("Element.createShadowRoot()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Creates a [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) on the element, turning it into a shadow host. Returns a {{DOMxRef("ShadowRoot")}}.
 - {{DOMxRef("Element.computedStyleMap()")}} {{Experimental_Inline}}
   - : Returns a {{DOMxRef("StylePropertyMapReadOnly")}} interface which provides a read-only representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
 - {{DOMxRef("EventTarget.dispatchEvent()")}}
@@ -303,7 +301,9 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("Element/beforematch_event", "beforematch")}} {{Experimental_Inline}}
   - : Fires on an element that is in the [_hidden until found_](/en-US/docs/Web/HTML/Global_attributes/hidden) state, when the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
 - {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
-  - : Fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the current open dialog. For example, the browser might fire this event when the user presses the <kbd>Esc</kbd> key or clicks a "Close dialog" button which is part of the browser's UI.
+  - : Fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the currently open modal dialog. The browser fires this event when the user presses the <kbd>Esc</kbd> key to close the modal dialog.
+- {{domxref("Element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} {{Experimental_Inline}}
+  - : Fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_Containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents).
 - {{domxref("Element/error_event", "error")}}
   - : Fired when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
 - {{domxref("Element/scroll_event", "scroll")}}

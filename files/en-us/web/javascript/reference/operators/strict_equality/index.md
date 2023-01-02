@@ -1,6 +1,7 @@
 ---
 title: Strict equality (===)
 slug: Web/JavaScript/Reference/Operators/Strict_equality
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
