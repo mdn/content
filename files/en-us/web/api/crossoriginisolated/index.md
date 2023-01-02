@@ -19,8 +19,6 @@ indicates whether the website is in a cross-origin isolation state. That state m
 - {{DOMxRef("Performance.now()")}} offers better precision.
 - {{DOMxRef("Performance.measureUserAgentSpecificMemory()")}} can be accessed.
 
-> **Warning:** Isolated state prevents assigning value to {{DOMxRef("Document.domain")}}.
-
 A website is in a cross-origin isolated state, when the response header {{HTTPHeader("Cross-Origin-Opener-Policy")}} has the value `same-origin` and the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header has the value `require-corp` or `credentialless`.
 
 ## Value
