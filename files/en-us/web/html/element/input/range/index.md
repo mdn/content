@@ -184,12 +184,17 @@ To help you from repeating code you can reuse that same {{HTMLElement("datalist"
 #### HTML
 
 ```html
-<label for="temp">Temperature for room 1:</label><br />
-<input type="range" id="temp" name="temp" list="values" /><br />
-<label for="temp">Temperature for room 2:</label><br />
-<input type="range" id="temp" name="temp" list="values" /><br />
-<label for="temp">Temperature for room 3:</label><br />
-<input type="range" id="temp" name="temp" list="values" />
+<p>
+  <label for="temp1">Temperature for room 1:</label>
+  <input type="range" id="temp1" name="temp1" list="values" />
+</p>
+<p>
+  <label for="temp2">Temperature for room 2:</label>
+  <input type="range" id="temp2" name="temp2" list="values" />
+<p>
+  <label for="temp3">Temperature for room 3:</label>
+  <input type="range" id="temp3" name="temp3" list="values" />
+</p>
 
 <datalist id="values">
   <option value="0" label="0"></option>
@@ -211,8 +216,8 @@ You can label tick marks by giving the `<option>` elements `label` attributes. H
 #### HTML
 
 ```html
-<label for="temp">Choose a comfortable temperature:</label><br />
-<input type="range" id="temp" name="temp" list="values" />
+<label for="tempB">Choose a comfortable temperature:</label><br />
+<input type="range" id="tempB" name="temp" list="values" />
 
 <datalist id="values">
   <option value="0" label="very cold!"></option>
