@@ -350,7 +350,7 @@ Object.defineProperty(o, "b", {
 });
 Object.defineProperty(o, "b", {
   value: 1,
-}); // TypeError: because the property is neither writable nor configurable, it cannot be modified
+}); // TypeError: the property cannot be modified because it is neither writable nor configurable, 
 ```
 
 ### Adding properties and default values
@@ -477,7 +477,7 @@ a.x = 1;
 console.log(b.x); // undefined
 ```
 
-Unlike accessor properties, value properties are always set on the object itself, not on a prototype. However, if a non-writable value property is inherited, it still prevents from modifying the property on the object.
+Unlike accessor properties, value properties are always set on the object itself, not on a prototype. However, if a non-writable value property is inherited, it is still prevented from being modified on the object.
 
 ```js
 function MyClass() {}
