@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/every
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript

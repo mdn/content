@@ -1,6 +1,7 @@
 ---
 title: Function.prototype.prototype
 slug: Web/JavaScript/Reference/Global_Objects/Function/prototype
+page-type: javascript-instance-data-property
 tags:
   - Function
   - JavaScript

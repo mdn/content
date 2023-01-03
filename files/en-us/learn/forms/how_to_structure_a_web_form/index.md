@@ -253,7 +253,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
      </p>
      <p>
        <label for="mail">
-         <span>E-mail: </span>
+         <span>Email: </span>
          <strong><span aria-label="required">*</span></strong>
        </label>
        <input type="email" id="mail" name="usermail" />

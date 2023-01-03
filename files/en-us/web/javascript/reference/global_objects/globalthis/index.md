@@ -1,6 +1,7 @@
 ---
 title: globalThis
 slug: Web/JavaScript/Reference/Global_Objects/globalThis
+page-type: javascript-global-property
 tags:
   - JavaScript
   - Property

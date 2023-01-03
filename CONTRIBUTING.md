@@ -70,7 +70,7 @@ If you've created a new GitHub account and want to know what to do next, you can
 - [GitHub CLI](https://docs.github.com/en/github-cli/github-cli/about-github-cli) - A command-line wrapper for interacting with GitHub.
 - [`git`](https://git-scm.com/downloads) - You can use `git` from the command line to interact with GitHub.
   The examples in this document assume you are using this method.
-  The [`git` cheatsheet](https://training.github.com/) and [Using Git](https://docs.github.com/en/get-started) guide are useful resources for beginners and advanced users.
+  The [`git` cheat sheet](https://training.github.com/) and [Using Git](https://docs.github.com/en/get-started) guide are useful resources for beginners and advanced users.
 
 ### Simple changes
 
@@ -385,7 +385,7 @@ During reviews, you may be asked to answer questions about your work or to make 
 This is a common part of the process of making changes in open source projects.
 There are some important rules of etiquette to remember that will help during the review stage.
 
-1. **Check tests** that are run automatically run for pull requests (see [.github/workflows](.github/workflows)).
+1. **Check tests** that are run automatically for pull requests (see [.github/workflows](.github/workflows)).
    If one or more of these tests fail, you must fix them.
    Your pull request will not be approved and merged if there are failing tests.
    If you don't know how to resolve the underlying issue(s), you can ask for help.

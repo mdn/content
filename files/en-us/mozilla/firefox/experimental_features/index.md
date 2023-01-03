@@ -722,6 +722,47 @@ See {{bug(1764850)}} for more details.
   </tbody>
 </table>
 
+### font-variant-emoji
+
+The CSS [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji) property allows you to set a default presentation style for displaying emojis.
+See ({{bug(1461589)}}) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>108</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.font-variant-emoji.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
 ### SVGPathSeg APIs
@@ -1648,6 +1689,49 @@ See these bugs for details: {{bug(1556362)}}, {{bug(1556373)}}, {{bug(1556365)}}
   </tbody>
 </table>
 
+#### Document and Element scrollend events
+
+The `scrollend` event indicates that the user has completed scrolling in {{domxref("Element")}} and {{domxref("Document")}} objects.
+For more information, see [Element: `scrollend` event](/en-US/docs/Web/API/Element/scrollend_event) and [Document: `scrollend` event](/en-US/docs/Web/API/Document/scrollend_event) ({{bug(1797013)}}, {{bug(1803435)}}).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>109</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td>
+        <code>apz.scrollend-event.content.enabled</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ### Payment Request API
 
 #### Primary payment handling
@@ -1921,11 +2005,10 @@ This also changes the console warning; if the upgrade succeeds, the message indi
   </tbody>
 </table>
 
-### Feature policy
+### Permissions Policy / Feature policy
 
-[Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to CSP but controls features instead of security behavior.
-
-> **Note:** The `Feature-Policy` header has now been renamed to `Permissions-Policy` in the spec, and this article will eventually be updated to reflect that change.
+[Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to CSP but controls features instead of security behavior.
+Note that this is implemented in Firefox as "**Feature Policy**, the name used in an earlier version of the specification.
 
 <table>
   <thead>

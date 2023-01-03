@@ -76,8 +76,8 @@ returned. The rejection handler receives one of the following exception values:_
     - The document containing the element isn't fully active; that is, it's not the
       current active document.
     - The element is not contained by a document.
-    - The element is not permitted to use the `"fullscreen"` feature,
-      either because of Feature Policy configuration or other access control features.
+    - The element is not permitted to use the `fullscreen` feature,
+      either because of [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) configuration or other access control features.
     - The element and its document are the same node.
 
 ## Security
@@ -98,8 +98,7 @@ simple requirements:
   {{HTMLElement("iframe")}} which has the {{htmlattrxref("allowfullscreen","iframe")}}
   attribute applied to it.
 
-Additionally, of course, the Feature Policy `"fullscreen"` permission must
-be granted.
+Additionally, any set Permissions Policies must allow the use of this feature.
 
 ### Detecting fullscreen activation
 

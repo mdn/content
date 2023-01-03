@@ -1,6 +1,6 @@
 ---
 title: HTTPS
-slug: Glossary/https
+slug: Glossary/HTTPS
 tags:
   - HTTPS
   - Infrastructure

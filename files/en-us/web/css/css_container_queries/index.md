@@ -177,5 +177,6 @@ If you want to use a single-column layout for devices with a smaller viewport, y
 - CSS {{Cssxref("container")}} shorthand property
 - CSS {{Cssxref("container-name")}} property
 - CSS {{cssxref("content-visibility")}} property
+- [Say Hello to CSS Container Queries](https://ishadeed.com/article/say-hello-to-css-container-queries/) by Ahmad Shadeed
 - [Container Queries: a Quick Start Guide](https://www.oddbird.net/2021/04/05/containerqueries/)
 - [Collection of Container Queries articles](https://github.com/sturobson/Awesome-Container-Queries)

@@ -1,6 +1,7 @@
 ---
 title: Exponentiation assignment (**=)
 slug: Web/JavaScript/Reference/Operators/Exponentiation_assignment
+page-type: javascript-operator
 tags:
   - Assignment operator
   - JavaScript

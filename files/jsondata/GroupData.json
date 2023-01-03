@@ -147,10 +147,6 @@
     "Contact Picker API": {
       "overview": ["Contact Picker API"],
       "interfaces": ["ContactsManager"],
-      "methods": [
-        "ContactsManager.select()",
-        "ContactsManager.getProperties()"
-      ],
       "properties": ["Navigator.contacts"],
       "events": []
     },
@@ -762,6 +758,13 @@
       "properties": ["indexedDB"],
       "events": []
     },
+    "Ink API": {
+      "overview": ["Ink API"],
+      "interfaces": ["Ink", "InkPresenter"],
+      "methods": [],
+      "properties": ["Navigator.ink"],
+      "events": []
+    },
     "Intersection Observer API": {
       "overview": ["Intersection Observer API"],
       "guides": [
@@ -781,6 +784,13 @@
       "overview": ["Layout Instability API"],
       "interfaces: ": ["LayoutShift", "LayoutShiftAttribution"],
       "methods": [],
+      "properties": [],
+      "events": []
+    },
+    "Local Font Access API": {
+      "overview": ["Local Font Access API"],
+      "interfaces": ["FontData"],
+      "methods": ["Window.queryLocalFonts()"],
       "properties": [],
       "events": []
     },
@@ -1110,19 +1120,20 @@
     "Screen Capture API": {
       "overview": ["Screen Capture API"],
       "guides": ["/docs/Web/API/Screen_Capture_API/Using_Screen_Capture"],
-      "interfaces": [],
+      "interfaces": ["CaptureController"],
       "dictionaries": [],
       "methods": ["MediaDevices.getDisplayMedia()"],
       "properties": [
-        "MediaTrackConstraints.cursor",
         "MediaTrackConstraints.displaySurface",
         "MediaTrackConstraints.logicalSurface",
+        "MediaTrackConstraints.suppressLocalAudioPlayback",
         "MediaTrackSettings.cursor",
         "MediaTrackSettings.displaySurface",
         "MediaTrackSettings.logicalSurface",
-        "MediaTrackSupportedConstraints.cursor",
+        "MediaTrackSettings.suppressLocalAudioPlayback",
         "MediaTrackSupportedConstraints.displaySurface",
-        "MediaTrackSupportedConstraints.logicalSurface"
+        "MediaTrackSupportedConstraints.logicalSurface",
+        "MediaTrackSupportedConstraints.suppressLocalAudioPlayback"
       ],
       "types": ["CursorCaptureConstraintSet", "DisplayCaptureSurfaceType"],
       "events": []
@@ -1508,6 +1519,13 @@
       "overview": ["Vibration API"],
       "interfaces": [],
       "methods": ["Navigator.vibrate()"],
+      "properties": [],
+      "events": []
+    },
+    "VirtualKeyboard API": {
+      "overview": ["VirtualKeyboard API"],
+      "interfaces": ["VirtualKeyboard"],
+      "methods": [],
       "properties": [],
       "events": []
     },
@@ -2030,12 +2048,26 @@
       "properties": ["Window.sessionStorage", "Window.localStorage"],
       "events": ["Window: storage"]
     },
+    "WebTransport API": {
+      "overview": ["WebTransport API"],
+      "guides": [],
+      "interfaces": [
+        "WebTransport",
+        "WebTransportBidirectionalStream",
+        "WebTransportDatagramDuplexStream",
+        "WebTransportError"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Web Workers API": {
       "overview": ["Web Workers API"],
       "guides": [
         "/docs/Web/API/Web_Workers_API/Using_web_workers",
         "/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers",
-        "/docs/Web/API/Web_Workers_API/Structured_clone_algorithm"
+        "/docs/Web/API/Web_Workers_API/Structured_clone_algorithm",
+        "/docs/Web/API/Web_Workers_API/Transferable_objects"
       ],
       "interfaces": [
         "DedicatedWorkerGlobalScope",

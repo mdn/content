@@ -1,6 +1,7 @@
 ---
 title: GeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
+page-type: javascript-class
 tags:
   - Constructor
   - ECMAScript 2015
@@ -18,6 +19,8 @@ In JavaScript, every generator function is actually a `GeneratorFunction` object
 ```js
 const GeneratorFunction = function* () {}.constructor;
 ```
+
+{{EmbedInteractiveExample("pages/js/functionasterisk-function.html")}}
 
 ## Constructor
 

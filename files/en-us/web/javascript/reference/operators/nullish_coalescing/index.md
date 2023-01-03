@@ -1,6 +1,7 @@
 ---
 title: Nullish coalescing operator (??)
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
@@ -35,7 +36,7 @@ It is not possible to combine both the AND (`&&`) and OR operators (`||`) direct
 
 ```js example-bad
 null || undefined ?? "foo"; // raises a SyntaxError
-true || undefined ?? "foo"; // raises a SyntaxError
+true && undefined ?? "foo"; // raises a SyntaxError
 ```
 
 Instead, provide parenthesis to explicitly indicate precedence:

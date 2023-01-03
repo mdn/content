@@ -1,6 +1,7 @@
 ---
 title: await
 slug: Web/JavaScript/Reference/Operators/await
+page-type: javascript-operator
 tags:
   - Function
   - JavaScript
@@ -120,7 +121,7 @@ async function f3() {
 f3();
 ```
 
-### Promise rejection
+### Handling rejected promises
 
 If the `Promise` is rejected, the rejected value is thrown.
 
@@ -136,8 +137,6 @@ async function f4() {
 f4();
 ```
 
-### Handling rejected promises
-
 You can handle rejected promises without a `try` block by chaining a [`catch()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) handler before awaiting the promise.
 
 ```js
@@ -147,6 +146,19 @@ const response = await promisedFunction().catch((err) => {
 });
 // response will be "default response" if the promise is rejected
 ```
+
+This is built on the assumption that `promisedFunction()` never synchronously throws an error, but always returns a rejected promise. This is the case for most properly-designed promise-based functions, which usually look like:
+
+```js
+function promisedFunction() {
+  // Immediately return a promise to minimize chance of an error being thrown
+  return new Promise((resolve, reject) => {
+    // do something async
+  });
+}
+```
+
+However, if `promisedFunction()` does throw an error synchronously, the error won't be caught by the `catch()` handler. In this case, the `try...catch` statement is necessary.
 
 ### Top level await
 
@@ -286,7 +298,7 @@ async function noAwait() {
 }
 ```
 
-However, consider the case where `someAsyncTask` asynchronously throws an error.
+However, consider the case where `lastAsyncTask` asynchronously throws an error.
 
 ```js
 async function lastAsyncTask() {

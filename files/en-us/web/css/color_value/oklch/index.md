@@ -38,6 +38,10 @@ oklch(59.69% 0.156 49.77 / .5)
 
     `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
+### Formal syntax
+
+{{csssyntax}}
+
 ## Specifications
 
 {{Specifications}}
