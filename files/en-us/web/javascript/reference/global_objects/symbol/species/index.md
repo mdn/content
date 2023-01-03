@@ -26,7 +26,7 @@ The well-known symbol `@@species`.
 
 ## Description
 
-The `@@species` accessor property allows subclasses to override the default constructor for objects. This specifies a protocol about how instances should be copied. For example, when you use copying methods of arrays, such as {{jsxref("Array/map", "map()")}}. the `map()` method uses `instance.constructor[Symbol.species]` to get the constructor for constructing the new array.
+The `@@species` accessor property allows subclasses to override the default constructor for objects. This specifies a protocol about how instances should be copied. For example, when you use copying methods of arrays, such as {{jsxref("Array/map", "map()")}}. the `map()` method uses `instance.constructor[Symbol.species]` to get the constructor for constructing the new array. For more information, see [subclassing built-ins](/en-US/docs/Web/JavaScript/Reference/Classes/extends#subclassing_built-ins).
 
 All built-in implementations of `@@species` return the `this` value, which is the current instance's constructor. This allows copying methods to create instances of derived classes rather than the base class — for example, `map()` will return an array of the same type as the original array.
 
