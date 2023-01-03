@@ -1,6 +1,6 @@
 ---
 title: Property (JavaScript)
-slug: Glossary/property/JavaScript
+slug: Glossary/Property/JavaScript
 tags:
   - CodingScripting
 ---

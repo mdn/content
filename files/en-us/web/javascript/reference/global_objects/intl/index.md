@@ -48,7 +48,7 @@ Subtags identifying languages, scripts, regions (including countries), and (rare
 
 BCP 47 extension sequences consist of a single digit or letter (other than `"x"`) and one or more two- to eight-letter or digit subtags separated by hyphens. Only one sequence is permitted for each digit or letter: `"de-a-foo-a-foo"` is invalid. BCP 47 extension subtags are defined in the [Unicode CLDR Project](https://github.com/unicode-org/cldr/tree/main/common/bcp47). Currently only two extensions have defined semantics:
 
-- The `"u"` (Unicode) extension can be used to request additional customization of {{jsxref("Intl.Collator")}}, {{jsxref("Intl.NumberFormat")}}, or {{jsxref("Intl.DateTimeFormat")}} objects. Examples:
+- The `"u"` (Unicode) extension can be used to request additional customization of `Intl` API objects. Examples:
 
   - `"de-DE-u-co-phonebk"`: Use the phonebook variant of the German sort order, which interprets umlauted vowels as corresponding character pairs: ä → ae, ö → oe, ü → ue.
   - `"th-TH-u-nu-thai"`: Use Thai digits (๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙) in number formatting.
@@ -63,7 +63,7 @@ Finally, a private-use extension sequence using the letter `"x"` may appear, fol
 
 The `options` argument must be an object with properties that vary between constructors and functions. If the `options` argument is not provided or is undefined, default values are used for all properties.
 
-One property is supported by all language sensitive constructors and functions: The `localeMatcher` property, whose value must be a string `"lookup"` or `"best fit"` and which selects one of the locale matching algorithms described above.
+One property is supported by all language sensitive constructors and functions: The `localeMatcher` property, whose value must be a string `"lookup"` or `"best fit"` and which selects one of the locale matching algorithms described below.
 
 ### Locale identification and negotiation
 

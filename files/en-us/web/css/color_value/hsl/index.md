@@ -50,6 +50,10 @@ hsl(hue, saturation, lightness, alpha)
 - `alpha` {{optional_inline}}
   - : A {{cssxref("&lt;percentage&gt;")}} or a {{cssxref("&lt;number&gt;")}} between `0` and `1`, where the number `1` corresponds to `100%` and means full opacity, while `0` corresponds to `0%` and means fully transparent.
 
+### Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 The `hsl()` function works well with [`conic-gradient()`](/en-US/docs/Web/CSS/gradient/conic-gradient) as both deal with angles.

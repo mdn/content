@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.Object.getOwnPropertyNames
 
 {{JSRef}}
 
-The **`Object.getOwnPropertyNames()`** method returns an array of all properties (including non-enumerable properties except for those which use Symbol) found directly in a given object.
+The **`Object.getOwnPropertyNames()`** static method returns an array of all properties (including non-enumerable properties except for those which use Symbol) found directly in a given object.
 
 {{EmbedInteractiveExample("pages/js/object-getownpropertynames.html")}}
 
