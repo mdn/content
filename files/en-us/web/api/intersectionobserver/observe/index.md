@@ -30,9 +30,17 @@ observer's callback is executed with an array of
 which occurred. Note that this design allows multiple elements' intersection changes to
 be processed by a single call to the callback.
 
-> **Note:** the observer [callback](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#callback) will always fire the next render cycle after `observe()` is called, even if it has not yet moved with respect to the viewport. This means that, for example, an element that is outside the viewpoint when `observe()` is called on it will result in the 
-> callback being immediately called with at least one [entry](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry) with [`intersecting`](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry/isIntersecting) set to `false`.
-> An element inside the viewport will result in the callback being immediately called with at least one entry with `intersecting` set to `true`.
+> **Note:** the observer
+> [callback](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#callback)
+> will always fire the next render cycle after `observe()` is called, even if it has
+> not yet moved with respect to the viewport. This means that, for example, an element
+> that is outside the viewpoint when `observe()` is called on it will result in the 
+> callback being immediately called with at least one
+> [entry](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry)
+> with [`intersecting`](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry/isIntersecting)
+> set to `false`.
+> An element inside the viewport will result in the callback being immediately called
+> with at least one entry with `intersecting` set to `true`.
 
 ## Syntax
 
