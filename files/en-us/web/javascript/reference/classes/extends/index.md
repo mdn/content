@@ -203,7 +203,7 @@ class MyDate extends Date {
 
 You might want to return {{jsxref("Array")}} objects in your derived array class `MyArray`. The species pattern lets you override default constructors.
 
-For example, when using methods such as {{jsxref("Array.prototype.map()")}} that returns the default constructor, you want these methods to return a parent `Array` object, instead of the `MyArray` object. The {{jsxref("Symbol.species")}} symbol lets you do this:
+For example, when using methods such as {{jsxref("Array.prototype.map()")}} that return the default constructor, you want these methods to return a parent `Array` object, instead of the `MyArray` object. The {{jsxref("Symbol.species")}} symbol lets you do this:
 
 ```js
 class MyArray extends Array {
