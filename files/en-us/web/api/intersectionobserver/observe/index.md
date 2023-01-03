@@ -32,8 +32,9 @@ be processed by a single call to the callback.
 
 > **Note:** the observer
 > [callback](/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#callback)
-> will always fire the next render cycle after `observe()` is called, even if it has
-> not yet moved with respect to the viewport. This means that, for example, an element
+> will always fire the next render cycle after `observe()` is called, even if the
+> observed element has not yet moved with respect to the viewport. This means that,
+> for example, an element
 > that is outside the viewport when `observe()` is called on it will result in the 
 > callback being immediately called with at least one
 > [entry](/en-US/docs/Web/API/IntersectionObserverEntry)
