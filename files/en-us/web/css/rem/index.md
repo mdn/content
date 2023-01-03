@@ -16,9 +16,9 @@ browser-compat: css.types.rem
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`rem()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns a remainder (with the same sign as the dividend) when dividing one number by another. The remainder is a leftover when one operand is divided by a second operand. It always takes the sign of the dividend.
+The **`rem()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns a remainder left over when the first parameter is divided by the second parameter, similar to the JavaScript [remainder operator (`%`)](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder). The remainder is the value leftover when one operand, the dividend, is divided by a second operand, the divisor. It always takes the sign of the dividend.
 
-> When dividing 27 by 5, the result is 5 with a remainder of 2. The full calculation is `27 / 5 = 5 * 5 + 2`. The `rem(27, 5)` function returns the remainder of `2`.
+> For example, the `rem(27, 5)` function returns the remainder of `2`. When dividing 27 by 5, the result is 5 with a remainder of 2. The full calculation is `27 / 5 = 5 * 5 + 2`. 
 
 ## Syntax
 
@@ -43,7 +43,7 @@ rotate: rem(-55deg, -15deg); /* -10deg */
 
 ### Parameter
 
-The `rem(dividend, divisor)` function accepts two comma-separated values as its parameters. Both parameters must have the same type for the function to be valid.
+The `rem(dividend, divisor)` function accepts two comma-separated values as its parameters. Both parameters must have the same type, [number](/en-US/docs/Web/CSS/number), [dimension](/en-US/docs/Web/CSS/dimension), or [percentage](/en-US/docs/Web/CSS/percentage), for the function to be valid. While the units in the two parameters don't need to be the same, they do need of the same dimension type, such as {{cssxref("length")}}, {{cssxref("angle")}}, {{cssxref("time")}}, or {{cssxref("frequency")}} to be valid.
 
 - `dividend`
   - : A calculation that resolves to a {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}} representing the dividend.
