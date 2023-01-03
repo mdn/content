@@ -26,7 +26,7 @@
     "@mdn/yari": "1.29.1",
     "cross-env": "7.0.3",
     "env-cmd": "10.1.0",
-    "husky": "8.0.2",
+    "husky": "8.0.3",
     "lint-staged": "13.1.0",
     "markdownlint-cli2": "0.6.0",
     "markdownlint-rule-search-replace": "1.0.8",
