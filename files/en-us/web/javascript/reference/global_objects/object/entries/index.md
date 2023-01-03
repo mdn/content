@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Object.entries
 
 {{JSRef}}
 
-The **`Object.entries()`** method returns an array of a given object's own enumerable string-keyed property key-value pairs.
+The **`Object.entries()`** static method returns an array of a given object's own enumerable string-keyed property key-value pairs.
 
 {{EmbedInteractiveExample("pages/js/object-entries.html")}}
 

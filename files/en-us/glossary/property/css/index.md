@@ -1,6 +1,6 @@
 ---
 title: Property (CSS)
-slug: Glossary/property/CSS
+slug: Glossary/Property/CSS
 tags:
   - CodingScripting
 ---

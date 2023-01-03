@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Reflect.construct
 
 {{JSRef}}
 
-The static **`Reflect.construct()`** method acts like the
+The **`Reflect.construct()`** static method acts like the
 {{jsxref("Operators/new", "new")}} operator, but as a function. It is equivalent to
 calling `new target(...args)`. It gives also the added option to specify a
 different prototype.

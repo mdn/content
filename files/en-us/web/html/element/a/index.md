@@ -53,7 +53,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : The URL that the hyperlink points to. Links are not restricted to HTTP-based URLs — they can use any URL scheme supported by browsers:
 
-    - Sections of a page with fragment URLs
+    - Sections of a page with document fragments
+    - Specific text portions with [text fragments](/en-US/docs/Web/Text_fragments)
     - Pieces of media files with media fragments
     - Telephone numbers with `tel:` URLs
     - Email addresses with `mailto:` URLs
@@ -259,7 +260,7 @@ document.querySelector('a').addEventListener('click', (event) =>
 
 `<a>` elements can have consequences for users' security and privacy. See [`Referer` header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for information.
 
-Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Link_types/noreferrer) and [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) makes the website vulnerable to {{domxref("window.opener")}} API exploitation attacks ([vulnerability description](https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/)), although note that, in newer browser versions setting `target="_blank"` implicitly provides the same protection as setting `rel="noopener"`. See [browser compatibility](#browser_compatibility) for details.
+Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Link_types/noreferrer) and [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) makes the website vulnerable to {{domxref("window.opener")}} API exploitation attacks, although note that, in newer browser versions setting `target="_blank"` implicitly provides the same protection as setting `rel="noopener"`. See [browser compatibility](#browser_compatibility) for details.
 
 ## Accessibility
 
@@ -500,6 +501,8 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
 ## See also
 
 - {{HTMLElement("link")}} is similar to `<a>`, but for metadata hyperlinks that are invisible to users.
+- {{CSSxRef(":link")}} is a CSS pseudo-class that will match `<a>` elements with valid `href` attributes.
 - {{CSSxRef(":visited")}} is a CSS pseudo-class that will match `<a>` elements with URL in `href` attribute that was visited by the user in the past.
 - {{CSSxRef(":link")}} is a CSS pseudo-class that will match `<a>` elements with URL in `href` attribute that was not yet visited by the user.
 - {{CSSxRef(":any-link")}} is a CSS pseudo-class that will match `<a>` elements with `href` attribute.
+- [Text fragments](/en-US/docs/Web/Text_fragments) are user-agent instructions added to URLs that allow content authors to link to specific text on a page, without IDs being required.

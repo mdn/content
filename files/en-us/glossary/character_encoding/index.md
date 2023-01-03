@@ -1,6 +1,6 @@
 ---
 title: Character encoding
-slug: Glossary/character_encoding
+slug: Glossary/Character_encoding
 tags:
   - Composing
 ---

@@ -147,10 +147,6 @@
     "Contact Picker API": {
       "overview": ["Contact Picker API"],
       "interfaces": ["ContactsManager"],
-      "methods": [
-        "ContactsManager.select()",
-        "ContactsManager.getProperties()"
-      ],
       "properties": ["Navigator.contacts"],
       "events": []
     },
@@ -947,8 +943,7 @@
         "/docs/Web/API/Resource_Timing_API",
         "/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API",
         "/docs/Web/API/User_timing_API",
-        "/docs/Web/API/User_timing_API/Using_the_User_Timing_API",
-        "/docs/Web/API/Element_timing_API"
+        "/docs/Web/API/User_timing_API/Using_the_User_Timing_API"
       ],
       "interfaces": [
         "EventCounts",
@@ -1527,6 +1522,13 @@
       "properties": [],
       "events": []
     },
+    "VirtualKeyboard API": {
+      "overview": ["VirtualKeyboard API"],
+      "interfaces": ["VirtualKeyboard"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Visual Viewport": {
       "overview": ["Visual Viewport API"],
       "interfaces": ["VisualViewport"],
@@ -2064,7 +2066,8 @@
       "guides": [
         "/docs/Web/API/Web_Workers_API/Using_web_workers",
         "/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers",
-        "/docs/Web/API/Web_Workers_API/Structured_clone_algorithm"
+        "/docs/Web/API/Web_Workers_API/Structured_clone_algorithm",
+        "/docs/Web/API/Web_Workers_API/Transferable_objects"
       ],
       "interfaces": [
         "DedicatedWorkerGlobalScope",

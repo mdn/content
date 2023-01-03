@@ -1,6 +1,6 @@
 ---
 title: GIF
-slug: Glossary/gif
+slug: Glossary/GIF
 tags:
   - Composing
 ---
