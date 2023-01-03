@@ -263,7 +263,7 @@ It turns out that `ReadOnlyMap` is not constructible, because the [`Map()`](/en-
 const m = new ReadOnlyMap([["a", 1]]); // TypeError: A read-only map must be set at construction time.
 ```
 
-We may get around this by using a private flag to indicate whether the instance is being constructed. However, a more significant problem with this design is that it breaks [Liskov substitution principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle), which states that a subclass should be substitutable for its superclass. If a function expects a `Map` object, it should be able to use a `ReadOnlyMap` object as well, which will break here.
+We may get around this by using a private flag to indicate whether the instance is being constructed. However, a more significant problem with this design is that it breaks the [Liskov substitution principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle), which states that a subclass should be substitutable for its superclass. If a function expects a `Map` object, it should be able to use a `ReadOnlyMap` object as well, which will break here.
 
 Inheritance often leads to [the circle-ellipse problem](https://en.wikipedia.org/wiki/Circle%E2%80%93ellipse_problem), because neither type perfectly entails the behavior of the other, although they share a lot of common traits. In general, unless there's a very good reason to use inheritance, it's better to use composition instead. Composition means that a class has a reference to an object of another class, and only uses that object as an implementation detail.
 
