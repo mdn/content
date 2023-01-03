@@ -59,7 +59,17 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
   - : Defines a multiplier for glyph outlines and metrics associated with this font. This makes it easier to harmonize the designs of various fonts when rendered at the same font size.
 - {{cssxref("@font-face/src", "src")}}
 
-  - : Specifies font resources. A comma-separated list representing the resource fallback order, each resource specified by a `url()` or `local()`. If the previous resource is loaded successfully, the latter resources will not be used. The `url()` can be followed by `format()` and `tech()`, like this:
+  - : Specifies font resources.
+
+    A comma-separated list representing the resource fallback order, where each resource is specified using `url()` or `local()`.
+    The first resource in the list that loads successfully will be used and subsequent items are ignored.
+    If multiple `src` descriptors are set, only the last declared rule that is able to load a resource is applied.
+
+    > **Note:** Items that the browser considers invalid are ignored.
+    > Some browsers will ignore the whole descriptor if any item is invalid, even if only one item is invalid.
+    > This may affect design of your fallbacks.
+
+    The `url()` can be followed by `format()` and `tech()`, like this:
 
     ```css
     src: local("Trickster"),
@@ -116,7 +126,8 @@ It's common to use both `url()` and `local()` together, so that the user's insta
 
 If the `local()` function is provided, specifying a font name to look for on the user's device, and if the {{Glossary("user agent")}} finds a match, that local font is used. Otherwise, the font resource specified using the `url()` function is downloaded and used.
 
-Resources are attempted to be loaded in order, so usually `local()` should be written before `url()`. Also, `local()` is not just a helper for `url()`, they are equal and both are optional, a rule block containing only one or more `local()` without `url()` is possible.
+Browsers attempt to load resources in their list declaration order, so usually `local()` should be written before `url()`. Both functions are optional, so a rule block containing only one or more `local()` without `url()` is possible.
+If a more specific fonts with `format()` or `tech()` values are desired, these should be listed _before_ versions that don't have these values, as the less-specific variant would otherwise be tried and used first.
 
 By allowing authors to provide their own fonts, `@font-face` makes it possible to design content without being limited to the so-called "web-safe" fonts (that is, the fonts which are so common that they're considered to be universally available). The ability to specify the name of a locally-installed font to look for and use makes it possible to customize the font beyond the basics while making it possible to do so without relying on an Internet connection.
 
@@ -195,6 +206,36 @@ In this example, the user's local copy of "Helvetica Neue Bold" is used; if the 
   src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
     url("MgOpenModernaBold.ttf");
   font-weight: bold;
+}
+```
+
+### Fallbacks on older browsers
+
+Browsers should use a `@font-face` with a single `src` descriptor listing possible sources for the font.
+Since the browser will use the first resource that it is able to load, items should be specified in the order that you'd most like them to be used.
+
+Generally this means that local files should appear before remote files, and that resources with `format()` or `tech()` constraints should appear before resources that don't have them (otherwise the less-constrained version would always be selected).
+For example:
+
+```css
+@font-face {
+  font-family: "MgOpenModernaBold";
+  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental), url("MgOpenModernaBold.otf") format(opentype);
+}
+```
+
+A browser that does not support `tech()` above should drop the first item and attempt to load the second resource.
+
+Some browsers do not yet [drop invalid items](#browser_compatibility), and instead fail the whole `src` descriptor if any value is invalid.
+If working with these browsers you can specify multiple `src` descriptors as fallbacks.
+Note that multiple `src` descriptors are attempted in reverse-order, so at the end we have our normal descriptor with all the items.
+
+```css
+@font-face {
+  font-family: "MgOpenModernaBold";
+  src: url("MgOpenModernaBold.otf") format(opentype);
+  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental);
+  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental), url("MgOpenModernaBold.otf") format(opentype);
 }
 ```
 
