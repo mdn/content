@@ -39,12 +39,16 @@ The function also accepts a legacy syntax in which all four values are separated
 
 ### Values
 
-- Values for `red`, `green`, `blue` represent color channels and may each be a {{cssxref("&lt;number&gt;")}} clamped between 0 and 255 or a {{cssxref("&lt;percentage&gt;")}}, or the keyword `none`. For color channel values, it is not permissible to mix percentages and numbers, so:
+- `red`, `green`, `blue`
 
-  - if any color channel value is a number, then all color channel values must be numbers or `none`
-  - if any color channel value is a percentage, then all color channel values must be percentages or `none`.
+  - : These values represent color channels and may each be a {{cssxref("&lt;number&gt;")}}
+    clamped between 0 and 255, or a {{cssxref("&lt;percentage&gt;")}}, or the keyword `none`. You can't mix percentages and numbers, so:
 
-- The value for `alpha` is a {{cssxref("&lt;number&gt;")}} clamped between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}. It represents opacity, where the number `1` corresponds to `100%` (full opacity). It defaults to 100%.
+    - if any of these values is a number, then they must all be numbers or `none`
+    - if any of these values is a percentage, then they must all percentages or `none`.
+
+- `alpha`
+  - : A {{cssxref("&lt;number&gt;")}} clamped between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}. This value represents opacity, where the number `1` corresponds to `100%` (full opacity). It defaults to 100%.
 
 ### Formal syntax
 
