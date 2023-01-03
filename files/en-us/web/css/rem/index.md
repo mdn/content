@@ -44,7 +44,7 @@ rotate: rem(-55deg, -15deg); /* -10deg */
 /* Calculations */
 scale: rem(10 * 2, 1.7);         /* 1.3 */
 rotate: rem(10turn, 18turn / 3); /* 4turn */
-transition-duration: rem(20s / 2, 3000ms * 2); /* 4s */	
+transition-duration: rem(20s / 2, 3000ms * 2); /* 4s */
 ```
 
 ### Parameter
