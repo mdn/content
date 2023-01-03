@@ -36,7 +36,7 @@ _Also inherits properties from {{domxref("EventTarget")}}._
 - {{domxref("IDBRequest.error")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMException")}} in the event of an unsuccessful request, indicating what went wrong.
 - {{domxref("IDBRequest.result")}} {{ReadOnlyInline}}
-  - : Returns the result of the request. If the request failed and the result is not available, an InvalidStateError exception is thrown.
+  - : Returns the result of the request. If the request is not completed, the result is not available and an `InvalidStateError` exception is thrown.
 - {{domxref("IDBRequest.source")}} {{ReadOnlyInline}}
   - : The source of the request, such as an {{domxref("IDBIndex")}} or an {{domxref("IDBObjectStore")}}. If no source exists (such as when calling {{domxref("IDBFactory.open")}}), it returns null.
 - {{domxref("IDBRequest.readyState")}} {{ReadOnlyInline}}

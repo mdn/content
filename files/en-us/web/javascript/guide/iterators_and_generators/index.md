@@ -1,6 +1,7 @@
 ---
 title: Iterators and generators
 slug: Web/JavaScript/Guide/Iterators_and_Generators
+page-type: guide
 tags:
   - Guide
   - Intermediate

@@ -1,6 +1,7 @@
 ---
 title: decodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
+page-type: javascript-function
 tags:
   - JavaScript
   - Method
@@ -10,9 +11,7 @@ browser-compat: javascript.builtins.decodeURIComponent
 
 {{jsSidebar("Objects")}}
 
-The **`decodeURIComponent()`** function decodes a Uniform
-Resource Identifier (URI) component previously created by
-{{jsxref("encodeURIComponent")}} or by a similar routine.
+The **`decodeURIComponent()`** function decodes a Uniform Resource Identifier (URI) component previously created by {{jsxref("encodeURIComponent()")}} or by a similar routine.
 
 {{EmbedInteractiveExample("pages/js/globalprops-decodeuricomponent.html")}}
 
@@ -29,18 +28,18 @@ decodeURIComponent(encodedURI)
 
 ### Return value
 
-A new string representing the decoded version of the given encoded Uniform Resource
-Identifier (URI) component.
+A new string representing the decoded version of the given encoded Uniform Resource Identifier (URI) component.
 
 ### Exceptions
 
-Throws an {{jsxref("URIError")}} ("malformed URI sequence") exception when used
-wrongly.
+- {{jsxref("URIError")}}
+  - : Thrown if `encodedURI` contains a `%` not followed by two hexadecimal digits, or if the escape sequence does not encode a valid UTF-8 character.
 
 ## Description
 
-Replaces each escape sequence in the encoded URI component with the character that it
-represents.
+`decodeURIComponent()` is a function property of the global object.
+
+`decodeURIComponent()` uses the same decoding algorithm as described in {{jsxref("decodeURI()")}}. It decodes _all_ escape sequences, including those that are not created by {{jsxref("encodeURIComponent")}}, like `-.!~*'()`.
 
 ## Examples
 
@@ -65,8 +64,7 @@ try {
 
 ### Decoding query parameters from a URL
 
-decodeURIComponent cannot be used directly to parse query parameters from a URL. It
-needs a bit of preparation.
+`decodeURIComponent()` cannot be used directly to parse query parameters from a URL. It needs a bit of preparation.
 
 ```js
 function decodeQueryParam(p) {

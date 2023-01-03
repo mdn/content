@@ -19,13 +19,8 @@ browser-compat: api.Magnetometer.x
 {{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`x`** read-only property of the
-{{domxref("Magnetometer")}} interface returns a double precision integer containing
-the magnetic field around the device's x axis.
-
-If a feature policy blocks use of a feature it is because your code is inconsistent
-with the policies set on your server. This is not something that would ever be shown to
-a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation
-instructions.
+{{domxref("Magnetometer")}} interface returns a number specifying
+the magnetic field around the device's x-axis.
 
 ## Value
 

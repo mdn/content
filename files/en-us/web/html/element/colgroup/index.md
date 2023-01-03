@@ -17,64 +17,6 @@ The **`<colgroup>`** [HTML](/en-US/docs/Web/HTML) element defines a group of col
 
 {{EmbedInteractiveExample("pages/tabbed/colgroup.html","tabbed-taller")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>None.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        If the {{htmlattrxref("span", "colgroup")}} attribute is
-        present: none.<br />If
-        the attribute is not present: zero or more {{HTMLElement("col")}}
-        element
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>
-        The start tag may be omitted, if it has a {{HTMLElement("col")}}
-        element as its first child and if it is not preceded by a
-        {{HTMLElement("colgroup")}} whose end tag has been omitted.<br />The
-        end tag may be omitted, if it is not followed by a space or a comment.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        A {{HTMLElement("table")}} element. The
-        {{HTMLElement("colgroup")}} must appear after any optional
-        {{HTMLElement("caption")}} element but before any
-        {{HTMLElement("thead")}}, {{HTMLElement("th")}},
-        {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}} and
-        {{HTMLElement("tr")}} element.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>No <code>role</code> permitted</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLTableColElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Attributes
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
@@ -135,6 +77,66 @@ The following attributes are deprecated and should not be used. They are documen
 ## Examples
 
 Please see the {{HTMLElement("table")}} page for examples on `<colgroup>`.
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        If the {{htmlattrxref("span", "colgroup")}} attribute is
+        present: none.<br />If
+        the attribute is not present: zero or more {{HTMLElement("col")}}
+        element
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>
+        The start tag may be omitted, if it has a {{HTMLElement("col")}}
+        element as its first child and if it is not preceded by a
+        {{HTMLElement("colgroup")}} whose end tag has been omitted.<br />The
+        end tag may be omitted, if it is not followed by a space or a comment.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        A {{HTMLElement("table")}} element. The
+        {{HTMLElement("colgroup")}} must appear after any optional
+        {{HTMLElement("caption")}} element but before any
+        {{HTMLElement("thead")}}, {{HTMLElement("th")}},
+        {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}} and
+        {{HTMLElement("tr")}} element.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLTableColElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

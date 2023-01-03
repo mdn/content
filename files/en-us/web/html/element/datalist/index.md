@@ -16,65 +16,6 @@ The **`<datalist>`** [HTML](/en-US/docs/Web/HTML) element contains a set of {{HT
 
 {{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        Either
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >
-        or zero or more {{HTMLElement("option")}} elements.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role"
-          >listbox</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>No <code>role</code> permitted</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLDataListElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 To bind the `<datalist>` element to the control, we give it a unique identifier in the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute, and then add the [`list`](/en-US/docs/Web/HTML/Element/input#attr-list) attribute to the {{HTMLElement("input")}} element with the same identifier as value.
 Only certain types of {{HTMLElement("input")}} support this behavior, and it can also vary from browser to browser.
 
@@ -171,6 +112,67 @@ The specification allows linking `<datalist>` with a {{HTMLElement("input/passwo
 ```
 
 {{EmbedLiveSample("Password_type", 600, 40)}}
+
+## Technical Summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        Either
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >
+        or zero or more {{HTMLElement("option")}} elements.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role"
+          >listbox</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLDataListElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

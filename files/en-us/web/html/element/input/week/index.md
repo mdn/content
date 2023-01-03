@@ -34,53 +34,6 @@ The Edge `week` control is somewhat more elaborate, opening up week and year pic
 
 ![An input reading 'week 01, 2017'. A popup is open below with two columns. The left column has a list of weeks, from week 48 to Week 52, continuing with week 01 to week 05. The right side has years, from 2012 to 2022. Week 01 and 2017 are in the middle, highlighted with a blue background. At the bottom, there is a row with a checkbox and an X; likely buttons.](week-control-edge.png)
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
-      <td>
-        A string representing a week and year, or
-        empty
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Supported common attributes</strong></td>
-      <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("readonly", "input")}}, and
-        {{htmlattrxref("step", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td>
-        <code>value</code>, <code>valueAsDate</code>,
-        <code>valueAsNumber</code>, and <code>list</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><strong>DOM interface</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
-        and {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Value
 
 A string representing the value of the week/year entered into the input. The format of the date and time value used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid week string")}}.
@@ -382,6 +335,55 @@ function populateWeeks() {
 ```
 
 > **Note:** Remember that some years have 53 weeks in them (see [Weeks per year](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))! You'll need to take this into consideration when developing production apps.
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>
+        A string representing a week and year, or
+        empty
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+        {{htmlattrxref("autocomplete", "input")}},
+        {{htmlattrxref("list", "input")}},
+        {{htmlattrxref("readonly", "input")}}, and
+        {{htmlattrxref("step", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td>
+        <code>value</code>, <code>valueAsDate</code>,
+        <code>valueAsNumber</code>, and <code>list</code>.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
+        and {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

@@ -41,6 +41,8 @@ _Doesn't inherit any properties._
     handlers for connected HID devices.
 - {{domxref("Navigator.hardwareConcurrency")}} {{ReadOnlyInline}}
   - : Returns the number of logical processor cores available.
+- {{domxref("Navigator.ink")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns an {{domxref("Ink")}} object for the current document, providing access to [Ink API](/en-US/docs/Web/API/Ink_API) functionality.
 - {{domxref('Navigator.keyboard')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref('Keyboard')}} object which provides access to functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
 - {{domxref("Navigator.language")}} {{ReadOnlyInline}}
@@ -77,6 +79,8 @@ _Doesn't inherit any properties._
   - : Returns the user agent string for the current browser.
 - {{domxref("Navigator.userAgentData")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("NavigatorUAData")}} object, which gives access to information about the browser and operating system of the user.
+- {{domxref("Navigator.virtualKeyboard")}} {{ReadOnlyInline}}
+  - : Returns a reference to the {{domxref("VirtualKeyboard")}} API, to take control of the on-screen virtual keyboard.
 - {{domxref("Navigator.webdriver")}} {{ReadOnlyInline}}
   - : Indicates whether the user agent is controlled by automation.
 - {{domxref("Navigator.windowControlsOverlay")}} {{ReadOnlyInline}}

@@ -1,6 +1,7 @@
 ---
 title: 'SyntaxError: function statement requires a name'
 slug: Web/JavaScript/Reference/Errors/Unnamed_function_statement
+page-type: javascript-error
 tags:
   - Error
   - Errors

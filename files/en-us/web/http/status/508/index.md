@@ -2,7 +2,7 @@
 title: 508 Loop Detected
 slug: Web/HTTP/Status/508
 tags:
-  - '508'
+  - "508"
   - HTTP
   - Server error
   - Status code
@@ -21,7 +21,7 @@ entire operation failed.
 
 ## Status
 
-```plain
+```http
 508 Loop Detected
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Keyed collections
 slug: Web/JavaScript/Guide/Keyed_collections
+page-type: guide
 tags:
   - Collections
   - Guide
@@ -67,7 +68,7 @@ The `WeakMap` API is essentially the same as the `Map` API. However, a `WeakMap`
 
 For more information and example code, see also "Why WeakMap?" on the {{jsxref("WeakMap")}} reference page.
 
-One use case of `WeakMap` objects is to store private data for an object, or to hide implementation details. The following example is from Nick Fitzgerald's blog post ["Hiding Implementation Details with ECMAScript 6 WeakMaps"](https://fitzgeraldnick.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html). The private data and methods belong inside the object and are stored in the `privates` `WeakMap` object. Everything exposed on the instance and prototype is public; everything else is inaccessible from the outside world because `privates` is not exported from the module.
+One use case of `WeakMap` objects is to store private data for an object, or to hide implementation details. The following example is from Nick Fitzgerald's blog post ["Hiding Implementation Details with ECMAScript 6 WeakMaps"](https://fitzgeraldnick.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html). The private data and methods belong inside the object and are stored in the `privates` object, which is a `WeakMap`. Everything exposed on the instance and prototype is public; everything else is inaccessible from the outside world because `privates` is not exported from the module.
 
 ```js
 const privates = new WeakMap();
@@ -92,7 +93,7 @@ module.exports = Public;
 
 ### Set object
 
-{{jsxref("Set")}} objects are collections of values. You can iterate its elements in insertion order. A value in a `Set` may only occur once; it is unique in the `Set`'s collection.
+{{jsxref("Set")}} objects are collections of unique values. You can iterate its elements in insertion order. A value in a `Set` may only occur once; it is unique in the `Set`'s collection.
 
 The following code shows some basic operations with a `Set`. See also the {{jsxref("Set")}} reference page for more examples and the complete API.
 

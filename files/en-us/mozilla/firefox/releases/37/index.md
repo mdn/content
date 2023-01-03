@@ -24,9 +24,9 @@ Highlights:
 
 ### CSS
 
-- {{cssxref("display")}}`:` `contents` is now activated by default ({{bug(1102374)}} and {{bug(1105369)}}).
-- [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts) is now working on element with {{cssxref("display")}}`:` `table-caption` ({{bug(1109571)}}).
-- Relative positioning ({{cssxref("position")}}`:` `relative`) of table cells has been implemented ({{bug(35168)}}).
+- `display: contents` is now activated by default ({{bug(1102374)}} and {{bug(1105369)}}).
+- [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts) is now working on element with `display: table-caption` ({{bug(1109571)}}).
+- Relative positioning (`position: relative`) of table cells has been implemented ({{bug(35168)}}).
 - The quirks mode behavior of {{cssxref("empty-cells")}} has been removed: it now defaults to `show` like in standard mode ({{bug(1020400)}}).
 
 ### HTML

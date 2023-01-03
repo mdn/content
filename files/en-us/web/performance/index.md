@@ -163,7 +163,6 @@ APIs
 - [Navigator.deviceMemory](/en-US/docs/Web/API/Navigator/deviceMemory)
 - [Intersection Observer](/en-US/docs/Web/API/Intersection_Observer_API)
 - [Using the User Timing API](/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
-- [Long Tasks API](/en-US/docs/Web/API/Long_Tasks_API)
 - [High Resolution Timing API](/en-US/docs/Web/API/DOMHighResTimeStamp) ([https://w3c.github.io/hr-time/)](https://w3c.github.io/hr-time/)
 - [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
 - [Page Visibility](/en-US/docs/Web/API/Page_Visibility_API)

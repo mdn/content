@@ -18,7 +18,7 @@ The `StereoPannerNode` interface of the [Web Audio API](/en-US/docs/Web/API/Web_
 
 The {{domxref("StereoPannerNode.pan", "pan")}} property takes a unitless value between `-1` (full left pan) and `1` (full right pan). This interface was introduced as a much simpler way to apply a simple panning effect than having to use a full {{domxref("PannerNode")}}.
 
-![](stereopannernode.png)
+![The Stereo Panner Node moved the sound's position from the center of two speakers to the left.](stereopannernode.png)
 
 {{InheritanceDiagram}}
 

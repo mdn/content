@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method

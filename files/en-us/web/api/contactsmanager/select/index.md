@@ -100,7 +100,7 @@ async function getContacts() {
 
 ### Select Using Only Supported Properties
 
-The following example uses {{jsxref("ContactsManager.getProperties", "getProperties()")}} to ensure that only supported properties are passed. Otherwise, `select()` might throw a {{jsxref("TypeError")}}. `handleResults()` is a developer defined function.
+The following example uses {{domxref("ContactsManager.getProperties", "getProperties()")}} to ensure that only supported properties are passed. Otherwise, `select()` might throw a {{jsxref("TypeError")}}. `handleResults()` is a developer defined function.
 
 ```js
 const supportedProperties = await navigator.contacts.getProperties();

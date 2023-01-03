@@ -41,7 +41,10 @@ add(request)
 ### Parameters
 
 - `request`
-  - : The request you want to add to the cache. This can be a {{domxref("Request")}} object or a URL.
+
+  - : A request for the resource you want to add to the cache. This can be a {{domxref("Request")}} object or a URL.
+
+    This parameter is used as a parameter to the {{domxref("Request.Request()", "Request()")}} constructor, so URLs follow the same rules as for that constructor. In particular, URLs may be relative to the base URL, which is the document's {{domxref("Node.baseURI", "baseURI")}} in a window context, or {{domxref("WorkerGlobalScope.location")}} in a worker context.
 
 ### Return value
 
