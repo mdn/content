@@ -46,6 +46,9 @@ console.log(myMap.size);  // 0
 console.log(myMap.has('bar')); // false
 ```
 
+> **Note:** Do not use array-style square bracket notation (e.g. myMap['bar']) to access the elements of a Map object. While its valid javascript, it will not give you the expected result.
+
+ 
 ## Specifications
 
 {{Specifications}}
