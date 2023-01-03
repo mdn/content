@@ -95,7 +95,7 @@ div {
 
 {{EmbedLiveSample('Using hsl() with conic-gradient(), ', '100%', '140px')}}
 
-### Comma-separated syntax
+### Legacy syntax: comma-separated values
 
 For legacy reasons, the `hsl()` function accepts a form in which all values are separated using commas.
 
@@ -126,7 +126,7 @@ div.comma-separated {
 
 #### Result
 
-{{EmbedLiveSample('Comma-separated syntax, ', '100%', '150px')}}
+{{EmbedLiveSample('Legacy syntax: comma-separated values', '100%', '150px')}}
 
 ## Specifications
 

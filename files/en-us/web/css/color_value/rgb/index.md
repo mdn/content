@@ -56,7 +56,7 @@ The function also accepts a legacy syntax in which all four values are separated
 
 ## Examples
 
-### Comma-separated syntax
+### Legacy syntax: comma-separated values
 
 For legacy reasons, the `rgb()` function accepts a form in which all values are separated using commas.
 
@@ -87,7 +87,7 @@ div.comma-separated {
 
 #### Result
 
-{{EmbedLiveSample('Comma-separated syntax, ', '100%', '150px')}}
+{{EmbedLiveSample('Legacy syntax: comma-separated values', '100%', '150px')}}
 
 ## Specifications
 
