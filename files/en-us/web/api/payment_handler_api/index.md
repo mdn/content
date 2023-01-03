@@ -119,14 +119,10 @@ From the payment method manifest, the browser gets the URL of the default paymen
 }
 ```
 
-It first uses the information found in each manifest to present the payment apps to the user in the browser-provided Payment Request UI in the merchant app ([`name`](/en-US/docs/Web/Manifest/name), [`icons`](/en-US/docs/Web/Manifest/icons)).
+When the {{domxref("PaymentRequest.show()")}} method is invoked by the merchant app in response to a user gesture, the browser uses the information found in each manifest to present the payment apps to the user in the browser-provided Payment Request UI ([`name`](/en-US/docs/Web/Manifest/name), [`icons`](/en-US/docs/Web/Manifest/icons)).
 
-Next, the {{domxref("PaymentRequest.show()")}} method should be invoked by the merchant app in response to a user gesture:
-
-- If there are multiple payment app options, a list of options is presented to the user from them to choose from.
-- If there is only one payment app option, the user gesture is still required to continue — along the lines of clicking a "proceed to payment" button.
-
-This starts the payment flow, which causes the browser to Just-In-Time (JIT) install the web app, registering the service worker specified in [`serviceworker`](/en-US/docs/Web/Manifest/serviceworker) so it can handle the payment.
+- If there are multiple payment app options, a list of options is presented to the user for them to choose from. Selecting a payment app will start the payment flow, which causes the browser to Just-In-Time (JIT) install the web app if necessary, registering the service worker specified in the [`serviceworker`](/en-US/docs/Web/Manifest/serviceworker) member so it can handle the payment.
+- If there is only one payment app option, the {{domxref("PaymentRequest.show()")}} method will start the payment flow with this payment app, JIT-installing it if necessary, as described above. This is an optimization to avoid presenting the user with a list that contains only one payment app choice.
 
 > **Note:** If [`prefer_related_applications`](/en-US/docs/Web/Manifest/prefer_related_applications) is set to `true` in the payment app manifest, the browser will launch the platform-specific payment app specified in [`related_applications`](/en-US/docs/Web/Manifest/related_applications) to handle the payment (if it is available) instead of the web payment app.
 
