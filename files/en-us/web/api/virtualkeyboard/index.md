@@ -26,14 +26,14 @@ You access the `VirtualKeyboard` interface by using {{domxref("navigator.virtual
 
 _The `VirtualKeyboard` interface doesn't inherit any properties._
 
-- {{DOMxRef("VirtualKeyboard.boundingRect")}} {{ReadOnlyInline}}
+- {{DOMxRef("VirtualKeyboard.boundingRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{domxref("DOMRect")}} that describes the geometry of the virtual keyboard.
-- {{DOMxRef("VirtualKeyboard.overlaysContent")}}
+- {{DOMxRef("VirtualKeyboard.overlaysContent")}} {{Experimental_Inline}}
   - : A {{jsxref('Boolean')}} that defines whether the browser should stop handling the on-screen virtual keyboard.
 
 ### Events
 
-- {{domxref("VirtualKeyboard.geometrychange_event", "geometrychange")}}
+- {{domxref("VirtualKeyboard.geometrychange_event", "geometrychange")}} {{Experimental_Inline}}
   - : Fires when the geometry of the on-screen virtual keyboard changes, which happens when the virtual keyboard appears or disappears.
 
 ## Instance methods

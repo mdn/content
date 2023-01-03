@@ -12,7 +12,7 @@ tags:
 browser-compat: api.Navigator.virtualKeyboard
 ---
 
-{{APIRef("VirtualKeyboard")}}
+{{APIRef("VirtualKeyboard")}}{{SeeCompatTable}}
 
 The **`virtualKeyboard`** read-only property
 of the {{domxref("navigator")}} interface returns a reference to the {{domxref("VirtualKeyboard")}} instance object.
