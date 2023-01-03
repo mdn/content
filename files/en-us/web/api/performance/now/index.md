@@ -105,7 +105,7 @@ isolate your document using the {{HTTPHeader("Cross-Origin-Opener-Policy")}} and
 
 ```plain
 Cross-Origin-Opener-Policy: same-origin
-Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Embedder-Policy: require-corp | credentialless
 ```
 
 These headers ensure a top-level document does not share a browsing context group with

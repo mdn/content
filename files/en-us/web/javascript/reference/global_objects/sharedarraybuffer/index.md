@@ -43,11 +43,11 @@ As a baseline requirement, your document needs to be in a [secure context](/en-U
 For top-level documents, two headers need to be set to cross-origin isolate your site:
 
 - [`Cross-Origin-Opener-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) with `same-origin` as value (protects your origin from attackers)
-- [`Cross-Origin-Embedder-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) with `require-corp` as value (protects victims from your origin)
+- [`Cross-Origin-Embedder-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) with `require-corp` or `credentialless` as value (protects victims from your origin)
 
 ```http
 Cross-Origin-Opener-Policy: same-origin
-Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Embedder-Policy: require-corp | credentialless
 ```
 
 To check if cross origin isolation has been successful, you can test against the [`crossOriginIsolated`](/en-US/docs/Web/API/crossOriginIsolated) property available to window and worker contexts:

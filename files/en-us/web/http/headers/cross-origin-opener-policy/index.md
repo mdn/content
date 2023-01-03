@@ -56,7 +56,7 @@ Certain features like {{jsxref("SharedArrayBuffer")}} objects or {{domxref("Perf
 
 ```http
 Cross-Origin-Opener-Policy: same-origin
-Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Embedder-Policy: require-corp | credentialless
 ```
 
 See also the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header which you'll need to set as well.
