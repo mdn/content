@@ -33,12 +33,18 @@ margin: rem(14%, 3%);       /* 2% */
 margin: rem(18px, 5px);     /* 3px */
 margin: rem(10rem, 6rem);   /* 4rem */
 margin: rem(26vmin, 7vmin); /* 5vmin */
+margin: rem(1000px, 29rem); /* 72px - if root font-size is 16px */
 
 /* Negative/positive values */
 rotate: rem(200deg, 30deg);  /* 20deg */
 rotate: rem(140deg, -90deg); /* 50deg */
 rotate: rem(-90deg, 20deg);  /* -10deg */
 rotate: rem(-55deg, -15deg); /* -10deg */
+
+/* Calculations */
+scale: rem(10 * 2, 1.7);         /* 1.3 */
+rotate: rem(10turn, 18turn / 3); /* 4turn */
+transition-duration: rem(20s / 2, 3000ms * 2); /* 4s */	
 ```
 
 ### Parameter
