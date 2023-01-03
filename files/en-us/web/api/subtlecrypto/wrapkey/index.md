@@ -84,7 +84,7 @@ The promise is rejected when one of the following exceptions is encountered:
 ## Supported algorithms
 
 All [algorithms that are usable for encryption](/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms) are also usable for key wrapping, as long as the key has the "wrapKey" usage set.
-For key wrapping you have the additional option of AES-KW.
+For key wrapping you have the additional option of [AES-KW](#aes-kw).
 
 ### AES-KW
 
@@ -101,7 +101,8 @@ AES-KW is specified in [RFC 3394](https://datatracker.ietf.org/doc/html/rfc3394)
 
 ### Raw wrap
 
-This example wraps an AES key. It uses "raw" as the export format and AES-KW, with a password-derived key, to encrypt it. [See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/raw.js).
+This example wraps an AES key.
+It uses "raw" as the export format and AES-KW, with a password-derived key, to encrypt it. [See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/raw.js).
 
 ```js
 let salt;
@@ -255,8 +256,7 @@ window.crypto.subtle
 
 ### SubjectPublicKeyInfo wrap
 
-This example wraps an RSA public encryption key. It uses "spki" as the export format
-and AES-CBC, with a password-derived key, to encrypt it.
+This example wraps an RSA public encryption key. It uses "spki" as the export format and AES-CBC, with a password-derived key, to encrypt it.
 [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/spki.js)
 
 ```js
@@ -336,8 +336,7 @@ window.crypto.subtle
 
 ### JSON Web Key import
 
-This code wraps an ECDSA private signing key. It uses "jwk" as the export format and
-AES-GCM, with a password-derived key, to encrypt it.
+This code wraps an ECDSA private signing key. It uses "jwk" as the export format and AES-GCM, with a password-derived key, to encrypt it.
 [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/jwk.js)
 
 ```js
