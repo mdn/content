@@ -7355,8 +7355,6 @@
 /en-US/docs/Web/API/AbstractWorker	/en-US/docs/Web/API/Worker
 /en-US/docs/Web/API/AbstractWorker.onerror	/en-US/docs/Web/API/Worker/error_event
 /en-US/docs/Web/API/AbstractWorker/onerror	/en-US/docs/Web/API/Worker/error_event
-/en-US/docs/Web/API/AesCbcParams	/en-US/docs/Web/API/SubtleCrypto/encrypt
-/en-US/docs/Web/API/AesCtrParams	/en-US/docs/Web/API/SubtleCrypto/encrypt
 /en-US/docs/Web/API/AmbientLightSensor/reading	/en-US/docs/Web/API/AmbientLightSensor/illuminance
 /en-US/docs/Web/API/AmbientLightSensorReading	/en-US/docs/Web/API/AmbientLightSensor
 /en-US/docs/Web/API/AmbientLightSensorReading/AmbientLightSensorReading	/en-US/docs/Web/API/AmbientLightSensor/AmbientLightSensor
@@ -9473,7 +9471,6 @@
 /en-US/docs/Web/API/RotationRate.alpha	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
 /en-US/docs/Web/API/RotationRate.beta	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
 /en-US/docs/Web/API/RotationRate.gamma	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
-/en-US/docs/Web/API/RsaOaepParams	/en-US/docs/Web/API/SubtleCrypto/encrypt
 /en-US/docs/Web/API/SVGAElement/SVGAlement.target	/en-US/docs/Web/API/SVGAElement/target
 /en-US/docs/Web/API/SVGAnimatedPoints	/en-US/docs/Web/API/SVGPolygonElement
 /en-US/docs/Web/API/SVGAnimationElement/onbegin	/en-US/docs/Web/API/SVGAnimationElement/beginEvent_event
