@@ -17,7 +17,7 @@ The **`setSinkId()`** method of the {{domxref("AudioContext")}} interface sets t
 
 To use this method, the user must grant `'speaker-selection'` permission via the [Permissions API](/en-US/docs/Web/API/Permissions_API), or via a {{domxref("MediaDevices.getUserMedia()")}} call.
 
-In addition, this feature may be blocked by a [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
+In addition, this feature may be blocked by a [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ## Syntax
 
@@ -38,7 +38,7 @@ setSinkId(sinkId)
 
 A {{jsxref("Promise")}} that fulfills with a value of `undefined`.
 
-Attempting to set the Sink ID to its existing value (i.e. returned by {{domxref("AudioContext.sinkId")}}), throws no errors, but it aborts the process immediately.
+Attempting to set the sink ID to its existing value (i.e. returned by {{domxref("AudioContext.sinkId")}}), throws no errors, but it aborts the process immediately.
 
 ### Exceptions
 
