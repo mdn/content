@@ -58,7 +58,7 @@ For more details, see the {{jsxref("Date.parse()")}} documentation.
 
 ```js example-good
 new Date('05 October 2011 14:48 UTC');
-new Date(1317826080); // Unix Time Stamp for 05 October 2011 14:48:00 UTC
+new Date(1317826080); // Unix Timestamp for 05 October 2011 14:48:00 UTC
 ```
 
 ## See also

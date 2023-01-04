@@ -19,7 +19,7 @@ browser-compat: javascript.builtins.Math.min
 
 {{JSRef}}
 
-The **`Math.min()`** function returns the smallest of the numbers given as input parameters, or {{jsxref("Infinity")}} if there are no parameters.
+The **`Math.min()`** static method returns the smallest of the numbers given as input parameters, or {{jsxref("Infinity")}} if there are no parameters.
 
 {{EmbedInteractiveExample("pages/js/math-min.html")}}
 

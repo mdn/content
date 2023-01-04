@@ -35,7 +35,7 @@ startsWith(searchString, position)
 
 ### Return value
 
-**`true`** if the given characters are found at the beginning of the string; otherwise, **`false`**.
+**`true`** if the given characters are found at the beginning of the string, including when `searchString` is an empty string; otherwise, **`false`**.
 
 ### Exceptions
 
