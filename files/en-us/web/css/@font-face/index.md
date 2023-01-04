@@ -58,65 +58,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 - {{cssxref("@font-face/size-adjust", "size-adjust")}}
   - : Defines a multiplier for glyph outlines and metrics associated with this font. This makes it easier to harmonize the designs of various fonts when rendered at the same font size.
 - {{cssxref("@font-face/src", "src")}}
-
-  - : Specifies font resources.
-
-    A comma-separated list representing the resource fallback order, where each resource is specified using `url()` or `local()`.
-    The first resource in the list that loads successfully will be used and subsequent items are ignored.
-    If multiple `src` descriptors are set, only the last declared rule that is able to load a resource is applied.
-
-    > **Note:** Items that the browser considers invalid are ignored.
-    > Some browsers will ignore the whole descriptor if any item is invalid, even if only one item is invalid.
-    > This may affect design of your fallbacks.
-
-    The `url()` can be followed by `format()` and `tech()`, like this:
-
-    ```css
-    src: local("Trickster"),
-      url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1), url("trickster-outline.otf")
-        format("opentype"), url("trickster-outline.woff") format("woff");
-    ```
-
-    `url()`: Specifies the URL of a font file, like any other `url()` in CSS. If the font file is a container for multiple fonts, a fragment identifier is included to indicate which sub-font should be used, as follows:
-
-    ```css
-    src: url(collection.otc#WhichFont); /* WhichFont is the PostScript name of a font in the font file */
-    src: url(fonts.svg#WhichFont); /* WhichFont is the element id of a font in the SVG Font file */
-    ```
-
-    `local()`: Specifies the font name should the font be available on the user's device. Quoting the font name is optional.
-
-    > **Note:** The {{domxref("Local Font Access API", "Local Font Access API", "", "nocode")}} can be used to access the user's locally installed font data — this includes higher-level details such as names, styles, and families, as well as the raw bytes of the underlying font files.
-
-    `format()`: **Optional**. Specifies the font format. If the value is not supported or invalid, the browser may not download the resource, potentially saving bandwidth. If omitted, the browser will always download the resource and then detect the format. The preferred value type is a _keyword_, which can also be given as a _string_ (within quotes) for backward compatibility reasons.
-
-    The following table shows the valid values and their corresponding font formats. There are a few other possible values, see next paragraph.
-
-    | Keyword             | Font Format           | Common extensions |
-    | ------------------- | --------------------- | ----------------- |
-    | `woff2`             | WOFF 2.0              | .woff2            |
-    | `woff`              | WOFF 1.0              | .woff             |
-    | `opentype`          | OpenType              | .otf, .ttf        |
-    | `truetype`          | TrueType              | .ttf              |
-    | `collection`        | OpenType Collection   | .otc, .ttc        |
-    | `embedded-opentype` | Embedded OpenType     | .eot              |
-    | `svg`               | SVG Font (deprecated) | .svg, .svgz       |
-
-    > **Note:** The values `opentype` and `truetype` are completely equivalent, regardless of whether the font file uses cubic bezier curves (within CFF/CFF2 table) or quadratic bezier curves (within glyph table).
-
-    `tech()`: **Optional**. {{Experimental_inline}} Value is one of the following _keywords_: `variations`, `palettes`, `incremental`, `features-opentype`, `features-aat`, `features-graphite`, `color-COLRv0`, `color-COLRv1`, `color-SVG`, `color-sbix`, `color-CBDT`.
-
-    The following table shows several old unnormalized `format()` values and their new equivalent syntax:
-
-    | Old syntax                      | Equivalent syntax                   |
-    | ------------------------------- | ----------------------------------- |
-    | `format("woff2-variations")`    | `format(woff2) tech(variations)`    |
-    | `format("woff-variations")`     | `format(woff) tech(variations)`     |
-    | `format("opentype-variations")` | `format(opentype) tech(variations)` |
-    | `format("truetype-variations")` | `format(truetype) tech(variations)` |
-
-    > **Note:** `format(svg)` stands for [SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts), and `tech(color-SVG)` stands for [OpenType fonts with SVG table](https://learn.microsoft.com/en-us/typography/opentype/spec/svg) (also called OpenType-SVG color fonts), which are completely different.
-
+  - : Specifies references to font resources including hints about the font format and technology.
 - {{cssxref("@font-face/unicode-range", "unicode-range")}}
   - : The range of Unicode code points to be used from the font.
 
@@ -220,7 +162,8 @@ For example:
 ```css
 @font-face {
   font-family: "MgOpenModernaBold";
-  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental), url("MgOpenModernaBold.otf") format(opentype);
+  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental), url("MgOpenModernaBold.otf")
+      format(opentype);
 }
 ```
 
@@ -235,7 +178,8 @@ Note that multiple `src` descriptors are attempted in reverse-order, so at the e
   font-family: "MgOpenModernaBold";
   src: url("MgOpenModernaBold.otf") format(opentype);
   src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental);
-  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental), url("MgOpenModernaBold.otf") format(opentype);
+  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental), url("MgOpenModernaBold.otf")
+      format(opentype);
 }
 ```
 
