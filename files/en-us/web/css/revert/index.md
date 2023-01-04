@@ -37,7 +37,7 @@ Revert will not affect rules applied to children of an element you reset (but wi
 
 ## Examples
 
-### Revert vs. unset
+### Difference between revert and unset
 
 Although `revert` and `unset` are similar, they differ for some properties for some elements.
 

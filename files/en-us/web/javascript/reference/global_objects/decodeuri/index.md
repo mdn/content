@@ -64,7 +64,7 @@ decodeURI(
 // "https://developer.mozilla.org/ru/docs/JavaScript_шеллы"
 ```
 
-### decodeURI() vs. decodeURIComponent()
+### Comparing decodeURI() and decodeURIComponent()
 
 `decodeURI()` assumes the input is a full URI, so it does not decode characters that are part of the URI syntax.
 
