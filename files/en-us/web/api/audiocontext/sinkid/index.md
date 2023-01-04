@@ -48,7 +48,7 @@ playBtn.addEventListener('click', () => {
 
   if(audioCtx.sinkId === '') {
     console.log('Audio playing on default device');
-  } else if(typeof audioCtx.sinkId === 'object') {
+  } else if(typeof audioCtx.sinkId === 'object' && audioCtx.sinkId.type === 'none') {
     console.log('Audio not playing on any device');
   } else {
     console.log(`Audio playing on device ${ audioCtx.sinkId }`);

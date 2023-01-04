@@ -15,7 +15,7 @@ browser-compat: api.AudioContext.setSinkId
 
 The **`setSinkId()`** method of the {{domxref("AudioContext")}} interface sets the output audio device for the `AudioContext`. If a sink ID is not explicitly set, the default system audio output device will be used.
 
-To use this method, the user must grant `'speaker-selection'` permission via the [Permissions API](/en-US/docs/Web/API/Permissions_API), or via a {{domxref("MediaDevices.getUserMedia()")}} call.
+To use this method, the developer needs access to audio devices. If required, the user can be prompted to grant the required permission via a {{domxref("MediaDevices.getUserMedia()")}} call.
 
 In addition, this feature may be blocked by a [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
@@ -45,7 +45,7 @@ Attempting to set the sink ID to its existing value (i.e. returned by {{domxref(
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if accessing the selected audio output device failed.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if the browser does not have the `speaker-selection` permission granted, as discussed in the article introduction above.
+  - : Thrown if the browser does not have permission to access audio devices.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if the passed `sinkId` does not match any audio device found on the system.
 
@@ -61,18 +61,20 @@ We also provide the user with a dropdown menu to allow them to change the audio 
    mediaDeviceBtn.addEventListener('click', async () => {
      selectDiv.innerHTML = '';
 
-     await navigator.mediaDevices.getUserMedia({audio: true, video: true});
+     await navigator.mediaDevices.getUserMedia({ audio: true });
      const devices = await navigator.mediaDevices.enumerateDevices();
 
      // Most of the DOM scripting to generate the dropdown cut out for brevity
 
-     devices.forEach((device) => {
-       if(device.kind === 'audiooutput' && device.deviceId !== 'default') {
-         const option = document.createElement('option')
-         option.value = device.deviceId;
-         option.textContent = device.label;
-         select.appendChild(option);
-       }
+     const audioOutputs = devices.filter(
+        (device) => device.kind === 'audiooutput' && device.deviceId !== 'default'
+     );
+
+     audioOutputs.forEach((device) => {
+       const option = document.createElement('option')
+       option.value = device.deviceId;
+       option.textContent = device.label;
+       select.appendChild(option);
      });
 
      const option = document.createElement('option')
@@ -90,9 +92,9 @@ We also provide the user with a dropdown menu to allow them to change the audio 
 
      select.addEventListener('change', async () => {
        if(select.value === 'none') {
-         audioCtx.setSinkId({ type : 'none' });
+         await audioCtx.setSinkId({ type : 'none' });
        } else {
-         audioCtx.setSinkId(select.value);
+         await audioCtx.setSinkId(select.value);
        }
      })
    });
