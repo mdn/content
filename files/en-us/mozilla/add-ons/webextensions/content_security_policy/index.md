@@ -122,7 +122,7 @@ For Chrome, extensions cannot use WebAssembly in version 101 or earlier. In 102,
 
 ### Upgrade insecure network requests in Manifest V3
 
-Extensions should use `https:` and `wss:` when communicating with external servers. To encourage this as the default behavior, the default Manifest V3 CSP includes the {{CSP("upgrade-insecure-requests")}} directive. This directive automatically upgrades network requests to `http:` to use `https:`.
+Extensions should use `https:` and `wss:` when communicating with external servers. To encourage this as the standard behavior, the default Manifest V3 CSP includes the {{CSP("upgrade-insecure-requests")}} directive. This directive automatically upgrades network requests to `http:` to use `https:`.
 
 While requests are automatically updated, it is still recommended to use `https:`-URLs in the extension's source code where possible. In particular, entries in the [`host_permissions` section of manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) should start with `https://` or `*://` instead of only `http://`.
 
