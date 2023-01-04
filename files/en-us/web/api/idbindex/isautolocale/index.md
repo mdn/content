@@ -18,7 +18,7 @@ browser-compat: api.IDBIndex.isAutoLocale
 
 {{APIRef("IndexedDB")}}{{SeeCompatTable}}{{Non-standard_Header}}
 
-The **`isAutoLocale`** read-only property of the {{domxref("IDBIndex")}} interface returns a boolean value indicating whether the index had a `locale` value of `auto` specified upon its creation (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).)
+The **`isAutoLocale`** read-only property of the {{domxref("IDBIndex")}} interface returns a boolean value indicating whether the index had a `locale` value of `auto` specified upon its creation (see [`createIndex()`'s parameter `options`](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).)
 
 ## Value
 
