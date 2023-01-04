@@ -47,7 +47,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
   - : Returns a number representing the width of the top border of the element.
 - {{DOMxRef("Element.clientWidth")}} {{ReadOnlyInline}}
   - : Returns a number representing the inner width of the element.
-- {{DOMxRef("Element.elementTiming")}}
+- {{DOMxRef("Element.elementTiming")}} {{Experimental_Inline}}
   - : A string reflecting the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute which marks an element for observation in the {{domxref("PerformanceElementTiming")}} API.
 - {{domxref("Element.firstElementChild")}} {{ReadOnlyInline}}
   - : Returns the first child element of this element.
