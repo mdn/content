@@ -1,6 +1,6 @@
 ---
-title: firewall
-slug: Glossary/firewall
+title: Firewall
+slug: Glossary/Firewall
 tags:
   - DDoS
   - Firewall

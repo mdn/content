@@ -221,19 +221,19 @@ For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Cont
 
 - Host
 
-  - Only allow loading of resources from a specific host, with optional scheme, port, and path. e.g. `example.com`, `*.example.com`, `https://*.example.com:12/path/to/file.js`
-  - Path parts in the CSP that end in `/` match any path they are a prefix of. e.g. `example.com/api/` will match URLs like `example.com/api/users/new`.
-  - Other path parts in the CSP are matched exactly e.g. `example.com/file.js` will match `http://example.com/file.js` and `https://example.com/file.js`, but not `https://example.com/file.js/file2.js`
+  - Only allow loading of resources from a specific host, with optional scheme, port, and path. For example, `example.com`, `*.example.com`, `https://*.example.com:12/path/to/file.js`.
+  - Path parts in the CSP that end in `/` match any path they are a prefix of. For example, `example.com/api/` will match URLs like `example.com/api/users/new`.
+  - Other path parts in the CSP are matched exactly; for example, `example.com/file.js` will match `http://example.com/file.js` and `https://example.com/file.js`, but not `https://example.com/file.js/file2.js`.
 
 - Scheme
-  - Only allow loading of resources over a specific scheme, should always end with "`:`". e.g. `https:`, `http:`, `data:` etc.
+  - Only allow loading of resources over a specific scheme, should always end with "`:`". For example, `https:`, `http:`, `data:`, etc.
 
 ### Other values
 
 - nonce-\*
-  - : A cryptographic nonce (only used once) to allow scripts. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial. This is used in conjunction with the [script tag nonce attribute](/en-US/docs/Web/HTML/Element/script#attr-nonce). e.g. `nonce-DhcnhD3khTMePgXwdayK9BsMqXjhguVV`
+  - : A cryptographic nonce (only used once) to allow scripts. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial. This is used in conjunction with the [script tag nonce attribute](/en-US/docs/Web/HTML/Element/script#attr-nonce). For example, `nonce-DhcnhD3khTMePgXwdayK9BsMqXjhguVV`.
 - sha\*-\*
-  - : sha256, sha384, or sha512. followed by a dash and then the sha\* value. e.g. `sha256-jzgBGA4UWFFmpOBq0JpdsySukE1FrEN5bUpoK8Z29fY=`
+  - : sha256, sha384, or sha512. Followed by a dash and then the sha\* value. For example, `sha256-jzgBGA4UWFFmpOBq0JpdsySukE1FrEN5bUpoK8Z29fY=`.
 
 ## CSP in workers
 

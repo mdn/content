@@ -1,6 +1,6 @@
 ---
 title: RTL (Right to Left)
-slug: Glossary/rtl
+slug: Glossary/RTL
 tags:
   - Composing
   - Localization

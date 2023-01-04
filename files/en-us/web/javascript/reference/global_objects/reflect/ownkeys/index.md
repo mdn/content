@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Reflect.ownKeys
 
 {{JSRef}}
 
-The static **`Reflect.ownKeys()`** method returns an array of
+The **`Reflect.ownKeys()`** static method returns an array of
 the `target` object's own property keys.
 
 {{EmbedInteractiveExample("pages/js/reflect-ownkeys.html")}}
