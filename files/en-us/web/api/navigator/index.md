@@ -79,7 +79,7 @@ _Doesn't inherit any properties._
   - : Returns the user agent string for the current browser.
 - {{domxref("Navigator.userAgentData")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("NavigatorUAData")}} object, which gives access to information about the browser and operating system of the user.
-- {{domxref("Navigator.virtualKeyboard")}} {{ReadOnlyInline}}
+- {{domxref("Navigator.virtualKeyboard")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a reference to the {{domxref("VirtualKeyboard")}} API, to take control of the on-screen virtual keyboard.
 - {{domxref("Navigator.webdriver")}} {{ReadOnlyInline}}
   - : Indicates whether the user agent is controlled by automation.

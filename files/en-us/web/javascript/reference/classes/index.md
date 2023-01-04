@@ -19,7 +19,9 @@ Classes are a template for creating objects. They encapsulate data with code to 
 
 For more examples and explanations, see the [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes) guide.
 
-## Defining classes
+## Description
+
+### Defining classes
 
 Classes are in fact "special [functions](/en-US/docs/Web/JavaScript/Reference/Functions)", and just as you can define [function expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function) and [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function), a class can be defined in two ways: a [class expression](/en-US/docs/Web/JavaScript/Reference/Operators/class) or a [class declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class).
 
@@ -51,7 +53,7 @@ const Rectangle = class Rectangle2 {
 
 Like function expressions, class expressions may be anonymous, or have a name that's different from the variable that it's assigned to. However, unlike function declarations, class declarations have the same [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) restrictions as `let` or `const` and behave as if they are [not hoisted](/en-US/docs/Web/JavaScript/Guide/Using_Classes#class_declaration_hoisting).
 
-## Class body
+### Class body
 
 The body of a class is the part that is in curly brackets `{}`. This is where you define class members, such as methods or constructor.
 
@@ -80,23 +82,34 @@ Together, they add up to 16 possible combinations. To divide the reference more 
 
 In addition, there are two special class element syntaxes: [`constructor`](#constructor) and [static initialization blocks](#static_initialization_blocks), with their own references.
 
-### Constructor
+#### Constructor
 
-The {{jsxref("Classes/constructor", "constructor", "", "true")}} method is a special method for creating and initializing an object created with a `class`.
-There can only be one special method with the name "constructor" in a class.
-A {{jsxref("SyntaxError")}} will be thrown if the class contains more than one occurrence of a `constructor` method.
+The {{jsxref("Classes/constructor", "constructor")}} method is a special method for creating and initializing an object created with a class. There can only be one special method with the name "constructor" in a class — a {{jsxref("SyntaxError")}} is thrown if the class contains more than one occurrence of a `constructor` method.
 
-A constructor can use the `super` keyword to call the constructor of the super class.
+A constructor can use the [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super) keyword to call the constructor of the super class.
 
-### Static initialization blocks
+You can create instance properties inside the constructor:
 
-[Static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks) allow flexible initialization of [static properties](#static_methods_and_properties) including the evaluation of statements during initialization, and granting access to private scope.
+```js
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+}
+```
 
-Multiple static blocks can be declared, and these can be interleaved with the declaration of static properties and methods (all static items are evaluated in declaration order).
+Alternatively, if your instance properties' values do not depend on the constructor's arguments, you can define them as [class fields](#public_field_declarations).
 
-### Prototype methods
+#### Static initialization blocks
 
-See also {{jsxref("Functions/Method_definitions", "method definitions", "", "true")}}.
+[Static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks) allow flexible initialization of [static properties](#static_methods_and_fields), including the evaluation of statements during initialization, while granting access to the private scope.
+
+Multiple static blocks can be declared, and these can be interleaved with the declaration of static fields and methods (all static items are evaluated in declaration order).
+
+#### Methods
+
+Methods are defined on the prototype of each class instance and are shared by all instances. Methods can be plain functions, async functions, generator functions, or async generator functions. For more information, see [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions).
 
 ```js
 class Rectangle {
@@ -112,40 +125,23 @@ class Rectangle {
   calcArea() {
     return this.height * this.width;
   }
+  *getSides() {
+    yield this.height;
+    yield this.width;
+    yield this.height;
+    yield this.width;
+  }
 }
 
 const square = new Rectangle(10, 10);
 
 console.log(square.area); // 100
+console.log([...square.getSides()]); // [10, 10, 10, 10]
 ```
 
-### Generator methods
+#### Static methods and fields
 
-See also [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators).
-
-```js
-class Polygon {
-  constructor(...sides) {
-    this.sides = sides;
-  }
-  // Method
-  *getSides() {
-    for (const side of this.sides) {
-      yield side;
-    }
-  }
-}
-
-const pentagon = new Polygon(1,2,3,4,5);
-
-console.log([...pentagon.getSides()]); // [1,2,3,4,5]
-```
-
-### Static methods and fields
-
-The {{jsxref("Classes/static", "static")}} keyword defines a static method or field for a class.
-Static properties (fields and methods) are defined on the class itself instead of each instance.
-Static methods are often used to create utility functions for an application, whereas static fields are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
+The {{jsxref("Classes/static", "static")}} keyword defines a static method or field for a class. Static properties (fields and methods) are defined on the class itself instead of each instance. Static methods are often used to create utility functions for an application, whereas static fields are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
 
 ```js
 class Point {
@@ -174,71 +170,9 @@ console.log(Point.displayName);      // "Point"
 console.log(Point.distance(p1, p2)); // 7.0710678118654755
 ```
 
-### Binding `this` with prototype and static methods
+#### Field declarations
 
-When a static or prototype method is called without a value for {{jsxref("Operators/this", "this")}}, such as by assigning the method to a variable and then calling it, the `this` value will be `undefined` inside the method.
-This behavior will be the same even if the {{jsxref("Strict_mode", "\"use strict\"")}} directive isn't present, because code within the `class` body's syntactic boundary is always executed in strict mode.
-
-```js
-class Animal {
-  speak() {
-    return this;
-  }
-  static eat() {
-    return this;
-  }
-}
-
-const obj = new Animal();
-obj.speak(); // the Animal object
-const speak = obj.speak;
-speak(); // undefined
-
-Animal.eat() // class Animal
-const eat = Animal.eat;
-eat(); // undefined
-```
-
-If we rewrite the above using traditional function-based syntax in non–strict mode, then `this` method calls are automatically bound to the initial `this` value, which by default is the {{Glossary("Global_object", "global object")}}.
-In strict mode, autobinding will not happen; the value of `this` remains as passed.
-
-```js
-function Animal() { }
-
-Animal.prototype.speak = function () {
-  return this;
-}
-
-Animal.eat = function () {
-  return this;
-}
-
-const obj = new Animal();
-const speak = obj.speak;
-speak(); // global object (in non–strict mode)
-
-const eat = Animal.eat;
-eat(); // global object (in non-strict mode)
-```
-
-### Instance properties
-
-Instance properties must be defined inside of class methods:
-
-```js
-class Rectangle {
-  constructor(height, width) {
-    this.height = height;
-    this.width = width;
-  }
-}
-```
-
-### Field declarations
-
-#### Public field declarations
-
-With the JavaScript field declaration syntax, the above example can be written as:
+With the class field declaration syntax, the [constructor](#constructor) example can be written as:
 
 ```js
 class Rectangle {
@@ -253,13 +187,11 @@ class Rectangle {
 
 Class fields are similar to object properties, not variables, so we don't use keywords such as `const` to declare them. In JavaScript, [private fields](#private_field_declarations) use a special identifier syntax, so modifier keywords like `public` and `private` should not be used either.
 
-By declaring fields up-front, class definitions become more self-documenting, and the fields are always present.
+As seen above, the fields can be declared with or without a default value. Fields without default values default to `undefined`. By declaring fields up-front, class definitions become more self-documenting, and the fields are always present, which help with optimizations.
 
-As seen above, the fields can be declared with or without a default value.
+See [public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) for more information.
 
-See {{jsxref("Classes/Public_class_fields", "public class fields", "", "true")}} for more information.
-
-#### Private field declarations
+#### Private class features
 
 Using private fields, the definition can be refined as below.
 
@@ -277,15 +209,13 @@ class Rectangle {
 It's an error to reference private fields from outside of the class; they can only be read or written within the class body.
 By defining things that are not visible outside of the class, you ensure that your classes' users can't depend on internals, which may change from version to version.
 
-> **Note:** Private fields can only be declared up-front in a field declaration.
+Private fields can only be declared up-front in a field declaration. They cannot be created later through assigning to them, the way that normal properties can.
 
-Private fields cannot be created later through assigning to them, the way that normal properties can.
+For more information, see [private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields).
 
-For more information, see {{jsxref("Classes/Private_class_fields", "private class features", "", "true")}}.
+### Inheritance
 
-## Sub classing with `extends`
-
-The {{jsxref("Classes/extends", "extends")}} keyword is used in _class declarations_ or _class expressions_ to create a class as a child of another class.
+The {{jsxref("Classes/extends", "extends")}} keyword is used in _class declarations_ or _class expressions_ to create a class as a child of another constructor (either a class or a function).
 
 ```js
 class Animal {
@@ -308,83 +238,11 @@ class Dog extends Animal {
   }
 }
 
-const d = new Dog('Mitzie');
+const d = new Dog("Mitzie");
 d.speak(); // Mitzie barks.
 ```
 
-If there is a constructor present in the subclass, it needs to first call super() before using "this".
-
-One may also extend traditional function-based "classes":
-
-```js
-function Animal(name) {
-  this.name = name;
-}
-
-Animal.prototype.speak = function () {
-  console.log(`${this.name} makes a noise.`);
-}
-
-class Dog extends Animal {
-  speak() {
-    console.log(`${this.name} barks.`);
-  }
-}
-
-const d = new Dog('Mitzie');
-d.speak(); // Mitzie barks.
-
-// For similar methods, the child's method takes precedence over parent's method
-```
-
-Note that classes cannot extend regular (non-constructible) objects.
-If you want to inherit from a regular object, you can instead use {{jsxref("Object.setPrototypeOf()")}}:
-
-```js
-const Animal = {
-  speak() {
-    console.log(`${this.name} makes a noise.`);
-  }
-};
-
-class Dog {
-  constructor(name) {
-    this.name = name;
-  }
-}
-
-// If you do not do this you will get a TypeError when you invoke speak
-Object.setPrototypeOf(Dog.prototype, Animal);
-
-const d = new Dog('Mitzie');
-d.speak(); // Mitzie makes a noise.
-```
-
-## Species
-
-You might want to return {{jsxref("Array")}} objects in your derived array class `MyArray`.
-The species pattern lets you override default constructors.
-
-For example, when using methods such as {{jsxref("Array.prototype.map()")}} that returns the default constructor, you want these methods to return a parent `Array` object, instead of the `MyArray` object.
-The {{jsxref("Symbol.species")}} symbol lets you do this:
-
-```js
-class MyArray extends Array {
-  // Overwrite species to the parent Array constructor
-  static get [Symbol.species]() { return Array; }
-}
-
-const a = new MyArray(1, 2, 3);
-const mapped = a.map((x) => x * x);
-
-console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array);   // true
-```
-
-## Super class calls with `super`
-
-The {{jsxref("Operators/super", "super")}} keyword is used to call corresponding methods of super class.
-This is one advantage over prototype-based inheritance.
+If there is a constructor present in the subclass, it needs to first call `super()` before using `this`. The {{jsxref("Operators/super", "super")}} keyword can also be used to call corresponding methods of super class.
 
 ```js
 class Cat {
@@ -404,43 +262,58 @@ class Lion extends Cat {
   }
 }
 
-const l = new Lion('Fuzzy');
+const l = new Lion("Fuzzy");
 l.speak();
 // Fuzzy makes a noise.
 // Fuzzy roars.
 ```
 
-## Mix-ins
+## Examples
 
-Abstract subclasses or _mix-ins_ are templates for classes.
-An ECMAScript class can only have a single superclass, so multiple inheritance from tooling classes, for example, is not possible.
-The functionality must be provided by the superclass.
+### Binding this with instance and static methods
 
-A function with a superclass as input and a subclass extending that superclass as output can be used to implement mix-ins in ECMAScript:
+When a static or instance method is called without a value for {{jsxref("Operators/this", "this")}}, such as by assigning the method to a variable and then calling it, the `this` value will be `undefined` inside the method. This behavior is the same even if the {{jsxref("Strict_mode", "\"use strict\"")}} directive isn't present, because code within the `class` body is always executed in strict mode.
 
 ```js
-const calculatorMixin = (Base) => class extends Base {
-  calc() { }
-};
+class Animal {
+  speak() {
+    return this;
+  }
+  static eat() {
+    return this;
+  }
+}
 
-const randomizerMixin = (Base) => class extends Base {
-  randomize() { }
-};
+const obj = new Animal();
+obj.speak(); // the Animal object
+const speak = obj.speak;
+speak(); // undefined
+
+Animal.eat() // class Animal
+const eat = Animal.eat;
+eat(); // undefined
 ```
 
-A class that uses these mix-ins can then be written like this:
+If we rewrite the above using traditional function-based syntax in non–strict mode, then `this` method calls are automatically bound to {{jsxref("globalThis")}}. In strict mode, the value of `this` remains as `undefined`.
 
 ```js
-class Foo { }
-class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
+function Animal() {}
+
+Animal.prototype.speak = function () {
+  return this;
+}
+
+Animal.eat = function () {
+  return this;
+}
+
+const obj = new Animal();
+const speak = obj.speak;
+speak(); // global object (in non–strict mode)
+
+const eat = Animal.eat;
+eat(); // global object (in non-strict mode)
 ```
-
-## Re-running a class definition
-
-A class can't be redefined.
-Attempting to do so produces a `SyntaxError`.
-
-If you're experimenting with code in a web browser, such as the Firefox Web Console (**Tools** > **Web Developer** > **Web Console**) and you 'Run' a definition of a class with the same name twice, you'll get a `SyntaxError: redeclaration of let ClassName;`. (See further discussion of this issue in {{Bug(1428672)}}.) Doing something similar in Chrome Developer Tools gives you a message like `Uncaught SyntaxError: Identifier 'ClassName' has already been declared at <anonymous>:1:1`.
 
 ## Specifications
 

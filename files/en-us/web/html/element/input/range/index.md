@@ -73,11 +73,11 @@ This value must be less than or equal to the value of the [`max`](/en-US/docs/We
 
 ### step
 
-The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
+The `step` attribute is a number that specifies the granularity that the value must adhere to. Only values that match the specified stepping interval ([`min`](#min) if specified, {{htmlattrxref("value", "input")}} otherwise, or an appropriate default value if neither of those is provided) are valid.
 
-A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)). See the [Setting step to `any`](#setting_step_to_any) example for how this works in supported browsers.
+The `step` attribute can also be set to the `any` string value. This `step` value means that no stepping interval is implied and any value is allowed in the specified range (barring other constraints, such as [`min`](#min) and [`max`](#max)). See the [Setting step to the `any` value](#setting_step_to_the_any_value) example for how this works in supported browsers.
 
-> **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring to round numbers up when there are two equally close options.
+> **Note:** When the value entered by a user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round off the value to the nearest valid value, preferring to round numbers up when there are two equally close options.
 
 The default stepping value for `range` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer; for example, if you set `min` to -10 and `value` to 1.5, then a `step` of 1 will allow only values such as 1.5, 2.5, 3.5,… in the positive direction and -0.5, -1.5, -2.5,… in the negative direction. See the [HTML `step` attribute](/en-US/docs/Web/HTML/Attributes/step).
 
@@ -184,12 +184,17 @@ To help you from repeating code you can reuse that same {{HTMLElement("datalist"
 #### HTML
 
 ```html
-<label for="temp">Temperature for room 1:</label><br />
-<input type="range" id="temp" name="temp" list="values" /><br />
-<label for="temp">Temperature for room 2:</label><br />
-<input type="range" id="temp" name="temp" list="values" /><br />
-<label for="temp">Temperature for room 3:</label><br />
-<input type="range" id="temp" name="temp" list="values" />
+<p>
+  <label for="temp1">Temperature for room 1:</label>
+  <input type="range" id="temp1" name="temp1" list="values" />
+</p>
+<p>
+  <label for="temp2">Temperature for room 2:</label>
+  <input type="range" id="temp2" name="temp2" list="values" />
+<p>
+  <label for="temp3">Temperature for room 3:</label>
+  <input type="range" id="temp3" name="temp3" list="values" />
+</p>
 
 <datalist id="values">
   <option value="0" label="0"></option>
@@ -211,8 +216,8 @@ You can label tick marks by giving the `<option>` elements `label` attributes. H
 #### HTML
 
 ```html
-<label for="temp">Choose a comfortable temperature:</label><br />
-<input type="range" id="temp" name="temp" list="values" />
+<label for="tempB">Choose a comfortable temperature:</label><br />
+<input type="range" id="tempB" name="temp" list="values" />
 
 <datalist id="values">
   <option value="0" label="very cold!"></option>
