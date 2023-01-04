@@ -59,8 +59,8 @@ See [Payment Handler API > Concepts and usage](/en-US/docs/Web/API/Payment_Handl
       <td>
         A boolean that sets how the HTTP cache is used for service worker script resources during updates. It provides equivalent functionality to certain values of the <code>updateViaCache</code> option provided when a service worker is registered via JavaScript using {{domxref("ServiceWorkerContainer.register()")}}.
         <ul>
-          <li><code>true</code>: The HTTP cache will be queried for imports, but the main script will always be updated from the network. If no fresh entry is found in the HTTP cache for the imports, they're fetched from the network. Equivalent to <code>updateViaCache: imports</code>.</li>
-          <li><code>false</code>: The HTTP cache will not be used for the main script or its imports. All service worker script resources will be updated from the network. Equivalent to <code>updateViaCache: none</code>.</li>
+          <li><code>true</code>: The HTTP cache will be queried for imports, but the main script will always be updated from the network. If no fresh entry is found in the HTTP cache for the imports, they're fetched from the network. Equivalent to <code>updateViaCache: "imports"</code>.</li>
+          <li><code>false</code>: The HTTP cache will not be used for the main script or its imports. All service worker script resources will be updated from the network. Equivalent to <code>updateViaCache: "none"</code>.</li>
         </ul>
       </td>
     </tr>
