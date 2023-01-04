@@ -14,33 +14,18 @@ browser-compat: api.Window.scrollbars
 
 {{APIRef()}}
 
-The **`Window.scrollbars`** property returns the
-`scrollbars` object, whose visibility can be checked.
+Returns the `scrollbars` object.
+
+This is one of a group of `Window` properties that contain a boolean `visible` property, that used to represent whether or not a particular part of a web browser's user interface was visible.
+
+For privacy and interoperability reasons, the value of the `visible` property is now `false` if this `Window` is a popup, and `true` otherwise.
 
 ## Value
 
-A `scrollbars` object.
+An object containing a single property:
 
-## Examples
-
-The following complete HTML example shows how the `visible` property of the
-scrollbars object is used.
-
-```html
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Various DOM Tests</title>
-    <script>
-      let visibleScrollbars = window.scrollbars.visible;
-    </script>
-  </head>
-  <body>
-    <p>Various DOM Tests</p>
-  </body>
-</html>
-```
+- `visible` {{readonlyinline}}
+  - : A boolean property, `false` if this `Window` is a popup, and `true` otherwise.
 
 ## Specifications
 
