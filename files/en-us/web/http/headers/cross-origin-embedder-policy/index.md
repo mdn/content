@@ -79,7 +79,7 @@ If you enable COEP using `require-corp` and have a cross origin resource that ne
 <img src="https://thirdparty.com/img.png" crossorigin />
 ```
 
-`COEP:credentialless` can also be used as an alternative.
+A COEP value of `credentialless` can be used as an alternative.
 
 ## Specifications
 
