@@ -24,7 +24,7 @@ respondWith(response)
 ### Parameters
 
 - `response`
-  - : A {{jsxref("Promise")}} that resolves with a boolean value to signal that it is ready to handle a payment request (`true`), or not (`false`).
+  - : A {{jsxref("Promise")}} that resolves with a boolean value to signal that it is ready to handle a payment request: (`true`), or not (`false`).
 
 ### Return value
 
