@@ -13,6 +13,8 @@ The **import assertion** feature tells the host to do after-the-fact checks abou
 
 ## Syntax
 
+Assertions can be attached to any kind of `import`/`export from` statement, including default import, namespace import, etc. It follows the module specifier string and starts with the `assert` keyword.
+
 ```js
 import { exports } from "module-name" assert {};
 import { exports } from "module-name" assert { key: "data" };
@@ -25,14 +27,12 @@ export { exports } from "module-name" assert { key: "data", key2: "data2" };
 export { exports } from "module-name" assert { key: "data", key2: "data2", /* …, */ keyN: "dataN" };
 ```
 
-> **Note:** Assertions can be attached to any kind of `import`/`export from` statement, including default import, namespace import, etc.
+The grammar does not allow a line break between the `"module-name"` specifier and the `assert` keyword, in order to avoid syntactical ambiguity in the following valid code where `assert` is a variable name via [automatic semicolon insertion](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion):
 
-> **Note:** The grammar does not allow a line break between the `"module-name"` specifier and the `assert` keyword, in order to avoid syntactical ambiguity in the following valid code where `assert` is a variable name via [automatic semicolon insertion](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion):
->
-> ```js
-> import { something } from "module-name"
-> assert(something)
-> ```
+```js-nolint
+import { something } from "module-name"
+assert(something)
+```
 
 ### Parameters
 
@@ -43,7 +43,7 @@ export { exports } from "module-name" assert { key: "data", key2: "data2", /* �
 
 ## Description
 
-Import assertions allow hosts to do additional checks about the module that has just been loaded. The primary use case is to ensure that modules that are expected to be JSON are always parsed as JSON (in other words, to ensure that they are never executed with the privilege of JS code).
+Import assertions allow hosts to do additional checks about the module that has just been loaded. The primary use case is to ensure that modules that are expected to be JSON are always parsed as JSON (and are never executed with the privilege of JS code).
 
 Consider the following statement:
 
@@ -51,7 +51,7 @@ Consider the following statement:
 import data from "https://example.com/data.json";
 ```
 
-On the web, each import statement would result in a HTTP request. The response is then prepared into a JavaScript value and made available to the program by the host (i.e. the browser). For example, the response may look like this:
+On the web, each import statement results in a HTTP request. The response is then prepared into a JavaScript value and made available to the program by the host (i.e. the browser). For example, the response may look like this:
 
 ```http
 HTTP/1.1 200 OK
@@ -60,7 +60,7 @@ Content-Type: application/json; charset=utf-8
 {"name":"John"}
 ```
 
-Modules are identified and parsed only according to their served [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) — the URL file extension cannot be used to identify a file's type. In this case, the MIME type is `application/json`, which tells the host browser that the file is JSON and must be parsed as JSON. If, for some reason (the server is hijacked or bogus), the MIME type in the server response is set to `text/javascript` (for JavaScript source), then the file would be parsed and executed as code. If the "json" file actually contained malicious code, the `import` declaration would unintentionally execute external code, posing a serious security threat.
+Modules are identified and parsed only according to their served [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) — the file extension in the URL cannot be used to identify a file's type. In this case, the MIME type is `application/json`, which tells the host browser that the file is JSON and must be parsed as JSON. If, for some reason (e.g. the server is hijacked or bogus), the MIME type in the server response is set to `text/javascript` (for JavaScript source), then the file would be parsed and executed as code. If the "JSON" file actually contains malicious code, the `import` declaration would unintentionally execute external code, posing a serious security threat.
 
 Import assertions fix this problem by allowing the author to explicitly specify how a module should be validated. For example, the import statement above, which lacks an assertion, would actually fail:
 
@@ -70,7 +70,7 @@ Failed to load module script: Expected a JavaScript module script but the server
 
 Instead, you must provide an assertion to tell the host that this file must contain JSON. To validate the module's type (via MIME type), you use the assertion key called `type`. To validate that the module is a JSON module, the value is `"json"`.
 
-> **Note:** The actual assertion value does not correspond to the MIME type. It's separately specified by the WHATWG specification.
+> **Note:** The actual assertion value does not correspond directly to the MIME type. It's separately specified by the [HTML specification](https://html.spec.whatwg.org/multipage/webappapis.html#module-type-allowed).
 
 Therefore, the code above should be re-written as:
 
@@ -84,7 +84,7 @@ This does **not** change how the module is interpreted. The host already knows t
 Failed to load module script: Expected a JSON module script but the server responded with a MIME type of "text/javascript". Strict MIME type checking is enforced for module scripts per HTML spec.
 ```
 
-If the assertion is absent, browsers implicitly assume that the module is JavaScript, and fail if the module is not JavaScript (for example, JSON). This ensures that module types are always strictly validated and prevent any security risks. Other non-browser hosts are free to implement their own behavior. The specification explicitly calls out `type: "json"` to be supported — if a module is asserted to be `type: "json"` and the host does not fail this import, then it must be parsed as JSON. However, there's no behavior requirement otherwise: for imports without `type: "json"` assertions, the host may still parse it as JSON if security is not an issue in this environment.
+If the assertion is absent, browsers implicitly assume that the module is JavaScript, and fail if the module is not JavaScript (for example, JSON). This ensures that module types are always strictly validated and prevents any security risks. Other non-browser hosts are free to implement their own behavior. The specification explicitly calls out `type: "json"` to be supported — if a module is asserted to be `type: "json"` and the host does not fail this import, then it must be parsed as JSON. However, there's no behavior requirement otherwise: for imports without `type: "json"` assertions, the host may still parse it as JSON if security is not an issue in this environment.
 
 The assertion syntax is designed to be extensible — although only `type` is known to be supported, you can put arbitrary keys in the assertion bag.
 
