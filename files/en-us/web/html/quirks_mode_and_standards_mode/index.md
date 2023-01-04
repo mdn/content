@@ -1,6 +1,6 @@
 ---
 title: Quirks Mode
-slug: Web/HTML/Quirks_Mode
+slug: Web/HTML/Quirks_Mode_and_Standards_Mode
 tags:
   - Gecko
   - Guide
