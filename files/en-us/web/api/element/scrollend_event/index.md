@@ -37,13 +37,39 @@ A generic {{domxref("Event")}}.
 
 The following example shows how to use the `scrollend` event to detect when the user has stopped scrolling:
 
+```css hidden
+#scroll-box {
+  height: 100px;
+  width: 100px;
+  float: left;
+  overflow: scroll;
+  outline: 4px dotted;
+  margin: 4px;
+}
+
+#scroll-box-title {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  transform: translateX(0);
+}
+
+#large-element {
+  height: 200px;
+  width: 200px;
+}
+
+#output {
+  text-align: center;
+}
+```
+
 ```html
-<div
-  id="scroll-box"
-  style="overflow: scroll; height: 100px; width: 100px; float: left;">
-  <p style="height: 200px; width: 200px;">Scroll me!</p>
+<div id="scroll-box">
+  <p id="scroll-box-title">Scroll me!</p>
+  <p id="large-element"></p>
 </div>
-<p style="text-align: center;" id="output">Waiting on scroll events...</p>
+<p id="output">Waiting on scroll events...</p>
 ```
 
 ```js
