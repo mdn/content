@@ -12,7 +12,7 @@ tags:
   - specificity
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
 
 The aim of this lesson is to develop your understanding of some of the most fundamental concepts of CSS — the cascade, specificity, and inheritance — which control how CSS is applied to HTML and how conflicts between style declarations are resolved.
 
@@ -287,7 +287,7 @@ If you didn't fully understand the cascade, specificity, and inheritance, then d
 
 Refer back here if you start to come across strange issues with styles not applying as expected. It could be a specificity issue.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
 
 ## In this module
 
