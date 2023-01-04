@@ -52,7 +52,7 @@ The code snippet below uses the `geometrychange` event to detect when the virtua
 
 ```js
 if("virtualKeyboard" in navigator) {
-  navigator.overlaysContent = true;
+  navigator.virtualKeyboard.overlaysContent = true;
 
   navigator.virtualKeyboard.addEventListener("geometrychange", event => {
     const { x, y, width, height } = event.target.boundingRect;
