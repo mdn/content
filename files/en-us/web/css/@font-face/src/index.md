@@ -163,6 +163,9 @@ To check if a font technology is supported by a browser within CSS, use the {{cs
 
 ### Specifying font resources using url() and local()
 
+In this example, a `font-family` is defined with the name `MainText` which has two font faces.
+The first is a regular font face, and the second is a bold version of the same font family.
+
 ```css
 /* a regular font face: */
 @font-face {
@@ -173,15 +176,24 @@ To check if a font technology is supported by a browser within CSS, use the {{cs
     format("opentype");
 }
 
-/* a bold font face of the same family: */
+/* Defining a different bold font face for the same family: */
 @font-face {
   font-family: MainText;
   src: local(Gill Sans Bold), /* full font name */
     local(GillSans-Bold), /* postscript name */
     url('GillSansBold.woff') format("woff"),
     url('GillSansBold.otf') format("opentype");
-    url("GillSansBold.woff") format("woff"),
-    url("GillSansBold.otf") format("opentype");
+  font-weight: bold;
+}
+
+/* using the regular font face: */
+p {
+  font-family: MainText;
+}
+
+/* using the bold font face: */
+p.bold {
+  font-family: MainText;
   font-weight: bold;
 }
 ```
@@ -197,6 +209,11 @@ A color font will be activated if the user agent supports it, and an `opentype` 
   font-family: "Trickster";
   src: url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1), url("trickster-outline.otf")
       format(opentype);
+}
+
+/* using the font face: */
+p {
+  font-family: "Trickster";
 }
 ```
 
