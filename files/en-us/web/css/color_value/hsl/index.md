@@ -37,7 +37,7 @@ hsl(hue, saturation, lightness, alpha)
 
 The `hsl()` function accepts three space-separated values, representing respectively `hue`, `saturation`, and `lightness`. Optionally it may also be given a slash `/` followed by a fourth value, representing `alpha`.
 
-The function also accepts a legacy syntax in which all four values are separated with commas.
+The function also accepts a legacy syntax in which all values are separated with commas.
 
 ### Values
 
