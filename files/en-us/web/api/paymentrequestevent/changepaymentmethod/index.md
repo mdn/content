@@ -16,8 +16,7 @@ browser-compat: api.PaymentRequestEvent.changePaymentMethod
 
 {{APIRef("Payment Handler API")}}{{SeeCompatTable}}
 
-The **`changePaymentMethod`** property of the
-{{domxref("PaymentRequestEvent")}} interface is used by the payment handler to get an updated total, given such payment method details as the billing address.
+The **`changePaymentMethod()`** method of the {{domxref("PaymentRequestEvent")}} interface is used by the payment handler to get an updated total, given such payment method details as the billing address.
 
 When this method is invoked, a {{domxref("PaymentMethodChangeEvent")}} is fired.
 
