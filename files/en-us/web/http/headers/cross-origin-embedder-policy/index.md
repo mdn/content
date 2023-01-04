@@ -71,7 +71,7 @@ if (crossOriginIsolated) {
 }
 ```
 
-### Avoiding COEP:require-corp blockage with CORS
+### Avoiding COEP blockage with CORS
 
 If you enable COEP using `require-corp` and have a cross origin resource that needs to be loaded, it needs to support [CORS](/en-US/docs/Web/HTTP/CORS) and you need to explicitly mark the resource as loadable from another origin to avoid blockage from COEP. For example, you can use the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute for this image from a third-party site:
 
@@ -79,7 +79,7 @@ If you enable COEP using `require-corp` and have a cross origin resource that ne
 <img src="https://thirdparty.com/img.png" crossorigin />
 ```
 
-A COEP value of `credentialless` can be used as an alternative.
+If CORS is not supported for some images, a COEP value of `credentialless` can be used as an alternative to load the image without any explicit opt-in from the cross-origin server, at the cost of requesting it without cookies.
 
 ## Specifications
 
