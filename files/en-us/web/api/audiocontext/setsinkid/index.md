@@ -83,7 +83,7 @@ We also provide the user with a dropdown menu to allow them to change the audio 
      //...
    ```
 
-2. Add a {{domxref("HTMLElement/change_event", "change")}} event listener to the {{htmlelement("select")}} element to change the sink ID and therefore the audio output device on the fly, when a new value is selected. If the "None" value is selected in the dropdown, we invoke `setSinkId()` with the `{ type : 'none' }` object parameter to select no audio device, otherwise we run it with the audio device ID contained in the `<select>` element `value` attribute` as the parameter.
+2. Add a {{domxref("HTMLElement/change_event", "change")}} event listener to the {{htmlelement("select")}} element to change the sink ID and therefore the audio output device when a new value is selected. If "None" is selected in the dropdown, we invoke `setSinkId()` with the `{ type : 'none' }` object parameter to select no audio device, otherwise we run it with the audio device ID contained in the `<select>` element `value` attribute` as the parameter.
 
    ```js
      // ...
