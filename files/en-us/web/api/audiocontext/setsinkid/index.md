@@ -47,7 +47,7 @@ Attempting to set the Sink ID to its existing value (i.e. returned by {{domxref(
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if the browser does not have the `speaker-selection` permission granted, as discussed in the article introduction above.
 - `NotFoundError` {{domxref("DOMException")}}
-  - : Thrown if the `sinkId` parameter passed in does not match any audio device found on the underlying system.
+  - : Thrown if the passed `sinkId` does not match any audio device found on the system.
 
 ## Examples
 
