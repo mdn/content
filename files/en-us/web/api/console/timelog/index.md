@@ -14,9 +14,31 @@ browser-compat: api.console.timeLog
 
 {{APIRef("Console API")}}
 
-The **`console.timeLog()`** method logs the current value of a timer that was previously started by calling {{domxref("console.time()")}} to the console.
+{{AvailableInWorkers}}
 
-The method can be passed the name of a timer. This should correspond with a name previously passed into {{domxref("console.time()")}}:
+The **`console.timeLog()`** method logs the current value of a timer that was previously started by calling {{domxref("console.time()")}}.
+
+## Syntax
+
+```js-nolint
+timeLog()
+timeLog(label)
+```
+
+### Parameters
+
+- `label` {{optional_inline}}
+  - : The name of the timer to log to the console. If this is omitted the label "default" is used.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Description
+
+The `console.timeLog()` method logs the current value of a timer.
+
+The method can be passed the name of a timer. This will attempt to log the value of a timer created with that name in a previous call to {{domxref("console.time()")}}:
 
 ```js
 console.time("reticulating splines");
@@ -25,7 +47,7 @@ console.timeLog("reticulating splines");
 // reticulating splines: 650ms
 ```
 
-If the timer name is omitted, then this call should correspond to a timer called `"default"`:.
+If the timer name is omitted, then the timer is named `"default"`:
 
 ```js
 console.time();
@@ -48,24 +70,6 @@ Timer "timer name" doesn't exist.
 ```
 
 See [Timers](/en-US/docs/Web/API/console#timers) in the documentation for more details and examples.
-
-{{AvailableInWorkers}}
-
-## Syntax
-
-```js-nolint
-timeLog()
-timeLog(label)
-```
-
-### Parameters
-
-- `label` {{optional_inline}}
-  - : The name of the timer to log to the console. If this is omitted the label "default" is used.
-
-### Return value
-
-None ({{jsxref("undefined")}}).
 
 ## Examples
 
