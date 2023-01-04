@@ -19,7 +19,7 @@ The **`sinkId`** read-only property of the
 
 ## Value
 
-This property can return one of three values, depending on how the sink ID was set:
+This property returns one of three values, depending on how the sink ID was set:
 
 - Empty string
   - : If a sink ID has not explicitly been set, the default system audio output device will be used, and `sinkId` will return an empty string.
