@@ -32,7 +32,7 @@ Note that although its allowed values include `true` and `false`, this attribute
 
 You can set the color used to draw the text insertion {{Glossary("caret")}} with the CSS {{cssxref("caret-color")}} property.
 
-Elements made editable, and therefore interactive, with their own `contenteditable` attribute are focusable and participate in sequential keyboard navigation, but `contenteditable` elements nested within other `contenteditable` elements are not added to the tabbing sequence. They can be added to the keyboard navigation sequence with [`tabindex="0'`](/en-US/docs/Web/HTML/Global_attributes/tabindex).
+Elements that are made editable, and therefore interactive, by using the `contenteditable` attribute can be focused. They participate in sequential keyboard navigation. However, elements with the `contenteditable` attribute nested within other `contenteditable` elements are not added to the tabbing sequence by default. You can add the nested `contenteditable` elements to the keyboard navigation sequence by specifying the `tabindex` value ([`tabindex="0"`](/en-US/docs/Web/HTML/Global_attributes/tabindex)).
 
 ## Specifications
 
