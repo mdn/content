@@ -42,13 +42,13 @@ rotate3d(x, y, z, a)
 
 - `x`
   - : Is a {{cssxref("&lt;number&gt;")}} describing the x-coordinate of the vector denoting the axis of rotation which
-    could be between 0 and 1.
+    could be between &nbsp;-1 and 1. Using a negative value will rotate the element in a counter-clockwise direction.
 - `y`
   - : Is a {{cssxref("&lt;number&gt;")}} describing the y-coordinate of the vector denoting the axis of rotation which
-    could be between 0 and 1.
+    could be between &nbsp;-1 and 1. Using a negative value will rotate the element in a counter-clockwise direction.
 - `z`
   - : Is a {{cssxref("&lt;number&gt;")}} describing the z-coordinate of the vector denoting the axis of rotation which
-    could be between 0 and 1.
+    could be between &nbsp;-1 and 1. Using a negative value will rotate the element in a counter-clockwise direction.
 - `a`
   - : Is an {{ cssxref("&lt;angle&gt;") }} representing the angle of the rotation. A positive angle denotes a clockwise
     rotation, a negative angle a counter-clockwise one.
