@@ -43,7 +43,7 @@ Attempting to set the Sink ID to its existing value (i.e. returned by {{domxref(
 ### Exceptions
 
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : Thrown if accessing the required system resources to be able to use the selected audio output device failed.
+  - : Thrown if accessing the selected audio output device failed.
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if the browser does not have the `speaker-selection` permission granted, as discussed in the article introduction above.
 - `NotFoundError` {{domxref("DOMException")}}
