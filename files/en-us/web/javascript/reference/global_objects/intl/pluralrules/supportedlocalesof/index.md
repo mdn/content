@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.Intl.PluralRules.supportedLocalesOf
 
 {{JSRef}}
 
-The **`Intl.PluralRules.supportedLocalesOf()`** method returns
+The **`Intl.PluralRules.supportedLocalesOf()`** static method returns
 an array containing those of the provided locales that are supported in plural
 formatting without having to fall back to the runtime's default locale.
 

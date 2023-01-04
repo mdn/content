@@ -1,6 +1,6 @@
 ---
 title: HTTPS RR
-slug: Glossary/https_rr
+slug: Glossary/HTTPS_RR
 tags:
   - HTTPS
   - HTTPS RR

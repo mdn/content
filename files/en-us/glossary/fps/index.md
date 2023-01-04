@@ -1,5 +1,5 @@
 ---
-title: frame rate (FPS)
+title: Frame rate (FPS)
 slug: Glossary/FPS
 tags:
   - Animation

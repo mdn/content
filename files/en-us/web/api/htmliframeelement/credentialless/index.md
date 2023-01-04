@@ -15,9 +15,11 @@ browser-compat: api.HTMLIFrameElement.credentialless
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-The **`credentialless`** property of the {{domxref("HTMLIFrameElement")}} interface indicates whether the {{htmlelement("iframe")}} is credentialless, meaning that its content is loaded in a new, ephemeral context.
+The **`credentialless`** property of the {{domxref("HTMLIFrameElement")}} interface indicates whether the {{htmlelement("iframe")}} is credentialless, meaning that documents inside will be loaded using new, ephemeral contexts.
 
-This context does not have access to the parent context's shared storage and credentials. In return, the {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for a deeper explanation.
+Those contexts do not have access to their network, cookies and storage data associated with their origin. Instead, they use new ones, local to the top-level document lifetime. It means any data stored won't be accessible anymore after the user navigates away from the page or reloads it.
+
+In return, the {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for a deeper explanation.
 
 ## Value
 

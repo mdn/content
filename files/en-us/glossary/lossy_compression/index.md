@@ -1,6 +1,6 @@
 ---
-title: lossy compression
-slug: Glossary/lossy_compression
+title: Lossy compression
+slug: Glossary/Lossy_compression
 tags:
   - Beginner
   - Composing

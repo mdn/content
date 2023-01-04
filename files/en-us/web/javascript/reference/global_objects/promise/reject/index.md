@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Promise.reject
 
 {{JSRef}}
 
-The **`Promise.reject()`** method returns a `Promise` object that is rejected with a given reason.
+The **`Promise.reject()`** static method returns a `Promise` object that is rejected with a given reason.
 
 {{EmbedInteractiveExample("pages/js/promise-reject.html")}}
 
