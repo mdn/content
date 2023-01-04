@@ -25,10 +25,17 @@ console.timeLog("reticulating splines");
 // reticulating splines: 650ms
 ```
 
-If the timer name is omitted, then this call should correspond to a timer that was started by a call to {{domxref("console.time()")}} which also omitted the name. This timer is called `"default"`:
+If the timer name is omitted, then this call should correspond to a timer called `"default"`:.
 
 ```js
 console.time();
+reticulateSplines();
+console.timeLog();
+// default: 780ms
+```
+
+```js
+console.time("default");
 reticulateSplines();
 console.timeLog();
 // default: 780ms
