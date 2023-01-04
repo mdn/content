@@ -56,10 +56,10 @@ Certain features like {{jsxref("SharedArrayBuffer")}} objects or {{domxref("Perf
 
 ```http
 Cross-Origin-Opener-Policy: same-origin
-Cross-Origin-Embedder-Policy: require-corp | credentialless
+Cross-Origin-Embedder-Policy: require-corp
 ```
 
-See also the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header which you'll need to set as well.
+See also the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header which you'll need to set to `require-corp` or `credentialless` as well.
 
 To check if cross-origin isolation has been successful, you can test against the [`crossOriginIsolated`](/en-US/docs/Web/API/crossOriginIsolated) property available to window and worker contexts:
 

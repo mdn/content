@@ -132,7 +132,7 @@ memory is gated behind two HTTP headers:
 
 ```http
 Cross-Origin-Opener-Policy: same-origin
-Cross-Origin-Embedder-Policy: require-corp | credentialless
+Cross-Origin-Embedder-Policy: require-corp
 ```
 
 To check if cross origin isolation has been successful, you can test against the

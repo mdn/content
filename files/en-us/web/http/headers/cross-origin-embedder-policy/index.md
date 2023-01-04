@@ -51,7 +51,7 @@ Cross-Origin-Embedder-Policy: unsafe-none | require-corp | credentialless
 You can only access certain features like {{jsxref("SharedArrayBuffer")}} objects or {{domxref("Performance.now()")}} with unthrottled timers, if your document has a COEP header with a value of `require-corp` or `credentialless` set.
 
 ```http
-Cross-Origin-Embedder-Policy: require-corp | credentialless
+Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
 ```
 

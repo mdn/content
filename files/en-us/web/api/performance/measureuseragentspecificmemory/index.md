@@ -113,7 +113,7 @@ Two headers need to be set to cross-origin isolate your site:
 
 ```http
 Cross-Origin-Opener-Policy: same-origin
-Cross-Origin-Embedder-Policy: require-corp | credentialless
+Cross-Origin-Embedder-Policy: require-corp
 ```
 
 To check if cross origin isolation has been successful, you can test against the [`crossOriginIsolated`](/en-US/docs/Web/API/crossOriginIsolated) property available to window and worker contexts:
