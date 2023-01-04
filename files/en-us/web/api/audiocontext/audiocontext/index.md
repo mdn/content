@@ -56,7 +56,7 @@ new AudioContext(options)
     - `sinkId` {{optional_inline}} {{Experimental_Inline}}
       - : Specifies the sink ID of the audio output device to use for the `AudioContext`. This can take one of the following value types:
         - String
-          - : A string value representing the sink ID, retrieved for example via the `deviceId` property of the {{domxref("MediaDeviceInfo")}} objects returned by {{domxref("MediaDevices.enumerateDevices()")}}.
+          - : A string representing the sink ID, retrieved for example via the `deviceId` property of the {{domxref("MediaDeviceInfo")}} objects returned by {{domxref("MediaDevices.enumerateDevices()")}}.
         - `AudioSinkOptions`
           - : An object representing different options for a sink ID. Currently this takes a single property, `type`, with a value of `none`. Setting this parameter value causes the audio to be processed without being played through any audio output device.
 
