@@ -1,6 +1,7 @@
 ---
 title: 'ReferenceError: reference to undefined property "x"'
 slug: Web/JavaScript/Reference/Errors/Undefined_prop
+page-type: javascript-error
 tags:
   - Error
   - Errors
@@ -28,8 +29,7 @@ ReferenceError: reference to undefined property "x" (Firefox)
 ## What went wrong?
 
 The script attempted to access an object property which doesn't exist. There are two
-ways to access properties; see the {{jsxref("Operators/Property_Accessors", "property
-  accessors", 0, 1)}} reference page to learn more about them.
+ways to access properties; see the [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) reference page to learn more about them.
 
 ## Examples
 
@@ -67,4 +67,4 @@ if (Object.hasOwn(foo, 'bar')) {
 
 ## See also
 
-- {{jsxref("Operators/Property_Accessors", "property accessors", 0, 1)}}
+- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)

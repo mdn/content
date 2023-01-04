@@ -1,6 +1,7 @@
 ---
 title: return
 slug: Web/JavaScript/Reference/Statements/return
+page-type: javascript-statement
 tags:
   - JavaScript
   - Language feature
@@ -103,7 +104,7 @@ function counter() {
 
 counter();
 
-// Output:
+// Logs:
 // 1A
 // 1B
 // 2A

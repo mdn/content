@@ -7,7 +7,7 @@ tags:
   - Property
 ---
 
-{{APIRef("Event Timing")}}
+{{APIRef("Performance API")}}
 
 The read-only `performance.eventCounts` property is an {{domxref("EventCounts")}} map containing the number of events which have been dispatched per event type.
 

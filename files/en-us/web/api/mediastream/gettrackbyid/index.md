@@ -5,7 +5,7 @@ page-type: web-api-instance-method
 tags:
   - Media
   - MediaStream
-  - MediaStream API
+  - Media Capture and Streams API
   - Method
   - Reference
   - WebRTC

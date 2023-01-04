@@ -105,7 +105,7 @@ The position is set as absolute, so the element rotates in place.
   animation-timeline: squareTimeline;
 
   position: absolute;
-  bottom: 50px; 
+  bottom: 50px;
 }
 
 @keyframes rotateAnimation {

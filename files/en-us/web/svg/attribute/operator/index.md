@@ -1,6 +1,7 @@
 ---
 title: operator
 slug: Web/SVG/Attribute/operator
+page-type: svg-attribute
 tags:
   - Filters
   - NeedsCompatTable
@@ -86,6 +87,7 @@ For {{SVGElement("feComposite")}}, `operator` defines the compositing operation 
 - `lighter`
   - : This value indicates that the sum of the source graphic defined in the `in` attribute and the destination graphic defined in the `in2` attribute is displayed.
 - `arithmetic`
+
   - : This value indicates that the source graphic defined in the `in` attribute and the destination graphic defined in the `in2` attribute are combined using the following formula:
 
     `result = k1*i1*i2 + k2*i1 + k3*i2 + k4`

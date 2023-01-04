@@ -1,6 +1,7 @@
 ---
 title: Reflect.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -13,7 +14,7 @@ browser-compat: javascript.builtins.Reflect.construct
 
 {{JSRef}}
 
-The static **`Reflect.construct()`** method acts like the
+The **`Reflect.construct()`** static method acts like the
 {{jsxref("Operators/new", "new")}} operator, but as a function. It is equivalent to
 calling `new target(...args)`. It gives also the added option to specify a
 different prototype.
@@ -127,20 +128,20 @@ function OtherClass() {
 }
 
 const obj1 = Reflect.construct(OneClass, args);
-// Output:
-//     OneClass
-//     function OneClass { ... }
+// Logs:
+// OneClass
+// function OneClass { ... }
 
 const obj2 = Reflect.construct(OneClass, args, OtherClass);
-// Output:
-//     OneClass
-//     function OtherClass { ... }
+// Logs:
+// OneClass
+// function OtherClass { ... }
 
 const obj3 = Object.create(OtherClass.prototype);
 OneClass.apply(obj3, args);
-// Output:
-//     OneClass
-//     undefined
+// Logs:
+// OneClass
+// undefined
 ```
 
 ## Examples

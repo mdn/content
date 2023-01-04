@@ -1,6 +1,7 @@
 ---
 title: do...while
 slug: Web/JavaScript/Reference/Statements/do...while
+page-type: javascript-statement
 tags:
   - JavaScript
   - Language feature
@@ -10,7 +11,7 @@ browser-compat: javascript.statements.do_while
 
 {{jsSidebar("Statements")}}
 
-The **`do...while` statement** creates a loop that executes a
+The **`do...while`** statement creates a loop that executes a
 specified statement until the test condition evaluates to false. The condition is
 evaluated after executing the statement, resulting in the specified statement executing
 at least once.
@@ -40,7 +41,7 @@ while (condition)
     the `do...while`.
 
     Note: Use the {{jsxref("Statements/break", "break")}} statement to stop a loop before `condition` evaluates
-    to true.
+    to false.
 
 ## Examples
 

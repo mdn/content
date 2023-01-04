@@ -12,7 +12,7 @@ tags:
 browser-compat: html.elements.source
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies multiple media resources for the {{HTMLElement("picture")}}, the {{HTMLElement("audio")}} element, or the {{HTMLElement("video")}} element. It is a {{glossary("void element")}}, meaning that it has no content and does not have a closing tag. It is commonly used to offer the same media content in multiple file formats in order to provide compatibility with a broad range of browsers given their differing support for [image file formats](/en-US/docs/Web/Media/Formats/Image_types) and [media file formats](/en-US/docs/Web/Media/Formats).
 
@@ -41,7 +41,7 @@ The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies multiple media
       <td>
         <div>
           A media element—{{HTMLElement("audio")}} or
-          {{HTMLelement("video")}}—and it must be placed before any
+          {{HTMLElement("video")}}—and it must be placed before any
           <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
             >flow content</a
           >
@@ -78,7 +78,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("type")}}
 
-  - : The [MIME media type of the resource](/en-US/docs/Web/Media/Formats/Image_types), optionally with a [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
+  - : The [MIME media type of the image](/en-US/docs/Web/Media/Formats/Image_types) or [other media type](/en-US/docs/Web/Media/Formats/Containers), optionally with a [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
 
 - {{htmlattrdef("src")}}
 

@@ -1,6 +1,7 @@
 ---
 title: handler.set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -65,16 +66,14 @@ value.
 
 This trap can intercept these operations:
 
-- Property assignment: `proxy[foo] = bar`
-  and `proxy.foo = bar`
-- Inherited property assignment:
-  `Object.create(proxy)[foo] = bar`
+- Property assignment: `proxy[foo] = bar` and `proxy.foo = bar`
 - {{jsxref("Reflect.set()")}}
+
+Or any other operation that invokes the `[[Set]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
 
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a
-{{jsxref("TypeError")}}:
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
 - Cannot change the value of a property to be different from the value of the
   corresponding target object property if the corresponding target object property is a

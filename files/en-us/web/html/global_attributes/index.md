@@ -69,9 +69,11 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`exportparts`](/en-US/docs/Web/HTML/Global_attributes/exportparts) {{Experimental_Inline}}
   - : Used to transitively export shadow parts from a nested shadow tree into a containing light tree.
 - [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden)
-  - : A Boolean attribute indicates that the element is not yet, or is no longer, _relevant_. For example, it can be used to hide elements of the page that can't be used until the login process has been completed. The browser won't render such elements. This attribute must not be used to hide content that could legitimately be shown.
+  - : An enumerated attribute indicating that the element is not yet, or is no longer, _relevant_. For example, it can be used to hide elements of the page that can't be used until the login process has been completed. The browser won't render such elements. This attribute must not be used to hide content that could legitimately be shown.
 - [`id`](/en-US/docs/Web/HTML/Global_attributes/id)
   - : Defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a fragment identifier), scripting, or styling (with CSS).
+- [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert)
+  - : A boolean value that makes the browser disregard user input events for the element. Useful when click events are present.
 - [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode)
   - : Provides a hint to browsers as to the type of virtual keyboard configuration to use when editing this element or its contents. Used primarily on {{HTMLElement("input")}} elements, but is usable on any element while in {{HTMLAttrxRef("contenteditable")}} mode.
 - [`is`](/en-US/docs/Web/HTML/Global_attributes/is)
@@ -124,6 +126,12 @@ In addition to the basic HTML global attributes, the following global attributes
 
     - empty string or `yes`, which indicates that the element will be translated.
     - `no`, which indicates that the element will not be translated.
+- [`virtualkeyboardpolicy`](/en-US/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy)
+
+  - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute used to control the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available, for elements that also uses the {{htmlattrxref("contenteditable")}} attribute.
+
+    - `auto` or an _empty string_, which automatically shows the virtual keyboard when the element is focused or tapped.
+    - `manual`, which decouples focus and tap on the element from the virtual keyboard's state.
 
 ## Specifications
 

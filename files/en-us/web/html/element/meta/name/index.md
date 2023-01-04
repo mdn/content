@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.meta.name
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The {{htmlelement("meta")}} element can be used to provide document metadata in terms of name-value pairs, with the {{htmlattrxref("name", "meta")}} attribute giving the metadata name, and the {{htmlattrxref("content", "meta")}} attribute giving the value.
 
@@ -145,7 +145,7 @@ The CSS Device Adaptation specification defines the following metadata name:
         <td><code>width</code></td>
         <td>A positive integer number, or the text <code>device-width</code></td>
         <td>
-          Defines the pixel width of the viewport that you want the web site to be
+          Defines the pixel width of the viewport that you want the website to be
           rendered at.
         </td>
       </tr>
@@ -244,11 +244,13 @@ The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtension
 
   > **Note:**
   >
-  > - Only cooperative robots follow these rules. Do not expect to prevent e-mail harvesters with them.
+  > - Only cooperative robots follow these rules. Do not expect to prevent email harvesters with them.
   > - The robot still needs to access the page in order to read these rules. To prevent bandwidth consumption, use a _{{Glossary("robots.txt")}}_ file.
   > - If you want to remove a page, `noindex` will work, but only after the robot visits the page again. Ensure that the `robots.txt` file is not preventing revisits.
   > - Some values are mutually exclusive, like `index` and `noindex`, or `follow` and `nofollow`. In these cases the robot's behavior is undefined and may vary between them.
   > - Some crawler robots, like Google, Yahoo and Bing, support the same values for the HTTP header `X-Robots-Tag`; this allows non-HTML documents like images to use these rules.
+
+<!-- ## Technical summary -->
 
 ## Specifications
 

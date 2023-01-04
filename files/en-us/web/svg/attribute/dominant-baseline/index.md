@@ -1,6 +1,7 @@
 ---
 title: dominant-baseline
 slug: Web/SVG/Attribute/dominant-baseline
+page-type: svg-attribute
 tags:
   - Reference
   - SVG
@@ -84,6 +85,7 @@ text {
 </table>
 
 - `auto`
+
   - : If this property occurs on a {{SVGElement("text")}} element, then the computed value depends on the value of the {{SVGAttr("writing-mode")}} attribute.
 
     If the {{SVGAttr("writing-mode")}} is horizontal, then the value of the dominant-baseline component is `alphabetic`. Otherwise, if the {{SVGAttr("writing-mode")}} is vertical, then the value of the dominant-baseline component is `central`.

@@ -25,7 +25,11 @@ A {{domxref("VideoColorSpace")}} object.
 The following example prints the `colorSpace` to the console.
 
 ```js
-console.log(VideoFrame.colorSpace);
+const cnv = document.createElement('canvas');
+// draw something on the canvas
+// ...
+const videoFrame = new VideoFrame(cnv, { timestamp: 0 });
+console.log(videoFrame.colorSpace);
 ```
 
 ## Specifications

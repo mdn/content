@@ -1,6 +1,7 @@
 ---
 title: Intl.Segmenter.prototype.segment()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment
+page-type: javascript-instance-method
 tags:
   - Internationalization
   - Intl
@@ -29,7 +30,7 @@ segment(input)
 
 ### Return value
 
-A new iterable [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) object containing the segments of the input string, using the segmenter's locale and granularity.
+A new iterable [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) object containing the segments of the input string, using the segmenter's locale and granularity.
 
 ## Examples
 
@@ -49,7 +50,6 @@ for (const {segment, index, isWordLike} of segments) {
     isWordLike ? " (word-like)" : ""
   );
 }
-// logs
 // segment at code units [0, 3]: «Moi» (word-like)
 // segment at code units [3, 4]: « »
 // segment at code units [4, 5]: «?»

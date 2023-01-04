@@ -15,7 +15,7 @@ tags:
 browser-compat: api.RTCPeerConnection.currentLocalDescription
 ---
 
-{{WebRTCSidebar}}
+{{APIRef("WebRTC")}}
 
 The read-only property
 **`RTCPeerConnection.currentLocalDescription`** returns an
@@ -55,8 +55,7 @@ const pc = new RTCPeerConnection();
 const sd = pc.currentLocalDescription;
 if (sd) {
   alert(`Local session: type='${sd.type}'; sdp description='${sd.sdp}'`);
-}
-else {
+} else {
   alert("No local session yet.");
 }
 ```

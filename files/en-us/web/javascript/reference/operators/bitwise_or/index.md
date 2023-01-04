@@ -1,6 +1,7 @@
 ---
 title: Bitwise OR (|)
 slug: Web/JavaScript/Reference/Operators/Bitwise_OR
+page-type: javascript-operator
 tags:
   - Bitwise operator
   - JavaScript
@@ -12,7 +13,7 @@ browser-compat: javascript.operators.bitwise_or
 
 {{jsSidebar("Operators")}}
 
-The bitwise OR operator (`|`) returns a `1` in each bit position
+The **bitwise OR (`|`)** operator returns a `1` in each bit position
 for which the corresponding bits of either or both operands are `1`s.
 
 {{EmbedInteractiveExample("pages/js/expressions-bitwise-or.html", "shorter")}}

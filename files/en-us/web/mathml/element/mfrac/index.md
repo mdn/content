@@ -26,11 +26,11 @@ and [Legendre symbols](https://en.wikipedia.org/wiki/Legendre_symbol).
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following attributes:
 
-- `denomalign` {{deprecated_inline}}
+- `denomalign` {{deprecated_inline}} {{Non-standard_Inline}}
   - : The alignment of the denominator under the fraction. Possible values are: `left`, `center` (default), and `right`.
 - `linethickness`
   - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the thickness of the horizontal fraction line.
-- `numalign` {{deprecated_inline}}
+- `numalign` {{deprecated_inline}} {{Non-standard_Inline}}
   - : The alignment of the numerator over the fraction. Possible values are: `left`, `center` (default), and `right`.
 
 > **Note:** For the `linethickness` attribute, some browsers may also accept the deprecated values `medium`, `thin` and `thick` (whose exact interpretation is left to implementers) or [legacy MathML lengths](/en-US/docs/Web/MathML/Attribute/Values#legacy_mathml_lengths).

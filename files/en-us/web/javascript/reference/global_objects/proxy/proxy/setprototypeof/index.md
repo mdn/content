@@ -1,6 +1,7 @@
 ---
 title: handler.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -53,10 +54,11 @@ This trap can intercept these operations:
 - {{jsxref("Object.setPrototypeOf()")}}
 - {{jsxref("Reflect.setPrototypeOf()")}}
 
+Or any other operation that invokes the `[[SetPrototypeOf]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
+
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a
-{{jsxref("TypeError")}}:
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
 - If `target` is not extensible, the `prototype`
   parameter must be the same value as

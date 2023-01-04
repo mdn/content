@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.base
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<base>`** [HTML](/en-US/docs/Web/HTML) element specifies the base URL to use for all _relative_ URLs in a document. There can be only one `<base>` element in a document.
 

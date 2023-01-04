@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceEventTiming.processingStart
 ---
 
-{{APIRef}}
+{{APIRef("Performance API")}}
 
 The read-only **`processingStart`** property returns the time at which event dispatch started. This is when event handlers are about to be executed.
 
@@ -37,7 +37,7 @@ const observer = new PerformanceObserver((list) => {
   });
 });
 // Register the observer for events
-observer.observe({entryTypes: ["event"]});
+observer.observe({type: "event", buffered: true});
 ```
 
 ## Specifications

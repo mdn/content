@@ -19,6 +19,8 @@ the {{domxref("FileReader/loadend_event", "loadend")}} event is triggered, and t
 
 > **Note:** The {{domxref("Blob.text()")}} method is a newer promise-based API to read a file as text.
 
+> **Note:** This method loads the entire file's content into memory and is not suitable for large files. Prefer [`readAsArrayBuffer()`](/en-US/docs/Web/API/FileReader/readAsArrayBuffer) for large files.
+
 ## Syntax
 
 ```js-nolint

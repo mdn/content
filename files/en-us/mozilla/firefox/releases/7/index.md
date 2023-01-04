@@ -61,7 +61,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 - {{ domxref("DOMTokenList.item") }} now returns `undefined` if the `index` is out of bounds, previously it returned `null`.
 - `Node.getFeature` has been removed.
 - The `HTMLInsElement` and `HTMLDelElement` interfaces have been removed, since the {{ HTMLElement("ins") }} and {{ HTMLElement("del") }} elements actually use the {{ domxref("HTMLModElement") }} interface.
-- In a effort to conform to the upcoming [DOM4](https://dom.spec.whatwg.org/) specification where {{ domxref("Attr") }} do not inherit from {{ domxref("Node") }} anymore (it did in DOM Core 1, 2 and 3), many {{ domxref("Node") }} properties and methods on the {{ domxref("Attr") }} interface are [now reporting warnings](/en-US/docs/Web/API/Attr#deprecated_properties_and_methods) as we work toward removing them in a later version.
+- In an effort to conform to the upcoming [DOM4](https://dom.spec.whatwg.org/) specification where {{ domxref("Attr") }} do not inherit from {{ domxref("Node") }} anymore (it did in DOM Core 1, 2 and 3), many {{ domxref("Node") }} properties and methods on the {{ domxref("Attr") }} interface are [now reporting warnings](/en-US/docs/Web/API/Attr#deprecated_properties_and_methods) as we work toward removing them in a later version.
 - Added support for the {{ domxref("window.deviceorientation_event", "ondeviceorientation") }} and {{ domxref("window.devicemotion_event", "ondevicemotion") }} properties on {{ domxref("window") }} objects.
 - {{ domxref("window.resizeTo") }}, {{ domxref("window.resizeBy") }}, {{ domxref("window.moveTo") }}, and {{ domxref("window.moveBy") }} no longer apply to the main window.
 

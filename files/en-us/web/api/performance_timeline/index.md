@@ -9,7 +9,7 @@ tags:
 spec-urls: https://w3c.github.io/performance-timeline/
 ---
 
-{{DefaultAPISidebar("Performance Timeline API")}}
+{{DefaultAPISidebar("Performance API")}}
 
 The **Performance Timeline** API defines extensions to the {{domxref("Performance")}} interface to support client-side latency measurements within applications. The extensions provide interfaces to retrieve {{domxref("PerformanceEntry","performance entry metrics", '', 'true')}} based on specific filter criteria. The standard also includes interfaces that allow an application to define _[performance observer](#performance_observers)_ callbacks that are notified when specific performance events are added to the browser's _performance timeline_.
 

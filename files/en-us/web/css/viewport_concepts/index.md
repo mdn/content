@@ -34,15 +34,15 @@ To recap, the viewport is basically the part of the document that is currently v
 The width of the viewport is not always the width of the window. If you query the width or height of the window and document in Chrome or Firefox, you may get:
 
 ```js
-document.documentElement.clientWidth /* 1200 */
-window.innerWidth /* 1200 */
-window.outerWidth /* 1200 */
+document.documentElement.clientWidth; /* 1200 */
+window.innerWidth; /* 1200 */
+window.outerWidth; /* 1200 */
 ```
 
 ```js
-document.documentElement.clientHeight /* 800 */
-window.innerHeight /* 800 */
-window.outerHeight /* 900 */
+document.documentElement.clientHeight; /* 800 */
+window.innerHeight; /* 800 */
+window.outerHeight; /* 900 */
 ```
 
 There are several DOM properties that can help you query viewport size, and other similar lengths:
@@ -58,15 +58,15 @@ The area within the `innerHeight` and `innerWidth` is generally considered the *
 When zoomed in, both Firefox and Chrome report the new CSS pixel size for `innerWidth` and `clientWidth`. The values returned for the `outerWidth` and `outerHeight` depend on the browser: Firefox reports the new value in CSS pixels, but Chrome returns the length in the default pixel size. When zoomed in you may get:
 
 ```js
-document.documentElement.clientWidth /* 800 */
-window.innerWidth /* 800 */
-window.outerWidth /* 800 in Firefox, 1200 in chrome */
+document.documentElement.clientWidth; /* 800 */
+window.innerWidth; /* 800 */
+window.outerWidth; /* 800 in Firefox, 1200 in chrome */
 ```
 
 ```js
-document.documentElement.clientHeight /* 533 */
-window.innerHeight /* 533 */
-window.outerHeight /* 596 in Firefox, 900 in chrome */
+document.documentElement.clientHeight; /* 533 */
+window.innerHeight; /* 533 */
+window.outerHeight; /* 596 in Firefox, 900 in chrome */
 ```
 
 The viewport was originally 1200 x 800 pixels. Upon zooming in, the viewport became 800 x 533 pixels. This is the _layout viewport_. Sticky headers or footers, with the following styles, will stick to the top and bottom of the _layout viewport_ respectively.
@@ -162,7 +162,6 @@ The `width` property controls the size of the viewport. It should preferably be 
 
 ## See also
 
-- [@viewport CSS at-rule](/en-US/docs/Web/CSS/@viewport)
 - [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
 - {{HTMLElement("meta")}}, specifically `<meta name="viewport">`
 - [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Web/HTML/Viewport_meta_tag)

@@ -26,7 +26,7 @@ The manifest can also contain pointers to several other types of files:
 - [Web-accessible resources](#web_accessible_resources)
   - : Make packaged content accessible to web pages and content scripts.
 
-![](webextension-anatomy.png)
+![The components of a web extension. The manifest.JSON must be present in all extensions. It provides pointers to background pages, content scripts, browser actions, page actions, options pages, and web accessible resources. Background pages consist of HTML and JS. Content scripts consist of JS and CSS. The user clicks on an icon to trigger browser actions and page actions and the resulting pop-up consists of HTML, CSS, and JS. Options pages consist of HTML, CSS, and JS.](webextension-anatomy.png)
 
 See the [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) reference page for all the details.
 

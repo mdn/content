@@ -20,6 +20,10 @@ tags:
   - XMLHttpRequest
 ---
 
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
+</section>
+
 At times, you may need to parse {{Glossary("XML")}} content and convert it into a {{Glossary("DOM")}} tree, or, conversely, serialize an existing DOM tree into XML. In this article, we'll look at the objects provided by the web platform to make the common tasks of serializing and parsing XML easy.
 
 - {{domxref("XMLSerializer")}}
@@ -33,7 +37,7 @@ At times, you may need to parse {{Glossary("XML")}} content and convert it into 
 
 ## Creating an XML document
 
-Using one of the following approaches to create an XML document (which is an instance of {{domxref("Document")}}.
+Using one of the following approaches to create an XML document (which is an instance of {{domxref("Document")}}).
 
 ### Parsing strings into DOM trees
 
@@ -74,7 +78,7 @@ xhr.responseType = "document";
 xhr.send();
 ```
 
-The value returned in the `xhr` object's {{domxref("XMLHttpRequest.responseXML", "responseXML")}} field is a {{domxref("Document")}} constructed by parsing the XML.
+The value in the `xhr` object's {{domxref("XMLHttpRequest.responseXML", "responseXML")}} field is a {{domxref("Document")}} constructed by parsing the XML.
 
 If the document is {{Glossary("HTML")}}, the code shown above will return a {{domxref("Document")}}. If the document is XML, the resulting object is actually a {{domxref("XMLDocument")}}. The two types are essentially the same; the difference is largely historical, although differentiating has some practical benefits as well.
 

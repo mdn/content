@@ -1,6 +1,7 @@
 ---
 title: Character classes
 slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
+page-type: guide
 tags:
   - Guide
   - JavaScript
@@ -25,7 +26,6 @@ Character classes distinguish kinds of characters such as, for example, distingu
       <th scope="col">Meaning</th>
     </tr>
   </thead>
-  <tbody></tbody>
   <tbody>
     <tr>
       <td>

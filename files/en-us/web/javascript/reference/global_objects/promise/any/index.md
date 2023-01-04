@@ -1,6 +1,7 @@
 ---
 title: Promise.any()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/any
+page-type: javascript-static-method
 tags:
   - JavaScript
   - Method
@@ -12,7 +13,7 @@ browser-compat: javascript.builtins.Promise.any
 
 {{JSRef}}
 
-The **`Promise.any()`** method takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise fulfills when any of the input's promises fulfills, with this first fulfillment value. It rejects when all of the input's promises reject (including when an empty iterable is passed), with an {{jsxref("AggregateError")}} containing an array of rejection reasons.
+The **`Promise.any()`** static method takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise fulfills when any of the input's promises fulfills, with this first fulfillment value. It rejects when all of the input's promises reject (including when an empty iterable is passed), with an {{jsxref("AggregateError")}} containing an array of rejection reasons.
 
 {{EmbedInteractiveExample("pages/js/promise-any.html")}}
 
@@ -66,7 +67,8 @@ Promise.any([pErr, pSlow, pFast]).then((value) => {
   console.log(value);
   // pFast fulfills first
 });
-// expected output: "Done quick"
+// Logs:
+// Done quick
 ```
 
 ### Rejections with AggregateError
@@ -81,7 +83,7 @@ const failure = new Promise((resolve, reject) => {
 Promise.any([failure]).catch((err) => {
   console.log(err);
 });
-// expected output: "AggregateError: No Promise in Promise.any was resolved"
+// AggregateError: No Promise in Promise.any was resolved
 ```
 
 ### Displaying the first image loaded

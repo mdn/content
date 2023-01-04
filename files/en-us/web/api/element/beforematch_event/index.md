@@ -101,6 +101,8 @@ To run the example again, click "Reload".
 
 {{EmbedLiveSample("Using beforematch", "", 300)}}
 
+If your browser does not support the `"until-found"` enumerated value of the `hidden` attribute, the second `<div>` will be hidden (as `hidden` was boolean prior to the addition of the `until-found` value).
+
 ## Specifications
 
 {{Specifications}}

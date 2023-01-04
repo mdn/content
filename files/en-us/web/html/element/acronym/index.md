@@ -11,7 +11,7 @@ tags:
 browser-compat: html.elements.acronym
 ---
 
-{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 ## Summary
 
@@ -46,6 +46,8 @@ Though the purpose of this tag is purely for the convenience of the author, its 
 
 It is therefore recommended that web authors either explicitly style this element, or accept some cross-browser variation.
 
+<!-- ## Technical summary -->
+
 ## Specifications
 
 {{Specifications}}
@@ -57,5 +59,3 @@ It is therefore recommended that web authors either explicitly style this elemen
 ## See also
 
 - The {{HTMLElement("abbr")}} HTML element
-
-{{HTMLRef}}

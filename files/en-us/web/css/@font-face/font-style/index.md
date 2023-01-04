@@ -47,11 +47,7 @@ font-style: oblique 30deg 50deg;
 
 ## Formal syntax
 
-```
-normal               |
-italic               |
-oblique <angle>{0,2}
-```
+{{csssyntax}}
 
 ## Examples
 

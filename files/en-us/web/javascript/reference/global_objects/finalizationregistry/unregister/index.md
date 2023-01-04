@@ -1,6 +1,7 @@
 ---
 title: FinalizationRegistry.prototype.unregister()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/unregister
+page-type: javascript-instance-method
 tags:
   - FinalizationRegistry
   - JavaScript
@@ -35,7 +36,7 @@ A boolean value that is `true` if at least one cell was unregistered and `false`
 - {{jsxref("TypeError")}}
   - : Thrown when `unregisterToken` is not an object.
 
-## Notes
+## Description
 
 When a target object has been reclaimed, it is no longer registered in the registry.
 There is no need to call `unregister` in your cleanup callback. Only call

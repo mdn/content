@@ -1,6 +1,7 @@
 ---
 title: Intl.Collator.prototype.compare()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
+page-type: javascript-instance-method
 tags:
   - Collator
   - Internationalization
@@ -54,8 +55,7 @@ is bound to the collator from which it was obtained, so it can be passed directl
 const a = ["Offenbach", "Österreich", "Odenwald"];
 const collator = new Intl.Collator("de-u-co-phonebk");
 a.sort(collator.compare);
-console.log(a.join(", "));
-// → "Odenwald, Österreich, Offenbach"
+console.log(a.join(", ")); // "Odenwald, Österreich, Offenbach"
 ```
 
 ### Using compare for array search
@@ -70,8 +70,7 @@ const collator = new Intl.Collator("fr", {
 });
 const s = "congres";
 const matches = a.filter((v) => collator.compare(v, s) === 0);
-console.log(matches.join(", "));
-// → "Congrès, congres"
+console.log(matches.join(", ")); // "Congrès, congres"
 ```
 
 ## Specifications

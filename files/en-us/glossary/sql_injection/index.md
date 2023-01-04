@@ -46,7 +46,7 @@ After clicking on the login button, the SQL query will work as follows:
 
 Just take a closer look at the above query's password section.
 
-```
+```plain
 Password=' anything 'or'1'='1 '
 ```
 

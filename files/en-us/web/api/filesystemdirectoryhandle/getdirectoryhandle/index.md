@@ -12,7 +12,7 @@ tags:
 browser-compat: api.FileSystemDirectoryHandle.getDirectoryHandle
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`getDirectoryHandle()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface returns a

@@ -1,6 +1,7 @@
 ---
 title: Object.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method
@@ -32,7 +33,7 @@ The return value of calling `this.toString()`.
 
 ## Description
 
-All objects that inherit from `Object.prototype` (that is, all except [`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#object_with_null_prototype)) inherit the `toLocaleString()` method. {{jsxref("Object")}}'s `toLocaleString` returns the result of calling {{jsxref("Object/toString", "this.toString()")}}.
+All objects that inherit from `Object.prototype` (that is, all except [`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)) inherit the `toLocaleString()` method. {{jsxref("Object")}}'s `toLocaleString` returns the result of calling {{jsxref("Object/toString", "this.toString()")}}.
 
 This function is provided to give objects a generic `toLocaleString` method, even though not all may use it. In the core language, these built-in objects override `toLocaleString` to provide locale-specific formatting:
 

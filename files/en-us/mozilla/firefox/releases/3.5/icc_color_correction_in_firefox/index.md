@@ -13,7 +13,7 @@ Although support for color correction was introduced in Firefox 3, it was disabl
 
 The image below is split into three sections. The top left corner shows the image as rendered by Firefox 2. The top right corner shows how the image renders in Firefox 3. The bottom shows the image rendered in Photoshop.
 
-![](iccsample.jpg)
+![A purple flower as rendered by Firefox 2, Firefox 3, and Photoshop.](iccsample.jpg)
 
 As you can see, Firefox 3 and Photoshop render the image identically, because both support the embedded color correction profile. Firefox 2 ignores the profile, resulting in mismatched color.
 

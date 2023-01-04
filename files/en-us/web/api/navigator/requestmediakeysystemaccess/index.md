@@ -68,6 +68,8 @@ In case of an error, the returned {{jsxref('Promise')}} is rejected with a
     browser, or none of the configurations specified by
     `supportedConfigurations` can be satisfied (if, for example, none of the
     `codecs` specified in `contentType` are available).
+- `SecurityError` {{domxref("DOMException")}}
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 - {{jsxref("TypeError")}}`
   - : Either `keySystem` is an empty string or the
     `supportedConfigurations` array is empty.
@@ -141,5 +143,5 @@ should be permitted, and therefore are valid requests.
 ## See also
 
 - [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API)
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)

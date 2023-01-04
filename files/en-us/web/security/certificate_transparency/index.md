@@ -6,6 +6,8 @@ tags:
   - Web
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 **Certificate Transparency** is an open framework designed to protect against and monitor for certificate mis-issuances. It's defined in [RFC 9162](https://www.rfc-editor.org/rfc/rfc9162). With certificate transparency, newly-issued certificates are 'logged' to publicly-run, often independent _CT logs_ — which maintain an append-only, cryptographically-assured record of issued TLS certificates.
 
 In this way, certificate authorities (CAs) can be subject to much greater public scrutiny and oversight. Potentially malicious certificates, such as those that violate the CA/B Forum _Baseline Requirements_, can be detected and revoked much more quickly. Browser vendors and root store maintainers are also empowered to make more informed decisions regarding problematic CAs that they may decide to distrust.

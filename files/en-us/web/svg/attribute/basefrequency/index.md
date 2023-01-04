@@ -1,6 +1,7 @@
 ---
 title: baseFrequency
 slug: Web/SVG/Attribute/baseFrequency
+page-type: svg-attribute
 tags:
   - Filters
   - SVG
@@ -101,6 +102,7 @@ svg {
 </table>
 
 - `<number-optional-number>`
+
   - : If two numbers are provided, the first one represents the base frequency in the horizontal direction and the second one the base frequency in the vertical direction. If one number is provided, then that value is used for both x and y.
 
     Negative values are forbidden.

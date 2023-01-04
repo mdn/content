@@ -332,11 +332,6 @@ This topic provides an index to the main _sorts_ of events you might be interest
               ><code>MSGestureTap</code></a
             >.
           </li>
-          <li>
-            <a href="/en-US/docs/Web/Events/Mouse_gesture_events"
-              >Mouse gesture events for Firefox Addons</a
-            >
-          </li>
         </ul>
       </td>
     </tr>
@@ -449,7 +444,7 @@ This topic provides an index to the main _sorts_ of events you might be interest
       <td>
         <p>
           Events related to media usage (including the
-          <a href="/en-US/docs/Web/API/Media_Streams_API#events"
+          <a href="/en-US/docs/Web/API/Media_Capture_and_Streams_API#events"
             >Media Capture and Streams API</a
           >,
           <a href="/en-US/docs/Web/API/Web_Audio_API#events">Web Audio API</a>,

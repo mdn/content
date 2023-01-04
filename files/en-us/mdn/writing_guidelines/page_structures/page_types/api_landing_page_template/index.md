@@ -24,10 +24,6 @@ tags:
 > slug: Web/API/NameOfTheAPI_API
 > page-type: web-api-overview
 > tags:
->   - API
->   - NameOfTheAPI API
->   - Reference
->   - Landing
 >   - Experimental
 >   - Deprecated
 >   - Non-standard
@@ -45,15 +41,7 @@ tags:
 > - **page-type**
 >   - : The `page-type` key for Web/API landing pages is always `web-api-overview`.
 > - **tags**
->
->   - : Always include the following tags: **API**, **Reference**, **Landing**, the _name of the API_ (e.g. **WebXR Device API**).
->
->     Include the following tags as appropriate:
->
->     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** if it isn't on a standards track.
->     - Special requirements: **Secure context** (if it is available in a secure context only)
->     - Any other tags that represent terms people might search for related to the technology.
->       For example on WebVR interface pages we include **VR** and **Virtual reality**.
+>   - : Include (appropriate) technology status tags: **Experimental** (if [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** if not on a standards track.
 >
 > ---
 >
@@ -126,13 +114,13 @@ To help improve content discoverability and {{Glossary("SEO")}}, keep the follow
 
 The _name of interface_ extends the following APIs, adding the listed features.
 
-#### Interface #1
+#### Interface 1
 
 - {{domxref("addition1")}}
   - : Description of the feature of Interface#1 that is added to that API by the API you are currently documenting.
     One \*term and definition for each feature. If this API doesn't extend any other interfaces, you can delete these sections.
 
-#### Interface #2
+#### Interface 2
 
 - {{domxref("addition1")}}
   - : Description of the feature of Interface#2 that is added to that API by the API you are currently documenting, etc.

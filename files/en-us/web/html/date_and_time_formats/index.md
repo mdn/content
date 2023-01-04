@@ -20,7 +20,7 @@ tags:
   - week-year
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Certain HTML elements use date and/or time values. The formats of the strings that specify these values are described in this article.
 

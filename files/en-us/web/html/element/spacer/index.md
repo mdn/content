@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.spacer
 ---
 
-{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 The **`<spacer>`** [HTML](/en-US/docs/Web/HTML) element is an obsolete HTML element which allowed insertion of empty spaces on pages. It was devised by Netscape to accomplish the same effect as a single-pixel layout image, which was something web designers used to use to add white spaces to web pages without actually using an image. However, `<spacer>` is no longer supported by any major browser and the same effects can now be achieved using simple CSS.
 
@@ -47,5 +47,3 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 ## Browser compatibility
 
 {{Compat}}
-
-{{ HTMLRef }}

@@ -9,6 +9,8 @@ tags:
   - console
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 When a user visits a page served over {{Glossary("HTTPS")}}, their connection with the web server is encrypted with {{Glossary("TLS")}} and is therefore safeguarded from most sniffers and man-in-the-middle attacks. An HTTPS page that includes content fetched using cleartext HTTP is called a **mixed content** page. Pages like this are only partially encrypted, leaving the unencrypted content accessible to sniffers and man-in-the-middle attackers. That leaves the pages unsafe.
 
 ## Types of mixed content
@@ -94,5 +96,3 @@ To fix this type of error, all requests to HTTP content should be removed and re
 
 - [Mixed Content - W3C Editor's Draft](https://w3c.github.io/webappsec/specs/mixedcontent/)
 - [How to fix a website with blocked mixed content](/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

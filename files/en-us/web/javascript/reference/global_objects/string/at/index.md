@@ -1,6 +1,7 @@
 ---
 title: String.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/String/at
+page-type: javascript-instance-method
 tags:
   - String
   - JavaScript
@@ -47,13 +48,11 @@ function returnLast(arr) {
 
 let invoiceRef = "myinvoice01";
 
-console.log(returnLast(invoiceRef));
-// Logs: '1'
+console.log(returnLast(invoiceRef)); // '1'
 
 invoiceRef = "myinvoice02";
 
-console.log(returnLast(invoiceRef));
-// Logs: '2'
+console.log(returnLast(invoiceRef)); // '2'
 ```
 
 ### Comparing methods
@@ -65,15 +64,15 @@ const myString = "Every green bus drives fast.";
 
 // Using length property and charAt() method
 const lengthWay = myString.charAt(myString.length - 2);
-console.log(lengthWay); // Logs: 't'
+console.log(lengthWay); // 't'
 
 // Using slice() method
 const sliceWay = myString.slice(-2, -1);
-console.log(sliceWay); // Logs: 't'
+console.log(sliceWay); // 't'
 
 // Using at() method
 const atWay = myString.at(-2);
-console.log(atWay); // Logs: 't'
+console.log(atWay); // 't'
 ```
 
 ## Specifications

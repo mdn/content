@@ -1,6 +1,7 @@
 ---
 title: Intl.Locale.prototype.textInfo
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/textInfo
+page-type: javascript-instance-accessor-property
 tags:
   - Internationalization
   - Intl
@@ -31,14 +32,14 @@ Return the supported text directions for a given `Locale`.
 
 ```js
 const ar = new Intl.Locale("ar");
-console.log(ar.textInfo); // logs { direction: "rtl" }
-console.log(ar.textInfo.direction); // logs "rtl"
+console.log(ar.textInfo); // { direction: "rtl" }
+console.log(ar.textInfo.direction); // "rtl"
 ```
 
 ```js
 const es = new Intl.Locale("es");
-console.log(es.textInfo); // logs { direction: "ltr" }
-console.log(es.textInfo.direction); // logs "ltr"
+console.log(es.textInfo); // { direction: "ltr" }
+console.log(es.textInfo.direction); // "ltr"
 ```
 
 ## Specifications

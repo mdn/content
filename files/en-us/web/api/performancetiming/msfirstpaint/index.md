@@ -8,7 +8,7 @@ tags:
   - Non-standard
 ---
 
-{{APIRef("Navigation timing API")}}
+{{APIRef("Performance API API")}}
 
 {{Non-standard_header()}}
 

@@ -1,6 +1,7 @@
 ---
 title: String.prototype.padStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/padStart
+page-type: javascript-instance-method
 tags:
   - Advanced
   - Intermediate
@@ -62,14 +63,13 @@ A {{jsxref("String")}} of the specified `targetLength` with
 
 ```js
 // JavaScript version of: (unsigned)
-//  printf "%0*d" width num
+// printf "%0*d" width num
 function leftFillNum(num, targetLength) {
   return num.toString().padStart(targetLength, 0);
 }
 
 const num = 123;
-console.log(leftFillNum(num, 5));
-// expected output: "00123"
+console.log(leftFillNum(num, 5)); // "00123"
 ```
 
 ## Specifications

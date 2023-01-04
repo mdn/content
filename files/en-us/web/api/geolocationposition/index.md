@@ -22,7 +22,7 @@ _The `GeolocationPosition` interface doesn't inherit any properties._
 - {{domxref("GeolocationPosition.coords")}} {{ReadOnlyInline}} {{securecontext_inline}}
   - : Returns a {{domxref("GeolocationCoordinates")}} object defining the current location.
 - {{domxref("GeolocationPosition.timestamp")}} {{ReadOnlyInline}} {{securecontext_inline}}
-  - : Returns a {{domxref("DOMTimeStamp")}} representing the time at which the location was retrieved.
+  - : Returns a timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds, representing the time at which the location was retrieved.
 
 ## Instance methods
 

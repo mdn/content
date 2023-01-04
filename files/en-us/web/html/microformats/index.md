@@ -12,6 +12,8 @@ tags:
   - Search
 ---
 
+{{HTMLSidebar}}
+
 [_Microformats_](https://microformats.org/) are standards used to embed semantics and structured data in HTML, and provide an API to be used by social web applications, search engines, aggregators, and other tools. These minimal patterns of HTML are used for marking up entities that range from fundamental to domain-specific information, such as people, organizations, events, and locations.
 
 - To create a microformats object, h-\* class names are used in the class attribute.
@@ -51,7 +53,7 @@ In addition to being machine-readable, microformats are designed to be easily re
 
 All microformats consist of a root, and a collection of properties. Properties are all optional and potentially multivalued - applications needing a singular value may use the first instance of a property. Hierarchical data is represented with nested microformats, typically as property values themselves.
 
-All microformats class names use prefixes. Prefixes are **syntax independent from vocabularies**, which are developed separately.
+All microformats class names use prefixes. Prefixes are **syntax independent of vocabularies**, which are developed separately.
 
 - **"h-\*" for root class names**, e.g. "h-card", "h-entry", "h-feed", and many more. These top-level root classes usually indicate a type and corresponding expected vocabulary of properties. For example:
 
@@ -187,6 +189,7 @@ Example h-entry as a blog post:
       <a href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106">
         <img
           class="u-photo"
+          alt="Greg McVerry"
           src="https://quickthoughts.jgregorymcverry.com/file/2d6c9cfed7ac8e849f492b5bc7e6a630/thumb.jpg" />
       </a>
       <a
@@ -225,10 +228,18 @@ Example h-entry as a blog post:
     {
       "type": [ "h-entry" ],
       "properties": {
-        "in-reply-to": [ "https://developer.mozilla.org/en-US/docs/Web/HTML/microformats" ],
-        "name": [ "Hey thanks for making this microformats resource" ],
-        "url": [ "https://quickthoughts.jgregorymcverry.com/2019/05/31/hey-thanks-for-making-this-microformats-resource" ],
-        "published": [ "2019-05-31T14:19:09+0000" ],
+        "in-reply-to": [
+          "https://developer.mozilla.org/en-US/docs/Web/HTML/microformats"
+        ],
+        "name": [
+          "Hey thanks for making this microformats resource"
+        ],
+        "url": [
+          "https://quickthoughts.jgregorymcverry.com/2019/05/31/hey-thanks-for-making-this-microformats-resource"
+        ],
+        "published": [
+          "2019-05-31T14:19:09+0000"
+        ],
         "content": [
           {
             "html": "Hey thanks for making this microformats resource",
@@ -241,8 +252,12 @@ Example h-entry as a blog post:
             "type": [ "h-card" ],
             "properties": {
               "name": [ "Greg McVerry" ],
-              "photo": [ "https://quickthoughts.jgregorymcverry.com/file/2d6c9cfed7ac8e849f492b5bc7e6a630/thumb.jpg" ],
-              "url": [ "https://quickthoughts.jgregorymcverry.com/profile/jgmac1106" ]
+              "photo": [
+                "https://quickthoughts.jgregorymcverry.com/file/2d6c9cfed7ac8e849f492b5bc7e6a630/thumb.jpg"
+              ],
+              "url": [
+                "https://quickthoughts.jgregorymcverry.com/profile/jgmac1106"
+              ]
             },
             "lang": "en",
             "value": "Greg McVerry"
@@ -251,6 +266,8 @@ Example h-entry as a blog post:
       },
       "lang": "en"
     }
+  ]
+}
 ```
 
 ### h-feed
@@ -364,24 +381,42 @@ The `h-event` is for events on the web. h-event is often used with both event li
 {
   "items": [
     {
-      "type": [ "h-event" ],
+      "type": [
+        "h-event"
+      ],
       "properties": {
-        "name": [ "IndieWeb Summit" ],
-        "url": [ "https://aaronparecki.com/2019/06/29/1/" ],
+        "name": [
+          "IndieWeb Summit"
+        ],
+        "url": [
+          "https://aaronparecki.com/2019/06/29/1/"
+        ],
         "author": [
           {
-            "type": [ "h-card" ],
+            "type": [
+              "h-card"
+            ],
             "properties": {
-              "name": [ "Aaron Parecki" ],
-              "url": [ "https://aaronparecki.com"]
+              "name": [
+                "Aaron Parecki"
+              ],
+              "url": [
+                "https://aaronparecki.com"
+              ]
             },
             "lang": "en",
             "value": "Aaron Parecki"
           }
         ],
-        "start": [ "2019-06-29T09:00:00-07:00" ],
-        "end": [ "2019-06-30T18:00:00-07:00" ],
-        "published": [ "2019-05-25T18:00:00-07:00" ],
+        "start": [
+          "2019-06-29T09:00:00-07:00"
+        ],
+        "end": [
+          "2019-06-30T18:00:00-07:00"
+        ],
+        "published": [
+          "2019-05-25T18:00:00-07:00"
+        ],
         "content": [
           {
             "html": "Come join us",
@@ -391,15 +426,31 @@ The `h-event` is for events on the web. h-event is often used with both event li
         ],
         "location": [
           {
-            "type": [ "h-card" ],
+            "type": [
+              "h-card"
+            ],
             "properties": {
-              "name": [ "Mozilla" ],
-              "p-street-address": [ "1120 NW Couch St" ]
-              "locality": [ "Portland" ],
-              "region": [ "Oregon" ],
-              "country": [ "US" ],
-              "latitude": [ "45.52345" ],
-              "longitude": [ "-122.682677" ]
+              "name": [
+                "Mozilla"
+              ],
+              "p-street-address": [
+                "1120 NW Couch St"
+              ],
+              "locality": [
+                "Portland"
+              ],
+              "region": [
+                "Oregon"
+              ],
+              "country": [
+                "US"
+              ],
+              "latitude": [
+                "45.52345"
+              ],
+              "longitude": [
+                "-122.682677"
+              ]
             },
             "lang": "en",
             "value": "Mozilla"
@@ -408,7 +459,8 @@ The `h-event` is for events on the web. h-event is often used with both event li
       },
       "lang": "en"
     }
-  ],
+  ]
+}
 ```
 
 ## Microformats rel property examples
@@ -441,7 +493,7 @@ This attribute states that the linked document should not be given any weight by
 
 ## Browser compatibility
 
-Supported in all browsers's support for the class attribute and its DOM API.
+Supported in all browsers' support for the class attribute and its DOM API.
 
 ## See also
 

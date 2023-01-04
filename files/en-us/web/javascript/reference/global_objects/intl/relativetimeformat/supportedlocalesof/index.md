@@ -2,6 +2,7 @@
 title: Intl.RelativeTimeFormat.supportedLocalesOf()
 slug: >-
   Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf
+page-type: javascript-static-method
 tags:
   - Internationalization
   - Intl
@@ -15,7 +16,7 @@ browser-compat: javascript.builtins.Intl.RelativeTimeFormat.supportedLocalesOf
 
 {{JSRef}}
 
-The **`Intl.RelativeTimeFormat.supportedLocalesOf()`** method returns an array containing those of the provided locales that are supported in date and time formatting without having to fall back to the runtime's default locale.
+The **`Intl.RelativeTimeFormat.supportedLocalesOf()`** static method returns an array containing those of the provided locales that are supported in date and time formatting without having to fall back to the runtime's default locale.
 
 {{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-supportedlocalesof.html","shorter")}}
 
@@ -37,7 +38,7 @@ supportedLocalesOf(locales, options)
   - : An object that may have the following property:
 
     - `localeMatcher`
-      - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`. For information about this option, see the {{jsxref("Intl", "Intl", "#Locale_negotiation", 1)}} page.
+      - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`. For information about this option, see the {{jsxref("Intl", "Intl", "#locale_identification_and_negotiation", 1)}} page.
 
 ### Return value
 
@@ -57,7 +58,7 @@ Assuming a runtime that supports Indonesian and German but not Balinese in date 
 const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
 const options = { localeMatcher: 'lookup' };
 console.log(Intl.RelativeTimeFormat.supportedLocalesOf(locales, options).join(', '));
-// → "id-u-co-pinyin, de-ID"
+// "id-u-co-pinyin, de-ID"
 ```
 
 ## Specifications

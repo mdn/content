@@ -100,7 +100,7 @@ There are four `itemscope` attributes in the following example. Each `itemscope`
     <tr>
       <td>itemprop</td>
       <td>datePublished</td>
-      <td>2009-11-05</td>
+      <td>2022-11-05</td>
     </tr>
     <tr>
       <td>itemprop</td>
@@ -215,7 +215,7 @@ There are four `itemscope` attributes in the following example. Each `itemscope`
   </p>
   <p>
     Published:
-    <time datetime="2009-11-05" itemprop="datePublished">November 5, 2009</time>
+    <time datetime="2022-11-05" itemprop="datePublished">November 5, 20022</time>
   </p>
   <span itemprop="description">This is my grandmother's apple pie recipe. I like to add a dash of
     nutmeg.</span>

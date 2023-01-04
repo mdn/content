@@ -35,7 +35,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLObjectElement.contentDocument")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Document")}} representing the active document of the object element's nested browsing context, if any; otherwise `null`.
 - {{domxref("HTMLObjectElement.contentWindow")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("WindowProxy")}} representing the window proxy of the object element's nested browsing context, if any; otherwise `null`.
+  - : Returns a {{glossary("WindowProxy")}} representing the window proxy of the object element's nested browsing context, if any; otherwise `null`.
 - {{domxref("HTMLObjectElement.data")}}
   - : Returns a string that reflects the {{htmlattrxref("data", "object")}} HTML attribute, specifying the address of a resource's data.
 - {{domxref("HTMLObjectElement.declare")}} {{deprecated_inline}}

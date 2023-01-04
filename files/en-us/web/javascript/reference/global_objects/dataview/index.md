@@ -1,6 +1,7 @@
 ---
 title: DataView
 slug: Web/JavaScript/Reference/Global_Objects/DataView
+page-type: javascript-class
 tags:
   - Class
   - DataView
@@ -71,6 +72,8 @@ function getUint64BigInt(dataview, byteOffset, littleEndian) {
 
 ## Instance properties
 
+- `DataView.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"DataView"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("DataView.prototype.buffer")}}
   - : The {{jsxref("ArrayBuffer")}} referenced by this view. Fixed at construction time and thus **read only.**
 - {{jsxref("DataView.prototype.byteLength")}}

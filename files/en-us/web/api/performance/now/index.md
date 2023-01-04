@@ -11,7 +11,7 @@ tags:
 browser-compat: api.Performance.now
 ---
 
-{{APIRef("High Resolution Timing")}}
+{{APIRef("Performance API")}}
 
 The **`performance.now()`** method
 returns a {{domxref("DOMHighResTimeStamp")}}, measured in milliseconds.

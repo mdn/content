@@ -1,6 +1,7 @@
 ---
 title: Reflect.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -13,7 +14,7 @@ browser-compat: javascript.builtins.Reflect.isExtensible
 
 {{JSRef}}
 
-The static **`Reflect.isExtensible()`** method determines if an object is extensible (whether it can have new properties added to it). It is similar to {{jsxref("Object.isExtensible()")}}, but with [some differences](#difference_with_object.isextensible).
+The **`Reflect.isExtensible()`** static method determines if an object is extensible (whether it can have new properties added to it). It is similar to {{jsxref("Object.isExtensible()")}}, but with [some differences](#difference_with_object.isextensible).
 
 {{EmbedInteractiveExample("pages/js/reflect-isextensible.html", "taller")}}
 
@@ -45,19 +46,19 @@ See also {{jsxref("Object.isExtensible()")}}.
 ```js
 // New objects are extensible.
 const empty = {};
-Reflect.isExtensible(empty); // === true
+Reflect.isExtensible(empty); // true
 
 // ...but that can be changed.
 Reflect.preventExtensions(empty);
-Reflect.isExtensible(empty); // === false
+Reflect.isExtensible(empty); // false
 
 // Sealed objects are by definition non-extensible.
 const sealed = Object.seal({});
-Reflect.isExtensible(sealed); // === false
+Reflect.isExtensible(sealed); // false
 
 // Frozen objects are also by definition non-extensible.
 const frozen = Object.freeze({});
-Reflect.isExtensible(frozen); // === false
+Reflect.isExtensible(frozen); // false
 ```
 
 ### Difference with Object.isExtensible()

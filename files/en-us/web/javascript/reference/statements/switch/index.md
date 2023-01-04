@@ -1,6 +1,7 @@
 ---
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
+page-type: javascript-statement
 tags:
   - JavaScript
   - Language feature
@@ -87,7 +88,7 @@ switch (foo) {
   default:
     console.log('default');
 }
-// Logs "0" and "1"
+// Logs 0 and 1
 ```
 
 You can use other control-flow statements to replace `break`, such as a [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement.

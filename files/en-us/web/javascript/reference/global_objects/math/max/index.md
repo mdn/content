@@ -1,6 +1,7 @@
 ---
 title: Math.max()
 slug: Web/JavaScript/Reference/Global_Objects/Math/max
+page-type: javascript-static-method
 tags:
   - JavaScript
   - Math
@@ -16,7 +17,7 @@ browser-compat: javascript.builtins.Math.max
 
 {{JSRef}}
 
-The **`Math.max()`** function returns the largest of the numbers given as input parameters, or -{{jsxref("Infinity")}} if there are no parameters.
+The **`Math.max()`** static method returns the largest of the numbers given as input parameters, or -{{jsxref("Infinity")}} if there are no parameters.
 
 {{EmbedInteractiveExample("pages/js/math-max.html")}}
 
@@ -49,9 +50,9 @@ Because `max()` is a static method of `Math`, you always use it as `Math.max()`,
 ### Using Math.max()
 
 ```js
-Math.max(10, 20); //  20
+Math.max(10, 20); // 20
 Math.max(-10, -20); // -10
-Math.max(-10, 20); //  20
+Math.max(-10, 20); // 20
 ```
 
 ### Getting the maximum element of an array

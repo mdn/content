@@ -11,7 +11,7 @@ tags:
 browser-compat: api.PerformanceMark
 ---
 
-{{APIRef("User Timing API")}}
+{{APIRef("Performance API")}}
 
 **`PerformanceMark`** is an interface for {{domxref("PerformanceEntry")}} objects with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`mark`".
 

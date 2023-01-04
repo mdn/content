@@ -1,6 +1,7 @@
 ---
 title: Intl.PluralRules.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions
+page-type: javascript-instance-method
 tags:
   - Internationalization
   - Intl
@@ -18,6 +19,8 @@ browser-compat: javascript.builtins.Intl.PluralRules.resolvedOptions
 The **`Intl.PluralRules.prototype.resolvedOptions()`** method
 returns a new object with properties reflecting the locale and plural formatting
 options computed during initialization of this {{jsxref("Intl.PluralRules")}} object.
+
+{{EmbedInteractiveExample("pages/js/intl-pluralrules-prototype-resolvedoptions.html")}}
 
 ## Syntax
 
@@ -68,7 +71,7 @@ usedOptions.locale;                // "de-DE"
 usedOptions.maximumFractionDigits; // 3
 usedOptions.minimumFractionDigits; // 0
 usedOptions.minimumIntegerDigits;  // 1
-usedOptions.pluralCategories;      // Array [ "one", "other" ]
+usedOptions.pluralCategories;      // [ "one", "other" ]
 usedOptions.type;                  // "cardinal"
 ```
 

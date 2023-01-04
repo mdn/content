@@ -1,6 +1,7 @@
 ---
 title: 'SyntaxError: unterminated string literal'
 slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
+page-type: javascript-error
 tags:
   - Error
   - Errors
@@ -16,7 +17,7 @@ The JavaScript error "unterminated string literal" occurs when there is an unter
 
 ## Message
 
-```
+```plain
 SyntaxError: Unterminated string constant (Edge)
 SyntaxError: unterminated string literal (Firefox)
 ```
@@ -31,7 +32,7 @@ There is an unterminated
 [string literal](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals) somewhere. String literals must be
 enclosed by single (`'`) or double (`"`) quotes. JavaScript makes
 no distinction between single-quoted strings and double-quoted strings.
-[Escape sequences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation) work
+[Escape sequences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences) work
 in strings created with either single or double quotes.
 To fix this error, check if:
 

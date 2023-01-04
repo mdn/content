@@ -64,10 +64,14 @@ See also the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header which you'll 
 To check if cross-origin isolation has been successful, you can test against the [`crossOriginIsolated`](/en-US/docs/Web/API/crossOriginIsolated) property available to window and worker contexts:
 
 ```js
+const myWorker = new Worker('worker.js');
+
 if (crossOriginIsolated) {
-  // Post SharedArrayBuffer
+  const buffer = new SharedArrayBuffer(16);
+  myWorker.postMessage(buffer);
 } else {
-  // Do something else
+  const buffer = new ArrayBuffer(16);
+  myWorker.postMessage(buffer);
 }
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: BigInt.asIntN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asIntN
+page-type: javascript-static-method
 tags:
   - BigInt
   - JavaScript
@@ -69,11 +70,9 @@ The `BigInt.asIntN()` method can be useful to stay in the range of 64-bit arithm
 ```js
 const max = 2n ** (64n - 1n) - 1n;
 
-BigInt.asIntN(64, max);
-// ↪ 9223372036854775807n
+BigInt.asIntN(64, max); // 9223372036854775807n
 
-BigInt.asIntN(64, max + 1n);
-// ↪ -9223372036854775808n
+BigInt.asIntN(64, max + 1n); // -9223372036854775808n
 // negative because the 64th bit of 2^63 is 1
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Destructuring assignment
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
+page-type: javascript-language-feature
 tags:
   - Destructuring
   - Destructuring_assignment
@@ -364,7 +365,7 @@ const obj = {
   }
 }
 const [a, b, ...rest] = obj; // Logs 0 1 2 3
-console.log(rest); // Logs an array [2, 3]
+console.log(rest); // [2, 3] (an array)
 ```
 
 ### Object destructuring

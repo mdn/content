@@ -51,7 +51,7 @@ for (const value of list.values()) {
 
 The result is:
 
-```
+```plain
 <p>
 #text "hey"
 <span>

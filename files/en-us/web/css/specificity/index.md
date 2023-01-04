@@ -321,7 +321,7 @@ All these methods are covered in preceding sections.
 
 If you're unable to remove `!important` flags from an authors style sheet, the only solution to overriding the important styles is by using `!important`. Creating a [cascade layer](/en-US/docs/Web/CSS/@layer) of important declaration overrides is an excellent solution. Two ways of doing this include:
 
-#### Method #1
+#### Method 1
 
 1. Create a separate, short style sheet containing only important declarations specifically overriding any important declarations you were unable to remove.
 2. Import this stylesheet as the first import in your CSS using `layer()`, including the `@import` statement, before linking to other stylesheets. This is to ensure that the important overrides is imported as the first layer.
@@ -332,7 +332,7 @@ If you're unable to remove `!important` flags from an authors style sheet, the o
 </style>
 ```
 
-#### Method #2
+#### Method 2
 
 1. At the beginning of your stylesheet declarations, create a named cascade layer, like so:
 
