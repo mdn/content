@@ -10,12 +10,6 @@ tags:
 
 The [same-origin security policy](/en-US/docs/Web/Security/Same-origin_policy) forbids cross-origin access to resources. But CORS gives web servers the ability to say they want to opt into allowing cross-origin access to their resources.
 
-## See also
-
-- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) on MDN
-- [Cross-origin resource sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on Wikipedia
-- [Fetch specification](https://fetch.spec.whatwg.org)
-
 ### CORS headers
 
 - {{HTTPHeader("Access-Control-Allow-Origin")}}
@@ -36,3 +30,9 @@ The [same-origin security policy](/en-US/docs/Web/Security/Same-origin_policy) f
   - : Used when issuing a preflight request to let the server know which [HTTP method](/en-US/docs/Web/HTTP/Methods) will be used when the actual request is made.
 - {{HTTPHeader("Origin")}}
   - : Indicates where a fetch originates from.
+
+## See also
+
+- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) on MDN
+- [Cross-origin resource sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on Wikipedia
+- [Fetch specification](https://fetch.spec.whatwg.org)

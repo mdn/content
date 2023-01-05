@@ -16,10 +16,7 @@ browser-compat: api.PaymentRequestEvent.respondWith
 
 {{APIRef("Payment Handler API")}}{{SeeCompatTable}}
 
-The **`respondWith`** property of the
-{{domxref("PaymentRequestEvent")}} interface prevents the default event handling and
-allows you to provide a {{jsxref("Promise")}} for a {{domxref("PaymentResponse")}}
-object yourself.
+The **`respondWith()`** method of the {{domxref("PaymentRequestEvent")}} interface prevents the default event handling and allows you to provide a {{jsxref("Promise")}} for a {{domxref("PaymentResponse")}} object yourself.
 
 ## Syntax
 
