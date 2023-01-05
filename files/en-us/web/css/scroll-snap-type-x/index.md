@@ -22,7 +22,6 @@ Specifying any precise animations or physics used to enforce those snap points i
 
 > **Note:** The CSS [scroll-snap-type](/en-US/docs/Web/CSS/scroll-snap-type) is the modern specification that defines this functionality.
 
-
 ```css
 /* Keyword values */
 scroll-snap-type-x: none;
