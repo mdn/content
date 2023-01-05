@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript

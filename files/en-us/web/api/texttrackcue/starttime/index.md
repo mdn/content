@@ -17,7 +17,7 @@ The **`startTime`** property of the {{domxref("TextTrackCue")}} interface return
 
 ## Value
 
-An integer representing the start time, in seconds.
+A number representing the start time, in seconds.
 
 ## Examples
 

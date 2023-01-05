@@ -1,6 +1,7 @@
 ---
 title: 'TypeError: "x" is not a function'
 slug: Web/JavaScript/Reference/Errors/Not_a_function
+page-type: javascript-error
 tags:
   - Error
   - Errors

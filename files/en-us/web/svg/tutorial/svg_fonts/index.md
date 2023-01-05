@@ -1,6 +1,7 @@
 ---
 title: SVG fonts
 slug: Web/SVG/Tutorial/SVG_fonts
+page-type: guide
 tags:
   - Advanced
   - NeedsUpdate

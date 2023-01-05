@@ -1,6 +1,6 @@
 ---
-title: accent
-slug: Glossary/accent
+title: Accent
+slug: Glossary/Accent
 tags:
   - Input
   - accent

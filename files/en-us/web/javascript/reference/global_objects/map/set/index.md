@@ -1,6 +1,7 @@
 ---
 title: Map.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/Map/set
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript

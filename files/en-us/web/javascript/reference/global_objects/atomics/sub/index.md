@@ -1,6 +1,7 @@
 ---
 title: Atomics.sub()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/sub
+page-type: javascript-static-method
 tags:
   - Atomics
   - JavaScript
@@ -11,7 +12,7 @@ browser-compat: javascript.builtins.Atomics.sub
 
 {{JSRef}}
 
-The static **`Atomics.sub()`** method subtracts a given value
+The **`Atomics.sub()`** static method subtracts a given value
 at a given position in the array and returns the old value at that position. This atomic
 operation guarantees that no other write happens until the modified value is written
 back.

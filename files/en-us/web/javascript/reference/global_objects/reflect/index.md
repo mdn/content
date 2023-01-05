@@ -1,6 +1,7 @@
 ---
 title: Reflect
 slug: Web/JavaScript/Reference/Global_Objects/Reflect
+page-type: javascript-namespace
 tags:
   - ECMAScript 2015
   - JavaScript

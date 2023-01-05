@@ -33,7 +33,7 @@ It is valid for the input types including: {{HTMLElement("input/date", "date")}}
   <thead>
     <tr>
       <th>Input type</th>
-      <th>Example</th>
+      <th>Syntax</th>
       <th>Example</th>
     </tr>
   </thead>

@@ -1,6 +1,7 @@
 ---
 title: JavaScript reference
 slug: Web/JavaScript/Reference
+page-type: landing-page
 tags:
   - Code
   - ECMAScript
@@ -17,7 +18,11 @@ tags:
 
 {{JsSidebar}}
 
-This part of the JavaScript section on MDN serves as a repository of facts about the JavaScript language. Read more [about this reference](/en-US/docs/Web/JavaScript/Reference/About).
+The JavaScript reference serves as a repository of facts about the JavaScript language. The entire language is described here in detail. As you write JavaScript code, you'll refer to these pages often (thus the title "JavaScript reference").
+
+The JavaScript language is intended to be used within some larger environment, be it a browser, server-side scripts, or similar. For the most part, this reference attempts to be environment-agnostic and does not target a web browser environment.
+
+If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/Guide). Once you have a firm grasp of the fundamentals, you can use the reference to get more details on individual objects and language constructs.
 
 ## Built-ins
 
@@ -178,6 +183,7 @@ This part of the JavaScript section on MDN serves as a repository of facts about
 
 - {{jsxref("Statements/Empty", "Empty", "", 1)}}
 - {{jsxref("Statements/block", "Block", "", 1)}}
+- {{jsxref("Statements/Expression_statement", "Expression statement", "", 1)}}
 - {{jsxref("Statements/debugger", "debugger")}}
 - {{jsxref("Statements/export", "export")}}
 - {{jsxref("Statements/import", "import")}}

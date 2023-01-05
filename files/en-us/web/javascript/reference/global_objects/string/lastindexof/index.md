@@ -1,6 +1,7 @@
 ---
 title: String.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method

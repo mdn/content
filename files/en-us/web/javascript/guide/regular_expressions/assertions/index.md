@@ -1,6 +1,7 @@
 ---
 title: Assertions
 slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
+page-type: guide
 tags:
   - Assertions
   - Guide
@@ -131,7 +132,7 @@ Assertions include boundaries, which indicate the beginnings and endings of line
       <td>
         <p>
           <strong>Lookahead assertion: </strong>Matches "x" only if "x" is
-          followed by "y". For example, /<code>Jack(?=Sprat)/</code> matches
+          followed by "y". For example, <code>/Jack(?=Sprat)/</code> matches
           "Jack" only if it is followed by "Sprat".<br /><code
             >/Jack(?=Sprat|Frost)/</code
           >

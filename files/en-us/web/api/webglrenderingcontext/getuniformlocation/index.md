@@ -33,11 +33,11 @@ inputs:
 
 - {{domxref("WebGLRenderingContext.getUniform", "getUniform()")}}
   - : Returns the value of the uniform at the given location.
-- {{domxref("WebGLRenderingContext.uniform", "uniform[1234][fi][v]()")}}
+- [`WebGLRenderingContext.uniform[1234][fi][v]()`](/en-US/docs/Web/API/WebGLRenderingContext/uniform)
   - : Sets the uniform's value to the specified value, which may be a single floating
     point or integer number, or a 2-4 component vector specified either as a list of
     values or as a {{jsxref("Float32Array")}} or {{jsxref("Int32Array")}}.
-- {{domxref("WebGLRenderingContext.uniformMatrix", "uniformMatrix[234][fv]()")}}
+- [`WebGLRenderingContext.uniformMatrix[234][fv]()`](/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix)
   - : Sets the uniform's value to the specified matrix, possibly with transposition. The
     value is represented as a sequence of `GLfloat` values or as a
     `Float32Array`.

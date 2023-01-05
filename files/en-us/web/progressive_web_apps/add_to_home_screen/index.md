@@ -205,7 +205,7 @@ The click handler contains the following steps:
 
 So when the button is clicked, the install prompt appears.
 
-![](chrome-desktop-a2hs-banner.png)
+![Install prompt prompts for installing or cancelling the awesome fox picture.](chrome-desktop-a2hs-banner.png)
 
 If the user selects _Install_, the app is installed (available as standalone desktop app), and the Install button no longer shows (the `onbeforeinstallprompt` event no longer fires if the app is already installed). When you open the app, it will appear in its own window:
 

@@ -1804,10 +1804,6 @@
       "inh": "",
       "impl": []
     },
-    "InteractionCounts": {
-      "inh": "",
-      "impl": []
-    },
     "IntersectionObserver": {
       "inh": "",
       "impl": []
@@ -2313,10 +2309,6 @@
       "impl": []
     },
     "Path2D": {
-      "inh": "",
-      "impl": []
-    },
-    "PaymentInstruments": {
       "inh": "",
       "impl": []
     },

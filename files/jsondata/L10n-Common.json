@@ -185,6 +185,14 @@
     "zh-CN": "[我来译！]",
     "zh-TW": "[我來譯！]"
   },
+  "Tutorial": {
+    "en-US": "Tutorial",
+    "es": "Tutorial",
+    "fr": "Tutoriel",
+    "ja": "チュートリアル",
+    "ru": "Руководство",
+    "zh-CN": "教程"
+  },
   "listSeparator": {
     "en-US": ", ",
     "es": ", ",

@@ -38,6 +38,10 @@ color(display-p3 1 0.5 0 / .5);
 
     `/ <alpha-value>` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
+### Formal syntax
+
+{{csssyntax}}
+
 ## Specifications
 
 {{Specifications}}

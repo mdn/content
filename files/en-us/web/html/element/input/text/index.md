@@ -21,56 +21,6 @@ browser-compat: html.elements.input.type_text
 
 {{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
-      <td>
-        A string representing the text contained in
-        the text field.
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Supported Common Attributes</strong></td>
-      <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("maxlength", "input")}},
-        {{htmlattrxref("minlength", "input")}},
-        {{htmlattrxref("pattern", "input")}},
-        {{htmlattrxref("placeholder", "input")}},
-        {{htmlattrxref("readonly", "input")}},
-        {{htmlattrxref("required", "input")}} and
-        {{htmlattrxref("size", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td>{{htmlattrxref("list", "input")}}, <code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM interface</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}}
-        and
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}.
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Value
 
 The {{htmlattrxref("value", "input")}} attribute is a string that contains the current value of the text entered into the text field. You can retrieve this using the {{domxref("HTMLInputElement")}} `value` property in JavaScript.
@@ -432,6 +382,58 @@ This renders like so:
 ## Examples
 
 You can see good examples of text inputs used in context in our [Your first HTML form](/en-US/docs/Learn/Forms/Your_first_form) and [How to structure an HTML form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form) articles.
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>
+        A string representing the text contained in
+        the text field.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Supported Common Attributes</strong></td>
+      <td>
+        {{htmlattrxref("autocomplete", "input")}},
+        {{htmlattrxref("list", "input")}},
+        {{htmlattrxref("maxlength", "input")}},
+        {{htmlattrxref("minlength", "input")}},
+        {{htmlattrxref("pattern", "input")}},
+        {{htmlattrxref("placeholder", "input")}},
+        {{htmlattrxref("readonly", "input")}},
+        {{htmlattrxref("required", "input")}} and
+        {{htmlattrxref("size", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td>{{htmlattrxref("list", "input")}}, <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}}
+        and
+        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

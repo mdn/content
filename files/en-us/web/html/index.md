@@ -79,7 +79,7 @@ Our [HTML Learning Area](/en-US/docs/Learn/HTML) features multiple modules that 
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
   - : The {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements allow you to play audio and video media natively within your content without the need for external software support.
 - [HTML content categories](/en-US/docs/Web/Guide/HTML/Content_categories)
-  - : HTML is comprised of several kinds of content, each of which is allowed to be used in certain contexts and is disallowed in others. Similarly, each has a set of other content categories they can contain and elements that can or can't be used in them. This is a guide to these categories.
+  - : HTML is comprised of several kinds of content, each of which is allowed to be used in certain contexts and is disallowed in others. Similarly, each context has a set of other content categories it can contain and elements that can or can't be used in them. This is a guide to these categories.
 - [Quirks mode and standards mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
   - : Historical information on quirks mode and standards mode.
 

@@ -1,6 +1,6 @@
 ---
-title: markup
-slug: Glossary/markup
+title: Markup
+slug: Glossary/Markup
 tags:
   - Intro
   - Markup

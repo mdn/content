@@ -1,6 +1,7 @@
 ---
 title: Intl.Segmenter.prototype.segment()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment
+page-type: javascript-instance-method
 tags:
   - Internationalization
   - Intl
