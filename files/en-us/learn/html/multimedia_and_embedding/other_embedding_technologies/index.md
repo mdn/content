@@ -212,7 +212,7 @@ textarea.onkeyup = function () {
 
 So, that was easy and fun, right? {{htmlelement("iframe")}} elements are designed to allow you to embed other web documents into the current document. This is great for incorporating third-party content into your website that you might not have direct control over and don't want to have to implement your own version of — such as video from online video providers, commenting systems like [Disqus](https://disqus.com/), maps from online map providers, advertising banners, etc. Even the live editable examples you've been using through this course are implemented using `<iframe>`s.
 
-Before diving into using `<iframe>` elements, there sre some security concerns to be aware of.
+Before diving into using `<iframe>` elements, there are some security concerns to be aware of.
 Say you wanted to include the MDN glossary on one of your web pages using the {{htmlelement("iframe")}} element, you might try something like the next code example.
 If you were to do add the code below into one of your pages, you might be surprised to see an error message instead of the glossary page:
 
