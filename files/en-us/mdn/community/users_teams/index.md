@@ -150,10 +150,12 @@ Owners can:
 
 ### Summary of the roles
 
-||[Contributor](#contributor)|[Organization member](#organization_member)|[Maintainer](#maintainer)|[Owner](#owner)|
-|:-|:-|:-|:-|:-|
-|Requirements|Follow the code of conduct and contribution guidelines|- Enable 2FA for GitHub account<br>- Enable signed commits<br><br>One or more of:<br>- Resolve two or more issues<br>- Contribute for at least two months<br>- Active contribution in a project area|One or more of:<br>- Invited expert for at least six months<br>- Knowledge across multiple project areas<br>- Act towards overall health of the project<br>- Mentor other contributors<br>- Spend at least 16 hours per month on the project<br>- Attend community meetings|Limited to Mozilla staff|
-|Privileges|- Invitations to contributor events<br>- Eligibility to become an organization member|Access rights at organization level|Approve and merge pull requests|- Manage access of different roles to various repositories<br>- Add or archive repositories and projects|
+| Role | Requirements | Privileges |
+|:-|:-|:-|
+| [**Contributor**](#contributor) | Follow the code of conduct and contribution guidelines | - Invitations to contributor events<br>- Eligibility to become an organization member |
+| [**Organization member**](#organization_member) | - Enable 2FA for GitHub account<br>- Enable signed commits<br><br>One or more of:<br>- Resolve two or more issues<br>- Contribute for at least two months<br>- Active contribution in a project area | Access rights at the organization level |
+| [**Maintainer**](#maintainer) | One or more of:<br>- Invited expert for at least six months<br>- Knowledge across multiple project areas<br>- Act towards overall health of the project<br>- Mentor other contributors<br>- Spend at least 16 hours per month on the project<br>- Attend community meetings | Approve and merge pull requests |
+| [**Owner**](#owner) | Limited to Mozilla staff | - Manage access of different roles to various repositories<br>- Add or archive repositories and projects |
 
 ## Special roles
 
