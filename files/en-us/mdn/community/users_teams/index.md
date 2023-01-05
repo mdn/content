@@ -314,33 +314,15 @@ We manage teams using the [GitHub teams](https://docs.github.com/en/organization
 The teams in the [MDN GitHub organization](https://github.com/orgs/mdn/teams) include:
 
 - **Core**: Core MDN Web Docs team
-- **Localization team leads**: People who lead our individual localization teams
-- **MDN community engagement**: People responsible for community engagement across our repositories
-- **MDN product**: People responsible for the MDN Plus product
+- **mdn-community-engagement**: People responsible for community engagement across our repositories
+- **mdn-product**: People responsible for the MDN Plus product
+- **localization-team-leads**: People who lead our individual localization teams
 - **OWD**: Contributors from the Open Web Docs non-profit organization
-- **SRE**: Site reliability engineers who support MDN Web Docs
-- **Yari content**: The umbrella team for all MDN Web Docs content reviewers
+- **sre**: Site reliability engineers who support MDN Web Docs
+- **yari-content**: The umbrella team for all MDN Web Docs content reviewers
 
-  - **Yari content MDN**: Responsible for reviewing docs under `/en-US/docs`
-  - **Yari content Mozilla add-ons**: Responsible for reviewing docs under `/en-US/docs/Mozilla/Add-ons`
-  - **Yari content JavaScript**: Responsible for reviewing docs under `/en-US/docs/Web/JavaScript`
-  - **Yari content HTML**: Responsible for reviewing docs under `/en-US/docs/Web/HTML`
-  - **Yari content Web API**: Responsible for reviewing docs under `/en-US/docs/Web/API`
-  - **Yari content HTTP**: Responsible for reviewing docs under `/en-US/docs/Web/HTTP`
-  - **Yari content CSS**: Responsible for reviewing docs under `/en-US/docs/Web/CSS`
-  - **Yari content accessibility**: Responsible for reviewing docs under `/en-US/docs/Web/Accessibility`
-  - **Yari content SVG**: Responsible for reviewing docs under `/en-US/docs/Web/SVG`
-  - **Yari content Web Assembly**: Responsible for reviewing docs related to WebAssembly
-
-  The following teams are specific to the respective localization teams:
-
-  - **Yari content ES**: Responsible for reviewing MDN docs in Spanish
-  - **Yari content FR**: Responsible for reviewing MDN docs in French
-  - **Yari content JA**: Responsible for reviewing MDN docs in Japanese
-  - **Yari content KO**: Responsible for reviewing MDN docs in Korean
-  - **Yari content PT-BR**: Responsible for reviewing MDN docs in Brazilian Portuguese
-  - **Yari content RU**: Responsible for reviewing MDN docs in Russian
-  - **Yari content ZH**: Responsible for reviewing MDN docs in Chinese
+  - There is a sub-team for the different topic areas — accessibility, Add-ons, CSS, HTML, HTTP, Javascript, SVG, Web API, and Web assembly. For example, there's yari-content-css and yari-content-svg.
+  - There are also sub-teams for different languages — Brazilian Portuguese, Chinese, French, Japanese, Korean, Russian, and Spanish. For example, there's yari-content-fr and yari-content-ko.
 
 To become a member of a team, you must:
 
