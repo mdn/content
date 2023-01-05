@@ -17,9 +17,9 @@ browser-compat: css.types.color.rgb
 
 The **`rgb()`** functional notation expresses a color according to its red, green, and blue components. An optional alpha component represents the color's transparency.
 
-{{EmbedInteractiveExample("pages/css/function-rgb.html")}}
+> **Note:** The legacy `rgba()` syntax is an alias for `rgb()`, accepting the same parameters and behaving in the same way.
 
-> **Note:** The legacy {{cssxref("color_value/rgba", "rgba()")}} syntax is an alias for `rgb()`, accepting the same parameters and behaving in the same way.
+{{EmbedInteractiveExample("pages/css/function-rgb.html")}}
 
 ## Syntax
 
@@ -31,6 +31,13 @@ rgb(255 255 255 / .5)
 /* Syntax with comma-separated values */
 rgb(255, 255, 255)
 rgb(255, 255, 255, .5)
+
+/* Legacy rgba() syntax */
+rgba(255 255 255)
+rgba(255 255 255 / .5)
+
+rgba(255, 255, 255)
+rgba(255, 255, 255, .5)
 ```
 
 The `rgb()` function accepts three space-separated values, representing respectively values for `red`, `green`, and `blue`. Optionally it may also be given a slash `/` followed by a fourth value, representing `alpha`.
@@ -88,6 +95,39 @@ div.comma-separated {
 #### Result
 
 {{EmbedLiveSample('Legacy syntax: comma-separated values', '100%', '150px')}}
+
+### Legacy syntax: rgba()
+
+The legacy `rgba()` syntax is an alias for `rgb()`.
+
+#### HTML
+
+```html
+<div class="rgb"></div>
+<div class="rgba"></div>
+```
+
+#### CSS
+
+```css
+div {
+  width: 100px;
+  height: 50px;
+  margin: 1rem;
+}
+
+div.rgb {
+  background-color: rgb(255 0 0 / 0.5);
+}
+
+div.rgba {
+  background-color: rgba(255 0 0 / 0.5);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Legacy syntax: rgba()', '100%', '150px')}}
 
 ## Specifications
 

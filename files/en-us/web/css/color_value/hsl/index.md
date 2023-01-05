@@ -17,11 +17,11 @@ browser-compat: css.types.color.hsl
 
 The **`hsl()`** functional notation expresses an {{glossary("RGB", "sRGB")}} color according to its _hue_, _saturation_, and _lightness_ components. An optional _alpha_ component represents the color's transparency.
 
+> **Note:** The legacy `hsla()` syntax is an alias for `hsl()`, accepting the same parameters and behaving in the same way.
+
 {{EmbedInteractiveExample("pages/css/function-hsl.html")}}
 
 Defining _complementary colors_ with `hsl()` can be done with a single formula, as they are positioned on the same diameter of the {{glossary("color wheel")}}. If `theta` is the angle of a color, its complementary one will have `180deg-theta` as its _hue_ coordinate.
-
-> **Note:** The legacy {{cssxref("color_value/hsla", "hsla()")}} syntax is an alias for `hsl()`, accepting the same parameters and behaving in the same way.
 
 ## Syntax
 
@@ -33,6 +33,13 @@ hsl(hue saturation lightness / alpha)
 /* Syntax with comma-separated values */
 hsl(hue, saturation, lightness)
 hsl(hue, saturation, lightness, alpha)
+
+/* Legacy hsla() syntax */
+hsla(hue saturation lightness)
+hsla(hue saturation lightness / alpha)
+
+hsla(hue, saturation, lightness)
+hsla(hue, saturation, lightness, alpha)
 ```
 
 The `hsl()` function accepts three space-separated values, representing respectively `hue`, `saturation`, and `lightness`. Optionally it may also be given a slash `/` followed by a fourth value, representing `alpha`.
@@ -127,6 +134,39 @@ div.comma-separated {
 #### Result
 
 {{EmbedLiveSample('Legacy syntax: comma-separated values', '100%', '150px')}}
+
+### Legacy syntax: hsla()
+
+The legacy `hsla()` syntax is an alias for `hsl()`.
+
+#### HTML
+
+```html
+<div class="hsl"></div>
+<div class="hsla"></div>
+```
+
+#### CSS
+
+```css
+div {
+  width: 100px;
+  height: 50px;
+  margin: 1rem;
+}
+
+div.hsl {
+  background-color: hsl(0 100% 50% / 50%);
+}
+
+div.hsla {
+  background-color: hsl(0 100% 50% / 50%);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Legacy syntax: hsla()', '100%', '150px')}}
 
 ## Specifications
 
