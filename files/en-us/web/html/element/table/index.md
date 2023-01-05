@@ -1,5 +1,5 @@
 ---
-title: '<table>: The Table element'
+title: "<table>: The Table element"
 slug: Web/HTML/Element/table
 tags:
   - Element
@@ -644,14 +644,14 @@ The {{htmlattrxref("scope", "th")}} attribute on header elements is redundant in
     <tr>
       <th scope="row">Teal</th>
       <td><code>#51F6F6</code></td>
-      <td><code>hsla(180, 90%, 64%, 1)</code></td>
-      <td><code>rgba(81, 246, 246, 1)</code></td>
+      <td><code>hsl(180 90% 64% / 1)</code></td>
+      <td><code>rgb(81 246 246 / 1)</code></td>
     </tr>
     <tr>
       <th scope="row">Goldenrod</th>
       <td><code>#F6BC57</code></td>
-      <td><code>hsla(38, 90%, 65%, 1)</code></td>
-      <td><code>rgba(246, 188, 87, 1)</code></td>
+      <td><code>hsl(38 90% 65% / 1)</code></td>
+      <td><code>rgba(246 188 87 / 1)</code></td>
     </tr>
   </tbody>
 </table>
