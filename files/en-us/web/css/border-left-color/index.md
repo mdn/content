@@ -23,8 +23,8 @@ The **`border-left-color`** CSS property sets the color of an element's left [bo
 /* <color> values */
 border-left-color: red;
 border-left-color: #ffbb00;
-border-left-color: rgb(255, 0, 0);
-border-left-color: hsla(100%, 50%, 25%, 0.75);
+border-left-color: rgb(255 0 0);
+border-left-color: hsl(100deg 50% 25% / 0.75);
 border-left-color: currentcolor;
 border-left-color: transparent;
 
