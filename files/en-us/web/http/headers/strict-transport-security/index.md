@@ -83,8 +83,8 @@ By following the guidelines and successfully submitting your domain, you can ens
 While the service is hosted by Google, all browsers are using this preload list.
 However, it is not part of the HSTS specification and should not be treated as official.
 
-- Information regarding the HSTS preload list in Chrome : <https://www.chromium.org/hsts>
-- Consultation of the Firefox HSTS preload list : [nsSTSPreloadList.inc](https://hg.mozilla.org/mozilla-central/raw-file/tip/security/manager/ssl/nsSTSPreloadList.inc)
+- Information regarding the HSTS preload list in Chrome: <https://www.chromium.org/hsts>
+- Consultation of the Firefox HSTS preload list: [nsSTSPreloadList.inc](https://hg.mozilla.org/mozilla-central/raw-file/tip/security/manager/ssl/nsSTSPreloadList.inc)
 
 ## Examples
 
