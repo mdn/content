@@ -205,7 +205,7 @@ async function getPrice() {
     promptForDishChoice(),
     fetchPrices(),
   ]);
-  return pricesValue[choiceValue];
+  return prices[choice];
 }
 ```
 
