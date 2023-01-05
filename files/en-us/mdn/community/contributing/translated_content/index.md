@@ -30,7 +30,7 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 
 ### French (fr)
 
-- Discussions : [Matrix (#l10n-fr channel)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
+- Discussions: [Matrix (#l10n-fr channel)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
 - Current contributors: [cw118](https://github.com/cw118), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
 
 ### Japanese (ja)
