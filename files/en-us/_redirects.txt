@@ -11179,7 +11179,6 @@
 /en-US/docs/Web/CSS/::-webkit-scrollbar-track-piece	/en-US/docs/Web/CSS/::-webkit-scrollbar
 /en-US/docs/Web/CSS/:@-moz-document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/:any	/en-US/docs/Web/CSS/:is
-/en-US/docs/Web/CSS/:current	/en-US/docs/Web/API/WebVTT_API
 /en-US/docs/Web/CSS/:dir()	/en-US/docs/Web/CSS/:dir
 /en-US/docs/Web/CSS/:host()	/en-US/docs/Web/CSS/:host_function
 /en-US/docs/Web/CSS/:lang()	/en-US/docs/Web/CSS/:lang
