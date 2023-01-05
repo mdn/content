@@ -20,6 +20,9 @@ The **`scroll-snap-type-x`** [CSS](/en-US/docs/Web/CSS) property defines how str
 
 Specifying any precise animations or physics used to enforce those snap points is not covered by this property but instead left up to the user agent.
 
+> **Note:** The CSS [scroll-snap-type](/en-US/docs/Web/CSS/scroll-snap-type) is the modern specification that defines this functionality.
+
+
 ```css
 /* Keyword values */
 scroll-snap-type-x: none;
@@ -61,5 +64,6 @@ Not part of any standard.
 
 ## See also
 
-- [`scroll-snap-type-y`](/en-US/docs/Web/CSS/scroll-snap-type-y)
-- [`scroll-snap-type`](/en-US/docs/Web/CSS/scroll-snap-type)
+- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
+- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+  
