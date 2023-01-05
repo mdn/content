@@ -44,7 +44,7 @@ As a contributor, you can get involved with the project by engaging in the follo
 - Submitting bug reports. Check out the [kind of issues you can open](https://github.com/mdn/content/issues/new/choose) on MDN's [`content`](https://github.com/mdn/content) repository.
   If you notice a platform bug, you can [open an issue](https://github.com/mdn/yari/issues/new/choose) on MDN's `yari` repository.
 - Commenting on issues to move conversations towards a fruitful resolution.
-- Addressing open issues (for example, in the [`content`](https://github.com/mdn/content/issues) repository) by submitting [pull requests](CONTRIBUTING.md#pull-request-process).
+- Addressing open issues (for example, in the [`content`](https://github.com/mdn/content/issues) repository) by submitting [pull requests](/en-US/docs/MDN/Community/Pull_requests).
 - Attending community events.
 - Helping to promote the MDN project.
 
@@ -134,7 +134,7 @@ In addition to the responsibilities of other contributor roles, owners have the 
 
 - Following and enforcing MDN team norms, including the [Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/) and [Mozilla Policies](https://www.mozilla.org/en-US/about/governance/policies/).
 - Following the MDN organization policies and leading by example.
-- Suggesting, documenting, and implementing new policies through the pull request process.
+- Suggesting, documenting, and implementing new policies through the [pull request process](/en-US/docs/MDN/Community/Pull_requests).
 - Following and contributing to issues and discussions across the MDN organization.
 - Ensuring that an issue or pull request gets feedback from one or more members within one week.
 - [Archiving](https://help.github.com/articles/about-archiving-repositories/) or deleting unmaintained repositories.
@@ -164,7 +164,7 @@ Some contributor roles have more nuanced responsibilities and have special eligi
 ### Spotlight contributor
 
 Spotlight contributors are people who have gone above and beyond with their contributions to MDN Web Docs.
-Their contributions are in the form of opening pull requests to improve the project, helping community members in [GitHub discussions](https://github.com/mdn/mdn-community/discussions) or learn forums, or providing feedback on GitHub issues and pull requests.
+Their contributions are in the form of pull requests to improve the project, helping community members in [GitHub discussions](https://github.com/mdn/mdn-community/discussions) or learn forums, or providing feedback on GitHub issues and pull requests.
 
 We feature a spotlight contributor on the [MDN website](/en-US/) once every month.
 See the [process](#nominating_a_spotlight_contributor) to nominate someone as a spotlight contributor.
