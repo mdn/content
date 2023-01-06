@@ -37,8 +37,9 @@ getKey(key)
 
 ### Return Value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is the key for the first record matching the given key or key range.
 
 ### Exceptions
 

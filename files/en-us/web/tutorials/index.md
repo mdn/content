@@ -147,7 +147,7 @@ These resources are created by forward-thinking companies and web developers who
 - [Exploring ES6](https://exploringjs.com/es6/)
   - : Reliable and in-depth information on ECMAScript 2015.
 - [JavaScript Patterns](https://shichuan.github.io/javascript-patterns/)
-  - : A JavaScript pattern and antipattern collection that covers function patterns, jQuery patterns, jQuery plugin patterns, design patterns, general patterns, literals and constructor patterns, object creation patterns, code reuse patterns, DOM.
+  - : A JavaScript pattern and anti-pattern collection that covers function patterns, jQuery patterns, jQuery plugin patterns, design patterns, general patterns, literals and constructor patterns, object creation patterns, code reuse patterns, DOM.
 - [How browsers work](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
   - : A detailed research article describing different modern browsers, their engines, page rendering etc.
 - [JavaScript Videos](https://github.com/bolshchikov/js-must-watch)
