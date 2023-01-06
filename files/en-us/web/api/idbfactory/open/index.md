@@ -44,6 +44,8 @@ open(name, version)
 
 A {{domxref("IDBOpenDBRequest")}} object on which subsequent events related to this request are fired.
 
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is a {{domxref("IDBDatabase")}} object representing the connection to the database.
+
 ### Exceptions
 
 - {{jsxref("TypeError")}}

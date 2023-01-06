@@ -40,8 +40,9 @@ delete(key)
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired. The `request.result` attribute is set to undefined.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is `undefined`.
 
 ### Exceptions
 
