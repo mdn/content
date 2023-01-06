@@ -60,3 +60,9 @@ spec-urls: https://drafts.csswg.org/css-scroll-snap/
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- [Well-controlled scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/) on web.dev
+- [CSS Scroll Snap](https://12daysofweb.dev/2022/css-scroll-snap/)
+- [Scroll snap examples on Codepen](https://codepen.io/collection/KpqBGW)
