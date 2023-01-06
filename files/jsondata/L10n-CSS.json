@@ -27,7 +27,7 @@
     "pt-BR": "Tipos de dados",
     "ru": "Типы данных",
     "zh-CN": "数据类型",
-    "zh-TW": "數據類型"
+    "zh-TW": "資料型態"
   },
   "missing": {
     "en-US": "Value not found in DB!",
@@ -37,7 +37,7 @@
     "pt-BR": "Valor não encontrado na Database",
     "ru": "Значение не найдено в базе данных!",
     "zh-CN": "在数据库中找不到该值！",
-    "zh-TW": "在數據庫中找不到該值！"
+    "zh-TW": "在資料庫中找不到該值！"
   },
   "info_in_preview_not_available": {
     "en-US": "CSS info in preview not available",
