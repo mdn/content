@@ -10,7 +10,7 @@ tags:
 
 The [same-origin security policy](/en-US/docs/Web/Security/Same-origin_policy) forbids cross-origin access to resources. But CORS gives web servers the ability to say they want to opt into allowing cross-origin access to their resources.
 
-### CORS headers
+## CORS headers
 
 - {{HTTPHeader("Access-Control-Allow-Origin")}}
   - : Indicates whether the response can be shared.
