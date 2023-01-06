@@ -25,7 +25,7 @@ To get the inner height of a window, i.e. the height of the page being displayed
 
 The following figure shows the difference between `outerHeight` and `innerHeight`.
 
-![illustration comparing innerHeight and outerHeight](firefoxinnervsouterheight2.png)
+![innerHeight vs. outerHeight illustration](firefoxinnervsouterheight2.png)
 
 ## Specifications
 
