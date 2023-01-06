@@ -19,27 +19,25 @@ The ARIA `tabpanel` is a container for the resources of layered content associat
 
 The `tabpanel` role indicates the element is a container for the resources associated with a [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) role, where each `tab` is contained in a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role).
 
-A `tabpanel` is part of the a tab interface, a common user experience pattern in which a group of visual tabs each enable quick switching between multiple layered views. Each tab is defined as such with the `tab` role. The `tablist` role is used on the container grouping the selectable tabs. The `tablist` is usually above or to the side of a content area. The `tabpanel` role is the role of the container of every pane of content that is made visible by selecting a tab. Only one `tabpanel` is visible at a time.
+A `tabpanel` is part of a tab interface, a common user experience pattern in which a group of visual tabs each enable quick switching between multiple layered views. Each tab is defined as such with the `tab` role. The `tablist` role is used on the container grouping the selectable tabs. The `tablist` is usually above or to the side of a content area. The `tabpanel` role is the role of the container of every pane of content that is made visible by selecting a tab. When a single-selectable `tablist` is selected or active, the `hidden` attribute of the other tabpanels should be set to true until the user selects the tab associated with that tabpanel. When a multi-selectable `tablist` is selected or active, its corresponding controlled `tabpanel` should have its [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute set to `true` and its `hidden` attribute set to `false`, otherwise the reverse.
 
-Only the `tabpanel` associated with the currently selected `tab` is displayed. The other `tabpanel` elements, the ones associated with the unselected `tabs` are hidden.
+Only the `tabpanels` associated with the currently selected `tab` are displayed. The other `tabpanel` elements, the ones associated with the unselected `tabs` are hidden.
 
 Selecting a different `tab` changes the currently visible tab panel. The content area changes by making visible a new panel while hiding the previously visible panel and making the newly selected tab more prominent than the other tabs. User focus, however, does not change on tab selection.
 
 Tabs do not act as anchor links to individual panels. While semantic HTML may be coded with the tabs being anchor links navigating to the tab's associated tabpanel, when JavaScript is used to progressively enhance the content to a tabbed interface, the link's default behavior should be prevented.
 
-In a tab interface, selecting a `tab` makes the associated `tabpanel` visible but does not move user focus. Tab selection only reveals the content of the associated panel visually and unhides them from assistive technologies. The <kbd>Tab</kbd> key should be programmed to move from the focused tab to the tab's associated tabpanel.
+In a tab interface, selecting a `tab` makes the associated `tabpanels` visible but does not move user focus. Tab selection only reveals the content of the associated panels visually and unhides them from assistive technologies. The <kbd>Tab</kbd> key should be programmed to move from the focused tab to the tab's associated tabpanel.
 
 Each `tab` in a `tablist` serves as the label for one of the tab panels and can be activated to display that panel. Include the `id` of each `tab` as the value of each `tabpanel`'s [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute.
 
 You can also optionally associate each `tabpanel` with its associated `tab` by including the {{HTMLAttrXRef('id')}} of the `tabpanel` as the value of the `tab`'s [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) attribute.
 
-When a tabbed interface is initialized, one `tabpanel` is displayed and its associated `tab` is styled to indicate that it is active. Hide the non-visible tabpanels with the HTML {{htmlattrxref('hidden')}} attribute or set [`aria-hidden="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby). Browsers won't render elements with the `hidden` attribute set, so long as [CSS is declared on a `hidden` attribute selector to remove it](/en-US/docs/Web/CSS/display#none).
+When a tabbed interface is initialized, one `tabpanel` is displayed and its associated `tab` is styled to indicate that it is active. Hide the non-visible tabpanels with the HTML {{htmlattrxref('hidden')}} attribute or set [`aria-hidden="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden). Browsers won't render elements with the `hidden` attribute set, so long as [CSS is declared on a `hidden` attribute selector to remove it](/en-US/docs/Web/CSS/display#none).
 
 If using `aria-hidden`, use CSS to hide the hidden tab panels. When a new `tab` is selected, remove the `hidden` attribute from the newly active panel or set the `aria-hidden` attribute to `false`, while adding `hidden` or `aria-hidden="true"` to the previously active `tabpanel`.
 
-The newly selected `tab` is considered "active" and should have its [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute set to `true` while all other tabs in the same `tablist` should have the `aria-selected` attribute set to `false`, or removed altogether. See [ARIA `tab` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) for move information.
-
-If the `tablist` precedes the `tabpanel` in source order, the user will expect to be able to step through the remaining tabs in focus order or select the <kbd>down arrow</kbd> to give focus to the visible tabpanel when navigating by keyboard.
+The newly selected `tab` is considered "active" and should have its [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute set to `true` while all other tabs in the same `tablist` should have the `aria-selected` attribute set to `false`, or removed altogether. See [ARIA `tab` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) for more information.
 
 Include [`tabindex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) on enable a `tabpanel` to receive focus without putting the `tabpanel` in the page <kbd>Tab</kbd> focus sequence for keyboard users.
 
@@ -55,8 +53,10 @@ Carousels can be created using this tab pattern: A slide picker controls can be 
   - : Group of `tab` elements.
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
   - : Provides an accessible name. References the `tab` element that controls the panel
-- [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+- [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
   - : Indicates whether an element is exposed to the accessibility API.
+- [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
+  - : Should be set if a multi-selectable `tablist` is used.
 - [HTML `hidden` attribute](/en-US/docs/Web/HTML/Global_attributes/hidden)
   - : Indicates an element is not currently relevant and browsers won't render it.
 
@@ -78,7 +78,6 @@ See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility
 - [ARIA `tablist` role](/en-US/docs/Web/Accessibility/ARIA/Roles)
 - [Example: Tabs with Automatic Activation](https://www.w3.org/WAI/ARIA/apg/example-index/tabs/tabs-automatic.html) - W3C
 - [Example: Tabs with Manual Activation](https://www.w3.org/WAI/ARIA/apg/example-index/tabs/tabs-manual.html) -W3C
-- [Example: Codepen of tab interface](https://codepen.io/heydon/pen/veeaEa/) - Heydon Pickering
 
 <section id="Quick_links">
 
