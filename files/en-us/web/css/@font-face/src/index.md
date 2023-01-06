@@ -30,11 +30,11 @@ src: url(path/to/svgFont.svg#example); /* Fragment identifying font */
 src: local(font); /* Unquoted name */
 src: local(some font); /* Name containing space */
 src: local("font"); /* Quoted name */
-src: local("some font"); /* Quoted name containing space */
+src: local('some font'); /* Single-quoted name containing a space */
 
 /* <tech(<font-tech>)> values */
-src: url(path/to/font.otf) tech(color-COLRv1);
-src: url(path/to/font.otf) tech(color-SVG);
+src: url(path/to/fontCOLRv1.otf) tech(color-COLRv1);
+src: url(path/to/fontCOLR-svg.otf) tech(color-SVG);
 
 /* <format(<font-format>)> values */
 src: url(path/to/font.woff) format("woff");
@@ -58,7 +58,7 @@ src: url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1), url("trick
   - : An optional declaration that follows the `url()` value that provides a hint for the user agent on the font format.
     If the value is not supported or invalid, the browser may not download the resource, potentially saving bandwidth.
     If omitted, the browser will download the resource and then detect the format.
-    If including a font source for backward-compatibility that is not in the list of [defined keywords](#formal-syntax), enclose the format string in quotes. 
+    If including a font source for backward-compatibility that is not in the list of [defined keywords](#formal-syntax), enclose the format string in quotes.
     Possible values are described in the [Font formats](#font_formats) section below.
 - `tech()` {{Experimental_inline}}
   - : An optional declaration that follows the `url()` value that provides a hint for the user agent on the font technology.
@@ -74,12 +74,17 @@ src: url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1), url("trick
 
 ## Description
 
-The value of this descriptor is a prioritized, comma-separated list of external references or locally-installed font face names, where each resource is specified using `url()` or `local()`. When a font is needed, the {{glossary("user agent")}} iterates over the set of references listed using the first one it can successfully activate. Fonts containing invalid data or local font faces that are not found are ignored and the user agent loads the next font in the list.
+The value of this descriptor is a prioritized, comma-separated list of external references or locally-installed font face names, where each resource is specified using `url()` or `local()`.
+When a font is needed, the {{glossary("user agent")}} iterates over the set of references listed using the first one it can successfully activate.
+Fonts containing invalid data or local font faces that are not found are ignored and the user agent loads the next font in the list.
+
 If multiple `src` descriptors are set, only the last declared rule that is able to load a resource is applied.
+If the last `src` descriptor can load a resource and doesn't include a `local()` font, the browser may download external font files and ignore the local version even if there is one available on the device.
 
 > **Note:** Values within descriptors that the browser considers invalid are ignored.
 > Some browsers will ignore the whole descriptor if any item is invalid, even if only one item is invalid.
 > This may affect design of fallbacks.
+> See [Browser compatibility](#browser_compatibility) for more information.
 
 As with other URLs in CSS, the URL may be relative, in which case it is resolved relative to the location of the style sheet containing the `@font-face` rule. In the case of SVG fonts, the URL points to an element within a document containing SVG font definitions. If the element reference is omitted, a reference to the first defined font is implied. Similarly, font container formats that can contain more than one font load only one of the fonts for a given `@font-face` rule. Fragment identifiers are used to indicate which font to load. If a container format lacks a defined fragment identifier scheme, a simple 1-based indexing scheme (e.g., "font-collection#1" for the first font, "font-collection#2" for the second font, etc.) is used.
 
@@ -107,7 +112,10 @@ To check if a font format is supported by a browser within CSS, use the {{cssxre
 | `woff`              | WOFF 1.0              | .woff             |
 | `woff2`             | WOFF 2.0              | .woff2            |
 
-> **Note:** The `opentype` and `truetype` values are equivalent whether the font file uses cubic bezier curves (within CFF/CFF2 table) or quadratic bezier curves (within glyph table).
+> **Note:**
+>
+> - `format(svg)` stands for [SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts), and `tech(color-SVG)` stands for [OpenType fonts with SVG table](https://learn.microsoft.com/en-us/typography/opentype/spec/svg) (also called OpenType-SVG color fonts), which are completely different.
+> - The `opentype` and `truetype` values are equivalent whether the font file uses cubic bezier curves (within CFF/CFF2 table) or quadratic bezier curves (within glyph table).
 
 Older non-normalized `format()` values have the following equivalent syntax; provided as a string enclosed in quotes for backward-compatibility reasons:
 
@@ -117,8 +125,6 @@ Older non-normalized `format()` values have the following equivalent syntax; pro
 | `format("woff-variations")`     | `format(woff) tech(variations)`     |
 | `format("opentype-variations")` | `format(opentype) tech(variations)` |
 | `format("truetype-variations")` | `format(truetype) tech(variations)` |
-
-> **Note:** `format(svg)` stands for [SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts), and `tech(color-SVG)` stands for [OpenType fonts with SVG table](https://learn.microsoft.com/en-us/typography/opentype/spec/svg) (also called OpenType-SVG color fonts), which are completely different.
 
 ### Font technologies
 
@@ -181,7 +187,8 @@ The example below shows how to define two font faces with the same font family. 
   src: local(Gill Sans Bold), /* full font name */
     local(GillSans-Bold), /* postscript name */
     url('GillSansBold.woff') format("woff"),
-    url('GillSansBold.otf') format("opentype");
+    url('GillSansBold.otf') format("opentype"),
+    url("GillSansBold.svg#MyFontBold"); /* Referencing an SVG font fragment by id */
   font-weight: bold;
 }
 
@@ -190,7 +197,7 @@ p {
   font-family: MainText;
 }
 
-/* Font-family is inherited, but bold fonts are used: */
+/* Font-family is inherited, but bold fonts are used */
 p.bold {
   font-weight: bold;
 }
@@ -209,7 +216,7 @@ A color font will be activated if the user agent supports it, and an `opentype` 
       format(opentype);
 }
 
-/* using the font face: */
+/* Using the font face */
 p {
   font-family: "Trickster";
 }
