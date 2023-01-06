@@ -48,6 +48,11 @@ spec-urls: https://drafts.csswg.org/css-scroll-snap/
 - {{cssxref("scroll-margin-block-end")}}
 - {{cssxref("scroll-snap-stop")}}
 
+### Glossary terms
+
+- {{Glossary("scroll container")}}
+- {{Glossary("scrollport")}}
+
 ## Guides
 
 - [Basic concepts of CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts)
@@ -55,7 +60,3 @@ spec-urls: https://drafts.csswg.org/css-scroll-snap/
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-The individual property pages detail browser compatibility information for each property.
