@@ -46,7 +46,7 @@ A regular expression pattern is composed of simple characters, such as `/abc/`, 
 The last example includes parentheses, which are used as a memory device.
 The match made with this part of the pattern is remembered for later use, as described in [Using groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences#using_groups).
 
-> **Note:** If you are already familiar with the forms of a regular expression, you may also read [the cheatsheet](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) for a quick lookup for a specific pattern/construct.
+> **Note:** If you are already familiar with the forms of a regular expression, you may also read [the cheat sheet](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) for a quick lookup for a specific pattern/construct.
 
 ### Using simple patterns
 
@@ -165,7 +165,7 @@ If you want to look at all the special characters that can be used in regular ex
   </tbody>
 </table>
 
-> **Note:** [A larger cheatsheet is also available](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) (only aggregating parts of those individual articles).
+> **Note:** [A larger cheat sheet is also available](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) (only aggregating parts of those individual articles).
 
 ### Escaping
 
@@ -491,7 +491,7 @@ form.addEventListener('submit', (event) => {
 - [Regex tester](https://regex101.com/)
   - : An online regex builder/debugger
 - [Regex interactive tutorial](https://regexlearn.com/)
-  - : An online interactive tutorials, Cheatsheet, & Playground.
+  - : An online interactive tutorials, Cheat sheet, & Playground.
 - [Regex visualizer](https://extendsclass.com/regex-tester.html)
   - : An online visual regex tester.
 
