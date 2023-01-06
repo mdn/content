@@ -21,7 +21,7 @@ CSS scroll snap enables snapping content as the user scrolls overflowing content
 
 To enable scroll snapping, the scrolling behavior is defined on the scroll container. The container's {{cssxref("scroll-snap-type")}} property defines whether the scrollable viewport can be snapped to, the axis upon which the snapping occurs, and whether snapping is required or optional. To enable scrolling, the container should have a defined size and {{cssxref("overflow")}} must be enabled. There are optional {{cssxref("scroll-padding")}} properties that can be set on the scroll container to create a snapping offset.
 
-The {{cssxref("scroll-snap-align")}} property can be set on the children of the scroll container to define a snap position, if there is one. The {{cssxref("scroll-snap-stop")}} property enables requiring that child is snapped to during scrolling and not passed over. There are several {{cssxref("scroll-margin")}} properties that can be set on the snapped-to child elements to create an outset from the defined box.
+The {{cssxref("scroll-snap-align")}} property is set on every child of the scroll container, defining each child's snap position or lack thereof. The {{cssxref("scroll-snap-stop")}} property enables requiring that child is snapped to during scrolling and not passed over. There are several {{cssxref("scroll-margin")}} properties that can be set on the snapped-to child elements to create an outset from the defined box.
 
 ## Reference
 
