@@ -369,7 +369,7 @@ You can find the version of node we're using for development by entering the com
 
 ```bash
 >node --version
-v16.15.0
+v16.17.1
 ```
 
 Open **package.json**, and add this information as an **engines > node** section as shown (using the version number for your system).
