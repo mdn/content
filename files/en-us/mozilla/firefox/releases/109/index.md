@@ -56,6 +56,8 @@ This article provides information about the changes in Firefox 109 that will aff
 
 ## Changes for add-on developers
 
+- The property `secretKeyLength` has been added to {{WebExtAPIRef("webRequest.SecurityInfo")}}. This property provides the length in bits of the secret key in the security properties of a web request ({{bug(1778473)}}).
+
 ### Removals
 
 ### Other
