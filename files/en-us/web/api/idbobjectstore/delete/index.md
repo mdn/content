@@ -78,7 +78,7 @@ the app loads.
 ```js
 function deleteItem(event) {
   // retrieve the name of the task we want to delete
-  let dataTask = event.target.getAttribute('data-task');
+  let dataTask = event.target.getAttribute("data-task");
 
   // open a database transaction and delete the task, finding it by the name we retrieved above
   let transaction = db.transaction(["toDoList"], "readwrite");
@@ -90,7 +90,7 @@ function deleteItem(event) {
     event.target.parentNode.parentNode.removeChild(event.target.parentNode);
     note.innerHTML += `<li>Task "${dataTask}" deleted.</li>`;
   };
-};
+}
 ```
 
 ## Specifications

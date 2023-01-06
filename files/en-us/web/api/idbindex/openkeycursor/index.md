@@ -82,26 +82,26 @@ corresponding primary key of the referenced record into an HTML table.
 
 ```js
 function displayDataByIndex() {
-  tableEntry.innerHTML = '';
-  const transaction = db.transaction(['contactsList'], 'readonly');
-  const objectStore = transaction.objectStore('contactsList');
+  tableEntry.innerHTML = "";
+  const transaction = db.transaction(["contactsList"], "readonly");
+  const objectStore = transaction.objectStore("contactsList");
 
-  const myIndex = objectStore.index('lName');
+  const myIndex = objectStore.index("lName");
 
   myIndex.openKeyCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      const tableRow = document.createElement('tr');
-      tableRow.innerHTML = `<td>${cursor.key}</td>`
-                         + `<td>${cursor.primaryKey}</td>`;
+      const tableRow = document.createElement("tr");
+      tableRow.innerHTML =
+        `<td>${cursor.key}</td>` + `<td>${cursor.primaryKey}</td>`;
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
     } else {
-      console.log('All last names displayed.');
+      console.log("All last names displayed.");
     }
   };
-};
+}
 ```
 
 ## Specifications

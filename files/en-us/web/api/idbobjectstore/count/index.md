@@ -60,13 +60,13 @@ the number of records in the store using `count()` — when the success handler
 fires, we log the count value (an integer) to the console.
 
 ```js
-const transaction = db.transaction(['fThings'], 'readonly');
-const objectStore = transaction.objectStore('fThings');
+const transaction = db.transaction(["fThings"], "readonly");
+const objectStore = transaction.objectStore("fThings");
 
 const countRequest = objectStore.count();
 countRequest.onsuccess = () => {
   console.log(countRequest.result);
-}
+};
 ```
 
 ## Specifications

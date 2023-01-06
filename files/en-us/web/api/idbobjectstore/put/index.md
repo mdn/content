@@ -87,7 +87,9 @@ our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-no
 const title = "Walk dog";
 
 // Open up a transaction as usual
-const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+const objectStore = db
+  .transaction(["toDoList"], "readwrite")
+  .objectStore("toDoList");
 
 // Get the to-do list object that has this title as it's title
 const objectStoreTitleRequest = objectStore.get(title);
@@ -103,7 +105,9 @@ objectStoreTitleRequest.onsuccess = () => {
   const updateTitleRequest = objectStore.put(data);
 
   // Log the transaction that originated this request
-  console.log(`The transaction that originated this request is ${updateTitleRequest.transaction}`);
+  console.log(
+    `The transaction that originated this request is ${updateTitleRequest.transaction}`
+  );
 
   // When this new request succeeds, run the displayData() function again to update the display
   updateTitleRequest.onsuccess = () => {

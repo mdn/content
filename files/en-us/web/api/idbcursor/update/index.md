@@ -81,32 +81,32 @@ you can grab data from the current record under the cursor object using `cursor.
 
 ```js
 function updateResult() {
-  list.textContent = '';
-  const transaction = db.transaction(['rushAlbumList'], 'readwrite');
-  const objectStore = transaction.objectStore('rushAlbumList');
+  list.textContent = "";
+  const transaction = db.transaction(["rushAlbumList"], "readwrite");
+  const objectStore = transaction.objectStore("rushAlbumList");
 
   objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      if (cursor.value.albumTitle === 'A farewell to kings') {
+      if (cursor.value.albumTitle === "A farewell to kings") {
         const updateData = cursor.value;
 
         updateData.year = 2050;
         const request = cursor.update(updateData);
         request.onsuccess = () => {
-          console.log('A better album year?');
+          console.log("A better album year?");
         };
-      };
+      }
 
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
       cursor.continue();
     } else {
-      console.log('Entries displayed.');
+      console.log("Entries displayed.");
     }
   };
-};
+}
 ```
 
 ## Specifications

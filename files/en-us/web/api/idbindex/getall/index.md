@@ -64,11 +64,11 @@ not between `0` and `2^32> - 1` included.
 ## Examples
 
 ```js
-const myIndex = objectStore.index('index');
+const myIndex = objectStore.index("index");
 const getAllRequest = myIndex.getAll();
 getAllRequest.onsuccess = () => {
   console.log(getAllRequest.result);
-}
+};
 ```
 
 ## Specifications
