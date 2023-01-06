@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.BigInt.asUintN
 
 {{JSRef}}
 
-The **`BigInt.asUintN`** static method returns the given number of least significant bits of a `BigInt` value as an unsigned integer.
+The **`BigInt.asUintN()`** static method truncates a `BigInt` value to the given number of least significant bits and returns that value as an unsigned integer.
 
 {{EmbedInteractiveExample("pages/js/bigint-asuintn.html", "taller")}}
 
