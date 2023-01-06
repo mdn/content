@@ -58,7 +58,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 - {{cssxref("@font-face/size-adjust", "size-adjust")}}
   - : Defines a multiplier for glyph outlines and metrics associated with this font. This makes it easier to harmonize the designs of various fonts when rendered at the same font size.
 - {{cssxref("@font-face/src", "src")}}
-  - : Specifies references to font resources including hints about the font format and technology.
+  - : Specifies references to font resources including hints about the font format and technology. It is required for the @font-face rule to be valid.
 - {{cssxref("@font-face/unicode-range", "unicode-range")}}
   - : The range of Unicode code points to be used from the font.
 

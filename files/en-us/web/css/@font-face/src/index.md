@@ -52,20 +52,20 @@ src: url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1), url("trick
 
 - `url()`
 
-  - : Specifies an external reference consisting of a {{cssxref("&lt;url&gt;")}}, followed by optional hints using the `format()` and `tech()` component values that specify the format and font technology of the resource referenced by the URL. The `format()` and `tech()` components are a comma-separated list of strings that denote well-known font formats and technologies. If a user agent doesn't support the font technology or formats, it skips downloading the font resource. If no format or technology hints are supplied, the font resource is always downloaded.
+  - : Specifies an external reference consisting of a {{cssxref("&lt;url&gt;")}}, followed by optional hints using the `format()` and `tech()` component values that specify the format and font technology of the resource referenced by the URL. The `format()` and `tech()` components are a comma-separated list of strings of known [font formats](#font_formats) and technologies. If a user agent doesn't support the font technology or formats, it skips downloading the font resource. If no format or technology hints are supplied, the font resource is always downloaded.
 
 - `format()`
   - : An optional declaration that follows the `url()` value that provides a hint for the user agent on the font format.
     If the value is not supported or invalid, the browser may not download the resource, potentially saving bandwidth.
-    If omitted, the browser will always download the resource and then detect the format.
-    The preferred value type is a keyword, but may also be provided as a string enclosed in quotes for backward-compatibility reasons.
-    Possible values are described in [Font formats](#font-formats).
+    If omitted, the browser will download the resource and then detect the format.
+    If including a font source for backward-compatibility that is not in the list of [defined keywords](#formal-syntax), enclose the format string in quotes. 
+    Possible values are described in the [Font formats](#font_formats) section below.
 - `tech()` {{Experimental_inline}}
   - : An optional declaration that follows the `url()` value that provides a hint for the user agent on the font technology.
     The value for `tech()` may be one of the keywords described in [Font technologies](#font-technologies).
 - `local(<font-face-name>)`
   - : Specifies the font name should the font be available on the user's device.
-    Quoting the font name is optional.
+    Enclosing the font name in quotes is optional.
 - `<font-face-name>`
   - : Specifies the full name or postscript name of a locally-installed font face using the `local()` component value, which uniquely identifies a single font face within a larger family.
     The name can optionally be enclosed in quotes.
@@ -83,7 +83,7 @@ If multiple `src` descriptors are set, only the last declared rule that is able 
 
 As with other URLs in CSS, the URL may be relative, in which case it is resolved relative to the location of the style sheet containing the `@font-face` rule. In the case of SVG fonts, the URL points to an element within a document containing SVG font definitions. If the element reference is omitted, a reference to the first defined font is implied. Similarly, font container formats that can contain more than one font load only one of the fonts for a given `@font-face` rule. Fragment identifiers are used to indicate which font to load. If a container format lacks a defined fragment identifier scheme, a simple 1-based indexing scheme (e.g., "font-collection#1" for the first font, "font-collection#2" for the second font, etc.) is used.
 
-If the font file is a container for multiple fonts, a fragment identifier is included to indicate which sub-font should be used:
+If the font file is a container for multiple fonts, a fragment identifier is included to indicate the sub-font that should be used, as shown below:
 
 ```css
 /* WhichFont is the PostScript name of a font in the font file */
@@ -94,7 +94,7 @@ src: url(fonts.svg#WhichFont);
 
 ### Font formats
 
-The following table shows the valid values and their corresponding font formats.
+The following table shows the valid font keywords and their corresponding font formats.
 To check if a font format is supported by a browser within CSS, use the {{cssxref("@supports", "@supports")}} rule.
 
 | Keyword             | Font Format           | Common extensions |
@@ -109,7 +109,7 @@ To check if a font format is supported by a browser within CSS, use the {{cssxre
 
 > **Note:** The `opentype` and `truetype` values are equivalent whether the font file uses cubic bezier curves (within CFF/CFF2 table) or quadratic bezier curves (within glyph table).
 
-Older non-normalized `format()` values have the following equivalent syntax:
+Older non-normalized `format()` values have the following equivalent syntax; provided as a string enclosed in quotes for backward-compatibility reasons:
 
 | Old syntax                      | Equivalent syntax                   |
 | ------------------------------- | ----------------------------------- |
@@ -123,7 +123,7 @@ Older non-normalized `format()` values have the following equivalent syntax:
 ### Font technologies
 
 The following table shows valid values for the `tech()` descriptor and their corresponding font technologies.
-To check if a font technology is supported by a browser within CSS, use the {{cssxref("@supports", "@supports")}} rule.
+To check if a font technology is supported by a browser within CSS, use the {{cssxref("@supports", "@supports")}} at-rule.
 
 | Keyword             | Description                                                                                   |
 | :------------------ | :-------------------------------------------------------------------------------------------- |
@@ -163,11 +163,10 @@ To check if a font technology is supported by a browser within CSS, use the {{cs
 
 ### Specifying font resources using url() and local()
 
-In this example, a `font-family` is defined with the name `MainText` which has two font faces.
-The first is a regular font face, and the second is a bold version of the same font family.
+The example below shows how to define two font faces with the same font family. The `font-family` is named `MainText`. The first font face has a regular font, and the second one is a bold version of the same font family.
 
 ```css
-/* a regular font face: */
+/* Defining a regular font face */
 @font-face {
   font-family: MainText;
   src: local(Futura-Medium),
@@ -176,7 +175,7 @@ The first is a regular font face, and the second is a bold version of the same f
     format("opentype");
 }
 
-/* Defining a different bold font face for the same family: */
+/* Defining a different bold font face for the same family */
 @font-face {
   font-family: MainText;
   src: local(Gill Sans Bold), /* full font name */
@@ -186,14 +185,13 @@ The first is a regular font face, and the second is a bold version of the same f
   font-weight: bold;
 }
 
-/* using the regular font face: */
+/* Using the regular font face */
 p {
   font-family: MainText;
 }
 
-/* using the bold font face: */
+/* Font-family is inherited, but bold fonts are used: */
 p.bold {
-  font-family: MainText;
   font-weight: bold;
 }
 ```
