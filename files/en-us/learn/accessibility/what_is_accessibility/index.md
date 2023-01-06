@@ -164,7 +164,7 @@ This sounds serious, but really you just need to consider accessibility as the m
 
 Web browsers make use of special **accessibility APIs** (provided by the underlying operating system) that expose information useful for assistive technologies (ATs) — ATs mostly tend to make use of semantic information, so this information doesn't include things like styling information, or JavaScript. This information is structured in a tree of information called the **accessibility tree**.
 
-Different operating systems have different accessibility APIs available :
+Different operating systems have different accessibility APIs available:
 
 - Windows: MSAA/IAccessible, UIAExpress, IAccessible2
 - macOS: NSAccessibility
