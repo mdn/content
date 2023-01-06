@@ -785,11 +785,13 @@ In order to test the models (and to create some example books and other items th
    node populatedb <your mongodb url>
    ```
 
-   > **Note:** On some operating systems/terminals, you may need to wrap the database URL inside double (") or single (') quotation marks.
+   > **Note:** On Windows you need to wrap the database URL inside double (").
+   > On other operating systems you may need single (') quotation marks.
 
 4. The script should run through to completion, displaying items as it creates them in the terminal.
 
-> **Note:** Go to your database on mongoDB Atlas (in the _Collections_ tab). You should now be able to drill down into individual collections of Books, Authors, Genres and BookInstances, and check out individual documents.
+> **Note:** Go to your database on mongoDB Atlas (in the _Collections_ tab).
+> You should now be able to drill down into individual collections of Books, Authors, Genres and BookInstances, and check out individual documents.
 
 ## Summary
 
