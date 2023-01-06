@@ -70,13 +70,9 @@ selection into the output paragraph at the very bottom of the HTML.
 ```html
 <h1>setBaseAndExtent example</h1>
 <div>
-  <p class="one">
-    <span>Fish</span><span>Dog</span><span>Cat</span><span>Bird</span>
-  </p>
+  <p class="one"><span>Fish</span><span>Dog</span><span>Cat</span><span>Bird</span></p>
   <p>MIDDLE</p>
-  <p class="two">
-    <span>Car</span><span>Bike</span><span>Boat</span><span>Plane</span>
-  </p>
+  <p class="two"><span>Car</span><span>Bike</span><span>Boat</span><span>Plane</span></p>
 </div>
 
 <div>
@@ -93,6 +89,8 @@ selection into the output paragraph at the very bottom of the HTML.
 
 <p><strong>Output</strong>: <span class="output"></span></p>
 ```
+
+> **Note:** There is intentionally no [whitespace](/en-US/docs/Web/API/Document_Object_Model/Whitespace) between the `<p class="one">`/`<p class="two">` and the `<span>` tag to prevent the insertion of a text node that may affect the number of `childNotes` expected. Find out more from the [`Node.firstChild` example](/en-US/docs/Web/API/Node/firstChild#example).
 
 The JavaScript looks like so:
 
