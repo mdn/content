@@ -13,7 +13,7 @@ browser-compat: api.CSPViolationReportBody
 
 The `CSPViolationReportBody` interface is an interface containing the report data for a content security policy (CSP) violation. CSP violations are thrown when the webpage attempts to load a resource that violates the CSP policy set by the {{HTTPHeader("Content-Security-Policy")}} HTTP header.
 
-> **Note:** this interface is similar, but not identical to, the [JSON objects](/docs/Web/HTTP/CSP#violation_report_syntax) sent back to the [`report-uri`](/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri) or [`report-to`](/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) policy directive of the {{HTTPHeader("Content-Security-Policy")}} header.
+> **Note:** this interface is similar, but not identical to, the [JSON objects](/en-US/docs/Web/HTTP/CSP#violation_report_syntax) sent back to the [`report-uri`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri) or [`report-to`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) policy directive of the {{HTTPHeader("Content-Security-Policy")}} header.
 
 {{InheritanceDiagram}}
 
