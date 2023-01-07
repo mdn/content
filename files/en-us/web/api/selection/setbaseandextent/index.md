@@ -90,7 +90,7 @@ selection into the output paragraph at the very bottom of the HTML.
 <p><strong>Output</strong>: <span class="output"></span></p>
 ```
 
-> **Note:** There is intentionally no [whitespace](/en-US/docs/Web/API/Document_Object_Model/Whitespace) between the `<p class="one">`/`<p class="two">` and the `<span>` tag to prevent the insertion of a text node that may affect the number of `childNotes` expected. Find out more from the [`Node.firstChild` example](/en-US/docs/Web/API/Node/firstChild#example).
+> **Note:** There is intentionally no [whitespace](/en-US/docs/Web/API/Document_Object_Model/Whitespace) between the `<p class="one">` and `<p class="two">` start tags and the `<span>` start tags which follow them — to avoid the presence of text nodes that would affect the number of `childNodes` expected. Find out more from the [`Node.firstChild` example](/en-US/docs/Web/API/Node/firstChild#example).
 
 The JavaScript looks like so:
 
