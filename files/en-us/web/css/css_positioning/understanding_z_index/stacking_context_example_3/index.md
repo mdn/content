@@ -44,7 +44,7 @@ To better understand the situation, here is the stacking context hierarchy:
 
   - LEVEL #1
   - LEVEL #1
-  - LEVEL #1 
+  - LEVEL #1
 
 This problem can be avoided by removing overlapping between different level menus, or by using individual (and different) z-index values assigned through the id selector instead of class selector, or by flattening the HTML hierarchy.
 
