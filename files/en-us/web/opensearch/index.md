@@ -13,11 +13,11 @@ tags:
 
 {{AddonSidebar}}
 
-The **[OpenSearch description format](https://github.com/dewitt/opensearch)** lets a website describe a search engine for itself, so that a browser or other client application can use that search engine. OpenSearch is supported by (at least) Firefox, Edge, Internet Explorer, Safari, and Chrome. (See [Reference Material](#reference_material) for links to other browsers' documentation.)
+The **[OpenSearch description format](https://github.com/dewitt/opensearch)** can be used to describe the web interface of a search engine. This allows a website to describe a search engine for itself, so that a browser or other client application can use that search engine. OpenSearch is supported by (at least) Firefox, Edge, Internet Explorer, Safari, and Chrome. (See [Reference Material](#reference_material) for links to other browsers' documentation.)
 
 Firefox also supports additional features not in the OpenSearch standard, such as search suggestions and the `<SearchForm>` element. This article focuses on creating OpenSearch-compatible search plugins that support these additional Firefox features.
 
-OpenSearch description files can be advertised as described in [Autodiscovery of search plugins](#autodiscovery_of_search_plugins), and can be installed programmatically.
+OpenSearch description files can be advertised as described in [Autodiscovery of search plugins](#autodiscovery_of_search_plugins).
 
 > **Warning:** OpenSearch plugins can't be uploaded anymore on [addons.mozilla.org](https://addons.mozilla.org) (AMO). Search engine feature must use WebExtension API with [chrome settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides) in `manifest.json` file.
 
