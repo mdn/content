@@ -22,7 +22,7 @@ It accepts an integer as a value, with different results depending on the intege
 
   > **Note:** `tabindex="-1"` may be useful for elements that should not be navigated to directly using the <kbd>Tab</kbd> key, but need to have keyboard focus set to them. Examples include an off-screen modal window that should be focused when it comes into view, or a form submission error message that should be immediately focused when an errant form is submitted.
 
-- `tabindex="0"` means that the element should be focusable in sequential keyboard navigation, after any positive tabindex values. Focus navigation order of these elements is defined by their order in the document source.
+- `tabindex="0"` means that the element should be focusable in sequential keyboard navigation, after any positive `tabindex` values. The focus navigation order of these elements is defined by their order in the document source.
 - A _positive value_ means the element should be focusable in sequential keyboard navigation, with its order defined by the value of the number. That is, `tabindex="4"` is focused before `tabindex="5"` and `tabindex="0"`, but after `tabindex="3"`. If multiple elements share the same positive `tabindex` value, their order relative to each other follows their position in the document source. The maximum value for `tabindex` is 32767.
 - If the `tabindex` value is omitted the user agent will decide whether the element is focusable.
 
