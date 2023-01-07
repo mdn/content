@@ -36,7 +36,7 @@ So for example, we can define a **customized built-in** [word-count element](htt
 customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
-The element is called `word-count`, its class object is `WordCount`, and it extends the {{htmlelement("p")}} element and as such, it can only be constructed by setting the `is` attribute in the extended element. For example: `<p is="word-count">`, or `document.createElement("p", { is: "word-count" })`.
+The element is called `word-count`, its class object is `WordCount`, and it extends the {{htmlelement("p")}} element and, as such, it can only be constructed by setting the `is` attribute in the extended element. For example: `<p is="word-count">`, or `document.createElement("p", { is: "word-count" })`.
 
 A custom element's class object is written using the `class` syntax. For example, `WordCount` is structured like so:
 
