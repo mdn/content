@@ -127,7 +127,7 @@ When the current property is configurable, defining an attribute to `undefined` 
 
 ### Creating a property
 
-When the property specified doesn't exist in the object, `Object.defineProperty()` creates a new property as described. Fields may be omitted from the descriptor, and default values for those fields are inputted.
+When the property specified doesn't exist in the object, `Object.defineProperty()` creates a new property as described. Fields may be omitted from the descriptor and default values for those fields are inputted.
 
 ```js
 const o = {}; // Creates a new object
@@ -209,7 +209,7 @@ console.log(o.a); // 37; the assignment didn't work
 
 #### Enumerable attribute
 
-The `enumerable` property attribute defines whether the property is picked by {{jsxref("Object.assign()")}} or [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) operator. For non-{{jsxref("Global_Objects/Symbol", "Symbol")}} properties, it also defines whether it shows up in a {{jsxref("Statements/for...in", "for...in")}} loop and {{jsxref("Object.keys()")}} or not. For more information, see [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties).
+The `enumerable` property attribute defines whether the property is considered by {{jsxref("Object.assign()")}} or the [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) operator. For non-{{jsxref("Global_Objects/Symbol", "Symbol")}} properties, it also defines whether it shows up in a {{jsxref("Statements/for...in", "for...in")}} loop and {{jsxref("Object.keys()")}} or not. For more information, see [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties).
 
 ```js
 const o = {};
