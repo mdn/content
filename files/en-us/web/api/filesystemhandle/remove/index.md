@@ -18,6 +18,8 @@ The **`remove()`** method of the {{domxref("FileSystemHandle")}} interface reque
 
 This is a convenient addition to allow you to remove a file or directory directly from its handle. Previously you would have to obtain the handle of the parent directory, then call {{domxref("FileSystemDirectoryHandle.removeEntry()")}} on that to remove it.
 
+You can also call `remove()` on the root directory of the [Origin Private File System](/en-US/docs/Web/API/File_System_Access_API#origin_private_file_system) as a convenient way to clear its contents, after which a new empty OPFS is created.
+
 ## Syntax
 
 ```js-nolint
@@ -40,17 +42,17 @@ A {{jsxref("Promise")}} that fulfills with a value of `undefined`.
 - `InvalidModificationError` {{domxref("DOMException")}}
   - : Thrown if `recursive` is set to `false` and the entry to be removed is a directory with children.
 - `NoModificationAllowedError` {{domxref("DOMException")}}
-  - : Thrown if the browser was not able to get an exclusive lock on the entry, or if the entry is the root directory of the [Origin Private File System](/en-US/docs/Web/API/File_System_Access_API#origin_private_file_system).
+  - : Thrown if the browser was not able to get an exclusive lock on the entry.
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if {{domxref('PermissionStatus')}} is not `granted`.
 - `NotFoundError` {{domxref("DOMException")}}
-  - : Thrown if an entry name is not found or matched.
-- {{jsxref("TypeError")}}
-  - : Thrown if the name is not a valid string or contains characters not allowed on the file system.
+  - : Thrown if the entry is not found.
 
 ## Examples
 
-Our [FileSystemFileHandle.remove() demo](https://filesystemfilehandle-remove.glitch.me/) (see the [source code](https://glitch.com/edit/#!/filesystemfilehandle-remove)) is a very simple file creator app. You can enter text into the {{htmlelement("textarea")}} and press the "Save file" {{htmlelement("button")}}, and the app will open a file picker allowing you to save that text onto your local file system in a text file of your choice. It doesn't allow you to view the content of created files, and it doesn't sync the app with the underlying file system on page reloads.
+Our [FileSystemHandle.remove() demo](https://filesystemhandle-remove.glitch.me/) (see the [source code](https://glitch.com/edit/#!/filesystemhandle-remove)) is a very simple file creator app. You can enter text into the {{htmlelement("textarea")}} and press the "Save file" {{htmlelement("button")}}, and the app will open a file picker allowing you to save that text onto your local file system in a text file of your choice. You can also choose to delete files you create.
+
+It doesn't allow you to view the content of created files, and it doesn't stay in sync with the underlying file system on page reloads/closes. This means that files created by the app will still exist on the file system if you don't choose to delete them before reloading or closing the tab.
 
 The file picker, file handle, and the file itself if you are creating a new file, are created using {{domxref("window.showSaveFilePicker()")}}. The text is written to the file via {{domxref("FileSystemFileHandle.createWritable()")}}.
 
@@ -93,4 +95,4 @@ Walking through this:
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [FileSystemFileHandle.remove() demo](https://filesystemfilehandle-remove.glitch.me/)
+- [FileSystemHandle.remove() demo](https://filesystemhandle-remove.glitch.me/)
