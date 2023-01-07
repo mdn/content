@@ -7,11 +7,9 @@ tags:
 browser-compat: api.CSPViolationReportBody
 ---
 
-{{MDNSidebar}}
-
 {{APIRef("Reporting API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The `CSPViolationReportBody` interface is an interface containing the report data for a content security policy (CSP) violation. CSP violations are thrown when the webpage attempts to load a resource that violates the CSP policy set by the {{HTTPHeader("Content-Security-Policy")}} HTTP header.
+The `CSPViolationReportBody` interface contains the report data for a Content Security Policy (CSP) violation. CSP violations are thrown when the webpage attempts to load a resource that violates the CSP set by the {{HTTPHeader("Content-Security-Policy")}} HTTP header.
 
 > **Note:** this interface is similar, but not identical to, the [JSON objects](/en-US/docs/Web/HTTP/CSP#violation_report_syntax) sent back to the [`report-uri`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri) or [`report-to`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) policy directive of the {{HTTPHeader("Content-Security-Policy")}} header.
 
@@ -22,7 +20,7 @@ The `CSPViolationReportBody` interface is an interface containing the report dat
 _Also inherits properties from its parent interface, {{DOMxRef("ReportBody")}}._
 
 - {{domxref("CSPViolationReportBody.blockedURL")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A string representing the URL of the resource that was blocked because it violates the CSP policy.
+  - : A string representing the URL of the resource that was blocked because it violates the CSP.
 - {{domxref("CSPViolationReportBody.columnNumber")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The column number in the document or worker at which the violation occurred.
 - {{domxref("CSPViolationReportBody.disposition")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -36,7 +34,7 @@ _Also inherits properties from its parent interface, {{DOMxRef("ReportBody")}}._
 - {{domxref("CSPViolationReportBody.originalPolicy")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing the policy whose enforcement uncovered the violation.
 - {{domxref("CSPViolationReportBody.referrer")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A string representing the referrer of the resources whose policy was violated. This will be a URL or `null`.
+  - : A string representing the the URL for referrer of the resources whose policy was violated, or `null`.
 - {{domxref("CSPViolationReportBody.sample")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string representing a sample of the resource that caused the violation, usually the first 40 characters. This will only be populated if the resource is an inline script, event handler, or style — external resources causing a violation will not generate a sample.
 - {{domxref("CSPViolationReportBody.sourceFile")}} {{ReadOnlyInline}} {{Experimental_Inline}}
