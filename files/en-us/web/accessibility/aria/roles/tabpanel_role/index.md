@@ -37,7 +37,7 @@ You can also optionally associate each `tabpanel` with its associated `tab` by i
 
 When a tabbed interface is initialized, one `tabpanel` is displayed and its associated `tab` is styled to indicate that it is active, reflecting its programatic state. All inactive `tabpanel` elements must be hidden to all users. This is most commonly achieved by use of CSS's `display: none`.
 
-See [ARIA `tab` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) for more information specific to the use of this role.
+See the [ARIA `tab` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) article for more information specific to the use of this role.
 
 Include [`tabindex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) to allow a `tabpanel` to receive focus without including the `tabpanel` in the page's keyboard focus order.
 
