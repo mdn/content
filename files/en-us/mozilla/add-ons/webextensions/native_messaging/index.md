@@ -331,6 +331,11 @@ def get_message():
 
 # Encode a message for transmission, given its content.
 def encode_message(message_content):
+    # https://discuss.python.org/t/how-to-read-1mb-of-input-from-stdin/22534/19
+    # https://stackoverflow.com/a/56563264
+    # https://docs.python.org/3/library/json.html#basic-usage
+    # To get the most compact JSON representation, you should specify 
+    # (',', ':') to eliminate whitespace.
     encodedContent = json.dumps(messageContent, separators=(',', ':')).encode('utf-8')
     encoded_length = struct.pack('=I', len(encoded_content))
     return {'length': encoded_length, 'content': encoded_content}
@@ -372,6 +377,11 @@ def get_message():
 
 # Encode a message for transmission, given its content.
 def encode_message(message_content):
+   # https://discuss.python.org/t/how-to-read-1mb-of-input-from-stdin/22534/19
+   # https://stackoverflow.com/a/56563264
+   # https://docs.python.org/3/library/json.html#basic-usage
+   # To get the most compact JSON representation, you should specify 
+   # (',', ':') to eliminate whitespace.
     encoded_content = json.dumps(message_content, separators=(',', ':')).encode("utf-8")
     encoded_length = struct.pack('=I', len(encoded_content))
     #  use struct.pack("10s", bytes), to pack a string of the length of 10 characters
