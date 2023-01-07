@@ -22,7 +22,7 @@ _Also inherits properties from its parent interface, {{DOMxRef("ReportBody")}}._
 - {{domxref("CSPViolationReportBody.blockedURL")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string representing the URL of the resource that was blocked because it violates the CSP.
 - {{domxref("CSPViolationReportBody.columnNumber")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : The column number in the document or worker at which the violation occurred.
+  - : The column number in the script at which the violation occurred.
 - {{domxref("CSPViolationReportBody.disposition")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Indicates how the violated policy is configured to be treated by the user agent. This will be `"enforce"` or `"report"`.
 - {{domxref("CSPViolationReportBody.documentURL")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -30,7 +30,7 @@ _Also inherits properties from its parent interface, {{DOMxRef("ReportBody")}}._
 - {{domxref("CSPViolationReportBody.effectiveDirective")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string representing the directive whose enforcement uncovered the violation.
 - {{domxref("CSPViolationReportBody.lineNumber")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : The line number in the document or worker at which the violation occurred.
+  - : The line number in the script at which the violation occurred.
 - {{domxref("CSPViolationReportBody.originalPolicy")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing the policy whose enforcement uncovered the violation.
 - {{domxref("CSPViolationReportBody.referrer")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -38,7 +38,7 @@ _Also inherits properties from its parent interface, {{DOMxRef("ReportBody")}}._
 - {{domxref("CSPViolationReportBody.sample")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string representing a sample of the resource that caused the violation, usually the first 40 characters. This will only be populated if the resource is an inline script, event handler, or style — external resources causing a violation will not generate a sample.
 - {{domxref("CSPViolationReportBody.sourceFile")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A string representing the URL of the document or worker in which the violation was found.
+  - : If the violation occurred as a result of a script, this will be the URL of the script; otherwise, it will be `null`. Both `columnNumber` and `lineNumber` should have non-null values if this property is not `null`.
 - {{domxref("CSPViolationReportBody.statusCode")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A number representing the HTTP status code of the document or worker in which the violation occurred.
 
