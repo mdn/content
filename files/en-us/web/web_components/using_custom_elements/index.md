@@ -25,13 +25,18 @@ To register a custom element on the page, you use the {{domxref("CustomElementRe
 - A [class](/en-US/docs/Web/JavaScript/Reference/Classes) object that defines the behavior of the element.
 - {{optional_inline}} An options object containing an `extends` property, which specifies the built-in element your element inherits from, if any (only relevant to customized built-in elements; see the definition below).
 
-So for example, we can define a custom [word-count element](https://mdn.github.io/web-components-examples/word-count-web-component/) like this:
+There are two types of custom elements:
+
+- **Autonomous custom elements** are standalone — they don't inherit from standard HTML elements. You use these on a page by literally writing them out as an HTML element. For example `<popup-info>`, or `document.createElement("popup-info")`.
+- **Customized built-in elements** inherit from basic HTML elements. To create one of these, you have to specify which element they extend (as implied in the examples above), and they are used by writing out the basic element but specifying the name of the custom element in the [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute (or property). For example `<p is="word-count">`, or `document.createElement("p", { is: "word-count" })`.
+
+So for example, we can define a **customized built-in** [word-count element](https://mdn.github.io/web-components-examples/word-count-web-component/) like this:
 
 ```js
 customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
-The element is called `word-count`, its class object is `WordCount`, and it extends the {{htmlelement("p")}} element.
+The element is called `word-count`, its class object is `WordCount`, and it extends the {{htmlelement("p")}} element and, as such, it can only be constructed by setting the `is` attribute in the extended element. For example: `<p is="word-count">`, or `document.createElement("p", { is: "word-count" })`.
 
 A custom element's class object is written using the `class` syntax. For example, `WordCount` is structured like so:
 
@@ -46,14 +51,11 @@ class WordCount extends HTMLParagraphElement {
 }
 ```
 
+> **Note:** Find the [full JavaScript source](https://github.com/mdn/web-components-examples/blob/main/word-count-web-component/main.js) here.
+
 This is just a simple example, but there is more you can do here. It is possible to define specific lifecycle callbacks inside the class, which run at specific points in the element's lifecycle. For example, `connectedCallback` is invoked each time the custom element is appended into a document-connected element, while `attributeChangedCallback` is invoked when one of the custom element's attributes is added, removed, or changed.
 
 You'll learn more about these in the [Using the lifecycle callbacks](#using_the_lifecycle_callbacks) section below.
-
-There are two types of custom elements:
-
-- **Autonomous custom elements** are standalone — they don't inherit from standard HTML elements. You use these on a page by literally writing them out as an HTML element. For example `<popup-info>`, or `document.createElement("popup-info")`.
-- **Customized built-in elements** inherit from basic HTML elements. To create one of these, you have to specify which element they extend (as implied in the examples above), and they are used by writing out the basic element but specifying the name of the custom element in the [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute (or property). For example `<p is="word-count">`, or `document.createElement("p", { is: "word-count" })`.
 
 ## Working through some simple examples
 
