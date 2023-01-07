@@ -50,6 +50,7 @@ class WordCount extends HTMLParagraphElement {
   }
 }
 ```
+
 > **Note:** Find the [full JavaScript source](https://github.com/mdn/web-components-examples/blob/main/word-count-web-component/main.js) here.
 
 This is just a simple example, but there is more you can do here. It is possible to define specific lifecycle callbacks inside the class, which run at specific points in the element's lifecycle. For example, `connectedCallback` is invoked each time the custom element is appended into a document-connected element, while `attributeChangedCallback` is invoked when one of the custom element's attributes is added, removed, or changed.
