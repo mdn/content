@@ -41,7 +41,7 @@ The **`SecurityPolicyViolationEvent`** interface inherits from {{domxref("Event"
 - {{domxref("SecurityPolicyViolationEvent.originalPolicy")}} {{ReadOnlyInline}}
   - : A string containing the policy whose enforcement uncovered the violation.
 - {{domxref("SecurityPolicyViolationEvent.referrer")}} {{ReadOnlyInline}}
-  - : A string representing the referrer of the resources whose policy was violated. This will be a URL or `null`.
+  - : A string representing the URL for the referrer of the resources whose policy was violated, or `null`.
 - {{domxref("SecurityPolicyViolationEvent.sample")}} {{ReadOnlyInline}}
   - : A string representing a sample of the resource that caused the violation, usually the first 40 characters. This will only be populated if the resource is an inline script, event handler, or style — external resources causing a violation will not generate a sample.
 - {{domxref("SecurityPolicyViolationEvent.sourceFile")}} {{ReadOnlyInline}}
