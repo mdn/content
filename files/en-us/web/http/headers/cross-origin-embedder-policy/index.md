@@ -41,7 +41,7 @@ Cross-Origin-Embedder-Policy: unsafe-none | require-corp | credentialless
 - `require-corp`
   - : A document can only load resources from the same origin, or resources explicitly marked as loadable from another origin.
     If a cross origin resource supports CORS, the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute or the {{HTTPHeader("Cross-Origin-Resource-Policy")}} header must be used to load it without being blocked by COEP.
-- `credentialless`
+- `credentialless` {{Experimental_Inline}}
   - : [no-cors](/en-US/docs/Web/API/Request/mode) cross-origin requests are sent without credentials. In particular, it means Cookies are omitted from the request, and ignored from the response. The responses are allowed **without** an explicit permission via the {{HTTPHeader("Cross-Origin-Resource-Policy")}} header. [Navigate](/en-US/docs/Web/API/Request/mode) responses behave similarly as the `require-corp` mode: They require {{HTTPHeader("Cross-Origin-Resource-Policy")}} response header.
 
 ## Examples
