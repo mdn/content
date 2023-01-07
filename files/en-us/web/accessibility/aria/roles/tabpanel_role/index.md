@@ -27,7 +27,7 @@ In single-select tab interfaces, only the `tabpanel` associated with the current
 
 In multi-select tab interfaces, multiple `tabpanel` elements may be displayed, matching the expanded state of their associated `tab` elements.
 
-Tabs do not act as anchor links to individual panels — and upon activation, keyboard focus should remain on the curent `tab` element and not automatically move to the newly displayed `tabpanel`. While a tab interface may be progressively enhanced based off an underlying markup pattern of in-page hyperlinks pointing to their associated sections of content, when JavaScript is used to modify these elements into a tabbed interface, the hyperlinks' default behavior should be prevented. Ideally, this could be done by removing or modifying the `href` attribute, as this would have the added benefit of removing the hyperlink-specific menu items from the element's browser context menu.
+Tabs do not act as anchor links to individual panels — and upon activation, keyboard focus should remain on the current `tab` element and not automatically move to the newly displayed `tabpanel`. While a tab interface may be progressively enhanced based off an underlying markup pattern of in-page hyperlinks pointing to their associated sections of content, when JavaScript is used to modify these elements into a tabbed interface, the hyperlinks' default behavior should be prevented. Ideally, this could be done by removing or modifying the `href` attribute, as this would have the added benefit of removing the hyperlink-specific menu items from the element's browser context menu.
 
 When keyboard focus is on a `tablist`, or a `tab` within the `tablist`, the <kbd>Tab</kbd> key should be programmed to move from the focused tab — which may or may not be the selected tab — to the `tabpanel` which represents the currently selected tab.
 
@@ -35,7 +35,7 @@ Each `tab` in a `tablist` can serve as the label for its corresponding `tabpanel
 
 You can also optionally associate each `tabpanel` with its associated `tab` by including the {{HTMLAttrXRef('id')}} of the `tabpanel` as the value of the `tab`'s [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) attribute.
 
-When a tabbed interface is initialized, one `tabpanel` is displayed and its associated `tab` is styled to indicate that it is active, reflecting its programatic state. All inactive `tabpanel` elements must be hidden to all users. This is most commonly achieved by use of CSS's `display: none`.
+When a tabbed interface is initialized, one `tabpanel` is displayed and its associated `tab` is styled to indicate that it is active, reflecting its programmatic state. All inactive `tabpanel` elements must be hidden to all users. This is most commonly achieved by use of CSS's `display: none`.
 
 See the [ARIA `tab` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) article for more information specific to the use of this role.
 
