@@ -40,7 +40,6 @@ To better understand the situation, here is the stacking context hierarchy:
     - LEVEL #2 (`z-index`: 1)
     - LEVEL #2 (`z-index`: 1)
     - LEVEL #2 (`z-index`: 1)
-    - LEVEL #2 (`z-index`: 1)
 
   - LEVEL #1
   - LEVEL #1
