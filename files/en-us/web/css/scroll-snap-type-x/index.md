@@ -64,4 +64,4 @@ Not part of any standard.
 ## See also
 
 - [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [Well-controlled scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
