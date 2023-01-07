@@ -53,7 +53,7 @@ There are a few simple guidelines to consider for writing a better glossary entr
 
 ### Expand with links
 
-A glossary entry should always end with a _Learn more_ section.
+A glossary entry should always end with a _See also_ section.
 This section should contain links to help the reader move forward: discovering more details; learning to use the relevant technology.
 
 It is good practice to organize the links into three groups:
