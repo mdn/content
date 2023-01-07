@@ -36,7 +36,7 @@ So for example, we can define a **customized built-in** [word-count element](htt
 customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
-The element is called `word-count`, its class object is `WordCount`, and it extends the {{htmlelement("p")}} element.
+The element is called `word-count`, its class object is `WordCount`, and it extends the {{htmlelement("p")}} element and as such, it can only be constructed by setting it as the `is` attribute. For example: `<p is="word-count">`, or `document.createElement("p", { is: "word-count" })`.
 
 A custom element's class object is written using the `class` syntax. For example, `WordCount` is structured like so:
 
@@ -50,7 +50,7 @@ class WordCount extends HTMLParagraphElement {
   }
 }
 ```
-You can find the full [source code here](https://github.com/mdn/web-components-examples/tree/main/word-count-web-component).
+> **Note:** Find the [full JavaScript source](https://github.com/mdn/web-components-examples/blob/main/word-count-web-component/main.js) here.
 
 This is just a simple example, but there is more you can do here. It is possible to define specific lifecycle callbacks inside the class, which run at specific points in the element's lifecycle. For example, `connectedCallback` is invoked each time the custom element is appended into a document-connected element, while `attributeChangedCallback` is invoked when one of the custom element's attributes is added, removed, or changed.
 
