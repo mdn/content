@@ -142,7 +142,7 @@ These resources are created by forward-thinking companies and web developers who
   - : A comprehensive, regularly updated guide to JavaScript for all levels of learning from beginner to advanced.
 - [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
   - : A series of books diving deep into the core mechanisms of the JavaScript language.
-- [JavaScript Garden](https://bonsaiden.github.io/JavaScript-Garden/)
+- [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)
   - : Documentation of the most quirky parts of JavaScript.
 - [Exploring ES6](https://exploringjs.com/es6/)
   - : Reliable and in-depth information on ECMAScript 2015.
