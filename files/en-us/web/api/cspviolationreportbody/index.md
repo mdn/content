@@ -34,7 +34,7 @@ _Also inherits properties from its parent interface, {{DOMxRef("ReportBody")}}._
 - {{domxref("CSPViolationReportBody.originalPolicy")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing the policy whose enforcement uncovered the violation.
 - {{domxref("CSPViolationReportBody.referrer")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A string representing the the URL for referrer of the resources whose policy was violated, or `null`.
+  - : A string representing the URL for the referrer of the resources whose policy was violated, or `null`.
 - {{domxref("CSPViolationReportBody.sample")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string representing a sample of the resource that caused the violation, usually the first 40 characters. This will only be populated if the resource is an inline script, event handler, or style — external resources causing a violation will not generate a sample.
 - {{domxref("CSPViolationReportBody.sourceFile")}} {{ReadOnlyInline}} {{Experimental_Inline}}
