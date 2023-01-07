@@ -23,7 +23,7 @@ Glossary entries are intended to be straightforward and brief.
 ## How to write an entry
 
 First, choose what topic you'd like to write a glossary entry for.
-If you're looking for topics that need a glossary entry, check the list of terms from the sidebar of the [Glossary landing page](/en-US/docs/Glossary).
+If you're looking for topics that need a glossary entry, check the list of terms in the sidebar of the [Glossary landing page](/en-US/docs/Glossary).
 
 If you have an idea for a new glossary entry, [create a new page](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#creating_pages) for it underneath the [glossary landing page](https://github.com/mdn/content/tree/main/files/en-us/glossary).
 
