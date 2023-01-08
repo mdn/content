@@ -80,7 +80,14 @@ Next follows the _authority_, which is separated from the scheme by the characte
 - The port indicates the technical "gate" used to access the resources on the web server. It is usually omitted if the web server uses the standard ports of the HTTP protocol (80 for HTTP and 443 for HTTPS) to grant access to its resources. Otherwise it is mandatory.
 
 > **Note:** The separator between the scheme and authority is `://`. The colon separates the scheme from the next part of the URL, while `//` indicates that the next part of the URL is the authority.
->
+- www: it is a subdomain
+- subdomain: A subdomain is a domain that is part of a larger domain. It is an additional part of a website's URL that comes before the main domain name. For example, in the URL "support.example.com", "support" is the subdomain, "example" is the main domain, and "com" is the top-level domain. Subdomains can be used to organize and structure a website into different sections, or to create separate areas for specific purposes. For example, a company might use subdomains for its support, blog, and online store sections.
+
+-.com : it is the top-level domain.
+
+-top-level domain: A top-level domain (TLD) is the portion of a website's URL that comes after the main domain name and the subdomain, if present. The TLD is used to identify the type of website or the purpose of the domain. Some common TLDs include ".com" (commercial), ".org" (organization), ".net" (network), and ".edu" (education).
+
+There are also country-specific TLDs, such as ".us" (United States), ".uk" (United Kingdom), and ".jp" (Japan). These TLDs are used to identify the country or geographical location of the website.
 > One example of a URL that doesn't use an authority is the mail client (`mailto:foobar`). It contains a scheme but doesn't use an authority component. Therefore, the colon is not followed by two slashes and only acts as a delimiter between the scheme and mail address.
 
 ## Path to resource
