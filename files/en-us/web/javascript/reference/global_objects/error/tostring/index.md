@@ -42,7 +42,7 @@ Error.prototype.toString = function () {
   let name = this.name;
   name = name === undefined ? "Error" : `${name}`;
   let msg = this.message;
-  msg = msg === undefined ? "" : `${name}`;
+  msg = msg === undefined ? "" : `${msg}`;
   if (name === "") {
     return msg;
   }
