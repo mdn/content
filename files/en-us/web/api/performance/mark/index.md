@@ -28,7 +28,7 @@ mark(name, markOptions)
 - `markOptions` {{optional_inline}}
   - : An object for specifying a timestamp and additional metadata for the mark.
     - `detail` {{optional_inline}}
-      - : Arbitrary metadata to include in the mark. Defaults to `null`. Must be [structured-clonable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+      - : Arbitrary metadata to include in the mark. Defaults to `null`. Must be [structured-cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
     - `startTime` {{optional_inline}}
       - : {{domxref("DOMHighResTimeStamp")}} to use as the mark time. Defaults to {{domxref("performance.now()")}}.
 
