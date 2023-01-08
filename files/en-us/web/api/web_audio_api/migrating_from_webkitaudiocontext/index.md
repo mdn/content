@@ -54,7 +54,7 @@ The semantics of these methods remain the same in the renamed versions.
 
 ## Changes to starting and stopping nodes
 
-In `webkitAudioContext`, there are two ways to start and stop {{domxref("AudioBufferSourceNode")}} and {{domxref("OscillatorNode")}}: the `noteOn()` and `noteOff()` methods, and the `start()` and `stop()` methods. ({{domxref("AudioBufferSourceNode ")}}has yet another way of starting output: the `noteGrainOn()` method.) The `noteOn()`/`noteGrainOn()`/`noteOff()` methods were the original way to start/stop output in these nodes, and in the newer versions of the specification, the `noteOn()` and `noteGrainOn()` methods were consolidated into a single `start()` method, and the `noteOff()` method was renamed to the `stop()` method.
+In `webkitAudioContext`, there are two ways to start and stop {{domxref("AudioBufferSourceNode")}} and {{domxref("OscillatorNode")}}: the `noteOn()` and `noteOff()` methods, and the `start()` and `stop()` methods. ({{domxref("AudioBufferSourceNode")}} has yet another way of starting output: the `noteGrainOn()` method.) The `noteOn()`/`noteGrainOn()`/`noteOff()` methods were the original way to start/stop output in these nodes, and in the newer versions of the specification, the `noteOn()` and `noteGrainOn()` methods were consolidated into a single `start()` method, and the `noteOff()` method was renamed to the `stop()` method.
 
 In order to port your code, you can just rename the method that you're using. For example, if you have code like the below:
 

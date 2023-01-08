@@ -50,7 +50,7 @@ _The `VirtualKeyboard` interface doesn't inherit any methods_.
 The following example demonstrates how to opt out of the automatic virtual keyboard behavior, and detect the geometry of the virtual keyboard in the web page:
 
 ```js
-if("virtualKeyboard" in navigator) {
+if ("virtualKeyboard" in navigator) {
   navigator.overlaysContent = true;
 
   navigator.virtualKeyboard.addEventListener("geometrychange", event => {
