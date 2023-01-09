@@ -191,12 +191,8 @@ The {{CSSxRef("&lt;filter-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/C
 The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Types) specifies different color representations.
 
 - {{CSSxRef("color_value/rgb", "rgb()")}}
-  - : Defines a given color according to its red, green, and blue components.
-- {{CSSxRef("color_value/rgba", "rgba()")}}
   - : Defines a given color according to its red, green, blue and alpha (transparency) components.
 - {{CSSxRef("color_value/hsl", "hsl()")}}
-  - : Defines a given color according to its hue, saturation, and lightness components.
-- {{CSSxRef("color_value/hsla", "hsla()")}}
   - : Defines a given color according to its hue, saturation, lightness and alpha (transparency) components.
 - {{CSSxRef("color_value/hwb", "hwb()")}}
   - : Defines a given color according to its hue, whiteness and blackness components.

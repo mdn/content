@@ -205,11 +205,11 @@ An abbreviation is a shortened version of a longer word, while an acronym is a n
   - **Correct**: CD-ROMs
   - **Incorrect**: CD-ROM's
 
-- **"Versus", "vs.", and "v."**: The contraction "vs." is preferred.
+- **"Versus", "vs.", and "v."**: If using the contraction, "vs." is preferred over "v." and can be used in headings. Elsewhere in text, use the spelled-out form "versus".
 
   - **Correct**: this vs. that
   - **Incorrect**: this v. that
-  - **Incorrect**: this versus that
+  - **Correct**: this versus that
 
 ### Capitalization
 

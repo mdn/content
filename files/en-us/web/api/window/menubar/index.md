@@ -23,7 +23,7 @@ For privacy and interoperability reasons, the value of the `visible` property is
 
 An object containing a single property:
 
-- `visible` {{readonlyinline}}
+- `visible` {{ReadOnlyInline}}
   - : A boolean property, `false` if this `Window` is a popup, and `true` otherwise.
 
 ## Specifications

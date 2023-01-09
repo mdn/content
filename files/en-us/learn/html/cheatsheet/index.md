@@ -1,5 +1,5 @@
 ---
-title: HTML Cheatsheet
+title: HTML Cheat Sheet
 slug: Learn/HTML/Cheatsheet
 tags:
   - Beginner
@@ -10,7 +10,7 @@ tags:
 
 {{LearnSidebar}}
 
-While using {{Glossary("HTML")}} it can be very handy to have an easy way to remember how to use HTML tags properly and how to apply them. MDN provides you with an extended [HTML documentation](/en-US/docs/Web/HTML/Element) as well as a deep instructional [HTML how-to](/en-US/docs/Learn/HTML/Howto). However, in many cases we just need some quick hints as we go. That's the whole purpose of the cheatsheet, to give you some quick accurate ready to use code snippets for common usages.
+While using {{Glossary("HTML")}} it can be very handy to have an easy way to remember how to use HTML tags properly and how to apply them. MDN provides you with an extended [HTML documentation](/en-US/docs/Web/HTML/Element) as well as a deep instructional [HTML how-to](/en-US/docs/Learn/HTML/Howto). However, in many cases we just need some quick hints as we go. That's the whole purpose of the cheat sheet, to give you some quick accurate ready to use code snippets for common usages.
 
 > **Note:** HTML tags must be used for their semantic, not their appearance. It's always possible to totally change the look and feel of a given tag using {{Glossary("CSS")}} so, when using HTML, take the time to focus on the meaning rather than the appearance.
 
@@ -241,7 +241,7 @@ format&#x3C;/code>.</pre
 
 "Block elements," on the other hand, take up the entire width of a webpage. They also take up a full line of a webpage; they do not fit together side-by-side. Instead, they stack like paragraphs in an essay or toy blocks in a tower.
 
-> **Note:** Because this cheatsheet is limited to a few elements representing specific structures or having special semantics, the [`div`](/en-US/docs/Web/HTML/Element/div) element is intentionally not included — because the `div` element doesn't represent anything and doesn't have any special semantics.
+> **Note:** Because this cheat sheet is limited to a few elements representing specific structures or having special semantics, the [`div`](/en-US/docs/Web/HTML/Element/div) element is intentionally not included — because the `div` element doesn't represent anything and doesn't have any special semantics.
 
 <table class="standard-table">
   <thead>
@@ -281,7 +281,7 @@ an extended quotation.&#x3C;/blockquote></pre
       <td id="details-example">
         <pre class="brush: html">
 &#x3C;details>
-  &#x3C;summary>Html Cheatsheet&#x3C;/summary>
+  &#x3C;summary>Html Cheat Sheet&#x3C;/summary>
   &#x3C;p>Inline elements&#x3C;/p>
   &#x3C;p>Block elements&#x3C;/p>
 &#x3C;/details></pre

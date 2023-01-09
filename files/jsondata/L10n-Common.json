@@ -6,7 +6,8 @@
     "ja": "コンストラクター",
     "pt-BR": "Construtor",
     "ru": "Конструктор",
-    "zh-CN": "构造函数"
+    "zh-CN": "构造函数",
+    "zh-TW": "建構子"
   },
   "Event_handlers": {
     "en-US": "Event handlers",
@@ -26,7 +27,8 @@
     "ja": "イベント",
     "pt-BR": "Eventos",
     "ru": "События",
-    "zh-CN": "事件"
+    "zh-CN": "事件",
+    "zh-TW": "事件"
   },
   "Guides": {
     "en-US": "Guides",
@@ -35,7 +37,8 @@
     "ja": "ガイド",
     "pt-BR": "Guias",
     "ru": "Руководства",
-    "zh-CN": "指南"
+    "zh-CN": "指南",
+    "zh-TW": "指南"
   },
   "Implemented_by": {
     "en-US": "Implemented by:",
@@ -44,7 +47,8 @@
     "ja": "実装先:",
     "pt-BR": "Implementado por:",
     "ru": "Выполняется:",
-    "zh-CN": "实现于："
+    "zh-CN": "实现于：",
+    "zh-TW": "實現於："
   },
   "Inheritance": {
     "en-US": "Inheritance:",
@@ -53,7 +57,8 @@
     "ja": "継承:",
     "pt-BR": "Herança:",
     "ru": "Наследование:",
-    "zh-CN": "继承"
+    "zh-CN": "继承",
+    "zh-TW": "繼承"
   },
   "Instance_methods": {
     "en-US": "Instance methods",
@@ -61,7 +66,8 @@
     "fr": "Méthodes d'instance",
     "ja": "インスタンスメソッド",
     "pt-BR": "Métodos de instância",
-    "zh-CN": "实例方法"
+    "zh-CN": "实例方法",
+    "zh-TW": "實體方法"
   },
   "Instance_properties": {
     "en-US": "Instance properties",
@@ -69,7 +75,8 @@
     "fr": "Propriétés d'instance",
     "ja": "インスタンスプロパティ",
     "pt-BR": "Propriedades de instância",
-    "zh-CN": "实例属性"
+    "zh-CN": "实例属性",
+    "zh-TW": "實體屬性"
   },
   "Interfaces": {
     "en-US": "Interfaces",
@@ -78,7 +85,8 @@
     "ja": "インターフェイス",
     "pt-BR": "Interfaces",
     "ru": "Интерфейсы",
-    "zh-CN": "接口"
+    "zh-CN": "接口",
+    "zh-TW": "介面"
   },
   "Methods": {
     "en-US": "Methods",
@@ -87,7 +95,8 @@
     "ja": "メソッド",
     "pt-BR": "Métodos",
     "ru": "Методы",
-    "zh-CN": "方法"
+    "zh-CN": "方法",
+    "zh-TW": "方法"
   },
   "MissingPage": {
     "en-US": "[Page not yet written]",
@@ -95,7 +104,8 @@
     "fr": "[Page qui reste à écrire]",
     "ja": "[ページがまだ書かれていません]",
     "pt-BR": "[Página ainda não foi escrita]",
-    "zh-CN": "[页面尚未撰写]"
+    "zh-CN": "[页面尚未撰写]",
+    "zh-TW": "[页面尚未撰写]"
   },
   "Properties": {
     "en-US": "Properties",
@@ -104,7 +114,8 @@
     "ja": "プロパティ",
     "pt-BR": "Propriedades",
     "ru": "Свойства",
-    "zh-CN": "属性"
+    "zh-CN": "属性",
+    "zh-TW": "屬性"
   },
   "Reference": {
     "en-US": "Reference",
@@ -113,7 +124,8 @@
     "ja": "リファレンス",
     "pt-BR": "Referência",
     "ru": "Руководство",
-    "zh-CN": "参考"
+    "zh-CN": "参考",
+    "zh-TW": "參考"
   },
   "Related_pages": {
     "en-US": "Related pages for $1",
@@ -122,7 +134,8 @@
     "ja": "$1 に関連するページ",
     "pt-BR": "Páginas relacionadas a $1",
     "ru": "Похожие страницы для $1",
-    "zh-CN": "$1 的相关页面"
+    "zh-CN": "$1 的相关页面",
+    "zh-TW": "$ 的相關頁面"
   },
   "Related_pages_wo_group": {
     "en-US": "Related pages:",
@@ -131,7 +144,8 @@
     "ja": "関連するページ:",
     "pt-BR": "Páginas relacionadas:",
     "ru": "Похожие страницы:",
-    "zh-CN": "相关页面："
+    "zh-CN": "相关页面：",
+    "zh-TW": "相關頁面："
   },
   "Static_methods": {
     "en-US": "Static methods",
@@ -139,7 +153,8 @@
     "fr": "Méthodes statiques",
     "ja": "静的メソッド",
     "pt-BR": "Métodos estáticos",
-    "zh-CN": "静态方法"
+    "zh-CN": "静态方法",
+    "zh-TW": "靜態方法"
   },
   "Static_properties": {
     "en-US": "Static properties",
@@ -147,7 +162,8 @@
     "fr": "Propriétés statiques",
     "ja": "静的プロパティ",
     "pt-BR": "Propriedades estáticas",
-    "zh-CN": "静态属性"
+    "zh-CN": "静态属性",
+    "zh-TW": "靜態屬性"
   },
   "TranslationCTA": {
     "en-US": "Our volunteers haven't translated this article into your language yet. Join us and help get the job done!",
@@ -156,7 +172,8 @@
     "ja": "まだボランティアによって日本語に翻訳されていない記事です。 MDN に参加して、翻訳してみませんか？",
     "pt-BR": "Nossos voluntários ainda não traduziram este artigo para sua linguagem. Junte-se a nós e nos ajude a traduzir!",
     "ru": "Наши волонтёры ещё не перевели данную статью на Русский. Присоединяйтесь к нам и помогите закончить эту работу!",
-    "zh-CN": "此页面仍未被本地化，期待你的翻译!"
+    "zh-CN": "此页面仍未被本地化，期待你的翻译！",
+    "zh-TW": "此頁面仍未被本地化，期待你的翻譯！"
   },
   "[Translate]": {
     "en-US": "[Translate]",
@@ -165,7 +182,8 @@
     "ja": "[翻訳する]",
     "pt-BR": "[Traduzir]",
     "ru": "[Перевести]",
-    "zh-CN": "[我来译！]"
+    "zh-CN": "[我来译！]",
+    "zh-TW": "[我來譯！]"
   },
   "Tutorial": {
     "en-US": "Tutorial",
@@ -182,7 +200,8 @@
     "ja": "、",
     "pt-BR": ", ",
     "ru": ", ",
-    "zh-CN": "、"
+    "zh-CN": "、",
+    "zh-TW": "、"
   },
   "section": {
     "en-US": "section",
@@ -199,6 +218,7 @@
     "ja": "この項目についての文書はまだ書かれていません。書いてみませんか？",
     "pt-BR": "A documentação sobre isto ainda não foi escrita; por favor considere contribuir!",
     "ru": "Документация об этом ещё не написана; пожалуйста, поспособствуйте её написанию!",
-    "zh-CN": "此文档尚未被撰写，期待你的贡献!"
+    "zh-CN": "此文档尚未被撰写，期待你的贡献！",
+    "zh-TW": "此文檔尚未被撰寫，期待你的貢獻！"
   }
 }

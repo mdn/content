@@ -28,8 +28,7 @@ A string representing the specified {{jsxref("Error")}} object.
 ## Description
 
 The {{jsxref("Error")}} object overrides the {{jsxref("Object.prototype.toString()")}}
-method inherited by all objects. Its semantics are as follows (assuming
-{{jsxref("Object")}} and {{jsxref("String")}} have their original values):
+method inherited by all objects. Its semantics are as follows:
 
 ```js
 Error.prototype.toString = function () {
@@ -42,7 +41,7 @@ Error.prototype.toString = function () {
   let name = this.name;
   name = name === undefined ? "Error" : `${name}`;
   let msg = this.message;
-  msg = msg === undefined ? "" : `${name}`;
+  msg = msg === undefined ? "" : `${msg}`;
   if (name === "") {
     return msg;
   }
