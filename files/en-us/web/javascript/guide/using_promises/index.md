@@ -472,7 +472,7 @@ Promise.resolve()
 console.log(1); // 1, 2, 3, 4
 ```
 
-### Task queues vs microtasks
+### Task queues vs. microtasks
 
 Promise callbacks are handled as a [microtask](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) whereas [`setTimeout()`](/en-US/docs/Web/API/setTimeout) callbacks are handled as task queues.
 
@@ -500,7 +500,7 @@ Promise callback (.then)
 event-loop cycle: Promise (fulfilled) Promise {<fulfilled>}
 ```
 
-For more details, refer to [Tasks vs microtasks](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#tasks_vs_microtasks).
+For more details, refer to [Tasks vs. microtasks](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#tasks_vs_microtasks).
 
 ### When promises and tasks collide
 

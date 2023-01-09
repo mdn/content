@@ -12,7 +12,7 @@ spec-urls: https://svgwg.org/svg2-draft/coords.html#ViewBoxAttribute
 
 The **`viewBox`** attribute defines the position and dimension, in user space, of an SVG viewport.
 
-The value of the `viewBox` attribute is a list of four numbers: `min-x`, `min-y`, `width` and `height`. The numbers, which are separated by whitespace and/or a comma, specify a rectangle in user space which is mapped to the bounds of the viewport established for the associated SVG element (not the [browser viewport](/en-US/docs/Glossary/Viewport)).
+The value of the `viewBox` attribute is a list of four numbers: `min-x`, `min-y`, `width` and `height`. The numbers `min-x` and `min-y` represent the top left coordinates of the viewport. The numbers `width` and `height` represent its dimensions. These numbers, which are separated by whitespace and/or a comma, specify a rectangle in user space which is mapped to the bounds of the viewport established for the associated SVG element (not the [browser viewport](/en-US/docs/Glossary/Viewport)).
 
 You can use this attribute with the following SVG elements:
 
