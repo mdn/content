@@ -77,17 +77,17 @@ function multiplyMatrixAndPoint(matrix, point) {
   let z = point[2];
   let w = point[3];
 
-  // Multiply the point against each part of the 1st column, then add together
-  let resultX = x * c0r0 + y * c0r1 + z * c0r2 + w * c0r3;
+  // Multiply the point against each part of the 1st row, then add together
+  let resultX = x * c0r0 + y * c1r0 + z * c2r0 + w * c3r0;
 
-  // Multiply the point against each part of the 2nd column, then add together
-  let resultY = x * c1r0 + y * c1r1 + z * c1r2 + w * c1r3;
+  // Multiply the point against each part of the 2nd row, then add together
+  let resultY = x * c0r1 + y * c1r1 + z * c2r1 + w * c3r1;
 
-  // Multiply the point against each part of the 3rd column, then add together
-  let resultZ = x * c2r0 + y * c2r1 + z * c2r2 + w * c2r3;
+  // Multiply the point against each part of the 3rd row, then add together
+  let resultZ = x * c0r2 + y * c1r2 + z * c2r2 + w * c3r2;
 
-  // Multiply the point against each part of the 4th column, then add together
-  let resultW = x * c3r0 + y * c3r1 + z * c3r2 + w * c3r3;
+  // Multiply the point against each part of the 4th row, then add together
+  let resultW = x * c0r3 + y * c1r3 + z * c2r3 + w * c3r3;
 
   return [resultX, resultY, resultZ, resultW];
 }
