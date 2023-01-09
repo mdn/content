@@ -432,6 +432,12 @@ You can see good examples of text inputs used in context in our [Your first HTML
         {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}.
       </td>
     </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td>with no <code>list</code> attribute:
+                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></td>
+      <td>with <code>list</code> attribute: {{ARIARole("combobox")}}</td>
+    </tr>
   </tbody>
 </table>
 
