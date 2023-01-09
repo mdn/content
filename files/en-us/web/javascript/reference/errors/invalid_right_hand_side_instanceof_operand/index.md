@@ -39,7 +39,7 @@ i.e. an object which has a `prototype` property and is callable. It can also be 
 
 ## Examples
 
-### instanceof vs typeof
+### instanceof vs. typeof
 
 ```js example-bad
 "test" instanceof ""; // TypeError: invalid 'instanceof' operand ""
