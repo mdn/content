@@ -93,7 +93,7 @@ Quantifiers indicate numbers of characters or expressions to match.
         <p>
           Where "n" is a positive integer, matches at least "n" occurrences of
           the preceding item "x". For example, <code>/a{2,}/</code> doesn't
-          match the "a" in "candy", but matches all the a's in "caandy" and
+          match the "a" in "candy", but matches all of the a's in "caandy" and
           in "caaaaaaandy".
         </p>
       </td>
