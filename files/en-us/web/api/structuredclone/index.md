@@ -31,7 +31,7 @@ structuredClone(value, options)
 
 - `value`
   - : The object to be cloned.
-    This can be any [structured-clonable type](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types).
+    This can be any [structured-cloneable type](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types).
 - `options` {{optional_inline}}
   - : An object with the following properties:
     - `transfer`
