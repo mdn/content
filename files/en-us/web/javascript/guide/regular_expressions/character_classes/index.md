@@ -161,7 +161,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
           feed, line feed, and other Unicode spaces. Equivalent to
           <code
             >[
-            \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code
+            \f\n\r\t\v\u0020\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code
           >. For example, <code>/\s\w*/</code> matches " bar" in "foo bar".
         </p>
       </td>
@@ -173,7 +173,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
           Matches a single character other than white space. Equivalent to
           <code
             >[^
-            \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code
+            \f\n\r\t\v\u0020\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code
           >. For example, <code>/\S\w*/</code> matches "foo" in "foo bar".
         </p>
       </td>
