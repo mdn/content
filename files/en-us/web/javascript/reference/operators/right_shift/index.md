@@ -1,6 +1,7 @@
 ---
 title: Right shift (>>)
 slug: Web/JavaScript/Reference/Operators/Right_shift
+page-type: javascript-operator
 tags:
   - Bitwise operator
   - JavaScript

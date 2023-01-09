@@ -24,11 +24,11 @@ The {{domxref("Node")}} that the mutation affected.
 
 ## Examples
 
-### Red div, blue div
+### Logging the target of a mutation
 
-In the following example, there are two divs: a red div (`#red-div`) and a blue div (`#blue-div`). A {{domxref("MutationObserver")}} is created to observe the parent div (`#container`) of the red and blue divs, and the observer is set to observe for changes to the childlist of the parent div.
+In the following example, there are two divs: a red div (`#red-div`) and a blue div (`#blue-div`), inside a container div `#container`. A {{domxref("MutationObserver")}} is created to observe the container. The observer is observing changes to the childlist, and also has `subtree: true` so it will observe changes to the children of the container's children.
 
-The observer is set to log the `target` of the mutation record by calling the function `logNewNodes`. You should see that even though the {{domxref("MutationObserver")}} is observing the `#container` directly, the `target` will be whichever child div whose children have changed as the {{domxref("MutationObserver")}} is observing for changes to the childlist of `#container`, `#red-div` and `#blue-div`, and the subtree (the childlists of `#red-div` and `#blue-div`).
+The observer callback logs the `target` of the mutation record. When we add nodes to the `#red-div` or the `#blue-div`, the `target` will be the `#red-div` or the `#blue-div`, respectively.
 
 #### HTML
 
@@ -38,17 +38,15 @@ The observer is set to log the `target` of the mutation record by calling the fu
 <button id="add-nodes-to-blue-div">Add a node to blue div</button>
 <button id="reset">Reset</button>
 <div id="container">
-  <div id="red-div">
-  </div>
-  <div id="blue-div">
-  </div>
+  <div id="red-div"></div>
+  <div id="blue-div"></div>
 </div>
 ```
 
 ```css hidden
 #log {
   border: 1px dotted black;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 #red-div {
@@ -98,19 +96,19 @@ addToBlue.addEventListener("click", () => {
 
 reset.addEventListener("click", () => self.location.reload());
 
-function logNewNodes(records) {
+function logMutationTarget(records) {
   for (const record of records) {
-     log.textContent = `Target of mutation: ${record.target.id}`;
+    log.textContent = `Target of mutation: ${record.target.id}`;
   }
 }
 
-const observer = new MutationObserver(logNewNodes);
-observer.observe(container, {childList: true, subtree: true});
+const observer = new MutationObserver(logMutationTarget);
+observer.observe(container, { childList: true, subtree: true });
 ```
 
 #### Result
 
-{{EmbedLiveSample("Red Div, Blue Div", "", 200)}}
+{{EmbedLiveSample("Logging the target of a mutation", "", 200)}}
 
 ## Specifications
 

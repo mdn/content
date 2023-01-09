@@ -74,4 +74,4 @@ button.onclick = () => {
 
 ## See also
 
-- {{DOMxRef("Picture-in-Picture_API")}}
+- {{DOMxRef("Picture-in-Picture_API", "Picture-in-Picture API")}}

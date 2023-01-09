@@ -1,6 +1,7 @@
 ---
 title: <feColorMatrix>
 slug: Web/SVG/Element/feColorMatrix
+page-type: svg-element
 tags:
   - Element
   - SVG

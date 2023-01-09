@@ -70,6 +70,8 @@ This example uses the CSS {{cssxref("font-size")}} property to increase the font
 
 This element implements the {{domxref('HTMLElement')}} interface.
 
+<!-- ## Technical summary -->
+
 ## Specifications
 
 {{Specifications}}

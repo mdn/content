@@ -1,6 +1,7 @@
 ---
 title: String.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method
@@ -33,7 +34,7 @@ includes(searchString, position)
 
 ### Return value
 
-**`true`** if the search string is found anywhere within the given string; otherwise, **`false`** if not.
+**`true`** if the search string is found anywhere within the given string, including when `searchString` is an empty string; otherwise, **`false`**.
 
 ### Exceptions
 

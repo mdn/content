@@ -20,7 +20,7 @@ The **`ErrorEvent`** interface represents events providing information related t
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
 - {{domxref("ErrorEvent.message")}} {{ReadOnlyInline}}
-  - : A string containing a human-readable error message describing the problem.
+  - : A string containing a human-readable error message describing the problem. Lacking a {{HTMLAttrxRef("crossorigin")}} setting reduces error logging.
 - {{domxref("ErrorEvent.filename")}} {{ReadOnlyInline}}
   - : A string containing the name of the script file in which the error occurred.
 - {{domxref("ErrorEvent.lineno")}} {{ReadOnlyInline}}

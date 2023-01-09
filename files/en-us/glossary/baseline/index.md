@@ -1,6 +1,6 @@
 ---
 title: Baseline
-slug: Glossary/baseline
+slug: Glossary/Baseline
 tags:
   - CSS
   - SVG

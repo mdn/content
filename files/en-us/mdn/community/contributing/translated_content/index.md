@@ -25,12 +25,12 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 
 ### Chinese (zh-CN, zh-TW)
 
-- Discussions: [Telegram (MozTW L10n channel)](https://moztw.org/community/telegram/)
+- Discussions: [Telegram (MozTW L10n channel)](https://moztw.org/community/telegram/), [Telegram (Mozilla China channel)](https://t.me/mozilla_china)
 - Current contributors: [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999)
 
 ### French (fr)
 
-- Discussions : [Matrix (#l10n-fr channel)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
+- Discussions: [Matrix (#l10n-fr channel)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
 - Current contributors: [cw118](https://github.com/cw118), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
 
 ### Japanese (ja)

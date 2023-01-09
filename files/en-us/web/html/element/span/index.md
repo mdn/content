@@ -17,6 +17,50 @@ The **`<span>`** [HTML](/en-US/docs/Web/HTML) element is a generic inline contai
 
 {{EmbedInteractiveExample("pages/tabbed/span.html", "tabbed-shorter")}}
 
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Example
+
+### Example 1
+
+#### HTML
+
+```html
+<p><span>Some text</span></p>
+```
+
+#### Result
+
+{{EmbedLiveSample('Example_1')}}
+
+### Example 2
+
+#### HTML
+
+```html
+<li>
+  <span>
+    <a href="portfolio.html" target="_blank">See my portfolio</a>
+  </span>
+</li>
+```
+
+#### CSS
+
+```css
+li span {
+  background: gold;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Example_2')}}
+
+## Technical Summary
+
 <table class="properties">
   <tbody>
     <tr>
@@ -78,48 +122,6 @@ The **`<span>`** [HTML](/en-US/docs/Web/HTML) element is a generic inline contai
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Example
-
-### Example 1
-
-#### HTML
-
-```html
-<p><span>Some text</span></p>
-```
-
-#### Result
-
-{{EmbedLiveSample('Example_1')}}
-
-### Example 2
-
-#### HTML
-
-```html
-<li>
-  <span>
-    <a href="portfolio.html" target="_blank">See my portfolio</a>
-  </span>
-</li>
-```
-
-#### CSS
-
-```css
-li span {
-  background: gold;
-}
-```
-
-#### Result
-
-{{EmbedLiveSample('Example_2')}}
 
 ## Specifications
 

@@ -1,6 +1,6 @@
 ---
-title: buffer
-slug: Glossary/buffer
+title: Buffer
+slug: Glossary/Buffer
 tags:
   - Buffer
   - CodingScripting

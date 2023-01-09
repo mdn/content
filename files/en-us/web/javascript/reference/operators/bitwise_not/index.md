@@ -1,6 +1,7 @@
 ---
 title: Bitwise NOT (~)
 slug: Web/JavaScript/Reference/Operators/Bitwise_NOT
+page-type: javascript-operator
 tags:
   - Bitwise operator
   - JavaScript

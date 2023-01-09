@@ -15,8 +15,8 @@ These features are especially useful for one of the most common areas in which D
 - [Datagram Transport Layer Security](https://en.wikipedia.org/wiki/Datagram_Transport_Layer_Security) on Wikipedia
 - Specifications:
 
+  - {{RFC(9147, "The Datagram Transport Layer Security (DTLS) Protocol Version 1.3")}}
   - {{RFC(6347, "Datagram Transport Layer Security Version 1.2")}}
-  - [Datagram Transport Layer Security Protocol Version 1.3 _draft specification_](https://datatracker.ietf.org/doc/html/draft-ietf-tls-dtls13)
 
 - Related specification
 
