@@ -41,25 +41,25 @@
   dependencies:
     "@mdn/browser-compat-data" latest
 
-"@mdn/browser-compat-data@^5.2.25":
-  version "5.2.25"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.25.tgz#0e04c72819b6c2373f89bbdc8cd3597010fc3513"
-  integrity sha512-OIxLo3VvobcUw8Kvxl2NOfldfw7QdFDexLPGkXTC2b08uzmR3vBJNE8M3yKFsTpXCMiIYWVT0bD/+I7tjZ/2lQ==
+"@mdn/browser-compat-data@^5.2.26":
+  version "5.2.26"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.26.tgz#69475019a6010f2460a6a5a18e29e7bda7917497"
+  integrity sha512-rFA2CekW9o+hH2oAf0Jxl7RWldw1uTpicZXyYiBX+InViySKms0l7beXEctlqPoofdyxzjPMAG8Y+TIWpWVXSg==
 
 "@mdn/browser-compat-data@latest":
   version "5.2.24"
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.24.tgz#45c85391411987d12519d214d80c324c5100bcbc"
   integrity sha512-KZJKMObObkYFUgEWEbIJ7voJ0iGm3XqhJLkS5jyRLSMoSL7PnmCjes+CttpSzgyLu7DwJsFWsRvKBgYFxb5e7A==
 
-"@mdn/yari@1.32.9":
-  version "1.32.9"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.32.9.tgz#7b0657e4e512889a0b7fe58d965d5ba042730275"
-  integrity sha512-BBQnau/Vr2ajwCs18oFoV16TUY4jYNli2+fOYzXBuFvY7L5zHZroyjXvt5p3KnmsbuOSkiYLsjZFUYqVprb8SQ==
+"@mdn/yari@1.32.10":
+  version "1.32.10"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.32.10.tgz#252ecb01ebab834407616d926628fbd82bfb0aa5"
+  integrity sha512-Tq5Xvcw5uS5UopR2dDxFueVP2idNb5P6sGaaZT4YQwbZ4UEA2KFQR0IY3M2/X77aAbSfBWinCzG0Gnnz+Tk3ow==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
     "@mdn/bcd-utils-api" "^0.0.3"
-    "@mdn/browser-compat-data" "^5.2.25"
+    "@mdn/browser-compat-data" "^5.2.26"
     "@mozilla/glean" "1.3.0"
     "@use-it/interval" "^1.0.0"
     "@webref/css" "^5.4.4"
@@ -83,7 +83,7 @@
     front-matter "^4.0.2"
     fs-extra "^11.1.0"
     got "^11.8.3"
-    html-react-parser "^3.0.6"
+    html-react-parser "^3.0.7"
     http-proxy-middleware "^2.0.6"
     image-size "^1.0.2"
     image-type "^4.1.0"
@@ -2366,10 +2366,10 @@ html-dom-parser@3.1.2:
     domhandler "5.0.3"
     htmlparser2 "8.0.1"
 
-html-react-parser@^3.0.6:
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/html-react-parser/-/html-react-parser-3.0.6.tgz#356b861e6ad48e3221337d5a5929c5e452f8dfdd"
-  integrity sha512-kFh/qJkz4KJudCcILfI1hQKXTheRyMREXuL/WbWYUAsMsu0EOwV4nO5jA3ecu1LUNpCcebkNcBECxqpswBDlLw==
+html-react-parser@^3.0.7:
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/html-react-parser/-/html-react-parser-3.0.7.tgz#18d5b71965f5e04023e32618ad22a99b299a8324"
+  integrity sha512-4Nzpp1Lsd6ngOJR8T+Vc4u+Z77OddOgKL3KvwbtA0/U0Yv8v5JF+yewQxIudrdOWGYuO0Borc0vQ2y53pzBAwA==
   dependencies:
     domhandler "5.0.3"
     html-dom-parser "3.1.2"
