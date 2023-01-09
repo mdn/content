@@ -43,7 +43,7 @@ For Firefox, the `reduce` request is honoured if:
 - In Windows 10: Settings > Ease of Access > Display > Show animations in Windows.
 - In Windows 11: Settings > Accessibility > Visual Effects > Animation Effects
 - In macOS: System Preferences > Accessibility > Display > Reduce motion.
-- In iOS: Settings > General > Accessibility > Reduce Motion.
+- In iOS: Settings > Accessibility > Motion.
 - In Android 9+: Settings > Accessibility > Remove animations.
 - In Firefox `about:config`: Add a number preference called `ui.prefersReducedMotion` and set its value to either `0` for full animation or to `1` to indicate a preference for reduced motion. Changes to this preference take effect immediately.
 

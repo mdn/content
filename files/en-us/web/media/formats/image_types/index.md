@@ -312,7 +312,7 @@ However it also has disadvantages for some cases, as video and image encoding ha
 The format offers:
 
 - Excellent lossy compression compared to JPG and PNG for visually similar compression levels (e.g. lossy AVIF images are around 50% smaller than JPEG images).
-- Generally AVIF has better compression than WebP — median 50% vs 30% compression for the same JPG set (source: [AVIF WebP Comparison](https://www.ctrl.blog/entry/webp-avif-comparison.html) (CTRL Blog)).
+- Generally, AVIF has better compression than WebP — median 50% vs. 30% compression for the same JPG set (source: [AVIF WebP Comparison](https://www.ctrl.blog/entry/webp-avif-comparison.html) (CTRL Blog)).
 - Lossless compression.
 - Animation/multi-image storage (similar to animated GIFs, but with much better compression)
 - Alpha channel support (i.e. for transparency).
