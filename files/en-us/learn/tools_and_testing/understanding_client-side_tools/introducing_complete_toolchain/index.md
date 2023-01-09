@@ -440,7 +440,7 @@ Another clever trick Parcel has up its sleeve is that any changes to your source
 2. Search for the text "near misses", and replace it with something silly like "flying pigs".
 3. Save the file, then go straight back to the app running in your browser. You'll notice that the browser has automatically refreshed, and the line "\<date> there will be \<number> near misses" at the top of the page has been changed!
 
-You could also try using ESLint and Prettier too — try deliberately removing a load of the whitespace from one of your files and try Prettier on it to clean it up, or introduce a syntax error into one of your JavaScript files and see what errors ESLint gives you when you try to use Parcel to build it again.
+You could also try using ESLint and Prettier too — try deliberately removing a load of the whitespace from one of your files and running Prettier on it to clean it up, or introduce a syntax error into one of your JavaScript files and see what errors ESLint gives you when you try to use Parcel to build it again.
 
 ## Summary
 
