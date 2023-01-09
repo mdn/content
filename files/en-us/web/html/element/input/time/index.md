@@ -503,6 +503,7 @@ function populateMinutes() {
  hourSelect.onchange = setMinutesToZero;
  minuteSelect.onchange = setMinutesToZero;
 ```
+
 ## Technical Summary
 
 <table class="properties">
