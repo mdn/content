@@ -118,6 +118,7 @@ We want to run this method whenever a `ToDoItem` emits a `checkbox-changed` even
 ```html
 <to-do-item :label="item.label" :done="item.done" :id="item.id"
             @checkbox-changed="updateDoneStatus(item.id)">
+</to-do-item>
 ```
 
 Now if you check a `ToDoItem`, you should see the summary update appropriately!
