@@ -55,7 +55,6 @@ The most notable difference between this operator and the [equality](/en-US/docs
 "hello" === "hola"; // false
 
 3 === 3; // true
-3 === new Number(3) // false
 3 === 4; // false
 
 true === true; // true
@@ -70,6 +69,7 @@ null === null; // true
 "3" === 3; // false
 true === 1; // false
 null === undefined; // false
+3 === new Number(3); // false
 ```
 
 ### Comparing objects
