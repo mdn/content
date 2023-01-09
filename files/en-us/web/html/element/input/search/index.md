@@ -454,6 +454,11 @@ You can see a good example of a search form used in context at our [website-aria
         {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}.
       </td>
     </tr>
+     <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td>with no <code>list</code> attribute: {{ARIARole("searchbox")}}</td>
+      <td>with <code>list</code> attribute: {{ARIARole("combobox")}}</td>
+    </tr>
   </tbody>
 </table>
 
