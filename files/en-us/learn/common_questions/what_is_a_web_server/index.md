@@ -69,7 +69,7 @@ Technically, you could host all those files on your own computer, but it's far m
 - A dedicated web server is typically more available. (up and running)
 - Excluding downtime and systems troubles, a dedicated web server is always connected to the Internet.
 - A dedicated web server can have the same IP address all the time. This is known as a _dedicated IP address_. (not all {{Glossary("ISP", "ISPs")}} provide a fixed IP address for home lines)
-- A dedicated web server is typically maintained by a third-party.
+- A dedicated web server is typically maintained by a third party.
 
 For all these reasons, finding a good hosting provider is a key part of building your website. Examine the various services companies offer. Choose one that fits your needs and budget. (Services range from free to thousands of dollars per month.) You can find more details [in this article](/en-US/docs/Learn/Common_questions/How_much_does_it_cost#hosting).
 
@@ -106,7 +106,7 @@ Roughly speaking, a server can serve either static or dynamic content. Remember 
 
 The term _dynamic_ means that the server processes the content or even generates it on the fly from a database. This approach provides more flexibility, but the technical stack is more complex, making it dramatically more challenging to build a website.
 
-There are so many application server technologies that it's difficult to suggest a particular one. Some application servers cater to specific website categories like blogs, wikis, or eCommerce; others are more generic. If you're building a dynamic website, take the time to choose technology that fits your needs. Unless you want to learn web server programming (which is an exciting area in itself!), you don't need to create your own application server. That's just [reinventing the wheel](https://en.wikipedia.org/wiki/Reinventing_the_wheel).
+There are so many application server technologies that it's difficult to suggest a particular one. Some application servers cater to specific website categories like blogs, wikis, or e-commerce; others are more generic. If you're building a dynamic website, take the time to choose technology that fits your needs. Unless you want to learn web server programming (which is an exciting area in itself!), you don't need to create your own application server. That's just [reinventing the wheel](https://en.wikipedia.org/wiki/Reinventing_the_wheel).
 
 ## Next steps
 

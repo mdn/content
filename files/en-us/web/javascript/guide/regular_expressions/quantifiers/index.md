@@ -93,7 +93,7 @@ Quantifiers indicate numbers of characters or expressions to match.
         <p>
           Where "n" is a positive integer, matches at least "n" occurrences of
           the preceding item "x". For example, <code>/a{2,}/</code> doesn't
-          match the "a" in "candy", but matches all of the a's in "caandy" and
+          match the "a" in "candy", but matches all the a's in "caandy" and
           in "caaaaaaandy".
         </p>
       </td>
@@ -161,13 +161,13 @@ console.table(delicateMessage.match(wordEndingWithAs)); // [ "Spartaaaaaaa" ]
 ```js
 const singleLetterWord = /\b\w\b/g;
 const notSoLongWord = /\b\w{2,6}\b/g;
-const loooongWord = /\b\w{13,}\b/g;
+const longWord = /\b\w{13,}\b/g;
 
 const sentence = "Why do I have to learn multiplication table?";
 
 console.table(sentence.match(singleLetterWord)); // ["I"]
 console.table(sentence.match(notSoLongWord));    // [ "Why", "do", "have", "to", "learn", "table" ]
-console.table(sentence.match(loooongWord));      // ["multiplication"]
+console.table(sentence.match(longWord));      // ["multiplication"]
 ```
 
 ### Optional character
