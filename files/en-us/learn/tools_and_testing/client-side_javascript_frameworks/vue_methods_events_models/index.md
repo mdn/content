@@ -96,7 +96,8 @@ We now have an app that displays a list of to-do items. However, we can't update
 
    ```js
    components: {
-     ToDoItem, ToDoForm;
+     ToDoItem,
+     ToDoForm
    }
    ```
 
