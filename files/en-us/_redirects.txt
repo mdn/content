@@ -5395,6 +5395,7 @@
 /en-US/docs/MDC:How_to_Help	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN/About	/en-US/docs/MDN/Writing_guidelines
 /en-US/docs/MDN/At_ten/Contributing_to_MDN	/en-US/docs/MDN/Contribute
+/en-US/docs/MDN/Community/Issues/Issue_triage	/en-US/docs/MDN/Community/Issues
 /en-US/docs/MDN/Community/Users_teams	/en-US/docs/MDN/Community/Roles_teams
 /en-US/docs/MDN/Contribute/Changelog	/en-US/docs/MDN/Changelog
 /en-US/docs/MDN/Contribute/Code_sample_guidelines	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
@@ -5468,7 +5469,7 @@
 /en-US/docs/MDN/Contribute/Localize	/en-US/docs/MDN/Community/Contributing/Translated_content
 /en-US/docs/MDN/Contribute/Markdown_in_MDN	/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /en-US/docs/MDN/Contribute/Open_source_etiquette	/en-US/docs/MDN/Community/Open_source_etiquette
-/en-US/docs/MDN/Contribute/Processes/Content_bug_triage	/en-US/docs/MDN/Community/Issues/Issue_triage
+/en-US/docs/MDN/Contribute/Processes/Content_bug_triage	/en-US/docs/MDN/Community/Issues
 /en-US/docs/MDN/Contribute/Processes/Locating_browser-specific_information	https://github.com/mdn/browser-compat-data/blob/main/docs/matching-browser-releases/index.md
 /en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_version	https://github.com/mdn/browser-compat-data/blob/main/docs/matching-browser-releases/index.md
 /en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_versiosn	https://github.com/mdn/browser-compat-data/blob/main/docs/matching-browser-releases/index.md
