@@ -222,6 +222,38 @@ p {
 }
 ```
 
+### Fallbacks for older browsers
+
+Browsers should use a `@font-face` with a single `src` descriptor listing possible sources for the font.
+Since the browser will use the first resource that it is able to load, items should be specified in the order that you'd most like them to be used.
+
+Generally this means that local files should appear before remote files, and that resources with `format()` or `tech()` constraints should appear before resources that don't have them (otherwise the less-constrained version would always be selected).
+For example:
+
+```css
+@font-face {
+  font-family: "MgOpenModernaBold";
+  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental), url("MgOpenModernaBold.otf")
+      format(opentype);
+}
+```
+
+A browser that does not support `tech()` above should ignore the first item and attempt to load the second resource.
+
+Some browsers do not yet [ignore invalid items](#browser_compatibility), and instead fail the whole `src` descriptor if any value is invalid.
+If working with these browsers you can specify multiple `src` descriptors as fallbacks.
+Note that multiple `src` descriptors are attempted in reverse-order, so at the end we have our normal descriptor with all the items.
+
+```css
+@font-face {
+  font-family: "MgOpenModernaBold";
+  src: url("MgOpenModernaBold.otf") format(opentype);
+  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental);
+  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental), url("MgOpenModernaBold.otf")
+      format(opentype);
+}
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -232,6 +264,7 @@ p {
 
 ## See also
 
+- {{cssxref("@font-face", "@font-face")}}
 - {{cssxref("@font-face/font-display", "font-display")}}
 - {{cssxref("@font-face/font-family", "font-family")}}
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}

@@ -71,7 +71,9 @@ If the `local()` function is provided, specifying a font name to look for on the
 Browsers attempt to load resources in their list declaration order, so usually `local()` should be written before `url()`. Both functions are optional, so a rule block containing only one or more `local()` without `url()` is possible.
 If a more specific fonts with `format()` or `tech()` values are desired, these should be listed _before_ versions that don't have these values, as the less-specific variant would otherwise be tried and used first.
 
-By allowing authors to provide their own fonts, `@font-face` makes it possible to design content without being limited to the so-called "web-safe" fonts (that is, the fonts which are so common that they're considered to be universally available). The ability to specify the name of a locally-installed font to look for and use makes it possible to customize the font beyond the basics while making it possible to do so without relying on an Internet connection.
+By allowing authors to provide their own fonts, `@font-face` makes it possible to design content without being limited to the so-called "web-safe" fonts (that is, the fonts which are so common that they're considered to be universally available). The ability to specify the name of a locally-installed font to look for and use makes it possible to customize the font beyond the basics while making it possible to do so without relying on an internet connection.
+
+> **Note:** Fallback strategies for loading fonts on older browsers are described in the [`src` descriptor page](/en-US/docs/Web/CSS/@font-face/src#fallbacks_for_older_browsers).
 
 The `@font-face` at-rule may be used not only at the top level of a CSS, but also inside any [CSS conditional-group at-rule](/en-US/docs/Web/CSS/At-rule#conditional_group_rules).
 
@@ -148,38 +150,6 @@ In this example, the user's local copy of "Helvetica Neue Bold" is used; if the 
   src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
     url("MgOpenModernaBold.ttf");
   font-weight: bold;
-}
-```
-
-### Fallbacks on older browsers
-
-Browsers should use a `@font-face` with a single `src` descriptor listing possible sources for the font.
-Since the browser will use the first resource that it is able to load, items should be specified in the order that you'd most like them to be used.
-
-Generally this means that local files should appear before remote files, and that resources with `format()` or `tech()` constraints should appear before resources that don't have them (otherwise the less-constrained version would always be selected).
-For example:
-
-```css
-@font-face {
-  font-family: "MgOpenModernaBold";
-  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental), url("MgOpenModernaBold.otf")
-      format(opentype);
-}
-```
-
-A browser that does not support `tech()` above should drop the first item and attempt to load the second resource.
-
-Some browsers do not yet [drop invalid items](#browser_compatibility), and instead fail the whole `src` descriptor if any value is invalid.
-If working with these browsers you can specify multiple `src` descriptors as fallbacks.
-Note that multiple `src` descriptors are attempted in reverse-order, so at the end we have our normal descriptor with all the items.
-
-```css
-@font-face {
-  font-family: "MgOpenModernaBold";
-  src: url("MgOpenModernaBold.otf") format(opentype);
-  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental);
-  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental), url("MgOpenModernaBold.otf")
-      format(opentype);
 }
 ```
 
