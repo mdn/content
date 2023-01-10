@@ -1272,6 +1272,10 @@
       "inh": "GPUError",
       "impl": []
     },
+    "GPUPipelineError": {
+      "inh": "DOMException",
+      "impl": []
+    },
     "GPUPipelineLayout": {
       "inh": "",
       "impl": []
@@ -2309,6 +2313,10 @@
       "impl": []
     },
     "Path2D": {
+      "inh": "",
+      "impl": []
+    },
+    "PaymentInstruments": {
       "inh": "",
       "impl": []
     },
