@@ -31,12 +31,21 @@ setBaseAndExtent(anchorNode, anchorOffset, focusNode, focusOffset)
   - : The number of child nodes from the start of the anchor node that should be excluded
     from the selection. So for example, if the value is 0 the whole node is included. If
     the value is 1, the whole node minus the first child node is included. And so on.
+
+    If `anchorNode` is a {{domxref("Text")}} node, the offset refers to the number of
+    characters from the start of the {{domxref("Node.textContent")}} that should be
+    excluded from the selection.
+
 - `focusNode`
   - : The node at the end of the selection.
 - `focusOffset`
   - : The number of child nodes from the start of the focus node that should be included
     in the selection. So for example, if the value is 0 the whole node is excluded. If the
     value is 1, the first child node is included. And so on.
+
+    If `focusNode` is a {{domxref("Text")}} node, the offset refers to the number of
+    characters from the start of the {{domxref("Node.textContent")}} that should be
+    included in the selection.
 
 > **Note:** If the focus position appears before the anchor position in
 > the document, the direction of the selection is reversed — the caret is placed at the
