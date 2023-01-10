@@ -6,7 +6,7 @@ const installedYariVersion = yariPackageJson.version;
 
 if (installedYariVersion < availableYariVersion) {
   console.log(
-    `The installed version of Yari (${installedYariVersion}) is older than ` +
+    `The installed version of yari(${installedYariVersion}) is older than ` +
       `the version referenced in package.json (${availableYariVersion}). ` +
       `Please make sure your main git branch is up-to-date with ` +
       `https://github.com/mdn/content/, then run yarn install to ` +
