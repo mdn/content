@@ -9944,6 +9944,7 @@
 /en-US/docs/Web/API/WebRTC_API/Overview	/en-US/docs/Web/API/WebRTC_API#WebRTC_concepts_and_usage
 /en-US/docs/Web/API/WebRTC_API/Taking_still_photos	/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 /en-US/docs/Web/API/WebRTC_API/WebRTC_basics	/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling
+/en-US/docs/Web/API/WebRTC_API/adapter.js	/en-US/docs/Web/API/WebRTC_API#interoperability
 /en-US/docs/Web/API/WebSocket/onclose	/en-US/docs/Web/API/WebSocket/close_event
 /en-US/docs/Web/API/WebSocket/onerror	/en-US/docs/Web/API/WebSocket/error_event
 /en-US/docs/Web/API/WebSocket/onmessage	/en-US/docs/Web/API/WebSocket/message_event
