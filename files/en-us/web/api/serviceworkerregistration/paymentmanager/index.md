@@ -4,14 +4,13 @@ slug: Web/API/ServiceWorkerRegistration/paymentManager
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - PaymentManager
   - Reference
 browser-compat: api.ServiceWorkerRegistration.paymentManager
 ---
 
-{{APIRef("Payment Handler API")}}{{SeeCompatTable}}
+{{APIRef("Payment Handler API")}}
 
 The **`paymentManager`** property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a payment app's {{domxref("PaymentManager")}} instance, which is used to manage various payment app functionality.

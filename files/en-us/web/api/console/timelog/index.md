@@ -82,7 +82,7 @@ console.timeEnd("answer time");
 ```
 
 The output from the example above shows the time taken by the user to dismiss the first
-alert box, followed by the time it took for the user to dismiss the second alert:
+alert box, followed by the cumulative time it took for the user to dismiss both alerts:
 
 ```
 answer time: 2542ms debugger eval code:3:9
