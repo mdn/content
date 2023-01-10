@@ -22,7 +22,7 @@ Do the following:
 
 - Before filing an issue, consider if you need to start a [discussion](https://github.com/mdn/mdn-community/discussions) in the MDN Web Docs project on GitHub. Use discussions to gain different viewpoints and to converge on an agreed-upon course of action. This helps to keep issues focused and productive.
 - After filing an issue, try to fix the problem yourself. Read our [contribution guide](https://github.com/mdn/content/blob/main/CONTRIBUTING.md) to learn more.
-- If you have a question, you can ask using mechanisms like [chat rooms](https://chat.mozilla.org/#/room/#mdn:mozilla.org) or [forums](https://discourse.mozilla.org/c/mdn/236) without filing an issue.
+- If you have a question, you can ask using mechanisms like [chat rooms](https://chat.mozilla.org/#/room/#mdn:mozilla.org) or [forums](https://discourse.mozilla.org/c/mdn/236) instead of filing an issue.
 
 Avoid doing the following:
 
@@ -61,7 +61,7 @@ If you think you've found a bug with the content on MDN Web Docs or with the loo
   - The issue has no clear consensus on its resolution.
   - The requirements for completing the task expand while it's being resolved or the work is unclear.
 
-- You can open an issue and [fix it yourself](#fixing_issues_yourself).
+- For minor and small bugs, you can [make the changes yourself](#fixing_issues_yourself) and submit a pull request.
 
 ### Creating a task list issue
 
@@ -75,9 +75,9 @@ For example:
    // Issue title
    Ensure sections follow the order defined in the CSS property template
 
-   // Issue description
-   The CSS property page template is defined [here](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template).
-   This issue tracker will be used to compare the documented CSS properties with the template and track changes to the property pages for compliance.
+   ### Description
+   The CSS property page template is defined [here](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template).
+   The task list in this issue will be used to compare the documented CSS properties with the template and track changes to the property pages for compliance.
 
    ### List of pages checked
 
@@ -114,9 +114,14 @@ These are the general steps for working on an issue:
 
 If you spot a bug — whether it's a problem with the website's look and feel or an error in documentation — you can try to fix it yourself. Learn how you can contribute by going through our [contribution guide](https://github.com/mdn/content/blob/main/CONTRIBUTING.md).
 
-In general, begin by [opening the issue](#guidelines_for_reporting_an_issue). Add a comment about your intent to work on the issue and if possible, your proposed solution or steps to fix the issue.
-Wait for the issue to be triaged, for the MDN Web Docs team to verify that the issue is legit and to approve your proposed solution. (If you open a pull request before the issue has been triaged, your time and effort might go waste if the linked issue is deemed invalid or the solution does not match the one expected by the MDN Web Docs team.)
+If the bug is small, such as a typo or a minor sentence improvement, or involves an uncontroversial fix, submit a pull request with the changes.
+
+For all other type of bugs, begin by [opening the issue](#guidelines_for_reporting_an_issue). Add a comment about your intent to work on the issue and if possible, describe your proposed solution or steps to fix the issue.
+Wait for the issue to be triaged, so that the MDN Web Docs team can verify that the issue is legit and approves your proposed solution.
+
+> **Note:** If you open a pull request before the issue has been triaged, your time and effort might go waste if the linked issue is deemed invalid or the solution does not match the one expected by the MDN Web Docs team.
 After the issue is triaged, assign the issue to yourself.
+
 Using the [guidelines on working on an issue](#Guidelines_for_working_on_an_issue), try to fix the problem by updating the appropriate source, such as:
 
 - The MDN Web Docs content (in English) in the [content](https://github.com/mdn/content) repository
@@ -206,7 +211,7 @@ Next, set the following labels as appropriate:
 - `effort: small`, `effort: medium`, `effort: large`: Some contributors like to search for bugs based on the time and effort that will be needed to fix the bug. So where possible, you should try to provide an estimate of the required effort.
 - `good first issue`: Set this label on the issue if the fix for the issue is really simple and if fixing the issue would provide good practice for a newcomer who is getting used to the process.
 - `help wanted`: Set this label if the issue requires help from someone who knows about or is familiar with the topic. This is a popular label and some contributors use it to search for issues to work on in open source projects in their areas of familiarity or expertise.
-- `broken link internal`, `broken link external` — Set the appropriate label if the issue involves a link to a non-existent internal page or a broken external link.
+- `broken link internal`, `broken link external` — Set the appropriate label if the issue involves a broken link to an internal or external page.
 - `needs content update`: Set this label if the issue fix in another repository will need an equivalent fix in the `mdn/content` repository.
 
    > **Note:** After the triage process is complete, remove the `needs triage` label.
