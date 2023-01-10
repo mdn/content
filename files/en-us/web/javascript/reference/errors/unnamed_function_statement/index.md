@@ -34,7 +34,7 @@ You'll need to check how functions are defined and if you need to provide a name
 
 ## Examples
 
-### Statements vs expressions
+### Statements vs. expressions
 
 A _[function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function)_ (or _function declaration_) requires a name.
 This won't work:

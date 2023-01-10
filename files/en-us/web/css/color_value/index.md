@@ -11,9 +11,7 @@ tags:
   - Web
   - color
   - hsl
-  - hsla
   - rgb
-  - rgba
   - unit
   - lch
   - lab
@@ -29,9 +27,9 @@ A `<color>` may also include an [alpha-channel](https://en.wikipedia.org/wiki/Al
 A `<color>` can be defined in any of the following ways:
 
 - Using a keyword (such as `blue` or `transparent`). All existing keywords specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB).
-- Using the [RGB cubic-coordinate](https://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation) system (via the #-hexadecimal or the `rgb()` and `rgba()` functional notations).
+- Using the [RGB cubic-coordinate](https://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation) system (via the #-hexadecimal or the `rgb()` functional notation).
   These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB).
-- Using the [HSL cylindrical-coordinate](https://en.wikipedia.org/wiki/HSL_and_HSV) system (via the {{cssxref("color_value/hsl","hsl()")}} and {{cssxref("color_value/hsla","hsla()")}} functional notations).
+- Using the [HSL cylindrical-coordinate](https://en.wikipedia.org/wiki/HSL_and_HSV) system (via the {{cssxref("color_value/hsl","hsl()")}} functional notation).
   These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB).
 - Using the [HWB cylindrical-coordinate](https://en.wikipedia.org/wiki/HWB_color_model) system (via the {{cssxref("color_value/hwb","hwb()")}} functional notation).
   These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB).
@@ -89,15 +87,9 @@ The HSL color model defines a given color in the [sRGB color space](https://en.w
 Many designers find HSL more intuitive than RGB, since it allows hue, saturation, and lightness to each be adjusted independently. HSL can also make it easier to create a set of matching colors (such as when you want multiple shades of a single hue).
 However, using HSL to create color variations can produce surprising results, as it is not [perceptually uniform](https://en.wikipedia.org/wiki/Color_difference#Tolerance). For example, both `hsl(240 100% 50%)` and `hsl(60 100% 50%)` have the same lightness, even though the former is much darker than the latter.
 
-HSL colors are expressed through the functional `hsl()` and `hsla()` notations.
+HSL colors are expressed through the functional {{cssxref("color_value/hsl()", "hsl()")}} notation.
 
-- [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) or [`hsla()`](/en-US/docs/Web/CSS/color_value/hsla): `hsl[a](H, S, L[, A])` or `hsl[a](H S L[ / A])`
-
-  - : `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in the [CSS Color](https://drafts.csswg.org/css-color/#the-hsl-notation) specification. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in the [CSS Color Level 3](https://drafts.csswg.org/css-color-3/#hsl-color) specification. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
-
-    `S` (saturation) and `L` (lightness) are percentages. `100%` **saturation** is completely saturated, while `0%` is completely unsaturated (gray). `100%` **lightness** is white, `0%` lightness is black, and `50%` lightness is "normal".
-
-    `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+> **Note:** The legacy {{cssxref("color_value/hsla", "hsla()")}} syntax is an alias for `hsl()`, accepting the same parameters and behaving in the same way.
 
 ### HWB color model
 
@@ -189,30 +181,38 @@ div {
 ```
 
 ```js hidden
-const inputElem = document.querySelector('input');
-const divElem = document.querySelector('div');
+const inputElem = document.querySelector("input");
+const divElem = document.querySelector("div");
 
 function validTextColor(stringToTest) {
-  if (stringToTest === "") { return false; }
-  if (stringToTest === "inherit") { return false; }
-  if (stringToTest === "transparent") { return false; }
+  if (stringToTest === "") {
+    return false;
+  }
+  if (stringToTest === "inherit") {
+    return false;
+  }
+  if (stringToTest === "transparent") {
+    return false;
+  }
 
   const image = document.createElement("img");
   image.style.color = "rgb(0, 0, 0)";
   image.style.color = stringToTest;
-  if (image.style.color !== "rgb(0, 0, 0)") { return true; }
+  if (image.style.color !== "rgb(0, 0, 0)") {
+    return true;
+  }
   image.style.color = "rgb(255, 255, 255)";
   image.style.color = stringToTest;
   return image.style.color !== "rgb(255, 255, 255)";
 }
 
-inputElem.addEventListener('change', () => {
+inputElem.addEventListener("change", () => {
   if (validTextColor(inputElem.value)) {
     divElem.style.backgroundColor = inputElem.value;
-    divElem.textContent = '';
+    divElem.textContent = "";
   } else {
-    divElem.style.backgroundColor = 'white';
-    divElem.textContent = 'Invalid color value';
+    divElem.style.backgroundColor = "white";
+    divElem.textContent = "Invalid color value";
   }
 });
 ```
@@ -492,16 +492,16 @@ hwb(90 10% 10% / 50%)
 ### HSL transparency variations
 
 ```css-nolint
-hsla(240, 100%, 50%, 0.05)    /*   5% opaque blue */
-hsla(240, 100%, 50%, 0.4)     /*  40% opaque blue */
-hsla(240, 100%, 50%, 0.7)     /*  70% opaque blue */
-hsla(240, 100%, 50%, 1)       /* full opaque blue */
+hsl(240 100% 50% / 0.05)    /*   5% opaque blue */
+hsl(240 100% 50% / 0.4)     /*  40% opaque blue */
+hsl(240 100% 50% / 0.7)     /*  70% opaque blue */
+hsl(240 100% 50% / 1)       /* full opaque blue */
 
-/* Whitespace syntax */
-hsla(240 100% 50% / 0.05)     /*   5% opaque blue */
+/* Comma syntax */
+hsl(240, 100%, 50%, 0.05)     /*   5% opaque blue */
 
 /* Percentage value for alpha */
-hsla(240 100% 50% / 5%)       /*   5% opaque blue */
+hsl(240 100% 50% / 5%)       /*   5% opaque blue */
 ```
 
 ## Specifications
