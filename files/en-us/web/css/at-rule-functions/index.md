@@ -59,7 +59,7 @@ The {{CSSxRef("@namespace")}} at-role specify XML namespaces to be used in a CSS
 
 ## @container functions
 
-The {{CSSxRef("@container")}} at-role specify styles to a containment context. 
+The {{CSSxRef("@container")}} at-role specify styles to a containment context.
 
 - {{CSSxRef("@container", "@container style()")}}
   - : Defines the containment context style.
