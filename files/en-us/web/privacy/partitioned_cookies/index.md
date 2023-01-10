@@ -13,7 +13,7 @@ browser-compat: http.headers.Set-Cookie.Partitioned
 
 **Cookies Having Independent Partitioned State** (**CHIPS**, also know as **Partitioned cookies**) allows developers to opt a cookie into partitioned storage, with a separate cookie jar per top-level site.
 
-A partitioned third-party cookie is tied to the top-level site where it's initially set and cannot be accessed from elsewhere. The aim is to allow cookies to be set by third-party services, but only read within the context of the top-level site where they were initially set. This helps stop cross-site tracking, and enables non-tracking uses of third-party cookies such as persisting state of embedded maps or chat widgets across different sites, and persisting config information for subresource CDN load balancing and Headless CMS providers.
+A partitioned third-party cookie is tied to the top-level site where it's initially set and cannot be accessed from elsewhere. The aim is to allow cookies to be set by third-party services, but only read within the context of the top-level site where they were initially set. This allows cross-site tracking to be blocked, while still enabling non-tracking uses of third-party cookies such as persisting state of embedded maps or chat widgets across different sites, and persisting config information for subresource CDN load balancing and Headless CMS providers.
 
 ## Cross-site tracking in a nutshell
 
@@ -43,17 +43,17 @@ With `Partitioned` set, the cookie is stored using two keys, the host key and a 
 Revisiting the example we described in the previous section:
 
 1. A user visits `https://site-a.example`, which embeds content from `https://3rd-party.example`. `https://3rd-party.example` sets a cookie on the user's device using `Partitioned`, meaning that the site owner opts in to CHIPS.
-2. The storage key for the cookie would now be `{("https", "site-a.example"), ("3rd-party.example")}`.
+2. The storage key for the cookie would now be `{("https://site-a.example"), ("3rd-party.example")}`.
 3. When the user visits `https://site-b.example`, which also embeds `https://3rd-party.example`, this new embedded instance is no longer able to access the cookie because the partition key doesn't match.
 
-> **Note:** CHIPS is similar to the older [State partitioning mechanism](/en-US/docs/Web/Privacy/State_Partitioning) implemented by Firefox. The difference is that state partitioning partitions cookie storage and retrieval into separate cookie jars for each top-level site, without a mechanism to allow opt-in to third party cookies if desired. As browsers start to phase out third-party cookie usage, there are still valid, non-tracking uses of third-party cookies that need to be permitted while developers begin to handle this change.
+> **Note:** CHIPS is similar to the older [State partitioning mechanism](/en-US/docs/Web/Privacy/State_Partitioning) implemented by Firefox. The difference is that state partitioning partitions cookie storage and retrieval into separate cookie jars for each top-level site, without a mechanism to allow opt-in to third-party cookies if desired. As browsers start to phase out third-party cookie usage, there are still valid, non-tracking uses of third-party cookies that need to be permitted while developers begin to handle this change.
 
 ## A valid third-party embed scenario
 
-Blocking all third-party cookies would currently be problematic, for example in a retail site that uses a third-party chat service, as described below. CHIPs will protect against third-party trackers while still allowing this to work.
+Blocking all third-party cookies would currently be problematic, for example in a retail site that uses a third-party chat service, as described below. CHIPs will enable this use case, while third-party tracking cookies are blocked.
 
 1. A user visits `https://shoppy.example`, which embeds a third-party chat service from `https://3rd-party.example/chat` to provide support for users that need help. `https://3rd-party.example/chat` sets a cookie on the user's device using `Partitioned`, to persist the state of the chat across different site subdomains.
-2. The storage key for the cookie would be `{("https", "shoppy.example"), ("3rd-party.example/chat")}`.
+2. The storage key for the cookie would be `{("https://shoppy.example"), ("3rd-party.example/chat")}`.
 3. The user visits various subdomains in the quest to solve their problem that also embed `https://3rd-party.example/chat`, including `https://support.shoppy.example` and `https://checkout.shoppy.example`. The new embedded instances are able to access the cookie because the partition key still matches.
 
 > **Note:** [First-party sets](https://github.com/WICG/first-party-sets) is a proposal that aims to allow site owners to declare a collection of related domains that will act like they are a single top-level site, for the purposes of cookie access mechanisms like CHIPS.
@@ -69,3 +69,4 @@ Blocking all third-party cookies would currently be problematic, for example in 
 ## See also
 
 - [Cookies Having Independent Partitioned State (CHIPS) on developer.chrome.com](https://developer.chrome.com/docs/privacy-sandbox/chips/)
+- [CHIPS Explainer](https://github.com/privacycg/CHIPS)
