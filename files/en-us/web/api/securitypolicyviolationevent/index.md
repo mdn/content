@@ -24,7 +24,7 @@ The **`SecurityPolicyViolationEvent`** interface inherits from {{domxref("Event"
 - {{domxref("SecurityPolicyViolationEvent.SecurityPolicyViolationEvent","SecurityPolicyViolationEvent()")}}
   - : Creates a new `SecurityPolicyViolationEvent` object instance.
 
-## Properties
+## Instance properties
 
 - {{domxref("SecurityPolicyViolationEvent.blockedURI")}} {{ReadOnlyInline}}
   - : A string representing the URI of the resource that was blocked because it violates a policy.

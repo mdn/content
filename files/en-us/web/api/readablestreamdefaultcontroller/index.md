@@ -20,12 +20,12 @@ The **`ReadableStreamDefaultController`** interface of the [Streams API](/en-US/
 
 None. `ReadableStreamDefaultController` instances are created automatically during `ReadableStream` construction.
 
-## Properties
+## Instance properties
 
 - {{domxref("ReadableStreamDefaultController.desiredSize")}} {{ReadOnlyInline}}
   - : Returns the desired size required to fill the stream's internal queue.
 
-## Methods
+## Instance methods
 
 - {{domxref("ReadableStreamDefaultController.close()")}}
   - : Closes the associated stream.

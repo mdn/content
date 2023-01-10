@@ -38,10 +38,10 @@ border-width: thick;
 border-width: 4px;
 border-width: 1.2rem;
 
-/* vertical | horizontal */
+/* top and bottom | left and right */
 border-width: 2px 1.5em;
 
-/* top | horizontal | bottom */
+/* top | left and right | bottom */
 border-width: 1px 2em 1.5cm;
 
 /* top | right | bottom | left */

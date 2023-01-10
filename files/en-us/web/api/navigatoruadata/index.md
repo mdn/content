@@ -19,7 +19,7 @@ An instance of this object is returned by calling {{domxref("Navigator.userAgent
 
 > **Note:** The terms _high entropy_ and _low entropy_ refer to the amount of information these values reveal about the browser. The values returned as properties are deemed low entropy, and unlikely to identify a user. The values returned by {{domxref("NavigatorUAData.getHighEntropyValues()")}} could potentially reveal more information. These values are therefore retrieved via a {{jsxref("Promise")}}, allowing time for the browser to request user permission, or make other checks.
 
-## Properties
+## Instance properties
 
 - {{domxref("NavigatorUAData.brands")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an array of brand information containing the browser name and version.
@@ -28,7 +28,7 @@ An instance of this object is returned by calling {{domxref("Navigator.userAgent
 - {{domxref("NavigatorUAData.platform")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the platform brand the user-agent is running on.
 
-## Methods
+## Instance methods
 
 - {{domxref("NavigatorUAData.getHighEntropyValues()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with a dictionary object containing the _high entropy_ values the user-agent returns.

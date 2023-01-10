@@ -17,7 +17,7 @@ The **`ImageTrack`** interface of the {{domxref('WebCodecs API','','','true')}} 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("ImageTrack.animated")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{jsxref("boolean")}} indicating whether the track is animated and therefore has multiple frames.

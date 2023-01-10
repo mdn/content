@@ -1,6 +1,7 @@
 ---
 title: WeakMap.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -45,10 +46,10 @@ const wm = new WeakMap();
 const obj = {};
 
 // Add new elements to the WeakMap
-wm.set(obj, 'foo').set(window, 'bar'); // chainable
+wm.set(obj, "foo").set(window, "bar"); // chainable
 
 // Update an element in the WeakMap
-wm.set(obj, 'baz');
+wm.set(obj, "baz");
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: WeakMap.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -41,10 +42,10 @@ has(key)
 
 ```js
 const wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.has(window); // returns true
-wm.has('baz');  // returns false
+wm.has("baz"); // returns false
 ```
 
 ## Specifications

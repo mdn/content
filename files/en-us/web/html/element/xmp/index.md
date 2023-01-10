@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.xmp
 ---
 
-{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 ## Summary
 
@@ -30,6 +30,8 @@ This element has no other attributes than the [global attributes](/en-US/docs/We
 
 This element implements the {{domxref('HTMLElement')}} interface.
 
+<!-- ## Technical summary -->
+
 ## Specifications
 
 {{Specifications}}
@@ -42,5 +44,3 @@ This element implements the {{domxref('HTMLElement')}} interface.
 
 - The {{HTMLElement("pre")}} and {{HTMLElement("code")}} elements to be used instead.
 - The {{HTMLElement("plaintext")}} and {{HTMLElement("listing")}} elements, similar to {{HTMLElement("xmp")}} but also obsolete.
-
-{{HTMLRef}}

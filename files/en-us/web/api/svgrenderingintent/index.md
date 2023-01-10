@@ -65,11 +65,11 @@ The **`SVGRenderingIntent`** interface defines the enumerated list of possible v
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 _This interface doesn't implement any specific properties._
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods._
 

@@ -20,14 +20,14 @@ The **`XRTransientInputHitTestResult`** interface of the [WebXR Device API](/en-
 
 You can get an array of `XRHitTestResult` objects for a frame by calling {{domxref("XRFrame.getHitTestResultsForTransientInput()")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("XRTransientInputHitTestResult.inputSource")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Represents the {{domxref("XRInputSource")}} that was used to compute the `results` array.
 - {{domxref("XRTransientInputHitTestResult.results")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Represents an array of {{domxref("XRHitTestResult")}} objects containing the hit test results for the input source, ordered by the distance along the ray used to perform the hit test, with the closest result at position 0.
 
-## Methods
+## Instance methods
 
 None.
 

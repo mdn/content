@@ -23,7 +23,7 @@ The **`CryptoKey`** interface of the [Web Crypto API](/en-US/docs/Web/API/Web_Cr
 
 For security reasons, the `CryptoKey` interface can only be used in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 
-## Properties
+## Instance properties
 
 - `CryptoKey.type`
 

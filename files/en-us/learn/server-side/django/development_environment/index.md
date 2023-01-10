@@ -162,7 +162,7 @@ You can similarly check that _pip3_ is installed by listing the available packag
 pip3 list
 ```
 
-### Windows 10
+### Windows 10 or 11
 
 Windows doesn't include Python by default, but you can easily install it (along with the _pip3_ tool) from [python.org](https://www.python.org/):
 
@@ -295,7 +295,7 @@ At this point, you may see a bunch of scripts being run (the same scripts as for
 > # Use Ctrl+X to exit nano, choose Y to save the file.
 > ```
 
-#### Windows 10 virtual environment setup
+#### Windows virtual environment setup
 
 Installing [virtualenvwrapper-win](https://pypi.org/project/virtualenvwrapper-win/) is even simpler than setting up _virtualenvwrapper_ because you don't need to configure where the tool stores virtual environment information (there is a default value). All you need to do is run the following command in the command prompt:
 

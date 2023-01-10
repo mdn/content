@@ -90,9 +90,9 @@ Your code will be richer and more professional as a result, and you'll be able t
 
 ## Vue tutorials
 
-> **Note:** Vue tutorials last tested in May 2020, with Vue 2.6.11.
+> **Note:** Vue tutorial last tested in January 2023, with Vue 3.2.45.
 >
-> If you need to check your code against our version, you can find a finished version of the sample Vue app code in our [todo-vue repository](https://github.com/mdn/todo-vue). For a running live version, see <https://mdn.github.io/todo-vue/dist/>.
+> If you need to check your code against our version, you can find a finished version of the sample Vue app code in our [todo-vue repository](https://github.com/mdn/todo-vue). For a running live version, see <https://mdn.github.io/todo-vue/>.
 
 - [1. Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
   - : Now let's introduce Vue, the third of our frameworks. In this article, we'll look at a little bit of Vue background, learn how to install it and create a new project, study the high-level structure of the whole project and an individual component, see how to run the project locally, and get it prepared to start building our example.

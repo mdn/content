@@ -70,7 +70,7 @@ These suppression triggers are changes to the computed value of any of the follo
 - {{cssxref("top")}}, {{cssxref("left")}}, {{cssxref("right")}}, or {{cssxref("bottom")}}
 - {{cssxref("margin")}} or {{cssxref("padding")}}
 - Any {{cssxref("width")}} or {{cssxref("height")}}-related properties
-- {{cssxref("transform")}}
+- {{cssxref("transform")}} and the individual transform properties {{cssxref("translate")}}, {{cssxref("scale")}}, and {{cssxref("rotate")}}
 
 Additionally, {{cssxref("position")}} changes anywhere inside the scrolling box also disable scroll anchoring.
 

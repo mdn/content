@@ -1,6 +1,7 @@
 ---
 title: yield*
 slug: Web/JavaScript/Reference/Operators/yield*
+page-type: javascript-operator
 tags:
   - ECMAScript 2015
   - Generators
@@ -15,7 +16,7 @@ browser-compat: javascript.operators.yield_star
 
 {{jsSidebar("Operators")}}
 
-The **`yield*` expression** is used to
+The **`yield*`** operator is used to
 delegate to another {{jsxref("Statements/function*", "generator")}} or iterable
 object.
 
@@ -77,7 +78,7 @@ objects).
 ```js
 function* g3(...args) {
   yield* [1, 2];
-  yield* '34';
+  yield* "34";
   yield* args;
 }
 
@@ -99,12 +100,12 @@ console.log(iterator.next()); // {value: undefined, done: true}
 ```js
 function* g4() {
   yield* [1, 2, 3];
-  return 'foo';
+  return "foo";
 }
 
 function* g5() {
   const g4ReturnValue = yield* g4();
-  console.log(g4ReturnValue) // 'foo'
+  console.log(g4ReturnValue); // 'foo'
   return g4ReturnValue;
 }
 

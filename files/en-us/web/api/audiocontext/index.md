@@ -26,7 +26,7 @@ An audio context controls both the creation of the nodes it contains and the exe
 - {{domxref("AudioContext.AudioContext", "AudioContext()")}}
   - : Creates and returns a new `AudioContext` object.
 
-## Properties
+## Instance properties
 
 _Also inherits properties from its parent interface, {{domxref("BaseAudioContext")}}._
 
@@ -35,7 +35,7 @@ _Also inherits properties from its parent interface, {{domxref("BaseAudioContext
 - {{domxref("AudioContext.outputLatency")}} {{ReadOnlyInline}}
   - : Returns an estimation of the output latency of the current audio context.
 
-## Methods
+## Instance methods
 
 _Also inherits methods from its parent interface, {{domxref("BaseAudioContext")}}._
 

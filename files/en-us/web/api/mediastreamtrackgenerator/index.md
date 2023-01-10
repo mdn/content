@@ -22,14 +22,14 @@ The object consumes a stream of media frames as input, which can be audio or vid
 - {{domxref("MediaStreamTrackGenerator.MediaStreamTrackGenerator", "MediaStreamTrackGenerator()")}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Creates a new `MediaStreamTrackGenerator` object which accepts either {{domxref("VideoFrame")}} or {{domxref("AudioData")}} objects.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from {{domxref("MediaStreamTrack")}}._
 
 - {{domxref("MediaStreamTrackGenerator.writable")}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : A {{domxref("WritableStream")}}.
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from {{domxref("MediaStreamTrack")}}._
 

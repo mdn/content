@@ -24,7 +24,7 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
 - {{domxref("Request.Request","Request()")}}
   - : Creates a new `Request` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("Request.body")}} {{ReadOnlyInline}}
   - : A {{domxref("ReadableStream")}} of the body contents.
@@ -55,7 +55,7 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
 - {{domxref("Request.url")}} {{ReadOnlyInline}}
   - : Contains the URL of the request.
 
-## Methods
+## Instance methods
 
 - {{domxref("Request.arrayBuffer()")}}
   - : Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} representation of the request body.

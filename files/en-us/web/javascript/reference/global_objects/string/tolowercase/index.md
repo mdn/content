@@ -1,6 +1,7 @@
 ---
 title: String.prototype.toLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method
@@ -38,7 +39,7 @@ lower case. `toLowerCase()` does not affect the value of the string
 ### Using `toLowerCase()`
 
 ```js
-console.log('ALPHABET'.toLowerCase()); // 'alphabet'
+console.log("ALPHABET".toLowerCase()); // 'alphabet'
 ```
 
 ## Specifications

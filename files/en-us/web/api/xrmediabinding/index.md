@@ -26,7 +26,7 @@ The **`XRMediaBinding`** interface is used to create layers that display the con
 - {{domxref("XRMediaBinding.XRMediaBinding", "XRMediaBinding()")}} {{Experimental_Inline}}
   - : Creates a new `XRMediaBinding` object for the specified {{domxref("XRSession")}}.
 
-## Methods
+## Instance methods
 
 - {{domxref("XRMediaBinding.createCylinderLayer()")}} {{Experimental_Inline}}
   - : Returns an {{domxref("XRCylinderLayer")}} object bound to an {{domxref("HTMLVideoElement")}}.

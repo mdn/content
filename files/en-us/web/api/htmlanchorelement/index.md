@@ -16,7 +16,7 @@ The **`HTMLAnchorElement`** interface represents hyperlink elements and provides
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -80,7 +80,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLAnchorElement.shape")}} {{deprecated_inline}}
   - : A string representing the shape of the active area.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 

@@ -19,11 +19,11 @@ The **`StylePropertyMap`** interface of the [CSS Typed Object Model API](/en-US/
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("StylePropertyMapReadOnly")}}._
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{DOMxRef("StylePropertyMapReadOnly")}}._
 

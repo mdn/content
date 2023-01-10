@@ -16,7 +16,7 @@ The **`TrustedHTML`** interface of the {{domxref('Trusted Types API')}} represen
 
 The value of a **TrustedHTML** object is set when the object is created and cannot be changed by JavaScript as there is no setter exposed.
 
-## Methods
+## Instance methods
 
 - {{domxref("TrustedHTML.toJSON()")}}
   - : Returns a JSON representation of the stored data.

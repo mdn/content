@@ -19,7 +19,7 @@ tags:
 
 ## Reason
 
-```
+```plain
 Reason: CORS request did not succeed
 ```
 

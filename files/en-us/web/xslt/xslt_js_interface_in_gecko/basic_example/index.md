@@ -1,5 +1,5 @@
 ---
-title: Basic Example
+title: Basic example
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
 tags:
   - XSLT

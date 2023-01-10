@@ -1,6 +1,7 @@
 ---
 title: Symbol.iterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
+page-type: javascript-static-data-property
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -16,6 +17,12 @@ The well-known **`Symbol.iterator`** symbol specifies the default iterator for a
 
 {{EmbedInteractiveExample("pages/js/symbol-iterator.html")}}
 
+## Value
+
+The well-known symbol `@@iterator`.
+
+{{js_property_attributes(0, 0, 0)}}
+
 ## Description
 
 Whenever an object needs to be iterated (such as at the beginning of a `for...of` loop), its `@@iterator` method is called with no arguments, and the returned **iterator** is used to obtain the values to be iterated.
@@ -30,8 +37,6 @@ Some built-in types have a default iteration behavior, while other types (such a
 
 See also [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) for more information.
 
-{{js_property_attributes(0,0,0)}}
-
 ## Examples
 
 ### User-defined iterables
@@ -45,14 +50,14 @@ myIterable[Symbol.iterator] = function* () {
   yield 2;
   yield 3;
 };
-[...myIterable] // [1, 2, 3]
+[...myIterable]; // [1, 2, 3]
 ```
 
 Or iterables can be defined directly inside a class or object using a [computed property](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names):
 
 ```js
 class Foo {
-  *[Symbol.iterator] () {
+  *[Symbol.iterator]() {
     yield 1;
     yield 2;
     yield 3;
@@ -60,13 +65,13 @@ class Foo {
 }
 
 const someObj = {
-  *[Symbol.iterator] () {
-    yield 'a';
-    yield 'b';
-  }
-}
+  *[Symbol.iterator]() {
+    yield "a";
+    yield "b";
+  },
+};
 
-console.log(...new Foo); // 1, 2, 3
+console.log(...new Foo()); // 1, 2, 3
 console.log(...someObj); // 'a', 'b'
 ```
 
@@ -77,7 +82,7 @@ If an iterable's `@@iterator` method does not return an iterator object, then it
 ```js example-bad
 const nonWellFormedIterable = {};
 nonWellFormedIterable[Symbol.iterator] = () => 1;
-[...nonWellFormedIterable] // TypeError: [Symbol.iterator]() returned a non-object value
+[...nonWellFormedIterable]; // TypeError: [Symbol.iterator]() returned a non-object value
 ```
 
 ## Specifications

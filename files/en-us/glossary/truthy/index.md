@@ -45,3 +45,4 @@ true && "dog"
 - {{Glossary("Falsy")}}
 - {{Glossary("Type_Coercion", "Type coercion")}}
 - {{Glossary("Boolean")}}
+- [Boolean coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion)

@@ -16,7 +16,7 @@ The **`HTMLProgressElement`** interface provides special properties and methods 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -29,7 +29,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLProgressElement.labels")}} {{ReadOnlyInline}}
   - : Returns {{domxref("NodeList")}} containing the list of {{HTMLElement("label")}} elements that are labels for this element.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

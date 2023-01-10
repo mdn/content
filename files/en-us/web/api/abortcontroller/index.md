@@ -21,12 +21,12 @@ You can create a new `AbortController` object using the {{domxref("AbortControll
 - {{domxref("AbortController()")}}
   - : Creates a new `AbortController` object instance.
 
-## Properties
+## Instance properties
 
 - {{domxref("AbortController.signal")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("AbortSignal")}} object instance, which can be used to communicate with, or to abort, a DOM request.
 
-## Methods
+## Instance methods
 
 - {{domxref("AbortController.abort()")}}
   - : Aborts a DOM request before it has completed. This is able to abort [fetch requests](/en-US/docs/Web/API/fetch), consumption of any response bodies, and streams.

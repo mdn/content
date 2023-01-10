@@ -15,11 +15,11 @@ The **`Scheduler`** interface of the [Prioritized Task Scheduling API](/en-US/do
 
 A `Scheduler` can be accessed from the global object {{domxref("Window")}} or {{domxref("WorkerGlobalScope")}} (`this.scheduler`).
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
 - {{domxref('Scheduler.postTask()')}}
   - : Adds a task to the scheduler as a callback, optionally specifying a priority, delay, and/or a signal for aborting the task.

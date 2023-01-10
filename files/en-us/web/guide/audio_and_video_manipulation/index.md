@@ -14,6 +14,10 @@ tags:
   - developer recommendation
 ---
 
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
+</section>
+
 The beauty of the web is that you can combine technologies to create new forms. Having native audio and video in the browser means we can use these data streams with technologies such as {{htmlelement("canvas")}}, [WebGL](/en-US/docs/Web/API/WebGL_API) or [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to modify audio and video directly, for example adding reverb/compression effects to audio, or grayscale/sepia filters to video. This article provides a reference to explain what you need to do.
 
 ## Video manipulation
@@ -298,7 +302,7 @@ window.addEventListener('load', setFilter);
 
 #### Common audio filters
 
-These are some of the common types of audio filter you can apply:
+These are some common types of audio filter you can apply:
 
 - Low Pass: Allows frequencies below the cutoff frequency to pass through and attenuates frequencies above the cutoff.
 - High Pass: Allows frequencies above the cutoff frequency to pass through and attenuates frequencies below the cutoff.
@@ -307,7 +311,7 @@ These are some of the common types of audio filter you can apply:
 - High Shelf: Allows all frequencies through, but adds a boost (or attenuation) to the higher frequencies.
 - Peaking: Allows all frequencies through, but adds a boost (or attenuation) to a range of frequencies.
 - Notch: Allows all frequencies through, except for a set of frequencies.
-- Allpass: Allows all frequencies through, but changes the phase relationship between the various frequencies.
+- All Pass: Allows all frequencies through, but changes the phase relationship between the various frequencies.
 
 > **Note:** See {{domxref("BiquadFilterNode")}} for more information.
 
@@ -353,7 +357,7 @@ context.listener.setPosition(0, 0, 0);
 
 It's also possible to manipulate audio at a low level using JavaScript. This can be useful should you want to create audio codecs.
 
-Libraries currently exist for the following formats :
+Libraries currently exist for the following formats:
 
 - AAC: [AAC.js](https://github.com/audiocogs/aac.js)
 - ALAC: [alac.js](https://github.com/audiocogs/alac.js)

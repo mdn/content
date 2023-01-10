@@ -43,7 +43,7 @@ To write content to file, create a FileWriter object by calling [`createWriter()
   </tbody>
 </table>
 
-## Methods
+## Instance methods
 
 ### createWriter()
 

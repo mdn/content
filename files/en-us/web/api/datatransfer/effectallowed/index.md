@@ -57,9 +57,6 @@ possible values are:
 Assigning any other value to `effectAllowed` has no effect and the old value
 is retained.
 
-Internet Explorer will change the value to be lowercased; thus, `linkMove`
-will become `linkmove`, and so on.
-
 ## Examples
 
 ### Setting effectAllowed
@@ -163,5 +160,4 @@ reset.addEventListener("click", () => document.location.reload());
 - [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

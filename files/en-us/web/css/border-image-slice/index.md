@@ -36,10 +36,10 @@ The {{cssxref("border-image-repeat")}}, {{cssxref("border-image-width")}}, and {
 /* All sides */
 border-image-slice: 30%;
 
-/* vertical | horizontal */
+/* top and bottom | left and right */
 border-image-slice: 10% 30%;
 
-/* top | horizontal | bottom */
+/* top | left and right | bottom */
 border-image-slice: 30 30% 45;
 
 /* top | right | bottom | left */

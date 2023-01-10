@@ -19,14 +19,14 @@ The **`DataTransferItem`** object represents one drag data item. During a _drag 
 
 This interface has no constructor.
 
-## Properties
+## Instance properties
 
 - {{domxref("DataTransferItem.kind")}} {{ReadOnlyInline}}
   - : The _kind_ of drag data item, `string` or `file`.
 - {{domxref("DataTransferItem.type")}} {{ReadOnlyInline}}
   - : The drag data item's type, typically a MIME type.
 
-## Methods
+## Instance methods
 
 - {{domxref("DataTransferItem.getAsFile()")}}
   - : Returns the {{domxref("File")}} object associated with the drag data item (or null if the drag item is not a file).

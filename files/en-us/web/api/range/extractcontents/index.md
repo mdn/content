@@ -36,7 +36,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A {{ domxref("DocumentFragment") }} object.
 
 ## Examples
 

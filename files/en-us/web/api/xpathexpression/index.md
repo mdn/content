@@ -23,7 +23,7 @@ This is useful when an expression will be reused in an application, because it i
 
 Objects of this type are created by calling {{domxref("XPathEvaluator.createExpression", "XPathEvaluator.createExpression()")}}.
 
-## Methods
+## Instance methods
 
 - {{DOMxRef("XPathExpression.evaluate()")}}
   - : Evaluates the XPath expression on the given node or document.

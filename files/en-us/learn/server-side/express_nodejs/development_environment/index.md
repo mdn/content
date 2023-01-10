@@ -86,10 +86,10 @@ Installing _Node_ and _npm_ on Windows and macOS is straightforward because you 
 
 ### Ubuntu 20.04
 
-The easiest way to install the most recent LTS version of Node 12.x is to use the [package manager](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions) to get it from the Ubuntu _binary distributions_ repository. This can be done by running the following two commands on your terminal:
+The easiest way to install the most recent LTS version of Node is to use the [package manager](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions) to get it from the Ubuntu _binary distributions_ repository. This can be done by running the following two commands on your terminal:
 
 ```bash
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
@@ -101,14 +101,14 @@ The easiest way to test that node is installed is to run the "version" command i
 
 ```bash
 > node -v
-v12.18.4
+v16.17.1
 ```
 
 The _Nodejs_ package manager _npm_ should also have been installed, and can be tested in the same way:
 
 ```bash
 > npm -v
-6.14.6
+8.19.2
 ```
 
 As a slightly more exciting test let's create a very basic "pure node" server that prints out "Hello World" in the browser when you visit the correct URL in your browser:
@@ -246,7 +246,7 @@ The following steps show how you can use npm to download a package, save it into
    Example app listening on port 3000
    ```
 
-6. Navigate to the URL `http://127.0.0.1:3000/`.
+6. Navigate to the URL `http://localhost:3000/`.
    If everything is working, the browser should display the string "Hello World!".
 
 ### Development dependencies
@@ -379,7 +379,7 @@ The DEBUG command creates useful logging, resulting in an output like that shown
   helloworld:server Listening on port 3000 +0ms
 ```
 
-Open a browser and navigate to `http://127.0.0.1:3000/` to see the default Express welcome page.
+Open a browser and navigate to `http://localhost:3000/` to see the default Express welcome page.
 
 ![Express - Generated App Default Screen](express_default_screen.png)
 

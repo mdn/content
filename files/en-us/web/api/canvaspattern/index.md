@@ -16,11 +16,11 @@ The **`CanvasPattern`** interface represents an [opaque object](https://en.wikip
 
 It can be used as a {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} or {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}.
 
-## Properties
+## Instance properties
 
 _As an opaque object, this has no exposed property._
 
-## Methods
+## Instance methods
 
 _There are no inherited method._
 

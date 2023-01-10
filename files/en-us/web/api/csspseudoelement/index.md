@@ -18,14 +18,14 @@ The **`CSSPseudoElement`** interface represents a pseudo-element that may be the
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{DOMxRef('CSSPseudoElement.element')}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the originating/parent {{DOMxRef('Element')}} of the pseudo-element.
 - {{DOMxRef('CSSPseudoElement.type')}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the pseudo-element selector as a string.
 
-## Methods
+## Instance methods
 
 _`CSSPseudoElement` extends {{DOMxRef('EventTarget')}}, so it inherits the following methods:_
 

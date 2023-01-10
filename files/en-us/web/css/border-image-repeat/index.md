@@ -26,7 +26,7 @@ border-image-repeat: repeat;
 border-image-repeat: round;
 border-image-repeat: space;
 
-/* vertical | horizontal */
+/* top and bottom | left and right */
 border-image-repeat: round stretch;
 
 /* Global values */

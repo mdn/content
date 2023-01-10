@@ -26,14 +26,14 @@ event's `state` property contains a copy of the history entry's state object.
 - {{domxref("PopStateEvent.PopStateEvent", "PopStateEvent()")}}
   - : Creates a new `PopStateEvent` object.
 
-## Properties
+## Instance properties
 
 _This interface also inherits the properties of its parent, {{domxref("Event")}}._
 
 - {{domxref("PopStateEvent.state")}} {{ReadOnlyInline}}
   - : Returns a copy of the information that was provided to `pushState()` or `replaceState()`.
 
-## Methods
+## Instance methods
 
 _This interface has no methods of its own, but inherits the methods of its parent, {{domxref("Event")}}._
 

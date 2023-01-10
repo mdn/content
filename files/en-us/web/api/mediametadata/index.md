@@ -23,7 +23,7 @@ The **`MediaMetadata`** interface of the [Media Session API](/en-US/docs/Web/API
 - {{domxref("MediaMetadata.MediaMetadata", "MediaMetadata()")}}
   - : Creates a new `MediaMetaData` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("MediaMetadata.title")}}
   - : Returns or sets the title of the media to be played.

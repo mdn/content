@@ -22,14 +22,14 @@ This object doesn't itself contain lighting values, but it is used to collect li
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - `XRLightProbe.onreflectionchange`
   - : Event handler property for the {{domxref("XRLightProbe.reflectionchange_event", "reflectionchange")}} event.
 - {{domxref("XRLightProbe.probeSpace")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An {{domxref("XRSpace")}} tracking the position and orientation the lighting estimations are relative to.
 
-## Methods
+## Instance methods
 
 None.
 

@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -107,7 +108,7 @@ function logArrayElements(element, index, array) {
 }
 
 new Uint8Array([0, 1, 2, 3]).forEach(logArrayElements);
-// logs:
+// Logs:
 // a[0] = 0
 // a[1] = 1
 // a[2] = 2

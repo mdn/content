@@ -10,6 +10,8 @@ tags:
   - Web
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 <table>
   <tbody>
     <tr>
@@ -40,7 +42,7 @@ Domain names are a key part of the Internet infrastructure. They provide a human
 
 Any Internet-connected computer can be reached through a public {{Glossary("IP")}} address, either an IPv4 address (e.g. `173.194.121.32`) or an IPv6 address (e.g., `2027:0da8:8b73:0000:0000:8a2e:0370:1337`).
 
-Computers can handle such addresses easily, but people have a hard time finding out who's running the server or what service the website offers. IP addresses are hard to remember and might change over time.
+Computers can handle such addresses easily, but people have a hard time finding out who is running the server or what service the website offers. IP addresses are hard to remember and might change over time.
 
 To solve all those problems we use human-readable addresses called domain names.
 
@@ -93,7 +95,7 @@ To find out whether a given domain name is available,
 - Go to a domain name registrar's website. Most of them provide a "whois" service that tells you whether a domain name is available.
 - Alternatively, if you use a system with a built-in shell, type a `whois` command into it, as shown here for `mozilla.org`:
 
-  ```
+  ```bash
   $ whois mozilla.org
   Domain Name:MOZILLA.ORG
   Domain ID: D1409563-LROR
@@ -122,7 +124,7 @@ As you can see, I can't register `mozilla.org` because the Mozilla Foundation ha
 
 On the other hand, let's see if I could register `afunkydomainname.org`:
 
-```
+```bash
 $ whois afunkydomainname.org
 NOT FOUND
 ```
@@ -162,6 +164,6 @@ As we already saw, when you want to display a webpage in your browser it's easie
 Okay, we talked a lot about processes and architecture. Time to move on.
 
 - If you want to get hands-on, it's a good time to start digging into design and explore [the anatomy of a web page](/en-US/docs/Learn/Common_questions/Common_web_layouts).
-- It's also worth noting that some aspects of building a website cost money. Please refer to [how much it costs to build a web site](/en-US/docs/Learn/Common_questions/How_much_does_it_cost).
+- It's also worth noting that some aspects of building a website cost money. Please refer to [how much it costs to build a website](/en-US/docs/Learn/Common_questions/How_much_does_it_cost).
 - Or read more about [Domain Names](https://en.wikipedia.org/wiki/Domain_name) on Wikipedia.
 - You can also find [here](https://howdns.works/) a fun and colorful explanation of how DNS works.

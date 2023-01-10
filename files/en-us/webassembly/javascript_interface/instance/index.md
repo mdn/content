@@ -34,17 +34,17 @@ const importObject = {
   imports: {
     imported_func(arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-fetch('simple.wasm').then((response) =>
-  response.arrayBuffer()
-).then((bytes) => {
-  const mod = new WebAssembly.Module(bytes);
-  const instance = new WebAssembly.Instance(mod, importObject);
-  instance.exports.exported_func();
-})
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => {
+    const mod = new WebAssembly.Module(bytes);
+    const instance = new WebAssembly.Instance(mod, importObject);
+    instance.exports.exported_func();
+  });
 ```
 
 The preferred way to get an `Instance` is asynchronously, for example using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) function like this:
@@ -54,12 +54,13 @@ const importObject = {
   imports: {
     imported_func(arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then((obj) => obj.instance.exports.exported_func());
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (obj) => obj.instance.exports.exported_func()
+);
 ```
 
 This also demonstrates how the `exports` property is used to access exported functions.

@@ -22,11 +22,11 @@ A list of valid code values is found in the [UI Events KeyboardEvent code Values
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
 - {{domxref('Keyboard.getLayoutMap()')}} {{experimental_inline}}
   - : Returns a {{jsxref('Promise')}} that resolves with an instance of {{domxref('KeyboardLayoutMap')}} which is a map-like object with functions for retrieving the strings associated with specific physical keys.

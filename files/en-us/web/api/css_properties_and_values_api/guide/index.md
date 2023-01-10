@@ -12,7 +12,9 @@ tags:
   - Learn
 ---
 
-{{SeeCompatTable}} The **CSS Properties and Values API** — part of the [CSS Houdini](/en-US/docs/Web/Guide/Houdini) umbrella of APIs — allows the registration of {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking, default values, and properties that do or do not inherit their value.
+{{DefaultAPISidebar("CSS Properties and Values API")}}{{SeeCompatTable}}
+
+The **CSS Properties and Values API** — part of the [CSS Houdini](/en-US/docs/Web/Guide/Houdini) umbrella of APIs — allows the registration of {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking, default values, and properties that do or do not inherit their value.
 
 ## Registering a custom property
 

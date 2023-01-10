@@ -35,7 +35,7 @@ You can access `CacheStorage` through the global {{domxref("caches")}} property.
 
 {{securecontext_header}}
 
-## Methods
+## Instance methods
 
 - {{domxref("CacheStorage.match()")}}
   - : Checks if a given {{domxref("Request")}} is a key in any of the {{domxref("Cache")}} objects that the {{domxref("CacheStorage")}} object tracks, and returns a {{jsxref("Promise")}} that resolves to that match.

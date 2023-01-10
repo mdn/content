@@ -1,6 +1,7 @@
 ---
 title: Reflect
 slug: Web/JavaScript/Reference/Global_Objects/Reflect
+page-type: javascript-namespace
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -21,6 +22,11 @@ Unlike most global objects, `Reflect` is not a constructor. You cannot use it wi
 The `Reflect` object provides the following static functions which have the same names as the [proxy handler methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy).
 
 Some of these methods are also the same as corresponding methods on {{jsxref("Object")}}, although they do have [some subtle differences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods) between them.
+
+## Static properties
+
+- `Reflect[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Reflect"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Static methods
 
@@ -57,16 +63,16 @@ Some of these methods are also the same as corresponding methods on {{jsxref("Ob
 
 ```js
 const duck = {
-  name: 'Maurice',
-  color: 'white',
+  name: "Maurice",
+  color: "white",
   greeting() {
     console.log(`Quaaaack! My name is ${this.name}`);
-  }
-}
+  },
+};
 
-Reflect.has(duck, 'color');
+Reflect.has(duck, "color");
 // true
-Reflect.has(duck, 'haircut');
+Reflect.has(duck, "haircut");
 // false
 ```
 
@@ -80,7 +86,7 @@ Reflect.ownKeys(duck);
 ### Adding a new property to the object
 
 ```js
-Reflect.set(duck, 'eyes', 'black');
+Reflect.set(duck, "eyes", "black");
 // returns "true" if successful
 // "duck" now contains the property "eyes: 'black'"
 ```

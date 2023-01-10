@@ -17,7 +17,7 @@ The **`OTPCredential`** interface of the {{domxref('WebOTP API','','',' ')}} con
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from {{domxref("Credential")}}._
 
@@ -28,7 +28,7 @@ _This interface also inherits properties from {{domxref("Credential")}}._
 
 None.
 
-## Methods
+## Instance methods
 
 None.
 

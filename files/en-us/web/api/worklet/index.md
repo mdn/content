@@ -87,11 +87,11 @@ Worklets are restricted to specific use cases; they cannot be used for arbitrary
 
 For 3D rendering with [WebGL](/en-US/docs/Web/API/WebGL_API), you don't use Worklets. Instead, you write Vertex Shaders and Fragment Shaders using GLSL code, and those shaders will then run on the graphics card.
 
-## Properties
+## Instance properties
 
 _The Worklet interface does not define any properties._
 
-## Methods
+## Instance methods
 
 - {{domxref("Worklet.addModule()")}}
   - : Adds the script module at the given URL to the current worklet.

@@ -16,11 +16,11 @@ The **`MIDIOutput`** interface of the {{domxref('Web MIDI API','','',' ')}} prov
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface doesn't implement any specific properties, but inherits properties from {{domxref("MIDIPort")}}._
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from {{domxref("MIDIPort")}}._
 

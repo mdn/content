@@ -132,9 +132,9 @@ Note that variables may hold values that have different [data types](/en-US/docs
       <th scope="row">{{Glossary("String")}}</th>
       <td>
         This is a sequence of text known as a string. To signify that the value
-        is a string, enclose it in single quote marks.
+        is a string, enclose it in single or double quote marks.
       </td>
-      <td><code>let myVariable = 'Bob';</code></td>
+      <td><code>let myVariable = 'Bob';</code> or <br/><code>let myVariable = "Bob";</code></td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Number")}}</th>
@@ -339,28 +339,11 @@ document.querySelector("html").addEventListener("click", function () {
 });
 ```
 
-There are many ways to attach an event handler to an element. Here we select the {{htmlelement("html")}} element. We then call its [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) function, passing in the name of the event to listen to (`'click'`) and a function to run when the event happens.
+There are a number of ways to attach an event handler to an element.
+Here we select the {{htmlelement("html")}} element. We then call its [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) function, passing in the name of the event to listen to (`'click'`) and a function to run when the event happens.
 
-Note that
-
-```js
-document.querySelector("html").addEventListener("click", function () {
-  alert("Ouch! Stop poking me!");
-});
-```
-
-is equivalent to
-
-```js
-let myHTML = document.querySelector("html");
-myHTML.addEventListener("click", function () {
-  alert("Ouch! Stop poking me!");
-});
-```
-
-It's just shorter.
-
-The functions we just passed to `addEventListener()` here are called _anonymous functions_, because they don't have a name. There's an alternative way of writing anonymous functions, which we call an _arrow function_. An arrow function uses `() =>` instead of `function ()`:
+The function we just passed to `addEventListener()` here is called an _anonymous function_, because it doesn't have a name. There's an alternative way of writing anonymous functions, which we call an _arrow function_.
+An arrow function uses `() =>` instead of `function ()`:
 
 ```js
 document.querySelector("html").addEventListener("click", () => {
@@ -398,7 +381,7 @@ In this section, you will learn how to use JavaScript and DOM API features to al
 
 5. Save all files and load `index.html` in the browser. Now when you click the image, it should change to the other one.
 
-This is what happened. You stored a reference to your {{htmlelement("img")}} element in the `myImage` variable. Next, you made this variable's `onclick` event handler property equal to a function with no name (an "anonymous" function). So every time this element is clicked:
+This is what happened. You stored a reference to your {{htmlelement("img")}} element in `myImage`. Next, you made its `onclick` event handler property equal to a function with no name (an "anonymous" function). So every time this element is clicked:
 
 1. The code retrieves the value of the image's `src` attribute.
 2. The code uses a conditional to check if the `src` value is equal to the path of the original image:

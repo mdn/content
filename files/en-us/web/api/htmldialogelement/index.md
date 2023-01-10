@@ -17,7 +17,7 @@ The **`HTMLDialogElement`** interface provides methods to manipulate {{HTMLEleme
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -26,7 +26,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLDialogElement.returnValue")}}
   - : A string that sets or returns the return value for the dialog.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
@@ -35,18 +35,18 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLDialogElement.show()")}}
   - : Displays the dialog modelessly, i.e. still allowing interaction with content outside of the dialog.
 - {{domxref("HTMLDialogElement.showModal()")}}
-  - : Displays the dialog as a modal, over the top of any other dialogs that might be present. Interaction outside the dialog is blocked.
+  - : Displays the dialog as a modal, over the top of any other dialogs that might be present. Everything outside the dialog are [inert](/en-US/docs/Web/API/HTMLElement/inert) with interactions outside the dialog being blocked.
 
 ## Events
 
 - {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
-  - : Fired when the user instructs the browser that they wish to dismiss the current open dialog.
+  - : Fired when the user dismisses the current open dialog with the escape key.
 - {{domxref("HTMLDialogElement/close_event", "close")}}
-  - : Fired when the dialog is closed.
+  - : Fired when the dialog is closed, whether with the escape key, the `HTMLDialogElement.close()` method, or via submitting a form within the dialog with [`method="dialog"`](/en-US/docs/Web/HTML/Element/form#attr-method).
 
 ## Examples
 
-The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} containing a form via the {{domxref("HTMLDialogElement.showModal()")}} function. From there you can click the _Cancel_ button to close the dialog (via the {{domxref("HTMLDialogElement.close()")}} function), or submit the form via the submit button.
+The following example shows a simple button that, when clicked, opens a modal {{htmlelement("dialog")}} containing a form via the {{domxref("HTMLDialogElement.showModal()")}} function. While open, everything other than the modal dialog's contents is inert. From there you can click the _Cancel_ button to close the dialog (via the {{domxref("HTMLDialogElement.close()")}} function), or submit the form via the submit button. Selecting the cancel button closes the dialog, creating a {{domxref("HTMLDialogElement/close_event", "close")}} event, not a {{domxref("HTMLDialogElement/cancel_event", "cancel")}} event.
 
 ```html
 <!-- Simple pop-up dialog box, containing a form -->
@@ -64,7 +64,7 @@ The following example shows a simple button that, when clicked, opens a {{htmlel
       </p>
     </section>
     <menu>
-      <button id="cancel" type="reset">Cancel</button>
+      <button id="cancel" type="button">Cancel</button>
       <button type="submit">Confirm</button>
     </menu>
   </form>

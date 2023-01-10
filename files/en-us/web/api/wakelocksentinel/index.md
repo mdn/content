@@ -21,7 +21,7 @@ An acquired `WakeLockSentinel` can be released manually via the {{domxref('WakeL
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface provides the following properties._
 
@@ -39,7 +39,7 @@ _This interface provides the following properties._
 - {{domxref("WakeLockSentinel.release_event", "release")}} {{Experimental_Inline}}
   - : Fired when the {{domxref('WakeLockSentinel.release','release()')}} method is called or the wake lock is released by the user agent.
 
-## Methods
+## Instance methods
 
 - {{domxref('WakeLockSentinel.release()', 'release()')}}
   - : Releases the `WakeLockSentinel`, returning a {{jsxref("Promise")}} that is resolved once the sentinel has been successfully released.

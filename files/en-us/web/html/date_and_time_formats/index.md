@@ -20,7 +20,7 @@ tags:
   - week-year
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Certain HTML elements use date and/or time values. The formats of the strings that specify these values are described in this article.
 
@@ -287,7 +287,7 @@ A time string can specify a time with precision to the minute, second, or to the
 
 There are some additional basic rules:
 
-- The hour is always specified using the 24-hour clock, with `00` being midnight and 11 PM being `23`. No values outside the range `00`–`23` are permitted.
+- The hour is always specified using the 24-hour clock, with `00` being midnight and 11 PM being `23`. No values outside the range `00` – `23` are permitted.
 - The minute must be a two-digit number between `00` and `59`. No values outside that range are allowed.
 - If the number of seconds is omitted (to specify a time accurate only to the minute), no colon should follow the number of minutes.
 - If specified, the integer portion of the number of seconds must be between `00` and `59`. You _cannot_ specify leap seconds by using values like `60` or `61`.

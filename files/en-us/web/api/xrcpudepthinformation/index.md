@@ -22,7 +22,7 @@ The **`XRCPUDepthInformation`** interface contains depth information from the CP
 
 This interface inherits properties from its parent, {{domxref("XRDepthInformation")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("XRCPUDepthInformation.data")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An {{jsxref("ArrayBuffer")}} containing depth-buffer information in raw format.
@@ -35,7 +35,7 @@ This interface inherits properties from its parent, {{domxref("XRDepthInformatio
 - {{domxref("XRDepthInformation.width")}} {{ReadOnlyInline}}
   - : Contains the width of the depth buffer (number of columns).
 
-## Methods
+## Instance methods
 
 - {{domxref("XRCPUDepthInformation.getDepthInMeters()")}} {{Experimental_Inline}}
   - : Returns the depth in meters at (x, y) in normalized view coordinates.

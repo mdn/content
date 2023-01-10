@@ -1,6 +1,7 @@
 ---
 title: Closures
 slug: Web/JavaScript/Closures
+page-type: guide
 tags:
   - Closure
   - ES5
@@ -159,12 +160,12 @@ document.getElementById('size-16').onclick = size16;
 ```
 
 ```html
-<a href="#" id="size-12">12</a>
-<a href="#" id="size-14">14</a>
-<a href="#" id="size-16">16</a>
+<button id="size-12">12</button>
+<button id="size-14">14</button>
+<button id="size-16">16</button>
 ```
 
-Run the code using [JSFiddle](https://jsfiddle.net/vnkuZ/7726/).
+Run the code using [JSFiddle](https://jsfiddle.net/hotae160/).
 
 ## Emulating private methods with closures
 
@@ -276,7 +277,7 @@ function sum(a) {
   };
 }
 
-console.log(sum(1)(2)(3)(4)); // log 20
+console.log(sum(1)(2)(3)(4)); // 20
 ```
 
 You can also write without anonymous functions:
@@ -300,7 +301,7 @@ const sum2 = sum(1);
 const sum3 = sum2(2);
 const sum4 = sum3(3);
 const result = sum4(4);
-console.log(result); //log 20
+console.log(result); // 20
 ```
 
 In the example above, there's a series of nested functions, all of which have access to the outer functions' scope. In this context, we can say that closures have access to _all_ outer function scopes.
@@ -316,7 +317,7 @@ function outer() {
   }
 }
 
-outer()(); // logs 5 6
+outer()(); // Logs 5 6
 ```
 
 Closures over modules can be more interesting.
@@ -372,7 +373,7 @@ Prior to the introduction of the [`let`](/en-US/docs/Web/JavaScript/Reference/St
 
 ```html
 <p id="help">Helpful notes will appear here</p>
-<p>E-mail: <input type="text" id="email" name="email" /></p>
+<p>Email: <input type="text" id="email" name="email" /></p>
 <p>Name: <input type="text" id="name" name="name" /></p>
 <p>Age: <input type="text" id="age" name="age" /></p>
 ```
@@ -384,7 +385,7 @@ function showHelp(help) {
 
 function setupHelp() {
   var helpText = [
-    { id: 'email', help: 'Your e-mail address' },
+    { id: 'email', help: 'Your email address' },
     { id: 'name', help: 'Your full name' },
     { id: 'age', help: 'Your age (you must be over 16)' },
   ];
@@ -424,7 +425,7 @@ function makeHelpCallback(help) {
 
 function setupHelp() {
   var helpText = [
-    { id: 'email', help: 'Your e-mail address' },
+    { id: 'email', help: 'Your email address' },
     { id: 'name', help: 'Your full name' },
     { id: 'age', help: 'Your age (you must be over 16)' },
   ];
@@ -451,7 +452,7 @@ function showHelp(help) {
 
 function setupHelp() {
   var helpText = [
-    { id: 'email', help: 'Your e-mail address' },
+    { id: 'email', help: 'Your email address' },
     { id: 'name', help: 'Your full name' },
     { id: 'age', help: 'Your age (you must be over 16)' },
   ];
@@ -478,7 +479,7 @@ function showHelp(help) {
 
 function setupHelp() {
   const helpText = [
-    { id: 'email', help: 'Your e-mail address' },
+    { id: 'email', help: 'Your email address' },
     { id: 'name', help: 'Your full name' },
     { id: 'age', help: 'Your age (you must be over 16)' },
   ];
@@ -505,7 +506,7 @@ function showHelp(help) {
 
 function setupHelp() {
   var helpText = [
-    { id: 'email', help: 'Your e-mail address' },
+    { id: 'email', help: 'Your email address' },
     { id: 'name', help: 'Your full name' },
     { id: 'age', help: 'Your age (you must be over 16)' },
   ];

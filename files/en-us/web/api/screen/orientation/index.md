@@ -28,7 +28,7 @@ Note that older, prefixed versions returned a string equivalent to
 ## Examples
 
 ```js
-switch (screen.orientation) {
+switch (screen.orientation.type) {
   case "landscape-primary":
     console.log("That looks good.");
     break;

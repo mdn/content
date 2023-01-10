@@ -16,7 +16,7 @@ The **`HTMLSourceElement`** interface provides special properties (beyond the re
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -35,7 +35,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLSourceElement.type")}}
   - : A string reflecting the {{ htmlattrxref("type", "source") }} HTML attribute, containing the type of the media resource.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

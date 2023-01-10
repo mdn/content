@@ -18,7 +18,7 @@ browser-compat: api.Clients
 
 The `Clients` interface provides access to {{domxref("Client")}} objects. Access it via `{{domxref("ServiceWorkerGlobalScope", "self")}}.clients` within a [service worker](/en-US/docs/Web/API/Service_Worker_API).
 
-## Methods
+## Instance methods
 
 - {{domxref("Clients.get()")}}
   - : Returns a {{jsxref("Promise")}} for a {{domxref("Client")}} matching a given {{domxref("Client.id", "id")}}.

@@ -1,6 +1,7 @@
 ---
 title: continue
 slug: Web/JavaScript/Reference/Statements/continue
+page-type: javascript-statement
 tags:
   - JavaScript
   - Language feature
@@ -10,7 +11,7 @@ browser-compat: javascript.statements.continue
 
 {{jsSidebar("Statements")}}
 
-The **`continue` statement** terminates execution of the
+The **`continue`** statement terminates execution of the
 statements in the current iteration of the current or labeled loop, and continues
 execution of the loop with the next iteration.
 
@@ -88,8 +89,7 @@ checkiandj: while (i < 4) {
     console.log(`j: ${j}`);
     j -= 1;
 
-    if ((j % 2) === 0)
-      continue checkj;
+    if (j % 2 === 0) continue checkj;
     console.log(`${j} is odd.`);
   }
   console.log(`i = ${i}`);

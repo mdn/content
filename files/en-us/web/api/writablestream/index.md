@@ -23,12 +23,12 @@ This object comes with built-in backpressure and queuing.
 - {{domxref("WritableStream.WritableStream", "WritableStream()")}}
   - : Creates a new `WritableStream` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("WritableStream.locked")}} {{ReadOnlyInline}}
   - : A boolean indicating whether the `WritableStream` is locked to a writer.
 
-## Methods
+## Instance methods
 
 - {{domxref("WritableStream.abort()")}}
   - : Aborts the stream, signaling that the producer can no longer successfully write to the stream and it is to be immediately moved to an error state, with any queued writes discarded.

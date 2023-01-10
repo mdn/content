@@ -18,7 +18,7 @@ The **`WakeLock`** interface of the [Screen Wake Lock API](/en-US/docs/Web/API/S
 
 The system wake lock is exposed through the global {{domxref('Navigator.wakeLock')}} property.
 
-## Methods
+## Instance methods
 
 - {{domxref("WakeLock.request", "request()")}} {{Experimental_Inline}}
   - : Requests a {{domxref("WakeLockSentinel")}} object, which returns a {{jsxref("Promise")}} that resolves with a {{domxref("WakeLockSentinel")}} object.

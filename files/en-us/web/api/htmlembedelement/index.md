@@ -19,7 +19,7 @@ The **`HTMLEmbedElement`** interface provides special properties (beyond the reg
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -36,7 +36,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLEmbedElement.width")}}
   - : A string that reflects the {{htmlattrxref("width", "embed")}} HTML attribute, containing the displayed width of the resource.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

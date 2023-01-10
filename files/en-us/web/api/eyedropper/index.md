@@ -21,7 +21,7 @@ The **`EyeDropper`** interface represents an instance of an eyedropper tool that
 - {{DOMxRef("EyeDropper.EyeDropper", "EyeDropper()")}} {{Experimental_Inline}}
   - : Returns a new `EyeDropper` instance.
 
-## Methods
+## Instance methods
 
 _The `EyeDropper` interface doesn't inherit any methods_.
 

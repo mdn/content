@@ -27,7 +27,7 @@ The **`DeviceMotionEvent`** interface provides web developers with information a
 - {{domxref("DeviceMotionEvent.DeviceMotionEvent", "DeviceMotionEvent()")}}
   - : Creates a new `DeviceMotionEvent`.
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("DeviceMotionEvent.acceleration")}} {{ReadOnlyInline}}
   - : An object giving the acceleration of the device on the three axis X, Y and Z. Acceleration is expressed in [m/s²](https://en.wikipedia.org/wiki/Meter_per_second_squared).

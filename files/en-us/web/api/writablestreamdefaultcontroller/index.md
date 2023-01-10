@@ -20,11 +20,11 @@ The **`WritableStreamDefaultController`** interface of the [Streams API](/en-US/
 
 None. `WritableStreamDefaultController` instances are created automatically during `WritableStream` construction.
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
 - {{domxref("WritableStreamDefaultController.error()")}}
   - : Causes any future interactions with the associated stream to error.

@@ -29,7 +29,7 @@ The **Clipboard API** provides the ability to respond to clipboard commands (cut
 
 This API is designed to supersede accessing the clipboard using {{domxref("document.execCommand()")}}.
 
-> **Note:** The **clipboard** is a data buffer that is used for short-term, data storage and/or data transfers, this can be between documents or applications
+> **Note:** The **clipboard** is a data buffer that is used for short-term, data storage and/or data transfers, this can be between documents or applications.
 > It is usually implemented as an anonymous, temporary [data buffer](https://en.wikipedia.org/wiki/Data_buffer), sometimes called the paste buffer, that can be accessed from most or all programs within the environment via defined [programming interfaces](https://en.wikipedia.org/wiki/Application_programming_interface).
 >
 > A typical application accesses clipboard functionality by mapping [user input](https://en.wikipedia.org/wiki/User_input) such as [keybindings](https://en.wikipedia.org/wiki/Keybinding), [menu selections](<https://en.wikipedia.org/wiki/Menu_(computing)>), etc. to these interfaces.

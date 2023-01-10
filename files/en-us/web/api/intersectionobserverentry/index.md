@@ -18,7 +18,7 @@ The **`IntersectionObserverEntry`** interface of the [Intersection Observer API]
 
 Instances of `IntersectionObserverEntry` are delivered to an {{domxref("IntersectionObserver")}} callback in its `entries` parameter; otherwise, these objects can only be obtained by calling {{domxref("IntersectionObserver.takeRecords()")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("IntersectionObserverEntry.boundingClientRect")}} {{ReadOnlyInline}}
   - : Returns the bounds rectangle of the target element as a {{domxref("DOMRectReadOnly")}}. The bounds are computed as described in the documentation for {{domxref("Element.getBoundingClientRect()")}}.
@@ -35,7 +35,7 @@ Instances of `IntersectionObserverEntry` are delivered to an {{domxref("Intersec
 - {{domxref("IntersectionObserverEntry.time")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the time at which the intersection was recorded, relative to the `IntersectionObserver`'s [time origin](/en-US/docs/Web/API/DOMHighResTimeStamp#the_time_origin).
 
-## Methods
+## Instance methods
 
 _This interface has no methods._
 

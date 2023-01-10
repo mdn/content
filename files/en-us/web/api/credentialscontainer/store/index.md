@@ -49,7 +49,7 @@ the credential is correct.
 if ("PasswordCredential" in window) {
   let credential = new PasswordCredential({
     id: "example-username",
-    name: "John Doe", // In case of a login, the name comes from the server.
+    name: "Carina Anand", // In case of a login, the name comes from the server.
     password: "correct horse battery staple"
   });
 

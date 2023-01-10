@@ -20,7 +20,7 @@ It is the streaming equivalent of {{domxref("TextDecoder")}}.
 - {{domxref("TextDecoderStream.TextDecoderStream","TextDecoderStream()")}}
   - : Creates a new `TextDecoderStream` object.
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("TextDecoderStream.encoding")}} {{ReadOnlyInline}}
   - : An encoding.

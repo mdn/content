@@ -21,12 +21,12 @@ The individual items can be accessed using the [array operator](/en-US/docs/Web/
 
 This interface has no constructor.
 
-## Properties
+## Instance properties
 
 - {{domxref("DataTransferItemList.length")}} {{ReadOnlyInline}}
   - : An `unsigned long` that is the number of drag items in the list.
 
-## Methods
+## Instance methods
 
 - {{domxref("DataTransferItemList.add()")}}
   - : Adds an item (either a {{domxref("File")}} object or a string) to the drag item list and returns a {{domxref("DataTransferItem")}} object for the new item.

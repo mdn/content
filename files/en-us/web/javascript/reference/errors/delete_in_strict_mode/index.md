@@ -3,6 +3,7 @@ title: >-
   SyntaxError: applying the 'delete' operator to an unqualified name is
   deprecated
 slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
+page-type: javascript-error
 tags:
   - Error
   - Errors

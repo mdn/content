@@ -1,6 +1,7 @@
 ---
 title: Object.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
+page-type: javascript-static-method
 tags:
   - ECMAScript 5
   - JavaScript
@@ -12,7 +13,7 @@ browser-compat: javascript.builtins.Object.preventExtensions
 
 {{JSRef}}
 
-The **`Object.preventExtensions()`** method prevents new
+The **`Object.preventExtensions()`** static method prevents new
 properties from ever being added to an object (i.e. prevents future extensions to the
 object). It also prevents the object's prototype from being re-assigned.
 
@@ -63,11 +64,11 @@ obj === obj2; // true
 
 // Objects are extensible by default.
 const empty = {};
-Object.isExtensible(empty); // === true
+Object.isExtensible(empty); // true
 
 // They can be made un-extensible
 Object.preventExtensions(empty);
-Object.isExtensible(empty); // === false
+Object.isExtensible(empty); // false
 
 // Object.defineProperty throws when adding
 // a new property to a non-extensible object.

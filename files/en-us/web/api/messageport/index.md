@@ -22,7 +22,7 @@ The **`MessagePort`** interface of the [Channel Messaging API](/en-US/docs/Web/A
 
 {{InheritanceDiagram}}
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("EventTarget")}}_.
 

@@ -98,12 +98,12 @@ Though similar to {{domxref("Element/mouseover_event", "mouseover")}}, `mouseent
 
 ### Behavior of `mouseenter` events
 
-![](mouseenter.png)
+![Mouseenter behavior diagram](mouseenter.png)
 One `mouseenter` event is sent to each element of the hierarchy when entering them. Here 4 events are sent to the four elements of the hierarchy when the pointer reaches the text.
 
 ### Behavior of `mouseover` events
 
-![](mouseover.png)
+![Mouseover behavior diagram](mouseover.png)
 A single `mouseover` event is sent to the deepest element of the DOM tree, then it bubbles up the hierarchy until it is canceled by a handler or reaches the root.
 
 With deep hierarchies, the number of `mouseover` events sent can be quite huge and cause significant performance problems. In such cases, it is better to listen for `mouseenter` events.

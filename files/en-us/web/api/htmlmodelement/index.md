@@ -16,7 +16,7 @@ The **`HTMLModElement`** interface provides special properties (beyond the regul
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 

@@ -29,7 +29,7 @@ page: [URL Pattern API](/en-US/docs/Web/API/URL_Pattern_API)
 - {{domxref("URLPattern.URLPattern", "URLPattern()")}} {{Experimental_Inline}}
   - : Returns a new `URLPattern` object based on the given pattern and base URL.
 
-## Properties
+## Instance properties
 
 - {{domxref("URLPattern.hash", "hash")}} {{Experimental_Inline}}
   - : A string containing a pattern to match the _hash_ part
@@ -56,7 +56,7 @@ page: [URL Pattern API](/en-US/docs/Web/API/URL_Pattern_API)
   - : A string containing a pattern to match the _username_
     part of a URL.
 
-## Methods
+## Instance methods
 
 - {{domxref("URLPattern.exec", "exec()")}} {{Experimental_Inline}}
   - : Returns an object with the matched parts of the URL or `null` if the URL

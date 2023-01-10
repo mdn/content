@@ -18,11 +18,11 @@ The **`CanvasGradient`** interface represents an [opaque object](https://en.wiki
 
 It can be used as a {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} or {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}.
 
-## Properties
+## Instance properties
 
 _As an opaque object, there is no exposed property._
 
-## Methods
+## Instance methods
 
 - {{domxref("CanvasGradient.addColorStop()")}}
   - : Adds a new stop, defined by an `offset` and a `color`, to the gradient.

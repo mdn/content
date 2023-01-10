@@ -25,7 +25,7 @@ This is very useful for adaptive design, since this makes it possible to observe
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _The `MediaQueryList` interface inherits properties from its parent interface, {{DOMxRef("EventTarget")}}._
 
@@ -34,7 +34,7 @@ _The `MediaQueryList` interface inherits properties from its parent interface, {
 - {{DOMxRef("MediaQueryList.media", "media")}} {{ReadOnlyInline}}
   - : A string representing a serialized media query.
 
-## Methods
+## Instance methods
 
 _The `MediaQueryList` interface inherits methods from its parent interface, {{DOMxRef("EventTarget")}}._
 

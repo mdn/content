@@ -20,7 +20,7 @@ The **`DeviceOrientationEvent`** object provides web developers with information
 - {{domxref("DeviceOrientationEvent.DeviceOrientationEvent","DeviceOrientationEvent.DeviceOrientationEvent()")}}
   - : Creates a new `DeviceOrientationEvent`.
 
-## Properties
+## Instance properties
 
 - {{domxref("DeviceOrientationEvent.absolute")}} {{ReadOnlyInline}}
   - : A boolean that indicates whether or not the device is providing orientation data absolutely.

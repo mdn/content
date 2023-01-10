@@ -32,11 +32,11 @@ All reference spaces—with the sole exception being bounded reference spaces—
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _`XRReferenceSpace` inherits the properties of {{domxref("EventTarget")}} but defines no additional properties._
 
-## Methods
+## Instance methods
 
 _`XRReferenceSpace` also inherits methods from {{domxref("EventTarget")}} in addition to the following methods._
 

@@ -26,7 +26,7 @@ In browsers that support it, an instance of this interface may be passed in the 
 - {{domxref("FederatedCredential.FederatedCredential()","FederatedCredential()")}} {{Experimental_Inline}}
   - : Creates a new `FederatedCredential` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor, {{domxref("Credential")}}._
 
@@ -39,7 +39,7 @@ _Inherits properties from its ancestor, {{domxref("Credential")}}._
 
 None.
 
-## Methods
+## Instance methods
 
 None.
 

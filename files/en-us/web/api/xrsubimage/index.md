@@ -24,7 +24,7 @@ Below is a list of interfaces based on the <code>XRSubImage</code> interface.
 
 - {{domxref("XRWebGLSubImage")}}: used during rendering of WebGL layers.
 
-## Properties
+## Instance properties
 
 - {{domxref("XRSubImage.viewport")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The {{domxref("XRViewport")}} used when rendering the sub image.

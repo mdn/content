@@ -15,7 +15,7 @@ browser-compat: api.Window.external
 
 The `external` property of the {{domxref("Window")}} API returns an instance of the `External` interface, which was intended to contain functions related to adding external search providers to the browser. However, this is now deprecated, and the contained methods are now dummy functions that do nothing as per spec.
 
-## Methods
+## Instance methods
 
 The `External` object has the following methods:
 

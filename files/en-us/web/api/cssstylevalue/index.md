@@ -28,7 +28,7 @@ Below is a list of interfaces based on the `CSSStyleValue` interface.
 - {{domxref('CSSTransformValue')}}
 - {{domxref('CSSUnparsedValue')}}
 
-## Methods
+## Instance methods
 
 - {{domxref("CSSStyleValue.parse()")}} {{Experimental_Inline}}
   - : Sets a specific CSS property to the specified values and returns the first value as a {{domxref('CSSStyleValue')}} object.

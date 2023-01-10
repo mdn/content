@@ -62,8 +62,6 @@ For this reason, many modern browsers do not support `autocomplete="off"` for lo
 - If a site sets `autocomplete="off"` for a {{HTMLElement("form")}}, and the form includes username and password input fields, then the browser still offers to remember this login, and if the user agrees, the browser will autofill those fields the next time the user visits the page.
 - If a site sets `autocomplete="off"` for username and password {{HTMLElement("input")}} fields, then the browser still offers to remember this login, and if the user agrees, the browser will autofill those fields the next time the user visits the page.
 
-This is the behavior in Firefox (since version 38), Google Chrome (since 34), and Internet Explorer (since version 11).
-
 ### Preventing autofilling with autocomplete="new-password"
 
 If you are defining a user management page where a user can specify a new password for another person, and therefore you want to prevent autofilling of password fields, you can use `autocomplete="new-password"`.

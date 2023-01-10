@@ -25,7 +25,7 @@ new WheelEvent(type)
 new WheelEvent(type, options)
 ```
 
-### Properties
+### Parameters
 
 - `type`
   - : A string with the name of the event.

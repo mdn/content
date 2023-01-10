@@ -25,7 +25,7 @@ The **`KeyframeEffect`** interface of the [Web Animations API](/en-US/docs/Web/A
 - {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}
   - : Returns a new `KeyframeEffect` object instance, and also allows you to clone an existing keyframe effect object instance.
 
-## Properties
+## Instance properties
 
 - {{domxref("KeyframeEffect.target")}}
   - : Gets and sets the element, or originating element of the pseudo-element, being animated by this object. This may be `null` for animations that do not target a specific element or pseudo-element.
@@ -36,7 +36,7 @@ The **`KeyframeEffect`** interface of the [Web Animations API](/en-US/docs/Web/A
 - {{domxref("KeyframeEffect.composite")}}
   - : Gets and sets the composite operation property for resolving the property value changes between this and other keyframe effects.
 
-## Methods
+## Instance methods
 
 _This interface inherits some of its methods from its parent, {{domxref("AnimationEffect")}}._
 

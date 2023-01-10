@@ -15,7 +15,7 @@ browser-compat: api.History
 
 The **`History`** interface allows manipulation of the browser _session history_, that is the pages visited in the tab or frame that the current page is loaded in.
 
-## Properties
+## Instance properties
 
 _The `History` interface doesn't inherit any property._
 
@@ -26,7 +26,7 @@ _The `History` interface doesn't inherit any property._
 - {{domxref("History.state","state")}} {{ReadOnlyInline}}
   - : Returns an `any` value representing the state at the top of the history stack. This is a way to look at the state without having to wait for a {{domxref("Window/popstate_event", "popstate")}} event.
 
-## Methods
+## Instance methods
 
 _The `History`_ _interface doesn't inherit any methods._
 

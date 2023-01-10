@@ -26,11 +26,11 @@ You can have an unlimited number of cursors at the same time. You always get the
 
 {{InheritanceDiagram}}
 
-## Methods
+## Instance methods
 
 Inherits methods from its parent interface, {{domxref("IDBCursor")}}.
 
-## Properties
+## Instance properties
 
 Inherits properties from its parent interface, {{domxref("IDBCursor")}}.
 

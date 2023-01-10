@@ -25,7 +25,7 @@ It contains the content the speech service should read and information about how
 - {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance", "SpeechSynthesisUtterance()")}}
   - : Returns a new `SpeechSynthesisUtterance` object instance.
 
-## Properties
+## Instance properties
 
 _`SpeechSynthesisUtterance` also inherits properties from its parent interface, {{domxref("EventTarget")}}._
 

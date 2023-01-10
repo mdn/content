@@ -24,11 +24,11 @@ Unless stated otherwise, nodes based upon `AudioScheduledSourceNode` output sile
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent interface, {{domxref("AudioNode")}}._
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent interface, {{domxref("AudioNode")}}, and adds the following methods:_
 

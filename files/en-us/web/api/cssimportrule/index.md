@@ -16,7 +16,7 @@ The **`CSSImportRule`** interface represents an {{cssxref("@import")}} [at-rule]
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
@@ -27,7 +27,7 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 - {{domxref("CSSImportRule.styleSheet")}} {{ReadOnlyInline}}
   - : Returns the associated stylesheet.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 

@@ -24,12 +24,12 @@ The individual source buffers can be accessed using the [array operator](/en-US/
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("SourceBufferList.length")}} {{ReadOnlyInline}}
   - : Returns the number of {{domxref("SourceBuffer")}} objects in the list.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 

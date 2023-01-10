@@ -13,7 +13,7 @@ browser-compat: api.WebGLShaderPrecisionFormat
 
 The **WebGLShaderPrecisionFormat** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and represents the information returned by calling the {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}} method.
 
-## Properties
+## Instance properties
 
 - {{domxref("WebGLShaderPrecisionFormat.rangeMin")}} {{ReadOnlyInline}}
   - : The base 2 log of the absolute value of the minimum value that can be represented.

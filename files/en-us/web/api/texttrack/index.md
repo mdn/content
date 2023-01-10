@@ -19,7 +19,7 @@ The `TextTrack` interface—part of the API for handling WebVTT (text tracks on 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from {{domxref("EventTarget")}}._
 
@@ -40,7 +40,7 @@ _This interface also inherits properties from {{domxref("EventTarget")}}._
 - {{domxref("TextTrack.mode")}}
   - : A string specifying the track's current mode, which must be one of the permitted values. Changing this property's value changes the track's current mode to match. The default is `disabled`, unless the {{HTMLElement("track")}} element's {{htmlattrxref("default", "track")}} boolean attribute is set to `true` — in which case the default mode is `showing`.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from {{domxref("EventTarget")}}._
 

@@ -24,9 +24,10 @@ new CountQueuingStrategy(highWaterMark)
 
 ### Parameters
 
+An object with the following property:
+
 - `highWaterMark`
-  - : An object containing a `highWaterMark` property. This is a non-negative
-    integer defining the total number of chunks that can be contained in the internal
+  - : The total number of chunks that can be contained in the internal
     queue before backpressure is applied.
 
 ### Return value

@@ -28,12 +28,12 @@ The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_
 - {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}
   - : Creates and returns a readable stream object from the given handlers.
 
-## Properties
+## Instance properties
 
 - {{domxref("ReadableStream.locked")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether or not the readable stream is locked to a reader.
 
-## Methods
+## Instance methods
 
 - {{domxref("ReadableStream.cancel()")}}
   - : Returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer. The supplied `reason` argument will be given to the underlying source, which may or may not use it.

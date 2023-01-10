@@ -23,7 +23,7 @@ The **`VRStageParameters`** interface of the [WebVR API](/en-US/docs/Web/API/Web
 
 This interface is accessible through the {{domxref("VRDisplay.stageParameters")}} property.
 
-## Properties
+## Instance properties
 
 - {{domxref("VRStageParameters.sittingToStandingTransform")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Contains a matrix that transforms the sitting-space view matrices of {{domxref("VRFrameData")}} to standing-space.

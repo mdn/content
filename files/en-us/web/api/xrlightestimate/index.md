@@ -20,7 +20,7 @@ The **`XRLightEstimate`** interface of the [WebXR Device API](/en-US/docs/Web/AP
 
 To get an `XRLightEstimate` object, call the {{domxref("XRFrame.getLightEstimate()")}} method.
 
-## Properties
+## Instance properties
 
 - {{domxref("XRLightEstimate.primaryLightDirection")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{domxref("DOMPointReadOnly")}} representing the direction to the primary light source from the `probeSpace` of an {{domxref("XRLightProbe")}}.
@@ -29,7 +29,7 @@ To get an `XRLightEstimate` object, call the {{domxref("XRFrame.getLightEstimate
 - {{domxref("XRLightEstimate.sphericalHarmonicsCoefficients")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{jsxref("Float32Array")}} containing 9 spherical harmonics coefficients.
 
-## Methods
+## Instance methods
 
 None.
 

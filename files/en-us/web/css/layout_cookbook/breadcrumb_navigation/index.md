@@ -1,5 +1,5 @@
 ---
-title: Breadcrumb Navigation
+title: Breadcrumb navigation
 slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 page-type: guide
 tags:

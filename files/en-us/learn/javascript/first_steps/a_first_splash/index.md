@@ -46,7 +46,7 @@ We want to set really clear expectations here: You won't be expected to learn Ja
 
 ## Thinking like a programmer
 
-One of the hardest things to learn in programming is not the syntax you need to learn, but how to apply it to solve real world problems. You need to start thinking like a programmer — this generally involves looking at descriptions of what your program needs to do, working out what code features are needed to achieve those things, and how to make them work together.
+One of the hardest things to learn in programming is not the syntax you need to learn, but how to apply it to solve real-world problems. You need to start thinking like a programmer — this generally involves looking at descriptions of what your program needs to do, working out what code features are needed to achieve those things, and how to make them work together.
 
 This requires a mixture of hard work, experience with the programming syntax, and practice — plus a bit of creativity. The more you code, the better you'll get at it. We can't promise that you'll develop "programmer brain" in five minutes, but we will give you plenty of opportunities to practice thinking like a programmer throughout the course.
 
@@ -443,7 +443,7 @@ for (const resetPara of resetParas) {
 
 This code creates a variable containing a list of all the paragraphs inside `<div class="resultParas">` using the {{domxref("Document.querySelectorAll", "querySelectorAll()")}} method, then it loops through each one, removing the text content of each.
 
-Note that even though `resetParas` is a constant, we can change its internal properties like `textContent`.
+Note that even though `resetPara` is a constant, we can change its internal properties like `textContent`.
 
 ### A small discussion on objects
 

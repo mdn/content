@@ -10,11 +10,10 @@ tags:
   - Reference
   - Web
   - acos
-  - Experimental
 browser-compat: css.types.acos
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`acos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the inverse cosine of a number between `-1` and `1`. The function contains a single calculation that returns the number of radians representing an {{cssxref("&lt;angle&gt;")}} between `0deg` and `180deg`.
 

@@ -40,7 +40,7 @@ Each of those text nodes is an object that has the properties and methods docume
 - {{domxref("Text.Text", "Text()")}}
   - : Returns a new `Text` node with the parameter as its textual content.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parents, {{domxref("CharacterData")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
 
@@ -49,7 +49,7 @@ _Inherits properties from its parents, {{domxref("CharacterData")}}, {{domxref("
 - {{domxref("Text.wholeText")}} {{ReadOnlyInline}}
   - : Returns a string containing the text of all `Text` nodes logically adjacent to this {{domxref("Node")}}, concatenated in document order.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("CharacterData")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
 

@@ -31,11 +31,11 @@ Workers may themselves spawn new workers, as long as those workers are hosted at
 - {{domxref("Worker.Worker", "Worker()")}}
   - : Creates a dedicated web worker that executes the script at the specified URL. This also works for [Blob URLs](/en-US/docs/Web/API/Blob).
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("EventTarget")}}._
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("EventTarget")}}._
 

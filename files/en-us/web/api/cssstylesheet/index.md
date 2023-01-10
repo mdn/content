@@ -41,7 +41,7 @@ See the [Obtaining a StyleSheet](#obtaining_a_stylesheet) section for the variou
 - {{domxref("CSSStyleSheet.CSSStyleSheet()", "CSSStyleSheet()")}}
   - : Creates a new `CSSStyleSheet` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("StyleSheet")}}._
 
@@ -54,7 +54,7 @@ _Inherits properties from its parent, {{domxref("StyleSheet")}}._
 - {{domxref("CSSStyleSheet.ownerRule")}} {{ReadOnlyInline}}
   - : If this stylesheet is imported into the document using an {{cssxref("@import")}} rule, the `ownerRule` property returns the corresponding {{domxref("CSSImportRule")}}; otherwise, this property's value is `null`.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("StyleSheet")}}._
 

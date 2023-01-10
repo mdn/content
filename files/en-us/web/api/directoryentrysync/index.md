@@ -46,7 +46,7 @@ const dirEntry = fs.root.getDirectory('project_dir', {create: true});
 - <a href="#getdirectory">getDirectory()</a>
 - <a href="#removerecursively">removeRecursively()</a>
 
-## Methods
+## Instance methods
 
 ### createReader()
 
@@ -54,7 +54,7 @@ Creates a new `DirectoryReaderSync` to read entries from this directory.
 
 #### Syntax
 
-```
+```js
 createReader()
 ```
 

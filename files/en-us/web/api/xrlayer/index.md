@@ -27,7 +27,7 @@ Below is a list of interfaces based on the <code>XRLayer</code> interface.
 - {{domxref("XRCompositionLayer")}}
 - {{domxref("XRWebGLLayer")}}
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("EventTarget")}}_.
 

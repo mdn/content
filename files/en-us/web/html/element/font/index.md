@@ -10,7 +10,7 @@ tags:
 browser-compat: html.elements.font
 ---
 
-{{Deprecated_Header}}
+{{HTMLSidebar}}{{Deprecated_Header}}
 
 The **`<font>`** [HTML](/en-US/docs/Web/HTML) element defines the font size, color and face for its content.
 
@@ -31,6 +31,8 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
 This element implements the {{domxref("HTMLFontElement")}} interface.
 
+<!-- ## Technical summary -->
+
 ## Specifications
 
 {{Specifications}}
@@ -38,5 +40,3 @@ This element implements the {{domxref("HTMLFontElement")}} interface.
 ## Browser compatibility
 
 {{Compat}}
-
-{{HTMLRef}}

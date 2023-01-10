@@ -1,5 +1,5 @@
 ---
-title: Responsive Navigation Patterns
+title: Responsive navigation patterns
 slug: Web/Progressive_web_apps/Responsive/Responsive_navigation_patterns
 tags:
   - Guide

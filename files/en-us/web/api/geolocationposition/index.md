@@ -15,16 +15,16 @@ browser-compat: api.GeolocationPosition
 
 The **`GeolocationPosition`** interface represents the position of the concerned device at a given time. The position, represented by a {{domxref("GeolocationCoordinates")}} object, comprehends the 2D position of the device, on a spheroid representing the Earth, but also its altitude and its speed.
 
-## Properties
+## Instance properties
 
 _The `GeolocationPosition` interface doesn't inherit any properties._
 
 - {{domxref("GeolocationPosition.coords")}} {{ReadOnlyInline}} {{securecontext_inline}}
   - : Returns a {{domxref("GeolocationCoordinates")}} object defining the current location.
 - {{domxref("GeolocationPosition.timestamp")}} {{ReadOnlyInline}} {{securecontext_inline}}
-  - : Returns a {{domxref("DOMTimeStamp")}} representing the time at which the location was retrieved.
+  - : Returns a timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds, representing the time at which the location was retrieved.
 
-## Methods
+## Instance methods
 
 _The `GeolocationPosition` interface neither implements, nor inherits any methods._
 

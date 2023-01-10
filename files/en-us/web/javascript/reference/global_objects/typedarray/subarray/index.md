@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.subarray()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method
@@ -67,7 +68,7 @@ console.log(uint8); // Uint8Array [ 1, 2, 3, 0, 0, 0, 0, 0 ]
 
 const sub = uint8.subarray(0, 4);
 
-console.log(sub);   // Uint8Array [ 1, 2, 3, 0 ]
+console.log(sub); // Uint8Array [ 1, 2, 3, 0 ]
 ```
 
 ## Specifications

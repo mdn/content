@@ -19,7 +19,7 @@ The **`SpeechSynthesis`** interface of the [Web Speech API](/en-US/docs/Web/API/
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _`SpeechSynthesis` also inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
@@ -30,7 +30,7 @@ _`SpeechSynthesis` also inherits properties from its parent interface, {{domxref
 - {{domxref("SpeechSynthesis.speaking")}} {{ReadOnlyInline}}
   - : A boolean value that returns `true` if an utterance is currently in the process of being spoken — even if `SpeechSynthesis` is in a paused state.
 
-## Methods
+## Instance methods
 
 _`SpeechSynthesis` also inherits methods from its parent interface, {{domxref("EventTarget")}}._
 

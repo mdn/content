@@ -17,7 +17,7 @@ The **`HTMLHRElement`** interface provides special properties (beyond those of t
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -32,7 +32,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLHRElement.width")}} {{deprecated_inline}}
   - : A string representing the width of the rule on the page.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}_.
 

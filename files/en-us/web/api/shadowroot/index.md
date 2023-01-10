@@ -20,7 +20,7 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("ShadowRoot.activeElement")}} {{ReadOnlyInline}}
   - : Returns the {{domxref('Element')}} within the shadow tree that has focus.
@@ -46,7 +46,7 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
 - {{domxref("ShadowRoot.styleSheets")}} {{ReadOnlyInline}}
   - : Returns a {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects for stylesheets explicitly linked into, or embedded in a shadow tree.
 
-## Methods
+## Instance methods
 
 - {{DOMxRef("ShadowRoot.getAnimations()")}}
   - : Returns an array of all {{DOMxRef("Animation")}} objects currently in effect, whose target elements are descendants of the shadow tree.

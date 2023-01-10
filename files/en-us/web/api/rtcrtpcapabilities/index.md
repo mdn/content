@@ -25,7 +25,7 @@ The **`RTCRtpCapabilities`** dictionary is a data type used to describe the capa
 
 An `RTCRtpCapabilities` object contains an array of objects conforming to {{domxref("RTCRtpCodecCapability")}} (each describing the capabilities of one codec) and an array of the supported {{Glossary("RTP")}} [header extensions](https://datatracker.ietf.org/doc/html/rfc3550#section-5.3.1) for that codec.
 
-## Properties
+## Instance properties
 
 - `codecs`
   - : An array of {{domxref("RTCRtpCodecCapability")}} objects, each describing one of the codecs supported by the {{domxref("RTCRtpSender")}} or {{domxref("RTCRtpReceiver")}}. There are some special entries in this array, described below in the section [The codecs array](#the_codecs_array).

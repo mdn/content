@@ -51,8 +51,9 @@ compiles the loaded simple.wasm byte code using the
 ```js
 const worker = new Worker("wasm_worker.js");
 
-WebAssembly.compileStreaming(fetch('simple.wasm'))
-  .then((mod) => worker.postMessage(mod));
+WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
+  worker.postMessage(mod)
+);
 ```
 
 In the worker (see
@@ -73,7 +74,7 @@ const importObject = {
 };
 
 onmessage = (e) => {
-  console.log('module received from main thread');
+  console.log("module received from main thread");
   const mod = e.data;
 
   WebAssembly.instantiate(mod, importObject).then((instance) => {

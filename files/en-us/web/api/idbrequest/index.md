@@ -21,7 +21,7 @@ The request object does not initially contain any information about the result o
 
 All asynchronous operations immediately return an {{domxref("IDBRequest")}} instance. Each request has a `readyState` that is set to the `'pending'` state; this changes to `'done'` when the request is completed or fails. When the state is set to `done`, every request returns a `result` and an `error`, and an event is fired on the request. When the state is still `pending`, any attempt to access the `result` or `error` raises an `InvalidStateError` exception.
 
-In plain words, all asynchronous methods return a request object. If the request has been completed successfully, the result is made available through the `result` property and an event indicating success is fired at the request ({{domxref("IDBRequest.success_event", "success")}}). If an error occurs while performing the operation, the exception is made available through the `result` property and an error event is fired ({{domxref("IDBRequest.error_event", "error")}}).
+In plain words, all asynchronous methods return a request object. If the request has been completed successfully, the result is made available through the `result` property and an event indicating success is fired at the request ({{domxref("IDBRequest.success_event", "success")}}). If an error occurs while performing the operation, the exception is made available through the `error` property and an error event is fired ({{domxref("IDBRequest.error_event", "error")}}).
 
 The interface {{domxref("IDBOpenDBRequest")}} is derived from `IDBRequest`.
 
@@ -29,14 +29,14 @@ The interface {{domxref("IDBOpenDBRequest")}} is derived from `IDBRequest`.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Also inherits properties from {{domxref("EventTarget")}}._
 
 - {{domxref("IDBRequest.error")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMException")}} in the event of an unsuccessful request, indicating what went wrong.
 - {{domxref("IDBRequest.result")}} {{ReadOnlyInline}}
-  - : Returns the result of the request. If the request failed and the result is not available, an InvalidStateError exception is thrown.
+  - : Returns the result of the request. If the request is not completed, the result is not available and an `InvalidStateError` exception is thrown.
 - {{domxref("IDBRequest.source")}} {{ReadOnlyInline}}
   - : The source of the request, such as an {{domxref("IDBIndex")}} or an {{domxref("IDBObjectStore")}}. If no source exists (such as when calling {{domxref("IDBFactory.open")}}), it returns null.
 - {{domxref("IDBRequest.readyState")}} {{ReadOnlyInline}}
@@ -44,7 +44,7 @@ _Also inherits properties from {{domxref("EventTarget")}}._
 - {{domxref("IDBRequest.transaction")}} {{ReadOnlyInline}}
   - : The transaction for the request. This property can be null for certain requests, for example those returned from {{domxref("IDBFactory.open")}} unless an upgrade is needed. (You're just connecting to a database, so there is no transaction to return).
 
-## Methods
+## Instance methods
 
 _No methods, but inherits methods from {{domxref("EventTarget")}}._
 

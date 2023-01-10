@@ -17,7 +17,7 @@ The **`CSSKeyframeRule`** interface describes an object representing a set of st
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
@@ -26,7 +26,7 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 - {{domxref("CSSKeyframeRule.style")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("CSSStyleDeclaration")}} of the CSS style associated with the keyframe.
 
-## Methods
+## Instance methods
 
 _No specific methods; inherits methods from its ancestor {{domxref("CSSRule")}}._
 

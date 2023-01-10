@@ -22,14 +22,14 @@ The **`PictureInPictureEvent`** interface represents picture-in-picture-related 
 - {{domxref("PictureInPictureEvent.PictureInPictureEvent", "PictureInPictureEvent()")}}
   - : Creates a `PictureInPictureEvent` event with the given parameters.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent {{domxref("Event")}}_.
 
 - {{domxref("PictureInPictureEvent.pictureInPictureWindow")}}
   - : Returns the {{domxref("PictureInPictureWindow")}} the event relates to.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent {{domxref("Event")}}_.
 

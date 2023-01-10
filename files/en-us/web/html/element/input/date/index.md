@@ -15,7 +15,7 @@ tags:
 browser-compat: html.elements.input.type_date
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of **`type="date"`** create input fields that let the user enter a date, either with a textbox that validates the input or a special date picker interface.
 
@@ -24,53 +24,6 @@ The resulting value includes the year, month, and day, but _not_ the time. The {
 {{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}
 
 The input UI generally varies from browser to browser; see [Browser compatibility](#browser_compatibility) for further details. In unsupported browsers, the control degrades gracefully to [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text).
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
-      <td>
-        A string representing a date in YYYY-MM-DD
-        format, or empty
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Supported common attributes</strong></td>
-      <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("readonly", "input")}}, and
-        {{htmlattrxref("step", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td>
-        <code>list</code>, <code>value</code>, <code>valueAsDate</code>,
-        <code>valueAsNumber</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><strong>DOM interface</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Value
 
@@ -206,7 +159,7 @@ If you try to submit the form with an incomplete date (or with a date outside th
 
 {{EmbedLiveSample('Validation', 600, 100)}}
 
-Here's the CSS used in the above example. We make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) to add an icon next to the input, based on whether or not the current value is valid. We had to put the icon on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome at least the input's generated content is placed inside the form control, and can't be styled or shown effectively.
+Here's the CSS used in the above example. We make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) to add an icon next to the input, based on whether the current value is valid. We had to put the icon on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome at least the input's generated content is placed inside the form control, and can't be styled or shown effectively.
 
 ```css
 label {
@@ -233,7 +186,7 @@ input:valid + span::after {
 
 Browsers that don't support this input type gracefully degrade to a text input, but this creates problems in consistency of user interface (the presented controls are different) and data handling.
 
-The second problem is the more serious one; with date input supported, the value is normalized to the format `yyyy-mm-dd`. But with a text input, the browser has no recognition of what format the date should be in, and there are many different formats in which people write dates. For example:
+The second problem is the more serious one; with date input supported, the value is normalized to the format `yyyy-mm-dd`. But with a text input, the browser has no recognition of what format the date should be in, and there are many formats in which people write dates. For example:
 
 - `ddmmyyyy`
 - `dd/mm/yyyy`
@@ -242,7 +195,7 @@ The second problem is the more serious one; with date input supported, the value
 - `mm-dd-yyyy`
 - `Month dd, yyyy`
 
-One way around this is the {{htmlattrxref("pattern", "input")}} attribute on your date input. Even though the date picker doesn't use it, the text input fallback will. For example, try viewing the following in a unsupporting browser:
+One way around this is the {{htmlattrxref("pattern", "input")}} attribute on your date input. Even though the date picker doesn't use it, the text input fallback will. For example, try viewing the following in an unsupporting browser:
 
 ```html
 <form>
@@ -475,6 +428,55 @@ daySelect.onchange = () => {
 ```
 
 > **Note:** Remember that some years have 53 weeks in them (see [Weeks per year](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))! You'll need to take this into consideration when developing production apps.
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>
+        A string representing a date in YYYY-MM-DD
+        format, or empty
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+        {{htmlattrxref("autocomplete", "input")}},
+        {{htmlattrxref("list", "input")}},
+        {{htmlattrxref("readonly", "input")}}, and
+        {{htmlattrxref("step", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td>
+        <code>list</code>, <code>value</code>, <code>valueAsDate</code>,
+        <code>valueAsNumber</code>.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
+        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

@@ -16,14 +16,14 @@ The **`HTMLTableCaptionElement`** interface provides special properties (beyond 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLTableCaptionElement.align")}} {{deprecated_inline}}
   - : A string which represents an enumerated attribute indicating alignment of the caption with respect to the table.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}_.
 

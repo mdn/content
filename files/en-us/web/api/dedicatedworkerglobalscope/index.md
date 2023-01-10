@@ -18,14 +18,14 @@ The **`DedicatedWorkerGlobalScope`** object (the {{domxref("Worker")}} global sc
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
 
 - {{domxref("DedicatedWorkerGlobalScope.name")}} {{ReadOnlyInline}}
   - : The name that the {{domxref("Worker")}} was (optionally) given when it was created using the {{domxref("Worker.Worker", "Worker()")}} constructor. This is mainly useful for debugging purposes.
 
-### Properties inherited from WorkerGlobalScope
+### Instance properties inherited from WorkerGlobalScope
 
 - {{domxref("WorkerGlobalScope.self")}}
   - : Returns an object reference to the `DedicatedWorkerGlobalScope` object itself.
@@ -38,7 +38,7 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
 - {{domxref("WorkerGlobalScope.performance")}} {{ReadOnlyInline}} {{Non-standard_inline}}
   - : Returns the {{domxref("Performance")}} object associated with the worker, which is a regular performance object, but with a subset of its properties and methods available.
 
-## Methods
+## Instance methods
 
 _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
 

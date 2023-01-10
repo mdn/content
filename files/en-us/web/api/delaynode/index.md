@@ -54,14 +54,14 @@ When creating a graph that has a cycle, it is mandatory to have at least one `De
 - {{domxref("DelayNode.DelayNode", "DelayNode()")}}
   - : Creates a new instance of an DelayNode object instance. As an alternative, you can use the {{domxref("BaseAudioContext.createDelay()")}} factory method; see [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}._
 
 - {{domxref("DelayNode.delayTime")}} {{ReadOnlyInline}}
   - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the amount of delay to apply, specified in seconds.
 
-## Methods
+## Instance methods
 
 _No specific methods; inherits methods from its parent, {{domxref("AudioNode")}}._
 

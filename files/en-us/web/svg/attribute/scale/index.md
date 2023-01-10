@@ -1,6 +1,7 @@
 ---
 title: scale
 slug: Web/SVG/Attribute/scale
+page-type: svg-attribute
 tags:
   - Filters
   - SVG

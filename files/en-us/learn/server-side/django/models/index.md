@@ -198,7 +198,7 @@ A model can also have methods.
 
 ```python
 def __str__(self):
-    return self.field_name
+    return self.my_field_name
 ```
 
 Another common method to include in Django models is `get_absolute_url()`, which returns a URL for displaying individual model records on the website (if you define this method then Django will automatically add a "View on Site" button to the model's record editing screens in the Admin site). A typical pattern for `get_absolute_url()` is shown below.
@@ -445,7 +445,7 @@ Some things to consider:
 - Should "language" be associated with a `Book`, `BookInstance`, or some other object?
 - Should the different languages be represented using model, a free text field, or a hard-coded selection list?
 
-After you've decided, add the field. You can see what we decided on GitHub [here](https://github.com/mdn/django-locallibrary-tutorial/blob/master/catalog/models.py).
+After you've decided, add the field. You can see what we decided on GitHub [here](https://github.com/mdn/django-locallibrary-tutorial/blob/main/catalog/models.py).
 
 Don't forget that after a change to your model, you should again re-run your database migrations to add the changes.
 

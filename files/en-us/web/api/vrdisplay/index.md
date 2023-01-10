@@ -25,7 +25,7 @@ The **`VRDisplay`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) 
 
 An array of all connected VR Devices can be returned by invoking the {{domxref("Navigator.getVRDisplays()")}} method.
 
-## Properties
+## Instance properties
 
 - {{domxref("VRDisplay.capabilities")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns a {{domxref("VRDisplayCapabilities")}} object that indicates the various capabilities of the `VRDisplay`.
@@ -44,7 +44,7 @@ An array of all connected VR Devices can be returned by invoking the {{domxref("
 - {{domxref("VRDisplay.stageParameters")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns a {{domxref("VRStageParameters")}} object containing room-scale parameters, if the `VRDisplay` is capable of supporting room-scale experiences.
 
-## Methods
+## Instance methods
 
 - {{domxref("VRDisplay.getEyeParameters()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns the {{domxref("VREyeParameters")}} object containing the eye parameters for the specified eye.

@@ -127,21 +127,7 @@ People with dyslexia and other cognitive conditions may have difficulty reading 
 
 ## Formal syntax
 
-```
-<font-stretch-absolute>{1,2}
-
-<font-stretch-absolute> =
-  normal          |
-  ultra-condensed |
-  extra-condensed |
-  condensed       |
-  semi-condensed  |
-  semi-expanded   |
-  expanded        |
-  extra-expanded  |
-  ultra-expanded  |
-  <percentage>
-```
+{{csssyntax}}
 
 ## Examples
 
@@ -172,7 +158,6 @@ The following find a local Open Sans font or import it, and allow using the font
 - {{cssxref("@font-face/font-family", "font-family")}}
 - {{cssxref("@font-face/font-weight", "font-weight")}}
 - {{cssxref("@font-face/font-style", "font-style")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/src", "src")}}

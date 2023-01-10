@@ -19,7 +19,7 @@ The **`SpeechSynthesisEvent`** interface of the [Web Speech API](/en-US/docs/Web
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _The {{domxref("SpeechSynthesisEvent")}} interface also inherits properties from its parent interface, {{domxref("Event")}}._
 
@@ -32,7 +32,7 @@ _The {{domxref("SpeechSynthesisEvent")}} interface also inherits properties from
 - {{domxref("SpeechSynthesisEvent.utterance")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("SpeechSynthesisUtterance")}} instance that the event was triggered on.
 
-## Methods
+## Instance methods
 
 _The {{domxref("SpeechSynthesisEvent")}} interface also inherits methods from its parent interface, {{domxref("Event")}}._
 

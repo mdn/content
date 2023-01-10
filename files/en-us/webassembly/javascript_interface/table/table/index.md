@@ -65,9 +65,9 @@ const tbl = new WebAssembly.Table({
 We can retrieve the index contents using [`Table.prototype.get()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/get):
 
 ```js
-console.log(tbl.length);  // a table with 2 elements
-console.log(tbl.get(0));  // content for index 0 is null
-console.log(tbl.get(1));  // content for index 1 is null
+console.log(tbl.length); // a table with 2 elements
+console.log(tbl.get(0)); // content for index 0 is null
+console.log(tbl.get(1)); // content for index 1 is null
 ```
 
 Next, we create an import object that contains the `WebAssembly.Table`:
@@ -92,7 +92,10 @@ Next, we load and instantiate a WebAssembly module. The `table2.wasm` module def
 We instantiate `table2.wasm` using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) method:
 
 ```js
-const instantiating = WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject);
+const instantiating = WebAssembly.instantiateStreaming(
+  fetch("table2.wasm"),
+  importObject
+);
 ```
 
 After instantiating `table2.wasm`, `tbl` is updated with the following:
@@ -105,9 +108,9 @@ The items at indexes 0 and 1 of the table are now callable [Exported WebAssembly
 
 ```js
 instantiating.then((obj) => {
-  console.log(tbl.length);      // 2
-  console.log(tbl.get(0)());    // 42
-  console.log(tbl.get(1)());    // 83
+  console.log(tbl.length); // 2
+  console.log(tbl.get(0)()); // 42
+  console.log(tbl.get(1)()); // 83
 });
 ```
 

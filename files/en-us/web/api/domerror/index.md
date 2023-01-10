@@ -16,7 +16,7 @@ browser-compat: api.DOMError
 
 The **`DOMError`** interface describes an error object that contains an error name.
 
-## Properties
+## Instance properties
 
 - {{domxref("DOMError.name")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Returns a string representing one of the error type names (see below).

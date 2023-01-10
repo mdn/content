@@ -19,7 +19,7 @@ The `CookieStore` is accessed via attributes in the global scope in a {{domxref(
 
 {{InheritanceDiagram}}
 
-## Methods
+## Instance methods
 
 - {{domxref("CookieStore.delete()")}} {{Experimental_Inline}}
   - : The `delete()` method deletes a cookie with the given name or options object, it returns a {{jsxref("Promise")}} that resolves when the deletion completes.

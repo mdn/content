@@ -22,7 +22,7 @@ the user has set a reduced data usage option on the user agent.
 
 ## Value
 
-A {{jsxref('Boolean')}}.
+A boolean value.
 
 ## Specifications
 

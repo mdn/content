@@ -1,6 +1,7 @@
 ---
 title: setter
 slug: Web/JavaScript/Reference/Functions/set
+page-type: javascript-language-feature
 tags:
   - ECMAScript 5
   - Functions
@@ -12,9 +13,7 @@ browser-compat: javascript.functions.set
 
 {{jsSidebar("Functions")}}
 
-The **`set`** syntax binds an object
-property to a function to be called when there is an attempt to set that
-property.
+The **`set`** syntax binds an object property to a function to be called when there is an attempt to set that property. It can also be used in [classes](/en-US/docs/Web/JavaScript/Reference/Classes).
 
 {{EmbedInteractiveExample("pages/js/functions-setter.html")}}
 
@@ -74,6 +73,32 @@ console.log(language.log); // ['EN', 'FA']
 Note that `current` is not defined, and any attempts to access it will
 result in `undefined`.
 
+### Using setters in classes
+
+You can use the exact same syntax to define public instance setters that are available on class instances. In classes, you don't need the comma separator between methods.
+
+```js
+class ClassWithGetSet {
+  #msg = "hello world";
+  get msg() {
+    return this.#msg;
+  }
+  set msg(x) {
+    this.#msg = `hello ${x}`;
+  }
+}
+
+const instance = new ClassWithGetSet();
+console.log(instance.msg); // "hello world"
+
+instance.msg = "cake";
+console.log(instance.msg); // "hello cake"
+```
+
+Setter properties are defined on the `prototype` property of the class and are thus shared by all instances of the class. Unlike setter properties in object literals, setter properties in classes are not enumerable.
+
+Static setters and private setters use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) pages.
+
 ### Removing a setter with the `delete` operator
 
 If you want to remove the setter, you can just {{jsxref("Operators/delete", "delete")}}
@@ -96,10 +121,9 @@ Object.defineProperty(o, 'b', {
 });
 
 o.b = 10;
-//  Runs the setter, which assigns 10 / 2 (5) to the 'a' property
+// Runs the setter, which assigns 10 / 2 (5) to the 'a' property
 
-console.log(o.a)
-//  5
+console.log(o.a); // 5
 ```
 
 ### Using a computed property name
@@ -112,14 +136,12 @@ const obj = {
   set [expr](v) { this.baz = v; }
 };
 
-console.log(obj.baz);
-//  "bar"
+console.log(obj.baz); // "bar"
 
 obj.foo = 'baz';
-//  run the setter
+// Run the setter
 
-console.log(obj.baz);
-//  "baz"
+console.log(obj.baz); // "baz"
 ```
 
 ## Specifications

@@ -250,4 +250,3 @@ the browser will block self-hosted content and off-site content, and incorrectly
 - [CSP in Web Workers](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#csp_in_workers)
 - [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)
 - [CSP Evaluator](https://github.com/google/csp-evaluator) - Evaluate your Content Security Policy
-- [CSP Scanner](https://cspscanner.com/) - Improve your Content Security Policy

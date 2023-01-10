@@ -1,5 +1,5 @@
 ---
-title: 'HTML attribute: disabled'
+title: "HTML attribute: disabled"
 slug: Web/HTML/Attributes/disabled
 tags:
   - Attribute
@@ -20,6 +20,10 @@ browser-compat:
 {{HTMLSidebar}}
 
 The Boolean **`disabled`** attribute, when present, makes the element not mutable, focusable, or even submitted with the form. The user can neither edit nor focus on the control, nor its form control descendants.
+
+{{EmbedInteractiveExample("pages/tabbed/attribute-disabled.html", "tabbed-standard")}}
+
+## Overview
 
 If the `disabled` attribute is specified on a form control, the element and its form control descendants do not participate in constraint validation. Often browsers grey out such controls and it won't receive any browsing events, like mouse clicks or focus-related ones.
 
@@ -118,7 +122,7 @@ When form controls are disabled, many browsers will display them in a lighter, g
 </fieldset>
 ```
 
-{{EmbedLiveSample('Examples', 500, 300)}}
+{{EmbedLiveSample('Examples', 500, 450)}}
 
 ## Specifications
 

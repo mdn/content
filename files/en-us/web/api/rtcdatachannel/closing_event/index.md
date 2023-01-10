@@ -1,5 +1,5 @@
 ---
-title: 'RTCDataChannel: closing event'
+title: "RTCDataChannel: closing event"
 slug: Web/API/RTCDataChannel/closing_event
 page-type: web-api-event
 tags:
@@ -30,9 +30,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('bufferedamountlow', (event) => { });
+addEventListener("closing", (event) => {});
 
-onbufferedamountlow = (event) => { };
+onbufferedamountlow = (event) => {};
 ```
 
 ## Event type
@@ -60,8 +60,8 @@ You can also set the {{domxref("RTCDataChannel.closing_event", "onclosing")}} ev
 
 ```js
 pc.onclosing = (ev) => {
- myConnectionStatus.icon = closingIcon;
- myConnectionStatus.text = "Connection closing";
+  myConnectionStatus.icon = closingIcon;
+  myConnectionStatus.text = "Connection closing";
 };
 ```
 

@@ -22,7 +22,7 @@ The **`WindowControlsOverlayGeometryChangeEvent`** interface of the [Window Cont
 - {{domxref("WindowControlsOverlayGeometryChangeEvent.WindowControlsOverlayGeometryChangeEvent", "WindowControlsOverlayGeometryChangeEvent()")}} {{Experimental_Inline}}
   - : Creates a `WindowControlsOverlayGeometryChangeEvent` event with the given parameters.
 
-## Properties
+## Instance properties
 
 _Also inherits properties from its parent {{domxref("Event")}}_.
 

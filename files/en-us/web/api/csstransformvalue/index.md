@@ -38,14 +38,14 @@ Below is a list of interfaces based on the `CSSTransformValue` interface.
 - {{domxref("CSSTransformValue.CSSTransformValue", "CSSTransformValue()")}} {{Experimental_Inline}}
   - : Creates a new `CSSTransformValue` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("CSSTransformValue.length")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns how many transform components are contained within the `CSSTransformValue`.
 - {{domxref("CSSTransformValue.is2D")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean indicating whether the transform is 2D or 3D.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its ancestor {{domxref('CSSStyleValue')}}._
 

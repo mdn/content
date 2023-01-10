@@ -22,7 +22,7 @@ The **`ProgressEvent`** interface represents events measuring progress of an und
 - {{domxref("ProgressEvent.ProgressEvent", "ProgressEvent()")}}
   - : Creates a `ProgressEvent` event with the given parameters.
 
-## Properties
+## Instance properties
 
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
@@ -33,7 +33,7 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 - {{domxref("ProgressEvent.total")}} {{ReadOnlyInline}}
   - : A 64-bit unsigned integer representing the total amount of work that the underlying process is in the progress of performing. When downloading a resource using HTTP, this is the `Content-Length` (the size of the body of the message), and doesn't include the headers and other overhead.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("Event")}}._
 

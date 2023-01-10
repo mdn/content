@@ -19,7 +19,7 @@ A `BackgroundFetchRecord` is created by the {{domxref("BackgroundFetchManager.fe
 
 There will be one `BackgroundFetchRecord` for each resource requested by `fetch()`.
 
-## Properties
+## Instance properties
 
 - {{domxref("BackgroundFetchRecord.request","request")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("Request")}}.

@@ -16,7 +16,7 @@ The **`HTMLTitleElement`** interface contains the title for a document. This ele
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -42,7 +42,7 @@ console.log(title.text); // yield: "Hello world!  really?"
 
 As you can see, the tag `span` and its content were skipped.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

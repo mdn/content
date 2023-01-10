@@ -23,7 +23,7 @@ In the image below, the red outline represents a clipping region shaped like a s
 Only those parts of the checkerboard pattern that are within the clipping region get
 drawn.
 
-![](canvas_clipping_path.png)
+![Star-shaped clipping region](canvas_clipping_path.png)
 
 > **Note:** Be aware that the clipping region is only constructed from
 > shapes added to the path. It doesn't work with shape primitives drawn directly to the

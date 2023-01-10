@@ -28,7 +28,7 @@ But this has never been available to JavaScript before. Previously, if we wanted
 
 With Streams being available to JavaScript, this all changes — you can now start processing raw data with JavaScript bit by bit as soon as it is available on the client-side, without needing to generate a buffer, string, or blob.
 
-![](concept.png)
+![The basic concept of the stream API is data is fetched from the network in several data packets. The data is processed, and then sent to the browser in a stream of data packets.](concept.png)
 
 There are more advantages too — you can detect when streams start or end, chain streams together, handle errors and cancel streams as required, and react to the speed the stream is being read at.
 

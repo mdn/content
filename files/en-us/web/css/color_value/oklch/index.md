@@ -38,6 +38,10 @@ oklch(59.69% 0.156 49.77 / .5)
 
     `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
+### Formal syntax
+
+{{csssyntax}}
+
 ## Specifications
 
 {{Specifications}}
@@ -49,4 +53,5 @@ oklch(59.69% 0.156 49.77 / .5)
 ## See also
 
 - [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/)
+- [OKLCH in CSS](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl)
 - [Safari Technology Preview 137 release notes](https://webkit.org/blog/12156/release-notes-for-safari-technology-preview-137/): includes `oklch()` and {{cssxref("color_value/oklab",'oklab()')}} colors.

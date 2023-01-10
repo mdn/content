@@ -18,7 +18,7 @@ The **`SVGMarkerElement`** interface provides access to the properties of {{SVGE
 
 The following properties and methods all return, or act on the attributes of the {{SVGElement("marker")}} element represented by `SVGMarkerElement`.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
@@ -59,7 +59,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGElement"
 - {{domxref("SVGMarkerElement.preserveAspectRatio")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGPreserveAspectRatio")}} object which contains the values set by the {{SVGattr("preserveAspectRatio")}} attribute on the {{SVGElement("marker")}} viewport.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent, {{domxref("SVGElement")}}._
 

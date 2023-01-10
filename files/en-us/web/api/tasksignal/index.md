@@ -24,14 +24,14 @@ Abortable tasks that do not need the priority to change may instead specify an {
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _The `TaskSignal` interface also inherits properties from its parent interface, {{domxref("AbortSignal")}}._
 
 - {{domxref('TaskSignal.priority')}} {{ReadOnlyInline}}
   - : Returns the priority of the signal.
 
-## Methods
+## Instance methods
 
 _The `TaskSignal` interface inherits methods from its parent interface, {{domxref("AbortSignal")}}._
 

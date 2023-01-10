@@ -126,7 +126,7 @@ _No changes._
 
 #### Bug fixes
 
-- `WebDriver:NewWindow` will no longer timeout because of `focus`-related inconsistencies across platforms ({{bug(1523234)}}).
+- `WebDriver:NewWindow` will no longer timeout because inconsistencies across platforms regarding the `focus` event ({{bug(1523234)}}).
 
 #### Others
 

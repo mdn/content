@@ -30,14 +30,14 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 - {{domxref("InstallEvent.InstallEvent", "InstallEvent()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Creates a new `InstallEvent` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
 - {{domxref("InstallEvent.activeWorker")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns the {{domxref("ServiceWorker")}} that is currently controlling the page.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 

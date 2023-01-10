@@ -1,6 +1,6 @@
 ---
 title: Property
-slug: Glossary/property
+slug: Glossary/Property
 tags:
   - Disambiguation
 ---

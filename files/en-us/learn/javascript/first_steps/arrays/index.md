@@ -108,9 +108,10 @@ Items in an array are numbered, starting from zero. This number is called the it
 
 4. Try making some more modifications to your array examples before moving on. Play around a bit, and see what works and what doesn't.
 
-## Finding items in an array
+## Finding the index of items in an array
 
-This is fine if you know the index of an item, but what if you don't? You can find the index of a particular item using the {{jsxref("Array.prototype.indexOf()","indexOf()")}} method. This takes an item as an argument and returns the index, or `-1` if the item was not found in the array:
+If you don't know the index of an item, you can use the {{jsxref("Array.prototype.indexOf()","indexOf()")}} method.
+The `indexOf()` method takes an item as an argument and will either return the item's index or `-1` if the item is not in the array:
 
 ```js
 const birds = ['Parrot', 'Falcon', 'Owl'];

@@ -97,7 +97,7 @@ These are great resources for people who are trying to figure out where to start
 
 The Emscripten tool is able to take just about any C/C++ source code and compile it into a .wasm module, plus the necessary JavaScript "glue" code for loading and running the module, and an HTML document to display the results of the code.
 
-![](emscripten-diagram.png)
+![Diagram: Emscripten compiles C/C++ source code and into a WASM module, an HTML document along with the JavaScript glue code.](emscripten-diagram.png)
 
 In a nutshell, the process works as follows:
 

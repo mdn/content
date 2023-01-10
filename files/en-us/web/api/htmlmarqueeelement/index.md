@@ -19,7 +19,7 @@ It inherits properties and methods from the {{DOMxRef("HTMLElement")}} interface
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("HTMLElement")}}._
 
@@ -55,7 +55,7 @@ _Inherits properties from its parent, {{DOMxRef("HTMLElement")}}._
 - {{DOMxRef("HTMLMarqueeElement.onstart")}} {{Deprecated_Inline}}
   - : Fires when the marquee starts scrolling.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{DOMxRef("HTMLElement")}}._
 

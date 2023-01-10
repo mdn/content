@@ -15,7 +15,7 @@ The **`WorkerLocation`** interface defines the absolute location of the script e
 
 This interface is only visible from inside a JavaScript script executed in the context of a Web worker.
 
-## Properties
+## Instance properties
 
 - {{domxref("WorkerLocation.href")}} {{ReadOnlyInline}}
   - : Returns a string containing the serialized {{domxref("URL")}} for the worker's location.
@@ -36,7 +36,7 @@ This interface is only visible from inside a JavaScript script executed in the c
 - {{domxref("WorkerLocation.hash")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("URL.hash", "hash")}} part of the worker's location.
 
-## Methods
+## Instance methods
 
 - {{domxref("WorkerLocation.toString()")}}
   - : Returns a string containing the serialized {{domxref("URL")}} for the worker's location. It is a synonym for {{domxref("WorkerLocation.href")}}.

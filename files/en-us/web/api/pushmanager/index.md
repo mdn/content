@@ -18,12 +18,12 @@ The **`PushManager`** interface of the [Push API](/en-US/docs/Web/API/Push_API) 
 
 This interface is accessed via the {{domxref("ServiceWorkerRegistration.pushManager")}} property.
 
-## Properties
+## Instance properties
 
 - {{domxref("PushManager.supportedContentEncodings")}}
   - : Returns an array of supported content codings that can be used to encrypt the payload of a push message.
 
-## Methods
+## Instance methods
 
 - {{domxref("PushManager.getSubscription()")}}
   - : Retrieves an existing push subscription. It returns a {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}} object containing details of an existing subscription. If no existing subscription exists, this resolves to a `null` value.

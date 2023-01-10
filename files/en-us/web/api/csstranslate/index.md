@@ -25,7 +25,7 @@ The **`CSSTranslate`** interface of the {{domxref('CSS_Object_Model#css_typed_ob
 - {{domxref("CSSTranslate.CSSTranslate", "CSSTranslate()")}} {{Experimental_Inline}}
   - : Creates a new `CSSTranslate` object.
 
-## Properties
+## Instance properties
 
 - {{domxref('CSSTranslate.x','x')}} {{Experimental_Inline}}
   - : Returns or sets the x-axis value.

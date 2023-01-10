@@ -68,7 +68,7 @@ Here's a list of our standard macros for generating quicklinks.
 
 - [`CSSRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/CSSRef.ejs)
   - : Builds the standard quicklinks for CSS Reference pages.
-- [`HTMLRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLRef.ejs)
+- [`HTMLSidebar`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLSidebar.ejs)
   - : Builds the standard quicklinks for HTML Reference pages.
 - [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs)
   - : Creates a set of quicklinks using the current page's (or the specified page's) children as the destinations.

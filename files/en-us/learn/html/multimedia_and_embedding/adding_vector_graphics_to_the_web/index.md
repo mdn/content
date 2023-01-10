@@ -93,7 +93,6 @@ So why would anyone want to use raster graphics over SVG? Well, SVG does have so
 
 - SVG can get complicated very quickly, meaning that file sizes can grow; complex SVGs can also take significant processing time in the browser.
 - SVG can be harder to create than raster images, depending on what kind of image you are trying to create.
-- SVG is not supported in older browsers, so may not be suitable if you need to support older versions of Internet Explorer with your web site (SVG started being supported as of IE9.)
 
 Raster graphics are arguably better for complex precision images such as photos, for the reasons described above.
 

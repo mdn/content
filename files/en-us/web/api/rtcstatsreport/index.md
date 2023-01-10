@@ -27,7 +27,7 @@ Calling `getStats()` on an {{domxref("RTCPeerConnection")}} lets you specify whe
 
 For each category of statistic information, there is a dictionary whose properties provide the relevant information.
 
-### Properties common to all statistic categories
+### Instance properties common to all statistic categories
 
 All WebRTC statistics objects are fundamentally based on the {{domxref("RTCStats")}} dictionary, which provides the most fundamental information: the timestamp, the statistic type string, and an ID uniquely identifying the source of the data.
 

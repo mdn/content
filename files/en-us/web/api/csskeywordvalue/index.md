@@ -26,12 +26,12 @@ The interface instance name is a {{Glossary("stringifier")}} meaning that when u
 - {{domxref("CSSKeywordValue.CSSKeywordValue", "CSSKeywordValue()")}} {{Experimental_Inline}}
   - : Creates a new `CSSKeywordValue` object.
 
-## Properties
+## Instance properties
 
 - {{domxref('CSSKeywordValue.value')}} {{Experimental_Inline}}
   - : Returns or sets the value of the `CSSKeywordValue`.
 
-## Methods
+## Instance methods
 
 _Inherits methods from {{domxref('CSSStyleValue')}}._
 

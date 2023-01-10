@@ -17,11 +17,11 @@ browser-compat: api.BackgroundFetchManager
 
 The **`BackgroundFetchManager`** interface of the {{domxref('Background Fetch API','','',' ')}} is a map where the keys are background fetch IDs and the values are {{domxref("BackgroundFetchRegistration")}} objects.
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
 - {{domxref('BackgroundFetchManager.fetch','fetch()' )}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} object for a supplied array of URLs and {{domxref("Request")}} objects.

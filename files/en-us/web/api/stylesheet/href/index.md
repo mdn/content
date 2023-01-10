@@ -1,5 +1,5 @@
 ---
-title: Stylesheet.href
+title: StyleSheet.href
 slug: Web/API/StyleSheet/href
 page-type: web-api-instance-property
 tags:

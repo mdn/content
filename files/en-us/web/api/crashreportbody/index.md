@@ -20,7 +20,7 @@ A crash report is generated when a document becomes unusable due to the browser 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - `reason` {{experimental_inline}}
 

@@ -24,7 +24,7 @@ represents an event related to a specific {{DOMxRef("RTCDataChannel")}}.
 - {{DOMxRef("RTCDataChannelEvent.RTCDataChannelEvent", "RTCDataChannelEvent()")}}
   - : Creates a new `RTCDataChannelEvent`.
 
-## Properties
+## Instance properties
 
 _Also inherits properties from {{DOMxRef("Event")}}._
 

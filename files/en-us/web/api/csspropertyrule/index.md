@@ -19,7 +19,7 @@ The **`CSSPropertyRule`** interface of the {{domxref('CSS_Properties_and_Values_
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
@@ -32,7 +32,7 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 - {{domxref("CSSPropertyRule.syntax")}} {{ReadOnlyInline}}
   - : Returns the literal syntax of the custom property.
 
-## Methods
+## Instance methods
 
 _No specific methods; inherits methods from its ancestor {{domxref("CSSRule")}}._
 

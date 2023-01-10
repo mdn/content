@@ -1,6 +1,7 @@
 ---
 title: textLength
 slug: Web/SVG/Attribute/textLength
+page-type: svg-attribute
 tags:
   - Attribute
   - CSS

@@ -65,12 +65,12 @@ Here we preload our CSS and JavaScript files so they will be available as soon a
 
 ### What types of content can be preloaded?
 
-Many different content types can be preloaded. The possible `as` attribute values are:
+Many content types can be preloaded. The possible `as` attribute values are:
 
 - `audio`: Audio file, as typically used in {{htmlelement("audio")}}.
 - `document`: An HTML document intended to be embedded by a {{htmlelement("frame")}} or {{htmlelement("iframe")}}.
 - `embed`: A resource to be embedded inside an {{htmlelement("embed")}} element.
-- `fetch`: Resource to be accessed by a fetch or XHR request, such as an ArrayBuffer or JSON file.
+- `fetch`: Resource to be accessed by a fetch or XHR request, such as an ArrayBuffer, WebAssembly/WASM binary, or JSON file.
 - `font`: Font file.
 - `image`: Image file.
 - `object`: A resource to be embedded inside an {{htmlelement("object")}} element.
@@ -80,7 +80,7 @@ Many different content types can be preloaded. The possible `as` attribute value
 - `worker`: A JavaScript web worker or shared worker.
 - `video`: Video file, as typically used in {{htmlelement("video")}}.
 
-> **Note:** `video` preloading is included in the Preload spec, but is not currently implemented by browsers.
+> **Note:** `font` and `fetch` preloading requires the `crossorigin` attribute to be set; see [CORS-enabled fetches](#cors-enabled_fetches) below.
 
 > **Note:** There's more detail about these values and the web features they expect to be consumed by in the Preload spec — see [link element extensions](https://w3c.github.io/preload/#link-element-extensions). Also note that the full list of values the `as` attribute can take is governed by the Fetch spec — see [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination).
 
@@ -227,7 +227,7 @@ This is useful when you want to preload a script, but then defer execution until
 Other preloading features exist, but none are quite as fit for purpose as `<link rel="preload">`:
 
 - `<link rel="prefetch">` has been supported in browsers for a long time, but it is intended for prefetching resources that will be used in the **_next_** navigation/page load (e.g. when you go to the next page). This is fine, but isn't useful for the current page! In addition, browsers will give `prefetch` resources a lower priority than `preload` ones — the current page is more important than the next. See [Link prefetching FAQ](/en-US/docs/Web/HTTP/Link_prefetching_FAQ) for more details.
-- `<link rel="prerender">` renders a specified webpage in the background, speeding up its load if the user navigates to it. Because of the potential to waste users bandwidth, Chrome treats `prerender` as a [NoState prefetch](https://developer.chrome.com/blog/nostate-prefetch/) instead.
+- `<link rel="prerender">` renders a specified webpage in the background, speeding up its load if the user navigates to it. Because of the potential to waste users' bandwidth, Chrome treats `prerender` as a [NoState prefetch](https://developer.chrome.com/blog/nostate-prefetch/) instead.
 - `<link rel="subresource">` {{non-standard_inline}} was supported in Chrome a while ago, and was intended to tackle the same issue as `preload`, but it had a problem: there was no way to work out a priority for the items (`as` didn't exist back then), so they all got fetched with fairly low priority.
 - There are a number of script-based resource loaders out there, but they don't have any power over the browser's fetch prioritization queue, and are subject to much the same performance problems.
 

@@ -6,11 +6,13 @@ tags:
   - MathML Reference
 ---
 
-{{MathMLRef}}
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/MathML")}}
+</section>
 
-This is an alphabetical list of MathML attributes. More details for each attribute are available on relevant [MathML element pages](/en-US/docs/Web/MathML/Element) and on the [global attributes page](/en-US/docs/Web/MathML/Global_attributes). The [values](/en-US/docs/Web/MathML/Attribute/Values) page also describes some  notes on common values used by MathML attributes.
+This is an alphabetical list of MathML attributes. More details for each attribute are available on relevant [MathML element pages](/en-US/docs/Web/MathML/Element) and on the [global attributes page](/en-US/docs/Web/MathML/Global_attributes). The [values](/en-US/docs/Web/MathML/Attribute/Values) page also describes some notes on common values used by MathML attributes.
 
-> **Note:** As explained on the main [MathML](/en-US/docs/Web/MathML) page, documentation is focused on a subset of the language that is relevant for browsers. See the [MathML Full](https://w3c.github.io/mathml/) specification if you want details about other MathML attributes.
+> **Note:** As explained on the main [MathML](/en-US/docs/Web/MathML) page, MDN uses [MathML Core](https://w3c.github.io/mathml-core/) as a reference specification. However, legacy features that are still implemented by some browsers are also documented. You can find further details for these and other features in [MathML 4](https://w3c.github.io/mathml/).
 
 <table class="standard-table">
   <thead>
@@ -404,6 +406,28 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td>{{ MathMLElement("mo") }}</td>
       <td>
         A <a href="/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether the operator stretches to the size of the adjacent element.
+      </td>
+    </tr>
+    <tr>
+      <td><code>subscriptshift</code> {{deprecated_inline}}</td>
+      <td>
+        {{ MathMLElement("msub") }},
+        {{ MathMLElement("msubsup") }},
+        {{ MathMLElement("mmultiscripts") }}
+      </td>
+      <td>
+        A <a href="en-US/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> indicating the minimum amount to shift the baseline of the subscript down.
+      </td>
+    </tr>
+    <tr>
+      <td><code>superscriptshift</code> {{deprecated_inline}}</td>
+      <td>
+        {{ MathMLElement("msup") }},
+        {{ MathMLElement("msubsup") }},
+        {{ MathMLElement("mmultiscripts") }}
+      </td>
+      <td>
+        A <a href="en-US/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> indicating the minimum amount to shift the baseline of the superscript up.
       </td>
     </tr>
     <tr>

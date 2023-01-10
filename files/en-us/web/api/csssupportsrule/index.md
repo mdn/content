@@ -16,11 +16,11 @@ The **`CSSSupportsRule`** interface represents a single CSS {{cssxref("@supports
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestors {{domxref("CSSConditionRule")}}, {{domxref("CSSGroupingRule")}}, and {{domxref("CSSRule")}}._
 
-## Methods
+## Instance methods
 
 _Inherits methods from its ancestors {{domxref("CSSConditionRule")}}, {{domxref("CSSGroupingRule")}}, and {{domxref("CSSRule")}}._
 

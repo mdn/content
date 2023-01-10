@@ -42,11 +42,11 @@ A good general rule for improving perceived performance is that it is usually be
 
 > **Note:** Time appears to pass more quickly for users who are actively engaged, distracted, or entertained, than for those who are waiting passively for something to happen. Where possible, actively engage and inform users who are waiting for a task to complete.
 
-Similarly, it is better to display a "loading animation" as soon as a user clicks a link to perform a long running operation. While this doesn't change the time taken to complete the operation, the site feels more responsive, and the user knows that it is working on something useful.
+Similarly, it is better to display a "loading animation" as soon as a user clicks a link to perform a long-running operation. While this doesn't change the time taken to complete the operation, the site feels more responsive, and the user knows that it is working on something useful.
 
 ## Performance metrics
 
-There is no single metric or test that can be run on a site to evaluate how a user "feels". However there are a number of metrics that can be "helpful indicators":
+There is no single metric or test that can be run on a site to evaluate how a user "feels". However, there are a number of metrics that can be "helpful indicators":
 
 - [First paint](/en-US/docs/Glossary/First_paint)
   - : The time to start of first paint operation. Note that this change may not be visible; it can be a simple background color update or something even less noticeable.
@@ -108,4 +108,5 @@ By reducing the time that a user has to wait for _useful_ content, and keeping t
 - [JavaScript performance](/en-US/docs/Learn/Performance/JavaScript)
 - [HTML performance features](/en-US/docs/Learn/Performance/HTML)
 - [CSS performance features](/en-US/docs/Learn/Performance/CSS)
-- [Business case for performance](/en-US/docs/Learn/Performance/business_case_for_performance)
+- [The business case for web performance](/en-US/docs/Learn/Performance/business_case_for_performance)
+- [Web performance resources](/en-US/docs/Learn/Performance/Web_Performance_Basics)

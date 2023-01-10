@@ -15,7 +15,7 @@ These attacks succeed if the Web app does not employ enough validation or encodi
 
 ## See also
 
-- [Cross-site scripting (XSS)](/en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)
+- [Type of Attacks: Cross-site scripting (XSS)](/en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)
 - [Cross-site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) on Wikipedia
 - [Cross-site scripting on OWASP](https://owasp.org/www-community/attacks/xss/)
 - [Another article about Cross-site scripting](https://www.acunetix.com/blog/articles/dom-xss-explained/)

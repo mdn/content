@@ -21,7 +21,7 @@ The **`MediaKeySession`** interface of the [EncryptedMediaExtensions API](/en-US
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("MediaKeySession.closed")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("Promise")}} signaling when a `MediaKeySession` closes. This promise can only be fulfilled and is never rejected. Closing a session means that licenses and keys associated with it are no longer valid for decrypting media data.
@@ -39,7 +39,7 @@ The **`MediaKeySession`** interface of the [EncryptedMediaExtensions API](/en-US
 - {{domxref("MediaKeySession.message_event", "message")}}
   - : Fires when the content decryption module has generated a message for the session.
 
-## Methods
+## Instance methods
 
 - {{domxref("MediaKeySession.close()")}}
   - : Returns a {{jsxref("Promise")}} after notifying the current media session is no longer needed and that the CDM should release any resources associated with this object and close it.

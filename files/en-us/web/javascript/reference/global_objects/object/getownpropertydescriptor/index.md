@@ -1,6 +1,7 @@
 ---
 title: Object.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
+page-type: javascript-static-method
 tags:
   - ECMAScript 5
   - JavaScript
@@ -11,7 +12,7 @@ browser-compat: javascript.builtins.Object.getOwnPropertyDescriptor
 
 {{JSRef}}
 
-The **`Object.getOwnPropertyDescriptor()`** method returns an
+The **`Object.getOwnPropertyDescriptor()`** static method returns an
 object describing the configuration of a specific property on a given object (that is,
 one directly present on an object and not in the object's prototype chain). The object
 returned is mutable but mutating it has no effect on the original property's
@@ -75,16 +76,18 @@ let o, d;
 
 o = { get foo() { return 17; } };
 d = Object.getOwnPropertyDescriptor(o, 'foo');
-// d is {
+console.log(d);
+// {
 //   configurable: true,
 //   enumerable: true,
-//   get: /*the getter function*/,
+//   get: [Function: get foo],
 //   set: undefined
 // }
 
 o = { bar: 42 };
 d = Object.getOwnPropertyDescriptor(o, 'bar');
-// d is {
+console.log(d);
+// {
 //   configurable: true,
 //   enumerable: true,
 //   value: 42,
@@ -93,7 +96,8 @@ d = Object.getOwnPropertyDescriptor(o, 'bar');
 
 o = { [Symbol.for('baz')]: 73 }
 d = Object.getOwnPropertyDescriptor(o, Symbol.for('baz'));
-// d is {
+console.log(d);
+// {
 //   configurable: true,
 //   enumerable: true,
 //   value: 73,
@@ -107,7 +111,8 @@ Object.defineProperty(o, 'qux', {
   enumerable: false
 });
 d = Object.getOwnPropertyDescriptor(o, 'qux');
-// d is {
+console.log(d);
+// {
 //   value: 8675309,
 //   writable: false,
 //   enumerable: false,

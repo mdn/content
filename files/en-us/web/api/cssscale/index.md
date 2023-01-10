@@ -25,7 +25,7 @@ The **`CSSScale`** interface of the {{domxref('CSS_Object_Model#css_typed_object
 - {{domxref("CSSScale.CSSScale", "CSSScale()")}} {{Experimental_Inline}}
   - : Creates a new `CSSScale` object.
 
-## Properties
+## Instance properties
 
 - {{domxref('CSSScale.x','x')}} {{Experimental_Inline}}
   - : Returns or sets the x-axis value.

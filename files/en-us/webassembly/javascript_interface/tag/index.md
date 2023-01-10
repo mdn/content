@@ -48,15 +48,16 @@ The snippet below shows how we might pass it to a module **example.wasm** during
 
 ```js
 const importObject = {
-  "extmod": {
-    "exttag": tagToImport
-  }
+  extmod: {
+    exttag: tagToImport,
+  },
 };
 
-WebAssembly.instantiateStreaming(fetch('example.wasm'), importObject)
-  .then((obj) => {
+WebAssembly.instantiateStreaming(fetch("example.wasm"), importObject).then(
+  (obj) => {
     // …
-  });
+  }
+);
 ```
 
 The WebAssembly module might then import the tag as shown below:

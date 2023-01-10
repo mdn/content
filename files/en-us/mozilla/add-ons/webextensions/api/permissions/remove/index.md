@@ -50,11 +50,10 @@ const permissionToRemove = {
   permissions: ["history"]
 }
 
-function remove() {
+async function remove() {
   console.log("removing");
-  browser.permissions.remove(permissionToRemove).then((result) => {
-    console.log(result);
-  });
+  const removed = await browser.permissions.remove(permissionToRemove);
+  console.log(removed);
 }
 
 document.querySelector("#remove").addEventListener("click", remove);
@@ -63,5 +62,3 @@ document.querySelector("#remove").addEventListener("click", remove);
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/permissions/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

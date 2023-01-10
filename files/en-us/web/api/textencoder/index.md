@@ -22,14 +22,14 @@ The **`TextEncoder`** interface takes a stream of code points as input and emits
 - {{DOMxRef("TextEncoder.TextEncoder", "TextEncoder()")}}
   - : Returns a newly constructed `TextEncoder` that will generate a byte stream with UTF-8 encoding.
 
-## Properties
+## Instance properties
 
 _The `TextEncoder` interface doesn't inherit any properties._
 
 - {{DOMxRef("TextEncoder.prototype.encoding")}} {{ReadOnlyInline}}
   - : Always returns `utf-8`.
 
-## Methods
+## Instance methods
 
 _The `TextEncoder` interface doesn't inherit any methods_.
 

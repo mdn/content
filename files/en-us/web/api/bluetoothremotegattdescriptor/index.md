@@ -18,7 +18,7 @@ browser-compat: api.BluetoothRemoteGATTDescriptor
 The `BluetoothRemoteGATTDescriptor` interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) provides a GATT Descriptor,
 which provides further information about a characteristic's value.
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("BluetoothRemoteGATTDescriptor.characteristic")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the {{DOMxRef("BluetoothRemoteGATTCharacteristic")}} this descriptor belongs
@@ -31,7 +31,7 @@ which provides further information about a characteristic's value.
   - : Returns the currently cached descriptor value. This value gets updated when the
     value of the descriptor is read.
 
-## Methods
+## Instance methods
 
 - {{DOMxRef("BluetoothRemoteGATTDescriptor.readValue()")}} {{Experimental_Inline}}
   - : Returns a {{JSxRef("Promise")}} that resolves to

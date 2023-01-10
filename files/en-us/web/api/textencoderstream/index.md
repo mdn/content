@@ -20,7 +20,7 @@ The **`TextEncoderStream`** interface of the {{domxref('Encoding API','','',' ')
 - {{domxref("TextEncoderStream.TextEncoderStream","TextEncoderStream()")}}
   - : Creates a new `TextEncoderStream` object.
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("TextEncoderStream.encoding")}} {{ReadOnlyInline}}
   - : Always returns "`utf-8`".

@@ -68,22 +68,22 @@ Once the file is instantiated, the code calls the exported WebAssembly `run()` m
 The stack is then logged from the `catch` statement.
 
 ```js
-const tag = new WebAssembly.Tag({ parameters: ['i32'] });
+const tag = new WebAssembly.Tag({ parameters: ["i32"] });
 
 function throwExceptionWithStack(param) {
   // Note: We declare the exception with "{traceStack: true}"
-  throw new WebAssembly.Exception(tag, [param], {traceStack: true});
+  throw new WebAssembly.Exception(tag, [param], { traceStack: true });
 }
 
 // Note: importObject properties match the WebAssembly import statements.
 const importObject = {
-  "extmod": {
-    "exttag": tag,
-    "throwExnWithStack": throwExceptionWithStack,
+  extmod: {
+    exttag: tag,
+    throwExnWithStack: throwExceptionWithStack,
   },
 };
 
-WebAssembly.instantiateStreaming(fetch('example.wasm'), importObject)
+WebAssembly.instantiateStreaming(fetch("example.wasm"), importObject)
   .then((obj) => {
     console.log(obj.instance.exports.run());
   })
@@ -100,7 +100,7 @@ WebAssembly.instantiateStreaming(fetch('example.wasm'), importObject)
 The most "relevant" part of this code is the line where the exception is created:
 
 ```js
-new WebAssembly.Exception(tag, [param], {traceStack: true});
+new WebAssembly.Exception(tag, [param], { traceStack: true });
 ```
 
 Passing in `{traceStack: true}` tells the WebAssembly virtual machine that it should attach a stack trace to the returned `WebAssembly.Exception`.

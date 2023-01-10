@@ -23,14 +23,14 @@ The `OfflineAudioContext` interface is an {{domxref("AudioContext")}} interface 
 - {{domxref("OfflineAudioContext.OfflineAudioContext()", "OfflineAudioContext()")}}
   - : Creates a new `OfflineAudioContext` instance.
 
-## Properties
+## Instance properties
 
 _Also inherits properties from its parent interface, {{domxref("BaseAudioContext")}}._
 
 - {{domxref('OfflineAudioContext.length')}} {{ReadOnlyInline}}
   - : An integer representing the size of the buffer in sample-frames.
 
-## Methods
+## Instance methods
 
 _Also inherits methods from its parent interface, {{domxref("BaseAudioContext")}}._
 

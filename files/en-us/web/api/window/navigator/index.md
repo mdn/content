@@ -24,7 +24,7 @@ The {{domxref("navigator")}} object.
 
 ## Examples
 
-### Example #1: Browser detect and return a string
+### Example 1: Browser detect and return a string
 
 ```js
 function getBrowserName(userAgent) {

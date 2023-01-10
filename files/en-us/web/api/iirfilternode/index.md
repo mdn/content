@@ -60,11 +60,11 @@ However, if you need to create an odd-ordered IIR filter, you'll need to use `II
 - {{domxref("IIRFilterNode.IIRFilterNode", "IIRFilterNode()")}}
   - : Creates a new instance of an IIRFilterNode object.
 
-## Properties
+## Instance properties
 
 _This interface has no properties of its own; however, it inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("AudioNode")}}. It also has the following additional methods:_
 

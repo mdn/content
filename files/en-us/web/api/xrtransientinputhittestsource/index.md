@@ -20,11 +20,11 @@ The **`XRTransientInputHitTestSource`** interface of the [WebXR Device API](/en-
 
 This object doesn't itself contain transient input hit test results, but it is used to compute hit tests for each {{domxref("XRFrame")}} by calling {{domxref("XRFrame.getHitTestResultsForTransientInput()")}}, which returns {{domxref("XRTransientInputHitTestResult")}} objects.
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
 - {{domxref("XRTransientInputHitTestSource.cancel()")}} {{Experimental_Inline}}
   - : Unsubscribes from the transient input hit test.

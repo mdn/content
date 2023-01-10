@@ -25,7 +25,7 @@ The **`CSSMatrixComponent`** interface of the {{domxref('CSS_Object_Model#css_ty
 - {{domxref("CSSMatrixComponent.CSSMatrixComponent", "CSSMatrixComponent()")}} {{Experimental_Inline}}
   - : Creates a new `CSSMatrixComponent` object.
 
-## Properties
+## Instance properties
 
 - {{domxref('CSSMatrixComponent.matrix','matrix')}} {{Experimental_Inline}}
   - : A matrix.

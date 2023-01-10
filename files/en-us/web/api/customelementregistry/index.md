@@ -15,7 +15,7 @@ browser-compat: api.CustomElementRegistry
 
 The **`CustomElementRegistry`** interface provides methods for registering custom elements and querying registered elements. To get an instance of it, use the {{domxref("window.customElements")}} property.
 
-## Methods
+## Instance methods
 
 - {{domxref("CustomElementRegistry.define()")}}
   - : Defines a new [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements).

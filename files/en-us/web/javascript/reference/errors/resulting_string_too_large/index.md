@@ -1,6 +1,7 @@
 ---
 title: 'RangeError: repeat count must be less than infinity'
 slug: Web/JavaScript/Reference/Errors/Resulting_string_too_large
+page-type: javascript-error
 tags:
   - Error
   - Errors
@@ -37,7 +38,7 @@ number. The range of allowed values can be described like this: \[0, +∞).
 
 The resulting string can also not be larger than the maximum string size, which can
 differ in JavaScript engines. In Firefox (SpiderMonkey) the maximum string size is
-2<sup>30</sup> - 2 (\~1GB).
+2<sup>30</sup> - 2 (\~2GiB).
 
 ## Examples
 

@@ -50,6 +50,8 @@ new FontFace(family, source, descriptors)
       - : With an allowable value for {{cssxref("@font-face/ascent-override")}}.
     - `descentOverride`
       - : With an allowable value for {{cssxref("@font-face/descent-override")}}.
+    - `display`
+      - : With an allowable value for {{cssxref("@font-face/font-display")}}.
     - `featureSettings`
       - : With an allowable value for {{cssxref("font-feature-settings")}}.
     - `lineGapOverride`
@@ -60,8 +62,6 @@ new FontFace(family, source, descriptors)
       - : With an allowable value for {{cssxref("@font-face/font-style")}}.
     - `unicodeRange`
       - : With an allowable value for {{cssxref("@font-face/unicode-range")}}.
-    - `variant`
-      - : With an allowable value for {{cssxref("@font-face/font-variant")}}.
     - `variationSettings`
       - : With an allowable value for {{cssxref("@font-face/font-variation-settings")}}.
     - `weight`

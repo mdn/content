@@ -37,7 +37,7 @@ A `CSSStyleDeclaration` object can be exposed using three different APIs:
 - {{DOMxRef("CSSStyleDeclaration.named_properties", '<code>CSSStyleDeclaration</code> named properties', "", 1)}}
   - : Dashed and camel-cased attributes for all supported CSS properties.
 
-## Methods
+## Instance methods
 
 - {{DOMxRef("CSSStyleDeclaration.getPropertyPriority()")}}
   - : Returns the optional priority, "important".

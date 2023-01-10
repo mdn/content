@@ -1,6 +1,7 @@
 ---
 title: Left shift assignment (<<=)
 slug: Web/JavaScript/Reference/Operators/Left_shift_assignment
+page-type: javascript-operator
 tags:
   - Assignment operator
   - JavaScript
@@ -12,7 +13,7 @@ browser-compat: javascript.operators.left_shift_assignment
 
 {{jsSidebar("Operators")}}
 
-The left shift assignment operator (`<<=`) moves the specified amount of bits to the left and assigns the result to the variable.
+The **left shift assignment (`<<=`)** operator moves the specified amount of bits to the left and assigns the result to the variable.
 
 {{EmbedInteractiveExample("pages/js/expressions-left-shift-assignment.html", "shorter")}}
 

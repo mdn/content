@@ -26,7 +26,7 @@ The **`SensorErrorEvent`** interface of the [Sensor APIs](/en-US/docs/Web/API/Se
 - {{domxref("SensorErrorEvent.SensorErrorEvent", "SensorErrorEvent()")}}
   - : Creates a new `SensorErrorEvent` object.
 
-## Properties
+## Instance properties
 
 - {{domxref('SensorErrorEvent.error')}} {{ReadOnlyInline}}
   - : Returns the {{domxref('DOMException')}} object passed in the event's constructor.

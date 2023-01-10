@@ -53,25 +53,25 @@ Congratulations, you've just created your first object. Job done! But this is an
 
 ```js
 const person = {
-  name: ['Bob', 'Smith'],
+  name: ["Bob", "Smith"],
   age: 32,
   bio: function () {
     console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
   },
   introduceSelf: function () {
     console.log(`Hi! I'm ${this.name[0]}.`);
-  }
+  },
 };
 ```
 
 After saving and refreshing, try entering some of the following into the JavaScript console on your browser devtools:
 
 ```js
-person.name
-person.name[0]
-person.age
-person.bio()
-person.introduceSelf()
+person.name;
+person.name[0];
+person.age;
+person.bio();
+person.introduceSelf();
 ```
 
 You have now got some data and functionality inside your object, and are now able to access them with some nice simple syntax!
@@ -82,7 +82,7 @@ So what is going on here? Well, an object is made up of multiple members, each o
 const objectName = {
   member1Name: member1Value,
   member2Name: member2Value,
-  member3Name: member3Value
+  member3Name: member3Value,
 };
 ```
 
@@ -92,14 +92,14 @@ When the object's members are functions there's a simpler syntax. Instead of `bi
 
 ```js
 const person = {
-  name: ['Bob', 'Smith'],
+  name: ["Bob", "Smith"],
   age: 32,
   bio() {
     console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
   },
   introduceSelf() {
     console.log(`Hi! I'm ${this.name[0]}.`);
-  }
+  },
 };
 ```
 
@@ -114,8 +114,8 @@ It is very common to create an object using an object literal when you want to t
 Above, you accessed the object's properties and methods using **dot notation**. The object name (person) acts as the **namespace** — it must be entered first to access anything inside the object. Next you write a dot, then the item you want to access — this can be the name of a simple property, an item of an array property, or a call to one of the object's methods, for example:
 
 ```js
-person.age
-person.bio()
+person.age;
+person.bio();
 ```
 
 ### Objects as object properties
@@ -124,7 +124,7 @@ An object property can itself be an object. For example, try changing the `name`
 
 ```js
 const person = {
-  name: ['Bob', 'Smith'],
+  name: ["Bob", "Smith"],
 };
 ```
 
@@ -133,8 +133,8 @@ to
 ```js
 const person = {
   name: {
-    first: 'Bob',
-    last: 'Smith',
+    first: "Bob",
+    last: "Smith",
   },
   // …
 };
@@ -143,22 +143,22 @@ const person = {
 To access these items you just need to chain the extra step onto the end with another dot. Try these in the JS console:
 
 ```js
-person.name.first
-person.name.last
+person.name.first;
+person.name.last;
 ```
 
 If you do this, you'll also need to go through your method code and change any instances of
 
 ```js
-name[0]
-name[1]
+name[0];
+name[1];
 ```
 
 to
 
 ```js
-name.first
-name.last
+name.first;
+name.last;
 ```
 
 Otherwise, your methods will no longer work.
@@ -169,15 +169,15 @@ Bracket notation provides an alternative way to access object properties.
 Instead of using [dot notation](#dot_notation) like this:
 
 ```js
-person.age
-person.name.first
+person.age;
+person.name.first;
 ```
 
 You can instead use brackets:
 
 ```js
-person['age']
-person['name']['first']
+person["age"];
+person["name"]["first"];
 ```
 
 This looks very similar to how you access the items in an array, and it is basically the same thing — instead of using an index number to select an item, you are using the name associated with each member's value.
@@ -185,15 +185,24 @@ It is no wonder that objects are sometimes called **associative arrays** — the
 
 Dot notation is generally preferred over bracket notation because it is more succinct and easier to read.
 However there are some cases where you have to use brackets.
-For example, if an object property name is defined at runtime then you can't use dot notation to access the value, but you can pass the name as a variable inside brackets as shown with `input` below:
+For example, if an object property name is held in a variable, then you can't use dot notation to access the value, but you can access the value using bracket notation.
+
+In the example below, the `logProperty()` function can use `person[propertyName]` to retrieve the value of the property named in `propertyName`.
 
 ```js
 const person = {
-  name: ['Bob', 'Smith'],
-  age: 32
+  name: ["Bob", "Smith"],
+  age: 32,
+};
+
+function logProperty(propertyName) {
+  console.log(person[propertyName]);
 }
-const input = prompt('Get name or age?')
-console.log(person[input])
+
+logProperty("name");
+// ["Bob", "Smith"]
+logProperty("age");
+// 32
 ```
 
 ## Setting object members
@@ -202,30 +211,30 @@ So far we've only looked at retrieving (or **getting**) object members — you c
 
 ```js
 person.age = 45;
-person['name']['last'] = 'Cratchit';
+person["name"]["last"] = "Cratchit";
 ```
 
 Try entering the above lines, and then getting the members again to see how they've changed, like so:
 
 ```js
-person.age
-person['name']['last']
+person.age;
+person["name"]["last"];
 ```
 
 Setting members doesn't just stop at updating the values of existing properties and methods; you can also create completely new members. Try these in the JS console:
 
 ```js
-person['eyes'] = 'hazel';
-person.farewell = function() {
-  console.log('Bye everybody!');
-}
+person["eyes"] = "hazel";
+person.farewell = function () {
+  console.log("Bye everybody!");
+};
 ```
 
 You can now test out your new members:
 
 ```js
-person['eyes']
-person.farewell()
+person["eyes"];
+person.farewell();
 ```
 
 One useful aspect of bracket notation is that it can be used to set not only member values dynamically, but member names too. Let's say we wanted users to be able to store custom value types in their people data, by typing the member name and value into two text inputs. We could get those values like this:
@@ -244,15 +253,15 @@ person[myDataName] = myDataValue;
 To test this, try adding the following lines into your code, just below the closing curly brace of the `person` object:
 
 ```js
-const myDataName = 'height';
-const myDataValue = '1.75m';
+const myDataName = "height";
+const myDataValue = "1.75m";
 person[myDataName] = myDataValue;
 ```
 
 Now try saving and refreshing, and entering the following into your text input:
 
 ```js
-person.height
+person.height;
 ```
 
 Adding a property to an object using the method above isn't possible with dot notation, which can only accept a literal member name, not a variable value pointing to a name.
@@ -275,18 +284,18 @@ Let's illustrate what we mean with a simplified pair of person objects:
 
 ```js
 const person1 = {
-  name: 'Chris',
+  name: "Chris",
   introduceSelf() {
     console.log(`Hi! I'm ${this.name}.`);
-  }
-}
+  },
+};
 
 const person2 = {
-  name: 'Deepti',
+  name: "Deepti",
   introduceSelf() {
     console.log(`Hi! I'm ${this.name}.`);
-  }
-}
+  },
+};
 ```
 
 In this case, `person1.introduceSelf()` outputs "Hi! I'm Chris."; `person2.introduceSelf()` on the other hand outputs "Hi! I'm Deepti.", even though the method's code is exactly the same in each case. This isn't hugely useful when you are writing out object literals by hand, but it will be essential when we start using **constructors** to create more than one object from a single object definition, and that's the subject of the next section.
@@ -303,9 +312,9 @@ The first version of this is just a function:
 function createPerson(name) {
   const obj = {};
   obj.name = name;
-  obj.introduceSelf = function() {
+  obj.introduceSelf = function () {
     console.log(`Hi! I'm ${this.name}.`);
-  }
+  };
   return obj;
 }
 ```
@@ -320,11 +329,11 @@ Note that `createPerson()` takes a parameter `name` to set the value of the `nam
 Now we can create as many objects as we like, reusing the definition:
 
 ```js
-const salva = createPerson('Salva');
+const salva = createPerson("Salva");
 salva.name;
 salva.introduceSelf();
 
-const frankie = createPerson('Frankie');
+const frankie = createPerson("Frankie");
 frankie.name;
 frankie.introduceSelf();
 ```
@@ -341,20 +350,20 @@ Constructors, by convention, start with a capital letter and are named for the t
 ```js
 function Person(name) {
   this.name = name;
-  this.introduceSelf = function() {
+  this.introduceSelf = function () {
     console.log(`Hi! I'm ${this.name}.`);
-  }
+  };
 }
 ```
 
 To call `Person()` as a constructor, we use `new`:
 
 ```js
-const salva = new Person('Salva');
+const salva = new Person("Salva");
 salva.name;
 salva.introduceSelf();
 
-const frankie = new Person('Frankie');
+const frankie = new Person("Frankie");
 frankie.name;
 frankie.introduceSelf();
 ```
@@ -366,7 +375,7 @@ As you've been going through these examples, you have probably been thinking tha
 So when you used string methods like:
 
 ```js
-myString.split(',');
+myString.split(",");
 ```
 
 You were using a method available on a [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) object. Every time you create a string in your code, that string is automatically created as an instance of `String`, and therefore has several common methods and properties available on it.
@@ -374,8 +383,8 @@ You were using a method available on a [`String`](/en-US/docs/Web/JavaScript/Ref
 When you accessed the document object model using lines like this:
 
 ```js
-const myDiv = document.createElement('div');
-const myVideo = document.querySelector('video');
+const myDiv = document.createElement("div");
+const myVideo = document.querySelector("video");
 ```
 
 You were using methods available on a [`Document`](/en-US/docs/Web/API/Document) object. For each webpage loaded, an instance of `Document` is created, called `document`, which represents the entire page's structure, content, and other features such as its URL. Again, this means that it has several common methods and properties available on it.
@@ -385,7 +394,7 @@ The same is true of pretty much any other built-in object or API you've been usi
 Note that built in objects and APIs don't always create object instances automatically. As an example, the [Notifications API](/en-US/docs/Web/API/Notifications_API) — which allows modern browsers to fire system notifications — requires you to instantiate a new object instance using the constructor for each notification you want to fire. Try entering the following into your JavaScript console:
 
 ```js
-const myNotification = new Notification('Hello!');
+const myNotification = new Notification("Hello!");
 ```
 
 ## Test your skills!

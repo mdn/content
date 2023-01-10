@@ -26,7 +26,7 @@ The **`VRFrameData`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API
 - {{domxref("VRFrameData.VRFrameData", "VRFrameData()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Creates a `VRFrameData` object instance.
 
-## Properties
+## Instance properties
 
 - {{domxref("VRFrameData.leftProjectionMatrix")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : A {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the projection to be used for the left eye's rendering.

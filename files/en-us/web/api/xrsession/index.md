@@ -24,7 +24,7 @@ With `XRSession` methods, you can poll the viewer's position and orientation (th
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _In addition to the properties listed below, `XRSession` inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
@@ -47,7 +47,7 @@ _In addition to the properties listed below, `XRSession` inherits properties fro
 - {{DOMxRef("XRSession.visibilityState", "visibilityState")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : A string indicating whether or not the session's imagery is visible to the user, and if so, if it's being visible but not currently the target for user events.
 
-## Methods
+## Instance methods
 
 _`XRSession` provides the following methods in addition to those inherited from its parent interface, {{domxref("EventTarget")}}._
 

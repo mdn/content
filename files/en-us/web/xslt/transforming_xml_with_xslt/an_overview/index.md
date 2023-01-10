@@ -1,5 +1,5 @@
 ---
-title: An Overview
+title: An overview
 slug: Web/XSLT/Transforming_XML_with_XSLT/An_Overview
 tags:
   - NeedsHelp

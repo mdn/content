@@ -1,6 +1,7 @@
 ---
 title: Generator
 slug: Web/JavaScript/Reference/Global_Objects/Generator
+page-type: javascript-class
 tags:
   - Class
   - ECMAScript 2015
@@ -35,6 +36,11 @@ console.log(gen.next().value); // 1
 console.log(gen.next().value); // 2
 console.log(gen.next().value); // 3
 ```
+
+## Instance properties
+
+- `Generator.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Generator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

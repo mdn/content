@@ -23,14 +23,14 @@ This interface inherits from {{domxref("AuthenticatorResponse")}}.
 
 > **Note:** This interface is restricted to top-level contexts. Use from within an {{HTMLElement("iframe")}} element will not have any effect.
 
-## Properties
+## Instance properties
 
 - `AuthenticatorAttestationResponse.clientDataJSON` {{securecontext_inline}} {{ReadOnlyInline}}
   - : Client data for the authentication, such as origin and challenge. The {{domxref("AuthenticatorResponse.clientDataJSON","clientDataJSON")}} property is inherited from the {{domxref("AuthenticatorResponse")}}.
 - {{domxref("AuthenticatorAttestationResponse.attestationObject")}} {{securecontext_inline}} {{ReadOnlyInline}}
   - : An {{jsxref("ArrayBuffer")}} containing authenticator data and an attestation statement for a newly-created key pair.
 
-## Methods
+## Instance methods
 
 - {{domxref("AuthenticatorAttestationResponse.getTransports()")}} {{securecontext_inline}}
   - : Returns an {{jsxref("Array")}} of strings describing which transport methods (e.g. `usb`, `nfc`) are believed to be supported with the authenticator. The array may be empty if the information is not available.

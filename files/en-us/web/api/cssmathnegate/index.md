@@ -24,14 +24,18 @@ The **`CSSMathNegate`** interface of the {{domxref('CSS_Object_Model#css_typed_o
 - {{domxref("CSSMathNegate.CSSMathNegate", "CSSMathNegate()")}} {{Experimental_Inline}}
   - : Creates a new `CSSMathNegate` object.
 
-## Properties
+## Instance properties
 
 - {{domxref('CSSMathNegate.value')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref('CSSNumericValue')}} object.
 
-## Methods
+## Static methods
 
-None.
+_The interface may also inherit methods from its parent interface, {{domxref("CSSMathValue")}}._
+
+## Instance methods
+
+_The interface may also inherit methods from its parent interface, {{domxref("CSSMathValue")}}._
 
 ## Examples
 

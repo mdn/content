@@ -19,7 +19,7 @@ browser-compat: api.ResizeObserverEntry
 
 The **`ResizeObserverEntry`** interface represents the object passed to the {{domxref('ResizeObserver.ResizeObserver','ResizeObserver()')}} constructor's callback function, which allows you to access the new dimensions of the {{domxref("Element")}} or {{domxref("SVGElement")}} being observed.
 
-## Properties
+## Instance properties
 
 - {{domxref('ResizeObserverEntry.borderBoxSize')}} {{ReadOnlyInline}}
   - : An object containing the new border box size of the observed element when the callback is run.
@@ -34,7 +34,7 @@ The **`ResizeObserverEntry`** interface represents the object passed to the {{do
 
 > **Note:** The content box is the box in which content can be placed, meaning the border box minus the padding and border width. The border box encompasses the content, padding, and border. See [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) for further explanation.
 
-## Methods
+## Instance methods
 
 None.
 

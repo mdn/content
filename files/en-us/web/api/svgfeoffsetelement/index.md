@@ -17,7 +17,7 @@ The **`SVGFEOffsetElement`** interface corresponds to the {{SVGElement("feOffset
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
@@ -38,7 +38,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFEOffsetElement.y")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
-## Methods
+## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
 

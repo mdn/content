@@ -22,7 +22,7 @@ browser-compat: api.console.debug
 The **`console.debug()`** method outputs a message to the web console at
 the "debug" log level. The message is only displayed to the user if the console is configured to
 display debug output. In most cases, the log level is configured within the console UI. This log
-level might correspond to the \`Debug\` or \`Verbose\` log level.
+level might correspond to the `Debug` or `Verbose` log level.
 
 {{AvailableInWorkers}}
 

@@ -1,6 +1,7 @@
 ---
 title: Set.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Set/clear
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -37,12 +38,12 @@ const mySet = new Set();
 mySet.add(1);
 mySet.add("foo");
 
-console.log(mySet.size);       // 2
+console.log(mySet.size); // 2
 console.log(mySet.has("foo")); // true
 
 mySet.clear();
 
-console.log(mySet.size);       // 0
+console.log(mySet.size); // 0
 console.log(mySet.has("bar")); // false
 ```
 

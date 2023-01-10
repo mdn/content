@@ -16,11 +16,11 @@ The **`HTMLSpanElement`** interface represents a {{HTMLElement("span")}} element
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface has no properties, but inherits properties from: {{DOMxRef("HTMLElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface has no methods, but inherits methods from: {{DOMxRef("HTMLElement")}}._
 

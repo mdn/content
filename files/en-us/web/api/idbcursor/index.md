@@ -24,7 +24,7 @@ You can have an unlimited number of cursors at the same time. You always get the
 
 {{AvailableInWorkers}}
 
-## Properties
+## Instance properties
 
 > **Note:** {{domxref("IDBCursorWithValue")}} is an **`IDBCursor`** interface with an additional **`value`** property.
 
@@ -39,7 +39,7 @@ You can have an unlimited number of cursors at the same time. You always get the
 - {{domxref("IDBCursor.request")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("IDBRequest")}} that was used to obtain the cursor.
 
-## Methods
+## Instance methods
 
 - {{domxref("IDBCursor.advance()")}}
   - : Sets the number of times a cursor should move its position forward.

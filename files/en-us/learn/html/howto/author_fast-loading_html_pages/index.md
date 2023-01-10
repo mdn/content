@@ -11,6 +11,8 @@ tags:
   - Web Performance
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}
+
 These tips are based on common knowledge and experimentation.
 
 An optimized web page not only provides for a more responsive site for your visitors but also reduces the load on your web servers and internet connection. This can be crucial for high volume sites or sites which have a spike in traffic due to unusual circumstances such as breaking news stories.
@@ -195,5 +197,5 @@ Note: Even though these attributes do help a lot the first time a page is loaded
 ## See also
 
 - Book: ["Speed Up Your Site" by Andy King](http://www.websiteoptimization.com/)
-- The excellent and very complete [Best Practices for Speeding Up Your Web Site](https://developer.yahoo.com/performance/rules.html) (Yahoo!)
+- The excellent and very complete [Best Practices for Speeding Up Your Website](https://developer.yahoo.com/performance/rules.html) (Yahoo!)
 - Tools for analyzing and optimizing performance: [Google PageSpeed Tools](https://developers.google.com/speed)

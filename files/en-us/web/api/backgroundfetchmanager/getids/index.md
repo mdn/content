@@ -38,7 +38,7 @@ None.
 
 ## Examples
 
-The following examples shows how to retrieve the IDs of all registered background fetches. With an active {{domxref('ServiceWorker', 'service worker')}}, use the {{domxref('ServiceWorkerRegistration.backgroundFetch')}} property to access the \`BackgroundFetchManager\` object and call its \`get()\` method.
+The following examples shows how to retrieve the IDs of all registered background fetches. With an active {{domxref('ServiceWorker', 'service worker')}}, use the {{domxref('ServiceWorkerRegistration.backgroundFetch')}} property to access the `BackgroundFetchManager` object and call its `getIds()` method.
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {

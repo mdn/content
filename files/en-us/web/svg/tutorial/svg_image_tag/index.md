@@ -1,6 +1,7 @@
 ---
 title: SVG image element
 slug: Web/SVG/Tutorial/SVG_Image_Tag
+page-type: guide
 tags:
   - Beginner
   - NeedsBeginnerUpdate

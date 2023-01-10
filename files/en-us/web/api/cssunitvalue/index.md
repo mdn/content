@@ -24,18 +24,22 @@ The **`CSSUnitValue`** interface of the {{domxref('CSS_Object_Model#css_typed_ob
 - {{domxref("CSSUnitValue.CSSUnitValue", "CSSUnitValue()")}} {{Experimental_Inline}}
   - : Creates a new `CSSUnitValue` object.
 
-## Properties
+## Instance properties
 
 - {{domxref('CSSUnitValue.value')}} {{Experimental_Inline}}
   - : Returns a double indicating the number of units.
 - {{domxref('CSSUnitValue.unit')}} {{Experimental_Inline}}
   - : Returns a string indicating the type of unit.
 
-### Event handlers
+## Static methods
 
-None.
+_The interface may also inherit methods from its parent interface, {{domxref("CSSNumericValue")}}._
 
-## Methods
+## Instance methods
+
+_The interface may also inherit methods from its parent interface, {{domxref("CSSNumericValue")}}._
+
+## Event handlers
 
 None.
 

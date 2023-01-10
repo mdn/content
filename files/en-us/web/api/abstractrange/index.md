@@ -16,7 +16,7 @@ The **`AbstractRange`** abstract interface is the base class upon which all {{Gl
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("AbstractRange.collapsed", "collapsed")}} {{ReadOnlyInline}}
   - : A Boolean value which is `true` if the range is _collapsed_. A collapsed range is a range whose start position and end position are the same, resulting in a zero-character-long range.
@@ -29,7 +29,7 @@ The **`AbstractRange`** abstract interface is the base class upon which all {{Gl
 - {{domxref("AbstractRange.startOffset", "startOffset")}} {{ReadOnlyInline}}
   - : An integer value indicating the offset, in characters, from the beginning of the node's contents to the last character of the contents referred to by the range object. This value must be less than the length of the node indicated in `startContainer`.
 
-## Methods
+## Instance methods
 
 _The `AbstractRange` interface does provide any methods._
 

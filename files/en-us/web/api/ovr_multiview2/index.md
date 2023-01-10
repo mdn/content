@@ -42,7 +42,7 @@ This extension exposes 4 constants that can be used in [`getParameter()`](/en-US
 - `FRAMEBUFFER_INCOMPLETE_VIEW_TARGETS_OVR`
   - : If baseViewIndex is not the same for all framebuffer attachment points where the value of `FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE` is not `NONE`, the framebuffer is considered incomplete. Calling [`checkFramebufferStatus`](/en-US/docs/Web/API/WebGLRenderingContext/checkFramebufferStatus) for a framebuffer in this state returns `FRAMEBUFFER_INCOMPLETE_VIEW_TARGETS_OVR`.
 
-## Methods
+## Instance methods
 
 - [`framebufferTextureMultiviewOVR()`](/en-US/docs/Web/API/OVR_multiview2/framebufferTextureMultiviewOVR)
   - : Simultaneously renders to multiple elements of a 2D texture array.

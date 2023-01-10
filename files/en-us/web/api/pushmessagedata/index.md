@@ -21,11 +21,11 @@ Unlike the similar methods in the [Fetch API](/en-US/docs/Web/API/Fetch_API), wh
 
 Messages received through the Push API are sent encrypted by push services and then automatically decrypted by browsers before they are made accessible through the methods of the `PushMessageData` interface.
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
 - {{domxref("PushMessageData.arrayBuffer()")}}
   - : Extracts the data as an {{jsxref("ArrayBuffer")}} object.

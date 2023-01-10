@@ -29,7 +29,7 @@ It inherits from its parent, {{domxref("DOMRectReadOnly")}}.
 - {{domxref("DOMRect.DOMRect","DOMRect()")}}
   - : Creates a new `DOMRect` object.
 
-## Properties
+## Instance properties
 
 _`DOMRect` inherits properties from its parent, {{domxref("DOMRectReadOnly")}}. The difference is that they are not read-only anymore._
 
@@ -50,14 +50,16 @@ _`DOMRect` inherits properties from its parent, {{domxref("DOMRectReadOnly")}}. 
 - {{domxref("DOMRectReadOnly.left")}}
   - : Returns the left coordinate value of the `DOMRect` (has the same value as `x`, or `x + width` if `width` is negative).
 
-## Methods
-
-_`DOMRect` inherits methods from its parent, {{domxref("DOMRectReadOnly")}}._
-
 ## Static methods
+
+_`DOMRect` may also inherit static methods from its parent, {{domxref("DOMRectReadOnly")}}._
 
 - {{domxref("DOMRect.fromRect()")}}
   - : Creates a new `DOMRect` object with a given location and dimensions.
+
+## Instance methods
+
+_`DOMRect` may inherit methods from its parent, {{domxref("DOMRectReadOnly")}}._
 
 ## Specifications
 

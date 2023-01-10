@@ -35,9 +35,11 @@ You can use the following pseudo-elements to customize various parts of the scro
 
 - `::-webkit-scrollbar` — the entire scrollbar.
 - `::-webkit-scrollbar-button` — the buttons on the scrollbar (arrows pointing upwards and downwards that scroll one line at a time).
+- `::-webkit-scrollbar:horizontal{}` — the horizontal scrollbar.
 - `::-webkit-scrollbar-thumb` — the draggable scrolling handle.
 - `::-webkit-scrollbar-track` — the track (progress bar) of the scrollbar, where there is a gray bar on top of a white bar.
 - `::-webkit-scrollbar-track-piece` — the part of the track (progress bar) not covered by the handle.
+- `::-webkit-scrollbar:vertical{}` — the vertical scrollbar.
 - `::-webkit-scrollbar-corner` — the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet. This is often the bottom-right corner of the browser window.
 - `::-webkit-resizer` — the draggable resizing handle that appears at the bottom corner of some elements.
 

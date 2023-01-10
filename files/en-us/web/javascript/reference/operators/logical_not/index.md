@@ -1,6 +1,7 @@
 ---
 title: Logical NOT (!)
 slug: Web/JavaScript/Reference/Operators/Logical_NOT
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
@@ -12,7 +13,7 @@ browser-compat: javascript.operators.logical_not
 
 {{jsSidebar("Operators")}}
 
-The logical NOT (`!`) operator (logical complement, negation) takes truth to
+The **logical NOT (`!`)** (logical complement, negation) operator takes truth to
 falsity and vice versa. It is typically used with boolean (logical)
 values. When used with non-Boolean values, it returns `false` if its single
 operand can be converted to `true`; otherwise, returns `true`.

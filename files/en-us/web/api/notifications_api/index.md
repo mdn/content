@@ -30,7 +30,7 @@ This is not only best practice — you should not be spamming users with notific
 
 This will spawn a request dialog, along the following lines:
 
-![](screen_shot_2019-12-11_at_9.59.14_am.png)
+![A dialog box asking the user to allow notifications from that origin. There are options to never allow or allow notifications.](screen_shot_2019-12-11_at_9.59.14_am.png)
 
 From here the user can choose to allow notifications from this origin, or block them. Once a choice has been made, the setting will generally persist for the current session.
 

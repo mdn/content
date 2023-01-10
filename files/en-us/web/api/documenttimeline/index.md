@@ -26,7 +26,7 @@ The **`DocumentTimeline`** interface of the [Web Animations API](/en-US/docs/Web
 - {{domxref("DocumentTimeline.DocumentTimeline", "DocumentTimeline()")}}
   - : Creates a new `DocumentTimeline` object associated with the active document of the current browsing context.
 
-## Properties
+## Instance properties
 
 _This interface inherits its property from its parent, {{domxref("AnimationTimeline")}}._
 

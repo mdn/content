@@ -19,11 +19,11 @@ The **`FileSystemWritableFileStream`** interface of the {{domxref('File System A
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("WritableStream")}}._
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{DOMxRef("WritableStream")}}._
 

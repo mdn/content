@@ -16,11 +16,11 @@ browser-compat: http.status
 HTTP response status codes indicate whether a specific [HTTP](/en-US/docs/Web/HTTP) request has been successfully completed.
 Responses are grouped in five classes:
 
-1. [Informational responses](#information_responses) (`100`–`199`)
-2. [Successful responses](#successful_responses) (`200`–`299`)
-3. [Redirection messages](#redirection_messages) (`300`–`399`)
-4. [Client error responses](#client_error_responses) (`400`–`499`)
-5. [Server error responses](#server_error_responses) (`500`–`599`)
+1. [Informational responses](#information_responses) (`100` – `199`)
+2. [Successful responses](#successful_responses) (`200` – `299`)
+3. [Redirection messages](#redirection_messages) (`300` – `399`)
+4. [Client error responses](#client_error_responses) (`400` – `499`)
+5. [Server error responses](#server_error_responses) (`500` – `599`)
 
 The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs/rfc9110.html#overview.of.status.codes).
 
@@ -112,7 +112,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
   - : The client does not have access rights to the content; that is, it is unauthorized, so the server is refusing to give the requested resource.
     Unlike `401 Unauthorized`, the client's identity is known to the server.
 - {{HTTPStatus(404, "404 Not Found")}}
-  - : The server can not find the requested resource.
+  - : The server cannot find the requested resource.
     In the browser, this means the URL is not recognized.
     In an API, this can also mean that the endpoint is valid but the resource itself does not exist.
     Servers may also send this response instead of `403 Forbidden` to hide the existence of a resource from an unauthorized client.

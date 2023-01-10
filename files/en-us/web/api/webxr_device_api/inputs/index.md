@@ -61,7 +61,7 @@ The fundamental capabilities of an input source are:
 
 Any additional capabilities a WebXR controller may have are accessed through the input source's {{domxref("XRInputSource.gamepad", "gamepad")}} object. This object provides access to all of the buttons, axes, trackpads, and so forth that may be a part of the controller. See [Advanced controllers using the gamepad object](#advanced_controllers_using_the_gamepad_object) to learn how to use these controllers.
 
-### Properties of input sources
+### Instance properties of input sources
 
 Each individual `XRInputSource` has a set of properties that describe the input's available axes and buttons, which hand the user's holding it in, and how the input source is used to handle targeting within the 3D space.
 
@@ -429,10 +429,10 @@ If an XR device uses the mouse to simulate a controller when in the `inline` mod
 1. The user presses the mouse button while inside the {{HTMLElement("canvas")}} presenting the WebXR scene.
 2. The mouse event is captured by the XR device's driver.
 3. The device creates a new `XRInputSource` to represent the simulated XR input source. The {{domxref("XRInputSource.targetRayMode", "targetRayMode")}} is set to `screen`, and the other information is filled out as appropriate. This new input source is temporarily added to the list that's returned by the {{domxref("XRSession")}} property {{domxref("XRSession.inputSources", "inputSources")}}.
-4. The browser delivers {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} events corresponding to the action.
+4. The browser delivers {{domxref("Element/pointerdown_event", "pointerdown")}} events corresponding to the action.
 5. A primary action is generated and sent to the app in the form of a {{domxref("XRSession.selectstart_event", "selectstart")}} event, with its source set to the new `XRInputSource`. Or, if the mouse is being used as an off-hand or secondary controller, an auxiliary action is sent instead.
 6. When the user releases the mouse button, the {{domxref("XRSession.select_event", "select")}} event is sent to the `XRSession`, then the DOM receives a {{domxref("Element.click_event", "click")}} event. The session then receives the {{domxref("XRSession.selectend_event", "selectend")}} event indicating the completion of the action.
-7. When the action is completed, the browser deletes the transient input source, and any appropriate {{domxref("HTMLElement/pointerup_event", "pointerup")}} events are sent.
+7. When the action is completed, the browser deletes the transient input source, and any appropriate {{domxref("Element/pointerup_event", "pointerup")}} events are sent.
 
 Thus, the transient input source is indeed transient—it exists only for the duration of handling the input and will as such not be listed in the input source list.
 

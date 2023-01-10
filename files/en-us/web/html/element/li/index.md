@@ -9,11 +9,73 @@ tags:
 browser-compat: html.elements.li
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<li>`** [HTML](/en-US/docs/Web/HTML) element is used to represent an item in a list. It must be contained in a parent element: an ordered list ({{HTMLElement("ol")}}), an unordered list ({{HTMLElement("ul")}}), or a menu ({{HTMLElement("menu")}}). In menus and unordered lists, list items are usually displayed using bullet points. In ordered lists, they are usually displayed with an ascending counter on the left, such as a number or letter.
 
 {{EmbedInteractiveExample("pages/tabbed/li.html", "tabbed-shorter")}}
+
+## Attributes
+
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+- {{htmlattrdef("value")}}
+  - : This integer attribute indicates the current ordinal value of the list item as defined by the {{HTMLElement("ol")}} element. The only allowed value for this attribute is a number, even if the list is displayed with Roman numerals or letters. List items that follow this one continue numbering from the value set. The **value** attribute has no meaning for unordered lists ({{HTMLElement("ul")}}) or for menus ({{HTMLElement("menu")}}).
+- {{htmlattrdef("type")}} {{Deprecated_inline}} {{Non-standard_Inline}}
+
+  - : This character attribute indicates the numbering type:
+
+    - `a`: lowercase letters
+    - `A`: uppercase letters
+    - `i`: lowercase Roman numerals
+    - `I`: uppercase Roman numerals
+    - `1`: numbers
+
+    This type overrides the one used by its parent {{HTMLElement("ol")}} element, if any.
+
+    > **Note:** This attribute has been deprecated; use the CSS {{cssxref("list-style-type")}} property instead.
+
+## Examples
+
+For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul")}} pages.
+
+### Ordered list
+
+```html
+<ol>
+  <li>first item</li>
+  <li>second item</li>
+  <li>third item</li>
+</ol>
+```
+
+{{EmbedLiveSample("Ordered_list")}}
+
+### Ordered list with a custom value
+
+```html
+<ol type="I">
+  <li value="3">third item</li>
+  <li>fourth item</li>
+  <li>fifth item</li>
+</ol>
+```
+
+{{EmbedLiveSample("Ordered_list_with_a_custom_value")}}
+
+### Unordered list
+
+```html
+<ul>
+  <li>first item</li>
+  <li>second item</li>
+  <li>third item</li>
+</ul>
+```
+
+{{EmbedLiveSample("Unordered_list")}}
+
+## Technical Summary
 
 <table class="properties">
   <tbody>
@@ -80,66 +142,6 @@ The **`<li>`** [HTML](/en-US/docs/Web/HTML) element is used to represent an item
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-- {{htmlattrdef("value")}}
-  - : This integer attribute indicates the current ordinal value of the list item as defined by the {{HTMLElement("ol")}} element. The only allowed value for this attribute is a number, even if the list is displayed with Roman numerals or letters. List items that follow this one continue numbering from the value set. The **value** attribute has no meaning for unordered lists ({{HTMLElement("ul")}}) or for menus ({{HTMLElement("menu")}}).
-- {{htmlattrdef("type")}} {{Deprecated_inline}} {{Non-standard_Inline}}
-
-  - : This character attribute indicates the numbering type:
-
-    - `a`: lowercase letters
-    - `A`: uppercase letters
-    - `i`: lowercase Roman numerals
-    - `I`: uppercase Roman numerals
-    - `1`: numbers
-
-    This type overrides the one used by its parent {{HTMLElement("ol")}} element, if any.
-
-    > **Note:** This attribute has been deprecated; use the CSS {{cssxref("list-style-type")}} property instead.
-
-## Examples
-
-For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul")}} pages.
-
-### Ordered list
-
-```html
-<ol>
-  <li>first item</li>
-  <li>second item</li>
-  <li>third item</li>
-</ol>
-```
-
-{{EmbedLiveSample("Ordered_list")}}
-
-### Ordered list with a custom value
-
-```html
-<ol type="I">
-  <li value="3">third item</li>
-  <li>fourth item</li>
-  <li>fifth item</li>
-</ol>
-```
-
-{{EmbedLiveSample("Ordered_list_with_a_custom_value")}}
-
-### Unordered list
-
-```html
-<ul>
-  <li>first item</li>
-  <li>second item</li>
-  <li>third item</li>
-</ul>
-```
-
-{{EmbedLiveSample("Unordered_list")}}
 
 ## Specifications
 

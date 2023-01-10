@@ -16,7 +16,7 @@ The **`GamepadButton`** interface defines an individual button of a gamepad or o
 
 A `GamepadButton` object is returned by querying any value of the array returned by the `buttons` property of the {{domxref("Gamepad")}} interface.
 
-## Properties
+## Instance properties
 
 - {{domxref("GamepadButton.pressed")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether the button is currently pressed (`true`) or unpressed (`false`).

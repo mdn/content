@@ -25,7 +25,7 @@ The **`AudioWorkletNode`** interface of the [Web Audio API](/en-US/docs/Web/API/
 - {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}}
   - : Creates a new instance of an `AudioWorkletNode` object.
 
-## Properties
+## Instance properties
 
 _Also Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
@@ -39,7 +39,7 @@ _Also Inherits properties from its parent, {{domxref("AudioNode")}}_.
 - {{domxref("AudioWorkletNode.processorerror_event", "processorerror")}}
   - : Fired when an error is thrown in associated {{domxref("AudioWorkletProcessor")}}. Once fired, the processor and consequently the node will output silence throughout its lifetime.
 
-## Methods
+## Instance methods
 
 _Also inherits methods from its parent, {{domxref("AudioNode")}}_.
 

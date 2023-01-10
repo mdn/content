@@ -19,7 +19,7 @@ A `BackgroundFetchRegistration` instance is returned by the {{domxref("Backgroun
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 The following properties are available synchronously, as convenience properties copied from those in the `BackgroundFetchRegistration` instance.
 
@@ -55,7 +55,7 @@ The following properties are available synchronously, as convenience properties 
 - {{domxref("BackgroundFetchRegistration.recordsAvailable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{jsxref("boolean")}} indicating whether the `recordsAvailable` flag is set.
 
-## Methods
+## Instance methods
 
 - {{domxref("BackgroundFetchRegistration.abort","BackgroundFetchRegistration.abort()")}} {{Experimental_Inline}}
   - : Aborts the background fetch. Returns a {{jsxref("Promise")}} that resolves with `true` if the fetch was successfully aborted.

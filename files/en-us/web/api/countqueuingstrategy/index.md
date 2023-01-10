@@ -20,11 +20,11 @@ The **`CountQueuingStrategy`** interface of the [Streams API](/en-US/docs/Web/AP
 - {{domxref("CountQueuingStrategy.CountQueuingStrategy", "CountQueuingStrategy()")}}
   - : Creates a new `CountQueuingStrategy` object instance.
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
 - {{domxref("CountQueuingStrategy.size()")}}
   - : Returns `1`.

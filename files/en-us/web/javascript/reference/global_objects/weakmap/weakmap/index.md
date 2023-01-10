@@ -1,6 +1,7 @@
 ---
 title: WeakMap() constructor
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
+page-type: javascript-constructor
 tags:
   - Constructor
   - JavaScript
@@ -41,7 +42,7 @@ const o2 = function () {};
 const o3 = window;
 
 wm1.set(o1, 37);
-wm1.set(o2, 'azerty');
+wm1.set(o2, "azerty");
 wm2.set(o1, o2); // a value can be anything, including an object or a function
 wm2.set(o3, undefined);
 wm2.set(wm1, wm2); // keys and values can be any objects. Even WeakMaps!

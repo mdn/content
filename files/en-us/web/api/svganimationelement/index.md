@@ -17,7 +17,7 @@ The **`SVGAnimationElement`** interface is the base interface for all of the ani
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
@@ -28,7 +28,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGElement"
 - {{domxref("SVGAnimationElement.targetElement")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGElement")}} representing the element which is being animated. If no target element is being animated (for example, because the {{SVGAttr("href")}} specifies an unknown element) the value returned is `null`.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent, {{domxref("SVGElement")}}._
 
@@ -45,7 +45,7 @@ _This interface also inherits methods from its parent, {{domxref("SVGElement")}}
 - {{domxref("SVGAnimationElement.endElement()")}}
   - : Creates an end instance time for the current time. The new instance time is added to the end instance times list. The behavior of this method is equivalent to `endElementAt(0)`.
 - {{domxref("SVGAnimationElement.endElementAt()")}}
-  - : Creates a end instance time for the current time plus the specified offset. The new instance time is added to the end instance times list.
+  - : Creates an end instance time for the current time plus the specified offset. The new instance time is added to the end instance times list.
 
 ## Events
 

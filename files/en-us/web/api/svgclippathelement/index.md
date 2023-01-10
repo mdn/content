@@ -17,14 +17,14 @@ The **`SVGClipPathElement`** interface provides access to the properties of {{SV
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
 - {{domxref("SVGClipPathElement.clipPathUnits")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("clipPathUnits")}} attribute of the given {{SVGElement("clipPath")}} element. Takes one of the constants defined in {{domxref("SVGUnitTypes")}}.
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from its parent, {{domxref("SVGElement")}}._
 

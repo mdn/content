@@ -14,7 +14,7 @@ browser-compat: api.DeviceMotionEventRotationRate
 
 A `DeviceMotionEventRotationRate` object provides information about the rate at which the device is rotating around all three axes.
 
-## Properties
+## Instance properties
 
 - {{ domxref("DeviceMotionEventRotationRate.alpha") }} {{ReadOnlyInline}}
   - : The amount of rotation around the Z axis, in degrees per second.

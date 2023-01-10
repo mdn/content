@@ -9,11 +9,13 @@ tags:
   - tracking
 ---
 
+{{QuicklinksWithSubPages("Web/Privacy/Storage_access_policy/Errors")}}
+
 ## Message
 
 Firefox:
 
-```
+```plain
 CookieBlockedAll=Request to access cookies or storage on "X" was blocked because we are blocking all storage access requests.
 ```
 

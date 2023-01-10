@@ -12,7 +12,7 @@ browser-compat: api.TextDecoder.decode
 
 {{APIRef("Encoding API")}}
 
-The **`TextDecode.decode()`** method returns a string containing text decoded from the buffer passed as a parameter.
+The **`TextDecoder.decode()`** method returns a string containing text decoded from the buffer passed as a parameter.
 
 The decoding method is defined in the current {{domxref("TextDecoder")}} object.
 This includes the expected encoding of the data, and how decoding errors are handled.

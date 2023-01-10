@@ -23,7 +23,7 @@ The **`XRRenderState`** interface of the [WebXR Device API](/en-US/docs/Web/API/
 
 When you apply changes using the `XRSession` method {{domxref("XRSession.updateRenderState", "updateRenderState()")}}, the specified changes take effect after the current animation frame has completed, but before the next one begins.
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("XRRenderState.baseLayer")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The {{DOMxRef("XRWebGLLayer")}} from which the browser's compositing system obtains the image for the XR session.

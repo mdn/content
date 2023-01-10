@@ -1,6 +1,7 @@
 ---
 title: class expression
 slug: Web/JavaScript/Reference/Operators/class
+page-type: javascript-operator
 tags:
   - Classes
   - ECMAScript 2015
@@ -14,9 +15,7 @@ browser-compat: javascript.operators.class
 
 {{jsSidebar("Operators")}}
 
-The **class expression** is one way to define a class. Similar to [function expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function), class expressions can be named or unnamed. If named, the name of the class is local to the class body only.
-
-JavaScript classes use prototype-based inheritance.
+The **`class`** keyword can be used to define a class inside an expression. Similar to [function expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function), class expressions can be named or unnamed. If named, the name of the class is local to the class body only.
 
 {{EmbedInteractiveExample("pages/js/expressions-classexpression.html")}}
 

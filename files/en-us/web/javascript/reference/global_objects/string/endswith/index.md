@@ -1,6 +1,7 @@
 ---
 title: String.prototype.endsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method
@@ -33,7 +34,7 @@ endsWith(searchString, endPosition)
 
 ### Return value
 
-**`true`** if the given characters are found at the end of the string; otherwise, **`false`**.
+**`true`** if the given characters are found at the end of the string, including when `searchString` is an empty string; otherwise, **`false`**.
 
 ### Exceptions
 
@@ -49,11 +50,11 @@ This method lets you determine whether or not a string ends with another string.
 ### Using endsWith()
 
 ```js
-const str = 'To be, or not to be, that is the question.';
+const str = "To be, or not to be, that is the question.";
 
-console.log(str.endsWith('question.')); // true
-console.log(str.endsWith('to be')); // false
-console.log(str.endsWith('to be', 19)); // true
+console.log(str.endsWith("question.")); // true
+console.log(str.endsWith("to be")); // false
+console.log(str.endsWith("to be", 19)); // true
 ```
 
 ## Specifications

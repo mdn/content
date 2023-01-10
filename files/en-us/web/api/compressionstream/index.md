@@ -19,7 +19,7 @@ The **`CompressionStream`** interface of the {{domxref('Compression Streams API'
 - {{domxref("CompressionStream.CompressionStream", "CompressionStream()")}}
   - : Creates a new `CompressionStream`
 
-## Properties
+## Instance properties
 
 - {{domxref("CompressionStream.readable")}}
   - : Returns the {{domxref("ReadableStream")}} instance controlled by this object.

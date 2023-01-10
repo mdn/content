@@ -31,7 +31,7 @@ from the client.
     </tr>
     <tr>
       <th scope="row">Successful response has body</th>
-      <td>Yes</td>
+      <td>No</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Safe/HTTP", "Safe")}}</th>

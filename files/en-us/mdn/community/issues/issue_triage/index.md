@@ -8,6 +8,8 @@ tags:
   - governance
 ---
 
+{{MDNSidebar}}
+
 This document looks at the process for triaging content bugs and getting them ready for contributors to effectively work on.
 
 ## Reporting and working on bugs
@@ -103,9 +105,7 @@ Definitions:
 - Major issue — Something that could severely affect a page's usefulness, for example a significant amount of out-of-date information, a complex and important code example that doesn't work, a significant amount of prose that is badly written and hard to understand, a large number of broken links, etc.
 - Minor issue — something that doesn't look great but does not affect learning, or only has a minor effect on learning. Examples — Typos, bad grammar, a broken link, a small amount of out-of-date information or badly-written prose, a small code snippet that doesn't work.
 
-Generally speaking, critical issues should be fixed immediately, and would probably be handled by MDN staff/peers. And Tier 1 issues are more important than Tier 2 issues. Folks that are interested in tackling the highest priority MDN issues should always tackle Tier 0 issues if any are available, before moving on to Tier 1 then Tier 2 issues.
-
-> **Note:** For definitions of Tier 1 and Tier 2, see the [MDN documentation priority list](https://mdn-contributor-docs.mozilla.org/legacy/documentation-priorities/).
+Generally speaking, critical issues should be fixed immediately, and would probably be handled by MDN staff/peers.
 
 ### Provide further information
 

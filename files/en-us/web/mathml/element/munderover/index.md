@@ -11,7 +11,7 @@ browser-compat: mathml.elements.munderover
 
 {{MathMLRef}}
 
-The MathML `<munderover>` element is used to attach accents or limits both under and over an expression.
+The **`<munderover>`** [MathML](/en-US/docs/Web/MathML) element is used to attach accents or limits both under and over an expression.
 
 It uses the following syntax: `<munderover> base underscript overscript </munderover>`
 

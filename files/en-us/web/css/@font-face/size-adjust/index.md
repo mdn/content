@@ -37,9 +37,7 @@ All metrics associated with this font are scaled by the given percentage. This i
 
 ## Formal syntax
 
-```
-<percentage [0,∞]>
-```
+{{csssyntax}}
 
 ## Examples
 
@@ -75,7 +73,6 @@ The `size-adjust` property can help when overriding the metrics of a fallback fo
 - {{cssxref("@font-face/font-weight", "font-weight")}} descriptor
 - {{cssxref("@font-face/font-style", "font-style")}} descriptor
 - {{cssxref("@font-face/font-stretch", "font-stretch")}} descriptor
-- {{cssxref("@font-face/font-variant", "font-variant")}} descriptor
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}} descriptor
 - {{cssxref("@font-face/src", "src")}} descriptor

@@ -49,7 +49,7 @@ The `ConvolverNode` interface is an {{domxref("AudioNode")}} that performs a Lin
 - {{domxref("ConvolverNode.ConvolverNode()", "ConvolverNode()")}}
   - : Creates a new `ConvolverNode` object instance.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
@@ -58,7 +58,7 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 - {{domxref("ConvolverNode.normalize")}}
   - : A boolean that controls whether the impulse response from the buffer will be scaled by an equal-power normalization when the `buffer` attribute is set, or not.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_.
 

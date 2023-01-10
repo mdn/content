@@ -17,7 +17,7 @@ tags:
 
 Returns a sidebar object which contains several methods for registering add-ons with the browser.
 
-## Methods
+## Instance methods
 
 The sidebar object returned has the following methods:
 

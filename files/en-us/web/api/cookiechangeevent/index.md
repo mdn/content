@@ -30,7 +30,7 @@ Cookie changes that will cause the `CookieChangeEvent` to be dispatched are:
 - {{domxref("CookieChangeEvent.CookieChangeEvent", "CookieChangeEvent()")}} {{Experimental_Inline}}
   - : Creates a new `CookieChangeEvent`.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from {{domxref("Event")}}._
 

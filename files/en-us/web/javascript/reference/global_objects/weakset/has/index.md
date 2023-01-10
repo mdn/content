@@ -1,6 +1,7 @@
 ---
 title: WeakSet.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -43,8 +44,8 @@ const ws = new WeakSet();
 const obj = {};
 ws.add(window);
 
-ws.has(window);  // returns true
-ws.has(obj);     // returns false
+ws.has(window); // returns true
+ws.has(obj); // returns false
 ```
 
 ## Specifications

@@ -22,7 +22,7 @@ The **`HIDConnectionEvent`** interface of the {{domxref('WebHID API')}} represen
 - {{domxref("HIDConnectionEvent.HIDConnectionEvent", "HIDConnectionEvent()")}} {{Experimental_Inline}}
   - : Returns a new `HIDConnectionEvent` object. Typically this constructor is not used as events are created when an input report is received.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from {{domxref("Event")}}._
 

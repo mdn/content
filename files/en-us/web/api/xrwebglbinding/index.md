@@ -23,12 +23,12 @@ The **`XRWebGLBinding`** interface is used to create layers that have a GPU back
 - {{domxref("XRWebGLBinding.XRWebGLBinding", "XRWebGLBinding()")}} {{Experimental_Inline}}
   - : Creates a new `XRWebGLBinding` object for the specified XR session and WebGL rendering context.
 
-## Properties
+## Instance properties
 
 - {{domxref("XRWebGLBinding.nativeProjectionScaleFactor")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The `scaleFactor` that was passed in during the construction of the projection layer. The native buffer size is scaled by this number.
 
-## Methods
+## Instance methods
 
 - {{domxref("XRWebGLBinding.createCubeLayer()")}} {{Experimental_Inline}}
   - : Returns an {{domxref("XRCubeLayer")}} object, which is a layer that renders directly from a [cubemap](https://en.wikipedia.org/wiki/Cube_mapping), and projects it onto the inside faces of a cube.

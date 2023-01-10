@@ -22,7 +22,7 @@ The **`AbsoluteOrientationSensor`** interface of the [Sensor APIs](/en-US/docs/W
 
 To use this sensor, the user must grant permission to the `'accelerometer'`, `'gyroscope'`, and `'magnetometer'` device sensors through the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
-If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
+This feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 
 {{InheritanceDiagram}}
 
@@ -31,11 +31,11 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 - {{domxref("AbsoluteOrientationSensor.AbsoluteOrientationSensor", "AbsoluteOrientationSensor()")}}
   - : Creates a new `AbsoluteOrientationSensor` object.
 
-## Properties
+## Instance properties
 
 _No specific properties; inherits properties from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}._
 
-## Methods
+## Instance methods
 
 _No specific methods; inherits methods from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}._
 

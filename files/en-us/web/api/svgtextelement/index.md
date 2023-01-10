@@ -17,11 +17,11 @@ The **`SVGTextElement`** interface corresponds to the {{SVGElement("text")}} ele
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface doesn't implement any specific properties, but inherits properties from its parent interface, {{domxref("SVGTextPositioningElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGTextPositioningElement")}}._
 

@@ -1,6 +1,7 @@
 ---
 title: JSON.stringify()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
+page-type: javascript-static-method
 tags:
   - JSON
   - JavaScript
@@ -14,7 +15,7 @@ browser-compat: javascript.builtins.JSON.stringify
 
 {{JSRef}}
 
-The **`JSON.stringify()`** method converts a JavaScript value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
+The **`JSON.stringify()`** static method converts a JavaScript value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
 
 {{EmbedInteractiveExample("pages/js/json-stringify.html")}}
 
@@ -31,7 +32,7 @@ JSON.stringify(value, replacer, space)
 - `value`
   - : The value to convert to a JSON string.
 - `replacer` {{optional_inline}}
-  - : A function that alters the behavior of the stringification process, or an array of strings or numbers naming properties of `value` that should be included in the output. If `replacer` is an array, all elements that are not strings or numbers (can be either primitives or wrapper objects), including {{jsxref("Symbol")}} values, are completely ignored. If `replacer` is anything other than a function or an array (e.g. [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or not provided), all properties of the object are included in the resulting JSON string.
+  - : A function that alters the behavior of the stringification process, or an array of strings and numbers that specifies properties of `value` to be included in the output. If `replacer` is an array, all elements in this array that are not strings or numbers (either primitives or wrapper objects), including {{jsxref("Symbol")}} values, are completely ignored. If `replacer` is anything other than a function or an array (e.g. [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or not provided), all string-keyed properties of the object are included in the resulting JSON string.
 - `space` {{optional_inline}}
 
   - : A string or number that's used to insert white space (including indentation, line break characters, etc.) into the output JSON string for readability purposes.
@@ -117,8 +118,8 @@ JSON.stringify([1, "false", false]); // '[1,"false",false]'
 JSON.stringify([NaN, null, Infinity]); // '[null,null,null]'
 JSON.stringify({ x: 5 }); // '{"x":5}'
 
-JSON.stringify(new Date(2006, 0, 2, 15, 4, 5));
-// '"2006-01-02T15:04:05.000Z"'
+JSON.stringify(new Date(1906, 0, 2, 15, 4, 5));
+// '"1906-01-02T15:04:05.000Z"'
 
 JSON.stringify({ x: 5, y: 6 });
 // '{"x":5,"y":6}'

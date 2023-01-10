@@ -19,7 +19,7 @@ browser-compat: api.WebKitPoint
 
 > **Note:** Although it is not directly related to this defunct interface, you are probably looking for {{domxref("DOMPoint")}}.
 
-## Properties
+## Instance properties
 
 - `x` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A floating-point value specifying the point's position with respect to the X (horizontal) axis.

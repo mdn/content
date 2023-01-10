@@ -19,7 +19,7 @@ A `CookieStoreManager` has an associated {{domxref("ServiceWorkerRegistration")}
 
 To get a `CookieStoreManager`, call {{domxref("ServiceWorkerRegistration.cookies")}}.
 
-## Methods
+## Instance methods
 
 - {{domxref("CookieStoreManager.getSubscriptions()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("promise")}} which resolves to a list of the cookie change subscriptions for this service worker registration.

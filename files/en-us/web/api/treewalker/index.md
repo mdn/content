@@ -14,7 +14,7 @@ The **`TreeWalker`** object represents the nodes of a document subtree and a pos
 
 A `TreeWalker` can be created using the {{domxref("Document.createTreeWalker()")}} method.
 
-## Properties
+## Instance properties
 
 _This interface doesn't inherit any property._
 
@@ -45,7 +45,7 @@ _This interface doesn't inherit any property._
 - {{domxref("TreeWalker.currentNode")}}
   - : Is the {{domxref("Node")}} on which the `TreeWalker` is currently pointing at.
 
-## Methods
+## Instance methods
 
 _This interface doesn't inherit any method._
 

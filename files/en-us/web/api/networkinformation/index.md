@@ -21,7 +21,7 @@ The `NetworkInformation` interface cannot be instantiated. It is instead accesse
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties of its parent, {{domxref("EventTarget")}}._
 
@@ -48,7 +48,7 @@ _This interface also inherits properties of its parent, {{domxref("EventTarget")
     - `other`
     - `unknown`
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods of its parent, {{domxref("EventTarget")}}._
 

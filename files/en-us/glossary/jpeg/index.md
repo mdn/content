@@ -1,6 +1,6 @@
 ---
 title: JPEG
-slug: Glossary/jpeg
+slug: Glossary/JPEG
 tags:
   - Beginner
   - Composing

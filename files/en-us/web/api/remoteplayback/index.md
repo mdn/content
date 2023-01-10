@@ -16,7 +16,7 @@ The **`RemotePlayback`** interface of the {{domxref('Remote Playback API','','',
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("RemotePlayback.state")}} {{ReadOnlyInline}}
 
@@ -29,7 +29,7 @@ The **`RemotePlayback`** interface of the {{domxref('Remote Playback API','','',
     - `"disconnected"`
       - : The remote playback has not been initiated, has failed to initiate, or has been stopped.
 
-## Methods
+## Instance methods
 
 - {{domxref("RemotePlayback.watchAvailability()")}}
   - : A {{jsxref("Promise")}} that resolves with a `callbackId` of an available remote playback device.

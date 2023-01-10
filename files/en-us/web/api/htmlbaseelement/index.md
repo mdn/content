@@ -16,7 +16,7 @@ The **`HTMLBaseElement`** interface contains the base URI for a document. This o
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -25,7 +25,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLBaseElement.target")}}
   - : A string that reflects the {{htmlattrxref("target", "base")}} HTML attribute, containing a default target browsing context or frame for elements that do not have a target reference specified.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

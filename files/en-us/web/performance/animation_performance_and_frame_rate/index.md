@@ -6,6 +6,8 @@ tags:
   - Web Performance
 ---
 
+{{QuickLinksWithSubPages("Web/Performance")}}
+
 Animation on the web can be done via {{domxref('SVGAnimationElement', 'SVG')}}, {{domxref('window.requestAnimationFrame','JavaScript')}}, including {{htmlelement('canvas')}} and {{domxref('WebGL_API', 'WebGL')}}, CSS {{cssxref('animation')}}, {{htmlelement('video')}}, animated gifs and even animated PNGs and other image types. The performance cost of animating a CSS property can vary from one property to another, and animating expensive CSS properties can result in {{glossary('jank')}} as the browser struggles to hit a smooth {{glossary("FPS", "frame rate")}}.
 
 For animated media, such as video and animated gifs, the main performance concern is file size - downloading the file fast enough to not negatively impact performance is the greatest issue. Code based animations, be it CSS, SVG, \<canvas>, webGL or other JavaScript animations, can cause performance issues even if the bandwidth footprint is small. These animations can consume CPU and/or cause jank.

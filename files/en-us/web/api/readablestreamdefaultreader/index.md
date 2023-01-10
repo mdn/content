@@ -27,12 +27,12 @@ For any other underlying source, the stream will always satisfy read requests wi
 - {{domxref("ReadableStreamDefaultReader.ReadableStreamDefaultReader", "ReadableStreamDefaultReader()")}}
   - : Creates and returns a `ReadableStreamDefaultReader` object instance.
 
-## Properties
+## Instance properties
 
 - {{domxref("ReadableStreamDefaultReader.closed")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("Promise")}} that fulfills when the stream closes, or rejects if the stream throws an error or the reader's lock is released. This property enables you to write code that responds to an end to the streaming process.
 
-## Methods
+## Instance methods
 
 - {{domxref("ReadableStreamDefaultReader.cancel()")}}
   - : Returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer. The supplied `reason` argument will be given to the underlying source, which may or may not use it.

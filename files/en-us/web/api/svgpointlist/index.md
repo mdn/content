@@ -16,14 +16,14 @@ The **`SVGPointList`** interface represents a list of {{domxref("SVGPoint")}} ob
 
 An `SVGPointList` can be designated as read-only, which means that attempts to modify the object will result in an exception being thrown.
 
-## Properties
+## Instance properties
 
 - {{domxref("SVGPointList.length")}} {{ReadOnlyInline}}
   - : Returns the number of points in the list.
 - {{domxref("SVGPointList.numberOfItems")}} {{ReadOnlyInline}}
   - : Returns the number of points in the list.
 
-## Methods
+## Instance methods
 
 - {{domxref("SVGPointList.clear()")}}
   - : Removes all items in the list.

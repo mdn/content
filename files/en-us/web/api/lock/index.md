@@ -16,7 +16,7 @@ browser-compat: api.Lock
 The **`Lock`** interface of the [Web Locks API](/en-US/docs/Web/API/Web_Locks_API) provides the name and mode of a lock.
 This may be a newly requested lock that is received in the callback to {{domxref('LockManager.request','LockManager.request()')}}, or a record of an active or queued lock returned by {{domxref('LockManager.query()')}}.
 
-## Properties
+## Instance properties
 
 - {{domxref('Lock.mode')}} {{ReadOnlyInline}}
   - : Returns the access mode passed to {{domxref('LockManager.request()')}} when the lock was requested.

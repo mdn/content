@@ -16,7 +16,7 @@ The **`HTMLTableRowElement`** interface provides special properties and methods 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -27,7 +27,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLTableRowElement.sectionRowIndex")}} {{ReadOnlyInline}}
   - : Returns a `long` value which gives the logical position of the row within the table section it belongs to. If the row is not part of a section, returns `-1`.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}_.
 
@@ -47,7 +47,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLTableRowElement.ch")}} {{deprecated_inline}}
   - : A string containing one single character. This character is the one to align all the cell of a column on. It reflects the {{htmlattrxref("char", "tr")}} and default to the decimal points associated with the language, e.g. `'.'` for English, or `','` for French. This property was optional and was not very well supported.
 - {{domxref("HTMLTableRowElement.chOff")}} {{deprecated_inline}}
-  - : A string containing a integer indicating how many characters must be left at the right (for left-to-right scripts; or at the left for right-to-left scripts) of the character defined by `HTMLTableRowElement.ch`. This property was optional and was not very well supported.
+  - : A string containing an integer indicating how many characters must be left at the right (for left-to-right scripts; or at the left for right-to-left scripts) of the character defined by `HTMLTableRowElement.ch`. This property was optional and was not very well supported.
 - {{domxref("HTMLTableRowElement.vAlign")}} {{deprecated_inline}}
   - : A string representing an enumerated value indicating how the content of the cell must be vertically aligned. It reflects the {{htmlattrxref("valign", "tr")}} attribute and can have one of the following values: `"top"`, `"middle"`, `"bottom"`, or `"baseline"`.
 

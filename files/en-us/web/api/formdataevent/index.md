@@ -24,14 +24,14 @@ This allows a {{domxref("FormData")}} object to be quickly obtained in response 
 - {{domxref("FormDataEvent.FormDataEvent","FormDataEvent()")}}
   - : Creates a new `FormDataEvent` object instance.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent interface, {{domxref("Event")}}._
 
 - {{domxref("FormDataEvent.formData")}}
   - : Contains the {{domxref("FormData")}} object representing the data contained in the form when the event was fired.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent interface, {{domxref("Event")}}._
 

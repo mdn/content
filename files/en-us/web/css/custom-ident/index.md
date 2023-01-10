@@ -44,6 +44,7 @@ To prevent ambiguity, each property that uses `<custom-ident>` forbids the use o
 - {{CSSxRef("counter-reset")}}, {{CSSxRef("counter-increment")}}
   - : Forbids the global CSS values (`unset`, `initial`, and `inherit`), as well as `none`.
 - {{CSSxRef("@counter-style")}}, {{CSSxRef("list-style-type")}}
+
   - : Forbids the global CSS values (`unset`, `initial`, and `inherit`), as well as the values:
 
     - `none`
@@ -107,6 +108,7 @@ To prevent ambiguity, each property that uses `<custom-ident>` forbids the use o
     - `upper-armenian`
     - `disclosure-open`
     - `disclosure-close`
+
 - {{CSSxRef("grid-row-start")}}, {{CSSxRef("grid-row-end")}}, {{CSSxRef("grid-column-start")}}, {{CSSxRef("grid-column-end")}}
   - : Forbids the `span` value.
 - {{CSSxRef("will-change")}}
@@ -146,4 +148,5 @@ _As this type is not a real type but a convenience type used to simplify the des
 
 ## See also
 
-- {{CSSxRef("&lt;ident&gt;")}}
+- [&lt;ident&gt;](/en-US/docs/Web/CSS/ident)
+- [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/dashed-ident)

@@ -32,11 +32,7 @@ When the `system` descriptor is `cyclic`, `numeric`, `alphabetic`, `symbolic`, o
 
 ## Formal syntax
 
-```
-[ <integer [0,∞]> && <symbol> ]#
-
-<symbol> = <string> | <image> | <custom-ident>
-```
+{{csssyntax}}
 
 ## Examples
 

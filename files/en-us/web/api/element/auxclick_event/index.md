@@ -94,7 +94,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
 For the vast majority of browsers that map middle click to opening a link in a new tab, including Firefox, it is possible to cancel this behavior by calling {{domxref("Event.preventDefault()", "preventDefault()")}} from within an `auxclick` event handler.
 
-When listening for `auxclick` events originating on elements that do not support input or navigation, you will often want to explicitly prevent other default actions mapped to the down action of the middle mouse button. On Windows this is usually autoscroll, and on macOS and Linux this is usually clipboard paste. This can be done by preventing the default behavior of the {{domxref("Element/mousedown_event", "mousedown")}} or {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event.
+When listening for `auxclick` events originating on elements that do not support input or navigation, you will often want to explicitly prevent other default actions mapped to the down action of the middle mouse button. On Windows this is usually autoscroll, and on macOS and Linux this is usually clipboard paste. This can be done by preventing the default behavior of the {{domxref("Element/mousedown_event", "mousedown")}} or {{domxref("Element/pointerdown_event", "pointerdown")}} event.
 
 Additionally, you may need to avoid opening a system context menu after a right click. Due to timing differences between operating systems, this too is not a preventable default behavior of `auxclick`. Instead, this can be done by preventing the default behavior of the {{domxref("Element/contextmenu_event", "contextmenu")}} event.
 
@@ -186,5 +186,5 @@ h1 {
 - {{domxref("Element/dblclick_event", "dblclick")}}
 - {{domxref("Element/mousedown_event", "mousedown")}}
 - {{domxref("Element/mouseup_event", "mouseup")}}
-- {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}
-- {{domxref("HTMLElement/pointerup_event", "pointerup")}}
+- {{domxref("Element/pointerdown_event", "pointerdown")}}
+- {{domxref("Element/pointerup_event", "pointerup")}}

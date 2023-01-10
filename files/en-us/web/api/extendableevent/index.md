@@ -33,11 +33,11 @@ This interface inherits from the {{domxref("Event")}} interface.
 - {{domxref("ExtendableEvent.ExtendableEvent()", "ExtendableEvent()")}}
   - : Creates a new `ExtendableEvent` object.
 
-## Properties
+## Instance properties
 
 _Doesn't implement any specific properties, but inherits properties from its parent, {{domxref("Event")}}._
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("Event")}}_.
 

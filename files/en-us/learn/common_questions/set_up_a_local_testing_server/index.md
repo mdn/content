@@ -15,6 +15,8 @@ tags:
   - servers
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 This article explains how to set up a simple local testing server on your machine, and the basics of how to use it.
 
 <table>
@@ -40,7 +42,7 @@ This article explains how to set up a simple local testing server on your machin
 
 ## Local files vs. remote files
 
-Throughout most of the learning area, we tell you to just open your examples directly in a browser — this can be done by double clicking the HTML file, dragging and dropping it into the browser window, or choosing _File_ > _Open…_ and navigating to the HTML file. There are many ways to achieve this.
+Throughout most of the learning area, we tell you to just open your examples directly in a browser — this can be done by double-clicking the HTML file, dragging and dropping it into the browser window, or choosing _File_ > _Open…_ and navigating to the HTML file. There are many ways to achieve this.
 
 If the web address path starts with `file://` followed by the path to the file on your local hard drive, a local file is being used. In contrast, if you view one of our examples hosted on GitHub (or an example on some other remote server), the web address will start with `http://` or `https://`, to show that the file has been received via HTTP.
 

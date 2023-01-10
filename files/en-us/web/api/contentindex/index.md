@@ -17,11 +17,11 @@ browser-compat: api.ContentIndex
 
 The **`ContentIndex`** interface of the [Content Index API](/en-US/docs/Web/API/Content_Index_API) allows developers to register their offline enabled content with the browser.
 
-## Properties
+## Instance properties
 
 There are no properties of this interface.
 
-## Methods
+## Instance methods
 
 - {{domxref('ContentIndex.add()')}} {{Experimental_Inline}}
   - : Registers an item with the [content index](/en-US/docs/Web/API/Content_Index_API).

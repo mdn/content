@@ -15,12 +15,12 @@ browser-compat: api.MediaKeyStatusMap
 
 The **`MediaKeyStatusMap`** interface of the [EncryptedMediaExtensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) is a read-only map of media key statuses by key IDs.
 
-## Properties
+## Instance properties
 
 - {{domxref("MediaKeyStatusMap.size")}} {{ReadOnlyInline}}
   - : Returns the number of key/value pairs in the status map.
 
-## Methods
+## Instance methods
 
 - {{domxref("MediaKeyStatusMap.entries()")}} {{ReadOnlyInline}}
   - : Returns a new `Iterator` object containing an array of `[key, value]` for each element in the status map, in insertion order.

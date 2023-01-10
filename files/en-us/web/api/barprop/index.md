@@ -29,7 +29,7 @@ The **`BarProp`** interface of the {{domxref('Document Object Model')}} represen
 
 The `BarProp` interface is not accessed directly, but via one of these elements.
 
-## Properties
+## Instance properties
 
 - {{domxref("BarProp.visible")}} {{ReadOnlyInline}}
   - : A {{jsxref("Boolean")}}, which is true if the bar represented by the used interface element is visible.

@@ -22,7 +22,7 @@ The Bluetooth registry contains lists of descriptors, services, and characterist
 
 The `BluetoothUUID` interface provides methods to retrieve these 128-bit UUIDs.
 
-## Properties
+## Instance properties
 
 None.
 
@@ -30,7 +30,7 @@ None.
 
 None.
 
-## Methods
+## Instance methods
 
 - {{domxref("BluetoothUUID.canonicalUUID()")}} {{Experimental_Inline}}
   - : Returns the 128-bit UUID when passed the 16- or 32-bit UUID alias.

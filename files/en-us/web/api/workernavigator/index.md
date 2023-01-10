@@ -17,7 +17,7 @@ browser-compat: api.WorkerNavigator
 
 The **`WorkerNavigator`** interface represents a subset of the {{DOMxRef("Navigator")}} interface allowed to be accessed from a {{DOMxRef("Worker")}}. Such an object is initialized for each worker and is available via the {{DOMxRef("WorkerGlobalScope.navigator", "self.navigator")}} property.
 
-## Properties
+## Instance properties
 
 _The `WorkerNavigator` interface doesn't inherit any property._
 
@@ -54,7 +54,7 @@ _The `WorkerNavigator` interface doesn't inherit any property._
 - {{domxref("WorkerNavigator.userAgentData")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("NavigatorUAData")}} object, which gives access to information about the browser and operating system of the user.
 
-## Methods
+## Instance methods
 
 _The `WorkerNavigator` interface neither inherits nor implements any method._
 

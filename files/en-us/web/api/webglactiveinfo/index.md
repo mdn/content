@@ -13,7 +13,7 @@ browser-compat: api.WebGLActiveInfo
 
 The **WebGLActiveInfo** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and represents the information returned by calling the {{domxref("WebGLRenderingContext.getActiveAttrib()")}} and {{domxref("WebGLRenderingContext.getActiveUniform()")}} methods.
 
-## Properties
+## Instance properties
 
 - {{domxref("WebGLActiveInfo.name")}}
   - : The read-only name of the requested variable.

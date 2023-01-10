@@ -31,7 +31,7 @@ This extension exposes new constants, which can be used in the {{domxref("WebGLR
 - `ext.MAX_DRAW_BUFFERS_WEBGL`
   - : A {{domxref("WebGL_API/Types", "GLint")}} indicating the maximum number of draw buffers.
 
-## Methods
+## Instance methods
 
 This extension exposes one new method.
 

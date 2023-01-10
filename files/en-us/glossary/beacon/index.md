@@ -1,6 +1,6 @@
 ---
-title: beacon
-slug: Glossary/beacon
+title: Beacon
+slug: Glossary/Beacon
 tags:
   - Beacon
   - Reference

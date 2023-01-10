@@ -9,6 +9,8 @@ tags:
   - text editor
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 In this article we highlight some things to think about when installing a text editor for web development.
 
 <table class="standard-table">
@@ -66,17 +68,6 @@ Here are some popular editors:
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://atom.io/">Atom</a></td>
-      <td>MIT/BSD</td>
-      <td>Free</td>
-      <td>Windows, Mac, Linux</td>
-      <td>
-        <a href="https://github.com/atom/atom/issues" rel="external">GitHub Issues</a>
-      </td>
-      <td><a href="https://atom.io/docs/latest/">Online Manual</a></td>
-      <td><a href="https://atom.io/packages">Yes</a></td>
-    </tr>
-    <tr>
       <td><a href="http://bluefish.openoffice.nl">Bluefish</a></td>
       <td>GPL 3</td>
       <td>Free</td>
@@ -131,9 +122,7 @@ Here are some popular editors:
       <td>Free</td>
       <td>Windows, Mac, Linux</td>
       <td>
-        <a href="http://www.codelobster.com/forum/index.php" rel="external"
-          >Forum</a
-        >, <a href="mailto:support@codelobster.com">E-mail</a>
+        <a href="http://www.codelobster.com/forum/index.php" rel="external">Forum</a >, <a href="mailto:support@codelobster.com">Email</a>
       </td>
       <td><a href="https://www.codelobsteride.com/help/">Online Manual</a></td>
       <td>Yes</td>
@@ -171,7 +160,7 @@ Here are some popular editors:
       <td>$99</td>
       <td>Mac</td>
       <td>
-        <a href="mailto:hello@espressoapp.com">E-mail</a>
+        <a href="mailto:hello@espressoapp.com">Email</a>
       </td>
       <td>
         <a href="https://help.espressoapp.com/">Online Manual</a>
@@ -297,7 +286,7 @@ Here are some popular editors:
         <a href="https://webchat.freenode.net/?channels=textmate">IRC</a>,
         <a href="https://lists.macromates.com/listinfo/textmate" rel="external"
           >Mailing list</a
-        >, <a href="mailto:tm-support@macromates.com">E-mail</a>
+        >, <a href="mailto:tm-support@macromates.com">Email</a>
       </td>
       <td>
         <a href="https://manual.macromates.com/en/">Online Manual</a>,
@@ -407,7 +396,7 @@ So, in more detail, what should you be thinking about when you choose a text edi
 
 Of course it's your choice. However, some editors are only available for certain OSs, so if you like switching back and forth, that would narrow down the possibilities. Any text editor _can_ get the job done, if it runs on your system, but a cross-platform editor eases migration from OS to OS.
 
-So first find out which OS you're using, and then check if a given editor supports your OS. Most editors specify on their website whether they support Windows or Mac, though some editors only support certain versions (say, only Windows 7 or later and not Vista). If you're running Ubuntu, your best bet is to search within the Ubuntu Software Center. In general, of course, the Linux/UNIX world is a pretty diverse place where different distros work with different, incompatible packaging systems. That means, if you've set your heart on an obscure text editor, you may have to compile it from source yourself (not for the faint-hearted).
+So first find out which OS you're using, and then check if a given editor supports your OS. Most editors specify on their website whether they support Windows or Mac, though some editors only support certain versions. If you're running Ubuntu, your best bet is to search within the Ubuntu Software Center. In general, of course, the Linux/UNIX world is a pretty diverse place where different distros work with different, incompatible packaging systems. That means, if you've set your heart on an obscure text editor, you may have to compile it from source yourself (not for the faint-hearted).
 
 #### What kind of technologies do I want to manipulate?
 
@@ -471,13 +460,10 @@ Installing a text editor is usually quite straightforward. The method varies bas
 
 When you install a new text editor, your OS will probably continue to open text files with its default editor until you change the _[file association](https://en.wikipedia.org/wiki/File_association)._ These instructions will help you specify that your OS should open files in your preferred editor when you double-click them:
 
-- Windows
+- [Windows](https://support.microsoft.com/en-us/windows)
 
-  - [Windows 8](https://support.microsoft.com/en-us/windows?ui=en-US&rs=en-US&ad=US)
-  - [Windows 7](https://support.microsoft.com/en-us/windows/change-which-programs-windows-7-uses-by-default-62fd162f-8c82-0436-806f-c60d69dcf495)
-  - [older systems](https://www.lifewire.com/how-to-change-file-associations-in-windows-2624477)
+- [macOS](https://support.apple.com/guide/mac-help/choose-an-app-to-open-a-file-on-mac-mh35597/mac)
 
-- [macOS](https://osxdaily.com/2013/08/08/change-default-application-open-files-mac-os-x/)
 - Linux
 
   - [Ubuntu Unity](https://askubuntu.com/questions/289337/how-can-i-change-file-association-globally)

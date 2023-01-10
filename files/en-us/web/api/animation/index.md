@@ -24,7 +24,7 @@ The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/We
 - {{domxref("Animation.Animation()", "Animation()")}}
   - : Creates a new `Animation` object instance.
 
-## Properties
+## Instance properties
 
 - {{domxref("Animation.currentTime")}}
   - : The current time value of the animation in milliseconds, whether running or paused. If the animation lacks a {{domxref("AnimationTimeline", "timeline")}}, is inactive or hasn't been played yet, its value is `null`.
@@ -49,7 +49,7 @@ The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/We
 - {{domxref("Animation.timeline")}}
   - : Gets or sets the {{domxref("AnimationTimeline", "timeline")}} associated with this animation.
 
-## Methods
+## Instance methods
 
 - {{domxref("Animation.cancel()")}}
   - : Clears all {{domxref("KeyframeEffect", "keyframeEffects")}} caused by this animation and aborts its playback.

@@ -65,7 +65,7 @@ right: unset;
 
 The effect of `right` depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):
 
-- When `position` is set to `absolute` or `fixed`, the `right` property specifies the distance between the element's right edge and the right edge of its containing block.
+- When `position` is set to `absolute` or `fixed`, the `right` property specifies the distance between the element's outer margin of right edge and the inner border of the right edge of its containing block.
 - When `position` is set to `relative`, the `right` property specifies the distance the element's right edge is moved to the left from its normal position.
 - When `position` is set to `sticky`, the `right` property is used to compute the sticky-constraint rectangle.
 - When `position` is set to `static`, the `right` property has _no effect_.

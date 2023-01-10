@@ -39,9 +39,9 @@ tags:
 - {{ cssxref("::before") }} and {{ cssxref("::after") }} updated to CSS 2.1
   - : The `::before` and `::after` pseudo-elements have been updated to full CSS 2.1 support, adding support for the `position`, `float`, `list-style-*`, and some `display` properties.
 - `ch` units for length
-  - : The `ch` unit can now be used anywhere that accepts a [unit of length](/en-US/docs/Web/CSS/length#units).`1ch` is the width of the "0" (zero) character.
+  - : The `ch` unit can now be used anywhere that accepts a [unit of length](/en-US/docs/Web/CSS/length#units). `1ch` is the width of the "0" (zero) character.
 - {{ cssxref("opacity") }}
-  - : The`-moz-opacity` Mozilla extension to CSS has been removed in favor of the standard `opacity` property.
+  - : The `-moz-opacity` Mozilla extension to CSS has been removed in favor of the standard `opacity` property.
 - {{ cssxref("text-shadow") }}
   - : The `text-shadow` property, which allows web content to specify shadow effects to apply to text and text decorations, is now supported.
 - {{ cssxref("overflow-wrap") }}
@@ -189,7 +189,7 @@ If you're an extension developer, you should start by reading [Updating extensio
 - The XUL `textbox` widget now offers a `search` type, for use as search fields.
 - In order to support dragging and dropping tabs between windows, the `browser` widget now has a `swapDocShells()` method.
 - Added the `level` attribute to the `panel` element; this specifies whether panels appear on top of other applications, or just on top of the window the panel is contained within.
-- XUL elements now support the `clientHeight`,`clientWidth`,`scrollHeight`, and `scrollWidth` properties.
+- XUL elements now support the `clientHeight`, `clientWidth`, `scrollHeight`, and `scrollWidth` properties.
 - `keyset` now include a `disabled` attribute.
 - In addition, `keyset`s can now be removed using the node's [`removeChild()`](/en-US/docs/Web/API/Node/removeChild) method.
 - `mozIStorageStatement` had the `initialize()` method removed; consumers should use the `createStatement()` method instead to get a new statement object.

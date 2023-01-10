@@ -53,12 +53,16 @@ openCursor(query, direction)
         in the decreasing order of keys.
     - `prevunique`
       - : The cursor is opened at the start of the store; then, the cursor returns all records, that are not duplicates,
-        in the increasing order of keys.
+        in the decreasing order of keys.
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is:
+
+- an {{domxref("IDBCursorWithValue")}} object pointing at the first record matching the given query
+- `null` if no matching records were found.
 
 ### Exceptions
 

@@ -6,6 +6,8 @@ tags:
   - dns-prefetch
 ---
 
+{{QuickLinksWithSubPages("Web/Performance")}}
+
 **`DNS-prefetch`** is an attempt to resolve domain names before resources get requested. This could be a file loaded later or link target a user tries to follow.
 
 ## Why use dns-prefetch?

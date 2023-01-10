@@ -16,7 +16,7 @@ The **`PageTransitionEvent`** event object is available inside handler functions
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("Event")}}._
 

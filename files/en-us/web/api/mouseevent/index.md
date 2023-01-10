@@ -31,7 +31,14 @@ Several more specific events are based on `MouseEvent`, including {{domxref("Whe
 - {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}
   - : Creates a `MouseEvent` object.
 
-## Properties
+## Static properties
+
+- {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}} {{ReadOnlyInline}}
+  - : Minimum force necessary for a normal click.
+- {{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}} {{non-standard_inline}} {{ReadOnlyInline}}
+  - : Minimum force necessary for a force click.
+
+## Instance properties
 
 _This interface also inherits properties of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
@@ -86,14 +93,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.y")}} {{ReadOnlyInline}}
   - : Alias for {{domxref("MouseEvent.clientY")}}.
 
-## Constants
-
-- {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}} {{ReadOnlyInline}}
-  - : Minimum force necessary for a normal click.
-- {{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}} {{non-standard_inline}} {{ReadOnlyInline}}
-  - : Minimum force necessary for a force click.
-
-## Methods
+## Instance methods
 
 _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
@@ -122,20 +122,20 @@ Event state (canceled or not) is then determined with the return value of method
 
 ```js
 function simulateClick() {
-// Get the element to send a click event
-const cb = document.getElementById("checkbox");
+  // Get the element to send a click event
+  const cb = document.getElementById("checkbox");
 
-// Create a synthetic click MouseEvent
+  // Create a synthetic click MouseEvent
   let evt = new MouseEvent("click", {
     bubbles: true,
     cancelable: true,
-    view: window
+    view: window,
   });
 
-// Send the event to the checkbox element
-cb.dispatchEvent(evt);
+  // Send the event to the checkbox element
+  cb.dispatchEvent(evt);
 }
-document.getElementById("button").addEventListener('click', simulateClick);
+document.getElementById("button").addEventListener("click", simulateClick);
 ```
 
 ### Result

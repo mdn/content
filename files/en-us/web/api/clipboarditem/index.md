@@ -32,7 +32,7 @@ Access to the contents of the clipboard is gated behind the [Permissions API](/e
 - {{domxref("ClipboardItem.ClipboardItem", "ClipboardItem()")}}
   - : Creates a new **`ClipboardItem`** object, with the {{Glossary("MIME type")}} as the key and {{domxref("Blob")}} as the value.
 
-## Properties
+## Instance properties
 
 _This interface provides the following properties._
 
@@ -41,7 +41,7 @@ _This interface provides the following properties._
 - {{domxref("ClipboardItem.presentationStyle", "presentationStyle")}} {{ReadOnlyInline}}
   - : Returns one of the following: `"unspecified"`, `"inline"` or `"attachment"`.
 
-## Methods
+## Instance methods
 
 _This interface defines the following methods._
 

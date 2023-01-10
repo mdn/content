@@ -12,6 +12,8 @@ tags:
   - troubleshooting
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 In this article, we go over various troubleshooting steps for a website and some basic actions to take in order to solve these issues.
 
 <table>
@@ -120,11 +122,11 @@ The address cannot be found. Indeed.
 
 #### 404 errors
 
-Many times the error just results just from a typo, but sometimes maybe you either forgot to upload a resource or you lost your network connection while you were uploading your resources. First check the spelling and accuracy of the file path, and if there's still a problem, upload your files again. That will likely fix the problem.
+Many times the error results just from a typo, but sometimes maybe you either forgot to upload a resource or you lost your network connection while you were uploading your resources. First check the spelling and accuracy of the file path, and if there's still a problem, upload your files again. That will likely fix the problem.
 
 #### JavaScript errors
 
-Someone (possibly you) added a script to the page and made a mistake. This will not prevent the page from loading but you will feel something went wrong.
+Someone (possibly you) added a script to the page and made a mistake. This will not prevent the page from loading, but you will feel something went wrong.
 
 Open the console (**Tools ➤ Web developer ➤ Web Console**) and reload the page:
 
@@ -148,7 +150,7 @@ Grades go from A to F. Our page is just small and meets most criteria. But we ca
 
 `ping` is a useful shell tool that tests the domain name you provide and tells you if the server's responding or not:
 
-```
+```plain
 $ ping mozilla.org
 PING mozilla.org (63.245.215.20): 56 data bytes
 64 bytes from 63.245.215.20: icmp_seq=0 ttl=44 time=148.741 ms

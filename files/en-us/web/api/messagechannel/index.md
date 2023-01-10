@@ -18,7 +18,7 @@ The **`MessageChannel`** interface of the [Channel Messaging API](/en-US/docs/We
 
 {{AvailableInWorkers}}
 
-## Properties
+## Instance properties
 
 - {{domxref("MessageChannel.port1")}} {{ReadOnlyInline}}
   - : Returns port1 of the channel.

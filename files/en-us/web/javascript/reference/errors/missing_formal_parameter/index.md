@@ -1,6 +1,7 @@
 ---
 title: 'SyntaxError: missing formal parameter'
 slug: Web/JavaScript/Reference/Errors/Missing_formal_parameter
+page-type: javascript-error
 tags:
   - Error
   - Errors
@@ -15,7 +16,7 @@ declaration is missing valid parameters.
 
 ## Message
 
-```
+```plain
 SyntaxError: missing formal parameter (Firefox)
 SyntaxError: Unexpected number '3'. Expected a parameter pattern or a ')' in parameter list. (Safari)
 SyntaxError: Unexpected string literal "x". Expected a parameter pattern or a ')' in parameter list. (Safari)
@@ -86,7 +87,7 @@ square(2); // 4
 
 greet("Howdy"); // "Howdy"
 
-log({obj: "value"}); // Object { obj: "value" }
+log({obj: "value"}); // { obj: "value" }
 ```
 
 ## See also

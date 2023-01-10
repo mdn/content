@@ -11,7 +11,7 @@ browser-compat: mathml.elements.mn
 
 {{MathMLRef}}
 
-The MathML `<mn>` element represents a numeric literal which is normally a sequence of digits with a possible separator (a dot or a comma). However, it is also allowed to have arbitrary text in it which is actually a numeric quantity, for example "eleven".
+The **`<mn>`** [MathML](/en-US/docs/Web/MathML) element represents a **numeric** literal which is normally a sequence of digits with a possible separator (a dot or a comma). However, it is also allowed to have arbitrary text in it which is actually a numeric quantity, for example "eleven".
 
 ## Attributes
 

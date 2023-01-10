@@ -25,7 +25,7 @@ The **`CSSSkewX`** interface of the {{domxref('CSS_Object_Model#css_typed_object
 - {{domxref("CSSSkewX.CSSSkewX", "CSSSkewX()")}} {{Experimental_Inline}}
   - : Creates a new `CSSSkewX` object.
 
-## Properties
+## Instance properties
 
 - {{domxref('CSSSkewX.ax','ax')}} {{Experimental_Inline}}
   - : Returns or sets the x-axis value.

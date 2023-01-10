@@ -24,7 +24,7 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 - {{domxref("ExtendableMessageEvent.ExtendableMessageEvent","ExtendableMessageEvent()")}}
   - : Creates a new `ExtendableMessageEvent` object instance.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("ExtendableEvent")}}_.
 
@@ -39,7 +39,7 @@ _Inherits properties from its parent, {{domxref("ExtendableEvent")}}_.
 - {{domxref("ExtendableMessageEvent.ports")}} {{ReadOnlyInline}}
   - : Returns the array containing the {{domxref("MessagePort")}} objects representing the ports of the associated message channel.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 

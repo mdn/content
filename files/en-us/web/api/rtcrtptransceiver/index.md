@@ -24,7 +24,7 @@ Each {{Glossary("SDP")}} media section describes one bidirectional SRTP ("Secure
 
 A transceiver is uniquely identified using its {{domxref("RTCRtpTransceiver.mid", "mid")}} property, which is the same as the media ID (`mid`) of its corresponding m-line. An `RTCRtpTransceiver` is **associated** with an m-line if its `mid` is non-null; otherwise it's considered disassociated.
 
-## Properties
+## Instance properties
 
 - {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}} {{ReadOnlyInline}}
   - : A read-only string which indicates the transceiver's current directionality, or `null` if the transceiver is stopped or has never participated in an exchange of offers and answers. To change the transceiver's directionality, set the value of the {{domxref("RTCRtpTransceiver.direction", "direction")}} property.
@@ -39,7 +39,7 @@ A transceiver is uniquely identified using its {{domxref("RTCRtpTransceiver.mid"
 - {{domxref("RTCRtpTransceiver.stopped", "stopped")}} {{Deprecated_Inline}}
   - : Indicates whether or not sending and receiving using the paired `RTCRtpSender` and `RTCRtpReceiver` has been permanently disabled, either due to SDP offer/answer, or due to a call to {{domxref("RTCRtpTransceiver.stop", "stop()")}}.
 
-## Methods
+## Instance methods
 
 - {{domxref("RTCRtpTransceiver.setCodecPreferences", "setCodecPreferences()")}}
   - : A list of {{domxref("RTCRtpCodecParameters")}} objects which override the default preferences used by the {{Glossary("user agent")}} for the transceiver's codecs.

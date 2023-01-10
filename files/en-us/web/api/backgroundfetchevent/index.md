@@ -24,7 +24,7 @@ It is the event type passed to `onbackgroundfetchabort` and `onbackgroundfetchcl
 - {{domxref("BackgroundFetchEvent.BackgroundFetchEvent()", "BackgroundFetchEvent()")}} {{Experimental_Inline}}
   - : Creates a new `BackgroundFetchEvent` object. This constructor is not typically used, as the browser creates these objects itself and provides them to background fetch event callbacks.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
@@ -35,7 +35,7 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
 None.
 
-## Methods
+## Instance methods
 
 None.
 

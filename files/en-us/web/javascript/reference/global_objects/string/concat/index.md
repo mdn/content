@@ -1,6 +1,7 @@
 ---
 title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method
@@ -52,18 +53,18 @@ The `concat()` method is very similar to the [addition/string concatenation oper
 The following example combines strings into a new string.
 
 ```js
-const hello = 'Hello, ';
-console.log(hello.concat('Kevin', '. Have a nice day.'));
+const hello = "Hello, ";
+console.log(hello.concat("Kevin", ". Have a nice day."));
 // Hello, Kevin. Have a nice day.
 
-const greetList = ['Hello', ' ', 'Venkat', '!'];
-"".concat(...greetList)  // "Hello Venkat!"
+const greetList = ["Hello", " ", "Venkat", "!"];
+"".concat(...greetList); // "Hello Venkat!"
 
-"".concat({})    // [object Object]
-"".concat([])    // ""
-"".concat(null)  // "null"
-"".concat(true)  // "true"
-"".concat(4, 5)  // "45"
+"".concat({}); // "[object Object]"
+"".concat([]); // ""
+"".concat(null); // "null"
+"".concat(true); // "true"
+"".concat(4, 5); // "45"
 ```
 
 ## Specifications

@@ -169,7 +169,7 @@ Now we've defined the evil circle, we need to actually make it appear in our sce
 
 - First of all, create a new evil circle object instance (specifying the necessary parameters). You only need to do this once, not on every iteration of the loop.
 - At the point where you loop through every ball and call the `draw()`, `update()`, and `collisionDetect()` functions for each one, make it so that these functions are only called if the current ball exists.
-- Call the evil ball instance's `draw()`, `checkBounds()`, and `collisionDetect()` methods on every iteration of the loop.
+- Call the evil circle instance's `draw()`, `checkBounds()`, and `collisionDetect()` methods on every iteration of the loop.
 
 ### Implementing the score counter
 

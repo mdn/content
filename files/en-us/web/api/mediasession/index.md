@@ -20,14 +20,14 @@ The **`MediaSession`** interface of the [Media Session API](/en-US/docs/Web/API/
 
 For example, a smartphone might have a standard panel in its lock screen that provides controls for media playback and information display. A browser on the device can use `MediaSession` to make browser playback controllable from that standard/global user interface.
 
-## Properties
+## Instance properties
 
 - {{domxref("MediaSession.metadata", "metadata")}}
   - : Returns an instance of {{domxref("MediaMetadata")}}, which contains rich media metadata for display in a platform UI.
 - {{domxref("MediaSession.playbackState", "playbackState")}}
   - : Indicates whether the current media session is playing. Valid values are `none`, `paused`, or `playing`.
 
-## Methods
+## Instance methods
 
 - {{domxref("MediaSession.setActionHandler", "setActionHandler()")}}
   - : Sets an action handler for a media session action, such as play or pause.

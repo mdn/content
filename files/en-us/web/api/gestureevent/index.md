@@ -19,7 +19,7 @@ The **`GestureEvent`** is a proprietary interface specific to WebKit which gives
 
 `GestureEvent` derives from {{domxref("UIEvent")}}, which in turn derives from {{domxref("Event")}}.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
@@ -28,7 +28,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("GestureEvent.scale")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Distance between two digits since the event's beginning. Expressed as a floating-point multiple of the initial distance between the digits at the beginning of the gesture. Values below 1.0 indicate an inward pinch (zoom out). Values above 1.0 indicate an outward unpinch (zoom in). Initial value: `1.0`.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 

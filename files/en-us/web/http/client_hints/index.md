@@ -8,7 +8,9 @@ tags:
   - Performance
 ---
 
-**Client Hints** are a set of [HTTP request header](/en-US/docs/Web/HTTP/Headers) fields that a server can proactively request from a client to get information about the device, network, user, and user-agent-specific preferences.
+{{HTTPSidebar}}
+
+**Client hints** are a set of [HTTP request header](/en-US/docs/Web/HTTP/Headers) fields that a server can proactively request from a client to get information about the device, network, user, and user-agent-specific preferences.
 The server can determine which resources to send, based on the information that the client chooses to provide.
 
 The set of "hint" headers are listed in the topic [HTTP Headers](/en-US/docs/Web/HTTP/Headers#client_hints) and [summarized below](#hint_types).
@@ -70,6 +72,35 @@ The high entropy hints are those that have the potential to give away more infor
 The decision might be based on user preferences, a permission request, or the permission policy.
 All client hints that are not low entropy hints are considered high entropy hints.
 
+## Critical client hints
+
+A _critical client hint_ is one where applying the response may significantly change the rendered page, potentially in a way that is jarring or will affect usability, and therefore which must be applied before the content is rendered.
+For example, `Sec-CH-Prefers-Reduced-Motion` is commonly treated as a critical hint, because it might markedly affect the behavior of animations, and because a user who chooses this preference needs it to be set.
+
+A server can use the {{HTTPHeader("Critical-CH")}} response header along with `Accept-CH` to specify that an accepted client hint is also a critical client hint (a header in `Critical-CH` must also appear in `Accept-CH`).
+User agents receiving a response with `Critical-CH` must check if the indicated critical headers were sent in the original request. If not, then the user agent will retry the request rather than render the page.
+This approach ensures that client preferences set using critical client hints are always used, even if not included in the first request, or if the server configuration changes.
+
+For example, in this case, the server tells a client via {{httpheader("Accept-CH")}} that it accepts `Sec-CH-Prefers-Reduced-Motion`, and {{httpheader("Critical-CH")}} is used to specify that `Sec-CH-Prefers-Reduced-Motion` is considered a critical client hint:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: text/html
+Accept-CH: Sec-CH-Prefers-Reduced-Motion
+Vary: Sec-CH-Prefers-Reduced-Motion
+Critical-CH: Sec-CH-Prefers-Reduced-Motion
+```
+
+> **Note:** We've also specified `Sec-CH-Prefers-Reduced-Motion` in the {{httpheader("Vary")}} header to indicate to the browser that the served content will differ based on this header value, even if the URL stays the same, so the browser shouldn't just use an existing cached response and instead should cache this response separately. Each header listed in the `Critical-CH` header should also be present in the `Accept-CH` and `Vary` headers.
+
+As `Sec-CH-Prefers-Reduced-Motion` is a critical hint that was not in the original request, the client automatically retries the request — this time telling the server via `Sec-CH-Prefers-Reduced-Motion` that it has a user preference for reduced-motion animations.
+
+```http
+GET / HTTP/1.1
+Host: example.com
+Sec-CH-Prefers-Reduced-Motion: "reduce"
+```
+
 ## Hint types
 
 ### User-agent client hints
@@ -83,6 +114,11 @@ Client hints are available to web page JavaScript via the [User Agent Client Hin
 > For historical reasons this header contains a lot of largely irrelevant information, and information that might be used to identify a _particular user_.
 > UA client hints provide a more efficient and privacy preserving way of getting the desired information.
 > They are eventually expected to replace this older approach.
+
+### User preference media features client hints
+
+User Preference Media Features Client Hints allow a server to vary responses based on a user agent's preferences for [CSS media features](/en-US/docs/Web/CSS/@media#media_features) such as color scheme or reduced motion.
+Headers include: {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}, {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}}.
 
 ### Device client hints
 

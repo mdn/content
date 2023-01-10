@@ -23,7 +23,7 @@ When an `IntersectionObserver` is created, it's configured to watch for given ra
 - {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}}
   - : Creates a new `IntersectionObserver` object which will execute a specified callback function when it detects that a target element's visibility has crossed one or more thresholds.
 
-## Properties
+## Instance properties
 
 - {{domxref("IntersectionObserver.root")}} {{ReadOnlyInline}}
   - : The {{domxref("Element")}} or {{domxref("Document")}} whose bounds are used as the bounding box when testing for intersection. If no `root` value was passed to the constructor or its value is `null`, the top-level document's viewport is used.
@@ -32,7 +32,7 @@ When an `IntersectionObserver` is created, it's configured to watch for given ra
 - {{domxref("IntersectionObserver.thresholds")}} {{ReadOnlyInline}}
   - : A list of thresholds, sorted in increasing numeric order, where each threshold is a ratio of intersection area to bounding box area of an observed target. Notifications for a target are generated when any of the thresholds are crossed for that target. If no value was passed to the constructor, 0 is used.
 
-## Methods
+## Instance methods
 
 - {{domxref("IntersectionObserver.disconnect()")}}
   - : Stops the `IntersectionObserver` object from observing any target.

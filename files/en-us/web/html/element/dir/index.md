@@ -14,7 +14,7 @@ tags:
 browser-compat: html.elements.dir
 ---
 
-{{HTMLRef}}{{Deprecated_Header}}
+{{HTMLSidebar}}{{Deprecated_Header}}
 
 The **`<dir>`** [HTML](/en-US/docs/Web/HTML) element is used as a container for a directory of files and/or folders, potentially with styles and icons applied by the {{Glossary("user agent")}}. Do not use this obsolete element; instead, you should use the {{HTMLElement("ul")}} element for lists, including lists of files.
 
@@ -30,6 +30,8 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
 - {{htmlattrdef("compact")}} {{Deprecated_Inline}}
   - : This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the user agent and it doesn't work in all browsers.
+
+<!-- ## Technical summary -->
 
 ## Specifications
 

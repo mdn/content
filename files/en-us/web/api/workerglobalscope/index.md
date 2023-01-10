@@ -19,7 +19,7 @@ This interface is usually specialized by each worker type: {{domxref("DedicatedW
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface inherits properties from the {{domxref("EventTarget")}} interface._
 
@@ -41,7 +41,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 - {{domxref("WorkerGlobalScope.console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
   - : Returns the {{domxref("console")}} associated with the worker.
 
-### Properties implemented from elsewhere
+### Instance properties implemented from elsewhere
 
 - {{domxref("caches")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
@@ -70,7 +70,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 - `unhandledrejection` {{non-standard_inline}}
   - : Fires on unhandled [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) rejection events.
 
-## Methods
+## Instance methods
 
 _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 
@@ -84,7 +84,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 - {{domxref("WorkerGlobalScope.dump()")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Allows you to write a message to stdout — i.e. in your terminal. This is the same as Firefox's {{domxref("window.dump")}}, but for workers.
 
-### Methods implemented from elsewhere
+### Instance methods implemented from elsewhere
 
 - {{domxref("atob", "atob()")}}
   - : Decodes a string of data which has been encoded using base-64 encoding.

@@ -26,11 +26,11 @@ The **`SubtleCrypto`** interface of the [Web Crypto API](/en-US/docs/Web/API/Web
 >
 > Please learn and experiment, but don't guarantee or imply the security of your work before an individual knowledgeable in this subject matter thoroughly reviews it. The [Crypto 101 Course](https://www.crypto101.io/) can be a great place to start learning about the design and implementation of secure systems.
 
-## Properties
+## Instance properties
 
 _This interface doesn't inherit any properties, as it has no parent interface._
 
-## Methods
+## Instance methods
 
 _This interface doesn't inherit any methods, as it has no parent interface._
 
