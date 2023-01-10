@@ -63,7 +63,7 @@ const obj = new Foo(...args);
 const obj = Reflect.construct(Foo, args);
 ```
 
-### Reflect.construct() vs Object.create()
+### Reflect.construct() vs. Object.create()
 
 Prior to the introduction of `Reflect`, objects could be constructed using
 an arbitrary combination of constructor and prototype by using

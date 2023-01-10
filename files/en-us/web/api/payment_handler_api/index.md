@@ -217,7 +217,7 @@ navigator.serviceWorker.register("serviceworker.js")
   - : The event object for the {{domxref("ServiceWorkerGlobalScope.canmakepayment_event", "canmakepayment")}} event, fired on a payment app's service worker when it has been successfully registered to signal that it is ready to handle payments.
 - {{domxref("PaymentManager")}}
   - : Used to manage various aspects of payment app functionality. Accessed via the {{domxref("ServiceWorkerRegistration.paymentManager")}} property.
-- {{domxref("PaymentRequestEvent")}}
+- {{domxref("PaymentRequestEvent")}} {{Experimental_Inline}}
   - : The event object for the {{domxref("ServiceWorkerGlobalScope.paymentrequest_event", "paymentrequest")}} event, fired on a payment app's service worker when a payment flow has been initiated on the merchant website via the {{domxref("PaymentRequest.show()")}} method.
 
 ## Extensions to other interfaces
