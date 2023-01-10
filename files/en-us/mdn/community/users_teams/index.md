@@ -217,7 +217,7 @@ In addition, community managers have the following responsibilities:
 - Identifying and assisting with the implementation of automation to improve project sustainability.
 - Meeting and ensuring a healthy relationship with contributors and partners.
 - Assisting with issue triage and pull request review where appropriate.
-- Monitoring all communication channels, including [GitHub discussions](https://github.com/mdn/mdn-community/discussions) on GitHub.
+- Monitoring all communication channels, including [GitHub discussions](https://github.com/mdn/mdn-community/discussions).
 - Highlighting contributors that have done exceptional work and/or have shown dedication to the MDN project.
 
 ## Processes
