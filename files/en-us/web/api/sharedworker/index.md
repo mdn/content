@@ -51,6 +51,8 @@ The following code snippet shows creation of a `SharedWorker` object using the {
 const myWorker = new SharedWorker('worker.js');
 ```
 
+> **Note:** Once Shared worker is created any script running in the same origin can obtain a reference to that worker and communicate with it. And shared worker will be alive as long as its WorkerGlobalScope's owner set (a set of Document and WorkerGlobalScope objects) is not empty. (e.g., There is any live page holding a reference to it (through new SharedWorker())). To read more about shared worker lifetime see [10.2.3 The worker's lifetime](https://html.spec.whatwg.org/multipage/workers.html#the-worker's-lifetime).
+
 Both scripts then access the worker through a {{domxref("MessagePort")}} object created using the {{domxref("SharedWorker.port")}} property. If the onmessage event is attached using addEventListener, the port is manually started using its `start()` method:
 
 ```js
