@@ -254,6 +254,24 @@ Note that multiple `src` descriptors are attempted in reverse-order, so at the e
 }
 ```
 
+### Checking if the user agent supports a font
+
+The following example shows how to check if the user agent supports a font technology using the {{cssxref("@supports")}} rule.
+The block of CSS inside `@supports` will be applied if the user agent supports `color-COLRv1` technology.
+
+```css
+@supports font-tech(color-COLRv1) {
+  @font-face {
+    font-family: "Trickster";
+    src: url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1);
+  }
+
+  .colored_text {
+    font-family: "Trickster";
+  }
+}
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -265,6 +283,7 @@ Note that multiple `src` descriptors are attempted in reverse-order, so at the e
 ## See also
 
 - {{cssxref("@font-face", "@font-face")}}
+- {{cssxref("@supports", "@supports")}}
 - {{cssxref("@font-face/font-display", "font-display")}}
 - {{cssxref("@font-face/font-family", "font-family")}}
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
@@ -273,4 +292,3 @@ Note that multiple `src` descriptors are attempted in reverse-order, so at the e
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/unicode-range", "unicode-range")}}
-- {{cssxref("@supports", "@supports")}}
