@@ -1,5 +1,5 @@
 ---
-title: Roles and teams on MDN
+title: MDN Web Docs roles and teams
 slug: MDN/Community/Users_teams
 page-type: mdn-community-guide
 tags:
@@ -10,7 +10,7 @@ tags:
 
 {{MDNSidebar}}
 
-The success and growth of the MDN Web Docs project is, in large part, due to our community of contributors. There are also employees, contractors, and a network of partners who are dedicated to the health, growth, and maintenance of the project as a whole. There are also some individuals who have committed a portion of their time to assist with the daily tasks of running MDN Web Docs. To manage all these different groups, the project relies heavily on [roles](#roles) and [teams](#teams) in the [MDN organization on GitHub](https://github.com/mdn). A list of the members of the organization can be [found here](https://github.com/orgs/mdn/people).
+The success and growth of the MDN Web Docs project is, in large part, due to our community of contributors. Some contributors have committed a portion of their time to assist with the daily tasks of running MDN Web Docs. In addition, there is a team of employees, contractors, and a network of partners who are all dedicated to the health, growth, and maintenance of the project. To manage all these different groups, the project relies heavily on [roles](#roles) and [teams](#teams) in the [MDN organization on GitHub](https://github.com/mdn). A list of the members of the organization can be [found here](https://github.com/orgs/mdn/people).
 
 Community contributions help this open source project immensely.
 Contributors can use their work on MDN Web Docs to show their writing, technical, and collaboration skills, and the ability to work with people from diverse backgrounds. This section describes the roles you can take on while volunteering on the MDN Web Docs project.
