@@ -412,7 +412,7 @@ body {
 
 {{EmbedLiveSample('The_problem', '100%', 600)}}
 
-Once again, this is because the float has been taken out of normal flow. Clearing the following element won't work as it did before. This is a problem if you want the box to wrap jointly around the floated item as well as the text of the first paragraph that wraps around the float, while also having the following content cleared of the box. There are three potential ways to deal with this, two of which work in all browsers — yet are slightly hacky — and a third, newer way that deals with this situation properly.
+Once again, this is because the float has been taken out of normal flow. You might expect that by jointly wrapping the floated box and the text of first paragraph that wraps around the float, you will have subsequent content to be cleared of the box. But this is not the case, as shown above. There are three potential ways to deal with this, two of which work in all browsers — yet are slightly hacky — and a third, newer way that deals with this situation properly.
 
 ### The clearfix hack
 
