@@ -52,7 +52,7 @@ content-visibility: unset;
 
 ## Accessibility concerns
 
-Prior to Chromium 90, offscreen headers and landmark roles within `content-visibility: auto` were not exposed to a11y tools. As of Chromium 90, this has been corrected, and off-screen content within a `content-visibility: auto` element remains in the document object model and the accessibility tree. This allows improving page performance with `content-visibility: auto` without negatively impacting accessibility.
+Off-screen content within a `content-visibility: auto` element remains in the document object model and the accessibility tree. This allows improving page performance with `content-visibility: auto` without negatively impacting accessibility.
 
 However, one caveat to keep in mind is that, since styles for off-screen content are not rendered, elements intentionally hidden with `display: none` or `visibility: hidden` _will still appear in the accessibility tree_. If you don't want an element to appear in the accessibility tree, use `aria-hidden="true"`.
 
@@ -60,20 +60,35 @@ However, one caveat to keep in mind is that, since styles for off-screen content
 
 ### Using auto to reduce rendering cost of long pages
 
-The following example shows the use of auto to skip painting and rendering of off-screen sections. This helps with both load and interactions on the page, since the content outside of the viewport is not rendered.
+The following example shows the use of `content-visibility:auto` to skip painting and rendering of off-screen sections. When a `section` is out of the viewport then the painting of the content is skipped until the section comes close to the viewport, this helps with both load and interactions on the page.
+
+#### HTML
 
 ```html
-<style>
+<section>
+  <!-- Content for each section… -->
+</section>
+<section>
+  <!-- Content for each section… -->
+</section>
+<section>
+  <!-- Content for each section… -->
+</section>
+<section>
+  <!-- Content for each section… -->
+</section>
+
+```
+
+#### CSS
+
+The `contain-intrinsic-size: auto 500px;` property adds a default size to the `section`s of 500px to the height and width, once the section has been rendered it will retain its rendered intrinsic size, even when it is scrolled out of the viewport.
+
+```css
 section {
   content-visibility: auto;
-  contain-intrinsic-size: 0 500px;
+  contain-intrinsic-size: auto 500px;
 }
-
-<section>…
-<section>…
-<section>…
-<section>…
-…
 ```
 
 ### Using hidden to manually manage visibility
