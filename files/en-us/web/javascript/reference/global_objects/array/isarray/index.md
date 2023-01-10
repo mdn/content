@@ -68,7 +68,7 @@ Array.isArray(new Uint8Array(32));
 Array.isArray({ __proto__: Array.prototype });
 ```
 
-### instanceof vs Array.isArray()
+### instanceof vs. Array.isArray()
 
 When checking for `Array` instance, `Array.isArray()` is preferred over `instanceof` because it works across realms.
 

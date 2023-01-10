@@ -21,7 +21,7 @@ The **`override-colors`** CSS [descriptor](/en-US/docs/Glossary/Descriptor_(CSS)
 /* basic syntax */
 override-colors: <index of color> <color>;
 
-/* using colour names */
+/* using color names */
 override-colors: 0 red;
 
 /* using hex-color */

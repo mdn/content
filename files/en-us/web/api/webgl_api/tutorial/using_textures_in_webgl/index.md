@@ -66,7 +66,7 @@ function loadTexture(gl, url) {
     );
 
     // WebGL1 has different requirements for power of 2 images
-    // vs non power of 2 images so check if the image is a
+    // vs. non power of 2 images so check if the image is a
     // power of 2 in both dimensions.
     if (isPowerOf2(image.width) && isPowerOf2(image.height)) {
       // Yes, it's a power of 2. Generate mips.
