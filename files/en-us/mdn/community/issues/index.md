@@ -20,7 +20,7 @@ While reporting an issue or participating in a conversation in an issue, always 
 
 Do the following:
 
-- Before filing an issue, consider if you need to start a [discussion](https://github.com/mdn/mdn-community/discussions) in the MDN Web Docs project on GitHub. Use discussions to gain different viewpoints and to converge on an agreed upon course of action. This helps to keep issues focused and productive.
+- Before filing an issue, consider if you need to start a [discussion](https://github.com/mdn/mdn-community/discussions) in the MDN Web Docs project on GitHub. Use discussions to gain different viewpoints and to converge on an agreed-upon course of action. This helps to keep issues focused and productive.
 - After filing an issue, try to fix the problem yourself. Read our [contribution guide](https://github.com/mdn/content/blob/main/CONTRIBUTING.md) to learn more.
 - If you have a question, you can ask using mechanisms like [chat rooms](https://chat.mozilla.org/#/room/#mdn:mozilla.org) or [forums](https://discourse.mozilla.org/c/mdn/236) without filing an issue.
 
@@ -40,7 +40,7 @@ If you think you've found a bug with the content on MDN Web Docs or with the loo
 
 ### Reporting an issue
 
-- Depending on the type of problem you've discovered, report it by filing an issue on [documentation](https://github.com/mdn/content/issues/new/choose), [translation](https://github.com/mdn/translated-content/issues/new/choose), the website's [look and feel](https://github.com/mdn/yari/issues/new/choose), the "Try it" [interactive example](https://github.com/mdn/interactive-examples/issues/new/choose) section, or the [browser compatibility information](https://github.com/mdn/browser-compat-data/issues/new/choose).
+- Depending on the type of problem you've discovered, report it by filing an issue on [documentation](https://github.com/mdn/content/issues/new/choose), [translation](https://github.com/mdn/translated-content/issues/new/choose), the website's [look and feel](https://github.com/mdn/yari/issues/new/choose), the "Try it" [interactive example](https://github.com/mdn/interactive-examples/issues/new/choose) section, or the [browser compatibility](https://github.com/mdn/browser-compat-data/issues/new/choose) information.
 
 - Choose the appropriate category to report the issue. For example, to report a content bug, use the [Content issue](https://github.com/mdn/content/issues/new?assignees=&labels=needs+triage&template=content-bug.yml) template in the `mdn/content` repository.
 
@@ -115,7 +115,7 @@ These are the general steps for working on an issue:
 If you spot a bug — whether it's a problem with the website's look and feel or an error in documentation — you can try to fix it yourself. Learn how you can contribute by going through our [contribution guide](https://github.com/mdn/content/blob/main/CONTRIBUTING.md).
 
 In general, begin by [opening the issue](#guidelines_for_reporting_an_issue). Add a comment about your intent to work on the issue and if possible, your proposed solution or steps to fix the issue.
-Wait for the issue to be triaged, for the MDN Web Docs team to verify that the issue is legit and to approve your proposed solution. (If you open a pull request before the issue has been triaged, your time and effort might go waste if the linked issue is deemed invalid or the solution is not inline with the one expected by the MDN Web Docs team.)
+Wait for the issue to be triaged, for the MDN Web Docs team to verify that the issue is legit and to approve your proposed solution. (If you open a pull request before the issue has been triaged, your time and effort might go waste if the linked issue is deemed invalid or the solution does not match the one expected by the MDN Web Docs team.)
 After the issue is triaged, assign the issue to yourself.
 Using the [guidelines on working on an issue](#Guidelines_for_working_on_an_issue), try to fix the problem by updating the appropriate source, such as:
 
@@ -157,18 +157,18 @@ These are some of the things to keep in mind while reviewing the validity of an 
 - Check if the issue raised is valid and if the fix will improve the content for the readers and the website.
 - Evaluate if the impact of the fix will be small or site-wide.
 - Evaluate if the fix for the issue will need a discussion first, in which case, point the author to open a [discussion](https://github.com/mdn/mdn-community/discussions) instead.
-- Check if the issue is inline with our [writing guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide) and [templates](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types).
+- Check if the issue complies with our [writing guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide) and [templates](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types).
 - Check whether suggestions for adding links comply with our [external links policy](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#external_links).
 
 #### Review the issue for completeness of information
 
 Review each issue against the following checklist to ensure that the issue contains the described information for someone to start working on the bug:
 
-- URL of the MDN Web Docs page with the problem or URL of an example MDN Web Docs page if the problem exists on multiple pages.
-- The specific heading or section on the MDN Web Docs page where the problem was found.
-- A clear description of the incorrect, unhelpful, incomplete, or missing information.
+- URL of the MDN Web Docs page with the problem or URL of an example MDN Web Docs page if the problem exists on multiple pages
+- The specific heading or section on the MDN Web Docs page where the problem was found
+- A clear description of the incorrect, unhelpful, incomplete, or missing information
 
-If any of the above information is not present, then you should ask the author of the issue to provide these details and resume triaging the issue only after those details have been provided. It is okay to wait for up to a week to get a response from the author.
+If any of the above information is not present, then you should ask the author of the issue to provide these details, and add the `needs info` label to the issue. Resume triaging the issue only after those details have been provided (after which, you can remove the `needs info` label). It is okay to wait for up to a week to get a response from the author.
 
 #### Set a priority label
 
