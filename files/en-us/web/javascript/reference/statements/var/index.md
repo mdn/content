@@ -61,7 +61,7 @@ function foo() {
   }
   bar();
   console.log(x); // 1 (`x` is in scope)
-  console.log(y); // ReferenceError in strict mode, `y` is scoped to `bar`
+  console.log(y); // ReferenceError, `y` is scoped to `bar`
 }
 
 foo();
