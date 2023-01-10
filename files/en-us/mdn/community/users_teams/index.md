@@ -10,7 +10,7 @@ tags:
 
 {{MDNSidebar}}
 
-The success and growth of the MDN Web Docs project is, in large part, due to our community of contributors. Some contributors have committed a portion of their time to assist with the daily tasks of running MDN Web Docs. In addition, there is a team of employees, contractors, and a network of partners who are all dedicated to the health, growth, and maintenance of the project. To manage all these different groups, the project relies heavily on [roles](#roles) and [teams](#teams) in the [MDN organization on GitHub](https://github.com/mdn). A list of the members of the organization can be [found here](https://github.com/orgs/mdn/people).
+The success and growth of the MDN Web Docs project is, in large part, due to our community of contributors. Some contributors have committed a portion of their time to assist with the daily tasks of running MDN Web Docs. Changes to the site, including maintenance tasks, are performed by employees, contractors, and a network of partners who are all dedicated to the health, growth, and maintenance of MDN Web Docs. The project relies heavily on [roles](#roles) and [teams](#teams) in the [MDN organization on GitHub](https://github.com/mdn) to manage and incorporate changes from these different groups. A list of the organization's members can be [found here](https://github.com/orgs/mdn/people).
 
 Community contributions help this open source project immensely.
 Contributors can use their work on MDN Web Docs to show their writing, technical, and collaboration skills, and the ability to work with people from diverse backgrounds. This section describes the roles you can take on while volunteering on the MDN Web Docs project.
@@ -313,16 +313,16 @@ We manage teams using the [GitHub teams](https://docs.github.com/en/organization
 
 The teams in the [MDN GitHub organization](https://github.com/orgs/mdn/teams) include:
 
-- **Core**: Core MDN Web Docs team
-- **mdn-community-engagement**: People responsible for community engagement across our repositories
-- **mdn-product**: People responsible for the MDN Plus product
-- **localization-team-leads**: People who lead our individual localization teams
-- **OWD**: Contributors from the Open Web Docs non-profit organization
-- **sre**: Site reliability engineers who support MDN Web Docs
-- **yari-content**: The umbrella team for all MDN Web Docs content reviewers
+- `@Core`: Core MDN Web Docs team
+- `@mdn-community-engagement`: People responsible for community engagement across our repositories
+- `@mdn-product`: People responsible for the MDN Plus product
+- `@localization-team-leads`: People who lead our individual localization teams
+- `@OWD`: Contributors from the Open Web Docs non-profit organization
+- `@sre`: Site reliability engineers who support MDN Web Docs
+- `@yari-content`: The umbrella team for all MDN Web Docs content reviewers
 
-  - There is a sub-team for the different topic areas — accessibility, Add-ons, CSS, HTML, HTTP, Javascript, SVG, Web API, and Web assembly. For example, there's yari-content-css and yari-content-svg.
-  - There are also sub-teams for different languages — Brazilian Portuguese, Chinese, French, Japanese, Korean, Russian, and Spanish. For example, there's yari-content-fr and yari-content-ko.
+  - There is a sub-team for the different topic areas — accessibility, Add-ons, CSS, HTML, HTTP, Javascript, SVG, Web API, and Web assembly. For example, there's `@yari-content-css` and `@yari-content-svg`.
+  - There are also sub-teams for different languages — Brazilian Portuguese, Chinese, French, Japanese, Korean, Russian, and Spanish. For example, there's `@yari-content-fr` and `@yari-content-ko`.
 
 To become a member of a team, you must:
 
