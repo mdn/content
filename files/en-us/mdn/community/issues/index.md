@@ -12,7 +12,7 @@ tags:
 
 As a contributor, you can [report](#Guidelines_for_reporting_an_issue) and [work](#guidelines_for_working_on_an_issue) on issues.
 
-After you report an issue, the issue gets triaged. Issue [triaging](#guidelines_for_triaging_issues) is typically done by people assigned the role of a maintainer or an owner. In addition to working on issues, this page outlines the process of issue triage.
+After you report an issue, the issue gets triaged. Issue [triaging](#guidelines_for_triaging_issues) is typically done by people assigned the role of a maintainer or an owner.
 
 ## General guidelines for participation
 
@@ -40,9 +40,9 @@ If you think you've found a bug with the content on MDN Web Docs or with the loo
 
 ### Reporting an issue
 
-- Depending on the problem you've discovered, report it by filing a [documentation issue](https://github.com/mdn/content/issues), a [translation issue](https://github.com/mdn/translated-content/issues), or a [website look and feel issue](https://github.com/mdn/yari/issues).
+- Depending on the type of problem you've discovered, report it by filing an issue on [documentation](https://github.com/mdn/content/issues/new/choose), [translation](https://github.com/mdn/translated-content/issues/new/choose), the website's [look and feel](https://github.com/mdn/yari/issues/new/choose), the "Try it" [interactive example](https://github.com/mdn/interactive-examples/issues/new/choose) section, or the [browser compatibility information](https://github.com/mdn/browser-compat-data/issues/new/choose).
 
-- To open an issue, use the appropriate template available in the repository. For example, to report a content bug, use the the [Content issue](<https://github.com/mdn/content/issues/new?assignees=&labels=needs+triage&template=content-bug.yml>) template in the `mdn/content` repository.
+- Choose the appropriate category to report the issue. For example, to report a content bug, use the [Content issue](https://github.com/mdn/content/issues/new?assignees=&labels=needs+triage&template=content-bug.yml) template in the `mdn/content` repository.
 
 - Provide sufficient information while reporting the issue:
 
