@@ -42,6 +42,9 @@ This article provides information about the changes in Firefox 109 that will aff
 
 ### APIs
 
+- The `scrollend` events are now supported, which indicate that the user has completed scrolling in {{domxref("Element")}} and {{domxref("Document")}} objects.
+  For more information, see [Element: `scrollend` event](/en-US/docs/Web/API/Element/scrollend_event) and [Document: `scrollend` event](/en-US/docs/Web/API/Document/scrollend_event) ({{bug(1797013)}}, {{bug(1803435)}}).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
