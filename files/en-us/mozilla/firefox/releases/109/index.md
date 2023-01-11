@@ -56,7 +56,15 @@ This article provides information about the changes in Firefox 109 that will aff
 
 #### WebDriver BiDi
 
+- The connection details for WebDriver BiDi are now written to `WebDriverBiDiServer.json` instead of `WebDriverBiDiActivePort`, which contains both the port (`ws_port`) and the host (`ws_host`). This file is located in the Firefox profile folder ({{bug(1792875)}}).
+- Added support for subscribing / unsubscribing to individual `contexts` when using `session.subscribe` and `session.unsubscribe` ({{bug(1723102)}}).
+- Added support for serializing `Node` objects ({{bug(1770731)}}).
+- Fixed the `columnNumber` for `exceptions` and `stackTraces` to be 0-based ({{bug(1796073)}}).
+
 #### Marionette
+
+- Fixed a bug where `WebDriver:NewWindow` and `WebDriver:SwitchToWindow` were not focusing the new window properly ({{bug(1798655)}}).
+- Fixed a bug where `WebDriver:FindElement` (and similar commands) would fail if the Firefox window was occluded by other applications on Windows ({{bug(1802473)}}).
 
 ## Changes for add-on developers
 
