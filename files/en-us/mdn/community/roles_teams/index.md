@@ -1,13 +1,12 @@
 ---
 title: MDN Web Docs roles and teams
-slug: MDN/Community/Users_teams
+slug: MDN/Community/Roles_teams
 page-type: mdn-community-guide
 tags:
   - meta
   - community-guidelines
   - governance
 ---
-
 {{MDNSidebar}}
 
 The success and growth of the MDN Web Docs project is, in large part, due to our community of contributors. Some contributors have committed a portion of their time to assist with the daily tasks of running MDN Web Docs. Changes to the site, including maintenance tasks, are performed by employees, contractors, and a network of partners who are all dedicated to the health, growth, and maintenance of MDN Web Docs. The project relies heavily on [roles](#roles) and [teams](#teams) in the [MDN organization on GitHub](https://github.com/mdn) to manage and incorporate changes from these different groups. A list of the organization's members can be [found here](https://github.com/orgs/mdn/people).
