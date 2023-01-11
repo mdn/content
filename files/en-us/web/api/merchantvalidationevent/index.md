@@ -22,7 +22,7 @@ browser-compat: api.MerchantValidationEvent
 
 The **`MerchantValidationEvent`** interface of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) enables a merchant to verify themselves as allowed to use a particular payment handler.
 
-To learn more about merchant validation, see [Merchant validation](/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation).
+To learn more about merchant validation, see [Payment processing concepts, Merchant validation](/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation).
 
 ## Constructor
 

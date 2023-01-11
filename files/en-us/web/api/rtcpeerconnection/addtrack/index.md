@@ -24,7 +24,7 @@ which will be transmitted to the other peer.>
 
 > **Note:** Adding a track to a connection triggers renegotiation by
 > firing a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event. See
-> [Starting negotiation](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling#starting_negotiation) for details.
+> [Signaling and video calling, Starting negotiation](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling#starting_negotiation) for details.
 
 ## Syntax
 

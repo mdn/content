@@ -41,7 +41,7 @@ audio track as currently configured.
 
 ## Examples
 
-See [Example: Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) for an example.
+See [Media Streams API, Example: Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) for an example.
 
 ## Browser compatibility
 

@@ -79,7 +79,7 @@ if (pose) {
 Passing each `view` to {{domxref("XRWebGLLayer.getViewport", "getViewport()")}} returns the WebGL viewport to apply in order to cause the rendered
 output to be positioned correctly in the framebuffer for rendering to the corresponding eye on the output device.
 
-This code is derived from [Drawing a frame](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion#drawing_a_frame).
+This code is derived from [WebXR Device API, Drawing a frame](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion#drawing_a_frame).
 You can see more context and see much more on that page.
 
 ## Specifications

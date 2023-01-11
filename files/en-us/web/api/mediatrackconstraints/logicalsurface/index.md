@@ -41,7 +41,7 @@ is unnecessary since browsers will ignore any constraints they're unfamiliar wit
 
 A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) which is `true` if logical surfaces should be permitted among the selections available to the user.
 
-See [How constraints are defined](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#how_constraints_are_defined) for an explanation of how to define constraints.
+See [Media Streams API, How constraints are defined](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#how_constraints_are_defined) for an explanation of how to define constraints.
 
 ## Usage notes
 

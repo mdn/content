@@ -30,7 +30,7 @@ to process payments.
 A string uniquely identifying the payment handler being used to
 process the payment. This may be either a standardized identifier, or a URL used by the
 payment processor to handle payments. See
-[Merchant validation](/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation)for more information.
+[Payment processing concepts, Merchant validation](/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation)for more information.
 
 ## Examples
 

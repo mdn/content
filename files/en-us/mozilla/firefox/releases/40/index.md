@@ -164,7 +164,7 @@ _No change._
 ### Other
 
 - Places Keywords API has been deprecated and will be removed soon ({{bug(1140395)}}).
-- The automated testing system now supports skipping individual test functions. See [Conditional test functions](/en-US/docs/Mozilla/QA/Writing_xpcshell-based_unit_tests#conditional_test_functions).
+- The automated testing system now supports skipping individual test functions. See [XPCShell tests, Conditionally running a test](https://firefox-source-docs.mozilla.org/testing/xpcshell/index.html#conditionally-running-a-test).
 
 ## Older versions
 

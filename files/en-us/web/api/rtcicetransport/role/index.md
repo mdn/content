@@ -29,7 +29,7 @@ the transport is fulfilling: that of the controlling agent, or the agent that is
 controlled.
 
 You can learn more about ICE roles in
-[Choosing a candidate pair](/en-US/docs/Web/API/WebRTC_API/Connectivity#choosing_a_candidate_pair).
+[WebRTC connectivity, Choosing a candidate pair](/en-US/docs/Web/API/WebRTC_API/Connectivity#choosing_a_candidate_pair).
 
 ## Value
 

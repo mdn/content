@@ -36,7 +36,7 @@ specific data needed to complete the merchant verification process. Once this ha
 loaded, it should be passed into {{domxref("MerchantValidationEvent.complete",
   "complete()")}}, either directly or using a promise.
 
-See [Merchant validation](/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation)for more information on the merchant validation process.
+See [Payment processing concepts, Merchant validation](/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation)for more information on the merchant validation process.
 
 ## Browser compatibility
 

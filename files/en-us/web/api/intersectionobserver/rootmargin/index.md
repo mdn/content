@@ -43,7 +43,7 @@ the values
 If `rootMargin` isn't specified when the object was instantiated, it
 defaults to the string `"0px 0px 0px 0px"`, meaning that the intersection
 will be computed between the root element's unmodified bounds rectangle and the target's
-bounds. [The root margin]](/en-US/docs/Web/API/Intersection_Observer_API#how_intersection_is_calculated)
+bounds. [How intersection is calculated](/en-US/docs/Web/API/Intersection_Observer_API#how_intersection_is_calculated)
 describes how the `rootMargin` is used in more detail.
 
 ## Specifications
