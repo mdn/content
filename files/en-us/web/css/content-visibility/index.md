@@ -93,26 +93,64 @@ section {
 
 ### Using hidden to manually manage visibility
 
-The following example shows that it is possible to manage visibility in script. The added benefit of using `content-visibility: hidden` instead of, for example, `display: none` is that rendered content when hidden with `content-visibility` will preserve rendering state. This means that if the content is shown again, it will render quicker than the alternative.
+The following example shows that it is possible to manage visibility using JavaScript. The added benefit of using `content-visibility: hidden` instead of, for example, `display: none` is that rendered content when hidden with `content-visibility` will preserve rendering state. This means that if the content is shown again, it will render quicker than the alternative.
+
+#### HTML
 
 ```html
-<style>
-.hidden {
-  content-visibility: hidden;
-  /* when hidden, we want the element to size as if it had one child of 0x500px size */
-  contain-intrinsic-size: 0 500px;
-}
-.visible {
-  content-visibility: visible;
-  /* this is here to avoid layout shift when switching between .hidden and .visible */
-  contain: style layout paint;
-}
-
-<div class=hidden>…
-<div class=visible>…
-<div class=hidden>…
-<div class=hidden>…
+<div class="hidden">
+  <button data-state="hidden">Show</button>
+  <p>This content is hidden (at the start) and will be visible when the button is clicked.</p>
+</div>
+<div class="visible">
+  <button data-state="visible">Hide</button>
+  <p>This content is visible (at the start) and will be hidden when the button is clicked.</p>
+</div>
 ```
+
+#### CSS
+
+The `content-visibility` property is set on the paragraph in the containing div, this means that the content in the paragraphs will be either hidden or visible depending on the class of the parent div.
+
+The `contain-intrinsic-size` property is there to represent the content size to help reduce layout shift, while the content is hidden.
+
+```css
+.hidden > p {
+  content-visibility: hidden;
+  contain-intrinsic-size: 0 1rem;
+  border: red dotted 1px;
+}
+.visible > p {
+  content-visibility: visible;
+  border: red dashed 1px;
+}
+```
+
+#### JS
+
+```js
+const handleClick = (event) => {
+  if (event.target.tagName.toLowerCase() === "button") {
+    const currentButton = event.target
+    if (currentButton.dataset.state === "hidden") {
+      currentButton.textContent = "Hide"
+      currentButton.setAttribute("data-state", "visible")
+      currentButton.closest("div").classList.replace("hidden", "visible")
+    } else if (currentButton.dataset.state === "visible") {
+      currentButton.textContent = "Show"
+      currentButton.setAttribute("data-state", "hidden")
+      currentButton.closest("div").classList.replace("visible", "hidden")
+    }
+  } else {
+    return
+  }
+}
+document.addEventListener("click", handleClick)
+```
+
+#### Result
+
+{{ EmbedLiveSample('Using hidden to manually manage visibility') }}
 
 ## Specifications
 
