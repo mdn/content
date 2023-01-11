@@ -1112,7 +1112,6 @@
       "overview": ["Reporting_API"],
       "guides": [],
       "interfaces": [
-        "CrashReportBody",
         "DeprecationReportBody",
         "InterventionReportBody",
         "Report",
