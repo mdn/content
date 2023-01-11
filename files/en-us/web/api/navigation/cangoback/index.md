@@ -35,7 +35,7 @@ A boolean value: `true` if it is possible to navigate backwards in the navigatio
 
 ```js
 async function backHandler() {
-  if(navigation.canGoBack) {
+  if (navigation.canGoBack) {
     await navigation.back().finished;
     // Handle any required clean-up after
     // navigation has finished
@@ -45,7 +45,7 @@ async function backHandler() {
 }
 
 async function forwardHandler() {
-  if(navigation.canGoForward) {
+  if (navigation.canGoForward) {
     await navigation.forward().finished;
     // Handle any required clean-up after
     // navigation has finished
