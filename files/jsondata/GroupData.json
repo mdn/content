@@ -1112,6 +1112,7 @@
       "overview": ["Reporting_API"],
       "guides": [],
       "interfaces": [
+        "CSPViolationReportBody",
         "DeprecationReportBody",
         "InterventionReportBody",
         "Report",
