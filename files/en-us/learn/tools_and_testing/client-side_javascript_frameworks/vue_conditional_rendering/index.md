@@ -1,5 +1,5 @@
 ---
-title: 'Vue conditional rendering: editing existing todos'
+title: "Vue conditional rendering: editing existing todos"
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering
 tags:
@@ -153,7 +153,7 @@ Update your `ToDoItem`'s template as shown below.
       <label :for="id" class="checkbox-label">\{{label}}</label>
     </div>
     <div class="btn-group">
-      <button type="button" class="btn"  @click="toggleToItemEditForm">
+      <button type="button" class="btn" @click="toggleToItemEditForm">
         Edit <span class="visually-hidden">\{{label}}</span>
       </button>
       <button type="button" class="btn btn__danger" @click="deleteToDo">
@@ -199,9 +199,9 @@ methods: {
 
 ## Conditionally displaying components via v:if and v:else
 
-Now we have an `isEditing` flag that we can use to signify that the item is being edited (or not). If `isEditing` is true, we want to use that flag to display our `ToDoItemEditForm` instead of the checkbox. To do that, we'll use another Vue directive: [`v-if`](https://v2.vuejs.org/v2/api/#v-if).
+Now we have an `isEditing` flag that we can use to signify that the item is being edited (or not). If `isEditing` is true, we want to use that flag to display our `ToDoItemEditForm` instead of the checkbox. To do that, we'll use another Vue directive: [`v-if`](https://vuejs.org/api/built-in-directives.html#v-if).
 
-The `v-if` directive will only render a block if the value passed to it is truthy. This is similar to how an `if` statement works in JavaScript. `v-if` also has corresponding [`v-else-if`](https://v2.vuejs.org/v2/api/#v-else-if) and [`v-else`](https://v2.vuejs.org/v2/api/#v-else) directives to provide the equivalent of JavaScript `else if` and `else` logic inside Vue templates.
+The `v-if` directive will only render a block if the value passed to it is truthy. This is similar to how an `if` statement works in JavaScript. `v-if` also has corresponding [`v-else-if`](https://vuejs.org/api/built-in-directives.html#v-else-if) and [`v-else`](https://vuejs.org/api/built-in-directives.html#v-else) directives to provide the equivalent of JavaScript `else if` and `else` logic inside Vue templates.
 
 It's important to note that `v-else` and `v-else-if` blocks need to be the first sibling of a `v-if`/`v-else-if` block, otherwise Vue will not recognize them. You can also attach `v-if` to a `<template>` tag if you need to conditionally render an entire template.
 
@@ -210,7 +210,7 @@ Lastly, you can use a `v-if` + `v-else` at the root of your component to display
 First of all add `v-if="!isEditing"` to the root `<div>` in your `ToDoItem` component,
 
 ```html
-<div class="stack-small" v-if="!isEditing">
+<div class="stack-small" v-if="!isEditing"></div>
 ```
 
 Next, below that `<div>`'s closing tag add the following line:
@@ -315,7 +315,7 @@ This is great so far, but we've actually introduced a bug by adding in the edit 
 
 Note the state of the checkbox after you cancel — not only has the app forgotten the state of the checkbox, but the done status of that todo item is now out of whack. If you try checking (or unchecking) it again, the completed count will change in the opposite way to what you'd expect. This is because the `isDone` inside `data` is only given the value `this.done` on component load.
 
-Fixing this is fortunately quite easy — we can do this by converting our `isDone` data item into a [computed property](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties) — another advantage of computed properties is that they preserve [reactivity](https://v2.vuejs.org/v2/guide/reactivity.html), meaning (among other things) that their state is saved when the template changes like ours is now doing.
+Fixing this is fortunately quite easy — we can do this by converting our `isDone` data item into a [computed property](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties) — another advantage of computed properties is that they preserve [reactivity](https://vuejs.org/guide/essentials/reactivity-fundamentals.html), meaning (among other things) that their state is saved when the template changes like ours is now doing.
 
 So, let's implement the fix:
 

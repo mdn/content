@@ -64,22 +64,22 @@ For a good (but potentially biased) comparison between Vue and many of the other
 
 To use Vue in an existing site, you can drop one of the following [`<script>`](/en-US/docs/Web/HTML/Element/script) elements onto a page. This allows you to start using Vue on existing sites, which is why Vue prides itself on being a progressive framework. This is a great option when migrating an existing project using a library like jQuery to Vue. With this method, you can use a lot of the core features of Vue, such as the attributes, custom components, and data-management.
 
-- Development Script (Unoptimized, but includes console warnings. Great for development.)
+- Development Script (not optimized, but includes console warnings which is great for development.)
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.45/index.js"></script>
   ```
 
 - Production Script (Optimized version, minimal console warnings. It is recommended that you specify a version number when including Vue on your site so that any framework updates do not break your live site without you knowing.)
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
   ```
 
 However, this approach has some limitations. To build more complex apps, you'll want to use the [Vue npm package](https://www.npmjs.com/package/vue). This will let you use advanced features of Vue and take advantage of bundlers like WebPack. To make building apps with Vue easier, there is a CLI to streamline the development process. To use the npm package & the CLI you will need:
 
 1. Node.js 8.11+ installed.
-2. npm or yarn.
+2. [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) or [yarn](https://yarnpkg.com/).
 
 > **Note:** If you don't have the above installed, find out [more about installing npm and Node.js](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups) here.
 
@@ -101,52 +101,14 @@ We'll look at using this below.
 
 ## Initializing a new project
 
-To explore various features of Vue, we will be building up a sample todo list app. We'll begin by using the Vue CLI to create a new app framework to build our app into. Follow the steps below:
+To explore various features of Vue, we will be building up a sample todo list app. We'll begin by using the Vue CLI to create a new app framework to build our app into.
 
-1. In terminal, `cd` to where you'd like to create your sample app, then run `vue create moz-todo-vue`.
-2. Use the arrow keys and
-
-   <kbd>Enter</kbd>
-
-   to select the "Manually select features" option.
-
-3. The first menu you'll be presented with allows you to choose which features you want to include in your project. Make sure that "Babel" and "Linter / Formatter" are selected. If they are not, use the arrow keys and the space bar to toggle them on. Once they are selected, press
-
-   <kbd>Enter</kbd>
-
-   to proceed.
-
-4. Next, you'll select a config for the linter / formatter. Navigate to "ESLint with error prevention only" and hit
-
-   <kbd>Enter</kbd>
-
-   again. This will help us catch common errors, but not be overly opinionated.
-
-5. Next, you are asked to configure what kind of automated linting we want. Select "Lint on save". This will check for errors when we save a file inside the project. Hit
-
-   <kbd>Enter</kbd>
-
-   to continue.
-
-6. Now, you will select how we want your config files to be managed. "In dedicated config files" will put your config settings for things like ESLint into their own, dedicated files. The other option, "In package.json", will put all of your config settings into the app's `package.json` file. Select "In dedicated config files" and push
-
-   <kbd>Enter</kbd>
-
-   .
-
-7. Finally, you are asked if you want to save this as a preset for future options. This is entirely up to you. If you like these settings over the existing presets and want to use them again, type
-
-   <kbd>y</kbd>
-
-   , otherwise type
-
-   <kbd>n</kbd>
-
-   .
-
+In terminal, `cd` to where you'd like to create your sample app, then run `vue create moz-todo-vue`.
+You can choose the default option `Default ([Vue 3] babel, eslint)` by pressing <kbd>Enter</kbd> to proceed.
 The CLI will now begin scaffolding out your project, and installing all of your dependencies.
 
-If you've never run the Vue CLI before, you'll get one more question — you'll be asked to choose a package manager. You can use the arrow keys to select which one you prefer. The Vue CLI will default to this package manager from now on. If you need to use a different package manager after this, you can pass in a flag `--packageManager=<package-manager>`, when you run `vue create`. So if you wanted to create the `moz-todo-vue` project with npm and you'd previously chosen yarn, you'd run `vue create moz-todo-vue --packageManager=npm`.
+If you've never run the Vue CLI before, you'll get one more question — you'll be asked to choose a package manager which defaults to `yarn`.
+The Vue CLI will default to this package manager from now on. If you need to use a different package manager after this, you can pass in a flag `--packageManager=<package-manager>`, when you run `vue create`. So if you wanted to create the `moz-todo-vue` project with npm and you'd previously chosen yarn, you'd run `vue create moz-todo-vue --packageManager=npm`.
 
 > **Note:** We've not gone over all of the options here, but you can [find more information on the CLI](https://cli.vuejs.org) in the Vue docs.
 
@@ -154,9 +116,10 @@ If you've never run the Vue CLI before, you'll get one more question — you'll 
 
 If everything went successfully, the CLI should have created a series of files and directories for your project. The most significant ones are as follows:
 
-- `.eslintrc.js`: This is a config file for [ESLint](https://eslint.org/). You can use this to manage your linting rules.
+- `package.json`: This file contains the list of dependencies for your project, as well as some metadata and `eslint` configuration.
+- `yarn.lock`: If you chose `yarn` as your package manager, this file will be generated with a list of all the dependencies and sub-dependencies that your project needs.
 - `babel.config.js`: This is the config file for [Babel](https://babeljs.io/), which transforms modern JavaScript features being used in development code into older syntax that is more cross-browser compatible in production code. You can register additional babel plugins in this file.
-- `.browserslistrc`: This is a config for [Browserslist](https://github.com/browserslist/browserslist). You can use this to control which browsers your tooling optimizes for.
+- `jsconfig.json`: This is a config file for [Visual Studio Code](https://code.visualstudio.com/docs/languages/jsconfig) and gives context for VS Code on your project structure and assists auto-completion.
 - `public`: This directory contains static assets that are published, but not processed by [Webpack](https://webpack.js.org/) during build (with one exception; `index.html` gets some processing).
 
   - `favicon.ico`: This is the favicon for your app. Currently, it's the Vue logo.
@@ -177,7 +140,7 @@ If everything went successfully, the CLI should have created a series of files a
 
 Like in many front-end frameworks, components are a central part of building apps in Vue. These components let you break a large application into discrete building blocks that can be created and managed separately, and transfer data between each other as required. These small blocks can help you reason about and test your code.
 
-While some frameworks encourage you to separate your template, logic, and styling code into separate files, Vue takes the opposite approach. Using [Single File Components](https://v2.vuejs.org/v2/guide/single-file-components.html), Vue lets you group your templates, corresponding script, and CSS all together in a single file ending in `.vue`. These files are processed by a JS build tool (such as Webpack), which means you can take advantage of build-time tooling in your project. This allows you to use tools like Babel, TypeScript, SCSS and more to create more sophisticated components.
+While some frameworks encourage you to separate your template, logic, and styling code into separate files, Vue takes the opposite approach. Using [Single File Components (SFC)](https://vuejs.org/guide/scaling-up/sfc.html), Vue lets you group your templates, corresponding script, and CSS all together in a single file ending in `.vue`. These files are processed by a JS build tool (such as Webpack), which means you can take advantage of build-time tooling in your project. This allows you to use tools like Babel, TypeScript, SCSS and more to create more sophisticated components.
 
 As a bonus, projects created with the Vue CLI are configured to use `.vue` files with Webpack out of the box. In fact, if you look inside the `src` folder in the project we created with the CLI, you'll see your first `.vue` file: `App.vue`.
 
@@ -196,14 +159,14 @@ Open your `App.vue` file — you'll see that it has three parts: `<template>`, `
 In the case of `App.vue`, our default export sets the name of the component to `App` and registers the `HelloWorld` component by adding it into the `components` property. When you register a component in this way, you're registering it locally. Locally registered components can only be used inside the components that register them, so you need to import and register them in every component file that uses them. This can be useful for bundle splitting/tree shaking since not every page in your app necessarily needs every component.
 
 ```js
-import HelloWorld from './components/HelloWorld.vue';
+import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     //You can register components locally here.
-    HelloWorld
-  }
+    HelloWorld,
+  },
 };
 ```
 
@@ -258,7 +221,7 @@ If you save your `App.vue` file now, the rendered app will throw an error becaus
 Delete these lines now:
 
 ```js
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
 ```
 
 ```js

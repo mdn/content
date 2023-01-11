@@ -37,6 +37,8 @@ When including a `pattern`, provide a description of the pattern in visible text
 If the input's value is not the empty string and the value does not match the entire regular expression, there is a constraint violation reported by the {{domxref('ValidityState')}} object's {{domxref('ValidityState.patternMismatch','patternMismatch')}} property being `true`.
 The pattern's regular expression, when matched against the value, must have its start anchored to the start of the string and its end anchored to the end of the string, which is slightly different from JavaScript regular expressions: in the case of pattern attribute, we are matching against the entire value, not just any subset, as if a `^(?:` were implied at the start of the pattern and `)$` at the end.
 
+> **Note:** If the `pattern` attribute is specified with no value, its value is implicitly the empty string. Thus, **any non-empty** input `value` will result in constraint violation.
+
 ## Examples
 
 ### Matching a phone number

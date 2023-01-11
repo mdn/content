@@ -65,7 +65,7 @@ See [Options and constraints](#options_and_constraints), below, for more on both
 
 You can then use the captured stream, `captureStream`, for anything that accepts a stream as input. The [examples](#examples) below show a few ways to make use of the stream.
 
-### Visible vs logical display surfaces
+### Visible vs. logical display surfaces
 
 For the purposes of the Screen Capture API, a **display surface** is any content object that can be selected by the API for sharing purposes. Sharing surfaces include the contents of a browser tab, a complete window, and a monitor (or group of monitors combined together into one surface).
 

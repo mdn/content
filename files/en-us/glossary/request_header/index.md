@@ -13,7 +13,7 @@ In addition, [CORS](/en-US/docs/Glossary/CORS) defines a subset of request heade
 
 The HTTP message below shows a few request headers after a {{HTTPMethod("GET")}} request:
 
-```bash
+```http
 GET /home.html HTTP/1.1
 Host: developer.mozilla.org
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0

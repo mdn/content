@@ -75,8 +75,6 @@ The spec defines the following report types:
   - : Indicates that a WebAPI or other browser feature being used in the website is expected to stop working in a future release. Indicated by a {{domxref("Report.body")}} property with a {{domxref("DeprecationReportBody")}} return value.
 - Intervention report
   - : Indicates that a request made by the website has been denied by the browser, e.g. for security or user annoyance reasons. Indicated by a {{domxref("Report.body")}} property with a {{domxref("InterventionReportBody")}} return value.
-- Crash report
-  - : Indicates that the website stopped running due to a browser crash. Indicated by a {{domxref("Report.body")}} property with a {{domxref("CrashReportBody")}} return value.
 
 ## Examples
 

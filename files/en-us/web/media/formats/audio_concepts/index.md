@@ -117,13 +117,13 @@ You can apply a filter that narrows the audio bandwidth, removing any audio freq
 
 If you know what kind of audio you're most likely to handle, you can potentially find special filtering techniques applicable specifically to that kind of sound, that will optimize the encoding.
 
-The most commonly-used compression methods for audio apply the science of **[psychoacoustics](https://en.wikipedia.org/wiki/Psychoacoustics)**. This is the science that studies how humans perceive sound, and what parts of the audio frequencies we hear are most important to how we respond to those sounds, given the context and content of the sound. Factors such as the ability to sense the change in frequency of a sound, the overall range of human hearing versus the frequencies of the audio signal, audio localization, and so forth all can be considered by a codec.
+The most commonly-used compression methods for audio apply the science of **[psychoacoustics](https://en.wikipedia.org/wiki/Psychoacoustics)**. This is the science that studies how humans perceive sound, and what parts of the audio frequencies we hear are most important to how we respond to those sounds, given the context and content of the sound. Factors such as the ability to sense the change in frequency of a sound, the overall range of human hearing vs. the frequencies of the audio signal, audio localization, and so forth all can be considered by a codec.
 
 By using a sound (no pun intended) understanding of psychoacoustics, it's possible to design a compression method that will minimize the compressed size of the audio while maximizing the perceived fidelity of the sound. An algorithm employing psychoacoustics may use any of the techniques mentioned here, and will almost certainly apply others as well.
 
 All of this means there is a fundamental question that has to be asked and answered before choosing a codec: Given the content of the sound, the usage context, and the target audience, is it acceptable to lose some degree of audio fidelity, and if so, how much; or is it necessary that, upon decoding the data, the result be identical to the source audio?
 
-### Lossy vs lossless compression
+### Lossy vs. lossless compression
 
 If loss of detail and potentially fidelity is unacceptable or undesirable, a **lossless** codec is preferred. On the other hand, if some degree of reduction of audio fidelity is okay, a **lossy** codec can be used. Generally, lossy compression results in significantly smaller output than lossless compression methods; also, many lossy codecs are excellent, with the loss in quality and detail being difficult or even impossible for the average listener to discern.
 
