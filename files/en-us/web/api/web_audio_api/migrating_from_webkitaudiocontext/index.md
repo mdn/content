@@ -32,7 +32,7 @@ Three of the creator methods on `webkitAudioContext` have been renamed in {{domx
 - `createDelayNode()` has been renamed to {{domxref("createDelay")}}.
 - `createJavaScriptNode()` has been renamed to {{domxref("createScriptProcessor")}}.
 
-These are simple renames that were made in order to improve the consistency of these method names on {{domxref("AudioContext")}}. If your code uses either of these names, like in the example below :
+These are simple renames that were made in order to improve the consistency of these method names on {{domxref("AudioContext")}}. If your code uses either of these names, like in the example below:
 
 ```js
 // Old method names

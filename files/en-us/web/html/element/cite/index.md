@@ -17,7 +17,7 @@ browser-compat: html.elements.cite
 
 {{HTMLSidebar}}
 
-The **`<cite>`** [HTML](/en-US/docs/Web/HTML) element is used to describe a reference to a cited creative work, and must include the title of that work. The reference may be in an abbreviated form according to context-appropriate conventions related to citation metadata.
+The **`<cite>`** [HTML](/en-US/docs/Web/HTML) element is used to mark up the title of a cited creative work. The reference may be in an abbreviated form according to context-appropriate conventions related to citation metadata.
 
 {{EmbedInteractiveExample("pages/tabbed/cite.html", "tabbed-standard")}}
 
@@ -56,8 +56,6 @@ In the context of the `<cite>` element, a creative work that might be cited coul
 - A Facebook post
 - A written or oral statement
 - And so forth.
-
-It's worth noting that the W3C specification says that a reference to a creative work, as included within a `<cite>` element, may include the name of the work's author. However, the WHATWG specification for `<cite>` says the opposite: that a person's name must _never_ be included, under any circumstances.
 
 To include a reference to the source of quoted material which is contained within a {{HTMLElement("blockquote")}} or {{HTMLElement("q")}} element, use the {{htmlattrxref("cite", "blockquote")}} attribute on the element.
 

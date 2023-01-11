@@ -134,7 +134,7 @@ Workers may spawn more workers if they wish. So-called sub-workers must be hoste
 
 ### Importing scripts and libraries
 
-Worker threads have access to a global function, `importScripts()`, which lets them import scripts. It accepts zero or more URIs as parameters to resources to import; all of the following examples are valid:
+Worker threads have access to a global function, `importScripts()`, which lets them import scripts. It accepts zero or more URIs as parameters to resources to import; all the following examples are valid:
 
 ```js
 importScripts();                         /* imports nothing */
@@ -195,7 +195,7 @@ onconnect = (e) => {
 }
 ```
 
-First, we use an `onconnect` handler to fire code when a connection to the port happens (i.e. when the `onmessage` event handler in the parent thread is setup, or when the `start()` method is explicitly called in the parent thread).
+First, we use an `onconnect` handler to fire code when a connection to the port happens (i.e. when the `onmessage` event handler in the parent thread is set up, or when the `start()` method is explicitly called in the parent thread).
 
 We use the `ports` attribute of this event object to grab the port and store it in a variable.
 
@@ -771,7 +771,7 @@ Finally, a message is sent to the worker to start it.
 
 ### Dividing tasks among multiple workers
 
-As multi-core computers become increasingly common, it's often useful to divide computationally complex tasks among multiple workers, which may then perform those tasks on multiple-processor cores.
+As multicore computers become increasingly common, it's often useful to divide computationally complex tasks among multiple workers, which may then perform those tasks on multiple-processor cores.
 
 ## Other types of workers
 
@@ -798,7 +798,7 @@ You can use most standard JavaScript features inside a web worker, including:
 - {{jsxref("Global_Objects/Array", "Array")}}, {{jsxref("Global_Objects/Date", "Date")}}, {{jsxref("Global_Objects/Math", "Math")}}, and {{jsxref("Global_Objects/String", "String")}}
 - {{domxref("setTimeout()")}} and {{domxref("setInterval()")}}
 
-The main thing you _can't_ do in a Worker is directly affect the parent page. This includes manipulating the DOM and using that page's objects. You have to do it indirectly, by sending a message back to the main script via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}, then actioning the changes from there.
+The main thing you _can't_ do in a Worker is directly affect the parent page. This includes manipulating the DOM and using that page's objects. You have to do it indirectly, by sending a message back to the main script via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}, then doing the changes in event handler.
 
 > **Note:** You can test whether a method is available to workers using the site: <https://worker-playground.glitch.me/>. For example, if you enter [EventSource](/en-US/docs/Web/API/EventSource) into the site on Firefox 84 you'll see that this is not supported in service workers, but is in dedicated and shared workers.
 

@@ -5395,6 +5395,7 @@
 /en-US/docs/MDC:How_to_Help	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN/About	/en-US/docs/MDN/Writing_guidelines
 /en-US/docs/MDN/At_ten/Contributing_to_MDN	/en-US/docs/MDN/Contribute
+/en-US/docs/MDN/Community/Users_teams	/en-US/docs/MDN/Community/Roles_teams
 /en-US/docs/MDN/Contribute/Changelog	/en-US/docs/MDN/Changelog
 /en-US/docs/MDN/Contribute/Code_sample_guidelines	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 /en-US/docs/MDN/Contribute/Content	/en-US/docs/MDN/Writing_guidelines
@@ -9944,6 +9945,7 @@
 /en-US/docs/Web/API/WebRTC_API/Overview	/en-US/docs/Web/API/WebRTC_API#WebRTC_concepts_and_usage
 /en-US/docs/Web/API/WebRTC_API/Taking_still_photos	/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 /en-US/docs/Web/API/WebRTC_API/WebRTC_basics	/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling
+/en-US/docs/Web/API/WebRTC_API/adapter.js	/en-US/docs/Web/API/WebRTC_API#interoperability
 /en-US/docs/Web/API/WebSocket/onclose	/en-US/docs/Web/API/WebSocket/close_event
 /en-US/docs/Web/API/WebSocket/onerror	/en-US/docs/Web/API/WebSocket/error_event
 /en-US/docs/Web/API/WebSocket/onmessage	/en-US/docs/Web/API/WebSocket/message_event
@@ -11179,7 +11181,6 @@
 /en-US/docs/Web/CSS/::-webkit-scrollbar-track-piece	/en-US/docs/Web/CSS/::-webkit-scrollbar
 /en-US/docs/Web/CSS/:@-moz-document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/:any	/en-US/docs/Web/CSS/:is
-/en-US/docs/Web/CSS/:current	/en-US/docs/Web/API/WebVTT_API
 /en-US/docs/Web/CSS/:dir()	/en-US/docs/Web/CSS/:dir
 /en-US/docs/Web/CSS/:host()	/en-US/docs/Web/CSS/:host_function
 /en-US/docs/Web/CSS/:lang()	/en-US/docs/Web/CSS/:lang
@@ -11327,14 +11328,16 @@
 /en-US/docs/Web/CSS/color_value/color_keywords	/en-US/docs/Web/CSS/named-color
 /en-US/docs/Web/CSS/color_value/device-cmyk()	/en-US/docs/Web/CSS/color_value/device-cmyk
 /en-US/docs/Web/CSS/color_value/hsl()	/en-US/docs/Web/CSS/color_value/hsl
-/en-US/docs/Web/CSS/color_value/hsla()	/en-US/docs/Web/CSS/color_value/hsla
+/en-US/docs/Web/CSS/color_value/hsla	/en-US/docs/Web/CSS/color_value/hsl
+/en-US/docs/Web/CSS/color_value/hsla()	/en-US/docs/Web/CSS/color_value/hsl
 /en-US/docs/Web/CSS/color_value/hwb()	/en-US/docs/Web/CSS/color_value/hwb
 /en-US/docs/Web/CSS/color_value/lab()	/en-US/docs/Web/CSS/color_value/lab
 /en-US/docs/Web/CSS/color_value/lch()	/en-US/docs/Web/CSS/color_value/lch
 /en-US/docs/Web/CSS/color_value/oklab()	/en-US/docs/Web/CSS/color_value/oklab
 /en-US/docs/Web/CSS/color_value/oklch()	/en-US/docs/Web/CSS/color_value/oklch
 /en-US/docs/Web/CSS/color_value/rgb()	/en-US/docs/Web/CSS/color_value/rgb
-/en-US/docs/Web/CSS/color_value/rgba()	/en-US/docs/Web/CSS/color_value/rgba
+/en-US/docs/Web/CSS/color_value/rgba	/en-US/docs/Web/CSS/color_value/rgb
+/en-US/docs/Web/CSS/color_value/rgba()	/en-US/docs/Web/CSS/color_value/rgb
 /en-US/docs/Web/CSS/color_value/system-color	/en-US/docs/Web/CSS/system-color
 /en-US/docs/Web/CSS/color_value/system_color_keywords	/en-US/docs/Web/CSS/system-color
 /en-US/docs/Web/CSS/conic-gradient	/en-US/docs/Web/CSS/gradient/conic-gradient

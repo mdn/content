@@ -127,8 +127,8 @@ memory is gated behind two HTTP headers:
 
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}} with `same-origin` as value
   (protects your origin from attackers)
-- {{HTTPHeader("Cross-Origin-Embedder-Policy")}} with `require-corp` as
-  value (protects victims from your origin)
+- {{HTTPHeader("Cross-Origin-Embedder-Policy")}} with `require-corp` or
+  `credentialless` as value (protects victims from your origin)
 
 ```http
 Cross-Origin-Opener-Policy: same-origin
