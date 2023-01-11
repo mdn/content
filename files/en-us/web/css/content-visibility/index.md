@@ -163,5 +163,6 @@ document.addEventListener("click", handleClick)
 ## See also
 
 - [CSS Containment](/en-US/docs/Web/CSS/CSS_Containment)
+- [`contain-intrinsic-size`](/en-US/docs/Web/CSS/contain-intrinsic-size)
+- {{domxref("element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}}
 - [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/content-visibility/) (web.dev)
-- The {{domxref("element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event
