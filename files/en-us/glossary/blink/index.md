@@ -1,6 +1,7 @@
 ---
 title: Blink
 slug: Glossary/Blink
+page-type: glossary-definition
 tags:
   - Infrastructure
   - Layout

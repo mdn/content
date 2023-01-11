@@ -1,6 +1,7 @@
 ---
 title: Unicode
 slug: Glossary/Unicode
+page-type: glossary-definition
 tags:
   - Infrastructure
 ---

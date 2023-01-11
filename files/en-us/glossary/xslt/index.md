@@ -1,6 +1,7 @@
 ---
 title: XSLT
 slug: Glossary/XSLT
+page-type: glossary-definition
 tags:
   - CodingScripting
   - XML

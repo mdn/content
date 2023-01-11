@@ -1,6 +1,7 @@
 ---
 title: Flex
 slug: Glossary/Flex
+page-type: glossary-definition
 tags:
   - CSS
   - Flex

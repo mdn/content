@@ -1,6 +1,7 @@
 ---
 title: SEO
 slug: Glossary/SEO
+page-type: glossary-definition
 tags:
   - Intro
   - SEO

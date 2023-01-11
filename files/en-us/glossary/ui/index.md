@@ -1,6 +1,7 @@
 ---
 title: UI
 slug: Glossary/UI
+page-type: glossary-definition
 tags:
   - Accessibility
   - Design

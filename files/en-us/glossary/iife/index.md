@@ -1,6 +1,7 @@
 ---
 title: IIFE
 slug: Glossary/IIFE
+page-type: glossary-definition
 tags:
   - CodingScripting
   - DesignPattern

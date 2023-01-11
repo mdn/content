@@ -1,6 +1,7 @@
 ---
 title: SCTP
 slug: Glossary/SCTP
+page-type: glossary-definition
 tags:
   - Infrastructure
   - SCTP

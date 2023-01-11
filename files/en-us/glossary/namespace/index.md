@@ -1,6 +1,7 @@
 ---
 title: Namespace
 slug: Glossary/Namespace
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Operating System

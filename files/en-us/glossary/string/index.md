@@ -1,6 +1,7 @@
 ---
 title: String
 slug: Glossary/String
+page-type: glossary-definition
 tags:
   - Beginner
   - CodingScripting

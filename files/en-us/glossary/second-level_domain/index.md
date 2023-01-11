@@ -1,6 +1,7 @@
 ---
 title: Second-level Domain
 slug: Glossary/Second-level_Domain
+page-type: glossary-definition
 tags:
   - Infrastructure
 ---

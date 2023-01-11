@@ -1,6 +1,7 @@
 ---
 title: Computer Programming
 slug: Glossary/Computer_Programming
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Computer Programming
