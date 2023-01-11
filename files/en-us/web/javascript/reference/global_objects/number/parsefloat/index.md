@@ -36,7 +36,7 @@ Or {{jsxref("NaN")}} when the first non-whitespace character cannot be converted
 
 ## Examples
 
-### Number.parseFloat vs parseFloat
+### Number.parseFloat vs. parseFloat
 
 This method has the same functionality as the global {{jsxref("parseFloat", "parseFloat()")}} function:
 

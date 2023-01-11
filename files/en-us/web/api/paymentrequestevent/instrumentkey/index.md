@@ -9,6 +9,7 @@ tags:
   - Payment Request API
   - PaymentRequestEvent
   - Reference
+  - Non-standard
 browser-compat: api.PaymentRequestEvent.instrumentKey
 ---
 
