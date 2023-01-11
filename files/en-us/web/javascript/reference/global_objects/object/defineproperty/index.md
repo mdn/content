@@ -71,7 +71,7 @@ An **accessor descriptor** also has the following optional keys:
 - `set`
   - : A function which serves as a setter for the property, or {{jsxref("undefined")}} if there is no setter. When the property is assigned, this function is called with one argument (the value being assigned to the property) and with `this` set to the object through which the property is assigned. **Defaults to {{jsxref("undefined")}}.**
 
-If a descriptor has none of `value`, `writable`, `get` and `set` keys, it is treated as a data descriptor. If a descriptor has both \[`value` or `writable`] and \[`get` or `set`] keys, an exception is thrown.
+If a descriptor doesn't have any of the `value`, `writable`, `get`, and `set` keys, it is treated as a data descriptor. If a descriptor has both \[`value` or `writable`] and \[`get` or `set`] keys, an exception is thrown.
 
 These attributes are not necessarily the descriptor's own properties. Inherited properties will be considered as well. In order to ensure these defaults are preserved, you might freeze existing objects in the descriptor object's prototype chain upfront, specify all options explicitly, or point to [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) with {{jsxref("Object.create", "Object.create(null)")}}.
 
