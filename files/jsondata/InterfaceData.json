@@ -436,10 +436,6 @@
       "inh": "",
       "impl": []
     },
-    "CrashReportBody": {
-      "inh": "ReportBody",
-      "impl": []
-    },
     "Credential": {
       "inh": "",
       "impl": []

@@ -39,6 +39,8 @@ Below is a list of interfaces based on the FileSystemHandle interface.
   - : Compares two {{domxref("FileSystemHandle", "handles")}} to see if the associated entries (either a file or directory) match.
 - {{domxref('FileSystemHandle.queryPermission()', 'queryPermission()')}} {{Experimental_Inline}}
   - : Queries the current permission state of the current handle.
+- {{domxref('FileSystemHandle.remove', 'remove()')}} {{Experimental_Inline}}
+  - : Requests removal of the entry represented by the handle from the underlying file system.
 - {{domxref('FileSystemHandle.requestPermission', 'requestPermission()')}} {{Experimental_Inline}}
   - : Requests read or readwrite permissions for the file handle.
 
