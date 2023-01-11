@@ -56677,10 +56677,6 @@
     "modified": "2020-10-15T22:16:15.742Z",
     "contributors": ["alattalatta", "chrisdavidmills"]
   },
-  "Web/API/ReportingObserverOptions": {
-    "modified": "2020-10-15T22:16:15.808Z",
-    "contributors": ["chrisdavidmills"]
-  },
   "Web/API/Reporting_API": {
     "modified": "2019-05-09T02:48:05.646Z",
     "contributors": ["sideshowbarker", "Nux", "chrisdavidmills"]

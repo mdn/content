@@ -1109,7 +1109,7 @@
       ]
     },
     "Reporting API": {
-      "overview": ["Reporting_API"],
+      "overview": ["Reporting API"],
       "guides": [],
       "interfaces": [
         "CSPViolationReportBody",
