@@ -73,11 +73,6 @@ See related [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/
 - `<string>`
   - The human readable text alternative of the numeric [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
 
-## ARIAMixin API
-
-- {{domxref("Element.ariaColIndexText")}}
-  - : The [`ariaColIndexText`](/en-US/docs/Web/API/Element/ariaColIndexText) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-colindextext` attribute, which defines a human readable text alternative of aria-colindex.
-
 ## Associated roles
 
 Used in roles:
@@ -95,7 +90,6 @@ Inherits into roles:
 
 ## See Also
 
-- [`Element.ariaColIndexText`](/en-US/docs/Web/API/Element/ariaColIndexText)
 - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
 - [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext)
 - [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)

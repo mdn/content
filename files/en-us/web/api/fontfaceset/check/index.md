@@ -47,11 +47,11 @@ console.log(document.fonts.check("12px courier"));
 console.log(document.fonts.check("12px MyFont", "ß"));
 ```
 
-If the font given in the font specification does not exist, this function returns `true`:
+If the font given in the font specification does not exist, this function returns `false`:
 
 ```js
 console.log(document.fonts.check("12px NonExistingFont"));
-// true
+// false
 ```
 
 ## Specifications
