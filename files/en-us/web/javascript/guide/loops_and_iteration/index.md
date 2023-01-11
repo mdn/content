@@ -95,7 +95,7 @@ element that allows multiple selections).
 Here, the `for` statement declares the variable `i` and initializes it to `0`. It checks that `i` is less than the number of options in the `<select>` element, performs the succeeding `if` statement, and increments `i` by 1 after each pass through the loop.
 
 ```js
-function howMany(selectObject) {
+function countSelected(selectObject) {
   let numberSelected = 0;
   for (let i = 0; i < selectObject.options.length; i++) {
     if (selectObject.options[i].selected) {
@@ -109,7 +109,7 @@ const btn = document.getElementById('btn');
 
 btn.addEventListener('click', () => {
   const musicTypes = document.selectForm.musicTypes;
-  console.log(`You have selected ${howMany(musicTypes)} option(s).`);
+  console.log(`You have selected ${countSelected(musicTypes)} option(s).`);
 });
 ```
 

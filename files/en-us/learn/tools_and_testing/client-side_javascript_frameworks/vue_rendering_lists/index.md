@@ -52,7 +52,7 @@ At this point we've got a fully working component; we're now ready to add multip
 
 ## Rendering lists with v-for
 
-To be an effective to-do list, we need to be able to render multiple to-do items. To do that, Vue has a special directive, [`v-for`](https://v2.vuejs.org/v2/api/#v-for). This is a built-in Vue directive that lets us include a loop inside of our template, repeating the rendering of a template feature for each item in an array. We'll use this to iterate through an array of to-do items and display them in our app in separate `ToDoItem` components.
+To be an effective to-do list, we need to be able to render multiple to-do items. To do that, Vue has a special directive, [`v-for`](https://vuejs.org/api/built-in-directives.html#v-for). This is a built-in Vue directive that lets us include a loop inside of our template, repeating the rendering of a template feature for each item in an array. We'll use this to iterate through an array of to-do items and display them in our app in separate `ToDoItem` components.
 
 ### Adding some data to render
 
@@ -62,20 +62,20 @@ Add a few sample to-do items, along the lines of those seen below. This way you 
 
 ```js
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    ToDoItem
+    ToDoItem,
   },
   data() {
     return {
       ToDoItems: [
-        { label: 'Learn Vue', done: false },
-        { label: 'Create a Vue project with the CLI', done: true },
-        { label: 'Have fun', done: true },
-        { label: 'Create a to-do list', done: false }
-      ]
+        { label: "Learn Vue", done: false },
+        { label: "Create a Vue project with the CLI", done: true },
+        { label: "Have fun", done: true },
+        { label: "Create a to-do list", done: false },
+      ],
     };
-  }
+  },
 };
 ```
 
@@ -92,7 +92,7 @@ To make sure that Vue can accurately compare the `key` attributes, they need to 
 1. Import `lodash.uniqueid` into your `App` component in the same way you did with your `ToDoItem` component, using
 
    ```js
-    import uniqueId from 'lodash.uniqueid';
+   import uniqueId from "lodash.uniqueid";
    ```
 
 2. Next, add an `id` field to each element in your `ToDoItems` array, and assign each of them a value of `uniqueId('todo-')`.
@@ -100,24 +100,28 @@ To make sure that Vue can accurately compare the `key` attributes, they need to 
    The `<script>` element in `App.vue` should now have the following contents:
 
    ```js
-   import ToDoItem from './components/ToDoItem.vue';
-   import uniqueId from 'lodash.uniqueid'
+   import ToDoItem from "./components/ToDoItem.vue";
+   import uniqueId from "lodash.uniqueid";
 
    export default {
-     name: 'app',
+     name: "app",
      components: {
-       ToDoItem
+       ToDoItem,
      },
      data() {
        return {
          ToDoItems: [
-           { id: uniqueId('todo-'), label: 'Learn Vue', done: false },
-           { id: uniqueId('todo-'), label: 'Create a Vue project with the CLI', done: true },
-           { id: uniqueId('todo-'), label: 'Have fun', done: true },
-           { id: uniqueId('todo-'), label: 'Create a to-do list', done: false }
-         ]
+           { id: uniqueId("todo-"), label: "Learn Vue", done: false },
+           {
+             id: uniqueId("todo-"),
+             label: "Create a Vue project with the CLI",
+             done: true,
+           },
+           { id: uniqueId("todo-"), label: "Have fun", done: true },
+           { id: uniqueId("todo-"), label: "Create a to-do list", done: false },
+         ],
        };
-     }
+     },
    };
    ```
 
@@ -160,17 +164,17 @@ The `<script>` contents in your `ToDoItem` component should now look something l
 
 ```js
 export default {
-    props: {
-        label: {required: true, type: String},
-        done: {default: false, type: Boolean},
-        id: {required: true, type: String}
-    },
-    data() {
-        return {
-           isDone : this.done,
-        }
-    },
-}
+  props: {
+    label: { required: true, type: String },
+    done: { default: false, type: Boolean },
+    id: { required: true, type: String },
+  },
+  data() {
+    return {
+      isDone: this.done,
+    };
+  },
+};
 ```
 
 Now, over in your `App.vue` component, pass `item.id` as a prop to the `ToDoItem` component. Your `App.vue` template should now look like this:
