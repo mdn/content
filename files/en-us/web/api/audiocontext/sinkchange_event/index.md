@@ -59,5 +59,6 @@ See our [SetSinkId test example](https://set-sink-id.glitch.me/) for working cod
 ## See also
 
 - [SetSinkId test example](https://set-sink-id.glitch.me/)
+- [Change the destination output device in Web Audio](https://developer.chrome.com/blog/audiocontext-setsinkid/)
 - {{domxref("AudioContext.setSinkId()")}}
 - {{domxref("AudioContext.sinkId")}}

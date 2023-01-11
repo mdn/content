@@ -67,5 +67,6 @@ playBtn.addEventListener('click', () => {
 ## See also
 
 - [SetSinkId test example](https://set-sink-id.glitch.me/)
+- [Change the destination output device in Web Audio](https://developer.chrome.com/blog/audiocontext-setsinkid/)
 - {{domxref("AudioContext.setSinkId()")}}
 - {{domxref("AudioContext/sinkchange_event", "sinkchange")}}

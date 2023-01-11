@@ -115,5 +115,6 @@ The output device can be changed during audio playback, as well as before, or be
 ## See also
 
 - [SetSinkId test example](https://set-sink-id.glitch.me/)
+- [Change the destination output device in Web Audio](https://developer.chrome.com/blog/audiocontext-setsinkid/)
 - {{domxref("AudioContext.sinkId")}}
 - {{domxref("AudioContext/sinkchange_event", "sinkchange")}}
