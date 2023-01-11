@@ -17,7 +17,6 @@ The **`ReportBody`** interface of the {{domxref('Reporting API','','',' ')}} rep
 
 ### Reports that inherit from `ReportBody`
 
-- {{domxref("CrashReportBody")}}
 - {{domxref("CSPViolationReportBody")}}
 - {{domxref("DeprecationReportBody")}}
 - {{domxref("InterventionReportBody")}}
