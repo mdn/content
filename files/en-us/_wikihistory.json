@@ -65839,10 +65839,6 @@
     "modified": "2019-06-17T09:14:48.783Z",
     "contributors": ["Sheppy", "beaulac", "now-raymond", "chrisdavidmills"]
   },
-  "Web/API/WebRTC_API/adapter.js": {
-    "modified": "2019-03-18T20:50:12.240Z",
-    "contributors": ["Sheppy", "shivangpatel", "teoli"]
-  },
   "Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/End_a_call": {
     "modified": "2020-12-10T13:59:26.911Z",
     "contributors": ["lolaodelola"]
