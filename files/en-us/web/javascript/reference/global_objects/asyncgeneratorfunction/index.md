@@ -11,11 +11,7 @@ The **`AsyncGeneratorFunction`** object provides methods for [async generator fu
 
 Note that `AsyncGeneratorFunction` is _not_ a global object. It can be obtained with the following code:
 
-```js
-const AsyncGeneratorFunction = async function* () {}.constructor;
-```
-
-{{EmbedInteractiveExample("pages/js/async-functionasterisk-function.html")}}
+{{EmbedInteractiveExample("pages/js/async-functionasterisk-function.html", "taller")}}
 
 ## Constructor
 
