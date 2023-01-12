@@ -91,7 +91,7 @@ Otherwise, the scheme must be one of the following:
 
 ## Examples
 
-If your site is `burgers.example.com`, and you have a `web+burger:` scheme, you can unregister the handler for it, like so:
+If your site is `burgers.example.com`, and you have a `web+burger:` scheme, you can unregister the handler for it like so:
 
 ```js
 navigator.unregisterProtocolHandler("web+burger",
