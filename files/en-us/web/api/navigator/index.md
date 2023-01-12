@@ -144,6 +144,8 @@ _Doesn't inherit any method._
   - : Returns a promise that resolves with a {{domxref("BatteryManager")}} object that returns information about the battery charging status.
 - {{domxref("Navigator.registerProtocolHandler()")}}
   - : Allows web sites to register themselves as a possible handler for a given protocol.
+- {{domxref("Navigator.unregisterProtocolHandler()")}}
+  - : Unregister a website that is a handler for a given protocol.
 - {{domxref("Navigator.requestMediaKeySystemAccess()")}}
   - : Returns a {{jsxref("Promise")}} for a MediaKeySystemAccess object.
 - {{domxref("Navigator.requestMIDIAccess()")}}
