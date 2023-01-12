@@ -331,13 +331,11 @@ def get_message():
 
 # Encode a message for transmission, given its content.
 def encode_message(message_content):
-    # https://github.com/mdn/webextensions-examples/issues/509
-    # https://discuss.python.org/t/how-to-read-1mb-of-input-from-stdin/22534/19
-    # https://stackoverflow.com/a/56563264
     # https://docs.python.org/3/library/json.html#basic-usage
     # To get the most compact JSON representation, you should specify 
     # (',', ':') to eliminate whitespace.
-    encoded_content = json.dumps(message_content, separators=(',', ':')).encode('utf-8')
+    # We want the most compact representation because the browser rejects # messages that exceed 1 MB.
+    encoded_content = json.dumps(message_content, separators=(',', ':'))
     encoded_length = struct.pack('=I', len(encoded_content))
     return {'length': encoded_length, 'content': encoded_content}
 
@@ -356,7 +354,7 @@ while True:
 In Python 3, the received binary data must be decoded into a string. The content to be sent back to the addon must be encoded into binary data using a struct:
 
 ```python
-#!/usr/bin/env python
+#!/usr/bin/env -S python3 -u
 
 import sys
 import json
@@ -393,39 +391,7 @@ try:
     while True:
         receivedMessage = getMessage()
         if receivedMessage == "ping":
-            sendMessage(encodeMessage("pong3"))
-except AttributeError:
-    # Python 2.x version (if sys.stdin.buffer is not defined)
-    # Read a message from stdin and decode it.
-    def getMessage():
-        rawLength = sys.stdin.read(4)
-        if len(rawLength) == 0:
-            sys.exit(0)
-        messageLength = struct.unpack('@I', rawLength)[0]
-        message = sys.stdin.read(messageLength)
-        return json.loads(message)
-
-    # Encode a message for transmission,
-    # given its content.
-    def encodeMessage(messageContent):
-        # https://docs.python.org/3/library/json.html#basic-usage
-        # To get the most compact JSON representation, you should specify 
-        # (',', ':') to eliminate whitespace.
-        # We want the most compact representation because the browser rejects # messages that exceed 1 MB.
-        encodedContent = json.dumps(messageContent, separators=(',', ':'))
-        encodedLength = struct.pack('@I', len(encodedContent))
-        return {'length': encodedLength, 'content': encodedContent}
-
-    # Send an encoded message to stdout
-    def sendMessage(encodedMessage):
-        sys.stdout.write(encodedMessage['length'])
-        sys.stdout.write(encodedMessage['content'])
-        sys.stdout.flush()
-
-    while True:
-        receivedMessage = getMessage()
-        if receivedMessage == "ping":
-            sendMessage(encodeMessage("pong2"))
+            sendMessage(encodeMessage("pong"))
 ```
 
 ## Closing the native app
