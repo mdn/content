@@ -1,5 +1,5 @@
 ---
-title: At-rule functions
+title: CSS at-rule functions
 slug: Web/CSS/At-rule-functions
 page-type: guide
 tags:
@@ -11,7 +11,7 @@ tags:
 
 {{CSSRef}}
 
-**At-rule Functions** are [at-rule](/en-US/docs/Web/CSS/At-rule) statements that can represent more complex rules or invoke special data processing or calculations.
+**[CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) functions** are at-rule statements that can represent more complex rules or invoke special data processing or calculations.
 
 ## Syntax
 
