@@ -89,8 +89,6 @@ Otherwise, the scheme must be one of the following:
 - `wtai`
 - `xmpp`
 
-<!-- This must match: https://html.spec.whatwg.org/multipage/system-state.html#safelisted-scheme -->
-
 ## Examples
 
 If your site is `burgers.example.com`, and you have a `web+burger:` scheme, you can unregister the handler for it, like so:
