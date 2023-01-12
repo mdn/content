@@ -356,49 +356,76 @@ while True:
 In Python 3, the received binary data must be decoded into a string. The content to be sent back to the addon must be encoded into binary data using a struct:
 
 ```python
-#!/usr/bin/python -u
+#!/usr/bin/env python
 
-# Note that running python with the `-u` flag is required on Windows,
-# in order to ensure that stdin and stdout are opened in binary, rather
-# than text, mode.
-
-import json
 import sys
+import json
 import struct
 
-# Read a message from stdin and decode it.
-def get_message():
-    raw_length = sys.stdin.buffer.read(4)
+try:
+    # Python 3.x version
+    # Read a message from stdin and decode it.
+    def getMessage():
+        rawLength = sys.stdin.buffer.read(4)
+        if len(rawLength) == 0:
+            sys.exit(0)
+        messageLength = struct.unpack('@I', rawLength)[0]
+        message = sys.stdin.buffer.read(messageLength).decode('utf-8')
+        return json.loads(message)
 
-    if not raw_length:
-        sys.exit(0)
-    message_length = struct.unpack('=I', raw_length)[0]
-    message = sys.stdin.buffer.read(message_length).decode("utf-8")
-    return json.loads(message)
+    # Encode a message for transmission,
+    # given its content.
+    def encodeMessage(messageContent):
+        # https://docs.python.org/3/library/json.html#basic-usage
+        # To get the most compact JSON representation, you should specify 
+        # (',', ':') to eliminate whitespace.
+        # We want the most compact representation because the browser rejects # messages that exceed 1 MB.
+        encodedContent = json.dumps(messageContent, separators=(',', ':')).encode('utf-8')
+        encodedLength = struct.pack('@I', len(encodedContent))
+        return {'length': encodedLength, 'content': encodedContent}
 
-# Encode a message for transmission, given its content.
-def encode_message(message_content):
-   # https://github.com/mdn/webextensions-examples/issues/509
-   # https://discuss.python.org/t/how-to-read-1mb-of-input-from-stdin/22534/19
-   # https://stackoverflow.com/a/56563264
-   # https://docs.python.org/3/library/json.html#basic-usage
-   # To get the most compact JSON representation, you should specify 
-   # (',', ':') to eliminate whitespace.
-    encoded_content = json.dumps(message_content, separators=(',', ':')).encode("utf-8")
-    encoded_length = struct.pack('=I', len(encoded_content))
-    #  use struct.pack("10s", bytes), to pack a string of the length of 10 characters
-    return {'length': encoded_length, 'content': struct.pack(str(len(encoded_content))+"s",encoded_content)}
+    # Send an encoded message to stdout
+    def sendMessage(encodedMessage):
+        sys.stdout.buffer.write(encodedMessage['length'])
+        sys.stdout.buffer.write(encodedMessage['content'])
+        sys.stdout.buffer.flush()
 
-# Send an encoded message to stdout.
-def send_message(encoded_message):
-    sys.stdout.buffer.write(encoded_message['length'])
-    sys.stdout.buffer.write(encoded_message['content'])
-    sys.stdout.buffer.flush()
+    while True:
+        receivedMessage = getMessage()
+        if receivedMessage == "ping":
+            sendMessage(encodeMessage("pong3"))
+except AttributeError:
+    # Python 2.x version (if sys.stdin.buffer is not defined)
+    # Read a message from stdin and decode it.
+    def getMessage():
+        rawLength = sys.stdin.read(4)
+        if len(rawLength) == 0:
+            sys.exit(0)
+        messageLength = struct.unpack('@I', rawLength)[0]
+        message = sys.stdin.read(messageLength)
+        return json.loads(message)
 
-while True:
-    message = get_message()
-    if message == "ping":
-        send_message(encode_message("pong"))
+    # Encode a message for transmission,
+    # given its content.
+    def encodeMessage(messageContent):
+        # https://docs.python.org/3/library/json.html#basic-usage
+        # To get the most compact JSON representation, you should specify 
+        # (',', ':') to eliminate whitespace.
+        # We want the most compact representation because the browser rejects # messages that exceed 1 MB.
+        encodedContent = json.dumps(messageContent, separators=(',', ':'))
+        encodedLength = struct.pack('@I', len(encodedContent))
+        return {'length': encodedLength, 'content': encodedContent}
+
+    # Send an encoded message to stdout
+    def sendMessage(encodedMessage):
+        sys.stdout.write(encodedMessage['length'])
+        sys.stdout.write(encodedMessage['content'])
+        sys.stdout.flush()
+
+    while True:
+        receivedMessage = getMessage()
+        if receivedMessage == "ping":
+            sendMessage(encodeMessage("pong2"))
 ```
 
 ## Closing the native app
