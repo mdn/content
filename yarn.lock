@@ -51,10 +51,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.24.tgz#45c85391411987d12519d214d80c324c5100bcbc"
   integrity sha512-KZJKMObObkYFUgEWEbIJ7voJ0iGm3XqhJLkS5jyRLSMoSL7PnmCjes+CttpSzgyLu7DwJsFWsRvKBgYFxb5e7A==
 
-"@mdn/yari@1.32.11":
-  version "1.32.11"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.32.11.tgz#976a6db3796d212b4ac240711f934213cf2a0cb4"
-  integrity sha512-iPfj+211SQCbqqv0QEq96gWGp9NA8nQUofQEA5QQjIoetd1ie9jyN1psuWe6fbiSdJaFY93aMb1G7LnrkNiyrA==
+"@mdn/yari@1.33.1":
+  version "1.33.1"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.33.1.tgz#b5ba08a6d7c04516a9ea8cc4600dc9ba5bbc042b"
+  integrity sha512-C/GALaQC0MbRr1HvWLLCy7lGIkTlBTBGt+aiAy2lcsMvR5cZ8SGSZqGAuYun6KnxoxWqFioj6zA/eIm8AuU1Lg==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
