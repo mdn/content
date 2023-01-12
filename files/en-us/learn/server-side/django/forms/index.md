@@ -403,7 +403,7 @@ def renew_book_librarian(request, pk):
         'book_instance': book_instance,
     }
 
-    return render(request, 'catalog/book_renew_librarian.html', context)
+    return render(request, 'book_renew_librarian.html', context)
 ```
 
 ### The template

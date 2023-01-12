@@ -436,10 +436,6 @@
       "inh": "",
       "impl": []
     },
-    "CrashReportBody": {
-      "inh": "ReportBody",
-      "impl": []
-    },
     "Credential": {
       "inh": "",
       "impl": []
@@ -1270,6 +1266,10 @@
     },
     "GPUOutOfMemoryError": {
       "inh": "GPUError",
+      "impl": []
+    },
+    "GPUPipelineError": {
+      "inh": "DOMException",
       "impl": []
     },
     "GPUPipelineLayout": {
@@ -2309,6 +2309,10 @@
       "impl": []
     },
     "Path2D": {
+      "inh": "",
+      "impl": []
+    },
+    "PaymentInstruments": {
       "inh": "",
       "impl": []
     },
