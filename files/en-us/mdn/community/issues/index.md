@@ -71,7 +71,7 @@ Ensure that you list all the actionable tasks as a checklist.
 
 For example:
 
-   ```markdown
+   ```plain
    // Issue title
    Ensure sections follow the order defined in the CSS property template
 
