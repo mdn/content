@@ -18,7 +18,7 @@ browser-compat: api.PromiseRejectionEvent
 
 The **`PromiseRejectionEvent`** interface represents events which are sent to the global script context when JavaScript {{jsxref("Promise")}}s are rejected. These events are particularly useful for telemetry and debugging purposes.
 
-For details on promise rejection events, see [Promise rejection events](/en-US/docs/Web/JavaScript/Guide/Using_promises#promise_rejection_events).
+For details, see [Promise rejection events](/en-US/docs/Web/JavaScript/Guide/Using_promises#promise_rejection_events).
 
 {{InheritanceDiagram}}
 

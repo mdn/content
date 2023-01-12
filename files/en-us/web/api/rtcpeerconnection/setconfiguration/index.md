@@ -29,7 +29,7 @@ this might be done:
 - Renegotiation of the connection is needed, and a different set of ICE servers needs
   to be used for some reason. Perhaps the user has moved into a new region, so using new
   regional ICE servers is necessary, for example.
-  In this situation, one might call `setConfiguration()` to switch to new regional ICE servers, then initiate an [Lifetime of a WebRTC session, ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart).
+  In this situation, one might call `setConfiguration()` to switch to new regional ICE servers, then initiate an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart).
 
 > **Note:** You cannot change the identity information for a connection once it's already been set.
 

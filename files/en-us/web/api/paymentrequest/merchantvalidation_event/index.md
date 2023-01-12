@@ -24,7 +24,7 @@ browser-compat: api.PaymentRequest.merchantvalidation_event
 
 **`merchantvalidation`** events are delivered by the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to a {{domxref("PaymentRequest")}} object when a payment handler requires that the merchant requesting the purchase validate itself as permitted to use the payment handler.
 
-See [Payment processing concepts, Merchant validation](/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation) for details on how the merchant validation process works.
+Learn how the [merchant validation](/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation) process works.
 
 This event is not cancelable and does not bubble.
 

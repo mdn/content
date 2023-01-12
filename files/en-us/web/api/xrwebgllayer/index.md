@@ -60,7 +60,7 @@ Although `XRWebGLLayer` is currently the only type of framebuffer layer supporte
 
 ### Binding the layer to a WebGL context
 
-This snippet, taken from [WebXR Device API, Drawing a frame](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion#drawing_a_frame), shows how the `XRWebGLLayer` is obtained from the {{domxref("XRSession")}} object's rendering state and is then bound as the current rendering WebGL framebuffer by calling the WebGL {{domxref("WebGLRenderingContext.bindFrameBuffer", "bindFrameBuffer()")}} function.
+This snippet, taken from the section [Drawing a frame](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion#drawing_a_frame), shows how the `XRWebGLLayer` is obtained from the {{domxref("XRSession")}} object's rendering state and is then bound as the current rendering WebGL framebuffer by calling the WebGL {{domxref("WebGLRenderingContext.bindFrameBuffer", "bindFrameBuffer()")}} function.
 
 ```js
 let glLayer = xrSession.renderState.baseLayer;

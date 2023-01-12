@@ -36,7 +36,7 @@ The Edge `week` control is somewhat more elaborate, opening up week and year pic
 
 ## Value
 
-A string representing the value of the week/year entered into the input. The format of the date and time value used by this input type is described in [HTML date and time formats, Week strings](/en-US/docs/Web/HTML/Date_and_time_formats#week_strings).
+A string representing the value of the week/year entered into the input. The format of the date and time value used by this input type is described in the [Week strings](/en-US/docs/Web/HTML/Date_and_time_formats#week_strings) section.
 
 You can set a default value for the input by including a value inside the {{htmlattrxref("value", "input")}} attribute, like so:
 

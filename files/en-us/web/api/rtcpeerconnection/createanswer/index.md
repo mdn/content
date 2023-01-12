@@ -104,7 +104,7 @@ you see fit.
 
 {{jsxref("Promise.catch()")}} is used to trap and handle errors.
 
-See [Signaling and video calling, Handling the invitation](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling#handling_the_invitation) to see the complete code, in context, from which this
+See the [Handling the invitation](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling#handling_the_invitation) section to view the complete code from which this
 snippet is derived; that will help you understand the signaling process and how answers
 work.
 
