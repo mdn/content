@@ -67,9 +67,9 @@ of the received frames of video.
 ## Examples
 
 Here are some example constraints objects for `getDisplayMedia()` that make
-use of the `displaySurface` property. In addition, see
-[Media Streams API, Example: Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser)
-for a complete example showing how constraints are used.
+use of the `displaySurface` property. In addition, see the
+[Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example
+that demonstrates how constraints are used.
 
 ## Specifications
 

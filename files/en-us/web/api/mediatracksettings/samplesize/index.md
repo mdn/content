@@ -46,7 +46,7 @@ For example, 16-bit stereo audio requires (16/8)\*2 or 4 bytes per sample.
 
 ## Examples
 
-See [Media Streams API, Example: Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) for an example.
+See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example.
 
 ## Specifications
 

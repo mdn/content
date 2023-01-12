@@ -36,7 +36,7 @@ by its height, and rounding the result to ten decimal places. For example, the s
 
 ## Examples
 
-See [Media Streams API, Example: Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) for an example.
+See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example.
 
 ## Specifications
 

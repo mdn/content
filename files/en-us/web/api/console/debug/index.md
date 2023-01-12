@@ -45,8 +45,8 @@ debug(msg, subst1, /* …, */ substN)
     with `subst1` through `substN` in consecutive order.
 - `subst1` … `substN`
   - : JavaScript objects with which to replace substitution strings within
-    `msg`. This gives you additional control over the format of the output. See
-    [Console API, Using string substitutions](/en-US/docs/Web/API/console#using_string_substitutions) for a
+    `msg`. This gives you additional control over the format of the output. See the
+    [Using string substitutions](/en-US/docs/Web/API/console#using_string_substitutions) section of the console page for a
     description of how substitutions work.
 
 See [Outputting text to the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of the {{domxref("console")}} object for
