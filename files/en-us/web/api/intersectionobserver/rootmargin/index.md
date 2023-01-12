@@ -25,7 +25,7 @@ outward so that the target element is considered 100% visible even if a certain 
 of pixels worth of width or height is clipped away, or treat the target as partially
 hidden if an edge is too close to the edge of the root's bounding box.
 
-See [How intersection is calculated](/en-US/docs/Web/API/Intersection_Observer_API#how_intersection_is_calculated)
+See [how intersection is calculated](/en-US/docs/Web/API/Intersection_Observer_API#how_intersection_is_calculated)
 for a more in-depth look at the root margin and how it works with
 the root's bounding box.
 
