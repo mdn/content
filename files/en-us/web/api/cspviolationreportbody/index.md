@@ -3,11 +3,11 @@ title: CSPViolationReportBody
 slug: Web/API/CSPViolationReportBody
 page-type: web-api-interface
 tags:
-  - Experimental
+
 browser-compat: api.CSPViolationReportBody
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("Reporting API")}}{{SecureContext_Header}}
 
 The `CSPViolationReportBody` interface contains the report data for a Content Security Policy (CSP) violation. CSP violations are thrown when the webpage attempts to load a resource that violates the CSP set by the {{HTTPHeader("Content-Security-Policy")}} HTTP header.
 
@@ -19,34 +19,34 @@ The `CSPViolationReportBody` interface contains the report data for a Content Se
 
 _Also inherits properties from its parent interface, {{DOMxRef("ReportBody")}}._
 
-- {{domxref("CSPViolationReportBody.blockedURL")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("CSPViolationReportBody.blockedURL")}} {{ReadOnlyInline}}
   - : A string representing the URL of the resource that was blocked because it violates the CSP.
-- {{domxref("CSPViolationReportBody.columnNumber")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("CSPViolationReportBody.columnNumber")}} {{ReadOnlyInline}}
   - : The column number in the script at which the violation occurred.
-- {{domxref("CSPViolationReportBody.disposition")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("CSPViolationReportBody.disposition")}} {{ReadOnlyInline}}
   - : Indicates how the violated policy is configured to be treated by the user agent. This will be `"enforce"` or `"report"`.
-- {{domxref("CSPViolationReportBody.documentURL")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("CSPViolationReportBody.documentURL")}} {{ReadOnlyInline}}
   - : A string representing the URL of the document or worker in which the violation was found.
-- {{domxref("CSPViolationReportBody.effectiveDirective")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("CSPViolationReportBody.effectiveDirective")}} {{ReadOnlyInline}}
   - : A string representing the directive whose enforcement uncovered the violation.
-- {{domxref("CSPViolationReportBody.lineNumber")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("CSPViolationReportBody.lineNumber")}} {{ReadOnlyInline}}
   - : The line number in the script at which the violation occurred.
-- {{domxref("CSPViolationReportBody.originalPolicy")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("CSPViolationReportBody.originalPolicy")}} {{ReadOnlyInline}}
   - : A string containing the policy whose enforcement uncovered the violation.
-- {{domxref("CSPViolationReportBody.referrer")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("CSPViolationReportBody.referrer")}} {{ReadOnlyInline}}
   - : A string representing the URL for the referrer of the resources whose policy was violated, or `null`.
-- {{domxref("CSPViolationReportBody.sample")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("CSPViolationReportBody.sample")}} {{ReadOnlyInline}}
   - : A string representing a sample of the resource that caused the violation, usually the first 40 characters. This will only be populated if the resource is an inline script, event handler, or style — external resources causing a violation will not generate a sample.
-- {{domxref("CSPViolationReportBody.sourceFile")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("CSPViolationReportBody.sourceFile")}} {{ReadOnlyInline}}
   - : If the violation occurred as a result of a script, this will be the URL of the script; otherwise, it will be `null`. Both `columnNumber` and `lineNumber` should have non-null values if this property is not `null`.
-- {{domxref("CSPViolationReportBody.statusCode")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("CSPViolationReportBody.statusCode")}} {{ReadOnlyInline}}
   - : A number representing the HTTP status code of the document or worker in which the violation occurred.
 
 ## Instance methods
 
 _Also inherits methods from its parent interface, {{DOMxRef("ReportBody")}}._
 
-- {{DOMxRef("CSPViolationReportBody.toJSON()")}} {{Experimental_Inline}}
+- {{DOMxRef("CSPViolationReportBody.toJSON()")}}
   - : A _serializer_ which returns a JSON representation of the `CSPViolationReportBody` object.
 
 ## Examples
