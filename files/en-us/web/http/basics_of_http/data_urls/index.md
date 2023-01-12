@@ -119,7 +119,7 @@ lots of text…
 
 ## See also
 
-- [Base64 encoding and decoding](/en-US/docs/Glossary/Base64)
+- [Base64](/en-US/docs/Glossary/Base64)
 - [Percent encoding](/en-US/docs/Glossary/percent-encoding)
 - {{domxref("atob","atob()")}}
 - {{domxref("btoa","btoa()")}}
