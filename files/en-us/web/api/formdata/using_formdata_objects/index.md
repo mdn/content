@@ -111,7 +111,7 @@ You can also send files using `FormData`. Include an {{ HTMLElement("input") }} 
     <input type="submit" value="Stash the file!" />
   </p>
 </form>
-<div></div>
+<div id="output"></div>
 ```
 
 Then you can send it using code like the following:
@@ -121,7 +121,7 @@ const form = document.forms.namedItem("fileinfo");
 form.addEventListener(
   "submit",
   (event) => {
-    const output = document.querySelector("output");
+    const output = document.querySelector("#output");
     const formData = new FormData(form);
 
     formData.append("CustomField", "This is some extra data");

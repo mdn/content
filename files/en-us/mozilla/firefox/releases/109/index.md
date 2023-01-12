@@ -42,6 +42,9 @@ This article provides information about the changes in Firefox 109 that will aff
 
 ### APIs
 
+- The `scrollend` events are now supported, which indicate that the user has completed scrolling in {{domxref("Element")}} and {{domxref("Document")}} objects.
+  For more information, see [Element: `scrollend` event](/en-US/docs/Web/API/Element/scrollend_event) and [Document: `scrollend` event](/en-US/docs/Web/API/Document/scrollend_event) ({{bug(1797013)}}, {{bug(1803435)}}).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
@@ -56,7 +59,15 @@ This article provides information about the changes in Firefox 109 that will aff
 
 #### WebDriver BiDi
 
+- The connection details for WebDriver BiDi are now written to `WebDriverBiDiServer.json` instead of `WebDriverBiDiActivePort`, which contains both the port (`ws_port`) and the host (`ws_host`). This file is located in the Firefox profile folder ({{bug(1792875)}}).
+- Added support for subscribing / unsubscribing to individual `contexts` when using `session.subscribe` and `session.unsubscribe` ({{bug(1723102)}}).
+- Added support for serializing `Node` objects ({{bug(1770731)}}).
+- Fixed the `columnNumber` for `exceptions` and `stackTraces` to be 0-based ({{bug(1796073)}}).
+
 #### Marionette
+
+- Fixed a bug where `WebDriver:NewWindow` and `WebDriver:SwitchToWindow` were not focusing the new window properly ({{bug(1798655)}}).
+- Fixed a bug where `WebDriver:FindElement` (and similar commands) would fail if the Firefox window was occluded by other applications on Windows ({{bug(1802473)}}).
 
 ## Changes for add-on developers
 
