@@ -9464,6 +9464,7 @@
 /en-US/docs/Web/API/RemotePlayback/onconnect	/en-US/docs/Web/API/RemotePlayback/connect_event
 /en-US/docs/Web/API/RemotePlayback/onconnecting	/en-US/docs/Web/API/RemotePlayback/connecting_event
 /en-US/docs/Web/API/RemotePlayback/ondisconnect	/en-US/docs/Web/API/RemotePlayback/disconnect_event
+/en-US/docs/Web/API/ReportingObserverOptions	/en-US/docs/Web/API/ReportingObserver
 /en-US/docs/Web/API/Request/context	/en-US/docs/Web/API/Request/destination
 /en-US/docs/Web/API/RequestDestination	/en-US/docs/Web/API/Request/destination
 /en-US/docs/Web/API/Resource_Timing	/en-US/docs/Web/API/Resource_Timing_API

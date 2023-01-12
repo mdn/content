@@ -55,28 +55,18 @@ Methods are then available on the observer to start collecting reports ({{domxre
 
 The Reporting API spec also defines a Generate Test Report [WebDriver](/en-US/docs/Web/WebDriver) extension, which allows you to simulate report generation during automation. Reports generated via WebDriver are observed by any registered `ReportObserver` objects present in the loaded website. This is not yet documented.
 
-## Reporting API interfaces
+## Interfaces
 
-- {{domxref("ReportingObserver")}}
-  - : Create `ReportingObserver` instances using its constructor, which can then be used to collect and access reports.
+- {{domxref("CSPViolationReportBody")}}
+  - : Contains details of a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) violation.
+- {{domxref("DeprecationReportBody")}}
+  - : Contains details of deprecated web platform features that a website is using.
+- {{domxref("InterventionReportBody")}}
+  - : Contains details of an intervention report, which is generated when a request made by the website has been denied by the browser; e.g. for security reasons.
 - {{domxref("Report")}}
   - : An object representing a single report.
-
-### Reporting API dictionaries
-
-- {{domxref("ReportingObserverOptions")}}
-  - : Allows options to be set in the constructor when creating a reporting observer.
-
-### Available report types
-
-The spec defines the following report types:
-
-- Deprecation report
-  - : Indicates that a WebAPI or other browser feature being used in the website is expected to stop working in a future release. Indicated by a {{domxref("Report.body")}} property with a {{domxref("DeprecationReportBody")}} return value.
-- Intervention report
-  - : Indicates that a request made by the website has been denied by the browser, e.g. for security or user annoyance reasons. Indicated by a {{domxref("Report.body")}} property with a {{domxref("InterventionReportBody")}} return value.
-- CSP violation report
-  - : Indicates that a request made by the website was denied by the Content Security Policy. Indicated by a {{domxref("Report.body")}} property with a {{domxref("CSPViolationReportBody")}} return value.
+- {{domxref("ReportingObserver")}}
+  - : An object that can be used to collect and access reports as they are generated.
 
 ## Examples
 
