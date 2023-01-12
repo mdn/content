@@ -32,7 +32,7 @@ If the event generator script is hosted on a different origin, a new `EventSourc
 const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );
 ```
 
-Once you've instantiated your event source, you can begin listening for messages from the server by attaching a handler for the {{domxref("EventSource.message_event", "message")}} event:
+Once you've instantiated your event source, you can begin listening for messages _without_ `event` from the server by attaching a handler for the {{domxref("EventSource.message_event", "message")}} event:
 
 ```js
 evtSource.onmessage = (event) => {
@@ -46,7 +46,7 @@ evtSource.onmessage = (event) => {
 
 This code listens for incoming messages (that is, notices from the server that do not have an `event` field on them) and appends the message text to a list in the document's HTML.
 
-You can also listen for events with `addEventListener()`:
+You can listen for events with `event` with `addEventListener()`:
 
 ```js
 evtSource.addEventListener("ping", (event) => {
@@ -58,7 +58,7 @@ evtSource.addEventListener("ping", (event) => {
 });
 ```
 
-This code is similar, except that it will be called automatically whenever the server sends a message with the `event` field set to "ping"; it then parses the JSON in the `data` field and outputs that information.
+This code will be called whenever the server sends a message with the `event` field set to "ping"; it then parses the JSON in the `data` field and outputs that information.
 
 > **Warning:** When **not used over HTTP/2**, SSE suffers from a limitation to the maximum number of open connections, which can be especially painful when opening multiple tabs, as the limit is _per browser_ and is set to a very low number (6). The issue has been marked as "Won't fix" in [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) and [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896). This limit is per browser + domain, which means that you can open 6 SSE connections across all of the tabs to `www.example1.com` and another 6 SSE connections to `www.example2.com` (per [Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)). When using HTTP/2, the maximum number of simultaneous _HTTP streams_ is negotiated between the server and the client (defaults to 100).
 
