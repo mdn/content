@@ -334,7 +334,8 @@ def encode_message(message_content):
     # https://docs.python.org/3/library/json.html#basic-usage
     # To get the most compact JSON representation, you should specify 
     # (',', ':') to eliminate whitespace.
-    # We want the most compact representation because the browser rejects # messages that exceed 1 MB.
+    # We want the most compact representation because the browser rejects
+    # messages that exceed 1 MB.
     encoded_content = json.dumps(message_content, separators=(',', ':'))
     encoded_length = struct.pack('=I', len(encoded_content))
     return {'length': encoded_length, 'content': encoded_content}
