@@ -1,6 +1,7 @@
 ---
 title: Parent object
 slug: Glossary/Parent_object
+page-type: glossary-definition
 tags:
   - CodingScripting
   - NeedsContent

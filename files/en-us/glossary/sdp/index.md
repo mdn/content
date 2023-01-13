@@ -1,6 +1,7 @@
 ---
 title: SDP
 slug: Glossary/SDP
+page-type: glossary-definition
 tags:
   - Advanced
   - Collaborating

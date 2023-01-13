@@ -1,6 +1,7 @@
 ---
 title: HTML5
 slug: Glossary/HTML5
+page-type: glossary-definition
 tags:
   - CodingScripting
   - HTML

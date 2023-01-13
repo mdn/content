@@ -1,6 +1,7 @@
 ---
 title: Middleware
 slug: Glossary/Middleware
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

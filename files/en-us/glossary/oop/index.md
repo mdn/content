@@ -1,6 +1,7 @@
 ---
 title: OOP
 slug: Glossary/OOP
+page-type: glossary-definition
 tags:
   - Beginner
   - CodingScripting

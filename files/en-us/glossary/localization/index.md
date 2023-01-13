@@ -1,6 +1,7 @@
 ---
 title: Localization
 slug: Glossary/Localization
+page-type: glossary-definition
 tags:
   - Collaborating
   - Intro

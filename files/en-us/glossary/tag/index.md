@@ -1,6 +1,7 @@
 ---
 title: Tag
 slug: Glossary/Tag
+page-type: glossary-definition
 tags:
   - CodingScripting
   - HTML

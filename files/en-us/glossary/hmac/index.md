@@ -1,6 +1,7 @@
 ---
 title: HMAC
 slug: Glossary/HMAC
+page-type: glossary-definition
 tags:
   - Cryptography
   - Hash

@@ -1,6 +1,7 @@
 ---
 title: Long task
 slug: Glossary/Long_task
+page-type: glossary-definition
 tags:
   - Long Tasks API
   - Reference

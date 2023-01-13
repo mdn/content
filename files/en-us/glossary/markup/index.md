@@ -1,6 +1,7 @@
 ---
 title: Markup
 slug: Glossary/Markup
+page-type: glossary-definition
 tags:
   - Intro
   - Markup

@@ -1,6 +1,7 @@
 ---
 title: Argument
 slug: Glossary/Argument
+page-type: glossary-definition
 tags:
   - CodingScripting
   - JavaScript
