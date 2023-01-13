@@ -1,6 +1,7 @@
 ---
 title: 'RangeError: argument is not a valid code point'
 slug: Web/JavaScript/Reference/Errors/Not_a_codepoint
+page-type: javascript-error
 tags:
   - Error
   - Errors

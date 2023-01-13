@@ -57,7 +57,7 @@ const nommingCake = document
 nommingCake.pause();
 ```
 
-Additionally, when resetting :
+Additionally, when resetting:
 
 ```js
 // An all-purpose function to pause the animations on Alice, the cupcake, and the bottle that reads "drink me."

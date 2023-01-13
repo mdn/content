@@ -41,6 +41,8 @@ _Doesn't inherit any properties._
     handlers for connected HID devices.
 - {{domxref("Navigator.hardwareConcurrency")}} {{ReadOnlyInline}}
   - : Returns the number of logical processor cores available.
+- {{domxref("Navigator.ink")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns an {{domxref("Ink")}} object for the current document, providing access to [Ink API](/en-US/docs/Web/API/Ink_API) functionality.
 - {{domxref('Navigator.keyboard')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref('Keyboard')}} object which provides access to functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
 - {{domxref("Navigator.language")}} {{ReadOnlyInline}}
@@ -77,6 +79,8 @@ _Doesn't inherit any properties._
   - : Returns the user agent string for the current browser.
 - {{domxref("Navigator.userAgentData")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("NavigatorUAData")}} object, which gives access to information about the browser and operating system of the user.
+- {{domxref("Navigator.virtualKeyboard")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a reference to the {{domxref("VirtualKeyboard")}} API, to take control of the on-screen virtual keyboard.
 - {{domxref("Navigator.webdriver")}} {{ReadOnlyInline}}
   - : Indicates whether the user agent is controlled by automation.
 - {{domxref("Navigator.windowControlsOverlay")}} {{ReadOnlyInline}}
@@ -110,7 +114,7 @@ _Doesn't inherit any properties._
 - {{domxref("Navigator.activeVRDisplays")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns an array containing every {{domxref("VRDisplay")}} object that is currently presenting ({{domxref("VRDisplay.ispresenting")}} is `true`).
 - {{domxref("Navigator.doNotTrack")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : Reports the value of the user's do-not-track preference. When this value is "yes", your web site or application should not track the user.
+  - : Reports the value of the user's do-not-track preference. When this value is "1", your web site or application should not track the user.
 - {{domxref("Navigator.mimeTypes")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Returns an {{domxref("MimeTypeArray")}} listing the MIME types supported by the browser.
 - {{domxref("Navigator.oscpu")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
@@ -140,6 +144,8 @@ _Doesn't inherit any method._
   - : Returns a promise that resolves with a {{domxref("BatteryManager")}} object that returns information about the battery charging status.
 - {{domxref("Navigator.registerProtocolHandler()")}}
   - : Allows web sites to register themselves as a possible handler for a given protocol.
+- {{domxref("Navigator.unregisterProtocolHandler()")}}
+  - : Unregister a website that is a handler for a given protocol.
 - {{domxref("Navigator.requestMediaKeySystemAccess()")}}
   - : Returns a {{jsxref("Promise")}} for a MediaKeySystemAccess object.
 - {{domxref("Navigator.requestMIDIAccess()")}}

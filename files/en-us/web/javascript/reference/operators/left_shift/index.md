@@ -1,6 +1,7 @@
 ---
 title: Left shift (<<)
 slug: Web/JavaScript/Reference/Operators/Left_shift
+page-type: javascript-operator
 tags:
   - Bitwise operator
   - JavaScript

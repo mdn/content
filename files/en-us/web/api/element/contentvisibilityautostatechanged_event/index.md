@@ -6,7 +6,7 @@ tags:
   - Experimental
   - Event
   - Reference
-browser-compat: api.element.contentvisibilityautostatechanged_event
+browser-compat: api.Element.contentvisibilityautostatechanged_event
 ---
 
 {{APIRef("CSS Containment")}}{{SeeCompatTable}}

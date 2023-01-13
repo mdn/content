@@ -1,6 +1,7 @@
 ---
 title: First Meaningful Paint
-slug: Glossary/first_meaningful_paint
+slug: Glossary/First_meaningful_paint
+page-type: glossary-definition
 tags:
   - Reference
   - Web Performance

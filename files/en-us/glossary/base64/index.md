@@ -1,6 +1,7 @@
 ---
 title: Base64
 slug: Glossary/Base64
+page-type: glossary-definition
 tags:
   - Advanced
   - Base64
@@ -228,7 +229,7 @@ function strToUTF8Arr(sDOMStr) {
   for (let nMapIdx = 0; nMapIdx < nStrLen; nMapIdx++) {
     nChr = sDOMStr.codePointAt(nMapIdx);
 
-    if (nChr > 65536) {
+    if (nChr >= 0x10000) {
       nMapIdx++;
     }
 

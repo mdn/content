@@ -1,6 +1,7 @@
 ---
 title: Literal
 slug: Glossary/Literal
+page-type: glossary-definition
 tags:
   - Literal
   - JavaScript

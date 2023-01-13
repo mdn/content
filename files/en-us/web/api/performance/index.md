@@ -14,11 +14,9 @@ browser-compat: api.Performance
 
 {{APIRef("Performance API")}}
 
-The **`Performance`** interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the [Performance Timeline API](/en-US/docs/Web/API/Performance_Timeline), the [Navigation Timing API](/en-US/docs/Web/API/Navigation_timing_API), the [User Timing API](/en-US/docs/Web/API/User_Timing_API), and the [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API).
+The **`Performance`** interface provides access to performance-related information for the current page.
 
-An object of this type can be obtained by calling the {{domxref("window.performance")}} read-only attribute.
-
-> **Note:** This interface and its members are available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) via [`WorkerGlobalScope.performance`](/en-US/docs/Web/API/performance_property), except where indicated below. Also, note that performance markers and measures are per context. If you create a mark on the main thread (or other worker), you cannot see it in a worker thread, and vice versa.
+An object of this type can be obtained by calling `window.performance` or `self.performance` in workers. Note that Performance entries are per context. If you create a mark on the main thread (or other worker), you cannot see it in a worker thread, and vice versa. See [`self.performance`](/en-US/docs/Web/API/performance_property) for which APIs are available in window and worker contexts.
 
 {{InheritanceDiagram}}
 
@@ -34,13 +32,9 @@ _The `Performance` interface doesn't inherit any properties._
 
   - : A legacy {{domxref("PerformanceNavigation")}} object that provides useful context about the operations included in the times listed in `timing`, including whether the page was a load or a refresh, how many redirections occurred, and so forth.
 
-    > **Note:** Not available in workers.
-
 - {{domxref("Performance.timing")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
 
   - : A legacy {{domxref("PerformanceTiming")}} object containing latency-related performance information.
-
-    > **Note:** Not available in workers.
 
 - {{domxref("Performance.memory")}} {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : A _non-standard_ extension added in Chrome, this property provides an object with basic memory usage information. _You **should not use** this non-standard API._

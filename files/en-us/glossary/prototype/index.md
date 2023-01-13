@@ -1,6 +1,7 @@
 ---
 title: Prototype
 slug: Glossary/Prototype
+page-type: glossary-definition
 tags:
   - Apps
   - Composing

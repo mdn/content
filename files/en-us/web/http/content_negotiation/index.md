@@ -18,7 +18,7 @@ In [HTTP](/en-US/docs/Glossary/HTTP), **_content negotiation_** is the mechanism
 
 A specific document is called a _resource_. When a client wants to obtain a resource, the client requests it via a URL. The server uses this URL to choose one of the variants available–each variant is called a _representation_–and returns a specific representation to the client. The overall resource, as well as each of the representations, has a specific URL. _Content negotiation_ determines how a specific representation is chosen when the resource is called. There are several ways of negotiating between the client and the server.
 
-![](httpnego.png)
+![A client requesting a URL. The server has multiple resources represented by the URL and sends back appropriate content based on the request.](httpnego.png)
 
 The best-suited representation is identified through one of two mechanisms:
 
@@ -31,7 +31,7 @@ Over the years, other content negotiation proposals, like [transparent content n
 
 In _server-driven content negotiation_, or proactive content negotiation, the browser (or any other kind of user agent) sends several HTTP headers along with the URL. These headers describe the user's preferred choice. The server uses them as hints and an internal algorithm chooses the best content to serve to the client. If it can't provide a suitable resource, it might respond with {{HTTPStatus("406")}} (Not Acceptable) or {{HTTPStatus("415")}} (Unsupported Media Type) and set headers for the types of media that it does support (e.g., using the {{HTTPHeader("Accept-Post")}} or {{HTTPHeader("Accept-Patch")}} for POST and PATCH requests, respectively). The algorithm is server-specific and not defined in the standard. See the [Apache negotiation algorithm](https://httpd.apache.org/docs/current/en/content-negotiation.html#algorithm).
 
-![](httpnegoserver.png)
+![A client requesting a URL with headers denoting a preference for content types. The server has multiple resources represented by the URL and sends back the content for the preferred language and compresses the request body based, respecting the client's request headers.](httpnegoserver.png)
 
 The HTTP/1.1 standard defines list of the standard headers that start server-driven negotiation (such as {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Encoding")}}, and {{HTTPHeader("Accept-Language")}}). Though {{HTTPHeader("User-Agent")}} isn't in this list, it's sometimes also used to send a specific representation of the requested resource. However, this isn't always considered a good practice. The server uses the {{HTTPHeader("Vary")}} header to indicate which headers it actually used for content negotiation (or more precisely, the associated request headers), so that [caches](/en-US/docs/Web/HTTP/Caching) can work optimally.
 
@@ -104,6 +104,6 @@ Server-driven negotiation has a few drawbacks: it doesn't scale well. One header
 
 HTTP allows another negotiation type: _agent-driven negotiation_ or _reactive negotiation_. In this case, the server sends back a page that contains links to the available alternative resources when faced with an ambiguous request. The user is presented the resources and chooses the one to use.
 
-![](httpnego3.png)
+![A client requesting a URL with headers denoting a preference for content types. The server has multiple resources represented by the URL and sends back multiple responses so the client may choose a body with a preferred compression algorithms applied.](httpnego3.png)
 
 Unfortunately, the HTTP standard doesn't specify the format of the page for choosing between the available resources, which prevents the process from being automated. Besides falling back to the _server-driven negotiation_, this method is almost always used with scripting, especially with JavaScript redirection: after having checked for the negotiation criteria, the script performs the redirection. A second problem is that one more request is needed to fetch the real resource, slowing the availability of the resource to the user.

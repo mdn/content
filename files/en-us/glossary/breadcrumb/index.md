@@ -1,6 +1,7 @@
 ---
 title: Breadcrumb
 slug: Glossary/Breadcrumb
+page-type: glossary-definition
 tags:
   - Accessibility
   - Navigation

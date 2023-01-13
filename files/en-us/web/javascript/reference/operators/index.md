@@ -1,6 +1,7 @@
 ---
 title: Expressions and operators
 slug: Web/JavaScript/Reference/Operators
+page-type: landing-page
 tags:
   - JavaScript
   - Landing page

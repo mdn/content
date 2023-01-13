@@ -1,6 +1,7 @@
 ---
 title: Houdini
 slug: Glossary/Houdini
+page-type: glossary-definition
 tags:
   - CSS
   - CSS API

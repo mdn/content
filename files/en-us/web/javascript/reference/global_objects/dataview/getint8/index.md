@@ -1,6 +1,7 @@
 ---
 title: DataView.prototype.getInt8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt8
+page-type: javascript-instance-method
 tags:
   - DataView
   - JavaScript

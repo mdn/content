@@ -1,6 +1,7 @@
 ---
 title: Cipher
 slug: Glossary/Cipher
+page-type: glossary-definition
 tags:
   - Cryptography
   - Privacy

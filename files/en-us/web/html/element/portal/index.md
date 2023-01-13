@@ -21,23 +21,6 @@ The **`<portal>`** [HTML](/en-US/docs/Web/HTML) element enables the embedding of
 
 A `<portal>` is similar to an `<iframe>`. An `<iframe>` allows a separate {{Glossary("browsing context")}} to be embedded. However, the embedded content of a `<portal>` is more limited than that of an `<iframe>`. It cannot be interacted with, and therefore is not suitable for embedding widgets into a document. Instead, the `<portal>` acts as a preview of the content of another page. It can be navigated into therefore allowing for seamless transition to the embedded content.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"
-          >button</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLPortalElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
@@ -66,6 +49,25 @@ Portals are given a default label which is the title of the embedded page. If no
 Portals used for prerendering only should be hidden with the hidden HTML attribute or the CSS {{cssxref("display")}} property with a value of `none`.
 
 When using animations during portal activation the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) should be respected.
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"
+          >button</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLPortalElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

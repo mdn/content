@@ -1,6 +1,7 @@
 ---
 title: Symbol.replace
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
+page-type: javascript-static-data-property
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -16,7 +17,13 @@ The **`Symbol.replace`** well-known symbol specifies the method that replaces ma
 
 For more information, see {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}} and {{jsxref("String.prototype.replace()")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-replace.html")}}{{js_property_attributes(0,0,0)}}
+{{EmbedInteractiveExample("pages/js/symbol-replace.html")}}
+
+## Value
+
+The well-known symbol `@@replace`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Examples
 
