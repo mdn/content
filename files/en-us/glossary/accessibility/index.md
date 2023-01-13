@@ -1,6 +1,7 @@
 ---
 title: Accessibility
 slug: Glossary/Accessibility
+page-type: glossary-definition
 tags:
   - Accessibility
 ---

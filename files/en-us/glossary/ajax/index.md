@@ -1,6 +1,7 @@
 ---
 title: Ajax
 slug: Glossary/AJAX
+page-type: glossary-definition
 tags:
   - AJAX
   - CodingScripting

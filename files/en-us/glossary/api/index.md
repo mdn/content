@@ -1,6 +1,7 @@
 ---
 title: API
 slug: Glossary/API
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Infrastructure
