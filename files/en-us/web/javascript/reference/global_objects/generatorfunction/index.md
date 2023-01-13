@@ -20,6 +20,12 @@ Note that `GeneratorFunction` is _not_ a global object. It can be obtained with 
 
 {{EmbedInteractiveExample("pages/js/functionasterisk-function.html", "taller")}}
 
+## Syntax
+
+```js
+const GeneratorFunction = function* () {}.constructor;
+```
+
 ## Constructor
 
 - {{jsxref("GeneratorFunction/GeneratorFunction", "GeneratorFunction()")}}
