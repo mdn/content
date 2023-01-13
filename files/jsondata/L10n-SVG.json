@@ -250,6 +250,7 @@
     "fr": "Attributs d'évènement globaux",
     "ja": "グローバルイベント属性",
     "pt-BR": "Atributos de eventos globais",
+    "zh-CN": "全局事件属性",
     "zh-TW": "全域事件屬性"
   },
   "gradientElement": {
@@ -432,6 +433,7 @@
     "fr": "Éléments enfants de conteneur de texte",
     "ja": "テキストコンテンツの子要素",
     "pt-BR": "Elementos filhos de conteúdo de texto",
+    "zh-CN": "文本内容子元素",
     "zh-TW": "文字內容子元素"
   },
   "textContentElement": {
@@ -451,7 +453,7 @@
     "ja": "テキストコンテンツの要素",
     "pt-BR": "Elementos de conteúdo textual",
     "ru": "Текстосодержащие элементы",
-    "zh-CN": "文字内容子元素",
+    "zh-CN": "文字内容元素",
     "zh-TW": "文字內容元素"
   },
   "transferFunctionAttributes": {
