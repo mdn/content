@@ -1,6 +1,7 @@
 ---
 title: Mixin
 slug: Glossary/Mixin
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Method

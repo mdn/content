@@ -1,6 +1,7 @@
 ---
 title: GZip compression
 slug: Glossary/GZip_compression
+page-type: glossary-definition
 tags:
   - compression
   - gzip

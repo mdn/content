@@ -1,6 +1,7 @@
 ---
 title: Key
 slug: Glossary/Key
+page-type: glossary-definition
 tags:
   - Cryptography
   - Security
