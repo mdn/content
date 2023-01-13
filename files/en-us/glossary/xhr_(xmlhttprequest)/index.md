@@ -1,6 +1,7 @@
 ---
 title: XHR (XMLHttpRequest)
 slug: Glossary/XHR_(XMLHttpRequest)
+page-type: glossary-definition
 tags:
   - API
   - Beginner

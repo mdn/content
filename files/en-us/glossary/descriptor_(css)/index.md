@@ -1,6 +1,7 @@
 ---
 title: Descriptor (CSS)
 slug: Glossary/Descriptor_(CSS)
+page-type: glossary-definition
 tags:
   - CSS
   - CodingScripting
