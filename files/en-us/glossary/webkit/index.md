@@ -1,6 +1,7 @@
 ---
 title: WebKit
 slug: Glossary/WebKit
+page-type: glossary-definition
 tags:
   - Browser
   - Intro

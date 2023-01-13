@@ -1,6 +1,7 @@
 ---
 title: Snap positions
 slug: Glossary/Snap_positions
+page-type: glossary-definition
 tags:
   - snap positions
 ---

@@ -1,6 +1,7 @@
 ---
 title: Truthy
 slug: Glossary/Truthy
+page-type: glossary-definition
 tags:
   - CodingScripting
   - JavaScript

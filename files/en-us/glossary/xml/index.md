@@ -1,6 +1,7 @@
 ---
 title: XML
 slug: Glossary/XML
+page-type: glossary-definition
 tags:
   - CodingScripting
   - XML
