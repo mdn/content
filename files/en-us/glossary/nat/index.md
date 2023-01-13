@@ -1,6 +1,7 @@
 ---
 title: NAT
 slug: Glossary/NAT
+page-type: glossary-definition
 tags:
   - Beginner
   - Infrastructure
