@@ -92,7 +92,7 @@ jobs:
           # you don't need that script as a writer. It's only used in CI
           # and it can't use the default CONTENT_ROOT that gets set in
           # package.json.
-          # Note that the filepath may contains parentheses,
+          # Note that the filepaths may contain parentheses,
           # so we need to escape them.
           echo "${{ env.GIT_DIFF_CONTENT }}" | xargs yarn build
 
