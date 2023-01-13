@@ -59,6 +59,8 @@ This page lists a number of impressive web technology demos for you to get inspi
   - : HTML and canvas implementation of Settlers of Catan.
 - [Pyramid Solitaire Ancient Egypt](https://www.solitaireparadise.com/games_list/pyramid_solitaire_ancient_egypt.html)
   - : Pyramid solitaire app ported to WebAssembly with Emscripten
+- [Subway Surfers](https://poki.com/en/g/subway-surfers)
+  - : 3D mobile first web game using Pixi.js and WebGL
 
 ## Assorted demos
 
