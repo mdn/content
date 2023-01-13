@@ -92,7 +92,9 @@ jobs:
           # you don't need that script as a writer. It's only used in CI
           # and it can't use the default CONTENT_ROOT that gets set in
           # package.json.
-          yarn build ${{ env.GIT_DIFF_CONTENT }}
+          # Note that the filepath may contains parentheses,
+          # so we need to escape them.
+          echo ${{ env.GIT_DIFF_CONTENT }} | xargs yarn build
 
           echo "Disk usage size of build/"
           du -sh $BUILD_OUT_ROOT
@@ -138,4 +140,4 @@ jobs:
           echo ${{ env.GIT_DIFF_FILES }}
 
           export CONTENT_ROOT=$(pwd)/files
-          yarn filecheck ${{ env.GIT_DIFF_FILES }}
+          echo ${{ env.GIT_DIFF_FILES }} | xargs yarn filecheck
