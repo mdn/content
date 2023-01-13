@@ -1,6 +1,7 @@
 ---
 title: WAI
 slug: Glossary/WAI
+page-type: glossary-definition
 tags:
   - Accessibility
 ---

@@ -1,6 +1,7 @@
 ---
 title: Pixel
 slug: Glossary/Pixel
+page-type: glossary-definition
 tags:
   - Design
   - Graphics

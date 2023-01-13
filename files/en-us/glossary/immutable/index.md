@@ -1,6 +1,7 @@
 ---
 title: Immutable
 slug: Glossary/Immutable
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

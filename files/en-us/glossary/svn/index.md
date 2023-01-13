@@ -1,6 +1,7 @@
 ---
 title: SVN
 slug: Glossary/SVN
+page-type: glossary-definition
 tags:
   - Collaborating
 ---

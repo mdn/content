@@ -1,6 +1,7 @@
 ---
 title: Minification
 slug: Glossary/Minification
+page-type: glossary-definition
 tags:
   - Performance
   - Reference

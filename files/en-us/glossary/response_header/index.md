@@ -1,6 +1,7 @@
 ---
 title: Response header
 slug: Glossary/Response_header
+page-type: glossary-definition
 tags:
   - WebMechanics
 ---
