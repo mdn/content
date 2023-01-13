@@ -1,6 +1,7 @@
 ---
 title: Robots.txt
 slug: Glossary/Robots.txt
+page-type: glossary-definition
 tags:
   - Infrastructure
 ---

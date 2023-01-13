@@ -1,6 +1,7 @@
 ---
 title: REST
 slug: Glossary/REST
+page-type: glossary-definition
 tags:
   - Architecture
   - Beginner

@@ -1,6 +1,7 @@
 ---
 title: Repo
 slug: Glossary/Repo
+page-type: glossary-definition
 tags:
   - Infrastructure
   - Intro
