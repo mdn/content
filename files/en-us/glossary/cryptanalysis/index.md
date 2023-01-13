@@ -1,6 +1,7 @@
 ---
 title: Cryptanalysis
 slug: Glossary/Cryptanalysis
+page-type: glossary-definition
 tags:
   - Cryptography
   - Privacy

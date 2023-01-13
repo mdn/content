@@ -43,7 +43,7 @@ The code to generate that image looks something like this:
 
 ## Rectangle
 
-The {{SVGElement("rect")}} element draws a rectangle on the screen. There are 6 basic attributes that control the position and shape of the rectangles on screen. The one on the right has its `rx` and `ry` parameters set, giving it rounded corners. If they're not set, they default to `0`.
+The {{SVGElement("rect")}} element draws a rectangle on the screen. There are six basic attributes that control the position and shape of the rectangles on screen. The one on the right has its `rx` and `ry` parameters set, giving it rounded corners. If they're not set, they default to `0`.
 
 ```xml
 <rect x="10" y="10" width="30" height="30"/>
@@ -55,17 +55,17 @@ The {{SVGElement("rect")}} element draws a rectangle on the screen. There are 6 
 - `y`
   - : The y position of the top left corner of the rectangle.
 - `width`
-  - : The width of the rectangle
+  - : The width of the rectangle.
 - `height`
-  - : The height of the rectangle
+  - : The height of the rectangle.
 - `rx`
-  - : The x radius of the corners of the rectangle
+  - : The x radius of the corners of the rectangle.
 - `ry`
-  - : The y radius of the corners of the rectangle
+  - : The y radius of the corners of the rectangle.
 
 ## Circle
 
-The {{SVGElement("circle")}} element draws a circle on the screen. It takes 3 basic parameters to determine the shape and size of the element.
+The {{SVGElement("circle")}} element draws a circle on the screen. It takes three basic parameters to determine the shape and size of the element.
 
 ```xml
 <circle cx="25" cy="75" r="20"/>

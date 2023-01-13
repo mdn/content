@@ -1,6 +1,7 @@
 ---
 title: Base64
 slug: Glossary/Base64
+page-type: glossary-definition
 tags:
   - Advanced
   - Base64

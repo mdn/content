@@ -1,6 +1,7 @@
 ---
 title: CSS pixel
 slug: Glossary/CSS_pixel
+page-type: glossary-definition
 tags:
   - CSS
   - CSS Pixel

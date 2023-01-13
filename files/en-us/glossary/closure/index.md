@@ -1,6 +1,7 @@
 ---
 title: Closure
 slug: Glossary/Closure
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---
