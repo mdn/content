@@ -50,9 +50,9 @@ A {{jsxref("Promise")}} that fulfills with an {{jsxref("ArrayBuffer")}} containi
 The promise is rejected when the following exceptions are encountered:
 
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : Raised when the requested operation is not valid for the provided key (e.g. invalid encryption algorithm, or invalid key for the specified encryption algorithm*)*.
+  - : Raised when the requested operation is not valid for the provided key (e.g. invalid encryption algorithm, or invalid key for the specified encryption algorithm).
 - `OperationError` {{domxref("DOMException")}}
-  - : Raised when the operation failed for an operation-specific reason (e.g. algorithm parameters of invalid sizes, or AES-GCM plaintext longer than 2³⁹−256 bytes).
+  - : Raised when the operation failed for an operation-specific reason (e.g. algorithm parameters of invalid sizes, or AES-GCM plaintext longer than 2<sup>39</sup>−256 bytes).
 
 ## Supported algorithms
 
@@ -171,9 +171,9 @@ function encryptMessage(key) {
 let iv = window.crypto.getRandomValues(new Uint8Array(16));
 let key = window.crypto.getRandomValues(new Uint8Array(16));
 let data = new Uint8Array(12345);
-//crypto functions are wrapped in promises so we have to use await and make sure the function that
-//contains this code is an async function
-//encrypt function wants a cryptokey object
+// crypto functions are wrapped in promises so we have to use await and make sure the function that
+// contains this code is an async function
+// encrypt function wants a cryptokey object
 const key_encoded = await crypto.subtle.importKey(
   "raw",
   key.buffer,

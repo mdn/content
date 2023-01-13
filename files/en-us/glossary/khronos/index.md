@@ -1,6 +1,7 @@
 ---
 title: The Khronos Group
 slug: Glossary/Khronos
+page-type: glossary-definition
 tags:
   - Khronos
 ---

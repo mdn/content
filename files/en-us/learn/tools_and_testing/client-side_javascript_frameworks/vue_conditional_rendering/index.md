@@ -58,7 +58,11 @@ We can start by creating a separate component to handle the editing functionalit
   <form class="stack-small" @submit.prevent="onSubmit">
     <div>
       <label class="edit-label">Edit Name for &quot;\{{label}}&quot;</label>
-      <input :id="id" type="text" autocomplete="off" v-model.lazy.trim="newLabel" />
+      <input
+        :id="id"
+        type="text"
+        autocomplete="off"
+        v-model.lazy.trim="newLabel" />
     </div>
     <div class="btn-group">
       <button type="button" class="btn" @click="onCancel">
@@ -148,8 +152,12 @@ Update your `ToDoItem`'s template as shown below.
 <template>
   <div class="stack-small">
     <div class="custom-checkbox">
-      <input type="checkbox" class="checkbox" :id="id" :checked="isDone"
-             @change="$emit('checkbox-changed')" />
+      <input
+        type="checkbox"
+        class="checkbox"
+        :id="id"
+        :checked="isDone"
+        @change="$emit('checkbox-changed')" />
       <label :for="id" class="checkbox-label">\{{label}}</label>
     </div>
     <div class="btn-group">
@@ -265,9 +273,12 @@ Last for this section, we'll add event handlers for the events emitted by the `T
 Update your `<to-do-item-edit-form></to-do-item-edit-form>` call to look like so:
 
 ```html
-<to-do-item-edit-form v-else :id="id" :label="label"
-                      @item-edited="itemEdited"
-                      @edit-cancelled="editCancelled">
+<to-do-item-edit-form
+  v-else
+  :id="id"
+  :label="label"
+  @item-edited="itemEdited"
+  @edit-cancelled="editCancelled">
 </to-do-item-edit-form>
 ```
 
@@ -296,10 +307,13 @@ Next, we'll add the event listeners for the `item-deleted` and `item-edited` eve
 Update the `<to-do-item></to-do-item>` call inside the `App.vue` template to look like this:
 
 ```html
-<to-do-item :label="item.label" :done="item.done" :id="item.id"
-            @checkbox-changed="updateDoneStatus(item.id)"
-            @item-deleted="deleteToDo(item.id)"
-            @item-edited="editToDo(item.id, $event)">
+<to-do-item
+  :label="item.label"
+  :done="item.done"
+  :id="item.id"
+  @checkbox-changed="updateDoneStatus(item.id)"
+  @item-deleted="deleteToDo(item.id)"
+  @item-edited="editToDo(item.id, $event)">
 </to-do-item>
 ```
 
@@ -317,7 +331,7 @@ Note the state of the checkbox after you cancel — not only has the app forgott
 
 Fixing this is fortunately quite easy — we can do this by converting our `isDone` data item into a [computed property](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties) — another advantage of computed properties is that they preserve [reactivity](https://vuejs.org/guide/essentials/reactivity-fundamentals.html), meaning (among other things) that their state is saved when the template changes like ours is now doing.
 
-So, let's implement the fix:
+So, let's implement the fix in `ToDoItem.vue`:
 
 1. Remove the following line from inside our `data()` property:
 

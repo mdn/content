@@ -1,6 +1,7 @@
 ---
 title: Falsy
 slug: Glossary/Falsy
+page-type: glossary-definition
 tags:
   - CodingScripting
   - JavaScript

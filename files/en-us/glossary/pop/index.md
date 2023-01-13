@@ -1,6 +1,7 @@
 ---
 title: POP3
 slug: Glossary/POP
+page-type: glossary-definition
 tags:
   - Beginner
   - Infrastructure

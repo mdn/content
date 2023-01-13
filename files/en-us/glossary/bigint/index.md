@@ -1,6 +1,7 @@
 ---
 title: BigInt
 slug: Glossary/BigInt
+page-type: glossary-definition
 tags:
   - BigInt
   - JavaScript

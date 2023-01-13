@@ -1,6 +1,7 @@
 ---
 title: Slug
 slug: Glossary/Slug
+page-type: glossary-definition
 tags:
   - Community
   - Intermediate
