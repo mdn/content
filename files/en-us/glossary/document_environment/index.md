@@ -1,6 +1,7 @@
 ---
 title: Document environment
 slug: Glossary/Document_environment
+page-type: glossary-definition
 tags:
   - CodingScripting
   - JavaScript
