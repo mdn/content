@@ -1,6 +1,7 @@
 ---
 title: DataView() constructor
 slug: Web/JavaScript/Reference/Global_Objects/DataView/DataView
+page-type: javascript-constructor
 tags:
   - Constructor
   - DataView

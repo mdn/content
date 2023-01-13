@@ -15,8 +15,6 @@ spec-urls: https://drafts.csswg.org/selectors/
 
 **CSS selectors** define the pattern to select elements to which a set of CSS rules are then applied.
 
-> **Note:** There are no selectors or combinators to select parent items, siblings of parents, or children of parent siblings.
-
 CSS selectors can be grouped into the following categories based on the type of elements they can select.
 
 ## Basic selectors
@@ -151,9 +149,9 @@ The term 'selector' can refer to one of the following:
 
 - Relative selector
 
-  - : A selector that represents an element relative to one or more [anchor elements](/en-US/docs/Web/CSS/Pseudo-classes) preceded by a combinator. Relative selectors that don't begin with an explicit [combinator](#combinators) have an implied [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator).
+  - : A selector representing an element relative to one or more anchor elements preceded by a combinator. Relative selectors that don't begin with an explicit [combinator](#combinators) have an implied [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator).
 
-    **Examples:** `+ div#topic > #reference {...}`, `> .icon {...}`
+    **Examples:** `+ div#topic > #reference {...}`, `> .icon {...}`, `dt:has(+ img) ~ dd {...}`
 
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
 
@@ -169,5 +167,6 @@ See the [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes#specifications) and [p
 
 ## See also
 
+- [`:has()` pseudo class](/en-US/docs/Web/CSS/:has)
 - [CSS Specificity](/en-US/docs/Web/CSS/Specificity)
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)

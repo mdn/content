@@ -436,10 +436,6 @@
       "inh": "",
       "impl": []
     },
-    "CrashReportBody": {
-      "inh": "ReportBody",
-      "impl": []
-    },
     "Credential": {
       "inh": "",
       "impl": []
@@ -1272,6 +1268,10 @@
       "inh": "GPUError",
       "impl": []
     },
+    "GPUPipelineError": {
+      "inh": "DOMException",
+      "impl": []
+    },
     "GPUPipelineLayout": {
       "inh": "",
       "impl": []
@@ -1801,10 +1801,6 @@
       "impl": []
     },
     "Instance": {
-      "inh": "",
-      "impl": []
-    },
-    "InteractionCounts": {
       "inh": "",
       "impl": []
     },

@@ -1,6 +1,7 @@
 ---
 title: decodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURI
+page-type: javascript-function
 tags:
   - Decode
   - JavaScript
@@ -63,7 +64,7 @@ decodeURI(
 // "https://developer.mozilla.org/ru/docs/JavaScript_шеллы"
 ```
 
-### decodeURI() vs decodeURIComponent()
+### decodeURI() vs. decodeURIComponent()
 
 `decodeURI()` assumes the input is a full URI, so it does not decode characters that are part of the URI syntax.
 

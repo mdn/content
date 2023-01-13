@@ -1,6 +1,6 @@
 ---
-title: caret
-slug: Glossary/caret
+title: Caret
+slug: Glossary/Caret
 tags:
   - Cursor
   - Input

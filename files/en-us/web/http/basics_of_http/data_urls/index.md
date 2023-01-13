@@ -47,7 +47,7 @@ Base64 is a group of binary-to-text encoding schemes that represent binary data 
 
 ### Encoding in JavaScript
 
-The Web APIs have native methods to encode or decode to base64: [Base64 encoding and decoding](/en-US/docs/Glossary/Base64).
+The Web APIs have native methods to encode or decode to base64: [Base64](/en-US/docs/Glossary/Base64).
 
 ### Encoding on a Unix system
 
@@ -119,7 +119,7 @@ lots of text…
 
 ## See also
 
-- [Base64 encoding and decoding](/en-US/docs/Glossary/Base64)
+- [Base64](/en-US/docs/Glossary/Base64)
 - [Percent encoding](/en-US/docs/Glossary/percent-encoding)
 - {{domxref("atob","atob()")}}
 - {{domxref("btoa","btoa()")}}

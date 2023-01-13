@@ -2,7 +2,6 @@
 title: Privacy, permissions, and information security
 slug: Web/Privacy
 tags:
-  - Feature Policy
   - Information
   - Permissions
   - Personalize
@@ -97,25 +96,6 @@ There are several web technologies and features at play to manage privacy and se
       </td>
     </tr>
     <tr>
-      <td><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></td>
-      <td>
-        Lets web developers selectively enable, disable, and modify the behavior
-        of certain features and APIs both for a document and for subdocuments
-        loaded in {{HTMLElement("iframe")}}s
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{HTMLElement("iframe")}}'s {{htmlattrxref("allow", "iframe")}}
-        attribute
-      </td>
-      <td>
-        Technically part of Feature Policy, the <code>allow</code> attribute on
-        an <code>&#x3C;iframe></code> specifies which web features the document
-        in the frame should be allowed to access
-      </td>
-    </tr>
-    <tr>
       <td>
         <a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">HTTP Strict Transport Security</a> (HSTS)
       </td>
@@ -137,7 +117,15 @@ There are several web technologies and features at play to manage privacy and se
       <td><a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a></td>
       <td>
         Provides a way to determine the status of permissions for the current
-        browser context
+        browser context.
+      </td>
+    </tr>
+    <tr>
+      <td><a href="/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</a></td>
+      <td>
+        Lets web servers selectively enable or disable features and APIs, both for a document and for subdocuments
+        loaded in {{HTMLElement("iframe")}}s via the {{HTTPHeader("Permissions-Policy")}} HTTP header.
+        The {{htmlattrxref("allow", "iframe")}} attribute can be used to set Permissions Policies on individual {{HTMLElement("iframe")}}s.
       </td>
     </tr>
     <tr>
@@ -154,8 +142,6 @@ There are several web technologies and features at play to manage privacy and se
     </tr>
   </tbody>
 </table>
-
-Not all of these are generally directly used within code; notably, the [Permissions API](/en-US/docs/Web/API/Permissions_API), [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy), and the {{htmlattrxref("allow", "iframe")}} attribute on {{HTMLElement("iframe")}} elements are primary tools directly used by code to help secure a site and its content.
 
 ## Keeping personal data safe
 
@@ -183,4 +169,4 @@ Browsers may choose to provide ways around this. For example, in Firefox 73, the
 
 - [Web security](/en-US/docs/Web/Security)
 - [Permissions API](/en-US/docs/Web/API/Permissions_API)
-- [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) and the HTTP {{HTTPHeader("feature-policy")}} header
+- [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)

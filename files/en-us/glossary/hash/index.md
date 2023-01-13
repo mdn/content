@@ -1,6 +1,6 @@
 ---
 title: Hash
-slug: Glossary/hash
+slug: Glossary/Hash
 tags:
   - CodingScripting
   - Cryptography

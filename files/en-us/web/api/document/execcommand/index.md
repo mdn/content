@@ -44,8 +44,6 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
       - : Changes the document background color. In `styleWithCss` mode, it affects the background color of the containing block instead. This requires a {{cssxref("&lt;color&gt;")}} value string to be passed in as a value argument. Note that Internet Explorer uses this to set the text background color.
     - `bold`
       - : Toggles bold on/off for the selection or at the insertion point. Internet Explorer uses the {{HTMLElement("strong")}} tag instead of {{HTMLElement("b")}}.
-    - `ClearAuthenticationCache`
-      - : Clears all authentication credentials from the cache.
     - `contentReadOnly`
       - : Makes the content document either read-only or editable. This requires a boolean true/false as the value argument. (Not supported by Internet Explorer.)
     - `copy`
@@ -192,16 +190,17 @@ Clicking the "Bold" or "Italic" buttons inserts the appropriate tags in the elem
 
 ```js
 // Prepare action buttons
-const buttonContainers = document.querySelectorAll('.actions');
+const buttonContainers = document.querySelectorAll(".actions");
 
 for (const buttonContainer of buttonContainers) {
-  const buttons = buttonContainer.querySelectorAll('button');
-  const pasteTarget = buttonContainer.getAttribute('data-for');
+  const buttons = buttonContainer.querySelectorAll("button");
+  const pasteTarget = buttonContainer.getAttribute("data-for");
 
   for (const button of buttons) {
-    const elementName = button.getAttribute('data-el');
-    button.addEventListener('click',
-      () => insertText(`<${elementName}></${elementName}>`, pasteTarget) )
+    const elementName = button.getAttribute("data-el");
+    button.addEventListener("click", () =>
+      insertText(`<${elementName}></${elementName}>`, pasteTarget)
+    );
   }
 }
 
@@ -216,12 +215,12 @@ function insertText(newText, selector) {
       pasted = false;
     }
   } catch (e) {
-    console.error('error caught:', e);
+    console.error("error caught:", e);
     pasted = false;
   }
 
   if (!pasted) {
-      console.error('paste unsuccessful, execCommand not supported');
+    console.error("paste unsuccessful, execCommand not supported");
   }
 }
 ```

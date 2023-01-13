@@ -41,7 +41,7 @@ In the [previous article](/en-US/docs/Learn/Forms/Basic_native_form_controls) we
 
 Because HTML form control appearance may be quite different from a designer's specifications, web developers sometimes build their own custom form controls. We cover this in an advanced tutorial: [How to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls).
 
-## E-mail address field
+## Email address field
 
 This type of field is set using the value `email` for the {{htmlattrxref("type","input")}} attribute:
 
@@ -295,7 +295,7 @@ That brings us to the end of our tour of the HTML5 form input types. There are a
 - [Your first form](/en-US/docs/Learn/Forms/Your_first_form)
 - [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
 - [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
-- [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
+- **The HTML5 input types**
 - [Other form controls](/en-US/docs/Learn/Forms/Other_form_controls)
 - [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
 - [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)

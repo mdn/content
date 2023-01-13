@@ -70,6 +70,10 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 _No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
+## Events
+
+_No specific events; inherits events from its parent, {{domxref("HTMLElement")}}._
+
 ## Examples
 
 ### Dynamically importing scripts
@@ -146,4 +150,3 @@ Classic scripts are assumed to be supported on all browsers.
 - HTML {{HTMLElement("noscript")}} element
 - {{domxref("document.currentScript")}}
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) (code snippets similar to scripts but executed in [another global context](/en-US/docs/Web/API/DedicatedWorkerGlobalScope))
-- [Ryan Grove's \<script> and \<link> node event compatibility chart](https://pie.gd/test/script-link-events/)

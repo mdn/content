@@ -30,7 +30,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - {{HTMLAttrDef("download")}}
 
-  - : Causes the browser to treat the linked URL as a download. Can be used with or without a value:
+  - : Causes the browser to treat the linked URL as a download. Can be used with or without a `filename` value:
 
     - Without a value, the browser will suggest a filename/extension, generated from various sources:
 
@@ -38,7 +38,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
       - The final segment in the URL [path](/en-US/docs/Web/API/URL/pathname)
       - The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), or {{domxref("Blob.type")}} for a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL))
 
-    - Defining a value suggests it as the filename. `/` and `\` characters are converted to underscores (`_`). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary.
+    - `filename`: defining a value suggests it as the filename. `/` and `\` characters are converted to underscores (`_`). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary.
 
     > **Note:**
     >
@@ -53,7 +53,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : The URL that the hyperlink points to. Links are not restricted to HTTP-based URLs — they can use any URL scheme supported by browsers:
 
-    - Sections of a page with fragment URLs
+    - Sections of a page with document fragments
+    - Specific text portions with [text fragments](/en-US/docs/Web/Text_fragments)
     - Pieces of media files with media fragments
     - Telephone numbers with `tel:` URLs
     - Email addresses with `mailto:` URLs
@@ -116,104 +117,6 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     > **Note:** Use the {{HTMLElement("area")}} element for image maps instead.
 
-## Properties
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >,
-        <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
-          >interactive content</a
-        >, palpable content.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model"
-          >Transparent</a
-        >, except that no descendant may be
-        <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
-          >interactive content</a
-        > or an
-        <a href="/en-US/docs/Web/HTML/Element/a"
-          >a</a
-        > element, and no descendant may have a specified
-        <a
-          href="/en-US/docs/Web/HTML/Global_attributes/tabindex"
-          >tabindex</a
-        > attribute.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >, or any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >flow content</a
-        >, but not other <code>&#x3C;a></code> elements.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        {{ARIARole("link")}} when <code>href</code> attribute is
-        present, otherwise
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >no corresponding role</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>
-        <p>When <code>href</code> attribute is present:</p>
-        <ul>
-          <li>{{ARIARole("button")}}</li>
-          <li>{{ARIARole("checkbox")}}</li>
-          <li>{{ARIARole("menuitem")}}</li>
-          <li>{{ARIARole("menuitemcheckbox")}}</li>
-          <li>{{ARIARole("menuitemradio")}}</li>
-          <li>{{ARIARole("option")}}</li>
-          <li>{{ARIARole("radio")}}</li>
-          <li>{{ARIARole("switch")}}</li>
-          <li>{{ARIARole("tab")}}</li>
-          <li>{{ARIARole("treeitem")}}</li>
-        </ul>
-        <p>When <code>href</code> attribute is not present:</p>
-        <ul>
-          <li>any</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{DOMxRef("HTMLAnchorElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Examples
 
 ### Linking to an absolute URL
@@ -269,7 +172,7 @@ To create links that open in the user's email program to let them send a new mes
 <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
 ```
 
-For details about `mailto:` URLs, such as including a subject or body, see [Email links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#e-mail_links) or {{RFC(6068)}}.
+For details about `mailto:` URLs, such as including a subject or body, see [Email links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_links) or {{RFC(6068)}}.
 
 ### Linking to telephone numbers
 
@@ -357,7 +260,7 @@ document.querySelector('a').addEventListener('click', (event) =>
 
 `<a>` elements can have consequences for users' security and privacy. See [`Referer` header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for information.
 
-Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Link_types/noreferrer) and [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) makes the website vulnerable to {{domxref("window.opener")}} API exploitation attacks ([vulnerability description](https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/)), although note that, in newer browser versions setting `target="_blank"` implicitly provides the same protection as setting `rel="noopener"`. See [browser compatibility](#browser_compatibility) for details.
+Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Link_types/noreferrer) and [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) makes the website vulnerable to {{domxref("window.opener")}} API exploitation attacks, although note that, in newer browser versions setting `target="_blank"` implicitly provides the same protection as setting `rel="noopener"`. See [browser compatibility](#browser_compatibility) for details.
 
 ## Accessibility
 
@@ -489,6 +392,104 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
 
 - [Hand tremors and the giant-button-problem](https://axesslab.com/hand-tremors/)
 
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >,
+        <a
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
+          >interactive content</a
+        >, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model"
+          >Transparent</a
+        >, except that no descendant may be
+        <a
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
+          >interactive content</a
+        > or an
+        <a href="/en-US/docs/Web/HTML/Element/a"
+          >a</a
+        > element, and no descendant may have a specified
+        <a
+          href="/en-US/docs/Web/HTML/Global_attributes/tabindex"
+          >tabindex</a
+        > attribute.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >, or any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >flow content</a
+        >, but not other <code>&#x3C;a></code> elements.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        {{ARIARole("link")}} when <code>href</code> attribute is
+        present, otherwise
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >no corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>
+        <p>When <code>href</code> attribute is present:</p>
+        <ul>
+          <li>{{ARIARole("button")}}</li>
+          <li>{{ARIARole("checkbox")}}</li>
+          <li>{{ARIARole("menuitem")}}</li>
+          <li>{{ARIARole("menuitemcheckbox")}}</li>
+          <li>{{ARIARole("menuitemradio")}}</li>
+          <li>{{ARIARole("option")}}</li>
+          <li>{{ARIARole("radio")}}</li>
+          <li>{{ARIARole("switch")}}</li>
+          <li>{{ARIARole("tab")}}</li>
+          <li>{{ARIARole("treeitem")}}</li>
+        </ul>
+        <p>When <code>href</code> attribute is not present:</p>
+        <ul>
+          <li>any</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{DOMxRef("HTMLAnchorElement")}}</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Specifications
 
 {{Specifications}}
@@ -501,3 +502,7 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
 
 - {{HTMLElement("link")}} is similar to `<a>`, but for metadata hyperlinks that are invisible to users.
 - {{CSSxRef(":link")}} is a CSS pseudo-class that will match `<a>` elements with valid `href` attributes.
+- {{CSSxRef(":visited")}} is a CSS pseudo-class that will match `<a>` elements with URL in `href` attribute that was visited by the user in the past.
+- {{CSSxRef(":link")}} is a CSS pseudo-class that will match `<a>` elements with URL in `href` attribute that was not yet visited by the user.
+- {{CSSxRef(":any-link")}} is a CSS pseudo-class that will match `<a>` elements with `href` attribute.
+- [Text fragments](/en-US/docs/Web/Text_fragments) are user-agent instructions added to URLs that allow content authors to link to specific text on a page, without IDs being required.

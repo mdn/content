@@ -201,7 +201,7 @@ You might expect this to return an error, but it works just fine. Trying to repr
 
 If you have a numeric variable that you want to convert to a string but not change otherwise, or a string variable that you want to convert to a number but not change otherwise, you can use the following two constructs:
 
-- The {{jsxref("Number")}} object converts anything passed to it into a number, if it can. Try the following:
+- The {{jsxref("Number/Number", "Number()")}} function converts anything passed to it into a number, if it can. Try the following:
 
   ```js
   const myString = "123";

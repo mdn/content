@@ -210,7 +210,7 @@ The address levels are:
 
 - `address-level1`: The post town — "Winchelsea" in this case.
 - `address-line2`: The locality — "Upper-Wapping" in this case.
-- `address-line1`: The house/street particulars — "103 Frogmarch Street"
+- `address-line1`: The house/street particulars — "103 Frogmarch Street".
 
 The postcode is separate. Note that you can actually use just the postcode and `address-line1` to successfully deliver mail in the UK, so they should be the only mandatory items, but usually people tend to provide more details.
 
@@ -244,9 +244,9 @@ An address in Japan is typically **written in one line**, in an order from the l
 
 ## See also
 
-- The {{htmlelement("input")}} element.
-- The {{htmlelement("select")}} element.
-- The {{htmlelement("textarea")}} element.
-- The {{htmlelement("form")}} element.
+- The {{htmlelement("input")}} element
+- The {{htmlelement("select")}} element
+- The {{htmlelement("textarea")}} element
+- The {{htmlelement("form")}} element
 - [HTML forms](/en-US/docs/Learn/Forms)
-- All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+- All [global attributes](/en-US/docs/Web/HTML/Global_attributes)

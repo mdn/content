@@ -43,6 +43,8 @@ Historically, the {{HTMLElement("embed")}} element could be used with audio play
 
 You can write `<bgsound>` as a self-closing tag (`<bgsound />`); however, since this element is non-standard, doing so will still not validate.
 
+<!-- ## Technical summary -->
+
 ## Specifications
 
 {{Specifications}}
