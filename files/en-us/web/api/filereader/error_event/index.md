@@ -62,7 +62,7 @@ function handleSelected(e) {
         });
 
         reader.addEventListener('load', () => {
-            console.error(`File: ${selectedFile.name} read successfully`);
+            console.log(`File: ${selectedFile.name} read successfully`);
         });
 
         reader.readAsDataURL(selectedFile);
