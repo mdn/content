@@ -26,8 +26,8 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Usage notes
 
-- Do not use the `<b>` element.  All direct styling elements were deprecated in 1999 by HTML4.01, in favor of the use of CSS.
-  
+- Do not use the `<b>` element. All direct styling elements were deprecated in 1999 by HTML4.01, in favor of the use of CSS.
+
 ## Examples
 
 ```html
