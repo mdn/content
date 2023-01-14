@@ -310,7 +310,7 @@ Here's another example written in Python. It listens for messages from the exten
 This is the Python 2 version:
 
 ```python
-#!/usr/bin/python -u
+#!/usr/bin/env -S python2 -u
 
 # Note that running python with the `-u` flag is required on Windows,
 # in order to ensure that stdin and stdout are opened in binary, rather
