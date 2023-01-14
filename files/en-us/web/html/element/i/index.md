@@ -1,5 +1,5 @@
 ---
-title: '<i>: The Idiomatic Text element'
+title: '<i>: The Italic element'
 slug: Web/HTML/Element/i
 tags:
   - Element
@@ -13,7 +13,7 @@ browser-compat: html.elements.i
 
 {{HTMLSidebar}}
 
-The **`<i>`** [HTML](/en-US/docs/Web/HTML) element represents a range of text that is set off from the normal text for some reason, such as idiomatic text, technical terms, taxonomical designations, among others. Historically, these have been presented using italicized type, which is the original source of the `<i>` naming of this element.
+The **`<i>`** [HTML](/en-US/docs/Web/HTML) element represents an italicized range of text, for reasons such as references, and technical terms, among others. 
 
 {{EmbedInteractiveExample("pages/tabbed/i.html", "tabbed-shorter")}}
 
@@ -23,24 +23,11 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Usage notes
 
-- Use the `<i>` element for text that is set off from the normal prose for readability reasons. This would be a range of text with different semantic meaning than the surrounding text. Among the use cases for the `<i>` element are spans of text representing a different quality or mode of text, such as:
+Historically, this tag was used to indicate italic text, frequently for purposes of emphasis, to support style guides, to make document references, to indicate stress in dialogue, and so forth.  `<p>Usage looked <i>like this</i></p>.`
 
-  - Alternative voice or mood
-  - Taxonomic designations (such as the genus and species "_Homo sapiens_")
-  - Idiomatic terms from another language (such as "_et cetera_"); these should include the {{htmlattrxref("lang")}} attribute to identify the language
-  - Technical terms
-  - Transliterations
-  - Thoughts (such as "She wondered, _What is this writer talking about, anyway?_")
-  - Ship or vessel names in Western writing systems (such as "They searched the docks for the _Empress of the Galaxy_, the ship to which they were assigned.")
+However, this tag has been deprecated since 1999, and the modern approach is typically to use semantic elements indicating intent, rather than presentational elements to define appearance, so that readers with different needs can be supported.  Prefer tags like `<ref>`, `<cite>`, `<em>`, `<dfn>`, and so forth, as appropriate.
 
-- In earlier versions of the HTML specification, the `<i>` element was merely a presentational element used to display text in italics, much like the `<b>` element was used to display text in bold letters. This is no longer true, as these tags now define semantics rather than typographic appearance. A browser will typically still display the contents of the `<i>` element in italic type, but is, by definition, no longer required to do so. To display text in italic type, authors should use the CSS {{cssxref("font-style")}} property.
-- Be sure the text in question is not actually more appropriately marked up with another element.
-
-  - Use {{HTMLElement("em")}} to indicate stress emphasis.
-  - Use {{HTMLElement("strong")}} to indicate importance, seriousness, or urgency.
-  - Use {{HTMLElement("mark")}} to indicate relevance.
-  - Use {{HTMLElement("cite")}} to mark up the name of a work, such as a book, play, or song.
-  - Use {{HTMLElement("dfn")}} to mark up the defining instance of a term.
+Direct support for specific formatting is best handled with CSS, through rules like [`font-style: italic`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-style), instead.
 
 ## Examples
 
