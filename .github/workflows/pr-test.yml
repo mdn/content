@@ -42,12 +42,16 @@ jobs:
             --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
 
           # filter out files that are not markdown files
-          GIT_DIFF_CONTENT=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(md)$" | xargs)
-          echo "GIT_DIFF_CONTENT=${GIT_DIFF_CONTENT}" >> $GITHUB_ENV
+          GIT_DIFF_CONTENT=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(md)$")
+          echo "GIT_DIFF_CONTENT<<EOF" >> $GITHUB_ENV
+          echo ${GIT_DIFF_CONTENT} >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
 
           # filter out files that are not attachments
-          GIT_DIFF_FILES=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(png|jpeg|jpg|gif|svg|webp)$" | xargs)
-          echo "GIT_DIFF_FILES=${GIT_DIFF_FILES}" >> $GITHUB_ENV
+          GIT_DIFF_FILES=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(png|jpeg|jpg|gif|svg|webp)$")
+          echo "GIT_DIFF_FILES<<EOF" >> $GITHUB_ENV
+          echo ${GIT_DIFF_FILES} >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -92,7 +96,9 @@ jobs:
           # you don't need that script as a writer. It's only used in CI
           # and it can't use the default CONTENT_ROOT that gets set in
           # package.json.
-          yarn build ${{ env.GIT_DIFF_CONTENT }}
+          # Note that the filepaths may contain parentheses,
+          # so we need to escape them.
+          echo "${{ env.GIT_DIFF_CONTENT }}" | xargs -d '\n' yarn build
 
           echo "Disk usage size of build/"
           du -sh $BUILD_OUT_ROOT
@@ -135,7 +141,5 @@ jobs:
       - name: Check changed files
         if: ${{ env.GIT_DIFF_FILES }}
         run: |
-          echo ${{ env.GIT_DIFF_FILES }}
-
           export CONTENT_ROOT=$(pwd)/files
-          yarn filecheck ${{ env.GIT_DIFF_FILES }}
+          echo "${{ env.GIT_DIFF_FILES }}" | xargs -d '\n' yarn filecheck

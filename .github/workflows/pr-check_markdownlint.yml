@@ -25,8 +25,10 @@ jobs:
           DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }} \
             --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
           # filter out files that are not markdown
-          DIFF_DOCUMENTS=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.md$" | xargs)
-          echo "DIFF_DOCUMENTS=${DIFF_DOCUMENTS}" >> $GITHUB_ENV
+          DIFF_DOCUMENTS=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.md$")
+          echo "DIFF_DOCUMENTS<<EOF" >> $GITHUB_ENV
+          echo ${DIFF_DOCUMENTS} >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
@@ -41,5 +43,4 @@ jobs:
       - name: Lint markdown files
         run: |
           echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
-          files_to_lint="${{ env.DIFF_DOCUMENTS }}"
-          yarn markdownlint-cli2 ${files_to_lint}
+          echo "${{ env.DIFF_DOCUMENTS }}" | xargs -d '\n' yarn markdownlint-cli2
