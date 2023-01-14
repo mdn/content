@@ -11,7 +11,7 @@ tags:
 spec-urls: https://w3c.github.io/aria/#aria-valuetext
 ---
 
-The `aria-valuetext` attribute defines the human readable text alternative of `aria-valuenow` for a range widget.
+The `aria-valuetext` attribute defines the human-readable text alternative of `aria-valuenow` for a range widget.
 
 ## Description
 
@@ -28,7 +28,7 @@ When both the `aria-valuetext` and `aria-valuenow` are included, the `aria-value
 ## Values
 
 - `<string>`
-  - : A human readable text alternative of the `aria-valuenow` value.
+  - : A human-readable text alternative of the `aria-valuenow` value.
 
 ## ARIAMixin API
 
