@@ -1,6 +1,7 @@
 ---
 title: Privileged code
 slug: Glossary/Privileged_code
+page-type: glossary-definition
 tags:
   - privileged
 ---

@@ -1,6 +1,7 @@
 ---
 title: IETF
 slug: Glossary/IETF
+page-type: glossary-definition
 tags:
   - IETF
   - Infrastructure

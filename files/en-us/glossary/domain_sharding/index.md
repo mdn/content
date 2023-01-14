@@ -1,6 +1,7 @@
 ---
 title: Domain sharding
 slug: Glossary/Domain_sharding
+page-type: glossary-definition
 tags:
   - DNS
   - HTTP

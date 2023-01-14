@@ -96,3 +96,11 @@ Inherits into roles:
 - [`cell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
 - [`columnheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
 - [`rowheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
+
+<section id="Quick_links">
+
+1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
+
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
+
+</section>

@@ -1,6 +1,7 @@
 ---
 title: Specification
 slug: Glossary/Specification
+page-type: glossary-definition
 tags:
   - OpenPractices
   - Standardization

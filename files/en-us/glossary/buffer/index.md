@@ -1,6 +1,7 @@
 ---
 title: Buffer
 slug: Glossary/Buffer
+page-type: glossary-definition
 tags:
   - Buffer
   - CodingScripting

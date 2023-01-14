@@ -1,6 +1,7 @@
 ---
 title: XLink
 slug: Glossary/XLink
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

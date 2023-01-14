@@ -1,6 +1,7 @@
 ---
 title: DTLS (Datagram Transport Layer Security)
 slug: Glossary/DTLS
+page-type: glossary-definition
 tags:
   - DTLS
   - Intro

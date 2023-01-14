@@ -1,6 +1,7 @@
 ---
 title: TCP slow start
 slug: Glossary/TCP_slow_start
+page-type: glossary-definition
 tags:
   - Infrastructure
   - Networking

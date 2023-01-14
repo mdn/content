@@ -1,6 +1,7 @@
 ---
 title: Shim
 slug: Glossary/Shim
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

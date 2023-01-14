@@ -1,6 +1,7 @@
 ---
 title: WCAG
 slug: Glossary/WCAG
+page-type: glossary-definition
 tags:
   - Accessibility
   - WCAG

@@ -1,6 +1,7 @@
 ---
 title: JSON
 slug: Glossary/JSON
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Intro

@@ -1,6 +1,7 @@
 ---
 title: Prototype-based programming
 slug: Glossary/Prototype-based_programming
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

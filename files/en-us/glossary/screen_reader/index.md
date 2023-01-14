@@ -1,6 +1,7 @@
 ---
 title: Screen reader
 slug: Glossary/Screen_reader
+page-type: glossary-definition
 tags:
   - Accessibility
   - Screen reader

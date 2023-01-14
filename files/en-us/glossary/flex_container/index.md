@@ -1,6 +1,7 @@
 ---
 title: Flex Container
 slug: Glossary/Flex_Container
+page-type: glossary-definition
 tags:
   - CSS
   - flex container
