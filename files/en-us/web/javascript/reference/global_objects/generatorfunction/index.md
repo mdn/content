@@ -18,13 +18,11 @@ The **`GeneratorFunction`** object provides methods for [generator functions](/e
 
 Note that `GeneratorFunction` is _not_ a global object. It can be obtained with the following code:
 
-{{EmbedInteractiveExample("pages/js/functionasterisk-function.html", "taller")}}
-
-## Syntax
-
 ```js
 const GeneratorFunction = function* () {}.constructor;
 ```
+
+{{EmbedInteractiveExample("pages/js/functionasterisk-function.html", "taller")}}
 
 ## Constructor
 
