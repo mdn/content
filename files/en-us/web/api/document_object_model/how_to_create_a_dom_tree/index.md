@@ -7,7 +7,7 @@ tags:
   - Add-ons
   - DOM
   - Extensions
-  - JXON
+  - JSON
   - NeedsUpdate
   - XML
 ---
@@ -93,7 +93,7 @@ doc.appendChild(peopleElem);
 
 See also the [DOM chapter of the XUL Tutorial](/en-US/docs/XUL_Tutorial/Document_Object_Model).
 
-You can automate the creation of a DOM tree using a [JXON reverse algorithm](/en-US/docs/JXON#jxon_reverse_algorithms) in association with the following JSON representation:
+You can automate the creation of a DOM tree using a [JSON reverse algorithm](/en-US/docs/JSON#json_reverse_algorithms) in association with the following JSON representation:
 
 ```json
 {
@@ -139,14 +139,14 @@ You can automate the creation of a DOM tree using a [JXON reverse algorithm](/en
 
 ### So what?
 
-DOM trees can be [queried using XPath expressions](/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript), converted to strings or written to a local or remote files using [XMLSerializer](/en-US/docs/Web/Guide/Parsing_and_serializing_XML) (without having to first convert to a string), [POSTed to a web server](/en-US/docs/Web/API/XMLHttpRequest) (via `XMLHttpRequest`), transformed using [XSLT](/en-US/docs/Web/XSLT), [XLink](/en-US/docs/Glossary/XLink), converted to a JavaScript object through a [JXON algorithm](/en-US/docs/JXON), etc.
+DOM trees can be [queried using XPath expressions](/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript), converted to strings or written to a local or remote files using [XMLSerializer](/en-US/docs/Web/Guide/Parsing_and_serializing_XML) (without having to first convert to a string), [POSTed to a web server](/en-US/docs/Web/API/XMLHttpRequest) (via `XMLHttpRequest`), transformed using [XSLT](/en-US/docs/Web/XSLT), [XLink](/en-US/docs/Glossary/XLink), converted to a JavaScript object through a [JSON algorithm](/en-US/docs/JSON), etc.
 
 You can use DOM trees to model data which isn't well-suited for RDF (or perhaps you just don't like RDF). Another application is that, since XUL is XML, the UI of your application can be dynamically manipulated, downloaded, uploaded, saved, loaded, converted, or transformed quite easily.
 
 ## See also
 
 - [XML](/en-US/docs/Web/XML)
-- [JXON](/en-US/docs/JXON)
+- [JSON](/en-US/docs/JSON)
 - [XPath](/en-US/docs/Web/XPath)
 - [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
 - [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest)
