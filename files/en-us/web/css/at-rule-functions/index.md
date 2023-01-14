@@ -1,6 +1,6 @@
 ---
 title: CSS at-rule functions
-slug: Web/CSS/At-rule-functions
+slug: Web/CSS/At-rule_functions
 page-type: guide
 tags:
   - CSS
@@ -11,7 +11,7 @@ tags:
 
 {{CSSRef}}
 
-**[CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) functions** are at-rule statements that can represent more complex rules or invoke special data processing or calculations.
+**[CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) functions** are at-rule statements that represent complex rules or can invoke special data processing or calculations.
 
 ## Syntax
 
@@ -20,46 +20,46 @@ tags:
 }
 ```
 
-The syntax starts with '`@`' (at statement), followed by an identifier. Then comes the **name of the at-role function**, followed by a left parenthesis `(`. Next up are the argument(s), and the function is finished off with a closing parenthesis `)`.
+The syntax begins with the at symbol `@` and an at-rule identifier, such as `import`. This is followed by the **name of the at-rule function**, such as `url`, followed by a pair of opening and closing parentheses. One or more  arguments are specified inside the parentheses.
 
-Some at-role functions can take multiple arguments, which are formatted similarly to CSS property values. Whitespace is allowed, but they are optional inside the parentheses. In some functional notations multiple arguments are separated by commas, while others use spaces.
+Some at-rule functions can take multiple arguments, which are formatted similar to CSS property values. White space is allowed, but it is optional inside the parentheses. Multiple arguments can be separated using a comma or a space.
 
 ## @import functions
 
-The {{CSSxRef("@import")}} at-role used to import styles from other stylesheets.
+The {{CSSxRef("@import")}} at-rule is used to import styles from other stylesheets.
 
 - {{CSSxRef("@import", "@import url()")}}
-  - : Imports a stylesheet file from a specified URL.
+  - : Imports a stylesheet file from the specified URL.
 - {{CSSxRef("@import", "@import src()")}}
-  - : Imports a stylesheet file from a specified source.
+  - : Imports a stylesheet file from the specified source.
 - {{CSSxRef("@import", "@import supports()")}}
   - : Imports a stylesheet file based on browser support.
 - {{CSSxRef("@import", "@import layer()")}}
-  - : Imports a stylesheet file to a specific cascade layer.
+  - : Imports a stylesheet file into the specified cascade layer.
 
 ## @supports functions
 
-The {{CSSxRef("@supports")}} at-role specify CSS declarations that depend on a browser's support for CSS features.
+The {{CSSxRef("@supports")}} at-rule checks for a browser's support for the specified CSS feature and then applies the CSS styling.
 
 - {{CSSxRef("@supports", "@supports selector()")}}
-  - : Evaluates browser supports based on specified selector syntax.
+  - : Applies CSS rules after checking browser's support for the specified selector syntax.
 - {{CSSxRef("@supports", "@supports font-tech()")}}
-  - : Evaluates browser supports based on specified font technology for layout and rendering.
+  - : Applies CSS rules after checking browser's support for the specified font technology.
 - {{CSSxRef("@supports", "@supports font-format()")}}
-  - : Evaluates browser supports based on specified font format for layout and rendering.
+  - : Applies CSS rules after checking browser's support for the specified font format.
 
 ## @namespace functions
 
-The {{CSSxRef("@namespace")}} at-role specify XML namespaces to be used in a CSS stylesheet.
+The {{CSSxRef("@namespace")}} at-rule is used to specify XML namespaces to be used in a CSS stylesheet.
 
 - {{CSSxRef("@namespace", "@namespace url()")}}
-  - : Defines XML namespace from a specified URL.
+  - : Defines XML namespace from the specified URL.
 - {{CSSxRef("@namespace", "@namespace src()")}}
-  - : Defines XML namespace from a specified source.
+  - : Defines XML namespace from the specified source.
 
 ## @container functions
 
-The {{CSSxRef("@container")}} at-role specify styles to a containment context.
+The {{CSSxRef("@container")}} at-rule is used to specify styles for a containment context.
 
 - {{CSSxRef("@container", "@container style()")}}
   - : Defines the containment context style.
