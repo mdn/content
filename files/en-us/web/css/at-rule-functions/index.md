@@ -1,6 +1,6 @@
 ---
 title: CSS at-rule functions
-slug: Web/CSS/At-rule_functions
+slug: Web/CSS/At-rule-functions
 page-type: guide
 tags:
   - CSS
