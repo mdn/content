@@ -12,7 +12,7 @@ browser-compat: api.HTMLTitleElement
 
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLTitleElement`** interface contains the title for a document. This element inherits all of the properties and methods of the {{domxref("HTMLElement")}} interface.
+The **`HTMLTitleElement`** interface is implemented by a document's {{ HTMLElement( "title" )}}. This element inherits all of the properties and methods of the {{domxref("HTMLElement")}} interface.
 
 {{InheritanceDiagram}}
 
