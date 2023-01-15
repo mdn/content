@@ -14,7 +14,7 @@ browser-compat: api.HTMLElement
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLElement`** interface represents any {{HTMLElement('html')}} element. Some elements directly implement this interface, while others implement it via an interface that inherits it.
+The **`HTMLElement`** interface represents any {{HTMLElement("html")}} element. Some elements directly implement this interface, while others implement it via an interface that inherits it.
 
 {{InheritanceDiagram}}
 
