@@ -50,11 +50,11 @@ get(options)
     to have, and options for interacting with the user. It can contain the following
     properties:
 
-    - `password`
+    - `password` {{optional_inline}}
       - : a boolean value indicating that returned
         {{domxref("Credential")}} instances should include user (as opposed to federated)
         credentials.
-    - `federated`
+    - `federated` {{optional_inline}}
 
       - : An object containing requirements for returned federated credentials. The available
         options are:
@@ -62,11 +62,19 @@ get(options)
         - `providers`
           - : An array of string instances of
             identity providers to search for.
-        - `protocols`
-          - : An array of string instances of
-            federation protocols to search for.
 
-    - `publicKey`
+    - `identity` {{optional_inline}}
+
+      - : An object containing details of federated identity providers (IdPs) that a relying party (RP) website can use to sign users in. Causes a `get()` call to initiate a request for a user to sign in to a RP with an IdP (see [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API)). `identity` can contain a single property, `providers`, which contains an array of objects each specifying the details of a separate IdP:
+
+        - `configURL`
+          - : A string specifying the URL of the IdP's config file. See [Provide a config file](/en-US/docs/Web/API/FedCM_API#provide_a_config_file) for more information.
+        - `clientId`
+          - : A string specifying the the RP's client identifier, issued by the IdP to the RP in a completely separate process specific to the IdP.
+        - `nonce` {{optional_inline}}
+          - : A random string that can be included to ensure the response is issued for this specific request, and prevent {{glossary("replay attack", "replay attacks")}}.
+
+    - `publicKey` {{optional_inline}}
       - : An object containing requirements for returned [WebAuthn](/en-US/docs/Web/API/Web_Authentication_API) credentials. The available options are:
         - `challenge`
           - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} emitted by the relying party's server and used as a [cryptographic challenge](https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication). This value will be signed by the authenticator and the signature will be sent back as part of {{domxref("AuthenticatorAssertionResponse.signature")}}.
@@ -80,15 +88,15 @@ get(options)
           - : A string qualifying how the user verification should be part of the authentication process.
         - `extensions` {{optional_inline}}
           - : An object with several client extensions' inputs. Those extensions are used to request additional processing (e.g. dealing with legacy FIDO APIs credentials, prompting a specific text on the authenticator, etc.).
-    - `mediation`
+    - `mediation` {{optional_inline}}
       - : A {{jsxref("String")}} indicating whether the user will
         be required to log on for every visit to the website. Valid values are
         `"silent"`, `"optional"`, `"conditional"`, or `"required"`.
-    - `unmediated` {{deprecated_inline}}
+    - `unmediated` {{optional_inline}} {{deprecated_inline}}
       - : A boolean value
         indicating the returned {{domxref("Credential")}} instance should not require user
         mediation.
-    - `signal`
+    - `signal` {{optional_inline}}
       - : An instance of {{domxref("AbortSignal")}} that can indicate
         that an ongoing `get()` operation should be halted. An aborted
         operation may complete normally (generally if the abort was received after the
@@ -105,6 +113,28 @@ obtained, the Promise will resolve to null.
 
 - `SecurityError` {{domxref("DOMException")}}
   - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+
+## Examples
+
+### Relying party sign-in using the FedCM API
+
+Relying parties (RPs) can call `navigator.credentials.get()` with the `identity` option to make a request for users to sign in to the RP via an identity provider (IdP), using identity federation. A typical request would look like this:
+
+```js
+async function signIn() {
+  const identityCredential = await navigator.credentials.get({
+    identity: {
+      providers: [{
+        configURL: 'https://accounts.idp.example/config.json',
+        clientId: '********',
+        nonce: '******'
+      }]
+    }
+  });
+}
+```
+
+Check out [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API#fedcm_sign-in_flow) for more details on how this works. This call will start off the sign-in flow described in [FedCM sign-in flow](http://localhost:5042/en-US/docs/Web/API/FedCM_API#fedcm_sign-in_flow).
 
 ## Specifications
 
