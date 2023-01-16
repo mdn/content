@@ -5,7 +5,7 @@ tags:
   - HTTP
   - Status code
   - Used
-browser-compat: http.status.226
+spec-urls: https://www.rfc-editor.org/rfc/rfc3229.html#section-10.4.1
 ---
 
 {{HTTPSidebar}}
@@ -20,12 +20,4 @@ The HTTP **`226 IM Used`** response code is used when the server has fulfilled a
 
 ## Specifications
 
-| Specification                | Status   | Comments           |
-| ---------------------------- | -------- | ------------------ |
-| {{RFC(3229, "226 IM Used")}} | IETF RFC | Initial definition |
-
-## Browser compatibility
-
-{{Compat}}
-
-## See also
+{{Specifiications}}

@@ -5,7 +5,7 @@ tags:
   - HTTP
   - HTTP Status Code
   - Reference
-browser-compat: http.status.421
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#name-421-misdirected-request
 ---
 
 {{HTTPSidebar}}
@@ -15,17 +15,9 @@ The HTTP **`421 Misdirected Request`** client error response code indicates that
 ## Status
 
 ```
-418 I'm a teapot
+421 Misdirected Request
 ```
 
 ## Specifications
 
-| Specification                            | Status   | Comments           |
-| ---------------------------------------- | -------- | ------------------ |
-| {{RFC(7540, "421 Misdirected Request")}} | IETF RFC | Initial definition |
-
-## Browser compatibility
-
-{{Compat}}
-
-## See also
+{{Specifications}}

@@ -6,7 +6,7 @@ tags:
   - HTTP Status Code
   - Reference
   - Client Error
-browser-compat: http.status.423
+spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.3
 ---
 
 {{HTTPSidebar}}
@@ -23,12 +23,4 @@ We can use appropriate precondition or postcondition code, such as 'lock-token-s
 
 ## Specifications
 
-| Specification               | Status   | Comments           |
-| --------------------------- | -------- | ------------------ |
-| {{RFC(4918, "423 Locked")}} | IETF RFC | Initial definition |
-
-## Browser compatibility
-
-{{Compat}}
-
-## See also
+{{Specifications}}

@@ -6,7 +6,7 @@ tags:
   - HTTP Status Code
   - Reference
   - Client Error
-browser-compat: http.status.424
+spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.4
 ---
 
 {{HTTPSidebar}}
@@ -17,19 +17,7 @@ If a request was issued, and one property update failed (with for example {{HTTP
 
 ## Status
 
-```
-424 Failed Dependency
-```
-
-## Specifications
-
-| Specification                          | Status   | Comments           |
-| -------------------------------------- | -------- | ------------------ |
-| {{RFC(4918, "424 Failed Dependency")}} | IETF RFC | Initial definition |
-
-## Browser compatibility
-
-{{Compat}}
+{{Specifications}}
 
 ## See also
 
