@@ -128,9 +128,9 @@ The following keywords are currently available:
 - `unlimitedStorage`
 - `webNavigation`
 - `webRequest`
-- `webRequestfilterResponse`
-- `webRequestFilterResponse.serviceWorkerScript`
 - `webRequestBlocking`
+- `webRequestFilterResponse`
+- `webRequestFilterResponse.serviceWorkerScript`
 
 In most cases the permission just grants access to the API, with the following exceptions:
 

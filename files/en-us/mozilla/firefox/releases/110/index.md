@@ -60,7 +60,7 @@ This article provides information about the changes in Firefox 110 that will aff
 
 ## Changes for add-on developers
 
-- The `"webRequestfilterResponse"` and `"webRequestFilterResponse.serviceWorkerScript"` [API permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) have been added. These permissions provide access to {{WebExtAPIRef("webRequest.filterResponseData")}} and {{WebExtAPIRef("webRequest.filterResponseData")}} for requests originated for service worker scripts, respectively. These permissions can be provided as optional permissions. See {{WebExtAPIRef("webRequest.filterResponseData")}} for more information on using these permissions ({{bug(1809235)}}).
+- The `"webRequestFilterResponse"` and `"webRequestFilterResponse.serviceWorkerScript"` [API permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) have been added. These permissions provide access to {{WebExtAPIRef("webRequest.filterResponseData")}} and {{WebExtAPIRef("webRequest.filterResponseData")}} for requests originated for service worker scripts, respectively. These permissions can be provided as optional permissions. See {{WebExtAPIRef("webRequest.filterResponseData")}} for more information on using these permissions ({{bug(1809235)}}).
 
 ### Removals
 
