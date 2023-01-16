@@ -1,6 +1,7 @@
 ---
 title: Polyfill
 slug: Glossary/Polyfill
+page-type: glossary-definition
 tags:
   - Browser Support
   - CodingScripting

@@ -1,6 +1,7 @@
 ---
 title: Block (scripting)
 slug: Glossary/Block/Scripting
+page-type: glossary-definition
 tags:
   - CodingScripting
   - JavaScript

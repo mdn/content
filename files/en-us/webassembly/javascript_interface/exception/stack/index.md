@@ -30,7 +30,7 @@ The virtual machine can then attach a stack trace to the exception object return
 A string containing the stack trace, or {{jsxref("undefined")}} if no trace has been assigned.
 
 The stack trace string lists the locations of each operation on the stack in WebAssembly format.
-This is a human readable string indicating the URL, name of the function type called, the function index, and its offset in the module binary.
+This is a human-readable string indicating the URL, name of the function type called, the function index, and its offset in the module binary.
 It has approximately this format (see [stack trace conventions](https://webassembly.github.io/spec/web-api/index.html#conventions) in the specification for more information):
 
 ```

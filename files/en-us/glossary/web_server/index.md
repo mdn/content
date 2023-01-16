@@ -1,6 +1,7 @@
 ---
 title: Web server
 slug: Glossary/Web_server
+page-type: glossary-definition
 tags:
   - web server
   - web-server

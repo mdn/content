@@ -1,6 +1,7 @@
 ---
 title: ATAG
 slug: Glossary/ATAG
+page-type: glossary-definition
 tags:
   - ATAG
   - Accessibility

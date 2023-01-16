@@ -35,7 +35,7 @@ None.
 
 ### Return value
 
-A value representing the state. This can be any [structured-clonable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) data type.
+A value representing the state. This can be any [structured-cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) data type.
 
 If no state is defined, it returns `undefined`.
 

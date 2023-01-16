@@ -92,11 +92,11 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - {{domxref("Window.location")}}
   - : Gets/sets the location, or current URL, of the window object.
 - {{domxref("Window.locationbar")}} {{ReadOnlyInline}}
-  - : Returns the locationbar object, whose visibility can be toggled in the window.
+  - : Returns the locationbar object.
 - {{domxref("Window.localStorage")}} {{ReadOnlyInline}}
   - : Returns a reference to the local storage object used to store data that may only be accessed by the origin that created it.
 - {{domxref("Window.menubar")}} {{ReadOnlyInline}}
-  - : Returns the menubar object, whose visibility can be toggled in the window.
+  - : Returns the menubar object.
 - {{domxref("Window.messageManager")}} {{Non-standard_Inline}}
   - : Returns the [message manager](/en-US/docs/The_message_manager) object for this window.
 - {{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
@@ -124,7 +124,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - {{domxref("Window.performance")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing [performance-related](/en-US/docs/Web/API/Navigation_timing_API) data. See also [Using Navigation Timing](/en-US/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing) for additional information and examples.
 - {{domxref("Window.personalbar")}} {{ReadOnlyInline}}
-  - : Returns the personalbar object, whose visibility can be toggled in the window.
+  - : Returns the personalbar object.
 - {{domxref("Window.screen")}} {{ReadOnlyInline}}
   - : Returns a reference to the screen object associated with the window.
 - {{domxref("Window.screenX")}} and {{domxref("Window.screenLeft")}} {{ReadOnlyInline}}
@@ -132,7 +132,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - {{domxref("Window.screenY")}} and {{domxref("Window.screenTop")}} {{ReadOnlyInline}}
   - : Both properties return the vertical distance from the top border of the user's browser viewport to the top side of the screen.
 - {{domxref("Window.scrollbars")}} {{ReadOnlyInline}}
-  - : Returns the scrollbars object, whose visibility can be toggled in the window.
+  - : Returns the scrollbars object.
 - {{domxref("Window.scrollMaxX")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
   - : The maximum offset that the window can be scrolled to horizontally, that is the document width minus the viewport width.
 - {{domxref("Window.scrollMaxY")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
@@ -152,9 +152,9 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - {{domxref("Window.status")}} {{Deprecated_Inline}}
   - : Gets/sets the text in the statusbar at the bottom of the browser.
 - {{domxref("Window.statusbar")}} {{ReadOnlyInline}}
-  - : Returns the statusbar object, whose visibility can be toggled in the window.
+  - : Returns the statusbar object.
 - {{domxref("Window.toolbar")}} {{ReadOnlyInline}}
-  - : Returns the toolbar object, whose visibility can be toggled in the window.
+  - : Returns the toolbar object.
 - {{domxref("Window.top")}} {{ReadOnlyInline}}
   - : Returns a reference to the topmost window in the window hierarchy. This property is read only.
 - {{domxref("Window.visualViewport")}} {{ReadOnlyInline}}

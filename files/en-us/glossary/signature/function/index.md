@@ -1,6 +1,7 @@
 ---
 title: Signature (functions)
 slug: Glossary/Signature/Function
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Java

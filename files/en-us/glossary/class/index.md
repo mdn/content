@@ -1,6 +1,7 @@
 ---
 title: Class
 slug: Glossary/Class
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

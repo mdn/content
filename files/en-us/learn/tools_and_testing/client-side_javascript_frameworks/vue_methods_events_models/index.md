@@ -1,5 +1,5 @@
 ---
-title: 'Adding a new todo form: Vue events, methods, and models'
+title: "Adding a new todo form: Vue events, methods, and models"
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models
 tags:
@@ -89,7 +89,7 @@ We now have an app that displays a list of to-do items. However, we can't update
 4. Let's load this component into our app. Go back to `App.vue` and add the following `import` statement just below the previous one, inside your `<script>` element:
 
    ```js
-   import ToDoForm from './components/ToDoForm';
+   import ToDoForm from "./components/ToDoForm";
    ```
 
 5. You also need to register the new component in your `App` component — update the `components` property of the component object so that it looks like this:
@@ -136,15 +136,15 @@ To make a method available to the `ToDoForm` component, we need to add it to the
 
    ```js
    export default {
-      methods: {
-          onSubmit() {
-             console.log('form submitted')
-          }
-      }
-   }
+     methods: {
+       onSubmit() {
+         console.log("form submitted");
+       },
+     },
+   };
    ```
 
-2. Next we need to bind the method to our `<form>` element's `submit` event handler. Much like how Vue uses the [`v-bind`](https://v2.vuejs.org/v2/api/#v-bind) syntax for binding attributes, Vue has a special directive for event handling: [`v-on`](https://v2.vuejs.org/v2/api/#v-on). The `v-on` directive works via the `v-on:event="method"` syntax. And much like `v-bind`, there's also a shorthand syntax: `@event="method"`.
+2. Next we need to bind the method to our `<form>` element's `submit` event handler. Much like how Vue uses the [`v-bind`](https://vuejs.org/api/built-in-directives.html#v-bind) syntax for binding attributes, Vue has a special directive for event handling: [`v-on`](https://vuejs.org/api/built-in-directives.html#v-on). The `v-on` directive works via the `v-on:event="method"` syntax. And much like `v-bind`, there's also a shorthand syntax: `@event="method"`.
 
    We'll use the shorthand syntax here for consistency. Add the `submit` handler to your `<form>` element like so:
 
@@ -190,17 +190,17 @@ The first thing we need is a `data` property in our form to track the value of t
      methods: {
        onSubmit() {
          console.log("form submitted");
-       }
+       },
      },
      data() {
        return {
-         label: ""
+         label: "",
        };
-     }
+     },
    };
    ```
 
-2. We now need some way to attach the value of the `new-todo-input` element's field to the `label` field. Vue has a special directive for this: [`v-model`](https://v2.vuejs.org/v2/api/#v-model). `v-model` binds to the data property you set on it and keeps it in sync with the `<input>`. `v-model` works across all the various input types, including checkboxes, radios, and select inputs. To use `v-model`, you add an attribute with the structure `v-model="variable"` to the `<input>`.
+2. We now need some way to attach the value of the `new-todo-input` element's field to the `label` field. Vue has a special directive for this: [`v-model`](https://vuejs.org/api/built-in-directives.html#v-model). `v-model` binds to the data property you set on it and keeps it in sync with the `<input>`. `v-model` works across all the various input types, including checkboxes, radios, and select inputs. To use `v-model`, you add an attribute with the structure `v-model="variable"` to the `<input>`.
 
    So in our case, we would add it to our `new-todo-input` field as seen below. Do this now:
 
@@ -259,26 +259,30 @@ In the `onSubmit` event handler of our `ToDoForm`, let's add a `todo-added` even
 
    ```js
    export default {
-     name: 'app',
+     name: "app",
      components: {
        ToDoItem,
-       ToDoForm
+       ToDoForm,
      },
-    data() {
+     data() {
        return {
          ToDoItems: [
-           { id:uniqueId('todo-'), label: 'Learn Vue', done: false },
-           { id:uniqueId('todo-'), label: 'Create a Vue project with the CLI', done: true },
-           { id:uniqueId('todo-'), label: 'Have fun', done: true },
-           { id:uniqueId('todo-'), label: 'Create a to-do list', done: false }
-         ]
+           { id: uniqueId("todo-"), label: "Learn Vue", done: false },
+           {
+             id: uniqueId("todo-"),
+             label: "Create a Vue project with the CLI",
+             done: true,
+           },
+           { id: uniqueId("todo-"), label: "Have fun", done: true },
+           { id: uniqueId("todo-"), label: "Create a to-do list", done: false },
+         ],
        };
      },
      methods: {
        addToDo() {
-         console.log('To-do added');
-       }
-     }
+         console.log("To-do added");
+       },
+     },
    };
    ```
 

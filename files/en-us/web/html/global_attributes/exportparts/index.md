@@ -11,7 +11,7 @@ browser-compat: html.global_attributes.exportparts
 
 {{HTMLSidebar("Global_attributes")}}
 
-The **`exportparts`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) allows to select and style elements existing in nested {{Glossary("shadow tree", "shadow trees")}}, by exporting their `part` names.
+The **`exportparts`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) allows you to select and style elements existing in nested {{Glossary("shadow tree", "shadow trees")}}, by exporting their `part` names.
 
 The shadow tree is an isolated structure where identifiers, classes, and styles cannot be reached by selectors or queries belonging to a regular DOM.
 To apply a style to an element living in a shadow tree, by CSS rule created outside of it, {{HTMLAttrxRef("part")}} global attribute has to be used. It has to be assigned to an element present in Shadow Tree, and its value should be some identifier.

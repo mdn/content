@@ -1,6 +1,7 @@
 ---
 title: XQuery
 slug: Glossary/XQuery
+page-type: glossary-definition
 tags:
   - CodingScripting
   - XML

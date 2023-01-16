@@ -1,6 +1,7 @@
 ---
 title: Bandwidth
 slug: Glossary/Bandwidth
+page-type: glossary-definition
 tags:
   - Infrastructure
 ---
