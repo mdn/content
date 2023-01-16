@@ -153,7 +153,8 @@ function base64EncArr(aBytes) {
   let nUint24 = 0;
   for (let nIdx = 0; nIdx < nLen; nIdx++) {
     nMod3 = nIdx % 3;
-//    if (nIdx > 0 && ((nIdx * 4) / 3) % 76 === 0) {  //include this if you want line breaks in your base64.
+// To break your base64 into several 80-character lines, add:
+//   if (nIdx > 0 && ((nIdx * 4) / 3) % 76 === 0) {
 //      sB64Enc += "\r\n";
 //    }
 
