@@ -252,9 +252,9 @@ The browser requests the IdP config file and carries out the sign-in flow detail
 
 10. The IdP checks that the account ID sent by the RP matches the ID for the account that is already signed in, and that the `Referer` matches the origin of the RP, which will have been registered in advance with the IdP. If everything looks good, it responds with the validation token.
 
-   > **Note:** The origin of the RP will be registered with the IdP in a completely separate process when the RP first integrates with the IdP. This process will be specific to each IdP.
+  > **Note:** The origin of the RP will be registered with the IdP in a completely separate process when the RP first integrates with the IdP. This process will be specific to each IdP.
 
-   The RP validates the validation token. If validation is successful, the `get()` promise resolves with an {{domxref("IdentityCredential")}} object, which provides further RP functionality. Additionally, at this point the RP may register the user or let them sign in and start a new session.
+When the flow is complete, the RP validates the validation token. If validation is successful, the `get()` promise resolves with an {{domxref("IdentityCredential")}} object, which provides further RP functionality. Additionally, at this point the RP may register the user or let them sign in and start a new session.
 
 ### Features available via IdentityCredential
 
