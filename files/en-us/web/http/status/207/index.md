@@ -5,7 +5,7 @@ tags:
   - HTTP
   - Status code
   - Partial Success
-browser-compat: http.status.207
+spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.1
 ---
 
 {{HTTPSidebar}}
@@ -23,10 +23,6 @@ If you perform a destructive operation like {{HTTPMethod("POST")}}, {{HTTPMethod
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

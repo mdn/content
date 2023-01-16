@@ -5,14 +5,16 @@ tags:
   - HTTP
   - Informational
   - Status code
-browser-compat: http.status.102
+spec-urls: https://www.rfc-editor.org/rfc/rfc2518.html#section-10.1
 ---
 
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{deprecated_header}}
 
-The HTTP **`102 Processing`** informational status response code indicates to client that a full request has been recieved and the server is working on it.
+The HTTP **`102 Processing`** informational status response code indicates to client that a full request has been received and the server is working on it.
 
 This status code is only sent if the server expects the request to take significant time. It tells the client that your request is not dead yet.
+
+**Note:** This status code is deprecated and shouldn't be send any more. Clients may still accept it, but simply ignore them.
 
 ## Status
 
@@ -23,10 +25,6 @@ This status code is only sent if the server expects the request to take signific
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

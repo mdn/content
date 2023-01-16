@@ -5,7 +5,6 @@ tags:
   - HTTP
   - Status code
   - Reported
-browser-compat: http.status.208
 spec-url: https://www.rfc-editor.org/rfc/rfc5842.html#section-7.1
 ---
 
@@ -22,8 +21,6 @@ The HTTP **`208 Already Reported`** response code is used inside DAV: propstat r
 ## Specifications
 
 {{Specifications}}
-| ------------------------------------- | -------- | ------------------ |
-| {{RFC(5842, "208 Already Reported")}} | IETF RFC | Initial definition |
 
 ## Browser compatibility
 
