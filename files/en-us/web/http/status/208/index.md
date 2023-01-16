@@ -20,7 +20,7 @@ The HTTP **`208 Already Reported`** response code is used inside DAV: propstat r
 
 ## Specifications
 
-| Specification                         | Status   | Comments           |
+{{Specifications}}
 | ------------------------------------- | -------- | ------------------ |
 | {{RFC(5842, "208 Already Reported")}} | IETF RFC | Initial definition |
 
