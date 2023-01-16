@@ -44,7 +44,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
 ## Examples
 
-An obvious use for pointer lock is an online game, when you want your mouse movement to be focused on controlling the game, without the distraction of the mouse pointer moving around, going outside the game area, or reaching the edge of the window.
+Pointer lock is often used in online games, when you want your mouse movement to be focused on controlling the game, without the distraction of the mouse pointer moving around, going outside the game area, or reaching the edge of the window.
 
 To enable pointer lock, you would get the user to interact with the UI in some way, perhaps by pressing a button, or the game canvas itself.
 
