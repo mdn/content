@@ -44,11 +44,6 @@ _The `RTCRtpStreamStats` dictionary is based on {{domxref("RTCStats")}}, and inh
 - {{domxref("RTCRtpStreamStats.transportId", "transportId")}}
   - : A string uniquely identifying the object which was inspected to produce the {{domxref("RTCTransportStats")}} object associated with this RTP stream.
 
-#### Obsolete fields
-
-- {{domxref("RTCRtpStreamStats.kind", "mediaType")}} {{Deprecated_Inline}}
-  - : Renamed to {{domxref("RTCRtpStreamStats.kind", "kind")}} in the specification in February 2018. See {{SectionOnPage("/en-US/docs/Web/API/RTCRtpStreamStats/kind", "Browser Compatibility", "code")}} to determine when browsers made the transition.
-
 ### Local-only measurements
 
 These properties are computed locally, and are only available to the device receiving the media stream. Their primary purpose is to examine the error resiliency of the connection, as they provide information about lost packets, lost frames, and how heavily compressed the data is.

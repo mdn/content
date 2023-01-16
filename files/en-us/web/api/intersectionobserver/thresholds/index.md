@@ -23,7 +23,7 @@ thresholds that was specified when the observer was instantiated with
 only one threshold ratio was provided when instantiating the object, this will be an
 array containing that single value.
 
-See {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "Thresholds")}} to
+See the [Intersection Observer](/en-US/docs/Web/API/Intersection_Observer_API#thresholds) page to
 learn how thresholds work.
 
 ## Value

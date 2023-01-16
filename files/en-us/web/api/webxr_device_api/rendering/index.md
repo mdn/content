@@ -137,7 +137,7 @@ The `XRFrame` doesn't directly keep track of the positions or orientations of th
 
 After rendering the scene twice—once into the left half of the framebuffer and once into the right half of the framebuffer—the framebuffer is sent to the XR hardware, which displays each half of the framebuffer to the corresponding eye. This is often (but not always) done by drawing the image to a single screen and using lenses to transfer the correct half of that image to each eye.
 
-You can learn more about how 3D is represented by WebXR in {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Cameras", "Representing 3D with WebXR")}}.
+You can learn more about how 3D is represented by WebXR in [Representing 3D with WebXR](/en-US/docs/Web/API/WebXR_Device_API/Cameras#representing_3d_with_webxr).
 
 ## Drawing the scene
 
