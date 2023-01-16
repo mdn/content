@@ -24,6 +24,16 @@ The subsequent {{HTMLElement("dd")}} (**Description Details**) element provides 
 
 {{EmbedInteractiveExample("pages/tabbed/dt.html", "tabbed-standard")}}
 
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Examples
+
+For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web/HTML/Element/dl#examples).
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
@@ -88,14 +98,6 @@ The subsequent {{HTMLElement("dd")}} (**Description Details**) element provides 
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Examples
-
-For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web/HTML/Element/dl#examples).
 
 ## Specifications
 

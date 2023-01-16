@@ -1,6 +1,7 @@
 ---
 title: Text formatting
 slug: Web/JavaScript/Guide/Text_formatting
+page-type: guide
 tags:
   - Guide
   - JavaScript

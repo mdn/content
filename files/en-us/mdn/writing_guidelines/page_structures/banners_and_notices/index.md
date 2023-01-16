@@ -30,8 +30,10 @@ There are special versions of each of the following macros for that; change "\_h
 
 Deprecated content is content that covers a technology or idea that is in the process of becoming obsolete.
 It's no longer recommended, and is expected to be removed from browsers in the relatively near future.
+For more information on the definitions of **deprecated**, see the [Experimental, deprecated, and obsolete](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) documentation.
+
 You can mark pages as deprecated using the [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) macro.
-Just like with obsolete content, you can specify the Gecko version in which the technology was deprecated as a parameter, if the technology is Gecko-specific.
+As with obsolete content, you can specify the Gecko version in which the technology was deprecated as a parameter, if the technology is Gecko-specific.
 
 You should also add the tag "Deprecated" to the page.
 

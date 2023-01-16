@@ -1,6 +1,7 @@
 ---
 title: <image>
 slug: Web/SVG/Element/image
+page-type: svg-element
 tags:
   - Element
   - Reference

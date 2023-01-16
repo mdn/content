@@ -22,7 +22,7 @@ A string.
 ## Examples
 
 ```js
-// Let's an <a id="myAnchor" href="/en-US/docs/Location.pathname"> element be in the document
+// Let's say an <a id="myAnchor" href="/en-US/docs/Location.pathname"> element is in the document
 const anchor = document.getElementById("myAnchor");
 const result = anchor.pathname; // Returns:'/en-US/docs/Location.pathname'
 ```

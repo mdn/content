@@ -1,6 +1,7 @@
 ---
 title: ReferenceError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError
+page-type: javascript-constructor
 tags:
   - Constructor
   - JavaScript

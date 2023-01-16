@@ -1,6 +1,7 @@
 ---
 title: Function expression
 slug: Web/JavaScript/Reference/Operators/function
+page-type: javascript-operator
 tags:
   - Function
   - JavaScript

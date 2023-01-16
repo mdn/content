@@ -1,6 +1,7 @@
 ---
 title: 'RangeError: repeat count must be non-negative'
 slug: Web/JavaScript/Reference/Errors/Negative_repetition_count
+page-type: javascript-error
 tags:
   - Error
   - Errors

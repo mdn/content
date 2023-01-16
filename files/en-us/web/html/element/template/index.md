@@ -22,75 +22,6 @@ The **`<template>`** [HTML](/en-US/docs/Web/HTML) element is a mechanism for hol
 
 Think of a template as a content fragment that is being stored for subsequent use in the document. While the parser does process the contents of the **`<template>`** element while loading the page, it does so only to ensure that those contents are valid; the element's contents are not rendered, however.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
-          >Metadata content</a
-        >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >flow content</a
-        >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >,
-        <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#script-supporting_elements"
-          >script-supporting element</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>No restrictions</td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
-          >metadata content</a
-        >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >, or
-        <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#script-supporting_elements"
-          >script-supporting elements</a
-        >. Also allowed as a child of a {{HTMLElement("colgroup")}}
-        element that does <em>not</em> have a
-        {{htmlattrxref("span", "colgroup")}} attribute.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>No <code>role</code> permitted</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLTemplateElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Attributes
 
 The only standard attributes that the `template` element supports are the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
@@ -212,6 +143,77 @@ container.appendChild(secondClone);
 `firstClone` is a DocumentFragment instance, so while it gets appended inside the container as expected, clicking on it does not trigger the click event. `secondClone` is an [HTMLDivElement](/en-US/docs/Web/API/HTMLDivElement) instance, clicking on it works as one would expect.
 
 {{EmbedLiveSample('Avoiding_DocumentFragment_pitfall')}}
+
+## Technical Summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+          >Metadata content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >,
+        <a
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#script-supporting_elements"
+          >script-supporting element</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>No restrictions</td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+          >metadata content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >, or
+        <a
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#script-supporting_elements"
+          >script-supporting elements</a
+        >. Also allowed as a child of a {{HTMLElement("colgroup")}}
+        element that does <em>not</em> have a
+        {{htmlattrxref("span", "colgroup")}} attribute.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLTemplateElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

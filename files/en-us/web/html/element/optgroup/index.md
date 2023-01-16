@@ -17,6 +17,42 @@ The **`<optgroup>`** [HTML](/en-US/docs/Web/HTML) element creates a grouping of 
 
 {{EmbedInteractiveExample("pages/tabbed/optgroup.html", "tabbed-standard")}}
 
+> **Note:** Optgroup elements may not be nested.
+
+## Attributes
+
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+- {{htmlattrdef("disabled")}}
+  - : If this Boolean attribute is set, none of the items in this option group is selectable. Often browsers grey out such control and it won't receive any browsing events, like mouse clicks or focus-related ones.
+- {{htmlattrdef("label")}}
+  - : The name of the group of options, which the browser can use when labeling the options in the user interface. This attribute is mandatory if this element is used.
+
+## Examples
+
+```html
+<select>
+  <optgroup label="Group 1">
+    <option>Option 1.1</option>
+  </optgroup>
+  <optgroup label="Group 2">
+    <option>Option 2.1</option>
+    <option>Option 2.2</option>
+  </optgroup>
+  <optgroup label="Group 3" disabled>
+    <option>Option 3.1</option>
+    <option>Option 3.2</option>
+    <option>Option 3.3</option>
+  </optgroup>
+</select>
+```
+
+### Result
+
+{{EmbedLiveSample("Examples")}}
+
+## Technical Summary
+
 <table class="properties">
   <tbody>
     <tr>
@@ -57,40 +93,6 @@ The **`<optgroup>`** [HTML](/en-US/docs/Web/HTML) element creates a grouping of 
     </tr>
   </tbody>
 </table>
-
-> **Note:** Optgroup elements may not be nested.
-
-## Attributes
-
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-- {{htmlattrdef("disabled")}}
-  - : If this Boolean attribute is set, none of the items in this option group is selectable. Often browsers grey out such control and it won't receive any browsing events, like mouse clicks or focus-related ones.
-- {{htmlattrdef("label")}}
-  - : The name of the group of options, which the browser can use when labeling the options in the user interface. This attribute is mandatory if this element is used.
-
-## Examples
-
-```html
-<select>
-  <optgroup label="Group 1">
-    <option>Option 1.1</option>
-  </optgroup>
-  <optgroup label="Group 2">
-    <option>Option 2.1</option>
-    <option>Option 2.2</option>
-  </optgroup>
-  <optgroup label="Group 3" disabled>
-    <option>Option 3.1</option>
-    <option>Option 3.2</option>
-    <option>Option 3.3</option>
-  </optgroup>
-</select>
-```
-
-### Result
-
-{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

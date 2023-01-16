@@ -582,7 +582,7 @@ The new operations are:
 
 ### Number types
 
-Web assembly currently has four available _number types_:
+WebAssembly currently has four available _number types_:
 
 - `i32`: 32-bit integer
 - `i64`: 64-bit integer

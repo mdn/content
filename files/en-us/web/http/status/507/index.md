@@ -16,7 +16,7 @@ It indicates that a method could not be performed because the server cannot stor
 
 ## Status
 
-```plain
+```http
 507 Insufficient Storage
 ```
 

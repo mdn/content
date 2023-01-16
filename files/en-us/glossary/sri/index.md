@@ -1,6 +1,7 @@
 ---
 title: SRI
 slug: Glossary/SRI
+page-type: glossary-definition
 tags:
   - CSP
   - Security

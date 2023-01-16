@@ -1,6 +1,7 @@
 ---
 title: Canvas
 slug: Glossary/Canvas
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Graphics

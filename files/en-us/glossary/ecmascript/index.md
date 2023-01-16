@@ -1,6 +1,7 @@
 ---
 title: ECMAScript
 slug: Glossary/ECMAScript
+page-type: glossary-definition
 tags:
   - WebMechanics
 ---

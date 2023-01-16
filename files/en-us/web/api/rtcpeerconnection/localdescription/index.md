@@ -25,7 +25,7 @@ const sessionDescription = peerConnection.localDescription
 
 On a more fundamental level, the returned value is the value of {{domxref("RTCPeerConnection.pendingLocalDescription")}} if that property isn't `null`;
 otherwise, the value of {{domxref("RTCPeerConnection.currentLocalDescription")}} is returned.
-See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current descriptions")}} for details on this algorithm and why it's used.
+See [Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) in the WebRTC Connectivity page for details on this algorithm and why it's used.
 
 ## Example
 

@@ -31,7 +31,7 @@ identical.
 
 ## Status
 
-```plain
+```http
 307 Temporary Redirect
 ```
 

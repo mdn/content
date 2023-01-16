@@ -1,6 +1,7 @@
 ---
 title: IDL
 slug: Glossary/IDL
+page-type: glossary-definition
 tags:
   - CodingScripting
   - IDL

@@ -1,6 +1,7 @@
 ---
 title: Composite operation
 slug: Glossary/Composite_operation
+page-type: glossary-definition
 tags:
   - Animations
 ---

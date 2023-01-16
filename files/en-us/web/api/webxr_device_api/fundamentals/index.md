@@ -59,7 +59,7 @@ A human eye is able to take in a FOV of around 135°. Assuming a person has two 
 
 The drawing shown here demonstrates the concept of FOV: blue wedge for the left eye, red wedge for the right eye. The light brown overlapping area is where the viewer has binocular vision and can perceive depth. If you look carefully, you'll see that each eye sees the die slightly differently, and the combined view blends the two into a 3D shape.
 
-Generally, applications only define and manage the horizontal FOV. For more details, see {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Rendering", "The optics of 3D")}}.
+Generally, applications only define and manage the horizontal FOV. For more details, see [The optics of 3D](/en-US/docs/Web/API/WebXR_Device_API/Rendering#the_optics_of_3d).
 
 #### Field of view and mixed reality devices
 

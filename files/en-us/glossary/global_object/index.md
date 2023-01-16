@@ -1,6 +1,7 @@
 ---
 title: Global object
 slug: Glossary/Global_object
+page-type: glossary-definition
 tags:
   - CodingScripting
   - NeedsContent

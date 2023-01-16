@@ -1,6 +1,7 @@
 ---
 title: <tspan>
 slug: Web/SVG/Element/tspan
+page-type: svg-element
 tags:
   - Element
   - Reference

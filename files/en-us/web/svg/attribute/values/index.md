@@ -1,6 +1,7 @@
 ---
 title: values
 slug: Web/SVG/Attribute/values
+page-type: svg-attribute
 tags:
   - NeedsCompatTable
   - NeedsExample
