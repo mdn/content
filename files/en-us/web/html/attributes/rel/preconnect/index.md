@@ -1,6 +1,6 @@
 ---
 title: 'Link types: preconnect'
-slug: Web/HTML/Link_types/preconnect
+slug: Web/HTML/Attributes/rel/preconnect
 tags:
   - Attribute
   - HTML

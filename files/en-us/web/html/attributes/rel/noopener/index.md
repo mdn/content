@@ -1,6 +1,6 @@
 ---
 title: 'Link types: noopener'
-slug: Web/HTML/Link_types/noopener
+slug: Web/HTML/Attributes/rel/noopener
 tags:
   - Attribute
   - HTML

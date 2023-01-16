@@ -1,6 +1,6 @@
 ---
 title: 'Link types: preload'
-slug: Web/HTML/Link_types/preload
+slug: Web/HTML/Attributes/rel/preload
 tags:
   - Attribute
   - HTML

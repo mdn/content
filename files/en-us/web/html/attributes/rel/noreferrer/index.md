@@ -1,6 +1,6 @@
 ---
 title: 'Link types: noreferrer'
-slug: Web/HTML/Link_types/noreferrer
+slug: Web/HTML/Attributes/rel/noreferrer
 tags:
   - Attribute
   - HTML
