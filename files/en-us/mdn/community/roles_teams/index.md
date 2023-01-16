@@ -320,7 +320,7 @@ The teams in the [MDN GitHub organization](https://github.com/orgs/mdn/teams) in
 - `@sre`: Site reliability engineers who support MDN Web Docs
 - `@yari-content`: The umbrella team for all MDN Web Docs content reviewers
 
-  - There is a sub-team for the different topic areas — accessibility, Add-ons, CSS, HTML, HTTP, JavaScript, SVG, Web API, and Web assembly. For example, there's `@yari-content-css` and `@yari-content-svg`.
+  - There is a sub-team for the different topic areas — accessibility, Add-ons, CSS, HTML, HTTP, JavaScript, SVG, Web API, and WebAssembly. For example, there's `@yari-content-css` and `@yari-content-svg`.
   - There are also sub-teams for different languages — Brazilian Portuguese, Chinese, French, Japanese, Korean, Russian, and Spanish. For example, there's `@yari-content-fr` and `@yari-content-ko`.
 
 To become a member of a team, you must:
