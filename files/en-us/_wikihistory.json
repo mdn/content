@@ -21975,10 +21975,6 @@
     "modified": "2020-10-15T22:29:10.156Z",
     "contributors": ["bershanskiy"]
   },
-  "Web/API/Bluetooth/referringDevice": {
-    "modified": "2020-10-15T22:29:04.795Z",
-    "contributors": ["bershanskiy"]
-  },
   "Web/API/Bluetooth/requestDevice": {
     "modified": "2020-10-15T21:43:01.722Z",
     "contributors": [

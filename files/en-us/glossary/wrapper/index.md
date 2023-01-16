@@ -1,6 +1,7 @@
 ---
 title: Wrapper
 slug: Glossary/Wrapper
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Wrapper

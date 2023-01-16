@@ -1,6 +1,7 @@
 ---
 title: Web performance
 slug: Glossary/Web_performance
+page-type: glossary-definition
 tags:
   - Perceived Performance
   - Reference

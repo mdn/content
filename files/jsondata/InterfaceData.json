@@ -436,6 +436,10 @@
       "inh": "",
       "impl": []
     },
+    "CrashReportBody": {
+      "inh": "ReportBody",
+      "impl": []
+    },
     "Credential": {
       "inh": "",
       "impl": []
@@ -2076,6 +2080,10 @@
       "inh": "",
       "impl": []
     },
+    "MLActivation": {
+      "inh": "",
+      "impl": []
+    },
     "MLCommandEncoder": {
       "inh": "",
       "impl": []
@@ -2093,10 +2101,6 @@
       "impl": []
     },
     "MLOperand": {
-      "inh": "",
-      "impl": []
-    },
-    "MLOperator": {
       "inh": "",
       "impl": []
     },

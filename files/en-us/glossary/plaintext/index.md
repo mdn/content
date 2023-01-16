@@ -1,6 +1,7 @@
 ---
 title: Plaintext
 slug: Glossary/Plaintext
+page-type: glossary-definition
 tags:
   - Cryptography
   - Security

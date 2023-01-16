@@ -1,6 +1,7 @@
 ---
 title: IPv4
 slug: Glossary/IPv4
+page-type: glossary-definition
 tags:
   - IPv4
   - Infrastructure

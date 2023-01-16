@@ -1,6 +1,7 @@
 ---
 title: Conditional
 slug: Glossary/Conditional
+page-type: glossary-definition
 tags:
   - Beginner
   - CodingScripting

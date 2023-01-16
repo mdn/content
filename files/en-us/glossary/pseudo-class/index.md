@@ -1,6 +1,7 @@
 ---
 title: Pseudo-class
 slug: Glossary/Pseudo-class
+page-type: glossary-definition
 tags:
   - CSS
   - CodingScripting

@@ -1,6 +1,7 @@
 ---
 title: Script-supporting element
 slug: Glossary/Script-supporting_element
+page-type: glossary-definition
 tags:
   - HTML
   - HTML Content Categories
