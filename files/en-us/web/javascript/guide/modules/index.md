@@ -334,7 +334,7 @@ With this mapping, if a script with an URL that contains `/node_modules/dependen
 The map in `imports` is used as a fallback if there is no matching scope in the scoped map, or the matching scopes don't contain a matching specifier. For example, if `coolmodule` is imported from a script with a non-matching scope path, then the module specifier map in `imports` will be used instead, mapping to the version in `/node_modules/coolmodule/index.js`.
 
 Note that the path used to select a scope does not affect how the address is resolved.
-The value in the mapped path does not have to have to match the scopes path, and relative paths are still resolved to the base URL of the script that contains the import map.
+The value in the mapped path does not have to match the scopes path, and relative paths are still resolved to the base URL of the script that contains the import map.
 
 Just as for module specifier maps, you can have many scope keys, and these may contain overlapping paths.
 If multiple scopes match the referrer URL, then the most specific scope path is checked first (the longest scope key) for a matching specifier.
