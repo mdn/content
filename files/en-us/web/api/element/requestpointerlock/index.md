@@ -68,6 +68,7 @@ canvas.addEventListener("click", async () => {
 
 For more example code, see:
 
+- [pointer lock demo](https://mdn.github.io/dom-examples/pointer-lock/) ([see source code](https://github.com/mdn/dom-examples/tree/main/pointer-lock))
 - {{domxref("Pointer Lock API", "Pointer Lock API", "", "nocode")}}
 - [Disable mouse acceleration to provide a better FPS gaming experience](https://web.dev/disable-mouse-acceleration/)
 
