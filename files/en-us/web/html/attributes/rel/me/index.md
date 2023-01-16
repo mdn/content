@@ -1,5 +1,5 @@
 ---
-title:rel=me
+title: rel=me
 slug: Web/HTML/Attributes/rel/me
 tags:
   - Attribute
