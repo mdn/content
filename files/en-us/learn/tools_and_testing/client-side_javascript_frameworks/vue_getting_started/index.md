@@ -230,9 +230,9 @@ components: {
 }
 ```
 
-Your rendered app should no longer show an error, just a blank page, as we currently have no visible content inside `<template>`.
-
-Let's add a new `<h1>` inside `<div id="app">`. Since we're going to be creating a todo list app below, let's set our header text to "To-Do List". Add it like so:
+The `<template>` tag is empty now so you'll see an error saying `The template requires child element` in both the console and the rendered app.
+You can fix this by adding some content inside the `<template>` tag and we can start with a new `<h1>` element inside a `<div>`.
+Since we're going to be creating a todo list app below, let's set our heading to "To-Do List" like so:
 
 ```html
 <template>
