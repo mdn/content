@@ -1,6 +1,7 @@
 ---
 title: Static method
 slug: Glossary/Static_method
+page-type: glossary-definition
 tags:
   - CodingScripting
   - JavaScript
@@ -23,7 +24,7 @@ In the [Notifications API](/en-US/docs/Web/API/Notifications_API), the {{domxref
 let promise = Notification.requestPermission();
 ```
 
-The {{domxref("Notification.close()")}} method on the other hand, is an instance method — it is called on an specific notification object instance to close the system notification it represents:
+The {{domxref("Notification.close()")}} method on the other hand, is an instance method — it is called on a specific notification object instance to close the system notification it represents:
 
 ```js
 let myNotification = new Notification("This is my notification");

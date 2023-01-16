@@ -67,7 +67,7 @@ When a user toggles a `<Todo/>` template from viewing to editing, we should focu
 
 ### Targeting our elements
 
-In order to focus on an element in our DOM, we need to tell React which element we want to focus on and how to find it. React's [`useRef`](https://reactjs.org/docs/hooks-reference.html#useref) hook creates an object with a single property: `current`. This property can be a reference to anything we want and look that reference up later. It's particularly useful for referring to DOM elements.
+In order to focus on an element in our DOM, we need to tell React which element we want to focus on and how to find it. React's [`useRef`](https://reactjs.org/docs/hooks-reference.html#useref) hook creates an object with a single property: `current`. This property can be a reference to anything we want, and that reference can be looked up later. It's particularly useful for referring to DOM elements.
 
 Change the `import` statement at the top of `Todo.js` so that it includes `useRef`:
 
@@ -140,7 +140,7 @@ main render (3)                                     Todo.js:100
 side effect (3)                                     Todo.js:98
 ```
 
-That's it for our experimentation for now. Delete `console.log("main render")` now, and lets move on to implementing our focus management.
+That's it for our experimentation for now. Delete `console.log("main render")` now, and let's move on to implementing our focus management.
 
 ### Focusing on our editing field
 
@@ -174,7 +174,7 @@ useEffect(() => {
 }, [isEditing]);
 ```
 
-This kind of mostly works. Head back to your browser and you'll see that your focus moves between Edit `<input>` and "Edit" button as you start and end an edit. However, you may have noticed a new problem — the "Edit" button in the final `<Todo />` component is focussed immediately on page load, before we even interact with the app!
+This kind of mostly works. Head back to your browser and you'll see that your focus moves between Edit `<input>` and "Edit" button as you start and end an edit. However, you may have noticed a new problem — the "Edit" button in the final `<Todo />` component is focused immediately on page load, before we even interact with the app!
 
 Our `useEffect()` hook is behaving exactly as we designed it: it runs as soon as the component renders, sees that `isEditing` is `false`, and focuses the "Edit" button. Because there are three instances of `<Todo />`, we see focus on the last "Edit" button.
 
@@ -292,7 +292,7 @@ Here we are invoking `usePrevious()` to track the length of the tasks state, lik
 
 ### Using `useEffect()` to control our heading focus
 
-Now that we've stored how many tasks we previously had, we can set up a `useEffect()` hook to run when our number of tasks changes, which will focus the heading if the number of tasks we have now is less than with it previously was — i.e. we deleted a task!
+Now that we've stored how many tasks we previously had, we can set up a `useEffect()` hook to run when our number of tasks changes, which will focus the heading if the number of tasks we have now is less than it previously was — that is, we deleted a task!
 
 Add the following into the body of your `App()` function, just below your previous additions:
 
@@ -316,7 +316,7 @@ Most of the time, you can be an effective contributor to a React project even if
 
 `useRef()` and `useEffect()` are somewhat advanced features, and you should be proud of yourself for using them! Look out for opportunities to practice them more, because doing so will allow you to create inclusive experiences for users. Remember: our app would have been inaccessible to keyboard users without them!
 
-> **Note:** If you need to check your code against our version, you can find a finished version of the sample React app code in our [todo-react repository](https://github.com/mdn/todo-react). For a running live version, see <https://mdn.github.io/todo-react-build/>.
+> **Note:** If you need to check your code against our version, you can find a finished version of the sample React app code in our [todo-react repository](https://github.com/mdn/todo-react). For a running live version, see <https://mdn.github.io/todo-react>.
 
 In the very last article we'll present you with a list of React resources that you can use to go further in your learning.
 

@@ -1,5 +1,5 @@
 ---
-title: '<input>: The Input (Form Input) element'
+title: "<input>: The Input (Form Input) element"
 slug: Web/HTML/Element/input
 tags:
   - Data entry
@@ -375,11 +375,11 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete)
 
-  - : (**Not** a Boolean attribute!) The [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute takes as its value a space-separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete `email` addresses in an email input field. See {{SectionOnPage("/en-US/docs/Web/HTML/Attributes/autocomplete", "Values")}} for permitted values.
+  - : (**Not** a Boolean attribute!) The [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute takes as its value a space-separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete `email` addresses in an email input field. See [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete#values) for permitted values.
 
     The `autocomplete` attribute is valid on `hidden`, `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`, `color`, and `password`. This attribute has no effect on input types that do not return numeric or text data, being valid for all input types except `checkbox`, `radio`, `file`, or any of the button types.
 
-    See [The HTML autocomplete attribute](/en-US/docs/Web/HTML/Attributes/autocomplete) for additional information, including information on password security and how `autocomplete` is slightly different for `hidden` than for other input types.
+    See the [`autocomplete` attribute](/en-US/docs/Web/HTML/Attributes/autocomplete) for additional information, including information on password security and how `autocomplete` is slightly different for `hidden` than for other input types.
 
 - `autofocus`
 
@@ -411,7 +411,8 @@ A few additional non-standard attributes are listed following the descriptions o
 
     ```html
     <form action="page.html" method="post">
-      <label>Fruit:
+      <label
+        >Fruit:
         <input type="text" name="fruit" dirname="fruit.dir" value="cherry" />
       </label>
       <input type="submit" />
@@ -1117,13 +1118,13 @@ If there is an error, supporting browsers will both alert the user and prevent t
 function validate(input) {
   let validityState_object = input.validity;
   if (validityState_object.valueMissing) {
-     input.setCustomValidity('A value is required');
+    input.setCustomValidity("A value is required");
   } else if (validityState_object.rangeUnderflow) {
-    input.setCustomValidity('Your value is too low');
+    input.setCustomValidity("Your value is too low");
   } else if (validityState_object.rangeOverflow) {
-    input.setCustomValidity('Your value is too high');
+    input.setCustomValidity("Your value is too high");
   } else {
-    input.setCustomValidity('');
+    input.setCustomValidity("");
   }
 }
 ```
@@ -1132,7 +1133,7 @@ The last line, setting the custom validity message to the empty string is vital.
 
 #### Custom validation error example
 
-If you want to present a custom error message when a field fails to validate, you need to use the [Constraint validation features](/en-US/docs/Web/API/Constraint_validation#constraint_validation_interfaces) available on `<input>` (and related) elements. Take the following form:
+If you want to present a custom error message when a field fails to validate, you need to use the [Constraint Validation API](/en-US/docs/Learn/Forms/Form_validation#validating_forms_using_javascript) available on `<input>` (and related) elements. Take the following form:
 
 ```html
 <form>
@@ -1147,18 +1148,20 @@ The basic HTML form validation features will cause this to produce a default err
 If you wanted to instead display custom error messages, you could use JavaScript like the following:
 
 ```js
-const nameInput = document.querySelector('input');
+const nameInput = document.querySelector("input");
 
-nameInput.addEventListener('input', () => {
-  nameInput.setCustomValidity('');
+nameInput.addEventListener("input", () => {
+  nameInput.setCustomValidity("");
   nameInput.checkValidity();
 });
 
-nameInput.addEventListener('invalid', () => {
-  if (nameInput.value === '') {
-    nameInput.setCustomValidity('Enter your username!');
+nameInput.addEventListener("invalid", () => {
+  if (nameInput.value === "") {
+    nameInput.setCustomValidity("Enter your username!");
   } else {
-    nameInput.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
+    nameInput.setCustomValidity(
+      "Usernames can only contain upper and lowercase letters. Try again!"
+    );
   }
 });
 ```

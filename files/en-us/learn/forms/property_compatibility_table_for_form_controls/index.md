@@ -102,7 +102,7 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("height")}}
       </th>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td style="text-align: center; vertical-align: top">
         ✅ Yes
@@ -123,7 +123,7 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("border")}}
       </th>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td style="text-align: center; vertical-align: top">
         ✅ Yes
@@ -156,7 +156,7 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("padding")}}
       </th>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td style="text-align: center; vertical-align: top">
         ✅ Yes
@@ -333,7 +333,7 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("border-radius")}}
       </th>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td style="text-align: center; vertical-align: top">
         ✅ Yes
@@ -1280,10 +1280,10 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and `{{htmlel
         {{cssxref("text-indent")}}
       </th>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -1311,10 +1311,10 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and `{{htmlel
         {{cssxref("text-shadow")}}
       </th>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -3278,4 +3278,4 @@ See the `{{htmlelement("input/image", "image")}}` input type:
 - [How to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls)
 - [HTML forms in legacy browsers](/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
 - [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [Property compatibility table for form widgets](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- **Property compatibility table for form widgets**

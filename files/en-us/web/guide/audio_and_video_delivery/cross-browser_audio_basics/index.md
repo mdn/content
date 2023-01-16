@@ -10,6 +10,8 @@ tags:
   - events
 ---
 
+{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
+
 This article provides:
 
 - a basic guide to creating a cross-browser HTML audio player with all the associated attributes, properties, and events explained
@@ -23,7 +25,7 @@ The code below is an example of a basic audio implementation using HTML5:
 <audio controls>
   <source src="audiofile.mp3" type="audio/mpeg" />
   <source src="audiofile.ogg" type="audio/ogg" />
-  <!-- fallback for non supporting browsers goes here -->
+  <!-- fallback for non-supporting browsers goes here -->
   <p>
     Your browser does not support HTML audio, but you can still
     <a href="audiofile.mp3">download the music</a>.
@@ -39,7 +41,7 @@ The code below is an example of a basic audio implementation using HTML5:
   - `src` contains the path to the audio file to be loaded (relative or absolute).
   - `type` is used to inform the browser of the file type. If omitted, most browsers will attempt to guess this from the file extension.
 
-- If the {{ htmlelement("audio") }} element is not supported then {{ htmlelement("audio") }} and {{ htmlelement("source") }} will be ignored. However any supported text or elements that you define within {{ htmlelement("audio") }} will be displayed or acted upon. So the ideal place to create a fallback or inform of incompatibility is before the closing `</audio>` tag. In this case, we've provided a simple paragraph including a link to download the audio directly.
+- If the {{ htmlelement("audio") }} element is not supported then {{ htmlelement("audio") }} and {{ htmlelement("source") }} will be ignored. However, any supported text or elements that you define within {{ htmlelement("audio") }} will be displayed or acted upon. So the ideal place to create a fallback or inform of incompatibility is before the closing `</audio>` tag. In this case, we've provided a simple paragraph including a link to download the audio directly.
 - The `controls` attribute on the {{ htmlelement("audio") }} element is specified when we require the browser to provide us with default playback controls. If you don't specify this attribute, no controls will appear — and you will instead have to create your own controls and program their functionality using the Media API (see below). However, that can be a good approach, because the default controls look different among various browsers. So creating your own controls ensures a consistent look for the controls across all browsers.
 
 ## HTML audio in detail
@@ -58,7 +60,7 @@ Specifying `autoplay` will cause the audio to start playing as soon as possible 
 <audio autoplay>…</audio>
 ```
 
-> **Note:** This value is often ignored on mobile platforms, and its use is not recommended unless really necessary. Auto-playing audio (and video) is usually really annoying. Plus browsers have policies that will block autoplay entirely in many situations. See the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) for details.
+> **Note:** This value is often ignored on mobile platforms, and its use is not recommended unless really necessary. Autoplaying audio (and video) is usually really annoying. Plus browsers have policies that will block autoplay entirely in many situations. See the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) for details.
 
 #### loop
 
@@ -354,7 +356,7 @@ We also have a few events available that will fire when there is some kind of in
 - abort
   - : Media data download has been aborted but not due to an error.
 - error
-  - : An error is encountered while media data is being download.
+  - : An error is encountered while media data is being downloaded.
 - emptied
   - : The media buffer has been emptied, possibly due to an error or because the load() method was invoked to reload it.
 - stalled

@@ -19,6 +19,37 @@ The **`<aside>`** [HTML](/en-US/docs/Web/HTML) element represents a portion of a
 
 {{EmbedInteractiveExample("pages/tabbed/aside.html", "tabbed-standard")}}
 
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Usage notes
+
+- Do not use the `<aside>` element to tag parenthesized text, as this kind of text is considered part of the main flow.
+
+## Examples
+
+### Using \<aside>
+
+This example uses `<aside>` to mark up a paragraph in an article. The paragraph is only indirectly related to the main article content:
+
+```html
+<article>
+  <p>
+    The Disney movie <cite>The Little Mermaid</cite> was first released to
+    theatres in 1989.
+  </p>
+  <aside>
+    <p>The movie earned $87 million during its initial release.</p>
+  </aside>
+  <p>More info about the movie…</p>
+</article>
+```
+
+{{EmbedLiveSample("Using_aside")}}
+
+## Technical Summary
+
 <table class="properties">
   <tbody>
     <tr>
@@ -86,35 +117,6 @@ The **`<aside>`** [HTML](/en-US/docs/Web/HTML) element represents a portion of a
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Usage notes
-
-- Do not use the `<aside>` element to tag parenthesized text, as this kind of text is considered part of the main flow.
-
-## Examples
-
-### Using \<aside>
-
-This example uses `<aside>` to mark up a paragraph in an article. The paragraph is only indirectly related to the main article content:
-
-```html
-<article>
-  <p>
-    The Disney movie <cite>The Little Mermaid</cite> was first released to
-    theatres in 1989.
-  </p>
-  <aside>
-    <p>The movie earned $87 million during its initial release.</p>
-  </aside>
-  <p>More info about the movie…</p>
-</article>
-```
-
-{{EmbedLiveSample("Using_aside")}}
 
 ## Specifications
 

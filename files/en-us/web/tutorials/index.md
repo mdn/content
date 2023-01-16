@@ -129,7 +129,7 @@ These resources are created by forward-thinking companies and web developers who
   - : A recap of the JavaScript programming language aimed at intermediate-level developers.
 - [Eloquent JavaScript](https://eloquentjavascript.net/)
   - : A comprehensive guide to intermediate and advanced JavaScript methodologies.
-- [Speaking JavaScript](http://speakingjs.com/es5/)
+- [Speaking JavaScript](https://exploringjs.com/es5/)
   - : For programmers who want to learn JavaScript quickly and properly, and for JavaScript programmers who want to deepen their skills and/or look up specific topics.
 - [Essential JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
   - : An introduction to essential JavaScript design patterns.
@@ -142,12 +142,12 @@ These resources are created by forward-thinking companies and web developers who
   - : A comprehensive, regularly updated guide to JavaScript for all levels of learning from beginner to advanced.
 - [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
   - : A series of books diving deep into the core mechanisms of the JavaScript language.
-- [JavaScript Garden](https://bonsaiden.github.io/JavaScript-Garden/)
+- [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)
   - : Documentation of the most quirky parts of JavaScript.
 - [Exploring ES6](https://exploringjs.com/es6/)
   - : Reliable and in-depth information on ECMAScript 2015.
 - [JavaScript Patterns](https://shichuan.github.io/javascript-patterns/)
-  - : A JavaScript pattern and antipattern collection that covers function patterns, jQuery patterns, jQuery plugin patterns, design patterns, general patterns, literals and constructor patterns, object creation patterns, code reuse patterns, DOM.
+  - : A JavaScript pattern and anti-pattern collection that covers function patterns, jQuery patterns, jQuery plugin patterns, design patterns, general patterns, literals and constructor patterns, object creation patterns, code reuse patterns, DOM.
 - [How browsers work](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
   - : A detailed research article describing different modern browsers, their engines, page rendering etc.
 - [JavaScript Videos](https://github.com/bolshchikov/js-must-watch)

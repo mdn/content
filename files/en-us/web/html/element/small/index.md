@@ -17,6 +17,40 @@ The **`<small>`** [HTML](/en-US/docs/Web/HTML) element represents side-comments 
 
 {{EmbedInteractiveExample("pages/tabbed/small.html", "tabbed-shorter")}}
 
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Examples
+
+### Basic usage
+
+```html
+<p>
+  This is the first sentence.
+  <small>This whole sentence is in small letters.</small>
+</p>
+```
+
+{{EmbedLiveSample("Basic_usage")}}
+
+### CSS alternative
+
+```html
+<p>
+  This is the first sentence.
+  <span style="font-size:0.8em">This whole sentence is in small letters.</span>
+</p>
+```
+
+{{EmbedLiveSample("CSS_alternative")}}
+
+## Notes
+
+Although the `<small>` element, like the {{htmlelement("b")}} and {{htmlelement("i")}} elements, may be perceived to violate the principle of separation between structure and presentation, all three are valid in HTML. Authors are encouraged to use their best judgement when determining whether to use `<small>` or CSS.
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
@@ -72,38 +106,6 @@ The **`<small>`** [HTML](/en-US/docs/Web/HTML) element represents side-comments 
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Examples
-
-### Basic usage
-
-```html
-<p>
-  This is the first sentence.
-  <small>This whole sentence is in small letters.</small>
-</p>
-```
-
-{{EmbedLiveSample("Basic_usage")}}
-
-### CSS alternative
-
-```html
-<p>
-  This is the first sentence.
-  <span style="font-size:0.8em">This whole sentence is in small letters.</span>
-</p>
-```
-
-{{EmbedLiveSample("CSS_alternative")}}
-
-## Notes
-
-Although the `<small>` element, like the {{htmlelement("b")}} and {{htmlelement("i")}} elements, may be perceived to violate the principle of separation between structure and presentation, all three are valid in HTML. Authors are encouraged to use their best judgement when determining whether to use `<small>` or CSS.
 
 ## Specifications
 

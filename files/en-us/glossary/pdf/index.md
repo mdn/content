@@ -1,6 +1,7 @@
 ---
 title: PDF
 slug: Glossary/PDF
+page-type: glossary-definition
 tags:
   - Composing
   - PDF

@@ -33,8 +33,7 @@ requires merchant validation.
 
 A read-only string which uniquely identifies the payment handler
 which is requesting merchant validation. See
-{{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant
-  validation")}} for more information on the process.
+[Merchant validation](/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation) for more information on the process.
 
 ## Browser compatibility
 

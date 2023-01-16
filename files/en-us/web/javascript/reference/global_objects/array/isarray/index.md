@@ -1,6 +1,7 @@
 ---
 title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
+page-type: javascript-static-method
 tags:
   - Array
   - ECMAScript 5
@@ -67,7 +68,7 @@ Array.isArray(new Uint8Array(32));
 Array.isArray({ __proto__: Array.prototype });
 ```
 
-### instanceof vs Array.isArray()
+### instanceof vs. Array.isArray()
 
 When checking for `Array` instance, `Array.isArray()` is preferred over `instanceof` because it works across realms.
 

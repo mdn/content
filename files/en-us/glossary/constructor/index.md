@@ -1,6 +1,7 @@
 ---
 title: Constructor
 slug: Glossary/Constructor
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

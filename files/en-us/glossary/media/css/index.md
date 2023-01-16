@@ -1,6 +1,7 @@
 ---
 title: Media (CSS)
 slug: Glossary/Media/CSS
+page-type: glossary-definition
 tags:
   - CSS
   - Intro

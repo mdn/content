@@ -1,6 +1,7 @@
 ---
 title: color-interpolation-filters
 slug: Web/SVG/Attribute/color-interpolation-filters
+page-type: svg-attribute
 tags:
   - NeedsExample
   - SVG

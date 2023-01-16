@@ -1,6 +1,7 @@
 ---
 title: CSS
 slug: Glossary/CSS
+page-type: glossary-definition
 tags:
   - CSS
   - CodingScripting

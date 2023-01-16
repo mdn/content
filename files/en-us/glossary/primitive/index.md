@@ -1,6 +1,7 @@
 ---
 title: Primitive
 slug: Glossary/Primitive
+page-type: glossary-definition
 tags:
   - CodingScripting
   - JavaScript

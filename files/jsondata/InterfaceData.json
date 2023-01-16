@@ -1272,6 +1272,10 @@
       "inh": "GPUError",
       "impl": []
     },
+    "GPUPipelineError": {
+      "inh": "DOMException",
+      "impl": []
+    },
     "GPUPipelineLayout": {
       "inh": "",
       "impl": []
@@ -1804,10 +1808,6 @@
       "inh": "",
       "impl": []
     },
-    "InteractionCounts": {
-      "inh": "",
-      "impl": []
-    },
     "IntersectionObserver": {
       "inh": "",
       "impl": []
@@ -2080,6 +2080,10 @@
       "inh": "",
       "impl": []
     },
+    "MLActivation": {
+      "inh": "",
+      "impl": []
+    },
     "MLCommandEncoder": {
       "inh": "",
       "impl": []
@@ -2097,10 +2101,6 @@
       "impl": []
     },
     "MLOperand": {
-      "inh": "",
-      "impl": []
-    },
-    "MLOperator": {
       "inh": "",
       "impl": []
     },

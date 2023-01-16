@@ -31,27 +31,27 @@ The Navigation API only exposes history entries created in the current browsing 
 
 _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
-- {{domxref("NavigationHistoryEntry.id", "id")}} {{ReadOnlyInline}}
+- {{domxref("NavigationHistoryEntry.id", "id")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the `id` of the history entry. This is a unique, UA-generated value that always represents a specific history entry, useful to correlate it with an external resource such as a storage cache.
-- {{domxref("NavigationHistoryEntry.index", "index")}} {{ReadOnlyInline}}
+- {{domxref("NavigationHistoryEntry.index", "index")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the index of the history entry in the history entries list (that is, the list returned by {{domxref("Navigation.entries()")}}), or `-1` if the entry does not appear in the list.
-- {{domxref("NavigationHistoryEntry.key", "key")}} {{ReadOnlyInline}}
+- {{domxref("NavigationHistoryEntry.key", "key")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the `key` of the history entry. This is a unique, UA-generated value that represents the history entry's slot in the entries list rather than the entry itself. It is used to navigate that particular slot via {{domxref("Navigation.traverseTo()")}}. The `key` will be reused by other entries that replace the entry in the list (that is, if the {{domxref("NavigateEvent.navigationType")}} is `replace`).
-- {{domxref("NavigationHistoryEntry.sameDocument", "sameDocument")}} {{ReadOnlyInline}}
+- {{domxref("NavigationHistoryEntry.sameDocument", "sameDocument")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `true` if this history entry is for the same `document` as the current {{domxref("Document")}} value, or `false` otherwise.
-- {{domxref("NavigationHistoryEntry.url", "url")}} {{ReadOnlyInline}}
+- {{domxref("NavigationHistoryEntry.url", "url")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the absolute URL of this history entry.
 
 ## Instance methods
 
 _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
-- {{domxref("NavigationHistoryEntry.getState", "getState()")}}
+- {{domxref("NavigationHistoryEntry.getState", "getState()")}} {{Experimental_Inline}}
   - : Returns a clone of the available state associated with this history entry.
 
 ## Events
 
-- {{domxref("NavigationHistoryEntry/dispose_event", "dispose")}}
+- {{domxref("NavigationHistoryEntry/dispose_event", "dispose")}} {{Experimental_Inline}}
   - : Fires when the entry is no longer part of the history entry list.
 
 ## Examples

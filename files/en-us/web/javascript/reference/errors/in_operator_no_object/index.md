@@ -1,6 +1,7 @@
 ---
 title: 'TypeError: cannot use ''in'' operator to search for ''x'' in ''y'''
 slug: Web/JavaScript/Reference/Errors/in_operator_no_object
+page-type: javascript-error
 tags:
   - Error
   - Errors

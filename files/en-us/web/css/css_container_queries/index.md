@@ -65,13 +65,13 @@ Specifically, this query will apply a larger font size for the card title if the
 
 ```css
 /* Default heading styles for the card title */
-.card h1 {
+.card h2 {
   font-size: 1em;
 }
 
 /* Container query applied if the container is larger than 700px */
 @container (min-width: 700px) {
-  .card h1 {
+  .card h2 {
     font-size: 2em;
   }
 }
@@ -177,5 +177,6 @@ If you want to use a single-column layout for devices with a smaller viewport, y
 - CSS {{Cssxref("container")}} shorthand property
 - CSS {{Cssxref("container-name")}} property
 - CSS {{cssxref("content-visibility")}} property
+- [Say Hello to CSS Container Queries](https://ishadeed.com/article/say-hello-to-css-container-queries/) by Ahmad Shadeed
 - [Container Queries: a Quick Start Guide](https://www.oddbird.net/2021/04/05/containerqueries/)
 - [Collection of Container Queries articles](https://github.com/sturobson/Awesome-Container-Queries)

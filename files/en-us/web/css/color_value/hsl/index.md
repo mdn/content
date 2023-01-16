@@ -17,6 +17,8 @@ browser-compat: css.types.color.hsl
 
 The **`hsl()`** functional notation expresses an {{glossary("RGB", "sRGB")}} color according to its _hue_, _saturation_, and _lightness_ components. An optional _alpha_ component represents the color's transparency.
 
+> **Note:** The legacy `hsla()` syntax is an alias for `hsl()`, accepting the same parameters and behaving in the same way.
+
 {{EmbedInteractiveExample("pages/css/function-hsl.html")}}
 
 Defining _complementary colors_ with `hsl()` can be done with a single formula, as they are positioned on the same diameter of the {{glossary("color wheel")}}. If `theta` is the angle of a color, its complementary one will have `180deg-theta` as its _hue_ coordinate.
@@ -31,7 +33,18 @@ hsl(hue saturation lightness / alpha)
 /* Syntax with comma-separated values */
 hsl(hue, saturation, lightness)
 hsl(hue, saturation, lightness, alpha)
+
+/* Legacy hsla() syntax */
+hsla(hue saturation lightness)
+hsla(hue saturation lightness / alpha)
+
+hsla(hue, saturation, lightness)
+hsla(hue, saturation, lightness, alpha)
 ```
+
+The `hsl()` function accepts three space-separated values, representing respectively `hue`, `saturation`, and `lightness`. Optionally it may also be given a slash `/` followed by a fourth value, representing `alpha`.
+
+The function also accepts a legacy syntax in which all values are separated with commas.
 
 ### Values
 
@@ -50,7 +63,13 @@ hsl(hue, saturation, lightness, alpha)
 - `alpha` {{optional_inline}}
   - : A {{cssxref("&lt;percentage&gt;")}} or a {{cssxref("&lt;number&gt;")}} between `0` and `1`, where the number `1` corresponds to `100%` and means full opacity, while `0` corresponds to `0%` and means fully transparent.
 
+### Formal syntax
+
+{{csssyntax}}
+
 ## Examples
+
+### Using `hsl()` with `conic-gradient()`
 
 The `hsl()` function works well with [`conic-gradient()`](/en-US/docs/Web/CSS/gradient/conic-gradient) as both deal with angles.
 
@@ -58,26 +77,96 @@ The `hsl()` function works well with [`conic-gradient()`](/en-US/docs/Web/CSS/gr
 <div></div>
 ```
 
+#### CSS
+
 ```css
 div {
   width: 100px;
   height: 100px;
   background: conic-gradient(
-    hsl(360, 100%, 50%),
-    hsl(315, 100%, 50%),
-    hsl(270, 100%, 50%),
-    hsl(225, 100%, 50%),
-    hsl(180, 100%, 50%),
-    hsl(135, 100%, 50%),
-    hsl(90, 100%, 50%),
-    hsl(45, 100%, 50%),
-    hsl(0, 100%, 50%)
+    hsl(360 100% 50%),
+    hsl(315 100% 50%),
+    hsl(270 100% 50%),
+    hsl(225 100% 50%),
+    hsl(180 100% 50%),
+    hsl(135 100% 50%),
+    hsl(90 100% 50%),
+    hsl(45 100% 50%),
+    hsl(0 100% 50%)
   );
   clip-path: circle(closest-side);
 }
 ```
 
-{{EmbedLiveSample('Examples', '100%', '140px')}}
+#### Result
+
+{{EmbedLiveSample('Using hsl() with conic-gradient(), ', '100%', '140px')}}
+
+### Legacy syntax: comma-separated values
+
+For legacy reasons, the `hsl()` function accepts a form in which all values are separated using commas.
+
+#### HTML
+
+```html
+<div class="space-separated"></div>
+<div class="comma-separated"></div>
+```
+
+#### CSS
+
+```css
+div {
+  width: 100px;
+  height: 50px;
+  margin: 1rem;
+}
+
+div.space-separated {
+  background-color: hsl(0 100% 50% / 50%);
+}
+
+div.comma-separated {
+  background-color: hsl(0, 100%, 50%, 50%);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Legacy syntax: comma-separated values', '100%', '150px')}}
+
+### Legacy syntax: hsla()
+
+The legacy `hsla()` syntax is an alias for `hsl()`.
+
+#### HTML
+
+```html
+<div class="hsl"></div>
+<div class="hsla"></div>
+```
+
+#### CSS
+
+```css
+div {
+  width: 100px;
+  height: 50px;
+  margin: 1rem;
+}
+
+div.hsl {
+  background-color: hsl(0 100% 50% / 50%);
+}
+
+div.hsla {
+  background-color: hsl(0 100% 50% / 50%);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Legacy syntax: hsla()', '100%', '150px')}}
 
 ## Specifications
 

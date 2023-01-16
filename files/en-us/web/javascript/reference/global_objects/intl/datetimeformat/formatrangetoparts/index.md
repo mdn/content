@@ -1,6 +1,7 @@
 ---
 title: Intl.DateTimeFormat.prototype.formatRangeToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRangeToParts
+page-type: javascript-instance-method
 tags:
   - DateTimeFormat
   - Internationalization

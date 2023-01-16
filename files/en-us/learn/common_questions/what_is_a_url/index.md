@@ -116,7 +116,7 @@ The {{Glossary("HTML")}} language — [which will be discussed later on](/en-US/
 
 Other technologies, such as {{Glossary("CSS")}} or {{Glossary("JavaScript")}}, use URLs extensively, and these are really the heart of the Web.
 
-## Absolute URLs vs relative URLs
+## Absolute URLs vs. relative URLs
 
 What we saw above is called an _absolute URL_, but there is also something called a _relative URL_. The [URL standard](https://url.spec.whatwg.org/#absolute-url-string) defines both — though it uses the terms [_absolute URL string_](https://url.spec.whatwg.org/#absolute-url-string) and [_relative URL string_](https://url.spec.whatwg.org/#relative-url-string), to distinguish them from [URL objects](https://url.spec.whatwg.org/#url) (which are in-memory representations of URLs).
 

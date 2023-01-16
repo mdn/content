@@ -1,6 +1,7 @@
 ---
 title: Fetch directive
 slug: Glossary/Fetch_directive
+page-type: glossary-definition
 tags:
   - CSP
   - HTTP

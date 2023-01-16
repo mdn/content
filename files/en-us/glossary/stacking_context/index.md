@@ -1,6 +1,7 @@
 ---
 title: Stacking context
 slug: Glossary/Stacking_context
+page-type: glossary-definition
 tags:
   - CSS
   - CodingScripting

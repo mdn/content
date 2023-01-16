@@ -25,7 +25,7 @@ If the server _does_ recognize the method, but intentionally does not support it
 
 ## Status
 
-```plain
+```http
 501 Not Implemented
 ```
 
