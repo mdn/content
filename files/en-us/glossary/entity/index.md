@@ -1,6 +1,7 @@
 ---
 title: Entity
 slug: Glossary/Entity
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Composing

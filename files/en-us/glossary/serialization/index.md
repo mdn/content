@@ -1,6 +1,7 @@
 ---
 title: Serialization
 slug: Glossary/Serialization
+page-type: glossary-definition
 tags:
   - CodingScripting
   - JavaScript

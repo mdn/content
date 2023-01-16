@@ -1,6 +1,7 @@
 ---
 title: XPath
 slug: Glossary/XPath
+page-type: glossary-definition
 tags:
   - CodingScripting
   - XML

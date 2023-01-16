@@ -1,6 +1,7 @@
 ---
 title: Gamut
 slug: Glossary/Gamut
+page-type: glossary-definition
 tags:
   - Color
 ---

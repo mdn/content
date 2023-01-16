@@ -21975,10 +21975,6 @@
     "modified": "2020-10-15T22:29:10.156Z",
     "contributors": ["bershanskiy"]
   },
-  "Web/API/Bluetooth/referringDevice": {
-    "modified": "2020-10-15T22:29:04.795Z",
-    "contributors": ["bershanskiy"]
-  },
   "Web/API/Bluetooth/requestDevice": {
     "modified": "2020-10-15T21:43:01.722Z",
     "contributors": [
@@ -56676,10 +56672,6 @@
   "Web/API/ReportingObserver/takeRecords": {
     "modified": "2020-10-15T22:16:15.742Z",
     "contributors": ["alattalatta", "chrisdavidmills"]
-  },
-  "Web/API/ReportingObserverOptions": {
-    "modified": "2020-10-15T22:16:15.808Z",
-    "contributors": ["chrisdavidmills"]
   },
   "Web/API/Reporting_API": {
     "modified": "2019-05-09T02:48:05.646Z",

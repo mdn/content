@@ -1,6 +1,7 @@
 ---
 title: Type conversion
 slug: Glossary/Type_Conversion
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Type casting

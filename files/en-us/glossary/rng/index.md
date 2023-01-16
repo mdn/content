@@ -1,6 +1,7 @@
 ---
 title: Random Number Generator
 slug: Glossary/RNG
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

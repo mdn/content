@@ -1,6 +1,7 @@
 ---
 title: Loop
 slug: Glossary/Loop
+page-type: glossary-definition
 tags:
   - CodingScripting
   - control flow
