@@ -15,7 +15,7 @@ tags:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
 
-Events are things happen in the system you are programming, which the system tells you about so your code can react to them.
+Events are things that happen in the system you are programming, which the system tells you about so your code can react to them.
 
 For example, if the user clicks a button on a webpage, you might want to react to that action by displaying an information box.
 In this article, we discuss some important concepts surrounding events, and look at how they work in browsers.
