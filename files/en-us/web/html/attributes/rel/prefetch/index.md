@@ -1,5 +1,5 @@
 ---
-title: 'Link types: prefetch'
+title: rel=prefetch
 slug: Web/HTML/Attributes/rel/prefetch
 tags:
   - Attribute

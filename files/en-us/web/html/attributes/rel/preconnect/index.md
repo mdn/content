@@ -1,5 +1,5 @@
 ---
-title: 'Link types: preconnect'
+title: rel=preconnect
 slug: Web/HTML/Attributes/rel/preconnect
 tags:
   - Attribute

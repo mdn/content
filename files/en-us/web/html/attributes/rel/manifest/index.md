@@ -1,5 +1,5 @@
 ---
-title: 'Link types: manifest'
+title: rel=manifest
 slug: Web/HTML/Attributes/rel/manifest
 tags:
   - App

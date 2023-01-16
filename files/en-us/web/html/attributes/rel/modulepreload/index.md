@@ -1,5 +1,5 @@
 ---
-title: 'Link types: modulepreload'
+title: rel=modulepreload
 slug: Web/HTML/Attributes/rel/modulepreload
 tags:
   - Attribute

@@ -1,5 +1,5 @@
 ---
-title: 'Link types: preload'
+title: rel=preload
 slug: Web/HTML/Attributes/rel/preload
 tags:
   - Attribute

@@ -1,5 +1,5 @@
 ---
-title: 'Link types: noopener'
+title: rel=noopener
 slug: Web/HTML/Attributes/rel/noopener
 tags:
   - Attribute

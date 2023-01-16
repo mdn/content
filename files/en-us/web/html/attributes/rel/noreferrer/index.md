@@ -1,5 +1,5 @@
 ---
-title: 'Link types: noreferrer'
+title: rel=noreferrer
 slug: Web/HTML/Attributes/rel/noreferrer
 tags:
   - Attribute

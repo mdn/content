@@ -1,5 +1,5 @@
 ---
-title: 'Link types: prerender'
+title: rel=prerender
 slug: Web/HTML/Attributes/rel/prerender
 tags:
   - Attribute
