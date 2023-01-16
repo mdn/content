@@ -15,7 +15,7 @@ tags:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
 
-Events are actions or occurrences that happen in the system you are programming, which the system tells you about so your code can react to them.
+Events are things happen in the system you are programming, which the system tells you about so your code can react to them.
 
 For example, if the user clicks a button on a webpage, you might want to react to that action by displaying an information box.
 In this article, we discuss some important concepts surrounding events, and look at how they work in browsers.
@@ -67,15 +67,6 @@ Note: Event handlers are sometimes called **event listeners** — they are prett
 The listener listens out for the event happening, and the handler is the code that is run in response to it happening.
 
 > **Note:** Web events are not part of the core JavaScript language — they are defined as part of the APIs built into the browser.
-
-### It's not just web pages
-
-Events are not unique to JavaScript — most programming languages have some kind of event model, and the way the model works often differs from JavaScript's way.
-
-In fact, the event model in JavaScript for web pages differs from the event model for JavaScript as it is used in other environments. For example, [Node.js](/en-US/docs/Learn/Server-side/Express_Nodejs) is a very popular JavaScript runtime that enables developers to use JavaScript to build network and server-side applications.
-The [Node.js event model](https://nodejs.org/docs/latest-v12.x/api/events.html) is quite different from the event model in web pages.
-
-You don't need to understand anything about other such environments at this stage; we just wanted to make it clear that events can differ in different programming environments.
 
 ### An example: handling a click event
 
@@ -634,8 +625,13 @@ All we're doing here is calling `stopPropagation()` on the event object in the h
 
 <div class="hidden">
   <video>
-    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
-    <p>Your browser doesn't support HTML video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+    <source
+      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+      type="video/webm" />
+    <p>
+      Your browser doesn't support HTML video. Here is a
+      <a href="rabbit320.mp4">link to the video</a> instead.
+    </p>
   </video>
 </div>
 ```
@@ -770,6 +766,21 @@ The output is as follows (try clicking around on it):
 > **Note:** In this example, we're using `event.target` to get the element that was the target of the event (that is, the innermost element). If we wanted to access the element that handled this event (in this case the container) we could use `event.currentTarget`.
 
 > **Note:** See [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/useful-eventtarget.html) for the full source code; also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html) here.
+
+## It's not just web pages
+
+Events are not unique to JavaScript — most programming languages have some kind of event model, and the way the model works often differs from JavaScript's way.
+In fact, the event model in JavaScript for web pages differs from the event model for JavaScript as it is used in other environments.
+
+For example, [Node.js](/en-US/docs/Learn/Server-side/Express_Nodejs) is a very popular JavaScript runtime that enables developers to use JavaScript to build network and server-side applications.
+The [Node.js event model](https://nodejs.org/docs/latest-v12.x/api/events.html) relies on listeners to listen for events and emitters to emit events periodically — it doesn't sound that different, but the code is quite different, making use of functions like `on()` to register an event listener, and `once()` to register an event listener that unregisters after it has run once.
+The [HTTP connect event docs](https://nodejs.org/docs/latest-v12.x/api/http.html#http_event_connect) provide a good example.
+
+You can also use JavaScript to build cross-browser add-ons — browser functionality enhancements — using a technology called [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).
+The event model is similar to the web events model, but a bit different — event listeners' properties are camel-cased (such as `onMessage` rather than `onmessage`), and need to be combined with the `addListener` function.
+See the [`runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples) page for an example.
+
+You don't need to understand anything about other such environments at this stage in your learning; we just wanted to make it clear that events can differ in different programming environments.
 
 ## Test your skills!
 
