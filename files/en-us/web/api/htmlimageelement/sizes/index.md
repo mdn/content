@@ -43,7 +43,7 @@ Each source size descriptor consists of a media condition as defined by the medi
 queries standard. Because a source size descriptor is used to specify the width to use
 for the image during layout of the page, the media condition is typically (but not
 necessarily) based entirely on width information. See
-{{SectionOnPage("/en-US/docs/Web/CSS/Media_Queries/Using_media_queries", "Syntax")}} for
+[Using media queries, Syntax](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax) for
 details on how to construct a media condition.
 
 ### Source size values
