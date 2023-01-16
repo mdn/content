@@ -131,14 +131,14 @@ Some regex patterns do not work as you may expect:
   ```
 
   ```js
-  // with `$` in protocol
+  // with `$` in hash
   const pattern = new URLPattern({ hash: '(hash$)' });
   console.log(pattern.test('https://example.com/#hash')); // true
   console.log(pattern.test('xhttps://example.com/#otherhash')); // false
   ```
 
   ```js
-  // without `$` in protocol
+  // without `$` in hash
   const pattern = new URLPattern({ hash: '(hash)' });
   console.log(pattern.test('https://example.com/#hash')); // true
   console.log(pattern.test('xhttps://example.com/#otherhash')); // false

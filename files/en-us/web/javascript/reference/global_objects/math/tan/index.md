@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Math.tan
 
 {{JSRef}}
 
-The **`Math.tan()`** function returns the tangent of a number in radians.
+The **`Math.tan()`** static method returns the tangent of a number in radians.
 
 {{EmbedInteractiveExample("pages/js/math-tan.html")}}
 

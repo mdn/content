@@ -1,6 +1,7 @@
 ---
 title: CardDAV
 slug: Glossary/CardDAV
+page-type: glossary-definition
 tags:
   - CardDAV
   - Infrastructure

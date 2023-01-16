@@ -1,6 +1,7 @@
 ---
-title: mime
-slug: Glossary/mime
+title: MIME
+slug: Glossary/MIME
+page-type: glossary-definition
 tags:
   - Beginner
   - Infrastructure

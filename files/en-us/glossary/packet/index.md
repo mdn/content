@@ -1,6 +1,7 @@
 ---
 title: Packet
 slug: Glossary/Packet
+page-type: glossary-definition
 tags:
   - Network packet
   - Packet

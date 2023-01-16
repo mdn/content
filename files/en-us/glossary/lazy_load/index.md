@@ -1,6 +1,7 @@
 ---
 title: Lazy load
 slug: Glossary/Lazy_load
+page-type: glossary-definition
 tags:
   - Lazy loading
   - Reference

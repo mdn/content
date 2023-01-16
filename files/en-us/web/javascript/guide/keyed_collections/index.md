@@ -93,7 +93,7 @@ module.exports = Public;
 
 ### Set object
 
-{{jsxref("Set")}} objects are collections of values. You can iterate its elements in insertion order. A value in a `Set` may only occur once; it is unique in the `Set`'s collection.
+{{jsxref("Set")}} objects are collections of unique values. You can iterate its elements in insertion order. A value in a `Set` may only occur once; it is unique in the `Set`'s collection.
 
 The following code shows some basic operations with a `Set`. See also the {{jsxref("Set")}} reference page for more examples and the complete API.
 

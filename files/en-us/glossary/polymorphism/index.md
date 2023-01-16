@@ -1,6 +1,7 @@
 ---
 title: Polymorphism
 slug: Glossary/Polymorphism
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

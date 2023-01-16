@@ -1,6 +1,7 @@
 ---
 title: Locale
 slug: Glossary/Locale
+page-type: glossary-definition
 tags:
   - Composing
   - Locale

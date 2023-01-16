@@ -1,6 +1,7 @@
 ---
 title: Fork
 slug: Glossary/Fork
+page-type: glossary-definition
 tags:
   - Fork
   - Tools

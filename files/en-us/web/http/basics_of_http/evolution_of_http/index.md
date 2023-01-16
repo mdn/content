@@ -196,7 +196,7 @@ HTTP's extensibility is still being used to add new features. Notably, we can ci
 
 ## HTTP/3 - HTTP over QUIC
 
-The next major version of HTTP, HTTP/3 has the same semantics as earlier versions of HTTP but uses {{Glossary("QUIC")}} instead of {{Glossary("TCP")}} for the transport layer portion. By October 2022, [26% of all websites were using HTTP/3](https://w3techs.com/technologies/details/ce-http3)).
+The next major version of HTTP, HTTP/3 has the same semantics as earlier versions of HTTP but uses {{Glossary("QUIC")}} instead of {{Glossary("TCP")}} for the transport layer portion. By October 2022, [26% of all websites were using HTTP/3](https://w3techs.com/technologies/details/ce-http3).
 
 QUIC is designed to provide much lower latency for HTTP connections. Like HTTP/2, it is a multiplexed protocol, but HTTP/2 runs over a single TCP connection, so packet loss detection and retransmission handled at the TCP layer can block all streams. QUIC runs multiple streams over {{Glossary("UDP")}} and implements packet loss detection and retransmission independently for each stream, so that if an error occurs, only the stream with data in that packet is blocked.
 

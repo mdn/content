@@ -5395,6 +5395,8 @@
 /en-US/docs/MDC:How_to_Help	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN/About	/en-US/docs/MDN/Writing_guidelines
 /en-US/docs/MDN/At_ten/Contributing_to_MDN	/en-US/docs/MDN/Contribute
+/en-US/docs/MDN/Community/Issues/Issue_triage	/en-US/docs/MDN/Community/Issues
+/en-US/docs/MDN/Community/Users_teams	/en-US/docs/MDN/Community/Roles_teams
 /en-US/docs/MDN/Contribute/Changelog	/en-US/docs/MDN/Changelog
 /en-US/docs/MDN/Contribute/Code_sample_guidelines	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 /en-US/docs/MDN/Contribute/Content	/en-US/docs/MDN/Writing_guidelines
@@ -5467,7 +5469,7 @@
 /en-US/docs/MDN/Contribute/Localize	/en-US/docs/MDN/Community/Contributing/Translated_content
 /en-US/docs/MDN/Contribute/Markdown_in_MDN	/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /en-US/docs/MDN/Contribute/Open_source_etiquette	/en-US/docs/MDN/Community/Open_source_etiquette
-/en-US/docs/MDN/Contribute/Processes/Content_bug_triage	/en-US/docs/MDN/Community/Issues/Issue_triage
+/en-US/docs/MDN/Contribute/Processes/Content_bug_triage	/en-US/docs/MDN/Community/Issues
 /en-US/docs/MDN/Contribute/Processes/Locating_browser-specific_information	https://github.com/mdn/browser-compat-data/blob/main/docs/matching-browser-releases/index.md
 /en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_version	https://github.com/mdn/browser-compat-data/blob/main/docs/matching-browser-releases/index.md
 /en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_versiosn	https://github.com/mdn/browser-compat-data/blob/main/docs/matching-browser-releases/index.md
@@ -7355,8 +7357,6 @@
 /en-US/docs/Web/API/AbstractWorker	/en-US/docs/Web/API/Worker
 /en-US/docs/Web/API/AbstractWorker.onerror	/en-US/docs/Web/API/Worker/error_event
 /en-US/docs/Web/API/AbstractWorker/onerror	/en-US/docs/Web/API/Worker/error_event
-/en-US/docs/Web/API/AesCbcParams	/en-US/docs/Web/API/SubtleCrypto/encrypt
-/en-US/docs/Web/API/AesCtrParams	/en-US/docs/Web/API/SubtleCrypto/encrypt
 /en-US/docs/Web/API/AmbientLightSensor/reading	/en-US/docs/Web/API/AmbientLightSensor/illuminance
 /en-US/docs/Web/API/AmbientLightSensorReading	/en-US/docs/Web/API/AmbientLightSensor
 /en-US/docs/Web/API/AmbientLightSensorReading/AmbientLightSensorReading	/en-US/docs/Web/API/AmbientLightSensor/AmbientLightSensor
@@ -8077,6 +8077,7 @@
 /en-US/docs/Web/API/ElementTraversal.lastElementChild	/en-US/docs/Web/API/Element/lastElementChild
 /en-US/docs/Web/API/ElementTraversal.nextElementSibling	/en-US/docs/Web/API/Element/nextElementSibling
 /en-US/docs/Web/API/ElementTraversal.previousElementSibling	/en-US/docs/Web/API/Element/previousElementSibling
+/en-US/docs/Web/API/Element_Timing_API	/en-US/docs/Web/API/PerformanceElementTiming
 /en-US/docs/Web/API/EncryptedMediaExtensions	/en-US/docs/Web/API/Encrypted_Media_Extensions_API
 /en-US/docs/Web/API/EncryptedMediaExtensions_API	/en-US/docs/Web/API/Encrypted_Media_Extensions_API
 /en-US/docs/Web/API/Entry	/en-US/docs/Web/API/FileSystemEntry
@@ -9464,6 +9465,7 @@
 /en-US/docs/Web/API/RemotePlayback/onconnect	/en-US/docs/Web/API/RemotePlayback/connect_event
 /en-US/docs/Web/API/RemotePlayback/onconnecting	/en-US/docs/Web/API/RemotePlayback/connecting_event
 /en-US/docs/Web/API/RemotePlayback/ondisconnect	/en-US/docs/Web/API/RemotePlayback/disconnect_event
+/en-US/docs/Web/API/ReportingObserverOptions	/en-US/docs/Web/API/ReportingObserver
 /en-US/docs/Web/API/Request/context	/en-US/docs/Web/API/Request/destination
 /en-US/docs/Web/API/RequestDestination	/en-US/docs/Web/API/Request/destination
 /en-US/docs/Web/API/Resource_Timing	/en-US/docs/Web/API/Resource_Timing_API
@@ -9473,7 +9475,6 @@
 /en-US/docs/Web/API/RotationRate.alpha	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
 /en-US/docs/Web/API/RotationRate.beta	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
 /en-US/docs/Web/API/RotationRate.gamma	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
-/en-US/docs/Web/API/RsaOaepParams	/en-US/docs/Web/API/SubtleCrypto/encrypt
 /en-US/docs/Web/API/SVGAElement/SVGAlement.target	/en-US/docs/Web/API/SVGAElement/target
 /en-US/docs/Web/API/SVGAnimatedPoints	/en-US/docs/Web/API/SVGPolygonElement
 /en-US/docs/Web/API/SVGAnimationElement/onbegin	/en-US/docs/Web/API/SVGAnimationElement/beginEvent_event
@@ -9946,6 +9947,7 @@
 /en-US/docs/Web/API/WebRTC_API/Overview	/en-US/docs/Web/API/WebRTC_API#WebRTC_concepts_and_usage
 /en-US/docs/Web/API/WebRTC_API/Taking_still_photos	/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 /en-US/docs/Web/API/WebRTC_API/WebRTC_basics	/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling
+/en-US/docs/Web/API/WebRTC_API/adapter.js	/en-US/docs/Web/API/WebRTC_API#interoperability
 /en-US/docs/Web/API/WebSocket/onclose	/en-US/docs/Web/API/WebSocket/close_event
 /en-US/docs/Web/API/WebSocket/onerror	/en-US/docs/Web/API/WebSocket/error_event
 /en-US/docs/Web/API/WebSocket/onmessage	/en-US/docs/Web/API/WebSocket/message_event
@@ -11181,7 +11183,6 @@
 /en-US/docs/Web/CSS/::-webkit-scrollbar-track-piece	/en-US/docs/Web/CSS/::-webkit-scrollbar
 /en-US/docs/Web/CSS/:@-moz-document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/:any	/en-US/docs/Web/CSS/:is
-/en-US/docs/Web/CSS/:current	/en-US/docs/Web/API/WebVTT_API
 /en-US/docs/Web/CSS/:dir()	/en-US/docs/Web/CSS/:dir
 /en-US/docs/Web/CSS/:host()	/en-US/docs/Web/CSS/:host_function
 /en-US/docs/Web/CSS/:lang()	/en-US/docs/Web/CSS/:lang
@@ -11329,14 +11330,16 @@
 /en-US/docs/Web/CSS/color_value/color_keywords	/en-US/docs/Web/CSS/named-color
 /en-US/docs/Web/CSS/color_value/device-cmyk()	/en-US/docs/Web/CSS/color_value/device-cmyk
 /en-US/docs/Web/CSS/color_value/hsl()	/en-US/docs/Web/CSS/color_value/hsl
-/en-US/docs/Web/CSS/color_value/hsla()	/en-US/docs/Web/CSS/color_value/hsla
+/en-US/docs/Web/CSS/color_value/hsla	/en-US/docs/Web/CSS/color_value/hsl
+/en-US/docs/Web/CSS/color_value/hsla()	/en-US/docs/Web/CSS/color_value/hsl
 /en-US/docs/Web/CSS/color_value/hwb()	/en-US/docs/Web/CSS/color_value/hwb
 /en-US/docs/Web/CSS/color_value/lab()	/en-US/docs/Web/CSS/color_value/lab
 /en-US/docs/Web/CSS/color_value/lch()	/en-US/docs/Web/CSS/color_value/lch
 /en-US/docs/Web/CSS/color_value/oklab()	/en-US/docs/Web/CSS/color_value/oklab
 /en-US/docs/Web/CSS/color_value/oklch()	/en-US/docs/Web/CSS/color_value/oklch
 /en-US/docs/Web/CSS/color_value/rgb()	/en-US/docs/Web/CSS/color_value/rgb
-/en-US/docs/Web/CSS/color_value/rgba()	/en-US/docs/Web/CSS/color_value/rgba
+/en-US/docs/Web/CSS/color_value/rgba	/en-US/docs/Web/CSS/color_value/rgb
+/en-US/docs/Web/CSS/color_value/rgba()	/en-US/docs/Web/CSS/color_value/rgb
 /en-US/docs/Web/CSS/color_value/system-color	/en-US/docs/Web/CSS/system-color
 /en-US/docs/Web/CSS/color_value/system_color_keywords	/en-US/docs/Web/CSS/system-color
 /en-US/docs/Web/CSS/conic-gradient	/en-US/docs/Web/CSS/gradient/conic-gradient

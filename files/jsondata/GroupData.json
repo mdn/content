@@ -902,6 +902,20 @@
       "properties": ["Document.hidden", "Document.visibilityState"],
       "events": ["Document: visibilitychange"]
     },
+    "Payment Handler API": {
+      "overview": ["Payment Handler API"],
+      "interfaces": [
+        "CanMakePaymentEvent",
+        "PaymentManager",
+        "PaymentRequestEvent"
+      ],
+      "methods": [],
+      "properties": ["ServiceWorkerRegistration.paymentManager"],
+      "events": [
+        "ServiceWorkerGlobalScope: canmakepayment",
+        "ServiceWorkerGlobalScope: paymentrequest"
+      ]
+    },
     "Payment Request API": {
       "overview": ["Payment Request API"],
       "guides": [
@@ -943,8 +957,7 @@
         "/docs/Web/API/Resource_Timing_API",
         "/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API",
         "/docs/Web/API/User_timing_API",
-        "/docs/Web/API/User_timing_API/Using_the_User_Timing_API",
-        "/docs/Web/API/Element_timing_API"
+        "/docs/Web/API/User_timing_API/Using_the_User_Timing_API"
       ],
       "interfaces": [
         "EventCounts",
@@ -1096,10 +1109,10 @@
       ]
     },
     "Reporting API": {
-      "overview": ["Reporting_API"],
+      "overview": ["Reporting API"],
       "guides": [],
       "interfaces": [
-        "CrashReportBody",
+        "CSPViolationReportBody",
         "DeprecationReportBody",
         "InterventionReportBody",
         "Report",
@@ -1520,6 +1533,13 @@
       "overview": ["Vibration API"],
       "interfaces": [],
       "methods": ["Navigator.vibrate()"],
+      "properties": [],
+      "events": []
+    },
+    "VirtualKeyboard API": {
+      "overview": ["VirtualKeyboard API"],
+      "interfaces": ["VirtualKeyboard"],
+      "methods": [],
       "properties": [],
       "events": []
     },
@@ -2060,7 +2080,8 @@
       "guides": [
         "/docs/Web/API/Web_Workers_API/Using_web_workers",
         "/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers",
-        "/docs/Web/API/Web_Workers_API/Structured_clone_algorithm"
+        "/docs/Web/API/Web_Workers_API/Structured_clone_algorithm",
+        "/docs/Web/API/Web_Workers_API/Transferable_objects"
       ],
       "interfaces": [
         "DedicatedWorkerGlobalScope",

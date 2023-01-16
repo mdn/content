@@ -1,6 +1,7 @@
 ---
 title: Interpolation
 slug: Glossary/Interpolation
+page-type: glossary-definition
 tags:
   - Animation
   - Gradient

@@ -1,6 +1,7 @@
 ---
 title: Prefetch
 slug: Glossary/Prefetch
+page-type: glossary-definition
 tags:
   - Prefetch
   - Reference

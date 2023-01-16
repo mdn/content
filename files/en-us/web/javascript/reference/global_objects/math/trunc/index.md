@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Math.trunc
 
 {{JSRef}}
 
-The **`Math.trunc()`** function returns the integer part of a number by removing any fractional digits.
+The **`Math.trunc()`** static method returns the integer part of a number by removing any fractional digits.
 
 {{EmbedInteractiveExample("pages/js/math-trunc.html")}}
 

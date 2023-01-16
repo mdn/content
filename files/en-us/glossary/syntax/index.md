@@ -1,6 +1,7 @@
 ---
 title: Syntax
 slug: Glossary/Syntax
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Syntax

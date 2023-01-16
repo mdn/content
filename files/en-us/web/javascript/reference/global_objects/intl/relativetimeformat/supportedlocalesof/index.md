@@ -16,7 +16,7 @@ browser-compat: javascript.builtins.Intl.RelativeTimeFormat.supportedLocalesOf
 
 {{JSRef}}
 
-The **`Intl.RelativeTimeFormat.supportedLocalesOf()`** method returns an array containing those of the provided locales that are supported in date and time formatting without having to fall back to the runtime's default locale.
+The **`Intl.RelativeTimeFormat.supportedLocalesOf()`** static method returns an array containing those of the provided locales that are supported in date and time formatting without having to fall back to the runtime's default locale.
 
 {{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-supportedlocalesof.html","shorter")}}
 
