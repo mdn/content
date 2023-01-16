@@ -1,6 +1,7 @@
 ---
 title: Graceful degradation
 slug: Glossary/Graceful_degradation
+page-type: glossary-definition
 tags:
   - Design
   - graceful degradation

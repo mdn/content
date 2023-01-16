@@ -1,6 +1,7 @@
 ---
 title: Privileged
 slug: Glossary/Privileged
+page-type: glossary-definition
 tags:
   - Security
 ---

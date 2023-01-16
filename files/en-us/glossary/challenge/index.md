@@ -1,6 +1,7 @@
 ---
 title: Challenge-response authentication
 slug: Glossary/Challenge
+page-type: glossary-definition
 tags:
   - Security
 ---

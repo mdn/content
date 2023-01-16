@@ -1,6 +1,7 @@
 ---
 title: NaN
 slug: Glossary/NaN
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Computing

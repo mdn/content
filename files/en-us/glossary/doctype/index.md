@@ -1,6 +1,7 @@
 ---
 title: Doctype
 slug: Glossary/Doctype
+page-type: glossary-definition
 tags:
   - Browser
   - CodingScripting

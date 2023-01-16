@@ -1,6 +1,7 @@
 ---
 title: CRLF
 slug: Glossary/CRLF
+page-type: glossary-definition
 tags:
   - CR
   - CRLF

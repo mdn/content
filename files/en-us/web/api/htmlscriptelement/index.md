@@ -150,4 +150,3 @@ Classic scripts are assumed to be supported on all browsers.
 - HTML {{HTMLElement("noscript")}} element
 - {{domxref("document.currentScript")}}
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) (code snippets similar to scripts but executed in [another global context](/en-US/docs/Web/API/DedicatedWorkerGlobalScope))
-- [Ryan Grove's \<script> and \<link> node event compatibility chart](https://pie.gd/test/script-link-events/)

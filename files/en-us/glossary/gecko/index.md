@@ -1,6 +1,7 @@
 ---
 title: Gecko
 slug: Glossary/Gecko
+page-type: glossary-definition
 tags:
   - Firefox OS
   - Gecko
