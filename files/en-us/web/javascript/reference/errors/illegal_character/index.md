@@ -31,7 +31,7 @@ SyntaxError: Invalid or unexpected token (Chrome)
 There is an invalid or unexpected token that doesn't belong at this position in the
 code. Use an editor that supports syntax highlighting and carefully check your code
 against mismatches like a minus sign (`-`) versus a dash (`–`)
-or simple quotes (`"`) vs non-standard quotation marks (`"`).
+or simple quotes (`"`) versus non-standard quotation marks (`"`).
 
 ## Examples
 

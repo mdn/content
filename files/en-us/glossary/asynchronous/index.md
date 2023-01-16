@@ -1,6 +1,7 @@
 ---
 title: Asynchronous
 slug: Glossary/Asynchronous
+page-type: glossary-definition
 tags:
   - Web
   - WebMechanics

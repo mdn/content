@@ -1,6 +1,7 @@
 ---
 title: Promise
 slug: Glossary/Promise
+page-type: glossary-definition
 tags:
   - Promise
   - Promises

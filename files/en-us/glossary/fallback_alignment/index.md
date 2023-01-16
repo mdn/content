@@ -1,6 +1,7 @@
 ---
 title: Fallback alignment
 slug: Glossary/Fallback_Alignment
+page-type: glossary-definition
 tags:
   - CSS
   - alignment

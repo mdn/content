@@ -1,6 +1,7 @@
 ---
 title: Local scope
 slug: Glossary/Local_scope
+page-type: glossary-definition
 tags:
   - CodingScripting
   - NeedsContent

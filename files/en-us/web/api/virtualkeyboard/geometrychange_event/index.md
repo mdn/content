@@ -38,7 +38,7 @@ A generic {{domxref("Event")}}.
 The following code snippet uses the `geometrychange` event to detect when the virtual keyboard geometry changes, and then accesses the {{domxref("VirtualKeyboard.boundingRect", "boundingRect")}} property to query the size and position of the virtual keyboard:
 
 ```js
-if("virtualKeyboard" in navigator) {
+if ("virtualKeyboard" in navigator) {
   navigator.overlaysContent = true;
 
   navigator.virtualKeyboard.addEventListener("geometrychange", event => {

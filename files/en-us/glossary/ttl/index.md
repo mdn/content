@@ -1,6 +1,7 @@
 ---
 title: TTL
 slug: Glossary/TTL
+page-type: glossary-definition
 tags:
   - Caching
   - Domain Name System

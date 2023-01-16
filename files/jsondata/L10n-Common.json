@@ -105,7 +105,7 @@
     "ja": "[ページがまだ書かれていません]",
     "pt-BR": "[Página ainda não foi escrita]",
     "zh-CN": "[页面尚未撰写]",
-    "zh-TW": "[页面尚未撰写]"
+    "zh-TW": "[頁面尚未被撰寫]"
   },
   "Properties": {
     "en-US": "Properties",
@@ -135,7 +135,7 @@
     "pt-BR": "Páginas relacionadas a $1",
     "ru": "Похожие страницы для $1",
     "zh-CN": "$1 的相关页面",
-    "zh-TW": "$ 的相關頁面"
+    "zh-TW": "$1 的相關頁面"
   },
   "Related_pages_wo_group": {
     "en-US": "Related pages:",
@@ -191,7 +191,8 @@
     "fr": "Tutoriel",
     "ja": "チュートリアル",
     "ru": "Руководство",
-    "zh-CN": "教程"
+    "zh-CN": "教程",
+    "zh-TW": "教學"
   },
   "listSeparator": {
     "en-US": ", ",
@@ -219,6 +220,6 @@
     "pt-BR": "A documentação sobre isto ainda não foi escrita; por favor considere contribuir!",
     "ru": "Документация об этом ещё не написана; пожалуйста, поспособствуйте её написанию!",
     "zh-CN": "此文档尚未被撰写，期待你的贡献！",
-    "zh-TW": "此文檔尚未被撰寫，期待你的貢獻！"
+    "zh-TW": "此說明文件尚未被撰寫，期待你的貢獻！"
   }
 }

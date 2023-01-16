@@ -181,7 +181,7 @@ Several features can be controlled at the same time by sending the header with a
 For example, the following are equivalent:
 
 ```http
-Permissions-Policy: picture-in-picture=(), geolocation=(self https://example.com), camera=*;
+Permissions-Policy: picture-in-picture=(), geolocation=(self https://example.com), camera=*
 
 Permissions-Policy: picture-in-picture=()
 Permissions-Policy: geolocation=(self https://example.com)

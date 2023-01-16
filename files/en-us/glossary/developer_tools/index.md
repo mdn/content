@@ -1,6 +1,7 @@
 ---
 title: Developer Tools
 slug: Glossary/Developer_Tools
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Developer Tools

@@ -1,6 +1,7 @@
 ---
 title: Forbidden response header name
 slug: Glossary/Forbidden_response_header_name
+page-type: glossary-definition
 tags:
   - HTTP
   - Response
