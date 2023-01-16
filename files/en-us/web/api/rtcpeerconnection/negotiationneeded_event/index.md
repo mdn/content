@@ -76,7 +76,7 @@ pc.onnegotiationneeded = (ev) => {
 };
 ```
 
-For a more detailed example, see the [Starting negotiation](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling#starting_negotiation) section.
+For a more detailed example, see [Starting negotiation](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling#starting_negotiation).
 
 ## Specifications
 

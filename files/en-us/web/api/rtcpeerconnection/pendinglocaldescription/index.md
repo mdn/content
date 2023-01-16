@@ -25,7 +25,7 @@ currently stands, but as it may exist in the near future. Use
 {{domxref("RTCPeerConnection.currentLocalDescription")}} or
 {{domxref("RTCPeerConnection.localDescription")}} to get the current state of the
 endpoint. For details on the difference, see
-the [Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) section.
+[Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) in the WebRTC Connectivity page.
 
 ## Value
 

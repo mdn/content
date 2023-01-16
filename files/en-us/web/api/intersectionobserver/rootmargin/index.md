@@ -25,7 +25,7 @@ outward so that the target element is considered 100% visible even if a certain 
 of pixels worth of width or height is clipped away, or treat the target as partially
 hidden if an edge is too close to the edge of the root's bounding box.
 
-See [how intersection is calculated](/en-US/docs/Web/API/Intersection_Observer_API#how_intersection_is_calculated)
+See [how intersections are calculated](/en-US/docs/Web/API/Intersection_Observer_API#how_intersection_is_calculated)
 for a more in-depth look at the root margin and how it works with
 the root's bounding box.
 
@@ -43,7 +43,7 @@ the values
 If `rootMargin` isn't specified when the object was instantiated, it
 defaults to the string `"0px 0px 0px 0px"`, meaning that the intersection
 will be computed between the root element's unmodified bounds rectangle and the target's
-bounds. [How intersection is calculated](/en-US/docs/Web/API/Intersection_Observer_API#how_intersection_is_calculated)
+bounds. [How intersections are calculated](/en-US/docs/Web/API/Intersection_Observer_API#how_intersection_is_calculated)
 describes how the `rootMargin` is used in more detail.
 
 ## Specifications

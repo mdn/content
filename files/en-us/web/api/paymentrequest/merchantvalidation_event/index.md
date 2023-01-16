@@ -83,7 +83,7 @@ request.onmerchantvalidation = (event) => {
 const response = await request.show();
 ```
 
-For more information, see [Payment processing concepts, Merchant validation](/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation).
+For more information, see [Merchant validation](/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation).
 
 ## Browser compatibility
 
@@ -94,7 +94,7 @@ For more information, see [Payment processing concepts, Merchant validation](/en
 - [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - `onmerchantvalidation` event handler property
-- [Payment processing concepts, Merchant validation](/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation)
+- [Merchant validation](/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation)
 - {{domxref("PaymentRequest")}}
 - {{domxref("PaymentRequest.payerdetailchange_event", "payerdetailchange")}} event
 - {{domxref("PaymentRequest.paymentmethodchange_event", "paymentmethodchange")}} event

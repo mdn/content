@@ -34,7 +34,7 @@ On a more fundamental level, the returned value is the value of
 {{domxref("RTCPeerConnection.pendingRemoteDescription")}} if that property isn't
 `null`; otherwise, the value of
 {{domxref("RTCPeerConnection.currentRemoteDescription")}} is returned. See
-the [Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) section for details on this algorithm and why it's used.
+[Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) in the WebRTC Connectivity page for details on this algorithm and why it's used.
 
 ## Example
 

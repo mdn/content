@@ -42,7 +42,7 @@ function intersectionCallback(entries) {
 ```
 
 To see a more concrete example, take a look at
-the [Handling intersection changes](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility#handling_intersection_changes) section.
+[Handling intersection changes](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility#handling_intersection_changes).
 
 ## Specifications
 
