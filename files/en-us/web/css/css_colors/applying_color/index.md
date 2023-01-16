@@ -96,7 +96,7 @@ For more detailed discussion of each of the color value types, see the reference
 
 A set of standard color names have been defined, letting you use these keywords instead of numeric representations of colors if you choose to do so and there's a keyword representing the exact color you want to use. Color keywords include the standard primary and secondary colors (such as `red`, `blue`, or `orange`), shades of gray (from `black` to `white`, including colors like `darkgray` and `lightgrey`), and a variety of other blended colors including `lightseagreen`, `cornflowerblue`, and `rebeccapurple`.
 
-See [Color syntax](/en-US/docs/Web/CSS/color_value#syntax) for a list of all available color keywords.
+See [Named colors](/en-US/docs/Web/CSS/named-color) for more information on color keywords.
 
 ### RGB values
 
