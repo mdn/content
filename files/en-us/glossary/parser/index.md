@@ -1,6 +1,7 @@
 ---
 title: Parser
 slug: Glossary/Parser
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

@@ -1,6 +1,7 @@
 ---
 title: Telnet
 slug: Glossary/Telnet
+page-type: glossary-definition
 tags:
   - Infrastructure
 ---

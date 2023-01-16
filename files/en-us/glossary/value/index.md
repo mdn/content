@@ -1,6 +1,7 @@
 ---
 title: Value
 slug: Glossary/Value
+page-type: glossary-definition
 tags:
   - CodingScripting
   - NeedsContent

@@ -75,7 +75,7 @@ In the following examples I am working with {{CSSxRef("flex-direction")}} set to
 
 The {{CSSxRef("flex-basis")}} property specifies the initial size of the flex item before any space distribution happens. The initial value for this property is `auto`. If `flex-basis` is set to `auto` then to work out the initial size of the item the browser first checks if the main size of the item has an absolute size set. This would be the case if you had given your item a width of 200 pixels. In that case `200px` would be the `flex-basis` for this item.
 
-If your item is instead auto-sized, then `auto` resolves to the size of its content. At this point your knowledge of `min-` and `max-content` sizing becomes useful, as flexbox will take the `min-content` size of the item as the `flex-basis`. The following live example can help to demonstrate this.
+If your item is instead auto-sized, then `auto` resolves to the size of its content. At this point your knowledge of `min-` and `max-content` sizing becomes useful, as flexbox will take the `max-content` size of the item as the `flex-basis`. The following live example can help to demonstrate this.
 
 In this example I have created a series of inflexible boxes, with both `flex-grow` and `flex-shrink` set to `0`. Here we can see how the first item — which has an explicit width of 150 pixels set as the main size — takes a `flex-basis` of `150px`, whereas the other two items have no width and so are sized according to their content width.
 

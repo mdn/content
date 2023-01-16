@@ -131,14 +131,11 @@ function App(props) {
           <span className="visually-hidden"> tasks</span>
         </button>
       </div>
-      <h2 id="list-heading">
-        3 tasks remaining
-      </h2>
+      <h2 id="list-heading">3 tasks remaining</h2>
       <ul
         role="list"
         className="todo-list stack-large stack-exception"
-        aria-labelledby="list-heading"
-      >
+        aria-labelledby="list-heading">
         <li className="todo stack-small">
           <div className="c-cb">
             <input id="todo-0" type="checkbox" defaultChecked={true} />
@@ -234,7 +231,9 @@ Further down, you can find our [`<ul>`](/en-US/docs/Web/HTML/Element/ul) element
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
-  aria-labelledby="list-heading">…</ul>
+  aria-labelledby="list-heading">
+  …
+</ul>
 ```
 
 The `role` attribute helps assistive technology explain what kind of element a tag represents. A `<ul>` is treated like a list by default, but the styles we're about to add will break that functionality. This role will restore the "list" meaning to the `<ul>` element. If you want to learn more about why this is necessary, you can check out [Scott O'Hara's article, "Fixing Lists"](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html).
@@ -465,10 +464,6 @@ body {
   [class*="__lg"] {
     font-size: 2.4rem;
   }
-}
-.filters {
-  width: 100%;
-  margin: unset auto;
 }
 /* Todo item styles */
 .todo {

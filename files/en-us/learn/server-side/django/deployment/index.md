@@ -50,7 +50,7 @@ The production environment is the environment provided by the server computer wh
 - Operating system (e.g. Linux, Windows).
 - Programming language runtime and framework libraries on top of which your website is written.
 - Web server used to serve pages and other content (e.g. Nginx, Apache).
-- Application server that passes "dynamic" requests between your Django website and the webserver.
+- Application server that passes "dynamic" requests between your Django website and the web server.
 - Databases on which your website is dependent.
 
 > **Note:** Depending on how your production environment is configured you might also have a reverse proxy, load balancer, and so on.
@@ -66,7 +66,7 @@ That makes deployment quite easy, because you just need to concentrate on your w
 
 Some developers will choose the increased flexibility provided by IaaS over PaaS, while others will appreciate the reduced maintenance overhead and easier scaling of PaaS. When you're getting started, setting up your website on a PaaS system is much easier, and so that is what we'll do in this tutorial.
 
-> **Note:** If you choose a Python/Django-friendly hosting provider they should provide instructions on how to set up a Django website using different configurations of webserver, application server, reverse proxy, and so on. (this won't be relevant if you choose a PaaS). For example, there are many step-by-step guides for various configurations in the [Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django).
+> **Note:** If you choose a Python/Django-friendly hosting provider they should provide instructions on how to set up a Django website using different configurations of web server, application server, reverse proxy, and so on. (this won't be relevant if you choose a PaaS). For example, there are many step-by-step guides for various configurations in the [Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django).
 
 ## Choosing a hosting provider
 
@@ -200,7 +200,7 @@ For example, an application that uses a database can get the address using the v
 The database service itself may be hosted by Railway or some other provider.
 
 Developers interact with Railway through the Railway site, and using a special [Command Line Interface (CLI)](https://docs.railway.app/develop/cli) tool.
-The CLI allows you to associate a local Github repository with a railway project, upload the repository from the local branch to the live site, inspect the logs of the running process, set and get configuration variables and much more.
+The CLI allows you to associate a local GitHub repository with a railway project, upload the repository from the local branch to the live site, inspect the logs of the running process, set and get configuration variables and much more.
 One of the most useful features is that you can use the CLI to run your local project with the same environment variables as the live project.
 
 In order to get our application to work on Railway, we'll need to put our Django web application into a git repository, add the files above, integrate with a database add-on, and make changes to properly handle static files.
@@ -210,11 +210,11 @@ That's all the overview you need in order to get started.
 
 ### Creating an application repository in GitHub
 
-Railway is closely integrated with Github and the **git** source code version control system, and you can configure it to automatically deploy changes to a particular repository or branch on Github.
+Railway is closely integrated with GitHub and the **git** source code version control system, and you can configure it to automatically deploy changes to a particular repository or branch on GitHub.
 Alternatively you can push your current local code branch direct to the railway deployment using the CLI.
 
-> **Note:** Using a source code management system like Github is good software development practice.
-> Skip this step if you're already using Github to manage your source.
+> **Note:** Using a source code management system like GitHub is good software development practice.
+> Skip this step if you're already using GitHub to manage your source.
 
 There are a lot of ways to work with git, but one of the easiest is to first set up an account on [GitHub](https://github.com/), create the repository there, and then sync to it locally:
 
@@ -545,24 +545,24 @@ We should now be ready to start deploying LocalLibrary on Railway.
 To start using Railway you will first need to create an account:
 
 - Go to [railway.app](https://railway.app/) and click the **Login** link in the top toolbar.
-- Select Github in the popup to login using your Github credentials
+- Select GitHub in the popup to login using your GitHub credentials
 - You may then need to go to your email and verify your account.
 - You'll then be logged in to the Railway.app dashboard: <https://railway.app/dashboard>.
 
-### Deploy on Railway from Github
+### Deploy on Railway from GitHub
 
-Next we'll setup Railway to deploy our library from Github.
+Next we'll set up Railway to deploy our library from GitHub.
 First choose the **Dashboard** option from the site top menu, then select the **New Project** button:
 
 ![Railway website dashboard with new project button](railway_new_project_button.png)
 
-Railway will display a list of options for the new project, including the option to deploy a project from a template that is first created in your Github account, and a number of databases.
+Railway will display a list of options for the new project, including the option to deploy a project from a template that is first created in your GitHub account, and a number of databases.
 Select **Deploy from GitHub repo**.
 
 ![Railway website screen - deploy](railway_new_project_button_deploy_github_repo.png)
 
-All projects in the Github repos you shared with Railway during setup are displayed.
-Select your Github repository for the local library: `<user-name>/django-locallibrary-tutorial`.
+All projects in the GitHub repos you shared with Railway during setup are displayed.
+Select your GitHub repository for the local library: `<user-name>/django-locallibrary-tutorial`.
 
 ![Railway website screen showing a dialog to choose an existing GitHub repository or choose a new one](railway_new_project_button_deploy_github_selectrepo.png)
 
@@ -587,7 +587,7 @@ This is a Django security error that is raised because our source code is not ru
 > **Note:** This kind of debug information is very useful when you're getting set up, but is a security risk in a deployed site.
 > We'll show you how to disable it once the site is up and running.
 
-Open **/locallibrary/settings.py** in your Github project and change the [ALLOWED_HOSTS](https://docs.djangoproject.com/en/4.0/ref/settings/#allowed-hosts) setting to include your Railway site URL:
+Open **/locallibrary/settings.py** in your GitHub project and change the [ALLOWED_HOSTS](https://docs.djangoproject.com/en/4.0/ref/settings/#allowed-hosts) setting to include your Railway site URL:
 
 ```python
 ## For example, for a site URL at 'web-production-3640.up.railway.app'
@@ -623,7 +623,7 @@ git push origin main
 
 Next we need to create a Postgres database and connect it to the Django application that we just deployed.
 (If you open the site now you'll get a new error because the database cannot be accessed).
-We will create the database as part of the application project, although you there is nothing to stop you creating in its own separate project.
+We will create the database as part of the application project, although you can create the database in its own separate project.
 
 On Railway, choose the **Dashboard** option from the site top menu and then select your application project.
 At this stage it just contains a single service for your application (this can be selected to set variables and other details of the service).
@@ -669,8 +669,8 @@ We'll do that using the [CLI](https://docs.railway.app/develop/cli) tool on our 
 
 Download and install the Railway client for your local operating system by following the [instructions here](https://docs.railway.app/develop/cli).
 
-After the client is installed you will be able run commands.
-Some of the more important operations include deploying the current directory of your computer to an associated Railway project (without having to upload to github), and running your Django project locally using the same settings as you have on the production server.
+After the client is installed you will be able to run commands.
+Some of the more important operations include deploying the current directory of your computer to an associated Railway project (without having to upload to GitHub), and running your Django project locally using the same settings as you have on the production server.
 We show these in the next sections.
 
 You can get a list of all the possible commands by entering the following in a terminal.

@@ -1,6 +1,7 @@
 ---
 title: RAIL
 slug: Glossary/RAIL
+page-type: glossary-definition
 tags:
   - RAIL
   - Timings

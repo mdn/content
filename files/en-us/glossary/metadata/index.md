@@ -1,6 +1,7 @@
 ---
 title: Metadata
 slug: Glossary/Metadata
+page-type: glossary-definition
 tags:
   - CodingScripting
   - HTML

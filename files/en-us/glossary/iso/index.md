@@ -1,6 +1,7 @@
 ---
 title: ISO
 slug: Glossary/ISO
+page-type: glossary-definition
 tags:
   - ISO
   - Infrastructure
