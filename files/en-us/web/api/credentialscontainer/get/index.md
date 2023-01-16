@@ -17,8 +17,7 @@ browser-compat: api.CredentialsContainer.get
 
 The **`get()`** method of the
 {{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} to a
-single {{domxref("Credential")}} instance that matches the provided parameters. If no
-match is found the Promise will resolve to null.
+single {{domxref("Credential")}} instance that matches the provided parameters.
 
 This method first collects all credentials in the {{domxref("CredentialsContainer")}}
 that meet the necessary criteria (defined in the **`options`**
@@ -26,13 +25,7 @@ argument). From the resulting set of credentials, it then selects the best one.
 Depending on the options, it may display a dialog to the user and ask the user to make
 the selection.
 
-This method collects credentials by calling the "CollectFromCredentialStore" method for
-each credential type allowed by the **`options`** argument. For
-example: if options.password exists, then the
-{{domxref("PasswordCredential")}}.\[\[CollectFromCredentialStore]] is called.
-
-> **Note:** This method is restricted to top-level contexts. Calls to it within an
-> `<iframe>` element will resolve without effect.
+> **Note:** Usage of this feature may be blocked by an {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} or {{HTTPHeader("Permissions-Policy/publickey-credentials-get","publickey-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 
 ## Syntax
 
@@ -45,7 +38,7 @@ get(options)
 
 - `options` {{optional_inline}}
 
-  - : An object of type {{domxref("CredentialRequestOptions")}} that contains options for
+  - : An object that contains options for
     the request. The options include criteria that the credentials are required or allowed
     to have, and options for interacting with the user. It can contain the following
     properties:
@@ -106,13 +99,17 @@ get(options)
 ### Return value
 
 A {{jsxref("Promise")}} that resolves with a {{domxref("Credential")}} instance that
-matches the provided parameters. If a single Credential cannot be unambiguously
-obtained, the Promise will resolve to null.
+matches the provided parameters. If a single credential cannot be unambiguously
+obtained, the Promise will resolve to `null`.
 
 ### Exceptions
 
+- `NetworkError` {{domxref("DOMException")}}
+  - : In the case of a `get()` call with an `identity` option, this exception is thrown if the IdP does not respond within 60 seconds, or if the provided credentials are not valid/found.
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Use of this feature was blocked by an {{HTTPHeader("Permissions-Policy/identity-credentials-get","identity-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 - `SecurityError` {{domxref("DOMException")}}
-  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+  - : Use of this feature was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-get","publickey-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ## Examples
 
@@ -146,5 +143,7 @@ Check out [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedC
 
 ## See also
 
-- {{HTTPHeader("Permissions-Policy")}} directive
-  {{HTTPHeader("Permissions-Policy/publickey-credentials-get","publickey-credentials-get")}}
+- [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API)
+- {{HTTPHeader("Permissions-Policy")}} directives:
+  - {{HTTPHeader("Permissions-Policy/identity-credentials-get","identity-credentials-get")}}
+  - {{HTTPHeader("Permissions-Policy/publickey-credentials-get","publickey-credentials-get")}}

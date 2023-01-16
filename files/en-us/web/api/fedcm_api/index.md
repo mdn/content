@@ -260,20 +260,20 @@ When the flow is complete, the RP validates the validation token. If validation 
 
 The {{domxref("IdentityCredential")}} object obtained from a successful FedCM sign-in provides access to the token used to validate the sign-in (see {{domxref("IdentityCredential.token")}}).
 
-## IFrame support
+## Permissions Policy integration and IFrame support
 
-FedCM is usable from within {{htmlelement("iframe")}}s, enabling a couple of use cases:
+The {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Permissions_Policy) can be used to control permission to use FedCM, more specifically usage of the {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} method.
 
-- Larger sites won't want a third-party sign-in script to gain control over the top-level frame; instead they will want to add that script and invoke FedCM from within an {{htmlelement("iframe")}}.
-- Some `<iframes>` may themselves require federated sign-in.
-
-The {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Permissions_Policy) can be used to control Permission to use FedCM, more specifically usage of the {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} method.
-
-A developer can explicitly grant permission for an `<iframe>` to use FedCM via the `allow` attribute:
+Developers can explicitly grant permission for an {{htmlelement("iframe")}} to use FedCM via the `allow` attribute:
 
 ```html
 <iframe src="3rd-party.example" allow="identity-credentials-get"></iframe> 
 ```
+
+The availability of FedCM within `<iframe>`s enables a couple of use cases:
+
+- Larger sites won't want a third-party sign-in script to gain control over the top-level frame; instead they will want to add that script and invoke FedCM from within an {{htmlelement("iframe")}}.
+- Some `<iframes>` may themselves require federated sign-in.
 
 ## Interfaces
 
