@@ -21,7 +21,16 @@ You typically call this function from a `webRequest` event listener.
 
 Firefox uses an optimized byte cache for script requests. This optimized byte cache overrides the normal request caching. Data from this cache is not available in a form useful to extensions. If your extension needs to filter scripts, create your filter in {{WebExtAPIRef("webRequest.onBeforeRequest")}}. Doing this ensures that the filter is created prior to the attempt to load from cache, thereby avoiding the optimized cache.
 
-To use this API you must have the `"webRequestBlocking"` [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions), as well as the normal permissions needed for the event listener (the `"webRequest"` permission and the [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the host).
+## Permissions
+
+Prior to Firefox 110, to use this API, you must have the `"webRequestBlocking"` [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
+
+From Firefox 110, to use this API:
+
+- In a Manifest V3 extension, you must have the `"webRequestBlocking"`, `"webRequestfilterResponse"`, and `"webRequestFilterResponse.serviceWorkerScript"` API permissions.
+- In a Manifest V2 extension, you must have the `"webRequestBlocking"` API permission. `"webRequestfilterResponse"` and `"webRequestFilterResponse.serviceWorkerScript"` permissions can be provided but are ignored.
+
+Extensions must also have the permissions needed for the event listener (the `"webRequest"` permission and the [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the host).
 
 ## Syntax
 
