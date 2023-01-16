@@ -6,6 +6,7 @@ tags:
   - Status code
   - Reported
 browser-compat: http.status.208
+spec-url: https://www.rfc-editor.org/rfc/rfc5842.html#section-7.1
 ---
 
 {{HTTPSidebar}}
