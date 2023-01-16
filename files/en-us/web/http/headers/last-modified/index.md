@@ -18,6 +18,8 @@ than an {{HTTPHeader("ETag")}} header, it is a fallback mechanism. Conditional r
 containing {{HTTPHeader("If-Modified-Since")}} or {{HTTPHeader("If-Unmodified-Since")}}
 headers make use of this field.
 
+Header **`Last-Modified`** is also used by [crawlers](/en-US/docs/Glossary/Crawler) to adjust crawl frequency, by browsers in [heuristic caching](/en-US/docs/Web/HTTP/Caching#heuristic_caching) and by content-management (CMS) systems to display the last-modified time.
+
 <table class="properties">
   <tbody>
     <tr>
