@@ -3919,7 +3919,7 @@
 /en-US/docs/HTML/Intro	/en-US/docs/Learn/HTML/Introduction_to_HTML
 /en-US/docs/HTML/Introduction	/en-US/docs/Learn/HTML/Introduction_to_HTML
 /en-US/docs/HTML/Introduction_to_HTML5	/en-US/docs/Learn/HTML
-/en-US/docs/HTML/Link_types	/en-US/docs/Web/HTML/Link_types
+/en-US/docs/HTML/Link_types	/en-US/docs/Web/HTML/Attributes/rel
 /en-US/docs/HTML/Manipulating_video_using_canvas	/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
 /en-US/docs/HTML/Optimizing_Your_Pages_for_Speculative_Parsing	/en-US/docs/Glossary/speculative_parsing
 /en-US/docs/HTML/Supported_media_formats	/en-US/docs/Web/Media/Formats
@@ -11987,6 +11987,7 @@
 /en-US/docs/Web/HTML/Inline_elmements	/en-US/docs/Web/HTML/Inline_elements
 /en-US/docs/Web/HTML/Introduction	/en-US/docs/Learn/HTML/Introduction_to_HTML
 /en-US/docs/Web/HTML/Kinds_of_HTML_content	/en-US/docs/Web/HTML/Content_categories
+/en-US/docs/Web/HTML/Link_types	/en-US/docs/Web/HTML/Attributes/rel
 /en-US/docs/Web/HTML/Link_types/Link_types:_noopener	/en-US/docs/Web/HTML/Attributes/rel/noopener
 /en-US/docs/Web/HTML/Link_types/dns-prefetch	/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch
 /en-US/docs/Web/HTML/Link_types/manifest	/en-US/docs/Web/HTML/Attributes/rel/manifest
