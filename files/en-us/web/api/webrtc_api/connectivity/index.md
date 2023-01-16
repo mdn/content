@@ -129,7 +129,7 @@ In addition, the ICE agent will automatically initiate a rollback when a peer th
 
 ### ICE restarts
 
-For now, see {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Session_lifetime", "ICE restart")}}.
+Learn about the [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart) process.
 
 ## The entire exchange in a complicated diagram
 
