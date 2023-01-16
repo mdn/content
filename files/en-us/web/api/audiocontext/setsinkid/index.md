@@ -51,7 +51,7 @@ Attempting to set the sink ID to its existing value (i.e. returned by {{domxref(
 
 ## Examples
 
-In our [SetSinkId test example](https://set-sink-id.glitch.me/) (check out the [source code](https://glitch.com/edit/#!/set-sink-id)), we create a simple audio graph that generates a three-second burst of white noise via an {{domxref("AudioBufferSourceNode")}}, which we also run through a {{domxref("GainNode")}} to quiet things down a bit.
+In our [SetSinkId test example](https://set-sink-id.glitch.me/) (check out the [source code](https://glitch.com/edit/#!/set-sink-id)), we create an audio graph that generates a three-second burst of white noise via an {{domxref("AudioBufferSourceNode")}}, which we also run through a {{domxref("GainNode")}} to quiet things down a bit.
 
 We also provide the user with a dropdown menu to allow them to change the audio output device on the fly. To do this, we:
 

@@ -30,7 +30,7 @@ This property returns one of three values, depending on how the sink ID was set:
 
 ## Examples
 
-In our [SetSinkId test example](https://set-sink-id.glitch.me/), we create a simple audio graph that generates a three-second burst of white noise via an {{domxref("AudioBufferSourceNode")}}, which we also run through a {{domxref("GainNode")}} to quiet things down a bit. We also provide the user with a dropdown menu to allow them to change the audio output device.
+In our [SetSinkId test example](https://set-sink-id.glitch.me/), we create an audio graph that generates a three-second burst of white noise via an {{domxref("AudioBufferSourceNode")}}, which we also run through a {{domxref("GainNode")}} to quiet things down a bit. We also provide the user with a dropdown menu to allow them to change the audio output device.
 
 When the Play button is clicked, we assemble the audio graph and start it playing, and we also log information about the current device to the console based on the value of `sinkId`:
 
