@@ -6,6 +6,7 @@ tags:
   - Firefox
   - Mozilla
   - Release
+---
 
 {{FirefoxSidebar}}
 
