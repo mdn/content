@@ -33,6 +33,19 @@ This article provides information about the changes in Firefox 109 that will aff
 
 #### Removals
 
+### SVG
+
+#### Removals
+
+- `SVGGraphicsElement.getTransformToElement()` has been removed.
+  This follows its removal from the SVG2 specification in 2015, and other from major browsers.
+  ({{bug(1803790)}}).
+
+- The `SVGGraphicsElement.nearestViewportElement` and `SVGGraphicsElement.farthestViewportElement` attributes have been disabled by default in nightly and early beta builds (behind preference `svg.nearestAndFarthestViewportElement.enabled`).
+  [`SVGElement.viewportElement`](/en-US/docs/Web/API/SVGElement#svgelement.viewportelement) can be used as an alternative to `SVGGraphicsElement.nearestViewportElement`.
+  They have been removed from the SVG2 specification and are likely to be removed entirely from Firefox in a future release.
+  ({{bug(1133174)}}).
+
 ### HTTP
 
 #### Removals
