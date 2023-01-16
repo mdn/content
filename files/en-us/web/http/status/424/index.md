@@ -21,4 +21,4 @@ If a request was issued, and one property update failed (with for example {{HTTP
 
 ## See also
 
-- {{HTTPStatus(403)}}
+- {{HTTPStatus(403)}} (Forbidden)
