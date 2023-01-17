@@ -70,14 +70,7 @@ However, issues arise when you start to view the site on a narrow screen device.
 
 An improvement would be to display a cropped version of the image which displays the important details of the image when the site is viewed on a narrow screen. A second cropped image could be displayed for a medium-width screen device, like a tablet. The general problem whereby you want to serve different cropped images in that way, for various layouts, is commonly known as the **art direction problem**.
 
-In addition, there is no need to embed such large images on the page if it is being viewed on a mobile screen. And conversely, a small [raster image](/en-US/docs/Glossary/Raster_image) starts to look grainy when displayed larger than its original size (a raster image is a set number of pixels wide and a set number of pixels tall, as we saw when we looked at [vector graphics](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)). This is called the **resolution switching problem**.
-
-Conversely, it is unnecessary to display a large image on a screen significantly smaller than
-the size it was meant for. Doing so can waste bandwidth; in particular, mobile users don't want to
-waste bandwidth by downloading a large image intended for desktop users, when a small image would
-do for their device. Ideally, multiple resolutions would be made available to the user's web
-browser. The browser could then determine the optimal resolution to load based on the screen size
-of the user's device.
+In addition, there is no need to embed such large images on the page if it is being viewed on a mobile screen. Doing so can waste bandwidth; in particular, mobile users don't want to waste bandwidth by downloading a large image intended for desktop users, when a small image would do for their device. Conversely, a small [raster image](/en-US/docs/Glossary/Raster_image) starts to look grainy when displayed larger than its original size (a raster image is a set number of pixels wide and a set number of pixels tall, as we saw when we looked at [vector graphics](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)). Ideally, multiple resolutions would be made available to the user's web browser. The browser could then determine the optimal resolution to load based on the screen size of the user's device. This is called the **resolution switching problem**.
 
 To make things more complicated, some devices have high resolution screens that need larger images than you might expect to display nicely. This is essentially the same problem, but in a slightly different context.
 
