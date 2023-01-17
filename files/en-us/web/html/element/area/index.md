@@ -92,7 +92,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     Use this attribute only if the {{htmlattrxref("href", "area")}} attribute is present.
 
-    > **Note:** Setting `target="_blank"` on `<area>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
+    > **Note:** Setting `target="_blank"` on `<area>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
 
 ### Deprecated attributes
 

@@ -68,7 +68,7 @@ Some interesting new performance and security features have been added to the `<
   crossorigin="anonymous" />
 ```
 
-A `rel` value of `preload` indicates that the browser should preload this resource (see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Link_types/preload) for more details), with the `as` attribute indicating the specific class of content being fetched.
+A `rel` value of `preload` indicates that the browser should preload this resource (see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Attributes/rel/preload) for more details), with the `as` attribute indicating the specific class of content being fetched.
 The `crossorigin` attribute indicates whether the resource should be fetched with a {{Glossary("CORS")}} request.
 
 Other usage notes:
@@ -246,7 +246,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins.
 
 - {{HTMLAttrDef("rel")}}
-  - : This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of [link type values](/en-US/docs/Web/HTML/Link_types).
+  - : This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of [link type values](/en-US/docs/Web/HTML/Attributes/rel).
 - {{HTMLAttrDef("sizes")}} {{Experimental_Inline}}
 
   - : This attribute defines the sizes of the icons for visual media contained in the resource.
@@ -296,9 +296,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : The value of this attribute shows the relationship of the current document to the linked document, as defined by the {{HTMLAttrxRef("href", "link")}} attribute.
     The attribute thus defines the reverse relationship compared to the value of the `rel` attribute.
-    [Link type values](/en-US/docs/Web/HTML/Link_types) for the attribute are similar to the possible values for {{HTMLAttrxRef("rel", "link")}}.
+    [Link type values](/en-US/docs/Web/HTML/Attributes/rel) for the attribute are similar to the possible values for {{HTMLAttrxRef("rel", "link")}}.
 
-    > **Note:** Instead of `rev`, you should use the {{HTMLAttrxRef("rel", "link")}} attribute with the opposite [link type value](/en-US/docs/Web/HTML/Link_types).
+    > **Note:** Instead of `rev`, you should use the {{HTMLAttrxRef("rel", "link")}} attribute with the opposite [link type value](/en-US/docs/Web/HTML/Attributes/rel).
     > For example, to establish the reverse link for `made`, specify `author`. Also, this attribute doesn't stand for "revision" and must not be used with a version number, even though many sites misuse it in this way.
 
 ## Examples
@@ -389,7 +389,7 @@ You can determine when a style sheet has been loaded by watching for a `load` ev
 
 ### Preload examples
 
-You can find a number of `<link rel="preload">` examples in [Preloading content with `rel="preload"`](/en-US/docs/Web/HTML/Link_types/preload).
+You can find a number of `<link rel="preload">` examples in [Preloading content with `rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload).
 
 ### Blocking rendering till a resource is fetched
 

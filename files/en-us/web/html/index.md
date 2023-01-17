@@ -59,13 +59,13 @@ Our [HTML Learning Area](/en-US/docs/Learn/HTML) features multiple modules that 
   - : The {{htmlattrxref("crossorigin", "img")}} attribute, in combination with an appropriate {{glossary("CORS")}} header, allows images defined by the {{HTMLElement("img")}} element to be loaded from foreign origins and used in a {{HTMLElement("canvas")}} element as if they were being loaded from the current origin.
 - [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin)
   - : Some HTML elements that provide support for [CORS](/en-US/docs/Web/HTTP/CORS), such as {{HTMLElement("img")}} or {{HTMLElement("video")}}, have a `crossorigin` attribute (`crossOrigin` property), which lets you configure the CORS requests for the element's fetched data.
-- [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Link_types/preload)
+- [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Attributes/rel/preload)
   - : The `preload` value of the {{htmlelement("link")}} element's {{htmlattrxref("rel", "link")}} attribute allows you to write declarative fetch requests in your HTML {{htmlelement("head")}}, specifying resources that your pages will need very soon after loading, which you therefore want to start preloading early in the lifecycle of a page load, before the browser's main rendering machinery kicks in. This ensures that they are made available earlier and are less likely to block the page's first render, leading to performance improvements. This article provides a basic guide to how `preload` works.
 
 ## Reference
 
 - [HTML reference](/en-US/docs/Web/HTML/Reference)
-  - : HTML consists of **elements**, each of which may be modified by some number of **attributes**. HTML documents are connected to each other with [links](/en-US/docs/Web/HTML/Link_types).
+  - : HTML consists of **elements**, each of which may be modified by some number of **attributes**. HTML documents are connected to each other with **links**.
 - [HTML element reference](/en-US/docs/Web/HTML/Element)
   - : Browse a list of all {{glossary("HTML")}} {{glossary("Element", "elements")}}.
 - [HTML attribute reference](/en-US/docs/Web/HTML/Attributes)
