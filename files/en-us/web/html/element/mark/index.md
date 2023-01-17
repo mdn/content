@@ -1,6 +1,7 @@
 ---
 title: '<mark>: The Mark Text element'
 slug: Web/HTML/Element/mark
+page-type: html-element
 tags:
   - Element
   - HTML

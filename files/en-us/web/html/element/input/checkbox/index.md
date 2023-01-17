@@ -1,6 +1,7 @@
 ---
 title: <input type="checkbox">
 slug: Web/HTML/Element/input/checkbox
+page-type: html-element
 tags:
   - Element
   - HTML

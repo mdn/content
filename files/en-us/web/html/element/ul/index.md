@@ -1,6 +1,7 @@
 ---
 title: '<ul>: The Unordered List element'
 slug: Web/HTML/Element/ul
+page-type: html-element
 tags:
   - Element
   - HTML

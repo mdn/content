@@ -1,6 +1,7 @@
 ---
 title: '<sup>: The Superscript element'
 slug: Web/HTML/Element/sup
+page-type: html-element
 tags:
   - Element
   - HTML

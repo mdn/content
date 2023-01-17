@@ -1,6 +1,7 @@
 ---
 title: '<template>: The Content Template element'
 slug: Web/HTML/Element/template
+page-type: html-element
 tags:
   - Element
   - HTML

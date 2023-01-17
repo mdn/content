@@ -1,6 +1,7 @@
 ---
 title: '<bgsound>: The Background Sound element'
 slug: Web/HTML/Element/bgsound
+page-type: html-element
 tags:
   - Audio
   - Background Sound

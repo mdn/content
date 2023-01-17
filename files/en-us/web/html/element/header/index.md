@@ -1,6 +1,7 @@
 ---
 title: <header>
 slug: Web/HTML/Element/header
+page-type: html-element
 tags:
   - Element
   - HTML

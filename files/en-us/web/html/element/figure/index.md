@@ -1,6 +1,7 @@
 ---
 title: '<figure>: The Figure with Optional Caption element'
 slug: Web/HTML/Element/figure
+page-type: html-element
 tags:
   - Element
   - HTML

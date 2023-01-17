@@ -1,6 +1,7 @@
 ---
 title: "<input>: The Input (Form Input) element"
 slug: Web/HTML/Element/input
+page-type: html-element
 tags:
   - Data entry
   - Element

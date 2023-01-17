@@ -1,6 +1,7 @@
 ---
 title: '<em>: The Emphasis element'
 slug: Web/HTML/Element/em
+page-type: html-element
 tags:
   - Element
   - HTML

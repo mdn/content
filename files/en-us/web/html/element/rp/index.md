@@ -1,6 +1,7 @@
 ---
 title: '<rp>: The Ruby Fallback Parenthesis element'
 slug: Web/HTML/Element/rp
+page-type: html-element
 tags:
   - Element
   - HTML

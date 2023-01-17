@@ -1,6 +1,7 @@
 ---
 title: '<body>: The Document Body element'
 slug: Web/HTML/Element/body
+page-type: html-element
 tags:
   - Element
   - HTML

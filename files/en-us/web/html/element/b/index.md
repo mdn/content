@@ -1,6 +1,7 @@
 ---
 title: '<b>: The Bring Attention To element'
 slug: Web/HTML/Element/b
+page-type: html-element
 tags:
   - Attention
   - Element

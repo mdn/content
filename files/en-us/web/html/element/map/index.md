@@ -1,6 +1,7 @@
 ---
 title: '<map>: The Image Map element'
 slug: Web/HTML/Element/map
+page-type: html-element
 tags:
   - Element
   - HTML

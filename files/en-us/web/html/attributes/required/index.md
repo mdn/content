@@ -1,6 +1,7 @@
 ---
 title: 'HTML attribute: required'
 slug: Web/HTML/Attributes/required
+page-type: html-attribute
 tags:
   - Attribute
   - Attributes

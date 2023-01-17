@@ -1,6 +1,7 @@
 ---
 title: '<form>: The Form element'
 slug: Web/HTML/Element/form
+page-type: html-element
 tags:
   - Element
   - Form Element

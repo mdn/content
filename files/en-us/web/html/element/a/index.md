@@ -1,6 +1,7 @@
 ---
 title: "<a>: The Anchor element"
 slug: Web/HTML/Element/a
+page-type: html-element
 tags:
   - Content
   - Element

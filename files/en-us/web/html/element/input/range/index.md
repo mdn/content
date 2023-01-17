@@ -1,6 +1,7 @@
 ---
 title: <input type="range">
 slug: Web/HTML/Element/input/range
+page-type: html-element
 tags:
   - Element
   - Forms

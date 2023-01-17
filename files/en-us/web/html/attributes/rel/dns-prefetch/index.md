@@ -1,6 +1,7 @@
 ---
 title: rel=dns-prefetch
 slug: Web/HTML/Attributes/rel/dns-prefetch
+page-type: html-attribute-value
 tags:
   - Attribute
   - HTML

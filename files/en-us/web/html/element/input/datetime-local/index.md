@@ -1,6 +1,7 @@
 ---
 title: <input type="datetime-local">
 slug: Web/HTML/Element/input/datetime-local
+page-type: html-element
 tags:
   - Date
   - Date and Time

@@ -1,6 +1,7 @@
 ---
 title: <input type="color">
 slug: Web/HTML/Element/input/color
+page-type: html-element
 tags:
   - Color Picker
   - Element

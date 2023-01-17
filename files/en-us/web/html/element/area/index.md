@@ -1,6 +1,7 @@
 ---
 title: "<area>: The Image Map Area element"
 slug: Web/HTML/Element/area
+page-type: html-element
 tags:
   - Content
   - Element

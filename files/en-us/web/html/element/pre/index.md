@@ -1,6 +1,7 @@
 ---
 title: '<pre>: The Preformatted Text element'
 slug: Web/HTML/Element/pre
+page-type: html-element
 tags:
   - Element
   - HTML

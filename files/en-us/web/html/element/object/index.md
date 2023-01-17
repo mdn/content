@@ -1,6 +1,7 @@
 ---
 title: '<object>: The External Object element'
 slug: Web/HTML/Element/object
+page-type: html-element
 tags:
   - Element
   - HTML

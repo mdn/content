@@ -1,6 +1,7 @@
 ---
 title: '<optgroup>: The Option Group element'
 slug: Web/HTML/Element/optgroup
+page-type: html-element
 tags:
   - Element
   - Forms

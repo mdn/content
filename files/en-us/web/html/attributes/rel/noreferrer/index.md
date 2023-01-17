@@ -1,6 +1,7 @@
 ---
 title: rel=noreferrer
 slug: Web/HTML/Attributes/rel/noreferrer
+page-type: html-attribute-value
 tags:
   - Attribute
   - HTML

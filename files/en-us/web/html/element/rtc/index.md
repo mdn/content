@@ -1,6 +1,7 @@
 ---
 title: '<rtc>: The Ruby Text Container element'
 slug: Web/HTML/Element/rtc
+page-type: html-element
 tags:
   - Deprecated
   - Element

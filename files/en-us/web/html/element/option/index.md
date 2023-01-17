@@ -1,6 +1,7 @@
 ---
 title: '<option>: The HTML Option element'
 slug: Web/HTML/Element/option
+page-type: html-element
 tags:
   - Element
   - Forms

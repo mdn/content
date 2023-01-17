@@ -1,6 +1,7 @@
 ---
 title: <input type="file">
 slug: Web/HTML/Element/input/file
+page-type: html-element
 tags:
   - Directory Picker
   - File

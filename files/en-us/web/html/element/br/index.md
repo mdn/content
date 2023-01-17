@@ -1,6 +1,7 @@
 ---
 title: '<br>: The Line Break element'
 slug: Web/HTML/Element/br
+page-type: html-element
 tags:
   - Element
   - HTML

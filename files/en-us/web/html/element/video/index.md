@@ -1,6 +1,7 @@
 ---
 title: "<video>: The Video Embed element"
 slug: Web/HTML/Element/video
+page-type: html-element
 tags:
   - Element
   - HTML

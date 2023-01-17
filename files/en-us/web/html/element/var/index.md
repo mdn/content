@@ -1,6 +1,7 @@
 ---
 title: '<var>: The Variable element'
 slug: Web/HTML/Element/var
+page-type: html-element
 tags:
   - Element
   - HTML
