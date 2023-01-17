@@ -52,7 +52,7 @@ Cross-Origin-Opener-Policy: same-origin
 
 ### Certain features depend on cross-origin isolation
 
-Certain features like {{jsxref("SharedArrayBuffer")}} objects or {{domxref("Performance.now()")}} with unthrottled timers are only available if your document has a COOP header with the value `same-origin` value set.
+Certain features like {{jsxref("SharedArrayBuffer")}} objects or {{domxref("Performance.now()")}} with unthrottled timers are only available if your document has a COOP header with the value `same-origin` set.
 
 ```http
 Cross-Origin-Opener-Policy: same-origin
