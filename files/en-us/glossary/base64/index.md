@@ -170,7 +170,7 @@ function base64EncArr(aBytes) {
     }
   }
   return (
-    sB64Enc.substr(0, sB64Enc.length - 2 + nMod3) +
+    sB64Enc.substring(0, sB64Enc.length - 2 + nMod3) +
     (nMod3 === 2 ? "" : nMod3 === 1 ? "=" : "==")
   );
 }
