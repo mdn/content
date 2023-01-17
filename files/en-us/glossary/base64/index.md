@@ -102,7 +102,7 @@ function b64ToUint6(nChr) {
 }
 
 function base64DecToArr(sBase64, nBlocksSize) {
-  const sB64Enc = sBase64.replace(/[^A-Za-z0-9+/]/g, "");
+  const sB64Enc = sBase64.replace(/[^A-Za-z0-9+/]/g, ""); // Only necessary if the base64 includes whitespace such as line breaks.
   const nInLen = sB64Enc.length;
   const nOutLen = nBlocksSize
     ? Math.ceil(((nInLen * 3 + 1) >> 2) / nBlocksSize) * nBlocksSize
@@ -153,9 +153,10 @@ function base64EncArr(aBytes) {
   let nUint24 = 0;
   for (let nIdx = 0; nIdx < nLen; nIdx++) {
     nMod3 = nIdx % 3;
-    if (nIdx > 0 && ((nIdx * 4) / 3) % 76 === 0) {
-      sB64Enc += "\r\n";
-    }
+// To break your base64 into several 80-character lines, add:
+//   if (nIdx > 0 && ((nIdx * 4) / 3) % 76 === 0) {
+//      sB64Enc += "\r\n";
+//    }
 
     nUint24 |= aBytes[nIdx] << ((16 >>> nMod3) & 24);
     if (nMod3 === 2 || aBytes.length - nIdx === 1) {

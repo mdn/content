@@ -80,7 +80,6 @@ try {
         console.log('Sensor is not supported by the User Agent.');
     } else {
         throw error;
-        throw error;
     }
   });
   accelerometer.addEventListener("reading", () => reloadOnShake(accelerometer));
