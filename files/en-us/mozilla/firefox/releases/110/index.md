@@ -60,6 +60,8 @@ This article provides information about the changes in Firefox 110 that will aff
 
 ## Changes for add-on developers
 
+- The `defaultZoomFactor` property of {{WebExtAPIRef("tabs.ZoomSettings")}} now returns the value of the default zoom factor setting ({{bug(1772166)}})
+
 ### Removals
 
 ### Other
