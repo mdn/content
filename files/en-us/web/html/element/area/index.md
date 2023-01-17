@@ -1,5 +1,5 @@
 ---
-title: '<area>: The Image Map Area element'
+title: "<area>: The Image Map Area element"
 slug: Web/HTML/Element/area
 tags:
   - Content
@@ -73,7 +73,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - {{htmlattrdef("rel")}}
   - : For anchors containing the {{htmlattrxref("href", "area")}} attribute, this attribute specifies the relationship of the target object to the link object.
-    The value is a space-separated list of [link types values](/en-US/docs/Web/HTML/Link_types).
+    The value is a space-separated list of link types.
     The values and their semantics will be registered by some authority that might have meaning to the document author.
     The default relationship, if no other is given, is void. Use this attribute only if the {{htmlattrxref("href", "area")}} attribute is present.
 - {{htmlattrdef("shape")}}
@@ -92,7 +92,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     Use this attribute only if the {{htmlattrxref("href", "area")}} attribute is present.
 
-    > **Note:** Setting `target="_blank"` on `<area>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
+    > **Note:** Setting `target="_blank"` on `<area>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
 
 ### Deprecated attributes
 
