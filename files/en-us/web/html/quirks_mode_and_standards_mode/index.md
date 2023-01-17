@@ -52,4 +52,4 @@ If you serve XHTML-like content using the `text/html` MIME type, browsers will r
 
 If the page is rendered in quirks or limited-quirks mode, Firefox will log a warning to the console tab in the developer tools. If this warning is not shown, Firefox is using no-quirks mode.
 
-The value of `document.compatMode` in JavaScript will show whether or not the document is in quirks mode. If its value us `"quirks"`, the document is in quirks mode. If it isn't, it will have value `"CSS1Compat"`.
+The value of `document.compatMode` in JavaScript will show whether or not the document is in quirks mode. If its value is `"quirks"`, the document is in quirks mode. If it isn't, it will have value `"CSS1Compat"`.

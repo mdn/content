@@ -87,6 +87,8 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Gets the width of the content area of the browser window including, if rendered, the vertical scrollbar.
 - {{domxref("isSecureContext")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
+- {{domxref("Window.launchQueue")}} {{ReadOnlyInline}}
+  - : When a [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA) is launched with a [`launch_handler`](/en-US/docs/Web/Manifest/launch_handler) `client_mode` value of `focus-existing`, `navigate-new`, or `navigate-existing`, the `launchQueue` provides access to the {{domxref("LaunchQueue")}} class, which allows custom launch navigation handling to be implemented for the PWA.
 - {{domxref("Window.length")}} {{ReadOnlyInline}}
   - : Returns the number of frames in the window. See also {{domxref("window.frames")}}.
 - {{domxref("Window.location")}}
