@@ -1,6 +1,7 @@
 ---
 title: <strike>
 slug: Web/HTML/Element/strike
+page-type: html-element
 tags:
   - Element
   - HTML

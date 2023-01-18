@@ -1,6 +1,7 @@
 ---
 title: autofocus
 slug: Web/HTML/Global_attributes/autofocus
+page-type: html-attribute
 tags:
   - Autofocus
   - Global attributes

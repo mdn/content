@@ -1,6 +1,7 @@
 ---
 title: '<dfn>: The Definition element'
 slug: Web/HTML/Element/dfn
+page-type: html-element
 tags:
   - Definition
   - Definitions

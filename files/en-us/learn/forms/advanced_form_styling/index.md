@@ -131,8 +131,12 @@ Styling a checkbox or a radio button is tricky by default. The sizes of checkbox
 For example, consider this simple test case:
 
 ```html
-<label><span><input type="checkbox" name="q5" value="true"></span> True</label>
-<label><span><input type="checkbox" name="q5" value="false"></span> False</label>
+<label
+  ><span><input type="checkbox" name="q5" value="true" /></span> True</label
+>
+<label
+  ><span><input type="checkbox" name="q5" value="false" /></span> False</label
+>
 ```
 
 ```css
@@ -149,13 +153,13 @@ input[type="checkbox"] {
 
 Different browsers handle the checkbox and span differently, often ugly ways:
 
-| Browser                             | Rendering                         |
-| ----------------------------------- | --------------------------------- |
-| Firefox 71 (macOS)                  | ![Rounded corners and 1px light grey border](firefox-mac-checkbox.png)     |
-| Firefox 57 (Windows 10)             | ![Rectangular corners with 1px medium grey border](firefox-windows-checkbox.png) |
-| Chrome 77 (macOS), Safari 13, Opera | ![Rounded corner with 1px medium grey border](chrome-mac-checkbox.png)      |
-| Chrome 63 (Windows 10)              | ![Rectangular borders with slightly greyish background instead of white.](chrome-windows-checkbox.png)  |
-| Edge 16 (Windows 10)                | ![Rectangular borders with slightly greyish background instead of white.](edge-checkbox.png)            |
+| Browser                             | Rendering                                                                                              |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Firefox 71 (macOS)                  | ![Rounded corners and 1px light grey border](firefox-mac-checkbox.png)                                 |
+| Firefox 57 (Windows 10)             | ![Rectangular corners with 1px medium grey border](firefox-windows-checkbox.png)                       |
+| Chrome 77 (macOS), Safari 13, Opera | ![Rounded corner with 1px medium grey border](chrome-mac-checkbox.png)                                 |
+| Chrome 63 (Windows 10)              | ![Rectangular borders with slightly greyish background instead of white.](chrome-windows-checkbox.png) |
+| Edge 16 (Windows 10)                | ![Rectangular borders with slightly greyish background instead of white.](edge-checkbox.png)           |
 
 #### Using appearance: none on radios/checkboxes
 
@@ -509,10 +513,6 @@ You can see the result of the above CSS styling in the below live example (see a
 It is easier to just create your own custom solution for these features, if you want to be able to control the styling, or use a third-party solution such as [progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js/#examples).
 
 The article [How to build custom form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls) provides an example of how to build a custom designed select with HTML, CSS, and JavaScript.
-
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Advanced styling](/en-US/docs/Learn/Forms/Test_your_skills:_Advanced_styling). Bear in mind that some questions in this assessment series assume knowledge of the [next article](/en-US/docs/Learn/Forms/UI_pseudo-classes) too, so you might want to work through that article first before attempting it.
 
 ## Summary
 

@@ -1,6 +1,7 @@
 ---
 title: <input type="button">
 slug: Web/HTML/Element/input/button
+page-type: html-element
 tags:
   - Element
   - Forms

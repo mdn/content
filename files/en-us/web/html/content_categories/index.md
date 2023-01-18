@@ -1,6 +1,7 @@
 ---
 title: Content categories
 slug: Web/HTML/Content_categories
+page-type: guide
 tags:
   - Advanced
   - Guide

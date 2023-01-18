@@ -1,6 +1,7 @@
 ---
 title: '<dl>: The Description List element'
 slug: Web/HTML/Element/dl
+page-type: html-element
 tags:
   - Definition List
   - Description list

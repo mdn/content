@@ -1,6 +1,7 @@
 ---
 title: <xmp>
 slug: Web/HTML/Element/xmp
+page-type: html-element
 tags:
   - Element
   - HTML

@@ -1,6 +1,7 @@
 ---
 title: Round Trip Time (RTT)
 slug: Glossary/Round_Trip_Time_(RTT)
+page-type: glossary-definition
 tags:
   - Beginner
   - Performance

@@ -1,6 +1,7 @@
 ---
 title: '<ol>: The Ordered List element'
 slug: Web/HTML/Element/ol
+page-type: html-element
 tags:
   - Element
   - HTML

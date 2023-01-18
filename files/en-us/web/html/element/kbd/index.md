@@ -1,6 +1,7 @@
 ---
 title: '<kbd>: The Keyboard Input element'
 slug: Web/HTML/Element/kbd
+page-type: html-element
 tags:
   - Displaying Input
   - Displaying Keys

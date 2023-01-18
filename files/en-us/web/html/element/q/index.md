@@ -1,6 +1,7 @@
 ---
 title: '<q>: The Inline Quotation element'
 slug: Web/HTML/Element/q
+page-type: html-element
 tags:
   - Citation
   - Cite

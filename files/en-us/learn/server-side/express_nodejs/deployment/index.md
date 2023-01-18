@@ -166,7 +166,7 @@ const catalogRouter = require("./routes/catalog"); // Import routes for "catalog
 const compression = require("compression");
 
 // Create the Express application object
-const app = express();
+var app = express();
 
 // …
 
@@ -201,7 +201,7 @@ const compression = require("compression");
 const helmet = require("helmet");
 
 // Create the Express application object
-const app = express();
+var app = express();
 
 app.use(helmet());
 // …
@@ -379,7 +379,7 @@ Open **package.json**, and add this information as an **engines > node** section
   "name": "express-locallibrary-tutorial",
   "version": "0.0.0",
   "engines": {
-    "node": "16.17.1"
+    "node": ">=16.17.1"
   },
   "private": true,
   // …

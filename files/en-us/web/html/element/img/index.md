@@ -1,6 +1,7 @@
 ---
 title: "<img>: The Image Embed element"
 slug: Web/HTML/Element/img
+page-type: html-element
 tags:
   - Content
   - Element
