@@ -1,6 +1,7 @@
 ---
 title: '<details>: The Details disclosure element'
 slug: Web/HTML/Element/details
+page-type: html-element
 tags:
   - Disclosure Box
   - Disclosure Widget

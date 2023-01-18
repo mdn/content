@@ -1,6 +1,7 @@
 ---
 title: <input type="password">
 slug: Web/HTML/Element/input/password
+page-type: html-element
 tags:
   - Element
   - Forms

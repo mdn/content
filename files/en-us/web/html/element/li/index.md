@@ -1,6 +1,7 @@
 ---
 title: '<li>: The List Item element'
 slug: Web/HTML/Element/li
+page-type: html-element
 tags:
   - Element
   - HTML

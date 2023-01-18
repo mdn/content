@@ -1,6 +1,7 @@
 ---
 title: '<i>: The Idiomatic Text element'
 slug: Web/HTML/Element/i
+page-type: html-element
 tags:
   - Element
   - HTML

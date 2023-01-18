@@ -1,6 +1,7 @@
 ---
 title: '<marquee>: The Marquee element'
 slug: Web/HTML/Element/marquee
+page-type: html-element
 tags:
   - Element
   - HTML

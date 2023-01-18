@@ -1,6 +1,7 @@
 ---
 title: 'HTML attribute: autocomplete'
 slug: Web/HTML/Attributes/autocomplete
+page-type: html-attribute
 tags:
   - Addresses
   - Attribute

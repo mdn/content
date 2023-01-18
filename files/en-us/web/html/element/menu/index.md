@@ -1,6 +1,7 @@
 ---
 title: '<menu>: The Menu element'
 slug: Web/HTML/Element/menu
+page-type: html-element
 tags:
   - Element
   - HTML

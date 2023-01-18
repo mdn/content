@@ -1,6 +1,7 @@
 ---
 title: '<image>: The Image element'
 slug: Web/HTML/Element/image
+page-type: html-element
 tags:
   - Element
   - HTML

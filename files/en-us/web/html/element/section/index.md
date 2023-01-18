@@ -1,6 +1,7 @@
 ---
 title: '<section>: The Generic Section element'
 slug: Web/HTML/Element/section
+page-type: html-element
 tags:
   - Element
   - HTML

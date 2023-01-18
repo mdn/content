@@ -1,6 +1,7 @@
 ---
 title: '<dd>: The Description Details element'
 slug: Web/HTML/Element/dd
+page-type: html-element
 tags:
   - Definition
   - Description Details

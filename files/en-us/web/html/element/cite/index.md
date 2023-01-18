@@ -1,6 +1,7 @@
 ---
 title: '<cite>: The Citation element'
 slug: Web/HTML/Element/cite
+page-type: html-element
 tags:
   - Attribution
   - Citation

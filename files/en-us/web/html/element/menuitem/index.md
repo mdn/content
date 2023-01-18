@@ -1,6 +1,7 @@
 ---
 title: <menuitem>
 slug: Web/HTML/Element/menuitem
+page-type: html-element
 tags:
   - Deprecated
   - Element

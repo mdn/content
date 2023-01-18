@@ -1,6 +1,7 @@
 ---
 title: hidden
 slug: Web/HTML/Global_attributes/hidden
+page-type: html-attribute
 tags:
   - Global attributes
   - HTML

@@ -1,6 +1,7 @@
 ---
 title: Standard metadata names
 slug: Web/HTML/Element/meta/name
+page-type: html-attribute
 tags:
   - Attribute
   - HTML

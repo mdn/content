@@ -1,6 +1,7 @@
 ---
 title: '<audio>: The Embed Audio element'
 slug: Web/HTML/Element/audio
+page-type: html-element
 tags:
   - Audio
   - Element

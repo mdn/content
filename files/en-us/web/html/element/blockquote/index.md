@@ -1,6 +1,7 @@
 ---
 title: '<blockquote>: The Block Quotation element'
 slug: Web/HTML/Element/blockquote
+page-type: html-element
 tags:
   - Blockquote
   - Element

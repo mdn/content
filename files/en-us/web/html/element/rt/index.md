@@ -1,6 +1,7 @@
 ---
 title: '<rt>: The Ruby Text element'
 slug: Web/HTML/Element/rt
+page-type: html-element
 tags:
   - Element
   - HTML

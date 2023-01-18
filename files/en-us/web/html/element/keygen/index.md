@@ -1,6 +1,7 @@
 ---
 title: <keygen>
 slug: Web/HTML/Element/keygen
+page-type: html-element
 tags:
   - Deprecated
   - Element

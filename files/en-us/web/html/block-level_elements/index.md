@@ -1,6 +1,7 @@
 ---
 title: Block-level elements
 slug: Web/HTML/Block-level_elements
+page-type: guide
 tags:
   - Beginner
   - Development

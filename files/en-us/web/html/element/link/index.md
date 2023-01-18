@@ -1,6 +1,7 @@
 ---
 title: "<link>: The External Resource Link element"
 slug: Web/HTML/Element/link
+page-type: html-element
 tags:
   - Element
   - HTML

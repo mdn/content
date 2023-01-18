@@ -1,6 +1,7 @@
 ---
 title: '<div>: The Content Division element'
 slug: Web/HTML/Element/div
+page-type: html-element
 tags:
   - Content Division
   - Element

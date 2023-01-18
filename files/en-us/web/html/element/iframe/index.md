@@ -1,6 +1,7 @@
 ---
 title: '<iframe>: The Inline Frame element'
 slug: Web/HTML/Element/iframe
+page-type: html-element
 tags:
   - Content
   - Element

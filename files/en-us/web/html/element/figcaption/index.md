@@ -1,6 +1,7 @@
 ---
 title: '<figcaption>: The Figure Caption element'
 slug: Web/HTML/Element/figcaption
+page-type: html-element
 tags:
   - Element
   - HTML

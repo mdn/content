@@ -1,6 +1,7 @@
 ---
 title: '<samp>: The Sample Output element'
 slug: Web/HTML/Element/samp
+page-type: html-element
 tags:
   - Element
   - HTML

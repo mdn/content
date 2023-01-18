@@ -1,6 +1,7 @@
 ---
 title: <input type="email">
 slug: Web/HTML/Element/input/email
+page-type: html-element
 tags:
   - Email
   - Forms

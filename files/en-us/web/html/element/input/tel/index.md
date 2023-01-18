@@ -1,6 +1,7 @@
 ---
 title: <input type="tel">
 slug: Web/HTML/Element/input/tel
+page-type: html-element
 tags:
   - Element
   - Form Inputs

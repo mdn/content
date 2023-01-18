@@ -1,6 +1,7 @@
 ---
 title: '<bdi>: The Bidirectional Isolate element'
 slug: Web/HTML/Element/bdi
+page-type: html-element
 tags:
   - BDI
   - BiDi
