@@ -7,10 +7,11 @@ tags:
   - Property
   - PaymentManager
   - Reference
+  - Experimental
 browser-compat: api.ServiceWorkerRegistration.paymentManager
 ---
 
-{{APIRef("Payment Handler API")}}
+{{APIRef("Payment Handler API")}}{{SeeCompatTable}}
 
 The **`paymentManager`** property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a payment app's {{domxref("PaymentManager")}} instance, which is used to manage various payment app functionality.
