@@ -176,7 +176,7 @@ They are responsible for reviewing and approving pull requests in their topic or
 
 In addition to the responsibilities of an [organization member](#organization_member), invited experts are responsible for:
 
-- Following the [reviewing guide](REVIEWING.md).
+- Following the [reviewing guide](https://github.com/mdn/content/blob/main/REVIEWING.md).
 - Reviewing pull requests in their topic area.
 - Helping other contributors become reviewers.
 
