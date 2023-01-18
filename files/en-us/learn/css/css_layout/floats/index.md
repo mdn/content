@@ -179,7 +179,7 @@ Add a class of `special` to the first paragraph of text, the one immediately fol
 }
 ```
 
-To make the effect easier to see, change the `margin-left` on your float to `margin` so you get space all around the float. You'll be able to see the background on the paragraph running right underneath the floated box, as in the example below.
+To make the effect easier to see, change the `margin-right` on your float to `margin` so you get space all around the float. You'll be able to see the background on the paragraph running right underneath the floated box, as in the example below.
 
 ```html hidden
 <h1>Float example</h1>

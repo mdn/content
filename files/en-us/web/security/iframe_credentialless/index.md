@@ -27,27 +27,27 @@ This problem can be solved by IFrame credentialless.
 An `<iframe>` is made credentialless by applying the {{htmlattrxref("credentialless", "iframe")}} attribute to it, or setting the equivalent DOM property — {{domxref("HTMLIFrameElement.credentialless")}} — to `true`.
 
 ```html
-<iframe src="https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)"
-        title="Spectre vulnerability Wikipedia page"
-        width="960"
-        height="600"
-        credentialless>
+<iframe
+  src="https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)"
+  title="Spectre vulnerability Wikipedia page"
+  width="960"
+  height="600"
+  credentialless></iframe>
 ```
 
 Or:
 
 ```html
-<iframe width="960"
-        height="600">
-</iframe>
+<iframe width="960" height="600"> </iframe>
 ```
 
 ```js
-const iframeElem = document.querySelector('iframe');
+const iframeElem = document.querySelector("iframe");
 
 iframeElem.credentialless = true;
-iframeElem.title = 'Spectre vulnerability Wikipedia page';
-iframeElem.src = 'https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)';
+iframeElem.title = "Spectre vulnerability Wikipedia page";
+iframeElem.src =
+  "https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)";
 ```
 
 > **Note:** The {{domxref("window.credentialless")}} property can be queried by a document embedded in an `<iframe>` to test whether it is being run in a credentialless context. A value of `true` means the embedding `<iframe>` is credentialless.
@@ -58,7 +58,7 @@ The nonce is shared for every credentialless iframe that is a descendant of the 
 
 In addition:
 
-- Pop-ups opened by credentialless iframes are opened with [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) set. This prevents OAuth pop-up flows from being used in credentialless iframes.
+- Pop-ups opened by credentialless iframes are opened with [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) set. This prevents OAuth pop-up flows from being used in credentialless iframes.
 - Browser autofill or password manager functionality is unavailable in credentialless `<iframes>`.
 
 The result of this is that documents loaded into credentialless `<iframes>` are effectively vanilla or "public" versions, not customized with any user's sensitive information. Since there is no sensitive information available to leak from these documents, they are of no use to would-be attackers, and so the Cross-Origin Embedder Policy requirement is dropped for those IFrames.

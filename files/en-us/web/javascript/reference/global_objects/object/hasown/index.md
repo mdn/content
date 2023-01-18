@@ -119,7 +119,7 @@ The elements of an {{jsxref("Array")}} are defined as direct properties, so
 you can use `hasOwn()` method to check whether a particular index exists:
 
 ```js
-const fruits = ['Apple', 'Banana','Watermelon', 'Orange'];
+const fruits = ['Apple', 'Banana', 'Watermelon', 'Orange'];
 Object.hasOwn(fruits, 3);   // true ('Orange')
 Object.hasOwn(fruits, 4);   // false - not defined
 ```

@@ -1,6 +1,6 @@
 ---
-title: 'Link types: me'
-slug: Web/HTML/Link_types/me
+title: rel=me
+slug: Web/HTML/Attributes/rel/me
 tags:
   - Attribute
   - HTML
