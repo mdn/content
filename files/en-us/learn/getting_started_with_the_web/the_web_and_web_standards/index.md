@@ -67,7 +67,7 @@ There are a number of technologies to learn if you want to be a front-end web de
 
 ### Browsers
 
-You are probably reading these words inside a web browser in this very moment (unless you've printed it out, or are using assistive technology, such as a screen reader to read it out to you). Web browsers are the software programs people use to consume the web, and include [Firefox](https://www.mozilla.org/en-US/firefox/), [Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/), [Safari](https://www.apple.com/safari/), and [Edge](https://www.microsoft.com/en-us/edge).
+You are probably reading these words inside a web browser in this very moment (unless you've printed it out, or are using assistive technology, such as a screen reader to read it out to you). Web browsers are the software programs people use to consume the web, and include [Firefox](https://www.mozilla.org/en-US/firefox/), [Chrome](https://www.google.com/chrome/), [Brave](https://brave.com/), [Opera](https://www.opera.com/), [Safari](https://www.apple.com/safari/), and [Edge](https://www.microsoft.com/en-us/edge).
 
 ### HTTP
 
