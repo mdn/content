@@ -83,6 +83,10 @@ The {{DOMxRef("Document")}} provides some additional information that can be use
 - {{DOMxRef("Document.fullscreenEnabled")}}
   - : The `fullscreenEnabled` property tells you whether or not the document is currently in a state that would allow fullscreen mode to be requested.
 
+### Viewport scaling on mobile browsers
+
+In vast majority of mobile browsers, fullscreen mode ignores viewport meta tag configuration and blocks user scaling in fullscreen mode. In example: "pinch to zoom" on the image presented in fullscreen mode will not work, even if the page in normal mode can ba scaled using pinch to zoom.
+
 ## Things your users want to know
 
 You'll want to be sure to let your users know that they can press the <kbd>Esc</kbd> key (or <kbd>F11</kbd>) to exit fullscreen mode.
