@@ -17,7 +17,7 @@ The **`keyup`** event is fired when a key is released.
 
 The [`keydown`](/en-US/docs/Web/API/Element/keydown_event) and `keyup` events provide a code indicating which key is pressed, while `keypress` indicates which character was entered. For example, a lowercase "a" will be reported as 65 by `keydown` and `keyup`, but as 97 by `keypress`. An uppercase "A" is reported as 65 by all events.
 
-Since Firefox 65, the `keyup` and [`keydown`](/en-US/docs/Web/API/Element/keydown_event) events are now fired during IME composition, to improve cross-browser compatibility for CJKT users ({{bug(354358)}}. To ignore all `keyup` events that are part of composition, do something like this (229 is a special value set for a `keyCode` relating to an event that has been processed by an IME):
+Since Firefox 65, the `keyup` and [`keydown`](/en-US/docs/Web/API/Element/keydown_event) events are now fired during IME composition, to improve cross-browser compatibility for CJKT users ({{bug(354358)}}. To ignore all `keyup` events that are part of composition, do something like this (229 is a special value set for a `keyCode` relating to an event that has been processed by an input-method editor ([IME](https://www.w3.org/TR/ime-api/#IME))):
 
 ```js
 eventTarget.addEventListener("keyup", (event) => {
