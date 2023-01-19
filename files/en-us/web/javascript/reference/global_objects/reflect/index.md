@@ -19,9 +19,94 @@ browser-compat: javascript.builtins.Reflect
 
 Unlike most global objects, `Reflect` is not a constructor. You cannot use it with a [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or invoke the `Reflect` object as a function. All properties and methods of `Reflect` are static (just like the {{jsxref("Math")}} object).
 
-The `Reflect` object provides the following static functions which have the same names as the [proxy handler methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy).
+The `Reflect` object provides the following static functions which have the same names as the [proxy handler methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy). Some of these methods are also the same as corresponding methods on {{jsxref("Object")}}, although they do
+have [some subtle differences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods) between them.
 
-Some of these methods are also the same as corresponding methods on {{jsxref("Object")}}, although they do have [some subtle differences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods) between them.
+`Reflect` can be used to [simplify introspection calls](#simplify_introspection_calls), [ensure defensive programming](#ensure_defensive_programming) and
+[provide default forwarding behaviour in proxy handler traps](#provide_default_forwarding_behaviour_in_proxy_handler_traps).
+
+### Simplify introspection calls
+
+`Reflect` collects methods for object reflection under a single namespace. Instead of directly accessing {{jsxref("Object")}} methods or attributes,
+you can use `Reflect`'s API, which encapsulates this functionality. For example:
+
+```js
+// A chained method to get all the String and Symbol keys of an object
+var allKeys = Object.getOwnPropertyNames(targetObject)
+                    .concat(Object.getOwnPropertySymbols(targetObject));
+
+// Reflect's call to retrieve the String and Symbol keys
+Reflect.ownKeys(targetObject)
+```
+
+Instead of wrapping operations (such as checking for a property) in a function and having to explicitly pass
+it around as a first-class value, you can use the `Reflect` API in your code as needed:
+
+```js
+// Equivalent to (property in targetObject)
+Reflect.has(targetObject, property)
+```
+
+### Ensure defensive programming
+
+The introspection methods of the {{jsxref("Object")}} class throw errors if they fail to complete an operation. This is not the case with some of
+`Reflect`'s methods (e.g. `defineProperty`). The API will handle the errors and return a boolean value. Compare the approaches:
+
+```js
+// Here, a try-catch block has to be explicitly defined
+try {
+  Object.defineProperty(targetObject, propertyKey, atributes);
+} catch (e) {
+  // Process the error
+}
+
+// No requirement for a try-catch block
+if (Reflect.defineProperty(targetObject, propertyKey, atributes)) {
+  // Property was successfully defined
+} else {
+  // The property definition was not successful
+}
+```
+
+Another example of defensive programming relates to the built-in `apply` method.
+In the example below, `concatStrings` is a function which defines its own `apply` method. Called directly, this will throw an error.
+`Reflect` calls the built-in `apply` method, resulting in the execution of the original function:
+
+```js
+function concatStrings() {
+  return Array.prototype.reduce.call(arguments, function (prefix, suffix) {
+    return prefix + suffix;
+  }, "");
+}
+concatStrings.apply = function () {
+  throw new Error('Explicitly defined method for apply!!!!');
+}
+
+// This will throw an error
+concatStrings.apply(null, ["J", "o", "i", "n", "e", "d"]);
+
+// Reflect safely calls the concatStrings function
+Reflect.apply(concatStrings, null, ["J", "o", "i", "n", "e", "d"]) === "Joined";
+```
+
+### Provide default forwarding behaviour in `Proxy` handler traps
+
+A `Proxy` handler trap is used to intercept operations on an object (e.g. deletion of the object's properties).
+In the example below, a trap is used to execute some custom functionality. The `Reflect` API's role is
+to execute the default introspection behaviour:
+
+```js
+let handler = {
+  // Trap
+  deleteProperty(targetObject, property) {
+    // Custom functionality - log the deletion
+    console.log("Deleting property: " + property);
+
+    // Execute the default behaviour of deleting a property
+    return Reflect.deleteProperty(targetObject, property);
+  }
+};
+```
 
 ## Static properties
 
