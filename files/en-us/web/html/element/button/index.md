@@ -248,12 +248,12 @@ Whether clicking on a {{HTMLElement("button")}} or {{HTMLElement("input")}} butt
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("checkbox")}}, {{ARIARole("combobox")}},
-        {{ARIARole("link")}}, {{ARIARole("menuitem")}},
-        {{ARIARole("menuitemcheckbox")}},
-        {{ARIARole("menuitemradio")}}, {{ARIARole("option")}},
-        {{ARIARole("radio")}}, {{ARIARole("switch")}},
-        {{ARIARole("tab")}}
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role">checkbox</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role">link</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role">menuitem</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role">menuitemcheckbox</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role">menuitemradio</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role">option</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role">switch</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a>
       </td>
     </tr>
     <tr>

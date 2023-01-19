@@ -66,8 +66,8 @@ Please see the {{HTMLElement("figure")}} page for examples on `<figcaption>`.
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("none")}},
-        {{ARIARole("presentation")}}
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role">group</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role">none</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a>
       </td>
     </tr>
     <tr>

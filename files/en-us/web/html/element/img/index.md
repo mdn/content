@@ -432,15 +432,15 @@ The value of the `title` attribute is usually presented to the user as a tooltip
                   ></code
                 >
               </li>
-              <li>{{ARIARole("link")}}</li>
-              <li>{{ARIARole("menuitem")}}</li>
-              <li>{{ARIARole("menuitemcheckbox")}}</li>
-              <li>{{ARIARole("menuitemradio")}}</li>
-              <li>{{ARIARole("option")}}</li>
-              <li>{{ARIARole("progressbar")}}</li>
-              <li>{{ARIARole("scrollbar")}}</li>
-              <li>{{ARIARole("separator")}}</li>
-              <li>{{ARIARole("slider")}}</li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role">link</a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role">menuitem</a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role">menuitemcheckbox</a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role">menuitemradio</a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role">progressbar</a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role">scrollbar</a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role">separator</a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role">slider</a></li>
               <li>
                 <code
                   ><a
@@ -456,12 +456,12 @@ The value of the `title` attribute is usually presented to the user as a tooltip
                   ></code
                 >
               </li>
-              <li>{{ARIARole("treeitem")}}</li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role">treeitem</a></li>
             </ul>
           </li>
           <li>
-            with empty <code>alt</code> attribute, {{ARIARole("none")}}
-            or {{ARIARole("presentation")}}
+            with empty <code>alt</code> attribute, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role">none</a>
+            or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a>
           </li>
           <li>
             with no <code>alt</code> attribute, no <code>role</code> permitted

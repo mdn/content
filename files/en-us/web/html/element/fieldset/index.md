@@ -135,13 +135,13 @@ This example shows a disabled `<fieldset>` with two controls inside it. Note how
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td>{{ARIARole("group")}}</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("radiogroup")}},
-        {{ARIARole("presentation")}}, {{ARIARole("none")}}
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role">radiogroup</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role">none</a>
       </td>
     </tr>
     <tr>

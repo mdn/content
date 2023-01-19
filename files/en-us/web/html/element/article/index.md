@@ -75,10 +75,10 @@ A given document can have multiple articles in it; for example, on a blog that s
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("application")}}, {{ARIARole("document")}},
-        {{ARIARole("feed")}}, {{ARIARole("main")}},
-        {{ARIARole("none")}}, {{ARIARole("presentation")}},
-        {{ARIARole("region")}}
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/application_role">application</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/document_role">document</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role">feed</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/main_role">main</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role">none</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/region_role">region</a>
       </td>
     </tr>
     <tr>

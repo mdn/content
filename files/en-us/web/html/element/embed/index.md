@@ -102,9 +102,9 @@ Use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on an 
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("application")}}, {{ARIARole("document")}},
-        {{ARIARole("img")}}, {{ARIARole("none")}},
-        {{ARIARole("presentation")}}
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/application_role">application</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/document_role">document</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/img_role">img</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role">none</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a>
       </td>
     </tr>
     <tr>

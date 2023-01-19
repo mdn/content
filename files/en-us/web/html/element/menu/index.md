@@ -136,15 +136,15 @@ button {
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("directory")}}, {{ARIARole("group")}},
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/directory_role">directory</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role">group</a>,
         <code
           ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role"
             >listbox</a
           ></code
-        >, {{ARIARole("menu")}}, {{ARIARole("menubar")}},
-        {{ARIARole("none")}}, {{ARIARole("presentation")}},
-        {{ARIARole("radiogroup")}}, {{ARIARole("tablist")}},
-        {{ARIARole("toolbar")}} or {{ARIARole("tree")}}
+        >, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role">menu</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role">menubar</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role">none</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role">radiogroup</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role">tablist</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role">toolbar</a> or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role">tree</a>
       </td>
     </tr>
     <tr>

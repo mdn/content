@@ -107,9 +107,9 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("feed")}}, {{ARIARole("none")}},
-        {{ARIARole("note")}}, {{ARIARole("presentation")}},
-        {{ARIARole("region")}}, {{ARIARole("search")}}
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role">feed</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role">none</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/note_role">note</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/region_role">region</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/search_role">search</a>
       </td>
     </tr>
     <tr>

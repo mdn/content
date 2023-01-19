@@ -156,16 +156,16 @@ Depending on the content, including a heading could also be good for SEO, so it 
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("alert")}}, {{ARIARole("alertdialog")}},
-        {{ARIARole("application")}}, {{ARIARole("banner")}},
-        {{ARIARole("complementary")}},
-        {{ARIARole("contentinfo")}}, {{ARIARole("dialog")}},
-        {{ARIARole("document")}}, {{ARIARole("feed")}},
-        {{ARIARole("log")}}, {{ARIARole("main")}},
-        {{ARIARole("marquee")}}, {{ARIARole("navigation")}},
-        {{ARIARole("none")}}, {{ARIARole("note")}},
-        {{ARIARole("presentation")}}, {{ARIARole("search")}},
-        {{ARIARole("status")}}, {{ARIARole("tabpanel")}}
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role">alert</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role">alertdialog</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/application_role">application</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role">banner</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role">complementary</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role">contentinfo</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role">dialog</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/document_role">document</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role">feed</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/log_role">log</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/main_role">main</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role">marquee</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role">navigation</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role">none</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/note_role">note</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/search_role">search</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/status_role">status</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role">tabpanel</a>
       </td>
     </tr>
     <tr>

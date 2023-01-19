@@ -454,7 +454,7 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        {{ARIARole("link")}} when <code>href</code> attribute is
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role">link</a> when <code>href</code> attribute is
         present, otherwise
         <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
           >no corresponding role</a
@@ -466,16 +466,16 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
       <td>
         <p>When <code>href</code> attribute is present:</p>
         <ul>
-          <li>{{ARIARole("button")}}</li>
-          <li>{{ARIARole("checkbox")}}</li>
-          <li>{{ARIARole("menuitem")}}</li>
-          <li>{{ARIARole("menuitemcheckbox")}}</li>
-          <li>{{ARIARole("menuitemradio")}}</li>
-          <li>{{ARIARole("option")}}</li>
-          <li>{{ARIARole("radio")}}</li>
-          <li>{{ARIARole("switch")}}</li>
-          <li>{{ARIARole("tab")}}</li>
-          <li>{{ARIARole("treeitem")}}</li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role">checkbox</a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role">menuitem</a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role">menuitemcheckbox</a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role">menuitemradio</a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role">switch</a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role">treeitem</a></li>
         </ul>
         <p>When <code>href</code> attribute is not present:</p>
         <ul>
