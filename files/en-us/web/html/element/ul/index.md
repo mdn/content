@@ -172,12 +172,12 @@ The above HTML will output:
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("directory")}}, {{ARIARole("group")}},
-        {{ARIARole("listbox")}}, {{ARIARole("menu")}},
-        {{ARIARole("menubar")}}, {{ARIARole("none")}},
-        {{ARIARole("presentation")}},
-        {{ARIARole("radiogroup")}}, {{ARIARole("tablist")}},
-        {{ARIARole("toolbar")}}, {{ARIARole("tree")}}
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role"><code>listbox</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role"><code>menubar</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role"><code>radiogroup</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role"><code>tablist</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role"><code>toolbar</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role"><code>tree</code></a>
       </td>
     </tr>
     <tr>

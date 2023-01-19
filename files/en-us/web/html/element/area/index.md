@@ -163,7 +163,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        {{ARIARole("link")}} when {{htmlattrxref("href", "area")}} attribute is present, otherwise <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> when {{htmlattrxref("href", "area")}} attribute is present, otherwise <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a>
       </td>
     </tr>
     <tr>

@@ -245,7 +245,7 @@ This CSS creates a look similar to a tabbed interface, where activating the tab 
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td>{{ARIARole("group")}}</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>

@@ -189,8 +189,8 @@ Optionally, warn of any potential accessibility concerns that exist with using t
       <th scope="row">Permitted ARIA roles</th>
       <td>
         Fill in a list of ARIA roles that can be set on the element, inside
-        \{{ARIARole("nameOfRole")}} macro calls. For example
-        {{ARIARole("directory")}}.
+        \<a href="/en-US/docs/Web/Accessibility/ARIA/Roles/nameOfRole_role"><code>nameOfRole</code></a> macro calls. For example
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>.
       </td>
     </tr>
     <tr>

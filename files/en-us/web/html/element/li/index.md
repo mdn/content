@@ -129,12 +129,12 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("menuitem")}},
-        {{ARIARole("menuitemcheckbox")}},
-        {{ARIARole("menuitemradio")}}, {{ARIARole("option")}},
-        {{ARIARole("none")}}, {{ARIARole("presentation")}},
-        {{ARIARole("radio")}}, {{ARIARole("separator")}},
-        {{ARIARole("tab")}}, {{ARIARole("treeitem")}}
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role"><code>separator</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a>
       </td>
     </tr>
     <tr>

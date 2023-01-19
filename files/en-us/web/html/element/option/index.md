@@ -77,7 +77,7 @@ See {{HTMLElement("select")}} for examples.
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td>{{ARIARole("option")}}</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>

@@ -193,7 +193,7 @@ The following attributes control behavior during form submission.
           ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/search_role"
             >search</a
           ></code
-        >, {{ARIARole("none")}} or {{ARIARole("presentation")}}
+        >, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a> or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
