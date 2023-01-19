@@ -27,7 +27,7 @@ Prior to Firefox 110, to use this API, you must have the `"webRequestBlocking"` 
 
 From Firefox 110, to use this API:
 
-- In a Manifest V3 extension, you must have the `"webRequestBlocking"`, `"webRequestfilterResponse"`, and `"webRequestFilterResponse.serviceWorkerScript"` API permissions.
+- In a Manifest V3 extension, you must have the `"webRequestBlocking"`, `"webRequestFilterResponse"`, and `"webRequestFilterResponse.serviceWorkerScript"` API permissions.
 - In a Manifest V2 extension, you must have the `"webRequestBlocking"` API permission. `"webRequestfilterResponse"` and `"webRequestFilterResponse.serviceWorkerScript"` permissions can be provided but are ignored.
 
 Extensions must also have the permissions needed for the event listener (the `"webRequest"` permission and the [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the host).
