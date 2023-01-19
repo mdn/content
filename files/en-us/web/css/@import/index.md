@@ -20,12 +20,9 @@ The **`@import`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-ru
 ```css
 @import url;
 @import url list-of-media-queries;
-@import url supports(supports-query);
-@import url supports(supports-query) list-of-media-queries;
 @import url layer;
 @import url layer(layer-name);
 @import url layer(layer-name) list-of-media-queries;
-@import url layer(layer-name) supports(supports-query) list-of-media-queries;
 ```
 
 where:
@@ -34,8 +31,6 @@ where:
   - : Is a {{CSSxRef("&lt;string&gt;")}}, a `<url>`, or a {{CSSxRef("url")}} function representing the location of the resource to import. The URL may be absolute or relative.
 - _list-of-media-queries_
   - : Is a comma-separated list of [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), which specify the media-dependent conditions for applying the CSS rules defined in the linked URL. If the browser does not support any of these queries, it does not load the linked resource.
-- _supports-query_
-  - : Is either a {{CSSxRef("@supports", "&lt;supports-condition&gt;", "#Syntax")}} or a {{CSSxRef("Syntax", "&lt;declaration&gt;", "#CSS_declarations")}}. If the import conditions do not match, the rules in the imported stylesheet do not apply.
 - _layer-name_
   - : Is the name of a [cascade layer](/en-US/docs/Web/CSS/@layer) into which the contents of the linked resource are imported.
 
@@ -69,12 +64,9 @@ The two examples above show how to specify the _url_ as a `<string>` and as a `u
 @import url("bluish.css") print, screen;
 @import "common.css" screen;
 @import url("landscape.css") screen and (orientation: landscape);
-@import url("narrow.css") supports(display: flex) screen and (max-width: 400px);
 ```
 
-The `@import` rules in the above examples show media-dependent conditions that will need to be true before the linked CSS rules are applied.
-
-So for instance, the last `@import` rule will load the `narrow.css` stylesheet if the user agent supports [`display: flex`](/en-US/docs/Web/CSS/display#display_flex). The [media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), using the `and` operator, further specifies to apply the style rules only to a screen device with a maximum viewport width of 400px.
+The `@import` rules in the above examples show media-dependent conditions that will need to be true before the linked CSS rules are applied. So for instance, the last `@import` rule will load the `landscape.css` stylesheet only on a screen device in landscape orientation.
 
 ### Importing CSS rules into a cascade layer
 

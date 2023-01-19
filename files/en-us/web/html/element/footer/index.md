@@ -92,8 +92,8 @@ The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for 
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("presentation")}} or
-        {{ARIARole("none")}}
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> or
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
       </td>
     </tr>
     <tr>

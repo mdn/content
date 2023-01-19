@@ -1244,7 +1244,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
                     href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code>
               </li>
               <li>
-                with <code>list</code> attribute: {{ARIARole("combobox")}}
+                with <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
               </li>
             </ul>
           </li>
@@ -1254,10 +1254,10 @@ Firefox uses the following heuristics to determine the locale to validate the us
               ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
           </li>
           <li>
-            <code>type=number</code>: {{ARIARole("spinbutton")}}
+            <code>type=number</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role"><code>spinbutton</code></a>
           </li>
-          <li><code>type=radio</code>: {{ARIARole("radio")}}</li>
-          <li><code>type=range</code>: {{ARIARole("slider")}}</li>
+          <li><code>type=radio</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a></li>
+          <li><code>type=range</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role"><code>slider</code></a></li>
           <li>
             <code>type=reset</code>:
             <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
@@ -1266,10 +1266,10 @@ Firefox uses the following heuristics to determine the locale to validate the us
             <code>type=search</code>
             <ul>
               <li>
-                with no <code>list</code> attribute: {{ARIARole("searchbox")}}
+                with no <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role"><code>searchbox</code></a>
               </li>
               <li>
-                with <code>list</code> attribute:{{ARIARole("combobox")}}
+                with <code>list</code> attribute:<a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
               </li>
             </ul>
           </li>
@@ -1286,7 +1286,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
                 <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code>
               </li>
               <li>
-                with <code>list</code> attribute: {{ARIARole("combobox")}}
+                with <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
               </li>
             </ul>
           </li>
@@ -1298,7 +1298,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
                 <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code>
               </li>
               <li>
-                with <code>list</code> attribute: {{ARIARole("combobox")}}
+                with <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
               </li>
             </ul>
           </li>
@@ -1311,7 +1311,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
                   ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a ></code>
               </li>
               <li>
-                with <code>list</code> attribute: {{ARIARole("combobox")}}
+                with <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
               </li>
             </ul>
           </li>
@@ -1327,35 +1327,35 @@ Firefox uses the following heuristics to determine the locale to validate the us
       <td>
         <ul>
           <li>
-            <code>type=button</code>: {{ARIARole("checkbox")}},
-            {{ARIARole("combobox")}},
-            {{ARIARole("link")}},
-            {{ARIARole("menuitem")}},
-            {{ARIARole("menuitemcheckbox")}},
-            {{ARIARole("menuitemradio")}},
-            {{ARIARole("option")}}, {{ARIARole("radio")}},
-            {{ARIARole("switch")}}, {{ARIARole("tab")}}
+            <code>type=button</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>
           </li>
           <li>
-            <code>type=checkbox</code>: {{ARIARole("button")}} when used
+            <code>type=checkbox</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a> when used
             with <code>aria-pressed</code>,
-            {{ARIARole("menuitemcheckbox")}},
-            {{ARIARole("option")}}, {{ARIARole("switch")}}
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>
           </li>
           <li>
-            <code>type=image</code>: {{ARIARole("link")}},
-            {{ARIARole("menuitem")}},
-            {{ARIARole("menuitemcheckbox")}},
-            {{ARIARole("menuitemradio")}},
-            {{ARIARole("radio")}}, {{ARIARole("switch")}}
+            <code>type=image</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>
           </li>
           <li>
-            <code>type=radio</code>: {{ARIARole("menuitemradio")}}
+            <code>type=radio</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>
           </li>
           <li>
             <code>type=text</code> with no <code>list</code> attribute:
-            {{ARIARole("combobox")}}, {{ARIARole("searchbox")}},
-            {{ARIARole("spinbutton")}}
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role"><code>searchbox</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role"><code>spinbutton</code></a>
           </li>
           <li>
             <code>type=color|date|datetime-local|email|file|hidden|</code>

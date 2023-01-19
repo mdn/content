@@ -142,7 +142,7 @@ The output of the above code looks like this:
 
 {{EmbedLiveSample("Using_abbreviations_and_definitions_together", 650, 200)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
@@ -184,7 +184,7 @@ The output of the above code looks like this:
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td>{{ARIARole("term")}}</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/term_role"><code>term</code></a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>

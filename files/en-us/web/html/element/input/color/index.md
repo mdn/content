@@ -165,7 +165,7 @@ The final result looks like this:
 
 {{EmbedLiveSample("Example", 700, 200)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

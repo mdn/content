@@ -70,7 +70,7 @@ Use of Java applets on the Web is deprecated; most browsers no longer support us
 
 {{EmbedLiveSample("Example", "100%", 300)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

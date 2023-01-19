@@ -302,7 +302,7 @@ draw();
 
 {{EmbedLiveSample("Examples", '100%', 600)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

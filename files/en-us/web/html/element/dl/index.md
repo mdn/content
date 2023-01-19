@@ -76,12 +76,12 @@ The **`<dl>`** [HTML](/en-US/docs/Web/HTML) element represents a description lis
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("group")}},
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>,
         <code
           ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/List_role"
             >list</a
           ></code
-        >, {{ARIARole("none")}}, {{ARIARole("presentation")}}
+        >, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>

@@ -153,7 +153,7 @@ See {{HTMLElement("table")}} for examples on `<th>`.
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        {{ARIARole("columnheader")}} or {{ARIARole("rowheader")}}
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role"><code>columnheader</code></a> or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role"><code>rowheader</code></a>
       </td>
     </tr>
     <tr>
