@@ -106,7 +106,7 @@ The output:
 
 {{EmbedLiveSample("Chemical_formulas", 650, 120)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

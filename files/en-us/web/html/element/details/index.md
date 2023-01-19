@@ -205,7 +205,7 @@ This CSS creates a look similar to a tabbed interface, where activating the tab 
 
 {{EmbedLiveSample("Customizing_the_disclosure_widget", 650, 150)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

@@ -331,7 +331,7 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
 
 {{EmbedLiveSample('Examples', 600, 80)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

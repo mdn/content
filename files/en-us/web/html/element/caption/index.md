@@ -94,7 +94,7 @@ td {
 
 {{EmbedLiveSample('Example', 650, 100)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
