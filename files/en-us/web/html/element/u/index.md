@@ -145,7 +145,7 @@ cite {
 
 {{EmbedLiveSample("Styling_the_cite_element", 650, 80)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

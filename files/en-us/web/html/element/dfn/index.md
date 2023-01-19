@@ -142,7 +142,7 @@ The output of the above code looks like this:
 
 {{EmbedLiveSample("Using_abbreviations_and_definitions_together", 650, 200)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

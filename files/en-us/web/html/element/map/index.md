@@ -59,7 +59,7 @@ Click the left-hand parrot for JavaScript, or the right-hand parrot for CSS.
 
 {{ EmbedLiveSample('Image map with two areas', '', '250') }}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

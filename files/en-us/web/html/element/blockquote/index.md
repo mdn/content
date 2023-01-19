@@ -57,7 +57,7 @@ The output from this HTML snippet looks like this:
 
 {{EmbedLiveSample("Example", 640, 180)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

@@ -266,7 +266,7 @@ otherCheckbox.addEventListener('change', () => {
 
 {{EmbedLiveSample('Examples', '100%', 300)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

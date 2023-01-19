@@ -52,7 +52,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 {{EmbedLiveSample("Examples")}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

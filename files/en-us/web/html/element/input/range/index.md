@@ -345,7 +345,7 @@ input[type="range"][orient="vertical"] {
 
 {{EmbedLiveSample("Putting_it_all_together", 200, 200)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

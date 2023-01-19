@@ -118,7 +118,7 @@ The above HTML will output:
 
 {{EmbedLiveSample("Ordered_list_inside_unordered_list", 400, 150)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

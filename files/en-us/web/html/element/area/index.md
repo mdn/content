@@ -133,7 +133,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 {{ EmbedLiveSample('Examples', 360, 160) }}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

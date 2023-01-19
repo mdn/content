@@ -98,7 +98,7 @@ The resulting output is this:
 
 {{EmbedLiveSample("Sample_output_including_user_input", 650, 120)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

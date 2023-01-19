@@ -130,7 +130,7 @@ The following attributes control behavior during form submission.
 
 {{ EmbedLiveSample('Examples', '100%', 110) }}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

@@ -76,7 +76,7 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
 
 {{EmbedLiveSample("Unordered_list")}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

@@ -55,7 +55,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 {{EmbedLiveSample("Example")}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
