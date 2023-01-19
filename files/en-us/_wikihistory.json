@@ -29753,24 +29753,6 @@
       "JesseW"
     ]
   },
-  "Web/API/Document/registerElement": {
-    "modified": "2020-10-15T21:30:06.830Z",
-    "contributors": [
-      "ExE-Boss",
-      "fscholz",
-      "chrisdavidmills",
-      "vp2177",
-      "mmk",
-      "ebidel",
-      "jpnelson",
-      "Dan-Dascalescu",
-      "maybe",
-      "teoli",
-      "Sebastianz",
-      "markg",
-      "gasolin"
-    ]
-  },
   "Web/API/Document/releaseCapture": {
     "modified": "2020-10-15T21:13:22.978Z",
     "contributors": [
