@@ -174,7 +174,7 @@ It is important to provide a mechanism to close a dialog within the `dialog` ele
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
-      <td>{{ARIARole("alertdialog")}}</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role"><code>alertdialog</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM interface</th>
