@@ -72,7 +72,7 @@ step-end;
 - `ease-out`
   - : Indicates that the interpolation starts abruptly and then progressively slows down towards the end. This keyword represents the easing function `cubic-bezier(0.0, 0.0, 0.58, 1.0)`.
 
-![A 2D graph of 'Time ratio' to 'Output ratio' shows a straight diagonal line that slightly curves as it gets close to X1 Y1.](cubic-bezer-ease-out.png)
+![A 2D graph of 'Time ratio' to 'Output ratio' shows a straight diagonal line that slightly curves as it gets close to X1 Y1.](cubic-bezier-ease-out.png)
 
 - _number-of-steps_
 
