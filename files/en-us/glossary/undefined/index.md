@@ -1,6 +1,7 @@
 ---
-title: undefined
-slug: Glossary/undefined
+title: Undefined
+slug: Glossary/Undefined
+page-type: glossary-definition
 tags:
   - CodingScripting
   - JavaScript

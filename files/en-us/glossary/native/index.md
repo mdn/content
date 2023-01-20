@@ -1,6 +1,7 @@
 ---
 title: Native
 slug: Glossary/Native
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

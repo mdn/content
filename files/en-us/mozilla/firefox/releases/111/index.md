@@ -28,6 +28,10 @@ This article provides information about the changes in Firefox 111 that affect d
 
 #### Removals
 
+### SVG
+
+#### Removals
+
 ### HTTP
 
 #### Removals

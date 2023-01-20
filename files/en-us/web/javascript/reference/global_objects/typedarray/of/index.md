@@ -1,6 +1,7 @@
 ---
 title: TypedArray.of()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/of
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -13,7 +14,7 @@ browser-compat: javascript.builtins.TypedArray.of
 
 {{JSRef}}
 
-The **`TypedArray.of()`** method creates a new
+The **`TypedArray.of()`** static method creates a new
 [typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) from a variable number of arguments. This method is nearly the same as
 {{jsxref("Array.of()")}}.
 

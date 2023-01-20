@@ -17,7 +17,7 @@ tags:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-In this article we drill down into carrying out testing, looking at identifying a target audience (e.g. what browsers, devices, and other segments should you make sure are tested), lo-fi testing strategies (get yourself a range of devices and some virtual machines and do ad hoc tests when needed), higher tech strategies (automation, using dedicated testing apps), and testing with user groups.
+This article explains how to do cross-browser testing: how to choose which browsers and devices to test, how to actually test those browsers and devices, and how to test with user groups.
 
 <table>
   <tbody>
@@ -44,63 +44,52 @@ In this article we drill down into carrying out testing, looking at identifying 
   </tbody>
 </table>
 
-## Gotta test 'em all?
+## Choosing which browsers and devices to test
 
-When doing cross-browser testing, you need to work out a list of browsers you will need to test on to start with. There is no way you can test on every combination of browser and device your users might use to view your site — there are just too many, and new ones appear all the time.
+Since you can't test every combination of browser and device, it's enough that you ensure your site works on the most important ones. In practical applications, "important" often means "commonly used among the target audience."
 
-Instead, you should try to make sure your site works on the most important target browsers and devices, and then code defensively to give your site the widest support reach it can be expected to have.
-
-By coding defensively, we mean trying to build in intelligent fallbacks so that if a feature or style doesn't work in a browser, the site will be able to downgrade to something less exciting that still provides an acceptable user experience — the core information is still accessible, for example, even if it doesn't look quite as nice.
-
-The aim is to build up a chart of browsers/devices you can refer to as you test. You can make this as simple or as complex as you like — for example a common approach is to have multiple grades of support level, something like:
+You can classify browsers and devices by the amount of support you intend to give. For example:
 
 1. A grade: Common/modern browsers — Known to be capable. Test thoroughly and provide full support.
 2. B grade: Older/less capable browsers — known not to be capable. Test, and provide a more basic experience that gives full access to core information and services.
 3. C grade: Rare/unknown browsers — don't test, but assume they are capable. Serve the full site, which should work, at least with the fallbacks provided by our defensive coding.
 
-Throughout the following sections, we'll build up a support chart in this format.
+In the following sections, we'll build up a support chart in this format.
 
 > **Note:** Yahoo first made this approach popular, with their [Graded browser Support](https://github.com/yui/yui3/wiki/Graded-Browser-Support) approach.
 
-### Educated guesses
+### Predict your audience's most commonly used browsers
 
-You could call these "assumptions", or "gut feelings". This is not an accurate, scientific approach, but as someone who has experience with the web industry you'll have a pretty good idea of at least some of the browsers you should test. This can form a good basis for a support chart.
+This typically involves making educated guesses based on user demographics. For example, suppose your users are in North America and Western Europe:
 
-For example, if you live in Western Europe or North America, you will know that a lot of people use Windows and Mac desktops/laptops, where the main browsers are Chrome, Firefox, Safari, IE, and Edge. You probably want to just test the latest versions of the first three, as these browsers receive regular updates. For Edge and IE, you probably want to test the last couple of versions; these should all go in the A grade tier.
+A quick online search tells you that most people in North America and Western Europe use Windows or Mac desktops/laptops, where the main browsers are Chrome, Firefox, Safari, and Edge. You'd probably want to just test the latest versions of these browsers, as these browsers get regular updates. These should all go in the A grade tier.
 
-> **Note:** You can only have one version of IE or Edge installed on a machine at once, so you will probably have to use virtual machine, or other strategy to do the testing you need. See [Virtual machines](#virtual_machines) later on.
+Most people in this demographic also use either iOS or Android phones, so you'd probably want to test the latest versions of iOS Safari, the last couple of versions of the old Android stock browser, and Chrome and Firefox for iOS and Android. You should ideally test these on both a phone and a tablet, to ensure responsive designs work.
 
-Lots of people use iOS and Android, so you probably also want to test the latest versions of iOS Safari, the last couple of versions of the old Android stock browser, and Chrome and Firefox for iOS and Android. You should ideally test these on both a phone and a tablet, to make sure that responsive designs are working OK.
+For IE, you'd probably want to test the last couple of versions. Some people still use IE 9. Since IE is old and less capable, and Microsoft is phasing out IE support, let's put it in the B grade tier.
 
-You might also know that a number of people still use IE 9. This is old and less capable, so let's put it in the B grade tier.
+Opera Mini [isn't very capable of running complex JavaScript](https://dev.opera.com/articles/opera-mini-and-javascript/), so we should put this into grade B as well.
 
+Thus, we've based our choice of which browsers to test on the browsers that we expect our users to use.
 This gives us the following support chart so far:
 
-1. A grade: Chrome and Firefox for Windows/Mac, Safari for Mac, Edge and IE for Windows (last two versions of each), iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome and Firefox for Android (last two versions) on phone tablet
-2. B grade: IE 9 for Windows
+1. A grade: Chrome and Firefox for Windows/Mac, Safari for Mac, Edge for Windows, iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome and Firefox for Android (last two versions) on phone/tablet
+2. B grade: IE for Windows, Opera Mini
 3. C grade: n/a
 
-If you live somewhere else, or are working on a site that will serve somewhere else (e.g. certain countries, or locales), then you will probably have different common browsers to test.
+If your target audience is mostly located somewhere else, then the most common browsers and OSs may differ from above.
 
-> **Note:** "The CEO of my company uses a Blackberry, so we'd better make sure it looks good on that" can also be a persuasive argument.
+> **Note:** "The CEO of my company uses a Blackberry, so we'd better make sure it looks good on that" can also be something to consider.
 
-### Browser support stats
+### Browser statistics
 
-One helpful measure you can call on to inform your browser testing choices is browser support stats. There are a number of sites that provide such stats, for example:
-
-- [Statcounter](https://gs.statcounter.com/)
-
-This is a very North America-centric, and not particularly accurate, but it can give you an idea of broad trends.
-
-Opera Mini isn't very capable in terms of running complex JavaScript at runtime. See [Opera Mini and JavaScript](https://dev.opera.com/articles/opera-mini-and-javascript/) for more details. We should put this into grade B as well.
+Some websites show which browsers are popular in a given region. For example, [Statcounter](https://gs.statcounter.com/) gives an idea of trends in North America.
 
 ### Using analytics
 
-A much more accurate source of data, if you can get it, comes from an analytics app like [Google Analytics](https://marketingplatform.google.com/about/analytics/). This is an application that will give you accurate stats on exactly what browsers people are using to browse your site. Of course, this relies on you already having a site to use it on, so it isn't much good for completely new sites.
+A much more accurate source of data, if you can get it, is an analytics app like [Google Analytics](https://marketingplatform.google.com/about/analytics/), which tells you exactly what browsers people are using to browse your site. Of course, this relies on you already having a site to use it on, so it isn't good for completely new sites.
 
-But an analytics history can be useful for finding support stats to influence say a new version of a company's site, or new features you are adding to an existing site. If you have these available, they are far more accurate than global browser stats like those mentioned above.
-
-You may also consider using open source and privacy focussed analytics platforms like [Open Web Analytics](https://www.openwebanalytics.com/) and [Matomo](https://matomo.org). They expect you to self-host the analytics platform.
+You may also consider using open source and privacy-focused analytics platforms like [Open Web Analytics](https://www.openwebanalytics.com/) and [Matomo](https://matomo.org). They expect you to self-host the analytics platform.
 
 #### Setting up Google analytics
 
@@ -124,15 +113,15 @@ By default, you should see the reporting tab, like so:
 There is a huge amount of data you could look at using Google Analytics — customized reports in different categories, etc. — and we haven't got time to discuss it all.
 [Getting started with Analytics](https://support.google.com/analytics/answer/9306384?visit_id=637855964517698041-2103767437&rd=1) provides some useful guidance on reporting (and more) for beginners.
 
-You should also be encouraged to look at the different options on the left-hand side, and see what kinds of data you can find out. For example, you can find out what browsers and operating systems your users are using by selecting _Audience > Technology > Browser & OS_ from the left-hand menu.
+You can see what browsers and operating systems your users are using by selecting _Audience > Technology > Browser & OS_ from the left-hand menu.
 
 > **Note:** When using Google analytics, you need to beware of misleading bias, e.g. "We have no Firefox Mobile users" might lead you to not bother supporting Firefox mobile. But you are not going to have any Firefox Mobile users if the site was broken on Firefox mobile in the first place.
 
 ### Other considerations
 
-There are other considerations that you should probably include as well. You should definitely include accessibility as a grade A testing requirement (we'll cover exactly what you should test in our Handling common accessibility problems article)
+You should include accessibility as a grade A testing requirement (we'll cover exactly what you should test in our Handling common accessibility problems article).
 
-Plus you might have other considerations. If you are creating some kind of company intranet for delivering sales figures to managers, and all the managers have been provided with Windows phones for example, you will probably want to make mobile IE support a priority.
+Also, you should be aware of situation-specific needs. For example, if you are creating some kind of company intranet for delivering sales figures to managers, and all the managers have been provided with Windows phones, you will probably want to make mobile IE support a priority.
 
 ### Final support chart
 

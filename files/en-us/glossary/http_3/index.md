@@ -1,6 +1,7 @@
 ---
 title: HTTP/3
 slug: Glossary/HTTP_3
+page-type: glossary-definition
 tags:
   - HTTP
   - Intro

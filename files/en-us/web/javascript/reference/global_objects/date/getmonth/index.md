@@ -1,6 +1,7 @@
 ---
 title: Date.prototype.getMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
+page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript
@@ -37,7 +38,7 @@ The second statement below assigns the value 11 to the variable `month`,
 based on the value of the {{jsxref("Date")}} object `xmas95`.
 
 ```js
-const xmas95 = new Date('December 25, 1995 23:15:30');
+const xmas95 = new Date("December 25, 1995 23:15:30");
 const month = xmas95.getMonth();
 
 console.log(month); // 11
@@ -50,10 +51,10 @@ console.log(month); // 11
 > made easier:
 >
 > ```js
-> const options = { month: 'long'};
-> console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
+> const options = { month: "long" };
+> console.log(new Intl.DateTimeFormat("en-US", options).format(Xmas95));
 > // December
-> console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
+> console.log(new Intl.DateTimeFormat("de-DE", options).format(Xmas95));
 > // Dezember
 > ```
 

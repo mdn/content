@@ -322,16 +322,16 @@ The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macr
 
 {{AvailableInWorkers}}
 
-- {{ARIARole("button")}}
-- {{ARIARole("checkbox")}}
-- {{ARIARole("menuitem")}}
-- {{ARIARole("menuitemcheckbox")}}
-- {{ARIARole("menuitemradio")}}
-- {{ARIARole("option")}}
-- {{ARIARole("radio")}}
-- {{ARIARole("switch")}}
-- {{ARIARole("tab")}}
-- {{ARIARole("treeitem")}}
+- [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
+- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
+- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
+- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
+- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
+- [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
+- [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
+- [`switch`](/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role)
+- [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
+- [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role)
 
 <!---->
 

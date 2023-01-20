@@ -48,7 +48,7 @@ This article provides information about the changes in Firefox 65 that will affe
 
   - `meter`, which is now used as the default value for {{htmlelement("meter")}} elements in UA stylesheets. The existing value `meterbar` is now an alias for `meter` ({{bug(1501483)}}).
   - `progress-bar`, which is now used as the default value for {{htmlelement("progress")}} elements in UA stylesheets. The existing value `progressbar` is now an alias for `progress-bar` ({{bug(1501506)}}).
-  - `textarea`, which is now used as the default value for {{htmlelement("textarea")}} elements in UA stylesheets. The existing value `textfield-multiline` is now an alias for `textarea` ({{bug(1507905)}})
+  - `textarea`, which is now used as the default value for {{htmlelement("textarea")}} elements in UA stylesheets. The existing value `textfield-multiline` is now an alias for `textarea` ({{bug(1507905)}}).
 
 - The behavior of {{cssxref("user-select")}} has been changed to make it align more with other browsers ({{bug(1506547)}}). Specifically:
 

@@ -1,6 +1,7 @@
 ---
 title: Intl.Locale.prototype.baseName
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName
+page-type: javascript-instance-accessor-property
 tags:
   - Internationalization
   - Intl

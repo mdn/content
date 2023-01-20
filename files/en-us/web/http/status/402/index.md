@@ -17,7 +17,7 @@ Sometimes, this status code indicates that the request cannot be processed until
 
 ## Status
 
-```plain
+```http
 402 Payment Required
 ```
 

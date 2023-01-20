@@ -1,6 +1,7 @@
 ---
 title: RegExp.prototype.global
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
+page-type: javascript-instance-accessor-property
 tags:
   - JavaScript
   - Property

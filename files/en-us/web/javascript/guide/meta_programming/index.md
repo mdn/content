@@ -1,6 +1,7 @@
 ---
 title: Meta programming
 slug: Web/JavaScript/Guide/Meta_programming
+page-type: guide
 tags:
   - ECMAScript 2015
   - Guide

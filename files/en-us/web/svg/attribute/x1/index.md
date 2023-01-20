@@ -1,6 +1,7 @@
 ---
 title: x1
 slug: Web/SVG/Attribute/x1
+page-type: svg-attribute
 tags:
   - Drawing Lines
   - Gradients

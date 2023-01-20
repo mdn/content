@@ -1,6 +1,7 @@
 ---
 title: '<s>: The Strikethrough element'
 slug: Web/HTML/Element/s
+page-type: html-element
 tags:
   - Element
   - HTML

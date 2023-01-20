@@ -1,6 +1,7 @@
 ---
 title: Effective connection type
 slug: Glossary/Effective_connection_type
+page-type: glossary-definition
 tags:
   - Navigator
   - Network Information API

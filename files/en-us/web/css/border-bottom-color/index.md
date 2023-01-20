@@ -24,7 +24,7 @@ The **`border-bottom-color`** CSS property sets the color of an element's bottom
 border-bottom-color: red;
 border-bottom-color: #ffbb00;
 border-bottom-color: rgb(255, 0, 0);
-border-bottom-color: hsla(100%, 50%, 25%, 0.75);
+border-bottom-color: hsl(100deg 50% 25% / 0.75);
 border-bottom-color: currentcolor;
 border-bottom-color: transparent;
 

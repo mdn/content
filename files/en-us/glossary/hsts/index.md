@@ -1,6 +1,7 @@
 ---
 title: HSTS
 slug: Glossary/HSTS
+page-type: glossary-definition
 tags:
   - HTTP
   - Security

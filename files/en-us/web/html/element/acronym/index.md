@@ -1,6 +1,7 @@
 ---
 title: <acronym>
 slug: Web/HTML/Element/acronym
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -45,6 +46,8 @@ Though the purpose of this tag is purely for the convenience of the author, its 
 - A few browsers not only add a dotted underline, but also put it in small caps; to avoid this styling, adding something like {{cssxref('font-variant')}}`: none` in the CSS takes care of this case.
 
 It is therefore recommended that web authors either explicitly style this element, or accept some cross-browser variation.
+
+<!-- ## Technical summary -->
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: Stringifier
 slug: Glossary/Stringifier
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Stringifier

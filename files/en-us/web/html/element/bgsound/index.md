@@ -1,6 +1,7 @@
 ---
 title: '<bgsound>: The Background Sound element'
 slug: Web/HTML/Element/bgsound
+page-type: html-element
 tags:
   - Audio
   - Background Sound
@@ -42,6 +43,8 @@ The **`<bgsound>`** [HTML](/en-US/docs/Web/HTML) element is deprecated. It sets 
 Historically, the {{HTMLElement("embed")}} element could be used with audio player plug-ins to play audio in the background in most browsers. However, even this is no longer appropriate, and you should use `<audio>` instead, since it's more capable, more compatible, and doesn't require plug-ins.
 
 You can write `<bgsound>` as a self-closing tag (`<bgsound />`); however, since this element is non-standard, doing so will still not validate.
+
+<!-- ## Technical summary -->
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: Logical OR assignment (||=)
 slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
@@ -49,7 +50,7 @@ const x = {
   },
 };
 
-x.value ??= 2;
+x.value ||= 2;
 ```
 
 In fact, if `x` is truthy, `y` is not evaluated at all.

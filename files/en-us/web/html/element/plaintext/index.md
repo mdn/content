@@ -1,6 +1,7 @@
 ---
 title: '<plaintext>: The Plain Text element (Deprecated)'
 slug: Web/HTML/Element/plaintext
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -31,6 +32,8 @@ This element has no other attributes than the [global attributes](/en-US/docs/We
 ## DOM interface
 
 This element implements the {{domxref('HTMLElement')}} interface.
+
+<!-- ## Technical summary -->
 
 ## Specifications
 

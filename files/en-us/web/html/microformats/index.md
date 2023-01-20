@@ -1,6 +1,7 @@
 ---
 title: Microformats
 slug: Web/HTML/microformats
+page-type: guide
 tags:
   - Composing
   - HTML

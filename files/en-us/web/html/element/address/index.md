@@ -1,6 +1,7 @@
 ---
 title: '<address>: The Contact Address element'
 slug: Web/HTML/Element/address
+page-type: html-element
 tags:
   - Address
   - Author
@@ -27,6 +28,42 @@ The **`<address>`** [HTML](/en-US/docs/Web/HTML) element indicates that the encl
 The contact information provided by an `<address>` element's contents can take whatever form is appropriate for the context, and may include any type of contact information that is needed, such as a physical address, URL, email address, phone number, social media handle, geographic coordinates, and so forth. The `<address>` element should include the name of the person, people, or organization to which the contact information refers.
 
 `<address>` can be used in a variety of contexts, such as providing a business's contact information in the page header, or indicating the author of an article by including an `<address>` element within the {{HTMLElement("article")}}.
+
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Usage notes
+
+- The `<address>` element can only be used to represent the contact information for its nearest {{HTMLElement("article")}} or {{HTMLElement("body")}} element ancestor.
+- This element should not contain more information than the contact information, like a publication date (which belongs in a {{HTMLElement("time")}} element).
+- Typically an `<address>` element can be placed inside the {{HTMLElement("footer")}} element of the current section, if any.
+
+## Examples
+
+This example demonstrates the use of `<address>` to demarcate the contact information for an article's author.
+
+```html
+<address>
+  You can contact author at
+  <a href="http://www.somedomain.com/contact"> www.somedomain.com</a>.<br />
+  If you see any bugs, please
+  <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.<br />
+  You may also want to visit us:<br />
+  Mozilla Foundation<br />
+  331 E Evelyn Ave<br />
+  Mountain View, CA 94041<br />
+  USA
+</address>
+```
+
+### Result
+
+{{EmbedLiveSample("Examples", "300", "200")}}
+
+Although it renders text with the same default styling as the {{HTMLElement("i")}} or {{HTMLElement("em")}} elements, it is more appropriate to use `<address>` when dealing with contact information, as it conveys additional semantic information.
+
+## Technical summary
 
 <table class="properties">
   <tbody>
@@ -98,40 +135,6 @@ The contact information provided by an `<address>` element's contents can take w
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Usage notes
-
-- The `<address>` element can only be used to represent the contact information for its nearest {{HTMLElement("article")}} or {{HTMLElement("body")}} element ancestor.
-- This element should not contain more information than the contact information, like a publication date (which belongs in a {{HTMLElement("time")}} element).
-- Typically an `<address>` element can be placed inside the {{HTMLElement("footer")}} element of the current section, if any.
-
-## Examples
-
-This example demonstrates the use of `<address>` to demarcate the contact information for an article's author.
-
-```html
-<address>
-  You can contact author at
-  <a href="http://www.somedomain.com/contact"> www.somedomain.com</a>.<br />
-  If you see any bugs, please
-  <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.<br />
-  You may also want to visit us:<br />
-  Mozilla Foundation<br />
-  331 E Evelyn Ave<br />
-  Mountain View, CA 94041<br />
-  USA
-</address>
-```
-
-### Result
-
-{{EmbedLiveSample("Examples", "300", "200")}}
-
-Although it renders text with the same default styling as the {{HTMLElement("i")}} or {{HTMLElement("em")}} elements, it is more appropriate to use `<address>` when dealing with contact information, as it conveys additional semantic information.
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: baseProfile
 slug: Web/SVG/Attribute/baseProfile
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG

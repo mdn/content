@@ -1,6 +1,7 @@
 ---
 title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method

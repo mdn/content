@@ -1,6 +1,7 @@
 ---
 title: Prerender
-slug: Glossary/prerender
+slug: Glossary/Prerender
+page-type: glossary-definition
 tags:
   - Prefetch
   - Security
