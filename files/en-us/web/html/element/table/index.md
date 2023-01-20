@@ -1,6 +1,7 @@
 ---
 title: "<table>: The Table element"
 slug: Web/HTML/Element/table
+page-type: html-element
 tags:
   - Element
   - HTML

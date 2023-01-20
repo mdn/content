@@ -1,6 +1,7 @@
 ---
 title: '<var>: The Variable element'
 slug: Web/HTML/Element/var
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -92,7 +93,7 @@ This HTML uses `<var>` to enclose the names of two variables.
 
 {{EmbedLiveSample("Overriding_the_default_style", 650, 120)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

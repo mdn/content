@@ -1,6 +1,7 @@
 ---
 title: rel=preload
 slug: Web/HTML/Attributes/rel/preload
+page-type: html-attribute-value
 tags:
   - Attribute
   - HTML

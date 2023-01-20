@@ -7891,7 +7891,7 @@
 /en-US/docs/Web/API/Document.domConfig	/en-US/docs/Web/API/Document
 /en-US/docs/Web/API/Document.querySelector	/en-US/docs/Web/API/Document/querySelector
 /en-US/docs/Web/API/Document.querySelectorAll	/en-US/docs/Web/API/Document/querySelectorAll
-/en-US/docs/Web/API/Document.registerElement	/en-US/docs/Web/API/Document/registerElement
+/en-US/docs/Web/API/Document.registerElement	/en-US/docs/Web/API/CustomElementRegistry/define
 /en-US/docs/Web/API/Document.scripts	/en-US/docs/Web/API/Document/scripts
 /en-US/docs/Web/API/Document.xmlEncoding	/en-US/docs/Web/API/Document/xmlEncoding
 /en-US/docs/Web/API/Document/Document:_DOMContentLoaded_event	/en-US/docs/Web/API/Document/DOMContentLoaded_event
@@ -7968,6 +7968,7 @@
 /en-US/docs/Web/API/Document/pointerout_event	/en-US/docs/Web/API/Element/pointerout_event
 /en-US/docs/Web/API/Document/pointerover_event	/en-US/docs/Web/API/Element/pointerover_event
 /en-US/docs/Web/API/Document/pointerup_event	/en-US/docs/Web/API/Element/pointerup_event
+/en-US/docs/Web/API/Document/registerElement	/en-US/docs/Web/API/CustomElementRegistry/define
 /en-US/docs/Web/API/Document/resourcetimingbufferfull_event	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
 /en-US/docs/Web/API/Document/selectstart_event	/en-US/docs/Web/API/Node/selectstart_event
 /en-US/docs/Web/API/Document/timeline/currentTime	/en-US/docs/Web/API/AnimationTimeline/currentTime

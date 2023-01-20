@@ -51,8 +51,8 @@ Whenever an element is rendered, these properties are used to determine the colo
 
 Every element is a box with some sort of content, and has a background and a border in addition to whatever contents the box may have.
 
-- [Borders](#borders)
-  - : See the section [Borders](#borders) for a list of the CSS properties you can use to set the colors of a box's borders.
+- [Borders](#borders_2)
+  - : See the section [Borders](#borders_2) for a list of the CSS properties you can use to set the colors of a box's borders.
 - {{cssxref("background-color")}}
   - : The background color to use in areas of the element that have no foreground content.
 - {{cssxref("column-rule-color")}}

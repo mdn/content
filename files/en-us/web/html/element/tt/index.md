@@ -1,6 +1,7 @@
 ---
 title: '<tt>: The Teletype Text element'
 slug: Web/HTML/Element/tt
+page-type: html-element
 tags:
   - Element
   - HTML

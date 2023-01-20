@@ -1,6 +1,7 @@
 ---
 title: rel=me
 slug: Web/HTML/Attributes/rel/me
+page-type: html-attribute-value
 tags:
   - Attribute
   - HTML

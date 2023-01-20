@@ -63,7 +63,7 @@ unit, which lets you specify the width as a percentage of the viewport width
 
 ### Selecting an image to fit window width
 
-In this example, a blog-like layout is created, displaying some text and an image which
+In this example, a blog-like layout is created, displaying some text and an image
 for which three size points are specified, depending on the width of the window. Three
 versions of the image are also available, with their widths specified. The browser takes
 all of this information and selects an image and width that best meets the specified

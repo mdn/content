@@ -1,6 +1,7 @@
 ---
 title: '<template>: The Content Template element'
 slug: Web/HTML/Element/template
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -144,7 +145,7 @@ container.appendChild(secondClone);
 
 {{EmbedLiveSample('Avoiding_DocumentFragment_pitfall')}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

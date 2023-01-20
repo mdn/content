@@ -1,6 +1,7 @@
 ---
 title: <input type="number">
 slug: Web/HTML/Element/input/number
+page-type: html-element
 tags:
   - Element
   - Forms

@@ -1,6 +1,7 @@
 ---
 title: <input type="search">
 slug: Web/HTML/Element/input/search
+page-type: html-element
 tags:
   - Form input
   - Forms
