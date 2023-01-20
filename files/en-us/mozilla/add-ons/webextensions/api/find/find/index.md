@@ -46,7 +46,7 @@ browser.find.find(
     - `tabId`
       - : `integer`. ID of the tab to search. Defaults to the active tab.
     - `caseSensitive`
-      - : `boolean`. If true, the search is case-sensitive. Defaults to `false`.
+      - : `boolean`. If `true` the, the search is case-sensitive. Defaults to `false`.
     - `entireWord`
       - : `boolean`. Match only entire words: so "Tok" will not be matched inside "Tokyo". Defaults to `false`.
     - `includeRangeData`
