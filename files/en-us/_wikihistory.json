@@ -52,29 +52,6 @@
       "Sheppy"
     ]
   },
-  "Games/Examples": {
-    "modified": "2020-10-27T19:21:22.639Z",
-    "contributors": [
-      "escattone",
-      "rmertens",
-      "tmertensacker",
-      "zlatnaspirala",
-      "goktugyil",
-      "ExE-Boss",
-      "herolf",
-      "wbamberg",
-      "jxjj",
-      "MarxGames",
-      "GoalieSave25",
-      "bartread",
-      "chrisdavidmills",
-      "samuelbeloola",
-      "micahbolen",
-      "fscholz",
-      "douglas-j-bothwell",
-      "xfq"
-    ]
-  },
   "Games/Introduction": {
     "modified": "2020-10-27T19:23:08.004Z",
     "contributors": [
@@ -29751,24 +29728,6 @@
       "Ptak82",
       "Dria",
       "JesseW"
-    ]
-  },
-  "Web/API/Document/registerElement": {
-    "modified": "2020-10-15T21:30:06.830Z",
-    "contributors": [
-      "ExE-Boss",
-      "fscholz",
-      "chrisdavidmills",
-      "vp2177",
-      "mmk",
-      "ebidel",
-      "jpnelson",
-      "Dan-Dascalescu",
-      "maybe",
-      "teoli",
-      "Sebastianz",
-      "markg",
-      "gasolin"
     ]
   },
   "Web/API/Document/releaseCapture": {

@@ -78,7 +78,7 @@ This results in:
 
 {{EmbedLiveSample("Labeling_warnings", 650, 80)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

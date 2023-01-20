@@ -48,7 +48,7 @@ The output looks like this in your browser:
 
 {{EmbedLiveSample("Using_ruby_annotations", 600, 60)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

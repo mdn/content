@@ -49,7 +49,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 {{EmbedLiveSample("Examples", 600, 120)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

@@ -101,7 +101,7 @@ function NavigatorExample() {
 
 {{EmbedLiveSample("Poems", "100%", 250)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

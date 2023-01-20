@@ -49,7 +49,7 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
 
 {{EmbedLiveSample("Using_aside")}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
