@@ -54,7 +54,7 @@ browser.find.find(
     - `includeRectData`
       - : `boolean`. Include rectangle data in the response, which describes where in the rendered page the match was found. Defaults to `false`
     - `matchDiacritics`
-      - : `boolean`. If true, the search distinguish between accented letters and their base letters. For example, when set to `true`, searching for "résumé" does not find a match for "resume." Defaults to `false`.
+      - : `boolean`. If `true`, the search distinguishes between accented letters and their base letters. For example, when set to `true`, searching for "résumé" does not find a match for "resume". Defaults to `false`.
 
 ### Return value
 
