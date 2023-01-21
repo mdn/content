@@ -362,7 +362,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 
 ### Blend mode comparison
 
-In the following example, we have a `<div>` with two background images set on it — a Firefox logo on top of a linear gradient. Below it, we have a provided a `<select>` menu that allows you to change the `background-blend-mode` applied to the `<div>`, allowing you to compare the different blend mode effects.
+In the following example, we have a `<div>` with a background image set on it — a Firefox logo on top of a linear gradient. Below it, we have a provided a `<select>` menu that allows you to change the `background-blend-mode` applied to the `<div>`, allowing you to compare the different blend mode effects.
 
 #### HTML
 
