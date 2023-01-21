@@ -301,7 +301,7 @@ const func = (a, b, c)
 
 For the purpose of formatting, you may put the line break after the arrow or use parentheses/braces around the function body, as shown below. You can also put line breaks between parameters.
 
-```js
+```js-nolint
 const func = (a, b, c) =>
   1;
 
