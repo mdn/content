@@ -177,7 +177,7 @@ const func = () => ({ foo: 1 });
 Arrow function expressions should only be used for non-method functions because they do not have their own `this`. Let's see what happens when we try to use them as methods:
 
 ```js
-"use strict";
+'use strict';
 
 const obj = {
   i: 10,
