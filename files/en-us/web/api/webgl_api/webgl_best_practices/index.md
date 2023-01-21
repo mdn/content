@@ -465,7 +465,7 @@ Behind the scenes in the browser:
     drawArrays()
     bindTexture(webgl_texture)
     -texImage2D(HTMLVideoElement):
-        +useProgram(_internal_tex_tranform_prog)
+        +useProgram(_internal_tex_transform_prog)
 <pipeline flush>
         +bindFramebuffer(webgl_texture._internal_framebuffer)
         +bindTexture(HTMLVideoElement._internal_video_tex)
@@ -501,7 +501,7 @@ Behind the scenes in the browser:
     …
     bindTexture(webgl_texture)
     -texImage2D(HTMLVideoElement):
-        +useProgram(_internal_tex_tranform_prog)
+        +useProgram(_internal_tex_transform_prog)
 <pipeline flush>
         +bindFramebuffer(webgl_texture._internal_framebuffer)
         +bindTexture(HTMLVideoElement._internal_video_tex)
