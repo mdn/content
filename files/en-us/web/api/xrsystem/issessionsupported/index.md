@@ -58,8 +58,7 @@ returned promise, passing to the rejection handler a {{domxref("DOMException")}}
 `name` is one of the following strings.
 
 - `SecurityError`
-  - : The document's origin does not have permission to use the
-    `xr-spatial-tracking` [feature policy](/en-US/docs/Web/HTTP/Feature_Policy).
+  - : Use of this feature is blocked by an `xr-spatial-tracking` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ## Examples
 

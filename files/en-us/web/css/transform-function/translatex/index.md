@@ -167,3 +167,4 @@ div {
 - [`translateY()`](/en-US/docs/Web/CSS/transform-function/translateY)
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxref("translate")}}

@@ -19,7 +19,7 @@ tags:
 
 ## Reason
 
-```
+```plain
 Reason: Multiple CORS header 'Access-Control-Allow-Origin' not allowed
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Intl.NumberFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
+page-type: javascript-static-method
 tags:
   - Internationalization
   - Intl
@@ -14,7 +15,7 @@ browser-compat: javascript.builtins.Intl.NumberFormat.supportedLocalesOf
 
 {{JSRef}}
 
-The **`Intl.NumberFormat.supportedLocalesOf()`** method returns
+The **`Intl.NumberFormat.supportedLocalesOf()`** static method returns
 an array containing those of the provided locales that are supported in number
 formatting without having to fall back to the runtime's default locale.
 
@@ -41,7 +42,7 @@ Intl.NumberFormat.supportedLocalesOf(locales, options)
       - : The locale matching algorithm to use. Possible values are
         `"lookup"` and `"best fit"`; the default is
         `"best fit"`. For information about this option, see the
-        {{jsxref("Intl", "Intl", "#Locale_negotiation", 1)}} page.
+        {{jsxref("Intl", "Intl", "#locale_identification_and_negotiation", 1)}} page.
 
 ### Return value
 

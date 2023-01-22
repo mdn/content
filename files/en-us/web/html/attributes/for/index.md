@@ -1,6 +1,7 @@
 ---
 title: 'HTML attribute: for'
 slug: Web/HTML/Attributes/for
+page-type: html-attribute
 tags:
   - Attribute
   - Attributes

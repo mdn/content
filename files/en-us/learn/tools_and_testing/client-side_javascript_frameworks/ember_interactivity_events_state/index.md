@@ -181,7 +181,7 @@ class Todo {
 }
 ```
 
-This class represents a todo — it contains a `@tracked` `text` property containing the text of the todo, and a `@tracked` `isCompleted` property that specifies whether the todo has been completed or not. When instantiated, a `Todo` object will have an initial `text` value equal to the text given to it when created (see below), and an `isCompleted` value of `false`. The only Ember-specific part of this class is the `@tracked` decorator — this hooks in to the reactivity system and allows Ember to update what you're seeing in your app automatically if the tracked properties change. [More information on tracked can be found here](https://api.emberjs.com/ember/3.15/functions/@glimmer%2Ftracking/tracked).
+This class represents a todo — it contains a `@tracked text` property containing the text of the todo, and a `@tracked isCompleted` property that specifies whether the todo has been completed or not. When instantiated, a `Todo` object will have an initial `text` value equal to the text given to it when created (see below), and an `isCompleted` value of `false`. The only Ember-specific part of this class is the `@tracked` decorator — this hooks in to the reactivity system and allows Ember to update what you're seeing in your app automatically if the tracked properties change. [More information on tracked can be found here](https://api.emberjs.com/ember/3.15/functions/@glimmer%2Ftracking/tracked).
 
 Now it's time to add to the body of the service.
 

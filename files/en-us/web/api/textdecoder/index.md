@@ -45,7 +45,7 @@ _The `TextDecoder` interface doesn't inherit any methods_.
 
 ### Representing text with typed arrays
 
-This example shows how to decode a Chinese/Japanese character ![](2019-05-21_191907.png), as represented by five different typed arrays: {{jsxref("Uint8Array")}}, {{jsxref("Int8Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int16Array")}}, and {{jsxref("Int32Array")}}.
+This example shows how to decode a Chinese/Japanese character ![Chinese character meaning lucky](2019-05-21_191907.png), as represented by five different typed arrays: {{jsxref("Uint8Array")}}, {{jsxref("Int8Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int16Array")}}, and {{jsxref("Int32Array")}}.
 
 ```js
 let utf8decoder = new TextDecoder(); // default 'utf-8' or 'utf8'

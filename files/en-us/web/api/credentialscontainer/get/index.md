@@ -69,7 +69,7 @@ get(options)
     - `publicKey`
       - : An object containing requirements for returned [WebAuthn](/en-US/docs/Web/API/Web_Authentication_API) credentials. The available options are:
         - `challenge`
-          - :An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} emitted by the relying party's server and used as a [cryptographic challenge](https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication). This value will be signed by the authenticator and the signature will be sent back as part of {{domxref("AuthenticatorAssertionResponse.signature")}}.
+          - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} emitted by the relying party's server and used as a [cryptographic challenge](https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication). This value will be signed by the authenticator and the signature will be sent back as part of {{domxref("AuthenticatorAssertionResponse.signature")}}.
         - `timeout` {{optional_inline}}
           - : A numerical hint, in milliseconds, which indicates the time the caller is willing to wait for the retrieval operation to complete. This hint may be overridden by the browser.
         - `rpId` {{optional_inline}}
@@ -83,7 +83,7 @@ get(options)
     - `mediation`
       - : A {{jsxref("String")}} indicating whether the user will
         be required to log on for every visit to the website. Valid values are
-        `"silent"`, `"optional"`, or `"required"`.
+        `"silent"`, `"optional"`, `"conditional"`, or `"required"`.
     - `unmediated` {{deprecated_inline}}
       - : A boolean value
         indicating the returned {{domxref("Credential")}} instance should not require user
@@ -101,6 +101,11 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("Credential")}} instance 
 matches the provided parameters. If a single Credential cannot be unambiguously
 obtained, the Promise will resolve to null.
 
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+
 ## Specifications
 
 {{Specifications}}
@@ -111,5 +116,5 @@ obtained, the Promise will resolve to null.
 
 ## See also
 
-- {{HTTPHeader("Feature-Policy")}} directive
-  {{HTTPHeader("Feature-Policy/publickey-credentials-get","publickey-credentials-get")}}
+- {{HTTPHeader("Permissions-Policy")}} directive
+  {{HTTPHeader("Permissions-Policy/publickey-credentials-get","publickey-credentials-get")}}

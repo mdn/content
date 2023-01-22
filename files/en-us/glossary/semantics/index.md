@@ -1,6 +1,7 @@
 ---
 title: Semantics
 slug: Glossary/Semantics
+page-type: glossary-definition
 tags:
   - CodingScripting
   - HTML

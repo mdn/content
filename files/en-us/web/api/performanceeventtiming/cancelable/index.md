@@ -10,7 +10,7 @@ tags:
 browser-compat: api.PerformanceEventTiming.cancelable
 ---
 
-{{APIRef}}
+{{APIRef("Performance API")}}
 
 The read-only **`cancelable`** property returns the associated event's [`cancelable`](/en-US/docs/Web/API/Event/cancelable) property, indicating whether the event can be canceled.
 
@@ -35,7 +35,7 @@ const observer = new PerformanceObserver((list) => {
 });
 
 // Register the observer for events
-observer.observe({entryTypes: ["event"]});
+observer.observe({type: "event", buffered: true});
 ```
 
 ## Specifications

@@ -45,7 +45,7 @@ DBOpenRequest.onsuccess = (event) => {
   // store the result of opening the database in the db variable. This is used a lot below
   db = DBOpenRequest.result;
 
-  // This line will log the version of the connected database, which should be
+  // This line will log the names of the object stores of the connected database, which should be
   // an object that looks like { ['my-store-name'] }
   console.log(db.objectStoreNames);
 };

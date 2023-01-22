@@ -1,6 +1,7 @@
 ---
 title: '<picture>: The Picture element'
 slug: Web/HTML/Element/picture
+page-type: html-element
 tags:
   - Element
   - Graphics
@@ -14,7 +15,7 @@ tags:
 browser-compat: html.elements.picture
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<picture>`** [HTML](/en-US/docs/Web/HTML) element contains zero or more {{HTMLElement("source")}} elements and one {{HTMLElement("img")}} element to offer alternative versions of an image for different display/device scenarios.
 

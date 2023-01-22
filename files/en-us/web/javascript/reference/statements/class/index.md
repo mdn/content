@@ -1,6 +1,7 @@
 ---
 title: class
 slug: Web/JavaScript/Reference/Statements/class
+page-type: javascript-statement
 tags:
   - Classes
   - Declaration
@@ -14,7 +15,7 @@ browser-compat: javascript.statements.class
 
 {{jsSidebar("Statements")}}
 
-The **class declaration** creates a new class
+The **`class`** declaration creates a new class
 with a given name using prototype-based inheritance.
 
 {{EmbedInteractiveExample("pages/js/statement-class.html")}}
@@ -35,7 +36,7 @@ class name [extends otherName] {
 The class body of a class declaration is executed in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). The
 `constructor` method is optional.
 
-Class declarations are not {{Glossary("Hoisting", "hoisted")}}
+Class declarations behave like [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) and are not {{Glossary("Hoisting", "hoisted")}}
 (unlike [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function)).
 
 ## Examples
@@ -83,6 +84,8 @@ expression.
 let Foo = class {};
 class Foo {} // Uncaught SyntaxError: Identifier 'Foo' has already been declared
 ```
+
+If you're experimenting in a REPL, such as the Firefox web console (**Tools** > **Web Developer** > **Web Console**), and you run two class declarations with the same name in two separate inputs, you may get the same re-declaration error. See further discussion of this issue in {{bug(1580891)}}. The Chrome console allows class re-declarations between different REPL inputs.
 
 ## Specifications
 

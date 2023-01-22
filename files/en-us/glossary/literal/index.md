@@ -1,6 +1,7 @@
 ---
 title: Literal
 slug: Glossary/Literal
+page-type: glossary-definition
 tags:
   - Literal
   - JavaScript
@@ -29,7 +30,7 @@ The following are examples of string literals:
 "bar";
 "1234";
 "one line \n new line";
-"John's cat";
+"Joyo's cat";
 ```
 
 ### Object literals

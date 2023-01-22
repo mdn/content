@@ -1,6 +1,7 @@
 ---
 title: Map.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Map/keys
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - Iterator
@@ -43,7 +44,7 @@ const mapIter = myMap.keys();
 
 console.log(mapIter.next().value); // "0"
 console.log(mapIter.next().value); // 1
-console.log(mapIter.next().value); // Object
+console.log(mapIter.next().value); // {}
 ```
 
 ## Specifications

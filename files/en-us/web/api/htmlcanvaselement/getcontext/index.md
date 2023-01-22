@@ -36,6 +36,7 @@ getContext(contextType, contextAttributes)
 
   - : A string containing the context identifier defining the drawing
     context associated to the canvas. Possible values are:
+
     - `"2d"`, leading to the creation of a
       {{domxref("CanvasRenderingContext2D")}} object representing a two-dimensional
       rendering context.
@@ -62,9 +63,9 @@ getContext(contextType, contextAttributes)
     example:
 
     ```js
-    const gl = canvas.getContext('webgl', {
+    const gl = canvas.getContext("webgl", {
       antialias: false,
-      depth: false
+      depth: false,
     });
     ```
 
@@ -168,8 +169,8 @@ Given this {{HTMLElement("canvas")}} element:
 You can get a `2d` context of the canvas with the following code:
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 console.log(ctx); // CanvasRenderingContext2D { /* … */ }
 ```
 

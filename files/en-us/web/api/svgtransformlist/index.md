@@ -373,7 +373,7 @@ In this example we create a function that will apply three different transformat
     objects
   </desc>
   <script type="application/ecmascript">
-    <![CDATA[ 
+    <![CDATA[
       function transformMe(evt) {
         // svg root element to access the createSVGTransform() function
         const svgroot = evt.target.parentNode;

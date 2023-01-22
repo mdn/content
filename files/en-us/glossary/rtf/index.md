@@ -1,6 +1,7 @@
 ---
 title: RTF
 slug: Glossary/RTF
+page-type: glossary-definition
 tags:
   - Composing
   - Format

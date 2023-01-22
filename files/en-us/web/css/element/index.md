@@ -51,7 +51,7 @@ This example uses a hidden {{HTMLElement("div")}} as a background. The backgroun
   <div
     id="myBackground1"
     style="width:1024px; height:1024px; background-image: linear-gradient(to right, red, orange, yellow, white);">
-    <p style="transform-origin:0 0; transform: rotate(45deg); color:white;">
+    <p style="transform-origin:0 0; rotate: 45deg; color:white;">
       This text is part of the background. Cool, huh?
     </p>
   </div>
@@ -107,6 +107,5 @@ the `<div id="css-source">` inside `<div id="css-result">`.
 - {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("&lt;gradient&gt;")}}
-- {{cssxref("element", "element()")}}
 - {{cssxref("cross-fade", "cross-fade()")}}
 - {{domxref("document.mozSetImageElement()")}}

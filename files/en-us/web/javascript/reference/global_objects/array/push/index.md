@@ -1,6 +1,7 @@
 ---
 title: Array.prototype.push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
+page-type: javascript-instance-method
 tags:
   - Array
   - JavaScript
@@ -54,8 +55,8 @@ appends two elements to it. The `total` variable contains the new length of
 the array.
 
 ```js
-const sports = ['soccer', 'baseball'];
-const total = sports.push('football', 'swimming');
+const sports = ["soccer", "baseball"];
+const total = sports.push("football", "swimming");
 
 console.log(sports); // ['soccer', 'baseball', 'football', 'swimming']
 console.log(total); // 4
@@ -67,8 +68,8 @@ This example uses {{jsxref("Operators/Spread_syntax", "spread syntax", "", "1")}
 second array into the first one.
 
 ```js
-const vegetables = ['parsnip', 'potato'];
-const moreVegs = ['celery', 'beetroot'];
+const vegetables = ["parsnip", "potato"];
+const moreVegs = ["celery", "beetroot"];
 
 // Merge the second array into the first one
 vegetables.push(...moreVegs);
@@ -125,8 +126,7 @@ const obj = {
 // Let's add some empty objects just to illustrate.
 obj.addElem({});
 obj.addElem({});
-console.log(obj.length);
-// → 2
+console.log(obj.length); // 2
 ```
 
 Note that although `obj` is not an array, the method `push`

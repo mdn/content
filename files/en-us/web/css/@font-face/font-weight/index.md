@@ -83,11 +83,7 @@ People experiencing low vision conditions may have difficulty reading text set w
 
 ## Formal syntax
 
-```
-<font-weight-absolute>{1,2}
-
-<font-weight-absolute> = normal | bold | <number [1,1000]>
-```
+{{csssyntax}}
 
 ## Examples
 

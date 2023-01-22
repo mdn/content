@@ -1,6 +1,7 @@
 ---
 title: itemprop
 slug: Web/HTML/Global_attributes/itemprop
+page-type: html-attribute
 tags:
   - Attribute
   - Global attribute
@@ -131,7 +132,7 @@ Similarly, for date- and time-related data, the time element and its datetime at
 ```html
 <div itemscope>
   I was born on
-  <time itemprop="birthday" datetime="2009-05-10">May 10th 2009</time>.
+  <time itemprop="birthday" datetime="1984-05-10">May 10th 1984</time>.
 </div>
 ```
 

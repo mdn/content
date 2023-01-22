@@ -340,7 +340,7 @@ const tcp = time.connectEnd - time.connectStart;
 
 ### SSL negotiation
 
-[`secureConnectionStart`](/en-US/docs/Web/API/PerformanceResourceTiming/secureConnectionStart) will be `undefined` if not available, `0` if [https](/en-US/docs/Glossary/https) in not used, or a time stamp if available, and used. In other words, if a secure connection was used, `secureConnectionStart` will be [truthy](/en-US/docs/Glossary/Truthy), and the time between `secureConnectionStart` and `requestStart` will greater than 0.
+[`secureConnectionStart`](/en-US/docs/Web/API/PerformanceResourceTiming/secureConnectionStart) will be `undefined` if not available, `0` if [https](/en-US/docs/Glossary/https) in not used, or a timestamp if available, and used. In other words, if a secure connection was used, `secureConnectionStart` will be [truthy](/en-US/docs/Glossary/Truthy), and the time between `secureConnectionStart` and `requestStart` will greater than 0.
 
 ```js
 const ssl = time.requestStart - time.secureConnectionStart;
@@ -386,7 +386,7 @@ When a user requests a website or application, [to populate the browser](/en-US/
 const navigationTimings = performance.getEntriesByType('navigation');
 ```
 
-The `performance.getEntriesByType('navigation')`a returns an array of [PerformanceEntry](/en-US/docs/Web/API/PerformanceEntry) objects for the _navigation_ _type_.
+The `performance.getEntriesByType('navigation')` a returns an array of [PerformanceEntry](/en-US/docs/Web/API/PerformanceEntry) objects for the _navigation_ _type_.
 
 ![The results of when performance.getEntriesByType('navigation'); is entered into the console for this document](perfgentrybytypenavigation.png)
 
@@ -442,7 +442,7 @@ const request = timing.responseStart - timing.requestStart;
 
 ### Load event duration
 
-By subtracting the time stamp from immediately before the load event of the current document is fired from the time when the load event of the current document is completed, you can measure the duration of the load event.
+By subtracting the timestamp from immediately before the load event of the current document is fired from the time when the load event of the current document is completed, you can measure the duration of the load event.
 
 ```js
 const load = timing.loadEventEnd - timing.loadEventStart;

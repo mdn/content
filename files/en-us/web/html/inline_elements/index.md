@@ -1,6 +1,7 @@
 ---
 title: Inline elements
 slug: Web/HTML/Inline_elements
+page-type: guide
 tags:
   - Beginner
   - Elements
@@ -10,6 +11,8 @@ tags:
   - Layout
   - Reference
 ---
+
+{{HTMLSidebar}}
 
 In this article, we'll examine HTML inline-level elements and how they differ from [block-level elements](/en-US/docs/Web/HTML/Block-level_elements).
 
@@ -171,5 +174,3 @@ The following elements are inline by default (although block and inline elements
 - {{cssxref("display")}}
 - [Content categories](/en-US/docs/Web/Guide/HTML/Content_categories)
 - [Block and Inline Layout in Normal Flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}

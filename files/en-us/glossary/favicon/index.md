@@ -1,6 +1,7 @@
 ---
 title: Favicon
 slug: Glossary/Favicon
+page-type: glossary-definition
 tags:
   - Intro
   - favicon

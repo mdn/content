@@ -99,7 +99,7 @@ This example performs a four-second font size transition with a two-second delay
   background-color: #ffcccc;
   width: 200px;
   height: 200px;
-  transform: rotate(180deg);
+  rotate: 180deg;
 }
 ```
 

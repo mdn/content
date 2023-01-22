@@ -1,6 +1,7 @@
 ---
 title: Symbol.toPrimitive
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
+page-type: javascript-static-data-property
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -15,7 +16,11 @@ The **`Symbol.toPrimitive`** well-known symbol specifies a method that accepts a
 
 {{EmbedInteractiveExample("pages/js/symbol-toprimitive.html")}}
 
-{{js_property_attributes(0,0,0)}}
+## Value
+
+The well-known symbol `@@toPrimitive`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 
@@ -34,25 +39,25 @@ Following example describes how `Symbol.toPrimitive` property can modify the pri
 ```js
 // An object without Symbol.toPrimitive property.
 const obj1 = {};
-console.log(+obj1);     // NaN
+console.log(+obj1); // NaN
 console.log(`${obj1}`); // "[object Object]"
-console.log(obj1 + ''); // "[object Object]"
+console.log(obj1 + ""); // "[object Object]"
 
 // An object with Symbol.toPrimitive property.
 const obj2 = {
   [Symbol.toPrimitive](hint) {
-    if (hint === 'number') {
+    if (hint === "number") {
       return 10;
     }
-    if (hint === 'string') {
-      return 'hello';
+    if (hint === "string") {
+      return "hello";
     }
     return true;
-  }
+  },
 };
-console.log(+obj2);     // 10        — hint is "number"
+console.log(+obj2); // 10        — hint is "number"
 console.log(`${obj2}`); // "hello"   — hint is "string"
-console.log(obj2 + ''); // "true"    — hint is "default"
+console.log(obj2 + ""); // "true"    — hint is "default"
 ```
 
 ## Specifications

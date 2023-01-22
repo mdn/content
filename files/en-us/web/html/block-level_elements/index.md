@@ -1,6 +1,7 @@
 ---
 title: Block-level elements
 slug: Web/HTML/Block-level_elements
+page-type: guide
 tags:
   - Beginner
   - Development
@@ -8,6 +9,8 @@ tags:
   - HTML
   - Web
 ---
+
+{{HTMLSidebar}}
 
 In this article, we'll examine HTML block-level elements and how they differ from [inline-level elements](/en-US/docs/Web/HTML/Inline_elements).
 
@@ -53,7 +56,7 @@ There are a couple of key differences between block-level elements and inline el
 - Default formatting
   - : By default, block-level elements begin on new lines, but inline elements can start anywhere in a line.
 
-The distinction of block-level vs. inline elements was used in HTML specifications up to 4.01. Later, this binary distinction is replaced with a more complex set of [content categories](/en-US/docs/Web/Guide/HTML/Content_categories). While the "inline" category roughly corresponds to the category of [phrasing content](/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content), the "block-level" category doesn't directly correspond to any HTML content category, but _"block-level" and "inline" elements combined together_ correspond to the [flow content](/en-US/docs/Web/Guide/HTML/Content_categories#flow_content) in HTML. There are also additional categories, e.g. [interactive content](/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content).
+The distinction of block-level vs. inline elements was used in HTML specifications up to 4.01. Later, this binary distinction is replaced with a more complex set of [content categories](/en-US/docs/Web/Guide/HTML/Content_categories). While the "inline" category roughly corresponds to the category of [phrasing content](/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content), the "block-level" category doesn't directly correspond to any HTML content category, but _"block-level" and "inline" elements combined_ correspond to the [flow content](/en-US/docs/Web/Guide/HTML/Content_categories#flow_content) in HTML. There are also additional categories, e.g. [interactive content](/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content).
 
 ## Elements
 
@@ -121,5 +124,3 @@ The following is a complete list of all HTML "block-level" elements (although "b
 - [Inline elements](/en-US/docs/Web/HTML/Inline_elements)
 - {{cssxref("display")}}
 - [Block and Inline Layout in Normal Flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}

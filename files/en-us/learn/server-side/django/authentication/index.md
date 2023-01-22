@@ -88,7 +88,7 @@ Our superuser is already authenticated and has all permissions, so we'll need to
 > user = User.objects.create_user('myusername', 'myemail@crazymail.com', 'mypassword')
 >
 > # Update fields and then save again
-> user.first_name = 'John'
+> user.first_name = 'Tyrone'
 > user.last_name = 'Citizen'
 > user.save()
 > ```
@@ -432,7 +432,7 @@ Open the base template (**/locallibrary/catalog/templates/base_generic.html**) a
   </ul>
 ```
 
-As you can see, we use `if`-`else`-`endif` template tags to conditionally display text based on whether `\{{ user.is_authenticated }}` is true. If the user is authenticated then we know that we have a valid user, so we call `\{{ user.get_username }}` to display their name.
+As you can see, we use `if` / `else` / `endif` template tags to conditionally display text based on whether `\{{ user.is_authenticated }}` is true. If the user is authenticated then we know that we have a valid user, so we call `\{{ user.get_username }}` to display their name.
 
 We create the login and logout link URLs using the `url` template tag and the names of the respective URL configurations. Note also how we have appended `?next=\{{ request.path }}` to the end of the URLs. What this does is add a URL parameter `next` containing the address (URL) of the _current_ page, to the end of the linked URL. After the user has successfully logged in/out, the views will use this "`next`" value to redirect the user back to the page where they first clicked the login/logout link.
 

@@ -10,7 +10,7 @@ tags:
 browser-compat: api.EventCounts
 ---
 
-{{APIRef("Event Timing")}}
+{{APIRef("Performance API")}}
 
 The **`EventCounts`** interface is a read-only map where the keys are event types and the values are the number of events that have been dispatched for that event type.
 

@@ -1,6 +1,7 @@
 ---
 title: "<img>: The Image Embed element"
 slug: Web/HTML/Element/img
+page-type: html-element
 tags:
   - Content
   - Element
@@ -22,7 +23,7 @@ tags:
 browser-compat: html.elements.img
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<img>`** [HTML](/en-US/docs/Web/HTML) element embeds an image into the document.
 
@@ -118,6 +119,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `auto`
       - : Default: no preference for the decoding mode. The browser decides what is best for the user.
 
+- {{htmlattrdef("elementtiming")}}
+
+  - : Marks the image for observation by the {{domxref("PerformanceElementTiming")}} API. The value given becomes an identifier for the observed image element. See also the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute page.
+
 - {{htmlattrdef("fetchpriority")}} {{experimental_inline}}
 
   - : Provides a hint of the relative priority to use when fetching the image. Allowed values:
@@ -130,7 +135,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       - : Default: Signals automatic determination of fetch priority relative to other images.
 
 - {{htmlattrdef("height")}}
+
   - : The intrinsic height of the image, in pixels. Must be an integer without a unit.
+
+    > **Note:** Including `height` and [`width`](#attr-width) enables the aspect ratio of the image to be calculated by the browser prior to the image being loaded. This aspect ratio is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
+
 - {{htmlattrdef("ismap")}}
 
   - : This Boolean attribute indicates that the image is part of a [server-side map](https://en.wikipedia.org/wiki/Image_map#Server-side). If so, the coordinates where the user clicked on the image are sent to the server.
@@ -141,10 +150,12 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : Indicates how the browser should load the image:
 
-    - `eager`: Loads the image immediately, regardless of whether or not the image is currently within the visible viewport (this is the default value).
-    - `lazy`: Defers loading the image until it reaches a calculated distance from the viewport, as defined by the browser. The intent is to avoid the network and storage bandwidth needed to handle the image until it's reasonably certain that it will be needed. This generally improves the performance of the content in most typical use cases.
+    - `eager`
+      - : Loads the image immediately, regardless of whether or not the image is currently within the visible viewport (this is the default value).
+    - `lazy`
+      - : Defers loading the image until it reaches a calculated distance from the viewport, as defined by the browser. The intent is to avoid the network and storage bandwidth needed to handle the image until it's reasonably certain that it will be needed. This generally improves the performance of the content in most typical use cases.
 
-      > **Note:** Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.
+    > **Note:** Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.
 
 - {{htmlattrdef("referrerpolicy")}}
 
@@ -254,7 +265,7 @@ The following example embeds an image into the page and includes alternative tex
 
 ### Image link
 
-This example builds upon the previous one, showing how to turn the image into a link. To do so, nest the `<img>` tag inside the {{HTMLElement("a")}}. You should made the alternative text describe the resource the link is pointing to, as if you were using a text link instead.
+This example builds upon the previous one, showing how to turn the image into a link. To do so, nest the `<img>` tag inside the {{HTMLElement("a")}}. You should make the alternative text describe the resource the link is pointing to, as if you were using a text link instead.
 
 ```html
 <a href="https://developer.mozilla.org">
@@ -421,15 +432,15 @@ The value of the `title` attribute is usually presented to the user as a tooltip
                   ></code
                 >
               </li>
-              <li>{{ARIARole("link")}}</li>
-              <li>{{ARIARole("menuitem")}}</li>
-              <li>{{ARIARole("menuitemcheckbox")}}</li>
-              <li>{{ARIARole("menuitemradio")}}</li>
-              <li>{{ARIARole("option")}}</li>
-              <li>{{ARIARole("progressbar")}}</li>
-              <li>{{ARIARole("scrollbar")}}</li>
-              <li>{{ARIARole("separator")}}</li>
-              <li>{{ARIARole("slider")}}</li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role"><code>progressbar</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role"><code>scrollbar</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role"><code>separator</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role"><code>slider</code></a></li>
               <li>
                 <code
                   ><a
@@ -445,12 +456,12 @@ The value of the `title` attribute is usually presented to the user as a tooltip
                   ></code
                 >
               </li>
-              <li>{{ARIARole("treeitem")}}</li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a></li>
             </ul>
           </li>
           <li>
-            with empty <code>alt</code> attribute, {{ARIARole("none")}}
-            or {{ARIARole("presentation")}}
+            with empty <code>alt</code> attribute, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
+            or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
           </li>
           <li>
             with no <code>alt</code> attribute, no <code>role</code> permitted

@@ -99,7 +99,7 @@ in a total frame buffer size of 1280 by 720 pixels, with each eye's half of the 
 being 640x720 pixels. Now we can see the coordinates of each of the viewports
 representing these two views:
 
-![](twoviewsviewportcoords-scaledby2.svg)
+![Framebuffer and viewports with coordinates](twoviewsviewportcoords-scaledby2.svg)
 
 Since each eye gets half of the frame buffer, the result is that the left eye gets a
 640x720 portion of the buffer with the viewport's `x` and `y` at
@@ -145,7 +145,7 @@ we can use for the {{domxref("XRSession")}}; we set it as the rendering surface 
 {{domxref("XRRenderState")}} dictionary's {{domxref("XRRenderState.baseLayer")}}
 property. The result is a rendering context that looks like the diagram below:
 
-![](twoviewsviewportcoords.svg)
+![Framebuffer and viewports with coordinates](twoviewsviewportcoords.svg)
 
 Each time the {{domxref("XRViewerPose")}}'s {{domxref("XRViewerPose.views", "views")}}
 are iterated over for rendering, the rendering loop obtains an {{domxref("XRView")}} for

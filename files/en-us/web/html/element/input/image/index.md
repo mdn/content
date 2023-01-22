@@ -1,6 +1,7 @@
 ---
 title: <input type="image">
 slug: Web/HTML/Element/input/image
+page-type: html-element
 tags:
   - Element
   - Form Image
@@ -17,50 +18,11 @@ tags:
 browser-compat: html.elements.input.type_image
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`image`** are used to create graphical submit buttons, i.e. submit buttons that take the form of an image rather than text.
 
 {{EmbedInteractiveExample("pages/tabbed/input-image.html", "tabbed-standard")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
-      <td>None — the <code>value</code> attribute should not be specified.</td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>None.</td>
-    </tr>
-    <tr>
-      <td><strong>Supported common attributes</strong></td>
-      <td>
-        <a href="/en-US/docs/Web/HTML/Element/input#alt"><code>alt</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#src"><code>src</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#width"><code>width</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#height"><code>height</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#formaction"><code>formaction</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#formenctype"><code>formenctype</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#formmethod"><code>formmethod</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#formmethod"><code>formnovalidate</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#formtarget"><code>formtarget</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td>None.</td>
-    </tr>
-    <tr>
-      <td><strong>DOM interface</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>None.</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Value
 
@@ -78,7 +40,7 @@ For example, if you have a graphical button that shows an image with an icon and
 
 > **Note:** While the `alt` attribute is technically optional, you should always include one to maximize the usability of your content.
 
-Functionally, the `<input type="image">` `alt` attribute works just like the {{htmlattrxref("alt", "img")}} attribute on {{HTMLElement("img")}} elements.
+Functionally, the `alt` attribute of the `<input type="image">` element works just like the {{htmlattrxref("alt", "img")}} attribute on {{HTMLElement("img")}} elements.
 
 ### formaction
 
@@ -201,7 +163,7 @@ Let's look at a basic example that includes all the essential features you'd nee
   - : Specifies the HTTP method that the browser uses to submit the form. Possible values are:
 
     - `post`: The data from the form is included in the body of the form and is sent to the server.
-    - `get`: The data from the form is appended to the **`form`** attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.
+    - `get`: The data from the form is appended to the **`form`** attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side effects and contains only ASCII characters.
 
     If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the element's form owner.
 
@@ -331,7 +293,48 @@ label {
 }
 ```
 
-Here, `object-position` is configured to draw the image at the top-right corner of the element, while `object-fit` is set to `contain`, which indicates that the image should be drawn at the largest size that will fit within the element's box without altering its aspect ratio. Note the visible grey background of the element still visible in the area not covered by the image.
+Here, `object-position` is configured to draw the image in the top-right corner of the element, while `object-fit` is set to `contain`, which indicates that the image should be drawn at the largest size that will fit within the element's box without altering its aspect ratio. Note the visible grey background of the element still visible in the area not covered by the image.
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>None — the <code>value</code> attribute should not be specified.</td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Element/input#alt"><code>alt</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#src"><code>src</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#width"><code>width</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#height"><code>height</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#formaction"><code>formaction</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#formenctype"><code>formenctype</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#formmethod"><code>formmethod</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#formmethod"><code>formnovalidate</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#formtarget"><code>formtarget</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>None.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 
@@ -344,5 +347,6 @@ Here, `object-position` is configured to draw the image at the top-right corner 
 ## See also
 
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
+- The HTML {{HTMLElement("img")}} element
 - Positioning and sizing the image within the `<input>` element's frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
 - [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -63,8 +63,7 @@ renderbufferStorage(target, internalFormat, width, height)
     - `gl.RG32I`
     - `gl.RGB8`
     - `gl.RGBA8`
-    - `gl.SRGB8_ALPHA8` (also available as an extension for WebGL 1,
-        see below)
+    - `gl.SRGB8_ALPHA8` (also available as an extension for WebGL 1, see below)
     - `gl.RGB10_A2`
     - `gl.RGBA8UI`
     - `gl.RGBA8I`

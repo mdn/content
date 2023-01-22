@@ -94,8 +94,6 @@ As of Microsoft Edge 18, `-ms-high-contrast: none` is no longer supported. Micro
 
 The `-ms-high-contrast` media feature works with the {{CSSxRef("-ms-high-contrast-adjust")}} property.
 
-The `-ms-high-contrast` media feature was introduced in Windows 8.
-
 ## See also
 
 - [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)

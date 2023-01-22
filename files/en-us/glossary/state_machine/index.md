@@ -1,6 +1,7 @@
 ---
 title: State machine
 slug: Glossary/State_machine
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Finite

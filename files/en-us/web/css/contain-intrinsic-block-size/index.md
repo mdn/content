@@ -6,14 +6,12 @@ tags:
   - CSS Logical Property
   - CSS Property
   - Reference
-  - experimental
   - contain-intrinsic-block-size
-  - Experimental
 page-type: css-property
 browser-compat: css.properties.contain-intrinsic-block-size
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`contain-intrinsic-block-size`** [CSS](/en-US/docs/Web/CSS) [logical property](/en-US/docs/Web/CSS/CSS_Logical_Properties) defines the block size of an element that a browser can use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
 
@@ -72,6 +70,37 @@ The remembered value is not used if the child elements are being rendered; if si
 ## Formal syntax
 
 {{csssyntax}}
+
+## Examples
+
+### Setting the intrinsic block size
+
+The HTML below defines an element "contained_element" that will be subject to size constraint, and which contains a child element.
+
+```html
+<div id="contained_element">
+  <div class="child_element"></div>
+</div>
+```
+
+The CSS below sets the [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) of `contained_element` to `auto`, so if the element is hidden it will be size constrained.
+The intrinsic block size and inline size that are used when it is size constrained are set at the same time using `contain-intrinsic-block-size` and `contain-intrinsic-inline-size`, respectively.
+
+```css
+#contained_element {
+  border: 2px solid green;
+  inline-size: 151px;
+  content-visibility: auto;
+  contain-intrinsic-inline-size: 152px;
+  contain-intrinsic-block-size: 52px;
+}
+.child_element {
+  border: 1px solid red;
+  background: blue;
+  block-size: 50px;
+  inline-size: 150px;
+}
+```
 
 ## Specifications
 

@@ -600,7 +600,7 @@ Let's write an example:
    The test will be sent to BrowserStack, and the test result will be returned to your console. This shows the importance of including some kind of result reporting mechanism!
 
 5. Now if you go back to the [BrowserStack automation dashboard](https://www.browserstack.com/automate) page, you'll see your test listed:
-   ![](bstack_automated_results.png)
+   ![BrowserStack automated results](bstack_automated_results.png)
 
 If you click on the link for your test, you'll get to a new screen where you will be able to see a video recording of the test, and multiple detailed logs of information pertaining to it.
 
@@ -664,7 +664,7 @@ These are fairly intuitive — once the test completes, we send an API call to B
 
 If you now go back to your [BrowserStack automation dashboard](https://www.browserstack.com/automate) page, you should see your test session available, as before, but with the updated data attached to it:
 
-![](bstack_custom_results.png)
+![BrowserStack Custom Results](bstack_custom_results.png)
 
 ### Sauce Labs
 
@@ -726,7 +726,7 @@ Let's write an example:
    The test will be sent to Sauce Labs, and the test result will be returned to your console. This shows the importance of including some kind of result reporting mechanism!
 
 5. Now if you go to your [Sauce Labs Automated Test dashboard](https://app.saucelabs.com/dashboard/tests) page, you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.
-   ![](sauce_labs_automated_test.png)
+   ![Sauce Labs automated test](sauce_labs_automated_test.png)
 
 > **Note:** Sauce Labs' [Platform Configurator](https://saucelabs.com/platform/platform-configurator#/) is a useful tool for generating capability objects to feed to your driver instances, based on what browser/OS you want to test on.
 
@@ -794,7 +794,7 @@ Here we've set a `testPassed` variable to `true` or `false` depending on whether
 
 If you now go back to your [Sauce Labs Automated Test dashboard](https://app.saucelabs.com/dashboard/tests) page, you should see your new job now has the updated data attached to it:
 
-![](sauce_labs_updated_job_info.png)
+![Sauce Labs Updated Job info](sauce_labs_updated_job_info.png)
 
 ### Your own remote server
 

@@ -151,4 +151,5 @@ selectElem.addEventListener('change', () => {
 
 ## See also
 
-- {{cssxref("transform")}}
+- {{cssxref("transform")}} property
+- {{cssxref("translate")}} property

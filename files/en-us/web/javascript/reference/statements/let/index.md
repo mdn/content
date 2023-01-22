@@ -1,6 +1,7 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
+page-type: javascript-statement
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -42,7 +43,7 @@ let { bar } = foo; // where foo = { bar:10, baz:12 };
 
 **`let`** allows you to declare variables that are limited to the scope of a {{jsxref("statements/block", "block", "", 1)}} statement, or expression on which it is used, unlike the {{jsxref("statements/var", "var")}} keyword, which declares a variable globally, or locally to an entire function regardless of block scope.
 The other difference between {{jsxref("statements/var", "var")}} and
-`let` is that the latter is initialized to a value only when a [parser evaluates it (see below)](#temporal_dead_zone_tdz).
+`let` is that the latter can only be accessed after its declaration is reached (see [temporal dead zone](#temporal_dead_zone_tdz)). For this reason, `let` declarations are commonly regarded as [non-hoisted](/en-US/docs/Glossary/Hoisting).
 
 Just like {{jsxref("statements/const", "const", "Description")}} the `let` does _not_ create properties of the {{domxref("window")}} object when declared globally (in the top-most scope).
 
@@ -120,7 +121,7 @@ switch(x) {
 }
 ```
 
-However, it's important to point out that a block nested inside a case clause will create a new block scoped lexical environment, which will not produce the redeclaration errors shown above.
+A block nested inside a case clause will create a new block scoped lexical environment, avoiding the redeclaration errors shown above.
 
 ```js
 let x = 1;
@@ -136,6 +137,8 @@ switch(x) {
   }
 }
 ```
+
+If you're experimenting in a REPL, such as the Firefox web console (**Tools** > **Web Developer** > **Web Console**), and you run two `let` declarations with the same name in two separate inputs, you may get the same re-declaration error. See further discussion of this issue in {{bug(1580891)}}. The Chrome console allows `let` re-declarations between different REPL inputs.
 
 ### Temporal dead zone (TDZ)
 
@@ -216,7 +219,7 @@ This is still in the temporal dead zone as its declaration statement has not bee
 ```js example-bad
 function go(n) {
   // n here is defined!
-  console.log(n); // Object {a: [1,2,3]}
+  console.log(n); // { a: [1, 2, 3] }
 
   for (let n of n.a) { // ReferenceError
     console.log(n);
@@ -270,7 +273,7 @@ let x = 1;
 
 - {{jsxref("Statements/var", "var")}}
 - {{jsxref("Statements/const", "const")}}
-- [Hoisting > `let` and `const` hoisting](/en-US/docs/Glossary/Hoisting#let_and_const_hoisting)
+- [Hoisting](/en-US/docs/Glossary/Hoisting)
 - [ES6 In Depth: `let` and `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/)
 - [Breaking changes in `let` and `const` in Firefox 44](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/)
 - [You Don't Know JS: Scope & Closures: Chapter 3: Function vs. Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md)

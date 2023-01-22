@@ -1,6 +1,7 @@
 ---
 title: '<track>: The Embed Text Track element'
 slug: Web/HTML/Element/track
+page-type: html-element
 tags:
   - Accessibility
   - Cues
@@ -16,7 +17,7 @@ tags:
 browser-compat: html.elements.track
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<track>`** [HTML](/en-US/docs/Web/HTML) element is used as a child of the media elements, {{HTMLElement("audio")}} and {{HTMLElement("video")}}. It lets you specify timed text tracks (or time-based data), for example to automatically handle subtitles. The tracks are formatted in [WebVTT format](/en-US/docs/Web/API/WebVTT_API) (`.vtt` files) — Web Video Text Tracks.
 

@@ -40,8 +40,7 @@ getFramebufferAttachmentParameter(target, attachment, pname)
 
     - `gl.DRAW_FRAMEBUFFER`
       - : Equivalent to `gl.FRAMEBUFFER`.
-          Used as a destination for drawing, rendering, clearing, and writing
-          operations.
+        Used as a destination for drawing, rendering, clearing, and writing operations.
     - `gl.READ_FRAMEBUFFER`
       - : Used as a source for reading operations.
 
@@ -87,7 +86,7 @@ getFramebufferAttachmentParameter(target, attachment, pname)
     When using the {{domxref("EXT_sRGB")}} extension:
 
     - `ext.FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT`: The framebuffer
-        color encoding.
+      color encoding.
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
     the following values are available additionally:
@@ -281,8 +280,11 @@ Depends on the requested information (as specified with `pname`). Either a
 ## Examples
 
 ```js
-gl.getFramebufferAttachmentParameter(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0,
-                                     gl.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE);
+gl.getFramebufferAttachmentParameter(
+  gl.FRAMEBUFFER,
+  gl.COLOR_ATTACHMENT0,
+  gl.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE
+);
 ```
 
 ## Specifications

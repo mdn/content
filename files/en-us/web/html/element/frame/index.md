@@ -1,6 +1,7 @@
 ---
 title: <frame>
 slug: Web/HTML/Element/frame
+page-type: html-element
 tags:
   - Deprecated
   - Element
@@ -10,7 +11,7 @@ tags:
 browser-compat: html.elements.frame
 ---
 
-{{HTMLRef}}{{Deprecated_Header}}
+{{HTMLSidebar}}{{Deprecated_Header}}
 
 The **`<frame>`** [HTML](/en-US/docs/Web/HTML) element defines a particular area in which another HTML document can be displayed. A frame should be used within a {{HTMLElement("frameset")}}.
 

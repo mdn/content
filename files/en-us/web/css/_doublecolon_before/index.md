@@ -1,5 +1,5 @@
 ---
-title: "::before (:before)"
+title: "::before"
 slug: Web/CSS/::before
 page-type: css-pseudo-element
 tags:

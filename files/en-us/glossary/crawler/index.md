@@ -1,6 +1,7 @@
 ---
 title: Crawler
 slug: Glossary/Crawler
+page-type: glossary-definition
 tags:
   - Browser
   - Crawler

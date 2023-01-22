@@ -28,7 +28,7 @@ format of the given font.
 ## Examples
 
 ```js
-myGlyph.glypRef = "#glyphID";
+myGlyph.glyphRef = "#glyphID";
 ```
 
 ## Specifications

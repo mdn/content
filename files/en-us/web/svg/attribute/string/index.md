@@ -1,6 +1,7 @@
 ---
 title: string
 slug: Web/SVG/Attribute/string
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG
@@ -42,6 +43,7 @@ You can use this attribute with the following SVG elements:
 </table>
 
 - `<anything>`
+
   - : This value specifies a list of formats that are supported by the font referenced by the parent {{SVGElement("font-face-uri")}} element.
 
     The available types are: `"woff"`, `"woff2"`, `"truetype"`, `"opentype"`, `"embedded-opentype"`, and `"svg"`. See the {{cssxref("@font-face/src", "src")}} descriptor of the {{cssxref("@font-face")}} at-rule for more information.

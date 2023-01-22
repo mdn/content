@@ -1,6 +1,7 @@
 ---
 title: '<html>: The HTML Document / Root element'
 slug: Web/HTML/Element/html
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -10,7 +11,7 @@ tags:
 browser-compat: html.elements.html
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<html>`** [HTML](/en-US/docs/Web/HTML) element represents the root (top-level element) of an HTML document, so it is also referred to as the _root element_. All other elements must be descendants of this element.
 

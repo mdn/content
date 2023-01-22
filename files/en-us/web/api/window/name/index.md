@@ -32,7 +32,7 @@ the new page might also modify such data, which might then be read by the origin
 if it was reloaded).
 
 `Window.name` has also been used in some frameworks for providing
-cross-domain messaging (e.g. Dojo's [dojox.io.windowName](https://www.sitepen.com/blog/2008/07/22/windowname-transport))
+cross-domain messaging
 as a more secure alternative to JSONP. Modern web applications hosting sensitive data
 should, however, not rely on `window.name` for cross-domain messaging — that
 is not its intended purpose and there are safer/better ways of sharing information

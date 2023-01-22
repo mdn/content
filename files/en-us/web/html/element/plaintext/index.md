@@ -1,6 +1,7 @@
 ---
 title: '<plaintext>: The Plain Text element (Deprecated)'
 slug: Web/HTML/Element/plaintext
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -12,7 +13,7 @@ tags:
 browser-compat: html.elements.plaintext
 ---
 
-{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 The **`<plaintext>`** [HTML](/en-US/docs/Web/HTML) element renders everything following the start tag as raw text, ignoring any following HTML. There is no closing tag, since everything after it is considered raw text.
 
@@ -32,6 +33,8 @@ This element has no other attributes than the [global attributes](/en-US/docs/We
 
 This element implements the {{domxref('HTMLElement')}} interface.
 
+<!-- ## Technical summary -->
+
 ## Specifications
 
 {{Specifications}}
@@ -44,5 +47,3 @@ This element implements the {{domxref('HTMLElement')}} interface.
 
 - The {{HTMLElement("pre")}} and {{HTMLElement("code")}} elements, which should be used instead.
 - The {{HTMLElement("listing")}} and {{HTMLElement("xmp")}} elements, which are both obsolete elements similar to {{HTMLElement("plaintext")}}.
-
-{{HTMLRef}}

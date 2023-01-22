@@ -1,6 +1,7 @@
 ---
 title: '<th>: The Table Header element'
 slug: Web/HTML/Element/th
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -18,60 +19,11 @@ tags:
 browser-compat: html.elements.th
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<th>`** [HTML](/en-US/docs/Web/HTML) element defines a cell as header of a group of table cells. The exact nature of this group is defined by the {{htmlattrxref("scope", "th")}} and {{htmlattrxref("headers", "th")}} attributes.
 
 {{EmbedInteractiveExample("pages/tabbed/th.html","tabbed-taller")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>None.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >, but with no header, footer, sectioning content, or heading content
-        descendants.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>
-        The start tag is mandatory.<br />The end tag may be omitted, if it is
-        immediately followed by a {{HTMLElement("th")}} or
-        {{HTMLElement("td")}} element or if there are no more data in its
-        parent element.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>A {{HTMLElement("tr")}} element.</td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        {{ARIARole("columnheader")}} or {{ARIARole("rowheader")}}
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>Any</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLTableCellElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Attributes
 
@@ -123,26 +75,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_Inline}}
 
-  - : This attribute defines the background color of each cell in a column. It consists of a 6-digit hexadecimal code as defined in [sRGB](https://www.w3.org/Graphics/Color/sRGB) and is prefixed by '#'. This attribute may be used with one of sixteen predefined color strings:
-
-    - `black` = "#000000"
-    - `green` = "#008000"
-    - `silver` = "#C0C0C0"
-    - `lime` = "#00FF00"
-    - `gray` = "#808080"
-    - `olive` = "#808000"
-    - `white` = "#FFFFFF"
-    - `yellow` = "#FFFF00"
-    - `maroon` = "#800000"
-    - `navy` = "#000080"
-    - `red` = "#FF0000"
-    - `blue` = "#0000FF"
-    - `purple` = "#800080"
-    - `teal` = "#008080"
-    - `fuchsia` = "#FF00FF"
-    - `aqua` = "#00FFFF"
-
-    > **Note:** Do not use this attribute, as it is non-standard and only implemented in some versions of Microsoft Internet Explorer: The {{HTMLElement("th")}} element should be styled using [CSS](/en-US/docs/Web/CSS). To create a similar effect use the {{cssxref("background-color")}} property in CSS instead.
+  - : This attribute defines the background color of each cell in a column. It consists of a 6-digit hexadecimal code as defined in [sRGB](https://www.w3.org/Graphics/Color/sRGB) and is prefixed by '#'.
 
 - {{htmlattrdef("char")}} {{deprecated_inline}}
 
@@ -182,6 +115,57 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ## Examples
 
 See {{HTMLElement("table")}} for examples on `<th>`.
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >, but with no header, footer, sectioning content, or heading content
+        descendants.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>
+        The start tag is mandatory.<br />The end tag may be omitted, if it is
+        immediately followed by a {{HTMLElement("th")}} or
+        {{HTMLElement("td")}} element or if there are no more data in its
+        parent element.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>A {{HTMLElement("tr")}} element.</td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role"><code>columnheader</code></a> or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role"><code>rowheader</code></a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLTableCellElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

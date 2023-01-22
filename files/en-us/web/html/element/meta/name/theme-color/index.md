@@ -1,6 +1,7 @@
 ---
 title: theme-color
 slug: Web/HTML/Element/meta/name/theme-color
+page-type: html-attribute-value
 tags:
   - Attribute
   - HTML
@@ -10,7 +11,7 @@ tags:
 browser-compat: html.elements.meta.name.theme-color
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`theme-color`** value for the {{htmlattrxref("name", "meta")}} attribute of the {{htmlelement("meta")}} element indicates a suggested color that user agents should use to customize the display of the page or of the surrounding user interface. If specified, the {{htmlattrxref("content", "meta")}} attribute must contain a valid CSS {{cssxref("&lt;color&gt;")}}.
 

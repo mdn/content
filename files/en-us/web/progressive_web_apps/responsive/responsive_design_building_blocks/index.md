@@ -343,9 +343,7 @@ There is a way to override this mobile rendering behavior — viewport, which is
 <meta name="viewport" content="width=480" />
 ```
 
-This causes our browser to render our mobile app layout properly — `width=480` tells the browser _"render this markup at 480 pixels wide"_, hence the media queries kick in appropriately. There are many more options available in the viewport meta tag, which you can read about in [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Mozilla/Mobile/Viewport_meta_tag).
-
-> **Note:** There is a spec called [device adaptation](https://drafts.csswg.org/css-device-adapt/), which defines the same functionality but in CSS, using a `@viewport` at-rule. This is probably a more logical place to put such information, but the spec is not as well supported as the viewport meta tag, therefore you should stick with that for now.
+This causes our browser to render our mobile app layout properly — `width=480` tells the browser _"render this markup at 480 pixels wide"_, hence the media queries kick in appropriately. There are many more options available in the [viewport meta tag](/en-US/docs/Web/HTML/Viewport_meta_tag).
 
 ## Responsive images/video
 

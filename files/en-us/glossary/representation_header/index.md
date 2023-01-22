@@ -1,6 +1,7 @@
 ---
 title: Representation header
 slug: Glossary/Representation_header
+page-type: glossary-definition
 tags:
   - WebMechanics
 ---

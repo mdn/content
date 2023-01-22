@@ -1,6 +1,7 @@
 ---
 title: EXIF
 slug: Glossary/EXIF
+page-type: glossary-definition
 tags:
   - EXIF
   - Image

@@ -1,6 +1,7 @@
 ---
 title: 'TypeError: invalid ''instanceof'' operand ''x'''
 slug: Web/JavaScript/Reference/Errors/invalid_right_hand_side_instanceof_operand
+page-type: javascript-error
 tags:
   - Error
   - Errors
@@ -38,7 +39,7 @@ i.e. an object which has a `prototype` property and is callable. It can also be 
 
 ## Examples
 
-### instanceof vs typeof
+### instanceof vs. typeof
 
 ```js example-bad
 "test" instanceof ""; // TypeError: invalid 'instanceof' operand ""

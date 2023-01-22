@@ -1,6 +1,7 @@
 ---
 title: Selector (CSS)
 slug: Glossary/CSS_Selector
+page-type: glossary-definition
 tags:
   - CSS
   - CSS Selector

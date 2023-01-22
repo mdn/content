@@ -1,6 +1,7 @@
 ---
 title: accesskey
 slug: Web/HTML/Global_attributes/accesskey
+page-type: html-attribute
 tags:
   - Global attributes
   - HTML
@@ -112,7 +113,7 @@ Because of these issues, it is generally advised not to use `accesskey`s for mos
 
 ## See also
 
-- {{domxref("Element.accessKey")}}
+- {{domxref("HTMLElement.accessKey")}}
 - {{domxref("HTMLElement.accessKeyLabel")}}
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 - [`aria-keyshortcuts`](https://www.w3.org/TR/wai-aria-1.1/#aria-keyshortcuts)

@@ -40,7 +40,7 @@ comparePoint(referenceNode, offset)
 
 ### Return value
 
-Returns `-1`,`0`, or `1`.
+Returns `-1`, `0`, or `1`.
 
 ## Examples
 

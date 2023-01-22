@@ -111,5 +111,3 @@ para.onpointercancel = (event) => {
   - [`pointerup`](/en-US/docs/Web/API/Element/pointerup_event)
   - [`pointerout`](/en-US/docs/Web/API/Element/pointerout_event)
   - [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)
-
-- This event on `Document` targets: [`pointercancel`](/en-US/docs/Web/API/Document/pointercancel_event) event

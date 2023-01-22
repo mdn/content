@@ -1,6 +1,7 @@
 ---
 title: '<textarea>: The Textarea element'
 slug: Web/HTML/Element/textarea
+page-type: html-element
 tags:
   - Element
   - Forms
@@ -12,7 +13,7 @@ tags:
 browser-compat: html.elements.textarea
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<textarea>`** [HTML](/en-US/docs/Web/HTML) element represents a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable amount of free-form text, for example a comment on a review or feedback form.
 
@@ -42,7 +43,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{ htmlattrdef("autocorrect") }} {{non-standard_inline}}
 
-  - : A string which indicates whether or not to activate automatic spelling correction and processing of text substitutions (if any are configured) while the user is editing this `textarea`. Permitted values are:
+  - : A string which indicates whether to activate automatic spelling correction and processing of text substitutions (if any are configured) while the user is editing this `textarea`. Permitted values are:
 
     - `on`
       - : Enable automatic spelling correction and text substitutions.
@@ -67,7 +68,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : A hint to the user of what can be entered in the control. Carriage returns or line-feeds within the placeholder text must be treated as line breaks when rendering the hint.
 
-    > **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for a full explanation.
+    > **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for a full explanation.
 
 - {{ htmlattrdef("readonly") }}
   - : This Boolean attribute indicates that the user cannot modify the value of the control. Unlike the `disabled` attribute, the `readonly` attribute does not prevent the user from clicking or selecting in the control. The value of a read-only control is still submitted with the form.
@@ -85,10 +86,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{ htmlattrdef("wrap") }}
 
-  - : Indicates how the control wraps text. Possible values are:
+  - : Indicates how the control should wrap the value for form submission. Possible values are:
 
-    - `hard`: The browser automatically inserts line breaks (CR+LF) so that each line has no more than the width of the control; the `cols` attribute must also be specified for this to take effect.
-    - `soft`: The browser ensures that all line breaks in the value consist of a CR+LF pair, but does not insert any additional line breaks.
+    - `hard`: The browser automatically inserts line breaks (CR+LF) so that each line is no longer than the width of the control; the [`cols`](#attr-cols) attribute must be specified for this to take effect
+    - `soft`: The browser ensures that all line breaks in the entered value are a `CR+LF` pair, but no additional line breaks are added to the value.
     - `off` {{non-standard_inline}}: Like `soft` but changes appearance to `white-space: pre` so line segments exceeding `cols` are not wrapped and the `<textarea>` becomes horizontally scrollable.
 
     If this attribute is not specified, `soft` is its default value.
@@ -167,7 +168,7 @@ This example has a placeholder set. Notice how it disappears when you start typi
 
 {{ EmbedLiveSample('Example using "placeholder"','600','80') }}
 
-> **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for a full explanation.
+> **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for a full explanation.
 
 ### Disabled and readonly
 

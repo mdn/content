@@ -1,6 +1,7 @@
 ---
 title: HTML elements reference
 slug: Web/HTML/Element
+page-type: landing-page
 tags:
   - Basic
   - Element
@@ -10,7 +11,7 @@ tags:
   - "l10n:priority"
 ---
 
-{{HTMLSidebar("Elements")}}
+{{HTMLSidebar("HTML_Elements")}}
 
 This page lists all the {{Glossary("HTML")}} {{Glossary("Element","elements")}}, which are created using {{Glossary("Tag", "tags")}}.
 
@@ -117,7 +118,7 @@ The elements here are used to create and handle tabular data.
 
 ## Forms
 
-HTML provides a number of elements which can be used together to create forms which the user can fill out and submit to the Web site or application. There's a great deal of further information about this available in the [HTML forms guide](/en-US/docs/Learn/Forms).
+HTML provides a number of elements which can be used together to create forms which the user can fill out and submit to the website or application. There's a great deal of further information about this available in the [HTML forms guide](/en-US/docs/Learn/Forms).
 
 {{HTMLRefTable({"include": ["HTML forms"], "exclude":["Deprecated"]})}}
 

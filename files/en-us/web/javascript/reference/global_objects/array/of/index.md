@@ -1,6 +1,7 @@
 ---
 title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
+page-type: javascript-static-method
 tags:
   - Array
   - ECMAScript 2015
@@ -12,7 +13,7 @@ browser-compat: javascript.builtins.Array.of
 
 {{JSRef}}
 
-The **`Array.of()`** method creates a new `Array`
+The **`Array.of()`** static method creates a new `Array`
 instance from a variable number of arguments, regardless of number or type of the
 arguments.
 
@@ -42,7 +43,7 @@ Array.of(7); // [7]
 Array(7); // array of 7 empty slots
 
 Array.of(1, 2, 3); // [1, 2, 3]
-Array(1, 2, 3);    // [1, 2, 3]
+Array(1, 2, 3); // [1, 2, 3]
 ```
 
 The `Array.of()` method is a generic factory method. For example, if a subclass of `Array` inherits the `of()` method, the inherited `of()` method will return new instances of the subclass instead of `Array` instances. In fact, the `this` value can be any constructor function that accepts a single argument representing the length of the new array, and the constructor will be called with the number of arguments passed to `of()`. The final `length` will be set again when all elements are assigned. If the `this` value is not a constructor function, the plain `Array` constructor is used instead.
@@ -52,8 +53,8 @@ The `Array.of()` method is a generic factory method. For example, if a subclass 
 ### Using Array.of()
 
 ```js
-Array.of(1);         // [1]
-Array.of(1, 2, 3);   // [1, 2, 3]
+Array.of(1); // [1]
+Array.of(1, 2, 3); // [1, 2, 3]
 Array.of(undefined); // [undefined]
 ```
 

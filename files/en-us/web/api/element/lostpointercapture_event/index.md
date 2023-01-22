@@ -108,5 +108,3 @@ para.addEventListener('pointerdown', (event) => {
   - [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
   - [`pointerout`](/en-US/docs/Web/API/Element/pointerout_event)
   - [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)
-
-- This event on `Document` targets: [`lostpointercapture`](/en-US/docs/Web/API/Document/lostpointercapture_event) event

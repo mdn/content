@@ -1,6 +1,7 @@
 ---
 title: Intl.Locale.prototype.maximize()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
+page-type: javascript-instance-method
 tags:
   - Internationalization
   - Intl
@@ -14,8 +15,7 @@ browser-compat: javascript.builtins.Intl.Locale.maximize
 
 {{JSRef}}
 
-The
-**`Intl.Locale.prototype.maximize()`** method gets the
+The **`Intl.Locale.prototype.maximize()`** method gets the
 most likely values for the language, script, and region of the locale based on
 existing values.
 

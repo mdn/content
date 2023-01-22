@@ -1,6 +1,7 @@
 ---
 title: 'TypeError: invalid assignment to const "x"'
 slug: Web/JavaScript/Reference/Errors/Invalid_const_assignment
+page-type: javascript-error
 tags:
   - Error
   - JavaScript
@@ -109,7 +110,7 @@ But you can mutate the properties in a variable:
 
 ```js example-good
 obj.foo = 'baz';
-obj; // Object { foo: "baz" }
+obj; // { foo: "baz" }
 ```
 
 ## See also

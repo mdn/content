@@ -1,6 +1,7 @@
 ---
 title: WebP
-slug: Glossary/webp
+slug: Glossary/WebP
+page-type: glossary-definition
 tags:
   - Beginner
   - Composing

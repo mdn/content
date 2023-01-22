@@ -1,6 +1,7 @@
 ---
 title: WebRTC
 slug: Glossary/WebRTC
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Infrastructure

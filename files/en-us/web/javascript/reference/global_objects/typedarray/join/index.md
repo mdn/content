@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/join
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -44,10 +45,10 @@ A string with all array elements joined.
 ### Using join()
 
 ```js
-const uint8 = new Uint8Array([1,2,3]);
-uint8.join();      // '1,2,3'
-uint8.join(' / '); // '1 / 2 / 3'
-uint8.join('');    // '123'
+const uint8 = new Uint8Array([1, 2, 3]);
+uint8.join(); // '1,2,3'
+uint8.join(" / "); // '1 / 2 / 3'
+uint8.join(""); // '123'
 ```
 
 ## Specifications

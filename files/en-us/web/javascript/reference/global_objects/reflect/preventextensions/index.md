@@ -1,6 +1,7 @@
 ---
 title: Reflect.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -13,7 +14,7 @@ browser-compat: javascript.builtins.Reflect.preventExtensions
 
 {{JSRef}}
 
-The static **`Reflect.preventExtensions()`** method prevents new properties from ever being added to an object (i.e., prevents future extensions to the object). It is similar to {{jsxref("Object.preventExtensions()")}}, but with [some differences](#difference_with_object.preventextensions).
+The **`Reflect.preventExtensions()`** static method prevents new properties from ever being added to an object (i.e., prevents future extensions to the object). It is similar to {{jsxref("Object.preventExtensions()")}}, but with [some differences](#difference_with_object.preventextensions).
 
 {{EmbedInteractiveExample("pages/js/reflect-preventextensions.html")}}
 
@@ -45,11 +46,11 @@ See also {{jsxref("Object.preventExtensions()")}}.
 ```js
 // Objects are extensible by default.
 const empty = {};
-Reflect.isExtensible(empty)  // === true
+Reflect.isExtensible(empty); // true
 
 // ...but that can be changed.
 Reflect.preventExtensions(empty);
-Reflect.isExtensible(empty)  // === false
+Reflect.isExtensible(empty); // false
 ```
 
 ### Difference with Object.preventExtensions()
@@ -57,10 +58,10 @@ Reflect.isExtensible(empty)  // === false
 If the `target` argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. With {{jsxref("Object.preventExtensions()")}}, a non-object `target` will be returned as-is without any errors.
 
 ```js
-Reflect.preventExtensions(1)
+Reflect.preventExtensions(1);
 // TypeError: 1 is not an object
 
-Object.preventExtensions(1)
+Object.preventExtensions(1);
 // 1
 ```
 

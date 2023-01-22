@@ -14,7 +14,7 @@ tags:
 spec-urls: https://w3c.github.io/resource-timing/
 ---
 
-{{DefaultAPISidebar("Resource Timing API")}}
+{{DefaultAPISidebar("Performance API")}}
 
 The **`Resource Timing`** interfaces enable retrieving and analyzing detailed network timing data regarding the loading of an application's _resource(s)_. An application can use the timing metrics to determine, for example, the length of time it takes to load a specific resource, such as an {{domxref("XMLHttpRequest")}}, {{SVGElement("SVG","SVG element")}}, image, or script.
 

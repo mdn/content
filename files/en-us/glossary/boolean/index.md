@@ -1,6 +1,7 @@
 ---
 title: Boolean
 slug: Glossary/Boolean
+page-type: glossary-definition
 tags:
   - Boolean
   - CodingScripting

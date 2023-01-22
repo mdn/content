@@ -1,6 +1,7 @@
 ---
 title: part
 slug: Web/HTML/Global_attributes/part
+page-type: html-attribute
 tags:
   - Global attributes
   - HTML

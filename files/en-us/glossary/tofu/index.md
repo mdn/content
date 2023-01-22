@@ -1,6 +1,7 @@
 ---
 title: TOFU
 slug: Glossary/TOFU
+page-type: glossary-definition
 tags:
   - HTTP
   - SSH

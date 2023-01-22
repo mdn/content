@@ -137,7 +137,8 @@ HTML
 
   - [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 
-- [Preloading content with `rel="preload"`](/en-US/docs/Web/HTML/Link_types/preload) - <https://w3c.github.io/preload/>
+- [Preloading content with `rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload)
+- <https://w3c.github.io/preload/>
 
 CSS
 
@@ -163,7 +164,6 @@ APIs
 - [Navigator.deviceMemory](/en-US/docs/Web/API/Navigator/deviceMemory)
 - [Intersection Observer](/en-US/docs/Web/API/Intersection_Observer_API)
 - [Using the User Timing API](/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
-- [Long Tasks API](/en-US/docs/Web/API/Long_Tasks_API)
 - [High Resolution Timing API](/en-US/docs/Web/API/DOMHighResTimeStamp) ([https://w3c.github.io/hr-time/)](https://w3c.github.io/hr-time/)
 - [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
 - [Page Visibility](/en-US/docs/Web/API/Page_Visibility_API)

@@ -1,5 +1,5 @@
 ---
-title: '::after (:after)'
+title: '::after'
 slug: Web/CSS/::after
 page-type: css-pseudo-element
 tags:

@@ -1,6 +1,7 @@
 ---
 title: Number.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
+page-type: javascript-instance-method
 tags:
   - Internationalization
   - JavaScript
@@ -66,7 +67,7 @@ with default options is returned.
 ```js
 const number = 3500;
 
-console.log(number.toLocaleString()); // Displays "3,500" if in U.S. English locale
+console.log(number.toLocaleString()); // "3,500" if in U.S. English locale
 ```
 
 ### Checking for support for locales and options arguments

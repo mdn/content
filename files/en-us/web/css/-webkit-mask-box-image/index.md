@@ -12,7 +12,7 @@ tags:
 browser-compat: css.properties.-webkit-mask-box-image
 ---
 
-{{ CSSRef() }} {{ Non-standard_header() }}
+{{CSSRef}} {{ Non-standard_header() }}
 
 `-webkit-mask-box-image` sets the mask image for an element's border box.
 

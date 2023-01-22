@@ -11,13 +11,13 @@ tags:
 browser-compat: api.PerformanceEventTiming.interactionId
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The read-only **`interactionId`** property returns an ID that uniquely identifies a user interaction which triggered a series of associated events.
 
 ## Description
 
-When a user interacts with a web page, a user interaction (for example a click) usually triggers a sequence of events, such as `pointerdown`,`pointerup`, and `click` events. To measure the latency of this series of events, the events share the same `interactionId`.
+When a user interacts with a web page, a user interaction (for example a click) usually triggers a sequence of events, such as `pointerdown`, `pointerup`, and `click` events. To measure the latency of this series of events, the events share the same `interactionId`.
 
 An `interactionId` is only computed for the following event types belonging to a user interaction. It is `0` otherwise.
 
@@ -51,7 +51,7 @@ const observer = new PerformanceObserver((list) => {
   });
 });
 
-observer.observe({entryTypes: ["event"]}); 
+observer.observe({type: "event", buffered: true}); 
 
 // Log events with maximum event duration for a user interaction
 Object.entries(eventLatencies).forEach(([k, v]) => {

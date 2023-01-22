@@ -14,7 +14,7 @@ browser-compat: css.properties.transform-box
 
 {{CSSRef}}
 
-The **`transform-box`** CSS property defines the layout box to which the {{cssxref("transform")}} and {{cssxref("transform-origin")}} properties relate.
+The **`transform-box`** CSS property defines the layout box to which the {{cssxref("transform")}}, individual transform properties {{cssxref("translate")}},{{cssxref("scale")}}, and {{cssxref("rotate")}}, and {{cssxref("transform-origin")}} properties relate.
 
 ```css
 /* Keyword values */
@@ -97,13 +97,8 @@ svg {
 }
 
 #box {
-  transform-origin: 50% 50%;
-  /*+++++++++++++++++++++++++++*/
-  /* if I remove this rule the pen won't work properly on Chrome for Mac, FF, Safari
-  Will still work properly on Chrome for PC & Opera*/
+  transform-origin: 50% 50%; /* anything other than `0 0` to see the effect */
   transform-box: fill-box;
-  /*Alternatively I can use transform-origin:15px 15px;*/
-  /*+++++++++++++++++++++++++++*/
   animation: rotateBox 3s linear infinite;
 }
 
@@ -128,3 +123,7 @@ Full credit for this example goes to [Pogany](https://codepen.io/giaco); see [th
 
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
 - {{cssxref("transform")}}, {{cssxref("transform-origin")}}
+- Individual transform properties:
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}

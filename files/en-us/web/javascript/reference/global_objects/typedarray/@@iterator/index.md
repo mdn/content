@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator
+page-type: javascript-instance-method
 tags:
   - Iterator
   - JavaScript
@@ -21,7 +22,7 @@ The initial value of this property is the same function object as the initial va
 
 ## Syntax
 
-```js
+```js-nolint
 typedArray[Symbol.iterator]()
 ```
 

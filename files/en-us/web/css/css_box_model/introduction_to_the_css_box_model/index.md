@@ -52,7 +52,7 @@ Finally, note that for non-replaced inline elements, the amount of space taken u
 
 - [Layout and the containing block](/en-US/docs/Web/CSS/Containing_block)
 - [Introducing the CSS Cascade](/en-US/docs/Web/CSS/Cascade)
-- [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 - CSS key concepts:
   - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
   - [At-rules](/en-US/docs/Web/CSS/At-rule)

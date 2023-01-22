@@ -1,6 +1,7 @@
 ---
 title: '<br>: The Line Break element'
 slug: Web/HTML/Element/br
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -10,7 +11,7 @@ tags:
 browser-compat: html.elements.br
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<br>`** [HTML](/en-US/docs/Web/HTML) element produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant.
 
@@ -109,7 +110,7 @@ Use `<p>` elements, and use CSS properties like {{cssxref("margin")}} to control
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("none")}}, {{ARIARole("presentation")}}
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>

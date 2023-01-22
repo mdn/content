@@ -110,7 +110,7 @@ The _locallibrary_ project sub-folder is the entry point for the website:
 - **\_\_init\_\_.py** is an empty file that instructs Python to treat this directory as a Python package.
 - **settings.py** contains all the website settings, including registering any applications we create, the location of our static files, database configuration details, etc.
 - **urls.py** defines the site URL-to-view mappings. While this could contain _all_ the URL mapping code, it is more common to delegate some of the mappings to particular applications, as you'll see later.
-- **wsgi.py** is used to help your Django application communicate with the webserver. You can treat this as boilerplate.
+- **wsgi.py** is used to help your Django application communicate with the web server. You can treat this as boilerplate.
 - **asgi.py** is a standard for Python asynchronous web apps and servers to communicate with each other. ASGI is the asynchronous successor to WSGI and provides a standard for both asynchronous and synchronous Python apps (whereas WSGI provided a standard for synchronous apps only). It is backward-compatible with WSGI and supports multiple servers and application frameworks.
 
 The **manage.py** script is used to create applications, work with databases, and start the development web server.
@@ -331,7 +331,7 @@ python3 manage.py migrate
 
 > **Warning:** You'll need to run these commands every time your models change in a way that will affect the structure of the data that needs to be stored (including both addition and removal of whole models and individual fields).
 
-The `makemigrations` command _creates_ (but does not apply) the migrations for all applications installed in your project. You can specify the application name as well to just run a migration for a single project. This gives you a chance to check out the code for these migrations before they are applied. If you're a Django expert, you may choose to tweak them slightly!
+The `makemigrations` command _creates_ (but does not apply) the migrations for all applications installed in your project. You can specify the application name as well to just run a migration for a single app. This gives you a chance to check out the code for these migrations before they are applied. If you're a Django expert, you may choose to tweak them slightly!
 
 The `migrate` command is what applies the migrations to your database. Django tracks which ones have been added to the current database.
 

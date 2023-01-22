@@ -1,6 +1,7 @@
 ---
 title: 'HTML attribute: autocomplete'
 slug: Web/HTML/Attributes/autocomplete
+page-type: html-attribute
 tags:
   - Addresses
   - Attribute
@@ -37,6 +38,8 @@ For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute
 > 1. Have a `name` and/or `id` attribute
 > 2. Be descendants of a `<form>` element
 > 3. The form to have a {{HTMLElement("input/submit", "submit")}} button
+
+{{EmbedInteractiveExample("pages/tabbed/attribute-autocomplete.html", "tabbed-shorter")}}
 
 ## Values
 
@@ -132,7 +135,7 @@ For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute
 - "`bday-year`"
   - : The year of a birth date.
 - "`sex`"
-  - : A gender identity (such as "Female", "Fa'afafine", "Male"), as freeform text without newlines.
+  - : A gender identity (such as "Female", "Fa'afafine", "Hijra", "Male", "Nonbinary"), as freeform text without newlines.
 - "`tel`"
 
   - : A full telephone number, including the country code. If you need to break the phone number up into its components, you can use these values for those fields:
@@ -208,7 +211,7 @@ The address levels are:
 
 - `address-level1`: The post town — "Winchelsea" in this case.
 - `address-line2`: The locality — "Upper-Wapping" in this case.
-- `address-line1`: The house/street particulars — "103 Frogmarch Street"
+- `address-line1`: The house/street particulars — "103 Frogmarch Street".
 
 The postcode is separate. Note that you can actually use just the postcode and `address-line1` to successfully deliver mail in the UK, so they should be the only mandatory items, but usually people tend to provide more details.
 
@@ -242,9 +245,9 @@ An address in Japan is typically **written in one line**, in an order from the l
 
 ## See also
 
-- The {{htmlelement("input")}} element.
-- The {{htmlelement("select")}} element.
-- The {{htmlelement("textarea")}} element.
-- The {{htmlelement("form")}} element.
+- The {{htmlelement("input")}} element
+- The {{htmlelement("select")}} element
+- The {{htmlelement("textarea")}} element
+- The {{htmlelement("form")}} element
 - [HTML forms](/en-US/docs/Learn/Forms)
-- All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+- All [global attributes](/en-US/docs/Web/HTML/Global_attributes)

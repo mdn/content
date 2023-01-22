@@ -23,8 +23,6 @@ captureEvents(eventType)
 
 ### Parameters
 
--`eventType`
-
 `eventType` is a combination of the following values:
 `Event.ABORT`, `Event.BLUR`, `Event.CLICK`,
 `Event.CHANGE`, `Event.DBLCLICK`, `Event.DRAGDDROP`,

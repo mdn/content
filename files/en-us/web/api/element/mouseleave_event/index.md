@@ -94,13 +94,13 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
 ### Behavior of `mouseleave` events
 
-![](mouseleave.png)
+![mouseleave behavior diagram](mouseleave.png)
 
 One `mouseleave` event is sent to each element of the hierarchy when leaving them. Here four events are sent to the four elements of the hierarchy when the pointer moves from the text to an area outside of the most outer div represented here.
 
 ### Behavior of `mouseout` events
 
-![](mouseout.png)
+![mouseout behavior diagram](mouseout.png)
 
 One single `mouseout` event is sent to the deepest element of the DOM tree, then it bubbles up the hierarchy until it is canceled by a handler or reaches the root.
 

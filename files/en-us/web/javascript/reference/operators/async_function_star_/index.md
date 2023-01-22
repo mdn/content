@@ -1,6 +1,7 @@
 ---
 title: async function* expression
 slug: Web/JavaScript/Reference/Operators/async_function*
+page-type: javascript-operator
 tags:
   - Function
   - Iterator
@@ -66,7 +67,7 @@ const x = async function* (y) {
 };
 x(6)
   .next()
-  .then((res) => console.log(res.value)); // logs 36
+  .then((res) => console.log(res.value)); // 36
 ```
 
 ## Specifications

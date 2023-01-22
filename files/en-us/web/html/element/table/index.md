@@ -1,6 +1,7 @@
 ---
-title: '<table>: The Table element'
+title: "<table>: The Table element"
 slug: Web/HTML/Element/table
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -13,7 +14,7 @@ tags:
 browser-compat: html.elements.table
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<table>`** [HTML](/en-US/docs/Web/HTML) element represents tabular data — that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data.
 
@@ -380,7 +381,7 @@ for (const table of allTables) {
 
 ### Displaying large tables in small spaces
 
-A common issue with tables on the web is that they don't natively work very well on small screens when the amount of content is large, and the way to make them scrollable isn't obvious, especially when the markup may come from a CDN and cannot be modified to have a wrapper.
+A common issue with tables on the web is that they don't natively work very well on small screens when the amount of content is large, and the way to make them scrollable isn't obvious, especially when the markup may come from a CMS and cannot be modified to have a wrapper.
 
 This example provides one way to display tables in small spaces. We've hidden the HTML content as it is very large, and there is nothing remarkable about it. The CSS is more useful to inspect in this example.
 
@@ -625,7 +626,7 @@ This helps people navigating with the aid of assistive technology such as a scre
 
 ### Scoping rows and columns
 
-The {{htmlattrxref("scope", "th")}} attribute on header elements is redundant in simple contexts, because scope is inferred. However, some assistive technologies may fail to draw correct inferences, so specifying header scope may improve user experiences. In complex tables, scope can be specified so as to provide necessary information about the cells related to a header.
+The {{htmlattrxref("scope", "th")}} attribute on header elements is redundant in simple contexts, because scope is inferred. However, some assistive technologies may fail to draw correct inferences, so specifying header scope may improve user experiences. In complex tables, scope can be specified to provide necessary information about the cells related to a header.
 
 #### Example
 
@@ -644,14 +645,14 @@ The {{htmlattrxref("scope", "th")}} attribute on header elements is redundant in
     <tr>
       <th scope="row">Teal</th>
       <td><code>#51F6F6</code></td>
-      <td><code>hsla(180, 90%, 64%, 1)</code></td>
-      <td><code>rgba(81, 246, 246, 1)</code></td>
+      <td><code>hsl(180 90% 64% / 1)</code></td>
+      <td><code>rgb(81 246 246 / 1)</code></td>
     </tr>
     <tr>
       <th scope="row">Goldenrod</th>
       <td><code>#F6BC57</code></td>
-      <td><code>hsla(38, 90%, 65%, 1)</code></td>
-      <td><code>rgba(246, 188, 87, 1)</code></td>
+      <td><code>hsl(38 90% 65% / 1)</code></td>
+      <td><code>rgba(246 188 87 / 1)</code></td>
     </tr>
   </tbody>
 </table>

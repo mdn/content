@@ -1,6 +1,7 @@
 ---
 title: FinalizationRegistry.prototype.register()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register
+page-type: javascript-instance-method
 tags:
   - FinalizationRegistry
   - JavaScript
@@ -12,7 +13,7 @@ browser-compat: javascript.builtins.FinalizationRegistry.register
 
 {{JSRef}}
 
-The `register()` method registers an object with a
+The **`register()`** method registers an object with a
 {{jsxref("FinalizationRegistry")}} instance so that if the object is garbage-collected,
 the registry's callback may get called.
 
@@ -46,7 +47,7 @@ register(target, heldValue, unregisterToken)
     - `target` is the same as `heldvalue` (`target === heldValue`)
     - `unregisterToken` is not an object
 
-## Notes
+## Description
 
 See the [Avoid where possible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#avoid_where_possible)
 and [Notes on cleanup callbacks](/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#notes_on_cleanup_callbacks)

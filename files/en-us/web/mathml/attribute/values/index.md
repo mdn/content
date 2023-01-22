@@ -8,7 +8,9 @@ tags:
 browser-compat: mathml.attribute_values
 ---
 
-{{MathMLRef}}
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/MathML")}}
+</section>
 
 ## MathML-specific types
 
@@ -35,17 +37,17 @@ veryverythickmathspace => 0.3888888888888889em
 
 ### Units
 
-| Unit | Description                                                                                                                 |
-| ---- | --------------------------------------------------------------------------------------------------------------------------- |
+| Unit | Description                                                                                                    |
+| ---- | -------------------------------------------------------------------------------------------------------------- |
 | `em` | {{ Cssxref("font-size", "Font-relative") }} unit                                                               |
 | `ex` | {{ Cssxref("font-size", "Font-relative") }} unit. (The "x"-height of the element, `1ex ≈ 0.5em` in many fonts) |
-| `px` | Pixels                                                                                                                      |
-| `in` | Inches (1 inch = 2.54 centimeters)                                                                                          |
-| `cm` | Centimeters                                                                                                                 |
-| `mm` | Millimeters                                                                                                                 |
-| `pt` | Points (1 point = 1/72 inch)                                                                                                |
-| `pc` | Picas (1 pica = 12 points)                                                                                                  |
-| `%`  | Percentage of the default value.                                                                                            |
+| `px` | Pixels                                                                                                         |
+| `in` | Inches (1 inch = 2.54 centimeters)                                                                             |
+| `cm` | Centimeters                                                                                                    |
+| `mm` | Millimeters                                                                                                    |
+| `pt` | Points (1 point = 1/72 inch)                                                                                   |
+| `pc` | Picas (1 pica = 12 points)                                                                                     |
+| `%`  | Percentage of the default value.                                                                               |
 
 ### Constants
 

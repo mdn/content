@@ -1,6 +1,7 @@
 ---
 title: get SharedArrayBuffer[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/@@species
+page-type: javascript-static-accessor-property
 tags:
   - SharedArrayBuffer
   - JavaScript
@@ -16,7 +17,7 @@ The **`SharedArrayBuffer[@@species]`** accessor property returns the constructor
 
 ## Syntax
 
-```js
+```js-nolint
 SharedArrayBuffer[Symbol.species]
 ```
 

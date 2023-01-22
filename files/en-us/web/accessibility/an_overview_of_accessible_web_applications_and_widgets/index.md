@@ -87,7 +87,7 @@ _Example 3: Markup for the tabs widget with ARIA attributes added._
 </div>
 ```
 
-ARIA is [well supported](https://caniuse.com/#feat=wai-aria) by all major browsers, including Firefox, Safari, Opera, Chrome, and Internet Explorer, and many assistive technologies.
+ARIA is [well supported](https://caniuse.com/#feat=wai-aria) by all major browsers and many assistive technologies.
 
 ### Presentational changes
 

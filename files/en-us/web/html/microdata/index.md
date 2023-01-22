@@ -1,6 +1,7 @@
 ---
 title: Microdata
 slug: Web/HTML/Microdata
+page-type: guide
 tags:
   - Composing
   - Example
@@ -10,6 +11,8 @@ tags:
   - SEO
   - Search
 ---
+
+{{HTMLSidebar}}
 
 Microdata is part of the {{glossary("WHATWG")}} HTML Standard and is used to nest metadata within existing content on web pages. Search engines and web crawlers can extract and process microdata from a web page and use it to provide a richer browsing experience for users. Search engines benefit greatly from direct access to this structured data because it allows search engines to understand the information on web pages and provide more relevant results to users. Microdata uses a supporting vocabulary to describe an item and name-value pairs to assign values to its properties. Microdata is an attempt to provide a simpler way of annotating HTML elements with machine-readable tags than the similar approaches of using RDFa and classic microformats.
 
@@ -159,5 +162,3 @@ Supported in Firefox 16. Removed in Firefox 49.
 ## See also
 
 - [Global Attributes](/en-US/docs/Web/HTML/Global_attributes)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/HTML")}}

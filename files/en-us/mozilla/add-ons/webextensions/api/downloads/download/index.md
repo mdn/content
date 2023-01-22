@@ -85,7 +85,7 @@ If you use [URL.createObjectURL()](/en-US/docs/Web/API/URL/createObjectURL) to d
 
 ## Examples
 
-The following snippet attempts to download an example file, also specifying a filename and location to save it in, and the `uniquify` `conflictAction` option.
+The following snippet attempts to download an example file, also specifying a filename and location to save it in, and `uniquify` as the value of the `conflictAction` option.
 
 ```js
 function onStartedDownload(id) {

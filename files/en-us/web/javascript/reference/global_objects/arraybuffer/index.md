@@ -1,6 +1,7 @@
 ---
 title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
+page-type: javascript-class
 tags:
   - ArrayBuffer
   - Class
@@ -38,6 +39,8 @@ The [`ArrayBuffer()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayB
 
 ## Instance properties
 
+- `ArrayBuffer.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"ArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("ArrayBuffer.prototype.byteLength")}}
   - : The read-only size, in bytes, of the `ArrayBuffer`. This is established when the array is constructed and cannot be changed.
 

@@ -1,6 +1,7 @@
 ---
 title: OpenGL
 slug: Glossary/OpenGL
+page-type: glossary-definition
 tags:
   - CodingScripting
   - OpenGL

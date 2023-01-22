@@ -36,14 +36,7 @@ suffix: url(bullet.png);
 
 ## Formal syntax
 
-```
-<symbol>
-
-<symbol> =
-  <string>       |
-  <image>        |
-  <custom-ident>
-```
+{{csssyntax}}
 
 ## Examples
 

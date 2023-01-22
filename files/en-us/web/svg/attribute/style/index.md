@@ -1,6 +1,7 @@
 ---
 title: style
 slug: Web/SVG/Attribute/style
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute
@@ -56,6 +57,7 @@ svg {
 </table>
 
 - `<style>`
+
   - : The syntax of style data depends on the style sheet language. By default, the style sheet language is [CSS](/en-US/docs/Web/CSS).
 
     > **Note:** In theory, [the `contentStyleType` attribute](/en-US/docs/Web/SVG/Attribute/contentStyleType) could be used to specify styling languages other than CSS, like [XSL(T)](/en-US/docs/Web/XSLT). However, this was never implemented satisfactorily in browsers, so you should not rely on it.

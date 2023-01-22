@@ -23,10 +23,10 @@ The **`mask-border-slice`** [CSS](/en-US/docs/Web/CSS) property divides the imag
 /* All sides */
 mask-border-slice: 30%;
 
-/* vertical | horizontal */
+/* top and bottom | left and right */
 mask-border-slice: 10% 30%;
 
-/* top | horizontal | bottom */
+/* top | left and right | bottom */
 mask-border-slice: 30 30% 45;
 
 /* top | right | bottom | left */

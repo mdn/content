@@ -37,10 +37,10 @@ A {{domxref("ContentIndexEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-_In addition to the properties listed below, this interface inherits the properties of its parent interface, {{domxref("ContentIndexEvent")}}._
+_In addition to the properties listed below, this interface inherits the properties of its parent interface, {{domxref("Event")}}._
 
 - {{domxref("ContentIndexEvent.id", "id")}} {{ReadOnlyInline}}
-  - : A {{jsxref('String')}} which identifies the deleted content index via it's `id`.
+  - : A string which identifies the deleted content index via it's `id`.
 
 ## Examples
 

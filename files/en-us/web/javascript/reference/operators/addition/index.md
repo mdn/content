@@ -1,6 +1,7 @@
 ---
 title: Addition (+)
 slug: Web/JavaScript/Reference/Operators/Addition
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
@@ -11,7 +12,7 @@ browser-compat: javascript.operators.addition
 
 {{jsSidebar("Operators")}}
 
-The addition operator (`+`) produces the sum of numeric operands or string
+The **addition (`+`)** operator produces the sum of numeric operands or string
 concatenation.
 
 {{EmbedInteractiveExample("pages/js/expressions-addition.html")}}
@@ -67,6 +68,9 @@ false + false // 0
 
 // String + Boolean -> concatenation
 'foo' + false // "foofalse"
+
+// String + Number -> concatenation
+'2' + 2 // "22"
 ```
 
 ## Specifications
