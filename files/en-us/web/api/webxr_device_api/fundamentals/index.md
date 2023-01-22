@@ -125,7 +125,7 @@ Simpler and lower-priced XR devices typically use an integrated computer or conn
 
 Most immersive VR experiences take place using goggles or a headset of some kind. A VR headset is worn on the head, with a strap that goes behind the head to fasten it in place, and one or two displays whose screens are focused into the eyes using lenses. By presenting a slightly different image to each eye, the illusion of depth is created, giving the user a simulated 3D experience.
 
-![Drawing of a standard VR headset](publicdomainq-virtual_reality_headset.svg)
+![Drawing of a standard VR headset](publicdomain-virtual_reality_headset.svg)
 
 The vast majority of headsets use a single display whose frame is divided in half, with one half focused onto each of the user's eyes. For example, if a headset uses a 2560x1440 screen, with the left half being used for the left eye's view and the right half for the right eye's view, the framebuffer is used like this:
 

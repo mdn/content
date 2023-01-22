@@ -31,7 +31,10 @@ The **`<progress>`** [HTML](/en-US/docs/Web/HTML) element displays an indicator 
         >,
         <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
           >phrasing content</a
-        >, labelable content, palpable content.
+        >, labelable content,
+        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content"
+          >palpable content</a
+        >.
       </td>
     </tr>
     <tr>
