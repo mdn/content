@@ -1,4 +1,4 @@
----
+---index.md
 title: Using promises
 slug: Web/JavaScript/Guide/Using_promises
 page-type: guide
@@ -10,7 +10,33 @@ tags:
   - Promises
   - asynchronous
   - "l10n:priority"
----
+---Promise callback
+Promise (pending) Promise {<pending>}
+Promise callback (.then)
+event-loop cycle: Promise (fulfilled) Promise {<fulfilled>}
+const promise = new Promise((resolve, reject) => {
+  console.log("Promise callback");
+  resolve();
+}).then((result) => {
+  console.log("Promise callback (.then)");
+});
+
+setTimeout(() => {
+  console.log("event-loop cycle: Promise (fulfilled)", promise);
+}, 0);
+
+console.log("Promise (pending)", promise);
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+wait(0).then(() => console.log(4));
+Promise.resolve()
+  .then(() => console.log(2))
+  .then(() => console.log(3));
+console.log(1); // 1, 2, 3, 4
+42Promise.resolve().then(() => console.log(2));
+console.log(1);
+// Logs: 1, 2
+index.mdالمحتوى/الملفات/en-us/الويب/جافا سكريبت/يرشد/باستخدام الوعود/ index.md
 
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Using_Classes", "Web/JavaScript/Guide/Iterators_and_Generators")}}
 
