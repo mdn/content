@@ -110,7 +110,8 @@ From this list you can delete books by selecting the checkbox next to the book y
 
 You can edit a book by selecting its name in the link. The edit page for a book, shown below, is almost identical to the "Add" page. The main differences are the page title (_Change book_) and the addition of **Delete**, **HISTORY** and **VIEW ON SITE** buttons (this last button appears because we defined the `get_absolute_url()` method in our model).
 
-> **Note:** Clicking the **VIEW ON SITE** button raises a `NoReverseMatch` exception because we haven't created a URL or view for it yet. We'll get it working in [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views).
+> **Note:** Clicking the **VIEW ON SITE** button raises a `NoReverseMatch` exception because the `get_absolute_url()` method attempts to `reverse()` a named URL mapping ('book-detail') that has not yet been defined.
+> We'll define a URL mapping and associated view in [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views).
 
 ![Admin Site - Book Edit](admin_book_modify.png)
 
