@@ -20,7 +20,7 @@ globally-scoped variable, optionally initializing it to a value.
 ## Syntax
 
 ```js-nolint
-var varname1 [= value1] [, varname2 [= value2] ... [, varnameN [= valueN]]]
+var varname1 [= value1] [, varname2 [= value2] ... [, varnameN [= valueN]]];
 ```
 
 - `varnameN`
