@@ -51,5 +51,5 @@ videoElement.src = "https://example.com/bogusvideo.mp4";
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- The interface defining it, {{domxref("HTMLMediaElement")}}
 - {{HTMLElement("audio")}} and {{HTMLElement("video")}}

@@ -99,7 +99,7 @@ for (const track of tracks) {
 
 ## See also
 
-- The interface defining it, {{DOMxRef("HTMLMediaElement")}}.
+- The interface defining it, {{DOMxRef("HTMLMediaElement")}}
 - {{HTMLElement("video")}} and {{HTMLElement("audio")}}
 - {{DOMxRef("VideoTrack")}} and {{DOMxRef("VideoTrackList")}}
 - {{DOMxRef("AudioTrack")}} and {{DOMxRef("AudioTrackList")}}

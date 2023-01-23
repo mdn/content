@@ -188,9 +188,9 @@ Now you have the [2D rendering context](/en-US/docs/Web/API/CanvasRenderingConte
 
 - {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}
 - {{domxref("WebGLRenderingContext.getContextAttributes()")}}
-- The interface defining it, {{domxref("HTMLCanvasElement")}}.
+- The interface defining it, {{domxref("HTMLCanvasElement")}}
 - {{domxref("OffscreenCanvas.getContext()")}}
 - Available rendering contexts: {{domxref("CanvasRenderingContext2D")}},
   {{domxref("WebGLRenderingContext")}} and {{domxref("WebGL2RenderingContext")}} and
-  {{domxref("ImageBitmapRenderingContext")}}.
-- Available color spaces: [sRGB color space](https://en.wikipedia.org/wiki/SRGB) and [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
+  {{domxref("ImageBitmapRenderingContext")}}
+- Available color spaces: [sRGB color space](https://en.wikipedia.org/wiki/SRGB) and [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3)

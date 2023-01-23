@@ -36,4 +36,4 @@ obj.loop = true; // true
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- The interface defining it, {{domxref("HTMLMediaElement")}}

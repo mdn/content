@@ -40,5 +40,5 @@ A string object containing the URL of the text track data.
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLTrackElement")}}.
+- The interface defining it, {{domxref("HTMLTrackElement")}}
 - {{HTMLElement("track")}}

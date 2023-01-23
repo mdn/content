@@ -40,5 +40,5 @@ obj.volume = 0.75;
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- The interface defining it, {{domxref("HTMLMediaElement")}}
 - {{domxref("HTMLMediaElement.muted")}}

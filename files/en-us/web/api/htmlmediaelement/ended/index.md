@@ -44,6 +44,6 @@ console.log(obj.ended); // false
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- The interface defining it, {{domxref("HTMLMediaElement")}}
 - {{domxref("MediaStream")}}
 - {{domxref("MediaStream.active")}}

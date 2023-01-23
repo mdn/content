@@ -41,4 +41,4 @@ console.log(obj.defaultPlaybackRate); // 1
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- The interface defining it, {{domxref("HTMLMediaElement")}}

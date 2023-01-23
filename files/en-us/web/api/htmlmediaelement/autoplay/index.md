@@ -73,5 +73,5 @@ document.querySelector('#video').autoplay = false;
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- The interface defining it, {{domxref("HTMLMediaElement")}}
 - The {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements

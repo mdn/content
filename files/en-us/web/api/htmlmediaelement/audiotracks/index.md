@@ -76,6 +76,6 @@ for (let i = 0; i < video.audioTracks.length; i += 1) {
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- The interface defining it, {{domxref("HTMLMediaElement")}}
 - {{HTMLElement("audio")}} and {{HTMLElement("video")}}
 - {{domxref("AudioTrack")}} and {{domxref("AudioTrackList")}}

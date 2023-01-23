@@ -97,4 +97,4 @@ obj.src="https://example.com/blahblah.mp4";
 
 ## See also
 
-- The interface defining it, {{domxref("MediaError")}}.
+- The interface defining it, {{domxref("MediaError")}}

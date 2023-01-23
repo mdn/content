@@ -105,4 +105,4 @@ You can try out this example below, and can [see the example in action outside t
 ## See also
 
 - {{HTMLElement("video")}} and {{HTMLElement("audio")}}
-- The interface defining it, {{domxref("MediaError")}}.
+- The interface defining it, {{domxref("MediaError")}}

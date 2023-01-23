@@ -59,7 +59,7 @@ Not part of any standard.
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLCanvasElement")}}.
+- The interface defining it, {{domxref("HTMLCanvasElement")}}
 - The {{htmlattrxref("moz-opaque", "canvas")}} HTML attribute of the
-  {{HTMLElement("canvas")}} element.
+  {{HTMLElement("canvas")}} element
 - [Optimizing your JavaScript game for Firefox OS](https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/)

@@ -25,4 +25,4 @@ The **`HTMLMediaElement.crossOrigin`** property is the CORS setting for this med
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- The interface defining it, {{domxref("HTMLMediaElement")}}

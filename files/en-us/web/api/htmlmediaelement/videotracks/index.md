@@ -49,6 +49,6 @@ information about the track.
 
 ## See also
 
-- The interface defining it, {{DOMxRef("HTMLMediaElement")}}.
+- The interface defining it, {{DOMxRef("HTMLMediaElement")}}
 - {{HTMLElement("video")}}
 - {{DOMxRef("VideoTrack")}} and {{DOMxRef("VideoTrackList")}}
