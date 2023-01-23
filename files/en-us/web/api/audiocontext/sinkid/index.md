@@ -19,13 +19,13 @@ The **`sinkId`** read-only property of the
 
 ## Value
 
-This property returns one of three values, depending on how the sink ID was set:
+This property returns one of the following values, depending on how the sink ID was set:
 
-- Empty string
+- An empty string
   - : If a sink ID has not explicitly been set, the default system audio output device will be used, and `sinkId` will return an empty string.
-- String
+- A string
   - : If the sink ID is set as a string value (using {{domxref("AudioContext.setSinkId", "setSinkId()")}}, or the `sinkId` {{domxref("AudioContext.AudioContext", "AudioContext()")}} contructor option), `sinkId` will return that same string value.
-- {{domxref("AudioSinkInfo")}} object
+- An {{domxref("AudioSinkInfo")}} object
   - : If the sink ID is set as an options object (using {{domxref("AudioContext.setSinkId", "setSinkId()")}}, or the `sinkId` {{domxref("AudioContext.AudioContext", "AudioContext()")}} contructor option), `sinkId` will return an {{domxref("AudioSinkInfo")}} object reflecting the same values set in the initial options object.
 
 ## Examples
