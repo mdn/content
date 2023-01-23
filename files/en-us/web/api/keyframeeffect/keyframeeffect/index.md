@@ -44,7 +44,7 @@ The multi-argument constructor (see above) creates a completely new {{domxref("K
     - `duration` {{optional_inline}}
       - : The number of milliseconds each iteration of the animation takes to complete. Defaults to 0. Although this is technically optional, keep in mind that your animation will not run if this value is 0.
     - `easing` {{optional_inline}}
-      - : The rate of the animation's change over time. Accepts the pre-defined values `"linear"`, `"ease"`, `"ease-in"`, `"ease-out"`, and `"ease-in-out"`, or a custom `"cubic-bezier"` value like `"cubic-bezier(0.42, 0, 0.58, 1)"`. Defaults to `"linear"`.
+      - : The rate of the animation's change over time. Accepts an {{cssxref("easing-function")}}, such as `"linear"`, `"ease-in"`, `"step-end"`, or `"cubic-bezier(0.42, 0, 0.58, 1)"`. Defaults to `"linear"`.
     - `endDelay` {{optional_inline}}
       - : The number of milliseconds to delay after the end of an animation. This is primarily of use when sequencing animations based on the end time of another animation. Defaults to 0.
     - `fill` {{optional_inline}}
