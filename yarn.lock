@@ -41,31 +41,31 @@
   dependencies:
     "@mdn/browser-compat-data" latest
 
-"@mdn/browser-compat-data@^5.2.28":
-  version "5.2.28"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.28.tgz#07d0715026ba6194e2cb17901041112305fe2f85"
-  integrity sha512-GJ0cY5FUv/YdB8C/vkHUkD4o2rCiwRd2XIl6fDv+vX6O2dZ9CqiI/tWzfkKVURU5s2E0rVfLPNifTvAzRoqw2A==
+"@mdn/browser-compat-data@^5.2.29":
+  version "5.2.30"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.30.tgz#67aac0e3fbd2da9ac386d325d05fc324c0b93111"
+  integrity sha512-j48TKjgXHuUXzdk5MuPI7BBjryHQeI2TFWhcULBjiCkqXmW2hBoKGwQNEXTSzCVQmYvEat15cDDPU3NIQmY50w==
 
 "@mdn/browser-compat-data@latest":
   version "5.2.24"
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.24.tgz#45c85391411987d12519d214d80c324c5100bcbc"
   integrity sha512-KZJKMObObkYFUgEWEbIJ7voJ0iGm3XqhJLkS5jyRLSMoSL7PnmCjes+CttpSzgyLu7DwJsFWsRvKBgYFxb5e7A==
 
-"@mdn/yari@1.33.10":
-  version "1.33.10"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.33.10.tgz#fffeb18176f7ddf72dce29cd935001e1d8e6ead0"
-  integrity sha512-UdGwHE9I3fRnavZNrm4fYwhKeVr41pt+UU2xv7gnM6tVqx20qlK1fhaVd0lxTre94C5OOtIkulhRrKtg4ZddOg==
+"@mdn/yari@1.33.11":
+  version "1.33.11"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.33.11.tgz#699cb20ab80309f19b99959f7ddc276b42718f91"
+  integrity sha512-/+u1uCt5zJ4o4lNGEdxiP5b3jKCgvuw0RZDHL1NK2a39gkVaeC7QAwMsQMIalJoIbYuFTR38e7zUZktxYOR4tA==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
     "@mdn/bcd-utils-api" "^0.0.3"
-    "@mdn/browser-compat-data" "^5.2.28"
+    "@mdn/browser-compat-data" "^5.2.29"
     "@mozilla/glean" "1.3.0"
     "@use-it/interval" "^1.0.0"
     "@webref/css" "^5.4.4"
     accept-language-parser "^1.5.0"
     async "^3.2.4"
-    browser-specs "^3.39.0"
+    browser-specs "^3.40.0"
     chalk "^4.1.2"
     cheerio "^1.0.0-rc.12"
     cli-progress "^3.11.2"
@@ -616,10 +616,10 @@ braces@^3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^3.39.0:
-  version "3.39.0"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.39.0.tgz#2e897b77d35b1e0702268b885203ccaa3c341f8e"
-  integrity sha512-s5nrcnhRU4eywiJXsiJTh/+JoEfM61loik0C4+1rtzbneY8A/++rbJIKQQiPx1cTPpjldoyF5lGZuX5lEYmVcA==
+browser-specs@^3.40.0:
+  version "3.40.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.40.0.tgz#3165b0ae2692ee3e504f59a00dda014736c88721"
+  integrity sha512-Iyg9JttUBJR+qSwxlgTVjsMi2TU/0yhNKkSiaHx3awoMqhJ4Rt1zqVObScKaWgTfVSOru2MQDWzP4ZaxKlknVw==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
