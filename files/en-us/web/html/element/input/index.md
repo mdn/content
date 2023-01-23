@@ -359,7 +359,7 @@ Attributes for the `<input>` element include the [global HTML attributes](/en-US
 | [`src`](#src)                       | `image`                                                                 | Same as `src` attribute for {{htmlelement('img')}}; address of image resource         |
 | [`step`](#step)                     | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`    | Incremental values that are valid                                                     |
 | [`type`](#type)                     | all                                                                     | Type of form control                                                                  |
-| [`value`](#value)                   | all                                                                     | The initial value of the control                                                      |
+| [`value`](#value)                   | all except `image`                                                      | The initial value of the control                                                      |
 | [`width`](#width)                   | `image`                                                                 | Same as `width` attribute for {{htmlelement('img')}}                                  |
 
 A few additional non-standard attributes are listed following the descriptions of the standard attributes.
