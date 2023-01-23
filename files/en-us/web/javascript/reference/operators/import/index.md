@@ -34,7 +34,9 @@ The `import()` call is a syntax that closely resembles a function call, but `imp
 
 ### Return value
 
-It returns a promise which fulfills to an object containing all exports from `moduleName`, with the same shape as a namespace import (`import * as name from moduleName`): a [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed) object with [`null` prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). All keys are [enumerable](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) in lexicographic order (i.e. the default behavior of [`Array.prototype.sort()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#description)), with the default export available as a key called `default`.
+Returns a promise which fulfills to a [module namespace object](#module_namespace_object): an object containing all exports from `moduleName`.
+
+The evaluation of `import()` never synchronously throws an error. `moduleName` is [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), and if coercion throws, the promise is rejected with the thrown error.
 
 ## Description
 
@@ -50,6 +52,43 @@ The import declaration syntax (`import something from "somewhere"`) is static an
 Use dynamic import only when necessary. The static form is preferable for loading initial dependencies, and can benefit more readily from static analysis tools and [tree shaking](/en-US/docs/Glossary/Tree_shaking).
 
 If your file is not run as a module (if it's referenced in an HTML file, the script tag must have `type="module"`), you will not be able to use static import declarations, but the asynchronous dynamic import syntax will always be available, allowing you to import modules into non-module environments.
+
+### Module namespace object
+
+A _module namespace object_ is an object that describes all exports from a module. It is a static object that is created when the module is evaluated. There are two ways to access the module namespace object of a module: through a [namespace import](/en-US/docs/Web/JavaScript/Reference/Statements/import#namespace_import) (`import * as name from moduleName`), or through the fulfillment value of a dynamic import.
+
+The module namespace object is a [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed) object with [`null` prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). This means all string keys of the object correspond to the exports of the module and there are never extra keys. All keys are [enumerable](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) in lexicographic order (i.e. the default behavior of [`Array.prototype.sort()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#description)), with the default export available as a key called `default`. In addition, the module namespace object has a [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property with the value `"Module"`, used in {{jsxref("Object.prototype.toString()")}}.
+
+The string properties are non-configurable and writable when you use {{jsxref("Object.getOwnPropertyDescriptors()")}} to get their descriptors. However, they are effectively read-only, because you cannot re-assign a property to a new value. This behavior mirrors the fact that static imports create "[live bindings](/en-US/docs/Web/JavaScript/Reference/Statements/import#imported_values_can_only_be_modified_by_the_exporter)" — the values can be re-assigned by the module exporting them, but not by the module importing them. The writability of the properties reflects the possibility of the values changing, because non-configurable and non-writable properties must be constant. For example, you can re-assign the exported value of a variable, and the new value can be observed in the module namespace object.
+
+Each module specifier corresponds to a unique module namespace object, so the following is generally true:
+
+```js
+import * as mod from "/my-module.js";
+
+import("/my-module.js").then((mod2) => {
+  console.log(mod === mod2); // true
+});
+```
+
+Except in one curious case: because a promise never fulfills to a [thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables), if the `my-module.js` module exports a function called `then()`, that function will automatically get called when the dynamic import's promise is fulfilled.
+
+```js
+// my-module.js
+export function then() {
+  console.log("then() called");
+}
+```
+
+```js
+// main.js
+import * as mod from "/my-module.js";
+
+import("/my-module.js").then((mod2) => {
+  // Logs "then() called"
+  console.log(mod === mod2); // false
+});
+```
 
 ## Examples
 

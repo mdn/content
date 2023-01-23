@@ -1,6 +1,7 @@
 ---
 title: '<figure>: The Figure with Optional Caption element'
 slug: Web/HTML/Element/figure
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -100,7 +101,7 @@ function NavigatorExample() {
 
 {{EmbedLiveSample("Poems", "100%", 250)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

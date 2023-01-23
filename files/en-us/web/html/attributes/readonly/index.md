@@ -1,6 +1,7 @@
 ---
 title: 'HTML attribute: readonly'
 slug: Web/HTML/Attributes/readonly
+page-type: html-attribute
 tags:
   - Attribute
   - Attributes

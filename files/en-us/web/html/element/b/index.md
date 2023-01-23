@@ -1,6 +1,7 @@
 ---
 title: '<b>: The Bring Attention To element'
 slug: Web/HTML/Element/b
+page-type: html-element
 tags:
   - Attention
   - Element
@@ -48,7 +49,7 @@ Keywords are displayed with the default style of the
 
 {{EmbedLiveSample("Examples")}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

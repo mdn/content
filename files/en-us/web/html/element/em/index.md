@@ -1,6 +1,7 @@
 ---
 title: '<em>: The Emphasis element'
 slug: Web/HTML/Element/em
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -53,7 +54,7 @@ The `<em>` element is often used to indicate an implicit or explicit contrast.
 
 {{EmbedLiveSample("Example")}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

@@ -1,6 +1,7 @@
 ---
 title: tabindex
 slug: Web/HTML/Global_attributes/tabindex
+page-type: html-attribute
 tags:
   - Global attributes
   - HTML

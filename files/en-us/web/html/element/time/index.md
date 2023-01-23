@@ -1,6 +1,7 @@
 ---
 title: '<time>: The (Date) Time element'
 slug: Web/HTML/Element/time
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -111,7 +112,7 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 
 {{EmbedLiveSample('datetime_example', 250, 80)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

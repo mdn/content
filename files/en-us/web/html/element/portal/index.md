@@ -1,6 +1,7 @@
 ---
 title: '<portal>: The Portal element'
 slug: Web/HTML/Element/portal
+page-type: html-element
 tags:
   - Content
   - Element

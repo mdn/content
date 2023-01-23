@@ -1,6 +1,7 @@
 ---
 title: '<track>: The Embed Text Track element'
 slug: Web/HTML/Element/track
+page-type: html-element
 tags:
   - Accessibility
   - Cues

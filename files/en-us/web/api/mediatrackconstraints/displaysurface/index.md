@@ -35,7 +35,7 @@ If needed, you can determine whether or not this constraint is supported by chec
 A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) which specifies the type of display surface that's being captured.
 This value _does not_ affect the list of display sources in the browser's user interface.
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints", "How constraints are defined")}} for an explanation of how to define constraints.
+See [how constraints are defined](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#how_constraints_are_defined).
 
 ## Usage notes
 
@@ -67,9 +67,9 @@ of the received frames of video.
 ## Examples
 
 Here are some example constraints objects for `getDisplayMedia()` that make
-use of the `displaySurface` property. In addition, see
-{{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for a complete example showing how constraints are used.
+use of the `displaySurface` property. In addition, see the
+[Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example
+that demonstrates how constraints are used.
 
 ## Specifications
 

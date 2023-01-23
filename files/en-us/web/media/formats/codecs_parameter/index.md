@@ -151,7 +151,7 @@ This codec parameter string's components are described in more detail in the tab
       <td>
         The one-digit monochrome flag; if this is 0, the video includes the U and V planes in addition to the Y plane.
         Otherwise, the video data is entirely in the Y plane and is therefore monochromatic.
-        See {{SectionOnPage("/en-US/docs/Web/Media/Formats/Video_concepts", "YUV")}} for details on how the YUV color system works.
+        See [YUV](/en-US/docs/Web/Media/Formats/Video_concepts#yuv) for details on how the YUV color system works.
         The default value is 0 (not monochrome).
       </td>
     </tr>
@@ -730,7 +730,7 @@ The first four components are required; everything from `CC` (chroma subsampling
       <td>
         <p>
           A two-digit value indicating which chroma subsampling format to use.
-          The following table lists permitted values; see {{SectionOnPage("en-US/docs/Web/Media/Formats/Video_concepts", "Chroma subsampling")}} for additional information about this topic and others.
+          The following table lists permitted values; see [Chroma subsampling](/en-US/docs/Web/Media/Formats/Video_concepts#chroma_subsampling) in our "Digital video concepts" guide for additional information about this topic and others.
         </p>
         <table class="standard-table">
           <caption>
