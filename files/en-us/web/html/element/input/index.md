@@ -307,9 +307,9 @@ The available types are as follows:
       <th colspan="3">Obsolete values</th>
     </tr>
     <tr>
-      <td><code>datetime</code></td>
+      <td><code>datetime</code> {{deprecated_inline}}</td>
       <td>
-        {{deprecated_inline}} A control for entering a date and time (hour, minute, second, and fraction of a second) based on UTC time zone.
+        A control for entering a date and time (hour, minute, second, and fraction of a second) based on UTC time zone.
       </td>
       <td id="exampledatetime">
         <pre class="brush: html hidden">
@@ -359,7 +359,7 @@ Attributes for the `<input>` element include the [global HTML attributes](/en-US
 | [`src`](#src)                       | `image`                                                                 | Same as `src` attribute for {{htmlelement('img')}}; address of image resource         |
 | [`step`](#step)                     | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`    | Incremental values that are valid                                                     |
 | [`type`](#type)                     | all                                                                     | Type of form control                                                                  |
-| [`value`](#value)                   | all                                                                     | The initial value of the control                                                      |
+| [`value`](#value)                   | all except `image`                                                      | The initial value of the control                                                      |
 | [`width`](#width)                   | `image`                                                                 | Same as `width` attribute for {{htmlelement('img')}}                                  |
 
 A few additional non-standard attributes are listed following the descriptions of the standard attributes.

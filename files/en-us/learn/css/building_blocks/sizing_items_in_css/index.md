@@ -72,7 +72,7 @@ In many ways, percentages act like length units, and as we [discussed in the les
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/percent-width.html", '100%', 600)}}
 
-This is because percentages resolve against the size of the containing block. With no percentage applied our `<div>` would take up 100% of the available space, as it is a block level element. If we give it a percentage width, this becomes a percentage of the space it would normally fill.
+This is because percentages resolve against the size of the containing block. With no percentage applied, our `<div>` would take up 100% of the available space, as it is a block level element. If we give it a percentage width, this becomes a percentage of the space it would normally fill.
 
 ### Percentage margins and padding
 
