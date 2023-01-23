@@ -327,7 +327,7 @@ web: python manage.py migrate && python manage.py collectstatic && gunicorn loca
 
 The `web:` prefix tells Railway that this is a web process and can be sent HTTP traffic.
 We then call the command Django migration command `python manage.py migrate` to set up the database tables.
-Next, we call the Django command `python manage.py collectstatic` to collect static files into the folder defined by the `STATIC_ROOT` project setting (to be discussed later).
+Next, we call the Django command `python manage.py collectstatic` to collect static files into the folder defined by the `STATIC_ROOT` project setting (see the section [serving static files in production](#serving_static_files_in_production) below).
 Finally, we start the _gunicorn_ process, a popular web application server, passing it configuration information in the module `locallibrary.wsgi` (created with our application skeleton: **/locallibrary/wsgi.py**).
 
 Note that you can also use the Procfile to start worker processes or to run other non-interactive tasks before the release is deployed.
