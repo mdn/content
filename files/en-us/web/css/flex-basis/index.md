@@ -63,7 +63,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
     - `auto` uses the value of the [width](https://drafts.csswg.org/css2/#the-width-property) in horizontal writing mode, and the value of the [height](https://drafts.csswg.org/css2/#the-height-property) in vertical writing mode; when the corresponding value is also `auto`, the `content` value is used instead
     - `max-content` sets the intrinsic preferred width
     - `min-content` sets the intrinsic minimum width
-    - `fit-content` sets the maximum possible size of a containing block's content area, limited between the `min-content` and `max-content` values, calculated based on the content of the current element
+    - `fit-content` sets the maximum possible size of a containing block's content area, bounded by the `min-content` and `max-content` values, and calculated based on the content of the current element
 
 - `content`
 
