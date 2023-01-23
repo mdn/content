@@ -38,7 +38,7 @@ A `sinkchange` event listener can be used to report a change of audio output dev
 
 ```js
 audioCtx.addEventListener('sinkchange', () => {
-  if(typeof audioCtx.sinkId === 'object' && audioCtx.sinkId.type === 'none') {
+  if (typeof audioCtx.sinkId === 'object' && audioCtx.sinkId.type === 'none') {
     console.log('Audio changed to not play on any device');
   } else {
     console.log(`Audio output device changed to ${ audioCtx.sinkId }`);
