@@ -1,6 +1,7 @@
 ---
 title: '<i>: The Idiomatic Text element'
 slug: Web/HTML/Element/i
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -54,7 +55,7 @@ This example demonstrates using the `<i>` element to mark text that is in anothe
 
 {{EmbedLiveSample("Examples")}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

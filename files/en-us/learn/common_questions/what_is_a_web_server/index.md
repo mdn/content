@@ -106,7 +106,7 @@ Roughly speaking, a server can serve either static or dynamic content. Remember 
 
 The term _dynamic_ means that the server processes the content or even generates it on the fly from a database. This approach provides more flexibility, but the technical stack is more complex, making it dramatically more challenging to build a website.
 
-There are so many application server technologies that it's difficult to suggest a particular one. Some application servers cater to specific website categories like blogs, wikis, or eCommerce; others are more generic. If you're building a dynamic website, take the time to choose technology that fits your needs. Unless you want to learn web server programming (which is an exciting area in itself!), you don't need to create your own application server. That's just [reinventing the wheel](https://en.wikipedia.org/wiki/Reinventing_the_wheel).
+There are so many application server technologies that it's difficult to suggest a particular one. Some application servers cater to specific website categories like blogs, wikis, or e-commerce; others are more generic. If you're building a dynamic website, take the time to choose technology that fits your needs. Unless you want to learn web server programming (which is an exciting area in itself!), you don't need to create your own application server. That's just [reinventing the wheel](https://en.wikipedia.org/wiki/Reinventing_the_wheel).
 
 ## Next steps
 

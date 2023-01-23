@@ -1,6 +1,7 @@
 ---
-title: 'Link types: prerender'
-slug: Web/HTML/Link_types/prerender
+title: rel=prerender
+slug: Web/HTML/Attributes/rel/prerender
+page-type: html-attribute-value
 tags:
   - Attribute
   - HTML

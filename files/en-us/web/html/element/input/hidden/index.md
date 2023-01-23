@@ -1,6 +1,7 @@
 ---
 title: <input type="hidden">
 slug: Web/HTML/Element/input/hidden
+page-type: html-element
 tags:
   - Element
   - Forms

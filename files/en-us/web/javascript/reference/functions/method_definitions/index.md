@@ -154,7 +154,7 @@ The method syntax also supports [computed property names](/en-US/docs/Web/JavaSc
 
 ```js
 const bar = {
-  foo0: function() {
+  foo0: function () {
     return 0;
   },
   foo1() {

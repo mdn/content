@@ -118,7 +118,7 @@ _No changes._
 
 ### HTML
 
-- `<link rel="preload">` (see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Link_types/preload)) has been disabled in Firefox 57 because of various web compatibility issues (e.g. {{bug(1405761)}}). An improved version that works for non-cacheable resources is expected to land in Firefox 58.
+- `<link rel="preload">` (see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Attributes/rel/preload)) has been disabled in Firefox 57 because of various web compatibility issues (e.g. {{bug(1405761)}}). An improved version that works for non-cacheable resources is expected to land in Firefox 58.
 
 ### APIs
 

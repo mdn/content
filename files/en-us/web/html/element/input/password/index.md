@@ -1,6 +1,7 @@
 ---
 title: <input type="password">
 slug: Web/HTML/Element/input/password
+page-type: html-element
 tags:
   - Element
   - Forms
@@ -251,7 +252,7 @@ ssn.oninput = (event) => {
 
 {{EmbedLiveSample("Requesting_a_Social_Security_number", 600, 60)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

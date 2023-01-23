@@ -1,6 +1,7 @@
 ---
-title: 'Link types: prefetch'
-slug: Web/HTML/Link_types/prefetch
+title: rel=prefetch
+slug: Web/HTML/Attributes/rel/prefetch
+page-type: html-attribute-value
 tags:
   - Attribute
   - HTML

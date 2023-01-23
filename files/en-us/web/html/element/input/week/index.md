@@ -1,6 +1,7 @@
 ---
 title: <input type="week">
 slug: Web/HTML/Element/input/week
+page-type: html-element
 tags:
   - Element
   - Forms

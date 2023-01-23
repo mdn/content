@@ -197,7 +197,7 @@ doSomething(
   // A function expression passed as an argument
   function foo() {
     console.log("FOO!");
-  }
+  },
 );
 ```
 

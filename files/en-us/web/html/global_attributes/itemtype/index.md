@@ -1,6 +1,7 @@
 ---
 title: itemtype
 slug: Web/HTML/Global_attributes/itemtype
+page-type: html-attribute
 tags:
   - Attribute
   - Global attribute

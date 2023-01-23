@@ -52,29 +52,6 @@
       "Sheppy"
     ]
   },
-  "Games/Examples": {
-    "modified": "2020-10-27T19:21:22.639Z",
-    "contributors": [
-      "escattone",
-      "rmertens",
-      "tmertensacker",
-      "zlatnaspirala",
-      "goktugyil",
-      "ExE-Boss",
-      "herolf",
-      "wbamberg",
-      "jxjj",
-      "MarxGames",
-      "GoalieSave25",
-      "bartread",
-      "chrisdavidmills",
-      "samuelbeloola",
-      "micahbolen",
-      "fscholz",
-      "douglas-j-bothwell",
-      "xfq"
-    ]
-  },
   "Games/Introduction": {
     "modified": "2020-10-27T19:23:08.004Z",
     "contributors": [
@@ -29751,24 +29728,6 @@
       "Ptak82",
       "Dria",
       "JesseW"
-    ]
-  },
-  "Web/API/Document/registerElement": {
-    "modified": "2020-10-15T21:30:06.830Z",
-    "contributors": [
-      "ExE-Boss",
-      "fscholz",
-      "chrisdavidmills",
-      "vp2177",
-      "mmk",
-      "ebidel",
-      "jpnelson",
-      "Dan-Dascalescu",
-      "maybe",
-      "teoli",
-      "Sebastianz",
-      "markg",
-      "gasolin"
     ]
   },
   "Web/API/Document/releaseCapture": {
@@ -94190,6 +94149,42 @@
       "perfmattersconf"
     ]
   },
+  "Web/HTML/Attributes/rel/dns-prefetch": {
+    "modified": "2020-10-15T22:29:03.654Z",
+    "contributors": ["sideshowbarker"]
+  },
+  "Web/HTML/Attributes/rel/manifest": {
+    "modified": "2020-10-15T22:29:03.916Z",
+    "contributors": ["sideshowbarker"]
+  },
+  "Web/HTML/Attributes/rel/modulepreload": {
+    "modified": "2020-10-15T22:29:02.735Z",
+    "contributors": ["sideshowbarker"]
+  },
+  "Web/HTML/Attributes/rel/noopener": {
+    "modified": "2020-10-15T22:29:03.663Z",
+    "contributors": ["sideshowbarker"]
+  },
+  "Web/HTML/Attributes/rel/noreferrer": {
+    "modified": "2020-10-15T22:29:06.663Z",
+    "contributors": ["sideshowbarker"]
+  },
+  "Web/HTML/Attributes/rel/preconnect": {
+    "modified": "2020-10-15T22:29:05.087Z",
+    "contributors": ["sideshowbarker"]
+  },
+  "Web/HTML/Attributes/rel/prefetch": {
+    "modified": "2020-10-15T22:29:05.730Z",
+    "contributors": ["sideshowbarker"]
+  },
+  "Web/HTML/Attributes/rel/preload": {
+    "modified": "2020-10-15T22:29:04.820Z",
+    "contributors": ["sideshowbarker"]
+  },
+  "Web/HTML/Attributes/rel/prerender": {
+    "modified": "2020-10-15T22:29:04.645Z",
+    "contributors": ["sideshowbarker"]
+  },
   "Web/HTML/Attributes/required": {
     "modified": "2020-11-09T13:04:56.530Z",
     "contributors": [
@@ -100635,90 +100630,6 @@
       "Gilchris",
       "PablO"
     ]
-  },
-  "Web/HTML/Link_types": {
-    "modified": "2020-10-15T21:12:51.727Z",
-    "contributors": [
-      "sideshowbarker",
-      "mfuji09",
-      "DecimalTurn",
-      "alattalatta",
-      "estelle",
-      "bberberov",
-      "ExE-Boss",
-      "myf",
-      "irenesmith",
-      "twhb",
-      "JonathanPool",
-      "jpmedley",
-      "vrana",
-      "jalbertbowden",
-      "fscholz",
-      "Biiinggg",
-      "chrisdavidmills",
-      "wxdude225",
-      "pcat",
-      "xmbhasin",
-      "m_gol",
-      "kicknordel",
-      "mathiasbynens",
-      "dgashmdn",
-      "Sheppy",
-      "acdha",
-      "teoli",
-      "johndickman",
-      "craigfrancis",
-      "bmintz",
-      "jswisher",
-      "justinthrelkeld",
-      "jgborges",
-      "rogerxas",
-      "wzhd",
-      "udoline",
-      "charmander",
-      "PixnBits",
-      "jsx",
-      "enderandpeter",
-      "miloszj7",
-      "ethertank",
-      "tregagnon"
-    ]
-  },
-  "Web/HTML/Link_types/dns-prefetch": {
-    "modified": "2020-10-15T22:29:03.654Z",
-    "contributors": ["sideshowbarker"]
-  },
-  "Web/HTML/Link_types/manifest": {
-    "modified": "2020-10-15T22:29:03.916Z",
-    "contributors": ["sideshowbarker"]
-  },
-  "Web/HTML/Link_types/modulepreload": {
-    "modified": "2020-10-15T22:29:02.735Z",
-    "contributors": ["sideshowbarker"]
-  },
-  "Web/HTML/Link_types/noopener": {
-    "modified": "2020-10-15T22:29:03.663Z",
-    "contributors": ["sideshowbarker"]
-  },
-  "Web/HTML/Link_types/noreferrer": {
-    "modified": "2020-10-15T22:29:06.663Z",
-    "contributors": ["sideshowbarker"]
-  },
-  "Web/HTML/Link_types/preconnect": {
-    "modified": "2020-10-15T22:29:05.087Z",
-    "contributors": ["sideshowbarker"]
-  },
-  "Web/HTML/Link_types/prefetch": {
-    "modified": "2020-10-15T22:29:05.730Z",
-    "contributors": ["sideshowbarker"]
-  },
-  "Web/HTML/Link_types/preload": {
-    "modified": "2020-10-15T22:29:04.820Z",
-    "contributors": ["sideshowbarker"]
-  },
-  "Web/HTML/Link_types/prerender": {
-    "modified": "2020-10-15T22:29:04.645Z",
-    "contributors": ["sideshowbarker"]
   },
   "Web/HTML/Microdata": {
     "modified": "2020-09-06T05:55:47.630Z",

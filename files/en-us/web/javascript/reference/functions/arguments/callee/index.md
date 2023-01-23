@@ -66,15 +66,15 @@ const global = this;
 
 const sillyFunction = function (recursed) {
   if (this !== global) {
-    console.log('This is: ', this);
+    console.log("This is: ", this);
   } else {
-    console.log('This is the global');
+    console.log("This is the global");
   }
 
   if (!recursed) {
     return arguments.callee(true);
   }
-}
+};
 
 sillyFunction();
 // This is the global
@@ -140,8 +140,8 @@ console.log(
   [1, 2, 3, 4, 5].map(
     // Wrap the higher-order function in the Y-combinator
     // "factorial" is not a function's name: it's introduced as a parameter
-    Y((factorial) => (n) => (n <= 1 ? 1 : factorial(n - 1) * n))
-  )
+    Y((factorial) => (n) => (n <= 1 ? 1 : factorial(n - 1) * n)),
+  ),
 );
 // [ 1, 2, 6, 24, 120 ]
 ```

@@ -1,6 +1,7 @@
 ---
-title: 'Link types: manifest'
-slug: Web/HTML/Link_types/manifest
+title: rel=manifest
+slug: Web/HTML/Attributes/rel/manifest
+page-type: html-attribute-value
 tags:
   - App
   - Attribute

@@ -1,6 +1,7 @@
 ---
 title: '<textarea>: The Textarea element'
 slug: Web/HTML/Element/textarea
+page-type: html-element
 tags:
   - Element
   - Forms
