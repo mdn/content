@@ -49,7 +49,7 @@ A pseudo-class is a selector that selects elements that are in a specific state,
 Pseudo-classes are keywords that start with a colon:
 
 ```css
-:pseudo-class-name
+:pseudo-class-name ;
 ```
 
 ### Simple pseudo-class example
@@ -84,7 +84,7 @@ Some pseudo-classes only apply when the user interacts with the document in some
 Pseudo-elements behave in a similar way. However, they act as if you had added a whole new HTML element into the markup, rather than applying a class to existing elements. Pseudo-elements start with a double colon `::`.
 
 ```css
-::pseudo-element-name
+::pseudo-element-name ;
 ```
 
 > **Note:** Some early pseudo-elements used the single colon syntax, so you may sometimes see this in code or examples. Modern browsers support the early pseudo-elements with single- or double-colon syntax for backwards compatibility.
@@ -149,14 +149,13 @@ In the next article, we'll learn about [combinators](/en-US/docs/Learn/CSS/Build
 
 ## In this module
 
+- [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 - [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
 
   - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
   - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
   - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
   - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-- [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 
 - [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
 - [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
