@@ -27,19 +27,13 @@ This includes information on using browser dev tools to track down and fix probl
       <td>
         Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
         <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages; an idea
-        of the high-level
-        <a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
-          >principles of cross browser testing</a
-        >.
+        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages; an idea of the high-level <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">principles of cross browser testing</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To be able to diagnose common JavaScript cross-browser problems, and use
-        appropriate tools and techniques to fix them.
+        To be able to diagnose common JavaScript cross-browser problems, and use appropriate tools and techniques to fix them.
       </td>
     </tr>
   </tbody>
@@ -427,7 +421,8 @@ The easiest way to give Babel a try is to use the [online version](https://babel
 
 ### Using bad browser sniffing code
 
-All browsers have a **user-agent** string, which identifies what the browser is (version, name, OS, etc.) In the bad only days when pretty much everyone used Netscape or Internet Explorer, developers used to use so-called **browser sniffing code** to detect which browser the user was using, and give them appropriate code to work on that browser.
+All browsers have a **user-agent** string, which identifies what the browser is (version, name, OS, etc.).
+Historically developers used _browser sniffing code_ to detect which browser the user was using, and give them appropriate code to work on that browser.
 
 The code used to look something like this (although this is a simplified example):
 
@@ -441,7 +436,7 @@ if (ua.includes('Firefox')) {
 }
 ```
 
-The idea was fairly good — detect what browser is viewing the site, and run code as appropriate to make sure the browser will be able to use your site OK.
+The idea seems to make sense — detect what browser is viewing the site, and provide code that is appropriate for that browser.
 
 > **Note:** Try opening up your JavaScript console now and running `navigator.userAgent`, to see what you get returned.
 
@@ -451,7 +446,7 @@ Many developers implemented bad browser sniffing code and didn't maintain it, an
 
 > **Note:** You should read [History of the browser user-agent string](https://webaim.org/blog/user-agent-string-history/) by Aaron Andersen for a useful and amusing take on this situation.
 
-The lesson to be learned here is — NEVER use browser sniffing. The only real use case for browser sniffing code in the modern day is if you are implementing a fix for a bug in a very specific version of a particular browser. But even then, most bugs get fixed pretty quickly in browser vendor rapid release cycles. It won't come up very often. [Feature detection](#feature_detection) is almost always a better option — if you detect whether a feature is supported, you won't need to change your code when new browser versions come out, and the tests are much more reliable.
+The lesson to be learned here is to never use browser sniffing. The only real use case for browser sniffing code in the modern day is if you are implementing a fix for a bug in a very specific version of a particular browser. But even then, most bugs get fixed pretty quickly in browser vendor rapid release cycles. It won't come up very often. [Feature detection](#feature_detection) is almost always a better option — if you detect whether a feature is supported, you won't need to change your code when new browser versions come out, and the tests are much more reliable.
 
 If you come across browser sniffing when joining an existing project, look at whether it can be replaced with something more sensible. Browser sniffing causes all kind of interesting bugs, like {{bug(1308462)}}.
 
