@@ -19,7 +19,8 @@ specifies a value to be returned to the function caller.
 ## Syntax
 
 ```js-nolint
-return [expression]
+return;
+return expression;
 ```
 
 - `expression`

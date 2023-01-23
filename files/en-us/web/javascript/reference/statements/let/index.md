@@ -22,7 +22,11 @@ The **`let`** declaration declares a block-scoped local variable, optionally ini
 ## Syntax
 
 ```js-nolint
-let name1 [= value1] [, name2 [= value2]] [, ..., nameN [= valueN]
+let name1;
+let name1 = value1;
+let name1 = value1, name2 = value2;
+let name1, name2 = value2;
+let name1 = value1, name2, /* …, */ nameN = valueN;
 ```
 
 ### Parameters
