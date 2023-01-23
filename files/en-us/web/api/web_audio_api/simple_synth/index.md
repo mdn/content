@@ -139,7 +139,7 @@ On the right side of the settings bar, we place a label and a {{HTMLElement("sel
   background-color: #eef;
 }
 
-.key:active {
+.key:active, .active {
   background-color: #000;
   color: #fff;
 }
@@ -574,6 +574,26 @@ function changeVolume(event) {
 ```
 
 This sets the value of the main gain node's `gain` {{domxref("AudioParam")}} to the slider's new value.
+
+```js hidden
+const synth_keys = document.querySelectorAll('.key')
+function key_note(down) {
+  synth_key = 'zxcvbnm,./asdfghjkl;\'qwertyuiop[]\\1234567890-=!@#$%^&*()_+'.indexOf(event.key)
+  const el_key = synth_keys[synth_key]
+  if (el_key) {
+    if (down) {
+      el_key.scrollIntoView()
+      el_key.classList.add('active')
+      notePressed({ buttons: 1, target: el_key })
+    } else {
+      el_key.classList.remove('active')
+      noteReleased({ buttons: 1, target: el_key })
+    }
+  }
+}
+addEventListener('keydown', () => key_note(1))
+addEventListener('keyup', () => key_note(0))
+```
 
 ### Result
 
