@@ -23,7 +23,7 @@ the program will terminate.
 ## Syntax
 
 ```js-nolint
-throw expression
+throw expression;
 ```
 
 - `expression`
