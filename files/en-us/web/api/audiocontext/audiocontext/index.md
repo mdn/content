@@ -55,10 +55,8 @@ new AudioContext(options)
         the new context's output device's preferred sample rate is used by default.
     - `sinkId` {{optional_inline}} {{Experimental_Inline}}
       - : Specifies the sink ID of the audio output device to use for the `AudioContext`. This can take one of the following value types:
-        - String
-          - : A string representing the sink ID, retrieved for example via the `deviceId` property of the {{domxref("MediaDeviceInfo")}} objects returned by {{domxref("MediaDevices.enumerateDevices()")}}.
-        - `AudioSinkOptions`
-          - : An object representing different options for a sink ID. Currently this takes a single property, `type`, with a value of `none`. Setting this parameter causes the audio to be processed without being played through any audio output device.
+        - A string representing the sink ID, retrieved for example via the `deviceId` property of the {{domxref("MediaDeviceInfo")}} objects returned by {{domxref("MediaDevices.enumerateDevices()")}}.
+        - An object representing different options for a sink ID. Currently, this takes a single property, `type`, with a value of `none`. Setting this parameter causes the audio to be processed without being played through any audio output device.
 
 ### Return value
 
