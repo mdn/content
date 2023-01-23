@@ -82,7 +82,7 @@ The following example shows the use of `content-visibility:auto` to skip paintin
 
 #### CSS
 
-The `contain-intrinsic-size: auto 500px;` property adds a default size to the `section`s of 500px to the height and width, once the section has been rendered it will retain its rendered intrinsic size, even when it is scrolled out of the viewport.
+The `contain-intrinsic-size: auto 500px;` property adds a default size of 500px to the height and width of each `section` element. After a section is rendered, it will retain its rendered intrinsic size, even when it is scrolled out of the viewport.
 
 ```css
 section {
@@ -93,7 +93,7 @@ section {
 
 ### Using hidden to manually manage visibility
 
-The following example shows that it is possible to manage visibility using JavaScript. The added benefit of using `content-visibility: hidden` instead of, for example, `display: none` is that rendered content when hidden with `content-visibility` will preserve rendering state. This means that if the content is shown again, it will render quicker than the alternative.
+The following example shows that it is possible to manage visibility using JavaScript. The added benefit of using `content-visibility: hidden` instead of, for example, `display: none` is that the content rendered using `content-visibility` will preserve rendering state when hidden. This means that if the content is shown again, it will render faster than the alternative.
 
 #### HTML
 
@@ -110,9 +110,9 @@ The following example shows that it is possible to manage visibility using JavaS
 
 #### CSS
 
-The `content-visibility` property is set on the paragraph in the containing div, this means that the content in the paragraphs will be either hidden or visible depending on the class of the parent div.
+The `content-visibility` property is set on the paragraph in the containing `div` element. This means that the content in the paragraphs will be either hidden or visible depending on the class of the parent `div` element.
 
-The `contain-intrinsic-size` property is there to represent the content size to help reduce layout shift, while the content is hidden.
+The `contain-intrinsic-size` property is included to represent the content size. This helps to reduce layout shift when content is hidden.
 
 ```css
 .hidden > p {
