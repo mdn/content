@@ -37,7 +37,7 @@ If not specified, the default `client_mode` value is auto. Available values are:
 - `auto`
   - : The user agent decides what works best for the platform. For example, <code>navigate-existing</code> might make more sense on mobile, where single app instances are commonplace, whereas <code>navigate-new</code> might make more sense in a desktop context. This is the default value used if provided values are invalid.
 
-When `focus-existing` is used as a value, you can include code inside the {{domxref("LaunchQueue.setConsumer", "window.launchQueue.setConsumer()")}}'s callback function to provide custom handling of the {{domxref("LaunchParams.targetURL", "targetURL")}}
+When `focus-existing` is used, you can include code inside the {{domxref("LaunchQueue.setConsumer", "window.launchQueue.setConsumer()")}}'s callback function to provide custom handling of the {{domxref("LaunchParams.targetURL", "targetURL")}}
 
 ```js
 window.launchQueue.setConsumer(launchParams => {
