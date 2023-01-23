@@ -85,7 +85,7 @@ The {{DOMxRef("Document")}} provides some additional information that can be use
 
 ### Viewport scaling on mobile browsers
 
-In vast majority of mobile browsers, fullscreen mode ignores viewport meta tag configuration and blocks user scaling in fullscreen mode. In example: "pinch to zoom" on the image presented in fullscreen mode will not work, even if the page in normal mode can ba scaled using pinch to zoom.
+Some mobile browsers while in fullscreen mode ignore viewport meta-tag settings and block user scaling; for example: a "pinch to zoom" gesture will not work on a page presented in fullscreen mode — even if, when not in fullscreen mode, the page can be scaled using pinch to zoom.
 
 ## Things your users want to know
 
