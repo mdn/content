@@ -14,7 +14,7 @@ The HTTP **`102 Processing`** informational status response code indicates to cl
 
 This status code is only sent if the server expects the request to take significant time. It tells the client that your request is not dead yet.
 
-**Note:** This status code is deprecated and shouldn't be sent any more. Clients may still accept it, but simply ignore them.
+> **Note:** This status code is deprecated and shouldn't be sent any more. Clients may still accept it, but simply ignore them.
 
 ## Status
 
