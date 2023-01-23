@@ -1,6 +1,7 @@
 ---
 title: Host
 slug: Glossary/Host
+page-type: glossary-definition
 tags:
   - Intermediate
   - Web

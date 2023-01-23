@@ -1,6 +1,7 @@
 ---
 title: <ins>
 slug: Web/HTML/Element/ins
+page-type: html-element
 tags:
   - Element
   - HTML

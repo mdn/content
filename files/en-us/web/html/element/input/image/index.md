@@ -1,6 +1,7 @@
 ---
 title: <input type="image">
 slug: Web/HTML/Element/input/image
+page-type: html-element
 tags:
   - Element
   - Form Image

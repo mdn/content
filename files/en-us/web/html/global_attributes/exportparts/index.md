@@ -1,6 +1,7 @@
 ---
 title: exportparts
 slug: Web/HTML/Global_attributes/exportparts
+page-type: html-attribute
 tags:
   - Global attributes
   - HTML

@@ -9,10 +9,11 @@ tags:
   - FileSystemHandle
   - Method
   - Experimental
+  - Non-standard
 browser-compat: api.FileSystemHandle.remove
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}{{Non-standard_header}}
 
 The **`remove()`** method of the {{domxref("FileSystemHandle")}} interface requests removal of the entry represented by the handle from the underlying file system.
 

@@ -1,6 +1,7 @@
 ---
 title: <menuitem>
 slug: Web/HTML/Element/menuitem
+page-type: html-element
 tags:
   - Deprecated
   - Element
@@ -93,7 +94,7 @@ div {
 
 {{EmbedLiveSample("Example", '100%', 80)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

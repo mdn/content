@@ -168,7 +168,7 @@ This works particularly well when you want to use a value that is quite new and 
 }
 ```
 
-We will look at many more ways to support varying browsers in later lessons.
+We will look at many more ways to support various browsers in later lessons.
 
 ## Summary
 

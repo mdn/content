@@ -1,6 +1,7 @@
 ---
 title: Control flow
 slug: Glossary/Control_flow
+page-type: glossary-definition
 tags:
   - CodingScripting
   - JavaScript

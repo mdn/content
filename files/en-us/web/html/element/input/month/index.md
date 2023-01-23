@@ -1,6 +1,7 @@
 ---
 title: <input type="month">
 slug: Web/HTML/Element/input/month
+page-type: html-element
 tags:
   - Date picker
   - Element
@@ -40,7 +41,7 @@ The Microsoft Edge `month` control looks like this:
 ## Value
 
 A string representing the value of the month and year entered into the input, in the form YYYY-MM (four or more digit year, then a hyphen ("`-`"), followed by the two-digit month).
-The format of the month string used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid local month string")}}.
+The format of the month string used by this input type is described in [Month strings](/en-US/docs/Web/HTML/Date_and_time_formats#month_strings).
 
 ### Setting a default value
 

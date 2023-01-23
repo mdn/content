@@ -1,6 +1,7 @@
 ---
 title: DOM (Document Object Model)
 slug: Glossary/DOM
+page-type: glossary-definition
 tags:
   - CodingScripting
   - DOM

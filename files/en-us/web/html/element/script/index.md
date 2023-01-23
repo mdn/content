@@ -1,6 +1,7 @@
 ---
 title: '<script>: The Script element'
 slug: Web/HTML/Element/script
+page-type: html-element
 tags:
   - Element
   - HTML

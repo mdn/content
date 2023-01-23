@@ -1,6 +1,7 @@
 ---
 title: '<big>: The Bigger Text element'
 slug: Web/HTML/Element/big
+page-type: html-element
 tags:
   - Element
   - HTML

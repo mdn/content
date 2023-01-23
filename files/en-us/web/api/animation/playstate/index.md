@@ -15,9 +15,7 @@ browser-compat: api.Animation.playState
 
 {{APIRef("Web Animations")}}
 
-The **`Animation.playState`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns and sets an enumerated value describing the playback state of an animation.
-
-> **Note:** This property is read-only for CSS Animations and Transitions.
+The read-only **`Animation.playState`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns an enumerated value describing the playback state of an animation.
 
 ## Value
 

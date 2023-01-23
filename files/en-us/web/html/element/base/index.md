@@ -1,6 +1,7 @@
 ---
 title: '<base>: The Document Base URL element'
 slug: Web/HTML/Element/base
+page-type: html-element
 tags:
   - Element
   - HTML

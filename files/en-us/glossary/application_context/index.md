@@ -1,6 +1,7 @@
 ---
 title: Application Context
 slug: Glossary/Application_context
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

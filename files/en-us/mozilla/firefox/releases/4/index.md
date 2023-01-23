@@ -287,7 +287,7 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 - [FormData](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#using_formdata_objects) support for XMLHttpRequest.
 - The {{domxref("element.isContentEditable")}} property has been implemented.
 - The {{domxref("document.currentScript")}} property lets you determine which {{HTMLElement("script")}} element's script is currently executing. The new {{domxref("element.onbeforescriptexecute")}} and {{domxref("element.onafterscriptexecute")}} events are fired before and after a script element executes.
-- Added the [`mozSourceNode`](/en-US/docs/Web/API/DataTransfer#mozsourcenode) property to the [`DragTransfer`](/en-US/docs/Web/API/DataTransfer) object.
+- Added the `mozSourceNode` property to the [`DragTransfer`](/en-US/docs/Web/API/DataTransfer) object.
 - Added the [`selection.modify()`](/en-US/docs/Web/API/Selection/modify) method to the {{domxref("Selection")}} object; this lets you easily alter the current text selection or cursor position in a browser window.
 - Support for the `window.directories` object and the `directories` feature for {{domxref("window.open")}}, which are not supported in any other browser, has been removed. Use `personalbar` instead. {{Bug(474058)}}
 - The {{domxref("event.mozInputSource")}} property has been added to DOM user interface events; this non-standard property lets you determine the type of device that generated an event.

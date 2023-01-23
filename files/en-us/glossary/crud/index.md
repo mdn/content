@@ -1,6 +1,7 @@
 ---
 title: CRUD
 slug: Glossary/CRUD
+page-type: glossary-definition
 tags:
   - Infrastructure
 ---

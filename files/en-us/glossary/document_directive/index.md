@@ -1,6 +1,7 @@
 ---
 title: Document directive
 slug: Glossary/Document_directive
+page-type: glossary-definition
 tags:
   - CSP
   - Directive

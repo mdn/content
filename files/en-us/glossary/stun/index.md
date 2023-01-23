@@ -1,6 +1,7 @@
 ---
 title: STUN
 slug: Glossary/STUN
+page-type: glossary-definition
 tags:
   - Infrastructure
   - STUN
