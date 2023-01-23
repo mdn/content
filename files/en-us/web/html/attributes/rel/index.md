@@ -1,6 +1,7 @@
 ---
 title: "HTML attribute: rel"
 slug: Web/HTML/Attributes/rel
+page-type: html-attribute
 tags:
   - Attribute
   - Attributes

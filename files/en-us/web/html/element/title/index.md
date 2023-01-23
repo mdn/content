@@ -1,6 +1,7 @@
 ---
 title: '<title>: The Document Title element'
 slug: Web/HTML/Element/title
+page-type: html-element
 tags:
   - Element
   - HTML

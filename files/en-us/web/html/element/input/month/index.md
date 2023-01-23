@@ -1,6 +1,7 @@
 ---
 title: <input type="month">
 slug: Web/HTML/Element/input/month
+page-type: html-element
 tags:
   - Date picker
   - Element

@@ -1,6 +1,7 @@
 ---
 title: <input type="url">
 slug: Web/HTML/Element/input/url
+page-type: html-element
 tags:
   - Element
   - Form Control

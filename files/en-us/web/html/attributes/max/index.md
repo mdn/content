@@ -1,6 +1,7 @@
 ---
 title: "HTML attribute: max"
 slug: Web/HTML/Attributes/max
+page-type: html-attribute
 tags:
   - Attribute
   - Attributes

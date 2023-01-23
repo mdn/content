@@ -1,6 +1,7 @@
 ---
 title: <input type="email">
 slug: Web/HTML/Element/input/email
+page-type: html-element
 tags:
   - Email
   - Forms
@@ -330,7 +331,7 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
 
 {{EmbedLiveSample('Examples', 600, 80)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

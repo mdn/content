@@ -1,6 +1,7 @@
 ---
 title: "<a>: The Anchor element"
 slug: Web/HTML/Element/a
+page-type: html-element
 tags:
   - Content
   - Element
@@ -453,7 +454,7 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        {{ARIARole("link")}} when <code>href</code> attribute is
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> when <code>href</code> attribute is
         present, otherwise
         <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
           >no corresponding role</a
@@ -465,16 +466,16 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
       <td>
         <p>When <code>href</code> attribute is present:</p>
         <ul>
-          <li>{{ARIARole("button")}}</li>
-          <li>{{ARIARole("checkbox")}}</li>
-          <li>{{ARIARole("menuitem")}}</li>
-          <li>{{ARIARole("menuitemcheckbox")}}</li>
-          <li>{{ARIARole("menuitemradio")}}</li>
-          <li>{{ARIARole("option")}}</li>
-          <li>{{ARIARole("radio")}}</li>
-          <li>{{ARIARole("switch")}}</li>
-          <li>{{ARIARole("tab")}}</li>
-          <li>{{ARIARole("treeitem")}}</li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a></li>
         </ul>
         <p>When <code>href</code> attribute is not present:</p>
         <ul>
@@ -500,8 +501,7 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
 ## See also
 
 - {{HTMLElement("link")}} is similar to `<a>`, but for metadata hyperlinks that are invisible to users.
-- {{CSSxRef(":link")}} is a CSS pseudo-class that will match `<a>` elements with valid `href` attributes.
-- {{CSSxRef(":visited")}} is a CSS pseudo-class that will match `<a>` elements with URL in `href` attribute that was visited by the user in the past.
 - {{CSSxRef(":link")}} is a CSS pseudo-class that will match `<a>` elements with URL in `href` attribute that was not yet visited by the user.
+- {{CSSxRef(":visited")}} is a CSS pseudo-class that will match `<a>` elements with URL in `href` attribute that was visited by the user in the past.
 - {{CSSxRef(":any-link")}} is a CSS pseudo-class that will match `<a>` elements with `href` attribute.
 - [Text fragments](/en-US/docs/Web/Text_fragments) are user-agent instructions added to URLs that allow content authors to link to specific text on a page, without IDs being required.

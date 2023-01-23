@@ -1,6 +1,7 @@
 ---
 title: <input type="file">
 slug: Web/HTML/Element/input/file
+page-type: html-element
 tags:
   - Directory Picker
   - File
@@ -390,7 +391,7 @@ The example looks like this; have a play:
 
 {{EmbedLiveSample('Examples', '100%', 200)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

@@ -21,7 +21,7 @@ This section covers the types of content we provide and the copyrights and licen
 
 Your reuse of the content here is published under the same license as the original content—CC-BY-SA v2.5 or any later version. When reusing the content on MDN Web Docs, you need to ensure that attribution is given to the original content as well as to "Mozilla Contributors". Include a hyperlink (online) or URL (in print) to the specific page of the content being sourced. For example, to provide attribution for _this_ article, you can write:
 
-> [Attributions and copyright licensing](/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license) by [Mozilla Contributors](/en-US/docs/MDN/About/contributors.txt) is licensed under [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/). <!--need to revisit the contributors.txt link-->
+> [Attributions and copyright licensing](/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license) by [Mozilla Contributors](/en-US/docs/MDN/Community/Roles_teams#contributor) is licensed under [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/). <!--need to revisit the contributors.txt link-->
 
 In the above example, "Mozilla Contributors" links to the history of the cited page. See [Best practices for attribution](https://wiki.creativecommons.org/wiki/Marking/Users) for further explanation.
 
