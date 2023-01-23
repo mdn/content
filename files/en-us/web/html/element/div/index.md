@@ -81,7 +81,7 @@ This example creates a shadowed box by applying a style to the `<div>` using CSS
 
 {{EmbedLiveSample("A_styled_example", 650, 120)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

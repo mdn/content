@@ -39,7 +39,7 @@ _[The Yahoo Style Guide](https://web.archive.org/web/20121014054923/http://style
 
 {{EmbedLiveSample("Example")}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

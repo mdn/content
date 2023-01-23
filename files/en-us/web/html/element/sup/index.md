@@ -97,7 +97,7 @@ The output:
 
 {{EmbedLiveSample("Ordinal_numbers", 650, 160)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

@@ -391,7 +391,7 @@ The example looks like this; have a play:
 
 {{EmbedLiveSample('Examples', '100%', 200)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

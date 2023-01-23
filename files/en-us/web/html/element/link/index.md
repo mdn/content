@@ -436,7 +436,7 @@ the rendering of the page will be blocked till the resource is fetched. For exam
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td>{{ARIARole("link")}} with <code>href</code> attribute</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> with <code>href</code> attribute</td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>

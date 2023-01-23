@@ -252,7 +252,7 @@ ssn.oninput = (event) => {
 
 {{EmbedLiveSample("Requesting_a_Social_Security_number", 600, 60)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

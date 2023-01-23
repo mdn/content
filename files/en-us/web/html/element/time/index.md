@@ -112,7 +112,7 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 
 {{EmbedLiveSample('datetime_example', 250, 80)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

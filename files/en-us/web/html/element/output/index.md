@@ -106,7 +106,7 @@ Many browsers implement this element as an [`aria-live`](/en-US/docs/Web/Accessi
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td>{{ARIARole("status")}}</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/status_role"><code>status</code></a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>

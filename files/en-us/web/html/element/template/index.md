@@ -145,7 +145,7 @@ container.appendChild(secondClone);
 
 {{EmbedLiveSample('Avoiding_DocumentFragment_pitfall')}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

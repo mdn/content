@@ -54,7 +54,7 @@ The `<em>` element is often used to indicate an implicit or explicit contrast.
 
 {{EmbedLiveSample("Example")}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

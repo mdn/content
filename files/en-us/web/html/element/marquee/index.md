@@ -76,7 +76,7 @@ The **`<marquee>`** [HTML](/en-US/docs/Web/HTML) element is used to insert a scr
 
 {{EmbedLiveSample("Examples", 600, 450)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

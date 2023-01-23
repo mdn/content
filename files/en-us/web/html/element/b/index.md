@@ -49,7 +49,7 @@ Keywords are displayed with the default style of the
 
 {{EmbedLiveSample("Examples")}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

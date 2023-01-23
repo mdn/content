@@ -60,7 +60,7 @@ li span {
 
 {{EmbedLiveSample('Example_2')}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

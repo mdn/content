@@ -68,7 +68,7 @@ body {
 
 {{EmbedLiveSample("Without_ruby_support", 600, 60)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
