@@ -10,7 +10,10 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.1
 
 {{HTTPSidebar}}
 
-The HTTP **`207 Multi Status`** response code indicates that there might be mixture of responses. We use {{HTTPStatus(204)}} if all the operations succededs or else if all fails we can use {{HTTPStatus(403)}}. But if half of them fails and half succedds we use Multi Status in such conditions.
+The HTTP **`207 Multi Status`** response code indicates that there might be mixture of responses.
+
+We use {{HTTPStatus(204)}} if all the operations succeed and {{HTTPStatus(403)}} if all operations fail.
+`207 Multi Status` is returned if some operations succeed and others fail.
 
 If you perform a destructive operation like {{HTTPMethod("POST")}}, {{HTTPMethod("DELETE")}} etc. against more than one resource and the operations against each individual resource does not share a common outcome then you can go for 207.
 
