@@ -46,36 +46,33 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 ## Examples
 
-The following example shows a simple button that, when clicked, opens a modal {{htmlelement("dialog")}} containing a form via the {{domxref("HTMLDialogElement.showModal()")}} function. While open, everything other than the modal dialog's contents is inert. From there you can click the _Cancel_ button to close the dialog (via the {{domxref("HTMLDialogElement.close()")}} function), or submit the form via the submit button. Selecting the cancel button closes the dialog, creating a {{domxref("HTMLDialogElement/close_event", "close")}} event, not a {{domxref("HTMLDialogElement/cancel_event", "cancel")}} event.
+The following example shows a button that, when clicked, opens a modal {{htmlelement("dialog")}} containing a form via the {{domxref("HTMLDialogElement.showModal()")}} function. While open, everything other than the modal dialog's contents is inert. From there you can click the _Cancel_ button to close the dialog (via the {{domxref("HTMLDialogElement.close()")}} function), or submit the form via the submit button. Selecting the cancel button closes the dialog, creating a {{domxref("HTMLDialogElement/close_event", "close")}} event, not a {{domxref("HTMLDialogElement/cancel_event", "cancel")}} event.
 
 ```html
-<!-- Simple pop-up dialog box, containing a form -->
 <dialog id="favDialog">
   <form method="dialog">
-    <section>
-      <p>
-        <label for="favAnimal">Favorite animal:</label>
-        <select id="favAnimal" name="favAnimal">
-          <option></option>
-          <option>Brine shrimp</option>
-          <option>Red panda</option>
-          <option>Spider monkey</option>
-        </select>
-      </p>
-    </section>
-    <menu>
-      <button id="cancel" type="button">Cancel</button>
+    <p>
+      <label for="favAnimal">Favorite animal:</label>
+      <select id="favAnimal" name="favAnimal">
+        <option></option>
+        <option>Brine shrimp</option>
+        <option>Red panda</option>
+        <option>Spider monkey</option>
+      </select>
+    </p>
+    <div>
+      <button id="cancel" type="reset">Cancel</button>
       <button type="submit">Confirm</button>
-    </menu>
+    </div>
   </form>
 </dialog>
 
-<menu>
+<div>
   <button id="updateDetails">Update details</button>
-</menu>
+</div>
 
 <script>
-  (() => {
+  (function () {
     const updateButton = document.getElementById("updateDetails");
     const cancelButton = document.getElementById("cancel");
     const dialog = document.getElementById("favDialog");
@@ -90,13 +87,13 @@ The following example shows a simple button that, when clicked, opens a modal {{
     }
 
     // Update button opens a modal dialog
-    updateButton.addEventListener("click", () => {
+    updateButton.addEventListener("click", function () {
       dialog.showModal();
       openCheck(dialog);
     });
 
     // Form cancel button closes the dialog box
-    cancelButton.addEventListener("click", () => {
+    cancelButton.addEventListener("click", function () {
       dialog.close("animalNotChosen");
       openCheck(dialog);
     });
