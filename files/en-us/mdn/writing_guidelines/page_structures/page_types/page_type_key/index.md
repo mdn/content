@@ -36,6 +36,8 @@ These page types are not specific to a particular MDN technology area:
 
 ## Domain-specific page types
 
+This section lists page types that are specific to a single area of MDN.
+
 ### CSS page types
 
 This section lists `page-type` values for pages under [Web/CSS](/en-US/docs/Web/CSS). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
@@ -54,9 +56,24 @@ This section lists `page-type` values for pages under [Web/CSS](/en-US/docs/Web/
 - `css-shorthand-property`: a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties), like {{cssxref("background")}}.
 - `css-type`: a [data type](/en-US/docs/Web/CSS/CSS_Types), like [`<color>`](/en-US/docs/Web/CSS/color_value).
 
+### Glossary page types
+
+This section lists `page-type` values for pages under [Glossary](/en-US/docs/Glossary). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below.
+
+- `glossary-definition`: a page defining a term, like [Bézier curve](/en-US/docs/Glossary/Bezier_curve).
+- `glossary-disambiguation`: a page providing links to two or more definition pages for an ambiguous term, like [Node](/en-US/docs/Glossary/Node).
+
+### HTML page types
+
+This section lists `page-type` values for pages under [Web/HTML](/en-US/docs/Web/HTML). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+
+- `html-attribute`: an HTML attribute, like [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete).
+- `html-attribute-value`: a single value for an HTML attribute, like [`dns-prefetch`](/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch).
+- `html-element`: an HTML element, like [`<button>`](/en-US/docs/Web/HTML/Element/button).
+
 ### JavaScript page types
 
-This section lists `page-type` values for pages under [Web/JavaScript](/en-US/docs/Web/CSS). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+This section lists `page-type` values for pages under [Web/JavaScript](/en-US/docs/Web/JavaScript). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
 
 - `javascript-class`: a definition of a built-in object, like [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
 - `javascript-constructor`: an object constructor, like [`Array()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array).
@@ -73,6 +90,13 @@ This section lists `page-type` values for pages under [Web/JavaScript](/en-US/do
 - `javascript-static-accessor-property`: a static accessor property, like [`RegExp.lastMatch`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch).
 - `javascript-static-data-property`: a static data property, like [`Math.E`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/E).
 - `javascript-static-method`: a static method, like [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
+
+### SVG page types
+
+This section lists `page-type` values for pages under [Web/SVG](/en-US/docs/Web/SVG). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+
+- `svg-attribute`: an SVG attribute, like [`crossorigin`](/en-US/docs/Web/SVG/Attribute/crossorigin).
+- `svg-element`: an SVG element, like [`<circle>`](/en-US/docs/Web/SVG/Element/circle).
 
 ### Web API page types
 
