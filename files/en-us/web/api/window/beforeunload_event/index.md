@@ -101,7 +101,7 @@ by all browsers.
 When this event returns (or sets the `returnValue` property to) a value
 other than `null` or `undefined`, the user will be prompted to
 confirm the page unload. In older browsers, the return value of the event is displayed
-in this dialog. Since with Firefox 44, Chrome 51, Opera 38, and Safari 9.1, a generic
+in this dialog. Since Firefox 44, Chrome 51, Opera 38, and Safari 9.1, a generic
 string not under the control of the webpage is shown instead of the returned
 string. For example:
 
