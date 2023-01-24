@@ -582,7 +582,8 @@ function key_note(down) {
   const el_key = synth_keys[synth_key]
   if (el_key) {
     if (down) {
-      el_key.scrollIntoView({block: 'center', inline: 'center'})
+      el_key.tabIndex = -1
+      el_key.focus()
       el_key.classList.add('active')
       notePressed({ buttons: 1, target: el_key })
     } else {
