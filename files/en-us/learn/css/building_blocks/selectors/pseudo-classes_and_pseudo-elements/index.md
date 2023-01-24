@@ -49,9 +49,6 @@ A pseudo-class is a selector that selects elements that are in a specific state,
 Pseudo-classes are keywords that start with a colon. For example, `:hover` is a pseudo-class.
 
 ```css
-:pseudo-class-name ;
-```
-
 ### Simple pseudo-class example
 
 Let's look at a simple example. If we wanted to make the first paragraph in an article larger and bold, we could add a class to that paragraph and then add CSS to that class, as shown in the first example below:
