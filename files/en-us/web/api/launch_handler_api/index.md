@@ -26,7 +26,7 @@ You can specify launch behavior for your app by adding the [`launch_handler`](/e
 }
 ```
 
-If not specified, the default `client_mode` value is auto. Available values are:
+If not specified, the default `client_mode` value is `auto`. Available values are:
 
 - `navigate-new`
   - : A new browsing context is created in a web app window to load the target launch URL.
