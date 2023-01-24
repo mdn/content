@@ -1827,7 +1827,7 @@ Note that since locking the screen orientation isn't typically supported on desk
 #### StorageManager.getDirectory()
 
 The {{domxref("StorageManager.getDirectory()")}} method, obtained using `navigator.storage.getDirectory()` in a worker or the main thread, provides access to files stored in the [origin private file system](/en-US/docs/Web/API/File_System_Access_API#origin_private_file_system).
-This data is origin-specific: permission prompts are not required to access files and clearing data for the site/origin deletes the storage.
+This data is origin-specific: permission prompts are not required to access files, and clearing data for the site/origin deletes the storage.
 See {{bug(1785123)}} for more details.
 
 <table>
