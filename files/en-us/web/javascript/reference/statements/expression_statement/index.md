@@ -7,7 +7,7 @@ spec-urls: https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-
 
 {{jsSidebar("Statements")}}
 
-An **expression statement** evaluates an expression and discards its result. It allows the expression to perform side effects, such as executing a function or updating a variable.
+Wherever JavaScript expects a statement, you can also write an expression. Such a statement is called an **expression statement**. The reverse does not hold: you cannot write a statement where JavaScript expects an expression.
 
 ## Syntax
 
