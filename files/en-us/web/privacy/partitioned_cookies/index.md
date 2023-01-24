@@ -9,7 +9,7 @@ tags:
 browser-compat: http.headers.Set-Cookie.Partitioned
 ---
 
-{{QuicklinksWithSubPages("Web/Privacy")}}{{seecompattable}}
+{{QuicklinksWithSubPages("Web/Privacy")}}{{SeeCompatTable}}
 
 **Cookies Having Independent Partitioned State** (**CHIPS**, also know as **Partitioned cookies**) allows developers to opt a cookie into partitioned storage, with a separate cookie jar per top-level site.
 
@@ -17,7 +17,7 @@ A partitioned third-party cookie is tied to the top-level site where it's initia
 
 ## Cross-site tracking in a nutshell
 
-Historically, when a site embeds content via an {{htmlelement("iframe")}}, the embeded content can set a cookie on the user's device in response to the cross-site request. If the user visits other sites that embed the same content, the embedded content can access the same cookie originally set by the first instance of the embedded content. This enables the content owner to track user activity across these sites, and any other sites that embed the same content.
+Historically, when a site embeds content via an {{htmlelement("iframe")}}, the embedded content can set a cookie on the user's device in response to the cross-site request. If the user visits other sites that embed the same content, the embedded content can access the same cookie originally set by the first instance of the embedded content. This enables the content owner to track user activity across these sites, and any other sites that embed the same content.
 
 For example:
 
