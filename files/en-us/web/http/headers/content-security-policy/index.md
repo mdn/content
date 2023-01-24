@@ -197,24 +197,24 @@ For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Cont
 
 ### Keyword values
 
-- `none`
+- `'none'`
   - : Won't allow loading of any resources.
-- `self`
+- `'self'`
   - : Only allow resources from the current origin.
-- `strict-dynamic`
+- `'strict-dynamic'`
   - : The trust granted to a script in the page due to an accompanying nonce or hash is extended to the scripts it loads.
-- `report-sample`
+- `'report-sample'`
   - : Require a sample of the violating code to be included in the violation report.
 
 ### Unsafe keyword values
 
-- `unsafe-inline`
+- `'unsafe-inline'`
   - : Allow use of inline resources.
-- `unsafe-eval`
+- `'unsafe-eval'`
   - : Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("Window.setImmediate", "setImmediate")}} {{non-standard_inline}}, and `window.execScript` {{non-standard_inline}}.
-- `unsafe-hashes`
+- `'unsafe-hashes'`
   - : Allows enabling specific inline event handlers.
-- `unsafe-allow-redirects` {{experimental_inline}}
+- `'unsafe-allow-redirects'` {{experimental_inline}}
   - : TBD
 
 ### Hosts values
@@ -230,9 +230,9 @@ For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Cont
 
 ### Other values
 
-- nonce-\*
+- `'nonce-*'`
   - : A cryptographic nonce (only used once) to allow scripts. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial. This is used in conjunction with the [script tag nonce attribute](/en-US/docs/Web/HTML/Element/script#attr-nonce). For example, `nonce-DhcnhD3khTMePgXwdayK9BsMqXjhguVV`.
-- sha\*-\*
+- `'sha*-*'`
   - : sha256, sha384, or sha512. Followed by a dash and then the sha\* value. For example, `sha256-jzgBGA4UWFFmpOBq0JpdsySukE1FrEN5bUpoK8Z29fY=`.
 
 ## CSP in workers
