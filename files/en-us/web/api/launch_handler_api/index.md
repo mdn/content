@@ -28,12 +28,12 @@ You can specify launch behavior for your app by adding the [`launch_handler`](/e
 
 If not specified, the default `client_mode` value is `auto`. Available values are:
 
-- `navigate-new`
-  - : A new browsing context is created in a web app window to load the target launch URL.
-- `navigate-existing`
-  - : The most recently interacted with browsing context in a web app window is navigated to the target launch URL.
 - `focus-existing`
   - : The most recently interacted with browsing context in a web app window is chosen to handle the launch. This will populate the target launch URL in the {{domxref("LaunchParams.targetURL", "targetURL")}} property of the {{domxref("LaunchParams")}} object passed into the {{domxref("LaunchQueue.setConsumer", "window.launchQueue.setConsumer()")}}'s callback function. As you'll see below, this allows you to set custom launch handing functionality for your app.
+- `navigate-existing`
+  - : The most recently interacted with browsing context in a web app window is navigated to the target launch URL. The target URL is still made available via {{domxref("LaunchQueue.setConsumer", "window.launchQueue.setConsumer()")}} to allow additional custom launch navigation handling to be implemented.
+- `navigate-new`
+  - : A new browsing context is created in a web app window to load the target launch URL. The target URL is still made available via {{domxref("LaunchQueue.setConsumer", "window.launchQueue.setConsumer()")}} to allow additional custom launch navigation handling to be implemented.
 - `auto`
   - : The user agent decides what works best for the platform. For example, <code>navigate-existing</code> might make more sense on mobile, where single app instances are commonplace, whereas <code>navigate-new</code> might make more sense in a desktop context. This is the default value used if provided values are invalid.
 
@@ -52,7 +52,7 @@ window.launchQueue.setConsumer(launchParams => {
 - {{domxref("LaunchParams")}}
   - : Used when implementing custom launch navigation handling in a PWA. When {{domxref("LaunchQueue.setConsumer", "window.launchQueue.setConsumer()")}} is invoked to set up the launch navigation handling functionality, the callback function inside `setConsumer()` is passed a `LaunchParams` object instance.
 - {{domxref("LaunchQueue")}}
-  - : When a [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA) is launched with a [`launch_handler`](/en-US/docs/Web/Manifest/launch_handler) `client_mode` value set, `LaunchQueue` provides access to functionality that allows custom launch navigation handling to be implemented in the PWA. This functionality is controlled by the properties of the {{domxref("LaunchParams")}} object passed into the {{domxref("LaunchQueue.setConsumer", "setConsumer()")}} callback function.
+  - : When a [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA) is launched with a [`launch_handler`](/en-US/docs/Web/Manifest/launch_handler) value of `client_mode`, `navigate-new`, or `navigate-existing`, `LaunchQueue` provides access to functionality that allows custom launch navigation handling to be implemented in the PWA. This functionality is controlled by the properties of the {{domxref("LaunchParams")}} object passed into the {{domxref("LaunchQueue.setConsumer", "setConsumer()")}} callback function.
 
 ## Extensions to other interfaces
 
