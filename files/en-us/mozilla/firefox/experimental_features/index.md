@@ -1822,6 +1822,50 @@ Note that since locking the screen orientation isn't typically supported on desk
   </tbody>
 </table>
 
+### File System Access API
+
+#### StorageManager.getDirectory()
+
+The {{domxref("StorageManager.getDirectory()")}} method, obtained using `navigator.storage.getDirectory()` in a worker or the main thread, provides access to files stored in the [origin private file system](/en-US/docs/Web/API/File_System_Access_API#origin_private_file_system).
+This data is origin-specific: permission prompts are not required to access files, and clearing data for the site/origin deletes the storage.
+See {{bug(1785123)}} for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version changed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>110</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>97</td>
+      <td>No.</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.fs.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### Prioritized Task Scheduling API
 
 The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they defined in a website developer's code, or in third party libraries and frameworks.
