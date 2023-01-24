@@ -54,6 +54,48 @@ body {
 }
 ```
 
+### Using a custom property before it is set
+
+```css
+body {
+  background-color: var(--main-bg-color);
+}
+
+:root {
+  --main-bg-color: pink;
+}
+```
+
+### Using a custom property set in another file
+
+```css
+/* 1.css */
+body {
+  background-color: var(--main-bg-color);
+}
+```
+
+```css
+/* 2.css */
+:root {
+  --main-bg-color: pink;
+}
+```
+
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="1.css"></link>
+    <link rel="stylesheet" href="2.css"></link>
+  </head>
+  <body>
+    <!-- Background color will be pink -->
+  </body>
+</html>
+```
+
 ### Custom properties with fallbacks for use when the property has not been set
 
 ```css
