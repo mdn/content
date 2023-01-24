@@ -88,6 +88,10 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     If omitted, this attribute defaults to the host of the current document URL, not including subdomains.
 
+    Contrary to earlier specifications, leading dots in domain names (`.example.com`) are ignored.
+
+    Multiple host/domain values are _not_ allowed, but if a domain _is_ specified, then subdomains are always included.
+
 - `Expires=<date>` {{optional_inline}}
 
   - : Indicates the maximum lifetime of the cookie as an HTTP-date timestamp.
