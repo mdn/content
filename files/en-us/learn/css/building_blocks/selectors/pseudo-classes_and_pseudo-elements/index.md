@@ -81,7 +81,9 @@ Some pseudo-classes only apply when the user interacts with the document in some
 
 ## What is a pseudo-element?
 
-Pseudo-elements behave in a similar way. However, they act as if you had added a whole new HTML element into the markup, rather than applying a class to existing elements. Pseudo-elements start with a double colon `::`.
+Pseudo-elements behave in a similar way. However, they act as if you had added a whole new HTML element into the markup, rather than applying a class to existing elements.
+
+Pseudo-elements start with a double colon `::`. `::before` is an example of a pseudo-element.
 
 ```css
 ::pseudo-element-name ;
