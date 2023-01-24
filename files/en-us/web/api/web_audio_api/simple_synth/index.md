@@ -576,24 +576,24 @@ function changeVolume(event) {
 This sets the value of the main gain node's `gain` {{domxref("AudioParam")}} to the slider's new value.
 
 ```js hidden
-const synth_keys = document.querySelectorAll('.key')
-function key_note(down) {
-  synth_key = 'zxcvbnm,./asdfghjkl;\'qwertyuiop[]\\1234567890-=!@#$%^&*()_+'.indexOf(event.key)
-  const el_key = synth_keys[synth_key]
-  if (el_key) {
+const synthKeys = document.querySelectorAll(".key");
+function keyNote(down) {
+  const synthKey = "zxcvbnm,./asdfghjkl;'qwertyuiop[]\\1234567890-=!@#$%^&*()_+".indexOf(event.key);
+  const elKey = synthKeys[synthKey];
+  if (elKey) {
     if (down) {
-      el_key.tabIndex = -1
-      el_key.focus()
-      el_key.classList.add('active')
-      notePressed({ buttons: 1, target: el_key })
+      elKey.tabIndex = -1;
+      elKey.focus();
+      elKey.classList.add("active");
+      notePressed({ buttons: 1, target: elKey });
     } else {
-      el_key.classList.remove('active')
-      noteReleased({ buttons: 1, target: el_key })
+      elKey.classList.remove("active");
+      noteReleased({ buttons: 1, target: elKey });
     }
   }
 }
-addEventListener('keydown', () => key_note(1))
-addEventListener('keyup', () => key_note(0))
+addEventListener("keydown", () => keyNote(1));
+addEventListener("keyup", () => keyNote(0));
 ```
 
 ### Result
