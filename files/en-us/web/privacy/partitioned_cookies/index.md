@@ -6,6 +6,7 @@ tags:
   - CHIPS
   - Partitioned cookies
   - Privacy
+  - Experimental
 browser-compat: http.headers.Set-Cookie.Partitioned
 ---
 
