@@ -33,7 +33,7 @@ If not specified, the default `client_mode` value is `auto`. Available values ar
 - `navigate-existing`
   - : The most recently interacted with browsing context in a web app window is navigated to the target launch URL.
 - `focus-existing`
-  - : The most recently interacted with browsing context in a web app window is chosen to handle the launch. Specify the target launch URL in the {{domxref("LaunchParams.targetURL", "targetURL")}} property of the {{domxref("LaunchParams")}} object passed into the {{domxref("LaunchQueue.setConsumer", "window.launchQueue.setConsumer()")}}'s callback function. As you'll see below, this allows you to set custom launch handing functionality for your app.
+  - : The most recently interacted with browsing context in a web app window is chosen to handle the launch. This will populate the target launch URL in the {{domxref("LaunchParams.targetURL", "targetURL")}} property of the {{domxref("LaunchParams")}} object passed into the {{domxref("LaunchQueue.setConsumer", "window.launchQueue.setConsumer()")}}'s callback function. As you'll see below, this allows you to set custom launch handing functionality for your app.
 - `auto`
   - : The user agent decides what works best for the platform. For example, <code>navigate-existing</code> might make more sense on mobile, where single app instances are commonplace, whereas <code>navigate-new</code> might make more sense in a desktop context. This is the default value used if provided values are invalid.
 
