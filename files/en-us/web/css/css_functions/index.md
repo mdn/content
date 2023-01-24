@@ -1,5 +1,5 @@
 ---
-title: CSS Functional Notation
+title: CSS value functions
 slug: Web/CSS/CSS_Functions
 page-type: guide
 tags:
@@ -11,25 +11,21 @@ tags:
   - Reference
   - Types
   - data types
-spec-urls:
-  - https://drafts.csswg.org/css-values/
-  - https://drafts.csswg.org/css-color/
-  - https://drafts.csswg.org/css-images/
 ---
 
 {{CSSRef}}
 
-**CSS functional notation** is a type of [CSS value](/en-US/docs/Web/CSS/CSS_Values_and_Units) that can represent more complex data types or invoke special data processing or calculations.
+**CSS value functions** are statements that invoke special data processing or calculations to return a [CSS](/en-US/docs/Web/CSS) [value](/en-US/docs/Web/CSS/CSS_Values_and_Units) for a CSS property. CSS value functions represent more complex [data types](/en-US/docs/Web/CSS/CSS_Types) and they may take some input arguments to calculate the return value.
 
 ## Syntax
 
 ```css
 selector {
-  property: functional-notation([argument]? [, argument]!);
+  property: function([argument]? [, argument]!);
 }
 ```
 
-The syntax starts with the **name of the functional notation**, followed by a left parenthesis `(`. Next up are the notation argument(s), and the function is finished off with a closing parenthesis `)`.
+The value syntax starts with the **name of the function**, followed by a left parenthesis `(`. Next up are the argument(s), and the function is finished off with a closing parenthesis `)`.
 
 Functions can take multiple arguments, which are formatted similarly to CSS property values. Whitespace is allowed, but they are optional inside the parentheses. In some functional notations multiple arguments are separated by commas, while others use spaces.
 
@@ -318,10 +314,6 @@ This function can be used to provide the timeline for an animation.
 
 - {{cssxref("animation-timeline/scroll", "scroll()")}} {{Experimental_Inline}}
   - : Sets the {{cssxref("animation-timeline")}} of an element to depend on scrollbar on a particular axis of either the nearest parent (with that scrollbar), or the root container.
-
-## Specifications
-
-{{Specifications}}
 
 ## See also
 
