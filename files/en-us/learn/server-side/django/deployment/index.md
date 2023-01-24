@@ -322,11 +322,12 @@ It lists the commands that will be executed by Railway to start your site.
 Create the file `Procfile` (with no file extension) in the root of your GitHub repo and copy/paste in the following text:
 
 ```plain
-web: python manage.py migrate && gunicorn locallibrary.wsgi
+web: python manage.py migrate && python manage.py collectstatic && gunicorn locallibrary.wsgi
 ```
 
 The `web:` prefix tells Railway that this is a web process and can be sent HTTP traffic.
 We then call the command Django migration command `python manage.py migrate` to set up the database tables.
+Next, we call the Django command `python manage.py collectstatic` to collect static files into the folder defined by the `STATIC_ROOT` project setting (see the section [serving static files in production](#serving_static_files_in_production) below).
 Finally, we start the _gunicorn_ process, a popular web application server, passing it configuration information in the module `locallibrary.wsgi` (created with our application skeleton: **/locallibrary/wsgi.py**).
 
 Note that you can also use the Procfile to start worker processes or to run other non-interactive tasks before the release is deployed.
@@ -418,11 +419,8 @@ It is called with the following command:
 python3 manage.py collectstatic
 ```
 
-For this tutorial, _collectstatic_ is run automatically by Railway before the application is uploaded, copying all the static files in the application to the location specified in `STATIC_ROOT`.
+For this tutorial, _collectstatic_ is run by Railway before the application is uploaded, copying all the static files in the application to the location specified in `STATIC_ROOT`.
 `Whitenoise` then finds the files from the location defined by `STATIC_ROOT` (by default) and serves them at the base URL defined by `STATIC_URL`.
-
-> **Note:** Railway does not document that it calls `python3 manage.py collectstatic` when a Django application is loaded — this has been verified by testing.
-> If needed, you could run the tool by adding the command to the [Procfile](#procfile).
 
 ##### settings.py
 
@@ -448,7 +446,7 @@ We'll actually do the file serving using a library called [WhiteNoise](https://p
 There are many ways to serve static files in production (we saw the relevant Django settings in the previous sections).
 The [WhiteNoise](https://pypi.org/project/whitenoise/) project provides one of the easiest methods for serving static assets directly from Gunicorn in production.
 
-Railway automatically calls _collectstatic_ to prepare your static files for use by WhiteNoise after it uploads your application.
+Railway calls _collectstatic_ to prepare your static files for use by WhiteNoise after it uploads your application.
 Check out [WhiteNoise](https://pypi.org/project/whitenoise/) documentation for an explanation of how it works and why the implementation is a relatively efficient method for serving these files.
 
 The steps to set up _WhiteNoise_ to use with the project are [given here](https://whitenoise.evans.io/en/stable/django.html) (and reproduced below):
