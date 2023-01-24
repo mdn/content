@@ -35,7 +35,7 @@ The `srcset` property, along with the {{domxref("HTMLImageElement.sizes",
 can be used together to make pages that use appropriate images for the rendering
 situation.
 
-> **Note:** If the {{htmlattrdef("srcset")}} attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
+> **Note:** If the {{htmlattrxref("srcset", "img")}} attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
 
 ## Value
 
