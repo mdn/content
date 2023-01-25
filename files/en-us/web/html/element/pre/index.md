@@ -1,6 +1,7 @@
 ---
 title: '<pre>: The Preformatted Text element'
 slug: Web/HTML/Element/pre
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -98,7 +99,7 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
 
 {{EmbedLiveSample("Escaping_reserved_characters")}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

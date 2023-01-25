@@ -34,7 +34,7 @@ mode callback.
 
 ```js-nolint
 createIndex(indexName, keyPath)
-createIndex(indexName, keyPath, objectParameters)
+createIndex(indexName, keyPath, options)
 ```
 
 ### Parameters
@@ -46,7 +46,7 @@ createIndex(indexName, keyPath, objectParameters)
   - : The key path for the index to use. Note that it is possible to create an index with
     an empty `keyPath`, and also to pass in a sequence (array) as a
     `keyPath`.
-- `objectParameters` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object which can include the following
     properties:

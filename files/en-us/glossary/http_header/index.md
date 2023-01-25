@@ -1,6 +1,7 @@
 ---
 title: HTTP header
 slug: Glossary/HTTP_header
+page-type: glossary-definition
 tags:
   - HTTP Header
   - WebMechanics
@@ -18,7 +19,7 @@ The HTTP and Fetch specifications refer to a number of header categories, includ
 A basic request with one header:
 
 ```http
-GET /example.http HTTP/1.1
+GET /example.html HTTP/1.1
 Host: example.com
 ```
 

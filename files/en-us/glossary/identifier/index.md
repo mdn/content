@@ -1,6 +1,7 @@
 ---
 title: Identifier
 slug: Glossary/Identifier
+page-type: glossary-definition
 tags:
   - Beginner
   - CodingScripting

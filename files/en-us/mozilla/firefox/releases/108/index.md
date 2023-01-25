@@ -10,7 +10,7 @@ tags:
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 108 that will affect developers. Firefox 108 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and will ship on [December 13, 2022](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 108 that will affect developers. Firefox 108 was released on December 13, 2022.
 
 ## Changes for web developers
 
@@ -18,8 +18,6 @@ This article provides information about the changes in Firefox 108 that will aff
 
 - The {{HTMLElement("source")}} element supports [`height`](/en-US/docs/Web/HTML/Element/source#attr-height) & [`width`](/en-US/docs/Web/HTML/Element/source#attr-width) attributes when it is a child of a {{HTMLElement("picture")}} element.
   This functionality can be configured via the `dom.picture_source_dimension_attributes.enabled` preference which is now set to `true` by default ({{bug(1795953)}}).
-
-#### Removals
 
 ### CSS
 
@@ -29,12 +27,11 @@ This article provides information about the changes in Firefox 108 that will aff
 - Container query length units are now supported via the the `layout.css.container-queries.enabled` preference, which is set to `false` by default.
   Setting this preference to `true` allows the use of `cqw`, `cqh`, `cqi`, `cqb`, `cqmin`, and `cqmax` units of length which are relative to the size of a query container.
   For more information on these units, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) documentation ({{bug(1744231)}}).
-
-#### Removals
+- The [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji) property is now supported via the `layout.css.font-variant-emoji.enabled` preference, which is set to `false` by default. This property allows you to set a default presentation style for displaying emojis ({{bug(1461589)}}).
 
 ### JavaScript
 
-#### Removals
+No notable changes
 
 ### HTTP
 
@@ -43,27 +40,17 @@ This article provides information about the changes in Firefox 108 that will aff
 - [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP header directives [`script-src-elem`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem) and [`script-src-attr`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-attr) are now supported.
   A server can use these to specify valid sources for JavaScript `<script>` elements, and for inline script event handlers like `onclick`, respectively ({{bug(1529337)}}).
 
-#### Removals
-
-### Security
-
-#### Removals
-
 ### APIs
 
-#### DOM
+- [Import maps](/en-US/docs/Web/HTML/Element/script/type/importmap) are now supported.
+  Import maps provide flexibility and additional control over how browsers resolve module specifiers when importing [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules).
+  ({{bug(1795647)}}).
 
 #### Media, WebRTC, and Web Audio
 
 - The [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) is now available in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts).
-  Calls to [`navigator.requestMIDIAccess()`](/en-US/docs/Web/API/Navigator/requestMIDIAccess) will prompt users with active MIDI devices to install a [Site Permission Add-On](https://support.mozilla.org/en-US/kb/site-permission-addons), which is required to enable the API.
+  Calls to [`navigator.requestMIDIAccess()`](/en-US/docs/Web/API/Navigator/requestMIDIAccess) will prompt users with active MIDI devices to install a [Site Permission Add-On](https://support.mozilla.org/en-US/kb/site-permission-add-ons), which is required to enable the API.
   For more information see {{bug(1795025)}}.
-
-#### Removals
-
-### WebAssembly
-
-#### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -83,10 +70,6 @@ This article provides information about the changes in Firefox 108 that will aff
 ## Changes for add-on developers
 
 - Firefox now issues a warning when an extension is installed if its [version number](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) doesn't follow the recommended format ({{bug(1793925)}}).
-
-### Removals
-
-### Other
 
 ## Older versions
 

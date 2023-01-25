@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.TypedArray.from
 
 {{JSRef}}
 
-The **`TypedArray.from()`** method creates a new
+The **`TypedArray.from()`** static method creates a new
 [typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects)
 from an array-like or iterable object. This method is nearly the same as
 {{jsxref("Array.from()")}}.

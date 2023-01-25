@@ -126,23 +126,17 @@ Intl.Collator(locales, options)
       - : Whether numeric collation should be used, such that "1" < "2" <
         "10". Possible values are `true` and `false`; the
         default is `false`.
-
-        > **Note:** This option can also be set through the `kn` Unicode
-        > extension key; if both are provided, this `options`
-        > property takes precedence.
+        This option can also be set through the `kn` Unicode
+        extension key; if both are provided, this `options`
+        property takes precedence.
 
     - `caseFirst`
 
       - : Whether upper case or lower case should sort first. Possible values are
-        `"upper"`, `"lower"`, or `"false"` (use
-        the locale's default). This option can be set through an
-        `options` property or through a Unicode extension
-        key; if both are provided, the `options` property
-        takes precedence.
-
-        > **Note:** This option can also be set through the `kf` Unicode
-        > extension key; if both are provided, this `options`
-        > property takes precedence.
+        `"upper"`, `"lower"`, or `"false"` (use the locale's default).
+        This option can also be set through the `kf` Unicode
+        extension key; if both are provided, this `options`
+        property takes precedence.
 
     - `collation`
 
@@ -166,9 +160,9 @@ Intl.Collator(locales, options)
         - `unihan` (Chinese, Japanese, and Korean; not available in Chrome or Edge)
         - `zhuyin` (Chinese)
 
-        > **Note:** This option can also be set through the `co` Unicode
-        > extension key; if both are provided, this `options`
-        > property takes precedence.
+        This option can also be set through the `co` Unicode
+        extension key; if both are provided, this `options`
+        property takes precedence.
 
 ## Examples
 

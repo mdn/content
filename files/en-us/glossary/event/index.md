@@ -1,6 +1,7 @@
 ---
 title: Event
-slug: Glossary/event
+slug: Glossary/Event
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

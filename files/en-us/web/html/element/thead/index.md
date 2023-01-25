@@ -1,6 +1,7 @@
 ---
 title: '<thead>: The Table Head element'
 slug: Web/HTML/Element/thead
+page-type: html-element
 tags:
   - Element
   - HTML

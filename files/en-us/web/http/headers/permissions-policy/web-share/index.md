@@ -5,11 +5,10 @@ tags:
   - Permissions-Policy
   - HTTP
   - Web Share
-  - Experimental
 browser-compat: http.headers.Permissions-Policy.web-share
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader('Permissions-Policy')}} header `web-share` directive controls whether the current document is allowed to use the {{domxref("Navigator.share","Navigator.share()")}} method of the Web Share API to share text, links, images, and other content to arbitrary destinations of the user's choice.
 

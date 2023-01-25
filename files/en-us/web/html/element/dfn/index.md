@@ -1,6 +1,7 @@
 ---
 title: '<dfn>: The Definition element'
 slug: Web/HTML/Element/dfn
+page-type: html-element
 tags:
   - Definition
   - Definitions
@@ -16,7 +17,7 @@ browser-compat: html.elements.dfn
 
 {{HTMLSidebar}}
 
-The **`<dfn>`** [HTML](/en-US/docs/Web/HTML) element is used to indicate the term being defined within the context of a definition phrase or sentence. The {{HTMLElement("p")}} element, the {{HTMLElement("dt")}}/{{HTMLElement("dd")}} pairing, or the {{HTMLElement("section")}} element which is the nearest ancestor of the `<dfn>` is considered to be the definition of the term.
+The **`<dfn>`** [HTML](/en-US/docs/Web/HTML) element is used to indicate the term being defined within the context of a definition phrase or sentence. The ancestor {{HTMLElement("p")}} element, the {{HTMLElement("dt")}}/{{HTMLElement("dd")}} pairing, or the nearest {{HTMLElement("section")}} ancestor of the `<dfn>` element, is considered to be the definition of the term.
 
 {{EmbedInteractiveExample("pages/tabbed/dfn.html", "tabbed-shorter")}}
 
@@ -141,7 +142,7 @@ The output of the above code looks like this:
 
 {{EmbedLiveSample("Using_abbreviations_and_definitions_together", 650, 200)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
@@ -183,7 +184,7 @@ The output of the above code looks like this:
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td>{{ARIARole("term")}}</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/term_role"><code>term</code></a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>

@@ -1,6 +1,7 @@
 ---
 title: CIA
 slug: Glossary/CIA
+page-type: glossary-definition
 tags:
   - Security
 ---

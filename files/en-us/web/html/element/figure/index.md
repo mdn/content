@@ -1,6 +1,7 @@
 ---
 title: '<figure>: The Figure with Optional Caption element'
 slug: Web/HTML/Element/figure
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -87,10 +88,12 @@ function NavigatorExample() {
 ```html
 <figure>
   <p style="white-space:pre">
-    Bid me discourse, I will enchant thine ear, Or like a fairy trip upon the
-    green, Or, like a nymph, with long dishevelled hair, Dance on the sands, and
-    yet no footing seen: Love is a spirit all compact of fire, Not gross to
-    sink, but light, and will aspire.
+    Bid me discourse, I will enchant thine ear,
+    Or like a fairy trip upon the green,
+    Or, like a nymph, with long dishevelled hair,
+    Dance on the sands, and yet no footing seen:
+    Love is a spirit all compact of fire,
+    Not gross to sink, but light, and will aspire.
   </p>
   <figcaption><cite>Venus and Adonis</cite>, by William Shakespeare</figcaption>
 </figure>
@@ -98,7 +101,7 @@ function NavigatorExample() {
 
 {{EmbedLiveSample("Poems", "100%", 250)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

@@ -1,6 +1,7 @@
 ---
 title: Method
 slug: Glossary/Method
+page-type: glossary-definition
 tags:
   - CodingScripting
   - JavaScript

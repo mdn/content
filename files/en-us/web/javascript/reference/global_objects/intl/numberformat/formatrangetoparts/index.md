@@ -12,11 +12,10 @@ tags:
   - Prototype
   - Reference
   - formatRangeToParts
-  - Experimental
 browser-compat: javascript.builtins.Intl.NumberFormat.formatRangeToParts
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
 The **`Intl.Numberformat.prototype.formatRangeToParts()`** method enables locale-aware formatting of strings produced by `NumberFormat` formatters.
 

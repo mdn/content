@@ -50,9 +50,9 @@ Your code will be richer and more professional as a result, and you'll be able t
 
 ## React tutorials
 
-> **Note:** React tutorials last tested in May 2020, with React/ReactDOM 16.13.1 and create-react-app 3.4.1.
+> **Note:** React tutorials last tested in January 2023, with React/ReactDOM 18.2.0 and create-react-app 5.0.1.
 >
-> If you need to check your code against our version, you can find a finished version of the sample React app code in our [todo-react repository](https://github.com/mdn/todo-react). For a running live version, see <https://mdn.github.io/todo-react-build/>.
+> If you need to check your code against our version, you can find a finished version of the sample React app code in our [todo-react repository](https://github.com/mdn/todo-react). For a running live version, see <https://mdn.github.io/todo-react/>.
 
 - [1. Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
   - : In this article we will say hello to React. We'll discover a little bit of detail about its background and use cases, set up a basic React toolchain on our local computer, and create and play with a simple starter app, learning a bit about how React works in the process.
@@ -90,9 +90,9 @@ Your code will be richer and more professional as a result, and you'll be able t
 
 ## Vue tutorials
 
-> **Note:** Vue tutorials last tested in May 2020, with Vue 2.6.11.
+> **Note:** Vue tutorial last tested in January 2023, with Vue 3.2.45.
 >
-> If you need to check your code against our version, you can find a finished version of the sample Vue app code in our [todo-vue repository](https://github.com/mdn/todo-vue). For a running live version, see <https://mdn.github.io/todo-vue/dist/>.
+> If you need to check your code against our version, you can find a finished version of the sample Vue app code in our [todo-vue repository](https://github.com/mdn/todo-vue). For a running live version, see <https://mdn.github.io/todo-vue/>.
 
 - [1. Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
   - : Now let's introduce Vue, the third of our frameworks. In this article, we'll look at a little bit of Vue background, learn how to install it and create a new project, study the high-level structure of the whole project and an individual component, see how to run the project locally, and get it prepared to start building our example.

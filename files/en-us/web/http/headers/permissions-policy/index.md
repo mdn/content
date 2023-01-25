@@ -13,7 +13,7 @@ tags:
 browser-compat: http.headers.Permissions-Policy
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{HTTPSidebar}}
 
 The HTTP **`Permissions-Policy`** header provides a mechanism to allow and deny the use of browser features in a document or within any {{HTMLElement("iframe")}} elements in the document.
 
@@ -94,10 +94,10 @@ You can specify
 - {{httpheader('Permissions-Policy/encrypted-media', 'encrypted-media')}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to use the [Encrypted Media Extensions](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) API (EME). When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMediaKeySystemAccess()")}} will reject with a {{domxref("DOMException")}}.
 
-- {{httpheader('Permissions-Policy/execution-while-not-rendered', 'execution-while-not-rendered')}}
+- {{httpheader('Permissions-Policy/execution-while-not-rendered', 'execution-while-not-rendered')}} {{Experimental_Inline}}
   - : Controls whether tasks should execute in frames while they're not being rendered (e.g. if an iframe is [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) or has `display: none` set).
 
-- {{httpheader('Permissions-Policy/execution-while-out-of-viewport', 'execution-while-out-of-viewport')}}
+- {{httpheader('Permissions-Policy/execution-while-out-of-viewport', 'execution-while-out-of-viewport')}} {{Experimental_Inline}}
   - : Controls whether tasks should execute in frames while they're outside of the visible viewport.
 
 - {{httpheader('Permissions-Policy/fullscreen','fullscreen')}}
@@ -118,6 +118,9 @@ You can specify
 
 - {{httpheader('Permissions-Policy/idle-detection','idle-detection')}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to use the {{domxref("Idle Detection API", "Idle Detection API", "", "nocode")}} to detect when users are interacting with their devices, for example to report "available"/"away" status in chat applications.
+
+- {{httpheader('Permissions-Policy/local-fonts','local-fonts')}} {{Experimental_Inline}}
+  - : Controls whether the current document is allowed to gather data on the user's locally-installed fonts via the {{DOMxRef("Window.queryLocalFonts()")}} method (see also the {{domxref("Local Font Access API", "Local Font Access API", "", "nocode")}}).
 
 - {{httpheader('Permissions-Policy/magnetometer','magnetometer')}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to gather information about the orientation of the device through the {{DOMxRef("Magnetometer")}} interface.
@@ -149,7 +152,7 @@ You can specify
 - {{httpheader('Permissions-Policy/usb', 'usb')}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to use the [WebUSB API](https://wicg.github.io/webusb/).
 
-- {{httpheader("Permissions-Policy/web-share", "web-share")}} {{Experimental_Inline}}
+- {{httpheader("Permissions-Policy/web-share", "web-share")}}
   - : Controls whether or not the current document is allowed to use the {{domxref("Navigator.share","Navigator.share()")}} of Web Share API to share text, links, images, and other content to arbitrary destinations of user's choice, e.g. mobile apps.
 
 - {{httpheader("Permissions-Policy/xr-spatial-tracking", "xr-spatial-tracking")}} {{Experimental_Inline}}
@@ -178,7 +181,7 @@ Several features can be controlled at the same time by sending the header with a
 For example, the following are equivalent:
 
 ```http
-Permissions-Policy: picture-in-picture=(), geolocation=(self https://example.com), camera=*;
+Permissions-Policy: picture-in-picture=(), geolocation=(self https://example.com), camera=*
 
 Permissions-Policy: picture-in-picture=()
 Permissions-Policy: geolocation=(self https://example.com)

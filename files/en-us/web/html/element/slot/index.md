@@ -1,6 +1,7 @@
 ---
 title: '<slot>: The Web Component Slot element'
 slug: Web/HTML/Element/slot
+page-type: html-element
 tags:
   - Element
   - HTML

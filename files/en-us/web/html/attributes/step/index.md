@@ -1,6 +1,7 @@
 ---
 title: "HTML attribute: step"
 slug: Web/HTML/Attributes/step
+page-type: html-attribute
 tags:
   - Attribute
   - Attributes

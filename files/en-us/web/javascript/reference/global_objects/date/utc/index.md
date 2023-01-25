@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Date.UTC
 
 {{JSRef}}
 
-The **`Date.UTC()`** method accepts parameters similar to the
+The **`Date.UTC()`** static method accepts parameters similar to the
 {{jsxref("Date")}} constructor, but treats them as UTC. It returns the number of
 milliseconds since January 1, 1970, 00:00:00 UTC.
 

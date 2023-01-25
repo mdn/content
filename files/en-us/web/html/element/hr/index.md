@@ -1,6 +1,7 @@
 ---
 title: '<hr>: The Thematic Break (Horizontal Rule) element'
 slug: Web/HTML/Element/hr
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -23,7 +24,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - {{htmlattrdef("align")}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : Sets the alignment of the rule on the page. If no value is specified, the default value is `left`.
-- {{htmlattrdef("color")}} {{Non-standard_inline}} {{Deprecated_Inline}}
+- {{htmlattrdef("color")}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : Sets the color of the rule through color name or hexadecimal value.
 - {{htmlattrdef("noshade")}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : Sets the rule to have no shading.
@@ -54,7 +55,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 {{EmbedLiveSample("Example")}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
@@ -89,12 +90,12 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td>{{ARIARole("separator")}}</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role"><code>separator</code></a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("presentation")}} or {{ARIARole("none")}}
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
       </td>
     </tr>
     <tr>

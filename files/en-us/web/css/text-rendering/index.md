@@ -98,7 +98,7 @@ This demonstrates how `optimizeLegibility` is used by browsers automatically whe
 
 {{ EmbedLiveSample('Automatic_application_of_optimizeLegibility') }}
 
-### optimizeSpeed vs optimizeLegibility
+### optimizeSpeed vs. optimizeLegibility
 
 This example shows the difference between the appearance of `optimizeSpeed` and `optimizeLegibility` (in your browser; other browsers may vary).
 

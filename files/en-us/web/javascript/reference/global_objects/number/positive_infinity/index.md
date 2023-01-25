@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Number.POSITIVE_INFINITY
 
 {{JSRef}}
 
-The **`Number.POSITIVE_INFINITY`** property represents the positive Infinity value.
+The **`Number.POSITIVE_INFINITY`** static data property represents the positive Infinity value.
 
 {{EmbedInteractiveExample("pages/js/number-positive-infinity.html")}}
 

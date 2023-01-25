@@ -26,7 +26,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 ### HTML
 
-- The `rel="noopener"` [Link type](/en-US/docs/Web/HTML/Link_types) has been implemented (see {{bug(1222516)}}).
+- The `rel="noopener"` [Link type](/en-US/docs/Web/HTML/Attributes/rel) has been implemented (see {{bug(1222516)}}).
 
 ### CSS
 
@@ -109,7 +109,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - The {{domxref("DataTransfer.types")}} property of the [Drag and drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) now returns a frozen array of strings rather than a {{domxref("DOMStringList")}} (see {{bug(1298243)}}).
 - The `loadstart` and `loadend` events are now fired on {{htmlelement("img")}} elements (see {{bug(1264769)}}).
 - The {{domxref("Notification.requireInteraction")}} of the [Notifications API](/en-US/docs/Web/API/Notifications_API) has been implemented (see {{bug(862395)}}.)
-- The {{domxref("Window.open()")}} method now has a `noopener` [window feature](/en-US/docs/Web/API/Window/open#window_functionality_features) available (see {{bug(1267339)}}), which mirrors the functionality of the `rel="noopener"` [Link type](/en-US/docs/Web/HTML/Link_types).
+- The {{domxref("Window.open()")}} method now has a `noopener` [window feature](/en-US/docs/Web/API/Window/open#window_functionality_features) available (see {{bug(1267339)}}), which mirrors the functionality of the `rel="noopener"` [Link type](/en-US/docs/Web/HTML/Attributes/rel).
 - The {{domxref("CustomElementRegistry.get()")}} method of the [Web Components API](/en-US/docs/Web/Web_Components) has been implemented (see {{bug(1275838)}}).
 - [Pointer Event](/en-US/docs/Web/API/Pointer_events) {{domxref("PointerEvent.width","width")}} and {{domxref("PointerEvent.height","height")}} properties now default to a value of 1 (see {{bug(1304315)}}).
 - The [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) has been updated to include changes in the [latest spec](https://wicg.github.io/entries-api/) (see {{bug(1284987)}} for the exact details).

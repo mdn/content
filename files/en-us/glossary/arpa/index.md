@@ -1,6 +1,7 @@
 ---
 title: ARPA
 slug: Glossary/ARPA
+page-type: glossary-definition
 tags:
   - Infrastructure
 ---

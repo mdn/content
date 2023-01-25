@@ -170,3 +170,4 @@ Browsers may choose to provide ways around this. For example, in Firefox 73, the
 - [Web security](/en-US/docs/Web/Security)
 - [Permissions API](/en-US/docs/Web/API/Permissions_API)
 - [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)
+- [The Privacy Sandbox](https://developer.chrome.com/docs/privacy-sandbox/)

@@ -1,6 +1,7 @@
 ---
 title: '<source>: The Media or Image Source element'
 slug: Web/HTML/Element/source
+page-type: html-element
 tags:
   - Element
   - HTML

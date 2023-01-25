@@ -69,9 +69,12 @@ The object literal syntax is not the same as the **J**ava**S**cript **O**bject *
 - JSON object property values can only be strings, numbers, `true`, `false`, `null`, arrays, or another JSON object. This means JSON cannot express methods or non-plain objects like [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) or [`RegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp).
 - In JSON, `"__proto__"` is a normal property key. In an object literal, it [sets the object's prototype](#prototype_setter).
 
-JSON is a _strict subset_ of the object literal syntax, meaning that every valid JSON text can be parsed as an object literal, and would likely not cause syntax errors. The only exception is that the object literal syntax prohibits duplicate `__proto__` keys, which does not apply to [`JSON.parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse). The only time when the object value they represent (a.k.a. their semantic) differ is also when the source contains the `__proto__` key — for object literals, it sets the object's prototype; for JSON, it's a normal property.
+JSON is a _strict subset_ of the object literal syntax, meaning that every valid JSON text can be parsed as an object literal, and would likely not cause syntax errors. The only exception is that the object literal syntax prohibits duplicate `__proto__` keys, which does not apply to [`JSON.parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse). The latter treats `__proto__` like a normal property and takes the last occurrence as the property's value. The only time when the object value they represent (a.k.a. their semantic) differ is also when the source contains the `__proto__` key — for object literals, it sets the object's prototype; for JSON, it's a normal property.
 
 ```js
+console.log(JSON.parse('{ "__proto__": 0, "__proto__": 1 }')); // {__proto__: 1}
+console.log({ "__proto__": 0, "__proto__": 1 }); // SyntaxError: Duplicate __proto__ fields are not allowed in object literals
+
 console.log(JSON.parse('{ "__proto__": {} }')); // { __proto__: {} }
 console.log({ "__proto__": {} }); // {} (with {} as prototype)
 ```
@@ -266,20 +269,22 @@ const mergedObj = { ...obj1, ...obj2 };
 
 A property definition of the form `__proto__: value` or `"__proto__": value` does not create a property with the name `__proto__`. Instead, if the provided value is an object or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), it points the `[[Prototype]]` of the created object to that value. (If the value is not an object or `null`, the object is not changed.)
 
+Note that the `__proto__` key is standardized syntax, in contrast to the non-standard and non-performant [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) accessors. It sets the `[[Prototype]]` during object creation, similar to {{jsxref("Object.create")}} — instead of mutating the prototype chain.
+
 ```js
 const obj1 = {};
-console.log(Object.getPrototypeOf(obj1) === Object.prototype);
+console.log(Object.getPrototypeOf(obj1) === Object.prototype); // true
 
 const obj2 = { __proto__: null };
-console.log(Object.getPrototypeOf(obj2) === null);
+console.log(Object.getPrototypeOf(obj2)); // null
 
 const protoObj = {};
-const obj3 = { '__proto__': protoObj };
-console.log(Object.getPrototypeOf(obj3) === protoObj);
+const obj3 = { "__proto__": protoObj };
+console.log(Object.getPrototypeOf(obj3) === protoObj); // true
 
-const obj4 = { __proto__: 'not an object or null' };
-console.log(Object.getPrototypeOf(obj4) === Object.prototype);
-console.log(!Object.hasOwn(obj4, '__proto__'));
+const obj4 = { __proto__: "not an object or null" };
+console.log(Object.getPrototypeOf(obj4) === Object.prototype); // true
+console.log(Object.hasOwn(obj4, "__proto__")); // false
 ```
 
 Only a single prototype setter is permitted in an object literal. Multiple prototype setters are a syntax error.
@@ -287,21 +292,37 @@ Only a single prototype setter is permitted in an object literal. Multiple proto
 Property definitions that do not use "colon" notation are not prototype setters. They are property definitions that behave identically to similar definitions using any other name.
 
 ```js
-const __proto__ = 'variable';
+const __proto__ = "variable";
 
 const obj1 = { __proto__ };
-console.log(Object.getPrototypeOf(obj1) === Object.prototype);
-console.log(Object.hasOwn(obj1, '__proto__'));
-console.log(obj1.__proto__ === 'variable');
+console.log(Object.getPrototypeOf(obj1) === Object.prototype); // true
+console.log(Object.hasOwn(obj1, "__proto__")); // true
+console.log(obj1.__proto__); // "variable"
 
-const obj2 = { __proto__() { return 'hello'; } };
-console.log(obj2.__proto__() === 'hello');
+const obj2 = { __proto__() { return "hello"; } };
+console.log(obj2.__proto__()); // "hello"
 
-const obj3 = { ['__prot' + 'o__']: 17 };
-console.log(obj3.__proto__ === 17);
+const obj3 = { ["__proto__"]: 17 };
+console.log(obj3.__proto__); // 17
+
+// Mixing prototype setter with normal own properties with "__proto__" key 
+const obj4 = { ["__proto__"]: 17, __proto__: {} }; // {__proto__: 17} (with {} as prototype)
+const obj5 = {
+  ["__proto__"]: 17,
+  __proto__: {},
+  __proto__: null, // SyntaxError: Duplicate __proto__ fields are not allowed in object literals
+};
+const obj6 = {
+  ["__proto__"]: 17,
+  ["__proto__"]: "hello",
+  __proto__: null,
+}; // {__proto__: "hello"} (with null as prototype)
+const obj7 =  {
+  ["__proto__"]: 17,
+  __proto__,
+  __proto__: null,
+}; // {__proto__: "variable"} (with null as prototype)
 ```
-
-Note that the `__proto__` key is standardized syntax, in contrast to the non-standard and non-performant [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) accessors. It sets the `[[Prototype]]` during object creation, similar to {{jsxref("Object.create")}} — instead of mutating the prototype chain.
 
 ## Specifications
 

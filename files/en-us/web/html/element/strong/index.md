@@ -1,6 +1,7 @@
 ---
 title: '<strong>: The Strong Importance element'
 slug: Web/HTML/Element/strong
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -77,7 +78,7 @@ This results in:
 
 {{EmbedLiveSample("Labeling_warnings", 650, 80)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
