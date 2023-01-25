@@ -74,7 +74,7 @@ Note that this same set of values can be used in all {{Glossary("fetch directive
 Given this CSP header:
 
 ```http
-Content-Security-Policy: script-src-attr 'none'
+Content-Security-Policy: style-src-attr 'none'
 ```
 
 …the inline style applied to the element below not be applied:
