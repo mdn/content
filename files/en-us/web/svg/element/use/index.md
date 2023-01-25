@@ -54,23 +54,23 @@ For security reasons, browsers may apply the [same-origin policy](/en-US/docs/We
 
 - {{SVGAttr("href")}}
   - : The URL to an element/fragment that needs to be duplicated.
-    _Value type_: [**\<URL>**](/en-US/docs/Web/SVG/Content_type#url) ; _Default value_: none; _Animatable_: **yes**
-- {{SVGAttr("xlink:href")}}
-  - : {{Deprecated_Header}}An [\<IRI>](/en-US/docs/Web/SVG/Content_type#iri) reference to an element/fragment that needs to be duplicated.
+    _Value type_: [**`<URL>`**](/en-US/docs/Web/SVG/Content_type#url) ; _Default value_: none; _Animatable_: **yes**
+- {{SVGAttr("xlink:href")}} {{Deprecated_Header}}
+  - : An [`<IRI>`](/en-US/docs/Web/SVG/Content_type#iri) reference to an element/fragment that needs to be duplicated.
   If both {{SVGAttr("href")}} and {{SVGAttr("xlink:href")}} are present, the value given by {{SVGAttr("href")}} is used.
-    _Value type_: [**\<IRI>**](/en-US/docs/Web/SVG/Content_type#iri) ; _Default value_: none; _Animatable_: **yes**
+    _Value type_: [**`<IRI>`**](/en-US/docs/Web/SVG/Content_type#iri) ; _Default value_: none; _Animatable_: **yes**
 - {{SVGAttr("x")}}
   - : The x coordinate of an additional final offset transformation applied to the `<use>` element.
-    _Value type_: [**\<coordinate>**](/en-US/docs/Web/SVG/Content_type#coordinate) ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: [**`<coordinate>`**](/en-US/docs/Web/SVG/Content_type#coordinate) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("y")}}
   - : The y coordinate of an additional final offset transformation applied to the `<use>` element.
-    _Value type_: [**\<coordinate>**](/en-US/docs/Web/SVG/Content_type#coordinate) ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: [**`<coordinate>`**](/en-US/docs/Web/SVG/Content_type#coordinate) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("width")}}
   - : The width of the use element.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length) ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: [**`<length>`**](/en-US/docs/Web/SVG/Content_type#length) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("height")}}
   - : The height of the use element.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length) ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: [**`<length>`**](/en-US/docs/Web/SVG/Content_type#length) ; _Default value_: `0`; _Animatable_: **yes**
 
 > **Note:** `width`, and `height` have no effect on `use` elements, unless the element referenced has a [viewBox](/en-US/docs/Web/SVG/Attribute/viewBox) - i.e. they only have an effect when `use` refers to a `svg` or `symbol` element.
 
