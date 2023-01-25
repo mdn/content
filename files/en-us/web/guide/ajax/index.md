@@ -43,6 +43,7 @@ Although X in Ajax stands for XML, {{glossary("JSON")}} is preferred because it 
     - [Monitoring the progress of a request](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
     - [Submitting forms and upload binary files](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#submitting_forms_and_uploading_files) – in _pure_ Ajax, or using {{domxref("FormData")}} objects
     - Using Ajax within [Web workers](/en-US/docs/Web/API/Worker)
+
 - [_Pure-Ajax_ navigation example](/en-US/docs/Web/API/History_API/Example)
   - : This article provides a working (minimalist) example of a _pure-Ajax_ website composed only of three pages.
 - [Sending and Receiving Binary Data](/en-US/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data)
@@ -50,7 +51,7 @@ Although X in Ajax stands for XML, {{glossary("JSON")}} is preferred because it 
 - [XML](/en-US/docs/Web/XML)
   - : The **Extensible Markup Language (XML)** is a W3C-recommended general-purpose markup language for creating special-purpose markup languages. It is a simplified subset of SGML, capable of describing many kinds of data. Its primary purpose is to facilitate the sharing of data across different systems, particularly systems connected via the Internet.
 - [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
-  - : How to parse an XML document from a string, a file or via JavaScript and how to serialize XML documents to strings, JavaScript Object trees (JXON) or files.
+  - : How to parse an XML document from a string, a file or via JavaScript and how to serialize XML documents to strings or files.
 - [XPath](/en-US/docs/Web/XPath)
   - : XPath stands for **X**ML **Path** Language, it uses a non-XML syntax that provides a flexible way of addressing (pointing to) different parts of an [XML](/en-US/docs/Web/XML) document. As well as this, it can also be used to test addressed nodes within a document to determine whether they match a pattern or not.
 - {{domxref("FileReader")}} API
