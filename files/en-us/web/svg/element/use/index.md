@@ -31,7 +31,7 @@ svg {
   <use href="#myCircle" x="20" fill="white" stroke="red" />
   <!--
 stroke="red" will be ignored here, as stroke was already set on myCircle.
-Most attributes defined on <use> (except for x, y, width, height and (xlink:)href)
+Most attributes defined on <use> (except for `x`, `y`, `width`, `height` and `(xlink:)href)`
 have no effect if the corresponding attribute is set in the referenced element.
 That's why the circles have different x positions, but the same stroke value.
   -->
@@ -54,7 +54,7 @@ For security reasons, browsers may apply the [same-origin policy](/en-US/docs/We
 
 - {{SVGAttr("href")}}
   - : The URL to an element/fragment that needs to be duplicated.<br/> _Value type_: [**`<URL>`**](/en-US/docs/Web/SVG/Content_type#url) ; _Default value_: none; _Animatable_: **yes**
-- {{SVGAttr("xlink:href")}} {{Deprecated_Header}}
+- {{SVGAttr("xlink:href")}} {{Deprecated_Inline}}
   - : An [`<IRI>`](/en-US/docs/Web/SVG/Content_type#iri) reference to an element/fragment that needs to be duplicated. If both {{SVGAttr("href")}} and {{SVGAttr("xlink:href")}} are present, the value given by {{SVGAttr("href")}} is used.<br/> _Value type_: [**`<IRI>`**](/en-US/docs/Web/SVG/Content_type#iri) ; _Default value_: none; _Animatable_: **yes**
 - {{SVGAttr("x")}}
   - : The x coordinate of an additional final offset transformation applied to the `<use>` element.<br/> _Value type_: [**`<coordinate>`**](/en-US/docs/Web/SVG/Content_type#coordinate) ; _Default value_: `0`; _Animatable_: **yes**
