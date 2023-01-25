@@ -58,13 +58,12 @@ For security reasons, browsers may apply the [same-origin policy](/en-US/docs/We
 - {{SVGAttr("xlink:href")}}
   - : {{Deprecated_Header}}An [\<IRI>](/en-US/docs/Web/SVG/Content_type#iri) reference to an element/fragment that needs to be duplicated.
   If both {{SVGAttr("href")}} and {{SVGAttr("xlink:href")}} are present, the value given by {{SVGAttr("href")}} is used.
-   
     _Value type_: [**\<IRI>**](/en-US/docs/Web/SVG/Content_type#iri) ; _Default value_: none; _Animatable_: **yes**
 - {{SVGAttr("x")}}
-  - : The x coordinate of an additional final offset transformation applied to the use element.
+  - : The x coordinate of an additional final offset transformation applied to the `<use>` element.
     _Value type_: [**\<coordinate>**](/en-US/docs/Web/SVG/Content_type#coordinate) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("y")}}
-  - : The y coordinate of an additional final offset transformation applied to the use element.
+  - : The y coordinate of an additional final offset transformation applied to the `<use>` element.
     _Value type_: [**\<coordinate>**](/en-US/docs/Web/SVG/Content_type#coordinate) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("width")}}
   - : The width of the use element.
