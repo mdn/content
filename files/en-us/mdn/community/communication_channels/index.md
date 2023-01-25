@@ -19,12 +19,14 @@ They are also great places to get to know other community members, share your wo
 If you have a question or want to get in touch with us about something, feel free to join us.
 
 ### Discord server
+
 As of January 2023, MDN Web Docs opened up a Discord server to the public.
 This server is a great place to see what staff and members of the community are doing on a daily basis and to find out how you can get involved.
 
 - [MDN Web Docs community discord server](https://discord.gg/apa6Rn7uEj)
 
 ### Matrix chat rooms
+
 The Matrix chat rooms are an alternative to the Discord server.
 
 - [MDN room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on Mozilla Element web app
