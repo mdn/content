@@ -12,11 +12,11 @@ browser-compat: javascript.builtins.Map.@@species
 
 {{JSRef}}
 
-The **`Map[@@species]`** accessor property is an unused accessor property specifying how to copy `Map` objects.
+The **`Map[@@species]`** static accessor property is an unused accessor property specifying how to copy `Map` objects.
 
 ## Syntax
 
-```js
+```js-nolint
 Map[Symbol.species]
 ```
 
