@@ -1,6 +1,6 @@
 ---
-title: XHR (XMLHttpRequest)
-slug: Glossary/XHR_(XMLHttpRequest)
+title: XMLHttpRequest (XHR)
+slug: Glossary/XMLHttpRequest
 page-type: glossary-definition
 tags:
   - API
