@@ -12,4 +12,3 @@ tags:
 ## See also
 
 - [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity)
-- {{HTTPHeader("Content-Security-Policy")}}: {{CSP("require-sri-for")}}
