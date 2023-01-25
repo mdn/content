@@ -15,12 +15,17 @@ There are various communication channels using which community can contact MDN W
 ## Chat rooms
 
 Chat rooms are for queries, clarifications, sharing information, and meetings.
+They are also great places to get to know other community members, share your work, and get help for your contributions.
+If you have a question or want to get in touch with us about something, feel free to join us.
 
 ### Discord server
+As of January 2023, MDN Web Docs opened up a Discord server to the public.
+This server is a great place to see what staff and members of the community are doing on a daily basis and to find out how you can get involved.
 
 - [MDN Web Docs community discord server](https://discord.gg/apa6Rn7uEj)
 
 ### Matrix chat rooms
+The Matrix chat rooms are an alternative to the Discord server.
 
 - [MDN room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on Mozilla Element web app
 - [MDN room](https://app.element.io/#/room/#mdn:mozilla.org) on Matrix Element web app
@@ -29,7 +34,9 @@ Chat rooms are for queries, clarifications, sharing information, and meetings.
 
 ## GitHub Discussions
 
-[GitHub Discussions](https://github.com/mdn/mdn-community/discussions) are for conducting polls and for issues that needs a discussion to agree upon a course of action or define an actionable piece of work. Refer [the guidelines](/en-US/docs/MDN/Community/Discussions) before opening a discussion.
+[GitHub Discussions](https://github.com/mdn/mdn-community/discussions) are for conducting polls and for issues that needs a discussion to agree upon a course of action or define an actionable piece of work.
+You can use GitHub Discussions if you think the answer to your question might be helpful for other people to find in the future.
+See [the Discussion guidelines](/en-US/docs/MDN/Community/Discussions) before you create a new submission.
 
 ## Forums
 
