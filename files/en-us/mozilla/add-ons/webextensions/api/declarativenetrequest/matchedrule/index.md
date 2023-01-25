@@ -15,7 +15,8 @@ browser-compat: webextensions.api.declarativeNetRequest.MatchedRule
 
 {{AddonSidebar()}}
 
-Details of the rules matching a filter.
+An object describing the matched rule. This type may be returned by the {{WebExtAPIRef("declarativeNetRequest.getMatchedRules")}} or {{WebExtAPIRef("declarativeNetRequest.testMatchOutcome")}} methods, or observed through the {{WebExtAPIRef("declarativeNetRequest.onRuleMatchedDebug")}} event.
+
 
 ## Type
 

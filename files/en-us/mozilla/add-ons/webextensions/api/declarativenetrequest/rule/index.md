@@ -15,7 +15,7 @@ browser-compat: webextensions.api.declarativeNetRequest.Rule
 
 {{AddonSidebar()}}
 
-The details of a dynamic ruleset.
+The object describing the actions to take for matching requests. These can be specified in the static rule resources linked by the [manifest.json's `declarative_net_request` key](Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request), or more dynamically through the {{WebExtAPIRef("declarativeNetRequest.updateDynamicRules")}} or {{WebExtAPIRef("declarativeNetRequest.updateSessionRules")}} methods.
 
 ## Type
 
@@ -26,7 +26,7 @@ Values of this type are objects. They contain these properties:
 - `condition`
   - : {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}}. The condition under which this rule is triggered.
 - `id`
-  - : `number`. An ID that uniquely identifies a rule. Mandatory and should be >= 1.
+  - : `number`. An ID that uniquely identifies a rule within a ruleset. Mandatory and should be >= 1.
 - `priority` {{optional_inline}}
   - : `number`. Rule priority. Defaults to 1. When specified, should be >= 1.
 

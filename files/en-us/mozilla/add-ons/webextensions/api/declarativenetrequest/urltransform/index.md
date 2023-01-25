@@ -15,7 +15,7 @@ browser-compat: webextensions.api.declarativeNetRequest.URLTransform
 
 {{AddonSidebar()}}
 
-Details describing a URL transformation to perform.
+Details describing a URL transformation to perform for a redirect rule. This object can be specified at {{WebExtAPIRef("declarativeNetRequest.RuleAction", "rule.action")}}.redirect.transform.
 
 ## Type
 
@@ -35,22 +35,22 @@ Values of this type are objects. They contain these properties:
   - : A `string`. The new query for the request. Should be either empty, in which case the existing query is cleared; or should begin with '?'.
 - `queryTransform` {{optional_inline}}
 
-  - : An object describing how to add, remove, or replace query key-value pairs.
+  - : An object describing how to add, remove, or replace query key-value pairs. Cannot be specified if 'query' is specified.
     - `addOrReplaceParams` {{optional_inline}}
 
       - : An object describing the list of query key-value pairs to be added or replaced.
-        - `key` {{optional_inline}}
+        - `key`
           - : A `string`. The key value.
         - `replaceOnly` {{optional_inline}}
           - : A `boolean`. If true, the query key is replaced only if it's already present. Otherwise, the key is also added if it's missing. Defaults to false.
-        - `value` {{optional_inline}}
+        - `value`
           - : A `string`. The value value.
 
     - `removeParams` {{optional_inline}}
       - : A `string`. The list of query keys to be removed.
 
 - `scheme` {{optional_inline}}
-  - : A `string`. The new scheme for the request. Allowed values are `"http"`, `"https"`, `"ftp"` and `"chrome-extension"`.
+  - : A `string`. The new scheme for the request. Allowed values are `"http"`, `"https"`, and the scheme of the extension, for example, "moz-extension" in Firefox or "chrome-extension" in Chrome. When the extension scheme is used, the `host` must be specified to generate a meaningful redirection target.
 - `username` {{optional_inline}}
   - : A `string`. The new username for the request.
 

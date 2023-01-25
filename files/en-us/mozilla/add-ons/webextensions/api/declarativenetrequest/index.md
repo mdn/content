@@ -22,7 +22,7 @@ To use this API, an extension must request the `"declarativeNetRequest"` or `"de
 
 The `"declarativeNetRequest"` permission allows extensions to block and upgrade requests without any [host permissions](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions). Host permissions are required if the extension wants to redirect a request or modify headers on a request. The `"declarativeNetRequestWithHostAccess"` permission requires host permissions to the request URL and initiator to act on a request.
 
-The `"declarativeNetRequestFeedback"` permission is required to use {{WebExtAPIRef("declarativeNetRequest.getmatchedrules","getmatchedrules")}} and {{WebExtAPIRef("declarativeNetRequest.onRuleMatchedDebug","onRuleMatchedDebug")}} as they return information on declarative rules matched.
+The `"declarativeNetRequestFeedback"` permission is required to use {{WebExtAPIRef("declarativeNetRequest.getMatchedRules","getMatchedRules")}} and {{WebExtAPIRef("declarativeNetRequest.onRuleMatchedDebug","onRuleMatchedDebug")}} as they return information on declarative rules matched. See [Testing](#testing) for more information.
 
 ## Rules
 
@@ -137,183 +137,27 @@ If multiple `modifyHeaders` rules specify the same header, the resulting modific
 
 ## Testing
 
-{{WebExtAPIRef("declarativeNetRequest.getmatchedrules","getmatchedrules")}} and {{WebExtAPIRef("declarativeNetRequest.onRuleMatchedDebug","onRuleMatchedDebug")}} are available to assist with testing rules and rulesets. These APIs require the `"declarativeNetRequestFeedback"` [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). In addition:
+
+{{WebExtAPIRef("declarativeNetRequest.testMatchOutcome","testMatchOutcome")}}, {{WebExtAPIRef("declarativeNetRequest.getMatchedRules","getmatchedrules")}}, and {{WebExtAPIRef("declarativeNetRequest.onRuleMatchedDebug","onRuleMatchedDebug")}} are available to assist with testing rules and rulesets. These APIs require the `"declarativeNetRequestFeedback"` [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). In addition:
 
 - in Chrome, these APIs are only available to unpacked extensions.
 
 ## Comparison with the webRequest API
 
 - The declarativeNetRequest API evaluates network requests in the browser itself. This makes it more performant than the webRequest API, where each network request is evaluated in JavaScript in the extension process.
-- Because the requests are not intercepted by the extension process, declarativeNetRequest removes the need for extensions to have a background page, resulting in less memory consumption.
+- Because the requests are not intercepted by the extension process, declarativeNetRequest removes the need for extensions to have a background page.
 - Unlike the webRequest API, blocking or upgrading requests using the declarativeNetRequest API requires no host permissions when used with the `declarativeNetRequest` permission.
 - The declarativeNetRequest API provides better privacy to users because extensions do not read the network requests made on the user's behalf.
-- Unlike the webRequest API, any images or iframes blocked using the declarativeNetRequest API are automatically collapsed in the DOM.
+- (Chrome only:) Unlike the webRequest API, any images or iframes blocked using the declarativeNetRequest API are automatically collapsed in the DOM.
 - While deciding whether a request is to be blocked or redirected, the declarativeNetRequest API is given priority over the webRequest API because it allows for synchronous interception. Similarly, any headers removed through declarativeNetRequest API are not made visible to web request extensions.
 - The webRequest API is more flexible than the declarativeNetRequest API because it allows extensions to evaluate a request programmatically.
-
-## Example
-
-### manifest.json
-
-```json
-{
-  "name": "declarativeNetRequest extension",
-  "version": "1",
-  "declarative_net_request": {
-    "rule_resources": [{
-      "id": "ruleset_1",
-      "enabled": true,
-      "path": "rules.json"
-    }]
-  },
-  "permissions": [
-    "*://*.google.com/*",
-    "*://*.abcd.com/*",
-    "*://*.example.com/*",
-    "https://*.xyz.com/*",
-    "*://*.headers.com/*",
-    "declarativeNetRequest"
-  ],
-  "manifest_version": 2
-}
-```
-
-### rules.json
-
-```json
-[
-  {
-    "id": 1,
-    "priority": 1,
-    "action": { "type": "block" },
-    "condition": {"urlFilter": "google.com", "resourceTypes": ["main_frame"] }
-  },
-  {
-    "id": 2,
-    "priority": 1,
-    "action": { "type": "allow" },
-    "condition": { "urlFilter": "google.com/123", "resourceTypes": ["main_frame"] }
-  },
-  {
-    "id": 3,
-    "priority": 2,
-    "action": { "type": "block" },
-    "condition": { "urlFilter": "google.com/12345", "resourceTypes": ["main_frame"] }
-  },
-  {
-    "id": 4,
-    "priority": 1,
-    "action": { "type": "redirect", "redirect": { "url": "https://example.com" } },
-    "condition": { "urlFilter": "google.com", "resourceTypes": ["main_frame"] }
-  },
-  {
-    "id": 5,
-    "priority": 1,
-    "action": { "type": "redirect", "redirect": { "extensionPath": "/a.jpg" } },
-    "condition": { "urlFilter": "abcd.com", "resourceTypes": ["main_frame"] }
-  },
-  {
-    "id": 6,
-    "priority": 1,
-    "action": {
-      "type": "redirect",
-      "redirect": {
-        "transform": { "scheme": "https", "host": "new.example.com" }
-      }
-    },
-    "condition": { "urlFilter": "||example.com", "resourceTypes": ["main_frame"] }
-  },
-  {
-    "id": 7,
-    "priority": 1,
-    "action": {
-      "type": "redirect",
-      "redirect": {
-        "regexSubstitution": "https://\\1.xyz.com/"
-      }
-    },
-    "condition": {
-      "regexFilter": "^https://www\\.(abc|def)\\.xyz\\.com/",
-      "resourceTypes": [
-        "main_frame"
-      ]
-    }
-  },
-  {
-    "id" : 8,
-    "priority": 2,
-    "action" : {
-      "type" : "allowAllRequests"
-    },
-    "condition" : {
-      "urlFilter" : "||b.com/path",
-      "resourceTypes" : ["sub_frame"]
-    }
-  },
-  {
-    "id" : 9,
-    "priority": 1,
-    "action" : {
-      "type" : "block"
-    },
-    "condition" : {
-      "urlFilter" : "script.js",
-      "resourceTypes" : ["script"]
-    }
-  },
-  {
-    "id": 10,
-    "priority": 2,
-    "action": {
-      "type": "modifyHeaders",
-      "responseHeaders": [
-        { "header": "h1", "operation": "remove" },
-        { "header": "h2", "operation": "set", "value": "v2" },
-        { "header": "h3", "operation": "append", "value": "v3" }
-      ]
-    },
-    "condition": { "urlFilter": "headers.com/123", "resourceTypes": ["main_frame"] }
-  },
-  {
-    "id": 11,
-    "priority": 1,
-    "action": {
-      "type": "modifyHeaders",
-      "responseHeaders": [
-        { "header": "h1", "operation": "set", "value": "v4" },
-        { "header": "h2", "operation": "append", "value": "v5" },
-        { "header": "h3", "operation": "append", "value": "v6" }
-      ]
-    },
-    "condition": { "urlFilter": "headers.com/12345", "resourceTypes": ["main_frame"] }
-  },
-]
-```
-
-To illustrate how this rule set affects requests, consider:
-
-- navigation to `"https://google.com"`. Rules with ID (1) and (4) match. The request iw blocked because blocking rules have higher priority than redirect rules when the `"priority"` is the same.
-- navigation to `"https://google.com/1234"`. Rules with ID (1), (2), and (4) match. Because the request has a matching `allow` rule and no higher priority rules, the request is not blocked nor redirected and continues to `"https://google.com/1234"`.
-- navigation to `"https://google.com/12345"` Rules with ID (1), (2), (3), and (4) match. The request is blocked because rule (3) has the highest priority, overriding all other matching rules.
-- navigation to `"https://abcd.com"`. The rule with ID (5) matches. Since rule (5) specifies an extension path, the request is redirected to `"chrome-extension://EXTENSION_ID/a.jpg"`.
-- navigation to `"http://example.com/path"`. The rule with ID (6) matches. Since rule (6) specifies a URL transform, the request is redirected to `"https://new.example.com/path"`.
-- a navigation to `"https://www.abc.xyz.com/path"`. The rule with ID (7) matches. The request is redirected to `"https://abc.xyz.com/path"`.
-- this request hierarchy:
-  - <https://a.com/path> (main-frame request)
-    - <https://b.com/path> (sub-frame request, matches the rule with ID (8))
-      - <https://c.com/path> (sub-frame request, matches the rule with ID (8))
-        - <https://c.com/script.js> (script request, matches the rules with IDs (8, 9) but (8) has higher priority)
-      - <https://b.com/script.js> (script request, matches the rules with IDs (8, 9) but (8) has higher priority)
-    - <https://d.com/path> (sub-frame request)
-      - <https://d.com/script.js> (script request, matches the rule with ID (9)) All requests in green will be allow-listed due to rule with ID (8) and not be evaluated by the extensions' ruleset. Requests in red are blocked due to rule with ID (9).
-- navigation to `"https://headers.com/12345"` with response headers `{ "h1": "initial_1", "h2": "initial_2" }`. Rules with ID (10) and (11) match. The request has its response headers modified to `{ "h2": "v2", "h2": "v5", "h3": "v3", "h3": "v6" }`. Header `h1` is removed by (10), `h2` is set by (10) then appended by (11), and `h3` is appended by (10) and (11).
 
 ## Types
 
 - {{WebExtAPIRef("declarativeNetRequest.MatchedRule")}}
   - : Details of a matched rule.
 - {{WebExtAPIRef("declarativeNetRequest.ModifyHeaderInfo")}}
-  - : The request headers to modify for the request.
+  - : The request or response headers to modify for the request.
 - {{WebExtAPIRef("declarativeNetRequest.Redirect")}}
   - : Details of how the redirect should be performed. Only valid for redirect rules.
 - {{WebExtAPIRef("declarativeNetRequest.ResourceType")}}
@@ -324,10 +168,8 @@ To illustrate how this rule set affects requests, consider:
   - : An object defining the action to take if a rule is matched.
 - {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}}
   - : An object defining the condition under which a rule is triggered.
-- {{WebExtAPIRef("declarativeNetRequest.Ruleset")}}
-  - : An object containing details of a static ruleset.
 - {{WebExtAPIRef("declarativeNetRequest.URLTransform")}}
-  - : An object containing details of a URL transformation to perform.
+  - : An object containing details of a URL transformation to perform for a redirect action.
 
 ## Properties
 

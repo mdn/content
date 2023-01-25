@@ -15,7 +15,11 @@ browser-compat: webextensions.api.declarativeNetRequest.ModifyHeaderInfo
 
 {{AddonSidebar()}}
 
-The request headers to modify for a request.
+The request or response header to modify for a request, declared in the `rule.action.requestHeaders` array or `rule.action.responseHeaders` array for rules whose {{WebExtAPIRef("declarativeNetRequest.RuleAction", "rule.action")}}`.type` is "modifyHeaders".
+
+Each object describes one header modification. To modify multiple headers, multiple objects can be specified in these arrays, or even across multiple rules. More than one extension may modify headers, provided that the specific header has not been modified before by another extension.
+
+A header may be modified only once, with one exception. The "append" operation can be executed again if the previous operation is "set" or "append".
 
 ## Type
 
@@ -26,7 +30,7 @@ Values of this type are objects. They contain these properties:
 - `operation`
   - : A `string`. The operation to be performed on a header. Possible values are `"append"`, `"set"`, and `"remove"`.
 - `value` {{optional_inline}}
-  - : A `string`. The new value for the header. Must be specified for append and set operations.
+  - : A `string`. The new value for the header. Must be specified for append and set operations. Not allowed for the "remove" operation.
 
 ## Browser compatibility
 

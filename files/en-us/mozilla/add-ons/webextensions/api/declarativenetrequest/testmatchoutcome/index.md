@@ -20,20 +20,21 @@ Checks if any of the extension's `declarativeNetRequest` rules would match a hyp
 ## Syntax
 
 ```js-nolint
-let count = browser.declarativeNetRequest.testMatchOutcome(
-    rules                // array
+let result = await browser.declarativeNetRequest.testMatchOutcome(
+    request,                // object
+    options                 // optional object
 );
 ```
 
 ### Parameters
 
-- `testMatchRequestDetails`
+- `request`
 
-  - : An object containing the match rules to test.
+  - : The details of the request to test.
     - `initiator` {{optional_inline}}
       - : A `string`. The initiator URL (if any) for the hypothetical request.
     - `method` {{optional_inline}}
-      - : A `string`. The standard HTTP method of the hypothetical request. Defaults to `"get"` for HTTP requests and is ignored for non-HTTP requests.
+      - : A `string`. The standard (lower case) HTTP method of the hypothetical request. Defaults to `"get"` for HTTP requests and is ignored for non-HTTP requests.
     - `tabId` {{optional_inline}}
       - : A `number`. The ID of the tab the hypothetical request takes place in. Does not need to correspond to a real tab ID. Default is `-1`, meaning that the request isn't related to a tab.
     - `type`
@@ -48,7 +49,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 - `matchedRules`
   - : {{WebExtAPIRef("declarativeNetRequest.MatchedRule")}}. Details of the rules (if any) that match the hypothetical request.
 
-If no rules match, the object is empty. If the request fails, the promise is rejected with an error message.
+If no rules match, the `matchedRules` array is empty. If the request fails, the promise is rejected with an error message.
 
 ## Examples
 

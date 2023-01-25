@@ -18,7 +18,7 @@ browser-compat: webextensions.api.declarativeNetRequest.MAX_NUMBER_OF_REGEX_RULE
 
 The maximum number of regular expression rules that an extension can add. This limit is evaluated separately for the set of dynamic rules and those specified in the rule resources file.
 
-Its value is `1000`.
+Its value is `1000` in Chrome.
 
 {{WebExtExamples}}
 
