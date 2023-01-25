@@ -29,6 +29,8 @@ The `import.meta` object is created by the host environment, as an extensible [`
 
 - `url`
   - : The full URL to the module, includes query parameters and/or hash (following the `?` or `#`). In browsers, this is either the URL from which the script was obtained (for external scripts), or the URL of the containing document (for inline scripts). In Node.js, this is the file path (including the `file://` protocol).
+- `resolve`
+  - : A built-in function that resolves a given module name or path. See: [import.meta.resolve](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta.resolve)
 
 ## Description
 
