@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Symbol.species
 
 {{JSRef}}
 
-The well-known symbol **`Symbol.species`** specifies a function-valued property that the constructor function uses to create derived objects.
+The **`Symbol.species`** static data property represents the well-known symbol specifying the method that a constructor function uses to create derived objects.
 
 > **Warning:** The existence of `@@species` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
 

@@ -1,6 +1,6 @@
 ---
 title: ':-moz-locale-dir(rtl)'
-slug: Web/CSS/:-moz-locale-dir(rtl)
+slug: Web/CSS/:-moz-locale-dir_rtl
 page-type: css-pseudo-class
 tags:
   - ':-moz-locale-dir'

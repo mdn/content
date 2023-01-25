@@ -1,6 +1,6 @@
 ---
 title: Round Trip Time (RTT)
-slug: Glossary/Round_Trip_Time_(RTT)
+slug: Glossary/Round_Trip_Time
 page-type: glossary-definition
 tags:
   - Beginner

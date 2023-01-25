@@ -345,7 +345,7 @@ The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macr
 
 - [MDN Web Docs Glossary](/en-US/docs/Glossary):
 
-  - {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}
+  - {{Glossary("XMLHttpRequest", "XHR")}}
 
 - [AJAX](https://en.wikipedia.org/wiki/AJAX) on Wikipedia
 - [Ajax](/en-US/docs/Web/Guide/AJAX)

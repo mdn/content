@@ -1,6 +1,6 @@
 ---
 title: Descriptor (CSS)
-slug: Glossary/Descriptor_(CSS)
+slug: Glossary/CSS_Descriptor
 page-type: glossary-definition
 tags:
   - CSS

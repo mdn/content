@@ -1419,6 +1419,18 @@
     "modified": "2020-05-10T03:48:27.987Z",
     "contributors": ["mfuji09", "roshan0708", "cadorej", "estelle"]
   },
+  "Glossary/CSS_Descriptor": {
+    "modified": "2019-04-11T08:18:58.120Z",
+    "contributors": [
+      "anneke",
+      "mfluehr",
+      "lburnor",
+      "rileym7",
+      "sideshowbarker",
+      "KateSturmey",
+      "Onkar316"
+    ]
+  },
   "Glossary/CSS_Selector": {
     "modified": "2019-10-26T12:44:16.165Z",
     "contributors": [
@@ -1915,18 +1927,6 @@
       "Jeremie",
       "Biraj",
       "SphinxKnight"
-    ]
-  },
-  "Glossary/Descriptor_(CSS)": {
-    "modified": "2019-04-11T08:18:58.120Z",
-    "contributors": [
-      "anneke",
-      "mfluehr",
-      "lburnor",
-      "rileym7",
-      "sideshowbarker",
-      "KateSturmey",
-      "Onkar316"
     ]
   },
   "Glossary/Deserialization": {
@@ -4249,7 +4249,7 @@
     "modified": "2019-07-10T13:32:40.366Z",
     "contributors": ["Malvoz", "tedmcox", "adithya_mani", "klez"]
   },
-  "Glossary/Round_Trip_Time_(RTT)": {
+  "Glossary/Round_Trip_Time": {
     "modified": "2019-06-03T22:23:04.640Z",
     "contributors": ["zacnomore", "estelle"]
   },
@@ -5378,10 +5378,6 @@
       "Andrew_Pfeiffer"
     ]
   },
-  "Glossary/XHR_(XMLHttpRequest)": {
-    "modified": "2019-06-20T05:52:29.969Z",
-    "contributors": ["Sheppy", "Sebastianz"]
-  },
   "Glossary/XHTML": {
     "modified": "2020-05-04T02:16:47.962Z",
     "contributors": [
@@ -5442,6 +5438,10 @@
       "sudheesh001",
       "ajinkya_p"
     ]
+  },
+  "Glossary/XMLHttpRequest": {
+    "modified": "2019-06-20T05:52:29.969Z",
+    "contributors": ["Sheppy", "Sebastianz"]
   },
   "Glossary/XPath": {
     "modified": "2019-03-23T22:57:48.593Z",
@@ -74381,7 +74381,7 @@
       "Jez9999"
     ]
   },
-  "Web/CSS/:-moz-locale-dir(ltr)": {
+  "Web/CSS/:-moz-locale-dir_ltr": {
     "modified": "2020-08-06T11:25:55.888Z",
     "contributors": [
       "Sheppy",
@@ -74396,7 +74396,7 @@
       "Marsf"
     ]
   },
-  "Web/CSS/:-moz-locale-dir(rtl)": {
+  "Web/CSS/:-moz-locale-dir_rtl": {
     "modified": "2020-08-06T11:27:19.919Z",
     "contributors": [
       "Sheppy",
@@ -101510,7 +101510,7 @@
       "dbruant"
     ]
   },
-  "Web/HTTP/Cross-Origin_Resource_Policy_(CORP)": {
+  "Web/HTTP/Cross-Origin_Resource_Policy": {
     "modified": "2020-10-15T22:16:18.437Z",
     "contributors": [
       "dd-pardal",

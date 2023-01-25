@@ -4,8 +4,8 @@
 #    yarn content add-redirect <fromURL> <toURL>
 #
 # FROM-URL	TO-URL
-/en-US/docs/-moz-locale-dir(ltr)	/en-US/docs/Web/CSS/:-moz-locale-dir(ltr)
-/en-US/docs/-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir(rtl)
+/en-US/docs/-moz-locale-dir(ltr)	/en-US/docs/Web/CSS/:-moz-locale-dir_ltr
+/en-US/docs/-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir_rtl
 /en-US/docs/::file-selector-button	/en-US/docs/Web/CSS/::file-selector-button
 /en-US/docs/<img>	/en-US/docs/Web/HTML/Element/Img
 /en-US/docs/AJAX	/en-US/docs/Web/Guide/AJAX
@@ -389,8 +389,8 @@
 /en-US/docs/CSS/:-moz-list-bullet	/en-US/docs/Web/CSS/:-moz-list-bullet
 /en-US/docs/CSS/:-moz-list-number	/en-US/docs/Web/CSS/:-moz-list-number
 /en-US/docs/CSS/:-moz-loading	/en-US/docs/Web/CSS/:-moz-loading
-/en-US/docs/CSS/:-moz-locale-dir(ltr)	/en-US/docs/Web/CSS/:-moz-locale-dir(ltr)
-/en-US/docs/CSS/:-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir(rtl)
+/en-US/docs/CSS/:-moz-locale-dir(ltr)	/en-US/docs/Web/CSS/:-moz-locale-dir_ltr
+/en-US/docs/CSS/:-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir_rtl
 /en-US/docs/CSS/:-moz-only-whitespace	/en-US/docs/Web/CSS/:-moz-only-whitespace
 /en-US/docs/CSS/:-moz-placeholder	/en-US/docs/Web/CSS/:placeholder-shown
 /en-US/docs/CSS/:-moz-read-write	/en-US/docs/Web/CSS/:read-write
@@ -414,7 +414,7 @@
 /en-US/docs/CSS/::first-line	/en-US/docs/Web/CSS/::first-line
 /en-US/docs/CSS/::selection	/en-US/docs/Web/CSS/::selection
 /en-US/docs/CSS/:@-moz-document	/en-US/docs/Web/CSS/@document
-/en-US/docs/CSS/:[Property_Name]/:-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir(rtl)
+/en-US/docs/CSS/:[Property_Name]/:-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir_rtl
 /en-US/docs/CSS/:active	/en-US/docs/Web/CSS/:active
 /en-US/docs/CSS/:after	/en-US/docs/Web/CSS/::after
 /en-US/docs/CSS/:any	/en-US/docs/Web/CSS/:is
@@ -901,8 +901,8 @@
 /en-US/docs/CSS:-moz-grabbing	/en-US/docs/Web/CSS/cursor#grab
 /en-US/docs/CSS:-moz-hidden-unscrollable	/en-US/docs/Web/CSS/overflow
 /en-US/docs/CSS:-moz-image-region	/en-US/docs/Web/CSS/-moz-image-region
-/en-US/docs/CSS:-moz-locale-dir(ltr)	/en-US/docs/Web/CSS/:-moz-locale-dir(ltr)
-/en-US/docs/CSS:-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir(rtl)
+/en-US/docs/CSS:-moz-locale-dir(ltr)	/en-US/docs/Web/CSS/:-moz-locale-dir_ltr
+/en-US/docs/CSS:-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir_rtl
 /en-US/docs/CSS:-moz-margin-end	/en-US/docs/Web/CSS/margin-inline-end
 /en-US/docs/CSS:-moz-margin-start	/en-US/docs/Web/CSS/margin-inline-start
 /en-US/docs/CSS:-moz-opacity	/en-US/docs/Web/CSS/opacity
@@ -932,8 +932,8 @@
 /en-US/docs/CSS::-moz-first-node	/en-US/docs/Web/CSS/:-moz-first-node
 /en-US/docs/CSS::-moz-last-node	/en-US/docs/Web/CSS/:-moz-last-node
 /en-US/docs/CSS::-moz-list-bullet	/en-US/docs/Web/CSS/:-moz-list-bullet
-/en-US/docs/CSS::-moz-locale-dir(ltr)	/en-US/docs/Web/CSS/:-moz-locale-dir(ltr)
-/en-US/docs/CSS::-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir(rtl)
+/en-US/docs/CSS::-moz-locale-dir(ltr)	/en-US/docs/Web/CSS/:-moz-locale-dir_ltr
+/en-US/docs/CSS::-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir_rtl
 /en-US/docs/CSS::-moz-only-whitespace	/en-US/docs/Web/CSS/:-moz-only-whitespace
 /en-US/docs/CSS::-moz-placeholder	/en-US/docs/Web/CSS/:placeholder-shown
 /en-US/docs/CSS::@-moz-document	/en-US/docs/Web/CSS/@document
@@ -3593,6 +3593,7 @@
 /en-US/docs/Glossary/Condition	/en-US/docs/Glossary/Conditional
 /en-US/docs/Glossary/Content_type	/en-US/docs/Glossary/MIME_type
 /en-US/docs/Glossary/DTD	/en-US/docs/Glossary/Doctype
+/en-US/docs/Glossary/Descriptor_(CSS)	/en-US/docs/Glossary/CSS_Descriptor
 /en-US/docs/Glossary/Distributed_DenialofService	/en-US/docs/Glossary/Distributed_Denial_of_Service
 /en-US/docs/Glossary/Empty_element	/en-US/docs/Glossary/Void_element
 /en-US/docs/Glossary/Error	/en-US/docs/Glossary/Exception
@@ -3614,6 +3615,7 @@
 /en-US/docs/Glossary/Property_(CSS)	/en-US/docs/Glossary/property/CSS
 /en-US/docs/Glossary/Random_Number_Generator	/en-US/docs/Glossary/RNG
 /en-US/docs/Glossary/Responsive_design	/en-US/docs/Glossary/Responsive_web_design
+/en-US/docs/Glossary/Round_Trip_Time_(RTT)	/en-US/docs/Glossary/Round_Trip_Time
 /en-US/docs/Glossary/SRTP	/en-US/docs/Glossary/RTP
 /en-US/docs/Glossary/SSL_Glossary	/en-US/docs/Glossary/SSL
 /en-US/docs/Glossary/Serialize	/en-US/docs/Glossary/Serialization
@@ -3628,7 +3630,7 @@
 /en-US/docs/Glossary/Web_Sockets	/en-US/docs/Glossary/WebSockets
 /en-US/docs/Glossary/World_Wide_Web_Consortium_(W3C)	/en-US/docs/Glossary/W3C
 /en-US/docs/Glossary/XForm	/en-US/docs/Glossary/XForms
-/en-US/docs/Glossary/XMLHttpRequest	/en-US/docs/Glossary/XHR_(XMLHttpRequest)
+/en-US/docs/Glossary/XHR_(XMLHttpRequest)	/en-US/docs/Glossary/XMLHttpRequest
 /en-US/docs/Glossary/XSS	/en-US/docs/Glossary/Cross-site_scripting
 /en-US/docs/Glossary/entities	/en-US/docs/Glossary/Entity
 /en-US/docs/Glossary/l10n	/en-US/docs/Glossary/Localization
@@ -11167,6 +11169,8 @@
 /en-US/docs/Web/CSS/:-moz-any	/en-US/docs/Web/CSS/:is
 /en-US/docs/Web/CSS/:-moz-any-link	/en-US/docs/Web/CSS/:any-link
 /en-US/docs/Web/CSS/:-moz-full-screen	/en-US/docs/Web/CSS/:fullscreen
+/en-US/docs/Web/CSS/:-moz-locale-dir(ltr)	/en-US/docs/Web/CSS/:-moz-locale-dir_ltr
+/en-US/docs/Web/CSS/:-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir_rtl
 /en-US/docs/Web/CSS/:-moz-placeholder	/en-US/docs/Web/CSS/:placeholder-shown
 /en-US/docs/Web/CSS/:-moz-ui-invalid	/en-US/docs/Web/CSS/:user-invalid
 /en-US/docs/Web/CSS/:-ms-input-placeholder	/en-US/docs/Web/CSS/:placeholder-shown
@@ -12015,6 +12019,7 @@
 /en-US/docs/Web/HTTP/Caching_FAQ	/en-US/docs/Web/HTTP/Caching
 /en-US/docs/Web/HTTP/Controlling_DNS_prefetching	/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control
 /en-US/docs/Web/HTTP/Cookies/Cookie_Prefixes	/en-US/docs/Web/HTTP/Cookies#Cookie_prefixes
+/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)	/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy
 /en-US/docs/Web/HTTP/Evolution_of_HTTP	/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
 /en-US/docs/Web/HTTP/Feature_Policy	/en-US/docs/Web/HTTP/Permissions_Policy
 /en-US/docs/Web/HTTP/Gecko_user_agent_string_reference	/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox
