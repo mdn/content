@@ -102,7 +102,7 @@ function b64ToUint6(nChr) {
 }
 
 function base64DecToArr(sBase64, nBlocksSize) {
-  const sB64Enc = sBase64.replace(/[^A-Za-z0-9+/]/g, ""); // Only necessary if the base64 includes whitespace such as line breaks.
+  const sB64Enc = sBase64.replace(/[^A-Za-z0-9+/]/g, ""); // Remove "="-padding, whitespace/line breaks, and more..
   const nInLen = sB64Enc.length;
   const nOutLen = nBlocksSize
     ? Math.ceil(((nInLen * 3 + 1) >> 2) / nBlocksSize) * nBlocksSize
