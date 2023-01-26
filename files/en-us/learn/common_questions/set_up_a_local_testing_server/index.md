@@ -69,7 +69,7 @@ For VSCode, you can check the following free extension:
 
 ### Using Python
 
-Another way to do this for our purposes is to use Python's `http.server` module.
+Another way to achieve this is to use Python's `http.server` module.
 
 > **Note:** Older versions of Python (up to version 2.7) provided a similar module named `SimpleHTTPServer`. If you are using Python 2.x, you can follow this guide by replacing all uses of `http.server` with `SimpleHTTPServer`. However, we recommend you use the latest version of Python.
 
