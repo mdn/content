@@ -41,25 +41,25 @@
   dependencies:
     "@mdn/browser-compat-data" latest
 
-"@mdn/browser-compat-data@^5.2.30":
-  version "5.2.30"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.30.tgz#67aac0e3fbd2da9ac386d325d05fc324c0b93111"
-  integrity sha512-j48TKjgXHuUXzdk5MuPI7BBjryHQeI2TFWhcULBjiCkqXmW2hBoKGwQNEXTSzCVQmYvEat15cDDPU3NIQmY50w==
+"@mdn/browser-compat-data@^5.2.31":
+  version "5.2.31"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.31.tgz#c8010d5b1abd3a2b0942703ee27695713ba90b23"
+  integrity sha512-tOav2FmnXMkdJqyq7ne3l/+YK6r+Q8JIOxnAxP+lfFx28HOLuYLI7thntMGK0eghG6p9ivXcCbDQ2Q58cw3zUw==
 
 "@mdn/browser-compat-data@latest":
   version "5.2.24"
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.24.tgz#45c85391411987d12519d214d80c324c5100bcbc"
   integrity sha512-KZJKMObObkYFUgEWEbIJ7voJ0iGm3XqhJLkS5jyRLSMoSL7PnmCjes+CttpSzgyLu7DwJsFWsRvKBgYFxb5e7A==
 
-"@mdn/yari@1.33.18":
-  version "1.33.18"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.33.18.tgz#5d2d3ffb070a439c4bf7d739edb3733fc4538638"
-  integrity sha512-Dbv7LBxTld7wnK+DE+IPsNX9RQWG3uad9a1Mp5JjmC9jg3yv1ZV6LwFaqRJhP4c/+FL2VqzoFC2WkOmF3lgwRg==
+"@mdn/yari@1.33.19":
+  version "1.33.19"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.33.19.tgz#fc15d91d62735208e80acc0575fd5c89483595af"
+  integrity sha512-QDMgRCRk2JiqUPXMBxLC4zm/SyadsvW/C1+9LLGyqT92WQSEl/O0KD7ZAEeNVTo3AK008frL1XwQEQHELf3I5Q==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
     "@mdn/bcd-utils-api" "^0.0.3"
-    "@mdn/browser-compat-data" "^5.2.30"
+    "@mdn/browser-compat-data" "^5.2.31"
     "@mozilla/glean" "1.3.0"
     "@use-it/interval" "^1.0.0"
     "@webref/css" "^5.4.4"
