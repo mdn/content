@@ -14,16 +14,16 @@ There are various communication channels using which community can contact MDN W
 
 ## Chat rooms
 
-Chat rooms are for queries, clarifications, sharing information, and meetings.
-They are also great places to get to know other community members, share your work, and get help for your contributions.
-If you have a question or want to get in touch with us about something, feel free to join us.
+Chat rooms are for posting queries, seeking clarifications, sharing information, and meeting other folks.
+They are also great place to get to know other community members, share your work, and get help for your contributions.
 
 ### Discord server
 
-As of January 2023, MDN Web Docs opened up a Discord server to the public.
-This server is a great place to see what staff and members of the community are doing on a daily basis and to find out how you can get involved.
+MDN Web Docs community discord server is open to the public. This server is a great place to see what staff and members of the community are doing on a daily basis.
 
-- [MDN Web Docs community discord server](https://discord.gg/apa6Rn7uEj)
+You can ask questions, seek clarifications, and find out how you can get involved. You can also join specific channels based on your areas of interest or expertise.
+
+Join the MDN Web Docs community on discord [here](https://discord.gg/apa6Rn7uEj).
 
 ### Matrix chat rooms
 
@@ -36,13 +36,17 @@ The Matrix chat rooms are an alternative to the Discord server.
 
 ## GitHub Discussions
 
-[GitHub Discussions](https://github.com/mdn/mdn-community/discussions) are for conducting polls and for issues that needs a discussion to agree upon a course of action or define an actionable piece of work.
-You can use GitHub Discussions if you think the answer to your question might be helpful for other people to find in the future.
-See [the Discussion guidelines](/en-US/docs/MDN/Community/Discussions) before you create a new submission.
+[GitHub Discussions](https://github.com/mdn/mdn-community/discussions) on MDN Web Docs is the place to look out for any project-wide [announcements](https://github.com/mdn/mdn-community/discussions/categories/announcements). 
+
+Use GitHub discussions to post your questions and propose your suggestions. Choose the appropriate [discussion category](https://github.com/mdn/mdn-community#github-discussions) when starting a thread. Your answered questions can be really useful for other people looking for similar information in the future.
+
+We strongly recommend you to use GitHub Discussions to share the work you're planning to do and that you think will need a consensus on the course of action. You can also use GitHub Discussions for brainstorming your ideas to define an actionable piece of work, especially when the changes have a wide-ranging impact.
+
+Check out the MDN-specific [discussion guidelines](/en-US/docs/MDN/Community/Discussions) before you create a new submission.
 
 ## Forums
 
-The forums can be used for discussing code problems, assessment with the skill tests, assessments that appear on the Learn web development section on MDN, and if you want someone to take a look at your page.
+You can use the forums listed below for discussing code problems. You can also request feedback here on your progress with the assessments in the [MDN learning area](https://developer.mozilla.org/en-US/docs/Learn).
 
 - [MDN Discourse forum](https://discourse.mozilla.org/c/mdn/236)
 - [MDN Discourse forum learning category](https://discourse.mozilla.org/c/mdn/learn/250)
@@ -50,7 +54,7 @@ The forums can be used for discussing code problems, assessment with the skill t
 
 ## Localization channels
 
-Each localization team has its own [methods of communication](/en-US/docs/MDN/Community/Contributing/Translated_content).
+Each localization team has its own [method of communication](/en-US/docs/MDN/Community/Contributing/Translated_content).
 
 ## Bugs and issues
 
@@ -66,4 +70,4 @@ For reporting bugs and issues related to the MDN Web Docs website use following 
 
 ## Mailing list
 
-For nonpublic communication email the [mdn-admins list](mailto:mdn-admins@mozilla.org).
+For any nonpublic communication, send an email to [mdn-admins](mailto:mdn-admins@mozilla.org).
