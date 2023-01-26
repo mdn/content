@@ -15,7 +15,7 @@ spec-urls:
 
 {{CSSRef}}
 
-The **Compositing and Blending** CSS module defines how an element's background layers can be blended together, how an element can be blended with its container, and whether the element must create a new {{glossary("stacking context")}}.
+The **Compositing and Blending** CSS module defines how an element's background layers can be blended together, how an element can be blended with its container, and whether the element must create a new [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
 
 Similar to blending effects available in many image editing applications, this module enables blending an element's background layers together and blending an element's content with that of its container. CSS can be used to define which blending mode should be used, if any, to blend an element's background images and colors into a single background image. It is also possible to define how an element's borders, background, and content, including text, emojis, and images, should be blended with the background of its container.
 
@@ -98,9 +98,9 @@ span {
 - {{cssxref("background-image")}}
 - {{cssxref("background-color")}}
 
-### Associated concepts
+### Associated concepts and glossary terms
 
-- [Stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
+- Glossary: {{glossary("stacking context")}}
 - SVG's {{ SVGElement("feBlend") }} filter primitive
 
 ## Specifications
