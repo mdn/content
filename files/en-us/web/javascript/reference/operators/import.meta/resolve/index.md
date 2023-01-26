@@ -52,7 +52,7 @@ However, even if `"./lib/helper.js"` cannot be successfully imported, the second
 
 ### Bare module names
 
-You can pass a bare module name (also known as a bare module specifier) to `import.meta.resolve()`, as long as you have the corresponding [import map](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps). For example, the following works in a browser:
+You can pass a bare module name (also known as a bare module specifier) to `import.meta.resolve()`, as long as module resolution is defined for the name. For example, you can define this using an [import map](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps) inside a browser:
 
 ```html
 <!-- index.html -->
