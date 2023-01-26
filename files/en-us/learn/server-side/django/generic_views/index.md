@@ -431,7 +431,7 @@ class BookDetailView(generic.DetailView):
 
 That's it! All you need to do now is create a template called **/locallibrary/catalog/templates/catalog/book_detail.html**, and the view will pass it the database information for the specific `Book` record extracted by the URL mapper. Within the template you can access the book's details with the template variable named `object` OR `book` (i.e. generically "`the_model_name`").
 
-If you need to, you can change the template used and the name of the context object used to reference the book in the template. You can also override methods to, for example, add additional information to the context.
+If you need to, you can change the template used and the name of the context object used to reference the book in the template. You can also override methods too, for example, add additional information to the context.
 
 #### What happens if the record doesn't exist?
 
