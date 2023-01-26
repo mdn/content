@@ -40,7 +40,14 @@ If you think you've found a bug with the content on MDN Web Docs or with the loo
 
 ### Reporting an issue
 
-- Depending on the type of problem you've discovered, report it by filing an issue on [documentation](https://github.com/mdn/content/issues/new/choose), [translation](https://github.com/mdn/translated-content/issues/new/choose), the website's [look and feel](https://github.com/mdn/yari/issues/new/choose), the "Try it" [interactive example](https://github.com/mdn/interactive-examples/issues/new/choose) section, or the [browser compatibility](https://github.com/mdn/browser-compat-data/issues/new/choose) information.
+- Depending on the type of problem you've discovered, report it by filing an issue on one of the followings:
+  - [documentation](https://github.com/mdn/content/issues/new/choose)
+  - [translation](https://github.com/mdn/translated-content/issues/new/choose)
+  - the website's [look and feel](https://github.com/mdn/yari/issues/new/choose)
+  - the "Try it" [interactive example](https://github.com/mdn/interactive-examples/issues/new/choose) section
+  - [DOM examples](https://github.com/mdn/dom-examples/issues)
+  - [Learning area](https://github.com/mdn/learning-area/issues)
+  - the [browser compatibility](https://github.com/mdn/browser-compat-data/issues/new/choose) information
 
 - Choose the appropriate category to report the issue. For example, to report a content bug, use the [Content issue](https://github.com/mdn/content/issues/new?assignees=&labels=needs+triage&template=content-bug.yml) template in the `mdn/content` repository.
 
