@@ -35,10 +35,13 @@ To learn more about SVGs, see the [SVG documentation](/en-US/docs/Web/SVG) and f
 
 ## Examples
 
-### Detecting a dark theme
+### Detecting a dark or light theme
 
-The elements below have an initial color theme.
-They can be further themed according to the user's color scheme preference.
+Three elements show the possible color schemes for a website: a light scheme, a dark scheme, and a default scheme (if the browser doesn't support this feature or can't determine a preferred color scheme).
+
+Below those three example elements is a "result" element showing the actual scheme that your browser selected, using the `prefers-color-scheme` media query.
+
+The following HTML is used:
 
 ```html
 <div class="scheme light">Light scheme style</div>
@@ -138,7 +141,7 @@ The following CSS is used to style the elements above:
 }
 ```
 
-{{EmbedLiveSample("Detecting_a_dark_theme")}}
+{{EmbedLiveSample("Detecting_a_dark_or_light_theme")}}
 
 ### Color scheme inheritance
 
