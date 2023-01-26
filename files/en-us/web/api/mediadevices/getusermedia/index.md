@@ -21,7 +21,7 @@ browser-compat: api.MediaDevices.getUserMedia
 
 {{securecontext_header}}{{APIRef("Media Capture and Streams")}}
 
-The {{domxref("MediaDevices")}}**`.getUserMedia()`** method prompts the user for permission to use a media input which produces a {{domxref("MediaStream")}} with tracks containing the requested types of media.
+The `{{domxref("MediaDevices")}}.getUserMedia()` method prompts the user for permission to use a media input which produces a {{domxref("MediaStream")}} with tracks containing the requested types of media.
 
 That stream can include, for example, a video track (produced by either a hardware or virtual video source such as a camera, video recording device, screen sharing service, and so forth), an audio track (similarly, produced by a physical or virtual audio source like a microphone, A/D converter, or the like), and possibly other track types.
 
@@ -298,9 +298,9 @@ been granted to use a device for input, even if the device is not actively recor
 the moment.
 
 For example in Firefox, the URL bar displays a pulsing red icon to indicate that
-recording is underway. The icon is gray if the permission is in place but recording is
+recording is underway. The icon is gray if the permission is in place but the recording is
 not currently underway. The device's physical light is used to indicate whether or not
-recording is currently active. If you've muted your camera (so-called "facemuting"),
+the recording is currently active. If you've muted your camera (so-called "facemuting"),
 your camera's activity light goes out to indicate that the camera is not actively
 recording you, without discarding the permission to resume using the camera once muting
 is over.
@@ -315,7 +315,7 @@ There are a number of ways security management and controls in a {{Glossary("use
 The two [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) directives that apply to `getUserMedia()` are `camera`
 and `microphone`.
 
-For example, this HTTP header will enable use of a camera by the document
+For example, this HTTP header will enable the use of a camera by the document
 and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same
 origin:
 
