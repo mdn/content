@@ -1,6 +1,7 @@
 ---
 title: <input type="color">
 slug: Web/HTML/Element/input/color
+page-type: html-element
 tags:
   - Color Picker
   - Element
@@ -164,7 +165,7 @@ The final result looks like this:
 
 {{EmbedLiveSample("Example", 700, 200)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

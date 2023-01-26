@@ -73,7 +73,7 @@ To get the outer height of a window, i.e. the height of the whole browser window
 The following figure shows the difference between `outerHeight` and
 `innerHeight`.
 
-![innerHeight vs outerHeight illustration](firefoxinnervsouterheight2.png)
+![innerHeight vs. outerHeight illustration](firefoxinnervsouterheight2.png)
 
 ## Demo
 

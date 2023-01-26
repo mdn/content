@@ -28,7 +28,7 @@ includes(searchString, position)
 ### Parameters
 
 - `searchString`
-  - : A string to be searched for within `str`. Cannot be a regex.
+  - : A string to be searched for within `str`. Cannot [be a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes). All values that are not regexes are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), so omitting it or passing `undefined` causes `includes()` to search for the string `"undefined"`, which is rarely what you want.
 - `position` {{optional_inline}}
   - : The position within the string at which to begin searching for `searchString`. (Defaults to `0`.)
 

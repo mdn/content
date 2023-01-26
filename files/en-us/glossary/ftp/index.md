@@ -1,6 +1,7 @@
 ---
 title: FTP
 slug: Glossary/FTP
+page-type: glossary-definition
 tags:
   - CodingScripting
   - FTP

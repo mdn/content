@@ -1,6 +1,7 @@
 ---
 title: CORS
 slug: Glossary/CORS
+page-type: glossary-definition
 tags:
   - Infrastructure
   - Security
@@ -10,7 +11,7 @@ tags:
 
 The [same-origin security policy](/en-US/docs/Web/Security/Same-origin_policy) forbids cross-origin access to resources. But CORS gives web servers the ability to say they want to opt into allowing cross-origin access to their resources.
 
-### CORS headers
+## CORS headers
 
 - {{HTTPHeader("Access-Control-Allow-Origin")}}
   - : Indicates whether the response can be shared.
@@ -30,6 +31,8 @@ The [same-origin security policy](/en-US/docs/Web/Security/Same-origin_policy) f
   - : Used when issuing a preflight request to let the server know which [HTTP method](/en-US/docs/Web/HTTP/Methods) will be used when the actual request is made.
 - {{HTTPHeader("Origin")}}
   - : Indicates where a fetch originates from.
+- {{HTTPHeader("Timing-Allow-Origin")}}
+  - : Specifies origins that are allowed to see values of attributes retrieved via features of the [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API), which would otherwise be reported as zero due to cross-origin restrictions.
 
 ## See also
 

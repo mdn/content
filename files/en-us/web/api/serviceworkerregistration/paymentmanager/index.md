@@ -4,10 +4,10 @@ slug: Web/API/ServiceWorkerRegistration/paymentManager
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - PaymentManager
   - Reference
+  - Experimental
 browser-compat: api.ServiceWorkerRegistration.paymentManager
 ---
 

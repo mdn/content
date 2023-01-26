@@ -1,6 +1,7 @@
 ---
 title: '<address>: The Contact Address element'
 slug: Web/HTML/Element/address
+page-type: html-element
 tags:
   - Address
   - Author

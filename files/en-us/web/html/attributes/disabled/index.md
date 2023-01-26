@@ -1,6 +1,7 @@
 ---
 title: "HTML attribute: disabled"
 slug: Web/HTML/Attributes/disabled
+page-type: html-attribute
 tags:
   - Attribute
   - Attributes

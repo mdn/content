@@ -6,10 +6,11 @@ tags:
   - Manifest
   - Web
   - Experimental
+  - Non-standard
 browser-compat: html.manifest.serviceworker
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}{{Non-standard_header}}
 
 <table class="properties">
   <tbody>

@@ -40,13 +40,6 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 The following example uses [global attributes](/en-US/docs/Web/MathML/Global_attributes) `displaystyle` and `mathcolor` to respectively override the [`math-style`](/en-US/docs/Web/CSS/math-style) and [`color`](/en-US/docs/Web/CSS/color) of the `<munder>` and `<munderover>` children:
 
-```html hidden
- <link
-   rel="stylesheet"
-   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-  />
-```
-
 ```html
 <math display="block">
   <mstyle displaystyle="false" mathcolor="teal">

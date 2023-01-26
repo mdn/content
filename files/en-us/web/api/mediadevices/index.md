@@ -38,7 +38,7 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 - {{ domxref("MediaDevices.enumerateDevices", "enumerateDevices()") }}
   - : Obtains an array of information about the media input and output devices available on the system.
 - {{domxref("MediaDevices.getSupportedConstraints", "getSupportedConstraints()")}}
-  - : Returns an object conforming to {{domxref("MediaTrackSupportedConstraints")}} indicating which constrainable properties are supported on the {{domxref("MediaStreamTrack")}} interface. See {{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API", "Capabilities and constraints")}} to learn more about constraints and how to use them.
+  - : Returns an object conforming to {{domxref("MediaTrackSupportedConstraints")}} indicating which constrainable properties are supported on the {{domxref("MediaStreamTrack")}} interface. See [Media Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints) to learn more about constraints and how to use them.
 - {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}
   - : Prompts the user to select a display or portion of a display (such as a window) to capture as a {{domxref("MediaStream")}} for sharing or recording purposes. Returns a promise that resolves to a `MediaStream`.
 - {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}

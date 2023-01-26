@@ -25,7 +25,7 @@ style-rule ::=
     }
 ```
 
-Where :
+Where:
 
 ```css
 selectors-list ::=

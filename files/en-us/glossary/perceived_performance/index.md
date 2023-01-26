@@ -1,6 +1,7 @@
 ---
 title: Perceived performance
 slug: Glossary/Perceived_performance
+page-type: glossary-definition
 tags:
   - Perceived Performance
   - Reference

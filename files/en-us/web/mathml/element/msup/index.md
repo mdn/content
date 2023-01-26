@@ -26,13 +26,6 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 ## Examples
 
-```html hidden
- <link
-   rel="stylesheet"
-   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-  />
-```
-
 ```html
 <math display="block">
   <msup>

@@ -1,6 +1,7 @@
 ---
 title: CMS
 slug: Glossary/CMS
+page-type: glossary-definition
 tags:
   - CMS
   - Composing

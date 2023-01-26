@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Math.LN2
 
 {{JSRef}}
 
-The **`Math.LN2`** property represents the natural logarithm of 2, approximately 0.693:
+The **`Math.LN2`** static data property represents the natural logarithm of 2, approximately 0.693:
 
 {{EmbedInteractiveExample("pages/js/math-ln2.html","shorter")}}
 
