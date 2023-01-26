@@ -1566,7 +1566,11 @@
         "DocumentTimeline",
         "KeyframeEffect"
       ],
-      "methods": ["Document.getAnimations()", "Element.animate()"],
+      "methods": [
+        "Document.getAnimations()",
+        "Element.animate()",
+        "Element.getAnimations()"
+      ],
       "properties": ["Document.timeline"],
       "events": []
     },
