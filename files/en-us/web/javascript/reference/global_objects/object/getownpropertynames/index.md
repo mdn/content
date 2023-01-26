@@ -78,7 +78,7 @@ const myObj = Object.create({}, {
 });
 myObj.foo = 1;
 
-console.log(Object.getOwnPropertyNames(my_obj).sort()); // ["foo", "getFoo"]
+console.log(Object.getOwnPropertyNames(myObj).sort()); // ["foo", "getFoo"]
 ```
 
 If you want only the enumerable properties, see {{jsxref("Object.keys()")}} or use a {{jsxref("Statements/for...in", "for...in")}} loop (note that this will also return enumerable properties found along the prototype chain for the object unless the latter is filtered with {{jsxref("Object.hasOwn()", "hasOwn()")}}).
