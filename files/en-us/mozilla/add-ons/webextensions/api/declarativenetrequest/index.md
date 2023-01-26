@@ -29,7 +29,7 @@ The `"declarativeNetRequestFeedback"` permission is required to use {{WebExtAPIR
 The declarative rules are defined by four fields:
 
 - `id` – An ID that uniquely identifies a rule. Mandatory and should be >= 1.
-- `priority` – The rule priority. When specified, it should be >= 1. Defaults to 1. See [Matching precedents](#matching-precedents) for details on how priority affects which rules are applied.
+- `priority` – The rule priority. When specified, it should be >= 1. Defaults to 1. See [Matching precedents](#matching_precedents) for details on how priority affects which rules are applied.
 - `condition` – The condition under which this rule is triggered.
 - `action` – The action to take when the rule is matched. Rules can do one of these things:
   - block a network request.
@@ -136,7 +136,6 @@ If multiple `modifyHeaders` rules specify the same header, the resulting modific
 - If a rule has removed a header, lower priority rules cannot further modify the header.
 
 ## Testing
-
 
 {{WebExtAPIRef("declarativeNetRequest.testMatchOutcome","testMatchOutcome")}}, {{WebExtAPIRef("declarativeNetRequest.getMatchedRules","getmatchedrules")}}, and {{WebExtAPIRef("declarativeNetRequest.onRuleMatchedDebug","onRuleMatchedDebug")}} are available to assist with testing rules and rulesets. These APIs require the `"declarativeNetRequestFeedback"` [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). In addition:
 
