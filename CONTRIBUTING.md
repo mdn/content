@@ -88,14 +88,13 @@ After you have made changes to your branch, the goal is to open a [pull request]
 A pull request represents the work you want to be reviewed, approved, and merged into the `main` branch of the MDN repository.
 See the [Creating a pull request](#creating-a-pull-request) for more details on creating and handling pull requests successfully.
 
-If you're not certain of the changes that you want to make, get in touch with us!
-You can [chat with us](https://chat.mozilla.org/#/room/#mdn:mozilla.org) or [file an issue](https://github.com/mdn/content/issues).
+If you're not certain of the changes that you want to make, [get in touch with us](/en-US/docs/MDN/Community/Communication_channels)!
 
 > **Note:** You can click the **Source on GitHub** link at the bottom of an MDN page to jump directly to the page source on GitHub.
 
 ### Forking and cloning the repository
 
-If you want make changes to more than one file, the GitHub UI is not very efficient because you have to make separate pull requests for each file you want to change.
+If you want to make changes to more than one file, the GitHub UI is not very efficient because you have to make separate pull requests for each file you want to change.
 Instead of using the GitHub UI, you need to use `git` or a client like the [GitHub Desktop](https://docs.github.com/en/get-started/using-github/github-desktop) or [GitHub CLI](https://docs.github.com/en/github-cli/github-cli/about-github-cli).
 The following examples are using plain `git` commands, but you can use any of the clients mentioned above to perform the equivalent actions.
 
