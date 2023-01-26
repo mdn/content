@@ -140,4 +140,4 @@ The report includes the full path to the violating resource in `blocked-uri` whi
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - CSP {{CSP("report-to")}} directive
-- CSP {{CSP("report-to")}} directive {{deprecated_inline}}
+- CSP {{CSP("report-uri")}} directive {{deprecated_inline}}
