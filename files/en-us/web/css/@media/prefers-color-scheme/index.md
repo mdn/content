@@ -41,57 +41,81 @@ The elements below have an initial color theme.
 They can be further themed according to the user's color scheme preference.
 
 ```html
-<div class="day">Day (initial)</div>
-<div class="day light-scheme">Day (changes in light scheme)</div>
-<div class="day dark-scheme">Day (changes in dark scheme)</div>
+<div class="scheme-example light-scheme">Light scheme style</div>
+<div class="scheme-example dark-scheme">Dark scheme style</div>
+<div class="scheme-example no-scheme">No scheme detected style</div>
 <br />
 
-<div class="night">Night (initial)</div>
-<div class="night light-scheme">Night (changes in light scheme)</div>
-<div class="night dark-scheme">Night (changes in dark scheme)</div>
+<div class="scheme-example result-scheme">Result: <span class="result-text light-scheme-text">Light scheme</span> <span class="result-text dark-scheme-text">Dark scheme</span> <span class="result-text no-scheme-text">No scheme detected</span></div>
 ```
 
 The following CSS is used to style the elements above:
 
 ```css
-.day {
-  background: #eee;
-  color: black;
-}
-.night {
-  background: #333;
-  color: white;
-}
 
-@media (prefers-color-scheme: dark) {
-  .day.dark-scheme {
-    background: #333;
-    color: white;
-  }
-  .night.dark-scheme {
-    background: black;
-    color: #ddd;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .day.light-scheme {
-    background: white;
-    color: #555;
-  }
-  .night.light-scheme {
-    background: #eee;
-    color: black;
-  }
-}
-
-.day,
-.night {
+.scheme-example {
   display: inline-block;
   padding: 1em;
   width: 7em;
   height: 2em;
   vertical-align: middle;
+}
+
+.result-scheme {
+  width: 25.5em;
+}
+
+.result-text {
+  display: none;
+}
+
+.light-scheme {
+  background: #eee;
+  color: black;
+}
+
+.dark-scheme {
+  background: black;
+  color: white;
+}
+
+.no-scheme, .result-scheme {
+  background: #aaa;
+  color: black;
+}
+
+.no-scheme-text {
+  display: initial;
+}
+
+@media (prefers-color-scheme: dark) {
+  .result-scheme {
+    background: black;
+    color: white;
+  }
+  
+  .no-scheme-text {
+    display: none;
+  }
+  
+  .dark-scheme-text {
+    display: initial;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .result-scheme {
+    background: #eee;
+    color: black;
+  }
+  
+  .no-scheme-text {
+    display: none;
+  }
+  
+  .light-scheme-text {
+    display: initial;
+  }
 }
 ```
 
