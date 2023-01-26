@@ -36,7 +36,7 @@ The Matrix chat rooms are an alternative to the Discord server.
 
 ## GitHub Discussions
 
-[GitHub Discussions](https://github.com/mdn/mdn-community/discussions) on MDN Web Docs is the place to look out for any project-wide [announcements](https://github.com/mdn/mdn-community/discussions/categories/announcements). 
+[GitHub Discussions](https://github.com/mdn/mdn-community/discussions) on MDN Web Docs is the place to look out for any project-wide [announcements](https://github.com/mdn/mdn-community/discussions/categories/announcements).
 
 Use GitHub discussions to post your questions and propose your suggestions. Choose the appropriate [discussion category](https://github.com/mdn/mdn-community#github-discussions) when starting a thread. Your answered questions can be really useful for other people looking for similar information in the future.
 
@@ -46,7 +46,7 @@ Check out the MDN-specific [discussion guidelines](/en-US/docs/MDN/Community/Dis
 
 ## Forums
 
-You can use the forums listed below for discussing code problems. You can also request feedback here on your progress with the assessments in the [MDN learning area](https://developer.mozilla.org/en-US/docs/Learn).
+You can use the forums listed below for discussing code problems. You can also request feedback here on your progress with the assessments in the [MDN learning area](/en-US/docs/Learn).
 
 - [MDN Discourse forum](https://discourse.mozilla.org/c/mdn/236)
 - [MDN Discourse forum learning category](https://discourse.mozilla.org/c/mdn/learn/250)
@@ -55,18 +55,6 @@ You can use the forums listed below for discussing code problems. You can also r
 ## Localization channels
 
 Each localization team has its own [method of communication](/en-US/docs/MDN/Community/Contributing/Translated_content).
-
-## Bugs and issues
-
-For reporting bugs and issues related to the MDN Web Docs website use following links:
-
-- [mdn/content](https://github.com/mdn/content/issues)
-- [mdn/translated-content](https://github.com/mdn/translated-content/issues)
-- [yari](https://github.com/mdn/yari/issues)
-- [browser-compat-data](https://github.com/mdn/browser-compat-data/issues)
-- [interactive-examples](https://github.com/mdn/interactive-examples/issues)
-- [dom-examples](https://github.com/mdn/dom-examples/issues)
-- [learning-area](https://github.com/mdn/learning-area/issues)
 
 ## Mailing list
 
