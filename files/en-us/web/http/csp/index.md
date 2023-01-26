@@ -185,7 +185,7 @@ The report JSON object is sent with an `application/csp-report` {{HTTPHeader("Co
     Only applicable to `script-src*` and `style-src*` violations, when they contain the `'report-sample'`
 - `status-code`
   - : The HTTP status code of the resource on which the global object was instantiated.
-- `violated-directive`
+- `violated-directive` {{deprecated_inline}}
   - : The directive whose enforcement caused the violation. The `violated-directive` is a historic name for the `effective-directive` field and contains the same value.
 
 ## Sample violation report
