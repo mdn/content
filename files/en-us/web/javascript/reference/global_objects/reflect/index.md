@@ -21,67 +21,9 @@ Unlike most global objects, `Reflect` is not a constructor. You cannot use it wi
 
 The `Reflect` object provides a collection of static functions which have the same names as the [proxy handler methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy). Some of these methods are also the same as corresponding methods on {{jsxref("Object")}}, although they do have [some subtle differences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods) between them.
 
-`Reflect` can be used to [simplify introspection calls](#simplify_introspection_calls), [ensure defensive programming](#ensure_defensive_programming) and [provide default forwarding behavior in proxy handler traps](#provide_default_forwarding_behavior_in_proxy_handler_traps).
-
-### Simplify introspection calls
-
-`Reflect` collects methods for object reflection under a single namespace. Instead of directly accessing {{jsxref("Object")}} methods or attributes, you can use `Reflect`'s API, which encapsulates this functionality. For example:
-
-```js
-// A chained method to get all the String and Symbol keys of an object
-Object.getOwnPropertyNames(targetObject).concat(Object.getOwnPropertySymbols(targetObject));
-
-// Reflect's call to retrieve the String and Symbol keys
-Reflect.ownKeys(targetObject);
-```
-
-Instead of wrapping operations (such as checking for a property) in a function and having to explicitly pass it around as a first-class value, you can use the `Reflect` API in your code as needed:
-
-```js
-// Equivalent to (property in targetObject)
-Reflect.has(targetObject, property);
-```
-
-### Ensure defensive programming
-
-The introspection methods of the {{jsxref("Object")}} class throw errors if they fail to complete an operation. This is not the case with some of `Reflect`'s methods (e.g. `defineProperty`). The API will handle the errors and return a boolean value. Compare the approaches:
-
-```js
-// Here, a try-catch block has to be explicitly defined
-try {
-  Object.defineProperty(targetObject, propertyKey, attributes);
-} catch (e) {
-  // Process the error
-}
-
-// No requirement for a try-catch block
-if (Reflect.defineProperty(targetObject, propertyKey, attributes)) {
-  // Property was successfully defined
-} else {
-  // The property definition was not successful
-}
-```
-
-Another example of defensive programming relates to the built-in `apply` method. In the example below, `concatStrings` is a function which defines its own `apply` method. Called directly, this will throw an error. `Reflect` calls the built-in `apply` method, resulting in the execution of the original function:
-
-```js
-function concatStrings() {
-  return Array.prototype.reduce.call(arguments, (prefix, suffix) => prefix + suffix, "");
-}
-concatStrings.apply = () => {
-  throw new Error("Explicitly defined method for apply!!!!");
-};
-
-// This will throw an error
-concatStrings.apply(null, ["J", "o", "i", "n", "e", "d"]);
-
-// Reflect safely calls the concatStrings function
-Reflect.apply(concatStrings, null, ["J", "o", "i", "n", "e", "d"]) === "Joined";
-```
-
-### Provide default forwarding behavior in Proxy handler traps
-
-A `Proxy` handler trap is used to intercept operations on an object (e.g. deletion of the object's properties). In the example below, a trap is used to execute some custom functionality. The `Reflect` API's role is to execute the default introspection behavior:
+`Reflect`'s core use case is to provide default forwarding behavior in `Proxy` handler traps. In practice, a trap is used to intercept operations
+on an object (e.g. deletion of the object's properties). In the example below, a trap is used to execute some custom functionality.
+The `Reflect` API is used to invoke an object's internal methods; in this case, it calls the `[[DELETE]]` method on `targetObject`:
 
 ```js
 new Proxy({}, {
@@ -89,7 +31,7 @@ new Proxy({}, {
     // Custom functionality - log the deletion
     console.log("Deleting property: " + property);
 
-    // Execute the default behaviour of deleting a property
+    // Execute the default instrospection behaviour
     return Reflect.deleteProperty(targetObject, property);
   }
 });
