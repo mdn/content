@@ -81,12 +81,12 @@ const helperPath = new URL("./lib/helper.js", import.meta.url).href;
 console.log(helperPath);
 ```
 
-This is also a useful replacement syntax when targeting older browsers released from 2018 to 2022. However, there are some differences:
+This is also a useful replacement syntax when targeting older browsers. However, there are some differences:
 
 - `import.meta.resolve()` returns a string, while `new URL()` returns a `URL` object. It is possible to use [`href`](/en-US/docs/Web/API/URL/href) or [`toString()`](/en-US/docs/Web/API/URL/toString) on the constructed `URL`, but this may still not produce the exact same result in some JavaScript environments or when using certain bundlers or other tool that handle JavaScript.
 - `import.meta.resolve()` can accept bare module names, as described above. `new URL()` treats bare module names as relative paths (i.e. `new URL("my-module", import.meta.url)` means `new URL("./my-module", import.meta.url)`).
 
-As of January 2023, some tools recognize `new URL("./lib/helper.js", import.meta.url).href` as a dependency on `"./lib/helper.js"` (similar to an import), and take this into account for features like:
+Some tools recognize `new URL("./lib/helper.js", import.meta.url).href` as a dependency on `"./lib/helper.js"` (similar to an import), and take this into account for features like:
 
 - Bundling
 - Rewriting imports for moved files
