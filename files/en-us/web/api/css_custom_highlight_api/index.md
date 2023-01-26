@@ -14,26 +14,26 @@ browser-compat:
 
 {{DefaultAPISidebar("CSS Custom Highlight API")}}
 
-Styling ranges of text on a webpage can be very useful. For example, text editing web apps highlight spelling or grammar errors, and code editors highlight syntax errors.
+Styling text ranges on a webpage can be very useful. For example, text editing web apps highlight spelling or grammar errors, and code editors highlight syntax errors.
 
-The CSS Custom Highlight API provides a mechanism for styling arbitrary ranges on a document by using JavaScript to create the ranges, and CSS to style them.
+The CSS Custom Highlight API provides a mechanism for styling arbitrary text ranges on a document by using JavaScript to create the ranges, and CSS to style them.
 
 ## Concepts and usage
 
 The CSS Custom Highlight API extends the concept of other highlight pseudo-elements such as {{cssxref('::selection')}}, {{cssxref('::spelling-error')}}, {{cssxref('::grammar-error')}}, and {{cssxref('::target-text')}} by providing a way to create and style arbitrary {{domxref('Range')}} objects, rather than being limited to browser-defined ranges.
 
-Using the CSS Custom Highlight API, you can programmatically create ranges and then highlight them without affecting the DOM structure in the page.
+Using the CSS Custom Highlight API, you can programmatically create text ranges and highlight them without affecting the DOM structure in the page.
 
-There are four steps to style ranges of text on a webpage using the API:
+There are four steps to style text ranges on a webpage using the CSS Custom Highlight API:
 
-1. Creating {{domxref('Range')}} objects.
-2. Creating {{domxref('Highlight')}} objects for the ranges.
-3. Registering the highlights using the {{domxref('HighlightRegistry')}}.
-4. Styling the highlights using the {{cssxref('::highlight', '::highlight() pseudo-element')}}.
+1. Creating {{domxref("Range")}} objects.
+2. Creating {{domxref("Highlight")}} objects for these ranges.
+3. Registering the highlights using the {{domxref("HighlightRegistry")}}.
+4. Styling the highlights using the {{cssxref("::highlight", "::highlight()")}} pseudo-element.
 
-### Creating ranges
+### Create ranges
 
-The first step is to define the ranges that need to be styled by creating {{domxref('Range')}} objects in JavaScript. For example:
+The first step is to define the text ranges that you want to style by creating {{domxref("Range")}} objects in JavaScript. For example:
 
 ```js
 const parentNode = document.getElementById("foo");
@@ -47,9 +47,11 @@ range2.setStart(parentNode, 40);
 range2.setEnd(parentNode, 60);
 ```
 
-### Creating highlights
+### Create highlights
 
-Once you've defined ranges, the second step is to instantiate {{domxref('Highlight')}} objects for them. Multiple ranges can be associated to one highlight. If you want to highlight multiple pieces of text the same way, you need to create a single highlight and initialize it with all of the corresponding ranges.
+The second step is to instantiate {{domxref("Highlight")}} objects for your text ranges.
+
+Multiple ranges can be associated to one highlight. If you want to highlight multiple pieces of text the same way, you need to create a single highlight and initialize it with the corresponding ranges.
 
 ```js
 const highlight = new Highlight(range1, range2);
@@ -58,40 +60,41 @@ const highlight = new Highlight(range1, range2);
 But you can also create as many highlights as you need. For example, if you are building a collaborative text editor where each user gets a different text color, then you can create one highlight per user, as seen in the code snippet below:
 
 ```js
-const highlight1 = new Highlight(range1);
-const highlight2 = new Highlight(range2);
+const user1Highlight = new Highlight(user1Range1, user1Range2);
+const user2Highlight = new Highlight(user2Range1, user2Range2, user2Range3);
 ```
 
-Each highlight can then be styled differently.
+Each highlight can be styled differently.
 
-### Registering highlights
+### Register highlights
 
-Once highlights have been created, register them by using the {{domxref('HighlightRegistry')}} available as `CSS.highlights`.
+Once highlights have been created, register them by using the {{domxref("HighlightRegistry")}} available as `CSS.highlights`.
 
-The registry is a {{jsxref('Map')}}-like object used to register highlights by names, as seen below:
+The registry is a {{jsxref("Map")}}-like object used to register highlights by names, as seen below:
 
 ```js
-CSS.highlights.set('search-results', highlight);
+CSS.highlights.set("user-1-highlight", user1Highlight);
+CSS.highlights.set("user-2-highlight", user2Highlight);
 ```
 
-In the above code snippet, the `search-results` string is a custom identifier that will be used in CSS to apply styles to the registered highlight.
+In the above code snippet, the `user-1-highlight` and `user-2-highlight` strings are custom identifiers that can be used in CSS to apply styles to the registered highlight.
 
 You can register as many highlights as you need in the registry, as well as remove highlights and clear the entire registry.
 
 ```js
 // Remove a single highlight from the registry.
-CSS.highlights.delete('search-results');
+CSS.highlights.delete("user-1-highlight");
 
 // Clear the registry.
 CSS.highlights.clear();
 ```
 
-### Styling highlights
+### Style highlights
 
-The final step is to style the registered highlights. This is done by using the {{cssxref('::highlight', '::highlight()')}} pseudo-element. For example, to style the `search-results` highlight registered in the previous step:
+The final step is to style the registered highlights. This is done by using the {{cssxref("::highlight", "::highlight()")}} pseudo-element. For example, to style the `user-1-highlight` highlight registered in the previous step:
 
 ```css
-::highlight(search-results) {
+::highlight(user-1-highlight) {
   background-color: yellow;
   color: black;
 }
@@ -99,10 +102,10 @@ The final step is to style the registered highlights. This is done by using the 
 
 ## Interfaces
 
-- {{domxref('Highlight')}}
+- {{domxref("Highlight")}}
   - : This interface is used to represent a collection of ranges to be styled on a document.
-- {{domxref('HighlightRegistry')}}
-  - : Accessible via `CSS.highlights`, this map-like object is used to register highlights under custom IDs.
+- {{domxref("HighlightRegistry")}}
+  - : Accessible via `CSS.highlights`, this {{jsxref("Map")}}-like object is used to register highlights with custom identifiers.
 
 ## Examples
 
@@ -112,35 +115,35 @@ This example shows how to use the CSS Custom Highlight API to highlight search r
 
 #### HTML
 
-The HTML code snippet below defines a search field and an article with a few paragraphs and styles text:
+The HTML code snippet below defines a search field and an article with a few paragraphs of text:
 
 ```html
 <label>Search within text <input id="query" type="text"></label>
 <article>
   <p>
-    Maxime debitis hic, delectus perspiciatis <em>laborum molestiae labore</em>,
+    Maxime debitis hic, delectus perspiciatis laborum molestiae labore,
     deleniti, quam consequatur iure veniam alias voluptas nisi quo.
     Dolorem eaque alias, quo vel quas repudiandae architecto deserunt
     quidem, sapiente laudantium nulla.
   </p>
   <p>
-    Maiores odit molestias, necessitatibus doloremque dolor illum reprehenderit
-    provident nostrum laboriosam iste, <strong>tempore perferendis</strong>!
-    Ab porro neque esse voluptas libero necessitatibus fugiat, ex, minus atque
-    deserunt veniam molestiae tempora? Vitae.
+    Maiores odit molestias, necessitatibus doloremque dolor illum
+    reprehenderit provident nostrum laboriosam iste, tempore perferendis!
+    Ab porro neque esse voluptas libero necessitatibus fugiat, ex, minus
+    atque deserunt veniam molestiae tempora? Vitae.
   </p>
   <p>
     Dolorum facilis voluptate eaque eius similique ducimus dignissimos
     assumenda quos architecto. Doloremque deleniti non exercitationem
-    rerum quam alias harum, nisi obcaecati corporis temporibus vero
-    <em>sapiente voluptatum est quibusdam id ipsa</em>.
+    rerum quam alias harum, nisi obcaecati corporis temporibus vero sapiente
+    voluptatum est quibusdam id ipsa.
   </p>
 </article>
 ```
 
 #### JavaScript
 
-JavaScript is used to listen to `input` events on the search field. When the event is fired, the code finds the typed text in the article, and uses the CSS Custom Highlight API to create and register a `search-results` highlight object:
+JavaScript is used to listen to the `input` event on the search field. When the event is fired, the code locates matches for the input text in the article text, it then creates ranges for the matches, and uses the CSS Custom Highlight API to create and register a `search-results` highlight object:
 
 ```js
 const query = document.getElementById("query");
@@ -158,6 +161,13 @@ while (currentNode) {
 
 // Listen to the input event to run the search.
 query.addEventListener("input", () => {
+  // If the CSS Custom Highlight API is not supported,
+  // display a message and bail-out.
+  if (!CSS.highlights) {
+    article.textContent = "CSS Custom Highlight API not supported.";
+    return;
+  }
+
   // Clear the HighlightRegistry to remove the 
   // previous search results.
   CSS.highlights.clear();
@@ -169,6 +179,7 @@ query.addEventListener("input", () => {
     return;
   }
 
+  // Iterate over all text nodes and find matches.
   const ranges = allTextNodes
     .map((el) => {
       return { el, text: el.textContent.toLowerCase() };
@@ -195,6 +206,7 @@ query.addEventListener("input", () => {
 
   // Create a Highlight object for the ranges.
   const searchResultsHighlight = new Highlight(...ranges.flat());
+
   // Register the Highlight object in the registry.
   CSS.highlights.set("search-results", searchResultsHighlight);
 });
@@ -202,7 +214,7 @@ query.addEventListener("input", () => {
 
 #### CSS
 
-Finally, the `::highlight()` pseudo-element is used to style the ranges:
+Finally, the `::highlight()` pseudo-element is used in CSS to style the highlights:
 
 ```css
 ::highlight(search-results) {

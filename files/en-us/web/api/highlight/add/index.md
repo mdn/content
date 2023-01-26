@@ -15,7 +15,7 @@ browser-compat: api.Highlight.add
 
 The **`add()`** method of the {{domxref("Highlight")}} interface adds a new {{domxref("Range")}} object to a highlight, to be styled using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}.
 
-`Highlight` is a {{jsxref("Set")}}-like object, so this is similar to using {{jsxref("Set.add")}}.
+`Highlight` is a {{jsxref("Set")}}-like object, so this is similar to using {{jsxref("Set.add()")}}.
 
 ## Syntax
 

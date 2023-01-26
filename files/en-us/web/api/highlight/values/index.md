@@ -20,7 +20,7 @@ contains the values for each `Range` object in the `Highlight` object in inserti
 > `keys()` page redirects here. It behaves exactly the same and returns
 > **values** of `Highlight` elements.
 
-`Highlight` is a {{jsxref("Set")}}-like object, so this is similar to using {{jsxref("Set.values")}}.
+`Highlight` is a {{jsxref("Set")}}-like object, so this is similar to using {{jsxref("Set.values()")}}.
 
 ## Syntax
 

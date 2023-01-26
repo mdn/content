@@ -31,7 +31,7 @@ _The `Highlight` interface doesn't inherit any properties._
 
 - {{domxref("Highlight.priority")}}
   - : A number that indicates the priority of this `Highlight` object. When multiple highlights overlap, the browser uses this priority to decide how to style the overlapping parts.
-- {{domxref('Highlight.size')}} {{ReadOnlyInline}}
+- {{domxref("Highlight.size")}} {{ReadOnlyInline}}
   - : Returns the number of ranges in the `Highlight` object.
 - {{domxref("Highlight.type")}}
   - : An enumerated {{jsxref("String")}} used to specify the semantic meaning of the highlight. This allows assistive technologies to include this meaning when exposing the highlight to users.
@@ -40,13 +40,13 @@ _The `Highlight` interface doesn't inherit any properties._
 
 _The `Highlight` interface doesn't inherit any methods_.
 
-- {{domxref('Highlight.add()')}}
+- {{domxref("Highlight.add()")}}
   - : Add a new range to this highlight.
-- {{domxref('Highlight.clear()')}}
+- {{domxref("Highlight.clear()")}}
   - : Clear all ranges in this highlight.
-- {{domxref('Highlight.delete()')}}
+- {{domxref("Highlight.delete()")}}
   - : Remove a range from this highlight.
-- {{domxref('Highlight.entries()')}}
+- {{domxref("Highlight.entries()")}}
   - : Returns a new iterator object that contains each range in the highlight object, in insertion order.
 - {{domxref("Highlight.forEach()")}}
   - : Calls `callbackFn` once for each range present in the highlight object, in insertion order.

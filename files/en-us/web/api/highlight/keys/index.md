@@ -15,7 +15,7 @@ browser-compat: api.Highlight.keys
 
 The **`keys()`** method of the {{domxref("Highlight")}} interface is an alias for the {{domxref("Highlight.values()", "values()")}} method.
 
-`Highlight` is a {{jsxref("Set")}}-like object, so this is similar to using {{jsxref("Set.keys")}}.
+`Highlight` is a {{jsxref("Set")}}-like object, so this is similar to using {{jsxref("Set.keys()")}}.
 
 ## Syntax
 

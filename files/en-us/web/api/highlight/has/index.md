@@ -15,7 +15,7 @@ browser-compat: api.Highlight.has
 
 The **`has()`** method of the {{domxref("Highlight")}} interface returns a boolean indicating whether a {{domxref("Range")}} object exists in a `Highlight` object or not.
 
-`Highlight` is a {{jsxref("Set")}}-like object, so this is similar to using {{jsxref("Set.has")}}.
+`Highlight` is a {{jsxref("Set")}}-like object, so this is similar to using {{jsxref("Set.has()")}}.
 
 ## Syntax
 

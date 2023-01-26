@@ -15,7 +15,7 @@ browser-compat: api.Highlight.forEach
 
 The **`forEach()`** method of the {{domxref("Highlight")}} interface executes a provided function once for each {{domxref("Range")}} object in the `Highlight` object, in insertion order.
 
-`Highlight` is a {{jsxref("Set")}}-like object, so this is similar to using {{jsxref("Set.forEach")}}.
+`Highlight` is a {{jsxref("Set")}}-like object, so this is similar to using {{jsxref("Set.forEach()")}}.
 
 ## Syntax
 

@@ -15,7 +15,7 @@ browser-compat: api.Highlight.delete
 
 The **`delete()`** method of the {{domxref("Highlight")}} interface removes a specified {{domxref("Range")}} object from a `Highlight` object.
 
-`Highlight` is a {{jsxref("Set")}}-like object, so this is similar to using {{jsxref("Set.delete")}}.
+`Highlight` is a {{jsxref("Set")}}-like object, so this is similar to using {{jsxref("Set.delete()")}}.
 
 ## Syntax
 
