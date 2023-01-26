@@ -57,7 +57,7 @@ Some examples won't run if you open them as local files. This can be due to a va
 
 ## Using an extension in your code editor to run a local HTTP server
 
-If you only need HTML, CSS and JavaScript, and no server-side language, the easiest way may be to check for extensions in your code editor. In addition to automate the installation and set-up for your local HTTP server, they also integrate nicely with your code editors. Testing local files in an HTTP server may be one click away.
+If you only need HTML, CSS and JavaScript, and no server-side language, the easiest way may be to check for extensions in your code editor. As well as automating installation and set-up for your local HTTP server, they also integrate nicely with your code editors. Testing local files in an HTTP server may be one click away.
 
 For VSCode, you can check the following free extension:
 
