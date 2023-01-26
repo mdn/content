@@ -100,7 +100,7 @@ This is the same behavior exhibited by all [strict-mode functions](/en-US/docs/W
 
 ### arguments is an array-like object
 
-`arguments` is an array-like object, which means that `arguments` has a {{jsxref("Functions/arguments/length", "length")}} property and properties indexed from zero, but it doesn't have {{JSxRef("Array")}}'s built-in methods like {{jsxref("Array/forEach", "forEach()")}} or {{jsxref("Array/map", "map()")}}. However, it can be converted to a real `Array`, using one of [`slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), {{jsxref("Array.from()")}}, or [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
+`arguments` is an array-like object, which means that `arguments` has a {{jsxref("Functions/arguments/length", "length")}} property and properties indexed from zero, but it doesn't have {{JSxRef("Array")}} like built-in methods like {{jsxref("Array/forEach", "forEach()")}} or {{jsxref("Array/map", "map()")}}. However, it can be converted to a real `Array`, using one of [`slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), {{jsxref("Array.from()")}}, or [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
 
 ```js
 const args = Array.prototype.slice.call(arguments);
