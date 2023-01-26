@@ -65,7 +65,7 @@ inappropriate, than it is to follow every guideline to the letter.
    all bound by [our Code of Conduct](CODE_OF_CONDUCT.md) when contributing to
    MDN, which means adhering to Mozilla's [Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
    If anyone has engaged in behavior that is potentially illegal or makes
-   you or someone else feel unsafe, unwelcome, or uncomfortable, you are
+   you or someone else feels unsafe, unwelcome, or uncomfortable, you are
    encouraged to [report it](https://www.mozilla.org/en-US/about/governance/policies/participation/reporting/).
    We want MDN to be a welcoming, friendly community that we can all be
    proud of.
@@ -100,7 +100,7 @@ inappropriate, than it is to follow every guideline to the letter.
    assigned already. In such cases, the PR should be linked to an issue
    that explains all these details. If you are not sure, ask the submitter
    if they need a review of the content, and where the rationale behind the
-   change is explained. Ping our team on [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) to ask for help if you are still not sure, or
+   change is explained. Ping our team on the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) to ask for help if you are still not sure, or
    if you think the content is suspicious.
 
 Note: You may encounter merge conflicts as you review pull requests, if another

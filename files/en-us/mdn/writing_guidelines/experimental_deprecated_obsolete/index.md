@@ -97,7 +97,7 @@ If the item was implemented in one or more release builds of browsers without re
 
 Please use common sense with wording of warning messages and other changes to the text suggested in the guidelines above.
 Different items will require different wording and handling of the situation.
-When in doubt, feel free to ask for advice on the [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix), or on the [MDN Web Docs discussion forum](https://discourse.mozilla.org/c/mdn).
+When in doubt, feel free to ask for advice on the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms).
 
 ## Guidelines for documenting a specification conflict
 
