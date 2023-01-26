@@ -21,7 +21,7 @@ browser-compat: api.MediaDevices.getUserMedia
 
 {{securecontext_header}}{{APIRef("Media Capture and Streams")}}
 
-The `{{domxref("MediaDevices")}}.getUserMedia()` method prompts the user for permission to use a media input which produces a {{domxref("MediaStream")}} with tracks containing the requested types of media.
+The {{domxref("MediaDevices")}} interface's **`getUserMedia()`** method prompts the user for permission to use a media input which produces a {{domxref("MediaStream")}} with tracks containing the requested types of media.
 
 That stream can include, for example, a video track (produced by either a hardware or virtual video source such as a camera, video recording device, screen sharing service, and so forth), an audio track (similarly, produced by a physical or virtual audio source like a microphone, A/D converter, or the like), and possibly other track types.
 
