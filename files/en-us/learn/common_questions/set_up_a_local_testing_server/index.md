@@ -55,7 +55,11 @@ Some examples won't run if you open them as local files. This can be due to a va
 - **They include other files**. Browsers commonly treat requests to load resources using the `file://` schema as cross-origin requests.
   So if you load a local file that includes other local files, this may trigger a {{Glossary("CORS")}} error.
 
-## Using an extension in your code editor to run a local HTTP server
+## Running a simple local HTTP server
+
+To get around the problem of async requests, we need to test such examples by running them through a local web server.
+
+### Using an extension in your code editor to run a local HTTP server
 
 If you only need HTML, CSS and JavaScript, and no server-side language, the easiest way may be to check for extensions in your code editor. As well as automating installation and set-up for your local HTTP server, they also integrate nicely with your code editors. Testing local files in an HTTP server may be one click away.
 
@@ -63,10 +67,9 @@ For VSCode, you can check the following free extension:
 
 - `vscode-preview-server`. You can check it on its [home page](https://marketplace.visualstudio.com/items?itemName=yuichinukiyama.vscode-preview-server).
 
-## Running a simple local HTTP server
+### Using Python
 
-To get around the problem of async requests, we need to test such examples by running them through a local web server.
-One of the easiest ways to do this for our purposes is to use Python's `http.server` module.
+Another way to do this for our purposes is to use Python's `http.server` module.
 
 > **Note:** Older versions of Python (up to version 2.7) provided a similar module named `SimpleHTTPServer`. If you are using Python 2.x, you can follow this guide by replacing all uses of `http.server` with `SimpleHTTPServer`. However, we recommend you use the latest version of Python.
 
