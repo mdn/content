@@ -60,3 +60,4 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 - [MDN localization update, February 2021](https://hacks.mozilla.org/2021/02/mdn-localization-update-february-2021/) — the latest state of localization on MDN
 - [An update on MDN Web Docs' localization strategy](https://hacks.mozilla.org/2020/12/an-update-on-mdn-web-docs-localization-strategy/) — updated strategy based on community feedback
 - [MDN Web Docs evolves! Lowdown on the upcoming new platform](https://hacks.mozilla.org/2020/10/mdn-web-docs-evolves-lowdown-on-the-upcoming-new-platform/) — more on the advantages of the new platform, and the rationale behind the localization changes.
+- [MDN communication channels](/en-US/docs/MDN/Community/Communication_channels)

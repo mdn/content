@@ -37,8 +37,7 @@ If you're new here and you would like to become a contributor, take a look at ou
 
 As a contributor, you can get involved with the project by engaging in the following activities:
 
-- Participating in community [GitHub discussions](https://github.com/mdn/mdn-community/discussions).
-  Check out the [discussion categories](https://github.com/mdn/mdn-community#github-discussions) to see where you can participate.
+- Participating in community discussions on the [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 - Helping other contributors with their pull requests and issues or mentoring new contributors.
 - Submitting bug reports. Check out the [kind of issues you can open](https://github.com/mdn/content/issues/new/choose) on MDN's [`content`](https://github.com/mdn/content) repository.
   If you notice a platform bug, you can [open an issue](https://github.com/mdn/yari/issues/new/choose) on MDN's `yari` repository.
@@ -163,14 +162,14 @@ Some contributor roles have more nuanced responsibilities and have special eligi
 ### Spotlight contributor
 
 Spotlight contributors are people who have gone above and beyond with their contributions to MDN Web Docs.
-Their contributions are in the form of pull requests to improve the project, helping community members in [GitHub discussions](https://github.com/mdn/mdn-community/discussions) or learn forums, or providing feedback on GitHub issues and pull requests.
+Their contributions are in the form of pull requests to improve the project, helping community members on various [communication channels](/en-US/docs/MDN/Community/Communication_channels) or learn forums, or providing feedback on GitHub issues and pull requests.
 
 We feature a spotlight contributor on the [MDN website](/en-US/) once every month.
 See the [process](#nominating_a_spotlight_contributor) to nominate someone as a spotlight contributor.
 
 ### Invited expert
 
-Invited experts have a track record on MDN for their contributions, participation in discussions and reviews, or have a proven knowledge in a certain area of expertise.
+Invited experts have a track record on MDN for their contributions, participation in discussions and reviews, or have proven knowledge in a certain area of expertise.
 Invited experts are responsible for a specific topic area or a component of the MDN project.
 They are responsible for reviewing and approving pull requests in their topic or project area, answering technical questions, and maintaining the general health of their particular project. See the [process](#nominating_an_invited_expert) to nominate someone as an invited expert.
 
@@ -206,7 +205,7 @@ Community managers have a distinct role in many respects.
 Community managers share many of the same responsibilities as a [maintainer](#maintainer).
 In addition, community managers have the following responsibilities:
 
-- Addressing reports of violation of [Mozilla's code of conduct](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md)) and deciding on the appropriate action.
+- Addressing reports of violation of [Mozilla's code of conduct](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md) and deciding on the appropriate action.
 - Organizing and running community events.
 - Organizing community-related project meetings.
 - Determining media strategies to promote the MDN project.
@@ -216,7 +215,7 @@ In addition, community managers have the following responsibilities:
 - Identifying and assisting with the implementation of automation to improve project sustainability.
 - Meeting and ensuring a healthy relationship with contributors and partners.
 - Assisting with issue triage and pull request review where appropriate.
-- Monitoring all communication channels, including [GitHub discussions](https://github.com/mdn/mdn-community/discussions).
+- Monitoring all the [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 - Highlighting contributors that have done exceptional work and/or have shown dedication to the MDN project.
 
 ## Processes
@@ -306,7 +305,7 @@ We manage teams using the [GitHub teams](https://docs.github.com/en/organization
 
 - A person on a team is commonly added to the [CODEOWNERS](https://github.com/mdn/content/blob/main/.github/CODEOWNERS) file for their respective topic area(s) of interest.
 
-- When a pull request touches files in your area of responsibility, based on the CODEOWNERS file, you will be added as a reviewer to a pull request automatically using Github's [load-balancing algorithm](https://docs.github.com/en/organizations/organizing-members-into-teams/managing-code-review-settings-for-your-team#routing-algorithms).
+- When a pull request touches files in your area of responsibility, based on the CODEOWNERS file, you will be added as a reviewer to a pull request automatically using GitHub's [load-balancing algorithm](https://docs.github.com/en/organizations/organizing-members-into-teams/managing-code-review-settings-for-your-team#routing-algorithms).
 
 - Members of a team have a higher-level repository access. Repository permissions are assigned to only those repositories where a member needs access.
 
@@ -320,8 +319,8 @@ The teams in the [MDN GitHub organization](https://github.com/orgs/mdn/teams) in
 - `@sre`: Site reliability engineers who support MDN Web Docs
 - `@yari-content`: The umbrella team for all MDN Web Docs content reviewers
 
-  - There is a sub-team for the different topic areas — accessibility, Add-ons, CSS, HTML, HTTP, JavaScript, SVG, Web API, and WebAssembly. For example, there's `@yari-content-css` and `@yari-content-svg`.
-  - There are also sub-teams for different languages — Brazilian Portuguese, Chinese, French, Japanese, Korean, Russian, and Spanish. For example, there's `@yari-content-fr` and `@yari-content-ko`.
+  - There is a subteam for the different topic areas — accessibility, Add-ons, CSS, HTML, HTTP, JavaScript, SVG, Web API, and WebAssembly. For example, there's `@yari-content-css` and `@yari-content-svg`.
+  - There are also subteams for different languages — Brazilian Portuguese, Chinese, French, Japanese, Korean, Russian, and Spanish. For example, there's `@yari-content-fr` and `@yari-content-ko`.
 
 To become a member of a team, you must:
 
