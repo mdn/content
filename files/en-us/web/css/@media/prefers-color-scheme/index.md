@@ -41,79 +41,98 @@ The elements below have an initial color theme.
 They can be further themed according to the user's color scheme preference.
 
 ```html
-<div class="scheme-example light-scheme">Light scheme style</div>
-<div class="scheme-example dark-scheme">Dark scheme style</div>
-<div class="scheme-example no-scheme">No scheme detected style</div>
+<div class="scheme light">Light scheme style</div>
+<div class="scheme dark">Dark scheme style</div>
+<div class="scheme none">No scheme detected style</div>
 <br />
 
-<div class="scheme-example result-scheme">Result: <span class="result-text light-scheme-text">Light scheme</span> <span class="result-text dark-scheme-text">Dark scheme</span> <span class="result-text no-scheme-text">No scheme detected</span></div>
+<div class="scheme result">
+  Result:
+  <span class="result-text light">Light scheme</span>
+  <span class="result-text dark">Dark scheme</span>
+  <span class="result-text none">No scheme detected</span>
+</div>
 ```
 
 The following CSS is used to style the elements above:
 
 ```css
-
-.scheme-example {
+/* basic shape */
+.scheme {
   display: inline-block;
   padding: 1em;
   width: 7em;
-  height: 2em;
+  height: 3em;
   vertical-align: middle;
 }
 
-.result-scheme {
+/* wider result shape */
+.scheme.result {
   width: 25.5em;
 }
 
+/* hide result labels (active scheme will un-hide the correct label) */
 .result-text {
   display: none;
 }
 
-.light-scheme {
+/* light scheme style */
+.scheme.light {
   background: #eee;
   color: black;
 }
 
-.dark-scheme {
+/* dark scheme style */
+.scheme.dark {
   background: black;
   color: white;
 }
 
-.no-scheme, .result-scheme {
+/* no scheme style, also initial style for result */
+.scheme.none, .scheme.result {
   background: #aaa;
   color: black;
 }
 
-.no-scheme-text {
+/* un-hide no scheme label */
+.result-text.none {
   display: initial;
 }
 
 @media (prefers-color-scheme: dark) {
-  .result-scheme {
+  /* dark scheme active */
+  /* style result like dark scheme */
+  .scheme.result {
     background: black;
     color: white;
   }
   
-  .no-scheme-text {
+  /* re-hide no scheme label */
+  .result-text.none {
     display: none;
   }
   
-  .dark-scheme-text {
+  /* un-hide dark scheme label */
+  .result-text.dark {
     display: initial;
   }
 }
 
 @media (prefers-color-scheme: light) {
-  .result-scheme {
+  /* light scheme active */
+  /* style result like light scheme */
+  .scheme.result {
     background: #eee;
     color: black;
   }
   
-  .no-scheme-text {
+  /* re-hide no scheme label */
+  .result-text.none {
     display: none;
   }
   
-  .light-scheme-text {
+  /* un-hide light scheme label */
+  .result-text.light {
     display: initial;
   }
 }
