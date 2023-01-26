@@ -80,9 +80,9 @@ It works (even if it's not obvious what `toString()` does).
 
 What are these extra properties, and where do they come from?
 
-Every object in JavaScript has a built-in property, which is called its **prototype**. The prototype is itself an object, so the prototype will have its own prototype, making what's called a **prototype chain**. The chain ends when we reach a prototype that has `null` for its own prototype.
+Every object in JavaScript has a built-in property, which is called it's **prototype**. The prototype is itself an object, so the prototype will have it's own prototype, making what's called a **prototype chain**. The chain ends when we reach a prototype that has `null` for it's own prototype.
 
-> **Note:** The property of an object that points to its prototype is **not** called `prototype`. Its name is not standard, but in practice all browsers use [`__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto). The standard way to access an object's prototype is the {{jsxref("Object/getPrototypeOf", "Object.getPrototypeOf()")}} method.
+> **Note:** The property of an object that points to it's prototype is **not** called `prototype`. It's name is not standard, but in practice all browsers use [`__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto). The standard way to access an object's prototype is the {{jsxref("Object/getPrototypeOf", "Object.getPrototypeOf()")}} method.
 
 When you try to access a property of an object: if the property can't be found in the object itself, the prototype is searched for the property. If the property still can't be found, then the prototype's prototype is searched, and so on until either the property is found, or the end of the chain is reached, in which case `undefined` is returned.
 
@@ -98,7 +98,7 @@ What is the prototype for `myObject`? To find out, we can use the function `Obje
 Object.getPrototypeOf(myObject); // Object { }
 ```
 
-This is an object called `Object.prototype`, and it is the most basic prototype, that all objects have by default. The prototype of `Object.prototype` is `null`, so it's at the end of the prototype chain:
+This is an object called `Object.prototype`, and it's the most basic prototype, that all objects have by default. The prototype of `Object.prototype` is `null`, so it's at the end of the prototype chain:
 
 ![Prototype chain for myObject](myobject-prototype-chain.svg)
 
@@ -166,7 +166,7 @@ const carl = Object.create(personPrototype);
 carl.greet(); // hello!
 ```
 
-Here we create an object `personPrototype`, which has a `greet()` method. We then use `Object.create()` to create a new object with `personPrototype` as its prototype. Now we can call `greet()` on the new object, and the prototype provides its implementation.
+Here we create an object `personPrototype`, which has a `greet()` method. We then use `Object.create()` to create a new object with `personPrototype` as it's prototype. Now we can call `greet()` on the new object, and the prototype provides it's implementation.
 
 ### Using a constructor
 
@@ -213,7 +213,7 @@ The objects we create using the `Person` constructor above have two properties:
 - a `name` property, which is set in the constructor, so it appears directly on `Person` objects
 - a `greet()` method, which is set in the prototype.
 
-It's common to see this pattern, in which methods are defined on the prototype, but data properties are defined in the constructor. That's because methods are usually the same for every object we create, while we often want each object to have its own value for its data properties (just as here where every person has a different name).
+It's common to see this pattern, in which methods are defined on the prototype, but data properties are defined in the constructor. That's because methods are usually the same for every object we create, while we often want each object to have it's own value for it's data properties (just as here where every person has a different name).
 
 Properties that are defined directly in the object, like `name` here, are called **own properties**, and you can check whether a property is an own property using the static {{jsxref("Object/hasOwn", "Object.hasOwn()")}} method:
 
