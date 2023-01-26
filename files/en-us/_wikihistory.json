@@ -102059,19 +102059,6 @@
       "teoli"
     ]
   },
-  "Web/HTTP/Headers/Content-Security-Policy/require-sri-for": {
-    "modified": "2020-10-15T21:50:39.705Z",
-    "contributors": [
-      "sideshowbarker",
-      "mozdevcontrib",
-      "Malvoz",
-      "bershanskiy",
-      "Sheppy",
-      "freddyb",
-      "fscholz",
-      "phillycheeze"
-    ]
-  },
   "Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for": {
     "modified": "2020-12-11T06:46:59.679Z",
     "contributors": ["bershanskiy", "koto", "chrisdavidmills"]
