@@ -49,12 +49,7 @@ The following HTML is used:
 <div class="scheme none">No scheme detected style</div>
 <br />
 
-<div class="scheme result">
-  Result:
-  <span class="result-text light">Light scheme</span>
-  <span class="result-text dark">Dark scheme</span>
-  <span class="result-text none">No scheme detected</span>
-</div>
+<div class="scheme result">Result: this is the active color scheme</div>
 ```
 
 The following CSS is used to style the elements above:
@@ -72,11 +67,6 @@ The following CSS is used to style the elements above:
 /* wider result shape */
 .scheme.result {
   width: 25.5em;
-}
-
-/* hide result labels (active scheme will un-hide the correct label) */
-.result-text {
-  display: none;
 }
 
 /* light scheme style */
@@ -97,27 +87,12 @@ The following CSS is used to style the elements above:
   color: black;
 }
 
-/* un-hide no scheme label */
-.result-text.none {
-  display: initial;
-}
-
 @media (prefers-color-scheme: dark) {
   /* dark scheme active */
   /* style result like dark scheme */
   .scheme.result {
     background: black;
     color: white;
-  }
-  
-  /* re-hide no scheme label */
-  .result-text.none {
-    display: none;
-  }
-  
-  /* un-hide dark scheme label */
-  .result-text.dark {
-    display: initial;
   }
 }
 
@@ -127,16 +102,6 @@ The following CSS is used to style the elements above:
   .scheme.result {
     background: #eee;
     color: black;
-  }
-  
-  /* re-hide no scheme label */
-  .result-text.none {
-    display: none;
-  }
-  
-  /* un-hide light scheme label */
-  .result-text.light {
-    display: initial;
   }
 }
 ```
