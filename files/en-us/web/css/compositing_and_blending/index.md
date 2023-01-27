@@ -98,10 +98,13 @@ span {
 - {{cssxref("background-image")}}
 - {{cssxref("background-color")}}
 
-### Associated concepts and glossary terms
+### Associated concepts
+
+- SVG's {{ SVGElement("feBlend") }} filter primitive
+
+### Glossary terms
 
 - Glossary: {{glossary("stacking context")}}
-- SVG's {{ SVGElement("feBlend") }} filter primitive
 
 ## Specifications
 

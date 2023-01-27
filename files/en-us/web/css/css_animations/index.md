@@ -43,7 +43,7 @@ The **CSS Animations** module lets you animate the values of CSS properties over
 
 - {{cssxref("@keyframes")}}
 
-### Data types and values
+### Data types, functions, and values
 
 - {{cssxref("easing-function")}}
 - [`scroll()`](/en-US/docs/Web/CSS/animation-timeline/scroll) function
@@ -79,9 +79,9 @@ The **CSS Animations** module lets you animate the values of CSS properties over
 
 - {{cssxref('will-change')}}
 
-### Associated concepts and glossary terms
+### Glossary terms
 
-- Glossary: {{glossary("Bézier curve")}}
+- {{glossary("Bézier curve")}}
 
 ## Specifications
 
