@@ -43,11 +43,11 @@ If you'd prefer to browse your tasks and choose by technology category instead, 
 ## How to help
 
 1. First of all, sign up for a [GitHub account](https://github.com/join), if you don't already have one — you'll need this to communicate on the GitHub issues.
-2. Next, choose one or more topic areas you'd like to help with. Use the list above to get more information to help you make your selection. If you are not sure what a good choice would be, ask for help in the [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix).
+2. Next, choose one or more topic areas you'd like to help with. Use the list above to get more information to help you make your selection. If you are not sure what a good choice would be, ask for help in the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms).
 
 After you are set up, you can:
 
 1. Choose an issue to work on that interests you, and ask us to assign it to you with a comment on the issue.
-2. If you need any help when you are working on it, feel free to contact us in the [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix).
+2. If you need any help when you are working on it, feel free to contact us in the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms).
 3. Once you've fixed an issue, ask the submitter for a review and, hopefully, they will tell you whether they think more work is required. We will get involved if needed.
 4. Once the issue is verified fixed, it can be closed. The person closing the issue can be either the original issue submitter, or an MDN staff member.

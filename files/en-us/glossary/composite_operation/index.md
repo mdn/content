@@ -18,5 +18,5 @@ The _composite operation_ is the specific operation that is used to combine an e
 
 ## See also
 
-- [`animation-composition`](/en-us/web/css/animation-composition)
+- [`animation-composition`](/en-US/web/css/animation-composition)
 - [`KeyframeEffect.composite`](/en-US/docs/Web/API/KeyframeEffect/composite)

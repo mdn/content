@@ -39,6 +39,8 @@ No notable changes
   A server can use these to specify valid sources for stylesheet `<style>` elements and `<link>` elements with `rel="stylesheet"`, and for styles applied to individual elements, respectively ({{bug(1529338)}}).
 - [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP header directives [`script-src-elem`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem) and [`script-src-attr`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-attr) are now supported.
   A server can use these to specify valid sources for JavaScript `<script>` elements, and for inline script event handlers like `onclick`, respectively ({{bug(1529337)}}).
+- [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) violation reports now include `effective-directive` and `status-code` properties.
+  For more information, see [Violation report syntax](/en-US/docs/Web/HTTP/CSP#violation_report_syntax) ({{bug(1192684)}}).
 
 ### APIs
 

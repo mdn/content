@@ -20,9 +20,9 @@ While reporting an issue or participating in a conversation in an issue, always 
 
 Do the following:
 
-- Before filing an issue, consider if you need to start a [discussion](https://github.com/mdn/mdn-community/discussions) in the MDN Web Docs project on GitHub. Use discussions to gain different viewpoints and to converge on an agreed-upon course of action. This helps to keep issues focused and productive.
+- Before filing an issue, consider if you need to [discuss](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) it with the staff/community. Use discussions to gain different viewpoints and to converge on an agreed-upon course of action. This helps to keep issues focused and productive.
 - After filing an issue, try to fix the problem yourself. Read our [contribution guide](https://github.com/mdn/content/blob/main/CONTRIBUTING.md) to learn more.
-- If you have a question, you can ask using mechanisms like [chat rooms](https://chat.mozilla.org/#/room/#mdn:mozilla.org) or [forums](https://discourse.mozilla.org/c/mdn/236) instead of filing an issue.
+- If you have a question, you can ask it in the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) instead of filing an issue.
 
 Avoid doing the following:
 
@@ -40,7 +40,14 @@ If you think you've found a bug with the content on MDN Web Docs or with the loo
 
 ### Reporting an issue
 
-- Depending on the type of problem you've discovered, report it by filing an issue on [documentation](https://github.com/mdn/content/issues/new/choose), [translation](https://github.com/mdn/translated-content/issues/new/choose), the website's [look and feel](https://github.com/mdn/yari/issues/new/choose), the "Try it" [interactive example](https://github.com/mdn/interactive-examples/issues/new/choose) section, or the [browser compatibility](https://github.com/mdn/browser-compat-data/issues/new/choose) information.
+- Depending on the type of problem you've discovered, report it by filing an issue on one of the followings:
+  - [documentation](https://github.com/mdn/content/issues/new/choose)
+  - [translation](https://github.com/mdn/translated-content/issues/new/choose)
+  - the website's [look and feel](https://github.com/mdn/yari/issues/new/choose)
+  - the "Try it" [interactive example](https://github.com/mdn/interactive-examples/issues/new/choose) section
+  - [DOM examples](https://github.com/mdn/dom-examples/issues)
+  - [Learning area](https://github.com/mdn/learning-area/issues)
+  - the [browser compatibility](https://github.com/mdn/browser-compat-data/issues/new/choose) information
 
 - Choose the appropriate category to report the issue. For example, to report a content bug, use the [Content issue](https://github.com/mdn/content/issues/new?assignees=&labels=needs+triage&template=content-bug.yml) template in the `mdn/content` repository.
 
@@ -100,7 +107,7 @@ These are the general steps for working on an issue:
 
 3. **Do the research:** Most issues need some investigation before work can start.
 
-   - Scope out the work that needs to be done. If you need to ask questions, ask for help in the [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix).
+   - Scope out the work that needs to be done. If you need to ask questions, ask them in the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms).
    - If the issue is well-described, and the work is pretty obvious, go ahead and do it.
    - If the issue is not well-described, and/or you are not sure what is needed, feel free to @mention the poster and ask for more information.
 
