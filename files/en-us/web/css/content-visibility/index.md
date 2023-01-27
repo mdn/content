@@ -52,15 +52,17 @@ content-visibility: unset;
 
 ## Accessibility concerns
 
-Off-screen content within a `content-visibility: auto` element remains in the document object model and the accessibility tree. This allows improving page performance with `content-visibility: auto` without negatively impacting accessibility.
+Off-screen content within a `content-visibility: auto` property remains in the document object model and the accessibility tree. This allows improving page performance with `content-visibility: auto` without negatively impacting accessibility.
 
-However, one caveat to keep in mind is that, since styles for off-screen content are not rendered, elements intentionally hidden with `display: none` or `visibility: hidden` _will still appear in the accessibility tree_. If you don't want an element to appear in the accessibility tree, use `aria-hidden="true"`.
+Since styles for off-screen content are not rendered, elements intentionally hidden with `display: none` or `visibility: hidden` _will still appear in the accessibility tree_.
+If you don't want an element to appear in the accessibility tree, use `aria-hidden="true"`.
 
 ## Examples
 
 ### Using auto to reduce rendering cost of long pages
 
-The following example shows the use of `content-visibility:auto` to skip painting and rendering of off-screen sections. When a `section` is out of the viewport then the painting of the content is skipped until the section comes close to the viewport, this helps with both load and interactions on the page.
+The following example shows the use of `content-visibility: auto` to skip painting and rendering of off-screen sections.
+When a `section` is out of the viewport then the painting of the content is skipped until the section comes close to the viewport, this helps with both load and interactions on the page.
 
 #### HTML
 
@@ -74,14 +76,12 @@ The following example shows the use of `content-visibility:auto` to skip paintin
 <section>
   <!-- Content for each section… -->
 </section>
-<section>
-  <!-- Content for each section… -->
-</section>
+<!-- … -->
 ```
 
 #### CSS
 
-The `contain-intrinsic-size: auto 500px;` property adds a default size of 500px to the height and width of each `section` element. After a section is rendered, it will retain its rendered intrinsic size, even when it is scrolled out of the viewport.
+The `contain-intrinsic-size` property adds a default size of 500px to the height and width of each `section` element. After a section is rendered, it will retain its rendered intrinsic size, even when it is scrolled out of the viewport.
 
 ```css
 section {
@@ -90,23 +90,24 @@ section {
 }
 ```
 
-### Using hidden to manually manage visibility
+### Using hidden to manage visibility
 
-The following example shows that it is possible to manage visibility using JavaScript. The added benefit of using `content-visibility: hidden` instead of, for example, `display: none` is that the content rendered using `content-visibility` will preserve rendering state when hidden. This means that if the content is shown again, it will render faster than the alternative.
+The following example shows how to manage content visibility with JavaScript.
+Using `content-visibility: hidden;` instead of `display: none;` preserves the rendering state of content when hidden and rendering is faster.
 
 #### HTML
 
 ```html
 <div class="hidden">
-  <button data-state="hidden">Show</button>
+  <button class="toggle">Click me</button>
   <p>
-    This content is initially hidden and is visible when the button is clicked.
+    This content is initially hidden and can be shown by clicking the button.
   </p>
 </div>
 <div class="visible">
-  <button data-state="visible">Hide</button>
+  <button class="toggle">Click me</button>
   <p>
-    This content is initially visible and is hidden when the button is clicked.
+    This content is initially visible and can be hidden by clicking the button.
   </p>
 </div>
 ```
@@ -118,14 +119,17 @@ The `content-visibility` property is set on the paragraph in the containing `div
 The `contain-intrinsic-size` property is included to represent the content size. This helps to reduce layout shift when content is hidden.
 
 ```css
+p {
+  contain-intrinsic-size: 0 1.1em;
+  border: dotted 2px;
+}
+
 .hidden > p {
   content-visibility: hidden;
-  contain-intrinsic-size: 0 1rem;
-  border: red dotted 1px;
 }
+
 .visible > p {
   content-visibility: visible;
-  border: red dashed 1px;
 }
 ```
 
@@ -133,22 +137,16 @@ The `contain-intrinsic-size` property is included to represent the content size.
 
 ```js
 const handleClick = (event) => {
-  if (event.target.tagName.toLowerCase() === "button") {
-    const currentButton = event.target;
-    if (currentButton.dataset.state === "hidden") {
-      currentButton.textContent = "Hide";
-      currentButton.setAttribute("data-state", "visible");
-      currentButton.closest("div").classList.replace("hidden", "visible");
-    } else if (currentButton.dataset.state === "visible") {
-      currentButton.textContent = "Show";
-      currentButton.setAttribute("data-state", "hidden");
-      currentButton.closest("div").classList.replace("visible", "hidden");
-    }
-  } else {
-    return;
-  }
+  const button = event.target;
+  const div = button.parentElement;
+  button.textContent = div.classList.contains("visible") ? "Show" : "Hide";
+  div.classList.toggle("hidden");
+  div.classList.toggle("visible");
 };
-document.addEventListener("click", handleClick);
+
+document.querySelectorAll("button.toggle").forEach((button) => {
+  button.addEventListener("click", handleClick);
+});
 ```
 
 #### Result
