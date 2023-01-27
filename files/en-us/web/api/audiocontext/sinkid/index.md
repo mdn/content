@@ -26,7 +26,7 @@ This property returns one of the following values, depending on how the sink ID 
 - A string
   - : If the sink ID is set as a string value (using {{domxref("AudioContext.setSinkId", "setSinkId()")}}, or the `sinkId` {{domxref("AudioContext.AudioContext", "AudioContext()")}} constructor option), `sinkId` will return that same string value.
 - An {{domxref("AudioSinkInfo")}} object
-  - : If the sink ID is set as an options object (using {{domxref("AudioContext.setSinkId", "setSinkId()")}}, or the `sinkId` {{domxref("AudioContext.AudioContext", "AudioContext()")}} contructor option), `sinkId` will return an {{domxref("AudioSinkInfo")}} object reflecting the same values set in the initial options object.
+  - : If the sink ID is set as an options object (using {{domxref("AudioContext.setSinkId", "setSinkId()")}}, or the `sinkId` {{domxref("AudioContext.AudioContext", "AudioContext()")}} constructor option), `sinkId` will return an {{domxref("AudioSinkInfo")}} object reflecting the same values set in the initial options object.
 
 ## Examples
 
