@@ -180,7 +180,7 @@ i {
   animation: clouds ease 5s alternate infinite 2s;
 }
 .ground {
-  background-image: linear-gradient(to top, white 0 98%, rgba(125 125 125 / 0.5) 100%);
+  background-image: linear-gradient(to top, white 0 97%, 99%, rgb(125 125 125) 100%);
   background-position: center 580px;
   animation: snowpile linear 300s forwards;
   border: 1px solid grey;
