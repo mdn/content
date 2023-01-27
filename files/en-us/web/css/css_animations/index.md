@@ -252,13 +252,13 @@ This example uses {{cssxref("animation-iteration-count")}} to make the flakes fa
 ### Interfaces
 
 - {{domxref("AnimationEvent")}} (inherits from {{domxref("Event")}})
-  - : Including {{domxref("AnimationEvent.animationName")}}, {{domxref("AnimationEvent.elapsedTime")}}, and {{domxref("AnimationEvent.pseudoElement")}} properties.
+  - : Including {{domxref("AnimationEvent.animationName")}}, {{domxref("AnimationEvent.elapsedTime")}}, and {{domxref("AnimationEvent.pseudoElement")}}.
 - {{domxref("CSSKeyframeRule")}} (inherits from {{domxref("CSSRule")}})
   - : Including {{domxref("CSSKeyframeRule.keyText")}} and {{domxref("CSSKeyframeRule.style")}}.
 - {{domxref("CSSKeyframesRule")}} (inherits from {{domxref("CSSRule")}})
-  - : Including {{domxref("CSSKeyframesRule.name")}}, {{domxref("CSSKeyframesRule.cssRules")}}, {{domxref("CSSKeyframesRule.appendRule()")}}, {{domxref("CSSKeyframesRule.deleteRule()")}}, and {{domxref("CSSKeyframesRule.findRule()")}}
+  - : Including {{domxref("CSSKeyframesRule.name")}}, {{domxref("CSSKeyframesRule.cssRules")}}, {{domxref("CSSKeyframesRule.appendRule()")}}, {{domxref("CSSKeyframesRule.deleteRule()")}}, and {{domxref("CSSKeyframesRule.findRule()")}}.
 - {{DOMxRef("Element")}}
-  - : Including {{DOMxRef("Element.animate()")}} and {{DOMxRef("Element.getAnimations()")}}
+  - : Including {{DOMxRef("Element.animate()")}} and {{DOMxRef("Element.getAnimations()")}}.
 
 ## Guides
 
