@@ -64,9 +64,7 @@ You may have heard great stories about negative margins. Don't even think. Nowad
 
 The gap property in CSS is a shorthand for `row-gap` and `column-gap`, specifying the size of gutters, which is the space between rows and columns within grid, flex, and multi-column layouts.
 
-In Flexbox, the `gap` property is applied on the flex-container. It creates a fixed space between the flex-items but not on the sides.
-However, the gap property is not the only thing that can put space between items. Margins, paddings, justify-content and align-content can also increase the size of the gutter and affect the actual gap value.  You should try out and see how the `gap` property differs from margin(in both axes) and how margin or padding affects it.
-
+In Flexbox, the `gap` property is applied on the flex-container. It creates a fixed space between the flex-items but not on the sides. However, the gap property is not the only thing that can put space between items. Margins, paddings, justify-content and align-content can also increase the size of the gutter and affect the actual gap value. You should try out and see how the `gap` property differs from margin(in both axes) and how margin or padding affects it.
 
 {{EmbedGHLiveSample("css-examples/flexbox/wrapping/gaps.html", '100%', 830)}}
 
