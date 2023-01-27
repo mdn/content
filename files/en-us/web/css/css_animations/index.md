@@ -286,4 +286,5 @@ div:hover * {
 
 - [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions) can trigger animations based on user actions.
 - The CSS Scroll Timeline {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties, along with the {{cssxref('scroll-timeline')}} shorthand, create animations tied to the scroll offset of a scroll container.
+- The [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media query to enabled providing minimize motions for users requesting it.
 - The [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) enables constructing and controlling the playback of animations with JavaScript.
