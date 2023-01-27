@@ -29,8 +29,7 @@ For more information, see also this article on [Content Security Policy (CSP)](/
     </tr>
     <tr>
       <th colspan="2" scope="row">
-        This header is not supported inside a {{HTMLElement("meta")}}
-        element.
+        This header is not supported inside a {{HTMLElement("meta")}} element.
       </th>
     </tr>
   </tbody>
@@ -82,7 +81,7 @@ The report JSON object is sent with an `application/csp-report` {{HTTPHeader("Co
   - : The first 40 characters of the inline script, event handler, or style that caused the violation.
 - `status-code`
   - : The HTTP status code of the resource on which the global object was instantiated.
-- `violated-directive`
+- `violated-directive` {{deprecated_inline}}
   - : The directive whose enforcement caused the violation. The `violated-directive` is a historic name for the `effective-directive` field and contains the same value.
 
 ## Sample violation report
@@ -109,7 +108,8 @@ The HTML of `signup.html` looks like this:
 </html>
 ```
 
-Can you spot the violation? Stylesheets are only allowed to be loaded from `cdn.example.com`, yet the website tries to load one from its own origin (`http://example.com`). A browser capable of reporting CSP violations will send the following report as an HTTP `POST` request to `http://example.com/_/csp-reports`, when the document is visited:
+Can you spot the violation? Stylesheets are only allowed to be loaded from `cdn.example.com`, yet the website tries to load one from its own origin (`http://example.com`).
+A browser capable of reporting CSP violations will send the following report as an HTTP `POST` request to `http://example.com/_/csp-reports`, when the document is visited:
 
 ```json
 {
