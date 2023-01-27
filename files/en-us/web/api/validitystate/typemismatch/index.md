@@ -51,7 +51,7 @@ input:invalid {
 }
 ```
 
-{{EmbedLiveSample("Examples", 300, 40)}}
+{{EmbedLiveSample("Examples", 300, 110)}}
 
 The above each produce a `typeMismatch` because the email address is just a domain and the URL has no protocol
 
