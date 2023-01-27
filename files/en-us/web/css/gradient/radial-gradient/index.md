@@ -53,9 +53,9 @@ A radial gradient is specified by indicating the center of the gradient (where t
     If `<ending-shape>` is specified as `circle`, the size may be given explicitly as a [`<length>`](/en-US/docs/Web/CSS/length), which provides an explicit circle radius. Negative values are invalid.
 
     If `<ending-shape>` is specified as `ellipse`, the size may be given as a [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) with two values to provide an explicit ellipse size. The first value represents the horizontal radius, the second the vertical radius. Percentages values are relative to the corresponding dimension of the gradient box. Negative values are invalid.
-    
+
     The `<ending-shape>` keyword may be omitted and the gradient shape will be determined based on the size given. One `<length>` value provides a circle, while two values in `<length-percentage>`units provide an ellipse.
-    
+
 - `<linear-color-stop>`
   - : A color-stop's {{cssxref("&lt;color&gt;")}} value, followed by an one or two optional stop positions (either a {{cssxref("&lt;percentage&gt;")}} or a {{cssxref("&lt;length&gt;")}} along the gradient's axis). A percentage of `0%`, or a length of `0`, represents the center of the gradient; the value `100%` represents the intersection of the ending shape with the virtual gradient ray. Percentage values in between are linearly positioned on the gradient ray. Including two stop positions is equivalent to declaring two color stops with the same color at the two positions.
 - `<color-hint>`
