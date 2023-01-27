@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Symbol.matchAll
 
 {{JSRef}}
 
-The **`Symbol.matchAll`** well-known symbol specifies the method that returns an iterator, that yields matches of the regular expression against a string. This function is called by the {{jsxref("String.prototype.matchAll()")}} method.
+The **`Symbol.matchAll`** static data property represents the well-known symbol specifying the method that returns an iterator, that yields matches of the regular expression against a string. This function is called by the {{jsxref("String.prototype.matchAll()")}} method.
 
 For more information, see {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}} and {{jsxref("String.prototype.matchAll()")}}.
 

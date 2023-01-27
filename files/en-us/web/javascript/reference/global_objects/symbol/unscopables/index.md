@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Symbol.unscopables
 
 {{JSRef}}
 
-The **`Symbol.unscopables`** well-known symbol is used to specify an object value of whose own and inherited property names are excluded from the [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) environment bindings of the associated object.
+The **`Symbol.unscopables`** static data property represents the well-known symbol used to specify properties of the associated object that should not become bindings within the [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) environment.
 
 {{EmbedInteractiveExample("pages/js/symbol-unscopables.html")}}
 

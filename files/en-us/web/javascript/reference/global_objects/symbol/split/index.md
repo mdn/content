@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Symbol.split
 
 {{JSRef}}
 
-The **`Symbol.split`** well-known symbol specifies the method that splits a string at the indices that match a regular expression. This function is called by the {{jsxref("String.prototype.split()")}} method.
+The **`Symbol.split`** static data property represents the well-known symbol specifying the method that splits a string at the indices that match a regular expression. This function is called by the {{jsxref("String.prototype.split()")}} method.
 
 For more information, see {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} and {{jsxref("String.prototype.split()")}}.
 
