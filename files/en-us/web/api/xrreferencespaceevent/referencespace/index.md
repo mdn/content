@@ -1,6 +1,7 @@
 ---
 title: XRReferenceSpaceEvent.referenceSpace
 slug: Web/API/XRReferenceSpaceEvent/referenceSpace
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -22,6 +23,7 @@ tags:
   - Property
 browser-compat: api.XRReferenceSpaceEvent.referenceSpace
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRReferenceSpaceEvent")}} property

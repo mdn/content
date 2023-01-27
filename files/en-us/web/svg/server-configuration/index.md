@@ -1,7 +1,9 @@
 ---
-title: Server Configuration
+title: Server configuration
 slug: Web/SVG/Server-configuration
+page-type: guide
 tags:
   - SVG
 ---
-See <http://wiki.svg.org/Server_Configuration>
+
+See [SVG Server Settings](https://www.w3.org/services/svg-server/).

@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.createOffer()
 slug: Web/API/RTCPeerConnection/createOffer
+page-type: web-api-instance-method
 tags:
   - API
   - Media
@@ -12,6 +13,7 @@ tags:
   - createOffer
 browser-compat: api.RTCPeerConnection.createOffer
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`createOffer()`** method
@@ -33,15 +35,18 @@ offer.
 
 ## Syntax
 
-```js
-aPromise = myPeerConnection.createOffer([options]);
+```js-nolint
+createOffer()
+createOffer(options)
 
-myPeerConnection.createOffer(successCallback, failureCallback, [options]) {{deprecated_inline}}
+createOffer(successCallback, failureCallback)
+createOffer(successCallback, failureCallback, options)
 ```
 
 ### Parameters
 
 - `options` {{optional_inline}}
+
   - : An object providing the following options requested for the offer:
 
     - `iceRestart` {{optional_inline}}
@@ -95,7 +100,7 @@ should examine the received exception to determine which occurred.
   - : Returned if examining the state of the system to determine resource availability in order to
     generate the offer failed for some reason.
 
-## Example
+## Examples
 
 Here we see a handler for the {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event which creates the
 offer and sends it to the remote system over a signaling channel.
@@ -109,10 +114,9 @@ offer and sends it to the remote system over a signaling channel.
 > fulfillment handler, depend entirely on your design.
 
 ```js
-  myPeerConnection.createOffer().then(function(offer) {
-    return myPeerConnection.setLocalDescription(offer);
-  })
-  .then(function() {
+myPeerConnection.createOffer()
+  .then((offer) => myPeerConnection.setLocalDescription(offer))
+  .then(() => {
     sendToServer({
       name: myUsername,
       target: targetUsername,
@@ -120,7 +124,7 @@ offer and sends it to the remote system over a signaling channel.
       sdp: myPeerConnection.localDescription
     });
   })
-  .catch(function(reason) {
+  .catch((reason) => {
     // An error occurred, so handle the failure to connect
   });
 ```
@@ -137,8 +141,7 @@ the same one.
 
 Use {{jsxref("Promise.catch()")}} to trap and handle errors.
 
-See [Signaling and
-video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) for the complete example from which this snippet is derived; this
+See [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) for the complete example from which this snippet is derived; this
 will help you to understand how the signaling code here works.
 
 ## Specifications

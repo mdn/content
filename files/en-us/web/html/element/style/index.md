@@ -1,6 +1,7 @@
 ---
 title: '<style>: The Style Information element'
 slug: Web/HTML/Element/style
+page-type: html-element
 tags:
   - CSS
   - Element
@@ -12,7 +13,7 @@ tags:
 browser-compat: html.elements.style
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<style>`** [HTML](/en-US/docs/Web/HTML) element contains style information for a document, or part of a document. It contains CSS, which is applied to the contents of the document containing the `<style>` element.
 
@@ -34,13 +35,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : A cryptographic nonce (number used once) used to allow inline styles in a [style-src Content-Security-Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
 - {{htmlattrdef("title")}}
   - : This attribute specifies [alternative style sheet](/en-US/docs/Web/CSS/Alternative_style_sheets) sets.
+- {{htmlattrdef("blocking")}}
+  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of critical subresources. [`@import`](/en-US/docs/Web/CSS/@import)-ed stylesheets are generally considered as critical subresources, whereas [`background-image`](/en-US/docs/Web/CSS/background-image) and fonts are not.
+    - `render`: The rendering of content on the screen is blocked.
 
 ### Deprecated attributes
-
-- {{htmlattrdef("scoped")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : This attribute specifies that the styles only apply to the elements of its parent(s) and children.
-
-    > **Note:** This attribute may be re-introduced in the future per <https://github.com/w3c/csswg-drafts/issues/3547>. If you want to use the attribute now, you can use a [polyfill](https://github.com/samthor/scoped).
 
 - {{htmlattrdef("type")}} {{deprecated_inline}}
   - : This attribute should not be provided: if it is, the only permitted values are the empty string or a case-insensitive match for `text/css`.
@@ -52,84 +51,90 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 In the following example, we apply a very simple stylesheet to a document:
 
 ```html
-<!doctype html>
-<html>
-<head>
-  <style>
-    p {
-      color: red;
-    }
-  </style>
-</head>
-<body>
-  <p>This is my paragraph.</p>
-</body>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test page</title>
+    <style>
+      p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is my paragraph.</p>
+  </body>
 </html>
 ```
 
-{{EmbedLiveSample('A_simple_stylesheet', '100%', '60')}}
+{{EmbedLiveSample('A_simple_stylesheet', '100%', '100')}}
 
 ### Multiple style elements
 
 In this example we've included two `<style>` elements — notice how the conflicting declarations in the later `<style>` element override those in the earlier one, if they have equal [specificity](/en-US/docs/Web/CSS/Specificity).
 
 ```html
-<!doctype html>
-<html>
-<head>
-  <style>
-    p {
-      color: white;
-      background-color: blue;
-      padding: 5px;
-      border: 1px solid black;
-    }
-  </style>
-  <style>
-    p {
-      color: blue;
-      background-color: yellow;
-    }
-  </style>
-</head>
-<body>
-  <p>This is my paragraph.</p>
-</body>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test page</title>
+    <style>
+      p {
+        color: white;
+        background-color: blue;
+        padding: 5px;
+        border: 1px solid black;
+      }
+    </style>
+    <style>
+      p {
+        color: blue;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is my paragraph.</p>
+  </body>
 </html>
 ```
 
-{{EmbedLiveSample('Multiple_style_elements', '100%', '60')}}
+{{EmbedLiveSample('Multiple_style_elements', '100%', '100')}}
 
 ### Including a media query
 
 In this example we build on the previous one, including a `media` attribute on the second `<style>` element so it is only applied when the viewport is less than 500px in width.
 
 ```html
-<!doctype html>
-<html>
-<head>
-  <style>
-    p {
-      color: white;
-      background-color: blue;
-      padding: 5px;
-      border: 1px solid black;
-    }
-  </style>
-  <style media="all and (max-width: 500px)">
-    p {
-      color: blue;
-      background-color: yellow;
-    }
-  </style>
-</head>
-<body>
-  <p>This is my paragraph.</p>
-</body>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test page</title>
+    <style>
+      p {
+        color: white;
+        background-color: blue;
+        padding: 5px;
+        border: 1px solid black;
+      }
+    </style>
+    <style media="all and (max-width: 500px)">
+      p {
+        color: blue;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is my paragraph.</p>
+  </body>
 </html>
 ```
 
-{{EmbedLiveSample('Including_a_media_query', '100%', '60')}}
+{{EmbedLiveSample('Including_a_media_query', '100%', '100')}}
 
 ## Technical summary
 

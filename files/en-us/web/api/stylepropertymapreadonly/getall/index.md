@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMapReadOnly.getAll()
 slug: Web/API/StylePropertyMapReadOnly/getAll
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,6 +13,7 @@ tags:
   - getAll()
 browser-compat: api.StylePropertyMapReadOnly.getAll
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`getAll()`** method of the
@@ -20,20 +22,20 @@ The **`getAll()`** method of the
 
 ## Syntax
 
-```js
-var cssStyleValues[] = StylePropertyMapReadOnly.getAll(property)
+```js-nolint
+getAll(property)
 ```
 
 ### Parameters
 
-- property
+- `property`
   - : The name of the property to retrieve all values of.
 
 ### Return value
 
 An array of {{domxref("CSSStyleValue")}} objects.
 
-## Example
+## Examples
 
 The following example uses `getAll()` with the
 {{cssxref('background-image')}} property. An {{jsxref('Array')}} is returned which

@@ -1,15 +1,16 @@
 ---
 title: Headers.set()
 slug: Web/API/Headers/set
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Fetch
   - Method
   - Reference
   - set
 browser-compat: api.Headers.set
 ---
+
 {{APIRef("Fetch")}}
 
 The **`set()`** method of the {{domxref("Headers")}} interface
@@ -22,14 +23,13 @@ overwrites the existing value with the new one, whereas {{domxref("Headers.appen
 appends the new value to the end of the set of values.
 
 For security reasons, some headers can only be controller by the user agent. These
-headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}
-and {{Glossary("Forbidden_response_header_name", "forbidden response header names",
-  1)}}.
+headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}}
+and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.
 
 ## Syntax
 
-```js
-myHeaders.set(name, value);
+```js-nolint
+set(name, value)
 ```
 
 ### Parameters
@@ -40,16 +40,16 @@ myHeaders.set(name, value);
 - `value`
   - : The new value you want to set.
 
-### Returns
+### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 Creating an empty `Headers` object is simple:
 
 ```js
-var myHeaders = new Headers(); // Currently empty
+const myHeaders = new Headers(); // Currently empty
 ```
 
 You could add a header to this using {{domxref("Headers.append")}}, then set a new

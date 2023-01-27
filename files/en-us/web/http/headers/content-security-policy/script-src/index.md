@@ -1,5 +1,5 @@
 ---
-title: 'CSP: script-src'
+title: "CSP: script-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/script-src
 tags:
   - CSP
@@ -12,8 +12,9 @@ tags:
   - Security
   - script-src
   - source
-browser-compat: http.headers.csp.Content-Security-Policy.script-src
+browser-compat: http.headers.Content-Security-Policy.script-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src`** directive specifies valid sources for JavaScript. This includes not only URLs loaded directly into {{HTMLElement("script")}} elements, but also things like inline script event handlers (`onclick`) and [XSLT stylesheets](/en-US/docs/Web/XSLT) which can trigger script execution.
@@ -72,13 +73,13 @@ the following script is blocked and won't be loaded or executed:
 Note that inline event handlers are blocked as well:
 
 ```html
-<button id="btn" onclick="doSomething()">
+<button id="btn" onclick="doSomething()"></button>
 ```
 
 You should replace them with {{domxref("EventTarget.addEventListener", "addEventListener")}} calls:
 
 ```js
-document.getElementById("btn").addEventListener('click', doSomething);
+document.getElementById("btn").addEventListener("click", doSomething);
 ```
 
 ### Unsafe inline script
@@ -87,7 +88,7 @@ document.getElementById("btn").addEventListener('click', doSomething);
 
 To allow inline scripts and inline event handlers, `'unsafe-inline'`, a nonce-source or a hash-source that matches the inline block can be specified.
 
-```
+```http
 Content-Security-Policy: script-src 'unsafe-inline';
 ```
 
@@ -95,13 +96,14 @@ The above Content Security Policy will allow inline {{HTMLElement("script")}} el
 
 ```html
 <script>
-  var inline = 1;
+  const inline = 1;
+  // …
 </script>
 ```
 
 You can use a nonce-source to only allow specific inline script blocks:
 
-```
+```http
 Content-Security-Policy: script-src 'nonce-2726c7f26c'
 ```
 
@@ -109,29 +111,33 @@ You will have to set the same nonce on the {{HTMLElement("script")}} element:
 
 ```html
 <script nonce="2726c7f26c">
-  var inline = 1;
+  const inline = 1;
+  // …
 </script>
 ```
 
 Alternatively, you can create hashes from your inline scripts. CSP supports sha256, sha384 and sha512.
 
-```
+```http
 Content-Security-Policy: script-src 'sha256-B2yPHKaXnvFWtRChIbabYmUBFZdVfKKXHbWtWidDVF8='
 ```
 
 When generating the hash, don't include the {{HTMLElement("script")}} tags and note that capitalization and whitespace matter, including leading or trailing whitespace.
 
 ```html
-<script>var inline = 1;</script>
+<script>
+  const inline = 1;
+</script>
 ```
 
 ### Unsafe eval expressions
 
-The `'unsafe-eval'` source expression controls several script execution methods that create code from strings. If `'unsafe-eval'` isn't specified with the `script-src` directive, the following methods are blocked and won't have any effect:
+The `'unsafe-eval'` source expression controls several script execution methods that create code from strings.
+If a page has a CSP header and `'unsafe-eval'` isn't specified with the `script-src` directive, the following methods are blocked and won't have any effect:
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
 - {{jsxref("Function", "Function()")}}
-- When passing a string literal like to methods like: `window.setTimeout("alert(\"Hello World!\");", 500);`
+- When passing a string literal like to methods like: `setTimeout("alert(\"Hello World!\");", 500);`
 
   - {{domxref("setTimeout()")}}
   - {{domxref("setInterval()")}}
@@ -139,9 +145,22 @@ The `'unsafe-eval'` source expression controls several script execution methods 
 
 - `window.execScript()` {{non-standard_inline}} (IE < 11 only)
 
+### Unsafe WebAssembly execution
+
+The `'wasm-unsafe-eval'` source expression controls WebAssembly execution.
+If a page has a CSP header and `'wasm-unsafe-eval'` isn't specified in the `script-src` directive, WebAssembly is blocked from loading and executing on the page.
+The `'wasm-unsafe-eval'` source expression is more specific than `'unsafe-eval'` which permits both compilation (and instantiation) of WebAssembly and, for example, the use of the `eval` operation in JavaScript.
+If the `'unsafe-eval'` source keyword is used, then this overrides any occurrence of `'wasm-unsafe-eval'` in the CSP policy.
+
+```http
+Content-Security-Policy: script-src 'wasm-unsafe-eval'
+```
+
 ### strict-dynamic
 
-The `'strict-dynamic'` source expression specifies that the trust explicitly given to a script present in the markup, by accompanying it with a nonce or a hash, shall be propagated to all the scripts loaded by that root script. At the same time, any allowlist or source expressions such as `'self'` or `'unsafe-inline'` will be ignored. For example, a policy such as `script-src 'strict-dynamic' 'nonce-R4nd0m' https://allowlisted.example.com/` would allow loading of a root script with `<script nonce="R4nd0m" src="https://example.com/loader.js">` and propagate that trust to any script loaded by `loader.js`, but disallow loading scripts from `https://allowlisted.example.com/` unless accompanied by a nonce or loaded from a trusted script.
+The `'strict-dynamic'` source expression specifies that the trust explicitly given to a script present in the markup, by accompanying it with a nonce or a hash, shall be propagated to all the scripts loaded by that root script. At the same time, any allowlist or source expressions such as `'self'` or `'unsafe-inline'` will be ignored.
+
+For example, a policy such as `script-src 'strict-dynamic' 'nonce-R4nd0m' https://allowlisted.example.com/` would allow loading of a root script with `<script nonce="R4nd0m" src="https://example.com/loader.js">` and propagate that trust to any script loaded by `loader.js`, but disallow loading scripts from `https://allowlisted.example.com/` unless accompanied by a nonce or loaded from a trusted script.
 
 ```http
 Content-Security-Policy: script-src 'strict-dynamic' 'nonce-someNonce'
@@ -173,6 +192,7 @@ will act like `'unsafe-inline' https:` in browsers that support CSP1, `https: 'n
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}}
+- {{CSP("Sources")}}
 - {{HTMLElement("script")}}
 - {{CSP("script-src-elem")}}
 - {{CSP("script-src-attr")}}

@@ -1,6 +1,7 @@
 ---
 title: SVGFilterElement
 slug: Web/API/SVGFilterElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,13 +10,14 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFilterElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFilterElement`** interface provides access to the properties of {{SVGElement("filter")}} elements, as well as methods to manipulate them.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("SVGFilterElement.href")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedString")}} that corresponds to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given {{SVGElement("filter")}} element.
@@ -36,7 +38,7 @@ The **`SVGFilterElement`** interface provides access to the properties of {{SVGE
 - {{domxref("SVGFilterElement.filterResY")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : An {{domxref("SVGAnimatedInteger")}} that contains the Y component of the {{SVGAttr("filterRes")}} attribute of the given {{SVGElement("filter")}} element.
 
-## Methods
+## Instance methods
 
 - {{domxref("SVGFilterElement.setFilterRes()")}} {{deprecated_inline}}
   - : Sets the values of the {{SVGAttr("filterRes")}} attribute.

@@ -1,6 +1,7 @@
 ---
 title: SVGFEConvolveMatrixElement
 slug: Web/API/SVGFEConvolveMatrixElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEConvolveMatrixElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEConvolveMatrixElement`** interface corresponds to the {{SVGElement("feConvolveMatrix")}} element.
@@ -51,7 +53,7 @@ The **`SVGFEConvolveMatrixElement`** interface corresponds to the {{SVGElement("
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
@@ -90,7 +92,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFEConvolveMatrixElement.y")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
-## Methods
+## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
 

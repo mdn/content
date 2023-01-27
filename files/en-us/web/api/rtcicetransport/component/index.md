@@ -1,6 +1,7 @@
 ---
 title: RTCIceTransport.component
 slug: Web/API/RTCIceTransport/component
+page-type: web-api-instance-property
 tags:
   - API
   - ICE
@@ -18,19 +19,14 @@ tags:
   - component
 browser-compat: api.RTCIceTransport.component
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **{{domxref("RTCIceTransport")}}**
 property **`component`** specifies whether the object is
 serving to transport {{Glossary("RTP")}} or {{Glossary("RTCP")}}.
 
-## Syntax
-
-```js
-iceComponent = RTCIceTransport.component;
-```
-
-### Value
+## Value
 
 A string which is one of the following:
 

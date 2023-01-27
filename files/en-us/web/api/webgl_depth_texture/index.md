@@ -1,6 +1,7 @@
 ---
 title: WEBGL_depth_texture
 slug: Web/API/WEBGL_depth_texture
+page-type: webgl-extension
 tags:
   - API
   - Reference
@@ -8,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_depth_texture
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_depth_texture`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and defines 2D depth and depth-stencil textures.
@@ -29,7 +31,7 @@ This extension extends {{domxref("WebGLRenderingContext.texImage2D()")}}:
 
 - The `format` and `internalformat` parameters now accept `gl.DEPTH_COMPONENT` and `gl.DEPTH_STENCIL`.
 - The `type` parameter now accepts `gl.UNSIGNED_SHORT`, `gl.UNSIGNED_INT`, and `ext.UNSIGNED_INT_24_8_WEBGL`.
-- The `pixels` parameter now accepts an `ArrayBufferView` of type `Uint16Array` and `Uint32Array`.
+- The `pixels` parameter now accepts a {{jsxref("Uint16Array")}} or a {{jsxref("Uint32Array")}} object.
 
 This extension extends {{domxref("WebGLRenderingContext.framebufferTexture2D()")}}:
 
@@ -40,7 +42,7 @@ This extension extends {{domxref("WebGLRenderingContext.framebufferTexture2D()")
 ## Examples
 
 ```js
-var ext = gl.getExtension('WEBGL_depth_texture');
+const ext = gl.getExtension('WEBGL_depth_texture');
 
 gl.texImage2D(gl.TEXTURE_2D, 0, gl.DEPTH_COMPONENT, 512, 512, 0, gl.DEPTH_COMPONENT, gl.UNSIGNED_SHORT, null);
 ```

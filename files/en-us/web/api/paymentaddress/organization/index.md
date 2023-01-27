@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.organization
 slug: Web/API/PaymentAddress/organization
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -15,26 +16,23 @@ tags:
   - institution
   - organization
   - paymentAddress
+  - Deprecated
+  - Non-standard
 browser-compat: api.PaymentAddress.organization
 ---
-{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+
+{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`organization`** read-only
 property of the {{domxref('PaymentAddress')}} interface returns a string containing
 the name of the organization, firm, company, or institution at the address.
 
-## Syntax
+## Value
 
-```js
-var paymentOrganization = PaymentAddress.organization;
-```
-
-### Value
-
-A {{domxref("DOMString")}} whose value is the name of the organization or company
+A string whose value is the name of the organization or company
 located at the address described by the `PaymentAddress` object. This should
 be the name of the organization that is to receive the shipment for shipping addresses,
-or which is responsible for payment for payment addresses.
+or which is responsible for payment addresses.
 
 ## Browser compatibility
 

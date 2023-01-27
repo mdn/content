@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamDefaultReader.closed
 slug: Web/API/ReadableStreamDefaultReader/closed
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - closed
 browser-compat: api.ReadableStreamDefaultReader.closed
 ---
+
 {{APIRef("Streams")}}
 
 The **`closed`** read-only property of the
@@ -18,13 +20,7 @@ The **`closed`** read-only property of the
 stream throws an error or the reader's lock is released. This property enables you
 to write code that responds to an end to the streaming process.
 
-## Syntax
-
-```js
-var closed = readableStreamDefaultReader.closed;
-```
-
-### Value
+## Value
 
 A {{jsxref("Promise")}}.
 

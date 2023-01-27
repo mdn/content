@@ -1,6 +1,7 @@
 ---
 title: Document.getSelection()
 slug: Web/API/Document/getSelection
+page-type: web-api-instance-method
 tags:
   - API
   - Document
@@ -9,6 +10,7 @@ tags:
   - getSelection
 browser-compat: api.Document.getSelection
 ---
+
 {{APIRef("DOM")}}
 
 The **`getSelection()`** property of
@@ -18,7 +20,7 @@ the caret.
 
 ## Syntax
 
-```js
+```js-nolint
 getSelection()
 ```
 
@@ -26,11 +28,11 @@ getSelection()
 
 None.
 
-### Returns
+### Return value
 
 A {{DOMxRef("Selection")}} object.
 
-## Example
+## Examples
 
 ### Getting a Selection object
 

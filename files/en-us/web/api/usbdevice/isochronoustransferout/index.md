@@ -1,6 +1,7 @@
 ---
 title: USBDevice.isochronousTransferOut()
 slug: Web/API/USBDevice/isochronousTransferOut
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,34 +11,33 @@ tags:
   - WebUSB
   - WebUSB API
   - isochronousTransferOut
+  - Experimental
 browser-compat: api.USBDevice.isochronousTransferOut
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`isochronousTransferOut()`** method of the
-{{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves with a
-{{domxref("USBIsochronousOutTransferResult")}} when time sensitive information has been
-transmitted to the USB device.
+{{domxref("USBDevice")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("USBIsochronousOutTransferResult")}} when time sensitive information has been transmitted from the USB device.
 
 ## Syntax
 
-```js
-var promise = USBDevice.isochronousTransferOut(endpointNumber, data, packetLengths)
+```js-nolint
+isochronousTransferOut(endpointNumber, data, packetLengths)
 ```
 
 ### Parameters
 
-- endpointNumber
+- `endpointNumber`
   - : The number of a device-specific endpoint (buffer).
-- data
+- `data`
   - : A {{domxref("TypedArray")}} containing the data to send to the device.
-- packetLengths
+- `packetLengths`
   - : An array of lengths for the packets being transferred.
 
 ### Return value
 
-A {{jsxref("promise")}} that resolves with a
-{{domxref("USBIsochronousOutTransferResult")}}.
+A {{jsxref("Promise")}} that resolves with a {{domxref("USBIsochronousOutTransferResult")}}.
 
 ## Specifications
 

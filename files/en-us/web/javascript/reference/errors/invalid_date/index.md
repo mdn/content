@@ -1,12 +1,14 @@
 ---
 title: 'RangeError: invalid date'
 slug: Web/JavaScript/Reference/Errors/Invalid_date
+page-type: javascript-error
 tags:
   - Error
   - Errors
   - JavaScript
   - RangeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid date" occurs when a string leading to an invalid date
@@ -14,11 +16,10 @@ has been provided to {{jsxref("Date")}} or {{jsxref("Date.parse()")}}.
 
 ## Message
 
-```js
-RangeError: invalid date (Edge)
+```
+RangeError: Invalid time value (V8-based)
 RangeError: invalid date (Firefox)
-RangeError: invalid time value (Chrome)
-RangeError: Provided date is not in valid range (Chrome)
+RangeError: Invalid Date (Safari)
 ```
 
 ## Error type
@@ -57,7 +58,7 @@ For more details, see the {{jsxref("Date.parse()")}} documentation.
 
 ```js example-good
 new Date('05 October 2011 14:48 UTC');
-new Date(1317826080); // Unix Time Stamp for 05 October 2011 14:48:00 UTC
+new Date(1317826080); // Unix Timestamp for 05 October 2011 14:48:00 UTC
 ```
 
 ## See also

@@ -1,10 +1,10 @@
 ---
 title: VideoPlaybackQuality.droppedVideoFrames
 slug: Web/API/VideoPlaybackQuality/droppedVideoFrames
+page-type: web-api-instance-property
 tags:
   - API
   - Data Loss
-  - Experimental
   - Frames
   - Media
   - Media Playback Quality
@@ -18,6 +18,7 @@ tags:
   - droppedVideoFrames
 browser-compat: api.VideoPlaybackQuality.droppedVideoFrames
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`droppedVideoFrames`**
@@ -25,13 +26,7 @@ property of the {{domxref("VideoPlaybackQuality")}} interface returns the number
 video frames which have been dropped rather than being displayed since the last time
 the media was loaded into the {{domxref("HTMLVideoElement")}}.
 
-## Syntax
-
-```js
-value = videoPlaybackQuality.droppedVideoFrames;
-```
-
-### Value
+## Value
 
 An unsigned 64-bit value indicating the number of frames that have been dropped since
 the last time the media in the {{HTMLElement("video")}} element was loaded or reloaded.
@@ -41,7 +36,7 @@ to avoid dropping frames.
 Frames are typically dropped either before or after decoding them, when it's determined
 that it will not be possible to draw them to the screen at the correct time.
 
-## Example
+## Examples
 
 This example calls {{domxref("HTMLVideoElement.getVideoPlaybackQuality",
   "getVideoPlaybackQuality()")}} to obtain a {{domxref("VideoPlaybackQuality")}} object,
@@ -49,11 +44,11 @@ then determines what percentage of frames have been dropped. That value is then
 presented in an element for the user's reference.
 
 ```js
-var videoElem = document.getElementById("my_vid");
-var percentElem = document.getElementById("percent");
-var quality = videoElem.getVideoPlaybackQuality();
+const videoElem = document.getElementById("my_vid");
+const percentElem = document.getElementById("percent");
+const quality = videoElem.getVideoPlaybackQuality();
 
-var dropPercent = (quality.droppedVideoFrames/quality.totalVideoFrames)*100;
+const dropPercent = (quality.droppedVideoFrames/quality.totalVideoFrames)*100;
 percentElem.innerText = Math.trunc(dropPercent).toString(10);
 ```
 

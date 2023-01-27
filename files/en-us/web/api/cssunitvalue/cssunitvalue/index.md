@@ -1,6 +1,7 @@
 ---
 title: CSSUnitValue()
 slug: Web/API/CSSUnitValue/CSSUnitValue
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
@@ -11,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.CSSUnitValue.CSSUnitValue
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSUnitValue()`** constructor creates a
@@ -20,16 +22,16 @@ would be represented by a `CSSNumericValue`.
 
 ## Syntax
 
-```js
-var CSSUnitValue = new CSSUnitValue()
+```js-nolint
+new CSSUnitValue()
 ```
 
 ### Parameters
 
-- value
+- `value`
   - : Returns a double indicating the number of units.
-- unit
-  - : Returns a {{jsxref('USVString')}} indicating the type of unit.
+- `unit`
+  - : Returns a string indicating the type of unit.
 
 ## Examples
 

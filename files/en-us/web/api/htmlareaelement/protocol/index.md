@@ -1,27 +1,24 @@
 ---
 title: HTMLAreaElement.protocol
 slug: Web/API/HTMLAreaElement/protocol
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAreaElement
   - Property
 browser-compat: api.HTMLAreaElement.protocol
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The
 **`HTMLAreaElement.protocol`**
-property is a {{domxref("USVString")}} representing the protocol scheme of the URL,
+property is a string representing the protocol scheme of the URL,
 including the final `':'`.
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = area.protocol;
-// Setter
-area.protocol = string;
-```
+A string.
 
 ## Examples
 

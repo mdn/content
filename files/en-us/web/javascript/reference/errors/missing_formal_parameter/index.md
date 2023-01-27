@@ -1,12 +1,14 @@
 ---
 title: 'SyntaxError: missing formal parameter'
 slug: Web/JavaScript/Reference/Errors/Missing_formal_parameter
+page-type: javascript-error
 tags:
   - Error
   - Errors
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing formal parameter" occurs when your function
@@ -14,8 +16,10 @@ declaration is missing valid parameters.
 
 ## Message
 
-```js
+```plain
 SyntaxError: missing formal parameter (Firefox)
+SyntaxError: Unexpected number '3'. Expected a parameter pattern or a ')' in parameter list. (Safari)
+SyntaxError: Unexpected string literal "x". Expected a parameter pattern or a ')' in parameter list. (Safari)
 ```
 
 ## Error type
@@ -83,14 +87,12 @@ square(2); // 4
 
 greet("Howdy"); // "Howdy"
 
-log({obj: "value"}); // Object { obj: "value" }
+log({obj: "value"}); // { obj: "value" }
 ```
 
 ## See also
 
 - Other errors regarding formal parameters:
 
-  - [SyntaxError:
-    Malformed formal parameter](/en-US/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter)
-  - [SyntaxError:
-    redeclaration of formal parameter "x"](/en-US/docs/Web/JavaScript/Reference/Errors/Redeclared_parameter)
+  - [SyntaxError: Malformed formal parameter](/en-US/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter)
+  - [SyntaxError: redeclaration of formal parameter "x"](/en-US/docs/Web/JavaScript/Reference/Errors/Redeclared_parameter)

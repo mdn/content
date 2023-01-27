@@ -1,6 +1,7 @@
 ---
 title: RTCTrackEvent.transceiver
 slug: Web/API/RTCTrackEvent/transceiver
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -14,6 +15,7 @@ tags:
   - events
 browser-compat: api.RTCTrackEvent.transceiver
 ---
+
 {{APIRef("WebRTC")}}
 
 The WebRTC API interface {{domxref("RTCTrackEvent")}}'s
@@ -24,13 +26,7 @@ read-only **`transceiver`** property indicates the
 The transceiver pairs the track's
 {{domxref("RTCTrackEvent.receiver", "receiver")}} with an {{domxref("RTCRtpSender")}}.
 
-## Syntax
-
-```js
-var rtpTransceiver = trackEvent.transceiver;
-```
-
-### Value
+## Value
 
 The {{domxref("RTCRtpTransceiver")}} which pairs the `receiver` with a
 sender and other properties which establish a single bidirectional {{Glossary("RTP", "SRTP")}}

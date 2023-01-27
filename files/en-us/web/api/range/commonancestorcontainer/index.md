@@ -1,6 +1,7 @@
 ---
 title: Range.commonAncestorContainer
 slug: Web/API/Range/commonAncestorContainer
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -8,12 +9,12 @@ tags:
   - Range
 browser-compat: api.Range.commonAncestorContainer
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.commonAncestorContainer`** read-only property
 returns the deepest — or furthest down the document tree — {{domxref("Node")}} that
-contains both [boundary
-points](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-Position-h3) of the {{domxref("Range")}}. This means that if
+contains both [boundary points](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-Position-h3) of the {{domxref("Range")}}. This means that if
 {{domxref("Range.startContainer")}} and {{domxref("Range.endContainer")}} both refer to
 the same node, this node is the **common ancestor container**.
 
@@ -26,15 +27,13 @@ consider using the various methods available to set the start and end positions 
 `Range`, such as {{domxref("Range.setStart()")}} and
 {{domxref("Range.setEnd()")}}.
 
-## Syntax
+## Value
 
-```js
-rangeAncestor = range.commonAncestorContainer;
-```
+A {{domxref("Node")}} object.
 
-## Example
+## Examples
 
-In this example, we create an event listener to handle {{Event("pointerup")}} events on
+In this example, we create an event listener to handle {{domxref("Document/pointerup_event", "pointerup")}} events on
 a list. The listener gets the common ancestors of each piece of selected text, and
 triggers an animation to highlight them.
 
@@ -42,10 +41,12 @@ triggers an animation to highlight them.
 
 ```html
 <ul>
-  <li>Strings
+  <li>
+    Strings
     <ul>
       <li>Cello</li>
-      <li>Violin
+      <li>
+        Violin
         <ul>
           <li>First Chair</li>
           <li>Second Chair</li>
@@ -53,7 +54,8 @@ triggers an animation to highlight them.
       </li>
     </ul>
   </li>
-  <li>Woodwinds
+  <li>
+    Woodwinds
     <ul>
       <li>Clarinet</li>
       <li>Oboe</li>
@@ -73,8 +75,12 @@ The `.highlight` class created below uses a set of CSS
 }
 
 @keyframes highlight {
-  from { outline: 1px solid #f00f; }
-  to   { outline: 1px solid #f000; }
+  from {
+    outline: 1px solid #f00f;
+  }
+  to {
+    outline: 1px solid #f000;
+  }
 }
 ```
 
@@ -87,7 +93,7 @@ body {
 ### JavaScript
 
 ```js
-document.addEventListener('pointerup', e => {
+document.addEventListener('pointerup', (e) => {
   const selection = window.getSelection();
 
   if (selection.type === 'Range') {
@@ -112,7 +118,7 @@ function playAnimation(el) {
 
 ### Result
 
-{{EmbedLiveSample("Example", 700, 190)}}
+{{EmbedLiveSample("Examples", 700, 190)}}
 
 ## Specifications
 

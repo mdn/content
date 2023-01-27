@@ -1,11 +1,13 @@
 ---
 title: 'Warning: unreachable code after return statement'
 slug: Web/JavaScript/Reference/Errors/Stmt_after_return
+page-type: javascript-error
 tags:
   - Error
   - JavaScript
   - Warning
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning "unreachable code after return statement" occurs when using an
@@ -14,7 +16,7 @@ semicolon-less return statement but including an expression directly after.
 
 ## Message
 
-```js
+```
 Warning: unreachable code after return statement (Firefox)
 ```
 
@@ -54,13 +56,13 @@ Warnings will not be shown for semicolon-less returns if these statements follow
 
 ```js example-bad
 function f() {
-  var x = 3;
+  let x = 3;
   x += 4;
   return x;   // return exits the function immediately
   x -= 3;     // so this line will never run; it is unreachable
 }
 
-function f() {
+function g() {
   return     // this is treated like `return;`
     3 + 4;   // so the function returns, and this line is never reached
 }
@@ -70,13 +72,13 @@ function f() {
 
 ```js example-good
 function f() {
-  var x = 3;
+  let x = 3;
   x += 4;
   x -= 3;
   return x;  // OK: return after all other statements
 }
 
-function f() {
+function g() {
   return 3 + 4  // OK: semicolon-less return with expression on the same line
 }
 ```

@@ -1,6 +1,7 @@
 ---
 title: throw
 slug: Web/JavaScript/Reference/Statements/throw
+page-type: javascript-statement
 tags:
   - Exception
   - JavaScript
@@ -8,9 +9,10 @@ tags:
   - Statement
 browser-compat: javascript.statements.throw
 ---
+
 {{jsSidebar("Statements")}}
 
-The **`throw` statement** throws a user-defined exception.
+The **`throw`** statement throws a user-defined exception.
 Execution of the current function will stop (the statements after `throw`
 won't be executed), and control will be passed to the first [`catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
 block in the call stack. If no `catch` block exists among caller functions,
@@ -20,8 +22,8 @@ the program will terminate.
 
 ## Syntax
 
-```js
-throw expression; 
+```js-nolint
+throw expression;
 ```
 
 - `expression`
@@ -40,9 +42,9 @@ throw true;     // generates an exception with the value true
 throw new Error('Required');  // generates an error object with the message of Required
 ```
 
-Also note that the `throw` statement is affected by [automatic
-semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion) as no line terminator between the `throw`
-keyword and the expression is allowed.
+Also note that the `throw` statement is affected by
+[automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)
+as no line terminator between the `throw` keyword and the expression is allowed.
 
 ## Examples
 
@@ -58,8 +60,8 @@ function UserException(message) {
   this.name = 'UserException';
 }
 function getMonthName(mo) {
-  mo = mo - 1; // Adjust month number for array index (1 = Jan, 12 = Dec)
-  var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
+  mo--; // Adjust month number for array index (1 = Jan, 12 = Dec)
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
     'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   if (months[mo] !== undefined) {
     return months[mo];
@@ -68,10 +70,12 @@ function getMonthName(mo) {
   }
 }
 
+let monthName;
+
 try {
   // statements to try
-  var myMonth = 15; // 15 is out of bound to raise the exception
-  var monthName = getMonthName(myMonth);
+  const myMonth = 15; // 15 is out of bound to raise the exception
+  monthName = getMonthName(myMonth);
 } catch (e) {
   monthName = 'unknown';
   console.error(e.message, e.name); // pass exception object to err handler
@@ -97,30 +101,29 @@ an invalid format, the throw statement throws an exception by creating an object
  * If the argument passed to the ZipCode constructor does not
  * conform to one of these patterns, an exception is thrown.
  */
-
-function ZipCode(zip) {
-  zip = new String(zip);
-  pattern = /[0-9]{5}([- ]?[0-9]{4})?/;
-  if (pattern.test(zip)) {
+class ZipCode {
+  static pattern = /[0-9]{5}([- ]?[0-9]{4})?/;
+  constructor(zip) {
+    zip = String(zip);
+    const match = zip.match(ZipCode.pattern);
+    if (!match) {
+      throw new ZipCodeFormatException(zip);
+    }
     // zip code value will be the first match in the string
-    this.value = zip.match(pattern)[0];
-    this.valueOf = function() {
-      return this.value
-    };
-    this.toString = function() {
-      return String(this.value)
-    };
-  } else {
-    throw new ZipCodeFormatException(zip);
+    this.value = match[0];
+  }
+  valueOf() {
+    return this.value;
+  }
+  toString() {
+    return this.value;
   }
 }
 
-function ZipCodeFormatException(value) {
-  this.value = value;
-  this.message = 'does not conform to the expected format for a zip code';
-  this.toString = function() {
-    return this.value + this.message;
-  };
+class ZipCodeFormatException extends Error {
+  constructor(zip) {
+    super(`${zip} does not conform to the expected format for a zip code`);
+  }
 }
 
 /*
@@ -135,11 +138,8 @@ function verifyZipCode(z) {
   try {
     z = new ZipCode(z);
   } catch (e) {
-    if (e instanceof ZipCodeFormatException) {
-      return ZIPCODE_INVALID;
-    } else {
-      return ZIPCODE_UNKNOWN_ERROR;
-    }
+    const isInvalidCode = e instanceof ZipCodeFormatException;
+    return isInvalidCode ? ZIPCODE_INVALID : ZIPCODE_UNKNOWN_ERROR;
   }
   return z;
 }

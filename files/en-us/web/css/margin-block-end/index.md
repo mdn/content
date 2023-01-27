@@ -1,11 +1,11 @@
 ---
 title: margin-block-end
 slug: Web/CSS/margin-block-end
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - NeedsContent
   - Reference
   - margin-block
@@ -13,6 +13,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.margin-block-end
 ---
+
 {{CSSRef}}
 
 The **`margin-block-end`** [CSS](/en-US/docs/Web/CSS) property defines the logical block end margin of an element, which maps to a physical margin depending on the element's writing mode, directionality, and text orientation.
@@ -34,6 +35,7 @@ margin-block-end: auto;
 margin-block-end: inherit;
 margin-block-end: initial;
 margin-block-end: revert;
+margin-block-end: revert-layer;
 margin-block-end: unset;
 ```
 
@@ -95,5 +97,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - The mapped physical properties: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

@@ -1,6 +1,7 @@
 ---
 title: XRViewport.width
 slug: Web/API/XRViewport/width
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -21,6 +22,7 @@ tags:
   - width
 browser-compat: api.XRViewport.width
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRViewport")}} property

@@ -1,6 +1,7 @@
 ---
 title: Intl.ListFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
+page-type: javascript-instance-method
 tags:
   - Internationalization
   - Intl
@@ -12,15 +13,18 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.ListFormat.formatToParts
 ---
+
 {{JSRef}}
 
 The **`Intl.ListFormat.prototype.formatToParts()`** method
 returns an {{jsxref("Array")}} of objects representing the different components that
 can be used to format a list of values in a locale-aware fashion.
 
+{{EmbedInteractiveExample("pages/js/intl-listformat-prototype-formattoparts.html")}}
+
 ## Syntax
 
-```js
+```js-nolint
 formatToParts(list)
 ```
 
@@ -42,8 +46,8 @@ formatted string.
 
 Each element of the resulting array has two properties: `type` and
 `value`. The `type` property may be either
-"`element`", which refers to a value from the list, or
-"`literal`" which refers to a linguistic construct. The `value`
+`"element"`, which refers to a value from the list, or
+`"literal"` which refers to a linguistic construct. The `value`
 property gives the content, as a string, of the token.
 
 The locale and style options used for formatting are given when constructing the

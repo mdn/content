@@ -11,6 +11,7 @@ tags:
   - captivePortal
 browser-compat: webextensions.api.captivePortal
 ---
+
 {{AddonSidebar}}
 
 Determine the captive portal state of the user's connection. A captive portal is a web page displayed when a user first connects to a Wi-Fi network. The user provides information or acts on the captive portal web page to gain broader access to network resources, such as accepting terms and conditions or making a payment.
@@ -42,7 +43,8 @@ To use this API you need to have the "captivePortal" [permission](/en-US/docs/Mo
 
 {{WebExtExamples("h2")}}
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -69,4 +71,4 @@ To use this API you need to have the "captivePortal" [permission](/en-US/docs/Mo
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

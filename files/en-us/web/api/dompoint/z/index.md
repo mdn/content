@@ -1,6 +1,7 @@
 ---
 title: DOMPoint.z
 slug: Web/API/DOMPoint/z
+page-type: web-api-instance-property
 tags:
   - API
   - Coordinate
@@ -16,6 +17,7 @@ tags:
   - z
 browser-compat: api.DOMPoint.z
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPoint`** interface's
@@ -26,13 +28,7 @@ Unless transforms have changed the orientation, a `z` of 0 is
 the plane of the screen, with positive values extending outward toward the user from the
 screen, and negative values receding into the distance behind the screen.
 
-## Syntax
-
-```js
-var zPos = DOMPoint.z;
-```
-
-### Value
+## Value
 
 A double-precision floating-point value indicating the _z_ coordinate's value
 for the point. This value is **unrestricted**, meaning that it is allowed

@@ -1,6 +1,7 @@
 ---
 title: '<var>: The Variable element'
 slug: Web/HTML/Element/var
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -15,11 +16,84 @@ tags:
 browser-compat: html.elements.var
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<var>`** [HTML](/en-US/docs/Web/HTML) element represents the name of a variable in a mathematical expression or a programming context. It's typically presented using an italicized version of the current typeface, although that behavior is browser-dependent.
 
 {{EmbedInteractiveExample("pages/tabbed/var.html", "tabbed-shorter")}}
+
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Usage notes
+
+### Related elements
+
+Other elements that are used in contexts in which `<var>` is commonly used include:
+
+- {{HTMLElement("code")}}: The HTML Code element
+- {{HTMLElement("kbd")}}: The HTML Keyboard input element
+- {{HTMLElement("samp")}}: The HTML Sample Output element
+
+If you encounter code that is mistakenly using `<var>` for style purposes rather than semantic purposes, you should either use a {{HTMLElement("span")}} with appropriate CSS or, an appropriate semantic element among the following:
+
+- {{HTMLElement("em")}}
+- {{HTMLElement("i")}}
+- {{HTMLElement("q")}}
+
+### Default style
+
+Most browsers apply {{cssxref("font-style")}} to `"italic"` when rendering `<var>`. This can be overridden in CSS, like this:
+
+```css
+var {
+  font-style: normal;
+}
+```
+
+## Examples
+
+### Basic example
+
+Here's a simple example, using `<var>` to denote variable names in a mathematical equation.
+
+```html
+<p>A simple equation: <var>x</var> = <var>y</var> + 2</p>
+```
+
+The output:
+
+{{EmbedLiveSample("Basic_example", 650,80)}}
+
+### Overriding the default style
+
+Using CSS, you can override the default style for the `<var>` element. In this example, variable names are rendered using bold Courier if it's available, otherwise it falls back to the default monospace font.
+
+#### CSS
+
+```css
+var {
+  font: bold 15px "Courier", "Courier New", monospace;
+}
+```
+
+#### HTML
+
+```html
+<p>
+  The variables <var>minSpeed</var> and <var>maxSpeed</var> control the minimum
+  and maximum speed of the apparatus in revolutions per minute (RPM).
+</p>
+```
+
+This HTML uses `<var>` to enclose the names of two variables.
+
+#### Result
+
+{{EmbedLiveSample("Overriding_the_default_style", 650, 120)}}
+
+## Technical summary
 
 <table class="properties">
   <tbody>
@@ -77,77 +151,6 @@ The **`<var>`** [HTML](/en-US/docs/Web/HTML) element represents the name of a va
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Usage notes
-
-### Related elements
-
-Other elements that are used in contexts in which `<var>` is commonly used include:
-
-- {{HTMLElement("code")}}: The HTML Code element
-- {{HTMLElement("kbd")}}: The HTML Keyboard input element
-- {{HTMLElement("samp")}}: The HTML Sample Output element
-
-If you encounter code that is mistakenly using `<var>` for style purposes rather than semantic purposes, you should either use a {{HTMLElement("span")}} with appropriate CSS or, an appropriate semantic element among the following:
-
-- {{HTMLElement("em")}}
-- {{HTMLElement("i")}}
-- {{HTMLElement("q")}}
-
-### Default style
-
-Most browsers apply {{cssxref("font-style")}} to `"italic"` when rendering `<var>`. This can be overridden in CSS, like this:
-
-```css
-var {
-  font-style: normal;
-}
-```
-
-## Examples
-
-### Basic example
-
-Here's a simple example, using `<var>` to denote variable names in a mathematical equation.
-
-```html
-<p>A simple equation:
-  <var>x</var> = <var>y</var> + 2 </p>
-```
-
-The output:
-
-{{EmbedLiveSample("Basic_example", 650,80)}}
-
-### Overriding the default style
-
-Using CSS, you can override the default style for the `<var>` element. In this example, variable names are rendered using bold Courier if it's available, otherwise it falls back to the default monospace font.
-
-#### CSS
-
-```css
-var {
-  font: bold 15px "Courier", "Courier New", monospace;
-}
-```
-
-#### HTML
-
-```html
-<p>The variables <var>minSpeed</var> and <var>maxSpeed</var> control
-   the minimum and maximum speed of the apparatus in revolutions
-   per minute (RPM).</p>
-```
-
-This HTML uses `<var>` to enclose the names of two variables.
-
-#### Result
-
-{{EmbedLiveSample("Overriding_the_default_style", 650, 120)}}
 
 ## Specifications
 

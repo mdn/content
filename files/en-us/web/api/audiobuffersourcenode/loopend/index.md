@@ -1,6 +1,7 @@
 ---
 title: AudioBufferSourceNode.loopEnd
 slug: Web/API/AudioBufferSourceNode/loopEnd
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -13,6 +14,7 @@ tags:
   - sound
 browser-compat: api.AudioBufferSourceNode.loopEnd
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `loopEnd` property of the {{ domxref("AudioBufferSourceNode") }}
@@ -22,15 +24,7 @@ indicated by the {{domxref("AudioBufferSourceNode.loopStart", "loopStart")}} pro
 This is only used if the {{domxref("AudioBufferSourceNode.loop", "loop")}} property is
 `true`.
 
-## Syntax
-
-```js
-AudioBufferSourceNode.loopEnd = endOffsetInSeconds;
-
-var endOffsetInSeconds = AudioBufferSourceNode.loopEnd;
-```
-
-### Value
+## Value
 
 A floating-point number indicating the offset, in seconds, into the audio buffer at
 which each loop will loop return to the beginning of the loop (that is, the current play
@@ -40,7 +34,7 @@ only used if the {{domxref("AudioBufferSourceNode.loop", "loop")}} property is
 
 The default value is 0.
 
-## Example
+## Examples
 
 In this example, the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} function is used to
 decode an audio track and put it into an {{domxref("AudioBufferSourceNode")}}. Buttons
@@ -62,14 +56,16 @@ function getData() {
   source = audioCtx.createBufferSource();
   request = new XMLHttpRequest();
 
-  request.open('GET', 'viper.ogg', true);
+  request.open("GET", "viper.ogg", true);
 
-  request.responseType = 'arraybuffer';
+  request.responseType = "arraybuffer";
 
-  request.onload = function() {
-    var audioData = request.response;
+  request.onload = () => {
+    const audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(
+      audioData,
+      (buffer) => {
         myBuffer = buffer;
         songLength = buffer.duration;
         source.buffer = myBuffer;
@@ -77,28 +73,28 @@ function getData() {
         source.connect(audioCtx.destination);
         source.loop = true;
 
-        loopstartControl.setAttribute('max', Math.floor(songLength));
-        loopendControl.setAttribute('max', Math.floor(songLength));
+        loopstartControl.setAttribute("max", Math.floor(songLength));
+        loopendControl.setAttribute("max", Math.floor(songLength));
       },
 
-      function(e){"Error with decoding audio data" + e.err});
-
-  }
+      (e) => console.error(`Error with decoding audio data: ${e.err}`)
+    );
+  };
 
   request.send();
 }
 
-  ...
+// …
 
-loopstartControl.oninput = function() {
+loopstartControl.oninput = () => {
   source.loopStart = loopstartControl.value;
   loopstartValue.innerHTML = loopstartControl.value;
-}
+};
 
-loopendControl.oninput = function() {
+loopendControl.oninput = () => {
   source.loopEnd = loopendControl.value;
   loopendValue.innerHTML = loopendControl.value;
-}
+};
 ```
 
 ## Specifications

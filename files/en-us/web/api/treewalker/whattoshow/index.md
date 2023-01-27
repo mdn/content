@@ -1,6 +1,7 @@
 ---
 title: TreeWalker.whatToShow
 slug: Web/API/TreeWalker/whatToShow
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -8,6 +9,7 @@ tags:
   - TreeWalker
 browser-compat: api.TreeWalker.whatToShow
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.whatToShow`** read-only property returns a
@@ -110,24 +112,22 @@ children may be included, if relevant. The possible values are:
   </tbody>
 </table>
 
-## Syntax
+## Value
+
+A bitmask.
+
+## Examples
 
 ```js
-nodeTypes = treeWalker.whatToShow;
-```
-
-## Example
-
-```js
-var treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT + NodeFilter.SHOW_COMMENT + NodeFilter.SHOW_TEXT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+const treeWalker = document.createTreeWalker(
+  document.body,
+  NodeFilter.SHOW_ELEMENT + NodeFilter.SHOW_COMMENT + NodeFilter.SHOW_TEXT,
+  { acceptNode: (node) => NodeFilter.FILTER_ACCEPT },
+  false,
 );
-if( (treeWalker.whatToShow == NodeFilter.SHOW_ALL) ||
-    (treeWalker.whatToShow % (NodeFilter.SHOW_COMMENT*2)) >= NodeFilter.SHOW_COMMENT) {
-    // treeWalker will show comments
+if ((treeWalker.whatToShow === NodeFilter.SHOW_ALL) ||
+    (treeWalker.whatToShow % (NodeFilter.SHOW_COMMENT * 2)) >= NodeFilter.SHOW_COMMENT) {
+  // treeWalker will show comments
 }
 ```
 

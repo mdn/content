@@ -1,6 +1,7 @@
 ---
 title: Simple color animation
 slug: Web/API/WebGL_API/By_example/Simple_color_animation
+page-type: guide
 tags:
   - Beginner
   - Example
@@ -9,6 +10,7 @@ tags:
   - Tutorial
   - WebGL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}
 
 A very basic color animation created using {{Glossary("WebGL")}}, performed by clearing the drawing buffer with a different random color every second.
@@ -23,35 +25,35 @@ This time we put the {{Glossary("WebGL")}} function calls within a timer event h
 
 ```html
 <p>A simple WebGL program that shows color animation.</p>
-<p>You can click the button below to toggle the
-    color animation on or off.</p>
-<canvas id="canvas-view">Your browser does not seem to support
-    HTML5 canvas.</canvas>
+<p>You can click the button below to toggle the color animation on or off.</p>
+<canvas id="canvas-view">
+  Your browser does not seem to support HTML canvas.
+</canvas>
 <button id="animation-onoff">
   Press here to
-<strong>[verb goes here]</strong>
+  <strong>[verb goes here]</strong>
   the animation
 </button>
 ```
 
 ```css
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  display : block;
-  width : 280px;
-  height : 210px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  display: block;
+  width: 280px;
+  height: 210px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 button {
-  display : inline-block;
-  font-size : inherit;
-  margin : auto;
-  padding : 0.6em;
+  display: inline-block;
+  font-size: inherit;
+  margin: auto;
+  padding: 0.6em;
 }
 ```
 
@@ -61,11 +63,11 @@ window.addEventListener("load", function setupAnimation (evt) {
   window.removeEventListener(evt.type, setupAnimation, false);
 
   // A variable to hold a timer that drives the animation.
-  var timer;
+  let timer;
 
   // Click event handlers.
-  var button = document.querySelector("#animation-onoff");
-  var verb = document.querySelector("strong");
+  const button = document.querySelector("#animation-onoff");
+  const verb = document.querySelector("strong");
   function startAnimation(evt) {
     button.removeEventListener(evt.type, startAnimation, false);
     button.addEventListener("click", stopAnimation, false);
@@ -87,10 +89,10 @@ window.addEventListener("load", function setupAnimation (evt) {
   // handlers for canvas and button.
   stopAnimation({type: "click"});
 
-  var gl;
+  let gl;
   function drawAnimation () {
     if (!gl) {
-      var canvas = document.getElementById("canvas-view");
+      const canvas = document.getElementById("canvas-view");
       gl = canvas.getContext("webgl")
         ||canvas.getContext("experimental-webgl");
       if (!gl) {
@@ -104,7 +106,7 @@ window.addEventListener("load", function setupAnimation (evt) {
     }
 
     // Get a random color value using a helper function.
-    var color = getRandomColor();
+    const color = getRandomColor();
     // Set the WebGLRenderingContext clear color to the
     // random color.
     gl.clearColor(color[0], color[1], color[2], 1.0);

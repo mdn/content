@@ -1,6 +1,7 @@
 ---
 title: CSSTransformValue.is2D
 slug: Web/API/CSSTransformValue/is2D
+page-type: web-api-instance-property
 tags:
   - API
   - CSS
@@ -12,6 +13,7 @@ tags:
   - is2D
 browser-compat: api.CSSTransformValue.is2D
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The read-only **`is2D`** property of the
@@ -21,13 +23,7 @@ In the case of the `CSSTransformValue` this property returns
 true unless any of the individual functions return false for `Is2D`, in which
 case it returns false.
 
-## Syntax
-
-```js
-var is2D = CSSTransformValue.is2D;
-```
-
-### Return value
+## Value
 
 A boolean. True indicates that the transform is a 2D transform, false that it is a 3D
 transform.

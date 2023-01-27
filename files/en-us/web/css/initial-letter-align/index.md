@@ -1,6 +1,7 @@
 ---
 title: initial-letter-align
 slug: Web/CSS/initial-letter-align
+page-type: css-property
 tags:
   - Align
   - CSS
@@ -15,6 +16,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.initial-letter-align
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`initial-letter-align`** CSS property specifies the alignment of initial letters within a paragraph.
@@ -30,6 +32,7 @@ initial-letter-align: ideographic;
 initial-letter-align: inherit;
 initial-letter-align: initial;
 initial-letter-align: revert;
+initial-letter-align: revert-layer;
 initial-letter-align: unset;
 ```
 

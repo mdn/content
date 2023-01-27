@@ -1,6 +1,7 @@
 ---
 title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - Iterator
@@ -10,6 +11,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.values
 ---
+
 {{JSRef}}
 
 The **`values()`** method returns a new [Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that
@@ -24,7 +26,7 @@ contains the values for each element in the `Set` object in insertion order.
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 
@@ -38,12 +40,12 @@ A new iterator object containing the values for each element in the given
 ### Using values()
 
 ```js
-var mySet = new Set();
-mySet.add('foo');
-mySet.add('bar');
-mySet.add('baz');
+const mySet = new Set();
+mySet.add("foo");
+mySet.add("bar");
+mySet.add("baz");
 
-var setIter = mySet.values();
+const setIter = mySet.values();
 
 console.log(setIter.next().value); // "foo"
 console.log(setIter.next().value); // "bar"
@@ -61,3 +63,4 @@ console.log(setIter.next().value); // "baz"
 ## See also
 
 - {{jsxref("Set.prototype.entries()")}}
+- {{jsxref("Set.prototype.keys()")}}

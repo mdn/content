@@ -30,10 +30,6 @@ Content:Learn:
   - files/en-us/learn/**/*
   - files/en-us/web/guide/**/*
   - files/en-us/web/tutorials/**/*
-Content:Learn:Django:
-  - files/en-us/learn/server-side/django/**/*
-Content:Learn:Express:
-  - files/en-us/learn/server-side/express_nodejs/**/*
 Content:Other:
   - files/en-us/games/**/*
   - files/en-us/mdn/**/*

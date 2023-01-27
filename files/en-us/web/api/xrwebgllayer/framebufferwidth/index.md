@@ -1,6 +1,7 @@
 ---
 title: XRWebGLLayer.framebufferWidth
 slug: Web/API/XRWebGLLayer/framebufferWidth
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -20,9 +21,11 @@ tags:
   - augmented
   - framebufferWidth
   - width
+  - Experimental
 browser-compat: api.XRWebGLLayer.framebufferWidth
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only {{domxref("XRWebGLLayer")}} property
 **`framebufferWidth`** specifies the width of the framebuffer,

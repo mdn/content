@@ -6,6 +6,7 @@ tags:
   - Learning
   - Web Performance
 ---
+
 {{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/javascript_performance", "Learn/Performance/CSS", "Learn/Performance")}}
 
 HTML is by default fast and accessible. It is our job, as developers, to ensure that we preserve these two properties when creating or editing HTML code. Complications can occur when, for example, the file size of a {{htmlelement("video")}} embed is too large, or when a webpage is not optimized for mobile devices. This module intends to walk you through the key HTML performance features that can drastically improve the quality of your webpage.
@@ -44,7 +45,8 @@ HTML is by default fast and accessible. It is our job, as developers, to ensure 
 
   - [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 
-- [Preloading content with `rel="preload"`](/en-US/docs/Web/HTML/Preloading_content) - [(https://w3c.github.io/preload/](https://w3c.github.io/preload/))
+- [Preloading content with `rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload)
+- [(https://w3c.github.io/preload/](https://w3c.github.io/preload/))
 - `async` / `defer` attributes
 - {{htmlelement('iframe')}}
 - {{htmlelement('object')}}
@@ -63,12 +65,13 @@ HTML is by default fast and accessible. It is our job, as developers, to ensure 
 - [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
 - [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
 - [Multimedia: video](/en-US/docs/Learn/Performance/video)
-- [JavaScript performance best practices](/en-US/docs/Learn/Performance/JavaScript).
+- [JavaScript performance](/en-US/docs/Learn/Performance/JavaScript)
 - [HTML performance features](/en-US/docs/Learn/Performance/HTML)
 - [CSS performance features](/en-US/docs/Learn/Performance/CSS)
 - [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)
 - [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
-- [Focusing on performance](/en-US/docs/Learn/Performance/business_case_for_performance)
+- [The business case for web performance](/en-US/docs/Learn/Performance/business_case_for_performance)
+- [Web performance resources](/en-US/docs/Learn/Performance/Web_Performance_Basics)
 
 ## See also
 
@@ -79,4 +82,5 @@ HTML is by default fast and accessible. It is our job, as developers, to ensure 
 
   - [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 
-- [Preloading content with `rel="preload"`](/en-US/docs/Web/HTML/Preloading_content) - [(https://w3c.github.io/preload/](https://w3c.github.io/preload/))
+- [Preloading content with `rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload)
+- [(https://w3c.github.io/preload/](https://w3c.github.io/preload/))

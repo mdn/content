@@ -1,6 +1,7 @@
 ---
 title: Animation()
 slug: Web/API/Animation/Animation
+page-type: web-api-constructor
 tags:
   - API
   - Animation
@@ -10,14 +11,17 @@ tags:
   - web animations api
 browser-compat: api.Animation.Animation
 ---
+
 {{ APIRef("Web Animations API") }}
 
 The **`Animation()`** constructor of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a new `Animation` object instance.
 
 ## Syntax
 
-```js
-var animation = new Animation([effect][, timeline]);
+```js-nolint
+new Animation()
+new Animation(effect)
+new Animation(effect, timeline)
 ```
 
 ### Parameters
@@ -32,7 +36,10 @@ var animation = new Animation([effect][, timeline]);
 In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), the `Animation()` constructor is used to create an `Animation` for the `rabbitDownKeyframes` using the document's `timeline`:
 
 ```js
-var rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
+const rabbitDownAnimation = new Animation(
+  rabbitDownKeyframes,
+  document.timeline
+);
 ```
 
 ## Specifications

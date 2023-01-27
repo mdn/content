@@ -1,6 +1,7 @@
 ---
 title: ChannelMergerNode
 slug: Web/API/ChannelMergerNode
+page-type: web-api-interface
 tags:
   - API
   - ChannelMergerNode
@@ -9,11 +10,12 @@ tags:
   - Web Audio API
 browser-compat: api.ChannelMergerNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `ChannelMergerNode` interface, often used in conjunction with its opposite, {{domxref("ChannelSplitterNode")}}, reunites different mono inputs into a single output. Each input is used to fill a channel of the output. This is useful for accessing each channels separately, e.g. for performing channel mixing where gain must be separately controlled on each channel.
 
-![](webaudiomerger.png)
+![Default channel merger node with six mono inputs combining to form a single output.](webaudiomerger.png)
 
 If `ChannelMergerNode` has one single output, but as many inputs as there are channels to merge; the number of inputs is defined as a parameter of its constructor and the call to {{domxref("BaseAudioContext/createChannelMerger", "AudioContext.createChannelMerger()")}}. In the case that no value is given, it will default to `6`.
 
@@ -33,7 +35,7 @@ Using a `ChannelMergerNode`, it is possible to create outputs with more channels
     </tr>
     <tr>
       <th scope="row">Channel count mode</th>
-      <td><code>"max"</code></td>
+      <td><code>"explicit"</code></td>
     </tr>
     <tr>
       <th scope="row">Channel count</th>
@@ -51,11 +53,11 @@ Using a `ChannelMergerNode`, it is possible to create outputs with more channels
 - {{domxref("ChannelMergerNode.ChannelMergerNode()", "ChannelMergerNode()")}}
   - : Creates a new `ChannelMergerNode` object instance.
 
-## Properties
+## Instance properties
 
 _No specific property; inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_.
 

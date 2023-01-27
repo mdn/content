@@ -7,6 +7,7 @@ tags:
   - header
 browser-compat: http.headers.From
 ---
+
 {{HTTPSidebar}}
 
 The **`From`** request header contains an Internet email
@@ -33,7 +34,7 @@ robot is sending excessive, unwanted, or invalid requests.
 
 ## Syntax
 
-```
+```http
 From: <email>
 ```
 
@@ -44,7 +45,7 @@ From: <email>
 
 ## Examples
 
-```
+```http
 From: webmaster@example.org
 ```
 

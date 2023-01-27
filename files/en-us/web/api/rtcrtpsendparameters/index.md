@@ -1,6 +1,7 @@
 ---
 title: RTCRtpSendParameters
 slug: Web/API/RTCRtpSendParameters
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -20,11 +21,12 @@ tags:
   - sender
 browser-compat: api.RTCRtpSendParameters
 ---
+
 {{APIRef("WebRTC")}}
 
 The WebRTC API's **`RTCRtpSendParameters`** dictionary is used to specify the parameters for an {{domxref("RTCRtpSender")}} when calling its {{domxref("RTCRtpSender.setParameters", "setParameters()")}} method.
 
-## Properties
+## Instance properties
 
 _In addition to the properties below, `RTCRtpSendParameters` inherits the properties from the {{domxref("RTCRtpParameters")}} interface._
 
@@ -36,9 +38,7 @@ _In addition to the properties below, `RTCRtpSendParameters` inherits the proper
 ### Obsolete properties
 
 - {{domxref("RTCRtpSendParameters.degradationPreference", "degradationPreference")}} {{deprecated_inline}}
-  - : Specifies the preferred way the WebRTC layer should handle optimizing bandwidth against quality in constrained-bandwidth situations; the value comes from the {{domxref("RTCDegradationPreference")}} enumerated string type, and the default is `balanced`.
-- {{domxref("RTCRtpSendParameters,priority", "priority")}} {{deprecated_inline}}
-  - : A string from the {{domxref("RTCPriorityType")}} enumerated type which indicates the encoding's priority. The default value is `low`.
+  - : Specifies the preferred way the WebRTC layer should handle optimizing bandwidth against quality in constrained-bandwidth situations; the possible values are `maintain-framerate`, `maintain-resolution`, or `balanced`. The default value is `balanced`.
 
 ## Specifications
 

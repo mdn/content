@@ -7,6 +7,7 @@ tags:
   - Request method
 browser-compat: http.methods.OPTIONS
 ---
+
 {{HTTPSidebar}}
 
 The **HTTP `OPTIONS` method** requests permitted communication options for a given URL or server. A client can specify a URL with this method, or an asterisk (`*`) to refer to the entire server.
@@ -42,7 +43,7 @@ The **HTTP `OPTIONS` method** requests permitted communication options for a giv
 
 ## Syntax
 
-```
+```http
 OPTIONS /index.html HTTP/1.1
 OPTIONS * HTTP/1.1
 ```
@@ -59,7 +60,7 @@ curl -X OPTIONS https://example.org -i
 
 The response then contains an {{HTTPHeader("Allow")}} header that holds the allowed methods:
 
-```
+```http
 HTTP/1.1 204 No Content
 Allow: OPTIONS, GET, HEAD, POST
 Cache-Control: max-age=604800
@@ -74,7 +75,7 @@ In [CORS](/en-US/docs/Web/HTTP/CORS), a [preflight request](/en-US/docs/Glossary
 - The {{HTTPHeader("Access-Control-Request-Method")}} header sent in the preflight request tells the server that when the actual request is sent, it will have a {{HTTPMethod("POST")}} request method.
 - The {{HTTPHeader("Access-Control-Request-Headers")}} header tells the server that when the actual request is sent, it will have the `X-PINGOTHER` and `Content-Type` headers.
 
-```
+```http
 OPTIONS /resources/post-here/ HTTP/1.1
 Host: bar.example
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -97,7 +98,7 @@ The server now can respond if it will accept a request under these circumstances
 - {{HTTPHeader("Access-Control-Max-Age")}}
   - : The above permissions may be cached for 86,400 seconds (1 day).
 
-```
+```http
 HTTP/1.1 204 No Content
 Date: Mon, 01 Dec 2008 01:15:39 GMT
 Server: Apache/2.0.61 (Unix)

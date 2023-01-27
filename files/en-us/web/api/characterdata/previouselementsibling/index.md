@@ -1,12 +1,14 @@
 ---
 title: CharacterData.previousElementSibling
 slug: Web/API/CharacterData/previousElementSibling
+page-type: web-api-instance-property
 tags:
   - Property
   - Read-only
   - Reference
 browser-compat: api.Element.previousElementSibling
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`previousElementSibling`** of the {{domxref("CharacterData")}} interface
@@ -30,17 +32,16 @@ SOME TEXT
 
 ```js
 // Initially set node to the Text node with `SOME TEXT`
-let node = document.getElementById('div-02').nextSibling;
+let node = document.getElementById("div-02").nextSibling;
 
-let result = 'Previous element siblings of SOME TEXT:\n';
+let result = "Previous element siblings of SOME TEXT:\n";
 
 while (node) {
-  result += node.nodeName + '\n';
+  result += `${node.nodeName}\n`;
   node = node.previousElementSibling;
 }
 
-document.getElementsByTagName('pre')[0].textContent = result;
-
+document.querySelector("pre").textContent = result;
 ```
 
 {{EmbedLiveSample("Example", "100%", "200")}}

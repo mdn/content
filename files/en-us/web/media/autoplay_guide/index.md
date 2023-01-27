@@ -19,6 +19,9 @@ tags:
   - muted
   - play
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
+
 Automatically starting the playback of audio (or videos with audio tracks) immediately upon page load can be an unwelcome surprise to users. While autoplay of media serves a useful purpose, it should be used carefully and only when needed. In order to give users control over this, browsers often provide various forms of autoplay blocking. In this guide, we'll cover autoplay functionality in the various media and Web Audio APIs, including a brief overview of how to use autoplay and how to work with browsers to handle autoplay blocking gracefully.
 
 Autoplay blocking is _not_ applied to {{HTMLElement("video")}} elements when the source media does not have an audio track, or if the audio track is muted. Media with an active audio track are considered to be **audible**, and autoplay blocking applies to them. **Inaudible** media are not affected by autoplay blocking.
@@ -30,7 +33,7 @@ The term **autoplay** refers to any feature that causes audio to begin to play w
 That means that both of the following are considered autoplay behavior, and are therefore subject to the browser's autoplay blocking policy:
 
 ```html
-<audio src="/music.mp3" autoplay>
+<audio src="/music.mp3" autoplay></audio>
 ```
 
 and
@@ -53,17 +56,17 @@ As a general rule, you can assume that media will be allowed to autoplay only if
 - The audio is muted or its volume is set to 0
 - The user has interacted with the site (by clicking, tapping, pressing keys, etc.)
 - If the site has been allowlisted; this may happen either automatically if the browser determines that the user engages with media frequently, or manually through preferences or other user interface features
-- If the autoplay feature policy is used to grant autoplay support to an {{HTMLElement("iframe")}} and its document.
+- If the autoplay [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) is used to grant autoplay support to an {{HTMLElement("iframe")}} and its document.
 
 Otherwise, the playback will likely be blocked. The exact situations that result in blocking, and the specifics of how sites become allowlisted vary from browser to browser, but the above are good guidelines to go by.
 
-For details, see the auto-play policies for [Google Chrome](https://developer.chrome.com/blog/autoplay/) and [WebKit](https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/).
+For details, see the autoplay policies for [Google Chrome](https://developer.chrome.com/blog/autoplay/) and [WebKit](https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/).
 
 > **Note:** Put another way, playback of any media that includes audio is generally blocked if the playback is programmatically initiated in a tab which has not yet had any user interaction. Browsers may additionally choose to block under other circumstances.
 
 ## Autoplay of media elements
 
-Now that we've covered what autoplay is and what can prevent autoplay from being allowed, we'll look at how your web site or app can automatically play media upon page load, how to detect when autoplay fails to occur, and tips for coping when autoplay is denied by the browser.
+Now that we've covered what autoplay is and what can prevent autoplay from being allowed, we'll look at how your website or app can automatically play media upon page load, how to detect when autoplay fails to occur, and tips for coping when autoplay is denied by the browser.
 
 ### The autoplay attribute
 
@@ -79,35 +82,35 @@ An {{HTMLElement("audio")}} element using the `autoplay` attribute might look li
 
 ```html
 <audio id="musicplayer" autoplay>
-  <source src="/music/chapter1.mp3">
+  <source src="/music/chapter1.mp3" />
 </audio>
 ```
 
 #### Example 2: Detecting autoplay failure
 
-If you rely on autoplay for anything important, or if autoplay failure will impact your app in any way, you will probably want to be able to tell when it autoplay didn't begin. Unfortunately, in the case of the {{htmlattrxref("autoplay", "audio")}} attribute, recognizing whether or not autoplay successfully began is tricky. There's not an event triggered when autoplay fails. Nor is there an exception thrown or a callback you can set up or even a flag on the media element that tells you if autoplay worked. All you can really do is examine a few values and make an educated guess as to whether or not autoplay worked.
+If you rely on autoplay for anything important, or if autoplay failure will impact your app in any way, you will probably want to be able to tell when autoplay didn't begin. Unfortunately, in the case of the {{htmlattrxref("autoplay", "audio")}} attribute, recognizing whether or not autoplay successfully began is tricky. There's not an event triggered when autoplay fails. Nor is there an exception thrown or a callback you can set up or even a flag on the media element that tells you if autoplay worked. All you can really do is examine a few values and make an educated guess as to whether or not autoplay worked.
 
-A better approach, if you're able to adjust the direction you look at things from, is to instead rely on knowing that playback of the media has successfully started, instead of when it fails to start. You can do this easily, by listening for the {{event("play")}} event to be fired on the media element.
+A better approach, if you're able to adjust the direction you look at things from, is to instead rely on knowing that playback of the media has successfully started, instead of when it fails to start. You can do this easily, by listening for the {{domxref("HTMLMediaElement/play_event", "play")}} event to be fired on the media element.
 
 The `play` event is sent both when the media is resumed after being paused _and_ when autoplay occurs. That means that the first time the `play` event is fired, you know your media is being started for the first time after the page is opened.
 
 Consider this HTML for a media element:
 
 ```html
-<video src="myvideo.mp4" autoplay onplay="handleFirstPlay(event)">
+<video src="myvideo.mp4" autoplay onplay="handleFirstPlay(event)"></video>
 ```
 
-Here we have a {{HTMLElement("video")}} element whose {{htmlattrxref("autoplay", "video")}} attribute is set, with an {{domxref("GlobalEventHandlers.onplay", "onplay")}} event handler set up; the event is handled by a function called `handleFirstPlay()`, which receives as input the `play` event.
+Here we have a {{HTMLElement("video")}} element whose {{htmlattrxref("autoplay", "video")}} attribute is set, with an {{domxref("HTMLMediaElement.play_event", "onplay")}} event handler set up; the event is handled by a function called `handleFirstPlay()`, which receives as input the `play` event.
 
 `handleFirstPlay()` looks like this:
 
 ```js
 let hasPlayed = false;
 function handleFirstPlay(event) {
-  if(hasPlayed === false) {
+  if (!hasPlayed) {
     hasPlayed = true;
 
-    let vid = event.target;
+    const vid = event.target;
 
     vid.onplay = null;
 
@@ -146,16 +149,18 @@ You might use code like this to accomplish the job:
 let startPlayPromise = videoElem.play();
 
 if (startPlayPromise !== undefined) {
-  startPlayPromise.then(() => {
-    // Start whatever you need to do only after playback
-    // has begun.
-  }).catch(error => {
-    if (error.name === "NotAllowedError") {
-      showPlayButton(videoElem);
-    } else {
-      // Handle a load or playback error
-    }
-  });
+  startPlayPromise
+    .then(() => {
+      // Start whatever you need to do only after playback
+      // has begun.
+    })
+    .catch((error) => {
+      if (error.name === "NotAllowedError") {
+        showPlayButton(videoElem);
+      } else {
+        // Handle a load or playback error
+      }
+    });
 }
 ```
 
@@ -171,95 +176,90 @@ If you want to start playing the video after the first interaction with the page
 
 ```js
 let playAttempt = setInterval(() => {
-  videoElem.play()
+  videoElem
+    .play()
     .then(() => {
       clearInterval(playAttempt);
     })
-    .catch(error => {
-      console.log('Unable to play the video, User has not interacted yet.');
+    .catch((error) => {
+      console.log("Unable to play the video, User has not interacted yet.");
     });
 }, 3000);
 ```
 
 ## Autoplay using the Web Audio API
 
-In the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), a web site or app can start playing audio using the `start()` method on a source node linked to the {{domxref("AudioContext")}}. Doing so outside the context of handling a user input event is subject to autoplay rules.
+In the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), a website or app can start playing audio using the `start()` method on a source node linked to the {{domxref("AudioContext")}}. Doing so outside the context of handling a user input event is subject to autoplay rules.
 
-_More content will come soon; autoplay blocking is still being worked on at Mozilla. If others have it already, they are welcome to pitch in with this section..._
+## The autoplay Permissions Policy
 
-## The autoplay feature policy
+In addition to the browser-side management and control over autoplay functionality described above, a web server can also express its willingness to allow autoplay to function. The {{Glossary("HTTP")}} {{HTTPHeader("Permissions-Policy")}} header's [`autoplay`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/autoplay) directive is used to control which domains, if any, can be used to autoplay media. By default, the `autoplay` Permissions Policy is set to `self`, indicating that autoplay is permitted as they're hosted on the same domain as the document.
 
-In addition to the browser-side management and control over autoplay functionality described above, a web server can also express its willingness to allow autoplay to function. The {{Glossary("HTTP")}} {{HTTPHeader("Feature-Policy")}} header's [`autoplay`](/en-US/docs/Web/HTTP/Headers/Feature-Policy/autoplay) directive is used to control which domains, if any, can be used to autoplay media. By default, the `autoplay` feature policy is set to `'self'` (_including the single quote characters_), indicating that autoplay is permitted as they're hosted on the same domain as the document.
+You can also specify an empty allowlist (`()`) to disable autoplay entirely, `*` to allow autoplay from all domains, or one or more specific origins from which media can be automatically played. These origins are separated by space characters.
 
-You can also specify `'none'` to disable autoplay entirely, `'*'` to allow autoplay from all domains, or one or more specific origins from which media can be automatically played. These origins are separated by space characters.
+> **Note:** The specified Permissions Policy applies to the document and every {{HTMLElement("iframe")}} nested within it, unless those frames include an {{htmlattrxref("allow", "iframe")}}, which sets a new Permissions Policy for that frame and all frames nested within it.
 
-> **Note:** The specified feature policy applies to the document and every {{HTMLElement("iframe")}} nested within it, unless those frames include an {{htmlattrxref("allow", "iframe")}}, which sets a new feature policy for that frame and all frames nested within it.
-
-When using the {{htmlattrxref("allow", "iframe")}} attribute on an `<iframe>` to specify a feature policy for that frame and its nested frames, you can also specify the value `'src'` to allow autoplay of media only from the same domain as that specified by the frame's {{htmlattrxref("src", "iframe")}} attribute.
+When using the {{htmlattrxref("allow", "iframe")}} attribute on an `<iframe>` to specify a Permissions Policy for that frame and its nested frames, you can also specify the value `'src'` to allow autoplay of media only from the same domain as that specified by the frame's {{htmlattrxref("src", "iframe")}} attribute.
 
 ### Example: Allowing autoplay only from the document's domain
 
-To use the {{HTTPHeader("Feature-Policy")}} header to only allow media to autoplay from the document's {{Glossary("origin")}}:
+To use the {{HTTPHeader("Permissions-Policy")}} header to only allow media to autoplay from the document's {{Glossary("origin")}}:
 
-```plain
-Feature-Policy: autoplay 'self'
+```http
+Permissions-Policy: autoplay=(self)
 ```
 
 To do the same for an {{HTMLElement("iframe")}}:
 
 ```html
-<iframe src="mediaplayer.html"
-        allow="autoplay 'src'">
-</iframe>
+<iframe src="mediaplayer.html" allow="autoplay"> </iframe>
 ```
 
 ### Example: Allowing autoplay and fullscreen mode
 
-Adding [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) permission to the previous example results in a `Feature-Policy` header like the following if fullscreen access is allowed regardless of the domain; a domain restriction can be added as well as needed.
+Adding [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) permission to the previous example results in a `Permissions-Policy` header like the following if fullscreen access is allowed regardless of the domain; a domain restriction can be added as well as needed.
 
-```plain
-Feature-Policy: autoplay 'self'; fullscreen
+```http
+Permissions-Policy: autoplay=(self), fullscreen=(self)
 ```
 
 The same permissions, grated using the `<iframe>` element's `allow` property, look like this:
 
 ```html
-<iframe src="mediaplayer.html"
-        allow="autoplay 'src'; fullscreen">
-</iframe>
+<iframe src="mediaplayer.html" allow="autoplay; fullscreen"> </iframe>
 ```
 
 ### Example: Allowing autoplay from specific sources
 
-The `Feature-Policy` header to allow media to be played from both the document's (or `<iframe>`'s) own domain and `https://example.media` looks like this:
+The `Permissions-Policy` header to allow media to be played from both the document's (or `<iframe>`'s) own domain and `https://example.media` looks like this:
 
-```plain
-Feature-Policy: autoplay 'self' https://example.media
+```http
+Permissions-Policy: autoplay=(self "https://example.media")
 ```
 
 An {{HTMLElement("iframe")}} can be written to specify that this autoplay policy should be applied to itself and any child frames would be written thusly:
 
 ```html
-<iframe width="300" height="200"
-        src="mediaplayer.html"
-        allow="autoplay 'src' https://example.media">
+<iframe
+  width="300"
+  height="200"
+  src="mediaplayer.html"
+  allow="autoplay 'src' https://example.media">
 </iframe>
 ```
 
 ### Example: Disabling autoplay
 
-Setting the `autoplay` feature policy to `'none'` disables autoplay entirely for the document or `<iframe>` and all nested frames. The HTTP header is:
+Setting the `autoplay` Permissions Policy to `()`/`none` disables autoplay entirely for the document or `<iframe>` and all nested frames. The HTTP header is:
 
-```plain
-Feature-Policy: autoplay 'none'
+```http
+Permissions-Policy: autoplay=()
 ```
 
 Using the `<iframe>`'s `allow` attribute:
 
 ```html
-<iframe src="mediaplayer.html"
-        allow="autoplay 'none'">
-</iframe>
+<iframe src="mediaplayer.html" allow="autoplay 'none'"> </iframe>
 ```
 
 ## Best practices
@@ -271,7 +271,12 @@ Tips and recommended best practices to help you make the most of working with au
 A common use case for autoplay is to automatically begin to play a video clip that goes along with an article, an advertisement, or a preview of the page's main functionality. To autoplay videos like these, you have two options: don't have an audio track, or have an audio track but configure the {{HTMLElement("video")}} element to mute the audio by default, like this:
 
 ```html
-<video src="/videos/awesomevid.webm" controls autoplay playsinline muted>
+<video
+  src="/videos/awesomevid.webm"
+  controls
+  autoplay
+  playsinline
+  muted></video>
 ```
 
 This video element is configured to include the user controls (typically play/pause, scrubbing through the video's timeline, volume control, and muting); also, since the {{htmlattrxref("muted", "video")}} attribute is included, and the {{htmlattrxref("playsinline", "video")}} attribute that is required for autoplay in Safari, the video will autoplay but with the audio muted. The user has the option, however, of re-enabling the audio by clicking on the unmute button in the controls.
@@ -283,19 +288,19 @@ Browsers may have preferences that control the way autoplay works, or how autopl
 ### Firefox
 
 - `media.allowed-to-play.enabled`
-  - : A Boolean preference which specifies whether or not the {{domxref("HTMLMediaElement.allowedToPlay")}} property is exposed to the web. This is currently `false` by default (except in nightly builds, where it's `true` by default). If this is `false`, the `allowedToPlay` property is missing from the `HTMLMediaElement` interface, and is thus not present on either {{HTMLElement("audio")}} or {{HTMLElement("video")}} elements.
+  - : A Boolean preference which specifies whether the {{domxref("HTMLMediaElement.allowedToPlay")}} property is exposed to the web. This is currently `false` by default (except in nightly builds, where it's `true` by default). If this is `false`, the `allowedToPlay` property is missing from the `HTMLMediaElement` interface, and is thus not present on either {{HTMLElement("audio")}} or {{HTMLElement("video")}} elements.
 - `media.autoplay.allow-extension-background-pages`
   - : This Boolean preference, if `true`, allows browser extensions' background scripts to autoplay audio media. Setting this value to `false` disables this capability. The default value is `true`.
 - `media.autoplay.allow-muted`
   - : A Boolean preference which if `true` (the default) allows audio media which is currently muted to be automatically played. If this has been changed to `false`, media with an audio track will not be permitted to play even if muted.
 - `media.autoplay.block-webaudio`
-  - : A Boolean preference which indicates whether or not to apply autoplay blocking to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API). The default is `false`, except on Nightly where it is `true`.
+  - : A Boolean preference which indicates whether to apply autoplay blocking to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API). The default is `false`, except on Nightly where it is `true`.
 - `media.autoplay.default`
   - : An integer preference which specifies whether per-domain configuration for autoplay support by default is allowed (`0`), blocked (`1`), or prompt-on-use (`2`). The default value is `0`.
 - `media.autoplay.enabled.user-gestures-needed` (Nightly builds only)
-  - : A Boolean preference which controls whether or not detection of user gestures is allowed to override the setting of `media.autoplay.default`. If `media.autoplay.default` is _not_ set to `0` (autoplay allowed by default), this preference being `true` allows autoplay of media with audio tracks anyway if the page has been activated by user gestures, and media that isn't audible is not restricted at all.
+  - : A Boolean preference which controls whether detection of user gestures is allowed to override the setting of `media.autoplay.default`. If `media.autoplay.default` is _not_ set to `0` (autoplay allowed by default), this preference being `true` allows autoplay of media with audio tracks anyway if the page has been activated by user gestures, and media that isn't audible is not restricted at all.
 - `media.block-autoplay-until-in-foreground`
-  - : A Boolean preference which indicates whether or not media playback is blocked when started on a background tab. The default value, `true`, means that even when otherwise available, autoplay won't take place until after a tab is brought to the foreground. This prevents the distracting situation in which a tab begins playing sound and the user can't find the tab among all their tabs and windows.
+  - : A Boolean preference which indicates whether media playback is blocked when started on a background tab. The default value, `true`, means that even when otherwise available, autoplay won't take place until after a tab is brought to the foreground. This prevents the distracting situation in which a tab begins playing sound and the user can't find the tab among all their tabs and windows.
 
 ## See also
 

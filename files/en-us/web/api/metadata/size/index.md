@@ -1,9 +1,9 @@
 ---
 title: Metadata.size
 slug: Web/API/Metadata/size
+page-type: web-api-instance-property
 tags:
   - API
-  - File System API
   - File and Directory Entries API
   - Files
   - Non-standard
@@ -12,34 +12,30 @@ tags:
   - Reference
   - metadata
   - size
+  - Experimental
 browser-compat: api.Metadata.size
 ---
-{{APIRef("File System API")}}{{Non-standard_header}}
+
+{{APIRef("File and Directory Entries API")}}{{Non-standard_header}}{{SeeCompatTable}}
 
 The read-only **`size`** property of
 the {{domxref("Metadata")}} interface specifies the size, in bytes, of the referenced
 file or other file system object on disk.
 
-## Syntax
-
-```js
-var size = Metadata.size;
-```
-
-### Value
+## Value
 
 A number indicating the size of the file in bytes.
 
-## Example
+## Examples
 
 This example checks the size of a log file and removes it if it's larger than a
 megabyte.
 
 ```js
-workingDirectory.getFile("log/important.log", {}, function(fileEntry) {
-  fileEntry.getMetadata(function(metadata) {
+workingDirectory.getFile("log/important.log", {}, (fileEntry) => {
+  fileEntry.getMetadata((metadata) => {
     if (metadata.size > 1048576) {
-      fileEntry.remove(function() {
+      fileEntry.remove(() => {
         /* log file removed; do something clever here */
       });
     }
@@ -49,7 +45,7 @@ workingDirectory.getFile("log/important.log", {}, function(fileEntry) {
 
 ## Specifications
 
-This API has no official W3C or WHATWG specification.
+This feature has been removed from all specification and is not in the process of being standardized.
 
 ## Browser compatibility
 
@@ -57,10 +53,8 @@ This API has no official W3C or WHATWG specification.
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("Metadata")}}
 - {{domxref("FileSystemEntry.getMetadata()")}}
 - {{domxref("FileSystemFileEntry")}}

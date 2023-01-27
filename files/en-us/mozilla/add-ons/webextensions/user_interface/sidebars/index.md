@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
 tags:
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 A sidebar is a pane that is displayed at the side of the browser window, next to the web page. This page describes sidebars, specifying them, designing them, and examples of use.
@@ -12,7 +13,7 @@ The browser provides a UI that enables the user to select a sidebar to display. 
 
 The browser may include a number of built-in sidebars. For example, Firefox includes a sidebar for interacting with bookmarks:
 
-![](bookmarks-sidebar.png)
+![Annotator sidebar with a box allowing the user to take notes about the page.](bookmarks-sidebar.png)
 
 Using the [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest.json key, an extension can add its own sidebar to the browser. It will be listed alongside the built-in sidebars, and the user will be able to open it using the same mechanism as for the built-in sidebars.
 
@@ -22,7 +23,7 @@ A document for a particular tab can be set using the {{WebExtAPIRef("sidebarActi
 
 ```js
 // sidebar.js
-browser.windows.getCurrent({populate: true}).then((windowInfo) => {
+browser.windows.getCurrent({ populate: true }).then((windowInfo) => {
   myWindowId = windowInfo.id;
 });
 ```

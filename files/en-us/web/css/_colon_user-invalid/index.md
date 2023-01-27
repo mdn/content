@@ -1,15 +1,18 @@
 ---
-title: ':user-invalid (:-moz-ui-invalid)'
+title: ":user-invalid (:-moz-ui-invalid)"
 slug: Web/CSS/:user-invalid
+page-type: css-pseudo-class
 tags:
   - CSS
   - CSS Selectors
   - Pseudo-class
   - Reference
   - Selector
+  - Experimental
 browser-compat: css.selectors.user-invalid
 ---
-{{CSSRef}}
+
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`:user-invalid`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any validated form element whose value isn't valid based on their [validation constraints](/en-US/docs/Learn/Forms#constraint_validation), after the user has interacted with it.
 
@@ -19,7 +22,9 @@ The `:user-invalid` pseudo-class must match an {{CSSxRef(":invalid")}}, {{CSSxRe
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:user-invalid
+```
 
 ## Examples
 
@@ -31,7 +36,7 @@ Try typing something other than an email address to see it in action.
 ```html
 <form>
   <label for="email">Email *: </label>
-  <input id="email" name="email" type="email" required>
+  <input id="email" name="email" type="email" required />
   <span></span>
 </form>
 ```
@@ -42,7 +47,7 @@ input:user-invalid {
 }
 
 input:user-invalid + span::before {
-  content: '✖';
+  content: "✖";
   color: red;
 }
 ```

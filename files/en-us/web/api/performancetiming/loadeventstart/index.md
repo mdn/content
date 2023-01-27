@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.loadEventStart
 slug: Web/API/PerformanceTiming/loadEventStart
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility
@@ -13,7 +14,8 @@ tags:
   - legacy
 browser-compat: api.PerformanceTiming.loadEventStart
 ---
-{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
+
+{{APIRef("Performance API")}}{{Deprecated_Header}}
 
 > **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
 > interface's {{domxref("PerformanceNavigationTiming.loadEventStart")}} read-only property instead.
@@ -21,14 +23,12 @@ browser-compat: api.PerformanceTiming.loadEventStart
 The legacy
 **`PerformanceTiming.loadEventStart`**
 read-only property returns an `unsigned long long` representing the moment,
-in milliseconds since the UNIX epoch, when the {{event("load")}} event was sent for the
+in milliseconds since the UNIX epoch, when the {{domxref("Window/load_event", "load")}} event was sent for the
 current document. If this event has not yet been sent, it returns `0.`
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.loadEventStart;
-```
+An `unsigned long long`.
 
 ## Specifications
 

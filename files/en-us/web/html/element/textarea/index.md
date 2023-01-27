@@ -1,6 +1,7 @@
 ---
 title: '<textarea>: The Textarea element'
 slug: Web/HTML/Element/textarea
+page-type: html-element
 tags:
   - Element
   - Forms
@@ -12,7 +13,7 @@ tags:
 browser-compat: html.elements.textarea
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<textarea>`** [HTML](/en-US/docs/Web/HTML) element represents a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable amount of free-form text, for example a comment on a review or feedback form.
 
@@ -31,17 +32,6 @@ The `<textarea>` element also accepts several attributes common to form `<input>
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("autocapitalize")}} {{non-standard_inline}}
-
-  - : This is a non-standard attribute supported by WebKit on iOS (therefore nearly all browsers running on iOS, including Safari, Firefox, and Chrome), which controls whether and how the text value should be automatically capitalized as it is entered/edited by the user. The non-deprecated values are available in iOS 5 and later. Possible values are:
-
-    - `none`: Completely disables automatic capitalization.
-    - `sentences`: Automatically capitalize the first letter of sentences.
-    - `words`: Automatically capitalize the first letter of words.
-    - `characters`: Automatically capitalize all characters.
-    - `on`: {{deprecated_inline}} Deprecated since iOS 5.
-    - `off`: {{deprecated_inline}} Deprecated since iOS 5.
-
 - {{htmlattrdef("autocomplete")}}
 
   - : This attribute indicates whether the value of the control can be automatically completed by the browser. Possible values are:
@@ -53,7 +43,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{ htmlattrdef("autocorrect") }} {{non-standard_inline}}
 
-  - : A string which indicates whether or not to activate automatic spelling correction and processing of text substitutions (if any are configured) while the user is editing this `textarea`. Permitted values are:
+  - : A string which indicates whether to activate automatic spelling correction and processing of text substitutions (if any are configured) while the user is editing this `textarea`. Permitted values are:
 
     - `on`
       - : Enable automatic spelling correction and text substitutions.
@@ -78,14 +68,14 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : A hint to the user of what can be entered in the control. Carriage returns or line-feeds within the placeholder text must be treated as line breaks when rendering the hint.
 
-    > **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for a full explanation.
+    > **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for a full explanation.
 
 - {{ htmlattrdef("readonly") }}
   - : This Boolean attribute indicates that the user cannot modify the value of the control. Unlike the `disabled` attribute, the `readonly` attribute does not prevent the user from clicking or selecting in the control. The value of a read-only control is still submitted with the form.
 - {{ htmlattrdef("required") }}
   - : This attribute specifies that the user must fill in a value before submitting a form.
 - {{ htmlattrdef("rows") }}
-  - : The number of visible text lines for the control.
+  - : The number of visible text lines for the control. If it is specified, it must be a positive integer. If it is not specified, the default value is 2.
 - {{ htmlattrdef("spellcheck") }}
 
   - : Specifies whether the `<textarea>` is subject to spell checking by the underlying browser/OS. The value can be:
@@ -96,10 +86,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{ htmlattrdef("wrap") }}
 
-  - : Indicates how the control wraps text. Possible values are:
+  - : Indicates how the control should wrap the value for form submission. Possible values are:
 
-    - `hard`: The browser automatically inserts line breaks (CR+LF) so that each line has no more than the width of the control; the `cols` attribute must also be specified for this to take effect.
-    - `soft`: The browser ensures that all line breaks in the value consist of a CR+LF pair, but does not insert any additional line breaks.
+    - `hard`: The browser automatically inserts line breaks (CR+LF) so that each line is no longer than the width of the control; the [`cols`](#attr-cols) attribute must be specified for this to take effect
+    - `soft`: The browser ensures that all line breaks in the entered value are a `CR+LF` pair, but no additional line breaks are added to the value.
     - `off` {{non-standard_inline}}: Like `soft` but changes appearance to `white-space: pre` so line segments exceeding `cols` are not wrapped and the `<textarea>` becomes horizontally scrollable.
 
     If this attribute is not specified, `soft` is its default value.
@@ -118,7 +108,7 @@ The HTML specification doesn't define where the baseline of a `<textarea>` is, s
 
 In most browsers, `<textarea>`s are resizable — you'll notice the drag handle in the right-hand corner, which can be used to alter the size of the element on the page. This is controlled by the {{ cssxref("resize") }} CSS property — resizing is enabled by default, but you can explicitly disable it using a `resize` value of `none`:
 
-```html
+```css
 textarea {
   resize: none;
 }
@@ -134,7 +124,7 @@ textarea:invalid {
 }
 
 textarea:valid {
-   border: 2px solid lime;
+  border: 2px solid lime;
 }
 ```
 
@@ -145,8 +135,7 @@ textarea:valid {
 The following example shows a very simple textarea, with a set numbers of rows and columns and some default content.
 
 ```html
-<textarea name="textarea"
-   rows="10" cols="50">Write something here</textarea>
+<textarea name="textarea" rows="10" cols="50">Write something here</textarea>
 ```
 
 {{ EmbedLiveSample('Basic_example','600','150') }}
@@ -156,9 +145,9 @@ The following example shows a very simple textarea, with a set numbers of rows a
 This example has a minimum and maximum number of characters — of 10 and 20 respectively. Try it and see.
 
 ```html
-<textarea name="textarea"
-   rows="5" cols="30"
-   minlength="10" maxlength="20">Write something here</textarea>
+<textarea name="textarea" rows="5" cols="30" minlength="10" maxlength="20">
+Write something here…
+</textarea>
 ```
 
 {{ EmbedLiveSample('Example using "minlength" and "maxlength"','600','80') }}
@@ -170,28 +159,30 @@ Note that `minlength` doesn't stop the user from removing characters so that the
 This example has a placeholder set. Notice how it disappears when you start typing into the box.
 
 ```html
-<textarea name="textarea"
-   rows="5" cols="30"
-   placeholder="Comment text."></textarea>
+<textarea
+  name="textarea"
+  rows="5"
+  cols="30"
+  placeholder="Comment text."></textarea>
 ```
 
 {{ EmbedLiveSample('Example using "placeholder"','600','80') }}
 
-> **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for a full explanation.
+> **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for a full explanation.
 
 ### Disabled and readonly
 
 This example shows two `<textarea>`s — one of which is `disabled`, and one of which is `readonly`. Have a play with both and you'll see the difference in behavior — the `disabled` element is not selectable in any way (and its value is not submitted), whereas the `readonly` element is selectable and its contents copyable (and its value is submitted); you just can't edit the contents.
 
-> **Note:** In browsers other than firefox, such as chrome, the `disabled` textarea content may be selectable and copyable.
+> **Note:** In browsers other than Firefox, such as chrome, the `disabled` textarea content may be selectable and copyable.
 
 ```html
-<textarea name="textarea"
-   rows="5" cols="30"
-   disabled>I am a disabled textarea</textarea>
-<textarea name="textarea"
-   rows="5" cols="30"
-   readonly>I am a readonly textarea</textarea>
+<textarea name="textarea" rows="5" cols="30" disabled>
+I am a disabled textarea.
+</textarea>
+<textarea name="textarea" rows="5" cols="30" readonly>
+I am a read-only textarea.
+</textarea>
 ```
 
 {{ EmbedLiveSample('Disabled_and_readonly','600','80') }}

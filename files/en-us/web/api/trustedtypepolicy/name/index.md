@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicy.name
 slug: Web/API/TrustedTypePolicy/name
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,19 +10,14 @@ tags:
   - TrustedTypePolicy
 browser-compat: api.TrustedTypePolicy.name
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`name`** read-only property of the {{domxref("TrustedTypePolicy")}} interface returns the name of the policy.
 
-## Syntax
+## Value
 
-```js
-var name = TrustedTypePolicy.name;
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing the name of the policy.
+A string containing the name of the policy.
 
 ## Examples
 
@@ -29,7 +25,7 @@ In the below example a policy called `myEscapePolicy` is created using {{domxref
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) => string.replace(/\>/g, "<")
+  createHTML: (string) => string.replace(/>/g, "<")
 });
 
 console.log(escapeHTMLPolicy.name); /* "myEscapePolicy" */

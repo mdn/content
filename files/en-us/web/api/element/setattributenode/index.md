@@ -1,6 +1,7 @@
 ---
 title: Element.setAttributeNode()
 slug: Web/API/Element/setAttributeNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.setAttributeNode
 ---
+
 {{ APIRef("DOM") }}
 
 The **`setAttributeNode()`** method adds a new
@@ -16,15 +18,19 @@ The **`setAttributeNode()`** method adds a new
 
 ## Syntax
 
-```js
-var replacedAttr = element.setAttributeNode(attribute);
+```js-nolint
+setAttributeNode(attribute)
 ```
 
-- `attribute` is the `Attr` node to set on the element.
-- `replacedAttr` is the replaced attribute node, if any, returned by this
-  function.
+### Parameters
 
-## Example
+- `attribute` is the `Attr` node to set on the element.
+
+### Return value
+
+The replaced attribute node, if any, returned by this function.
+
+## Examples
 
 This example copies the `align` attribute from one element to another.
 
@@ -65,3 +71,7 @@ used to change element's attributes.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Document.createAttribute()")}}

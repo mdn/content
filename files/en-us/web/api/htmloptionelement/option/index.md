@@ -1,6 +1,7 @@
 ---
 title: Option()
 slug: Web/API/HTMLOptionElement/Option
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -12,6 +13,7 @@ tags:
   - NeedsSpecTable
 browser-compat: api.HTMLOptionElement.Option
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`Option()`** constructor creates a new
@@ -19,18 +21,22 @@ The **`Option()`** constructor creates a new
 
 ## Syntax
 
-```js
-var optionElementReference = new Option(text, value, defaultSelected, selected);
+```js-nolint
+new Option()
+new Option(text)
+new Option(text, value)
+new Option(text, value, defaultSelected)
+new Option(text, value, defaultSelected, selected)
 ```
 
 ### Parameters
 
 - `text` {{optional_inline}}
-  - : A {{domxref("DOMString")}} representing the content of the element, i.e. the
+  - : A string representing the content of the element, i.e. the
     displayed text. If this is not specified, a default value of "" (empty string) is
     used.
 - `value` {{optional_inline}}
-  - : A {{domxref("DOMString")}} representing the value of the
+  - : A string representing the value of the
     {{domxref("HTMLOptionElement")}}, i.e. the value attribute of the equivalent
     {{htmlelement("option")}}. If this is not specified, the value of text is used as the
     value, e.g. for the associated {{htmlelement("select")}} element's value when the form
@@ -57,10 +63,10 @@ var optionElementReference = new Option(text, value, defaultSelected, selected);
 </select>
 */
 
-var s = document.getElementById('s');
-var options = [Four, Five, Six];
+const s = document.getElementById('s');
+const options = [Four, Five, Six];
 
-options.forEach(function(element,key) {
+options.forEach((element,key) => {
     s[key] = new Option(element,key);
 });
 ```
@@ -76,18 +82,18 @@ options.forEach(function(element,key) {
 </select>
 */
 
-var s = document.getElementById('s');
-var options = [ 'zero', 'one', 'two' ];
+const s = document.getElementById('s');
+const options = [ 'zero', 'one', 'two' ];
 
-options.forEach(function(element, key) {
-  if (element == 'zero') {
-    s[s.options.length] = new Option(element, s.options.length, false, false);
+options.forEach((element, key) => {
+  if (element === 'zero') {
+    s[key] = new Option(element, s.options.length, false, false);
   }
-  if (element == 'one') {
-    s[s.options.length] = new Option(element, s.options.length, true, false); // Will add the "selected" attribute
+  if (element === 'one') {
+    s[key] = new Option(element, s.options.length, true, false); // Will add the "selected" attribute
   }
-  if (element == 'two') {
-    s[s.options.length] = new Option(element, s.options.length, false, true); // Just will be selected in "view"
+  if (element === 'two') {
+    s[key] = new Option(element, s.options.length, false, true); // Just will be selected in "view"
   }
 });
 

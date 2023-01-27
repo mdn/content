@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.summary
 slug: Web/API/HTMLTableElement/summary
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -12,19 +13,17 @@ tags:
   - Deprecated
 browser-compat: api.HTMLTableElement.summary
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 The **`HTMLTableElement.summary`** property represents the
 table description.
 
-## Syntax
+## Value
 
-```js
-HTMLTableElement.summary = string;
-varstring = HTMLTableElement.summary;
-```
+A string.
 
-## Example
+## Examples
 
 ```js
 HTMLTableElement.summary = "Usage statistics";

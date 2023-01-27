@@ -1,6 +1,7 @@
 ---
 title: Atomics.and()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/and
+page-type: javascript-static-method
 tags:
   - Atomics
   - JavaScript
@@ -8,9 +9,10 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.and
 ---
+
 {{JSRef}}
 
-The static **`Atomics.and()`**
+The **`Atomics.and()`** static
 method computes a bitwise AND with a given value at a given position in the array, and
 returns the old value at that position. This atomic operation guarantees that no other
 write happens until the modified value is written back.
@@ -19,7 +21,7 @@ write happens until the modified value is written back.
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.and(typedArray, index, value)
 ```
 

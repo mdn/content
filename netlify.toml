@@ -1,3 +1,0 @@
-# Netlify is used for MDN's meta and contributor documentation only
-[build]
-  base = "meta/"

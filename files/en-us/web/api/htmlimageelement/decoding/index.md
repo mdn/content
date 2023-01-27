@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.decoding
 slug: Web/API/HTMLImageElement/decoding
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -10,29 +11,24 @@ tags:
   - decoding
 browser-compat: api.HTMLImageElement.decoding
 ---
+
 {{APIRef}}
 
 The **`decoding`** property of the
 {{domxref("HTMLImageElement")}} interface represents a hint given to the browser on how
 it should decode the image.
 
-## Syntax
+## Value
 
-```js
-refStr = imgElem.decoding;
-imgElem.decoding = refStr;
-```
+A string representing the decoding hint. Possible values are:
 
-### Values
-
-A {{domxref("DOMString")}} representing the decoding hint. Possible values are:
-
-- **`sync`**: Decode the image synchronously for atomic
-  presentation with other content.
-- **`async`**: Decode the image asynchronously to reduce delay
-  in presenting other content.
-- **`auto`**: Default mode, which indicates no preference for
-  the decoding mode. The browser decides what is best for the user.
+- `sync`
+  - : Decode the image synchronously for atomic presentation with other content.
+- `async`
+  - : Decode the image asynchronously to reduce delay in presenting other content.
+- `auto`
+  - : Default mode, which indicates no preference for the decoding mode.
+    The browser decides what is best for the user.
 
 ## Usage notes
 
@@ -45,7 +41,7 @@ offscreen image objects.
 ## Examples
 
 ```js
-var img = new Image();
+const img = new Image();
 img.decoding = 'sync';
 img.src = 'img/logo.png';
 ```

@@ -1,6 +1,7 @@
 ---
 title: SVGMarkerElement.preserveAspectRatio
 slug: Web/API/SVGMarkerElement/preserveAspectRatio
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,17 +10,12 @@ tags:
   - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.preserveAspectRatio
 ---
+
 {{APIRef("SVG")}}
 
 The **`preserveAspectRatio`** read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedPreserveAspectRatio")}} object containing the value of the {{SVGattr("preserveAspectRatio")}} attribute of the {{SVGElement("marker")}}.
 
-## Syntax
-
-```js
-let preserveAspectRatio = SVGMarkerElement.preserveAspectRatio;
-```
-
-### Value
+## Value
 
 An {{domxref("SVGAnimatedPreserveAspectRatio")}} object. The `baseVal` property of this object returns an {{domxref("SVGPreserveAspectRatio")}} object, with the following properties:
 
@@ -68,10 +64,15 @@ This example demonstrates how to return the numeric constants for `align` and `m
 ```html
 <svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
-        preserveAspectRatio="xMidYMid meet"
-        markerWidth="6" markerHeight="6"
-        orient="auto-start-reverse">
+    <marker
+      id="arrow"
+      viewBox="0 0 10 10"
+      refX="5"
+      refY="5"
+      preserveAspectRatio="xMidYMid meet"
+      markerWidth="6"
+      markerHeight="6"
+      orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" />
     </marker>
   </defs>

@@ -1,17 +1,18 @@
 ---
 title: mask-border-outset
 slug: Web/CSS/mask-border-outset
+page-type: css-property
 tags:
   - CSS
   - CSS Masking
   - CSS Property
-  - Experimental
   - NeedsCompatTable
   - NeedsExample
   - Reference
   - recipe:css-property
 browser-compat: css.properties.mask-border-outset
 ---
+
 {{CSSRef}}
 
 The **`mask-border-outset`** [CSS](/en-US/docs/Web/CSS) property specifies the distance by which an element's [mask border](/en-US/docs/Web/CSS/mask-border) is set out from its border box.
@@ -25,10 +26,10 @@ mask-border-outset: 1rem;
 /* <number> value */
 mask-border-outset: 1.5;
 
-/* vertical | horizontal */
+/* top and bottom | left and right */
 mask-border-outset: 1 1.2;
 
-/* top | horizontal | bottom */
+/* top | left and right | bottom */
 mask-border-outset: 30px 2 45px;
 
 /* top | right | bottom | left */
@@ -38,6 +39,7 @@ mask-border-outset: 7px 12px 14px 5px;
 mask-border-outset: inherit;
 mask-border-outset: initial;
 mask-border-outset: revert;
+mask-border-outset: revert-layer;
 mask-border-outset: unset;
 ```
 

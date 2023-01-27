@@ -1,14 +1,19 @@
 ---
 title: padding-inline
 slug: Web/CSS/padding-inline
+page-type: css-shorthand-property
 tags:
   - CSS
+  - CSS Property
   - recipe:css-shorthand-property
 browser-compat: css.properties.padding-inline
 ---
+
 {{CSSRef}}
 
 The **`padding-inline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) defines the logical inline start and end padding of an element, which maps to physical padding properties depending on the element's writing mode, directionality, and text orientation.
+
+{{EmbedInteractiveExample("pages/css/padding-inline.html")}}
 
 ## Constituent properties
 
@@ -42,7 +47,7 @@ The `padding-inline` property may be specified with one or two values. If one va
 - {{cssxref("&lt;length&gt;")}}
   - : The size of the padding as a fixed value. Must be nonnegative.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The size of the padding as a percentage, relative to the _inline-size_ of the containing block. Must be nonnegative.
+  - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Containing_block). Must be nonnegative.
 
 ## Description
 
@@ -98,5 +103,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - The mapped physical properties: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

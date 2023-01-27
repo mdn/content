@@ -6,13 +6,14 @@ tags:
   - NeedsSpecTable
   - Reference
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 `set:leading()` returns the nodes in one node-set that come before the first node in the other node-set.
 
 ## Syntax
 
-```js
+```js-nolint
 set:leading(nodeSet1, nodeSet2)
 ```
 
@@ -31,4 +32,4 @@ A node-set containing the nodes from `nodeSet1` whose values precede the first n
 
 ## Specifications
 
-[EXSLT - SET:LEADING](http://www.exslt.org/set/functions/leading/index.html)
+[EXSLT - SET:LEADING](http://exslt.org/set/functions/leading/index.html)

@@ -1,6 +1,7 @@
 ---
 title: Keyboard API
 slug: Web/API/Keyboard_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental
@@ -9,8 +10,12 @@ tags:
   - Keyboard Map
   - Overview
   - Reference
+browser-compat:
+  - api.Keyboard
+  - api.KeyboardLayoutMap
 ---
-{{SeeCompatTable}}{{APIRef("Keyboard API")}}
+
+{{SeeCompatTable}}{{DefaultAPISidebar("Keyboard API")}}
 
 The Keyboard API provides methods for working with a physical keyboard that is attached to a device running a browser.
 
@@ -28,11 +33,10 @@ The following example demonstrates how to get the location-specific or layout-sp
 
 ```js
 if (navigator.keyboard) {
-  var keyboard = navigator.keyboard;
-  keyboard.getLayoutMap()
-  .then(keyboardLayoutMap => {
-    var upKey = keyboardLayoutMap.get('KeyW');
-    window.alert('Press ' + upKey + ' to move up.');
+  const keyboard = navigator.keyboard;
+  keyboard.getLayoutMap().then((keyboardLayoutMap) => {
+    const upKey = keyboardLayoutMap.get("KeyW");
+    window.alert(`Press ${upKey} to move up.`);
   });
 } else {
   // Do something else.
@@ -53,9 +57,9 @@ This captures these keys regardless of which modifiers are used with the key pre
 
 ### Writing system keys
 
-The codes passed {{domxref('Keyboard.lock')}} and the various methods of the {{domxref('KeyboardLayoutMap')}} interface are called “writing system keys”.
+The codes passed {{domxref('Keyboard.lock')}} and the various methods of the {{domxref('KeyboardLayoutMap')}} interface are called "writing system keys".
 
-“Writing system keys” are defined in the [Writing System Keys](https://w3c.github.io/uievents-code/#key-alphanumeric-writing-system) section of the [UI Events KeyboardEvent code Values](https://w3c.github.io/uievents-code/) spec as the physical keys that change meaning based on the current locale and keyboard layout. These keys are shown below. Blue keys are present on all standard keyboards while green keys are only available on some keyboards.
+"Writing system keys" are defined in the [Writing System Keys](https://w3c.github.io/uievents-code/#key-alphanumeric-writing-system) section of the [UI Events KeyboardEvent code Values](https://w3c.github.io/uievents-code/) spec as the physical keys that change meaning based on the current locale and keyboard layout. These keys are shown below. Blue keys are present on all standard keyboards while green keys are only available on some keyboards.
 
 ![Writing system keys as defined by the UI Events KeyboardEvent code Values spec.](writing-system-keys.png)
 
@@ -65,22 +69,13 @@ The codes passed {{domxref('Keyboard.lock')}} and the various methods of the {{d
   - : Provides functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
 - {{domxref('KeyboardLayoutMap')}} {{experimental_inline}}
   - : A map-like object with functions for retrieving the string associated with specific physical keys.
-- {{domxref('navigator.keyboard')}} {{readonlyinline}} {{experimental_inline}}
+- {{domxref('navigator.keyboard')}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns a {{domxref('Keyboard')}} object which provides access to functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
 
 ## Specifications
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Keyboard Map')}}     | {{Spec2('Keyboard Map')}}     | Initial definition. |
-| {{SpecName('Keyboard Lock')}} | {{Spec2('Keyboard Lock')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-### Keyboard API
-
-{{Compat("api.Keyboard")}}
-
-### Keyboard lock API
-
-{{Compat("api.KeyboardLayoutMap")}}
+{{Compat}}

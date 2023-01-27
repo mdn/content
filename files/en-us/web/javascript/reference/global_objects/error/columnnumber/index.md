@@ -1,6 +1,7 @@
 ---
 title: Error.prototype.columnNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
+page-type: javascript-instance-data-property
 tags:
   - JavaScript
   - Non-standard
@@ -8,18 +9,27 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Error.columnNumber
 ---
+
 {{JSRef}} {{non-standard_header}}
 
-The **`columnNumber`** property contains the column number in the line of the file that raised this error.
+The **`columnNumber`** data property of an {{jsxref("Error")}} instance contains the column number in the line of the file that raised this error.
+
+## Value
+
+A positive integer.
+
+{{js_property_attributes(1, 0, 1)}}
 
 ## Examples
 
 ### Using columnNumber
 
 ```js
-var e = new Error('Could not parse input');
-throw e;
-console.log(e.columnNumber) // 0
+try {
+  throw new Error("Could not parse input");
+} catch (err) {
+  console.log(err.columnNumber); // 9
+}
 ```
 
 ## Specifications

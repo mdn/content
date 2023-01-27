@@ -8,6 +8,9 @@ tags:
   - Storage
   - tracking
 ---
+
+{{QuicklinksWithSubPages("Web/Privacy")}}
+
 State Partitioning is a broad effort to rework how Firefox manages client-side
 state (i.e., data stored in the browser) to mitigate the ability of websites
 to abuse state for cross-site tracking. This effort aims to
@@ -45,8 +48,7 @@ access to some storage APIs (e.g., cookies and localStorage) for certain
 domains under certain conditions. For example, our "block all third-party
 cookies" policy will prevent all domains from accessing certain storage APIs
 when loaded in a third-party context. Our current
-[default cookie policy
-](en-US/docs/Mozilla/Firefox/Privacy/Storage_access_policy)blocks access in a third-party context only for domains classified as
+[default cookie policy](/en-US/docs/Mozilla/Firefox/Privacy/Storage_access_policy) blocks access in a third-party context only for domains classified as
 trackers.
 
 ## State Partitioning
@@ -67,7 +69,7 @@ In the example below `example.com` is embedded in
 partitioned, there are three distinct storage buckets (instead of one). The
 tracker can still access storage, but since every storage bucket is
 additionally keyed under the top-level site, the data it has access to on A
-will be different than the data on B. This will prevent a tracker from storing
+will be different from the data on B. This will prevent a tracker from storing
 an identifier in their cookies when visited directly and then retrieving that
 identifier when embedded in other websites.
 
@@ -75,8 +77,7 @@ identifier when embedded in other websites.
 
 ### Standardization
 
-The [Privacy Community
-Group](https://privacycg.github.io/) has a Work Item for
+The [Privacy Community Group](https://privacycg.github.io/) has a Work Item for
 [Client-Side Storage Partitioning](https://privacycg.github.io/storage-partitioning/). This serves as an overview of the
 standardization efforts for storage partitioning in the individual standards
 affected. We intend to align our state partitioning implementation with these
@@ -196,8 +197,7 @@ third-party integrations that are common on the web to continue to function.
 #### Storage Access API
 
 Third-party frames may use
-[`document.requestStorageAccess`
-](/en-US/docs/Web/API/Document/requestStorageAccess) to request unpartitioned storage access through the
+[document.requestStorageAccess](/en-US/docs/Web/API/Document/requestStorageAccess) to request unpartitioned storage access through the
 [Storage Access API](/en-US/docs/Web/API/Storage_Access_API). Once
 granted, the requesting third-party will gain access to its first-party
 storage bucket (i.e., the storage it would have access to if visited as a
@@ -226,16 +226,15 @@ with storage in a third-party context. In the following examples,
 
 | Reason                                                                                                  | Console Message                                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Storage of a third-party frame is partitioned                                                           | Partitioned cookie or storage access was provided to “b.example” because it is loaded in the third-party context and storage partitioning is enabled. |
-| Storage access is granted through a **heuristic**                                                       | Storage access automatically granted for First-Party isolation “b.example” on “a.example”.                                                            |
-| Storage access is granted via the [StorageAccessAPI](/en-US/docs/Web/API/Document/requestStorageAccess) | Storage access granted for origin “b.example” on “a.example”.                                                                                         |
+| Storage of a third-party frame is partitioned                                                           | Partitioned cookie or storage access was provided to "b.example" because it is loaded in the third-party context and storage partitioning is enabled. |
+| Storage access is granted through a **heuristic**                                                       | Storage access automatically granted for First-Party isolation "b.example" on "a.example".                                                            |
+| Storage access is granted via the [StorageAccessAPI](/en-US/docs/Web/API/Document/requestStorageAccess) | Storage access granted for origin "b.example" on "a.example".                                                                                         |
 
 #### Clear Third-Party Storage-Access
 
 If a third-party iframe is granted storage access to the parent context,
 Firefox sets a permission. To revoke access you can clear the permission via
-the [Site
-Information Panel](https://support.mozilla.org/en-US/kb/site-information-panel) in the permissions section under "Cross-site Cookies".
+the [Site Information Panel](https://support.mozilla.org/en-US/kb/site-information-panel) in the permissions section under "Cross-site Cookies".
 
 #### Test Preferences
 
@@ -247,7 +246,7 @@ Information Panel](https://support.mozilla.org/en-US/kb/site-information-panel) 
 Setting `privacy.antitracking.enableWebcompat` to `false` will **disable** all
 ETP and State Partitioning web-compatibility features. Disabling these features
 can be useful when testing, to ensure your website is fully compatible with the
-State Partitioning mechanism in Firefox and it does not rely on temporary
+State Partitioning mechanism in Firefox, and it does not rely on temporary
 heuristics.
 
 Features disabled by the pref include:
@@ -257,11 +256,9 @@ Features disabled by the pref include:
 - Automatic storage access grants:
   [document.requestStorageAccess](/en-US/docs/Web/API/Document/requestStorageAccess)
   will always prompt the user.
-- [SmartBlock's "unblock on opt-in"
-  feature](https://blog.mozilla.org/security/2021/07/13/smartblock-v2/), which
+- [SmartBlock's "unblock on opt-in" feature](https://blog.mozilla.org/security/2021/07/13/smartblock-v2/), which
   will allow certain trackers when users interact with them.
-- Any temporary [anti-tracking
-  exceptions](https://wiki.mozilla.org/Security/Anti_tracking_policy#Temporary_Web_Compatibility_Interventions)
+- Any temporary [anti-tracking exceptions](https://wiki.mozilla.org/Security/Anti_tracking_policy#Temporary_Web_Compatibility_Interventions)
   granted to websites via the skip-listing mechanism.
 
 ##### Disable Heuristics
@@ -270,12 +267,10 @@ The following preferences can be used to disable individual storage access
 heuristics via the
 [config editor](https://support.mozilla.org/en-US/kb/about-config-editor-firefox):
 
-- Enable / disable the [redirect
-  heuristics](#storage_access_redirect_heuristics):
+- Enable / disable the [redirect heuristics](#storage_access_redirect_heuristics):
   `privacy.restrict3rdpartystorage.heuristic.recently_visited`,
   `privacy.restrict3rdpartystorage.heuristic.redirect`
-- Enable / disable the [window
-  open heuristics](#storage_access_window_open_heuristics):
+- Enable / disable the [window open heuristics](#storage_access_window_open_heuristics):
   `privacy.restrict3rdpartystorage.heuristic.window_open`,
   `privacy.restrict3rdpartystorage.heuristic.opened_window_after_interaction`
 

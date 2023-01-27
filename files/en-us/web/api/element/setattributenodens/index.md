@@ -1,6 +1,7 @@
 ---
 title: Element.setAttributeNodeNS()
 slug: Web/API/Element/setAttributeNodeNS
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -9,30 +10,36 @@ tags:
   - Reference
 browser-compat: api.Element.setAttributeNodeNS
 ---
+
 {{ APIRef("DOM") }}
 
 `setAttributeNodeNS` adds a new namespaced attribute node to an element.
 
 ## Syntax
 
-```js
-replacedAttr = element.setAttributeNodeNS(attributeNode)
+```js-nolint
+setAttributeNodeNS(attributeNode)
 ```
 
-- `replacedAttr` is the replaced attribute node, if any, returned by this function.
+### Parameters
+
 - `attributeNode` is an `Attr` node.
 
-## Example
+### Return value
+
+The replaced attribute node, if any, returned by this function.
+
+## Examples
 
 ```js
 // <div id="one" xmlns:myNS="http://www.mozilla.org/ns/specialspace"
 //            myNS:special-align="utterleft">one</div>
 // <div id="two">two</div>
 
-var myns = "http://www.mozilla.org/ns/specialspace";
-var d1 = document.getElementById("one");
-var d2 = document.getElementById("two");
-var a = d1.getAttributeNodeNS(myns, "special-align");
+const myns = "http://www.mozilla.org/ns/specialspace";
+const d1 = document.getElementById("one");
+const d2 = document.getElementById("two");
+const a = d1.getAttributeNodeNS(myns, "special-align");
 d2.setAttributeNodeNS(a.cloneNode(true));
 alert(d2.attributes[1].value) // returns: `utterleft'
 ```
@@ -52,3 +59,8 @@ Note that if you try to set without cloning the node, Mozilla gives an NS_ERROR_
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Document.createAttribute()")}}
+- {{domxref("Document.createAttributeNS()")}}

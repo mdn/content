@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.isContentEditable
 slug: Web/API/HTMLElement/isContentEditable
+page-type: web-api-instance-property
 tags:
   - API
   - Editing
@@ -11,28 +12,27 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.isContentEditable
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.isContentEditable`** read-only property
 returns a boolean value that is `true` if the contents of the element
 are editable; otherwise it returns `false`.
 
-## Syntax
+## Value
 
-```js
-editable = element.isContentEditable
-```
+A boolean value.
 
-## Example
+## Examples
 
 ### HTML
 
 ```html
 <p id="myText1">Uneditable Paragraph</p>
-<p id="myText2" contentEditable="true">Editable Paragraph</p>
+<p id="myText2" contenteditable="true">Editable Paragraph</p>
 
-<p id="infoText1">Can edit the first paragraph? </p>
-<p id="infoText2">Can edit the second paragraph? </p>
+<p id="infoText1">Can edit the first paragraph?</p>
+<p id="infoText2">Can edit the second paragraph?</p>
 ```
 
 ### JavaScript
@@ -44,7 +44,7 @@ document.getElementById('infoText2').innerHTML += document.getElementById('myTex
 
 ### Result
 
-{{ EmbedLiveSample('Example') }}
+{{ EmbedLiveSample('Examples') }}
 
 ## Specifications
 

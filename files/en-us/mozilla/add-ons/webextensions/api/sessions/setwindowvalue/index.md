@@ -12,6 +12,7 @@ tags:
   - setWindowValue
 browser-compat: webextensions.api.sessions.setWindowValue
 ---
+
 {{AddonSidebar()}}
 
 Stores a key/value pair to associate with a given window. You can subsequently retrieve this value using {{WebExtAPIRef("sessions.getWindowValue")}}.
@@ -22,8 +23,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var storing = browser.sessions.setWindowValue(
+```js-nolint
+let storing = browser.sessions.setWindowValue(
   windowId,    // integer
   key,         // string
   value        // string or object

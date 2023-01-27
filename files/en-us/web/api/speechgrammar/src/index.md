@@ -1,6 +1,7 @@
 ---
 title: SpeechGrammar.src
 slug: Web/API/SpeechGrammar/src
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -13,28 +14,23 @@ tags:
   - src
 browser-compat: api.SpeechGrammar.src
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 The **`src`** property of the {{domxref("SpeechGrammar")}}
 interface sets and returns a string containing the grammar from within in the
 `SpeechGrammar` object.
 
-## Syntax
+## Value
 
-```js
-var myGrammar = speechGrammarInstance.src;
-```
-
-### Value
-
-A {{domxref("DOMString")}} representing the grammar.
+A string representing the grammar.
 
 ## Examples
 
 ```js
-var grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
-var recognition = new SpeechRecognition();
-var speechRecognitionList = new SpeechGrammarList();
+const grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
+const recognition = new SpeechRecognition();
+const speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
 

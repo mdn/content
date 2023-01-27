@@ -1,12 +1,15 @@
 ---
 title: attributeType
 slug: Web/SVG/Attribute/attributeType
+page-type: svg-attribute
 tags:
   - Deprecated
   - NeedsCompatTable
   - SVG
   - SVG Attribute
+spec-urls: https://www.w3.org/TR/SVG11/animate.html#AttributeTypeAttribute
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`attributeType`** attribute specifies the namespace in which the target attribute and its associated values are defined.
@@ -21,7 +24,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -29,8 +34,13 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
   <rect x="50" y="50" width="100" height="100">
-    <animate attributeType="XML" attributeName="y" from="0" to="50"
-        dur="5s" repeatCount="indefinite"/>
+    <animate
+      attributeType="XML"
+      attributeName="y"
+      from="0"
+      to="50"
+      dur="5s"
+      repeatCount="indefinite" />
   </rect>
 </svg>
 ```
@@ -65,24 +75,7 @@ html, body, svg {
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "animate.html#AttributeTypeAttribute", "attributeType")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 

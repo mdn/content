@@ -1,6 +1,7 @@
 ---
 title: Using the Screen Capture API
 slug: Web/API/Screen_Capture_API/Using_Screen_Capture
+page-type: guide
 tags:
   - API
   - Capture
@@ -15,7 +16,9 @@ tags:
   - display
   - getDisplayMedia
   - screen
+browser-compat: api.MediaDevices.getDisplayMedia
 ---
+
 {{DefaultAPISidebar("Screen Capture API")}}
 
 In this article, we will examine how to use the Screen Capture API and its {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture part or all of a screen for streaming, recording, or sharing during a [WebRTC](/en-US/docs/Web/API/WebRTC_API) conference session.
@@ -34,8 +37,8 @@ async function startCapture(displayMediaOptions) {
 
   try {
     captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-  } catch(err) {
-    console.error("Error: " + err);
+  } catch (err) {
+    console.error(`Error: ${err}`);
   }
   return captureStream;
 }
@@ -48,23 +51,23 @@ You can write this code either using an asynchronous function and the [`await`](
 ```js
 function startCapture(displayMediaOptions) {
  return navigator.mediaDevices.getDisplayMedia(displayMediaOptions)
-    .catch(err => { console.error("Error:" + err); return null; });
+    .catch((err) => { console.error(`Error:${err}`); return null; });
 }
 ```
 
 Either way, the {{Glossary("user agent")}} responds by presenting a user interface that prompts the user to choose the screen area to share. Both of these implementations of `startCapture()` return the {{domxref("MediaStream")}} containing the captured display imagery.
 
-See {{anch("Options and constraints")}}, below, for more on both how to specify the type of surface you want as well as other ways to adjust the resulting stream.
+See [Options and constraints](#options_and_constraints), below, for more on both how to specify the type of surface you want as well as other ways to adjust the resulting stream.
 
 ### Example of a window allowing the user to select a display surface to capture
 
-[![Screenshot of Chrome's window for picking a source surface](chrome-screen-capture-window.png)](Chrome-Screen-Capture-Window.png)
+[![Screenshot of Chrome's window for picking a source surface](chrome-screen-capture-window.png)](chrome-screen-capture-window.png)
 
-You can then use the captured stream, `captureStream`, for anything that accepts a stream as input. The {{anch("Examples", "examples")}} below show a few ways to make use of the stream.
+You can then use the captured stream, `captureStream`, for anything that accepts a stream as input. The [examples](#examples) below show a few ways to make use of the stream.
 
-### Visible vs logical display surfaces
+### Visible vs. logical display surfaces
 
-For the purposes of the Screen Capture API, a **display surface** is any content object that can be selected by the API for sharing purposes. Sharing surfaces include the contents of a browser tab, a complete window, all of the windows of an application combined into a single surface, and a monitor (or group of monitors combined together into one surface).
+For the purposes of the Screen Capture API, a **display surface** is any content object that can be selected by the API for sharing purposes. Sharing surfaces include the contents of a browser tab, a complete window, and a monitor (or group of monitors combined together into one surface).
 
 There are two types of display surface. A **visible display surface** is a surface which is entirely visible on the screen, such as the frontmost window or tab, or the entire screen.
 
@@ -74,27 +77,23 @@ A user agent might allow the capture of the entire content of an obscured window
 
 ### Options and constraints
 
-The constraints object passed into {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} is an object which is used to configuring the resulting stream.
+The options object passed into {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} is used to set options for the resulting stream.
 
-> **Note:** Unlike most uses of constraints in media APIs, here it's solely used to define the stream configuration, and _not_ to filter the available choices.
+The `video` and `audio` objects passed into the options object can also hold additional constraints particular to those media tracks. See [Properties of shared screen tracks](/en-US/docs/Web/API/MediaTrackConstraints#instance_properties_of_shared_screen_tracks) for details about additional constraints for configuring a screen-capture stream that are added to {{domxref("MediaTrackConstraints")}}, {{domxref("MediaTrackSupportedConstraints")}}, and {{domxref("MediaTrackSettings")}}).
 
-See [Properties of shared screen tracks](/en-US/docs/Web/API/MediaTrackConstraints#properties_of_shared_screen_tracks) for details about additional constraints for configuring a screen-capture stream that are added to {{domxref("MediaTrackConstraints")}}, {{domxref("MediaTrackSupportedConstraints")}}, and {{domxref("MediaTrackSettings")}}).
-
-None of the constraints are applied in any way until after the content to capture has been selected. The constraints alter what you see in the resulting stream.
-
-For example, if you specify a {{domxref("MediaTrackConstraints.width", "width")}} constraint for the video, it's applied by scaling the video after the user selects the area to share. It doesn't establish a restriction on the size of the source itself.
+None of the constraints are applied in any way until after the content to capture has been selected. The constraints alter what you see in the resulting stream. For example, if you specify a {{domxref("MediaTrackConstraints.width", "width")}} constraint for the video, it's applied by scaling the video after the user selects the area to share. It doesn't establish a restriction on the size of the source itself.
 
 > **Note:** Constraints _never_ cause changes to the list of sources available for capture by the Screen Sharing API. This ensures that web applications can't force the user to share specific content by restricting the source list until only one item is left.
 
 While display capture is in effect, the machine which is sharing screen contents will display some form of indicator so the user is aware that sharing is taking place.
 
-> **Note:** For privacy and security reasons, screen sharing sources are not enumerable using {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}. Related to this, the {{event("devicechange")}} event is never sent when there are changes to the sources available for `getDisplayMedia()`.
+> **Note:** For privacy and security reasons, screen sharing sources are not enumerable using {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}. Related to this, the {{domxref("MediaDevices/devicechange_event", "devicechange")}} event is never sent when there are changes to the sources available for `getDisplayMedia()`.
 
 ### Capturing shared audio
 
 {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} is most commonly used to capture video of a user's screen (or parts thereof). However, {{Glossary("user agent", "user agents")}} may allow the capture of audio along with the video content. The source of this audio might be the selected window, the entire computer's audio system, or the user's microphone (or a combination of all of the above).
 
-Before starting a project that will require sharing of audio, be sure to check the {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getDisplayMedia", "Browser compatibility", "code")}} to see if the browsers you wish compatibility with have support for audio in captured screen streams.
+Before starting a project that will require sharing of audio, be sure to check the [browser compatibility](/en-US/docs/Web/API/MediaDevices/getDisplayMedia#browser_compatibility) for `getDisplayMedia()` to see if the browsers you wish compatibility with have support for audio in captured screen streams.
 
 To request that the screen be shared with included audio, the options passed into `getDisplayMedia()` might look like this:
 
@@ -105,34 +104,38 @@ const gdmOptions = {
 }
 ```
 
-This allows the user total freedom to select whatever they want, within the limits of what the user agent supports. This could be refined further by specifying additional information for each of `audio` and `video`:
+This allows the user total freedom to select whatever they want, within the limits of what the user agent supports. This could be refined further by specifying additional options, and constraints inside the `audio` and `video` objects:
 
 ```js
 const gdmOptions = {
   video: {
-    cursor: "always"
+    displaySurface: "window"
   },
   audio: {
     echoCancellation: true,
     noiseSuppression: true,
     sampleRate: 44100
-  }
+    suppressLocalAudioPlayback: true
+  },
+  surfaceSwitching: "include",
+  selfBrowserSurface: "exclude",
+  systemAudio: "exclude"
 }
 ```
 
-In this example the cursor will always be visible in the capture, and the audio track should ideally have noise suppression and echo cancellation features enabled, as well as an ideal audio sample rate of 44.1kHz.
+In this example the display surface captured is to be the whole window. The audio track should ideally have noise suppression and echo cancellation features enabled, as well as an ideal audio sample rate of 44.1kHz, and suppression of local audio playback.
+
+In addition, the app is hinting to the user agent that it should:
+
+- Provide a control during screen sharing to allow the user to dynamically switch the shared tab.
+- Hide the current tab from the list of options presented to the user when capture is requested.
+- Not include the system audio among the possible audio sources offered to the user.
 
 Capturing audio is always optional, and even when web content requests a stream with both audio and video, the returned {{domxref("MediaStream")}} may still have only one video track, with no audio.
-
-> **Note:** Some properties are not widely implemented and might not be used by the engine. `cursor`, for example, [has limited support](/en-US/docs/Web/API/MediaTrackConstraints/cursor#browser_compatibility).
 
 ## Using the captured stream
 
 The {{jsxref("promise")}} returned by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} resolves to a {{domxref("MediaStream")}} that contains at least one video stream that contains the screen or screen area, and which is adjusted or filtered based upon the constraints specified when `getDisplayMedia()` was called.
-
-## Security
-
-As is always the case when sharing content over a network, it's important to consider the privacy and safety implications of screen sharing.
 
 ### Potential risks
 
@@ -160,9 +163,7 @@ There isn't all that much code needed in order to make this work, and if you're 
 
 First, some constants are set up to reference the elements on the page to which we'll need access: the {{HTMLElement("video")}} into which the captured screen contents will be streamed, a box into which logged output will be drawn, and the start and stop buttons that will turn on and off capture of screen imagery.
 
-The object `displayMediaOptions` contains the constraints to pass into `getDisplayMedia()`; here, the {{domxref("MediaTrackConstraints.cursor", "cursor")}} property is set to `always`, indicating that the mouse cursor should always be included in the captured media.
-
-> **Note:** Some properties are not widely implemented and might not be used by the engine. `cursor`, for example, [has limited support](/en-US/docs/Web/API/MediaTrackConstraints/cursor#browser_compatibility).
+The object `displayMediaOptions` contains the options to pass into `getDisplayMedia()`; here, the {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} property is set to `window`, indicating that the whole window should be captured.
 
 Finally, event listeners are established to detect user clicks on the start and stop buttons.
 
@@ -174,19 +175,19 @@ const stopElem = document.getElementById("stop");
 
 // Options for getDisplayMedia()
 
-var displayMediaOptions = {
+const displayMediaOptions = {
   video: {
-    cursor: "always"
+    displaySurface: "window"
   },
   audio: false
 };
 
 // Set event listeners for the start and stop buttons
-startElem.addEventListener("click", function(evt) {
+startElem.addEventListener("click", (evt) => {
   startCapture();
 }, false);
 
-stopElem.addEventListener("click", function(evt) {
+stopElem.addEventListener("click", (evt) => {
   stopCapture();
 }, false);
 ```
@@ -196,10 +197,10 @@ stopElem.addEventListener("click", function(evt) {
 To make logging of errors and other issues easy, this example overrides certain {{domxref("console")}} methods to output their messages to the {{HTMLElement("pre")}} block whose ID is `log`.
 
 ```js
-console.log = msg => logElem.innerHTML += `${msg}<br>`;
-console.error = msg => logElem.innerHTML += `<span class="error">${msg}</span><br>`;
-console.warn = msg => logElem.innerHTML += `<span class="warn">${msg}<span><br>`;
-console.info = msg => logElem.innerHTML += `<span class="info">${msg}</span><br>`;
+console.log = (msg) => logElem.innerHTML += `${msg}<br>`;
+console.error = (msg) => logElem.innerHTML += `<span class="error">${msg}</span><br>`;
+console.warn = (msg) => logElem.innerHTML += `<span class="warn">${msg}<span><br>`;
+console.info = (msg) => logElem.innerHTML += `<span class="info">${msg}</span><br>`;
 ```
 
 This allows us to use the familiar {{domxref("console.log()")}}, {{domxref("console.error()")}}, and so on to log information to the log box in the document.
@@ -215,8 +216,8 @@ async function startCapture() {
   try {
     videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
     dumpOptionsInfo();
-  } catch(err) {
-    console.error("Error: " + err);
+  } catch (err) {
+    console.error(`Error: ${err}`);
   }
 }
 ```
@@ -237,7 +238,7 @@ The `stopCapture()` method is called when the "Stop Capture" button is clicked. 
 function stopCapture(evt) {
   let tracks = videoElem.srcObject.getTracks();
 
-  tracks.forEach(track => track.stop());
+  tracks.forEach((track) => track.stop());
   videoElem.srcObject = null;
 }
 ```
@@ -257,23 +258,29 @@ function dumpOptionsInfo() {
 }
 ```
 
-The track list is obtained by calling {{domxref("MediaStream.getVideoTracks", "getVideoTracks()")}} on the capture'd screen's {{domxref("MediaStream")}}. The settings currently in effect are obtained using {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} and the established constraints are gotten with {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}
+The track list is obtained by calling {{domxref("MediaStream.getVideoTracks", "getVideoTracks()")}} on the captured screen's {{domxref("MediaStream")}}. The settings currently in effect are obtained using {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} and the established constraints are gotten with {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}
 
 #### HTML
 
 The HTML starts with a simple introductory paragraph, then gets into the meat of things.
 
 ```html
-<p>This example shows you the contents of the selected part of your display.
-Click the Start Capture button to begin.</p>
+<p>
+  This example shows you the contents of the selected part of your display.
+  Click the Start Capture button to begin.
+</p>
 
-<p><button id="start">Start Capture</button>&nbsp;<button id="stop">Stop Capture</button></p>
+<p>
+  <button id="start">Start Capture</button>&nbsp;<button id="stop">
+    Stop Capture
+  </button>
+</p>
 
 <video id="video" autoplay></video>
-<br>
+<br />
 
 <strong>Log:</strong>
-<br>
+<br />
 <pre id="log"></pre>
 ```
 
@@ -318,28 +325,27 @@ The final product looks like this. If your browser supports Screen Capture API, 
 
 ## Security
 
-In order to function when [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) is enabled, you will need the `display-capture` permission. This can be done using the {{HTTPHeader("Feature-Policy")}} {{Glossary("HTTP")}} header or—if you're using the Screen Capture API in an {{HTMLElement("iframe")}}, the `<iframe>` element's {{htmlattrxref("allow", "iframe")}} attribute.
+In order to function when [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) is enabled, you will need the `display-capture` permission. This can be done using the {{HTTPHeader("Permissions-Policy")}} {{Glossary("HTTP")}} header or—if you're using the Screen Capture API in an {{HTMLElement("iframe")}}, the `<iframe>` element's {{htmlattrxref("allow", "iframe")}} attribute.
 
 For example, this line in the HTTP headers will enable Screen Capture API for the document and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same origin:
 
-```
-Feature-Policy: display-capture 'self'
+```http
+Permissions-Policy: display-capture=(self)
 ```
 
-If you're performing screen capture within an `<iframe>`, you can request permission just for that frame, which is clearly more secure than requesting a more general permission:
+If you're performing screen capture within an `<iframe>`, you can request permission just for that frame, which is clearly more secure than requesting permission more generally:
 
 ```html
-<iframe src="https://mycode.example.net/etc" allow="display-capture">
-</iframe>
+<iframe src="https://mycode.example.net/etc" allow="display-capture"> </iframe>
 ```
 
 ## Browser compatibility
 
-{{Compat("api.MediaDevices.getDisplayMedia")}}
+{{Compat}}
 
 ## See also
 
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [Taking still photos with WebRTC](/en-US/docs/Web/API/WebRTC_API/Taking_still_photos)
 - {{domxref("HTMLCanvasElement.captureStream()")}} to obtain a {{domxref("MediaStream")}} with the live contents of a {{HTMLElement("canvas")}}

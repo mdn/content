@@ -1,12 +1,13 @@
 ---
 title: ITU
 slug: Glossary/ITU
+page-type: glossary-definition
 tags:
-  - Glossary
   - ITU
   - Standardization
   - organization
 ---
+
 The International Telecommunication Union (ITU) is the organization authorized by the United Nations to establish standards and rules for telecommunication, including telegraph, radio, telephony and the internet.
 
 From defining rules for ensuring transmissions get to where they need to go to and creating the "SOS" alert signal used in Morse code, the ITU has long played a key role in how we use technology to exchange information and ideas.

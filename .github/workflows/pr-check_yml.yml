@@ -1,0 +1,31 @@
+name: Lint YAML
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - yarn.lock
+      - "**/*.yml"
+      - .github/workflows/pr-check_yml.yml
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+          cache: yarn
+
+      - name: Install all yarn packages
+        run: |
+          yarn --frozen-lockfile
+
+      - name: Lint markdown files
+        run: |
+          yarn lint:yml

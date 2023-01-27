@@ -1,6 +1,7 @@
 ---
 title: Element.ariaColSpan
 slug: Web/API/Element/ariaColSpan
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,20 +12,14 @@ tags:
   - Element
 browser-compat: api.Element.ariaColSpan
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaColSpan`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colspan) attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
 
-## Syntax
+## Value
 
-```js
-var ariaColSpan = element.ariaColSpan;
-element.ariaColSpan = ariaColSpan
-```
-
-### Value
-
-A {{domxref("DOMString")}} which contains an integer.
+A string which contains an integer.
 
 ## Examples
 
@@ -61,4 +56,4 @@ console.log(el.ariaColSpan);
 
 ## See also
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

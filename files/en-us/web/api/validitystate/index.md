@@ -1,6 +1,7 @@
 ---
 title: ValidityState
 slug: Web/API/ValidityState
+page-type: web-api-interface
 tags:
   - API
   - Constraint Validation API
@@ -9,11 +10,12 @@ tags:
   - Interface
 browser-compat: api.ValidityState
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`ValidityState`** interface represents the _validity states_ that an element can be in, with respect to constraint validation. Together, they help explain why an element's value fails to validate, if it's not valid.
 
-## Properties
+## Instance properties
 
 For each of these Boolean properties, a value of `true` indicates that the specified reason validation may have failed is true, with the exception of the `valid` property, which is `true` if the element's value obeys all constraints.
 

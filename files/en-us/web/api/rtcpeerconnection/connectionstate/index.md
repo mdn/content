@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.connectionState
 slug: Web/API/RTCPeerConnection/connectionState
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCPeerConnection
@@ -9,6 +10,7 @@ tags:
   - connectionState
 browser-compat: api.RTCPeerConnection.connectionState
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`connectionState`** property
@@ -28,8 +30,8 @@ is sent to the {{domxref("RTCPeerConnection")}} instance.
 
 ## Syntax
 
-```js
-var connectionState = RTCPeerConnection.connectionState;
+```js-nolint
+const connectionState = RTCPeerConnection.connectionState
 ```
 
 ## Value
@@ -68,11 +70,11 @@ A string representing the current state of the connection, that is one of the fo
 ## Example
 
 ```js
-var pc = new RTCPeerConnection(configuration);
+const pc = new RTCPeerConnection(configuration);
 
-/* ... */
+// …
 
-var connectionState = pc.connectionState;
+const connectionState = pc.connectionState;
 ```
 
 ## Specifications
@@ -85,8 +87,7 @@ var connectionState = pc.connectionState;
 
 ## See also
 
-- [Lifetime of a WebRTC
-  session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
 - {{domxref("RTCPeerConnection")}}
 - {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)

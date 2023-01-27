@@ -1,6 +1,7 @@
 ---
 title: Intl.DisplayNames
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
+page-type: javascript-class
 tags:
   - Class
   - DisplayNames
@@ -11,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DisplayNames
 ---
+
 {{JSRef}}
 
 The **`Intl.DisplayNames`** object enables the consistent translation of language, region and script display names.

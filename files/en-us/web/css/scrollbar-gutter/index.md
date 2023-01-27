@@ -1,9 +1,10 @@
 ---
 title: scrollbar-gutter
 slug: Web/CSS/scrollbar-gutter
+page-type: css-property
 tags:
   - CSS
-  - Property
+  - CSS Property
   - Reference
   - scrollbar-gutter
 browser-compat: css.properties.scrollbar-gutter
@@ -34,6 +35,7 @@ scrollbar-gutter: stable both-edges;
 scrollbar-gutter: inherit;
 scrollbar-gutter: initial;
 scrollbar-gutter: revert;
+scrollbar-gutter: revert-layer;
 scrollbar-gutter: unset;
 ```
 

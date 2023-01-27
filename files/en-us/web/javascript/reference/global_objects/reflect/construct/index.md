@@ -1,6 +1,7 @@
 ---
 title: Reflect.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -10,9 +11,10 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.construct
 ---
+
 {{JSRef}}
 
-The static **`Reflect.construct()`** method acts like the
+The **`Reflect.construct()`** static method acts like the
 {{jsxref("Operators/new", "new")}} operator, but as a function. It is equivalent to
 calling `new target(...args)`. It gives also the added option to specify a
 different prototype.
@@ -21,7 +23,7 @@ different prototype.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.construct(target, argumentsList)
 Reflect.construct(target, argumentsList, newTarget)
 ```
@@ -52,16 +54,16 @@ A {{jsxref("TypeError")}}, if `target` or
 ## Description
 
 `Reflect.construct()` allows you to invoke a constructor with a variable
-number of arguments. (This would also be possible by using the [spread
-syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) combined with the [`new`
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/new).)
+number of arguments. (This would also be possible by using the
+[spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) combined with the
+[`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new).)
 
 ```js
-let obj = new Foo(...args)
-let obj = Reflect.construct(Foo, args)
+const obj = new Foo(...args);
+const obj = Reflect.construct(Foo, args);
 ```
 
-### `Reflect.construct()` vs `Object.create()`
+### Reflect.construct() vs. Object.create()
 
 Prior to the introduction of `Reflect`, objects could be constructed using
 an arbitrary combination of constructor and prototype by using
@@ -69,31 +71,30 @@ an arbitrary combination of constructor and prototype by using
 
 ```js
 function OneClass() {
-    this.name = 'one'
+  this.name = "one";
 }
 
 function OtherClass() {
-    this.name = 'other'
+  this.name = "other";
 }
 
 // Calling this:
-let obj1 = Reflect.construct(OneClass, args, OtherClass)
+const obj1 = Reflect.construct(OneClass, args, OtherClass);
 
 // ...has the same result as this:
-let obj2 = Object.create(OtherClass.prototype)
-OneClass.apply(obj2, args)
+const obj2 = Object.create(OtherClass.prototype);
+OneClass.apply(obj2, args);
 
-console.log(obj1.name)  // 'one'
-console.log(obj2.name)  // 'one'
+console.log(obj1.name); // 'one'
+console.log(obj2.name); // 'one'
 
-console.log(obj1 instanceof OneClass)  // false
-console.log(obj2 instanceof OneClass)  // false
+console.log(obj1 instanceof OneClass); // false
+console.log(obj2 instanceof OneClass); // false
 
-console.log(obj1 instanceof OtherClass)  // true
-console.log(obj2 instanceof OtherClass)  // true
+console.log(obj1 instanceof OtherClass); // true
+console.log(obj2 instanceof OtherClass); // true
 
-
-//Another example to demonstrate below:
+// Another example to demonstrate below:
 
 function func1(a, b, c, d) {
   console.log(arguments[3]);
@@ -103,8 +104,7 @@ function func2(d, e, f, g) {
   console.log(arguments[3]);
 }
 
-let obj1 = Reflect.construct(func1, ['I', 'Love', 'my', 'India'])
-obj1
+const obj1 = Reflect.construct(func1, ["I", "Love", "my", "country"]);
 ```
 
 However, while the end result is the same, there is one important difference in the
@@ -119,39 +119,39 @@ parameter if supplied, or `target` if not.
 
 ```js
 function OneClass() {
-    console.log('OneClass')
-    console.log(new.target)
+  console.log("OneClass");
+  console.log(new.target);
 }
 function OtherClass() {
-    console.log('OtherClass')
-    console.log(new.target)
+  console.log("OtherClass");
+  console.log(new.target);
 }
 
-let obj1 = Reflect.construct(OneClass, args)
-// Output:
-//     OneClass
-//     function OneClass { ... }
+const obj1 = Reflect.construct(OneClass, args);
+// Logs:
+// OneClass
+// function OneClass { ... }
 
-let obj2 = Reflect.construct(OneClass, args, OtherClass)
-// Output:
-//     OneClass
-//     function OtherClass { ... }
+const obj2 = Reflect.construct(OneClass, args, OtherClass);
+// Logs:
+// OneClass
+// function OtherClass { ... }
 
-let obj3 = Object.create(OtherClass.prototype);
-OneClass.apply(obj3, args)
-// Output:
-//     OneClass
-//     undefined
+const obj3 = Object.create(OtherClass.prototype);
+OneClass.apply(obj3, args);
+// Logs:
+// OneClass
+// undefined
 ```
 
 ## Examples
 
-### Using `Reflect.construct()`
+### Using Reflect.construct()
 
 ```js
-let d = Reflect.construct(Date, [1776, 6, 4])
-d instanceof Date  // true
-d.getFullYear()    // 1776
+const d = Reflect.construct(Date, [1776, 6, 4]);
+d instanceof Date; // true
+d.getFullYear(); // 1776
 ```
 
 ## Specifications

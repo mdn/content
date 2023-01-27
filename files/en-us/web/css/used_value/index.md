@@ -1,11 +1,14 @@
 ---
 title: Used value
 slug: Web/CSS/used_value
+page-type: guide
 tags:
   - CSS
   - Guide
   - Reference
+spec-urls: https://www.w3.org/TR/CSS22/cascade.html#used-value
 ---
+
 {{CSSRef}}
 
 The **used value** of a [CSS](/en-US/docs/Web/CSS) property is its value after all calculations have been performed on the [computed value](/en-US/docs/Web/CSS/computed_value).
@@ -63,9 +66,9 @@ div {
 
 ```js
 function updateUsedWidth(id) {
-  var div = document.querySelector(`#${id}`);
-  var par = div.querySelector('.show-used-width');
-  var wid = window.getComputedStyle(div)["width"];
+  const div = document.getElementById(id);
+  const par = div.querySelector('.show-used-width');
+  const wid = window.getComputedStyle(div)["width"];
   par.textContent = `Used width: ${wid}.`;
 }
 
@@ -97,33 +100,25 @@ CSS 2.0 defined only _computed value_ as the last step in a property's calculati
 
 ## Specifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("CSS2.2", "cascade.html#used-value", "used value")}}
-      </td>
-      <td>{{Spec2("CSS2.2")}}</td>
-      <td><p>No change.</p></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("CSS2.1", "cascade.html#used-value", "used value")}}
-      </td>
-      <td>{{Spec2("CSS2.1")}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 
 - {{domxref("window.getComputedStyle")}}
-- {{CSS_key_concepts}}
+- CSS key concepts:
+  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
+  - [Comments](/en-US/docs/Web/CSS/Comments)
+  - [Specificity](/en-US/docs/Web/CSS/Specificity)
+  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
+  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
+  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - Values
+    - [Initial values](/en-US/docs/Web/CSS/initial_value)
+    - [Computed values](/en-US/docs/Web/CSS/computed_value)
+    - [Used values](/en-US/docs/Web/CSS/used_value)
+    - [Actual values](/en-US/docs/Web/CSS/actual_value)
+  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+  - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
+  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)

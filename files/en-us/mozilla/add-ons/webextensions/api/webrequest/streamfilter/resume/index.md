@@ -11,6 +11,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.StreamFilter.resume
 ---
+
 {{AddonSidebar()}}
 
 Resumes a request that was previously suspended through a call to {{WebExtAPIRef("webRequest.StreamFilter.suspend()", "suspend()")}}.
@@ -19,7 +20,7 @@ You can't call this function until after the {{WebExtAPIRef("webRequest.StreamFi
 
 ## Syntax
 
-```js
+```js-nolint
 StreamFilter.resume()
 ```
 
@@ -43,7 +44,7 @@ This example uses suspend/resume to delay a web request.
 function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
-  filter.onstart = event => {
+  filter.onstart = (event) => {
     filter.suspend();
 
     setTimeout(() => {

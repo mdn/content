@@ -1,11 +1,13 @@
 ---
 title: CharacterData.appendData()
 slug: Web/API/CharacterData/appendData
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
 browser-compat: api.CharacterData.appendData
 ---
+
 {{APIRef("DOM")}}
 
 The **`appendData()`** method of the {{domxref("CharacterData")}} interface
@@ -13,8 +15,8 @@ adds the provided data to the end of the node's current data.
 
 ## Syntax
 
-```js
-appendData(data);
+```js-nolint
+appendData(data)
 ```
 
 ### Parameters
@@ -33,8 +35,8 @@ None.
 ```
 
 ```js
-let span = document.getElementsByTagName("span")[0];
-let textnode = span.nextSibling;
+const span = document.querySelector("span");
+const textnode = span.nextSibling;
 
 textnode.appendData(" - appended text.");
 ```

@@ -1,6 +1,7 @@
 ---
 title: MediaQueryList.addListener()
 slug: Web/API/MediaQueryList/addListener
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -9,8 +10,10 @@ tags:
   - Method
   - Reference
   - addListener
+  - Deprecated
 browser-compat: api.MediaQueryList.addListener
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_Header}}
 
 The deprecated **`addListener()`** method of the
@@ -25,25 +28,25 @@ available in the browsers you need to support.
 
 ## Syntax
 
-```js
-MediaQueryList.addListener(func)
+```js-nolint
+addListener(func)
 ```
 
 ### Parameters
 
-- func
+- `func`
   - : A function or function reference representing the callback function you want to run
     when the media query status changes.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 ```js
-var paragraph = document.querySelector('p');
-var mediaQueryList = window.matchMedia('(max-width: 600px)');
+const paragraph = document.querySelector('p');
+const mediaQueryList = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
   if (e.matches) {
@@ -51,7 +54,7 @@ function screenTest(e) {
     paragraph.textContent = 'This is a narrow screen — 600px wide or less.';
     document.body.style.backgroundColor = 'pink';
   } else {
-    /* the viewport is more than than 600 pixels wide */
+    /* the viewport is more than 600 pixels wide */
     paragraph.textContent = 'This is a wide screen — more than 600px wide.';
     document.body.style.backgroundColor = 'aquamarine';
   }
@@ -71,8 +74,7 @@ mediaQueryList.addListener(screenTest);
 ## See also
 
 - [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from
-  code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

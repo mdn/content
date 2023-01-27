@@ -1,6 +1,7 @@
 ---
 title: EXT_sRGB
 slug: Web/API/EXT_sRGB
+page-type: webgl-extension
 tags:
   - API
   - Reference
@@ -8,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.EXT_sRGB
 ---
+
 {{APIRef("WebGL")}}
 
 The **`EXT_sRGB`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and adds sRGB support to textures and framebuffer objects.
@@ -32,9 +34,9 @@ This extension exposes the following constants, which can be used in the {{domxr
 ## Examples
 
 ```js
-var ext = gl.getExtension('EXT_sRGB');
+const ext = gl.getExtension('EXT_sRGB');
 
-var texture = gl.createTexture();
+const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
 gl.texImage2D(gl.TEXTURE_2D, 0, ext.SRGB_EXT, 512, 512, 0,

@@ -1,6 +1,7 @@
 ---
 title: ClipboardItem()
 slug: Web/API/ClipboardItem/ClipboardItem
+page-type: web-api-instance-property
 tags:
   - API
   - Clipboard
@@ -13,6 +14,7 @@ tags:
   - paste
 browser-compat: api.ClipboardItem.ClipboardItem
 ---
+
 {{DefaultAPISidebar("Clipboard API")}}
 
 The **`ClipboardItem()`** constructor of the {{domxref("Clipboard API")}} creates a new {{domxref("ClipboardItem")}} object which represents data to be stored or retrieved via the {{domxref("Clipboard API")}}, that is {{domxref("clipboard.write()")}} and {{domxref("clipboard.read()")}} respectively.
@@ -21,19 +23,19 @@ The **`ClipboardItem()`** constructor of the {{domxref("Clipboard API")}} create
 
 ## Syntax
 
-```js
-var ClipboardItem = new ClipboardItem(ClipboardItemData);
+```js-nolint
+new ClipboardItem(data)
+new ClipboardItem(data, options)
 ```
 
 ### Parameters
 
-- `ClipboardItemData`
+- `data`
   - : An {{jsxref("Object")}} with the {{Glossary("MIME type")}} as the key and data as the value. The data can be represented as a {{domxref("Blob")}}, a {{jsxref("String")}} or a {{jsxref("Promise")}} which resolves to either a blob or string.
-- `ClipboardItemOptions` {{optional_inline}}
-
-  - : An {{jsxref("Object")}} with the following properties:
-
-    - **`presentationStyle`**: One of `"unspecified"`, `"inline"` or `"attachment"`. The default is `"unspecified"`.
+- `options` {{optional_inline}}
+  - : An object with the following properties:
+    - `presentationStyle` {{optional_inline}}
+      - : One of the three strings: `unspecified`, `inline` or `attachment`. The default is `unspecified`.
 
 > **Note:** You can also work with text via the {{domxref("Clipboard.readText()")}} and {{domxref("Clipboard.writeText()")}} methods of the {{domxref("Clipboard")}}
 > interface.
@@ -47,17 +49,17 @@ The below example requests a png image using the {{domxref("Fetch API")}}, and i
 ```js
 async function writeClipImg() {
   try {
-    const imgURL = '/myimage.png';
+    const imgURL = "/myimage.png";
     const data = await fetch(imgURL);
     const blob = await data.blob();
 
     await navigator.clipboard.write([
       new ClipboardItem({
-        [blob.type]: blob
-      })
+        [blob.type]: blob,
+      }),
     ]);
-    console.log('Fetched image copied.');
-  } catch(err) {
+    console.log("Fetched image copied.");
+  } catch (err) {
     console.error(err.name, err.message);
   }
 }
@@ -75,4 +77,4 @@ async function writeClipImg() {
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/image-support-for-async-clipboard/)
+- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)

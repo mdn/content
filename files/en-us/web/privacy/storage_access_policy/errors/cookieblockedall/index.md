@@ -8,12 +8,15 @@ tags:
   - storage access policy
   - tracking
 ---
+
+{{QuicklinksWithSubPages("Web/Privacy/Storage_access_policy/Errors")}}
+
 ## Message
 
 Firefox:
 
-```
-CookieBlockedAll=Request to access cookies or storage on “X” was blocked because we are blocking all storage access requests.
+```plain
+CookieBlockedAll=Request to access cookies or storage on "X" was blocked because we are blocking all storage access requests.
 ```
 
 ## What went wrong?

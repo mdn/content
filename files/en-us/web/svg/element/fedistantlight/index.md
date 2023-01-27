@@ -1,6 +1,7 @@
 ---
 title: <feDistantLight>
 slug: Web/SVG/Element/feDistantLight
+page-type: svg-element
 tags:
   - Element
   - Filters
@@ -10,6 +11,7 @@ tags:
   - SVG Light Source
 browser-compat: svg.elements.feDistantLight
 ---
+
 {{SVGRef}}
 
 The **`<feDistantLight>`** filter primitive defines a distant light source that can be used within a lighting filter primitive: {{SVGElement("feDiffuseLighting")}} or {{SVGElement("feSpecularLighting")}}.

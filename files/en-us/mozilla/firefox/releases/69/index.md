@@ -2,11 +2,12 @@
 title: Firefox 69 for developers
 slug: Mozilla/Firefox/Releases/69
 tags:
-  - '69'
+  - "69"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 69 that will affect developers. Firefox 69 was released on September 3, 2019.
@@ -17,14 +18,14 @@ This article provides information about the changes in Firefox 69 that will affe
 
 #### Debugger
 
-- [Event Listener Breakpoints](/en-US/docs/Tools/Debugger/Set_event_listener_breakpoints) let you diagnose which code a page executes in response to browser events. You can pick specific types, such as `click` or `keydown`, or whole categories of events, like all mouse input events. ({{bug(1526082)}}).
-- Scripts shown in the debugger's  [source list pane](/en-US/docs/Tools/Debugger/UI_Tour#source_list_pane) can now be saved via the _Download file_ context menu option ({{bug(888161)}}).
+- [Event Listener Breakpoints](https://firefox-source-docs.mozilla.org/devtools-user/debugger/set_event_listener_breakpoints/index.html) let you diagnose which code a page executes in response to browser events. You can pick specific types, such as `click` or `keydown`, or whole categories of events, like all mouse input events. ({{bug(1526082)}}).
+- Scripts shown in the debugger's [source list pane](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#source-list-pane) can now be saved via the _Download file_ context menu option ({{bug(888161)}}).
 - In the debugger's source list pane, loaded extensions are listed with their name, rather than just their {{Glossary("UUID")}} ({{bug(1486416)}}), making it much easier to find the extension code you want to debug.
 - The debugger now loads significantly faster via lazy-loading scripts ({{bug(1527488)}}).
 
 #### Console
 
-- [Browser Console](/en-US/docs/Tools/Browser_Console) messages from [tracking protection errors](/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection), [CSP errors](/en-US/docs/Web/HTTP/CSP), and [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors) are grouped automatically to reduce noise from repeated blocked resources and storage access ({{bug(1522396)}}).
+- [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) messages from [tracking protection errors](/en-US/docs/Web/Privacy/Tracking_Protection), [CSP errors](/en-US/docs/Web/HTTP/CSP), and [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors) are grouped automatically to reduce noise from repeated blocked resources and storage access ({{bug(1522396)}}).
 - All visible logs in the console can shared by saving to a file or copying to clipboard via a new _Export visible messages to_ context menu item ({{bug(1517728)}}).
 - The console's toolbar now responsively reduces its height into a single row to save vertical space ({{bug(972530)}}).
 - Messages from content can now be hidden in the console to focus on logs from the Firefox UI ({{bug(1523842)}}).
@@ -36,12 +37,12 @@ This article provides information about the changes in Firefox 69 that will affe
 
 #### Inspector
 
-- When you hover over an element in the [Page Inspector](/en-US/docs/Tools/Page_Inspector), the infobar that appears now includes the fact that an element is a flex container, or flex item ({{bug(1521188)}}).
+- When you hover over an element in the [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), the infobar that appears now includes the fact that an element is a flex container, or flex item ({{bug(1521188)}}).
 - When inspecting a page containing a grid with a subgrid, the parent grid's overlay lines are displayed whenever the subgrid's lines are displayed; if the parent grid's overlay checkbox is unselected, then its lines are translucent ({{bug(1550519)}}).
 
 #### Remote debugging
 
-- For our mobile web developers, we have migrated remote debugging from the old WebIDE into a re-designed [about:debugging](/en-US/docs/Tools/about:debugging), making the experience of debugging [GeckoView](https://hacks.mozilla.org/2019/06/geckoview-in-2019/) on remote devices via USB much better ({{bug(1462208)}}).
+- For our mobile web developers, we have migrated remote debugging from the old WebIDE into a re-designed [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html), making the experience of debugging [GeckoView](https://hacks.mozilla.org/2019/06/geckoview-in-2019/) on remote devices via USB much better ({{bug(1462208)}}).
 
 #### General
 
@@ -51,7 +52,7 @@ This article provides information about the changes in Firefox 69 that will affe
 
 - In order to align more closely to the specification, the text track associated with a {{HTMLElement("track")}} element no longer loads the WebVTT file containing the text cues if the element is created in its default `disabled` {{domxref("TextTrack.mode", "mode")}}. To access or manipulate the cues when the `mode` is `disabled`, change the `mode` to either `started` or `hidden`; this will trigger loading of the WebVTT data ({{bug(1550633)}}).
 
-####  Removals
+#### Removals
 
 - The HTML {{HTMLElement("keygen")}} element has been removed from Firefox. It was deprecated some time ago, and its purpose has generally been supplanted by other technologies ({{bug(1315460)}}).
 
@@ -76,7 +77,7 @@ This article provides information about the changes in Firefox 69 that will affe
 ### JavaScript
 
 - [Public class fields](/en-US/docs/Web/JavaScript/Reference/Classes#field_declarations) are enabled by default ({{bug(1555464)}}). See also [Class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) for more information.
-- The promise rejection events [`unhandledrejection`](/en-US/docs/Web/API/Window/unhandledrejection_event) and [`rejectionhandled`](/en-US/docs/Web/API/Window/rejectionhandled_event) are now enabled by default ({{bug(1362272)}}). To learn more about how these work, see {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}.
+- The promise rejection events [`unhandledrejection`](/en-US/docs/Web/API/Window/unhandledrejection_event) and [`rejectionhandled`](/en-US/docs/Web/API/Window/rejectionhandled_event) are now enabled by default ({{bug(1362272)}}). To learn more about how these work, see [Promise rejection events](/en-US/docs/Web/JavaScript/Guide/Using_promises#promise_rejection_events).
 
 ### HTTP
 
@@ -103,7 +104,7 @@ This article provides information about the changes in Firefox 69 that will affe
 
 #### Media, Web Audio, and WebRTC
 
-- For improved user security, and in-keeping with the latest versions of the [Media Capture and Streams](/en-US/docs/Web/API/Media_Streams_API) specification, the {{domxref("navigator.mediaDevices")}} property is no longer present if the context is insecure. To use {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}, {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}, and so forth, be sure your content is loaded using {{Glossary("HTTPS")}} ({{bug(1528031)}}).
+- For improved user security, and in-keeping with the latest versions of the [Media Capture and Streams](/en-US/docs/Web/API/Media_Capture_and_Streams_API) specification, the {{domxref("navigator.mediaDevices")}} property is no longer present if the context is insecure. To use {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}, {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}, and so forth, be sure your content is loaded using {{Glossary("HTTPS")}} ({{bug(1528031)}}).
 - The Web Audio API's {{domxref("AudioParam.value")}} property now returns the actual value of the property at the current time, taking into account all scheduled or graduated value changes. Previously, Firefox only returned the most recent explicitly-set value (as through using the `value` setter) ({{bug(893020)}}).
 - We've updated {{domxref("MediaStreamAudioSourceNode")}} to use the new, lexicographical, ordering for tracks. Previously, track ordering was up to the individual browser, and could even change arbitrarily. In addition, attempting to create a `MediaStreamAudioSourceNode` using a stream that has no audio tracks now throws an `InvalidStateError` exception ({{bug(1553215)}}).
 - The {{domxref("MediaTrackSettings.facingMode", "facingMode")}}, {{domxref("MediaTrackSettings.deviceId", "deviceId")}}, and {{domxref("MediaTrackSettings.groupId", "groupId")}} settings are now included as members of the {{domxref("MediaTrackSettings")}} object returned by calls to {{domxref("MediaStreamTrack.getSettings()")}} ({{bug(1537986)}}).

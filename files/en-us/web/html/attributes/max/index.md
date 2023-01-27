@@ -1,6 +1,7 @@
 ---
-title: 'HTML attribute: max'
+title: "HTML attribute: max"
 slug: Web/HTML/Attributes/max
+page-type: html-attribute
 tags:
   - Attribute
   - Attributes
@@ -8,11 +9,15 @@ tags:
   - HTML
   - max
   - Reference
+browser-compat:
+  - html.elements.input.max
+  - html.elements.meter.max
+  - html.elements.progress.max
 ---
 
 {{HTMLSidebar}}
 
-The **`max`** attribute defines the maximum value that is acceptable and valid for the input containing the attribute. If the [`value`](/en-US/docs/Web/HTML/Element/input#attr-value) of the element is greater than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). This value must be greater than or equal to the value of the [`min`](min) attribute. If the `max` attribute is present by is not specified or is invalid, no `max` value is applied. If the `max` attribute is valid and a non-empty value is greater than the maximum allowed by the `max` attribute, constraint validation will prevent form submission.
+The **`max`** attribute defines the maximum value that is acceptable and valid for the input containing the attribute. If the [`value`](/en-US/docs/Web/HTML/Element/input#value) of the element is greater than this, the element fails [validation](/en-US/docs/Learn/Forms/Form_validation). This value must be greater than or equal to the value of the [`min`](min) attribute. If the `max` attribute is present by is not specified or is invalid, no `max` value is applied. If the `max` attribute is valid and a non-empty value is greater than the maximum allowed by the `max` attribute, constraint validation will prevent form submission.
 
 Valid for the numeric input types, including the {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and both the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the `max` attribute is a number that specifies the most positive value a form control to be considered valid.
 
@@ -130,63 +135,11 @@ Provide instructions to help users understand how to complete the form and use i
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'input.html#the-min-and-max-attributes', 'max attribute')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5 W3C', 'input.html#the-min-and-max-attributes', 'max attribute')}}
-      </td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'forms.html#the-progress-element', 'progress element')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5 W3C', 'forms.html#the-progress-element', 'progress element')}}
-      </td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'forms.html#the-meter-element', 'meter element')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5 W3C', 'forms.html#the-meter-element', 'meter element')}}
-      </td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("html.elements.attributes.max")}}
+{{Compat}}
 
 ## See also
 
@@ -194,7 +147,7 @@ Provide instructions to help users understand how to complete the form and use i
 - [`min`](/en-US/docs/Web/HTML/Attributes/min)
 - other meter attributes: [`low`](/en-US/docs/Web/HTML/Attributes/low), [`high`](/en-US/docs/Web/HTML/Attributes/high), [`optimum`](/en-US/docs/Web/HTML/Attributes/optimum)
 - [Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
-- [Constraint validation API](/en-US/docs/Web/API/Constraint_validation)
+- [Form validation](/en-US/docs/Learn/Forms/Form_validation)
 - {{domxref('validityState.rangeOverflow')}}
 - {{cssxref(':out-of-range')}}
 - {{htmlelement('input')}}

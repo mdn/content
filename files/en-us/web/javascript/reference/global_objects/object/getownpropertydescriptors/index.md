@@ -1,6 +1,7 @@
 ---
 title: Object.getOwnPropertyDescriptors()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
+page-type: javascript-static-method
 tags:
   - JavaScript
   - Method
@@ -8,16 +9,17 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.getOwnPropertyDescriptors
 ---
+
 {{JSRef}}
 
-The **`Object.getOwnPropertyDescriptors()`** method returns all
+The **`Object.getOwnPropertyDescriptors()`** static method returns all
 own property descriptors of a given object.
 
 {{EmbedInteractiveExample("pages/js/object-getownpropertydescriptors.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Object.getOwnPropertyDescriptors(obj)
 ```
 

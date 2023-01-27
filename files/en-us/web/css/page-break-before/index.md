@@ -1,6 +1,7 @@
 ---
 title: page-break-before
 slug: Web/CSS/page-break-before
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.page-break-before
 ---
+
 {{CSSRef}}
 
 > **Warning:** This property has been replaced by the {{cssxref("break-before")}} property.
@@ -31,6 +33,7 @@ page-break-before: verso;
 page-break-before: inherit;
 page-break-before: initial;
 page-break-before: revert;
+page-break-before: revert-layer;
 page-break-before: unset;
 ```
 
@@ -45,9 +48,9 @@ page-break-before: unset;
 - `avoid`
   - : Avoid page breaks before the element.
 - `left`
-  - : Force page breaks before the element so that the next page is formatted as a left page.
+  - : Force page breaks before the element so that the next page is formatted as a left page. It's the page placed on the left side of the spine of the book or the back side of the page in duplex printing.
 - `right`
-  - : Force page breaks before the element so that the next page is formatted as a right page.
+  - : Force page breaks before the element so that the next page is formatted as a right page. It's the page placed on the right side of the spine of the book or the front side of the page in duplex printing.
 - `recto` {{experimental_inline}}
   - : If pages progress left-to-right, then this acts like `right`. If pages progress right-to-left, then this acts like `left`.
 - `verso` {{experimental_inline}}
@@ -80,9 +83,9 @@ For compatibility reasons, `page-break-before` should be treated by browsers as 
 ### Avoid a page break before an element
 
 ```css
-/* avoid page break before div elements of class note */
+/* Avoid page break before div elements of class note */
 div.note {
-    page-break-before: avoid;
+  page-break-before: avoid;
 }
 ```
 

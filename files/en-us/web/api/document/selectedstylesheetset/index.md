@@ -1,6 +1,7 @@
 ---
 title: Document.selectedStyleSheetSet
 slug: Web/API/Document/selectedStyleSheetSet
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -9,22 +10,17 @@ tags:
   - Reference
   - Stylesheets
   - Deprecated
+  - Non-standard
 browser-compat: api.Document.selectedStyleSheetSet
 ---
-{{APIRef("DOM")}}{{deprecated_header}}
+
+{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`selectedStyleSheetSet`** property indicates the name of the style sheet set that's currently in use.
 
-## Syntax
+## Value
 
-```js
-currentStyleSheetSet = document.selectedStyleSheetSet;
-
-document.selectedStyleSheet = newStyleSheetSet;
-```
-
-On return, `currentStyleSheetSet` indicates the name of the style sheet set
-currently in use. You can also set the current style sheet set using this property.
+The name of the style sheet set currently in use. You can also set the current style sheet set using this property.
 
 Setting the value of this property is equivalent to calling
 {{domxref("document.enableStyleSheetsForSet()")}} with the value of
@@ -35,10 +31,10 @@ Setting the value of this property is equivalent to calling
 > the `disabled` attribute on style sheets will affect the value of this
 > attribute.
 
-## Example
+## Examples
 
 ```js
-console.log('Current style sheet set: ' + document.selectedStyleSheetSet);
+console.log(`Current style sheet set: ${document.selectedStyleSheetSet}`);
 
 document.selectedStyleSheetSet = 'Some other style sheet';
 ```

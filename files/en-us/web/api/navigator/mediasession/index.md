@@ -1,6 +1,7 @@
 ---
 title: Navigator.mediaSession
 slug: Web/API/Navigator/mediaSession
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -17,6 +18,7 @@ tags:
   - metadata
 browser-compat: api.Navigator.mediaSession
 ---
+
 {{APIRef}}
 
 The read-only {{domxref("Navigator")}} property
@@ -33,16 +35,10 @@ In addition, the `MediaSession` interface provides the
 {{domxref("MediaSession.setActionHandler", "setActionHandler()")}} method, which lets
 you receive events when the user engages device controls such as either onscreen or
 physical play, pause, seek, and other similar controls. An internet radio app, for
-example, can use `setActionHandler()` to let fhe media controls on a keyboard
+example, can use `setActionHandler()` to let the media controls on a keyboard
 or elsewhere on the user's device be used to control the app's media playback.
 
-## Syntax
-
-```js
-let mediaSession = navigator.mediaSession;
-```
-
-### Value
+## Value
 
 A {{domxref("MediaSession")}} object the current document can use to share information
 about media it's playing and its current playback status. This information can include
@@ -50,7 +46,7 @@ typical metadata such as the title, artist, and album name of the song being pla
 well as potentially one or more images containing things like album art, artist photos,
 and so forth.
 
-## Example
+## Examples
 
 In this example, metadata is submitted to the `mediaSession` object. Note
 that the code begins by ensuring that the {{domxref("navigator.mediaSession")}} property

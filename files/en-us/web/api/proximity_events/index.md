@@ -1,6 +1,7 @@
 ---
 title: Proximity Events
 slug: Web/API/Proximity_Events
+page-type: web-api-overview
 tags:
   - API
   - Experimental
@@ -8,6 +9,7 @@ tags:
   - Reference
   - Deprecated
 ---
+
 {{DefaultAPISidebar("Proximity Events")}}{{Deprecated_Header}}
 
 > **Warning:** The Proximity Events APIs are not supported by any current major browser, and should not be used. This page is provided for historical interest.

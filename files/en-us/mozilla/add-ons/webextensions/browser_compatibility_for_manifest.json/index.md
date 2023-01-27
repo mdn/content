@@ -5,14 +5,14 @@ tags:
   - Add-ons
   - WebExtensions
   - manifest.json
+browser-compat: webextensions.manifest
 ---
+
 {{AddonSidebar}}
 
-{{Compat("webextensions.manifest",2)}}
+{{Compat}}
 
 > **Note:**
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: '<fieldset>: The Field Set element'
 slug: Web/HTML/Element/fieldset
+page-type: html-element
 tags:
   - Element
   - Forms
@@ -11,7 +12,7 @@ tags:
 browser-compat: html.elements.fieldset
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<fieldset>`** [HTML](/en-US/docs/Web/HTML) element is used to group several controls as well as labels ({{HTMLElement("label")}}) within a web form.
 
@@ -54,9 +55,9 @@ This example shows a really simple `<fieldset>` example, with a `<legend>`, and 
 ```html
 <form action="#">
   <fieldset>
-    <legend>Simple fieldset</legend>
-    <input type="radio" id="radio">
-    <label for="radio">Spirit of radio</label>
+    <legend>Do you agree?</legend>
+    <input type="checkbox" id="chbx" name="agree" value="Yes!" />
+    <label for="chbx">I agree</label>
   </fieldset>
 </form>
 ```
@@ -70,14 +71,14 @@ This example shows a disabled `<fieldset>` with two controls inside it. Note how
 ```html
 <form action="#">
   <fieldset disabled>
-    <legend>Disabled fieldset</legend>
+    <legend>Disabled login fieldset</legend>
     <div>
       <label for="name">Name: </label>
-      <input type="text" id="name" value="Chris">
+      <input type="text" id="name" value="Chris" />
     </div>
     <div>
       <label for="pwd">Archetype: </label>
-      <input type="password" id="pwd" value="Wookie">
+      <input type="password" id="pwd" value="Wookie" />
     </div>
   </fieldset>
 </form>
@@ -134,13 +135,13 @@ This example shows a disabled `<fieldset>` with two controls inside it. Note how
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td>{{ARIARole("group")}}</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("radiogroup")}},
-        {{ARIARole("presentation")}}, {{ARIARole("none")}}
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role"><code>radiogroup</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
       </td>
     </tr>
     <tr>

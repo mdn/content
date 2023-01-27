@@ -5,6 +5,7 @@ tags:
   - Guide
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 The browser extensions API is still an [emerging standard](https://browserext.github.io/browserext/). As a result, while it is supported by most major browsers including Firefox, Chrome, Edge, and Opera, there are differences between the various implementations. This means that some changes may be necessary to implement your extension for multiple browsers.

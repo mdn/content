@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.mediaGroup
 slug: Web/API/HTMLMediaElement/mediaGroup
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -8,27 +9,17 @@ tags:
   - Property
   - Web
   - Deprecated
+  - Non-standard
 browser-compat: api.HTMLMediaElement.mediaGroup
 ---
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`HTMLMediaElement.mediaGroup`** property reflects the {{htmlattrxref("mediaGroup", "video")}} HTML attribute, which indicates the name of the group of elements it belongs to. A group of media elements shares a common `controller`.
 
-## Syntax
+## Value
 
-```js
-...
-```
-
-### Value
-
-A {{domxref("DOMString")}}.
-
-## Example
-
-```js
-...
-```
+A string.
 
 ## Specifications
 

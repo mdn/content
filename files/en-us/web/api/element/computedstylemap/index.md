@@ -1,6 +1,7 @@
 ---
 title: Element.computedStyleMap()
 slug: Web/API/Element/computedStyleMap
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -13,6 +14,7 @@ tags:
   - computedStyleMap()
 browser-compat: api.Element.computedStyleMap
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`computedStyleMap()`** method of
@@ -22,8 +24,8 @@ an alternative to {{domxref("CSSStyleDeclaration")}}.
 
 ## Syntax
 
-```js
-var stylePropertyMapReadOnly = element.computedStyleMap()
+```js-nolint
+computedStyleMap()
 ```
 
 ### Parameters
@@ -41,7 +43,7 @@ we will add all the CSS Property / Value pairs.
 
 ```html
 <p>
-   <a href="https://example.com">Link</a>
+  <a href="https://example.com">Link</a>
 </p>
 <dl id="regurgitation"></dl>
 ```
@@ -82,7 +84,7 @@ for (const [prop, val] of allComputedStyles) {
 }
 ```
 
-In [browsers that support `computedStyleMap()`](#Browser_compatibility),
+In [browsers that support `computedStyleMap()`](#browser_compatibility),
 you'll see a list of all the CSS properties and values.
 In other browsers you'll just see a link.
 

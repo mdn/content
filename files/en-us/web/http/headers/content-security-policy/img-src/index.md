@@ -11,8 +11,9 @@ tags:
   - Security
   - img-src
   - source
-browser-compat: http.headers.csp.Content-Security-Policy.img-src
+browser-compat: http.headers.Content-Security-Policy.img-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} **`img-src`** directive specifies valid sources of images and favicons.
@@ -65,7 +66,7 @@ Content-Security-Policy: img-src https://example.com/
 The following {{HTMLElement("img")}} is blocked and won't load:
 
 ```html
-<img src="https://not-example.com/foo.jpg" alt="example picture">
+<img src="https://not-example.com/foo.jpg" alt="example picture" />
 ```
 
 ## Specifications

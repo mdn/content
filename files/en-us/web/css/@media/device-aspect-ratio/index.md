@@ -1,8 +1,9 @@
 ---
 title: device-aspect-ratio
 slug: Web/CSS/@media/device-aspect-ratio
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Deprecated
   - Media Queries
@@ -11,7 +12,10 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.device-aspect-ratio
 ---
+
 {{CSSRef}} {{deprecated_header}}
+
+> **Note:** To query for the aspect ratio of the viewport, developers should use the [`aspect-ratio`](/en-US/docs/Web/CSS/@media/aspect-ratio) media feature instead.
 
 The **`device-aspect-ratio`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the width-to-height aspect ratio of an output device.
 

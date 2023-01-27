@@ -1,11 +1,13 @@
 ---
 title: Web-based protocol handlers
 slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
+page-type: guide
 tags:
   - Advanced
-  - HTML5
+  - HTML
   - Web-Based Protocol Handlers
 ---
+
 ## Background
 
 It's fairly common to find web pages link to resources using non-`http` protocols. An example is the `mailto:` protocol:
@@ -36,7 +38,7 @@ Where the parameters are:
 
 When a browser executes this code, it should display a prompt to the user, asking permission to allow the web application to register as a handler for the protocol. Firefox displays a prompt in the notification bar area:
 
-![](protocolregister.png)
+![Screenshot of a prompt that reads: Add Burger handler (google.co.uk) as an application for burger links. An Add Application button is next to the text.](protocolregister.png)
 
 > **Note:** The URL template supplied when registering **must** be of the same domain as the webpage attempting to perform the registration or the registration will fail. For example, `http://example.com/homepage.html` can register a protocol handler for `http://example.com/handle_mailto/%s`, but not for `http://example.org/handle_mailto/%s`.
 
@@ -44,21 +46,28 @@ Registering the same protocol handler more than once will pop up a different not
 
 ### Example
 
-```js
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html lang="en">
-<head>
-  <title>Web Protocol Handler Sample - Register</title>
-  <script type="text/javascript">
-    navigator.registerProtocolHandler("web+burger",
-                                  "http://www.google.co.uk/?uri=%s",
-                                  "Burger handler");
-  </script>
-</head>
-<body>
-  <h1>Web Protocol Handler Sample</h1>
-  <p>This web page will install a web protocol handler for the <code>web+burger:</code> protocol.</p>
-</body>
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Web Protocol Handler Sample - Register</title>
+    <script>
+      navigator.registerProtocolHandler(
+        "web+burger",
+        "http://www.google.co.uk/?uri=%s",
+        "Burger handler"
+      );
+    </script>
+  </head>
+  <body>
+    <h1>Web Protocol Handler Sample</h1>
+    <p>
+      This web page will install a web protocol handler for the
+      <code>web+burger:</code> protocol.
+    </p>
+  </body>
 </html>
 ```
 
@@ -69,14 +78,14 @@ Now, anytime the user activates a link that uses the registered protocol, the br
 ### Example
 
 ```html
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Web Protocol Handler Sample - Test</title>
-</head>
-<body>
-  <p>Hey have you seen <a href="web+burger:cheeseburger">this</a> before?</p>
-</body>
+  <head>
+    <title>Web Protocol Handler Sample - Test</title>
+  </head>
+  <body>
+    <p>Hey have you seen <a href="web+burger:cheeseburger">this</a> before?</p>
+  </body>
 </html>
 ```
 
@@ -102,7 +111,7 @@ if ( isset ( $_GET["value"] ) ) {
 }
 ?>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Web Protocol Handler Sample</title>
@@ -123,6 +132,6 @@ if ( isset ( $_GET["value"] ) ) {
 
 ## See also
 
-- [nsIProtocolHandler](/en-US/docs/XPCOM_Interface_Reference/nsIProtocolHandler) (XUL only)
-- [RegisterProtocolHandler Enhancing the Federated Web](http://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) at Mozilla Webdev
-- [Register a custom protocolHandler](https://developers.google.com/web/updates/2011/06/Registering-a-custom-protocol-handler) at Google Developers.
+- `nsIProtocolHandler` (XUL only)
+- [RegisterProtocolHandler Enhancing the Federated Web](https://blog.mozilla.org/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) at Mozilla Webdev
+- [Register a custom protocolHandler](https://web.dev/registering-a-custom-protocol-handler/) at web.dev.

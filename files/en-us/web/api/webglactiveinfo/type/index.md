@@ -1,6 +1,7 @@
 ---
 title: WebGLActiveInfo.type
 slug: Web/API/WebGLActiveInfo/type
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -8,6 +9,7 @@ tags:
   - WebGL
 browser-compat: api.WebGLActiveInfo.type
 ---
+
 {{APIRef("WebGL")}}
 
 The read-only **`WebGLActiveInfo.type`** property represents the type of the requested data returned by calling the {{domxref("WebGLRenderingContext.getActiveAttrib()", "getActiveAttrib()")}} or {{domxref("WebGLRenderingContext.getActiveUniform()", "getActiveUniform()")}} methods.
@@ -15,10 +17,10 @@ The read-only **`WebGLActiveInfo.type`** property represents the type of the req
 ## Examples
 
 ```js
-var activeAttrib = gl.getActiveAttrib(program, index);
+const activeAttrib = gl.getActiveAttrib(program, index);
 activeAttrib.type;
 
-var activeUniform = gl.getActiveUniform(program, index);
+const activeUniform = gl.getActiveUniform(program, index);
 activeUniform.type;
 ```
 

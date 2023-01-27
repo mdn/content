@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.frameRate
 slug: Web/API/MediaTrackSettings/frameRate
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -15,6 +16,7 @@ tags:
   - frameRate
 browser-compat: api.MediaTrackSettings.frameRate
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
@@ -31,21 +33,14 @@ the value of {{domxref("MediaTrackSupportedConstraints.frameRate")}} as returned
 call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var frameRate = MediaTrackSettings.frameRate;
-```
-
-### Value
+## Value
 
 A double-precision floating-point number indicating the current configuration of the
 track's frame rate, in frames per second.
 
-## Example
+## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example.
 
 ## Specifications
 
@@ -57,8 +52,7 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Exampl
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities,
-  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints.frameRate")}}
 - {{domxref("MediaTrackSettings")}}

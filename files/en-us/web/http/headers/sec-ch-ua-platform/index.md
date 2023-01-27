@@ -8,10 +8,11 @@ tags:
   - HTTP Header
   - Reference
   - Request header
-  -  Experimental
+  - Experimental
 browser-compat: http.headers.Sec-CH-UA-Platform
 ---
-{{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
+
+{{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`Sec-CH-UA-Platform`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the platform or operating system on which the user agent is running.
 For example: "Windows" or "Android".
@@ -44,7 +45,7 @@ Sec-CH-UA-Platform: <platform>
 ### Directives
 
 - `<platform>`
-  - : One of the following strings: `"Android"`, `"Chrome OS"`, `"iOS"`, `"Linux"`, `"macOS"`, `"Windows"`, or `"Unknown"`.
+  - : One of the following strings: `"Android"`, `"Chrome OS"`, `"Chromium OS"`, `"iOS"`, `"Linux"`, `"macOS"`, `"Windows"`, or `"Unknown"`.
 
 ## Examples
 

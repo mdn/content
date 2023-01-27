@@ -1,6 +1,7 @@
 ---
 title: Element.ariaAutoComplete
 slug: Web/API/Element/ariaAutoComplete
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,20 +12,14 @@ tags:
   - Element
 browser-compat: api.Element.ariaAutoComplete
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaAutoComplete`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-autocomplete`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete) attribute, which indicates whether inputting text could trigger display of one or more predictions of the user's intended value for a combobox, searchbox, or textbox and specifies how predictions would be presented if they were made.
 
-## Syntax
+## Value
 
-```js
-var ariaAutoComplete = element.ariaAutoComplete;
-element.ariaAutoComplete = ariaAutoComplete
-```
-
-### Value
-
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"inline"`
   - : When a user is providing input, text suggesting one way to complete the provided input may be dynamically inserted after the caret.
@@ -42,7 +37,14 @@ In this example, the `aria-autocomplete` attribute on the element with an ID of 
 ```html
 <div class="animals-combobox">
   <label for="animal">Animal</label>
-  <input id="animal" type="text" role="combobox" aria-autocomplete="inline" aria-controls="animals-listbox" aria-expanded="false" aria-haspopup="listbox">
+  <input
+    id="animal"
+    type="text"
+    role="combobox"
+    aria-autocomplete="inline"
+    aria-controls="animals-listbox"
+    aria-expanded="false"
+    aria-haspopup="listbox" />
   <ul id="animals-listbox" role="listbox" aria-label="Animals">
     <li id="animal-cat" role="option">Cat</li>
     <li id="animal-dog" role="option">Dog</li>

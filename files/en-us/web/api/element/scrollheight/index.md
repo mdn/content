@@ -1,6 +1,7 @@
 ---
 title: Element.scrollHeight
 slug: Web/API/Element/scrollHeight
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -9,13 +10,14 @@ tags:
   - Reference
 browser-compat: api.Element.scrollHeight
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.scrollHeight`** read-only property is a
 measurement of the height of an element's content, including content not visible on the
 screen due to overflow.
 
-![](scrollheight.png)
+![The user's viewport is an element with four regions labeled padding-top, border-top, border-bottom, padding-bottom. The scroll height goes from the container's padding top to the end of the padding bottom, well beyond the top and bottom of the viewport.](scrollheight.png)
 
 The `scrollHeight` value is equal to the minimum height the element would
 require in order to fit all the content in the viewport without using a vertical
@@ -29,13 +31,7 @@ fit without a need for vertical scrollbar, its `scrollHeight` is equal to
 > **Note:** This property will round the value to an integer. If you need a fractional value, use
 > {{domxref("Element.getBoundingClientRect()")}}.
 
-## Syntax
-
-```js
-elemScrollHeight = element.scrollHeight;
-```
-
-### Value
+## Value
 
 An integer corresponding to the scrollHeight pixel value of the element.
 
@@ -69,7 +65,7 @@ window.getComputedStyle(element).overflowY !== 'hidden'
 
 ### Checking that the user has read a text
 
-Associated with the {{domxref("GlobalEventHandlers/onscroll", "onscroll")}} event, this
+Associated with the {{domxref("Element.scroll_event", "scroll")}} event, this
 equivalence can be useful to determine whether a user has read a text or not (see also
 the {{domxref("element.scrollTop")}} and {{domxref("element.clientHeight")}}
 properties).
@@ -82,7 +78,8 @@ until the content of the textarea has been scrolled through.
 ```html
 <form name="registration">
   <p>
-    <textarea id="rules">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
+    <textarea id="rules">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
 Aliquam erat volutpat. Praesent molestie, dolor ut eleifend aliquam, mi ligula ultrices sapien, quis cursus
 neque dui nec risus. Duis tincidunt lobortis purus eu aliquet. Quisque in dignissim magna. Aenean ac lorem at
 velit ultrices consequat. Nulla luctus nisi ut libero cursus ultrices. Pellentesque nec dignissim enim. Phasellus
@@ -94,7 +91,7 @@ dictum ipsum aliquet erat eleifend sit amet sollicitudin felis tempus. Aliquam c
 luctus pellentesque placerat. Mauris nisl odio, condimentum sed fringilla a, consectetur id ligula. Praesent sem
 sem, aliquet non faucibus vitae, iaculis nec elit. Nullam volutpat, lectus et blandit bibendum, nulla lorem congue
 turpis, ac pretium tortor sem ut nibh. Donec vel mi in ligula hendrerit sagittis. Donec faucibus viverra fermentum.
-Fusce in arcu arcu. Nullam at dignissim massa. Cras nibh est, pretium sit amet faucibus eget, sollicitudin in
+Fusce in arcu. Nullam at dignissim massa. Cras nibh est, pretium sit amet faucibus eget, sollicitudin in
 ligula. Vivamus vitae urna mauris, eget euismod nunc. Aenean semper gravida enim non feugiat. In hac habitasse
 platea dictumst. Cras eleifend nisl volutpat ante condimentum convallis. Donec varius dolor malesuada erat
 consequat congue. Donec eu lacus ut sapien venenatis tincidunt. Quisque sit amet tellus et enim bibendum varius et
@@ -123,14 +120,14 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
   border-radius: 5px;
   width: 600px;
   padding: 5px;
-  border: 2px #7FDF55 solid;
+  border: 2px #7fdf55 solid;
 }
 
 #rules {
   width: 600px;
   height: 130px;
   padding: 5px;
-  border: #2A9F00 solid 2px;
+  border: #2a9f00 solid 2px;
   border-radius: 5px;
 }
 ```
@@ -147,8 +144,8 @@ function checkReading () {
   checkReading.noticeBox.textContent = checkReading.read ? "Thank you." : "Please, scroll and read the following text.";
 }
 
-onload = function () {
-  var oToBeRead = document.getElementById("rules");
+onload = () => {
+  const oToBeRead = document.getElementById("rules");
   checkReading.noticeBox = document.createElement("span");
   document.registration.accept.checked = false;
   checkReading.noticeBox.id = "notice";
@@ -171,10 +168,7 @@ onload = function () {
 
 ## See also
 
-- [MSDN:
-  Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer
-  9](<https://docs.microsoft.com/previous-versions/hh781509(v=vs.85)>)
+- [MSDN: Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9](<https://docs.microsoft.com/previous-versions/hh781509(v=vs.85)>)
 - {{domxref("Element.clientHeight")}}
 - {{domxref("HTMLElement.offsetHeight")}}
-- [Determining
-  the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

@@ -8,12 +8,15 @@ tags:
   - storage access policy
   - tracking
 ---
+
+{{QuicklinksWithSubPages("Web/Privacy/Storage_access_policy/Errors")}}
+
 ## Message
 
 Firefox:
 
 ```
-CookieBlockedByPermission=Request to access cookies or storage on “X” was blocked because of custom cookie permission.
+CookieBlockedByPermission=Request to access cookies or storage on "X" was blocked because of custom cookie permission.
 ```
 
 ## What went wrong?

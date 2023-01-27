@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.drawFocusIfNeeded()
 slug: Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
+page-type: web-api-instance-method
 tags:
   - API
   - Accessibility
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.drawFocusIfNeeded
 ---
+
 {{APIRef}}
 
 The
@@ -19,9 +21,9 @@ specified element is focused.
 
 ## Syntax
 
-```js
-void ctx.drawFocusIfNeeded(element);
-void ctx.drawFocusIfNeeded(path, element);
+```js-nolint
+drawFocusIfNeeded(element)
+drawFocusIfNeeded(path, element)
 ```
 
 ### Parameters
@@ -30,6 +32,10 @@ void ctx.drawFocusIfNeeded(path, element);
   - : The element to check whether it is focused or not.
 - `path`
   - : A {{domxref("Path2D")}} path to use.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

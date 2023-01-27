@@ -12,6 +12,7 @@ tags:
   - contextualIdentities
 browser-compat: webextensions.api.contextualIdentities.create
 ---
+
 {{AddonSidebar()}}
 
 Creates a new contextual identity. Once created, the user will be able to create new tabs belonging to this contextual identity, just as they can with the built-in identities.
@@ -20,8 +21,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var createContext = browser.contextualIdentities.create(
+```js-nolint
+let createContext = browser.contextualIdentities.create(
   details                  // object
 )
 ```

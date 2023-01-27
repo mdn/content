@@ -5,6 +5,7 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `function-available` function determines if a given function is available and returns boolean true or false.
@@ -26,7 +27,7 @@ Boolean `true` or `false`.
 
 ### Defined
 
-[XPath 1.0 15](https://www.w3.org/TR/xslt#function-function-available)
+[XSLT 1.0 15](https://www.w3.org/TR/1999/REC-xslt-19991116/#function-function-available)
 
 ### Gecko support
 

@@ -1,16 +1,17 @@
 ---
 title: HTML elements reference
 slug: Web/HTML/Element
+page-type: landing-page
 tags:
   - Basic
   - Element
   - HTML
   - Reference
   - Web
-  - l10n:priority
+  - "l10n:priority"
 ---
 
-{{HTMLSidebar("Elements")}}
+{{HTMLSidebar("HTML_Elements")}}
 
 This page lists all the {{Glossary("HTML")}} {{Glossary("Element","elements")}}, which are created using {{Glossary("Tag", "tags")}}.
 
@@ -117,7 +118,7 @@ The elements here are used to create and handle tabular data.
 
 ## Forms
 
-HTML provides a number of elements which can be used together to create forms which the user can fill out and submit to the Web site or application. There's a great deal of further information about this available in the [HTML forms guide](/en-US/docs/Learn/Forms).
+HTML provides a number of elements which can be used together to create forms which the user can fill out and submit to the website or application. There's a great deal of further information about this available in the [HTML forms guide](/en-US/docs/Learn/Forms).
 
 {{HTMLRefTable({"include": ["HTML forms"], "exclude":["Deprecated"]})}}
 
@@ -135,6 +136,6 @@ Web Components is an HTML-related technology which makes it possible to, essenti
 
 ## Obsolete and deprecated elements
 
-> **Warning:** These are old HTML elements which are deprecated and should not be used. **You should never use them in new projects, and should replace them in old projects as soon as you can.** They are listed here for completeness only.
+> **Warning:** These are old HTML elements which are deprecated and should not be used. **You should never use them in new projects, and you should replace them in old projects as soon as you can.** They are listed here for completeness only.
 
 {{HTMLRefTable({"include":["Deprecated","Obsolete"]})}}

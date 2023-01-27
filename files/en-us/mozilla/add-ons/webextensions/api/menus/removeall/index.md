@@ -14,6 +14,7 @@ tags:
   - removeAll
 browser-compat: webextensions.api.menus.removeAll
 ---
+
 {{AddonSidebar()}}
 
 Removes all menu items added by the extension.
@@ -24,8 +25,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var removing = browser.menus.removeAll()
+```js-nolint
+let removing = browser.menus.removeAll()
 ```
 
 ### Parameters
@@ -52,18 +53,18 @@ function onRemoved() {
 browser.menus.create({
   id: "click-me",
   title: "Click me!",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.create({
   id: "remove-all",
   title: "Remove all!",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
-browser.menus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "remove-all") {
-    var removing = browser.menus.removeAll();
+browser.menus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "remove-all") {
+    let removing = browser.menus.removeAll();
     removing.then(onRemoved);
   }
 });
@@ -71,9 +72,10 @@ browser.menus.onClicked.addListener(function(info, tab) {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus#method-removeAll) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/contextMenus/#method-removeAll) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -100,4 +102,4 @@ browser.menus.onClicked.addListener(function(info, tab) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

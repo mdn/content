@@ -1,6 +1,7 @@
 ---
 title: ImageData.width
 slug: Web/API/ImageData/width
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -9,18 +10,17 @@ tags:
   - Reference
 browser-compat: api.ImageData.width
 ---
+
 {{APIRef("Canvas API")}}
 
 The readonly **`ImageData.width`** property returns the number
 of pixels per row in the {{domxref("ImageData")}} object.
 
-## Syntax
+## Value
 
-```js
-imageData.width
-```
+A number.
 
-## Example
+## Examples
 
 This example creates an `ImageData` object that is 200 pixels wide and 100
 pixels tall. Thus, the `width` property is `200`.

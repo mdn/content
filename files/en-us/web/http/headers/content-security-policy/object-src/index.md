@@ -11,8 +11,9 @@ tags:
   - Security
   - object-src
   - source
-browser-compat: http.headers.csp.Content-Security-Policy.object-src
+browser-compat: http.headers.Content-Security-Policy.object-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}}

@@ -1,6 +1,7 @@
 ---
 title: Window.blur()
 slug: Web/API/Window/blur
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -8,17 +9,26 @@ tags:
   - Method
 browser-compat: api.Window.blur
 ---
+
 {{APIRef}}
 
 Shifts focus away from the window.
 
 ## Syntax
 
-```js
-window.blur()
+```js-nolint
+blur()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 window.blur();

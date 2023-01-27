@@ -17,6 +17,7 @@ tags:
   - cross browser
   - user testing
 ---
+
 {{LearnSidebar}}
 
 Once you've started to become comfortable programming with core web technologies (like HTML, CSS, and JavaScript), and you start to get more experience, read more resources, and learn more tips and tricks, you'll start to come across all kind of tools, from JavaScript frameworks, to testing and automation tools, and more besides. As your web projects become larger and more complex, you'll want to start taking advantage of some of these tools, working out a reliable toolchain to give your development process superpowers.
@@ -38,7 +39,7 @@ Working out what tools you should be using can be a difficult process, so we hav
 
 ## Prerequisites
 
-You should really learn the basics of the core [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn/CSS), and [JavaScript](/en-US/docs/Learn/JavaScript) languages first before attempting to use many the tools detailed here. For example, you'll need to know the fundamentals of these languages before you start debugging problems in complex web code, making effective use of JavaScript frameworks, or writing tests and running them against your code using test runners.
+You should really learn the basics of the core [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn/CSS), and [JavaScript](/en-US/docs/Learn/JavaScript) languages first before attempting to use many of the tools detailed here. For example, you'll need to know the fundamentals of these languages before you start debugging problems in complex web code, making effective use of JavaScript frameworks, or writing tests and running them against your code using test runners.
 
 In addition, you should start with the first module in this topic, which gives a useful overview of the general area.
 

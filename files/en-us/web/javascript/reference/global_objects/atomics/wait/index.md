@@ -1,6 +1,7 @@
 ---
 title: Atomics.wait()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/wait
+page-type: javascript-static-method
 tags:
   - Atomics
   - JavaScript
@@ -8,19 +9,21 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.wait
 ---
+
 {{JSRef}}
 
-The static **`Atomics.wait()`**
+The **`Atomics.wait()`** static
 method verifies that a given position in an {{jsxref("Int32Array")}} still contains a
-given value and if so sleeps, awaiting a wakeup or a timeout. It returns a string which
-is either "`ok`", "`not-equal`", or "`timed-out`".
+given value and if so sleeps, awaiting a wake-up notification or times out. It returns a string which
+is either `"ok"`, `"not-equal"`, or `"timed-out"`.
 
 > **Note:** This operation only works with a shared
-> {{jsxref("Int32Array")}} and may not be allowed on the main thread.
+> {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} and may not be allowed on the main thread.
+> For a non-blocking, asynchronous version of this method, see {{jsxref("Atomics.waitAsync()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.wait(typedArray, index, value)
 Atomics.wait(typedArray, index, value, timeout)
 ```
@@ -28,7 +31,7 @@ Atomics.wait(typedArray, index, value, timeout)
 ### Parameters
 
 - `typedArray`
-  - : A shared {{jsxref("Int32Array")}}.
+  - : A shared {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}}.
 - `index`
   - : The position in the `typedArray` to wait on.
 - `value`
@@ -38,8 +41,7 @@ Atomics.wait(typedArray, index, value, timeout)
 
 ### Return value
 
-A string which is either "`ok`", "`not-equal`", or
-"`timed-out`".
+A string which is either `"ok"`, `"not-equal"`, or `"timed-out"`.
 
 ### Exceptions
 
@@ -88,4 +90,5 @@ Atomics.notify(int32, 0, 1);
 ## See also
 
 - {{jsxref("Atomics")}}
+- {{jsxref("Atomics.waitAsync()")}}
 - {{jsxref("Atomics.notify()")}}

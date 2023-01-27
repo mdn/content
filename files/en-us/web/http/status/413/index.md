@@ -7,22 +7,22 @@ tags:
   - HTTP Status Code
   - Reference
   - Status code
+spec-urls: https://httpwg.org/specs/rfc9110.html#status.413
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`413 Payload Too Large`** response status code indicates that the request entity is larger than limits defined by server; the server might close the connection or return a {{HTTPHeader("Retry-After")}} header field.
 
 ## Status
 
-```
+```http
 413 Payload Too Large
 ```
 
 ## Specifications
 
-| Specification                                                        | Title                                                         |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "413 Payload Too Large" , "6.5.11")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## See also
 

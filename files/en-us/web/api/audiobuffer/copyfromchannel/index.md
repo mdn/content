@@ -1,6 +1,7 @@
 ---
 title: AudioBuffer.copyFromChannel()
 slug: Web/API/AudioBuffer/copyFromChannel
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -17,6 +18,7 @@ tags:
   - sound
 browser-compat: api.AudioBuffer.copyFromChannel
 ---
+
 {{APIRef("Web Audio API")}}
 
 The
@@ -27,8 +29,8 @@ channel of the `AudioBuffer` to a specified
 
 ## Syntax
 
-```js
-myArrayBuffer.copyFromChannel(destination, channelNumber, startInChannel);
+```js-nolint
+copyFromChannel(destination, channelNumber, startInChannel)
 ```
 
 ### Parameters
@@ -45,7 +47,7 @@ myArrayBuffer.copyFromChannel(destination, channelNumber, startInChannel);
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -60,14 +62,14 @@ myArrayBuffer.copyFromChannel(destination, channelNumber, startInChannel);
       of samples that already exist in the source buffer; that is, it's greater than its
       current {{domxref("AudioBuffer.length", "length")}}.
 
-## Example
+## Examples
 
 This example creates a new audio buffer, then copies the samples from another channel
 into it.
 
 ```js
-var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
-var anotherArray = new Float32Array(length);
+const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+const anotherArray = new Float32Array(length);
 myArrayBuffer.copyFromChannel(anotherArray, 1, 0);
 ```
 
@@ -81,5 +83,4 @@ myArrayBuffer.copyFromChannel(anotherArray, 1, 0);
 
 ## See also
 
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

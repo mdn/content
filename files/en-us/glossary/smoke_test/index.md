@@ -1,13 +1,14 @@
 ---
 title: Smoke Test
 slug: Glossary/Smoke_Test
+page-type: glossary-definition
 tags:
   - Composing
-  - Glossary
   - Intro
   - QA
   - Testing
 ---
+
 A smoke test consists of functional or unit tests of critical software functionality. Smoke testing comes before further, in-depth testing.
 
 Smoke testing answers questions like
@@ -20,4 +21,4 @@ If this basic functionality fails, there is no point investing time in more deta
 
 ## See also
 
-- {{Interwiki("wikipedia", "Smoke testing (software)")}} on Wikipedia
+- [Smoke testing (software)](<https://en.wikipedia.org/wiki/Smoke_testing_(software)>) on Wikipedia

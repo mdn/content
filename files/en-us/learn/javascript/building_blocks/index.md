@@ -15,8 +15,9 @@ tags:
   - Loops
   - Module
   - events
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{LearnSidebar}}
 
 In this module, we continue our coverage of all JavaScript's key fundamental features, turning our attention to commonly-encountered types of code blocks such as conditional statements, loops, functions, and events. You've seen this stuff already in the course, but only in passing — here we'll discuss it all explicitly.

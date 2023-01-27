@@ -1,6 +1,7 @@
 ---
 title: Request.bodyUsed
 slug: Web/API/Request/bodyUsed
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch
@@ -10,19 +11,14 @@ tags:
   - Request
 browser-compat: api.Request.bodyUsed
 ---
+
 {{APIRef("Fetch")}}
 
 The read-only **`bodyUsed`** property of the
 {{domxref("Request")}} interface is a boolean value that indicates
 whether the request body has been read yet.
 
-## Syntax
-
-```js
-request.bodyUsed;
-```
-
-### Value
+## Value
 
 A boolean value.
 
@@ -36,7 +32,7 @@ const request = new Request('/myEndpoint', {
 
 request.bodyUsed; // false
 
-request.text().then(function(bodyAsText) {
+request.text().then((bodyAsText) => {
   console.log(request.bodyUsed); // true
 });
 ```

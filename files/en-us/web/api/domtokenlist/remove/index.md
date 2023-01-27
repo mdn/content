@@ -1,6 +1,7 @@
 ---
 title: DOMTokenList.remove()
 slug: Web/API/DOMTokenList/remove
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - remove
 browser-compat: api.DOMTokenList.remove
 ---
+
 {{APIRef("DOM")}}
 
 The **`remove()`** method of the {{domxref("DOMTokenList")}} interface
@@ -17,22 +19,21 @@ removes the specified _tokens_ from the list.
 
 ## Syntax
 
-```js
-remove(token);
-remove(token, token);
-remove(token, token, token);
-...
+```js-nolint
+remove(token1)
+remove(token1, token2)
+remove(token1, token2, /* … ,*/ tokenN)
 ```
 
 ### Parameters
 
-- `token`
+- `token1`, …, `tokenN`
   - : A string representing the token you want to remove from the list.
     If the string is not in the list, no error is thrown, and nothing happens.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -1,15 +1,16 @@
 ---
 title: mask-repeat
 slug: Web/CSS/mask-repeat
+page-type: css-property
 tags:
   - CSS
   - CSS Masking
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.mask-repeat
 ---
+
 {{CSSRef}}
 
 The **`mask-repeat`** [CSS](/en-US/docs/Web/CSS) property sets how mask images are repeated. A mask image can be repeated along the horizontal axis, the vertical axis, both axes, or not repeated at all.
@@ -37,6 +38,7 @@ mask-repeat: round repeat, space, repeat-x;
 mask-repeat: inherit;
 mask-repeat: initial;
 mask-repeat: revert;
+mask-repeat: revert-layer;
 mask-repeat: unset;
 ```
 
@@ -153,7 +155,7 @@ You can specify a different `<repeat-style>` for each mask image, separated by c
 
 ```css
 .examplethree {
-  mask-image: url('mask1.png'), url('mask2.png');
+  mask-image: url("mask1.png"), url("mask2.png");
   mask-repeat: repeat-x, repeat-y;
 }
 ```

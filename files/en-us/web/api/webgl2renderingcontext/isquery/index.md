@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.isQuery()
 slug: Web/API/WebGL2RenderingContext/isQuery
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.isQuery
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.isQuery()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) returns `true` if the
@@ -16,8 +18,8 @@ passed object is a valid {{domxref("WebGLQuery")}} object.
 
 ## Syntax
 
-```js
-GLBoolean gl.isQuery(query);
+```js-nolint
+isQuery(query)
 ```
 
 ### Parameters
@@ -36,9 +38,9 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether the given objec
 `WebGLQuery` objects are not available in WebGL 1.
 
 ```js
-var query = gl.createQuery();
+const query = gl.createQuery();
 
-// ...
+// …
 
 gl.isQuery(query);
 ```

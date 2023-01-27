@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.complete
 slug: Web/API/HTMLImageElement/complete
+page-type: web-api-instance-property
 tags:
   - API
   - Fetching
@@ -13,19 +14,14 @@ tags:
   - complete
 browser-compat: api.HTMLImageElement.complete
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only {{domxref("HTMLImageElement")}} interface's
 **`complete`** attribute is a Boolean value which indicates
 whether or not the image has completely loaded.
 
-## Syntax
-
-```js
-let doneLoading = htmlImageElement.complete;
-```
-
-### Value
+## Value
 
 A Boolean value which is `true` if the image has completely loaded;
 otherwise, the value is `false`.
@@ -82,7 +78,7 @@ async function lightBox(url) {
   lightboxControlsElem.disabled = false;
 }
 
-/* ... */
+// …
 
 function fixRedEyeCommand() {
   if (lightboxElem.style.display === "block" && lightboxImgElem.complete) {

@@ -1,6 +1,7 @@
 ---
 title: Window.scrollByPages()
 slug: Web/API/Window/scrollByPages
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -12,6 +13,7 @@ tags:
   - scrolling
 browser-compat: api.Window.scrollByPages
 ---
+
 {{ ApiRef() }} {{Non-standard_header}}
 
 The **`Window.scrollByPages()`** method scrolls the current
@@ -19,8 +21,8 @@ document by the specified number of pages.
 
 ## Syntax
 
-```js
-window.scrollByPages(pages)
+```js-nolint
+scrollByPages(pages)
 ```
 
 ### Parameters
@@ -28,7 +30,11 @@ window.scrollByPages(pages)
 - `pages` is the number of pages to scroll. It may be a positive or
   negative integer.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 // scroll down the document by 1 page

@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.ownerRule
 slug: Web/API/CSSStyleSheet/ownerRule
+page-type: web-api-instance-property
 tags:
   - '@import'
   - API
@@ -18,6 +19,7 @@ tags:
   - ownerRule
 browser-compat: api.CSSStyleSheet.ownerRule
 ---
+
 {{APIRef("CSSOM")}}
 
 The read-only {{domxref("CSSStyleSheet")}} property
@@ -26,13 +28,7 @@ corresponding to the {{cssxref("@import")}} at-rule which imported the styleshee
 the document. If the stylesheet wasn't imported into the document using
 `@import`, the returned value is `null`.
 
-## Syntax
-
-```js
-var ownerRule = cssStyleSheet.ownerRule;
-```
-
-### Value
+## Value
 
 A {{domxref("CSSImportRule")}} corresponding to the {{cssxref("@import")}} rule which
 imported the stylesheet into the document. If the stylesheet wasn't imported into the
@@ -44,9 +40,9 @@ This snippet of code looks for rules which were not imported into the document u
 `@import` at-rule.
 
 ```js
-let ruleList = document.styleSheets[0].cssRules;
+const ruleList = document.styleSheets[0].cssRules;
 
-for (let rule of ruleList) {
+for (const rule of ruleList) {
   if (!rule.ownerRule) {
     /* rule is not imported */
   }
@@ -57,9 +53,9 @@ This snipped obtains a reference to the stylesheet associated with the
 `@import` and processes it in some manner:
 
 ```js
-let ruleList = document.styleSheets[0].cssRules;
+const ruleList = document.styleSheets[0].cssRules;
 
-for (let rule of ruleList) {
+for (const rule of ruleList) {
   if (rule.ownerRule) {
     checkStylesheet(rule.ownerRule.styleSheet);
   }
@@ -77,5 +73,4 @@ for (let rule of ruleList) {
 ## See also
 
 - [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model)
-- [Using
-  dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

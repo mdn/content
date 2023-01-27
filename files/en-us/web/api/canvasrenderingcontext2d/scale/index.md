@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.scale()
 slug: Web/API/CanvasRenderingContext2D/scale
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.scale
 ---
+
 {{APIRef}}
 
 The
@@ -24,8 +26,8 @@ drawn at twice the normal size.
 
 ## Syntax
 
-```js
-void ctx.scale(x, y);
+```js-nolint
+scale(x, y)
 ```
 
 ### Parameters
@@ -36,6 +38,10 @@ void ctx.scale(x, y);
 - `y`
   - : Scaling factor in the vertical direction. A negative value flips pixels across the
     horizontal axis. A value of `1` results in no vertical scaling.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

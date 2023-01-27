@@ -1,6 +1,7 @@
 ---
 title: scroll-padding-inline
 slug: Web/CSS/scroll-padding-inline
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Property
@@ -12,6 +13,7 @@ tags:
   - scroll-padding-inline-start
 browser-compat: css.properties.scroll-padding-inline
 ---
+
 {{CSSRef}}
 
 The `scroll-padding-inline` [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the scroll padding of an element in the inline dimension.
@@ -35,13 +37,14 @@ scroll-padding-inline: auto;
 
 /* <length> values */
 scroll-padding-inline: 10px;
-scroll-padding-inline: 1em .5em;
+scroll-padding-inline: 1em 0.5em;
 scroll-padding-inline: 10%;
 
 /* Global values */
 scroll-padding-inline: inherit;
 scroll-padding-inline: initial;
 scroll-padding-inline: revert;
+scroll-padding-inline: revert-layer;
 scroll-padding-inline: unset;
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Window.scrollByLines()
 slug: Web/API/Window/scrollByLines
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -10,6 +11,7 @@ tags:
   - Window
 browser-compat: api.Window.scrollByLines
 ---
+
 {{ ApiRef() }} {{Non-standard_header}}
 
 The **`Window.scrollByLines()`** method scrolls the document by
@@ -17,8 +19,8 @@ the specified number of lines.
 
 ## Syntax
 
-```js
-window.scrollByLines(lines)
+```js-nolint
+scrollByLines(lines)
 ```
 
 ### Parameters
@@ -26,7 +28,11 @@ window.scrollByLines(lines)
 - `lines` is the number of lines to scroll the document by. It may be a
   positive or negative integer.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```html
 <!-- Scroll up the document by 5 lines -->

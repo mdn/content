@@ -11,6 +11,7 @@ tags:
   - Phaser
   - Tutorial
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser", "Games/Workflows/2D_Breakout_game_Phaser/Scaling")}}
@@ -25,23 +26,30 @@ The HTML document structure is quite simple, as the game will be rendered entire
 
 ```html
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en-US">
+  <head>
     <meta charset="utf-8" />
     <title>Gamedev Phaser Workshop - lesson 01: Initialize the framework</title>
-    <style>* { padding: 0; margin: 0; }</style>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
     <script src="js/phaser.min.js"></script>
-</head>
-<body>
-<script>
-    var game = new Phaser.Game(480, 320, Phaser.CANVAS, null, {
-      preload: preload, create: create, update: update
-    });
-    function preload() {}
-    function create() {}
-    function update() {}
-</script>
-</body>
+  </head>
+  <body>
+    <script>
+      const game = new Phaser.Game(480, 320, Phaser.CANVAS, null, {
+        preload,
+        create,
+        update,
+      });
+      function preload() {}
+      function create() {}
+      function update() {}
+    </script>
+  </body>
 </html>
 ```
 
@@ -50,7 +58,7 @@ The HTML document structure is quite simple, as the game will be rendered entire
 Next, we need to go through the process of downloading the Phaser source code and applying it to our HTML document. This tutorial uses Phaser V2 — it won't work with the current version on Phaser (V3). The V2 library is still available on the Phaser download page, below the links for the V3 download.
 
 1. Go to the [Phaser download page](https://phaser.io/download/stable).
-2. Choose an option that suits you best — I would recommend the _min.js_ option as it keeps the source code smaller, and you are unlikely need to go through the source code anyway.
+2. Choose an option that suits you best — we recommend the _min.js_ option as it keeps the source code smaller, and you are unlikely to go through the source code anyway. **Please make sure to use Phaser version 2 as that's what this tutorial was written for.**
 3. Save the Phaser code inside a `/js` directory in the same location as your `index.html` file.
 4. Update the `src` value of the first {{htmlelement("script")}} element as shown above.
 

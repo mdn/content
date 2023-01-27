@@ -1,6 +1,7 @@
 ---
 title: SVGAnimatedInteger
 slug: Web/API/SVGAnimatedInteger
+page-type: web-api-interface
 tags:
   - API
   - NeedsBrowserCompatibility
@@ -10,11 +11,12 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedInteger
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated integer interface
 
-The `SVGAnimatedInteger` interface is used for attributes of basic type [\<integer>](/en-US/docs/SVG/Content_type#Integer) which can be animated.
+The `SVGAnimatedInteger` interface is used for attributes of basic type [\<integer>](/en-US/docs/Web/SVG/Content_type#integer) which can be animated.
 
 ### Interface overview
 
@@ -49,7 +51,7 @@ The `SVGAnimatedInteger` interface is used for attributes of basic type [\<integ
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 <table class="no-markdown">
   <thead>
@@ -80,7 +82,7 @@ The `SVGAnimatedInteger` interface is used for attributes of basic type [\<integ
   </tbody>
 </table>
 
-## Methods
+## Instance methods
 
 The `SVGAnimatedInteger` interface do not provide any specific methods.
 

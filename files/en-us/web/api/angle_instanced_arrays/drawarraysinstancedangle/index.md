@@ -1,6 +1,7 @@
 ---
 title: ANGLE_instanced_arrays.drawArraysInstancedANGLE()
 slug: Web/API/ANGLE_instanced_arrays/drawArraysInstancedANGLE
+page-type: web-api-instance-method
 tags:
   - ANGLE_instanced_arrays
   - API
@@ -10,6 +11,7 @@ tags:
   - WebGL extension
 browser-compat: api.ANGLE_instanced_arrays.drawArraysInstancedANGLE
 ---
+
 {{APIRef("WebGL")}}
 
 The **`ANGLE_instanced_arrays.drawArraysInstancedANGLE()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) renders primitives from array data like the {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} method. In addition, it can execute multiple instances of the range of elements.
@@ -18,8 +20,8 @@ The **`ANGLE_instanced_arrays.drawArraysInstancedANGLE()`** method of the [WebGL
 
 ## Syntax
 
-```js
-void ext.drawArraysInstancedANGLE(mode, first, count, primcount);
+```js-nolint
+drawArraysInstancedANGLE(mode, first, count, primcount)
 ```
 
 ### Parameters
@@ -36,27 +38,27 @@ void ext.drawArraysInstancedANGLE(mode, first, count, primcount);
     - [`gl.TRIANGLE_FAN`](https://en.wikipedia.org/wiki/Triangle_fan)
     - `gl.TRIANGLES`: Draws a triangle for a group of three vertices.
 
-- first
+- `first`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the starting index in the array of vector points.
-- count
+- `count`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of indices to be rendered.
-- primcount
+- `primcount`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of instances of the range of elements to execute.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
 - If `mode` is not one of the accepted values, a `gl.INVALID_ENUM` error is thrown.
 - If `first`, `count` or `primcount` are negative, a `gl.INVALID_VALUE` error is thrown.
-- if `gl.CURRENT_PROGRAM` is {{jsxref("null")}}, a `gl.INVALID_OPERATION` error is thrown.
+- if `gl.CURRENT_PROGRAM` is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), a `gl.INVALID_OPERATION` error is thrown.
 
 ## Examples
 
 ```js
-var ext = gl.getExtension('ANGLE_instanced_arrays');
+const ext = gl.getExtension("ANGLE_instanced_arrays");
 ext.drawArraysInstancedANGLE(gl.POINTS, 0, 8, 4);
 ```
 

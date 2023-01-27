@@ -14,11 +14,12 @@ tags:
   - console
   - troubleshooting
 ---
+
 {{HTTPSidebar}}
 
 ## Reason
 
-```
+```plain
 Reason: expected 'true' in CORS header 'Access-Control-Allow-Credentials'
 ```
 

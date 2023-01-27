@@ -6,6 +6,7 @@ tags:
   - Gecko
   - Web Development
 ---
+
 {{FirefoxSidebar}}
 
 This page tries to give an overview of the changes between [Gecko](/en-US/Gecko) 1.8 and Gecko 1.9, that could possibly affect websites in their behavior or rendering.

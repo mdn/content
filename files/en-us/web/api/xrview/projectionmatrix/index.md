@@ -1,6 +1,7 @@
 ---
 title: XRView.projectionMatrix
 slug: Web/API/XRView/projectionMatrix
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -18,9 +19,11 @@ tags:
   - augmented
   - perspective
   - projectionMatrix
+  - Experimental
 browser-compat: api.XRView.projectionMatrix
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRView")}} interface's read-only
 **`projectionMatrix`** property specifies the projection matrix

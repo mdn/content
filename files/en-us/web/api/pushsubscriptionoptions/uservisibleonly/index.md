@@ -1,6 +1,7 @@
 ---
 title: PushSubscriptionOptions.userVisibleOnly
 slug: Web/API/PushSubscriptionOptions/userVisibleOnly
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,17 +10,12 @@ tags:
   - PushSubscriptionOptions
 browser-compat: api.PushSubscriptionOptions.userVisibleOnly
 ---
+
 {{DefaultAPISidebar("Push API")}}
 
 The **`userVisibleOnly`** read-only property of the {{domxref("PushSubscriptionOptions")}} interface indicates if the returned push subscription will only be used for messages whose effect is made visible to the user.
 
-## Syntax
-
-```js
-let userVisibleOnly = PushSubscriptionOptions.userVisibleOnly;
-```
-
-### Value
+## Value
 
 A boolean value that indicates whether the returned push subscription will only be used for messages whose effect is made visible to the user.
 
@@ -27,12 +23,12 @@ A boolean value that indicates whether the returned push subscription will only 
 
 In the example below the value of `userVisibleOnly` is printed to the console.
 
-```css
-navigator.serviceWorker.ready.then(function(reg) {
-  reg.pushManager.getSubscription().then(function(subscription) {
-    let options = subscription.options;
+```js
+navigator.serviceWorker.ready.then((reg) => {
+  reg.pushManager.getSubscription().then((subscription) => {
+    const options = subscription.options;
     console.log(options.userVisibleOnly); // true if this is a user visible subscription
-  })
+  });
 });
 ```
 

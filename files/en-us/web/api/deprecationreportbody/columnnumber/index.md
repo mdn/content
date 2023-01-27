@@ -1,27 +1,24 @@
 ---
 title: DeprecationReportBody.columnNumber
 slug: Web/API/DeprecationReportBody/columnNumber
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
+  - Experimental
   - columnNumber
   - DeprecationReportBody
 browser-compat: api.DeprecationReportBody.columnNumber
 ---
-{{APIRef("Reporting API")}}
+
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`columnNumber`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns the line in the source file in which the deprecated feature was used.
 
 > **Note:** This property is most useful alongside {{domxref("DeprecationReportBody.sourceFile")}} and {{domxref("DeprecationReportBody.lineNumber")}} as it enables the location of the column in that file and line where the error occurred.
 
-## Syntax
-
-```js
-let columnNumber = DeprecationReportBody.columnNumber;
-```
-
-### Value
+## Value
 
 An integer, or `null` if the column is not known.
 
@@ -35,7 +32,7 @@ let options = {
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
+let observer = new ReportingObserver((reports, observer) => {
   let firstReport = reports[0];
   console.log(firstReport.type); // deprecation
   console.log(firstReport.body.sourceFile); // the source file

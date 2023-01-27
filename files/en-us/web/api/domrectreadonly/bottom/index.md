@@ -1,6 +1,7 @@
 ---
 title: DOMRectReadOnly.bottom
 slug: Web/API/DOMRectReadOnly/bottom
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -11,17 +12,12 @@ tags:
   - bottom
 browser-compat: api.DOMRectReadOnly.bottom
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
-The **`bottom`** read-only property of the **`DOMRectReadOnly`** interface returns the bottom coordinate value of the `DOMRect.` (Has the same value as `y + height`, or `y` if `height` is negative.)
+The **`bottom`** read-only property of the **`DOMRectReadOnly`** interface returns the bottom coordinate value of the `DOMRect`. (Has the same value as `y + height`, or `y` if `height` is negative.)
 
-## Syntax
-
-```js
-var recBottom = DOMRect.bottom;
-```
-
-### Value
+## Value
 
 A double.
 

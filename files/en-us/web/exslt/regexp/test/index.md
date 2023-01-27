@@ -6,23 +6,24 @@ tags:
   - NeedsSpecTable
   - Reference
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 `regexp:test()` tests to see whether a string matches a specified regular expression.
 
 ## Syntax
 
-```js
+```js-nolint
 regexp:test(testString, regExpString[, flagsString])
 ```
 
 ### Parameters
 
 - `testString`
-  - : The string to test..
+  - : The string to test.
 - `regExpString`
   - : The JavaScript style regular expression to evaluate.
-- `flagsString`{{Optional_Inline}}
+- `flagsString` {{optional_inline}}
   - : An optional string containing character flags.
 
 The character flags are:
@@ -38,4 +39,4 @@ The character flags are:
 
 ## Specifications
 
-[EXSLT - REGEXP:TEST](http://www.exslt.org/regexp/functions/test/index.html)
+[EXSLT - REGEXP:TEST](http://exslt.org/regexp/functions/test/index.html)

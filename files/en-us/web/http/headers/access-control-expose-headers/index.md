@@ -8,6 +8,7 @@ tags:
   - header
 browser-compat: http.headers.Access-Control-Expose-Headers
 ---
+
 {{HTTPSidebar}}
 
 The **`Access-Control-Expose-Headers`** response header allows a server to indicate which response headers should be made available to scripts running in the browser, in response to a cross-origin request.
@@ -29,7 +30,7 @@ Only the {{Glossary("CORS-safelisted response header", "CORS-safelisted response
 
 ## Syntax
 
-```
+```http
 Access-Control-Expose-Headers: [<header-name>[, <header-name>]*]
 Access-Control-Expose-Headers: *
 ```
@@ -45,25 +46,25 @@ Access-Control-Expose-Headers: *
 
 The {{Glossary("CORS-safelisted response header", "CORS-safelisted response headers")}} are: {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Length")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Expires")}}, {{HTTPHeader("Last-Modified")}}, {{HTTPHeader("Pragma")}}. To expose a non-CORS-safelisted response header, you can specify:
 
-```
+```http
 Access-Control-Expose-Headers: Content-Encoding
 ```
 
-To additionally expose a custom header, like `X-Kuma-Revision`, you can specify multiple headers separated by a comma:
+To additionally expose a custom header, like `Kuma-Revision`, you can specify multiple headers separated by a comma:
 
-```
-Access-Control-Expose-Headers: Content-Encoding, X-Kuma-Revision
+```http
+Access-Control-Expose-Headers: Content-Encoding, Kuma-Revision
 ```
 
 For requests without credentials, a server can also respond with a wildcard value:
 
-```
+```http
 Access-Control-Expose-Headers: *
 ```
 
 However, this won't wildcard the {{HTTPHeader("Authorization")}} header, so if you need to expose that, you will need to list it explicitly:
 
-```
+```http
 Access-Control-Expose-Headers: *, Authorization
 ```
 

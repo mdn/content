@@ -1,6 +1,7 @@
 ---
 title: Document.fullscreen
 slug: Web/API/Document/fullscreen
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -14,6 +15,7 @@ tags:
   - screen
 browser-compat: api.Document.fullscreen
 ---
+
 {{APIRef("Fullscreen API")}}{{Deprecated_Header}}
 
 The obsolete {{domxref("Document")}} interface's **`fullscreen`** read-only property reports whether or not the document is currently displaying content in fullscreen mode.
@@ -22,17 +24,11 @@ Although this property is read-only, it will not throw if it is modified (even i
 
 > **Note:** Since this property is deprecated, you can determine if fullscreen mode is active on the document by checking to see if {{DOMxRef("Document.fullscreenElement")}} is not `null`.
 
-## Syntax
+## Value
 
-```js
-var isFullScreen = document.fullscreen;
-```
+A Boolean value which is `true` if the document is currently displaying an element in fullscreen mode; otherwise, the value is `false`.
 
-### Value
-
-A Boolean value which is `true` if the document is currently displaying an element in fullscreen mode; otherwise, the value is `false.`
-
-## Example
+## Examples
 
 This simple function reports whether or not fullscreen mode is currently active, using the obsolete `fullscreen` property.
 

@@ -1,6 +1,7 @@
 ---
 title: transition-property
 slug: Web/CSS/transition-property
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.transition-property
 ---
+
 {{CSSRef}}
 
 The **`transition-property`** [CSS](/en-US/docs/Web/CSS) property sets the CSS properties to which a [transition effect](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) should be applied.
@@ -40,6 +42,7 @@ transition-property: all, -moz-specific, sliding;
 transition-property: inherit;
 transition-property: initial;
 transition-property: revert;
+transition-property: revert-layer;
 transition-property: unset;
 ```
 

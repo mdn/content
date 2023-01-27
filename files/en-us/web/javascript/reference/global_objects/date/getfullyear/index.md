@@ -1,6 +1,7 @@
 ---
 title: Date.prototype.getFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
+page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getFullYear
 ---
+
 {{JSRef}}
 
 The **`getFullYear()`** method returns the year of the
@@ -21,7 +23,7 @@ method.
 
 ## Syntax
 
-```js
+```js-nolint
 getFullYear()
 ```
 
@@ -44,8 +46,8 @@ The following example assigns the four-digit value of the current year to the va
 `year`.
 
 ```js
-var today = new Date();
-var year = today.getFullYear();
+const today = new Date();
+const year = today.getFullYear();
 ```
 
 ## Specifications

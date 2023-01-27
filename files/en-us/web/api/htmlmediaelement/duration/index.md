@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.duration
 slug: Web/API/HTMLMediaElement/duration
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -13,19 +14,14 @@ tags:
   - seconds
 browser-compat: api.HTMLMediaElement.duration
 ---
+
 {{APIRef("HTML DOM")}}
 
 The _read-only_ {{domxref("HTMLMediaElement")}}
 property **`duration`** indicates the length of the element's
 media in seconds.
 
-## Syntax
-
-```js
-myDuration = htmlMediaElement.duration
-```
-
-### Value
+## Value
 
 A double-precision floating-point value indicating the duration of the media in
 seconds. If no media data is available, the value `NaN` is returned. If the
@@ -35,7 +31,7 @@ of `duration` is `+Infinity`.
 ## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 console.log(obj.duration); // NaN
 ```
 

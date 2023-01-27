@@ -1,12 +1,18 @@
 ---
 title: scroll-margin-block-end
 slug: Web/CSS/scroll-margin-block-end
+page-type: css-property
 tags:
   - CSS
+  - CSS Property
+  - Reference
+  - Web
   - recipe:css-property
+  - scroll-margin-block
   - scroll-margin-block-end
 browser-compat: css.properties.scroll-margin-block-end
 ---
+
 {{CSSRef}}
 
 The `scroll-margin-block-end` property defines the margin of the scroll snap area at the end of the block dimension that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.
@@ -24,6 +30,7 @@ scroll-margin-block-end: 1em;
 scroll-margin-block-end: inherit;
 scroll-margin-block-end: initial;
 scroll-margin-block-end: revert;
+scroll-margin-block-end: revert-layer;
 scroll-margin-block-end: unset;
 ```
 

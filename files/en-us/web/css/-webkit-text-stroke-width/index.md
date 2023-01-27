@@ -1,16 +1,17 @@
 ---
-title: '-webkit-text-stroke-width'
+title: "-webkit-text-stroke-width"
 slug: Web/CSS/-webkit-text-stroke-width
+page-type: css-property
 tags:
   - CSS
   - CSS Property
-  - Non-standard
   - Reference
   - WebKit
   - recipe:css-property
 browser-compat: css.properties.-webkit-text-stroke-width
 ---
-{{CSSRef}}{{Non-standard_header}}
+
+{{CSSRef}}
 
 The **`-webkit-text-stroke-width`** [CSS](/en-US/docs/Web/CSS) property specifies the width of the stroke for text.
 
@@ -95,7 +96,7 @@ p {
 
 ## See also
 
-- [Surfin' Safari blog post announcing this feature](https://www.webkit.org/blog/85/introducing-text-stroke/)
+- [Surfin' Safari blog post announcing this feature](https://webkit.org/blog/85/introducing-text-stroke/)
 - [CSS-Tricks article explaining this feature](https://css-tricks.com/adding-stroke-to-web-text/)
 - {{cssxref("-webkit-text-stroke-color")}}
 - {{cssxref("-webkit-text-stroke")}}

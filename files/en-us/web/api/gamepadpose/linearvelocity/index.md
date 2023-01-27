@@ -1,6 +1,7 @@
 ---
 title: GamepadPose.linearVelocity
 slug: Web/API/GamepadPose/linearVelocity
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -13,19 +14,14 @@ tags:
   - linearVelocity
 browser-compat: api.GamepadPose.linearVelocity
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 The **`linearVelocity`** read-only property of the {{domxref("GamepadPose")}} interface returns an array representing the linear velocity vector of the {{domxref("Gamepad")}}, in meters per second.
 
 In other words, the current velocity at which the sensor is moving along the `x`, `y`, and `z` axes.
 
-## Syntax
-
-```js
-var myGamepadLinVel = gamepadPoseInstance.linearVelocity;
-```
-
-### Value
+## Value
 
 A {{jsxref("Float32Array")}}, or `null` if the gamepad is not able to provide linear velocity data.
 

@@ -2,11 +2,12 @@
 title: Firefox 85 for developers
 slug: Mozilla/Firefox/Releases/85
 tags:
-  - '85'
+  - "85"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 85 that will affect developers. Firefox 85 was released on January 26, 2021.
@@ -17,11 +18,11 @@ This article provides information about the changes in Firefox 85 that will affe
 
 ### Developer Tools
 
-- Developers can now use the [Page Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#viewing_common_pseudo-classes) to toggle the {{cssxref(":focus-visible")}} pseudo-class for the currently selected element (in addition to the pseudo classes that were previously supported: {{cssxref(":hover")}}, {{cssxref(":active")}} and {{cssxref(":focus")}}, {{cssxref(":focus-within")}}, and {{cssxref(":visited")}}). ({{bug(1617608)}}).
+- Developers can now use the [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#viewing-common-pseudo-classes) to toggle the {{cssxref(":focus-visible")}} pseudo-class for the currently selected element (in addition to the pseudo classes that were previously supported: {{cssxref(":hover")}}, {{cssxref(":active")}} and {{cssxref(":focus")}}, {{cssxref(":focus-within")}}, and {{cssxref(":visited")}}). ({{bug(1617608)}}).
 
 ### HTML
 
-- [`<link rel="preload">`](/en-US/docs/Web/HTML/Link_types/preload) is now enabled. ({{bug(1626997)}}).
+- [`<link rel="preload">`](/en-US/docs/Web/HTML/Attributes/rel/preload) is now enabled. ({{bug(1626997)}}).
 
 #### Removals
 
@@ -40,12 +41,12 @@ This article provides information about the changes in Firefox 85 that will affe
   // Old method
   let pinyin = new Intl.Collator(["zh-u-co-pinyin"]);
   // New method
-  let pinyin = new Intl.Collator("zh", {collation: "pinyin"});
+  let pinyin = new Intl.Collator("zh", { collation: "pinyin" });
   ```
 
 ### Plugins
 
-- Flash support has been completely removed from Firefox ({{bug(1675349)}}). Read our [plugin roadmap](/en-US/docs/Plugins/Roadmap#schedule) for more information.
+- Flash support has been completely removed from Firefox ({{bug(1675349)}}).
 
 ### APIs
 

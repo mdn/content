@@ -1,6 +1,7 @@
 ---
 title: handler.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -8,6 +9,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.defineProperty
 ---
+
 {{JSRef}}
 
 The **`handler.defineProperty()`** method is a trap for
@@ -17,9 +19,9 @@ The **`handler.defineProperty()`** method is a trap for
 
 ## Syntax
 
-```js
-const p = new Proxy(target, {
-  defineProperty: function(target, property, descriptor) {
+```js-nolint
+new Proxy(target, {
+  defineProperty(target, property, descriptor) {
   }
 });
 ```
@@ -51,13 +53,14 @@ The **`handler.defineProperty()`** method is a trap for
 
 This trap can intercept these operations:
 
-- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.defineProperty()")}}, {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Reflect.defineProperty()")}}
+
+Or any other operation that invokes the `[[DefineOwnProperty]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
 
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a
-{{jsxref("TypeError")}}:
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
 - A property cannot be added, if the target object is not extensible.
 - A property cannot be added as or modified to be non-configurable, if it does not
@@ -78,8 +81,8 @@ The following code traps {{jsxref("Object.defineProperty()")}}.
 
 ```js
 const p = new Proxy({}, {
-  defineProperty: function(target, prop, descriptor) {
-    console.log('called: ' + prop);
+  defineProperty(target, prop, descriptor) {
+    console.log(`called: ${prop}`);
     return true;
   }
 });
@@ -125,6 +128,6 @@ Object.defineProperty(p, 'name', {
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Reflect.defineProperty()")}}

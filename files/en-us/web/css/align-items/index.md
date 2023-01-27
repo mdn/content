@@ -1,6 +1,7 @@
 ---
 title: align-items
 slug: Web/CSS/align-items
+page-type: css-property
 tags:
   - CSS
   - CSS Flexible Boxes
@@ -9,6 +10,9 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.align-items
 ---
+
+{{CSSRef}}
+
 The [CSS](/en-US/docs/Web/CSS) **`align-items`** property sets the {{cssxref("align-self")}} value on all direct children as a group. In Flexbox, it controls the alignment of items on the {{glossary("Cross Axis")}}. In Grid Layout, it controls the alignment of items on the Block Axis within their {{glossary("Grid Areas", "grid area")}}.
 
 The interactive example below demonstrates some of the values for `align-items` using grid layout.
@@ -41,6 +45,7 @@ align-items: unsafe center;
 align-items: inherit;
 align-items: initial;
 align-items: revert;
+align-items: revert-layer;
 align-items: unset;
 ```
 
@@ -93,7 +98,7 @@ align-items: unset;
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   align-items: center; /* Can be changed in the live sample */
   background-color: #8c8c8c;
@@ -192,8 +197,6 @@ select {
     <option value="end">end</option>
     <option value="self-start">self-start</option>
     <option value="self-end">self-end</option>
-    <option value="left">left</option>
-    <option value="right">right</option>
 
     <option value="first baseline">first baseline</option>
     <option value="last baseline">last baseline</option>
@@ -213,15 +216,15 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+const values = document.getElementById('values');
+const display = document.getElementById('display');
+const container = document.getElementById('container');
 
-values.addEventListener('change', function (evt) {
+values.addEventListener('change', (evt) => {
   container.style.alignItems = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener('change', (evt) => {
   container.className = evt.target.value;
 });
 ```
@@ -232,7 +235,7 @@ display.addEventListener('change', function (evt) {
 
 ## Specifications
 
-{{Specifications("css.properties.align-items.grid_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -245,5 +248,3 @@ display.addEventListener('change', function (evt) {
 - CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
 - [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
 - The {{cssxref("align-self")}} property
-
-{{CSSRef}}

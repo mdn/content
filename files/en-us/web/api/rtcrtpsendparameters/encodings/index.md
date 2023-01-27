@@ -1,6 +1,7 @@
 ---
 title: RTCRtpSendParameters.encodings
 slug: Web/API/RTCRtpSendParameters/encodings
+page-type: web-api-instance-property
 tags:
   - API
   - Codec
@@ -19,6 +20,7 @@ tags:
   - sender
 browser-compat: api.RTCRtpSendParameters.encodings
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpSendParameters")}} dictionary's
@@ -29,20 +31,17 @@ encoder being used for the {{domxref("RTCRtpSender")}}'s {{domxref("RTCRtpSender
 
 ## Syntax
 
-```js
-sendParameters.encodings = encodingParameterList;
+```js-nolint
+sendParameters.encodings = encodingParameterList
 
-encodingParameterList = sendParameters.encodings;
+encodingParameterList = sendParameters.encodings
 ```
 
 ### Value
 
 An array of objects conforming to the {{domxref("RTCRtpEncodingParameters")}}
 dictionary, each of which contains properties which provide settings and parameters that
-describe and configure the codec used for a single destination. Each object's properties
-are:
-
-{{page("/en-US/docs/Web/API/RTCRtpEncodingParameters", "Properties")}}
+describe and configure the codec used for a single destination.
 
 ## Description
 

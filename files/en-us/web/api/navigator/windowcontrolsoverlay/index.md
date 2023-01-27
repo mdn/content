@@ -1,6 +1,7 @@
 ---
 title: Navigator.windowControlsOverlay
 slug: Web/API/Navigator/windowControlsOverlay
+page-type: web-api-instance-property
 tags:
   - API
   - Window Controls Overlay
@@ -9,7 +10,8 @@ tags:
   - Progressive Web Apps
 browser-compat: api.Navigator.windowControlsOverlay
 ---
-{{securecontext_header}}{{APIRef("")}}
+
+{{SecureContext_Header}}{{APIRef("")}}
 
 The **`windowControlsOverlay`** property of the {{domxref("Navigator")}}
 interface returns the {{domxref("WindowControlsOverlay")}} interface, which exposes
@@ -26,7 +28,7 @@ of the app window.
 
 The {{domxref("WindowControlsOverlay")}} interface.
 
-## Example
+## Examples
 
 ```js
 if ('windowControlsOverlay' in navigator) {

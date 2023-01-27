@@ -1,6 +1,7 @@
 ---
 title: Element.tagName
 slug: Web/API/Element/tagName
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -14,6 +15,7 @@ tags:
   - tagName
 browser-compat: api.Element.tagName
 ---
+
 {{ApiRef("DOM")}}
 
 The **`tagName`** read-only property
@@ -24,13 +26,7 @@ For example, if the element is an {{HTMLElement("img")}}, its
 `tagName` property is `"IMG"` (for HTML documents; it may be cased
 differently for XML/XHTML documents).
 
-## Syntax
-
-```js
-elementName = Element.tagName;
-```
-
-### Value
+## Value
 
 A string indicating the element's tag name. This string's capitalization depends on the
 document type:
@@ -47,18 +43,18 @@ For {{domxref("Element")}} objects, the value of `tagName` is the same as
 the value of the {{domxref("Node.nodeName", "nodeName")}} property the element object
 inherits from {{domxref("Node")}}.
 
-## Example
+## Examples
 
 ### HTML
 
 ```html
-<span id="born">When I was born...</span>
+<span id="born">When I was born…</span>
 ```
 
 ### JavaScript
 
 ```js
-var span = document.getElementById("born");
+const span = document.getElementById("born");
 console.log(span.tagName);
 ```
 

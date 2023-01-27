@@ -11,6 +11,7 @@ tags:
   - django
   - server-side
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
 
 The first article in our practical tutorial series explains what you'll learn, and provides an overview of the "local library" example website we'll be working through and evolving in subsequent articles.
@@ -60,9 +61,9 @@ You have learned about some of these topics already, and touched briefly on othe
 
 ## The LocalLibrary website
 
-*LocalLibrary* is the name of the website that we'll create and evolve over the course of this series of tutorials. As you'd expect, the purpose of the website is to provide an online catalog for a small local library, where users can browse available books and manage their accounts.
+_LocalLibrary_ is the name of the website that we'll create and evolve over the course of this series of tutorials. As you'd expect, the purpose of the website is to provide an online catalog for a small local library, where users can browse available books and manage their accounts.
 
-This example has been carefully chosen because it can scale to show as much or as little detail as we need, and can be used to show off almost any Django feature. More importantly, it allows us to provide a *guided* path through the most important functionality in the Django web framework:
+This example has been carefully chosen because it can scale to show as much or as little detail as we need, and can be used to show off almost any Django feature. More importantly, it allows us to provide a _guided_ path through the most important functionality in the Django web framework:
 
 - In the first few tutorial articles we will define a simple _browse-only_ library that library members can use to find out what books are available. This allows us to explore the operations that are common to almost every website: reading and displaying content from a database.
 - As we progress, the library example naturally extends to demonstrate more advanced Django features. For example we can extend the library to allow users to reserve books, and use this to demonstrate how to use forms, and support user authentication.
@@ -73,7 +74,7 @@ Even though this is a very extensible example, it's called _**Local**Library_ fo
 
 As you work through the tutorial we'll provide the appropriate code snippets for you to copy and paste at each point, and there will be other code that we hope you'll extend yourself (with some guidance).
 
-If you get stuck, you can find the fully developed version of the website [on Github here](https://github.com/mdn/django-locallibrary-tutorial).
+If you get stuck, you can find the fully developed version of the website [on GitHub here](https://github.com/mdn/django-locallibrary-tutorial).
 
 ## Summary
 

@@ -8,6 +8,7 @@ tags:
   - Status code
 browser-compat: http.status.410
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`410 Gone`** client error response code indicates that access to the target resource is no longer available at the origin server and that this condition is likely to be permanent.
@@ -18,7 +19,7 @@ If you don't know whether this condition is temporary or permanent, a {{HTTPStat
 
 ## Status
 
-```
+```http
 410 Gone
 ```
 

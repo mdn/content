@@ -1,11 +1,13 @@
 ---
-title: 'BroadcastChannel: message event'
+title: "BroadcastChannel: message event"
 slug: Web/API/BroadcastChannel/message_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
 browser-compat: api.BroadcastChannel.message_event
 ---
+
 {{APIRef}}
 
 The `message` event is fired on a {{domxref('BroadcastChannel')}} object when a message arrives on that channel.
@@ -14,9 +16,9 @@ The `message` event is fired on a {{domxref('BroadcastChannel')}} object when a 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('message', event => { })
-onmessage = event => { }
+```js-nolint
+addEventListener("message", (event) => { })
+onmessage = (event) => { }
 ```
 
 ## Event type
@@ -29,15 +31,15 @@ A {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
-- {{domxref("MessageEvent.data", "data")}} {{readonlyInline}}
+- {{domxref("MessageEvent.data", "data")}} {{ReadOnlyInline}}
   - : The data sent by the message emitter.
-- {{domxref("MessageEvent.origin", "origin")}} {{readonlyInline}}
+- {{domxref("MessageEvent.origin", "origin")}} {{ReadOnlyInline}}
   - : A string representing the origin of the message emitter.
-- {{domxref("MessageEvent.lastEventId", "lastEventId")}} {{readonlyInline}}
+- {{domxref("MessageEvent.lastEventId", "lastEventId")}} {{ReadOnlyInline}}
   - : A string representing a unique ID for the event.
-- {{domxref("MessageEvent.source", "source")}} {{readonlyInline}}
+- {{domxref("MessageEvent.source", "source")}} {{ReadOnlyInline}}
   - : A _message event source_, which is either a {{glossary("WindowProxy")}}, a {{domxref("MessagePort")}}, or a {{domxref("ServiceWorker")}} object representing the message emitter.
-- {{domxref("MessageEvent.ports", "ports")}} {{readonlyInline}}
+- {{domxref("MessageEvent.ports", "ports")}} {{ReadOnlyInline}}
   - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
 
 ## Examples
@@ -48,7 +50,7 @@ In this example there's a "sender" [`<iframe>`](/en-US/docs/Web/HTML/Element/ifr
 
 ```html hidden
 <h1>Sender</h1>
-<label for="message">Type a message to broadcast:</label><br/>
+<label for="message">Type a message to broadcast:</label><br />
 <textarea id="message" name="message" rows="1" cols="40">Hello</textarea>
 <button id="broadcast-message" type="button">Broadcast message</button>
 ```
@@ -81,13 +83,13 @@ button {
 ```
 
 ```js
-const channel = new BroadcastChannel('example-channel');
-const messageControl = document.querySelector('#message');
-const broadcastMessageButton = document.querySelector('#broadcast-message');
+const channel = new BroadcastChannel("example-channel");
+const messageControl = document.querySelector("#message");
+const broadcastMessageButton = document.querySelector("#broadcast-message");
 
-broadcastMessageButton.addEventListener('click', () => {
-    channel.postMessage(messageControl.value);
-})
+broadcastMessageButton.addEventListener("click", () => {
+  channel.postMessage(messageControl.value);
+});
 ```
 
 ### Receiver 1
@@ -112,8 +114,8 @@ h1 {
 ```
 
 ```js
-const channel = new BroadcastChannel('example-channel');
-channel.addEventListener('message', event => {
+const channel = new BroadcastChannel("example-channel");
+channel.addEventListener("message", (event) => {
   received.textContent = event.data;
 });
 ```
@@ -140,19 +142,19 @@ h1 {
 ```
 
 ```js
-const channel = new BroadcastChannel('example-channel');
-channel.addEventListener('message', event => {
+const channel = new BroadcastChannel("example-channel");
+channel.addEventListener("message", (event) => {
   received.textContent = event.data;
 });
 ```
 
 ### Result
 
-{{ EmbedLiveSample('Sender', '100%', '170px','' ,'' , 'dummy') }}
+{{ EmbedLiveSample('Sender', '100%', 220) }}
 
-{{ EmbedLiveSample('Receiver_1', '100%', '150px','' ,'' , 'dummy') }}
+{{ EmbedLiveSample('Receiver_1', '100%', 160) }}
 
-{{ EmbedLiveSample('Receiver_2', '100%', '150px','' ,'' , 'dummy') }}
+{{ EmbedLiveSample('Receiver_2', '100%', 160) }}
 
 ## Specifications
 

@@ -1,9 +1,9 @@
 ---
 title: WindowClient.focused
 slug: Web/API/WindowClient/focused
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - Service Workers
@@ -12,26 +12,21 @@ tags:
   - focused
 browser-compat: api.WindowClient.focused
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`focused`** read-only property of the
 {{domxref("WindowClient")}} interface is a boolean value that indicates whether
 the current client has focus.
 
-## Syntax
-
-```js
-var myFocused = windowClient.focused;
-```
-
-### Value
+## Value
 
 A boolean value.
 
-## Example
+## Examples
 
 ```js
-self.addEventListener('notificationclick', function(event) {
+self.addEventListener('notificationclick', (event) => {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
@@ -39,17 +34,14 @@ self.addEventListener('notificationclick', function(event) {
   // focuses if it is
   event.waitUntil(clients.matchAll({
     type: "window"
-  }).then(function(clientList) {
-    for (var i = 0; i < clientList.length; i++) {
-      var client = clientList[i];
-      if (client.url == '/' && 'focus' in client) {
-        if(!client.focused)
-          return client.focus();
-        }
+  }).then((clientList) => {
+    for (const client of clientList) {
+      if (client.url === '/' && 'focus' in client) {
+        if (!client.focused) return client.focus();
       }
     }
-    if (clients.openWindow)
-      return clients.openWindow('/');
+
+    if (clients.openWindow) return clients.openWindow('/');
   }));
 });
 ```

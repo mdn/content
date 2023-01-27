@@ -1,6 +1,7 @@
 ---
 title: RelativeOrientationSensor
 slug: Web/API/RelativeOrientationSensor
+page-type: web-api-interface
 tags:
   - API
   - Generic Sensor API
@@ -14,13 +15,12 @@ tags:
   - Sensors
 browser-compat: api.RelativeOrientationSensor
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`RelativeOrientationSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) describes the device's physical orientation without regard to the Earth's reference coordinate system.
 
-To use this sensor, the user must grant permission to the `'accelerometer'`, and `'gyroscope'` device sensors through the [Permissions API](/en-US/docs/Web/API/Permissions_API).
-
-If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
+To use this sensor, the user must grant permission to the `'accelerometer'`, and `'gyroscope'` device sensors through the [Permissions API](/en-US/docs/Web/API/Permissions_API). In addition, this feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 
 {{InheritanceDiagram}}
 
@@ -29,11 +29,11 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 - {{domxref("RelativeOrientationSensor.RelativeOrientationSensor", "RelativeOrientationSensor()")}}
   - : Creates a new `RelativeOrientationSensor` object.
 
-## Properties
+## Instance properties
 
-_No specific properties; inherits methods from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}._
+_No specific properties; inherits properties from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}._
 
-## Methods
+## Instance methods
 
 _No specific methods; inherits methods from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}._
 
@@ -57,8 +57,8 @@ sensor.addEventListener('reading', () => {
   // model is a Three.js object instantiated elsewhere.
   model.quaternion.fromArray(sensor.quaternion).inverse();
 });
-sensor.addEventListener('error', error => {
-  if (event.error.name == 'NotReadableError') {
+sensor.addEventListener('error', (error) => {
+  if (event.error.name === 'NotReadableError') {
     console.log("Sensor is not available.");
   }
 });
@@ -73,10 +73,10 @@ Using orientation sensors requires requesting permissions for multiple device se
 const sensor = new RelativeOrientationSensor();
 Promise.all([navigator.permissions.query({ name: "accelerometer" }),
              navigator.permissions.query({ name: "gyroscope" })])
-       .then(results => {
-         if (results.every(result => result.state === "granted")) {
+       .then((results) => {
+         if (results.every((result) => result.state === "granted")) {
            sensor.start();
-           ...
+           // ...
          } else {
            console.log("No permissions to use RelativeOrientationSensor.");
          }

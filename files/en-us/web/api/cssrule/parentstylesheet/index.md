@@ -1,6 +1,7 @@
 ---
 title: CSSRule.parentStyleSheet
 slug: Web/API/CSSRule/parentStyleSheet
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -9,28 +10,22 @@ tags:
   - Reference
 browser-compat: api.CSSRule.parentStyleSheet
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`parentStyleSheet`** property of the
 {{domxref("CSSRule")}} interface returns the {{domxref("StyleSheet")}} object in which
 the current rule is defined.
 
-## Syntax
+## Value
+
+A {{domxref("StyleSheet")}} object.
+
+## Examples
 
 ```js
-var stylesheet = cssRule.parentStyleSheet
-```
-
-### Values
-
-- `stylesheet`
-  - : A {{domxref("StyleSheet")}} object.
-
-## Example
-
-```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules.parentStyleSheet);
+const docRules = document.styleSheets[0].cssRules;
+console.log(docRules[0].parentStyleSheet == document.styleSheets[0]); // returns true
 ```
 
 ## Specifications

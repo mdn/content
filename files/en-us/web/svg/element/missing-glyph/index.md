@@ -1,6 +1,7 @@
 ---
 title: <missing-glyph>
 slug: Web/SVG/Element/missing-glyph
+page-type: svg-element
 tags:
   - Deprecated
   - Element
@@ -9,6 +10,7 @@ tags:
   - SVG Container
 browser-compat: svg.elements.missing-glyph
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`<missing-glyph>`** [SVG](/en-US/docs/Web/SVG) element's content is rendered, if for a given character the font doesn't define an appropriate {{SVGElement("glyph")}}.
@@ -28,11 +30,11 @@ The **`<missing-glyph>`** [SVG](/en-US/docs/Web/SVG) element's content is render
 
 ### Specific attributes
 
-- {{SVGAttr("d")}}
-- {{SVGAttr("horiz-adv-x")}}
-- {{SVGAttr("vert-origin-x")}}
-- {{SVGAttr("vert-origin-y")}}
-- {{SVGAttr("vert-adv-y")}}
+- {{SVGAttr("d")}} {{Deprecated_Inline}}
+- {{SVGAttr("horiz-adv-x")}} {{Deprecated_Inline}}
+- {{SVGAttr("vert-origin-x")}} {{Deprecated_Inline}}
+- {{SVGAttr("vert-origin-y")}} {{Deprecated_Inline}}
+- {{SVGAttr("vert-adv-y")}} {{Deprecated_Inline}}
 
 ## DOM Interface
 

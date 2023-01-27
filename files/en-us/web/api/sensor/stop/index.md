@@ -1,6 +1,7 @@
 ---
 title: Sensor.stop()
 slug: Web/API/Sensor/stop
+page-type: web-api-instance-method
 tags:
   - API
   - Generic Sensor API
@@ -12,6 +13,7 @@ tags:
   - stop()
 browser-compat: api.Sensor.stop
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`stop`** method of the
@@ -19,8 +21,8 @@ The **`stop`** method of the
 
 ## Syntax
 
-```js
-Sensor.stop()
+```js-nolint
+stop()
 ```
 
 ### Parameters
@@ -29,9 +31,9 @@ None.
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 ```js
 // TBD

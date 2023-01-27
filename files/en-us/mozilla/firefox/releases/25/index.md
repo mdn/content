@@ -7,6 +7,7 @@ tags:
   - Firefox 25
   - Guide
 ---
+
 {{FirefoxSidebar}}
 
 ## Changes for Web developers
@@ -34,7 +35,7 @@ tags:
 
 ### JavaScript
 
-[EcmaScript 2015](/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) implementation continues!
+[ECMAScript 2015](/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) implementation continues!
 
 - The method {{jsxref("Array.of()")}} is now implemented on [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) ({{bug("866849")}}).
 - Support for the methods {{jsxref("Array.prototype.find()")}} and {{jsxref("Array.prototype.findIndex()")}} has been added ({{bug("885553")}}).

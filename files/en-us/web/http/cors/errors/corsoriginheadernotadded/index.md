@@ -14,11 +14,12 @@ tags:
   - console
   - troubleshooting
 ---
+
 {{HTTPSidebar}}
 
 ## Reason
 
-```
+```plain
 Reason: CORS header 'Origin' cannot be added
 ```
 

@@ -1,6 +1,7 @@
 ---
-title: ':nth-last-of-type()'
+title: ":nth-last-of-type()"
 slug: Web/CSS/:nth-last-of-type
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
@@ -10,20 +11,12 @@ tags:
   - Web
 browser-compat: css.selectors.nth-last-of-type
 ---
+
 {{CSSRef}}
 
 The **`:nth-last-of-type()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among siblings of the same type (tag name), counting from the end.
 
-```css
-/* Selects every fourth <p> element
-   among any group of siblings,
-   counting backwards from the last one */
-p:nth-last-of-type(4n) {
-  color: lime;
-}
-```
-
-> **Note:** This pseudo-class is essentially the same as {{Cssxref(":nth-of-type")}}, except it counts items backwards from the _end_, not forwards from the beginning.
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-last-of-type.html", "tabbed-shorter")}}
 
 ## Syntax
 
@@ -31,9 +24,9 @@ The `nth-last-of-type` pseudo-class is specified with a single argument, which r
 
 See {{Cssxref(":nth-last-child")}} for a more detailed explanation of its syntax.
 
-### Formal syntax
-
-{{csssyntax}}
+```
+:nth-last-of-type( <an-plus-b> | even | odd )
+```
 
 ## Examples
 

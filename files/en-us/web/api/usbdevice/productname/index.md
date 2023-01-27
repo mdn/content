@@ -1,6 +1,7 @@
 ---
 title: USBDevice.productName
 slug: Web/API/USBDevice/productName
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,21 +11,17 @@ tags:
   - WebUSB
   - WebUSB API
   - productName
+  - Experimental
 browser-compat: api.USBDevice.productName
 ---
+
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
 The **`productName`** read only property of the
 {{domxref("USBDevice")}} interface the manufacturer-defined name that identifies a USB
 device.
 
-## Syntax
-
-```js
-var serialNumber = USBDevice.productName
-```
-
-### Value
+## Value
 
 The manufacturer-defined name that identifies a USB device.
 

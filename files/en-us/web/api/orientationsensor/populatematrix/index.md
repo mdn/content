@@ -1,6 +1,7 @@
 ---
 title: OrientationSensor.populateMatrix()
 slug: Web/API/OrientationSensor/populateMatrix
+page-type: web-api-instance-method
 tags:
   - API
   - Generic Sensor API
@@ -14,6 +15,7 @@ tags:
   - populateMatrix()
 browser-compat: api.OrientationSensor.populateMatrix
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`populateMatrix`** method of the
@@ -30,15 +32,10 @@ where:
 - Y = Vy \* sin(θ/2)
 - Z = Vz \* sin(θ/2)
 
-If a feature policy blocks use of a feature it is because your code is inconsistent
-with the policies set on your server. This is not something that would ever be shown to
-a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation
-instructions.
-
 ## Syntax
 
-```js
-orientationInstance.populateMatrix(targetMatrix)
+```js-nolint
+populateMatrix(targetMatrix)
 ```
 
 Because {{domxref('OrientationSensor')}} is a base class, `populateMatrix`
@@ -46,14 +43,14 @@ may only be read from one of its derived classes.
 
 ### Parameters
 
-- _targetMatrix_
+- `targetMatrix`
   - : TBD
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 ```js
 // TBD

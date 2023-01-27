@@ -1,6 +1,7 @@
 ---
 title: CSSTransition.transitionProperty
 slug: Web/API/CSSTransition/transitionProperty
+page-type: web-api-instance-property
 tags:
   - API
   - Animation
@@ -9,22 +10,17 @@ tags:
   - Reference
 browser-compat: api.CSSTransition.transitionProperty
 ---
-{{APIRef("Web Animations API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Animations API")}}
 
 The **`transitionProperty`** property of the
 {{domxref("CSSTransition")}} interface returns the **expanded transition property
 name** of the transition. This is the longhand CSS property for which the
 transition was generated.
 
-## Syntax
+## Value
 
-```js
-const transitionProperty = CSSAnimation.transitionProperty;
-```
-
-### Value
-
-A {{domxref("CSSOMString")}}.
+A string.
 
 ## Examples
 

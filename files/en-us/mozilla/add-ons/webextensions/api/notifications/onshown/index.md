@@ -13,13 +13,14 @@ tags:
   - onShown
 browser-compat: webextensions.api.notifications.onShown
 ---
+
 {{AddonSidebar()}}
 
 Fired immediately after a notification has been shown.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.notifications.onShown.addListener(listener)
 browser.notifications.onShown.removeListener(listener)
 browser.notifications.onShown.hasListener(listener)
@@ -66,4 +67,4 @@ browser.notifications.onShown.addListener(logShown);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications) API.
+> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.

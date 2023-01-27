@@ -1,6 +1,7 @@
 ---
 title: VTTCue.text
 slug: Web/API/VTTCue/text
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,20 +10,14 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.text
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`text`** property of the {{domxref("VTTCue")}} interface represents the text contents of the cue.
 
-## Syntax
+## Value
 
-```js
-let text = VTTCue.text;
-VTTCue.text = a;
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing the raw text of the cue.
+A string containing the raw text of the cue.
 
 ## Examples
 

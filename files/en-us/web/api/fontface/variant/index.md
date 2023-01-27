@@ -1,6 +1,7 @@
 ---
 title: FontFace.variant
 slug: Web/API/FontFace/variant
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Font Loading API
@@ -12,23 +13,16 @@ tags:
   - variant
 browser-compat: api.FontFace.variant
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`variant`** property of the
 {{domxref("FontFace")}} interface programmatically retrieves or sets font variant
-values. It is equivalent to the {{cssxref("@font-face/font-variant", "font-variant")}}
-descriptor.
+values.
 
-## Syntax
+## Value
 
-```js
-var variantSubProperty = FontFace.variant;
-FontFace.variant = variantSubProperty;
-```
-
-### Value
-
-A {{domxref('CSSOMString')}} containing a descriptor as it would be defined in a style
+A string containing a descriptor as it would be defined in a style
 sheet's `@font-face` rule.
 
 ## Specifications

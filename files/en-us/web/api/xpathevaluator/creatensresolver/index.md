@@ -1,6 +1,7 @@
 ---
 title: XPathEvaluator.createNSResolver()
 slug: Web/API/XPathEvaluator/createNSResolver
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -12,6 +13,7 @@ tags:
   - XPathEvaluator
 browser-compat: api.XPathEvaluator.createNSResolver
 ---
+
 {{APIRef("DOM XPath")}}
 
 This method adapts any DOM node to resolve namespaces so that an XPath expression can
@@ -25,13 +27,13 @@ called, also correctly resolving the implicit `xml` prefix.
 
 ## Syntax
 
-```js
-XPathNSResolver XPathEvaluator.createNSResolver(nodeResolver);
+```js-nolint
+createNSResolver(nodeResolver)
 ```
 
 ### Parameters
 
-- nodeResolver
+- `nodeResolver`
   - : A {{domxref("Node")}} to be used as a context for namespace resolution.
 
 ### Return value

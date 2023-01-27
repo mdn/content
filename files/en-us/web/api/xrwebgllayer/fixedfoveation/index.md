@@ -1,6 +1,7 @@
 ---
 title: XRWebGLLayer.fixedFoveation
 slug: Web/API/XRWebGLLayer/fixedFoveation
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,10 +11,12 @@ tags:
   - WebXR API
   - WebXR Device API
   - XR
+  - Experimental
 
 browser-compat: api.XRWebGLLayer.fixedFoveation
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`fixedFoveation`** property of the {{domxref("XRWebGLLayer")}} interface is a number indicating the amount of foveation used by the XR compositor. Fixed Foveated Rendering (FFR) renders the edges of the eye textures at a lower resolution than the center and reduces the GPU load.
 
@@ -35,7 +38,7 @@ Note that some user agents might implement certain levels of foveation, so you m
 - `2/3`: medium foveation
 - `1.0`: maximum foveation
 
-Some devices don't support foveated rendering. In that case `fixedFoveation` is {{jsxref("null")}} and setting it will not do anything.
+Some devices don't support foveated rendering. In that case `fixedFoveation` is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and setting it will not do anything.
 
 ## Examples
 

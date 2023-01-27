@@ -1,9 +1,9 @@
 ---
 title: PaymentRequest.shippingAddress
 slug: Web/API/PaymentRequest/shippingAddress
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Payment Request
   - Payment Request API
   - PaymentRequest
@@ -11,21 +11,20 @@ tags:
   - Reference
   - Secure context
   - shippingAddress
+  - Deprecated
+  - Non-standard
 browser-compat: api.PaymentRequest.shippingAddress
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
 The **`shippingAddress`** read-only property of
 the {{domxref('PaymentRequest')}} interface returns the shipping address provided by the
 user. It is `null` by default.
 
-## Syntax
+## Value
 
-```js
-var paymentAddress = PaymentRequest.shippingAddress;
-```
-
-## Example
+## Examples
 
 Generally, the user agent will fill the `shippingAddress` property value.
 You can trigger this by setting
@@ -33,7 +32,7 @@ You can trigger this by setting
 the `PaymentRequest` constructor.
 
 In the example below, the cost of shipping varies by geography. When the
-{{domxref('PaymentRequest.onshippingaddresschange')}} is
+{{domxref('PaymentRequest.shippingaddresschange_event', 'shippingaddresschange')}} is
 called, `updateDetails()` is called to update the details of
 the `PaymentRequest`, using `shippingAddress` to set the correct
 shipping cost.
@@ -41,23 +40,23 @@ shipping cost.
 ```js
 // Initialization of PaymentRequest arguments are excerpted for the sake of
 //   brevity.
-var payment = new PaymentRequest(supportedInstruments, details, options);
+const payment = new PaymentRequest(supportedInstruments, details, options);
 
-payment.addEventListener('shippingaddresschange', function(evt) {
-  evt.updateWith(new Promise(function(resolve) {
+payment.addEventListener('shippingaddresschange', (evt) => {
+  evt.updateWith(new Promise((resolve) => {
     updateDetails(details, request.shippingAddress, resolve);
   }));
 });
 
-payment.show().then(function(paymentResponse) {
+payment.show().then((paymentResponse) => {
     // Processing of paymentResponse excerpted for brevity.
-}).catch(function(err) {
+}).catch((err) => {
     console.error("Uh oh, something bad happened", err.message);
 });
 
 function updateDetails(details, shippingAddress, resolve) {
   if (shippingAddress.country === 'US') {
-    var shippingOption = {
+    const shippingOption = {
       id: '',
       label: '',
       amount: {currency: 'USD', value: '0.00'},

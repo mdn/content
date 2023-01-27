@@ -1,6 +1,7 @@
 ---
 title: Keyboard.getLayoutMap()
 slug: Web/API/Keyboard/getLayoutMap
+page-type: web-api-instance-method
 tags:
   - API
   - Keyboard API
@@ -10,9 +11,11 @@ tags:
   - Reference
   - getLayoutMap()
   - keyboard
+  - Experimental
 browser-compat: api.Keyboard.getLayoutMap
 ---
-{{APIRef("Keyboard API")}}{{SeeCompatTable}}
+
+{{APIRef("Keyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`getLayoutMap()`** method of the
 {{domxref("Keyboard")}} interface returns a {{jsxref('Promise')}} that resolves with
@@ -21,8 +24,8 @@ functions for retrieving the strings associated with specific physical keys.
 
 ## Syntax
 
-```js
-var promise = Keyboard.getLayoutMap()
+```js-nolint
+getLayoutMap()
 ```
 
 ### Parameters
@@ -34,17 +37,17 @@ None.
 A {{jsxref('Promise')}} that resolves with an instance of
 {{domxref('KeyboardLayoutMap')}}.
 
-## Example
+## Examples
 
 The following example demonstrates how to get the location- or layout-specific string
 associated with the key that corresponds to the 'W' key on an English QWERTY keyboard.
 
 ```js
-var keyboard = navigator.keyboard;
+const keyboard = navigator.keyboard;
 keyboard.getLayoutMap()
-.then(keyboardLayoutMap => {
-  var upKey = keyboardLayoutMap.get('KeyW');
-  window.alert('Press ' + upKey + ' to move up.');
+.then((keyboardLayoutMap) => {
+  const upKey = keyboardLayoutMap.get('KeyW');
+  window.alert(`Press ${upKey} to move up.`);
 })
 ```
 

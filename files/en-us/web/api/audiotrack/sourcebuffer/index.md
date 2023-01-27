@@ -1,6 +1,7 @@
 ---
 title: AudioTrack.sourceBuffer
 slug: Web/API/AudioTrack/sourceBuffer
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -16,6 +17,7 @@ tags:
   - track
 browser-compat: api.AudioTrack.sourceBuffer
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("AudioTrack")}}**
@@ -25,13 +27,7 @@ created by a {{domxref("SourceBuffer")}} or the {{domxref("SourceBuffer")}} has 
 removed from the {{domxref("MediaSource.sourceBuffers")}} attribute of its parent
 media source.
 
-## Syntax
-
-```js
-var sourceBuffer = AudioTrack.sourceBuffer;
-```
-
-### Value
+## Value
 
 A {{domxref("SourceBuffer")}} or null.
 

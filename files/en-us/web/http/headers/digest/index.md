@@ -7,6 +7,7 @@ tags:
   - Digest
 browser-compat: http.headers.Digest
 ---
+
 {{HTTPSidebar}}
 
 The **`Digest`** response HTTP header provides a {{Glossary("digest")}} of the _selected representation_ of the requested resource.
@@ -34,7 +35,7 @@ It can be used to verify that the representation data has not been modified duri
 
 ## Syntax
 
-```
+```http
 Digest: <digest-algorithm>=<digest-value>
 Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-value>
 ```
@@ -58,7 +59,7 @@ Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=,unixsum=30637
 
 ## Specifications
 
-{{Specifications("http.headers.Digest")}}
+{{Specifications}}
 
 ## Browser compatibility
 

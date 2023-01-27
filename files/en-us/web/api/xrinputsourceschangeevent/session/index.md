@@ -1,6 +1,7 @@
 ---
 title: XRInputSourcesChangeEvent.session
 slug: Web/API/XRInputSourcesChangeEvent/session
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -22,6 +23,7 @@ tags:
   - augmented
 browser-compat: api.XRInputSourcesChangeEvent.session
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The {{domxref("XRInputSourcesChangeEvent")}} property

@@ -11,6 +11,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.search.search
 ---
+
 {{AddonSidebar()}}
 
 Perform a search using the search engine specified, or the default search engine if no search engine is specified.
@@ -23,7 +24,7 @@ To get the installed search engines, use {{WebExtAPIRef("search.get()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.search.search(
   searchProperties       // object
 )
@@ -37,9 +38,9 @@ browser.search.search(
 
     - `query`
       - : `string`. The search query.
-    - `engine`{{optional_inline}}
+    - `engine` {{optional_inline}}
       - : `string`. The name of the search engine. If the search engine name you specify doesn't exist, the function throws an error. If this property is omitted the default search engine will be used.
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. An optional identifier for the tab you want to execute the search in. If this property is omitted the search results will be displayed in a new tab.
 
 ### Return value

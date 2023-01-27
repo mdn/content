@@ -1,6 +1,7 @@
 ---
 title: Map.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Map/clear
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Map.clear
 ---
+
 {{JSRef}}
 
 The **`clear()`** method removes all elements from a `Map` object.
@@ -18,7 +20,7 @@ The **`clear()`** method removes all elements from a `Map` object.
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 
@@ -31,17 +33,17 @@ clear()
 ### Using clear()
 
 ```js
-var myMap = new Map();
+const myMap = new Map();
 myMap.set('bar', 'baz');
 myMap.set(1, 'foo');
 
-myMap.size;       // 2
-myMap.has('bar'); // true
+console.log(myMap.size);  // 2
+console.log(myMap.has('bar')); // true
 
 myMap.clear();
 
-myMap.size;       // 0
-myMap.has('bar')  // false
+console.log(myMap.size);  // 0
+console.log(myMap.has('bar')); // false
 ```
 
 ## Specifications

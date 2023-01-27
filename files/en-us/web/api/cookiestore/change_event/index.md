@@ -1,6 +1,7 @@
 ---
-title: 'CookieStore: change event'
+title: "CookieStore: change event"
 slug: Web/API/CookieStore/change_event
+page-type: web-api-event
 tags:
   - API
   - Reference
@@ -8,9 +9,11 @@ tags:
   - change
   - onchange
   - CookieStore
+  - Experimental
 browser-compat: api.CookieStore.change_event
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
+
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 A `change` event is fired at a {{domxref("CookieStore")}} object when a change is made to any cookie.
 
@@ -18,10 +21,10 @@ A `change` event is fired at a {{domxref("CookieStore")}} object when a change i
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-cookieStore.addEventListener('change', event => { })
+```js-nolint
+cookieStore.addEventListener("change", (event) => { })
 
-cookieStore.onchange = event => { }
+cookieStore.onchange = (event) => { }
 ```
 
 ## Examples
@@ -29,16 +32,16 @@ cookieStore.onchange = event => { }
 To be informed when a cookie has changed, you can add a handler to the `cookieStore` instance using {{domxref("EventTarget.addEventListener", "addEventListener()")}}, like this:
 
 ```js
-cookieStore.addEventListener('change', function(event) {
-  console.log('1 change event');
+cookieStore.addEventListener("change", (event) => {
+  console.log("1 change event");
 });
 ```
 
 Alternatively, you can use the `CookieStore.onchange` event handler property to establish a handler for the `change` event:
 
 ```js
-cookieStore.onchange = function(event) {
-    console.log('1 change event');
+cookieStore.onchange = (event) => {
+  console.log("1 change event");
 };
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.signalingState
 slug: Web/API/RTCPeerConnection/signalingState
+page-type: web-api-instance-property
 tags:
   - API
   - ICE
@@ -17,6 +18,7 @@ tags:
   - state
 browser-compat: api.RTCPeerConnection.signalingState
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`signalingState`** property on the
@@ -24,8 +26,7 @@ The read-only **`signalingState`** property on the
 describing the state of the signaling process
 on the local end of the connection
 while connecting or reconnecting to another peer.
-See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Session_lifetime",
-  "Signaling")}} for more details about the signaling process.
+See [Signaling](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#signaling) in our WebRTC session lifetime page.
 
 Because the signaling process is a state machine, being able to verify that your code
 is in the expected state when messages arrive can help avoid unexpected and avoidable
@@ -42,13 +43,7 @@ In addition, when the value of this property changes, a
 {{DOMxRef("RTCPeerConnection/signalingstatechange_event", "signalingstatechange")}} event is sent to the {{domxref("RTCPeerConnection")}}
 instance.
 
-## Syntax
-
-```js
- var state = RTCPeerConnection.signalingState;
-```
-
-### Value
+## Value
 
 The allowed string values are:
 
@@ -89,11 +84,11 @@ The allowed string values are:
 - `closed`
   - : The {{domxref("RTCPeerConnection")}} has been closed.
 
-## Example
+## Examples
 
 ```js
-var pc = new RTCPeerConnection(configuration);
-var state = pc.signalingState;
+const pc = new RTCPeerConnection(configuration);
+const state = pc.signalingState;
 ```
 
 ## Specifications
@@ -106,8 +101,7 @@ var state = pc.signalingState;
 
 ## See also
 
-- [Lifetime of a WebRTC
-  session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
 - {{domxref("RTCPeerConnection")}}
 - {{DOMxRef("RTCPeerConnection/signalingstatechange_event", "signalingstatechange")}}
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)

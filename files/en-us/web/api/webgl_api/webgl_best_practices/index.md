@@ -1,6 +1,7 @@
 ---
 title: WebGL best practices
 slug: Web/API/WebGL_API/WebGL_best_practices
+page-type: guide
 tags:
   - 2D
   - 3D
@@ -13,7 +14,8 @@ tags:
   - OpenGL
   - WebGL
 ---
-{{WebGLSidebar}}
+
+{{DefaultAPISidebar("WebGL")}}
 
 WebGL is a complicated API, and it's often not obvious what the recommended ways to use it are. This page tackles recommendations across the spectrum of expertise, and not only highlights dos and don'ts, but also details _why_. You can rely on this document to guide your choice of approach, and ensure you're on the right track no matter what browser or hardware your users run.
 
@@ -37,9 +39,9 @@ These WebGL 1 extensions are universally supported, and can be relied upon to be
 - WEBGL_debug_renderer_info
 - WEBGL_lose_context
 
-_(see also: <https://jdashg.github.io/misc/webgl/webgl-feature-levels.html>)_
+_(see also: [WebGL feature levels and % support](https://kdashg.github.io/misc/webgl/webgl-feature-levels.html))_
 
-Consider polyfilling these into WebGLRenderingContext, like: <https://github.com/jdashg/misc/blob/master/webgl/webgl-v1.1.js>
+Consider polyfilling these into WebGLRenderingContext, like: <https://github.com/kdashg/misc/blob/tip/webgl/webgl-v1.1.js>
 
 ## Understand system limits
 
@@ -180,9 +182,9 @@ for (const [vs, fs, prog] of programs) {
   compileOnce(gl, fs);
   gl.linkProgram(prog);
   if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
-    console.error('Link failed: ' + gl.getProgramInfoLog(prog));
-    console.error('vs info-log: ' + gl.getShaderInfoLog(vs));
-    console.error('fs info-log: ' + gl.getShaderInfoLog(fs));
+    console.error(`Link failed: ${gl.getProgramInfoLog(prog)}`);
+    console.error(`vs info-log: ${gl.getShaderInfoLog(vs)}`);
+    console.error(`fs info-log: ${gl.getShaderInfoLog(fs)}`);
   }
 }
 ```
@@ -204,9 +206,9 @@ for (const [vs, fs, prog] of programs) {
 }
 for (const [vs, fs, prog] of programs) {
   if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
-    console.error('Link failed: ' + gl.getProgramInfoLog(prog));
-    console.error('vs info-log: ' + gl.getShaderInfoLog(vs));
-    console.error('fs info-log: ' + gl.getShaderInfoLog(fs));
+    console.error(`Link failed: ${gl.getProgramInfoLog(prog)}`);
+    console.error(`vs info-log: ${gl.getShaderInfoLog(vs)}`);
+    console.error(`fs info-log: ${gl.getShaderInfoLog(fs)}`);
   }
 }
 ```
@@ -218,7 +220,7 @@ While we've described a pattern to allow browsers to compile and link in paralle
 Example usage:
 
 ```js
-ext = gl.getExtension('KHR_parallel_shader_compile');
+ext = gl.getExtension("KHR_parallel_shader_compile");
 gl.compileProgram(vs);
 gl.compileProgram(fs);
 gl.attachShader(prog, vs);
@@ -260,17 +262,17 @@ Instead of:
 ```js
 gl.compileShader(vs);
 if (!gl.getShaderParameter(vs, gl.COMPILE_STATUS)) {
-  console.error('vs compile failed: ' + gl.getShaderInfoLog(vs));
+  console.error(`vs compile failed: ${gl.getShaderInfoLog(vs)}`);
 }
 
 gl.compileShader(fs);
 if (!gl.getShaderParameter(fs, gl.COMPILE_STATUS)) {
-  console.error('fs compile failed: ' + gl.getShaderInfoLog(fs));
+  console.error(`fs compile failed: ${gl.getShaderInfoLog(fs)}`);
 }
 
 gl.linkProgram(prog);
 if (!gl.getProgramParameter(vs, gl.LINK_STATUS)) {
-  console.error('Link failed: ' + gl.getProgramInfoLog(prog));
+  console.error(`Link failed: ${gl.getProgramInfoLog(prog)}`);
 }
 ```
 
@@ -281,9 +283,9 @@ gl.compileShader(vs);
 gl.compileShader(fs);
 gl.linkProgram(prog);
 if (!gl.getProgramParameter(vs, gl.LINK_STATUS)) {
-  console.error('Link failed: ' + gl.getProgramInfoLog(prog));
-  console.error('vs info-log: ' + gl.getShaderInfoLog(vs));
-  console.error('fs info-log: ' + gl.getShaderInfoLog(fs));
+  console.error(`Link failed: ${gl.getProgramInfoLog(prog)}`);
+  console.error(`vs info-log: ${gl.getShaderInfoLog(vs)}`);
+  console.error(`fs info-log: ${gl.getShaderInfoLog(fs)}`);
 }
 ```
 
@@ -346,7 +348,7 @@ precision mediump float;
 | `mediump` | int11 | (-2^10, 2^10) |
 | `lowp`    | int9  | (-2^8, 2^8)   |
 
-_\*float24: sign bit, 7-bit for exponent, 16-bit for mantissa_
+_\*float24: sign bit, 7-bit for exponent, 16-bit for mantissa._
 
 ### ESSL300 minimum requirements (WebGL 2)
 
@@ -404,7 +406,7 @@ A number of formats (particularly three-channel formats) are emulated. For examp
 
 ## Avoid alpha:false, which can be expensive
 
-Specifying `alpha:false` during context creation causes the browser to composite the WebGL-rendered canvas as though it were opaque, ignoring any alpha values the application writes in its fragment shader. On some platforms, this capability unfortunately comes at a significant performance cost. The RGB back buffer may have to be emulated on top of an RGBA surface, and there are relatively few techniques available in the OpenGL API for making it appear to the application that an RGBA surface has no alpha channel. [It has been found](https://crbug.com/1045643) that all of these techniques have approximately equal performance impact on affected platforms.
+Specifying `alpha:false` during context creation causes the browser to composite the WebGL-rendered canvas as though it were opaque, ignoring any alpha values the application writes in its fragment shader. On some platforms, this capability unfortunately comes at a significant performance cost. The RGB back buffer may have to be emulated on top of an RGBA surface, and there are relatively few techniques available in the OpenGL API for making it appear to the application that an RGBA surface has no alpha channel. [It has been found](https://bugs.chromium.org/p/chromium/issues/detail?id=1045643) that all of these techniques have approximately equal performance impact on affected platforms.
 
 Most applications, even those requiring alpha blending, can be structured to produce `1.0` for the alpha channel. The primary exception is any application requiring destination alpha in the blending function. If feasible, it is recommended to do this rather than using `alpha:false`.
 
@@ -442,7 +444,7 @@ Most texture uploads from DOM elements will incur a processing pass that will te
 In WebGL:
 
 ```
-    ...
+    …
     useProgram(prog1)
 <pipeline flush>
     bindFramebuffer(target)
@@ -450,20 +452,20 @@ In WebGL:
     bindTexture(webgl_texture)
     texImage2D(HTMLVideoElement)
     drawArrays()
-    ...
+    …
 ```
 
 Behind the scenes in the browser:
 
 ```
-    ...
+    …
     useProgram(prog1)
 <pipeline flush>
     bindFramebuffer(target)
     drawArrays()
     bindTexture(webgl_texture)
     -texImage2D(HTMLVideoElement):
-        +useProgram(_internal_tex_tranform_prog)
+        +useProgram(_internal_tex_transform_prog)
 <pipeline flush>
         +bindFramebuffer(webgl_texture._internal_framebuffer)
         +bindTexture(HTMLVideoElement._internal_video_tex)
@@ -473,7 +475,7 @@ Behind the scenes in the browser:
         +useProgram(prog1)
 <pipeline flush>
     drawArrays()
-    ...
+    …
 ```
 
 Prefer doing uploads before starting drawing, or at least between pipelines:
@@ -481,7 +483,7 @@ Prefer doing uploads before starting drawing, or at least between pipelines:
 In WebGL:
 
 ```
-    ...
+    …
     bindTexture(webgl_texture)
     texImage2D(HTMLVideoElement)
     useProgram(prog1)
@@ -490,16 +492,16 @@ In WebGL:
     drawArrays()
     bindTexture(webgl_texture)
     drawArrays()
-    ...
+    …
 ```
 
 Behind the scenes in the browser:
 
 ```
-    ...
+    …
     bindTexture(webgl_texture)
     -texImage2D(HTMLVideoElement):
-        +useProgram(_internal_tex_tranform_prog)
+        +useProgram(_internal_tex_transform_prog)
 <pipeline flush>
         +bindFramebuffer(webgl_texture._internal_framebuffer)
         +bindTexture(HTMLVideoElement._internal_video_tex)
@@ -512,7 +514,7 @@ Behind the scenes in the browser:
     drawArrays()
     bindTexture(webgl_texture)
     drawArrays()
-    ...
+    …
 ```
 
 ## Use texStorage to create textures
@@ -529,30 +531,36 @@ Storing data that you won't use again can have high cost, particularly on tiled-
 
 ## Use non-blocking async data readback
 
-Operations like `readPixels` and `getBufferSubData` are typically synchronous, but using the same APIs, non-blocking, asynchronous data readback can be achieved. The approach in WebGL 2 is analogous to the approach in OpenGL: <https://jdashg.github.io/misc/async-gpu-downloads.html>
+Operations like `readPixels` and `getBufferSubData` are typically synchronous, but using the same APIs, non-blocking, asynchronous data readback can be achieved. The approach in WebGL 2 is analogous to the approach in OpenGL: [Async downloads in blocking APIs](https://kdashg.github.io/misc/async-gpu-downloads.html)
 
 ```js
 function clientWaitAsync(gl, sync, flags, interval_ms) {
   return new Promise((resolve, reject) => {
     function test() {
       const res = gl.clientWaitSync(sync, flags, 0);
-      if (res == gl.WAIT_FAILED) {
+      if (res === gl.WAIT_FAILED) {
         reject();
         return;
       }
-      if (res == gl.TIMEOUT_EXPIRED) {
+      if (res === gl.TIMEOUT_EXPIRED) {
         setTimeout(test, interval_ms);
         return;
       }
       resolve();
     }
-    test());
+    test();
   });
 }
 
 async function getBufferSubDataAsync(
-    gl, target, buffer, srcByteOffset, dstBuffer,
-    /* optional */ dstOffset, /* optional */ length) {
+  gl,
+  target,
+  buffer,
+  srcByteOffset,
+  dstBuffer,
+  /* optional */ dstOffset,
+  /* optional */ length
+) {
   const sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
   gl.flush();
 
@@ -582,35 +590,37 @@ async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
 
 ### `devicePixelRatio` and high-dpi rendering
 
-Handling `devicePixelRatio != 1.0` is tricky. While the common approach is to set `canvas.width = width * devicePixelRatio`, this will cause moire artifacts with non-integer values of `devicePixelRatio`, as is common with UI scaling on Windows, as well as zooming on all platforms.
+Handling `devicePixelRatio !== 1.0` is tricky. While the common approach is to set `canvas.width = width * devicePixelRatio`, this will cause moire artifacts with non-integer values of `devicePixelRatio`, as is common with UI scaling on Windows, as well as zooming on all platforms.
 
 Instead, we can use non-integer values for CSS's `top`/`bottom`/`left`/`right` to fairly reliably 'pre-snap' our canvas to whole integer device coordinates.
 
-Demo: <https://jdashg.github.io/misc/webgl/device-pixel-presnap.html>
+Demo: [Device pixel presnap](https://kdashg.github.io/misc/webgl/device-pixel-presnap.html)
 
 ### ResizeObserver and 'device-pixel-content-box'
 
 On supporting browsers (Chromium?), `ResizeObserver` can be used with `'device-pixel-content-box'` to request a callback that includes the true device pixel size of an element. This can be used to build an async-but-accurate function:
 
 ```js
-window.getDevicePixelSize = window.getDevicePixelSize || async function(elem) {
-   await new Promise(fn_resolve => {
-      const observer = new ResizeObserver(entries => {
-         for (const cur of entries) {
-            const dev_size = cur.devicePixelContentBoxSize;
-            const ret = {
-               width: dev_size[0].inlineSize,
-               height: dev_size[0].blockSize,
-            };
-            fn_resolve(ret);
-            observer.disconnect();
-            return;
-         }
-         throw 'device-pixel-content-box not observed for elem ' + elem;
+window.getDevicePixelSize =
+  window.getDevicePixelSize ||
+  (async (elem) => {
+    await new Promise((fn_resolve) => {
+      const observer = new ResizeObserver((entries) => {
+        for (const cur of entries) {
+          const dev_size = cur.devicePixelContentBoxSize;
+          const ret = {
+            width: dev_size[0].inlineSize,
+            height: dev_size[0].blockSize,
+          };
+          fn_resolve(ret);
+          observer.disconnect();
+          return;
+        }
+        throw `device-pixel-content-box not observed for elem ${elem}`;
       });
-      observer.observe(elem, {box: 'device-pixel-content-box'});
-   });
-};
+      observer.observe(elem, { box: "device-pixel-content-box" });
+    });
+  });
 ```
 
 Please refer to [the specification](https://www.w3.org/TR/resize-observer/#resize-observer-interface) for more details.

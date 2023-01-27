@@ -9,10 +9,11 @@ tags:
   - Reference
 browser-compat: http.headers.Date
 ---
+
 {{HTTPSidebar}}
 
 The **`Date`** general HTTP header contains the date and time
-at which the message was originated.
+at which the message originated.
 
 > **Warning:** `Date` is listed
 > in the [forbidden header names](https://fetch.spec.whatwg.org/#forbidden-header-name)
@@ -20,10 +21,10 @@ at which the message was originated.
 >
 > ```js
 > fetch('https://httpbin.org/get', {
->       'headers': {
->         'Date': (new Date()).toUTCString()
->       }
->     })
+>   'headers': {
+>     'Date': (new Date()).toUTCString()
+>   }
+> })
 > ```
 
 <table class="properties">
@@ -44,7 +45,7 @@ at which the message was originated.
 
 ## Syntax
 
-```
+```http
 Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 ```
 
@@ -71,7 +72,7 @@ Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 
 ## Examples
 
-```
+```http
 Date: Wed, 21 Oct 2015 07:28:00 GMT
 ```
 

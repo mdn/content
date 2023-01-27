@@ -1,10 +1,10 @@
 ---
 title: MediaKeys.createSession()
 slug: Web/API/MediaKeys/createSession
+page-type: web-api-instance-method
 tags:
   - API
   - EncryptedMediaExtensions
-  - Experimental
   - Media
   - MediaKeys
   - Method
@@ -12,7 +12,8 @@ tags:
   - createSession
 browser-compat: api.MediaKeys.createSession
 ---
-{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
+
+{{APIRef("EncryptedMediaExtensions")}}
 
 The `MediaKeys.createSession()` method returns a new
 {{domxref("MediaKeySession")}} object, which represents a context for message exchange
@@ -20,9 +21,19 @@ with a content decryption module (CDM).
 
 ## Syntax
 
-```js
-var mediaKeySessionObject = MediaKeys.createSession([MediaKeySessionType]);
+```js-nolint
+createSession()
+createSession(mediaKeySessionType)
 ```
+
+### Parameters
+
+- `mediaKeySessionType` {{optional_inline}}
+  - : A string. Either "temporary" or "persistent-license". The default value is "temporary".
+
+### Return value
+
+A new {{domxref("MediaKeySession")}} object.
 
 ## Specifications
 

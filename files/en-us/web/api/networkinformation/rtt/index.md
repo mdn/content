@@ -1,6 +1,7 @@
 ---
 title: NetworkInformation.rtt
 slug: Web/API/NetworkInformation/rtt
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -12,6 +13,7 @@ tags:
   - rtt
 browser-compat: api.NetworkInformation.rtt
 ---
+
 {{apiref("Network Information API")}}{{SeeCompatTable}}
 
 The **`NetworkInformation.rtt`** read-only property returns the
@@ -23,13 +25,7 @@ the properties of the underlying connection technology.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-rtt = NetworkInformation.rtt
-```
-
-### Return value
+## Value
 
 A number.
 

@@ -10,6 +10,7 @@ tags:
   - Phaser
   - Tutorial
 ---
+
 {{GamesSidebar}}
 
 {{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}

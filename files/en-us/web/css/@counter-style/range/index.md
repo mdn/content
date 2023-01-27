@@ -1,8 +1,9 @@
 ---
 title: range
 slug: Web/CSS/@counter-style/range
+page-type: css-at-rule-descriptor
 tags:
-  - '@counter-style'
+  - "@counter-style"
   - At-rule descriptor
   - CSS
   - CSS Counter Styles
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: css.at-rules.counter-style.range
 ---
+
 {{CSSRef}}
 
 When defining custom counter styles, the **`range`** descriptor lets the author specify a range of counter values over which the style is applied. If a counter value is outside the specified range, then the fallback style will be used to construct the representation of that marker.
@@ -84,7 +86,7 @@ When range is specified as integers, the value `infinite` can be used to denote 
 ```css
 @counter-style range-multi-example {
   system: cyclic;
-  symbols: "\25A0" "\25A1";
+  symbols: "\25A0""\25A1";
   range: 2 4, 7 9;
 }
 
@@ -108,4 +110,4 @@ The above list will display as follows:
 ## See also
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles.
+- {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles.

@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.fillStyle
 slug: Web/API/CanvasRenderingContext2D/fillStyle
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.fillStyle
 ---
+
 {{APIRef}}
 
 The
@@ -17,27 +19,15 @@ property of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API) specifies the
 color, gradient, or pattern to use inside shapes. The default style is `#000`
 (black).
 
-> **Note:** For more examples of fill and stroke styles, see [Applying
-> styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas
-> tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
+> **Note:** For more examples of fill and stroke styles, see [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
-## Syntax
+## Value
 
-```js
-ctx.fillStyle = color;
-ctx.fillStyle = gradient;
-ctx.fillStyle = pattern;
-```
+One of the following:
 
-### Options
-
-- `color`
-  - : A {{domxref("DOMString")}} parsed as [CSS](/en-US/docs/Web/CSS)
-    {{cssxref("&lt;color&gt;")}} value.
-- `gradient`
-  - : A {{domxref("CanvasGradient")}} object (a linear or radial gradient).
-- `pattern`
-  - : A {{domxref("CanvasPattern")}} object (a repeating image).
+- A string parsed as CSS {{cssxref("&lt;color&gt;")}} value.
+- A {{domxref("CanvasGradient")}} object (a linear or radial gradient).
+- A {{domxref("CanvasPattern")}} object (a repeating image).
 
 ## Examples
 
@@ -54,10 +44,10 @@ This example applies a blue fill color to a rectangle.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fillRect(10, 10, 100, 100);
 ```
 
@@ -78,8 +68,8 @@ you can generate all kinds of palettes.
 ```
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 for (let i = 0; i < 6; i++) {
   for (let j = 0; j < 6; j++) {
@@ -111,8 +101,8 @@ In WebKit- and Blink-based browsers, the non-standard and deprecated method
 `ctx.setFillColor()` is implemented in addition to this property.
 
 ```js
-setFillColor(color, optional alpha);
-setFillColor(grayLevel, optional alpha);
+setFillColor(color, /* (optional) */ alpha);
+setFillColor(grayLevel, /* (optional) */ alpha);
 setFillColor(r, g, b, a);
 setFillColor(c, m, y, k, a);
 ```

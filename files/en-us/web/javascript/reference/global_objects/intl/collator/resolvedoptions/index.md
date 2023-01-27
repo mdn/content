@@ -1,6 +1,7 @@
 ---
 title: Intl.Collator.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
+page-type: javascript-instance-method
 tags:
   - Collator
   - Internationalization
@@ -12,6 +13,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Collator.resolvedOptions
 ---
+
 {{JSRef}}
 
 The **`Intl.Collator.prototype.resolvedOptions()`** method
@@ -24,7 +26,7 @@ computed during initialization of this {{jsxref("Intl.Collator")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 resolvedOptions()
 ```
 
@@ -46,11 +48,11 @@ The resulting object has the following properties:
   - : The values provided for these properties in the `options` argument or
     filled in as defaults.
 - `collation`
-  - : The value requested using the Unicode extension key "`co`", if it is
-    supported for `locale`, or "`default`".
+  - : The value requested using the Unicode extension key `"co"`, if it is
+    supported for `locale`, or `"default"`.
 - `numeric`, `caseFirst`
   - : The values requested for these properties in the `options` argument or
-    using the Unicode extension keys "`kn`" and "`kf`" or filled
+    using the Unicode extension keys `"kn"` and `"kf"` or filled
     in as defaults. If the implementation does not support these properties, they are
     omitted.
 
@@ -59,15 +61,15 @@ The resulting object has the following properties:
 ### Using the resolvedOptions method
 
 ```js
-var de = new Intl.Collator('de', { sensitivity: 'base' })
-var usedOptions = de.resolvedOptions();
+const de = new Intl.Collator("de", { sensitivity: "base" });
+const usedOptions = de.resolvedOptions();
 
-usedOptions.locale;            // "de"
-usedOptions.usage;             // "sort"
-usedOptions.sensitivity;       // "base"
+usedOptions.locale; // "de"
+usedOptions.usage; // "sort"
+usedOptions.sensitivity; // "base"
 usedOptions.ignorePunctuation; // false
-usedOptions.collation;         // "default"
-usedOptions.numeric;           // false
+usedOptions.collation; // "default"
+usedOptions.numeric; // false
 ```
 
 ## Specifications

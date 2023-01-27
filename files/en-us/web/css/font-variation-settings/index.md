@@ -1,6 +1,7 @@
 ---
 title: font-variation-settings
 slug: Web/CSS/font-variation-settings
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-variation-settings
 ---
+
 {{CSSRef}}
 
 The **`font-variation-settings`** CSS property provides low-level control over [variable font](/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide) characteristics, by specifying the four letter axis names of the characteristics you want to vary, along with their values.
@@ -28,6 +30,7 @@ font-variation-settings: "XHGT" 0.7;
 font-variation-settings: inherit;
 font-variation-settings: initial;
 font-variation-settings: revert;
+font-variation-settings: revert-layer;
 font-variation-settings: unset;
 ```
 

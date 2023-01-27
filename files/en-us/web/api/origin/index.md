@@ -1,6 +1,7 @@
 ---
 title: origin
 slug: Web/API/origin
+page-type: web-api-global-property
 tags:
   - API
   - HTML DOM
@@ -12,20 +13,15 @@ tags:
   - origin
 browser-compat: api.origin
 ---
-{{APIRef()}}{{SeeCompatTable}}
+
+{{APIRef()}}
 
 The global **`origin`** read-only property returns the origin of the global
 scope, serialized as a string.
 
-## Syntax
+## Value
 
-```js
-var myOrigin = self.origin; // or just origin
-```
-
-### Value
-
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 
@@ -33,7 +29,7 @@ Executed from inside a worker script, the following snippet will log the worker'
 global scope's origin to the console each time it receives a message
 
 ```js
-onmessage = function() {
+onmessage = () => {
   console.log(self.origin);
 };
 ```

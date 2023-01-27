@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.transform()
 slug: Web/API/CanvasRenderingContext2D/transform
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.transform
 ---
+
 {{APIRef}}
 
 The
@@ -24,8 +26,8 @@ described by the arguments of this method. This lets you scale, rotate, translat
 
 ## Syntax
 
-```js
-void ctx.transform(a, b, c, d, e, f);
+```js-nolint
+transform(a, b, c, d, e, f)
 ```
 
 The transformation matrix is described by: <math><semantics><mrow><mo>[</mo>
@@ -57,6 +59,10 @@ The transformation matrix is described by: <math><semantics><mrow><mo>[</mo>
 - `f` (dy)
   - : Vertical translation (moving).
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Skewing a shape
@@ -73,10 +79,10 @@ This example skews a rectangle both vertically (`.2`) and horizontally
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.transform(1, .2, .8, 1, 0, 0);
+ctx.transform(1, 0.2, 0.8, 1, 0, 0);
 ctx.fillRect(0, 0, 100, 100);
 ```
 

@@ -1,10 +1,10 @@
 ---
 title: MediaKeySystemAccess.keySystem
 slug: Web/API/MediaKeySystemAccess/keySystem
+page-type: web-api-instance-property
 tags:
   - API
   - EncryptedMediaExtensions
-  - Experimental
   - MediaKeySystemAccess
   - NeedsExample
   - Property
@@ -12,16 +12,15 @@ tags:
   - keySystem
 browser-compat: api.MediaKeySystemAccess.keySystem
 ---
-{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
+
+{{APIRef("EncryptedMediaExtensions")}}
 
 The `MediaKeySystemAccess.keySystem` read-only property returns a
-{{domxref('DOMString')}} identifying the key system being used.
+string identifying the key system being used.
 
-## Syntax
+## Value
 
-```js
-var keySystem = mediaKeySystemAccess.keySystem;
-```
+A string.
 
 ## Specifications
 

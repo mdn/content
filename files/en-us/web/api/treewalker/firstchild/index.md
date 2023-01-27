@@ -1,6 +1,7 @@
 ---
 title: TreeWalker.firstChild()
 slug: Web/API/TreeWalker/firstChild
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -9,6 +10,7 @@ tags:
   - TreeWalker
 browser-compat: api.TreeWalker.firstChild
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.firstChild()`** method moves the current
@@ -18,20 +20,28 @@ returns `null` and the current node is not changed.
 
 ## Syntax
 
-```js
-node = treeWalker.firstChild;
+```js-nolint
+firstChild()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+A {{domxref("Node")}} object or `null`.
+
+## Examples
 
 ```js
-var treeWalker = document.createTreeWalker(
+const treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
-var node = treeWalker.firstChild(); // returns the first child of the root element, or null if none
+const node = treeWalker.firstChild(); // returns the first child of the root element, or null if none
 ```
 
 ## Specifications

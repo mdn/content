@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: range role'
+title: "ARIA: range role"
 slug: Web/Accessibility/ARIA/Roles/range_role
 tags:
   - Accessibility
@@ -8,16 +8,16 @@ tags:
   - Reference
   - ARIA roles
   - Abstract role
+spec-urls: https://w3c.github.io/aria/#range
 ---
-
 
 The `range` abstract role is a generic type of structure role representing a range of values.
 
-> **Note:**  The `range` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles/#Abstract_roles). It is included here for completeness of documentation. It is  not to be used by web authors.
+> **Note:** The `range` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#abstract_roles). It is included here for completeness of documentation. It is not to be used by web authors.
 
 ## Description
 
-The `range` role is an abstract role. It must not be used by web authors. It is the superclass for structural roles for elements that accept a value within a range of values, including the [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role) role, [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role) and [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role). For these three, consider using the {{HTMLElement("meter")}} element, the  {{HTMLElement("progress")}} element, and the {{HTMLElement("input/range")}}, respectively.
+The `range` role is an abstract role. It must not be used by web authors. It is the superclass for structural roles for elements that accept a value within a range of values, including the [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role) role, [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role) and [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role). For these three, consider using the {{HTMLElement("meter")}} element, the {{HTMLElement("progress")}} element, and the {{HTMLElement("input/range")}}, respectively.
 
 ## Best Practices
 
@@ -25,9 +25,7 @@ Do not use.
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#range","ARIA: range role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 
@@ -45,6 +43,6 @@ Do not use.
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

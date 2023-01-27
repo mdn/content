@@ -12,6 +12,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.StreamFilter
 ---
+
 {{AddonSidebar()}}
 
 A `StreamFilter` is an object you use to monitor and modify HTTP responses.
@@ -30,7 +31,7 @@ The filter generates four different events:
 You can listen to each event by assigning a listener function to its attribute:
 
 ```js
-filter.onstart = event => {
+filter.onstart = (event) => {
   console.log("started");
 }
 ```
@@ -88,16 +89,16 @@ This code listens for `onstart`, `ondata`, and `onstop`. It logs those events, a
 function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
-  filter.onstart = event => {
+  filter.onstart = (event) => {
     console.log("started");
   }
 
-  filter.ondata = event => {
+  filter.ondata = (event) => {
     console.log(event.data);
     filter.write(event.data);
   }
 
-  filter.onstop = event => {
+  filter.onstop = (event) => {
     console.log("finished");
     filter.disconnect();
   }

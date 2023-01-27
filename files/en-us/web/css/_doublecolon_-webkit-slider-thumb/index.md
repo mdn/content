@@ -1,6 +1,7 @@
 ---
 title: '::-webkit-slider-thumb'
 slug: Web/CSS/::-webkit-slider-thumb
+page-type: css-pseudo-element
 tags:
   - CSS
   - NeedsBrowserCompatibility
@@ -13,6 +14,7 @@ tags:
   - Selector
 browser-compat: css.selectors.-webkit-slider-thumb
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-webkit-slider-thumb`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the "thumb" that the user can move within the "groove" of an {{HTMLElement("input")}} of `type="range"` to alter its numerical value.

@@ -10,6 +10,7 @@ tags:
   - menus
 browser-compat: webextensions.api.menus.getTargetElement
 ---
+
 {{AddonSidebar}}
 
 Returns the element for a given `targetElementId`
@@ -24,7 +25,7 @@ An extension requires the "menus" permission to use this API.
 
 ## Syntax
 
-```js
+```js-nolint
 let elem = browser.menus.getTargetElement(targetElementId);
 ```
 
@@ -45,7 +46,16 @@ The following example uses the `getTargetElement` method to get the element refe
 browser.menus.create({
   title: "Remove element",
   documentUrlPatterns: ["*://*/*"],
-  contexts: ["audio", "editable", "frame", "image", "link", "page", "password", "video"],
+  contexts: [
+    "audio",
+    "editable",
+    "frame",
+    "image",
+    "link",
+    "page",
+    "password",
+    "video",
+  ],
   onclick(info, tab) {
     browser.tabs.executeScript(tab.id, {
       frameId: info.frameId,

@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.stepUp()
 slug: Web/API/HTMLInputElement/stepUp
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -10,10 +11,11 @@ tags:
   - Text Field Selection API
 browser-compat: api.HTMLInputElement.stepUp
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLInputElement.stepUp()`** method increments the value
-of a numeric type of  {{HTMLElement("input")}} element by the value of the
+of a numeric type of {{HTMLElement("input")}} element by the value of the
 [`step`](/en-US/docs/Web/HTML/Attributes/step) attribute, or the
 default `step` value if the step attribute is not explicitly set. The method,
 when invoked, increments the {{htmlattrxref("value","input")}} by
@@ -118,18 +120,21 @@ table above), or if the step value is set to `any`, an
 
 ## Syntax
 
-```js
-element.stepUp( [ stepIncrement ] );
+```js-nolint
+stepUp()
+stepUp(stepIncrement)
 ```
 
 ### Parameters
 
-- _`stepIncrement`_
-  - : The optional  `stepIncrement` parameter is a numeric value.  If
-    no parameter is passed, `stepIncrement` defaults to
-    `1`.
+- `stepIncrement` {{optional_inline}}
+  - : A numeric value. If no parameter is passed, `stepIncrement` defaults to `1`.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 Click the button in this example to increment the {{HTMLElement("input/number",
   "number")}} input type:
@@ -138,24 +143,25 @@ Click the button in this example to increment the {{HTMLElement("input/number",
 
 ```html
 <p>
-  <label>Enter a number between 0 and 400 that is divisible by 5:
-   <input type="number" step="5" id="theNumber" min="0" max="400">
-  </label>
+  <label for="theNumber">Enter a number between 0 and 400 that is divisible by 5:</label>
+  <input type="number" step="5" id="theNumber" min="0" max="400" />
 </p>
 <p>
-  <label>Enter how many values of step you would like to increment by or leave it blank:
-   <input type="number" step="1" id="incrementor" min="0" max="25">
+  <label>
+    Enter how many values of step you would like to increment by or leave it
+    blank:
   </label>
+  <input type="number" step="1" id="incrementor" min="0" max="25" />
 </p>
-<input type="button" value="Increment" id="theButton">
+<input type="button" value="Increment" id="theButton" />
 ```
 
 ### JavaScript
 
 ```js
 /* make the button call the function */
-let button = document.getElementById('theButton')
-button.addEventListener('click', function() {
+const button = document.getElementById('theButton');
+button.addEventListener('click', () => {
   steponup()
 })
 
@@ -181,7 +187,7 @@ input:invalid {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 Note if you don't pass a parameter to the `stepUp` method, it defaults to
 `1`. Any other value is a multiplier of the `step` attribute

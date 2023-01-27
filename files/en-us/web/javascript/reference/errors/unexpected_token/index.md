@@ -1,12 +1,14 @@
 ---
 title: 'SyntaxError: Unexpected token'
 slug: Web/JavaScript/Reference/Errors/Unexpected_token
+page-type: javascript-error
 tags:
   - Error
   - Errors
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exceptions "unexpected token" occur when a specific language construct
@@ -14,7 +16,7 @@ was expected, but something else was provided. This might be a simple typo.
 
 ## Message
 
-```js
+```plain
 SyntaxError: expected expression, got "x"
 SyntaxError: expected property name, got "x"
 SyntaxError: expected target, got "x"
@@ -58,12 +60,12 @@ for (let i = 0; i < 5; ++i) {
 Sometimes, you leave out brackets around `if` statements:
 
 ```js example-bad
-function round(n, upperBound, lowerBound){
-  if(n > upperBound) || (n < lowerBound){
-    throw 'Number ' + String(n) + ' is more than ' + String(upperBound) + ' or less than ' + String(lowerBound);
-  }else if(n < ((upperBound + lowerBound)/2)){
+function round(n, upperBound, lowerBound) {
+  if (n > upperBound) || (n < lowerBound) { // Not enough brackets here!
+    throw new Error(`Number ${n} is more than ${upperBound} or less than ${lowerBound}`);
+  } else if (n < (upperBound + lowerBound) / 2) {
     return lowerBound;
-  }else{
+  } else {
     return upperBound;
   }
 } // SyntaxError: expected expression, got '||'
@@ -73,12 +75,12 @@ The brackets may look correct at first, but note how the `||` is outside the
 brackets. Correct would be putting brackets around the `||`:
 
 ```js example-good
-function round(n, upperBound, lowerBound){
-  if((n > upperBound) || (n < lowerBound)){
-    throw 'Number ' + String(n) + ' is more than ' + String(upperBound) + ' or less than ' + String(lowerBound);
-  }else if(n < ((upperBound + lowerBound)/2)){
+function round(n, upperBound, lowerBound) {
+  if ((n > upperBound) || (n < lowerBound)) {
+    throw new Error(`Number ${n} is more than ${upperBound} or less than ${lowerBound}`);
+  } else if (n < (upperBound + lowerBound) / 2) {
     return lowerBound;
-  }else{
+  } else {
     return upperBound;
   }
 }

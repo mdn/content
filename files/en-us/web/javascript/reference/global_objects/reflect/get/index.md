@@ -1,6 +1,7 @@
 ---
 title: Reflect.get()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -10,16 +11,17 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.get
 ---
+
 {{JSRef}}
 
-The static **`Reflect.get()`** method works like getting a
+The **`Reflect.get()`** static method works like getting a
 property from an object (`target[propertyKey]`) as a function.
 
 {{EmbedInteractiveExample("pages/js/reflect-get.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.get(target, propertyKey)
 Reflect.get(target, propertyKey, receiver)
 ```
@@ -47,9 +49,8 @@ A {{jsxref("TypeError")}}, if `target` is not an
 
 ## Description
 
-The `Reflect.get` method allows you to get a property on an object. It is
-like the [property
-accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) syntax as a function.
+The `Reflect.get` method allows you to get a property on an object. It is like the
+[property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) syntax as a function.
 
 ## Examples
 
@@ -97,5 +98,4 @@ Reflect.get(obj, 'foo', y) // "3bar"
 
 - [Polyfill of `Reflect.get` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
-- [Property
-  accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)

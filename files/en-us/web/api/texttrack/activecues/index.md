@@ -1,6 +1,7 @@
 ---
 title: TextTrack.activeCues
 slug: Web/API/TextTrack/activeCues
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,17 +10,12 @@ tags:
   - TextTrack
 browser-compat: api.TextTrack.activeCues
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`activeCues`** read-only property of the {{domxref("TextTrack")}} interface returns a {{domxref("TextTrackCueList")}} object listing the currently active cues.
 
-## Syntax
-
-```js
-let activeCues = TextTrack.activeCues;
-```
-
-### Value
+## Value
 
 A {{domxref("TextTrackCueList")}} object.
 

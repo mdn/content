@@ -11,6 +11,7 @@ tags:
   - client-side
   - npm
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
 In your development process you'll undoubtedly be required to run some command in the terminal (or on the "command line" — these are effectively the same thing). This article provides an introduction to the terminal, the essential commands you'll need to enter into it, how to chain commands together, and how to add your own command line interface (CLI) tools.
@@ -21,15 +22,13 @@ In your development process you'll undoubtedly be required to run some command i
       <th scope="row">Prerequisites:</th>
       <td>
         Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages.
+        <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To understand what the terminal/command line is, what basic commands you
-        should learn, and how to install new command line tools.
+        To understand what the terminal/command line is, what basic commands you should learn, and how to install new command line tools.
       </td>
     </tr>
   </tbody>
@@ -55,13 +54,13 @@ The terminal originates from around the 1950s-60s and its original form really d
 
 Since then, the terminal has remained a constant feature of all operating systems — from desktop machines, to servers tucked away in the cloud, to microcomputers like the Raspberry PI Zero, and even to mobile phones. It provides direct access to the computer's underlying file system and low-level features, and is therefore incredibly useful for performing complex tasks rapidly, if you know what you are doing.
 
-It is also useful for automation — for example to write a command to update the titles of hundreds of files instantly, say from “ch01-xxxx.png” to “ch02-xxxx.png”. If you updated the file names using your finder or explorer GUI app, it would take you a long time.
+It is also useful for automation — for example to write a command to update the titles of hundreds of files instantly, say from "ch01-xxxx.png" to "ch02-xxxx.png". If you updated the file names using your finder or explorer GUI app, it would take you a long time.
 
 Anyway, the terminal is not going away anytime soon.
 
 ### What does the terminal look like?
 
-Below you can see some of the different flavours of programs that are available that can get you to a terminal.
+Below you can see some of the different flavors of programs that are available that can get you to a terminal.
 
 The next images show the command prompts available in Windows — there's a good range of options from the "cmd" program to "powershell" — which can be run from the start menu by typing the program name.
 
@@ -69,7 +68,7 @@ The next images show the command prompts available in Windows — there's a good
 
 And below, you can see the macOS terminal application.
 
-![A basic vanilla mac terminal](mac-terminal.png)
+![A basic vanilla macOS terminal](mac-terminal.png)
 
 ### How do you access the terminal?
 
@@ -89,15 +88,15 @@ The terminal is available on macOS at Applications/Utilities/Terminal.
 
 As with some other programming tools, using the terminal (or command line) on Windows has traditionally not been as simple or easy as on other operating systems. But things are getting better.
 
-Windows has traditionally had its own terminal-like program called cmd (“the command prompt”) for a long time, but this definitely doesn't have parity with Unix commands, and is equivalent to the old-style Windows DOS prompt.
+Windows has traditionally had its own terminal-like program called cmd ("the command prompt") for a long time, but this definitely doesn't have parity with Unix commands, and is equivalent to the old-style Windows DOS prompt.
 
 Better programs exist for providing a terminal experience on Windows, such as Powershell ([see here to find installers](https://github.com/PowerShell/PowerShell)), and Gitbash (which comes as part of the [git for Windows](https://gitforwindows.org/) toolset)
 
-However, the best option for Windows in the modern day is the Windows Subsystem for Linux (WSL) — a compatibility layer for running Linux operating systems directly from inside Windows 10, allowing you to run a “true terminal” directly on Windows, without needing a virtual machine.
+However, the best option for Windows in the modern day is the Windows Subsystem for Linux (WSL) — a compatibility layer for running Linux operating systems directly from inside Windows 10, allowing you to run a "true terminal" directly on Windows, without needing a virtual machine.
 
-This can be installed directly from the Windows store for free. You can find all the documentation you need in the [Windows Subsystem for Linux Documentation](https://docs.microsoft.com/windows/wsl).
+This can be installed directly from the Windows store for free. You can find all the documentation you need in the [Windows Subsystem for Linux Documentation](https://docs.microsoft.com/windows/wsl/).
 
-![a screenshot of the windows subsystem for linux documentation](wsl.png)
+![a screenshot of the Windows subsystem for Linux documentation](wsl.png)
 
 In terms of what option to choose on Windows, we'd strongly recommend trying to install the WSL. You could stick with the default command prompt (`cmd`), and many tools will work OK, but you'll find everything easier if you have better parity with Unix tools.
 
@@ -105,7 +104,7 @@ In terms of what option to choose on Windows, we'd strongly recommend trying to 
 
 Generally you'll find these two terms used interchangeably. Technically, a terminal is software that starts and connects to a shell. A shell is your session and session environment (where things like the prompt and shortcuts might be customized). The command line is the literal line where you enter commands and the cursor blinks.
 
-### Do you _have_ to use the terminal?
+### Do you have to use the terminal?
 
 Although there's a great wealth of tools available from the command line, if you're using tools like [Visual Studio Code](https://code.visualstudio.com/) there's also a mass of extensions that can be used as a proxy to using terminal commands without needing to use the terminal directly. However, you won't find a code editor extension for everything you want to do — you'll have to get some experience with the terminal eventually.
 
@@ -199,9 +198,9 @@ ls -l
 
 In the case of `ls`, the `-l` (_dash ell_) option gives you a listing with one file or directory on each line, and a lot more information shown. Directories can be identified by looking for a letter "d" on the very left-hand side of the lines. Those are the ones we can `cd` into.
 
-Below is a screenshot with a “vanilla” macOS terminal at the top, and a customized terminal with some extra icons and colors to keep it looking lively — both showing the results of running `ls -l`:
+Below is a screenshot with a "vanilla" macOS terminal at the top, and a customized terminal with some extra icons and colors to keep it looking lively — both showing the results of running `ls -l`:
 
-![A vanilla mac terminal and a more colorful custom mac terminal, showing a file listing - the result of running the ls -l command](mac-terminals-ls.png)
+![A vanilla macOS terminal and a more colorful custom macOS terminal, showing a file listing - the result of running the ls -l command](mac-terminals-ls.png)
 
 > **Note:** To find out exactly what options each command has available, you can look at its [man page](https://en.wikipedia.org/wiki/Man_page). This is done by typing the `man` command, followed by the name of the command you want to look up, for example `man ls`. This will open up the man page in the terminal's default text file viewer (for example, [`less`](<https://en.wikipedia.org/wiki/Less_(Unix)>) in my terminal), and you should then be able to scroll through the page using the arrow keys, or some similar mechanism. The man page lists all the options in great detail, which may be a bit intimidating to begin with, but at least you know it's there if you need it. Once you are finished looking through the man page, you need to quit out of it using your text viewer's quit command ("q" in `less`; you may have to search on the web to find it if it isn't obvious).
 
@@ -313,7 +312,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/fetch
 ```
 
 By combining these commands we've customized the output to show the full URLs that the Mozilla server is redirecting through when we request the `/docs/Web/API/WindowOrWorkerGlobalScope/fetch` URL.
-Getting to know your system will prove useful in years to come — learn how these single serving tools work and how they can become part of your arsenal to solve niche problems.
+Getting to know your system will prove useful in years to come — learn how these single serving tools work and how they can become part of your toolkit to solve niche problems.
 
 ## Adding powerups
 
@@ -326,10 +325,10 @@ This is slowly expanding — you can expect to see more package providers as tim
 
 Install npm on your system now, by going to the URL above and downloading and running a Node.js installer appropriate to your operating system. If prompted, make sure to include npm as part of the installation.
 
-![the node.js installer on windows, showing the option to include npm](npm-install-option.png)
+![the Node.js installer on windows, showing the option to include npm](npm-install-option.png)
 
 Although we'll look at a number of different tools in the next article onwards, we'll cut our teeth on [Prettier](https://prettier.io/).
-Prettier is an opinionated code formatter that has "few options".
+Prettier is an opinionated code formatter that only has a "few options".
 Fewer options tends to mean simpler.
 Given how tooling can sometimes get out of hand in terms of complexity, "few options" can be very appealing.
 
@@ -339,53 +338,29 @@ Before we dive into installing Prettier, there's a question to answer — "where
 
 With `npm` we have the choice of installing tools globally — so we can access them anywhere — or locally to the current project directory.
 
-There's pros and cons each way — and this list of pros and cons for globally installing is far from exhaustive:
+There are pros and cons each way — and the following lists of pros and cons for globally installing are far from exhaustive.
 
-<table class="standard-table no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Pros of installing globally</th>
-      <th scope="col">Cons of installing globally</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Accessible anywhere in your terminal</td>
-      <td>May not be compatible with your project's codebase</td>
-    </tr>
-    <tr>
-      <td>Only install once</td>
-      <td>
-        Other developers in your team won't have access to these tools, for
-        example if you are sharing the codebase over a tool like git.
-      </td>
-    </tr>
-    <tr>
-      <td>Uses less disk space</td>
-      <td>
-        Related to the previous point, it makes project code harder to replicate
-        (if you install your tools locally, they can be set up as dependencies
-        and installed with <code>npm install</code>).
-      </td>
-    </tr>
-    <tr>
-      <td>Always the same version</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Feels like any other unix command</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+**Pros of installing globally:**
 
-Although the _cons_ list is shorter, the negative impact of global installing is potentially much larger than the benefits. However, for now we'll err on the side of simplicity and install globally to keep things simple. We'll look more at local installs and why they're good in the next article.
+- Accessible anywhere in your terminal
+- Only install once
+- Uses less disk space
+- Always the same version
+- Feels like any other unix command
+
+**Cons of installing globally:**
+
+- May not be compatible with your project's codebase
+- Other developers in your team won't have access to these tools, for example if you are sharing the codebase over a tool like git.
+- Related to the previous point, it makes project code harder to replicate (if you install your tools locally, they can be set up as dependencies and installed with <code>npm install</code>).
+
+Although the _cons_ list is shorter, the negative impact of global installing is potentially much larger than the benefits.
+Here we'll install locally, but feel free to install globally once you understand the relative risks.
 
 ### Installing Prettier
 
-For this article we will install Prettier as a global command line utility.
-
 Prettier is an opinionated code formatting tool for front end developers, focusing around JavaScript-based languages and adding support for HTML, CSS, SCSS, JSON and more.
+
 Prettier can:
 
 - Save the cognitive overhead of getting the style consistent manually across all your code files; Prettier can do this for you automatically.
@@ -393,18 +368,20 @@ Prettier can:
 - Be installed on any operating system and even as a direct part of project tooling, ensuring that colleagues and friends who work on your code use the code style you're using.
 - Be configured to run upon save, as you type, or even before publishing your code (with additional tooling that we'll see later on in the module).
 
+For this article we will install Prettier locally, as suggested in the [Prettier installation guide](https://prettier.io/docs/en/install.html)
+
 Once you've installed node, open up the terminal and run the following command to install Prettier:
 
 ```bash
-npm install --global prettier
+npm install prettier
 ```
 
-Once the command has finished running, the Prettier tool is now available in your terminal, at any location in your file system.
-
-Running the command without any arguments, as with many other commands, will offer up usage and help information. Try this now:
+You can now run the file locally using the [npx](https://nodejs.dev/learn/the-npx-nodejs-package-runner/) tool.
+Running the command without any arguments, as with many other commands, will offer up usage and help information.
+Try this now:
 
 ```bash
-prettier
+npx prettier
 ```
 
 Your output should look something like this:
@@ -418,7 +395,12 @@ Stdin is read if it is piped to Prettier and no files are given.
 …
 ```
 
-It's always worth at the very least skimming over the usage information, even if it is long. It'll help you to understand better how the tool is intended to be used.
+It's always worth at the very least skimming over the usage information, even if it is long.
+It'll help you to understand better how the tool is intended to be used.
+
+> **Note:** If you have not first installed Prettier locally, then running `npx prettier` will download and run the latest version of Prettier all in one go _just for that command_.
+> While that might sound great, new versions of Prettier may slightly modify the output.
+> You want to install locally so that you are fixing the version of Prettier that you are using for formatting until you are ready to change it.
 
 ### Playing with Prettier
 
@@ -428,20 +410,20 @@ First of all, create a new directory somewhere on your file system that is easy 
 
 Now save the following code in a new file called `index.js`, inside your test directory:
 
-```js
+```js-nolint
 const myObj = {
 a:1,b:{c:2}}
 function printMe(obj){console.log(obj.b.c)}
 printMe(myObj)
 ```
 
-We can run prettier against a codebase to just check if our code wants adjusting. `cd` into your directory, and try running this command:
+We can run Prettier against a codebase to just check if our code wants adjusting. `cd` into your directory, and try running this command:
 
 ```bash
-prettier --check index.js
+npx prettier --check index.js
 ```
 
-You should get on output along the lines of
+You should get an output along the lines of:
 
 ```bash
 Checking formatting...
@@ -449,12 +431,12 @@ index.js
 Code style issues found in the above file(s). Forgot to run Prettier?
 ```
 
-So there's some code styles that can be fixed. No problem. Adding the `--write` option to the prettier command will fix those up, leaving us to focus on actually writing useful code.
+So, there's some code styles that can be fixed. No problem. Adding the `--write` option to the `prettier` command will fix those up, leaving us to focus on actually writing useful code.
 
 Now try running this version of the command:
 
 ```bash
-prettier --write index.js
+npx prettier --write index.js
 ```
 
 You'll get an output like this
@@ -480,11 +462,11 @@ printMe(myObj);
 
 Depending on your workflow (or the workflow that you pick) you can make this an automated part of your process. Automation is really where tools excel; our personal preference is the kind of automation that "just happens" without having to configure anything.
 
-With Prettier there's a number of ways automation can be achieved and though they're beyond the scope of this article, there's some excellent resources online to help (some of which have been linked to). You can invoke prettier:
+With Prettier there's a number of ways automation can be achieved and though they're beyond the scope of this article, there's some excellent resources online to help (some of which have been linked to). You can invoke Prettier:
 
 - Before you commit your code into a git repository using [Husky](https://github.com/typicode/husky).
-- Whenever you hit "save" in your code editor, be it [VS Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), [Atom](https://atom.io/packages/prettier-atom), or [Sublime Text](https://packagecontrol.io/packages/JsPrettier).
-- As part of continuous integration checks using tools like [Github Actions](https://github.com/features/actions).
+- Whenever you hit "save" in your code editor, be it [VS Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), or [Sublime Text](https://packagecontrol.io/packages/JsPrettier).
+- As part of continuous integration checks using tools like [GitHub Actions](https://github.com/features/actions).
 
 Our personal preference is the second one — while using say VS Code, Prettier kicks in and cleans up any formatting it needs to do every time we hit save. You can find a lot more information about using Prettier in different ways in the [Prettier docs](https://prettier.io/docs/en/).
 
@@ -492,9 +474,9 @@ Our personal preference is the second one — while using say VS Code, Prettier 
 
 If you want to play with a few more tools, here's a brief list that are fun to try out:
 
-- [`bat`](https://github.com/sharkdp/bat) — A “nicer” `cat` (`cat` is used to print the contents of files).
+- [`bat`](https://github.com/sharkdp/bat) — A "nicer" `cat` (`cat` is used to print the contents of files).
 - [`prettyping`](https://denilson.sa.nom.br/prettyping/) — `ping` on the command line, but visualized (`ping` is a useful tool to check if a server is responding).
-- [`htop`](https://hisham.hm/htop/) — A process viewer, useful for when something is making your CPU fan behave like a jet engine and you want to identify the offending program.
+- [`htop`](https://htop.dev/) — A process viewer, useful for when something is making your CPU fan behave like a jet engine and you want to identify the offending program.
 - [`tldr`](https://tldr.sh/#installation) — mentioned earlier in this chapter, but available as a command line tool.
 
 Note that some of the above suggestions may need installing using npm, like we did with Prettier.

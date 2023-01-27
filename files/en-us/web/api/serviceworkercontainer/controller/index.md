@@ -1,6 +1,7 @@
 ---
 title: ServiceWorkerContainer.controller
 slug: Web/API/ServiceWorkerContainer/controller
+page-type: web-api-instance-property
 tags:
   - API
   - Controller
@@ -12,6 +13,7 @@ tags:
   - ServiceWorkerController
 browser-compat: api.ServiceWorkerContainer.controller
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`controller`** read-only
@@ -22,17 +24,11 @@ property of the {{domxref("ServiceWorkerContainer")}} interface returns a
 `null` if the request is a force refresh (_Shift_ + refresh) or if
 there is no active worker.
 
-## Syntax
-
-```js
-var myController = navigator.serviceWorker.controller;
-```
-
-### Value
+## Value
 
 A {{domxref("ServiceWorker")}} object.
 
-## Example
+## Examples
 
 ```js
 if ('serviceWorker' in navigator) {

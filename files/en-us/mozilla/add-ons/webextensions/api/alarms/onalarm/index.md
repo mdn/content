@@ -13,13 +13,14 @@ tags:
   - onAlarm
 browser-compat: webextensions.api.alarms.onAlarm
 ---
+
 {{AddonSidebar()}}
 
 Fired when any alarm set by the extension goes off.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.alarms.onAlarm.addListener(listener)
 browser.alarms.onAlarm.removeListener(listener)
 browser.alarms.onAlarm.hasListener(listener)
@@ -51,7 +52,7 @@ Handle an alarm going off:
 
 ```js
 function handleAlarm(alarmInfo) {
-  console.log("on alarm: " + alarmInfo.name);
+  console.log(`on alarm: ${alarmInfo.name}`);
 }
 
 browser.alarms.onAlarm.addListener(handleAlarm);
@@ -63,6 +64,4 @@ browser.alarms.onAlarm.addListener(handleAlarm);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.

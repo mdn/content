@@ -1,6 +1,7 @@
 ---
 title: Notification.tag
 slug: Web/API/Notification/tag
+page-type: web-api-instance-property
 tags:
   - API
   - Notification
@@ -11,6 +12,7 @@ tags:
   - tag
 browser-compat: api.Notification.tag
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`tag`** read-only property of the
@@ -23,20 +25,13 @@ tag, linking them together. One notification can then be programmatically replac
 another to avoid the users' screen being filled up with a huge number of similar
 notifications.
 
-## Syntax
+## Value
 
-```js
-var tag = Notification.tag;
-```
-
-### Value
-
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 
-Our [Using
-the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API#Dealing_with_repeated_notifications) article has a good example of tag usage.
+Our [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API#dealing_with_repeated_notifications) article has a good example of tag usage.
 
 ## Specifications
 
@@ -48,5 +43,4 @@ the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notificat
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

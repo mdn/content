@@ -1,6 +1,7 @@
 ---
 title: '::backdrop'
 slug: Web/CSS/::backdrop
+page-type: css-pseudo-element
 tags:
   - API
   - CSS
@@ -15,6 +16,7 @@ tags:
   - fullscreen
 browser-compat: css.selectors.backdrop
 ---
+
 {{CSSRef}}
 
 The **`::backdrop`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a box the size of the {{Glossary("viewport")}} which is rendered immediately beneath any element being presented in fullscreen mode. This includes both elements which have been placed in fullscreen mode using the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) and {{HTMLElement("dialog")}} elements.
@@ -24,7 +26,7 @@ When multiple elements have been placed into fullscreen mode, the backdrop is dr
 ```css
 /* Backdrop is only displayed when dialog is opened with dialog.showModal() */
 dialog::backdrop {
-  background: rgba(255,0,0,.25);
+  background: rgba(255, 0, 0, 0.25);
 }
 ```
 
@@ -34,7 +36,9 @@ All fullscreen elements are placed in a last-in/first out (LIFO) stack in the to
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+::backdrop
+```
 
 ## Examples
 
@@ -50,7 +54,7 @@ video::backdrop {
 
 The resulting screen looks like this:
 
-![](bbb-backdrop.png)
+![An almost full-screen video player with purple above and below the player as the video player doesn't completely fill the screen.](bbb-backdrop.png)
 
 [See this example in action](https://mdn.github.io/css-examples/backdrop/index.html), after changing the color of the background cause the video to go fullscreen to see the change to the backdrop color.
 

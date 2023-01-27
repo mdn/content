@@ -1,6 +1,7 @@
 ---
 title: Window.scroll()
 slug: Web/API/Window/scroll
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Window.scroll
 ---
+
 {{APIRef}}
 
 The **`Window.scroll()`** method scrolls the window to a
@@ -16,9 +18,9 @@ particular place in the document.
 
 ## Syntax
 
-```js
-window.scroll(x-coord, y-coord)
-window.scroll(options)
+```js-nolint
+scroll(x-coord, y-coord)
+scroll(options)
 ```
 
 ### Parameters
@@ -37,7 +39,13 @@ window.scroll(options)
     - `left`
       - : Specifies the number of pixels along the X axis to scroll the window or element.
     - `behavior`
-      - : Specifies whether the scrolling should animate smoothly (`smooth`), or happen instantly in a single jump (`auto`, the default value).
+      - : Browsers scrolling an element to a position can have one of the following scroll behaviors:
+        - `auto` (default): The scrolling behavior is controlled by the [`scroll-behavior`](/en-US/docs/Web/CSS/scroll-behavior) CSS style, which is set on or inherited by the scrolling element.
+        - `smooth`: The scrolling animates smoothly.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -1,9 +1,9 @@
 ---
 title: PaymentResponse.complete()
 slug: Web/API/PaymentResponse/complete
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Payment Request
   - Payment Request API
@@ -13,6 +13,7 @@ tags:
   - complete
 browser-compat: api.PaymentResponse.complete
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The {{domxref("PaymentRequest")}} method
@@ -26,15 +27,16 @@ the payment request and the {{jsxref("Promise")}} returned by the
 
 ## Syntax
 
-```js
-completePromise = paymentRequest.complete(result);
+```js-nolint
+complete()
+complete(result)
 ```
 
 ### Parameters
 
 - `result` {{optional_inline}}
 
-  - : A {{domxref("DOMString")}} indicating the state of the payment operation upon
+  - : A string indicating the state of the payment operation upon
     completion. It must be one of the following:
 
     - `success`
@@ -50,7 +52,7 @@ completePromise = paymentRequest.complete(result);
 
     > **Note:** In older versions of the specification, an empty string,
     > `""`, was used instead of `unknown` to indicate a completion
-    > without a known result state. See the {{anch("Browser compatibility")}} section
+    > without a known result state. See the [Browser compatibility](#browser_compatibility) section
     > below for details.
 
 ### Return value
@@ -77,25 +79,25 @@ calls `complete()` with an answer appropriate to the status in the response.
 ```js
 // Initialization of PaymentRequest arguments are excerpted for the
 //   sake of brevity.
-var payment = new PaymentRequest(supportedInstruments, details, options);
+const payment = new PaymentRequest(supportedInstruments, details, options);
 
-payment.show().then(function(paymentResponse) {
-  var fetchOptions = {
+payment.show().then((paymentResponse) => {
+  const fetchOptions = {
     method: 'POST',
     credentials: include,
     body: JSON.stringify(paymentResponse)
   };
-  var serverPaymentRequest = new Request('secure/payment/endpoint');
-  fetch(serverPaymentRequest, fetchOptions).then( response => {
+  const serverPaymentRequest = new Request('secure/payment/endpoint');
+  fetch(serverPaymentRequest, fetchOptions).then((response) => {
     if (response.status < 400) {
       paymentResponse.complete("success");
     } else {
       paymentResponse.complete("fail");
     };
-  }).catch( reason => {
+  }).catch((reason) => {
     paymentResponse.complete("fail");
   });
-}).catch(function(err) {
+}).catch((err) => {
   console.error("Uh oh, something bad happened", err.message);
 });
 ```

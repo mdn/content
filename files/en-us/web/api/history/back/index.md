@@ -1,6 +1,7 @@
 ---
 title: History.back()
 slug: Web/API/History/back
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - Web
 browser-compat: api.History.back
 ---
+
 {{APIRef("History API")}}
 
 The **`History.back()`** method causes
@@ -21,13 +23,21 @@ effect as calling {{domxref("History.go", "history.go(-1)")}}. If there is no pr
 page, this method call does nothing.
 
 This method is {{glossary("asynchronous")}}. Add a listener for the
-{{event("popstate")}} event in order to determine when the navigation has completed.
+{{domxref("Window/popstate_event", "popstate")}} event in order to determine when the navigation has completed.
 
 ## Syntax
 
-```js
-history.back()
+```js-nolint
+back()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -59,5 +69,4 @@ document.getElementById('go-back').addEventListener('click', () => {
 ## See also
 
 - {{domxref("History")}}
-- [Working with
-  the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)
+- [Working with the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)

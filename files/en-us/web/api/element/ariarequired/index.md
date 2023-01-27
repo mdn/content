@@ -1,6 +1,7 @@
 ---
 title: Element.ariaRequired
 slug: Web/API/Element/ariaRequired
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,22 +12,16 @@ tags:
   - Element
 browser-compat: api.Element.ariaRequired
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaRequired`** property of the {{domxref("Element")}} interface reflects the value of the `aria-required` attribute, which indicates that user input is required on the element before a form may be submitted.
 
 > **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="text"` or a {{htmlelement("textarea")}} as these have built in semantics and do not require ARIA attributes.
 
-## Syntax
+## Value
 
-```js
-var ariaRequired = element.ariaRequired;
-element.ariaRequired = ariaRequired
-```
-
-### Value
-
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : Users need to provide input on an element before a form is submitted.
@@ -39,8 +34,13 @@ In this example the `aria-required` attribute on the element with an ID of `txtB
 
 ```html
 <div id="txtboxMultilineLabel">Enter the tags for the article</div>
-<div role="textbox" id="txtBoxInput" contenteditable="true" aria-multiline="true"
-  aria-labelledby="txtboxMultilineLabel" aria-required="true"></div>
+<div
+  role="textbox"
+  id="txtBoxInput"
+  contenteditable="true"
+  aria-multiline="true"
+  aria-labelledby="txtboxMultilineLabel"
+  aria-required="true"></div>
 ```
 
 ```js

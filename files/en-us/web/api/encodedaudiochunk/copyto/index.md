@@ -1,32 +1,35 @@
 ---
 title: EncodedAudioChunk.copyTo()
 slug: Web/API/EncodedAudioChunk/copyTo
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - copyTo
   - EncodedAudioChunk
+  - Experimental
 browser-compat: api.EncodedAudioChunk.copyTo
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`copyTo()`** method of the {{domxref("EncodedAudioChunk")}} interface copies the encoded chunk of audio data.
 
 ## Syntax
 
-```js
-EncodedAudioChunk.copyTo(destination)
+```js-nolint
+copyTo(destination)
 ```
 
 ### Parameters
 
 - `destination`
-  - : A {{domxref("BufferSource")}} that the data can be copied to.
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} that the data can be copied to.
 
-### Return Value
+### Return value
 
-{{jsxref("Undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

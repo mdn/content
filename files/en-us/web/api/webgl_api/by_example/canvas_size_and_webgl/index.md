@@ -1,6 +1,7 @@
 ---
 title: Canvas size and WebGL
 slug: Web/API/WebGL_API/By_example/Canvas_size_and_WebGL
+page-type: guide
 tags:
   - Beginner
   - Example
@@ -8,6 +9,7 @@ tags:
   - Tutorial
   - WebGL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Basic_scissoring","Learn/WebGL/By_example/Boilerplate_1")}}
 
 This WebGL example explores the effect of setting (or not setting) the canvas size to its element size in {{Glossary("CSS")}} pixels, as it appears in the browser window.
@@ -26,45 +28,37 @@ The effect is clearly visible when using {{domxref("WebGLRenderingContext.scisso
 
 ```html
 <p>Compare the two canvases.</p>
-<canvas>Your browser does not seem to support
-    HTML5 canvas.</canvas>
-<canvas>Your browser does not seem to support
-    HTML5 canvas.</canvas>
+<canvas>Your browser does not seem to support HTML canvas.</canvas>
+<canvas>Your browser does not seem to support HTML canvas.</canvas>
 ```
 
 ```css
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  display : inline-block;
-  width : 120px;
-  height : 80px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  display: inline-block;
+  width: 120px;
+  height: 80px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 ```
 
 ```js
-window.addEventListener("load", function() {
-  "use strict"
-  var firstCanvas = document.getElementsByTagName("canvas")[0],
-    secondCanvas = document.getElementsByTagName("canvas")[1];
+window.addEventListener("load", () => {
+  const [ firstCanvas , secondCanvas ] = document.getElementsByTagName("canvas");
   firstCanvas.width = firstCanvas.clientWidth;
   firstCanvas.height = firstCanvas.clientHeight;
-  [firstCanvas, secondCanvas].forEach(function(canvas) {
-    var gl = canvas.getContext("webgl")
-      || canvas.getContext("experimental-webgl");
+  [firstCanvas, secondCanvas].forEach((canvas) => {
+    const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
     if (!gl) {
-      document.querySelector("p").innerHTML =
-        "Failed to get WebGL context. "
-        + "Your browser or device may not support WebGL.";
+      document.querySelector("p").textContent = "Failed. Your browser or device may not support WebGL.";
       return;
     }
-    gl.viewport(0, 0,
-      gl.drawingBufferWidth, gl.drawingBufferHeight);
+    gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
     gl.enable(gl.SCISSOR_TEST);
     gl.scissor(30, 10, 60, 60);
     gl.clearColor(1.0, 1.0, 0.0, 1.0);

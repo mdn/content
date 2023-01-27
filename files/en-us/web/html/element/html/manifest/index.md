@@ -1,9 +1,12 @@
 ---
 title: manifest
 slug: Web/HTML/Element/html/manifest
+page-type: html-attribute
 tags:
   - Cache
   - application cache
+  - Deprecated
+  - Non-standard
 browser-compat: html.elements.html.manifest
 ---
 

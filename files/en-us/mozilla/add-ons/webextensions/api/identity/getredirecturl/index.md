@@ -12,6 +12,7 @@ tags:
   - getRedirectURL
 browser-compat: webextensions.api.identity.getRedirectURL
 ---
+
 {{AddonSidebar()}}
 
 Generates a URL that you can use as a redirect URL.
@@ -22,8 +23,8 @@ See [Getting a redirect URL](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/ident
 
 ## Syntax
 
-```js
-var redirectURL = browser.identity.getRedirectURL()
+```js-nolint
+let redirectURL = browser.identity.getRedirectURL()
 ```
 
 ### Parameters
@@ -43,11 +44,9 @@ A string containing a redirect URL value.
 Get the redirect URL:
 
 ```js
-var redirectURL = browser.identity.getRedirectURL();
+let redirectURL = browser.identity.getRedirectURL();
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`identity`](https://developer.chrome.com/extensions/identity) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`identity`](https://developer.chrome.com/docs/extensions/reference/identity/) API.

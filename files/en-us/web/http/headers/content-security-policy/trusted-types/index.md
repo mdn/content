@@ -6,17 +6,19 @@ tags:
   - Directive
   - HTTP
   - Security
-browser-compat: http.headers.csp.Content-Security-Policy.trusted-types
+  - Experimental
+browser-compat: http.headers.Content-Security-Policy.trusted-types
 ---
-{{HTTPSidebar}}
+
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`trusted-types`** {{experimental_inline}} directive instructs user agents to restrict the creation of Trusted Types policies - functions that build non-spoofable, typed values intended to be passed to DOM XSS sinks in place of strings.
 
-Together with **[`require-trusted-types-for`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for)** directive, this allows authors to define rules guarding writing values to the DOM and thus reducing the DOM XSS attack surface to small, isolated parts of the web application codebase, facilitating their monitoring and code review. This directive declares an allow-list of trusted type policy names created with `TrustedTypes.createPolicy` from Trusted Types API.
+Together with **[`require-trusted-types-for`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for)** directive, this allows authors to define rules guarding writing values to the DOM and thus reducing the DOM XSS attack surface to small, isolated parts of the web application codebase, facilitating their monitoring and code review. This directive declares an allowlist of trusted type policy names created with `trustedTypes.createPolicy` from Trusted Types API.
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: trusted-types;
 Content-Security-Policy: trusted-types 'none';
 Content-Security-Policy: trusted-types <policyName>;
@@ -42,10 +44,6 @@ if (typeof trustedTypes !== 'undefined') {
 }
 ```
 
-## Polyfill
-
-A [polyfill for Trusted Types](https://github.com/w3c/webappsec-trusted-types#polyfill) is available on Github.
-
 ## Specifications
 
 {{Specifications}}
@@ -58,5 +56,6 @@ A [polyfill for Trusted Types](https://github.com/w3c/webappsec-trusted-types#po
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - [Cross-Site Scripting (XSS)](/en-US/docs/Glossary/Cross-site_scripting)
-- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types)
+- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/)
 - Trusted Types with [DOMPurify](https://github.com/cure53/DOMPurify#what-about-dompurify-and-trusted-types) XSS sanitizer
+- [Trusted Types polyfill](https://github.com/w3c/trusted-types#polyfill)

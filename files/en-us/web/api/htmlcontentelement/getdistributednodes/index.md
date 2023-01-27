@@ -1,6 +1,7 @@
 ---
 title: HTMLContentElement.getDistributedNodes()
 slug: Web/API/HTMLContentElement/getDistributedNodes
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -8,25 +9,25 @@ tags:
   - Reference
   - Web Components
   - Deprecated
+  - Non-standard
 browser-compat: api.HTMLContentElement.getDistributedNodes
 ---
-{{ APIRef("Web Components") }}{{Deprecated_header}}
+
+{{APIRef("Web Components")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`HTMLContentElement.getDistributedNodes()`** method
 returns a static {{domxref("NodeList")}} of the {{glossary("distributed nodes")}}
 associated with this `<content>` element.
 
-## Syntax
+## Value
 
-```js
-var nodeList = object.getDistributedNodes()
-```
+A {{domxref("NodeList")}} object.
 
-## Example
+## Examples
 
 ```js
 // Get the distributed nodes
-var nodes = myContentObject.getDistributedNodes();
+const nodes = myContentObject.getDistributedNodes();
 ```
 
 ## Specifications

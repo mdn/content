@@ -13,13 +13,14 @@ tags:
   - onShown
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.onShown
 ---
+
 {{AddonSidebar()}}
 
 Fired when the sidebar pane becomes visible as a result of the user switching to it.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.devtools.panels.onShown.addListener(listener)
 browser.devtools.panels.onShown.removeListener(listener)
 browser.devtools.panels.onShown.hasListener(listener)
@@ -67,4 +68,4 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels) API.
+> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API.

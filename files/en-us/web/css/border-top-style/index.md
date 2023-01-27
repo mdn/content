@@ -1,6 +1,7 @@
 ---
 title: border-top-style
 slug: Web/CSS/border-top-style
+page-type: css-property
 tags:
   - CSS
   - CSS Borders
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.border-top-style
 ---
+
 {{CSSRef}}
 
 The **`border-top-style`** [CSS](/en-US/docs/Web/CSS) property sets the line style of an element's top {{CSSxRef("border")}}.
@@ -36,6 +38,7 @@ border-top-style: outset;
 border-top-style: inherit;
 border-top-style: initial;
 border-top-style: revert;
+border-top-style: revert-layer;
 border-top-style: unset;
 ```
 
@@ -82,9 +85,10 @@ The `border-top-style` property is specified as a single keyword chosen from tho
 /* Define look of the table */
 table {
   border-width: 2px;
-  background-color: #52E385;
+  background-color: #52e385;
 }
-tr, td {
+tr,
+td {
   padding: 3px;
 }
 

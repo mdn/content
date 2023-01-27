@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getAttachedShaders()
 slug: Web/API/WebGLRenderingContext/getAttachedShaders
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getAttachedShaders
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getAttachedShaders()`** method of
@@ -17,13 +19,13 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns a list of
 
 ## Syntax
 
-```js
-sequence<WebGLShader> gl.getAttachedShaders(program);
+```js-nolint
+getAttachedShaders(program)
 ```
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}} object to get attached shaders for.
 
 ### Return value
@@ -34,7 +36,7 @@ given `WebGLProgram`.
 ## Examples
 
 ```js
-var program = gl.createProgram();
+const program = gl.createProgram();
 
 // Attach pre-existing shaders
 gl.attachShader(program, vertexShader);

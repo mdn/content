@@ -1,6 +1,7 @@
 ---
 title: XRRenderState.depthFar
 slug: Web/API/XRRenderState/depthFar
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -16,7 +17,8 @@ tags:
   - depthFar
 browser-compat: api.XRRenderState.depthFar
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`depthFar`** read-only property of the
 {{domxref("XRRenderState")}} interface returns the distance in meters of the far clip

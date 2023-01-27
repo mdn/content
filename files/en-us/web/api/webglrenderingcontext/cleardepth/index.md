@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.clearDepth()
 slug: Web/API/WebGLRenderingContext/clearDepth
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.clearDepth
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.clearDepth()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies the clear value for the
@@ -20,8 +22,8 @@ between 0 and 1.
 
 ## Syntax
 
-```js
-void gl.clearDepth(depth);
+```js-nolint
+clearDepth(depth)
 ```
 
 ### Parameters
@@ -32,7 +34,7 @@ void gl.clearDepth(depth);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

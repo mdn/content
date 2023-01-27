@@ -1,6 +1,7 @@
 ---
 title: Screen.availLeft
 slug: Web/API/Screen/availLeft
+page-type: web-api-instance-property
 tags:
   - API
   - API:Mozilla Extensions
@@ -10,17 +11,16 @@ tags:
   - Property
 browser-compat: api.Screen.availLeft
 ---
+
 {{APIRef("CSSOM")}}{{Non-standard_Header}}
 
-Returns the first available pixel available from the left side of the screen.
+Returns the first available pixel from the left side of the screen.
 
-## Syntax
+## Value
 
-```js
-let availLeft = window.screen.availLeft;
-```
+A number.
 
-## Example
+## Examples
 
 ```js
 let setX = window.screen.width - window.screen.availLeft;

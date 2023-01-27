@@ -1,6 +1,7 @@
 ---
 title: TextTrackList.getTrackById()
 slug: Web/API/TextTrackList/getTrackById
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -18,6 +19,7 @@ tags:
   - track
 browser-compat: api.TextTrackList.getTrackById
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **{{domxref("TextTrackList")}}** method
@@ -29,14 +31,14 @@ string.
 
 ## Syntax
 
-```js
-var theTrack = TextTrackList.getTrackById(id);
+```js-nolint
+getTrackById(id)
 ```
 
 ### Parameters
 
 - `id`
-  - : A {{domxref("DOMString")}} indicating the ID of the track to locate within the track
+  - : A string indicating the ID of the track to locate within the track
     list.
 
 ### Return value

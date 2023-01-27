@@ -1,6 +1,7 @@
 ---
 title: '<legend>: The Field Set Legend element'
 slug: Web/HTML/Element/legend
+page-type: html-element
 tags:
   - Element
   - Forms
@@ -11,11 +12,21 @@ tags:
 browser-compat: html.elements.legend
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<legend>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for the content of its parent {{HTMLElement("fieldset")}}.
 
 {{EmbedInteractiveExample("pages/tabbed/legend.html", "tabbed-standard")}}
+
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Examples
+
+See {{HTMLElement("form")}} for examples on `<legend>`.
+
+## Technical summary
 
 <table class="properties">
   <tbody>
@@ -68,14 +79,6 @@ The **`<legend>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for
   </tbody>
 </table>
 
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Examples
-
-See {{HTMLElement("form")}} for examples on `<legend>`.
-
 ## Specifications
 
 {{Specifications}}
@@ -86,4 +89,4 @@ See {{HTMLElement("form")}} for examples on `<legend>`.
 
 ## See also
 
-- [ARIA: Form role](/en-US/docs/Web/Accessibility/ARIA/Roles/Form_Role)
+- [ARIA: Form role](/en-US/docs/Web/Accessibility/ARIA/Roles/form_role)

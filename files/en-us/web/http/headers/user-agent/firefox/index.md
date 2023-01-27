@@ -9,6 +9,7 @@ tags:
   - Gecko 2.0
   - Guide
 ---
+
 {{HTTPSidebar}}
 
 This document describes the user agent string used in Firefox 4 and later and applications based on Gecko 2.0 and later. For a breakdown of changes to the string in Gecko 2.0, see [Final User Agent string for Firefox 4](https://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/) (blog post). See also this document on [user agent sniffing](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent) and this [Hacks blog post](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/).
@@ -38,7 +39,9 @@ For other products based on Gecko, the string can take one of two forms, where t
 `Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion appname/appversion`
 
 - `appname/appversion` indicates the application name and version. For instance, this could be "`Camino/2.1.1`", or "`SeaMonkey/2.7.1`".
-- `Firefox/firefoxversion` is an optional compatibility token that some Gecko-based browsers may choose to incorporate, to achieve maximum compatibility with websites that expect Firefox. `firefoxversion` will generally represent the equivalent Firefox release corresponding to the given Gecko version. Some Gecko-based browsers may not opt into using this token; for this reason, sniffers should be looking for Gecko — not Firefox! Whether this token appears is controlled by the _"general.useragent.compatMode.firefox"_ boolean pref.
+- `Firefox/firefoxversion` is an optional compatibility token that some Gecko-based browsers may choose to incorporate, to achieve maximum compatibility with websites that expect Firefox. `firefoxversion` will generally represent the equivalent Firefox release corresponding to the given Gecko version. Some Gecko-based browsers may not opt into using this token; for this reason, sniffers should be looking for Gecko — not Firefox!
+
+Prior to Firefox 4 and Gecko 2.0, it was possible for extensions and plug-ins to add user agent parts, but that has not been possible since {{ Bug(581008) }}.
 
 ## Mobile and Tablet indicators
 
@@ -180,7 +183,7 @@ Although it is **strongly discouraged** by Mozilla, some handset manufacturers u
 
 Here is a JavaScript regular expression that will detect all mobile devices, including devices with a device id in their UA string:
 
-```
+```js
 /mobi/i
 ```
 
@@ -204,11 +207,11 @@ While the version number for Firefox OS is not included in the UA string, it is 
 
 > **Note:** It's easy to find the correspondences by looking at the [Mercurial repository names](https://hg.mozilla.org/releases): repositories starting by `mozilla-b2g` are the release repositories for Firefox OS, and have both Firefox OS and Gecko versions in their names.
 
-Firefox OS has a four-digit version number: `X.X.X.Y`. The first two digits are owned by the Mozilla product team and denote versions with new features (eg: v1.1, 1.2, etc). The third digit is incremented with regular version tags (about every 6 weeks) for security updates, and the fourth is owned by the OEM.
+Firefox OS has a four-digit version number: `X.X.X.Y`. The first two digits are owned by the Mozilla product team and denote versions with new features (eg: v1.1, 1.2, etc.). The third digit is incremented with regular version tags (about every 6 weeks) for security updates, and the fourth is owned by the OEM.
 
 ## Firefox for iOS
 
-Firefox for iOS uses the default Mobile Safari UA string, with an additional **FxiOS/\<version>** token on iPod and iPhone, similar to how [Chrome for iOS identifies itself](https://developer.chrome.com/multidevice/user-agent#chrome_for_ios_user_agent).
+Firefox for iOS uses the default Mobile Safari UA string, with an additional **FxiOS/\<version>** token on iPod and iPhone, similar to how [Chrome for iOS identifies itself](https://developer.chrome.com/docs/multidevice/user-agent/#chrome_for_ios_user_agent).
 
 | Form factor | Firefox for iOS user agent string                                                                                                           |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -217,10 +220,6 @@ Firefox for iOS uses the default Mobile Safari UA string, with an additional **F
 | iPad        | Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1 Safari/605.1.15                       |
 
 Regarding the deviation on iPad form factor, see this [issue](https://github.com/mozilla-mobile/firefox-ios/issues/6620).
-
-## Firefox Web Runtime
-
-The Web Runtime uses the same user agent string as desktop Firefox.
 
 ## Other Gecko-based browsers
 
@@ -233,12 +232,6 @@ These are some sample UA strings from other Gecko-based browsers on various plat
 | SeaMonkey on Windows           | Mozilla/5.0 (Windows NT 5.2; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1                 |
 | SeaMonkey on Mac               | Mozilla/5.0 (Macintosh; Intel Mac OS X 10.5; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1 |
 | SeaMonkey on Linux             | Mozilla/5.0 (X11; Linux i686; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1                |
-
-## Implementation notes for applications, vendors, and extensions
-
-Prior to Firefox 4 and Gecko 2.0, it was possible for extensions to add user agent parts through the `general.useragent.extra.identifier` preferences. But that has not been possible since {{ Bug(581008) }}.
-
-In the past, specific plug-ins, add-ons or extensions added user agent parts to notify sites they were installed. The recommended way to do this, if it's absolutely necessary (remember that it slows down every request) is to [set a custom HTTP header](/en-US/docs/Setting_HTTP_request_headers).
 
 ## See also
 

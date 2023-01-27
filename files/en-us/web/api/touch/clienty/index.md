@@ -1,6 +1,7 @@
 ---
 title: Touch.clientY
 slug: Web/API/Touch/clientY
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -10,24 +11,19 @@ tags:
   - touch
 browser-compat: api.Touch.clientY
 ---
+
 {{ APIRef("Touch Events") }}
 
 The **`Touch.clientY`** read-only property returns the Y
 coordinate of the touch point relative to the browser's viewport, not including any
 scroll offset.
 
-## Syntax
-
-```js
-touchItem.clientY;
-```
-
-### Return value
+## Value
 
 A `long` value representing the Y coordinate of the touch point relative to
 the viewport, not including any scroll offset.
 
-## Example
+## Examples
 
 This example illustrates using the {{domxref("Touch")}} object's
 {{domxref("Touch.clientX")}} and {{domxref("Touch.clientY")}} properties. The
@@ -45,17 +41,19 @@ touch point, are calculated.
 
 ```js
 // Register touchstart and touchend listeners for element 'source'
-var src = document.getElementById("source");
-var clientX, clientY;
+const src = document.getElementById("source");
+let clientX;
+let clientY;
 
-src.addEventListener('touchstart', function(e) {
+src.addEventListener('touchstart', (e) => {
   // Cache the client X/Y coordinates
   clientX = e.touches[0].clientX;
   clientY = e.touches[0].clientY;
 }, false);
 
-src.addEventListener('touchend', function(e) {
-  var deltaX, deltaY;
+src.addEventListener('touchend', (e) => {
+  let deltaX;
+  let deltaY;
 
   // Compute the change in X and Y coordinates.
   // The first touch point in the changedTouches
@@ -63,7 +61,7 @@ src.addEventListener('touchend', function(e) {
   deltaX = e.changedTouches[0].clientX - clientX;
   deltaY = e.changedTouches[0].clientY - clientY;
 
-  // Process the data ...
+  // Process the data…
 }, false);
 ```
 

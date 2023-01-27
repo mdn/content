@@ -2,6 +2,7 @@
 title: Comparing Reflect and Object methods
 slug: >-
   Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods
+page-type: guide
 tags:
   - Guide
   - JavaScript
@@ -10,9 +11,10 @@ tags:
   - Overview
   - Reflect
 ---
+
 {{jssidebar}}
 
-The {{jsxref("Reflect")}} object, introduced in ES2015, is a built-in object that provides methods to interface with JavaScript objects. Some of the static functions that exist on `Reflect` also correspond to methods available on {{jsxref("Object")}}, which predates ES2015. Although some of the methods appear to be similar in their behavior, there are often subtle differences between them.
+The {{jsxref("Reflect")}} object is a built-in object that provides methods to interface with JavaScript objects. Some of the static functions that exist on `Reflect` also correspond to methods available on {{jsxref("Object")}}. Although some of the methods appear to be similar in their behavior, there are often subtle differences between them.
 
 The table below details the differences between the methods available on the `Object` and `Reflect` APIs. Please note that if a method does not exist in an API, it is marked as N/A.
 
@@ -29,7 +31,7 @@ The table below details the differences between the methods available on the `Ob
       <td><code>defineProperty()</code></td>
       <td>
         {{jsxref("Object.defineProperty()")}} returns the object that
-        was passed to the function. Returns a <code>TypeError</code> if the
+        was passed to the function. Throws a <code>TypeError</code> if the
         property was not successfully defined on the object.
       </td>
       <td>
@@ -42,18 +44,20 @@ The table below details the differences between the methods available on the `Ob
       <td><code>defineProperties()</code></td>
       <td>
         {{jsxref("Object.defineProperties()")}} returns the objects
-        that were passed to the function. Returns a <code>TypeError</code> if
+        that were passed to the function. Throws a <code>TypeError</code> if
         any properties were not successfully defined on the object.
       </td>
       <td>N/A</td>
     </tr>
     <tr>
-      <td><code>set()</code></td>
+      <td><code>has()</code></td>
       <td>N/A</td>
       <td>
-        {{jsxref("Reflect.set()")}} returns <code>true</code> if the
-        property was set successfully on the object and <code>false</code> if it
-        was not. Throws a <code>TypeError</code> if the target was not
+        {{jsxref("Reflect.has()")}} returns <code>true</code> if the
+        property exists on the object or on its prototype chain or
+        <code>false</code> otherwise, similar to the
+        {{jsxref("Operators/in", "in")}} operator.
+        Throws a <code>TypeError</code> if the target was not
         an <code>Object</code>.
       </td>
     </tr>
@@ -63,6 +67,16 @@ The table below details the differences between the methods available on the `Ob
       <td>
         {{jsxref("Reflect.get()")}} returns the value of the property.
         Throws a <code>TypeError</code> if the target was not
+        an <code>Object</code>.
+      </td>
+    </tr>
+    <tr>
+      <td><code>set()</code></td>
+      <td>N/A</td>
+      <td>
+        {{jsxref("Reflect.set()")}} returns <code>true</code> if the
+        property was set successfully on the object and <code>false</code> if it
+        was not. Throws a <code>TypeError</code> if the target was not
         an <code>Object</code>.
       </td>
     </tr>

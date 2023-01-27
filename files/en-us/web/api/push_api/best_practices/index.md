@@ -1,6 +1,7 @@
 ---
 title: Web Push API Notifications best practices
 slug: Web/API/Push_API/Best_Practices
+page-type: guide
 tags:
   - Apps
   - Beginner
@@ -12,10 +13,11 @@ tags:
   - Usability
 ---
 
+{{DefaultAPISidebar("Push API") }}
 
 This article provides a useful summary of best practices to keep in mind when developing web sites and applications that use Push Notifications for user engagement.
 
-> “If done well, it's nice to have, but if not done well, it's really annoying.” — Overheard conversation between two browser developers discussing the ethics of push notifications.
+> "If done well, it's nice to have, but if not done well, it's really annoying." — Overheard conversation between two browser developers discussing the ethics of push notifications.
 
 ## Overview of web push notifications
 
@@ -27,7 +29,7 @@ Their novelty provides a new and unexploited opportunity for enterprising sites 
 
 But really, is this the best use of push notifications? Or is it a new iteration on the old and tired pop-up ad?
 
-> “Web push doesn't risk ending up in the spam folder. Nor can it be blocked by ad blockers. It shows right up on your desktop even when the website is shut. In mobile, it shows up in the notification tray, just like app push notifications, even when the browser is not running.” — an unnamed marketing site
+> "Web push doesn't risk ending up in the spam folder. Nor can it be blocked by ad blockers. It shows right up on your desktop even when the website is shut. In mobile, it shows up in the notification tray, just like app push notifications, even when the browser is not running." — an unnamed marketing site
 
 ### Positive uses of push
 

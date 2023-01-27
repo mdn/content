@@ -1,6 +1,7 @@
 ---
 title: '<p>: The Paragraph element'
 slug: Web/HTML/Element/p
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -10,11 +11,11 @@ tags:
 browser-compat: html.elements.p
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<p>`** [HTML](/en-US/docs/Web/HTML) element represents a paragraph. Paragraphs are usually represented in visual media as blocks of text separated from adjacent blocks by blank lines and/or first-line indentation, but HTML paragraphs can be any structural grouping of related content, such as images or form fields.
 
-Paragraphs are [block-level elements](/en-US/docs/Web/HTML/Block-level_elements), and notably will automatically close if another block-level element is parsed before the closing `</p>` tag. See “Tag omission” below.
+Paragraphs are [block-level elements](/en-US/docs/Web/HTML/Block-level_elements), and notably will automatically close if another block-level element is parsed before the closing `</p>` tag. See "Tag omission" below.
 
 {{EmbedInteractiveExample("pages/tabbed/p.html", "tabbed-standard")}}
 
@@ -101,14 +102,14 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 ### HTML
 
 ```html
-<p>This is the first paragraph of text.
-  This is the first paragraph of text.
-  This is the first paragraph of text.
-  This is the first paragraph of text.</p>
-<p>This is the second paragraph.
-  This is the second paragraph.
-  This is the second paragraph.
-  This is the second paragraph.</p>
+<p>
+  This is the first paragraph of text. This is the first paragraph of text. This
+  is the first paragraph of text. This is the first paragraph of text.
+</p>
+<p>
+  This is the second paragraph. This is the second paragraph. This is the second
+  paragraph. This is the second paragraph.
+</p>
 ```
 
 ### Result
@@ -150,8 +151,8 @@ p {
 }
 
 p.pilcrow {
-   text-indent: 0;
-   display: inline;
+  text-indent: 0;
+  display: inline;
 }
 p.pilcrow + p.pilcrow::before {
   content: " ¶ ";
@@ -161,14 +162,13 @@ p.pilcrow + p.pilcrow::before {
 ### JavaScript
 
 ```js
-document.querySelector('button').addEventListener('click', function (event) {
-  document.querySelectorAll('p').forEach(function (paragraph) {
+document.querySelector('button').addEventListener('click', (event) => {
+  document.querySelectorAll('p').forEach((paragraph) => {
     paragraph.classList.toggle('pilcrow');
   });
-  var newButtonText = event.target.dataset.toggleText;
-  var oldText = event.target.innerText;
-  event.target.innerText = newButtonText;
-  event.target.dataset.toggleText = oldText;
+
+  [event.target.innerText, event.target.dataset.toggleText] =
+    [event.target.dataset.toggleText, event.target.innerText];
 });
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: 'HTMLDialogElement: cancel event'
 slug: Web/API/HTMLDialogElement/cancel_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -10,32 +11,28 @@ tags:
   - cancel
 browser-compat: api.HTMLDialogElement.cancel_event
 ---
+
 {{APIRef}}
 
-The **`cancel`** event fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the current open dialog. For example, the browser might fire this event when the user presses the <kbd>Esc</kbd> key or clicks a "Close dialog" button which is part of the browser's UI.
+The **`cancel`** event fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the current open dialog. The browser fires this event when the user presses the <kbd>Esc</kbd> key.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler</th>
-      <td>
-        {{domxref("GlobalEventHandlers/oncancel", "oncancel")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event does not bubble.
+
+When a `<dialog>` is dismissed with the <kbd>Esc</kbd> key, both the `cancel` and {{domxref("HTMLDialogElement/close_event", "close")}} events are fired.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('cancel', (event) => {});
+
+oncancel = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -45,7 +42,7 @@ The **`cancel`** event fires on a {{HTMLElement("dialog")}} when the user instru
 
 ```html
 <dialog class="example-dialog">
-    <button class="close" type="reset">Close</button>
+  <button class="close" type="reset">Close</button>
 </dialog>
 
 <button class="open-dialog">Open dialog</button>
@@ -54,12 +51,13 @@ The **`cancel`** event fires on a {{HTMLElement("dialog")}} when the user instru
 ```
 
 ```css hidden
-button, div {
-    margin: .5rem;
+button,
+div {
+  margin: 0.5rem;
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const result = document.querySelector('.result');
@@ -100,6 +98,5 @@ closeButton.addEventListener('click', () => {
 
 ## See also
 
-- {{domxref("GlobalEventHandlers.oncancel")}}
 - HTML {{HTMLElement("dialog")}} element
 - {{domxref("HTMLDialogElement/close_event", "close")}}

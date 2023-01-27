@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.createImageData()
 slug: Web/API/CanvasRenderingContext2D/createImageData
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.createImageData
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.createImageData()`** method of
@@ -17,9 +19,10 @@ specified dimensions. All of the pixels in the new object are transparent black.
 
 ## Syntax
 
-```js
-ImageData ctx.createImageData(width, height);
-ImageData ctx.createImageData(imagedata);
+```js-nolint
+createImageData(width, height)
+createImageData(width, height, settings)
+createImageData(imagedata)
 ```
 
 ### Parameters
@@ -30,6 +33,9 @@ ImageData ctx.createImageData(imagedata);
 - `height`
   - : The height to give the new `ImageData` object. A negative value flips the
     rectangle around the horizontal axis.
+- `settings` {{optional_inline}}
+  - : An object with the following properties:
+    - `colorSpace`: Specifies the color space of the image data. Can be set to `"srgb"` for the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) or `"display-p3"` for the [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
 - `imagedata`
   - : An existing `ImageData` object from which to copy the width and height.
     The image itself is **not** copied.
@@ -106,8 +112,7 @@ ctx.putImageData(imageData, 20, 20);
 ### More examples
 
 For more examples using `createImageData()` and the `ImageData`
-object, see [Pixel
-manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas) and {{domxref("ImageData.data")}}.
+object, see [Pixel manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas) and {{domxref("ImageData.data")}}.
 
 ## Specifications
 
@@ -121,5 +126,4 @@ manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipula
 
 - The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("ImageData")}}
-- [Pixel
-  manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
+- [Pixel manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)

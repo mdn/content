@@ -5,6 +5,7 @@ tags:
   - CodingScripting
   - HTML
 ---
+
 {{LearnSidebar}}
 
 The following links point to solutions to common everyday problems you'll need to solve with HTML.
@@ -52,7 +53,6 @@ HTML only sets up document structure. To solve presentation issues, use {{glossa
 ### Embedded content
 
 - [How to embed a webpage within another webpage](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [How to add Flash content within a webpage](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#the_%3cembed%3e_and_%3cobject%3e_elements)
 
 ## Uncommon or advanced problems
 

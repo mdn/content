@@ -1,6 +1,7 @@
 ---
 title: TreeWalker.nextNode()
 slug: Web/API/TreeWalker/nextNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -9,6 +10,7 @@ tags:
   - TreeWalker
 browser-compat: api.TreeWalker.nextNode
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.nextNode()`** method moves the current
@@ -18,20 +20,28 @@ returns `null` and the current node is not changed.
 
 ## Syntax
 
-```js
-node = treeWalker.nextNode();
+```js-nolint
+nextNode()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+A {{domxref("Node")}} object or `null`.
+
+## Examples
 
 ```js
-var treeWalker = document.createTreeWalker(
+const treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
-var node = treeWalker.nextNode(); // returns the first child of root, as it is the next node in document order
+const node = treeWalker.nextNode(); // returns the first child of root, as it is the next node in document order
 ```
 
 ## Specifications

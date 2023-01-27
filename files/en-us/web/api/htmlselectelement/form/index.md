@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.form
 slug: Web/API/HTMLSelectElement/form
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLSelectElement
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement.form
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLSelectElement.form`** read-only property returns a
@@ -16,7 +18,11 @@ The **`HTMLSelectElement.form`** read-only property returns a
 with. If the element is not associated with of a {{HTMLElement("form")}} element, then
 it returns `null`.
 
-## Example
+## Value
+
+A {{domxref("HTMLFormElement")}}.
+
+## Examples
 
 ```html
 <form id="pet-form">
@@ -32,8 +38,8 @@ it returns `null`.
 
 <label for="lunch-select">Choose your lunch</label>
 <select name="lunch" id="lunch-select">
-    <option value="salad">Salad</option>
-    <option value="sandwich">Sandwich</option>
+  <option value="salad">Salad</option>
+  <option value="sandwich">Sandwich</option>
 </select>
 
 <script>

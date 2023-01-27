@@ -1,11 +1,15 @@
 ---
 title: Box-shadow generator
 slug: Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
+page-type: guide
 tags:
   - CSS
   - Tools
   - box-shadow
 ---
+
+{{CSSRef}}
+
 This tool lets you construct CSS {{cssxref("box-shadow")}} effects, to add box shadow effects to your CSS objects.
 
 {{EmbedGHLiveSample("css-examples/tools/box-shadow-generator/", '100%', 900)}}

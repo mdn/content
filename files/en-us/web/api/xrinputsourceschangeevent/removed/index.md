@@ -1,6 +1,7 @@
 ---
 title: XRInputSourcesChangeEvent.removed
 slug: Web/API/XRInputSourcesChangeEvent/removed
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -23,6 +24,7 @@ tags:
   - removed
 browser-compat: api.XRInputSourcesChangeEvent.removed
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRInputSourcesChangeEvent")}} property {{domxref("XRInputSourcesChangeEvent.removed", "removed")}} is an array of

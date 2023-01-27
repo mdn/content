@@ -8,6 +8,7 @@ tags:
   - header
 browser-compat: http.headers.Server-Timing
 ---
+
 {{HTTPSidebar}}
 
 The **`Server-Timing`** header communicates one or more metrics and descriptions for a given request-response cycle. It is used to surface any backend server timing metrics (e.g. database read/write, CPU time, file system access, etc.) in the developer tools in the user's browser or in the {{domxref("PerformanceServerTiming")}} interface.
@@ -29,9 +30,9 @@ The **`Server-Timing`** header communicates one or more metrics and descriptions
 
 The syntax of the `Server-Timing` header allows you to communicate metrics in different ways: server metric name only, metric with value, metric with value and description, and metric with description.
 
-The specification advices that names and descriptions should be kept as short as possible (use abbreviations and omit optional values where possible) to minimize the HTTP overhead.
+The specification advises that names and descriptions should be kept as short as possible (use abbreviations and omit optional values where possible) to minimize the HTTP overhead.
 
-```
+```http
 // Single metric without value
 Server-Timing: missedCache
 

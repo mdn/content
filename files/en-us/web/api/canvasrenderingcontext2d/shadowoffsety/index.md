@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.shadowOffsetY
 slug: Web/API/CanvasRenderingContext2D/shadowOffsetY
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.shadowOffsetY
 ---
+
 {{APIRef}}
 
 The
@@ -18,21 +20,13 @@ vertically.
 
 > **Note:** Shadows are only drawn if the
 > {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} property is set to
-> a non-transparent value. One of the {{domxref("CanvasRenderingContext2D.shadowBlur",
-    "shadowBlur")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetX",
-    "shadowOffsetX")}}, or `shadowOffsetY` properties must be non-zero, as
+> a non-transparent value. One of the {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}},
+> {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, or `shadowOffsetY` properties must be non-zero, as
 > well.
 
-## Syntax
+## Value
 
-```js
-ctx.shadowOffsetY = offset;
-```
-
-- `offset`
-  - : A float specifying the distance that shadows will be offset vertically. Positive
-    values are down, and negative are up. The default value is `0` (no vertical
-    offset). {{jsxref("Infinity")}} and {{jsxref("NaN")}} values are ignored.
+A float specifying the distance that shadows will be offset vertically. Positive values are down, and negative are up. The default value is `0` (no vertical offset). {{jsxref("Infinity")}} and {{jsxref("NaN")}} values are ignored.
 
 ## Examples
 
@@ -53,16 +47,16 @@ of 10.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Shadow
-ctx.shadowColor = 'red';
+ctx.shadowColor = "red";
 ctx.shadowOffsetY = 25;
 ctx.shadowBlur = 10;
 
 // Rectangle
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fillRect(20, 20, 150, 80);
 ```
 

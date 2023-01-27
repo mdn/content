@@ -1,12 +1,14 @@
 ---
 title: Node.parentElement
 slug: Web/API/Node/parentElement
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
   - Read-only
 browser-compat: api.Node.parentElement
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`parentElement`** property of {{domxref("Node")}} interface

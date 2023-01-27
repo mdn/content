@@ -8,11 +8,12 @@ tags:
   - Numeric
   - Bitwise
 ---
+
 {{WebAssemblySidebar}}
 
-The **`rotl`** instructions, short for *rotate-left*, are used for performing a bitwise left-rotate.
+The **`rotl`** instructions, short for _rotate-left_, are used for performing a bitwise left-rotate.
 
-{{EmbedInteractiveExample("pages/wat/rotl.html")}}
+{{EmbedInteractiveExample("pages/wat/rotl.html", "tabbed-taller")}}
 
 ## Syntax
 

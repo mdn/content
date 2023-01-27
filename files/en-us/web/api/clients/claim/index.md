@@ -1,10 +1,10 @@
 ---
 title: Clients.claim()
 slug: Web/API/Clients/claim
+page-type: web-api-instance-method
 tags:
   - API
   - Clients
-  - Experimental
   - Method
   - Reference
   - Service Workers
@@ -12,6 +12,7 @@ tags:
   - claim
 browser-compat: api.Clients.claim
 ---
+
 {{APIRef("Service Worker Clients")}}
 
 The **`claim()`** method of the {{domxref("Clients")}} interface allows an active service worker to set itself as the {{domxref("ServiceWorkerContainer.controller", "controller")}} for all clients within its {{domxref("ServiceWorkerRegistration.scope", "scope")}}.
@@ -24,8 +25,8 @@ regularly over the network, or possibly via a different service worker.
 
 ## Syntax
 
-```js
-await clients.claim();
+```js-nolint
+claim()
 ```
 
 ### Parameters
@@ -36,12 +37,12 @@ None.
 
 A {{jsxref("Promise")}} that resolves to `undefined`.
 
-## Example
+## Examples
 
 The following example uses `claim()` inside service worker's "`activate`" event listener so that clients loaded in the same scope do not need to be reloaded before their fetches will go through this service worker.
 
 ```js
-self.addEventListener('activate', event => {
+self.addEventListener("activate", (event) => {
   event.waitUntil(clients.claim());
 });
 ```
@@ -57,7 +58,7 @@ self.addEventListener('activate', event => {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [The service worker lifecycle](https://developers.google.com/web/fundamentals/instant-and-offline/service-worker/lifecycle)
+- [The service worker lifecycle](https://web.dev/service-worker-lifecycle/)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise", "Promises")}}
 - {{domxref("ServiceWorkerGlobalScope.skipWaiting()", "self.skipWaiting()")}} - skip the service worker's waiting phase

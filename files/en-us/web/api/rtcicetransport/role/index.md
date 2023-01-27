@@ -1,6 +1,7 @@
 ---
 title: RTCIceTransport.role
 slug: Web/API/RTCIceTransport/role
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -19,6 +20,7 @@ tags:
   - rtc
 browser-compat: api.RTCIceTransport.role
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **{{domxref("RTCIceTransport")}}**
@@ -27,22 +29,17 @@ the transport is fulfilling: that of the controlling agent, or the agent that is
 controlled.
 
 You can learn more about ICE roles in
-{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Choosing a candidate
-  pair")}}.
+[Choosing a candidate pair](/en-US/docs/Web/API/WebRTC_API/Connectivity#choosing_a_candidate_pair).
 
-## Syntax
+## Value
 
-```js
-iceRole = RTCIceTransport.role;
-```
+A string specifying whether the {{domxref("RTCIceTransport")}}
+represents the controlling agent or the controlled agent. The value must be one of the following:
 
-### Value
-
-A {{domxref("DOMString")}} specifying whether the {{domxref("RTCIceTransport")}}
-represents the controlling agent or the controlled agent. The value must be one of those
-found in the enumerated type {{domxref("RTCIceRole")}}:
-
-{{page("/en-US/docs/Web/API/RTCIceRole", "Values")}}
+- `"controlling"`
+  - : The {{domxref("RTCIceTransport")}} object is serving as the controlling agent.
+- `"controlled"`
+  - : The transport is the controlled agent.
 
 ## Specifications
 

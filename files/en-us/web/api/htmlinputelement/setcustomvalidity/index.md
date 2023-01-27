@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.setCustomValidity()
 slug: Web/API/HTMLInputElement/setCustomValidity
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -12,14 +13,15 @@ tags:
   - setCustomValidity()
 browser-compat: api.HTMLObjectElement.setCustomValidity
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLInputElement.setCustomValidity()`** method sets a custom validity message for the element.
 
 ## Syntax
 
-```js
-element.setCustomValidity(message);
+```js-nolint
+setCustomValidity(message)
 ```
 
 ### Parameters
@@ -29,7 +31,7 @@ element.setCustomValidity(message);
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -48,13 +50,13 @@ function validate(inputID) {
   const validityState = input.validity;
 
   if (validityState.valueMissing) {
-    input.setCustomValidity('You gotta fill this out, yo!');
+    input.setCustomValidity("You gotta fill this out, yo!");
   } else if (validityState.rangeUnderflow) {
-    input.setCustomValidity('We need a higher number!');
+    input.setCustomValidity("We need a higher number!");
   } else if (validityState.rangeOverflow) {
-    input.setCustomValidity('Thats too high!');
+    input.setCustomValidity("Thats too high!");
   } else {
-    input.setCustomValidity('');
+    input.setCustomValidity("");
   }
 
   input.reportValidity();
@@ -77,5 +79,4 @@ submitted.
 
 - [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
 - [Guide: Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
-- [Constraint validation API](/en-US/docs/Web/API/Constraint_validation)
 - {{domxref('ValidityState')}}

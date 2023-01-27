@@ -10,13 +10,14 @@ tags:
   - client-side
   - props
   - state
-  - vue
+  - Vue
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 Now it's time to dive deeper into Vue, and create our own custom component — we'll start by creating a component to represent each item in the todo list. Along the way, we'll learn about a few important concepts such as calling components inside other components, passing data to them via props, and saving data state.
 
-> **Note:** If you need to check your code against our version, you can find a finished version of the sample Vue app code in our [todo-vue repository](https://github.com/mdn/todo-vue). For a running live version, see <https://mdn.github.io/todo-vue/dist/>.
+> **Note:** If you need to check your code against our version, you can find a finished version of the sample Vue app code in our [todo-vue repository](https://github.com/mdn/todo-vue). For a running live version, see <https://mdn.github.io/todo-vue/>.
 
 <table>
   <tbody>
@@ -88,14 +89,14 @@ We can now begin to add actual content to our `ToDoItem`. Vue templates are curr
 1. Add an empty `<div>` inside your component template now.
 2. Inside that `<div>`, let's add a checkbox and a corresponding label. Add an `id` to the checkbox, and a `for` attribute mapping the checkbox to the label, as shown below.
 
-    ```html
-    <template>
-      <div>
-        <input type="checkbox" id="todo-item" />
-        <label for="todo-item">My Todo Item</label>
-      </div>
-    </template>
-    ```
+   ```html
+   <template>
+     <div>
+       <input type="checkbox" id="todo-item" />
+       <label for="todo-item">My Todo Item</label>
+     </div>
+   </template>
+   ```
 
 ### Using TodoItem inside our app
 
@@ -104,33 +105,34 @@ This is all fine, but we haven't added the component to our app yet, so there's 
 1. Open up `App.vue` again.
 2. At the top of your `<script>` tag, add the following to import your `ToDoItem` component:
 
-    ```js
-    import ToDoItem from './components/ToDoItem.vue';
-    ```
+   ```js
+   import ToDoItem from "./components/ToDoItem.vue";
+   ```
 
 3. Inside your component object, add the `components` property, and inside it add your `ToDoItem` component to register it.
 
 Your `<script>` contents should now look like this:
 
 ```js
-import ToDoItem from './components/ToDoItem.vue';
+import ToDoItem from "./components/ToDoItem.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    ToDoItem
-  }
+    ToDoItem,
+  },
 };
 ```
 
 This is the same way that the `HelloWorld` component was registered by the Vue CLI earlier.
 
-To actually render the `ToDoItem` component in the app, you need to go up into your `<template>` element and call it as a `<to-do-item></to-do-item>` element. Note that the component file name and its representation in JavaScript is always in PascalCase (e.g. `ToDoList`), and the equivalent custom element is always in kebab-case (e.g. `<to-do-list>`).
+To actually render the `ToDoItem` component in the app, you need to go up into your `<template>` element and call it as a `<to-do-item></to-do-item>` element. Note that the component file name and its representation in JavaScript is in PascalCase (e.g. `ToDoList`), and the equivalent custom element is in kebab-case (e.g. `<to-do-list>`).
+It's necessary to use this casing style if you're writing Vue templates [in the DOM directly](https://vuejs.org/guide/essentials/component-basics.html#dom-template-parsing-caveats)
 
 1. Underneath the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements), create an unordered list ([`<ul>`](/en-US/docs/Web/HTML/Element/ul)) containing a single list item ([`<li>`](/en-US/docs/Web/HTML/Element/li)).
 2. Inside the list item add `<to-do-item></to-do-item>`.
 
-Your `App.vue` `<template>` contents should now look something like this:
+The `<template>` section of your `App.vue` file should now look something like this:
 
 ```html
 <div id="app">
@@ -169,25 +171,23 @@ For this component, we'll use the object registration method.
 3. Inside this object, add two properties with the keys `label` and `done`.
 4. The `label` key's value should be an object with 2 properties (or **props**, as they are called in the context of being available to the components).
 
-    1. The first is a `required` property, which will have a value of `true`. This will tell Vue that we expect every instance of this component to have a label field. Vue will warn us if a `ToDoItem` component does not have a label field.
-    2. The second property we'll add is a `type` property. Set the value for this property as the JavaScript `String` type (note the capital "S"). This tells Vue that we expect the value of this property to be a string.
+   1. The first is a `required` property, which will have a value of `true`. This will tell Vue that we expect every instance of this component to have a label field. Vue will warn us if a `ToDoItem` component does not have a label field.
+   2. The second property we'll add is a `type` property. Set the value for this property as the JavaScript `String` type (note the capital "S"). This tells Vue that we expect the value of this property to be a string.
 
 5. Now on to the `done` prop.
 
-    1. First add a `default` field, with a value of `false`. This means that when no `done` prop is passed to a `ToDoItem` component, the `done` prop will have a value of false (bear in mind that this is not required — we only need `default` on non-required props).
-    2. Next add a `type` field with a value of `Boolean`. This tells Vue we expect the value prop to be a JavaScript boolean type.
+   1. First add a `default` field, with a value of `false`. This means that when no `done` prop is passed to a `ToDoItem` component, the `done` prop will have a value of false (bear in mind that this is not required — we only need `default` on non-required props).
+   2. Next add a `type` field with a value of `Boolean`. This tells Vue we expect the value prop to be a JavaScript boolean type.
 
 Your component object should now look like this:
 
 ```js
-<script>
-  export default {
-    props: {
-      label: { required: true, type: String },
-      done: { default: false, type: Boolean }
-    }
-  };
-</script>
+export default {
+  props: {
+    label: { required: true, type: String },
+    done: { default: false, type: Boolean },
+  },
+};
 ```
 
 ### Using registered props
@@ -235,7 +235,7 @@ So that's props in a nutshell. Next we'll move on to how Vue persists data state
 
 ## Vue's data object
 
-If you change the value of the `label` prop passed into the `<to-do-item></to-do-item>` call in your App component, you should see it update. This is great. We have a checkbox, with an updatable label. However, we're currently not doing anything with the "done" prop — we can check the checkboxes in the UI, but nowhere in the app are we recording whether a todo item is actually done.
+If you change the value of the `label` prop passed into the `<to-do-item></to-do-item>` call in your `App` component, you should see it update. This is great. We have a checkbox, with an updatable label. However, we're currently not doing anything with the "done" prop — we can check the checkboxes in the UI, but nowhere in the app are we recording whether a todo item is actually done.
 
 To achieve this, we want to bind the component's `done` prop to the `checked` attribute on the [`<input>`](/en-US/docs/Web/HTML/Element/input) element, so that it can serve as a record of whether the checkbox is checked or not. However, it's important that props serve as one-way data binding — a component should never alter the value of its own props. There are a lot of reasons for this. In part, components editing props can make debugging a challenge. If a value is passed to multiple children, it could be hard to track where the changes to that value were coming from. In addition, changing props can cause components to re-render. So mutating props in a component would trigger the component to rerender, which may in-turn trigger the mutation again.
 
@@ -263,13 +263,13 @@ Update the component object like so:
 export default {
   props: {
     label: { required: true, type: String },
-    done: { default: false, type: Boolean }
+    done: { default: false, type: Boolean },
   },
   data() {
     return {
-      isDone: this.done
+      isDone: this.done,
     };
-  }
+  },
 };
 ```
 
@@ -297,7 +297,7 @@ So let's do this. Update your `<input>` element now to include `:checked="isDone
 
 Test out your component by passing `:done="true"` to the `ToDoItem` call in `App.vue`. Note that you need to use the `v-bind` syntax, because otherwise `true` is passed as a string. The displayed checkbox should be checked.
 
-```js
+```html
 <template>
   <div id="app">
     <h1>My To-Do List</h1>
@@ -329,31 +329,31 @@ npm install --save lodash.uniqueid
 We can now import this package into our `ToDoItem` component. Add the following line at the top of `ToDoItem.vue`'s `<script>` element:
 
 ```js
-import uniqueId from 'lodash.uniqueid';
+import uniqueId from "lodash.uniqueid";
 ```
 
 Next, add an `id` field to our data property, so the component object ends up looking like so (`uniqueId()` returns the specified prefix — `todo-` — with a unique string appended to it):
 
 ```js
-import uniqueId from 'lodash.uniqueid';
+import uniqueId from "lodash.uniqueid";
 
 export default {
   props: {
     label: { required: true, type: String },
-    done: { default: false, type: Boolean }
+    done: { default: false, type: Boolean },
   },
   data() {
     return {
       isDone: this.done,
-      id: uniqueId('todo-')
+      id: uniqueId("todo-"),
     };
-  }
+  },
 };
 ```
 
 Next, bind the `id` to both our checkbox's `id` attribute and the label's `for` attribute, updating the existing `id` and `for` attributes as shown:
 
-```js
+```html
 <template>
   <div>
     <input type="checkbox" :id="id" :checked="isDone" />
@@ -366,7 +366,7 @@ Next, bind the `id` to both our checkbox's `id` attribute and the label's `for` 
 
 And that will do for this article. At this point we have a nicely-working `ToDoItem` component that can be passed a label to display, will store its checked state, and will be rendered with a unique `id` each time it is called. You can check if the unique `id`s are working by temporarily adding more `<to-do-item></to-do-item>` calls into `App.vue`, and then checking their rendered output with your browser's DevTools.
 
-Now we're ready to add multiple `ToDoItem` components to our App. In our next article we'll look at adding a set of todo item data to our `App.vue` component, which we'll then loop through and display inside `ToDoItem` components using the `v-for` directive.
+Now we're ready to add multiple `ToDoItem` components to our app. In our next article we'll look at adding a set of todo item data to our `App.vue` component, which we'll then loop through and display inside `ToDoItem` components using the `v-for` directive.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 

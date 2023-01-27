@@ -8,11 +8,12 @@ tags:
   - Numeric
   - Bitwise
 ---
+
 {{WebAssemblySidebar}}
 
-The **`ctz`** instructions, short for *count trailing zeros*, are used to count the amount of zeros at the start of the numbers binary representation.
+The **`ctz`** instructions, short for _count trailing zeros_, are used to count the amount of zeros at the start of the numbers binary representation.
 
-{{EmbedInteractiveExample("pages/wat/ctz.html")}}
+{{EmbedInteractiveExample("pages/wat/ctz.html", "tabbed-taller")}}
 
 ## Syntax
 

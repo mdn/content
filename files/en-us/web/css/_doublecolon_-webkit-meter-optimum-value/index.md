@@ -1,6 +1,7 @@
 ---
 title: '::-webkit-meter-optimum-value'
 slug: Web/CSS/::-webkit-meter-optimum-value
+page-type: css-pseudo-element
 tags:
   - '::-webkit-meter-optimum-value'
   - CSS
@@ -10,6 +11,7 @@ tags:
   - Selector
 browser-compat: css.selectors.-webkit-meter-optimum-value
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-webkit-meter-optimum-value`** CSS [pseudo-element](/en-US/docs/Glossary/Pseudo-element) styles the {{htmlelement("meter")}} element when its value is inside the low-high range.
@@ -41,9 +43,9 @@ This example will only work in browsers based on WebKit or Blink.
 ```css
 meter::-webkit-meter-bar {
   /* Required to get rid of the default background property */
-  background : none;
-  background-color : whiteSmoke;
-  box-shadow : 0 5px 5px -5px #333 inset;
+  background: none;
+  background-color: whiteSmoke;
+  box-shadow: 0 5px 5px -5px #333 inset;
 }
 
 meter::-webkit-meter-optimum-value {

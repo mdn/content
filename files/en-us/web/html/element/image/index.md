@@ -1,6 +1,7 @@
 ---
 title: '<image>: The Image element'
 slug: Web/HTML/Element/image
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -12,12 +13,15 @@ tags:
   - Reference
 browser-compat: html.elements.image
 ---
-{{HTMLRef}}{{deprecated_header}}
+
+{{HTMLSidebar}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`<image>`** [HTML](/en-US/docs/Web/HTML) element is an ancient and poorly supported precursor to the {{HTMLElement("img")}} element.
 **It should not be used**.
 
 Some browsers will attempt to automatically convert this into an {{HTMLElement("img")}} element, and may succeed if the {{htmlattrxref("src", "img")}} attribute is specified as well.
+
+<!-- ## Technical summary -->
 
 ## Specifications
 

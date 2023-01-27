@@ -1,8 +1,8 @@
 ---
 title: RTCSessionDescription.toJSON()
 slug: Web/API/RTCSessionDescription/toJSON
+page-type: web-api-instance-method
 tags:
-  - Experimental
   - Method
   - RTCSessionDescription
   - Reference
@@ -10,7 +10,8 @@ tags:
   - WebRTC
 browser-compat: api.RTCSessionDescription.toJSON
 ---
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+
+{{APIRef("WebRTC")}}
 
 The **`RTCSessionDescription.toJSON()`** method generates a
 {{Glossary("JSON")}} description of the object. Both properties,
@@ -19,19 +20,22 @@ The **`RTCSessionDescription.toJSON()`** method generates a
 
 ## Syntax
 
-```js
-var jsonValue = sd.toJSON();
+```js-nolint
+toJSON()
 ```
 
-The result value is a {{jsxref("JSON")}} object containing the following values:
+### Parameters
 
-- `"type"`, containing the value of the
-  {{domxref("RTCSessionDescription.type")}} property and can be one of the following
-  values: `"offer"`, `"answer"`, `"pranswer"` or
-  `null`.
-- `"sdp"`, containing a {{domxref("DOMString")}}, or `null`,
-  with the {{Glossary("SDP")}} message corresponding to
-  {{domxref("RTCSessionDescription.sdp")}} property.
+None.
+
+### Return value
+
+A {{jsxref("JSON")}} object containing the following properties:
+
+- `type`
+  - : One of the following: `"offer"`, `"answer"`, `"pranswer"` or `null`.
+- `sdp`
+  - : Either `null` or the {{Glossary("SDP")}} message string corresponding to {{domxref("RTCSessionDescription.sdp")}} property.
 
 ## Example
 

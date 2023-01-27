@@ -1,6 +1,7 @@
 ---
 title: Intl.getCanonicalLocales()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
+page-type: javascript-static-method
 tags:
   - Internationalization
   - Intl
@@ -9,9 +10,10 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.getCanonicalLocales
 ---
+
 {{JSRef}}
 
-The **`Intl.getCanonicalLocales()`** method returns an array
+The **`Intl.getCanonicalLocales()`** static method returns an array
 containing the canonical locale names. Duplicates will be omitted and elements will be
 validated as structurally valid language tags.
 
@@ -21,7 +23,7 @@ validated as structurally valid language tags.
 
 ## Syntax
 
-```js
+```js-nolint
 Intl.getCanonicalLocales(locales)
 ```
 
@@ -46,11 +48,6 @@ Intl.getCanonicalLocales('EN_US');
 // RangeError:'EN_US' is not a structurally valid language tag
 ```
 
-## Polyfill
-
-[formatjs
-Intl.getCanonicalLocales polyfill](https://formatjs.io/docs/polyfills/intl-getcanonicallocales)
-
 ## Specifications
 
 {{Specifications}}
@@ -64,3 +61,4 @@ Intl.getCanonicalLocales polyfill](https://formatjs.io/docs/polyfills/intl-getca
 - {{jsxref("Intl/NumberFormat/supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
 - {{jsxref("Intl/DateTimeFormat/supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}
 - {{jsxref("Intl/Collator/supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}
+- [A polyfill of `Intl.getCanonicalLocales` in FormatJS](https://formatjs.io/docs/polyfills/intl-getcanonicallocales/)

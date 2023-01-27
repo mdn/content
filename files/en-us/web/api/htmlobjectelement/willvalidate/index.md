@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.willValidate
 slug: Web/API/HTMLObjectElement/willValidate
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - willValidate
 browser-compat: api.HTMLObjectElement.willValidate
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`willValidate`** read-only property of
@@ -18,13 +20,7 @@ the {{domxref("HTMLObjectElement")}} interface returns a boolean value that
 indicates whether the element is a candidate for constraint validation. Always false for
 HTMLObjectElement objects.
 
-## Syntax
-
-```js
-var Boolean = HTMLObjectElement.willValidate;
-```
-
-### Value
+## Value
 
 A boolean value.
 

@@ -1,6 +1,7 @@
 ---
 title: SVGFontFaceNameElement
 slug: Web/API/SVGFontFaceNameElement
+page-type: web-api-interface
 tags:
   - API
   - Deprecated
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFontFaceNameElement
 ---
+
 {{APIRef("SVG")}}{{deprecated_header}}
 
 The **`SVGFontFaceNameElement`** interface corresponds to the {{SVGElement("font-face-name")}} elements.
@@ -17,11 +19,11 @@ Object-oriented access to the attributes of the {{SVGElement("font-face-name")}}
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface has no properties but inherits properties from its parent, {{domxref("SVGElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface has no methods but inherits methods from its parent, {{domxref("SVGElement")}}._
 

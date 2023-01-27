@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Security
 ---
+
 {{FirefoxSidebar}}
 
 This article discusses changes that affect security in Firefox 2.
@@ -25,7 +26,7 @@ If SSLv2 support must be enabled, it can be by setting the appropriate `security
 
 ## Determining what ciphers are available
 
-As always, you can find out what ciphers are supported -- and which are enabled or disabled -- by going to about:config and searching on "ssl" or "tls".
+As always, you can find out what ciphers are supported — and which are enabled or disabled — by going to about:config and searching on "ssl" or "tls".
 
 ## Security improved for the jar: protocol
 

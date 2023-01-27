@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.networkState
 slug: Web/API/HTMLMediaElement/networkState
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -9,19 +10,14 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.networkState
 ---
+
 {{APIRef("HTML DOM")}}
 
 The
 **`HTMLMediaElement.networkState`** property indicates the
 current state of the fetching of media over the network.
 
-## Syntax
-
-```js
-var networkState = audioOrVideo.networkState;
-```
-
-### Value
+## Value
 
 An `unsigned short`. Possible values are:
 
@@ -39,17 +35,17 @@ still loading data.
 
 ```html
 <audio id="example" preload="auto">
- <source src="sound.ogg" type="audio/ogg" />
+  <source src="sound.ogg" type="audio/ogg" />
 </audio>
 ```
 
 ```js
-var obj = document.getElementById('example');
+const obj = document.getElementById('example');
 
-obj.addEventListener('playing', function() {
+obj.addEventListener('playing', () => {
 
   if (obj.networkState === 2) {
-    // Still loading...
+    // Still loading…
   }
 
 });

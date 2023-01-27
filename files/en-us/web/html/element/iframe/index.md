@@ -1,6 +1,7 @@
 ---
 title: '<iframe>: The Inline Frame element'
 slug: Web/HTML/Element/iframe
+page-type: html-element
 tags:
   - Content
   - Element
@@ -17,67 +18,15 @@ tags:
 browser-compat: html.elements.iframe
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<iframe>`** [HTML](/en-US/docs/Web/HTML) element represents a nested {{Glossary("browsing context")}}, embedding another HTML page into the current one.
 
 {{EmbedInteractiveExample("pages/tabbed/iframe.html", "tabbed-standard")}}
 
-Each embedded browsing context has its own [session history](/en-US/docs/Web/API/History) and [document](/en-US/docs/Web/API/Document). The browsing context that embeds the others is called the \*_parent_ browsing context*. The *topmost\* browsing context — the one with no parent — is usually the browser window, represented by the {{domxref("Window")}} object.
+Each embedded browsing context has its own [session history](/en-US/docs/Web/API/History) and [document](/en-US/docs/Web/API/Document). The browsing context that embeds the others is called the _parent browsing context_. The _topmost_ browsing context — the one with no parent — is usually the browser window, represented by the {{domxref("Window")}} object.
 
 > **Warning:** Because each browsing context is a complete document environment, every `<iframe>` in a page requires increased memory and other computing resources. While theoretically you can use as many `<iframe>`s as you like, check for performance problems.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >, embedded content, interactive content, palpable content.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>None.</td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>Any element that accepts embedded content.</td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>
-        {{ARIARole("application")}}, {{ARIARole("document")}},
-        {{ARIARole("img")}}, {{ARIARole("none")}},
-        {{ARIARole("presentation")}}
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLIFrameElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Attributes
 
@@ -85,9 +34,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("allow")}}
 
-  - : Specifies a [feature policy](/en-US/docs/Web/HTTP/Feature_Policy) for the `<iframe>`. The policy defines what features are available to the `<iframe>` based on the origin of the request (e.g. access to the microphone, camera, battery, web-share API, etc.).
+  - : Specifies a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) for the `<iframe>`. The policy defines what features are available to the `<iframe>` (for example, access to the microphone, camera, battery, web-share, etc.) based on the origin of the request.
 
-    For more information and examples see: [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) > [The iframe allow attribute](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy#the_iframe_allow_attribute).
+      > **Note:** A Permissions Policy specified by the `allow` attribute implements a further restriction on top of the policy specified in the {{httpheader("Permissions-Policy")}} header. It doesn't replace it.
 
 - {{htmlattrdef("allowfullscreen")}}
 
@@ -95,14 +44,31 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     > **Note:** This attribute is considered a legacy attribute and redefined as `allow="fullscreen"`.
 
-- {{htmlattrdef("allowpaymentrequest")}}
+- {{htmlattrdef("allowpaymentrequest")}} {{Experimental_Inline}}
 
   - : Set to `true` if a cross-origin `<iframe>` should be allowed to invoke the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API).
 
     > **Note:** This attribute is considered a legacy attribute and redefined as `allow="payment"`.
 
+- {{htmlattrdef("credentialless")}} {{Experimental_Inline}} {{Non-standard_Inline}}
+
+  - : Set to `true` to make the `<iframe>` credentialless, meaning that its content will be loaded in a new, ephemeral context. It doesn't have access to the network, cookies, and storage data associated with its origin. It uses a new context local to the top-level document lifetime. In return, the {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for more details.
+
 - {{htmlattrdef("csp")}} {{experimental_inline}}
+
   - : A [Content Security Policy](/en-US/docs/Web/HTTP/CSP) enforced for the embedded resource. See {{domxref("HTMLIFrameElement.csp")}} for details.
+
+- {{htmlattrdef("fetchpriority")}} {{Experimental_Inline}}
+
+  - : Provides a hint of the relative priority to use when fetching the iframe document. Allowed values:
+
+    - `high`
+      - : Signals a high-priority fetch relative to other iframe documents.
+    - `low`
+      - : Signals a low-priority fetch relative to other iframe documents.
+    - `auto`
+      - : Default: Signals automatic determination of fetch priority relative to other iframe documents.
+
 - {{htmlattrdef("height")}}
   - : The height of the frame in CSS pixels. Default is `150`.
 - {{htmlattrdef("loading")}} {{experimental_inline}}
@@ -204,8 +170,11 @@ This example embeds the page at <https://example.org> in an iframe.
 #### HTML
 
 ```html
-<iframe src="https://example.org"
-            title="iframe Example 1" width="400" height="300">
+<iframe
+  src="https://example.org"
+  title="iframe Example 1"
+  width="400"
+  height="300">
 </iframe>
 ```
 
@@ -218,10 +187,66 @@ This example embeds the page at <https://example.org> in an iframe.
 People navigating with assistive technology such as a screen reader can use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on an `<iframe>` to label its content. The title's value should concisely describe the embedded content:
 
 ```html
-<iframe title="Wikipedia page for Avocados" src="https://en.wikipedia.org/wiki/Avocado"></iframe>
+<iframe
+  title="Wikipedia page for Avocados"
+  src="https://en.wikipedia.org/wiki/Avocado"></iframe>
 ```
 
 Without this title, they have to navigate into the `<iframe>` to determine what its embedded content is. This context shift can be confusing and time-consuming, especially for pages with multiple `<iframe>`s and/or if embeds contain interactive content like video or audio.
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >, embedded content, interactive content, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>Any element that accepts embedded content.</td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLIFrameElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

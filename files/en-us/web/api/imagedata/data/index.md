@@ -1,6 +1,7 @@
 ---
 title: ImageData.data
 slug: Web/API/ImageData/data
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.ImageData.data
 ---
+
 {{APIRef("Canvas API")}}
 
 The readonly **`ImageData.data`** property returns a
@@ -16,11 +18,9 @@ The readonly **`ImageData.data`** property returns a
 pixel data. Data is stored as a one-dimensional array in the RGBA order, with integer
 values between `0` and `255` (inclusive).
 
-## Syntax
+## Value
 
-```js
-imageData.data
-```
+A {{jsxref("Uint8ClampedArray")}}.
 
 ## Examples
 
@@ -58,7 +58,7 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const imageData = ctx.createImageData(100, 100);
 
-// Iterate through every pixel
+// Fill the array with RGBA values
 for (let i = 0; i < imageData.data.length; i += 4) {
   // Percentage in the x direction, times 255
   let x = (i % 400) / 400 * 255;
@@ -82,8 +82,7 @@ ctx.putImageData(imageData, 20, 20);
 
 ### More examples
 
-For more examples using `ImageData.data`, see [Pixel
-manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas),
+For more examples using `ImageData.data`, see [Pixel manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas),
 {{domxref("CanvasRenderingContext2D.createImageData()")}}, and
 {{domxref("CanvasRenderingContext2D.putImageData()")}}.
 
@@ -102,5 +101,4 @@ manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipula
 - {{domxref("ImageData")}}
 - {{domxref("CanvasRenderingContext2D.createImageData()")}}
 - {{domxref("CanvasRenderingContext2D.putImageData()")}}
-- [Pixel
-  manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
+- [Pixel manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)

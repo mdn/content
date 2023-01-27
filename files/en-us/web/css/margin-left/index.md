@@ -1,6 +1,7 @@
 ---
 title: margin-left
 slug: Web/CSS/margin-left
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.margin-left
 ---
+
 {{CSSRef}}
 
 The **`margin-left`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#margin_area) on the left side of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
@@ -34,6 +36,7 @@ margin-left: auto;
 margin-left: inherit;
 margin-left: initial;
 margin-left: revert;
+margin-left: revert-layer;
 margin-left: unset;
 ```
 
@@ -44,7 +47,7 @@ The `margin-left` property is specified as the keyword `auto`, or a `<length>`, 
 - {{cssxref("&lt;length&gt;")}}
   - : The size of the margin as a fixed value.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The size of the margin as a percentage, relative to the _width_ of the containing block.
+  - : The size of the margin as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Containing_block).
 - `auto`
 
   - : The left margin receives a share of the unused horizontal space, as determined mainly by the layout mode that is used. If the values of `margin-left` and `margin-right` are both `auto`, the calculated space is evenly distributed. This table summarizes the different cases:
@@ -153,9 +156,15 @@ The `margin-left` property is specified as the keyword `auto`, or a `<length>`, 
 ### Setting left margin using pixels and percentages
 
 ```css
-.content { margin-left: 5%; }
-.sidebox { margin-left: 10px; }
-.logo    { margin-left: -5px; }
+.content {
+  margin-left: 5%;
+}
+.sidebox {
+  margin-left: 10px;
+}
+.logo {
+  margin-left: -5px;
+}
 ```
 
 ## Specifications

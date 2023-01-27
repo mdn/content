@@ -1,19 +1,19 @@
 ---
 title: masonry-auto-flow
 slug: Web/CSS/masonry-auto-flow
+page-type: css-property
 tags:
   - CSS
   - Experimental
-  - Property
+  - CSS Property
   - Reference
   - grid
   - masonry
   - masonry-auto-flow
 browser-compat: css.properties.masonry-auto-flow
 ---
-{{CSSRef}}
 
-{{SeeCompatTable}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`masonry-auto-flow`** CSS property modifies how items are placed when using [masonry](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) in [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout).
 
@@ -31,6 +31,7 @@ masonry-auto-flow: next ordered;
 masonry-auto-flow: inherit;
 masonry-auto-flow: initial;
 masonry-auto-flow: revert;
+masonry-auto-flow: revert-layer;
 masonry-auto-flow: unset;
 ```
 
@@ -93,7 +94,7 @@ This property may take one of two forms:
 
 #item1 {
   background-color: lime;
-  height: 2em
+  height: 2em;
 }
 
 #item2 {
@@ -120,9 +121,9 @@ This property may take one of two forms:
 const selectElem = document.querySelector('select');
 
 function changeMasonryFlow() {
-  var grid = document.getElementById("grid");
-  var direction = document.getElementById("flow");
-  var masonryAutoFlow = direction.value === "pack" ? "pack" : "next";
+  const grid = document.getElementById("grid");
+  const direction = document.getElementById("flow");
+  const masonryAutoFlow = direction.value === "pack" ? "pack" : "next";
 
   grid.style.masonryAutoFlow = masonryAutoFlow;
 }

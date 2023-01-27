@@ -1,6 +1,7 @@
 ---
 title: XRViewport.x
 slug: Web/API/XRViewport/x
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -24,6 +25,7 @@ tags:
   - x
 browser-compat: api.XRViewport.x
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRViewport")}} interface's

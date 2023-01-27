@@ -1,6 +1,7 @@
 ---
 title: AudioContext.getOutputTimestamp()
 slug: Web/API/AudioContext/getOutputTimestamp
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -12,6 +13,7 @@ tags:
   - sound
 browser-compat: api.AudioContext.getOutputTimestamp
 ---
+
 {{APIRef("Web Audio API")}}
 
 The
@@ -33,15 +35,15 @@ The two values are as follows:
 
 ## Syntax
 
-```js
-var timestamp = context.getOutputTimestamp()
+```js-nolint
+getOutputTimestamp()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 An `AudioTimestamp` object, which has the following properties.
 
@@ -58,35 +60,36 @@ In the following code we start to play an audio file after a play button is clic
 and start off a `requestAnimationFrame` loop running, which constantly
 outputs the `contextTime` and `performanceTime`.
 
-You can see full code of this [example
-at output-timestamp](https://github.com/mdn/webaudio-examples/blob/master/output-timestamp/index.html) ([see it live
-also](https://mdn.github.io/webaudio-examples/output-timestamp/)).
+You can see full code of this [example at output-timestamp](https://github.com/mdn/webaudio-examples/blob/master/output-timestamp/index.html) ([see it live also](https://mdn.github.io/webaudio-examples/output-timestamp/)).
 
 ```js
-play.addEventListener('click', () => {
-  if(!audioCtx) {
-    audioCtx = new window.AudioContext();
+// Press the play button
+playBtn.addEventListener("click", () => {
+  // We can create the audioCtx as there has been some user action
+  if (!audioCtx) {
+    audioCtx = new AudioContext();
   }
-
+  source = new AudioBufferSourceNode(audioCtx);
   getData();
   source.start(0);
-  play.setAttribute('disabled', 'disabled');
-
+  playBtn.disabled = true;
+  stopBtn.disabled = false;
   rAF = requestAnimationFrame(outputTimestamps);
 });
 
-stop.addEventListener('click', () => {
+// Press the stop button
+stopBtn.addEventListener("click", () => {
   source.stop(0);
-  play.removeAttribute('disabled');
+  playBtn.disabled = false;
+  stopBtn.disabled = true;
   cancelAnimationFrame(rAF);
 });
 
-// function to output timestamps
-
+// Helper function to output timestamps
 function outputTimestamps() {
-  let ts = audioCtx.getOutputTimestamp()
-  console.log('Context time: ' + ts.contextTime + ' | Performance time: ' + ts.performanceTime);
-  rAF = requestAnimationFrame(outputTimestamps);
+  const ts = audioCtx.getOutputTimestamp();
+  output.textContent = `Context time: ${ts.contextTime} | Performance time: ${ts.performanceTime}`;
+  rAF = requestAnimationFrame(outputTimestamps); // Reregister itself
 }
 ```
 

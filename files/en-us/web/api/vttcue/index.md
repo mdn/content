@@ -1,12 +1,14 @@
 ---
 title: VTTCue
 slug: Web/API/VTTCue
+page-type: web-api-interface
 tags:
   - VTTCue
   - text track
   - vtt
 browser-compat: api.VTTCue
 ---
+
 {{APIRef("WebVTT")}}
 
 The `VTTCue` interface—part of the API for handling WebVTT (text tracks on media presentations)—describes and controls the text track associated with a particular {{HTMLElement("track")}} element.
@@ -15,10 +17,10 @@ The `VTTCue` interface—part of the API for handling WebVTT (text tracks on med
 
 ## Constructor
 
-- {{domxref("VTTCue.VTTCue()")}}
+- {{domxref("VTTCue.VTTCue", "VTTCue()")}}
   - : Returns a newly created `VTTCue` object that covers the given time range and has the given text.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from {{domxref("TextTrackCue")}}._
 
@@ -41,9 +43,9 @@ _This interface also inherits properties from {{domxref("TextTrackCue")}}._
 - {{domxref("VTTCue.align")}}
   - : Returns an enum representing the alignment of all the lines of text within the cue box.
 - {{domxref("VTTCue.text")}}
-  - : Returns a {{domxref("DOMString")}} with the contents of the cue.
+  - : Returns a string with the contents of the cue.
 
-## Methods
+## Instance methods
 
 - {{domxref("VTTCue.getCueAsHTML", "getCueAsHTML()")}}
   - : Returns the cue text as a {{domxref("DocumentFragment")}}.
@@ -55,7 +57,9 @@ _This interface also inherits properties from {{domxref("TextTrackCue")}}._
 The following example adds a new {{domxref("TextTrack")}} to the video, then adds cues using the {{domxref("TextTrack.addCue()")}} method, with a `VTTCue` object as the value.
 
 ```html
-<video controls src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+<video
+  controls
+  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
 ```
 
 ### CSS

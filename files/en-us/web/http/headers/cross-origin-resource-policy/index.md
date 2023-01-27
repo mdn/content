@@ -9,11 +9,8 @@ tags:
   - header
 browser-compat: http.headers.Cross-Origin-Resource-Policy
 ---
-{{HTTPSidebar}}
 
-> **Note:** Due to a [bug in Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1074261),
-> setting Cross-Origin-Resource-Policy can break PDF rendering,
-> preventing visitors from being able to read past the first page of some PDFs.
+{{HTTPSidebar}}
 
 The HTTP **`Cross-Origin-Resource-Policy`** response header
 conveys a desire that the browser blocks no-cors cross-origin/cross-site requests to the
@@ -34,7 +31,7 @@ given resource.
 
 ## Syntax
 
-```
+```http
 Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
 ```
 
@@ -43,7 +40,7 @@ Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
 The response header below will cause compatible user agents to disallow cross-origin
 no-cors requests:
 
-```
+```http
 Cross-Origin-Resource-Policy: same-origin
 ```
 

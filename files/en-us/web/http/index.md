@@ -8,8 +8,9 @@ tags:
   - TCP/IP
   - Web
   - Web Development
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{HTTPSidebar}}
 
 **_Hypertext Transfer Protocol (HTTP)_** is an [application-layer](https://en.wikipedia.org/wiki/Application_Layer) protocol for transmitting hypermedia documents, such as HTML. It was designed for communication between web browsers and web servers, but it can also be used for other purposes. HTTP follows a classical [client-server model](https://en.wikipedia.org/wiki/Client%E2%80%93server_model), with a client opening a connection to make a request, then waiting until it receives a response. HTTP is a [stateless protocol](https://en.wikipedia.org/wiki/Stateless_protocol), meaning that the server does not keep any data (state) between two requests.
@@ -31,7 +32,7 @@ Learn how to use HTTP with guides and tutorials.
     The server can then determine which resources to send, based on the information that the client chooses to provide.
 - [Evolution of HTTP](/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
   - : A brief description of the changes between the early versions of HTTP, to the modern HTTP/2, the emergent HTTP/3 and beyond.
-- [Mozilla web security guidelines](https://wiki.mozilla.org/Security/Guidelines/Web_Security)
+- [Mozilla web security guidelines](https://infosec.mozilla.org/guidelines/web_security)
   - : A collection of tips to help operational teams with creating secure web applications.
 - [HTTP Messages](/en-US/docs/Web/HTTP/Messages)
   - : Describes the type and structure of the different kind of messages of HTTP/1.x and HTTP/2.
@@ -51,17 +52,17 @@ Browse through detailed HTTP reference documentation.
 - [HTTP Status Response Codes](/en-US/docs/Web/HTTP/Status)
   - : HTTP response codes indicate whether a specific HTTP request has been successfully completed. Responses are grouped in five classes: informational responses, successful responses, redirections, client errors, and servers errors.
 - [CSP directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy)
-  - : The {{HTTPHeader("Content-Security-Policy")}} response header fields allows web site administrators to control resources the user agent is allowed to load for a given page. With a few exceptions, policies mostly involve specifying server origins and script endpoints.
+  - : The {{HTTPHeader("Content-Security-Policy")}} response header fields allows website administrators to control resources the user agent is allowed to load for a given page. With a few exceptions, policies mostly involve specifying server origins and script endpoints.
 
 ## Tools & resources
 
 Helpful tools and resources for understanding and debugging HTTP.
 
-- [Firefox Developer Tools](/en-US/docs/Tools)
-  - : [Network monitor](/en-US/docs/Tools/Network_Monitor)
+- [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+  - : [Network monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
 - [Mozilla Observatory](https://observatory.mozilla.org/)
   - : A project designed to help developers, system administrators, and security professionals configure their sites safely and securely.
 - [RedBot](https://redbot.org/)
-  - : Tools to check your cache-related headers
-- [How Browsers Work](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
+  - : Tools to check your cache-related headers.
+- [How Browsers Work (2011)](https://web.dev/howbrowserswork/)
   - : A very comprehensive article on browser internals and request flow through HTTP protocol. A MUST-READ for any web developer.

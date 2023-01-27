@@ -1,6 +1,7 @@
 ---
 title: SVGFEGaussianBlurElement
 slug: Web/API/SVGFEGaussianBlurElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEGaussianBlurElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEGaussianBlurElement`** interface corresponds to the {{SVGElement("feGaussianBlur")}} element.
@@ -51,7 +53,7 @@ The **`SVGFEGaussianBlurElement`** interface corresponds to the {{SVGElement("fe
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
@@ -74,7 +76,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFEGaussianBlurElement.y")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods of its parent, {{domxref("SVGElement")}}._
 

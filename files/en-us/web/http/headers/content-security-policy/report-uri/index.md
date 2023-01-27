@@ -7,8 +7,10 @@ tags:
   - HTTP
   - Reference
   - Security
-browser-compat: http.headers.csp.Content-Security-Policy.report-uri
+  - Deprecated
+browser-compat: http.headers.Content-Security-Policy.report-uri
 ---
+
 {{HTTPSidebar}}{{deprecated_header}}
 
 The deprecated HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
@@ -22,8 +24,8 @@ documents sent via an HTTP POST request to the specified URI.
 > while also adding forward compatibility when browsers get {{CSP("report-to")}} support,
 > you can specify both **`report-uri`** and {{CSP("report-to")}}:
 >
-> ```html
-> Content-Security-Policy: ...; report-uri https://endpoint.com; report-to groupname
+> ```http
+> Content-Security-Policy: …; report-uri https://endpoint.com; report-to groupname
 > ```
 >
 > In browsers that support {{CSP("report-to")}},
@@ -53,7 +55,7 @@ with other directives.
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: report-uri <uri>;
 Content-Security-Policy: report-uri <uri> <uri>;
 ```
@@ -66,7 +68,7 @@ Content-Security-Policy: report-uri <uri> <uri>;
 See {{HTTPHeader("Content-Security-Policy-Report-Only")}} for more information and
 examples.
 
-```
+```http
 Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/
 ```
 

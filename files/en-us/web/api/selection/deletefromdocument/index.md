@@ -1,9 +1,9 @@
 ---
 title: Selection.deleteFromDocument()
 slug: Web/API/Selection/deleteFromDocument
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - HTML Editing
   - Method
   - Reference
@@ -11,22 +11,27 @@ tags:
   - deleteFromDocument
 browser-compat: api.Selection.deleteFromDocument
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+
+{{ ApiRef("DOM") }}
 
 The **`deleteFromDocument()`** method of the
 {{domxref("Selection")}} interface deletes the selected text from the document's DOM.
 
 ## Syntax
 
-```js
-sel.deleteFromDocument()
+```js-nolint
+deleteFromDocument()
 ```
 
 ### Parameters
 
-_None._
+None.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 This example lets you delete selected text by clicking a button. Upon clicking the
 button, the
@@ -36,7 +41,10 @@ button, the
 ### HTML
 
 ```html
-<p>Try highlighting some of the text in this paragraph. Once you do, you can remove the selected content by clicking the button below.</p>
+<p>
+  Try highlighting some of the text in this paragraph. Once you do, you can
+  remove the selected content by clicking the button below.
+</p>
 <button>Delete selected text</button>
 ```
 
@@ -54,7 +62,7 @@ function deleteSelection() {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

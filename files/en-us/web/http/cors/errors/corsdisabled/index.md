@@ -20,11 +20,12 @@ tags:
   - secure
   - troubleshooting
 ---
+
 {{HTTPSidebar}}
 
 ## Reason
 
-```
+```plain
 Reason: CORS disabled
 ```
 

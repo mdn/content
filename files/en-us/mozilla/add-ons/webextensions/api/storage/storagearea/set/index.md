@@ -14,6 +14,7 @@ tags:
   - set
 browser-compat: webextensions.api.storage.StorageArea.set
 ---
+
 {{AddonSidebar()}}
 
 Stores one or more items in the storage area, or update existing items.
@@ -26,7 +27,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let settingItem = browser.storage.<storageType>.set(
   keys             // object
 )
@@ -96,4 +97,4 @@ browser.storage.local.get("monster")
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.

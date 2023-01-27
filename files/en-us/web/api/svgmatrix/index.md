@@ -1,6 +1,7 @@
 ---
 title: SVGMatrix
 slug: Web/API/SVGMatrix
+page-type: web-api-interface
 tags:
   - API
   - Deprecated
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGMatrix
 ---
+
 {{APIRef("SVG")}}{{deprecated_header}}
 
 Many of SVG's graphics operations utilize 2x3 matrices of the form:
@@ -32,7 +34,7 @@ An **`SVGMatrix`** object can be designated as read only, which means that attem
 
 > **Warning:** SVG 2 replaced the `SVGMatrix` interface by the more general {{domxref("DOMMatrix")}} and {{domxref("DOMMatrixReadOnly")}} interfaces.
 
-## Properties
+## Instance properties
 
 - {{domxref("SVGMatrix.a")}}
   - : A float representing the _a_ component of the matrix.
@@ -47,7 +49,7 @@ An **`SVGMatrix`** object can be designated as read only, which means that attem
 - {{domxref("SVGMatrix.f")}}
   - : A float representing the _f_ component of the matrix.
 
-## Methods
+## Instance methods
 
 - {{domxref("SVGMatrix.multiply()")}}
   - : Performs matrix multiplication. This matrix is post-multiplied by another matrix, returning the resulting new matrix as `SVGMatrix`.

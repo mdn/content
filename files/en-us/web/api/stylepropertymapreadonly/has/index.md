@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMapReadOnly.has()
 slug: Web/API/StylePropertyMapReadOnly/has
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,6 +13,7 @@ tags:
   - has()
 browser-compat: api.StylePropertyMapReadOnly.has
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`has()`** method of the
@@ -20,20 +22,20 @@ property is in the `StylePropertyMapReadOnly` object.
 
 ## Syntax
 
-```js
-var boolean = StylePropertyMapReadOnly.has(property)
+```js-nolint
+has(property)
 ```
 
 ### Parameters
 
-- property
+- `property`
   - : The name of a property.
 
 ### Return value
 
-A {{jsxref("boolean")}}.
+A boolean value.
 
-## Example
+## Examples
 
 Here we use the `has()` method to see if the padding-top property is present
 within the button elements style attribute.
@@ -43,7 +45,7 @@ within the button elements style attribute.
 const buttonEl = document.querySelector('.example');
 
 // find what's in the style attribute with attributeStyleMap and has()
-const hasPadTop = buttonEl.attributeStyleMap.has('padding-top);
+const hasPadTop = buttonEl.attributeStyleMap.has('padding-top');
 
 console.log(hasPadTop); // logs true if padding-top is present in style attribute
 ```

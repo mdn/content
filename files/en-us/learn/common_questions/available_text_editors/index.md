@@ -8,6 +8,9 @@ tags:
   - Tools
   - text editor
 ---
+
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 In this article we highlight some things to think about when installing a text editor for web development.
 
 <table class="standard-table">
@@ -51,7 +54,7 @@ Notice we didn't mention price. Obviously, that matters too, but a product's cos
 
 Here are some popular editors:
 
-<table class="standard-table" &#x22;="">
+<table class="standard-table">
   <thead>
     <tr>
       <th scope="col">Editor</th>
@@ -64,17 +67,6 @@ Here are some popular editors:
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><a href="https://atom.io/">Atom</a></td>
-      <td>MIT/BSD</td>
-      <td>Free</td>
-      <td>Windows, Mac, Linux</td>
-      <td>
-        <a href="https://discuss.atom.io/categories" rel="external">Forum</a>
-      </td>
-      <td><a href="https://atom.io/docs/latest/">Online Manual</a></td>
-      <td><a href="https://atom.io/packages">Yes</a></td>
-    </tr>
     <tr>
       <td><a href="http://bluefish.openoffice.nl">Bluefish</a></td>
       <td>GPL 3</td>
@@ -94,11 +86,6 @@ Here are some popular editors:
       <td>Free</td>
       <td>Windows, Mac, Linux</td>
       <td>
-        <a
-          href="https://groups.google.com/forum/#!forum/brackets-dev"
-          rel="external"
-          >Forum</a
-        >,
         <a href="https://webchat.freenode.net/?channels=brackets" rel="external"
           >IRC</a
         >
@@ -117,17 +104,17 @@ Here are some popular editors:
       </td>
     </tr>
     <tr>
-      <td><a href="https://panic.com/coda/" rel="external">Coda</a></td>
+      <td><a href="https://nova.app/" rel="external">Nova</a></td>
       <td>Closed source</td>
       <td>$99</td>
       <td>Mac</td>
       <td>
         <a href="https://twitter.com/panic">Twitter</a>,
         <a href="https://panic.com/qa" rel="external">Forum</a>,
-        <a href="mailto:coda@panic.com">E-mail</a>
+        <a href="https://nova.app/help/">Online</a>
       </td>
-      <td><a href="https://panic.com/coda/#book">eBook</a></td>
-      <td><a href="https://panic.com/coda/plugins.php">Yes</a></td>
+      <td><a href="https://help.panic.com/nova/">eBook</a></td>
+      <td><a href="https://extensions.panic.com/">Yes</a></td>
     </tr>
     <tr>
       <td><a href="http://www.codelobster.com">CodeLobster</a></td>
@@ -135,9 +122,7 @@ Here are some popular editors:
       <td>Free</td>
       <td>Windows, Mac, Linux</td>
       <td>
-        <a href="http://www.codelobster.com/forum/index.php" rel="external"
-          >Forum</a
-        >, <a href="mailto:support@codelobster.com">E-mail</a>
+        <a href="http://www.codelobster.com/forum/index.php" rel="external">Forum</a >, <a href="mailto:support@codelobster.com">Email</a>
       </td>
       <td><a href="https://www.codelobsteride.com/help/">Online Manual</a></td>
       <td>Yes</td>
@@ -170,17 +155,15 @@ Here are some popular editors:
       <td>Yes</td>
     </tr>
     <tr>
-      <td><a href="https://www.macrabbit.com/espresso/">Espresso</a></td>
+      <td><a href="https://www.espressoapp.com/">Espresso</a></td>
       <td>Closed source</td>
-      <td>$75</td>
+      <td>$99</td>
       <td>Mac</td>
       <td>
-        <a href="https://www.macrabbit.com/support/" rel="external">FAQ</a>,
-        <a href="mailto:support@macrabbit.com">E-mail</a>
+        <a href="mailto:hello@espressoapp.com">Email</a>
       </td>
       <td>
-        No end user doc,<br />but
-        <a href="http://wiki.macrabbit.com/">plug-in doc</a>
+        <a href="https://help.espressoapp.com/">Online Manual</a>
       </td>
       <td>Yes</td>
     </tr>
@@ -190,16 +173,13 @@ Here are some popular editors:
       <td>Free</td>
       <td>Windows, Mac, Linux</td>
       <td>
-        <a
-          href="https://mail.gnome.org/mailman/listinfo/gedit-list"
-          rel="external"
-          >Mailing list</a
-        >, <a href="irc://irc.gnome.org/%23gedit">IRC</a>
+        <a href="https://discourse.gnome.org/tag/gedit"
+          rel="external">Discourse</a>, <a href="irc://irc.gnome.org/%23gedit">IRC</a>
       </td>
       <td>
         <a href="https://help.gnome.org/users/gedit/stable/">Online Manual</a>
       </td>
-      <td><a href="https://wiki.gnome.org/Apps/Gedit/PluginsLists">Yes</a></td>
+      <td><a href="https://wiki.gnome.org/Apps/Gedit/ThirdPartyPlugins">Yes</a></td>
     </tr>
     <tr>
       <td><a href="https://kate-editor.org/">Kate</a></td>
@@ -211,7 +191,7 @@ Here are some popular editors:
         <a href="irc://irc.kde.org/kate">IRC</a>
       </td>
       <td>
-        <a href="https://docs.kde.org/stable5/en/applications/kate/index.html"
+        <a href="https://docs.kde.org/index.php?application=kate&language=en"
           >Online Manual</a
         >
       </td>
@@ -219,7 +199,7 @@ Here are some popular editors:
     </tr>
     <tr>
       <td>
-        <a href="https://komodoide.com/komodo-edit/" rel="external"
+        <a href="https://www.activestate.com/products/komodo-edit/" rel="external"
           >Komodo Edit</a
         >
       </td>
@@ -228,11 +208,11 @@ Here are some popular editors:
       <td>Windows, Mac, Linux</td>
       <td><a href="http://forum.komodoide.com/" rel="external">Forum</a></td>
       <td>
-        <a href="http://docs.activestate.com/komodo/8.5/" rel="external"
+        <a href="https://docs.activestate.com/komodo" rel="external"
           >Online Manual</a
         >
       </td>
-      <td><a href="https://komodoide.com/resources/addons/">Yes</a></td>
+      <td><a href="https://community.komodoide.com/packages/addons/">Yes</a></td>
     </tr>
     <tr>
       <td>
@@ -248,14 +228,14 @@ Here are some popular editors:
       </td>
       <td>
         <a
-          href="https://npp-wiki.tuxfamily.org/index.php?title=Main_Page"
+          href="https://npp-user-manual.org/"
           rel="external"
-          >Wiki</a
+          >Online Manual</a
         >
       </td>
       <td>
         <a
-          href="https://npp-wiki.tuxfamily.org/index.php?title=Plugin_Central"
+          href="https://github.com/notepad-plus-plus/nppPluginList"
           rel="external"
           >Yes</a
         >
@@ -288,8 +268,8 @@ Here are some popular editors:
         >
       </td>
       <td>
-        <a href="https://www.sublimetext.com/docs/3/">Official</a>,<a
-          href="http://docs.sublimetext.info/en/latest/index.html"
+        <a href="https://www.sublimetext.com/docs/">Official</a>,<a
+          href="https://docs.sublimetext.io/"
         >
           Unofficial</a
         >
@@ -306,7 +286,7 @@ Here are some popular editors:
         <a href="https://webchat.freenode.net/?channels=textmate">IRC</a>,
         <a href="https://lists.macromates.com/listinfo/textmate" rel="external"
           >Mailing list</a
-        >, <a href="mailto:tm-support@macromates.com">E-mail</a>
+        >, <a href="mailto:tm-support@macromates.com">Email</a>
       </td>
       <td>
         <a href="https://manual.macromates.com/en/">Online Manual</a>,
@@ -323,27 +303,25 @@ Here are some popular editors:
     <tr>
       <td>
         <a
-          href="https://www.barebones.com/products/textwrangler/"
+          href="https://www.barebones.com/products/bbedit/"
           rel="external"
-          >TextWrangler</a
-        >
+          >BBEdit</a>
       </td>
       <td>Closed source</td>
       <td>Free</td>
       <td>Mac</td>
       <td>
         <a
-          href="https://www.barebones.com/support/textwrangler/faqs.html"
+          href="https://www.barebones.com/support/bbedit/"
           rel="external"
           >FAQ</a
-        >,
-        <a href="https://groups.google.com/forum/#!forum/textwrangler">Forum</a>
+        >
       </td>
       <td>
         <a
-          href="http://ash.barebones.com/TextWrangler_User_Manual.pdf"
+          href="https://www.barebones.com/products/bbedit/features.html"
           rel="external"
-          >PDF Manual</a
+          >Online Manual</a
         >
       </td>
       <td>No</td>
@@ -418,7 +396,7 @@ So, in more detail, what should you be thinking about when you choose a text edi
 
 Of course it's your choice. However, some editors are only available for certain OSs, so if you like switching back and forth, that would narrow down the possibilities. Any text editor _can_ get the job done, if it runs on your system, but a cross-platform editor eases migration from OS to OS.
 
-So first find out which OS you're using, and then check if a given editor supports your OS. Most editors specify on their website whether they support Windows or Mac, though some editors only support certain versions (say, only Windows 7 or later and not Vista). If you're running Ubuntu, your best bet is to search within the Ubuntu Software Center. In general, of course, the Linux/UNIX world is a pretty diverse place where different distros work with different, incompatible packaging systems. That means, if you've set your heart on an obscure text editor, you may have to compile it from source yourself (not for the faint-hearted).
+So first find out which OS you're using, and then check if a given editor supports your OS. Most editors specify on their website whether they support Windows or Mac, though some editors only support certain versions. If you're running Ubuntu, your best bet is to search within the Ubuntu Software Center. In general, of course, the Linux/UNIX world is a pretty diverse place where different distros work with different, incompatible packaging systems. That means, if you've set your heart on an obscure text editor, you may have to compile it from source yourself (not for the faint-hearted).
 
 #### What kind of technologies do I want to manipulate?
 
@@ -453,10 +431,10 @@ If you aren't sure which features you want, or your favorite editor lacks those 
 If you like _lots_ of features and your editor is slowing down because of all your plugins, try using an [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) (integrated development environment). An IDE provides many tools in one interface and it's a bit daunting for beginners, but always an option if your text editor feels too limited. Here are some popular IDEs:
 
 - [Aptana Studio](http://www.aptana.com/)
-- [Eclipse](https://eclipse.org/)
-- [Komodo IDE](https://komodoide.com/)
-- [NetBeans IDE](https://netbeans.org/)
-- [Visual Studio](https://www.visualstudio.com/)
+- [Eclipse](https://www.eclipse.org/)
+- [Komodo IDE](https://www.activestate.com/products/komodo-ide/)
+- [NetBeans IDE](https://netbeans.apache.org//)
+- [Visual Studio](https://visualstudio.microsoft.com/)
 - [WebStorm](https://www.jetbrains.com/webstorm/)
 
 #### Do I need support/help while using my text editor?
@@ -482,18 +460,15 @@ Installing a text editor is usually quite straightforward. The method varies bas
 
 When you install a new text editor, your OS will probably continue to open text files with its default editor until you change the _[file association](https://en.wikipedia.org/wiki/File_association)._ These instructions will help you specify that your OS should open files in your preferred editor when you double-click them:
 
-- Windows
+- [Windows](https://support.microsoft.com/en-us/windows)
 
-  - [Windows 8](https://windows.microsoft.com/en-us/windows-8/choose-programs-windows-uses-default)
-  - [Windows 7](https://windows.microsoft.com/en-us/windows/change-default-programs#1TC=windows-7)
-  - [older systems](https://pcsupport.about.com/od/fixtheproblem/f/chdefprogram.htm)
+- [macOS](https://support.apple.com/guide/mac-help/choose-an-app-to-open-a-file-on-mac-mh35597/mac)
 
-- [Mac OS X](https://osxdaily.com/2013/08/08/change-default-application-open-files-mac-os-x/)
 - Linux
 
   - [Ubuntu Unity](https://askubuntu.com/questions/289337/how-can-i-change-file-association-globally)
   - [GNOME](https://help.gnome.org/users/gnome-help/stable/files-open.html.en)
-  - [KDE](https://doc.opensuse.org/documentation/html/openSUSE_113/opensuse-kdeuser/cha.kde.cust.html#pro.kde.cust.system.fileass)
+  - [KDE](https://userbase.kde.org/System_Settings/File_Associations)
 
 ## Next steps
 

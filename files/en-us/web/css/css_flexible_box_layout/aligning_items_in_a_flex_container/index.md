@@ -1,6 +1,7 @@
 ---
-title: Aligning Items in a Flex Container
+title: Aligning items in a flex container
 slug: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
+page-type: guide
 tags:
   - Align
   - CSS
@@ -14,11 +15,12 @@ tags:
   - justify
   - justify-content
 ---
+
 {{CSSRef}}
 
 One of the reasons that flexbox quickly caught the interest of web developers is that it brought proper alignment capabilities to the web for the first time. It enabled proper vertical alignment, so we can at last easily center a box. In this guide, we will take a thorough look at how the alignment and justification properties work in Flexbox.
 
-To center our box we use the `align-items` property to align our item on the cross axis, which in this case is the block axis running vertically. We use `justify-content` to align the item on the main axis, which in this case the inline axis running horizontally.
+To center our box we use the `align-items` property to align our item on the cross axis, which in this case is the block axis running vertically. We use `justify-content` to align the item on the main axis, which in this case is the inline axis running horizontally.
 
 ![A containing element with another box centered inside it.](align1.png)
 
@@ -33,7 +35,7 @@ The properties we will look at in this guide are as follows.
 - {{cssxref("justify-content")}} — controls alignment of all items on the main axis.
 - {{cssxref("align-items")}} — controls alignment of all items on the cross axis.
 - {{cssxref("align-self")}} — controls alignment of an individual flex item on the cross axis.
-- {{cssxref("align-content")}} — described in the spec as for “packing flex lines”; controls space between flex lines on the cross axis.
+- {{cssxref("align-content")}} — described in the spec as for "packing flex lines"; controls space between flex lines on the cross axis.
 - {{cssxref("gap")}}, {{cssxref("column-gap")}}, and {{cssxref("row-gap")}} — used to create gaps or gutters between flex items.
 
 We will also discover how auto margins can be used for alignment in flexbox.
@@ -155,7 +157,7 @@ The live example below has the `direction` property set to `rtl` to force a righ
 
 The start line will also change if you change the `flex-direction` property — for example using `row-reverse` instead of `row`.
 
-In this next example I have items laid out with `flex-direction: row-reverse` and `justify-content: flex-end`. In a left to right language the items all line up on the left. Try changing `flex-direction: row-reverse` to `flex-direction: row`. You will see that the items now move to the right hand side.
+In this next example I have items laid out with `flex-direction: row-reverse` and `justify-content: flex-end`. In a left to right language the items all line up on the left. Try changing `flex-direction: row-reverse` to `flex-direction: row`. You will see that the items now move to the right-hand side.
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-reverse.html", '100%', 440)}}
 

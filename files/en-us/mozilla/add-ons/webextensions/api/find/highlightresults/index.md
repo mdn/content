@@ -12,6 +12,7 @@ tags:
   - highlightResults
 browser-compat: webextensions.api.find.highlightResults
 ---
+
 {{AddonSidebar()}}
 
 Highlights the results of a previous call to {{WebExtAPIRef("find.find()")}}.
@@ -22,7 +23,7 @@ Note that the stored results are global across all extensions, so for example, i
 
 ## Syntax
 
-```js
+```js-nolint
 browser.find.highlightResults(
   options // optional object
 )
@@ -30,7 +31,7 @@ browser.find.highlightResults(
 
 ### Parameters
 
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
 
   - : `object`. An object specifying additional options. It may take any of the following properties, all optional:
 

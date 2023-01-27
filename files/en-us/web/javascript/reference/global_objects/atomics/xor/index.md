@@ -1,6 +1,7 @@
 ---
 title: Atomics.xor()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/xor
+page-type: javascript-static-method
 tags:
   - Atomics
   - JavaScript
@@ -8,9 +9,10 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.xor
 ---
+
 {{JSRef}}
 
-The static **`Atomics.xor()`**
+The **`Atomics.xor()`** static
 method computes a bitwise XOR with a given value at a given position in the array, and
 returns the old value at that position. This atomic operation guarantees that no other
 write happens until the modified value is written back.
@@ -19,7 +21,7 @@ write happens until the modified value is written back.
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.xor(typedArray, index, value)
 ```
 

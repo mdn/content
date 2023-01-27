@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.bezierCurveTo()
 slug: Web/API/CanvasRenderingContext2D/bezierCurveTo
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,11 +10,12 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.bezierCurveTo
 ---
+
 {{APIRef}}
 
 The
 **`CanvasRenderingContext2D.bezierCurveTo()`**
-method of the Canvas 2D API adds a cubic [Bézier curve](/en-US/docs/Glossary/Bézier_curve) to the current
+method of the Canvas 2D API adds a cubic [Bézier curve](/en-US/docs/Glossary/Bezier_curve) to the current
 sub-path. It requires three points: the first two are control points and the third one
 is the end point. The starting point is the latest point in the current path, which can
 be changed using {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} before
@@ -21,8 +23,8 @@ creating the Bézier curve.
 
 ## Syntax
 
-```js
-void ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
+```js-nolint
+bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)
 ```
 
 ### Parameters
@@ -39,6 +41,10 @@ void ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
   - : The x-axis coordinate of the end point.
 - `y`
   - : The y-axis coordinate of the end point.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -134,4 +140,4 @@ ctx.stroke();
 ## See also
 
 - The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
-- [Bézier curve](/en-US/docs/Glossary/Bézier_curve)
+- [Bézier curve](/en-US/docs/Glossary/Bezier_curve)

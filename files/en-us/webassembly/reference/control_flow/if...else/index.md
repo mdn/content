@@ -8,11 +8,12 @@ tags:
   - Reference
   - Control flow
 ---
+
 {{WebAssemblySidebar}}
 
 The **`if`** statement executes a statement if the last item on the stack is true (1). If the condition is false (0), another statement can be executed
 
-{{EmbedInteractiveExample("pages/wat/if...else.html")}}
+{{EmbedInteractiveExample("pages/wat/if...else.html", "tabbed-taller")}}
 
 ## Syntax
 

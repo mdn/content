@@ -1,6 +1,7 @@
 ---
 title: Notification.image
 slug: Web/API/Notification/image
+page-type: web-api-instance-property
 tags:
   - API
   - Image
@@ -9,24 +10,20 @@ tags:
   - Notifications API
   - Property
   - Reference
+  - Experimental
 browser-compat: api.Notification.image
 ---
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The `image` read-only property of the
 {{domxref("Notification")}} interface contains the URL of an image to be displayed as
 part of the notification, as specified in the `image` option of the
 {{domxref("Notification.Notification","Notification()")}} constructor.
 
-## Syntax
+## Value
 
-```js
-var image = Notification.image;
-```
-
-### Value
-
-A {{domxref("USVString")}}.
+A string.
 
 ## Specifications
 
@@ -38,5 +35,4 @@ A {{domxref("USVString")}}.
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

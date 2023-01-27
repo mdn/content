@@ -2,12 +2,13 @@
 title: Firefox 42 for developers
 slug: Mozilla/Firefox/Releases/42
 tags:
-  - '42'
+  - "42"
   - Firefox
   - Mozilla
   - Release
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 42 was released on November 3, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -18,9 +19,9 @@ tags:
 
 Highlights:
 
-- [Debugging Firefox for Android over Wifi](/en-US/docs/Tools/about:debugging#connecting_over_the_network)
-- [Firefox OS Simulator configuration in WebIDE](/en-US/docs/Tools/WebIDE/Setting_up_runtimes#Configuring_Simulators)
-- [CSS filter presets](/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_filters#saving_filter_presets)
+- [Debugging Firefox for Android over Wi-Fi](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#connecting-over-the-network)
+- _Firefox OS Simulator configuration in WebIDE_
+- [CSS filter presets](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_filters/index.html#saving-filter-presets)
 
 [All devtools bugs fixed between Firefox 41 and Firefox 42](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-08-10&query_format=advanced&chfield=resolution&chfieldfrom=2015-06-29&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=12478437).
 
@@ -28,7 +29,7 @@ Highlights:
 
 - Vertical {{cssxref('writing-mode')}} is now supported with rtl scripts ({{bug(1131451)}}).
 - The values of {{cssxref("caption-side")}} are now relative to the table, and changing actual meaning according to its {{cssxref("writing-mode")}} value {{bug(1202993)}}.
-- Non-standard properties like `-moz-margin-start` are now aliases of their standard counterpart ({{cssxref('margin-inline-start')}}, …). Previously, it was the opposite. This affects the value returned by {{domxref('CSSStyleDeclaration.cssText')}} and iteration of the properties in a style rule and iteration of the properties in a style rule, that both use the canonical form ({{bug(1118103)}}).
+- Non-standard properties like `-moz-margin-start` are now aliases of their standard counterpart ({{cssxref('margin-inline-start')}}, …). Previously, it was the opposite. This affects the value returned by {{domxref('CSSStyleDeclaration.cssText')}} and iteration of the properties in a style rule, which both use the canonical form ({{bug(1118103)}}).
 - The prefixed version of CSS gradients can be turned off by setting the `layout.css.prefixes.gradients` preference to `false`.
 - Several old bugs with {{cssxref("float")}} and margin collapsing behavior have been fixed ({{bug(478834)}}, {{bug(538194)}}, and {{bug(451791)}}).
 
@@ -72,7 +73,7 @@ Our experimental implementation of [Web Animations API](/en-US/docs/Web/API/Web_
 - The {{domxref('Animation/playbackRate', 'AnimationPlayer.playbackRate')}} property ({{bug(1127380)}}).
 - The {{domxref('CSSAnimation')}} and {{domxref('CSSTransition')}} interfaces ({{bug(1178186)}}).
 - The {{domxref('Animation.reverse()')}} method ({{bug(1150808)}}).
-- The {{domxref('AnimationPlaybackEvent')}} interface has been added and {{event('cancel')}} and {{event('finish')}} are now fired on {{domxref('Animation')}} ({{bug(1178664)}}).
+- The {{domxref('AnimationPlaybackEvent')}} interface has been added and {{domxref("Animation/cancel_event", "cancel")}} and {{domxref("Animation/finish_event", "finish")}} are now fired on {{domxref('Animation')}} ({{bug(1178664)}}).
 
 #### Web Components
 
@@ -135,7 +136,7 @@ _No change._
 
 #### nsIContentPolicy
 
-- The `TYPE_EMBED` constant has been added to [`nsIContentPolicy`](/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPolicy) to allow Gecko internals and add-on code to better differentiate different types of requests. Previously, `TYPE_OBJECT` was used for these cases ({{bug(1148030)}}).
+- The `TYPE_EMBED` constant has been added to `nsIContentPolicy` to allow Gecko internals and add-on code to better differentiate different types of requests. Previously, `TYPE_OBJECT` was used for these cases ({{bug(1148030)}}).
 - Similarly, the `TYPE_SUBDOCUMENT` constants has been split into `TYPE_FRAME` and `TYPE_IFRAME` ({{bug(1148044)}}).
 
 ### XUL

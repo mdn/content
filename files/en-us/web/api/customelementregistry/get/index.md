@@ -1,10 +1,10 @@
 ---
 title: CustomElementRegistry.get()
 slug: Web/API/CustomElementRegistry/get
+page-type: web-api-instance-method
 tags:
   - API
   - CustomElementRegistry
-  - Experimental
   - Method
   - Reference
   - Web Components
@@ -12,6 +12,7 @@ tags:
   - get
 browser-compat: api.CustomElementRegistry.get
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 The **`get()`** method of the
@@ -20,19 +21,18 @@ previously-defined custom element.
 
 ## Syntax
 
-```js
-constructor = customElements.get(name);
+```js-nolint
+get(name)
 ```
 
 ### Parameters
 
-- name
-  - : The name of the custom element whose constructor you want to return a reference to.
+- `name`
+  - : The name of the custom element.
 
 ### Return value
 
-The constructor for the named custom element, or `undefined` if there is no
-custom element definition with that name.
+The constructor for the named custom element, or {{jsxref("undefined")}} if there is no custom element defined with the name.
 
 ## Examples
 

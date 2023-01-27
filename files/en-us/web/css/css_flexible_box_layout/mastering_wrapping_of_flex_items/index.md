@@ -1,6 +1,7 @@
 ---
-title: Mastering Wrapping of Flex Items
+title: Mastering wrapping of flex items
 slug: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
+page-type: guide
 tags:
   - CSS
   - Flex
@@ -10,6 +11,7 @@ tags:
   - grid
   - wrapping
 ---
+
 {{CSSRef}}
 
 Flexbox was designed as a single dimensional layout, meaning that it deals with laying out items as a row or as a column — but not both at once. There is however the ability to wrap flex items onto new lines, creating new rows if {{cssxref("flex-direction")}} is `row` and new columns if `flex-direction` is `column`. In this guide I will explain how this works, what it is designed for and what situations really require [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout) rather than flexbox.
@@ -50,7 +52,7 @@ This is the difference between one and two-dimensional layout. In a one dimensio
 
 Typically flexbox-based grid systems work by taking flexbox back to the familiar world of float-based layouts. If you assign percentage widths to flex items — either as `flex-basis` or by adding a width to the item itself leaving the value of `flex-basis` as `auto` — you can get the impression of a two dimensional layout. You can see this working in the example below.
 
-Here I have set `flex-grow` and `flex-shrink` to `0` to make inflexible flex items and am then controlling flexibility using percentages, just like we used to do in float layouts.
+Here I have set `flex-grow` and `flex-shrink` to `0` to make inflexible flex items and I'm then controlling flexibility using percentages, just like we used to do in float layouts.
 
 {{EmbedGHLiveSample("css-examples/flexbox/wrapping/flex-grid.html", '100%', 650)}}
 
@@ -58,11 +60,9 @@ If you need flex items to line up in the cross axis, controlling the width in th
 
 ## Creating gutters between items
 
-When wrapping flex items, the need to space them out is likely to arise. At the current time we do not have any implementations of the gap properties from the [Box Alignment module](https://www.w3.org/TR/css-align-3/) for Flexbox. In the future we will be able to use `row-gap` and `column-gap` for flexbox as we do for CSS Grid. At the current time you will need to use margins to achieve this.
+When wrapping flex items, the need to space them out is likely to arise. You can see from the live example below that in order to create gaps that do not also create a gap at the edges of the container, we need to use negative margins on the flex container itself. Any border on the flex container is then moved to a second wrapper in order that the negative margin can pull the items up to that wrapper element.
 
-You can see from the live example below that in order to create gaps that do not also create a gap at the edges of the container, we need to use negative margins on the flex container itself. Any border on the flex container is then moved to a second wrapper in order that the negative margin can pull the items up to that wrapper element.
-
-It is this requirement that the gap properties, once implemented, will solve for us. Proper gaps only happen on the inside edges of items.
+A more robust way to perform the above tasks is to include the Flexbox `gap` property on the container to set equal space between all flex items. Try setting gaps using both negative margins and the `gap` property in the editor below.
 
 {{EmbedGHLiveSample("css-examples/flexbox/wrapping/gaps.html", '100%', 830)}}
 
@@ -70,7 +70,7 @@ It is this requirement that the gap properties, once implemented, will solve for
 
 The flexbox specification details what should happen if a flex item is collapsed by setting `visibility: collapse` on an item. See the MDN documentation for the {{cssxref("visibility")}} property. The specification describes the behavior as follows:
 
-> “Specifying visibility:collapse on a flex item causes it to become a collapsed flex item, producing an effect similar to visibility:collapse on a table-row or table-column: the collapsed flex item is removed from rendering entirely, but leaves behind a "strut" that keeps the flex line's cross-size stable. Thus, if a flex container has only one flex line, dynamically collapsing or uncollapsing items may change the flex container's main size, but is guaranteed to have no effect on its cross size and won't cause the rest of the page's layout to "wobble". Flex line wrapping is re-done after collapsing, however, so the cross-size of a flex container with multiple lines might or might not change.” - [Collapsed items](https://www.w3.org/TR/css-flexbox-1/#visibility-collapse)
+> "Specifying visibility:collapse on a flex item causes it to become a collapsed flex item, producing an effect similar to visibility:collapse on a table-row or table-column: the collapsed flex item is removed from rendering entirely, but leaves behind a "strut" that keeps the flex line's cross-size stable. Thus, if a flex container has only one flex line, dynamically collapsing or uncollapsing items may change the flex container's main size, but is guaranteed to have no effect on its cross size and won't cause the rest of the page's layout to "wobble". Flex line wrapping is re-done after collapsing, however, so the cross-size of a flex container with multiple lines might or might not change." - [Collapsed items](https://www.w3.org/TR/css-flexbox-1/#visibility-collapse)
 
 This behavior is useful if you want to target flex items using JavaScript to show and hide content for example. The example in the specification demonstrates one such pattern.
 

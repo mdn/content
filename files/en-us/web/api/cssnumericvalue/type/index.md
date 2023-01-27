@@ -1,17 +1,19 @@
 ---
-title: CSSNumericValue.type
+title: CSSNumericValue.type()
 slug: Web/API/CSSNumericValue/type
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
   - CSSNumericValue
   - Experimental
   - Houdini
-  - Property
+  - Method
   - Reference
   - Type
 browser-compat: api.CSSNumericValue.type
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`type()`** method of the
@@ -22,8 +24,8 @@ The **`type()`** method of the
 
 ## Syntax
 
-```js
-var cssNumericType = CSSNumericValue.type();
+```js-nolint
+type()
 ```
 
 ### Parameters

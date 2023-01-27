@@ -1,6 +1,7 @@
 ---
 title: SVGRenderingIntent
 slug: Web/API/SVGRenderingIntent
+page-type: web-api-interface
 tags:
   - API
   - Deprecated
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGRenderingIntent
 ---
+
 {{APIRef("SVG")}}{{deprecated_header}}
 
 The **`SVGRenderingIntent`** interface defines the enumerated list of possible values for {{SVGAttr("rendering-intent")}} attributes or descriptors.
@@ -63,11 +65,11 @@ The **`SVGRenderingIntent`** interface defines the enumerated list of possible v
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 _This interface doesn't implement any specific properties._
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods._
 

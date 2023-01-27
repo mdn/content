@@ -1,6 +1,7 @@
 ---
 title: ResizeObserverEntry.devicePixelContentBoxSize
 slug: Web/API/ResizeObserverEntry/devicePixelContentBoxSize
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - devicePixelContentBoxSize
 browser-compat: api.ResizeObserverEntry.devicePixelContentBoxSize
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`devicePixelContentBoxSize`** read-only property of
@@ -31,8 +33,7 @@ multi-column scenarios. Each object in the array contains two properties:
     width; if the writing-mode is vertical, this is the vertical dimension, or height.
 
 > **Note:** For more information about writing modes and block and inline
-> dimensions, read [Handling
-> different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
+> dimensions, read [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
 ## Examples
 
@@ -49,7 +50,7 @@ const observer = new ResizeObserver((entries) => {
 
   /* … render to canvas … */
 });
-observer.observe(canvas, {box: ['device-pixel-content-box']});
+observer.observe(canvas, {box: 'device-pixel-content-box'});
 ```
 
 ## Specifications

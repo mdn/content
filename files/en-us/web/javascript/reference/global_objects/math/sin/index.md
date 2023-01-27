@@ -1,6 +1,7 @@
 ---
 title: Math.sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
+page-type: javascript-static-method
 tags:
   - JavaScript
   - Math
@@ -8,45 +9,43 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Math.sin
 ---
+
 {{JSRef}}
 
-The **`Math.sin()`** function returns the sine of a number.
+The **`Math.sin()`** static method returns the sine of a number in radians.
 
 {{EmbedInteractiveExample("pages/js/math-sin.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Math.sin(x)
 ```
 
 ### Parameters
 
 - `x`
-  - : A number (given in radians).
+  - : A number representing an angle in radians.
 
 ### Return value
 
-The sine of the given number.
+The sine of `x`, between -1 and 1, inclusive. If `x` is {{jsxref("Infinity")}}, `-Infinity`, or {{jsxref("NaN")}}, returns {{jsxref("NaN")}}.
 
 ## Description
 
-The `Math.sin()` method returns a numeric value between -1 and 1, which
-represents the sine of the angle given in radians.
-
-Because `sin()` is a static method of `Math`, you always use it
-as `Math.sin()`, rather than as a method of a `Math` object you
-created (`Math` is not a constructor).
+Because `sin()` is a static method of `Math`, you always use it as `Math.sin()`, rather than as a method of a `Math` object you created (`Math` is not a constructor).
 
 ## Examples
 
 ### Using Math.sin()
 
 ```js
-Math.sin(0);           // 0
-Math.sin(1);           // 0.8414709848078965
-
+Math.sin(-Infinity); // NaN
+Math.sin(-0); // -0
+Math.sin(0); // 0
+Math.sin(1); // 0.8414709848078965
 Math.sin(Math.PI / 2); // 1
+Math.sin(Infinity); // NaN
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: GeolocationPositionError.code
 slug: Web/API/GeolocationPositionError/code
+page-type: web-api-instance-property
 tags:
   - API
   - Code
@@ -10,6 +11,7 @@ tags:
   - Secure context
 browser-compat: api.GeolocationPositionError.code
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationPositionError.code`** read-only property is an `unsigned short` representing the error code.

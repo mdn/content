@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.readyState
 slug: Web/API/XMLHttpRequest/readyState
+page-type: web-api-instance-property
 tags:
   - AJAX
   - Property
@@ -8,6 +9,7 @@ tags:
   - XMLHttpRequest
 browser-compat: api.XMLHttpRequest.readyState
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The **XMLHttpRequest.readyState** property returns the state an XMLHttpRequest client is in. An XHR client exists in one of the following states:
@@ -36,17 +38,17 @@ The **XMLHttpRequest.readyState** property returns the state an XMLHttpRequest c
 ## Example
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 console.log('UNSENT', xhr.readyState); // readyState will be 0
 
 xhr.open('GET', '/api', true);
 console.log('OPENED', xhr.readyState); // readyState will be 1
 
-xhr.onprogress = function () {
+xhr.onprogress = () => {
     console.log('LOADING', xhr.readyState); // readyState will be 3
 };
 
-xhr.onload = function () {
+xhr.onload = () => {
     console.log('DONE', xhr.readyState); // readyState will be 4
 };
 

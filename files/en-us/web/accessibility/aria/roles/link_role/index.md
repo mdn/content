@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: link role'
+title: "ARIA: link role"
 slug: Web/Accessibility/ARIA/Roles/link_role
 tags:
   - ARIA
@@ -8,6 +8,7 @@ tags:
   - Link role
   - ARIA link
   - Accessibility
+spec-urls: https://w3c.github.io/aria/#link
 ---
 
 A `link` widget provides an interactive reference to a resource. The target resource can be either external or local; i.e., either outside or within the current page or application.
@@ -56,22 +57,22 @@ span[role="link"]:focus {
 
 ### JavaScript
 
-```JavaScript
+```js
 const fakeLinks = document.querySelectorAll('[role="link"]');
 
-for(let i = 0; i < fakeLinks.length; i++) {
-  fakeLinks[i].addEventListener('click', navigateLink);
-  fakeLinks[i].addEventListener('keydown', navigateLink);
+for (let i = 0; i < fakeLinks.length; i++) {
+  fakeLinks[i].addEventListener("click", navigateLink);
+  fakeLinks[i].addEventListener("keydown", navigateLink);
 }
 
 //handles clicks and keydowns on the link
 function navigateLink(e) {
-    if (e.type === 'click' || e.key === 'Enter') {
-        let ref = e.target != null ? e.target : e.srcElement;
-        if (ref) {
-          window.open(ref.getAttribute('data-href'), '_blank');
-        }
+  if (e.type === "click" || e.key === "Enter") {
+    const ref = e.target ?? e.srcElement;
+    if (ref) {
+      window.open(ref.getAttribute("data-href"), "_blank");
     }
+  }
 }
 ```
 
@@ -93,9 +94,7 @@ Using the {{HTMLElement('a')}} instead.
 
 ## Specifications
 
-| Specification                                                                                            | Status                                           |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#link","ARIA link role")}}                                         | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See also
 
@@ -108,6 +107,6 @@ Using the {{HTMLElement('a')}} instead.
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

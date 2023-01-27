@@ -1,6 +1,7 @@
 ---
 title: NodeIterator.filter
 slug: Web/API/NodeIterator/filter
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -8,6 +9,7 @@ tags:
   - Property
 browser-compat: api.NodeIterator.filter
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeIterator.filter`** read-only method returns a
@@ -21,20 +23,17 @@ should return the constant `NodeFilter.FILTER_ACCEPT` for cases when the
 node should be accepted and `NodeFilter.FILTER_REJECT` for cases when the
 node should be rejected.
 
-## Syntax
+## Value
 
-```js
-nodeFilter = nodeIterator.filter;
-```
+A {{domxref("NodeFilter")}} object.
 
-## Example
+## Examples
 
 ```js
 const nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
 nodeFilter = nodeIterator.filter;
 ```

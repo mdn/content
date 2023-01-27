@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.selectedIndex
 slug: Web/API/HTMLSelectElement/selectedIndex
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement.selectedIndex
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLSelectElement.selectedIndex`** is a
@@ -17,14 +19,11 @@ The **`HTMLSelectElement.selectedIndex`** is a
 {{HTMLElement("option")}} element, depending on the value of `multiple`. The
 value `-1` indicates that no element is selected.
 
-## Syntax
+## Value
 
-```js
-var index = selectElem.selectedIndex;
-selectElem.selectedIndex = index;
-```
+A number.
 
-## Example
+## Examples
 
 ### HTML
 
@@ -43,18 +42,18 @@ selectElem.selectedIndex = index;
 ### JavaScript
 
 ```js
-var selectElem = document.getElementById('select')
-var pElem = document.getElementById('p')
+const selectElem = document.getElementById('select')
+const pElem = document.getElementById('p')
 
 // When a new <option> is selected
-selectElem.addEventListener('change', function() {
-  var index = selectElem.selectedIndex;
+selectElem.addEventListener('change', () => {
+  const index = selectElem.selectedIndex;
   // Add that data to the <p>
-  pElem.innerHTML = 'selectedIndex: ' + index;
+  pElem.textContent = `selectedIndex: ${index}`;
 })
 ```
 
-{{EmbedLiveSample("Example", "200px", "80px")}}
+{{EmbedLiveSample("Examples", "200px", "120px")}}
 
 ## Specifications
 

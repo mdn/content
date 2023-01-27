@@ -1,6 +1,7 @@
 ---
 title: WeakSet.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - WeakSet
 browser-compat: javascript.builtins.WeakSet.delete
 ---
+
 {{JSRef}}
 
 The **`delete()`** method removes the specified element from a
@@ -18,7 +20,7 @@ The **`delete()`** method removes the specified element from a
 
 ## Syntax
 
-```js
+```js-nolint
 delete(value)
 ```
 
@@ -38,15 +40,15 @@ the `WeakSet` or if the `value` is not an object.
 ### Using the delete() method
 
 ```js
-var ws = new WeakSet();
-var obj = {};
+const ws = new WeakSet();
+const obj = {};
 
 ws.add(window);
 
-ws.delete(obj);    // Returns false. No obj found to be deleted.
-ws.delete(window); // Returns true.  Successfully removed.
+ws.delete(obj); // Returns false. No obj found to be deleted.
+ws.delete(window); // Returns true. Successfully removed.
 
-ws.has(window);    // Returns false. The window is no longer present in the WeakSet.
+ws.has(window); // Returns false. The window is no longer present in the WeakSet.
 ```
 
 ## Specifications
@@ -60,4 +62,5 @@ ws.has(window);    // Returns false. The window is no longer present in the Weak
 ## See also
 
 - {{jsxref("WeakSet")}}
-- {{jsxref("WeakSet.prototype.clear()")}}
+- {{jsxref("WeakSet.prototype.add()")}}
+- {{jsxref("WeakSet.prototype.has()")}}

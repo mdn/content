@@ -1,6 +1,7 @@
 ---
 title: XRInputSource.targetRayMode
 slug: Web/API/XRInputSource/targetRayMode
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -21,6 +22,7 @@ tags:
   - targetRayMode
 browser-compat: api.XRInputSource.targetRayMode
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRInputSource")}}
@@ -54,7 +56,7 @@ The input source's {{domxref("XRInputSource.targetRaySpace", "targetRaySpace")}}
 indicates the position and orientation of the target ray, and can be used to determine
 where to render the ray.
 
-## Example
+## Examples
 
 This fragment of code shows part of a function to be called once every frame. It looks for inputs which have a non-`null` {{domxref("XRInputSource.targetRaySpace", "targetRaySpace")}}. Inputs which have a value for this property represent inputs that project a target ray outward from the user.
 
@@ -64,16 +66,16 @@ The code should continue to perform tasks such as drawing controllers or any obj
 
 ```js
 function updateInputSources(session, frame, refSpace) {
-  for (let source of session.getInputSources()) {
-    let targetRayPose = frame.getPose(inputSource.targetRaySpace, refSpace);
+  for (const source of session.getInputSources()) {
+    const targetRayPose = frame.getPose(inputSource.targetRaySpace, refSpace);
 
     if (targetRayPose) {
-      if (source.targetRayMode == "tracked-pointer") {
+      if (source.targetRayMode === "tracked-pointer") {
         myRenderTargetRayAsBeam(targetRayPose);
       }
     }
 
-    /* ... */
+    // …
   }
 }
 ```
@@ -92,5 +94,4 @@ See the article [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
 - [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs)
-- [Using gamepads in WebXR
-  applications](/en-US/docs/Web/WebXR%20Device%20API/Gamepads)
+- [Using gamepads in WebXR applications](/en-US/docs/Web/WebXR%20Device%20API/Gamepads)

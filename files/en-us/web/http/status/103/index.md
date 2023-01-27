@@ -8,9 +8,11 @@ tags:
   - NeedsCompatTable
   - NeedsContent
   - Status code
+  - Experimental
 browser-compat: http.status.103
 ---
-{{HTTPSidebar}}
+
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP **`103 Early Hints`** information response status code
 is primarily intended to be used with the {{HTTPHeader("Link")}} header to allow the
@@ -24,9 +26,7 @@ user agent to start preloading resources while the server is still preparing a r
 
 ## Specifications
 
-| Specification                                | Status   | Comments           |
-| -------------------------------------------- | -------- | ------------------ |
-| {{RFC(8297, "103 Early Hints")}} | IETF RFC | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

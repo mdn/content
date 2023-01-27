@@ -1,6 +1,7 @@
 ---
 title: XRInputSourcesChangeEvent.added
 slug: Web/API/XRInputSourcesChangeEvent/added
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -19,6 +20,7 @@ tags:
   - augmented
 browser-compat: api.XRInputSourcesChangeEvent.added
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRInputSourcesChangeEvent")}}
@@ -40,14 +42,14 @@ removed devices whose {{domxref("XRInputSource.targetRayMode", "targetRayMode")}
 `tracked-pointer`.
 
 ```js
-xrSession.oninputsourcescchange = event => {
-  for (let input of event.added) {
-    if (input.targetRayMode == "tracked-pointer") {
+xrSession.oninputsourcescchange = (event) => {
+  for (const input of event.added) {
+    if (input.targetRayMode === "tracked-pointer") {
       addedPointerDevice(input);
     }
   }
-  for (let input of event.removed) {
-    if (input.targetRayMode == "tracked-pointer") {
+  for (const input of event.removed) {
+    if (input.targetRayMode === "tracked-pointer") {
       removedPointerDevice(input);
     }
   }

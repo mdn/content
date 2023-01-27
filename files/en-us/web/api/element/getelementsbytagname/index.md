@@ -1,6 +1,7 @@
 ---
 title: Element.getElementsByTagName()
 slug: Web/API/Element/getElementsByTagName
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.getElementsByTagName
 ---
+
 {{ APIRef("DOM") }}
 
 The
@@ -34,28 +36,29 @@ elements that are descendants of the specified element.
 
 ## Syntax
 
-```js
-elements = element.getElementsByTagName(tagName)
+```js-nolint
+getElementsByTagName(tagName)
 ```
 
-- `elements` is a _live_ {{domxref("HTMLCollection")}} of elements
-  with a matching tag name, in the order they appear. If no elements are found, the
-  `HTMLCollection` is empty.
-- `element` is the element from where the search starts. Only the
-  element's descendants are included, not the element itself.
+### Parameters
+
 - `tagName` is the qualified name to look for. The special string
   `"*"` represents all elements. For compatibility with XHTML, lower-case
   should be used.
 
-## Example
+### Return value
+
+A _live_ {{domxref("HTMLCollection")}} of elements with a matching tag name, in the order they appear. If no elements are found, the `HTMLCollection` is empty.
+
+## Examples
 
 ```js
 // Check the status of each data cell in a table
 const table = document.getElementById('forecast-table');
 const cells = table.getElementsByTagName('td');
 
-for (let cell of cells) {
-  let status = cell.getAttribute('data-status');
+for (const cell of cells) {
+  const status = cell.getAttribute('data-status');
   if (status === 'open') {
     // Grab the data
   }

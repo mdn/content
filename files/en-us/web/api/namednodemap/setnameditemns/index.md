@@ -1,11 +1,13 @@
 ---
 title: NamedNodeMap.setNamedItemNS()
 slug: Web/API/NamedNodeMap/setNamedItemNS
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
 browser-compat: api.NamedNodeMap.setNamedItemNS
 ---
+
 {{APIRef("DOM")}}
 
 The **`setNamedItemNS()`** method of the {{domxref("NamedNodeMap")}} interface
@@ -18,8 +20,8 @@ it is _replaced_.
 
 ## Syntax
 
-```js
-setNamedItemNS(attr);
+```js-nolint
+setNamedItemNS(attr)
 ```
 
 ### Parameters
@@ -44,27 +46,31 @@ Returns the old attribute if replaced, or `null` if the attribute is new.
 ```
 
 ```js
-
 const parser = new DOMParser();
 // ob:one in <span> is not in a namespace, while ob:one in <warning>, is.
-const xmlString = '<warning ob:one="test" xmlns:ob="http://www.example.com/ob">Beware!</warning>';
+const xmlString =
+  '<warning ob:one="test" xmlns:ob="http://www.example.com/ob">Beware!</warning>';
 const doc = parser.parseFromString(xmlString, "application/xml");
 
-const span = document.getElementsByTagName("span")[0];
-const pre = document.getElementsByTagName("pre")[0];
-const warning = doc.getElementsByTagName("warning")[0];
+const span = document.querySelector("span");
+const pre = document.querySelector("pre");
+const warning = doc.querySelector("warning");
 const attrMap = span.attributes;
 
-let result = "The `<span>` element initially contains " + attrMap.length + " attribute.\n\n";
+let result = `The '<span>' element initially contains ${attrMap.length} attribute.\n\n`;
 
-result += "We remove `one` from `<span>` and adds it to `<pre>`.\n";
-const one = warning.attributes.removeNamedItemNS("http://www.example.com/ob", "one");
+result += "We remove `one` from '<span>' and adds it to '<pre>'.\n";
+const one = warning.attributes.removeNamedItemNS(
+  "http://www.example.com/ob",
+  "one"
+);
 attrMap.setNamedItemNS(one);
-result += "The `<span>` element now contains " + span.attributes.length + " attributes:\n\n";
+result += `The '<span>' element now contains ${span.attributes.length} attributes:\n\n`;
 result += "Prefix\tLocal name\tQualified name\n";
 result += "=========================================\n";
-for(let attr of attrMap) {
-  result += attr.prefix + "\t" + attr.localName + "\t\t" + attr.name + "\n";
+
+for (const attr of attrMap) {
+  result += `${attr.prefix}\t${attr.localName}\t\t${attr.name}\n`;
 }
 
 pre.textContent = result;

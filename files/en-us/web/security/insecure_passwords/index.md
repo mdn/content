@@ -9,6 +9,9 @@ tags:
   - password
   - passwords
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 Serving login forms over HTTP is especially dangerous because of the wide variety of attacks that can be used against them to extract a user's password. Network eavesdroppers could steal a user's password by sniffing the network, or by modifying the served page in transit.
 
 The [HTTPS](/en-US/docs/Glossary/https) protocol is designed to protect user data from eavesdropping (confidentiality) and from modification (integrity) on the network. Websites that handle user data should use HTTPS to protect their users from attackers. If a website uses HTTP instead of HTTPS, it is trivial to steal user information (such as their login credentials). This was famously demonstrated by [Firesheep](https://codebutler.github.io/firesheep/).
@@ -24,5 +27,3 @@ Unfortunately, [password reuse is a big problem](https://www.lightbluetouchpaper
 ## See also
 
 - [No More Passwords over HTTP, Please!](https://blog.mozilla.org/tanvi/2016/01/28/no-more-passwords-over-http-please/) — detailed blog post with more information, and FAQ.
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

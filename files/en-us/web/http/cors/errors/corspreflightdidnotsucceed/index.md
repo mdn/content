@@ -14,11 +14,12 @@ tags:
   - console
   - troubleshooting
 ---
+
 {{HTTPSidebar}}
 
 ## Reason
 
-```
+```plain
 Reason: CORS preflight channel did not succeed
 ```
 

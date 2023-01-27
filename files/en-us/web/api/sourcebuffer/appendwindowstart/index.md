@@ -1,10 +1,10 @@
 ---
 title: SourceBuffer.appendWindowStart
 slug: Web/API/SourceBuffer/appendWindowStart
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - Media Source Extensions
   - Property
@@ -14,7 +14,8 @@ tags:
   - appendWindowStart
 browser-compat: api.SourceBuffer.appendWindowStart
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+
+{{APIRef("Media Source Extensions")}}
 
 The **`appendWindowStart`** property of the
 {{domxref("SourceBuffer")}} interface controls the timestamp for the start of the [append window](https://w3c.github.io/media-source/#append-window), a
@@ -25,15 +26,7 @@ appended, whereas those outside the range will be filtered out.
 The default value of `appendWindowStart` is the presentation start time,
 which is the beginning time of the playable media.
 
-## Syntax
-
-```js
-var myAppendWindowStart = sourceBuffer.appendWindowStart;
-
-sourceBuffer.appendWindowStart = 2.0;
-```
-
-### Value
+## Value
 
 A double, indicating the start time of the append window, in seconds.
 
@@ -43,15 +36,15 @@ The following exceptions may be thrown when setting a new value for this propert
 
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if an attempt was made to set the value to less than 0 or to a value greater
-        than or equal to
-        {{domxref("SourceBuffer.appendWindowEnd")}}.
+    than or equal to
+    {{domxref("SourceBuffer.appendWindowEnd")}}.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if this {{domxref("SourceBuffer")}} object is being updated (i.e.
-        its {{domxref("SourceBuffer.updating")}} property is
-        currently `true`), or this `SourceBuffer` has been
-        removed from the {{domxref("MediaSource")}}.
+    its {{domxref("SourceBuffer.updating")}} property is
+    currently `true`), or this `SourceBuffer` has been
+    removed from the {{domxref("MediaSource")}}.
 
-## Example
+## Examples
 
 TBD
 

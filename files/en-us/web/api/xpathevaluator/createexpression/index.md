@@ -1,6 +1,7 @@
 ---
 title: XPathEvaluator.createExpression()
 slug: Web/API/XPathEvaluator/createExpression
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -11,6 +12,7 @@ tags:
   - XPathEvaluator
 browser-compat: api.XPathEvaluator.createExpression
 ---
+
 {{APIRef("DOM XPath")}}
 
 This method compiles an {{domxref("XPathExpression")}} which can then be used for
@@ -18,15 +20,16 @@ This method compiles an {{domxref("XPathExpression")}} which can then be used fo
 
 ## Syntax
 
-```js
-XPathExpression XPathEvaluator.createExpression(expression, resolver);
+```js-nolint
+createExpression(expression)
+createExpression(expression, resolver)
 ```
 
 ### Parameters
 
-- expression
-  - : A {{domxref("DOMString")}} representing the XPath expression to be created.
-- resolver {{optional_inline}}
+- `expression`
+  - : A string representing the XPath expression to be created.
+- `resolver` {{optional_inline}}
   - : Permits translation of all prefixes, including the `xml` namespace
     prefix, within the XPath expression into appropriate namespace URIs.
 
@@ -49,7 +52,7 @@ If the expression contains namespace prefixes which cannot be resolved by the sp
 {{domxref("XPathNSResolver")}}, a {{domxref("DOMException")}} of type
 `NAMESPACE_ERROR` is raised.
 
-## Example
+## Examples
 
 The following example shows the use of the `evaluate()` method.
 
@@ -63,16 +66,16 @@ The following example shows the use of the `evaluate()` method.
 ### JavaScript
 
 ```js
-var xpath = "//div";
-var evaluator = new XPathEvaluator();
-var expression = evaluator.createExpression(xpath);
-var result = expression.evaluate(document, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
+const xpath = "//div";
+const evaluator = new XPathEvaluator();
+const expression = evaluator.createExpression(xpath);
+const result = expression.evaluate(document, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
 document.querySelector("output").textContent = result.snapshotLength;
 ```
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

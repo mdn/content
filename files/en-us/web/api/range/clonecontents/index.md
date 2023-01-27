@@ -1,6 +1,7 @@
 ---
 title: Range.cloneContents()
 slug: Web/API/Range/cloneContents
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -8,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.cloneContents
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Range.cloneContents()`** returns a {{
@@ -24,11 +26,19 @@ fragment valid.
 
 ## Syntax
 
-```js
-documentFragment = range.cloneContents();
+```js-nolint
+cloneContents()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+A {{domxref("DocumentFragment") }} object.
+
+## Examples
 
 ```js
 range = document.createRange();

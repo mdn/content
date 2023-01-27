@@ -1,11 +1,13 @@
 ---
 title: by
 slug: Web/SVG/Attribute/by
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute
-browser-compat: svg.elements.animate.by
+browser-compat: svg.elements.animateTransform.by
 ---
+
 {{SVGRef}}
 
 The **`by`** attribute specifies a relative offset value for an attribute that will be modified during an animation.
@@ -22,7 +24,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -30,7 +34,7 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <rect x="10" y="10" width="100" height="100">
-    <animate attributeName="width" fill="freeze" by="50" dur="3s"/>
+    <animate attributeName="width" fill="freeze" by="50" dur="3s" />
   </rect>
 </svg>
 ```
@@ -62,31 +66,7 @@ When a list of values is defined via the {{SVGAttr("values")}} attribute, the `b
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#ByAttribute", "by")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "animate.html#ByAttribute", "by")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

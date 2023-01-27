@@ -1,6 +1,7 @@
 ---
 title: Atomics.add()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/add
+page-type: javascript-static-method
 tags:
   - Atomics
   - JavaScript
@@ -8,9 +9,10 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.add
 ---
+
 {{JSRef}}
 
-The static **`Atomics.add()`**
+The **`Atomics.add()`** static
 method adds a given value at a given position in the array and returns the old value at
 that position. This atomic operation guarantees that no other write happens until the
 modified value is written back.
@@ -19,7 +21,7 @@ modified value is written back.
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.add(typedArray, index, value)
 ```
 

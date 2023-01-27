@@ -1,6 +1,7 @@
 ---
 title: Basic concepts of Logical Properties and Values
 slug: Web/CSS/CSS_Logical_Properties/Basic_concepts
+page-type: guide
 tags:
   - CSS
   - CSS Logical Properties
@@ -8,6 +9,7 @@ tags:
   - concepts
   - writing modes
 ---
+
 {{CSSRef}}
 
 The Logical Properties and Values Specification introduces flow-relative mappings for many of the properties and values in CSS. This article introduces the specification, and explains flow relative properties and values.

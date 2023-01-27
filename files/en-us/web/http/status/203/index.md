@@ -7,7 +7,9 @@ tags:
   - Reference
   - Status code
   - Successful response
+spec-urls: https://httpwg.org/specs/rfc9110.html#status.203
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`203 Non-Authoritative Information`** response
@@ -23,15 +25,13 @@ status code.
 
 ## Status
 
-```
+```http
 203 Non-Authoritative Information
 ```
 
 ## Specifications
 
-| Specification                                                                        | Title                                                         |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "203 Non-Authoritative Information" , "6.3.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## See also
 

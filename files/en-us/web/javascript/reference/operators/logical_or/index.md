@@ -1,6 +1,7 @@
 ---
 title: Logical OR (||)
 slug: Web/JavaScript/Reference/Operators/Logical_OR
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
@@ -9,9 +10,10 @@ tags:
   - Reference
 browser-compat: javascript.operators.logical_or
 ---
+
 {{jsSidebar("Operators")}}
 
-The logical OR (`||`) operator (logical disjunction) for a set of operands
+The **logical OR (`||`)** (logical disjunction) operator for a set of operands
 is true if and only if one or more of its operands is true. It is typically used with
 boolean (logical) values. When it is, it returns a Boolean value. However,
 the `||` operator actually returns the value of one of the specified
@@ -22,7 +24,7 @@ non-Boolean value.
 
 ## Syntax
 
-```js
+```js-nolint
 expr1 || expr2
 ```
 
@@ -66,19 +68,25 @@ happens because the value of the operator is already determined after the evalua
 the first operand. See example:
 
 ```js
-function A(){ console.log('called A'); return false; }
-function B(){ console.log('called B'); return true; }
+function A() {
+  console.log('called A');
+  return false;
+}
+function B() {
+  console.log('called B');
+  return true;
+}
 
-console.log( B() || A() );
-// logs "called B" due to the function call,
+console.log(B() || A());
+// Logs "called B" due to the function call,
 // then logs true (which is the resulting value of the operator)
 ```
 
 ### Operator precedence
 
 The following expressions might seem equivalent, but they are not, because the
-`&&` operator is executed before the `||` operator (see [operator
-precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
+`&&` operator is executed before the `||` operator
+(see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
 
 ```js
 true || false && false      // returns true, because && is executed first
@@ -95,7 +103,7 @@ The following code shows examples of the `||` (logical OR) operator.
 o1 = true  || true       // t || t returns true
 o2 = false || true       // f || t returns true
 o3 = true  || false      // t || f returns true
-o4 = false || (3 == 4)   // f || f returns false
+o4 = false || (3 === 4)  // f || f returns false
 o5 = 'Cat' || 'Dog'      // t || t returns "Cat"
 o6 = false || 'Cat'      // f || t returns "Cat"
 o7 = 'Cat' || false      // t || f returns "Cat"
@@ -106,8 +114,8 @@ o10 = false || varObject // f || object returns varObject
 
 > **Note:** If you use this operator to provide a default value to some
 > variable, be aware that any _falsy_ value will not be used. If you only need to
-> filter out {{jsxref("null")}} or {{jsxref("undefined")}}, consider using [the
-> nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator).
+> filter out [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, consider using
+> [the nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing).
 
 ### Conversion rules for booleans
 
@@ -166,8 +174,7 @@ is always equal to:
 
 ## See also
 
-- [The
-  nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [The nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - {{jsxref("Boolean")}}
 - {{Glossary("Truthy")}}
 - {{Glossary("Falsy")}}

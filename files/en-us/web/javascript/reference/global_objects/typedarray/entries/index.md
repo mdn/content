@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - Iterator
@@ -13,6 +14,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.entries
 ---
+
 {{JSRef}}
 
 The **`entries()`** method returns a new {{jsxref("Array")}}
@@ -22,7 +24,7 @@ iterator object that contains the key/value pairs for each index in the array.
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 
@@ -35,25 +37,24 @@ A new _array iterator_ object.
 ### Iteration using for...of loop
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArray = arr.entries();
-// your browser must support for..of loop
-// and let-scoped variables in for loops
-for (let n of eArray) {
-  console.log(n);
+const array = new Uint8Array([10, 20, 30, 40, 50]);
+const arrayEntries = arr.entries();
+for (const element of arrayEntries) {
+  console.log(element);
 }
 ```
 
 ### Alternative iteration
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArr = arr.entries();
-console.log(eArr.next().value); // [0, 10]
-console.log(eArr.next().value); // [1, 20]
-console.log(eArr.next().value); // [2, 30]
-console.log(eArr.next().value); // [3, 40]
-console.log(eArr.next().value); // [4, 50]
+const array = new Uint8Array([10, 20, 30, 40, 50]);
+const arrayEntries = arr.entries();
+
+console.log(arrayEntries.next().value); // [0, 10]
+console.log(arrayEntries.next().value); // [1, 20]
+console.log(arrayEntries.next().value); // [2, 30]
+console.log(arrayEntries.next().value); // [3, 40]
+console.log(arrayEntries.next().value); // [4, 50]
 ```
 
 ## Specifications
@@ -71,5 +72,4 @@ console.log(eArr.next().value); // [4, 50]
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.keys()")}}
 - {{jsxref("TypedArray.prototype.values()")}}
-- {{jsxref("TypedArray.prototype.@@iterator()",
-    "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
