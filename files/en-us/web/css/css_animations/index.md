@@ -87,7 +87,7 @@ i {
   height: 16px;
   width: 16px;
   border-radius: 50%;
-  animation: falling 3s linear 2s infinite backwards;
+  animation: falling 3s linear 0s infinite backwards;
   background-image: 
     linear-gradient(180deg, transparent 40%, white 40%, white 60%, transparent 60%), 
     linear-gradient(90deg, transparent 40%, white 40%, white 60%, transparent 60%), 
@@ -175,7 +175,7 @@ i {
      -5px 15px 15px white, 
      0 20px 20px rgba(125 125 125 / 0.5);
 
-  animation: clouds ease 5s alternate infinite 2s;
+  animation: clouds ease 5s alternate infinite 0.2s, wind ease-out 4s alternate infinite;
 }
 .ground {
   background-image: linear-gradient(to top, white 0 97%, 99%, rgb(125 125 125) 100%);
@@ -193,10 +193,17 @@ i {
 @keyframes clouds {
   from {
     border-radius: 0 0 90px 33% / 0 0 45px 50px; 
-    height: 150px;
   }
   to {
     border-radius: 0 0 40px 50% / 0 0 55px 80px; 
+  }
+}
+
+@keyframes wind {
+  from {
+    height: 150px;
+  }
+  to {
     height: 100px;
   }
 }
