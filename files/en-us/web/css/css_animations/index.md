@@ -17,8 +17,6 @@ spec-urls:
 
 The **CSS Animations** module lets you animate the values of CSS properties over time, using keyframes, providing properties to control the easing, duration, number of repetitions, play state, and other attributes of these keyframes.
 
-`<STILL WORKING ON THIS>`
-
 ### Example
 
 To activate the clouds to start the snow fall and snow accumulation, hover over the example. When you move the mouse out of the example, the animation will pause.
@@ -218,6 +216,8 @@ div:hover * {
 
 {{ EmbedLiveSample('Example', "630", "630") }}
 
+This example uses {{cssxref("animation-iteration-count")}} to make the flakes fall repeatedly, {{cssxref("animation-direction")}} to make the clouds move back and forth, {{cssxref("animation-fill-mode")}} to keep the snow level high once it has stopped growing, and {{cssxref("animation-play-state")}} to pause the animation.
+
 ## Reference
 
 ### Properties
@@ -230,7 +230,6 @@ div:hover * {
 - {{cssxref("animation-fill-mode")}}
 - {{cssxref("animation-iteration-count")}}
 - {{cssxref("animation-name")}}
-- {{cssxref("animation-play-state")}}
 - {{cssxref("animation-timing-function")}}
 - {{cssxref("animation-timeline")}}
 
@@ -286,5 +285,5 @@ div:hover * {
 
 - [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions) can trigger animations based on user actions.
 - The CSS Scroll Timeline {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties, along with the {{cssxref('scroll-timeline')}} shorthand, create animations tied to the scroll offset of a scroll container.
-- The [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media query to enabled providing minimize motions for users requesting it.
+- The [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media query to enable minimizing animations for users requesting it.
 - The [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) enables constructing and controlling the playback of animations with JavaScript.
