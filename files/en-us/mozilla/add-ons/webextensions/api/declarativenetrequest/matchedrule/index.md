@@ -17,11 +17,12 @@ browser-compat: webextensions.api.declarativeNetRequest.MatchedRule
 
 An object describing the matched rule. This type may be returned by the {{WebExtAPIRef("declarativeNetRequest.getMatchedRules")}} or {{WebExtAPIRef("declarativeNetRequest.testMatchOutcome")}} methods, or observed through the {{WebExtAPIRef("declarativeNetRequest.onRuleMatchedDebug")}} event.
 
-
 ## Type
 
 Values of this type are objects. They contain these properties:
 
+- `extensionId`
+  - : A `string`. The ID of the extension, if this rule belongs to a different extension. This property is only available when used with {{WebExtAPIRef("declarativeNetRequest.testMatchOutcome")}}, with the `includeOtherExtensions` option set to `true`.
 - `ruleId`
   - : A `number`. The matching rule's ID.
 - `rulesetId`
