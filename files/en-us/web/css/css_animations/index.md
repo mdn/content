@@ -267,7 +267,7 @@ This example uses {{cssxref("animation-iteration-count")}} to make the flakes fa
 - [CSS animations tips and tricks](/en-US/docs/Web/CSS/CSS_Animations/Tips)
   - : Tips and tricks to help you get the most out of CSS animations. Currently offers a technique for replaying an animation which has already run through to completion, which the API doesn't support inherently.
 
-## Associated content
+## Related content
 
 ### Associated properties
 

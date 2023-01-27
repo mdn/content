@@ -91,7 +91,7 @@ span {
 
 - {{cssxref("&lt;blend-mode&gt;")}}
 
-## Associated content
+## Related content
 
 ### Associated properties
 
