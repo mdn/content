@@ -352,6 +352,7 @@
         "EventTarget",
         "HTMLCollection",
         "MutationObserver",
+        "MutationRecord",
         "NamedNodeMap",
         "Node",
         "NodeIterator",
