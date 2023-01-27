@@ -19,9 +19,11 @@ The **CSS Animations** module lets you animate the values of CSS properties over
 
 ### Example
 
-To activate the clouds to start the snow fall and snow accumulation, hover over the example. When you move the mouse out of the example, the animation will pause.
+To view the animation in action, check the checkbox or hover over the example. The cloud will change shape, snowflakes will fall, and the snow level will rise. To pause the animation, uncheck the checkbox or move your mouse off of the example.
 
 ```html hidden
+<input type="checkbox" id="animate" aria-label="Toggle the play state of the animation">
+<label for="animate">the animation</label>
 <div class="root">
   <i></i>
   <i></i>
@@ -97,61 +99,81 @@ i {
  i:nth-of-type(4n) {
     height: 30px;
     width: 30px;
-    transform-origin: right -30px; }
+    transform-origin: right -30px; 
+    }
  i:nth-of-type(4n+1) {
     height: 24px;
     width: 24px;
-    transform-origin: left 30px; }
+    transform-origin: left 30px; 
+    }
  i:nth-of-type(4n+2) {
     height: 10px;
     width: 10px;
-    transform-origin: -30px 0; }
+    transform-origin: -30px 0; 
+    }
  i:nth-of-type(4n+3) {
     height: 40px;
     width: 40px;
-    transform-origin: -50px 0; }
+    transform-origin: -50px 0; 
+    }
  i:nth-of-type(4n) {
     animation-duration: 5.3s;
     animation-iteration-count: 12;
-    transform-origin: -10px -20px; }
+    transform-origin: -10px -20px; 
+    }
  i:nth-of-type(4n+1) {
     animation-duration: 3.1s;
     animation-iteration-count: 20;
-    transform-origin: 10px -20px; }
+    transform-origin: 10px -20px; 
+    }
  i:nth-of-type(4n+2) {
     animation-duration: 1.7s;
     animation-iteration-count: 35;
-    transform-origin: right -20px; }
+    transform-origin: right -20px; 
+    }
  i:nth-of-type(3n) {
-    animation-delay: 2.3s; }
+    animation-delay: 2.3s; 
+    }
  i:nth-of-type(3n+1) {
-    animation-delay: 1.5s; }
+    animation-delay: 1.5s; 
+    }
  i:nth-of-type(3n+2) {
-    animation-delay: 3.4s; }
+    animation-delay: 3.4s; 
+    }
  i:nth-of-type(5n) {
-    animation-timing-function: ease-in-out; }
+    animation-timing-function: ease-in-out; 
+    }
  i:nth-of-type(5n+1) {
-    animation-timing-function: ease-out; }
+    animation-timing-function: ease-out; 
+    }
  i:nth-of-type(5n+2) {
-    animation-timing-function: ease; }
+    animation-timing-function: ease; 
+    }
  i:nth-of-type(5n+3) {
-    animation-timing-function: ease-in; }
+    animation-timing-function: ease-in; 
+    }
  i:nth-of-type(5n+4) {
-    animation-timing-function: linear; }
+    animation-timing-function: linear; 
+    }
  i:nth-of-type(11n) {
     animation-timing-function: cubic-bezier(0.2, 0.3, 0.8, 0.9); }
  i:nth-of-type(7n) {
-    opacity: 0.5; }
+    opacity: 0.5; 
+    }
  i:nth-of-type(7n+2) {
-    opacity: 0.3; }
+    opacity: 0.3; 
+    }
  i:nth-of-type(7n+4) {
-    opacity: 0.7; }
+    opacity: 0.7; 
+    }
  i:nth-of-type(7n+6) {
     opacity: 0.6;
     animation-timing-function: ease-in;
-    transform-origin: left 10px; }
+    transform-origin: left 10px;
+    }
  i:nth-of-type(7n+1) {
-    opacity: 0.8; }
+    opacity: 0.8;
+    }
 
 .root {
   height: 600px;
@@ -162,7 +184,7 @@ i {
 }
 .ground, .cloud {
   position: absolute;
-  top: 0; right: 0; left: 0; bottom: 0;
+  top: 0; right: 0; left: 0; 
   background-repeat: no-repeat;
 }
 .cloud { 
@@ -175,10 +197,13 @@ i {
      -5px 15px 15px white, 
      0 20px 20px rgba(125 125 125 / 0.5);
 
-  animation: clouds ease 5s alternate infinite 0.2s, wind ease-out 4s alternate infinite;
+  animation: 
+    clouds ease 5s alternate infinite 0.2s, 
+    wind ease-out 4s alternate infinite;
 }
 .ground {
-  background-image: linear-gradient(to top, white 0 97%, 99%, rgb(125 125 125) 100%);
+  bottom: 0;
+  background-image: linear-gradient(to top, #fff 97%, 99%, #bbb 100%);
   background-position: center 580px;
   animation: snowpile linear 300s forwards;
   border: 1px solid grey;
@@ -186,8 +211,12 @@ i {
 }
 
 @keyframes snowpile {
-  from {background-position: center 580px;}
-  to {background-position: center 280px;}
+  from {
+    background-position: center 580px;
+    }
+  to {
+    background-position: center 280px;
+    }
 }
 
 @keyframes clouds {
@@ -210,14 +239,25 @@ i {
 
 @keyframes falling {
   from {
-    transform: translate(0, -50px) rotate(0deg) scale(0.9, 0.9); }
+    transform: translate(0, -50px) rotate(0deg) scale(0.9, 0.9); 
+    }
   to {
-    transform: translate(30px, 600px) rotate(360deg) scale(1.1, 1.1); } 
+    transform: translate(30px, 600px) rotate(360deg) scale(1.1, 1.1); 
+    } 
 }
 
-i, div[class] {animation-play-state: paused;}
-div:hover * {
+i, 
+div[class] {
+  animation-play-state: paused;
+}
+div:hover *, input:checked ~ div * {
   animation-play-state: running;
+}
+input + label::before {
+  content: "Play "
+}
+input:checked + label::before {
+  content: "Pause "
 }
 ```
 
