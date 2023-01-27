@@ -59,7 +59,7 @@ Some examples won't run if you open them as local files. This can be due to a va
 
 To get around the problem of async requests, we need to test such examples by running them through a local web server.
 
-### Using an extension in your code editor to run a local HTTP server
+### Using an extension in your code editor
 
 If you only need HTML, CSS and JavaScript, and no server-side language, the easiest way may be to check for extensions in your code editor. As well as automating installation and set-up for your local HTTP server, they also integrate nicely with your code editors. Testing local files in an HTTP server may be one click away.
 
