@@ -378,7 +378,7 @@ Better still, the Web Animations API also provides a [`finished`](/en-US/docs/We
 
 ## Conclusion
 
-These are the basic features of the Web Animations API. By now you should be ready to "jump down the rabbit hole" of animating in the browser and ready to write your own animation experiments! 
+These are the basic features of the Web Animations API. By now you should be ready to "jump down the rabbit hole" of animating in the browser and ready to write your own animation experiments!
 
 ## See also
 
