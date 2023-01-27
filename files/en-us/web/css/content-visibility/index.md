@@ -77,7 +77,6 @@ The following example shows the use of `content-visibility:auto` to skip paintin
 <section>
   <!-- Content for each section… -->
 </section>
-
 ```
 
 #### CSS
@@ -100,11 +99,15 @@ The following example shows that it is possible to manage visibility using JavaS
 ```html
 <div class="hidden">
   <button data-state="hidden">Show</button>
-  <p>This content is hidden (at the start) and will be visible when the button is clicked.</p>
+  <p>
+    This content is initially hidden and is visible when the button is clicked.
+  </p>
 </div>
 <div class="visible">
   <button data-state="visible">Hide</button>
-  <p>This content is visible (at the start) and will be hidden when the button is clicked.</p>
+  <p>
+    This content is initially visible and is hidden when the button is clicked.
+  </p>
 </div>
 ```
 
@@ -131,21 +134,21 @@ The `contain-intrinsic-size` property is included to represent the content size.
 ```js
 const handleClick = (event) => {
   if (event.target.tagName.toLowerCase() === "button") {
-    const currentButton = event.target
+    const currentButton = event.target;
     if (currentButton.dataset.state === "hidden") {
-      currentButton.textContent = "Hide"
-      currentButton.setAttribute("data-state", "visible")
-      currentButton.closest("div").classList.replace("hidden", "visible")
+      currentButton.textContent = "Hide";
+      currentButton.setAttribute("data-state", "visible");
+      currentButton.closest("div").classList.replace("hidden", "visible");
     } else if (currentButton.dataset.state === "visible") {
-      currentButton.textContent = "Show"
-      currentButton.setAttribute("data-state", "hidden")
-      currentButton.closest("div").classList.replace("visible", "hidden")
+      currentButton.textContent = "Show";
+      currentButton.setAttribute("data-state", "hidden");
+      currentButton.closest("div").classList.replace("visible", "hidden");
     }
   } else {
-    return
+    return;
   }
-}
-document.addEventListener("click", handleClick)
+};
+document.addEventListener("click", handleClick);
 ```
 
 #### Result
