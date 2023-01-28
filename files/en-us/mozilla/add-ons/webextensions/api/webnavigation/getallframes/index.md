@@ -43,8 +43,8 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 - `errorOccurred`
   - : `boolean`. True if the last navigation in this frame was interrupted by an error, i.e. the {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} event fired.
-- `processId`
-  - : `integer`. The ID of the process running the renderer for this tab.
+- `processId` {{optional_inline}} {{deprecated_inline}}
+  - : `integer`. This value is never set in modern browsers. It used to represent the ID of the process running the renderer for this tab.
 - `frameId`
   - : `integer`. The ID of the frame. If this is the main frame, then `frameId` is zero.
 - `parentFrameId`

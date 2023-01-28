@@ -65,8 +65,8 @@ Events have three functions:
 
 - `sourceFrameId`
   - : `integer`. ID of the frame from which the navigation is initiated. `0` indicates that the frame is the tab's top-level browsing context, not a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation is initiated from a nested iframe. Frame IDs are unique for a given tab and process.
-- `sourceProcessId`
-  - : `integer`. The ID of the process from which the navigation is initiated.
+- `processId` {{optional_inline}} {{deprecated_inline}}
+  - : `integer`. This value is never set in modern browsers. It used to represent the ID of the process from which the navigation originated.
 - `sourceTabId`
   - : `integer`. The ID of the tab from which the navigation is initiated. For example, if the user opens a link in a new tab, this will be the ID of the tab containing the link.
 - `tabId`
