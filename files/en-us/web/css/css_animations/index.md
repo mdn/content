@@ -318,7 +318,7 @@ This example uses {{cssxref("animation-iteration-count")}} to make the flakes fa
 
 ### Associated properties
 
-- {{cssxref('will-change')}}
+- {{cssxref("will-change")}}
 
 ### Glossary terms
 
