@@ -21,11 +21,9 @@ requestSubmit(submitter)
 
 - `submitter` {{optional_inline}}
 
-  - : The submit button whose attributes describe the method by which the form is to be
-    submitted. This may be either an {{HTMLElement("input")}} or
-    {{HTMLElement("button")}} element whose `type` attribute
-    is `submit`.
-
+  - : A {{Glossary("submit button")}} that is a member of the form.
+    If the `submitter` specifies `form*` attributes, they will override the form's default behavior (e.g. `formmethod="POST"`).
+    If the `submitter` has a `name` attribute or is an `{{HtmlElement('input/image', '&lt;input type="image"&gt;')}}`, it will be included in the form data set.
     If you omit the `submitter` parameter, the form element
     itself is used as the submitter.
 
@@ -36,7 +34,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the specified `submitter` is not a submit button.
+  - : Thrown if the specified `submitter` is not a {{Glossary("submit button")}}.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if the specified `submitter` isn't a member of the form on
     which `requestSubmit()` was called. The submitter must be either a
