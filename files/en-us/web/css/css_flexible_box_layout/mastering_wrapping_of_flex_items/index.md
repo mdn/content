@@ -60,7 +60,7 @@ If you need flex items to line up in the cross axis, controlling the width in th
 
 ## Creating gutters between items
 
-You may have heard great stories about negative margins. Don't even think. Nowadays we have the Flexbox `gap` property to make the said task super convenient.
+To create gaps or gutters between flex items, use the {{CSSXref('gap')}} property.
 
 The gap property in CSS is a shorthand for `row-gap` and `column-gap`, specifying the size of gutters, which is the space between rows and columns within grid, flex, and multi-column layouts.
 
