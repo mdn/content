@@ -21,21 +21,21 @@ Unlike most global objects, `Reflect` is not a constructor. You cannot use it wi
 
 The `Reflect` object provides a collection of static functions which have the same names as the [proxy handler methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy). Some of these methods are also the same as corresponding methods on {{jsxref("Object")}}, although they do have [some subtle differences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods) between them.
 
-`Reflect`'s core use case is to provide default forwarding behavior in `Proxy` handler traps. In practice, a trap is used to intercept operations
-on an object (e.g. deletion of the object's properties). In the example below, a trap is used to execute some custom functionality.
-The `Reflect` API is used to invoke an object's internal methods; in this case, it calls the `[[DELETE]]` method on `targetObject`:
+The major use case of `Reflect` is to provide default forwarding behavior in `Proxy` handler traps. A [trap](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#terminology) is used to intercept an operation on an object — it provides a custom implementation for an [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods). The `Reflect` API is used to invoke the corresponding internal method. For example, the code below creates a proxy `p` with a [`deleteProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty) trap that intercepts the `[[Delete]]` internal method. `Reflect.deleteProperty()` is used to invoke the default `[[Delete]]` behavior on `targetObject` directly. You can replace it with [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete), but using `Reflect` saves you from having to remember the syntax that each internal method corresponds to.
 
 ```js
-new Proxy({}, {
+const p = new Proxy({}, {
   deleteProperty(targetObject, property) {
-    // Custom functionality - log the deletion
-    console.log("Deleting property: " + property);
+    // Custom functionality: log the deletion
+    console.log("Deleting property: ", property);
 
-    // Execute the default instrospection behaviour
+    // Execute the default introspection behavior
     return Reflect.deleteProperty(targetObject, property);
   }
 });
 ```
+
+The `Reflect` methods also allow finer control of how the internal method is invoked. For example, {{jsxref("Reflect.construct()")}} is the only way to construct a target function with a specific [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) value. If you use the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator to invoke a function, the `new.target` value is always the function itself. This has important effects with [subclassing](/en-US/docs/Web/JavaScript/Reference/Operators/new.target#new.target_using_reflect.construct). For another example, {{jsxref("Reflect.get()")}} allows you to run a [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) with a custom `this` value, while [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) always use the current object as the `this` value.
 
 ## Static properties
 
