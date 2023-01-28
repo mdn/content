@@ -33,6 +33,35 @@ new DocumentTimeline(options)
         as a number of milliseconds relative to the {{domxref("Performance.timeOrigin","time origin")}} of the current {{domxref("Document")}}.
         Defaults to `0`.
 
+## Examples
+
+### Origin time
+
+Since {{domxref("Document.timeline")}} is relative to the {{domxref("Performance.timeOrigin","time origin")}}, a `DocumentTimeline` with `originTime` `0` will show the same time as it.
+
+```js
+const timeline = new DocumentTimeline();
+console.log(timeline.currentTime === document.timeline.currentTime); // true
+```
+
+`DocumentTimeline`s with a non-zero `originTime` will be offset from {{domxref("Document.timeline")}} by that amount.
+
+```js
+const offsetTimeline = new DocumentTimeline({ originTime: 500 });
+console.log(
+  document.timeline.currentTime - offsetTimeline.currentTime
+); // 500
+```
+
+A `DocumentTimeline` relative to the current moment can be constructed with:
+
+```js
+const nowTimeline = new DocumentTimeline({
+  originTime: document.timeline.currentTime
+});
+console.log(nowTimeline.currentTime); // 0
+```
+
 ## Specifications
 
 {{Specifications}}
