@@ -19,11 +19,12 @@ browser-compat: api.Document.timeline
 
 {{ APIRef("Web Animations") }}
 
-The `timeline` readonly property of the {{domxref("Document")}} interface represents the default timeline of the current document. This timeline is a special instance of {{domxref("DocumentTimeline")}} that is automatically created on page load.
+The `timeline` readonly property of the {{domxref("Document")}} interface represents the default timeline of the current document. This timeline is a special instance of {{domxref("DocumentTimeline")}}.
 
 This timeline is unique to each `document` and persists for the lifetime of the `document` including calls to {{domxref("Document.open()")}}.
 
-The time values for this timeline are calculated as a fixed offset from the global clock such that the **zero time** corresponds to the {{domxref("PerformanceTiming.navigationStart", "navigationStart")}} moment plus a signed delta known as the **origin time.** Prior to establishing the `navigationStart` moment, the document timeline is **inactive**.
+The default timeline expresses the time in milliseconds since the document's {{domxref("Performance.timeOrigin","time origin")}}.
+Prior to the time origin, the timeline is inactive, and its {{domxref("AnimationTimeline.currentTime","currentTime")}} is `null`.
 
 > **Note:** A document timeline that is associated with a non-active document is also considered to be **inactive**.
 
