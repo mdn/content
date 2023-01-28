@@ -41,18 +41,22 @@ Three elements show the possible color schemes for a website: a light scheme, a 
 
 Below those three example elements is a "result" element showing the actual scheme that your browser selected, using the `prefers-color-scheme` media query.
 
-The following HTML is used:
+{{EmbedLiveSample("Detecting_a_dark_or_light_theme")}}
+
+The code used to generate this example:
+
+HTML:
 
 ```html
-<div class="scheme light">Light scheme style</div>
-<div class="scheme dark">Dark scheme style</div>
-<div class="scheme none">No scheme detected style</div>
+<div class="scheme light">Light color scheme</div>
+<div class="scheme dark">Dark color scheme</div>
+<div class="scheme none">No color scheme detected</div>
 <br />
 
 <div class="scheme result">Result: this is the active color scheme</div>
 ```
 
-The following CSS is used to style the elements above:
+CSS:
 
 ```css
 /* basic shape */
@@ -105,8 +109,6 @@ The following CSS is used to style the elements above:
   }
 }
 ```
-
-{{EmbedLiveSample("Detecting_a_dark_or_light_theme")}}
 
 ### Color scheme inheritance
 
