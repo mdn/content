@@ -146,8 +146,8 @@ cases:
         {{jsxref("Map.prototype.size", "size")}} property.
       </td>
       <td>
-        The number of items in an <code>Object</code> must be determined
-        manually.
+        Determining the number of items in an <code>Object</code> is more roundabout and less efficient. Often this is done by using {{jsxref("Object.keys", "Object.keys")}}
+        and checking the {{jsxref("Array.prototype.length", "length")}} property of the returned array.
       </td>
     </tr>
     <tr>
