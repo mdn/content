@@ -151,6 +151,8 @@ JavaScript also has built-in APIs that produce `null`-prototype objects, especia
 - [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)
 - Module namespace objects, obtained through [`import * as ns from "module";`](/en-US/docs/Web/JavaScript/Reference/Statements/import#namespace_import) or [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import)
 
+The term "`null`-prototype object" often also includes any object without `Object.prototype` in its prototype chain. Such objects can be created with [`extends null`](/en-US/docs/Web/JavaScript/Reference/Classes/extends#extending_null) when using classes.
+
 ### Object coercion
 
 Many built-in operations that expect objects first coerce their arguments to objects. [The operation](https://tc39.es/ecma262/#sec-toobject) can be summarized as follows:
