@@ -30,8 +30,8 @@ new DocumentTimeline(options)
   - : An object specifying options for the new timeline. The following properties are available:
     - `originTime`
       - : A number that specifies the zero time for the `documentTimeline`
-        as a real number of milliseconds relative to the {{domxref("PerformanceTiming.navigationStart","navigationStart")}} time of the active document
-        for the current browsing context.
+        as a number of milliseconds relative to the {{domxref("Performance.timeOrigin","time origin")}} of the current {{domxref("Document")}}.
+        Defaults to `0`.
 
 ## Specifications
 
