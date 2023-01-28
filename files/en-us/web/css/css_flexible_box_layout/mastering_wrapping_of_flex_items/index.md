@@ -62,7 +62,7 @@ If you need flex items to line up in the cross axis, controlling the width in th
 
 When wrapping flex items, the need to space them out is likely to arise. You can see from the live example below that in order to create gaps that do not also create a gap at the edges of the container, we need to use negative margins on the flex container itself. Any border on the flex container is then moved to a second wrapper in order that the negative margin can pull the items up to that wrapper element.
 
-It is this requirement that the gap properties, once implemented, will solve for us. Proper gaps only happen on the inside edges of items.
+A more robust way to perform the above tasks is to include the Flexbox `gap` property on the container to set equal space between all flex items. Try setting gaps using both negative margins and the `gap` property in the editor below.
 
 {{EmbedGHLiveSample("css-examples/flexbox/wrapping/gaps.html", '100%', 830)}}
 

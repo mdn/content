@@ -27,7 +27,7 @@ An enumerated value that is one of the following values:
 - `"bluetooth"`
 - `"cellular"`
 - `"ethernet"`
-- `"none`"
+- `"none"`
 - `"wifi"`
 - `"wimax"`
 - `"other"`

@@ -22,7 +22,7 @@ A boolean.
 
 ### Checking if a user gesture was ever performed
 
-Use the `hasBeenActive` property to check wether the user has ever interacted with the page.
+Use the `hasBeenActive` property to check whether the user has ever interacted with the page.
 
 ```js
 if (navigator.userActivation.hasBeenActive) {
