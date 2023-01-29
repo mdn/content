@@ -10,7 +10,7 @@ browser-compat: api.Node.replaceChild
 
 {{APIRef("DOM")}}
 
-The **`replaceChild()`** method of the {{domxref("Node")}} element
+The **`replaceChild()`** method of the {{domxref("Node")}} interface
 replaces a child node within the given (parent) node.
 
 ## Syntax
