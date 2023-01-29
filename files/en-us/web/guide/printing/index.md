@@ -32,16 +32,16 @@ Add the following to your {{HTMLElement("head")}} tag.
 
 ## Using media queries to improve layout
 
-
-You can use CSS to change the appearance of your web page when it's printed on a paper. You can specify one font for the screen version and another for the print version. This rule allows you to specify different style for screen and a printer.
-Using the {{cssxref("@media")}} rule in your CSS allows you to target different media types, and screen sizes, from a single stylesheet.
-They can also be used to create your print styles using {{cssxref("@media")}} print.
+You can use CSS to change the appearance of your web page when it's printed on a paper. You can specify one font for the screen version and another for the print version. This rule allows you to specify different style for screen and a printer. Using the {{cssxref("@media")}} rule in your CSS allows you to target different media types, and screen sizes, from a single stylesheet. They can also be used to create your print styles using {{cssxref("@media")}} print.
 
 Add this at the end of your stylesheet. Note that specificity and precedence rules still apply:
+
 ```css
 @media print { 
- /* All your print styles go here */
- #header, #footer, #nav { display: none !important; } 
+  /* All your print styles go here */
+  #header, #footer, #nav {
+    display: none !important;
+  } 
 }
 ```
 
