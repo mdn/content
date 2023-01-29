@@ -32,7 +32,7 @@ Add the following to your {{HTMLElement("head")}} tag.
 
 ## Using media queries to improve layout
 
-You can use the CSS {{cssxref("@media")}} at-rule to set a different appearance for your web page when it's printed on paper and when it is displayed on the screen. The `print` option sets the styles that will be used when the content is printed.
+You can use the CSS {{cssxref("@media")}} at-rule to set a different appearance for your webpage when it is printed on paper and when it is displayed on the screen. The `print` option sets the styles that will be used when the content is printed.
 
 Add this at the end of your stylesheet. Note that specificity and precedence rules still apply:
 
