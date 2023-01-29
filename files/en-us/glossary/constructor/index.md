@@ -32,5 +32,5 @@ const defaultReference = new Default();
 ## See also
 
 - [Constructor](https://en.wikipedia.org/wiki/Constructor_%28object-oriented_programming%29) on Wikipedia
-- [The constructor in object oriented programming for JavaScript](/en-US/docs/Learn/JavaScript/Objects#the_constructor) on MDN
+- [The constructor in object oriented programming for JavaScript](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#classes_and_constructors) on MDN
 - [New operator in JavaScript](/en-US/docs/Web/JavaScript/Reference/Operators/new) on MDN

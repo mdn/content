@@ -184,7 +184,7 @@ When you submit a form using a button created with `<input type="image">`, two e
 
 When you click on the image to submit the form, you'll see the data appended to the URL as parameters, for example `?x=52&y=55`. If the image input has a [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute, then keep in mind that the specified name is prefixed on every attribute, so if the `name` is `position`, then the returned coordinates would be formatted in the URL as `?position.x=52&position.y=55`. This, of course, applies to all other attributes as well.
 
-These are the X and Y coordinates of the image that the mouse clicked on to submit the form, where (0,0) is the top-left of the image. These can be used when the position the image was clicked on is significant, for example you might have a map that when clicked, sends the coordinates that were clicked to the server. The server-side code then works out what location was clicked on, and returns information about places nearby.
+These are the X and Y coordinates of the image that the mouse clicked on to submit the form, where (0,0) is the top-left of the image and the default in case submission happens without a click on the image. These can be used when the position the image was clicked on is significant, for example you might have a map that when clicked, sends the coordinates that were clicked to the server. The server-side code then works out what location was clicked on, and returns information about places nearby.
 
 In our above example, we could write server-side code that works out what color was clicked on by the coordinates submitted, and keeps a tally of the favorite colors people voted for.
 
