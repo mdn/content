@@ -45,16 +45,6 @@ Add this at the end of your stylesheet. Note that specificity and precedence rul
 }
 ```
 
-### Browser Support for "@media print"
-
-The @media print is supported in the following browsers:
-
-- FireFox 3.5
-- Chrome 14
-- Safari 3.2
-- Internet Explorer 9
-- Opera 11
-
 ## Detecting print requests
 
 Browsers send {{domxref("Window/beforeprint_event", "beforeprint")}} and {{domxref("Window/afterprint_event", "afterprint")}} events to let content determine when printing may have occurred. You can use this to adjust the user interface presented during printing (such as by displaying or hiding user interface elements during the print process).
