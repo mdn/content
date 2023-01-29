@@ -20,7 +20,7 @@ A [combobox](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role) element has
 
 Other examples of controls include:
 
-- A the button parts of an accordion widget which toggle the visibility of their associated panel content. Each button may have an `aria-controls` specified, referencing the ID of the element containing the content associated with the invoking control.
+- The button parts of an accordion widget that toggle the visibility of their associated panel content. Each button may have an `aria-controls` specified, referencing the ID of the element containing the content associated with the invoking control.
 - An element with a role of [scrollbar](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role): the scrollbar requires an `aria-controls` attribute referencing the ID of the element it controls.
 - A group of tabs that each display a different tabpanels: each element with [`role="tab"`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) has an `aria-controls` attribute referencing its associated [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role).
 
