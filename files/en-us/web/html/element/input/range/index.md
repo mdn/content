@@ -394,7 +394,7 @@ input[type="range"][orient="vertical"] {
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
       <td>
-        {{ARIARole("slider")}}
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role">slider</a></code>
       </td>
     </tr>
   </tbody>
