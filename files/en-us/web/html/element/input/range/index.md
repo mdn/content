@@ -1,6 +1,7 @@
 ---
 title: <input type="range">
 slug: Web/HTML/Element/input/range
+page-type: html-element
 tags:
   - Element
   - Forms
@@ -344,7 +345,7 @@ input[type="range"][orient="vertical"] {
 
 {{EmbedLiveSample("Putting_it_all_together", 200, 200)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

@@ -14,8 +14,9 @@ browser-compat: api.Document.createExpression
 
 {{APIRef("DOM")}}
 
-This method compiles an {{DOMxRef("XPathExpression")}} which can then be used for
-(repeated) evaluations.
+This method compiles an {{DOMxRef("XPathExpression")}} which can then be used for (repeated) evaluations.
+
+You must call this method on the same document that you run the expression against.
 
 ## Syntax
 
@@ -30,10 +31,6 @@ createExpression(xpathText, namespaceURLMapper)
 - `namespaceURLMapper`
   - : A function which maps a namespace prefix to a
     namespace URL (or null if none needed).
-
-{{Fx_MinVersion_Note(3, "Prior to Firefox 3, you could call this method on documents
-other than the one you planned to run the XPath against. Under Firefox 3, you must call
-it on the same document.")}}
 
 ### Return value
 

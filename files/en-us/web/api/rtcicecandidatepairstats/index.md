@@ -88,7 +88,7 @@ The following properties have been removed from the specification and should no 
 
 The currently-active ICE candidate pair—if any—can be obtained by calling the {{domxref("RTCIceTransport")}} method {{domxref("RTCIceTransport.getSelectedCandidatePair", "getSelectedCandidatePair()")}}, which returns an {{domxref("RTCIceCandidatePair")}} object, or `null` if there isn't a pair selected. The active candidate pair describes the current configuration of the two ends of the {{domxref("RTCPeerConnection")}}.
 
-Any candidate pair that isn't the active pair of candidates for a transport gets deleted if the {{domxref("RTCIceTransport")}} performs an ICE restart, at which point the {{domxref("RTCIceTransport.state", "state")}} of the ICE transport returns to `new` and negotiation starts once again. For more information, see {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Session_lifetime", "ICE restart")}}.
+Any candidate pair that isn't the active pair of candidates for a transport gets deleted if the {{domxref("RTCIceTransport")}} performs an ICE restart, at which point the {{domxref("RTCIceTransport.state", "state")}} of the ICE transport returns to `new` and negotiation starts once again. For more information, see [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart).
 
 ## Example
 

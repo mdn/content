@@ -157,7 +157,9 @@ Before:
 
 ![the todo app with partial styling added; the app is now in a card, but some of the internal features still need styling](todo-app-unstyled.png)
 
-After:![the todo app with partial styling added; the app is now in a card, but some of the internal features still need styling](todo-app-reset-styles.png)
+After:
+
+![the todo app with partial styling added; the app is now in a card, but some of the internal features still need styling](todo-app-reset-styles.png)
 
 Noticeable changes include the removal of the list bullets, background color changes, and changes to the base button and input styles.
 
@@ -171,114 +173,114 @@ Update your `App.vue` file's `<style>` element so it looks like so:
 
 ```html
 <style>
-/* Global styles */
-.btn {
-  padding: 0.8rem 1rem 0.7rem;
-  border: 0.2rem solid #4d4d4d;
-  cursor: pointer;
-  text-transform: capitalize;
-}
-.btn__danger {
-  color: #fff;
-  background-color: #ca3c3c;
-  border-color: #bd2130;
-}
-.btn__filter {
-  border-color: lightgrey;
-}
-.btn__danger:focus {
-  outline-color: #c82333;
-}
-.btn__primary {
-  color: #fff;
-  background-color: #000;
-}
-.btn-group {
-  display: flex;
-  justify-content: space-between;
-}
-.btn-group > * {
-  flex: 1 1 auto;
-}
-.btn-group > * + * {
-  margin-left: 0.8rem;
-}
-.label-wrapper {
-  margin: 0;
-  flex: 0 0 100%;
-  text-align: center;
-}
-[class*="__lg"] {
-  display: inline-block;
-  width: 100%;
-  font-size: 1.9rem;
-}
-[class*="__lg"]:not(:last-child) {
-  margin-bottom: 1rem;
-}
-@media screen and (min-width: 620px) {
-  [class*="__lg"] {
-    font-size: 2.4rem;
+  /* Global styles */
+  .btn {
+    padding: 0.8rem 1rem 0.7rem;
+    border: 0.2rem solid #4d4d4d;
+    cursor: pointer;
+    text-transform: capitalize;
   }
-}
-.visually-hidden {
-  position: absolute;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap;
-}
-[class*="stack"] > * {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.stack-small > * + * {
-  margin-top: 1.25rem;
-}
-.stack-large > * + * {
-  margin-top: 2.5rem;
-}
-@media screen and (min-width: 550px) {
+  .btn__danger {
+    color: #fff;
+    background-color: #ca3c3c;
+    border-color: #bd2130;
+  }
+  .btn__filter {
+    border-color: lightgrey;
+  }
+  .btn__danger:focus {
+    outline-color: #c82333;
+  }
+  .btn__primary {
+    color: #fff;
+    background-color: #000;
+  }
+  .btn-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn-group > * {
+    flex: 1 1 auto;
+  }
+  .btn-group > * + * {
+    margin-left: 0.8rem;
+  }
+  .label-wrapper {
+    margin: 0;
+    flex: 0 0 100%;
+    text-align: center;
+  }
+  [class*="__lg"] {
+    display: inline-block;
+    width: 100%;
+    font-size: 1.9rem;
+  }
+  [class*="__lg"]:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  @media screen and (min-width: 620px) {
+    [class*="__lg"] {
+      font-size: 2.4rem;
+    }
+  }
+  .visually-hidden {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+  }
+  [class*="stack"] > * {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
   .stack-small > * + * {
-    margin-top: 1.4rem;
+    margin-top: 1.25rem;
   }
   .stack-large > * + * {
-    margin-top: 2.8rem;
+    margin-top: 2.5rem;
   }
-}
-/* End global styles */
-#app {
-  background: #fff;
-  margin: 2rem 0 4rem 0;
-  padding: 1rem;
-  padding-top: 0;
-  position: relative;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
-}
-@media screen and (min-width: 550px) {
+  @media screen and (min-width: 550px) {
+    .stack-small > * + * {
+      margin-top: 1.4rem;
+    }
+    .stack-large > * + * {
+      margin-top: 2.8rem;
+    }
+  }
+  /* End global styles */
   #app {
-    padding: 4rem;
+    background: #fff;
+    margin: 2rem 0 4rem 0;
+    padding: 1rem;
+    padding-top: 0;
+    position: relative;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
   }
-}
-#app > * {
-  max-width: 50rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-#app > form {
-  max-width: 100%;
-}
-#app h1 {
-  display: block;
-  min-width: 100%;
-  width: 100%;
-  text-align: center;
-  margin: 0;
-  margin-bottom: 1rem;
-}
+  @media screen and (min-width: 550px) {
+    #app {
+      padding: 4rem;
+    }
+  }
+  #app > * {
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #app > form {
+    max-width: 100%;
+  }
+  #app h1 {
+    display: block;
+    min-width: 100%;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
 </style>
 ```
 
@@ -293,9 +295,7 @@ We should apply the button CSS classes to the `<button>` in our `ToDoForm` compo
 Add `class="btn btn__primary btn__lg"` to your form's `<button>` element:
 
 ```html
-<button type="submit" class="btn btn__primary btn__lg">
-  Add
-</button>
+<button type="submit" class="btn btn__primary btn__lg">Add</button>
 ```
 
 While we're here, there's one more semantic and styling change we can make. Since our form denotes a specific section of our page, it could benefit from an `<h2>` element. The label, however, already denotes the purpose of the form. To avoid repeating ourselves, let's wrap our label in an `<h2>`. There are a few other global CSS styles which we can add as well. We'll also add the `input__lg` class to our `<input>` element.
@@ -327,7 +327,9 @@ Let's also add the `stack-large` class to the `<ul>` tag in our `App.vue` file. 
 Update it as follows:
 
 ```html
-<ul aria-labelledby="list-summary" class="stack-large">…</ul>
+<ul aria-labelledby="list-summary" class="stack-large">
+  …
+</ul>
 ```
 
 ## Adding scoped styles
@@ -337,7 +339,9 @@ The last component we want to style is our `ToDoItem` component. To keep the sty
 To use the `scoped` modifier, create a `<style>` element inside `ToDoItem.vue`, at the bottom of the file, and give it a `scoped` attribute:
 
 ```html
-<style scoped>/* … */</style>
+<style scoped>
+  /* … */
+</style>
 ```
 
 Next, copy the following CSS into the newly created `<style>` element:

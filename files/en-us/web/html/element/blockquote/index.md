@@ -1,6 +1,7 @@
 ---
 title: '<blockquote>: The Block Quotation element'
 slug: Web/HTML/Element/blockquote
+page-type: html-element
 tags:
   - Blockquote
   - Element
@@ -56,7 +57,7 @@ The output from this HTML snippet looks like this:
 
 {{EmbedLiveSample("Example", 640, 180)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

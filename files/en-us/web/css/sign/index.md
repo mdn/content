@@ -62,7 +62,7 @@ div {
 
 ### Position direction
 
-Another usecase is to control the {{cssxref("position")}} of the element. Either a positive or a negative value.
+Another use case is to control the {{cssxref("position")}} of the element. Either a positive or a negative value.
 
 ```css
 div {

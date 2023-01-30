@@ -33,7 +33,7 @@ Strings can be created as primitives, from string literals, or as objects, using
 
 ```js
 const string1 = "A string primitive";
-const string2 = "Also a string primitive";
+const string2 = 'Also a string primitive';
 const string3 = `Yet another string primitive`;
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: class
 slug: Web/HTML/Global_attributes/class
+page-type: html-attribute
 tags:
   - Global attributes
   - HTML

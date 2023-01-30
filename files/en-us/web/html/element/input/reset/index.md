@@ -1,6 +1,7 @@
 ---
 title: <input type="reset">
 slug: Web/HTML/Element/input/reset
+page-type: html-element
 tags:
   - Element
   - Form Button

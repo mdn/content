@@ -10,7 +10,7 @@ tags:
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 108 that will affect developers. Firefox 108 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and will ship on [December 13, 2022](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 108 that will affect developers. Firefox 108 was released on December 13, 2022.
 
 ## Changes for web developers
 
@@ -39,10 +39,8 @@ No notable changes
   A server can use these to specify valid sources for stylesheet `<style>` elements and `<link>` elements with `rel="stylesheet"`, and for styles applied to individual elements, respectively ({{bug(1529338)}}).
 - [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP header directives [`script-src-elem`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem) and [`script-src-attr`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-attr) are now supported.
   A server can use these to specify valid sources for JavaScript `<script>` elements, and for inline script event handlers like `onclick`, respectively ({{bug(1529337)}}).
-
-### Security
-
-No notable changes
+- [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) violation reports now include `effective-directive` and `status-code` properties.
+  For more information, see [Violation report syntax](/en-US/docs/Web/HTTP/CSP#violation_report_syntax) ({{bug(1192684)}}).
 
 ### APIs
 
@@ -50,19 +48,11 @@ No notable changes
   Import maps provide flexibility and additional control over how browsers resolve module specifiers when importing [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules).
   ({{bug(1795647)}}).
 
-#### DOM
-
-No notable changes
-
 #### Media, WebRTC, and Web Audio
 
 - The [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) is now available in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts).
   Calls to [`navigator.requestMIDIAccess()`](/en-US/docs/Web/API/Navigator/requestMIDIAccess) will prompt users with active MIDI devices to install a [Site Permission Add-On](https://support.mozilla.org/en-US/kb/site-permission-add-ons), which is required to enable the API.
   For more information see {{bug(1795025)}}.
-
-### WebAssembly
-
-No notable changes
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 

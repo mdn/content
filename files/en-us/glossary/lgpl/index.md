@@ -1,6 +1,7 @@
 ---
 title: LGPL
 slug: Glossary/LGPL
+page-type: glossary-definition
 tags:
   - License
   - OpenPractices

@@ -23,7 +23,7 @@ Consider the following example code:
 function init() {
   var name = 'Mozilla'; // name is a local variable created by init
   function displayName() {
-    // displayName() is the inner function, a closure
+    // displayName() is the inner function, that forms the closure
     console.log(name); // use variable declared in the parent function
   }
   displayName();
@@ -108,7 +108,7 @@ In this example, we have defined a function `makeAdder(x)`, that takes a single 
 
 In essence, `makeAdder` is a function factory. It creates functions that can add a specific value to their argument. In the above example, the function factory creates two new functions—one that adds five to its argument, and one that adds 10.
 
-`add5` and `add10` are both closures. They share the same function body definition, but store different lexical environments. In `add5`'s lexical environment, `x` is 5, while in the lexical environment for `add10`, `x` is 10.
+`add5` and `add10` both form closures. They share the same function body definition, but store different lexical environments. In `add5`'s lexical environment, `x` is 5, while in the lexical environment for `add10`, `x` is 10.
 
 ## Practical closures
 
@@ -211,7 +211,7 @@ In previous examples, each closure had its own lexical environment. Here though,
 
 The shared lexical environment is created in the body of an anonymous function, _which is executed as soon as it has been defined_ (also known as an [IIFE](/en-US/docs/Glossary/IIFE)). The lexical environment contains two private items: a variable called `privateCounter`, and a function called `changeBy`. You can't access either of these private members from outside the anonymous function. Instead, you can access them using the three public functions that are returned from the anonymous wrapper.
 
-Those three public functions are closures that share the same lexical environment. Thanks to JavaScript's lexical scoping, they each have access to the `privateCounter` variable and the `changeBy` function.
+Those three public functions form closures that share the same lexical environment. Thanks to JavaScript's lexical scoping, they each have access to the `privateCounter` variable and the `changeBy` function.
 
 ```js
 const makeCounter = function () {
@@ -408,7 +408,7 @@ The `helpText` array defines three helpful hints, each associated with the ID of
 
 If you try this code out, you'll see that it doesn't work as expected. No matter what field you focus on, the message about your age will be displayed.
 
-The reason for this is that the functions assigned to `onfocus` are closures; they consist of the function definition and the captured environment from the `setupHelp` function's scope. Three closures have been created by the loop, but each one shares the same single lexical environment, which has a variable with changing values (`item`). This is because the variable `item` is declared with `var` and thus has function scope due to hoisting. The value of `item.help` is determined when the `onfocus` callbacks are executed. Because the loop has already run its course by that time, the `item` variable object (shared by all three closures) has been left pointing to the last entry in the `helpText` list.
+The reason for this is that the functions assigned to `onfocus` form closures; they consist of the function definition and the captured environment from the `setupHelp` function's scope. Three closures have been created by the loop, but each one shares the same single lexical environment, which has a variable with changing values (`item`). This is because the variable `item` is declared with `var` and thus has function scope due to hoisting. The value of `item.help` is determined when the `onfocus` callbacks are executed. Because the loop has already run its course by that time, the `item` variable object (shared by all three closures) has been left pointing to the last entry in the `helpText` list.
 
 One solution in this case is to use more closures: in particular, to use a function factory as described earlier:
 

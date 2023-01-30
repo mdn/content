@@ -1,6 +1,7 @@
 ---
 title: inert
 slug: Web/HTML/Global_attributes/inert
+page-type: html-attribute
 tags:
   - Attribute
   - Global attributes

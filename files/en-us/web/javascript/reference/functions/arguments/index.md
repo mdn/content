@@ -26,16 +26,16 @@ The `arguments` object is a local variable available within all non-[arrow](/en-
 For example, if a function is passed 3 arguments, you can access them as follows:
 
 ```js
-arguments[0] // first argument
-arguments[1] // second argument
-arguments[2] // third argument
+arguments[0]; // first argument
+arguments[1]; // second argument
+arguments[2]; // third argument
 ```
 
 The `arguments` object is useful for functions called with more arguments than they are formally declared to accept, called [_variadic functions_](https://en.wikipedia.org/wiki/Variadic_function), such as {{jsxref("Math.min()")}}. This example function accepts any number of string arguments and returns the longest one:
 
 ```js
 function longestString() {
-  let longest = '';
+  let longest = "";
   for (let i = 0; i < arguments.length; i++) {
     if (arguments[i].length > longest.length) {
       longest = arguments[i];
@@ -52,7 +52,7 @@ You can use {{jsxref("Functions/arguments/length", "arguments.length")}} to coun
 Each argument index can also be set or reassigned:
 
 ```js
-arguments[1] = 'new value';
+arguments[1] = "new value";
 ```
 
 Non-strict functions that only has simple parameters (that is, no rest, default, or destructured parameters) will sync the new value of parameters with the `arguments` object, and vice versa:
@@ -114,7 +114,9 @@ For common use cases, using it as an array-like object is sufficient, since it b
 
 ```js
 function midpoint() {
-  return (Math.min.apply(null, arguments) + Math.max.apply(null, arguments)) / 2;
+  return (
+    (Math.min.apply(null, arguments) + Math.max.apply(null, arguments)) / 2
+  );
 }
 
 console.log(midpoint(3, 1, 4, 1, 5)); // 3
@@ -145,14 +147,14 @@ function myConcat(separator) {
 You can pass as many arguments as you like to this function. It returns a string list using each argument in the list:
 
 ```js
-// returns "red, orange, blue"
-myConcat(', ', 'red', 'orange', 'blue');
+myConcat(", ", "red", "orange", "blue");
+// "red, orange, blue"
 
-// returns "elephant; giraffe; lion; cheetah"
-myConcat('; ', 'elephant', 'giraffe', 'lion', 'cheetah');
+myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
+// "elephant; giraffe; lion; cheetah"
 
-// returns "sage. basil. oregano. pepper. parsley"
-myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
+myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
+// "sage. basil. oregano. pepper. parsley"
 ```
 
 ### Defining a function that creates HTML lists
@@ -163,7 +165,7 @@ This example defines a function that creates a string containing HTML for a list
 function list(type) {
   let html = `<${type}l><li>`;
   const args = Array.prototype.slice.call(arguments, 1);
-  html += args.join('</li><li>');
+  html += args.join("</li><li>");
   html += `</li></${type}l>`; // end list
   return html;
 }
@@ -172,11 +174,8 @@ function list(type) {
 You can pass any number of arguments to this function, and it adds each argument as a list item to a list of the type indicated. For example:
 
 ```js
-const listHTML = list('u', 'One', 'Two', 'Three');
-
-/* listHTML is:
-"<ul><li>One</li><li>Two</li><li>Three</li></ul>"
-*/
+list("u", "One", "Two", "Three");
+// "<ul><li>One</li><li>Two</li><li>Three</li></ul>"
 ```
 
 ### Using typeof with arguments

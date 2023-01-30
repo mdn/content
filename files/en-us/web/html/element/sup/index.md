@@ -1,6 +1,7 @@
 ---
 title: '<sup>: The Superscript element'
 slug: Web/HTML/Element/sup
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -96,7 +97,7 @@ The output:
 
 {{EmbedLiveSample("Ordinal_numbers", 650, 160)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

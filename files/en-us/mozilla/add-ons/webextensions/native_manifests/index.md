@@ -193,7 +193,7 @@ The managed storage manifest contains a single JSON object with the following pr
     <tr>
       <td><code>description</code></td>
       <td>String</td>
-      <td>Human readable description, ignored by Firefox.</td>
+      <td>Human-readable description, ignored by Firefox.</td>
     </tr>
     <tr>
       <td><code>type</code></td>

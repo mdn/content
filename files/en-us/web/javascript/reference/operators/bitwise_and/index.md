@@ -58,8 +58,7 @@ The truth table for the AND operation is:
 14 & 9 (base 10) = 00000000000000000000000000001000 (base 2) = 8 (base 10)
 ```
 
-Bitwise ANDing any number `x` with `0` yields
-`0`.
+Bitwise ANDing any number `x` with `-1` returns `x` converted to a 32-bit integer. Do not use `& -1` to truncate numbers to integers; use [`Math.trunc()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc#using_bitwise_no-ops_to_truncate_numbers) instead.
 
 ## Examples
 

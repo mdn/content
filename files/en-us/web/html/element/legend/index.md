@@ -1,6 +1,7 @@
 ---
 title: '<legend>: The Field Set Legend element'
 slug: Web/HTML/Element/legend
+page-type: html-element
 tags:
   - Element
   - Forms

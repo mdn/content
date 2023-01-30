@@ -35,7 +35,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
 - {{HTTPStatus(102, "102 Processing")}} ({{Glossary("WebDAV")}})
   - : This code indicates that the server has received and is processing the request, but no response is available yet.
 - {{HTTPStatus(103, "103 Early Hints")}}
-  - : This status code is primarily intended to be used with the {{HTTPHeader("Link")}} header, letting the user agent start [preloading](/en-US/docs/Web/HTML/Link_types/preload) resources while the server prepares a response.
+  - : This status code is primarily intended to be used with the {{HTTPHeader("Link")}} header, letting the user agent start [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload) resources while the server prepares a response.
 
 ## Successful responses
 

@@ -1,6 +1,7 @@
 ---
 title: <input type="radio">
 slug: Web/HTML/Element/input/radio
+page-type: html-element
 tags:
   - Choosing Options
   - Element

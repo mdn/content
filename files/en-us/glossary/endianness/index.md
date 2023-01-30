@@ -1,6 +1,7 @@
 ---
 title: Endianness
 slug: Glossary/Endianness
+page-type: glossary-definition
 tags:
   - Coding
   - CodingScripting

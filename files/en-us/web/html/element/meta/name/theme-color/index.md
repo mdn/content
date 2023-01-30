@@ -1,6 +1,7 @@
 ---
 title: theme-color
 slug: Web/HTML/Element/meta/name/theme-color
+page-type: html-attribute-value
 tags:
   - Attribute
   - HTML

@@ -1,6 +1,7 @@
 ---
 title: Constraint validation
 slug: Web/HTML/Constraint_validation
+page-type: guide
 tags:
   - CSS
   - Guide

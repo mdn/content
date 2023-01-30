@@ -36,7 +36,7 @@ _Also implements properties from its parent interface,_ {{domxref("EventTarget")
   - : Returns a service worker whose state is `installing`. This is initially set to `null`.
 - {{domxref("ServiceWorkerRegistration.navigationPreload")}} {{ReadOnlyInline}}
   - : Returns the instance of {{domxref("NavigationPreloadManager")}} associated with the current service worker registration.
-- {{domxref("ServiceWorkerRegistration.paymentManager")}}
+- {{domxref("ServiceWorkerRegistration.paymentManager")}} {{Experimental_Inline}}
   - : Returns a payment app's {{domxref("PaymentManager")}} instance, which is used to manage various payment app functionality.
 - {{domxref("ServiceWorkerRegistration.pushManager")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("PushManager")}} interface for managing push subscriptions including subscribing, getting an active subscription, and accessing push permission status.

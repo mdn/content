@@ -1,6 +1,7 @@
 ---
 title: Signature
 slug: Glossary/Signature
+page-type: glossary-disambiguation
 tags:
   - Disambiguation
 ---

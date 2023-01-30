@@ -18,6 +18,8 @@ browser-compat: css.properties.scroll-snap-type-y
 
 The **`scroll-snap-type-y`** [CSS](/en-US/docs/Web/CSS) property defines how strictly snap points are enforced on the vertical axis of the scroll container in case there is one.
 
+> **Note:** See [scroll-snap-type](/en-US/docs/Web/CSS/scroll-snap-type) for the standard feature.
+
 Specifying any precise animations or physics used to enforce those snap points is not covered by this property but instead left up to the user agent.
 
 ```css
@@ -64,5 +66,5 @@ Not part of any standard.
 
 ## See also
 
-- [`scroll-snap-type-x`](/en-US/docs/Web/CSS/scroll-snap-type-x)
-- [`scroll-snap-type`](/en-US/docs/Web/CSS/scroll-snap-type)
+- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
+- [Well-controlled scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)

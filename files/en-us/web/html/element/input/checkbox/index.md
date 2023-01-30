@@ -1,6 +1,7 @@
 ---
 title: <input type="checkbox">
 slug: Web/HTML/Element/input/checkbox
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -265,7 +266,7 @@ otherCheckbox.addEventListener('change', () => {
 
 {{EmbedLiveSample('Examples', '100%', 300)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

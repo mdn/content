@@ -1,6 +1,7 @@
 ---
 title: data-*
 slug: Web/HTML/Global_attributes/data-*
+page-type: html-attribute
 tags:
   - Global attributes
   - HTML
