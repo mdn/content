@@ -25,7 +25,9 @@ The **`get`** syntax binds an object property to a function that will be called 
 { get [expression]() { /* … */ } }
 ```
 
-- A getter must have exactly zero parameter.
+There are some additional syntax restrictions:
+
+- A getter must have exactly zero parameters.
 
 ### Parameters
 

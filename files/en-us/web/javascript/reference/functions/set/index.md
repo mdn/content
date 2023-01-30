@@ -24,6 +24,8 @@ The **`set`** syntax binds an object property to a function to be called when th
 { set [expression](val) { /* … */ } }
 ```
 
+There are some additional syntax restrictions:
+
 - A setter must have exactly one parameter.
 
 ### Parameters

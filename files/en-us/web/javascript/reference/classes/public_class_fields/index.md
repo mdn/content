@@ -24,6 +24,8 @@ class ClassWithField {
 }
 ```
 
+There are some additional syntax restrictions:
+
 - The name of a static property (field or method) cannot be `prototype`.
 - The name of a class field (static or instance) cannot be `constructor`.
 
