@@ -1,4 +1,4 @@
----
+content/files/en-us/glossary/string/index.md---
 title: String
 slug: Glossary/String
 page-type: glossary-definition
