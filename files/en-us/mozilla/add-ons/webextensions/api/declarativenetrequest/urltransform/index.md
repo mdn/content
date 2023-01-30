@@ -24,7 +24,7 @@ Values of this type are objects. They contain these properties:
 - `fragment` {{optional_inline}}
   - : A `string`. The new fragment for the request. Should be either empty, in which case the existing fragment is cleared; or should begin with '#'.
 - `host` {{optional_inline}}
-  - : A `string`. The new host for the request.
+  - : A `string`. The new host name for the request.
 - `password` {{optional_inline}}
   - : A `string`. The new password for the request.
 - `path` {{optional_inline}}
