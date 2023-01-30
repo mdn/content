@@ -44,4 +44,4 @@ By participating in and contributing to our projects and discussions, you acknow
 
 ## Get in touch
 
-You can communicate with the MDN Web Docs team and community through discussions on [GitHub](https://github.com/mdn/mdn-community/discussions), our forums on [Discourse](https://discourse.mozilla.org/c/mdn/236), and a [Matrix channel](https://wiki.mozilla.org/Matrix).
+You can communicate with the MDN Web Docs team and community using the [communication channels](/en-US/docs/MDN/Community/Communication_channels).

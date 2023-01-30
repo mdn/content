@@ -34,6 +34,9 @@ This article provides information about the changes in Firefox 110 that will aff
 
 ### HTTP
 
+- The `'unsafe-hashes'` value for {{HTTPHeader("Content-Security-Policy")}} source directives is now supported.
+  For more information, see [CSP unsafe-hashes](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_hashes) ({{bug(1343950)}}).
+
 #### Removals
 
 ### Security

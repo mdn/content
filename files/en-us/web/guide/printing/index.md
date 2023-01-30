@@ -32,6 +32,19 @@ Add the following to your {{HTMLElement("head")}} tag.
 
 ## Using media queries to improve layout
 
+You can use the CSS {{cssxref("@media")}} at-rule to set a different appearance for your webpage when it is printed on paper and when it is displayed on the screen. The `print` option sets the styles that will be used when the content is printed.
+
+Add this at the end of your stylesheet. Note that specificity and precedence rules still apply:
+
+```css
+@media print { 
+  /* All your print styles go here */
+  #header, #footer, #nav {
+    display: none !important;
+  } 
+}
+```
+
 ## Detecting print requests
 
 Browsers send {{domxref("Window/beforeprint_event", "beforeprint")}} and {{domxref("Window/afterprint_event", "afterprint")}} events to let content determine when printing may have occurred. You can use this to adjust the user interface presented during printing (such as by displaying or hiding user interface elements during the print process).

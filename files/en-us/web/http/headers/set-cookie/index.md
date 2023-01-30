@@ -41,12 +41,13 @@ For more information, see the guide on [Using HTTP cookies](/en-US/docs/Web/HTTP
 
 ```http
 Set-Cookie: <cookie-name>=<cookie-value>
-Set-Cookie: <cookie-name>=<cookie-value>; Expires=<date>
-Set-Cookie: <cookie-name>=<cookie-value>; Max-Age=<number>
 Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>
+Set-Cookie: <cookie-name>=<cookie-value>; Expires=<date>
+Set-Cookie: <cookie-name>=<cookie-value>; HttpOnly
+Set-Cookie: <cookie-name>=<cookie-value>; Max-Age=<number>
+Set-Cookie: <cookie-name>=<cookie-value>; Partitioned
 Set-Cookie: <cookie-name>=<cookie-value>; Path=<path-value>
 Set-Cookie: <cookie-name>=<cookie-value>; Secure
-Set-Cookie: <cookie-name>=<cookie-value>; HttpOnly
 
 Set-Cookie: <cookie-name>=<cookie-value>; SameSite=Strict
 Set-Cookie: <cookie-name>=<cookie-value>; SameSite=Lax
@@ -79,6 +80,16 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     >
     > **`__Host-` prefix**: Cookies with names starting with `__Host-` must be set with the `secure` flag, must be from a secure page (HTTPS), must not have a domain specified (and therefore, are not sent to subdomains), and the path must be `/`.
 
+- `Domain=<domain-value>` {{optional_inline}}
+
+  - : Defines the host to which the cookie will be sent.
+
+    If omitted, this attribute defaults to the host of the current document URL, not including subdomains.
+
+    Contrary to earlier specifications, leading dots in domain names (`.example.com`) are ignored.
+
+    Multiple host/domain values are _not_ allowed, but if a domain _is_ specified, then subdomains are always included.
+
 - `Expires=<date>` {{optional_inline}}
 
   - : Indicates the maximum lifetime of the cookie as an HTTP-date timestamp.
@@ -92,17 +103,17 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     When an `Expires` date is set, the deadline is relative to the _client_ the cookie is being set on, not the server.
 
+- `HttpOnly` {{optional_inline}}
+  - : Forbids JavaScript from accessing the cookie, for example, through the {{domxref("Document.cookie")}} property.
+    Note that a cookie that has been created with `HttpOnly` will still be sent with JavaScript-initiated requests, for example, when calling {{domxref("XMLHttpRequest.send()")}} or {{domxref("fetch()")}}.
+    This mitigates attacks against cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}).
+
 - `Max-Age=<number>` {{optional_inline}}
   - : Indicates the number of seconds until the cookie expires. A zero or negative number will expire the cookie immediately. If both `Expires` and `Max-Age` are set, `Max-Age` has precedence.
-- `Domain=<domain-value>` {{optional_inline}}
 
-  - : Defines the host to which the cookie will be sent.
+- `Partitioned` {{optional_inline}}{{experimental_inline}}
 
-    If omitted, this attribute defaults to the host of the current document URL, not including subdomains.
-
-    Contrary to earlier specifications, leading dots in domain names (`.example.com`) are ignored.
-
-    Multiple host/domain values are _not_ allowed, but if a domain _is_ specified, then subdomains are always included.
+  - : Indicates that the cookie should be stored using partitioned storage. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) for more details.
 
 - `Path=<path-value>` {{optional_inline}}
 
@@ -113,18 +124,6 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     - the request paths `/docs`, `/docs/`, `/docs/Web/`, and `/docs/Web/HTTP` will all match.
     - the request paths `/`, `/docsets`, `/fr/docs` will not match.
 
-- `Secure` {{optional_inline}}
-
-  - : Indicates that the cookie is sent to the server only when a request is made with the `https:` scheme (except on localhost), and therefore, is more resistant to [man-in-the-middle](/en-US/docs/Glossary/MitM) attacks.
-
-    > **Note:** Do not assume that `Secure` prevents all access to sensitive information in cookies (session keys, login details, etc.). Cookies with this attribute can still be read/modified either with access to the client's hard disk or from JavaScript if the `HttpOnly` cookie attribute is not set.
-    >
-    > Insecure sites (`http:`) cannot set cookies with the `Secure` attribute (since Chrome 52 and Firefox 52). For Firefox, the `https:` requirements are ignored when the `Secure` attribute is set by localhost (since Firefox 75).
-
-- `HttpOnly` {{optional_inline}}
-  - : Forbids JavaScript from accessing the cookie, for example, through the {{domxref("Document.cookie")}} property.
-    Note that a cookie that has been created with `HttpOnly` will still be sent with JavaScript-initiated requests, for example, when calling {{domxref("XMLHttpRequest.send()")}} or {{domxref("fetch()")}}.
-    This mitigates attacks against cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}).
 - `SameSite=<samesite-value>` {{optional_inline}}
 
   - : Controls whether or not a cookie is sent with cross-site requests,
@@ -153,6 +152,14 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     > 3. Cookies from the same domain are no longer considered to be from the same site if sent using a different scheme (`http:` or `https:`).
     >
     > See the [Browser compatibility](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#browser_compatibility) table for information about specific browser implementation (rows: "`SameSite`: Defaults to `Lax`", "`SameSite`: Secure context required", and "`SameSite`: URL scheme-aware ("schemeful")").
+
+- `Secure` {{optional_inline}}
+
+  - : Indicates that the cookie is sent to the server only when a request is made with the `https:` scheme (except on localhost), and therefore, is more resistant to [man-in-the-middle](/en-US/docs/Glossary/MitM) attacks.
+
+    > **Note:** Do not assume that `Secure` prevents all access to sensitive information in cookies (session keys, login details, etc.). Cookies with this attribute can still be read/modified either with access to the client's hard disk or from JavaScript if the `HttpOnly` cookie attribute is not set.
+    >
+    > Insecure sites (`http:`) cannot set cookies with the `Secure` attribute (since Chrome 52 and Firefox 52). For Firefox, the `https:` requirements are ignored when the `Secure` attribute is set by localhost (since Firefox 75).
 
 ## Examples
 
@@ -216,6 +223,14 @@ Set-Cookie: __Host-id=1; Secure
 // Rejected due to setting a Domain
 Set-Cookie: __Host-id=1; Secure; Path=/; Domain=example.com
 ```
+
+### Partitioned cookie
+
+```http
+Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
+```
+
+> **Note:** Partitioned cookies must be set with `Secure` and `Path=/`. In addition, it is recommended to use the `__Host` prefix when setting partitioned cookies to make them bound to the hostname and not the registrable domain.
 
 ## Specifications
 
