@@ -324,9 +324,9 @@ Every animation, even those that are 0 seconds in duration, throw animation even
 ## Related concepts
 
 - {{cssxref("will-change")}} CSS property
-- {{glossary("Bézier curve")}} glossary term
-- [`<easing-function>`](foo) data type
+- [`<easing-function>`](/en-US/docs/Web/CSS/easing-function) data type
 - [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media query
+- {{glossary("Bézier curve")}} glossary term
 
 ## Specifications
 
