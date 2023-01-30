@@ -70,7 +70,8 @@ Now that we've covered what autoplay is and what can prevent autoplay from being
 
 ### The autoplay attribute
 
-The simplest way to automatically play content is to add the {{htmlattrxref("autoplay", "audio")}} attribute to your {{HTMLElement("audio")}} or {{HTMLElement("video")}} element. This sets the {{domxref("HTMLMediaElement.autoplay", "autoplay")}} property on the element to `true`, and when `autoplay` is `true`, the media will automatically begin to play as soon as possible after the following have occurred:
+The simplest way to automatically play content is to add the {{htmlattrxref("autoplay", "audio")}} attribute to your {{HTMLElement("audio")}} or {{HTMLElement("video")}} element, which sets the {{domxref("HTMLMediaElement.autoplay", "autoplay")}} property on the element to `true`.
+When `autoplay` is `true`, the media will automatically begin to play as soon as possible after the following have occurred:
 
 - The page is allowed to use autoplay functionality
 - The element has been created during page load
@@ -86,44 +87,92 @@ An {{HTMLElement("audio")}} element using the `autoplay` attribute might look li
 </audio>
 ```
 
-#### Example 2: Detecting autoplay failure
+#### Example 2: Detecting whether autoplay is allowed
 
-If you rely on autoplay for anything important, or if autoplay failure will impact your app in any way, you will probably want to be able to tell when autoplay didn't begin. Unfortunately, in the case of the {{htmlattrxref("autoplay", "audio")}} attribute, recognizing whether or not autoplay successfully began is tricky. There's not an event triggered when autoplay fails. Nor is there an exception thrown or a callback you can set up or even a flag on the media element that tells you if autoplay worked. All you can really do is examine a few values and make an educated guess as to whether or not autoplay worked.
+If autoplay is important for your application, you may need to customize behavior based on whether or not autoplay is allowed, disallowed, or only supported for inaudible content.
+For example, if your application needs to autoplay a video and you know that the page only allows the autoplay of inaudible content, you can either mute it or supply a video with no audio track.
+Similarly, if you know that autoplay is not allowed at all, you might provide a default image for the video (using the [`poster`](/en-US/docs/Web/HTML/Element/video#attr-poster) attribute), or choose to defer loading the video until it is requested.
 
-A better approach, if you're able to adjust the direction you look at things from, is to instead rely on knowing that playback of the media has successfully started, instead of when it fails to start. You can do this easily, by listening for the {{domxref("HTMLMediaElement/play_event", "play")}} event to be fired on the media element.
+The [`Navigator.getAutoplayPolicy()`](/en-US/docs/Web/API/Navigator/getAutoplayPolicy) method can used to check the autoplay policy for a type of media feature (i.e. all media elements, or all audio contexts) in a document, or to check whether a specific media element or audio context can autoplay.
 
-The `play` event is sent both when the media is resumed after being paused _and_ when autoplay occurs. That means that the first time the `play` event is fired, you know your media is being started for the first time after the page is opened.
+The example below shows how you pass the `mediaelement` string to get the autoplay policy for all media elements in the document (pass `audiocontext` to get the policy for audio contexts).
+The code assumes `video` is a `HTMLVideoElement` media element using the [`<video>`](/en-US/docs/Web/HTML/Element/video#attr-autoplay) tag or [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement), and that it is configured to autoplay with audio by default.
+If autoplay is only allowed for inaudible content we mute the audio; if autoplay is disallowed we make sure that a placeholder image is displayed for the video.
+
+```js
+if (navigator.getAutoplayPolicy("mediaelement") === "allowed") {
+  // The video element will autoplay with audio.
+} else if (navigator.getAutoplayPolicy("mediaelement") === "allowed-muted") {
+  // Mute audio on video
+  video.muted = true;
+} else (navigator.getAutoplayPolicy("mediaelement") === "disallowed") {
+  // Set a default placeholder image.
+  video.poster = "http://example.com/poster_image_url";
+}
+```
+
+The result of checking the policy for a feature type is the "general policy" for instances of the specified feature type in the document.
+If the value is `allowed` or `allowed-muted` you can assume that all items of the type in the document have this same policy.
+However the `disallowed` policy may sometimes still be returned even if some elements are able to autoplay (this could happen if elements were initially disallowed, but were then were touched by the user and therefore "blessed" by the user-agent).
+Therefore if this value is returned you may choose to check individual elements/audio contexts.
+
+The code to test a specific element or audio context is the same, except that you pass in the element or context to test rather than the type string.
+Here we pass in the `video` object we want to test.
+
+```js
+if (navigator.getAutoplayPolicy(video) === "allowed") {
+  // The video element will autoplay with audio.
+} else if (navigator.getAutoplayPolicy(video) === "allowed-muted") {
+  // Mute audio on video
+  video.muted = true;
+} else (navigator.getAutoplayPolicy(video) === "disallowed") {
+  // Set a default placeholder image.
+  video.poster = "http://example.com/poster_image_url";
+}
+```
+
+Finally, note that the autoplay policy for a particular element may change, in particular due to user interaction.
+Therefore you may need to recheck the policy when elements are touched.
+
+#### Example 3: Detecting autoplay failure as a fallback
+
+No specific event (or other notification) is triggered by autoplay success or failure, so browsers that do not support [`Navigator.getAutoplayPolicy()`](/en-US/docs/Web/API/Navigator/getAutoplayPolicy) have no easy way to determine if autoplay is supported or to react when it is triggered or not triggered.
+
+One approach is to listen for the first instance of the {{domxref("HTMLMediaElement/play_event", "play")}} event, which is fired on the media element when is resumed after being paused _and_ when autoplay occurs.
+That means that the first time the `play` event is fired, you know your media is being started for the first time after the page is opened,
 
 Consider this HTML for a media element:
 
 ```html
-<video src="myvideo.mp4" autoplay onplay="handleFirstPlay(event)"></video>
+<video src="myvideo.mp4" id="video" autoplay></video>
 ```
 
-Here we have a {{HTMLElement("video")}} element whose {{htmlattrxref("autoplay", "video")}} attribute is set, with an {{domxref("HTMLMediaElement.play_event", "onplay")}} event handler set up; the event is handled by a function called `handleFirstPlay()`, which receives as input the `play` event.
+Here we have a {{HTMLElement("video")}} element whose {{htmlattrxref("autoplay", "video")}} attribute is set and with a {{domxref("HTMLMediaElement.play_event", "play")}} event handler set up; the event is handled by a function called `handleFirstPlay()`, which receives as input the `play` event.
 
 `handleFirstPlay()` looks like this:
 
 ```js
+const video = document.getElementById("video");
+video.addEventListener( "play", handleFirstPlay(event), false);
+
 let hasPlayed = false;
 function handleFirstPlay(event) {
   if (!hasPlayed) {
     hasPlayed = true;
 
+    // Remove listener so this only gets called once.
     const vid = event.target;
-
-    vid.onplay = null;
+    vid.removeEventListener("play", handleFirstPlay(event));
 
     // Start whatever you need to do after first playback has started
   }
 }
 ```
 
-After getting a reference to the video element from the {{domxref("Event")}} object's {{domxref("Event.target", "target")}}, the element's `onplay` handler is set to `null`. This will prevent any future `play` events from being delivered to the handler. That could happen if the video is paused and resumed by the user or automatically by the browser when the document is in a background tab.
+After getting a reference to the video element from the {{domxref("Event")}} object's {{domxref("Event.target", "target")}}, we use it to remove the event listener.
+This will prevent any future `play` events from being delivered to the handler. That could happen if the video is paused and resumed by the user or automatically by the browser when the document is in a background tab.
 
 At this point, your site or app can begin whatever it needs to do that relies upon the video having been started up.
-
-> **Note:** This approach doesn't differentiate between autoplay and the user starting playback manually.
 
 ### The play() method
 
