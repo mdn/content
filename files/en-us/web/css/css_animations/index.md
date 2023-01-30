@@ -17,7 +17,7 @@ spec-urls:
 
 The **CSS Animations** module lets you animate the values of CSS properties over time, using keyframes, providing properties to control the easing, duration, number of repetitions, play state, and other attributes of these keyframes.
 
-### Example
+### Animations in action
 
 To view the animation in action, check the checkbox or hover over the example. The cloud will change shape, snowflakes will fall, and the snow level will rise. To pause the animation, uncheck the checkbox or move your mouse off of the example.
 
@@ -261,7 +261,7 @@ input:checked + label::before {
 }
 ```
 
-{{ EmbedLiveSample('Example', "630", "630") }}
+{{ EmbedLiveSample('Animations_in_action', "630", "630") }}
 
 This example uses {{cssxref("animation-iteration-count")}} to make the flakes fall repeatedly, {{cssxref("animation-direction")}} to make the clouds move back and forth, {{cssxref("animation-fill-mode")}} to keep the snow level high once it has stopped growing, and {{cssxref("animation-play-state")}} to pause the animation.
 
