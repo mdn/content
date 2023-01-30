@@ -40,6 +40,11 @@ No notable changes.
   They have been removed from the SVG2 specification and are likely to be removed entirely from Firefox in a future release.
   ({{bug(1133174)}}).
 
+### HTTP
+
+- The `'unsafe-hashes'` value for {{HTTPHeader("Content-Security-Policy")}} source directives is now supported.
+  For more information, see [CSP unsafe-hashes](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_hashes) ({{bug(1343950)}}).
+
 ### APIs
 
 - The `scrollend` events are now supported, which indicate that the user has completed scrolling in {{domxref("Element")}} and {{domxref("Document")}} objects.
