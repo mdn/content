@@ -32,7 +32,7 @@ There are some additional syntax restrictions:
 ### Parameters
 
 - `prop`
-  - : The name of the property to bind to the given function. Same as other properties in [object initializers](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer), it can be a string literal, a number literal, or an identifier.
+  - : The name of the property to bind to the given function. In the same way as other properties in [object initializers](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer), it can be a string literal, a number literal, or an identifier.
 - `expression`
   - : You can also use expressions for a computed property name to bind to the given function.
 
