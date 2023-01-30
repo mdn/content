@@ -20,7 +20,7 @@ tags:
 
 {{FirefoxSidebar}}
 
-Based on the [Gecko](/en-US/docs/Gecko) 1.8 engine, Firefox 1.5 improved its already best in class standards support, and provided new capabilities to enable the next generation of web applications. Firefox 1.5 features improved support for CSS2 and CSS3, APIs for scriptable and programmable 2D graphics through [SVG](/en-US/docs/Web/SVG) 1.1 and [`<canvas>`](/en-US/docs/Web/API/Canvas_API), [XForms](/en-US/docs/XForms) and XML events, as well as many DHTML, JavaScript, and DOM enhancements.
+Based on the [Gecko](/en-US/docs/Glossary/Gecko) 1.8 engine, Firefox 1.5 improved its already best in class standards support, and provided new capabilities to enable the next generation of web applications. Firefox 1.5 features improved support for CSS2 and CSS3, APIs for scriptable and programmable 2D graphics through [SVG](/en-US/docs/Web/SVG) 1.1 and [`<canvas>`](/en-US/docs/Web/API/Canvas_API), [XForms](/en-US/docs/XForms) and XML events, as well as many DHTML, JavaScript, and DOM enhancements.
 
 ## Developer Tools
 
