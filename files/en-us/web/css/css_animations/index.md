@@ -297,7 +297,7 @@ Every animation, even those that are 0 seconds long, throw animation events:
 - {{domxref("Element/animationcancel_event", "animationcancel")}}
 - {{domxref("Element/animationiteration_event", "animationiteration")}}
 
-### Interfaces_
+### Interfaces
 
 - {{domxref("AnimationEvent")}}
 - {{domxref("CSSKeyframeRule")}}
@@ -312,7 +312,7 @@ Every animation, even those that are 0 seconds long, throw animation events:
 
 ## Related content
 
-### properties
+### Properties
 
 - {{cssxref("will-change")}}
 
