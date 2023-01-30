@@ -456,8 +456,8 @@ You can see a good example of a search form used in context at our [website-aria
     </tr>
      <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td>with no <code>list</code> attribute: {{ARIARole("searchbox")}}</td>
-      <td>with <code>list</code> attribute: {{ARIARole("combobox")}}</td>
+      <td>with no <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role">searchbox</a></code></td>
+      <td>with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code></td>
     </tr>
   </tbody>
 </table>
