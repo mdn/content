@@ -106,7 +106,7 @@ We can then add the fancy class to any element on the page to add a yellow box a
 
 The following example will look like the image above in [browsers supporting the CSS Painting API](/en-US/docs/Web/API/CSS/paintWorklet#browser_compatibility).
 
-{{EmbedLiveSample("Using_the_paint_worklet", 120, 120)}}
+{{EmbedGHLiveSample("dom-examples/css-painting/half-highlight-fixed-size/", 120, 120)}}
 
 While you can't play with the worklet's script, you can alter the `background-size` and `background-position` to change the size and location of the background image.
 
@@ -186,7 +186,7 @@ CSS.paintWorklet.addModule(
 
 In [browsers that support the CSS Paint API](/en-US/docs/Web/API/CSS/paintWorklet#browser_compatibility), the elements in the example below should get yellow backgrounds proportional to their font size.
 
-{{EmbedLiveSample("Using_the_paint_worklet_2", 300, 300)}}
+{{EmbedGHLiveSample("dom-examples/css-painting/half-highlight-paintsize", 200, 200)}}
 
 ## Custom properties
 
@@ -324,7 +324,7 @@ CSS.paintWorklet.addModule(
 
 While you can't play with the worklet's script, you can alter the custom property values in DevTools to change the colors and width of the background image.
 
-{{EmbedGHLiveSample("css-examples/houdini/css_painting_api/example-boxbg.html", '100%', 400)}}
+{{EmbedGHLiveSample("dom-examples/css-painting/custom-properties/", '100%', 400)}}
 
 ## Adding complexity
 
@@ -421,7 +421,7 @@ CSS.paintWorklet.addModule(
 );
 ```
 
-{{EmbedLiveSample("Using_the_paint_worklet_4", 300, 300)}}
+{{EmbedGHLiveSample("dom-examples/css-painting/fancy-header-highlight/", 200, 200)}}
 
 While you can't edit the worklet itself, you can play around with the CSS and HTML. Maybe try [`float`](/en-US/docs/Web/CSS/float) and [`clear`](/en-US/docs/Web/CSS/clear) on the headers?
 
@@ -650,7 +650,7 @@ CSS.paintWorklet.addModule(
 );
 ```
 
-{{EmbedLiveSample("Using_the_paint_worklet_5", 300, 300)}}
+{{EmbedGHLiveSample("dom-examples/css-painting/hollow-highlight", 400, 400)}}
 
 ## See also
 
