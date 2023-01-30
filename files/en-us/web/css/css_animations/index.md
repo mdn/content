@@ -284,13 +284,6 @@ This example uses {{cssxref("animation-iteration-count")}} to make the flakes fa
 
 - {{cssxref("@keyframes")}}
 
-### Data types, functions, and values
-
-- {{cssxref("easing-function")}}
-- [`scroll()`](/en-US/docs/Web/CSS/animation-timeline/scroll) function
-
-or
-
 ### Functions
 
 - [`scroll()`](/en-US/docs/Web/CSS/animation-timeline/scroll) function
@@ -303,17 +296,6 @@ Every animation, even those that are 0 seconds long, throw animation events:
 - {{domxref("Element/animationend_event", "animationend")}}
 - {{domxref("Element/animationcancel_event", "animationcancel")}}
 - {{domxref("Element/animationiteration_event", "animationiteration")}}
-
-### Interfaces
-
-- {{domxref("AnimationEvent")}} (inherits from {{domxref("Event")}})
-  - : Including {{domxref("AnimationEvent.animationName")}}, {{domxref("AnimationEvent.elapsedTime")}}, and {{domxref("AnimationEvent.pseudoElement")}}.
-- {{domxref("CSSKeyframeRule")}} (inherits from {{domxref("CSSRule")}})
-  - : Including {{domxref("CSSKeyframeRule.keyText")}} and {{domxref("CSSKeyframeRule.style")}}.
-- {{domxref("CSSKeyframesRule")}} (inherits from {{domxref("CSSRule")}})
-  - : Including {{domxref("CSSKeyframesRule.name")}}, {{domxref("CSSKeyframesRule.cssRules")}}, {{domxref("CSSKeyframesRule.appendRule()")}}, {{domxref("CSSKeyframesRule.deleteRule()")}}, and {{domxref("CSSKeyframesRule.findRule()")}}.
-
-or
 
 ### Interfaces_
 
@@ -330,7 +312,7 @@ or
 
 ## Related content
 
-### Associated properties
+### properties
 
 - {{cssxref("will-change")}}
 
