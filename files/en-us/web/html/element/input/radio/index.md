@@ -339,7 +339,7 @@ Notice that when clicking on a radio button, there's a nice, smooth fade out/in 
      <tr>
       <td><strong>Implicit ARIA Role</strong></td>
       <td>
-        {{ARIARole("radio")}}
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code>
       </td>
     </tr>
   </tbody>
