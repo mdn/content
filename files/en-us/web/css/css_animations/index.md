@@ -22,7 +22,7 @@ The **CSS Animations** module lets you animate the values of CSS properties over
 To view the animation in action, check the checkbox or hover over the example. The cloud will change shape, snowflakes will fall, and the snow level will rise. To pause the animation, uncheck the checkbox or move your mouse off of the example.
 
 ```html hidden
-<input type="checkbox" id="animate" aria-label="Toggle the play state of the animation">
+<input type="checkbox" id="animate" aria-label="Toggle the play state of the animation"><!-- See aria-label: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label -->
 <label for="animate">the animation</label>
 <div class="root">
   <i></i>
@@ -90,13 +90,14 @@ i {
   width: 16px;
   border-radius: 50%;
   animation: falling 3s linear 0s infinite backwards;
+  /* Snowflakes are made with CSS linear gradients (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients) */
   background-image: 
     linear-gradient(180deg, transparent 40%, white 40%, white 60%, transparent 60%), 
     linear-gradient(90deg, transparent 40%, white 40%, white 60%, transparent 60%), 
     linear-gradient(45deg, transparent 43%, white 43%, white 57%, transparent 57%), 
     linear-gradient(135deg, transparent 43%, white 43%, white 57%, transparent 57%); 
 }
- i:nth-of-type(4n) {
+ i:nth-of-type(4n) { /* using tree structural pseudoclasses to create randomness - https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-of-type */
     height: 30px;
     width: 30px;
     transform-origin: right -30px; 
@@ -156,7 +157,8 @@ i {
     animation-timing-function: linear; 
     }
  i:nth-of-type(11n) {
-    animation-timing-function: cubic-bezier(0.2, 0.3, 0.8, 0.9); }
+    animation-timing-function: cubic-bezier(0.2, 0.3, 0.8, 0.9); 
+    }
  i:nth-of-type(7n) {
     opacity: 0.5; 
     }
@@ -184,19 +186,20 @@ i {
 }
 .ground, .cloud {
   position: absolute;
-  top: 0; right: 0; left: 0; 
+  top: 0; 
+  right: 0; 
+  left: 0; 
   background-repeat: no-repeat;
 }
 .cloud { 
-   width:100%;
-   height:150px;
-   background:#ffffff;
+   width: 100%;
+   height: 150px;
+   background: #ffffff;
    border-radius: 0 0 90px 33% / 0 0 45px 50px;
    box-shadow: 
      5px 15px 15px white, 
      -5px 15px 15px white, 
      0 20px 20px rgba(125 125 125 / 0.5);
-
   animation: 
     clouds ease 5s alternate infinite 0.2s, 
     wind ease-out 4s alternate infinite;
@@ -207,7 +210,8 @@ i {
   background-position: center 580px;
   animation: snowpile linear 300s forwards;
   border: 1px solid grey;
-  transform: translate3d(0, 0, 0);
+  /* put the ground into a 3D rendering context (because the snow flakes are in a 3d rendering context) */
+  transform: translate3d(0, 0, 0); 
 }
 
 @keyframes snowpile {
@@ -246,15 +250,21 @@ i {
     } 
 }
 
+/* by default, the animations are paused. */
 i, 
 div[class] {
   animation-play-state: paused;
 }
-div:hover *, input:checked ~ div * {
+/* When the div is hovered, the animation plays. Also, 
+when the input is checked, the animation coming after the checked checbox plays */
+div:hover *, 
+input:checked ~ div * { 
   animation-play-state: running;
 }
+
+/* Change the content of the label that comes right after the input. Included aria-label on the label to improve accessibility. */
 input + label::before {
-  content: "Play "
+  content: "Play " 
 }
 input:checked + label::before {
   content: "Pause "
@@ -263,7 +273,7 @@ input:checked + label::before {
 
 {{ EmbedLiveSample('Animations_in_action', "630", "630") }}
 
-This example uses {{cssxref("animation-iteration-count")}} to make the flakes fall repeatedly, {{cssxref("animation-direction")}} to make the clouds move back and forth, {{cssxref("animation-fill-mode")}} to keep the snow level high once it has stopped growing, and {{cssxref("animation-play-state")}} to pause the animation.
+This example uses {{cssxref("animation-iteration-count")}} to make the flakes fall repeatedly, {{cssxref("animation-direction")}} to make the clouds move back and forth, {{cssxref("animation-fill-mode")}} to keep the snow level high once it has stopped growing, and {{cssxref("animation-play-state")}} to pause the animation. To see the code for this animation, [view the source on Github](https://github.com/mdn/content/blob/main/files/en-us/web/css/css_animations/index.md).
 
 ## Reference
 
@@ -290,7 +300,7 @@ This example uses {{cssxref("animation-iteration-count")}} to make the flakes fa
 
 ### Events
 
-Every animation, even those that are 0 seconds long, throw animation events:
+Every animation, even those that are 0 seconds in duration, throw animation events:
 
 - {{domxref("Element/animationstart_event", "animationstart")}}
 - {{domxref("Element/animationend_event", "animationend")}}
@@ -299,6 +309,7 @@ Every animation, even those that are 0 seconds long, throw animation events:
 
 ### Interfaces
 
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
 - {{domxref("AnimationEvent")}}
 - {{domxref("CSSKeyframeRule")}}
 - {{domxref("CSSKeyframesRule")}}
@@ -310,15 +321,12 @@ Every animation, even those that are 0 seconds long, throw animation events:
 - [CSS animations tips and tricks](/en-US/docs/Web/CSS/CSS_Animations/Tips)
   - : Tips and tricks to help you get the most out of CSS animations. Currently offers a technique for replaying an animation which has already run through to completion, which the API doesn't support inherently.
 
-## Related content
+## Related concepts
 
-### Properties
-
-- {{cssxref("will-change")}}
-
-### Glossary terms
-
-- {{glossary("Bézier curve")}}
+- {{cssxref("will-change")}} CSS property
+- {{glossary("Bézier curve")}} glossary term
+- [`<easing-function>`](foo) data type
+- [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media query
 
 ## Specifications
 
@@ -326,7 +334,7 @@ Every animation, even those that are 0 seconds long, throw animation events:
 
 ## See also
 
-- [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions) can trigger animations based on user actions.
 - The CSS Scroll Timeline {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties, along with the {{cssxref('scroll-timeline')}} shorthand, create animations tied to the scroll offset of a scroll container.
-- The [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media query to enable minimizing animations for users requesting it.
-- The [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) enables constructing and controlling the playback of animations with JavaScript.
+- [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions) can trigger animations based on user actions.
+- The HTML {{htmlelement("canvas")}} element along with the [canvas API](/en-US/docs/Web/API/Canvas_API) and [WebGL API](/en-US/docs/Web/API/WebGL_API) to draw graphics and animations.
+- [SVG](/en-US/docs/Web/SVG) and the {{domxref("SVGAnimationElement")}} interface, which is the base interface for all of the animation element interfaces: {{domxref("SVGAnimateElement")}}, {{domxref("SVGSetElement")}}, {{domxref("SVGAnimateColorElement")}}, {{domxref("SVGAnimateMotionElement")}} and {{domxref("SVGAnimateTransformElement")}}.
