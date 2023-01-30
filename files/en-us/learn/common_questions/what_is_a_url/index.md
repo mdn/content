@@ -76,7 +76,7 @@ The first part of the URL is the _scheme_, which indicates the protocol that the
 
 Next follows the _authority_, which is separated from the scheme by the character pattern `://`. If present the authority includes both the _domain_ (e.g. `www.example.com`) and the _port_ (`80`), separated by a colon:
 
-- The domain indicates which Web server is being requested. Usually this is a domain name, but an {{Glossary("IP address")}} may also be used (but this is rare as it is much less convenient).
+- The domain indicates which Web server is being requested. Usually this is a [domain name](/en-US/docs/Learn/Common_questions/What_is_a_domain_name), but an {{Glossary("IP address")}} may also be used (but this is rare as it is much less convenient).
 - The port indicates the technical "gate" used to access the resources on the web server. It is usually omitted if the web server uses the standard ports of the HTTP protocol (80 for HTTP and 443 for HTTPS) to grant access to its resources. Otherwise it is mandatory.
 
 > **Note:** The separator between the scheme and authority is `://`. The colon separates the scheme from the next part of the URL, while `//` indicates that the next part of the URL is the authority.

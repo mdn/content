@@ -1,6 +1,7 @@
 ---
 title: '<data>: The Data element'
 slug: Web/HTML/Element/data
+page-type: html-element
 tags:
   - Element
   - HTML

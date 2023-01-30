@@ -1,6 +1,7 @@
 ---
 title: '<dd>: The Description Details element'
 slug: Web/HTML/Element/dd
+page-type: html-element
 tags:
   - Definition
   - Description Details
@@ -73,7 +74,7 @@ For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td>{{ARIARole("definition")}}</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role"><code>definition</code></a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>

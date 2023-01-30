@@ -1,6 +1,7 @@
 ---
 title: '<span>: The Content Span element'
 slug: Web/HTML/Element/span
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -59,7 +60,7 @@ li span {
 
 {{EmbedLiveSample('Example_2')}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

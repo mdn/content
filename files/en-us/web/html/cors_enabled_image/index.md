@@ -1,6 +1,7 @@
 ---
 title: Allowing cross-origin use of images and canvas
 slug: Web/HTML/CORS_enabled_image
+page-type: guide
 tags:
   - Advanced
   - CORS

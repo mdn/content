@@ -161,13 +161,13 @@ console.table(delicateMessage.match(wordEndingWithAs)); // [ "Spartaaaaaaa" ]
 ```js
 const singleLetterWord = /\b\w\b/g;
 const notSoLongWord = /\b\w{2,6}\b/g;
-const loooongWord = /\b\w{13,}\b/g;
+const longWord = /\b\w{13,}\b/g;
 
 const sentence = "Why do I have to learn multiplication table?";
 
 console.table(sentence.match(singleLetterWord)); // ["I"]
 console.table(sentence.match(notSoLongWord));    // [ "Why", "do", "have", "to", "learn", "table" ]
-console.table(sentence.match(loooongWord));      // ["multiplication"]
+console.table(sentence.match(longWord));      // ["multiplication"]
 ```
 
 ### Optional character

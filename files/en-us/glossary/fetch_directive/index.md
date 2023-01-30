@@ -28,5 +28,4 @@ See [Fetch directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#fetc
   - <https://www.w3.org/TR/CSP/#directives-fetch>
   - {{HTTPHeader("Content-Security-Policy/upgrade-insecure-requests", "upgrade-insecure-requests")}}
   - {{HTTPHeader("Content-Security-Policy/block-all-mixed-content", "block-all-mixed-content")}}
-  - {{HTTPHeader("Content-Security-Policy/require-sri-for", "require-sri-for")}} {{Deprecated_Inline}}
   - {{HTTPHeader("Content-Security-Policy")}}

@@ -1,6 +1,7 @@
 ---
 title: <input type="time">
 slug: Web/HTML/Element/input/time
+page-type: html-element
 tags:
   - Element
   - Forms

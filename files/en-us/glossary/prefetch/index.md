@@ -43,6 +43,6 @@ Browsers will prefetch content when the prefetch [`<link>`](/en-US/docs/Web/HTML
 
 - defer
 - async
-- [preload](/en-US/docs/Web/HTML/Link_types/preload)
+- [preload](/en-US/docs/Web/HTML/Attributes/rel/preload)
 - [page prediction](/en-US/docs/Glossary/Page_prediction)
 - [lazy loading](/en-US/docs/Web/Performance/Lazy_loading)

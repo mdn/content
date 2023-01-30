@@ -1,6 +1,7 @@
 ---
 title: '<tfoot>: The Table Foot element'
 slug: Web/HTML/Element/tfoot
+page-type: html-element
 tags:
   - Element
   - HTML
