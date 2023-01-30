@@ -448,7 +448,7 @@ Also consider using the [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocom
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
       <td>
-        {{ARIARole("spinbutton")}}
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role">spinbutton</a></code>
       </td>
     </tr>
   </tbody>
