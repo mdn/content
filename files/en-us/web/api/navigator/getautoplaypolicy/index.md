@@ -19,7 +19,7 @@ It can also be used to check autoplay support for specific media elements and au
 ## Syntax
 
 ```js-nolint
-/* Test autoplay policy for a particular media playing feature */
+// Test autoplay policy for a particular media playing feature
 getAutoplayPolicy(type)
 
 /* Test autoplay support for specific element or context */
