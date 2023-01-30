@@ -28,7 +28,7 @@ Autoplay blocking is _not_ applied to {{HTMLElement("video")}} elements when the
 
 ## Autoplay and autoplay blocking
 
-The term **autoplay** refers to any feature that causes audio to begin to play without the user specifically requesting that playback begin. This includes both the use of HTML attributes to autoplay media as well as the user of JavaScript code to start playback outside the context of handling user input.
+The term **autoplay** refers to any feature that causes audio to begin to play without the user specifically requesting that playback begin. This includes both the use of HTML attributes to autoplay media as well as the use of JavaScript code to start playback outside the context of handling user input.
 
 That means that both of the following are considered autoplay behavior, and are therefore subject to the browser's autoplay blocking policy:
 
@@ -223,7 +223,7 @@ Adding [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) permission to the pr
 Permissions-Policy: autoplay=(self), fullscreen=(self)
 ```
 
-The same permissions, grated using the `<iframe>` element's `allow` property, look like this:
+The same permissions, gated using the `<iframe>` element's `allow` property, look like this:
 
 ```html
 <iframe src="mediaplayer.html" allow="autoplay; fullscreen"> </iframe>
