@@ -22,10 +22,9 @@ requestSubmit(submitter)
 - `submitter` {{optional_inline}}
 
   - : A {{Glossary("submit button")}} that is a member of the form.
-    If the `submitter` specifies `form*` attributes, they will override the form's default behavior (e.g. `formmethod="POST"`).
+    If the `submitter` specifies `form*` attributes, they will override the form's submission behavior (e.g. `formmethod="POST"`).
     If the `submitter` has a `name` attribute or is an `{{HtmlElement('input/image', '&lt;input type="image"&gt;')}}`, it will be included in the form data set.
-    If you omit the `submitter` parameter, the form element
-    itself is used as the submitter.
+    If you omit the `submitter` parameter, the form element itself is used as the submitter.
 
 ### Return value
 
