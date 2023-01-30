@@ -272,7 +272,7 @@ Adding [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) permission to the pr
 Permissions-Policy: autoplay=(self), fullscreen=(self)
 ```
 
-The same permissions, gated using the `<iframe>` element's `allow` property, look like this:
+The same permissions, granted using the `<iframe>` element's `allow` property, look like this:
 
 ```html
 <iframe src="mediaplayer.html" allow="autoplay; fullscreen"> </iframe>

@@ -50,7 +50,7 @@ The method must be called with just one of the following three optional paramete
 - `element` {{optional_inline}}
 
   - : Test whether a specific media element can autoplay.
-    This must be a [`HTMLMediaElement`](/en-US/docs/Web/API/HTMLMediaElement), or derived element such as [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement) and [`HTMLAudioElement`](/en-US/docs/Web/API/HTMLAudioElement).
+    This must be a [`HTMLMediaElement`](/en-US/docs/Web/API/HTMLMediaElement), including derived elements such as [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement) and [`HTMLAudioElement`](/en-US/docs/Web/API/HTMLAudioElement).
 
 - `context` {{optional_inline}}
   - : An [`AudioContext`](/en-US/docs/Web/API/AudioContext).
@@ -81,11 +81,11 @@ Further Support can change for a check - i.e. it might be blocked, but later ena
 
 ## Description
 
-"Autoplay" refers to refers to any feature that causes audio to begin to play without the user specifically requesting that playback begin.
+"Autoplay" refers to any feature that causes audio to begin to play without the user specifically requesting that playback begin.
 This includes the `autoplay` attribute in the HTML [`<video>`](/en-US/docs/Web/HTML/Element/video#attr-autoplay) and [`<audio>`](/en-US/docs/Web/HTML/Element/audio#attr-autoplay) elements, and the use of JavaScript code to start playback without any user interaction.
 
 User agents commonly block autoplay by default, because unexpected sounds, particularly when a page first loads, can result in a jarring and unpleasant user experience.
-The mechanisms used to determine whether or not autoplay is blocked are at least partially depend on each particular user agent.
+The mechanisms used to determine whether or not autoplay is blocked are at least partially dependent on each particular user agent.
 
 This API provides a consistent and reliable mechanism for code to check if autoplaying media is allowed.
 This enables customization such as automatic muting of audio on sites where autoplay is not allowed, or even choosing to defer downloading of resources that cannot immediately be played (saving bandwidth).
@@ -101,7 +101,7 @@ This enables customization such as automatic muting of audio on sites where auto
 
 ### Checking if the feature is supported
 
-The code below shows how to check if `navigator.getAutoplayPolicy()` is supported
+The code below shows how to check if `navigator.getAutoplayPolicy()` is supported:
 
 ```html hidden
 <div id="reportResult"></div>
@@ -157,7 +157,7 @@ This should not be muted by default, and should play automatically if autoplay i
 
 The code reports whether or not the `getAutoplayPolicy()` method is supported, and if it is, the policy for media elements.
 
-If the policy is `allowed-muted` only muted videos can be played, so the code mutes the video.
+If the policy is `allowed-muted`, only muted videos can be played, so the code mutes the video.
 
 ```js
 const log = document.getElementById("reportResult");
@@ -166,7 +166,7 @@ const video = document.getElementById("bunny_vid");
 if (!navigator.getAutoplayPolicy) {
   log.textContent = "navigator.getAutoplayPolicy() not supported.";
 } else {
-  log.textContent = `navigator.getAutoplayPolicy("mediaelement") == ${navigator.getAutoplayPolicy(
+  log.textContent = `Autoplay policy for media elements is ${navigator.getAutoplayPolicy(
     "mediaelement"
   )}`;
 
@@ -183,13 +183,13 @@ Note that you might similarly check for `allowed` and `disallowed`.
 
 The video is displayed below along with information about whether the `getAutoplayPolicy()` method is supported, and if so, the policy.
 
-If `getAutoplayPolicy()` is supported and the policy is `allowed` the video will play automatically with sound.
-If the policy is `allowed-muted` the video will play without sound.
+If `getAutoplayPolicy()` is supported and the policy is `allowed`, the video will play automatically with sound.
+If the policy is `allowed-muted`, the video will play without sound.
 
 {{EmbedLiveSample('Test autoplay policy for media elements', '', '400')}}
 
-Note that if `getAutoplayPolicy()` is not supported the video will either autoplay with audio or not play until touched by the user.
-The code has no control over this behaviour: you're at the mercy of the browser implementation!
+Note that if `getAutoplayPolicy()` is not supported, the video will either autoplay with audio or not play until touched by the user.
+The code has no control over this behavior: you're at the mercy of the browser implementation!
 
 ### Test autoplay policy for a specific media element
 
@@ -198,7 +198,7 @@ It is almost exactly the same as the previous example (an `AudioContext` check w
 Note that it is possible for specific elements to autoplay even if a check on the `mediaelement` type to indicate that autoplay is `disallowed`; in other words, a check on a specific element is more reliable.
 
 The code creates a video element that has the [`autoplay`](/en-US/docs/Web/API/HTMLMediaElement/autoplay) attribute.
-If the autoplay policy is "allowed-muted" the video will be muted to allow it to play.
+If the autoplay policy is "allowed-muted", the video will be muted to allow it to play.
 
 #### HTML
 
@@ -227,7 +227,7 @@ This should not be muted by default, and should play automatically if autoplay i
 
 The code reports whether or not the `getAutoplayPolicy()` method is supported, and if it is, the policy for media elements.
 
-If the policy is `allowed-muted` only muted videos can be played, so the code mutes the video.
+If the policy is `allowed-muted`, only muted videos can be played, so the code mutes the video.
 
 ```js
 const log = document.getElementById("reportResult");
@@ -253,7 +253,7 @@ if (!navigator.getAutoplayPolicy) {
 The result is the same as in the previous example:
 
 - The video should autoplay with sound if `allowed` is returned, and no sound if `allowed-muted` is returned.
-- If `getAutoplayPolicy()` is not supported the video autoplay behaviour depends only on the browser.
+- If `getAutoplayPolicy()` is not supported, the video autoplay behavior depends only on the browser.
 
 {{EmbedLiveSample('Test autoplay policy for a specific media element', '', '400')}}
 
