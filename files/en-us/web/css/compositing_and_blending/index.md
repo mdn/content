@@ -1,5 +1,5 @@
 ---
-title: Compositing and Blending
+title: Compositing and blending
 slug: Web/CSS/Compositing_and_Blending
 page-type: css-module
 tags:
@@ -15,13 +15,13 @@ spec-urls:
 
 {{CSSRef}}
 
-The **Compositing and Blending** CSS module defines how an element's background layers can be blended together, how an element can be blended with its container, and whether the element must create a new [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
+The **compositing and blending** CSS module defines how an element's background layers can be blended together, how an element can be blended with its container, and whether the element must create a new [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
 
 Similar to blending effects available in many image editing applications, this module enables blending an element's background layers together and blending an element's content with that of its container. CSS can be used to define which blending mode should be used, if any, to blend an element's background images and colors into a single background image. It is also possible to define how an element's borders, background, and content, including text, emojis, and images, should be blended with the background of its container.
 
 This module provides for 16 different blending modes.
 
-### Example
+### Compositing and blending in action
 
 In this example, a border and two striped background images with a background color are provided for each box, with a background of a solid color with circles cut out set on the entire example.
 
@@ -37,10 +37,13 @@ In this example, a border and two striped background images with a background co
 ```
 
 ```css hidden
+/* creates a div with two offset striped background images and a background color. */
 div {
   width: 200px;
   height: 200px;
-  background-image: repeating-linear-gradient(45deg, red 0 15px, pink 15px 30px), repeating-linear-gradient(-45deg, blue 0 15px, lightblue 15px 30px);
+  background-image: 
+    repeating-linear-gradient(45deg, red 0 15px, pink 15px 30px), 
+    repeating-linear-gradient(-45deg, blue 0 15px, lightblue 15px 30px);
   background-size: 150px 150px;
   background-repeat: no-repeat;
   background-position: top left, bottom right;
@@ -63,21 +66,25 @@ div:nth-of-type(3n+3){
 div:nth-of-type(n + 4) {
   mix-blend-mode: difference;
 }
+/* put a pink background with transparent round holes that covers the entire element, and lay the examples in two rows with three columns each */
 section {
   padding: 0.75em;
-  background: radial-gradient(circle, transparent 0 20px, rgb(255, 200, 200) 20px); background-size: 60px 60px; background-position: center;
+  background: radial-gradient(circle, transparent 0 20px, rgb(255, 200, 200) 20px); 
+  background-size: 60px 60px; 
+  background-position: center;
   display: inline-grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1em;
 }
+/* make some of the text more legible */
 span {
   background-color: #ffffff99;
 }
 ```
 
-{{ EmbedLiveSample('Example', "630", "300") }}
+{{ EmbedLiveSample('Compositing_and_blending_in_action', "630", "300") }}
 
- The last three boxes are set to blend with the background of the container. Note how the background, border, and the content are all impacted.
+ The last three boxes are set to blend with the background of the container. Note how the background, border, and the content are all impacted. To see the code for this, [view the source on Github](https://github.com/mdn/content/blob/main/files/en-us/web/css/Compositing_and_Blending/index.md).
 
 ## Reference
 
@@ -87,24 +94,31 @@ span {
 - {{cssxref("isolation")}}
 - {{cssxref("mix-blend-mode")}}
 
-### Data types
+### Functions
 
-- {{cssxref("&lt;blend-mode&gt;")}}
+- {{cssxref("")}}
 
-## Related content
+### Events
 
-### Associated properties
+- {{domxref("")}}
 
-- {{cssxref("background-image")}}
-- {{cssxref("background-color")}}
+### Interfaces
 
-### Associated concepts
+- {{domxref("")}} (inherits from {{domxref("")}})
+  - : Including {{domxref("")}}, {{domxref("")}}, and {{domxref("")}}.
 
-- SVG's {{ SVGElement("feBlend") }} filter primitive
-
-### Glossary terms
-
-- Glossary: {{glossary("stacking context")}}
+## Related concepts
+<!--
+- {{cssxref("")}} CSS property
+- {{glossary("")}} glossary term
+- [`<>`](foo) data type
+- [``](/en-US/docs/Web/CSS/@media/) media query
+  -->
+- {{cssxref("background-image")}} CSS property
+- {{cssxref("background-color")}} CSS property
+- {{cssxref("&lt;blend-mode&gt;")}} data type
+- {{ SVGElement("feBlend") }} SVG filter primitive
+- {{glossary("stacking context")}} glossary term
 
 ## Specifications
 
