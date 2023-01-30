@@ -525,7 +525,7 @@ input:valid + span::after {
       <td><strong>Implicit ARIA Role</strong></td>
       <td>with no <code>list</code> attribute:
                 <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></td>
-      <td>with <code>list</code> attribute: {{ARIARole("combobox")}}</td>
+      <td>with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code></td>
     </tr>
   </tbody>
 </table>
