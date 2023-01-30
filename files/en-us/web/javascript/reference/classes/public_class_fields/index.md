@@ -24,6 +24,9 @@ class ClassWithField {
 }
 ```
 
+- The name of a static property (field or method) cannot be `prototype`.
+- The name of a class field (static or instance) cannot be `constructor`.
+
 ## Description
 
 This page introduces public instance fields in detail.

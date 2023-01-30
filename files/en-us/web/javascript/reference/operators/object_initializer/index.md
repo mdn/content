@@ -26,34 +26,27 @@ An **object initializer** is a comma-delimited list of zero or more pairs of pro
 ## Syntax
 
 ```js-nolint
-o = {};
-o = {a: 'foo', b: 42, c: {}};
-
-const a = 'foo';
-const b = 42;
-const c = {};
-o = { a: a, b: b, c: c };
-
 o = {
+  a: "foo",
+  b: 42,
+  c: {},
+  1: "number literal property",
+  "foo:bar": "string literal property",
+
+  shorthandProperty,
+
+  method(parameters) {
+    // …
+  },
+
   get property() {},
   set property(value) {},
-};
 
-o = { __proto__: prototype };
+  [expression]: "computed property",
 
-// Shorthand property names
-o = { a, b, c };
+  __proto__: prototype,
 
-// Shorthand method names
-o = {
-  property(parameters) {},
-};
-
-// Computed property names
-const prop = 'foo';
-o = {
-  [prop]: 'hey',
-  ['b' + 'ar']: 'there',
+  ...spreadProperty,
 };
 ```
 
