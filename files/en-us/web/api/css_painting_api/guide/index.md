@@ -23,6 +23,8 @@ To elaborate over these steps, we're going to start by creating a half-highlight
 
 ![Text reading 'My Cool Header' with a solid yellow background image block on the bottom left two thirds of the header](mycoolheader.png)
 
+> **Note:** The complete source for all the examples in this article can be found at [https://github.com/mdn/dom-examples/tree/main/css-painting](https://github.com/mdn/dom-examples/tree/main/css-painting), and the examples are running live at [https://mdn.github.io/dom-examples/css-painting/](https://mdn.github.io/dom-examples/css-painting/).
+
 ## CSS paint worklet
 
 In an external script file, we employ the [`registerPaint()`](/en-US/docs/Web/API/PaintWorklet/registerPaint) function to name our [CSS Paint worklet](/en-US/docs/Web/API/PaintWorklet). It takes two parameters. The first is the name we give the worklet — this is the name we will use in our CSS as the parameter of the `paint()` function when we want to apply this styling to an element. The second parameter is the class that does all the magic, defining the context options and what to paint to the two-dimensional canvas that will be our image.
