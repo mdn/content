@@ -74,16 +74,14 @@ The setup and design of our paint worklet took place in the external script show
 CSS.paintWorklet.addModule("nameOfPaintWorkletFile.js");
 ```
 
-This can be done using the paint worklet's `addModule()` method in a `<script>` within the main HTML or in an external JavaScript file linked to from the document.
+This can be done using the paint worklet's `addModule()` method in a `<script>` within the main HTML or in an external JavaScript file linked from the document.
 
 ## Using the paint worklet
 
-In our example, the paintworklet is stored on GitHub. To use it, we first register it:
+In our example, the paintworklet is stored alongside the main script file. To use it, we first register it:
 
 ```js
-CSS.paintWorklet.addModule(
-  "https://mdn.github.io/houdini-examples/cssPaint/intro/01partOne/header-highlight.js"
-);
+CSS.paintWorklet.addModule("header-highlight.js");
 ```
 
 ### Reference the paint worklet in CSS
@@ -177,9 +175,7 @@ While you can't play with the worklet's script, you can alter the element's `fon
 #### JavaScript
 
 ```js
-CSS.paintWorklet.addModule(
-  "https://mdn.github.io/houdini-examples/cssPaint/intro/02partTwo/header-highlight.js"
-);
+CSS.paintWorklet.addModule("header-highlight.js");
 ```
 
 #### Result
@@ -315,9 +311,7 @@ li:nth-of-type(3n + 1) {
 In our `<script>` we register the worklet:
 
 ```js
-CSS.paintWorklet.addModule(
-  "https://mdn.github.io/houdini-examples/cssPaint/intro/worklet/boxbg.js"
-);
+CSS.paintWorklet.addModule("boxbg.js");
 ```
 
 #### Result
@@ -416,16 +410,16 @@ h6 {
 And we register our worklet
 
 ```js
-CSS.paintWorklet.addModule(
-  "https://mdn.github.io/houdini-examples/cssPaint/intro/03partThree/header-highlight.js"
-);
+CSS.paintWorklet.addModule("header-highlight.js");
 ```
+
+The result looks like this:
 
 {{EmbedGHLiveSample("dom-examples/css-painting/fancy-header-highlight/", 200, 200)}}
 
 While you can't edit the worklet itself, you can play around with the CSS and HTML. Maybe try [`float`](/en-US/docs/Web/CSS/float) and [`clear`](/en-US/docs/Web/CSS/clear) on the headers?
 
-You could try making the background images above without the CSS paint API. It is doable, but you would have to declare a different, fairly complex linear gradient for each different color you wanted to create. With the CSS Paint API, one worklet can be re-used, with different colors passed in this case.
+You could try making the background images above without the CSS Paint API. It is doable, but you would have to declare a different, fairly complex linear gradient for each different color you wanted to create. With the CSS Paint API, one worklet can be reused, with different colors passed in this case.
 
 ## Passing parameters
 
@@ -464,23 +458,7 @@ paint(ctx, size, props, args) {
 }
 ```
 
-We can pass more than one argument.
-
-```css
-li {
-  background-image: paint(hollowHighlights, stroke, 10px);
-}
-```
-
-We can also specify that we want a particular type of argument. When we `get` our list of argument values, we ask specifically for a `<length>` unit.
-
-```js
-static get inputArguments() { return ['*', '<length>']; }
-```
-
-In this case, we specifically requested the `<length>` attribute. The first element in the returned array will be a [`CSSUnparsedValue`](/en-US/docs/Web/API/CSSUnparsedValue). The second will be a [`CSSStyleValue`](/en-US/docs/Web/API/CSSStyleValue).
-
-If the custom argument is a CSS value, for instance a unit, we can invoke Typed OM CSSStyleValue class (and sub classes) by using the value type keyword when we retrieve it in the `registerPaint()` function.
+We can also specify that we want a particular type of argument.
 
 Let's say we add a second argument with how many pixels wide we want the stroke to be:
 
@@ -495,6 +473,10 @@ When we `get` our list of argument values, we can ask specifically for a `<lengt
 ```js
 static get inputArguments() { return ['*', '<length>']; }
 ```
+
+In this case, we specifically requested the `<length>` attribute. The first element in the returned array will be a [`CSSUnparsedValue`](/en-US/docs/Web/API/CSSUnparsedValue). The second will be a [`CSSStyleValue`](/en-US/docs/Web/API/CSSStyleValue).
+
+If the custom argument is a CSS value, for instance a unit, we can invoke Typed OM CSSStyleValue class (and sub classes) by using the value type keyword when we retrieve it in the `registerPaint()` function.
 
 Now we can access the type and value properties, meaning we can get the number of pixels and a number type right out of the box. (Admittedly, `ctx.lineWidth` takes a float as a value rather than a value with length units, but for example's sake…)
 
@@ -532,7 +514,7 @@ registerPaint(
     }
     // Input arguments that can be passed to the `paint` function
     static get inputArguments() {
-      return ["*", ""];
+      return ["*", "<length>"];
     }
 
     static get contextOptions() {
@@ -645,9 +627,7 @@ li:nth-of-type(3n + 1) {
 In our `<script>` we register the worklet:
 
 ```js
-CSS.paintWorklet.addModule(
-  "https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hollow.js"
-);
+CSS.paintWorklet.addModule("hollow.js");
 ```
 
 {{EmbedGHLiveSample("dom-examples/css-painting/hollow-highlight", 400, 400)}}
