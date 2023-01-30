@@ -73,6 +73,8 @@ The multi-argument constructor (see above) creates a completely new {{domxref("K
       - : Determines how values build from iteration to iteration in this animation. Can be
         set to `accumulate` or `replace` (see above). Defaults
         to `replace`.
+    - `pseudoElement` {{optional_inline}}
+      - : A `string` containing a {{cssxref("pseudo-elements","pseudo-element")}} selector, such as `"::before"`. If present, the effect is applied to the selected pseudo-element of `target`, rather than to `target` itself.
 
 The single argument constructor (see above) creates a clone of an existing {{domxref("KeyframeEffect")}} object instance. Its parameter is as follows:
 

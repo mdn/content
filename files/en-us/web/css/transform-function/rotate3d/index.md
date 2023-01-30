@@ -18,7 +18,7 @@ fixed axis in 3D space, without deforming it. Its result is a {{cssxref("&lt;tra
 
 {{EmbedInteractiveExample("pages/css/rotate3d.html")}}
 
-In 3D space, rotations have three degrees of liberty, which together describe a single axis of rotation. The axis of
+In 3D space, rotations have three degrees of freedom, which together describe a single axis of rotation. The axis of
 rotation is defined by an \[x, y, z] vector and pass by the origin (as defined by the {{ cssxref("transform-origin") }}
 property). If, as specified, the vector is not _normalized_ (i.e., if the sum of the square of its three
 coordinates is not 1), the {{glossary("user agent")}} will normalize it internally. A non-normalizable vector, such as
