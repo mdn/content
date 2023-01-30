@@ -25,7 +25,7 @@ browser-compat: webextensions.api.dom.openOrClosedShadowRoot
 
 Gets the open shadow root or the closed shadow root hosted by the specified element. If the element doesn't attach the shadow root, it will return `null`.
 
-> **Note:** In FireFox, the equivalent `dom.openOrClosedShadowRoot` read-only
+> **Note:** In Firefox, the equivalent `dom.openOrClosedShadowRoot` read-only
 > property represents the shadow root hosted by the element, regardless if its
 > {{DOMxRef("ShadowRoot.mode", "mode")}} is `open` or
 > `closed`.
