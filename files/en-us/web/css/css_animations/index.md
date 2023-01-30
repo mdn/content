@@ -289,11 +289,19 @@ This example uses {{cssxref("animation-iteration-count")}} to make the flakes fa
 - {{cssxref("easing-function")}}
 - [`scroll()`](/en-US/docs/Web/CSS/animation-timeline/scroll) function
 
+or
+
+### Functions
+
+- [`scroll()`](/en-US/docs/Web/CSS/animation-timeline/scroll) function
+
 ### Events
+
+Every animation, even those that are 0 seconds long, throw animation events:
 
 - {{domxref("Element/animationstart_event", "animationstart")}}
 - {{domxref("Element/animationend_event", "animationend")}}
-- {{domxref("Element/animationcancel_event", "animationcancel")}},
+- {{domxref("Element/animationcancel_event", "animationcancel")}}
 - {{domxref("Element/animationiteration_event", "animationiteration")}}
 
 ### Interfaces
@@ -304,8 +312,14 @@ This example uses {{cssxref("animation-iteration-count")}} to make the flakes fa
   - : Including {{domxref("CSSKeyframeRule.keyText")}} and {{domxref("CSSKeyframeRule.style")}}.
 - {{domxref("CSSKeyframesRule")}} (inherits from {{domxref("CSSRule")}})
   - : Including {{domxref("CSSKeyframesRule.name")}}, {{domxref("CSSKeyframesRule.cssRules")}}, {{domxref("CSSKeyframesRule.appendRule()")}}, {{domxref("CSSKeyframesRule.deleteRule()")}}, and {{domxref("CSSKeyframesRule.findRule()")}}.
-- {{DOMxRef("Element")}}
-  - : Including {{DOMxRef("Element.animate()")}} and {{DOMxRef("Element.getAnimations()")}}.
+
+or
+
+### Interfaces_
+
+- {{domxref("AnimationEvent")}}
+- {{domxref("CSSKeyframeRule")}}
+- {{domxref("CSSKeyframesRule")}}
 
 ## Guides
 
