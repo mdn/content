@@ -44,7 +44,7 @@ Some of the new features in Firefox 1.5:
 - [Drawing Graphics with Canvas](/en-US/docs/Web/API/Canvas_API/Tutorial)
   - : Learn about the new `<canvas>` tag and how to draw graphs and other objects in Firefox.
 - [CSS3 Columns](/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)
-  - : Learn about the new support for automatic multi-column text layout as proposed for [CSS3](/en-US/docs/CSS/CSS3).
+  - : Learn about the new support for automatic multi-column text layout as proposed for [CSS3](/en-US/docs/Web/CSS).
 - [Using Firefox 1.5 caching](/en-US/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching)
   - : Learn about `bfcache` and how it speeds up back and forward navigation.
 
@@ -98,7 +98,7 @@ Firefox support for Web standards continues to lead the industry with consistent
 - Extensible Markup Language ([XML](/en-US/docs/Web/XML)): [XML 1.0](https://www.w3.org/TR/REC-xml/), [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/), [Associating Style Sheets with XML Documents 1.0](https://www.w3.org/TR/xml-stylesheet/), [Fragment Identifier for XML](https://lists.w3.org/Archives/Public/www-xml-linking-comments/2001AprJun/att-0074/01-NOTE-FIXptr-20010425.htm)
 - XSL Transformations ([XSLT](/en-US/docs/Web/XSLT)): [XSLT 1.0](https://www.w3.org/TR/xslt/)
 - XML Path Language ([XPath](/en-US/docs/Web/XPath)): [XPath 1.0](https://www.w3.org/TR/xpath/)
-- Resource Description Framework ([RDF](/en-US/docs/RDF)): [RDF](https://www.w3.org/RDF/)
+- Resource Description Framework ([RDF](/en-US/docs/Glossary/RDF)): [RDF](https://www.w3.org/RDF/)
 - Simple Object Access Protocol (SOAP): [SOAP 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)
 - [JavaScript](/en-US/docs/Web/JavaScript) 1.6, based on [ECMA-262](/en-US/docs/Web/JavaScript/Language_Resources), revision 3: [ECMA-262](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
 
