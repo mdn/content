@@ -42,6 +42,12 @@ let result = await browser.declarativeNetRequest.testMatchOutcome(
     - `url`
       - : A `string`. The URL of the hypothetical request.
 
+- `options`
+
+  - : Details of options for the request.
+    - `includeOtherExtensions` {{optional_inline}}
+      - : A `boolean`. Whether matching rules from other extensions are included in `matchedRules`. When rules from other extensions match, the resulting `matchedRule` has an `extensionId` property. Defaults to `false`.
+
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an object with these properties:
