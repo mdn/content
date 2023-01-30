@@ -1,6 +1,7 @@
 ---
 title: 'HTML attribute: required'
 slug: Web/HTML/Attributes/required
+page-type: html-attribute
 tags:
   - Attribute
   - Attributes
@@ -20,7 +21,7 @@ The attribute is not supported or relevant to {{HTMLElement("input/range","range
 
 Note `color` and `range` don't support `required`, but type `color` defaults to `#000000`, and `range` defaults to the midpoint between `min` and `max` — with `min` and `max` defaulting to 0 and 100 respectively in most browsers if not declared — so always has a value.
 
-In the case of a same named group of {{HTMLElement("input/radio","radio")}} buttons, if a single radio button in the group has the `required` attribute, a radio button in that group must be checked, although it doesn't have to be the one with the attribute is applied. So to improve code maintenance, it is recommended to either include the `required` attribute in every same-named radio button in the group, or else in none.
+In the case of a same named group of {{HTMLElement("input/radio","radio")}} buttons, if a single radio button in the group has the `required` attribute, a radio button in that group must be checked, although it doesn't have to be the one on which the attribute is applied. So to improve code maintenance, it is recommended to either include the `required` attribute in every same-named radio button in the group, or else in none.
 
 In the case of a same named group of {{HTMLElement("input/checkbox","checkbox")}} input types, only the checkboxes with the `required` attribute are required.
 
@@ -32,7 +33,7 @@ Because a read-only field cannot have a value, `required` does not have any effe
 
 ### Usability
 
-When including the `required` attribute, provide a visible indication near the control informing the user that the {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("textarea")}} is required. In addition, target required form controls with the {{cssxref(':required')}} pseudo-class, styling them in a way to indicate they are required. This improves usability for sighted users. Assistive technology should inform the user that the form control in mandatory based on the required attribute, but adding `aria-required="true"` doesn't hurt, in case the browser / screen reader combination does not support `required` yet.
+When including the `required` attribute, provide a visible indication near the control informing the user that the {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("textarea")}} is required. In addition, target required form controls with the {{cssxref(':required')}} pseudo-class, styling them in a way to indicate they are required. This improves usability for sighted users. Assistive technology should inform the user that the form control is mandatory based on the required attribute, but adding `aria-required="true"` doesn't hurt, in case the browser / screen reader combination does not support `required` yet.
 
 ### Constraint validation
 
@@ -74,7 +75,7 @@ Provide an indication to users informing them the form control is required. Ensu
 
 ## See also
 
-- {{cssxref('validityState.valueMissing')}}
+- {{domxref('validityState.valueMissing')}}
 - {{cssxref(':required')}} and {{cssxref(':optional')}}
 - {{htmlelement('input')}}
 - {{htmlelement('select')}}

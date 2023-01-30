@@ -11,7 +11,7 @@ tags:
 browser-compat: api.NDEFReader.NDEFReader
 ---
 
-{{SecureContext_Header}}{{APIRef}}{{SeeCompatTable}}
+{{SecureContext_Header}}{{APIRef("Web NFC API")}}{{SeeCompatTable}}
 
 The **`NDEFReader()`**
 constructor of the {{domxref("NDEFReader")}} interface returns a

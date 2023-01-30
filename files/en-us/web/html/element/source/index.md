@@ -1,6 +1,7 @@
 ---
 title: '<source>: The Media or Image Source element'
 slug: Web/HTML/Element/source
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -78,7 +79,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("type")}}
 
-  - : The [MIME media type of the resource](/en-US/docs/Web/Media/Formats/Image_types), optionally with a [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
+  - : The [MIME media type of the image](/en-US/docs/Web/Media/Formats/Image_types) or [other media type](/en-US/docs/Web/Media/Formats/Containers), optionally with a [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
 
 - {{htmlattrdef("src")}}
 

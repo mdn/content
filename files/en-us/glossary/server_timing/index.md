@@ -1,6 +1,7 @@
 ---
 title: Server Timing
 slug: Glossary/Server_Timing
+page-type: glossary-definition
 tags:
   - Reference
   - Server Timing

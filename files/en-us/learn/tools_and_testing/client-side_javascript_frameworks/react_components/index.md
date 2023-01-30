@@ -249,7 +249,12 @@ const DATA = [
 Next, we'll pass `DATA` to `<App />` as a prop, called `tasks`. The final line of `src/index.js` should read like this:
 
 ```jsx
-ReactDOM.render(<App tasks={DATA} />, document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <App tasks={DATA} />
+  </React.StrictMode>
+);
 ```
 
 This array is now available to the App component as `props.tasks`. You can `console.log()` it to check, if you'd like.

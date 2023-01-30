@@ -27,8 +27,8 @@ objects representing the media element's video tracks.
 The returned list is _live_; that is, as tracks are added to and removed from
 the media element, the list's contents change dynamically. Once you have a reference to
 the list, you can monitor it for changes to detect when new video tracks are added or
-existing ones removed. See {{SectionOnPage("/en-US/docs/Web/API/VideoTrackList", "Event
-  handlers")}} to learn more about watching for changes to a media element's track list.
+existing ones removed. See [VideoTrackList events](/en-US/docs/Web/API/VideoTrackList#events)
+to learn more about watching for changes to a media element's track list.
 
 ## Value
 

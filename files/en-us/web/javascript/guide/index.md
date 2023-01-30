@@ -1,6 +1,7 @@
 ---
 title: JavaScript Guide
 slug: Web/JavaScript/Guide
+page-type: guide
 tags:
   - Guide
   - JavaScript

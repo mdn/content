@@ -1,6 +1,7 @@
 ---
 title: Dominator
 slug: Glossary/Dominator
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

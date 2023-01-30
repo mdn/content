@@ -9,7 +9,7 @@ tags:
   - Reference
   - Web Authentication API
   - WebAuthn
-browser-compat: api.PublicKeyCredentialRequestOptions
+spec-urls: https://w3c.github.io/webauthn/#dictdef-publickeycredentialrequestoptions
 ---
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
@@ -75,10 +75,6 @@ navigator.credentials.get({ "publicKey": options })
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

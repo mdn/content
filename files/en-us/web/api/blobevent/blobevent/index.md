@@ -13,7 +13,7 @@ tags:
 browser-compat: api.BlobEvent.BlobEvent
 ---
 
-{{APIRef("Media Recorder API")}}
+{{APIRef("MediaStream Recording")}}
 
 The **`BlobEvent()`** constructor returns a newly created
 {{domxref("BlobEvent")}} object with an associated {{domxref("Blob")}}.

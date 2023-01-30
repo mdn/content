@@ -1,6 +1,7 @@
 ---
 title: itemscope
 slug: Web/HTML/Global_attributes/itemscope
+page-type: html-attribute
 tags:
   - Attribute
   - Global attribute

@@ -24,8 +24,7 @@ currently stands, but as it may exist in the near future. Use
 {{domxref("RTCPeerConnection.currentRemoteDescription")}} or
 {{domxref("RTCPeerConnection.remoteDescription")}} to get the current session
 description for the remote endpoint. For details on the difference, see
-{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current
-  descriptions")}}.
+[Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) in the WebRTC Connectivity page.
 
 ## Value
 

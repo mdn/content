@@ -224,7 +224,7 @@ In your extension's `manifest.json` file, change the persistent property of [`"b
 
 ### Move event listeners
 
-Listeners must be at the top-level to activate the background script if an event is triggered. Registered listeners may need to be restructured to the synchronous pattern, moved to the top-level, and unnested.
+Listeners must be at the top-level to activate the background script if an event is triggered. Registered listeners may need to be restructured to the synchronous pattern and moved to the top-level.
 
 ```js
 browser.runtime.onStartup.addListener(() => {

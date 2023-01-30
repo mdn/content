@@ -1,6 +1,7 @@
 ---
 title: do...while
 slug: Web/JavaScript/Reference/Statements/do...while
+page-type: javascript-statement
 tags:
   - JavaScript
   - Language feature
@@ -22,7 +23,7 @@ at least once.
 ```js-nolint
 do
   statement
-while (condition)
+while (condition);
 ```
 
 - `statement`
@@ -40,7 +41,7 @@ while (condition)
     the `do...while`.
 
     Note: Use the {{jsxref("Statements/break", "break")}} statement to stop a loop before `condition` evaluates
-    to true.
+    to false.
 
 ## Examples
 

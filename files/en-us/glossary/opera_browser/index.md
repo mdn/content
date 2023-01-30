@@ -1,6 +1,7 @@
 ---
 title: Opera Browser
 slug: Glossary/Opera_Browser
+page-type: glossary-definition
 tags:
   - Browser
   - Navigation

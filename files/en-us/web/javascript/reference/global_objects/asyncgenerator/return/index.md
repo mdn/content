@@ -1,6 +1,7 @@
 ---
 title: AsyncGenerator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator/return
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2018
   - AsyncGenerator

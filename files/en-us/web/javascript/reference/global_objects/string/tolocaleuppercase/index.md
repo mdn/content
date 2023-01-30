@@ -1,6 +1,7 @@
 ---
 title: String.prototype.toLocaleUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
+page-type: javascript-instance-method
 tags:
   - Internationalization
   - JavaScript

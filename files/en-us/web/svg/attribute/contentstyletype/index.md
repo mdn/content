@@ -1,6 +1,7 @@
 ---
 title: contentStyleType
 slug: Web/SVG/Attribute/contentStyleType
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG

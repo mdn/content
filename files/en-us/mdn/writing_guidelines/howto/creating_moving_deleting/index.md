@@ -9,11 +9,11 @@ page-type: mdn-writing-guide
 
 {{MDNSidebar}}
 
-This article describes how to create, move, delete, or edit a page. In all these instances, it's a good idea to check our guidelines for [What we write](/en-US/docs/MDN/Writing_guidelines/What_we_write) to confirm if any of these actions should be taken and discuss it with the [MDN Web Docs team](https://github.com/mdn/mdn-community/discussions) before proceeding.
+This article describes how to create, move, delete, or edit a page. In all these instances, it's a good idea to check our guidelines for [What we write](/en-US/docs/MDN/Writing_guidelines/What_we_write) to confirm if any of these actions should be taken and discuss it with the MDN Web Docs team on the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) before proceeding.
 
 ## Creating pages
 
-All pages on MDN Web Docs are authored in markdown format. The content is written in a file named `index.md`, which is stored in its own unique directory. The directory name represents the name of the page. For example, if `align-content` is a new CSS property for which you want to create a new reference page, you'd create a folder in `en-us/web/css` named `align-content` and create a file called `index.md` inside it.
+All pages on MDN Web Docs are authored in Markdown format. The content is written in a file named `index.md`, which is stored in its own unique directory. The directory name represents the name of the page. For example, if `align-content` is a new CSS property for which you want to create a new reference page, you'd create a folder in `en-us/web/css` named `align-content` and create a file called `index.md` inside it.
 
 > **Note:** The name of the directory differs slightly from the slug of the page. Most notably, the slug follows sentence casing.
 
@@ -95,11 +95,11 @@ For example, let's say you want to move the entire
 
 4. Create your pull request.
 
-> **Note:** `yarn content move` automatically adds the necessary redirect information to the `_redirects.txt` file so that the old location will redirect to the new one. Don't edit the `_redirects.txt` file manually! Mistakes can easily creep in if you do. If you need to add a redirect without moving a file, talk to the [MDN Web Docs team](https://github.com/mdn/mdn-community/discussions) about it.
+> **Note:** `yarn content move` automatically adds the necessary redirect information to the `_redirects.txt` file so that the old location will redirect to the new one. Don't edit the `_redirects.txt` file manually! Mistakes can easily creep in if you do. If you need to add a redirect without moving a file, talk to the MDN Web Docs team on the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) about it.
 
 ## Deleting pages
 
-Documents should only be removed from MDN Web Docs under special circumstances. If you are thinking about deleting pages, please discuss it with the [MDN Web Docs team](https://github.com/mdn/mdn-community/discussions) first.
+Documents should only be removed from MDN Web Docs under special circumstances. If you are thinking about deleting pages, please discuss it with the MDN Web Docs team on the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) first.
 
 Deleting one or more documents or an entire tree of documents is easy, just like moving pages, because we've created a special command that takes care of the
 details for you:

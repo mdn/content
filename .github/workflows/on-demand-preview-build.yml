@@ -98,7 +98,7 @@ jobs:
           echo "After..."
           du -sh build
 
-      - uses: technote-space/get-diff-action@v6.1.1
+      - uses: technote-space/get-diff-action@v6.1.2
         with:
           PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
           ABSOLUTE: true

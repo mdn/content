@@ -1,6 +1,7 @@
 ---
 title: throw
 slug: Web/JavaScript/Reference/Statements/throw
+page-type: javascript-statement
 tags:
   - Exception
   - JavaScript
@@ -22,7 +23,7 @@ the program will terminate.
 ## Syntax
 
 ```js-nolint
-throw expression
+throw expression;
 ```
 
 - `expression`

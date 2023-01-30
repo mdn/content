@@ -1,6 +1,7 @@
 ---
 title: CalDAV
 slug: Glossary/CalDAV
+page-type: glossary-definition
 tags:
   - CalDAV
   - Infrastructure

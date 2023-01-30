@@ -251,7 +251,7 @@ First, you'll need to make a connection between the API and your app. In the cas
 - The search term, which has to be specified in the `q` URL parameter (the value is taken from the value of the `searchTerm` text {{htmlelement("input")}}).
 - The document type to return results for, as specified in an expression passed in via the `fq` URL parameter. In this case, we want to return articles.
 
-Next, we use a couple of [`if ()`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statements to check whether the `startDate` and `endDate` `<input>`s have had values filled in on them. If they do, we append their values to the URL, specified in `begin_date` and `end_date` URL parameters respectively.
+Next, we use a couple of [`if ()`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statements to check whether the `startDate` and `endDate` elements have had values filled in on them. If they do, we append their values to the URL, specified in `begin_date` and `end_date` URL parameters respectively.
 
 So, a complete URL would end up looking something like this:
 

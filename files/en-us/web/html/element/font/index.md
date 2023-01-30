@@ -1,6 +1,7 @@
 ---
 title: <font>
 slug: Web/HTML/Element/font
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -30,6 +31,8 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 ## DOM interface
 
 This element implements the {{domxref("HTMLFontElement")}} interface.
+
+<!-- ## Technical summary -->
 
 ## Specifications
 

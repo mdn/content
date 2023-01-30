@@ -1,6 +1,7 @@
 ---
 title: Atomics.wait()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/wait
+page-type: javascript-static-method
 tags:
   - Atomics
   - JavaScript
@@ -11,9 +12,9 @@ browser-compat: javascript.builtins.Atomics.wait
 
 {{JSRef}}
 
-The static **`Atomics.wait()`**
+The **`Atomics.wait()`** static
 method verifies that a given position in an {{jsxref("Int32Array")}} still contains a
-given value and if so sleeps, awaiting a wakeup or a timeout. It returns a string which
+given value and if so sleeps, awaiting a wake-up notification or times out. It returns a string which
 is either `"ok"`, `"not-equal"`, or `"timed-out"`.
 
 > **Note:** This operation only works with a shared

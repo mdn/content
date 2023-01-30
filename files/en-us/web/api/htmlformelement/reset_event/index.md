@@ -49,7 +49,7 @@ This example uses {{domxref("EventTarget.addEventListener()")}} to listen for fo
 
 ```js
 function logReset(event) {
-  log.textContent = `Form reset! Time stamp: ${event.timeStamp}`;
+  log.textContent = `Form reset! Timestamp: ${event.timeStamp}`;
 }
 
 const form = document.getElementById('form');

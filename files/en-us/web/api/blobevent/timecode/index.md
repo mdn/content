@@ -12,7 +12,7 @@ tags:
 browser-compat: api.BlobEvent.timecode
 ---
 
-{{APIRef("Media Recorder API")}}
+{{APIRef("MediaStream Recording")}}
 
 The **`timecode`** read only property of the {{domxref("BlobEvent")}} interface indicates the difference between the timestamp of the first chunk of data, and the timestamp of the first chunk in the first `BlobEvent` produced by this recorder.
 

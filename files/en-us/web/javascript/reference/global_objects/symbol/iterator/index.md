@@ -1,6 +1,7 @@
 ---
 title: Symbol.iterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
+page-type: javascript-static-data-property
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -12,9 +13,15 @@ browser-compat: javascript.builtins.Symbol.iterator
 
 {{JSRef}}
 
-The well-known **`Symbol.iterator`** symbol specifies the default iterator for an object. Used by [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of).
+The **`Symbol.iterator`** static data property represents the well-known symbol specifying the method that returns the iterator for an object. If this property is set on an object, it is an iterable and can be used in a [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop and various other syntaxes.
 
 {{EmbedInteractiveExample("pages/js/symbol-iterator.html")}}
+
+## Value
+
+The well-known symbol `@@iterator`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 
@@ -29,8 +36,6 @@ Some built-in types have a default iteration behavior, while other types (such a
 - {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}
 
 See also [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) for more information.
-
-{{js_property_attributes(0,0,0)}}
 
 ## Examples
 

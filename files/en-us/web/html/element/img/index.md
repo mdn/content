@@ -1,6 +1,7 @@
 ---
 title: "<img>: The Image Embed element"
 slug: Web/HTML/Element/img
+page-type: html-element
 tags:
   - Content
   - Element
@@ -117,6 +118,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       - : Decode the image asynchronously, to reduce delay in presenting other content.
     - `auto`
       - : Default: no preference for the decoding mode. The browser decides what is best for the user.
+
+- {{htmlattrdef("elementtiming")}}
+
+  - : Marks the image for observation by the {{domxref("PerformanceElementTiming")}} API. The value given becomes an identifier for the observed image element. See also the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute page.
 
 - {{htmlattrdef("fetchpriority")}} {{experimental_inline}}
 
@@ -427,15 +432,15 @@ The value of the `title` attribute is usually presented to the user as a tooltip
                   ></code
                 >
               </li>
-              <li>{{ARIARole("link")}}</li>
-              <li>{{ARIARole("menuitem")}}</li>
-              <li>{{ARIARole("menuitemcheckbox")}}</li>
-              <li>{{ARIARole("menuitemradio")}}</li>
-              <li>{{ARIARole("option")}}</li>
-              <li>{{ARIARole("progressbar")}}</li>
-              <li>{{ARIARole("scrollbar")}}</li>
-              <li>{{ARIARole("separator")}}</li>
-              <li>{{ARIARole("slider")}}</li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role"><code>progressbar</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role"><code>scrollbar</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role"><code>separator</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role"><code>slider</code></a></li>
               <li>
                 <code
                   ><a
@@ -451,12 +456,12 @@ The value of the `title` attribute is usually presented to the user as a tooltip
                   ></code
                 >
               </li>
-              <li>{{ARIARole("treeitem")}}</li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a></li>
             </ul>
           </li>
           <li>
-            with empty <code>alt</code> attribute, {{ARIARole("none")}}
-            or {{ARIARole("presentation")}}
+            with empty <code>alt</code> attribute, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
+            or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
           </li>
           <li>
             with no <code>alt</code> attribute, no <code>role</code> permitted

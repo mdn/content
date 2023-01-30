@@ -1,6 +1,7 @@
 ---
 title: Long task
 slug: Glossary/Long_task
+page-type: glossary-definition
 tags:
   - Long Tasks API
   - Reference
@@ -13,4 +14,4 @@ It is an uninterrupted period where the [main UI thread](/en-US/docs/Glossary/Ma
 
 ## See also
 
-- [Long task API](/en-US/docs/Web/API/Long_Tasks_API)
+- [Long task API](/en-US/docs/Web/API/PerformanceLongTaskTiming)

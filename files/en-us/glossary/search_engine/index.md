@@ -1,6 +1,7 @@
 ---
 title: Search engine
 slug: Glossary/Search_engine
+page-type: glossary-definition
 tags:
   - Definition
   - Indexing
