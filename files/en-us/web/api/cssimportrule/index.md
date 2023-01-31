@@ -35,7 +35,7 @@ _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 
 ## Examples
 
-The following stylesheet includes a single {{cssxref("@import")}} rule. Therefore the first item in the list of CSS rules will be a `CSSImportRule`.
+The document includes a single stylesheet which contains a single {{cssxref("@import")}} rule. Therefore the first item in the list of CSS rules will be a `CSSImportRule`.
 
 ```css
 @import url("style.css") screen;
