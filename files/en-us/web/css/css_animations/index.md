@@ -1,5 +1,5 @@
 ---
-title: CSS Animations
+title: CSS animations
 slug: Web/CSS/CSS_Animations
 page-type: css-module
 tags:
