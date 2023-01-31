@@ -42,6 +42,9 @@ This article provides information about the changes in Firefox 110 that will aff
 
 ### APIs
 
+- The `midi` permission of the [Permission API](/en-US/docs/Web/API/Permissions_API) is now supported.
+  This allows the permission status for using the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) to be queried using [`navigator.permissions.query()`](/en-US/docs/Web/API/Permissions/query) ({{bug(1772166)}}).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
