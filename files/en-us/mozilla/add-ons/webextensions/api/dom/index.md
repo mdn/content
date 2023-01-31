@@ -12,7 +12,7 @@ browser-compat: webextensions.api.dom
 
 {{AddonSidebar}}
 
-Use the `chrome.dom` API to access special DOM APIs for Extensions.
+Access special extension only DOM features.
 
 ## Functions
 
