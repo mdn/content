@@ -44,7 +44,6 @@ Because of this polymorphic implementation, `@@species` of derived subclasses wo
 
 ```js
 class SubPromise extends Promise {}
-SubPromise[Symbol.species] === Promise; // false
 SubPromise[Symbol.species] === SubPromise; // true
 ```
 
