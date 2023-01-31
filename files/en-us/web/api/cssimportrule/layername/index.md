@@ -1,6 +1,6 @@
 ---
-title: CSSImportRule.layer
-slug: Web/API/CSSImportRule/layer
+title: CSSImportRule.layerName
+slug: Web/API/CSSImportRule/layerName
 page-type: web-api-instance-property
 tags:
   - API
@@ -14,7 +14,7 @@ browser-compat: api.CSSImportRule.layer
 ---
 
 {{APIRef("CSSOM")}}
-The read-only **`layer`** property of the {{domxref("CSSImportRule")}} interface returns the name of the cascade layercreated by the {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
+The read-only **`layerName`** property of the {{domxref("CSSImportRule")}} interface returns the name of the cascade layercreated by the {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
 
 If the created layer is anonymous, the string is empty (`""`), if no layer has been
 created, it is the `null` object.
@@ -28,7 +28,7 @@ A string, that can be empty, or the `null` object.
 The following stylesheet includes a single {{cssxref("@import")}} rule.
 Therefore the first item in the list of CSS rules will be a `CSSImportRule`.
 
-The `layer` property returns the name of the layer associated with the imported
+The `layerName` property returns the name of the layer associated with the imported
 stylesheet.
 
 ```css
@@ -39,9 +39,9 @@ stylesheet.
 
 ```js
 const myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].layer); // returns `"layer-1"`
-console.log(myRules[1].layer); // returns `""` (an anonymous layer)
-console.log(myRules[2].layer); // returns `null`
+console.log(myRules[0].layerName); // returns `"layer-1"`
+console.log(myRules[1].layerName); // returns `""` (an anonymous layer)
+console.log(myRules[2].layerName); // returns `null`
 ```
 
 ## Specifications
