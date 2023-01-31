@@ -58,7 +58,7 @@ As the structure of at-rules varies widely, please see [At-rule](/en-US/docs/Web
 
 ## Index
 
-> **Note:** The property names in this index do **not** include the [JavaScript names](https://www.dummies.com/article/technology/programming-web-design/javascript/converting-css-property-names-to-javascript-142516/) where they differ from the CSS standard names.
+> **Note:** The property names in this index do **not** include the JavaScript names where they differ from the CSS standard names.
 
 {{CSS_Ref}}
 
