@@ -134,6 +134,14 @@ navigator.permissions.query({ name: "midi", sysex: true }).then((result) => {
 
 {{Compat}}
 
+### Permission API
+
+{{Compat("api.Permissions.permission_midi")}}
+
+### Permission Policy
+
+{{Compat("http.headers.Permissions-Policy.midi")}}
+
 ## See also
 
 - [Introduction to Web MIDI](https://code.tutsplus.com/tutorials/introduction-to-web-midi--cms-25220)
