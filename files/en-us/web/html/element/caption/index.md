@@ -130,7 +130,7 @@ td {
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/wai-aria-1.2/#caption">caption</a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">caption</a>
       </td>
     </tr>
     <tr>
