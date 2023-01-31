@@ -15,6 +15,7 @@ browser-compat: api.CSSImportRule.layer
 
 {{APIRef("CSSOM")}}
 The read-only **`layer`** property of the {{domxref("CSSImportRule")}} interface returns the name of the cascade layercreated by the {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
+
 If the created layer is anonymous, the string is empty (`""`), if no layer has been
 created, it is the `null` object.
 
@@ -31,9 +32,9 @@ The `layer` property returns the name of the layer associated with the imported
 stylesheet.
 
 ```css
-@import url("style.css") screen layer(layer-1);
-@import url("style.css") screen layer;
-@import url("style.css") screen;
+@import url("style1.css") screen layer(layer-1);
+@import url("style2.css") screen layer;
+@import url("style3.css") screen;
 ```
 
 ```js
@@ -50,3 +51,8 @@ console.log(myRules[2].layer); // returns `null`
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- Learning area : [Cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- {{cssxref("@import")}} and {{cssxref("@layer)}}
