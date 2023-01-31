@@ -11,7 +11,7 @@ tags:
 browser-compat: api.GestureEvent
 ---
 
-{{APIRef("UI Events")}}{{Non-standard_Header}}
+{{APIRef("UI Events")}}
 
 {{Non-standard_Header}}
 

@@ -69,7 +69,7 @@ These are _some_ of the roughly 100 semantic [elements](/en-US/docs/Web/HTML/Ele
 ## See also
 
 - [HTML element reference](/en-US/docs/Web/HTML/Element#inline_text_semantics) on MDN
-- [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements#problems_solved_by_html5) on MDN
+- [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements#usage_notes) on MDN
 - [The meaning of semantics in computer science](https://en.wikipedia.org/wiki/Semantics#Computer_science) on Wikipedia
 - [Glossary](/en-US/docs/Glossary)
 

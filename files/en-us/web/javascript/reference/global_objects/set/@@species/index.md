@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Set.@@species
 
 {{JSRef}}
 
-The **`Set[@@species]`** accessor property is an unused accessor property specifying how to copy `Set` objects.
+The **`Set[@@species]`** static accessor property is an unused accessor property specifying how to copy `Set` objects.
 
 ## Syntax
 

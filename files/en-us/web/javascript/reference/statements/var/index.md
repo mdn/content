@@ -20,10 +20,14 @@ globally-scoped variable, optionally initializing it to a value.
 ## Syntax
 
 ```js-nolint
-var varname1 [= value1] [, varname2 [= value2] ... [, varnameN [= valueN]]]
+var name1;
+var name1 = value1;
+var name1 = value1, name2 = value2;
+var name1, name2 = value2;
+var name1 = value1, name2, /* …, */ nameN = valueN;
 ```
 
-- `varnameN`
+- `nameN`
   - : Variable name. It can be any legal identifier.
 - `valueN` {{optional_inline}}
   - : Initial value of the variable. It can be any legal expression. Default value is
