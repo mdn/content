@@ -58,16 +58,16 @@ No notable changes
 
 #### WebDriver BiDi
 
-- Following a [change in the specification](https://github.com/w3c/webdriver-bidi/pull/259), log entry level `"warning"` was renamed to `"warn"` ({{bug(1797115)}})
-- When using `script.evaluate` and `script.callFunction` with a sandbox name equal to an empty string, the evaluation will now be done using the default realm ({{bug(1793589)}})
-- Added support for the `browsingContext.domContentLoaded` event ({{bug(1756610)}})
+- Following a [change in the specification](https://github.com/w3c/webdriver-bidi/pull/259), log entry level `"warning"` was renamed to `"warn"` ({{bug(1797115)}}).
+- When using `script.evaluate` and `script.callFunction` with a sandbox name equal to an empty string, the evaluation will now be done using the default realm ({{bug(1793589)}}).
+- Added support for the `browsingContext.domContentLoaded` event ({{bug(1756610)}}).
 
 #### Marionette
 
-- Added support for the `tiltX`, `tiltY` and `twist` properties of pointer actions for `WebDriver:PerformActions` ({{bug(1793832)}})
-- Fixed a bug where `WebDriver:GetElementText` wasn't returning the element text for pretty-printed XML ({{bug(1794099)}})
-- `HTMLDocument` is no longer serialized as a `WebElement` reference ({{bug(1793920)}})
-- `WebDriver:NewWindow` now opens a window with an `about:blank` tab instead of `about:newtab` ({{bug(1533058)}})
+- Added support for the `tiltX`, `tiltY` and `twist` properties of pointer actions for `WebDriver:PerformActions` ({{bug(1793832)}}).
+- Fixed a bug where `WebDriver:GetElementText` wasn't returning the element text for pretty-printed XML ({{bug(1794099)}}).
+- `HTMLDocument` is no longer serialized as a `WebElement` reference ({{bug(1793920)}}).
+- `WebDriver:NewWindow` now opens a window with an `about:blank` tab instead of `about:newtab` ({{bug(1533058)}}).
 
 ## Changes for add-on developers
 
