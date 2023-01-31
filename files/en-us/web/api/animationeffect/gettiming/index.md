@@ -29,7 +29,16 @@ None.
 
 ### Return value
 
-An object.
+An object containing the following properties:
+
+- `delay`
+- `endDelay`
+- `fill`
+- `iterationStart`
+- `iterations`
+- `duration`
+- `direction`
+- `easing`
 
 ## Specifications
 
