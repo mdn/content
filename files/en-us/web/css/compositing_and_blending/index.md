@@ -112,7 +112,7 @@ span {
 
 ## See also
 
-- [CSS filter effects](/en-US/docs/Web/CSS/Filter_Effects) module
+- [CSS filter effects](/en-US/docs/Web/CSS/Filter_Effects) module enables applying filter effects to images like blurring and changing color intensity.
 - [Compositing And Blending In CSS](https://www.sarasoueidan.com/blog/compositing-and-blending-in-css/) (2015)
 - [Editing Images in CSS: Blend Modes](https://code.tutsplus.com/tutorials/editing-images-in-css-blend-modes--cms-26058) (2022)
 - [web.dev: blend modes](https://web.dev/learn/css/blend-modes/) (2021)
