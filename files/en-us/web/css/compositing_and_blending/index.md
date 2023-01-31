@@ -1,5 +1,5 @@
 ---
-title: Compositing and blending
+title: CSS compositing and blending
 slug: Web/CSS/Compositing_and_Blending
 page-type: css-module
 tags:
@@ -17,13 +17,11 @@ spec-urls:
 
 The **compositing and blending** CSS module defines how an element's background layers can be blended together, how an element can be blended with its container, and whether the element must create a new [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
 
-Similar to blending effects available in many image editing applications, this module enables blending an element's background layers together and blending an element's content with that of its container. CSS can be used to define which blending mode should be used, if any, to blend an element's background images and colors into a single background image. It is also possible to define how an element's borders, background, and content, including text, emojis, and images, should be blended with the background of its container.
-
-This module provides for 16 different blending modes.
+The properties in this CSS module can be used to define the blending mode that should be used, if any, to blend an element's background images and colors into a single background image. This module provides 16 blending modes. You can also define how an element's borders, background, and content, including text, emojis, and images, should be blended with the background of its container.
 
 ### Compositing and blending in action
 
-In this example, a border and two striped background images with a background color are provided for each box, with a background of a solid color with circles cut out set on the entire example.
+In this example, each box has a border, two striped background images, and a solid color background. The common background for all the boxes contains a pattern of circles. The three boxes in the second row are set to blend with the background of the container. 
 
 ```html hidden
 <section>
@@ -84,7 +82,7 @@ span {
 
 {{ EmbedLiveSample('Compositing_and_blending_in_action', "630", "300") }}
 
- The last three boxes are set to blend with the background of the container. Note how the background, border, and the content are all impacted. To see the code for this, [view the source on Github](https://github.com/mdn/content/blob/main/files/en-us/web/css/compositing_and_blending/index.md?plain=1).
+ Notice how the background, border, and the content are all impacted as a result of the blending. To see the code for this sample, [view the source on Github](https://github.com/mdn/content/blob/main/files/en-us/web/css/compositing_and_blending/index.md?plain=1).
 
 ## Reference
 
@@ -112,7 +110,7 @@ span {
 
 ## See also
 
-- [CSS filter effects](/en-US/docs/Web/CSS/Filter_Effects) module enables applying filter effects to images like blurring and changing color intensity.
+- Properties in the [CSS filter effects](/en-US/docs/Web/CSS/Filter_Effects) module enable applying filters effects, such as blurring and changing color intensity, to images, backgrounds, and borders.
 - [Compositing And Blending In CSS](https://www.sarasoueidan.com/blog/compositing-and-blending-in-css/) (2015)
 - [Editing Images in CSS: Blend Modes](https://code.tutsplus.com/tutorials/editing-images-in-css-blend-modes--cms-26058) (2022)
 - [web.dev: blend modes](https://web.dev/learn/css/blend-modes/) (2021)

@@ -15,11 +15,11 @@ spec-urls:
 
 {{CSSRef}}
 
-The **CSS Animations** module lets you animate the values of CSS properties over time, using keyframes, providing properties to control the easing, duration, number of repetitions, play state, and other attributes of these keyframes.
+The animations CSS module lets you animate the values of CSS properties, such as background-position and transform, over time by using keyframes. Each keyframe describes how the animated element should render at a given time during the animation sequence. You can use the properties in the animations module to control the duration, number of repetitions, delayed start, and other aspects of an animation.
 
 ### Animations in action
 
-To view the animation in action, check the checkbox or hover over the example. The cloud will change shape, snowflakes will fall, and the snow level will rise. To pause the animation, uncheck the checkbox or move your mouse off of the example.
+To view the animation in the box below, click the checkbox 'Play the animation' or hover the cursor over the box. When the animating is active, the cloud at the top changes shape, snowflakes fall, and the snow level at the bottom rises. To pause the animation, uncheck the checkbox or move your cursor away from the box.
 
 ```html hidden
 <input type="checkbox" id="animate" aria-label="Toggle the play state of the animation"><!-- See aria-label: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label -->
@@ -273,7 +273,7 @@ input:checked + label::before {
 
 {{ EmbedLiveSample('Animations_in_action', "630", "630") }}
 
-This example uses {{cssxref("animation-iteration-count")}} to make the flakes fall repeatedly, {{cssxref("animation-direction")}} to make the clouds move back and forth, {{cssxref("animation-fill-mode")}} to keep the snow level high once it has stopped growing, and {{cssxref("animation-play-state")}} to pause the animation. To see the code for this animation, [view the source on Github](https://github.com/mdn/content/blob/main/files/en-us/web/css/css_animations/index.md?plain=1).
+This sample animation uses {{cssxref("animation-iteration-count")}} to make the flakes fall repeatedly, {{cssxref("animation-direction")}} to make the cloud move back and forth, {{cssxref("animation-fill-mode")}} to raise the snow level in response to the cloud movement, and {{cssxref("animation-play-state")}} to pause the animation. To see the code for this animation, [view the source on Github](https://github.com/mdn/content/blob/main/files/en-us/web/css/css_animations/index.md?plain=1).
 
 ## Reference
 
@@ -296,11 +296,11 @@ This example uses {{cssxref("animation-iteration-count")}} to make the flakes fa
 
 ### Functions
 
-- [`scroll()`](/en-US/docs/Web/CSS/animation-timeline/scroll) function
+- [`scroll()`](/en-US/docs/Web/CSS/animation-timeline/scroll)
 
 ### Events
 
-Every animation, even those that are 0 seconds in duration, throw animation events:
+All animations, even those with 0 seconds duration, throw animation events.
 
 - {{domxref("Element/animationstart_event", "animationstart")}}
 - {{domxref("Element/animationend_event", "animationend")}}
@@ -317,9 +317,9 @@ Every animation, even those that are 0 seconds in duration, throw animation even
 ## Guides
 
 - [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
-  - : Step-by-step tutorial about how to create animations using CSS. This article describes each relevant CSS property and at-rule and explains how they interact with each other.
+  - : Step-by-step tutorial on how to create animations using CSS. This article describes the animation-related CSS properties and at-rule and how they interact with each other.
 - [CSS animations tips and tricks](/en-US/docs/Web/CSS/CSS_Animations/Tips)
-  - : Tips and tricks to help you get the most out of CSS animations. Currently offers a technique for replaying an animation which has already run through to completion, which the API doesn't support inherently.
+  - : Tips and tricks to help you get the most out of CSS animations.
 
 ## Related concepts
 
@@ -335,6 +335,6 @@ Every animation, even those that are 0 seconds in duration, throw animation even
 ## See also
 
 - The CSS Scroll Timeline {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties, along with the {{cssxref('scroll-timeline')}} shorthand, create animations tied to the scroll offset of a scroll container.
-- [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions) can trigger animations based on user actions.
-- The HTML {{htmlelement("canvas")}} element along with the [canvas API](/en-US/docs/Web/API/Canvas_API) and [WebGL API](/en-US/docs/Web/API/WebGL_API) to draw graphics and animations.
-- [SVG](/en-US/docs/Web/SVG) and the {{domxref("SVGAnimationElement")}} interface, which is the base interface for all of the animation element interfaces: {{domxref("SVGAnimateElement")}}, {{domxref("SVGSetElement")}}, {{domxref("SVGAnimateColorElement")}}, {{domxref("SVGAnimateMotionElement")}} and {{domxref("SVGAnimateTransformElement")}}.
+- Properties in the [transitions](/en-US/docs/Web/CSS/CSS_Transitions) CSS module to trigger animations based on user actions
+- The {{htmlelement("canvas")}} HTML element along with [canvas API](/en-US/docs/Web/API/Canvas_API) and [WebGL API](/en-US/docs/Web/API/WebGL_API) to draw graphics and animations
+- The {{domxref("SVGAnimationElement")}} interface for all the animation-related element interfaces, including {{domxref("SVGAnimateElement")}}, {{domxref("SVGSetElement")}}, {{domxref("SVGAnimateColorElement")}}, {{domxref("SVGAnimateMotionElement")}}, and {{domxref("SVGAnimateTransformElement")}}
