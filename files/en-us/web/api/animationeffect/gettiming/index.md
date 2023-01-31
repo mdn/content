@@ -33,20 +33,28 @@ An object containing the following properties:
 
 - `delay`
   - : A `number`.
+    (Corresponds to {{cssxref("animation-delay")}}.)
 - `endDelay`
   - : A `number`.
 - `fill`
   - : `"none"`, `"forwards"`, `"backwards"`, "`both`", or `"auto"`.
+    (Corresponds to {{cssxref("animation-fill-mode")}}.)
 - `iterationStart`
   - : A `number`.
 - `iterations`
   - : A `number`.
+    (Corresponds to {{cssxref("animation-iteration-count")}}.)
 - `duration`
   - : A `number` or the `string` `"auto"`.
+    (Corresponds to {{cssxref("animation-duration")}}.)
 - `direction`
   - : `"normal"`, `"reverse"`, `"alternate"`, or `"alternate-reverse"`.
+    (Corresponds to {{cssxref("animation-direction")}}.)
 - `easing`
   - : A `string` representing an {{cssxref("easing-function")}}.
+    (Corresponds to {{cssxref("animation-timing-function")}}.)
+
+Several of these properties have corresponding [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) properties.
 
 ## Specifications
 
