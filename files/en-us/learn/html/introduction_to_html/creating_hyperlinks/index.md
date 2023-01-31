@@ -113,7 +113,9 @@ If you have an image you want to make into a link, use the {{htmlelement("a")}} 
 
 ```html
 <a href="https://www.mozilla.org/en-US/">
-  <img src="mozilla-image.png" alt="Mozilla homepage" />
+  <div>
+    <img src="mozilla-image.png" alt="Mozilla homepage" />
+  </div>
 </a>
 ```
 
