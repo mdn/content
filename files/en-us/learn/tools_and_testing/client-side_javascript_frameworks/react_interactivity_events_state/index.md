@@ -123,7 +123,7 @@ Next, we'll pass `addTask()` into `<Form />` as a prop. The prop can have whatev
 Finally, you can use this prop inside the `handleSubmit()` function in your `<Form />` component! Update it as follows:
 
 ```jsx
-function handleSubmit(e) {
+function handleSubmit(props, e) {
   e.preventDefault();
   props.addTask("Say hello!");
 }
