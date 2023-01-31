@@ -22,8 +22,8 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
 - {{domxref("CSSImportRule.href")}} {{ReadOnlyInline}}
   - : Returns the URL specified by the {{cssxref("@import")}} rule.
-- {{domxref("CSSImportRule.layer")}} {{ReadOnlyInline}}
-  - : Returns the name of the [cascade layer](/en-US/docs/Web/CSS/@layer) declare in the {{cssxref("@import")}} rule, the empty string if the layer is anonymous, the or `null` if the rule doesn't declare any.
+- {{domxref("CSSImportRule.layerName")}} {{ReadOnlyInline}}
+  - : Returns the name of the [cascade layer](/en-US/docs/Web/CSS/@layer) declared in the {{cssxref("@import")}} rule, the empty string if the layer is anonymous, the or `null` if the rule doesn't declare any.
 - {{domxref("CSSImportRule.media")}}
   - : Returns the value of the `media` attribute of the associated stylesheet.
 - {{domxref("CSSImportRule.styleSheet")}} {{ReadOnlyInline}}
