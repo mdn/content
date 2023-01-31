@@ -60,7 +60,7 @@ The distinction of block-level vs. inline elements was used in HTML specificatio
 
 ### Changing element levels
 
-You can change the _visual presentation_ of an element using the CSS {{cssxref("display")}} property. For example, by changing the value of `display` from `"inline"` to `"block"`, you can tell the browser to render the inline element in a block box rather than an inline box, and vice versa. However, doing this will not change the _category_ and the _content model_ of the element. For example, even if the `display` of the `span` element is changed to `"block"`, it still would not allow to nest a `div` element inside it.
+You can change the _visual presentation_ of an element using the CSS {{cssxref("display")}} property. For example, by changing the value of `display` from `inline` to `block`, the browser will render the inline element as a block box rather than an inline box, and vice versa. However, doing this will not change the _category_ and the _content model_ of the element. For example, even if the `display` of the `span` element is changed to `block`, it should still only contain [phrasing content](/en-US/docs/Web/HTML/Content_categories#phrasing_content).
 
 ## Elements
 
