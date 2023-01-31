@@ -26,7 +26,7 @@ This timeline is unique to each `document` and persists for the lifetime of the 
 This timeline expresses the time in milliseconds since the document's {{domxref("Performance.timeOrigin","time origin")}}.
 Prior to the time origin, the timeline is inactive, and its {{domxref("AnimationTimeline.currentTime","currentTime")}} is `null`.
 
-> **Note:** A document timeline that is associated with a non-active document is also considered to be **inactive**.
+> **Note:** A document timeline that is associated with a non-active document (a {{domxref("Document")}} not associated with a {{domxref("Window")}}, {{htmlelement("iframe")}}, or {{htmlelement("frame")}}) is also considered to be **inactive**.
 
 ## Value
 
