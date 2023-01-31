@@ -32,13 +32,21 @@ None.
 An object containing the following properties:
 
 - `delay`
+  - : A `number`.
 - `endDelay`
+  - : A `number`.
 - `fill`
+  - : `"none"`, `"forwards"`, `"backwards"`, "`both`", or `"auto"`.
 - `iterationStart`
+  - : A `number`.
 - `iterations`
+  - : A `number`.
 - `duration`
+  - : A `number` or the `string` `"auto"`.
 - `direction`
+  - : `"normal"`, `"reverse"`, `"alternate"`, or `"alternate-reverse"`.
 - `easing`
+  - : A `string` representing an {{cssxref("easing-function")}}.
 
 ## Specifications
 
