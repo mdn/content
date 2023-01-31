@@ -25,7 +25,7 @@ the idea "Go five steps to the east" could be expressed this way as a loop:
 ```js
 for (let step = 0; step < 5; step++) {
   // Runs 5 times, with values of step 0 through 4.
-  console.log('Walking east one step');
+  console.log("Walking east one step");
 }
 ```
 
@@ -54,17 +54,17 @@ A {{jsxref("statements/for","for")}} loop repeats until a specified condition ev
 
 A `for` statement looks as follows:
 
-```js
-for ([initialExpression]; [conditionExpression]; [incrementExpression])
+```js-nolint
+for (initialization; condition; afterthought)
   statement
 ```
 
 When a `for` loop executes, the following occurs:
 
-1. The initializing expression `initialExpression`, if any, is executed. This expression usually initializes one or more loop counters, but the syntax allows an expression of any degree of complexity. This expression can also declare variables.
-2. The `conditionExpression` expression is evaluated. If the value of `conditionExpression` is true, the loop statements execute. Otherwise, the `for` loop terminates. (If the `conditionExpression` expression is omitted entirely, the condition is assumed to be true.)
+1. The initializing expression `initialization`, if any, is executed. This expression usually initializes one or more loop counters, but the syntax allows an expression of any degree of complexity. This expression can also declare variables.
+2. The `condition` expression is evaluated. If the value of `condition` is true, the loop statements execute. Otherwise, the `for` loop terminates. (If the `condition` expression is omitted entirely, the condition is assumed to be true.)
 3. The `statement` executes. To execute multiple statements, use a [block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block) (`{ }`) to group those statements.
-4. If present, the update expression `incrementExpression` is executed.
+4. If present, the update expression `afterthought` is executed.
 5. Control returns to Step 2.
 
 ### Example
@@ -77,7 +77,9 @@ element that allows multiple selections).
 
 ```html
 <form name="selectForm">
-  <label for="musicTypes">Choose some music types, then click the button below:</label>
+  <label for="musicTypes"
+    >Choose some music types, then click the button below:</label
+  >
   <select id="musicTypes" name="musicTypes" multiple>
     <option selected>R&B</option>
     <option>Jazz</option>
@@ -105,9 +107,9 @@ function countSelected(selectObject) {
   return numberSelected;
 }
 
-const btn = document.getElementById('btn');
+const btn = document.getElementById("btn");
 
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   const musicTypes = document.selectForm.musicTypes;
   console.log(`You have selected ${countSelected(musicTypes)} option(s).`);
 });
@@ -120,7 +122,7 @@ specified condition evaluates to false.
 
 A `do...while` statement looks as follows:
 
-```js
+```js-nolint
 do
   statement
 while (condition);
@@ -154,7 +156,7 @@ A {{jsxref("statements/while","while")}} statement executes its statements as lo
 specified condition evaluates to `true`. A `while` statement looks
 as follows:
 
-```js
+```js-nolint
 while (condition)
   statement
 ```
@@ -210,7 +212,7 @@ following `while` loop execute forever because the condition never becomes
 ```js example-bad
 // Infinite loops are bad!
 while (true) {
-  console.log('Hello, world!');
+  console.log("Hello, world!");
 }
 ```
 
@@ -223,7 +225,7 @@ to indicate whether a program should interrupt the loop or continue its executio
 
 The syntax of the labeled statement looks like the following:
 
-```js
+```js-nolint
 label:
   statement
 ```
@@ -237,8 +239,7 @@ any statement.
 In this example, the label `markLoop` identifies a `while` loop.
 
 ```js
-markLoop:
-while (theMark) {
+markLoop: while (theMark) {
   doSomething();
 }
 ```
@@ -283,11 +284,11 @@ for (let i = 0; i < a.length; i++) {
 let x = 0;
 let z = 0;
 labelCancelLoops: while (true) {
-  console.log('Outer loops: ', x);
+  console.log("Outer loops: ", x);
   x += 1;
   z = 1;
   while (true) {
-    console.log('Inner loops: ', z);
+    console.log("Inner loops: ", z);
     z += 1;
     if (z === 10 && x === 10) {
       break labelCancelLoops;
@@ -368,13 +369,13 @@ checkiandj: while (i < 4) {
   checkj: while (j > 4) {
     console.log(j);
     j -= 1;
-    if ((j % 2) === 0) {
+    if (j % 2 === 0) {
       continue checkj;
     }
-    console.log(j, ' is odd.');
+    console.log(j, " is odd.");
   }
-  console.log('i = ', i);
-  console.log('j = ', j);
+  console.log("i = ", i);
+  console.log("j = ", j);
 }
 ```
 
@@ -385,7 +386,7 @@ variable over all the enumerable properties of an object. For each distinct prop
 JavaScript executes the specified statements. A `for...in` statement looks as
 follows:
 
-```js
+```js-nolint
 for (variable in object)
   statement
 ```
@@ -398,11 +399,11 @@ names and their values.
 
 ```js
 function dumpProps(obj, objName) {
-  let result = '';
+  let result = "";
   for (const i in obj) {
     result += `${objName}.${i} = ${obj[i]}<br>`;
   }
-  result += '<hr>';
+  result += "<hr>";
   return result;
 }
 ```
@@ -433,7 +434,7 @@ over [iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
 {{jsxref("functions/arguments","arguments")}} object and so on), invoking a custom
 iteration hook with statements to be executed for the value of each distinct property.
 
-```js
+```js-nolint
 for (variable of object)
   statement
 ```
@@ -444,7 +445,7 @@ over property names, `for...of` iterates over property values:
 
 ```js
 const arr = [3, 5, 7];
-arr.foo = 'hello';
+arr.foo = "hello";
 
 for (const i in arr) {
   console.log(i);
