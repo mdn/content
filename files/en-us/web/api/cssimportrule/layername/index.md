@@ -10,7 +10,7 @@ tags:
   - CSSImportRule
   - Cascade layers
   - Read-only
-browser-compat: api.CSSImportRule.layer
+browser-compat: api.CSSImportRule.layerName
 ---
 
 {{APIRef("CSSOM")}}
