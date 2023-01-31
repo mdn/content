@@ -84,7 +84,7 @@ span {
 
 {{ EmbedLiveSample('Compositing_and_blending_in_action', "630", "300") }}
 
- The last three boxes are set to blend with the background of the container. Note how the background, border, and the content are all impacted. To see the code for this, [view the source on Github](https://github.com/mdn/content/blob/main/files/en-us/web/css/Compositing_and_Blending/index.md).
+ The last three boxes are set to blend with the background of the container. Note how the background, border, and the content are all impacted. To see the code for this, [view the source on Github](https://github.com/mdn/content/blob/main/files/en-us/web/css/compositing_and_blending/index.md?plain=1).
 
 ## Reference
 
@@ -94,31 +94,17 @@ span {
 - {{cssxref("isolation")}}
 - {{cssxref("mix-blend-mode")}}
 
-### Functions
-
-- {{cssxref("")}}
-
-### Events
-
-- {{domxref("")}}
-
-### Interfaces
-
-- {{domxref("")}} (inherits from {{domxref("")}})
-  - : Including {{domxref("")}}, {{domxref("")}}, and {{domxref("")}}.
-
 ## Related concepts
-<!--
-- {{cssxref("")}} CSS property
-- {{glossary("")}} glossary term
-- [`<>`](foo) data type
-- [``](/en-US/docs/Web/CSS/@media/) media query
-  -->
-- {{cssxref("background-image")}} CSS property
+
+- {{cssxref("blend-mode")}} data type
+- {{cssxref("filter")}} CSS property
+- {{cssxref("backdrop-filter")}} CSS property
+- {{cssxref("mask-composite")}} CSS property
 - {{cssxref("background-color")}} CSS property
-- {{cssxref("&lt;blend-mode&gt;")}} data type
-- {{ SVGElement("feBlend") }} SVG filter primitive
+- {{cssxref("background-image")}} CSS property
 - {{glossary("stacking context")}} glossary term
+- {{ SVGElement("feBlend")}} SVG filter primitive
+- {{ SVGElement("feComposite")}} SVG filter primitive
 
 ## Specifications
 
@@ -126,6 +112,7 @@ span {
 
 ## See also
 
+- [CSS filter effects](/en-US/docs/Web/CSS/Filter_Effects) module
 - [Compositing And Blending In CSS](https://www.sarasoueidan.com/blog/compositing-and-blending-in-css/) (2015)
 - [Editing Images in CSS: Blend Modes](https://code.tutsplus.com/tutorials/editing-images-in-css-blend-modes--cms-26058) (2022)
 - [web.dev: blend modes](https://web.dev/learn/css/blend-modes/) (2021)
