@@ -274,21 +274,22 @@ input:checked + label::before {
 {{ EmbedLiveSample('Animations_in_action', "630", "630") }}
 
 This sample animation uses {{cssxref("animation-iteration-count")}} to make the flakes fall repeatedly, {{cssxref("animation-direction")}} to make the cloud move back and forth, {{cssxref("animation-fill-mode")}} to raise the snow level in response to the cloud movement, and {{cssxref("animation-play-state")}} to pause the animation. To see the code for this animation, [view the source on Github](https://github.com/mdn/content/blob/main/files/en-us/web/css/css_animations/index.md?plain=1).
-
+t
 ## Reference
 
 ### Properties
 
 - {{cssxref("animation")}} shorthand
-- {{cssxref("animation-composition")}}
+- {{cssxref("animation-composition")}} {{Experimental_Inline}}
 - {{cssxref("animation-delay")}}
 - {{cssxref("animation-direction")}}
 - {{cssxref("animation-duration")}}
 - {{cssxref("animation-fill-mode")}}
 - {{cssxref("animation-iteration-count")}}
 - {{cssxref("animation-name")}}
+- {{cssxref("animation-play-state")}}
 - {{cssxref("animation-timing-function")}}
-- {{cssxref("animation-timeline")}}
+- {{cssxref("animation-timeline")}}t
 
 ### At-rules
 
