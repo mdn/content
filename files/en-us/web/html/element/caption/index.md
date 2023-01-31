@@ -130,9 +130,7 @@ td {
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
+        <a href="https://www.w3.org/TR/wai-aria-1.2/#caption">caption</a>
       </td>
     </tr>
     <tr>
