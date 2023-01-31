@@ -13,8 +13,8 @@ browser-compat: javascript.builtins.Proxy.handler.setPrototypeOf
 
 {{JSRef}}
 
-The **`handler.setPrototypeOf()`** method is a trap for
-{{jsxref("Object.setPrototypeOf()")}}.
+The **`handler.setPrototypeOf()`** method is a trap for the
+`[[SetPrototypeOf]]` internal method.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-setprototypeof.html", "taller")}}
 
@@ -44,8 +44,8 @@ The `setPrototypeOf()` method returns `true` if the
 
 ## Description
 
-The **`handler.setPrototypeOf()`** method is a trap for
-{{jsxref("Object.setPrototypeOf()")}}.
+The **`handler.setPrototypeOf()`** method is a trap for the
+`[[SetPrototypeOf]]` internal method.
 
 ### Interceptions
 
