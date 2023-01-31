@@ -95,17 +95,12 @@ span {
 ## Related concepts
 
 - {{cssxref("blend-mode")}} data type
-
-
 - {{cssxref("backdrop-filter")}} CSS property
 - {{cssxref("filter")}} CSS property
 - {{cssxref("mask-composite")}} CSS property
 - {{cssxref("background-color")}} CSS property
 - {{cssxref("background-image")}} CSS property
-
-
 - {{glossary("stacking context")}} glossary term
-
 - {{ SVGElement("feBlend")}} SVG filter primitive
 - {{ SVGElement("feComposite")}} SVG filter primitive
 
