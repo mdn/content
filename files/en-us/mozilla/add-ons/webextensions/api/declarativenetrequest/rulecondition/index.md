@@ -27,29 +27,10 @@ Values of this type are objects. They contain these properties:
   - : An array of `string`. Use [`initiatorDomains`](#initiatordomains) instead. The rule only matches network requests originating from this list of domains.
 - `excludedDomains` {{deprecated_inline}} {{optional_inline}}
   - : An array of `string`. Use [`excludedInitiatorDomains`](#excludedinitiatordomains) instead. The rule does not match network requests originating from this list of domains.
-- `excludedInitiatorDomains` {{optional_inline}}
-  - : An array of `string`. The rule does not match network requests originating from this list of domains. If the list is empty or omitted, no domains are excluded. This takes precedence over `initiatorDomains`. Note that:
-    - Sub-domains such as "a.example.com" are allowed.
-    - The entries must consist of only ASCII characters.
-    - Use [punycode](https://en.wikipedia.org/wiki/Punycode) encoding for internationalized domains.
-    - This matches against the request initiator and not the request URL.
-- `excludedRequestDomains` {{optional_inline}}
-  - : An array of `string`. The rule does not match network requests when the domains matches one from this list. If the list is empty or omitted, no domains are excluded. This takes precedence over `requestDomains`. Note that:
-    - Sub-domains such as "a.example.com" are allowed.
-    - The entries must consist of only ASCII characters.
-    - Use [punycode](https://en.wikipedia.org/wiki/Punycode) encoding for internationalized domains.
-- `excludedRequestMethods` {{optional_inline}}
-  - : An array of `string`. List of request methods that the rule does not match on. Only one of [`requestMethods`](#requestmethods) and `excludedRequestMethods` should be specified. If neither of them is specified, all request methods are matched.
-- `excludedResourceTypes` {{optional_inline}}
-  - : An array of {{WebExtAPIRef("declarativeNetRequest.ResourceType")}}. List of resource types that the rule does not match on. Only one of [`resourceTypes`](#resourcetypes) and `excludedResourceTypes` should be specified. If neither of them is specified, all resource types except `"main_frame"` are blocked.
-- `excludedTabIds` {{optional_inline}}
-  - : An array of `number`. List of {{WebExtAPIRef("tabs.Tab")}}.`id` that the rule should not match. An ID of {{WebExtAPIRef("tabs.TAB_ID_NONE")}} excludes requests that do not originate from a tab. Only supported for session-scoped rules.
 - `initiatorDomains` {{optional_inline}}
-  - : An array of `string`. The rule only matches network requests originating from this list of domains. If the list is omitted, the rule is applied to requests from all domains. An empty list is not allowed. Note that:
-    - Sub-domains such as "a.example.com" are allowed.
-    - The entries must consist of only ASCII characters.
-    - Use [punycode](https://en.wikipedia.org/wiki/Punycode) encoding for internationalized domains.
-    - This matches against the request initiator and not the request URL.
+  - : An array of `string`. The rule only matches network requests originating from this list of domains. If the list is omitted, the rule is applied to requests from all domains. An empty list is not allowed. A [canonical domain](#canonical_domain) should be used. This matches against the request initiator and not the request URL.
+- `excludedInitiatorDomains` {{optional_inline}}
+  - : An array of `string`. The rule does not match network requests originating from this list of domains. If the list is empty or omitted, no domains are excluded. This takes precedence over `initiatorDomains`. A [canonical domain](# whocanonical_domain) should be used. This matches against the request initiator and not the request URL.
 - `isUrlFilterCaseSensitive` {{optional_inline}}
   - : A `boolean`. Whether the [`urlFilter`](#urlfilter) or [`regexFilter`](#regexfilter) (whichever is specified) is case sensitive. Default is true in (older) versions of Chrome and Safari, and false in Firefox. There is consensus on defaulting to `true` across browsers in [WECG issue 269](https://github.com/w3c/webextensions/issues/269).
 - `regexFilter` {{optional_inline}}
@@ -58,16 +39,21 @@ Values of this type are objects. They contain these properties:
     - Only one of [`urlFilter`](#urlfilter) or [`regexFilter`](#regexfilter) can be specified.
     - The [`regexFilter`](#regexfilter) must be composed of only ASCII characters. This is matched against a URL where the host is encoded in the [punycode](https://en.wikipedia.org/wiki/Punycode) format (in case of internationalized domains) and any other non-ascii characters are URL encoded in utf-8.
 - `requestDomains` {{optional_inline}}
-  - : An array of `string`. The rule only matches network requests when the domain matches one from this list. If the list is omitted, the rule is applied to requests from all domains. An empty list is not allowed. Note that:
-    - Sub-domains such as "a.example.com" are allowed.
-    - The entries must consist of only ASCII characters.
-    - Use [punycode](https://en.wikipedia.org/wiki/Punycode) encoding for internationalized domains.
+  - : An array of `string`. The rule only matches network requests when the domain matches one from this list. If the list is omitted, the rule is applied to requests from all domains. An empty list is not allowed. A [canonical domain](#canonical_domain) should be used.
+- `excludedRequestDomains` {{optional_inline}}
+  - : An array of `string`. The rule does not match network requests when the domains matches one from this list. If the list is empty or omitted, no domains are excluded. This takes precedence over `requestDomains`. A [canonical domain](#canonical_domain) should be used.
 - `requestMethods` {{optional_inline}}
   - : An array of `string`. List of HTTP request methods that the rule matches. An empty list is not allowed. Specifying a `requestMethods` rule condition also excludes non-HTTP(s) requests, whereas specifying [`excludedRequestMethods`](#excludedpequestmethods) does not.
+- `excludedRequestMethods` {{optional_inline}}
+  - : An array of `string`. List of request methods that the rule does not match on. Only one of [`requestMethods`](#requestmethods) and `excludedRequestMethods` should be specified. If neither of them is specified, all request methods are matched.
 - `resourceTypes` {{optional_inline}}
   - : An array of {{WebExtAPIRef("declarativeNetRequest.ResourceType")}}. List of resource types that the rule matches with. An empty list is not allowed. This must be specified for `"allowAllRequests"` rules and may only include the `"sub_frame"` and `"main_frame"` resource types.
+- `excludedResourceTypes` {{optional_inline}}
+  - : An array of {{WebExtAPIRef("declarativeNetRequest.ResourceType")}}. List of resource types that the rule does not match on. Only one of [`resourceTypes`](#resourcetypes) and `excludedResourceTypes` should be specified. If neither of them is specified, all resource types except `"main_frame"` are blocked.
 - `tabIds` {{optional_inline}}
   - : An array of `number`. List of {{WebExtAPIRef("tabs.Tab")}}.`id` that the rule should match. An ID of {{WebExtAPIRef("tabs.TAB_ID_NONE")}} matches requests that don't originate from a tab. An empty list is not allowed. Only supported for session-scoped rules.
+- `excludedTabIds` {{optional_inline}}
+  - : An array of `number`. List of {{WebExtAPIRef("tabs.Tab")}}.`id` that the rule should not match. An ID of {{WebExtAPIRef("tabs.TAB_ID_NONE")}} excludes requests that do not originate from a tab. Only supported for session-scoped rules.
 - `urlFilter` {{optional_inline}}
   - : A `string`. The pattern that is matched against the network request URL. Supported constructs:
     - '*' : Wildcard: Matches any number of characters.
@@ -80,6 +66,18 @@ Values of this type are objects. They contain these properties:
     Note that:
     - Only one of `urlFilter` or [`regexFilter`](#regexfilter) can be specified.
     - The `urlFilter` must be composed of only ASCII characters. This is matched against a URL where the host is encoded in the [punycode](https://en.wikipedia.org/wiki/Punycode) format (in case of internationalized domains) and any other non-ASCII characters are URL encoded in utf-8. For example, when the request URL is `http://abc.рф?q=ф`, the `urlFilter` is matched against the URL `http://abc.xn--p1ai/?q=%D1%84`.
+
+### Canonical domain
+
+Domains specified in `initiatorDomains`, `excludedinitiatorDomains`, `requestDomains`, or `excludedRequestDomains` should comply with the following:
+
+- Sub-domains such as "a.example.com" are allowed.
+- The entries must consist of only _lowercase_ ASCII characters.
+- Use [Punycode](https://en.wikipedia.org/wiki/Punycode) encoding for internationalized domains.
+- IPv4 addresses must be represented as 4 numbers separated by a dot.
+- IPv6 addresses should be represented in their canonical form, wrapped in brackets.
+
+To programmatically generate the canonical domain for a URL, use the [URL API](/docs/Web/API/URL) and read its `hostname` property, i.e., `new URL(url).hostname`.
 
 ## Browser compatibility
 
