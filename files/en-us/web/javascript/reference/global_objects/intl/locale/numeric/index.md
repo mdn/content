@@ -1,6 +1,7 @@
 ---
 title: Intl.Locale.prototype.numeric
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric
+page-type: javascript-instance-accessor-property
 tags:
   - Internationalization
   - Intl

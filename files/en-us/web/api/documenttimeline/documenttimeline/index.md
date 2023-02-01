@@ -33,23 +33,6 @@ new DocumentTimeline(options)
         as a real number of milliseconds relative to the {{domxref("PerformanceTiming.navigationStart","navigationStart")}} time of the active document
         for the current browsing context.
 
-## Examples
-
-We could share a single `documentTimeline` among multiple animations, thus allowing us to manipulate just that group of animations via their shared timeline. This bit of code would start all the cats animating 500 milliseconds into their animations:
-
-```js
-let cats = document.querySelectorAll('.sharedTimelineCat');
-cats = Array.prototype.slice.call(cats);
-
-const sharedTimeline = new DocumentTimeline({ originTime: 500 });
-
-cats.forEach((cat) => {
-  const catKeyframes = new KeyframeEffect(cat, keyframes, timing);
-  const catAnimation = new Animation(catKeyframes, sharedTimeline);
-  catAnimation.play();
-});
-```
-
 ## Specifications
 
 {{Specifications}}

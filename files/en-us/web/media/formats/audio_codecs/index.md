@@ -224,7 +224,7 @@ Because encoded audio inherently uses fewer bits to represent each sample, the s
 
 Of course, these effects can be altered by decisions made while encoding the audio. For example, if the encoder is configured to reduce the sample rate, the sample rate's effect on the output file will be reduced in kind.
 
-For more information about these and other features of audio data, see {{SectionOnPage("/en-US/docs/Web/Media/Formats/Audio_concepts", "Audio data format and structure")}}.
+For more information about these and other features of audio data, see [Audio data format and structure](/en-US/docs/Web/Media/Formats/Audio_concepts#audio_data_format_and_structure).
 
 ### The effect of codec configuration on encoded audio output
 

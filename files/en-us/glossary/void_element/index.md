@@ -1,6 +1,7 @@
 ---
 title: Void element
 slug: Glossary/Void_element
+page-type: glossary-definition
 tags:
   - CodingScripting
   - HTML

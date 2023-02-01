@@ -1,5 +1,5 @@
 ---
-title: 'CSP: base-uri'
+title: "CSP: base-uri"
 slug: Web/HTTP/Headers/Content-Security-Policy/base-uri
 tags:
   - CSP

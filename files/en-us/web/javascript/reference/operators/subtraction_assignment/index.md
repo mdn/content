@@ -1,6 +1,7 @@
 ---
 title: Subtraction assignment (-=)
 slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
+page-type: javascript-operator
 tags:
   - Assignment operator
   - JavaScript

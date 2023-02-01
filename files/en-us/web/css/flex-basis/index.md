@@ -57,7 +57,14 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 ### Values
 
 - `<'width'>`
-  - : An absolute {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}} of the parent flex container's main size property, or the keyword `auto`. Negative values are invalid. Defaults to `auto`.
+  - : Any of the following units:
+    - {{cssxref("&lt;length&gt;")}} sets an absolute value
+    - {{cssxref("&lt;percentage&gt;")}} sets a percentage of the width or height of a containing block's content area
+    - `auto` uses the value of the [width](https://drafts.csswg.org/css2/#the-width-property) in horizontal writing mode, and the value of the [height](https://drafts.csswg.org/css2/#the-height-property) in vertical writing mode; when the corresponding value is also `auto`, the `content` value is used instead
+    - `max-content` sets the intrinsic preferred width
+    - `min-content` sets the intrinsic minimum width
+    - `fit-content` sets the maximum possible size of a containing block's content area, bounded by the `min-content` and `max-content` values, and calculated based on the content of the current element
+
 - `content`
 
   - : Indicates automatic sizing, based on the flex item's content.

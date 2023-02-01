@@ -49,7 +49,7 @@ A {{jsxref("Promise")}} that resolves with `undefined`, or rejected with one of 
 The {{jsxref("Promise")}} may be rejected with one of the following `DOMException` values:
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : The [web-share](/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share) permission has not been granted, or the window does not have {{Glossary("transient activation")}}, or a file share is being blocked due to security considerations.
+  - : A `web-share` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) has been used to block the use of this feature, the window does not have {{Glossary("transient activation")}}, or a file share is being blocked due to security considerations.
 - {{jsxref("TypeError")}}
 
   - : The specified share data cannot be validated. Possible reasons include:
@@ -117,7 +117,7 @@ The following is a list of usually shareable file types. However, you should alw
 
 ## Security
 
-This method requires that the current document have the [web-share](/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share) permission policy and {{Glossary("transient activation")}}. (It must be triggered off a UI event like a button click and cannot be launched at arbitrary points by a script.) Further, the method must specify valid data that is supported for sharing by the native implementation.
+This method requires that the current document have the [web-share](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/web-share) Permissions Policy and {{Glossary("transient activation")}}. (It must be triggered off a UI event like a button click and cannot be launched at arbitrary points by a script.) Further, the method must specify valid data that is supported for sharing by the native implementation.
 
 ## Examples
 

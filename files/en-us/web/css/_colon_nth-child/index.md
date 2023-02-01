@@ -39,13 +39,13 @@ Note that, in the `element:nth-child()` syntax, the child count includes childre
 
 - `<An+B>`
 
-  - : Represents elements in a list whose indices match those found in a custom pattern of numbers, defined by `An+B`, where:
+  - : Represents elements whose numeric position in a series of siblings matches the pattern `An+B`, for every positive integer or zero value of `n`, where:
 
     - `A` is an integer step size,
     - `B` is an integer offset,
     - `n` is all nonnegative integers, starting from 0.
 
-    It can be read as the `An+B`-th element of a list.
+    It can be read as the `An+B`-th element of a list. The `A` and `B` must both have {{cssxref("&lt;integer&gt;")}} values.
 
 ## Examples
 

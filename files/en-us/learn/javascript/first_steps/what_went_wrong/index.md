@@ -82,7 +82,7 @@ Earlier on in the course we got you to type some simple JavaScript commands into
    ```
 
 4. The error message says "guessSubmit.addeventListener is not a function", which means that the function we're calling is not recognized by the JavaScript interpreter. Often, this error message actually means that we've spelled something wrong. If you are not sure of the correct spelling of a piece of syntax, it is often good to look up the feature on MDN. The best way to do this currently is to search for "mdn _name-of-feature_" with your favorite search engine. Here's a shortcut to save you some time in this instance: [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener).
-5. So, looking at this page, the error appears to be that we've spelled the function name wrong! Remember that JavaScript is case sensitive, so any slight difference in spelling or casing will cause an error. Changing `addeventListener` to `addEventListener` should fix this. Do this now.
+5. So, looking at this page, the error appears to be that we've spelled the function name wrong! Remember that JavaScript is case-sensitive, so any slight difference in spelling or casing will cause an error. Changing `addeventListener` to `addEventListener` should fix this. Do this now.
 
 > **Note:** See our [TypeError: "x" is not a function](/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function) reference page for more details about this error.
 
@@ -267,7 +267,7 @@ So there we have it, the basics of figuring out errors in simple JavaScript prog
 ## See also
 
 - There are many other types of errors that aren't listed here; we are compiling a reference that explains what they mean in detail — see the [JavaScript error reference](/en-US/docs/Web/JavaScript/Reference/Errors).
-- If you come across any errors in your code that you aren't sure how to fix after reading this article, you can get help! Ask for help on the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250), or in the [MDN Web Docs room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix). Tell us what your error is, and we'll try to help you. A listing of your code would be useful as well.
+- If you come across any errors in your code that you aren't sure how to fix after reading this article, you can get help! Ask for help on the [communication channels](/en-US/docs/MDN/Community/Communication_channels). Tell us what your error is, and we'll try to help you. A listing of your code would be useful as well.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
 

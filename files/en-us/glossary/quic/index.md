@@ -1,6 +1,7 @@
 ---
 title: QUIC
 slug: Glossary/QUIC
+page-type: glossary-definition
 tags:
   - HTTP
   - QUIC

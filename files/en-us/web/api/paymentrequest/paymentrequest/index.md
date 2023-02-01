@@ -114,6 +114,11 @@ new PaymentRequest(methodData, details, options)
 A new {{domxref("PaymentRequest")}} object, configured for use as configured by the
 input parameters.
 
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+
 ## Examples
 
 The following example shows minimal functionality and focuses instead on showing the

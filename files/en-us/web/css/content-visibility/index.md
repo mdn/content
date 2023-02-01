@@ -52,52 +52,106 @@ content-visibility: unset;
 
 ## Accessibility concerns
 
-Prior to Chromium 90, offscreen headers and landmark roles within `content-visibility: auto` were not exposed to a11y tools. As of Chromium 90, this has been corrected, and off-screen content within a `content-visibility: auto` element remains in the document object model and the accessibility tree. This allows improving page performance with `content-visibility: auto` without negatively impacting accessibility.
+Off-screen content within a `content-visibility: auto` property remains in the document object model and the accessibility tree. This allows improving page performance with `content-visibility: auto` without negatively impacting accessibility.
 
-However, one caveat to keep in mind is that, since styles for off-screen content are not rendered, elements intentionally hidden with `display: none` or `visibility: hidden` _will still appear in the accessibility tree_. If you don't want an element to appear in the accessibility tree, use `aria-hidden="true"`.
+Since styles for off-screen content are not rendered, elements intentionally hidden with `display: none` or `visibility: hidden` _will still appear in the accessibility tree_.
+If you don't want an element to appear in the accessibility tree, use `aria-hidden="true"`.
 
 ## Examples
 
 ### Using auto to reduce rendering cost of long pages
 
-The following example shows the use of auto to skip painting and rendering of off-screen sections. This helps with both load and interactions on the page, since the content outside of the viewport is not rendered.
+The following example shows the use of `content-visibility: auto` to skip painting and rendering of off-screen sections.
+When a `section` is out of the viewport then the painting of the content is skipped until the section comes close to the viewport, this helps with both load and interactions on the page.
+
+#### HTML
 
 ```html
-<style>
+<section>
+  <!-- Content for each section… -->
+</section>
+<section>
+  <!-- Content for each section… -->
+</section>
+<section>
+  <!-- Content for each section… -->
+</section>
+<!-- … -->
+```
+
+#### CSS
+
+The `contain-intrinsic-size` property adds a default size of 500px to the height and width of each `section` element. After a section is rendered, it will retain its rendered intrinsic size, even when it is scrolled out of the viewport.
+
+```css
 section {
   content-visibility: auto;
-  contain-intrinsic-size: 0 500px;
+  contain-intrinsic-size: auto 500px;
 }
-
-<section>…
-<section>…
-<section>…
-<section>…
-…
 ```
 
-### Using hidden to manually manage visibility
+### Using hidden to manage visibility
 
-The following example shows that it is possible to manage visibility in script. The added benefit of using `content-visibility: hidden` instead of, for example, `display: none` is that rendered content when hidden with `content-visibility` will preserve rendering state. This means that if the content is shown again, it will render quicker than the alternative.
+The following example shows how to manage content visibility with JavaScript.
+Using `content-visibility: hidden;` instead of `display: none;` preserves the rendering state of content when hidden and rendering is faster.
+
+#### HTML
 
 ```html
-<style>
-.hidden {
-  content-visibility: hidden;
-  /* when hidden, we want the element to size as if it had one child of 0x500px size */
-  contain-intrinsic-size: 0 500px;
-}
-.visible {
-  content-visibility: visible;
-  /* this is here to avoid layout shift when switching between .hidden and .visible */
-  contain: style layout paint;
+<div class="hidden">
+  <button class="toggle">Click me</button>
+  <p>
+    This content is initially hidden and can be shown by clicking the button.
+  </p>
+</div>
+<div class="visible">
+  <button class="toggle">Click me</button>
+  <p>
+    This content is initially visible and can be hidden by clicking the button.
+  </p>
+</div>
+```
+
+#### CSS
+
+The `content-visibility` property is set on the paragraph in the containing `div` element. This means that the content in the paragraphs will be either hidden or visible depending on the class of the parent `div` element.
+
+The `contain-intrinsic-size` property is included to represent the content size. This helps to reduce layout shift when content is hidden.
+
+```css
+p {
+  contain-intrinsic-size: 0 1.1em;
+  border: dotted 2px;
 }
 
-<div class=hidden>…
-<div class=visible>…
-<div class=hidden>…
-<div class=hidden>…
+.hidden > p {
+  content-visibility: hidden;
+}
+
+.visible > p {
+  content-visibility: visible;
+}
 ```
+
+#### JS
+
+```js
+const handleClick = (event) => {
+  const button = event.target;
+  const div = button.parentElement;
+  button.textContent = div.classList.contains("visible") ? "Show" : "Hide";
+  div.classList.toggle("hidden");
+  div.classList.toggle("visible");
+};
+
+document.querySelectorAll("button.toggle").forEach((button) => {
+  button.addEventListener("click", handleClick);
+});
+```
+
+#### Result
+
+{{ EmbedLiveSample('Using hidden to manually manage visibility') }}
 
 ## Specifications
 
@@ -110,5 +164,6 @@ The following example shows that it is possible to manage visibility in script. 
 ## See also
 
 - [CSS Containment](/en-US/docs/Web/CSS/CSS_Containment)
+- [`contain-intrinsic-size`](/en-US/docs/Web/CSS/contain-intrinsic-size)
+- {{domxref("element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}}
 - [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/content-visibility/) (web.dev)
-- The {{domxref("element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event

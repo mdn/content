@@ -1,6 +1,7 @@
 ---
 title: Callback function
 slug: Glossary/Callback_function
+page-type: glossary-definition
 tags:
   - Callback
   - Callback function

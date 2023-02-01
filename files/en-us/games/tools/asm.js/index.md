@@ -7,7 +7,10 @@ tags:
   - asm.js
 ---
 
-{{Deprecated_header}}{{GamesSidebar}}
+{{GamesSidebar}}
+
+> **Warning:** The [asm.js](http://asmjs.org/) specification is considered **deprecated**.
+> Developers may look to [WebAssembly](/en-US/docs/WebAssembly) as an alternative to asm.js for running high-performance code in the browser.
 
 [Asm.js](http://asmjs.org/) is a specification defining a subset of JavaScript that is highly optimizable. This article looks at exactly what is permitted in the asm.js subset, what improvements it confers, where and how you can make use of it, and further resources and examples.
 

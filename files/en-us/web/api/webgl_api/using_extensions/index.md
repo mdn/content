@@ -57,8 +57,6 @@ The {{domxref("WebGLRenderingContext.getSupportedExtensions()")}} method returns
 
 The current extensions are:
 
-### Extensions
-
 - {{domxref("ANGLE_instanced_arrays")}}
 - {{domxref("EXT_blend_minmax")}}
 - {{domxref("EXT_color_buffer_float")}}

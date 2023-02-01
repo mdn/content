@@ -109,7 +109,7 @@ checks the value of `devicePixelRatio` any time it changes.
 let remove = null;
 
 const updatePixelRatio = () => {
-  if(remove != null) {
+  if (remove != null) {
       remove();
   }
   let mqString = `(resolution: ${window.devicePixelRatio}dppx)`;

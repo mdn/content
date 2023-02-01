@@ -1,6 +1,7 @@
 ---
 title: Server
 slug: Glossary/Server
+page-type: glossary-definition
 tags:
   - Infrastructure
   - Networking

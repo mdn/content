@@ -120,9 +120,11 @@ You can find the [complete code on GitHub here](https://github.com/mdn/dom-examp
 - If your app is synchronizing data from a remote server, consider using background sync.
 - Only active documents can acquire screen wake locks and previously acquired locks are automatically released when document becomes inactive. Therefore make sure to re-acquire screen wake lock if necessary when document becomes active (listen for [visibilitychange](/en-US/docs/Web/API/Document/visibilitychange_event) event).
 
-## Feature Policy integration
+## Permissions Policy integration
 
-Access to Screen Wake Lock API is controlled by [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) directive {{HTTPHeader("Feature-Policy/screen-wake-lock","screen-wake-lock")}}. Refer to [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) for reference how to use it.
+Access to the Screen Wake Lock API is controlled by the [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) directive {{HTTPHeader("Permissions-Policy/screen-wake-lock","screen-wake-lock")}}.
+
+The default allowlist for `screen-wake-lock` is `self`.
 
 ## Specifications
 
@@ -136,4 +138,3 @@ Access to Screen Wake Lock API is controlled by [Feature Policy](/en-US/docs/Web
 
 - [An introductory article on the Screen Wake Lock API](https://web.dev/wake-lock/)
 - [A Screen Wake Lock API demo on glitch](https://wake-lock-demo.glitch.me/)
-- [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) directive {{HTTPHeader("Feature-Policy/screen-wake-lock","screen-wake-lock")}}

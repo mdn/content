@@ -1,6 +1,7 @@
 ---
 title: Logical OR (||)
 slug: Web/JavaScript/Reference/Operators/Logical_OR
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature

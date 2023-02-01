@@ -25,11 +25,8 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 > slug: Web/API/NameOfTheParentInterface/NameOfTheEventHandler_event
 > page-type: web-api-event
 > tags:
->   - NameOfTheEvent
->   - API
->   - Event
->   - Reference
 >   - Experimental
+>   - Deprecated
 >   - Non-standard
 > browser-compat: path.to.feature.NameOfTheEvent_event
 > ---
@@ -45,16 +42,7 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 > - **page-type**
 >   - : The `page-type` key for Web/API events is always `web-api-event`.
 > - **tags**
->
->   - : Always include the following tags: **API**, **Reference**, **Event**, the _name of the event_, the name of the _parent interface_ (e.g. **Window**).
->
->     Include the following tags as appropriate:
->
->     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** if it isn't on a standards track.
->     - Special requirements: **Secure context** (if it is available in a secure context only)
->     - Any other tags that represent terms people might search for related to the technology.
->       For example on WebVR interface pages we include **VR** and **Virtual reality**.
->
+>   - : Include (appropriate) technology status tags: **Experimental** (if [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** if not on a standards track.
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `path.to.feature.NameOfTheEvent_event` with the query string for the event in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).

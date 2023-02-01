@@ -1,6 +1,7 @@
 ---
 title: RegExp.lastParen ($+)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastParen
+page-type: javascript-static-accessor-property
 tags:
   - JavaScript
   - Deprecated

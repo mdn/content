@@ -1,6 +1,7 @@
 ---
 title: ARIA
 slug: Glossary/ARIA
+page-type: glossary-definition
 tags:
   - Accessibility
 ---

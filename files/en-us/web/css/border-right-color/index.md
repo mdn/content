@@ -23,8 +23,8 @@ The **`border-right-color`** CSS property sets the color of an element's right [
 /* <color> values */
 border-right-color: red;
 border-right-color: #ffbb00;
-border-right-color: rgb(255, 0, 0);
-border-right-color: hsla(100%, 50%, 25%, 0.75);
+border-right-color: rgb(255 0 0);
+border-right-color: hsl(100deg 50% 25% / 0.75);
 border-right-color: currentcolor;
 border-right-color: transparent;
 

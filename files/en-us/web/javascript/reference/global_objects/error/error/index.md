@@ -1,6 +1,7 @@
 ---
 title: Error() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
+page-type: javascript-constructor
 tags:
   - Constructor
   - JavaScript

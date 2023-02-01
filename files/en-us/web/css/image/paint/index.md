@@ -37,7 +37,7 @@ where:
 In JavaScript, we register the [paint worklet](/en-US/docs/Web/API/PaintWorklet):
 
 ```js
-CSS.paintWorklet.addModule('boxbg.js');
+CSS.paintWorklet.addModule("boxbg.js");
 ```
 
 ...then, in the CSS, we define the `background-image` as a `paint()` type with the worklet name, `boxbg`, along with any variables (ex. `--boxColor` and `--widthSubtractor`) the worklet will use:
@@ -45,14 +45,14 @@ CSS.paintWorklet.addModule('boxbg.js');
 ```css
 li {
   background-image: paint(boxbg);
-  --boxColor: hsla(55, 90%, 60%, 1);
+  --boxColor: hsl(55 90% 60% / 1);
 }
 li:nth-of-type(3n) {
-  --boxColor: hsla(155, 90%, 60%, 1);
+  --boxColor: hsl(155 90% 60% / 1);
   --widthSubtractor: 20;
 }
 li:nth-of-type(3n + 1) {
-  --boxColor: hsla(255, 90%, 60%, 1);
+  --boxColor: hsl(255 90% 60% / 1);
   --widthSubtractor: 40;
 }
 ```
@@ -91,22 +91,24 @@ You can pass additional arguments via the CSS paint() function. In this example,
 ```
 
 ```js hidden
-  CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js');
+CSS.paintWorklet.addModule(
+  "https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js"
+);
 ```
 
 ```css
 li {
-  --boxColor: hsla(55, 90%, 60%, 1);
+  --boxColor: hsl(55 90% 60% / 1);
   background-image: paint(hollowHighlights, stroke, 2px);
 }
 
 li:nth-of-type(3n) {
-  --boxColor: hsla(155, 90%, 60%, 1);
+  --boxColor: hsl(155 90% 60% / 1);
   background-image: paint(hollowHighlights, filled, 3px);
 }
 
 li:nth-of-type(3n + 1) {
-  --boxColor: hsla(255, 90%, 60%, 1);
+  --boxColor: hsl(255 90% 60% / 1);
   background-image: paint(hollowHighlights, stroke, 1px);
 }
 ```

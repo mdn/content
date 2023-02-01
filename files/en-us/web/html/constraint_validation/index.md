@@ -1,6 +1,7 @@
 ---
 title: Constraint validation
 slug: Web/HTML/Constraint_validation
+page-type: guide
 tags:
   - CSS
   - Guide
@@ -21,7 +22,7 @@ For a basic introduction to these concepts, with examples, see the [Form validat
 
 In HTML, basic constraints are declared in two ways:
 
-- By choosing the most semantically appropriate value for the {{ htmlattrxref("type", "input") }} attribute of the {{ HTMLElement("input") }} element, e.g., choosing the `email` type automatically creates a constraint that checks whether the value is a valid e-mail address.
+- By choosing the most semantically appropriate value for the {{ htmlattrxref("type", "input") }} attribute of the {{ HTMLElement("input") }} element, e.g., choosing the `email` type automatically creates a constraint that checks whether the value is a valid email address.
 - By setting values on validation-related attributes, allowing basic constraints to be described in a simple way, without the need for JavaScript.
 
 ### Semantic input types
@@ -427,7 +428,7 @@ The {{cssxref(':required')}} and {{cssxref(':optional')}} [pseudo-classes](/en-U
 
 #### :placeholder-shown CSS pseudo-class
 
-See {{cssxref(':placeholder-shown')}}
+See {{cssxref(':placeholder-shown')}}.
 
 #### :valid :invalid CSS pseudo-classes
 

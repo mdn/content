@@ -23,6 +23,7 @@ browser-compat: path.to.feature.NameOfTheElement
 > ---
 > title: <NameOfTheElement>
 > slug: Web/SVG/Element/NameOfTheElement
+> page-type: svg-element
 > tags:
 >   - NameOfTheElement
 >   - SVG
@@ -42,6 +43,8 @@ browser-compat: path.to.feature.NameOfTheElement
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
 >     This will be formatted like `Web/SVG/Element/NameOfTheElement`.
+> - **page-type**
+>   - : Always `svg-element`.
 > - **tags**
 >
 >   - : Always include the following tags: **SVG**, **Reference**, **Element**, the _NameOfTheElement_ (e.g. **g**).

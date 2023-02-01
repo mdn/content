@@ -54,24 +54,13 @@ While we do have working edit functionality, we aren't providing a great experie
 
 To understand what's currently happening:
 
-1. Reload your page, then press
+1. Reload your page, then press <kbd>Tab</kbd>. You should see a focus outline on the input for adding new to-do items.
 
-   <kbd>Tab</kbd>
-
-   . You should see a focus outline on the input for adding new to-do items.
-
-2. Press
-
-   <kbd>Tab</kbd>
-
-   again. The focus should move to the "Add" button.
+2. Press <kbd>Tab</kbd> again. The focus should move to the "Add" button.
 
 3. Hit it again, and it'll be on the first checkbox. One more time, and focus should be on the first "Edit" button.
-4. Activate the "Edit" button by pressing
-
-   <kbd>Enter</kbd>
-
-   . The checkbox will be replaced with our edit component, but the focus outline will be gone.
+4. Activate the "Edit" button by pressing <kbd>Enter</kbd>.
+   The checkbox will be replaced with our edit component, but the focus outline will be gone.
 
 This behavior can be jarring. In addition, what happens when you press <kbd>Tab</kbd> again varies depending on the browser you're using. Similarly, if you save or cancel your edit, focus will disappear again as you move back to the non-edit view.
 
@@ -83,7 +72,7 @@ Vue, like some other frameworks, uses a virtual DOM (VDOM) to manage elements. T
 
 Since reading and writing actual DOM nodes is often more expensive than virtual nodes, this can result in better performance. However, it also means you often should not edit your HTML elements directly through native browser APIs (like [`Document.getElementById`](/en-US/docs/Web/API/Document/getElementById)) when using frameworks, because it results in the VDOM and real DOM going out of sync.
 
-Instead, if you need to access the underlying DOM nodes (like when setting focus), you can use **[Vue refs](https://v2.vuejs.org/v2/api/#ref)**. For custom Vue components, you can also use refs to directly access the internal structure of a child component, however this should be done with caution as it can make code harder to reason about and understand.
+Instead, if you need to access the underlying DOM nodes (like when setting focus), you can use [Vue refs](https://vuejs.org/guide/essentials/template-refs.html). For custom Vue components, you can also use refs to directly access the internal structure of a child component, however this should be done with caution as it can make code harder to reason about and understand.
 
 To use a ref in a component, you add a `ref` attribute to the element that you want to access, with a string identifier for the value of the attribute. It's important to note that a ref needs to be unique within a component. No two elements rendered at the same time should have the same ref.
 
@@ -180,7 +169,7 @@ Vue lets you run methods at various stages of this lifecycle using **lifecycle m
 9. `activated()` — Only used in components wrapped in a special `keep-alive` tag. Runs after the component is activated.
 10. `deactivated()` — Only used in components wrapped in a special `keep-alive` tag. Runs after the component is deactivated.
 
-> **Note:** The Vue Docs provide a [nice diagram for visualizing when these hooks happen](https://v2.vuejs.org/v2/guide/instance.html#Lifecycle-Diagram). This article from the [Digital Ocean Community Blog dives into the lifecycle methods more deeply](https://www.digitalocean.com/community/tutorials/vuejs-component-lifecycle).
+> **Note:** The Vue Docs provide a [nice diagram for visualizing when these hooks happen](https://vuejs.org/guide/essentials/lifecycle.html#lifecycle-diagram). This article from the [Digital Ocean Community Blog dives into the lifecycle methods more deeply](https://www.digitalocean.com/community/tutorials/vuejs-component-lifecycle).
 
 Now that we've gone over the lifecycle methods, let's use one to trigger focus when our `ToDoItemEditForm` component is mounted.
 
@@ -248,7 +237,7 @@ Now, when you delete an item from your list, focus should be moved up to the lis
 
 So that's it for focus management, and for our app! Congratulations for working your way through all our Vue tutorials. In the next article we'll round things off with some further resources to take your Vue learning further.
 
-> **Note:** If you need to check your code against our version, you can find a finished version of the sample Vue app code in our todo-vue repository. For a running live version, see <https://mdn.github.io/todo-vue/dist/>.
+> **Note:** If you need to check your code against our version, you can find a finished version of the sample Vue app code in our todo-vue repository. For a running live version, see <https://mdn.github.io/todo-vue/>.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 

@@ -14,7 +14,7 @@ Below is a quick review of best practices, tools, APIs with links to provide mor
 ## Best practices
 
 - Start with learning the [critical rendering path](/en-US/docs/Web/Performance/Critical_rendering_path) of the browser. Knowing this will help you understand how to improve the performance of the site.
-- Using _resource hints_ such as [`rel=preconnect`](/en-US/docs/Web/HTML/Link_types/preconnect), [`rel=dns-prefetch`](/en-US/docs/Web/HTML/Link_types/dns-prefetch), [`rel=prefetch`](/en-US/docs/Web/HTML/Link_types/prefetch), [`rel=preload`](/en-US/docs/Web/HTML/Link_types/preload).
+- Using _resource hints_ such as [`rel=preconnect`](/en-US/docs/Web/HTML/Attributes/rel/preconnect), [`rel=dns-prefetch`](/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch), [`rel=prefetch`](/en-US/docs/Web/HTML/Attributes/rel/prefetch), [`rel=preload`](/en-US/docs/Web/HTML/Attributes/rel/preload).
 - Keep the size of JavaScript to a [minimum](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4). Only use as much JavaScript as needed for the current page.
 - [CSS](/en-US/docs/Learn/Performance/CSS) performance factors
 - Use {{Glossary("HTTP_2", "HTTP/2")}} on your server (or CDN).

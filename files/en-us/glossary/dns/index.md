@@ -1,6 +1,7 @@
 ---
 title: DNS
 slug: Glossary/DNS
+page-type: glossary-definition
 tags:
   - DNS
   - Domain Name System

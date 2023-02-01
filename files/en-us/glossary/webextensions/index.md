@@ -1,6 +1,7 @@
 ---
 title: WebExtensions
 slug: Glossary/WebExtensions
+page-type: glossary-definition
 tags:
   - CodingScripting
   - NeedsContent

@@ -40,8 +40,6 @@ place-items: self-start legacy;
 place-items: self-end normal;
 place-items: flex-start legacy;
 place-items: flex-end normal;
-place-items: left legacy;
-place-items: right normal;
 
 /* Baseline alignment */
 place-items: baseline normal;

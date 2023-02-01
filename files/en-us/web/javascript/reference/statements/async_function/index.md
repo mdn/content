@@ -1,6 +1,7 @@
 ---
 title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
+page-type: javascript-statement
 tags:
   - Example
   - Function

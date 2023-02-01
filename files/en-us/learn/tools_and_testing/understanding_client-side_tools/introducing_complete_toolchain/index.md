@@ -68,7 +68,7 @@ As with any chain, the more links you have in your toolchain, the more complex a
 
 All web projects will be different, and you need to consider what parts of your toolchain are necessary and consider each part carefully.
 
-The smallest toolchain is one that has no links at all. You would handcode the HTML, use "vanilla JavaScript" (meaning no frameworks or intermediary languages), and manually upload it all to a server for hosting.
+The smallest toolchain is one that has no links at all. You would hand code the HTML, use "vanilla JavaScript" (meaning no frameworks or intermediary languages), and manually upload it all to a server for hosting.
 
 However, more complicated software requirements will likely benefit from the usage of tools to help simplify the development process. In addition, you should include tests before you deploy to your production server to ensure your software works as intended — this already sounds like a necessary toolchain.
 
@@ -116,7 +116,7 @@ Your toolchain will depend on your own needs, but for this example of a (possibl
 
 We'll use npm to install our tools, which you first met in Chapter 2. You should have Node.js and npm installed already, but if not, [refer back to that section](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups).
 
-> **Note:** Though it's not clear from the install process, installing npm also installs a complementary tool called npx. We will use npx later on this chapter to help run tools that are installed as local dependencies to the project.
+> **Note:** Though it's not clear from the installation process, installing npm also installs a complementary tool called npx. We will use npx later on this chapter to help run tools that are installed as local dependencies to the project.
 
 npm will be used to install subsequent parts of our toolchain. First of all, however, we'll install git to help with revision control.
 
@@ -166,7 +166,7 @@ prettier --write ./src/index.html
 
 It can be arduous to run the initial command against each file, and it would be useful to have a single command to do this for us (and the same will go for our linting tools).
 
-There's many different ways to solve this problem; here's just a few:
+There are many ways to solve this problem; here's just a few:
 
 - Using npm scripts to run multiple commands from the command line in one go, such as `npm run tidy-code`.
 - Using special "git hooks" to test if the code is formatted before a commit.
@@ -184,7 +184,7 @@ Linting helps with code quality but also is a way to catch potential errors earl
 
 Web development linting tools mostly exist for JavaScript (though there are a few available for HTML and CSS). This makes sense: if an unknown HTML element or invalid CSS property is used, due to the resilient nature of these two languages nothing is likely to break. JavaScript is a lot more fragile — mistakenly calling a function that doesn't exist for example causes your JavaScript to break; linting JavaScript is therefore very important, especially for larger projects.
 
-The go to tool for JavaScript linting is [ESLint](https://eslint.org/). It's an extremely powerful and versatile tool but can be tricky to configure correctly and you could easily consume many hours trying to get a configuration _just right_!
+The go-to tool for JavaScript linting is [ESLint](https://eslint.org/). It's an extremely powerful and versatile tool but can be tricky to configure correctly and you could easily consume many hours trying to get a configuration _just right_!
 
 Out of the box, ESLint is going to complain that it can't find the configuration file if you run it. The configuration file supports multiple formats but for this project we'll use `.eslintrc.json` (the leading period means the file is hidden by default).
 
@@ -230,7 +230,7 @@ OK, let's get the initial project setup out of the way.
    cd will-it-miss
    ```
 
-3. Now we will create a new directory for all of our web site's development code to live in. Run the following now:
+3. Now we will create a new directory for all of our website's development code to live in. Run the following now:
 
    ```bash
    mkdir src
@@ -266,7 +266,7 @@ At this point, we'll get hold of the project's code files (HTML, CSS, JavaScript
 
 We have our project files in place. That's all we need to do for now!
 
-> **Note:** To set up the project on your local machine, go to the root directory of the unzipped folder, open a terminal in that location, and execute the `npm install` command in the terminal. This will install all of the project dependencies that are stored in the `package.json` file.
+> **Note:** To set up the project on your local machine, go to the root directory of the unzipped folder, open a terminal in that location, and execute the `npm install` command in the terminal. This will install all project dependencies that are mentioned in the `package.json` file.
 
 #### Installing our tools
 
@@ -440,7 +440,7 @@ Another clever trick Parcel has up its sleeve is that any changes to your source
 2. Search for the text "near misses", and replace it with something silly like "flying pigs".
 3. Save the file, then go straight back to the app running in your browser. You'll notice that the browser has automatically refreshed, and the line "\<date> there will be \<number> near misses" at the top of the page has been changed!
 
-You could also try using ESLint and Prettier too — try deliberately removing a load of the whitespace from one of your files and try put Prettier on it to clean it up, or introduce a syntax error into one of your JavaScript files and see what errors ESLint gives you when you try to use Parcel to build it again.
+You could also try using ESLint and Prettier too — try deliberately removing a load of the whitespace from one of your files and running Prettier on it to clean it up, or introduce a syntax error into one of your JavaScript files and see what errors ESLint gives you when you try to use Parcel to build it again.
 
 ## Summary
 

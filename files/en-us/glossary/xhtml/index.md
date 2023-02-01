@@ -1,6 +1,7 @@
 ---
 title: XHTML
 slug: Glossary/XHTML
+page-type: glossary-definition
 tags:
   - CodingScripting
   - XHTML

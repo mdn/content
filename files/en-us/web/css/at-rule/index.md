@@ -68,10 +68,13 @@ Since each conditional group may also contain nested statements, there may be an
 ## Index
 
 - {{cssxref("@charset")}}
+- {{cssxref("@color-profile")}}
+- {{cssxref("@container")}}
 - {{cssxref("@counter-style")}}
 - {{cssxref("@document")}} {{deprecated_inline}}
 - {{cssxref("@font-face")}}
 - {{cssxref("@font-feature-values")}}
+- {{cssxref("@font-palette-values")}}
 - {{cssxref("@import")}}
 - {{cssxref("@keyframes")}}
 - {{cssxref("@layer")}}

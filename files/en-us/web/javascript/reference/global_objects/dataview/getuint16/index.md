@@ -1,6 +1,7 @@
 ---
 title: DataView.prototype.getUint16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint16
+page-type: javascript-instance-method
 tags:
   - DataView
   - JavaScript

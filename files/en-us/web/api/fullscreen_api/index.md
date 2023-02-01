@@ -79,9 +79,7 @@ _The Fullscreen API defines two events which can be used to detect when fullscre
 
 ## Controlling access
 
-The availability of fullscreen mode can be controlled using [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy). The fullscreen mode feature is identified by the string `"fullscreen"`, with a default allow-list value of `"self"`, meaning that fullscreen mode is permitted in top-level document contexts, as well as to nested browsing contexts loaded from the same origin as the top-most document.
-
-See [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) to learn more about using Feature Policy to control access to an API.
+The availability of fullscreen mode can be controlled using a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy). The fullscreen mode feature is identified by the string `"fullscreen"`, with a default allowlist value of `"self"`, meaning that fullscreen mode is permitted in top-level document contexts, as well as to nested browsing contexts loaded from the same origin as the top-most document.
 
 ## Usage notes
 

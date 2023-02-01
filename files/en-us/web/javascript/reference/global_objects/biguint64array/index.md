@@ -1,6 +1,7 @@
 ---
 title: BigUint64Array
 slug: Web/JavaScript/Reference/Global_Objects/BigUint64Array
+page-type: javascript-class
 tags:
   - BigInt
   - BigUInt64Array

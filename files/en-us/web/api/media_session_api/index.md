@@ -50,6 +50,8 @@ navigator.mediaSession.playbackState = "playing";
 
 ## Examples
 
+### Setting up action handlers for a music player
+
 The following example shows feature detection for the Media Session API. It then instantiates a metadata object for the session, and adds action handlers for the user control actions:
 
 ```js
@@ -92,6 +94,34 @@ playButton.addEventListener('pointerup', (event) => {
   .catch((error) => { console.error(error) });
 });
 ```
+
+### Using action handlers to control a slide presentation
+
+The `"previousslide"` and `"nextslide"` action handlers can be used to handle moving forward and backward through a slide presentation, for example when the user puts their presentation into a {{domxref("Picture-in-Picture API", "Picture-in-Picture", "", "nocode")}} window, and presses the browser-supplied controls for navigating through slides.
+
+```js
+try {
+  navigator.mediaSession.setActionHandler("previousslide", () => {
+    log('> User clicked "Previous Slide" icon.');
+    if (slideNumber > 1) slideNumber--;
+    updateSlide();
+  });
+} catch (error) {
+  log('Warning! The "previousslide" media session action is not supported.');
+}
+
+try {
+  navigator.mediaSession.setActionHandler("nextslide", () => {
+    log('> User clicked "Next Slide" icon.');
+    slideNumber++;
+    updateSlide();
+  });
+} catch (error) {
+  log('Warning! The "nextslide" media session action is not supported.');
+}
+```
+
+See [Presenting Slides / Media Session Sample](https://googlechrome.github.io/samples/media-session/slides.html) for a working example.
 
 ## Specifications
 

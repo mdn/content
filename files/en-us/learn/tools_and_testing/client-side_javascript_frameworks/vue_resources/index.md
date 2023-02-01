@@ -61,15 +61,7 @@ Here's where you should go to learn more about Vue:
 
 The Vue CLI also provides us with tools for preparing our app for publishing to the web. You can do this like so:
 
-- If your local server is still running, end it by pressing
-
-  <kbd>Ctrl</kbd>
-
-  \+
-
-  <kbd>C</kbd>
-
-  in the terminal.
+- If your local server is still running, end it by pressing <kbd>Ctrl</kbd> \+ <kbd>C</kbd> in the terminal.
 
 - Next, run the `npm run build` (or `yarn build`) in the console.
 
@@ -77,11 +69,12 @@ This will create a new `dist` directory containing all of your production ready 
 
 > **Note:** The Vue CLI docs also include a [specific guide on how to publish your app](https://cli.vuejs.org/guide/deployment.html#platform-guides) to many of the common hosting platforms.
 
-## Vue 3
+## Vue 2
 
-Vue 3 is a major release of the framework with a lot of major changes. It went into active beta in April, 2020. The biggest change is a new Composition API that works as an alternative to the current property-based API. In this new API, a single `setup()` function is used on the component. Only what you return from this function is available in your `<template>`s. You are required to be explicit about "reactive" properties when using this API. Vue handles this for you using the Options API. This makes the new API typically considered a more advanced use case.
+Vue 2 support will end on December 31st, 2023 and the default Vue version for all CLI tools is version 3 and above.
+The [Composition API](https://vuejs.org/guide/extras/composition-api-faq.html) works as an alternative to the property-based API where you use a `setup()` function is used on the component. Only what you return from this function is available in your `<template>`s. You are required to be explicit about "reactive" properties when using this API. Vue handles this for you using the [Options API](https://vuejs.org/guide/extras/composition-api-faq.html#trade-offs). This makes the new API typically considered a more advanced use case.
 
-There are also a handful of other changes, including a change in how apps are initialized in Vue. To read more about the changes involved with Vue 3, refer to [this article by Vue School which goes over most of the major changes in Vue 3](https://vueschool.io/articles/vuejs-tutorials/exciting-new-features-in-vue-3/).
+If you're upgrading from Vue 2, it's recommended you take a look at the [Vue 3 migration guide](https://v3-migration.vuejs.org/).
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 

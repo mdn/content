@@ -1,6 +1,7 @@
 ---
 title: SIMD
 slug: Glossary/SIMD
+page-type: glossary-definition
 tags:
   - CodingScripting
   - JavaScript

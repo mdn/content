@@ -1,6 +1,7 @@
 ---
 title: <hgroup>
 slug: Web/HTML/Element/hgroup
+page-type: html-element
 tags:
   - Element
   - HTML

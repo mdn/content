@@ -105,7 +105,7 @@ new URL("/a", "https://example.com/?query=1");
 // => 'https://example.com/a' (see relative URLs)
 
 new URL("//foo.com", "https://example.com");
-// => 'https://foo.com' (see relative URLs)
+// => 'https://foo.com/' (see relative URLs)
 ```
 
 ## Specifications

@@ -89,7 +89,7 @@ See the [WebGL constants](/en-US/docs/Web/API/WebGL_API/Constants) page.
 
 ## Uniforms and attributes
 
-- {{domxref("WebGL2RenderingContext.uniform()", "WebGL2RenderingContext.uniform[1234][uif][v]()")}}
+- [`WebGL2RenderingContext.uniform[1234][uif][v]()`](/en-US/docs/Web/API/WebGL2RenderingContext/uniform)
   - : Methods specifying values of uniform variables.
 - {{domxref("WebGL2RenderingContext.uniformMatrix()", "WebGL2RenderingContext.uniformMatrix[234]x[234]fv()")}}
   - : Methods specifying matrix values for uniform variables.

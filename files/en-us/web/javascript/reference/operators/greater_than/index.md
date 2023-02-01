@@ -1,6 +1,7 @@
 ---
 title: Greater than (>)
 slug: Web/JavaScript/Reference/Operators/Greater_than
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature

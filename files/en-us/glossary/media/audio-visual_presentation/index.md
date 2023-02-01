@@ -1,6 +1,7 @@
 ---
 title: Media (Audio-visual presentation)
 slug: Glossary/Media/Audio-visual_presentation
+page-type: glossary-definition
 tags:
   - Audio
   - Media

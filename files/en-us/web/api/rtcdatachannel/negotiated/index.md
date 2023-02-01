@@ -24,7 +24,7 @@ The read-only `RTCDataChannel` property
 (`true`) or by the WebRTC layer (`false`). **The
 default is `false`.**
 
-See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Creating a data channel")}} for further information about this property.
+See [Creating a data channel](/en-US/docs/Web/API/WebRTC_API/Using_data_channels#creating_a_data_channel) for further information about this property.
 
 ## Value
 

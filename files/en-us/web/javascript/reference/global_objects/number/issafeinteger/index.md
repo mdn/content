@@ -1,6 +1,7 @@
 ---
 title: Number.isSafeInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -12,7 +13,7 @@ browser-compat: javascript.builtins.Number.isSafeInteger
 
 {{JSRef}}
 
-The **`Number.isSafeInteger()`** method determines whether the provided value is a number that is a _safe integer_.
+The **`Number.isSafeInteger()`** static method determines whether the provided value is a number that is a _safe integer_.
 
 {{EmbedInteractiveExample("pages/js/number-issafeinteger.html")}}
 

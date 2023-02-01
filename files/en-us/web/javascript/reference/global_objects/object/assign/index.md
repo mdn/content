@@ -1,6 +1,7 @@
 ---
 title: Object.assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -13,7 +14,7 @@ browser-compat: javascript.builtins.Object.assign
 
 {{JSRef}}
 
-The **`Object.assign()`** method
+The **`Object.assign()`** static method
 copies all {{jsxref("Object/propertyIsEnumerable", "enumerable", "", 1)}}
 {{jsxref("Object/hasOwn", "own properties", "", 1)}} from one or more
 _source objects_ to a _target object_. It returns the modified target

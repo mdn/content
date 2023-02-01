@@ -97,4 +97,4 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
 - [How to label a technology](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete)
 
-  - : This section covers our definitions for the terms obsolete, deprecated, and experimental and provides guidelines on when we remove content from MDN Web Docs.
+  - : This section covers our definitions for the terms obsolete, deprecated, and experimental and provides guidelines on how to label a technology with them, and when we remove content from MDN Web Docs.

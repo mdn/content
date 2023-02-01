@@ -587,13 +587,14 @@ router.get("/", function (req, res) {
 
 ### Update app.js
 
-The last step is to add the routes to the middleware chain. We do this in `app.js`.
+The last step is to add the routes to the middleware chain.
+We do this in `app.js`.
 
 Open **app.js** and require the catalog route below the other routes (add the third line shown below, underneath the other two):
 
 ```js
-const indexRouter = require("./routes/index");
-const usersRouter = require("./routes/users");
+var indexRouter = require("./routes/index");
+var usersRouter = require("./routes/users");
 const catalogRouter = require("./routes/catalog"); //Import routes for "catalog" area of site
 ```
 

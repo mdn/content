@@ -1,6 +1,7 @@
 ---
 title: Strict mode
 slug: Web/JavaScript/Reference/Strict_mode
+page-type: guide
 tags:
   - ECMAScript 5
   - Guide
@@ -336,7 +337,7 @@ console.assert(fun() === undefined);
 console.assert(fun.call(2) === 2);
 console.assert(fun.apply(null) === null);
 console.assert(fun.call(undefined) === undefined);
-console.assert(fun.bind(true)());
+console.assert(fun.bind(true)() === true);
 ```
 
 #### Removal of stack-walking properties

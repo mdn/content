@@ -1,6 +1,7 @@
 ---
 title: XInclude
 slug: Glossary/XInclude
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

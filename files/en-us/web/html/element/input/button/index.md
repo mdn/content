@@ -1,6 +1,7 @@
 ---
 title: <input type="button">
 slug: Web/HTML/Element/input/button
+page-type: html-element
 tags:
   - Element
   - Forms
@@ -301,7 +302,7 @@ draw();
 
 {{EmbedLiveSample("Examples", '100%', 600)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
@@ -331,6 +332,10 @@ draw();
     <tr>
       <td><strong>Methods</strong></td>
       <td>None</td>
+    </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
     </tr>
   </tbody>
 </table>

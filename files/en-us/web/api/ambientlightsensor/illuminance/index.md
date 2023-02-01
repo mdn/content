@@ -20,8 +20,6 @@ browser-compat: api.AmbientLightSensor.illuminance
 
 The **`illuminance`** property of the {{domxref("AmbientLightSensor")}} interface returns the current light level in [lux](https://en.wikipedia.org/wiki/Lux) of the ambient light level around the hosting device.
 
-If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
-
 ## Value
 
 A {{jsxref('Number')}} indicating the current light level in lux.

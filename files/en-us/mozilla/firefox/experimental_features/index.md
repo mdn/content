@@ -722,6 +722,47 @@ See {{bug(1764850)}} for more details.
   </tbody>
 </table>
 
+### font-variant-emoji
+
+The CSS [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji) property allows you to set a default presentation style for displaying emojis.
+See ({{bug(1461589)}}) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>108</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.font-variant-emoji.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
 ### SVGPathSeg APIs
@@ -1781,6 +1822,50 @@ Note that since locking the screen orientation isn't typically supported on desk
   </tbody>
 </table>
 
+### File System Access API
+
+#### StorageManager.getDirectory()
+
+The {{domxref("StorageManager.getDirectory()")}} method, obtained using `navigator.storage.getDirectory()` in a worker or the main thread, provides access to files stored in the [origin private file system](/en-US/docs/Web/API/File_System_Access_API#origin_private_file_system).
+This data is origin-specific: permission prompts are not required to access files, and clearing data for the site/origin deletes the storage.
+See {{bug(1785123)}} for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version changed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>110</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>97</td>
+      <td>No.</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.fs.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### Prioritized Task Scheduling API
 
 The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they defined in a website developer's code, or in third party libraries and frameworks.
@@ -1921,11 +2006,10 @@ This also changes the console warning; if the upgrade succeeds, the message indi
   </tbody>
 </table>
 
-### Feature policy
+### Permissions Policy / Feature policy
 
-[Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to CSP but controls features instead of security behavior.
-
-> **Note:** The `Feature-Policy` header has now been renamed to `Permissions-Policy` in the spec, and this article will eventually be updated to reflect that change.
+[Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to CSP but controls features instead of security behavior.
+Note that this is implemented in Firefox as "**Feature Policy**, the name used in an earlier version of the specification.
 
 <table>
   <thead>

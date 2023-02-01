@@ -346,8 +346,8 @@ const jwkEcKey = {
 };
 
 /*
-Import a PEM encoded RSA private key, to use for RSA-PSS signing.
-Takes a string containing the PEM encoded key, and returns a Promise
+Import a JSON Web Key format EC private key, to use for ECDSA signing.
+Takes an object representing the JSON Web Key, and returns a Promise
 that will resolve to a CryptoKey representing the private key.
 */
 function importPrivateKey(jwk) {

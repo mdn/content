@@ -1,6 +1,7 @@
 ---
 title: String.prototype.charCodeAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method

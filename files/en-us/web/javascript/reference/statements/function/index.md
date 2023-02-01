@@ -1,6 +1,7 @@
 ---
 title: function declaration
 slug: Web/JavaScript/Reference/Statements/function
+page-type: javascript-statement
 tags:
   - Function
   - JavaScript

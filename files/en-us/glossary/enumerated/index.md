@@ -1,6 +1,7 @@
 ---
 title: Enumerated
 slug: Glossary/Enumerated
+page-type: glossary-definition
 tags:
   - Enumerated
   - CodingScripting

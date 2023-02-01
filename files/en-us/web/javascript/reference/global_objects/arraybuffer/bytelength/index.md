@@ -1,6 +1,7 @@
 ---
 title: ArrayBuffer.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
+page-type: javascript-instance-accessor-property
 tags:
   - ArrayBuffer
   - JavaScript

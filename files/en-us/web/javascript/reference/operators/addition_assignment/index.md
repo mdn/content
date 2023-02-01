@@ -1,6 +1,7 @@
 ---
 title: Addition assignment (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
+page-type: javascript-operator
 tags:
   - Assignment operator
   - JavaScript

@@ -1,6 +1,7 @@
 ---
 title: Object.defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
+page-type: javascript-static-method
 tags:
   - ECMAScript 5
   - JavaScript
@@ -11,7 +12,7 @@ browser-compat: javascript.builtins.Object.defineProperties
 
 {{JSRef}}
 
-The **`Object.defineProperties()`** method defines new or
+The **`Object.defineProperties()`** static method defines new or
 modifies existing properties directly on an object, returning the object.
 
 {{EmbedInteractiveExample("pages/js/object-defineproperties.html")}}

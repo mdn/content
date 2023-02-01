@@ -1,6 +1,7 @@
 ---
 title: JavaScript language overview
 slug: Web/JavaScript/Language_Overview
+page-type: guide
 tags:
   - Guide
   - Intermediate
@@ -562,7 +563,7 @@ avg(2, 3, 4, 5); // 3.5
 
 In the above code, the variable `args` holds all the values that were passed into the function.
 
-The rest parameter will store all arguments _after_ where it's declared, but not before. i.e. `function avg(firstValue, ...args)` will store the first value passed into the function in the `firstValue` variable and the remaining arguments in `args`.
+The rest parameter will store all arguments _after_ where it's declared, but not before. In other words, `function avg(firstValue, ...args)` will store the first value passed into the function in the `firstValue` variable and the remaining arguments in `args`.
 
 If a function accepts a list of arguments and you already hold an array, you can use the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) in the function call to _spread_ the array as a list of elements. For instance: `avg(...numbers)`.
 
@@ -722,7 +723,7 @@ const p = new Person("Maria");
 console.log(p.sayHello());
 ```
 
-JavaScript classes are just functions that must be instantiated with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. Every time a class is instantiated, it returns an object containing the methods and properties that the class specified. Classes don't enforce any code organization — for example, you can have functions returning classes, or you can have multiple classes per file. Here's an example of how ad hoc the creation of a class can be: it's just an expression returned from an arrow function. This pattern is called a [mixin](/en-US/docs/Web/JavaScript/Reference/Classes#mix-ins).
+JavaScript classes are just functions that must be instantiated with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. Every time a class is instantiated, it returns an object containing the methods and properties that the class specified. Classes don't enforce any code organization — for example, you can have functions returning classes, or you can have multiple classes per file. Here's an example of how ad hoc the creation of a class can be: it's just an expression returned from an arrow function. This pattern is called a [mixin](/en-US/docs/Web/JavaScript/Reference/Classes/extends#mix-ins).
 
 ```js
 const withAuthentication = (cls) =>
@@ -769,7 +770,8 @@ fs.readFile(filename)
   .then((content) => {
     // What to do when the file is read
     console.log(content);
-  }).catch((err) => {
+  })
+  .catch((err) => {
     throw err;
   });
 // Code here will be executed while the file is waiting to be read

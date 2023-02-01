@@ -1,6 +1,7 @@
 ---
 title: Function.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Function/toString
+page-type: javascript-instance-method
 tags:
   - Function
   - JavaScript

@@ -1,6 +1,7 @@
 ---
 title: '<noembed>: The Embed Fallback element'
 slug: Web/HTML/Element/noembed
+page-type: html-element
 tags:
   - Element
   - Embedded content

@@ -20,9 +20,7 @@ browser-compat: api.RelativeOrientationSensor
 
 The **`RelativeOrientationSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) describes the device's physical orientation without regard to the Earth's reference coordinate system.
 
-To use this sensor, the user must grant permission to the `'accelerometer'`, and `'gyroscope'` device sensors through the [Permissions API](/en-US/docs/Web/API/Permissions_API).
-
-If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
+To use this sensor, the user must grant permission to the `'accelerometer'`, and `'gyroscope'` device sensors through the [Permissions API](/en-US/docs/Web/API/Permissions_API). In addition, this feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 
 {{InheritanceDiagram}}
 

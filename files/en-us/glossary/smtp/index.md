@@ -1,6 +1,7 @@
 ---
 title: SMTP
 slug: Glossary/SMTP
+page-type: glossary-definition
 tags:
   - Beginner
   - Collaboration

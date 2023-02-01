@@ -1,6 +1,7 @@
 ---
 title: Intl.RelativeTimeFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format
+page-type: javascript-instance-method
 tags:
   - Internationalization
   - Intl

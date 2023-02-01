@@ -21,6 +21,8 @@ In addition to the [global MathML attributes](/en-US/docs/Web/MathML/Global_attr
   - : A [`<boolean>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) indicating whether the operator should be treated as an accent when used as an [under](/en-US/docs/Web/MathML/Element/munder)- or [overscript](/en-US/docs/Web/MathML/Element/mover) (i.e. drawn bigger and closer to the base expression).
 - `fence`
   - : A [`<boolean>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) indicating whether the operator is a fence (such as parentheses). There is no visual effect for this attribute.
+- `largeop`
+  - : A [`<boolean>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) indicating whether the operator should be drawn bigger when [`math-style`](/en-US/docs/Web/CSS/math-style) is set to `normal`.
 - `lspace`
   - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the amount of space before the operator.
 - `maxsize`

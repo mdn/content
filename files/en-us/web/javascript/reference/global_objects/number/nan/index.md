@@ -1,6 +1,7 @@
 ---
 title: Number.NaN
 slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
+page-type: javascript-static-data-property
 tags:
   - JavaScript
   - Number
@@ -10,7 +11,7 @@ browser-compat: javascript.builtins.Number.NaN
 
 {{JSRef}}
 
-The **`Number.NaN`** property represents Not-A-Number, which is equivalent to {{jsxref("NaN")}}. For more information about the behaviors of `NaN`, see the [description for the global property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN).
+The **`Number.NaN`** static data property represents Not-A-Number, which is equivalent to {{jsxref("NaN")}}. For more information about the behaviors of `NaN`, see the [description for the global property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN).
 
 {{EmbedInteractiveExample("pages/js/number-nan.html", "taller")}}
 

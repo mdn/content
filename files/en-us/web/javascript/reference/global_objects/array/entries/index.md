@@ -1,6 +1,7 @@
 ---
 title: Array.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
+page-type: javascript-instance-method
 tags:
   - Array
   - ECMAScript 2015

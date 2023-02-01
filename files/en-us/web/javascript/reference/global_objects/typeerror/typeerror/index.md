@@ -1,6 +1,7 @@
 ---
 title: TypeError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/TypeError/TypeError
+page-type: javascript-constructor
 tags:
   - Constructor
   - JavaScript

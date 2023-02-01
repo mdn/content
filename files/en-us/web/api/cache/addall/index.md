@@ -32,8 +32,10 @@ addAll(requests)
 ### Parameters
 
 - `requests`
-  - : An array of string URLs that you want to be fetched and added to the cache. You can
-    specify the {{domxref("Request")}} object instead of the URL.
+
+  - : An array of requests for the resources you want to add to the cache. These can be {{domxref("Request")}} objects or URLs.
+
+    These requests are used as parameters to the {{domxref("Request.Request()", "Request()")}} constructor, so URLs follow the same rules as for that constructor. In particular, URLs may be relative to the base URL, which is the document's {{domxref("Node.baseURI", "baseURI")}} in a window context, or {{domxref("WorkerGlobalScope.location")}} in a worker context.
 
 ### Return value
 

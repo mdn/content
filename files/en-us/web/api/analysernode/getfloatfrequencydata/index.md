@@ -48,7 +48,7 @@ analyser.getFloatFrequencyData(myDataArray);
 
 ### Drawing a spectrum
 
-The following example shows basic usage of an {{domxref("AudioContext")}} to connect a {{domxref("MediaElementAudioSourceNode")}} to an `AnalyserNode`. While the audio is playing, we collect the frequency data repeatedly with {{domxref("window.requestAnimationFrame()","requestAnimationFrame()")}} and draw a "winamp bargraph style" to a {{htmlelement("canvas")}} element.
+The following example shows basic usage of an {{domxref("AudioContext")}} to connect a {{domxref("MediaElementAudioSourceNode")}} to an `AnalyserNode`. While the audio is playing, we collect the frequency data repeatedly with {{domxref("window.requestAnimationFrame()","requestAnimationFrame()")}} and draw a "winamp bar graph style" to a {{htmlelement("canvas")}} element.
 
 For more complete applied examples/information, check out our [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) demo (see [app.js lines 108–193](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193) for relevant code).
 

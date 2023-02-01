@@ -32,7 +32,7 @@ None
 ### Event handlers
 
 - {{domxref("PresentationRequest.onconnectionavailable")}} {{Experimental_Inline}}
-  - : Fires on a successful call to {{DOMxRef("PresentationRequest.start","PresentationRequest.start()")}} or {{DOMxRef("PresentationRequest.join","PresentationRequest.join()")}}. This method provides a object with a reference to the created or joined object.
+  - : Fires on a successful call to {{DOMxRef("PresentationRequest.start","PresentationRequest.start()")}} or {{DOMxRef("PresentationRequest.join","PresentationRequest.join()")}}. This method provides an object with a reference to the created or joined object.
 
 ## Instance methods
 

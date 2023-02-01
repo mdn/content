@@ -166,7 +166,7 @@ Servers can send general or user-specific notifications through the website itse
 A few examples include:
 
 - Facebook and Twitter send emails and SMS messages to notify you of new communications.
-- Amazon regularly sends product e-mails that suggest products similar to those already bought or viewed that you might be interested in.
+- Amazon regularly sends product emails that suggest products similar to those already bought or viewed that you might be interested in.
 - A web server might send warning messages to site administrators alerting them to low memory on the server, or suspicious user activity.
 
 > **Note:** The most common type of notification is a "confirmation of registration". Pick almost any large site that you are interested in (Google, Amazon, Instagram, etc.) and create a new account using your email address. You will shortly receive an email confirming your registration, or requiring acknowledgment to activate your account.

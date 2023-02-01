@@ -1,6 +1,7 @@
 ---
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
+page-type: javascript-statement
 tags:
   - ECMAScript 2015
   - ES6

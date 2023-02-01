@@ -1,6 +1,7 @@
 ---
 title: Memory management
 slug: Web/JavaScript/Memory_Management
+page-type: guide
 tags:
   - Garbage collection
   - Guide
@@ -47,9 +48,13 @@ function f(a) {
 } // allocates a function (which is a callable object)
 
 // function expressions also allocate an object
-someElement.addEventListener("click", () => {
-  someElement.style.backgroundColor = "blue";
-}, false);
+someElement.addEventListener(
+  "click",
+  () => {
+    someElement.style.backgroundColor = "blue";
+  },
+  false,
+);
 ```
 
 #### Allocation via function calls

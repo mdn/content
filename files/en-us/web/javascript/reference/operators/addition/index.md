@@ -1,6 +1,7 @@
 ---
 title: Addition (+)
 slug: Web/JavaScript/Reference/Operators/Addition
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature

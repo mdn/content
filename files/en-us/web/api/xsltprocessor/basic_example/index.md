@@ -8,7 +8,7 @@ tags:
 ---
 
 This first example demonstrates the basics of setting up an XSLT transformation in a browser.
-The example takes an XML document that contains information about an article (title, list of authors and body text) and presents it in a human readable form.
+The example takes an XML document that contains information about an article (title, list of authors and body text) and presents it in a human-readable form.
 
 The XML document (**example.xml**) is shown below.
 

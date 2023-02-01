@@ -41,6 +41,11 @@ start(options)
 
 A {{jsxref("Promise")}}.
 
+### Exceptions
+
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+
 ## Examples
 
 The following example shows how to start idle detection using the `options` argument. It retrieves an instance of `AbortSignal` from an instance of {{domxref("AbortController")}}.

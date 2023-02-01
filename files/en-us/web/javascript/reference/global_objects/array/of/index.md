@@ -1,6 +1,7 @@
 ---
 title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
+page-type: javascript-static-method
 tags:
   - Array
   - ECMAScript 2015
@@ -12,9 +13,11 @@ browser-compat: javascript.builtins.Array.of
 
 {{JSRef}}
 
-The **`Array.of()`** method creates a new `Array`
+The **`Array.of()`** static method creates a new `Array`
 instance from a variable number of arguments, regardless of number or type of the
 arguments.
+
+{{EmbedInteractiveExample("pages/js/array-of.html", "shorter")}}
 
 ## Syntax
 

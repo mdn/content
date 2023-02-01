@@ -50,8 +50,9 @@ getAllKeys(query, count)
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is an {{jsxref("Array")}} of the keys for all records matching the given query, up to the value of `count`, if `count` was supplied.
 
 ### Exceptions
 

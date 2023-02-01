@@ -1,6 +1,7 @@
 ---
 title: Array.from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
+page-type: javascript-static-method
 tags:
   - Array
   - ECMAScript 2015

@@ -1,6 +1,7 @@
 ---
 title: BigInt() constructor
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
+page-type: javascript-constructor
 tags:
   - BigInt
   - Constructor

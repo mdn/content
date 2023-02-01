@@ -58,7 +58,7 @@ For example, to produce the final webpages you see in the browser, the applicati
 
 ## Deeper dive
 
-To review: to fetch a webpage, your browser sends a request to the web server, which searches for the requested file in its own storage space. Upon finding the file, the server reads it, processes it as-needed, and sends it to the browser. Let's look at those steps in more detail.
+To review: to fetch a webpage, your browser sends a request to the web server, which searches for the requested file in its own storage space. Upon finding the file, the server reads it, processes it as needed, and sends it to the browser. Let's look at those steps in more detail.
 
 ### Hosting files
 
@@ -66,10 +66,10 @@ First, a web server has to store the website's files, namely all HTML documents 
 
 Technically, you could host all those files on your own computer, but it's far more convenient to store files all on a dedicated web server because:
 
-- A dedicated web server is typically more available. (up and running)
-- Excluding downtime and systems troubles, a dedicated web server is always connected to the Internet.
-- A dedicated web server can have the same IP address all the time. This is known as a _dedicated IP address_. (not all {{Glossary("ISP", "ISPs")}} provide a fixed IP address for home lines)
-- A dedicated web server is typically maintained by a third-party.
+- A dedicated web server is typically more available (up and running).
+- Excluding downtime and system troubles, a dedicated web server is always connected to the Internet.
+- A dedicated web server can have the same IP address all the time. This is known as a _dedicated IP address_. (Not all {{Glossary("ISP", "ISPs")}} provide a fixed IP address for home lines.)
+- A dedicated web server is typically maintained by a third party.
 
 For all these reasons, finding a good hosting provider is a key part of building your website. Examine the various services companies offer. Choose one that fits your needs and budget. (Services range from free to thousands of dollars per month.) You can find more details [in this article](/en-US/docs/Learn/Common_questions/How_much_does_it_cost#hosting).
 
@@ -88,7 +88,7 @@ A {{Glossary("Protocol")}} is a set of rules for communication between two compu
 
 HTTP provides clear rules for how a client and server communicate. We'll cover HTTP itself in a [technical article](/en-US/docs/Web/HTTP) later. For now, just be aware of these things:
 
-- Usually only _clients_ make HTTP requests, and only to _servers_. Servers _respond_ to a _client_'s HTTP request. A server can also populate data into a client cache, in advance of it being requested, through a mechanism called a server push.
+- Usually only _clients_ make HTTP requests, and only to _servers_. Servers _respond_ to a _client_'s HTTP request. A server can also populate data into a client cache, in advance of it being requested, through a mechanism called [server push](https://en.wikipedia.org/wiki/HTTP/2_Server_Push).
 - When requesting a file via HTTP, clients must provide the file's {{Glossary("URL")}}.
 - The web server _must answer_ every HTTP request, at least with an error message.
 
@@ -106,7 +106,7 @@ Roughly speaking, a server can serve either static or dynamic content. Remember 
 
 The term _dynamic_ means that the server processes the content or even generates it on the fly from a database. This approach provides more flexibility, but the technical stack is more complex, making it dramatically more challenging to build a website.
 
-There are so many application server technologies that it's difficult to suggest a particular one. Some application servers cater to specific website categories like blogs, wikis, or eCommerce; others are more generic. If you're building a dynamic website, take the time to choose technology that fits your needs. Unless you want to learn web server programming (which is an exciting area in itself!), you don't need to create your own application server. That's just [reinventing the wheel](https://en.wikipedia.org/wiki/Reinventing_the_wheel).
+There are so many application server technologies that it's difficult to suggest a particular one. Some application servers cater to specific website categories like blogs, wikis, or e-commerce; others are more generic. If you're building a dynamic website, take the time to choose technology that fits your needs. Unless you want to learn web server programming (which is an exciting area in itself!), you don't need to create your own application server. That's just [reinventing the wheel](https://en.wikipedia.org/wiki/Reinventing_the_wheel).
 
 ## Next steps
 

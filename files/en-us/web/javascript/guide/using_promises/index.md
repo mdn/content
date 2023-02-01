@@ -1,6 +1,7 @@
 ---
 title: Using promises
 slug: Web/JavaScript/Guide/Using_promises
+page-type: guide
 tags:
   - Guide
   - Intermediate
@@ -43,7 +44,7 @@ This convention has several advantages. We will explore each one.
 
 A common need is to execute two or more asynchronous operations back to back, where each subsequent operation starts when the previous operation succeeds, with the result from the previous step. In the old days, doing several asynchronous operations in a row would lead to the classic callback pyramid of doom:
 
-```js
+```js-nolint
 doSomething(function (result) {
   doSomethingElse(result, function (newResult) {
     doThirdThing(newResult, function (finalResult) {
@@ -471,7 +472,7 @@ Promise.resolve()
 console.log(1); // 1, 2, 3, 4
 ```
 
-### Task queues vs microtasks
+### Task queues vs. microtasks
 
 Promise callbacks are handled as a [microtask](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) whereas [`setTimeout()`](/en-US/docs/Web/API/setTimeout) callbacks are handled as task queues.
 
@@ -499,7 +500,7 @@ Promise callback (.then)
 event-loop cycle: Promise (fulfilled) Promise {<fulfilled>}
 ```
 
-For more details, refer to [Tasks vs microtasks](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#tasks_vs_microtasks).
+For more details, refer to [Tasks vs. microtasks](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#tasks_vs_microtasks).
 
 ### When promises and tasks collide
 

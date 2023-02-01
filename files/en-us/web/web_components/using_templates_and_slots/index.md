@@ -16,7 +16,7 @@ This article explains how you can use the {{htmlelement("template")}} and {{html
 ## The truth about templates
 
 When you have to reuse the same markup structures repeatedly on a web page, it makes sense to use some kind of a template rather than repeating the same structure over and over again.
-This was possible before, but it is made a lot easier by the HTML {{htmlelement("template")}} element (which is well-supported in modern browsers).
+This was possible before, but it is made a lot easier by the HTML {{htmlelement("template")}} element.
 This element and its contents are not rendered in the DOM, but it can still be referenced using JavaScript.
 
 Let's look at a trivial quick example:
@@ -85,13 +85,10 @@ Now we can use it by just adding it to our HTML document:
 <my-paragraph></my-paragraph>
 ```
 
-> **Note:** Templates are well-supported in browsers; the Shadow DOM API is supported by default in Firefox (version 63 onwards), Chrome, Opera, Safari, and Edge (starting with version 79).
-
 ## Adding flexibility with slots
 
 So far so good, but the element isn't very flexible.
 We can only display one bit of text inside it, meaning that at the moment it is even less useful than a regular paragraph! We can make it possible to display different text in each element instance in a nice declarative way using the {{htmlelement("slot")}} element.
-This has more limited support than {{htmlelement("template")}}, available since Chrome 53, Opera 40, Safari 10, Firefox 59, and Edge 79.
 
 Slots are identified by their `name` attribute, and allow you to define placeholders in your template that can be filled with any markup fragment you want when the element is used in the markup.
 

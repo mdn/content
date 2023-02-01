@@ -1,6 +1,7 @@
 ---
 title: BigInt.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
+page-type: javascript-instance-method
 tags:
   - BigInt
   - JavaScript

@@ -34,8 +34,6 @@ This article provides information about the changes in Firefox 103 that will aff
 - Support has been added for the {{CSSxRef(":modal")}} pseudo class. It selects all elements that are in a state in which they exclude all interaction with other elements until the interaction has been dismissed ({{bug(1768535)}}).
 - The [`style`](/en-US/docs/Web/CSS/contain#style) value for the `contain` property is now supported. You can use this value for properties that can have effects on more than just an element and its descendants for effects don't escape the containing element. For more information, see ({{bug(1463600)}}).
 
-#### Removals
-
 ### JavaScript
 
 - Native Error types can now be serialized using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
@@ -44,15 +42,13 @@ This article provides information about the changes in Firefox 103 that will aff
   For {{JSxRef("AggregateError")}} the `message`, `name`, `cause` and `errors` properties are serialized.
   See {{bug(1556604)}} for more details.
 
-#### Removals
-
 ### HTTP
 
-#### Removals
+No notable changes.
 
 ### Security
 
-#### Removals
+No notable changes.
 
 ### APIs
 
@@ -64,15 +60,9 @@ This article provides information about the changes in Firefox 103 that will aff
   Previously `cache` would return a `CacheStorage` that would throw an exception if used outside of a secure context.
   See {{bug(1112134)}} for more details.
 
-#### DOM
-
-#### Media, WebRTC, and Web Audio
-
-#### Removals
-
 ### WebAssembly
 
-#### Removals
+No notable changes.
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 

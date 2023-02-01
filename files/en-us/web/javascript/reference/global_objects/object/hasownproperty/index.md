@@ -1,6 +1,7 @@
 ---
 title: Object.prototype.hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method

@@ -1,6 +1,7 @@
 ---
 title: Intl.DateTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
+page-type: javascript-class
 tags:
   - Class
   - DateTimeFormat

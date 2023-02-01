@@ -75,7 +75,7 @@ window.addEventListener("rejectionhandled", (event) => {
 
 ## See also
 
-- {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}
+- [Promise rejection events](/en-US/docs/Web/JavaScript/Guide/Using_promises#promise_rejection_events)
 - {{domxref("PromiseRejectionEvent")}}
 - {{jsxref("Promise")}}
 - {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}

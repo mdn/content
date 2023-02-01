@@ -58,8 +58,9 @@ deleteDatabase(name, options)
 
 ### Return value
 
-A {{DOMxRef("IDBOpenDBRequest")}} on which subsequent events related to this request
-are fired.
+A {{DOMxRef("IDBOpenDBRequest")}} on which subsequent events related to this request are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is `null`.
 
 ## Examples
 

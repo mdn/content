@@ -1,6 +1,7 @@
 ---
 title: WeakSet.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript

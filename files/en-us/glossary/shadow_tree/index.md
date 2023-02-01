@@ -1,6 +1,7 @@
 ---
 title: Shadow tree
 slug: Glossary/Shadow_tree
+page-type: glossary-definition
 tags:
   - DOM
   - Shadow Tree

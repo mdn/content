@@ -1,6 +1,7 @@
 ---
 title: ReferenceError
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
+page-type: javascript-class
 tags:
   - Class
   - JavaScript

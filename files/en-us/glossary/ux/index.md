@@ -1,6 +1,7 @@
 ---
 title: UX
 slug: Glossary/UX
+page-type: glossary-definition
 tags:
   - Accessibility
   - Composing

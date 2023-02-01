@@ -1,6 +1,7 @@
 ---
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
+page-type: javascript-class
 tags:
   - Class
   - JavaScript
@@ -149,6 +150,8 @@ JavaScript also has built-in APIs that produce `null`-prototype objects, especia
 - [`Array.prototype[@@unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables) (all `@@unscopables` objects should have `null`-prototype)
 - [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)
 - Module namespace objects, obtained through [`import * as ns from "module";`](/en-US/docs/Web/JavaScript/Reference/Statements/import#namespace_import) or [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import)
+
+The term "`null`-prototype object" often also includes any object without `Object.prototype` in its prototype chain. Such objects can be created with [`extends null`](/en-US/docs/Web/JavaScript/Reference/Classes/extends#extending_null) when using classes.
 
 ### Object coercion
 

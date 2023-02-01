@@ -1,6 +1,7 @@
 ---
 title: Java
 slug: Glossary/Java
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Java

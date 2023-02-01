@@ -1,6 +1,7 @@
 ---
 title: Less than (<)
 slug: Web/JavaScript/Reference/Operators/Less_than
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature

@@ -1,6 +1,7 @@
 ---
 title: super
 slug: Web/JavaScript/Reference/Operators/super
+page-type: javascript-language-feature
 tags:
   - Classes
   - ECMAScript 2015
@@ -16,6 +17,8 @@ browser-compat: javascript.operators.super
 The **`super`** keyword is used to access properties on an object literal or class's [[Prototype]], or invoke a superclass's constructor.
 
 The `super.prop` and `super[expr]` expressions are valid in any [method definition](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) in both [classes](/en-US/docs/Web/JavaScript/Reference/Classes) and [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer). The `super(...args)` expression is valid in class constructors.
+
+{{EmbedInteractiveExample("pages/js/expressions-super.html", "taller")}}
 
 ## Syntax
 
@@ -43,7 +46,7 @@ In the [constructor](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) b
 
 The "property lookup" form can be used to access methods and properties of an object literal's or class's [[Prototype]]. Within a class's body, the reference of `super` can be either the superclass's constructor itself, or the constructor's `prototype`, depending on whether the execution context is instance creation or class initialization. See the Examples section for more details.
 
-Note that the reference of `super` is determined by the class or object literal `super` was declared in, not the object the method is called on. Therefore, unbinding or re-binding a method doesn't change the reference of `super` in it (although they do change the reference of [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)). You can see `super` as a variable in the class or object literal scope, which the methods create a closure over. (But also beware that it's not actually not a variable, as explained above.)
+Note that the reference of `super` is determined by the class or object literal `super` was declared in, not the object the method is called on. Therefore, unbinding or re-binding a method doesn't change the reference of `super` in it (although they do change the reference of [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)). You can see `super` as a variable in the class or object literal scope, which the methods create a closure over. (But also beware that it's not actually a variable, as explained above.)
 
 When setting properties through `super`, the property is set on `this` instead.
 

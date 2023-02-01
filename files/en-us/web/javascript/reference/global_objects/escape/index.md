@@ -1,6 +1,7 @@
 ---
 title: escape()
 slug: Web/JavaScript/Reference/Global_Objects/escape
+page-type: javascript-function
 tags:
   - Deprecated
   - JavaScript

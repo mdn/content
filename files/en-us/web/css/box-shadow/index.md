@@ -156,7 +156,8 @@ We added a margin the size of the widest box-shadow to ensure the shadow doesn't
 
 ```css
 p {
-  box-shadow: 0 0 0 2em #f4aab9, 0 0 0 4em #66ccff;
+   box-shadow: 0 0 0 2em #2E3436,
+   0 0 0 4em #EDD400;
   margin: 4em;
   padding: 1em;
 }

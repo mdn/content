@@ -1,6 +1,7 @@
 ---
 title: if...else
 slug: Web/JavaScript/Reference/Statements/if...else
+page-type: javascript-statement
 tags:
   - JavaScript
   - Language feature

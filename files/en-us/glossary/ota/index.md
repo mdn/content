@@ -1,6 +1,7 @@
 ---
 title: OTA
 slug: Glossary/OTA
+page-type: glossary-definition
 tags:
   - Infrastructure
   - Intro

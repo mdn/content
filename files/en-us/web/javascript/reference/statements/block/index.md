@@ -1,6 +1,7 @@
 ---
 title: block
 slug: Web/JavaScript/Reference/Statements/block
+page-type: javascript-statement
 tags:
   - JavaScript
   - Language feature

@@ -357,7 +357,7 @@ context.listener.setPosition(0, 0, 0);
 
 It's also possible to manipulate audio at a low level using JavaScript. This can be useful should you want to create audio codecs.
 
-Libraries currently exist for the following formats :
+Libraries currently exist for the following formats:
 
 - AAC: [AAC.js](https://github.com/audiocogs/aac.js)
 - ALAC: [alac.js](https://github.com/audiocogs/alac.js)

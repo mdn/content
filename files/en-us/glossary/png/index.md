@@ -1,6 +1,7 @@
 ---
 title: PNG
 slug: Glossary/PNG
+page-type: glossary-definition
 tags:
   - Beginner
   - Composing

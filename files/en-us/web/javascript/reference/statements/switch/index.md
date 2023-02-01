@@ -1,6 +1,7 @@
 ---
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
+page-type: javascript-statement
 tags:
   - JavaScript
   - Language feature

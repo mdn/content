@@ -1,6 +1,7 @@
 ---
 title: URI
 slug: Glossary/URI
+page-type: glossary-definition
 tags:
   - HTTP
   - Search

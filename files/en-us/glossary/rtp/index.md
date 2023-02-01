@@ -1,6 +1,7 @@
 ---
 title: RTP (Real-time Transport Protocol) and SRTP (Secure RTP)
 slug: Glossary/RTP
+page-type: glossary-definition
 tags:
   - Network
   - Protocol

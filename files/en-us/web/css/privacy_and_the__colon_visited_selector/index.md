@@ -38,7 +38,7 @@ You can style visited links, but there are limits to which styles you can use. O
 - {{ cssxref("text-emphasis-color") }}
 - The color parts of the {{SVGAttr("fill")}} and {{SVGAttr("stroke")}} attributes
 
-In addition, even for the above styles, you won't be able to change the transparency between unvisited and visited links, as you otherwise would be able to using [`rgba()`](/en-US/docs/Web/CSS/color_value/rgba), [`hsla()`](/en-US/docs/Web/CSS/color_value/hsla), or the [`transparent`](/en-US/docs/Web/CSS/color_value#transparent_keyword) keyword.
+In addition, even for the above styles, you won't be able to change the transparency between unvisited and visited links, as you otherwise would be able to using the `alpha` parameter to [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) or [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), or the [`transparent`](/en-US/docs/Web/CSS/color_value#transparent_keyword) keyword.
 
 Here is an example of how to use styles with the aforementioned restrictions:
 
@@ -51,9 +51,9 @@ Here is an example of how to use styles with the aforementioned restrictions:
 }
 
 :visited {
-  outline-color: orange;    /* Visited links have an orange outline */
-  background-color: green;  /* Visited links have a green background */
-  color: yellow;            /* Visited links have yellow colored text */
+  outline-color: orange; /* Visited links have an orange outline */
+  background-color: green; /* Visited links have a green background */
+  color: yellow; /* Visited links have yellow colored text */
 }
 ```
 

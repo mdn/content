@@ -1,6 +1,7 @@
 ---
 title: undefined
 slug: Web/JavaScript/Reference/Global_Objects/undefined
+page-type: javascript-global-property
 tags:
   - JavaScript
   - Language feature

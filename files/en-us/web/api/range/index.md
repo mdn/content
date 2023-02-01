@@ -61,7 +61,7 @@ _There are no inherited methods._
 - {{ domxref("Range.deleteContents()")}}
   - : Removes the contents of a `Range` from the {{ domxref("Document") }}.
 - {{ domxref("Range.detach()")}}
-  - : Releases the `Range` from use to improve performance.
+  - : Does nothing. Kept for compatibility.
 - {{ domxref("Range.extractContents()")}}
   - : Moves contents of a `Range` from the document tree into a {{ domxref("DocumentFragment") }}.
 - {{ domxref("Range.getBoundingClientRect()") }}

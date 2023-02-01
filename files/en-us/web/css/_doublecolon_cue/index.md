@@ -17,7 +17,7 @@ browser-compat: css.selectors.cue
 
 {{CSSRef}}
 
-The **`::cue`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) matches [WebVTT](/en-US/docs/Web/API/WebVTT_API) cues within a selected element. This can be used to [style captions and other cues](/en-US/docs/Web/API/WebVTT_API#styling_webtt_cues) in media with VTT tracks.
+The **`::cue`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) matches [WebVTT](/en-US/docs/Web/API/WebVTT_API) cues within a selected element. This can be used to [style captions and other cues](/en-US/docs/Web/API/WebVTT_API#styling_webvtt_cues) in media with VTT tracks.
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-element-cue.html", "tabbed-shorter")}}
 

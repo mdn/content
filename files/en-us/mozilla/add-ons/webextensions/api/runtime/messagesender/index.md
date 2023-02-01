@@ -30,7 +30,7 @@ Values of this type are objects. They contain the following properties:
   - : `integer`. The frame that opened the connection. Zero for top-level frames, positive for child frames. This will only be set when `tab` is set.
 - `id` {{optional_inline}}
 
-  - : `string`. The ID of the extension that sent the message, if the message was sent by an extension. If the sender set an ID explicitly using the [applications](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in manifest.json, then `id` will have this value. Otherwise it will have the ID that was generated for the sender.
+  - : `string`. The ID of the extension that sent the message, if the message was sent by an extension. If the sender set an ID explicitly using the [browser_specific_settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in manifest.json, then `id` will have this value. Otherwise it will have the ID that was generated for the sender.
 
 - `url` {{optional_inline}}
 

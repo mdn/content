@@ -1,5 +1,5 @@
 ---
-title: 'CSP: manifest-src'
+title: "CSP: manifest-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/manifest-src
 tags:
   - CSP

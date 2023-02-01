@@ -1,6 +1,7 @@
 ---
 title: Generator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - Generator

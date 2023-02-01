@@ -277,7 +277,7 @@ This example uses the `detect()` method to detect the barcodes within the given 
 barcodeDetector
   .detect(imageEl)
   .then((barcodes) => {
-    barcodes.forEach((barcode) => console.log(barcode.rawData));
+    barcodes.forEach((barcode) => console.log(barcode.rawValue));
   })
   .catch((err) => {
     console.log(err);

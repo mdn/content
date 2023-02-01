@@ -1,6 +1,7 @@
 ---
 title: Statement
 slug: Glossary/Statement
+page-type: glossary-definition
 tags:
   - Beginner
   - CodingScripting

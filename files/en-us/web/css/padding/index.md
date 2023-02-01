@@ -25,10 +25,10 @@ An element's padding area is the space between its content and its border.
 
 This property is a shorthand for the following CSS properties:
 
+- {{cssxref("padding-top")}}
+- {{cssxref("padding-right")}}
 - {{cssxref("padding-bottom")}}
 - {{cssxref("padding-left")}}
-- {{cssxref("padding-right")}}
-- {{cssxref("padding-top")}}
 
 ## Syntax
 

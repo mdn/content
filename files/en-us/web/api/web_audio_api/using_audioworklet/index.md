@@ -30,7 +30,7 @@ It's worth noting that because audio processing can often involve substantial co
 
 Before we start looking at the use of AudioWorklet on a step-by-step basis, let's start with a brief high-level overview of what's involved.
 
-1. Create module that defines a audio worklet processor class, based on {{domxref("AudioWorkletProcessor")}} which takes audio from one or more incoming sources, performs its operation on the data, and outputs the resulting audio data.
+1. Create module that defines an audio worklet processor class, based on {{domxref("AudioWorkletProcessor")}} which takes audio from one or more incoming sources, performs its operation on the data, and outputs the resulting audio data.
 2. Access the audio context's {{domxref("AudioWorklet")}} through its {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} property, and call the audio worklet's {{domxref("Worklet.addModule", "addModule()")}} method to install the audio worklet processor module.
 3. As needed, create audio processing nodes by passing the processor's name (which is defined by the module) to the {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}} constructor.
 4. Set up any audio parameters the {{domxref("AudioWorkletNode")}} needs, or that you wish to configure. These are defined in the audio worklet processor module.

@@ -1,6 +1,7 @@
 ---
 title: "HTML attribute: maxlength"
 slug: Web/HTML/Attributes/maxlength
+page-type: html-attribute
 tags:
   - Attribute
   - Attributes

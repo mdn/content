@@ -1,6 +1,7 @@
 ---
 title: Grid
 slug: Glossary/Grid
+page-type: glossary-definition
 tags:
   - CSS
   - CSS Grid

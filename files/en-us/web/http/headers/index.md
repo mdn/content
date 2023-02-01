@@ -77,6 +77,8 @@ Servers proactively requests the client hint headers they are interested in from
   - : Servers can advertise support for Client Hints using the `Accept-CH` header field or an equivalent HTML `<meta>` element with [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#attr-http-equiv) attribute.
 - {{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}} {{deprecated_inline}}
   - : Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server's origin.
+- {{HTTPHeader("Critical-CH")}} {{experimental_inline}}
+  - : Servers use `Critical-CH` along with {{HttpHeader("Accept-CH")}} to specify that accepted client hints are also [critical client hints](/en-US/docs/Web/HTTP/Client_hints#critical_client_hints).
 
 The different categories of client hints are listed below.
 
@@ -288,10 +290,10 @@ _Learn more about CORS [here](/en-US/docs/Glossary/CORS)._
   - : Allows web developers to experiment with policies by monitoring, but not enforcing, their effects. These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP `POST` request to the specified URI.
 - {{HTTPHeader("Expect-CT")}}
   - : Allows sites to opt in to reporting and/or enforcement of Certificate Transparency requirements, which prevents the use of misissued certificates for that site from going unnoticed. When a site enables the Expect-CT header, they are requesting that Chrome check that any certificate for that site appears in public CT logs.
-- {{HTTPHeader("Feature-Policy")}}
-  - : Provides a mechanism to allow and deny the use of browser features in its own frame, and in iframes that it embeds.
 - {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
   - : Provides a mechanism to allow web applications to isolate their origins.
+- {{HTTPHeader("Permissions-Policy")}}
+  - : Provides a mechanism to allow and deny the use of browser features in a web site's own frame, and in {{htmlelement("iframe")}}s that it embeds.
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})
   - : Force communication using HTTPS instead of HTTP.
 - {{HTTPHeader("Upgrade-Insecure-Requests")}}

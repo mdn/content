@@ -107,7 +107,7 @@ h2 :not(span.foo) {
 
 - [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
 - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-- Related CSS pseudo-classes:
+- Other functional CSS pseudo-classes:
 
   - {{cssxref(":has", ":has()")}}
   - {{cssxref(":is", ":is()")}}

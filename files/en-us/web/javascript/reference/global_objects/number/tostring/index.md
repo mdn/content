@@ -1,6 +1,7 @@
 ---
 title: Number.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toString
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method

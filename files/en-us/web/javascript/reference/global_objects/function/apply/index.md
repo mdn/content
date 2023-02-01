@@ -1,6 +1,7 @@
 ---
 title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
+page-type: javascript-instance-method
 tags:
   - Function
   - JavaScript

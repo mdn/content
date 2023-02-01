@@ -1,6 +1,7 @@
 ---
 title: Cross-site scripting (XSS)
 slug: Glossary/Cross-site_scripting
+page-type: glossary-definition
 tags:
   - Cross Site Scripting
   - DOM

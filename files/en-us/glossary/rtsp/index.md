@@ -1,6 +1,7 @@
 ---
 title: "RTSP: Real-time streaming protocol"
 slug: Glossary/RTSP
+page-type: glossary-definition
 tags:
   - Real-time streaming protocol
   - Reference

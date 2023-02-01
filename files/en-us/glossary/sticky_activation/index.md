@@ -1,6 +1,7 @@
 ---
 title: Sticky activation
 slug: Glossary/Sticky_activation
+page-type: glossary-definition
 tags:
   - Sticky activation
   - Glossary

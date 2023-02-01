@@ -58,13 +58,7 @@ math {
 
 ### MathML
 
-The following MathML displays two versions of "x squared" using the Latin Modern Math font. Browser implementing the `math-shift` property should raise the superscripts using slightly different shifts.
-
-```html hidden
-<link
-  rel="stylesheet"
-  href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
-```
+The following MathML displays two versions of "x squared" using a font with an OpenType MATH table. Browser implementing the `math-shift` property should raise the superscripts using slightly different shifts.
 
 ```html
 <math style="font-size: 64pt;">

@@ -1,6 +1,7 @@
 ---
 title: '<colgroup>: The Table Column Group element'
 slug: Web/HTML/Element/colgroup
+page-type: html-element
 tags:
   - Element
   - HTML

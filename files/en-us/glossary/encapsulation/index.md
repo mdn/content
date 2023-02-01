@@ -1,6 +1,7 @@
 ---
 title: Encapsulation
 slug: Glossary/Encapsulation
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

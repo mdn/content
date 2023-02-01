@@ -1,6 +1,7 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
+page-type: javascript-statement
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -21,7 +22,11 @@ The **`let`** declaration declares a block-scoped local variable, optionally ini
 ## Syntax
 
 ```js-nolint
-let name1 [= value1] [, name2 [= value2]] [, ..., nameN [= valueN]
+let name1;
+let name1 = value1;
+let name1 = value1, name2 = value2;
+let name1, name2 = value2;
+let name1 = value1, name2, /* …, */ nameN = valueN;
 ```
 
 ### Parameters
@@ -120,7 +125,7 @@ switch(x) {
 }
 ```
 
-However, it's important to point out that a block nested inside a case clause will create a new block scoped lexical environment, which will not produce the redeclaration errors shown above.
+A block nested inside a case clause will create a new block scoped lexical environment, avoiding the redeclaration errors shown above.
 
 ```js
 let x = 1;
@@ -136,6 +141,8 @@ switch(x) {
   }
 }
 ```
+
+If you're experimenting in a REPL, such as the Firefox web console (**Tools** > **Web Developer** > **Web Console**), and you run two `let` declarations with the same name in two separate inputs, you may get the same re-declaration error. See further discussion of this issue in {{bug(1580891)}}. The Chrome console allows `let` re-declarations between different REPL inputs.
 
 ### Temporal dead zone (TDZ)
 

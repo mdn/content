@@ -1,6 +1,7 @@
 ---
 title: DataView.prototype.byteOffset
 slug: Web/JavaScript/Reference/Global_Objects/DataView/byteOffset
+page-type: javascript-instance-accessor-property
 tags:
   - DataView
   - JavaScript

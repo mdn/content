@@ -48,3 +48,4 @@ _This property is not part of any specification._
 ## See also
 
 - {{DOMxRef("Element.shadowRoot")}}
+- [`chrome.dom.openOrClosedShadowRoot`](https://developer.chrome.com/docs/extensions/reference/dom/#method-openOrClosedShadowRoot)

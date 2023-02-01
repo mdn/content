@@ -1,6 +1,7 @@
 ---
 title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
+page-type: javascript-class
 tags:
   - Class
   - Function
@@ -10,7 +11,7 @@ browser-compat: javascript.builtins.Function
 
 {{JSRef}}
 
-Every JavaScript function is actually a `Function` object. This can be seen with the code `(function () {}).constructor === Function`, which returns true.
+The **`Function`** object provides methods for [functions](/en-US/docs/Web/JavaScript/Reference/Functions). In JavaScript, every function is actually a `Function` object.
 
 ## Constructor
 

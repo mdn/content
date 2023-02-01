@@ -1,6 +1,7 @@
 ---
 title: Promise.prototype.catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript

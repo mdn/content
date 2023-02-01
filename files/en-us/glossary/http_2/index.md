@@ -1,6 +1,7 @@
 ---
 title: HTTP/2
 slug: Glossary/HTTP_2
+page-type: glossary-definition
 tags:
   - HTTP
   - Infrastructure

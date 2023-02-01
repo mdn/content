@@ -1,6 +1,7 @@
 ---
 title: '<shadow>: The Shadow Root element'
 slug: Web/HTML/Element/shadow
+page-type: html-element
 tags:
   - Deprecated
   - Element

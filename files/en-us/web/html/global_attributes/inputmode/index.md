@@ -1,6 +1,7 @@
 ---
 title: inputmode
 slug: Web/HTML/Global_attributes/inputmode
+page-type: html-attribute
 tags:
   - Attribute
   - Editing

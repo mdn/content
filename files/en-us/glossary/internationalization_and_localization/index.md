@@ -1,6 +1,7 @@
 ---
 title: Internationalization
 slug: Glossary/Internationalization_and_localization
+page-type: glossary-definition
 tags:
   - Internationalization
   - Reference

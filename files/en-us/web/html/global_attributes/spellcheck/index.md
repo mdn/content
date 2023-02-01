@@ -1,6 +1,7 @@
 ---
 title: spellcheck
 slug: Web/HTML/Global_attributes/spellcheck
+page-type: html-attribute
 tags:
   - Global attributes
   - HTML

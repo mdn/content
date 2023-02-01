@@ -1,6 +1,7 @@
 ---
 title: Intl.ListFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
+page-type: javascript-instance-method
 tags:
   - Internationalization
   - Intl

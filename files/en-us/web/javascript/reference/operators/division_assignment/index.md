@@ -1,6 +1,7 @@
 ---
 title: Division assignment (/=)
 slug: Web/JavaScript/Reference/Operators/Division_assignment
+page-type: javascript-operator
 tags:
   - Assignment operator
   - JavaScript

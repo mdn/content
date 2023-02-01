@@ -1,6 +1,7 @@
 ---
 title: Trailing commas
 slug: Web/JavaScript/Reference/Trailing_commas
+page-type: javascript-language-feature
 tags:
   - Comma
   - ECMAScript2017

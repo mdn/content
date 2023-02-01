@@ -17,7 +17,7 @@ The **`endTime`** property of the {{domxref("TextTrackCue")}} interface returns 
 
 ## Value
 
-An integer representing the end time, in seconds.
+A number representing the end time, in seconds.
 
 ## Examples
 

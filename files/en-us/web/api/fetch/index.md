@@ -102,7 +102,7 @@ fetch(resource, options)
         - `follow`: Automatically follow redirects. Unless otherwise stated the redirect mode is set to `follow`.
         - `error`: Abort with an error if a redirect occurs.
         - `manual`: Caller intends to process the response in another context.
-          See [WHATWG fetch standard](https://fetch.spec.whatwg.org/#requests) for more information.
+          See [WHATWG fetch standard](https://fetch.spec.whatwg.org/#concept-request-redirect-mode) for more information.
 
     - `referrer`
       - : A string specifying the referrer of the request. This can be a

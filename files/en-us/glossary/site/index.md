@@ -1,6 +1,7 @@
 ---
 title: Site
 slug: Glossary/Site
+page-type: glossary-definition
 tags:
   - Security
   - WebMechanics

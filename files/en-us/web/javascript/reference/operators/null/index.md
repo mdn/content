@@ -1,6 +1,7 @@
 ---
 title: 'null'
 slug: Web/JavaScript/Reference/Operators/null
+page-type: javascript-language-feature
 tags:
   - JavaScript
   - Language feature

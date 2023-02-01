@@ -1,6 +1,7 @@
 ---
 title: Exponentiation (**)
 slug: Web/JavaScript/Reference/Operators/Exponentiation
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature

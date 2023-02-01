@@ -1,6 +1,7 @@
 ---
 title: Ciphertext
 slug: Glossary/Ciphertext
+page-type: glossary-definition
 tags:
   - Cryptography
   - Privacy

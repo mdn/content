@@ -38,10 +38,10 @@ A few rules to follow in terms of markup within the syntax block:
 - Only specify the function and arguments. Example showing "corrected" examples below
 
   ```js
-  querySelector(selector)
+  querySelector(selector);
   //responseStr = element.querySelector(selector);
 
-  new IntersectionObserver(callback, options)
+  new IntersectionObserver(callback, options);
   // const observer = new IntersectionObserver(callback, options);
   ```
 
@@ -52,13 +52,13 @@ A few rules to follow in terms of markup within the syntax block:
 Start with a syntax block, like this (from the {{DOMxRef("IntersectionObserver.IntersectionObserver", "IntersectionObserver constructor")}} page):
 
 ```js
-new IntersectionObserver(callback, options)
+new IntersectionObserver(callback, options);
 ```
 
 or this (from {{DOMxRef("Document.hasStorageAccess")}}):
 
 ```js
-hasStorageAccess()
+hasStorageAccess();
 ```
 
 ##### Multiple lines/Optional parameters
@@ -68,30 +68,30 @@ Methods that can be used in many different ways should be expanded out into mult
 Each option should be on its own line, omitting both per-option comments and assignment. For example, {{jsxref("Array.prototype.slice()")}} has two optional parameters, and would be documented as shown below:
 
 ```js
-slice()
-slice(begin)
-slice(begin, end)
+slice();
+slice(begin);
+slice(begin, end);
 ```
 
 Similarly, for {{DOMxRef("CanvasRenderingContext2D.drawImage")}}:
 
 ```js
-drawImage(image, dx, dy)
-drawImage(image, dx, dy, dWidth, dHeight)
-drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
+drawImage(image, dx, dy);
+drawImage(image, dx, dy, dWidth, dHeight);
+drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
 ```
 
 Similarly for the {{jsxref("Date")}} constructor:
 
 ```js
-new Date()
-new Date(value)
-new Date(dateString)
-new Date(year, monthIndex)
-new Date(year, monthIndex, day)
-new Date(year, monthIndex, day, hours)
-new Date(year, monthIndex, day, hours, minutes)
-new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
+new Date();
+new Date(value);
+new Date(dateString);
+new Date(year, monthIndex);
+new Date(year, monthIndex, day);
+new Date(year, monthIndex, day, hours);
+new Date(year, monthIndex, day, hours, minutes);
+new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
 ```
 
 ##### Formal syntax
@@ -111,7 +111,7 @@ For specific cases where it is seen as beneficial, a separate **Formal syntax** 
 The aim is to make the syntax block as pure and unambiguous a definition of the feature's syntax as possible — don't include any irrelevant syntax. For example, you may see this syntax form used to describe promises in many places on the site:
 
 ```js
-caches.match(request, options).then(function(response) {
+caches.match(request, options).then(function (response) {
   // Do something with the response
 });
 ```
@@ -119,7 +119,7 @@ caches.match(request, options).then(function(response) {
 But this version is much more concise, and doesn't include the superfluous {{JSxRef("Promise.prototype.then()")}} method call:
 
 ```js
-match(request, options)
+match(request, options);
 ```
 
 ##### Callback syntax blocks
@@ -128,19 +128,33 @@ For methods with a callback function, the syntax for arrow functions, functions,
 
 ```js
 // Arrow function
-filter((currentValue) => { /* … */ } )
-filter((currentValue, index) => { /* … */ } )
-filter((currentValue, index, array) => { /* … */ } )
+filter((currentValue) => {
+  /* … */
+});
+filter((currentValue, index) => {
+  /* … */
+});
+filter((currentValue, index, array) => {
+  /* … */
+});
 
 // Callback function
-filter(callbackFn)
-filter(callbackFn, thisArg)
+filter(callbackFn);
+filter(callbackFn, thisArg);
 
 // Inline callback function
-filter(function(currentValue) { /* … */ })
-filter(function(currentValue, index) { /* … */ })
-filter(function(currentValue, index, array){ /* … */ })
-filter(function(currentValue, index, array) { /* … */ }, thisArg)
+filter(function (currentValue) {
+  /* … */
+});
+filter(function (currentValue, index) {
+  /* … */
+});
+filter(function (currentValue, index, array) {
+  /* … */
+});
+filter(function (currentValue, index, array) {
+  /* … */
+}, thisArg);
 ```
 
 ##### Syntax for arbitrary number of parameters
@@ -148,9 +162,9 @@ filter(function(currentValue, index, array) { /* … */ }, thisArg)
 For methods that accept an arbitrary number of parameters, the syntax block is written like this:
 
 ```js
-unshift(element0)
-unshift(element0, element1)
-unshift(element0, element1, /* … ,*/ elementN)
+unshift(element0);
+unshift(element0, element1);
+unshift(element0, element1, /* … ,*/ elementN);
 ```
 
 #### Parameters section

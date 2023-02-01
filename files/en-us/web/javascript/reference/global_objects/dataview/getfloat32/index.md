@@ -1,6 +1,7 @@
 ---
 title: DataView.prototype.getFloat32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat32
+page-type: javascript-instance-method
 tags:
   - DataView
   - JavaScript

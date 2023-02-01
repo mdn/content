@@ -1,6 +1,7 @@
 ---
 title: AggregateError
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError
+page-type: javascript-class
 tags:
   - AggregateError
   - Class
@@ -30,7 +31,7 @@ These properties are defined on `AggregateError.prototype` and shared by all `Ag
 - {{jsxref("Error/name", "AggregateError.prototype.name")}}
   - : Represents the name for the type of error. For `AggregateError.prototype.name`, the initial value is `"AggregateError"`.
 
-These properties are own properties of each `Error` instance.
+These properties are own properties of each `AggregateError` instance.
 
 - `errors`
   - : An array that essentially reflects the iterable with which the `AggregateError` was instantiated; for example, if the `AggregateError` was created using the {{JSxRef("AggregateError/AggregateError", "AggregateError()")}} constructor, an array produced from whatever iterable was passed to the constructor as its first argument.

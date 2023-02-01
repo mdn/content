@@ -29,7 +29,7 @@ automatically to pages when they are in the active tab.
 
 > **Note:** Browser support for the asynchronous clipboard APIs is still
 > in the process of being implemented. Be sure to check the [compatibility table](#browser_compatibility) as well as
-> {{SectionOnPage("/en-US/docs/Web/API/Clipboard", "Clipboard availability")}} for more
+> [Clipboard availability](/en-US/docs/Web/API/Clipboard#clipboard_availability) for more
 > information.
 
 > **Note:** For parity with Google Chrome, Firefox only allows this function to work with text, HTML, and PNG data.

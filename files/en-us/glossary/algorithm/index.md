@@ -1,6 +1,7 @@
 ---
 title: Algorithm
 slug: Glossary/Algorithm
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

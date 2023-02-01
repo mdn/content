@@ -141,7 +141,7 @@ function draw() {
 }
 ```
 
-If the `horizontalDegree` value is greater than our `degreeThreshold`, which is 30 in this case, then the ship will be moved left 5 pixels on every frame. If its value is lower than the threshold's negative value, then the ship is moved right. Up/down movement works in the same sort of way. The last value is `grabStrength`, which is a float between 0 and 1 — when reaching 1 (fist fully clenched), we show an alert for now (in a full game this could be replaced with the shooting logic.)
+If the `horizontalDegree` value is greater than our `degreeThreshold`, which is 30 in this case, then the ship will be moved left 5 pixels on every frame. If its value is lower than the threshold's negative value, then the ship is moved right. Up/down movement works in the same sort of way. The last value is `grabStrength`, which is a float between 0 and 1 — when reaching 1 (fist fully clenched), we show an alert for now (in a full game this could be replaced with the shooting logic).
 
 ![Leap Motion controller support in the game, with visible output for roll, pitch and strength.](controls-leapmotion.png)
 

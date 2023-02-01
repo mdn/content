@@ -39,7 +39,7 @@ None.
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the current {{domxref("Document")}} is not yet active, if the navigation was not intercepted using {{domxref("NavigateEvent.intercept", "intercept()")}}, or if the default scroll behavior has already ocurred.
+  - : Thrown if the current {{domxref("Document")}} is not yet active, if the navigation was not intercepted using {{domxref("NavigateEvent.intercept", "intercept()")}}, or if the default scroll behavior has already occurred.
 
 ## Examples
 
@@ -51,7 +51,7 @@ In this example of intercepting a navigation, the `handler()` function starts by
 navigation.addEventListener('navigate', (event) => {
   if (shouldNotIntercept(navigateEvent)) {
     return;
-  } 
+  }
   const url = new URL(event.destination.url);
 
   if (url.pathname.startsWith('/articles/')) {

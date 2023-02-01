@@ -1,6 +1,7 @@
 ---
 title: <input type="week">
 slug: Web/HTML/Element/input/week
+page-type: html-element
 tags:
   - Element
   - Forms
@@ -36,7 +37,7 @@ The Edge `week` control is somewhat more elaborate, opening up week and year pic
 
 ## Value
 
-A string representing the value of the week/year entered into the input. The format of the date and time value used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid week string")}}.
+A string representing the value of the week/year entered into the input. The format of the date and time value used by this input type is described in [Week strings](/en-US/docs/Web/HTML/Date_and_time_formats#week_strings).
 
 You can set a default value for the input by including a value inside the {{htmlattrxref("value", "input")}} attribute, like so:
 
@@ -381,6 +382,10 @@ function populateWeeks() {
         {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
         and {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
       </td>
+    </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
     </tr>
   </tbody>
 </table>

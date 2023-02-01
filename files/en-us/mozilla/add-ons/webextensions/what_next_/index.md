@@ -23,7 +23,7 @@ If you use minification or obfuscation tools to deliver your final code, you'll 
 
 ## Third-party libraries
 
-Third-party libraries are a great way to add complex features or functionality to your browser extensions quickly. When you submit an extension to the [AMO review process](#the_review_processv), the process will also consider any third-party libraries used. To streamline the review, make sure you always download third-party libraries from their official website or repository, and if the library is minified provide a link to the source code. Please note that third-party libraries cannot be modified in any way.
+Third-party libraries are a great way to add complex features or functionality to your browser extensions quickly. When you submit an extension to the [AMO review process](#the_review_process), the process will also consider any third-party libraries used. To streamline the review, make sure you always download third-party libraries from their official website or repository, and if the library is minified provide a link to the source code. Please note that third-party libraries cannot be modified in any way.
 
 [Learn more about submitting source code on Extension Workshop](https://extensionworkshop.com/documentation/publish/source-code-submission/)
 

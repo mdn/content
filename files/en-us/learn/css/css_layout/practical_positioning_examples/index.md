@@ -16,7 +16,7 @@ tags:
 
 {{LearnSidebar}}
 
-This article shows how to build some real world examples to illustrate what kinds of things you can do with positioning.
+This article shows how to build some real-world examples to illustrate what kinds of things you can do with positioning.
 
 <table>
   <tbody>

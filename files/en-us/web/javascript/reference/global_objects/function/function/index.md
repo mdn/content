@@ -1,6 +1,7 @@
 ---
 title: Function() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Function/Function
+page-type: javascript-constructor
 tags:
   - Constructor
   - Function

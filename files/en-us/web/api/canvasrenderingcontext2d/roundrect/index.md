@@ -51,6 +51,8 @@ roundRect(x, y, width, height, radii)
     Similarly, when `height` is negative, the rounded rect is flipped vertically.
     The specified radii may be scaled (reduced) if any of the edges are shorter than the combined radius of the vertices on either end.
 
+    The `radii` parameter can also be a {{domxref("DOMPoint")}} or {{domxref("DOMPointReadOnly")}} instance, or an object containing the same properties (`{x: 0, y: 0}`), or a list of such objects, or a list mixing numbers and such objects.
+
 ### Return value
 
 None ({{jsxref("undefined")}}).

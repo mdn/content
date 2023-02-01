@@ -1,6 +1,7 @@
 ---
 title: Origin
 slug: Glossary/Origin
+page-type: glossary-definition
 tags:
   - Security
   - WebMechanics

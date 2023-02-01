@@ -64,15 +64,18 @@ tabbed-custom-element::part(tab) {
 
 tabbed-custom-element::part(tab):hover {
   background-color: #0c0d19;
+  color: #ffffff;
   border-color: #0c0d33;
 }
 
 tabbed-custom-element::part(tab):hover:active {
   background-color: #0c0d33;
+  color: #ffffff;
 }
 
 tabbed-custom-element::part(tab):focus {
-  box-shadow: 0 0 0 1px #0a84ff inset, 0 0 0 1px #0a84ff,
+  box-shadow: 0 0 0 1px #0a84ff inset, 
+    0 0 0 1px #0a84ff,
     0 0 0 4px rgba(10, 132, 255, 0.3);
 }
 

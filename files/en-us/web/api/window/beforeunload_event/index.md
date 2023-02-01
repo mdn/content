@@ -69,7 +69,7 @@ In this example a page listens for changes to a [text `input`](/en-US/docs/Web/H
 ```js
 const beforeUnloadListener = (event) => {
   event.preventDefault();
-  return event.returnValue = "Are you sure you want to exit?";
+  return event.returnValue = '';
 };
 
 const nameInput = document.querySelector("#name");
@@ -101,14 +101,13 @@ by all browsers.
 When this event returns (or sets the `returnValue` property to) a value
 other than `null` or `undefined`, the user will be prompted to
 confirm the page unload. In older browsers, the return value of the event is displayed
-in this dialog. Starting with Firefox 44, Chrome 51, Opera 38, and Safari 9.1, a generic
-string not under the control of the webpage will be shown instead of the returned
+in this dialog. Since Firefox 44, Chrome 51, Opera 38, and Safari 9.1, a generic
+string not under the control of the webpage is shown instead of the returned
 string. For example:
 
 - Firefox displays the string, "This page is asking you to confirm that you want to
   leave - data you have entered may not be saved." (see {{bug("588292")}}).
-- Chrome displays the string, "Do you want to leave this site? Changes you made may
-  not be saved." (see [Chrome Platform Status](https://chromestatus.com/feature/5349061406228480)).
+- Chrome displays the string, "Do you want to leave the site? Changes you made may not be saved." (see [Chrome Platform Status](https://chromestatus.com/feature/5349061406228480)).
 
 Internet Explorer does not respect the `null` return value and will display
 this to users as "null" text. You have to use `undefined` to skip the prompt.

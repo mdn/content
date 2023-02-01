@@ -1,6 +1,7 @@
 ---
 title: Symbol.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript

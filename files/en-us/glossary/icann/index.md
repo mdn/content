@@ -1,6 +1,7 @@
 ---
 title: ICANN
 slug: Glossary/ICANN
+page-type: glossary-definition
 tags:
   - Infrastructure
 ---

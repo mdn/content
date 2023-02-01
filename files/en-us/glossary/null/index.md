@@ -1,6 +1,7 @@
 ---
 title: "Null"
 slug: Glossary/Null
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

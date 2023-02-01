@@ -1,6 +1,7 @@
 ---
 title: RDF
 slug: Glossary/RDF
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Infrastructure

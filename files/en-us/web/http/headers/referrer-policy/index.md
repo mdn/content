@@ -86,7 +86,7 @@ You can specify the `referrerpolicy` attribute on {{HTMLElement("a")}}, {{HTMLEl
 <a href="http://example.com" referrerpolicy="origin">…</a>
 ```
 
-Alternatively, you can set a `noreferrer` [link relation](/en-US/docs/Web/HTML/Link_types) on an `a`, `area`, or `link` elements:
+Alternatively, you can set a `noreferrer` [link relation](/en-US/docs/Web/HTML/Attributes/rel) on an `a`, `area`, or `link` elements:
 
 ```html
 <a href="http://example.com" rel="noreferrer">…</a>

@@ -77,7 +77,7 @@ This article provides information about the changes in Firefox 69 that will affe
 ### JavaScript
 
 - [Public class fields](/en-US/docs/Web/JavaScript/Reference/Classes#field_declarations) are enabled by default ({{bug(1555464)}}). See also [Class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) for more information.
-- The promise rejection events [`unhandledrejection`](/en-US/docs/Web/API/Window/unhandledrejection_event) and [`rejectionhandled`](/en-US/docs/Web/API/Window/rejectionhandled_event) are now enabled by default ({{bug(1362272)}}). To learn more about how these work, see {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}.
+- The promise rejection events [`unhandledrejection`](/en-US/docs/Web/API/Window/unhandledrejection_event) and [`rejectionhandled`](/en-US/docs/Web/API/Window/rejectionhandled_event) are now enabled by default ({{bug(1362272)}}). To learn more about how these work, see [Promise rejection events](/en-US/docs/Web/JavaScript/Guide/Using_promises#promise_rejection_events).
 
 ### HTTP
 

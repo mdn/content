@@ -1,6 +1,7 @@
 ---
 title: Intl.Locale.prototype.weekInfo
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/weekInfo
+page-type: javascript-instance-accessor-property
 tags:
   - Internationalization
   - Intl

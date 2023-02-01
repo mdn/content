@@ -1,6 +1,7 @@
 ---
 title: String.prototype.trim()
 slug: Web/JavaScript/Reference/Global_Objects/String/Trim
+page-type: javascript-instance-method
 tags:
   - ECMAScript 5
   - JavaScript

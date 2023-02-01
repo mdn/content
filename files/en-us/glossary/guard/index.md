@@ -1,6 +1,7 @@
 ---
 title: Guard
 slug: Glossary/Guard
+page-type: glossary-definition
 tags:
   - API
   - CodingScripting

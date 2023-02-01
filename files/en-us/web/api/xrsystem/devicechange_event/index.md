@@ -33,6 +33,8 @@ addEventListener('devicechange', (event) => { })
 ondevicechange = (event) => { }
 ```
 
+If the use of WebXR has been blocked by an `xr-spatial-tracking` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), `devicechange` events will not fire.
+
 ## Event type
 
 A generic {{DOMxRef("Event")}} with no added properties.

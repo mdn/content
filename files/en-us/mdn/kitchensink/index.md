@@ -50,7 +50,7 @@ Text that uses the `<kbd>` tag: <kbd>Shift</kbd>
 ### HTML
 
 ```html
-<pre>
+<pre></pre>
 ```
 
 ### JavaScript
@@ -275,8 +275,13 @@ if (5 < 30 && 55 > 20 && 5 < 20 && 55 > 10) {
 
 ```html
 <div id="cr-stage"></div>
-<p>Move the rectangle with arrow keys. Green means collision, blue means no collision.</p>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
+<p>
+  Move the rectangle with arrow keys. Green means collision, blue means no
+  collision.
+</p>
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
 ```
 
 ```js
@@ -322,16 +327,16 @@ The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macr
 
 {{AvailableInWorkers}}
 
-- {{ARIARole("button")}}
-- {{ARIARole("checkbox")}}
-- {{ARIARole("menuitem")}}
-- {{ARIARole("menuitemcheckbox")}}
-- {{ARIARole("menuitemradio")}}
-- {{ARIARole("option")}}
-- {{ARIARole("radio")}}
-- {{ARIARole("switch")}}
-- {{ARIARole("tab")}}
-- {{ARIARole("treeitem")}}
+- [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
+- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
+- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
+- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
+- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
+- [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
+- [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
+- [`switch`](/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role)
+- [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
+- [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role)
 
 <!---->
 
@@ -345,7 +350,7 @@ The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macr
 
 - [MDN Web Docs Glossary](/en-US/docs/Glossary):
 
-  - {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}
+  - {{Glossary("XMLHttpRequest", "XHR")}}
 
 - [AJAX](https://en.wikipedia.org/wiki/AJAX) on Wikipedia
 - [Ajax](/en-US/docs/Web/Guide/AJAX)

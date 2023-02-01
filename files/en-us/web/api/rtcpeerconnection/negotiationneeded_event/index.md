@@ -22,7 +22,7 @@ browser-compat: api.RTCPeerConnection.negotiationneeded_event
 A **`negotiationneeded`** event is sent to the {{domxref("RTCPeerConnection")}} when negotiation of the connection through the signaling channel is required.
 This occurs both during the initial setup of the connection as well as any time a change to the communication environment requires reconfiguring the connection.
 
-The `negotiationneeded` event is first dispatched to the {{domxref("RTCPeerConnection")}} when media is first added to the connection. This starts the process of {{Glossary("ICE")}} negotiation by instructing your code to begin exchanging ICE candidates through the signaling server. See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling", "Signaling transaction flow")}} for a description of the signaling process that begins with a `negotiationneeded` event.
+The `negotiationneeded` event is first dispatched to the {{domxref("RTCPeerConnection")}} when media is first added to the connection. This starts the process of {{Glossary("ICE")}} negotiation by instructing your code to begin exchanging ICE candidates through the signaling server. See [Signaling transaction flow](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling#signaling_transaction_flow) for a description of the signaling process that begins with a `negotiationneeded` event.
 
 This event is not cancelable and does not bubble.
 
@@ -76,7 +76,7 @@ pc.onnegotiationneeded = (ev) => {
 };
 ```
 
-For a more detailed example, see {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling", "Starting negotiation")}}.
+For a more detailed example, see [Starting negotiation](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling#starting_negotiation).
 
 ## Specifications
 

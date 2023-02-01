@@ -1,6 +1,7 @@
 ---
 title: Operator precedence
 slug: Web/JavaScript/Reference/Operators/Operator_Precedence
+page-type: guide
 tags:
   - Guide
   - JavaScript
@@ -28,7 +29,7 @@ The combination above has two possible interpretations:
 a OP1 (b OP2 c)
 ```
 
-Which one the language decides to adopt depends on the identity of `OP1` ad `OP2`.
+Which one the language decides to adopt depends on the identity of `OP1` and `OP2`.
 
 If `OP1` and `OP2` have different precedence levels (see the table below), the operator with the higher _precedence_ goes first and associativity does not matter. Observe how multiplication has higher precedence than addition and executed first, even though addition is written first in the code.
 
@@ -228,7 +229,7 @@ The following table lists operators in order from highest precedence (18) to low
 Several notes about the table:
 
 1. Not all syntax included here are "operators" in the strict sense. For example, spread `...` and arrow `=>` are typically not regarded as operators. However, we still included them to show how tightly they bind compared to other operators/expressions.
-2. The operand of unary operators (precedence 14; excluding prefix increment/decrement) cannot be an exponentiation `**` (precedence 13) without grouping, or there will be a {{jsxref("SyntaxError")}}. That means, although `-1 ** 2` is technically unambiguous, the language requires you to use `(-1) ** 2` instead.
+2. The left operand of an exponentiation `**` (precedence 13) cannot be one of the unary operators with precedence 14 without grouping, or there will be a {{jsxref("SyntaxError")}}. That means, although `-1 ** 2` is technically unambiguous, the language requires you to use `(-1) ** 2` instead.
 3. The operands of nullish coalescing `??` (precedence 3) cannot be a logical OR `||` (precedence 3) or logical AND `&&` (precedence 4). That means you have to write `(a ?? b) || c` or `a ?? (b || c)`, instead of `a ?? b || c`.
 4. Some operators have certain operands that require expressions narrower than those produced by higher-precedence operators. For example, the right-hand side of member access `.` (precedence 17) must be an identifier instead of a grouped expression. The left-hand side of arrow `=>` (precedence 2) must be an arguments list or a single identifier instead of some random expression.
 5. Some operators have certain operands that accept expressions wider than those produced by higher-precedence operators. For example, the bracket-enclosed expression of bracket notation `[ … ]` (precedence 17) can be any expression, even comma (precedence 1) joined ones. These operators act as if that operand is "automatically grouped". In this case we will omit the associativity.
@@ -255,30 +256,8 @@ Several notes about the table:
         {{jsxref("Operators/Property_Accessors", "Member Access", "#Dot_notation",
                 1)}}
       </td>
-      <td>left-to-right</td>
+      <td rowspan="2">left-to-right</td>
       <td><code>… . …</code></td>
-    </tr>
-    <tr>
-      <td>
-        {{jsxref("Operators/Property_Accessors", "Computed Member
-                Access","#Bracket_notation", 1)}}
-      </td>
-      <td>n/a</td>
-      <td><code>… [ … ]</code></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Operators/new","new")}} (with argument list)</td>
-      <td>n/a</td>
-      <td><code>new … ( … )</code></td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/en-US/docs/Web/JavaScript/Guide/Functions">Function Call</a>
-      </td>
-      <td>n/a</td>
-      <td>
-        <code>… ( … )</code>
-      </td>
     </tr>
     <tr>
       <td>
@@ -287,8 +266,27 @@ Several notes about the table:
           >Optional chaining</a
         >
       </td>
-      <td>left-to-right</td>
       <td><code>… ?. …</code></td>
+    </tr>
+    <tr>
+      <td>
+        {{jsxref("Operators/Property_Accessors", "Computed Member
+                Access","#Bracket_notation", 1)}}
+      </td>
+      <td rowspan="3">n/a</td>
+      <td><code>… [ … ]</code></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Operators/new","new")}} (with argument list)</td>
+      <td><code>new … ( … )</code></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/en-US/docs/Web/JavaScript/Guide/Functions">Function Call</a>
+      </td>
+      <td>
+        <code>… ( … )</code>
+      </td>
     </tr>
     <tr>
       <td>16</td>
@@ -585,7 +583,7 @@ Several notes about the table:
           >Logical OR (||)</a
         >
       </td>
-      <td>left-to-right</td>
+      <td rowspan="2">left-to-right</td>
       <td><code>… || …</code></td>
     </tr>
     <tr>
@@ -595,7 +593,6 @@ Several notes about the table:
           >Nullish coalescing operator (??)</a
         >
       </td>
-      <td>left-to-right</td>
       <td><code>… ?? …</code></td>
     </tr>
     <tr>
@@ -671,11 +668,12 @@ Several notes about the table:
           >Arrow (=>)</a
         >
       </td>
-      <td rowspan="4">n/a</td>
+      <td>right-to-left</td>
       <td><code>… => …</code></td>
     </tr>
     <tr>
       <td>{{jsxref("Operators/yield", "yield")}}</td>
+      <td rowspan="3">n/a</td>
       <td><code>yield …</code></td>
     </tr>
     <tr>

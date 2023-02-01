@@ -1,6 +1,7 @@
 ---
 title: AggregateError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError/AggregateError
+page-type: javascript-constructor
 tags:
   - Constructor
   - JavaScript

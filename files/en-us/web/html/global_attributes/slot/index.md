@@ -1,6 +1,7 @@
 ---
 title: slot
 slug: Web/HTML/Global_attributes/slot
+page-type: html-attribute
 tags:
   - Global attributes
   - HTML
