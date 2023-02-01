@@ -1,5 +1,5 @@
 ---
-title: '<form>: The Form element'
+title: "<form>: The Form element"
 slug: Web/HTML/Element/form
 page-type: html-element
 tags:
@@ -52,6 +52,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `on`: The browser may automatically complete entries.
 
 - {{htmlattrdef("name")}}
+
   - : The name of the form. The value must not be the empty string, and must be unique among the `form` elements in the forms collection that it is in, if any.
 
 - {{htmlattrdef("rel")}}
@@ -102,7 +103,8 @@ The following attributes control behavior during form submission.
 ```html
 <!-- Form which will send a GET request to the current URL -->
 <form method="get">
-  <label>Name:
+  <label
+    >Name:
     <input name="submitted-name" autocomplete="name" />
   </label>
   <button>Save</button>
@@ -110,7 +112,8 @@ The following attributes control behavior during form submission.
 
 <!-- Form which will send a POST request to the current URL -->
 <form method="post">
-  <label>Name:
+  <label
+    >Name:
     <input name="submitted-name" autocomplete="name" />
   </label>
   <button>Save</button>

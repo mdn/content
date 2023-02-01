@@ -1,5 +1,5 @@
 ---
-title: '<q>: The Inline Quotation element'
+title: "<q>: The Inline Quotation element"
 slug: Web/HTML/Element/q
 page-type: html-element
 tags:
@@ -35,7 +35,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ```html
 <p>
   According to Mozilla's website,
-  <q cite="https://www.mozilla.org/en-US/about/history/details/">Firefox 1.0 was released in 2004 and became a big success.</q>
+  <q cite="https://www.mozilla.org/en-US/about/history/details/"
+    >Firefox 1.0 was released in 2004 and became a big success.</q
+  >
 </p>
 ```
 

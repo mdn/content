@@ -1,5 +1,5 @@
 ---
-title: '<slot>: The Web Component Slot element'
+title: "<slot>: The Web Component Slot element"
 slug: Web/HTML/Element/slot
 page-type: html-element
 tags:
@@ -59,7 +59,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   </style>
   <details>
     <summary>
-      <code class="name">&lt;<slot name="element-name">NEED NAME</slot>&gt;</code>
+      <code class="name"
+        >&lt;<slot name="element-name">NEED NAME</slot>&gt;</code
+      >
       <span class="desc"><slot name="description">NEED DESCRIPTION</slot></span>
     </summary>
     <div class="attributes">

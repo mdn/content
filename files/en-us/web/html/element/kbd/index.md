@@ -1,5 +1,5 @@
 ---
-title: '<kbd>: The Keyboard Input element'
+title: "<kbd>: The Keyboard Input element"
 slug: Web/HTML/Element/kbd
 page-type: html-element
 tags:
@@ -67,7 +67,8 @@ First, let's look at what this looks like as just plain HTML.
 ```html
 <p>
   You can also create a new document using the keyboard shortcut
-  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd>.
+  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd
+  >.
 </p>
 ```
 
@@ -92,7 +93,7 @@ We can make more sense of this by adding some CSS:
 We add a new selector for nested `<kbd>` elements, `kbd>kbd`, which we can apply when rendering keyboard keys:
 
 ```css
-kbd>kbd {
+kbd > kbd {
   border-radius: 3px;
   padding: 1px 2px 0;
   border: 1px solid black;
@@ -106,7 +107,8 @@ Then we update the HTML to use this class on the keys in the output to be presen
 ```html
 <p>
   You can also create a new document by pressing
-  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd>.
+  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd
+  >.
 </p>
 ```
 
@@ -142,7 +144,9 @@ For example, you can explain how to choose the "New Document" option in the "Fil
 <p>
   To create a new file, choose the menu option
   <kbd
-    ><kbd><samp>File</samp></kbd>⇒<kbd><samp>New Document</samp></kbd></kbd>.
+    ><kbd><samp>File</samp></kbd
+    >⇒<kbd><samp>New Document</samp></kbd></kbd
+  >.
 </p>
 
 <p>

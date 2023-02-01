@@ -180,7 +180,7 @@ As with other textual entry controls, you can use the {{domxref("HTMLInputElemen
 ```js
 document.getElementById("selectAll").onclick = () => {
   document.getElementById("userPassword").select();
-}
+};
 ```
 
 #### Result
@@ -245,7 +245,7 @@ const current = document.getElementById("current");
 
 ssn.oninput = (event) => {
   current.textContent = ssn.value;
-}
+};
 ```
 
 #### Result

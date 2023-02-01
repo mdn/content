@@ -24,7 +24,9 @@ Existing links, such as ones with the `tel:` scheme, are unaffected.
 ## Syntax
 
 ```html
-<html x-ms-format-detection="none">…</html>
+<html x-ms-format-detection="none">
+  …
+</html>
 ```
 
 ## Value

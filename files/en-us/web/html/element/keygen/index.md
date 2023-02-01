@@ -97,8 +97,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 The element is written as follows:
 
 ```html
-<keygen name="name" challenge="challenge string" keytype="type"
-        keyparams="pqg-params">
+<keygen
+  name="name"
+  challenge="challenge string"
+  keytype="type"
+  keyparams="pqg-params"></keygen>
 ```
 
 The `keytype` parameter is used to specify what type of key is to be generated. Valid values are "`RSA`", which is the default, "`DSA`" and "`EC`". The `name` and `challenge` attributes are required in all cases. The `keytype` attribute is optional for RSA key generation and required for DSA and EC key generation. The `keyparams` attribute is required for DSA and EC key generation and ignored for RSA key generation. `PQG` is a synonym for `keyparams`. That is, you may specify `keyparams="pqg-params"` or `pqg="pqg-params"`.

@@ -1,5 +1,5 @@
 ---
-title: '<source>: The Media or Image Source element'
+title: "<source>: The Media or Image Source element"
 slug: Web/HTML/Element/source
 page-type: html-element
 tags:
@@ -171,10 +171,26 @@ A [media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) allows th
 
 ```html
 <picture>
-  <source srcset="landscape.png" media="(min-width: 1000px)" width="1000" height="400">
-  <source srcset="square.png" media="(min-width: 800px)" width="800" height="800">
-  <source srcset="portrait.png" media="(min-width: 600px)" width="600" height="800">
-  <img src="fallback.png" alt="Image used when the browser does not support the sources" width="500" height="400">
+  <source
+    srcset="landscape.png"
+    media="(min-width: 1000px)"
+    width="1000"
+    height="400" />
+  <source
+    srcset="square.png"
+    media="(min-width: 800px)"
+    width="800"
+    height="800" />
+  <source
+    srcset="portrait.png"
+    media="(min-width: 600px)"
+    width="600"
+    height="800" />
+  <img
+    src="fallback.png"
+    alt="Image used when the browser does not support the sources"
+    width="500"
+    height="400" />
 </picture>
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: '<dialog>: The Dialog element'
+title: "<dialog>: The Dialog element"
 slug: Web/HTML/Element/dialog
 page-type: html-element
 tags:
@@ -72,7 +72,8 @@ This example opens a modal dialog when the "Show the dialog" button is activated
 <dialog id="favDialog">
   <form method="dialog">
     <p>
-      <label>Favorite animal:
+      <label
+        >Favorite animal:
         <select>
           <option value="default">Choose…</option>
           <option>Brine shrimp</option>
@@ -96,22 +97,22 @@ This example opens a modal dialog when the "Show the dialog" button is activated
 #### JavaScript
 
 ```js
-const showButton = document.getElementById('showDialog');
-const favDialog = document.getElementById('favDialog');
-const outputBox = document.querySelector('output');
-const selectEl = favDialog.querySelector('select');
-const confirmBtn = favDialog.querySelector('#confirmBtn');
+const showButton = document.getElementById("showDialog");
+const favDialog = document.getElementById("favDialog");
+const outputBox = document.querySelector("output");
+const selectEl = favDialog.querySelector("select");
+const confirmBtn = favDialog.querySelector("#confirmBtn");
 
 // "Update details" button opens the <dialog> modally
-showButton.addEventListener('click', () => {
-    favDialog.showModal();
+showButton.addEventListener("click", () => {
+  favDialog.showModal();
 });
 // "Favorite animal" input sets the value of the submit button
-selectEl.addEventListener('change', (e) => {
+selectEl.addEventListener("change", (e) => {
   confirmBtn.value = selectEl.value;
 });
 // "Confirm" button of form triggers "close" on dialog because of [method="dialog"]
-favDialog.addEventListener('close', () => {
+favDialog.addEventListener("close", () => {
   outputBox.value = `ReturnValue: ${favDialog.returnValue}.`;
 });
 ```

@@ -1,5 +1,5 @@
 ---
-title: '<content>: The Shadow DOM Content Placeholder element'
+title: "<content>: The Shadow DOM Content Placeholder element"
 slug: Web/HTML/Element/content
 page-type: html-element
 tags:

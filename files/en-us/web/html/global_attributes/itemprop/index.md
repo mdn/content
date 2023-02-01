@@ -25,9 +25,11 @@ The example below shows the source for a set of elements marked up with `itempro
 ```html
 <div itemscope itemtype="http://schema.org/Movie">
   <h1 itemprop="name">Avatar</h1>
-  <span>Director:
+  <span
+    >Director:
     <span itemprop="director">James Cameron</span>
-    (born August 16, 1954)</span>
+    (born August 16, 1954)</span
+  >
   <span itemprop="genre">Science fiction</span>
   <a href="../movies/avatar-theatrical-trailer.html" itemprop="trailer">
     Trailer
@@ -193,8 +195,11 @@ An element introducing a property can also introduce multiple properties at once
 
 ```html
 <div itemscope>
-  <span itemprop="favorite-color
-    favorite-fruit">orange</span>
+  <span
+    itemprop="favorite-color
+    favorite-fruit"
+    >orange</span
+  >
 </div>
 ```
 

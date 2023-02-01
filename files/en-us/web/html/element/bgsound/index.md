@@ -1,5 +1,5 @@
 ---
-title: '<bgsound>: The Background Sound element'
+title: "<bgsound>: The Background Sound element"
 slug: Web/HTML/Element/bgsound
 page-type: html-element
 tags:
@@ -35,7 +35,7 @@ The **`<bgsound>`** [HTML](/en-US/docs/Web/HTML) element is deprecated. It sets 
 
 ```html
 <bgsound src="sound1.mid"></bgsound>
-  <bgsound src="sound2.au" loop="infinite"></bgsound>
+<bgsound src="sound2.au" loop="infinite"></bgsound>
 ```
 
 ## Usage notes

@@ -1,5 +1,5 @@
 ---
-title: '<caption>: The Table Caption element'
+title: "<caption>: The Table Caption element"
 slug: Web/HTML/Element/caption
 page-type: html-element
 tags:

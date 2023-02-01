@@ -1,5 +1,5 @@
 ---
-title: '<i>: The Idiomatic Text element'
+title: "<i>: The Idiomatic Text element"
 slug: Web/HTML/Element/i
 page-type: html-element
 tags:
@@ -48,7 +48,10 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 This example demonstrates using the `<i>` element to mark text that is in another language.
 
 ```html
-<p>The Latin phrase <i lang="la">Veni, vidi, vici</i> is often mentioned in music, art, and literature.</p>
+<p>
+  The Latin phrase <i lang="la">Veni, vidi, vici</i> is often mentioned in
+  music, art, and literature.
+</p>
 ```
 
 ### Result

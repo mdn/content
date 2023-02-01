@@ -1,5 +1,5 @@
 ---
-title: '<progress>: The Progress Indicator element'
+title: "<progress>: The Progress Indicator element"
 slug: Web/HTML/Element/progress
 page-type: html-element
 tags:
@@ -108,7 +108,9 @@ In most cases you should provide an accessible label when using `<progress>`. Wh
 #### Example
 
 ```html
-<label>Uploading Document: <progress value="70" max="100">70 %</progress></label>
+<label
+  >Uploading Document: <progress value="70" max="100">70 %</progress></label
+>
 
 <!-- OR -->
 

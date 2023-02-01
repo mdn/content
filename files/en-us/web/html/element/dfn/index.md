@@ -1,5 +1,5 @@
 ---
-title: '<dfn>: The Definition element'
+title: "<dfn>: The Definition element"
 slug: Web/HTML/Element/dfn
 page-type: html-element
 tags:
@@ -58,10 +58,12 @@ This example uses a plain `<dfn>` element to identify the location of a term wit
 #### HTML
 
 ```html
-<p>The <strong>HTML Definition element</strong>
-(<strong><dfn>&lt;dfn&gt;</dfn></strong>) is used to indicate the
-term being defined within the context of a definition phrase or
-sentence.</p>
+<p>
+  The <strong>HTML Definition element</strong> (<strong
+    ><dfn>&lt;dfn&gt;</dfn></strong
+  >) is used to indicate the term being defined within the context of a
+  definition phrase or sentence.
+</p>
 ```
 
 Since the `<dfn>` element has no `title`, the text contents of the `<dfn>` element itself are used as the term being defined.
@@ -79,10 +81,12 @@ To add links to the definitions, you create the link the same way you always do,
 #### HTML
 
 ```html
-<p>The <strong>HTML Definition element</strong>
-(<strong><dfn id="definition-dfn">&lt;dfn&gt;</dfn></strong>) is
-used to indicate the term being defined within the context of a
-definition phrase or sentence.</p>
+<p>
+  The <strong>HTML Definition element</strong> (<strong
+    ><dfn id="definition-dfn">&lt;dfn&gt;</dfn></strong
+  >) is used to indicate the term being defined within the context of a
+  definition phrase or sentence.
+</p>
 
 <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Graece donan, Latine
@@ -101,9 +105,11 @@ definition phrase or sentence.</p>
   nihil remittunt. Quid enim possumus hoc agere divinius?
 </p>
 
-<p>Because of all of that, we decided to use the
-<code><a href="#definition-dfn">&lt;dfn&gt;</a></code> element for
-this project.</p>
+<p>
+  Because of all of that, we decided to use the
+  <code><a href="#definition-dfn">&lt;dfn&gt;</a></code> element for this
+  project.
+</p>
 ```
 
 Here we see the definition — now with an {{htmlattrxref("id")}} attribute, `"definition-dfn"`, which can be used as the target of a link. Later on, a link is created using `<a>` with the {{htmlattrxref("href", "a")}} attribute set to `"#definition-dfn"` to set up the link back to the definition.

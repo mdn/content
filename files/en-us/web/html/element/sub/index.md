@@ -1,5 +1,5 @@
 ---
-title: '<sub>: The Subscript element'
+title: "<sub>: The Subscript element"
 slug: Web/HTML/Element/sub
 page-type: html-element
 tags:
@@ -80,7 +80,8 @@ In mathematics, families of variables related to the same concept (such as dista
 ```html
 <p>
   The horizontal coordinates' positions along the X-axis are represented as
-  <var>x<sub>1</sub></var> … <var>x<sub>n</sub></var>.
+  <var>x<sub>1</sub></var> … <var>x<sub>n</sub></var
+  >.
 </p>
 ```
 
