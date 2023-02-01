@@ -34,7 +34,7 @@ An object containing the following properties:
 - `delay`
   - : The `number` of milliseconds of delay before the start of the effect.
 
-    (Corresponds to {{cssxref("animation-delay")}}.)
+    (See also {{cssxref("animation-delay")}}.)
 - `endDelay`
   - : The `number` of milliseconds of delay after the end of the effect.
 
@@ -49,7 +49,7 @@ An object containing the following properties:
     The meaning of `"auto"` may differ depending on the type of effect; for
     {{domxref("KeyframeEffect")}}, `"auto"` is the same as `"none"`.
 
-    (Corresponds to {{cssxref("animation-fill-mode")}}.)
+    (See also {{cssxref("animation-fill-mode")}}.)
 - `iterationStart`
   - : A `number` indicating at what point in the iteration the effect starts. For example, an effect with
     an `iterationStart` of 0.5 and 2 `iterations` would start halfway through its first iteration
@@ -58,7 +58,7 @@ An object containing the following properties:
   - : The `number` of times the effect will repeat. A value of {{jsxref("Infinity")}} indicates that
     the effect repeats indefinitely.
 
-    (Corresponds to {{cssxref("animation-iteration-count")}}.)
+    (See also {{cssxref("animation-iteration-count")}}.)
 - `duration`
   - : A `number` of milliseconds or the `string` `"auto"`.
 
@@ -66,7 +66,7 @@ An object containing the following properties:
 
     The meaning of `"auto"` may differ depending on the type of effect; for {{domxref("KeyframeEffect")}}, `"auto"` is the same as `0`.
 
-    (Corresponds to {{cssxref("animation-duration")}}.)
+    (See also {{cssxref("animation-duration")}}.)
 - `direction`
   - : `"normal"`, `"reverse"`, `"alternate"`, or `"alternate-reverse"`.
 
@@ -74,13 +74,11 @@ An object containing the following properties:
     after each iteration (`"alternate"`), or runs backwards and switches direction after each iteration
     (`"alternate-reverse"`).
 
-    (Corresponds to {{cssxref("animation-direction")}}.)
+    (See also {{cssxref("animation-direction")}}.)
 - `easing`
   - : A `string` representing an {{cssxref("easing-function")}} describing the rate of change of the effect over time.
 
-    (Corresponds to {{cssxref("animation-timing-function")}}.)
-
-Several of these properties have corresponding [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) properties.
+    (See also {{cssxref("animation-timing-function")}}.)
 
 ## Specifications
 
