@@ -30,14 +30,14 @@ new DocumentTimeline(options)
   - : An object specifying options for the new timeline. The following properties are available:
     - `originTime`
       - : A number that specifies the zero time for the {{domxref("DocumentTimeline")}}
-        as a number of milliseconds relative to the {{domxref("Performance.timeOrigin","time origin")}} of the current {{domxref("Document")}}.
+        as a number of milliseconds relative to {{domxref("Performance.timeOrigin")}}.
         Defaults to `0`.
 
 ## Examples
 
 ### Origin time
 
-Since {{domxref("Document.timeline")}}'s zero time is the {{domxref("Performance.timeOrigin","time origin")}}, a {{domxref("DocumentTimeline")}} with `originTime` `0` will show the same time as it.
+Since {{domxref("Document.timeline")}}'s zero time is {{domxref("Performance.timeOrigin")}}, a {{domxref("DocumentTimeline")}} with `originTime` `0` will show the same time as it.
 
 ```js
 const timeline = new DocumentTimeline();

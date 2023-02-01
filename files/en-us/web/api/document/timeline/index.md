@@ -23,7 +23,7 @@ The `timeline` readonly property of the {{domxref("Document")}} interface repres
 
 This timeline is unique to each `document` and persists for the lifetime of the `document` including calls to {{domxref("Document.open()")}}.
 
-This timeline expresses the time in milliseconds since the document's {{domxref("Performance.timeOrigin","time origin")}}.
+This timeline expresses the time in milliseconds since {{domxref("Performance.timeOrigin")}}.
 Prior to the time origin, the timeline is inactive, and its {{domxref("AnimationTimeline.currentTime","currentTime")}} is `null`.
 
 > **Note:** A document timeline that is associated with a non-active document (a {{domxref("Document")}} not associated with a {{domxref("Window")}}, {{htmlelement("iframe")}}, or {{htmlelement("frame")}}) is also considered to be inactive.
