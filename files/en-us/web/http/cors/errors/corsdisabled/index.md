@@ -1,5 +1,5 @@
 ---
-title: 'Reason: CORS disabled'
+title: "Reason: CORS disabled"
 slug: Web/HTTP/CORS/Errors/CORSDisabled
 tags:
   - Authentication

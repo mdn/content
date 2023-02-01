@@ -1,5 +1,5 @@
 ---
-title: 'CSP: sandbox'
+title: "CSP: sandbox"
 slug: Web/HTTP/Headers/Content-Security-Policy/sandbox
 tags:
   - CSP
