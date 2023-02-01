@@ -193,7 +193,10 @@ This will produce the following HTML:
 
 ```html
 <div class="notecard note">
-  <p><strong>Note:</strong> This is how you write a note.</p>
+  <p>
+    <strong>Note:</strong>
+    This is how you write a note.
+  </p>
   <p>It can have multiple lines.</p>
 </div>
 ```
@@ -216,7 +219,10 @@ This will produce the following HTML:
 
 ```html
 <div class="notecard warning">
-  <p><strong>Warning:</strong> This is how you write a warning.</p>
+  <p>
+    <strong>Warning:</strong>
+    This is how you write a warning.
+  </p>
   <p>It can have multiple paragraphs.</p>
 </div>
 ```
@@ -264,7 +270,10 @@ And this will produce:
 
 ```html
 <div class="notecard warning">
-  <p><strong>Warnung:</strong> So schreibt man eine Warnung.</p>
+  <p>
+    <strong>Warnung:</strong>
+    So schreibt man eine Warnung.
+  </p>
 </div>
 ```
 
@@ -288,7 +297,10 @@ This will produce the following HTML:
 
 ```html
 <div class="notecard note">
-  <p><strong>Note:</strong> This is how you write a note.</p>
+  <p>
+    <strong>Note:</strong>
+    This is how you write a note.
+  </p>
   <p>It can contain code blocks.</p>
   <pre class="brush: js">const s = "I'm in a code block";</pre>
   <p>Like that.</p>

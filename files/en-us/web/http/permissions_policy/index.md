@@ -187,8 +187,8 @@ It is worth giving the `src` value a special mention. We mentioned above that us
 
 ```html
 <iframe src="https://example.com" allow="geolocation 'src'">
-  <iframe src="https://example.com" allow="geolocation"></iframe
-></iframe>
+  <iframe src="https://example.com" allow="geolocation"></iframe>
+</iframe>
 ```
 
 > **Note:** As you'll have noticed, the syntax for `<iframe>` policies is a bit different to the syntax for `Permissions-Policy` headers. The former still uses the same syntax as the older Feature Policy specification, which was superseded by Permissions Policy.

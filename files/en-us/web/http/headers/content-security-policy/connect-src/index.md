@@ -90,8 +90,8 @@ The following connections are blocked and won't load:
     navigator.sendBeacon("https://not-example.com/", {
       /* … */
     });
-  </script></a
->
+  </script>
+</a>
 ```
 
 ## Specifications

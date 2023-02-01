@@ -93,7 +93,10 @@ This represents an HTML resource whose contents are:
 
 ```html
 lots of text…
-<p><a name="bottom">bottom</a>?arg=val</p>
+<p>
+  <a name="bottom">bottom</a>
+  ?arg=val
+</p>
 ```
 
 - Syntax

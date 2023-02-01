@@ -250,8 +250,8 @@ It is worth giving the `src` value a special mention. We mentioned above that us
 
 ```html
 <iframe src="https://example.com" allow="geolocation 'src'">
-  <iframe src="https://example.com" allow="geolocation"></iframe
-></iframe>
+  <iframe src="https://example.com" allow="geolocation"></iframe>
+</iframe>
 ```
 
 ### Denying access to powerful features
