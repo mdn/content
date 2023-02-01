@@ -2,3 +2,4 @@ build/
 
 # Ignore markdown files till full pass is made on each folder
 *.md
+!files/en-us/glossary/**/*.md
