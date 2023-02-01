@@ -198,7 +198,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
    <link href="payment-form.css" rel="stylesheet" />
    ```
 
-3. Next, create your form by adding the outer {{htmlelement("form")}} opening tag:
+3. Next, create your form by adding a {{htmlelement("form")}} element:
 
    ```html
    <form></form>
