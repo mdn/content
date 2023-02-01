@@ -44,4 +44,6 @@ By participating in and contributing to our projects and discussions, you acknow
 
 ## Get in touch
 
-You can communicate with the MDN Web Docs team and community using the [communication channels](https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels).
+You can communicate with the MDN Web Docs team and community using the [communication channels][].
+
+[communication channels]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
