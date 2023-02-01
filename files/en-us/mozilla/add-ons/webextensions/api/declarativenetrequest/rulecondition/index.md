@@ -54,7 +54,7 @@ Values of this type are objects. They contain these properties:
   - : A `boolean`. Whether the [`urlFilter`](#urlfilter) or [`regexFilter`](#regexfilter) (whichever is specified) is case sensitive. Default is true in (older) versions of Chrome and Safari, and false in Firefox. There is consensus on defaulting to `true` across browsers in [WECG issue 269](https://github.com/w3c/webextensions/issues/269).
 - `regexFilter` {{optional_inline}}
   - : A `string`. Regular expression to match against the network request URL. Note that:
-    - The supported format is not stable and varies across browsers, see ["Regular expressions in DNR API (regexFilter)" in WECG issue 344 ](https://github.com/w3c/webextensions/issues/344) for details.
+    - The supported format is not stable and varies across browsers, see ["Regular expressions in DNR API (regexFilter)" in WECG issue 344](https://github.com/w3c/webextensions/issues/344) for details.
     - Only one of [`urlFilter`](#urlfilter) or [`regexFilter`](#regexfilter) can be specified.
     - The [`regexFilter`](#regexfilter) must be composed of only ASCII characters. This is matched against a URL where the host is encoded in the [punycode](https://en.wikipedia.org/wiki/Punycode) format (in case of internationalized domains) and any other non-ascii characters are URL encoded in utf-8.
 - `requestDomains` {{optional_inline}}
