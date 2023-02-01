@@ -82,7 +82,7 @@ We've already seen the {{htmlelement("title")}} element in action — this can b
 
 2. Now open the file in your browser. You should see something like this:
 
-   ![A simple web page with the title set to title element, and the h1 set to h1 element.](title-example.png)
+   ![A web page with 'title' text in the browser's page tab and 'h1' text as a page heading in the document body.](title-example.png)
 
    It should now be completely obvious where the `<h1>` content appears and where the `<title>` content appears!
 
