@@ -65,7 +65,7 @@ This example uses {{domxref("EventTarget.addEventListener()")}} to listen for fo
 
 ```js
 function logSubmit(event) {
-  log.textContent = `Form Submitted! Time stamp: ${event.timeStamp}`;
+  log.textContent = `Form Submitted! Timestamp: ${event.timeStamp}`;
   event.preventDefault();
 }
 

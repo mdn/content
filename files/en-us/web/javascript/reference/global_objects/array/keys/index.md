@@ -1,6 +1,7 @@
 ---
 title: Array.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
+page-type: javascript-instance-method
 tags:
   - Array
   - ECMAScript 2015
@@ -43,11 +44,11 @@ The `keys()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Obj
 Unlike {{jsxref("Object.keys()")}}, which only includes keys that actually exist in the array, the `keys()` iterator doesn't ignore holes representing missing properties.
 
 ```js
-const arr = ['a', , 'c'];
+const arr = ["a", , "c"];
 const sparseKeys = Object.keys(arr);
 const denseKeys = [...arr.keys()];
 console.log(sparseKeys); // ['0', '2']
-console.log(denseKeys);  // [0, 1, 2]
+console.log(denseKeys); // [0, 1, 2]
 ```
 
 ### Calling keys() on non-array objects

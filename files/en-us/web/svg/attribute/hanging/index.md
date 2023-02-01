@@ -1,6 +1,7 @@
 ---
 title: hanging
 slug: Web/SVG/Attribute/hanging
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG

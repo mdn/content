@@ -6,6 +6,8 @@ tags:
   - Security
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 Starting with [Firefox 23](/en-US/docs/Mozilla/Firefox/Releases/23), Firefox blocks [active mixed content](/en-US/docs/Web/Security/Mixed_content#mixed_active_content) by default. This follows a practice adopted by Internet Explorer ([since version 9](https://all-markup-news.com/internet-explorer-9-security-part-4-protecting-consumers-from-malicious-mixed-content/)) and [Chrome](https://security.googleblog.com/2011/06/trying-to-end-mixed-scripting.html?m=1).
 
 This page explains what you should be aware of as a web developer.
@@ -27,5 +29,3 @@ The best strategy to avoid mixed content blocking is to serve all the content as
 However, in some cases, the path may just be incorrect to the media in question. There are online as well as offline tools (depending on your operating system) such as [linkchecker](https://linkchecker.github.io/linkchecker/) to help resolve this.
 
 **For other domains,** use the site's HTTPS version if available. If HTTPS is not available, you can try contacting the domain and asking them if they can make the content available via HTTPS.
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

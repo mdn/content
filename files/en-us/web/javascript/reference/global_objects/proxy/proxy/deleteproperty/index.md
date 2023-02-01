@@ -1,6 +1,7 @@
 ---
 title: handler.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -11,8 +12,7 @@ browser-compat: javascript.builtins.Proxy.handler.deleteProperty
 
 {{JSRef}}
 
-The **`handler.deleteProperty()`** method is a trap for the
-{{jsxref("Operators/delete", "delete")}} operator.
+The **`handler.deleteProperty()`** method is a trap for the `[[Delete]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as the {{jsxref("Operators/delete", "delete")}} operator.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-deleteproperty.html", "taller")}}
 
@@ -42,21 +42,19 @@ whether or not the property has been successfully deleted.
 
 ## Description
 
-The **`handler.deleteProperty()`** method is a trap for the
-{{jsxref("Operators/delete", "delete")}} operator.
-
 ### Interceptions
 
 This trap can intercept these operations:
 
-- Property deletion: `delete proxy[foo]` and
+- The [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator: `delete proxy[foo]` and
   `delete proxy.foo`
 - {{jsxref("Reflect.deleteProperty()")}}
 
+Or any other operation that invokes the `[[Delete]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
+
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a
-{{jsxref("TypeError")}}:
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
 - A property cannot be deleted, if it exists as a non-configurable own property of the
   target object.

@@ -9,6 +9,8 @@ tags:
   - Navigation
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}
+
 Here we go over how to set up an image map, and some downsides to consider first.
 
 <table>
@@ -81,7 +83,7 @@ Inside the `<map>` element, we need {{htmlelement('area')}} elements. An `<area>
 
   {{htmlattrxref('coords','area')}}
 
-  - : `shape` takes one of four values: `circle`, `rect`, `poly`, and `default`. (A `default` `<area>` occupies the entire image, minus any other hotspots you've defined.) The shape you choose determines the coordinate information you'll need to provide in `coords`.
+  - : `shape` takes one of four values: `circle`, `rect`, `poly`, and `default`. (An `<area>` whose `shape` is `default` occupies the entire image, minus any other hotspots you've defined.) The shape you choose determines the coordinate information you'll need to provide in `coords`.
 
     - For a circle, provide the center's x and y coordinates, followed by the length of the radius.
     - For a rectangle, provide the x/y coordinates of the upper-left and bottom-right corners.

@@ -25,7 +25,7 @@ This overview of HTML Drag and Drop includes a description of the interfaces, ba
 
 ## Drag Events
 
-HTML drag-and-drop uses the {{domxref("Event","DOM event model")}} and _{{domxref("DragEvent","drag events")}}_ inherited from {{domxref("MouseEvent","mouse events")}}. A typical _drag operation_ begins when a user selects a _draggable_ element, drags the element to a _droppable_ element, and then releases the dragged element.
+HTML drag-and-drop uses the {{domxref("Event","DOM event model")}} and _{{domxref("DragEvent","drag events")}}_ inherited from {{domxref("MouseEvent","mouse events")}}. A typical _drag operation_ begins when a user selects a _draggable_ element, continues when the user drags the element to a _droppable_ element, and then ends when the user releases the dragged element.
 
 During drag operations, several event types are fired, and some events might fire many times, such as the {{domxref('HTMLElement/drag_event', 'drag')}} and {{domxref('HTMLElement/dragover_event', 'dragover')}} events.
 
@@ -60,10 +60,6 @@ The {{domxref("DataTransferItemList")}} object is a list of {{domxref("DataTrans
 A key difference between the {{domxref("DataTransfer")}} and {{domxref("DataTransferItem")}} interfaces is that the former uses the synchronous {{domxref("DataTransfer.getData","getData()")}} method to access a drag item's data, but the latter instead uses the asynchronous {{domxref("DataTransferItem.getAsString","getAsString()")}} method.
 
 > **Note:** {{domxref("DragEvent")}} and {{domxref("DataTransfer")}} are broadly supported on desktop browsers. However, the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces have limited browser support. See [Interoperability](#interoperability) for more information about drag-and-drop interoperability.
-
-### Gecko-specific interfaces
-
-Mozilla and Firefox support some features not in the standard drag-and-drop model. These are _convenience functions_ to help with dragging multiple items or non-string data (such as files). For more information, see [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items). Additionally, see the {{domxref("DataTransfer")}} reference page for all of the [Gecko-specific properties](/en-US/docs/Web/API/DataTransfer#gecko_properties) and [Gecko-specific methods](/en-US/docs/Web/API/DataTransfer#gecko_methods).
 
 ## The basics
 
@@ -262,7 +258,6 @@ As can be seen in the [DataTransferItem interface's Browser Compatibility table]
 ## See also
 
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
 - [HTML Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
 - [Drag and Drop interoperability data from CanIUse](https://caniuse.com/#search=draganddrop)

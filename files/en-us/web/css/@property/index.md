@@ -71,11 +71,7 @@ window.CSS.registerProperty({
 
 ## Formal syntax
 
-```
-@property <custom-property-name> {
-  <declaration-list>
-}
-```
+{{csssyntax}}
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: 'null'
 slug: Web/JavaScript/Reference/Operators/null
+page-type: javascript-language-feature
 tags:
   - JavaScript
   - Language feature
@@ -11,7 +12,7 @@ browser-compat: javascript.operators.null
 
 {{jsSidebar("Operators")}}
 
-The value `null` represents the intentional absence of any object value. It
+The **`null`** value represents the intentional absence of any object value. It
 is one of JavaScript's [primitive values](/en-US/docs/Glossary/Primitive) and
 is treated as [falsy](/en-US/docs/Glossary/Falsy) for boolean operations.
 

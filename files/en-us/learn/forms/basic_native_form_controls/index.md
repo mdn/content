@@ -15,7 +15,7 @@ tags:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
 
-In the [previous article](/en-US/docs/Learn/Forms/How_to_structure_a_web_form), we marked up a functional web form example, introducing some form controls and common structural elements, and focusing on accessibility best practices. Next we will look at the functionality of the different form controls, or widgets, in detail — studying all the different options available to collect different types of data. In this particular article we will look at the original set of form controls, available in all browsers since the early days of the web.
+In the [previous article](/en-US/docs/Learn/Forms/How_to_structure_a_web_form), we marked up a functional web form example, introducing some form controls and common structural elements, and focusing on accessibility best practices. Next, we will look at the functionality of the different form controls, or widgets, in detail — studying all the different options available to collect different types of data. In this particular article, we will look at the original set of form controls, available in all browsers since the early days of the web.
 
 <table>
   <tbody>
@@ -55,7 +55,7 @@ Text {{htmlelement("input")}} fields are the most basic form widgets. They are a
 All basic text controls share some common behaviors:
 
 - They can be marked as {{htmlattrxref("readonly","input")}} (the user cannot modify the input value but it is still sent with the rest of the form data) or {{htmlattrxref("disabled","input")}} (the input value can't be modified and is never sent with the rest of the form data).
-- They can have a {{htmlattrxref("placeholder","input")}}; this is text that appears inside the text input box that should be used to briefly describe the purpose of the box.
+- They can have a {{htmlattrxref("placeholder","input")}}; this is the text that appears inside the text input box that should be used to briefly describe the purpose of the box.
 - They can be constrained in [`size`](/en-US/docs/Web/HTML/Attributes/size) (the physical size of the box) and [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength) (the maximum number of characters that can be entered into the box).
 - They can benefit from spell checking (using the [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) attribute), if the browser supports it.
 
@@ -109,13 +109,13 @@ Other text input types, like {{HTMLElement("input/search", "search")}}, {{HTMLEl
 
 ## Checkable items: checkboxes and radio buttons
 
-Checkable items are controls whose state you can change by clicking on them or their associated labels. There are two kinds of checkable item: the checkbox and the radio button. Both use the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute to indicate whether the widget is checked by default or not.
+Checkable items are controls whose state you can change by clicking on them or their associated labels. There are two kinds of checkable items: the checkbox and the radio button. Both use the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute to indicate whether the widget is checked by default or not.
 
 It's worth noting that these widgets do not behave exactly like other form widgets. For most form widgets, once the form is submitted all widgets that have a [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute are sent, even if no value has been filled out. In the case of checkable items, their values are sent only if they are checked. If they are not checked, nothing is sent, not even their name. If they are checked but have no value, the name is sent with a value of _on._
 
 > **Note:** You can find the examples from this section on GitHub as [checkable-items.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/checkable-items.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)).
 
-For maximum usability/accessibility, you are advised to surround each list of related items in a {{htmlelement("fieldset")}}, with a {{htmlelement("legend")}} providing an overall description of the list. Each individual pair of {{htmlelement("label")}}/{{htmlelement("input")}} elements should be contained in its own list item (or similar). The associated {{htmlelement('label')}} is generally placed immediately after the radio button or checkbox, with the instructions for the group of radio button or checkboxes generally being the content of the {{htmlelement("legend")}}. See the examples linked above for structural examples.
+For maximum usability/accessibility, you are advised to surround each list of related items in a {{htmlelement("fieldset")}}, with a {{htmlelement("legend")}} providing an overall description of the list. Each individual pair of {{htmlelement("label")}}/{{htmlelement("input")}} elements should be contained in its own list item (or similar). The associated {{htmlelement('label')}} is generally placed immediately before or after the radio button or checkbox, with the instructions for the group of radio button or checkboxes generally being the content of the {{htmlelement("legend")}}. See the examples linked above for structural examples.
 
 ### Checkbox
 
@@ -156,7 +156,7 @@ The following screenshots show default, focused and disabled checkboxes in Firef
 
 ![Default, focused and disabled Checkboxes in Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10](checkboxes.png)
 
-> **Note:** Any checkboxes and radio buttons with the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute on load match the {{cssxref(':default')}} pseudo class, even if they are no longer checked. Any that are currently checked match the {{cssxref(':checked')}} pseudo class.
+> **Note:** Any checkboxes and radio buttons with the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute on load match the {{cssxref(':default')}} pseudo-class, even if they are no longer checked. Any that are currently checked match the {{cssxref(':checked')}} pseudo-class.
 
 Due to the on-off nature of checkboxes, the checkbox is considered a toggle button, with many developers and designers expanding on the default checkbox styling to create buttons that look like toggle switches. You can [see an example in action here](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/) (also see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/toggle-switch-example/index.html)).
 
@@ -415,7 +415,7 @@ This article has covered the older input types — the original set introduced i
 
 - [Your first form](/en-US/docs/Learn/Forms/Your_first_form)
 - [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
+- **Basic native form controls**
 - [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
 - [Other form controls](/en-US/docs/Learn/Forms/Other_form_controls)
 - [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)

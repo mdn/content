@@ -1,6 +1,7 @@
 ---
 title: IP Address
 slug: Glossary/IP_Address
+page-type: glossary-definition
 tags:
   - Beginner
   - Infrastructure

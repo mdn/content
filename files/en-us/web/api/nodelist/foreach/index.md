@@ -75,7 +75,7 @@ list.forEach(
 
 The above code results in the following:
 
-```
+```plain
 [object HTMLParagraphElement], 0, myThisArg
 [object Text], 1, myThisArg
 [object HTMLSpanElement], 2, myThisArg

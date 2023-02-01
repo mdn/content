@@ -17,6 +17,8 @@ The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rul
 
 > **Note:** In JavaScript, the rules created using `@media` can be accessed with the {{domxref("CSSMediaRule")}} CSS object model interface.
 
+{{EmbedInteractiveExample("pages/tabbed/at-rule-media.html", "tabbed-standard")}}
+
 ## Syntax
 
 The `@media` at-rule may be placed at the top level of your code or nested inside any other [conditional group at-rule](/en-US/docs/Web/CSS/At-rule#conditional_group_rules).
@@ -140,7 +142,7 @@ Media feature expressions test for their presence or value, and are entirely opt
 
 ### Logical operators
 
-The _logical operators_ `not`, `and`, and `only` can be used to compose a complex media query.
+The _logical operators_ `not`, `and`, `only`, and `or` can be used to compose a complex media query.
 You can also combine multiple media queries into a single rule by separating them with commas.
 
 - `and`
@@ -164,6 +166,8 @@ You can also combine multiple media queries into a single rule by separating the
     Each query in a comma-separated list is treated separately from the others
     Thus, if any of the queries in a list is `true`, the entire media statement returns `true`.
     In other words, lists behave like a logical `or` operator.
+- `or`
+  - : Equivalent to the `,` operator. Added in Media Queries Level 4.
 
 ## Accessibility concerns
 
@@ -181,11 +185,7 @@ Because of this potential, a browser may opt to fudge the returned values in som
 
 ## Formal syntax
 
-```
-@media <media-query-list> {
-  <stylesheet>
-}
-```
+{{csssyntax}}
 
 ## Examples
 

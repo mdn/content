@@ -1,6 +1,7 @@
 ---
 title: handler.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -11,8 +12,7 @@ browser-compat: javascript.builtins.Proxy.handler.ownKeys
 
 {{JSRef}}
 
-The **`handler.ownKeys()`** method is a trap for
-{{jsxref("Reflect.ownKeys()")}}.
+The **`handler.ownKeys()`** method is a trap for the `[[OwnPropertyKeys]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as {{jsxref("Object.keys()")}}, {{jsxref("Reflect.ownKeys()")}}, etc.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-ownkeys.html", "taller")}}
 
@@ -39,9 +39,6 @@ The `ownKeys()` method must return an enumerable object.
 
 ## Description
 
-The **`handler.ownKeys()`** method is a trap for
-{{jsxref("Reflect.ownKeys()")}}.
-
 ### Interceptions
 
 This trap can intercept these operations:
@@ -51,10 +48,11 @@ This trap can intercept these operations:
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Reflect.ownKeys()")}}
 
+Or any other operation that invokes the `[[OwnPropertyKeys]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
+
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a
-{{jsxref("TypeError")}}:
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
 - The result of `ownKeys()` must be an array.
 - The type of each array element is either a {{jsxref("String")}} or a

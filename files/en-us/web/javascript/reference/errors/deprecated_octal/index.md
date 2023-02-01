@@ -1,6 +1,7 @@
 ---
 title: 'SyntaxError: "0"-prefixed octal literals and octal escape seq. are deprecated'
 slug: Web/JavaScript/Reference/Errors/Deprecated_octal
+page-type: javascript-error
 tags:
   - Error
   - JavaScript
@@ -16,7 +17,7 @@ literals and octal escape sequences are used.
 
 ## Message
 
-```
+```plain
 SyntaxError: Octal literals are not allowed in strict mode. (V8-based)
 SyntaxError: "0"-prefixed octal literals are deprecated; use the "0o" prefix instead (Firefox)
 SyntaxError: Decimal integer literals with a leading zero are forbidden in strict mode (Safari)
@@ -70,7 +71,7 @@ Use a leading zero followed by the letter "o" or "O":
 For octal escape sequences, you can use hexadecimal escape sequences instead:
 
 ```js example-good
-'\xA9';
+"\xA9";
 ```
 
 ## See also

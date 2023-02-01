@@ -1,6 +1,7 @@
 ---
 title: cx
 slug: Web/SVG/Attribute/cx
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

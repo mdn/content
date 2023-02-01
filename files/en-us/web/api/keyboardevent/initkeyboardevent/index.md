@@ -37,7 +37,7 @@ initKeyboardEvent(type, canBubble, cancelable,
 - `cancelable` {{optional_inline}}
   - : Indicates whether or not the event can be canceled. Defaults to `false`.
 - `view` {{optional_inline}}
-  - : The {{domxref("WindowProxy")}} it is associated to. Defaults to `null`.
+  - : The {{glossary("WindowProxy")}} it is associated to. Defaults to `null`.
 - `key` {{optional_inline}}
   - : The value of the key attribute. Defaults to `""`.
 - `location` {{optional_inline}}

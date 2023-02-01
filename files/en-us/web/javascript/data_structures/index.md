@@ -1,6 +1,7 @@
 ---
 title: JavaScript data types and data structures
 slug: Web/JavaScript/Data_structures
+page-type: guide
 tags:
   - Beginner
   - Guide
@@ -249,7 +250,7 @@ console.log({} + []); // "[object Object]"
 
 Neither `{}` nor `[]` has a `[@@toPrimitive]()` method. Both `{}` and `[]` inherit `valueOf()` from {{jsxref("Object.prototype.valueOf")}}, which returns the object itself. Since the return value is an object, it is ignored. Therefore, `toString()` is called instead. [`{}.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) returns `"[object Object]"`, while [`[].toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) returns `""`, so the result is their concatenation: `"[object Object]"`.
 
-The `[@@toPrimitive]()` method always takes precedence when doing conversion to any primitive type. Primitive conversion generally behaves like number conversion, because `valueOf()` is called in priority; however, objects with custom `[@@toPrimitive]()` methods can choose to return any primitive. {{jsxref("Date")}} and {{jsxref("Symbol")}} objects are the only built-in objects that override the `[@@toPrimitive]()` method. [`Date.prototype[@@toPrimitive]()`]((/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive)) treats the `"default"` hint as if it's `"string"`, while [`Symbol.prototype[@@toPrimitive]()`]((/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive)) ignores the hint and always returns a symbol.
+The `[@@toPrimitive]()` method always takes precedence when doing conversion to any primitive type. Primitive conversion generally behaves like number conversion, because `valueOf()` is called in priority; however, objects with custom `[@@toPrimitive]()` methods can choose to return any primitive. {{jsxref("Date")}} and {{jsxref("Symbol")}} objects are the only built-in objects that override the `[@@toPrimitive]()` method. [`Date.prototype[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive) treats the `"default"` hint as if it's `"string"`, while [`Symbol.prototype[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive) ignores the hint and always returns a symbol.
 
 ### Numeric coercion
 
@@ -265,7 +266,7 @@ As you may have noticed, there are three distinct paths through which objects ma
 
 - [Primitive coercion](#primitive_coercion): `[@@toPrimitive]("default")` → `valueOf()` → `toString()`
 - [Numeric coercion](#numeric_coercion), [number coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), [BigInt coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion): `[@@toPrimitive]("number")` → `valueOf()` → `toString()`
-- [String coercion](#string_coercion): `[@@toPrimitive]("string")` → `toString()` → `valueOf()`
+- [String coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion): `[@@toPrimitive]("string")` → `toString()` → `valueOf()`
 
 In all cases, `[@@toPrimitive]()`, if present, must be callable and return a primitive, while `valueOf` or `toString` will be ignored if they are not callable or return an object. At the end of the process, if successful, the result is guaranteed to be a primitive. The resulting primitive is then subject to further coercions depending on the context.
 

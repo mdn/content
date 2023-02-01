@@ -1,6 +1,7 @@
 ---
 title: handler.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -11,8 +12,7 @@ browser-compat: javascript.builtins.Proxy.handler.isExtensible
 
 {{JSRef}}
 
-The **`handler.isExtensible()`** method is a trap for
-{{jsxref("Object.isExtensible()")}}.
+The **`handler.isExtensible()`** method is a trap for the `[[IsExtensible]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as {{jsxref("Object.isExtensible()")}}.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-isextensible.html", "taller")}}
 
@@ -39,9 +39,6 @@ The `isExtensible()` method must return a boolean value.
 
 ## Description
 
-The **`handler.isExtensible()`** method is a trap for
-{{jsxref("Object.isExtensible()")}}.
-
 ### Interceptions
 
 This trap can intercept these operations:
@@ -49,10 +46,11 @@ This trap can intercept these operations:
 - {{jsxref("Object.isExtensible()")}}
 - {{jsxref("Reflect.isExtensible()")}}
 
+Or any other operation that invokes the `[[IsExtensible]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
+
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a
-{{jsxref("TypeError")}}:
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
 - `Object.isExtensible(proxy)` must return the same value as
   `Object.isExtensible(target)`.

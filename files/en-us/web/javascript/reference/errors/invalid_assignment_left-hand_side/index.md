@@ -1,6 +1,7 @@
 ---
-title: 'SyntaxError: invalid assignment left-hand side'
+title: "SyntaxError: invalid assignment left-hand side"
 slug: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
+page-type: javascript-error
 tags:
   - Error
   - Errors
@@ -35,13 +36,13 @@ There was an unexpected assignment somewhere. This might be due to a mismatch of
 
 ```js example-bad
 if (Math.PI + 1 = 3 || Math.PI + 1 = 4) {
-  console.log('no way!');
+  console.log("no way!");
 }
 // SyntaxError: invalid assignment left-hand side
 
-const str = 'Hello, '
-+= 'is it me '
-+= 'you\'re looking for?';
+const str = "Hello, "
++= "is it me "
++= "you're looking for?";
 // SyntaxError: invalid assignment left-hand side
 ```
 
@@ -49,12 +50,12 @@ In the `if` statement, you want to use an equality operator (`===`), and for the
 
 ```js example-good
 if (Math.PI + 1 === 3 || Math.PI + 1 === 4) {
-  console.log('no way!');
+  console.log("no way!");
 }
 
-const str = 'Hello, '
-+ 'from the '
-+ 'other side!';
+const str = "Hello, "
+  + "from the "
+  + "other side!";
 ```
 
 ### Assignments producing ReferenceErrors

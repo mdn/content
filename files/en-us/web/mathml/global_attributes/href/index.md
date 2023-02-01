@@ -5,10 +5,11 @@ tags:
   - Global attributes
   - MathML
   - Reference
+  - Non-standard
 browser-compat: mathml.global_attributes.href
 ---
 
-{{MathMLRef("Global_attributes")}}
+{{QuickLinksWithSubPages("/en-us/docs/Web/MathML/Global_attributes")}}{{Non-standard_header}}
 
 The **`href`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) creates a hyperlink on the MathML element pointing to the specified URL.
 

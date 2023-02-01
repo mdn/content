@@ -1,6 +1,7 @@
 ---
 title: Date.prototype.toDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
+page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript
@@ -24,7 +25,7 @@ toDateString()
 
 ### Return value
 
-A string representing the date portion of the given {{jsxref("Date")}} object in human readable form in English.
+A string representing the date portion of the given {{jsxref("Date")}} object in human-readable form in English.
 
 ## Description
 

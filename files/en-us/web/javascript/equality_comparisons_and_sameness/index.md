@@ -1,6 +1,7 @@
 ---
 title: Equality comparisons and sameness
 slug: Web/JavaScript/Equality_comparisons_and_sameness
+page-type: guide
 tags:
   - Comparison
   - Equality
@@ -18,8 +19,8 @@ tags:
 
 JavaScript provides three different value-comparison operations:
 
-- [`===`](/en-US/docs/Web/JavaScript/Reference/Operators#identity) — strict equality (triple equals)
-- [`==`](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators) — loose equality (double equals)
+- [`===`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) — strict equality (triple equals)
+- [`==`](/en-US/docs/Web/JavaScript/Reference/Operators/Equality) — loose equality (double equals)
 - [`Object.is()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is)
 
 Which operation you choose depends on what sort of comparison you are looking to perform. Briefly:
@@ -65,7 +66,8 @@ Besides `===`, strict equality is also used by array index-finding methods inclu
 ```js
 console.log([NaN].indexOf(NaN)); // -1
 switch (NaN) {
-  case NaN: console.log("Surprise"); // Nothing is logged
+  case NaN:
+    console.log("Surprise"); // Nothing is logged
 }
 ```
 

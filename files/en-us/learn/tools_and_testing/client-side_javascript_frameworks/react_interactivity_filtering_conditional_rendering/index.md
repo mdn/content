@@ -48,7 +48,7 @@ As we near the end of our React journey (for now at least), we'll add the finish
 
 We don't have a user interface for editing the name of a task yet. We'll get to that in a moment. To start with, we can at least implement an `editTask()` function in `App.js`. It'll be similar to `deleteTask()` because it'll take an `id` to find its target object, but it'll also take a `newName` property containing the name to update the task to. We'll use [`Array.prototype.map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) instead of [`Array.prototype.filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) because we want to return a new array with some changes, instead of deleting something from the array.
 
-Add the `editTask()` function inside your App component, in the same place as the other functions:
+Add the `editTask()` function inside your `App` component, in the same place as the other functions:
 
 ```jsx
 function editTask(id, newName) {

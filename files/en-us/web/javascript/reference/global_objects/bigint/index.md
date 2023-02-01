@@ -1,6 +1,7 @@
 ---
 title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
+page-type: javascript-class
 tags:
   - BigInt
   - Class
@@ -11,7 +12,7 @@ browser-compat: javascript.builtins.BigInt
 
 {{JSRef}}
 
-**`BigInt`** is a [primitive wrapper object](/en-US/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript) used to represent and manipulate {{Glossary("Primitive", "primitive")}} `bigint` values — which are [too large](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) to be represented by the `number` {{Glossary("Primitive", "primitive")}}.
+**`BigInt`** values represent numeric values which are [too large](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) to be represented by the `number` {{Glossary("Primitive", "primitive")}}.
 
 ## Description
 
@@ -226,6 +227,11 @@ Note that built-in operations expecting BigInts often truncate the BigInt to a f
 - [`BigInt.asUintN()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asUintN)
   - : Clamps a BigInt value to an unsigned integer value, and returns that value.
 
+## Instance properties
+
+- `BigInt.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"BigInt"`. This property is used in {{jsxref("Object.prototype.toString()")}}. However, because `BigInt` also has its own [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) method, this property is not used unless you call [`Object.prototype.toString.call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) with a BigInt as `thisArg`.
+
 ## Instance methods
 
 - [`BigInt.prototype.toLocaleString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString)
@@ -268,7 +274,8 @@ console.log(JSON.stringify({ a: 1n }));
 If you do not wish to patch `BigInt.prototype`, you can use the [`replacer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#the_replacer_parameter) parameter of `JSON.stringify` to serialize BigInt values:
 
 ```js
-const replacer = (key, value) => key === "big" ? value.toString() : value;
+const replacer = (key, value) =>
+  typeof value === "bigint" ? value.toString() : value;
 
 const data = {
   number: 1,
@@ -291,6 +298,8 @@ const parsed = JSON.parse(payload, reviver);
 console.log(parsed);
 // { number: 1, big: 18014398509481982n }
 ```
+
+> **Note:** While it's possible to make the replacer of `JSON.stringify()` generic and properly serialize BigInt values for all objects, the reviver of `JSON.parse()` must be specific to the payload shape you expect, because the serialization is _lossy_: it's not possible to distinguish between a string that represents a BigInt and a normal string.
 
 ## Examples
 

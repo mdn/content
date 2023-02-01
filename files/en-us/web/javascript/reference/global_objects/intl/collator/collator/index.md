@@ -1,6 +1,7 @@
 ---
 title: Intl.Collator() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
+page-type: javascript-constructor
 tags:
   - Collator
   - Constructor
@@ -91,7 +92,7 @@ Intl.Collator(locales, options)
       - : The locale matching algorithm to use. Possible values are
         `"lookup"` and `"best fit"`; the default is
         `"best fit"`. For information about this option, see the
-        {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
+        {{jsxref("Global_Objects/Intl", "Intl", "#locale_identification_and_negotiation", 1)}} page.
     - `usage`
       - : Whether the comparison is for sorting or for searching for matching
         strings. Possible values are `"sort"` and
@@ -125,23 +126,17 @@ Intl.Collator(locales, options)
       - : Whether numeric collation should be used, such that "1" < "2" <
         "10". Possible values are `true` and `false`; the
         default is `false`.
-
-        > **Note:** This option can also be set through the `kn` Unicode
-        > extension key; if both are provided, this `options`
-        > property takes precedence.
+        This option can also be set through the `kn` Unicode
+        extension key; if both are provided, this `options`
+        property takes precedence.
 
     - `caseFirst`
 
       - : Whether upper case or lower case should sort first. Possible values are
-        `"upper"`, `"lower"`, or `"false"` (use
-        the locale's default). This option can be set through an
-        `options` property or through a Unicode extension
-        key; if both are provided, the `options` property
-        takes precedence.
-
-        > **Note:** This option can also be set through the `kf` Unicode
-        > extension key; if both are provided, this `options`
-        > property takes precedence.
+        `"upper"`, `"lower"`, or `"false"` (use the locale's default).
+        This option can also be set through the `kf` Unicode
+        extension key; if both are provided, this `options`
+        property takes precedence.
 
     - `collation`
 
@@ -165,9 +160,9 @@ Intl.Collator(locales, options)
         - `unihan` (Chinese, Japanese, and Korean; not available in Chrome or Edge)
         - `zhuyin` (Chinese)
 
-        > **Note:** This option can also be set through the `co` Unicode
-        > extension key; if both are provided, this `options`
-        > property takes precedence.
+        This option can also be set through the `co` Unicode
+        extension key; if both are provided, this `options`
+        property takes precedence.
 
 ## Examples
 

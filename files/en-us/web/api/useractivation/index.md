@@ -36,7 +36,7 @@ This API is only available in the window context and not exposed to workers.
 
 ### Checking if a user gesture was recently performed
 
-Use {{domxref("UserActivation.isActive")}} to check wether the user is currently interacting with the page ({{Glossary("Transient activation")}}).
+Use {{domxref("UserActivation.isActive")}} to check whether the user is currently interacting with the page ({{Glossary("Transient activation")}}).
 
 ```js
 if (navigator.userActivation.isActive) {
@@ -46,7 +46,7 @@ if (navigator.userActivation.isActive) {
 
 ### Checking if a user gesture was ever performed
 
-Use {{domxref("UserActivation.hasBeenActive")}} to check wether the user has ever interacted with the page ({{Glossary("Sticky activation")}}).
+Use {{domxref("UserActivation.hasBeenActive")}} to check whether the user has ever interacted with the page ({{Glossary("Sticky activation")}}).
 
 ```js
 if (navigator.userActivation.hasBeenActive) {

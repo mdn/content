@@ -1,6 +1,7 @@
 ---
 title: Intl.Collator.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
+page-type: javascript-static-method
 tags:
   - Collator
   - Internationalization
@@ -14,7 +15,7 @@ browser-compat: javascript.builtins.Intl.Collator.supportedLocalesOf
 
 {{JSRef}}
 
-The **`Intl.Collator.supportedLocalesOf()`** method returns an
+The **`Intl.Collator.supportedLocalesOf()`** static method returns an
 array containing those of the provided locales that are supported in collation without
 having to fall back to the runtime's default locale.
 
@@ -41,7 +42,7 @@ Intl.Collator.supportedLocalesOf(locales, options)
       - : The locale matching algorithm to use. Possible values are
         `"lookup"` and `"best fit"`; the default is
         `"best fit"`. For information about this option, see the
-        {{jsxref("Intl", "Intl", "#Locale_negotiation", 1)}} page.
+        {{jsxref("Intl", "Intl", "#locale_identification_and_negotiation", 1)}} page.
 
 ### Return value
 

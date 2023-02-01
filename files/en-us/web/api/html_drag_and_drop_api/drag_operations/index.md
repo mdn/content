@@ -203,14 +203,18 @@ A listener for the {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {
 
 If you want to allow a drop, you must prevent the default behavior by cancelling both the `dragenter` and `dragover` events. You can do this by calling their {{domxref("Event.preventDefault","preventDefault()")}} methods:
 
-```js
-const draggableElement = document.querySelector('p[draggable="true"]');
+```html
+<div id="drop-target">You can drag and then drop a draggable item here</div>
+```
 
-draggableElement.addEventListener("dragenter", (event) => {
+```js
+const dropElement = document.getElementById("drop-target");
+
+dropElement.addEventListener("dragenter", (event) => {
   event.preventDefault();
 });
 
-draggableElement.addEventListener("dragover", (event) => {
+dropElement.addEventListener("dragover", (event) => {
   event.preventDefault();
 });
 ```
@@ -325,7 +329,7 @@ function doDrop(event) {
 
 Once the drag is complete, a {{domxref("HTMLElement/dragend_event", "dragend")}} event is fired at the source of the drag (the same element that received the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event). This event will fire if the drag was successful or if it was cancelled. However, you can use the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine which drop operation occurred.
 
-If the {{domxref("DataTransfer.dropEffect","dropEffect")}} property has the value `none` during a {{domxref("HTMLElement/dragend_event", "dragend")}}, then the drag was cancelled. Otherwise, the effect specifies which operation was performed. The source can use this information after a `move` operation to remove the dragged item from the old location. The {{domxref("DataTransfer.mozUserCancelled","mozUserCancelled")}} property will be set to `true` if the user cancelled the drag (by pressing <kbd>Escape</kbd>), and `false` if the drag was cancelled for other reasons such as an invalid drop target, or if it was successful.
+If the {{domxref("DataTransfer.dropEffect","dropEffect")}} property has the value `none` during a {{domxref("HTMLElement/dragend_event", "dragend")}}, then the drag was cancelled. Otherwise, the effect specifies which operation was performed. The source can use this information after a `move` operation to remove the dragged item from the old location.
 
 A drop can occur inside the same window or over another application. The {{domxref("HTMLElement/dragend_event", "dragend")}} event will always fire regardless. The event's {{domxref("MouseEvent.screenX","screenX")}} and {{domxref("MouseEvent.screenY","screenY")}} properties will be set to the screen coordinates where the drop occurred.
 
@@ -334,6 +338,5 @@ After the {{domxref("HTMLElement/dragend_event", "dragend")}} event has finished
 ## See also
 
 - [HTML Drag and Drop API (Overview)](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
-- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
 - [HTML Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

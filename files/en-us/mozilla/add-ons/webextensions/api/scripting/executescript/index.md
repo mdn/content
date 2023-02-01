@@ -65,9 +65,7 @@ Each `InjectionResult` object has these properties:
 - `result` {{optional_inline}}
   - : `any`. The result of the script execution.
 - `error` {{optional_inline}}
-  - : `object`. When the injection fails, details of the failure errors.
-    - `message`
-      - : `string`. A message explaining why the injection failed.
+  - : `any`. If an error occurs, contains the value the script threw or rejected with. Typically this is an error object with a message property but it could be any value (including primitives and undefined).
 
 The result of the script is the last evaluated statement, which is similar to the results seen if you executed the script in the [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) (not any `console.log()` output). For example, consider a script like this:
 
@@ -77,7 +75,7 @@ let foo='my result'; foo;
 
 Here the results array contains the string "`my result`" as an element.
 
-The result values must be [structured clonable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
+The result values must be [structured cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
 
 ## Examples
 

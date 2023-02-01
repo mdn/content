@@ -1,6 +1,7 @@
 ---
 title: '<td>: The Table Data Cell element'
 slug: Web/HTML/Element/td
+page-type: html-element
 tags:
   - Cells
   - Data Cell
@@ -23,59 +24,6 @@ browser-compat: html.elements.td
 The **`<td>`** [HTML](/en-US/docs/Web/HTML) element defines a cell of a table that contains data. It participates in the _table model_.
 
 {{EmbedInteractiveExample("pages/tabbed/td.html","tabbed-taller")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>Sectioning root.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>
-        The start tag is mandatory.<br />The end tag may be omitted, if it is
-        immediately followed by a {{HTMLElement("th")}} or
-        {{HTMLElement("td")}} element or if there are no more data in its
-        parent element.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>A {{HTMLElement("tr")}} element.</td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_Role"
-            >cell</a
-          ></code
-        >
-        if a descendant of a {{HTMLElement("table")}} element
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>Any</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLTableCellElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Attributes
 
@@ -146,6 +94,61 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ## Examples
 
 See {{HTMLElement("table")}} for examples on `<td>`.
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>Sectioning root.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>
+        The start tag is mandatory.<br />The end tag may be omitted, if it is
+        immediately followed by a {{HTMLElement("th")}} or
+        {{HTMLElement("td")}} element or if there are no more data in its
+        parent element.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>A {{HTMLElement("tr")}} element.</td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_Role"
+            >cell</a
+          ></code
+        >
+        if a descendant of a {{HTMLElement("table")}} element
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLTableCellElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

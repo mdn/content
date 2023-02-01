@@ -159,7 +159,7 @@ https://username:password@www.example.com/
 ```
 
 **The use of these URLs is deprecated**.
-In Chrome, the `username:password@` part in URLs is even [stripped out](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7) for security reasons. In Firefox, it is checked if the site actually requires authentication and if not, Firefox will warn the user with a prompt "You are about to log in to the site "www\.example.com" with the username "username", but the website does not require authentication. This may be an attempt to trick you."
+In Chrome, the `username:password@` part in URLs is even [stripped out](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7) for security reasons. In Firefox, it is checked if the site actually requires authentication and if not, Firefox will warn the user with a prompt "You are about to log in to the site `www.example.com` with the username `username`, but the website does not require authentication. This may be an attempt to trick you."
 
 ## See also
 

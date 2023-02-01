@@ -1,6 +1,7 @@
 ---
 title: Intl.ListFormat() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat
+page-type: javascript-constructor
 tags:
   - Constructor
   - Internationalization
@@ -47,7 +48,7 @@ new Intl.ListFormat(locales, options)
         - `"lookup"`
 
         For information about this option, see the
-        {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}}
+        {{jsxref("Global_Objects/Intl", "Intl", "#locale_identification_and_negotiation", 1)}}
         page.
 
     - `type`

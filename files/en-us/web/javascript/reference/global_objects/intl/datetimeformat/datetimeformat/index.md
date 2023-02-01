@@ -1,6 +1,7 @@
 ---
 title: Intl.DateTimeFormat() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
+page-type: javascript-constructor
 tags:
   - Constructor
   - DateTimeFormat
@@ -132,7 +133,7 @@ Intl.DateTimeFormat(locales, options)
       - : The locale matching algorithm to use. Possible values are
         `"lookup"` and `"best fit"`; the default is
         `"best fit"`. For information about this option, see the
-        {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
+        {{jsxref("Global_Objects/Intl", "Intl", "#locale_identification_and_negotiation", 1)}} page.
     - `timeZone`
       - : The time zone to use. The only value implementations must recognize is
         `"UTC"`; the default is the runtime's default time zone.
@@ -312,7 +313,7 @@ console.log(new Intl.DateTimeFormat().format(date));
 const shortTime = new Intl.DateTimeFormat("en", {
   timeStyle: "short"
 });
-console.log(shortTime.format(Date.now())); // "13:31 AM"
+console.log(shortTime.format(Date.now())); // "1:31 PM"
 
 const shortDate = new Intl.DateTimeFormat("en", {
   dateStyle: "short"
@@ -323,7 +324,7 @@ const mediumTime = new Intl.DateTimeFormat("en", {
   timeStyle: "medium",
   dateStyle: "short"
 });
-console.log(mediumTime.format(Date.now())); // "07/07/20, 13:31:55 AM"
+console.log(mediumTime.format(Date.now())); // "07/07/20, 1:31:55 PM"
 ```
 
 ### Using dayPeriod

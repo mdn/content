@@ -1,6 +1,7 @@
 ---
 title: Array.prototype[@@unscopables]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
+page-type: javascript-instance-data-property
 tags:
   - Array
   - ECMAScript 2015
@@ -12,7 +13,13 @@ browser-compat: javascript.builtins.Array.@@unscopables
 
 {{JSRef}}
 
-The **`@@unscopables`** data property contains property names that were not included in the ECMAScript standard prior to the ES2015 version and that are ignored for [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement-binding purposes.
+The **`@@unscopables`** data property of `Array.prototype` is shared by all {{jsxref("Array")}} instances. It contains property names that were not included in the ECMAScript standard prior to the ES2015 version and that are ignored for [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement-binding purposes.
+
+## Value
+
+A [`null`-prototype object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) with property names given below and their values set to `true`.
+
+{{js_property_attributes(0, 0, 1)}}
 
 ## Description
 
@@ -36,9 +43,7 @@ The default `Array` properties that are ignored for `with` statement-binding pur
 
 See {{jsxref("Symbol.unscopables")}} for how to set unscopable properties for your own objects.
 
-{{js_property_attributes(0,0,1)}}
-
-## Example
+## Examples
 
 Imagine the `keys.push('something')` call below is in code that was written prior to ECMAScript 2015.
 

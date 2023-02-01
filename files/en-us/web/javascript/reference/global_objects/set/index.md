@@ -1,6 +1,7 @@
 ---
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
+page-type: javascript-class
 tags:
   - Class
   - ECMAScript 2015
@@ -43,6 +44,8 @@ The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) m
 
 ## Instance properties
 
+- `Set.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Set"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("Set.prototype.size")}}
   - : Returns the number of values in the `Set` object.
 

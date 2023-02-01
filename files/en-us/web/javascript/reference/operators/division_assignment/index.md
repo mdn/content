@@ -1,6 +1,7 @@
 ---
 title: Division assignment (/=)
 slug: Web/JavaScript/Reference/Operators/Division_assignment
+page-type: javascript-operator
 tags:
   - Assignment operator
   - JavaScript
@@ -12,7 +13,7 @@ browser-compat: javascript.operators.division_assignment
 
 {{jsSidebar("Operators")}}
 
-The division assignment operator (`/=`) divides a variable by the value of
+The **division assignment (`/=`)** operator divides a variable by the value of
 the right operand and assigns the result to the variable.
 
 {{EmbedInteractiveExample("pages/js/expressions-division-assignment.html")}}

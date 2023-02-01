@@ -1,6 +1,7 @@
 ---
 title: Clickjacking
 slug: Glossary/Clickjacking
+page-type: glossary-definition
 tags:
   - Clickjacking
   - Interface-based attack

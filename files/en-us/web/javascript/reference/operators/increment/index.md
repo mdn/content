@@ -1,6 +1,7 @@
 ---
 title: Increment (++)
 slug: Web/JavaScript/Reference/Operators/Increment
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
@@ -11,7 +12,7 @@ browser-compat: javascript.operators.increment
 
 {{jsSidebar("Operators")}}
 
-The increment operator (`++`) increments (adds one to) its operand and returns the value before or after the increment, depending on where the operator is placed.
+The **increment (`++`)** operator increments (adds one to) its operand and returns the value before or after the increment, depending on where the operator is placed.
 
 {{EmbedInteractiveExample("pages/js/expressions-increment.html")}}
 

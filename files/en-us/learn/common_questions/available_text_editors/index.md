@@ -68,17 +68,6 @@ Here are some popular editors:
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://atom.io/">Atom</a></td>
-      <td>MIT/BSD</td>
-      <td>Free</td>
-      <td>Windows, Mac, Linux</td>
-      <td>
-        <a href="https://github.com/atom/atom/issues" rel="external">GitHub Issues</a>
-      </td>
-      <td><a href="https://atom.io/docs/latest/">Online Manual</a></td>
-      <td><a href="https://atom.io/packages">Yes</a></td>
-    </tr>
-    <tr>
       <td><a href="http://bluefish.openoffice.nl">Bluefish</a></td>
       <td>GPL 3</td>
       <td>Free</td>
@@ -133,9 +122,7 @@ Here are some popular editors:
       <td>Free</td>
       <td>Windows, Mac, Linux</td>
       <td>
-        <a href="http://www.codelobster.com/forum/index.php" rel="external"
-          >Forum</a
-        >, <a href="mailto:support@codelobster.com">E-mail</a>
+        <a href="http://www.codelobster.com/forum/index.php" rel="external">Forum</a >, <a href="mailto:support@codelobster.com">Email</a>
       </td>
       <td><a href="https://www.codelobsteride.com/help/">Online Manual</a></td>
       <td>Yes</td>
@@ -173,7 +160,7 @@ Here are some popular editors:
       <td>$99</td>
       <td>Mac</td>
       <td>
-        <a href="mailto:hello@espressoapp.com">E-mail</a>
+        <a href="mailto:hello@espressoapp.com">Email</a>
       </td>
       <td>
         <a href="https://help.espressoapp.com/">Online Manual</a>
@@ -299,7 +286,7 @@ Here are some popular editors:
         <a href="https://webchat.freenode.net/?channels=textmate">IRC</a>,
         <a href="https://lists.macromates.com/listinfo/textmate" rel="external"
           >Mailing list</a
-        >, <a href="mailto:tm-support@macromates.com">E-mail</a>
+        >, <a href="mailto:tm-support@macromates.com">Email</a>
       </td>
       <td>
         <a href="https://manual.macromates.com/en/">Online Manual</a>,

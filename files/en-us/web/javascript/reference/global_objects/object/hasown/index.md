@@ -1,6 +1,7 @@
 ---
 title: Object.hasOwn()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
+page-type: javascript-static-method
 tags:
   - JavaScript
   - Method
@@ -22,12 +23,12 @@ If the property is inherited, or does not exist, the method returns `false`.
 ## Syntax
 
 ```js-nolint
-hasOwn(instance, prop)
+Object.hasOwn(obj, prop)
 ```
 
 ### Parameters
 
-- `instance`
+- `obj`
   - : The JavaScript object instance to test.
 - `prop`
   - : The {{jsxref("String")}} name or [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) of the property to test.
@@ -118,7 +119,7 @@ The elements of an {{jsxref("Array")}} are defined as direct properties, so
 you can use `hasOwn()` method to check whether a particular index exists:
 
 ```js
-const fruits = ['Apple', 'Banana','Watermelon', 'Orange'];
+const fruits = ['Apple', 'Banana', 'Watermelon', 'Orange'];
 Object.hasOwn(fruits, 3);   // true ('Orange')
 Object.hasOwn(fruits, 4);   // false - not defined
 ```
