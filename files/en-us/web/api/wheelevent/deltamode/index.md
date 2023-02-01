@@ -31,7 +31,10 @@ An `unsigned long`.
 ## Examples
 
 ```js
-const syntheticEvent = new WheelEvent("syntheticWheel", { "deltaX": 4, "deltaMode": 0 });
+const syntheticEvent = new WheelEvent("syntheticWheel", {
+  deltaX: 4,
+  deltaMode: 0,
+});
 
 console.log(syntheticEvent.deltaMode);
 ```

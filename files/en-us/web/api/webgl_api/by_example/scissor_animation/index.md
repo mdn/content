@@ -73,7 +73,7 @@ let gl;
 let color = getRandomColor();
 let position;
 
-function setupAnimation (evt) {
+function setupAnimation(evt) {
   window.removeEventListener(evt.type, setupAnimation, false);
   if (!(gl = getRenderingContext())) return;
 
@@ -103,13 +103,13 @@ function setupAnimation (evt) {
     clearInterval(timer);
   }
 
-  stopAnimation({type: "click"});
+  stopAnimation({ type: "click" });
 }
 
 // Variables to hold the size and velocity of the square.
 const size = [60, 60];
 let velocity = 3.0;
-function drawAnimation () {
+function drawAnimation() {
   gl.scissor(position[0], position[1], size[0], size[1]);
   gl.clear(gl.COLOR_BUFFER_BIT);
   // Every frame the vertical position of the square is
@@ -122,11 +122,11 @@ function drawAnimation () {
     // Horizontal position chosen randomly, and vertical
     // position at the top of the drawing buffer.
     position = [
-      Math.random()*(gl.drawingBufferWidth - size[0]),
-      gl.drawingBufferHeight
+      Math.random() * (gl.drawingBufferWidth - size[0]),
+      gl.drawingBufferHeight,
     ];
     // Random velocity between 1.0 and 7.0
-    velocity = 1.0 + 6.0*Math.random();
+    velocity = 1.0 + 6.0 * Math.random();
     color = getRandomColor();
     gl.clearColor(color[0], color[1], color[2], 1.0);
   }
@@ -142,10 +142,12 @@ function getRenderingContext() {
   const canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
-  const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+  const gl =
+    canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
   if (!gl) {
     const paragraph = document.querySelector("p");
-    paragraph.textContent = "Failed. Your browser or device may not support WebGL.";
+    paragraph.textContent =
+      "Failed. Your browser or device may not support WebGL.";
     return null;
   }
   gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);

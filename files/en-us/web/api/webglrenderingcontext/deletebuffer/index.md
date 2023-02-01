@@ -37,8 +37,8 @@ None ({{jsxref("undefined")}}).
 ### Deleting a buffer
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const buffer = gl.createBuffer();
 
 // …

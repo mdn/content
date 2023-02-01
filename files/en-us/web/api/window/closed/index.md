@@ -36,7 +36,7 @@ closed:
 ```js
 // Check that an opener exists and is not closed
 if (window.opener && !window.opener.closed) {
-  window.opener.location.href = 'http://www.mozilla.org';
+  window.opener.location.href = "http://www.mozilla.org";
 }
 ```
 
@@ -57,7 +57,7 @@ function refreshPopupWindow() {
     popupWindow.location.reload(true);
   } else {
     // Open a new popup window
-    popupWindow = window.open('popup.html', 'dataWindow');
+    popupWindow = window.open("popup.html", "dataWindow");
   }
 }
 ```
