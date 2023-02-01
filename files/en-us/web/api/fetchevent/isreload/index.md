@@ -31,7 +31,7 @@ A boolean value.
 ## Examples
 
 ```js
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   event.respondWith(async () => {
     if (event.isReload) {
       //Return something

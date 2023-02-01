@@ -80,7 +80,7 @@ function gameLoop() {
   ball.style.top = `${b * 2}px`;
 
   const start = rAF(gameLoop);
-};
+}
 ```
 
 ## Specifications

@@ -36,7 +36,6 @@ async function getFile() {
   [fileHandle] = await window.showOpenFilePicker();
 
   const fileName = fileHandle.name;
-
 }
 ```
 
