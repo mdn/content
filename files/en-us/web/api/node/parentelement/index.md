@@ -24,7 +24,7 @@ or `null` if there isn't one.
 
 ```js
 if (node.parentElement) {
-    node.parentElement.style.color = "red";
+  node.parentElement.style.color = "red";
 }
 ```
 

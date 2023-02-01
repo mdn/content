@@ -46,13 +46,13 @@ When this button is clicked, the audio and video tracks are removed from the {{d
 let initialStream = null;
 let newStream = null;
 
-let fetchStreamButton = document.getElementById('fetchStream');
-let removeTracksButton = document.getElementById('removeTracks');
+let fetchStreamButton = document.getElementById("fetchStream");
+let removeTracksButton = document.getElementById("removeTracks");
 
 async function fetchStreamFunction() {
   initialStream = await navigator.mediaDevices.getUserMedia({
     video: { width: 620, height: 310 },
-    audio: true
+    audio: true,
   });
   if (initialStream) {
     await attachToDOM(initialStream);
@@ -61,7 +61,7 @@ async function fetchStreamFunction() {
 
 async function attachToDOM(stream) {
   newStream = new MediaStream(stream.getTracks());
-  document.querySelector('video').srcObject = newStream;
+  document.querySelector("video").srcObject = newStream;
 }
 
 async function removeTracksFunction() {
@@ -75,8 +75,8 @@ async function removeTracksFunction() {
   console.log(newStream.getTracks());
 }
 
-fetchStreamButton.addEventListener('click', fetchStreamFunction);
-removeTracksButton.addEventListener('click', removeTracksFunction);
+fetchStreamButton.addEventListener("click", fetchStreamFunction);
+removeTracksButton.addEventListener("click", removeTracksFunction);
 ```
 
 ## Specifications

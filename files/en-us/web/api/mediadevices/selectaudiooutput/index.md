@@ -68,9 +68,9 @@ Here's an example of using `selectAudioOutput()`, within a function that is trig
 It outputs the selected [device IDs](/en-US/docs/Web/API/MediaDeviceInfo/deviceId) and labels (if available) or an error message.
 
 ```js
-document.querySelector('#myButton').addEventListener('click', () => {
+document.querySelector("#myButton").addEventListener("click", () => {
   if (!navigator.mediaDevices.selectAudioOutput) {
-    console.log('selectAudioOutput() not supported.');
+    console.log("selectAudioOutput() not supported.");
     return;
   }
 

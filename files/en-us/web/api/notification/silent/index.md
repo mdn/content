@@ -35,13 +35,13 @@ The following snippet is intended to fire a silent notification; a simple
 
 ```js
 const options = {
-  body: 'Do you like my body?',
-  silent: true
-}
+  body: "Do you like my body?",
+  silent: true,
+};
 
-const n = new Notification('Test notification', options);
+const n = new Notification("Test notification", options);
 
-console.log(n.silent) // should log true
+console.log(n.silent); // should log true
 ```
 
 ## Specifications
