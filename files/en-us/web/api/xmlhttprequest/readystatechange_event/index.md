@@ -1,5 +1,5 @@
 ---
-title: 'XMLHttpRequest: readystatechange event'
+title: "XMLHttpRequest: readystatechange event"
 slug: Web/API/XMLHttpRequest/readystatechange_event
 page-type: web-api-event
 tags:
@@ -23,9 +23,9 @@ The `readystatechange` event is fired whenever the {{domxref("XMLHttpRequest.rea
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('readystatechange', (event) => { })
+addEventListener("readystatechange", (event) => {});
 
-onreadystatechange = (event) => { }
+onreadystatechange = (event) => {};
 ```
 
 ## Event type

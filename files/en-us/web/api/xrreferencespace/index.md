@@ -82,8 +82,10 @@ The other situation in which you may need to acquire a new reference space is if
 To move or rotate the user's view of the world, you need to change the `XRReferenceSpace` used to represent that viewpoint. However, `XRReferenceSpace` is immutable, so you need to instead create a new reference space representing the changed viewpoint. This is easily done using the {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}} method.
 
 ```js
-let offsetTransform = new XRRigidTransform({x: 2, y: 0, z: 1},
-                                           {x: 0, y: 0, z: 0, w: 1});
+let offsetTransform = new XRRigidTransform(
+  { x: 2, y: 0, z: 1 },
+  { x: 0, y: 0, z: 0, w: 1 }
+);
 xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(offsetTransform);
 ```
 

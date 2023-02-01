@@ -1,5 +1,5 @@
 ---
-title: 'XRReferenceSpace: reset event'
+title: "XRReferenceSpace: reset event"
 slug: Web/API/XRReferenceSpace/reset_event
 page-type: web-api-event
 tags:
@@ -36,9 +36,9 @@ This event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('reset', (event) => { })
+addEventListener("reset", (event) => {});
 
-onreset = (event) => { }
+onreset = (event) => {};
 ```
 
 ## Event type

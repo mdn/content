@@ -55,8 +55,8 @@ const session = navigator.xr.requestSession("immersive-ar", {
   requiredFeatures: ["depth-sensing"],
   depthSensing: {
     usagePreference: ["gpu-optimized"],
-    formatPreference: ["luminance-alpha"]
-  }
+    formatPreference: ["luminance-alpha"],
+  },
 });
 
 const glBinding = new XRWebGLBinding(session, gl);

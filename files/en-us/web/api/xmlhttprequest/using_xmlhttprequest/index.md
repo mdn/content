@@ -524,7 +524,8 @@ ways to _submit_, and to **upload files**:
       <fieldset>
         <legend>Registration example</legend>
         <p>
-          <label>First name: <input type="text" name="firstname" /></label><br />
+          <label>First name: <input type="text" name="firstname" /></label
+          ><br />
           <label>Last name: <input type="text" name="lastname" /></label>
         </p>
         <p>
@@ -543,10 +544,10 @@ ways to _submit_, and to **upload files**:
       <fieldset>
         <legend>Registration example</legend>
         <p>
-          <label>First name:
-            <input type="text" name="firstname" />
-          </label><br />
-          <label>Last name:
+          <label>First name: <input type="text" name="firstname" /> </label
+          ><br />
+          <label
+            >Last name:
             <input type="text" name="lastname" />
           </label>
         </p>
@@ -566,12 +567,14 @@ ways to _submit_, and to **upload files**:
       <fieldset>
         <legend>Registration example</legend>
         <p>
-          <label>Your name:
+          <label
+            >Your name:
             <input type="text" name="user" />
           </label>
         </p>
         <p>
-          <label>Your message:<br />
+          <label
+            >Your message:<br />
             <textarea name="message" cols="40" rows="8"></textarea>
           </label>
         </p>
@@ -591,7 +594,8 @@ ways to _submit_, and to **upload files**:
       <fieldset>
         <legend>Upload example</legend>
         <p>
-          <label>First name: <input type="text" name="firstname" /></label><br />
+          <label>First name: <input type="text" name="firstname" /></label
+          ><br />
           <label>Last name: <input type="text" name="lastname" /></label><br />
           Sex:
           <input id="sex_male" type="radio" name="sex" value="male" />
@@ -599,7 +603,8 @@ ways to _submit_, and to **upload files**:
           <input id="sex_female" type="radio" name="sex" value="female" />
           <label for="sex_female">Female</label><br />
           Password: <input type="password" name="secret" /><br />
-          <label>What do you prefer:
+          <label
+            >What do you prefer:
             <select name="image_type">
               <option>Books</option>
               <option>Cinema</option>
@@ -608,7 +613,8 @@ ways to _submit_, and to **upload files**:
           </label>
         </p>
         <p>
-          <label>Post your photos:
+          <label
+            >Post your photos:
             <input type="file" multiple name="photos[]" />
           </label>
         </p>
@@ -627,7 +633,8 @@ ways to _submit_, and to **upload files**:
           <label for="vehicle_car">I have a car</label>
         </p>
         <p>
-          <label>Describe yourself:<br />
+          <label
+            >Describe yourself:<br />
             <textarea name="description" cols="50" rows="8"></textarea>
           </label>
         </p>
