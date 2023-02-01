@@ -121,7 +121,7 @@ To get the footer working, we need to implement the following three areas of fun
 
    ```html
    <button type="button" class="clear-completed" \{{on 'click'
-   this.todos.clearCompleted}}>
+   this.todos.clearCompleted}}></button>
    ```
 
 So now when the button is clicked, the `clearCompleted()` action we added earlier is run.
