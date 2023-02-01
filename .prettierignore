@@ -5,4 +5,9 @@ build/
 
 # Ignore markdown files till full pass is made on each folder
 *.md
+# The following paths have had a full pass
 !files/en-us/glossary/**/*.md
+!files/en-us/mdn/**/*.md
+
+# TODO: check if formatting kitchensink breaks Yari tests
+files/en-us/mdn/kitchensink/index.md
