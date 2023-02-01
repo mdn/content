@@ -1,5 +1,5 @@
 ---
-title: '::-moz-page'
+title: "::-moz-page"
 slug: Web/CSS/::-moz-page
 page-type: css-pseudo-element
 tags:

@@ -1,9 +1,9 @@
 ---
-title: '::placeholder'
+title: "::placeholder"
 slug: Web/CSS/::placeholder
 page-type: css-pseudo-element
 tags:
-  - '::placeholder'
+  - "::placeholder"
   - CSS
   - Pseudo-element
   - Reference

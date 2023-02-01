@@ -1,9 +1,9 @@
 ---
-title: '::target-text'
+title: "::target-text"
 slug: Web/CSS/::target-text
 page-type: css-pseudo-element
 tags:
-  - '::target-text'
+  - "::target-text"
   - CSS
   - Pseudo-element
   - Reference

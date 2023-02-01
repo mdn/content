@@ -235,29 +235,13 @@ body {
         Translates every Z point by 0
         Scales down by 10%
     */
-    transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      -50,-100,0,1.1
-    );
-
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -50, -100, 0, 1.1);
   }
   50% {
-    transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      0,0,0,0.9
-    );
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0.9);
   }
   to {
-     transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      50,100,0,1.1
-    )
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 50, 100, 0, 1.1);
   }
 }
 ```

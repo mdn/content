@@ -22,7 +22,7 @@ The **`:-moz-broken`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web
 ## Syntax
 
 ```css
-:-moz-broken
+:-moz-broken ;
 ```
 
 ## Examples

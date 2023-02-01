@@ -137,7 +137,7 @@ font-family: Goudy Bookletter 1911, sans-serif;
 font-family: Red/Black, sans-serif;
 font-family: "Lucida" Grande, sans-serif;
 font-family: Ahem!, sans-serif;
-font-family: test@foo, sans-serif;
+font-family: test @foo, sans-serif;
 font-family: #POUND, sans-serif;
 font-family: Hawaii 5-0, sans-serif;
 ```

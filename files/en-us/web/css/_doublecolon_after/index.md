@@ -1,5 +1,5 @@
 ---
-title: '::after'
+title: "::after"
 slug: Web/CSS/::after
 page-type: css-pseudo-element
 tags:
@@ -105,8 +105,8 @@ We can also support keyboard users with this technique, by adding a `tabindex` o
   </span>
   with a few
   <span tabindex="0" data-descr="small popups that appear when hovering">
-    tooltips
-  </span>.
+    tooltips </span
+  >.
 </p>
 ```
 

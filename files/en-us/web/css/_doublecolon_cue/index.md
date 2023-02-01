@@ -1,9 +1,9 @@
 ---
-title: '::cue'
+title: "::cue"
 slug: Web/CSS/::cue
 page-type: css-pseudo-element
 tags:
-  - '::cue'
+  - "::cue"
   - CSS
   - Media
   - Pseudo-element

@@ -57,17 +57,9 @@ clip: unset;
 
 ```html
 <p class="dotted-border">
-  <img
-    src="macarons.png"
-    title="Original graphic" />
-  <img
-    id="top-left"
-    src="macarons.png"
-    title="Graphic clipped to upper left" />
-  <img
-    id="middle"
-    src="macarons.png"
-    title="Graphic clipped towards middle" />
+  <img src="macarons.png" title="Original graphic" />
+  <img id="top-left" src="macarons.png" title="Graphic clipped to upper left" />
+  <img id="middle" src="macarons.png" title="Graphic clipped towards middle" />
   <img
     id="bottom-right"
     src="macarons.png"
