@@ -14,7 +14,7 @@ tags:
   - Read-only
   - Reference
   - Vertical
-  - 'y'
+  - "y"
 browser-compat: api.DOMPointReadOnly.y
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: 'HTMLElement: dragstart event'
+title: "HTMLElement: dragstart event"
 slug: Web/API/HTMLElement/dragstart_event
 page-type: web-api-event
 tags:
@@ -19,9 +19,9 @@ The `dragstart` event is fired when the user starts dragging an element or text 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('dragstart', (event) => {});
+addEventListener("dragstart", (event) => {});
 
-ondragstart = (event) => { };
+ondragstart = (event) => {};
 ```
 
 ## Event type

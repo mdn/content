@@ -44,7 +44,7 @@ None ({{jsxref("undefined")}}).
 ```js
 /* Place the caret at the beginning of an HTML document's body. */
 const body = document.querySelector("body");
-window.getSelection().collapse(body,0);
+window.getSelection().collapse(body, 0);
 ```
 
 ## Specifications

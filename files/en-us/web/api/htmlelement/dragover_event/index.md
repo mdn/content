@@ -1,5 +1,5 @@
 ---
-title: 'HTMLElement: dragover event'
+title: "HTMLElement: dragover event"
 slug: Web/API/HTMLElement/dragover_event
 page-type: web-api-event
 tags:
@@ -25,9 +25,9 @@ The event is fired on the drop target(s).
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('dragover', (event) => {});
+addEventListener("dragover", (event) => {});
 
-ondragover = (event) => { };
+ondragover = (event) => {};
 ```
 
 ## Event type

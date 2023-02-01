@@ -59,7 +59,8 @@ This example displays whether or not your browser supports the
 
 ```js
 const result = document.getElementById("result");
-const supported = navigator.mediaDevices.getSupportedConstraints().noiseSuppression;
+const supported =
+  navigator.mediaDevices.getSupportedConstraints().noiseSuppression;
 result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 

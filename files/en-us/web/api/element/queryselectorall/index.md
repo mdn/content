@@ -71,7 +71,9 @@ each descendant node that matches at least one of the specified selectors.
 
 ```js
 // dataset selectors
-const refs = [...document.querySelectorAll(`[data-name*="funnel-chart-percent"]`)];
+const refs = [
+  ...document.querySelectorAll(`[data-name*="funnel-chart-percent"]`),
+];
 
 // attribute selectors
 // const refs = [...document.querySelectorAll(`[class*="funnel-chart-percent"]`)];
@@ -162,8 +164,8 @@ Consider this HTML, with its three nested {{HTMLElement("div")}} blocks.
 ### JavaScript
 
 ```js
-const select = document.querySelector('.select');
-const inner = select.querySelectorAll('.outer .inner');
+const select = document.querySelector(".select");
+const inner = select.querySelectorAll(".outer .inner");
 inner.length; // 1, not 0!
 ```
 
@@ -178,8 +180,8 @@ The {{cssxref(":scope")}} pseudo-class restores the expected behavior, only matc
 selectors on descendants of the base element:
 
 ```js
-const select = document.querySelector('.select');
-const inner = select.querySelectorAll(':scope .outer .inner');
+const select = document.querySelector(".select");
+const inner = select.querySelectorAll(":scope .outer .inner");
 inner.length; // 0
 ```
 

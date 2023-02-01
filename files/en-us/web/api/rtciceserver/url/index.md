@@ -53,9 +53,9 @@ connections.
 myPeerConnection = new RTCPeerConnection({
   iceServers: [
     {
-      url: "stun:stunserver.example.org"
-    }
-  ]
+      url: "stun:stunserver.example.org",
+    },
+  ],
 });
 ```
 

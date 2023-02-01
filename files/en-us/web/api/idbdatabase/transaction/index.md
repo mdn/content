@@ -40,8 +40,8 @@ transaction(storeNames, mode, options)
     Therefore the following lines are equivalent:
 
     ```js
-    db.transaction(['my-store-name']);
-    db.transaction('my-store-name');
+    db.transaction(["my-store-name"]);
+    db.transaction("my-store-name");
     ```
 
     If you need to access all object stores in the database, you can use the property
@@ -67,7 +67,7 @@ transaction(storeNames, mode, options)
     you would use the following:
 
     ```js
-    const transaction = db.transaction('my-store-name', "readwrite");
+    const transaction = db.transaction("my-store-name", "readwrite");
     ```
 
     As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to
@@ -131,7 +131,7 @@ let db;
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  note.innerHTML += "<li>Database initialized.</li>";
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -140,7 +140,6 @@ DBOpenRequest.onsuccess = (event) => {
   // Run the displayData() function to populate the task list with
   // all the to-do list data already in the IDB
   displayData();
-
 };
 
 // open a read/write db transaction, ready for adding the data
@@ -148,11 +147,13 @@ const transaction = db.transaction(["toDoList"], "readwrite");
 
 // report on the success of opening the transaction
 transaction.oncomplete = (event) => {
-  note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
+  note.innerHTML +=
+    "<li>Transaction completed: database modification finished.</li>";
 };
 
 transaction.onerror = (event) => {
-  note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+  note.innerHTML +=
+    "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
 };
 
 // you would then go on to do something to this database

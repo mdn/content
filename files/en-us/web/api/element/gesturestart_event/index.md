@@ -1,5 +1,5 @@
 ---
-title: 'Element: gesturestart event'
+title: "Element: gesturestart event"
 slug: Web/API/Element/gesturestart_event
 page-type: web-api-event
 tags:
@@ -20,9 +20,9 @@ It is a proprietary event specific to WebKit.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('NameOfTheEvent', (event) => {});
+addEventListener("NameOfTheEvent", (event) => {});
 
-onNameOfTheEvent = (event) => { };
+onNameOfTheEvent = (event) => {};
 ```
 
 ## Event type

@@ -1,5 +1,5 @@
 ---
-title: 'Notification: click event'
+title: "Notification: click event"
 slug: Web/API/Notification/click_event
 page-type: web-api-event
 tags:
@@ -27,9 +27,9 @@ If you don't want that behavior, call {{domxref("Event/preventDefault", "prevent
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('click', (event) => { });
+addEventListener("click", (event) => {});
 
-onclick = (event) => { };
+onclick = (event) => {};
 ```
 
 ## Event type
@@ -45,8 +45,8 @@ is clicked:
 ```js
 notification.onclick = (event) => {
   event.preventDefault(); // prevent the browser from focusing the Notification's tab
-  window.open('http://www.mozilla.org', '_blank');
-}
+  window.open("http://www.mozilla.org", "_blank");
+};
 ```
 
 ## Specifications

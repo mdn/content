@@ -53,7 +53,7 @@ namedItem(str)
 
 ```js
 // Returns the HTMLInputElement representing #my-form-control
-elem1 = document.forms[0]['my-form-control'];
+elem1 = document.forms[0]["my-form-control"];
 ```
 
 ## Specifications

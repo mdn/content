@@ -44,7 +44,7 @@ specifically required; for example:
 
 ```js
 const constraints = {
-  facingMode: { exact: "user" }
+  facingMode: { exact: "user" },
 };
 ```
 

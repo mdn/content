@@ -54,7 +54,7 @@ This simple example catches unhandled promise rejections and logs them for debug
 ```js
 window.onunhandledrejection = (e) => {
   console.log(e.reason);
-}
+};
 ```
 
 ## Specifications

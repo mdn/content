@@ -72,7 +72,7 @@ function addTracksToStream(stream) {
   let senders = pc.getSenders();
 
   senders.forEach((sender) => {
-    if (sender.track && (sender.transport.state === connected)) {
+    if (sender.track && sender.transport.state === connected) {
       sender.setStreams(stream);
     }
   });

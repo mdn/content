@@ -83,7 +83,7 @@ If `setTimeout()` is called with [_delay_](#delay) value that's not a number, im
 ```js example-bad
 setTimeout(() => {
   console.log("Delayed for 1 second.");
-}, "1000")
+}, "1000");
 ```
 
 But in many cases, the implicit type coercion can lead to unexpected and surprising results. For example, when the following code runs, the string `"1 second"` ultimately gets coerced into the number `0` — and so, the code executes immediately, with zero delay.
@@ -91,7 +91,7 @@ But in many cases, the implicit type coercion can lead to unexpected and surpris
 ```js example-bad
 setTimeout(() => {
   console.log("Delayed for 1 second.");
-}, "1 second")
+}, "1 second");
 ```
 
 Therefore, don't use strings for the _delay_ value but instead always use numbers:
@@ -99,7 +99,7 @@ Therefore, don't use strings for the _delay_ value but instead always use number
 ```js example-good
 setTimeout(() => {
   console.log("Delayed for 1 second.");
-}, 1000)
+}, 1000);
 ```
 
 ### Working with asynchronous functions
@@ -110,15 +110,21 @@ In other words, you cannot use `setTimeout()` to create a "pause" before the nex
 See the following example:
 
 ```js
-  setTimeout(() => {console.log("this is the first message")}, 5000);
-  setTimeout(() => {console.log("this is the second message")}, 3000);
-  setTimeout(() => {console.log("this is the third message")}, 1000);
+setTimeout(() => {
+  console.log("this is the first message");
+}, 5000);
+setTimeout(() => {
+  console.log("this is the second message");
+}, 3000);
+setTimeout(() => {
+  console.log("this is the third message");
+}, 1000);
 
-  // Output:
+// Output:
 
-  // this is the third message
-  // this is the second message
-  // this is the first message
+// this is the third message
+// this is the second message
+// this is the first message
 ```
 
 Notice that the first function does not create a 5-second "pause" before calling the second function. Instead, the first function is called, but waits 5 seconds to
@@ -143,7 +149,7 @@ the `window` (or `global`) object. It will not be the same as the
 See the following example:
 
 ```js
-const myArray = ['zero', 'one', 'two'];
+const myArray = ["zero", "one", "two"];
 myArray.myMethod = function (sProperty) {
   console.log(arguments.length > 0 ? this[sProperty] : this);
 };
@@ -158,8 +164,8 @@ set to `myArray` by the call, so within the function,
 in the following:
 
 ```js
-setTimeout(myArray.myMethod, 1.0*1000); // prints "[object Window]" after 1 second
-setTimeout(myArray.myMethod, 1.5*1000, '1'); // prints "undefined" after 1.5 seconds
+setTimeout(myArray.myMethod, 1.0 * 1000); // prints "[object Window]" after 1 second
+setTimeout(myArray.myMethod, 1.5 * 1000, "1"); // prints "undefined" after 1.5 seconds
 ```
 
 The `myArray.myMethod` function is passed to `setTimeout`, then
@@ -171,8 +177,8 @@ There's also no option to pass a `thisArg` to
 using `call` to set `this` doesn't work either.
 
 ```js
-setTimeout.call(myArray, myArray.myMethod, 2.0*1000); // error
-setTimeout.call(myArray, myArray.myMethod, 2.5*1000, 2); // same error
+setTimeout.call(myArray, myArray.myMethod, 2.0 * 1000); // error
+setTimeout.call(myArray, myArray.myMethod, 2.5 * 1000, 2); // same error
 ```
 
 #### Solutions
@@ -187,15 +193,19 @@ setTimeout(function () {
   myArray.myMethod();
 }, 2.0 * 1000); // prints "zero,one,two" after 2 seconds
 setTimeout(function () {
-  myArray.myMethod('1');
+  myArray.myMethod("1");
 }, 2.5 * 1000); // prints "one" after 2.5 seconds
 ```
 
 The wrapper function can be an arrow function:
 
 ```js
-setTimeout(() => {myArray.myMethod()}, 2.0 * 1000); // prints "zero,one,two" after 2 seconds
-setTimeout(() => {myArray.myMethod('1')}, 2.5 * 1000); // prints "one" after 2.5 seconds
+setTimeout(() => {
+  myArray.myMethod();
+}, 2.0 * 1000); // prints "zero,one,two" after 2 seconds
+setTimeout(() => {
+  myArray.myMethod("1");
+}, 2.5 * 1000); // prints "one" after 2.5 seconds
 ```
 
 ##### Use bind()
@@ -203,15 +213,15 @@ setTimeout(() => {myArray.myMethod('1')}, 2.5 * 1000); // prints "one" after 2.5
 Alternatively, you can use {{jsxref("Function.bind()", "bind()")}} to set the value of `this` for all calls to a given function:
 
 ```js
-const myArray = ['zero', 'one', 'two'];
-const myBoundMethod = (function (sProperty) {
-    console.log(arguments.length > 0 ? this[sProperty] : this);
-}).bind(myArray);
+const myArray = ["zero", "one", "two"];
+const myBoundMethod = function (sProperty) {
+  console.log(arguments.length > 0 ? this[sProperty] : this);
+}.bind(myArray);
 
 myBoundMethod(); // prints "zero,one,two" because 'this' is bound to myArray in the function
 myBoundMethod(1); // prints "one"
-setTimeout(myBoundMethod, 1.0*1000); // still prints "zero,one,two" after 1 second because of the binding
-setTimeout(myBoundMethod, 1.5*1000, "1"); // prints "one" after 1.5 seconds
+setTimeout(myBoundMethod, 1.0 * 1000); // still prints "zero,one,two" after 1 second because of the binding
+setTimeout(myBoundMethod, 1.5 * 1000, "1"); // prints "one" after 1.5 seconds
 ```
 
 ### Passing string literals
@@ -227,7 +237,7 @@ setTimeout("console.log('Hello World!');", 500);
 ```js example-good
 // Do this instead
 setTimeout(() => {
-  console.log('Hello World!');
+  console.log("Hello World!");
 }, 500);
 ```
 
@@ -289,7 +299,9 @@ function pad(number) {
 function logline(now) {
   // log the last timestamp, the new timestamp, and the difference
   const newLine = document.createElement("pre");
-  newLine.textContent = `${pad(last)}         ${pad(now)}          ${now - last}`;
+  newLine.textContent = `${pad(last)}         ${pad(now)}          ${
+    now - last
+  }`;
   document.getElementById("log").appendChild(newLine);
   last = now;
 }
@@ -329,10 +341,10 @@ the thread that called `setTimeout()` has terminated. For example:
 
 ```js
 function foo() {
-  console.log('foo has been called');
+  console.log("foo has been called");
 }
 setTimeout(foo, 0);
-console.log('After setTimeout');
+console.log("After setTimeout");
 ```
 
 Will write to the console:
@@ -392,12 +404,12 @@ timeout by pressing on the second button.
 let timeoutID;
 
 function setOutput(outputContent) {
-  document.querySelector('#output').textContent = outputContent;
+  document.querySelector("#output").textContent = outputContent;
 }
 
 function delayedMessage() {
-  setOutput('');
-  timeoutID = setTimeout(setOutput, 2*1000, 'That was really slow!');
+  setOutput("");
+  timeoutID = setTimeout(setOutput, 2 * 1000, "That was really slow!");
 }
 
 function clearMessage() {

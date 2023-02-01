@@ -85,7 +85,7 @@ A selection object represents the {{DOMxRef("Range")}}s that the user has select
 
 ```js
 const selObj = window.getSelection();
-const range  = selObj.getRangeAt(0);
+const range = selObj.getRangeAt(0);
 ```
 
 - `selObj` is a Selection object

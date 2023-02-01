@@ -11,7 +11,7 @@ tags:
   - SVG
   - SVG DOM
   - SVGImageElement
-  - 'y'
+  - "y"
 browser-compat: api.SVGImageElement.y
 ---
 

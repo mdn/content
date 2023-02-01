@@ -1,5 +1,5 @@
 ---
-title: 'XRSession: visibilitychange event'
+title: "XRSession: visibilitychange event"
 slug: Web/API/XRSession/visibilitychange_event
 page-type: web-api-event
 tags:
@@ -22,9 +22,9 @@ The **`visibilitychange`** event is sent to an {{domxref("XRSession")}} to infor
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('visibilitychange', (event) => { })
+addEventListener("visibilitychange", (event) => {});
 
-onvisibilitychange = (event) => { }
+onvisibilitychange = (event) => {};
 ```
 
 ## Event type
@@ -59,7 +59,7 @@ This example demonstrates how to listen for a `visibilitychange` event on a WebX
 ```js
 navigator.xr.requestSession("inline").then((xrSession) => {
   xrSession.addEventListener("visibilitychange", (e) => {
-    switch(e.session.visibilityState) {
+    switch (e.session.visibilityState) {
       case "visible":
       case "visible-blurred":
         mySessionVisible(true);

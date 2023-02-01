@@ -56,8 +56,8 @@ into an object for future use.
 ```js
 const candidateLoc = {
   address: candidate.ip,
-  port: candidate.port
-}
+  port: candidate.port,
+};
 ```
 
 ## Specifications

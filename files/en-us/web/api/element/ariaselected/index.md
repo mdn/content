@@ -39,7 +39,7 @@ In this example the `aria-selected` attribute on the element with an ID of `tab-
 ```
 
 ```js
-let el = document.getElementById('tab-id');
+let el = document.getElementById("tab-id");
 console.log(el.ariaSelected); // true
 el.ariaSelected = "false";
 console.log(el.ariaSelected); // false

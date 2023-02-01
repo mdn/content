@@ -29,7 +29,7 @@ function calculate_time() {
   do_task();
   endTime = performance.now();
 
-  return (endTime - startTime);
+  return endTime - startTime;
 }
 ```
 
@@ -54,7 +54,9 @@ function print_json() {
     output.textContent += `performance.timing = ${JSON.stringify(timing)} \n`;
 
     const navigation = json.navigation;
-    output.textContent += `performance.navigation = ${JSON.stringify(navigation)} \n`;
+    output.textContent += `performance.navigation = ${JSON.stringify(
+      navigation
+    )} \n`;
   }
 }
 ```

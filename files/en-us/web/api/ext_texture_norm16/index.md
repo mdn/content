@@ -47,7 +47,7 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 ### Enabling the extension
 
 ```js
-let ext = gl.getExtension('EXT_texture_norm16');
+let ext = gl.getExtension("EXT_texture_norm16");
 ```
 
 ### Texture formats
@@ -56,16 +56,96 @@ The {{domxref("WebGLRenderingContext.texImage2D()")}} method accepts new formats
 
 ```js
 // imageData = Uint16Array
-gl.texImage2D(gl.TEXTURE_2D, 0, ext.R16_EXT, 1, 1, 0, gl.RED, gl.UNSIGNED_SHORT, imageData);
-gl.texImage2D(gl.TEXTURE_2D, 0, ext.RG16_EXT, 1, 1, 0, gl.RG, gl.UNSIGNED_SHORT, imageData);
-gl.texImage2D(gl.TEXTURE_2D, 0, ext.RGB16_EXT, 1, 1, 0, gl.RGB, gl.UNSIGNED_SHORT, imageData);
-gl.texImage2D(gl.TEXTURE_2D, 0, ext.RGBA16_EXT, 1, 1, 0, gl.RGBA, gl.UNSIGNED_SHORT, imageData);
+gl.texImage2D(
+  gl.TEXTURE_2D,
+  0,
+  ext.R16_EXT,
+  1,
+  1,
+  0,
+  gl.RED,
+  gl.UNSIGNED_SHORT,
+  imageData
+);
+gl.texImage2D(
+  gl.TEXTURE_2D,
+  0,
+  ext.RG16_EXT,
+  1,
+  1,
+  0,
+  gl.RG,
+  gl.UNSIGNED_SHORT,
+  imageData
+);
+gl.texImage2D(
+  gl.TEXTURE_2D,
+  0,
+  ext.RGB16_EXT,
+  1,
+  1,
+  0,
+  gl.RGB,
+  gl.UNSIGNED_SHORT,
+  imageData
+);
+gl.texImage2D(
+  gl.TEXTURE_2D,
+  0,
+  ext.RGBA16_EXT,
+  1,
+  1,
+  0,
+  gl.RGBA,
+  gl.UNSIGNED_SHORT,
+  imageData
+);
 
 // imageData = Int16Array
-gl.texImage2D(gl.TEXTURE_2D, 0, ext.R16_SNORM_EXT, 1, 1, 0, gl.RED, gl.SHORT, imageData);
-gl.texImage2D(gl.TEXTURE_2D, 0, ext.RG16_SNORM_EXT, 1, 1, 0, gl.RG, gl.SHORT, imageData);
-gl.texImage2D(gl.TEXTURE_2D, 0, ext.RGB16_SNORM_EXT, 1, 1, 0, gl.RGB, gl.SHORT, imageData);
-gl.texImage2D(gl.TEXTURE_2D, 0, ext.RGBA16_SNORM_EXT, 1, 1, 0, gl.RGBA, gl.SHORT, imageData);
+gl.texImage2D(
+  gl.TEXTURE_2D,
+  0,
+  ext.R16_SNORM_EXT,
+  1,
+  1,
+  0,
+  gl.RED,
+  gl.SHORT,
+  imageData
+);
+gl.texImage2D(
+  gl.TEXTURE_2D,
+  0,
+  ext.RG16_SNORM_EXT,
+  1,
+  1,
+  0,
+  gl.RG,
+  gl.SHORT,
+  imageData
+);
+gl.texImage2D(
+  gl.TEXTURE_2D,
+  0,
+  ext.RGB16_SNORM_EXT,
+  1,
+  1,
+  0,
+  gl.RGB,
+  gl.SHORT,
+  imageData
+);
+gl.texImage2D(
+  gl.TEXTURE_2D,
+  0,
+  ext.RGBA16_SNORM_EXT,
+  1,
+  1,
+  0,
+  gl.RGBA,
+  gl.SHORT,
+  imageData
+);
 ```
 
 ### Renderbuffer formats

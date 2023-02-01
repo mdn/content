@@ -37,7 +37,7 @@ A boolean.
 ```js
 const foo = document.getElementById("foo");
 if (foo.hasAttribute("bar")) {
-    // do something
+  // do something
 }
 ```
 

@@ -48,7 +48,7 @@ console.log(response.requestId === request.id);
 
 // And in serialized form too
 const json = response.toJSON();
-console.log(json.requestId,response.requestId, request.id);
+console.log(json.requestId, response.requestId, request.id);
 ```
 
 ## Value

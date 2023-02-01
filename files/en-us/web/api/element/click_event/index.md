@@ -1,5 +1,5 @@
 ---
-title: 'Element: click event'
+title: "Element: click event"
 slug: Web/API/Element/click_event
 page-type: web-api-event
 tags:
@@ -31,9 +31,9 @@ If the button is pressed on one element and the pointer is moved outside the ele
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('click', (event) => {});
+addEventListener("click", (event) => {});
 
-onclick = (event) => { };
+onclick = (event) => {};
 ```
 
 ## Event type
@@ -149,9 +149,9 @@ This example displays the number of consecutive clicks on a {{HtmlElement("butto
 ### JavaScript
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.addEventListener('click', (event) => {
+button.addEventListener("click", (event) => {
   button.textContent = `Click count: ${event.detail}`;
 });
 ```

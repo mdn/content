@@ -60,7 +60,7 @@ linkRef.onclick = () => {
   } else {
     console.log("SORRY! not _blank");
   }
-}
+};
 ```
 
 ## Specifications

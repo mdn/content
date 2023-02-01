@@ -40,7 +40,7 @@ This extension extends {{domxref("WebGLRenderingContext.renderbufferStorage()")}
 ## Examples
 
 ```js
-const ext = gl.getExtension('WEBGL_color_buffer_float');
+const ext = gl.getExtension("WEBGL_color_buffer_float");
 
 gl.renderbufferStorage(gl.RENDERBUFFER, ext.RGBA32F_EXT, 256, 256);
 ```

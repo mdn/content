@@ -38,9 +38,14 @@ its full path.
 function gotFileSystem(fs) {
   let path = "";
 
-  fs.root.getFile("data.json", { create: true, exclusive: true }, (entry) => {
-    path = fullPath;
-  }, handleError(error));
+  fs.root.getFile(
+    "data.json",
+    { create: true, exclusive: true },
+    (entry) => {
+      path = fullPath;
+    },
+    handleError(error)
+  );
 
   return path;
 }

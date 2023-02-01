@@ -22,9 +22,9 @@ The **`paste`** event fires when the user initiates a paste action through the b
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('paste', (event) => { });
+addEventListener("paste", (event) => {});
 
-onpaste = (event) => { };
+onpaste = (event) => {};
 ```
 
 ## Event type
@@ -67,8 +67,8 @@ function logPaste(event) {
   log.innerText = `Pasted!\n${log.innerText}`;
 }
 
-const editor = document.getElementById('editor');
-const log = document.getElementById('log');
+const editor = document.getElementById("editor");
+const log = document.getElementById("log");
 
 editor.oncopy = logCopy;
 editor.onpaste = logPaste;

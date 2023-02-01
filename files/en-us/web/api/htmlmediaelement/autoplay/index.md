@@ -60,7 +60,7 @@ interruption.
 ```js
 // Disable autoplay (recommended)
 // false is the default value
-document.querySelector('#video').autoplay = false;
+document.querySelector("#video").autoplay = false;
 ```
 
 ## Specifications

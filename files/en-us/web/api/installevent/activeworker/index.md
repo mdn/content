@@ -28,7 +28,7 @@ A {{domxref("ServiceWorker")}} object.
 ## Examples
 
 ```js
-self.addEventListener('install', (event) => {
+self.addEventListener("install", (event) => {
   const myActiveWorker = event.activeWorker;
 });
 ```

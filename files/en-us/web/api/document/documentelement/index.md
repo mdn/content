@@ -31,7 +31,7 @@ const firstTier = rootElement.childNodes;
 // such as <head> and <body>
 
 for (const child of firstTier) {
-   // do something with each direct child of the root element
+  // do something with each direct child of the root element
 }
 ```
 

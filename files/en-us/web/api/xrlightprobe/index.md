@@ -65,7 +65,7 @@ const glBinding = new XRWebGLBinding(xrSession, gl);
 const lightProbe = await xrSession.requestLightProbe();
 let glCubeMap = glBinding.getReflectionCubeMap(lightProbe);
 
-lightProbe.addEventListener('reflectionchange', () => {
+lightProbe.addEventListener("reflectionchange", () => {
   glCubeMap = glBinding.getReflectionCubeMap(lightProbe);
 });
 ```

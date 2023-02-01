@@ -49,9 +49,9 @@ history.
 ### JavaScript
 
 ```js
-document.getElementById('go-forward').addEventListener('click', (e) => {
+document.getElementById("go-forward").addEventListener("click", (e) => {
   window.history.forward();
-})
+});
 ```
 
 ## Specifications

@@ -67,7 +67,7 @@ function makeBold() {
       break;
   }
   document.querySelector("#output").textContent = `Output: ${message}`;
-  document.execCommand('bold');
+  document.execCommand("bold");
 }
 ```
 

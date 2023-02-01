@@ -75,12 +75,12 @@ function onXRSessionStarted(xrSession) {
   const gl = glCanvas.getContext("webgl2", { xrCompatible: true });
   const xrGlBinding = new XRWebGLBinding(xrSession, gl);
   const projectionLayer = xrGlBinding.createProjectionLayer({
-    textureType: "texture-array"
+    textureType: "texture-array",
   });
   xrSession.updateRenderState({
-    layers: [projectionLayer]
+    layers: [projectionLayer],
   });
- }
+}
 ```
 
 ## Specifications

@@ -41,7 +41,7 @@ to manage when an event is received.
 
 ```js
 xrSession.addEventListener("visibilitychange", (e) => {
-  switch(e.session.visibilityState) {
+  switch (e.session.visibilityState) {
     case "hidden":
       myEnableRendering(true);
       break;

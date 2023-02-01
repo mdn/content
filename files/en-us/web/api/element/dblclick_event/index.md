@@ -1,5 +1,5 @@
 ---
-title: 'Element: dblclick event'
+title: "Element: dblclick event"
 slug: Web/API/Element/dblclick_event
 page-type: web-api-event
 tags:
@@ -30,9 +30,9 @@ The **`dblclick`** event fires when a pointing device button (such as a mouse's 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('dblclick', (event) => {});
+addEventListener("dblclick", (event) => {});
 
-ondblclick = (event) => { };
+ondblclick = (event) => {};
 ```
 
 ## Event type
@@ -103,10 +103,10 @@ This example toggles the size of a card when you double click on it.
 ### JavaScript
 
 ```js
-const card = document.querySelector('aside');
+const card = document.querySelector("aside");
 
-card.addEventListener('dblclick', (e) => {
-  card.classList.toggle('large');
+card.addEventListener("dblclick", (e) => {
+  card.classList.toggle("large");
 });
 ```
 

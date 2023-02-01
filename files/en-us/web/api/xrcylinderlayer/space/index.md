@@ -33,7 +33,7 @@ The {{domxref("XRWebGLBinding.createCylinderLayer()")}} method creates a cylinde
 const cylinderLayer = xrGlBinding.createCylinderLayer({
   space: xrReferenceSpace,
   viewPixelWidth: 512,
-  viewPixelHeight: 512
+  viewPixelHeight: 512,
 });
 
 cylinderLayer.space = someOtherSpace;

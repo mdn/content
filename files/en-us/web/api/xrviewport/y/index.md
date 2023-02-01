@@ -21,7 +21,7 @@ tags:
   - augmented
   - origin
   - viewport
-  - 'y'
+  - "y"
 browser-compat: api.XRViewport.y
 ---
 

@@ -53,9 +53,9 @@ None ({{jsxref("undefined")}}).
 
 ```js
 const range = document.createRange();
-const newParent = document.createElement('h1');
+const newParent = document.createElement("h1");
 
-range.selectNode(document.querySelector('.header-text'));
+range.selectNode(document.querySelector(".header-text"));
 range.surroundContents(newParent);
 ```
 

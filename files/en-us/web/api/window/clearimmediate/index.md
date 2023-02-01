@@ -43,8 +43,7 @@ let immediateID = setImmediate(() => {
   // Run some code
 });
 
-document.getElementById("button")
-  .addEventListener(() => {
+document.getElementById("button").addEventListener(() => {
   clearImmediate(immediateID);
 });
 ```

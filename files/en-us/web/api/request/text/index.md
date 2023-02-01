@@ -37,9 +37,9 @@ A Promise that resolves with a {{jsxref("String")}}.
 ```js
 const text = "Hello world";
 
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: text
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: text,
 });
 
 request.text().then((text) => {

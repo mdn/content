@@ -46,7 +46,6 @@ chosen file, relative to a specified directory handle.
 
 ```js
 async function returnPathDirectories(directoryHandle) {
-
   // Get a file handle by showing a file picker:
   const handle = await self.showOpenFilePicker();
   if (!handle) {

@@ -64,14 +64,17 @@ A new [`NodeIterator`](/en-US/docs/Web/API/NodeIterator) object.
 
 ```js
 const nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    (node) => node.nodeName.toLowerCase() === 'p' ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  (node) =>
+    node.nodeName.toLowerCase() === "p"
+      ? NodeFilter.FILTER_ACCEPT
+      : NodeFilter.FILTER_REJECT
 );
 const pars = [];
 let currentNode;
 
-while (currentNode = nodeIterator.nextNode()) {
+while ((currentNode = nodeIterator.nextNode())) {
   pars.push(currentNode);
 }
 ```
@@ -80,18 +83,20 @@ The same, but using an object with an `acceptNode()` method:
 
 ```js
 const nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    {
-      acceptNode(node) {
-        return node.nodeName.toLowerCase() === 'p' ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
-      }
-    }
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return node.nodeName.toLowerCase() === "p"
+        ? NodeFilter.FILTER_ACCEPT
+        : NodeFilter.FILTER_REJECT;
+    },
+  }
 );
 const pars = [];
 let currentNode;
 
-while (currentNode = nodeIterator.nextNode()) {
+while ((currentNode = nodeIterator.nextNode())) {
   pars.push(currentNode);
 }
 ```

@@ -55,7 +55,7 @@ In this example, we see the client-side code needed to support merchant validati
 payRequest.onmerchantvalidation = (event) => {
   const validationDataPromise = getValidationData(event.validationURL);
   event.complete(validationDataPromise);
-}
+};
 
 function getValidationData(url) {
   // Retrieve the validation data from the URL

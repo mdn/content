@@ -32,10 +32,10 @@ The `XMLSerializer` interface provides the {{domxref("XMLSerializer.serializeToS
 The first, basic, example just serializes an entire document into a string containing XML.
 
 ```js
- const s = new XMLSerializer();
- const d = document;
- const str = s.serializeToString(d);
- saveXML(str);
+const s = new XMLSerializer();
+const d = document;
+const str = s.serializeToString(d);
+saveXML(str);
 ```
 
 This involves creating a new `XMLSerializer` object, then passing the {{domxref("Document")}} to be serialized into {{domxref("XMLSerializer.serializeToString", "serializeToString()")}}, which returns the XML equivalent of the document.
@@ -53,12 +53,12 @@ This example uses the {{domxref("Element.insertAdjacentHTML()")}} method to inse
 Because `insertAdjacentHTML()` accepts a string and not a `Node` as its second parameter, `XMLSerializer` is used to first convert the node into a string.
 
 ```js
-const inp = document.createElement('input');
+const inp = document.createElement("input");
 const XMLS = new XMLSerializer();
 const inp_xmls = XMLS.serializeToString(inp); // First convert DOM node into a string
 
 // Insert the newly created node into the document's body
-document.body.insertAdjacentHTML('afterbegin', inp_xmls);
+document.body.insertAdjacentHTML("afterbegin", inp_xmls);
 ```
 
 The code creates a new {{HTMLElement("input")}} element by calling {{domxref("Document.createElement()")}}, then serializes it into XML using {{domxref("XMLSerializer.serializeToString", "serializeToString()")}}.

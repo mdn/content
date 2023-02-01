@@ -121,7 +121,7 @@ then altering them, then setting them.
 
 ```js
 async function setVideoParams(sender, height, bitrate) {
-  const scaleRatio = sender.track.getSettings().height/height;
+  const scaleRatio = sender.track.getSettings().height / height;
   const params = sender.getParameters();
 
   params.encodings[0].scaleResolutionDownBy = Math.max(scaleRatio, 1);
@@ -154,13 +154,13 @@ Safari, and with Firefox, use code more like this:
 
 ```js
 async function setVideoParams(sender, height, bitrate) {
-  const scaleRatio = sender.track.getSettings().height/height;
+  const scaleRatio = sender.track.getSettings().height / height;
   const params = sender.getParameters();
 
   // If encodings is null, create it
 
   if (!params.encodings) {
-    params.encodings = [{ }];
+    params.encodings = [{}];
   }
 
   params.encodings[0].scaleResolutionDownBy = Math.max(scaleRatio, 1);

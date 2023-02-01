@@ -49,7 +49,7 @@ function sourceOpen() {
   console.log(this.readyState); // open
   const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, (buf) => {
-    sourceBuffer.addEventListener('updateend', () => {
+    sourceBuffer.addEventListener("updateend", () => {
       mediaSource.endOfStream();
       mediaSource.duration = 120;
       video.play();
@@ -57,7 +57,7 @@ function sourceOpen() {
     });
     sourceBuffer.appendBuffer(buf);
   });
-};
+}
 
 // …
 ```

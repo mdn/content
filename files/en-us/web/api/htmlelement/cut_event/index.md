@@ -1,5 +1,5 @@
 ---
-title: 'HTMLElement: cut event'
+title: "HTMLElement: cut event"
 slug: Web/API/HTMLElement/cut_event
 page-type: web-api-event
 tags:
@@ -22,9 +22,9 @@ The **`cut`** event fires when the user initiates a cut action through the brows
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('cut', (event) => { });
+addEventListener("cut", (event) => {});
 
-oncut = (event) => { };
+oncut = (event) => {};
 ```
 
 ## Event type
@@ -74,8 +74,8 @@ function preventCut(event) {
   log.innerText = `Cut blocked!\n${log.innerText}`;
 }
 
-const editor = document.getElementById('editor');
-const log = document.getElementById('log');
+const editor = document.getElementById("editor");
+const log = document.getElementById("log");
 
 editor.oncopy = logCopy;
 editor.oncut = preventCut;

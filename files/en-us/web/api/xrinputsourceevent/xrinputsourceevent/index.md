@@ -63,7 +63,7 @@ sends it to the {{domxref("XRSession")}}.
 ```js
 let event = new XRInputSourceEvent("select", {
   frame: eventFrame,
-  inputSource: source
+  inputSource: source,
 });
 if (event) {
   xrSession.dispatchEvent(event);

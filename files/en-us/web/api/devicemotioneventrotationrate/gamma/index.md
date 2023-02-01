@@ -1,5 +1,5 @@
 ---
-title: 'DeviceMotionEventRotationRate: gamma'
+title: "DeviceMotionEventRotationRate: gamma"
 slug: Web/API/DeviceMotionEventRotationRate/gamma
 page-type: web-api-instance-property
 tags:

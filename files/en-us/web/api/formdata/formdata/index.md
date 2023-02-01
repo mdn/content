@@ -42,7 +42,7 @@ const formData = new FormData();
 You could add a key/value pair to this using {{domxref("FormData.append", "append()")}}:
 
 ```js
-formData.append('username', 'Chris');
+formData.append("username", "Chris");
 ```
 
 ### Prepopulating from a HTML form element
@@ -78,10 +78,10 @@ output {
 #### JavaScript
 
 ```js
-const form = document.getElementById('form');
+const form = document.getElementById("form");
 const formData = new FormData(form);
 
-const output = document.getElementById('output');
+const output = document.getElementById("output");
 
 for (const [key, value] of formData) {
   output.textContent += `${key}: ${value}\n`;

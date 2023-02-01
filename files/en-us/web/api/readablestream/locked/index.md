@@ -32,7 +32,7 @@ const stream = new ReadableStream({
 
 const reader = stream.getReader();
 
-stream.locked
+stream.locked;
 // should return true, as the stream has been locked to a reader
 ```
 

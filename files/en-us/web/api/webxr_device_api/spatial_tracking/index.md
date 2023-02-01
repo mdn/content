@@ -1,5 +1,5 @@
 ---
-title: 'Spaces and reference spaces: Spatial tracking in WebXR'
+title: "Spaces and reference spaces: Spatial tracking in WebXR"
 slug: Web/API/WebXR_Device_API/Spatial_tracking
 page-type: guide
 tags:
@@ -108,7 +108,10 @@ The simplest case for using `getOffsetReferenceSpace()` is to transform a point 
 
 ```js
 let halfMeterTransform = new XRRigidTransform({
-        x: 0.5, y: 0.5, z: 0.5, w: 1.0
+  x: 0.5,
+  y: 0.5,
+  z: 0.5,
+  w: 1.0,
 });
 aRefSpace = aRefSpace.getOffsetReferenceSpace(halfMeterTransform);
 ```
@@ -123,8 +126,9 @@ Since most users would prefer that you maintain the same viewer position and fac
 
 ```js
 let viewerPose = frame.getViewerPose(worldReferenceSpace);
-let newSession = navigator.xr.requestSession("immersive-vr",
-      { requiredFeatures: "unbounded" });
+let newSession = navigator.xr.requestSession("immersive-vr", {
+  requiredFeatures: "unbounded",
+});
 worldReferenceSpace = await newSession.requestReferenceSpace("unbounded");
 viewerPose = worldReferenceSpace.getOffsetReferenceSpace(viewerPose.transform);
 ```
@@ -156,8 +160,11 @@ function myDrawFrame(currentFrameTime, frame) {
     }
 
     let offsetMatrix = mat4.create();
-    mat4.sub(offsetMatrix, previousViewerPose.transform.matrix,
-             viewerPose.transform.matrix);
+    mat4.sub(
+      offsetMatrix,
+      previousViewerPose.transform.matrix,
+      viewerPose.transform.matrix
+    );
 
     previousViewerPose = viewerPose;
   }

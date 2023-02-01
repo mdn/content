@@ -32,8 +32,8 @@ console.
 
 ```js
 reader.closed.then(() => {
-  console.log('reader closed');
-})
+  console.log("reader closed");
+});
 ```
 
 ## Specifications

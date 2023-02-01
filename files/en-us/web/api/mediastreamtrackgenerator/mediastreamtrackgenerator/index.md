@@ -41,7 +41,7 @@ new MediaStreamTrackGenerator(options)
 In the following example a new video `MediaStreamTrackGenerator` is created.
 
 ```js
-const trackGenerator = new MediaStreamTrackGenerator({ kind: 'video' });
+const trackGenerator = new MediaStreamTrackGenerator({ kind: "video" });
 ```
 
 ## Specifications

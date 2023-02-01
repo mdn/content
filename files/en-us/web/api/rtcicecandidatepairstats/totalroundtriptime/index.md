@@ -43,8 +43,9 @@ of the {{domxref("RTCIceCandidatePairStats.responsesReceived", "responsesReceive
 property:
 
 ```js
-rtt = rtcIceCandidatePairStats.totalRoundTripTime /
-        rtcIceCandidatePairStats.responsesReceived;
+rtt =
+  rtcIceCandidatePairStats.totalRoundTripTime /
+  rtcIceCandidatePairStats.responsesReceived;
 ```
 
 ## Specifications

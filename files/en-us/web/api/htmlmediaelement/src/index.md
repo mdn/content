@@ -34,7 +34,7 @@ attribute.
 ## Examples
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.src); // ""
 ```
 

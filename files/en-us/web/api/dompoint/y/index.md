@@ -12,7 +12,7 @@ tags:
   - Point
   - Property
   - Reference
-  - 'y'
+  - "y"
 browser-compat: api.DOMPoint.y
 ---
 

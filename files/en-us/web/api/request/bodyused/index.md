@@ -25,9 +25,9 @@ A boolean value.
 ## Examples
 
 ```js
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: 'Hello world'
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: "Hello world",
 });
 
 request.bodyUsed; // false

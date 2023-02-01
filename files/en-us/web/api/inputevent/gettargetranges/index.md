@@ -43,7 +43,10 @@ The following function returns true if `beforeinput`, and thus
 
 ```js
 function isBeforeInputEventAvailable() {
-  return window.InputEvent && typeof InputEvent.prototype.getTargetRanges === "function";
+  return (
+    window.InputEvent &&
+    typeof InputEvent.prototype.getTargetRanges === "function"
+  );
 }
 ```
 
@@ -56,10 +59,10 @@ event to log the result of `getTargetRanges()`.
 ```js
 const editableElem = document.querySelector('[contenteditable="true"]');
 
-editableElem.addEventListener('beforeinput', (e) => {
-    const targetRanges = e.getTargetRanges();
-    console.log(targetRanges);
-})
+editableElem.addEventListener("beforeinput", (e) => {
+  const targetRanges = e.getTargetRanges();
+  console.log(targetRanges);
+});
 ```
 
 ## Specifications

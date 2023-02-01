@@ -31,7 +31,7 @@ The below example creates a {{domxref("URLPattern")}} object with `*` for the
 `search` part. This pattern is a wildcard, thus matching any search part.
 
 ```js
-const pattern = new URLPattern('https://example.com?*');
+const pattern = new URLPattern("https://example.com?*");
 console.log(pattern.search); // '*'
 ```
 

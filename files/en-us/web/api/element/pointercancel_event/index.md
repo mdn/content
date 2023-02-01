@@ -1,5 +1,5 @@
 ---
-title: 'Element: pointercancel event'
+title: "Element: pointercancel event"
 slug: Web/API/Element/pointercancel_event
 tags:
   - Event
@@ -32,9 +32,9 @@ Some examples of situations that will trigger a `pointercancel` event:
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pointercancel', (event) => {});
+addEventListener("pointercancel", (event) => {});
 
-onpointercancel = (event) => { };
+onpointercancel = (event) => {};
 ```
 
 ## Event type
@@ -73,20 +73,20 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 Using `addEventListener()`:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('pointercancel', (event) => {
-  console.log('Pointer event cancelled');
+para.addEventListener("pointercancel", (event) => {
+  console.log("Pointer event cancelled");
 });
 ```
 
 Using the `onpointercancel` event handler property:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.onpointercancel = (event) => {
-  console.log('Pointer event cancelled');
+  console.log("Pointer event cancelled");
 };
 ```
 

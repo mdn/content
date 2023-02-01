@@ -12,7 +12,7 @@ tags:
 In all modern browsers, you can create a new XMLHttpRequest object using the following code:
 
 ```js
-const request = new XMLHttpRequest()
+const request = new XMLHttpRequest();
 ```
 
 However, if you need to also support Internet Explorer 6 and older, you need to extend your code like this:
@@ -20,11 +20,11 @@ However, if you need to also support Internet Explorer 6 and older, you need to 
 ```js
 let request;
 if (window.XMLHttpRequest) {
-    //Firefox, Opera, IE7, and other browsers will use the native object
-    request = new XMLHttpRequest();
+  //Firefox, Opera, IE7, and other browsers will use the native object
+  request = new XMLHttpRequest();
 } else {
-    //IE 5 and 6 will use the ActiveX control
-    request = new ActiveXObject("Microsoft.XMLHTTP");
+  //IE 5 and 6 will use the ActiveX control
+  request = new ActiveXObject("Microsoft.XMLHTTP");
 }
 ```
 

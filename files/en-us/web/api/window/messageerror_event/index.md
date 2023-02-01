@@ -1,5 +1,5 @@
 ---
-title: 'Window: messageerror event'
+title: "Window: messageerror event"
 slug: Web/API/Window/messageerror_event
 page-type: web-api-event
 tags:
@@ -22,9 +22,9 @@ This event is not cancellable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('messageerror', (event) => { });
+addEventListener("messageerror", (event) => {});
 
-onmessageerror = (event) => { };
+onmessageerror = (event) => {};
 ```
 
 ## Event type
@@ -53,8 +53,8 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 Listen for `messageerror` using {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js
-window.addEventListener('messageerror', (event) => {
-    console.error(event);
+window.addEventListener("messageerror", (event) => {
+  console.error(event);
 });
 ```
 
@@ -62,7 +62,7 @@ The same, but using the `onmessageerror` event handler property:
 
 ```js
 window.onmessageerror = (event) => {
-    console.error(event);
+  console.error(event);
 };
 ```
 

@@ -64,8 +64,7 @@ let requestHandle = null;
 let xrSession = null;
 
 if (XR) {
-  XR.isSessionSupported('immersive-vr')
-  .then((isSupported) => {
+  XR.isSessionSupported("immersive-vr").then((isSupported) => {
     if (isSupported) {
       startXR();
     }

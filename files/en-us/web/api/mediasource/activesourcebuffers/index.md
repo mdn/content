@@ -39,7 +39,7 @@ function sourceOpen() {
   console.log(mediaSource.readyState); // open
   const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, (buf) => {
-    sourceBuffer.addEventListener('updateend', () => {
+    sourceBuffer.addEventListener("updateend", () => {
       mediaSource.endOfStream();
       console.log(mediaSource.activeSourceBuffers);
       // will contain the source buffer that was added above,
@@ -49,7 +49,7 @@ function sourceOpen() {
     });
     sourceBuffer.appendBuffer(buf);
   });
-};
+}
 
 // …
 ```

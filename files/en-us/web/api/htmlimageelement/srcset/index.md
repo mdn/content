@@ -110,9 +110,7 @@ a `2x` descriptor) should be used for 2x displays.
   <img
     src="/en-us/web/html/element/img/clock-demo-200px.png"
     alt="Clock"
-    srcset="
-      /en-us/web/html/element/img/clock-demo-400px.png 2x
-    " />
+    srcset="/en-us/web/html/element/img/clock-demo-400px.png 2x" />
 </div>
 ```
 

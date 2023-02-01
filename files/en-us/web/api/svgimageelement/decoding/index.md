@@ -33,8 +33,8 @@ A string representing the decoding hint. Possible values are:
 
 ```js
 const img = new Image();
-img.decoding = 'sync';
-img.src = 'img/logo.svg';
+img.decoding = "sync";
+img.src = "img/logo.svg";
 ```
 
 ## Specifications

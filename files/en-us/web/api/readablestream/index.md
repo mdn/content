@@ -55,7 +55,7 @@ In the following example, an artificial {{domxref("Response")}} is created to st
 It demonstrates the usage of a {{domxref("ReadableStream")}} in combination with a {{jsxref("Uint8Array")}}.
 
 ```js
-fetch('https://www.example.org')
+fetch("https://www.example.org")
   .then((response) => response.body)
   .then((rb) => {
     const reader = rb.getReader();
@@ -68,7 +68,7 @@ fetch('https://www.example.org')
           reader.read().then(({ done, value }) => {
             // If there is no more data to read
             if (done) {
-              console.log('done', done);
+              console.log("done", done);
               controller.close();
               return;
             }
@@ -86,7 +86,7 @@ fetch('https://www.example.org')
   })
   .then((stream) =>
     // Respond with our stream
-    new Response(stream, { headers: { 'Content-Type': 'text/html' } }).text()
+    new Response(stream, { headers: { "Content-Type": "text/html" } }).text()
   )
   .then((result) => {
     // Do things with result

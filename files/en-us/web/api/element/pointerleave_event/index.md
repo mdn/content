@@ -1,5 +1,5 @@
 ---
-title: 'Element: pointerleave event'
+title: "Element: pointerleave event"
 slug: Web/API/Element/pointerleave_event
 tags:
   - Event
@@ -20,9 +20,9 @@ The `pointerleave` event is fired when a pointing device is moved out of the hit
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pointerleave', (event) => {});
+addEventListener("pointerleave", (event) => {});
 
-onpointerleave = (event) => { };
+onpointerleave = (event) => {};
 ```
 
 ## Event type
@@ -61,20 +61,20 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 Using `addEventListener()`:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('pointerleave', (event) => {
-  console.log('Pointer left element');
+para.addEventListener("pointerleave", (event) => {
+  console.log("Pointer left element");
 });
 ```
 
 Using the `onpointerleave` event handler property:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.onpointerleave = (event) => {
-  console.log('Pointer left element');
+  console.log("Pointer left element");
 };
 ```
 

@@ -53,7 +53,7 @@ function switchToRemoteUI() {
 
   // Stop monitoring the availability of remote playback devices.
   videoElem.remote.cancelWatchAvailability();
-};
+}
 ```
 
 ## Specifications

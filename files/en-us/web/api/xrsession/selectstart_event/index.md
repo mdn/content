@@ -1,5 +1,5 @@
 ---
-title: 'XRSession: selectstart event'
+title: "XRSession: selectstart event"
 slug: Web/API/XRSession/selectstart_event
 page-type: web-api-event
 tags:
@@ -36,9 +36,9 @@ The {{domxref("Element.beforexrselect_event", "beforexrselect")}} is fired befor
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('selectstart', (event) => { })
+addEventListener("selectstart", (event) => {});
 
-onselectstart = (event) => { }
+onselectstart = (event) => {};
 ```
 
 ## Event type
@@ -102,7 +102,7 @@ function onSelectionEvent(event) {
     return;
   }
 
-  switch(event.type) {
+  switch (event.type) {
     case "selectstart":
       targetObj = myBeginTracking(targetRayPose.matrix);
       break;
