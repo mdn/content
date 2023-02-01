@@ -162,6 +162,7 @@ p {
   padding: 1em;
 }
 ```
+<!-- these colors are intentionally pink and blue. WCAG requires color contrast between text and background, not between border colors. -->
 
 #### Result
 
