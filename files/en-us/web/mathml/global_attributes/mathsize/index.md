@@ -20,10 +20,10 @@ The **`mathsize`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) 
 ```html
 <!-- <length> values -->
 <math mathsize="12px">
-<math mathsize="0.8em">
-
-<!-- <percentage> values -->
-<math mathsize="80%">
+  <math mathsize="0.8em">
+    <!-- <percentage> values -->
+    <math mathsize="80%"></math></math
+></math>
 ```
 
 ### Values

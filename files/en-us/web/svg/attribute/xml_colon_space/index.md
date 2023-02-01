@@ -70,7 +70,7 @@ svg {
 
   - : This value tells the user agent to convert all newline and tab characters into spaces. Then, it draws all space characters (including leading, trailing and multiple consecutive space characters).
 
-    For example, the string "a   b" (three spaces between "a" and "b") separates "a" and "b" more than "a b" (one space between "a" and "b").
+    For example, the string "a b" (three spaces between "a" and "b") separates "a" and "b" more than "a b" (one space between "a" and "b").
 
 ## Specifications
 

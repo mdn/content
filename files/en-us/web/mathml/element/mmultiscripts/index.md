@@ -17,18 +17,11 @@ MathML uses the syntax below, that is a base expression, followed by an arbitrar
 
 ```html
 <mmultiscripts>
-  base
-  postsubscript1 postsuperscript1
-  postsubscript2 postsuperscript2
-  postsubscript3 postsuperscript3
-  ...
-  postsubscriptN postsuperscriptN
-  <mprescripts/>                ⎫
-  presubscript1 presuperscript1 ⎪
-  presubscript2 presuperscript2 ⎬ Optional
-  presubscript3 presuperscript3 ⎪
-  ...                           ⎪
-  presubscriptM presuperscriptM ⎭
+  base postsubscript1 postsuperscript1 postsubscript2 postsuperscript2
+  postsubscript3 postsuperscript3 ... postsubscriptN postsuperscriptN
+  <mprescripts /> ⎫ presubscript1 presuperscript1 ⎪ presubscript2
+  presuperscript2 ⎬ Optional presubscript3 presuperscript3 ⎪ ... ⎪ presubscriptM
+  presuperscriptM ⎭
 </mmultiscripts>
 ```
 
@@ -52,12 +45,17 @@ Children after the `<mprescripts/>` element are placed as pre-scripts (before th
 ```html
 <math display="block">
   <mmultiscripts>
-    <mi>X</mi>      <!-- base expression -->
-    <mi>d</mi>      <!-- postsubscript -->
-    <mi>c</mi>      <!-- postsuperscript -->
+    <mi>X</mi>
+    <!-- base expression -->
+    <mi>d</mi>
+    <!-- postsubscript -->
+    <mi>c</mi>
+    <!-- postsuperscript -->
     <mprescripts />
-    <mi>b</mi>      <!-- presubscript -->
-    <mi>a</mi>      <!-- presuperscript -->
+    <mi>b</mi>
+    <!-- presubscript -->
+    <mi>a</mi>
+    <!-- presuperscript -->
   </mmultiscripts>
 </math>
 ```
@@ -71,12 +69,17 @@ Empty `<mrow>` elements can be used to represent absent scripts:
 ```html
 <math display="block">
   <mmultiscripts>
-    <mi>X</mi>      <!-- base expression -->
-    <mrow></mrow>   <!-- postsubscript -->
-    <mi>c</mi>      <!-- postsuperscript -->
+    <mi>X</mi>
+    <!-- base expression -->
+    <mrow></mrow>
+    <!-- postsubscript -->
+    <mi>c</mi>
+    <!-- postsuperscript -->
     <mprescripts />
-    <mi>b</mi>      <!-- presubscript -->
-    <mrow></mrow>   <!-- presuperscript -->
+    <mi>b</mi>
+    <!-- presubscript -->
+    <mrow></mrow>
+    <!-- presuperscript -->
   </mmultiscripts>
 </math>
 ```

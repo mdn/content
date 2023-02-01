@@ -32,8 +32,7 @@ In this example, an [munder](/en-US/docs/Web/MathML/Element/munder) element is u
 ## Syntax
 
 ```html
-<math displaystyle="true"></math>
-<math displaystyle="false"></math>
+<math displaystyle="true"></math> <math displaystyle="false"></math>
 ```
 
 ### Values

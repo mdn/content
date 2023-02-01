@@ -27,9 +27,7 @@ autocomplete="off"
 You can do this either for an entire form, or for specific input elements in a form:
 
 ```html
-<form method="post" action="/form" autocomplete="off">
-  …
-</form>
+<form method="post" action="/form" autocomplete="off">…</form>
 ```
 
 ```html

@@ -29,14 +29,14 @@ Let's start with notifications — they can work without push, but are very usef
 To show a notification, we have to request permission to do so first. Instead of showing the notification immediately though, best practice dictates that we should show the popup when the user requests it by clicking on a button:
 
 ```js
-const button = document.getElementById('notifications');
-button.addEventListener('click', () => {
+const button = document.getElementById("notifications");
+button.addEventListener("click", () => {
   Notification.requestPermission().then((result) => {
-    if (result === 'granted') {
+    if (result === "granted") {
       randomNotification();
     }
   });
-})
+});
 ```
 
 This shows a popup using the operating system's own notifications service:
@@ -90,7 +90,9 @@ From the server-side, the whole process has to be encrypted with public and priv
 To receive push messages, we can listen to the {{domxref("ServiceWorkerGlobalScope.push_event", "push")}} event in the Service Worker file:
 
 ```js
-self.addEventListener('push', (e) => { /* ... */ });
+self.addEventListener("push", (e) => {
+  /* ... */
+});
 ```
 
 The data can be retrieved and then shown as a notification to the user immediately. This, for example, can be used to remind the user about something, or let them know about new content being available in the app.
@@ -112,9 +114,11 @@ Let's explore all of these
 The `index.js` file starts by registering the service worker:
 
 ```js
-navigator.serviceWorker.register('service-worker.js')
+navigator.serviceWorker
+  .register("service-worker.js")
   .then((registration) => {
-    return registration.pushManager.getSubscription()
+    return registration.pushManager
+      .getSubscription()
       .then(async (subscription) => {
         // registration part
       });
@@ -133,13 +137,13 @@ async (subscription) => {
   if (subscription) {
     return subscription;
   }
-}
+};
 ```
 
 If the user has already subscribed, we then return the subscription object and move to the subscription part. If not, we initialize a new subscription:
 
 ```js
-const response = await fetch('./vapidPublicKey');
+const response = await fetch("./vapidPublicKey");
 const vapidPublicKey = await response.text();
 const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
 ```
@@ -151,17 +155,17 @@ The app can now use the {{domxref("PushManager")}} to subscribe the new user. Th
 ```js
 registration.pushManager.subscribe({
   userVisibleOnly: true,
-  applicationServerKey: convertedVapidKey
+  applicationServerKey: convertedVapidKey,
 });
 ```
 
 Now let's move to the subscription part — the app first sends the subscription details as JSON to the server using Fetch.
 
 ```js
-fetch('./register', {
-  method: 'post',
+fetch("./register", {
+  method: "post",
   headers: {
-    'Content-type': 'application/json',
+    "Content-type": "application/json",
   },
   body: JSON.stringify({ subscription }),
 });
@@ -170,15 +174,15 @@ fetch('./register', {
 Then the {{domxref("Element.click_event", "onclick")}} function on the _Subscribe_ button is defined:
 
 ```js
-document.getElementById('doIt').onclick = () => {
-  const payload = document.getElementById('notification-payload').value;
-  const delay = document.getElementById('notification-delay').value;
-  const ttl = document.getElementById('notification-ttl').value;
+document.getElementById("doIt").onclick = () => {
+  const payload = document.getElementById("notification-payload").value;
+  const delay = document.getElementById("notification-delay").value;
+  const ttl = document.getElementById("notification-ttl").value;
 
-  fetch('./sendNotification', {
-    method: 'post',
+  fetch("./sendNotification", {
+    method: "post",
     headers: {
-      'Content-type': 'application/json',
+      "Content-type": "application/json",
     },
     body: JSON.stringify({
       subscription,
@@ -201,17 +205,19 @@ The server part is written in Node.js and needs to be hosted somewhere suitable,
 The [web-push module](https://www.npmjs.com/package/web-push) is used to set the VAPID keys, and optionally generate them if they are not available yet.
 
 ```js
-const webPush = require('web-push');
+const webPush = require("web-push");
 
 if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
-  console.log("You must set the VAPID_PUBLIC_KEY and VAPID_PRIVATE_KEY "+
-    "environment variables. You can use the following ones:");
+  console.log(
+    "You must set the VAPID_PUBLIC_KEY and VAPID_PRIVATE_KEY " +
+      "environment variables. You can use the following ones:"
+  );
   console.log(webPush.generateVAPIDKeys());
   return;
 }
 
 webPush.setVapidDetails(
-  'https://example.com',
+  "https://example.com",
   process.env.VAPID_PUBLIC_KEY,
   process.env.VAPID_PRIVATE_KEY
 );
@@ -234,18 +240,19 @@ module.exports = (app, route) => {
     const subscription = req.body.subscription;
     const payload = req.body.payload;
     const options = {
-      TTL: req.body.ttl
+      TTL: req.body.ttl,
     };
 
     setTimeout(() => {
-      webPush.sendNotification(subscription, payload, options)
-      .then(() => {
-        res.sendStatus(201);
-      })
-      .catch((error) => {
-        console.log(error);
-        res.sendStatus(500);
-      });
+      webPush
+        .sendNotification(subscription, payload, options)
+        .then(() => {
+          res.sendStatus(201);
+        })
+        .catch((error) => {
+          console.log(error);
+          res.sendStatus(500);
+        });
     }, req.body.delay * 1000);
   });
 };
@@ -256,10 +263,10 @@ module.exports = (app, route) => {
 The last file we will look at is the service worker:
 
 ```js
-self.addEventListener('push', (event) => {
-  const payload = event.data?.text() ?? 'no payload';
+self.addEventListener("push", (event) => {
+  const payload = event.data?.text() ?? "no payload";
   event.waitUntil(
-    self.registration.showNotification('ServiceWorker Cookbook', {
+    self.registration.showNotification("ServiceWorker Cookbook", {
       body: payload,
     })
   );

@@ -8,6 +8,22 @@ build/
 # The following paths have had a full pass
 !files/en-us/glossary/**/*.md
 !files/en-us/mdn/**/*.md
+!files/en-us/web/events/**/*.md
+!files/en-us/web/guide/**/*.md
+!files/en-us/web/manifest/**/*.md
+!files/en-us/web/mathml/**/*.md
+!files/en-us/web/media/**/*.md
+!files/en-us/web/performance/**/*.md
+!files/en-us/web/privacy/**/*.md
+!files/en-us/web/progressive_web_apps/**/*.md
+!files/en-us/web/security/**/*.md
+!files/en-us/web/svg/**/*.md
+!files/en-us/web/text_fragments/**/*.md
+!files/en-us/web/web_components/**/*.md
+!files/en-us/web/webdriver/**/*.md
+!files/en-us/web/xml/**/*.md
+!files/en-us/web/xpath/**/*.md
+!files/en-us/web/xslt/**/*.md
 
 # TODO: check if formatting kitchensink breaks Yari tests
 files/en-us/mdn/kitchensink/index.md

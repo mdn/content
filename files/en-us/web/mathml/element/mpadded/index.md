@@ -46,9 +46,13 @@ For the `depth`, `height`, `lspace`, `voffset` and `width` attributes, some brow
 
 ```html
 <math display="block">
-  <mpadded width="400px" height="5em" depth="4em"
-           lspace="300px" voffset="-2em"
-           style="background: lightblue">
+  <mpadded
+    width="400px"
+    height="5em"
+    depth="4em"
+    lspace="300px"
+    voffset="-2em"
+    style="background: lightblue">
     <mi>x</mi>
     <mo>+</mo>
     <mi>y</mi>

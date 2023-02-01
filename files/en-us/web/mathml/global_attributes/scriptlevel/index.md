@@ -34,9 +34,13 @@ The **`scriptlevel`** [global attribute](/en-US/docs/Web/MathML/Global_attribute
 ## Syntax
 
 ```html
-<math scriptlevel="-1"> <!-- decrease math-depth by 1 -->
-<math scriptlevel="+2"> <!-- increase math-depth by 2 -->
-<math scriptlevel="0"> <!-- reset math-depth to 0 -->
+<math scriptlevel="-1">
+  <!-- decrease math-depth by 1 -->
+  <math scriptlevel="+2">
+    <!-- increase math-depth by 2 -->
+    <math scriptlevel="0"> <!-- reset math-depth to 0 --></math></math
+  ></math
+>
 ```
 
 ### Values
