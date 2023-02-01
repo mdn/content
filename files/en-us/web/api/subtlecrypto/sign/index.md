@@ -199,7 +199,7 @@ let encoded = getMessageEncoding();
 let signature = await window.crypto.subtle.sign(
   {
     name: "ECDSA",
-    hash: {name: "SHA-384"},
+    hash: { name: "SHA-384" },
   },
   privateKey,
   encoded
@@ -225,11 +225,7 @@ function getMessageEncoding() {
 }
 
 let encoded = getMessageEncoding();
-let signature = await window.crypto.subtle.sign(
-  "HMAC",
-  key,
-  encoded
-);
+let signature = await window.crypto.subtle.sign("HMAC", key, encoded);
 ```
 
 ## Specifications

@@ -40,7 +40,7 @@ recognition.onresult = (event) => {
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
   console.log(event.emma);
-}
+};
 ```
 
 ## Browser compatibility

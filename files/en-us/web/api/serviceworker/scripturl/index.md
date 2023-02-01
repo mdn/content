@@ -25,7 +25,7 @@ A string.
 ## Examples
 
 ```js
-TBD
+TBD;
 ```
 
 ## Specifications
