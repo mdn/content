@@ -41,25 +41,25 @@
   dependencies:
     "@mdn/browser-compat-data" latest
 
-"@mdn/browser-compat-data@^5.2.31":
-  version "5.2.31"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.31.tgz#c8010d5b1abd3a2b0942703ee27695713ba90b23"
-  integrity sha512-tOav2FmnXMkdJqyq7ne3l/+YK6r+Q8JIOxnAxP+lfFx28HOLuYLI7thntMGK0eghG6p9ivXcCbDQ2Q58cw3zUw==
+"@mdn/browser-compat-data@^5.2.32":
+  version "5.2.32"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.32.tgz#8a2e2421015dc3b87b92bca62e7759e01968434b"
+  integrity sha512-EA8skQ+SM6VQNrToJjVEbooQ+B+eytVmJstaCI8UlB8IXvW5i/RfO3mZqu8pNUJK8zhKCIAX7PIdPE4k+rhyzw==
 
 "@mdn/browser-compat-data@latest":
   version "5.2.24"
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.24.tgz#45c85391411987d12519d214d80c324c5100bcbc"
   integrity sha512-KZJKMObObkYFUgEWEbIJ7voJ0iGm3XqhJLkS5jyRLSMoSL7PnmCjes+CttpSzgyLu7DwJsFWsRvKBgYFxb5e7A==
 
-"@mdn/yari@1.33.22":
-  version "1.33.22"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.33.22.tgz#0a44d31de54dba62e9464febf1975dad1869869f"
-  integrity sha512-KkTvoiyca72788zpJpdsVCdddfyMwi02nQEB43LTnNxnv9e26osuUEypjbXl5F8O+pTtvYI8NgtKFBMypgTDFw==
+"@mdn/yari@1.33.31":
+  version "1.33.31"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.33.31.tgz#688c962b11720c842f5d9985eddded31d7682149"
+  integrity sha512-WT+QyVVAgHQGCIkXf5FhVPw2dDSZpdAyqEfEAjfAaaEe6kNAi85bDbmmG1mOlSxdP0Gw3/KysbNjmj6I2Rsh4A==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
     "@mdn/bcd-utils-api" "^0.0.3"
-    "@mdn/browser-compat-data" "^5.2.31"
+    "@mdn/browser-compat-data" "^5.2.32"
     "@mozilla/glean" "1.3.0"
     "@use-it/interval" "^1.0.0"
     "@webref/css" "^5.4.4"
@@ -74,7 +74,7 @@
     cookie-parser "^1.4.6"
     css-tree "^2.3.1"
     dayjs "^1.11.7"
-    dexie "^3.2.2"
+    dexie "^3.2.3"
     dotenv "^16.0.3"
     ejs "^3.1.8"
     express "^4.18.2"
@@ -1315,10 +1315,10 @@ destroy@1.2.0:
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.2.0.tgz#4803735509ad8be552934c67df614f94e66fa015"
   integrity sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg==
 
-dexie@^3.2.2:
-  version "3.2.2"
-  resolved "https://registry.yarnpkg.com/dexie/-/dexie-3.2.2.tgz#fa6f2a3c0d6ed0766f8d97a03720056f88fe0e01"
-  integrity sha512-q5dC3HPmir2DERlX+toCBbHQXW5MsyrFqPFcovkH9N2S/UW/H3H5AWAB6iEOExeraAu+j+zRDG+zg/D7YhH0qg==
+dexie@^3.2.3:
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/dexie/-/dexie-3.2.3.tgz#f35c91ca797599df8e771b998e9ae9669c877f8c"
+  integrity sha512-iHayBd4UYryDCVUNa3PMsJMEnd8yjyh5p7a+RFeC8i8n476BC9wMhVvqiImq5zJZJf5Tuer+s4SSj+AA3x+ZbQ==
 
 diagnostics@^1.1.1:
   version "1.1.1"
