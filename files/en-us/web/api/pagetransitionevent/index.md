@@ -37,7 +37,7 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 ### JavaScript
 
 ```js
-window.addEventListener('pageshow', (event) => {
+window.addEventListener("pageshow", (event) => {
   if (event.persisted) {
     alert("The page was cached by the browser");
   } else {

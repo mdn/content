@@ -43,7 +43,7 @@ navigator.serviceWorker.ready.then((reg) => {
   reg.pushManager.getSubscription().then((subscription) => {
     const mySubscription = subscription.toJSON();
     // do something with subscription details
-  })
+  });
 });
 ```
 

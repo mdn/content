@@ -1,5 +1,5 @@
 ---
-title: 'OfflineAudioContext: complete event'
+title: "OfflineAudioContext: complete event"
 slug: Web/API/OfflineAudioContext/complete_event
 page-type: web-api-event
 tags:
@@ -23,9 +23,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('complete', (event) => { });
+addEventListener("complete", (event) => {});
 
-oncomplete = (event) => { };
+oncomplete = (event) => {};
 ```
 
 ## Event type
@@ -48,11 +48,11 @@ When processing is complete, you might want to use the `complete` event handler 
 ```js
 const offlineAudioCtx = new OfflineAudioContext();
 
-offlineAudioCtx.addEventListener('complete', () => {
-  console.log('Offline audio processing now complete');
-  showModalDialog('Song processed and ready to play');
+offlineAudioCtx.addEventListener("complete", () => {
+  console.log("Offline audio processing now complete");
+  showModalDialog("Song processed and ready to play");
   playBtn.disabled = false;
-})
+});
 ```
 
 You can also set up the event handler using the `oncomplete` property:
@@ -61,10 +61,10 @@ You can also set up the event handler using the `oncomplete` property:
 const offlineAudioCtx = new OfflineAudioContext();
 
 offlineAudioCtx.oncomplete = () => {
-  console.log('Offline audio processing now complete');
-  showModalDialog('Song processed and ready to play');
+  console.log("Offline audio processing now complete");
+  showModalDialog("Song processed and ready to play");
   playBtn.disabled = false;
-}
+};
 ```
 
 ## Specifications

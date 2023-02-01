@@ -69,7 +69,7 @@ None ({{jsxref("undefined")}}).
 ```js
 queueMicrotask(() => {
   // function contents here
-})
+});
 ```
 
 Taken from the [queueMicrotask spec](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing):
@@ -82,11 +82,13 @@ MyElement.prototype.loadData = function (url) {
       this.dispatchEvent(new Event("load"));
     });
   } else {
-    fetch(url).then((res) => res.arrayBuffer()).then((data) => {
-      this._cache[url] = data;
-      this._setData(data);
-      this.dispatchEvent(new Event("load"));
-    });
+    fetch(url)
+      .then((res) => res.arrayBuffer())
+      .then((data) => {
+        this._cache[url] = data;
+        this._setData(data);
+        this.dispatchEvent(new Event("load"));
+      });
   }
 };
 ```

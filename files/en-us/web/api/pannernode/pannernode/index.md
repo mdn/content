@@ -87,9 +87,9 @@ new PannerNode(context, options)
 const ctx = new AudioContext();
 
 const options = {
-  positionX : 1,
-  maxDistance: 5000
-}
+  positionX: 1,
+  maxDistance: 5000,
+};
 
 const myPanner = new PannerNode(ctx, options);
 ```

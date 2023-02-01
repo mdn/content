@@ -27,7 +27,7 @@ A string containing the ID.
 ## Examples
 
 ```js
-self.addEventListener('paymentrequest', e => {
+self.addEventListener("paymentrequest", (e) => {
   console.log(e.paymentRequestId);
 });
 ```
