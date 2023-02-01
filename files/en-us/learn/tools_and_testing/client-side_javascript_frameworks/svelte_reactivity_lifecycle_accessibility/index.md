@@ -1,5 +1,5 @@
 ---
-title: 'Advanced Svelte: Reactivity, lifecycle, accessibility'
+title: "Advanced Svelte: Reactivity, lifecycle, accessibility"
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility
 tags:
@@ -118,8 +118,15 @@ Now we'll tackle the _Check All_ and _Remove Completed_ buttons. Let's create a 
    </script>
 
    <div class="btn-group">
-     <button type="button" class="btn btn__primary" on:click={checkAll}>{completed ? 'Check' : 'Uncheck'} all</button>
-     <button type="button" class="btn btn__primary" on:click={removeCompleted}>Remove completed</button>
+     <button type="button" class="btn btn__primary" on:click="{checkAll}">
+       {completed ? 'Check' : 'Uncheck'} all
+     </button>
+     <button
+       type="button"
+       class="btn btn__primary"
+       on:click="{removeCompleted}">
+       Remove completed
+     </button>
    </div>
    ```
 
@@ -130,25 +137,25 @@ Now we'll tackle the _Check All_ and _Remove Completed_ buttons. Let's create a 
    Add the following import statement below the existing ones:
 
    ```js
-   import MoreActions from './MoreActions.svelte';
+   import MoreActions from "./MoreActions.svelte";
    ```
 
 4. Then add the described functions at the end of the `<script>` section:
 
    ```js
-   const checkAllTodos = (completed) => todos.forEach((t) => t.completed = completed);
+   const checkAllTodos = (completed) =>
+     todos.forEach((t) => (t.completed = completed));
 
-   const removeCompletedTodos = () => todos = todos.filter((t) => !t.completed);
+   const removeCompletedTodos = () =>
+     (todos = todos.filter((t) => !t.completed));
    ```
 
 5. Now go to the bottom of the `Todos.svelte` markup section and replace the `<div class="btn-group">` element that we copied into `MoreActions.svelte` with a call to the `MoreActions` component, like so:
 
    ```html
    <!-- MoreActions -->
-   <MoreActions
-     on:checkAll={(e) => checkAllTodos(e.detail)}
-     on:removeCompleted={removeCompletedTodos}
-   />
+   <MoreActions on:checkAll={(e) => checkAllTodos(e.detail)}
+   on:removeCompleted={removeCompletedTodos} />
    ```
 
 6. OK, let's go back into the app and try it out. You'll find that the _Remove Completed_ button works fine, but the _Check All_/_Uncheck All_ button just silently fails.
@@ -163,9 +170,9 @@ To see what's happening we can log the `todos` array from the `checkAllTodos()` 
 
    ```js
    const checkAllTodos = (completed) => {
-     todos.forEach((t) => t.completed = completed);
-     console.log('todos', todos);
-   }
+     todos.forEach((t) => (t.completed = completed));
+     console.log("todos", todos);
+   };
    ```
 
 2. Go back to your browser, open your DevTools console, and click _Check All_/_Uncheck All_ a few times.
@@ -186,7 +193,7 @@ For example, in the following piece of code:
 
 ```js
 const foo = obj.foo;
-foo.bar = 'baz';
+foo.bar = "baz";
 ```
 
 Svelte won't update references to `obj.foo.bar`, unless you follow it up with `obj = obj`. That's because Svelte can't track object references, so we have to explicitly tell it that `obj` has changed by issuing an assignment.
@@ -196,7 +203,7 @@ Svelte won't update references to `obj.foo.bar`, unless you follow it up with `o
 In our `checkAllTodos()` function, when we run:
 
 ```js
-todos.forEach((t) => t.completed = completed);
+todos.forEach((t) => (t.completed = completed));
 ```
 
 Svelte will not mark `todos` as changed because it does not know that when we update our `t` variable inside the `forEach()` method, we are also modifying the `todos` array. And that makes sense, because otherwise Svelte would be aware of the inner workings of the `forEach()` method; the same would therefore be true for any method attached to any object or array.
@@ -207,9 +214,9 @@ As we already saw, we could just tell Svelte to update the variable with a self-
 
 ```js
 const checkAllTodos = (completed) => {
-  todos.forEach((t) => t.completed = completed);
+  todos.forEach((t) => (t.completed = completed));
   todos = todos;
-}
+};
 ```
 
 This will solve the problem. Internally Svelte will flag `todos` as changed and remove the apparently redundant self-assignment. Apart from the fact that it looks weird, it's perfectly OK to use this technique, and sometimes it's the most concise way to do it.
@@ -218,8 +225,8 @@ We could also access the `todos` array by index, like this:
 
 ```js
 const checkAllTodos = (completed) => {
-  todos.forEach((t, i) => todos[i].completed = completed);
-}
+  todos.forEach((t, i) => (todos[i].completed = completed));
+};
 ```
 
 Assignments to properties of arrays and objects — e.g. `obj.foo += 1` or `array[i] = x` — work the same way as assignments to the values themselves. When Svelte analyzes this code, it can detect that the `todos` array is being modified.
@@ -229,7 +236,7 @@ Another solution is to assign a new array to `todos` containing a copy of all th
 ```js
 const checkAllTodos = (completed) => {
   todos = todos.map((t) => ({ ...t, completed }));
-}
+};
 ```
 
 In this case we are using the [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) method, which returns a new array with the results of executing the provided function for each item. The function returns a copy of each to-do using [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and overwrites the property of the completed value accordingly. This solution has the added benefit of returning a new array with new objects, completely avoiding mutating the original `todos` array.
@@ -278,10 +285,8 @@ We will add one usability detail to our component. We'll disable the buttons whe
 2. Don't forget to pass the prop into `MoreActions` from inside `Todos.svelte`, where the component is called:
 
    ```html
-   <MoreActions {todos}
-       on:checkAll={(e) => checkAllTodos(e.detail)}
-       on:removeCompleted={removeCompletedTodos}
-     />
+   <MoreActions {todos} on:checkAll={(e) => checkAllTodos(e.detail)}
+   on:removeCompleted={removeCompletedTodos} />
    ```
 
 ## Working with the DOM: focusing on the details
@@ -347,7 +352,7 @@ Let's begin by extracting our new to-do form out to its own component. With what
    Add the following `import` statement below the others inside `Todos.svelte`:
 
    ```js
-   import NewTodo from './NewTodo.svelte';
+   import NewTodo from "./NewTodo.svelte";
    ```
 
 4. And update the `addTodo()` function like so:
@@ -449,16 +454,16 @@ The one you'll use most frequently is `onMount()`, which lets us run a callback 
 1. To start with, add the following line at the beginning of the `<script>` section of `NewTodo.svelte`:
 
    ```js
-   import { onMount } from 'svelte';
+   import { onMount } from "svelte";
    ```
 
 2. And these lines at the end of it:
 
    ```js
-   console.log('initializing:', nameEl);
+   console.log("initializing:", nameEl);
    onMount(() => {
-     console.log('mounted:', nameEl);
-   })
+     console.log("mounted:", nameEl);
+   });
    ```
 
 3. Now remove the `if (autofocus) nameEl.focus()` line to avoid throwing the error we were seeing before.
@@ -504,8 +509,8 @@ Now we will take care of the `Todo` component's focus management details. First 
 
    ```html
    <input
-     bind:value={name}
-     bind:this={nameEl}
+     bind:value="{name}"
+     bind:this="{nameEl}"
      type="text"
      id="todo-{todo.id}"
      autocomplete="off"
@@ -534,7 +539,7 @@ The above solution works, but it is rather inelegant. Svelte provides a better w
 1. First of all, import `tick` at the top of the `<script>` section alongside your existing import:
 
    ```js
-   import { tick } from 'svelte';
+   import { tick } from "svelte";
    ```
 
 2. Next, call `tick()` with [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) from an [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function); update `onEdit()` like so:
@@ -558,7 +563,7 @@ Next up, we want the name `<input>` to automatically select all text on focus. M
 To select the text of a DOM input node, we have to call [`select()`](/en-US/docs/Web/API/HTMLInputElement/select). To get this function called whenever the node gets focused, we need an event listener along these lines:
 
 ```js
-node.addEventListener('focus', (event) => node.select());
+node.addEventListener("focus", (event) => node.select());
 ```
 
 And, in order to avoid memory leaks, we should also call the [`removeEventListener()`](/en-US/docs/Web/API/EventTarget/removeEventListener) function when the node is destroyed.
@@ -575,12 +580,13 @@ In our immediate use case, we will define a function called `selectOnFocus()` th
 
    ```js
    function selectOnFocus(node) {
-     if (node && typeof node.select === 'function') { // make sure node is defined and has a select() method
+     if (node && typeof node.select === "function") {
+       // make sure node is defined and has a select() method
        const onFocus = (event) => node.select(); // event handler
-       node.addEventListener('focus', onFocus); // when node gets focus call onFocus()
+       node.addEventListener("focus", onFocus); // when node gets focus call onFocus()
        return {
-         destroy: () => node.removeEventListener('focus', onFocus) // this will be executed when the node is removed from the DOM
-       }
+         destroy: () => node.removeEventListener("focus", onFocus), // this will be executed when the node is removed from the DOM
+       };
      }
    }
    ```
@@ -596,10 +602,12 @@ In our immediate use case, we will define a function called `selectOnFocus()` th
    In our case, our `<input>` would end up like so: update the component's first label/input pair (inside the edit template) as follows:
 
    ```html
-   <label for="todo-{todo.id}" class="todo-label">New name for '{todo.name}'</label>
+   <label for="todo-{todo.id}" class="todo-label"
+     >New name for '{todo.name}'</label
+   >
    <input
-     bind:value={name}
-     bind:this={nameEl}
+     bind:value="{name}"
+     bind:this="{nameEl}"
      use:selectOnFocus
      type="text"
      id="todo-{todo.id}"
@@ -618,12 +626,13 @@ Now let's make this function truly reusable across components. `selectOnFocus()`
 
    ```js
    export function selectOnFocus(node) {
-     if (node && typeof node.select === 'function') { // make sure node is defined and has a select() method
+     if (node && typeof node.select === "function") {
+       // make sure node is defined and has a select() method
        const onFocus = (event) => node.select(); // event handler
-       node.addEventListener('focus', onFocus); // when node gets focus call onFocus()
+       node.addEventListener("focus", onFocus); // when node gets focus call onFocus()
        return {
-         destroy: () => node.removeEventListener('focus', onFocus), // this will be executed when the node is removed from the DOM
-       }
+         destroy: () => node.removeEventListener("focus", onFocus), // this will be executed when the node is removed from the DOM
+       };
      }
    }
    ```
@@ -631,7 +640,7 @@ Now let's make this function truly reusable across components. `selectOnFocus()`
 3. Now import it from inside `Todo.svelte`; add the following import statement just below the others:
 
    ```js
-   import { selectOnFocus } from '../actions.js';
+   import { selectOnFocus } from "../actions.js";
    ```
 
 4. And remove the `selectOnFocus()` definition from `Todo.svelte`, since we no longer need it there.
@@ -643,15 +652,15 @@ To demonstrate our action's reusability, let's make use of it in `NewTodo.svelte
 1. Import `selectOnFocus()` from `actions.js` in this file too, as before:
 
    ```js
-   import { selectOnFocus } from '../actions.js';
+   import { selectOnFocus } from "../actions.js";
    ```
 
 2. Add the `use:selectOnFocus` directive to the `<input>`, like this:
 
    ```html
    <input
-     bind:value={name}
-     bind:this={nameEl}
+     bind:value="{name}"
+     bind:this="{nameEl}"
      use:selectOnFocus
      type="text"
      id="todo-0"
@@ -670,13 +679,14 @@ In the previous section, while working with the `Todo` components, we had to dea
 1. This is how we can implement it with actions instead:
 
    ```js
-   const focusOnInit = (node) => node && typeof node.focus === 'function' && node.focus();
+   const focusOnInit = (node) =>
+     node && typeof node.focus === "function" && node.focus();
    ```
 
 2. And then in our markup we just need to add another `use:` directive:
 
    ```html
-   <input bind:value={name} use:selectOnFocus use:focusOnInit />
+   <input bind:value="{name}" use:selectOnFocus use:focusOnInit />
    ```
 
 3. Our `onEdit()` function can now be much simpler:
@@ -705,7 +715,7 @@ That's not what we want — we want the _Edit_ button to receive focus only when
    ```js
    function onEdit() {
      editButtonPressed = true; // user pressed the Edit button, focus will come back to the Edit button
-     editing = true ; // enter editing mode
+     editing = true; // enter editing mode
    }
    ```
 
@@ -718,7 +728,7 @@ That's not what we want — we want the _Edit_ button to receive focus only when
 5. Finally we `use` the `focusEditButton` action on the _Edit_ button, like so:
 
    ```html
-   <button type="button" class="btn" on:click={onEdit} use:focusEditButton>
+   <button type="button" class="btn" on:click="{onEdit}" use:focusEditButton>
      Edit<span class="visually-hidden"> {todo.name}</span>
    </button>
    ```
@@ -756,7 +766,7 @@ First we'll extract the status heading to its own component.
 3. Import the file at the beginning of `Todos.svelte`, adding the following `import` statement below the others:
 
    ```js
-   import TodosStatus from './TodosStatus.svelte';
+   import TodosStatus from "./TodosStatus.svelte";
    ```
 
 4. Replace the `<h2>` status heading inside `Todos.svelte` with a call to the `TodosStatus` component, passing `todos` to it as a prop, like so:
@@ -818,7 +828,7 @@ With this in mind, let's go back to our use case. We'll create a function called
      }
    </script>
 
-   <h2 id="list-heading" bind:this={headingEl} tabindex="-1">
+   <h2 id="list-heading" bind:this="{headingEl}" tabindex="-1">
      {completedTodos} out of {totalTodos} items completed
    </h2>
    ```
@@ -839,7 +849,7 @@ With this in mind, let's go back to our use case. We'll create a function called
 
    ```html
    <!-- TodosStatus -->
-   <TodosStatus bind:this={todosStatus} {todos} />
+   <TodosStatus bind:this="{todosStatus}" {todos} />
    ```
 
 4. Now we can call the `exported focus()` method from our `removeTodo()` function:

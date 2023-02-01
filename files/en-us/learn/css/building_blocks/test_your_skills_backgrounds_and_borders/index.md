@@ -1,5 +1,5 @@
 ---
-title: 'Test your skills: Backgrounds and borders'
+title: "Test your skills: Backgrounds and borders"
 slug: Learn/CSS/Building_blocks/Test_your_skills_backgrounds_and_borders
 tags:
   - Beginner

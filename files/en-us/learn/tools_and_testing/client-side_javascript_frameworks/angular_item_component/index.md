@@ -79,8 +79,11 @@ Add markup for managing items by replacing the placeholder content in `item.comp
 
 ```html
 <div class="item">
-
-  <input [id]="item.description" type="checkbox" (change)="item.done = !item.done" [checked]="item.done" />
+  <input
+    [id]="item.description"
+    type="checkbox"
+    (change)="item.done = !item.done"
+    [checked]="item.done" />
   <label [for]="item.description">\{{item.description}}</label>
 
   <div class="btn-wrapper" *ngIf="!editable">
@@ -90,14 +93,20 @@ Add markup for managing items by replacing the placeholder content in `item.comp
 
   <!-- This section shows only if user clicks Edit button -->
   <div *ngIf="editable">
-    <input class="sm-text-input" placeholder="edit item" [value]="item.description" #editedItem (keyup.enter)="saveItem(editedItem.value)">
+    <input
+      class="sm-text-input"
+      placeholder="edit item"
+      [value]="item.description"
+      #editedItem
+      (keyup.enter)="saveItem(editedItem.value)" />
 
     <div class="btn-wrapper">
       <button class="btn" (click)="editable = !editable">Cancel</button>
-      <button class="btn btn-save" (click)="saveItem(editedItem.value)">Save</button>
+      <button class="btn btn-save" (click)="saveItem(editedItem.value)">
+        Save
+      </button>
     </div>
   </div>
-
 </div>
 ```
 
@@ -127,11 +136,18 @@ In this case, if `editable` is `true`, Angular puts the `<div>` and its child `<
 ```html
 <!-- This section shows only if user clicks Edit button -->
 <div *ngIf="editable">
-  <input class="sm-text-input" placeholder="edit item" [value]="item.description" #editedItem (keyup.enter)="saveItem(editedItem.value)">
+  <input
+    class="sm-text-input"
+    placeholder="edit item"
+    [value]="item.description"
+    #editedItem
+    (keyup.enter)="saveItem(editedItem.value)" />
 
   <div class="btn-wrapper">
     <button class="btn" (click)="editable = !editable">Cancel</button>
-    <button class="btn btn-save" (click)="saveItem(editedItem.value)">Save</button>
+    <button class="btn btn-save" (click)="saveItem(editedItem.value)">
+      Save
+    </button>
   </div>
 </div>
 ```
@@ -251,8 +267,11 @@ To use the `ItemComponent` selector within the `AppComponent`, you add the eleme
 Replace the current unordered list in `app.component.html` with the following updated version:
 
 ```html
-<h2>\{{items.length}} <span *ngIf="items.length === 1; else elseBlock">item</span>
-<ng-template #elseBlock>items</ng-template></h2>
+<h2>
+  \{{items.length}}
+  <span *ngIf="items.length === 1; else elseBlock">item</span>
+  <ng-template #elseBlock>items</ng-template>
+</h2>
 
 <ul>
   <li *ngFor="let i of items">

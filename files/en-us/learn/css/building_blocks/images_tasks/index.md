@@ -1,5 +1,5 @@
 ---
-title: 'Test your skills: Images and form elements'
+title: "Test your skills: Images and form elements"
 slug: Learn/CSS/Building_blocks/Images_tasks
 tags:
   - Beginner

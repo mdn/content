@@ -110,7 +110,8 @@ It's time to study the permissive nature of HTML code.
    - The incorrect nesting has been fixed by the browser as shown here:
 
      ```html
-     <strong>strong
+     <strong
+       >strong
        <em>strong emphasized?</em>
      </strong>
      <em> what is this?</em>
@@ -121,8 +122,8 @@ It's time to study the permissive nature of HTML code.
      ```html
      <li>
        <strong>
-         Unclosed attributes: Another common source of HTML problems. Let's
-         look at an example:
+         Unclosed attributes: Another common source of HTML problems. Let's look
+         at an example:
        </strong>
      </li>
      ```

@@ -1,5 +1,5 @@
 ---
-title: 'Django Tutorial Part 11: Deploying Django to production'
+title: "Django Tutorial Part 11: Deploying Django to production"
 slug: Learn/Server-side/Django/Deployment
 tags:
   - Beginner

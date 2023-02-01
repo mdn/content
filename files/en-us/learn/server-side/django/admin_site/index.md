@@ -1,5 +1,5 @@
 ---
-title: 'Django Tutorial Part 4: Django admin site'
+title: "Django Tutorial Part 4: Django admin site"
 slug: Learn/Server-side/Django/Admin_site
 tags:
   - Article

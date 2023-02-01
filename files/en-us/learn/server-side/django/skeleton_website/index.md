@@ -1,5 +1,5 @@
 ---
-title: 'Django Tutorial Part 2: Creating a skeleton website'
+title: "Django Tutorial Part 2: Creating a skeleton website"
 slug: Learn/Server-side/Django/skeleton_website
 tags:
   - Article

@@ -161,19 +161,17 @@ The code snippet below shows how this works. Continuing the "youngest team" exam
 
 <!DOCTYPE html>
 <html lang="en">
-<body>
-
- {% if youngest_teams %}
+  <body>
+    {% if youngest_teams %}
     <ul>
-    {% for team in youngest_teams %}
-        <li>\{\{ team.team_name \}\}</li>
-    {% endfor %}
+      {% for team in youngest_teams %}
+      <li>\{\{ team.team_name \}\}</li>
+      {% endfor %}
     </ul>
-{% else %}
+    {% else %}
     <p>No teams are available.</p>
-{% endif %}
-
-</body>
+    {% endif %}
+  </body>
 </html>
 ```
 

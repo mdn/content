@@ -2,7 +2,7 @@
 title: Web fonts
 slug: Learn/CSS/Styling_text/Web_fonts
 tags:
-  - '@font-face'
+  - "@font-face"
   - Article
   - Beginner
   - CSS

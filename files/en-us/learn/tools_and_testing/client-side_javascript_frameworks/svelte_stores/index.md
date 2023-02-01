@@ -109,9 +109,9 @@ Let's start by creating a writable store. Any component will be able to write to
 2. Give it the following content:
 
    ```js
-   import { writable } from 'svelte/store'
+   import { writable } from "svelte/store";
 
-   export const alert = writable('Welcome to the to-do list app!')
+   export const alert = writable("Welcome to the to-do list app!");
    ```
 
 > **Note:** Stores can be defined and used outside Svelte components, so you can organize them in any way you please.
@@ -193,14 +193,13 @@ Let's now use our component.
 1. In `App.svelte` we'll import the component. Add the following import statement below the existing one:
 
    ```js
-   import Alert from './components/Alert.svelte'
+   import Alert from "./components/Alert.svelte";
    ```
 
 2. Then call the `Alert` component just above the `Todos` call, like this:
 
    ```html
-   <Alert />
-   <Todos {todos} />
+   <Alert /> <Todos {todos} />
    ```
 
 3. Load your test app now, and you should now see the `Alert` message on screen. You can click on it to dismiss it.
@@ -267,15 +266,15 @@ Writing to our store is just a matter of importing it and executing `$store = 'n
 1. Add the following `import` statement below the existing ones:
 
    ```js
-   import { alert } from '../stores.js'
+   import { alert } from "../stores.js";
    ```
 
 2. Update your `addTodo()` function like so:
 
    ```js
    function addTodo(name) {
-     todos = [...todos, { id: newTodoId, name, completed: false }]
-     $alert = `Todo '${name}' has been added`
+     todos = [...todos, { id: newTodoId, name, completed: false }];
+     $alert = `Todo '${name}' has been added`;
    }
    ```
 
@@ -283,9 +282,9 @@ Writing to our store is just a matter of importing it and executing `$store = 'n
 
    ```js
    function removeTodo(todo) {
-     todos = todos.filter((t) => t.id !== todo.id)
-     todosStatus.focus()             // give focus to status heading
-     $alert = `Todo '${todo.name}' has been deleted`
+     todos = todos.filter((t) => t.id !== todo.id);
+     todosStatus.focus(); // give focus to status heading
+     $alert = `Todo '${todo.name}' has been deleted`;
    }
    ```
 
@@ -293,10 +292,14 @@ Writing to our store is just a matter of importing it and executing `$store = 'n
 
    ```js
    function updateTodo(todo) {
-     const i = todos.findIndex((t) => t.id === todo.id)
-     if (todos[i].name !== todo.name)            $alert = `todo '${todos[i].name}' has been renamed to '${todo.name}'`
-     if (todos[i].completed !== todo.completed)  $alert = `todo '${todos[i].name}' marked as ${todo.completed ? 'completed' : 'active'}`
-     todos[i] = { ...todos[i], ...todo }
+     const i = todos.findIndex((t) => t.id === todo.id);
+     if (todos[i].name !== todo.name)
+       $alert = `todo '${todos[i].name}' has been renamed to '${todo.name}'`;
+     if (todos[i].completed !== todo.completed)
+       $alert = `todo '${todos[i].name}' marked as ${
+         todo.completed ? "completed" : "active"
+       }`;
+     todos[i] = { ...todos[i], ...todo };
    }
    ```
 
@@ -304,12 +307,12 @@ Writing to our store is just a matter of importing it and executing `$store = 'n
 
    ```js
    $: {
-     if (filter === 'all') {
-       $alert = 'Browsing all to-dos';
-     } else if (filter === 'active') {
-       $alert = 'Browsing active to-dos';
-     } else if (filter === 'completed') {
-       $alert = 'Browsing completed to-dos';
+     if (filter === "all") {
+       $alert = "Browsing all to-dos";
+     } else if (filter === "active") {
+       $alert = "Browsing active to-dos";
+     } else if (filter === "completed") {
+       $alert = "Browsing completed to-dos";
      }
    }
    ```
@@ -318,13 +321,13 @@ Writing to our store is just a matter of importing it and executing `$store = 'n
 
    ```js
    const checkAllTodos = (completed) => {
-     todos = todos.map((t) => ({...t, completed}))
-     $alert = `${completed ? 'Checked' : 'Unchecked'} ${todos.length} to-dos`
-   }
+     todos = todos.map((t) => ({ ...t, completed }));
+     $alert = `${completed ? "Checked" : "Unchecked"} ${todos.length} to-dos`;
+   };
    const removeCompletedTodos = () => {
-     $alert = `Removed ${todos.filter((t) => t.completed).length} to-dos`
-     todos = todos.filter((t) => !t.completed)
-   }
+     $alert = `Removed ${todos.filter((t) => t.completed).length} to-dos`;
+     todos = todos.filter((t) => !t.completed);
+   };
    ```
 
 7. So basically, we've imported the store and updated it on every event, which causes a new alert to show each time. Have a look at your app again, and try adding/deleting/updating a few to-dos!
@@ -344,25 +347,26 @@ Let's see how to do that. We'll specify a prop with the milliseconds to wait bef
 1. Update the `<script>` section of your `Alert.svelte` component like so:
 
    ```js
-   import { onDestroy } from 'svelte'
-   import { alert } from '../stores.js'
+   import { onDestroy } from "svelte";
+   import { alert } from "../stores.js";
 
-   export let ms = 3000
-   let visible
-   let timeout
+   export let ms = 3000;
+   let visible;
+   let timeout;
 
    const onMessageChange = (message, ms) => {
-     clearTimeout(timeout)
-     if (!message) {               // hide Alert if message is empty
-       visible = false
+     clearTimeout(timeout);
+     if (!message) {
+       // hide Alert if message is empty
+       visible = false;
      } else {
-       visible = true                                              // show alert
-       if (ms > 0) timeout = setTimeout(() => visible = false, ms) // and hide it after ms milliseconds
+       visible = true; // show alert
+       if (ms > 0) timeout = setTimeout(() => (visible = false), ms); // and hide it after ms milliseconds
      }
-   }
-   $: onMessageChange($alert, ms)      // whenever the alert store or the ms props changes run onMessageChange
+   };
+   $: onMessageChange($alert, ms); // whenever the alert store or the ms props changes run onMessageChange
 
-   onDestroy(() => clearTimeout(timeout))           // make sure we clean-up the timeout
+   onDestroy(() => clearTimeout(timeout)); // make sure we clean-up the timeout
    ```
 
 2. And update the `Alert.svelte` markup section like so:
@@ -411,7 +415,7 @@ First we need some way for our `Todos` component to give back the updated to-dos
 1. First, add the following line below your `todos` array:
 
    ```js
-   $: console.log('todos', todos)
+   $: console.log("todos", todos);
    ```
 
 2. Next, update your `Todos` component call as follows:
@@ -434,7 +438,7 @@ So let's start by using a regular writable store to save our to-dos.
 1. Open the file `stores.js` and add the following store below the existing one:
 
    ```js
-   export const todos = writable([])
+   export const todos = writable([]);
    ```
 
 2. That was easy. Now we need to import the store and use it in `App.svelte`. Just remember that to access the to-dos now we have to use the `$todos` reactive `$store` syntax.
@@ -451,12 +455,12 @@ So let's start by using a regular writable store to save our to-dos.
      $todos = [
        { id: 1, name: "Create a Svelte starter app", completed: true },
        { id: 2, name: "Create your first component", completed: true },
-       { id: 3, name: "Complete the rest of the tutorial", completed: false }
+       { id: 3, name: "Complete the rest of the tutorial", completed: false },
      ];
    </script>
 
    <Alert />
-   <Todos bind:todos={$todos} />
+   <Todos bind:todos="{$todos}" />
    ```
 
 3. Try it out; everything should work. Next we'll see how to define our own custom stores.
@@ -472,8 +476,8 @@ You can create your own stores without relying on `svelte/store` by implementing
 First, let's add the following `console.log()` statements to our `App.svelte` component to see the `todos` store and its content in action. Add these lines below the `todos` array:
 
 ```js
-console.log('todos store - todos:', todos)
-console.log('todos store content - $todos:', $todos)
+console.log("todos store - todos:", todos);
+console.log("todos store content - $todos:", $todos);
 ```
 
 When you run the app now, you'll see something like this in your web console:
@@ -486,26 +490,25 @@ Just for reference, here's a basic working store implemented from scratch:
 
 ```js
 export const writable = (initial_value = 0) => {
-
-  let value = initial_value         // content of the store
-  let subs = []                     // subscriber's handlers
+  let value = initial_value; // content of the store
+  let subs = []; // subscriber's handlers
 
   const subscribe = (handler) => {
-    subs = [...subs, handler]                                 // add handler to the array of subscribers
-    handler(value)                                            // call handler with current value
-    return () => subs = subs.filter((sub) => sub !== handler)   // return unsubscribe function
-  }
+    subs = [...subs, handler]; // add handler to the array of subscribers
+    handler(value); // call handler with current value
+    return () => (subs = subs.filter((sub) => sub !== handler)); // return unsubscribe function
+  };
 
   const set = (new_value) => {
-    if (value === new_value) return         // same value, exit
-    value = new_value                       // update value
-    subs.forEach((sub) => sub(value))         // update subscribers
-  }
+    if (value === new_value) return; // same value, exit
+    value = new_value; // update value
+    subs.forEach((sub) => sub(value)); // update subscribers
+  };
 
-  const update = (update_fn) => set(update_fn(value))   // update function
+  const update = (update_fn) => set(update_fn(value)); // update function
 
-  return { subscribe, set, update }       // store contract
-}
+  return { subscribe, set, update }; // store contract
+};
 ```
 
 Here we declare `subs`, which is an array of subscribers. In the `subscribe()` method we add the handler to the `subs` array and return a function that, when executed, will remove the handler from the array.
@@ -515,14 +518,14 @@ When we call `set()`, we update the value of the store and call each handler, pa
 Usually you don't implement stores from scratch; instead you'd use the writable store to create [custom stores](https://svelte.dev/tutorial/custom-stores) with domain-specific logic. In the following example we create a counter store, which will only allow us to add one to the counter or reset its value:
 
 ```js
-import { writable } from 'svelte/store';
+import { writable } from "svelte/store";
 function myStore() {
   const { subscribe, set, update } = writable(0);
 
   return {
     subscribe,
     addOne: () => update((n) => n + 1),
-    reset: () => set(0)
+    reset: () => set(0),
   };
 }
 ```
@@ -548,30 +551,32 @@ Moreover, because web storage only supports saving string values, we will have t
 2. Give it the following content:
 
    ```js
-   import { writable } from 'svelte/store';
+   import { writable } from "svelte/store";
 
-   export const localStore = (key, initial) => {                 // receives the key of the local storage and an initial value
+   export const localStore = (key, initial) => {
+     // receives the key of the local storage and an initial value
 
-     const toString = (value) => JSON.stringify(value, null, 2)  // helper function
-     const toObj = JSON.parse                                    // helper function
+     const toString = (value) => JSON.stringify(value, null, 2); // helper function
+     const toObj = JSON.parse; // helper function
 
-     if (localStorage.getItem(key) === null) {                   // item not present in local storage
-       localStorage.setItem(key, toString(initial))              // initialize local storage with initial value
+     if (localStorage.getItem(key) === null) {
+       // item not present in local storage
+       localStorage.setItem(key, toString(initial)); // initialize local storage with initial value
      }
 
-     const saved = toObj(localStorage.getItem(key))              // convert to object
+     const saved = toObj(localStorage.getItem(key)); // convert to object
 
-     const { subscribe, set, update } = writable(saved)          // create the underlying writable store
+     const { subscribe, set, update } = writable(saved); // create the underlying writable store
 
      return {
        subscribe,
        set: (value) => {
-         localStorage.setItem(key, toString(value))              // save also to local storage as a string
-         return set(value)
+         localStorage.setItem(key, toString(value)); // save also to local storage as a string
+         return set(value);
        },
-       update
-     }
-   }
+       update,
+     };
+   };
    ```
 
    - Our `localStore` will be a function that when executed initially reads its content from web storage, and returns an object with three methods: `subscribe()`, `set()`, and `update()`.
@@ -587,17 +592,17 @@ Moreover, because web storage only supports saving string values, we will have t
    Update `stores.js` like so:
 
    ```js
-   import { writable } from 'svelte/store'
-   import { localStore } from './localStore.js'
+   import { writable } from "svelte/store";
+   import { localStore } from "./localStore.js";
 
-   export const alert = writable('Welcome to the to-do list app!')
+   export const alert = writable("Welcome to the to-do list app!");
 
    const initialTodos = [
-     { id: 1, name: 'Visit MDN web docs', completed: true },
-     { id: 2, name: 'Complete the Svelte Tutorial', completed: false },
-   ]
+     { id: 1, name: "Visit MDN web docs", completed: true },
+     { id: 2, name: "Complete the Svelte Tutorial", completed: false },
+   ];
 
-   export const todos = localStore('mdn-svelte-todo', initialTodos)
+   export const todos = localStore("mdn-svelte-todo", initialTodos);
    ```
 
    Using `localStore('mdn-svelte-todo', initialTodos)`, we are configuring the store to save the data in web storage under the key `mdn-svelte-todo`. We also set a couple of todos as initial values.
@@ -606,14 +611,14 @@ Moreover, because web storage only supports saving string values, we will have t
 
    ```html
    <script>
-     import Todos from './components/Todos.svelte'
-     import Alert from './components/Alert.svelte'
+     import Todos from "./components/Todos.svelte";
+     import Alert from "./components/Alert.svelte";
 
-     import { todos } from './stores.js'
+     import { todos } from "./stores.js";
    </script>
 
    <Alert />
-   <Todos bind:todos={$todos} />
+   <Todos bind:todos="{$todos}" />
    ```
 
    > **Note:** This is the only change we have to make in order to use our custom store. `App.svelte` is completely transparent in terms of what kind of store we are using.
@@ -636,23 +641,20 @@ Let's give our `Alert` component a fly `transition`. We'll open the `Alert.svelt
 1. Put the following `import` statement below the existing ones:
 
    ```js
-   import { fly } from 'svelte/transition'
+   import { fly } from "svelte/transition";
    ```
 
 2. To use it, update your opening `<div>` tag like so:
 
    ```html
-   <div role="alert" on:click={() => visible = false}
-     transition:fly
-   >
+   <div role="alert" on:click={() => visible = false} transition:fly >
    ```
 
    Transitions can also receive parameters, like this:
 
    ```html
-   <div role="alert" on:click={() => visible = false}
-     transition:fly="\{{delay: 250, duration: 300, x: 0, y: -100, opacity: 0.5}}"
-   >
+   <div role="alert" on:click={() => visible = false} transition:fly="\{{delay:
+   250, duration: 300, x: 0, y: -100, opacity: 0.5}}" >
    ```
 
    > **Note:** The double curly braces are not special Svelte syntax. It's just a literal JavaScript object being passed as a parameter to the fly transition.

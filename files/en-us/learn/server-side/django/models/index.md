@@ -1,5 +1,5 @@
 ---
-title: 'Django Tutorial Part 3: Using models'
+title: "Django Tutorial Part 3: Using models"
 slug: Learn/Server-side/Django/Models
 tags:
   - Article

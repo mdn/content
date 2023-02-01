@@ -1,5 +1,5 @@
 ---
-title: 'Django Tutorial Part 6: Generic list and detail views'
+title: "Django Tutorial Part 6: Generic list and detail views"
 slug: Learn/Server-side/Django/Generic_views
 tags:
   - Beginner
@@ -136,22 +136,20 @@ Templates for generic views are just like any other templates (although of cours
 As with our _index_ template, we extend our base template in the first line and then replace the block named `content`.
 
 ```html
-{% extends "base_generic.html" %}
-
-{% block content %}
-  <h1>Book List</h1>
-  {% if book_list %}
-  <ul>
-    {% for book in book_list %}
-      <li>
-        <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a> (\{{book.author}})
-      </li>
-    {% endfor %}
-  </ul>
-  {% else %}
-    <p>There are no books in the library.</p>
-  {% endif %}
-{% endblock %}
+{% extends "base_generic.html" %} {% block content %}
+<h1>Book List</h1>
+{% if book_list %}
+<ul>
+  {% for book in book_list %}
+  <li>
+    <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a>
+    (\{{book.author}})
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>There are no books in the library.</p>
+{% endif %} {% endblock %}
 ```
 
 The view passes the context (list of books) by default as `object_list` and `book_list` aliases; either will work.
@@ -164,9 +162,9 @@ If `book_list` is not empty, then we iterate through the list of books.
 
 ```html
 {% if book_list %}
-  <!-- code here to list the books -->
+<!-- code here to list the books -->
 {% else %}
-  <p>There are no books in the library.</p>
+<p>There are no books in the library.</p>
 {% endif %}
 ```
 
@@ -180,7 +178,7 @@ Each iteration populates the `book` template variable with information for the c
 
 ```html
 {% for book in book_list %}
-  <li> <!-- code here get information from each book item --> </li>
+<li><!-- code here get information from each book item --></li>
 {% endfor %}
 ```
 
@@ -189,9 +187,9 @@ You might also use the `{% empty %}` template tag to define what happens if the 
 ```html
 <ul>
   {% for book in book_list %}
-    <li> <!-- code here get information from each book item --> </li>
+  <li><!-- code here get information from each book item --></li>
   {% empty %}
-    <p>There are no books in the library.</p>
+  <p>There are no books in the library.</p>
   {% endfor %}
 </ul>
 ```
@@ -466,32 +464,32 @@ def book_detail_view(request, primary_key):
 Create the HTML file **/locallibrary/catalog/templates/catalog/book_detail.html** and give it the below content. As discussed above, this is the default template file name expected by the generic class-based _detail_ view (for a model named `Book` in an application named `catalog`).
 
 ```html
-{% extends "base_generic.html" %}
+{% extends "base_generic.html" %} {% block content %}
+<h1>Title: \{{ book.title }}</h1>
 
-{% block content %}
-  <h1>Title: \{{ book.title }}</h1>
+<p><strong>Author:</strong> <a href="">\{{ book.author }}</a></p>
+<!-- author detail link not yet defined -->
+<p><strong>Summary:</strong> \{{ book.summary }}</p>
+<p><strong>ISBN:</strong> \{{ book.isbn }}</p>
+<p><strong>Language:</strong> \{{ book.language }}</p>
+<p><strong>Genre:</strong> \{{ book.genre.all|join:", " }}</p>
 
-  <p><strong>Author:</strong> <a href="">\{{ book.author }}</a></p> <!-- author detail link not yet defined -->
-  <p><strong>Summary:</strong> \{{ book.summary }}</p>
-  <p><strong>ISBN:</strong> \{{ book.isbn }}</p>
-  <p><strong>Language:</strong> \{{ book.language }}</p>
-  <p><strong>Genre:</strong> \{{ book.genre.all|join:", " }}</p>
+<div style="margin-left:20px;margin-top:20px">
+  <h4>Copies</h4>
 
-  <div style="margin-left:20px;margin-top:20px">
-    <h4>Copies</h4>
-
-    {% for copy in book.bookinstance_set.all %}
-      <hr>
-      <p class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">
-        \{{ copy.get_status_display }}
-      </p>
-      {% if copy.status != 'a' %}
-        <p><strong>Due to be returned:</strong> \{{ copy.due_back }}</p>
-      {% endif %}
-      <p><strong>Imprint:</strong> \{{ copy.imprint }}</p>
-      <p class="text-muted"><strong>Id:</strong> \{{ copy.id }}</p>
-    {% endfor %}
-  </div>
+  {% for copy in book.bookinstance_set.all %}
+  <hr />
+  <p
+    class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">
+    \{{ copy.get_status_display }}
+  </p>
+  {% if copy.status != 'a' %}
+  <p><strong>Due to be returned:</strong> \{{ copy.due_back }}</p>
+  {% endif %}
+  <p><strong>Imprint:</strong> \{{ copy.imprint }}</p>
+  <p class="text-muted"><strong>Id:</strong> \{{ copy.id }}</p>
+  {% endfor %}
+</div>
 {% endblock %}
 ```
 
@@ -677,8 +675,10 @@ The code required for the URL mappers and the views should be virtually identica
 >   The recommended way to do this is to call `get_absolute_url()` on the author model as shown below.
 >
 >   ```html
->   <p><strong>Author:</strong> <a href="\{{ book.author.get_absolute_url }}">\{{ book.author }}</a></p>
->
+>   <p>
+>     <strong>Author:</strong>
+>     <a href="\{{ book.author.get_absolute_url }}">\{{ book.author }}</a>
+>   </p>
 >   ```
 
 When you are finished, your pages should look something like the screenshots below.

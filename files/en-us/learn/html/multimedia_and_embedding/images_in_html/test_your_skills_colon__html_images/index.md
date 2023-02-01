@@ -1,5 +1,5 @@
 ---
-title: 'Test your skills: HTML images'
+title: "Test your skills: HTML images"
 slug: >-
   Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images
 tags:

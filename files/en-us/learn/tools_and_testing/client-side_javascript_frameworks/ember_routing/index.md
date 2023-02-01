@@ -67,17 +67,17 @@ ember generate route active
 The second and third commands should have not only generated new files, but also updated an existing file, `app/router.js`. It contains the following contents:
 
 ```js
-import EmberRouter from '@ember/routing/router';
-import config from './config/environment';
+import EmberRouter from "@ember/routing/router";
+import config from "./config/environment";
 
 export default class Router extends EmberRouter {
   location = config.locationType;
   rootURL = config.rootURL;
 }
 
-Router.map(function() {
-  this.route('completed');
-  this.route('active');
+Router.map(function () {
+  this.route("completed");
+  this.route("active");
 });
 ```
 
@@ -140,11 +140,11 @@ Now we need to add models to our route JavaScript files to allow us to easily re
 First of all, update `todomvc/app/routes/index.js` so it looks as follows:
 
 ```js
-import Route from '@ember/routing/route';
-import { inject as service } from '@ember/service';
+import Route from "@ember/routing/route";
+import { inject as service } from "@ember/service";
 
 export default class IndexRoute extends Route {
-  @service('todo-data') todos;
+  @service("todo-data") todos;
 
   model() {
     let todos = this.todos;
@@ -152,8 +152,8 @@ export default class IndexRoute extends Route {
     return {
       get allTodos() {
         return todos.all;
-      }
-    }
+      },
+    };
   }
 }
 ```
@@ -169,7 +169,7 @@ In this file, change
 To
 
 ```hbs
-<TodoList @todos=\{{ @model.allTodos }} />
+<TodoList @todos="\{{" @model.allTodos }} />
 ```
 
 ### The completed route model
@@ -177,11 +177,11 @@ To
 Now update `todomvc/app/routes/completed.js` so it looks as follows:
 
 ```js
-import Route from '@ember/routing/route';
-import { inject as service } from '@ember/service';
+import Route from "@ember/routing/route";
+import { inject as service } from "@ember/service";
 
 export default class CompletedRoute extends Route {
-  @service('todo-data') todos;
+  @service("todo-data") todos;
 
   model() {
     let todos = this.todos;
@@ -189,8 +189,8 @@ export default class CompletedRoute extends Route {
     return {
       get completedTodos() {
         return todos.completed;
-      }
-    }
+      },
+    };
   }
 }
 ```
@@ -206,7 +206,7 @@ In this file, change
 To
 
 ```hbs
-<TodoList @todos=\{{ @model.completedTodos }} />
+<TodoList @todos="\{{" @model.completedTodos }} />
 ```
 
 ### The active route model
@@ -214,11 +214,11 @@ To
 Finally for the routes, let's sort out our active route. Start by updating `todomvc/app/routes/active.js` so it looks as follows:
 
 ```js
-import Route from '@ember/routing/route';
-import { inject as service } from '@ember/service';
+import Route from "@ember/routing/route";
+import { inject as service } from "@ember/service";
 
 export default class ActiveRoute extends Route {
-  @service('todo-data') todos;
+  @service("todo-data") todos;
 
   model() {
     let todos = this.todos;
@@ -226,8 +226,8 @@ export default class ActiveRoute extends Route {
     return {
       get activeTodos() {
         return todos.incomplete;
-      }
-    }
+      },
+    };
   }
 }
 ```
@@ -243,7 +243,7 @@ In this file, change
 To
 
 ```html
-<TodoList @todos=\{{ @model.activeTodos }} />
+<TodoList @todos="\{{" @model.activeTodos }} />
 ```
 
 Note that, in each of the route model hooks, we are returning an object with a getter instead of a static object, or more just the static list of todos (for example, `this.todos.completed`). The reason for this is that we want the template to have a dynamic reference to the todo list, and if we returned the list directly, the data would never re-compute, which would result in the navigations appearing to fail / not actually filter. By having a getter defined in the return object from the model data, the todos are re-looked-up so that our changes to the todo list are represented in the rendered list.

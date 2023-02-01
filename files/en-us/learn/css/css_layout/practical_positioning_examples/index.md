@@ -354,12 +354,8 @@ As a starting point, make a local copy of [hidden-info-panel-start.html](https:/
 
 ```html
 <label for="toggle">❔</label>
-<input type="checkbox" id="toggle">
-<aside>
-
-…
-
-</aside>
+<input type="checkbox" id="toggle" />
+<aside>…</aside>
 ```
 
 To start with here we've got a {{htmlelement("label")}} element and an {{htmlelement("input")}} element — `<label>` elements are normally used to associate a text label with a form element for accessibility purposes (allowing a screen user to see what description goes with what form element). Here it is associated with the `<input>` checkbox using the `for` and `id` attributes.

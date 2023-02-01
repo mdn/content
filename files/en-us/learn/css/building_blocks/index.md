@@ -48,6 +48,7 @@ This module contains the following articles, which cover the most essential part
     - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
 - [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+
   - : The aim of this lesson is to develop your understanding of some of the most fundamental concepts of CSS — the cascade, specificity, and inheritance — which control how CSS is applied to HTML and how conflicts are resolved.
 
 - [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)

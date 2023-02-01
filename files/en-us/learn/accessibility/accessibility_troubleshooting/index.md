@@ -1,5 +1,5 @@
 ---
-title: 'Assessment: Accessibility troubleshooting'
+title: "Assessment: Accessibility troubleshooting"
 slug: Learn/Accessibility/Accessibility_troubleshooting
 tags:
   - Accessibility

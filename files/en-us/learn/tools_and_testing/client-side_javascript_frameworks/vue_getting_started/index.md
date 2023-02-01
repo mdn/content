@@ -226,7 +226,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 
 ```js
 components: {
-  HelloWorld
+  HelloWorld;
 }
 ```
 

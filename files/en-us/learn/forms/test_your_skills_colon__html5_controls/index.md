@@ -1,5 +1,5 @@
 ---
-title: 'Test your skills: HTML5 controls'
+title: "Test your skills: HTML5 controls"
 slug: Learn/Forms/Test_your_skills:_HTML5_controls
 tags:
   - Assessment

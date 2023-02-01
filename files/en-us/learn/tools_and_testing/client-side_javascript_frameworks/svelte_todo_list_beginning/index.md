@@ -204,11 +204,15 @@ For the moment we will start with a static markup representation of our app, so 
           <div class="btn-group">
             <button class="btn todo-cancel" type="button">
               Cancel
-              <span class="visually-hidden">renaming Create a Svelte starter app</span>
+              <span class="visually-hidden"
+                >renaming Create a Svelte starter app</span
+              >
             </button>
             <button class="btn btn__primary todo-edit" type="submit">
               Save
-              <span class="visually-hidden">new name for Create a Svelte starter app</span>
+              <span class="visually-hidden"
+                >new name for Create a Svelte starter app</span
+              >
             </button>
           </div>
         </form>
@@ -249,11 +253,15 @@ For the moment we will start with a static markup representation of our app, so 
         <div class="btn-group">
           <button type="button" class="btn">
             Edit
-            <span class="visually-hidden">Complete the rest of the tutorial</span>
+            <span class="visually-hidden"
+              >Complete the rest of the tutorial</span
+            >
           </button>
           <button type="button" class="btn btn__danger">
             Delete
-            <span class="visually-hidden">Complete the rest of the tutorial</span>
+            <span class="visually-hidden"
+              >Complete the rest of the tutorial</span
+            >
           </button>
         </div>
       </div>
@@ -308,7 +316,7 @@ Further down, you can find the following `<ul>` element:
 <ul
   role="list"
   className="todo-list stack-large"
-  aria-labelledby="list-heading">
+  aria-labelledby="list-heading"></ul>
 ```
 
 The `role` attribute helps assistive technology explain what kind of semantic value an element has — or what its purpose is. A `<ul>` is treated like a list by default, but the styles we're about to add will break that functionality. This role will restore the "list" meaning to the `<ul>` element. If you want to learn more about why this is necessary, you can check out Scott O'Hara's article "Fixing Lists".

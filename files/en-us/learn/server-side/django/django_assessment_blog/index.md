@@ -1,5 +1,5 @@
 ---
-title: 'Assessment: DIY Django mini blog'
+title: "Assessment: DIY Django mini blog"
 slug: Learn/Server-side/Django/django_assessment_blog
 tags:
   - Assessment

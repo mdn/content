@@ -1,5 +1,5 @@
 ---
-title: 'Test your skills: Conditionals'
+title: "Test your skills: Conditionals"
 slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals
 tags:
   - Beginner

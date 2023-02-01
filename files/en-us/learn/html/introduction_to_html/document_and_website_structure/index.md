@@ -223,8 +223,8 @@ Sometimes you'll come across a situation where you can't find an ideal semantic 
   The King walked drunkenly back to his room at 01:00, the beer doing nothing to
   aid him as he staggered through the door
   <span class="editor-note">
-    [Editor's note: At this point in the play, the lights should be down low]
-  </span>.
+    [Editor's note: At this point in the play, the lights should be down low] </span
+  >.
 </p>
 ```
 
@@ -238,8 +238,8 @@ In this case, the editor's note is supposed to merely provide extra direction fo
   <ul>
     <li>
       <p>
-        <a href=""><strong>Silver earrings</strong></a>:
-        $99.95.
+        <a href=""><strong>Silver earrings</strong></a
+        >: $99.95.
       </p>
       <img src="../products/3333-0985/thumb.png" alt="Silver earrings" />
     </li>

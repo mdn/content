@@ -1,5 +1,5 @@
 ---
-title: 'Test your skills: Styling basics'
+title: "Test your skills: Styling basics"
 slug: Learn/Forms/Test_your_skills:_Styling_basics
 tags:
   - Assessment

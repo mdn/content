@@ -1,5 +1,5 @@
 ---
-title: 'Test your skills: Arrays'
+title: "Test your skills: Arrays"
 slug: Learn/JavaScript/First_steps/Test_your_skills:_Arrays
 tags:
   - Arrays

@@ -126,12 +126,8 @@ article {
 }
 
 .multiple {
-  box-shadow: 1px 1px 1px black,
-              2px 2px 1px black,
-              3px 3px 1px red,
-              4px 4px 1px red,
-              5px 5px 1px black,
-              6px 6px 1px black;
+  box-shadow: 1px 1px 1px black, 2px 2px 1px black, 3px 3px 1px red, 4px 4px 1px
+      red, 5px 5px 1px black, 6px 6px 1px black;
 }
 ```
 

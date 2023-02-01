@@ -1,5 +1,5 @@
 ---
-title: 'Test your skills: Object basics'
+title: "Test your skills: Object basics"
 slug: Learn/JavaScript/Objects/Test_your_skills:_Object_basics
 tags:
   - Beginner

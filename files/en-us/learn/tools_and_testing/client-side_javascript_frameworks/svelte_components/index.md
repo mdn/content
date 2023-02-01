@@ -145,7 +145,7 @@ We'll begin by creating our `FilterButton.svelte`.
 3. Back in our `Todos.svelte` component, we want to make use of our `FilterButton` component. First of all, we need to import it. Add the following line at the top of the `Todos.svelte <script>` section:
 
    ```js
-   import FilterButton from './FilterButton.svelte'
+   import FilterButton from "./FilterButton.svelte";
    ```
 
 4. Now replace the `<div class="filters...` element with a call to the `FilterButton` component, which takes the current filter as a prop. The below line is all you need:
@@ -167,7 +167,7 @@ In our case, the `FilterButton` component will receive an `onclick` handler from
 We will just declare the `onclick` prop assigning a dummy handler to prevent errors, like this:
 
 ```js
-export let onclick = (clicked) => {}
+export let onclick = (clicked) => {};
 ```
 
 And we'll declare the reactive statement `$: onclick(filter)` to call the `onclick` handler whenever the `filter` variable is updated.
@@ -175,9 +175,9 @@ And we'll declare the reactive statement `$: onclick(filter)` to call the `oncli
 1. The `<script>` section of our `FilterButton` component should end up looking like this. Update it now:
 
    ```js
-   export let filter = 'all'
-   export let onclick = (clicked) => {}
-   $: onclick(filter)
+   export let filter = "all";
+   export let onclick = (clicked) => {};
+   $: onclick(filter);
    ```
 
 2. Now when we call `FilterButton` inside `Todos.svelte`, we'll need to specify the handler. Update it like this:
@@ -199,7 +199,7 @@ Using `bind`, we will tell Svelte that any changes made to the `filter` prop in 
 1. In `Todos.svelte`, update the call to the `FilterButton` component as follows:
 
    ```html
-   <FilterButton bind:filter={filter} />
+   <FilterButton bind:filter="{filter}" />
    ```
 
    As usual, Svelte provides us with a nice shorthand: `bind:value={value}` is equivalent to `bind:value`. So in the above example you could just write `<FilterButton bind:filter />`.
@@ -250,7 +250,7 @@ Our `Todo` component will receive a single `todo` object as a prop. Let's declar
 3. Now we need to import our `Todo` component into `Todos.svelte`. Go to this file now, and add the following `import` statement below your previous one:
 
    ```js
-   import Todo from './Todo.svelte'
+   import Todo from "./Todo.svelte";
    ```
 
 4. Next we need to update our `{#each}` block to include a `<Todo>` component for each to-do, rather than the code that has been moved out to `Todo.svelte`. We are also passing the current `todo` object into the component as a prop.
@@ -288,8 +288,8 @@ We'll edit our `Todo` component to emit a `remove` event, passing the to-do bein
 1. First of all, add the following lines to the top of the `Todo` component's `<script>` section:
 
    ```js
-   import { createEventDispatcher } from 'svelte'
-   const dispatch = createEventDispatcher()
+   import { createEventDispatcher } from "svelte";
+   const dispatch = createEventDispatcher();
    ```
 
 2. Now update the _Delete_ button in the markup section of the same file to look like so:
@@ -323,8 +323,8 @@ We still have to implement functionality to allow us to edit existing to-dos. We
 1. We'll need one variable to track whether we are in editing mode and another to store the name of the task being updated. Add the following variable definitions at the bottom of the `<script>` section of the `Todo` component:
 
    ```js
-   let editing = false                     // track editing mode
-   let name = todo.name                    // hold the name of the to-do being edited
+   let editing = false; // track editing mode
+   let name = todo.name; // hold the name of the to-do being edited
    ```
 
 2. We have to decide what events our `Todo` component will emit:
@@ -338,8 +338,8 @@ We still have to implement functionality to allow us to edit existing to-dos. We
 
    ```js
    function update(updatedTodo) {
-     todo = { ...todo, ...updatedTodo }    // applies modifications to todo
-     dispatch('update', todo)              // emit update event
+     todo = { ...todo, ...updatedTodo }; // applies modifications to todo
+     dispatch("update", todo); // emit update event
    }
    ```
 
@@ -351,25 +351,25 @@ We still have to implement functionality to allow us to edit existing to-dos. We
 
    ```js
    function onCancel() {
-     name = todo.name                      // restores name to its initial value and
-     editing = false                       // and exit editing mode
+     name = todo.name; // restores name to its initial value and
+     editing = false; // and exit editing mode
    }
 
    function onSave() {
-     update({ name })                      // updates todo name
-     editing = false                       // and exit editing mode
+     update({ name }); // updates todo name
+     editing = false; // and exit editing mode
    }
 
    function onRemove() {
-     dispatch('remove', todo)              // emit remove event
+     dispatch("remove", todo); // emit remove event
    }
 
    function onEdit() {
-     editing = true                        // enter editing mode
+     editing = true; // enter editing mode
    }
 
    function onToggle() {
-     update({ completed: !todo.completed}) // updates todo status
+     update({ completed: !todo.completed }); // updates todo status
    }
    ```
 
@@ -508,8 +508,8 @@ We also use `todo.id` to create unique ids for the new input controls and labels
 
    ```js
    function updateTodo(todo) {
-     const i = todos.findIndex((t) => t.id === todo.id)
-     todos[i] = { ...todos[i], ...todo }
+     const i = todos.findIndex((t) => t.id === todo.id);
+     todos[i] = { ...todos[i], ...todo };
    }
    ```
 

@@ -1,5 +1,5 @@
 ---
-title: 'Django Tutorial: The Local Library website'
+title: "Django Tutorial: The Local Library website"
 slug: Learn/Server-side/Django/Tutorial_local_library_website
 tags:
   - Article

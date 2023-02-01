@@ -1,5 +1,5 @@
 ---
-title: 'Test your skills: Multicol'
+title: "Test your skills: Multicol"
 slug: Learn/CSS/CSS_layout/Multicol_skills
 tags:
   - Beginner

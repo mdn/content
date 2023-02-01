@@ -1,5 +1,5 @@
 ---
-title: 'Multimedia: Images'
+title: "Multimedia: Images"
 slug: Learn/Performance/Multimedia
 tags:
   - Images

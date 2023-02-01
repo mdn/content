@@ -59,9 +59,7 @@ The landing page HTML of our application is defined in `app/templates/applicatio
 ```html
 \{{!-- The following component displays Ember's default welcome message. --}}
 <WelcomePage />
-\{{!-- Feel free to remove this! --}}
-
-\{{outlet}}
+\{{!-- Feel free to remove this! --}} \{{outlet}}
 ```
 
 `<WelcomePage />` is a component provided by an Ember addon that renders the default welcome page we saw in the previous article, when we first navigated to our server at `localhost:4200`.
@@ -291,10 +289,9 @@ Now that we have all of our component structure files, we can cut and paste the 
    <section class="todoapp">
      <h1>todos</h1>
 
-     <Header />
+     <header />
      <TodoList />
-     <Footer />
-
+     <footer />
    </section>
    ```
 

@@ -1,5 +1,5 @@
 ---
-title: 'Django Tutorial Part 8: User authentication and permissions'
+title: "Django Tutorial Part 8: User authentication and permissions"
 slug: Learn/Server-side/Django/Authentication
 tags:
   - Article
@@ -219,41 +219,35 @@ Update the `TEMPLATES` section's `'DIRS'` line as shown:
 Create a new HTML file called /**locallibrary/templates/registration/login.html** and give it the following contents:
 
 ```html
-{% extends "base_generic.html" %}
+{% extends "base_generic.html" %} {% block content %} {% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %} {% if next %} {% if user.is_authenticated %}
+<p>
+  Your account doesn't have access to this page. To proceed, please login with
+  an account that has access.
+</p>
+{% else %}
+<p>Please login to see this page.</p>
+{% endif %} {% endif %}
 
-{% block content %}
+<form method="post" action="{% url 'login' %}">
+  {% csrf_token %}
+  <table>
+    <tr>
+      <td>\{{ form.username.label_tag }}</td>
+      <td>\{{ form.username }}</td>
+    </tr>
+    <tr>
+      <td>\{{ form.password.label_tag }}</td>
+      <td>\{{ form.password }}</td>
+    </tr>
+  </table>
+  <input type="submit" value="login" />
+  <input type="hidden" name="next" value="\{{ next }}" />
+</form>
 
-  {% if form.errors %}
-    <p>Your username and password didn't match. Please try again.</p>
-  {% endif %}
-
-  {% if next %}
-    {% if user.is_authenticated %}
-      <p>Your account doesn't have access to this page. To proceed,
-      please login with an account that has access.</p>
-    {% else %}
-      <p>Please login to see this page.</p>
-    {% endif %}
-  {% endif %}
-
-  <form method="post" action="{% url 'login' %}">
-    {% csrf_token %}
-    <table>
-      <tr>
-        <td>\{{ form.username.label_tag }}</td>
-        <td>\{{ form.username }}</td>
-      </tr>
-      <tr>
-        <td>\{{ form.password.label_tag }}</td>
-        <td>\{{ form.password }}</td>
-      </tr>
-    </table>
-    <input type="submit" value="login">
-    <input type="hidden" name="next" value="\{{ next }}">
-  </form>
-
-  {# Assumes you setup the password_reset view in your URLconf #}
-  <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+{# Assumes you setup the password_reset view in your URLconf #}
+<p><a href="{% url 'password_reset' %}">Lost password?</a></p>
 
 {% endblock %}
 ```
@@ -280,11 +274,9 @@ If you navigate to the logout URL (`http://127.0.0.1:8000/accounts/logout/`) the
 Create and open **/locallibrary/templates/registration/logged_out.html**. Copy in the text below:
 
 ```html
-{% extends "base_generic.html" %}
-
-{% block content %}
-  <p>Logged out!</p>
-  <a href="{% url 'login'%}">Click here to login again.</a>
+{% extends "base_generic.html" %} {% block content %}
+<p>Logged out!</p>
+<a href="{% url 'login'%}">Click here to login again.</a>
 {% endblock %}
 ```
 
@@ -303,17 +295,13 @@ The following templates can be used as a starting point.
 This is the form used to get the user's email address (for sending the password reset email). Create **/locallibrary/templates/registration/password_reset_form.html**, and give it the following contents:
 
 ```html
-{% extends "base_generic.html" %}
-
-{% block content %}
-  <form action="" method="post">
-  {% csrf_token %}
-  {% if form.email.errors %}
-    \{{ form.email.errors }}
-  {% endif %}
-      <p>\{{ form.email }}</p>
-    <input type="submit" class="btn btn-default btn-lg" value="Reset password">
-  </form>
+{% extends "base_generic.html" %} {% block content %}
+<form action="" method="post">
+  {% csrf_token %} {% if form.email.errors %} \{{ form.email.errors }} {% endif
+  %}
+  <p>\{{ form.email }}</p>
+  <input type="submit" class="btn btn-default btn-lg" value="Reset password" />
+</form>
 {% endblock %}
 ```
 
@@ -322,10 +310,11 @@ This is the form used to get the user's email address (for sending the password 
 This form is displayed after your email address has been collected. Create **/locallibrary/templates/registration/password_reset_done.html**, and give it the following contents:
 
 ```html
-{% extends "base_generic.html" %}
-
-{% block content %}
-  <p>We've emailed you instructions for setting your password. If they haven't arrived in a few minutes, check your spam folder.</p>
+{% extends "base_generic.html" %} {% block content %}
+<p>
+  We've emailed you instructions for setting your password. If they haven't
+  arrived in a few minutes, check your spam folder.
+</p>
 {% endblock %}
 ```
 
@@ -335,7 +324,8 @@ This template provides the text of the HTML email containing the reset link that
 
 ```html
 Someone asked for password reset for email \{{ email }}. Follow the link below:
-\{{ protocol }}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
+\{{ protocol }}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid
+token=token %}
 ```
 
 #### Password reset confirm
@@ -343,35 +333,38 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 This page is where you enter your new password after clicking the link in the password reset email. Create **/locallibrary/templates/registration/password_reset_confirm.html**, and give it the following contents:
 
 ```html
-{% extends "base_generic.html" %}
-
-{% block content %}
-    {% if validlink %}
-        <p>Please enter (and confirm) your new password.</p>
-        <form action="" method="post">
-        {% csrf_token %}
-            <table>
-                <tr>
-                    <td>\{{ form.new_password1.errors }}
-                        <label for="id_new_password1">New password:</label></td>
-                    <td>\{{ form.new_password1 }}</td>
-                </tr>
-                <tr>
-                    <td>\{{ form.new_password2.errors }}
-                        <label for="id_new_password2">Confirm password:</label></td>
-                    <td>\{{ form.new_password2 }}</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" value="Change my password"></td>
-                </tr>
-            </table>
-        </form>
-    {% else %}
-        <h1>Password reset failed</h1>
-        <p>The password reset link was invalid, possibly because it has already been used. Please request a new password reset.</p>
-    {% endif %}
-{% endblock %}
+{% extends "base_generic.html" %} {% block content %} {% if validlink %}
+<p>Please enter (and confirm) your new password.</p>
+<form action="" method="post">
+  {% csrf_token %}
+  <table>
+    <tr>
+      <td>
+        \{{ form.new_password1.errors }}
+        <label for="id_new_password1">New password:</label>
+      </td>
+      <td>\{{ form.new_password1 }}</td>
+    </tr>
+    <tr>
+      <td>
+        \{{ form.new_password2.errors }}
+        <label for="id_new_password2">Confirm password:</label>
+      </td>
+      <td>\{{ form.new_password2 }}</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><input type="submit" value="Change my password" /></td>
+    </tr>
+  </table>
+</form>
+{% else %}
+<h1>Password reset failed</h1>
+<p>
+  The password reset link was invalid, possibly because it has already been
+  used. Please request a new password reset.
+</p>
+{% endif %} {% endblock %}
 ```
 
 #### Password reset complete
@@ -379,11 +372,9 @@ This page is where you enter your new password after clicking the link in the pa
 This is the last password-reset template, which is displayed to notify you when the password reset has succeeded. Create **/locallibrary/templates/registration/password_reset_complete.html**, and give it the following contents:
 
 ```html
-{% extends "base_generic.html" %}
-
-{% block content %}
-  <h1>The password has been changed!</h1>
-  <p><a href="{% url 'login' %}">log in again?</a></p>
+{% extends "base_generic.html" %} {% block content %}
+<h1>The password has been changed!</h1>
+<p><a href="{% url 'login' %}">log in again?</a></p>
 {% endblock %}
 ```
 
@@ -419,17 +410,14 @@ Typically you will first test against the `\{{ user.is_authenticated }}` templat
 Open the base template (**/locallibrary/catalog/templates/base_generic.html**) and copy the following text into the `sidebar` block, immediately before the `endblock` template tag.
 
 ```html
-  <ul class="sidebar-nav">
-
-    …
-
-   {% if user.is_authenticated %}
-     <li>User: \{{ user.get_username }}</li>
-     <li><a href="{% url 'logout' %}?next=\{{ request.path }}">Logout</a></li>
-   {% else %}
-     <li><a href="{% url 'login' %}?next=\{{ request.path }}">Login</a></li>
-   {% endif %}
-  </ul>
+<ul class="sidebar-nav">
+  … {% if user.is_authenticated %}
+  <li>User: \{{ user.get_username }}</li>
+  <li><a href="{% url 'logout' %}?next=\{{ request.path }}">Logout</a></li>
+  {% else %}
+  <li><a href="{% url 'login' %}?next=\{{ request.path }}">Login</a></li>
+  {% endif %}
+</ul>
 ```
 
 As you can see, we use `if` / `else` / `endif` template tags to conditionally display text based on whether `\{{ user.is_authenticated }}` is true. If the user is authenticated then we know that we have a valid user, so we call `\{{ user.get_username }}` to display their name.

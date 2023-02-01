@@ -1,5 +1,5 @@
 ---
-title: 'Ember interactivity: Events, classes and state'
+title: "Ember interactivity: Events, classes and state"
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state
 tags:
@@ -70,13 +70,8 @@ We can capture the [`keydown`](/en-US/docs/Web/API/Document/keydown_event) event
 Add the new line shown below to your `header.hbs` file:
 
 ```html
-<input
-  class='new-todo'
-  aria-label='What needs to be done?'
-  placeholder='What needs to be done?'
-  autofocus
-  \{{on 'keydown' this.onKeyDown}}
->
+<input class='new-todo' aria-label='What needs to be done?' placeholder='What
+needs to be done?' autofocus \{{on 'keydown' this.onKeyDown}} >
 ```
 
 This new attribute is inside double curly braces, which tells you it is part of Ember's dynamic templating syntax. The first argument passed to `on` is the type of event to respond to (`keydown`), and the last argument is the event handler — the code that will run in response to the `keydown` event firing. As you may expect from dealing with [vanilla JavaScript objects](/en-US/docs/Learn/JavaScript/Objects/Basics#what_is_this), the `this` keyword refers to the "context" or "scope" of the component. One component's `this` will be different from another component's `this`.
@@ -92,30 +87,27 @@ ember generate component-class header
 This will create the following empty class file — `todomvc/app/components/header.js`:
 
 ```js
-import Component from '@glimmer/component';
+import Component from "@glimmer/component";
 
-export default class HeaderComponent extends Component {
-
-}
+export default class HeaderComponent extends Component {}
 ```
 
 Inside this file we will implement the event handler code. Update the content to the following:
 
 ```js
-import Component from '@glimmer/component';
-import { action } from '@ember/object';
+import Component from "@glimmer/component";
+import { action } from "@ember/object";
 
 export default class HeaderComponent extends Component {
-
   @action
   onKeyDown({ target, key }) {
     let text = target.value.trim();
     let hasValue = Boolean(text);
 
-    if (key === 'Enter' && hasValue) {
+    if (key === "Enter" && hasValue) {
       alert(text);
 
-      target.value = ''
+      target.value = "";
     }
   }
 }
@@ -153,11 +145,9 @@ installing service-test
 This creates a `todo-data.js` file inside the `todomvc/app/services` directory to contain our service, which initially contains an import statement and an empty class:
 
 ```js
-import Service from '@ember/service';
+import Service from "@ember/service";
 
-export default class TodoDataService extends Service {
-
-}
+export default class TodoDataService extends Service {}
 ```
 
 First of all, we want to define _what a todo is_. We know that we want to track both the text of a todo, and whether or not it is completed.
@@ -165,14 +155,14 @@ First of all, we want to define _what a todo is_. We know that we want to track 
 Add the following `import` statement below the existing one:
 
 ```js
-import { tracked } from '@glimmer/tracking';
+import { tracked } from "@glimmer/tracking";
 ```
 
 Now add the following class below the previous line you added:
 
 ```js
 class Todo {
-  @tracked text = '';
+  @tracked text = "";
   @tracked isCompleted = false;
 
   constructor(text) {
@@ -188,7 +178,7 @@ Now it's time to add to the body of the service.
 First add another `import` statement below the previous one, to make actions available inside the service:
 
 ```js
-import { action } from '@ember/object';
+import { action } from "@ember/object";
 ```
 
 Update the existing `export default class TodoDataService extends Service { }` block as follows:
@@ -221,7 +211,7 @@ Now that we've defined a way to add todos, we can interact with this service fro
 First of all, the service needs to be injected into the template via the `@inject` decorator, which we'll rename to `@service` for semantic clarity. To do this, add the following `import` line to `header.js`, beneath the two existing `import` lines:
 
 ```js
-import { inject as service } from '@ember/service';
+import { inject as service } from "@ember/service";
 ```
 
 With this import in place, we can now make the `todo-data` service available inside the `HeaderComponent` class via the `todos` object, using the `@service` decorator. Add the following line just below the opening `export…` line:
@@ -255,11 +245,11 @@ This generates the new component class `todomvc/app/components/todo-list.js`.
 Populate this file with the following code, which exposes the `todo-data` service, via the `todos` property, to our template. This makes it accessible via `this.todos` inside both the class and the template:
 
 ```js
-import Component from '@glimmer/component';
-import { inject as service } from '@ember/service';
+import Component from "@glimmer/component";
+import { inject as service } from "@ember/service";
 
 export default class TodoListComponent extends Component {
-  @service('todo-data') todos;
+  @service("todo-data") todos;
 }
 ```
 
@@ -276,15 +266,14 @@ get all() {
 Now we can access the data using `this.todos.all`, which is much more intuitive. To put this in action, go to your `todo-list.hbs` component, and replace the static component calls:
 
 ```html
-<Todo />
-<Todo />
+<Todo /> <Todo />
 ```
 
 With a dynamic `#each` block (which is basically syntactic sugar over the top of JavaScript's [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)) that creates a `<Todo />` component for each todo available in the list of todos returned by the service's `all()` getter:
 
 ```html
 \{{#each this.todos.all as |todo|}}
-  <Todo @todo=\{{todo}} />
+<Todo @todo="\{{todo}}" />
 \{{/each}}
 ```
 

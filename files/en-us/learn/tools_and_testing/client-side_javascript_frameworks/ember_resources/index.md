@@ -123,9 +123,12 @@ More concretely, using `mut` allows for template-only settings functions to be d
 
 ```html
 <Checkbox
-  @value=\{{this.someData}}
-  @onToggle=\{{fn (mut this.someData) (not this.someData)}}
-/>
+  @value="\{{this.someData}}"
+  @onToggle="\{{fn"
+  (mut
+  this.someData)
+  (not
+  this.someData)}} />
 ```
 
 Whereas, without `mut`, a component class would be needed:
@@ -148,7 +151,7 @@ export default class Example extends Component {
 Which would then be called in the template like so:
 
 ```html
-<Checkbox @data=\{{this.someData}} @onChange=\{{this.setData}} />
+<Checkbox @data="\{{this.someData}}" @onChange="\{{this.setData}}" />
 ```
 
 Due to the conciseness of using `mut`, it may be desirable to reach for it. However, `mut` has unnatural semantics and has caused much confusion over the term of its existence.
@@ -160,20 +163,21 @@ implicit Glimmer VM behavior.
 With `ember-set-helper`:
 
 ```html
-<Checkbox
-  @value=\{{this.someData}}
-  @onToggle=\{{set this "someData" (not this.someData)}}
-/>
+<Checkbox @value=\{{this.someData}} @onToggle=\{{set this "someData" (not
+this.someData)}} />
 ```
 
 With `ember-box`:
 
 ```html
 \{{#let (box this.someData) as |someData|}}
-  <Checkbox
-    @value=\{{unwrap someData}}
-    @onToggle=\{{update someData (not this.someData)}}
-  />
+<Checkbox
+  @value="\{{unwrap"
+  someData}}
+  @onToggle="\{{update"
+  someData
+  (not
+  this.someData)}} />
 \{{/let}}
 ```
 
