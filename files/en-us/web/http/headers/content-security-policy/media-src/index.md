@@ -1,5 +1,5 @@
 ---
-title: 'CSP: media-src'
+title: "CSP: media-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/media-src
 tags:
   - CSP
