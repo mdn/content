@@ -29,7 +29,7 @@ new DocumentTimeline(options)
 - `options` {{optional_inline}}
   - : An object specifying options for the new timeline. The following properties are available:
     - `originTime` {{optional_inline}}
-      - : A number that specifies the zero time for the {{domxref("DocumentTimeline")}}
+      - : A `number` that specifies the zero time for the {{domxref("DocumentTimeline")}}
         as a number of milliseconds relative to {{domxref("Performance.timeOrigin")}}.
         Defaults to `0`.
 
