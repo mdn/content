@@ -1,3 +1,6 @@
+# .prettierignore uses .gitignore syntax
+# see https://prettier.io/docs/en/ignore.html#ignoring-files-prettierignore
+
 build/
 
 # Ignore markdown files till full pass is made on each folder
