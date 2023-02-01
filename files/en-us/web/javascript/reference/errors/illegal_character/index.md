@@ -46,7 +46,7 @@ Famous examples of this are quotes, the minus or semicolon
 // “ and ” are not " but look like it
 
 42 – 13; // SyntaxError: illegal character
-// – is not - but looks like it
+// – (en-dash) is not - but looks like it
 
 const foo = "bar"; // SyntaxError: illegal character
 // <37e> is not ; but looks like it
