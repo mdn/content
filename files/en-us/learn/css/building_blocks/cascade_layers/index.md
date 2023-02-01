@@ -11,7 +11,7 @@ tags:
   - specificity
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
 
 This lesson aims to introduce you to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/Specificity).
 
@@ -410,7 +410,7 @@ You've reached the end of this article, but can you remember the most important 
 
 If you understood most of this article, then well done — you're now familiar with the fundamental mechanics of CSS cascade layers. Next up, we'll look at [selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) in detail.
 
-{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
 
 ## In this module
 
