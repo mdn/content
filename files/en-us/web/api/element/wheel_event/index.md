@@ -64,6 +64,8 @@ _This interface inherits properties from its ancestors, {{DOMxRef("MouseEvent")}
 - {{DOMxRef("WheelEvent.wheelDeltaY")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns an integer representing the vertical scroll amount.
 
+> **Note:** On MacOS the {{DOMxRef("MouseEvent.ctrlKey")}} property is set to `true` if the user uses the trackpad to zoom instead of scrolling.
+
 ## Examples
 
 ### Scaling an element via the wheel
