@@ -15,7 +15,7 @@ browser-compat: webextensions.api.declarativeNetRequest.testMatchOutcome
 
 {{AddonSidebar()}}
 
-Checks if any of the extension's `declarativeNetRequest` rules would match a hypothetical request. Only available while testing, as this is intended to be used during extension development. See [Browser compatibility](#browser-compatibility) for details on how testing is enabled in each browser.
+Checks if any of the extension's `declarativeNetRequest` rules would match a hypothetical request. Only available while testing, as this is intended to be used during extension development. See [Testing](/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#testing) for details on how testing is enabled in each browser.
 
 ## Syntax
 
