@@ -35,6 +35,26 @@ An object containing the following properties:
   - : The `number` of milliseconds of delay before the start of the effect.
 
     (See also {{cssxref("animation-delay")}}.)
+- `direction`
+  - : `"normal"`, `"reverse"`, `"alternate"`, or `"alternate-reverse"`.
+
+    Indicates whether the effect runs forwards (`"normal"`), backwards (`"reverse"`), switches direction
+    after each iteration (`"alternate"`), or runs backwards and switches direction after each iteration
+    (`"alternate-reverse"`).
+
+    (See also {{cssxref("animation-direction")}}.)
+- `duration`
+  - : A `number` of milliseconds or the `string` `"auto"`.
+
+    Indicates the time one iteration of the animation takes to complete.
+
+    The meaning of `"auto"` may differ depending on the type of effect; for {{domxref("KeyframeEffect")}}, `"auto"` is the same as `0`.
+
+    (See also {{cssxref("animation-duration")}}.)
+- `easing`
+  - : A `string` representing an {{cssxref("easing-function")}} describing the rate of change of the effect over time.
+
+    (See also {{cssxref("animation-timing-function")}}.)
 - `endDelay`
   - : The `number` of milliseconds of delay after the end of the effect.
 
@@ -50,35 +70,15 @@ An object containing the following properties:
     {{domxref("KeyframeEffect")}}, `"auto"` is the same as `"none"`.
 
     (See also {{cssxref("animation-fill-mode")}}.)
-- `iterationStart`
-  - : A `number` indicating at what point in the iteration the effect starts. For example, an effect with
-    an `iterationStart` of 0.5 and 2 `iterations` would start halfway through its first iteration
-    and end halfway through a third iteration.
 - `iterations`
   - : The `number` of times the effect will repeat. A value of {{jsxref("Infinity")}} indicates that
     the effect repeats indefinitely.
 
     (See also {{cssxref("animation-iteration-count")}}.)
-- `duration`
-  - : A `number` of milliseconds or the `string` `"auto"`.
-
-    Indicates the time one iteration of the animation takes to complete.
-
-    The meaning of `"auto"` may differ depending on the type of effect; for {{domxref("KeyframeEffect")}}, `"auto"` is the same as `0`.
-
-    (See also {{cssxref("animation-duration")}}.)
-- `direction`
-  - : `"normal"`, `"reverse"`, `"alternate"`, or `"alternate-reverse"`.
-
-    Indicates whether the effect runs forwards (`"normal"`), backwards (`"reverse"`), switches direction
-    after each iteration (`"alternate"`), or runs backwards and switches direction after each iteration
-    (`"alternate-reverse"`).
-
-    (See also {{cssxref("animation-direction")}}.)
-- `easing`
-  - : A `string` representing an {{cssxref("easing-function")}} describing the rate of change of the effect over time.
-
-    (See also {{cssxref("animation-timing-function")}}.)
+- `iterationStart`
+  - : A `number` indicating at what point in the iteration the effect starts. For example, an effect with
+    an `iterationStart` of 0.5 and 2 `iterations` would start halfway through its first iteration
+    and end halfway through a third iteration.
 
 ## Specifications
 
