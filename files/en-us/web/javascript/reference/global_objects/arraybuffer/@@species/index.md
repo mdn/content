@@ -19,7 +19,7 @@ The **`ArrayBuffer[@@species]`** static accessor property returns the constructo
 ## Syntax
 
 ```js
-ArrayBuffer[Symbol.species]
+ArrayBuffer[Symbol.species];
 ```
 
 ### Return value

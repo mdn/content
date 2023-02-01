@@ -60,16 +60,16 @@ The following code shows how to determine whether the `example` object contains 
 
 ```js
 const example = {};
-Object.hasOwn(example, 'prop');   // false - 'prop' has not been defined
+Object.hasOwn(example, "prop"); // false - 'prop' has not been defined
 
-example.prop = 'exists';
-Object.hasOwn(example, 'prop');   // true - 'prop' has been defined
+example.prop = "exists";
+Object.hasOwn(example, "prop"); // true - 'prop' has been defined
 
 example.prop = null;
-Object.hasOwn(example, 'prop');   // true - own property exists with value of null
+Object.hasOwn(example, "prop"); // true - own property exists with value of null
 
 example.prop = undefined;
-Object.hasOwn(example, 'prop');   // true - own property exists with value of undefined
+Object.hasOwn(example, "prop"); // true - own property exists with value of undefined
 ```
 
 ### Direct vs. inherited properties
@@ -78,17 +78,17 @@ The following example differentiates between direct properties and properties in
 
 ```js
 const example = {};
-example.prop = 'exists';
+example.prop = "exists";
 
 // `hasOwn` will only return true for direct properties:
-Object.hasOwn(example, 'prop');             // returns true
-Object.hasOwn(example, 'toString');         // returns false
-Object.hasOwn(example, 'hasOwnProperty');   // returns false
+Object.hasOwn(example, "prop"); // returns true
+Object.hasOwn(example, "toString"); // returns false
+Object.hasOwn(example, "hasOwnProperty"); // returns false
 
 // The `in` operator will return true for direct or inherited properties:
-'prop' in example;                          // returns true
-'toString' in example;                      // returns true
-'hasOwnProperty' in example;                // returns true
+"prop" in example; // returns true
+"toString" in example; // returns true
+"hasOwnProperty" in example; // returns true
 ```
 
 ### Iterating over the properties of an object
@@ -119,9 +119,9 @@ The elements of an {{jsxref("Array")}} are defined as direct properties, so
 you can use `hasOwn()` method to check whether a particular index exists:
 
 ```js
-const fruits = ['Apple', 'Banana', 'Watermelon', 'Orange'];
-Object.hasOwn(fruits, 3);   // true ('Orange')
-Object.hasOwn(fruits, 4);   // false - not defined
+const fruits = ["Apple", "Banana", "Watermelon", "Orange"];
+Object.hasOwn(fruits, 3); // true ('Orange')
+Object.hasOwn(fruits, 4); // false - not defined
 ```
 
 ### Problematic cases for hasOwnProperty
@@ -135,10 +135,10 @@ const foo = {
   hasOwnProperty() {
     return false;
   },
-  bar: 'The dragons be out of office',
+  bar: "The dragons be out of office",
 };
 
-if (Object.hasOwn(foo, 'bar')) {
+if (Object.hasOwn(foo, "bar")) {
   console.log(foo.bar); //true - reimplementation of hasOwnProperty() does not affect Object
 }
 ```
@@ -149,8 +149,8 @@ not inherit from `Object.prototype`, and so `hasOwnProperty()` is inaccessible.
 
 ```js
 const foo = Object.create(null);
-foo.prop = 'exists';
-if (Object.hasOwn(foo, 'prop')) {
+foo.prop = "exists";
+if (Object.hasOwn(foo, "prop")) {
   console.log(foo.prop); //true - works irrespective of how the object is created.
 }
 ```

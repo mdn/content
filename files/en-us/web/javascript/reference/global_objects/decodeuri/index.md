@@ -59,7 +59,7 @@ The `decodeURI()` function decodes the URI by treating each escape sequence in t
 
 ```js
 decodeURI(
-  "https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B",
+  "https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
 );
 // "https://developer.mozilla.org/ru/docs/JavaScript_шеллы"
 ```
@@ -70,12 +70,12 @@ decodeURI(
 
 ```js
 decodeURI(
-  "https://developer.mozilla.org/docs/JavaScript%3A%20a_scripting_language",
+  "https://developer.mozilla.org/docs/JavaScript%3A%20a_scripting_language"
 );
 // "https://developer.mozilla.org/docs/JavaScript%3A a_scripting_language"
 
 decodeURIComponent(
-  "https://developer.mozilla.org/docs/JavaScript%3A%20a_scripting_language",
+  "https://developer.mozilla.org/docs/JavaScript%3A%20a_scripting_language"
 );
 // "https://developer.mozilla.org/docs/JavaScript: a_scripting_language"
 ```

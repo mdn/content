@@ -723,7 +723,7 @@ squareBtn.addEventListener("click", () => {
       50,
       50,
       100,
-      "blue",
+      "blue"
     );
     square1.draw();
     square1.reportArea();
@@ -798,7 +798,7 @@ const square1 = new Module.Square(
   50,
   50,
   100,
-  colors.blue,
+  colors.blue
 );
 
 const circle1 = new Module.Circle(
@@ -807,7 +807,7 @@ const circle1 = new Module.Circle(
   75,
   200,
   100,
-  colors.green,
+  colors.green
 );
 
 const triangle1 = new Module.Triangle(
@@ -816,7 +816,7 @@ const triangle1 = new Module.Triangle(
   100,
   75,
   190,
-  colors.yellow,
+  colors.yellow
 );
 ```
 

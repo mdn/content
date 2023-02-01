@@ -132,7 +132,7 @@ promise.then(
   },
   function () {
     console.log("error");
-  },
+  }
 );
 ```
 

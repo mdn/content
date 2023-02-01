@@ -186,7 +186,7 @@ JSON.stringify(
   Object.create(null, {
     x: { value: "x", enumerable: false },
     y: { value: "y", enumerable: true },
-  }),
+  })
 );
 // '{"y":"y"}'
 

@@ -201,7 +201,7 @@ const arrayLike = {
   2: 4,
 };
 console.log(
-  Array.prototype.findLast.call(arrayLike, (x) => Number.isInteger(x)),
+  Array.prototype.findLast.call(arrayLike, (x) => Number.isInteger(x))
 ); // 4
 ```
 

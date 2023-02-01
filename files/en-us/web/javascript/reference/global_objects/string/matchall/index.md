@@ -61,7 +61,7 @@ let match;
 
 while ((match = regexp.exec(str)) !== null) {
   console.log(
-    `Found ${match[0]} start=${match.index} end=${regexp.lastIndex}.`,
+    `Found ${match[0]} start=${match.index} end=${regexp.lastIndex}.`
   );
 }
 // Found football start=6 end=14.
@@ -79,7 +79,7 @@ for (const match of matches) {
   console.log(
     `Found ${match[0]} start=${match.index} end=${
       match.index + match[0].length
-    }.`,
+    }.`
   );
 }
 // Found football start=6 end=14.

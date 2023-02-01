@@ -55,11 +55,7 @@ It is particular useful when adding, removing, or reordering items in a list tha
 JavaScript ignores trailing commas in arrays literals:
 
 ```js
-const arr = [
-  1,
-  2,
-  3,
-];
+const arr = [1, 2, 3];
 
 arr; // [1, 2, 3]
 arr.length; // 3
@@ -94,23 +90,23 @@ The following function definition pairs are legal and equivalent to each other. 
 
 ```js
 function f(p) {}
-function f(p,) {}
+function f(p) {}
 
 (p) => {};
-(p,) => {};
+(p) => {};
 ```
 
 The trailing comma also works with [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) for classes or objects:
 
 ```js
 class C {
-  one(a,) {}
-  two(a, b,) {}
+  one(a) {}
+  two(a, b) {}
 }
 
 const obj = {
-  one(a,) {},
-  two(a, b,) {},
+  one(a) {},
+  two(a, b) {},
 };
 ```
 
@@ -120,10 +116,10 @@ The following function invocation pairs are legal and equivalent to each other.
 
 ```js
 f(p);
-f(p,);
+f(p);
 
 Math.max(10, 20);
-Math.max(10, 20,);
+Math.max(10, 20);
 ```
 
 #### Illegal trailing commas
@@ -145,20 +141,20 @@ A trailing comma is also allowed on the left-hand side when using [destructuring
 
 ```js
 // array destructuring with trailing comma
-[a, b,] = [1, 2];
+[a, b] = [1, 2];
 
 // object destructuring with trailing comma
 const o = {
   p: 42,
   q: true,
 };
-const { p, q, } = o;
+const { p, q } = o;
 ```
 
 Again, when using a rest element, a {{jsxref("SyntaxError")}} will be thrown:
 
 ```js example-bad
-const [a, ...b,] = [1, 2, 3];
+const [a, ...b] = [1, 2, 3];
 // SyntaxError: rest element may not have a trailing comma
 ```
 
@@ -189,29 +185,21 @@ Trailing commas are valid in [named imports](/en-US/docs/Web/JavaScript/Referenc
 #### Named imports
 
 ```js
-import {
-  A,
-  B,
-  C,
-} from "D";
+import { A, B, C } from "D";
 
-import { X, Y, Z, } from "W";
+import { X, Y, Z } from "W";
 
-import { A as B, C as D, E as F, } from "Z";
+import { A as B, C as D, E as F } from "Z";
 ```
 
 #### Named exports
 
 ```js
-export {
-  A,
-  B,
-  C,
-};
+export { A, B, C };
 
-export { A, B, C, };
+export { A, B, C };
 
-export { A as B, C as D, E as F, };
+export { A as B, C as D, E as F };
 ```
 
 ### Quantifier prefix

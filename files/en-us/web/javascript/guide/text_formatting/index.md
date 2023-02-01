@@ -211,7 +211,7 @@ Any new line characters inserted in the source are part of the template literal.
 ```js
 console.log(
   "string text line 1\n\
-string text line 2",
+string text line 2"
 );
 // "string text line 1
 // string text line 2"
@@ -234,7 +234,7 @@ In order to embed expressions within normal strings, you would use the following
 const five = 5;
 const ten = 10;
 console.log(
-  "Fifteen is " + (five + ten) + " and not " + (2 * five + ten) + ".",
+  "Fifteen is " + (five + ten) + " and not " + (2 * five + ten) + "."
 );
 // "Fifteen is 15 and not 20."
 ```

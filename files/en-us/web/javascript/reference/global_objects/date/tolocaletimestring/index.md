@@ -126,7 +126,7 @@ console.log(date.toLocaleTimeString("en-US", { hour12: false }));
 
 // show only hours and minutes, use options with the default locale - use an empty array
 console.log(
-  date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+  date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
 );
 // "20:01"
 ```

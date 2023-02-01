@@ -31,56 +31,56 @@ The operands are compared using the same algorithm as the [Less than](/en-US/doc
 ### String to string comparison
 
 ```js
-console.log("a" <= "b");     // true
-console.log("a" <= "a");     // true
-console.log("a" <= "3");     // false
+console.log("a" <= "b"); // true
+console.log("a" <= "a"); // true
+console.log("a" <= "3"); // false
 ```
 
 ### String to number comparison
 
 ```js
-console.log("5" <= 3);       // false
-console.log("3" <= 3);       // true
-console.log("3" <= 5);       // true
+console.log("5" <= 3); // false
+console.log("3" <= 3); // true
+console.log("3" <= 5); // true
 
-console.log("hello" <= 5);   // false
-console.log(5 <= "hello");   // false
+console.log("hello" <= 5); // false
+console.log(5 <= "hello"); // false
 ```
 
 ### Number to Number comparison
 
 ```js
-console.log(5 <= 3);         // false
-console.log(3 <= 3);         // true
-console.log(3 <= 5);         // true
+console.log(5 <= 3); // false
+console.log(3 <= 3); // true
+console.log(3 <= 5); // true
 ```
 
 ### Number to BigInt comparison
 
 ```js
-console.log(5n <= 3);        // false
-console.log(3 <= 3n);        // true
-console.log(3 <= 5n);        // true
+console.log(5n <= 3); // false
+console.log(3 <= 3n); // true
+console.log(3 <= 5n); // true
 ```
 
 ### Comparing Boolean, null, undefined, NaN
 
 ```js
-console.log(true <= false);  // false
-console.log(true <= true);   // true
-console.log(false <= true);  // true
+console.log(true <= false); // false
+console.log(true <= true); // true
+console.log(false <= true); // true
 
-console.log(true <= 0);      // false
-console.log(true <= 1);      // true
+console.log(true <= 0); // false
+console.log(true <= 1); // true
 
-console.log(null <= 0);      // true
-console.log(1 <= null);      // false
+console.log(null <= 0); // true
+console.log(1 <= null); // false
 
 console.log(undefined <= 3); // false
 console.log(3 <= undefined); // false
 
-console.log(3 <= NaN);       // false
-console.log(NaN <= 3);       // false
+console.log(3 <= NaN); // false
+console.log(NaN <= 3); // false
 ```
 
 ## Specifications

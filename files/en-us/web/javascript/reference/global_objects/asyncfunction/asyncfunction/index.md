@@ -59,7 +59,7 @@ const AsyncFunction = async function () {}.constructor;
 const fn = new AsyncFunction(
   "a",
   "b",
-  "return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);",
+  "return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);"
 );
 
 fn(10, 20).then((v) => {

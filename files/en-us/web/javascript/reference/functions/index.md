@@ -201,7 +201,7 @@ doSomething(
   // A function expression passed as an argument
   function foo() {
     console.log("FOO!");
-  },
+  }
 );
 ```
 
@@ -224,9 +224,9 @@ Instead, start the expression statement with something else, so that the `functi
   console.log("FOO!");
 })();
 
-void function () {
+void (function () {
   console.log("FOO!");
-}();
+})();
 ```
 
 ### Function parameters

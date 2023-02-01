@@ -53,7 +53,7 @@ someElement.addEventListener(
   () => {
     someElement.style.backgroundColor = "blue";
   },
-  false,
+  false
 );
 ```
 

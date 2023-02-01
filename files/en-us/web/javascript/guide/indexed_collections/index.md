@@ -485,7 +485,7 @@ If `callback` needs access to the index of the item being processed, or access t
 const a = [10, 20, 30];
 const total = a.reduce(
   (accumulator, currentValue) => accumulator + currentValue,
-  0,
+  0
 );
 console.log(total); // 60
 ```

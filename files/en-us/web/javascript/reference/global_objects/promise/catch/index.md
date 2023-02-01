@@ -92,7 +92,7 @@ p1.then((value) => {
   })
   .then(
     () => console.log("after a catch the chain is restored"),
-    () => console.log("Not fired due to the catch"),
+    () => console.log("Not fired due to the catch")
   );
 
 // The following behaves the same as above
@@ -105,7 +105,7 @@ p1.then((value) => {
   })
   .then(
     () => console.log("after a catch the chain is restored"),
-    () => console.log("Not fired due to the catch"),
+    () => console.log("Not fired due to the catch")
   );
 ```
 
@@ -170,7 +170,7 @@ p2.then(
   (reason) => {
     console.log("next promise's onRejected");
     console.log(reason);
-  },
+  }
 );
 ```
 

@@ -64,7 +64,7 @@ promise.then(
   (reason) =>
     Promise.resolve(onFinally()).then(() => {
       throw reason;
-    }),
+    })
 );
 ```
 

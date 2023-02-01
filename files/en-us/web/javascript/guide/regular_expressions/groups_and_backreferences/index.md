@@ -188,7 +188,7 @@ lines.splice(
   1,
   0,
   " ".repeat(match.indices[1][1] - match.indices[1][0]) +
-    "^".repeat(match.indices.groups.name[1] - match.indices.groups.name[0]),
+    "^".repeat(match.indices.groups.name[1] - match.indices.groups.name[0])
 );
 console.log(lines.join("\n"));
 // function add(x, y) {

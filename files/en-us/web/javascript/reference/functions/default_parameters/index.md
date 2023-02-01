@@ -181,7 +181,7 @@ function withDefaults(
   d = go(),
   e = this,
   f = arguments,
-  g = this.value,
+  g = this.value
 ) {
   return [a, b, c, d, e, f, g];
 }

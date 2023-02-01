@@ -181,7 +181,7 @@ console.log(
   Array.prototype.flatMap.call(arrayLike, (x) => ({
     length: 1,
     0: x,
-  })),
+  }))
 );
 // [ { '0': 1, length: 1 }, { '0': 2, length: 1 }, { '0': 3, length: 1 } ]
 ```

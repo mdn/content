@@ -140,7 +140,7 @@ doSomething()
       .then((res) => res.json())
       .then((data) => {
         listOfIngredients.push(data);
-      }),
+      })
   )
   .then(() => {
     console.log(listOfIngredients);
@@ -170,7 +170,7 @@ doSomethingCritical()
   .then((result) =>
     doSomethingOptional(result)
       .then((optionalResult) => doSomethingExtraNice(optionalResult))
-      .catch((e) => {}),
+      .catch((e) => {})
   ) // Ignore if optional stuff fails; proceed.
   .then(() => moreCriticalStuff())
   .catch((e) => console.error(`Critical failure: ${e.message}`));

@@ -189,7 +189,7 @@ function promiseState(promise) {
   return Promise.race([promise, pendingState]).then(
     (value) =>
       value === pendingState ? value : { status: "fulfilled", value },
-    (reason) => ({ status: "rejected", reason }),
+    (reason) => ({ status: "rejected", reason })
   );
 }
 ```

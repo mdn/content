@@ -190,7 +190,7 @@ function checkData() {
     return true;
   } else {
     alert(
-      `Enter exactly three characters. ${document.form1.threeChar.value} is not valid.`,
+      `Enter exactly three characters. ${document.form1.threeChar.value} is not valid.`
     );
     return false;
   }
@@ -349,8 +349,18 @@ function. If the value does not correspond to a month number
 function getMonthName(mo) {
   mo--; // Adjust month number for array index (so that 0 = Jan, 11 = Dec)
   const months = [
-    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
   if (months[mo]) {
     return months[mo];

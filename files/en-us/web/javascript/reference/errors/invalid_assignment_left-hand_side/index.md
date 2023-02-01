@@ -58,9 +58,7 @@ if (Math.PI + 1 === 3 || Math.PI + 1 === 4) {
   console.log("no way!");
 }
 
-const str = "Hello, "
-  + "from the "
-  + "other side!";
+const str = "Hello, " + "from the " + "other side!";
 ```
 
 ## See also

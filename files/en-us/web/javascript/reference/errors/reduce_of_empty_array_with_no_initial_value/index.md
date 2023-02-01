@@ -62,7 +62,7 @@ number of elements in a list:
 const names = document.getElementsByClassName("names");
 const name_list = Array.prototype.reduce.call(
   names,
-  (acc, name) => acc + ", " + name,
+  (acc, name) => acc + ", " + name
 );
 ```
 
@@ -91,7 +91,7 @@ let nameList1 = "";
 if (names.length >= 1) {
   nameList1 = Array.prototype.reduce.call(
     names,
-    (acc, name) => `${acc}, ${name}`,
+    (acc, name) => `${acc}, ${name}`
   );
 }
 // nameList1 === "" when names is empty.
@@ -104,7 +104,7 @@ const nameList2 = Array.prototype.reduce.call(
       return name;
     return `${acc}, ${name}`;
   },
-  "",
+  ""
 );
 // nameList2 === "" when names is empty.
 ```

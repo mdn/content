@@ -63,7 +63,7 @@ const myObj = Object.create(
         return this.foo;
       },
     },
-  },
+  }
 );
 myObj.foo = "bar";
 console.log(Object.entries(myObj)); // [ ['foo', 'bar'] ]

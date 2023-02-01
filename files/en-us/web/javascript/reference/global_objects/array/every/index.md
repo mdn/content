@@ -182,7 +182,7 @@ const arrayLike = {
   2: "c",
 };
 console.log(
-  Array.prototype.every.call(arrayLike, (x) => typeof x === "string"),
+  Array.prototype.every.call(arrayLike, (x) => typeof x === "string")
 ); // true
 ```
 

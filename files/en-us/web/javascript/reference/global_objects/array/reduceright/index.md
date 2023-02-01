@@ -121,7 +121,7 @@ Some example run-throughs of the function would look like this:
 
 ```js
 [0, 1, 2, 3, 4].reduceRight(
-  (accumulator, currentValue, index, array) => accumulator + currentValue,
+  (accumulator, currentValue, index, array) => accumulator + currentValue
 );
 ```
 
@@ -144,7 +144,7 @@ Here we reduce the same array using the same algorithm, but with an `initialValu
 ```js
 [0, 1, 2, 3, 4].reduceRight(
   (accumulator, currentValue, index, array) => accumulator + currentValue,
-  10,
+  10
 );
 ```
 
@@ -187,7 +187,7 @@ const waterfall =
       (composition, fn) =>
         (...results) =>
           fn(composition, ...results),
-      callback,
+      callback
     )(...args);
 
 const randInt = (max) => Math.floor(Math.random() * max);

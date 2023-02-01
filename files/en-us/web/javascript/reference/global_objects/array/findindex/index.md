@@ -121,7 +121,7 @@ const arrayLike = {
   2: 4,
 };
 console.log(
-  Array.prototype.findIndex.call(arrayLike, (x) => !Number.isInteger(x)),
+  Array.prototype.findIndex.call(arrayLike, (x) => !Number.isInteger(x))
 ); // 1
 ```
 

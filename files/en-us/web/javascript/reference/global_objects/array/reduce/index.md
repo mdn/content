@@ -149,7 +149,7 @@ const array = [15, 16, 17, 18, 19];
 function reducer(accumulator, currentValue, index) {
   const returns = accumulator + currentValue;
   console.log(
-    `accumulator: ${accumulator}, currentValue: ${currentValue}, index: ${index}, returns: ${returns}`,
+    `accumulator: ${accumulator}, currentValue: ${currentValue}, index: ${index}, returns: ${returns}`
   );
   return returns;
 }
@@ -175,7 +175,7 @@ Here we reduce the same array using the same algorithm, but with an `initialValu
 ```js
 [15, 16, 17, 18, 19].reduce(
   (accumulator, currentValue) => accumulator + currentValue,
-  10,
+  10
 );
 ```
 
@@ -200,7 +200,7 @@ an `initialValue`, so that each item passes through your function.
 const objects = [{ x: 1 }, { x: 2 }, { x: 3 }];
 const sum = objects.reduce(
   (accumulator, currentValue) => accumulator + currentValue.x,
-  0,
+  0
 );
 
 console.log(sum); // 6
@@ -289,7 +289,7 @@ const friends = [
 // additional list contained in initialValue
 const allbooks = friends.reduce(
   (accumulator, currentValue) => [...accumulator, ...currentValue.books],
-  ["Alphabet"],
+  ["Alphabet"]
 );
 console.log(allbooks);
 // [
@@ -350,7 +350,7 @@ console.log(doubledPositiveNumbers); // [12, 4]
 function runPromiseInSequence(arr, input) {
   return arr.reduce(
     (promiseChain, currentFunction) => promiseChain.then(currentFunction),
-    Promise.resolve(input),
+    Promise.resolve(input)
   );
 }
 

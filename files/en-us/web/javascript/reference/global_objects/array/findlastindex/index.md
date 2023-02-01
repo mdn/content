@@ -122,7 +122,7 @@ const arrayLike = {
   2: 4,
 };
 console.log(
-  Array.prototype.findLastIndex.call(arrayLike, (x) => Number.isInteger(x)),
+  Array.prototype.findLastIndex.call(arrayLike, (x) => Number.isInteger(x))
 ); // 2
 ```
 

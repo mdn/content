@@ -64,7 +64,7 @@ const myObj = Object.create(
         return this.foo;
       },
     },
-  },
+  }
 );
 myObj.foo = "bar";
 console.log(Object.values(myObj)); // ['bar']

@@ -20,7 +20,7 @@ The **`TypedArray[@@species]`** static accessor property returns the constructor
 ## Syntax
 
 ```js
-TypedArray[Symbol.species]
+TypedArray[Symbol.species];
 ```
 
 ### Return value

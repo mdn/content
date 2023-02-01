@@ -45,7 +45,7 @@ const c = 3;
 // default precedence
 a + b * c; // 7
 // evaluated by default like this
-a + (b * c); // 7
+a + b * c; // 7
 
 // now overriding precedence
 // addition before multiplication

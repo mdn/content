@@ -51,7 +51,7 @@ Promise.reject(new Error("fail")).then(
   },
   (error) => {
     console.error(error); // Stacktrace
-  },
+  }
 );
 ```
 
@@ -79,7 +79,7 @@ class NotPromise {
     // native promise's, but Promise.reject() calls them in the same way.
     executor(
       (value) => console.log("Resolved", value),
-      (reason) => console.log("Rejected", reason),
+      (reason) => console.log("Rejected", reason)
     );
   }
 }

@@ -213,7 +213,7 @@ console.log(Object.getOwnPropertyDescriptor(obj, "hello"));
 // undefined
 
 console.log(
-  Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), "hello"),
+  Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), "hello")
 );
 // { configurable: true, enumerable: false, get: function get hello() { return 'world'; }, set: undefined }
 ```

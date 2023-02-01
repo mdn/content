@@ -158,7 +158,7 @@ o2 = Object.create(
       enumerable: true,
       configurable: true,
     },
-  },
+  }
 );
 // This is not equivalent to:
 // o2 = Object.create({ p: 42 })

@@ -58,7 +58,7 @@ Promise.resolve("Success").then(
   },
   (reason) => {
     // not called
-  },
+  }
 );
 ```
 
@@ -107,7 +107,7 @@ p1.then(
   },
   (e) => {
     // not called
-  },
+  }
 );
 
 // Thenable throws before callback
@@ -126,7 +126,7 @@ p2.then(
   },
   (e) => {
     console.error(e); // TypeError: Throwing
-  },
+  }
 );
 
 // Thenable throws after callback
@@ -145,7 +145,7 @@ p3.then(
   },
   (e) => {
     // not called
-  },
+  }
 );
 ```
 
@@ -191,7 +191,7 @@ class NotPromise {
     // native promise's, but Promise.resolve() calls them in the same way.
     executor(
       (value) => console.log("Resolved", value),
-      (reason) => console.log("Rejected", reason),
+      (reason) => console.log("Rejected", reason)
     );
   }
 }

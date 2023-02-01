@@ -79,7 +79,7 @@ Let's decompose a traditional anonymous function down to the simplest arrow func
 (a) => a + 100;
 
 // 3. Remove the parameter parentheses
-a => a + 100;
+(a) => a + 100;
 ```
 
 In the example above, both the parentheses around the parameter and the braces around the function body may be omitted. However, they can only be omitted in certain cases.

@@ -35,7 +35,7 @@ If `OP1` and `OP2` have different precedence levels (see the table below), the o
 
 ```js
 console.log(3 + 10 * 2); // 23
-console.log(3 + (10 * 2)); // 23, because parentheses here are superfluous
+console.log(3 + 10 * 2); // 23, because parentheses here are superfluous
 console.log((3 + 10) * 2); // 26, because the parentheses change the order
 ```
 
@@ -50,7 +50,7 @@ with the expected result that `a` and `b` get the value 5. This is because the a
 As another example, the unique exponentiation operator has right-associativity, whereas other arithmetic operators have left-associativity.
 
 ```js
-const a = 4 ** 3 ** 2; // Same as 4 ** (3 ** 2); evaluates to 262144
+const a = 4 ** (3 ** 2); // Same as 4 ** (3 ** 2); evaluates to 262144
 const b = 4 / 3 / 2; // Same as (4 / 3) / 2; evaluates to 0.6666...
 ```
 
@@ -112,7 +112,7 @@ a++++; // SyntaxError: Invalid left-hand side in postfix operation.
 Operator precedence will be handled _recursively_. For example, consider this expression:
 
 ```js
-1 + 2 ** 3 * 4 / 5 >> 6
+(1 + (2 ** 3 * 4) / 5) >> 6;
 ```
 
 First, we group operators with different precedence by decreasing levels of precedence.
@@ -122,7 +122,7 @@ First, we group operators with different precedence by decreasing levels of prec
 3. Looking around the `*`/`/` expression grouped in 2, because `+` has higher precedence than `>>`, the former is grouped.
 
 ```js
-   (1 + ( (2 ** 3) * 4 / 5) ) >> 6
+(1 + (2 ** 3 * 4) / 5) >> 6;
 // │    │ └─ 1. ─┘        │ │
 // │    └────── 2. ───────┘ │
 // └────────── 3. ──────────┘
@@ -131,7 +131,7 @@ First, we group operators with different precedence by decreasing levels of prec
 Within the `*`/`/` group, because they are both left-associative, the left operand would be grouped.
 
 ```js
-   (1 + ( ( (2 ** 3) * 4 ) / 5) ) >> 6
+(1 + (2 ** 3 * 4) / 5) >> 6;
 // │    │ │ └─ 1. ─┘     │    │ │
 // │    └─│─────── 2. ───│────┘ │
 // └──────│───── 3. ─────│──────┘
@@ -148,7 +148,7 @@ function echo(name, num) {
 // Exponentiation operator (**) is right-associative,
 // but all call expressions (echo()), which have higher precedence,
 // will be evaluated before ** does
-console.log(echo("left", 4) ** echo("middle", 3) ** echo("right", 2));
+console.log(echo("left", 4) ** (echo("middle", 3) ** echo("right", 2)));
 // Evaluating the left side
 // Evaluating the middle side
 // Evaluating the right side
@@ -182,8 +182,8 @@ In the previous section, we said "the higher-precedence expressions are always e
 Short-circuiting is jargon for conditional evaluation. For example, in the expression `a && (b + c)`, if `a` is {{Glossary("falsy")}}, then the sub-expression `(b + c)` will not even get evaluated, even if it is grouped and therefore has higher precedence than `&&`. We could say that the logical AND operator (`&&`) is "short-circuited". Along with logical AND, other short-circuited operators include logical OR (`||`), nullish coalescing (`??`), and optional chaining (`?.`).
 
 ```js
-a || (b * c); // evaluate `a` first, then produce `a` if `a` is "truthy"
-a && (b < c); // evaluate `a` first, then produce `a` if `a` is "falsy"
+a || b * c; // evaluate `a` first, then produce `a` if `a` is "truthy"
+a && b < c; // evaluate `a` first, then produce `a` if `a` is "falsy"
 a ?? (b || c); // evaluate `a` first, then produce `a` if `a` is not `null` and not `undefined`
 a?.b.c; // evaluate `a` first, then produce `undefined` if `a` is `null` or `undefined`
 ```
@@ -197,11 +197,20 @@ The previous model of a post-order traversal still stands. However, after the le
 Consider this case:
 
 ```js
-function A() { console.log('called A'); return false; }
-function B() { console.log('called B'); return false; }
-function C() { console.log('called C'); return true; }
+function A() {
+  console.log("called A");
+  return false;
+}
+function B() {
+  console.log("called B");
+  return false;
+}
+function C() {
+  console.log("called C");
+  return true;
+}
 
-console.log(C() || B() && A());
+console.log(C() || (B() && A()));
 
 // called C
 // true
@@ -210,7 +219,7 @@ console.log(C() || B() && A());
 Only `C()` is evaluated, despite `&&` having higher precedence. This does not mean that `||` has higher precedence in this case — it's exactly _because_ `(B() && A())` has higher precedence that causes it to be neglected as a whole. If it's re-arranged as:
 
 ```js
-console.log(A() && C() || B());
+console.log((A() && C()) || B());
 // called A
 // called B
 // false

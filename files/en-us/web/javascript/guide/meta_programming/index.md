@@ -404,7 +404,7 @@ const revocable = Proxy.revocable(
     get(target, name) {
       return `[[${name}]]`;
     },
-  },
+  }
 );
 const proxy = revocable.proxy;
 console.log(proxy.foo); // "[[foo]]"

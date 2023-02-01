@@ -71,14 +71,14 @@ The resulting object has the following properties:
 ### Using the resolvedOptions method
 
 ```js
-const germanFakeRegion = new Intl.DateTimeFormat('de-XX', { timeZone: 'UTC' });
+const germanFakeRegion = new Intl.DateTimeFormat("de-XX", { timeZone: "UTC" });
 const usedOptions = germanFakeRegion.resolvedOptions();
 
-usedOptions.locale;          // "de"
-usedOptions.calendar;        // "gregory"
+usedOptions.locale; // "de"
+usedOptions.calendar; // "gregory"
 usedOptions.numberingSystem; // "latn"
-usedOptions.timeZone;        // "UTC"
-usedOptions.month;           // "numeric"
+usedOptions.timeZone; // "UTC"
+usedOptions.month; // "numeric"
 ```
 
 ## Specifications

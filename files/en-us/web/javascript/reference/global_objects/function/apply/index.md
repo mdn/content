@@ -129,7 +129,7 @@ function minOfArray(arr) {
   for (let i = 0; i < arr.length; i += QUANTUM) {
     const submin = Math.min.apply(
       null,
-      arr.slice(i, Math.min(i + QUANTUM, arr.length)),
+      arr.slice(i, Math.min(i + QUANTUM, arr.length))
     );
     min = Math.min(submin, min);
   }

@@ -95,7 +95,7 @@ function splitString(stringToSplit, separator) {
     "The array has ",
     arrayOfStrings.length,
     " elements: ",
-    arrayOfStrings.join(" / "),
+    arrayOfStrings.join(" / ")
   );
 }
 
