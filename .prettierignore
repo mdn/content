@@ -9,5 +9,3 @@ build/
 !files/en-us/glossary/**/*.md
 !files/en-us/mdn/**/*.md
 
-# TODO: check if formatting kitchensink breaks Yari tests
-files/en-us/mdn/kitchensink/index.md
