@@ -184,7 +184,7 @@ Although it is **strongly discouraged** by Mozilla, some handset manufacturers u
 Here is a JavaScript regular expression that will detect all mobile devices, including devices with a device id in their UA string:
 
 ```js
-/mobi/i
+/mobi/i;
 ```
 
 The `i` makes it case-insensitive, and `mobi` matches all mobile browsers.
