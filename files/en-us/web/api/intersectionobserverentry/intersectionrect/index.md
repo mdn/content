@@ -43,7 +43,7 @@ function intersectionCallback(entries) {
   entries.forEach((entry) => {
     refreshZones.push({
       element: entry.target,
-      rect: entry.intersectionRect
+      rect: entry.intersectionRect,
     });
   });
 }

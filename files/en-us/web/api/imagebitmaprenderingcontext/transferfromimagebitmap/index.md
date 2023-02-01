@@ -48,7 +48,9 @@ None ({{jsxref("undefined")}}).
 ### JavaScript
 
 ```js
-const htmlCanvas = document.getElementById("htmlCanvas").getContext("bitmaprenderer");
+const htmlCanvas = document
+  .getElementById("htmlCanvas")
+  .getContext("bitmaprenderer");
 
 // Draw a WebGL scene offscreen
 const offscreen = new OffscreenCanvas(256, 256);

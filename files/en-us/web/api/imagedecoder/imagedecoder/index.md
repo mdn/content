@@ -52,7 +52,7 @@ The following example creates a new `ImageDecoder` with the required options.
 ```js
 let init = {
   type: "image/png",
-  data: imageByteStream
+  data: imageByteStream,
 };
 
 let imageDecoder = new ImageDecoder(init);

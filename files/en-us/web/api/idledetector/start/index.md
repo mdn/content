@@ -58,7 +58,7 @@ await idleDetector.start({
   threshold: 60_000,
   signal,
 });
-console.log('IdleDetector is active.');
+console.log("IdleDetector is active.");
 ```
 
 ## Specifications

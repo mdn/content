@@ -35,7 +35,7 @@ The following example observes all layout shifts, and prints them to the console
 ```js
 new PerformanceObserver((list) => {
   console.log(list.getEntries());
-}).observe({type: 'layout-shift', buffered: true});
+}).observe({ type: "layout-shift", buffered: true });
 ```
 
 ## Specifications
