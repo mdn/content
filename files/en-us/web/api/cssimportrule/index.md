@@ -43,7 +43,7 @@ The document includes a single stylesheet which contains a single {{cssxref("@im
 
 ```js
 const myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]); // A CSSImportRule instance
+console.log(myRules[0]); // A CSSImportRule instance object
 ```
 
 ## Specifications
