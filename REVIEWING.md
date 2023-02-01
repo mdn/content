@@ -100,7 +100,7 @@ inappropriate, than it is to follow every guideline to the letter.
    assigned already. In such cases, the PR should be linked to an issue
    that explains all these details. If you are not sure, ask the submitter
    if they need a review of the content, and where the rationale behind the
-   change is explained. Ping our team on the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) to ask for help if you are still not sure, or
+   change is explained. Ping our team in the [MDN Web Docs chat rooms][] to ask for help if you are still not sure, or
    if you think the content is suspicious.
 
 Note: You may encounter merge conflicts as you review pull requests, if another
@@ -207,6 +207,7 @@ for all their help.
 
 - [@vkWeb](https://github.com/vkWeb/)
 
-[get in touch with us]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started#Step_4_Ask_for_help
+[get in touch with us]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started#what_can_i_do_to_help
 [mdn code example guidelines]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 [mdn writing style guide]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide
+[MDN Web Docs chat rooms]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
