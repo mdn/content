@@ -42,7 +42,7 @@ class CustomCheckbox extends HTMLElement {
   }
 
   connectedCallback() {
-    console.log(this.#internals.form.length)
+    console.log(this.#internals.form.length);
   }
 }
 

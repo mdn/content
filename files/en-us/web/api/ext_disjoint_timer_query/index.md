@@ -71,7 +71,7 @@ This extension exposes eight new methods.
 ## Examples
 
 ```js
-const ext = gl.getExtension('EXT_disjoint_timer_query');
+const ext = gl.getExtension("EXT_disjoint_timer_query");
 ```
 
 ## Specifications

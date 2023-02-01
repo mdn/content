@@ -1,5 +1,5 @@
 ---
-title: 'Element: pointerdown event'
+title: "Element: pointerdown event"
 slug: Web/API/Element/pointerdown_event
 tags:
   - Event
@@ -22,9 +22,9 @@ The `pointerdown` event is fired when a pointer becomes active. For mouse, it is
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pointerdown', (event) => {});
+addEventListener("pointerdown", (event) => {});
 
-onpointerdown = (event) => { };
+onpointerdown = (event) => {};
 ```
 
 ## Event type
@@ -63,20 +63,20 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 Using `addEventListener()`:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('pointerdown', (event) => {
-  console.log('Pointer down event');
+para.addEventListener("pointerdown", (event) => {
+  console.log("Pointer down event");
 });
 ```
 
 Using the `onpointerdown` event handler property:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.onpointerdown = (event) => {
-  console.log('Pointer down event');
+  console.log("Pointer down event");
 };
 ```
 

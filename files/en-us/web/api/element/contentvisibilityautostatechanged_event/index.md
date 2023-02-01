@@ -31,9 +31,9 @@ contentvisibilityautostatechanged = (event) => {};
 ## Examples
 
 ```js
-const canvasElem = document.querySelector('canvas');
+const canvasElem = document.querySelector("canvas");
 
-canvasElem.addEventListener('contentvisibilityautostatechanged', stateChanged);
+canvasElem.addEventListener("contentvisibilityautostatechanged", stateChanged);
 canvasElem.style.contentVisibility = "auto";
 
 function stateChanged(event) {
@@ -46,7 +46,7 @@ function stateChanged(event) {
 
 // Call this when the canvas updates need to start.
 function startCanvasUpdates(canvas) {
-  // … 
+  // …
 }
 
 // Call this when the canvas updates need to stop.
