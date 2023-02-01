@@ -54,7 +54,7 @@ The code snippet below uses the `geometrychange` event to detect when the virtua
 if ("virtualKeyboard" in navigator) {
   navigator.virtualKeyboard.overlaysContent = true;
 
-  navigator.virtualKeyboard.addEventListener("geometrychange", event => {
+  navigator.virtualKeyboard.addEventListener("geometrychange", (event) => {
     const { x, y, width, height } = event.target.boundingRect;
   });
 }
@@ -75,13 +75,13 @@ The code snippet below uses the `keyboard-inset-height` CSS variable to reserve 
     margin: 0;
     height: 100vh;
     grid-template:
-      "messages"  1fr
-      "input"     auto
-      "keyboard"  env(keyboard-inset-height, 0px);
+      "messages" 1fr
+      "input" auto
+      "keyboard" env(keyboard-inset-height, 0px);
   }
 </style>
 <ul id="messages"></ul>
-<input type="text">
+<input type="text" />
 <script>
   if ("virtualKeyboard" in navigator) {
     navigator.virtualKeyboard.overlaysContent = true;

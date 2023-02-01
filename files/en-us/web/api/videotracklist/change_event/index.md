@@ -1,5 +1,5 @@
 ---
-title: 'VideoTrackList: change event'
+title: "VideoTrackList: change event"
 slug: Web/API/VideoTrackList/change_event
 page-type: web-api-event
 tags:
@@ -16,9 +16,9 @@ The `change` event is fired when a video track is made active or inactive, for e
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('change', (event) => { })
+addEventListener("change", (event) => {});
 
-onchange = (event) => { }
+onchange = (event) => {};
 ```
 
 ## Event type
@@ -30,14 +30,14 @@ A generic {{DOMxRef("Event")}} with no added properties.
 Using `addEventListener()`:
 
 ```js
-const videoElement = document.querySelector('video');
-videoElement.videoTracks.addEventListener('change', (event) => {
-    console.log(`'${event.type}' event fired`);
+const videoElement = document.querySelector("video");
+videoElement.videoTracks.addEventListener("change", (event) => {
+  console.log(`'${event.type}' event fired`);
 });
 
 // changing the value of `selected` will trigger the `change` event
-const toggleTrackButton = document.querySelector('.toggle-track');
-toggleTrackButton.addEventListener('click', () => {
+const toggleTrackButton = document.querySelector(".toggle-track");
+toggleTrackButton.addEventListener("click", () => {
   const track = videoElement.videoTracks[0];
   track.selected = !track.selected;
 });
@@ -46,14 +46,14 @@ toggleTrackButton.addEventListener('click', () => {
 Using the `onchange` event handler property:
 
 ```js
-const videoElement = document.querySelector('video');
+const videoElement = document.querySelector("video");
 videoElement.videoTracks.onchange = (event) => {
-    console.log(`'${event.type}' event fired`);
+  console.log(`'${event.type}' event fired`);
 };
 
 // changing the value of `selected` will trigger the `change` event
-const toggleTrackButton = document.querySelector('.toggle-track');
-toggleTrackButton.addEventListener('click', () => {
+const toggleTrackButton = document.querySelector(".toggle-track");
+toggleTrackButton.addEventListener("click", () => {
   const track = videoElement.videoTracks[0];
   track.selected = !track.selected;
 });
