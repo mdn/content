@@ -101,13 +101,12 @@ nested {{HTMLElement("div")}} elements).
     <p>Some outer text</p>
     <p>Some outer text</p>
 
-    <button onclick="getAllParaElems();">
-      Show all p elements in document
-    </button><br />
+    <button onclick="getAllParaElems();">Show all p elements in document</button
+    ><br />
 
     <button onclick="div1ParaElems();">
-      Show all p elements in div1 element
-    </button><br />
+      Show all p elements in div1 element</button
+    ><br />
 
     <button onclick="div2ParaElems();">
       Show all p elements in div2 element

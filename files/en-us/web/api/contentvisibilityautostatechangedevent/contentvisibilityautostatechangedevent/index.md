@@ -33,7 +33,7 @@ new ContentVisibilityAutoStateChangedEvent(type, options)
 A developer would not use this constructor manually. A new `ContentVisibilityAutoStateChangedEvent` object is constructed when a handler is invoked as a result of the {{domxref("element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event firing.
 
 ```js
-canvasElem.addEventListener('contentvisibilityautostatechanged', event => {
+canvasElem.addEventListener("contentvisibilityautostatechanged", (event) => {
   // …
 });
 ```

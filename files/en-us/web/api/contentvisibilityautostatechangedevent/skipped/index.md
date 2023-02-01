@@ -31,9 +31,9 @@ A boolean. Returns `true` if the user agent skips the element's contents, or `fa
 ## Examples
 
 ```js
-const canvasElem = document.querySelector('canvas');
+const canvasElem = document.querySelector("canvas");
 
-canvasElem.addEventListener('contentvisibilityautostatechanged', stateChanged);
+canvasElem.addEventListener("contentvisibilityautostatechanged", stateChanged);
 canvasElem.style.contentVisibility = "auto";
 
 function stateChanged(event) {
