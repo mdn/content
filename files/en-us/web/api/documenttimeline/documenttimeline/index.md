@@ -37,7 +37,9 @@ new DocumentTimeline(options)
 
 ### Origin time
 
-Since {{domxref("Document.timeline")}}'s zero time is {{domxref("Performance.timeOrigin")}}, a {{domxref("DocumentTimeline")}} with `originTime` `0` will show the same time as it.
+A {{domxref("DocumentTimeline")}} with an `originTime` of zero counts time
+starting from {{domxref("Performance.timeOrigin")}}. This is the same behavior
+as {{domxref("Document.timeline")}}.
 
 ```js
 const timeline = new DocumentTimeline();
