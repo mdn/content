@@ -173,9 +173,7 @@ In a stylesheet that contains [media query](/en-US/docs/Web/CSS/Media_Queries/Us
   Not this: <!--I thought this is the preferred style-->
 
   ```css example-bad
-  h1,
-  h2,
-  h3 {
+  h1, h2, h3 {
     font-family: sans-serif;
     text-align: center;
   }
@@ -211,11 +209,7 @@ p {
 ```
 
 ```css example-bad
-p {
-  color: white;
-  background-color: black;
-  padding: 1rem;
-}
+p { color: white; background-color: black; padding: 1rem; }
 ```
 
 ## Value to turn off properties

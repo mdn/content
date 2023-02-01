@@ -8,3 +8,6 @@ build/
 # The following paths have had a full pass
 !files/en-us/glossary/**/*.md
 !files/en-us/mdn/**/*.md
+
+# These files need to be reviewed further
+files/en-us/mdn/writing_guidelines/writing_style_guide/code_style_guide/css/index.md
