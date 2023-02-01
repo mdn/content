@@ -10,5 +10,4 @@ build/
 !files/en-us/mdn/**/*.md
 
 # These files need to be reviewed further
-files/en-us/mdn/writing_guidelines/writing_style_guide/code_style_guide/css/index.md
 files/en-us/mdn/kitchensink/index.md
