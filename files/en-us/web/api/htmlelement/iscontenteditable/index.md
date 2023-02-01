@@ -38,8 +38,10 @@ A boolean value.
 ### JavaScript
 
 ```js
-document.getElementById('infoText1').innerHTML += document.getElementById('myText1').isContentEditable;
-document.getElementById('infoText2').innerHTML += document.getElementById('myText2').isContentEditable;
+document.getElementById("infoText1").innerHTML +=
+  document.getElementById("myText1").isContentEditable;
+document.getElementById("infoText2").innerHTML +=
+  document.getElementById("myText2").isContentEditable;
 ```
 
 ### Result

@@ -22,7 +22,7 @@ A boolean value.
 ## Examples
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 obj.loop = true; // true
 ```
 

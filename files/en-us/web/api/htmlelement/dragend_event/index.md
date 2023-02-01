@@ -1,5 +1,5 @@
 ---
-title: 'HTMLElement: dragend event'
+title: "HTMLElement: dragend event"
 slug: Web/API/HTMLElement/dragend_event
 page-type: web-api-event
 tags:
@@ -24,9 +24,9 @@ The `dragend` event is fired when a drag operation is being ended (by releasing 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('dragend', (event) => {});
+addEventListener("dragend", (event) => {});
 
-ondragend = (event) => { };
+ondragend = (event) => {};
 ```
 
 ## Event type

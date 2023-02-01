@@ -143,7 +143,9 @@ Click the button in this example to increment the {{HTMLElement("input/number",
 
 ```html
 <p>
-  <label for="theNumber">Enter a number between 0 and 400 that is divisible by 5:</label>
+  <label for="theNumber"
+    >Enter a number between 0 and 400 that is divisible by 5:</label
+  >
   <input type="number" step="5" id="theNumber" min="0" max="400" />
 </p>
 <p>
@@ -160,19 +162,21 @@ Click the button in this example to increment the {{HTMLElement("input/number",
 
 ```js
 /* make the button call the function */
-const button = document.getElementById('theButton');
-button.addEventListener('click', () => {
-  steponup()
-})
+const button = document.getElementById("theButton");
+button.addEventListener("click", () => {
+  steponup();
+});
 
 function steponup() {
-  let input = document.getElementById('theNumber')
-  let val = document.getElementById('incrementor').value
+  let input = document.getElementById("theNumber");
+  let val = document.getElementById("incrementor").value;
 
-  if (val) {  /* increment with a parameter */
-    input.stepUp(val)
-  } else {    /* or without a parameter. Try it with 0 */
-    input.stepUp()
+  if (val) {
+    /* increment with a parameter */
+    input.stepUp(val);
+  } else {
+    /* or without a parameter. Try it with 0 */
+    input.stepUp();
   }
 }
 ```

@@ -39,7 +39,7 @@ A number.
 ## Examples
 
 ```js
-if (document.getElementById('form1').length > 1) {
+if (document.getElementById("form1").length > 1) {
   // more than one form control here
 }
 ```

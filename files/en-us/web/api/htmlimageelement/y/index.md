@@ -3,7 +3,7 @@ title: HTMLImageElement.y
 slug: Web/API/HTMLImageElement/y
 page-type: web-api-instance-property
 tags:
-- Property
+  - Property
 browser-compat: api.HTMLImageElement.y
 ---
 

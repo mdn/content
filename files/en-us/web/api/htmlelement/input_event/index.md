@@ -1,5 +1,5 @@
 ---
-title: 'HTMLElement: input event'
+title: "HTMLElement: input event"
 slug: Web/API/HTMLElement/input_event
 page-type: web-api-event
 tags:
@@ -35,9 +35,9 @@ For {{htmlelement("textarea")}} and {{htmlelement("input")}} elements that accep
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('input', (event) => {});
+addEventListener("input", (event) => {});
 
-oninput = (event) => { };
+oninput = (event) => {};
 ```
 
 ## Event type
@@ -58,10 +58,10 @@ This example logs the value whenever you change the value of the {{HtmlElement("
 ### JavaScript
 
 ```js
-const input = document.querySelector('input');
-const log = document.getElementById('values');
+const input = document.querySelector("input");
+const log = document.getElementById("values");
 
-input.addEventListener('input', updateValue);
+input.addEventListener("input", updateValue);
 
 function updateValue(e) {
   log.textContent = e.target.value;

@@ -56,20 +56,38 @@ The code below shows how to check if `HTMLScriptElement.supports()` is defined, 
 ```
 
 ```js
-if (typeof HTMLScriptElement.supports === 'undefined') {
+if (typeof HTMLScriptElement.supports === "undefined") {
   //Check if method is defined
   console.log("HTMLScriptElement.supports() method is not supported");
-}
-else
-{
+} else {
   //Returns true for the supported values
-  console.log(`HTMLScriptElement.supports('module'): ${HTMLScriptElement.supports('module')}`);
-  console.log(`HTMLScriptElement.supports('classic'): ${HTMLScriptElement.supports('classic')}`);
-  console.log(`HTMLScriptElement.supports('importmap'): ${HTMLScriptElement.supports('importmap')}`);
-  console.log(`HTMLScriptElement.supports('speculationrules'): ${HTMLScriptElement.supports('speculationrules')}`);
+  console.log(
+    `HTMLScriptElement.supports('module'): ${HTMLScriptElement.supports(
+      "module"
+    )}`
+  );
+  console.log(
+    `HTMLScriptElement.supports('classic'): ${HTMLScriptElement.supports(
+      "classic"
+    )}`
+  );
+  console.log(
+    `HTMLScriptElement.supports('importmap'): ${HTMLScriptElement.supports(
+      "importmap"
+    )}`
+  );
+  console.log(
+    `HTMLScriptElement.supports('speculationrules'): ${HTMLScriptElement.supports(
+      "speculationrules"
+    )}`
+  );
 
   //Returns false for any other values
-  console.log(`HTMLScriptElement.supports('anything else'): ${HTMLScriptElement.supports('anything else')}`);
+  console.log(
+    `HTMLScriptElement.supports('anything else'): ${HTMLScriptElement.supports(
+      "anything else"
+    )}`
+  );
 }
 ```
 

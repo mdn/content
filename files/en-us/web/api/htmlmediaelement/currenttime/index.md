@@ -51,7 +51,7 @@ The length of the media in seconds can be determined using the
 ## Examples
 
 ```js
-const video = document.createElement('video');
+const video = document.createElement("video");
 console.log(video.currentTime);
 ```
 

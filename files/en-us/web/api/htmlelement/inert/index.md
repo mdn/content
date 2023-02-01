@@ -3,9 +3,9 @@ title: HTMLElement.inert
 slug: Web/API/HTMLElement/inert
 page-type: web-api-instance-property
 tags:
-- API
-- DOM
-- Property
+  - API
+  - DOM
+  - Property
 browser-compat: api.HTMLElement.inert
 ---
 

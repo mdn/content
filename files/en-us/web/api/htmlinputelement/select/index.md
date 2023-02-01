@@ -48,7 +48,7 @@ Click the button in this example to select all the text in the
 
 ```js
 function selectText() {
-  const input = document.getElementById('text-box');
+  const input = document.getElementById("text-box");
   input.focus();
   input.select();
 }

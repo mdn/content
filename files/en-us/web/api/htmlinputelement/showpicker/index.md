@@ -56,7 +56,7 @@ None ({{jsxref("undefined")}}).
 The code below shows how to check if `showPicker()` is supported:
 
 ```js
-if ('showPicker' in HTMLInputElement.prototype) {
+if ("showPicker" in HTMLInputElement.prototype) {
   // showPicker() is supported.
 }
 ```
@@ -128,16 +128,16 @@ First we define a `<datalist>` in HTML consisting of a number of internet browse
 The code below adds an event listener that calls `showPicker()` when the button is clicked.
 
 ```js
-  const button = document.querySelector("button");
-  const browserInput = document.querySelector("input");
+const button = document.querySelector("button");
+const browserInput = document.querySelector("input");
 
-  button.addEventListener("click", () => {
-    try {
-      browserInput.showPicker();
-    } catch (error) {
-      // Fall back to another picker mechanism
-    }
-  });
+button.addEventListener("click", () => {
+  try {
+    browserInput.showPicker();
+  } catch (error) {
+    // Fall back to another picker mechanism
+  }
+});
 ```
 
 ### showPicker() for autocomplete
@@ -153,16 +153,16 @@ Here we define an input that takes an autocomplete option of "name".
 The code below shows the picker for the input when the button is clicked.
 
 ```js
-  const button = document.querySelector("button");
-  const browserInput = document.querySelector("input");
+const button = document.querySelector("button");
+const browserInput = document.querySelector("input");
 
-  button.addEventListener("click", () => {
-    try {
-      browserInput.showPicker();
-    } catch (error) {
-      // Fall back to another picker mechanism
-    }
-  });
+button.addEventListener("click", () => {
+  try {
+    browserInput.showPicker();
+  } catch (error) {
+    // Fall back to another picker mechanism
+  }
+});
 ```
 
 ## Specifications

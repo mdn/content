@@ -20,9 +20,9 @@ The **`disconnect`** event of the {{domxref("HID")}} interface fires when the us
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('disconnect', (event) => { })
+addEventListener("disconnect", (event) => {});
 
-ondisconnect = (event) => { }
+ondisconnect = (event) => {};
 ```
 
 ## Event type
@@ -43,7 +43,7 @@ _In addition to the properties listed below, properties from the parent interfac
 In the following example an event listener is registered to listen for the disconnection of a device. The name of the device is then printed to the console using {{domxref("HIDDevice.productName")}}.
 
 ```js
-navigator.hid.addEventListener('disconnect', ({device}) => {
+navigator.hid.addEventListener("disconnect", ({ device }) => {
   console.log(`HID disconnected: ${device.productName}`);
 });
 ```

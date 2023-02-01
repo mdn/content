@@ -53,7 +53,7 @@ the session history.
 ### JavaScript
 
 ```js
-document.getElementById('go-back').addEventListener('click', () => {
+document.getElementById("go-back").addEventListener("click", () => {
   history.back();
 });
 ```
