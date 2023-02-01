@@ -1,5 +1,5 @@
 ---
-title: 'Warning: -file- is being assigned a //# sourceMappingURL, but already has one'
+title: "Warning: -file- is being assigned a //# sourceMappingURL, but already has one"
 slug: Web/JavaScript/Reference/Errors/Already_has_pragma
 page-type: javascript-error
 tags:
