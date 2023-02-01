@@ -32,26 +32,52 @@ None.
 An object containing the following properties:
 
 - `delay`
-  - : A `number`.
+  - : The `number` of milliseconds of delay before the start of the effect.
+
     (Corresponds to {{cssxref("animation-delay")}}.)
 - `endDelay`
-  - : A `number`.
+  - : The `number` of milliseconds of delay after the end of the effect.
+
+    This is primarily of use when sequencing animations based on the end time of another animation.
 - `fill`
   - : `"none"`, `"forwards"`, `"backwards"`, "`both`", or `"auto"`.
+
+    Indicates whether the effect is reflected by its target(s) prior to playing
+    (`"backwards"`), retained after the effect has completed (`"forwards"`), `"both"`, or
+    neither (`"none"`).
+
+    The meaning of `"auto"` may differ depending on the type of effect; for
+    {{domxref("KeyframeEffect")}}, `"auto"` is the same as `"none"`.
+
     (Corresponds to {{cssxref("animation-fill-mode")}}.)
 - `iterationStart`
-  - : A `number`.
+  - : A `number` indicating at what point in the iteration the effect starts. For example, an effect with
+    an `iterationStart` of 0.5 and 2 `iterations` would start halfway through its first iteration
+    and end halfway through a third iteration.
 - `iterations`
-  - : A `number`.
+  - : The `number` of times the effect will repeat. A value of {{jsxref("Infinity")}} indicates that
+    the effect repeats indefinitely.
+
     (Corresponds to {{cssxref("animation-iteration-count")}}.)
 - `duration`
-  - : A `number` or the `string` `"auto"`.
+  - : A `number` of milliseconds or the `string` `"auto"`.
+
+    Indicates the time one iteration of the animation takes to complete.
+
+    The meaning of `"auto"` may differ depending on the type of effect; for {{domxref("KeyframeEffect")}}, `"auto"` is the same as `0`.
+
     (Corresponds to {{cssxref("animation-duration")}}.)
 - `direction`
   - : `"normal"`, `"reverse"`, `"alternate"`, or `"alternate-reverse"`.
+
+    Indicates whether the effect runs forwards (`"normal"`), backwards (`"reverse"`), switches direction
+    after each iteration (`"alternate"`), or runs backwards and switches direction after each iteration
+    (`"alternate-reverse"`).
+
     (Corresponds to {{cssxref("animation-direction")}}.)
 - `easing`
-  - : A `string` representing an {{cssxref("easing-function")}}.
+  - : A `string` representing an {{cssxref("easing-function")}} describing the rate of change of the effect over time.
+
     (Corresponds to {{cssxref("animation-timing-function")}}.)
 
 Several of these properties have corresponding [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) properties.
