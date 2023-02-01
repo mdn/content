@@ -256,7 +256,7 @@ div[class] {
   animation-play-state: paused;
 }
 /* When the div is hovered, the animation plays. Also, 
-when the input is checked, the animation coming after the checked checbox plays */
+when the input is checked, the animation coming after the checked checkbox plays */
 div:hover *, 
 input:checked ~ div * { 
   animation-play-state: running;
