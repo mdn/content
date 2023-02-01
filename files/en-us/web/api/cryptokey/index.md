@@ -38,7 +38,7 @@ For security reasons, the `CryptoKey` interface can only be used in a [secure co
   - : A boolean value indicating whether or not the key may be extracted using [`SubtleCrypto.exportKey()`](/en-US/docs/Web/API/SubtleCrypto/exportKey) or [`SubtleCrypto.wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/wrapKey).
 
     - `true`: The key may be extracted.
-    - `false` The key may not be extracted. [`exportKey()`](/en-US/docs/Web/API/SubtleCrypto/exportKey) or [`wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/wrapKey) will throw an exception if used to extract this key.
+    - `false`: The key may not be extracted. [`exportKey()`](/en-US/docs/Web/API/SubtleCrypto/exportKey) or [`wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/wrapKey) will throw an exception if used to extract this key.
 
 - `CryptoKey.algorithm`
 

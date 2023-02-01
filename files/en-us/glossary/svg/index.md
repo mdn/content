@@ -1,6 +1,7 @@
 ---
 title: SVG
 slug: Glossary/SVG
+page-type: glossary-definition
 tags:
   - Beginner
   - CodingScripting

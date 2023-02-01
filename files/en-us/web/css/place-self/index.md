@@ -39,8 +39,6 @@ place-self: self-start auto;
 place-self: self-end normal;
 place-self: flex-start auto;
 place-self: flex-end normal;
-place-self: left auto;
-place-self: right normal;
 
 /* Baseline alignment */
 place-self: baseline normal;

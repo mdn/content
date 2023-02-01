@@ -58,8 +58,7 @@ The truth table for the OR operation is:
 14 | 9 (base 10) = 00000000000000000000000000001111 (base 2) = 15 (base 10)
 ```
 
-Bitwise ORing any number `x` with `0` yields
-`x` converted to a 32-bit integer.
+Bitwise ORing any number `x` with `0` returns `x` converted to a 32-bit integer. Do not use `| 0` to truncate numbers to integers; use [`Math.trunc()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc#using_bitwise_no-ops_to_truncate_numbers) instead.
 
 ## Examples
 

@@ -25,15 +25,15 @@ The following code shows some basic operations with a `Map`. See also the {{jsxr
 
 ```js
 const sayings = new Map();
-sayings.set('dog', 'woof');
-sayings.set('cat', 'meow');
-sayings.set('elephant', 'toot');
+sayings.set("dog", "woof");
+sayings.set("cat", "meow");
+sayings.set("elephant", "toot");
 sayings.size; // 3
-sayings.get('dog'); // woof
-sayings.get('fox'); // undefined
-sayings.has('bird'); // false
-sayings.delete('dog');
-sayings.has('dog'); // false
+sayings.get("dog"); // woof
+sayings.get("fox"); // undefined
+sayings.has("bird"); // false
+sayings.delete("dog");
+sayings.has("dog"); // false
 
 for (const [key, value] of sayings) {
   console.log(`${key} goes ${value}`);
@@ -93,18 +93,18 @@ module.exports = Public;
 
 ### Set object
 
-{{jsxref("Set")}} objects are collections of values. You can iterate its elements in insertion order. A value in a `Set` may only occur once; it is unique in the `Set`'s collection.
+{{jsxref("Set")}} objects are collections of unique values. You can iterate its elements in insertion order. A value in a `Set` may only occur once; it is unique in the `Set`'s collection.
 
 The following code shows some basic operations with a `Set`. See also the {{jsxref("Set")}} reference page for more examples and the complete API.
 
 ```js
 const mySet = new Set();
 mySet.add(1);
-mySet.add('some text');
-mySet.add('foo');
+mySet.add("some text");
+mySet.add("foo");
 
 mySet.has(1); // true
-mySet.delete('foo');
+mySet.delete("foo");
 mySet.size; // 2
 
 for (const item of mySet) {

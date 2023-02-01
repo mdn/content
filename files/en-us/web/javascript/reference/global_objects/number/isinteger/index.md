@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Number.isInteger
 
 {{JSRef}}
 
-The **`Number.isInteger()`** method determines whether the passed value is an integer.
+The **`Number.isInteger()`** static method determines whether the passed value is an integer.
 
 {{EmbedInteractiveExample("pages/js/number-isinteger.html")}}
 

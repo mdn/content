@@ -21,10 +21,10 @@ spec-urls: https://drafts.csswg.org/css-scroll-snap/
 
 ### Properties
 
-- {{cssxref("scroll-snap-coordinate")}}
-- {{cssxref("scroll-snap-destination")}}
-- {{cssxref("scroll-snap-points-x")}}
-- {{cssxref("scroll-snap-points-y")}}
+- {{cssxref("scroll-snap-coordinate")}} {{Deprecated_Inline}}
+- {{cssxref("scroll-snap-destination")}} {{Deprecated_Inline}}
+- {{cssxref("scroll-snap-points-x")}} {{Deprecated_Inline}}
+- {{cssxref("scroll-snap-points-y")}} {{Deprecated_Inline}}
 - {{cssxref("scroll-snap-type")}}
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: Denial of Service
 slug: Glossary/Denial_of_Service
+page-type: glossary-definition
 tags:
   - Attack
   - Denial of Service

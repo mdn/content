@@ -3,7 +3,6 @@ title: 'Permissions-Policy: display-capture'
 slug: Web/HTTP/Headers/Permissions-Policy/display-capture
 tags:
   - Directive
-  - Experimental
   - Permissions Policy
   - HTTP
   - Reference
@@ -11,7 +10,7 @@ tags:
 browser-compat: http.headers.Permissions-Policy.display-capture
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `display-capture` directive controls whether or not the document is permitted to use [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API), that is, {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} to capture the screen's contents.
 

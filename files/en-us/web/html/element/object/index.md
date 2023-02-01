@@ -1,6 +1,7 @@
 ---
 title: '<object>: The External Object element'
 slug: Web/HTML/Element/object
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -107,7 +108,7 @@ Note that a `type` field is normally specified, but is not needed for Youtube vi
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("application")}}, {{ARIARole("document")}}, {{ARIARole("image")}}
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>
       </td>
     </tr>
     <tr>

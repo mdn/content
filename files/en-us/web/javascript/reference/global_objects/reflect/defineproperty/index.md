@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Reflect.defineProperty
 
 {{JSRef}}
 
-The static **`Reflect.defineProperty()`** method is like
+The **`Reflect.defineProperty()`** static method is like
 {{jsxref("Object.defineProperty()")}} but returns a {{jsxref("Boolean")}}.
 
 {{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}

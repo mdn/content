@@ -1,6 +1,7 @@
 ---
 title: Scrollport
 slug: Glossary/Scrollport
+page-type: glossary-definition
 tags:
   - scrollport
 ---

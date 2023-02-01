@@ -1,6 +1,7 @@
 ---
 title: '<center>: The Centered Text element'
 slug: Web/HTML/Element/center
+page-type: html-element
 tags:
   - Element
   - HTML

@@ -189,7 +189,7 @@ If we add `writing-mode: vertical-lr` to the grid container, we can see that the
 
 {{ EmbedLiveSample('Setting_writing_mode', '500', '330') }}
 
-![A image showing the direction of Block and Inline when writing-mode is vertical-lr](8-vertical-lr.png)
+![An image showing the direction of Block and Inline when writing-mode is vertical-lr](8-vertical-lr.png)
 
 ## Logical values for alignment
 

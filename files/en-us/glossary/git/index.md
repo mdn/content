@@ -1,6 +1,7 @@
 ---
 title: Git
 slug: Glossary/Git
+page-type: glossary-definition
 tags:
   - Collaborating
 ---

@@ -8,11 +8,10 @@ tags:
   - CSS Property
   - Reference
   - math-style
-  - Experimental
 browser-compat: css.properties.math-style
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The `math-style` property indicates whether MathML equations should render with normal or compact height.
 

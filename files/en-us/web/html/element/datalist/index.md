@@ -1,6 +1,7 @@
 ---
 title: '<datalist>: The HTML Data List element'
 slug: Web/HTML/Element/datalist
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -113,7 +114,7 @@ The specification allows linking `<datalist>` with a {{HTMLElement("input/passwo
 
 {{EmbedLiveSample("Password_type", 600, 40)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

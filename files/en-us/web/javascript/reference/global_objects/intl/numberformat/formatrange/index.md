@@ -9,13 +9,12 @@ tags:
   - Localization
   - Method
   - NumberFormat
-  - Experimental
   - Prototype
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.formatRange
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
 The **`Intl.NumberFormat.prototype.formatRange()`** method formats a range of numbers according to the locale and formatting options of the {{jsxref("Intl.NumberFormat")}} object from which the method is called.
 
@@ -58,11 +57,11 @@ const nf = new Intl.NumberFormat("en-US", {
   maximumFractionDigits: 0,
 });
 
-console.log(nf.formatRange(3, 5)); // "€3 – €5"
+console.log(nf.formatRange(3, 5)); // "$3 – $5"
 
 // Note: the "approximately equals" symbol is added if
 // startRange and endRange round to the same values.
-console.log(nf.formatRange(2.9, 3.1)); // "~€3"
+console.log(nf.formatRange(2.9, 3.1)); // "~$3"
 ```
 
 ```js

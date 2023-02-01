@@ -16,7 +16,7 @@ browser-compat: javascript.builtins.String.fromCodePoint
 
 {{JSRef}}
 
-The static **`String.fromCodePoint()`** method returns a string
+The **`String.fromCodePoint()`** static method returns a string
 created by using the specified sequence of code points.
 
 {{EmbedInteractiveExample("pages/js/string-fromcodepoint.html","shorter")}}

@@ -1,6 +1,7 @@
 ---
 title: GPL
 slug: Glossary/GPL
+page-type: glossary-definition
 tags:
   - GPL
   - License

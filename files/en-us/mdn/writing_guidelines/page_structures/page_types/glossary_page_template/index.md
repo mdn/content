@@ -22,6 +22,7 @@ tags:
 > ---
 > title: Term being defined
 > slug: Glossary/Term_being_defined
+> page-type: glossary-definition OR glossary-disambiguation
 > tags:
 >   - Glossary
 >   - The term
@@ -34,6 +35,8 @@ tags:
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
 >     This will be formatted as snake case of the title: `Glossary/Term_being_defined`.
+> - **page-type**
+>   - : `glossary-definition` for a definition page or `glossary-disambiguation` for a disambiguation page.
 > - **tags**
 >   - : Always include the following tags: **Glossary**, _Term being defined_.
 >
