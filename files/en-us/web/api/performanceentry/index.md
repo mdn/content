@@ -81,7 +81,7 @@ function perfObserver(list, observer) {
 }
 const observer = new PerformanceObserver(perfObserver);
 observer.observe({ entryTypes: ["measure", "mark"] });
-````
+```
 
 ## Specifications
 

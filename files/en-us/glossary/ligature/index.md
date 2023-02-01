@@ -1,6 +1,7 @@
 ---
 title: Ligature
 slug: Glossary/Ligature
+page-type: glossary-definition
 tags:
   - CSS
   - Design

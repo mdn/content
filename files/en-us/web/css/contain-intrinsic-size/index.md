@@ -7,7 +7,6 @@ tags:
   - CSS Property
   - Reference
   - contain-intrinsic-size
-  - recipe:css-shorthand-property
 browser-compat: css.properties.contain-intrinsic-size
 ---
 

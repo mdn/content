@@ -1,6 +1,7 @@
 ---
 title: Hoisting
 slug: Glossary/Hoisting
+page-type: glossary-definition
 tags:
   - CodingScripting
   - JavaScript

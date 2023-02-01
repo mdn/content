@@ -83,7 +83,7 @@ Using this as an example, we could include a subgrid stylesheet if the value is 
 
 Here, `basic-styling.css` handles all the styling that we want to give to every browser. We have two additional CSS files, `grid-layout.css` and `subgrid-layout.css`, which contain the CSS we want to selectively apply to browsers depending on their support levels.
 
-We use JavaScript to test the support for the subgrid value, then update the `href` of our conditional stylessheet based on browser support.
+We use JavaScript to test the support for the subgrid value, then update the `href` of our conditional stylesheet based on browser support.
 
 We can add a `<script></script>` to our document, filled with the following JavaScript
 
@@ -279,7 +279,7 @@ Let's have a look at how Modernizr works in terms of selectively applying CSS.
    <html lang="en-us" class="no-js">…</html>
    ```
 
-At this point, try loading your page, and you'll get an idea of how Modernizr works for CSS features. If you look at the DOM inspector of your browser's developer tools, you'll see that Modernizr has updated your `<html>` `class` value like so:
+At this point, try loading your page, and you'll get an idea of how Modernizr works for CSS features. If you look at the DOM inspector of your browser's developer tools, you'll see that Modernizr has updated the `class` attribute of your `<html>` element like so:
 
 ```html
 <html

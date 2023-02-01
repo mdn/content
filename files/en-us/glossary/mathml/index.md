@@ -1,6 +1,7 @@
 ---
 title: MathML
 slug: Glossary/MathML
+page-type: glossary-definition
 tags:
   - CodingScripting
   - MathML

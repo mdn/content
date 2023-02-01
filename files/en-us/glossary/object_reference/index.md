@@ -1,6 +1,7 @@
 ---
 title: Object reference
 slug: Glossary/Object_reference
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

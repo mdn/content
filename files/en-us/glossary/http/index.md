@@ -1,6 +1,7 @@
 ---
 title: HTTP
 slug: Glossary/HTTP
+page-type: glossary-definition
 tags:
   - Beginner
   - HTTP

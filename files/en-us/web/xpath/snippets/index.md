@@ -9,6 +9,10 @@ tags:
   - XSLT
 ---
 
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/XPath")}}
+</section>
+
 This article provides some XPath code snippets — simple examples of how to a few simple **utility functions** based on standard interfaces from the [DOM Level 3 XPath specification](https://www.w3.org/TR/DOM-Level-3-XPath/) that expose XPath functionality to JavaScript code. The snippets are functions you can use in the real world in your own code.
 
 ### Node-specific evaluator function
@@ -146,5 +150,3 @@ function getXPathForElement(el, xml) {
 ## See also
 
 - [Introduction to using XPath in JavaScript](/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/XPath")}}

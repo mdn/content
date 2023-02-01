@@ -1,6 +1,7 @@
 ---
 title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
@@ -14,7 +15,7 @@ browser-compat: javascript.operators.instanceof
 
 {{jsSidebar("Operators")}}
 
-The **`instanceof` operator** tests to see if the `prototype` property of a constructor appears anywhere in the prototype chain of an object. The return value is a boolean value. Its behavior can be customized with [`Symbol.hasInstance`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance).
+The **`instanceof`** operator tests to see if the `prototype` property of a constructor appears anywhere in the prototype chain of an object. The return value is a boolean value. Its behavior can be customized with [`Symbol.hasInstance`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance).
 
 {{EmbedInteractiveExample("pages/js/expressions-instanceof.html")}}
 

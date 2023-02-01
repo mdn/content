@@ -1,6 +1,7 @@
 ---
 title: '<image>: The Image element'
 slug: Web/HTML/Element/image
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -19,6 +20,8 @@ The **`<image>`** [HTML](/en-US/docs/Web/HTML) element is an ancient and poorly 
 **It should not be used**.
 
 Some browsers will attempt to automatically convert this into an {{HTMLElement("img")}} element, and may succeed if the {{htmlattrxref("src", "img")}} attribute is specified as well.
+
+<!-- ## Technical summary -->
 
 ## Specifications
 

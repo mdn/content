@@ -150,7 +150,7 @@ Consider this HTML:
   multiple
   accept="image/*"
   style="display:none" />
-<button id="fileSelect">Select some files</button>
+<button id="fileSelect" type="button">Select some files</button>
 ```
 
 The code that handles the `click` event can look like this:
@@ -166,7 +166,7 @@ fileSelect.addEventListener("click", (e) => {
 }, false);
 ```
 
-You can style the new button for opening the file picker as you wish.
+You can style the {{HTMLElement("button")}} however you wish.
 
 ## Using a label element to trigger a hidden file input element
 

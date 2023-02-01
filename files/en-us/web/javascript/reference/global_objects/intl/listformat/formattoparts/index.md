@@ -1,6 +1,7 @@
 ---
 title: Intl.ListFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
+page-type: javascript-instance-method
 tags:
   - Internationalization
   - Intl

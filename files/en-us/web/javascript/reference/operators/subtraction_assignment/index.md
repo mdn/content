@@ -1,6 +1,7 @@
 ---
 title: Subtraction assignment (-=)
 slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
+page-type: javascript-operator
 tags:
   - Assignment operator
   - JavaScript
@@ -12,7 +13,7 @@ browser-compat: javascript.operators.subtraction_assignment
 
 {{jsSidebar("Operators")}}
 
-The subtraction assignment operator (`-=`) subtracts the value of the right
+The **subtraction assignment (`-=`)** operator subtracts the value of the right
 operand from a variable and assigns the result to the variable.
 
 {{EmbedInteractiveExample("pages/js/expressions-subtraction-assignment.html")}}

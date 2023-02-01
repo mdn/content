@@ -59,13 +59,13 @@ background-size: 300px 150px;
 
 The result looks like this:
 
-![New Firefox logo stretched](s.codepen.io_richienb_debug_lonxgp_pnkvygvggyxa.png)
+![New Firefox logo stretched](stretched_firefox_logo.png)
 
 ## Scaling an image up
 
 On the other end of the spectrum, you can scale an image up in the background. Here we scale a 32x32 pixel favicon to 300x300 pixels:
 
-![MDN Logo scaled](favicon57.de33179910ae.1.1.png)
+![MDN Logo scaled](scaled_mdn_logo.png)
 
 ```css
 .square2 {

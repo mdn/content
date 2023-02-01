@@ -17,7 +17,7 @@ The **`Element.scrollHeight`** read-only property is a
 measurement of the height of an element's content, including content not visible on the
 screen due to overflow.
 
-![The user's veiwport is an element with four regions labeled padding-top, border-top, border-bottom, padding-bottom. The scroll height goes from the container's padding top to the end of the padding bottom, well beyond the top and bottom of the viewport.](scrollheight.png)
+![The user's viewport is an element with four regions labeled padding-top, border-top, border-bottom, padding-bottom. The scroll height goes from the container's padding top to the end of the padding bottom, well beyond the top and bottom of the viewport.](scrollheight.png)
 
 The `scrollHeight` value is equal to the minimum height the element would
 require in order to fit all the content in the viewport without using a vertical

@@ -1,6 +1,7 @@
 ---
 title: Number.isInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
+page-type: javascript-static-method
 tags:
   - JavaScript
   - Method
@@ -12,7 +13,7 @@ browser-compat: javascript.builtins.Number.isInteger
 
 {{JSRef}}
 
-The **`Number.isInteger()`** method determines whether the passed value is an integer.
+The **`Number.isInteger()`** static method determines whether the passed value is an integer.
 
 {{EmbedInteractiveExample("pages/js/number-isinteger.html")}}
 

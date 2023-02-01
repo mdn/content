@@ -11,10 +11,11 @@ tags:
   - SourceBuffer
   - Video
   - textTracks
+  - Experimental
 browser-compat: api.SourceBuffer.textTracks
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 The **`textTracks`** read-only property of the
 {{domxref("SourceBuffer")}} interface returns a list of the text tracks currently

@@ -1,6 +1,7 @@
 ---
 title: color-profile
 slug: Web/SVG/Attribute/color-profile
+page-type: svg-attribute
 tags:
   - Deprecated
   - NeedsExample

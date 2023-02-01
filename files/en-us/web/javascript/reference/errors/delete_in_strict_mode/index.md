@@ -3,6 +3,7 @@ title: >-
   SyntaxError: applying the 'delete' operator to an unqualified name is
   deprecated
 slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
+page-type: javascript-error
 tags:
   - Error
   - Errors
@@ -43,7 +44,7 @@ This error only happens in [strict mode code](/en-US/docs/Web/JavaScript/Referen
 Attempting to delete a plain variable, doesn't work in JavaScript and it throws an error in strict mode:
 
 ```js example-bad
-'use strict';
+"use strict";
 
 var x;
 
@@ -58,7 +59,7 @@ delete x;
 To free the contents of a variable, you can set it to [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null):
 
 ```js example-good
-'use strict';
+"use strict";
 
 var x;
 

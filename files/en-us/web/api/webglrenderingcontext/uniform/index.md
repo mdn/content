@@ -22,7 +22,7 @@ object, when they are once again initialized to 0.
 
 > **Note:** Many of the functions described here have expanded WebGL 2 interfaces, which can be
 > found under
-> {{domxref("WebGL2RenderingContext.uniform","WebGL2RenderingContext.uniform[1234][uif][v]()")}}.
+> [`WebGL2RenderingContext.uniform[1234][uif][v]()`](/en-US/docs/Web/API/WebGL2RenderingContext/uniform).
 
 ## Syntax
 

@@ -1,6 +1,7 @@
 ---
 title: Cookie
 slug: Glossary/Cookie
+page-type: glossary-definition
 tags:
   - WebMechanics
 ---
