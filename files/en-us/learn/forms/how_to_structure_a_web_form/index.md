@@ -204,7 +204,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
    <form></form>
    ```
 
-4. Inside the `<form>` tags, add a heading and paragraph to inform users how required fields are marked:
+4. Inside the `<form>` element, add a heading and paragraph to inform users how required fields are marked:
 
    ```html
    <h1>Payment form</h1>
