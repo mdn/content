@@ -51,8 +51,7 @@ trip time for requests on the sender.
 
 ```js
 sender.getStats().then((stats) => {
-  document.getElementById("currentRTT").innerText =
-          stats.roundTripTime;
+  document.getElementById("currentRTT").innerText = stats.roundTripTime;
 });
 ```
 

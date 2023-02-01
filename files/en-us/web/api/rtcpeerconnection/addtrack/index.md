@@ -95,8 +95,10 @@ track:
 
 ```js
 async function openCall(pc) {
-  const gumStream = await navigator.mediaDevices.getUserMedia(
-                          {video: true, audio: true});
+  const gumStream = await navigator.mediaDevices.getUserMedia({
+    video: true,
+    audio: true,
+  });
   for (const track of gumStream.getTracks()) {
     pc.addTrack(track);
   }
@@ -157,8 +159,10 @@ remote peer:
 
 ```js
 async function openCall(pc) {
-  const gumStream = await navigator.mediaDevices.getUserMedia(
-                          {video: true, audio: true});
+  const gumStream = await navigator.mediaDevices.getUserMedia({
+    video: true,
+    audio: true,
+  });
   for (const track of gumStream.getTracks()) {
     pc.addTrack(track, gumStream);
   }
@@ -168,7 +172,7 @@ async function openCall(pc) {
 The remote peer might then use a {{DOMxRef("RTCPeerConnection/track_event", "track")}} event handler that looks like this:
 
 ```js
-pc.ontrack = ({streams: [stream]}) => videoElem.srcObject = stream;
+pc.ontrack = ({ streams: [stream] }) => (videoElem.srcObject = stream);
 ```
 
 This sets the video element's current stream to the one that contains the track that's

@@ -1,5 +1,5 @@
 ---
-title: 'RTCPeerConnection: connectionstatechange event'
+title: "RTCPeerConnection: connectionstatechange event"
 slug: Web/API/RTCPeerConnection/connectionstatechange_event
 page-type: web-api-event
 tags:
@@ -26,9 +26,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('connectionstatechange', (event) => { });
+addEventListener("connectionstatechange", (event) => {});
 
-onconnectionstatechange = (event) => { };
+onconnectionstatechange = (event) => {};
 ```
 
 ## Event type
@@ -41,7 +41,7 @@ For an {{domxref("RTCPeerConnection")}}, `pc`, this example sets up a handler fo
 
 ```js
 pc.onconnectionstatechange = (ev) => {
-  switch(pc.connectionState) {
+  switch (pc.connectionState) {
     case "new":
     case "checking":
       setOnlineStatus("Connecting…");
@@ -62,17 +62,23 @@ pc.onconnectionstatechange = (ev) => {
       setOnlineStatus("Unknown");
       break;
   }
-}
+};
 ```
 
 You can also create a handler for `connectionstatechange` by using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-pc.addEventListener("connectionstatechange", (ev) => {
-  switch(pc.connectionState) {
-    // …
-  }
-}, false);
+pc.addEventListener(
+  "connectionstatechange",
+  (ev) => {
+    switch (
+      pc.connectionState
+      // …
+    ) {
+    }
+  },
+  false
+);
 ```
 
 ## Specifications

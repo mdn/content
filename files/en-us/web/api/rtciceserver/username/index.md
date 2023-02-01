@@ -45,11 +45,11 @@ creative password "turnpassword".
 myPeerConnection = new RTCPeerConnection({
   iceServers: [
     {
-      urls: "turn:turnserver.example.org",  // A TURN server
+      urls: "turn:turnserver.example.org", // A TURN server
       username: "webrtc",
-      credential: "turnpassword"
-    }
-  ]
+      credential: "turnpassword",
+    },
+  ],
 });
 ```
 

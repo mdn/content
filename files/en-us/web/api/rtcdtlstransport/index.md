@@ -76,7 +76,7 @@ For example, to create the connection using the highest level of bundling:
 
 ```js
 const rtcConfig = {
-  bundlePolicy: "max-bundle"
+  bundlePolicy: "max-bundle",
 };
 
 const pc = new RTCPeerConnection(rtcConfig);
@@ -116,7 +116,7 @@ function tallySenders(pc) {
     connected: 0,
     closed: 0,
     failed: 0,
-    unknown: 0
+    unknown: 0,
   };
 
   let senderList = pc.getSenders();
@@ -126,21 +126,21 @@ function tallySenders(pc) {
     if (!transport) {
       results.transportMissing++;
     } else {
-      switch(transport.state) {
+      switch (transport.state) {
         case "new":
         case "connecting":
           results.connectionPending++;
           break;
-       case "connected":
+        case "connected":
           results.connected++;
           break;
-       case "closed":
+        case "closed":
           results.closed++;
           break;
-       case "failed":
+        case "failed":
           results.failed++;
           break;
-       default:
+        default:
           results.unknown++;
           break;
       }

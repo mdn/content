@@ -93,9 +93,8 @@ const ssNewCandidate = (signalMsg) => {
     }
   });
 
-  pc.addIceCandidate(candidate)
-    .catch(reportError);
-}
+  pc.addIceCandidate(candidate).catch(reportError);
+};
 ```
 
 This walks through the list of the {{domxref("RTCRtpReceiver")}} objects being used to

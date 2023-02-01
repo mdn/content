@@ -60,11 +60,11 @@ const rtcConfig = {
     {
       urls: "turn:myturn.server.ip",
       username: "username",
-      credential: "password"
-    }
+      credential: "password",
+    },
   ],
-  iceTransportPolicy: "relay"
-}
+  iceTransportPolicy: "relay",
+};
 ```
 
 By setting `iceTransportPolicy` to `"relay"`,
