@@ -8,7 +8,6 @@ build/
 # The following paths have had a full pass
 !files/en-us/glossary/**/*.md
 !files/en-us/mdn/**/*.md
+!files/en-us/web/http/**/*.md
 !files/en-us/web/javascript/**/*.md
 
-# TODO: check if formatting kitchensink breaks Yari tests
-files/en-us/mdn/kitchensink/index.md
