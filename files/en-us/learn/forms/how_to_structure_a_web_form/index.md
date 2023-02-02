@@ -198,13 +198,13 @@ Let's put these ideas into practice and build a slightly more involved form — 
    <link href="payment-form.css" rel="stylesheet" />
    ```
 
-3. Next, create your form by adding a {{htmlelement("form")}} element:
+3. Next, create your form by adding the outer {{htmlelement("form")}} opening tag:
 
    ```html
    <form></form>
    ```
 
-4. Inside the `<form>` element, add a heading and paragraph to inform users how required fields are marked:
+4. Inside the `<form>` tags, add a heading and paragraph to inform users how required fields are marked:
 
    ```html
    <h1>Payment form</h1>
