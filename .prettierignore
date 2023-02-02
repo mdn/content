@@ -10,7 +10,3 @@ build/
 !files/en-us/glossary/**/*.md
 !files/en-us/learn/**/*.md
 !files/en-us/mdn/**/*.md
-
-# TODO: Format these files once https://github.com/mdn/yari/pull/8108 is merged
-# and "html" is properly set to "django"
-files/en-us/learn-server-side/django/**/*.md
