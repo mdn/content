@@ -40,7 +40,7 @@ An object which contains:
   - `activeDuration`
     - : The length of time in milliseconds that the effect will run. This is equal to `duration` multiplied by `iterations`.
   - `localTime`
-    - : The {{domxref("Animation.currentTime","currentTime")}} of the associated animation, or `null` if the effect is not associated with an animation.
+    - : The length of time in milliseconds that the effect has run. This is equal to the {{domxref("Animation.currentTime","currentTime")}} of the associated animation, or `null` if the effect is not associated with an animation.
   - `progress`
     - : Indicates how far along the animation is through its current iteration with values between `0` and `1`. Returns `null` if the animation is not running or its `KeyframeEffect` isn't associated with an `Animation`.
   - `currentIteration`
