@@ -9,7 +9,10 @@ tags:
   - Reference
   - Web MIDI API
 spec-urls: https://webaudio.github.io/web-midi-api/
-browser-compat: api.Navigator.requestMIDIAccess
+browser-compat:
+  - api.Navigator.requestMIDIAccess
+  - http.headers.Permissions-Policy.midi
+  - api.Permissions.permission_midi
 ---
 
 {{DefaultAPISidebar("Web MIDI API")}}{{SecureContext_Header}}
@@ -38,16 +41,27 @@ Therefore, the API can be used for musical and non-musical uses, with any MIDI d
 - {{domxref("MIDIConnectionEvent")}}
   - : The event passed to the {{domxref("MIDIAccess.statechange_event")}} and {{domxref("MIDIPort.statechange_event")}} events, when a port becomes available or unavailable.
 
-## Security
+## Security requirements
 
 Access to the API is requested using the {{domxref("navigator.requestMIDIAccess()")}} method.
 
-- The method must be called in a secure context.
+- The method must be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 - Access may be gated by the [`midi`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Feature_Policy).
-- The user must also explicitly grant, or have previously granted, permission to use the API though a user-agent specific mechanism.
+- The user must explicitly grant permission to use the API though a user-agent specific mechanism, or have previously granted permission.
   Note that if access is denied by a permission policy it cannot be granted by a user permission.
 
-The permission status can be queried using the [Permissions API](/en-US/docs/Web/API/Permissions_API) method [`navigator.permissions.query()`](/en-US/docs/Web/API/Permissions/query) and the `midi` permission.
+The permission status can be queried using the [Permissions API](/en-US/docs/Web/API/Permissions_API) method [`navigator.permissions.query()`](/en-US/docs/Web/API/Permissions/query), passing a permission descriptor with the `midi` permission and (optional) `sysex` property:
+
+```js
+navigator.permissions.query({ name: "midi", sysex: true }).then((result) => {
+  if (result.state === "granted") {
+    // Access granted.
+  } else if (result.state === "prompt") {
+    // Using API will prompt for permission
+  }
+  // Permission was denied by user prompt or permission policy
+});
+```
 
 ## Examples
 
@@ -110,22 +124,6 @@ function startLoggingMIDIInput(midiAccess, indexOfPort) {
 }
 ```
 
-### Check the permission status
-
-This example shows how you might check permission status for accessing MIDI.
-This may be useful if the site needs to display different content depending on whether MIDI access has already been granted, has yet to be requested, or is explicitly denied.
-
-```js
-navigator.permissions.query({ name: "midi", sysex: true }).then((result) => {
-  if (result.state === "granted") {
-    // Access granted.
-  } else if (result.state === "prompt") {
-    // Using API will prompt for permission
-  }
-  // Permission was denied by user prompt or permission policy
-});
-```
-
 ## Specifications
 
 {{Specifications}}
@@ -133,14 +131,6 @@ navigator.permissions.query({ name: "midi", sysex: true }).then((result) => {
 ## Browser compatibility
 
 {{Compat}}
-
-### Permission API
-
-{{Compat("api.Permissions.permission_midi")}}
-
-### Permission Policy
-
-{{Compat("http.headers.Permissions-Policy.midi")}}
 
 ## See also
 

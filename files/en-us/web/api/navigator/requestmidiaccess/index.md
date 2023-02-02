@@ -52,14 +52,27 @@ A {{jsxref('Promise')}} that resolves with a [`MIDIAccess`](/en-US/docs/Web/API/
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if the user or system denies the application from creating a [MIDIAccess](/en-US/docs/Web/API/MIDIAccess) object with the requested options, or if the document is not allowed to use the feature (for example, because of a [Permission Policy](/en-US/docs/Web/HTTP/Feature_Policy), or because the user previously denied a permission request).
 
-## Security
+## Security requirements
 
-Access to the Web MIDI API may be gated by the HTTP [Permission Policy](/en-US/docs/Web/HTTP/Feature_Policy), using the [`midi` directive](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi).
+Access to the API is subject to the following constraints:
 
-The user must also explicitly grant, or have previously granted, permission to use the API though a user-agent specific mechanism.
-Note that if access is blocked by a permission policy access the user-permission is ignored.
+- The method must be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+- Access may be gated by the [`midi`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Feature_Policy).
+- The user must explicitly grant permission to use the API though a user-agent specific mechanism, or have previously granted permission.
+  Note that if access is denied by a permission policy it cannot be granted by a user permission.
 
-The permission status can be queried using the [Permissions API](/en-US/docs/Web/API/Permissions_API) method [`navigator.permissions.query()`](/en-US/docs/Web/API/Permissions/query) and the `midi` permission.
+The permission status can be queried using the [Permissions API](/en-US/docs/Web/API/Permissions_API) method [`navigator.permissions.query()`](/en-US/docs/Web/API/Permissions/query), passing a permission descriptor with the `midi` permission and (optional) `sysex` property:
+
+```js
+navigator.permissions.query({ name: "midi", sysex: true }).then((result) => {
+  if (result.state === "granted") {
+    // Access granted.
+  } else if (result.state === "prompt") {
+    // Using API will prompt for permission
+  }
+  // Permission was denied by user prompt or permission policy
+});
+```
 
 ## Examples
 
@@ -73,22 +86,6 @@ navigator.requestMIDIAccess().then((access) => {
   const inputs = access.inputs.values();
   const outputs = access.outputs.values();
   // …
-});
-```
-
-### Check the permission status
-
-This example shows how you might check permission status for accessing MIDI.
-This allows code to format a site based on whether access has already been granted, has yet to be requested, or is explicitly denied.
-
-```js
-navigator.permissions.query({ name: "midi", sysex: true }).then((result) => {
-  if (result.state === "granted") {
-    // Access granted.
-  } else if (result.state === "prompt") {
-    // Using API will prompt for permission
-  }
-  // Permission was denied by user prompt or permission policy
 });
 ```
 
