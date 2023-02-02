@@ -29,7 +29,6 @@ The **`console.trace()`** method outputs a stack trace to the
 See [Stack traces](/en-US/docs/Web/API/console#stack_traces) in the
 {{domxref("console")}} documentation for details and examples.
 
-
 ## Syntax
 
 ```js-nolint
