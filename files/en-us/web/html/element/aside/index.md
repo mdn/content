@@ -16,7 +16,7 @@ browser-compat: html.elements.aside
 
 {{HTMLSidebar}}
 
-The **`<aside>`** [HTML](/en-US/docs/Web/HTML) element represents a portion of a document whose content is only indirectly related to the document's main content. Asides are frequently presented as sidebars or call-out boxes.
+The **`<aside>`** [HTML](/en-US/docs/Web/HTML) element represents a portion of a document whose content is only indirectly related to the document's main content. Asides are frequently presented as sidebars or call-out boxes, such as and not limited to a modal, a popup or an alert bar.
 
 {{EmbedInteractiveExample("pages/tabbed/aside.html", "tabbed-standard")}}
 
