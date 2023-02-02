@@ -38,7 +38,7 @@ An object which contains:
   - `endTime`
     - : The end time of the animation in milliseconds from the effect's start. This is equal to `activeDuration` plus `delay` and `endDelay`.
   - `activeDuration`
-    - : The length of time in milliseconds that the animation's effects will run. This is equal to the [iteration duration](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect) multiplied by the [iteration count](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect).
+    - : The length of time in milliseconds that the effect will run. This is equal to `duration` multiplied by `iterations`.
   - `localTime`
     - : The [current time](/en-US/docs/Web/API/AnimationTimeline/currentTime) of the animation in milliseconds. If the `KeyframeEffect` is not associated with an `Animation`, its value is `null`.
   - `progress`
