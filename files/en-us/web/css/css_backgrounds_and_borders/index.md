@@ -13,13 +13,11 @@ spec-urls: https://drafts.csswg.org/css-backgrounds/
 
 {{CSSRef}}
 
-The **CSS backgrounds and borders** module provides for adding borders, rounded corners, and box shadows to elements.
+The **CSS backgrounds and borders** module provides for adding borders, rounded corners, and box shadows to elements. The module also provides for setting whether cells inside a {{HTMLElement("table")}} have shared or separate borders.
 
 The module provides for many border styles, including properties to create borders made of images of any image type, from raster images to CSS gradients. Borders can be square or rounded, including providing different radii for each corner. Elements can be rounded whether or not they have a visible border.
 
-Box shadows include inset and outset shadow, single or multiple shadows, and solid or allowed to fade to transparent.
-
-The module also provides for setting whether cells inside a {{HTMLElement("table")}} have shared or separate borders.
+Box shadows include inset and outset shadow, single or multiple shadows, and solid or allowed to fade to transparent. An outer box-shadow casts a shadow as if the border-box of the element were opaque. An inner box-shadow casts a shadow as if everything outside the padding edge were opaque. The shadow can be solid or include a spread distance with the shadow color transitioning to transparent.
 
 ### Backgrounds and borders in action
 
@@ -52,10 +50,10 @@ To see the code for this background and borders sample, [view the source on Gith
 - {{cssxref("background-repeat")}}
 - {{cssxref("background-size")}}
 - {{cssxref("background")}} shorthand
-- {{cssxref("background-position-x")}}
-- {{cssxref("background-position-y")}}
-- {{cssxref("background-position-inline")}}
-- {{cssxref("background-position-block")}}
+- {{cssxref("background-position-x")}} {{experimental_inline}}
+- {{cssxref("background-position-y")}} {{experimental_inline}}
+- {{cssxref("background-position-inline")}} {{experimental_inline}}
+- {{cssxref("background-position-block")}} {{experimental_inline}}
 
 - {{cssxref("border-bottom-color")}}
 - {{cssxref("border-bottom-style")}}
@@ -110,10 +108,18 @@ To see the code for this background and borders sample, [view the source on Gith
 
 ## Related concepts
 
+- {{cssxref("box-sizing")}} CSS property
+- {{cssxref("box-decoration-break")}} CSS property
+- {{cssxref("text-shadow")}} CSS property
 - {{cssxref("")}} CSS property
+- {{cssxref("")}} CSS property
+-
 - {{glossary("")}} glossary term
+- [`<color>`](/en-US/docs/Web/CSS/color) data type
 - [`<image>`](/en-US/docs/Web/CSS/image) data type
-- [``](/en-US/docs/Web/CSS/@media/) media query
+- [`<position>`](/en-US/docs/Web/CSS/position) data type
+- [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) keyword
+- [`drop-shadow()`](/en-US/docs/Web/CSS/filter-function/drop-shadow) filter function
 
 ## Specifications
 
