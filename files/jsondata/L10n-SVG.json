@@ -341,7 +341,7 @@
     "ja": "非描画要素",
     "pt-BR": "Elemento nunca renderizado",
     "zh-CN": "非渲染元素",
-    "zh-TW": "未渲染元素"
+    "zh-TW": "非渲染元素"
   },
   "noCategory": {
     "en-US": "None",
