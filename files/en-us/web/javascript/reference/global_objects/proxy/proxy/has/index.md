@@ -12,8 +12,7 @@ browser-compat: javascript.builtins.Proxy.handler.has
 
 {{JSRef}}
 
-The **`handler.has()`** method is a trap for the
-{{jsxref("Operators/in", "in")}} operator.
+The **`handler.has()`** method is a trap for the `[[HasProperty]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as the {{jsxref("Operators/in", "in")}} operator.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-has.html", "taller")}}
 
@@ -41,9 +40,6 @@ bound to the handler.
 The `has()` method must return a boolean value.
 
 ## Description
-
-The **`handler.has()`** method is a trap for the
-{{jsxref("Operators/in", "in")}} operator.
 
 ### Interceptions
 

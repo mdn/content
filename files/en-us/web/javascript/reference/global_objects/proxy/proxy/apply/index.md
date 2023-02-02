@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Proxy.handler.apply
 
 {{JSRef}}
 
-The **`handler.apply()`** method is a trap for a function call.
+The **`handler.apply()`** method is a trap for the `[[Call]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as function calls.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-apply.html", "taller")}}
 
@@ -41,8 +41,6 @@ The following parameters are passed to the `apply()` method. `this` is bound to 
 The `apply()` method can return any value.
 
 ## Description
-
-The **`handler.apply()`** method is a trap for a function call.
 
 ### Interceptions
 
