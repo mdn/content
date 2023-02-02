@@ -38,7 +38,7 @@ An object which contains:
   - `endTime`
     - : The end time of the animation in milliseconds from the effect's start. This is equal to `activeDuration` plus `delay` and `endDelay`.
   - `activeDuration`
-    - : The length of time in milliseconds that the effect will run. This is equal to `duration` multiplied by `iterations`.
+    - : The total length of all iterations of the effect. This is equal to `duration` multiplied by `iterations` (or zero if that product would be {{jsxref("NaN")}}).
   - `localTime`
     - : The length of time in milliseconds that the effect has run. This is equal to the {{domxref("Animation.currentTime","currentTime")}} of the associated animation, or `null` if the effect is not associated with an animation.
   - `progress`
