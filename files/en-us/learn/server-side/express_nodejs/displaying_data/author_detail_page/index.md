@@ -77,7 +77,7 @@ block content
     h4 Books
 
     dl
-      each book in author_books
+      each book in authors_books
         dt
           a(href=book.url) #{book.title}
         dd #{book.summary}
