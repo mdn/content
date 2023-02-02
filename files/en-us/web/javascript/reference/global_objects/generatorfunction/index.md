@@ -22,7 +22,7 @@ Note that `GeneratorFunction` is _not_ a global object. It can be obtained with 
 const GeneratorFunction = function* () {}.constructor;
 ```
 
-{{EmbedInteractiveExample("pages/js/functionasterisk-function.html")}}
+{{EmbedInteractiveExample("pages/js/functionasterisk-function.html", "taller")}}
 
 ## Constructor
 
