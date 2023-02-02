@@ -84,6 +84,8 @@ Note that the value must be a uniform {{cssxref("color")}}. It can't be a {{cssx
 
 - {{cssxref("&lt;color&gt;")}}
   - : Sets the color of the textual and decorative parts of the element.
+- [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
+  - : Normally sets the color to the element's `color` property value, but when set as the value of `color` it is treated as `inherit`.
 
 ## Accessibility concerns
 
