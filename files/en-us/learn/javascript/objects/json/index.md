@@ -170,12 +170,18 @@ So, let's work through an example to show how we could make use of some JSON for
 To begin with, make local copies of our [heroes.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes.html) and [style.css](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/style.css) files.
 The latter contains some simple CSS to style our page, while the former contains some very simple body HTML, plus a {{HTMLElement("script")}} element to contain the JavaScript code we will be writing in this exercise:
 
-```html
-<header></header>
+```html-nolint
+<header>
+...
+</header>
 
-<section></section>
+<section>
+...
+</section>
 
-<script></script>
+<script>
+...
+</script>
 ```
 
 We have made our JSON data available on our GitHub, at <https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json>.

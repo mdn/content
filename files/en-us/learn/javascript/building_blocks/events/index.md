@@ -376,10 +376,9 @@ Some event objects add extra properties that are relevant to that particular typ
 ```js
 const textBox = document.querySelector("#textBox");
 const output = document.querySelector("#output");
-textBox.addEventListener(
-  "keydown",
-  (event) => (output.textContent = `You pressed "${event.key}".`)
-);
+textBox.addEventListener("keydown", (event) => {
+  output.textContent = `You pressed "${event.key}".`;
+});
 ```
 
 ```css hidden
@@ -775,10 +774,9 @@ function bgChange() {
 
 const container = document.querySelector("#container");
 
-container.addEventListener(
-  "click",
-  (event) => (event.target.style.backgroundColor = bgChange())
-);
+container.addEventListener("click", (event) => {
+  event.target.style.backgroundColor = bgChange();
+});
 ```
 
 The output is as follows (try clicking around on it):

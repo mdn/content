@@ -102,7 +102,7 @@ Now we'll tackle the _Check All_ and _Remove Completed_ buttons. Let's create a 
 1. Create a new file, `components/MoreActions.svelte`.
 2. When the first button is clicked, we'll emit a `checkAll` event to signal that all the to-dos should be checked/unchecked. When the second button is clicked, we'll emit a `removeCompleted` event to signal that all of the completed to-dos should be removed. Put the following content into your `MoreActions.svelte` file:
 
-   ```html
+   ```svelte
    <script>
      import { createEventDispatcher } from "svelte";
      const dispatch = createEventDispatcher();
@@ -118,15 +118,8 @@ Now we'll tackle the _Check All_ and _Remove Completed_ buttons. Let's create a 
    </script>
 
    <div class="btn-group">
-     <button type="button" class="btn btn__primary" on:click="{checkAll}">
-       {completed ? 'Check' : 'Uncheck'} all
-     </button>
-     <button
-       type="button"
-       class="btn btn__primary"
-       on:click="{removeCompleted}">
-       Remove completed
-     </button>
+     <button type="button" class="btn btn__primary" on:click={checkAll}>{completed ? 'Check' : 'Uncheck'} all</button>
+     <button type="button" class="btn btn__primary" on:click={removeCompleted}>Remove completed</button>
    </div>
    ```
 
@@ -152,10 +145,12 @@ Now we'll tackle the _Check All_ and _Remove Completed_ buttons. Let's create a 
 
 5. Now go to the bottom of the `Todos.svelte` markup section and replace the `<div class="btn-group">` element that we copied into `MoreActions.svelte` with a call to the `MoreActions` component, like so:
 
-   ```html
+   ```svelte
    <!-- MoreActions -->
-   <MoreActions on:checkAll={(e) => checkAllTodos(e.detail)}
-   on:removeCompleted={removeCompletedTodos} />
+   <MoreActions
+     on:checkAll={(e) => checkAllTodos(e.detail)}
+     on:removeCompleted={removeCompletedTodos}
+   />
    ```
 
 6. OK, let's go back into the app and try it out. You'll find that the _Remove Completed_ button works fine, but the _Check All_/_Uncheck All_ button just silently fails.
@@ -253,7 +248,7 @@ We will add one usability detail to our component. We'll disable the buttons whe
 
 1. Update your `MoreActions.svelte` component like this:
 
-   ```html
+   ```svelte
    <script>
      import { createEventDispatcher } from 'svelte';
      const dispatch = createEventDispatcher();
@@ -284,9 +279,11 @@ We will add one usability detail to our component. We'll disable the buttons whe
 
 2. Don't forget to pass the prop into `MoreActions` from inside `Todos.svelte`, where the component is called:
 
-   ```html
-   <MoreActions {todos} on:checkAll={(e) => checkAllTodos(e.detail)}
-   on:removeCompleted={removeCompletedTodos} />
+   ```svelte
+   <MoreActions {todos}
+       on:checkAll={(e) => checkAllTodos(e.detail)}
+       on:removeCompleted={removeCompletedTodos}
+     />
    ```
 
 ## Working with the DOM: focusing on the details
@@ -320,7 +317,7 @@ Let's begin by extracting our new to-do form out to its own component. With what
 1. Create a new file, `components/NewTodo.svelte`.
 2. Put the following contents inside it:
 
-   ```html
+   ```svelte
    <script>
      import { createEventDispatcher } from 'svelte';
      const dispatch = createEventDispatcher();
@@ -369,7 +366,7 @@ Let's begin by extracting our new to-do form out to its own component. With what
 
 5. Finally for this section, replace the NewTodo form markup with a call to `NewTodo` component, like so:
 
-   ```html
+   ```svelte
    <!-- NewTodo -->
    <NewTodo on:addTodo={(e) => addTodo(e.detail)} />
    ```
@@ -382,7 +379,7 @@ We'll create a `nameEl` variable and bind it to the input it using `bind:this={n
 
 Update the contents of `NewTodo.svelte` like so:
 
-```html
+```svelte
 <script>
   import { createEventDispatcher } from 'svelte';
   const dispatch = createEventDispatcher();
@@ -419,7 +416,7 @@ The next feature will add to our `NewTodo` component will be an `autofocus` prop
 
 1. Our first attempt is as follows: let's try adding the `autofocus` prop and just call `nameEl.focus()` from the `<script>` block. Update the first part of the `<script>` section of `NewTodo.svelte` (the first four lines) to look like this:
 
-   ```html
+   ```svelte
    <script>
      import { createEventDispatcher } from 'svelte';
      const dispatch = createEventDispatcher();
@@ -434,7 +431,7 @@ The next feature will add to our `NewTodo` component will be an `autofocus` prop
 
 2. Now go back to the `Todos` component and pass the `autofocus` prop into the `<NewTodo>` component call, like so:
 
-   ```html
+   ```svelte
    <!-- NewTodo -->
    <NewTodo autofocus on:addTodo={(e) => addTodo(e.detail)} />
    ```
@@ -507,10 +504,10 @@ Now we will take care of the `Todo` component's focus management details. First 
 
 3. And finally, bind `nameEl` to the `<input>` field by updating it like so:
 
-   ```html
+   ```svelte
    <input
-     bind:value="{name}"
-     bind:this="{nameEl}"
+     bind:value={name}
+     bind:this={nameEl}
      type="text"
      id="todo-{todo.id}"
      autocomplete="off"
@@ -593,7 +590,7 @@ In our immediate use case, we will define a function called `selectOnFocus()` th
 
 2. Now we need to tell the `<input>` to use that function with the [`use:action`](https://svelte.dev/docs#use_action) directive:
 
-   ```html
+   ```svelte
    <input use:selectOnFocus />
    ```
 
@@ -601,13 +598,11 @@ In our immediate use case, we will define a function called `selectOnFocus()` th
 
    In our case, our `<input>` would end up like so: update the component's first label/input pair (inside the edit template) as follows:
 
-   ```html
-   <label for="todo-{todo.id}" class="todo-label"
-     >New name for '{todo.name}'</label
-   >
+   ```svelte
+   <label for="todo-{todo.id}" class="todo-label">New name for '{todo.name}'</label>
    <input
-     bind:value="{name}"
-     bind:this="{nameEl}"
+     bind:value={name}
+     bind:this={nameEl}
      use:selectOnFocus
      type="text"
      id="todo-{todo.id}"
@@ -657,10 +652,10 @@ To demonstrate our action's reusability, let's make use of it in `NewTodo.svelte
 
 2. Add the `use:selectOnFocus` directive to the `<input>`, like this:
 
-   ```html
+   ```svelte
    <input
-     bind:value="{name}"
-     bind:this="{nameEl}"
+     bind:value={name}
+     bind:this={nameEl}
      use:selectOnFocus
      type="text"
      id="todo-0"
@@ -685,8 +680,8 @@ In the previous section, while working with the `Todo` components, we had to dea
 
 2. And then in our markup we just need to add another `use:` directive:
 
-   ```html
-   <input bind:value="{name}" use:selectOnFocus use:focusOnInit />
+   ```svelte
+   <input bind:value={name} use:selectOnFocus use:focusOnInit />
    ```
 
 3. Our `onEdit()` function can now be much simpler:
@@ -727,8 +722,8 @@ That's not what we want — we want the _Edit_ button to receive focus only when
 
 5. Finally we `use` the `focusEditButton` action on the _Edit_ button, like so:
 
-   ```html
-   <button type="button" class="btn" on:click="{onEdit}" use:focusEditButton>
+   ```svelte
+   <button type="button" class="btn" on:click={onEdit} use:focusEditButton>
      Edit<span class="visually-hidden"> {todo.name}</span>
    </button>
    ```
@@ -750,7 +745,7 @@ First we'll extract the status heading to its own component.
 1. Create a new file, `components/TodosStatus.svelte`.
 2. Add the following contents to it:
 
-   ```html
+   ```svelte
    <script>
      export let todos;
 
@@ -771,7 +766,7 @@ First we'll extract the status heading to its own component.
 
 4. Replace the `<h2>` status heading inside `Todos.svelte` with a call to the `TodosStatus` component, passing `todos` to it as a prop, like so:
 
-   ```html
+   ```svelte
    <TodosStatus {todos} />
    ```
 
@@ -791,7 +786,7 @@ So we need the `TodosStatus` component to expose a method that its parent can ca
 
 We've already seen that Svelte uses `export let varname = …` to [declare props](https://svelte.dev/docs#1_export_creates_a_component_prop). But if instead of using `let` you export a `const`, `class`, or `function`, it is read-only outside the component. Function expressions are valid props, however. In the following example, the first three declarations are props, and the rest are exported values:
 
-```html
+```svelte
 <script>
   export let bar = "optional default initial value"; // prop
   export let baz = undefined; // prop
@@ -813,7 +808,7 @@ With this in mind, let's go back to our use case. We'll create a function called
 
 1. Update the contents of `TodosStatus.svelte` like so:
 
-   ```html
+   ```svelte
    <script>
      export let todos;
 
@@ -828,7 +823,7 @@ With this in mind, let's go back to our use case. We'll create a function called
      }
    </script>
 
-   <h2 id="list-heading" bind:this="{headingEl}" tabindex="-1">
+   <h2 id="list-heading" bind:this={headingEl} tabindex="-1">
      {completedTodos} out of {totalTodos} items completed
    </h2>
    ```
@@ -847,9 +842,9 @@ With this in mind, let's go back to our use case. We'll create a function called
 
 3. Next, add a `bind:this={todosStatus}` directive to the call, as follows:
 
-   ```html
+   ```svelte
    <!-- TodosStatus -->
-   <TodosStatus bind:this="{todosStatus}" {todos} />
+   <TodosStatus bind:this={todosStatus} {todos} />
    ```
 
 4. Now we can call the `exported focus()` method from our `removeTodo()` function:

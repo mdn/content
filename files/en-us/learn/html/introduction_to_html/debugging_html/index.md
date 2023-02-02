@@ -110,8 +110,8 @@ It's time to study the permissive nature of HTML code.
    - The incorrect nesting has been fixed by the browser as shown here:
 
      ```html
-     <strong
-       >strong
+     <strong>
+       strong
        <em>strong emphasized?</em>
      </strong>
      <em> what is this?</em>

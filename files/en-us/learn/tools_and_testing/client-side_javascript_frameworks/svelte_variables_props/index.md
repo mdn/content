@@ -89,12 +89,12 @@ The state of our component will be represented by these three top-level variable
 
 1. Create a `<script>` section at the top of `src/components/Todos.svelte` and give it some content, as follows:
 
-   ```html
+   ```svelte
    <script>
      let todos = [
        { id: 1, name: "Create a Svelte starter app", completed: true },
        { id: 2, name: "Create your first component", completed: true },
-       { id: 3, name: "Complete the rest of the tutorial", completed: false },
+       { id: 3, name: "Complete the rest of the tutorial", completed: false }
      ];
      let totalTodos = todos.length;
      let completedTodos = todos.filter((todo) => todo.completed).length;
@@ -105,10 +105,8 @@ The state of our component will be represented by these three top-level variable
 
 2. Let's start by showing a status message. Find the `<h2>` heading with an `id` of `list-heading` and replace the hardcoded number of active and completed tasks with dynamic expressions:
 
-   ```html
-   <h2 id="list-heading">
-     {completedTodos} out of {totalTodos} items completed
-   </h2>
+   ```svelte
+   <h2 id="list-heading">{completedTodos} out of {totalTodos} items completed</h2>
    ```
 
 3. Go to the app, and you should see the "2 out of 3 items completed" message as before, but this time the information is coming from the `todos` array.
@@ -124,14 +122,15 @@ Let's give it a try.
 
 1. Replace the existing `<ul>` element with the following simplified version to get an idea of how it works:
 
-   ```html
+   ```svelte
    <ul>
-     {#each todos as todo, index (todo.id)}
+   {#each todos as todo, index (todo.id)}
      <li>
-       <input type="checkbox" checked="{todo.completed}" /> {index}. {todo.name}
-       (id: {todo.id})
+       <input type="checkbox" checked={todo.completed}/> {index}. {todo.name} (id: {todo.id})
      </li>
-     {:else} Nothing to do here! {/each}
+   {:else}
+     Nothing to do here!
+   {/each}
    </ul>
    ```
 
@@ -141,7 +140,7 @@ Let's give it a try.
 
 3. Now that we've seen that this is working, let's generate a complete to-do item with each loop of the `{#each}` directive, and inside embed the information from the `todos` array: `id`, `name`, and `completed`. Replace your existing `<ul>` block with the following:
 
-   ```html
+   ```svelte
    <!-- To-dos -->
    <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
      {#each todos as todo (todo.id)}
@@ -151,7 +150,7 @@ Let's give it a try.
            <input
              type="checkbox"
              id="todo-{todo.id}"
-             checked="{todo.completed}" />
+             checked={todo.completed} />
            <label for="todo-{todo.id}" class="todo-label"> {todo.name} </label>
          </div>
          <div class="btn-group">
@@ -193,23 +192,23 @@ With a hardcoded list of to-dos, our `Todos` component is not very useful. To tu
 2. Have a look at the app, and you'll see the "Nothing to do here!" message. This is because we are currently not passing any value into it from `App.svelte`, so it's using the default value.
 3. Now let's move our to-dos to `App.svelte` and pass them to the `Todos.svelte` component as a prop. Update `src/App.svelte` as follows:
 
-   ```html
+   ```svelte
    <script>
      import Todos from "./components/Todos.svelte";
 
      let todos = [
        { id: 1, name: "Create a Svelte starter app", completed: true },
        { id: 2, name: "Create your first component", completed: true },
-       { id: 3, name: "Complete the rest of the tutorial", completed: false },
+       { id: 3, name: "Complete the rest of the tutorial", completed: false }
      ];
    </script>
 
-   <Todos todos="{todos}" />
+   <Todos todos={todos} />
    ```
 
 4. When the attribute and the variable have the same name, Svelte allows you to just specify the variable as a handy shortcut, so we can rewrite our last line like this. Try this now.
 
-   ```html
+   ```svelte
    <Todos {todos} />
    ```
 
@@ -221,9 +220,11 @@ Let's add some functionality to toggle the task status. Svelte has the `on:event
 
 1. Update the `<input type="checkbox">` element inside `src/components/Todos.svelte` as follows:
 
-   ```html
-   <input type="checkbox" id="todo-{todo.id}" on:click={() => todo.completed =
-   !todo.completed} checked={todo.completed} />
+   ```svelte
+   <input type="checkbox" id="todo-{todo.id}"
+     on:click={() => todo.completed = !todo.completed}
+     checked={todo.completed}
+   />
    ```
 
 2. Next we'll add a function to remove a to-do from our `todos` array. At the bottom of the `<script>` section of `Todos.svelte`, add the `removeTodo()` function like so:
@@ -236,7 +237,7 @@ Let's add some functionality to toggle the task status. Svelte has the `on:event
 
 3. We'll call it via the _Delete_ button. Update it with a `click` event, like so:
 
-   ```html
+   ```svelte
    <button type="button" class="btn btn__danger"
      on:click={() => removeTodo(todo)}
    >
@@ -292,24 +293,23 @@ Now on to the next major task for this article — let's add some functionality 
 
 2. Now we will use this value in the `<input>` for adding new tasks. To do that we need to bind our `newTodoName` variable to the `todo-0` input, so that the `newTodoName` variable value stays in sync with the input's `value` property. We could do something like this:
 
-   ```html
-   <input value={newTodoName} on:keydown={(e) => newTodoName = e.target.value}
-   />
+   ```svelte
+   <input value={newTodoName} on:keydown={(e) => newTodoName = e.target.value} />
    ```
 
    Whenever the value of the variable `newTodoName` changes, it will be reflected in the `value` attribute of the input, and whenever a key is pressed in the input, we will update the contents of the variable `newTodoName`.
 
    This is a manual implementation of two-way data binding for an input box. But we don't need to do this — Svelte provides an easier way to bind any property to a variable, using the [`bind:property`](https://svelte.dev/docs#bind_element_property) directive:
 
-   ```html
-   <input bind:value="{newTodoName}" />
+   ```svelte
+   <input bind:value={newTodoName} />
    ```
 
    So, let's implement this. Update the `todo-0` input like so:
 
-   ```html
+   ```svelte
    <input
-     bind:value="{newTodoName}"
+     bind:value={newTodoName}
      type="text"
      id="todo-0"
      autocomplete="off"
@@ -338,8 +338,8 @@ Now on to the next major task for this article — let's add some functionality 
 
 6. Now we want to update our HTML so that we call `addTodo()` whenever the form is submitted. Update the NewTodo form's opening tag like so:
 
-   ```html
-   <form on:submit|preventDefault="{addTodo}"></form>
+   ```svelte
+   <form on:submit|preventDefault={addTodo}>
    ```
 
    The [`on:eventname`](https://svelte.dev/docs#on_element_event) directive supports adding modifiers to the DOM event with the `|` character. In this case, the `preventDefault` modifier tells Svelte to generate the code to call `event.preventDefault()` before running the handler. Explore the previous link to see what other modifiers are available.
@@ -411,7 +411,7 @@ Finally for this article, let's implement the ability to filter our to-dos by st
 
 2. Let's update the filter button markup to make it dynamic and update the current filter when the user presses one of the filter buttons. Update it like this:
 
-   ```html
+   ```svelte
    <div class="filters btn-group stack-exception">
      <button class="btn toggle-btn" class:btn__primary={filter === 'all'} aria-pressed={filter === 'all'} on:click={() => filter = 'all'} >
        <span class="visually-hidden">Show</span>
@@ -443,11 +443,11 @@ Finally for this article, let's implement the ability to filter our to-dos by st
 
 3. Now we just need to use the helper function in the `{#each}` loop; update it like this:
 
-   ```html
+   ```svelte
    …
-   <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
-     {#each filterTodos(filter, todos) as todo (todo.id)} …
-   </ul>
+     <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
+     {#each filterTodos(filter, todos) as todo (todo.id)}
+   …
    ```
 
    After analyzing our code, Svelte detects that our `filterTodos()` function depends on the variables `filter` and `todos`. And, just like with any other dynamic expression embedded in the markup, whenever any of these dependencies changes, the DOM will be updated accordingly. So whenever `filter` or `todos` changes, the `filterTodos()` function will be re-evaluated and the items inside the loop will be updated.

@@ -241,8 +241,8 @@ In the "drawing circles" example above, you don't have a collection of items to 
 In a case like that, you should use the {{jsxref("statements/for","for")}} loop.
 This has the following syntax:
 
-```js
-for (initializer; condition; final - expression) {
+```js-nolint
+for (initializer; condition; final-expression) {
   // code to run
 }
 ```

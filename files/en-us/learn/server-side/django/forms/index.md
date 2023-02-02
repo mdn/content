@@ -410,13 +410,13 @@ def renew_book_librarian(request, pk):
 
 Create the template referenced in the view (**/catalog/templates/catalog/book_renew_librarian.html**) and copy the code below into it:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
   <h1>Renew: \{{ book_instance.book.title }}</h1>
   <p>Borrower: \{{ book_instance.borrower }}</p>
-  <p{% if book_instance.is_overdue %} class="text-danger"{% endif %}>Due date: \{{ book_instance.due_back }}</p>
+  <p {% if book_instance.is_overdue %}class="text-danger"{% endif %}>Due date: \{{ book_instance.due_back }}</p>
 
   <form action="" method="post">
     {% csrf_token %}
@@ -449,9 +449,9 @@ All that's left is the `\{{ form }}` template variable, which we passed to the t
       value="2016-11-08"
       required />
     <br />
-    <span class="helptext"
-      >Enter date between now and 4 weeks (default 3 weeks).</span
-    >
+    <span class="helptext">
+      Enter date between now and 4 weeks (default 3 weeks).
+    </span>
   </td>
 </tr>
 ```
@@ -474,9 +474,9 @@ If you were to enter an invalid date, you'd additionally get a list of the error
       value="2015-11-08"
       required />
     <br />
-    <span class="helptext"
-      >Enter date between now and 4 weeks (default 3 weeks).</span
-    >
+    <span class="helptext">
+      Enter date between now and 4 weeks (default 3 weeks).
+    </span>
   </td>
 </tr>
 ```
@@ -498,9 +498,10 @@ For more examples of how to manually render forms in templates and dynamically l
 
 If you accepted the "challenge" in [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication#challenge_yourself) you'll have a list of all books on loan in the library, which is only visible to library staff. We can add a link to our renew page next to each item using the template code below.
 
-```html
+```django
 {% if perms.catalog.can_mark_returned %}-
-<a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a> {% endif %}
+  <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>
+{% endif %}
 ```
 
 > **Note:** Remember that your test login will need to have the permission "`catalog.can_mark_returned`" in order to access the renew book page (perhaps use your superuser account).
@@ -634,8 +635,10 @@ The "create" and "update" views use the same template by default, which will be 
 
 Create the template file `locallibrary/catalog/templates/catalog/author_form.html` and copy the text below.
 
-```html
-{% extends "base_generic.html" %} {% block content %}
+```django
+{% extends "base_generic.html" %}
+
+{% block content %}
 <form action="" method="post">
   {% csrf_token %}
   <table>
@@ -650,8 +653,10 @@ This is similar to our previous forms and renders the fields using a table. Note
 
 The "delete" view expects to find a template named with the format \_`model_name_confirm_delete.html` (again, you can change the suffix using `template_name_suffix` in your view). Create the template file `locallibrary/catalog/templates/catalog/author_confirm_delete.html` and copy the text below.
 
-```html
-{% extends "base_generic.html" %} {% block content %}
+```django
+{% extends "base_generic.html" %}
+
+{% block content %}
 
 <h1>Delete Author</h1>
 

@@ -352,10 +352,14 @@ Our finished example will look like this:
 
 As a starting point, make a local copy of [hidden-info-panel-start.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/hidden-info-panel-start.html) from our GitHub repo. This doesn't follow on from the previous example, so a fresh start file is required. Let's have a look at the HTML in the file:
 
-```html
+```html-nolint
 <label for="toggle">❔</label>
 <input type="checkbox" id="toggle" />
-<aside>…</aside>
+<aside>
+
+…
+
+</aside>
 ```
 
 To start with here we've got a {{htmlelement("label")}} element and an {{htmlelement("input")}} element — `<label>` elements are normally used to associate a text label with a form element for accessibility purposes (allowing a screen user to see what description goes with what form element). Here it is associated with the `<input>` checkbox using the `for` and `id` attributes.

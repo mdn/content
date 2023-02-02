@@ -101,8 +101,10 @@ verseChoose.addEventListener("change", () => {
 
 Let's define our `updateDisplay()` function. First of all, put the following beneath your previous code block — this is the empty shell of the function.
 
-```js
-function updateDisplay(verse) {}
+```js-nolint
+function updateDisplay(verse) {
+
+}
 ```
 
 We'll start our function by constructing a relative URL pointing to the text file we want to load, as we'll need it later. The value of the {{htmlelement("select")}} element at any time is the same as the text inside the selected {{htmlelement("option")}} (unless you specify a different value in a value attribute) — so for example "Verse 1". The corresponding verse text file is "verse1.txt", and is in the same directory as the HTML file, therefore just the file name will do.
@@ -133,12 +135,14 @@ fetch(url)
   })
   // When response.text() has succeeded, the `then()` handler is called with
   // the text, and we copy it into the `poemDisplay` box.
-  .then((text) => (poemDisplay.textContent = text))
+  .then((text) => {
+    poemDisplay.textContent = text;
+  })
   // Catch any errors that might happen, and display a message
   // in the `poemDisplay` box.
-  .catch(
-    (error) => (poemDisplay.textContent = `Could not fetch verse: ${error}`)
-  );
+  .catch((error) => {
+    poemDisplay.textContent = `Could not fetch verse: ${error}`;
+  });
 ```
 
 There's quite a lot to unpack in here.

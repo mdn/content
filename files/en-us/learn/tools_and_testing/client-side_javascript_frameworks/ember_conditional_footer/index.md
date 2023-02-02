@@ -101,27 +101,26 @@ To get the footer working, we need to implement the following three areas of fun
 5. Finally, we need to make use of this new functionality in our `footer.hbs` template. Go to this file now.
 6. First of all, replace this line:
 
-   ```html
+   ```hbs
    <strong>0</strong> todos left
    ```
 
    With this, which populates the incomplete number with the length of the `incomplete` array:
 
-   ```html
+   ```hbs
    <strong>\{{this.todos.incomplete.length}}</strong> todos left
    ```
 
 7. Next, replace this:
 
-   ```html
-   <button type="button" class="clear-completed"></button>
+   ```hbs
+   <button type="button" class="clear-completed">
    ```
 
    With this:
 
-   ```html
-   <button type="button" class="clear-completed" \{{on 'click'
-   this.todos.clearCompleted}}></button>
+   ```hbs
+   <button type="button" class="clear-completed" \{{on 'click' this.todos.clearCompleted}}>
    ```
 
 So now when the button is clicked, the `clearCompleted()` action we added earlier is run.
@@ -140,15 +139,17 @@ To fix this, we need to update this part of the template to include some conditi
 
 So let's try replacing this part of `footer.hbs`:
 
-```html
+```hbs
 <strong>\{{this.todos.incomplete.length}}</strong> todos left
 ```
 
 with the following:
 
-```html
-<strong>\{{this.todos.incomplete.length}}</strong> \{{#if
-this.todos.incomplete.length === 1}} todo \{{else}} todos \{{/if}} left
+```hbs
+<strong>\{{this.todos.incomplete.length}}</strong>
+\{{#if this.todos.incomplete.length === 1}} todo
+\{{else}} todos
+\{{/if}} left
 ```
 
 This will give us an error, however — in Ember, these simple if statements can currently only test for a truthy/falsy value, not a more complex expression such as a comparison. To fix this, we'll have to add a getter to `todo-data.js` to return the result of `this.incomplete.length === 1`, and then call that in our template.
@@ -163,9 +164,9 @@ get todoCountIsOne() {
 
 Then go back over to `footer.hbs` and update the previous template section we edited to the following:
 
-```html
-<strong>\{{this.todos.incomplete.length}}</strong> \{{#if
-this.todos.todoCountIsOne}} todo \{{else}} todos \{{/if}} left
+```hbs
+<strong>\{{this.todos.incomplete.length}}</strong>
+\{{#if this.todos.todoCountIsOne}}todo\{{else}}todos\{{/if}} left
 ```
 
 Now save and test, and you'll see the correct pluralization used when you only have one todo item present!
@@ -214,31 +215,36 @@ Finally, we will edit the `todo.hbs` template such that the checkbox's value is 
 
 1. In `todo.hbs`, first find the following line:
 
-   ```html
-   <li></li>
+   ```hbs
+   <li>
    ```
 
    And replace it with this — you'll notice that here we're using some more conditional content to add the class value if appropriate:
 
-   ```html
-   <li class="\{{ if @todo.isCompleted 'completed' }}"></li>
+   ```hbs
+   <li class="\{{ if @todo.isCompleted 'completed' }}">
    ```
 
 2. Next, find the following line:
 
-   ```html
+   ```hbs-nolint
    <input
      aria-label="Toggle the completion of this todo"
      class="toggle"
-     type="checkbox" />
+     type="checkbox"
+   >
    ```
 
    And replace it with this:
 
-   ```html
-   <input class="toggle" type="checkbox" aria-label="Toggle the completion of
-   this todo" checked=\{{ @todo.isCompleted }} \{{ on 'change' (fn
-   this.todos.toggleCompletion @todo) }} >
+   ```hbs
+   <input
+     class="toggle"
+     type="checkbox"
+     aria-label="Toggle the completion of this todo"
+     checked=\{{ @todo.isCompleted }}
+     \{{ on 'change' (fn this.todos.toggleCompletion @todo) }}
+   >
    ```
 
    > **Note:** The above snippet uses a new Ember-specific keyword — `fn`. `fn` allows for [partial application](https://en.wikipedia.org/wiki/Partial_application), which is similar to [`bind`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind), but it never changes the invocation context; this is equivalent to using `bind` with a `null` first argument.

@@ -67,8 +67,10 @@ To begin with, let's put together a basic function.
 1. Start by accessing the [function-start.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-start.html) file and making a local copy. You'll see that the HTML is simple — the body contains just a single button. We've also provided some basic CSS to style the custom message box, and an empty {{htmlelement("script")}} element to put our JavaScript in.
 2. Next, add the following inside the `<script>` element:
 
-   ```js
-   function displayMessage() {}
+   ```js-nolint
+   function displayMessage() {
+     ...
+   }
    ```
 
    We start off with the keyword `function`, which means we are defining a function. This is followed by the name we want to give to our function, a set of parentheses, and a set of curly braces. Any parameters we want to give to our function go inside the parentheses, and the code that runs when we call the function goes inside the curly braces.

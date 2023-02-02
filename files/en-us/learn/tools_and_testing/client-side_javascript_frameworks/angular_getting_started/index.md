@@ -237,7 +237,9 @@ To refer to an external HTML file, use the `templateUrl` property:
   selector: "app-root",
   templateUrl: "./app.component.html",
 })
-export class AppComponent {}
+export class AppComponent {
+  // code goes here
+}
 ```
 
 To write inline HTML, use the `template` property and write your HTML within backticks:
@@ -247,7 +249,9 @@ To write inline HTML, use the `template` property and write your HTML within bac
   selector: "app-root",
   template: `<h1>Hi!</h1>`,
 })
-export class AppComponent {}
+export class AppComponent {
+  // code goes here
+}
 ```
 
 Angular extends HTML with additional syntax that lets you insert dynamic values from your component.

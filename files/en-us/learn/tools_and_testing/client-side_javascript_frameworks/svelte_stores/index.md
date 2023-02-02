@@ -125,7 +125,7 @@ Let's now create our `Alert` component and see how we can read values from the s
 1. Create another new file named `src/components/Alert.svelte`.
 2. Give it the following content:
 
-   ```html
+   ```svelte
    <script>
      import { alert } from '../stores.js'
      import { onDestroy } from 'svelte'
@@ -198,8 +198,9 @@ Let's now use our component.
 
 2. Then call the `Alert` component just above the `Todos` call, like this:
 
-   ```html
-   <Alert /> <Todos {todos} />
+   ```svelte
+   <Alert />
+   <Todos {todos} />
    ```
 
 3. Load your test app now, and you should now see the `Alert` message on screen. You can click on it to dismiss it.
@@ -210,7 +211,7 @@ Let's now use our component.
 
 This works, but you'll have to copy and paste all this code every time you want to subscribe to a store:
 
-```html
+```svelte
 <script>
   import myStore from "./stores.js";
   import { onDestroy } from "svelte";
@@ -227,7 +228,7 @@ This works, but you'll have to copy and paste all this code every time you want 
 
 That's too much boilerplate for Svelte! Being a compiler, Svelte has more resources to make our lives easier. In this case Svelte provides the reactive `$store` syntax, also known as auto-subscription. In simple terms, you just prefix the store with the `$` sign and Svelte will generate the code to make it reactive automatically. So our previous code block can be replaced with this:
 
-```html
+```svelte
 <script>
   import myStore from "./stores.js";
 </script>
@@ -239,7 +240,7 @@ And `$myStore` will be fully reactive. This also applies to your own custom stor
 
 1. Let's apply this to our `Alert` component. Update the `<script>` and markup sections of `Alert.svelte` as follows:
 
-   ```html
+   ```svelte
    <script>
      import { alert } from '../stores.js'
    </script>
@@ -371,7 +372,7 @@ Let's see how to do that. We'll specify a prop with the milliseconds to wait bef
 
 2. And update the `Alert.svelte` markup section like so:
 
-   ```html
+   ```svelte
    {#if visible}
    <div on:click={() => visible = false}>
      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.432 0c1.34 0 2.01.912 2.01 1.957 0 1.305-1.164 2.512-2.679 2.512-1.269 0-2.009-.75-1.974-1.99C9.789 1.436 10.67 0 12.432 0zM8.309 20c-1.058 0-1.833-.652-1.093-3.524l1.214-5.092c.211-.814.246-1.141 0-1.141-.317 0-1.689.562-2.502 1.117l-.528-.88c2.572-2.186 5.531-3.467 6.801-3.467 1.057 0 1.233 1.273.705 3.23l-1.391 5.352c-.246.945-.141 1.271.106 1.271.317 0 1.357-.392 2.379-1.207l.6.814C12.098 19.02 9.365 20 8.309 20z"/></svg>
@@ -398,7 +399,7 @@ For common situations, you also have several predefined specialized `role` value
 
 In our case, just adding a `role="alert"` to the `<div>` container will do the trick, like this:
 
-```html
+```svelte
 <div role="alert" on:click={() => visible = false}>
 ```
 
@@ -420,7 +421,7 @@ First we need some way for our `Todos` component to give back the updated to-dos
 
 2. Next, update your `Todos` component call as follows:
 
-   ```html
+   ```svelte
    <Todos bind:todos />
    ```
 
@@ -445,7 +446,7 @@ So let's start by using a regular writable store to save our to-dos.
 
    Update your `App.svelte` file like this:
 
-   ```html
+   ```svelte
    <script>
      import Todos from "./components/Todos.svelte";
      import Alert from "./components/Alert.svelte";
@@ -455,12 +456,12 @@ So let's start by using a regular writable store to save our to-dos.
      $todos = [
        { id: 1, name: "Create a Svelte starter app", completed: true },
        { id: 2, name: "Create your first component", completed: true },
-       { id: 3, name: "Complete the rest of the tutorial", completed: false },
+       { id: 3, name: "Complete the rest of the tutorial", completed: false }
      ];
    </script>
 
    <Alert />
-   <Todos bind:todos="{$todos}" />
+   <Todos bind:todos={$todos} />
    ```
 
 3. Try it out; everything should work. Next we'll see how to define our own custom stores.
@@ -609,16 +610,16 @@ Moreover, because web storage only supports saving string values, we will have t
 
 4. Now let's get rid of the hardcoded to-dos in `App.svelte`. Update its contents as follows. We are basically just deleting the `$todos` array and the `console.log()` statements:
 
-   ```html
+   ```svelte
    <script>
-     import Todos from "./components/Todos.svelte";
-     import Alert from "./components/Alert.svelte";
+     import Todos from './components/Todos.svelte'
+     import Alert from './components/Alert.svelte'
 
-     import { todos } from "./stores.js";
+     import { todos } from './stores.js'
    </script>
 
    <Alert />
-   <Todos bind:todos="{$todos}" />
+   <Todos bind:todos={$todos} />
    ```
 
    > **Note:** This is the only change we have to make in order to use our custom store. `App.svelte` is completely transparent in terms of what kind of store we are using.
@@ -646,15 +647,18 @@ Let's give our `Alert` component a fly `transition`. We'll open the `Alert.svelt
 
 2. To use it, update your opening `<div>` tag like so:
 
-   ```html
-   <div role="alert" on:click={() => visible = false} transition:fly >
+   ```svelte
+   <div role="alert" on:click={() => visible = false}
+     transition:fly
+   >
    ```
 
    Transitions can also receive parameters, like this:
 
-   ```html
-   <div role="alert" on:click={() => visible = false} transition:fly="\{{delay:
-   250, duration: 300, x: 0, y: -100, opacity: 0.5}}" >
+   ```svelte
+   <div role="alert" on:click={() => visible = false}
+     transition:fly="\{{delay: 250, duration: 300, x: 0, y: -100, opacity: 0.5}}"
+   >
    ```
 
    > **Note:** The double curly braces are not special Svelte syntax. It's just a literal JavaScript object being passed as a parameter to the fly transition.

@@ -122,8 +122,7 @@ The "index.html" file and the "style.css" files are already complete:
 
     <textarea id="user-input" rows="5" cols="62">
 Try typing in here immediately after pressing "Generate primes"
-</textarea
-    >
+    </textarea>
 
     <div id="output"></div>
   </body>

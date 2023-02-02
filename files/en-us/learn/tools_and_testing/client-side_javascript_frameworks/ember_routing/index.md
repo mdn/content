@@ -168,8 +168,8 @@ In this file, change
 
 To
 
-```hbs
-<TodoList @todos="\{{" @model.allTodos }} />
+```hbs-nolint
+<TodoList @todos=\{{ @model.allTodos }} />
 ```
 
 ### The completed route model
@@ -205,8 +205,8 @@ In this file, change
 
 To
 
-```hbs
-<TodoList @todos="\{{" @model.completedTodos }} />
+```hbs-nolint
+<TodoList @todos=\{{ @model.completedTodos }} />
 ```
 
 ### The active route model
@@ -236,14 +236,14 @@ We can now update the `todomvc/app/templates/active.hbs` file so that when it in
 
 In this file, change
 
-```html
+```hbs
 <TodoList />
 ```
 
 To
 
-```html
-<TodoList @todos="\{{" @model.activeTodos }} />
+```hbs-nolint
+<TodoList @todos=\{{ @model.activeTodos }} />
 ```
 
 Note that, in each of the route model hooks, we are returning an object with a getter instead of a static object, or more just the static list of todos (for example, `this.todos.completed`). The reason for this is that we want the template to have a dynamic reference to the todo list, and if we returned the list directly, the data would never re-compute, which would result in the navigations appearing to fail / not actually filter. By having a getter defined in the return object from the model data, the todos are re-looked-up so that our changes to the todo list are represented in the rendered list.
@@ -254,7 +254,7 @@ So our route functionality is now all in place, but we can't access them from ou
 
 Go back to `todomvc/app/components/footer.hbs`, and find the following bit of markup:
 
-```html
+```hbs
 <a href="#">All</a>
 <a href="#">Active</a>
 <a href="#">Completed</a>
@@ -262,7 +262,7 @@ Go back to `todomvc/app/components/footer.hbs`, and find the following bit of ma
 
 Update it to
 
-```html
+```hbs
 <LinkTo @route="index">All</LinkTo>
 <LinkTo @route="active">Active</LinkTo>
 <LinkTo @route="completed">Completed</LinkTo>

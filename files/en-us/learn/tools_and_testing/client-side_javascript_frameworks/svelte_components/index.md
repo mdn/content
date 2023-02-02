@@ -118,7 +118,7 @@ We'll begin by creating our `FilterButton.svelte`.
 1. First of all, create a new file, `components/FilterButton.svelte`.
 2. Inside this file we will declare a `filter` prop, and then copy the relevant markup over to it from `Todos.svelte`. Add the following content into the file:
 
-   ```html
+   ```svelte
    <script>
      export let filter = 'all'
    </script>
@@ -150,7 +150,7 @@ We'll begin by creating our `FilterButton.svelte`.
 
 4. Now replace the `<div class="filters...` element with a call to the `FilterButton` component, which takes the current filter as a prop. The below line is all you need:
 
-   ```html
+   ```svelte
    <FilterButton {filter} />
    ```
 
@@ -182,7 +182,7 @@ And we'll declare the reactive statement `$: onclick(filter)` to call the `oncli
 
 2. Now when we call `FilterButton` inside `Todos.svelte`, we'll need to specify the handler. Update it like this:
 
-   ```html
+   ```svelte
    <FilterButton {filter} onclick={ (clicked) => filter = clicked }/>
    ```
 
@@ -198,15 +198,15 @@ Using `bind`, we will tell Svelte that any changes made to the `filter` prop in 
 
 1. In `Todos.svelte`, update the call to the `FilterButton` component as follows:
 
-   ```html
-   <FilterButton bind:filter="{filter}" />
+   ```svelte
+   <FilterButton bind:filter={filter} />
    ```
 
    As usual, Svelte provides us with a nice shorthand: `bind:value={value}` is equivalent to `bind:value`. So in the above example you could just write `<FilterButton bind:filter />`.
 
 2. The child component can now modify the value of the parent's filter variable, so we no longer need the `onclick` prop. Modify the `<script>` element of your `FilterButton` like this:
 
-   ```html
+   ```svelte
    <script>
      export let filter = "all";
    </script>
@@ -223,7 +223,7 @@ Our `Todo` component will receive a single `todo` object as a prop. Let's declar
 1. Create a new component file, `components/Todo.svelte`.
 2. Put the following contents inside this file:
 
-   ```html
+   ```svelte
    <script>
      export let todo
    </script>
@@ -257,7 +257,7 @@ Our `Todo` component will receive a single `todo` object as a prop. Let's declar
 
    Update the `{#each}` block inside `Todos.svelte` like so:
 
-   ```html
+   ```svelte
    <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
      {#each filterTodos(filter, todos) as todo (todo.id)}
      <li class="todo">
@@ -294,7 +294,7 @@ We'll edit our `Todo` component to emit a `remove` event, passing the to-do bein
 
 2. Now update the _Delete_ button in the markup section of the same file to look like so:
 
-   ```html
+   ```svelte
    <button type="button" class="btn btn__danger" on:click={() => dispatch('remove', todo)}>
      Delete <span class="visually-hidden">{todo.name}</span>
    </button>
@@ -304,7 +304,7 @@ We'll edit our `Todo` component to emit a `remove` event, passing the to-do bein
 
 3. Now we have to listen to that event from inside `Todos.svelte` and act accordingly. Go back to this file and update your `<Todo>` component call like so:
 
-   ```html
+   ```svelte
    <Todo {todo} on:remove={(e) => removeTodo(e.detail)} />
    ```
 
@@ -385,7 +385,7 @@ When `editing` is `true`, for example, Svelte will show the update form; when it
 
 The following gives you an idea of what the basic `if` block structure looks like:
 
-```html
+```svelte
 <div class="stack-small">
   {#if editing}
   <!-- markup for editing to-do: label, input text, Cancel and Save Button -->
@@ -397,7 +397,7 @@ The following gives you an idea of what the basic `if` block structure looks lik
 
 The non-editing section — that is, the `{:else}` part (lower half) of the `if` block — will be very similar to the one we had in our `Todos` component. The only difference is that we are calling `onToggle()`, `onEdit()`, and `onRemove()`, depending on the user action.
 
-```html
+```svelte
 {:else}
   <div class="c-cb">
     <input type="checkbox" id="todo-{todo.id}"
@@ -426,7 +426,7 @@ It is worth noting that:
 
 The editing UI (the upper half) will contain an `<input>` field and two buttons to cancel or save the changes:
 
-```html
+```svelte
 <div class="stack-small">
 {#if editing}
   <form on:submit|preventDefault={onSave} class="stack-small" on:keydown={(e) => e.key === 'Escape' && onCancel()}>
@@ -464,7 +464,7 @@ We also use `todo.id` to create unique ids for the new input controls and labels
 
 1. The complete updated markup of our `Todo` component looks like the following. Update yours now:
 
-   ```html
+   ```svelte
    <div class="stack-small">
    {#if editing}
      <!-- markup for editing todo: label, input text, Cancel and Save Button -->
@@ -517,7 +517,7 @@ We also use `todo.id` to create unique ids for the new input controls and labels
 
 3. Next we have to listen for the `update` event on our `<Todo>` component call, and run our `updateTodo()` function when this occurs to change the `name` and `completed` status. Update your \<Todo> call like this:
 
-   ```html
+   ```svelte
    {#each filterTodos(filter, todos) as todo (todo.id)}
    <li class="todo">
      <Todo {todo} on:update={(e) => updateTodo(e.detail)} on:remove={(e) =>

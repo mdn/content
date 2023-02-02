@@ -221,10 +221,10 @@ Sometimes you'll come across a situation where you can't find an ideal semantic 
 ```html
 <p>
   The King walked drunkenly back to his room at 01:00, the beer doing nothing to
-  aid him as he staggered through the door
+  aid him as he staggered through the door.
   <span class="editor-note">
-    [Editor's note: At this point in the play, the lights should be down low] </span
-  >.
+    [Editor's note: At this point in the play, the lights should be down low].
+  </span>
 </p>
 ```
 

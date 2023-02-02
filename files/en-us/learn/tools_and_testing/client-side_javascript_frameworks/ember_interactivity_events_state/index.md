@@ -69,9 +69,14 @@ We can capture the [`keydown`](/en-US/docs/Web/API/Document/keydown_event) event
 
 Add the new line shown below to your `header.hbs` file:
 
-```html
-<input class='new-todo' aria-label='What needs to be done?' placeholder='What
-needs to be done?' autofocus \{{on 'keydown' this.onKeyDown}} >
+```hbs
+<input
+  class='new-todo'
+  aria-label='What needs to be done?'
+  placeholder='What needs to be done?'
+  autofocus
+  \{{on 'keydown' this.onKeyDown}}
+>
 ```
 
 This new attribute is inside double curly braces, which tells you it is part of Ember's dynamic templating syntax. The first argument passed to `on` is the type of event to respond to (`keydown`), and the last argument is the event handler — the code that will run in response to the `keydown` event firing. As you may expect from dealing with [vanilla JavaScript objects](/en-US/docs/Learn/JavaScript/Objects/Basics#what_is_this), the `this` keyword refers to the "context" or "scope" of the component. One component's `this` will be different from another component's `this`.
@@ -265,13 +270,14 @@ get all() {
 
 Now we can access the data using `this.todos.all`, which is much more intuitive. To put this in action, go to your `todo-list.hbs` component, and replace the static component calls:
 
-```html
-<Todo /> <Todo />
+```hbs
+<Todo />
+<Todo />
 ```
 
 With a dynamic `#each` block (which is basically syntactic sugar over the top of JavaScript's [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)) that creates a `<Todo />` component for each todo available in the list of todos returned by the service's `all()` getter:
 
-```html
+```hbs
 \{{#each this.todos.all as |todo|}}
 <Todo @todo="\{{todo}}" />
 \{{/each}}
@@ -287,13 +293,13 @@ Try starting the server again and navigating to our app, and you'll find that it
 
 This is because the text label inside each list item is hardcoded to that text, as seen in `todo.hbs`:
 
-```html
+```hbs
 <label>Buy Movie Tickets</label>
 ```
 
 Update this line to use the Argument `@todo` — which will represent the Todo that we passed in to this component when it was invoked in `todo-list.hbs`, in the line `<Todo @todo=\{{todo}} />`:
 
-```html
+```hbs
 <label>\{{@todo.text}}</label>
 ```
 

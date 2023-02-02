@@ -266,9 +266,9 @@ By default, the browser will give it a large font size to make it look like a he
 On the other hand, you could make any element _look_ like a top level heading. Consider the following:
 
 ```html
-<span style="font-size: 32px; margin: 21px 0; display: block;"
-  >Is this a top level heading?</span
->
+<span style="font-size: 32px; margin: 21px 0; display: block;">
+  Is this a top level heading?
+</span>
 ```
 
 This is a {{htmlelement("span")}} element. It has no semantics. You use it to wrap content when you want to apply CSS to it (or do something to it with JavaScript) without giving it any extra meaning. (You'll find out more about these later on in the course.) We've applied some CSS to it to make it look like a top level heading, but since it has no semantic value, it will not get any of the extra benefits described above. It is a good idea to use the relevant HTML element for the job.
@@ -290,9 +290,12 @@ hummus
 
 Every unordered list starts off with a {{htmlelement("ul")}} element—this wraps around all the list items:
 
-```html
+```html-nolint
 <ul>
-  milk eggs bread hummus
+  milk
+  eggs
+  bread
+  hummus
 </ul>
 ```
 
@@ -646,8 +649,8 @@ Quick hummus recipe
 
   Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you've made it. If it starts to become fizzy, you should definitely discard it.
 
-  Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</textarea
->
+  Hummus is suitable for freezing; you should thaw it and use it within a couple of months.
+</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Reset" />
@@ -868,8 +871,8 @@ In this active learning section, we've provided an editable example. Inside it, 
   all wearing green jumpsuits and silly hats, and
   seemed to be having a whale of a time. If anyone
    has any information about this incident, please
-    contact the police now.</p></textarea
->
+    contact the police now.</p>
+</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Reset" />

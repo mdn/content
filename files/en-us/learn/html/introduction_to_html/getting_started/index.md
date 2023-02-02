@@ -474,8 +474,8 @@ Always include the attribute quotes. It avoids such problems, and results in mor
 
 In this article you will also notice that the attributes are wrapped in double quotes. However, you might see single quotes in some HTML code. This is a matter of style. You can feel free to choose which one you prefer. Both of these lines are equivalent:
 
-```html
-<a href="https://www.example.com">A link to my example.</a>
+```html-nolint
+<a href='https://www.example.com'>A link to my example.</a>
 
 <a href="https://www.example.com">A link to my example.</a>
 ```
@@ -489,9 +489,9 @@ Make sure you don't mix single quotes and double quotes. This example (below) sh
 However, if you use one type of quote, you can include the other type of quote _inside_ your attribute values:
 
 ```html
-<a href="https://www.example.com" title="Isn't this fun?"
-  >A link to my example.</a
->
+<a href="https://www.example.com" title="Isn't this fun?">
+  A link to my example.
+</a>
 ```
 
 To use quote marks inside other quote marks of the same type (single quote or double quote), use [HTML entities](#entity_references_including_special_characters_in_html). For example, this will break:
@@ -731,9 +731,8 @@ The character reference equivalent could be easily remembered because the text i
 
 In the example below, there are two paragraphs:
 
-```html
-<p>In HTML, you define a paragraph using the</p>
-<p>element.</p>
+```html-nolint
+<p>In HTML, you define a paragraph using the <p> element.</p>
 
 <p>In HTML, you define a paragraph using the &lt;p&gt; element.</p>
 ```
