@@ -36,7 +36,7 @@ An object which contains:
 - all of the properties of the object returned by {{domxref("AnimationEffect.getTiming()")}}, except that `"auto"` values are replaced with their computed value.
 - the following additional properties:
   - `endTime`
-    - : The end time of the animation in milliseconds from the animation's start (if the {{domxref("KeyframeEffect")}} is associated with an {{domxref("Animation")}}). (Also includes `endDelay` in that calculation.)
+    - : The end time of the animation in milliseconds from the effect's start. This is equal to `activeDuration` plus `delay` and `endDelay`.
   - `activeDuration`
     - : The length of time in milliseconds that the animation's effects will run. This is equal to the [iteration duration](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect) multiplied by the [iteration count](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect).
   - `localTime`
