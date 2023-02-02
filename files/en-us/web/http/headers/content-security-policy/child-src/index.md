@@ -1,5 +1,5 @@
 ---
-title: 'CSP: child-src'
+title: "CSP: child-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/child-src
 tags:
   - CSP

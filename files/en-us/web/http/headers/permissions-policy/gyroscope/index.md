@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: gyroscope'
+title: "Permissions-Policy: gyroscope"
 slug: Web/HTTP/Headers/Permissions-Policy/gyroscope
 tags:
   - Permissions Policy
