@@ -12,7 +12,7 @@ browser-compat: api.Highlight
 
 {{APIRef("CSS Custom Highlight API")}}
 
-The **`Highlight`** interface is used to represent a collection of {{domxref("Range", "Ranges", "", "nocode")}} to be styled using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}.
+The **`Highlight`** interface is used to represent a collection of {{domxref("Range")}} instances to be styled using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}.
 
 To style arbitrary ranges in a page, instantiate a new `Highlight` object, add one or more `Range` objects to it, and register it using the {{domxref("HighlightRegistry")}}.
 
@@ -43,13 +43,13 @@ _The `Highlight` interface doesn't inherit any methods_.
 - {{domxref("Highlight.add()")}}
   - : Add a new range to this highlight.
 - {{domxref("Highlight.clear()")}}
-  - : Clear all ranges in this highlight.
+  - : Remove all ranges from this highlight.
 - {{domxref("Highlight.delete()")}}
   - : Remove a range from this highlight.
 - {{domxref("Highlight.entries()")}}
   - : Returns a new iterator object that contains each range in the highlight object, in insertion order.
 - {{domxref("Highlight.forEach()")}}
-  - : Calls `callbackFn` once for each range present in the highlight object, in insertion order.
+  - : Calls the given callback once for each range in the highlight object, in insertion order.
 - {{domxref("Highlight.has()")}}
   - : Returns a boolean asserting whether a range is present the highlight object or not.
 - {{domxref("Highlight.keys()")}}
@@ -57,7 +57,7 @@ _The `Highlight` interface doesn't inherit any methods_.
 - {{domxref("Highlight.values()")}}
   - : Returns a new iterator object that yields the ranges in the highlight object in insertion order.
 
-## Example
+## Examples
 
 The following example demonstrates how to create ranges, instantiate a new `Highlight` object for them, and register it to be styled on the page:
 

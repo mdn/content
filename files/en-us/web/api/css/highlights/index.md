@@ -11,7 +11,7 @@ tags:
 browser-compat: api.CSS.highlights
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 The static, read-only **`highlights`** property of the {{domxref("CSS")}} interface provides access to the `HighlightRegistry` used to style arbitrary text ranges using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}.
 

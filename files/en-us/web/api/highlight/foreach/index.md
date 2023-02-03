@@ -46,7 +46,7 @@ forEach(function(range, key, highlight) { /* ... */ }, thisArg)
 
     - `range`, `key`
       - : The current `Range` object being processed in the `Highlight`. As there are no
-        keys in `Highlight`, the value is passed for both arguments.
+        keys in `Highlight`, the `range` is passed for both arguments.
     - `highlight`
       - : The `Highlight` object which `forEach()` was called upon.
 
@@ -55,9 +55,9 @@ forEach(function(range, key, highlight) { /* ... */ }, thisArg)
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 The code snippet below shows how create a new highlight with two ranges, and then log the ranges by using the `forEach()` method:
 
@@ -66,9 +66,19 @@ function logRanges(range, key, highlight) {
     console.log(`Highlight object ${highlight} contains range ${range}`);
 }
 
+const text = new Text("Time is an illusion. Lunchtime doubly so.");
+
+const range1 = document.createRange();
+range1.setStart(text, 0);
+range1.setEnd(text, 4);
+
+const range2 = document.createRange();
+range2.setStart(text, 21);
+range2.setEnd(text, 30);
+
 const myHighlight = new Highlight();
-myHighlight.add(new Range());
-myHighlight.add(new Range());
+myHighlight.add(range1);
+myHighlight.add(range2);
 
 myHighlight.forEach(logRanges);
 ```

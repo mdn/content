@@ -25,11 +25,11 @@ clear()
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
-The code snippet below shows how create a new highlight, with two ranges, and then clear it:
+The code snippet below shows how to create a new highlight with two ranges, and then clear it:
 
 ```js
 const highlight = new Highlight(range1, range2);

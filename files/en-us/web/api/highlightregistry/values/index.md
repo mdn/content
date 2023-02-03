@@ -13,8 +13,7 @@ browser-compat: api.HighlightRegistry.values
 
 {{APIRef("CSS Custom Highlight API")}}
 
-The **`values()`** method of the {{domxref("HighlightRegistry")}} interface returns a new [Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that
-contains the values for each `Highlight` object in the `HighlightRegistry` object in insertion order.
+The **`values()`** method of the {{domxref("HighlightRegistry")}} interface returns a new [Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that contains the values for each `Highlight` object in the `HighlightRegistry` object in insertion order.
 
 `HighlightRegistry` is a {{jsxref("Map")}}-like object, so this is similar to using {{jsxref("Map.values()")}}.
 
@@ -26,7 +25,7 @@ values()
 
 ### Return value
 
-A new iterator object containing the values for each `Highlight` object in the registry, in insertion order.
+A new iterator object containing each `Highlight` object in the registry, in insertion order.
 
 ## Examples
 

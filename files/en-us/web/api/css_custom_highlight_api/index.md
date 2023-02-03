@@ -6,6 +6,7 @@ tags:
   - API
   - CSS Custom Highlight
   - Reference
+spec-urls: https://w3c.github.io/csswg-drafts/css-highlight-api-1/
 browser-compat:
   - api.Highlight
   - api.HighlightRegistry
@@ -14,11 +15,11 @@ browser-compat:
 
 {{DefaultAPISidebar("CSS Custom Highlight API")}}
 
-Styling text ranges on a webpage can be very useful. For example, text editing web apps highlight spelling or grammar errors, and code editors highlight syntax errors.
-
 The CSS Custom Highlight API provides a mechanism for styling arbitrary text ranges on a document by using JavaScript to create the ranges, and CSS to style them.
 
 ## Concepts and usage
+
+Styling text ranges on a webpage can be very useful. For example, text editing web apps highlight spelling or grammar errors, and code editors highlight syntax errors.
 
 The CSS Custom Highlight API extends the concept of other highlight pseudo-elements such as {{cssxref('::selection')}}, {{cssxref('::spelling-error')}}, {{cssxref('::grammar-error')}}, and {{cssxref('::target-text')}} by providing a way to create and style arbitrary {{domxref('Range')}} objects, rather than being limited to browser-defined ranges.
 
@@ -68,7 +69,7 @@ Each highlight can be styled differently.
 
 ### Register highlights
 
-Once highlights have been created, register them by using the {{domxref("HighlightRegistry")}} available as `CSS.highlights`.
+Once highlights have been created, register them by using the {{domxref("HighlightRegistry")}} available as {{domxref("CSS.highlights")}}.
 
 The registry is a {{jsxref("Map")}}-like object used to register highlights by names, as seen below:
 
@@ -77,7 +78,7 @@ CSS.highlights.set("user-1-highlight", user1Highlight);
 CSS.highlights.set("user-2-highlight", user2Highlight);
 ```
 
-In the above code snippet, the `user-1-highlight` and `user-2-highlight` strings are custom identifiers that can be used in CSS to apply styles to the registered highlight.
+In the above code snippet, the `user-1-highlight` and `user-2-highlight` strings are custom identifiers that can be used in CSS to apply styles to the registered highlights.
 
 You can register as many highlights as you need in the registry, as well as remove highlights and clear the entire registry.
 
@@ -105,7 +106,7 @@ The final step is to style the registered highlights. This is done by using the 
 - {{domxref("Highlight")}}
   - : This interface is used to represent a collection of ranges to be styled on a document.
 - {{domxref("HighlightRegistry")}}
-  - : Accessible via `CSS.highlights`, this {{jsxref("Map")}}-like object is used to register highlights with custom identifiers.
+  - : Accessible via {{domxref("CSS.highlights")}}, this {{jsxref("Map")}}-like object is used to register highlights with custom identifiers.
 
 ## Examples
 
@@ -143,7 +144,7 @@ The HTML code snippet below defines a search field and an article with a few par
 
 #### JavaScript
 
-JavaScript is used to listen to the `input` event on the search field. When the event is fired, the code locates matches for the input text in the article text, it then creates ranges for the matches, and uses the CSS Custom Highlight API to create and register a `search-results` highlight object:
+JavaScript is used to listen to the `input` event on the search field. When the event is fired, the code locates matches for the input text in the article text. It then creates ranges for the matches, and uses the CSS Custom Highlight API to create and register a `search-results` highlight object:
 
 ```js
 const query = document.getElementById("query");

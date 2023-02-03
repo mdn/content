@@ -13,7 +13,7 @@ browser-compat: api.HighlightRegistry.has
 
 {{APIRef("CSS Custom Highlight API")}}
 
-The **`has()`** method of the {{domxref("HighlightRegistry")}} interface returns a boolean indicating whether a {{domxref("Highlight")}} object with the specified name exists in registry or not.
+The **`has()`** method of the {{domxref("HighlightRegistry")}} interface returns a boolean indicating whether or not a {{domxref("Highlight")}} object with the specified name exists in the registry.
 
 `HighlightRegistry` is a {{jsxref("Map")}}-like object, so this is similar to using {{jsxref("Map.has()")}}.
 
@@ -32,7 +32,7 @@ has(name)
 
 Returns `true` if a highlight with the specified name exists in the registry; otherwise `false`.
 
-## Example
+## Examples
 
 ```js
 const fooHighlight = new Highlight();

@@ -30,11 +30,11 @@ has(range)
 
 ### Return value
 
-Returns `true` if an object with the specified value exists in the `Highlight` object; otherwise `false`.
+Returns `true` if the specified range exists in the `Highlight` object; otherwise `false`.
 
-## Example
+## Examples
 
-The code snippet below creates two ranges, and a highlight objects that contains one of them. The code then uses the `has()` method to check whether each range exists in the highlight:
+The code snippet below creates two ranges, and a highlight object that contains one of them. The code then uses the `has()` method to check whether each range exists in the highlight:
 
 ```js
 const range1 = new Range();

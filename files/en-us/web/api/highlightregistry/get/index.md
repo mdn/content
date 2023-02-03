@@ -13,7 +13,7 @@ browser-compat: api.HighlightRegistry.get
 
 {{APIRef("CSS Custom Highlight API")}}
 
-The **`get()`** method of the {{domxref("HighlightRegistry")}} interface returns a {{domxref("Highlight")}} object from the registry specified by its name.
+The **`get()`** method of the {{domxref("HighlightRegistry")}} interface returns the named {{domxref("Highlight")}} object from the registry.
 
 `HighlightRegistry` is a {{jsxref("Map")}}-like object, so this is similar to using {{jsxref("Map.get()")}}.
 
@@ -34,7 +34,7 @@ The `Highlight` object associated with the specified name, or {{jsxref("undefine
 
 ## Examples
 
-The following code sample demonstrates how to create a new `Highlight`, set it in the registry, and retrieve it by its name using the `get()` method:
+The following code sample demonstrates how to create a new `Highlight`, add it to the registry, and retrieve it by its name using the `get()` method:
 
 ```js
 const fooHighlight = new Highlight();

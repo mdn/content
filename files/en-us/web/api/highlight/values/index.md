@@ -13,12 +13,9 @@ browser-compat: api.Highlight.values
 
 {{APIRef("CSS Custom Highlight API")}}
 
-The **`values()`** method of the {{domxref("Highlight")}} interface returns a new [Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that
-contains the values for each `Range` object in the `Highlight` object in insertion order.
+The **`values()`** method of the {{domxref("Highlight")}} interface returns a new [Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that contains the values for each `Range` object in the `Highlight` object in insertion order.
 
-> **Note:** The **`keys()`** method is an alias for this method, hence the
-> `keys()` page redirects here. It behaves exactly the same and returns
-> **values** of `Highlight` elements.
+> **Note:** The **`keys()`** method is an alias for this method. It behaves exactly the same and returns **values** of `Highlight` elements.
 
 `Highlight` is a {{jsxref("Set")}}-like object, so this is similar to using {{jsxref("Set.values()")}}.
 
@@ -30,7 +27,7 @@ values()
 
 ### Return value
 
-A new iterator object containing the values for each `Range` object in the given `Highlight`, in insertion order.
+A new iterator object containing each `Range` object in the given `Highlight`, in insertion order.
 
 ## Examples
 
@@ -44,9 +41,9 @@ myHighlight.add(new Range());
 
 const iter = myHighlight.values();
 
-console.log(iter.next().value); // Range
-console.log(iter.next().value); // Range
-console.log(iter.next().value); // Range
+for (value of iter) {
+  console.log(value); // Range
+}
 ```
 
 ## Specifications

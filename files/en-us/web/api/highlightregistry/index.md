@@ -12,7 +12,7 @@ browser-compat: api.HighlightRegistry
 
 {{APIRef("CSS Custom Highlight API")}}
 
-The **`HighlightRegistry`** interface, accessed via `CSS.highlights`, is a {{jsxref("Map")}}-like object used to register {{domxref("Highlight")}} objects to be styled using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}.
+The **`HighlightRegistry`** interface, accessed via {{domxref("CSS.highlights")}}, is a {{jsxref("Map")}}-like object used to register {{domxref("Highlight")}} objects to be styled using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}.
 
 {{InheritanceDiagram}}
 
@@ -28,39 +28,61 @@ _The `HighlightRegistry` interface doesn't inherit any properties._
 _The `HighlightRegistry` interface doesn't inherit any methods_.
 
 - {{domxref("HighlightRegistry.clear()")}}
-  - : Clear all ranges in this highlight.
+  - : Remove all `Highlight` objects from the registry.
 - {{domxref("HighlightRegistry.delete()")}}
-  - : Remove a range from this highlight.
+  - : Remove the named `Highlight` object from the registry.
 - {{domxref("HighlightRegistry.entries()")}}
-  - : Returns a new iterator object that contains each range in the highlight object, in insertion order.
+  - : Returns a new iterator object that contains each `Highlight` object in the registry, in insertion order.
 - {{domxref("HighlightRegistry.forEach()")}}
-  - : Calls `callbackFn` once for each range present in the highlight object, in insertion order.
+  - : Calls the given callback once for each `Highlight` object in the registry, in insertion order.
 - {{domxref("HighlightRegistry.get()")}}
-  - : sdfh
+  - : Gets the named `Highlight` object from the registry.
 - {{domxref("HighlightRegistry.has()")}}
-  - : Returns a boolean asserting whether a range is present the highlight object or not.
+  - : Returns a boolean asserting whether a `Highlight` object is present the registry or not.
 - {{domxref("HighlightRegistry.keys()")}}
   - : An alias for {{domxref("HighlightRegistry.values()")}}.
 - {{domxref("HighlightRegistry.set()")}}
-  - : sdfh
+  - : Adds the given `Highlight` object to the registry with the given name, or updates the named `Highlight` object, if it already exists in the registry.
 - {{domxref("HighlightRegistry.values()")}}
-  - : Returns a new iterator object that yields the ranges in the highlight object in insertion order.
+  - : Returns a new iterator object that yields the `Highlight` objects in the registry, in insertion order.
 
-## Example
+## Examples
+
+### Registering a highlight
 
 The following example demonstrates how to create ranges, instantiate a new `Highlight` object for them, and register the highlight using the `HighlightRegistry`, to style it on the page:
 
+#### HTML
+
+```html
+<p id="foo">CSS Custom Highlight API</p>
+```
+
+#### CSS
+
+```css
+::highlight(my-custom-highlight) {
+  background-color: peachpuff;
+}
+```
+
+#### JavaScript
+
 ```js
-const parentNode = document.getElementById("foo");
+const text = document.getElementById("foo").firstChild;
+
+if (!CSS.highlights) {
+  text.textContent = "The CSS Custom Highlight API is not supported in this browser!";
+}
 
 // Create a couple of ranges.
 const range1 = new Range();
-range1.setStart(parentNode, 10);
-range1.setEnd(parentNode, 20);
+range1.setStart(text, 0);
+range1.setEnd(text, 3);
 
 const range2 = new Range();
-range2.setStart(parentNode, 40);
-range2.setEnd(parentNode, 60);
+range2.setStart(text, 21);
+range2.setEnd(text, 24);
 
 // Create a custom highlight for these ranges.
 const highlight = new Highlight(range1, range2);
@@ -69,13 +91,9 @@ const highlight = new Highlight(range1, range2);
 CSS.highlights.set('my-custom-highlight', highlight);
 ```
 
-The following CSS code snippet demonstrates how to style the registered custom highlight by using the {{cssxref("::highlight")}} pseudo-element:
+#### Result
 
-```css
-::highlight(my-custom-highlight) {
-  background-color: peachpuff;
-}
-```
+{{ EmbedLiveSample("Registering a highlight") }}
 
 ## Specifications
 

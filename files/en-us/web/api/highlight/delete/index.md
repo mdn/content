@@ -32,9 +32,9 @@ delete(range)
 
 Returns `true` if `range` was already in `Highlight`; otherwise `false`.
 
-## Example
+## Examples
 
-The code snippet below shows how create a new highlight, with two ranges, and then delete one of them:
+The code snippet below shows how to create a new highlight with two ranges, and then delete one of them:
 
 ```js
 const range1 = new Range();

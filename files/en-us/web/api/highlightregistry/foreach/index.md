@@ -44,11 +44,11 @@ forEach(function(highlight, name, registry) { /* … */ }, thisArg)
 
   - : Function to execute for each `Highlight` object, taking three arguments:
 
-    - `highlight` {{Optional_Inline}}
+    - `highlight`
       - : The current highlight.
-    - `name` {{Optional_Inline}}
+    - `name`
       - : The highlight name.
-    - `highlight` {{Optional_Inline}}
+    - `registry`
       - : The registry object which `forEach()` was called upon.
 
 - `thisArg`
@@ -56,9 +56,9 @@ forEach(function(highlight, name, registry) { /* … */ }, thisArg)
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 The code snippet below shows how create a new highlight with two ranges, and then log the ranges by using the `forEach()` method:
 

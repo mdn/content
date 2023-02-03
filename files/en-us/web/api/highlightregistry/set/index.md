@@ -26,13 +26,13 @@ set(name, highlight)
 ### Parameters
 
 - `name`
-  - : The name of the `Highlight` object to add to the registry. The name must be a {{jsxref("String")}}.
+  - : The name of the `Highlight` object to add or update. The name must be a {{jsxref("String")}}.
 - `highlight`
-  - : The `Highlight` object to add to the registry. This must be a {{domxref("Highlight")}} interface instance.
+  - : The `Highlight` object to add or update. This must be a {{domxref("Highlight")}} interface instance.
 
 ### Return value
 
-The `HighlightRegistry` object is returned.
+The `HighlightRegistry` object.
 
 ## Examples
 

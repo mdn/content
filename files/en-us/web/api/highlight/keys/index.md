@@ -25,7 +25,7 @@ keys()
 
 ### Return value
 
-A new iterator object containing the values for each `Range` object in the given `Highlight`, in insertion order.
+A new iterator object containing each `Range` object in the given `Highlight`, in insertion order.
 
 ## Specifications
 

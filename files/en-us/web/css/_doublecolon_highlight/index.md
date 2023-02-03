@@ -36,34 +36,67 @@ In particular, {{CSSxRef("background-image")}} is ignored.
 
 ## Examples
 
-### HTML
+### Highlighting characters
+
+#### HTML
 
 ```html
-<p id="foo">This text is highlighted with the CSS Custom Highlight API.</p>
+<p id="rainbow-text">CSS Custom Highlight API rainbow</p>
 ```
 
-### JavaScript
-
-```js
-const textNode = document.getElementById("foo").childNodes[0];
-
-const range = new Range();
-range.setStart(textNode, 10);
-range.setEnd(textNode, 20);
-
-const highlight = new Highlight(range);
-
-CSS.highlights.set('my-custom-highlight', highlight);
-```
-
-### CSS
+#### CSS
 
 ```css
-::highlight(my-custom-highlight) {
-  color: black;
-  background-color: #f06;
+#rainbow-text {
+  font-family: monospace;
+  font-size: 1.5rem;
+}
+
+::highlight(rainbow-color-1) { color: #ad26ad;  text-decoration: underline; }
+::highlight(rainbow-color-2) { color: #5d0a99;  text-decoration: underline; }
+::highlight(rainbow-color-3) { color: #0000ff;  text-decoration: underline; }
+::highlight(rainbow-color-4) { color: #07c607;  text-decoration: underline; }
+::highlight(rainbow-color-5) { color: #b3b308;  text-decoration: underline; }
+::highlight(rainbow-color-6) { color: #ffa500;  text-decoration: underline; }
+::highlight(rainbow-color-7) { color: #ff0000;  text-decoration: underline; }
+```
+
+#### JavaScript
+
+```js
+const textNode = document.getElementById("rainbow-text").firstChild;
+
+if (!CSS.highlights) {
+  textNode.textContent = "The CSS Custom Highlight API is not supported in this browser!";
+}
+
+// Create and register highlights for each color in the rainbow.
+const highlights = [];
+for (let i = 0; i < 7; i ++) {
+  // Create a new highlight for this color.
+  const colorHighlight = new Highlight();
+  highlights.push(colorHighlight);
+
+  // Register this highlight under a custom name.
+  CSS.highlights.set(`rainbow-color-${i + 1}`, colorHighlight);
+}
+
+// Iterate over the text, character by character.
+for (let i = 0; i < textNode.textContent.length; i ++) {
+  // Create a new range just for this character.
+  const range = new Range();
+  range.setStart(textNode, i);
+  range.setEnd(textNode, i + 1);
+
+  // Add the range to the next available highlight,
+  // looping back to the first one once we've reached the 7th.
+  highlights[i % 7].add(range);
 }
 ```
+
+#### Result
+
+{{ EmbedLiveSample("Highlighting characters") }}
 
 ## Specifications
 

@@ -27,7 +27,7 @@ entries()
 
 A new iterator object that contains an array of `[name, highlight]` for each `Highlight` object in the `HighlightRegistry`, in insertion order.
 
-## Example
+## Examples
 
 The code snippet below creates and registers two new highlights, and then logs the highlights and their names by using the iterator returned by the `entries()` method:
 

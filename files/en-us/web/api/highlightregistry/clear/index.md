@@ -25,9 +25,9 @@ clear()
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 The code snippet below registers two highlight objects in the registry and then clears the registry:
 

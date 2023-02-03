@@ -13,7 +13,7 @@ browser-compat: api.HighlightRegistry.delete
 
 {{APIRef("CSS Custom Highlight API")}}
 
-The **`delete()`** method of the {{domxref("HighlightRegistry")}} interface removes a {{domxref("Highlight")}} object from the `HighlightRegistry` specified by its custom highlight name.
+The **`delete()`** method of the {{domxref("HighlightRegistry")}} interface removes a the named {{domxref("Highlight")}} object from the `HighlightRegistry`.
 
 `HighlightRegistry` is a {{jsxref("Map")}}-like object, so this is similar to using {{jsxref("Map.delete()")}}.
 
@@ -30,9 +30,9 @@ delete(customHighlightName)
 
 ### Return value
 
-Returns `true` if a `Highlight` object under the provided name was already in the `HighlightRegistry`; otherwise `false`.
+Returns `true` if a `Highlight` object under the provided name was in the `HighlightRegistry`; otherwise `false`.
 
-## Example
+## Examples
 
 The following code sample registers a highlight in the registry, and then deletes it:
 

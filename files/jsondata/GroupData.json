@@ -167,7 +167,7 @@
       "overview": ["CSS Custom Highlight API"],
       "interfaces": ["Highlight", "HighlightRegistry"],
       "methods": [],
-      "properties": [],
+      "properties": ["CSS.highlights"],
       "events": []
     },
     "Console API": {

@@ -13,7 +13,7 @@ browser-compat: api.Highlight.entries
 
 {{APIRef("CSS Custom Highlight API")}}
 
-The **`entries()`** method of the {{domxref("Highlight")}} interface returns a new [Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that contains **an array of `[range, range]`** for each {{domxref("Range")}} object in the `Highlight` object, in insertion order.
+The **`entries()`** method of the {{domxref("Highlight")}} interface returns a new [Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that contains an array of `[range, range]` for each {{domxref("Range")}} object in the `Highlight` object, in insertion order.
 
 `Highlight` is a {{jsxref("Set")}}-like object, so this is similar to using {{jsxref("Set.entries()")}}.
 
@@ -27,14 +27,24 @@ entries()
 
 A new iterator object that contains an array of `[range, range]` for each `Range` object in the given `Highlight`, in insertion order.
 
-## Example
+## Examples
 
 The code snippet below shows how create a new highlight with two ranges, and then log the ranges by using the iterator returned by the `entries()` method:
 
 ```js
+const text = new Text("Time is an illusion. Lunchtime doubly so.");
+
+const range1 = document.createRange();
+range1.setStart(text, 0);
+range1.setEnd(text, 4);
+
+const range2 = document.createRange();
+range2.setStart(text, 21);
+range2.setEnd(text, 30);
+
 const myHighlight = new Highlight();
-myHighlight.add(new Range());
-myHighlight.add(new Range());
+myHighlight.add(range1);
+myHighlight.add(range2);
 
 const iter = myHighlight.entries();
 
@@ -45,12 +55,24 @@ console.log(iter.next().value); // [Range, Range]
 The following code example shows how to iterate over the ranges in a highlight by using a [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop:
 
 ```js
-const myHighlight = new Highlight();
-myHighlight.add(new Range());
-myHighlight.add(new Range());
+const text = new Text("Time is an illusion. Lunchtime doubly so.");
 
-for (const [range] of myHighlight.entries()) {
-  console.log(range); // Range
+const range1 = document.createRange();
+range1.setStart(text, 0);
+range1.setEnd(text, 4);
+
+const range2 = document.createRange();
+range2.setStart(text, 21);
+range2.setEnd(text, 30);
+
+const highlight = new Highlight();
+highlight.add(range1);
+highlight.add(range2);
+
+for (const [range] of highlight.entries()) {
+  console.log(range.toString());
+  // Time
+  // Lunchtime
 }
 ```
 

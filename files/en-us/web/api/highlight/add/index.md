@@ -32,7 +32,7 @@ add(range)
 
 The `Highlight` object, with the added range.
 
-## Example
+## Examples
 
 The code snippet below shows how to add two ranges to a new highlight object:
 

@@ -13,20 +13,16 @@ browser-compat: api.Highlight.type
 
 {{APIRef("CSS Custom Highlight API")}}
 
-The `type` property of the {{domxref("Highlight")}} interface is an enumerated {{jsxref("String")}} used to specify the semantic meaning of the highlight. This allows assistive technologies, such as screen readers, to include this meaning when exposing the highlight to users.
+The `type` property of the {{domxref("Highlight")}} interface is an enumerated {{jsxref("String")}} used to specify the meaning of the highlight. This allows assistive technologies, such as screen readers, to include this meaning when exposing the highlight to users.
 
 By default, a highlight object will have its type set to `highlight`, but you can change it to `spelling-error` or `grammar-error`.
-
-Use `spelling-error` when the highlight is used to emphasize misspelled content.
-
-Use `grammar-error` when the highlight is used to emphasize content that is grammatically incorrect.
 
 ## Value
 
 The possible values of the `type` enumerated value are:
 
 - `highlight`
-  - : This is the default highlight type. It does not have any specific semantic meaning.
+  - : This is the default highlight type. It does not have any specific meaning.
 - `spelling-error`
   - : Use this type when the highlight is used to emphasize misspelled content.
 - `grammar-error`

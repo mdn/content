@@ -13,11 +13,11 @@ browser-compat: api.HighlightRegistry.size
 
 {{APIRef("CSS Custom Highlight API")}}
 
-The **`size`** property returns the number of {{domxref("Highlight")}} objects in a {{domxref("HighlightRegistry")}}.
+The **`size`** property returns the number of {{domxref("Highlight")}} objects in the {{domxref("HighlightRegistry")}}.
 
 ## Value
 
-The value of `size` is a read-only integer representing how many entries the {{jsxref("Map")}}-like `HighlightRegistry` object has.
+A read-only integer indicating how many `Highlight` objects the registry contains.
 
 ## Examples
 

@@ -18,7 +18,7 @@ The **`size`** property returns the number of {{domxref("Range")}} objects in a
 
 ## Value
 
-The value of `size` is a read-only integer representing how many entries the {{jsxref("Set")}}-like highlight object has.
+The value of `size` is a read-only integer representing how many entries the highlight object has.
 
 ## Examples
 
