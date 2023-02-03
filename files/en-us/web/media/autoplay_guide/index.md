@@ -58,7 +58,8 @@ As a general rule, you can assume that media will be allowed to autoplay only if
 - If the site has been allowlisted; this may happen either automatically if the browser determines that the user engages with media frequently, or manually through preferences or other user interface features
 - If the autoplay [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) is used to grant autoplay support to an {{HTMLElement("iframe")}} and its document.
 
-Otherwise, the playback will likely be blocked. The exact situations that result in blocking, and the specifics of how sites become allowlisted vary from browser to browser, but the above are good guidelines to go by.
+Otherwise, the playback will likely be blocked.
+The exact situations that result in blocking, and the specifics of how sites become allowlisted vary from browser to browser, but the above are good guidelines to go by.
 
 For details, see the autoplay policies for [Google Chrome](https://developer.chrome.com/blog/autoplay/) and [WebKit](https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/).
 
@@ -111,11 +112,6 @@ if (navigator.getAutoplayPolicy("mediaelement") === "allowed") {
 }
 ```
 
-The result of checking the policy for a feature type is the "general policy" for instances of the specified feature type in the document.
-If the value is `allowed` or `allowed-muted` you can assume that all items of the type in the document have this same policy.
-However the `disallowed` policy may sometimes still be returned even if some elements are able to autoplay (this could happen if elements were initially disallowed, but were then were touched by the user and therefore "blessed" by the user-agent).
-Therefore if this value is returned you may choose to check individual elements/audio contexts.
-
 The code to test a specific element or audio context is the same, except that you pass in the element or context to test rather than the type string.
 Here we pass in the `video` object we want to test.
 
@@ -131,8 +127,10 @@ if (navigator.getAutoplayPolicy(video) === "allowed") {
 }
 ```
 
-Finally, note that the autoplay policy for a particular element may change, in particular due to user interaction.
-Therefore you may need to recheck the policy when elements are touched.
+The autoplay policy for a type may change due to user interaction with the site, page, or a particular element.
+Similarly, on some browsers the policy for a specific element might change even though the policy for the type has not (for example, on browsers where touching a particular element can allow just that element to autoplay).
+
+As there is no way to be notified when the autoplay policy has changed (either for a type or element) generally we recommend that the policy is checked when the page is loaded, using the type.
 
 #### Example 3: Detecting autoplay failure as a fallback
 
