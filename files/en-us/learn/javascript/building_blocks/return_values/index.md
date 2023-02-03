@@ -168,6 +168,7 @@ Let's have a go at writing our own functions featuring return values.
    });
 ```
 
+
 4. Save your code, load it in a browser, and try it out.
 
 Here are some explanations for the `addEventListener` function in step 3 above: 
