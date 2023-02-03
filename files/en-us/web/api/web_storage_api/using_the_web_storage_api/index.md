@@ -209,8 +209,6 @@ Web Storage also provides a couple of simple methods to remove data. We don't us
 
 {{Compat}}
 
-All browsers have varying capacity levels for both localStorage and sessionStorage. Here is a [detailed rundown of all the storage capacities for various browsers](http://dev-test.nemikor.com/web-storage/support-test/).
-
 ## See also
 
 - [Web Storage API landing page](/en-US/docs/Web/API/Web_Storage_API)

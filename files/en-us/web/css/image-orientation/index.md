@@ -15,6 +15,10 @@ browser-compat: css.properties.image-orientation
 
 The **`image-orientation`** [CSS](/en-US/docs/Web/CSS) property specifies a layout-independent correction to the orientation of an image.
 
+{{EmbedInteractiveExample("pages/css/image-orientation.html")}}
+
+## Syntax
+
 ```css
 /* keyword values */
 image-orientation: none;
@@ -28,14 +32,14 @@ image-orientation: revert-layer;
 image-orientation: unset;
 ```
 
-## Syntax
-
 ### Values
 
 - `none`
   - : Does not apply any additional image rotation; the image is oriented as encoded or as other CSS property values dictate.
 - `from-image`
   - : Default initial value. The [EXIF](https://en.wikipedia.org/wiki/EXIF) information contained in the image is used to rotate the image appropriately.
+
+> **Warning:** `image-orientation: none;` **does not** override the orientation of non-secure-origin images as encoded by their [EXIF](https://en.wikipedia.org/wiki/EXIF) information, due to security concerns. Find out more from [the CSS working group draft issue](https://github.com/w3c/csswg-drafts/issues/5165).
 
 ## Description
 

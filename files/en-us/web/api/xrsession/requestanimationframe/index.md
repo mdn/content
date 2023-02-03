@@ -30,7 +30,7 @@ call `requestAnimationFrame()` again. This can be done from within the
 callback itself.
 
 The callback takes two parameters as inputs: an {{DOMxRef("XRFrame")}} describing the
-state of all tracked objects for the session, and a time stamp you can use to compute
+state of all tracked objects for the session, and a timestamp you can use to compute
 any animation updates needed.
 
 You can cancel a previously scheduled animation by calling

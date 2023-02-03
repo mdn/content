@@ -18,7 +18,7 @@ browser-compat: api.File.lastModifiedDate
 
 {{APIRef("File API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The **`File.lastModifiedDate`** read-only property returns the last modified date of the file. Files without a known last modified date returns the current date .
+The **`File.lastModifiedDate`** read-only property returns the last modified date of the file. Files without a known last modified date return the current date.
 
 ## Value
 

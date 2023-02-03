@@ -149,7 +149,7 @@ There are also two directories inside our root — `pdfs` and `projects`. These 
   <p>Visit my <a href="projects/index.html">project homepage</a>.</p>
   ```
 
-- **Moving back up into parent directories**: If you wanted to include a hyperlink inside `projects/index.html` pointing to `pdfs/project-brief.pdf`, you'd have to go up a directory level, then back down into the `pdf` directory.
+- **Moving back up into parent directories**: If you wanted to include a hyperlink inside `projects/index.html` pointing to `pdfs/project-brief.pdf`, you'd have to go up a directory level, then back down into the `pdfs` directory.
   To go up a directory, use two dots — `..` — so the URL you would use is `../pdfs/project-brief.pdf`:
 
   ```html
@@ -244,12 +244,11 @@ Other tips:
 
 ### Linking to non-HTML resources — leave clear signposts
 
-When linking to a resource that will be downloaded (like a PDF or Word document), streamed (like video or audio), or has another potentially unexpected effect (opens a popup window, or loads a Flash movie), you should add clear wording to reduce any confusion.
+When linking to a resource that will be downloaded (like a PDF or Word document), streamed (like video or audio), or has another potentially unexpected effect (opens a popup window), you should add clear wording to reduce any confusion.
 
 For example:
 
 - If you're on a low bandwidth connection, click a link, and then a multiple megabyte download starts unexpectedly.
-- If you don't have the Flash player installed, click a link, and then suddenly get taken to a page that requires Flash.
 
 Let's look at some examples, to see what kind of text can be used here:
 
@@ -263,12 +262,6 @@ Let's look at some examples, to see what kind of text can be used here:
 <p>
   <a href="https://www.example.com/video-stream/" target="_blank">
     Watch the video (stream opens in separate tab, HD quality)
-  </a>
-</p>
-
-<p>
-  <a href="https://www.example.com/car-game">
-    Play the car game (requires Flash)
   </a>
 </p>
 ```
@@ -311,7 +304,7 @@ The finished example should look similar to the following page:
 
 > **Note:** If you get stuck, or aren't sure if you have got it right, you can check the [navigation-menu-marked-up](https://github.com/mdn/learning-area/tree/main/html/introduction-to-html/navigation-menu-marked-up) directory to see the correct answer.
 
-## E-mail links
+## Email links
 
 It's possible to create links or buttons that, when clicked, open a new outgoing email message rather than linking to a resource or page.
 This is done using the {{HTMLElement("a")}} element and the `mailto:` URL scheme.

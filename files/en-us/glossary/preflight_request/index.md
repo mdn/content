@@ -1,6 +1,7 @@
 ---
 title: Preflight request
 slug: Glossary/Preflight_request
+page-type: glossary-definition
 tags:
   - CORS
   - HTTP

@@ -1,6 +1,7 @@
 ---
 title: Destructuring assignment
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
+page-type: javascript-language-feature
 tags:
   - Destructuring
   - Destructuring_assignment

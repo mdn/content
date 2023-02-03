@@ -287,7 +287,7 @@ When these are present, we can serve alternative styling rules to provide sensib
 
 This is not hugely pretty, but it does make the main content area more readable on browsers that don't support either or both of these features.
 
-Modernizr also puts its feature detect results in a JavaScript `Modenizr` object too, so that you can run JavaScript code selectively depending on feature support. For example, you could do this:
+Modernizr also puts its feature detect results in a JavaScript `Modernizr` object too, so that you can run JavaScript code selectively depending on feature support. For example, you could do this:
 
 ```js
 if (Modernizr.rgba) {

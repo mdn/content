@@ -1,6 +1,7 @@
 ---
 title: async function expression
 slug: Web/JavaScript/Reference/Operators/async_function
+page-type: javascript-operator
 tags:
   - Function
   - JavaScript
@@ -12,11 +13,9 @@ browser-compat: javascript.operators.async_function
 
 {{jsSidebar("Operators")}}
 
-The **`async function`** keyword can be used to define
-`async` functions inside expressions.
+The **`async function`** keywords can be used to define an async function inside an expression.
 
-You can also define async functions using an
-[async function statement](/en-US/docs/Web/JavaScript/Reference/Statements/async_function).
+You can also define async functions using an [async function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/async_function).
 
 ## Syntax
 

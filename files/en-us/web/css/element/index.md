@@ -107,6 +107,5 @@ the `<div id="css-source">` inside `<div id="css-result">`.
 - {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("&lt;gradient&gt;")}}
-- {{cssxref("element", "element()")}}
 - {{cssxref("cross-fade", "cross-fade()")}}
 - {{domxref("document.mozSetImageElement()")}}

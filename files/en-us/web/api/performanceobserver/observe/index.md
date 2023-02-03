@@ -66,7 +66,7 @@ observer.observe({ entryTypes: ["mark", "measure"] });
 
 ### Watching a single performance entry type
 
-The following example retrieves buffered events and subscribes to newer events for resource timing events ({{domxref("PerformanceResourceTiming")}}) using the `buffered` and `type` configuration options. Whenever you need to configure the observer to use the `buffered` or `durationTheshold` option, use `type` instead of `entryType`. Collecting multiple types of performance entry types will not work otherwise.
+The following example retrieves buffered events and subscribes to newer events for resource timing events ({{domxref("PerformanceResourceTiming")}}) using the `buffered` and `type` configuration options. Whenever you need to configure the observer to use the `buffered` or `durationThreshold` option, use `type` instead of `entryType`. Collecting multiple types of performance entry types will not work otherwise.
 
 ```js
 const observer = new PerformanceObserver((list, obj) => {

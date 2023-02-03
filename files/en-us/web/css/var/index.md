@@ -38,6 +38,8 @@ The first argument to the function is the name of the custom property to be subs
 - `<declaration-value>`
   - : The custom property's fallback value, which is used in case the custom property is invalid in the used context. This value may contain any character except some characters with special meaning like newlines, unmatched closing brackets, i.e. `)`, `]`, or `}`, top-level semicolons, or exclamation marks. The fallback value can itself be a custom property using the `var()` syntax.
 
+    > **Note:** `var(--a,)` is valid, specifying that if the `--a` custom property is invalid or missing, the `var()` should be replaced with nothing.
+
 ## Examples
 
 ### Using a custom property set on :root

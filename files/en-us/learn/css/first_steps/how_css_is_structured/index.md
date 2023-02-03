@@ -350,7 +350,7 @@ The output from the above code looks like this:
 
 - **{{cssxref("transform")}}**
 - **{{cssxref("background-image")}}, in particular gradient values**
-- **{{cssxref("color")}}, in particular rgb/rgba/hsl/hsla values**
+- **{{cssxref("color")}}, in particular rgb and hsl values**
 
 ## @rules
 

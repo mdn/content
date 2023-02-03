@@ -1,6 +1,7 @@
 ---
 title: Sloppy mode
 slug: Glossary/Sloppy_mode
+page-type: glossary-definition
 tags:
   - CodingScripting
   - JavaScript

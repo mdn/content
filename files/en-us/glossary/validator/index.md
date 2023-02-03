@@ -1,6 +1,7 @@
 ---
 title: Validator
 slug: Glossary/Validator
+page-type: glossary-definition
 tags:
   - Beginner
   - Security

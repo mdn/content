@@ -1,6 +1,7 @@
 ---
 title: PAC
 slug: Glossary/PAC
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

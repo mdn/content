@@ -114,7 +114,7 @@ The `Domain` and `Path` attributes define the _scope_ of a cookie: what URLs the
 
 #### Domain attribute
 
-The `Domain` attribute specifies which hosts can receive a cookie. If unspecified, the attribute defaults to the same {{Glossary("host")}} that set the cookie, _excluding subdomains_. If `Domain` _is_ specified, then subdomains are always included. Therefore, specifying `Domain` is less restrictive than omitting it. However, it can be helpful when subdomains need to share information about a user.
+The `Domain` attribute specifies which hosts can receive a cookie. If the server does not specify a `Domain`, the browser defaults the domain to the same {{Glossary("host")}} that set the cookie, _excluding subdomains_. If `Domain` _is_ specified, then subdomains are always included. Therefore, specifying `Domain` is less restrictive than omitting it. However, it can be helpful when subdomains need to share information about a user.
 
 For example, if you set `Domain=mozilla.org`, cookies are available on subdomains like `developer.mozilla.org`.
 
@@ -142,8 +142,8 @@ The [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) attribute let
 This provides some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).
 It takes three possible values: `Strict`, `Lax`, and `None`.
 
-With `Strict`, the cookie is only sent to the site where it originated.
-`Lax` is similar, except that cookies are sent when the user _navigates_ to the cookie's origin site.
+With `Strict`, the browser only sends the cookie with requests from the cookie's origin site.
+`Lax` is similar, except the browser also sends the cookie when the user _navigates_ to the cookie's origin site (even if the user is coming from a different site).
 For example, by following a link from an external site. `None` specifies that cookies are sent on both originating and cross-site requests, but _only in secure contexts_ (i.e., if `SameSite=None` then the `Secure` attribute must also be set).
 If no `SameSite` attribute is set, the cookie is treated as `Lax`.
 
@@ -221,7 +221,10 @@ Firefox, by default, blocks third-party cookies that are known to contain tracke
 Third-party cookies (or just tracking cookies) may also be blocked by other browser settings or extensions.
 Cookie blocking can cause some third-party components (such as social media widgets) not to function as intended.
 
-> **Note:** Servers can (and should) set the cookie [SameSite attribute](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) to specify whether or not cookies may be sent to third party sites.
+There are some useful features available for developers who wish to respect user privacy, and minimize third-party tracking:
+
+- Servers can (and should) set the cookie [SameSite attribute](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) to specify whether or not third-party cookies may be sent.
+- [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) enables developers to opt-in their cookies to partitioned storage, with a separate cookie jar per top-level site. This enables valid non-tracking uses of third-party cookies to continue working in browsers that do not allow cookies to be used for third-party tracking.
 
 ### Cookie-related regulations
 

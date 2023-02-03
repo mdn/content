@@ -4,7 +4,9 @@ slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_
 page-type: guide
 ---
 
-{{WebRTCSidebar}}{{PreviousMenuNext("Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Show_hide_html")}}
+{{DefaultAPISidebar("WebRTC")}}
+
+{{PreviousMenuNext("Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Show_hide_html")}}
 
 After you've created the peer, you'll want to get the browser's permission to access the microphone. We'll be using the [`getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia) method on the `navigator.MediaDevices` object. The `getUserMedia()` endpoint takes a `constraints` object that specifies which permissions are needed. `getUserMedia()` is a promise which, when successfully resolved, returns a [`MediaStream`](/en-US/docs/Web/API/MediaStream) object. In our case this is going to contain the audio from our stream. If the promise isn't successfully resolved, you'll want to catch and display the error.
 
@@ -12,12 +14,15 @@ After you've created the peer, you'll want to get the browser's permission to ac
 
    ```js
    function getLocalStream() {
-       navigator.mediaDevices.getUserMedia({video: false, audio: true}).then((stream) => {
-           window.localStream = stream; // A
-           window.localAudio.srcObject = stream; // B
-           window.localAudio.autoplay = true; // C
-       }).catch((err) => {
-           console.error(`you got an error: ${err}`)
+     navigator.mediaDevices
+       .getUserMedia({ video: false, audio: true })
+       .then((stream) => {
+         window.localStream = stream; // A
+         window.localAudio.srcObject = stream; // B
+         window.localAudio.autoplay = true; // C
+       })
+       .catch((err) => {
+         console.error(`you got an error: ${err}`);
        });
    }
    ```
@@ -38,7 +43,7 @@ After you've created the peer, you'll want to get the browser's permission to ac
 
 3. Refresh your app, which should still be running at `localhost:8000`; you should see the following permission pop up:
 
-   ![A browser permission dialogue box which says "http://localhost:8000 wants to use your microphone" with two options: "block" and "allow"](1oieizmfmllnygbsdu4f1iq.png)
+   ![A browser permission dialogue box which says "http://localhost:8000 wants to use your microphone" with two options: "block" and "allow"](use_microphone_dialogue_box.png)
 
 4. Plugin in some headphones before you allow the microphone usage so that when you unmute yourself later, you don't get any feedback. If you didn't see the permission prompt, open the inspector to see if you have any errors. Make sure your JavaScript file is correctly linked to your `index.html` too.
 
@@ -54,12 +59,15 @@ This what it should all look like together:
  */
 
 function getLocalStream() {
-    navigator.mediaDevices.getUserMedia({video: false, audio: true}).then((stream) => {
-        window.localStream = stream;
-        window.localAudio.srcObject = stream;
-        window.localAudio.autoplay = true;
-    }).catch((err) => {
-        console.error(`you got an error: ${err}`)
+  navigator.mediaDevices
+    .getUserMedia({ video: false, audio: true })
+    .then((stream) => {
+      window.localStream = stream;
+      window.localAudio.srcObject = stream;
+      window.localAudio.autoplay = true;
+    })
+    .catch((err) => {
+      console.error(`you got an error: ${err}`);
     });
 }
 

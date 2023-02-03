@@ -42,7 +42,7 @@ The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/We
   - : Gets or sets the playback rate of the animation.
 - {{domxref("Animation.ready")}} {{ReadOnlyInline}}
   - : Returns the current ready Promise for this animation.
-- {{domxref("animation.replaceState")}}
+- {{domxref("animation.replaceState")}} {{ReadOnlyInline}}
   - : Returns the replace state of the animation. This will be `active` if the animation has been replaced, or `persisted` if {{domxref("Animation.persist()")}} has been invoked on it.
 - {{domxref("Animation.startTime")}}
   - : Gets or sets the scheduled time when an animation's playback should begin.

@@ -114,7 +114,7 @@ a(href='http://someurl/') Link text
 | Plain text
 ```
 
-Pug allows you to perform conditional operations using `if`, `else`, `else if` and `unless`—for example:
+Pug allows you to perform conditional operations using `if`, `else`, `else if` and `unless` — for example:
 
 ```pug
 if title

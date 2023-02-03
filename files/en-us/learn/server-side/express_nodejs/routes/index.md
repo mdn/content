@@ -141,7 +141,7 @@ Route paths can also be string patterns. String patterns use a form of regular e
 - `?` : The endpoint must have 0 or 1 of the preceding character (or group), e.g. a route path of `'/ab?cd'` will match endpoints `acd` or `abcd`.
 - `+` : The endpoint must have 1 or more of the preceding character (or group), e.g. a route path of `'/ab+cd'` will match endpoints `abcd`, `abbcd`, `abbbcd`, and so on.
 - `*` : The endpoint may have an arbitrary string where the `*` character is placed. E.g. a route path of `'/ab*cd'` will match endpoints `abcd`, `abXcd`, `abSOMErandomTEXTcd`, and so on.
-- `()` : Grouping match on a set of characters to perform another operation on, e.g. `'/ab(cd)?e'` will perform a `?`-match on the group `(cd)`—it will match `abe` and `abcde`.
+- `()` : Grouping match on a set of characters to perform another operation on, e.g. `'/ab(cd)?e'` will perform a `?`-match on the group `(cd)` — it will match `abe` and `abcde`.
 
 The route paths can also be JavaScript [regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions). For example, the route path below will match `catfish` and `dogfish`, but not `catflap`, `catfishhead`, and so on. Note that the path for a regular expression uses regular expression syntax (it is not a quoted string as in the previous cases).
 
@@ -587,13 +587,14 @@ router.get("/", function (req, res) {
 
 ### Update app.js
 
-The last step is to add the routes to the middleware chain. We do this in `app.js`.
+The last step is to add the routes to the middleware chain.
+We do this in `app.js`.
 
 Open **app.js** and require the catalog route below the other routes (add the third line shown below, underneath the other two):
 
 ```js
-const indexRouter = require("./routes/index");
-const usersRouter = require("./routes/users");
+var indexRouter = require("./routes/index");
+var usersRouter = require("./routes/users");
 const catalogRouter = require("./routes/catalog"); //Import routes for "catalog" area of site
 ```
 

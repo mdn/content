@@ -44,7 +44,7 @@ Events have three functions:
   - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
     - `ZoomChangeInfo`
-      - : [`object`](#zoomchangeinfo). Information about the zoom event.
+      - : `object`. Information about the zoom event. See the [ZoomChangeInfo](#zoomchangeinfo_2) section for more details.
 
 ## Additional objects
 
@@ -80,8 +80,6 @@ browser.tabs.onZoomChange.addListener(handleZoomed);
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#event-onZoomChange) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

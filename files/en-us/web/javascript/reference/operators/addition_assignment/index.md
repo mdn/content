@@ -1,6 +1,7 @@
 ---
 title: Addition assignment (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
+page-type: javascript-operator
 tags:
   - Assignment operator
   - JavaScript
@@ -12,7 +13,7 @@ browser-compat: javascript.operators.addition_assignment
 
 {{jsSidebar("Operators")}}
 
-The addition assignment operator (`+=`) adds the value of the right operand
+The **addition assignment (`+=`)** operator adds the value of the right operand
 to a variable and assigns the result to the variable. The types of the two operands
 determine the behavior of the addition assignment operator. Addition or concatenation is
 possible.

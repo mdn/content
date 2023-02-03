@@ -80,7 +80,7 @@ Each of those parts provides specific information about the whole domain name.
 
 #### Who owns a domain name?
 
-You cannot "buy a domain name". This is so that unused domain names eventually become available to use again by someone else. If every domain name was bought, the web would quickly fill up with unused domain names that were locked and couldn't be used by anyone.
+You cannot "buy a domain name". This is so that unused domain names eventually become available to be used again by someone else. If every domain name was bought, the web would quickly fill up with unused domain names that were locked and couldn't be used by anyone.
 
 Instead, you pay for the right to use a domain name for one or more years. You can renew your right, and your renewal has priority over other people's applications. But you never own the domain name.
 
@@ -95,7 +95,7 @@ To find out whether a given domain name is available,
 - Go to a domain name registrar's website. Most of them provide a "whois" service that tells you whether a domain name is available.
 - Alternatively, if you use a system with a built-in shell, type a `whois` command into it, as shown here for `mozilla.org`:
 
-  ```
+  ```bash
   $ whois mozilla.org
   Domain Name:MOZILLA.ORG
   Domain ID: D1409563-LROR
@@ -124,7 +124,7 @@ As you can see, I can't register `mozilla.org` because the Mozilla Foundation ha
 
 On the other hand, let's see if I could register `afunkydomainname.org`:
 
-```
+```bash
 $ whois afunkydomainname.org
 NOT FOUND
 ```
@@ -137,14 +137,14 @@ The process is quite straightforward:
 
 1. Go to a registrar's website.
 2. Usually there is a prominent "Get a domain name" call to action. Click on it.
-3. Fill out the form with all required details. Make sure especially that you have not misspelled your desired domain name. Once it's paid for, it's too late!
+3. Fill out the form with all required details. Make sure, especially, that you have not misspelled your desired domain name. Once it's paid for, it's too late!
 4. The registrar will let you know when the domain name is properly registered. Within a few hours, all DNS servers will have received your DNS information.
 
 > **Note:** In this process the registrar asks you for your real-world address. Make sure you fill it properly, since in some countries registrars may be forced to close the domain if they cannot provide a valid address.
 
 #### DNS refreshing
 
-DNS databases are stored on every DNS server worldwide, and all these servers refer to a few special servers called "authoritative name servers" or "top-level DNS servers." — these are like the boss servers that manage the system.
+DNS databases are stored on every DNS server worldwide, and all these servers refer to a few special servers called "authoritative name servers" or "top-level DNS servers" — these are like the boss servers that manage the system.
 
 Whenever your registrar creates or updates any information for a given domain, the information must be refreshed in every DNS database. Each DNS server that knows about a given domain stores the information for some time before it is automatically invalidated and then refreshed (the DNS server queries an authoritative server and fetches the updated information from it). Thus, it takes some time for DNS servers that know about this domain name to get the up-to-date information.
 

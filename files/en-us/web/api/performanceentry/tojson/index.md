@@ -12,7 +12,7 @@ browser-compat: api.PerformanceEntry.toJSON
 
 {{APIRef("Performance API")}}
 
-The **`toJSON()`** method is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("PerformanceEntry","performance entry", "", "no-code")}} object.
+The **`toJSON()`** method is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("PerformanceEntry")}} object.
 
 ## Syntax
 
@@ -26,38 +26,42 @@ None.
 
 ### Return value
 
-A JSON object that is the serialization of the {{domxref("PerformanceEntry")}} object.
+A {{jsxref("JSON")}} object that is the serialization of the {{domxref("PerformanceEntry")}} object.
 
 ## Examples
 
 ### Using the toJSON method
 
-The following example shows the use of the `toJSON()` method.
+In this example, calling `entry.toJSON()` returns a JSON representation of the {{domxref("PerformanceMark")}} object.
 
 ```js
+performance.mark("debug-marker", { 
+  detail: "debugging-marker-123" 
+});
+
 const observer = new PerformanceObserver((list) => {
   list.getEntries().forEach((entry) => {
     console.log(entry.toJSON());
   });
 });
 
-// Register the observer for events
-observer.observe({type: "event", buffered: true});
+observer.observe({ entryTypes: ["mark"] });
 ```
 
 This would log a JSON object like so:
 
 ```json
 {
-  "name": "dragover",
-  "entryType": "event",
-  "startTime": 67090751.599999905,
-  "duration": 128,
-  "processingStart": 67090751.70000005,
-  "processingEnd": 67090751.900000095,
-  "cancelable": true
+  "name": "debug-marker", 
+  "entryType": "mark", 
+  "startTime": 158361, 
+  "duration": 0
 }
 ```
+
+Note that it doesn't contain `PerformanceMark`'s {{domxref("PerformanceMark.detail", "detail")}} property.
+
+To get a JSON string, you can use [`JSON.stringify(entry)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) directly; it will call `toJSON()` automatically.
 
 ## Specifications
 

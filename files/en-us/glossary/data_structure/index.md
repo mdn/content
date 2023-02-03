@@ -1,6 +1,7 @@
 ---
 title: Data structure
 slug: Glossary/Data_structure
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Data structure

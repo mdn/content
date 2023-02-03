@@ -1,6 +1,7 @@
 ---
 title: '<details>: The Details disclosure element'
 slug: Web/HTML/Element/details
+page-type: html-element
 tags:
   - Disclosure Box
   - Disclosure Widget
@@ -30,57 +31,6 @@ You can use CSS to style the disclosure widget, and you can programmatically ope
 By default when closed, the widget is only tall enough to display the disclosure triangle and summary. When open, it expands to display the details contained within.
 
 Fully standards-compliant implementations automatically apply the CSS `{{cssxref("display")}}: list-item` to the {{HTMLElement("summary")}} element. You can use this to customize its appearance further. See [Customizing the disclosure widget](#customizing_the_disclosure_widget) for further details.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >, sectioning root, interactive content, palpable content.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        One {{HTMLElement("summary")}} element followed by
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >flow content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >flow content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>{{ARIARole("group")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>No <code>role</code> permitted</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLDetailsElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Attributes
 
@@ -254,6 +204,59 @@ This CSS creates a look similar to a tabbed interface, where activating the tab 
 #### Result
 
 {{EmbedLiveSample("Customizing_the_disclosure_widget", 650, 150)}}
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >, sectioning root, interactive content, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        One {{HTMLElement("summary")}} element followed by
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a></td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLDetailsElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

@@ -93,6 +93,7 @@ The code snippet above shows how to mark up an alert dialog that only provides a
 
 ## See Also
 
+- HTML {{HTMLElement("dialog")}} element
 - [The `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
 - [The `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
 - [`aria-modal` attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal)

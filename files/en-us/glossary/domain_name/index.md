@@ -1,6 +1,7 @@
 ---
 title: Domain name
 slug: Glossary/Domain_name
+page-type: glossary-definition
 tags:
   - Domain Name
   - Protocol

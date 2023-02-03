@@ -72,4 +72,4 @@ You can find a complete guide in [Using the Payment Request API](/en-US/docs/Web
 - [Google Pay API PaymentRequest Tutorial](https://developers.google.com/pay/api/web/guides/paymentrequest/tutorial)
 - [Samsung Pay Web Payments Integration Guide](https://developer.samsung.com/internet/android/web-payments-integration-guide.html)
 - [W3C Payment Request API FAQ](https://github.com/w3c/payment-request-info/wiki/FAQ)
-- Feature Policy directive {{httpheader("Feature-Policy/payment", "payment")}}
+- Permissions Policy directive {{httpheader("Permissions-Policy/payment", "payment")}}

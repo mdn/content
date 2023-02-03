@@ -1,6 +1,7 @@
 ---
 title: <input type="reset">
 slug: Web/HTML/Element/input/reset
+page-type: html-element
 tags:
   - Element
   - Form Button
@@ -23,38 +24,6 @@ browser-compat: html.elements.input.type_reset
 {{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}
 
 > **Note:** You should usually avoid including reset buttons in your forms. They're rarely useful, and are instead more likely to frustrate users who click them by mistake (often while trying to click the [submit button](/en-US/docs/Web/HTML/Element/input/submit)).
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
-      <td>A string used as the button's label</td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>{{domxref("Element/click_event", "click")}}</td>
-    </tr>
-    <tr>
-      <td><strong>Supported common attributes</strong></td>
-      <td>
-        {{htmlattrxref("type", "input")}} and
-        {{htmlattrxref("value", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td><code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM interface</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>None</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Value
 
@@ -145,6 +114,44 @@ Buttons don't participate in constraint validation; they have no real value to b
 ## Examples
 
 We've included simple examples above. There isn't really anything more to say about reset buttons.
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>A string used as the button's label</td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>{{domxref("Element/click_event", "click")}}</td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+        {{htmlattrxref("type", "input")}} and
+        {{htmlattrxref("value", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td><code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 
