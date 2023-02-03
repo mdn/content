@@ -83,7 +83,7 @@ RGB colors can be expressed through both hexadecimal (prefixed with `#`) and fun
 ### HSL color model
 
 The HSL color model defines a given color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) according to its hue, saturation, and lightness components. An optional alpha component represents the color's transparency.
-  
+
 - [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl): `hsl(H S L [ / A])` or `hsl(H, S, L [, A])`
   - : Where the `H` is the hue, taking as a value an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in the [CSS Color](https://drafts.csswg.org/css-color/#the-hsl-notation) specification. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees. The `S` is the saturation as a `<percentage>` value where 100% is completely saturated, while 0% is completely unsaturated (gray). The `L` is the lightness as a `<percentage>` value where 100% is white, 0% is black, and 50% is "normal". The optional `A` is alphatransparency as a `<percentage>` or a `<number>` between 0 and 1, where the number 1 or 100% and means full opacity and 0 or 0% and means fully transparent.
 
