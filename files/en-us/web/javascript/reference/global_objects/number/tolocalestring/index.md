@@ -78,9 +78,9 @@ Not all implementations are required to support ECMA-402 (the Internationalizati
 function toLocaleStringSupportsLocales() {
   const number = 0;
   try {
-    number.toLocaleString('i');
+    number.toLocaleString("i");
   } catch (e) {
-    return e.name === 'RangeError';
+    return e.name === "RangeError";
   }
   return false;
 }
@@ -90,7 +90,11 @@ However, prior to ES5.1, implementations were not required to throw a range erro
 
 ```js
 function toLocaleStringSupportsOptions() {
-  return !!(typeof Intl === 'object' && Intl && typeof Intl.NumberFormat === 'function');
+  return !!(
+    typeof Intl === "object" &&
+    Intl &&
+    typeof Intl.NumberFormat === "function"
+  );
 }
 ```
 
@@ -109,24 +113,24 @@ specify that language (and possibly some fallback languages) using the
 const number = 123456.789;
 
 // German uses comma as decimal separator and period for thousands
-console.log(number.toLocaleString('de-DE'));
+console.log(number.toLocaleString("de-DE"));
 // → 123.456,789
 
 // Arabic in most Arabic speaking countries uses Eastern Arabic digits
-console.log(number.toLocaleString('ar-EG'));
+console.log(number.toLocaleString("ar-EG"));
 // → ١٢٣٤٥٦٫٧٨٩
 
 // India uses thousands/lakh/crore separators
-console.log(number.toLocaleString('en-IN'));
+console.log(number.toLocaleString("en-IN"));
 // → 1,23,456.789
 
 // the nu extension key requests a numbering system, e.g. Chinese decimal
-console.log(number.toLocaleString('zh-Hans-CN-u-nu-hanidec'));
+console.log(number.toLocaleString("zh-Hans-CN-u-nu-hanidec"));
 // → 一二三,四五六.七八九
 
 // when requesting a language that may not be supported, such as
 // Balinese, include a fallback language, in this case Indonesian
-console.log(number.toLocaleString(['ban', 'id']));
+console.log(number.toLocaleString(["ban", "id"]));
 // → 123.456,789
 ```
 
@@ -139,20 +143,29 @@ The results provided by `toLocaleString` can be customized using the
 const number = 123456.789;
 
 // request a currency format
-console.log(number.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
+console.log(
+  number.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
+);
 // → 123.456,79 €
 
 // the Japanese yen doesn't use a minor unit
-console.log(number.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))
+console.log(
+  number.toLocaleString("ja-JP", { style: "currency", currency: "JPY" }),
+);
 // → ￥123,457
 
 // limit to three significant digits
-console.log(number.toLocaleString('en-IN', { maximumSignificantDigits: 3 }));
+console.log(number.toLocaleString("en-IN", { maximumSignificantDigits: 3 }));
 // → 1,23,000
 
 // Use the host default language with options for number formatting
 const num = 30000.65;
-console.log(num.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+console.log(
+  num.toLocaleString(undefined, {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }),
+);
 // → "30,000.65" where English is the default language, or
 // → "30.000,65" where German is the default language, or
 // → "30 000,65" where French is the default language
