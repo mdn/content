@@ -155,7 +155,6 @@ Let's have a go at writing our own functions featuring return values.
 
 3. Include a way to print out information about the number entered into the text input by adding the following event handler below the existing functions:
 
-
    ```js
    input.addEventListener("change", () => {
      const num = parseFloat(input.value);
