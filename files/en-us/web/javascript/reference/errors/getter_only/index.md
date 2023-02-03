@@ -48,11 +48,11 @@ property to `30`. For more details see also the
 
 function Archiver() {
   const temperature = null;
-  Object.defineProperty(this, 'temperature', {
+  Object.defineProperty(this, "temperature", {
     get() {
-      console.log('get!');
+      console.log("get!");
       return temperature;
-    }
+    },
   });
 }
 
@@ -74,18 +74,20 @@ function Archiver() {
   let temperature = null;
   const archive = [];
 
-  Object.defineProperty(this, 'temperature', {
+  Object.defineProperty(this, "temperature", {
     get() {
-      console.log('get!');
+      console.log("get!");
       return temperature;
     },
     set(value) {
       temperature = value;
       archive.push({ val: temperature });
-    }
+    },
   });
 
-  this.getArchive = function() { return archive; };
+  this.getArchive = function () {
+    return archive;
+  };
 }
 
 const arc = new Archiver();

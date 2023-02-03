@@ -31,19 +31,19 @@ The **Web Share API** allows a site to share text, links, files, and other conte
 These share targets typically include the system clipboard, email, contacts or messaging applications, and Bluetooth or Wi-Fi channels.
 
 The API has just two methods.
-The {{domxref("navigator.canShare()")}} method may be used to first validate whether some data is "sharable", prior to passing it to {{domxref("navigator.share()")}} for sending.
+The {{domxref("navigator.canShare()")}} method may be used to first validate whether some data is "shareable", prior to passing it to {{domxref("navigator.share()")}} for sending.
 
 The {{domxref("navigator.share()")}} method invokes the native sharing mechanism of the underlying operating system and passes the specified data.
 It requires {{Glossary("transient activation")}}, and hence must be triggered off a UI event like a button click.
 Further, the method must specify valid data that is supported for sharing by the native implementation.
 
 The Web Share API is gated by the [web-share](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/web-share) Permissions Policy.
-If the policy is supported but has not been granted, both methods will indicate that the data is not sharable.
+If the policy is supported but has not been granted, both methods will indicate that the data is not shareable.
 
 ## Interfaces
 
 - {{domxref("navigator.canShare()")}}
-  - : Returns a boolean indicating whether the specified data is sharable.
+  - : Returns a boolean indicating whether the specified data is shareable.
 - {{domxref("navigator.share()")}}
   - : Returns a {{jsxref("Promise")}} that resolves if the passed data was successfully sent to a share target.
     This method must be called on a button click or other user activation (requires {{Glossary("transient activation")}}).

@@ -2316,10 +2316,6 @@
       "inh": "",
       "impl": []
     },
-    "PaymentInstruments": {
-      "inh": "",
-      "impl": []
-    },
     "PaymentManager": {
       "inh": "",
       "impl": []

@@ -12,8 +12,7 @@ browser-compat: javascript.builtins.Proxy.handler.get
 
 {{JSRef}}
 
-The **`handler.get()`** method is a trap for getting a property
-value.
+The **`handler.get()`** method is a trap for the `[[Get]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors).
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-get.html", "taller")}}
 
@@ -43,9 +42,6 @@ is bound to the handler.
 The `get()` method can return any value.
 
 ## Description
-
-The **`handler.get()`** method is a trap for getting a property
-value.
 
 ### Interceptions
 

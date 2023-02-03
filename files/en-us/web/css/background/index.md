@@ -13,7 +13,7 @@ browser-compat: css.properties.background
 
 {{CSSRef("CSS Background")}}
 
-The **`background`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all background style properties at once, such as color, image, origin and size, or repeat method.
+The **`background`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all background style properties at once, such as color, image, origin and size, or repeat method. Component properties not set in the `background` shorthand property value declaration are set to their default values.
 
 {{EmbedInteractiveExample("pages/css/background.html")}}
 
@@ -72,19 +72,27 @@ The syntax of each layer is as follows:
 ### Values
 
 - `<attachment>`
-  - : See {{cssxref("background-attachment")}}.
+  - : See {{cssxref("background-attachment")}}. Default: `scroll`.
 - `<box>`
-  - : See {{cssxref("background-clip")}} and {{cssxref("background-origin")}}.
+  - : See {{cssxref("background-clip")}} and {{cssxref("background-origin")}}. Default: `border-box` and `padding-box` respectively.
 - `<background-color>`
-  - : See {{cssxref("background-color")}}.
+  - : See {{cssxref("background-color")}}. Default: `transparent`.
 - `<bg-image>`
-  - : See {{Cssxref("background-image")}}.
+  - : See {{Cssxref("background-image")}}. Default: `none`.
 - `<position>`
-  - : See {{cssxref("background-position")}}.
+  - : See {{cssxref("background-position")}}. Default: 0% 0%.
 - `<repeat-style>`
-  - : See {{cssxref("background-repeat")}}.
+  - : See {{cssxref("background-repeat")}}. Default: `repeat`.
 - `<bg-size>`
-  - : See {{cssxref("background-size")}}.
+  - : See {{cssxref("background-size")}}. Default: `auto`.
+
+The following three lines of CSS are equivalent:
+
+```css
+background: none;
+background: transparent;
+background: repeat scroll 0% 0%/auto padding-box border-box none transparent;
+```
 
 ## Accessibility concerns
 

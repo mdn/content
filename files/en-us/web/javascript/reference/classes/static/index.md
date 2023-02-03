@@ -33,6 +33,11 @@ class ClassWithStatic {
 }
 ```
 
+There are some additional syntax restrictions:
+
+- The name of a static property (field or method) cannot be `prototype`.
+- The name of a class field (static or instance) cannot be `constructor`.
+
 ## Description
 
 This page introduces public static properties of classes, which include static methods, static accessors, and static fields.

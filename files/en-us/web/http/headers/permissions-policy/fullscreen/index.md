@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: fullscreen'
+title: "Permissions-Policy: fullscreen"
 slug: Web/HTTP/Headers/Permissions-Policy/fullscreen
 tags:
   - Permissions Policy

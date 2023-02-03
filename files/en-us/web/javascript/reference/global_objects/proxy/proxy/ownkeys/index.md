@@ -12,8 +12,7 @@ browser-compat: javascript.builtins.Proxy.handler.ownKeys
 
 {{JSRef}}
 
-The **`handler.ownKeys()`** method is a trap for
-{{jsxref("Reflect.ownKeys()")}}.
+The **`handler.ownKeys()`** method is a trap for the `[[OwnPropertyKeys]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as {{jsxref("Object.keys()")}}, {{jsxref("Reflect.ownKeys()")}}, etc.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-ownkeys.html", "taller")}}
 
@@ -39,9 +38,6 @@ The following parameter is passed to the `ownKeys()` method.
 The `ownKeys()` method must return an enumerable object.
 
 ## Description
-
-The **`handler.ownKeys()`** method is a trap for
-{{jsxref("Reflect.ownKeys()")}}.
 
 ### Interceptions
 

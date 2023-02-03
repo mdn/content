@@ -1,5 +1,5 @@
 ---
-title: 'CSP: style-src-attr'
+title: "CSP: style-src-attr"
 slug: Web/HTTP/Headers/Content-Security-Policy/style-src-attr
 tags:
   - CSP
@@ -74,7 +74,7 @@ Note that this same set of values can be used in all {{Glossary("fetch directive
 Given this CSP header:
 
 ```http
-Content-Security-Policy: script-src-attr 'none'
+Content-Security-Policy: style-src-attr 'none'
 ```
 
 …the inline style applied to the element below not be applied:
@@ -86,14 +86,14 @@ Content-Security-Policy: script-src-attr 'none'
 The policy would also block any styles applied in JavaScript by setting the `style` attribute directly, or by setting {{domxref("CSSStyleDeclaration.cssText", "cssText")}}:
 
 ```js
-document.querySelector('div').setAttribute('style', 'display:none;');
-document.querySelector('div').style.cssText = 'display:none;';
+document.querySelector("div").setAttribute("style", "display:none;");
+document.querySelector("div").style.cssText = "display:none;";
 ```
 
 Style properties that are set directly on the element's {{domxref("HTMLElement/style", "style")}} property will not be blocked, allowing users to safely manipulate styles via JavaScript:
 
 ```js
-document.querySelector('div').style.display = 'none';
+document.querySelector("div").style.display = "none";
 ```
 
 Note that using JavaScript might independently be blocked using the {{CSP("script-src")}} CSP directive.

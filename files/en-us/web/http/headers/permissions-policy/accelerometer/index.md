@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: accelerometer'
+title: "Permissions-Policy: accelerometer"
 slug: Web/HTTP/Headers/Permissions-Policy/accelerometer
 tags:
   - Accelerometer
