@@ -22,7 +22,7 @@ This article provides information about the changes in Firefox 110 that will aff
 
 ### CSS
 
-- Container queries and container query length units are now supported with the `layout.css.container-queries.enabled` preference set to `true` by default.
+- Container queries and container query length units are now supported by default.
   For more information on these queries and the related units of length, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) documentation ({{bug(1809720)}}).
 
 #### Removals
