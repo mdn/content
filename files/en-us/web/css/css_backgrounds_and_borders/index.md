@@ -19,23 +19,54 @@ The module provides for many border styles, including properties to create borde
 
 Box shadows include inset and outset shadow, single or multiple shadows, and solid or allowed to fade to transparent. An outer box-shadow casts a shadow as if the border-box of the element were opaque. An inner box-shadow casts a shadow as if everything outside the padding edge were opaque. The shadow can be solid or include a spread distance with the shadow color transitioning to transparent.
 
-### Backgrounds and borders in action
+### Backgrounds, borders, and box shadows in action
+
+This sample of borders, backgrounds, and box shadows consists of centered background images made of linear and radial gradients and a series of box shadows that make the border appear to "pop." The first sample has a border image set. The second sample has a rounded dotted border.
 
 <!-- intro example -->
 
 ```html hidden
-<div>Hello</div>
+<article>
+<div></div>
+<div></div>
+</article>
 ```
 
 ```css hidden
+article {display: flex; gap: 10px;}
 div {
-  background: red;
+  color: #58ADE3;
+  height: 320px;
+  width: 240px;
+  padding: 20px;
+  margin: 10px;
+  border: dotted 15px; /* defaults to `currentcolor` */
+  border-radius: 100px 0;
+  background-image: 
+    radial-gradient(circle, transparent 60%, currentcolor 60% 70%,transparent 70% ), 
+    linear-gradient(45deg, currentcolor, white),
+    linear-gradient(transparent, transparent);
+    /* the third transparent background image was added to provide space for the background color to show through */
+  background-color: currentcolor;
+  background-position: center;
+  background-size: 60px 60px, 120px 120px;
+  background-clip: content-box, content-box, padding-box; 
+  box-shadow: 
+    inset 5px 5px 5px rgba(0,0,0,0.4), 
+    inset -5px -5px 5px rgba(0,0,0,0.4),
+    5px 5px 5px rgba(0,0,0,0.4), 
+    -5px -5px 5px rgba(0,0,0,0.4);
+}
+div:first-of-type {
+  border-radius: 0;
+  border-image-source: repeating-conic-gradient(from 3deg at 25% 25%, currentColor 0 3deg, transparent 3deg 6deg);
+  border-image-slice: 30;
 }
 ```
 
-{{ EmbedLiveSample('Backgrounds_and_borders_in_action', "630", "630") }}
+{{ EmbedLiveSample('Backgrounds_borders_and_box_shadows_in_action', "450", "450") }}
 
-To see the code for this background and borders sample, [view the source on Github](https://github.com/mdn/content/blob/main/files/en-us/web/css/compositing_and_blending/index.md?plain=1).
+The background images are defined with {{cssxref("background-image")}}. The images are centered with {{cssxref("background-position")}}. Different values of the {{cssxref("background-clip")}} property for the multiple background images are employed to make the background images stay within the content box, while the background color gets clipped to the padding box; prevention the background from appearing thru transparent sections for the {{cssxref("border-image")}} and {{cssxref("border-style", "dotted")}} {{cssxref("border")}}. The rounded corners on the second sample were created using the {{cssxref("border-radius")}}property. A single {{cssxref("box-shadow")}} declaration set all the shadows, both inset and outset. To see the code for this background, borders, and box-shadow samples, [view the source on Github](https://github.com/mdn/content/blob/main/files/en-us/web/css/compositing_and_blending/index.md?plain=1).
 
 ## Reference
 
@@ -96,7 +127,7 @@ To see the code for this background and borders sample, [view the source on Gith
 ## Guides
 
 - [Learn CSS: background and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-  - :
+  - : Learn how to implement decorative images using CSS background images.
 - [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
   - : Explains how to set one or more backgrounds on an element.
 - [Resizing background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images)
@@ -108,18 +139,34 @@ To see the code for this background and borders sample, [view the source on Gith
 
 ## Related concepts
 
+- {{cssxref("border-block-end-color")}} CSS property
+- {{cssxref("border-block-start-color")}} CSS property
+- {{cssxref("border-inline-end-color")}} CSS property
+- {{cssxref("border-inline-start-color")}} CSS property
+- {{cssxref("border-block-end-style")}} CSS property
+- {{cssxref("border-block-start-style")}} CSS property
+- {{cssxref("border-inline-end-style")}} CSS property
+- {{cssxref("border-inline-start-style")}} CSS property
+- {{cssxref("border-block-end-width")}} CSS property
+- {{cssxref("border-block-start-width")}} CSS property
+- {{cssxref("border-inline-end-width")}} CSS property
+- {{cssxref("border-inline-start-width")}} CSS property
+
+- {{cssxref("border-start-start-radius")}} CSS property
+- {{cssxref("border-start-end-radius")}} CSS property
+- {{cssxref("border-end-start-radius")}} CSS property
+- {{cssxref("border-end-end-radius ")}} CSS property
+
 - {{cssxref("box-sizing")}} CSS property
 - {{cssxref("box-decoration-break")}} CSS property
 - {{cssxref("text-shadow")}} CSS property
-- {{cssxref("")}} CSS property
-- {{cssxref("")}} CSS property
--
-- {{glossary("")}} glossary term
+
+- {{cssxref("url()")}} CSS function
 - [`<color>`](/en-US/docs/Web/CSS/color) data type
 - [`<image>`](/en-US/docs/Web/CSS/image) data type
 - [`<position>`](/en-US/docs/Web/CSS/position) data type
+
 - [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) keyword
-- [`drop-shadow()`](/en-US/docs/Web/CSS/filter-function/drop-shadow) filter function
 
 ## Specifications
 
@@ -132,3 +179,4 @@ To see the code for this background and borders sample, [view the source on Gith
   - [Border-radius generator](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator)
   - [Box-shadow generator](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator)
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color), including for borders.
+- The [`drop-shadow()`](/en-US/docs/Web/CSS/filter-function/drop-shadow) filter function, used by the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties, applies a drop shadow effect to the input image.
