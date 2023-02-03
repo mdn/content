@@ -41,8 +41,10 @@ Only a small subset of CSS properties can be used with the `::first-letter` pseu
 
 ## Syntax
 
-```
-::first-letter
+```css
+::first-letter {
+  /* ... */
+}
 ```
 
 ## Examples

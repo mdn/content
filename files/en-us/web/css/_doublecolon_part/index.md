@@ -25,8 +25,10 @@ custom-element::part(foo) {
 
 ## Syntax
 
-```
-::part( <ident>+ )
+```css
+::part(<ident>+) {
+  /* ... */
+}
 ```
 
 ## Examples

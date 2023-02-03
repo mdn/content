@@ -17,8 +17,10 @@ The **`:modal`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/P
 
 ## Syntax
 
-```
-:modal
+```css
+:modal {
+  /* ... */
+}
 ```
 
 ## Usage notes

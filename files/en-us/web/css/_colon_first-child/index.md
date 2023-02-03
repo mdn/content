@@ -20,8 +20,10 @@ The **`:first-child`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web
 
 ## Syntax
 
-```
-:first-child
+```css
+:first-child {
+  /* ... */
+}
 ```
 
 ## Examples

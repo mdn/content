@@ -31,8 +31,10 @@ In particular, {{CSSxRef("background-image")}} is ignored.
 
 ## Syntax
 
-```
-::selection
+```css
+::selection {
+  /* ... */
+}
 ```
 
 ## Examples

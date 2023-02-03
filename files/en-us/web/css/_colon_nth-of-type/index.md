@@ -24,8 +24,10 @@ The `nth-of-type` pseudo-class is specified with a single argument, which repres
 
 See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
 
-```
-:nth-of-type( <an-plus-b> | even | odd )
+```css-nolint
+:nth-of-type(<an-plus-b> | even | odd) {
+  /* ... */
+}
 ```
 
 ## Examples

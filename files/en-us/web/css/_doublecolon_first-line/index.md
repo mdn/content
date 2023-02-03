@@ -35,8 +35,10 @@ Only a small subset of CSS properties can be used with the `::first-line` pseudo
 
 ## Syntax
 
-```
-::first-line
+```css
+::first-line {
+  /* ... */
+}
 ```
 
 ## Examples

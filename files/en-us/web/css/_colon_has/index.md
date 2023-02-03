@@ -29,8 +29,10 @@ The `:has()` pseudo-class takes on the [specificity](/en-US/docs/Web/CSS/Specifi
 
 ## Syntax
 
-```
-:has( <relative-selector-list> )
+```css-nolint
+:has(<relative-selector-list>) {
+  /* ... */
+}
 ```
 
 If the `:has()` pseudo-class itself is not supported in a browser, the entire selector block will fail unless `:has()` is in a forgiving selector list, such as in [`:is()`](/en-US/docs/Web/CSS/:is) and [`:where()`](/en-US/docs/Web/CSS/:where)).

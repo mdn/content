@@ -24,8 +24,10 @@ This selector is useful to provide a different focus indicator based on the user
 
 ## Syntax
 
-```
-:focus-visible
+```css
+:focus-visible {
+  /* ... */
+}
 ```
 
 ## Examples

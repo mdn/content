@@ -20,8 +20,10 @@ The **`:last-of-type`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/We
 
 ## Syntax
 
-```
-:last-of-type
+```css
+:last-of-type {
+  /* ... */
+}
 ```
 
 ## Examples

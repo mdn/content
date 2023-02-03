@@ -33,8 +33,10 @@ This only works when used inside CSS placed within a [shadow DOM](/en-US/docs/We
 
 ## Syntax
 
-```
-::slotted( <compound-selector> )
+```css-nolint
+::slotted(<compound-selector>) {
+  /* ... */
+}
 ```
 
 ## Examples

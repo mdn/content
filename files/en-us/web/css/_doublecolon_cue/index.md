@@ -25,8 +25,10 @@ The properties are applied to the entire set of cues as if they were a single un
 
 ## Syntax
 
-```
-::cue | ::cue( <selector> )
+```css-nolint
+::cue | ::cue(<selector>) {
+  /* ... */
+}
 ```
 
 ## Permitted properties

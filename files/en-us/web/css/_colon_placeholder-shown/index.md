@@ -19,8 +19,10 @@ The **`:placeholder-shown`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/do
 
 ## Syntax
 
-```
-:placeholder-shown
+```css
+:placeholder-shown {
+  /* ... */
+}
 ```
 
 ## Examples

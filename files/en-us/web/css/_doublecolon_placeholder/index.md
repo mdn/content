@@ -23,8 +23,10 @@ Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} 
 
 ## Syntax
 
-```
-::placeholder
+```css
+::placeholder {
+  /* ... */
+}
 ```
 
 ## Accessibility concerns
