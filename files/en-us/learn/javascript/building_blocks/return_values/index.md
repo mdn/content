@@ -60,8 +60,8 @@ console.log(newString); // Should print "The weather is warm"
 
 The [`replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) function is invoked on the `myText` string, and is passed two parameters:
 
-1. the substring to find ('cold').
-2. the string to replace it with ('warm').
+- The substring to find ('cold')
+- The string to replace it with ('warm')
 
 When the function completes (finishes running), it returns a value, which is a new string with the replacement made. In the code above, the result of this return value is saved in the variable `newString`.
 
