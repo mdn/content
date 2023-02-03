@@ -68,7 +68,7 @@ setInterval(() => {
 ### Result
 
 Open your console to see how many ranges are in the selection. In Gecko browsers, you
-can select multiple ranges across table cells by holding down <kbd>Ctrl</kbd> while
+can select multiple ranges across table cells by holding down <kbd>Ctrl</kbd> (or <kbd>Cmd</kbd> on MacOS) while
 dragging with the mouse.
 
 {{EmbedLiveSample("Examples")}}
