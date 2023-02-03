@@ -274,50 +274,33 @@ li::before {
 
 #### HTML
 
-```html
+```html-nolint
 <ol>
-  <li>item</li>
-  <!-- 1     -->
-  <li>
-    item
-    <!-- 2     -->
+  <li>item</li>          <!-- 1     -->
+  <li>item               <!-- 2     -->
     <ol>
-      <li>item</li>
-      <!-- 2.1   -->
-      <li>item</li>
-      <!-- 2.2   -->
-      <li>
-        item
-        <!-- 2.3   -->
+      <li>item</li>      <!-- 2.1   -->
+      <li>item</li>      <!-- 2.2   -->
+      <li>item           <!-- 2.3   -->
         <ol>
-          <li>item</li>
-          <!-- 2.3.1 -->
-          <li>item</li>
-          <!-- 2.3.2 -->
+          <li>item</li>  <!-- 2.3.1 -->
+          <li>item</li>  <!-- 2.3.2 -->
         </ol>
         <ol>
-          <li>item</li>
-          <!-- 2.3.1 -->
-          <li>item</li>
-          <!-- 2.3.2 -->
-          <li>item</li>
-          <!-- 2.3.3 -->
+          <li>item</li>  <!-- 2.3.1 -->
+          <li>item</li>  <!-- 2.3.2 -->
+          <li>item</li>  <!-- 2.3.3 -->
         </ol>
       </li>
-      <li>item</li>
-      <!-- 2.4   -->
+      <li>item</li>      <!-- 2.4   -->
     </ol>
   </li>
-  <li>item</li>
-  <!-- 3     -->
-  <li>item</li>
-  <!-- 4     -->
+  <li>item</li>          <!-- 3     -->
+  <li>item</li>          <!-- 4     -->
 </ol>
 <ol>
-  <li>item</li>
-  <!-- 1     -->
-  <li>item</li>
-  <!-- 2     -->
+  <li>item</li>          <!-- 1     -->
+  <li>item</li>          <!-- 2     -->
 </ol>
 ```
 

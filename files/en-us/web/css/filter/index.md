@@ -54,8 +54,8 @@ filter: unset;
 
 With a function, use the following:
 
-```css
-filter: <filter-function> [<filter-function>] * | none;
+```css-nolint
+filter: <filter-function> [<filter-function>]* | none;
 ```
 
 For a reference to an SVG {{SVGElement("filter")}} element, use the following:

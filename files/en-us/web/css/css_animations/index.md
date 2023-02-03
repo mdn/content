@@ -82,7 +82,7 @@ To view the animation in the box below, click the checkbox 'Play the animation' 
   <i></i>
   <i></i>
   <div class="cloud"></div>
-  <div class="ground"><div></div></div>
+  <div class="ground"></div>
 </div>
 ```
 
