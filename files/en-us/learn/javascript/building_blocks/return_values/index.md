@@ -166,8 +166,7 @@ Let's have a go at writing our own functions featuring return values.
        para.textContent += `${num} factorial is ${factorial(num)}. `;
      }
    });
-```
-
+   ```
 
 4. Save your code, load it in a browser, and try it out.
 
