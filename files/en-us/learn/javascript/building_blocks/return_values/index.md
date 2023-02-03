@@ -126,9 +126,9 @@ The function calls on the line are run first, and their return values are substi
 
 Let's have a go at writing our own functions featuring return values.
 
-1. First of all, make a local copy of the [function-library.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library.html) file from GitHub. This is a simple HTML page containing a text {{htmlelement("input")}} field and a paragraph. There's also a {{htmlelement("script")}} element, in which we have stored a reference to both HTML elements in two variables. This little page will allow you to enter a number into the text box, and display different numbers related to it in the paragraph below.
+1. Make a local copy of the [function-library.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library.html) file from GitHub. This is a simple HTML page containing a text {{htmlelement("input")}} field and a paragraph. There's also a {{htmlelement("script")}} element, in which we have stored a reference to both HTML elements in two variables. This page will allow you to enter a number into the text box, and display different numbers related to it below.
 
-2. Let's add some useful functions to this `<script>` element. Below the two existing lines of [JavaScript](/en-US/docs/Web/JavaScript), add the following function definitions:
+2. Add some useful functions to this `<script>` element below the two existing lines:
 
    ```js
    function squared(num) {
@@ -153,7 +153,8 @@ Let's have a go at writing our own functions featuring return values.
 
    The `squared()` and `cubed()` functions are fairly obvious — they return the square or cube of the number that was given as a parameter. The `factorial()` function returns the [factorial](https://en.wikipedia.org/wiki/Factorial) of the given number.
 
-3. Next, we're going to include a way to print out information about the number entered into the text input. Enter the following event handler below the existing functions:
+3. Include a way to print out information about the number entered into the text input by adding the following event handler below the existing functions:
+
 
    ```js
    input.addEventListener("change", () => {
