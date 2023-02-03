@@ -65,8 +65,6 @@ Values of this type are strings. Possible values are:
   - : Requests initiating a connection to a server through the [WebSocket API](/en-US/docs/Web/API/WebSockets_API).
 - `webtransport`
   - : Requests initiating a connection to a server through the [WebTransport API](/en-US/docs/Web/API/WebTransport_API).
-- `xbl`
-  - : [XBL](/en-US/docs/Mozilla/Tech/XBL) bindings loaded to extend the behavior of elements in a document.
 - `xml_dtd`
   - : [DTDs](/en-US/docs/Glossary/Doctype) loaded for an XML document.
 - `xmlhttprequest`
