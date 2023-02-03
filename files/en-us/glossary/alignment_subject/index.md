@@ -1,6 +1,7 @@
 ---
 title: Alignment subject
 slug: Glossary/Alignment_Subject
+page-type: glossary-definition
 tags:
   - Alignment subject
   - CSS

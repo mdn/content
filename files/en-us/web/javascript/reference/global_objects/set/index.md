@@ -1,6 +1,7 @@
 ---
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
+page-type: javascript-class
 tags:
   - Class
   - ECMAScript 2015

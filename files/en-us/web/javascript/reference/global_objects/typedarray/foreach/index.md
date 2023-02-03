@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -19,6 +20,8 @@ The **`forEach()`** method executes a provided function once
 per array element. This method has the same algorithm as
 {{jsxref("Array.prototype.forEach()")}}. _TypedArray_ is one of the
 [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
+
+{{EmbedInteractiveExample("pages/js/typedarray-foreach.html")}}
 
 ## Syntax
 

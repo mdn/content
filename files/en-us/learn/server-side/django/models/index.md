@@ -198,7 +198,7 @@ A model can also have methods.
 
 ```python
 def __str__(self):
-    return self.field_name
+    return self.my_field_name
 ```
 
 Another common method to include in Django models is `get_absolute_url()`, which returns a URL for displaying individual model records on the website (if you define this method then Django will automatically add a "View on Site" button to the model's record editing screens in the Admin site). A typical pattern for `get_absolute_url()` is shown below.

@@ -1,5 +1,5 @@
 ---
-title: 'Reason: CORS request external redirect not allowed'
+title: "Reason: CORS request external redirect not allowed"
 slug: Web/HTTP/CORS/Errors/CORSExternalRedirectNotAllowed
 tags:
   - CORS
@@ -19,7 +19,7 @@ tags:
 
 ## Reason
 
-```
+```plain
 Reason: CORS request external redirect not allowed
 ```
 

@@ -28,7 +28,7 @@ If the MDN Web Docs team accepts your proposal, it's time to get started with wr
 
 ## Contact
 
-You can contact the MDN team at <mdn-admins@mozilla.org>.
+You can contact the MDN team on the [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## See also
 

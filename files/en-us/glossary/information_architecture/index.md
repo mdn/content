@@ -1,6 +1,7 @@
 ---
 title: Information architecture
 slug: Glossary/Information_architecture
+page-type: glossary-definition
 tags:
   - Design
   - information architecture

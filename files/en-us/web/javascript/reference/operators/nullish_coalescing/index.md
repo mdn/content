@@ -1,6 +1,7 @@
 ---
 title: Nullish coalescing operator (??)
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
@@ -12,7 +13,7 @@ browser-compat: javascript.operators.nullish_coalescing
 
 {{JSSidebar("Operators")}}
 
-The **nullish coalescing operator (`??`)** is a logical
+The **nullish coalescing (`??`)** operator is a logical
 operator that returns its right-hand side operand when its left-hand side operand is
 [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, and otherwise returns its left-hand side
 operand.
@@ -35,7 +36,7 @@ It is not possible to combine both the AND (`&&`) and OR operators (`||`) direct
 
 ```js example-bad
 null || undefined ?? "foo"; // raises a SyntaxError
-true || undefined ?? "foo"; // raises a SyntaxError
+true && undefined ?? "foo"; // raises a SyntaxError
 ```
 
 Instead, provide parenthesis to explicitly indicate precedence:

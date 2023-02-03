@@ -20,7 +20,7 @@ The **`::-moz-color-swatch`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US
 
 ## Syntax
 
-```
+```css
 ::-moz-color-swatch
 ```
 

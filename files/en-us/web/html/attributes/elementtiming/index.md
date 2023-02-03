@@ -1,6 +1,7 @@
 ---
-title: 'HTML attribute: elementtiming'
+title: "HTML attribute: elementtiming"
 slug: Web/HTML/Attributes/elementtiming
+page-type: html-attribute
 tags:
   - Attribute
   - Attributes
@@ -12,7 +13,11 @@ tags:
 
 {{HTMLSidebar}}
 
-The **`elementtiming`** attribute is used to indicate that an element is flagged for tracking by the {{domxref("Element Timing API")}}. This attribute may be applied to {{htmlelement("img")}}, {{SVGElement("image")}} elements inside an {{SVGElement("svg")}}, poster images of {{htmlelement("video")}} elements, elements which have a {{cssxref("background-image")}}, and elements containing text nodes, such as a {{htmlelement("p")}}.
+The **`elementtiming`** attribute is used to indicate that an element is flagged for tracking by {{domxref("PerformanceObserver")}} objects using the `"element"` type. For more details, see the {{domxref("PerformanceElementTiming")}} interface.
+
+This attribute may be applied to {{htmlelement("img")}}, {{SVGElement("image")}} elements inside an {{SVGElement("svg")}}, poster images of {{htmlelement("video")}} elements, elements which have a {{cssxref("background-image")}}, and elements containing text nodes, such as a {{htmlelement("p")}}.
+
+In the DOM, this attribute is reflected as {{domxref("Element.elementTiming")}}.
 
 ## Usage
 
@@ -39,4 +44,5 @@ Good contenders for elements you might want to observe are:
 
 ## See also
 
-- [Custom metrics](https://web.dev/custom-metrics/)
+- {{domxref("PerformanceElementTiming")}}
+- {{domxref("Element.elementTiming")}}

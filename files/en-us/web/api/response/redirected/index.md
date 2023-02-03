@@ -33,11 +33,15 @@ Checking to see if the response comes from a redirected request is as simple as 
 In the code below, a textual message is inserted into an element when a redirect occurred during the fetch operation.
 Note, however, that this isn't as safe as outright rejecting redirects if they're unexpected, as described under [Disallowing redirects](#disallowing_redirects) below.
 
+The {{domxref("Response.url", "url")}} property returns the final URL after redirects.
+
 ```js
 fetch("awesome-picture.jpg")
   .then((response) => {
     const elem = document.getElementById("warning-message-box");
     elem.textContent = response.redirected ? "Unexpected redirect" : "";
+    // final url obtained after redirects
+    console.log(response.url);
     return response.blob();
   })
   .then((imageBlob) => {

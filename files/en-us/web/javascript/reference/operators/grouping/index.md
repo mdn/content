@@ -1,6 +1,7 @@
 ---
 title: Grouping operator ( )
 slug: Web/JavaScript/Reference/Operators/Grouping
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
@@ -11,7 +12,7 @@ browser-compat: javascript.operators.grouping
 
 {{jsSidebar("Operators")}}
 
-The grouping operator `( )` controls the precedence of evaluation in expressions. It also acts as a container for arbitrary expressions in certain syntactic constructs, where ambiguity or syntax errors would otherwise occur.
+The **grouping `( )`** operator controls the precedence of evaluation in expressions. It also acts as a container for arbitrary expressions in certain syntactic constructs, where ambiguity or syntax errors would otherwise occur.
 
 {{EmbedInteractiveExample("pages/js/expressions-groupingoperator.html")}}
 
@@ -64,7 +65,7 @@ The function `a` will be called before the function `b`, which will be called be
 
 ### Using the grouping operator to eliminate parsing ambiguity
 
-An expression statement (a [statement](/en-US/docs/Web/JavaScript/Reference/Statements) consisted of a single expression) cannot start with the keyword `function`, because the parser would see it as the start of a [function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function). This means the following [IIFE](/en-US/docs/Glossary/IIFE) syntax is invalid:
+An [expression statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement) cannot start with the keyword `function`, because the parser would see it as the start of a [function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function). This means the following [IIFE](/en-US/docs/Glossary/IIFE) syntax is invalid:
 
 ```js example-bad
 function () {

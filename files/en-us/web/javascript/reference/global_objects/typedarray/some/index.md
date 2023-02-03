@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/some
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript

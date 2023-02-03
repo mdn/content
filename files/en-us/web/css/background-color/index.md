@@ -40,17 +40,12 @@ background-color: #11ffeeff; /* Fully opaque */
 background-color: #1fef; /* Fully opaque shorthand */
 
 /* RGB value */
-background-color: rgb(255, 255, 128); /* Fully opaque */
-background-color: rgba(117, 190, 218, 0.5); /* 50% transparent */
+background-color: rgb(255 255 128); /* Fully opaque */
+background-color: rgb(117 190 218 / 0.5); /* 50% transparent */
 
 /* HSL value */
-background-color: hsl(50, 33%, 25%); /* Fully opaque */
-background-color: hsla(
-  50,
-  33%,
-  25%,
-  0.75
-); /* 75% opaque, i.e. 25% transparent */
+background-color: hsl(50 33% 25%); /* Fully opaque */
+background-color: hsl(50 33% 25% / 0.75); /* 75% opaque, i.e. 25% transparent */
 
 /* Special keyword values */
 background-color: currentcolor;

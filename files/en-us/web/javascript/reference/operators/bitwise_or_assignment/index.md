@@ -1,6 +1,7 @@
 ---
 title: Bitwise OR assignment (|=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_OR_assignment
+page-type: javascript-operator
 tags:
   - Assignment operator
   - JavaScript
@@ -12,7 +13,7 @@ browser-compat: javascript.operators.bitwise_or_assignment
 
 {{jsSidebar("Operators")}}
 
-The bitwise OR assignment operator (`|=`) uses the binary representation of
+The **bitwise OR assignment (`|=`)** operator uses the binary representation of
 both operands, does a bitwise OR operation on them and assigns the result to the
 variable.
 

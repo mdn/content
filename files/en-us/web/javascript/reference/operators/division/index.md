@@ -1,6 +1,7 @@
 ---
 title: Division (/)
 slug: Web/JavaScript/Reference/Operators/Division
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
@@ -11,7 +12,7 @@ browser-compat: javascript.operators.division
 
 {{jsSidebar("Operators")}}
 
-The division operator (`/`) produces the quotient of its operands where the
+The **division (`/`)** operator produces the quotient of its operands where the
 left operand is the dividend and the right operand is the divisor.
 
 {{EmbedInteractiveExample("pages/js/expressions-division.html")}}

@@ -1,6 +1,7 @@
 ---
 title: Main thread
 slug: Glossary/Main_thread
+page-type: glossary-definition
 tags:
   - Reference
   - Web Performance

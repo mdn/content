@@ -1,6 +1,7 @@
 ---
-title: '<area>: The Image Map Area element'
+title: "<area>: The Image Map Area element"
 slug: Web/HTML/Element/area
+page-type: html-element
 tags:
   - Content
   - Element
@@ -15,53 +16,11 @@ browser-compat: html.elements.area
 
 {{HTMLSidebar}}
 
-The **`<area>`** [HTML](/en-US/docs/Web/HTML) element defines an area inside an image map that has predefined clickable areas. An _image map_ allows geometric areas on an image to be associated with {{Glossary("Hyperlink", "hypertext link")}}.
+The **`<area>`** [HTML](/en-US/docs/Web/HTML) element defines an area inside an image map that has predefined clickable areas. An _image map_ allows geometric areas on an image to be associated with {{Glossary("Hyperlink", "hypertext links")}}.
 
 This element is used only within a {{HTMLElement("map")}} element.
 
 {{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a>
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>None; it is a {{Glossary("void element")}}.</td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>Must have a start tag and must not have an end tag.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>. The <code>&#x3C;area></code> element must have an ancestor {{HTMLElement("map")}}, but it need not be a direct parent.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        {{ARIARole("link")}} when {{htmlattrxref("href", "area")}} attribute is present, otherwise <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>No <code>role</code> permitted</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLAreaElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Attributes
 
@@ -115,7 +74,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - {{htmlattrdef("rel")}}
   - : For anchors containing the {{htmlattrxref("href", "area")}} attribute, this attribute specifies the relationship of the target object to the link object.
-    The value is a space-separated list of [link types values](/en-US/docs/Web/HTML/Link_types).
+    The value is a space-separated list of link types.
     The values and their semantics will be registered by some authority that might have meaning to the document author.
     The default relationship, if no other is given, is void. Use this attribute only if the {{htmlattrxref("href", "area")}} attribute is present.
 - {{htmlattrdef("shape")}}
@@ -134,7 +93,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     Use this attribute only if the {{htmlattrxref("href", "area")}} attribute is present.
 
-    > **Note:** Setting `target="_blank"` on `<area>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
+    > **Note:** Setting `target="_blank"` on `<area>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
 
 ### Deprecated attributes
 
@@ -173,6 +132,50 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 ### Result
 
 {{ EmbedLiveSample('Examples', 360, 160) }}
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a>
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>None; it is a {{Glossary("void element")}}.</td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>Must have a start tag and must not have an end tag.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>. The <code>&#x3C;area></code> element must have an ancestor {{HTMLElement("map")}}, but it need not be a direct parent.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> when {{htmlattrxref("href", "area")}} attribute is present, otherwise <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLAreaElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

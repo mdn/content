@@ -128,4 +128,4 @@ The resulting content looks like this in action:
 
 ## See also
 
-- {{SectionOnPage("/en-US/docs/Learn/Forms/Other_form_controls", "Drop-down controls")}}
+- [Drop-down controls](/en-US/docs/Learn/Forms/Other_form_controls#drop-down_controls)

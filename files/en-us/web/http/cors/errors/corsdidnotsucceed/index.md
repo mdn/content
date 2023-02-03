@@ -1,5 +1,5 @@
 ---
-title: 'Reason: CORS request did not succeed'
+title: "Reason: CORS request did not succeed"
 slug: Web/HTTP/CORS/Errors/CORSDidNotSucceed
 tags:
   - CORS
@@ -19,7 +19,7 @@ tags:
 
 ## Reason
 
-```
+```plain
 Reason: CORS request did not succeed
 ```
 

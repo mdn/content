@@ -167,7 +167,7 @@ In the example below, we've used four block and one inline `@layer` at-rules. Th
 1. Creates a named `layout` layer
 2. Creates an unnamed, anonymous layer
 3. Declares a list of three layers and creates only two new layers, `theme` and `utilities`, because `layout` already exists
-4. Adds additional styles to the already existing`layout` layer
+4. Adds additional styles to the already existing `layout` layer
 5. Creates a second unnamed, anonymous layer
 
 ```css
@@ -414,7 +414,7 @@ If you understood most of this article, then well done — you're now familiar w
 
 ## In this module
 
-- [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 - [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
 
   - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)

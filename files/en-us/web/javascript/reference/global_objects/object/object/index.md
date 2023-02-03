@@ -1,6 +1,7 @@
 ---
 title: Object() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/Object
+page-type: javascript-constructor
 tags:
   - Constructor
   - JavaScript

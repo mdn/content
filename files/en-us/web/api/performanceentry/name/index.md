@@ -32,7 +32,12 @@ A string. The value depends on the subclass of the `PerformanceEntry` object as 
     </tr>
     <tr>
       <td>{{domxref('PerformanceElementTiming')}}</td>
-      <td>The string the <code>elementtiming</code> HTML content attribute was set to (reflected as {{domxref("Element.elementTiming")}}).</td>
+      <td>One of the following strings:
+        <ul>
+          <li><code>"image-paint"</code></li>
+          <li><code>"text-paint"</code></li>
+        </ul>
+      </td>
     </tr>
     <tr>
       <td>{{domxref('PerformanceEventTiming')}}</td>

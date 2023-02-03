@@ -1,6 +1,7 @@
 ---
 title: Object.getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
+page-type: javascript-static-method
 tags:
   - ECMAScript 5
   - JavaScript
@@ -14,7 +15,7 @@ browser-compat: javascript.builtins.Object.getOwnPropertyNames
 
 {{JSRef}}
 
-The **`Object.getOwnPropertyNames()`** method returns an array of all properties (including non-enumerable properties except for those which use Symbol) found directly in a given object.
+The **`Object.getOwnPropertyNames()`** static method returns an array of all properties (including non-enumerable properties except for those which use Symbol) found directly in a given object.
 
 {{EmbedInteractiveExample("pages/js/object-getownpropertynames.html")}}
 
@@ -77,7 +78,7 @@ const myObj = Object.create({}, {
 });
 myObj.foo = 1;
 
-console.log(Object.getOwnPropertyNames(my_obj).sort()); // ["foo", "getFoo"]
+console.log(Object.getOwnPropertyNames(myObj).sort()); // ["foo", "getFoo"]
 ```
 
 If you want only the enumerable properties, see {{jsxref("Object.keys()")}} or use a {{jsxref("Statements/for...in", "for...in")}} loop (note that this will also return enumerable properties found along the prototype chain for the object unless the latter is filtered with {{jsxref("Object.hasOwn()", "hasOwn()")}}).

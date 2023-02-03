@@ -1,6 +1,7 @@
 ---
 title: lengthAdjust
 slug: Web/SVG/Attribute/lengthAdjust
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

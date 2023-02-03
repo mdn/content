@@ -16,7 +16,7 @@ browser-compat: api.HTMLObjectElement.contentWindow
 {{APIRef("HTML DOM")}}
 
 The **`contentWindow`** read-only property of
-the {{domxref("HTMLObjectElement")}} interface returns a {{domxref("WindowProxy")}}
+the {{domxref("HTMLObjectElement")}} interface returns a {{glossary("WindowProxy")}}
 representing the window proxy of the object element's nested browsing context, if any;
 otherwise null.
 

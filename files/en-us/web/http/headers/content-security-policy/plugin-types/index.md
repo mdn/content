@@ -1,5 +1,5 @@
 ---
-title: 'CSP: plugin-types'
+title: "CSP: plugin-types"
 slug: Web/HTTP/Headers/Content-Security-Policy/plugin-types
 tags:
   - CSP

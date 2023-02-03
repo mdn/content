@@ -1,6 +1,7 @@
 ---
 title: SQL Injection
 slug: Glossary/SQL_Injection
+page-type: glossary-definition
 tags:
   - Security
   - Sql
@@ -46,7 +47,7 @@ After clicking on the login button, the SQL query will work as follows:
 
 Just take a closer look at the above query's password section.
 
-```
+```plain
 Password=' anything 'or'1'='1 '
 ```
 

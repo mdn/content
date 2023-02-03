@@ -76,7 +76,7 @@ The following snippet shows a simplified version of two form fields with a valid
       id="email"
       aria-required="true"
       aria-invalid="false"
-      onblur="checkValidity('email', '@', 'Invalid e-mail address');" />
+      onblur="checkValidity('email', '@', 'Invalid email address');" />
   </li>
 </ul>
 ```

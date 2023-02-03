@@ -1,6 +1,7 @@
 ---
 title: function declaration
 slug: Web/JavaScript/Reference/Statements/function
+page-type: javascript-statement
 tags:
   - Function
   - JavaScript
@@ -11,7 +12,7 @@ browser-compat: javascript.statements.function
 
 {{jsSidebar("Statements")}}
 
-The **function declaration** (function statement) defines a function with
+The **`function`** declaration defines a function with
 the specified parameters.
 
 You can also define functions using the {{jsxref("Function")}} constructor and a

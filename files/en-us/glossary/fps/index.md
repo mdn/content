@@ -1,6 +1,7 @@
 ---
-title: frame rate (FPS)
+title: Frame rate (FPS)
 slug: Glossary/FPS
+page-type: glossary-definition
 tags:
   - Animation
   - Web Performance

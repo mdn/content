@@ -87,6 +87,10 @@ A table showing how _whiteness_ and _blackness_ interact with a fixed _hue_.
 
 {{EmbedLiveSample("Examples", "100%", "150px")}}
 
+### Formal syntax
+
+{{csssyntax}}
+
 ## Specifications
 
 {{Specifications}}

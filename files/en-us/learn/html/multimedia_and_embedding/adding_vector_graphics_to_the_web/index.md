@@ -82,7 +82,7 @@ This creates the following output:
 
 {{ EmbedLiveSample('What_is_SVG', 300, 240, "", "") }}
 
-From the example above, you may get the impression that SVG is easy to handcode. Yes, you can handcode simple SVG in a text editor, but for a complex image this quickly starts to get very difficult. For creating SVG images, most people use a vector graphics editor like [Inkscape](https://inkscape.org/) or [Illustrator](https://en.wikipedia.org/wiki/Adobe_Illustrator). These packages allow you to create a variety of illustrations using various graphics tools, and create approximations of photos (for example Inkscape's Trace Bitmap feature.)
+From the example above, you may get the impression that SVG is easy to hand code. Yes, you can hand code simple SVG in a text editor, but for a complex image this quickly starts to get very difficult. For creating SVG images, most people use a vector graphics editor like [Inkscape](https://inkscape.org/) or [Illustrator](https://en.wikipedia.org/wiki/Adobe_Illustrator). These packages allow you to create a variety of illustrations using various graphics tools, and create approximations of photos (for example Inkscape's Trace Bitmap feature.)
 
 SVG has some additional advantages besides those described so far:
 
@@ -147,7 +147,7 @@ background-size: contain;
 
 Like the `<img>` method described above, inserting SVGs using CSS background images means that the SVG can't be manipulated with JavaScript, and is also subject to the same CSS limitations.
 
-If your SVGs aren't showing up at all, it might be because your server isn't set up properly. If that's the problem, this [article will point you in the right direction](/en-US/docs/Web/SVG/Tutorial/Getting_Started#a_word_on_webservers).
+If your SVGs aren't showing up at all, it might be because your server isn't set up properly. If that's the problem, this [article will point you in the right direction](/en-US/docs/Web/SVG/Tutorial/Getting_Started#a_word_on_web_servers_for_.svgz_files).
 
 ### How to include SVG code inside your HTML
 

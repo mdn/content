@@ -1,6 +1,7 @@
 ---
 title: Intl.Segmenter() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
+page-type: javascript-constructor
 tags:
   - Constructor
   - Segmenter
@@ -51,7 +52,7 @@ new Intl.Segmenter(locales, options)
 
 ### Return value
 
-A new [`Intl.Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) instance.
+A new [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) instance.
 
 ## Examples
 

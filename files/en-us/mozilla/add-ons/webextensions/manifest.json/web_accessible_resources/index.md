@@ -152,7 +152,7 @@ moz-extension://<extension-UUID>/images/my-image.png"
 
 `<extension-UUID>` is **not** your extension's ID. This ID is randomly generated for every browser instance. This prevents websites from fingerprinting a browser by examining the extensions it has installed.
 
-> **Note:** In Chrome in Manifest V2, an extension's ID is fixed. When a resource is listed in `web_accessible_resources`, it is accessible as `chrome-extension://<your-extension-id>/<path/to/resource>`. In Manifest V3, Chrome can use a dynamic URL by setting `use_dynamic_url` two `true`.
+> **Note:** In Chrome in Manifest V2, an extension's ID is fixed. When a resource is listed in `web_accessible_resources`, it is accessible as `chrome-extension://<your-extension-id>/<path/to/resource>`. In Manifest V3, Chrome can use a dynamic URL by setting `use_dynamic_url` to `true`.
 
 The recommended approach to obtaining the URL of the resource is to use [`runtime.getURL`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL) passing the path relative to manifest.json, for example:
 

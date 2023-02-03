@@ -1,13 +1,13 @@
 ---
 title: Ajax
 slug: Glossary/AJAX
+page-type: glossary-definition
 tags:
   - AJAX
   - CodingScripting
   - Infrastructure
   - "l10n:priority"
 ---
-
 
 **Ajax**, which initially stood for Asynchronous {{Glossary("JavaScript")}} And {{Glossary("XML")}}, is a programming practice of building complex, dynamic webpages using a technology known as {{Glossary("XMLHttpRequest")}}.
 

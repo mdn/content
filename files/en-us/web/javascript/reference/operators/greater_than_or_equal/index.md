@@ -1,6 +1,7 @@
 ---
 title: Greater than or equal (>=)
 slug: Web/JavaScript/Reference/Operators/Greater_than_or_equal
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
@@ -11,7 +12,7 @@ browser-compat: javascript.operators.greater_than_or_equal
 
 {{jsSidebar("Operators")}}
 
-The greater than or equal operator (`>=`) returns `true` if
+The **greater than or equal (`>=`)** operator returns `true` if
 the left operand is greater than or equal to the right operand, and `false`
 otherwise.
 

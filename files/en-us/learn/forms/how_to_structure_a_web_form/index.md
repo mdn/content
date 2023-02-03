@@ -198,12 +198,10 @@ Let's put these ideas into practice and build a slightly more involved form — 
    <link href="payment-form.css" rel="stylesheet" />
    ```
 
-3. Next, create your form by adding the outer {{htmlelement("form")}} element:
+3. Next, create your form by adding the outer {{htmlelement("form")}} opening tag:
 
    ```html
    <form>
-     …
-   </form>
    ```
 
 4. Inside the `<form>` tags, add a heading and paragraph to inform users how required fields are marked:
@@ -253,7 +251,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
      </p>
      <p>
        <label for="mail">
-         <span>E-mail: </span>
+         <span>Email: </span>
          <strong><span aria-label="required">*</span></strong>
        </label>
        <input type="email" id="mail" name="usermail" />
@@ -322,9 +320,15 @@ Let's put these ideas into practice and build a slightly more involved form — 
    </section>
    ```
 
+8. Finally, complete your form by adding the outer {{htmlelement("form")}} closing tag:
+
+   ```html
+   </form>
+   ```
+
 You can see the finished form in action below (also find it on GitHub — see our payment-form.html [source](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.html) and [running live](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):
 
-{{EmbedLiveSample("A_payment_form","100%",620, "", "Learn/Forms/How_to_structure_a_web_form/Example")}}
+{{EmbedLiveSample("A_payment_form","100%",620)}}
 
 ## Test your skills!
 
@@ -343,7 +347,7 @@ You now have all the knowledge you'll need to properly structure your web forms.
 ## In this module
 
 - [Your first form](/en-US/docs/Learn/Forms/Your_first_form)
-- [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
+- **How to structure a web form**
 - [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
 - [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
 - [Other form controls](/en-US/docs/Learn/Forms/Other_form_controls)
