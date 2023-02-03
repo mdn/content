@@ -20,8 +20,10 @@ The **`::-moz-range-thumb`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 
 ## Syntax
 
-```
-::-moz-range-thumb
+```css
+::-moz-range-thumb {
+  /* ... */
+}
 ```
 
 ## Examples

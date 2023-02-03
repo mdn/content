@@ -20,7 +20,9 @@ The **`::-webkit-progress-inner-element`** [CSS](/en-US/docs/Web/CSS) [pseudo-el
 ## Syntax
 
 ```css
-::-webkit-progress-inner-element ;
+::-webkit-progress-inner-element {
+  /* ... */
+}
 ```
 
 ## Examples

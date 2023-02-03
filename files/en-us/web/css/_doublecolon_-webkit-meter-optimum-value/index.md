@@ -21,7 +21,9 @@ Green is the default color.
 ## Syntax
 
 ```css
-::-webkit-meter-optimum-value ;
+::-webkit-meter-optimum-value {
+  /* ... */
+}
 ```
 
 ## Specifications

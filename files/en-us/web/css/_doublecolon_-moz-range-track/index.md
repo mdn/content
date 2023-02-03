@@ -21,7 +21,9 @@ The **`::-moz-range-track`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 ## Syntax
 
 ```css
-::-moz-range-track ;
+::-moz-range-track {
+  /* ... */
+}
 ```
 
 ## Examples

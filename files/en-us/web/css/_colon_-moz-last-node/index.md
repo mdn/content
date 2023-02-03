@@ -20,7 +20,9 @@ The **`:-moz-last-node`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/
 ## Syntax
 
 ```css
-:-moz-last-node ;
+:-moz-last-node {
+  /* ... */
+}
 ```
 
 ## Examples

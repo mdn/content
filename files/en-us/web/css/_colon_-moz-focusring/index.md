@@ -27,7 +27,9 @@ The working group previously [intended to add this feature to CSS Selectors 4 or
 ## Syntax
 
 ```css
-:-moz-focusring ;
+:-moz-focusring {
+  /* ... */
+}
 ```
 
 ## Example

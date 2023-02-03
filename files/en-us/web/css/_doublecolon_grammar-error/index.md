@@ -31,7 +31,9 @@ Only a small subset of CSS properties can be used in a rule with `::grammar-erro
 ## Syntax
 
 ```css
-::grammar-error ;
+::grammar-error {
+  /* ... */
+}
 ```
 
 ## Examples

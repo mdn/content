@@ -20,7 +20,9 @@ The **`:-moz-handler-crashed`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US
 ## Syntax
 
 ```css
-:-moz-handler-crashed ;
+:-moz-handler-crashed {
+  /* ... */
+}
 ```
 
 ## Specifications

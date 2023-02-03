@@ -20,7 +20,9 @@ The **`:-moz-handler-disabled`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-U
 ## Syntax
 
 ```css
-:-moz-handler-disabled ;
+:-moz-handler-disabled {
+  /* ... */
+}
 ```
 
 ## Specifications

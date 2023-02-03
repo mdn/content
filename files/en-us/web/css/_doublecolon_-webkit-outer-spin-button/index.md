@@ -18,7 +18,9 @@ The **`::-webkit-outer-spin-button`** CSS pseudo-element is used to style the ou
 ## Syntax
 
 ```css
-::-webkit-outer-spin-button ;
+::-webkit-outer-spin-button {
+  /* ... */
+}
 ```
 
 ## Examples

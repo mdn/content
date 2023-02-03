@@ -20,8 +20,10 @@ The **`::-moz-scrolled-page-sequence`** [CSS](/en-US/docs/Web/CSS) [pseudo-eleme
 
 ## Syntax
 
-```
-::-moz-scrolled-page-sequence
+```css
+::-moz-scrolled-page-sequence {
+  /* ... */
+}
 ```
 
 ## Specifications

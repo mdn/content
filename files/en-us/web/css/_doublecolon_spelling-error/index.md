@@ -32,7 +32,9 @@ Only a small subset of CSS properties can be used in a rule with `::spelling-err
 ## Syntax
 
 ```css
-::spelling-error ;
+::spelling-error {
+  /* ... */
+}
 ```
 
 ## Examples

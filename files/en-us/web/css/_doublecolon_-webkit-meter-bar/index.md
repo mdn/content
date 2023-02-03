@@ -20,7 +20,9 @@ The **`::-webkit-meter-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US
 ## Syntax
 
 ```css
-::-webkit-meter-bar ;
+::-webkit-meter-bar {
+  /* ... */
+}
 ```
 
 ## Specifications

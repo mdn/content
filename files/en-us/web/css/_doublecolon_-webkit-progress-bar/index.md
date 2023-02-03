@@ -20,7 +20,9 @@ The **`::-webkit-progress-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en
 ## Syntax
 
 ```css
-::-webkit-progress-bar ;
+::-webkit-progress-bar {
+  /* ... */
+}
 ```
 
 ## Examples

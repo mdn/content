@@ -20,8 +20,10 @@ The **`::-moz-range-progress`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-
 
 ## Syntax
 
-```
-::-moz-range-progress
+```css
+::-moz-range-progress {
+  /* ... */
+}
 ```
 
 ## Examples

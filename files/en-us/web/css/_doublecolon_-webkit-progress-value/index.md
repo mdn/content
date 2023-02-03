@@ -20,7 +20,9 @@ The **`::-webkit-progress-value`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/
 ## Syntax
 
 ```css
-::-webkit-progress-value ;
+::-webkit-progress-value {
+  /* ... */
+}
 ```
 
 ## Examples

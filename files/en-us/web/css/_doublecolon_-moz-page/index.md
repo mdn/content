@@ -20,8 +20,10 @@ The **`::-moz-page`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/We
 
 ## Syntax
 
-```
-::-moz-page
+```css
+::-moz-page {
+  /* ... */
+}
 ```
 
 ## Specifications

@@ -20,7 +20,9 @@ The **`:-moz-handler-blocked`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US
 ## Syntax
 
 ```css
-:-moz-handler-blocked ;
+:-moz-handler-blocked {
+  /* ... */
+}
 ```
 
 ## Specifications

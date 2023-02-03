@@ -27,7 +27,9 @@ The **`:-moz-locale-dir(rtl)`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US
 ## Syntax
 
 ```css
-:-moz-locale-dir(rtl) ;
+:-moz-locale-dir(rtl) {
+  /* ... */
+}
 ```
 
 ## Examples

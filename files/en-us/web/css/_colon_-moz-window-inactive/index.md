@@ -23,7 +23,9 @@ The **`:-moz-window-inactive`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US
 ## Syntax
 
 ```css
-:-moz-window-inactive ;
+:-moz-window-inactive {
+  /* ... */
+}
 ```
 
 ## Examples

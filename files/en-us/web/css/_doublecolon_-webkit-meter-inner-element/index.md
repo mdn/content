@@ -19,7 +19,9 @@ browser-compat: css.selectors.-webkit-meter-inner-element
 ## Syntax
 
 ```css
-::-webkit-meter-inner-element ;
+::-webkit-meter-inner-element {
+  /* ... */
+}
 ```
 
 ## Specifications

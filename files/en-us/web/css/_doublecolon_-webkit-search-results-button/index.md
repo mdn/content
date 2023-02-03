@@ -19,7 +19,9 @@ The **`::-webkit-search-results-button`** CSS [pseudo-element](/en-US/docs/Web/C
 ## Syntax
 
 ```css
- selector::-webkit-search-results-button
+selector::-webkit-search-results-button {
+  /* ... */
+}
 ```
 
 ## Specifications
