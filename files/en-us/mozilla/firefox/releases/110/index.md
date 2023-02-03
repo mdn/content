@@ -51,6 +51,10 @@ This article provides information about the changes in Firefox 110 that will aff
 
 #### DOM
 
+- The {{domxref("element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event and associated {{domxref("ContentVisibilityAutoStateChangedEvent")}} interface are now supported.
+  The event can be used by application code to stop processes related to rendering the element when the user agent is [skipping its contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents).
+  ({{bug(1798485)}}).
+
 #### Media, WebRTC, and Web Audio
 
 #### Removals
