@@ -66,7 +66,7 @@ The text in the log below shows that the title initially reflects the matching a
 {{EmbedLiveSample("Examples")}}
 
 Note that alternate styles are not applied by default; they must be selected as the preferred stylesheet by the user.
-To apply the alternate stylesheets on FireFox:
+To apply the alternate stylesheets on Firefox:
 
 1. Open the Menu Bar (Press `F10` or tap the `Alt` key)
 2. Open **View > Page Style** submenu

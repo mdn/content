@@ -162,6 +162,8 @@ p {
 }
 ```
 
+<!-- these colors are intentionally pink and blue. WCAG requires color contrast between text and background, not between border colors. -->
+
 #### Result
 
 {{EmbedLiveSample('Setting_zero_for_offset_and_blur', '300', '300')}}

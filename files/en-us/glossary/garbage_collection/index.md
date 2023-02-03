@@ -1,6 +1,7 @@
 ---
 title: Garbage collection
 slug: Glossary/Garbage_collection
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

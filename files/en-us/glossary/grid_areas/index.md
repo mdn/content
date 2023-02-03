@@ -1,6 +1,7 @@
 ---
 title: Grid Areas
 slug: Glossary/Grid_Areas
+page-type: glossary-definition
 tags:
   - CSS
   - CSS Grids

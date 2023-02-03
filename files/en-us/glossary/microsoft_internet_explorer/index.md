@@ -1,6 +1,7 @@
 ---
 title: Microsoft Internet Explorer
 slug: Glossary/Microsoft_Internet_Explorer
+page-type: glossary-definition
 tags:
   - Browser
   - Internet Explorer

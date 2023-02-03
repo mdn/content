@@ -22,15 +22,14 @@ The **`split()`** method takes a pattern and divides a {{jsxref("String")}} into
 ## Syntax
 
 ```js-nolint
-split()
 split(separator)
 split(separator, limit)
 ```
 
 ### Parameters
 
-- `separator` {{optional_inline}}
-  - : The pattern describing where each split should occur. Can be a string or an object with a [`Symbol.split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) method — the typical example being a {{jsxref("Global_Objects/RegExp", "regular expression", "", 1)}}. If undefined, the original target string is returned wrapped in an array.
+- `separator`
+  - : The pattern describing where each split should occur. Can be a string or an object with a [`Symbol.split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) method — the typical example being a {{jsxref("Global_Objects/RegExp", "regular expression", "", 1)}}. All values that are not objects with a `@@split` method are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), so omitting it or passing `undefined` causes `split()` to split by the string `"undefined"`, which is rarely what you want.
 - `limit` {{optional_inline}}
   - : A non-negative integer specifying a limit on the number of substrings to be included in the array. If provided, splits the string at each occurrence of the specified `separator`, but stops when `limit` entries have been placed in the array. Any leftover text is not included in the array at all.
     - The array may contain fewer entries than `limit` if the end of the string is reached before the limit is reached.
@@ -67,15 +66,13 @@ Any other value will be coerced to a string before being used as separator.
 
 ### Using split()
 
-When the string is empty and no separator is specified, `split()` returns an array containing one empty
-string, rather than an empty array. If the string and separator are both empty
-strings, an empty array is returned.
+When the string is empty and a non-empty separator is specified, `split()` returns `[""]`. If the string and separator are both empty strings, an empty array is returned.
 
 ```js
 const emptyString = "";
 
-// string is empty and no separator is specified
-console.log(emptyString.split());
+// string is empty and separator is non-empty
+console.log(emptyString.split("a"));
 // [""]
 
 // string and separator are both empty strings

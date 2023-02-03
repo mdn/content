@@ -1,6 +1,7 @@
 ---
 title: Mutable
 slug: Glossary/Mutable
+page-type: glossary-definition
 tags:
   - CodingScripting
   - NeedsContent

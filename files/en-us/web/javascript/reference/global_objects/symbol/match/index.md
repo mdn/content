@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Symbol.match
 
 {{JSRef}}
 
-The **`Symbol.match`** well-known symbol specifies the matching of a regular expression against a string. This function is called by the {{jsxref("String.prototype.match()")}} method.
+The **`Symbol.match`** static data property represents the well-known symbol specifying the method used to match an input string against the current object, making the object behave like a {{jsxref("RegExp")}}. This function is called by the {{jsxref("String.prototype.match()")}} method.
 
 For more information, see {{jsxref("RegExp.@@match", "RegExp.prototype[@@match]()")}} and {{jsxref("String.prototype.match()")}}.
 

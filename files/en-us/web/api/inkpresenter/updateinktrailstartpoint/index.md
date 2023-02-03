@@ -73,7 +73,7 @@ canvas.addEventListener("pointermove", evt => {
   const pointSize = 10;
   ctx.fillStyle = "#000000";
   ctx.fillRect(evt.pageX, evt.pageY, pointSize, pointSize);
-  if(move_cnt == 50) {
+  if (move_cnt == 50) {
       let r = getRandomInt(0,255);
       let g = getRandomInt(0,255);
       let b = getRandomInt(0,255);

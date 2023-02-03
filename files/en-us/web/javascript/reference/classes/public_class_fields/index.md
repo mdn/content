@@ -11,7 +11,7 @@ browser-compat: javascript.classes.public_class_fields
 
 {{JsSidebar("Classes")}}
 
-Both static and instance public fields are writable, enumerable, and configurable properties. As such, unlike their private counterparts, they participate in prototype inheritance.
+Both static and instance **public fields** are writable, enumerable, and configurable properties. As such, unlike their private counterparts, they participate in prototype inheritance.
 
 ## Syntax
 
@@ -23,6 +23,11 @@ class ClassWithField {
   static staticFieldWithInitializer = "static field";
 }
 ```
+
+There are some additional syntax restrictions:
+
+- The name of a static property (field or method) cannot be `prototype`.
+- The name of a class field (static or instance) cannot be `constructor`.
 
 ## Description
 

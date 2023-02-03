@@ -1,6 +1,7 @@
 ---
 title: '<progress>: The Progress Indicator element'
 slug: Web/HTML/Element/progress
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -30,7 +31,10 @@ The **`<progress>`** [HTML](/en-US/docs/Web/HTML) element displays an indicator 
         >,
         <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
           >phrasing content</a
-        >, labelable content, palpable content.
+        >, labelable content,
+        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content"
+          >palpable content</a
+        >.
       </td>
     </tr>
     <tr>
@@ -57,7 +61,7 @@ The **`<progress>`** [HTML](/en-US/docs/Web/HTML) element displays an indicator 
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td>{{ARIARole("progressbar")}}</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role"><code>progressbar</code></a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>

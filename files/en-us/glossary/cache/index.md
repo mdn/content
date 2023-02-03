@@ -1,6 +1,7 @@
 ---
 title: Cache
 slug: Glossary/Cache
+page-type: glossary-definition
 tags:
   - HTTP
 ---

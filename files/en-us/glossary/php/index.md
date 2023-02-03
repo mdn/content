@@ -1,6 +1,7 @@
 ---
 title: PHP
 slug: Glossary/PHP
+page-type: glossary-definition
 tags:
   - Beginner
   - CodingScripting

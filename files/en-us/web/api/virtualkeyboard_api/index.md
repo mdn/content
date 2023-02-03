@@ -51,7 +51,7 @@ This is useful for positioning important UI elements in the area that's not cove
 The code snippet below uses the `geometrychange` event to detect when the virtual keyboard geometry changes; it then accesses the `boundingRect` property to query the size and position of the virtual keyboard:
 
 ```js
-if("virtualKeyboard" in navigator) {
+if ("virtualKeyboard" in navigator) {
   navigator.virtualKeyboard.overlaysContent = true;
 
   navigator.virtualKeyboard.addEventListener("geometrychange", event => {

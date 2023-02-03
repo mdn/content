@@ -1,6 +1,7 @@
 ---
 title: <font>
 slug: Web/HTML/Element/font
+page-type: html-element
 tags:
   - Element
   - HTML

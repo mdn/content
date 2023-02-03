@@ -1,6 +1,7 @@
 ---
 title: UUID
 slug: Glossary/UUID
+page-type: glossary-definition
 tags:
   - Infrastructure
 ---

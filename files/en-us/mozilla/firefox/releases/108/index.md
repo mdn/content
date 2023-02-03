@@ -10,7 +10,7 @@ tags:
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 108 that will affect developers. Firefox 108 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and will ship on [December 13, 2022](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 108 that will affect developers. Firefox 108 was released on December 13, 2022.
 
 ## Changes for web developers
 
@@ -39,10 +39,8 @@ No notable changes
   A server can use these to specify valid sources for stylesheet `<style>` elements and `<link>` elements with `rel="stylesheet"`, and for styles applied to individual elements, respectively ({{bug(1529338)}}).
 - [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP header directives [`script-src-elem`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem) and [`script-src-attr`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-attr) are now supported.
   A server can use these to specify valid sources for JavaScript `<script>` elements, and for inline script event handlers like `onclick`, respectively ({{bug(1529337)}}).
-
-### Security
-
-No notable changes
+- [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) violation reports now include `effective-directive` and `status-code` properties.
+  For more information, see [Violation report syntax](/en-US/docs/Web/HTTP/CSP#violation_report_syntax) ({{bug(1192684)}}).
 
 ### APIs
 
@@ -50,34 +48,26 @@ No notable changes
   Import maps provide flexibility and additional control over how browsers resolve module specifiers when importing [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules).
   ({{bug(1795647)}}).
 
-#### DOM
-
-No notable changes
-
 #### Media, WebRTC, and Web Audio
 
 - The [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) is now available in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts).
   Calls to [`navigator.requestMIDIAccess()`](/en-US/docs/Web/API/Navigator/requestMIDIAccess) will prompt users with active MIDI devices to install a [Site Permission Add-On](https://support.mozilla.org/en-US/kb/site-permission-add-ons), which is required to enable the API.
   For more information see {{bug(1795025)}}.
 
-### WebAssembly
-
-No notable changes
-
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### WebDriver BiDi
 
-- Following a [change in the specification](https://github.com/w3c/webdriver-bidi/pull/259), log entry level `"warning"` was renamed to `"warn"` ({{bug(1797115)}})
-- When using `script.evaluate` and `script.callFunction` with a sandbox name equal to an empty string, the evaluation will now be done using the default realm ({{bug(1793589)}})
-- Added support for the `browsingContext.domContentLoaded` event ({{bug(1756610)}})
+- Following a [change in the specification](https://github.com/w3c/webdriver-bidi/pull/259), log entry level `"warning"` was renamed to `"warn"` ({{bug(1797115)}}).
+- When using `script.evaluate` and `script.callFunction` with a sandbox name equal to an empty string, the evaluation will now be done using the default realm ({{bug(1793589)}}).
+- Added support for the `browsingContext.domContentLoaded` event ({{bug(1756610)}}).
 
 #### Marionette
 
-- Added support for the `tiltX`, `tiltY` and `twist` properties of pointer actions for `WebDriver:PerformActions` ({{bug(1793832)}})
-- Fixed a bug where `WebDriver:GetElementText` wasn't returning the element text for pretty-printed XML ({{bug(1794099)}})
-- `HTMLDocument` is no longer serialized as a `WebElement` reference ({{bug(1793920)}})
-- `WebDriver:NewWindow` now opens a window with an `about:blank` tab instead of `about:newtab` ({{bug(1533058)}})
+- Added support for the `tiltX`, `tiltY` and `twist` properties of pointer actions for `WebDriver:PerformActions` ({{bug(1793832)}}).
+- Fixed a bug where `WebDriver:GetElementText` wasn't returning the element text for pretty-printed XML ({{bug(1794099)}}).
+- `HTMLDocument` is no longer serialized as a `WebElement` reference ({{bug(1793920)}}).
+- `WebDriver:NewWindow` now opens a window with an `about:blank` tab instead of `about:newtab` ({{bug(1533058)}}).
 
 ## Changes for add-on developers
 

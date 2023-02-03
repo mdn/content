@@ -4,7 +4,6 @@ slug: Web/XPath
 tags:
   - CSS Selectors
   - DOM
-  - JXON
   - Landing
   - Path
   - XML

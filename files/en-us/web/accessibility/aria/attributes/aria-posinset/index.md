@@ -22,8 +22,8 @@ If all the items in a list are present in the DOM, the browser can calculate the
 The following example shows a listbox with four element options out of the 118 in the periodic table of chemical elements.
 
 ```html
-<h2 id="periodictable">Periodic table of chemical elements</h2>
-<ul role="listbox" aria-labelledby="periodictable">
+<h2 id="periodic-table">Periodic table of chemical elements</h2>
+<ul role="listbox" aria-labelledby="periodic-table">
   <li role="option" aria-setsize="118" aria-posinset="1">Hydrogen</li>
   <li role="option" aria-setsize="118" aria-posinset="3">Lithium</li>
   <li role="option" aria-setsize="118" aria-posinset="11">Sodium</li>

@@ -1,6 +1,7 @@
 ---
 title: '<cite>: The Citation element'
 slug: Web/HTML/Element/cite
+page-type: html-element
 tags:
   - Attribution
   - Citation
@@ -71,7 +72,7 @@ The HTML above outputs:
 
 {{EmbedLiveSample("Example", 640, 80)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

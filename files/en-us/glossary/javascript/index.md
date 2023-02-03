@@ -1,6 +1,7 @@
 ---
 title: JavaScript
 slug: Glossary/JavaScript
+page-type: glossary-definition
 tags:
   - CodingScripting
   - JavaScript

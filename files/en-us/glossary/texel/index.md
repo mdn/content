@@ -1,6 +1,7 @@
 ---
 title: Texel
 slug: Glossary/Texel
+page-type: glossary-definition
 tags:
   - 3D
   - Drawing

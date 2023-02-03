@@ -1,6 +1,7 @@
 ---
 title: Object
 slug: Glossary/Object
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Intro

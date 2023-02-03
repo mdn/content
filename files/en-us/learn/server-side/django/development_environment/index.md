@@ -40,7 +40,7 @@ Django makes it very easy to set up your own computer so that you can start deve
 
 The development environment is an installation of Django on your local computer that you can use for developing and testing Django apps prior to deploying them to a production environment.
 
-The main tools that Django itself provides are a set of Python scripts for creating and working with Django projects, along with a simple _development webserver_ that you can use to test local (i.e. on your computer, not on an external web server) Django web applications on your computer's web browser.
+The main tools that Django itself provides are a set of Python scripts for creating and working with Django projects, along with a simple _development web server_ that you can use to test local (i.e. on your computer, not on an external web server) Django web applications on your computer's web browser.
 
 There are other peripheral tools, which form part of the development environment, that we won't be covering here. These include things like a [text editor](/en-US/docs/Learn/Common_questions/Available_text_editors) or IDE for editing code, and a source control management tool like [Git](https://git-scm.com/) for safely managing different versions of your code. We are assuming that you've already got a text editor installed.
 
@@ -53,7 +53,7 @@ Django is extremely flexible in terms of how and where it can be installed and c
 - Configured to use one of several databases, which may also need to be separately installed and configured.
 - Run in the main system Python environment or within separate Python virtual environments.
 
-Each of these options requires a slightly different configuration and setup. The following subsections explain some of your choices. For the rest of the article, we'll show you how to setup Django on a small number of operating systems, and that setup will be assumed throughout the rest of this module.
+Each of these options requires a slightly different configuration and setup. The following subsections explain some of your choices. For the rest of the article, we'll show you how to set up Django on a small number of operating systems, and that setup will be assumed throughout the rest of this module.
 
 > **Note:** Other possible installation options are covered in the official Django documentation. We link to the [appropriate documents below](#see_also).
 

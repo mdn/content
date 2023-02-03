@@ -1,6 +1,7 @@
 ---
 title: ALPN
 slug: Glossary/ALPN
+page-type: glossary-definition
 tags:
   - ALPN
   - Draft

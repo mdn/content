@@ -44,7 +44,7 @@ The open Web presents incredible opportunities for developers. To take full adva
 - [Media](/en-US/docs/Web/Media)
   - : Formats, codecs, protocols, APIs, and techniques for embedding and streaming video, audio, and image content in Web documents and apps.
 - [SVG](/en-US/docs/Web/SVG)
-  - : Scalable Vector Graphics let you create images that scale smoothly to any size.
+  - : Scalable Vector Graphics lets you create images that scale smoothly to any size.
 - [MathML](/en-US/docs/Web/MathML)
   - : MathML lets you display complex mathematical notation on the Web.
 - [Web Components](/en-US/docs/Web/Web_Components)

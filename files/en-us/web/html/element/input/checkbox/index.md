@@ -1,6 +1,7 @@
 ---
 title: <input type="checkbox">
 slug: Web/HTML/Element/input/checkbox
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -265,7 +266,7 @@ otherCheckbox.addEventListener('change', () => {
 
 {{EmbedLiveSample('Examples', '100%', 300)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
@@ -301,6 +302,10 @@ otherCheckbox.addEventListener('change', () => {
       <td>
         {{domxref("HTMLInputElement.select", "select()")}}
       </td>
+    </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a></td>
     </tr>
   </tbody>
 </table>

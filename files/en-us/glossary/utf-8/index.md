@@ -1,6 +1,7 @@
 ---
 title: UTF-8
 slug: Glossary/UTF-8
+page-type: glossary-definition
 tags:
   - CodingScripting
   - HTML

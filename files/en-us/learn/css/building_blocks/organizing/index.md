@@ -71,8 +71,8 @@ Having a set of rules you always follow reduces the amount of mental overhead ne
 There are a couple of ways you will see CSS formatted. Some developers put all of the rules onto a single line, like so:
 
 ```css
-.box { background-color: #567895; }
-h2 { background-color: black; color: white; }
+.box {background-color: #567895; }
+h2 {background-color: black; color: white; }
 ```
 
 Other developers prefer to break everything onto a new line:
@@ -417,14 +417,13 @@ You should also now have the skills to explore the rest of the [MDN CSS](/en-US/
 
 ## In this module
 
+- [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 - [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
 
   - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
   - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
   - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
   - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-- [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 
 - [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
 - [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
