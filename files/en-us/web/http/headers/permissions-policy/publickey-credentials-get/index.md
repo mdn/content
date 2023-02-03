@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: publickey-credentials-get'
+title: "Permissions-Policy: publickey-credentials-get"
 slug: Web/HTTP/Headers/Permissions-Policy/publickey-credentials-get
 tags:
   - Directive

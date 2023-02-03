@@ -34,7 +34,7 @@ You likely wrote something like this:
 
 Whether it should be evaluated as `(-a) ** b` or `-(a ** b)` is ambiguous. In mathematics, -x<sup>2</sup> means `-(x ** 2)` — and that's how many languages, including Python, Haskell, and PHP, handle it. But making the unary minus operator take precedence over `**` breaks symmetry with `a ** -b`, which is unambiguously `a ** (-b)`. Therefore, the language forbids this syntax and requires you to parenthesize either side to resolve the ambiguity.
 
-```js example-good
+```js-nolint example-good
 (-a) ** b
 -(a ** b)
 ```
@@ -54,7 +54,7 @@ When writing complex math expressions involving exponentiation, you may write so
 
 ```js example-bad
 function taylorSin(x) {
-  return (n) => -1 ** n * x ** (2 * n + 1) / factorial(2 * n + 1);
+  return (n) => (-1 ** n * x ** (2 * n + 1)) / factorial(2 * n + 1);
   // SyntaxError: unparenthesized unary expression can't appear on the left-hand side of '**'
 }
 ```
@@ -63,7 +63,7 @@ However, the `-1 ** n` part is illegal in JavaScript. Instead, parenthesize the 
 
 ```js example-good
 function taylorSin(x) {
-  return (n) => (-1) ** n * x ** (2 * n + 1) / factorial(2 * n + 1);
+  return (n) => ((-1) ** n * x ** (2 * n + 1)) / factorial(2 * n + 1);
 }
 ```
 

@@ -57,7 +57,7 @@ The MDN Web Docs team concentrates on documenting the open web platform. If you 
 
 ## Process for selecting the new technology
 
-If a technology looks like a good candidate for being documented on MDN Web Docs, you can start a discussion on the [GitHub community discussions](/en-US/docs/MDN/Community/Communication_channels#github_disucssions) to propose and discuss the inclusion of this technology. This section describes what the proposal should include.
+If a technology looks like a good candidate for being documented on MDN Web Docs, you can start a discussion on the [GitHub community discussions](/en-US/docs/MDN/Community/Communication_channels#github_discussions) to propose and discuss the inclusion of this technology. This section describes what the proposal should include.
 
 ### Submitting the proposal
 
@@ -66,7 +66,7 @@ Technologies will be considered for inclusion on MDN Web Docs on a case-by-case 
 - The technology, its core purpose/use cases, and target developer audience.
 - What kind of industry or community buzz is there is around the technology?
   - Are a lot web developers using it? What is the industry adoption like?
-  - Do a lot web developers want or need this information?
+  - Do a lot of web developers want or need this information?
   - What is the size of the target audience for this information? Supporting statistics would help if you have them.
 - How does the technology relate to core web technology and web browsers? Useful details include:
   - Does it use HTML and CSS but generally not output to the web?
