@@ -12,7 +12,7 @@ browser-compat: api.PerformanceNavigation.toJSON
 
 {{APIRef("Performance API")}}
 
-The **`toJSON()`** method of the {{domxref("PerformanceENavigation")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("PerformanceNavigation")}} object.
+The **`toJSON()`** method of the {{domxref("PerformanceNavigation")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("PerformanceNavigation")}} object.
 
 ## Syntax
 
