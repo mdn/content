@@ -7,6 +7,7 @@ tags:
   - Method
   - Reference
   - Web Performance
+  - Deprecated
 browser-compat: api.PerformanceNavigation.toJSON
 ---
 
