@@ -1,4 +1,12 @@
+# .prettierignore uses .gitignore syntax
+# see https://prettier.io/docs/en/ignore.html#ignoring-files-prettierignore
+
 build/
 
 # Ignore markdown files till full pass is made on each folder
 *.md
+# The following paths have had a full pass
+!files/en-us/glossary/**/*.md
+!files/en-us/mdn/**/*.md
+!files/en-us/web/http/**/*.md
+

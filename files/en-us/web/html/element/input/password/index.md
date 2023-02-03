@@ -303,6 +303,10 @@ ssn.oninput = (event) => {
         {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
       </td>
     </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
+    </tr>
   </tbody>
 </table>
 

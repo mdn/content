@@ -12,8 +12,7 @@ browser-compat: javascript.builtins.Proxy.handler.getPrototypeOf
 
 {{JSRef}}
 
-The **`handler.getPrototypeOf()`** method is a trap for the
-`[[GetPrototypeOf]]` internal method.
+The **`handler.getPrototypeOf()`** method is a trap for the `[[GetPrototypeOf]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as {{jsxref("Object.getPrototypeOf()")}}.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-getprototypeof.html", "taller")}}
 

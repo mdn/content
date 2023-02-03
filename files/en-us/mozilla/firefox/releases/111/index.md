@@ -10,7 +10,7 @@ tags:
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 111 that will affect developers. Firefox 111 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and will ship on [March 14, 2023](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 111 that affect developers. Firefox 111 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [March 14, 2023](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
 
 ## Changes for web developers
 
@@ -59,6 +59,8 @@ This article provides information about the changes in Firefox 111 that will aff
 #### Marionette
 
 ## Changes for add-on developers
+
+- `matchDiacritics` has been added to the {{WebExtAPIRef("Find.find")}} API. This option enables searches to distinguish between accented letters and their base letters. For example, when set to `true`, searching for "résumé" does not find a match for "resume" ({{bug(1680606)}})
 
 ### Removals
 
