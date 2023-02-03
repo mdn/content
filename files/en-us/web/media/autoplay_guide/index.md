@@ -28,7 +28,7 @@ Autoplay blocking is _not_ applied to {{HTMLElement("video")}} elements when the
 
 ## Autoplay and autoplay blocking
 
-The term **autoplay** refers to any feature that causes audio to begin to play without the user specifically requesting that playback begin. This includes both the use of HTML attributes to autoplay media as well as the use of JavaScript code to start playback outside the context of handling user input.
+The term **autoplay** refers to any feature that causes media to begin to play without the user specifically requesting that playback begin. This includes both the use of HTML attributes to autoplay media as well as the use of JavaScript code to start playback outside the context of handling user input.
 
 That means that both of the following are considered autoplay behavior, and are therefore subject to the browser's autoplay blocking policy:
 
