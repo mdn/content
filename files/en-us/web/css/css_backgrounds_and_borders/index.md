@@ -118,7 +118,7 @@ To see the code for this background and borders sample, [view the source on Gith
 - [`<color>`](/en-US/docs/Web/CSS/color) data type
 - [`<image>`](/en-US/docs/Web/CSS/image) data type
 - [`<position>`](/en-US/docs/Web/CSS/position) data type
-- [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) keyword
+- [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) keyword
 - [`drop-shadow()`](/en-US/docs/Web/CSS/filter-function/drop-shadow) filter function
 
 ## Specifications
