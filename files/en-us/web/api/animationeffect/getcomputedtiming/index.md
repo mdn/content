@@ -36,11 +36,13 @@ An object which contains:
 - all of the properties of the object returned by {{domxref("AnimationEffect.getTiming()")}}, except that `"auto"` values are replaced with their computed value.
 - the following additional properties:
   - `endTime`
-    - : The end time of the animation in milliseconds from the effect's start. This is equal to `activeDuration` plus `delay` and `endDelay`.
+    - : A `number` indicating the end time of the effect in milliseconds from the effect's start. This is equal to `activeDuration` plus `delay` and `endDelay`.
   - `activeDuration`
-    - : The total length of all iterations of the effect. This is equal to `duration` multiplied by `iterations` (or zero if that product would be {{jsxref("NaN")}}).
+    - : A `number` indicating the total duration in milliseconds of all iterations of the effect. This is equal to `duration` multiplied by `iterations` (or zero if that product would be {{jsxref("NaN")}}).
   - `localTime`
-    - : The length of time in milliseconds that the effect has run. This is equal to the {{domxref("Animation.currentTime","currentTime")}} of the associated animation, or `null` if the effect is not associated with an animation.
+    - : A `number` or `null`.
+
+      Indicates the length of time in milliseconds that the effect has run. This is equal to the {{domxref("Animation.currentTime","currentTime")}} of the associated animation, or `null` if the effect is not associated with an animation.
   - `progress`
     - : `null` or a `number` at least `0` and less than `1`.
 
