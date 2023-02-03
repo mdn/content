@@ -33,7 +33,7 @@ None.
 
 An object which contains:
 
-- all of the properties of the object returned by {{domxref("AnimationEffect.getTiming()")}}, except that `"auto"` values are replaced with their computed value.
+- all of the properties of the object returned by {{domxref("AnimationEffect.getTiming()")}}, except that any `"auto"` values are replaced by computed values that may depend on the type of {{domxref("AnimationEffect")}}.
 - the following additional properties:
   - `endTime`
     - : A `number` indicating the end time of the effect in milliseconds from the effect's start. This is equal to `activeDuration` plus `delay` and `endDelay`.
