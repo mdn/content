@@ -21,6 +21,8 @@ The effects of `::first-line` are limited by the length and content of the first
 
 > **Note:** [Selectors Level 3](https://drafts.csswg.org/selectors-3/#first-line) introduced the double-colon notation (`::`) to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), which are single-colon `:`. Browsers accept both `::first-line` and `:first-line`, which was introduced in CSS2.
 
+For the purposes of CSS {{CSSXref("background")}}, the `::first-line` pseudo-element is like an inline-level element meaning that in a left-justified first line, the background may not extend all the way to the right margin.
+
 ## Allowable properties
 
 Only a small subset of CSS properties can be used with the `::first-line` pseudo-element:

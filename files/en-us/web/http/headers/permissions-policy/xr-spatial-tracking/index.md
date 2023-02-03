@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: xr-spatial-tracking'
+title: "Permissions-Policy: xr-spatial-tracking"
 slug: Web/HTTP/Headers/Permissions-Policy/xr-spatial-tracking
 tags:
   - Directive

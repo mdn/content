@@ -17,6 +17,10 @@ browser-compat: css.properties.break-inside
 
 The **`break-inside`** [CSS](/en-US/docs/Web/CSS) property sets how page, column, or region breaks should behave inside a generated box. If there is no generated box, the property is ignored.
 
+{{EmbedInteractiveExample("pages/css/break-inside.html")}}
+
+## Syntax
+
 ```css
 /* Keyword values */
 break-inside: auto;
@@ -41,10 +45,6 @@ To determine if a break must be done, the following rules are applied:
 2. If any of the three concerned values is an _avoid break value_ (`avoid`, `avoid-page`, `avoid-region`, or `avoid-column`), no such break will be applied at that point.
 
 Once forced breaks have been applied, soft breaks may be added if needed, but not on element boundaries that resolve in a corresponding `avoid` value.
-
-## Syntax
-
-The `break-inside` property is specified as one of the keyword values from the list below.
 
 ### Values
 
