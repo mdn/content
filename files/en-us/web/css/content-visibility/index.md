@@ -114,7 +114,7 @@ Using `content-visibility: hidden;` instead of `display: none;` preserves the re
 
 #### CSS
 
-The `content-visibility` property is set on the paragraph a child of the containing div. This means that the content in the paragraphs will be visible or hidden depending on the class of the parent div element.
+The `content-visibility` property is set on paragraphs that are direct children of elements with the `visible` and `hidden` classes. In our example, we can show and hide content in paragraphs depending on the CSS class of parent div elements.
 
 The `contain-intrinsic-size` property is included to represent the content size. This helps to reduce layout shift when content is hidden.
 
