@@ -113,8 +113,7 @@ type), and draw a circle on it.
 #### HTML
 
 ```html
-<canvas width="240"></canvas>
-<canvas width="240"></canvas>
+<canvas width="240"></canvas> <canvas width="240"></canvas>
 ```
 
 #### CSS
