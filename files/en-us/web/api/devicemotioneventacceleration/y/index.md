@@ -1,5 +1,5 @@
 ---
-title: 'DeviceMotionEventAcceleration: y'
+title: "DeviceMotionEventAcceleration: y"
 slug: Web/API/DeviceMotionEventAcceleration/y
 page-type: web-api-instance-property
 tags:

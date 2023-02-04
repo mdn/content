@@ -99,7 +99,9 @@ div {
 
 ```js
 function dragstart_handler(ev) {
-  console.log(`dragStart: dropEffect = ${ev.dataTransfer.dropEffect} ; effectAllowed = ${ev.dataTransfer.effectAllowed}`);
+  console.log(
+    `dragStart: dropEffect = ${ev.dataTransfer.dropEffect} ; effectAllowed = ${ev.dataTransfer.effectAllowed}`
+  );
 
   // Add this element's id to the drag payload so the drop handler will
   // know which element to add to its tree
@@ -108,7 +110,9 @@ function dragstart_handler(ev) {
 }
 
 function drop_handler(ev) {
-  console.log(`drop: dropEffect = ${ev.dataTransfer.dropEffect} ; effectAllowed = ${ev.dataTransfer.effectAllowed}`);
+  console.log(
+    `drop: dropEffect = ${ev.dataTransfer.dropEffect} ; effectAllowed = ${ev.dataTransfer.effectAllowed}`
+  );
   ev.preventDefault();
 
   // Get the id of the target and add the moved element to the target's DOM
@@ -117,10 +121,12 @@ function drop_handler(ev) {
 }
 
 function dragover_handler(ev) {
-  console.log(`dragOver: dropEffect = ${ev.dataTransfer.dropEffect} ; effectAllowed = ${ev.dataTransfer.effectAllowed}`);
+  console.log(
+    `dragOver: dropEffect = ${ev.dataTransfer.dropEffect} ; effectAllowed = ${ev.dataTransfer.effectAllowed}`
+  );
   ev.preventDefault();
   // Set the dropEffect to move
-  ev.dataTransfer.dropEffect = "move"
+  ev.dataTransfer.dropEffect = "move";
 }
 ```
 

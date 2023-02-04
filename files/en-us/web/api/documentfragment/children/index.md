@@ -31,11 +31,11 @@ If the document fragment has no element children, then `children` is an empty li
 ## Examples
 
 ```js
-let fragment = new DocumentFragment()
+let fragment = new DocumentFragment();
 fragment.children; // HTMLCollection []
 
-let paragraph = document.createElement('p')
-fragment.appendChild(paragraph)
+let paragraph = document.createElement("p");
+fragment.appendChild(paragraph);
 
 fragment.children; // HTMLCollection [<p>]
 ```
