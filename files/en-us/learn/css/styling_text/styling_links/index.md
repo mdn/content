@@ -166,25 +166,24 @@ p {
 
 a {
   outline: none;
-  text-decoration: none;
   padding: 2px 1px 0;
 }
 
 a:link {
-  color: #265301;
+  color: #6900ff;
 }
 
 a:visited {
-  color: #437a16;
+  color: #a5c300;
 }
 
 a:focus {
-  border-bottom: 1px solid;
+  text-decoration: none;
   background: #bae498;
 }
 
 a:hover {
-  border-bottom: 1px solid;
+  text-decoration: none;
   background: #cdfeaa;
 }
 
