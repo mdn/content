@@ -78,9 +78,13 @@ textarea:nth-of-type(3) {
 }
 ```
 
-{{ EmbedLiveSample('Basic_user_interface_in_action', "630", "630") }}
+{{ EmbedLiveSample('Basic_user_interface_in_action', "630", "300") }}
 
-The CSS {{CSSxRef("outline")}} and {{CSSxRef("outline-offset")}} properties were used to provide feedback to users which element currently has focus. An {{CSSxRef("accent-color")}} provides a theme color to all the form controls. The caret that appears when the text is edit has the same color thanks to the {{CSSxRef("caret-color")}} property. The {{CSSxRef("resize")}} property prevents the second {{HTMLElement("textarea")}} from being resizable while the {{CSSxRef("pointer-events")}} property prevent the third `<textarea>` from receiving click events, but it's still focusable using the keyboard. To see the code for this basic user interface sample, [view the source on Github](https://github.com/mdn/content/blob/main/files/en-us/web/css/CSS_Basic_User_Interface/index.md).
+The CSS {{CSSxRef("outline")}} and {{CSSxRef("outline-offset")}} properties were used to provide feedback to users which element currently has focus. An {{CSSxRef("accent-color")}} provides a theme color to all the form controls. The caret that appears when the text is edit has the same color thanks to the {{CSSxRef("caret-color")}} property. These can all be considered UI improvements.
+
+Some features harm usability. The {{CSSxRef("cursor")}} property was used to change cursors from the browser default which is confusing. The {{CSSxRef("resize")}} property prevents the second {{HTMLElement("textarea")}} from being resizable while the {{CSSxRef("pointer-events")}} property prevents the third `<textarea>` from receiving click events. It is still focusable using the keyboard.
+
+To see the code for this basic user interface sample, [view the source on Github](https://github.com/mdn/content/blob/main/files/en-us/web/css/CSS_Basic_User_Interface/index.md).
 
 ## Reference
 
