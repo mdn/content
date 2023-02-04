@@ -170,7 +170,7 @@ Let's have a go at writing our own functions featuring return values.
 
 4. Save your code, load it in a browser, and try it out.
 
-Here are some explanations for the `addEventListener` function in step 3 above: 
+Here are some explanations for the `addEventListener` function in step 3 above:
 
 - By adding a listener to the `change` event, this function runs whenever the `change` event fires on the text input — that is when a new value is entered into the text `input`, and submitted (e.g., enter a value, then un-focus the input by pressing <kbd>Tab</kbd> or <kbd>Return</kbd>). When this anonymous function runs, the value in the `input` is stored in the `num` constant.
 - The if statement prints an error message if the entered value is not a number. The condition checks if the expression `isNaN(num)` returns `true`. The [`isNaN()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN) function tests whether the `num` value is not a number — if so, it returns `true`, and if not, it returns `false`.
