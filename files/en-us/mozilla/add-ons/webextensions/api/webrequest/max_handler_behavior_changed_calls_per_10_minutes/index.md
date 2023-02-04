@@ -1,8 +1,8 @@
 ---
 title: webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES
 slug: >-
-page-type: webextension-api-property
   Mozilla/Add-ons/WebExtensions/API/webRequest/MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES
+page-type: webextension-api-property
 tags:
   - API
   - Add-ons

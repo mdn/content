@@ -1,8 +1,8 @@
 ---
 title: onSelectionChanged
 slug: >-
-page-type: webextension-api-event
   Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons
