@@ -1,6 +1,7 @@
 ---
 title: browsingData.removeCache()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

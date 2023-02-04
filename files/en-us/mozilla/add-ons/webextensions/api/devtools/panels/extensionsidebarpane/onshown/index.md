@@ -1,6 +1,7 @@
 ---
 title: devtools.panels.ExtensionSidebarPane.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onShown
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

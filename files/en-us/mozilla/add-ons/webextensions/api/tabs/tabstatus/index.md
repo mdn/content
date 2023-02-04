@@ -1,6 +1,7 @@
 ---
 title: tabs.TabStatus
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/TabStatus
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

@@ -1,6 +1,7 @@
 ---
 title: proxy
 slug: Mozilla/Add-ons/WebExtensions/API/proxy
+page-type: webextension-api
 tags:
   - API
   - Add-ons

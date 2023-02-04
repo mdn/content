@@ -1,6 +1,7 @@
 ---
 title: user_scripts
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts
+page-type: webextension-manifest-key
 tags:
   - Add-ons
   - Extensions

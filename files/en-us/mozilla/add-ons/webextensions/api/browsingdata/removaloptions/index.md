@@ -1,6 +1,7 @@
 ---
 title: browsingData.RemovalOptions
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/RemovalOptions
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

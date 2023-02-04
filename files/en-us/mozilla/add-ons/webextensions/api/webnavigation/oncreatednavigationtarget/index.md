@@ -1,6 +1,7 @@
 ---
 title: webNavigation.onCreatedNavigationTarget
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCreatedNavigationTarget
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

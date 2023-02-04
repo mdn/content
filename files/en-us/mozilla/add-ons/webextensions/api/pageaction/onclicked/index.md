@@ -1,6 +1,7 @@
 ---
 title: pageAction.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

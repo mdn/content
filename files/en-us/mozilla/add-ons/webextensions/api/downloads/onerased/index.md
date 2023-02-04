@@ -1,6 +1,7 @@
 ---
 title: downloads.onErased
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onErased
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

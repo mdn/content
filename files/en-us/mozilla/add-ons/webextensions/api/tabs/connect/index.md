@@ -1,6 +1,7 @@
 ---
 title: tabs.connect()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/connect
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

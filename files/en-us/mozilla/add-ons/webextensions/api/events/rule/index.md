@@ -1,6 +1,7 @@
 ---
 title: events.Rule
 slug: Mozilla/Add-ons/WebExtensions/API/events/Rule
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

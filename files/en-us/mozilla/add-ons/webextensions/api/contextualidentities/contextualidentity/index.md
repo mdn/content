@@ -1,6 +1,7 @@
 ---
 title: contextualIdentities.ContextualIdentity
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/ContextualIdentity
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

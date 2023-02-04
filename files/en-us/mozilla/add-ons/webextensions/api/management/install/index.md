@@ -1,6 +1,7 @@
 ---
 title: management.install()
 slug: Mozilla/Add-ons/WebExtensions/API/management/install
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

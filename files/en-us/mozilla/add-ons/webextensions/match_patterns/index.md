@@ -1,6 +1,7 @@
 ---
 title: Match patterns in extension manifests
 slug: Mozilla/Add-ons/WebExtensions/Match_patterns
+page-type: guide
 tags:
   - WebExtensions
 browser-compat: webextensions.match_patterns.scheme

@@ -1,6 +1,7 @@
 ---
 title: runtime.openOptionsPage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

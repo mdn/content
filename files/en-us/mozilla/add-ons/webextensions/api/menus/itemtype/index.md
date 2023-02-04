@@ -1,6 +1,7 @@
 ---
 title: menus.ItemType
 slug: Mozilla/Add-ons/WebExtensions/API/menus/ItemType
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

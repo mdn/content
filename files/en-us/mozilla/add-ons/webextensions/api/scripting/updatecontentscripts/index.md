@@ -1,6 +1,7 @@
 ---
 title: scripting.updateContentScripts()
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/updateContentScripts
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

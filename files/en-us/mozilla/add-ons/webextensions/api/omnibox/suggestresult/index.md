@@ -1,6 +1,7 @@
 ---
 title: omnibox.SuggestResult
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/SuggestResult
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

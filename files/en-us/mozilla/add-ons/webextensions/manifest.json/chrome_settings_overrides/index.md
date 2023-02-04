@@ -1,6 +1,7 @@
 ---
 title: chrome_settings_overrides
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides
+page-type: webextension-manifest-key
 tags:
   - Add-ons
   - Extensions

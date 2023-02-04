@@ -1,6 +1,7 @@
 ---
 title: contentScripts.RegisteredContentScript.unregister()
 slug: >-
+page-type: webextension-api-function
   Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript/unregister
 tags:
   - API

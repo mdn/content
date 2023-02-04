@@ -1,6 +1,7 @@
 ---
 title: devtools.inspectedWindow.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/reload
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

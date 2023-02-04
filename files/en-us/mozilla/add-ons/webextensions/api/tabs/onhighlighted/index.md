@@ -1,6 +1,7 @@
 ---
 title: tabs.onHighlighted
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlighted
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

@@ -1,6 +1,7 @@
 ---
 title: runtime.PlatformNaclArch
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformNaclArch
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

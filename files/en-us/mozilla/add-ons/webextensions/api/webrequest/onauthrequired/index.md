@@ -1,6 +1,7 @@
 ---
 title: webRequest.onAuthRequired
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

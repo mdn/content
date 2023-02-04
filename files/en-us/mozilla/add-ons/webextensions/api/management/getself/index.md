@@ -1,6 +1,7 @@
 ---
 title: management.getSelf()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getSelf
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

@@ -1,6 +1,7 @@
 ---
 title: topSites.get()
 slug: Mozilla/Add-ons/WebExtensions/API/topSites/get
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

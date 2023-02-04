@@ -1,6 +1,7 @@
 ---
 title: devtools panels
 slug: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
+page-type: guide
 tags:
   - Beginner
   - Guide

@@ -1,6 +1,7 @@
 ---
 title: browserSettings.overrideDocumentColors
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/overrideDocumentColors
+page-type: webextension-api-property
 tags:
   - API
   - Add-ons

@@ -1,6 +1,7 @@
 ---
 title: Example extensions
 slug: Mozilla/Add-ons/WebExtensions/Examples
+page-type: guide
 tags:
   - Interface
   - WebExtensions

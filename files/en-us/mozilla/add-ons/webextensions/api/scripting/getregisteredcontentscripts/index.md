@@ -1,6 +1,7 @@
 ---
 title: scripting.getRegisteredContentScripts()
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/getRegisteredContentScripts
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

@@ -1,6 +1,7 @@
 ---
 title: webRequest.StreamFilter.onstart
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/onstart
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

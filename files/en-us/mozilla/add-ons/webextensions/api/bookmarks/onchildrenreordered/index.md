@@ -1,6 +1,7 @@
 ---
 title: bookmarks.onChildrenReordered
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChildrenReordered
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

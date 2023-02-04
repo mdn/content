@@ -1,6 +1,7 @@
 ---
 title: downloads.DownloadTime
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadTime
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

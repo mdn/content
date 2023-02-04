@@ -1,6 +1,7 @@
 ---
 title: webRequest.BlockingResponse
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

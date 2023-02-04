@@ -1,6 +1,7 @@
 ---
 title: sessions.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/onChanged
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

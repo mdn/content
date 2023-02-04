@@ -1,6 +1,7 @@
 ---
 title: permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
+page-type: webextension-manifest-key
 tags:
   - Add-ons
   - Extensions

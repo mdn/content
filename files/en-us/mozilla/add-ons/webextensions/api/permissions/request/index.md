@@ -1,6 +1,7 @@
 ---
 title: permissions.request()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/request
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

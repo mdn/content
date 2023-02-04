@@ -1,6 +1,7 @@
 ---
 title: Extension pages
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
+page-type: guide
 tags:
   - Beginner
   - User Interface

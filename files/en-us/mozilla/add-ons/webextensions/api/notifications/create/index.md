@@ -1,6 +1,7 @@
 ---
 title: notifications.create()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/create
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

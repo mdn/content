@@ -1,6 +1,7 @@
 ---
 title: devtools.panels.create()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/create
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

@@ -1,6 +1,7 @@
 ---
 title: permissions.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

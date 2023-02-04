@@ -1,6 +1,7 @@
 ---
 title: Your second extension
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
+page-type: guide
 tags:
   - WebExtensions
 ---

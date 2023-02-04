@@ -1,6 +1,7 @@
 ---
 title: tabs.executeScript()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

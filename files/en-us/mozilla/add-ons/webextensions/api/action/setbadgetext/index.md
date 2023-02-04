@@ -1,6 +1,7 @@
 ---
 title: action.setBadgeText()
 slug: Mozilla/Add-ons/WebExtensions/API/action/setBadgeText
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

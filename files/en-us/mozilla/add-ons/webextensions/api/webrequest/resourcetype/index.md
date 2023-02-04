@@ -1,6 +1,7 @@
 ---
 title: webRequest.ResourceType
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/ResourceType
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

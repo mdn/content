@@ -1,6 +1,7 @@
 ---
 title: cookies.SameSiteStatus
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/SameSiteStatus
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

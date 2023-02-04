@@ -1,6 +1,7 @@
 ---
 title: userScripts.register()
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/register
+page-type: webextension-api-function
 tags:
   - Add-ons
   - Extensions

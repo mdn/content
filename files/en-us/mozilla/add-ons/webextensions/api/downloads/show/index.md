@@ -1,6 +1,7 @@
 ---
 title: downloads.show()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/show
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

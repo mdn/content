@@ -1,6 +1,7 @@
 ---
 title: history
 slug: Mozilla/Add-ons/WebExtensions/API/history
+page-type: webextension-api
 tags:
   - API
   - Add-ons

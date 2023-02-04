@@ -1,6 +1,7 @@
 ---
 title: tabs.onReplaced
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onReplaced
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

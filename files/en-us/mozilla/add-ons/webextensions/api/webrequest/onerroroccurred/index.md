@@ -1,6 +1,7 @@
 ---
 title: webRequest.onErrorOccurred
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onErrorOccurred
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

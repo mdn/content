@@ -1,6 +1,7 @@
 ---
 title: webRequest.handlerBehaviorChanged()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/handlerBehaviorChanged
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

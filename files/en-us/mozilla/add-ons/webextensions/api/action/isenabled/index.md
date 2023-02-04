@@ -1,6 +1,7 @@
 ---
 title: action.isEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/action/isEnabled
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

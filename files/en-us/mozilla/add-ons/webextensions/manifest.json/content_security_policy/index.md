@@ -1,6 +1,7 @@
 ---
 title: content_security_policy
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
+page-type: webextension-manifest-key
 tags:
   - Add-ons
   - Extensions

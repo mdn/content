@@ -1,6 +1,7 @@
 ---
 title: runtime.getURL()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getURL
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

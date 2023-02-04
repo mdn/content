@@ -1,6 +1,7 @@
 ---
 title: browserSettings
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings
+page-type: webextension-api
 tags:
   - API
   - Add-ons

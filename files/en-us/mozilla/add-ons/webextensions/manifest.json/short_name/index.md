@@ -1,6 +1,7 @@
 ---
 title: short_name
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/short_name
+page-type: webextension-manifest-key
 tags:
   - Add-ons
   - Extensions

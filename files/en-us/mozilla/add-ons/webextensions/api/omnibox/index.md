@@ -1,6 +1,7 @@
 ---
 title: omnibox
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox
+page-type: webextension-api
 tags:
   - API
   - Add-ons

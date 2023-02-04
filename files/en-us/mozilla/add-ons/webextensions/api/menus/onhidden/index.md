@@ -1,6 +1,7 @@
 ---
 title: menus.onHidden
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onHidden
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

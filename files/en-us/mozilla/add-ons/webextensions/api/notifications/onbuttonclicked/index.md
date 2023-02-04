@@ -1,6 +1,7 @@
 ---
 title: notifications.onButtonClicked
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

@@ -1,6 +1,7 @@
 ---
 title: webRequest.onCompleted
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onCompleted
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

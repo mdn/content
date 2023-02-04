@@ -1,6 +1,7 @@
 ---
 title: tabs.show()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/show
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

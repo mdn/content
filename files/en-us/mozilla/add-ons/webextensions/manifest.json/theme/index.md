@@ -1,6 +1,7 @@
 ---
 title: theme
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme
+page-type: webextension-manifest-key
 tags:
   - Add-ons
   - Browser

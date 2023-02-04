@@ -1,6 +1,7 @@
 ---
 title: runtime.lastError
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/lastError
+page-type: webextension-api-property
 tags:
   - API
   - Add-ons

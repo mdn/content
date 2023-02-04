@@ -1,6 +1,7 @@
 ---
 title: webRequest.onBeforeSendHeaders
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

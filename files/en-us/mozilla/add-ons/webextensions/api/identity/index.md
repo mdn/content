@@ -1,6 +1,7 @@
 ---
 title: identity
 slug: Mozilla/Add-ons/WebExtensions/API/identity
+page-type: webextension-api
 tags:
   - API
   - Add-ons

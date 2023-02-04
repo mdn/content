@@ -1,6 +1,7 @@
 ---
 title: sidebarAction.getPanel()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

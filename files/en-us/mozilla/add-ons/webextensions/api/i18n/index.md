@@ -1,6 +1,7 @@
 ---
 title: i18n
 slug: Mozilla/Add-ons/WebExtensions/API/i18n
+page-type: webextension-api
 tags:
   - API
   - Add-ons

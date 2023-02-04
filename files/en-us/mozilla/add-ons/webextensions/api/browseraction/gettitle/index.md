@@ -1,6 +1,7 @@
 ---
 title: browserAction.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getTitle
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

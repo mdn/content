@@ -1,6 +1,7 @@
 ---
 title: management.uninstall()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstall
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

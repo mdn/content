@@ -1,6 +1,7 @@
 ---
 title: Working with userScripts
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts
+page-type: guide
 tags:
   - API
   - Extensions

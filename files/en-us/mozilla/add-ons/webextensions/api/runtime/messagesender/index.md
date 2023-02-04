@@ -1,6 +1,7 @@
 ---
 title: runtime.MessageSender
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

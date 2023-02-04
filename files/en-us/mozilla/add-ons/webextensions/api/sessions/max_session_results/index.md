@@ -1,6 +1,7 @@
 ---
 title: sessions.MAX_SESSION_RESULTS
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/MAX_SESSION_RESULTS
+page-type: webextension-api-property
 tags:
   - API
   - Add-ons

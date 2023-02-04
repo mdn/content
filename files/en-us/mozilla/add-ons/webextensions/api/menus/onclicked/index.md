@@ -1,6 +1,7 @@
 ---
 title: menus.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onClicked
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

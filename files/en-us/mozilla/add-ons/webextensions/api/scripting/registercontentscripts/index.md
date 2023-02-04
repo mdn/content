@@ -1,6 +1,7 @@
 ---
 title: scripting.registerContentScripts()
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/registerContentScripts
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

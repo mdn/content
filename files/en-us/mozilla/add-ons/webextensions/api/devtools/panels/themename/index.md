@@ -1,6 +1,7 @@
 ---
 title: devtools.panels.themeName
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/themeName
+page-type: webextension-api-property
 tags:
   - API
   - Add-ons

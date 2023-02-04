@@ -1,6 +1,7 @@
 ---
 title: runtime.onSuspend
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onSuspend
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

@@ -1,6 +1,7 @@
 ---
 title: captivePortal
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal
+page-type: webextension-api
 tags:
   - API
   - Add-ons

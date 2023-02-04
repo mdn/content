@@ -1,6 +1,7 @@
 ---
 title: tabs.insertCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

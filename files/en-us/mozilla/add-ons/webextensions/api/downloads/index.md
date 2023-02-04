@@ -1,6 +1,7 @@
 ---
 title: downloads
 slug: Mozilla/Add-ons/WebExtensions/API/downloads
+page-type: webextension-api
 tags:
   - API
   - Add-ons

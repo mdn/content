@@ -1,6 +1,7 @@
 ---
 title: Prerequisites
 slug: Mozilla/Add-ons/WebExtensions/Prerequisites
+page-type: guide
 tags:
   - Draft
   - WebExtensions

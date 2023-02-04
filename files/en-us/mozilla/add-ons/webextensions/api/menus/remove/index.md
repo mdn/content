@@ -1,6 +1,7 @@
 ---
 title: menus.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/remove
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

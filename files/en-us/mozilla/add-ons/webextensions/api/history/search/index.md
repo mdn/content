@@ -1,6 +1,7 @@
 ---
 title: history.search()
 slug: Mozilla/Add-ons/WebExtensions/API/history/search
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

@@ -1,6 +1,7 @@
 ---
 title: cookies.CookieStore
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

@@ -1,6 +1,7 @@
 ---
 title: sessions.Session
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/Session
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

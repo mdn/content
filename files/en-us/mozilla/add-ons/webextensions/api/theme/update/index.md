@@ -1,6 +1,7 @@
 ---
 title: theme.update()
 slug: Mozilla/Add-ons/WebExtensions/API/theme/update
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

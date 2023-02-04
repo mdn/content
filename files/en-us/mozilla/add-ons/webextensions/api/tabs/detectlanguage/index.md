@@ -1,6 +1,7 @@
 ---
 title: tabs.detectLanguage()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/detectLanguage
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

@@ -1,6 +1,7 @@
 ---
 title: menus.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onShown
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

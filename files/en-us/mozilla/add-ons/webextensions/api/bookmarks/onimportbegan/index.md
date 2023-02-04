@@ -1,6 +1,7 @@
 ---
 title: bookmarks.onImportBegan
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportBegan
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

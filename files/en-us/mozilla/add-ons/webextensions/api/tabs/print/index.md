@@ -1,6 +1,7 @@
 ---
 title: tabs.print()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/print
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

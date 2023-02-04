@@ -1,6 +1,7 @@
 ---
 title: tabs.onActiveChanged
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onActiveChanged
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

@@ -1,6 +1,7 @@
 ---
 title: cookies.getAllCookieStores()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/getAllCookieStores
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

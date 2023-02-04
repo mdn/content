@@ -1,6 +1,7 @@
 ---
 title: bookmarks.getTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

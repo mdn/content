@@ -1,6 +1,7 @@
 ---
 title: browserAction.ImageDataType
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/ImageDataType
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

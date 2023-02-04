@@ -1,6 +1,7 @@
 ---
 title: proxy.RequestDetails
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/RequestDetails
+page-type: webextension-api-type
 tags:
   - Add-ons
   - Extensions

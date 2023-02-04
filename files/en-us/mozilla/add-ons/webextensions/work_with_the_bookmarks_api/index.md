@@ -1,6 +1,7 @@
 ---
 title: Work with the Bookmarks API
 slug: Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API
+page-type: guide
 tags:
   - Add-ons
   - Beginner

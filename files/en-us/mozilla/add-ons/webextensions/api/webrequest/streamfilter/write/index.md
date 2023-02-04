@@ -1,6 +1,7 @@
 ---
 title: webRequest.StreamFilter.write()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/write
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

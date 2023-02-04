@@ -1,6 +1,7 @@
 ---
 title: pageAction.setTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/setTitle
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

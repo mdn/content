@@ -1,6 +1,7 @@
 ---
 title: runtime.OnInstalledReason
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/OnInstalledReason
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

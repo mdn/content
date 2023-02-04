@@ -1,6 +1,7 @@
 ---
 title: tabs.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/remove
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

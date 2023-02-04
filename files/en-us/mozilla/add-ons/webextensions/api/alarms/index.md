@@ -1,6 +1,7 @@
 ---
 title: alarms
 slug: Mozilla/Add-ons/WebExtensions/API/alarms
+page-type: webextension-api
 tags:
   - API
   - Extensions

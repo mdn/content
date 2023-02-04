@@ -1,6 +1,7 @@
 ---
 title: runtime.getManifest()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getManifest
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

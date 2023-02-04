@@ -1,6 +1,7 @@
 ---
 title: webRequest.onBeforeRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

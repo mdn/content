@@ -1,6 +1,7 @@
 ---
 title: webNavigation.onHistoryStateUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onHistoryStateUpdated
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

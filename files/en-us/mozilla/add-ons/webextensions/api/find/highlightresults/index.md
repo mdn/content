@@ -1,6 +1,7 @@
 ---
 title: find.highlightResults()
 slug: Mozilla/Add-ons/WebExtensions/API/find/highlightResults
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

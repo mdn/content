@@ -1,6 +1,7 @@
 ---
 title: sessions.restore()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/restore
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

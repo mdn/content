@@ -1,6 +1,7 @@
 ---
 title: downloads.DoubleDelta
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DoubleDelta
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

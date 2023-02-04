@@ -1,6 +1,7 @@
 ---
 title: idle
 slug: Mozilla/Add-ons/WebExtensions/API/idle
+page-type: webextension-api
 tags:
   - API
   - Add-ons

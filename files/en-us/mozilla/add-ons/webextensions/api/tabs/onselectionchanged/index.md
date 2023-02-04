@@ -1,6 +1,7 @@
 ---
 title: tabs.onSelectionChanged
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onSelectionChanged
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

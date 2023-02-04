@@ -1,6 +1,7 @@
 ---
 title: runtime.onInstalled
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

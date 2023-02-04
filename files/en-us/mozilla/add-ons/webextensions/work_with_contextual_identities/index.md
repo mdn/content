@@ -1,6 +1,7 @@
 ---
 title: Work with contextual identities
 slug: Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities
+page-type: guide
 tags:
   - Add-ons
   - Beginner

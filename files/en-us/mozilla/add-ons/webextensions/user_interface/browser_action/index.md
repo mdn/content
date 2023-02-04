@@ -1,6 +1,7 @@
 ---
 title: Toolbar button
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
+page-type: guide
 tags:
   - WebExtension
 ---

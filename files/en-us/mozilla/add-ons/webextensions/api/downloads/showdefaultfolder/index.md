@@ -1,6 +1,7 @@
 ---
 title: downloads.showDefaultFolder()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/showDefaultFolder
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

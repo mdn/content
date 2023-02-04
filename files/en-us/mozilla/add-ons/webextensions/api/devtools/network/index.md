@@ -1,6 +1,7 @@
 ---
 title: devtools.network
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network
+page-type: webextension-api-property
 tags:
   - API
   - Add-ons

@@ -1,6 +1,7 @@
 ---
 title: browserAction.setBadgeTextColor()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeTextColor
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

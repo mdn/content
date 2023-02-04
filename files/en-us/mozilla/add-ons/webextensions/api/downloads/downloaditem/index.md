@@ -1,6 +1,7 @@
 ---
 title: downloads.DownloadItem
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

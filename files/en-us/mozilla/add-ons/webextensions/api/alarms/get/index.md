@@ -1,6 +1,7 @@
 ---
 title: alarms.get()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/get
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

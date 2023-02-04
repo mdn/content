@@ -1,6 +1,7 @@
 ---
 title: management.setEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/setEnabled
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

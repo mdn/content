@@ -1,6 +1,7 @@
 ---
 title: What are extensions?
 slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
+page-type: guide
 tags:
   - Extensions
   - WebExtensions

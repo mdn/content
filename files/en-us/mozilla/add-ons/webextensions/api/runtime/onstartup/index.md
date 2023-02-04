@@ -1,6 +1,7 @@
 ---
 title: runtime.onStartup
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onStartup
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons
