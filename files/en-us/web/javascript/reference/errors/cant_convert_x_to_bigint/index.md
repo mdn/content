@@ -1,5 +1,5 @@
 ---
-title: 'TypeError: can''t convert x to BigInt'
+title: "TypeError: can't convert x to BigInt"
 slug: Web/JavaScript/Reference/Errors/Cant_convert_x_to_BigInt
 page-type: javascript-error
 tags:

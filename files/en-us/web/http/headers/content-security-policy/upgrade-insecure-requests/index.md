@@ -1,5 +1,5 @@
 ---
-title: 'CSP: upgrade-insecure-requests'
+title: "CSP: upgrade-insecure-requests"
 slug: Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
 tags:
   - CSP

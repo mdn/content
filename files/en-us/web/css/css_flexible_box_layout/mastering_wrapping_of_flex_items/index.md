@@ -60,9 +60,13 @@ If you need flex items to line up in the cross axis, controlling the width in th
 
 ## Creating gutters between items
 
-When wrapping flex items, the need to space them out is likely to arise. You can see from the live example below that in order to create gaps that do not also create a gap at the edges of the container, we need to use negative margins on the flex container itself. Any border on the flex container is then moved to a second wrapper in order that the negative margin can pull the items up to that wrapper element.
+To create gaps or gutters between flex items, use the {{CSSXref('gap')}} property.
 
-A more robust way to perform the above tasks is to include the Flexbox `gap` property on the container to set equal space between all flex items. Try setting gaps using both negative margins and the `gap` property in the editor below.
+The gap property in CSS is a shorthand for `row-gap` and `column-gap`, specifying the size of gutters, which is the space between rows and columns within grid, flex, and multi-column layouts.
+
+In Flexbox, the `gap` property is applied to the flex container. It creates a fixed space between adjacent flex items. However, the `gap` property is not the only thing that can put space between items. Margins, paddings, `justify-content`, and `align-content` can also increase the size of the gutter, affecting the actual size of the gap.
+
+To see how the `gap` property differs from `margin` in both axes, try adding a `gap` to the container `.box` and change the `margin` value on the `.box > *` flex items.
 
 {{EmbedGHLiveSample("css-examples/flexbox/wrapping/gaps.html", '100%', 830)}}
 

@@ -64578,10 +64578,6 @@
     "modified": "2020-10-15T21:39:35.661Z",
     "contributors": ["fscholz", "teoli"]
   },
-  "Web/API/WebGLRenderingContext/commit": {
-    "modified": "2020-10-15T21:42:35.338Z",
-    "contributors": ["sideshowbarker", "fscholz", "nmve", "teoli"]
-  },
   "Web/API/WebGLRenderingContext/compileShader": {
     "modified": "2020-10-15T21:39:39.333Z",
     "contributors": ["fscholz", "teoli", "DanielWeb"]

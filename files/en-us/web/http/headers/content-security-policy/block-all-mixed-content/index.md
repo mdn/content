@@ -1,5 +1,5 @@
 ---
-title: 'CSP: block-all-mixed-content'
+title: "CSP: block-all-mixed-content"
 slug: Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content
 tags:
   - CSP

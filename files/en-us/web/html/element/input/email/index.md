@@ -379,6 +379,12 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
         {{domxref("HTMLInputElement.select", "select()")}}
       </td>
     </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td>with no <code>list</code> attribute:
+                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></td>
+      <td>with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code></td>
+    </tr>
   </tbody>
 </table>
 
