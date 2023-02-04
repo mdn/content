@@ -1,8 +1,8 @@
 ---
 title: devtools.panels.ElementsPanel.setExpression()
 slug: >-
-page-type: webextension-api-function
   Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setExpression
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons
