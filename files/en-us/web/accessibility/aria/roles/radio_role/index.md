@@ -106,7 +106,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ## Associated WAI-ARIA Roles, States, and Properties
 
-- ['radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role) role
+- [`radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role) role
 
   - : The radio buttons are contained in or owned by an element with role `radiogroup`. If unable to be nested within a `radiogroup` within the markup, the `aria-owns` attribute of the `radiogroup` contains the `id` values of the non-nested radio buttons in the group.
 
