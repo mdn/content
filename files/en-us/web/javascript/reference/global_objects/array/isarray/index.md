@@ -16,6 +16,8 @@ browser-compat: javascript.builtins.Array.isArray
 
 The **`Array.isArray()`** static method determines whether the passed value is an {{jsxref("Array")}}.
 
+{{EmbedInteractiveExample("pages/js/array-isarray.html")}}
+
 ## Syntax
 
 ```js-nolint
