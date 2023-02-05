@@ -29,7 +29,7 @@ The void elements in HTML are as follows:
 - {{HTMLElement("keygen")}} (HTML 5.2 Draft removed)
 - {{HTMLElement("link")}}
 - {{HTMLElement("meta")}}
-- {{HTMLElement("param")}} (Deprecated element)
+- {{HTMLElement("param")}} {{deprecated_inline}}
 - {{HTMLElement("source")}}
 - {{HTMLElement("track")}}
 - {{HTMLElement("wbr")}}
