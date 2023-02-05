@@ -19,6 +19,10 @@ The **`page-break-before`** CSS property adjusts page breaks _before_ the curren
 
 This property applies to block elements that generate a box. It won't apply on an empty {{ HTMLElement("div") }} that won't generate a box.
 
+{{EmbedInteractiveExample("pages/css/page-break-before.html")}}
+
+## Syntax
+
 ```css
 /* Keyword values */
 page-break-before: auto;
@@ -36,8 +40,6 @@ page-break-before: revert;
 page-break-before: revert-layer;
 page-break-before: unset;
 ```
-
-## Syntax
 
 ### Values
 
