@@ -160,7 +160,7 @@ The `action` key is an object that may have any of these properties, all optiona
           </li>
         </ul>
         <p>This property is only supported in Firefox.</p>
-        <p>This property is optional, and defaults to "navbar".</p>
+        <p>This property is optional, and defaults to "menupanel".</p>
         <p>
           Firefox remembers the <code>default_area</code> setting for an
           extension, even if that extension is uninstalled and subsequently
