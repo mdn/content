@@ -58,6 +58,10 @@ There are a couple of key differences between block-level elements and inline el
 
 The distinction of block-level vs. inline elements was used in HTML specifications up to 4.01. Later, this binary distinction is replaced with a more complex set of [content categories](/en-US/docs/Web/Guide/HTML/Content_categories). While the "inline" category roughly corresponds to the category of [phrasing content](/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content), the "block-level" category doesn't directly correspond to any HTML content category, but _"block-level" and "inline" elements combined_ correspond to the [flow content](/en-US/docs/Web/Guide/HTML/Content_categories#flow_content) in HTML. There are also additional categories, e.g. [interactive content](/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content).
 
+### Changing element levels
+
+You can change the _visual presentation_ of an element using the CSS {{cssxref("display")}} property. For example, by changing the value of `display` from `inline` to `block`, the browser will render the inline element as a block box rather than an inline box, and vice versa. However, doing this will not change the _category_ and the _content model_ of the element. For example, even if the `display` of the `span` element is changed to `block`, it should still only contain [phrasing content](/en-US/docs/Web/HTML/Content_categories#phrasing_content).
+
 ## Elements
 
 The following is a complete list of all HTML "block-level" elements (although "block-level" is not technically defined for elements that are new in HTML5).
