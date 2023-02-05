@@ -22,10 +22,10 @@ Whitespace is any string of text composed only of spaces, tabs or line breaks (t
 
 In the case of HTML, whitespace is largely ignored — whitespace in between words is treated as a single character, and whitespace at the start and end of elements and outside elements is ignored. Take the following minimal example:
 
-```html
+```html-nolint
 <!DOCTYPE html>
 
-<h1>Hello World!</h1>
+<h1> Hello World! </h1>
 ```
 
 This source code contains a couple of line feeds after the `DOCTYPE` and a bunch of space characters before, after, and inside the `<h1>` element, but the browser doesn't seem to care at all and just shows the words "Hello World!" as if these characters didn't exist at all:
@@ -75,8 +75,9 @@ Let's take another example. To make it easier, we've added a comment that shows 
 
 This example:
 
-```html
-<h1>Hello <span> World!</span></h1>
+```html-nolint
+<h1>   Hello
+        <span> World!</span>   </h1>
 
 <!--
 <h1>◦◦◦Hello◦⏎
@@ -102,37 +103,40 @@ Inside this context, whitespace character processing can be summarized as follow
 
 1. First, all spaces and tabs immediately before and after a line break are ignored so, if we take our example markup from before:
 
-   ```html
-   <h1>◦◦◦Hello◦⏎ ⇥⇥⇥⇥<span>◦World!</span>⇥◦◦</h1>
+   ```html-nolint
+   <h1>◦◦◦Hello◦⏎
+   ⇥⇥⇥⇥<span>◦World!</span>⇥◦◦</h1>
    ```
 
    ...and apply this first rule, we get:
 
-   ```html
-   <h1>◦◦◦Hello⏎ <span>◦World!</span>⇥◦◦</h1>
+   ```html-nolint
+   <h1>◦◦◦Hello⏎
+   <span>◦World!</span>⇥◦◦</h1>
    ```
 
 2. Next, all tab characters are handled as space characters, so the example becomes:
 
-   ```html
-   <h1>◦◦◦Hello⏎ <span>◦World!</span>◦◦◦</h1>
+   ```html-nolint
+   <h1>◦◦◦Hello⏎
+   <span>◦World!</span>◦◦◦</h1>
    ```
 
 3. Next, line breaks are converted to spaces:
 
-   ```html
+   ```html-nolint
    <h1>◦◦◦Hello◦<span>◦World!</span>◦◦◦</h1>
    ```
 
 4. After that, any space immediately following another space (even across two separate inline elements) is ignored, so we end up with:
 
-   ```html
+   ```html-nolint
    <h1>◦Hello◦<span>World!</span>◦</h1>
    ```
 
 5. And finally, sequences of spaces at the beginning and end of an element are removed, so we finally get this:
 
-   ```html
+   ```html-nolint
    <h1>Hello◦<span>World!</span></h1>
    ```
 
@@ -152,11 +156,11 @@ Let's take a look at an example to explain how. We've marked the whitespace char
 
 We have 3 text nodes that contain only whitespace, one before the first `<div>`, one between the 2 `<divs>`, and one after the second `<div>`.
 
-```html
+```html-nolint
 <body>
-  <div>Hello</div>
+  <div>  Hello  </div>
 
-  <div>World!</div>
+   <div>  World!   </div>
 </body>
 
 <!--
@@ -178,13 +182,11 @@ We can summarize how the whitespace here is handled as follows (there may be som
 
 1. Because we're inside a block formatting context, everything must be a block, so our 3 text nodes also become blocks, just like the 2 `<div>`s. Blocks occupy the full width available and are stacked on top of each other, which means that, starting from the example above:
 
-   ```html
-   <body>
-     ⏎ ⇥
-     <div>◦◦Hello◦◦</div>
-     ⏎ ⏎ ◦◦◦
-     <div>◦◦World!◦◦</div>
-     ◦◦⏎
+   ```html-nolint
+   <body>⏎
+   ⇥<div>◦◦Hello◦◦</div>⏎
+   ⏎
+   ◦◦◦<div>◦◦World!◦◦</div>◦◦⏎
    </body>
    ```
 
@@ -324,12 +326,8 @@ li {
 
 You can also solve this problem by putting your list items all on the same line in the source, which causes the whitespace nodes to not be created in the first place:
 
-```html
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+```html-nolint
+<li></li><li></li><li></li><li></li><li></li>
 ```
 
 ## DOM traversal and whitespace
