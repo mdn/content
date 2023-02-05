@@ -152,7 +152,7 @@ We need an extra class `active` to define the look and feel of our control when 
 Now, let's handle the list of options:
 
 ```css
-/* The .select selector here helps to make we only select
+/* The .select selector here helps to make sure we only select
    element inside our control. */
 .select .optList {
   /* This will make sure our list of options will be displayed below the value

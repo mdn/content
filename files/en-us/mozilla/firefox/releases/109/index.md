@@ -69,6 +69,7 @@ No notable changes.
 - Manifest V3 is now supported with the ability to sign and release Manifest V3 extensions on AMO. See the [Manifest v3 signing available November 21 on Firefox Nightly](https://blog.mozilla.org/addons/2022/11/17/manifest-v3-signing-available-november-21-on-firefox-nightly/) blog post for more information.
 - The default [Content Security Policy (CSP)](/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) for Manifest V3 extensions has been updated to [include `upgrade-insecure-requests`](/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#upgrade_insecure_network_requests_in_manifest_v3). This means that, by default, all network requests are upgraded to use `https:`. Extensions that need to use `http:` can do so by overriding the default CSP using the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json key ({{bug(1797086)}}).
 - The property `secretKeyLength` has been added to {{WebExtAPIRef("webRequest.SecurityInfo")}}. This property provides the length in bits of the secret key in the security properties of a web request ({{bug(1778473)}}).
+- With the introduction of the [extensions button](https://support.mozilla.org/kb/unified-extensions), the default value of `default_area` in the [`action`](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) and [`browser_action`](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest keys has changed from `"navbar"` to `"menupanel" ({{bug(1799947)}}).
 
 ## Older versions
 

@@ -1,5 +1,5 @@
 ---
-title: 'CSP: form-action'
+title: "CSP: form-action"
 slug: Web/HTTP/Headers/Content-Security-Policy/form-action
 tags:
   - CSP
@@ -56,7 +56,7 @@ Note that this same set of values can be used in all {{Glossary("fetch directive
 ### Meta tag configuration
 
 ```html
- <meta http-equiv="Content-Security-Policy" content="form-action 'none'" />
+<meta http-equiv="Content-Security-Policy" content="form-action 'none'" />
 ```
 
 ### Apache configuration

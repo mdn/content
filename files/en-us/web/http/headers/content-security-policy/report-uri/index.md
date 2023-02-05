@@ -1,5 +1,5 @@
 ---
-title: 'CSP: report-uri'
+title: "CSP: report-uri"
 slug: Web/HTTP/Headers/Content-Security-Policy/report-uri
 tags:
   - CSP
