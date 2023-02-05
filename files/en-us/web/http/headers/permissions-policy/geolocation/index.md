@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: geolocation'
+title: "Permissions-Policy: geolocation"
 slug: Web/HTTP/Headers/Permissions-Policy/geolocation
 tags:
   - Permissions Policy

@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: ambient-light-sensor'
+title: "Permissions-Policy: ambient-light-sensor"
 slug: Web/HTTP/Headers/Permissions-Policy/ambient-light-sensor
 tags:
   - Ambient Light Sensor

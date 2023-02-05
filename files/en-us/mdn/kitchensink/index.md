@@ -50,7 +50,7 @@ Text that uses the `<kbd>` tag: <kbd>Shift</kbd>
 ### HTML
 
 ```html
-<pre>
+<pre></pre>
 ```
 
 ### JavaScript
@@ -275,8 +275,13 @@ if (5 < 30 && 55 > 20 && 5 < 20 && 55 > 10) {
 
 ```html
 <div id="cr-stage"></div>
-<p>Move the rectangle with arrow keys. Green means collision, blue means no collision.</p>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
+<p>
+  Move the rectangle with arrow keys. Green means collision, blue means no
+  collision.
+</p>
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
 ```
 
 ```js
