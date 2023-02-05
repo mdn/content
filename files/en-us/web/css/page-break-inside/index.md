@@ -17,6 +17,10 @@ browser-compat: css.properties.page-break-inside
 
 The **`page-break-inside`** CSS property adjusts page breaks _inside_ the current element.
 
+{{EmbedInteractiveExample("pages/css/page-break-inside.html")}}
+
+## Syntax
+
 ```css
 /* Keyword values */
 page-break-inside: auto;
@@ -29,8 +33,6 @@ page-break-inside: revert;
 page-break-inside: revert-layer;
 page-break-inside: unset;
 ```
-
-## Syntax
 
 ### Values
 

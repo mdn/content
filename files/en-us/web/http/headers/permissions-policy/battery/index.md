@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: battery'
+title: "Permissions-Policy: battery"
 slug: Web/HTTP/Headers/Permissions-Policy/battery
 tags:
   - Battery
