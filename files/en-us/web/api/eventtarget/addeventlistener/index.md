@@ -157,7 +157,7 @@ try {
   const options = {
     get passive() {
       // This function will be called when the browser
-      //   attempts to access the passive property.
+      // attempts to access the passive property.
       passiveSupported = true;
       return false;
     },
