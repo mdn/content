@@ -23,9 +23,9 @@ The labels below help you find tasks based on estimated effort to complete the t
 
 | Label                                                                                                                                       | Description                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| [Small-effort tasks on the content repo](https://github.com/mdn/content/labels/effort%3A%20small) | A task that will probably require a small effort. |
-| [Medium-effort tasks on the content repo](https://github.com/mdn/content/labels/effort%3A%20medium)       | A task that will probably require a medium effort.    |
-| [Large-effort tasks on the content repo](https://github.com/mdn/content/labels/effort%3A%20large)      | A task that will probably require a large effort.     |
+| [effort: small](https://github.com/mdn/content/labels/effort%3A%20small) | A task that will probably require little effort. |
+| [effort: medium](https://github.com/mdn/content/labels/effort%3A%20medium)       | A task that will probably require a significant effort. |
+| [effort: large](https://github.com/mdn/content/labels/effort%3A%20large)      | A task that will probably require a lot of effort. |
 
 If you'd prefer to browse your tasks and choose by technology category instead, you can also find content type labels on [issues in the content repository](https://github.com/mdn/content/issues).
 
