@@ -127,14 +127,6 @@ When an extension is queried for how to handle a request, the matching rule with
 4. `upgradeScheme`
 5. `redirect`
 
-If the request is not blocked or redirected, the matching `modifyHeaders` rules are evaluated, with the most recently installed extensions getting priority. Within each extension, all `modifyHeaders` rules with a priority lower than matching `allow` or `allowAllRequests` rules are ignored.
-
-If multiple `modifyHeaders` rules specify the same header, the resulting modification for the header is determined based on the priority of each rule and the operations specified:
-
-- If a rule has been appended to a header, then lower-priority rules can only append to that header. `set` and `remove` operations are not permitted.
-- If a rule has set a header, lower priority rules cannot further modify the header, except for `append` rules from the same extension.
-- If a rule has removed a header, lower priority rules cannot further modify the header.
-
 ## Testing
 
 {{WebExtAPIRef("declarativeNetRequest.testMatchOutcome","testMatchOutcome")}}, {{WebExtAPIRef("declarativeNetRequest.getMatchedRules","getmatchedrules")}}, and {{WebExtAPIRef("declarativeNetRequest.onRuleMatchedDebug","onRuleMatchedDebug")}} are available to assist with testing rules and rulesets. These APIs require the `"declarativeNetRequestFeedback"` [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). In addition:

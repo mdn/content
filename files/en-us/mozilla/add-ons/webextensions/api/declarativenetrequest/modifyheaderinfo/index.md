@@ -17,9 +17,17 @@ browser-compat: webextensions.api.declarativeNetRequest.ModifyHeaderInfo
 
 The request or response header to modify for a request, declared in the `rule.action.requestHeaders` array or `rule.action.responseHeaders` array for rules whose {{WebExtAPIRef("declarativeNetRequest.RuleAction", "rule.action")}}`.type` is "modifyHeaders".
 
-Each object describes one header modification. To modify multiple headers, multiple objects can be specified in these arrays, or even across multiple rules. More than one extension may modify headers, provided that the specific header has not been modified before by another extension.
+Each object describes one header modification. To modify multiple headers, multiple objects can be specified in these arrays, or across multiple rules.
 
-A header may be modified only once, with one exception. The "append" operation can be executed again if the previous operation is "set" or "append".
+More than one extension may include rules that request the modification of a header. When this occurs:
+
+- If the request is not blocked or redirected, the most recently installed extension gets priority. Within each extension, all `modifyHeaders` rules with a priority lower than matching `allow` or `allowAllRequests` rules are ignored.
+
+- If multiple `modifyHeaders` rules specify the same header, the resulting modification for the header is determined based on the priority of each rule and the operations specified:
+
+  - If a rule has been appended to a header, then lower-priority rules can only append to that header. `set` and `remove` operations are not permitted.
+  - If a rule has set a header, lower priority rules cannot modify the header except for `append` rules from the same extension.
+  - If a rule has removed a header, lower priority rules cannot modify the header.
 
 ## Type
 
