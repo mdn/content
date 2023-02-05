@@ -179,7 +179,7 @@ For details about `mailto:` URLs, such as including a subject or body, see [Emai
 
 ```html
 <a href="tel:+49.157.0156">+49 157 0156</a>
-<a href="tel:+1(555)5309">(555) 5309</a>
+<a href="tel:+1(800)555-0123">(800) 555-0123</a>
 ```
 
 `tel:` link behavior varies with device capabilities:

@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: invalid BigInt syntax'
+title: "SyntaxError: invalid BigInt syntax"
 slug: Web/JavaScript/Reference/Errors/Invalid_BigInt_syntax
 page-type: javascript-error
 tags:

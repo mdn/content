@@ -41,7 +41,7 @@ that an object variant of a {{jsxref("String")}} or a {{jsxref("Number")}} is ex
 ### Invalid cases
 
 ```js example-bad
-'use strict';
+"use strict";
 
 const foo = "my string";
 // The following line does nothing if not in strict mode.
@@ -53,7 +53,7 @@ foo.bar = {}; // TypeError: can't assign to property "bar" on "my string": not a
 Either fix the code to prevent the [primitive](/en-US/docs/Glossary/Primitive) from being used in such places, or fix the issue by creating the object equivalent {{jsxref("Object")}}.
 
 ```js example-good
-'use strict';
+"use strict";
 
 const foo = new String("my string");
 foo.bar = {};

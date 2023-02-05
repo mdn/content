@@ -313,7 +313,7 @@ console.log(new Intl.DateTimeFormat().format(date));
 const shortTime = new Intl.DateTimeFormat("en", {
   timeStyle: "short"
 });
-console.log(shortTime.format(Date.now())); // "13:31 AM"
+console.log(shortTime.format(Date.now())); // "1:31 PM"
 
 const shortDate = new Intl.DateTimeFormat("en", {
   dateStyle: "short"
@@ -324,7 +324,7 @@ const mediumTime = new Intl.DateTimeFormat("en", {
   timeStyle: "medium",
   dateStyle: "short"
 });
-console.log(mediumTime.format(Date.now())); // "07/07/20, 13:31:55 AM"
+console.log(mediumTime.format(Date.now())); // "07/07/20, 1:31:55 PM"
 ```
 
 ### Using dayPeriod

@@ -16,4 +16,4 @@ It may also just be the final component when a new document is created under a p
 
 ## See also
 
-- [Choosing titles and slugs](/en-US/docs/MDN/Guidelines/Writing_style_guide#choosing_titles_and_slugs)
+- [Choosing titles and slugs](/en-US/docs/MDN/Guidelines/Writing_style_guide#slugs)

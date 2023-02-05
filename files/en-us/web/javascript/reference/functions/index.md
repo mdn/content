@@ -26,9 +26,13 @@ Function values are typically instances of [`Function`](/en-US/docs/Web/JavaScri
 
 > **Note:** Not all callable values are `instanceof Function`. For example, the `Function.prototype` object is callable but not an instance of `Function`. You can also manually set the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) of your function so it no longer inherits from `Function.prototype`. However, such cases are extremely rare.
 
+### Return value
+
 By default, if a function's execution doesn't end at a [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement, or if the `return` keyword doesn't have an expression after it, then the return value is {{jsxref("undefined")}}. The `return` statement allows you to return an arbitrary value from the function. One function call can only return one value, but you can simulate the effect of returning multiple values by returning an object or array and [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) the result.
 
 > **Note:** Constructors called with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) have a different set of logic to determine their return values.
+
+### Passing arguments
 
 [Parameters and arguments](<https://en.wikipedia.org/wiki/Parameter_(computer_programming)#Parameters_and_arguments>) have slightly different meanings, but in MDN web docs, we often use them interchangeably. For a quick reference:
 

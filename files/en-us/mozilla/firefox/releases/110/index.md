@@ -22,9 +22,16 @@ This article provides information about the changes in Firefox 110 that will aff
 
 ### CSS
 
+- Container queries and container query length units are now supported by default.
+  For more information on these queries and the related units of length, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) documentation ({{bug(1809720)}}).
+
 #### Removals
 
 ### JavaScript
+
+- Serialization of [native Error types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types) now includes the [`stack`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack) property in workers when using [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage) and [`structuredClone()`](/en-US/docs/Web/API/structuredClone).
+  With this addition, cloning native error stacks now works for all methods that use the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm), in both the main thread and workers.
+  (See {{bug(1774866)}} for more details.)
 
 #### Removals
 
@@ -42,7 +49,14 @@ This article provides information about the changes in Firefox 110 that will aff
 
 ### APIs
 
+- The `midi` permission of the [Permission API](/en-US/docs/Web/API/Permissions_API) is now supported.
+  This allows the permission status for using the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) to be queried using [`navigator.permissions.query()`](/en-US/docs/Web/API/Permissions/query) ({{bug(1772166)}}).
+
 #### DOM
+
+- The {{domxref("element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event and associated {{domxref("ContentVisibilityAutoStateChangedEvent")}} interface are now supported.
+  The event can be used by application code to stop processes related to rendering the element when the user agent is [skipping its contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents).
+  ({{bug(1798485)}}).
 
 #### Media, WebRTC, and Web Audio
 

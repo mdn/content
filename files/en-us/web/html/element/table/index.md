@@ -135,7 +135,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `none`, which indicates that no rules will be displayed; it is the default value;
     - `groups`, which will cause the rules to be displayed between row groups (defined by the {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} and {{HTMLElement("tfoot")}} elements) and between column groups (defined by the {{HTMLElement("col")}} and {{HTMLElement("colgroup")}} elements) only;
     - `rows`, which will cause the rules to be displayed between rows;
-    - `columns`, which will cause the rules to be displayed between columns;
+    - `cols`, which will cause the rules to be displayed between columns;
     - `all`, which will cause the rules to be displayed between rows and columns.
 
     To achieve a similar effect, apply the {{cssxref("border")}} property to the appropriate {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("col")}}, or {{HTMLElement("colgroup")}} elements.

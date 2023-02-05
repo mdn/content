@@ -47,7 +47,7 @@ various inputs.
 const url = new URL('https://example.com?foo=1&bar=2');
 const params1 = new URLSearchParams(url.search);
 
-// Get the URLSearchParams object directly from an URL object
+// Get the URLSearchParams object directly from a URL object
 const params1a = url.searchParams
 
 // Pass in a string literal
