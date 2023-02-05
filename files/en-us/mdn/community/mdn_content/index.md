@@ -23,9 +23,9 @@ The labels below help you find tasks based on estimated effort to complete the t
 
 | Label                                                                      | Description                                                                                        |
 | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| [effort: small](https://github.com/mdn/content/labels/effort%3A%20small)   | A task that will probably require little effort, like adding one sentence.                         |
-| [effort: medium](https://github.com/mdn/content/labels/effort%3A%20medium) | A task that will probably require non-trivial effort, like updating content to reflect the spec.   |
-| [effort: large](https://github.com/mdn/content/labels/effort%3A%20large)   | A task that will probably require significant and large-scale effort, like writing many new pages. |
+| [effort: small](https://github.com/mdn/content/labels/effort%3A%20small)   | A task that will probably require little effort, such as fixing a typo, or adding a few sentences of clarification.                |
+| [effort: medium](https://github.com/mdn/content/labels/effort%3A%20medium) | A task that will probably require non-trivial effort. For example, updating a page to reflect changes to the formal specification. |
+| [effort: large](https://github.com/mdn/content/labels/effort%3A%20large)   | A task that will probably require significant and large-scale effort, such as writing new guide and reference pages.               |
 
 If you'd prefer to browse your tasks and choose by technology category instead, you can also find content type labels on [issues in the content repository](https://github.com/mdn/content/issues).
 
