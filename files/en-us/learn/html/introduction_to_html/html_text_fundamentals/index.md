@@ -252,7 +252,7 @@ textarea.onkeyup = function(){
 
 Semantics are relied on everywhere around us—we rely on previous experience to tell us what the function of an everyday object is; when we see something, we know what its function will be. So, for example, we expect a red traffic light to mean "stop," and a green traffic light to mean "go." Things can get tricky very quickly if the wrong semantics are applied. (Do any countries use red to mean "go"? We hope not.)
 
-In a similar vein, we need to make sure we are using the correct elements, giving our content the correct meaning, function, or appearance. In this context, the {{htmlelement("h1")}} element is also a semantic element, which gives the text it wraps around the role (or meaning) of "a top level heading on your page."
+In a similar way, we need to make sure we are using the correct elements, giving our content the correct meaning, function, or appearance. In this context, the {{htmlelement("h1")}} element is also a semantic element, which gives the text it wraps around the role (or meaning) of "a top level heading on your page."
 
 ```html
 <h1>This is a top level heading</h1>
