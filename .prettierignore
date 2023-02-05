@@ -9,6 +9,7 @@ build/
 !files/en-us/glossary/**/*.md
 !files/en-us/mdn/**/*.md
 !files/en-us/web/api/w*/**/*.md
+!files/en-us/web/http/**/*.md
 
 # TODO: Prettier is replacing underscores with asterisks, failing MD049
 files/en-us/web/api/webxr_device_api/cameras/index.md
