@@ -19,13 +19,13 @@ Problems with MDN Web Docs are reported as [content repo issues](https://github.
 
 To help you choose what content issues to work on, we've sorted them using GitHub labels.
 
-The labels below help you find tasks based on how much time you have available.
+The labels below help you find tasks based on estimated effort to complete the task.
 
 | Label                                                                                                                                       | Description                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| [Less-than-30-minute tasks on the content repo](https://github.com/mdn/content/issues?q=is%3Aissue+is%3Aopen+label%3A%22time%3A+-30mins%22) | A task that will probably take less than 30 minutes. |
-| [Less-than-3-hour tasks on the content repo](https://github.com/mdn/content/issues?q=is%3Aissue+is%3Aopen+label%3A%22time%3A+-3hr%22)       | A task that will probably take less than 3 hours.    |
-| [Less-than-2-day tasks on the content repo](https://github.com/mdn/content/issues?q=is%3Aissue+is%3Aopen+label%3A%22time%3A+-2days%22)      | A task that will probably take less than 2 days.     |
+| [Small-effort tasks on the content repo](https://github.com/mdn/content/labels/effort%3A%20small) | A task that will probably require a small effort. |
+| [Medium-effort tasks on the content repo](https://github.com/mdn/content/labels/effort%3A%20medium)       | A task that will probably require a medium effort.    |
+| [Large-effort tasks on the content repo](https://github.com/mdn/content/labels/effort%3A%20large)      | A task that will probably require a large effort.     |
 
 If you'd prefer to browse your tasks and choose by technology category instead, you can also find content type labels on [issues in the content repository](https://github.com/mdn/content/issues).
 
