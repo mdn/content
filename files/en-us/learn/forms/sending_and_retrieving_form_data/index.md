@@ -250,7 +250,7 @@ There are many other server-side technologies you can use for form handling, inc
 
 - [Django](/en-US/docs/Learn/Server-side/Django) for Python (a bit more heavyweight than [Flask](https://flask.palletsprojects.com/), but with more tools and options).
 - [Express](/en-US/docs/Learn/Server-side/Express_Nodejs) for Node.js.
-- [Laravel](https://laravel.com/) for PHP.
+- [Laminas](https://getlaminas.org/) for PHP built by the core team ([Symfony](https://symfony.com/) more popular option).
 - [Ruby On Rails](https://rubyonrails.org/) for Ruby.
 - [Spring Boot](https://spring.io/guides/gs/handling-form-submission/) for Java.
 
