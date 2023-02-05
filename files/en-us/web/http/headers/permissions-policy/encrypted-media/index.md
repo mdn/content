@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: encrypted-media'
+title: "Permissions-Policy: encrypted-media"
 slug: Web/HTTP/Headers/Permissions-Policy/encrypted-media
 tags:
   - Directive
