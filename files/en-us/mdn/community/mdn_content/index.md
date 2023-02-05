@@ -21,11 +21,11 @@ To help you choose what content issues to work on, we've sorted them using GitHu
 
 The labels below help you find tasks based on estimated effort to complete the task.
 
-| Label                                                                                                                                       | Description                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| [effort: small](https://github.com/mdn/content/labels/effort%3A%20small) | A task that will probably require little effort. |
-| [effort: medium](https://github.com/mdn/content/labels/effort%3A%20medium)       | A task that will probably require a significant effort. |
-| [effort: large](https://github.com/mdn/content/labels/effort%3A%20large)      | A task that will probably require a lot of effort. |
+| Label                                                                      | Description                                          |
+| -------------------------------------------------------------------------- | ---------------------------------------------------- |
+| [effort: small](https://github.com/mdn/content/labels/effort%3A%20small)   | A task that will probably require little effort. |
+| [effort: medium](https://github.com/mdn/content/labels/effort%3A%20medium) | A task that will probably require non-trivial effort. |
+| [effort: large](https://github.com/mdn/content/labels/effort%3A%20large)   | A task that will probably require a lot of effort. |
 
 If you'd prefer to browse your tasks and choose by technology category instead, you can also find content type labels on [issues in the content repository](https://github.com/mdn/content/issues).
 
