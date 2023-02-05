@@ -51,10 +51,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.24.tgz#45c85391411987d12519d214d80c324c5100bcbc"
   integrity sha512-KZJKMObObkYFUgEWEbIJ7voJ0iGm3XqhJLkS5jyRLSMoSL7PnmCjes+CttpSzgyLu7DwJsFWsRvKBgYFxb5e7A==
 
-"@mdn/yari@1.34.0":
-  version "1.34.0"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.34.0.tgz#c98794dd812fd343f5cadf240bb1bb14ffc920de"
-  integrity sha512-AV9tcc+qcLP9sBfr/updilwD8HRckdXMkI23rsj48q9NuQLHBdIc6PTSvyODr4IPnM2MGFSm/6Ie5n6Xy2siSw==
+"@mdn/yari@1.34.9":
+  version "1.34.9"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.34.9.tgz#485c825e43d6e4c51c1b82a1aff24cafbee25910"
+  integrity sha512-OMnhIyx9qroWMZ9xe9NNU/qUOyf5k0NL334L+07LY5WDFYhYTnGkOSOm7ilXHZONN9bOJITbVxAwszCDZlI+uA==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
@@ -99,7 +99,7 @@
     md5-file "^5.0.0"
     mdast-util-from-markdown "^0.8.5"
     mdast-util-phrasing "^2.0.0"
-    mdn-data "^2.0.30"
+    mdn-data "^2.0.31"
     open "^8.4.0"
     open-editor "^3.0.0"
     prismjs "^1.29.0"
@@ -3331,10 +3331,15 @@ mdn-data@2.0.14:
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.14.tgz#7113fc4281917d63ce29b43446f701e68c25ba50"
   integrity sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==
 
-mdn-data@2.0.30, mdn-data@^2.0.30:
+mdn-data@2.0.30:
   version "2.0.30"
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.30.tgz#ce4df6f80af6cfbe218ecd5c552ba13c4dfa08cc"
   integrity sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==
+
+mdn-data@^2.0.31:
+  version "2.0.31"
+  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.31.tgz#dfb6cbdd1b0326aa231179d054b58a83212c2202"
+  integrity sha512-BoMtKzFjk2+b5QDi1QtS4XBZtwd1WIBVQSVe9Q6iIgQP+m6KhlbukWM8bp7rYgWXOXzp/cBqgHWU7az4hGV1WA==
 
 mdurl@^1.0.0, mdurl@^1.0.1:
   version "1.0.1"
