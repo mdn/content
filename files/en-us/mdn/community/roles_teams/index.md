@@ -7,6 +7,7 @@ tags:
   - community-guidelines
   - governance
 ---
+
 {{MDNSidebar}}
 
 The success and growth of the MDN Web Docs project is, in large part, due to our community of contributors. Some contributors have committed a portion of their time to assist with the daily tasks of running MDN Web Docs. Changes to the site, including maintenance tasks, are performed by employees, contractors, and a network of partners who are all dedicated to the health, growth, and maintenance of MDN Web Docs. The project relies heavily on [roles](#roles) and [teams](#teams) in the [MDN organization on GitHub](https://github.com/mdn) to manage and incorporate changes from these different groups. A list of the organization's members can be [found here](https://github.com/orgs/mdn/people).
@@ -148,12 +149,12 @@ Owners can:
 
 ### Summary of the roles
 
-| Role | Requirements | Privileges |
-|:-|:-|:-|
-| [**Contributor**](#contributor) | Follow the code of conduct and contribution guidelines | - Invitations to contributor events<br>- Eligibility to become an organization member |
-| [**Organization member**](#organization_member) | - Enable 2FA for GitHub account<br>- Enable signed commits<br><br>One or more of:<br>- Resolve two or more issues<br>- Contribute for at least two months<br>- Active contribution in a project area | Access rights at the organization level |
-| [**Maintainer**](#maintainer) | One or more of:<br>- Invited expert for at least six months<br>- Knowledge across multiple project areas<br>- Act towards overall health of the project<br>- Mentor other contributors<br>- Spend at least 16 hours per month on the project<br>- Attend community meetings | Approve and merge pull requests |
-| [**Owner**](#owner) | Limited to Mozilla staff | - Manage access of different roles to various repositories<br>- Add or archive repositories and projects |
+| Role                                            | Requirements                                                                                                                                                                                                                                                                | Privileges                                                                                               |
+| :---------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------- |
+| [**Contributor**](#contributor)                 | Follow the code of conduct and contribution guidelines                                                                                                                                                                                                                      | - Invitations to contributor events<br>- Eligibility to become an organization member                    |
+| [**Organization member**](#organization_member) | - Enable 2FA for GitHub account<br>- Enable signed commits<br><br>One or more of:<br>- Resolve two or more issues<br>- Contribute for at least two months<br>- Active contribution in a project area                                                                        | Access rights at the organization level                                                                  |
+| [**Maintainer**](#maintainer)                   | One or more of:<br>- Invited expert for at least six months<br>- Knowledge across multiple project areas<br>- Act towards overall health of the project<br>- Mentor other contributors<br>- Spend at least 16 hours per month on the project<br>- Attend community meetings | Approve and merge pull requests                                                                          |
+| [**Owner**](#owner)                             | Limited to Mozilla staff                                                                                                                                                                                                                                                    | - Manage access of different roles to various repositories<br>- Add or archive repositories and projects |
 
 ## Special roles
 

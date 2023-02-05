@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: midi'
+title: "Permissions-Policy: midi"
 slug: Web/HTTP/Headers/Permissions-Policy/midi
 tags:
   - Directive

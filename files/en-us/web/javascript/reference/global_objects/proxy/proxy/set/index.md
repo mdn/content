@@ -12,8 +12,7 @@ browser-compat: javascript.builtins.Proxy.handler.set
 
 {{JSRef}}
 
-The **`handler.set()`** method is a trap for setting a property
-value.
+The **`handler.set()`** method is a trap for the `[[Set]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as using [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) to set a property's value.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-set.html", "taller")}}
 
@@ -58,9 +57,6 @@ The `set()` method should return a boolean value.
   happened in strict-mode code, a {{jsxref("TypeError")}} will be thrown.
 
 ## Description
-
-The **`handler.set()`** method is a trap for setting property
-value.
 
 ### Interceptions
 

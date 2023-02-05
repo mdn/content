@@ -1,5 +1,5 @@
 ---
-title: 'RangeError: BigInt negative exponent'
+title: "RangeError: BigInt negative exponent"
 slug: Web/JavaScript/Reference/Errors/BigInt_negative_exponent
 page-type: javascript-error
 tags:
