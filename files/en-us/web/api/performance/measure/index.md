@@ -144,7 +144,7 @@ performance.measure("login-click", {
 });
 ```
 
-### Proving additional measurement details
+### Providing additional measurement details
 
 You can use the `details` property to provide additional information of any type. Maybe you want to record which HTML element was clicked, for example.
 
