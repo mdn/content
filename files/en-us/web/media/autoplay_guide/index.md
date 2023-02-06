@@ -130,7 +130,7 @@ if (navigator.getAutoplayPolicy(video) === "allowed") {
 The autoplay policy for a type may change due to user interaction with the site, page, or a particular element.
 Similarly, on some browsers the policy for a specific element might change even though the policy for the type has not (for example, on browsers where touching a particular element can allow just that element to autoplay).
 
-As there is no way to be notified when the autoplay policy has changed (either for a type or element) generally we recommend that the policy is checked when the page is loaded, using the type.
+As there is no way to be notified when the autoplay policy has changed (either for a type or element), generally we recommend that the policy is checked when the page is loaded, using the type.
 
 #### Example 3: Detecting autoplay failure as a fallback
 
