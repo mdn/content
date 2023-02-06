@@ -120,7 +120,7 @@ if (navigator.getAutoplayPolicy(video) === "allowed") {
 ```
 
 On page load, before the user has interacted with the page or site, the autoplay policy for the type and the individual items will be the same.
-After the user interacts with the site, page, or specific elements the autoplay policy may change for the whole `type`.
+After the user interacts with the site, page, or specific elements, the autoplay policy may change for the whole `type`.
 It is also possible that the policy for a specific item will change, even if the overall policy for the `type` does not.
 
 There is no way to be notified that the autoplay policy has changed.
