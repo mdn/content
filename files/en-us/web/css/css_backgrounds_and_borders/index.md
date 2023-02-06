@@ -66,7 +66,7 @@ div:first-of-type {
 
 {{ EmbedLiveSample('Backgrounds_borders_and_box_shadows_in_action', "450", "450") }}
 
-The background images are defined with {{cssxref("background-image")}}. The images are centered with {{cssxref("background-position")}}. Different values of the {{cssxref("background-clip")}} property for the multiple background images are employed to make the background images stay within the content box, while the background color gets clipped to the padding box; prevention the background from appearing thru transparent sections for the {{cssxref("border-image")}} and {{cssxref("border-style", "dotted")}} {{cssxref("border")}}. The rounded corners on the second sample were created using the {{cssxref("border-radius")}}property. A single {{cssxref("box-shadow")}} declaration set all the shadows, both inset and outset. To see the code for this background, borders, and box-shadow samples, [view the source on Github](https://github.com/mdn/content/blob/main/files/en-us/web/css/compositing_and_blending/index.md?plain=1).
+The background images are defined with {{cssxref("background-image")}}. The images are centered with {{cssxref("background-position")}}. Different values of the {{cssxref("background-clip")}} property for the multiple background images are used to make the background images stay within the content box. The background color gets clipped to the padding box preventing the background from appearing through the transparent sections for the {{cssxref("border-image")}} and the {{cssxref("border-style", "dotted")}} {{cssxref("border")}}. The rounded corners in the element on the right are created using the {{cssxref("border-radius")}} property. A single {{cssxref("box-shadow")}} declaration is used to set all the shadows, both inset and outset. To see the code for this sample, [view the source on Github](https://github.com/mdn/content/blob/main/files/en-us/web/css/compositing_and_blending/index.md?plain=1).
 
 ## Reference
 
@@ -127,7 +127,7 @@ The background images are defined with {{cssxref("background-image")}}. The imag
 ## Guides
 
 - [Learn CSS: background and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-  - : Learn how to implement decorative images using CSS background images.
+  - : Explains how to implement decorative images using CSS background images.
 - [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
   - : Explains how to set one or more backgrounds on an element.
 - [Resizing background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images)
@@ -139,7 +139,7 @@ The background images are defined with {{cssxref("background-image")}}. The imag
 
 ## Related concepts
 
-- {{cssxref("border-block-end-color")}} CSS property
+- {{cssxref("border-block-end-color")}} property
 - {{cssxref("border-block-start-color")}} CSS property
 - {{cssxref("border-inline-end-color")}} CSS property
 - {{cssxref("border-inline-start-color")}} CSS property
@@ -179,4 +179,4 @@ The background images are defined with {{cssxref("background-image")}}. The imag
   - [Border-radius generator](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator)
   - [Box-shadow generator](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator)
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color), including for borders.
-- The [`drop-shadow()`](/en-US/docs/Web/CSS/filter-function/drop-shadow) filter function, used by the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties, applies a drop shadow effect to the input image.
+- The [`drop-shadow()`](/en-US/docs/Web/CSS/filter-function/drop-shadow) filter function that applies a drop shadow effect to the input image. The function is used by the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.
