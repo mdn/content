@@ -115,6 +115,7 @@ let aVertexPosition;
 
 // Animation timing
 
+let shaderProgram;
 let currentAngle;
 let previousTime = 0.0;
 let degreesPerSecond = 90.0;
