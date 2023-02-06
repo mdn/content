@@ -157,7 +157,7 @@ The result of running the code on this page is:
 This example demonstrates how you can check the autoplay policy for the media elements type.
 
 The code creates a video element that has the [`autoplay`](/en-US/docs/Web/API/HTMLMediaElement/autoplay) attribute and is not muted by default.
-If the autoplay policy is "allowed-muted" the video will be muted to allow it to play.
+If the autoplay policy is "allowed-muted", the video will be muted to allow it to play.
 
 #### HTML
 
