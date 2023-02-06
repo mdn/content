@@ -69,8 +69,7 @@ nor configurable. (See {{jsxref("Object.defineProperty()")}} for more informatio
 
 ### Comparing strings
 
-In C, the `strcmp()` function is used for comparing strings. In JavaScript,
-you just use the [less-than and greater-than operators](/en-US/docs/Web/JavaScript/Reference/Operators):
+Use the [less-than and greater-than operators](/en-US/docs/Web/JavaScript/Reference/Operators) to compare strings:
 
 ```js
 const a = "a";

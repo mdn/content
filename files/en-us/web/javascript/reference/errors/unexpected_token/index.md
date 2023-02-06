@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: Unexpected token'
+title: "SyntaxError: Unexpected token"
 slug: Web/JavaScript/Reference/Errors/Unexpected_token
 page-type: javascript-error
 tags:
@@ -74,10 +74,12 @@ function round(n, upperBound, lowerBound) {
 The brackets may look correct at first, but note how the `||` is outside the
 brackets. Correct would be putting brackets around the `||`:
 
-```js example-good
+```js-nolint example-good
 function round(n, upperBound, lowerBound) {
   if ((n > upperBound) || (n < lowerBound)) {
-    throw new Error(`Number ${n} is more than ${upperBound} or less than ${lowerBound}`);
+    throw new Error(
+      `Number ${n} is more than ${upperBound} or less than ${lowerBound}`,
+    );
   } else if (n < (upperBound + lowerBound) / 2) {
     return lowerBound;
   } else {

@@ -41,6 +41,7 @@ If you think you've found a bug with the content on MDN Web Docs or with the loo
 ### Reporting an issue
 
 - Depending on the type of problem you've discovered, report it by filing an issue on one of the followings:
+
   - [documentation](https://github.com/mdn/content/issues/new/choose)
   - [translation](https://github.com/mdn/translated-content/issues/new/choose)
   - the website's [look and feel](https://github.com/mdn/yari/issues/new/choose)
@@ -63,6 +64,7 @@ If you think you've found a bug with the content on MDN Web Docs or with the loo
 - If the information you provide in the issue is incomplete, then you might be contacted later during the [issue triaging process](#review_issue_to_determine_completeness_of_information).
 
 - If you find yourself in one of the following situations, move the conversation to [MDN's discussion on GitHub](https://github.com/mdn/mdn-community/discussions):
+
   - A discussion needs to take place to clarify an issue.
   - A discussion begins after opening the issue.
   - The issue has no clear consensus on its resolution.
@@ -78,20 +80,20 @@ Ensure that you list all the actionable tasks as a checklist.
 
 For example:
 
-   ```plain
-   // Issue title
-   Ensure sections follow the order defined in the CSS property template
+```markdown
+// Issue title
+Ensure sections follow the order defined in the CSS property template
 
-   ### Description
-   The CSS property page template is defined [here](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template).
-   The task list in this issue will be used to compare the documented CSS properties with the template and track changes to the property pages for compliance.
+### Description
+The CSS property page template is defined [here](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template).
+The task list in this issue will be used to compare the documented CSS properties with the template and track changes to the property pages for compliance.
 
-   ### List of pages checked
+### List of pages checked
 
-   - [x] [accent-color](/en-US/docs/Web/CSS/accent-color) - checked, okay
-   - [ ] [backdrop-filter](/en-US/docs/Web/CSS/backdrop-filter)
-   - [ ] [letter-spacing](/en-US/docs/Web/CSS/letter-spacing) - open pull request to move `Accessibility concerns` and `Internationalization concerns` sections before the `Specifications` section.
-   ```
+- [x] [accent-color](/en-US/docs/Web/CSS/accent-color) - checked, okay
+- [ ] [backdrop-filter](/en-US/docs/Web/CSS/backdrop-filter)
+- [ ] [letter-spacing](/en-US/docs/Web/CSS/letter-spacing) - open pull request to move `Accessibility concerns` and `Internationalization concerns` sections before the `Specifications` section.
+```
 
 ## Guidelines for working on an issue
 
@@ -127,7 +129,7 @@ For all other type of bugs, begin by [opening the issue](#guidelines_for_reporti
 Wait for the issue to be triaged, so that the MDN Web Docs team can verify that the issue is legit and approves your proposed solution.
 
 > **Note:** If you open a pull request before the issue has been triaged, your time and effort might go waste if the linked issue is deemed invalid or the solution does not match the one expected by the MDN Web Docs team.
-After the issue is triaged, assign the issue to yourself.
+> After the issue is triaged, assign the issue to yourself.
 
 Using the [guidelines on working on an issue](#Guidelines_for_working_on_an_issue), try to fix the problem by updating the appropriate source, such as:
 
@@ -187,9 +189,11 @@ If any of the above information is not present, then you should ask the author o
 For each bug, set a priority label based on the severity of the issue to help people who want to work on the most important issues or areas.
 
 - Critical issue: This type of issue needs to be fixed as soon as possible, regardless of where it appears on the site. This type of issue could damage MDN's reputation severely and/or harm users. Examples of this issue include an incorrect code snippet, which if used in production, could create a severe security problem and undesirable content such as malware, profanity, pornography, hate speech, or links to such content.
+
   - Label: `p0` (will be addressed immediately)
 
 - Major issue: This type of issue could severely affect a page's usefulness. For example, a significant amount of out-of-date information, a complex and important code example that doesn't work, a significant amount of prose that is badly written and hard to understand, or a large number of broken links.
+
   - Labels: `p1` (will be addressed soon) and `p2` (will be addressed soon, but higher priority items will take precedence)
 
 - Minor issue — This is a type of improvement issue that can make the existing content better but does not affect learning or only has a minor effect on learning. Since these types of issues are not actively planned for, help from contributors to fix these issues is welcome and much appreciated. Fixing some of these issues can also provide the necessary practice to beginner contributors who are starting to get familiar with the contribution process. Examples include typos, bad grammar, a broken link, a small amount of out-of-date information or badly-written prose, or a code snippet that doesn't work.
@@ -221,4 +225,4 @@ Next, set the following labels as appropriate:
 - `broken link internal`, `broken link external` — Set the appropriate label if the issue involves a broken link to an internal or external page.
 - `needs content update`: Set this label if the issue fix in another repository will need an equivalent fix in the `mdn/content` repository.
 
-   > **Note:** After the triage process is complete, remove the `needs triage` label.
+  > **Note:** After the triage process is complete, remove the `needs triage` label.

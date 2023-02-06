@@ -143,7 +143,7 @@ Groups group multiple patterns as a whole, and capturing groups provide extra su
 const personList = `First_Name: John, Last_Name: Doe
 First_Name: Jane, Last_Name: Smith`;
 
-const regexpNames =  /First_Name: (\w+), Last_Name: (\w+)/mg;
+const regexpNames = /First_Name: (\w+), Last_Name: (\w+)/gm;
 for (const match of personList.matchAll(regexpNames)) {
   console.log(`Hello ${match[1]} ${match[2]}`);
 }
@@ -155,7 +155,8 @@ for (const match of personList.matchAll(regexpNames)) {
 const personList = `First_Name: John, Last_Name: Doe
 First_Name: Jane, Last_Name: Smith`;
 
-const regexpNames =  /First_Name: (?<firstname>\w+), Last_Name: (?<lastname>\w+)/mg;
+const regexpNames =
+  /First_Name: (?<firstname>\w+), Last_Name: (?<lastname>\w+)/gm;
 for (const match of personList.matchAll(regexpNames)) {
   console.log(`Hello ${match.groups.firstname} ${match.groups.lastname}`);
 }
@@ -187,7 +188,7 @@ lines.splice(
   1,
   0,
   " ".repeat(match.indices[1][1] - match.indices[1][0]) +
-    "^".repeat(match.indices.groups.name[1] - match.indices.groups.name[0])
+    "^".repeat(match.indices.groups.name[1] - match.indices.groups.name[0]),
 );
 console.log(lines.join("\n"));
 // function add(x, y) {

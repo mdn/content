@@ -88,9 +88,12 @@ If you write a live sample in the "Examples" section, provide a descriptive H3 h
 - CSS
 - JavaScript
 - Result
-  Write the code blocks in the respective subsections listed above.
-  In the **Result** subsection, add the call to the [`EmbedLiveSample` macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples#live_sample_macros). Preferably, include some more prose in this subsection to describe the result.
-  If you're not using a particular language type (for example, if you are not using JavaScript) or if you are hiding it, then you should omit the corresponding heading.
+
+Write the code blocks in the respective subsections listed above.
+
+In the **Result** subsection, add the call to the [`EmbedLiveSample` macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples#live_sample_macros). Preferably, include some more prose in this subsection to describe the result.
+
+If you're not using a particular language type (for example, if you are not using JavaScript) or if you are hiding it, then you should omit the corresponding heading.
 
 For example:
 

@@ -99,8 +99,6 @@ The following attributes control behavior during form submission.
 
 ## Examples
 
-### HTML
-
 ```html
 <!-- Form which will send a GET request to the current URL -->
 <form method="get">
@@ -127,8 +125,6 @@ The following attributes control behavior during form submission.
   </fieldset>
 </form>
 ```
-
-{{ EmbedLiveSample('Examples', '100%', 110) }}
 
 ## Technical summary
 
