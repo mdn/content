@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: screen-wake-lock'
+title: "Permissions-Policy: screen-wake-lock"
 slug: Web/HTTP/Headers/Permissions-Policy/screen-wake-lock
 tags:
   - Directive

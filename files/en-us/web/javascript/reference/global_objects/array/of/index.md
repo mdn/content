@@ -17,6 +17,8 @@ The **`Array.of()`** static method creates a new `Array`
 instance from a variable number of arguments, regardless of number or type of the
 arguments.
 
+{{EmbedInteractiveExample("pages/js/array-of.html", "shorter")}}
+
 ## Syntax
 
 ```js-nolint
@@ -91,7 +93,6 @@ console.log(Array.of.call({}, 1)); // [ 1 ]
 ## See also
 
 - [Polyfill of `Array.of` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
 - [`Array()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
 - {{jsxref("Array.from()")}}
 - {{jsxref("TypedArray.of()")}}

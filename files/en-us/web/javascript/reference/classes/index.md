@@ -164,11 +164,11 @@ class Point {
 const p1 = new Point(5, 5);
 const p2 = new Point(10, 10);
 p1.displayName; // undefined
-p1.distance;    // undefined
+p1.distance; // undefined
 p2.displayName; // undefined
-p2.distance;    // undefined
+p2.distance; // undefined
 
-console.log(Point.displayName);      // "Point"
+console.log(Point.displayName); // "Point"
 console.log(Point.distance(p1, p2)); // 7.0710678118654755
 ```
 
@@ -291,7 +291,7 @@ obj.speak(); // the Animal object
 const speak = obj.speak;
 speak(); // undefined
 
-Animal.eat() // class Animal
+Animal.eat(); // class Animal
 const eat = Animal.eat;
 eat(); // undefined
 ```
@@ -303,11 +303,11 @@ function Animal() {}
 
 Animal.prototype.speak = function () {
   return this;
-}
+};
 
 Animal.eat = function () {
   return this;
-}
+};
 
 const obj = new Animal();
 const speak = obj.speak;

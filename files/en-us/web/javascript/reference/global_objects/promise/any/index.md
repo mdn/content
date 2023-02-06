@@ -94,9 +94,9 @@ In this example, we have a function that fetches an image and returns a blob. We
 async function fetchAndDecode(url, description) {
   const res = await fetch(url);
   if (!res.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
+    throw new Error(`HTTP error! status: ${res.status}`);
   }
-  const data = await response.blob();
+  const data = await res.blob();
   return [data, description];
 }
 

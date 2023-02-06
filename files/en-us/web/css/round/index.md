@@ -50,11 +50,11 @@ The `valueToRound` is rounded according to the rounding strategy, to the nearest
 
 - `valueToRound`
   - : The value to be rounded.
-    This must be a {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}}, or a mathematical expression that resolves to to one of those values.
+    This must be a {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}}, or a mathematical expression that resolves to one of those values.
 
 - `roundingInterval`
   - : The rounding interval.
-    This is a {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}}, or a mathematical expression that resolves to to one of those values.
+    This is a {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}}, or a mathematical expression that resolves to one of those values.
 
 ### Return value
 
