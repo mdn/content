@@ -1480,9 +1480,12 @@ The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings
   </tbody>
 </table>
 
-#### Document property: autoplayPolicy
+#### Navigator method: getAutoplayPolicy()
 
-The {{domxref("document")}} property autoplayPolicy returns a string indicating how the browser handles requests to automatically play media (either using the {{domxref("HTMLMediaElement.autoplay", "autoplay")}} property on a media element or by attempting to trigger playback from JavaScript code. The spec for this API is still being written. The value changes over time depending on what the user is doing, their preferences, and the state of the browser in general. Potential values include `allowed` (autoplay is currently permitted), `allowed-muted` (autoplay is allowed but only with no—or muted—audio), and `disallowed` (autoplay is not allowed at this time). See {{bug(1506289)}} for more details.
+The {{domxref("navigator.getAutoplayPolicy()")}} method returns a string value indicating how the browser handles requests to automatically play media for either media elements or audio contexts.
+The possible values are: `allowed` (autoplay is currently permitted), `allowed-muted` (autoplay is allowed but only with no—or muted—audio), and `disallowed` (autoplay is not allowed at this time).
+The value can change over time for all items of a particular type, or for a particular item, depending on what the user is doing, their preferences, and the state of the browser in general.
+See {{bug(1773551)}} for more details.
 
 <table>
   <thead>
@@ -1495,27 +1498,27 @@ The {{domxref("document")}} property autoplayPolicy returns a string indicating 
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>66</td>
-      <td>No</td>
+      <td>110</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>66</td>
+      <td>110</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>66</td>
+      <td>110</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>66</td>
+      <td>110</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>dom.media.autoplay.autoplay-policy-api</code></td>
+      <td colspan="2"><code>dom.media.autoplay-policy-detection.enabled</code></td>
     </tr>
   </tbody>
 </table>
