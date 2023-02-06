@@ -17,7 +17,7 @@ Access special extension only DOM features.
 ## Functions
 
 - {{WebExtAPIRef("dom.openOrClosedShadowRoot()")}}
-  - : Gets the open shadow root or the closed shadow root hosted by the specified element. If the element doesn't attach the shadow root, it will return null.
+  - : Gets the open shadow root or the closed shadow root hosted by the specified element. If the shadow root isn't attached to the element, it will return `null`.
 
 {{WebExtExamples("h2")}}
 
