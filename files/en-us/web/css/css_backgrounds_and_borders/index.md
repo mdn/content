@@ -13,11 +13,13 @@ spec-urls: https://drafts.csswg.org/css-backgrounds/
 
 {{CSSRef}}
 
-The **CSS backgrounds and borders** module provides for adding borders, rounded corners, and box shadows to elements. The module also provides for setting whether cells inside a {{HTMLElement("table")}} have shared or separate borders.
+The **CSS backgrounds and borders** module provides properties for adding borders, rounded corners, and box shadows to elements.
 
-The module provides for many border styles, including properties to create borders made of images of any image type, from raster images to CSS gradients. Borders can be square or rounded, including providing different radii for each corner. Elements can be rounded whether or not they have a visible border.
+You can add different types of border styles, including borders made of images of any image type, from raster images to CSS gradients. Borders can be square or rounded, and a different radius can be set for each corner. Elements can be rounded whether or not they have a visible border.
 
 Box shadows include inset and outset shadow, single or multiple shadows, and solid or allowed to fade to transparent. An outer box-shadow casts a shadow as if the border-box of the element were opaque. An inner box-shadow casts a shadow as if everything outside the padding edge were opaque. The shadow can be solid or include a spread distance with the shadow color transitioning to transparent.
+
+The properties in this module also let you define whether cells inside a {{HTMLElement("table")}} should have shared or separate borders.
 
 ### Backgrounds, borders, and box shadows in action
 
