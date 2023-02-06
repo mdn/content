@@ -140,6 +140,8 @@ _Doesn't inherit any method._
   - : Returns `true` if a call to `Navigator.share()` would succeed.
 - {{domxref("Navigator.clearAppBadge()")}} {{Experimental_Inline}}
   - : Clears a badge on the current app's icon and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
+- {{domxref("Navigator.getAutoplayPolicy()")}}
+  - : Returns a value indicating whether the specified media element, audio context, or media feature "type" is allowed to autoplay.
 - {{domxref("Navigator.getBattery()")}}
   - : Returns a promise that resolves with a {{domxref("BatteryManager")}} object that returns information about the battery charging status.
 - {{domxref("Navigator.registerProtocolHandler()")}}

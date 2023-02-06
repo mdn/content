@@ -8,7 +8,6 @@ tags:
   - content-visibility
   - CSS
   - CSS Containment
-  - Experimental
   - Layout
   - Paint
   - Property
@@ -19,10 +18,9 @@ tags:
 browser-compat: api.ContentVisibilityAutoStateChangedEvent.skipped
 ---
 
-{{APIRef("CSS Containment")}}{{SeeCompatTable}}
+{{APIRef("CSS Containment")}}
 
-The `skipped` read-only property of the {{ domxref("ContentVisibilityAutoStateChangedEvent") }} interface
-returns `true` if the user agent [skips the element's contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents), or `false` otherwise.
+The `skipped` read-only property of the {{ domxref("ContentVisibilityAutoStateChangedEvent") }} interface returns `true` if the user agent [skips the element's contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents), or `false` otherwise.
 
 ## Value
 

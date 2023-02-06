@@ -100,7 +100,7 @@ The full list of the `readyState` values is documented at [XMLHTTPRequest.readyS
 - 3 (interactive) or (**processing request**)
 - 4 (complete) or (**request finished and response is ready**)
 
-Next, check the [HTTP response status codes](/en-US/docs/Web/HTTP/Status) of the HTTP response. The possible codes are listed at the [W3C](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html). In the following example, we differentiate between a successful and unsuccessful AJAX call by checking for a [`200 OK`](/en-US/docs/Web/HTTP/Status#successful_responses) response code.
+Next, check the [HTTP response status codes](/en-US/docs/Web/HTTP/Status) of the HTTP response. In the following example, we differentiate between a successful and unsuccessful AJAX call by checking for a [`200 OK`](/en-US/docs/Web/HTTP/Status#successful_responses) response code.
 
 ```js
 if (httpRequest.status === 200) {

@@ -4,12 +4,11 @@ slug: Web/API/ContentVisibilityAutoStateChangedEvent/ContentVisibilityAutoStateC
 page-type: web-api-constructor
 tags:
   - Constructor
-  - Experimental
   - Reference
 browser-compat: api.ContentVisibilityAutoStateChangedEvent.ContentVisibilityAutoStateChangedEvent
 ---
 
-{{APIRef("CSS Containment")}}{{SeeCompatTable}}
+{{APIRef("CSS Containment")}}
 
 The **`ContentVisibilityAutoStateChangedEvent()`** constructor creates a new {{domxref("ContentVisibilityAutoStateChangedEvent")}} object instance.
 
