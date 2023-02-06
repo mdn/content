@@ -8,7 +8,9 @@ tags:
   - Web
 ---
 
-An IP address accronym for Internet Protocol address, is a unique number assigned to every device connected to a network that uses the Internet protocol. IP addresses enable devices online to find each other. Without IP addresses we wouldn't be able to view any online content.
+An **IP address** is a number used to address each device on an IP network uniquely.
+
+_IP_ stands for _Internet Protocol_ which is the [protocol layer](https://docs.oracle.com/cd/E19683-01/806-4075/ipov-7/index.html) with which the address is associated.
 
 "IP address" typically still refers to 32-bit IPv4 addresses until IPv6 is deployed more broadly.
 
