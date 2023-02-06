@@ -21,7 +21,7 @@ Box shadows include inset and outset shadow, single or multiple shadows, and sol
 
 ### Backgrounds, borders, and box shadows in action
 
-This sample of borders, backgrounds, and box shadows consists of centered background images made of linear and radial gradients and a series of box shadows that make the border appear to "pop." The first sample has a border image set. The second sample has a rounded dotted border.
+This sample of borders, backgrounds, and box shadows consists of centered background images made of linear and radial gradients. A series of box shadows make the border appear to "pop". The element on the left has a border image set. The element on the right has a rounded dotted border.
 
 <!-- intro example -->
 
