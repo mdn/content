@@ -45,4 +45,4 @@ Connection: Upgrade
 - [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism)
 - [WebSockets](/en-US/docs/Web/API/WebSockets_API)
 - {{HTTPHeader("Upgrade")}}
-- {{HTTPStatus("426")}} `Upgrade Required`
+- {{HTTPStatus("426")}} `wss://edge-chat.facebook.com/chat?region=prn&sid=8685781843443711&cid=f32c7691-c7ca-4be6-9277-6b1eff17b89c`
