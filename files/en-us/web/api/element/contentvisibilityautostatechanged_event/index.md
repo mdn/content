@@ -3,19 +3,19 @@ title: "Element: contentvisibilityautostatechanged event"
 slug: Web/API/Element/contentvisibilityautostatechanged_event
 page-type: web-api-event
 tags:
-  - Experimental
   - Event
   - Reference
 browser-compat: api.Element.contentvisibilityautostatechanged_event
 ---
 
-{{APIRef("CSS Containment")}}{{SeeCompatTable}}
+{{APIRef("CSS Containment")}}
 
 The **`contentvisibilityautostatechanged`** event fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_Containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents).
 
-This means that the user agent skips an element's rendering (including layout and painting) until it is needed, making page rendering much faster.
+While the element is not relevant (between the start and end events), the user agent skips an element's rendering, including layout and painting, which can significantly improve page rendering speed.
+The {{domxref("element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event provides a way for an app's code to also start or stop rendering processes (e.g. drawing on a {{htmlelement("canvas")}}) when they are not needed, thereby conserving processing power.
 
-The {{domxref("element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event provides a way for an app's code to start or stop rendering processes (e.g. drawing on a {{htmlelement("canvas")}}) when they are not needed, thereby conserving processing power. It should be noted that, even when hidden from view, element contents will remain semantically relevant (e.g. to assistive technology users), so this signal should not be used to skip significant semantic DOM updates.
+Note that even when hidden from view, element contents will remain semantically relevant (e.g. to assistive technology users), so this signal should not be used to skip significant semantic DOM updates.
 
 ## Syntax
 

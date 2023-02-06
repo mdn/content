@@ -131,7 +131,7 @@ Only the `<p>` element with `class="fancy"` will get styled `red`.
 
 Sometimes you just want to display the static code block that is pertinent to the example rendered within a page. However you still need HTML, CSS and JavaScript to render such an example.
 
-To achieve this you can hide any code blocks which are note relevant with the `hidden` class.
+To achieve this you can hide any code blocks that are not relevant with the `hidden` class.
 
 Using the example above but hiding the HTML code would look like this:
 
