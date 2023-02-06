@@ -84,4 +84,3 @@ console.log(leftFillNum(num, 5)); // "00123"
 
 - [Polyfill of `String.prototype.padStart` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.padEnd()")}}
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/string.polyfill.js)
