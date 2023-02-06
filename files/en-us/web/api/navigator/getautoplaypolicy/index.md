@@ -124,7 +124,7 @@ After the user interacts with the site, page, or specific elements the autoplay 
 It is also possible that the policy for a specific item will change, even if the overall policy for the `type` does not.
 
 There is no way to be notified that the autoplay policy has changed.
-For this reason, while you can check the policy for a type or item at any time, usually you will only do so on page load.
+For this reason, while you can check the policy for a type or item at any time, usually you will only do so on page load or before attempting to play content.
 
 ## Examples
 
