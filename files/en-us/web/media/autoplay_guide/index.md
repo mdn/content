@@ -98,7 +98,7 @@ The [`Navigator.getAutoplayPolicy()`](/en-US/docs/Web/API/Navigator/getAutoplayP
 
 The example below shows how you pass the `mediaelement` string to get the autoplay policy for all media elements in the document (pass `audiocontext` to get the policy for audio contexts).
 The code assumes `video` is a `HTMLVideoElement` media element using the [`<video>`](/en-US/docs/Web/HTML/Element/video#attr-autoplay) tag or [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement), and that it is configured to autoplay with audio by default.
-If autoplay is only allowed for inaudible content we mute the audio; if autoplay is disallowed we make sure that a placeholder image is displayed for the video.
+If autoplay is only allowed for inaudible content, we mute the audio; if autoplay is disallowed, we make sure that a placeholder image is displayed for the video.
 
 ```js
 if (navigator.getAutoplayPolicy("mediaelement") === "allowed") {
