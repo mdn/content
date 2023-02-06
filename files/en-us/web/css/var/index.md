@@ -80,7 +80,7 @@ body {
 
 {{EmbedLiveSample("Using a custom property before it is set")}}
 
-In this example, the custom property `--main-bg-color` has been set on the `:root` selector, which has a global scope. So, even though the custom property is set later, the background color of the HTML body will be pink. 
+In this example, the custom property `--main-bg-color` has been set on the `:root` selector, which has a global scope. So, even though the custom property is set later, the background color of the HTML body will be pink.
 
 ### Using a custom property set in another file
 
@@ -169,7 +169,7 @@ Since `--header-color` isn't set, the text "Header" will be blue, the fallback v
 }
 
 body {
-  color: var(--main-bg-color, var(--backup-bg-color, white));
+  background-color: var(--main-bg-color, var(--backup-bg-color, white));
 }
 ```
 
@@ -177,7 +177,7 @@ body {
 
 {{EmbedLiveSample("Using a custom property as a fallback")}}
 
-Since `--main-bg-color` isn't set, the body's `color` will fall back to `--backup-bg-color`. As `--backup-bg-color` isn't set either, it will fall back to white.
+Since `--main-bg-color` isn't set, the body's `background-color` will fall back to `--backup-bg-color`, which is teal.
 
 ## Specifications
 
