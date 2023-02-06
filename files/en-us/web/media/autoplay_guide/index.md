@@ -59,7 +59,7 @@ As a general rule, you can assume that media will be allowed to autoplay only if
 - If the autoplay [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) is used to grant autoplay support to an {{HTMLElement("iframe")}} and its document.
 
 Otherwise, the playback will likely be blocked.
-The exact situations that result in blocking, and the specifics of how sites become allowlisted vary from browser to browser, but the above are good guidelines to go by.
+The exact situations that result in blocking, and the specifics of how sites become allowlisted, vary from browser to browser, but the above are good guidelines to go by.
 
 For details, see the autoplay policies for [Google Chrome](https://developer.chrome.com/blog/autoplay/) and [WebKit](https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/).
 
