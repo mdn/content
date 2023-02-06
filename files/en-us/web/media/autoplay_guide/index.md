@@ -134,7 +134,7 @@ As there is no way to be notified when the autoplay policy has changed (either f
 
 #### Example 3: Detecting autoplay failure as a fallback
 
-No specific event (or other notification) is triggered by autoplay success or failure, so browsers that do not support [`Navigator.getAutoplayPolicy()`](/en-US/docs/Web/API/Navigator/getAutoplayPolicy) have no easy way to determine if autoplay is supported or to react when it is triggered or not triggered.
+No specific event (or other notification) is triggered by autoplay success or failure, so browsers that do not support [`Navigator.getAutoplayPolicy()`](/en-US/docs/Web/API/Navigator/getAutoplayPolicy) have no easy way to determine if autoplay is supported, or to react when it is triggered or not triggered.
 
 One approach is to listen for the first instance of the {{domxref("HTMLMediaElement/play_event", "play")}} event, which is fired on the media element when is resumed after being paused _and_ when autoplay occurs.
 That means that the first time the `play` event is fired, you know your media is being started for the first time after the page is opened,
