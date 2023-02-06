@@ -9,4 +9,5 @@ build/
 !files/en-us/glossary/**/*.md
 !files/en-us/mdn/**/*.md
 !files/en-us/web/http/**/*.md
+!files/en-us/web/xslt/**/*.md
 
