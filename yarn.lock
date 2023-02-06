@@ -51,10 +51,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.24.tgz#45c85391411987d12519d214d80c324c5100bcbc"
   integrity sha512-KZJKMObObkYFUgEWEbIJ7voJ0iGm3XqhJLkS5jyRLSMoSL7PnmCjes+CttpSzgyLu7DwJsFWsRvKBgYFxb5e7A==
 
-"@mdn/yari@1.34.9":
-  version "1.34.9"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.34.9.tgz#485c825e43d6e4c51c1b82a1aff24cafbee25910"
-  integrity sha512-OMnhIyx9qroWMZ9xe9NNU/qUOyf5k0NL334L+07LY5WDFYhYTnGkOSOm7ilXHZONN9bOJITbVxAwszCDZlI+uA==
+"@mdn/yari@1.35.2":
+  version "1.35.2"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.35.2.tgz#67955ed4a295c8563b987fbd88b7199b74509f79"
+  integrity sha512-8zQCz2Qrvb4rvusAwsFbW84X0QMf4g+fRZD2mng30DZIGugq/n1gn+UBHBMc8HhkMR4Fqpxw/QPKtUj2gguvhw==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
@@ -98,7 +98,7 @@
     lru-cache "^7.14.1"
     md5-file "^5.0.0"
     mdast-util-from-markdown "^0.8.5"
-    mdast-util-phrasing "^2.0.0"
+    mdast-util-phrasing "^3.0.1"
     mdn-data "^2.0.31"
     open "^8.4.0"
     open-editor "^3.0.0"
@@ -3290,6 +3290,14 @@ mdast-util-phrasing@^2.0.0:
   dependencies:
     unist-util-is "^4.0.0"
 
+mdast-util-phrasing@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/mdast-util-phrasing/-/mdast-util-phrasing-3.0.1.tgz#c7c21d0d435d7fb90956038f02e8702781f95463"
+  integrity sha512-WmI1gTXUBJo4/ZmSk79Wcb2HcjPJBzM1nlI/OUWA8yk2X9ik3ffNbBGsU+09BFmXaL1IBb9fiuvq6/KMiNycSg==
+  dependencies:
+    "@types/mdast" "^3.0.0"
+    unist-util-is "^5.0.0"
+
 mdast-util-to-hast@^10.2.0:
   version "10.2.0"
   resolved "https://registry.yarnpkg.com/mdast-util-to-hast/-/mdast-util-to-hast-10.2.0.tgz#61875526a017d8857b71abc9333942700b2d3604"
@@ -5141,6 +5149,11 @@ unist-util-is@^4.0.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/unist-util-is/-/unist-util-is-4.1.0.tgz#976e5f462a7a5de73d94b706bac1b90671b57797"
   integrity sha512-ZOQSsnce92GrxSqlnEEseX0gi7GH9zTJZ0p9dtu87WRb/37mMPO2Ilx1s/t9vBHrFhbgweUwb+t7cIn5dxPhZg==
+
+unist-util-is@^5.0.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/unist-util-is/-/unist-util-is-5.2.0.tgz#37eed0617b76c114fd34d44c201aa96fd928b309"
+  integrity sha512-Glt17jWwZeyqrFqOK0pF1Ded5U3yzJnFr8CG1GMjCWTp9zDo2p+cmD6pWbZU8AgM5WU3IzRv6+rBwhzsGh6hBQ==
 
 unist-util-position@^3.0.0:
   version "3.1.0"

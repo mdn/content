@@ -20,7 +20,7 @@ The **Local Font Access API** provides a mechanism to access the user's locally 
 
 [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts) were revolutionary in enabling typography on the web by allowing web designers to provide custom fonts to use on a web document. Specified via the {{cssxref("@font-face")}} at-rule, a web font can be loaded from a URL provided in the `url()` function.
 
-`@font-face` has several other useful features available. In particular, you can also specify the font's PostScript name inside the `local()` function to tell the browser to use a local copy if the user has the font installed on their computer. This is not without its problems — `local()` has become notorious as a [fingerprinting vector](https://developer.chrome.com/articles/local-fonts/#local-fonts-as-fingerprint-vector).
+`@font-face` has several other useful features available. In particular, you can also specify the font's full or Postscript name inside the `local()` function to tell the browser to use a local copy if the user has the font installed on their computer. This is not without its problems — `local()` has become notorious as a [fingerprinting vector](https://developer.chrome.com/articles/local-fonts/#local-fonts-as-fingerprint-vector).
 
 In addition, high-end design tools have historically been difficult to deliver on the web, due to challenges in accurate font enumeration and accessing low-level font data (for example, to apply filters and transformations). Current apps often rely on workarounds such as asking users to upload their fonts to a server where they are processed to get raw byte data, or installing a separate local program to provide additional capabilities.
 
