@@ -1,0 +1,73 @@
+---
+title: PaymentResponse.toJSON()
+slug: Web/API/PaymentResponce/toJSON
+page-type: web-api-instance-method
+tags:
+  - API
+  - Method
+  - Reference
+  - Web Performance
+browser-compat: api.PaymentResponse.toJSON
+---
+
+{{SecureContext_Header}}{{APIRef("Payment Request API")}}
+
+The **`toJSON()`** method of the {{domxref("PaymentResponse")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("PaymentResponse")}} object.
+
+## Syntax
+
+```js-nolint
+toJSON()
+```
+
+### Parameters
+
+None.
+
+### Return value
+
+A {{jsxref("JSON")}} object that is the serialization of the {{domxref("PaymentResponse")}} object.
+
+## Examples
+
+### Using the toJSON method
+
+In this example, calling `entry.toJSON()` returns a JSON representation of the `PerformanceEventTiming` object.
+
+```js
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    console.log(entry.toJSON());
+  });
+});
+
+observer.observe({type: "event", buffered: true});
+```
+
+This would log a JSON object like so:
+
+```json
+{
+  "name": "dragover",
+  "entryType": "event",
+  "startTime": 67090751.599999905,
+  "duration": 128,
+  "processingStart": 67090751.70000005,
+  "processingEnd": 67090751.900000095,
+  "cancelable": true
+}
+```
+
+To get a JSON string, you can use [`JSON.stringify(entry)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) directly; it will call `toJSON()` automatically.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{jsxref("JSON")}}
