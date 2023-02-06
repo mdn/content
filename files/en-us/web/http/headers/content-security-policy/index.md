@@ -165,8 +165,6 @@ Reporting directives control the reporting process of CSP violations. See also t
 
 ### Other directives
 
-- {{CSP("require-sri-for")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Requires the use of {{Glossary("SRI")}} for scripts or styles on the page.
 - {{CSP("require-trusted-types-for")}} {{experimental_inline}}
   - : Enforces [Trusted Types](https://w3c.github.io/trusted-types/dist/spec/) at the DOM XSS injection sinks.
 - {{CSP("trusted-types")}} {{experimental_inline}}

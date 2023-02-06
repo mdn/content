@@ -64578,10 +64578,6 @@
     "modified": "2020-10-15T21:39:35.661Z",
     "contributors": ["fscholz", "teoli"]
   },
-  "Web/API/WebGLRenderingContext/commit": {
-    "modified": "2020-10-15T21:42:35.338Z",
-    "contributors": ["sideshowbarker", "fscholz", "nmve", "teoli"]
-  },
   "Web/API/WebGLRenderingContext/compileShader": {
     "modified": "2020-10-15T21:39:39.333Z",
     "contributors": ["fscholz", "teoli", "DanielWeb"]
@@ -102057,19 +102053,6 @@
       "fscholz",
       "Jonathan_Watt",
       "teoli"
-    ]
-  },
-  "Web/HTTP/Headers/Content-Security-Policy/require-sri-for": {
-    "modified": "2020-10-15T21:50:39.705Z",
-    "contributors": [
-      "sideshowbarker",
-      "mozdevcontrib",
-      "Malvoz",
-      "bershanskiy",
-      "Sheppy",
-      "freddyb",
-      "fscholz",
-      "phillycheeze"
     ]
   },
   "Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for": {

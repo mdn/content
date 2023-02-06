@@ -7,7 +7,6 @@ tags:
   - DOM
   - Guide
   - HTTP
-  - JXON
   - MakeBrowserAgnostic
   - Tutorial
   - XHR

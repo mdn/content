@@ -1,5 +1,5 @@
 ---
-title: 'RangeError: radix must be an integer'
+title: "RangeError: radix must be an integer"
 slug: Web/JavaScript/Reference/Errors/Bad_radix
 page-type: javascript-error
 tags:
@@ -58,16 +58,16 @@ The most common radixes:
 (42).toString(37);
 (42).toString(150);
 // You cannot use a string like this for formatting:
-(12071989).toString('MM-dd-yyyy');
+(12071989).toString("MM-dd-yyyy");
 ```
 
 ### Valid cases
 
 ```js example-good
-(42).toString(2);     // "101010" (binary)
-(13).toString(8);     // "15"     (octal)
-(0x42).toString(10);  // "66"     (decimal)
-(100000).toString(16) // "186a0"  (hexadecimal)
+(42).toString(2); // "101010" (binary)
+(13).toString(8); // "15" (octal)
+(0x42).toString(10); // "66" (decimal)
+(100000).toString(16); // "186a0" (hexadecimal)
 ```
 
 ## See also

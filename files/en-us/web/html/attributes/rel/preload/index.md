@@ -89,7 +89,7 @@ Many content types can be preloaded. The possible `as` attribute values are:
 
 `<link>` elements can accept a {{htmlattrxref("type", "link")}} attribute, which contains the MIME type of the resource the element points to. This is especially useful when preloading resources — the browser will use the `type` attribute value to work out if it supports that resource, and will only download it if so, ignoring it if not.
 
-You can see an example of this in our video example (see the [full source code](https://github.com/mdn/html-examples/tree/master/link-rel-preload/video), and also [the live version](https://mdn.github.io/html-examples/link-rel-preload/video/)), a code snippet from which is shown below. And while this code won't actually cause preloading in any browsers — because video preloading isn't yet supported in any browsers — it still illustrates the core behavior behind preloading in general.
+You can see an example of this in our video example (see the [full source code](https://github.com/mdn/html-examples/tree/master/link-rel-preload/video), and also [the live version](https://mdn.github.io/html-examples/link-rel-preload/video/)), a code snippet from which is shown below. This illustrates the core behavior behind preloading in general.
 
 ```html
 <head>

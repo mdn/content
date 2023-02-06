@@ -63,11 +63,11 @@ console.log(Object.getPrototypeOf(new ParentClass()));
 
 `extends` sets the prototype for both `ChildClass` and `ChildClass.prototype`.
 
-|                         | Prototype of `ChildClass` | Prototype of `ChildClass.prototype` |
-| ----------------------- | ------------------------- | ----------------------------------- |
-| `extends` clause absent | `Function.prototype`      | `Object.prototype`                  |
-| `extends null`          | `Function.prototype`      | `null`                              |
-| `extends ParentClass`   | `ParentClass`             | `ParentClass.prototype`             |
+|                                   | Prototype of `ChildClass` | Prototype of `ChildClass.prototype` |
+| --------------------------------- | ------------------------- | ----------------------------------- |
+| `extends` clause absent           | `Function.prototype`      | `Object.prototype`                  |
+| [`extends null`](#extending_null) | `Function.prototype`      | `null`                              |
+| `extends ParentClass`             | `ParentClass`             | `ParentClass.prototype`             |
 
 ```js
 class ParentClass {}
@@ -139,6 +139,42 @@ However, the above expectations take non-trivial efforts to implement properly.
 - The third one leads to visible invocations of custom code, which makes a lot of optimizations harder to implement. For example, if the `Map()` constructor is called with an iterable of _x_ elements, then it must visibly invoke the `set()` method _x_ times, instead of just copying the elements into the internal storage.
 
 These problems are not unique to built-in classes. For your own classes, you will likely have to make the same decisions. However, for built-in classes, optimizability and security are a much bigger concern. New built-in methods always construct the base class and call as few custom methods as possible. If you want to subclass built-ins while achieving the above expectations, you need to override all methods that have the default behavior baked into them. Any addition of new methods on the base class may also break the semantics of your subclass because they are inherited by default. Therefore, a better way to extend built-ins is to use [_composition_](#avoiding_inheritance).
+
+### Extending null
+
+`extends null` was designed to allow easy creation of [objects that do not inherit from `Object.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). However, due to unsettled decisions about whether `super()` should be called within the constructor, it's not possible to construct such a class in practice using any constructor implementation that doesn't return an object. [The TC39 committee is working on re-enabling this feature](https://github.com/tc39/ecma262/pull/1321).
+
+```js
+new (class extends null {})();
+// TypeError: Super constructor null of anonymous class is not a constructor
+
+new (class extends null {
+  constructor() {}
+})();
+// ReferenceError: Must call super constructor in derived class before accessing 'this' or returning from derived constructor
+
+new (class extends null {
+  constructor() {
+    super();
+  }
+})();
+// TypeError: Super constructor null of anonymous class is not a constructor
+```
+
+Instead, you need to explicitly return an instance from the constructor.
+
+```js
+class NullClass extends null {
+  constructor() {
+    // Using new.target allows derived classes to
+    // have the correct prototype chain
+    return Object.create(new.target.prototype);
+  }
+}
+
+const proto = Object.getPrototypeOf;
+console.log(proto(proto(new NullClass()))); // null
+```
 
 ## Examples
 
