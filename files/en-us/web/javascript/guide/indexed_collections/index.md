@@ -48,7 +48,7 @@ const arr3 = [];
 arr3.length = arrayLength;
 ```
 
-> **Note:** In the above code, `arrayLength` must be a `Number`. Otherwise, an array with a single element (the provided value) will be created. Calling `arr.length` will return `arrayLength`, but the array doesn't contain any elements. A {{jsxref("Statements/for...in","for...in")}} loop will not find any property on the array.
+> **Note:** In the above code, `arrayLength` must be a `Number`. Otherwise, an array with a single element (the provided value) will be created (except for the `arr3` example which will fail with `Uncaught RangeError: Invalid array length`). Calling `arr.length` will return `arrayLength`, but the array doesn't contain any elements. A {{jsxref("Statements/for...in","for...in")}} loop will not find any property on the array.
 
 In addition to a newly defined variable as shown above, arrays can also be assigned as a property of a new or an existing object:
 
