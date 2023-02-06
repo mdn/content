@@ -24,9 +24,13 @@ A {{DOMxref("Node")}}.
 
 ```js
 const nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  }
 );
 root = nodeIterator.root; // document.body in this case
 ```

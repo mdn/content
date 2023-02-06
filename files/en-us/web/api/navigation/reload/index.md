@@ -60,7 +60,10 @@ Either one of these promises rejects if the navigation has failed for some reaso
 
 ```js
 async function handleReload() {
-  await navigation.reload({ info: { animation: "fade-in" }, state: { infoPaneOpen: true } } );
+  await navigation.reload({
+    info: { animation: "fade-in" },
+    state: { infoPaneOpen: true },
+  });
 
   // ...
 }
@@ -70,7 +73,9 @@ Reload page and add a new state item:
 
 ```js
 async function handleReload() {
-  await navigation.reload({ state: { ...navigation.currentEntry.getState(), newState: 3 } });
+  await navigation.reload({
+    state: { ...navigation.currentEntry.getState(), newState: 3 },
+  });
 
   // ...
 }

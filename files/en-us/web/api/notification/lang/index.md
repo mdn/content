@@ -34,13 +34,13 @@ constructor.
 
 ```js
 const options = {
-  body: 'Do you like my body?',
-  lang: 'en-US'
-}
+  body: "Do you like my body?",
+  lang: "en-US",
+};
 
-const n = new Notification('Test notification',options);
+const n = new Notification("Test notification", options);
 
-console.log(n.lang) // should return 'en-US'
+console.log(n.lang); // should return 'en-US'
 ```
 
 ## Specifications

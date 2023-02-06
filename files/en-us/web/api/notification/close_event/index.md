@@ -1,5 +1,5 @@
 ---
-title: 'Notification: close event'
+title: "Notification: close event"
 slug: Web/API/Notification/close_event
 page-type: web-api-event
 tags:
@@ -22,9 +22,9 @@ The **`close`** event of the {{domxref("Notification")}} interface fires when a 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('close', (event) => { });
+addEventListener("close", (event) => {});
 
-onclose = (event) => { };
+onclose = (event) => {};
 ```
 
 ## Event type

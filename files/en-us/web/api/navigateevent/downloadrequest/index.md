@@ -50,7 +50,7 @@ navigation.addEventListener("navigate", (event) => {
       } else {
         doSinglePageAppNav(event.destination, event.signal);
       }
-    }
+    },
   });
 });
 ```
