@@ -47,6 +47,8 @@ The `indexOf()` method compares `searchElement` to elements of the array using [
 
 The `indexOf()` method skips empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
+The `indexOf()` method skips [NaN values](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN).
+
 The `indexOf()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ## Examples
@@ -101,10 +103,12 @@ updateVegetablesCollection(veggies, "spinach");
 
 ### Using indexOf() on sparse arrays
 
-You cannot use `indexOf()` to search for empty slots in sparse arrays.
+You cannot use `indexOf()` to search for empty slots in sparse arrays and nor for NaN values.
 
 ```js
-console.log([1, , 3].indexOf(undefined)); // -1
+const arr = [1, , 3, NaN];
+console.log(arr.indexOf(undefined)); // -1
+console.log(arr.indexOf(NaN)); // -1
 ```
 
 ### Calling indexOf() on non-array objects
