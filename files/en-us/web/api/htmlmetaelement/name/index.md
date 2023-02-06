@@ -13,7 +13,7 @@ browser-compat: api.HTMLMetaElement.name
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMetaElement.name`** is used in combination with {{domxref("HTMLMetaElement.content")}} to define the name-value pairs for the metadata of a document.
+The **`HTMLMetaElement.name`** property is used in combination with {{domxref("HTMLMetaElement.content")}} to define the name-value pairs for the metadata of a document.
 The `name` attribute defines the metadata name and the `content` attribute defines the value.
 
 ## Value
