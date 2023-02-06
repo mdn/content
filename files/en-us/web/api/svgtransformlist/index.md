@@ -362,7 +362,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
 
 In this example we create a function that will apply three different transformations to the SVG element that has been clicked on. In order to do this we create a separate {{domxref("SVGTransform")}} object for each transformation — such as `translate`, `rotate`, and `scale`. We apply multiple transformation by appending the transform object to the `SVGTransformList` associated with an SVG element.
 
-```html
+```html-nolint
 <svg
   id="my-svg"
   viewBox="0 0 300 280"
@@ -373,17 +373,27 @@ In this example we create a function that will apply three different transformat
     objects
   </desc>
   <script type="application/ecmascript">
-    <![CDATA[ function transformMe(evt) { // svg root element to access the
-    createSVGTransform() function const svgroot = evt.target.parentNode; //
-    SVGTransformList of the element that has been clicked on const tfmList =
-    evt.target.transform.baseVal; // Create a separate transform object for each
-    transform const translate = svgroot.createSVGTransform();
-    translate.setTranslate(50,5); const rotate = svgroot.createSVGTransform();
-    rotate.setRotate(10,0,0); const scale = svgroot.createSVGTransform();
-    scale.setScale(0.8,0.8); // apply the transformations by appending the
-    SVGTransform objects to the SVGTransformList associated with the element
-    tfmList.appendItem(translate); tfmList.appendItem(rotate);
-    tfmList.appendItem(scale); } ]]>
+    <![CDATA[
+      function transformMe(evt) {
+        // svg root element to access the createSVGTransform() function
+        const svgroot = evt.target.parentNode;
+        // SVGTransformList of the element that has been clicked on
+        const tfmList = evt.target.transform.baseVal;
+
+        // Create a separate transform object for each transform
+        const translate = svgroot.createSVGTransform();
+        translate.setTranslate(50,5);
+        const rotate = svgroot.createSVGTransform();
+        rotate.setRotate(10,0,0);
+        const scale = svgroot.createSVGTransform();
+        scale.setScale(0.8,0.8);
+
+        // apply the transformations by appending the SVGTransform objects to the SVGTransformList associated with the element
+        tfmList.appendItem(translate);
+        tfmList.appendItem(rotate);
+        tfmList.appendItem(scale);
+      }
+    ]]>
   </script>
 
   <polygon
