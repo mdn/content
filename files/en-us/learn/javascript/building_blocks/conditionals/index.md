@@ -171,8 +171,6 @@ Comparison operators are used to test the conditions inside our conditional stat
 - `<` and `>` — test if one value is less than or greater than another.
 - `<=` and `>=` — test if one value is less than or equal to, or greater than or equal to, another.
 
-> **Note:** Review the material at the previous link if you want to refresh your memories on these.
-
 We wanted to make a special mention of testing boolean (`true`/`false`) values, and a common pattern you'll come across again and again. Any value that is not `false`, `undefined`, `null`, `0`, `NaN`, or an empty string (`''`) actually returns `true` when tested as a conditional statement, therefore you can use a variable name on its own to test whether it is `true`, or even that it exists (that is, it is not undefined.) So for example:
 
 ```js
