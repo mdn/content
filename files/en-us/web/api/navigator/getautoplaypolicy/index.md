@@ -51,7 +51,7 @@ The method must be called with one (and only one) of the following three paramet
 - `element` {{optional_inline}}
 
   - : A specific media element.
-    This must be a [`HTMLMediaElement`](/en-US/docs/Web/API/HTMLMediaElement), including derived elements such as [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement) and [`HTMLAudioElement`](/en-US/docs/Web/API/HTMLAudioElement).
+    This must be an [`HTMLMediaElement`](/en-US/docs/Web/API/HTMLMediaElement), including derived elements such as [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement) and [`HTMLAudioElement`](/en-US/docs/Web/API/HTMLAudioElement).
 
 - `context` {{optional_inline}}
   - : A specific [`AudioContext`](/en-US/docs/Web/API/AudioContext).
