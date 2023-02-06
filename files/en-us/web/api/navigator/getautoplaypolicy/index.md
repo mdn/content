@@ -70,7 +70,7 @@ This will be a string containing one of the following values:
   - : Autoplay is not allowed.
 
 Note that the autoplay policy returned for a `type` parameter is the _broad_ policy for items of the indicated type.
-One page load, all items of a type will have the same policy as the type.
+On page load, all items of a type will have the same policy as the type.
 Once the user has interacted with the page/site, on some browsers individual items _may_ have a different policy to the corresponding type.
 
 ### Exceptions
