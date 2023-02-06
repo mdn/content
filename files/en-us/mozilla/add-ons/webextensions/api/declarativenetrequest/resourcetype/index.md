@@ -15,7 +15,7 @@ browser-compat: webextensions.api.declarativeNetRequest.ResourceType
 
 {{AddonSidebar()}}
 
-The resource type of a request.
+The resource type of a request. Comparable to {{WebExtAPIRef('webRequest.ResourceType')}}.
 
 ## Type
 
