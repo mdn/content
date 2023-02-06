@@ -7,7 +7,7 @@ tags:
   - HTTP Status Code
   - Reference
   - Status code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110.html#name-400-bad-request
+spec-urls: https://httpwg.org/specs/rfc9110.html#status.400
 ---
 
 {{HTTPSidebar}}
@@ -28,4 +28,4 @@ The HyperText Transfer Protocol (HTTP) **`400 Bad Request`** response status cod
 
 ## See also
 
-- [HTTP/1.1: Status Code Definitions](https://www.rfc-editor.org/rfc/rfc9110.html#name-status-codes)
+- [HTTP/1.1: Status Code Definitions](https://httpwg.org/specs/rfc9110.html#status.400)
