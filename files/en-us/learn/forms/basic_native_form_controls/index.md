@@ -125,7 +125,7 @@ A checkbox is created using the {{HTMLElement("input")}} element with a [`type`]
 <input type="checkbox" id="questionOne" name="subscribe" value="yes" checked />
 ```
 
-Related checkbox items should use the same [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute. Including the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute makes the checkbox checked automatically when the page loads. Clicking the checkbox or its associated label toggles the checkbox on and off.
+Related checkbox items should use the same [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute. Including the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute makes the checkbox checked automatically when the page loads. Clicking the checkbox or its associated label toggles the checkbox on and off.
 
 ```html
 <fieldset>
