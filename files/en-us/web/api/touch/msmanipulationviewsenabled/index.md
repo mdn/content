@@ -24,7 +24,7 @@ Using a JSON file:
 
 ```json
 {
-  "msManipulationViewsEnabled": true,
+  "msManipulationViewsEnabled": true
 }
 ```
 
