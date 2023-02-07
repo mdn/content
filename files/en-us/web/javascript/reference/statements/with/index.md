@@ -145,7 +145,7 @@ const namespace = new Proxy(
     get(target, key) {
       return key;
     },
-  }
+  },
 );
 
 with (namespace) {

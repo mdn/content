@@ -59,7 +59,7 @@ If a box has an outer display type of `block`, then:
 - The box will break onto a new line.
 - The {{cssxref("width")}} and {{cssxref("height")}} properties are respected.
 - Padding, margin and border will cause other elements to be pushed away from the box.
-- The box will extend in the inline direction to fill the space available in its container. In most cases, the box will become as wide as its container, filling up 100% of the space available.
+- If {{cssxref("width")}} is not specified, the box will extend in the inline direction to fill the space available in its container. In most cases, the box will become as wide as its container, filling up 100% of the space available.
 
 Some HTML elements, such as `<h1>` and `<p>`, use `block` as their outer display type by default.
 

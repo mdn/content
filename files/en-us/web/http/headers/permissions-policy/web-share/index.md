@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: web-share'
+title: "Permissions-Policy: web-share"
 slug: Web/HTTP/Headers/Permissions-Policy/web-share
 tags:
   - Permissions-Policy

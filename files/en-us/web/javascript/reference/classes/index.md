@@ -80,6 +80,8 @@ Together, they add up to 16 possible combinations. To divide the reference more 
 - [Private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
   - : Everything that's private
 
+> **Note:** Private features have the restriction that all property names declared in the same class must be unique. All other public properties do not have this restriction — you can have multiple public properties with the same name, and the last one overwrites the others. This is the same behavior as in [object initializers](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#duplicate_property_names).
+
 In addition, there are two special class element syntaxes: [`constructor`](#constructor) and [static initialization blocks](#static_initialization_blocks), with their own references.
 
 #### Constructor
@@ -162,11 +164,11 @@ class Point {
 const p1 = new Point(5, 5);
 const p2 = new Point(10, 10);
 p1.displayName; // undefined
-p1.distance;    // undefined
+p1.distance; // undefined
 p2.displayName; // undefined
-p2.distance;    // undefined
+p2.distance; // undefined
 
-console.log(Point.displayName);      // "Point"
+console.log(Point.displayName); // "Point"
 console.log(Point.distance(p1, p2)); // 7.0710678118654755
 ```
 
@@ -289,7 +291,7 @@ obj.speak(); // the Animal object
 const speak = obj.speak;
 speak(); // undefined
 
-Animal.eat() // class Animal
+Animal.eat(); // class Animal
 const eat = Animal.eat;
 eat(); // undefined
 ```
@@ -301,11 +303,11 @@ function Animal() {}
 
 Animal.prototype.speak = function () {
   return this;
-}
+};
 
 Animal.eat = function () {
   return this;
-}
+};
 
 const obj = new Animal();
 const speak = obj.speak;

@@ -166,8 +166,8 @@ const longWord = /\b\w{13,}\b/g;
 const sentence = "Why do I have to learn multiplication table?";
 
 console.table(sentence.match(singleLetterWord)); // ["I"]
-console.table(sentence.match(notSoLongWord));    // [ "Why", "do", "have", "to", "learn", "table" ]
-console.table(sentence.match(longWord));      // ["multiplication"]
+console.table(sentence.match(notSoLongWord)); // [ "Why", "do", "have", "to", "learn", "table" ]
+console.table(sentence.match(longWord)); // ["multiplication"]
 ```
 
 ### Optional character
