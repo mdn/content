@@ -79,6 +79,40 @@ article :last-of-type {
 
 {{EmbedLiveSample('Nested_elements', 500)}}
 
+### Multiple selectors elements
+
+This is a bit complicated example of nested elements with type selectors and class selectors.
+
+#### HTML
+
+```html
+<p>This `p` is not selected.</p>
+<p>This `p` is not selected either.</p>
+<p>This `p` is last `p` element of its parent e.g. `body` selected by `p` type selector.</p>
+<div class="container">
+  <div class="item">This `div` is not selected.</div>
+  <div class="item">This `div` is not selected either.</div>
+  <div class="item">This `div` is last `div` element of its parent `div` selected by `.container .item` class selector.</div>
+  <p class="item">This `p` is last `p` element of its parent `div` selected by `.container .item` class selector.</p>
+</div>
+```
+
+#### CSS
+
+```css
+p:last-of-type {
+  background: skyblue;
+}
+
+.container .item:last-of-type {
+  color: red;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Multiple_selectors_elements', 500)}}
+
 ## Specifications
 
 {{Specifications}}
