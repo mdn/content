@@ -76,7 +76,7 @@ export default myStrictFunction;
 
 ### Strict mode for classes
 
-All parts of a [class](/en-US/docs/Web/JavaScript/Reference/Classes)'s body are strict mode code, including both [class declarations](/en-US/docs/Web/JavaScript/Reference/Classes#class_declarations) and [class expressions](/en-US/docs/Web/JavaScript/Reference/Classes#class_expressions).
+All parts of a [class](/en-US/docs/Web/JavaScript/Reference/Classes)'s body are strict mode code, including both [class declarations](/en-US/docs/Web/JavaScript/Reference/Statements/class) and [class expressions](/en-US/docs/Web/JavaScript/Reference/Operators/class).
 
 ```js
 class C1 {

@@ -8069,6 +8069,7 @@
 /en-US/docs/Web/API/Element/ongotpointercapture	/en-US/docs/Web/API/Element/gotpointercapture_event
 /en-US/docs/Web/API/Element/onlostpointercapture	/en-US/docs/Web/API/Element/lostpointercapture_event
 /en-US/docs/Web/API/Element/onwheel	/en-US/docs/Web/API/Element/wheel_event
+/en-US/docs/Web/API/Element/openOrClosedShadowRoot	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/dom/openOrClosedShadowRoot
 /en-US/docs/Web/API/Element/pointerlockchange_event	/en-US/docs/Web/API/Document/pointerlockchange_event
 /en-US/docs/Web/API/Element/resourcetimingbufferfull_event	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
 /en-US/docs/Web/API/Element/select_event	/en-US/docs/Web/API/HTMLInputElement/select_event
