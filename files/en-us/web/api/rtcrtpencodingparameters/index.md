@@ -22,7 +22,7 @@ browser-compat: api.RTCRtpEncodingParameters
 
 An instance of the [WebRTC](/en-US/docs/Web/API/WebRTC_API) API's **`RTCRtpEncodingParameters`** dictionary describes a single configuration of a {{Glossary("codec")}} for an {{domxref("RTCRtpSender")}}.
 
-This dictionary is used in the {{domxref("RTCRtpSendParameters")}} describing the configuration of an RTP sender's {{domxref("RTCRtpSendParameters.encodings", "encodings")}}; {{domxref("RTCRtpDecodingParameters")}} is used to describe the configuration of an RTP receiver's {{domxref("RTCRtpReceiveParameters", "encodings")}}.
+This dictionary is used in the {{domxref("RTCRtpSendParameters")}} describing the configuration of an RTP sender's {{domxref("RTCRtpSendParameters.encodings", "encodings")}}.
 
 ## Instance properties
 
@@ -34,6 +34,9 @@ This dictionary is used in the {{domxref("RTCRtpSendParameters")}} describing th
   - : An unsigned long integer indicating the maximum number of bits per second to allow for this encoding. Other parameters may further constrain the bit rate, such as the value of `maxFramerate` or transport or physical network limitations.
 - {{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}}
   - : A value specifying the maximum number of frames per second to allow for this encoding.
+- `priority`
+  - : A string indicating the priority of the {{domxref("RTCRtpSender")}}, which may determine how the user agent allocates bandwidth between senders.
+    Allowed values are `very-low`, `low` (default), `medium`, `high`.
 - {{domxref("RTCRtpEncodingParameters.rid", "rid")}} {{Non-standard_Inline}}
   - : A string which, if set, specifies an _RTP stream ID_ (_RID_) to be sent using the RID header extension. This parameter cannot be modified using {{domxref("RTCRtpSender.setParameters", "setParameters()")}}. Its value can only be set when the transceiver is first created.
 - {{domxref("RTCRtpEncodingParameters.scaleResolutionDownBy", "scaleResolutionDownBy")}}
@@ -49,5 +52,6 @@ This dictionary is used in the {{domxref("RTCRtpSendParameters")}} describing th
 
 ## See also
 
+- {{domxref("RTCRtpDecodingParameters")}} is used to describe the configuration of an RTP receiver's {{domxref("RTCRtpReceiveParameters", "encodings")}}
 - [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - {{domxref("RTCRtpSender")}}, {{domxref("RTCRtpReceiver")}}, and {{domxref("RTCRtpTransceiver")}}
