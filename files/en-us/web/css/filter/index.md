@@ -1283,6 +1283,8 @@ Examples of using the URL function with an SVG resource are as follows:
 
 ## See also
 
+- CSS {{cssxref("backdrop-filter")}} property
+- CSS [compositing and blending](/en-US/docs/Web/CSS/Compositing_and_Blending) module, including the CSS {{cssxref("background-blend-mode")}} and {{cssxref("mix-blend-mode")}} properties.
+- The CSS {{cssxref("mask")}} property
+- [SVG](/en-US/docs/Web/SVG), including the SVG {{SVGElement("filter")}} element and SVG {{SVGAttr("filter")}} attribute.
 - [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
-- The {{cssxref("mask")}} property
-- [SVG](/en-US/docs/Web/SVG)
