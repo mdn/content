@@ -9,6 +9,7 @@ tags:
   - Reference
   - clear
 browser-compat: api.HighlightRegistry.clear
+spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.clear
 ---
 
 {{APIRef("CSS Custom Highlight API")}}

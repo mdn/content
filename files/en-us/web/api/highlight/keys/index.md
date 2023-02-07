@@ -9,6 +9,7 @@ tags:
   - Reference
   - keys
 browser-compat: api.Highlight.keys
+spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prototype.keys
 ---
 
 {{APIRef("CSS Custom Highlight API")}}

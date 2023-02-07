@@ -9,6 +9,7 @@ tags:
   - Reference
   - size
 browser-compat: api.Highlight.size
+spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-get-set.prototype.size
 ---
 
 {{APIRef("CSS Custom Highlight API")}}

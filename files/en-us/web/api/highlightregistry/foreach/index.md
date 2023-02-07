@@ -9,6 +9,7 @@ tags:
   - Reference
   - forEach
 browser-compat: api.HighlightRegistry.forEach
+spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.foreach
 ---
 
 {{APIRef("CSS Custom Highlight API")}}
