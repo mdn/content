@@ -33,15 +33,15 @@ To view how basic user interface properties can alter the appearance of UI featu
     <progress>
 </fieldset>
 <fieldset>
-  <legend>Be careful not to ruin usability</legend>
+  <legend>Be careful not to ruin usability: try resizing these.</legend>
   <textarea>
-  Resize me.
+  cursor: wait;
   </textarea>
   <textarea>
-  Then resize me.
+  resize: none;
   </textarea>
   <textarea>
-  How about me?
+  pointer-events: none;
   </textarea>
 </fieldset>
 ```
