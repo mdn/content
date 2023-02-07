@@ -80,7 +80,7 @@ body {
 
 {{EmbedLiveSample("Using a custom property before it is set")}}
 
-In this example, the custom property `--main-bg-color` has been set on the `:root` selector, which has a global scope. So, even though the custom property is set later, the background color of the HTML body will be pink.
+In this example, the background color of the HTML body will be pink even though the custom property is set later.
 
 ### Using a custom property set in another file
 
@@ -119,7 +119,7 @@ body {
 
 {{EmbedLiveSample("Using a custom property set in another file")}}
 
-The background color of the HTML body will be pink in this case even though the custom property is declared in another file. This is because of the global scope of the `:root` selector.
+The background color of the HTML body will be pink in this case even though the custom property is declared in another file.
 
 ### Custom properties with fallbacks for use when the property has not been set
 
