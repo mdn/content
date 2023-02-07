@@ -78,7 +78,7 @@ async function init() {
 A pipeline is a logical structure containing programmable stages that are completed to get your program's work done. WebGPU is currently able to handle two types of pipeline:
 
 - A render pipeline renders graphics, typically into a {{htmlelement("canvas")}} element, but it could also render graphics offscreen. It has two main stages:
-  - A vertex stage, in which a vertex shader takes positioning data fed into the GPU and uses it to position the vertices of triangles (the basic building block of rendered graphics) in 3D space. The GPU applies other specified effects like rotation, translation, or perspective, then rasterizes the triangles to fingure out what pixels each one should cover on the drawing canvas.
+  - A vertex stage, in which a vertex shader takes positioning data fed into the GPU and uses it to position the vertices of triangles (the basic building block of rendered graphics) in 3D space by applying specified effects like rotation, translation, or perspective. The vertices are then assembled into triangles and rasterized by the GPU to figure out what pixels each one should cover on the drawing canvas.
   - A fragment stage, in which a fragment shader takes color data and uses it to color in each triangle.
 - A compute pipeline is for general computation. A compute pipeline contains a single compute stage, in which a compute shader takes general data, processes it as specified, then returns the result in a buffer. The buffer can contain any kind of data.
 
