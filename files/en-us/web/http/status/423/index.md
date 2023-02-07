@@ -11,9 +11,24 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.3
 
 {{HTTPSidebar}}
 
-The HTTP **`423 Locked`** client error response code indicates that either the source or the destination of a method is locked. It should contain some conditions such that the accessible resources are not locked in order to access them or to prevent any modifications they must be locked.
+> **Note:** The ability to _lock_ a resource is specific to some {{Glossary("WebDAV")}} servers. Browsers accessing web pages will never encounter this status code; in the erroneous cases it happens, they will handle it as a generic `400` status code.
 
-We can use appropriate precondition or postcondition code, such as 'lock-token-submitted' or 'no-conflicting-lock'.
+The HTTP **`423 Locked`** error response code indicates that either the resources tentatively accessed is _locked_, meaning it can't be accessed. Its content should contain some information in WebDAV's XML format.
+
+### Example
+
+```
+HTTP/1.1 423 Locked
+Content-Type: application/xml; charset="utf-8"
+Content-Length: xxxx
+
+<?xml version="1.0" encoding="utf-8" ?>
+<D:error xmlns:D="DAV:">
+  <D:lock-token-submitted>
+    <D:href>/workspace/webdav/</D:href>
+  </D:lock-token-submitted>
+</D:error>
+```
 
 ## Status
 
