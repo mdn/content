@@ -88,9 +88,12 @@ If you write a live sample in the "Examples" section, provide a descriptive H3 h
 - CSS
 - JavaScript
 - Result
-  Write the code blocks in the respective subsections listed above.
-  In the **Result** subsection, add the call to the [`EmbedLiveSample` macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples#live_sample_macros). Preferably, include some more prose in this subsection to describe the result.
-  If you're not using a particular language type (for example, if you are not using JavaScript) or if you are hiding it, then you should omit the corresponding heading.
+
+Write the code blocks in the respective subsections listed above.
+
+In the **Result** subsection, add the call to the [`EmbedLiveSample` macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples#live_sample_macros). Preferably, include some more prose in this subsection to describe the result.
+
+If you're not using a particular language type (for example, if you are not using JavaScript) or if you are hiding it, then you should omit the corresponding heading.
 
 For example:
 
@@ -128,7 +131,7 @@ Only the `<p>` element with `class="fancy"` will get styled `red`.
 
 Sometimes you just want to display the static code block that is pertinent to the example rendered within a page. However you still need HTML, CSS and JavaScript to render such an example.
 
-To achieve this you can hide any code blocks which are note relevant with the `hidden` class.
+To achieve this you can hide any code blocks that are not relevant with the `hidden` class. If you do this, omit the `### HTML/CSS/JavaScript` headings for the hidden code blocks.
 
 Using the example above but hiding the HTML code would look like this:
 
@@ -138,8 +141,6 @@ Using the example above but hiding the HTML code would look like this:
 ### Styling a paragraph
 
 In this example, we're using CSS to style paragraphs that have the `fancy` class set.
-
-#### HTML
 
 ```html hidden
 <p>I'm not fancy.</p>
@@ -161,6 +162,34 @@ p.fancy {
 
 Only the `<p>` element with `class="fancy"` will get styled `red`.
 ````
+
+### Live example demo
+
+### Styling a paragraph
+
+In this example, we're using CSS to style paragraphs that have the `fancy` class set.
+
+#### HTML
+
+```html
+<p>I'm not fancy.</p>
+
+<p class="fancy">But I am!</p>
+```
+
+#### CSS
+
+```css
+p.fancy {
+  color: red;
+}
+```
+
+#### Result
+
+\{{EmbedLiveSample("Styling a paragraph")}}
+
+Only the `<p>` element with `class="fancy"` will get styled `red`.
 
 ## GitHub live samples
 

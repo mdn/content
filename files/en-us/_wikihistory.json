@@ -12870,6 +12870,10 @@
     "modified": "2020-10-15T22:03:32.991Z",
     "contributors": ["irenesmith", "hellosct1", "wbamberg"]
   },
+  "Mozilla/Add-ons/WebExtensions/API/dom/openOrClosedShadowRoot": {
+    "modified": "2020-10-15T22:08:25.724Z",
+    "contributors": ["tlylt"]
+  },
   "Mozilla/Add-ons/WebExtensions/API/downloads": {
     "modified": "2020-11-04T21:11:17.422Z",
     "contributors": [
@@ -32727,10 +32731,6 @@
       "GavinSharp",
       "Jürgen Jeka"
     ]
-  },
-  "Web/API/Element/openOrClosedShadowRoot": {
-    "modified": "2020-10-15T22:08:25.724Z",
-    "contributors": ["ExE-Boss"]
   },
   "Web/API/Element/outerHTML": {
     "modified": "2020-10-15T21:07:50.714Z",
