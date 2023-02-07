@@ -28,7 +28,7 @@ However, WebGL still has some fundamental issues that need addressing:
 - WebGL is based wholly around the use case of drawing graphics and rendering them to a canvas. It does not handle general-purpose GPU (GPGPU) computations very well. GPGPU computations are becoming more and more important for many different use cases, for example those based on machine learning models.
 - 3D graphics apps are becoming increasingly demanding, both in terms of the number of objects to be rendered simultaneously, and usage of new rendering features.
 
-WebGPU addresses these issues, providing a general-purpose architecture compatible with modern GPU APIs, which feels more "webby". It supports graphic rendering, but also has first support for GPGPU computations. Rendering of individual objects is significantly cheaper and it supports modern GPU rendering features such as compute-based particles and post-processing filters like color effects, sharpening, and depth-of-field simulation. In addition, it can handle expensive computations such as culling and skinned model transformation that previously were often done on the CPU.
+WebGPU addresses these issues, providing a general-purpose architecture compatible with modern GPU APIs, which feels more "webby". It supports graphic rendering, but also has first-class support for GPGPU computations. Rendering of individual objects is significantly cheaper and it supports modern GPU rendering features such as compute-based particles and post-processing filters like color effects, sharpening, and depth-of-field simulation. In addition, it can handle expensive computations such as culling and skinned model transformation that previously were often done on the CPU.
 
 ## General model
 
