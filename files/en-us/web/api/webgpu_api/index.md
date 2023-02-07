@@ -32,7 +32,7 @@ WebGPU addresses these issues, providing a general-purpose architecture compatib
 
 ## General model
 
-There are several layers of abstraction between the device GPU and the web browser running the WebGPU API. It is useful to understand these are you begin to learn WebGPU:
+There are several layers of abstraction between the device GPU and the web browser running the WebGPU API. It is useful to understand these as you begin to learn WebGPU:
 
 ![A basic stack diagram showing the position of the different elements of a WebGPU architecture on a device](basic-webgpu-stack.svg)
 
