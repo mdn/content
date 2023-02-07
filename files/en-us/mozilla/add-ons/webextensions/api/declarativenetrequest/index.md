@@ -112,24 +112,26 @@ The number of dynamic and session-scoped rules an extension can add is limited t
 ## Matching precedents
 
 When the browser evaluates how to handle requests, it checks each extension's rules that have a condition that matches the request and chooses the one to consider applying as follows:
+
 1. the rule priority, where 1 is the highest priority (and rules default to 1 where priority is not set)
    If this doesn't result in one rule to apply:
 2. the rule action, in the following order of precedence:
-  1. "allow" which means any other remaining rules are ignored.
-  2. "allowAllRequests" (for main_frame and sub_frame resourceTypes only) has the same effect as allow but also applies to future subresource loads in the document (including descendant frames) generated from the request.
-  3. "block" cancels the request.
-  4. "upgradeScheme" upgrades the scheme of the request.
-  5. "redirect" redirects the request.
-  6. "modifyHeaders" rewrites request and response headers.
+   1. "allow" which means any other remaining rules are ignored.
+   2. "allowAllRequests" (for main_frame and sub_frame resourceTypes only) has the same effect as allow but also applies to future subresource loads in the document (including descendant frames) generated from the request.
+   3. "block" cancels the request.
+   4. "upgradeScheme" upgrades the scheme of the request.
+   5. "redirect" redirects the request.
+   6. "modifyHeaders" rewrites request and response headers.
    If this doesn't result in one rule to apply:
 3. the ruleset the rule belongs to, in this order of precedence:
-  1. session
-  2. dynamic
-  3. static
-  If this doesn't result in one rule to apply:
+   1. session
+   2. dynamic
+   3. static
+   If this doesn't result in one rule to apply:
 4. the order of the rule in the ruleset, determined as the lowest value rule ID.
 
 If only one extension provides a rule for the request, that rule is applied. However, where more than one extension has a matching rule, the browser chooses the one to apply in this order of precedence:
+
 1. "block"
 2. "redirect" and "upgradeScheme"
 3. "allow" and "allowAllRequests"
