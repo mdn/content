@@ -1,5 +1,5 @@
 ---
-title: "Storage access policy: Block cookies from trackers"
+title: 'Storage access policy: Block cookies from trackers'
 slug: Web/Privacy/Storage_Access_Policy
 ---
 
@@ -86,17 +86,23 @@ HTTP Referrers
 
 ## Storage access grants
 
-In order to improve web compatibility and permit third-party integrations that require storage access, Firefox will grant storage access scoped to the first party for a particular third-party origin as described in this section. Currently, Firefox includes some web compatibility heuristics that grant storage access to third-party resources classified as trackers when a user interacts with those third parties. We do this when we expect that not granting access would cause the web page to break. We also support an initial implementation of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API), through which embedded {{htmlelement("iframe")}}s can request storage access by calling {{domxref("Document.requestStorageAccess()")}}. Although both of these approaches provide the same level of storage access, we recommend third parties switch to using the Storage Access API in order to guarantee their access to storage.
+In order to improve web compatibility and permit third-party integrations that require storage access, Firefox will grant access to cookies scoped to the first party for a particular third-party origin as described in this section. Currently, Firefox includes some web compatibility heuristics that grant third-party resources classified as trackers acccess to their unpartitioned first
+-party cookies when a user interacts with those third parties. We do this when we expect that not granting access would cause the web page to break. We also support an initial implementation of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API), through which embedded {{htmlelement("iframe")}}s can request access to cookies by calling {{domxref("Document.requestStorageAccess()")}}. Although both of these approaches provide the same level of storage access, we recommend third parties switch to using the Storage Access API in order to guarantee their access to first-party cookies.
+
+
 
 ### Automatic storage access upon interaction
 
-In order to improve web compatibility, Firefox currently includes some heuristics to grant storage access automatically to third parties that receive user interaction. These heuristics are intended to allow some third-party integrations that are common on the web to continue to function. They are intended to be temporary and will be removed in a future version of Firefox. They should not be relied upon for current and future web development.
+In order to improve web compatibility, Firefox currently includes some heuristics to grant access to cookies automatically to third parties that receive user interaction. These heuristics are intended to allow some third-party integrations that are common on the web to continue to function. They are intended to be temporary and will be removed in a future version of Firefox. They should not be relied upon for current and future web development.
 
 Third-party storage access may be granted to resources that have been classified as tracking resources when a user gesture triggers a pop-up window that has [opener access](/en-US/docs/Web/API/Window/opener) to the originating document. When that occurs, there are three possible ways a third-party origin can be granted access:
 
 - The origin of the resource that is initially loaded in the pop-up window is granted storage access on the opener document if that origin has received user interaction as a first party within the past 30 days.
 - After the initial resource is loaded in the pop-up window, the window may go through a series of redirects to other hosts. If a user interacts with the pop-up window following a redirect, the origin of the content loaded in the pop-up window is given storage access on the opener document.
 - When there is a top-level redirect from a tracking origin to a non-tracking origin, the tracking origin receives short-lived storage access on the non-tracking origin and any other non-tracking origins that appear further down the redirect chain (i.e., if the load continues to redirect). The tracking origin must have received user interaction as a first party within the past 30 days, and the storage access permission expires after 15 minutes.
+
+> **Note:** Previously, embedded, cross-origin content could gain access to its entire first-party storage, automatic and via the Storage Access API. This included access to APIs such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), [DOM Cache](/en-US/docs/Web/API/Cache), and so on.
+To align with other browsers, since Firefox version 109 storage is permanently partitioned. This means the storage access API and automatic storage access grants do no longer grant first-party access to storage. they can only be used to gain access to first-party cookies.
 
 ### Scope of storage access
 
@@ -156,7 +162,7 @@ No — this feature only restricts access to cookies and site data that can be u
 
 This depends on how the third-party analytics service is implemented. Third-party analytics providers will no longer be able to user their third-party storage to collect data. This means that providers using cookies which are scoped to their third-party domain, or local storage and other site data stored under their origin, will no longer have access to those identifiers across other websites.
 
-If these services are embedded into the main context of the page, they can continue to use first-party cookies and site storage to track users across page visits on that specific first-party domain.
+If these services are embedded into the main context of the page, they can continue to use first-party cookies to track users across page visits on that specific first-party domain.
 
 ### I use third-party services for social login, like, and share button integration. Will my users still be able to make use of these services?
 
@@ -167,7 +173,7 @@ A social content provider that is classified as a tracker will not have access t
 - For social login, the user may have to click a login button on the first party.
 - For social like or share buttons, the user will have to first interact with the button in a logged-out state. Once they do, many social content providers will prompt them to log in.
 
-After these interactions, the provider will receive third-party storage access if they prompt the user in a way that is captured by the storage access activation heuristics described above. These providers should consider switching to explicitly request storage access through the Storage Access API as soon as possible. An [initial implementation of this API](https://bugzil.la/1469714) is currently available in Nightly.
+After these interactions, the provider will receive third-party access to cookies if they prompt the user in a way that is captured by the storage access activation heuristics described above. These providers should consider switching to explicitly request storage access through the Storage Access API as soon as possible. An [initial implementation of this API](https://bugzil.la/1469714) is currently available in Nightly.
 
 ### I use third-party pixels and other tools to measure the effectiveness of my ad campaigns. Will I still be able to measure the conversion rate of my ads?
 
