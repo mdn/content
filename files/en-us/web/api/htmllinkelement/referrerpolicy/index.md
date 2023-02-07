@@ -14,7 +14,7 @@ browser-compat: api.HTMLLinkElement.referrerPolicy
 
 The
 **`HTMLLinkElement.referrerPolicy`**
-property reflect the HTML {{htmlattrxref("referrerpolicy","link")}} attribute of the
+property reflects the HTML {{htmlattrxref("referrerpolicy","link")}} attribute of the
 {{HTMLElement("link")}} element defining which referrer is sent when fetching the
 resource.
 
