@@ -10,6 +10,7 @@ browser-compat:
 {{DefaultAPISidebar("Storage Access API")}}
 
 The Storage Access API provides a way for embedded, cross-origin content to gain unrestricted access to the cookies that it would normally only have access to in a first-party context (We refer to storage and cookies that an origin has access to when being in a first party contex as the origin's _first-party_ storage).
+The Storage Access API provides a way for embedded, cross-origin content to gain unrestricted access to the cookies that it would normally only have access to in a first-party context (We refer to storage and cookies that an origin has access to when being in a first party contex as the origin's _first-party_ storage).
 
 > **Note:** Previously, embedded, cross-origin content could gain access to its entire first-party storage via the Storage Access API, not just cookies. This included access to APIs such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), [DOM Cache](/en-US/docs/Web/API/Cache).
 In its latest version the Storage Access API can only be used to gain access to first-party cookies. Firefox adopts this behavior starting from version 109 and keeps (non-cookie) storage permanently partitioned.

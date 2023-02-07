@@ -1,5 +1,5 @@
 ---
-title: 'Storage access policy: Block cookies from trackers'
+title: "Storage access policy: Block cookies from trackers"
 slug: Web/Privacy/Storage_Access_Policy
 ---
 
@@ -86,8 +86,7 @@ HTTP Referrers
 
 ## Storage access grants
 
-In order to improve web compatibility and permit third-party integrations that require storage access, Firefox will grant access to cookies scoped to the first party for a particular third-party origin as described in this section. Currently, Firefox includes some web compatibility heuristics that grant third-party resources classified as trackers acccess to their unpartitioned first
--party cookies when a user interacts with those third parties. We do this when we expect that not granting access would cause the web page to break. We also support an initial implementation of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API), through which embedded {{htmlelement("iframe")}}s can request access to cookies by calling {{domxref("Document.requestStorageAccess()")}}. Although both of these approaches provide the same level of storage access, we recommend third parties switch to using the Storage Access API in order to guarantee their access to first-party cookies.
+In order to improve web compatibility and permit third-party integrations that require storage access, Firefox will grant access to cookies scoped to the first party for a particular third-party origin as described in this section. Currently, Firefox includes some web compatibility heuristics that grant third-party resources classified as trackers acccess to unpartitioned cookies when a user interacts with those third parties. We do this when we expect that not granting access would cause the web page to break. We also support an initial implementation of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API), through which embedded {{htmlelement("iframe")}}s can request access to unpartitioned cookies by calling {{domxref("Document.requestStorageAccess()")}}. Although both of these approaches provide the same level of storage access, we recommend third parties switch to using the Storage Access API in order to guarantee their access to first-party cookies.
 
 
 
