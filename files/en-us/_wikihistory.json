@@ -6947,7 +6947,58 @@
       "Mori"
     ]
   },
-  "Learn/Common_questions/Available_text_editors": {
+  "Learn/Common_questions/Design_and_accessibility/Common_web_layouts": {
+    "modified": "2020-07-16T22:35:42.190Z",
+    "contributors": [
+      "chrisdavidmills",
+      "SphinxKnight",
+      "Jeremie",
+      "Sheppy",
+      "Kathrincolyn",
+      "Andrew_Pfeiffer",
+      "mehmetaergun",
+      "anistark",
+      "rhyne24"
+    ]
+  },
+  "Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users": {
+    "modified": "2020-07-16T22:35:50.650Z",
+    "contributors": [
+      "MelchiorIm3Tal",
+      "chrisdavidmills",
+      "SphinxKnight",
+      "Jeremie",
+      "Andrew_Pfeiffer",
+      "notabene"
+    ]
+  },
+  "Learn/Common_questions/Design_and_accessibility/HTML_features_for_accessibility": {
+    "modified": "2020-07-16T22:35:51.146Z",
+    "contributors": ["chrisdavidmills", "Tigt", "kscarfone", "shubhraj"]
+  },
+  "Learn/Common_questions/Design_and_accessibility/Thinking_before_coding": {
+    "modified": "2020-07-16T22:35:33.950Z",
+    "contributors": [
+      "maishakins",
+      "jamesdhurd",
+      "chrisdavidmills",
+      "surigangula",
+      "SphinxKnight",
+      "Jeremie",
+      "Andrew_Pfeiffer",
+      "teoli"
+    ]
+  },
+  "Learn/Common_questions/Design_and_accessibility/What_is_accessibility": {
+    "modified": "2020-07-16T22:35:46.668Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Jeremie",
+      "Andrew_Pfeiffer",
+      "notabene"
+    ]
+  },
+  "Learn/Common_questions/Tools_and_setup/Available_text_editors": {
     "modified": "2020-09-11T09:55:13.639Z",
     "contributors": [
       "callpri",
@@ -6963,7 +7014,7 @@
       "fmarier"
     ]
   },
-  "Learn/Common_questions/Checking_that_your_web_site_is_working_properly": {
+  "Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly": {
     "modified": "2020-07-16T22:35:49.891Z",
     "contributors": [
       "chrisdavidmills",
@@ -6973,59 +7024,11 @@
       "notabene"
     ]
   },
-  "Learn/Common_questions/Common_web_layouts": {
-    "modified": "2020-07-16T22:35:42.190Z",
-    "contributors": [
-      "chrisdavidmills",
-      "SphinxKnight",
-      "Jeremie",
-      "Sheppy",
-      "Kathrincolyn",
-      "Andrew_Pfeiffer",
-      "mehmetaergun",
-      "anistark",
-      "rhyne24"
-    ]
-  },
-  "Learn/Common_questions/Design_for_all_types_of_users": {
-    "modified": "2020-07-16T22:35:50.650Z",
-    "contributors": [
-      "MelchiorIm3Tal",
-      "chrisdavidmills",
-      "SphinxKnight",
-      "Jeremie",
-      "Andrew_Pfeiffer",
-      "notabene"
-    ]
-  },
-  "Learn/Common_questions/HTML_features_for_accessibility": {
-    "modified": "2020-07-16T22:35:51.146Z",
-    "contributors": ["chrisdavidmills", "Tigt", "kscarfone", "shubhraj"]
-  },
-  "Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine": {
+  "Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine": {
     "modified": "2020-07-16T22:35:52.276Z",
     "contributors": ["Mori", "anton-mladenov", "4a-j"]
   },
-  "Learn/Common_questions/How_does_the_Internet_work": {
-    "modified": "2020-07-16T22:35:35.495Z",
-    "contributors": [
-      "MSabry809",
-      "chrisdavidmills",
-      "codewilling",
-      "1653099",
-      "imba-tjd",
-      "SphinxKnight",
-      "Tan_",
-      "kjerinic",
-      "alattalatta",
-      "wattydev",
-      "diogeneshamilton",
-      "Jeremie",
-      "Andrew_Pfeiffer",
-      "kscarfone"
-    ]
-  },
-  "Learn/Common_questions/How_much_does_it_cost": {
+  "Learn/Common_questions/Tools_and_setup/How_much_does_it_cost": {
     "modified": "2020-07-16T22:35:45.160Z",
     "contributors": [
       "A.Faturechi",
@@ -7046,45 +7049,7 @@
       "notabene"
     ]
   },
-  "Learn/Common_questions/Pages_sites_servers_and_search_engines": {
-    "modified": "2020-07-16T22:35:39.329Z",
-    "contributors": [
-      "lghiggino",
-      "mfuji09",
-      "mammothb",
-      "Nucleomante",
-      "Patricio_Raschetti",
-      "chrisdavidmills",
-      "Gitthuma",
-      "bminard",
-      "haiku11000",
-      "agnelvishal",
-      "Gordon-Bleu",
-      "jswisher",
-      "AVRILALEJANDRO",
-      "vikhyat",
-      "ladyNinja86",
-      "dagolinuxoid",
-      "Sheppy",
-      "xfq",
-      "Jeremie",
-      "Andrew_Pfeiffer"
-    ]
-  },
-  "Learn/Common_questions/Thinking_before_coding": {
-    "modified": "2020-07-16T22:35:33.950Z",
-    "contributors": [
-      "maishakins",
-      "jamesdhurd",
-      "chrisdavidmills",
-      "surigangula",
-      "SphinxKnight",
-      "Jeremie",
-      "Andrew_Pfeiffer",
-      "teoli"
-    ]
-  },
-  "Learn/Common_questions/Upload_files_to_a_web_server": {
+  "Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server": {
     "modified": "2020-10-02T01:23:10.799Z",
     "contributors": [
       "hamishwillee",
@@ -7103,11 +7068,11 @@
       "rhyne24"
     ]
   },
-  "Learn/Common_questions/Using_Github_pages": {
+  "Learn/Common_questions/Tools_and_setup/Using_Github_pages": {
     "modified": "2020-07-16T22:35:51.402Z",
     "contributors": ["chrisdavidmills", "junBryl", "Mori"]
   },
-  "Learn/Common_questions/What_are_browser_developer_tools": {
+  "Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools": {
     "modified": "2020-07-16T22:35:47.122Z",
     "contributors": [
       "avivmu",
@@ -7124,98 +7089,7 @@
       "chrisdavidmills-github"
     ]
   },
-  "Learn/Common_questions/What_are_hyperlinks": {
-    "modified": "2020-07-16T22:35:42.757Z",
-    "contributors": [
-      "Patricio_Raschetti",
-      "maishakins",
-      "chrisdavidmills",
-      "vicvarfon",
-      "bhanubais",
-      "hoosteeno",
-      "samlaf",
-      "Jeremie",
-      "jsx",
-      "ronakkhunt",
-      "Andrew_Pfeiffer",
-      "teoli",
-      "tseamans"
-    ]
-  },
-  "Learn/Common_questions/What_is_a_URL": {
-    "modified": "2020-07-16T22:35:28.894Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "DallasBelt",
-      "Sheppy",
-      "tsaddique389",
-      "AbidRiaz",
-      "SphinxKnight",
-      "yzfdjzwl",
-      "bhanubais",
-      "Jeremie",
-      "jsx",
-      "ronakkhunt",
-      "Andrew_Pfeiffer",
-      "amygori",
-      "teoli"
-    ]
-  },
-  "Learn/Common_questions/What_is_a_domain_name": {
-    "modified": "2020-12-11T01:30:52.383Z",
-    "contributors": [
-      "darby",
-      "ronal.candia11",
-      "ezzep66",
-      "NateEag",
-      "chrisdavidmills",
-      "amitananddotxyz",
-      "jsx",
-      "gavenkoa",
-      "elcamlost",
-      "davidwhy",
-      "SphinxKnight",
-      "Jeremie",
-      "ronakkhunt",
-      "Andrew_Pfeiffer",
-      "notabene"
-    ]
-  },
-  "Learn/Common_questions/What_is_a_web_server": {
-    "modified": "2020-11-21T18:13:05.008Z",
-    "contributors": [
-      "Havardox",
-      "ohaver",
-      "hussamkhatib",
-      "gbui",
-      "mfuji09",
-      "fiver22",
-      "chrisdavidmills",
-      "ashishcodes",
-      "surigangula",
-      "xclusivesaurav",
-      "iigmir",
-      "ggarrickk",
-      "StarkBjorn",
-      "thanhvk",
-      "hierror",
-      "Jeremie",
-      "Andrew_Pfeiffer",
-      "sboroda",
-      "klez"
-    ]
-  },
-  "Learn/Common_questions/What_is_accessibility": {
-    "modified": "2020-07-16T22:35:46.668Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Jeremie",
-      "Andrew_Pfeiffer",
-      "notabene"
-    ]
-  },
-  "Learn/Common_questions/What_software_do_I_need": {
+  "Learn/Common_questions/Tools_and_setup/What_software_do_I_need": {
     "modified": "2020-11-24T08:00:20.552Z",
     "contributors": [
       "mmaimma",
@@ -7243,7 +7117,7 @@
       "kklein"
     ]
   },
-  "Learn/Common_questions/set_up_a_local_testing_server": {
+  "Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server": {
     "modified": "2020-07-16T22:35:52.628Z",
     "contributors": [
       "chrisdavidmills",
@@ -7261,6 +7135,132 @@
       "jaikathuria",
       "jgathogo",
       "Mateen"
+    ]
+  },
+  "Learn/Common_questions/Web_mechanics/How_does_the_Internet_work": {
+    "modified": "2020-07-16T22:35:35.495Z",
+    "contributors": [
+      "MSabry809",
+      "chrisdavidmills",
+      "codewilling",
+      "1653099",
+      "imba-tjd",
+      "SphinxKnight",
+      "Tan_",
+      "kjerinic",
+      "alattalatta",
+      "wattydev",
+      "diogeneshamilton",
+      "Jeremie",
+      "Andrew_Pfeiffer",
+      "kscarfone"
+    ]
+  },
+  "Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines": {
+    "modified": "2020-07-16T22:35:39.329Z",
+    "contributors": [
+      "lghiggino",
+      "mfuji09",
+      "mammothb",
+      "Nucleomante",
+      "Patricio_Raschetti",
+      "chrisdavidmills",
+      "Gitthuma",
+      "bminard",
+      "haiku11000",
+      "agnelvishal",
+      "Gordon-Bleu",
+      "jswisher",
+      "AVRILALEJANDRO",
+      "vikhyat",
+      "ladyNinja86",
+      "dagolinuxoid",
+      "Sheppy",
+      "xfq",
+      "Jeremie",
+      "Andrew_Pfeiffer"
+    ]
+  },
+  "Learn/Common_questions/Web_mechanics/What_are_hyperlinks": {
+    "modified": "2020-07-16T22:35:42.757Z",
+    "contributors": [
+      "Patricio_Raschetti",
+      "maishakins",
+      "chrisdavidmills",
+      "vicvarfon",
+      "bhanubais",
+      "hoosteeno",
+      "samlaf",
+      "Jeremie",
+      "jsx",
+      "ronakkhunt",
+      "Andrew_Pfeiffer",
+      "teoli",
+      "tseamans"
+    ]
+  },
+  "Learn/Common_questions/Web_mechanics/What_is_a_URL": {
+    "modified": "2020-07-16T22:35:28.894Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09",
+      "DallasBelt",
+      "Sheppy",
+      "tsaddique389",
+      "AbidRiaz",
+      "SphinxKnight",
+      "yzfdjzwl",
+      "bhanubais",
+      "Jeremie",
+      "jsx",
+      "ronakkhunt",
+      "Andrew_Pfeiffer",
+      "amygori",
+      "teoli"
+    ]
+  },
+  "Learn/Common_questions/Web_mechanics/What_is_a_domain_name": {
+    "modified": "2020-12-11T01:30:52.383Z",
+    "contributors": [
+      "darby",
+      "ronal.candia11",
+      "ezzep66",
+      "NateEag",
+      "chrisdavidmills",
+      "amitananddotxyz",
+      "jsx",
+      "gavenkoa",
+      "elcamlost",
+      "davidwhy",
+      "SphinxKnight",
+      "Jeremie",
+      "ronakkhunt",
+      "Andrew_Pfeiffer",
+      "notabene"
+    ]
+  },
+  "Learn/Common_questions/Web_mechanics/What_is_a_web_server": {
+    "modified": "2020-11-21T18:13:05.008Z",
+    "contributors": [
+      "Havardox",
+      "ohaver",
+      "hussamkhatib",
+      "gbui",
+      "mfuji09",
+      "fiver22",
+      "chrisdavidmills",
+      "ashishcodes",
+      "surigangula",
+      "xclusivesaurav",
+      "iigmir",
+      "ggarrickk",
+      "StarkBjorn",
+      "thanhvk",
+      "hierror",
+      "Jeremie",
+      "Andrew_Pfeiffer",
+      "sboroda",
+      "klez"
     ]
   },
   "Learn/Forms": {
