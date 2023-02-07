@@ -160,7 +160,7 @@ context.configure({
 });
 ```
 
-> **Note:** Traditionally a swap chain is a series of buffers containing the information for the frames of an animation, which are swapped each time a new frame is displayed. In our basic demo there is no animation — we are only displaying a single frame.
+> **Note:** Traditionally a swap chain is a series of textures containing the information for the frames of an animation, which are swapped each time a new frame is displayed. In our basic demo there is no animation — we are only displaying a single frame.
 
 ### Create a buffer and write our triangle data into it
 
