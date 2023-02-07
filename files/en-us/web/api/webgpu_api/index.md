@@ -265,7 +265,7 @@ const commandEncoder = device.createCommandEncoder();
 
 Next up we start the rendering pass running by creating a {{domxref("GPURenderPassEncoder")}} instance with a {{domxref("GPUCommandEncoder.beginRenderPass()")}} call. This method takes a descriptor object as a parameter, the only mandatory property of which is a `colorAttachments` array. In this case, we specify:
 
-1. A view to render into the `<canvas>`; we create a new view via {{domxref("GPUTexture.createView", "context.getCurrentTexture().createView()")}}.
+1. A texture view to render into; we create a new view from the `<canvas>` via {{domxref("GPUTexture.createView", "context.getCurrentTexture().createView()")}}.
 2. That the view should be "cleared" to a specified color once loaded and before any drawing takes place. This is what causes the blue background behind the triangle.
 3. That the value of the current rendering pass should be stored for this color attachment.
 
