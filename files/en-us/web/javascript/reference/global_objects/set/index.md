@@ -104,7 +104,7 @@ mySet1.has(5)       // false, 5 has been removed
 
 mySet1.size         // 4, since we just removed one value
 
-mySet1.add(5)       // Set(5) { 1, 'some text', {...}, {...}, 5 } - a previously deleted item will be added as a new item, it will not retain its original position before deletion
+mySet1.add(5)       // Set(5) { 1, "some text", {...}, {...}, 5 } - a previously deleted item will be added as a new item, it will not retain its original position before deletion
 
 console.log(mySet1) // Set(5) { 1, "some text", {…}, {…}, 5 }
 ```
@@ -256,7 +256,7 @@ console.log([...new Set(numbers)])
 ```js
 const text = 'India';
 
-const mySet = new Set(text);  // Set(5) {'I', 'n', 'd', 'i', 'a'}
+const mySet = new Set(text);  // Set(5) {"I", "n", "d", "i", "a"}
 mySet.size  // 5
 
 //case sensitive & duplicate omission
