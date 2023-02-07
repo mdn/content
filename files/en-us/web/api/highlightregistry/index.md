@@ -1,0 +1,109 @@
+---
+title: HighlightRegistry
+slug: Web/API/HighlightRegistry
+page-type: web-api-interface
+tags:
+  - API
+  - Interface
+  - CSS Custom Highlight API
+  - Reference
+browser-compat: api.HighlightRegistry
+---
+
+{{APIRef("CSS Custom Highlight API")}}
+
+The **`HighlightRegistry`** interface, accessed via {{domxref("CSS.highlights")}}, is a {{jsxref("Map")}}-like object used to register {{domxref("Highlight")}} objects to be styled using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}.
+
+{{InheritanceDiagram}}
+
+## Instance properties
+
+_The `HighlightRegistry` interface doesn't inherit any properties._
+
+- {{domxref("HighlightRegistry.size")}} {{ReadOnlyInline}}
+  - : Returns the number of `Highlight` objects currently registered.
+
+## Instance methods
+
+_The `HighlightRegistry` interface doesn't inherit any methods_.
+
+- {{domxref("HighlightRegistry.clear()")}}
+  - : Remove all `Highlight` objects from the registry.
+- {{domxref("HighlightRegistry.delete()")}}
+  - : Remove the named `Highlight` object from the registry.
+- {{domxref("HighlightRegistry.entries()")}}
+  - : Returns a new iterator object that contains each `Highlight` object in the registry, in insertion order.
+- {{domxref("HighlightRegistry.forEach()")}}
+  - : Calls the given callback once for each `Highlight` object in the registry, in insertion order.
+- {{domxref("HighlightRegistry.get()")}}
+  - : Gets the named `Highlight` object from the registry.
+- {{domxref("HighlightRegistry.has()")}}
+  - : Returns a boolean asserting whether a `Highlight` object is present the registry or not.
+- {{domxref("HighlightRegistry.keys()")}}
+  - : An alias for {{domxref("HighlightRegistry.values()")}}.
+- {{domxref("HighlightRegistry.set()")}}
+  - : Adds the given `Highlight` object to the registry with the given name, or updates the named `Highlight` object, if it already exists in the registry.
+- {{domxref("HighlightRegistry.values()")}}
+  - : Returns a new iterator object that yields the `Highlight` objects in the registry, in insertion order.
+
+## Examples
+
+### Registering a highlight
+
+The following example demonstrates how to create ranges, instantiate a new `Highlight` object for them, and register the highlight using the `HighlightRegistry`, to style it on the page:
+
+#### HTML
+
+```html
+<p id="foo">CSS Custom Highlight API</p>
+```
+
+#### CSS
+
+```css
+::highlight(my-custom-highlight) {
+  background-color: peachpuff;
+}
+```
+
+#### JavaScript
+
+```js
+const text = document.getElementById("foo").firstChild;
+
+if (!CSS.highlights) {
+  text.textContent = "The CSS Custom Highlight API is not supported in this browser!";
+}
+
+// Create a couple of ranges.
+const range1 = new Range();
+range1.setStart(text, 0);
+range1.setEnd(text, 3);
+
+const range2 = new Range();
+range2.setStart(text, 21);
+range2.setEnd(text, 24);
+
+// Create a custom highlight for these ranges.
+const highlight = new Highlight(range1, range2);
+
+// Register the ranges in the HighlightRegistry.
+CSS.highlights.set('my-custom-highlight', highlight);
+```
+
+#### Result
+
+{{ EmbedLiveSample("Registering a highlight") }}
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{domxref("css_custom_highlight_api", "The CSS Custom Highlight API", "", "nocode")}}
+- [CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web](https://css-tricks.com/css-custom-highlight-api-early-look/)
