@@ -13,7 +13,7 @@ browser-compat: css.selectors.placeholder
 
 {{CSSRef}}
 
-The **`::placeholder`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the {{htmlattrxref("placeholder","input","placeholder text",1)}} in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element.
+The **`::placeholder`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the [placeholder text](/en-US/docs/Web/HTML/Element/input#placeholder) in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element.
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-element-placeholder.html", "tabbed-shorter")}}
 
