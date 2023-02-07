@@ -87,7 +87,7 @@ The shaders mentioned above are sets of instructions processed by the GPU. WebGP
 There are several different ways in which you could architect a WebGPU app, but the process will contain the following steps:
 
 1. [Create shader modules](#create_shader_modules): Write your shader code in WGSL and package it into one or more shader modules.
-2. [Get and configure the canvas context](#get_and_configure_the_canvas_context): Get the `webgpu` context of a `<canvas>` element and configure it to receive information on what graphics to render from your GPU logical device. This step is not necessary if you are creating a compute pipeline rather than a render pipeline.
+2. [Get and configure the canvas context](#get_and_configure_the_canvas_context): Get the `webgpu` context of a `<canvas>` element and configure it to receive information on what graphics to render from your GPU logical device. This step is not necessary if your app has no graphical output, such as one which only uses compute pipelines.
 3. [Create buffers containing your data](#create_a_buffer_and_write_our_triangle_data_into_it): The data that you want processed by your pipeline needs to be stored in GPU buffers so the app can access it.
 4. [Create a pipeline](#define_and_create_the_rendering_pipeline): Define a pipeline descriptor that describes the desired pipeline in detail, including the required data structure, shaders, and resource layout, then create a pipeline from it.
 5. [Run a compute/rendering pass](#running_a_rendering_pass): This involves a number of substeps:
