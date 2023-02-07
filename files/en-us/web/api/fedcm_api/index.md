@@ -45,7 +45,7 @@ There is a potential privacy issue whereby an [IdP is able to discern whether a 
 
 The well-known file must be served from the [eTLD+1](https://web.dev/same-site-same-origin/#site) of the IdP at `/.well-known/web-identity`.
 
-For example, if the IdP endpoints are served under `https://accounts.idp.example/`, they must serve a well-known file at `https://idp.example/.well-known/web-identity`. The well-known file's content should look have the following JSON structure:
+For example, if the IdP endpoints are served under `https://accounts.idp.example/`, they must serve a well-known file at `https://idp.example/.well-known/web-identity`. The well-known file's content should have the following JSON structure:
 
 ```json
 {
