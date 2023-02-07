@@ -36,7 +36,7 @@ This dictionary is used in the {{domxref("RTCRtpSendParameters")}} describing th
   - : A value specifying the maximum number of frames per second to allow for this encoding.
 - `priority`
   - : A string indicating the priority of the {{domxref("RTCRtpSender")}}, which may determine how the user agent allocates bandwidth between senders.
-    Allowed values are `very-low`, `low`, `medium`, `high`.
+    Allowed values are `very-low`, `low` (default), `medium`, `high`.
 - {{domxref("RTCRtpEncodingParameters.rid", "rid")}} {{Non-standard_Inline}}
   - : A string which, if set, specifies an _RTP stream ID_ (_RID_) to be sent using the RID header extension. This parameter cannot be modified using {{domxref("RTCRtpSender.setParameters", "setParameters()")}}. Its value can only be set when the transceiver is first created.
 - {{domxref("RTCRtpEncodingParameters.scaleResolutionDownBy", "scaleResolutionDownBy")}}
