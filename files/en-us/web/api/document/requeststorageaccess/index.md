@@ -15,7 +15,10 @@ browser-compat: api.Document.requestStorageAccess
 
 {{APIRef("Storage Access API")}}
 
-The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface returns a {{jsxref("Promise")}} that resolves if the access to first-party storage was granted, and rejects if access was denied.
+The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface returns a {{jsxref("Promise")}}. If that promise resolves the requesting origin will have unrestricted access to its first-party cookies. If the access is denied tough, the promise rejects.
+
+> **Note:** Previously, embedded, cross-origin content could gain access to its entire first-party storage via the Storage Access API, not just cookie storage. This included access to APIs such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), [DOM Cache](/en-US/docs/Web/API/Cache), and so on.
+To align with other browsers, since Firefox version 109 storage is permanently partitioned. This means the storage access API does no longer grant first-party access to storage. It can only be used to gain access to first-party cookies.
 
 This is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 
@@ -31,7 +34,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with `undefined` if the access to first-party storage was granted, and rejects if access was denied.
+A {{jsxref("Promise")}} that fulfills with `undefined` if the access to first-party cookies was granted, and rejects if access was denied.
 
 When the promise gets resolved, the resolve handler will run as if a user gesture is being processed, whether the promise was fulfilled or rejected:
 

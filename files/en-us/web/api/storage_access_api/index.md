@@ -14,9 +14,14 @@ browser-compat:
 
 {{DefaultAPISidebar("Storage Access API")}}
 
-The Storage Access API provides a way for embedded, cross-origin content to gain unrestricted access to storage that it would normally only have access to in a first-party context (we refer to this as an origin's _first-party_ storage).
+The Storage Access API provides a way for embedded, cross-origin content to gain unrestricted access to the cookies that it would normally only have access to in a first-party context (We refer to storage that an origin has access to when being in a first party contex as the origin's _first-party_ storage).
 
-The API provides methods that allow embedded resources to check whether they currently have access to their first-party storage, and to request access to their first-party storage from the user agent.
+
+> **Note:** Previously, embedded, cross-origin content could gain access to its entire first-party storage via the Storage Access API. This included access to APIs such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), [DOM Cache](/en-US/docs/Web/API/Cache), and so on.
+Since Firefox version 109 first-party storage access is limited to the cookie storage. This leads to a closer alignment with other browser that implement the Storage Access API, like Safari, and hence reduces developer confusion and enhances web compatibility.
+
+The API provides methods that allow embedded resources to check whether they currently have access to their first-party cookies, and to request access to this kind of storage from the user agent.
+
 
 ## Concepts and usage
 
@@ -26,7 +31,7 @@ The semantics around third-party cookie blocking policies in particular differ f
 
 These cookie blocking policies are known to break embedded cross-origin content that requires access to its first-party storage. As an example, federated logins often require access to authentication cookies stored in first-party storage, and will require the user to sign in on each site separately (or completely break) if those cookies are not available. In the case of breakage, site owners have often encouraged users to add their site as an exception or to disable the policy entirely. As a consequence, users who wish to continue to interact with embedded content are forced to greatly relax their blocking policy for resources loaded from all embedded origins and possibly across all websites.
 
-The Storage Access API is intended to solve this problem; embedded cross-origin content can request unrestricted access to its first-party storage on a site-by-site basis via the {{domxref("Document.requestStorageAccess()")}} method, and check whether it already has access via the {{domxref("Document.hasStorageAccess()")}} method.
+The Storage Access API is intended to solve this problem; embedded cross-origin content can request unrestricted access to the cookies in its first-party storage on a site-by-site basis via the {{domxref("Document.requestStorageAccess()")}} method, and check whether it already has access via the {{domxref("Document.hasStorageAccess()")}} method.
 
 In addition, sandboxed {{htmlelement("iframe")}}s cannot be granted storage access by default for security reasons. The API therefore also adds the `allow-storage-access-by-user-activation` [sandbox token](/en-US/docs/Web/HTML/Element/iframe#attr-sandbox). The embedding website needs to add this to allow storage access requests to be successful, along with `allow-scripts` and `allow-same-origin` to allow it to call the API, and execute in an origin that can have cookies:
 
@@ -56,7 +61,6 @@ Although the API surface is the same, websites using the Storage Access API shou
 
 - If the embedded origin `tracker.example` has already obtained first-party storage access on the top-level origin `foo.example`, and the user visits a page from `foo.example` embedding a page from `tracker.example` again in less than 30 days, the embedded origin will have storage access immediately when loading.
 - If an embedded page from `tracker.example` has previously successfully obtained storage access on top-level origin `foo.example`, all embedded subresources from `tracker.example` on `foo.example` (e.g. scripts, images, stylesheets, etc.) will load with access to their first-party storage, which means they may send Cookie headers and honor incoming {{httpheader("Set-Cookie")}} headers.
-- In Firefox, when the promise returned from `requestStorageAccess()` is resolved, the embedded page will gain access to its entire first-party storage, not just cookies. This includes access to APIs such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), [DOM Cache](/en-US/docs/Web/API/Cache), and so on.
 - In Firefox, the storage access grants are phased out after 30 calendar days passing, whereas in Safari the storage access grants are phased out after 30 days of browser usage passed without user interaction. This is currently a limitation of the Firefox implementation, which we may address in a future version. In Safari, successful use of the storage access API resets this counter.
 
 Documentation for Firefox's new storage access policy for blocking tracking cookies includes [a detailed description](/en-US/docs/Web/Privacy/Storage_Access_Policy#storage_access_grants) of the scope of storage access grants.
@@ -66,15 +70,15 @@ Documentation for Firefox's new storage access policy for blocking tracking cook
 The storage API methods are implemented on the {{domxref("Document")}} interface:
 
 - {{domxref("Document.hasStorageAccess()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to its first-party storage.
+  - : Returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to its first-party cookies.
 - {{domxref("Document.requestStorageAccess()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves if the access to first-party storage was granted, and rejects if access was denied.
+  - : Returns a {{jsxref("Promise")}} that resolves if the access to first-party cookies was granted, and rejects if access was denied.
 
 > **Note:** User interaction propagates to the Promise returned by both of these methods, allowing the callers to take actions that require user interaction without requiring a second click from the user. For example, a caller could open a pop-up window from the resolved Promise without triggering Firefox's pop-up blocker.
 
 ## Extensions to \<iframe> sandbox
 
-The {{htmlelement("iframe")}} element's `sandbox` attribute has a new token, `allow-storage-access-by-user-activation`, which permits sandboxed `<iframe>`s to use the Storage Access API to request storage access.
+The {{htmlelement("iframe")}} element's `sandbox` attribute has a new token, `allow-storage-access-by-user-activation`, which permits sandboxed `<iframe>`s to use the Storage Access API to request access to cookie storage.
 
 ## Specifications
 

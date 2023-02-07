@@ -131,8 +131,8 @@ tracking, Firefox partitions accessible storage by top-level site. This
 mechanism means that, generally, a third-party embedded in one top-level site
 cannot access data stored under another top-level site.
 
-However, unlike Network Partitioning, this boundary is dynamic and access
-to a third-party's unpartitioned storage can be granted:
+However, unlike Network Partitioning, this boundary is dynamic for cookies and access
+to a third-party's unpartitioned cookies can be granted:
 
 - using the [Storage Access API](#storage_access_api).
 - automatically, such as for third-parties providing federated login.
@@ -142,7 +142,7 @@ Details about automatic grants are provided in the
 
 #### Partitioned APIs
 
-- [Cookies](/en-US/docs/Web/API/Document/cookie)
+- [Cookies](/en-US/docs/Web/API/Document/cookie) (Dynamic)
 - [localStorage](/en-US/docs/Web/API/Window/localStorage)
 - [sessionStorage](/en-US/docs/Web/API/Window/sessionStorage)
 - [DOM Cache](/en-US/docs/Web/API/Cache)
@@ -158,7 +158,7 @@ we are exploring options to enable Service Workers in partitioned contexts.
 #### Storage Access Heuristics
 
 To improve web compatibility, Firefox currently includes some heuristics to
-grant unpartitioned storage access automatically to third parties that
+grant unpartitioned access to cookies automatically to third parties that
 receive user interaction. These heuristics are intended to allow some
 third-party integrations that are common on the web to continue to function.
 
@@ -197,18 +197,13 @@ third-party integrations that are common on the web to continue to function.
 #### Storage Access API
 
 Third-party frames may use
-[document.requestStorageAccess](/en-US/docs/Web/API/Document/requestStorageAccess) to request unpartitioned storage access through the
+[document.requestStorageAccess](/en-US/docs/Web/API/Document/requestStorageAccess) to request unpartitioned access to cookie through the
 [Storage Access API](/en-US/docs/Web/API/Storage_Access_API). Once
-granted, the requesting third-party will gain access to its first-party
-storage bucket (i.e., the storage it would have access to if visited as a
-first-party). Any calls to [dynamically partitioned APIs](#dynamically_partitioned_apis), for
-example
-[localStorage](/en-US/docs/Web/API/Window/localStorage), will be
-made in context of the first-party bucket.
+granted, the requesting party will gain access to its entire first-party cookies (i.e., the cookies it would have access to if visited as a first-party).
 
 > **Warning:** When storage access is granted there may still
 > be references to the partitioned storage. However, sites shouldn't rely on
-> being able to use partitioned and unpartitioned storage at the same
+> being able to use partitioned and unpartitioned cookies at the same
 > time.
 
 ### Debugging
@@ -227,8 +222,8 @@ with storage in a third-party context. In the following examples,
 | Reason                                                                                                  | Console Message                                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Storage of a third-party frame is partitioned                                                           | Partitioned cookie or storage access was provided to "b.example" because it is loaded in the third-party context and storage partitioning is enabled. |
-| Storage access is granted through a **heuristic**                                                       | Storage access automatically granted for First-Party isolation "b.example" on "a.example".                                                            |
-| Storage access is granted via the [StorageAccessAPI](/en-US/docs/Web/API/Document/requestStorageAccess) | Storage access granted for origin "b.example" on "a.example".                                                                                         |
+| Access to unpartitioned cookies is granted through a **heuristic**                                                       | Storage access automatically granted for First-Party isolation "b.example" on "a.example".                                                            |
+| Access to unpartitioned cookies is granted via the [StorageAccessAPI](/en-US/docs/Web/API/Document/requestStorageAccess) | Storage access granted for origin "b.example" on "a.example".                                                                                         |
 
 #### Clear Third-Party Storage-Access
 
@@ -251,8 +246,8 @@ heuristics.
 
 Features disabled by the pref include:
 
-- [Storage access heuristics](#storage_access_heuristics): Unpartitioned storage
-  access can only be acquired via the Storage Access API.
+- [Storage access heuristics](#storage_access_heuristics): Unpartitioned
+  access to cookies can only be acquired via the Storage Access API.
 - Automatic storage access grants:
   [document.requestStorageAccess](/en-US/docs/Web/API/Document/requestStorageAccess)
   will always prompt the user.
