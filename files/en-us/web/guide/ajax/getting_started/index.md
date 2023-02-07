@@ -226,8 +226,8 @@ Finally, let's send some data to the server and receive a response. Our JavaScri
 First we'll add a text box to our HTML so the user can enter their name:
 
 ```html
-<label
-  >Your name:
+<label>
+  Your name:
   <input type="text" id="ajaxTextbox" />
 </label>
 <span id="ajaxButton" style="cursor: pointer; text-decoration: underline">
