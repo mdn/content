@@ -65,7 +65,7 @@ A {{jsxref("String")}} of the specified `targetLength` with
 // JavaScript version of: (unsigned)
 // printf "%0*d" width num
 function leftFillNum(num, targetLength) {
-  return num.toString().padStart(targetLength, 0);
+  return num.toString().padStart(targetLength, "0");
 }
 
 const num = 123;
@@ -84,4 +84,3 @@ console.log(leftFillNum(num, 5)); // "00123"
 
 - [Polyfill of `String.prototype.padStart` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.padEnd()")}}
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/string.polyfill.js)
