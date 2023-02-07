@@ -23,7 +23,7 @@ Play with the various sliders to apply filter effects to the image below:
 
 ```html hidden
 <article>
-<img src="https://assets.codepen.io/405/george_floyd_memorial_sm.jpg?format=auto">
+<img src="george_floyd_memorial_sm.jpg" alt="A colorful memorial honoring George Floyd and the Black Lives Matter movement"/>
   <form>
 <fieldset>
   <legend>Select your filters</legend>
