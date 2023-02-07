@@ -375,7 +375,7 @@ device.createBindGroupLayout({
 });
 ```
 
-Next we create a {{domxref("GPUBindGroup")}} by calling {{domxref("GPUDevice.createBindGroup()")}}. We passing this method call a descriptor object that specifies the bind group layout to base this bind group on, and the details of the variable to bind to the slot defined in the layout. In this case, we are declaring bind group 1, and specifying that it should be written to the `output` buffer we defined earlier).
+Next we create a {{domxref("GPUBindGroup")}} by calling {{domxref("GPUDevice.createBindGroup()")}}. We pass this method call a descriptor object that specifies the bind group layout to base this bind group on, and the details of the variable to bind to the slot defined in the layout. In this case, we are declaring binding 1, and specifying that it should be written to the `output` buffer we defined earlier).
 
 ```js
 const bindGroup = device.createBindGroup({
