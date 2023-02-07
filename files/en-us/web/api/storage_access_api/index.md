@@ -14,13 +14,13 @@ browser-compat:
 
 {{DefaultAPISidebar("Storage Access API")}}
 
-The Storage Access API provides a way for embedded, cross-origin content to gain unrestricted access to the cookies that it would normally only have access to in a first-party context (We refer to storage that an origin has access to when being in a first party contex as the origin's _first-party_ storage).
+The Storage Access API provides a way for embedded, cross-origin content to gain unrestricted access to the cookies that it would normally only have access to in a first-party context (We refer to storage and cookies that an origin has access to when being in a first party contex as the origin's _first-party_ storage).
 
 
 > **Note:** Previously, embedded, cross-origin content could gain access to its entire first-party storage via the Storage Access API. This included access to APIs such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), [DOM Cache](/en-US/docs/Web/API/Cache), and so on.
 Since Firefox version 109 first-party storage access is limited to the cookie storage. This leads to a closer alignment with other browser that implement the Storage Access API, like Safari, and hence reduces developer confusion and enhances web compatibility.
 
-The API provides methods that allow embedded resources to check whether they currently have access to their first-party cookies, and to request access to this kind of storage from the user agent.
+The API provides methods that allow embedded resources to check whether they currently have access to their first-party cookies, and to request access to them from the user agent.
 
 
 ## Concepts and usage
@@ -29,9 +29,9 @@ Most browsers implement a number of storage access policies that restrict access
 
 The semantics around third-party cookie blocking policies in particular differ from browser to browser, but the core functionality is similar: cross-origin resources embedded in a third-party context are not given access to the same cookies and site storage that they would have access to when loaded in a first-party context.
 
-These cookie blocking policies are known to break embedded cross-origin content that requires access to its first-party storage. As an example, federated logins often require access to authentication cookies stored in first-party storage, and will require the user to sign in on each site separately (or completely break) if those cookies are not available. In the case of breakage, site owners have often encouraged users to add their site as an exception or to disable the policy entirely. As a consequence, users who wish to continue to interact with embedded content are forced to greatly relax their blocking policy for resources loaded from all embedded origins and possibly across all websites.
+These cookie blocking policies are known to break embedded cross-origin content that requires access to its first-party storage. As an example, federated logins often require access to authentication cookies available in a first-party context, and will require the user to sign in on each site separately (or completely break) if those cookies are not available. In the case of breakage, site owners have often encouraged users to add their site as an exception or to disable the policy entirely. As a consequence, users who wish to continue to interact with embedded content are forced to greatly relax their blocking policy for resources loaded from all embedded origins and possibly across all websites.
 
-The Storage Access API is intended to solve this problem; embedded cross-origin content can request unrestricted access to the cookies in its first-party storage on a site-by-site basis via the {{domxref("Document.requestStorageAccess()")}} method, and check whether it already has access via the {{domxref("Document.hasStorageAccess()")}} method.
+The Storage Access API is intended to solve this problem; embedded cross-origin content can request unrestricted access to first-party cookies on a site-by-site basis via the {{domxref("Document.requestStorageAccess()")}} method, and check whether it already has access via the {{domxref("Document.hasStorageAccess()")}} method.
 
 In addition, sandboxed {{htmlelement("iframe")}}s cannot be granted storage access by default for security reasons. The API therefore also adds the `allow-storage-access-by-user-activation` [sandbox token](/en-US/docs/Web/HTML/Element/iframe#attr-sandbox). The embedding website needs to add this to allow storage access requests to be successful, along with `allow-scripts` and `allow-same-origin` to allow it to call the API, and execute in an origin that can have cookies:
 
@@ -78,7 +78,7 @@ The storage API methods are implemented on the {{domxref("Document")}} interface
 
 ## Extensions to \<iframe> sandbox
 
-The {{htmlelement("iframe")}} element's `sandbox` attribute has a new token, `allow-storage-access-by-user-activation`, which permits sandboxed `<iframe>`s to use the Storage Access API to request access to cookie storage.
+The {{htmlelement("iframe")}} element's `sandbox` attribute has a new token, `allow-storage-access-by-user-activation`, which permits sandboxed `<iframe>`s to use the Storage Access API to request access to first-party cookies.
 
 ## Specifications
 
