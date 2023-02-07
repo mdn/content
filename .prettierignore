@@ -13,6 +13,7 @@ build/
 !files/en-us/web/media/**/*.md
 !files/en-us/web/performance/**/*.md
 !files/en-us/web/privacy/**/*.md
+!files/en-us/web/security/**/*.md
 !files/en-us/web/webdriver/**/*.md
 !files/en-us/web/xml/**/*.md
 !files/en-us/web/xpath/**/*.md
