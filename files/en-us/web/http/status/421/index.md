@@ -10,7 +10,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#name-421-misdirected-request
 
 {{HTTPSidebar}}
 
-The HTTP **`421 Misdirected Request`** client error response code indicates that the request was directed at a server that is not able to produce a response. This might be possible if a connection is reused or if an alternative service is selected.
+The HTTP **`421 Misdirected Request`** client error response code indicates that the request was directed to a server that is not able to produce a response. This might be possible if a connection is reused or if an alternative service is selected.
 
 ## Status
 
