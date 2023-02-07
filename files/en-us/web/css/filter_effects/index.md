@@ -47,9 +47,11 @@ Play with the various sliders to apply filter effects to the image below:
 ```css hidden
 article {display: flex; gap: 1rem;}
 label {display: block; margin: 0.5em; font-family: sans-serif;}
-input {vertical-align: middle; margin-right: 0.5em;}
+input {vertical-align: middle; margin-right: 0.25em; max-width: 50%;}
 img {
   margin: 1rem;
+  width: 100%;
+  flex: 50%;
 }
 ```
 
@@ -123,36 +125,32 @@ function sepia() {
 }
 ```
 
-{{ EmbedLiveSample('Filter_effects_in_action', "630", "630") }}
+{{ EmbedLiveSample('Filter_effects_in_action', "630", "400") }}
 
-To see the code for this filter effects, [view the source on Github](https://github.com/mdn/content/blob/main/files/en-us/web/css/css_filter_effects/index.md).
+To see the code for this filter effects sample, [view the source on Github](https://github.com/mdn/content/blob/main/files/en-us/web/css/css_filter_effects/index.md).
 
 ### Properties
 
 - {{cssxref("backdrop-filter")}}
 - {{cssxref("filter")}}
 
-### At-rules
-
-- {{cssxref("")}}
-
 ### Functions
 
-- {{cssxref("&lt;filter-function&gt;")}} data type, including 10 CSS functions:
-  - {{cssxref("filter-function/blur", "blur()")}}
-  - {{cssxref("filter-function/brightness", "brightness()")}}
-  - {{cssxref("filter-function/contrast", "contrast()")}}
-  - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-  - {{cssxref("filter-function/grayscale", "grayscale()")}}
-  - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-  - {{cssxref("filter-function/invert", "invert()")}}
-  - {{cssxref("filter-function/opacity", "opacity()")}}
-  - {{cssxref("filter-function/saturate", "saturate()")}}
-  - {{cssxref("filter-function/sepia", "sepia()")}}
+- {{cssxref("filter-function/blur", "blur()")}}
+- {{cssxref("filter-function/brightness", "brightness()")}}
+- {{cssxref("filter-function/contrast", "contrast()")}}
+- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+- {{cssxref("filter-function/grayscale", "grayscale()")}}
+- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
+- {{cssxref("filter-function/invert", "invert()")}}
+- {{cssxref("filter-function/opacity", "opacity()")}}
+- {{cssxref("filter-function/saturate", "saturate()")}}
+- {{cssxref("filter-function/sepia", "sepia()")}}
 
 ## Related concepts
 
 - {{CSSxRef("&lt;image&gt;")}} data type
+- {{cssxref("&lt;filter-function&gt;")}} data type
 
 - {{cssxref("background-image")}} CSS property
 - {{cssxref("background-blend-mode")}} CSS property
