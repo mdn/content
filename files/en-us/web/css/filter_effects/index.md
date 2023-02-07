@@ -131,31 +131,12 @@ To see the code for this filter effects, [view the source on Github](https://git
 
 - {{cssxref("backdrop-filter")}}
 - {{cssxref("filter")}}
-- {{cssxref("color-interpolation-filters")}}
 
 ### At-rules
 
 - {{cssxref("")}}
 
 ### Functions
-
-- {{cssxref("")}}
-
-### Events
-
-- {{domxref("")}}
-
-### Interfaces
-
-- {{domxref("")}} (inherits from {{domxref("")}})
-  - : Including {{domxref("")}}, {{domxref("")}}, and {{domxref("")}}.
-
-## Guides
-
-- []()
-  - : <!-- description -->
-
-## Related concepts
 
 - {{cssxref("&lt;filter-function&gt;")}} data type, including 10 CSS functions:
   - {{cssxref("filter-function/blur", "blur()")}}
@@ -168,6 +149,9 @@ To see the code for this filter effects, [view the source on Github](https://git
   - {{cssxref("filter-function/opacity", "opacity()")}}
   - {{cssxref("filter-function/saturate", "saturate()")}}
   - {{cssxref("filter-function/sepia", "sepia()")}}
+
+## Related concepts
+
 - {{CSSxRef("&lt;image&gt;")}} data type
 
 - {{cssxref("background-image")}} CSS property
