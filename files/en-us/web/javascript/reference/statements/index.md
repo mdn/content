@@ -109,7 +109,7 @@ Everything else in the [list above](#statements_and_declarations_by_category) is
 
 The terms "statement" and "declaration" have a precise meaning in the formal syntax of JavaScript that affects where they may be placed in code. For example, in most control-flow structures, the body only accepts statements — such as the two arms of an [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else):
 
-```js
+```js-nolint
 if (condition)
   statement1;
 else
@@ -118,14 +118,14 @@ else
 
 If you use a declaration instead of a statement, it would be a {{jsxref("SyntaxError")}}. For example, a [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) declaration is not a statement, so you can't use it in its bare form as the body of an `if` statement.
 
-```js example-bad
+```js-nolint example-bad
 if (condition)
   let i = 0; // SyntaxError: Lexical declaration cannot appear in a single-statement context
 ```
 
 On the other hand, [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) is a statement, so you can use it on its own as the `if` body.
 
-```js example-good
+```js-nolint example-good
 if (condition)
   var i = 0;
 ```

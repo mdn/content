@@ -1,6 +1,7 @@
 ---
 title: '<optgroup>: The Option Group element'
 slug: Web/HTML/Element/optgroup
+page-type: html-element
 tags:
   - Element
   - Forms
@@ -51,7 +52,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 {{EmbedLiveSample("Examples")}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
@@ -81,7 +82,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td>{{ARIARole("group")}}</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>

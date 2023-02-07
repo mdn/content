@@ -82,7 +82,7 @@ This creates the following output:
 
 {{ EmbedLiveSample('What_is_SVG', 300, 240, "", "") }}
 
-From the example above, you may get the impression that SVG is easy to handcode. Yes, you can handcode simple SVG in a text editor, but for a complex image this quickly starts to get very difficult. For creating SVG images, most people use a vector graphics editor like [Inkscape](https://inkscape.org/) or [Illustrator](https://en.wikipedia.org/wiki/Adobe_Illustrator). These packages allow you to create a variety of illustrations using various graphics tools, and create approximations of photos (for example Inkscape's Trace Bitmap feature.)
+From the example above, you may get the impression that SVG is easy to hand code. Yes, you can hand code simple SVG in a text editor, but for a complex image this quickly starts to get very difficult. For creating SVG images, most people use a vector graphics editor like [Inkscape](https://inkscape.org/) or [Illustrator](https://en.wikipedia.org/wiki/Adobe_Illustrator). These packages allow you to create a variety of illustrations using various graphics tools, and create approximations of photos (for example Inkscape's Trace Bitmap feature.)
 
 SVG has some additional advantages besides those described so far:
 
@@ -161,7 +161,7 @@ You can also open up the SVG file in a text editor, copy the SVG code, and paste
 
 #### Pros
 
-- Putting your SVG inline saves an HTTP request, and therefore can reduce a bit your loading time.
+- Putting your SVG inline saves an HTTP request, and therefore can reduce your loading time a bit.
 - You can assign `class`es and `id`s to SVG elements and style them with CSS, either within the SVG or wherever you put the CSS style rules for your HTML document. In fact, you can use any [SVG presentation attribute](/en-US/docs/Web/SVG/Attribute#presentation_attributes) as a CSS property.
 - Inlining SVG is the only approach that lets you use CSS interactions (like `:focus`) and CSS animations on your SVG image (even in your regular stylesheet.)
 - You can make SVG markup into a hyperlink by wrapping it in an {{htmlelement("a")}} element.

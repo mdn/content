@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: hid'
+title: "Permissions-Policy: hid"
 slug: Web/HTTP/Headers/Permissions-Policy/hid
 tags:
   - Directive

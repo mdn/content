@@ -639,48 +639,6 @@ See {{bug(1715546)}} for more details.
   </tbody>
 </table>
 
-### Container queries
-
-Container queries allow you to apply CSS styles to elements based on the size of their container as opposed to the size of the viewport or other device characteristics.
-The CSS length units `cqw`, `cqh`, `cqi`, `cqb`, `cqmin`, `cqmax` are units of length relative to the size of a query container and are supported as part of this functionality.
-For more information, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) page and the [Container query length units](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) section ({{bug(1744231)}}, {{bug(1801123)}}).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>109</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>108</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>108</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>108</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.container-queries.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### round() math function
 
 The CSS [`round()`](/en-US/docs/Web/CSS/round) function is a math function that rounds a number (or the result of an expression) based on a selected rounding strategy.
@@ -1522,9 +1480,12 @@ The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings
   </tbody>
 </table>
 
-#### Document property: autoplayPolicy
+#### Navigator method: getAutoplayPolicy()
 
-The {{domxref("document")}} property autoplayPolicy returns a string indicating how the browser handles requests to automatically play media (either using the {{domxref("HTMLMediaElement.autoplay", "autoplay")}} property on a media element or by attempting to trigger playback from JavaScript code. The spec for this API is still being written. The value changes over time depending on what the user is doing, their preferences, and the state of the browser in general. Potential values include `allowed` (autoplay is currently permitted), `allowed-muted` (autoplay is allowed but only with no—or muted—audio), and `disallowed` (autoplay is not allowed at this time). See {{bug(1506289)}} for more details.
+The {{domxref("navigator.getAutoplayPolicy()")}} method returns a string value indicating how the browser handles requests to automatically play media for either media elements or audio contexts.
+The possible values are: `allowed` (autoplay is currently permitted), `allowed-muted` (autoplay is allowed but only with no—or muted—audio), and `disallowed` (autoplay is not allowed at this time).
+The value can change over time for all items of a particular type, or for a particular item, depending on what the user is doing, their preferences, and the state of the browser in general.
+See {{bug(1773551)}} for more details.
 
 <table>
   <thead>
@@ -1537,27 +1498,27 @@ The {{domxref("document")}} property autoplayPolicy returns a string indicating 
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>66</td>
-      <td>No</td>
+      <td>110</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>66</td>
+      <td>110</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>66</td>
+      <td>110</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>66</td>
+      <td>110</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>dom.media.autoplay.autoplay-policy-api</code></td>
+      <td colspan="2"><code>dom.media.autoplay-policy-detection.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -1818,6 +1779,50 @@ Note that since locking the screen orientation isn't typically supported on desk
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.screenorientation.allow-lock</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### File System Access API
+
+#### StorageManager.getDirectory()
+
+The {{domxref("StorageManager.getDirectory()")}} method, obtained using `navigator.storage.getDirectory()` in a worker or the main thread, provides access to files stored in the [origin private file system](/en-US/docs/Web/API/File_System_Access_API#origin_private_file_system).
+This data is origin-specific: permission prompts are not required to access files, and clearing data for the site/origin deletes the storage.
+See {{bug(1785123)}} for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version changed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>110</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>97</td>
+      <td>No.</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.fs.enabled</code></td>
     </tr>
   </tbody>
 </table>

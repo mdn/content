@@ -64,8 +64,6 @@ No notable changes
 
 ## Changes for add-on developers
 
-### Removals
-
 ### Other
 
 - The `error` property returned when an error occurs in {{WebExtAPIRef("scripting.executeScript")}} now represents any value the script throws or rejects with, instead of being just an object with a message property {{bug(1740608)}}.

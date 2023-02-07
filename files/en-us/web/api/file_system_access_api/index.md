@@ -52,7 +52,7 @@ Storing data in the OPFS is similar to storing data in any other browser-provide
 
 Files can be manipulated inside the OPFS via a three-step process:
 
-1. The {{domxref("StorageManager.getDirectory()")}} method returns a reference to a {{domxref("FileSystemDirectoryHandle")}} object allowing access to a directory and its contents — this represents the root of the OPFS.
+1. The {{domxref("StorageManager.getDirectory()")}} method, which is obtained using [`navigator.storage.getDirectory()`](/en-US/docs/Web/API/Navigator/storage) in a worker or the main thread, returns a reference to a {{domxref("FileSystemDirectoryHandle")}} object allowing access to a directory and its contents — this represents the root of the OPFS.
 2. The {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} method is invoked to return a {{domxref('FileSystemFileHandle')}} object representing a handle to a specific file in the directory.
 3. The {{domxref('FileSystemFileHandle.createSyncAccessHandle', 'createSyncAccessHandle()')}} method is invoked on that file handle, and returns a {{domxref('FileSystemSyncAccessHandle')}} object that can be used to read and write to the file. This is a high-performance handle for _synchronous_ read/write operations (the other handle types are asynchronous). The synchronous nature of this class brings performance advantages intended for use in contexts where asynchronous operations come with high overhead (for example, [WebAssembly](/en-US/docs/WebAssembly)). Note that it is only usable inside dedicated [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
@@ -206,7 +206,9 @@ writableStream.write({ type: "seek", position });
 writableStream.write({ type: "truncate", size });
 ```
 
-### Synchronously reading and writing a file
+### Synchronously reading and writing files in OPFS
+
+This example synchronously reads and writes a file to the [origin private file system](#origin_private_file_system).
 
 The following asynchronous event handler function is contained inside a Web Worker. On receiving a message from the main thread it:
 
@@ -221,7 +223,7 @@ onmessage = async (e) => {
   // retrieve message sent to work from main script
   const message = e.data;
 
-  // Get handle to draft file
+  // Get handle to draft file in OPFS
   const root = await navigator.storage.getDirectory();
   const draftHandle = await root.getFileHandle('draft.txt', { create: true });
   // Get sync access handle

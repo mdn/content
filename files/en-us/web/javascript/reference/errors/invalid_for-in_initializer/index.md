@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: for-in loop head declarations may not have initializers'
+title: "SyntaxError: for-in loop head declarations may not have initializers"
 slug: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
 page-type: javascript-error
 tags:

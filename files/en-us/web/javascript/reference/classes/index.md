@@ -80,6 +80,8 @@ Together, they add up to 16 possible combinations. To divide the reference more 
 - [Private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
   - : Everything that's private
 
+> **Note:** Private features have the restriction that all property names declared in the same class must be unique. All other public properties do not have this restriction — you can have multiple public properties with the same name, and the last one overwrites the others. This is the same behavior as in [object initializers](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#duplicate_property_names).
+
 In addition, there are two special class element syntaxes: [`constructor`](#constructor) and [static initialization blocks](#static_initialization_blocks), with their own references.
 
 #### Constructor
@@ -99,7 +101,7 @@ class Rectangle {
 }
 ```
 
-Alternatively, if your instance properties' values do not depend on the constructor's arguments, you can define them as [class fields](#public_field_declarations).
+Alternatively, if your instance properties' values do not depend on the constructor's arguments, you can define them as [class fields](#field_declarations).
 
 #### Static initialization blocks
 
@@ -162,11 +164,11 @@ class Point {
 const p1 = new Point(5, 5);
 const p2 = new Point(10, 10);
 p1.displayName; // undefined
-p1.distance;    // undefined
+p1.distance; // undefined
 p2.displayName; // undefined
-p2.distance;    // undefined
+p2.distance; // undefined
 
-console.log(Point.displayName);      // "Point"
+console.log(Point.displayName); // "Point"
 console.log(Point.distance(p1, p2)); // 7.0710678118654755
 ```
 
@@ -185,7 +187,7 @@ class Rectangle {
 }
 ```
 
-Class fields are similar to object properties, not variables, so we don't use keywords such as `const` to declare them. In JavaScript, [private fields](#private_field_declarations) use a special identifier syntax, so modifier keywords like `public` and `private` should not be used either.
+Class fields are similar to object properties, not variables, so we don't use keywords such as `const` to declare them. In JavaScript, [private features](#private_class_features) use a special identifier syntax, so modifier keywords like `public` and `private` should not be used either.
 
 As seen above, the fields can be declared with or without a default value. Fields without default values default to `undefined`. By declaring fields up-front, class definitions become more self-documenting, and the fields are always present, which help with optimizations.
 
@@ -289,7 +291,7 @@ obj.speak(); // the Animal object
 const speak = obj.speak;
 speak(); // undefined
 
-Animal.eat() // class Animal
+Animal.eat(); // class Animal
 const eat = Animal.eat;
 eat(); // undefined
 ```
@@ -301,11 +303,11 @@ function Animal() {}
 
 Animal.prototype.speak = function () {
   return this;
-}
+};
 
 Animal.eat = function () {
   return this;
-}
+};
 
 const obj = new Animal();
 const speak = obj.speak;

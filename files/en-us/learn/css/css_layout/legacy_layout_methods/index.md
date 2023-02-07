@@ -178,7 +178,7 @@ The aim is to turn this into a demonstration grid of two rows on a twelve column
 
 ![CSS grid with 16 grid items spread across twelve columns and two rows. The top row has 12 equal-width grid items in 12 columns. The second row has different-sized grid items. Item 13 spans 1 column, item 14 spans six columns, 15 spans three, and 16 spans two.](simple-grid-finished.png)
 
-In the {{htmlelement("style")}} element, add the following code, which gives the wrapper container a width of 980 pixels, with padding on the right-hand side of 20 pixels. This leaves us with 960 pixels for our total column/gutter widths — in this case, the padding is subtracted from the total content width because we have set {{cssxref("box-sizing")}} to `border-box` on all elements on the site (see [Changing the box model completely](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#changing_the_box_model_completely) for more explanation).
+In the {{htmlelement("style")}} element, add the following code, which gives the wrapper container a width of 980 pixels, with padding on the right-hand side of 20 pixels. This leaves us with 960 pixels for our total column/gutter widths — in this case, the padding is subtracted from the total content width because we have set {{cssxref("box-sizing")}} to `border-box` on all elements on the site (see [The alternative CSS box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#the_alternative_css_box_model) for more explanation).
 
 ```css
 * {

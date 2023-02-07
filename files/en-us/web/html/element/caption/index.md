@@ -1,6 +1,7 @@
 ---
 title: '<caption>: The Table Caption element'
 slug: Web/HTML/Element/caption
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -93,7 +94,7 @@ td {
 
 {{EmbedLiveSample('Example', 650, 100)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
@@ -129,9 +130,7 @@ td {
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">caption</a>
       </td>
     </tr>
     <tr>

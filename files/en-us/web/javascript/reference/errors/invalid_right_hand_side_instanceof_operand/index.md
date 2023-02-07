@@ -1,5 +1,5 @@
 ---
-title: 'TypeError: invalid ''instanceof'' operand ''x'''
+title: "TypeError: invalid 'instanceof' operand 'x'"
 slug: Web/JavaScript/Reference/Errors/invalid_right_hand_side_instanceof_operand
 page-type: javascript-error
 tags:
@@ -43,14 +43,14 @@ i.e. an object which has a `prototype` property and is callable. It can also be 
 
 ```js example-bad
 "test" instanceof ""; // TypeError: invalid 'instanceof' operand ""
-42 instanceof 0;      // TypeError: invalid 'instanceof' operand 0
+42 instanceof 0; // TypeError: invalid 'instanceof' operand 0
 
 function Foo() {}
-const f = Foo();        // Foo() is called and returns undefined
+const f = Foo(); // Foo() is called and returns undefined
 const x = new Foo();
 
-x instanceof f;       // TypeError: invalid 'instanceof' operand f
-x instanceof x;       // TypeError: x is not a function
+x instanceof f; // TypeError: invalid 'instanceof' operand f
+x instanceof x; // TypeError: x is not a function
 ```
 
 To fix these errors, you will either need to replace
@@ -60,14 +60,14 @@ or to make sure you use the function name, instead of the result of its evaluati
 
 ```js example-good
 typeof "test" === "string"; // true
-typeof 42 === "number"      // true
+typeof 42 === "number"; // true
 
 function Foo() {}
-const f = Foo;               // Do not call Foo.
+const f = Foo; // Do not call Foo.
 const x = new Foo();
 
-x instanceof f;            // true
-x instanceof Foo;          // true
+x instanceof f; // true
+x instanceof Foo; // true
 ```
 
 ## See also

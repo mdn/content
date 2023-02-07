@@ -22,7 +22,7 @@ This article provides information about the changes in Firefox 85 that will affe
 
 ### HTML
 
-- [`<link rel="preload">`](/en-US/docs/Web/HTML/Link_types/preload) is now enabled. ({{bug(1626997)}}).
+- [`<link rel="preload">`](/en-US/docs/Web/HTML/Attributes/rel/preload) is now enabled. ({{bug(1626997)}}).
 
 #### Removals
 

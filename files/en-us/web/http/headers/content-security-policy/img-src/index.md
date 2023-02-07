@@ -1,5 +1,5 @@
 ---
-title: 'CSP: img-src'
+title: "CSP: img-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/img-src
 tags:
   - CSP

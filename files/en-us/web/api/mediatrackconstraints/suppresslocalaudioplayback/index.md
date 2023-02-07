@@ -43,7 +43,7 @@ result in an error.
 let isLocalAudioSuppressed = displayStream.getVideoTracks()[0].getSettings().suppressLocalAudioPlayback;
 ```
 
-See [Example: Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) for an example that allows you to play with media track constraints.
+The [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example shows how to use media track constraints.
 
 ## Specifications
 

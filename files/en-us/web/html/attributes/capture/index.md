@@ -1,6 +1,7 @@
 ---
 title: 'HTML attribute: capture'
 slug: Web/HTML/Attributes/capture
+page-type: html-attribute
 tags:
   - API
   - Attribute

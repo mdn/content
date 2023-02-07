@@ -1,6 +1,7 @@
 ---
 title: '<h1>–<h6>: The HTML Section Heading elements'
 slug: Web/HTML/Element/Heading_Elements
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -62,8 +63,8 @@ The **`<h1>`** to **`<h6>`** [HTML](/en-US/docs/Web/HTML) elements represent six
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("tab")}}, {{ARIARole("presentation")}} or
-        {{ARIARole("none")}}
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> or
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
       </td>
     </tr>
     <tr>

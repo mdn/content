@@ -12,8 +12,7 @@ browser-compat: javascript.builtins.Proxy.handler.defineProperty
 
 {{JSRef}}
 
-The **`handler.defineProperty()`** method is a trap for
-{{jsxref("Object.defineProperty()")}}.
+The **`handler.defineProperty()`** method is a trap for the `[[DefineOwnProperty]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as {{jsxref("Object.defineProperty()")}}.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-defineproperty.html", "taller")}}
 
@@ -45,9 +44,6 @@ The `defineProperty()` method must return a {{jsxref("Boolean")}} indicating
 whether or not the property has been successfully defined.
 
 ## Description
-
-The **`handler.defineProperty()`** method is a trap for
-{{jsxref("Object.defineProperty()")}}.
 
 ### Interceptions
 

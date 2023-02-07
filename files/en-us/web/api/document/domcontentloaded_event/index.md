@@ -75,7 +75,7 @@ if (document.readyState === 'loading') {  // Loading hasn't finished yet
 }
 ```
 
-> **Note:** There's no race condition here — it's not possible for the document to be loaded between the `if` check and the `addEventLister()` call. JavaScript has run-to-completion semantics, which means if the document is loading at one particular tick of the event loop, it can't become loaded until the next cycle, at which time the `doSomething` handler is already attached and will be fired.
+> **Note:** There's no race condition here — it's not possible for the document to be loaded between the `if` check and the `addEventListener()` call. JavaScript has run-to-completion semantics, which means if the document is loading at one particular tick of the event loop, it can't become loaded until the next cycle, at which time the `doSomething` handler is already attached and will be fired.
 
 ### Live example
 
@@ -93,7 +93,7 @@ if (document.readyState === 'loading') {  // Loading hasn't finished yet
     class="event-log-contents"
     rows="8"
     cols="30"
-    id="leventLog"></textarea>
+    id="eventLog"></textarea>
 </div>
 ```
 

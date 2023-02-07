@@ -198,17 +198,17 @@ Let's put these ideas into practice and build a slightly more involved form — 
    <link href="payment-form.css" rel="stylesheet" />
    ```
 
-3. Next, create your form by adding the outer {{htmlelement("form")}} element:
+3. Next, create your form by adding a {{htmlelement("form")}} element:
 
-   ```html
+   ```html-nolint
    <form>
-     …
+   ...
    </form>
    ```
 
-4. Inside the `<form>` tags, add a heading and paragraph to inform users how required fields are marked:
+4. Inside the `<form>` element, add a heading and paragraph to inform users how required fields are marked:
 
-   ```html
+   ```html-nolint
    <h1>Payment form</h1>
    <p>
      Required fields are followed by
@@ -320,6 +320,12 @@ Let's put these ideas into practice and build a slightly more involved form — 
        <button type="submit">Validate the payment</button>
      </p>
    </section>
+   ```
+
+8. Finally, complete your form by adding the outer {{htmlelement("form")}} closing tag:
+
+   ```html
+   </form>
    ```
 
 You can see the finished form in action below (also find it on GitHub — see our payment-form.html [source](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.html) and [running live](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):
