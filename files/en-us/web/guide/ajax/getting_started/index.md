@@ -45,14 +45,14 @@ Note that there are no parentheses or parameters after the function name, becaus
 
 ```js
 httpRequest.onreadystatechange = () => {
-    // Process the server response here.
+  // Process the server response here.
 };
 ```
 
 Next, after declaring what happens when you receive the response, you need to actually make the request, by calling the `open()` and `send()` methods of the HTTP request object, like this:
 
 ```js
-httpRequest.open('GET', 'http://www.example.org/some.file', true);
+httpRequest.open("GET", "http://www.example.org/some.file", true);
 httpRequest.send();
 ```
 
@@ -71,7 +71,10 @@ or other formats, like `multipart/form-data`, JSON, XML, and so on.
 Note that if you want to `POST` data, you may have to set the MIME type of the request. For example, use the following before calling `send()` for form data sent as a query string:
 
 ```js
-httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+httpRequest.setRequestHeader(
+  "Content-Type",
+  "application/x-www-form-urlencoded"
+);
 ```
 
 ## Step 2 – Handling the server response
@@ -86,9 +89,9 @@ What should this function do? First, the function needs to check the request's s
 
 ```js
 if (httpRequest.readyState === XMLHttpRequest.DONE) {
-    // Everything is good, the response was received.
+  // Everything is good, the response was received.
 } else {
-    // Not ready yet.
+  // Not ready yet.
 }
 ```
 
@@ -104,11 +107,11 @@ Next, check the [HTTP response status codes](/en-US/docs/Web/HTTP/Status) of the
 
 ```js
 if (httpRequest.status === 200) {
-    // Perfect!
+  // Perfect!
 } else {
-    // There was a problem with the request.
-    // For example, the response may have a 404 (Not Found)
-    // or 500 (Internal Server Error) response code.
+  // There was a problem with the request.
+  // For example, the response may have a 404 (Not Found)
+  // or 500 (Internal Server Error) response code.
 }
 ```
 
@@ -180,7 +183,7 @@ function alertContents() {
       if (httpRequest.status === 200) {
         alert(httpRequest.responseText);
       } else {
-        alert('There was a problem with the request.');
+        alert("There was a problem with the request.");
       }
     }
   } catch (e) {
@@ -203,14 +206,14 @@ First off, let's create a valid XML document that we'll request later on. The do
 Next, in `makeRequest()`, we need to replace `test.html` with the XML file we just created:
 
 ```js
-httpRequest.open('GET', 'test.xml');
+httpRequest.open("GET", "test.xml");
 ```
 
 Then in `alertContents()`, we need to replace the line `alert(httpRequest.responseText);` with:
 
 ```js
 const xmldoc = httpRequest.responseXML;
-const root_node = xmldoc.querySelector('root');
+const root_node = xmldoc.querySelector("root");
 alert(root_node.firstChild.data);
 ```
 
@@ -223,7 +226,8 @@ Finally, let's send some data to the server and receive a response. Our JavaScri
 First we'll add a text box to our HTML so the user can enter their name:
 
 ```html
-<label>Your name:
+<label>
+  Your name:
   <input type="text" id="ajaxTextbox" />
 </label>
 <span id="ajaxButton" style="cursor: pointer; text-decoration: underline">
@@ -236,7 +240,7 @@ We'll also add a line to our event handler to get the user's data from the text 
 ```js
 document.getElementById("ajaxButton").onclick = () => {
   const userName = document.getElementById("ajaxTextbox").value;
-  makeRequest('test.php', userName);
+  makeRequest("test.php", userName);
 };
 ```
 
@@ -244,12 +248,14 @@ We need to modify `makeRequest()` to accept the user data and pass it along to t
 
 ```js
 function makeRequest(url, userName) {
-
   // …
 
   httpRequest.onreadystatechange = alertContents;
-  httpRequest.open('POST', url);
-  httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  httpRequest.open("POST", url);
+  httpRequest.setRequestHeader(
+    "Content-Type",
+    "application/x-www-form-urlencoded"
+  );
   httpRequest.send(`userName=${encodeURIComponent(userName)}`);
 }
 ```
@@ -269,7 +275,7 @@ function alertContents() {
       const response = JSON.parse(httpRequest.responseText);
       alert(response.computedString);
     } else {
-      alert('There was a problem with the request.');
+      alert("There was a problem with the request.");
     }
   }
 }
