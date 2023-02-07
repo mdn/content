@@ -82,9 +82,7 @@ No notable changes.
 
 ### Removals
 
-- Removed the ServiceWorker API in WebExtensions (`'serviceWorker' in navigator` now returns false when run inside an extension). ({{bug(1593931)}})
-
-### Other
+- Removed the ServiceWorker API in WebExtensions (`'serviceWorker' in navigator` now returns `false` when run inside an extension) ({{bug(1593931)}}).
 
 ## Older versions
 

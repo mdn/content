@@ -28,7 +28,7 @@ With the metrics above, and a bit of math, we can calculate many important metri
 To help measure the time it takes to complete all the steps, the Performance Timing API provides read only measurements of navigation timings. To view and capture our app's timing we enter:
 
 ```js
-let time = window.performance.timing
+let time = window.performance.timing;
 ```
 
 We can then use the results to measure how well our app is performing.
@@ -351,15 +351,15 @@ const ssl = time.requestStart - time.secureConnectionStart;
 The general performance timings above are deprecated but fully supported. We now have the {{domxref('PerformanceEntry', 'Performance Entry API')}}, which provides for marking and measuring times along the navigation and resource loading process. You can also create marks:
 
 ```js
-performance.getEntriesByType('navigation').forEach((navigation) => {
+performance.getEntriesByType("navigation").forEach((navigation) => {
   console.dir(navigation);
 });
 
-performance.getEntriesByType('resource').forEach((resource) => {
+performance.getEntriesByType("resource").forEach((resource) => {
   console.dir(resource);
 });
 
-performance.getEntriesByType('mark').forEach((mark) => {
+performance.getEntriesByType("mark").forEach((mark) => {
   console.dir(mark);
 });
 
@@ -367,11 +367,11 @@ performance.getEntriesByType("measure").forEach((measure) => {
   console.dir(measure);
 });
 
-performance.getEntriesByType('paint').forEach((paint) => {
+performance.getEntriesByType("paint").forEach((paint) => {
   console.dir(paint);
 });
 
-performance.getEntriesByType('frame').forEach((frame) => {
+performance.getEntriesByType("frame").forEach((frame) => {
   console.dir(frame);
 });
 ```
@@ -383,7 +383,7 @@ In supporting browsers, you can use `performance.getEntriesByType('paint')` to q
 When a user requests a website or application, [to populate the browser](/en-US/docs/Web/Performance/How_browsers_work) the user agent goes through a series of steps, including a {{glossary('DNS')}} lookup, {{glossary('TCP handshake')}}, and SSL negotiation, before the user agent makes the actual request and the servers return the requested assets. The browser then parses the content received, builds the DOM, CSSOM, accessibility, and render trees, eventually rendering the page. Once the user agent stops parsing the document, the user agent sets the document readiness to _interactive_. If there are deferred scripts needing to be parsed, it will do so, then fire the [DOMContentLoaded](/en-US/docs/Web/API/Window/DOMContentLoaded_event), after which the readiness is set to _complete_. The Document can now handle post-load tasks, after which point the document is marked as completely loaded.
 
 ```js
-const navigationTimings = performance.getEntriesByType('navigation');
+const navigationTimings = performance.getEntriesByType("navigation");
 ```
 
 The `performance.getEntriesByType('navigation')` a returns an array of [PerformanceEntry](/en-US/docs/Web/API/PerformanceEntry) objects for the _navigation_ _type_.
@@ -393,7 +393,7 @@ The `performance.getEntriesByType('navigation')` a returns an array of [Performa
 A lot can be garnered from these timing. In the above image, we see via the _name_ property that the file being timed is this document For the rest of this explanation, we use the following variable:
 
 ```js
-const timing = performance.getEntriesByType('navigation')[0];
+const timing = performance.getEntriesByType("navigation")[0];
 ```
 
 ### Protocol
@@ -411,13 +411,13 @@ It returns the network protocol used to fetch the resource: in this case `h2` fo
 To get the compression savings percentage, we divide the transferSize by the decodedBodySize, and subtract that from 100%. We see a savings of over 74%.
 
 ```js
-const compressionSavings = 1 - (timing.transferSize / timing.decodedBodySize);
+const compressionSavings = 1 - timing.transferSize / timing.decodedBodySize;
 ```
 
 We could have used
 
 ```js
-const compressionSavings = 1 - (timing.encodedBodySize / timing.decodedBodySize);
+const compressionSavings = 1 - timing.encodedBodySize / timing.decodedBodySize;
 ```
 
 but using `transferSize` includes the overhead bytes.
@@ -453,7 +453,8 @@ const load = timing.loadEventEnd - timing.loadEventStart;
 The DOMContentLoaded event duration is measured by subtracting the time value immediately before the user agent fires the DOMContentLoaded event from the time value immediately after the event completes. Keeping this at 50ms or faster helps ensure a responsive user interface.
 
 ```js
-const DOMContentLoaded = timing.domContentLoadedEventEnd - timing.domContentLoadedEventStart;
+const DOMContentLoaded =
+  timing.domContentLoadedEventEnd - timing.domContentLoadedEventStart;
 ```
 
 ### Duration
