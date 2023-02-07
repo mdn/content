@@ -1,5 +1,5 @@
 ---
-title: 'Populating the page: how browsers work'
+title: "Populating the page: how browsers work"
 slug: Web/Performance/How_browsers_work
 tags:
   - Browsers

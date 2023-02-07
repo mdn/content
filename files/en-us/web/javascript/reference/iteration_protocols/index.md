@@ -167,7 +167,7 @@ new WeakSet(
     yield {};
     yield myObj;
     yield {};
-  })()
+  })(),
 ).has(myObj); // true
 ```
 
