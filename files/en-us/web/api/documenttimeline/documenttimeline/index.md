@@ -46,7 +46,8 @@ const timeline = new DocumentTimeline();
 console.log(timeline.currentTime === document.timeline.currentTime); // true
 ```
 
-{{domxref("DocumentTimeline")}}s with a non-zero `originTime` will be offset from {{domxref("Document.timeline")}} by that amount.
+Setting a non-zero `originTime` will offset the {{domxref("DocumentTimeline")}}
+from {{domxref("Document.timeline")}} by that amount:
 
 ```js
 const offsetTimeline = new DocumentTimeline({ originTime: 500 });
