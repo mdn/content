@@ -146,7 +146,7 @@ const shaderModule = device.createShaderModule({
 
 In a render pipeline, we need to specify somewhere to render the graphics to. In this case we are getting a reference to an onscreen `<canvas>` element then calling {{domxref("HTMLCanvasElement.getContext()")}} with a parameter of `webgpu` to return its GPU context (a {{domxref("GPUCanvasContext")}} instance).
 
-From there, we configure the context's swap chain, which is the source of the graphical information to be rendered. This is done with a call to {{domxref("GPUCanvasContext.configure()")}}, passing it an options object containing the {{domxref("GPUDevice")}} that the rendering information will come from, the format the textures will have, and the alpha mode to use when rendering semi-transparent textures.
+From there, we configure the context's swap chain, which supplies the textures that will receive the graphical information to be rendered. This is done with a call to {{domxref("GPUCanvasContext.configure()")}}, passing it an options object containing the {{domxref("GPUDevice")}} that the rendering information will come from, the format the textures will have, and the alpha mode to use when rendering semi-transparent textures.
 
 ```js
 const canvas = document.querySelector('#gpuCanvas');
