@@ -405,7 +405,7 @@ const computePipeline = device.createComputePipeline({
 });
 ```
 
-One difference here from the pipeline layout is that we are not specifying a primitive type, as we are not drawing anything.
+One difference here from the render pipeline layout is that we are not specifying a primitive type, as we are not drawing anything.
 
 ### Running a compute pass
 
