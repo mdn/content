@@ -53,4 +53,3 @@ The above example uses parsing of a non–standard string value that may not be 
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toTimeString()")}}
 - {{jsxref("Date.prototype.toUTCString()")}}
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/date.polyfill.js)
