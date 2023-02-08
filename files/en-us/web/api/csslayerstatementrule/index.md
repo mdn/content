@@ -25,7 +25,7 @@ _Also inherits properties from its parent interface, {{DOMxRef("CSSRule")}}._
 ### HTML
 
 ```html
-<div>I am displayed in <code>color: rebeccapurple</code>.</div>
+<p></p>
 ```
 
 ### CSS
