@@ -1,5 +1,5 @@
 ---
-title: 'RegExp: lastIndex'
+title: "RegExp: lastIndex"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
 page-type: javascript-instance-data-property
 tags:
