@@ -28,7 +28,7 @@ This will work with {{htmlelement("audio") }} or {{htmlelement("video") }}; for 
 We can access these attributes like so:
 
 ```js
-const audio = document.getElementById('my-audio');
+const audio = document.getElementById("my-audio");
 const bufferedTimeRanges = audio.buffered;
 ```
 
@@ -54,11 +54,11 @@ Without any user interaction there is usually only one time range, but if you ju
 For this audio instance, the associated {{ domxref("TimeRanges") }} object would have the following available properties:
 
 ```js
-audio.buffered.length;   // returns 2
+audio.buffered.length; // returns 2
 audio.buffered.start(0); // returns 0
-audio.buffered.end(0);   // returns 5
+audio.buffered.end(0); // returns 5
 audio.buffered.start(1); // returns 15
-audio.buffered.end(1);   // returns 19
+audio.buffered.end(1); // returns 19
 ```
 
 To try out and visualize buffered time ranges we can write a bit of HTML:
@@ -78,20 +78,20 @@ and a bit of JavaScript:
 
 ```js
 window.onload = () => {
-  const audio = document.getElementById('my-audio');
-  const canvas = document.getElementById('my-canvas');
-  const context = canvas.getContext('2d');
+  const audio = document.getElementById("my-audio");
+  const canvas = document.getElementById("my-canvas");
+  const context = canvas.getContext("2d");
 
-  context.fillStyle = 'lightgray';
+  context.fillStyle = "lightgray";
   context.fillRect(0, 0, canvas.width, canvas.height);
-  context.fillStyle = 'red';
-  context.strokeStyle = 'white';
+  context.fillStyle = "red";
+  context.strokeStyle = "white";
 
   const inc = canvas.width / audio.duration;
 
   // Display TimeRanges
 
-  audio.addEventListener('seeked', () => {
+  audio.addEventListener("seeked", () => {
     for (let i = 0; i < audio.buffered.length; i++) {
       const startX = audio.buffered.start(i) * inc;
       const endX = audio.buffered.end(i) * inc;
@@ -181,9 +181,9 @@ And the following JavaScript provides our functionality:
 
 ```js
 window.onload = () => {
-  const audio = document.getElementById('my-audio');
+  const audio = document.getElementById("my-audio");
 
-  audio.addEventListener('progress', () => {
+  audio.addEventListener("progress", () => {
     const duration = audio.duration;
     if (duration > 0) {
       for (let i = 0; i < audio.buffered.length; i++) {
@@ -191,7 +191,7 @@ window.onload = () => {
           audio.buffered.start(audio.buffered.length - 1 - i) <
           audio.currentTime
         ) {
-          document.getElementById('buffered-amount').style.width = `${
+          document.getElementById("buffered-amount").style.width = `${
             (audio.buffered.end(audio.buffered.length - 1 - i) * 100) / duration
           }%`;
           break;
@@ -200,11 +200,11 @@ window.onload = () => {
     }
   });
 
-  audio.addEventListener('timeupdate', () => {
+  audio.addEventListener("timeupdate", () => {
     const duration = audio.duration;
     if (duration > 0) {
-      document.getElementById('progress-amount').style.width = `${
-        audio.currentTime / duration * 100
+      document.getElementById("progress-amount").style.width = `${
+        (audio.currentTime / duration) * 100
       }%`;
     }
   });

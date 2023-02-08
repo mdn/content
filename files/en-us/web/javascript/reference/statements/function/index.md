@@ -62,9 +62,15 @@ the value to return.
 Functions can be conditionally declared — that is, a function statement can be nested within an [`if`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement. However, in non-strict mode, the results are inconsistent across implementations.
 
 ```js
-console.log(`'foo' name ${"foo" in globalThis ? "is" : "is not"} global. typeof foo is ${typeof foo}`);
+console.log(
+  `'foo' name ${
+    "foo" in globalThis ? "is" : "is not"
+  } global. typeof foo is ${typeof foo}`,
+);
 if (false) {
-  function foo() { return 1; }
+  function foo() {
+    return 1;
+  }
 }
 
 // In Chrome:
@@ -80,9 +86,15 @@ if (false) {
 The scoping and hoisting effect won't change regardless of whether the `if` body is actually executed.
 
 ```js
-console.log(`'foo' name ${"foo" in globalThis ? "is" : "is not"} global. typeof foo is ${typeof foo}`);
+console.log(
+  `'foo' name ${
+    "foo" in globalThis ? "is" : "is not"
+  } global. typeof foo is ${typeof foo}`,
+);
 if (true) {
-  function foo() { return 1; }
+  function foo() {
+    return 1;
+  }
 }
 
 // In Chrome:
@@ -107,7 +119,11 @@ In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), [block](/en-
   }
 }
 
-console.log(`'foo' name ${"foo" in globalThis ? "is" : "is not"} global. typeof foo is ${typeof foo}`);
+console.log(
+  `'foo' name ${
+    "foo" in globalThis ? "is" : "is not"
+  } global. typeof foo is ${typeof foo}`,
+);
 // 'foo' name is not global. typeof foo is undefined
 ```
 
@@ -120,7 +136,7 @@ global scope. You can use the function before you declared it:
 hoisted(); // Logs "foo"
 
 function hoisted() {
-  console.log('foo');
+  console.log("foo");
 }
 ```
 
@@ -130,8 +146,8 @@ hoisted:
 ```js
 notHoisted(); // TypeError: notHoisted is not a function
 
-var notHoisted = function() {
-  console.log('bar');
+var notHoisted = function () {
+  console.log("bar");
 };
 ```
 
