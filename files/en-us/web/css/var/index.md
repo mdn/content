@@ -44,6 +44,8 @@ The first argument to the function is the name of the custom property to be subs
 
 ### Using a custom property set on :root
 
+#### CSS
+
 ```css
 :root {
   --main-bg-color: pink;
@@ -54,13 +56,87 @@ body {
 }
 ```
 
-### Custom properties with fallbacks for use when the property has not been set
+#### Result
+
+{{EmbedLiveSample("Using a custom property set on :root")}}
+
+Here, the value of the `background-color` property has been set via the custom property `--main-bg-color`. So the background color of the HTML body will be pink.
+
+### Using a custom property before it is set
+
+#### CSS
 
 ```css
-/* Fallback */
+body {
+  background-color: var(--main-bg-color);
+}
+
+:root {
+  --main-bg-color: pink;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Using a custom property before it is set")}}
+
+In this example, the background color of the HTML body will be pink even though the custom property is set later.
+
+### Using a custom property set in another file
+
+#### HTML
+
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="1.css"></link>
+    <link rel="stylesheet" href="2.css"></link>
+  </head>
+  <body>
+  </body>
+</html>
+```
+
+#### CSS
+
+```css
+/* 1.css */
+body {
+  background-color: var(--main-bg-color);
+}
+```
+
+```css
+/* 2.css */
+:root {
+  --main-bg-color: pink;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Using a custom property set in another file")}}
+
+The background color of the HTML body will be pink in this case even though the custom property is declared in another file.
+
+### Custom properties with fallbacks for use when the property has not been set
+
+#### HTML
+
+```html
+<div class="component">
+  <h1 class="header">Header</h1>
+  <p class="text">Text</p>
+</div>
+```
+
+#### CSS
+
+```css
 /* In the component's style: */
 .component .header {
-  /* header-color isn't set, and so remains blue, the fallback value */
   color: var(
     --header-color,
     blue
@@ -77,7 +153,15 @@ body {
 }
 ```
 
+#### Result
+
+{{EmbedLiveSample("Custom properties with fallbacks for use when the property has not been set")}}
+
+Since `--header-color` isn't set, the text "Header" will be blue, the fallback value.
+
 ### Using a custom property as a fallback
+
+#### CSS
 
 ```css
 :root {
@@ -85,10 +169,15 @@ body {
 }
 
 body {
-  /* main-bg-color isn't set, it will fall back to backup-bg-color. If backup-bg-color isn't set it will fall back to white. */
-  color: var(--main-bg-color, var(--backup-bg-color, white));
+  background-color: var(--main-bg-color, var(--backup-bg-color, white));
 }
 ```
+
+#### Result
+
+{{EmbedLiveSample("Using a custom property as a fallback")}}
+
+Since `--main-bg-color` isn't set, the body's `background-color` will fall back to `--backup-bg-color`, which is teal.
 
 ## Specifications
 
