@@ -94,7 +94,7 @@ In the example below, the browser will consider the following display-mode fallb
 ```json
 {
   "display_override": ["fullscreen", "minimal-ui"],
-  "display": "standalone",
+  "display": "standalone"
 }
 ```
 
