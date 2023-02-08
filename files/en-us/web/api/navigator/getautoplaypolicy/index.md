@@ -4,10 +4,11 @@ slug: Web/API/Navigator/getAutoplayPolicy
 page-type: web-api-instance-method
 tags:
   - experimental
+  - Experimental
 browser-compat: api.Navigator.getAutoplayPolicy
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 {{SeeCompatTable}}
 
