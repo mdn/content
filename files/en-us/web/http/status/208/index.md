@@ -74,4 +74,4 @@ Content-Length: 1241
 
 ## See also
 
-- {{HTTPStatus(200)}}
+- {{HTTPStatus("200")}}

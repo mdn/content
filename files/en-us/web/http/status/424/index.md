@@ -13,7 +13,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.4
 
 The HTTP **`424 Failed Dependency`** client error response code indicates that the method could not be performed on the resource because the requested action depended on another action and that action failed.
 
-If a request was issued, and one property update failed (with for example {{HTTPStatus(403)}} Forbidden) then automatically every other property update will also fail with 424 Failed Dependency.
+Regular web servers will normally not return this status code. But some other protocols, like {{Glossary("WebDAV")}}, can return it. For example, in {{Glossary{"WebDAV"}}, if a `PROPPATCH` request was issued, and one command fails then automatically every other command will also fail with `424 Failed Dependency`.
 
 ## Status
 
@@ -21,4 +21,4 @@ If a request was issued, and one property update failed (with for example {{HTTP
 
 ## See also
 
-- {{HTTPStatus(403)}} (Forbidden)
+- {{HTTPStatus("403")}} (Forbidden)

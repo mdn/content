@@ -29,4 +29,4 @@ This status code is only sent if the server expects the request to take signific
 ## See also
 
 - {{HTTPHeader("Expect")}}
-- {{HTTPStatus(100)}}
+- {{HTTPStatus("100")}}
