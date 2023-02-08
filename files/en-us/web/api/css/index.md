@@ -17,6 +17,8 @@ The **`CSS`** interface holds useful CSS-related methods. No objects with this i
 
 ## Static properties
 
+- {{DOMxRef("CSS.highlights")}} {{Experimental_Inline}}
+  - : Provides access to the `HighlightRegistry` used to style arbitrary text ranges using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}.
 - {{DOMxRef("CSS.paintWorklet")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Provides access to the Worklet responsible for all the classes related to painting.
 
