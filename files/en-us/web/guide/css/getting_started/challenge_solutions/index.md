@@ -315,7 +315,7 @@ The challenges on page [Media](/en-US/docs/Web/CSS/Media_Queries/Using_media_que
 
     ```js
     // JavaScript demonstration
-    function doDemo (button) {
+    function doDemo(button) {
       const square = document.getElementById("square");
       square.style.backgroundColor = "#fa4";
       square.style.marginLeft = "20em";
@@ -323,7 +323,7 @@ The challenges on page [Media](/en-US/docs/Web/CSS/Media_Queries/Using_media_que
       setTimeout(clearDemo, 2000, button);
     }
 
-    function clearDemo (button) {
+    function clearDemo(button) {
       const square = document.getElementById("square");
       square.style.backgroundColor = "transparent";
       square.style.marginLeft = "0em";

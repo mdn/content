@@ -306,7 +306,7 @@ This sample animation uses {{cssxref("animation-iteration-count")}} to make the 
 - {{cssxref("animation-name")}}
 - {{cssxref("animation-play-state")}}
 - {{cssxref("animation-timing-function")}}
-- {{cssxref("animation-timeline")}}t
+- {{cssxref("animation-timeline")}}
 
 ### At-rules
 
