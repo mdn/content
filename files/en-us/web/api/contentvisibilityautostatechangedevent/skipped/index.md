@@ -15,10 +15,11 @@ tags:
   - skipped
   - Style
   - Web
+  - Experimental
 browser-compat: api.ContentVisibilityAutoStateChangedEvent.skipped
 ---
 
-{{APIRef("CSS Containment")}}
+{{APIRef("CSS Containment")}}{{SeeCompatTable}}
 
 The `skipped` read-only property of the {{ domxref("ContentVisibilityAutoStateChangedEvent") }} interface returns `true` if the user agent [skips the element's contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents), or `false` otherwise.
 

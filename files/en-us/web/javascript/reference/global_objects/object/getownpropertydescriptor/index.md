@@ -74,8 +74,12 @@ A _property descriptor_ is a record with some of the following attributes:
 ```js
 let o, d;
 
-o = { get foo() { return 17; } };
-d = Object.getOwnPropertyDescriptor(o, 'foo');
+o = {
+  get foo() {
+    return 17;
+  },
+};
+d = Object.getOwnPropertyDescriptor(o, "foo");
 console.log(d);
 // {
 //   configurable: true,
@@ -85,7 +89,7 @@ console.log(d);
 // }
 
 o = { bar: 42 };
-d = Object.getOwnPropertyDescriptor(o, 'bar');
+d = Object.getOwnPropertyDescriptor(o, "bar");
 console.log(d);
 // {
 //   configurable: true,
@@ -94,8 +98,8 @@ console.log(d);
 //   writable: true
 // }
 
-o = { [Symbol.for('baz')]: 73 }
-d = Object.getOwnPropertyDescriptor(o, Symbol.for('baz'));
+o = { [Symbol.for("baz")]: 73 };
+d = Object.getOwnPropertyDescriptor(o, Symbol.for("baz"));
 console.log(d);
 // {
 //   configurable: true,
@@ -105,12 +109,12 @@ console.log(d);
 // }
 
 o = {};
-Object.defineProperty(o, 'qux', {
+Object.defineProperty(o, "qux", {
   value: 8675309,
   writable: false,
-  enumerable: false
+  enumerable: false,
 });
-d = Object.getOwnPropertyDescriptor(o, 'qux');
+d = Object.getOwnPropertyDescriptor(o, "qux");
 console.log(d);
 // {
 //   value: 8675309,
@@ -127,10 +131,10 @@ will cause a {{jsxref("TypeError")}}. In ES2015, a non-object first argument wil
 coerced to an object at first.
 
 ```js
-Object.getOwnPropertyDescriptor('foo', 0);
+Object.getOwnPropertyDescriptor("foo", 0);
 // TypeError: "foo" is not an object  // ES5 code
 
-Object.getOwnPropertyDescriptor('foo', 0);
+Object.getOwnPropertyDescriptor("foo", 0);
 // Object returned by ES2015 code: {
 //   configurable: false,
 //   enumerable: true,

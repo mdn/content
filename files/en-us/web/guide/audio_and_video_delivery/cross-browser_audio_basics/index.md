@@ -133,31 +133,31 @@ Given the following HTML:
 You can grab the {{htmlelement("audio") }} element like this:
 
 ```js
-const audio = document.getElementById('my-audio');
+const audio = document.getElementById("my-audio");
 ```
 
 Alternatively, you can create a new element. Here's an example of creating an {{ htmlelement("audio") }} element, setting the media to play, playing and pausing, and then playing from 5 seconds into the audio:
 
 ```js
-const audio = document.createElement('audio');
+const audio = document.createElement("audio");
 
-if (audio.canPlayType('audio/mpeg')) {
-  audio.setAttribute('src','audiofile.mp3');
+if (audio.canPlayType("audio/mpeg")) {
+  audio.setAttribute("src", "audiofile.mp3");
 }
 
-if (audio.canPlayType('audio/ogg')) {
-  audio.setAttribute('src','audiofile.ogg');
+if (audio.canPlayType("audio/ogg")) {
+  audio.setAttribute("src", "audiofile.ogg");
 }
 
-alert('play');
+alert("play");
 
 audio.play();
 
-alert('stop');
+alert("stop");
 
 audio.pause();
 
-alert('play from 5 seconds in');
+alert("play from 5 seconds in");
 
 audio.currentTime = 5;
 audio.play();
@@ -188,7 +188,7 @@ audio.pause();
 The `canPlayType()` method asks the browser whether a certain audio file type is supported. It takes the mime type of the type to check as a parameter.
 
 ```js
-if (audio.canPlayType('audio/mpeg')) {
+if (audio.canPlayType("audio/mpeg")) {
   // It's supported.
   // Do something here!
 }
@@ -246,9 +246,9 @@ Next, we attach some functionality to the player using JavaScript:
 
 ```js
 window.onload = () => {
-  const audio = document.getElementById('my-audio');
-  const play = document.getElementById('play');
-  const pause = document.getElementById('pause');
+  const audio = document.getElementById("my-audio");
+  const play = document.getElementById("play");
+  const pause = document.getElementById("pause");
 
   // associate functions with the 'onclick' events
   play.onclick = playAudio;
@@ -261,8 +261,7 @@ window.onload = () => {
   function pauseAudio() {
     audio.pause();
   }
-
-}
+};
 ```
 
 ## Media loading events
@@ -456,11 +455,11 @@ Now let's wire this thing up with JavaScript:
 
 ```js
 window.onload = () => {
-  const audio = document.getElementById('my-audio');
-  const play = document.getElementById('play');
-  const pause = document.getElementById('pause');
-  const loading = document.getElementById('loading');
-  const bar = document.getElementById('bar');
+  const audio = document.getElementById("my-audio");
+  const play = document.getElementById("play");
+  const pause = document.getElementById("pause");
+  const loading = document.getElementById("loading");
+  const bar = document.getElementById("bar");
 
   function displayControls() {
     loading.style.display = "none";
@@ -472,29 +471,31 @@ window.onload = () => {
     displayControls();
   } else {
     // not ready yet - wait for canplay event
-    audio.addEventListener('canplay', () => {
+    audio.addEventListener("canplay", () => {
       displayControls();
     });
   }
 
-  play.addEventListener('click', () => {
+  play.addEventListener("click", () => {
     audio.play();
     play.style.display = "none";
     pause.style.display = "block";
   });
 
-  pause.addEventListener('click', () => {
+  pause.addEventListener("click", () => {
     audio.pause();
     pause.style.display = "none";
     play.style.display = "block";
   });
 
   // Display progress
-  audio.addEventListener('timeupdate', () => {
+  audio.addEventListener("timeupdate", () => {
     // Sets the percentage
-    bar.style.width = `${Math.floor(audio.currentTime / audio.duration * 100)}%`;
+    bar.style.width = `${Math.floor(
+      (audio.currentTime / audio.duration) * 100
+    )}%`;
   });
-}
+};
 ```
 
 You should end up with something like this:
@@ -518,11 +519,11 @@ First of all, we apply a quick update to the progress bar CSS to display the han
 Then we add the code that detects the click and moves the 'playhead' to the correct position:
 
 ```js
-const progress = document.getElementById('progress');
+const progress = document.getElementById("progress");
 
-progress.addEventListener('click', (e) => {
+progress.addEventListener("click", (e) => {
   // Calculate the normalized position clicked
-  const clickPosition = (e.pageX  - progress.offsetLeft) / progress.offsetWidth;
+  const clickPosition = (e.pageX - progress.offsetLeft) / progress.offsetWidth;
   const clickTime = clickPosition * audio.duration;
 
   // Move the playhead to the correct position
