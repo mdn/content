@@ -190,7 +190,7 @@ class Square extends Polygon {
     super(length, length);
     // Note: In derived classes, super() must be called before you
     // can use 'this'. Leaving this out will cause a reference error.
-    this.name = 'Square';
+    this.name = "Square";
   }
 
   get area() {
@@ -207,7 +207,7 @@ Classes cannot extend regular (non-constructible) objects. If you want to inheri
 const Animal = {
   speak() {
     console.log(`${this.name} makes a noise.`);
-  }
+  },
 };
 
 class Dog {
@@ -229,7 +229,7 @@ This example extends the built-in {{jsxref("Date")}} object. This example is ext
 ```js
 class MyDate extends Date {
   getFormattedDate() {
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     return `${this.getDate()}-${months[this.getMonth()]}-${this.getFullYear()}`;
   }
 }
@@ -253,7 +253,7 @@ const a = new MyArray(1, 2, 3);
 const mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array);   // true
+console.log(mapped instanceof Array); // true
 ```
 
 This behavior is implemented by many built-in copying methods. For caveats of this feature, see the [subclassing built-ins](#subclassing_built-ins) discussion.
@@ -265,13 +265,15 @@ Abstract subclasses or _mix-ins_ are templates for classes. A class can only hav
 A function with a superclass as input and a subclass extending that superclass as output can be used to implement mix-ins:
 
 ```js
-const calculatorMixin = (Base) => class extends Base {
-  calc() {}
-};
+const calculatorMixin = (Base) =>
+  class extends Base {
+    calc() {}
+  };
 
-const randomizerMixin = (Base) => class extends Base {
-  randomize() {}
-};
+const randomizerMixin = (Base) =>
+  class extends Base {
+    randomize() {}
+  };
 ```
 
 A class that uses these mix-ins can then be written like this:
