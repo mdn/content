@@ -74,7 +74,7 @@ const p = new Proxy(
       console.log(`called: ${prop}`);
       return { configurable: true, enumerable: true, value: 10 };
     },
-  }
+  },
 );
 
 console.log(Object.getOwnPropertyDescriptor(p, "a").value);
