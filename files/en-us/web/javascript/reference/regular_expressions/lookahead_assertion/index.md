@@ -1,6 +1,7 @@
 ---
 title: "Lookahead assertion: (?=...), (?!...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion
+page-type: javascript-language-feature
 ---
 
 {{JsSidebar}}

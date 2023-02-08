@@ -1,6 +1,7 @@
 ---
 title: "Capturing group: (...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Capturing_group
+page-type: javascript-language-feature
 ---
 
 {{JsSidebar}}

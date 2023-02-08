@@ -1,6 +1,7 @@
 ---
 title: "Backreference: \\1, \\2"
 slug: Web/JavaScript/Reference/Regular_expressions/Backreference
+page-type: javascript-language-feature
 ---
 
 {{JsSidebar}}

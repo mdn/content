@@ -1,6 +1,7 @@
 ---
 title: "Input boundary assertion: ^, $"
 slug: Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion
+page-type: javascript-language-feature
 ---
 
 {{JsSidebar}}

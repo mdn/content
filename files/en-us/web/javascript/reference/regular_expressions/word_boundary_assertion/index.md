@@ -1,6 +1,7 @@
 ---
 title: "Word boundary assertion: \\b, \\B"
 slug: Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion
+page-type: javascript-language-feature
 ---
 
 {{JsSidebar}}

@@ -1,6 +1,7 @@
 ---
 title: "Non-capturing group: (?:...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Non-capturing_group
+page-type: javascript-language-feature
 ---
 
 {{JsSidebar}}

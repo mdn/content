@@ -1,6 +1,7 @@
 ---
 title: "Disjunction: |"
 slug: Web/JavaScript/Reference/Regular_expressions/Disjunction
+page-type: javascript-language-feature
 ---
 
 {{JsSidebar}}

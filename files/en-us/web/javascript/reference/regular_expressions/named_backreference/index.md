@@ -1,6 +1,7 @@
 ---
 title: "Named backreference: \\k<name>"
 slug: Web/JavaScript/Reference/Regular_expressions/Named_backreference
+page-type: javascript-language-feature
 ---
 
 {{JsSidebar}}

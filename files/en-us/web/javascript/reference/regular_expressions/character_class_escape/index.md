@@ -1,6 +1,7 @@
 ---
 title: "Character class escape: \\d, \\D, \\w, \\W, \\s, \\S"
 slug: Web/JavaScript/Reference/Regular_expressions/Character_class_escape
+page-type: javascript-language-feature
 ---
 
 {{JsSidebar}}

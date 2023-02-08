@@ -1,6 +1,7 @@
 ---
 title: "Quantifier: *, +, ?, {n}, {n,}, {n,m}"
 slug: Web/JavaScript/Reference/Regular_expressions/Quantifier
+page-type: javascript-language-feature
 ---
 
 {{JsSidebar}}

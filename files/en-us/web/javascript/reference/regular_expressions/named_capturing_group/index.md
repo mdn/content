@@ -1,6 +1,7 @@
 ---
 title: "Named capturing group: (?<name>...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Named_capturing_group
+page-type: javascript-language-feature
 ---
 
 {{JsSidebar}}

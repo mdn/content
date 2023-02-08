@@ -1,6 +1,7 @@
 ---
 title: "Unicode character class escape: \\p{...}, \\P{...}"
 slug: Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
+page-type: javascript-language-feature
 ---
 
 {{JsSidebar}}

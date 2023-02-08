@@ -1,6 +1,7 @@
 ---
 title: "Wildcard: ."
 slug: Web/JavaScript/Reference/Regular_expressions/Wildcard
+page-type: javascript-language-feature
 ---
 
 {{JsSidebar}}

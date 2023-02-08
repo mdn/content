@@ -1,6 +1,7 @@
 ---
 title: "Character escape: \\n, \\u{...}"
 slug: Web/JavaScript/Reference/Regular_expressions/Character_escape
+page-type: javascript-language-feature
 ---
 
 {{JsSidebar}}

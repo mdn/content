@@ -1,6 +1,7 @@
 ---
 title: Regular expressions
 slug: Web/JavaScript/Reference/Regular_expressions
+page-type: guide
 ---
 
 {{JsSidebar}}
