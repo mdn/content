@@ -29,7 +29,7 @@ Accept-CH: Width, Downlink, Sec-CH-UA
 This approach is efficient in that the server only requests the information that it is able to usefully handle.
 It is also relatively "privacy-preserving", in that it is up to the client to decide what information it can safely share.
 
-There is a small set of [low entropy client hint headers](#low_entropy_hints) that may be sent by a client event if not requested.
+There is a small set of [low entropy client hint headers](#low_entropy_hints) that may be sent by a client even if not requested.
 
 > **Note:** Client hints can also be specified in HTML using the {{HTMLElement("meta")}} element with the [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#attr-http-equiv) attribute.
 >

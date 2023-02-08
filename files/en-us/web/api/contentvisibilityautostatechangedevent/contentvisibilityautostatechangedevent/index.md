@@ -4,8 +4,8 @@ slug: Web/API/ContentVisibilityAutoStateChangedEvent/ContentVisibilityAutoStateC
 page-type: web-api-constructor
 tags:
   - Constructor
-  - Experimental
   - Reference
+  - Experimental
 browser-compat: api.ContentVisibilityAutoStateChangedEvent.ContentVisibilityAutoStateChangedEvent
 ---
 

@@ -32,10 +32,10 @@ To set event handler code you can just assign it to the appropriate onevent prop
 Below we show how to set a simple `greet()` function for the `click` event using the `onclick` property.
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function greet(event) {
-  console.log('greet:', event)
+  console.log("greet:", event);
 }
 
 btn.onclick = greet;
@@ -52,13 +52,13 @@ The most flexible way to set an event handler on an element is to use the {{domx
 Below we show how a simple `greet()` function can be set as a listener/event handler for the `click` event (you could use a lambda function instead of a named function if desired). Note again that the event is passed as the first argument to the event handler.
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function greet(event) {
-  console.log('greet:', event)
+  console.log("greet:", event);
 }
 
-btn.addEventListener('click', greet);
+btn.addEventListener("click", greet);
 ```
 
 The method can also take additional arguments/options to control aspects of how the events are captured and removed. More information can be found on the {{domxref("EventTarget.addEventListener")}} reference page.
@@ -72,9 +72,13 @@ This is done by passing the same {{domxref("AbortSignal")}} to the {{domxref("Ev
 ```js
 const controller = new AbortController();
 
-btn.addEventListener('click', (event) => {
-  console.log('greet:', event);
-}, { signal: controller.signal }); // pass an AbortSignal to this handler
+btn.addEventListener(
+  "click",
+  (event) => {
+    console.log("greet:", event);
+  },
+  { signal: controller.signal }
+); // pass an AbortSignal to this handler
 ```
 
 Then the event handler created by the code above can be removed like this:
