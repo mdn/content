@@ -86,14 +86,14 @@ The object that was passed to the function.
 ```js
 const obj = {};
 Object.defineProperties(obj, {
-  'property1': {
+  property1: {
     value: true,
-    writable: true
+    writable: true,
   },
-  'property2': {
-    value: 'Hello',
-    writable: false
-  }
+  property2: {
+    value: "Hello",
+    writable: false,
+  },
   // etc. etc.
 });
 ```
