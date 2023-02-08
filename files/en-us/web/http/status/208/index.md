@@ -24,51 +24,48 @@ The HTTP **`208 Already Reported`** response code is used in a {{HTTPStatus("207
 
 ```
 HTTP/1.1 207 Multi-Status
-   Content-Type: application/xml; charset="utf-8"
-   Content-Length: 1241
+Content-Type: application/xml; charset="utf-8"
+Content-Length: 1241
 
-   <?xml version="1.0" encoding="utf-8" ?>
-   <D:multistatus xmlns:D="DAV:">
-     <D:response>
-       <D:href>http://www.example.com/Coll/</D:href>
-       <D:propstat>
-         <D:prop>
-           <D:displayname>Loop Demo</D:displayname>
-           <D:resource-id>
-             <D:href
-   >urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf8</D:href>
-           </D:resource-id>
-         </D:prop>
-         <D:status>HTTP/1.1 200 OK</D:status>
-       </D:propstat>
-     </D:response>
-     <D:response>
-       <D:href>http://www.example.com/Coll/Foo</D:href>
-       <D:propstat>
-         <D:prop>
-           <D:displayname>Bird Inventory</D:displayname>
-           <D:resource-id>
-             <D:href
-   >urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf9</D:href>
-           </D:resource-id>
-         </D:prop>
-         <D:status>HTTP/1.1 200 OK</D:status>
-       </D:propstat>
-     </D:response>
-     <D:response>
-       <D:href>http://www.example.com/Coll/Bar</D:href>
-       <D:propstat>
-         <D:prop>
-           <D:displayname>Loop Demo</D:displayname>
-           <D:resource-id>
-             <D:href
-   >urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf8</D:href>
-           </D:resource-id>
-         </D:prop>
-         <D:status>HTTP/1.1 208 Already Reported</D:status>
-       </D:propstat>
-     </D:response>
-   </D:multistatus>
+<?xml version="1.0" encoding="utf-8" ?>
+<D:multistatus xmlns:D="DAV:">
+  <D:response>
+    <D:href>http://www.example.com/Coll/</D:href>
+    <D:propstat>
+      <D:prop>
+        <D:displayname>Loop Demo</D:displayname>
+        <D:resource-id>
+          <D:href>urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf8</D:href>
+        </D:resource-id>
+      </D:prop>
+      <D:status>HTTP/1.1 200 OK</D:status>
+    </D:propstat>
+  </D:response>
+  <D:response>
+    <D:href>http://www.example.com/Coll/Foo</D:href>
+    <D:propstat>
+      <D:prop>
+        <D:displayname>Bird Inventory</D:displayname>
+        <D:resource-id>
+          <D:href>urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf9</D:href>
+        </D:resource-id>
+      </D:prop>
+      <D:status>HTTP/1.1 200 OK</D:status>
+    </D:propstat>
+  </D:response>
+  <D:response>
+    <D:href>http://www.example.com/Coll/Bar</D:href>
+    <D:propstat>
+      <D:prop>
+        <D:displayname>Loop Demo</D:displayname>
+        <D:resource-id>
+          <D:href>urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf8</D:href>
+        </D:resource-id>
+      </D:prop>
+      <D:status>HTTP/1.1 208 Already Reported</D:status>
+    </D:propstat>
+  </D:response>
+</D:multistatus>
 ```
 
 ## Specifications

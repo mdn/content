@@ -10,17 +10,52 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.1
 
 {{HTTPSidebar}}
 
-The HTTP **`207 Multi Status`** response code indicates that there might be mixture of responses.
+> **Note:** The ability to return a _collection of resources_ is part of the {{Glossary("WebDAV")}} protocol. Browsers accessing web pages will never encounter this status code, though web applications accessing a WebDAV server can meet it.
 
-We use {{HTTPStatus(204)}} if all the operations succeed and {{HTTPStatus(403)}} if all operations fail.
-`207 Multi Status` is returned if some operations succeed and others fail.
+The HTTP **`207 Multi-Status`** response code indicates that there might be mixture of responses.
 
-If you perform a destructive operation like {{HTTPMethod("POST")}}, {{HTTPMethod("DELETE")}} etc. against more than one resource and the operations against each individual resource do not not share a common outcome then the response can be `207`.
+If not all have the same status the response get this `207 Multi-Status` code while the XML in the content of the response will list all individual response code.
 
 ## Status
 
 ```
 207 Multi-Status
+```
+
+## Example
+
+```
+HTTP/1.1 207 Multi-Status
+Content-Type: application/xml; charset="utf-8"
+Content-Length: 1241
+
+<?xml version="1.0" encoding="utf-8" ?>
+<D:multistatus xmlns:D="DAV:">
+  <D:response>
+    <D:href>http://www.example.com/Coll/</D:href>
+    <D:propstat>
+      <D:prop>
+        <D:displayname>Loop Demo</D:displayname>
+        <D:resource-id>
+          <D:href>urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf8</D:href>
+        </D:resource-id>
+      </D:prop>
+      <D:status>HTTP/1.1 200 OK</D:status>
+    </D:propstat>
+  </D:response>
+  <D:response>
+    <D:href>http://www.example.com/Coll/Bar</D:href>
+    <D:propstat>
+      <D:prop>
+        <D:displayname>Loop Demo</D:displayname>
+        <D:resource-id>
+          <D:href>urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf8</D:href>
+        </D:resource-id>
+      </D:prop>
+      <D:status>HTTP/1.1 208 Already Reported</D:status>
+    </D:propstat>
+  </D:response>
+</D:multistatus>
 ```
 
 ## Specifications
@@ -30,5 +65,5 @@ If you perform a destructive operation like {{HTTPMethod("POST")}}, {{HTTPMethod
 ## See also
 
 - [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
-- {{HTTPStatus(204)}}
-- {{HTTPStatus(403)}}
+- {{HTTPStatus("204")}}
+- {{HTTPStatus("403")}}
