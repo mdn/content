@@ -1743,7 +1743,7 @@
 /en-US/docs/DOM/XMLHttpRequest/Sending_and_Receiving_Binary_Data	/en-US/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
 /en-US/docs/DOM/XMLHttpRequest/Synchronous_and_Asynchronous_Requests	/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 /en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest	/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
-/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest_in_IE6	/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest_in_IE6
+/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest_in_IE6	/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /en-US/docs/DOM/XMLHttpRequestEventTarget	/en-US/docs/Web/API/XMLHttpRequestEventTarget
 /en-US/docs/DOM/addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/DOM/console	/en-US/docs/Web/API/console
@@ -7322,9 +7322,9 @@
 /en-US/docs/Using_HTML5_audio_and_video	/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /en-US/docs/Using_JSON_in_Firefox	/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON
 /en-US/docs/Using_Web_Standards_in_your_Web_Pages/Making_your_page_using_web_standards_-_how_to	/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML
-/en-US/docs/Using_Web_Standards_in_your_Web_Pages/Using_XMLHttpRequest	/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest_in_IE6
+/en-US/docs/Using_Web_Standards_in_your_Web_Pages/Using_XMLHttpRequest	/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /en-US/docs/Using_Web_Standards_in_your_Web_Pages:Making_your_page_using_web_standards_-_how_to	/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML
-/en-US/docs/Using_Web_Standards_in_your_Web_Pages:Using_XMLHttpRequest	/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest_in_IE6
+/en-US/docs/Using_Web_Standards_in_your_Web_Pages:Using_XMLHttpRequest	/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /en-US/docs/Using_XMLHttpRequest	/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /en-US/docs/Using_XPath	/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /en-US/docs/Using_an_External_Spell-checker	/en-US/docs/Mozilla/Firefox/Releases/3/Using_an_external_spell_checker
@@ -10198,6 +10198,7 @@
 /en-US/docs/Web/API/XMLHttpRequest/FormData/Using_FormData_Objects	/en-US/docs/Web/API/FormData/Using_FormData_Objects
 /en-US/docs/Web/API/XMLHttpRequest/How_to_check_the_secruity_state_of_an_XMLHTTPRequest_over_SSL	/en-US/docs/Web/API/XMLHttpRequest
 /en-US/docs/Web/API/XMLHttpRequest/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL	/en-US/docs/Web/API/XMLHttpRequest
+/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest_in_IE6	/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /en-US/docs/Web/API/XMLHttpRequest/XMLHttpRequest.response	/en-US/docs/Web/API/XMLHttpRequest/response
 /en-US/docs/Web/API/XMLHttpRequest/onreadystatechange	/en-US/docs/Web/API/XMLHttpRequest/readystatechange_event
 /en-US/docs/Web/API/XMLHttpRequest/responseresponseText	/en-US/docs/Web/API/XMLHttpRequest/responseText

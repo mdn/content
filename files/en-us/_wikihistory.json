@@ -70643,10 +70643,6 @@
       "vladimir.dzhuvinov"
     ]
   },
-  "Web/API/XMLHttpRequest/Using_XMLHttpRequest_in_IE6": {
-    "modified": "2019-01-16T13:20:26.973Z",
-    "contributors": ["Sheppy", "Dikrib", "Kohei", "kohei.yoshino"]
-  },
   "Web/API/XMLHttpRequest/XMLHttpRequest": {
     "modified": "2019-03-23T22:44:23.864Z",
     "contributors": ["mfuji09", "vriojtg", "Sheppy", "MashKao", "jsx"]
