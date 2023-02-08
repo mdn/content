@@ -163,6 +163,13 @@
       "properties": [],
       "events": ["Element: contentvisibilityautostatechanged"]
     },
+    "CSS Custom Highlight API": {
+      "overview": ["CSS Custom Highlight API"],
+      "interfaces": ["Highlight", "HighlightRegistry"],
+      "methods": [],
+      "properties": ["CSS.highlights"],
+      "events": []
+    },
     "Console API": {
       "overview": ["Console API"],
       "interfaces": ["Console"],
