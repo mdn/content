@@ -46,7 +46,7 @@ At its very simplest, the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} cons
 a locale identifier string as its argument:
 
 ```js
-const us = new Intl.Locale('en-US');
+const us = new Intl.Locale("en-US");
 ```
 
 ### Using the Locale constructor with an options object
