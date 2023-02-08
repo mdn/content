@@ -131,7 +131,7 @@ Only the `<p>` element with `class="fancy"` will get styled `red`.
 
 Sometimes you just want to display the static code block that is pertinent to the example rendered within a page. However you still need HTML, CSS and JavaScript to render such an example.
 
-To achieve this you can hide any code blocks that are not relevant with the `hidden` class.
+To achieve this you can hide any code blocks that are not relevant with the `hidden` class. If you do this, omit the `### HTML/CSS/JavaScript` headings for the hidden code blocks.
 
 Using the example above but hiding the HTML code would look like this:
 
@@ -141,8 +141,6 @@ Using the example above but hiding the HTML code would look like this:
 ### Styling a paragraph
 
 In this example, we're using CSS to style paragraphs that have the `fancy` class set.
-
-#### HTML
 
 ```html hidden
 <p>I'm not fancy.</p>
@@ -164,6 +162,34 @@ p.fancy {
 
 Only the `<p>` element with `class="fancy"` will get styled `red`.
 ````
+
+### Live example demo
+
+### Styling a paragraph
+
+In this example, we're using CSS to style paragraphs that have the `fancy` class set.
+
+#### HTML
+
+```html
+<p>I'm not fancy.</p>
+
+<p class="fancy">But I am!</p>
+```
+
+#### CSS
+
+```css
+p.fancy {
+  color: red;
+}
+```
+
+#### Result
+
+\{{EmbedLiveSample("Styling a paragraph")}}
+
+Only the `<p>` element with `class="fancy"` will get styled `red`.
 
 ## GitHub live samples
 
