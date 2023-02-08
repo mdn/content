@@ -41,7 +41,7 @@ const item = document.getElementsByTagName("p")[0];
 const rules = document.styleSheets[1].cssRules;
 const layer = rules[0]; // A CSSLayerStatementRule
 
-item.textContent = `@layer declares the following layers: ${layer.nameList.join(
+item.textContent = `The CSS @layer statement declares the following layers: ${layer.nameList.join(
   ", "
 )}.`;
 ```
