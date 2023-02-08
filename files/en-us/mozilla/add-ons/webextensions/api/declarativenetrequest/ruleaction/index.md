@@ -10,7 +10,9 @@ tags:
   - Type
   - declarativeNetRequest
   - RuleAction
-browser-compat: webextensions.api.declarativeNetRequest.RuleAction
+browser-compat: 
+  - webextensions.api.declarativeNetRequest.RuleAction
+  - webextensions.api.declarativeNetRequest.ModifyHeaderInfo
 ---
 
 {{AddonSidebar()}}
