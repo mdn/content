@@ -14,7 +14,7 @@ browser-compat:
 
 {{SeeCompatTable}}{{DefaultAPISidebar("WebGPU API")}}
 
-The **WebGPU API** enables web developers to use the underlying operating system's GPU (Graphics Processing Unit) to perform high-performance computations and draw complex images that can be rendered in the browser. It is the successor to {{domxref("WebGL_API", "WebGL", "", "nocode")}}, enabling better compatibility with modern GPUs, faster operations, and access to more advanced GPU features. In addition, WebGPU has first-class support for performing general computations on the GPU.
+The **WebGPU API** enables web developers to use the underlying system's GPU (Graphics Processing Unit) to perform high-performance computations and draw complex images that can be rendered in the browser. It is the successor to {{domxref("WebGL_API", "WebGL", "", "nocode")}}, enabling better compatibility with modern GPUs, faster operations, and access to more advanced GPU features. In addition, WebGPU has first-class support for performing general computations on the GPU.
 
 ## Concepts and usage
 
@@ -28,7 +28,7 @@ However, WebGL still has some fundamental issues that need addressing:
 - WebGL is based wholly around the use case of drawing graphics and rendering them to a canvas. It does not handle general-purpose GPU (GPGPU) computations very well. GPGPU computations are becoming more and more important for many different use cases, for example those based on machine learning models.
 - 3D graphics apps are becoming increasingly demanding, both in terms of the number of objects to be rendered simultaneously, and usage of new rendering features.
 
-WebGPU addresses these issues, providing an updated general-purpose architecture compatible with modern GPU APIs, which feels more "webby". It supports graphic rendering, but also has first-class support for GPGPU computations. Rendering of individual objects is significantly cheaper on the CPU side, and it supports modern GPU rendering features such as compute-based particles and post-processing filters like color effects, sharpening, and depth-of-field simulation. In addition, it can handle expensive computations such as culling and skinned model transformation.
+WebGPU addresses these issues, providing an updated general-purpose architecture compatible with modern GPU APIs, which feels more "webby". It supports graphic rendering, but also has first-class support for GPGPU computations. Rendering of individual objects is significantly cheaper on the CPU side, and it supports modern GPU rendering features such as compute-based particles and post-processing filters like color effects, sharpening, and depth-of-field simulation. In addition, it can handle expensive computations such as culling and skinned model transformation directly on the GPU.
 
 ## General model
 
@@ -41,8 +41,8 @@ There are several layers of abstraction between a device GPU and a web browser r
   - Discrete GPUs, which live on their own board, separate from the CPU.
   - Software "GPUs", implemented on the CPU.
   The above diagram assumes a device with only one GPU.
-- A native OS GPU API, which is part of the OS (e.g. Metal on macOS) is a programming interface allowing native applications to use the capabilities of the GPU. API instructions are sent to the GPU (and responses received) via a driver. It is possible for a system to have multiple native OS APIs and drivers available to communicate with the GPU, although the above diagram assumes a device with only one native API/driver.
-- A browser's WebGPU implementation handles communicating with the GPU via a native OS API driver. A WebGPU adapter effectively represents a physical GPU and a driver in your code.
+- A native GPU API, which is part of the OS (e.g. Metal on macOS), is a programming interface allowing native applications to use the capabilities of the GPU. API instructions are sent to the GPU (and responses received) via a driver. It is possible for a system to have multiple native OS APIs and drivers available to communicate with the GPU, although the above diagram assumes a device with only one native API/driver.
+- A browser's WebGPU implementation handles communicating with the GPU via a native GPU API driver. A WebGPU adapter effectively represents a physical GPU and driver available on the underlying system in your code.
 - A logical device is an abstraction via which a single web app can access GPU capabilities in a compartmentalized way. Logical devices are required to provide multiplexing capabilities. A physical device's GPU is used by many applications and processes concurrently, including potentially many web apps. Each web app needs to be able to access WebGPU in isolation for security and logic reasons.
 
 ## Accessing a device
@@ -67,9 +67,6 @@ async function init() {
   }
 
   const device = await adapter.requestDevice();
-  if (!device) {
-    throw Error('Couldn\'t request WebGPU logical device.');
-  }
 
   //...
 
@@ -113,13 +110,13 @@ We are using the following shader code. The vertex shader stage (`@vertex` block
 ```js
 const shaders = `
 struct VertexOut {
-    @builtin(position) position : vec4f,
-    @location(0) color : vec4f
+  @builtin(position) position : vec4f,
+  @location(0) color : vec4f
 }
 
 @vertex
 fn vertex_main(@location(0) position: vec4f,
-                 @location(1) color: vec4f) -> VertexOut
+               @location(1) color: vec4f) -> VertexOut
 {
   var output : VertexOut;
   output.position = position;
@@ -156,9 +153,9 @@ const canvas = document.querySelector('#gpuCanvas');
 const context = canvas.getContext('webgpu');
 
 context.configure({
-    device: device,
-    format: navigator.gpu.getPreferredCanvasFormat(),
-    alphaMode: 'premultiplied'
+  device: device,
+  format: navigator.gpu.getPreferredCanvasFormat(),
+  alphaMode: 'premultiplied'
 });
 ```
 
@@ -170,9 +167,9 @@ Next we will provide our WebGPU program with our data, in a form it can use. Our
 
 ```js
 const vertices = new Float32Array([
-    0.0,  0.6, 0, 1, 1, 0, 0, 1,
-   -0.5, -0.6, 0, 1, 0, 1, 0, 1,
-    0.5, -0.6, 0, 1, 0, 0, 1, 1
+  0.0,  0.6, 0, 1, 1, 0, 0, 1,
+ -0.5, -0.6, 0, 1, 0, 1, 0, 1,
+  0.5, -0.6, 0, 1, 0, 0, 1, 1
 ]);
 ```
 
@@ -182,16 +179,15 @@ The {{domxref("GPUBuffer")}} is created via a call to {{domxref("GPUDevice.creat
 
 ```js
 const vertexBuffer = device.createBuffer({
-    size: vertices.byteLength, // make it big enough to store vertices in
-    usage: GPUBufferUsage.VERTEX | GPUBufferUsage.COPY_DST,
+  size: vertices.byteLength, // make it big enough to store vertices in
+  usage: GPUBufferUsage.VERTEX | GPUBufferUsage.COPY_DST,
 });
 ```
 
-We could handle getting our data into the `GPUBuffer` using a mapping operation, like we use in the [compute pipeline example](#basic_compute_pipeline) to read data from the GPU back to JavaScript. However, in this case we are going to use the handy {{domxref("GPUQueue.writeBuffer()")}} convenience method, which takes as its parameters the buffer to write to, the data source to write from, and offet value for each, and the size of data to write (we've specified the whole length of the array). The browser then works out the most efficient way to handle writing the data.
+We could handle getting our data into the `GPUBuffer` using a mapping operation, like we use in the [compute pipeline example](#basic_compute_pipeline) to read data from the GPU back to JavaScript. However, in this case we are going to use the handy {{domxref("GPUQueue.writeBuffer()")}} convenience method, which takes as its parameters the buffer to write to, the data source to write from, an offset value for each, and the size of data to write (we've specified the whole length of the array). The browser then works out the most efficient way to handle writing the data.
 
 ```js
-const array = new Float32Array(vertices);
-device.queue.writeBuffer(vertexBuffer, 0, array, 0, vertices.length);
+device.queue.writeBuffer(vertexBuffer, 0, vertices, 0, vertices.length);
 ```
 
 ### Define and create the render pipeline
@@ -202,17 +198,17 @@ First of all, we create an object that describes the required layout of our vert
 
 ```js
 const vertexBuffers = [{
-    attributes: [{
-        shaderLocation: 0, // position
-        offset: 0,
-        format: 'float32x4'
-    }, {
-        shaderLocation: 1, // color
-        offset: 16,
-        format: 'float32x4'
-    }],
-    arrayStride: 32,
-    stepMode: 'vertex'
+  attributes: [{
+    shaderLocation: 0, // position
+    offset: 0,
+    format: 'float32x4'
+  }, {
+    shaderLocation: 1, // color
+    offset: 16,
+    format: 'float32x4'
+  }],
+  arrayStride: 32,
+  stepMode: 'vertex'
 }];
 ```
 
@@ -224,22 +220,22 @@ We also specify a `primitive` state, which in this case just states the type of 
 
 ```js
 const pipelineDescriptor = {
-    vertex: {
-        module: shaderModule,
-        entryPoint: 'vertex_main',
-        buffers: vertexBuffers
-    },
-    fragment: {
-        module: shaderModule,
-        entryPoint: 'fragment_main',
-        targets: [{
-            format: navigator.gpu.getPreferredCanvasFormat()
-        }]
-    },
-    primitive: {
-        topology: 'triangle-list'
-    },
-    layout: 'auto'
+  vertex: {
+    module: shaderModule,
+    entryPoint: 'vertex_main',
+    buffers: vertexBuffers
+  },
+  fragment: {
+    module: shaderModule,
+    entryPoint: 'fragment_main',
+    targets: [{
+      format: navigator.gpu.getPreferredCanvasFormat()
+    }]
+  },
+  primitive: {
+    topology: 'triangle-list'
+  },
+  layout: 'auto'
 };
 ```
 
@@ -267,12 +263,12 @@ Next up we start the rendering pass running by creating a {{domxref("GPURenderPa
 const clearColor = { r: 0.0, g: 0.5, b: 1.0, a: 1.0 };
 
 const renderPassDescriptor = {
-    colorAttachments: [{
-        clearValue: clearColor,
-        loadOp: 'clear',
-        storeOp: 'store',
-        view: context.getCurrentTexture().createView()
-    }]
+  colorAttachments: [{
+    clearValue: clearColor,
+    loadOp: 'clear',
+    storeOp: 'store',
+    view: context.getCurrentTexture().createView()
+  }]
 };
 
 const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
@@ -311,20 +307,26 @@ In our [basic compute demo](https://webgpu-basic-compute.glitch.me/), we get the
 The app follows a similar structure to the basic rendering demo. We create a {{domxref("GPUDevice")}} reference in the same way as before, and encapsulate our shader code into a {{domxref("GPUShaderModule")}} via a {{domxref("GPUDevice.createShaderModule()")}} call. The difference here is that our shader code only has one shader stage, a compute shader:
 
 ```js
+// Define global buffer size
+const BUFFER_SIZE = 1000; 
+
 const shader = `
 @group(0) @binding(0)
 var<storage, read_write> output: array<f32>;
 
 @compute @workgroup_size(64)
 fn main(
-
   @builtin(global_invocation_id)
   global_id : vec3u,
 
   @builtin(local_invocation_id)
   local_id : vec3u,
-
 ) {
+  // Avoid accessing the buffer out of bounds
+  if (global_id.x >= ${BUFFER_SIZE}) {
+    return;
+  }
+
   output[global_id.x] =
     f32(global_id.x) * 1000. + f32(local_id.x);
 }
@@ -339,16 +341,14 @@ In this example we create two {{domxref("GPUBuffer")}} instances to handle our d
 - `stagingBuffer` is specified as a buffer that can be mapped for reading by JavaScript, and will be the destination of a copy operation.
 
 ```js
-const BUFFER_SIZE = 1000;
-
 const output = device.createBuffer({
-    size: BUFFER_SIZE,
-    usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_SRC
+  size: BUFFER_SIZE,
+  usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_SRC
 });
 
 const stagingBuffer = device.createBuffer({
-    size: BUFFER_SIZE,
-    usage: GPUBufferUsage.MAP_READ | GPUBufferUsage.COPY_DST,
+  size: BUFFER_SIZE,
+  usage: GPUBufferUsage.MAP_READ | GPUBufferUsage.COPY_DST,
 });
 ```
 
@@ -359,13 +359,13 @@ When the pipeline is created, we specify a bind group to use for the pipeline. T
 ```js
 const bindGroupLayout =
 device.createBindGroupLayout({
-    entries: [{
-        binding: 0,
-        visibility: GPUShaderStage.COMPUTE,
-        buffer: {
-            type: "storage",
-        }
-    }]
+  entries: [{
+    binding: 0,
+    visibility: GPUShaderStage.COMPUTE,
+    buffer: {
+      type: "storage",
+    }
+  }]
 });
 ```
 
@@ -373,13 +373,13 @@ Next we create a {{domxref("GPUBindGroup")}} by calling {{domxref("GPUDevice.cre
 
 ```js
 const bindGroup = device.createBindGroup({
-    layout: bindGroupLayout,
-    entries: [{
-        binding: 0,
-        resource: {
-            buffer: output,
-        }
-    }]
+  layout: bindGroupLayout,
+  entries: [{
+    binding: 0,
+    resource: {
+      buffer: output,
+    }
+  }]
 });
 ```
 
@@ -391,13 +391,13 @@ With the above all in place, we can now create a compute pipeline by calling {{d
 
 ```js
 const computePipeline = device.createComputePipeline({
-    layout: device.createPipelineLayout({
-        bindGroupLayouts: [bindGroupLayout]
-    }),
-    compute: {
-      module: shaderModule,
-      entryPoint: 'main'
-    },
+  layout: device.createPipelineLayout({
+    bindGroupLayouts: [bindGroupLayout]
+  }),
+  compute: {
+    module: shaderModule,
+    entryPoint: 'main'
+  }
 });
 ```
 
@@ -426,11 +426,11 @@ Before submitting the encoded commands to the GPU for execution using {{domxref(
 ```js
 // Copy output buffer to staging buffer
 commandEncoder.copyBufferToBuffer(
-    output,
-    0, // Source offset
-    stagingBuffer,
-    0, // Destination offset
-    BUFFER_SIZE
+  output,
+  0, // Source offset
+  stagingBuffer,
+  0, // Destination offset
+  BUFFER_SIZE
 );
 
 // End frame by passing array of command buffers to command queue for execution
@@ -442,9 +442,9 @@ Once the output data is available in the `stagingBuffer`, we use the {{domxref("
 ```js
 // map staging buffer to read results back to JS
 await stagingBuffer.mapAsync(
-    GPUMapMode.READ,
-    0, // Offset
-    BUFFER_SIZE // Length
+  GPUMapMode.READ,
+  0, // Offset
+  BUFFER_SIZE // Length
 );
 
 const copyArrayBuffer = stagingBuffer.getMappedRange(0, BUFFER_SIZE);
