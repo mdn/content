@@ -1,12 +1,14 @@
 ---
 title: ContentVisibilityAutoStateChangedEvent()
-slug: Web/API/ContentVisibilityAutoStateChangedEvent/ContentVisibilityAutoStateChangedEvent
+slug: >-
+  Web/API/ContentVisibilityAutoStateChangeEvent/ContentVisibilityAutoStateChangeEvent
 page-type: web-api-constructor
 tags:
   - Constructor
   - Reference
   - Experimental
-browser-compat: api.ContentVisibilityAutoStateChangedEvent.ContentVisibilityAutoStateChangedEvent
+browser-compat: >-
+  api.ContentVisibilityAutoStateChangedEvent.ContentVisibilityAutoStateChangedEvent
 ---
 
 {{APIRef("CSS Containment")}}{{SeeCompatTable}}

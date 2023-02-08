@@ -1,6 +1,6 @@
 ---
 title: ContentVisibilityAutoStateChangedEvent.skipped
-slug: Web/API/ContentVisibilityAutoStateChangedEvent/skipped
+slug: Web/API/ContentVisibilityAutoStateChangeEvent/skipped
 page-type: web-api-instance-property
 tags:
   - API

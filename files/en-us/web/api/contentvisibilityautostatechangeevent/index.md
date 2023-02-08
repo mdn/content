@@ -1,6 +1,6 @@
 ---
 title: ContentVisibilityAutoStateChangedEvent
-slug: Web/API/ContentVisibilityAutoStateChangedEvent
+slug: Web/API/ContentVisibilityAutoStateChangeEvent
 page-type: web-api-interface
 tags:
   - Interface

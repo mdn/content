@@ -1,6 +1,6 @@
 ---
-title: "Element: contentvisibilityautostatechanged event"
-slug: Web/API/Element/contentvisibilityautostatechanged_event
+title: 'Element: contentvisibilityautostatechanged event'
+slug: Web/API/Element/contentvisibilityautostatechange_event
 page-type: web-api-event
 tags:
   - Event
