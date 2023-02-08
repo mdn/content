@@ -18,7 +18,7 @@ A {{jsxref("Array")}} of strings, each representing a cascade layer represented 
 ### HTML
 
 ```html
-<div>I am displayed in <code>color: rebeccapurple</code>.</div>
+<div></div>
 ```
 
 ### CSS
