@@ -26,10 +26,10 @@ The void elements in HTML are as follows:
 - {{HTMLElement("hr")}}
 - {{HTMLElement("img")}}
 - {{HTMLElement("input")}}
-- {{HTMLElement("keygen")}}(HTML 5.2 Draft removed)
+- {{HTMLElement("keygen")}} {{deprecated_inline}}
 - {{HTMLElement("link")}}
 - {{HTMLElement("meta")}}
-- {{HTMLElement("param")}}
+- {{HTMLElement("param")}} {{deprecated_inline}}
 - {{HTMLElement("source")}}
 - {{HTMLElement("track")}}
 - {{HTMLElement("wbr")}}
