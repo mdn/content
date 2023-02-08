@@ -1,5 +1,5 @@
 ---
-title: 'Media type and format guide: image, audio, and video content'
+title: "Media type and format guide: image, audio, and video content"
 slug: Web/Media/Formats
 tags:
   - API

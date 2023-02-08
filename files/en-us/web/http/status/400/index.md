@@ -28,4 +28,4 @@ The HyperText Transfer Protocol (HTTP) **`400 Bad Request`** response status cod
 
 ## See also
 
-- [HTTP/1.1: Status Code Definitions](https://httpwg.org/specs/rfc9110.html#status.400)
+- [HTTP Status Code Definitions](https://httpwg.org/specs/rfc9110.html#status.400)
