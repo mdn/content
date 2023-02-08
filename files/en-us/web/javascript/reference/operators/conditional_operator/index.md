@@ -62,10 +62,10 @@ One common usage is to handle a value that may be `null`:
 const greeting = (person) => {
   const name = person ? person.name : "stranger";
   return `Howdy, ${name}`;
-}
+};
 
-console.log(greeting({ name: "Alice" }));  // "Howdy, Alice"
-console.log(greeting(null));             // "Howdy, stranger"
+console.log(greeting({ name: "Alice" })); // "Howdy, Alice"
+console.log(greeting(null)); // "Howdy, stranger"
 ```
 
 ### Conditional chains
