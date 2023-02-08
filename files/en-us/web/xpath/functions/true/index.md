@@ -1,5 +1,5 @@
 ---
-title: 'true'
+title: "true"
 slug: Web/XPath/Functions/true
 tags:
   - XSLT

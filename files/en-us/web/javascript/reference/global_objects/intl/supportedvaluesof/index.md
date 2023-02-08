@@ -53,7 +53,7 @@ A sorted array of unique string values indicating the values supported by the im
 You can check that the method is supported by comparing to `undefined`:
 
 ```js
-if (typeof Intl.supportedValuesOf !== 'undefined') {
+if (typeof Intl.supportedValuesOf !== "undefined") {
   // method is supported
 }
 ```
