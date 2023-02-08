@@ -25,6 +25,12 @@ A {{jsxref("Array")}} of strings, each representing a cascade layer represented 
 
 ```css
 @layer layerName, layerName2;
+
+@layer layerName3 { 
+  div {
+    font-family: serif;
+    }
+}
 ```
 
 ### JavaScript
