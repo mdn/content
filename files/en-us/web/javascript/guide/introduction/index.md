@@ -87,7 +87,7 @@ The _Web Console_ tool built into Firefox is useful for experimenting with JavaS
 
 The [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) shows you information about the currently loaded Web page, and also includes a JavaScript interpreter that you can use to execute JavaScript expressions in the current page.
 
-To open the Web Console (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> on Windows and Linux or <kbd>Cmd</kbd>-<kbd>Option</kbd>-<kbd>K</kbd> on Mac), open the **Tools** menu in Firefox, and select "**Developer ▶ Web Console**".
+To open the Web Console (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> on Windows and Linux or <kbd>Cmd</kbd>-<kbd>Option</kbd>-<kbd>I</kbd> on Mac), open the **Tools** menu in Firefox, and select "**Developer ▶ Web Console**".
 
 The Web Console appears at the bottom of the browser window. Along the bottom of the console is an input line that you can use to enter JavaScript, and the output appears in the panel above:
 
