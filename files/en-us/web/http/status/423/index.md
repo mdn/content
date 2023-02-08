@@ -15,6 +15,12 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.3
 
 The HTTP **`423 Locked`** error response code indicates that either the resources tentatively targetted by is _locked_, meaning it can't be accessed. Its content should contain some information in WebDAV's XML format.
 
+## Status
+
+```
+423 Locked
+```
+
 ### Example
 
 ```
@@ -28,12 +34,6 @@ Content-Length: xxxx
     <D:href>/workspace/webdav/</D:href>
   </D:lock-token-submitted>
 </D:error>
-```
-
-## Status
-
-```
-423 Locked
 ```
 
 ## Specifications
