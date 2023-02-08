@@ -32,7 +32,8 @@ A {{jsxref("Array")}} of strings, each representing a cascade layer represented 
 ```js
 const item = document.getElementsByTagName("div")[0];
 const rules = document.styleSheets[1].cssRules;
-const layer = rules[0]; // A CSSLayerStatementRule
+const layerStatementRule = rules[0]; // A CSSLayerStatementRule
+const layerBlockRule = rules[1]; // A CSSLayerBlockRule; no nameList property.
 
 item.textContent = `@layer declares the following layers: ${layer.nameList.join(
   ", "
