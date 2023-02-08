@@ -37,7 +37,7 @@ _Also inherits properties from its parent interface, {{DOMxRef("CSSRule")}}._
 ### JavaScript
 
 ```js
-const item = document.getElementsByTagName("div")[0];
+const item = document.getElementsByTagName("p")[0];
 const rules = document.styleSheets[1].cssRules;
 const layer = rules[0]; // A CSSLayerStatementRule
 
