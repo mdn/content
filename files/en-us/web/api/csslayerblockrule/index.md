@@ -67,3 +67,4 @@ item.textContent = `The CSSLayerBlockRule is for the "${layer.name}" layer`;
 
 - {{cssxref("@layer")}}
 - {{DOMxRef("CSSLayerStatementRule")}}
+- [Learn CSS cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers)
