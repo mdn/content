@@ -49,7 +49,7 @@ An object describing the segment of the original string with the following prope
 // ┃A l l o n s┃-┃y┃!┃   ← code unit
 const input = "Allons-y!";
 
-const segmenter = new Intl.Segmenter("fr", {granularity: "word"});
+const segmenter = new Intl.Segmenter("fr", { granularity: "word" });
 const segments = segmenter.segment(input);
 
 let current = segments.containing();
