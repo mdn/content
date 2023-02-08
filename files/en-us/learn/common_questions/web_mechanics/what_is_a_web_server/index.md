@@ -71,7 +71,7 @@ Technically, you could host all those files on your own computer, but it's far m
 - A dedicated web server can have the same IP address all the time. This is known as a _dedicated IP address_. (Not all {{Glossary("ISP", "ISPs")}} provide a fixed IP address for home lines.)
 - A dedicated web server is typically maintained by a third party.
 
-For all these reasons, finding a good hosting provider is a key part of building your website. Examine the various services companies offer. Choose one that fits your needs and budget. (Services range from free to thousands of dollars per month.) You can find more details [in this article](/en-US/docs/Learn/Common_questions/How_much_does_it_cost#hosting).
+For all these reasons, finding a good hosting provider is a key part of building your website. Examine the various services companies offer. Choose one that fits your needs and budget. (Services range from free to thousands of dollars per month.) You can find more details [in this article](/en-US/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#hosting).
 
 Once you have web hosting service, you must [upload your files to your web server](/en-US/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).
 

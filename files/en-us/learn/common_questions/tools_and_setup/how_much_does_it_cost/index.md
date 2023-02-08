@@ -156,7 +156,7 @@ Depending on how you answer these questions, your site could cost thousands to h
 
 ## Next steps
 
-Now that you understand what kind of money your website may cost you, it's time to start designing that website and [setting up your work environment](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server).
+Now that you understand what kind of money your website may cost you, it's time to start designing that website and [setting up your work environment](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
 
 - Read on about [how to choose and install a text editor](/en-US/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors).
 - If you're more focused on design, take a look at the [anatomy of a web page](/en-US/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts).
