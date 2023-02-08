@@ -24,6 +24,7 @@ This article provides information about the changes in Firefox 110 that will aff
 
 - Container queries and container query length units are now supported by default.
   For more information on these queries and the related units of length, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) documentation ({{bug(1809720)}}).
+- The [color-gamut media query](/en-US/docs/Web/CSS/@media/color-gamut) is now supported ({{bug(1422237)}}).
 
 #### Removals
 

@@ -164,8 +164,10 @@ test, include:
 ```json
 {
   "androidIntentArguments": [
-    "-a", "android.intent.action.VIEW",
-    "-d", "https://example.com"
+    "-a",
+    "android.intent.action.VIEW",
+    "-d",
+    "https://example.com"
   ]
 }
 ```
@@ -174,9 +176,7 @@ For example, to specify a boolean extra that can be processed with [android.cont
 
 ```json
 {
-  "androidIntentArguments": [
-    "--ez", "customBooleanFlagName", "true"
-  ]
+  "androidIntentArguments": ["--ez", "customBooleanFlagName", "true"]
 }
 ```
 
@@ -236,7 +236,7 @@ through a preference, turns off chrome errors/warnings in the console, and enabl
           "dom.ipc.processCount": 8,
           "javascript.options.showInConsole": false
         },
-        "log": {"level": "trace"},
+        "log": { "level": "trace" },
         "env": {
           "MOZ_LOG": "nsHttp:5",
           "MOZ_LOG_FILE": "/path/to/my/profile/log"
@@ -273,9 +273,7 @@ This runs the GeckoView example application as installed on the first Android em
         "androidPackage": "org.mozilla.geckoview_example",
         "androidActivity": "org.mozilla.geckoview_example.GeckoView",
         "androidDeviceSerial": "emulator-5554",
-        "androidIntentArguments": [
-          "-d", "http://example.org"
-        ],
+        "androidIntentArguments": ["-d", "http://example.org"],
         "env": {
           "MOZ_LOG": "nsHttp:5",
           "MOZ_LOG_FILE": "/mnt/sdcard/log"
