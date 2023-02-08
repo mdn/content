@@ -29,6 +29,22 @@ _Inherits methods from its parent interface, {{DOMxRef("CSSGroupingRule")}}._
 
 ```html
 <p>I am displayed in <code>color: rebeccapurple</code>.</p>
+```
+
+### CSS
+
+```css
+@layer special {
+  p {
+    color: rebeccapurple;
+  }
+}
+```
+
+### JavaScript
+
+```js
+const item = document.getElementsByTagName("p")[0];
 const rules = document.styleSheets[1].cssRules;
 const layer = rules[0]; // A CSSLayerBlockRule
 
