@@ -17,7 +17,7 @@ This article discusses what the Internet is and how it works.
       <th scope="row">Prerequisites:</th>
       <td>
         None, but we encourage you to read the
-        <a href="/en-US/docs/Learn/Common_questions/Thinking_before_coding"
+        <a href="/en-US/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding"
           >Article on setting project goals</a
         >
         first
@@ -113,5 +113,5 @@ They can therefore be accessed by authorized members from different physical loc
 ## Next steps
 
 - [How the Web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
-- [Understanding the difference between a web page, a website, a web server and a search engine](/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)
-- [Understanding domain names](/en-US/docs/Learn/Common_questions/What_is_a_domain_name)
+- [Understanding the difference between a web page, a website, a web server and a search engine](/en-US/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines)
+- [Understanding domain names](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)

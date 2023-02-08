@@ -18,11 +18,11 @@ tags:
       <th scope="row">Prerequisites:</th>
       <td>
         First you need to know
-        <a href="/en-US/docs/Learn/Common_questions/How_does_the_Internet_work"
+        <a href="/en-US/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
           >how the Internet works</a
         >
         and understand
-        <a href="/en-US/docs/Learn/Common_questions/What_is_a_URL"
+        <a href="/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL"
           >what URLs are</a
         >.
       </td>
@@ -163,7 +163,7 @@ As we already saw, when you want to display a webpage in your browser it's easie
 
 Okay, we talked a lot about processes and architecture. Time to move on.
 
-- If you want to get hands-on, it's a good time to start digging into design and explore [the anatomy of a web page](/en-US/docs/Learn/Common_questions/Common_web_layouts).
-- It's also worth noting that some aspects of building a website cost money. Please refer to [how much it costs to build a website](/en-US/docs/Learn/Common_questions/How_much_does_it_cost).
+- If you want to get hands-on, it's a good time to start digging into design and explore [the anatomy of a web page](/en-US/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts).
+- It's also worth noting that some aspects of building a website cost money. Please refer to [how much it costs to build a website](/en-US/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost).
 - Or read more about [Domain Names](https://en.wikipedia.org/wiki/Domain_name) on Wikipedia.
 - You can also find [here](https://howdns.works/) a fun and colorful explanation of how DNS works.

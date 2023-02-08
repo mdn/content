@@ -18,8 +18,8 @@ In this article we highlight some things to think about when installing a text e
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        You should already know about<a
-          href="/en-US/docs/Learn/Common_questions/What_software_do_I_need"
+        You should already know about <a
+          href="/en-US/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need"
         >
           various software you need to build a website</a
         >.
@@ -472,4 +472,4 @@ When you install a new text editor, your OS will probably continue to open text 
 
 ## Next steps
 
-Now that you have a good text editor, you could take some time to finalize [your basic working environment](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server), or, if you want to play with it right away, write [your very first web page](/en-US/docs/Learn/Getting_started_with_the_web).
+Now that you have a good text editor, you could take some time to finalize [your basic working environment](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server), or, if you want to play with it right away, write [your very first web page](/en-US/docs/Learn/Getting_started_with_the_web).

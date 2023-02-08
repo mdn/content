@@ -180,4 +180,4 @@ Second, setting out actionable steps leads to new questions you'll need to answe
 
 As you can see, the simple idea "I want to make a website" generates a long to-do list, which only grows longer as you think about it. Soon it may look overwhelming, but don't panic. You don't need to answer all the questions and you don't need to do everything on your list. What matters is to have a vision of what you want and how to get there. Once you have that clear vision, you need to decide how and when to do it. Break down big tasks into small, actionable steps. And those small steps will add up to great achievements.
 
-From this article, you should now be able to make a rough plan for creating a website. A next step might be to read [how the Internet works](/en-US/docs/Learn/Common_questions/How_does_the_Internet_work).
+From this article, you should now be able to make a rough plan for creating a website. A next step might be to read [how the Internet works](/en-US/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work).

@@ -19,14 +19,14 @@ Getting involved on the Web isn't as cheap as it looks. In this article we discu
       <th scope="row">Prerequisites:</th>
       <td>
         You should already understand
-        <a href="/en-US/docs/Learn/Common_questions/What_software_do_I_need"
+        <a href="/en-US/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need"
           >what software you need</a
         >, the difference between
         <a
-          href="/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines"
+          href="/en-US/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
           >a webpage, a website, etc.</a
         >, and what
-        <a href="/en-US/docs/Learn/Common_questions/What_is_a_domain_name"
+        <a href="/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name"
           >a domain name is</a
         >.
       </td>
@@ -158,5 +158,5 @@ Depending on how you answer these questions, your site could cost thousands to h
 
 Now that you understand what kind of money your website may cost you, it's time to start designing that website and [setting up your work environment](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server).
 
-- Read on about [how to choose and install a text editor](/en-US/docs/Learn/Common_questions/Available_text_editors).
-- If you're more focused on design, take a look at the [anatomy of a web page](/en-US/docs/Learn/Common_questions/Common_web_layouts).
+- Read on about [how to choose and install a text editor](/en-US/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors).
+- If you're more focused on design, take a look at the [anatomy of a web page](/en-US/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts).

@@ -24,7 +24,7 @@ In this article, we go over various troubleshooting steps for a website and some
       <td>
         You need to know how to
         <a
-          href="/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server"
+          href="/en-US/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server"
           >upload files to a web server</a
         >.
       </td>
@@ -98,7 +98,7 @@ At first glance, the image we asked for seems to be in the right place but the N
 
 ![Deleting the 's'](code-correct.png)
 
-Save, [push to the server](/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server), and reload the page in your browser:
+Save, [push to the server](/en-US/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server), and reload the page in your browser:
 
 ![The image loads correctly in the browser](image-corrected.png)
 
@@ -176,5 +176,5 @@ Just keep in mind a handy keyboard shortcut: **Ctrl+C**. Ctrl+C sends an "interr
 
 Congratulations, your website is up and running for anyone to visit. That's a huge achievement. Now, you can start digging deeper into various subjects.
 
-- Since people can come to your website from all over the world, you should consider making it [accessible to everybody](/en-US/docs/Learn/Common_questions/What_is_accessibility).
+- Since people can come to your website from all over the world, you should consider making it [accessible to everybody](/en-US/docs/Learn/Common_questions/Design_and_accessibility/What_is_accessibility).
 - Is the design of your website a bit too rough? It's time to [learn more about CSS](/en-US/docs/Learn/CSS/First_steps/How_CSS_works).

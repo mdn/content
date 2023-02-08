@@ -17,11 +17,11 @@ In this article, we explain what web servers are, how web servers work, and why 
       <th scope="row">Prerequisites:</th>
       <td>
         You should already know
-        <a href="/en-US/docs/Learn/Common_questions/How_does_the_Internet_work"
+        <a href="/en-US/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
           >how the Internet works</a
         >, and
         <a
-          href="/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines"
+          href="/en-US/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
           >understand the difference between a web page, a website, a web
           server, and a search engine</a
         >.
@@ -73,7 +73,7 @@ Technically, you could host all those files on your own computer, but it's far m
 
 For all these reasons, finding a good hosting provider is a key part of building your website. Examine the various services companies offer. Choose one that fits your needs and budget. (Services range from free to thousands of dollars per month.) You can find more details [in this article](/en-US/docs/Learn/Common_questions/How_much_does_it_cost#hosting).
 
-Once you have web hosting service, you must [upload your files to your web server](/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server).
+Once you have web hosting service, you must [upload your files to your web server](/en-US/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).
 
 ### Communicating through HTTP
 
@@ -112,6 +112,6 @@ There are so many application server technologies that it's difficult to suggest
 
 Now that you are familiar with web servers, you could:
 
-- read up on [how much it costs to do something on the web](/en-US/docs/Learn/Common_questions/How_much_does_it_cost)
-- learn more about [various software you need to create a website](/en-US/docs/Learn/Common_questions/What_software_do_I_need)
-- move on to something practical like [how to upload files on a web server](/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server).
+- read up on [how much it costs to do something on the web](/en-US/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
+- learn more about [various software you need to create a website](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
+- move on to something practical like [how to upload files on a web server](/en-US/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).

@@ -19,7 +19,7 @@ In this article, we describe various web-related concepts: web pages, websites, 
       <th scope="row">Prerequisites:</th>
       <td>
         You should know
-        <a href="/en-US/docs/Learn/Common_questions/How_does_the_Internet_work"
+        <a href="/en-US/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
           >how the Internet works</a
         >.
       </td>
@@ -114,5 +114,5 @@ Here is an instance of Firefox showing a Google search box as its default startu
 
 ## Next steps
 
-- Dig deeper: [What is a web server](/en-US/docs/Learn/Common_questions/What_is_a_web_server)
-- See how web pages are linked into a website: [Understanding links on the web](/en-US/docs/Learn/Common_questions/What_are_hyperlinks)
+- Dig deeper: [What is a web server](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- See how web pages are linked into a website: [Understanding links on the web](/en-US/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks)

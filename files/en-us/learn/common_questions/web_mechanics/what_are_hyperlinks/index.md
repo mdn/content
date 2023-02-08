@@ -18,11 +18,11 @@ In this article, we'll go over what hyperlinks are and why they matter.
       <th scope="row">Prerequisites:</th>
       <td>
         You should know
-        <a href="/en-US/docs/Learn/Common_questions/How_does_the_Internet_work"
+        <a href="/en-US/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
           >how the Internet works</a
         >
         and be familiar with<a
-          href="/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines"
+          href="/en-US/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
         >
           the difference between a webpage, a website, a web server, and a
           search engine</a
@@ -95,5 +95,5 @@ Links influence how readily a search engine will link to your site. The trouble 
 
 Now you'll want to set up some webpages with links.
 
-- To get some more theoretical background, learn about [URLs and their structure](/en-US/docs/Learn/Common_questions/What_is_a_URL), since every link points to a URL.
+- To get some more theoretical background, learn about [URLs and their structure](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), since every link points to a URL.
 - Want something a bit more practical? The [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) article of our [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module explains how to implement links in detail.
