@@ -46,3 +46,9 @@ item.textContent = `@layer declares the following layers: ${layer.nameList.join(
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{DOMXRef("CSSLayerBlockRule.name")}}
+- {{CSSXref("@layer")}}
+- [The `@layer` statement at-rule for named layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers#the_layer_statement_at-rule_for_named_layers)
