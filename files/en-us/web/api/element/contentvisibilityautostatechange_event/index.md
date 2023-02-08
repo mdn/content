@@ -27,7 +27,7 @@ addEventListener("contentvisibilityautostatechange", (event) => {});
 contentvisibilityautostatechange = (event) => {};
 ```
 
-> **Note:** The event object is of type {{domxref("ContentVisibilityAutoStateChangedEvent")}}.
+> **Note:** The event object is of type {{domxref("ContentVisibilityAutoStateChangeEvent")}}.
 
 ## Examples
 
@@ -66,7 +66,7 @@ function stopCanvasUpdates(canvas) {
 
 ## See also
 
-- {{domxref("ContentVisibilityAutoStateChangedEvent")}}
+- {{domxref("ContentVisibilityAutoStateChangeEvent")}}
 - [CSS Containment](/en-US/docs/Web/CSS/CSS_Containment)
 - The {{cssxref("content-visibility")}} property
 - The {{cssxref("contain")}} property

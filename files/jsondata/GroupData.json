@@ -158,7 +158,7 @@
       "events": ["ServiceWorkerGlobalScope: contentdelete"]
     },
     "CSS Containment": {
-      "interfaces": ["ContentVisibilityAutoStateChangedEvent"],
+      "interfaces": ["ContentVisibilityAutoStateChangeEvent"],
       "methods": [],
       "properties": [],
       "events": ["Element: contentvisibilityautostatechange"]

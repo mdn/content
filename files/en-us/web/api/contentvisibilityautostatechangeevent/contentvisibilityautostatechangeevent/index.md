@@ -1,5 +1,5 @@
 ---
-title: ContentVisibilityAutoStateChangedEvent()
+title: ContentVisibilityAutoStateChangeEvent()
 slug: >-
   Web/API/ContentVisibilityAutoStateChangeEvent/ContentVisibilityAutoStateChangeEvent
 page-type: web-api-constructor
@@ -8,23 +8,23 @@ tags:
   - Reference
   - Experimental
 browser-compat: >-
-  api.ContentVisibilityAutoStateChangedEvent.ContentVisibilityAutoStateChangedEvent
+  api.ContentVisibilityAutoStateChangeEvent.ContentVisibilityAutoStateChangeEvent
 ---
 
 {{APIRef("CSS Containment")}}{{SeeCompatTable}}
 
-The **`ContentVisibilityAutoStateChangedEvent()`** constructor creates a new {{domxref("ContentVisibilityAutoStateChangedEvent")}} object instance.
+The **`ContentVisibilityAutoStateChangeEvent()`** constructor creates a new {{domxref("ContentVisibilityAutoStateChangeEvent")}} object instance.
 
 ## Syntax
 
 ```js-nolint
-new ContentVisibilityAutoStateChangedEvent(type, options)
+new ContentVisibilityAutoStateChangeEvent(type, options)
 ```
 
 ### Parameters
 
 - `type`
-  - : A string representing the type of event. In the case of `ContentVisibilityAutoStateChangedEvent` this is always `event`.
+  - : A string representing the type of event. In the case of `ContentVisibilityAutoStateChangeEvent` this is always `event`.
 - `options` {{optional_inline}}
   - : An object that contains the following properties:
     - `skipped`
@@ -32,7 +32,7 @@ new ContentVisibilityAutoStateChangedEvent(type, options)
 
 ## Examples
 
-A developer would not use this constructor manually. A new `ContentVisibilityAutoStateChangedEvent` object is constructed when a handler is invoked as a result of the {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event firing.
+A developer would not use this constructor manually. A new `ContentVisibilityAutoStateChangeEvent` object is constructed when a handler is invoked as a result of the {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event firing.
 
 ```js
 canvasElem.addEventListener('contentvisibilityautostatechange', event => {
