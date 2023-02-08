@@ -48,7 +48,7 @@ const item = document.getElementsByTagName("div")[0];
 const rules = document.styleSheets[1].cssRules;
 const layer = rules[0]; // A CSSLayerBlockRule
 
-item.textContent = `The CSSLayerBlockRule is for the ${layer.name} layer`;
+item.textContent = `The CSSLayerBlockRule is for the "${layer.name}" layer`;
 ```
 
 ### Result
