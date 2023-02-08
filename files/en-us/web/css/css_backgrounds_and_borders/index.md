@@ -142,26 +142,26 @@ The background images are defined with {{cssxref("background-image")}}. The imag
 ## Related concepts
 
 - {{cssxref("border-block-end-color")}} property
-- {{cssxref("border-block-start-color")}} CSS property
-- {{cssxref("border-inline-end-color")}} CSS property
-- {{cssxref("border-inline-start-color")}} CSS property
-- {{cssxref("border-block-end-style")}} CSS property
-- {{cssxref("border-block-start-style")}} CSS property
-- {{cssxref("border-inline-end-style")}} CSS property
-- {{cssxref("border-inline-start-style")}} CSS property
-- {{cssxref("border-block-end-width")}} CSS property
-- {{cssxref("border-block-start-width")}} CSS property
-- {{cssxref("border-inline-end-width")}} CSS property
-- {{cssxref("border-inline-start-width")}} CSS property
+- {{cssxref("border-block-start-color")}} property
+- {{cssxref("border-inline-end-color")}} property
+- {{cssxref("border-inline-start-color")}} property
+- {{cssxref("border-block-end-style")}} property
+- {{cssxref("border-block-start-style")}} property
+- {{cssxref("border-inline-end-style")}} property
+- {{cssxref("border-inline-start-style")}} property
+- {{cssxref("border-block-end-width")}} property
+- {{cssxref("border-block-start-width")}} property
+- {{cssxref("border-inline-end-width")}} property
+- {{cssxref("border-inline-start-width")}} property
 
-- {{cssxref("border-start-start-radius")}} CSS property
-- {{cssxref("border-start-end-radius")}} CSS property
-- {{cssxref("border-end-start-radius")}} CSS property
-- {{cssxref("border-end-end-radius ")}} CSS property
+- {{cssxref("border-start-start-radius")}} property
+- {{cssxref("border-start-end-radius")}} property
+- {{cssxref("border-end-start-radius")}} property
+- {{cssxref("border-end-end-radius ")}} property
 
-- {{cssxref("box-sizing")}} CSS property
-- {{cssxref("box-decoration-break")}} CSS property
-- {{cssxref("text-shadow")}} CSS property
+- {{cssxref("box-sizing")}} property
+- {{cssxref("box-decoration-break")}} property
+- {{cssxref("text-shadow")}} property
 
 - {{cssxref("url()")}} CSS function
 - [`<color>`](/en-US/docs/Web/CSS/color) data type
