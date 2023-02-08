@@ -64,7 +64,7 @@ Let's decompose a traditional anonymous function down to the simplest arrow func
 
 > **Note:** Traditional function expressions and arrow functions have more differences than their syntax. We will introduce their behavior differences in more detail in the next few subsections.
 
-```js
+```js-nolint
 // Traditional anonymous function
 (function (a) {
   return a + 100;

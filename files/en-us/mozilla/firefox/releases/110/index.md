@@ -22,6 +22,10 @@ This article provides information about the changes in Firefox 110 that will aff
 
 ### CSS
 
+- Container queries and container query length units are now supported by default.
+  For more information on these queries and the related units of length, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) documentation ({{bug(1809720)}}).
+- The [color-gamut media query](/en-US/docs/Web/CSS/@media/color-gamut) is now supported ({{bug(1422237)}}).
+
 #### Removals
 
 ### JavaScript
@@ -50,6 +54,10 @@ This article provides information about the changes in Firefox 110 that will aff
   This allows the permission status for using the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) to be queried using [`navigator.permissions.query()`](/en-US/docs/Web/API/Permissions/query) ({{bug(1772166)}}).
 
 #### DOM
+
+- The {{domxref("element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event and associated {{domxref("ContentVisibilityAutoStateChangedEvent")}} interface are now supported.
+  The event can be used by application code to stop processes related to rendering the element when the user agent is [skipping its contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents).
+  ({{bug(1798485)}}).
 
 #### Media, WebRTC, and Web Audio
 
