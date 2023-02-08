@@ -91,7 +91,10 @@ In binding patterns, the pattern starts with a declaration keyword (`var`, `let`
 
 ```js
 const obj = { a: 1, b: { c: 2 } };
-const { a, b: { c: d } } = obj;
+const {
+  a,
+  b: { c: d },
+} = obj;
 // Two variables are bound: `a` and `d`
 ```
 
@@ -100,7 +103,9 @@ All variables share the same declaration, so if you want some variables to be re
 ```js
 const obj = { a: 1, b: { c: 2 } };
 const { a } = obj; // a is constant
-let { b: { c: d } } = obj; // d is re-assignable
+let {
+  b: { c: d },
+} = obj; // d is re-assignable
 ```
 
 In assignment patterns, the pattern does not start with a keyword. Each destructured property is assigned to a target of assignment — which may either be declared beforehand with `var` or `let`, or is a property of another object — in general, anything that can appear on the left-hand side of an assignment expression.
@@ -163,7 +168,7 @@ console.log(others2); // [2, 3]
 
 The rest property must be the last in the pattern, and must not have a trailing comma.
 
-```js example-bad
+```js-nolint example-bad
 const [a, ...b,] = [1, 2, 3];
 
 // SyntaxError: rest element may not have a trailing comma
@@ -187,7 +192,7 @@ For features specific to array or object destructuring, please refer to the indi
 #### Basic variable assignment
 
 ```js
-const foo = ['one', 'two', 'three'];
+const foo = ["one", "two", "three"];
 
 const [red, yellow, green] = foo;
 console.log(red); // "one"
@@ -200,13 +205,13 @@ console.log(green); // "three"
 In an array destructuring from an array of length _N_ specified on the right-hand side of the assignment, if the number of variables specified on the left-hand side of the assignment is greater than _N_, only the first _N_ variables are assigned values. The values of the remaining variables will be undefined.
 
 ```js
-const foo = ['one', 'two'];
+const foo = ["one", "two"];
 
 const [red, yellow, green, blue] = foo;
 console.log(red); // "one"
 console.log(yellow); // "two"
 console.log(green); // undefined
-console.log(blue);  //undefined
+console.log(blue); // undefined
 ```
 
 #### Swapping variables
@@ -264,7 +269,7 @@ console.log(c); // 1
 You can also ignore all returned values:
 
 ```js
-[,,] = f();
+[, ,] = f();
 ```
 
 #### Using a binding pattern as the rest property
@@ -318,7 +323,9 @@ function parseProtocol(url) {
   return protocol;
 }
 
-console.log(parseProtocol('https://developer.mozilla.org/en-US/docs/Web/JavaScript'));
+console.log(
+  parseProtocol("https://developer.mozilla.org/en-US/docs/Web/JavaScript"),
+);
 // "https"
 ```
 
@@ -327,7 +334,10 @@ console.log(parseProtocol('https://developer.mozilla.org/en-US/docs/Web/JavaScri
 Array destructuring calls the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) of the right-hand side. Therefore, any iterable, not necessarily arrays, can be destructured.
 
 ```js
-const [a, b] = new Map([[1, 2], [3, 4]]);
+const [a, b] = new Map([
+  [1, 2],
+  [3, 4],
+]);
 console.log(a, b); // [1, 2] [3, 4]
 ```
 
@@ -348,8 +358,8 @@ const obj = {
       console.log(v);
       yield v;
     }
-  }
-}
+  },
+};
 const [a, b] = obj; // Only logs 0 and 1
 ```
 
@@ -362,8 +372,8 @@ const obj = {
       console.log(v);
       yield v;
     }
-  }
-}
+  },
+};
 const [a, b, ...rest] = obj; // Logs 0 1 2 3
 console.log(rest); // [2, 3] (an array)
 ```
@@ -422,10 +432,10 @@ Consider this object, which contains information about a user.
 ```js
 const user = {
   id: 42,
-  displayName: 'jdoe',
+  displayName: "jdoe",
   fullName: {
-    firstName: 'Jane',
-    lastName: 'Doe',
+    firstName: "Jane",
+    lastName: "Doe",
   },
 };
 ```
@@ -460,7 +470,7 @@ function whois({ displayName, fullName: { firstName: name } }) {
   return `${displayName} is ${name}`;
 }
 
-console.log(whois(user));  // "jdoe is Jane"
+console.log(whois(user)); // "jdoe is Jane"
 ```
 
 #### Setting a function parameter's default value
@@ -470,7 +480,11 @@ Default values can be specified using `=`, and will be used as variable values i
 Below we show a function where the default size is `'big'`, default co-ordinates are `x: 0, y: 0` and default radius is 25.
 
 ```js
-function drawChart({ size = 'big', coords = { x: 0, y: 0 }, radius = 25 } = {}) {
+function drawChart({
+  size = "big",
+  coords = { x: 0, y: 0 },
+  radius = 25,
+} = {}) {
   console.log(size, coords, radius);
   // do some chart drawing
 }
@@ -491,17 +505,17 @@ For more information, see [Default parameters > Destructured parameter with defa
 
 ```js
 const metadata = {
-  title: 'Scratchpad',
+  title: "Scratchpad",
   translations: [
     {
-      locale: 'de',
+      locale: "de",
       localizationTags: [],
-      lastEdit: '2014-04-14T08:43:37',
-      url: '/de/docs/Tools/Scratchpad',
-      title: 'JavaScript-Umgebung',
+      lastEdit: "2014-04-14T08:43:37",
+      url: "/de/docs/Tools/Scratchpad",
+      title: "JavaScript-Umgebung",
     },
   ],
-  url: '/en-US/docs/Tools/Scratchpad',
+  url: "/en-US/docs/Tools/Scratchpad",
 };
 
 const {
@@ -514,7 +528,7 @@ const {
 } = metadata;
 
 console.log(englishTitle); // "Scratchpad"
-console.log(localeTitle);  // "JavaScript-Umgebung"
+console.log(localeTitle); // "JavaScript-Umgebung"
 ```
 
 #### For of iteration and destructuring
@@ -522,26 +536,29 @@ console.log(localeTitle);  // "JavaScript-Umgebung"
 ```js
 const people = [
   {
-    name: 'Mike Smith',
+    name: "Mike Smith",
     family: {
-      mother: 'Jane Smith',
-      father: 'Harry Smith',
-      sister: 'Samantha Smith',
+      mother: "Jane Smith",
+      father: "Harry Smith",
+      sister: "Samantha Smith",
     },
     age: 35,
   },
   {
-    name: 'Tom Jones',
+    name: "Tom Jones",
     family: {
-      mother: 'Norah Jones',
-      father: 'Richard Jones',
-      brother: 'Howard Jones',
+      mother: "Norah Jones",
+      father: "Richard Jones",
+      brother: "Howard Jones",
     },
     age: 25,
-  }
+  },
 ];
 
-for (const { name: n, family: { father: f } } of people) {
+for (const {
+  name: n,
+  family: { father: f },
+} of people) {
   console.log(`Name: ${n}, Father: ${f}`);
 }
 
@@ -554,8 +571,8 @@ for (const { name: n, family: { father: f } } of people) {
 Computed property names, like on [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names), can be used with destructuring.
 
 ```js
-const key = 'z';
-const { [key]: foo } = { z: 'bar' };
+const key = "z";
+const { [key]: foo } = { z: "bar" };
 
 console.log(foo); // "bar"
 ```
@@ -565,8 +582,8 @@ console.log(foo); // "bar"
 Destructuring can be used with property names that are not valid JavaScript {{glossary("Identifier", "identifiers")}} by providing an alternative identifier that is valid.
 
 ```js
-const foo = { 'fizz-buzz': true };
-const { 'fizz-buzz': fizzBuzz } = foo;
+const foo = { "fizz-buzz": true };
+const { "fizz-buzz": fizzBuzz } = foo;
 
 console.log(fizzBuzz); // true
 ```
@@ -599,12 +616,12 @@ Array and Object destructuring can be combined. Say you want the third element i
 
 ```js
 const props = [
-  { id: 1, name: 'Fizz'},
-  { id: 2, name: 'Buzz'},
-  { id: 3, name: 'FizzBuzz'}
+  { id: 1, name: "Fizz" },
+  { id: 2, name: "Buzz" },
+  { id: 3, name: "FizzBuzz" },
 ];
 
-const [,, { name }] = props;
+const [, , { name }] = props;
 
 console.log(name); // "FizzBuzz"
 ```
@@ -615,9 +632,9 @@ When deconstructing an object, if a property is not accessed in itself, it will 
 
 ```js
 const obj = {
-  self: '123',
+  self: "123",
   __proto__: {
-    prot: '456',
+    prot: "456",
   },
 };
 const { self, prot } = obj;

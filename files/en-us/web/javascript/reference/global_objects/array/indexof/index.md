@@ -43,7 +43,7 @@ The first index of the element in the array; **-1** if not found.
 
 ## Description
 
-The `indexOf()` method compares `searchElement` to elements of the array using [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (the same algorithm used by the `===` operator).
+The `indexOf()` method compares `searchElement` to elements of the array using [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (the same algorithm used by the `===` operator). [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) values are never compared as equal, so `indexOf()` always returns `-1` when `searchElement` is `NaN`.
 
 The `indexOf()` method skips empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
@@ -62,6 +62,13 @@ array.indexOf(7); // -1
 array.indexOf(9, 2); // 2
 array.indexOf(2, -1); // -1
 array.indexOf(2, -3); // 0
+```
+
+You cannot use `indexOf()` to search for `NaN`.
+
+```js
+const array = [NaN];
+array.indexOf(NaN); // -1
 ```
 
 ### Finding all the occurrences of an element
