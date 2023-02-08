@@ -143,8 +143,8 @@ True if and only if there is no domain name in the hostname (no dots).
 #### Examples
 
 ```js
-isPlainHostName("www.mozilla.org") // false
-isPlainHostName("www") // true
+isPlainHostName("www.mozilla.org"); // false
+isPlainHostName("www"); // true
 ```
 
 ### `dnsDomainIs()`

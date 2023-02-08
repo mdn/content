@@ -151,7 +151,7 @@ Here we have a {{HTMLElement("video")}} element whose {{htmlattrxref("autoplay",
 
 ```js
 const video = document.getElementById("video");
-video.addEventListener( "play", handleFirstPlay(event), false);
+video.addEventListener("play", handleFirstPlay(event), false);
 
 let hasPlayed = false;
 function handleFirstPlay(event) {
