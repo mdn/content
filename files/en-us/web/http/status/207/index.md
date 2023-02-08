@@ -1,5 +1,5 @@
 ---
-title: 207 Multi Status
+title: 207 Multi-Status
 slug: Web/HTTP/Status/207
 tags:
   - HTTP
