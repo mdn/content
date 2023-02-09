@@ -82,7 +82,7 @@ span {
 
 {{ EmbedLiveSample('Compositing_and_blending_in_action', "630", "300") }}
 
- Notice how the background, border, and the content are all impacted as a result of the blending. To see the code for this sample, [view the source on Github](https://github.com/mdn/content/blob/main/files/en-us/web/css/compositing_and_blending/index.md?plain=1).
+ Notice how the background, border, and the content are all impacted as a result of the blending. To see the code for this sample, [view the source on Github](https://github.com/mdn/css-examples/blob/main/modules/compositing.html).
 
 ## Reference
 
