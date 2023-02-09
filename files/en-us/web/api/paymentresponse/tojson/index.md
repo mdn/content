@@ -1,6 +1,6 @@
 ---
 title: PaymentResponse.toJSON()
-slug: Web/API/PaymentResponce/toJSON
+slug: Web/API/PaymentResponse/toJSON
 page-type: web-api-instance-method
 tags:
   - API
