@@ -58,6 +58,8 @@ To see the code for this basic user interface sample, [view the source on Github
 
 - [Using URL values for the `cursor` property](/en-US/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property)
   - : Explains how a URL can be used with the {{CSSxRef("cursor")}} property to produce custom cursors.
+- [Learn forms: advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
+  - : Explains how {{CSSxRef("appearance")}} can be used to style form controls.
 
 ## Related concepts
 
