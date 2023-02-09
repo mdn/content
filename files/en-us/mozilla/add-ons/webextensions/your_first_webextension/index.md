@@ -131,6 +131,7 @@ Now visit a page under "`mozilla.org`", and you should see the red border round 
 ![Border displayed on mozilla.org](border_on_mozilla_org.png)
 
 > **Note:** Don't try it on "`addons.mozilla.org`", though! Content scripts are currently blocked on that domain.
+> **Note:** Make sure the url matches the pattern `mozilla.org` because the page may be redirected due to language preference.
 
 Try experimenting a bit. Edit the content script to change the color of the border, or do something else to the page content. Save the content script, then reload the extension's files by clicking the Reload button in "`about:debugging`". You can see the changes right away.
 
