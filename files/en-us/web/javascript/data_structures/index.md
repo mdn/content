@@ -213,7 +213,7 @@ You could implement `Map`s and `Set`s yourself. However, since objects cannot be
 
 Usually, to bind data to a DOM node, one could set properties directly on the object, or use `data-*` attributes. This has the downside that the data is available to any script running in the same context. `Map`s and `WeakMap`s make it easy to _privately_ bind data to an object.
 
-`WeakMap` and `WeakSet` only allow object keys, and the keys are allowed to be garbage collected even when they remain in the collection. They are specifically used for [memory usage optimization](/en-US/docs/Web/JavaScript/Memory_Management#data_structures_aiding_memory_management).
+`WeakMap` and `WeakSet` only allow garbage-collectable values as keys, which are either objects or [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry), and the keys may be collected even when they remain in the collection. They are specifically used for [memory usage optimization](/en-US/docs/Web/JavaScript/Memory_Management#data_structures_aiding_memory_management).
 
 ### Structured data: JSON
 
