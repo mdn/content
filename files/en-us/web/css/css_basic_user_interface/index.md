@@ -54,8 +54,6 @@ To see the code for this basic user interface sample, [view the source on Github
 - {{CSSxRef("resize")}}
 - {{CSSxRef("user-select")}}
 
-Previously, the {{CSSxRef("box-sizing")}} and {{CSSxRef("text-overflow")}} CSS properties were part of the basic user interface module, but were moved to the [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) and [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) modules, respectively. The {{CSSxRef("ime-mode")}} property has been deprecated and should not be used. An `input-security` property is under consideration, but is the provenance of HTML.
-
 ## Guides
 
 - [Using URL values for the `cursor` property](/en-US/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property)
