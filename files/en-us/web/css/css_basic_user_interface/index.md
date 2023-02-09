@@ -100,10 +100,10 @@ To see the code for this basic user interface sample, [view the source on Github
 - {{CSSxRef("nav-left")}} {{Experimental_Inline}}
 - {{CSSxRef("nav-right")}} {{Experimental_Inline}}
 - {{CSSxRef("nav-up")}} {{Experimental_Inline}}
-- {{CSSxRef("outline-color")}}
-- {{CSSxRef("outline-style")}}
-- {{CSSxRef("outline-width")}}
-- {{CSSxRef("outline")}} shorthand
+- {{CSSxRef("outline")}}, shorthand for:
+  - {{CSSxRef("outline-color")}}
+  - {{CSSxRef("outline-style")}}
+  - {{CSSxRef("outline-width")}}
 - {{CSSxRef("outline-offset")}}
 - {{CSSxRef("pointer-events")}}
 - {{CSSxRef("resize")}}
