@@ -92,9 +92,10 @@ To see the code for this basic user interface sample, [view the source on Github
 
 - {{CSSxRef("accent-color")}}
 - {{CSSxRef("appearance")}}
-- {{CSSxRef("caret-color")}}
-- {{CSSxRef("caret-shape")}}
+
 - {{CSSxRef("caret")}} shorthand
+  - {{CSSxRef("caret-color")}}
+  - {{CSSxRef("caret-shape")}}
 - {{CSSxRef("cursor")}}
 - {{CSSxRef("nav-down")}} {{Experimental_Inline}}
 - {{CSSxRef("nav-left")}} {{Experimental_Inline}}
