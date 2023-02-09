@@ -28,7 +28,7 @@ The CSS {{CSSxRef("outline")}} and {{CSSxRef("outline-offset")}} properties were
 
 Some features harm usability. The {{CSSxRef("cursor")}} property was used to change cursors from the browser default which is confusing. The {{CSSxRef("resize")}} property prevents the second {{HTMLElement("textarea")}} from being resizable while the {{CSSxRef("pointer-events")}} property prevents the third `<textarea>` from receiving click events. It is still focusable using the keyboard.
 
-To see the code for this basic user interface sample, [view the source on Github](https://github.com/mdn/content/blob/main/files/en-us/web/css/CSS_Basic_User_Interface/index.md).
+To see the code for this basic user interface sample, [view the source on Github](https://github.com/mdn/css-examples/blob/main/modules/basicUI.html).
 
 ## Reference
 
