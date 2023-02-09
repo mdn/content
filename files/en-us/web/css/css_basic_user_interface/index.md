@@ -37,7 +37,7 @@ To see the code for this basic user interface sample, [view the source on Github
 - {{CSSxRef("accent-color")}}
 - {{CSSxRef("appearance")}}
 
-- {{CSSxRef("caret")}} shorthand
+- {{CSSxRef("caret")}}, shorthand for:
   - {{CSSxRef("caret-color")}}
   - {{CSSxRef("caret-shape")}}
 - {{CSSxRef("cursor")}}
