@@ -101,7 +101,7 @@ class Rectangle {
 }
 ```
 
-Alternatively, if your instance properties' values do not depend on the constructor's arguments, you can define them as [class fields](#public_field_declarations).
+Alternatively, if your instance properties' values do not depend on the constructor's arguments, you can define them as [class fields](#field_declarations).
 
 #### Static initialization blocks
 
@@ -187,7 +187,7 @@ class Rectangle {
 }
 ```
 
-Class fields are similar to object properties, not variables, so we don't use keywords such as `const` to declare them. In JavaScript, [private fields](#private_field_declarations) use a special identifier syntax, so modifier keywords like `public` and `private` should not be used either.
+Class fields are similar to object properties, not variables, so we don't use keywords such as `const` to declare them. In JavaScript, [private features](#private_class_features) use a special identifier syntax, so modifier keywords like `public` and `private` should not be used either.
 
 As seen above, the fields can be declared with or without a default value. Fields without default values default to `undefined`. By declaring fields up-front, class definitions become more self-documenting, and the fields are always present, which help with optimizations.
 

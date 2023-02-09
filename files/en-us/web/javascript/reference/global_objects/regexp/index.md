@@ -32,9 +32,9 @@ The following three expressions create the same regular expression object:
 ```js
 const re = /ab+c/i; // literal notation
 // OR
-const re = new RegExp('ab+c', 'i'); // constructor with string pattern as first argument
+const re = new RegExp("ab+c", "i"); // constructor with string pattern as first argument
 // OR
-const re = new RegExp(/ab+c/, 'i'); // constructor with regular expression literal as first argument
+const re = new RegExp(/ab+c/, "i"); // constructor with regular expression literal as first argument
 ```
 
 Before regular expressions can be used, they have to be compiled. This process allows them to perform matches more efficiently. More about the process can be found in [dotnet docs](https://docs.microsoft.com/dotnet/standard/base-types/compilation-and-reuse-in-regular-expressions).
@@ -54,7 +54,7 @@ For example, the following are equivalent:
 ```js
 const re = /\w+/;
 // OR
-const re = new RegExp('\\w+');
+const re = new RegExp("\\w+");
 ```
 
 ### Special handling for regexes
@@ -175,8 +175,8 @@ In the replacement text, the script uses `$1` and `$2` to indicate the results o
 
 ```js
 const re = /(\w+)\s(\w+)/;
-const str = 'Maria Cruz';
-const newstr = str.replace(re, '$2, $1');
+const str = "Maria Cruz";
+const newstr = str.replace(re, "$2, $1");
 console.log(newstr);
 ```
 
@@ -187,7 +187,7 @@ This displays `"Cruz, Maria"`.
 The default line ending varies depending on the platform (Unix, Windows, etc.). The line splitting provided in this example works on all platforms.
 
 ```js
-const text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end';
+const text = "Some text\nAnd some more\r\nAnd yet\rThis is the end";
 const lines = text.split(/\r\n|\r|\n/);
 console.log(lines); // [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
 ```
@@ -197,7 +197,7 @@ Note that the order of the patterns in the regular expression matters.
 ### Using regular expression on multiple lines
 
 ```js
-const s = 'Please yes\nmake my day!';
+const s = "Please yes\nmake my day!";
 
 s.match(/yes.*day/);
 // Returns null
@@ -211,14 +211,14 @@ s.match(/yes[^]*day/);
 The {{JSxRef("Global_Objects/RegExp/sticky", "sticky")}} flag indicates that the regular expression performs sticky matching in the target string by attempting to match starting at {{jsxref("RegExp.prototype.lastIndex")}}.
 
 ```js
-const str = '#foo#';
+const str = "#foo#";
 const regex = /foo/y;
 
 regex.lastIndex = 1;
-regex.test(str)      // true
+regex.test(str); // true
 regex.lastIndex = 5;
-regex.test(str)      // false (lastIndex is taken into account with sticky flag)
-regex.lastIndex      // 0 (reset after match failure)
+regex.test(str); // false (lastIndex is taken into account with sticky flag)
+regex.lastIndex; // 0 (reset after match failure)
 ```
 
 ### The difference between the sticky flag and the global flag
@@ -249,7 +249,7 @@ To match characters from other languages such as Cyrillic or Hebrew, use `\uhhhh
 This example demonstrates how one can separate out Unicode characters from a word.
 
 ```js
-const text = 'Образец text на русском языке';
+const text = "Образец text на русском языке";
 const regex = /[\u0400-\u04FF]+/g;
 
 const match = regex.exec(text);
@@ -277,10 +277,10 @@ console.log(/^https?:\/\/(.+?)\./.exec(url)[1]); // 'xxx'
 ### Building a regular expression from dynamic inputs
 
 ```js
-const breakfasts = ['bacon', 'eggs', 'oatmeal', 'toast', 'cereal'];
-const order = 'Let me get some bacon and eggs, please';
+const breakfasts = ["bacon", "eggs", "oatmeal", "toast", "cereal"];
+const order = "Let me get some bacon and eggs, please";
 
-order.match(new RegExp(`\\b(${breakfasts.join('|')})\\b`, 'g'));
+order.match(new RegExp(`\\b(${breakfasts.join("|")})\\b`, "g"));
 // Returns ['bacon', 'eggs']
 ```
 
@@ -298,13 +298,13 @@ Starting with Firefox 34, in the case of a capturing group with quantifiers prev
 
 ```js
 // Firefox 33 or older
-'x'.replace(/x(.)?/g, (m, group) => {
+"x".replace(/x(.)?/g, (m, group) => {
   console.log(`group: ${JSON.stringify(group)}`);
 });
 // group: ""
 
 // Firefox 34 or newer
-'x'.replace(/x(.)?/g, (m, group) => {
+"x".replace(/x(.)?/g, (m, group) => {
   console.log(`group: ${group}`);
 });
 // group: undefined
