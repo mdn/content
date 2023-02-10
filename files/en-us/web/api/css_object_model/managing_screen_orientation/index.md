@@ -164,11 +164,7 @@ Any web application can lock the screen to suits its own needs. The screen is lo
 The {{domxref("ScreenOrientation.lock()", "screen.orientation.lock()")}} method accepts one of the following values to define the kind of lock to apply: `any`, `natural`. `portrait-primary`, `portrait-secondary`, `landscape-primary`, `landscape-secondary`, `portrait`, and `landscape`:
 
 ```js
-{
-  {
-    domxref("ScreenOrientation.lock()", "screen.orientation.lock()");
-  }
-}
+screen.orientation.lock();
 ```
 
 It returns a [promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves after the lock succeeds.
