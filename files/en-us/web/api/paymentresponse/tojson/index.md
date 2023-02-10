@@ -32,7 +32,7 @@ A {{jsxref("JSON")}} object that is the serialization of the {{domxref("PaymentR
 
 ### Using the toJSON method
 
-In this example, calling `entry.toJSON()` returns a JSON representation of the `PerformanceEventTiming` object.
+In this example, calling `paymentResponse.toJSON()` returns a JSON representation of the `PaymentResponse` object.
 
 ```js
 payment.show().then((paymentResponse) => {
