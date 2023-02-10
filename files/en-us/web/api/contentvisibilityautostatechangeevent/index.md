@@ -36,9 +36,9 @@ _Inherits properties from its parent, {{DOMxRef("Event")}}._
 ## Examples
 
 ```js
-const canvasElem = document.querySelector('canvas');
+const canvasElem = document.querySelector("canvas");
 
-canvasElem.addEventListener('contentvisibilityautostatechange', stateChanged);
+canvasElem.addEventListener("contentvisibilityautostatechange", stateChanged);
 canvasElem.style.contentVisibility = "auto";
 
 function stateChanged(event) {
