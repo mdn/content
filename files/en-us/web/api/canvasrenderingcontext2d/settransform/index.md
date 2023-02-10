@@ -113,7 +113,10 @@ type), and draw a circle on it.
 #### HTML
 
 ```html
-<canvas width="240"></canvas> <canvas width="240"></canvas>
+<!-- First canvas (ctx1) -->
+<canvas width="240"></canvas>
+<!-- Second canvas (ctx2) -->
+<canvas width="240"></canvas>
 ```
 
 #### CSS
