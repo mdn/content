@@ -76,7 +76,7 @@ const p = new Proxy(
       console.log("called");
       return ["a", "b", "c"];
     },
-  }
+  },
 );
 
 console.log(Object.getOwnPropertyNames(p));
