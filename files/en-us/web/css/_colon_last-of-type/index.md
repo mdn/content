@@ -81,7 +81,7 @@ article :last-of-type {
 
 ### Multiple selectors elements
 
-This is a bit complicated example of nested elements with type selectors and class selectors.
+This HTML example contains nested elements of different types. The CSS contains both type selectors and class selectors.
 
 #### HTML
 
