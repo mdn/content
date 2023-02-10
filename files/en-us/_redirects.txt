@@ -7804,6 +7804,10 @@
 /en-US/docs/Web/API/ConstrainULong	/en-US/docs/Web/API/MediaTrackConstraints
 /en-US/docs/Web/API/Constraint_validation	/en-US/docs/Learn/Forms/Form_validation
 /en-US/docs/Web/API/Constraint_validation/invalid_event	/en-US/docs/Web/API/HTMLInputElement/invalid_event
+/en-US/docs/Web/API/ContentVisibilityAutoStateChangeEvent/ContentVisibilityAutoStateChangedEvent	/en-US/docs/Web/API/ContentVisibilityAutoStateChangeEvent/ContentVisibilityAutoStateChangeEvent
+/en-US/docs/Web/API/ContentVisibilityAutoStateChangedEvent	/en-US/docs/Web/API/ContentVisibilityAutoStateChangeEvent
+/en-US/docs/Web/API/ContentVisibilityAutoStateChangedEvent/ContentVisibilityAutoStateChangedEvent	/en-US/docs/Web/API/ContentVisibilityAutoStateChangeEvent/ContentVisibilityAutoStateChangeEvent
+/en-US/docs/Web/API/ContentVisibilityAutoStateChangedEvent/skipped	/en-US/docs/Web/API/ContentVisibilityAutoStateChangeEvent/skipped
 /en-US/docs/Web/API/ConvolverNode.buffer	/en-US/docs/Web/API/ConvolverNode/buffer
 /en-US/docs/Web/API/ConvolverNode.normalize	/en-US/docs/Web/API/ConvolverNode/normalize
 /en-US/docs/Web/API/CookieStore/onchange	/en-US/docs/Web/API/CookieStore/change_event
@@ -8079,6 +8083,7 @@
 /en-US/docs/Web/API/Element/accessKey	/en-US/docs/Web/API/HTMLElement/accessKey
 /en-US/docs/Web/API/Element/attachInternals	/en-US/docs/Web/API/HTMLElement/attachInternals
 /en-US/docs/Web/API/Element/cancel_event	/en-US/docs/Web/API/HTMLDialogElement/cancel_event
+/en-US/docs/Web/API/Element/contentvisibilityautostatechanged_event	/en-US/docs/Web/API/Element/contentvisibilityautostatechange_event
 /en-US/docs/Web/API/Element/createShadowRoot	/en-US/docs/Web/API/Element/shadowRoot
 /en-US/docs/Web/API/Element/fullscreenchange	/en-US/docs/Web/API/Element/fullscreenchange_event
 /en-US/docs/Web/API/Element/mozRequestFullScreen	/en-US/docs/Web/API/Element/requestFullScreen
