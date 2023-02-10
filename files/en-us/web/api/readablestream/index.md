@@ -46,6 +46,42 @@ The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_
 - {{domxref("ReadableStream.tee()")}}
   - : The `tee` method [tees](https://streams.spec.whatwg.org/#tee-a-readable-stream) this readable stream, returning a two-element array containing the two resulting branches as new {{domxref("ReadableStream")}} instances. Each of those streams receives the same incoming data.
 
+## Async Iteration
+
+`ReadableStream` supports asynchronous iteration over the chunks in a stream using the [for await...of](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) syntax:
+
+```js
+const stream = new ReadableStream(getSomeSource());
+
+for await (const chunk of stream) {
+  // Do something with each 'chunk'
+}
+```
+
+The async iterator consumes the stream until it runs out of data or otherwise terminates.
+The loop can also exit early due to a `break`, `throw`, or `return`.
+
+While iterating, the stream is locked to prevent other consumers from acquiring a reader (attempting to iterate over a stream that is already locked will throw a `TypeError`).
+This lock is released when the iterator exits the loop.
+
+By default, exiting the loop will also cancel the stream, so that it can no longer be used.
+To continue to use a stream after exiting the loop, pass `{ preventCancel: true }` to the stream's `values()` method:
+
+```js
+for await (const chunk of stream.values({ preventCancel: true })) {
+  // Do something with 'chunk'
+  return;
+}
+// Acquire a reader for the stream and continue reading ...
+```
+
+Notes:
+
+- `ReadableStream` implements the [async iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols).
+- You can abort processing of a stream prematurely triggering code to call `throw` or `break` in the loop.
+  Note however that as each iteration is only run when the next chunk arrives, there can be a delay between signalling that you want to cancel, and the code getting to run.
+  The fastest way to terminate the stream may be to abort the "underlying source" of the stream.
+
 ## Examples
 
 ### Fetch stream
@@ -55,7 +91,7 @@ In the following example, an artificial {{domxref("Response")}} is created to st
 It demonstrates the usage of a {{domxref("ReadableStream")}} in combination with a {{jsxref("Uint8Array")}}.
 
 ```js
-fetch('https://www.example.org')
+fetch("https://www.example.org")
   .then((response) => response.body)
   .then((rb) => {
     const reader = rb.getReader();
@@ -68,7 +104,7 @@ fetch('https://www.example.org')
           reader.read().then(({ done, value }) => {
             // If there is no more data to read
             if (done) {
-              console.log('done', done);
+              console.log("done", done);
               controller.close();
               return;
             }
@@ -86,7 +122,7 @@ fetch('https://www.example.org')
   })
   .then((stream) =>
     // Respond with our stream
-    new Response(stream, { headers: { 'Content-Type': 'text/html' } }).text()
+    new Response(stream, { headers: { "Content-Type": "text/html" } }).text()
   )
   .then((result) => {
     // Do things with result
@@ -94,7 +130,7 @@ fetch('https://www.example.org')
   });
 ```
 
-### Async iterator to stream
+### Convert async iterator to stream
 
 Converting an [(async) iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) to a readable stream:
 
@@ -115,6 +151,25 @@ function iteratorToStream(iterator) {
 ```
 
 This works with both async and non-async iterators.
+
+### Async iteration of stream (for-wait-of)
+
+This example shows how you can process the `fetch()` response using a [for await...of](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) loop to iterate through the arriving chunks.
+
+```js
+const response = await fetch("https://www.example.org");
+let total = 0;
+
+// Iterate response.body (a ReadableStream) asynchronously 
+for await (const chunk of response.body) {
+  // Do something with each chunk
+  // Here we just accumulate the size of the response.
+  total += chunk.length;
+}
+
+// Do something with the total
+console.log(total);
+```
 
 ## Specifications
 
