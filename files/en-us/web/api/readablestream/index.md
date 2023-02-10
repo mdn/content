@@ -48,7 +48,8 @@ The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_
 
 ## Async Iteration
 
-`ReadableStream` supports asynchronous iteration over the chunks in a stream using the [for await...of](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) syntax:
+`ReadableStream` implements the [async iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols).
+This enables asynchronous iteration over the chunks in a stream using the [for await...of](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) syntax:
 
 ```js
 const stream = new ReadableStream(getSomeSource());
@@ -77,7 +78,6 @@ for await (const chunk of stream.values({ preventCancel: true })) {
 
 Notes:
 
-- `ReadableStream` implements the [async iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols).
 - You can abort processing of a stream prematurely triggering code to call `throw` or `break` in the loop.
   Note however that as each iteration is only run when the next chunk arrives, there can be a delay between signalling that you want to cancel, and the code getting to run.
   The fastest way to terminate the stream may be to abort the "underlying source" of the stream.
