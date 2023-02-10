@@ -55,21 +55,21 @@ top-left corner of the canvas, and not a location relative to any shape.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Point of transform origin
 ctx.arc(0, 0, 5, 0, 2 * Math.PI);
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fill();
 
 // Non-rotated rectangle
-ctx.fillStyle = 'gray';
+ctx.fillStyle = "gray";
 ctx.fillRect(100, 0, 80, 20);
 
 // Rotated rectangle
-ctx.rotate(45 * Math.PI / 180);
-ctx.fillStyle = 'red';
+ctx.rotate((45 * Math.PI) / 180);
+ctx.fillStyle = "red";
 ctx.fillRect(100, 0, 80, 20);
 
 // Reset transformation matrix to the identity matrix
@@ -107,11 +107,11 @@ Its horizontal center is at (80 + 140 / 2), or 150. Its vertical center is at (6
 2\), or 75. Thus, the center point is at (150, 75).
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Non-rotated rectangle
-ctx.fillStyle = 'gray';
+ctx.fillStyle = "gray";
 ctx.fillRect(80, 60, 140, 30);
 
 // Matrix transformation
@@ -120,7 +120,7 @@ ctx.rotate(Math.PI / 2);
 ctx.translate(-150, -75);
 
 // Rotated rectangle
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 ctx.fillRect(80, 60, 140, 30);
 ```
 

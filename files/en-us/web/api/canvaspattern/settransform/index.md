@@ -54,17 +54,17 @@ method, for example.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-const svg1 = document.getElementById('svg1');
+const svg1 = document.getElementById("svg1");
 const matrix = svg1.createSVGMatrix();
 
 const img = new Image();
-img.src = 'canvas_createpattern.png';
+img.src = "canvas_createpattern.png";
 
 img.onload = () => {
-  const pattern = ctx.createPattern(img, 'repeat');
+  const pattern = ctx.createPattern(img, "repeat");
   pattern.setTransform(matrix.rotate(-45).scale(1.5));
   ctx.fillStyle = pattern;
   ctx.fillRect(0, 0, 400, 400);
@@ -76,7 +76,7 @@ input to `setTransform()`, so for example you could replace the
 `SVGMatrix` in the above example with the following:
 
 ```js
-const matrix = new DOMMatrix([1, .2, .8, 1, 0, 0]);
+const matrix = new DOMMatrix([1, 0.2, 0.8, 1, 0, 0]);
 ```
 
 #### Editable demo
@@ -103,14 +103,14 @@ img.onload = () => {
 ```
 
 ```js hidden
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const edit = document.getElementById('edit');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const edit = document.getElementById("edit");
 const code = textarea.value;
 
-const svg1 = document.getElementById('svg1');
+const svg1 = document.getElementById("svg1");
 const matrix = svg1.createSVGMatrix();
 
 function drawCanvas() {
@@ -118,17 +118,17 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener('click', () => {
+edit.addEventListener("click", () => {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', drawCanvas);
-window.addEventListener('load', drawCanvas);
+textarea.addEventListener("input", drawCanvas);
+window.addEventListener("load", drawCanvas);
 ```
 
 {{ EmbedLiveSample('Editable_demo', 700, 400) }}

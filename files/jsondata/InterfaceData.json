@@ -412,7 +412,7 @@
       "inh": "ExtendableEvent",
       "impl": []
     },
-    "ContentVisibilityAutoStateChangedEvent": {
+    "ContentVisibilityAutoStateChangeEvent": {
       "inh": "Event",
       "impl": []
     },
@@ -937,10 +937,6 @@
       "impl": []
     },
     "EXT_blend_minmax": {
-      "inh": "",
-      "impl": []
-    },
-    "EXT_clip_cull_distance": {
       "inh": "",
       "impl": []
     },
@@ -3440,6 +3436,10 @@
       "inh": "",
       "impl": []
     },
+    "ToggleEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "Touch": {
       "inh": "",
       "impl": []
@@ -3652,6 +3652,10 @@
       "inh": "",
       "impl": []
     },
+    "WEBGL_clip_cull_distance": {
+      "inh": "",
+      "impl": []
+    },
     "WEBGL_color_buffer_float": {
       "inh": "",
       "impl": []
@@ -3709,6 +3713,10 @@
       "impl": []
     },
     "WEBGL_multi_draw_instanced_base_vertex_base_instance": {
+      "inh": "",
+      "impl": []
+    },
+    "WEBGL_provoking_vertex": {
       "inh": "",
       "impl": []
     },
