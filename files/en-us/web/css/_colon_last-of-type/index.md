@@ -106,6 +106,7 @@ p:last-of-type {
 
 .container .item:last-of-type {
   color: red;
+  font-weight: bold;
 }
 ```
 
