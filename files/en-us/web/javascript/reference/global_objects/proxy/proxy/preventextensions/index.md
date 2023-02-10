@@ -70,7 +70,7 @@ const p = new Proxy(
       Object.preventExtensions(target);
       return true;
     },
-  }
+  },
 );
 
 console.log(Object.preventExtensions(p));
@@ -87,7 +87,7 @@ const p = new Proxy(
     preventExtensions(target) {
       return true;
     },
-  }
+  },
 );
 
 Object.preventExtensions(p); // TypeError is thrown

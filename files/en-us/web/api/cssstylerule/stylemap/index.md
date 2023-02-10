@@ -31,10 +31,10 @@ the {{domxref('StylePropertyMap.set()')}} method.
 const stylesheet = document.styleSheets[0];
 
 Object.values(stylesheet.cssRules).forEach((block) => {
-  if (block.selectorText === 'button') {
-    block.styleMap.set('--mainColor', 'black');
+  if (block.selectorText === "button") {
+    block.styleMap.set("--mainColor", "black");
   }
-})
+});
 ```
 
 ## Specifications

@@ -64,7 +64,7 @@ const circle = new Circle();
 shape.__proto__ = circle;
 
 // Get the object prototype
-console.log(shape.__proto__ === Circle);  // false
+console.log(shape.__proto__ === Circle); // false
 ```
 
 ```js
