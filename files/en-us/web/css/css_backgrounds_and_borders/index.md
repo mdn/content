@@ -27,7 +27,9 @@ This sample of borders, backgrounds, and box shadows consists of centered backgr
 
 {{EmbedGHLiveSample("css-examples/modules/backgrounds.html", '100%', 430)}}
 
-The background images are defined with {{cssxref("background-image")}}. The images are centered with {{cssxref("background-position")}}. Different values of the {{cssxref("background-clip")}} property for the multiple background images are used to make the background images stay within the content box. The background color gets clipped to the padding box preventing the background from appearing through the transparent sections for the {{cssxref("border-image")}} and the {{cssxref("border-style", "dotted")}} {{cssxref("border")}}. The rounded corners in the element on the right are created using the {{cssxref("border-radius")}} property. A single {{cssxref("box-shadow")}} declaration is used to set all the shadows, both inset and outset. To see the code for this sample, [view the source on Github](https://github.com/mdn/css-examples/blob/main/modules/backgrounds.html).
+The background images are defined with {{cssxref("background-image")}}. The images are centered with {{cssxref("background-position")}}. Different values of the {{cssxref("background-clip")}} property for the multiple background images are used to make the background images stay within the content box. The background color gets clipped to the padding box preventing the background from appearing through the transparent sections for the {{cssxref("border-image")}} and the {{cssxref("border-style", "dotted")}} {{cssxref("border")}}. The rounded corners in the element on the right are created using the {{cssxref("border-radius")}} property. A single {{cssxref("box-shadow")}} declaration is used to set all the shadows, both inset and outset. 
+
+To see the code for this sample, [view the source on Github](https://github.com/mdn/css-examples/blob/main/modules/backgrounds.html).
 
 ## Reference
 
