@@ -41,7 +41,7 @@ payment.show().then((paymentResponse) => {
 });
 ```
 
-To get a JSON string, you can use [`JSON.stringify(entry)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) directly; it will call `toJSON()` automatically.
+To get a JSON string, you can use [`JSON.stringify(paymentResponse)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) directly; it will call `toJSON()` automatically.
 
 ## Specifications
 
