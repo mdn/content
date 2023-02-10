@@ -37,30 +37,36 @@ Values of this type are objects. They contain these properties:
 - `operation`
   - : A `string`. The operation to be performed on a header. Possible values are `"append"`, `"set"`, and `"remove"`.
 
-      In Chrome, `"append"` is supported for the following request headers:
-    - `Accept`
-    - `Accept-Encoding`
-    - `Accept-Language`
-    - `Access-Control-Request-Headers`
-    - `Cache-Control`
-    - `Connection`
-    - `Content-Language`
-    - `Cookie`
-    - `Forwarded`
-    - `If-Match`
-    - `If-None-Match`
-    - `Keep-Alive`
-    - `Range`
-    - `Te`
-    - `Trailer`
-    - `Transfer-Encoding`
-    - `Upgrade`
-    - `Via`
-    - `Want-Digest`
-    - `X-Forwarded-For`
-      In Firefox, the extension needs host permissions for the new value of the `Host` header.
 - `value` {{optional_inline}}
   - : A `string`. The new value for the header. Must be specified for append and set operations. Not allowed for the "remove" operation.
+  
+## Header limits
+
+In Chrome, `"append"` is supported for the following request headers:
+
+ - `Accept`
+ - `Accept-Encoding`
+ - `Accept-Language`
+ - `Access-Control-Request-Headers`
+ - `Cache-Control`
+ - `Connection`
+ - `Content-Language`
+ - `Cookie`
+ - `Forwarded`
+ - `If-Match`
+ - `If-None-Match`
+ - `Keep-Alive`
+ - `Range`
+ - `Te`
+ - `Trailer`
+ - `Transfer-Encoding`
+ - `Upgrade`
+ - `Via`
+ - `Want-Digest`
+ - `X-Forwarded-For`
+
+In Firefox, the extension needs host permissions for the new value of the `Host` header.
+
 
 ## Browser compatibility
 

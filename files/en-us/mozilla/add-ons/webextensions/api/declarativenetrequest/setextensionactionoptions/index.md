@@ -31,7 +31,7 @@ let count = browser.declarativeNetRequest.setExtensionActionOptions();
     - `displayActionCountAsBadgeText` {{optional_inline}}
       - : `boolean` Whether to automatically display the action count for a page as the extension's badge text. This preference persists across sessions.
     - `tabUpdate` {{optional_inline}}
-      - : `object`. Details of how the tab's action count should be adjusted. See the [tabUpdate](#tabUpdate_2) section for more details.
+      - : `object`. Details of how the tab's action count should be adjusted. See the [tabUpdate](#tabupdate_2) section for more details.
 
 ## Additional objects
 

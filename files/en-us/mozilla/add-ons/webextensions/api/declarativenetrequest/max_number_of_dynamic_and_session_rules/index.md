@@ -18,6 +18,10 @@ browser-compat: webextensions.api.declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AN
 
 The maximum number of combined dynamic and session scoped rules an extension can add.
 
+In Chrome, this limit is enforced for the combination of dynamic and session scoped rules.
+
+In Firefox, each ruleset has its own quota.
+
 Its value is `5000`.
 
 {{WebExtExamples}}

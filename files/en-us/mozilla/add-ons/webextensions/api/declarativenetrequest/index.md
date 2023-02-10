@@ -28,14 +28,14 @@ The `"declarativeNetRequestFeedback"` permission is required to use {{WebExtAPIR
 
 The declarative rules are defined by four fields:
 
-- `id` – An ID that uniquely identifies a rule. Mandatory and should be >= 1.
+- `id` – An ID that uniquely identifies a rule within a ruleset. Mandatory and should be >= 1.
 - `priority` – The rule priority. When specified, it should be >= 1. Defaults to 1. See [Matching precedents](#matching_precedents) for details on how priority affects which rules are applied.
-- `condition` – The condition under which this rule is triggered.
-- `action` – The action to take when the rule is matched. Rules can do one of these things:
+- `condition` – The {{WebExtAPIRef("declarativeNetRequest.RuleCondition","condition")}} under which this rule is triggered.
+- `action` – The {{WebExtAPIRef("declarativeNetRequest.RuleAction","action")}} to take when the rule is matched. Rules can do one of these things:
   - block a network request.
-  - prevent a request from getting blocked by negating any matching blocked rules.
   - redirect a network request.
   - modify headers from a network request.
+  - prevent another matching rule from being applied.
 
 This is an example rule that blocks all script requests originating from `"foo.com"` to any URL with `"abc"` as a substring:
 
