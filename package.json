@@ -4,7 +4,7 @@
   "private": true,
   "license": "SEE LICENSE IN LICENSE.md",
   "engines": {
-    "node": "^16.0.0 || >=18.0.0"
+    "node": ">=18.0.0"
   },
   "type": "module",
   "scripts": {
