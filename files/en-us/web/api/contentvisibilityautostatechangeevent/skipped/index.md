@@ -1,10 +1,10 @@
 ---
-title: ContentVisibilityAutoStateChangedEvent.skipped
-slug: Web/API/ContentVisibilityAutoStateChangedEvent/skipped
+title: ContentVisibilityAutoStateChangeEvent.skipped
+slug: Web/API/ContentVisibilityAutoStateChangeEvent/skipped
 page-type: web-api-instance-property
 tags:
   - API
-  - ContentVisibilityAutoStateChangedEvent
+  - ContentVisibilityAutoStateChangeEvent
   - content-visibility
   - CSS
   - CSS Containment
@@ -16,12 +16,12 @@ tags:
   - Style
   - Web
   - Experimental
-browser-compat: api.ContentVisibilityAutoStateChangedEvent.skipped
+browser-compat: api.ContentVisibilityAutoStateChangeEvent.skipped
 ---
 
 {{APIRef("CSS Containment")}}{{SeeCompatTable}}
 
-The `skipped` read-only property of the {{ domxref("ContentVisibilityAutoStateChangedEvent") }} interface returns `true` if the user agent [skips the element's contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents), or `false` otherwise.
+The `skipped` read-only property of the {{ domxref("ContentVisibilityAutoStateChangeEvent") }} interface returns `true` if the user agent [skips the element's contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents), or `false` otherwise.
 
 ## Value
 
@@ -32,7 +32,7 @@ A boolean. Returns `true` if the user agent skips the element's contents, or `fa
 ```js
 const canvasElem = document.querySelector('canvas');
 
-canvasElem.addEventListener('contentvisibilityautostatechanged', stateChanged);
+canvasElem.addEventListener('contentvisibilityautostatechange', stateChanged);
 canvasElem.style.contentVisibility = "auto";
 
 function stateChanged(event) {
@@ -64,7 +64,7 @@ function stopCanvasUpdates(canvas) {
 
 ## See also
 
-- The {{domxref("element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event
+- The {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event
 - [CSS Containment](/en-US/docs/Web/CSS/CSS_Containment)
 - The {{cssxref("content-visibility")}} property
 - The {{cssxref("contain")}} property
