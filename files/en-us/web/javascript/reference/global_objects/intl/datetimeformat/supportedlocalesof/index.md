@@ -71,9 +71,11 @@ that Indonesian is an adequate match for Balinese since most Balinese speakers a
 understand Indonesian, and therefore return the Balinese language tag as well.
 
 ```js
-const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-const options = { localeMatcher: 'lookup' };
-console.log(Intl.DateTimeFormat.supportedLocalesOf(locales, options).join(', '));
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
+console.log(
+  Intl.DateTimeFormat.supportedLocalesOf(locales, options).join(", "),
+);
 // "id-u-co-pinyin, de-ID"
 ```
 
