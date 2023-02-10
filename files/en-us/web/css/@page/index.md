@@ -284,13 +284,20 @@ The page-margin properties are the set of CSS properties can be set in any indiv
 |                       | max-width             |
 | z-index               | z-index               |
 
+## Named pages
+
+It is possibly to create named pages that can then be applied using the `page` property. This allows the user to create different page print layouts, that can be applied to different sections of a document.
+
 ## Examples
 
-The example below prints out 5 different sections in `landscape` size, and adds a 20% margin to each of them in the print-out.
+### Using the size property to change the page orientation
 
-HTML:
+This example show how you can split the `section`s into individual pages in `landscape` format and each page has a 20% margin when printed.
+
+#### HTML
 
 ```html
+<button>Print Webpage</button>
 <article>
   <section>
     <h2>Header</h2>
@@ -338,11 +345,9 @@ HTML:
     </p>
   </section>
 </article>
-
-<button>Print Webpage</button>
 ```
 
-CSS:
+#### CSS
 
 ```css
 @page {
@@ -377,9 +382,15 @@ section {
   page-break-after: always;
   break-after: page;
 }
+
+@media print {
+  button {
+    display: none;
+  }
+}
 ```
 
-JavaScript:
+#### JavaScript
 
 ```js
 const button = document.querySelector("button");
@@ -389,8 +400,10 @@ button.addEventListener("click", () => {
 });
 ```
 
+#### Result
+
 Print out the page below to see the output of this example:
-{{ EmbedLiveSample('Examples', '100%', 520) }}
+{{ EmbedLiveSample('Using the size property to change the page orientation', '100%', 520) }}
 
 ### @page pseudo-class examples
 
