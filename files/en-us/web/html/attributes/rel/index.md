@@ -88,7 +88,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
     - Otherwise, it creates a hyperlink referencing an alternate representation of the current document, whose nature is given by the [`hreflang`](/en-US/docs/Web/HTML/Element/link#attr-hreflang) and [`type`](/en-US/docs/Web/HTML/Element/link#attr-type) attributes.
 
       - If `hreflang` is given alongside `alternate`, and the value of `hreflang` is different from the current document's language, it indicates that the referenced document is a translation.
-      - If `type` is given alongside `alternate`, if indicates that the referenced document is an alternative format (such as a PDF).
+      - If `type` is given alongside `alternate`, it indicates that the referenced document is an alternative format (such as a PDF).
       - The `hreflang` and `type` attributes may both be given alongside `alternate`.
 
       ```html
