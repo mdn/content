@@ -48,7 +48,7 @@ that the transition is created for, which is `width`.
 
 ```js
 const item = document.querySelector(".box");
-item.addEventListener('transitionrun', () => {
+item.addEventListener("transitionrun", () => {
   let animations = document.querySelector(".box").getAnimations();
   console.log(animations[0].propertyName);
 });

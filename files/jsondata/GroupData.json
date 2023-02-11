@@ -158,10 +158,10 @@
       "events": ["ServiceWorkerGlobalScope: contentdelete"]
     },
     "CSS Containment": {
-      "interfaces": ["ContentVisibilityAutoStateChangedEvent"],
+      "interfaces": ["ContentVisibilityAutoStateChangeEvent"],
       "methods": [],
       "properties": [],
-      "events": ["Element: contentvisibilityautostatechanged"]
+      "events": ["Element: contentvisibilityautostatechange"]
     },
     "CSS Custom Highlight API": {
       "overview": ["CSS Custom Highlight API"],

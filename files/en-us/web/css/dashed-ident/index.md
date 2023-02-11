@@ -40,15 +40,18 @@ html {
   --tertiary-color: green;
 }
 
-h1, h4 {
+h1,
+h4 {
   color: var(--primary-color);
 }
 
-h2, h5 {
+h2,
+h5 {
   color: var(--secondary-color);
 }
 
-h3, h6 {
+h3,
+h6 {
   color: var(--tertiary-color);
 }
 ```
@@ -78,7 +81,10 @@ When `<dashed-ident>` is used with the [@font-palette-values](/en-US/docs/Web/CS
   override-colors: 0 #ff0000;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-palette: --my-palette;
 }
 ```
