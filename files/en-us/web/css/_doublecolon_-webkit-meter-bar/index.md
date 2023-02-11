@@ -1,9 +1,9 @@
 ---
-title: '::-webkit-meter-bar'
+title: "::-webkit-meter-bar"
 slug: Web/CSS/::-webkit-meter-bar
 page-type: css-pseudo-element
 tags:
-  - '-webkit-meter-bar'
+  - "-webkit-meter-bar"
   - CSS
   - Non-standard
   - Pseudo-element
@@ -20,7 +20,9 @@ The **`::-webkit-meter-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US
 ## Syntax
 
 ```css
-::-webkit-meter-bar
+::-webkit-meter-bar {
+  /* ... */
+}
 ```
 
 ## Specifications

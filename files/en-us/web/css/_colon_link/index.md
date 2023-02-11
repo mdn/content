@@ -24,8 +24,10 @@ Styles defined by the `:link` and [`:visited`](/en-US/docs/Web/CSS/:visited) pse
 
 ## Syntax
 
-```
-:link
+```css
+:link {
+  /* ... */
+}
 ```
 
 ## Examples

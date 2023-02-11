@@ -1,5 +1,5 @@
 ---
-title: '::-moz-page-sequence'
+title: "::-moz-page-sequence"
 slug: Web/CSS/::-moz-page-sequence
 page-type: css-pseudo-element
 tags:
@@ -20,7 +20,9 @@ The **`::-moz-page-sequence`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-U
 ## Syntax
 
 ```css
-::-moz-page-sequence
+::-moz-page-sequence {
+  /* ... */
+}
 ```
 
 ## Specifications

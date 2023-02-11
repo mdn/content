@@ -190,4 +190,4 @@ To be precise, when an element skips its contents:
 ## See also
 
 - [An Introduction to CSS Containment](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/)
-- The {{domxref("element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event
+- The {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event

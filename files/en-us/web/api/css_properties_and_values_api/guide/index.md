@@ -26,10 +26,10 @@ The following will register a {{cssxref('--*', 'CSS custom properties')}}, `--my
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-prop',
-  syntax: '<color>',
+  name: "--my-prop",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 
@@ -95,10 +95,10 @@ button {
 
 ```js
 window.CSS.registerProperty({
-  name: '--registered',
-  syntax: '<color>',
+  name: "--registered",
+  syntax: "<color>",
   inherits: false,
-  initialValue: 'red',
+  initialValue: "red",
 });
 ```
 
