@@ -13,9 +13,9 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.1
 > **Note:** The ability to return a _collection of resources_ is part of the {{Glossary("WebDAV")}} protocol (it may be received by web applications accessing a WebDAV server).
 > Browsers accessing web pages will never encounter this status code.
 
-The HTTP **`207 Multi-Status`** response code indicates that there might be mixture of responses.
+The HTTP **`207 Multi-Status`** response code indicates that there might be a mixture of responses.
 
-If not all have the same status the response get this `207 Multi-Status` code while the XML in the content of the response will list all individual response code.
+The response body is a `text/xml` or `application/xml` HTTP entity with a `multistatus` root element. The XML body will list all individual response codes.
 
 ## Status
 
