@@ -5,7 +5,6 @@ build/
 
 # A full pass on all Markdown files is being performed, the following folders
 # still need a full pass:
-/files/en-us/games/**/*.md
 /files/en-us/learn/**/*.md
 /files/en-us/mozilla/**/*.md
 /files/en-us/web/accessibility/**/*.md
