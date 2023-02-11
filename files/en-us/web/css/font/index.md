@@ -439,12 +439,14 @@ input {
 const textAreas = document.getElementsByClassName("curCss");
 
 function getProperties() {
-  return `${getCheckedValue("font_style")} `
-    + `${getCheckedValue("font_variant")} `
-    + `${getCheckedValue("font_weight")} `
-    + `${getCheckedValue("font_size")}`
-    + `${getCheckedValue("line_height")} `
-    + `${getCheckedValue("font_family")}`;
+  return (
+    `${getCheckedValue("font_style")} ` +
+    `${getCheckedValue("font_variant")} ` +
+    `${getCheckedValue("font_weight")} ` +
+    `${getCheckedValue("font_size")}` +
+    `${getCheckedValue("line_height")} ` +
+    `${getCheckedValue("font_family")}`
+  );
 }
 
 function getCheckedValue(radioName) {

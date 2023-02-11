@@ -1,5 +1,5 @@
 ---
-title: '::-moz-scrolled-page-sequence'
+title: "::-moz-scrolled-page-sequence"
 slug: Web/CSS/::-moz-scrolled-page-sequence
 page-type: css-pseudo-element
 tags:
@@ -20,8 +20,10 @@ The **`::-moz-scrolled-page-sequence`** [CSS](/en-US/docs/Web/CSS) [pseudo-eleme
 
 ## Syntax
 
-```
-::-moz-scrolled-page-sequence
+```css
+::-moz-scrolled-page-sequence {
+  /* ... */
+}
 ```
 
 ## Specifications
