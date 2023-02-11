@@ -115,6 +115,7 @@ p:last-of-type {
 {{EmbedLiveSample('Multiple_selectors_elements', 500)}}
 
 The last `<div>` and the last `<p>` are both red and bold as the `.item:last-of-type` selects the last of every type if that last element also has the `item` class.
+
 ## Specifications
 
 {{Specifications}}
