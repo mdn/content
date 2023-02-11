@@ -28,7 +28,7 @@ Below is a list of the supported collation types, adapted from the [Unicode coll
 
 - `big5han`
   - : Pinyin ordering for Latin, big5 charset ordering for CJK characters (for Chinese)
-    > **Note:** The `big5han` collations type is deprecated, not available in Chrome or Edge, and on the way to be removed in Firefox ([bug 1630920](https://bugzilla.mozilla.org/show_bug.cgi?id=1630920)).
+    > **Warning:** The `big5han` collation type is deprecated, not available in Firefox, Chrome or Edge.
 - `compat`
   - : A previous version of the ordering, for compatibility (for Arabic)
 - `dict`
@@ -45,7 +45,7 @@ Below is a list of the supported collation types, adapted from the [Unicode coll
   - : European ordering rules (for the `und` locale)
 - `gb2312`
   - : Pinyin ordering for Latin, gb2312han charset ordering for CJK characters (for Chinese)
-    > **Note:** The `gb2312` collation type is deprecated, not available in Chrome or Edge, and on the way to be removed in Firefox ([bug 1630920](https://bugzilla.mozilla.org/show_bug.cgi?id=1630920)).
+    > **Warning:** The `gb2312` collation type is deprecated, not available in Firefox, Chrome or Edge.
 - `phonebk`
   - : Phonebook style ordering (for German)
 - `phonetic`
@@ -53,15 +53,16 @@ Below is a list of the supported collation types, adapted from the [Unicode coll
 - `pinyin`
   - : Pinyin ordering for Latin and for CJK characters (for Chinese)
 - `reformed`
-  - : Reformed ordering (for Swedish)
-    > **Note:** This is the default ordering for Swedish whose collation naming is unusual as of May 2022. Since this is the default, request `sv` instead of requesting `sv-u-co-reformed`.
+  - : Reformed ordering (formerly for Swedish)
+    > **Warning:** Do not use explicitly. This is the old name for the default ordering for Swedish [whose collation naming used to differ from other languages](https://unicode-org.atlassian.net/browse/CLDR-15603). Since this was the default, request `sv` instead of requesting `sv-u-co-reformed`.
 - `search`
   - : Special collation type for string search
     > **Warning:** Do not use. In [`Intl.Collator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator), this collation is activated via the `search` value for the `usage` option. Furthermore, there is currently no API for actually using the collator for search.
 - `searchjl`
   - : Special collation type for Korean initial consonant search
+    > **Warning:** Do not use. This collation is meant for searching, but [`Intl.Collator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) provides an API only for sorting.
 - `standard`
-  - : Default ordering for each language, except Chinese and, as of May 2022, Swedish
+  - : Default ordering for each language, except Chinese (and, previously, Swedish)
     > **Warning:** Do not use explicitly. In general, it's unnecessary to specify this explicitly and specifying this for Swedish is problematic in case the naming of the Swedish collations is changed to be consistent with other languages in the future.
 - `stroke`
   - : Pinyin ordering for Latin, stroke order for CJK characters (for Chinese)

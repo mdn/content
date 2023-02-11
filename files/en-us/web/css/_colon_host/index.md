@@ -32,8 +32,10 @@ The **`:host`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Ps
 
 ## Syntax
 
-```
-:host
+```css
+:host {
+  /* ... */
+}
 ```
 
 ## Examples

@@ -30,8 +30,10 @@ simple-custom:defined {
 
 ## Syntax
 
-```
-:defined
+```css
+:defined {
+  /* ... */
+}
 ```
 
 ## Examples
