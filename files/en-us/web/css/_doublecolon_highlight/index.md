@@ -1,5 +1,5 @@
 ---
-title: '::highlight()'
+title: "::highlight()"
 slug: Web/CSS/::highlight
 page-type: css-pseudo-element
 tags:
@@ -52,13 +52,34 @@ In particular, {{CSSxRef("background-image")}} is ignored.
   font-size: 1.5rem;
 }
 
-::highlight(rainbow-color-1) { color: #ad26ad;  text-decoration: underline; }
-::highlight(rainbow-color-2) { color: #5d0a99;  text-decoration: underline; }
-::highlight(rainbow-color-3) { color: #0000ff;  text-decoration: underline; }
-::highlight(rainbow-color-4) { color: #07c607;  text-decoration: underline; }
-::highlight(rainbow-color-5) { color: #b3b308;  text-decoration: underline; }
-::highlight(rainbow-color-6) { color: #ffa500;  text-decoration: underline; }
-::highlight(rainbow-color-7) { color: #ff0000;  text-decoration: underline; }
+::highlight(rainbow-color-1) {
+  color: #ad26ad;
+  text-decoration: underline;
+}
+::highlight(rainbow-color-2) {
+  color: #5d0a99;
+  text-decoration: underline;
+}
+::highlight(rainbow-color-3) {
+  color: #0000ff;
+  text-decoration: underline;
+}
+::highlight(rainbow-color-4) {
+  color: #07c607;
+  text-decoration: underline;
+}
+::highlight(rainbow-color-5) {
+  color: #b3b308;
+  text-decoration: underline;
+}
+::highlight(rainbow-color-6) {
+  color: #ffa500;
+  text-decoration: underline;
+}
+::highlight(rainbow-color-7) {
+  color: #ff0000;
+  text-decoration: underline;
+}
 ```
 
 #### JavaScript
@@ -67,12 +88,13 @@ In particular, {{CSSxRef("background-image")}} is ignored.
 const textNode = document.getElementById("rainbow-text").firstChild;
 
 if (!CSS.highlights) {
-  textNode.textContent = "The CSS Custom Highlight API is not supported in this browser!";
+  textNode.textContent =
+    "The CSS Custom Highlight API is not supported in this browser!";
 }
 
 // Create and register highlights for each color in the rainbow.
 const highlights = [];
-for (let i = 0; i < 7; i ++) {
+for (let i = 0; i < 7; i++) {
   // Create a new highlight for this color.
   const colorHighlight = new Highlight();
   highlights.push(colorHighlight);
@@ -82,7 +104,7 @@ for (let i = 0; i < 7; i ++) {
 }
 
 // Iterate over the text, character by character.
-for (let i = 0; i < textNode.textContent.length; i ++) {
+for (let i = 0; i < textNode.textContent.length; i++) {
   // Create a new range just for this character.
   const range = new Range();
   range.setStart(textNode, i);

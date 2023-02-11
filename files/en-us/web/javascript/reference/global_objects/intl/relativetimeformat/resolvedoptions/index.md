@@ -62,12 +62,12 @@ The resulting object has the following properties:
 ### Using the resolvedOptions() method
 
 ```js
-const de = new Intl.RelativeTimeFormat('de-DE');
+const de = new Intl.RelativeTimeFormat("de-DE");
 const usedOptions = de.resolvedOptions();
 
-usedOptions.locale;          // "de-DE"
-usedOptions.style;           // "long"
-usedOptions.numeric;         // "always"
+usedOptions.locale; // "de-DE"
+usedOptions.style; // "long"
+usedOptions.numeric; // "always"
 usedOptions.numberingSystem; // "latn"
 ```
 

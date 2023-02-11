@@ -44,8 +44,8 @@ A {{domxref('CSSNumericValue')}}.
 
 ```js
 let v = CSS.px("23").add(CSS.percent("4")).add(CSS.cm("3")).add(CSS.in("9"));
-v.toString() // => "calc(23px + 4% + 3cm + 9in)"
-v.toSum("px", "percent").toString() // => "calc(1000.39px + 4%)"
+v.toString(); // => "calc(23px + 4% + 3cm + 9in)"
+v.toSum("px", "percent").toString(); // => "calc(1000.39px + 4%)"
 ```
 
 ## Specifications
