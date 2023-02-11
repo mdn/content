@@ -1,5 +1,5 @@
 ---
-title: '::-webkit-inner-spin-button'
+title: "::-webkit-inner-spin-button"
 slug: Web/CSS/::-webkit-inner-spin-button
 page-type: css-pseudo-element
 tags:
@@ -20,7 +20,9 @@ The **`::-webkit-inner-spin-button`** CSS pseudo-element is used to style the in
 ## Syntax
 
 ```css
-::-webkit-inner-spin-button
+::-webkit-inner-spin-button {
+  /* ... */
+}
 ```
 
 ## Examples

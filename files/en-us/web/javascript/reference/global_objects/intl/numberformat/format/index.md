@@ -44,14 +44,14 @@ The `format()` method formats a number into a string according to the locale and
 If you are performing calculations with integers larger than {{jsxref("Number.MAX_SAFE_INTEGER")}} you should use a {{jsxref("BigInt")}} instead, which will format correctly:
 
 ```js
-new Intl.NumberFormat('en-US').format(1234567891234567891) // 1,234,567,891,234,568,000
-new Intl.NumberFormat('en-US').format(1234567891234567891n) // 1,234,567,891,234,567,891
+new Intl.NumberFormat("en-US").format(1234567891234567891); // 1,234,567,891,234,568,000
+new Intl.NumberFormat("en-US").format(1234567891234567891n); // 1,234,567,891,234,567,891
 ```
 
 You can also pass through very large strings to be formatted as an arbitrary-precision decimal string (if you're performing calculations on the data you will still need to work with `BigInt`):
 
 ```js
-new Intl.NumberFormat('en-US').format("1234567891234567891") // 1,234,567,891,234,567,891
+new Intl.NumberFormat("en-US").format("1234567891234567891"); // 1,234,567,891,234,567,891
 ```
 
 ## Examples
@@ -62,8 +62,8 @@ Use the `format` getter function for formatting a single currency value.
 The code below shows how to format the roubles currency for a Russian locale:
 
 ```js
-const options = { style: 'currency', currency: 'RUB' };
-const numberFormat = new Intl.NumberFormat('ru-RU', options);
+const options = { style: "currency", currency: "RUB" };
+const numberFormat = new Intl.NumberFormat("ru-RU", options);
 console.log(numberFormat.format(654321.987));
 // "654 321,99 ₽"
 ```
@@ -76,9 +76,9 @@ This is considered a historical artefact, as part of a convention which is no lo
 
 ```js
 const a = [123456.789, 987654.321, 456789.123];
-const numberFormat = new Intl.NumberFormat('es-ES');
+const numberFormat = new Intl.NumberFormat("es-ES");
 const formatted = a.map((n) => numberFormat.format(n));
-console.log(formatted.join('; '));
+console.log(formatted.join("; "));
 // "123.456,789; 987.654,321; 456.789,123"
 ```
 
@@ -90,7 +90,7 @@ Using a string we can specify very numbers that are larger than {{jsxref("Number
 const numberFormat = new Intl.NumberFormat("en-US");
 
 // Here the value is converted to a Number
-console.log(numberFormat.format(987654321987654321))
+console.log(numberFormat.format(987654321987654321));
 // 987,654,321,987,654,300
 
 // Here we use a string and don't lose precision
