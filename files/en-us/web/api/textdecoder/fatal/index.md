@@ -21,7 +21,7 @@ The value of the property is set in the [`TextDecoder()` constructor](/en-US/doc
 
 ## Value
 
-A {{jsxref("Boolean")}} which will be `true` if the error mode is set to `fatal`.
+A boolean which will be `true` if the error mode is set to `fatal`.
 Otherwise, it will be `false`, indicating that the error mode is `replacement`.
 
 ## Specifications
