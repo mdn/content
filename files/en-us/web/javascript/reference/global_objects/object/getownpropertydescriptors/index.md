@@ -72,7 +72,7 @@ properties from a source object to a target object, you are able to use this met
 ```js
 Object.create(
   Object.getPrototypeOf(obj),
-  Object.getOwnPropertyDescriptors(obj)
+  Object.getOwnPropertyDescriptors(obj),
 );
 ```
 
@@ -89,12 +89,9 @@ superclass.prototype = {
   // Define the superclass constructor, methods, and properties here
 };
 function subclass() {}
-subclass.prototype = Object.create(
-  superclass.prototype,
-  {
-    // Define the subclass constructor, methods, and properties here
-  }
-);
+subclass.prototype = Object.create(superclass.prototype, {
+  // Define the subclass constructor, methods, and properties here
+});
 ```
 
 ## Specifications

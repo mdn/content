@@ -78,7 +78,7 @@ const p = new Proxy(
       console.log(`property removed: ${prop}`);
       return true;
     },
-  }
+  },
 );
 
 p.a = 10;
