@@ -24,8 +24,8 @@ The function `pow(x, 0.5)` is equivalent to `sqrt(x)`.
 
 ```css
 /* A <number> value */
-width: calc(100px * sqrt(9));   /*  300px */
-width: calc(100px * sqrt(25));  /*  500px */
+width: calc(100px * sqrt(9)); /*  300px */
+width: calc(100px * sqrt(25)); /*  500px */
 width: calc(100px * sqrt(100)); /* 1000px */
 ```
 

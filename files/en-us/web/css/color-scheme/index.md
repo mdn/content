@@ -54,6 +54,7 @@ The `color-scheme` property's value must be one of the following keywords.
 - `dark`
   - : Indicates that the element can be rendered using the operating system dark color scheme.
 - `only`
+
   - : Forbids the user agent from overriding the color scheme for the element.
 
     Can be used to turn off color overrides caused by Chrome's [Auto Dark Theme](https://developer.chrome.com/blog/auto-dark-theme/#per-element-opt-out), by applying `color-scheme: only light;` on a specific element or `:root`.

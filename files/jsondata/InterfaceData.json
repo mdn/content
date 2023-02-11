@@ -412,7 +412,7 @@
       "inh": "ExtendableEvent",
       "impl": []
     },
-    "ContentVisibilityAutoStateChangedEvent": {
+    "ContentVisibilityAutoStateChangeEvent": {
       "inh": "Event",
       "impl": []
     },

@@ -16,15 +16,12 @@ The **`:paused`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 
 A resource is paused if the user explicitly paused it, or if it is in a non-activated state.
 
-```css
-:paused {
-}
-```
-
 ## Syntax
 
-```
-:paused
+```css
+:paused {
+  /* ... */
+}
 ```
 
 ## Examples

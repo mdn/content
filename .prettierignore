@@ -8,9 +8,11 @@ build/
 # The following paths have had a full pass
 !files/en-us/glossary/**/*.md
 !files/en-us/mdn/**/*.md
-!files/en-us/web/html/**/*.md
+!files/en-us/web/api/[a-c]*/**/*.md
+!files/en-us/web/css/**/*.md
 !files/en-us/web/events/**/*.md
 !files/en-us/web/guide/**/*.md
+!files/en-us/web/html/**/*.md
 !files/en-us/web/http/**/*.md
 !files/en-us/web/manifest/**/*.md
 !files/en-us/web/media/**/*.md

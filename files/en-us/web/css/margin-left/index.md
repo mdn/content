@@ -25,9 +25,9 @@ In the rare cases where width is overconstrained (i.e., when all of `width`, `ma
 
 ```css
 /* <length> values */
-margin-left: 10px;  /* An absolute length */
-margin-left: 1em;   /* relative to the text size */
-margin-left: 5%;    /* relative to the nearest block container's width */
+margin-left: 10px; /* An absolute length */
+margin-left: 1em; /* relative to the text size */
+margin-left: 5%; /* relative to the nearest block container's width */
 
 /* Keyword values */
 margin-left: auto;

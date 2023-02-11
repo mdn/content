@@ -112,17 +112,35 @@ Color contrast ratio is determined by comparing the luminosity of the text and b
 The following are all ways to make a paragraph's text red:
 
 ```css
-p { color: red; }
-p { color: #f00; }
-p { color: #ff0000; }
-p { color: rgb(255,0,0); }
-p { color: rgb(100%, 0%, 0%); }
-p { color: hsl(0, 100%, 50%); }
+p {
+  color: red;
+}
+p {
+  color: #f00;
+}
+p {
+  color: #ff0000;
+}
+p {
+  color: rgb(255, 0, 0);
+}
+p {
+  color: rgb(100%, 0%, 0%);
+}
+p {
+  color: hsl(0, 100%, 50%);
+}
 
 /* 50% translucent */
-p { color: #ff000080; }
-p { color: rgba(255, 0, 0, 0.5); }
-p { color: hsla(0, 100%, 50%, 0.5); }
+p {
+  color: #ff000080;
+}
+p {
+  color: rgba(255, 0, 0, 0.5);
+}
+p {
+  color: hsla(0, 100%, 50%, 0.5);
+}
 ```
 
 ## Specifications
