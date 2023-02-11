@@ -509,15 +509,33 @@ p {
     "M15,45 A30,30,0,0,1,75,45 A30,30,0,0,1,135,45 Q135,90,75,130 Q15,90,15,45 Z"
   );
 }
-.shape1 { clip-path: circle(25%); }
-.shape2 { clip-path: circle(25% at 25% 25%); }
-.shape3 { clip-path: fill-box    circle(25% at 25% 25%); }
-.shape4 { clip-path: stroke-box  circle(25% at 25% 25%); }
-.shape5 { clip-path: view-box    circle(25% at 25% 25%); }
-.shape6 { clip-path: margin-box  circle(25% at 25% 25%); }
-.shape7 { clip-path: border-box  circle(25% at 25% 25%); }
-.shape8 { clip-path: padding-box circle(25% at 25% 25%); }
-.shape9 { clip-path: content-box circle(25% at 25% 25%); }
+.shape1 {
+  clip-path: circle(25%);
+}
+.shape2 {
+  clip-path: circle(25% at 25% 25%);
+}
+.shape3 {
+  clip-path: fill-box circle(25% at 25% 25%);
+}
+.shape4 {
+  clip-path: stroke-box circle(25% at 25% 25%);
+}
+.shape5 {
+  clip-path: view-box circle(25% at 25% 25%);
+}
+.shape6 {
+  clip-path: margin-box circle(25% at 25% 25%);
+}
+.shape7 {
+  clip-path: border-box circle(25% at 25% 25%);
+}
+.shape8 {
+  clip-path: padding-box circle(25% at 25% 25%);
+}
+.shape9 {
+  clip-path: content-box circle(25% at 25% 25%);
+}
 
 .defs {
   width: 0;

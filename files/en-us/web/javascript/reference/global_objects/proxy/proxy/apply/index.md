@@ -69,11 +69,11 @@ const p = new Proxy(function () {}, {
   apply(target, thisArg, argumentsList) {
     console.log(`called: ${argumentsList}`);
     return argumentsList[0] + argumentsList[1] + argumentsList[2];
-  }
+  },
 });
 
 console.log(p(1, 2, 3)); // "called: 1,2,3"
-                         // 6
+// 6
 ```
 
 ## Specifications

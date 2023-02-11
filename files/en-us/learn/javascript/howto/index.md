@@ -149,8 +149,8 @@ For more information on JavaScript debugging, see [Handling common JavaScript pr
 ### Making decisions in code
 
 - [How do you execute different blocks of code, depending on a variable's value or other condition?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [How do you use if ...else statements?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements)
-- [How do you nest one decision block inside another?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#nesting_if_..._else)
+- [How do you use if ...else statements?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#if...else_statements)
+- [How do you nest one decision block inside another?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#nesting_if...else)
 - [How do you use AND, OR, and NOT operators in JavaScript?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#logical_operators_and_or_and_not)
 - [How do you conveniently handle a large number of choices for one condition?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#switch_statements)
 - [How do you use a ternary operator to make a quick choice between two options based on a true or false test?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#ternary_operator)

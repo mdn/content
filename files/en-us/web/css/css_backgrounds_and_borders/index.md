@@ -25,50 +25,11 @@ The properties in this module also let you define whether cells inside a {{HTMLE
 
 This sample of borders, backgrounds, and box shadows consists of centered background images made of linear and radial gradients. A series of box shadows make the border appear to "pop". The element on the left has a border image set. The element on the right has a rounded dotted border.
 
-<!-- intro example -->
+{{EmbedGHLiveSample("css-examples/modules/backgrounds.html", '100%', 430)}}
 
-```html hidden
-<article>
-<div></div>
-<div></div>
-</article>
-```
+The background images are defined with {{cssxref("background-image")}}. The images are centered with {{cssxref("background-position")}}. Different values of the {{cssxref("background-clip")}} property for the multiple background images are used to make the background images stay within the content box. The background color gets clipped to the padding box preventing the background from appearing through the transparent sections for the {{cssxref("border-image")}} and the {{cssxref("border-style", "dotted")}} {{cssxref("border")}}. The rounded corners in the element on the right are created using the {{cssxref("border-radius")}} property. A single {{cssxref("box-shadow")}} declaration is used to set all the shadows, both inset and outset.
 
-```css hidden
-article {display: flex; gap: 10px;}
-div {
-  color: #58ADE3;
-  height: 320px;
-  width: 240px;
-  padding: 20px;
-  margin: 10px;
-  border: dotted 15px; /* defaults to `currentcolor` */
-  border-radius: 100px 0;
-  background-image: 
-    radial-gradient(circle, transparent 60%, currentcolor 60% 70%,transparent 70% ), 
-    linear-gradient(45deg, currentcolor, white),
-    linear-gradient(transparent, transparent);
-    /* the third transparent background image was added to provide space for the background color to show through */
-  background-color: currentcolor;
-  background-position: center;
-  background-size: 60px 60px, 120px 120px;
-  background-clip: content-box, content-box, padding-box; 
-  box-shadow: 
-    inset 5px 5px 5px rgba(0,0,0,0.4), 
-    inset -5px -5px 5px rgba(0,0,0,0.4),
-    5px 5px 5px rgba(0,0,0,0.4), 
-    -5px -5px 5px rgba(0,0,0,0.4);
-}
-div:first-of-type {
-  border-radius: 0;
-  border-image-source: repeating-conic-gradient(from 3deg at 25% 25%, currentColor 0 3deg, transparent 3deg 6deg);
-  border-image-slice: 30;
-}
-```
-
-{{ EmbedLiveSample('Backgrounds_borders_and_box_shadows_in_action', "450", "450") }}
-
-The background images are defined with {{cssxref("background-image")}}. The images are centered with {{cssxref("background-position")}}. Different values of the {{cssxref("background-clip")}} property for the multiple background images are used to make the background images stay within the content box. The background color gets clipped to the padding box preventing the background from appearing through the transparent sections for the {{cssxref("border-image")}} and the {{cssxref("border-style", "dotted")}} {{cssxref("border")}}. The rounded corners in the element on the right are created using the {{cssxref("border-radius")}} property. A single {{cssxref("box-shadow")}} declaration is used to set all the shadows, both inset and outset. To see the code for this sample, [view the source on Github](https://github.com/mdn/content/blob/main/files/en-us/web/css/compositing_and_blending/index.md?plain=1).
+To see the code for this sample, [view the source on Github](https://github.com/mdn/css-examples/blob/main/modules/backgrounds.html).
 
 ## Reference
 
