@@ -1,4 +1,5 @@
----
+Property of John Wesley Garbarino...Need fixed bad actors are
+Using this info to hack and take over different programs---
 title: PermissionStatus.state
 slug: Web/API/PermissionStatus/state
 page-type: web-api-instance-property
