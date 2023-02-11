@@ -113,68 +113,77 @@ select {
 #### JavaScript
 
 ```js
-const selectElem = document.querySelector('select');
-const divElem = document.querySelector('div');
-const slider = document.querySelector('input');
-const output = document.querySelector('output');
-const curValue = document.querySelector('p code');
+const selectElem = document.querySelector("select");
+const divElem = document.querySelector("div");
+const slider = document.querySelector("input");
+const output = document.querySelector("output");
+const curValue = document.querySelector("p code");
 
-selectElem.addEventListener('change', () => {
+selectElem.addEventListener("change", () => {
   setSlider(selectElem.value);
   setDiv(selectElem.value);
 });
 
-slider.addEventListener('input', () => {
+slider.addEventListener("input", () => {
   setDiv(selectElem.value);
 });
 
 function setSlider(filter) {
-  if (filter === 'blur') {
+  if (filter === "blur") {
     slider.value = 0;
     slider.min = 0;
     slider.max = 30;
     slider.step = 1;
-    slider.setAttribute('data-unit', 'px');
-  } else if (filter === 'brightness' || filter === 'contrast' || filter === 'saturate') {
+    slider.setAttribute("data-unit", "px");
+  } else if (
+    filter === "brightness" ||
+    filter === "contrast" ||
+    filter === "saturate"
+  ) {
     slider.value = 1;
     slider.min = 0;
     slider.max = 4;
     slider.step = 0.05;
-    slider.setAttribute('data-unit', '');
-  } else if (filter === 'drop-shadow') {
+    slider.setAttribute("data-unit", "");
+  } else if (filter === "drop-shadow") {
     slider.value = 0;
     slider.min = -20;
     slider.max = 40;
     slider.step = 1;
-    slider.setAttribute('data-unit', 'px');
-  } else if (filter === 'opacity') {
+    slider.setAttribute("data-unit", "px");
+  } else if (filter === "opacity") {
     slider.value = 1;
     slider.min = 0;
     slider.max = 1;
     slider.step = 0.01;
-    slider.setAttribute('data-unit', '');
-  } else if (filter === 'grayscale' || filter === 'invert' || filter === 'sepia') {
+    slider.setAttribute("data-unit", "");
+  } else if (
+    filter === "grayscale" ||
+    filter === "invert" ||
+    filter === "sepia"
+  ) {
     slider.value = 0;
     slider.min = 0;
     slider.max = 1;
     slider.step = 0.01;
-    slider.setAttribute('data-unit', '');
-  } else if (filter === 'hue-rotate') {
+    slider.setAttribute("data-unit", "");
+  } else if (filter === "hue-rotate") {
     slider.value = 0;
     slider.min = 0;
     slider.max = 360;
     slider.step = 1;
-    slider.setAttribute('data-unit', 'deg');
+    slider.setAttribute("data-unit", "deg");
   }
 }
 
 function setDiv(filter) {
-  const unit = slider.getAttribute('data-unit');
+  const unit = slider.getAttribute("data-unit");
   const offset = `${Math.round(slider.value)}${unit}`;
   const radius = `${Math.round(Math.abs(slider.value / 2))}${unit}`;
-  divElem.style.filter = filter === 'drop-shadow'
-    ? `${selectElem.value}(${offset} ${offset} ${radius})`
-    : `${selectElem.value}(${slider.value}${unit})`;
+  divElem.style.filter =
+    filter === "drop-shadow"
+      ? `${selectElem.value}(${offset} ${offset} ${radius})`
+      : `${selectElem.value}(${slider.value}${unit})`;
 
   updateOutput();
   updateCurValue();

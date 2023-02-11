@@ -1,5 +1,5 @@
 ---
-title: ':-moz-handler-crashed'
+title: ":-moz-handler-crashed"
 slug: Web/CSS/:-moz-handler-crashed
 page-type: css-pseudo-class
 tags:
@@ -20,7 +20,9 @@ The **`:-moz-handler-crashed`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US
 ## Syntax
 
 ```css
-:-moz-handler-crashed
+:-moz-handler-crashed {
+  /* ... */
+}
 ```
 
 ## Specifications

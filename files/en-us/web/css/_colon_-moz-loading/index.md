@@ -1,5 +1,5 @@
 ---
-title: ':-moz-loading'
+title: ":-moz-loading"
 slug: Web/CSS/:-moz-loading
 page-type: css-pseudo-class
 tags:
@@ -21,7 +21,9 @@ The **`:-moz-loading`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/We
 ## Syntax
 
 ```css
-:-moz-loading
+:-moz-loading {
+  /* ... */
+}
 ```
 
 ## Examples
