@@ -20,8 +20,10 @@ The **`:picture-in-picture`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/d
 
 ## Syntax
 
-```
-:picture-in-picture
+```css
+:picture-in-picture {
+  /* ... */
+}
 ```
 
 ## Usage notes

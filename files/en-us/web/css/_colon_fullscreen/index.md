@@ -20,8 +20,10 @@ The **`:fullscreen`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/
 
 ## Syntax
 
-```
-:fullscreen
+```css
+:fullscreen {
+  /* ... */
+}
 ```
 
 ## Usage notes

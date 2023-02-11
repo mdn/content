@@ -17,8 +17,10 @@ The **`:modal`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/P
 
 ## Syntax
 
-```
-:modal
+```css
+:modal {
+  /* ... */
+}
 ```
 
 ## Usage notes
@@ -39,7 +41,8 @@ This example styles a modal dialog that opens when the "Update details" button i
 <dialog id="favDialog">
   <form method="dialog">
     <p>
-      <label>Favorite animal:
+      <label
+        >Favorite animal:
         <select>
           <option value="default">Choose…</option>
           <option>Brine shrimp</option>
@@ -88,8 +91,7 @@ updateButton.addEventListener("click", () => {
   if (typeof favDialog.showModal === "function") {
     favDialog.showModal();
   } else {
-    outputBox.value =
-      "Sorry, the dialog API is not supported by this browser.";
+    outputBox.value = "Sorry, the dialog API is not supported by this browser.";
   }
 });
 // "Favorite animal" input sets the value of the submit button

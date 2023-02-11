@@ -48,7 +48,7 @@ Highlights:
   - `String(Symbol("1"))` now no longer throws a {{jsxref("TypeError")}}; instead a string (`"Symbol(1)"`) gets returned ({{bug(1058396)}}).
 
 - The various [_TypedArray_ constructors](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) now have as their `[[Prototype]]` a single function, denoted `%TypedArray%` in ES2015 (but otherwise not directly exposed). Each typed array prototype now inherits from `%TypedArray%.prototype`. (`%TypedArray%` and `%TypedArray%.prototype` inherit from [`Function.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) and [`Object.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object), respectively, so that typed array constructors and instances still have the properties found on those objects.) Typed array function properties now reside on `%TypedArray%.prototype` and work on any typed array. See [_TypedArray_](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#description) and {{bug(896116)}} for more information.
-- ES2015 semantics for [prototype mutations using object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_mutation) have been implemented ({{bug(1061853)}}).
+- ES2015 semantics for [prototype mutations using object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) have been implemented ({{bug(1061853)}}).
 
   - Now only a single member notated as `__proto__:value` will mutate the `[[Prototype]]` in the object literal syntax.
   - Method members like `__proto__() {}` will not overwrite the `[[Prototype]]` anymore.

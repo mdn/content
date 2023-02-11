@@ -45,15 +45,15 @@ This example shows some of the variations in localized plural rules. In order to
 ```js
 // Arabic has different plural rules
 
-new Intl.PluralRules('ar-EG').select(0);
+new Intl.PluralRules("ar-EG").select(0);
 // → 'zero'
-new Intl.PluralRules('ar-EG').select(1);
+new Intl.PluralRules("ar-EG").select(1);
 // → 'one'
-new Intl.PluralRules('ar-EG').select(2);
+new Intl.PluralRules("ar-EG").select(2);
 // → 'two'
-new Intl.PluralRules('ar-EG').select(6);
+new Intl.PluralRules("ar-EG").select(6);
 // → 'few'
-new Intl.PluralRules('ar-EG').select(18);
+new Intl.PluralRules("ar-EG").select(18);
 // → 'many'
 ```
 

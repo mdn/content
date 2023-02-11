@@ -1,5 +1,5 @@
 ---
-title: '::-moz-color-swatch'
+title: "::-moz-color-swatch"
 slug: Web/CSS/::-moz-color-swatch
 page-type: css-pseudo-element
 tags:
@@ -21,7 +21,9 @@ The **`::-moz-color-swatch`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US
 ## Syntax
 
 ```css
-::-moz-color-swatch
+::-moz-color-swatch {
+  /* ... */
+}
 ```
 
 ## Examples
