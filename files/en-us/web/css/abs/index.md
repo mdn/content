@@ -72,7 +72,7 @@ In older browsers that lack the support for CSS `abs()` function, you can use th
 
 ```css
 p {
-  line-height: max(var(--lh), -1*var(--lh));
+  line-height: max(var(--lh), -1 * var(--lh));
 }
 ```
 

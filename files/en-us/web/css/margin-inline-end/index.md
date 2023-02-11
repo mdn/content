@@ -24,9 +24,9 @@ The **`margin-inline-end`** [CSS](/en-US/docs/Web/CSS) property defines the logi
 
 ```css
 /* <length> values */
-margin-inline-end: 10px;   /* An absolute length */
-margin-inline-end: 1em;    /* relative to the text size */
-margin-inline-end: 5%;     /* relative to the nearest block container's width */
+margin-inline-end: 10px; /* An absolute length */
+margin-inline-end: 1em; /* relative to the text size */
+margin-inline-end: 5%; /* relative to the nearest block container's width */
 
 /* Keyword values */
 margin-inline-end: auto;

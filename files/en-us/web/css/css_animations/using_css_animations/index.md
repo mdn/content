@@ -343,7 +343,7 @@ The events get delivered to the `listener()` function, which is shown below.
 ```js
 function listener(event) {
   const l = document.createElement("li");
-  switch(event.type) {
+  switch (event.type) {
     case "animationstart":
       l.textContent = `Started: elapsed time is ${event.elapsedTime}`;
       break;
