@@ -142,8 +142,10 @@ However, selectors inside `:where()` have specificity 0, so the orange footer li
 
 ## Syntax
 
-```
-:where( <complex-selector-list> )
+```css-nolint
+:where(<complex-selector-list>) {
+  /* ... */
+}
 ```
 
 ## Specifications

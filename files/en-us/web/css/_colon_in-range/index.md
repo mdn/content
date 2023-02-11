@@ -23,8 +23,10 @@ This pseudo-class is useful for giving the user a visual indication that a field
 
 ## Syntax
 
-```
-:in-range
+```css
+:in-range {
+  /* ... */
+}
 ```
 
 ## Examples

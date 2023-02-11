@@ -51,9 +51,9 @@ parameter isn't an object. In ES2015, the parameter will be coerced to an
 {{jsxref("Object")}}.
 
 ```js
-Object.getPrototypeOf('foo');
+Object.getPrototypeOf("foo");
 // TypeError: "foo" is not an object (ES5 code)
-Object.getPrototypeOf('foo');
+Object.getPrototypeOf("foo");
 // String.prototype                  (ES2015 code)
 ```
 

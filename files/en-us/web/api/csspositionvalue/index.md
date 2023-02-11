@@ -39,12 +39,12 @@ None.
 The following example positions a container `<div>` 5 pixels from the top and 10 pixels from the left of the page.
 
 ```js
-const replacedEl = document.getElementById('image');
+const replacedEl = document.getElementById("image");
 const position = new CSSPositionValue(CSS.px(35), CSS.px(40));
 
-replacedEl.attributeStyleMap.set('object-position', position);
+replacedEl.attributeStyleMap.set("object-position", position);
 console.log(position.x.value, position.y.value);
-console.log(replacedEl.computedStyleMap().get('object-position'));
+console.log(replacedEl.computedStyleMap().get("object-position"));
 ```
 
 We set the {{cssxref('object-position')}} property, then check the values returned.
