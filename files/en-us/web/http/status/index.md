@@ -92,7 +92,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
 - `306 unused`
   - : This response code is no longer used; it is just reserved. It was used in a previous version of the HTTP/1.1 specification.
 - {{HTTPStatus(307, "307 Temporary Redirect")}}
-  - : The server sends this response to direct the client to get the requested resource at another URI with same method that was used in the prior request.
+  - : The server sends this response to direct the client to get the requested resource at another URI with the same method that was used in the prior request.
     This has the same semantics as the `302 Found` HTTP response code, with the exception that the user agent _must not_ change the HTTP method used: if a `POST` was used in the first request, a `POST` must be used in the second request.
 - {{HTTPStatus(308, "308 Permanent Redirect")}}
   - : This means that the resource is now permanently located at another URI, specified by the `Location:` HTTP Response header.
