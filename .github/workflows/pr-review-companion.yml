@@ -54,8 +54,7 @@ jobs:
             fs.writeFileSync('${{github.workspace}}/build.zip', Buffer.from(download.data));
 
       - name: Unzip what was downloaded
-        run: |
-          unzip build.zip -d build
+        run: unzip build.zip -d build
 
       - uses: actions/checkout@v3
         with:

@@ -10,7 +10,7 @@ on:
       - .github/workflows/pr-check_javascript.yml
 
 jobs:
-  docs:
+  lint-js:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,8 +23,7 @@ jobs:
           cache: yarn
 
       - name: Install all yarn packages
-        run: |
-          yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
 
       - name: Lint JavaScript files
         run: yarn lint:js
