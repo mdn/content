@@ -374,8 +374,8 @@ div {
 #### JavaScript
 
 ```js
-const articles = document.querySelectorAll('.container');
-const select = document.querySelector('select');
+const articles = document.querySelectorAll(".container");
+const select = document.querySelector("select");
 
 function updateDisplay() {
   articles.forEach((article) => {
@@ -383,7 +383,7 @@ function updateDisplay() {
   });
 }
 
-select.addEventListener('change', updateDisplay);
+select.addEventListener("change", updateDisplay);
 
 updateDisplay();
 ```
