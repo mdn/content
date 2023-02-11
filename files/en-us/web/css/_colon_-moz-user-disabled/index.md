@@ -21,7 +21,9 @@ The **`:-moz-user-disabled`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/d
 ## Syntax
 
 ```css
-:-moz-user-disabled
+:-moz-user-disabled {
+  /* ... */
+}
 ```
 
 ## Examples

@@ -21,8 +21,10 @@ The **`:read-only`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/C
 
 ## Syntax
 
-```
-:read-only
+```css
+:read-only {
+  /* ... */
+}
 ```
 
 ## Examples

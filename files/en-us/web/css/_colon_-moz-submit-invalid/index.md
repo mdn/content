@@ -21,8 +21,10 @@ By default, no style is applied. You can use this pseudo-class to customize the 
 
 ## Syntax
 
-```
-:-moz-submit-invalid
+```css
+:-moz-submit-invalid {
+  /* ... */
+}
 ```
 
 ## Specifications

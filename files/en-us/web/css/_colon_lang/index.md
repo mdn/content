@@ -24,8 +24,10 @@ The **`:lang()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 
 ### Formal syntax
 
-```
-:lang( <language-code> )
+```css-nolint
+:lang(<language-code>) {
+  /* ... */
+}
 ```
 
 ### Parameter
