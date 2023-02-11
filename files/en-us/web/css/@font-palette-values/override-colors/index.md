@@ -13,7 +13,7 @@ browser-compat: css.at-rules.font-palette-values.override-colors
 
 {{CSSRef}}
 
-The **`override-colors`** CSS [descriptor](/en-US/docs/Glossary/Descriptor_(CSS)) is used to override colors in the chosen [base-palette](/en-US/docs/Web/CSS/@font-palette-values/base-palette) for a color font.
+The **`override-colors`** CSS [descriptor](</en-US/docs/Glossary/Descriptor_(CSS)>) is used to override colors in the chosen [base-palette](/en-US/docs/Web/CSS/@font-palette-values/base-palette) for a color font.
 
 ## Syntax
 
@@ -34,13 +34,10 @@ override-colors: 0 rgb(255, 0, 0);
 override-colors: 0 #f00, 1 #0f0, 2 #00f;
 
 /* overriding multiple colors with readability */
-override-colors:
-  0 #f00,
-  1 #0f0,
-  2 #00f;
+override-colors: 0 #f00, 1 #0f0, 2 #00f;
 ```
 
-The `override-colors` [descriptor](/en-US/docs/Glossary/Descriptor_(CSS)) takes a comma-separated list of the color index and new color value.
+The `override-colors` [descriptor](</en-US/docs/Glossary/Descriptor_(CSS)>) takes a comma-separated list of the color index and new color value.
 
 The color index is zero-based and any [color value](/en-US/docs/Web/CSS/color_value) can be used.
 
@@ -90,12 +87,13 @@ This example shows how to override colors in the [Noto Color Emoji](https://font
 }
 ```
 
-```css
+```css-nolint
 @font-face {
   font-family: "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/l/font?kit=Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabts6diywYkdG3gjD0U&skey=a373f7129eaba270&v=v24) format("woff2");
+  src: url(https://fonts.gstatic.com/l/font?kit=Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabts6diywYkdG3gjD0U&skey=a373f7129eaba270&v=v24)
+    format("woff2");
 }
 
 .emoji {
@@ -104,11 +102,11 @@ This example shows how to override colors in the [Noto Color Emoji](https://font
 }
 @font-palette-values --red {
   font-family: "Noto Color Emoji";
-  override-colors: 
-    0 rgb(74, 11, 0), 
-    1 rgb(149, 22, 1), 
-    2 rgb(183, 27, 1), 
-    3 rgb(193, 28, 1), 
+  override-colors:
+    0 rgb(74, 11, 0),
+    1 rgb(149, 22, 1),
+    2 rgb(183, 27, 1),
+    3 rgb(193, 28, 1),
     4 rgb(230, 34, 1);
 }
 .red-hat {
@@ -135,18 +133,18 @@ Using [Rocher Color Font](https://www.harbortype.com/fonts/rocher-color/), this 
 
 ```css
 @font-face {
-  font-family: 'Rocher';
-  src: url('[path-to-font]/RocherColorGX.woff2') format('woff2'); 
+  font-family: "Rocher";
+  src: url("[path-to-font]/RocherColorGX.woff2") format("woff2");
 }
 h2 {
-  font-family: 'Rocher';
+  font-family: "Rocher";
 }
 @font-palette-values --override-palette {
-  font-family: 'Rocher';
+  font-family: "Rocher";
   base-palette: 3;
 }
 @font-palette-values --override-palette {
-  font-family: 'Rocher';
+  font-family: "Rocher";
   base-palette: 3;
   override-colors: 0 rebeccapurple;
 }

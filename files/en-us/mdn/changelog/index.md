@@ -47,7 +47,7 @@ Previously, the syntax blocks of JavaScript builtin and WebAPI methods that can 
 
 This was problematic — many developers were confused by this, and it conflicts with valid syntax forms in other programming languages (e.g. `[]` is also an array in JavaScript).
 
-As a result, going forward we are now writing multiple syntax forms of a method on separate lines inside the syntax block. See [Syntax sections > Multiple lines/Optional parameters](/en-US/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections#multiple_lines) for further information and examples.
+As a result, going forward we are now writing multiple syntax forms of a method on separate lines inside the syntax block. See [Syntax sections > Multiple lines/Optional parameters](/en-US/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections#multiple_linesoptional_parameters) for further information and examples.
 
 ### Documenting mixins
 

@@ -20,8 +20,10 @@ The **`:disabled`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CS
 
 ## Syntax
 
-```
-:disabled
+```css
+:disabled {
+  /* ... */
+}
 ```
 
 ## Examples
