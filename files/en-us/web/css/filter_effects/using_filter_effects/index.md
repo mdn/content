@@ -8,67 +8,20 @@ tags:
   - Reference
   - SVG
   - SVG Filter
-  - filter-functions
-browser-compat: css.properties.filter
+  - filter-functions 
+  - Example
+  - filters
+  - Guide
+  - Web
 ---
 
 {{CSSRef}}
 
-The **`filter`** [CSS](/en-US/docs/Web/CSS) property applies graphical effects like blur or color shift to an element. Filters are commonly used to adjust the rendering of images, backgrounds, and borders.
+**CSS filters** are represented by the {{cssxref("&lt;filter-function&gt;")}} data type that define graphical effects that can change the appearance of an image. These effects, or functions, are used in the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.
 
 Included in the CSS standard are several functions that achieve predefined effects. You can also reference an SVG filter with a URL to an [SVG filter element](/en-US/docs/Web/SVG/Element/filter).
 
-{{EmbedInteractiveExample("pages/css/filter.html")}}
-
-## Syntax
-
-```css
-/* URL to SVG filter */
-filter: url("filters.svg#filter-id");
-
-/* <filter-function> values */
-filter: blur(5px);
-filter: brightness(0.4);
-filter: contrast(200%);
-filter: drop-shadow(16px 16px 20px blue);
-filter: grayscale(50%);
-filter: hue-rotate(90deg);
-filter: invert(75%);
-filter: opacity(25%);
-filter: saturate(30%);
-filter: sepia(60%);
-
-/* Multiple filters */
-filter: contrast(175%) brightness(3%);
-
-/* Use no filter */
-filter: none;
-
-/* Global values */
-filter: inherit;
-filter: initial;
-filter: revert;
-filter: revert-layer;
-filter: unset;
-```
-
-With a function, use the following:
-
-```css
-filter: <filter-function> [<filter-function>]* | none
-```
-
-For a reference to an SVG {{SVGElement("filter")}} element, use the following:
-
-```css
-filter: url(file.svg#filter-element-id)
-```
-
-### Interpolation
-
-When animated, if both the beginning and end filters have a function list of the same length without {{cssxref("url","url()")}}, each of their filter functions is {{Glossary("interpolation", "interpolated")}} according to its specific rules. If they have different lengths, the missing equivalent filter functions from the longer list are added to the end of the shorter list using their initial values, then all filter functions are interpolated according to their specific rules. If one filter is `none`, it is replaced with the filter functions list of the other one using the filter function default values, then all filter functions are interpolated according to their specific rules. Otherwise, discrete interpolation is used.
-
-## Functions
+## Filter functions
 
 The `filter` property is specified as `none` or one or more of the functions listed below. If the parameter for any function is invalid, the function returns `none`. Except where noted, the functions that take a value expressed with a percent sign (as in `34%`) also accept the value expressed as decimal (as in `0.34`).
 
@@ -1234,9 +1187,9 @@ table.standard-table td {
 
 {{EmbedLiveSample('Combining_functions','100%','209px','','', 'no-codepen')}}
 
-## Formal definition
+## Interpolation
 
-{{cssinfo}}
+When animated, if both the beginning and end filters have a function list of the same length without {{cssxref("url","url()")}}, each of their filter functions is {{Glossary("interpolation", "interpolated")}} according to its specific rules. If they have different lengths, the missing equivalent filter functions from the longer list are added to the end of the shorter list using their initial values, then all filter functions are interpolated according to their specific rules. If one filter is `none`, it is replaced with the filter functions list of the other one using the filter function default values, then all filter functions are interpolated according to their specific rules. Otherwise, discrete interpolation is used.
 
 ## Formal syntax
 
@@ -1273,17 +1226,9 @@ Examples of using the URL function with an SVG resource are as follows:
 }
 ```
 
-## Specifications
-
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
-- CSS {{cssxref("backdrop-filter")}} property
+- The [CSS filter effects](/en-US/docs/Web/CSS/filter_effects) module which defines these functions and the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties that takes these functions as their value.
 - CSS [compositing and blending](/en-US/docs/Web/CSS/Compositing_and_Blending) module, including the CSS {{cssxref("background-blend-mode")}} and {{cssxref("mix-blend-mode")}} properties.
 - The CSS {{cssxref("mask")}} property
 - [SVG](/en-US/docs/Web/SVG), including the SVG {{SVGElement("filter")}} element and SVG {{SVGAttr("filter")}} attribute.
