@@ -270,7 +270,7 @@ The [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) CSS property 
 </table>
 
 Note that the related {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event and associated {{domxref("ContentVisibilityAutoStateChangeEvent")}} interface were added in version 110, and are gated by the same preference.
-These can be used by application code to monitor visbility changes and stop processes related to rendering the element when the user agent is [skipping its contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents).
+These can be used by application code to monitor visibility changes and stop processes related to rendering the element when the user agent is [skipping its contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents).
 (See {{bug(1791759)}} for more details.)
 
 ### Single numbers as aspect ratio in media queries

@@ -10,7 +10,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.1
 
 {{HTTPSidebar}}
 
-> **Note:** The ability to return a _collection of resources_ is part of the {{Glossary("WebDAV")}} protocol (it may be recieved by web applications accessing a WebDAV server).
+> **Note:** The ability to return a _collection of resources_ is part of the {{Glossary("WebDAV")}} protocol (it may be received by web applications accessing a WebDAV server).
 > Browsers accessing web pages will never encounter this status code.
 
 The HTTP **`207 Multi-Status`** response code indicates that there might be mixture of responses.
