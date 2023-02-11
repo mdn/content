@@ -1635,7 +1635,7 @@
 /en-US/docs/DOM/SVGLinearGradientElement	/en-US/docs/Web/API/SVGLinearGradientElement
 /en-US/docs/DOM/SVGMPathElement	/en-US/docs/Web/API/SVGMPathElement
 /en-US/docs/DOM/SVGMaskElement	/en-US/docs/Web/API/SVGMaskElement
-/en-US/docs/DOM/SVGMatrix	/en-US/docs/Web/API/SVGMatrix
+/en-US/docs/DOM/SVGMatrix	/en-US/docs/Web/API/DOMMatrix
 /en-US/docs/DOM/SVGMissingGlyphElement	/en-US/docs/Web/API/SVGMissingGlyphElement
 /en-US/docs/DOM/SVGNumber	/en-US/docs/Web/API/SVGNumber
 /en-US/docs/DOM/SVGNumberList	/en-US/docs/Web/API/SVGNumberList
@@ -2959,7 +2959,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/SVGLinearGradientElement	/en-US/docs/Web/API/SVGLinearGradientElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGMPathElement	/en-US/docs/Web/API/SVGMPathElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGMaskElement	/en-US/docs/Web/API/SVGMaskElement
-/en-US/docs/Document_Object_Model_(DOM)/SVGMatrix	/en-US/docs/Web/API/SVGMatrix
+/en-US/docs/Document_Object_Model_(DOM)/SVGMatrix	/en-US/docs/Web/API/DOMMatrix
 /en-US/docs/Document_Object_Model_(DOM)/SVGMissingGlyphElement	/en-US/docs/Web/API/SVGMissingGlyphElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGNumber	/en-US/docs/Web/API/SVGNumber
 /en-US/docs/Document_Object_Model_(DOM)/SVGNumberList	/en-US/docs/Web/API/SVGNumberList
@@ -9534,6 +9534,7 @@
 /en-US/docs/Web/API/SVGElement/onsubmit	/en-US/docs/Web/API/HTMLFormElement/submit_event
 /en-US/docs/Web/API/SVGGeometryElement/getTotalPathLength	/en-US/docs/Web/API/SVGGeometryElement/pathLength
 /en-US/docs/Web/API/SVGGraphicsElement/SVGGraphicsElement:_cut_event	/en-US/docs/Web/API/SVGGraphicsElement/cut_event
+/en-US/docs/Web/API/SVGMatrix	/en-US/docs/Web/API/DOMMatrix
 /en-US/docs/Web/API/SVGPathElement/getPointAtLength	/en-US/docs/Web/API/SVGGeometryElement/getPointAtLength
 /en-US/docs/Web/API/SVGPathElement/getTotalLength	/en-US/docs/Web/API/SVGGeometryElement/getTotalLength
 /en-US/docs/Web/API/SVGPathElement/pathLength	/en-US/docs/Web/API/SVGGeometryElement/pathLength

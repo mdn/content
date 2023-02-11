@@ -57912,21 +57912,6 @@
       "Jeremie"
     ]
   },
-  "Web/API/SVGMatrix": {
-    "modified": "2020-10-15T21:09:34.463Z",
-    "contributors": [
-      "fscholz",
-      "zbjornson",
-      "Sebastianz",
-      "mattwojo",
-      "jwhitlock",
-      "jhartz",
-      "kscarfone",
-      "Sheppy",
-      "Yukoba",
-      "Jeremie"
-    ]
-  },
   "Web/API/SVGMetadataElement": {
     "modified": "2020-10-15T21:53:39.187Z",
     "contributors": ["sideshowbarker", "fscholz", "Sebastianz"]

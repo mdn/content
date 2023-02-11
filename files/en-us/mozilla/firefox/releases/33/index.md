@@ -66,7 +66,7 @@ For details please [see the hacks post](https://hacks.mozilla.org/2014/07/event-
 - The {{domxref("RadioNodeList")}} API has been implemented and the selected radio button is accessible via {{domxref("RadioNodeList.value")}} ({{bug(779723)}}).
 - The {{domxref("DOMMatrix")}} has been added ({{bug(1018497)}}).
 - A non-standard (but implemented in other browsers) `DOMException.stack` property has been added. It returns a string with a human-friendly formatted stack ({{bug(857648)}}), in the same format as the existing non-standard {{jsxref("Error.stack")}} property.
-- For {{HTMLElement("canvas")}}, the method {{domxref("CanvasPattern.setTransform()")}}, allowing to modify a pattern using the {{domxref("SVGMatrix")}} representation of a linear transform ({{bug(1019257)}}).
+- For {{HTMLElement("canvas")}}, the method {{domxref("CanvasPattern.setTransform()")}}, allowing to modify a pattern using the {{domxref("DOMMatrix")}} representation of a linear transform ({{bug(1019257)}}).
 - Our experimental implementation of Media Source Extensions, behind the `media.mediasource.enabled` preference, enabled by default in Nightly and Aurora only, now supports MP4 ({{bug(1000686)}}).
 - The properties {{domxref("HTMLMediaElement.audioTracks")}} and {{domxref("HTMLMediaElement.videoTracks")}} have been experimentally implemented. They are controlled by the `media.track.enabled`, off by default ({{bug(744896)}}).
 - The non-standard `XMLHttpRequest.mozBackgroundRequest()` is no more accessible from Web sites. Only Firefox-internal code (Chrome code) can use it ({{bug(1035242)}}).
