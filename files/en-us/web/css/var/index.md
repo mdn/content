@@ -139,10 +139,7 @@ The background color of the HTML body will be pink in this case even though the 
 /* In the component's style: */
 .component .header {
   /* header-color isn't set, and so remains blue, the fallback value */
-  color: var(
-    --header-color,
-    blue
-  );
+  color: var(--header-color, blue);
 }
 
 .component .text {

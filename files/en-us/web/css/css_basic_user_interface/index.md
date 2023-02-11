@@ -8,7 +8,7 @@ tags:
   - Guide
   - Overview
   - Reference
-spec-urls: 
+spec-urls:
   - https://drafts.csswg.org/css-ui/
 ---
 
