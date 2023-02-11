@@ -37,19 +37,19 @@ A new {{domxref("CustomEvent")}} object.
 
 ```js
 // create custom events
-const catFound = new CustomEvent('animalfound', {
+const catFound = new CustomEvent("animalfound", {
   detail: {
-    name: 'cat'
-  }
+    name: "cat",
+  },
 });
-const dogFound = new CustomEvent('animalfound', {
+const dogFound = new CustomEvent("animalfound", {
   detail: {
-    name: 'dog'
-  }
+    name: "dog",
+  },
 });
 
 // add an appropriate event listener
-obj.addEventListener('animalfound', (e) => console.log(e.detail.name));
+obj.addEventListener("animalfound", (e) => console.log(e.detail.name));
 
 // dispatch the events
 obj.dispatchEvent(catFound);

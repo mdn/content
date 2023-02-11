@@ -1,5 +1,5 @@
 ---
-title: ':-moz-handler-disabled'
+title: ":-moz-handler-disabled"
 slug: Web/CSS/:-moz-handler-disabled
 page-type: css-pseudo-class
 tags:
@@ -20,7 +20,9 @@ The **`:-moz-handler-disabled`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-U
 ## Syntax
 
 ```css
-:-moz-handler-disabled
+:-moz-handler-disabled {
+  /* ... */
+}
 ```
 
 ## Specifications

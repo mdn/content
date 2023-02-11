@@ -20,8 +20,10 @@ The **`:-moz-only-whitespace`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US
 
 ## Syntax
 
-```
-:-moz-only-whitespace
+```css
+:-moz-only-whitespace {
+  /* ... */
+}
 ```
 
 ## Examples

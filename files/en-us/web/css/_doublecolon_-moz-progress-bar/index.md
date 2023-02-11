@@ -1,5 +1,5 @@
 ---
-title: '::-moz-progress-bar'
+title: "::-moz-progress-bar"
 slug: Web/CSS/::-moz-progress-bar
 page-type: css-pseudo-element
 tags:
@@ -20,8 +20,10 @@ If you want to select the unfinished part of {{HTMLElement("progress")}} in Mozi
 
 ## Syntax
 
-```
-::-moz-progress-bar
+```css
+::-moz-progress-bar {
+  /* ... */
+}
 ```
 
 ## Examples
