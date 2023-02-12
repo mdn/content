@@ -79,7 +79,8 @@ for await (const chunk of stream.values({ preventCancel: true })) {
 Notes:
 
 - The code in the loop is only run when the next chunk arrives.
-  If a user signal some operation from outside the loop that is implemented in the loop, such as a `break`, there may be a delay.
+  If code from outside the loop triggers code in the loop, such as a `break`, there may be a delay before the code in the loop is executed.
+- Polyfills are available if this feature is not [supported on your browser](#browser_compatibility): [web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill) or [sd-streams](https://github.com/stardazed/sd-streams).
 
 ## Examples
 
