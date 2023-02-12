@@ -22,9 +22,9 @@ This property has no effect on _non-[replaced](/en-US/docs/Web/CSS/Replaced_elem
 
 ```css
 /* <length> values */
-margin-top: 10px;  /* An absolute length */
-margin-top: 1em;   /* relative to the text size */
-margin-top: 5%;    /* relative to the nearest block container's width */
+margin-top: 10px; /* An absolute length */
+margin-top: 1em; /* relative to the text size */
+margin-top: 5%; /* relative to the nearest block container's width */
 
 /* Keyword values */
 margin-top: auto;

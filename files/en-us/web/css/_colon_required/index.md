@@ -24,8 +24,10 @@ This pseudo-class is useful for highlighting fields that must have valid data be
 
 ## Syntax
 
-```
-:required
+```css
+:required {
+  /* ... */
+}
 ```
 
 ## Examples
