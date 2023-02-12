@@ -21,13 +21,13 @@ Checks if a regular expression is supported as a {{WebExtAPIRef("declarativeNetR
 
 ```js-nolint
 let count = browser.declarativeNetRequest.isRegexSupported(
-    RegexOptions                // object
+    regexOptions                // object
 );
 ```
 
 ### Parameters
 
-- `RegexOptions`
+- `regexOptions`
 
   - : An object containing the regular expression to check.
     - `isCaseSensitive` {{optional_inline}}

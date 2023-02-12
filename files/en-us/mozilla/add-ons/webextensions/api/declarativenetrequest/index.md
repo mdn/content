@@ -113,7 +113,7 @@ The number of dynamic and session-scoped rules an extension can add is limited t
 
 When the browser evaluates how to handle requests, it checks each extension's rules that have a condition that matches the request and chooses the one to consider applying as follows:
 
-1. the rule priority, where 1 is the highest priority (and rules default to 1 where priority is not set)
+1. the rule priority, where 1 is the lowest priority (and rules default to 1 where priority is not set)
    If this doesn't result in one rule to apply:
 2. the rule action, in the following order of precedence:
    1. "allow" which means any other remaining rules are ignored.
@@ -165,7 +165,7 @@ If the request was not blocked or redirected, the matching `modifyHeaders` actio
 - {{WebExtAPIRef("declarativeNetRequest.ResourceType")}}
   - : The resource type of a request.
 - {{WebExtAPIRef("declarativeNetRequest.Rule")}}
-  - : An object containing details of a dynamic rule.
+  - : An object containing details of a rule.
 - {{WebExtAPIRef("declarativeNetRequest.RuleAction")}}
   - : An object defining the action to take if a rule is matched.
 - {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}}
@@ -186,11 +186,11 @@ If the request was not blocked or redirected, the matching `modifyHeaders` actio
 - {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}}
   - : The maximum number of combined dynamic and session scoped rules an extension can add.
 - {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_ENABLED_STATIC_RULESETS")}}
-  - : The maximum number of static `Rulesets` an extension can enable.
+  - : The maximum number of static rulesets an extension can enable.
 - {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_REGEX_RULES")}}
   - : The maximum number of regular expression rules that an extension can add.
 - {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_STATIC_RULESETS")}}
-  - : The maximum number of static `Rulesets` an extension can specify as part of the [`"rule_resources"`](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/rule_resources) manifest key.
+  - : The maximum number of static rulesets an extension can specify as part of the [`declarative_net_request.rule_resources`](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) manifest key.
 - {{WebExtAPIRef("declarativeNetRequest.SESSION_RULESET_ID")}}
   - : The ruleset ID for the session-scoped rules added by the extension.
 

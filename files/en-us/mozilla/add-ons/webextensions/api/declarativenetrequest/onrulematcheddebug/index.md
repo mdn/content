@@ -66,12 +66,12 @@ Events have three functions:
         - `tabId`
           - : A `number`. The ID of the tab in which the request takes place. Set to `-1` if the request is not related to a tab.
         - `type`
-          - : [`ResourceType`](/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/ResourceType). The resource type of the request.
+          - : {{WebExtAPIRef("declarativeNetRequest.ResourceType", "ResourceType")}}. The resource type of the request.
         - `url`
           - : A `string`. The URL of the request.
 
     - `rule`
-      - : [`MatchedRule`](/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/MatchedRule). Details of a matched rule.
+      - : {{WebExtAPIRef("declarativeNetRequest.MatchedRule", "MatchedRule")}}. Details of a matched rule.
 
 {{WebExtExamples}}
 

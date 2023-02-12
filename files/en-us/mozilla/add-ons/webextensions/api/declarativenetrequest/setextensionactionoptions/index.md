@@ -20,7 +20,9 @@ Configures whether the action count for tabs is displayed as the extension actio
 ## Syntax
 
 ```js-nolint
-let count = browser.declarativeNetRequest.setExtensionActionOptions();
+let count = browser.declarativeNetRequest.setExtensionActionOptions(
+    extensionActionOptions, // object
+);
 ```
 
 ### Parameters

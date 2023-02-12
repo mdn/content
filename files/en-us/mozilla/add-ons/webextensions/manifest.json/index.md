@@ -52,7 +52,7 @@ These are the `manifest.json` keys; these keys are available in Manifest V2 and 
 - [optional_permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)
 - [options_page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page)
 - [options_ui](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)
-- [page_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) (Manifest V2 only)
+- [page_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) (Manifest V2 only in Chrome)
 - [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)
 - [protocol_handlers](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers)
 - [short_name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name)

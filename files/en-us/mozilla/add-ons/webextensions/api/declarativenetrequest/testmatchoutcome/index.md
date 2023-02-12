@@ -42,7 +42,7 @@ let result = await browser.declarativeNetRequest.testMatchOutcome(
     - `url`
       - : A `string`. The URL of the hypothetical request.
 
-- `options`
+- `options` {{optional_inline}}
 
   - : Details of options for the request.
     - `includeOtherExtensions` {{optional_inline}}
