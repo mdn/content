@@ -10,7 +10,9 @@ tags:
   - Type
   - declarativeNetRequest
   - ModifyHeaderInfo
-browser-compat: webextensions.api.declarativeNetRequest.ModifyHeaderInfo
+browser-compat: 
+  - webextensions.api.declarativeNetRequest.RuleAction.requestHeaders
+  - webextensions.api.declarativeNetRequest.RuleAction.responseHeaders
 ---
 
 {{AddonSidebar()}}
@@ -36,37 +38,35 @@ Values of this type are objects. They contain these properties:
   - : A `string`. The name of the header to be modified.
 - `operation`
   - : A `string`. The operation to be performed on a header. Possible values are `"append"`, `"set"`, and `"remove"`.
-
 - `value` {{optional_inline}}
   - : A `string`. The new value for the header. Must be specified for append and set operations. Not allowed for the "remove" operation.
-  
+
 ## Header limits
 
 In Chrome, `"append"` is supported for the following request headers:
 
- - `Accept`
- - `Accept-Encoding`
- - `Accept-Language`
- - `Access-Control-Request-Headers`
- - `Cache-Control`
- - `Connection`
- - `Content-Language`
- - `Cookie`
- - `Forwarded`
- - `If-Match`
- - `If-None-Match`
- - `Keep-Alive`
- - `Range`
- - `Te`
- - `Trailer`
- - `Transfer-Encoding`
- - `Upgrade`
- - `Via`
- - `Want-Digest`
- - `X-Forwarded-For`
+- `Accept`
+- `Accept-Encoding`
+- `Accept-Language`
+- `Access-Control-Request-Headers`
+- `Cache-Control`
+- `Connection`
+- `Content-Language`
+- `Cookie`
+- `Forwarded`
+- `If-Match`
+- `If-None-Match`
+- `Keep-Alive`
+- `Range`
+- `Te`
+- `Trailer`
+- `Transfer-Encoding`
+- `Upgrade`
+- `Via`
+- `Want-Digest`
+- `X-Forwarded-For`
 
 In Firefox, the extension needs host permissions for the new value of the `Host` header.
-
 
 ## Browser compatibility
 
