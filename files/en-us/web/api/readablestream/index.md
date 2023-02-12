@@ -78,9 +78,8 @@ for await (const chunk of stream.values({ preventCancel: true })) {
 
 Notes:
 
-- You can abort processing of a stream prematurely triggering code to call `throw` or `break` in the loop.
-  Note however that as each iteration is only run when the next chunk arrives, there can be a delay between signalling that you want to cancel, and the code getting to run.
-  The fastest way to terminate the stream may be to abort the "underlying source" of the stream.
+- The code in the loop is only run when the next chunk arrives.
+  If a user signal some operation from outside the loop that is implemented in the loop, such as a `break`, there may be a delay.
 
 ## Examples
 
