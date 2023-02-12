@@ -11381,6 +11381,8 @@
 /en-US/docs/Web/CSS/counters()	/en-US/docs/Web/CSS/counters
 /en-US/docs/Web/CSS/cross-fade()	/en-US/docs/Web/CSS/cross-fade
 /en-US/docs/Web/CSS/default	/en-US/docs/Web/CSS/:default
+/en-US/docs/Web/CSS/display/multi-value_syntax_of_display	/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display
+/en-US/docs/Web/CSS/display/two-value_syntax_of_display	/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display
 /en-US/docs/Web/CSS/document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/document/@-moz-document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/dominant-baseline	/en-US/docs/Web/SVG/Attribute/dominant-baseline
