@@ -143,6 +143,7 @@ If the request was not blocked or redirected, the matching `modifyHeaders` actio
 {{WebExtAPIRef("declarativeNetRequest.testMatchOutcome","testMatchOutcome")}}, {{WebExtAPIRef("declarativeNetRequest.getMatchedRules","getmatchedrules")}}, and {{WebExtAPIRef("declarativeNetRequest.onRuleMatchedDebug","onRuleMatchedDebug")}} are available to assist with testing rules and rulesets. These APIs require the `"declarativeNetRequestFeedback"` [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). In addition:
 
 - in Chrome, these APIs are only available to unpacked extensions.
+- in Firefox, these APIs are only available after setting the `extensions.dnr.feedback` preference to `true`. Set this preference using `about:config` or the [`--pref` flag of the `web-ext` CLI tool](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/#pref).
 
 ## Comparison with the webRequest API
 
