@@ -69,7 +69,7 @@ const p = new Proxy(
       console.log("called");
       return true;
     },
-  }
+  },
 );
 
 console.log(Object.isExtensible(p));
@@ -86,7 +86,7 @@ const p = new Proxy(
     isExtensible(target) {
       return false;
     },
-  }
+  },
 );
 
 Object.isExtensible(p); // TypeError is thrown

@@ -132,7 +132,7 @@ font-family: "Goudy Bookletter 1911", sans-serif;
 
 The following declarations are **invalid**:
 
-```css example-bad
+```css-nolint example-bad
 font-family: Goudy Bookletter 1911, sans-serif;
 font-family: Red/Black, sans-serif;
 font-family: "Lucida" Grande, sans-serif;

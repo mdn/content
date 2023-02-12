@@ -19,11 +19,11 @@ They are also great place to get to know other community members, share your wor
 
 ### Discord server
 
-MDN Web Docs community discord server is open to the public. This server is a great place to see what staff and members of the community are doing on a daily basis.
+MDN Web Docs community Discord server is open to the public. This server is a great place to see what staff and members of the community are doing on a daily basis.
 
 You can ask questions, seek clarifications, and find out how you can get involved. You can also join specific channels based on your areas of interest or expertise.
 
-Join the MDN Web Docs community on discord [here](https://discord.gg/apa6Rn7uEj).
+Join the MDN Web Docs community on Discord [here](https://discord.gg/apa6Rn7uEj).
 
 ### Matrix chat rooms
 
