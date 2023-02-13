@@ -7,7 +7,7 @@ browser-compat: api.MediaList.deleteMedium
 
 {{APIRef("CSSOM")}}
 
-The `deleteMedium()` method of the {{DOMxRef("MediaList")}} interface removed the media type given in parameter from the list.
+The `deleteMedium()` method of the {{DOMxRef("MediaList")}} interface removed the media typquerye given in parameter from the list.
 
 ## Syntax
 
@@ -18,7 +18,7 @@ deleteMedium(medium)
 ### Parameters
 
 - `medium`
-  - : A string containing the media type to remove from the list.
+  - : A string containing the media query to remove from the list.
 
 ### Return value
 
@@ -27,11 +27,11 @@ None ([undefined](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 ### Exceptions
 
 - `NotFoundError` {{domxref("DOMException")}}
-  - : Thrown when the media type to remove is not in the list.
+  - : Thrown when the media query to remove is not in the list.
 
 ## Examples
 
-The following removes the media type `print` into the
+The following removes the media query `print` into the
 `MediaList` associated with the first stylesheet applied to the current document.
 
 ```js

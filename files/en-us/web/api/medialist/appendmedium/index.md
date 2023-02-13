@@ -7,7 +7,7 @@ browser-compat: api.MediaList.appendMedium
 
 {{APIRef("CSSOM")}}
 
-The `appendMedium()` method of the {{DomxRef("MediaList")}} interface add a media type to the list. If the media type is already in it, this method does nothing.
+The `appendMedium()` method of the {{DomxRef("MediaList")}} interface add a media query to the list. If the media query is already in the collection, this method does nothing.
 
 ## Syntax
 
@@ -18,7 +18,7 @@ appendMedium(medium)
 ### Parameters
 
 - `medium`
-  - : A string containing the medium to add.
+  - : A string containing the media query to add.
 
 ### Return value
 
@@ -26,7 +26,7 @@ None ([undefined](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 
 ## Examples
 
-The following adds the media type `print` into the
+The following adds the media query `print` into the
 `MediaList` associated with the first stylesheet applied to the current document.
 
 ```js
