@@ -1,11 +1,13 @@
 ---
 title: font-weight
 slug: Web/SVG/Attribute/font-weight
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute
 browser-compat: svg.attributes.presentation.font-weight
 ---
+
 {{SVGRef}}
 
 The **`font-weight`** attribute refers to the boldness or lightness of the glyphs used to render the text, relative to other fonts in the same font family.
@@ -23,7 +25,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

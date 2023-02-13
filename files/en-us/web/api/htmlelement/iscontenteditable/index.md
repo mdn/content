@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.isContentEditable
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.isContentEditable`** read-only property
@@ -28,10 +29,10 @@ A boolean value.
 
 ```html
 <p id="myText1">Uneditable Paragraph</p>
-<p id="myText2" contentEditable="true">Editable Paragraph</p>
+<p id="myText2" contenteditable="true">Editable Paragraph</p>
 
-<p id="infoText1">Can edit the first paragraph? </p>
-<p id="infoText2">Can edit the second paragraph? </p>
+<p id="infoText1">Can edit the first paragraph?</p>
+<p id="infoText2">Can edit the second paragraph?</p>
 ```
 
 ### JavaScript

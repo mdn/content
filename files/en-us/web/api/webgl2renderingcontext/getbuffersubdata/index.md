@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.getBufferSubData
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.getBufferSubData()`** method of
@@ -19,7 +20,7 @@ binding point and writes them to an {{jsxref("ArrayBuffer")}} or
 
 ## Syntax
 
-```js
+```js-nolint
 getBufferSubData(target, srcByteOffset, dstData)
 getBufferSubData(target, srcByteOffset, dstData, dstOffset)
 getBufferSubData(target, srcByteOffset, dstData, dstOffset, length)

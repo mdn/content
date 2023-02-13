@@ -15,6 +15,7 @@ tags:
   - Reference
 browser-compat: api.DOMPointReadOnly.DOMPointReadOnly
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPointReadOnly()`**
@@ -24,7 +25,7 @@ script code.
 
 ## Syntax
 
-```js
+```js-nolint
 new DOMPointReadOnly()
 new DOMPointReadOnly(x)
 new DOMPointReadOnly(x, y)

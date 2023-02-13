@@ -8,6 +8,7 @@ tags:
   - Overview
   - Reference
 ---
+
 {{DefaultAPISidebar("WebCodecs API")}}
 
 The **WebCodecs API** gives web developers low-level access to the individual frames of a video stream and chunks of audio.

@@ -10,17 +10,18 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEFuncGElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEFuncGElement`** interface corresponds to the {{SVGElement("feFuncG")}} element.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface not provide any specific properties, but inherits properties from its parent interface, {{domxref("SVGComponentTransferFunctionElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGComponentTransferFunctionElement")}}._
 

@@ -10,8 +10,10 @@ tags:
   - Method
   - Reference
   - addListener
+  - Deprecated
 browser-compat: api.MediaQueryList.addListener
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_Header}}
 
 The deprecated **`addListener()`** method of the
@@ -26,7 +28,7 @@ available in the browsers you need to support.
 
 ## Syntax
 
-```js
+```js-nolint
 addListener(func)
 ```
 

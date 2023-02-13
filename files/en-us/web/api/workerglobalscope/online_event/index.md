@@ -11,6 +11,7 @@ tags:
   - online
 browser-compat: api.WorkerGlobalScope.online_event
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`online`** event of the {{domxref("WorkerGlobalScope")}} fires when the device reconnects to the internet.
@@ -34,7 +35,7 @@ A generic {{domxref("Event")}}.
 The following code snippet shows an `onoffline` handler set inside a worker:
 
 ```js
-self.ononline = function() {
+self.ononline = () => {
   console.log('Your worker is now online');
 }
 ```
@@ -42,7 +43,7 @@ self.ononline = function() {
 The same snippet, but using `addEventListener()`:
 
 ```js
-self.addEventListener('online', function() {
+self.addEventListener('online', () => {
   console.log('Your worker is now online');
 });
 ```

@@ -1,6 +1,7 @@
 ---
 title: OpenType font features guide
 slug: Web/CSS/CSS_Fonts/OpenType_fonts_guide
+page-type: guide
 tags:
   - CSS
   - Fonts
@@ -9,6 +10,7 @@ tags:
   - font-feature-settings
   - opentype
 ---
+
 {{CSSRef}}
 
 Font features or variants refer to different glyphs or character styles contained within an OpenType font. These include things like ligatures (special glyphs that combine characters like 'fi' or 'ffl'), kerning (adjustments to the spacing between specific letterform pairings), fractions, numeral styles, and several others. These are all referred to as OpenType Features, and are made available to use on the web via specific properties and low-level control properties — {{cssxref("font-feature-settings")}}. This article provides you with all you need to know about using OpenType font features in CSS.
@@ -172,7 +174,7 @@ According to the specification you can either supply just the 4-character featur
 }
 ```
 
-#### More on font-feature-settings codes
+### More on font-feature-settings codes
 
 - ['The Complete CSS Demo for OpenType Features'](https://sparanoid.com/lab/opentype-features/) (can't vouch for the truth of the name, but it's pretty big)
 - [A list of OpenType features on Wikipedia](https://en.wikipedia.org/wiki/List_of_typographic_features)
@@ -185,14 +187,14 @@ For example, small caps can be set several ways, but if you want to ensure that 
 
 ```css
 .small-caps {
-   font-feature-settings: "smcp", "c2sc";
+  font-feature-settings: "smcp", "c2sc";
 }
 
 @supports (font-variant-caps: all-small-caps) {
-   .small-caps {
-       font-feature-settings: normal;
-       font-variant-caps: all-small-caps;
-   }
+  .small-caps {
+    font-feature-settings: normal;
+    font-variant-caps: all-small-caps;
+  }
 }
 ```
 
@@ -207,7 +209,7 @@ For example, small caps can be set several ways, but if you want to ensure that 
 - [Wakamai Fondue](https://wakamaifondue.com)
 - [Axis Praxis](https://www.axis-praxis.org/)
 
-### W3C Specifications:
+### W3C Specifications
 
 - [Font Feature Properties in CSS Fonts Module Level 3](https://drafts.csswg.org/css-fonts-3/#font-rend-props)
 - [font-variant-alternatives in CSS Fonts Module Level 4](https://www.w3.org/TR/css-fonts-4/#propdef-font-variant-alternates)

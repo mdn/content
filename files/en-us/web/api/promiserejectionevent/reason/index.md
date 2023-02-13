@@ -14,6 +14,7 @@ tags:
   - reason
 browser-compat: api.PromiseRejectionEvent.reason
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("PromiseRejectionEvent")}} **`reason`** read-only
@@ -30,7 +31,7 @@ and whatever else you might wish to include.
 ## Examples
 
 ```js
-window.onunhandledrejection = function(e) {
+window.onunhandledrejection = (e) => {
   console.log(e.reason);
 }
 ```

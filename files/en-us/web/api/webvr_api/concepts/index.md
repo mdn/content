@@ -15,6 +15,7 @@ tags:
   - concepts
   - velocity
 ---
+
 {{APIRef("WebVR API")}}{{deprecated_header}}
 
 > **Note:** WebVR API is replaced by [WebXR API](/en-US/docs/Web/API/WebXR_Device_API). WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.
@@ -72,13 +73,13 @@ The output information falls into four categories:
 2. Orientation — The rotation of the HMD around three axes in a 3D coordinate space. Pitch is rotation around the x axis, yaw is rotation around the y axis, and roll is rotation around the z axis. In WebVR, the pitch, yaw, and roll are represented by the first three elements of the array contained in {{domxref("VRPose.orientation")}}.
 3. Velocity — There are two types of velocity to consider in VR:
 
-    - Linear — The speed along any one of the axes that the HMD is traveling. This information can be accessed using {{domxref("VRPose.linearVelocity")}}.
-    - Angular — The speed at which the HMD is rotating around any one of the axes. This information can be accessed using {{domxref("VRPose.angularVelocity")}}.
+   - Linear — The speed along any one of the axes that the HMD is traveling. This information can be accessed using {{domxref("VRPose.linearVelocity")}}.
+   - Angular — The speed at which the HMD is rotating around any one of the axes. This information can be accessed using {{domxref("VRPose.angularVelocity")}}.
 
 4. Acceleration — There are two types of acceleration to consider in VR:
 
-    - Linear — The acceleration of travel along any one of the axes that the HMD is traveling. This information can be accessed using {{domxref("VRPose.linearAcceleration")}}.
-    - Angular — The acceleration of rotation of the HMD around any one of the axes. This information can be accessed using {{domxref("VRPose.angularAcceleration")}}.
+   - Linear — The acceleration of travel along any one of the axes that the HMD is traveling. This information can be accessed using {{domxref("VRPose.linearAcceleration")}}.
+   - Angular — The acceleration of rotation of the HMD around any one of the axes. This information can be accessed using {{domxref("VRPose.angularAcceleration")}}.
 
 ## Field of view
 
@@ -137,7 +138,7 @@ If developers do not take utmost care, VR apps can actually cause their users to
 To avoid bringing on motion sickness in our users (or at least minimize the effects), we need to:
 
 - Always maintain head tracking (this is the most important of all, especially if it occurs in middle of the experience.)
-- Use constant velocity; avoid acceleration or deceleration camera movements (use linear acceleration, and avoid vs easing if you can.)
+- Use constant velocity; avoid acceleration or deceleration camera movements (use linear acceleration, and avoid easing if you can.)
 - Keep the frame rate up (less than 30fps is uncomfortable.)
 - Avoid sharp and/or unexpected camera rotations.
 - Add fixed points of reference for fixed objects (otherwise the user will believe they are on the move.)
@@ -176,7 +177,7 @@ DoF is directly related to the tracking of the user's head movement.
 
 Although our field of view is much larger (approximately 180º), we need to be aware that only in a small portion of that field can you perceive symbols (the center 60º) or read text (the center 10º). If you do not have an eye tracking sensor we assume that the center of the screen is where the user is focusing their eyes.
 
-This limitation is important to consider when deciding where place visuals on the app canvas — too far towards the edge of the cone of focus can lead to eye strain much more quickly. There is a very interesting post about this (amongst other things) at https\://mixedreality.mozilla.org/ — see [Quick VR Mockups with Illustrator](https://blog.mozvr.com/quick-vr-prototypes/).
+This limitation is important to consider when deciding where to place visuals on the app canvas — too far toward the edge of the cone of focus can lead to eye strain much more quickly. There is a very interesting post about this (amongst other things) at [Mozilla's Mixed Reality site](https://mixedreality.mozilla.org/>) — in particular, read [Quick VR Mockups with Illustrator](https://blog.mozvr.com/quick-vr-prototypes/).
 
 ### 3D Positional Audio
 

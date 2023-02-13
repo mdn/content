@@ -1,12 +1,14 @@
 ---
 title: image-rendering
 slug: Web/SVG/Attribute/image-rendering
+page-type: svg-attribute
 tags:
   - NeedsExample
   - SVG
   - SVG Attribute
 browser-compat: svg.attributes.presentation.image-rendering
 ---
+
 {{SVGRef}}
 
 The **`image-rendering`** attribute provides a hint to the browser about how to make speed vs. quality tradeoffs as it performs image processing.

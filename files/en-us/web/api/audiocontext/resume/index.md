@@ -12,6 +12,7 @@ tags:
   - resume
 browser-compat: api.AudioContext.resume
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`resume()`** method of the {{ domxref("AudioContext") }}
@@ -23,7 +24,7 @@ called on an {{domxref("OfflineAudioContext")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 resume()
 ```
 
@@ -45,17 +46,17 @@ The following snippet is taken from our [AudioContext states demo](https://githu
 the button is updated as appropriate once the promise resolves.
 
 ```js
-susresBtn.onclick = function() {
-  if(audioCtx.state === 'running') {
-    audioCtx.suspend().then(function() {
-      susresBtn.textContent = 'Resume context';
+susresBtn.onclick = () => {
+  if (audioCtx.state === "running") {
+    audioCtx.suspend().then(() => {
+      susresBtn.textContent = "Resume context";
     });
-  } else if(audioCtx.state === 'suspended') {
-    audioCtx.resume().then(function() {
-      susresBtn.textContent = 'Suspend context';
+  } else if (audioCtx.state === "suspended") {
+    audioCtx.resume().then(() => {
+      susresBtn.textContent = "Suspend context";
     });
   }
-}
+};
 ```
 
 ## Specifications

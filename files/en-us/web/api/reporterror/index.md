@@ -10,6 +10,7 @@ tags:
   - Errors
 browser-compat: api.reportError
 ---
+
 {{APIRef}} {{AvailableInWorkers}}
 
 The **`reportError()`** global method may be used to report errors to the console or global event handlers, emulating an uncaught JavaScript exception.
@@ -22,7 +23,7 @@ This ensures that an exception in one callback will not prevent others from bein
 
 ## Syntax
 
-```js
+```js-nolint
 reportError(throwable)
 ```
 
@@ -57,13 +58,13 @@ Note that the handler assigned to `onerror` must return `true` to stop the event
 const newError = new Error('Some error message', "someFile.js", 11);
 self.reportError(newError);
 
-window.onerror = function(message, source, lineno, colno, error) {
-  console.log(`message: ${error.message}, lineno: ${lineno}` );
+window.onerror = (message, source, lineno, colno, error) => {
+  console.error(`message: ${error.message}, lineno: ${lineno}` );
   return true;
 };
 
 self.addEventListener('error', (error) => {
-    console.log(error.filename);
+  console.error(error.filename);
 });
 
 // Output

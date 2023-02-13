@@ -14,6 +14,7 @@ tags:
   - getContributingSources
 browser-compat: api.RTCRtpReceiver.getContributingSources
 ---
+
 {{APIRef("WebRTC API")}}
 
 The **`getContributingSources()`**
@@ -24,7 +25,7 @@ in the last ten seconds.
 
 ## Syntax
 
-```js
+```js-nolint
 getContributingSources()
 ```
 

@@ -12,6 +12,7 @@ tags:
   - Element
 browser-compat: api.Element.ariaValueMin
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaValueMin`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) attribute, which defines the minimum allowed value for a range widget.
@@ -25,9 +26,12 @@ A string which contains a number.
 In this example the `aria-valuemin` attribute on the element with an ID of `slider` is set to "1". Using `ariaValueMin` we update the value to "2".
 
 ```html
-<div role="slider" aria-valuenow="1"
-  aria-valuemin="1" aria-valuemax="7"
-  aria-valuetext="Sunday">
+<div
+  role="slider"
+  aria-valuenow="1"
+  aria-valuemin="1"
+  aria-valuemax="7"
+  aria-valuetext="Sunday"></div>
 ```
 
 ```js

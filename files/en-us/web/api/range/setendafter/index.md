@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.setEndAfter
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.setEndAfter()`** method sets the end position of a
@@ -18,7 +19,7 @@ The **`Range.setEndAfter()`** method sets the end position of a
 
 ## Syntax
 
-```js
+```js-nolint
 setEndAfter(referenceNode)
 ```
 

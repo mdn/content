@@ -4,14 +4,14 @@ slug: Web/API/Navigator/permissions
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Navigator
   - Permissions
   - Property
   - Reference
 browser-compat: api.Navigator.permissions
 ---
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+
+{{APIRef("HTML DOM")}}
 
 The **`Navigator.permissions`** read-only property returns a
 {{domxref("Permissions")}} object that can be used to query and update permission
@@ -24,7 +24,7 @@ A {{domxref("Permissions")}} object.
 ## Examples
 
 ```js
-navigator.permissions.query({name:'geolocation'}).then(function(result) {
+navigator.permissions.query({name:'geolocation'}).then((result) => {
   if (result.state === 'granted') {
     showMap();
   } else if (result.state === 'prompt') {

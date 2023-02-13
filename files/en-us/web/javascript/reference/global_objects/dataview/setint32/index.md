@@ -1,6 +1,7 @@
 ---
 title: DataView.prototype.setInt32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt32
+page-type: javascript-instance-method
 tags:
   - DataView
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.setInt32
 ---
+
 {{JSRef}}
 
 The **`setInt32()`** method stores a signed 32-bit integer
@@ -18,7 +20,7 @@ The **`setInt32()`** method stores a signed 32-bit integer
 
 ## Syntax
 
-```js
+```js-nolint
 setInt32(byteOffset, value)
 setInt32(byteOffset, value, littleEndian)
 ```

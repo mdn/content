@@ -18,6 +18,7 @@ tags:
   - rtpTimestamp
 browser-compat: api.RTCRtpContributingSource.rtpTimestamp
 ---
+
 {{APIRef("WebRTC API")}}
 
 The read-only **`rtpTimestamp`**

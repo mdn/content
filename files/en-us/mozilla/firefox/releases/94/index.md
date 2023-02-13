@@ -2,11 +2,12 @@
 title: Firefox 94 for developers
 slug: Mozilla/Firefox/Releases/94
 tags:
-  - '94'
+  - "94"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 94 that will affect developers. Firefox 94 was released on November 2nd, 2021
@@ -47,7 +48,7 @@ No notable changes
 ## Changes for add-on developers
 
 - Support for `partitionKey`, the first-party URL of a cookie when it's in storage that is partitioned by top-level site, is added to {{WebExtAPIRef('cookies.get')}}, {{WebExtAPIRef('cookies.getAll')}}, {{WebExtAPIRef('cookies.set')}}, {{WebExtAPIRef('cookies.remove')}}, and {{WebExtAPIRef('cookies.cookie')}}. ({{bug(1669716)}})
-- When a context menu is activated, {{WebExtAPIRef('menus.OnClickData','menus.OnClickData.srcUrl')}} returns the raw value of the `src`  attribute of the clicked element, instead of the current URL (after redirects). ({{bug(1659155)}})
+- When a context menu is activated, {{WebExtAPIRef('menus.OnClickData','menus.OnClickData.srcUrl')}} returns the raw value of the `src` attribute of the clicked element, instead of the current URL (after redirects). ({{bug(1659155)}})
 
 ## Older versions
 

@@ -2,11 +2,12 @@
 title: Firefox 101 for developers
 slug: Mozilla/Firefox/Releases/101
 tags:
-  - '101'
+  - "101"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 101 that will affect developers. Firefox 101 was released on May 31, 2022.
@@ -19,9 +20,11 @@ No notable changes.
 
 ### CSS
 
-- The [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) media feature that is used to detect whether the user has specified a preference for higher (`more`)  or lower (`less`) contrast in the presentation of web content is now available by default. This feature now also lets users specify a set of colors to use for the contrast through the new `custom` value ({{bug(1656363)}}).
+- The [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) media feature that is used to detect whether the user has specified a preference for higher (`more`) or lower (`less`) contrast in the presentation of web content is now available by default. This feature now also lets users specify a set of colors to use for the contrast through the new `custom` value ({{bug(1656363)}}).
 
 - Three new viewport sizes have been introduced: small (`s`), large (`l`), and dynamic (`d`). These new sizes have added new [viewport-percentage length units](/en-US/docs/Web/CSS/length) in addition to the existing ones - `vh`, `vw`, `vmax`, and `vmin`. The new viewport-percentage length units include `svh`, `lvh`, `dvh`, `svw`, `lvw`, `dvw`, `svmax`, `lvmax`, `dvmax`, `svmin`, `lvmin`, and `dvmin` ({{bug(1610815)}}). Additionally, the units `vb` and `vi` are now supported by default ({{bug(1610815)}}).
+
+- Support for the [`inline-size`](/en-US/docs/Web/CSS/contain#inline-size) value for the `contain` property has been added. For more information, see ({{bug(1755565)}}).
 
 ### JavaScript
 
@@ -53,6 +56,11 @@ No notable changes.
   Note that zero if a valid frame rate value, but is interpreted by Firefox as "no frame rate limit".
   For more information, see {{bug(1611957)}}.
 
+#### SVG
+
+- SVG images in the Firefox UI that are styled using [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) will respect the [`color-scheme`](/en-US/docs/Web/CSS/color-scheme) of the embedder (previously `prefers-color-scheme` ignored the `color-scheme` of the embedder and triggered off either the device or browser theme).
+  This ensures that a favicon, for example, is always styled to match the theme of the elements that nest it, and not necessarily the (potentially different) theme of the device. ({{bug(1764354)}}).
+
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 Starting with this release of Firefox the [WebDriver BiDi](https://wiki.mozilla.org/WebDriver/RemoteProtocol/WebDriver_BiDi) protocol will be enabled by default. A WebDriver BiDi session can be requested by using WebDriver classic (geckodriver, Marionette) and setting the [`webSocketURL` capability](/en-US/docs/Web/WebDriver/Capabilities/webSocketUrl) to `true` when creating a new WebDriver session. The same capability will then contain the WebSocket end-point for BiDi clients to connect to.
@@ -70,7 +78,7 @@ For more information, see the [full bug list](https://bugzilla.mozilla.org/bugli
 ## Changes for add-on developers
 
 - Addition of the {{WebExtAPIRef("scripting")}} API, which provides features to execute a script, insert and remove CSS, and manage the registration of content scripts ({{bug(1687764)}}). This API is available to Manifest V3 extensions and takes over the execute script and insert and remove CSS features from the {{WebExtAPIRef("tabs")}} API.
-- Addition of the {{WebExtAPIRef("action")}} API, which takes over the features of the {{WebExtAPIRef("browserAction")}} API in Manifest V3 extensions. Corresponding addition of the [`"action"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) manifest key. Note that the {{WebExtAPIRef("browserAction")}} API and [`"action"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest key are only available in Manifest V2 extensions.
+- Addition of the {{WebExtAPIRef("action")}} API, which takes over the features of the {{WebExtAPIRef("browserAction")}} API in Manifest V3 extensions. Corresponding addition of the [`"action"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) manifest key and [`_execute_action` special shortcut](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#special_shortcuts) to the manifest `commands` key. Note that the {{WebExtAPIRef("browserAction")}} API and [`"browser_action"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest key are only available in Manifest V2 extensions.
 - The [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) manifest key property `"persistent"` can be set to `false` under the control of preferences: for Manifest V2, the <code>extensions.eventPages.enabled</code> preference, and in Manifest V3, the <code>extensions.manifestV3.enabled</code> preference.
 - Addition of the [`"host_permissions"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key, which is available for Manifest V3 extensions.
 - The content script execution environment has changed for Manifest V3 extensions:
@@ -78,7 +86,7 @@ For more information, see the [full bug list](https://bugzilla.mozilla.org/bugli
   - The `content` object (that offered `content.fetch`, `content.XMLHttpRequest`, and `content.WebSocket`) is removed from the content script execution environment.
 - Addition of the {{WebExtAPIRef("storage.StorageArea.onChanged")}} event that enables you to listen for changes in content in the `local` and `sync` storage areas ({{bug(1758475)}}).
 
-#### Removals
+### Removals
 
 ### Other
 

@@ -7,6 +7,7 @@ tags:
   - TouchEvent
   - touch
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 Today, most Web content is designed for keyboard and mouse input. However, devices with touch screens (especially portable devices) are mainstream and Web applications can either directly process touch-based input by using {{domxref("Touch_events","Touch Events")}} or the application can use _interpreted mouse events_ for the application input. A disadvantage to using mouse events is that they do not support concurrent user input, whereas touch events support multiple simultaneous inputs (possibly at different locations on the touch surface), thus enhancing user experiences.
@@ -79,7 +80,7 @@ Access the attributes of a touch point.
 
 ```js
 // Create touchstart handler
-someElement.addEventListener('touchstart', function(ev) {
+someElement.addEventListener('touchstart', (ev) => {
   // Iterate through the touch points that were activated
   // for this element and process each event 'target'
   for (let i = 0; i < ev.targetTouches.length; i++) {
@@ -117,7 +118,7 @@ Some new features regarding a touch point's [touch area](/en-US/docs/Web/API/Tou
 
 The introduction of new input mechanisms results in increased application complexity to handle various input events, such as key events, mouse events, pen/stylus events, and touch events. To help address this problem, the [Pointer Events standard](https://www.w3.org/TR/pointerevents/) _defines events and related interfaces for handling hardware agnostic pointer input from devices including a mouse, pen, touchscreen, etc._. That is, the abstract _pointer_ creates a unified input model that can represent a contact point for a finger, pen/stylus or mouse. See the [Pointer Events MDN article](/en-US/docs/Web/API/Pointer_events).
 
-The pointer event model can simplify an application's input processing since a pointer represents input from any input device. Additionally, the pointer event types are very similar to mouse event types (for example, `pointerdown` `pointerup`) thus code to handle pointer events closely matches mouse handling code.
+The pointer event model can simplify an application's input processing since a pointer represents input from any input device. Additionally, the pointer event types are very similar to mouse event types (for example, `pointerdown` and `pointerup`) thus code to handle pointer events closely matches mouse handling code.
 
 The implementation status of pointer events in browsers is [relatively high](https://caniuse.com/#search=pointer) with Chrome, Firefox, IE11 and Edge having complete implementations.
 

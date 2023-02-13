@@ -1,11 +1,13 @@
 ---
 title: from
 slug: Web/SVG/Attribute/From
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute
 browser-compat: svg.elements.animate.from
 ---
+
 {{SVGRef}}
 
 The **`from`** attribute indicates the initial value of the attribute that will be modified during the animation.
@@ -22,7 +24,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -30,7 +34,7 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <rect x="10" y="10" height="100">
-    <animate attributeName="width" fill="freeze" from="100" to="150" dur="3s"/>
+    <animate attributeName="width" fill="freeze" from="100" to="150" dur="3s" />
   </rect>
 </svg>
 ```

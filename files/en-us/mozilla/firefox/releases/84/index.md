@@ -2,11 +2,12 @@
 title: Firefox 84 for developers
 slug: Mozilla/Firefox/Releases/84
 tags:
-  - '84'
+  - "84"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 84 that will affect developers. Firefox 84 was released on December 15, 2020.
@@ -41,7 +42,7 @@ _No changes._
 
 ### Security
 
-- Firefox now ensures that `localhost` URLs — such as *http\://localhost/* and *http\://dev.localhost/* — refer to the local host's loopback interface (e.g. _http\://127.0.0.1_). As a result, resources loaded from `localhost` are now assumed to have been delivered securely (see [Secure contexts](/en-US/docs/Web/Security/Secure_Contexts)), and also will not be treated as [mixed content](/en-US/docs/Web/Security/Mixed_content) ({{bug(1220810)}}, {{bug(1488740)}}).
+- Firefox now ensures that `localhost` URLs — such as `http://localhost/` and `http://dev.localhost/` — refer to the local host's loopback interface (e.g. `http://127.0.0.1`). As a result, resources loaded from `localhost` are now assumed to have been delivered securely (see [Secure contexts](/en-US/docs/Web/Security/Secure_Contexts)), and also will not be treated as [mixed content](/en-US/docs/Web/Security/Mixed_content) ({{bug(1220810)}}, {{bug(1488740)}}).
 
 ### APIs
 

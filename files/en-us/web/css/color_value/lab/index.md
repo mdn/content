@@ -1,6 +1,7 @@
 ---
 title: lab()
 slug: Web/CSS/color_value/lab
+page-type: css-function
 tags:
   - CSS
   - CSS Data Type
@@ -9,9 +10,11 @@ tags:
   - Web
   - color
   - lab
+  - Experimental
 browser-compat: css.types.color.lab
 ---
-{{CSSRef}}
+
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`lab()`** functional notation expresses a given color in the CIE L\*a\*b\* color space. Lab represents the entire range of color that humans can see.
 
@@ -34,6 +37,10 @@ lab(52.2345% 40.1645 59.9971 / .5);
     The third argument `b` is the distance along the `b` axis in the Lab colorspace.
 
     `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+
+### Formal syntax
+
+{{csssyntax}}
 
 ## Specifications
 

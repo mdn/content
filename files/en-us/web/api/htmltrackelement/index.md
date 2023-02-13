@@ -11,13 +11,14 @@ tags:
   - Reference
 browser-compat: api.HTMLTrackElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLTrackElement`** interface represents an {{Glossary("HTML")}} {{HTMLElement("track")}} element within the {{Glossary("DOM")}}. This element can be used as a child of either {{HTMLElement("audio")}} or {{HTMLElement("video")}} to specify a text track containing information such as closed captions or subtitles.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -45,7 +46,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLTrackElement.track")}} {{ReadOnlyInline}}
   - : Returns {{Domxref("TextTrack")}} is the track element's text track data.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

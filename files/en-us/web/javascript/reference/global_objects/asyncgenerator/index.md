@@ -1,6 +1,7 @@
 ---
 title: AsyncGenerator
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator
+page-type: javascript-class
 tags:
   - Class
   - ECMAScript 2018
@@ -11,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.AsyncGenerator
 ---
+
 {{JSRef}}
 
 The **`AsyncGenerator`** object is returned by an {{jsxref("Statements/async_function*", "async generator function", "", 1)}} and it conforms to both the [async iterable protocol and the async iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols).
@@ -37,6 +39,11 @@ asyncGen.next()
 asyncGen.next()
   .then((res) => console.log(res.value)); // 3
 ```
+
+## Instance properties
+
+- `AsyncGenerator.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"AsyncGenerator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
@@ -94,7 +101,7 @@ main()
 
 - {{jsxref("Statements/function*", "function*", "", 1)}}
 - {{jsxref("Statements/async_function*", "async function*", "", 1)}}
-- {{jsxref("Operators/function*", '<code>function*</code> expression', "", 1)}}
+- [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("GeneratorFunction", "Generator Function", "", 1)}}
 - {{jsxref("AsyncGeneratorFunction", "Async Generator Function", "", 1)}}
 - [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)

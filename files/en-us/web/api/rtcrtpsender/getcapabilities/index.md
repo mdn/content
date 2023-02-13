@@ -19,6 +19,7 @@ tags:
   - getCapabilities
 browser-compat: api.RTCRtpSender.getCapabilities
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The _static function_
@@ -31,7 +32,7 @@ calling the static function {{domxref("RTCRtpReceiver.getCapabilities()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getCapabilities(kind) //static function
 ```
 

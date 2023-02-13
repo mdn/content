@@ -16,7 +16,8 @@ tags:
   - track
 browser-compat: api.MediaStream.getVideoTracks
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The **`getVideoTracks()`** method of the
 {{domxref("MediaStream")}} interface returns a sequence of
@@ -24,7 +25,7 @@ The **`getVideoTracks()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 getVideoTracks()
 ```
 
@@ -41,10 +42,6 @@ is empty if the stream contains no video tracks.
 
 > **Note:** The order of the tracks is not defined by the specification,
 > and may not be the same from one call to `getVideoTracks()` to another.
-
-Early versions of this API included a special `VideoStreamTrack` interface
-which was used as the type for each entry in the list of video streams; however, this
-has since been merged into the main {{domxref("MediaStreamTrack")}} interface.
 
 ## Examples
 

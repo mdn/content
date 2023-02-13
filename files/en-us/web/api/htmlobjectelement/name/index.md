@@ -12,6 +12,7 @@ tags:
   - name
 browser-compat: api.HTMLObjectElement.name
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`name`** property of the

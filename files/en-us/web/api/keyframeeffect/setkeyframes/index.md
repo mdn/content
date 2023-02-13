@@ -13,13 +13,14 @@ tags:
   - web animations api
 browser-compat: api.KeyframeEffect.setKeyframes
 ---
+
 {{ APIRef("Web Animations API") }}
 
 The **`setKeyframes()`** method of the {{domxref("KeyframeEffect")}} interface replaces the keyframes that make up the affected `KeyframeEffect` with a new set of keyframes.
 
 ## Syntax
 
-```js
+```js-nolint
 setKeyframes(keyframes)
 ```
 

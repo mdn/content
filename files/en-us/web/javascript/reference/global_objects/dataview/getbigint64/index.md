@@ -1,6 +1,7 @@
 ---
 title: DataView.prototype.getBigInt64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigInt64
+page-type: javascript-instance-method
 tags:
   - BigInt
   - DataView
@@ -12,6 +13,7 @@ tags:
   - getBigInt64()
 browser-compat: javascript.builtins.DataView.getBigInt64
 ---
+
 {{JSRef}}
 
 The **`getBigInt64()`** method gets a signed 64-bit integer
@@ -21,7 +23,7 @@ The **`getBigInt64()`** method gets a signed 64-bit integer
 
 ## Syntax
 
-```js
+```js-nolint
 getBigInt64(byteOffset)
 getBigInt64(byteOffset, littleEndian)
 ```

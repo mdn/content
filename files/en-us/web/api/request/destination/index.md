@@ -17,6 +17,7 @@ tags:
   - request
 browser-compat: api.Request.destination
 ---
+
 {{APIRef("Fetch")}}
 
 The **`destination`** read-only

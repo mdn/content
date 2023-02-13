@@ -7,6 +7,7 @@ tags:
   - Status code
 browser-compat: http.status.100
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`100 Continue`** informational status response code
@@ -19,7 +20,7 @@ and receive a `100 Continue` status code in response before sending the body.
 
 ## Status
 
-```
+```http
 100 Continue
 ```
 

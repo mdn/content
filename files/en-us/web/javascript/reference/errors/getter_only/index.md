@@ -1,6 +1,7 @@
 ---
 title: 'TypeError: setting getter-only property "x"'
 slug: Web/JavaScript/Reference/Errors/Getter_only
+page-type: javascript-error
 tags:
   - Error
   - Errors
@@ -8,6 +9,7 @@ tags:
   - Strict Mode
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "setting getter-only property" occurs when there is an attempt
@@ -46,11 +48,11 @@ property to `30`. For more details see also the
 
 function Archiver() {
   const temperature = null;
-  Object.defineProperty(this, 'temperature', {
+  Object.defineProperty(this, "temperature", {
     get() {
-      console.log('get!');
+      console.log("get!");
       return temperature;
-    }
+    },
   });
 }
 
@@ -72,18 +74,20 @@ function Archiver() {
   let temperature = null;
   const archive = [];
 
-  Object.defineProperty(this, 'temperature', {
+  Object.defineProperty(this, "temperature", {
     get() {
-      console.log('get!');
+      console.log("get!");
       return temperature;
     },
     set(value) {
       temperature = value;
       archive.push({ val: temperature });
-    }
+    },
   });
 
-  this.getArchive = function() { return archive; };
+  this.getArchive = function () {
+    return archive;
+  };
 }
 
 const arc = new Archiver();

@@ -10,6 +10,7 @@ tags:
   - MIDIPort
 browser-compat: api.MIDIPort.state
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
 The **`state`** read-only property of the {{domxref("MIDIPort")}} interface returns the state of the port.
@@ -28,8 +29,8 @@ A string containing the state of the port, one of:
 The following example loops through all input ports and prints the state of each to the console.
 
 ```js
-for (let entry of midiAccess.inputs) {
-  let input = entry[1];
+for (const entry of midiAccess.inputs) {
+  const input = entry[1];
   console.log(input.state);
 }
 ```

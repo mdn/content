@@ -1,12 +1,14 @@
 ---
 title: onclick
 slug: Web/SVG/Attribute/onclick
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute
   - events
 browser-compat: svg.attributes.events.global.onclick
 ---
+
 {{SVGRef}}
 
 The **`onclick`** attribute specifies some script to run when the element is clicked.
@@ -54,7 +56,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
   margin: 0;
 }
@@ -62,7 +66,11 @@ html, body, svg {
 
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="100" onclick="alert('You have clicked the circle.')" />
+  <circle
+    cx="100"
+    cy="100"
+    r="100"
+    onclick="alert('You have clicked the circle.')" />
 </svg>
 ```
 

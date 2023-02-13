@@ -1,6 +1,7 @@
 ---
 title: offset-position
 slug: Web/CSS/offset-position
+page-type: css-property
 tags:
   - CSS
   - CSS Motion Path
@@ -11,6 +12,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.offset-position
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`offset-position`** CSS property defines the [initial position](https://www.w3.org/TR/motion-1/#valdef-offsetpath-initial-position) of the {{cssxref("offset-path")}}.
@@ -73,7 +75,7 @@ offset-position: unset;
 
 ```css
 #motion-demo {
-  offset-path: path('M20,20 C20,100 200,0 200,100');
+  offset-path: path("M20,20 C20,100 200,0 200,100");
   offset-position: left top;
   animation: move 3000ms infinite alternate ease-in-out;
   width: 40px;

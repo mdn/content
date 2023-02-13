@@ -9,58 +9,68 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming.redirectStart
 ---
-{{APIRef("Resource Timing API")}}
 
-The **`redirectStart`** read-only property returns a
-{{domxref("DOMHighResTimeStamp","timestamp")}} representing the start time of the fetch
-which that initiates the redirect.
+{{APIRef("Performance API")}}
 
-If there are HTTP redirects when fetching the resource and if any of the redirects are
-not from the same origin as the current document, but the timing allow check algorithm
-passes for each redirected resource, this property returns the starting time of the
-fetch that initiates the redirect; otherwise, zero is returned.
+The **`redirectStart`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} representing the start time of the fetch which that initiates the redirect.
 
-{{AvailableInWorkers}}
+If there are HTTP redirects when fetching the resource and if any of the redirects are not from the same origin as the current document, but the timing allow check algorithm passes for each redirected resource, this property returns the starting time of the fetch that initiates the redirect; otherwise, zero is returned.
+
+To get the amount of redirects, see also {{domxref("PerformanceNavigationTiming.redirectCount")}}.
 
 ## Value
 
-A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the start time of the
-fetch which initiates the redirect.
+The `redirectStart` property can have the following values:
+
+- A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the start time of the fetch which initiates the redirect.
+- `0` if there is no redirect.
+- `0` if the resource is a cross-origin request and no {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header is used.
 
 ## Examples
 
-In the following example, the value of the `*Start` and `*End`
-properties of all "`resource`"
-{{domxref("PerformanceEntry.entryType","type")}} events are logged.
+### Measuring redirection time
+
+The `redirectStart` and {{domxref("PerformanceResourceTiming.redirectEnd", "redirectEnd")}} properties can be used to measure how long the redirection takes.
 
 ```js
-function print_PerformanceEntries() {
-  // Use getEntriesByType() to just get the "resource" events
-  const p = performance.getEntriesByType("resource");
-  for (let i=0; i < p.length; i++) {
-    print_start_and_end_properties(p[i]);
-  }
-}
-function print_start_and_end_properties(perfEntry) {
-  // Print timestamps of the PerformanceEntry *start and *end properties
-  properties = ["connectStart", "connectEnd",
-                "domainLookupStart", "domainLookupEnd",
-                "fetchStart",
-                "redirectStart", "redirectEnd",
-                "requestStart",
-                "responseStart", "responseEnd",
-                "secureConnectionStart"];
+const redirect = entry.redirectEnd - entry.redirectStart;
+```
 
-  for (let i=0; i < properties.length; i++) {
-    // check each property
-    const value = perfEntry[properties[i]];
-    if (properties[i] in perfEntry) {
-      console.log(`… ${properties[i]} = ${value}`);
-    } else {
-      console.log(`… ${properties[i]} = NOT supported`);
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `resource` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
+
+```js
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    const redirect = entry.redirectEnd - entry.redirectStart;
+    if (redirect > 0) {
+      console.log(`${entry.name}: Redirect time: ${redirect}ms`);
     }
+  });
+});
+
+observer.observe({ type: "resource", buffered: true });
+```
+
+Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
+
+```js
+const resources = performance.getEntriesByType("resource");
+resources.forEach((entry) => {
+  const redirect = entry.redirectEnd - entry.redirectStart;
+  if (redirect > 0) {
+    console.log(`${entry.name}: Redirect time: ${redirect}ms`);
   }
-}
+});
+```
+
+### Cross-origin timing information
+
+If the value of the `redirectStart` property is `0`, the resource might be a cross-origin request. To allow seeing cross-origin timing information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
+
+For example, to allow `https://developer.mozilla.org` to see timing resources, the cross-origin resource should send:
+
+```http
+Timing-Allow-Origin: https://developer.mozilla.org
 ```
 
 ## Specifications
@@ -70,3 +80,8 @@ function print_start_and_end_properties(perfEntry) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("PerformanceNavigationTiming.redirectCount")}}
+- {{HTTPHeader("Timing-Allow-Origin")}}

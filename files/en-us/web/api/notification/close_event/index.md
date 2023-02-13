@@ -12,6 +12,7 @@ tags:
   - close
 browser-compat: api.Notification.close_event
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`close`** event of the {{domxref("Notification")}} interface fires when a {{domxref("Notification")}} is closed.

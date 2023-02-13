@@ -11,6 +11,7 @@ tags:
   - shadow dom
 browser-compat: api.ShadowRoot.activeElement
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`activeElement`** read-only property of the

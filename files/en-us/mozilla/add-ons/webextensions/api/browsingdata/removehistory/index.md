@@ -12,6 +12,7 @@ tags:
   - removeHistory
 browser-compat: webextensions.api.browsingData.removeHistory
 ---
+
 {{AddonSidebar()}}
 
 Clears the record of web pages that the user has visited (browsing history).
@@ -25,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let removing = browser.browsingData.removeHistory(
   removalOptions            // RemovalOptions object
 )
@@ -57,11 +58,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-let oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+let oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.removeHistory(
-  {since: oneWeekAgo}).
-then(onRemoved, onError);
+browser.browsingData
+  .removeHistory({ since: oneWeekAgo })
+  .then(onRemoved, onError);
 ```
 
 Remove all records of visited pages:
@@ -75,8 +76,7 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removeHistory({}).
-then(onRemoved, onError);
+browser.browsingData.removeHistory({}).then(onRemoved, onError);
 ```
 
 ## Browser compatibility
@@ -86,10 +86,9 @@ then(onRemoved, onError);
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -116,4 +115,4 @@ then(onRemoved, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

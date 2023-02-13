@@ -11,6 +11,7 @@ tags:
   - locked
 browser-compat: api.WritableStream.locked
 ---
+
 {{APIRef("Streams")}}
 
 The **`locked`** read-only property of the {{domxref("WritableStream")}} interface returns a boolean indicating whether the `WritableStream` is locked to a writer.

@@ -15,6 +15,7 @@ tags:
   - keys()
 browser-compat: api.CSSUnparsedValue.keys
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSUnparsedValue.keys()`** method
@@ -23,7 +24,7 @@ for each index in the array.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

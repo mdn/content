@@ -13,6 +13,7 @@ tags:
   - activated
 browser-compat: api.Sensor.activated
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`activated`** read-only property

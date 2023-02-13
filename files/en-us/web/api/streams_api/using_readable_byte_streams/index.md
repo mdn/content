@@ -15,6 +15,7 @@ tags:
   - reader
   - tee
 ---
+
 {{apiref("Streams")}}
 
 Readable _byte streams_ are [readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams) that have an underlying byte source of `type: "bytes"`, and which support efficient zero-copy transfer of data from the underlying source to a consumer (bypassing the stream's internal queues).
@@ -105,7 +106,7 @@ class MockHypotheticalSocket {
     this.socketdata = null;
   }
 
-  /* Method returning promise when this socket is readable. */
+  // Method returning promise when this socket is readable.
   select2() {
     // Object used to resolve promise
     const resultobj = {};
@@ -118,7 +119,7 @@ class MockHypotheticalSocket {
       }
 
       // Emulate slow read of data
-      window.setTimeout(() => {
+      setTimeout(() => {
         const numberBytesReceived = this.getNumberRandomBytesSocket();
         this.data_read += numberBytesReceived;
         this.socketdata = this.randomByteArray(numberBytesReceived);
@@ -144,32 +145,29 @@ class MockHypotheticalSocket {
     return length_data;
   }
 
-  /* Dummy close function */
+  // Dummy close function
   close() {
-    return
+    return;
   }
 
-  /* Return random number bytes in this call of socket */
+  // Return random number bytes in this call of socket
   getNumberRandomBytesSocket() {
-    //Capped to remaining data and the max min return-per-read range
+    // Capped to remaining data and the max min return-per-read range
     const remaining_data = this.max_data - this.data_read;
-    let numberBytesReceived = 0;
-    if (remaining_data < this.min_per_read) {
-      numberBytesReceived = remaining_data;
-    } else {
-      numberBytesReceived = this.getRandomIntInclusive(this.min_per_read, Math.min(this.max_per_read, remaining_data));
-    }
+    const numberBytesReceived = remaining_data < this.min_per_read
+      ? remaining_data
+      : this.getRandomIntInclusive(this.min_per_read, Math.min(this.max_per_read, remaining_data));
     return numberBytesReceived;
   }
 
-  /* Return random number between two values */
+  // Return random number between two values
   getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
-  /* Return random character string */
+  // Return random character string
   randomChars(length = 8) {
     let string = "";
     let choices = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
@@ -209,13 +207,11 @@ button {
 <button>Cancel stream</button>
 <div class="input">
   <h2>Underlying source</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 <div class="output">
   <h2>Consumer</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 ```
 
@@ -254,7 +250,7 @@ This ensures that the stream is handed a {{domxref("ReadableByteStreamController
 Since data can arrive at the socket before the consumer is ready to handle it, everything about reading the underlying source is configured in the `start()` callback method (we don't wait on a pull to start handling data).
 The implementation opens the "socket" and calls `select2()` to request data.
 When the returned promise resolves the code checks if `controller.byobRequest` exists (is not `null`), and if so calls `socket.readInto()` to copy data into the request and transfer it.
-If `byobRequest` does not exist there is no outstanding request from a consuming stream that can be satisfied as as zero-copy transfer.
+If `byobRequest` does not exist there is no outstanding request from a consuming stream that can be satisfied as a zero-copy transfer.
 In this case, `controller.enqueue()` used to copy data to the stream internal queues.
 
 The `select2()` request for more data is reposted until a request is returned with no data.
@@ -275,7 +271,7 @@ function makeSocketStream(host, port) {
       readRepeatedly().catch((e) => controller.error(e));
       function readRepeatedly() {
         return socket.select2().then(() => {
-          // Since the socket can become readable even when there’s
+          // Since the socket can become readable even when there's
           // no pending BYOB requests, we need to handle both cases.
           let bytesRead;
           if (controller.byobRequest) {
@@ -326,7 +322,7 @@ Note `processText()` is called recursively to read more data until the buffer is
 When the underlying source signals that it has no more data, the `reader.read()` will have `done` set to true, which in turn completes the read operation.
 
 This code is almost exactly the same as for the [Underlying pull source with byte reader](#underlying_pull_source_with_byte_reader) example above.
-The only difference is that the reader includes some code to slow down reading, so the the log output can demonstrate that data will be enqueued if not read fast enough.
+The only difference is that the reader includes some code to slow down reading, so the log output can demonstrate that data will be enqueued if not read fast enough.
 
 ```js
 const reader = stream.getReader({mode: "byob"});
@@ -428,7 +424,7 @@ class MockUnderlyingFileHandle {
     this.position = 0;
   }
 
-  /* Read data from "file" at position/length into specified buffer offset */
+  // Read data from "file" at position/length into specified buffer offset
   read(buffer, offset, length, position) {
     // Object used to resolve promise
     const resultobj = {};
@@ -452,16 +448,16 @@ class MockUnderlyingFileHandle {
         }
       }
       // Emulate slow read of data
-      window.setTimeout(() => { resolve(resultobj); }, 1000);
+      setTimeout(() => { resolve(resultobj); }, 1000);
     });
   }
 
-  /* Dummy close function */
+  // Dummy close function
   close() {
-    return
+    return;
   }
 
-  /* Return random character string */
+  // Return random character string
   randomChars(length = 8) {
     let string = "";
     let choices = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
@@ -472,7 +468,7 @@ class MockUnderlyingFileHandle {
     return string;
   }
 
-  /* Return random Uint8Array of bytes */
+  // Return random Uint8Array of bytes
   randomByteArray(bytes = 8) {
     const textEncoder = new TextEncoder();
     return textEncoder.encode(this.randomChars(bytes));
@@ -501,13 +497,11 @@ button {
 <button>Cancel stream</button>
 <div class="input">
   <h2>Underlying source</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 <div class="output">
   <h2>Consumer</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 ```
 
@@ -603,7 +597,7 @@ readStream(reader);
 
 function readStream(reader) {
   let bytesReceived = 0;
-  let offset =  0;
+  let offset = 0;
 
   while (offset < buffer.byteLength) {
     // read() returns a promise that resolves when a value has been received
@@ -651,7 +645,7 @@ Of particular note are that the:
 ### Underlying pull source with default reader
 
 This live example shows how the same data might be read as a zero-copy transfer using a default reader ({{domxref("ReadableStreamDefaultReader")}}).
-This uses the same same [mocked underlying file source](#mocked_underlying_file_source) as in the preceding example.
+This uses the same [mocked underlying file source](#mocked_underlying_file_source) as in the preceding example.
 
 ```js hidden
 class MockUnderlyingFileHandle {
@@ -669,7 +663,7 @@ class MockUnderlyingFileHandle {
     resultobj["bytesRead"] = 0;
 
     return new Promise((resolve/*, reject*/) => {
-      if (position >= this.maxdata) { //out of data
+      if (position >= this.maxdata) { // out of data
         resolve(resultobj);
         return;
       }
@@ -685,16 +679,16 @@ class MockUnderlyingFileHandle {
         }
       }
       // Emulate slow read of data
-      window.setTimeout(() => resolve(resultobj), 1000);
+      setTimeout(() => resolve(resultobj), 1000);
     });
   }
 
-  /* Dummy close function */
+  // Dummy close function
   close() {
-    return
+    return;
   }
 
-  /* Return random character string */
+  // Return random character string
   randomChars(length = 8) {
     let string = "";
     let choices = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
@@ -705,7 +699,7 @@ class MockUnderlyingFileHandle {
     return string;
   }
 
-  /* Return random Uint8Array of bytes */
+  // Return random Uint8Array of bytes
   randomByteArray(bytes = 8) {
     const textEncoder = new TextEncoder();
     return textEncoder.encode(this.randomChars(bytes));
@@ -734,15 +728,12 @@ button {
 <button>Cancel stream</button>
 <div class="input">
   <h2>Underlying source</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 <div class="output">
   <h2>Consumer</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
-
 ```
 
 ```js hidden
@@ -876,7 +867,7 @@ class MockUnderlyingFileHandle {
     this.position = 0;
   }
 
-  /* Read data from "file" at position/length into specified buffer offset */
+  // Read data from "file" at position/length into specified buffer offset
   read(buffer, offset, length, position) {
     // Object used to resolve promise
     const resultobj = {};
@@ -900,16 +891,16 @@ class MockUnderlyingFileHandle {
         }
       }
       // Emulate slow read of data
-      window.setTimeout(() => { resolve(resultobj); }, 1000);
+      setTimeout(() => { resolve(resultobj); }, 1000);
     });
   }
 
-  /* Dummy close function */
+  // Dummy close function
   close() {
-    return
+    return;
   }
 
-  /* Return random character string */
+  // Return random character string
   randomChars(length = 8) {
     let string = "";
     let choices = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
@@ -920,7 +911,7 @@ class MockUnderlyingFileHandle {
     return string;
   }
 
-  /* Return random Uint8Array of bytes */
+  // Return random Uint8Array of bytes
   randomByteArray(bytes = 8) {
     const textEncoder = new TextEncoder();
     return textEncoder.encode(this.randomChars(bytes));
@@ -940,7 +931,7 @@ class MockUnderlyingFileHandle {
   width: 50%;
   overflow-wrap: break-word;
 }
- button {
+button {
   display: block;
 }
 ```
@@ -949,13 +940,11 @@ class MockUnderlyingFileHandle {
 <button>Cancel stream</button>
 <div class="input">
   <h2>Underlying source</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 <div class="output">
   <h2>Consumer</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 ```
 

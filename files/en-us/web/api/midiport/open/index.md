@@ -10,6 +10,7 @@ tags:
   - MIDIPort
 browser-compat: api.MIDIPort.open
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
 The **`open()`** method of the {{domxref("MIDIPort")}} interface makes the MIDI device connected to this `MIDIPort` explicitly available.
@@ -20,7 +21,7 @@ If the port is already open when this method is called, then the promise will re
 
 ## Syntax
 
-```js
+```js-nolint
 open()
 ```
 

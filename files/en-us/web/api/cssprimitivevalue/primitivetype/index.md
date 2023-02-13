@@ -12,6 +12,7 @@ tags:
   - primitiveValue
 browser-compat: api.CSSPrimitiveValue.primitiveType
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`primitiveType`** read-only property of the

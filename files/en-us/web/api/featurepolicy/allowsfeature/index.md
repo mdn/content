@@ -4,18 +4,19 @@ slug: Web/API/FeaturePolicy/allowsFeature
 page-type: web-api-instance-method
 browser-compat: api.FeaturePolicy.allowsFeature
 ---
+
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
 The **`allowsFeature()`** method of
 the {{DOMxRef("FeaturePolicy")}} interface enables introspection of individual
-directives of the Feature Policy it is run on. It returns a {{JSxRef("Boolean")}}
+directives of the [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) it is run on. It returns a {{JSxRef("Boolean")}}
 that is `true` if and only if the specified feature is allowed in the
 specified context (or the default context if no context is specified).
 
 ## Syntax
 
-```js
-const allowed = FeaturePolicy.allowsFeature(feature);
+```js-nolint
+const allowed = FeaturePolicy.allowsFeature(feature)
 ```
 
 or
@@ -42,7 +43,7 @@ allowed.
 ## Example
 
 The following example queries whether or not the document is allowed to use camera API
-by the Feature Policy. Please note that Camera API might be restricted by the
+by the Permissions Policy. Please note that Camera API might be restricted by the
 Permissions API, if the user did not grant the corresponding permission yet.
 
 ```js

@@ -6,8 +6,10 @@ tags:
   - CSS
   - Houdini
   - Reference
+  - Experimental
 browser-compat: api.CSS.registerProperty
 ---
+
 {{SeeCompatTable}}
 {{APIRef("CSSOM")}}
 
@@ -21,8 +23,8 @@ and what the default value of the custom property is.
 
 ## Syntax
 
-```js
-CSS.registerProperty(PropertyDefinition);
+```js-nolint
+CSS.registerProperty(PropertyDefinition)
 ```
 
 ### Parameters
@@ -66,15 +68,15 @@ default value, and have it not inherit its value:
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 
 In this example, the custom property `--my-color` has been registered using
-the syntax `<color>` . We can now use that property to transition a
+the syntax `<color>`. We can now use that property to transition a
 gradient on hover or focus. Notice that with the registered property the transition
 works, but that it doesn't with the unregistered property!
 

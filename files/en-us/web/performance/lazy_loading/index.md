@@ -13,6 +13,9 @@ tags:
   - rendering
 spec-urls: https://html.spec.whatwg.org/multipage/#lazy-loading-attributes
 ---
+
+{{QuickLinksWithSubPages("Web/Performance")}}
+
 **Lazy loading** is a strategy to identify resources as non-blocking (non-critical) and load these only when needed. It's a way to shorten the length of the [critical rendering path](/en-US/docs/Web/Performance/Critical_rendering_path), which translates into reduced page load times.
 
 Lazy loading can occur on different moments in the application, but it typically happens on some user interactions such as scrolling and navigation.
@@ -47,9 +50,9 @@ Any script tag with `type="module"` is treated as a [JavaScript module](/en-US/d
 By default, CSS is treated as a [render blocking](/en-US/docs/Web/Performance/Critical_rendering_path) resource, so the browser won't render any processed content until the [CSSOM](/en-US/docs/Web/API/CSS_Object_Model) is constructed. CSS must be thin, delivered as quickly as possible, and the usage media types and queries are advised to unblock rendering.
 
 ```html
-<link href="style.css"    rel="stylesheet" media="all">
-<link href="portrait.css" rel="stylesheet" media="(orientation:portrait)">
-<link href="print.css"    rel="stylesheet" media="print">
+<link href="style.css" rel="stylesheet" media="all" />
+<link href="portrait.css" rel="stylesheet" media="(orientation:portrait)" />
+<link href="print.css" rel="stylesheet" media="print" />
 ```
 
 It is possible to perform some [CSS optimizations](/en-US/docs/Learn/Performance/CSS) to achieve that.
@@ -60,17 +63,17 @@ By default, font requests are delayed until the render tree is constructed, whic
 
 It is possible to override the default behavior and preload web font resources using `<link rel="preload">`, the [CSS font-display property](/en-US/docs/Web/CSS/@font-face/font-display), and the [Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API).
 
-See also: [Element Link](/en-US/docs/Web/HTML/Element/link)
+See also: [Element Link](/en-US/docs/Web/HTML/Element/link).
 
 ### Images and iframes
 
-Very often, webpages contain many images that contribute to data-usage and how fast a page can load. Most of those images are off-screen ([non-critical](/en-US/docs/Web/Performance/Critical_rendering_path)), requiring user interaction (an example being scroll) in order to view them.
+Very often, webpages contain many images that contribute to data-usage and how fast a page can load. Most of those images are off-screen ([non-critical](/en-US/docs/Web/Performance/Critical_rendering_path)), requiring a user interaction, like scrolling, in order to view them.
 
 **Loading attribute**
 The {{htmlattrxref("loading", "img")}} attribute on an {{HTMLElement("img")}} element (or the {{htmlattrxref("loading", "iframe")}} attribute on an {{HTMLElement("iframe")}}) can be used to instruct the browser to defer loading of images/iframes that are off-screen until the user scrolls near them.
 
 ```html
-<img src="image.jpg" alt="..." loading="lazy">
+<img src="image.jpg" alt="..." loading="lazy" />
 <iframe src="video-player.html" title="..." loading="lazy"></iframe>
 ```
 
@@ -80,7 +83,7 @@ You can determine if a given image has finished loading by examining the value o
 
 **Polyfill**
 Include this polyfill to provide support for older and currently incompatible browsers:
-[loading-attribute-polyfill](https://github.com/mfranzke/loading-attribute-polyfill)
+[loading-attribute-polyfill](https://github.com/mfranzke/loading-attribute-polyfill).
 
 **Intersection Observer API**
 [Intersection Observers](/en-US/docs/Web/API/IntersectionObserver) allow the user to know when an observed element enters or exits the browser's viewport.

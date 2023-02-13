@@ -11,9 +11,11 @@ tags:
   - Service Worker
   - Web Periodic Background Synchronization API
   - periodic sync
+  - Experimental
 browser-compat: api.PeriodicSyncManager.getTags
 ---
-{{DefaultAPISidebar("Periodic Background Sync")}}
+
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
 
 The **`getTags()`** method of the
 {{domxref("PeriodicSyncManager")}} interface returns a {{jsxref('Promise')}} that
@@ -22,7 +24,7 @@ currently registered for periodic syncing.
 
 ## Syntax
 
-```js
+```js-nolint
 getTags()
 ```
 

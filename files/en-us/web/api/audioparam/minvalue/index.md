@@ -12,6 +12,7 @@ tags:
   - minValue
 browser-compat: api.AudioParam.minValue
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`minValue`**

@@ -17,6 +17,7 @@ tags:
   - write
 browser-compat: api.Clipboard.write
 ---
+
 {{APIRef("Clipboard API")}}
 
 The {{domxref("Clipboard")}} method
@@ -28,12 +29,14 @@ automatically to pages when they are in the active tab.
 
 > **Note:** Browser support for the asynchronous clipboard APIs is still
 > in the process of being implemented. Be sure to check the [compatibility table](#browser_compatibility) as well as
-> {{SectionOnPage("/en-US/docs/Web/API/Clipboard", "Clipboard availability")}} for more
+> [Clipboard availability](/en-US/docs/Web/API/Clipboard#clipboard_availability) for more
 > information.
+
+> **Note:** For parity with Google Chrome, Firefox only allows this function to work with text, HTML, and PNG data.
 
 ## Syntax
 
-```js
+```js-nolint
 write(data)
 ```
 
@@ -56,18 +59,18 @@ string.
 
 ```js
 function setClipboard(text) {
-    const type = "text/plain";
-    const blob = new Blob([text], { type });
-    const data = [new ClipboardItem({ [type]: blob })];
+  const type = "text/plain";
+  const blob = new Blob([text], { type });
+  const data = [new ClipboardItem({ [type]: blob })];
 
-    navigator.clipboard.write(data).then(
-        function () {
-        /* success */
-        },
-        function () {
-        /* failure */
-        }
-    );
+  navigator.clipboard.write(data).then(
+    () => {
+      /* success */
+    },
+    () => {
+      /* failure */
+    }
+  );
 }
 ```
 
@@ -84,14 +87,17 @@ and an error function.
 
 ```js
 function copyCanvasContentsToClipboard(canvas, onDone, onError) {
-  canvas.toBlob(function (blob) {
+  canvas.toBlob((blob) => {
     let data = [new ClipboardItem({ [blob.type]: blob })];
 
-    navigator.clipboard.write(data).then(function () {
-      onDone();
-    }, function (err) {
-      onError(err);
-    })
+    navigator.clipboard.write(data).then(
+      () => {
+        onDone();
+      },
+      (err) => {
+        onError(err);
+      }
+    );
   });
 }
 ```

@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.disableVertexAttribArray
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.disableVertexAttribArray()`**
@@ -18,7 +19,7 @@ vertex attribute array off at a given index position.
 
 ## Syntax
 
-```js
+```js-nolint
 disableVertexAttribArray(index)
 ```
 

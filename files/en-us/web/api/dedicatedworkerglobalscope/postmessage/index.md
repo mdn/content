@@ -11,6 +11,7 @@ tags:
   - postMessage
 browser-compat: api.DedicatedWorkerGlobalScope.postMessage
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`postMessage()`** method of the {{domxref("DedicatedWorkerGlobalScope")}} interface sends a message to the main thread that spawned it.
@@ -26,7 +27,7 @@ The main scope that spawned the worker can send back information to the thread t
 
 ## Syntax
 
-```js
+```js-nolint
 postMessage(aMessage, transferList)
 ```
 
@@ -52,7 +53,7 @@ The following code snippet shows `worker.js`, in which an `onmessage` handler is
 Inside the handler a calculation is done from which a result message is created; this is then sent back to the main thread using `postMessage(workerResult);`
 
 ```js
-onmessage = function(e) {
+onmessage = (e) => {
   console.log('Message received from main script');
   const workerResult = `Result: ${e.data[0] * e.data[1]}`;
   console.log('Posting message back to main script');
@@ -62,7 +63,7 @@ onmessage = function(e) {
 
 In the main script, `onmessage` would have to be called on a `Worker object`, whereas inside the worker script you just need `onmessage` because the worker is effectively the global scope ({{domxref("DedicatedWorkerGlobalScope")}}).
 
-For a full example, see our [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
+For a full example, see our [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
 
 > **Note:** `postMessage()` can only send a single object at once. As seen above, if you want to pass multiple values you can send an array.
 

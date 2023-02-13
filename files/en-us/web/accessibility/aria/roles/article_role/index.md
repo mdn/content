@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: article role'
+title: "ARIA: article role"
 slug: Web/Accessibility/ARIA/Roles/article_role
 tags:
   - ARIA
@@ -13,6 +13,7 @@ spec-urls:
   - https://w3c.github.io/aria/#article
   - https://w3c.github.io/aria-practices/#feed
 ---
+
 The `article` role indicates a section of a page that could easily stand on its own on a page, in a document, or on a website. It is usually set on related content items such as comments, forum posts, newspaper articles or other items grouped together on one page.
 
 ```html
@@ -22,7 +23,7 @@ The `article` role indicates a section of a page that could easily stand on its 
   <p>Another paragraph.</p>
   Controls to interact with the article, share it, etc.
 </div>
-<div role="article"> … </div>
+<div role="article">…</div>
 ```
 
 This example shows two articles side by side on one page that could be structured similarly and are related.
@@ -38,7 +39,7 @@ Don't use `role="article"`. Instead use the `<article>` element.
   <p>Another paragraph.</p>
   Controls to interact with the article, share it, etc.
 </article>
-<article> … </article>
+<article>…</article>
 ```
 
 ## Description
@@ -53,7 +54,7 @@ If an article is part of a feed, it can have the [`aria-posinset`](/en-US/docs/W
 
 Inside an `application` or other widget that causes screen readers and other assistive technologies to be in pass-through mode, an article can be used to indicate that these should switch back to treating the enclosed content as regular web content.
 
-Instead of including the `article` role on a non-semantic element, the {{HTMLElement('article')}} element should be used. User agents translate this to the appropriate accessibility information just like the `article` role. Using the {{HTMLElement('article')}} element also helps search engines better discover the structure of a page. Examples of appropriate uses of the `role="article"`, or preferably `<article>`, include blog posts, forum posts, a comment to a forum or blog post, a comment to a comment to a forum or blog post, any an item in a social media feed.
+Instead of including the `article` role on a non-semantic element, the {{HTMLElement('article')}} element should be used. User agents translate this to the appropriate accessibility information just like the `article` role. Using the {{HTMLElement('article')}} element also helps search engines better discover the structure of a page. Examples of appropriate uses of the `role="article"`, or preferably `<article>`, include blog posts, forum posts, a comment to a forum or blog post, any an item in a social media feed.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -99,6 +100,6 @@ This role corresponds to the {{HTMLElement('article')}} element in HTML, and tha
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

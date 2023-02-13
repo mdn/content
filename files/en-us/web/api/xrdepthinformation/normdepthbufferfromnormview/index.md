@@ -14,9 +14,10 @@ tags:
   - WebXR Device API
 browser-compat: api.XRDepthInformation.normDepthBufferFromNormView
 ---
-{{APIRef("WebXR Device API")}}
 
-The *read-only* **`normDepthBufferFromNormView`** property of the {{DOMxRef("XRDepthInformation")}} interface contains the 3D geometric transform that needs to be applied when indexing into the depth buffer.
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+
+The _read-only_ **`normDepthBufferFromNormView`** property of the {{DOMxRef("XRDepthInformation")}} interface contains the 3D geometric transform that needs to be applied when indexing into the depth buffer.
 
 ## Value
 

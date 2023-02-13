@@ -1,6 +1,7 @@
 ---
 title: animation-timing-function
 slug: Web/CSS/animation-timing-function
+page-type: css-property
 tags:
   - CSS
   - CSS Animations
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.animation-timing-function
 ---
+
 {{CSSRef}}
 
 The **`animation-timing-function`** [CSS](/en-US/docs/Web/CSS) property sets how an animation progresses through the duration of each cycle.
@@ -30,7 +32,7 @@ animation-timing-function: step-start;
 animation-timing-function: step-end;
 
 /* Function values */
-animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
 animation-timing-function: steps(4, end);
 
 /* Steps Function keywords */
@@ -42,7 +44,7 @@ animation-timing-function: steps(6, start);
 animation-timing-function: steps(8, end);
 
 /* Multiple animations */
-animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
 
 /* Global values */
 animation-timing-function: inherit;
@@ -52,9 +54,7 @@ animation-timing-function: revert-layer;
 animation-timing-function: unset;
 ```
 
-Timing functions may be specified on individual keyframes in a [@keyframes](/en-US/docs/Web/CSS/@keyframes) rule. If no **`animation-timing-function`** is specified on a keyframe, the corresponding value of **`animation-timing-function`** from the element to which the animation is applied is used for that keyframe.
-
-Within a keyframe, `animating-timing-function` is an at-rule-specific descriptor, not the property of the same name. The timing is not being animated. Rather, a keyframe's timing function is applied on a property-by-property basis from the keyframe on which it is specified until the next keyframe specifying that property, or until the end of the animation if there is no subsequent keyframe specifying that property. As a result, an **`animation-timing-function`** specified on the **`100%`** or **`to`** keyframe will never be used.
+> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they are applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and `animation-*` property values do not match, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values).
 
 ### Values
 
@@ -98,7 +98,11 @@ Within a keyframe, `animating-timing-function` is an at-rule-specific descriptor
 - `step-end`
   - : Equal to `steps(1, jump-end)`
 
-> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values).
+## Description
+
+Timing functions may be specified on individual keyframes in a [@keyframes](/en-US/docs/Web/CSS/@keyframes) rule. If no **`animation-timing-function`** is specified on a keyframe, the corresponding value of **`animation-timing-function`** from the element to which the animation is applied is used for that keyframe.
+
+Within a keyframe, `animation-timing-function` is an at-rule-specific descriptor, not the property of the same name. The timing is not being animated. Rather, a keyframe's timing function is applied on a property-by-property basis from the keyframe on which it is specified until the next keyframe specifying that property, or until the end of the animation if there is no subsequent keyframe specifying that property. As a result, an **`animation-timing-function`** specified on the **`100%`** or **`to`** keyframe will never be used.
 
 ## Formal definition
 
@@ -125,47 +129,47 @@ Within a keyframe, `animating-timing-function` is an at-rule-specific descriptor
 
 ```css hidden
 .parent > div[class] {
-    animation-name: changeme;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    margin-bottom: 4px;
+  animation-name: changeme;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  margin-bottom: 4px;
 }
 @keyframes changeme {
-   0% {
-      min-width: 12em;
-      width: 12em;
-      background-color: black;
-      border: 1px solid red;
-      color: white;
-   }
-   100% {
-      width: 90vw;
-      min-width: 24em;
-      background-color: magenta;
-      color: yellow;
-      border: 1px solid orange;
-   }
+  0% {
+    min-width: 12em;
+    width: 12em;
+    background-color: black;
+    border: 1px solid red;
+    color: white;
+  }
+  100% {
+    width: 90vw;
+    min-width: 24em;
+    background-color: magenta;
+    color: yellow;
+    border: 1px solid orange;
+  }
 }
 ```
 
 ```css
 .ease {
-   animation-timing-function: ease;
+  animation-timing-function: ease;
 }
 .easein {
-   animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
 }
 .easeout {
-   animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
 }
 .easeinout {
-   animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
 }
 .linear {
-   animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 .cb {
-   animation-timing-function: cubic-bezier(0.2,-2,0.8,2);
+  animation-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
 }
 ```
 
@@ -188,53 +192,53 @@ Within a keyframe, `animating-timing-function` is an at-rule-specific descriptor
 
 ```css hidden
 .parent > div[class] {
-    animation-name: changeme;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    margin-bottom: 4px;
+  animation-name: changeme;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  margin-bottom: 4px;
 }
 @keyframes changeme {
-   0% {
-      min-width: 12em;
-      width: 12em;
-      background-color: black;
-      border: 1px solid red;
-      color: white;
-   }
-   100% {
-      width: 90vw;
-      min-width: 24em;
-      background-color: magenta;
-      color: yellow;
-      border: 1px solid orange;
-   }
+  0% {
+    min-width: 12em;
+    width: 12em;
+    background-color: black;
+    border: 1px solid red;
+    color: white;
+  }
+  100% {
+    width: 90vw;
+    min-width: 24em;
+    background-color: magenta;
+    color: yellow;
+    border: 1px solid orange;
+  }
 }
 ```
 
 ```css
 .jump-start {
-   animation-timing-function: steps(5, jump-start);
+  animation-timing-function: steps(5, jump-start);
 }
 .jump-end {
-   animation-timing-function: steps(5, jump-end);
+  animation-timing-function: steps(5, jump-end);
 }
 .jump-none {
-   animation-timing-function: steps(5, jump-none);
+  animation-timing-function: steps(5, jump-none);
 }
 .jump-both {
-   animation-timing-function: steps(5, jump-both);
+  animation-timing-function: steps(5, jump-both);
 }
 .start {
-   animation-timing-function: steps(5, start);
+  animation-timing-function: steps(5, start);
 }
 .end {
-   animation-timing-function: steps(5, end);
+  animation-timing-function: steps(5, end);
 }
 .step-start {
-   animation-timing-function: step-start;
+  animation-timing-function: step-start;
 }
 .step-end {
-   animation-timing-function: step-end;
+  animation-timing-function: step-end;
 }
 ```
 
@@ -254,3 +258,4 @@ Within a keyframe, `animating-timing-function` is an at-rule-specific descriptor
 - {{cssxref('easing-function')}}
 - JavaScript {{domxref("AnimationEvent")}} API
 - [cubic-bezier.com](https://cubic-bezier.com)
+- Other related animation properties: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}

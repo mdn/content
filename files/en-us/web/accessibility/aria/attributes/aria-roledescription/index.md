@@ -10,6 +10,7 @@ tags:
   - Reference
 spec-urls: https://w3c.github.io/aria/#aria-roledescription
 ---
+
 The `aria-roledescription` attribute defines a human-readable, author-localized description for the role of an element.
 
 ## Description
@@ -41,9 +42,13 @@ The `aria-roledescription` is required when using `aria-brailleroledescription`.
 The following example shows the use of `aria-roledescription` to indicate that a non-interactive container is a "slide" in a web-based presentation application.
 
 ```html
-<div role="article" aria-roledescription="slide" id="slide" aria-labelledby="slideheading">
-<h1 id="slideheading">Quarterly Report</h1>
-<!-- remaining slide contents -->
+<div
+  role="article"
+  aria-roledescription="slide"
+  id="slide"
+  aria-labelledby="slideheading">
+  <h1 id="slideheading">Quarterly Report</h1>
+  <!-- remaining slide contents -->
 </div>
 ```
 
@@ -52,7 +57,7 @@ In the previous examples, a screen reader user may hear "Quarterly Report, slide
 ## Values
 
 - `<string>`
-  - : A non-empty string, an unconstrained value type,containing more than just white space.
+  - : A non-empty string, an unconstrained value type, containing more than just white space.
 
 ## ARIAMixin API
 

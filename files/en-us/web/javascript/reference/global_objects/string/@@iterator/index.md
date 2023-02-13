@@ -1,6 +1,7 @@
 ---
 title: String.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/String/@@iterator
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - Iterator
@@ -12,29 +13,26 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.@@iterator
 ---
+
 {{JSRef}}
 
-The **`[@@iterator]()`** method returns a new iterator object
-that iterates over the code points of a String value, returning each code point as a
-String value.
+The **`@@iterator`** method of a string implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows strings to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops. It returns an iterator that yields the Unicode code points of the string value as individual strings.
 
 {{EmbedInteractiveExample("pages/js/string-iterator.html")}}
 
 ## Syntax
 
-```js
-str[Symbol.iterator]
+```js-nolint
+string[Symbol.iterator]()
 ```
 
 ### Return value
 
-A new iterator object.
+A new iterable iterator object that yields the Unicode code points of the string value as individual strings.
 
 ## Description
 
-A String is [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) because it implements the `@@iterator` method. It means strings can be used in [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops, be [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) in arrays, etc.
-
-Strings are iterated by Unicode codepoints. This means grapheme clusters will be split, but surrogate pairs will be preserved.
+Strings are iterated by Unicode code points. This means grapheme clusters will be split, but surrogate pairs will be preserved.
 
 ```js
 // "Backhand Index Pointing Right: Dark Skin Tone"
@@ -49,21 +47,12 @@ Strings are iterated by Unicode codepoints. This means grapheme clusters will be
 
 ## Examples
 
-### Using \[@@iterator]\()
+### Iteration using for...of loop
+
+Note that you seldom need to call this method directly. The existence of the `@@iterator` method makes strings [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), and iterating syntaxes like the `for...of` loop automatically calls this method to obtain the iterator to loop over.
 
 ```js
-const str = 'A\uD835\uDC68';
-
-const strIter = str[Symbol.iterator]();
-
-console.log(strIter.next().value); // "A"
-console.log(strIter.next().value); // "\uD835\uDC68"
-```
-
-### Using \[@@iterator]\() with for..of
-
-```js
-const str = 'A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A';
+const str = "A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A";
 
 for (const v of str) {
   console.log(v);
@@ -74,6 +63,19 @@ for (const v of str) {
 // "\uD835\uDC69"
 // "C"
 // "\uD835\uDC6A"
+```
+
+### Manually hand-rolling the iterator
+
+You may still manually call the `next()` method of the returned iterator object to achieve maximum control over the iteration process.
+
+```js
+const str = "A\uD835\uDC68";
+
+const strIter = str[Symbol.iterator]();
+
+console.log(strIter.next().value); // "A"
+console.log(strIter.next().value); // "\uD835\uDC68"
 ```
 
 ## Specifications

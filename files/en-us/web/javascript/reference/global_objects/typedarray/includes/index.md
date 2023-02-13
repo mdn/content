@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2016
   - JavaScript
@@ -11,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.includes
 ---
+
 {{JSRef}}
 
 The **`includes()`** method determines whether a typed array
@@ -23,7 +25,7 @@ appropriate. This method has the same algorithm as
 
 ## Syntax
 
-```js
+```js-nolint
 includes(searchElement)
 includes(searchElement, fromIndex)
 ```
@@ -45,10 +47,10 @@ A {{jsxref("Boolean")}}.
 ### Using includes
 
 ```js
-const uint8 = new Uint8Array([1,2,3]);
-uint8.includes(2);     // true
-uint8.includes(4);     // false
-uint8.includes(3, 3);  // false
+const uint8 = new Uint8Array([1, 2, 3]);
+uint8.includes(2); // true
+uint8.includes(4); // false
+uint8.includes(3, 3); // false
 
 // NaN handling (only true for Float32 and Float64)
 new Uint8Array([NaN]).includes(NaN); // false, since the NaN passed to the constructor gets converted to 0

@@ -11,6 +11,7 @@ tags:
   - WebSocket
 browser-compat: api.WebSocket.error_event
 ---
+
 {{APIRef}}
 
 The `error` event is fired when a connection with a `WebSocket` has been closed due to an error (some data couldn't be sent for example).
@@ -36,7 +37,7 @@ A generic {{domxref("Event")}}.
 const socket = new WebSocket('ws://localhost:8080');
 
 // Listen for possible errors
-socket.addEventListener('error', function (event) {
+socket.addEventListener('error', (event) => {
   console.log('WebSocket error: ', event);
 });
 ```

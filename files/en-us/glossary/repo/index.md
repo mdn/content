@@ -1,13 +1,14 @@
 ---
 title: Repo
 slug: Glossary/Repo
+page-type: glossary-definition
 tags:
-  - Glossary
   - Infrastructure
   - Intro
   - Repo
   - Repository
 ---
+
 In a revision control system like {{Glossary("Git")}} or {{Glossary("SVN")}}, a repo (i.e. "repository") is a place that hosts an application's code source, together with various metadata.
 
 ## See also

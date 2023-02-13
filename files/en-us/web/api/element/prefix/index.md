@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.prefix
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.prefix`** read-only property returns the

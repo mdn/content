@@ -1,6 +1,7 @@
 ---
 title: in2
 slug: Web/SVG/Attribute/in2
+page-type: svg-attribute
 tags:
   - Filters
   - NeedsCompatTable
@@ -12,6 +13,7 @@ spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomposite-in2
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-feblend-in2
 ---
+
 {{SVGRef}}
 
 The **`in2`** attribute identifies the second input for the given filter primitive. It works exactly like the {{SVGAttr("in")}} attribute.

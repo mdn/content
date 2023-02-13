@@ -1,6 +1,7 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
+page-type: javascript-statement
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -11,6 +12,7 @@ tags:
   - let
 browser-compat: javascript.statements.let
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`let`** declaration declares a block-scoped local variable, optionally initializing it to a value.
@@ -19,8 +21,12 @@ The **`let`** declaration declares a block-scoped local variable, optionally ini
 
 ## Syntax
 
-```js
-let name1 [= value1] [, name2 [= value2]] [, ..., nameN [= valueN];
+```js-nolint
+let name1;
+let name1 = value1;
+let name1 = value1, name2 = value2;
+let name1, name2 = value2;
+let name1 = value1, name2, /* …, */ nameN = valueN;
 ```
 
 ### Parameters
@@ -41,7 +47,7 @@ let { bar } = foo; // where foo = { bar:10, baz:12 };
 
 **`let`** allows you to declare variables that are limited to the scope of a {{jsxref("statements/block", "block", "", 1)}} statement, or expression on which it is used, unlike the {{jsxref("statements/var", "var")}} keyword, which declares a variable globally, or locally to an entire function regardless of block scope.
 The other difference between {{jsxref("statements/var", "var")}} and
-`let` is that the latter is initialized to a value only when a [parser evaluates it (see below)](#temporal_dead_zone_tdz).
+`let` is that the latter can only be accessed after its declaration is reached (see [temporal dead zone](#temporal_dead_zone_tdz)). For this reason, `let` declarations are commonly regarded as [non-hoisted](/en-US/docs/Glossary/Hoisting).
 
 Just like {{jsxref("statements/const", "const", "Description")}} the `let` does _not_ create properties of the {{domxref("window")}} object when declared globally (in the top-most scope).
 
@@ -49,9 +55,9 @@ An explanation of why the name "**let**" was chosen can be found [here](https://
 
 Many issues with `let` variables can be avoided by declaring them at the top of the scope in which they are used (doing so may impact readability).
 
-Unlike `var`, `let` begins _Declarations_, not _Statements_. That means you cannot use a lone `let` declaration as the body of a block (which makes sense, since there's no way to access the variable).
+Unlike `var`, `let` begins [_declarations_, not _statements_](/en-US/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations). That means you cannot use a lone `let` declaration as the body of a block (which makes sense, since there's no way to access the variable).
 
-```js
+```js example-bad
 if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
 ```
 
@@ -67,19 +73,19 @@ The main difference is that the scope of a **`var`** variable is the entire encl
 function varTest() {
   var x = 1;
   {
-    var x = 2;  // same variable!
-    console.log(x);  // 2
+    var x = 2; // same variable!
+    console.log(x); // 2
   }
-  console.log(x);  // 2
+  console.log(x); // 2
 }
 
 function letTest() {
   let x = 1;
   {
-    let x = 2;  // different variable
-    console.log(x);  // 2
+    let x = 2; // different variable
+    console.log(x); // 2
   }
-  console.log(x);  // 1
+  console.log(x); // 1
 }
 ```
 
@@ -87,8 +93,8 @@ At the top level of programs and functions, **`let`**, unlike **`var`**, does no
 For example:
 
 ```js
-var x = 'global';
-let y = 'global';
+var x = "global";
+let y = "global";
 console.log(this.x); // "global"
 console.log(this.y); // undefined
 ```
@@ -108,7 +114,7 @@ You may encounter errors in {{jsxref("Statements/switch", "switch")}} statements
 
 ```js example-bad
 let x = 1;
-switch(x) {
+switch (x) {
   case 0:
     let foo;
     break;
@@ -119,12 +125,12 @@ switch(x) {
 }
 ```
 
-However, it's important to point out that a block nested inside a case clause will create a new block scoped lexical environment, which will not produce the redeclaration errors shown above.
+A block nested inside a case clause will create a new block scoped lexical environment, avoiding the redeclaration errors shown above.
 
 ```js
 let x = 1;
 
-switch(x) {
+switch (x) {
   case 0: {
     let foo;
     break;
@@ -136,9 +142,11 @@ switch(x) {
 }
 ```
 
+If you're experimenting in a REPL, such as the Firefox web console (**Tools** > **Web Developer** > **Web Console**), and you run two `let` declarations with the same name in two separate inputs, you may get the same re-declaration error. See further discussion of this issue in {{bug(1580891)}}. The Chrome console allows `let` re-declarations between different REPL inputs.
+
 ### Temporal dead zone (TDZ)
 
-A `let` or `const` variable is said to be in a "temporal dead zone" (TDZ) from the start of the block until code execution reaches the line where the variable is declared.
+A `let` or `const` variable is said to be in a "temporal dead zone" (TDZ) from the start of the block until code execution reaches the line where the variable is declared and initialized.
 
 While inside the TDZ, the variable has not been initialized with a value, and any attempt to access it will result in a {{jsxref("ReferenceError")}}.
 The variable is initialized with a value when execution reaches the line of code where it was declared.
@@ -148,7 +156,8 @@ This differs from {{jsxref("Statements/var", "var", "var_hoisting")}} variables,
 The code below demonstrates the different result when `let` and `var` are accessed in code before the line in which they are declared.
 
 ```js example-bad
-{ // TDZ starts at beginning of scope
+{
+  // TDZ starts at beginning of scope
   console.log(bar); // undefined
   console.log(foo); // ReferenceError
   var bar = 1;
@@ -161,13 +170,13 @@ For example, the code below works because, even though the function that uses th
 
 ```js
 {
-    // TDZ starts at beginning of scope
-    const func = () => console.log(letVar); // OK
+  // TDZ starts at beginning of scope
+  const func = () => console.log(letVar); // OK
 
-    // Within the TDZ letVar access throws `ReferenceError`
+  // Within the TDZ letVar access throws `ReferenceError`
 
-    let letVar = 3; // End of TDZ (for letVar)
-    func(); // Called outside TDZ!
+  let letVar = 3; // End of TDZ (for letVar)
+  func(); // Called outside TDZ!
 }
 ```
 
@@ -193,11 +202,11 @@ console.log(typeof undeclaredVariable);
 The following code results in a `ReferenceError` at the line shown:
 
 ```js example-bad
-function test(){
-   var foo = 33;
-   if(foo) {
-      let foo = (foo + 55); // ReferenceError
-   }
+function test() {
+  var foo = 33;
+  if (foo) {
+    let foo = foo + 55; // ReferenceError
+  }
 }
 test();
 ```
@@ -215,14 +224,15 @@ This is still in the temporal dead zone as its declaration statement has not bee
 ```js example-bad
 function go(n) {
   // n here is defined!
-  console.log(n); // Object {a: [1,2,3]}
+  console.log(n); // { a: [1, 2, 3] }
 
-  for (let n of n.a) { // ReferenceError
+  for (let n of n.a) {
+    //          ^ ReferenceError
     console.log(n);
   }
 }
 
-go({a: [1, 2, 3]});
+go({ a: [1, 2, 3] });
 ```
 
 ### Other situations
@@ -238,8 +248,8 @@ if (a === 1) {
   var a = 11; // the scope is global
   let b = 22; // the scope is inside the if-block
 
-  console.log(a);  // 11
-  console.log(b);  // 22
+  console.log(a); // 11
+  console.log(b); // 22
 }
 
 console.log(a); // 11
@@ -269,7 +279,7 @@ let x = 1;
 
 - {{jsxref("Statements/var", "var")}}
 - {{jsxref("Statements/const", "const")}}
-- [Hoisting > `let` and `const` hoisting](/en-US/docs/Glossary/Hoisting#let_and_const_hoisting)
+- [Hoisting](/en-US/docs/Glossary/Hoisting)
 - [ES6 In Depth: `let` and `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/)
 - [Breaking changes in `let` and `const` in Firefox 44](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/)
 - [You Don't Know JS: Scope & Closures: Chapter 3: Function vs. Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md)

@@ -10,13 +10,14 @@ tags:
   - StyleSheetList
 browser-compat: api.StyleSheetList.item
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`item()`** method of the {{domxref("StyleSheetList")}} interface returns a single {{domxref("CSSStyleSheet")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 

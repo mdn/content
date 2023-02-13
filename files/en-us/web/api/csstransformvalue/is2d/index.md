@@ -13,6 +13,7 @@ tags:
   - is2D
 browser-compat: api.CSSTransformValue.is2D
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The read-only **`is2D`** property of the

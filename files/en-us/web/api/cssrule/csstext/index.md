@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSRule.cssText
 ---
+
 {{APIRef("CSSOM") }}
 
 The **`cssText`** property of the {{domxref("CSSRule")}}

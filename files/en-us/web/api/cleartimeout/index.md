@@ -10,6 +10,7 @@ tags:
   - clearTimeout
 browser-compat: api.clearTimeout
 ---
+
 {{APIRef("HTML DOM")}}
 
 The global **`clearTimeout()`** method cancels a timeout previously established
@@ -20,7 +21,7 @@ this method does nothing.
 
 ## Syntax
 
-```js
+```js-nolint
 clearTimeout(timeoutID)
 ```
 
@@ -55,20 +56,24 @@ const alarm = {
   },
 
   setup() {
-    if (typeof this.timeoutID === 'number') {
+    if (typeof this.timeoutID === "number") {
       this.cancel();
     }
 
-    this.timeoutID = setTimeout(function(msg) {
-      this.remind(msg);
-    }.bind(this), 1000, 'Wake up!');
+    this.timeoutID = setTimeout(
+      (msg) => {
+        this.remind(msg);
+      },
+      1000,
+      "Wake up!"
+    );
   },
 
   cancel() {
     clearTimeout(this.timeoutID);
-  }
+  },
 };
-window.addEventListener('click', () => alarm.setup() );
+window.addEventListener("click", () => alarm.setup());
 ```
 
 ## Notes

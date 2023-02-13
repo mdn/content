@@ -11,6 +11,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.texImage2D
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.texImage2D()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies a two-dimensional texture
@@ -18,12 +19,10 @@ image.
 
 ## Syntax
 
-```js
+```js-nolint
 // WebGL1
-texImage2D(target, level, internalformat, width, height, border, format, type)
-texImage2D(target, level, internalformat, width, height, border, format, type, pixels) // pixels a TypedArray or a DataView
-texImage2D(target, level, internalformat, format, type)
-texImage2D(target, level, internalformat, format, type, pixels)
+texImage2D(target, level, internalformat, width, height, border, format, type, pixels) // pixels can be a TypedArray or a DataView or null
+texImage2D(target, level, internalformat, format, type, pixels) // pixels cannot be a TypedArray or a DataView or null
 
 
 // WebGL2
@@ -55,7 +54,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
 
 - `level`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
-    level and level _n_ is the *n*th mipmap reduction level.
+    level and level _n_ is the n-th mipmap reduction level.
 - `internalformat`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the color components in the texture.
@@ -714,10 +713,11 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
     - `gl.LUMINANCE`: Each color component is a luminance component, alpha is
       1.0.
     - `gl.LUMINANCE_ALPHA`: Each component is a luminance/alpha component.
+
     When using the {{domxref("WEBGL_depth_texture")}} extension:
 
-      - `gl.DEPTH_COMPONENT`
-      - `gl.DEPTH_STENCIL`
+    - `gl.DEPTH_COMPONENT`
+    - `gl.DEPTH_STENCIL`
 
     When using the {{domxref("EXT_sRGB")}} extension:
 
@@ -725,7 +725,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
     - `ext.SRGB_ALPHA_EXT`
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the
-      following values are available additionally:
+    following values are available additionally:
 
     - `gl.R8`
     - `gl.R16F`
@@ -774,12 +774,12 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
       alpha bits.
     - `gl.UNSIGNED_SHORT_5_5_5_1`: 5 red bits, 5 green bits, 5 blue bits, 1
       alpha bit.
+
     When using the {{domxref("WEBGL_depth_texture")}} extension:
 
-      - `gl.UNSIGNED_SHORT`
-      - `gl.UNSIGNED_INT`
-      - `ext.UNSIGNED_INT_24_8_WEBGL` (constant provided by the
-        extension)
+    - `gl.UNSIGNED_SHORT`
+    - `gl.UNSIGNED_INT`
+    - `ext.UNSIGNED_INT_24_8_WEBGL` (constant provided by the extension)
 
     - When using the {{domxref("OES_texture_float")}} extension:
 
@@ -790,7 +790,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
     - `ext.HALF_FLOAT_OES` (constant provided by the extension)
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
+    the following values are available additionally:
 
     - `gl.BYTE`
     - `gl.UNSIGNED_SHORT`
@@ -804,7 +804,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
     - `gl.UNSIGNED_INT_5_9_9_9_REV`
     - `gl.UNSIGNED_INT_24_8`
     - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (pixels must be
-        [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null))
+      [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null))
 
 - `pixels`
 

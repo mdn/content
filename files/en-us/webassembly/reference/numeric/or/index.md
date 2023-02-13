@@ -8,6 +8,7 @@ tags:
   - Numeric
   - Bitwise
 ---
+
 {{WebAssemblySidebar}}
 
 The **`or`** instructions, are used for performing a bitwise OR, similar to the **`|`** operator in other languages.

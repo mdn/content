@@ -12,13 +12,14 @@ tags:
   - Selector
 browser-compat: api.Element.closest
 ---
+
 {{APIRef('DOM')}}
 
 The **`closest()`** method of the {{domxref("Element")}} interface traverses the element and its parents (heading toward the document root) until it finds a node that matches the specified [CSS selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors).
 
 ## Syntax
 
-```js
+```js-nolint
 closest(selectors)
 ```
 
@@ -42,8 +43,10 @@ The closest ancestor {{domxref("Element")}} or itself, which matches the `select
 
 ```html
 <article>
-  <div id="div-01">Here is div-01
-    <div id="div-02">Here is div-02
+  <div id="div-01">
+    Here is div-01
+    <div id="div-02">
+      Here is div-02
       <div id="div-03">Here is div-03</div>
     </div>
   </div>

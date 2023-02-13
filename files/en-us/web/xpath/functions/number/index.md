@@ -5,6 +5,7 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `number` function converts an object to a number and returns the number.
@@ -17,7 +18,7 @@ number( [object] )
 
 ### Arguments
 
-- _`object`_(optional)
+- `object` (optional)
   - : The object to be converted to a number. If this argument is omitted, the current context node will be used.
 
 ### Returns

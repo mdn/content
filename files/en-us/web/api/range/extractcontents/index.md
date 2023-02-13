@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.extractContents
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.extractContents()`** method moves contents of the
@@ -25,7 +26,7 @@ document fragment valid.
 
 ## Syntax
 
-```js
+```js-nolint
 extractContents()
 ```
 
@@ -35,7 +36,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A {{ domxref("DocumentFragment") }} object.
 
 ## Examples
 
@@ -71,12 +72,12 @@ body {
 p {
   border: 1px solid;
   font-size: 2em;
-  padding: .3em;
+  padding: 0.3em;
 }
 
 button {
   font-size: 1.2em;
-  padding: .5em;
+  padding: 0.5em;
   pointer-events: auto;
 }
 ```

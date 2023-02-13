@@ -11,6 +11,7 @@ tags:
   - cancel
 browser-compat: api.ReadableStreamDefaultReader.cancel
 ---
+
 {{APIRef("Streams")}}
 
 The **`cancel()`** method of the
@@ -28,7 +29,7 @@ still and not completely get rid of the stream, you'd use
 
 ## Syntax
 
-```js
+```js-nolint
 cancel()
 cancel(reason)
 ```

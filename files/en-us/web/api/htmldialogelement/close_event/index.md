@@ -5,16 +5,16 @@ page-type: web-api-event
 tags:
   - API
   - Event
-  - Experimental
   - HTML DOM
   - HTMLDialogElement
   - Reference
   - close
 browser-compat: api.HTMLDialogElement.close_event
 ---
+
 {{ APIRef() }}
 
-The `close` event is fired on an `HTMLDialogElement` object when the dialog it represents has been closed.
+The `close` event is fired on an `HTMLDialogElement` object when the {{htmlelement("dialog")}} it represents has been closed.
 
 This event is not cancelable and does not bubble.
 
@@ -40,7 +40,11 @@ A generic {{domxref("Event")}}.
 
 ```html
 <dialog class="example-dialog">
-    <button class="close" type="reset">Close</button>
+  <form method="dialog">
+     <button>Close via method="dialog"</button>
+  </form>
+  <button class="close">Close via .close() method</button>
+  <p>Or hit the <kbd>Esc</kbd> key</p>
 </dialog>
 
 <button class="open-dialog">Open dialog</button>
@@ -49,12 +53,13 @@ A generic {{domxref("Event")}}.
 ```
 
 ```css hidden
-button, div {
-    margin: .5rem;
+button,
+div {
+  margin: 0.5rem;
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const result = document.querySelector('.result');
@@ -66,12 +71,8 @@ dialog.addEventListener('close', (event) => {
 
 const openDialog = document.querySelector('.open-dialog');
 openDialog.addEventListener('click', () => {
-  if (typeof dialog.showModal === 'function') {
-      dialog.showModal();
-      result.textContent = '';
-  } else {
-      result.textContent = 'The dialog API is not supported by this browser';
-  }
+  dialog.showModal();
+  result.textContent = "";
 });
 
 const closeButton = document.querySelector('.close');
@@ -82,7 +83,7 @@ closeButton.addEventListener('click', () => {
 
 #### Result
 
-{{ EmbedLiveSample('Live_example', '100%', '100px') }}
+{{ EmbedLiveSample('Live_example', '100%', '200px') }}
 
 ## Specifications
 

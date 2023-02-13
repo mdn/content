@@ -7,8 +7,9 @@ tags:
   - HTTP Status Code
   - Reference
   - Status code
-spec-urls: https://httpwg.org/specs/rfc7231.html#section-6.5.10
+spec-urls: https://httpwg.org/specs/rfc9110.html#status.411
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP)
@@ -23,7 +24,7 @@ that the server refuses to accept the request without a defined
 
 ## Status
 
-```
+```http
 411 Length Required
 ```
 

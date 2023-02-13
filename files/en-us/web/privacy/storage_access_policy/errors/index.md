@@ -7,6 +7,9 @@ tags:
   - Storage
   - storage access policy
 ---
+
+{{QuicklinksWithSubPages}}
+
 This page lists the errors that can be raised due to Firefox's anti-tracking functionality, governed by the [Storage Access Policy](/en-US/docs/Web/Privacy/Storage_Access_Policy). You can find further information about them by clicking on the links below:
 
 A request to access cookies or storage was

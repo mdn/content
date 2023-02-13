@@ -1,6 +1,7 @@
 ---
 title: <switch>
 slug: Web/SVG/Element/switch
+page-type: svg-element
 tags:
   - Element
   - NeedsExample
@@ -8,6 +9,7 @@ tags:
   - SVG Container
 browser-compat: svg.elements.switch
 ---
+
 {{SVGRef}}
 
 The **`<switch>`** [SVG](/en-US/docs/Web/SVG) element evaluates any {{SVGAttr("requiredFeatures")}}, {{SVGAttr("requiredExtensions")}} and {{SVGAttr("systemLanguage")}} attributes on its direct child elements in order, and then renders the first child where these attributes evaluate to true.

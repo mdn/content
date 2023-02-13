@@ -12,6 +12,7 @@ tags:
   - hand
 browser-compat: api.Gamepad.hand
 ---
+
 {{APIRef("Gamepad")}}{{SeeCompatTable}}
 
 The **`hand`** read-only property of the {{domxref("Gamepad")}} interface returns an enum defining what hand the controller is being held in, or is most likely to be held in.

@@ -6,6 +6,7 @@ tags:
   - Firefox 9
   - Guide
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 9 doesn't have a lot of changes that should be compatibility issues for add-on developers. However, there are a few possible items that might trip you up, so let's take a look.
@@ -27,7 +28,9 @@ If your add-on uses `nsIChromeFrameMessageManager.loadFrameScript()` with the de
 Starting in Firefox 9, you should call the new `nsIChromeFrameMessageManager.removeDelayedFrameScript()` method to stop loading your script in newly-created frames. You do this like this, for example:
 
 ```js
-browser.messageManager.removeDelayedFrameScript("chrome://myextension/content/somescript.js");
+browser.messageManager.removeDelayedFrameScript(
+  "chrome://myextension/content/somescript.js"
+);
 ```
 
 ## Interface changes

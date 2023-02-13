@@ -8,6 +8,7 @@ tags:
   - redirects
 browser-compat: http.status.302
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`302 Found`** redirect
@@ -30,7 +31,7 @@ confirmation message such as: 'you successfully uploaded XYZ'.
 
 ## Status
 
-```
+```http
 302 Found
 ```
 

@@ -10,6 +10,7 @@ tags:
   - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.pad
 ---
+
 {{DefaultAPISidebar("CSS Counter Styles")}}
 
 The **`pad`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the value of the {{cssxref("@counter-style/pad", "pad")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.

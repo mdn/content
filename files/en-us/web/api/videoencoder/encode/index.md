@@ -8,15 +8,17 @@ tags:
   - Reference
   - encode
   - VideoEncoder
+  - Experimental
 browser-compat: api.VideoEncoder.encode
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`encode()`** method of the {{domxref("VideoEncoder")}} interface enqueues a control message to encode a given {{domxref("VideoFrame")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 encode(frame)
 encode(frame, options)
 ```

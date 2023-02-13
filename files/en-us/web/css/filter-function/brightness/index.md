@@ -1,6 +1,7 @@
 ---
 title: brightness()
 slug: Web/CSS/filter-function/brightness
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: css.types.filter-function.brightness
 ---
+
 {{CSSRef}}
 
 The **`brightness()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) applies a linear multiplier to the input image, making it appear brighter or darker. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
@@ -47,7 +49,8 @@ brightness(200%) /* Double brightness */
 
 ## See also
 
-- {{cssxref("&lt;filter-function&gt;")}}
+The other {{cssxref("&lt;filter-function&gt;")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
+
 - {{cssxref("filter-function/blur", "blur()")}}
 - {{cssxref("filter-function/contrast", "contrast()")}}
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}

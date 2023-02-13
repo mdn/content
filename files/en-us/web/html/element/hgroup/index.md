@@ -1,22 +1,56 @@
 ---
 title: <hgroup>
 slug: Web/HTML/Element/hgroup
+page-type: html-element
 tags:
-  - Deprecated
   - Element
-  - Experimental
   - HTML
-  - HTML5
   - Reference
   - Web
 browser-compat: html.elements.hgroup
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
-The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a heading and related content. It groups a single [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element with one or more  [`<p>`](/en-US/docs/Web/HTML/Element/p).
+The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a heading and related content. It groups a single [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element with one or more [`<p>`](/en-US/docs/Web/HTML/Element/p).
 
 {{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
+
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Usage notes
+
+The `<hgroup>` element allows the grouping of a heading with any secondary content, such as subheadings, an alternative title, or tagline. Each of these types of content represented as a `<p>` element within the `<hgroup>`.
+
+The `<hgroup>` itself has no impact on the document outline of a web page. Rather, the single allowed heading within the `<hgroup>` contributes to the document outline.
+
+## Examples
+
+```html
+<!DOCTYPE html>
+<title>HTML Standard</title>
+<body>
+  <hgroup id="document-title">
+    <h1>HTML: Living Standard</h1>
+    <p>Last Updated 12 July 2022</p>
+  </hgroup>
+  <p>Some intro to the document.</p>
+  <h2>Table of contents</h2>
+  <ol id="toc">
+    …
+  </ol>
+  <h2>First section</h2>
+  <p>Some intro to the first section.</p>
+</body>
+```
+
+## Accessibility concerns
+
+The `<hgroup>` presently has no strong accessibility semantics. The content of the element (a heading and optional paragraphs) is what is exposed by browser accessibility APIs.
+
+## Technical summary
 
 <table class="properties">
   <tbody>
@@ -74,38 +108,6 @@ The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a heading and
   </tbody>
 </table>
 
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Usage notes
-
-The `<hgroup>` element allows the grouping of a heading with any secondary content, such as subheadings, an alternative title, or tagline. Each of these types of content represented as a `<p>` element within the `<hgroup>`.
-
-The `<hgroup>` itself has no impact on the document outline of a web page. Rather, the single allowed heading within the `<hgroup>` contributes to the document outline.
-
-## Examples
-
-```html
-<!DOCTYPE html>
-<title>HTML Standard</title>
-<body>
-  <hgroup id="document-title">
-    <h1>HTML: Living Standard</h1>
-    <p>Last Updated 12 July 2022</p>
-  </hgroup>
-  <p>Some intro to the document.</p>
-  <h2>Table of contents</h2>
-  <ol id=toc>…</ol>
-  <h2>First section</h2>
-  <p>Some intro to the first section.</p>
-</body>
-```
-
-## Accessibility concerns
-
-The `<hgroup>` presently has no strong accessibility semantics. The content of the element (a heading and optional paragraphs) is what is exposed by browser accessibility APIs.
-
 ## Specifications
 
 {{Specifications}}
@@ -117,4 +119,4 @@ The `<hgroup>` presently has no strong accessibility semantics. The content of t
 ## See also
 
 - Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
-- [Sections and outlines of an HTML5 document](/en-US/docs/Web/HTML/Element/Heading_Elements).
+- [Sections and outlines of an HTML document](/en-US/docs/Web/HTML/Element/Heading_Elements).

@@ -1,6 +1,7 @@
 ---
 title: TypedArray.from()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/from
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -11,9 +12,10 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.from
 ---
+
 {{JSRef}}
 
-The **`TypedArray.from()`** method creates a new
+The **`TypedArray.from()`** static method creates a new
 [typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects)
 from an array-like or iterable object. This method is nearly the same as
 {{jsxref("Array.from()")}}.
@@ -22,7 +24,7 @@ from an array-like or iterable object. This method is nearly the same as
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 TypedArray.from(arrayLike, (element) => { /* ... */ } )
 TypedArray.from(arrayLike, (element, index) => { /* ... */ } )
@@ -94,12 +96,7 @@ Some subtle distinctions between {{jsxref("Array.from()")}} and
   `TypedArray.from()` is not a constructor,
   `TypedArray.from()` will throw a {{jsxref("TypeError")}},
   where `Array.from()` defaults to creating a new {{jsxref("Array")}}.
-- `TypedArray.from()` uses `[[Set]]` where
-  `Array.from()` uses `[[DefineOwnProperty]]`. Hence, when
-  working with {{jsxref("Proxy")}} objects, it calls
-  {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} to create new
-  elements rather than {{jsxref("Global_Objects/Proxy/handler/defineProperty",
-        "handler.defineProperty()")}}.
+- `TypedArray.from()` uses `[[Set]]` where `Array.from()` uses `[[DefineOwnProperty]]`. Hence, when working with {{jsxref("Proxy")}} objects, it calls [`handler.set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set) to create new elements rather than [`handler.defineProperty()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty).
 - When the `source` parameter is an iterator, the
   `TypedArray.from()` first collects all the values from the
   iterator, then creates an instance of `thisArg` using the
@@ -123,7 +120,7 @@ Uint8Array.from(s);
 ### From a string
 
 ```js
-Int16Array.from('123');
+Int16Array.from("123");
 // Int16Array [ 1, 2, 3 ]
 ```
 
@@ -139,7 +136,7 @@ Float32Array.from([1, 2, 3], (x) => x + x);
 ### Generate a sequence of numbers
 
 ```js
-Uint8Array.from({length: 5}, (v, k) => k);
+Uint8Array.from({ length: 5 }, (v, k) => k);
 // Uint8Array [ 0, 1, 2, 3, 4 ]
 ```
 
@@ -157,4 +154,3 @@ Uint8Array.from({length: 5}, (v, k) => k);
 - {{jsxref("TypedArray.of()")}}
 - {{jsxref("Array.from()")}}
 - {{jsxref("Array.prototype.map()")}}
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/v0.0.1/int-8-array.polyfill.js)

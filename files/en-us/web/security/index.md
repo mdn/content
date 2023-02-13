@@ -6,6 +6,9 @@ tags:
   - Security
   - Web
 ---
+
+{{QuickLinksWithSubpages}}
+
 Ensuring that your website or open web application is secure is critical. Even simple bugs in your code can result in private information being leaked, and bad people are out there trying to find ways to steal data. The web security-oriented articles listed here provide information that may help you secure your site and its code from attacks and data theft.
 
 ## Content security
@@ -28,7 +31,7 @@ Ensuring that your website or open web application is secure is critical. Even s
 - [How to fix a website with blocked mixed content](/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
   - : If your website delivers HTTPS pages, all [active mixed content](/en-US/docs/Web/Security/Mixed_content#mixed_active_content) delivered via HTTP on these pages will be blocked by default. Consequently, your website may appear broken to users (if iframes or plugins don't load, etc.). [Passive mixed content](/en-US/docs/Web/Security/Mixed_content#mixed_passivedisplay_content) is displayed by default, but users can set a preference to block this type of content, as well. This page explains what you should be aware of as a web developer.
 - [Secure contexts](/en-US/docs/Web/Security/Secure_Contexts)
-  - : A **secure context** is a `Window` or `Worker` for which there is reasonable confidence that the content has been delivered securely (via HTTPS/TLS), and for which the potential for communication with contexts that are **not** secure is limited. Many Web APIs and features are accessible only in a secure context. The primary goal of secure contexts is to prevent {{interwiki("wikipedia", "man-in-the-middle attack", "man-in-the-middle attackers")}} from accessing powerful APIs that could further compromise the victim of an attack.
+  - : A **secure context** is a `Window` or `Worker` for which there is reasonable confidence that the content has been delivered securely (via HTTPS/TLS), and for which the potential for communication with contexts that are **not** secure is limited. Many Web APIs and features are accessible only in a secure context. The primary goal of secure contexts is to prevent [man-in-the-middle attackers](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) from accessing powerful APIs that could further compromise the victim of an attack.
 - [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
   - : This reference lists the web platform features available only in secure contexts.
 - [Weak signature algorithms](/en-US/docs/Web/Security/Weak_Signature_Algorithm)
@@ -47,10 +50,8 @@ Ensuring that your website or open web application is secure is critical. Even s
 
 - [Referer header policy: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns)
   - : There are privacy and security risks associated with the [Referer HTTP header](/en-US/docs/Web/HTTP/Headers/Referer). This article describes them and offers advice on mitigating those risks.
-- Robots.txt
-  - : to be written
-- Site maps
-  - : to be written
+- [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless)
+  - : Iframe credentialless provides a mechanism for developers to load third-party resources in {{htmlelement("iframe")}}s using a new, ephemeral context. This context doesn't have access to the network, cookies, and storage data associated with its origin. It uses a new context local to the top-level document lifetime. In return, the {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not.
 
 ## Integrity
 
@@ -68,7 +69,7 @@ Ensuring that your website or open web application is secure is critical. Even s
 In [clickjacking](/en-US/docs/Glossary/Clickjacking), a user is fooled into clicking on a UI element that performs some action other than what the user expects.
 
 - [HTTP X-Frame-Options](/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
-  - : The **`X-Frame-Options`** [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether or not a browser should be allowed to render a page in a [`<frame>`](/en-US/docs/Web/HTML/Element/frame), [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), [`<embed>`](/en-US/docs/Web/HTML/Element/embed) or [`<object>`](/en-US/docs/Web/HTML/Element/object). Sites can use this to avoid [clickjacking](/en-US/docs/Glossary/Clickjacking) attacks, by ensuring that their content is not embedded into other sites.
+  - : The **`X-Frame-Options`** [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether a browser should be allowed to render a page in a [`<frame>`](/en-US/docs/Web/HTML/Element/frame), [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), [`<embed>`](/en-US/docs/Web/HTML/Element/embed) or [`<object>`](/en-US/docs/Web/HTML/Element/object). Sites can use this to avoid [clickjacking](/en-US/docs/Glossary/Clickjacking) attacks, by ensuring that their content is not embedded into other sites.
 - [CSP: frame-ancestors](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
   - : The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** directive specifies valid parents that may embed a page using {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or {{HTMLElement("applet")}}.
 
@@ -120,14 +121,9 @@ In [clickjacking](/en-US/docs/Glossary/Clickjacking), a user is fooled into clic
 - {{Glossary("SQL injection")}}
 - {{Glossary("Symmetric-key cryptography")}}
 - {{Glossary("TOFU")}}
-
-<!---->
-
 - {{Glossary("TLS")}}
 
 ## See also
 
 - [Security Blog](https://blog.mozilla.org/security/)
 - [@mozsec on Twitter](https://twitter.com/mozsec)
-
-{{QuickLinksWithSubpages}}

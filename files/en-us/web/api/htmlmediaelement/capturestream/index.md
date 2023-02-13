@@ -15,9 +15,10 @@ tags:
   - captureStream
 browser-compat: api.HTMLMediaElement.captureStream
 ---
+
 {{APIRef("HTML Media Capture")}}
 
-The **`captureStream()`** property of the
+The **`captureStream()`** method of the
 {{domxref("HTMLMediaElement")}} interface returns a {{domxref('MediaStream')}} object
 which is streaming a real-time capture of the content being rendered in the media
 element.
@@ -26,7 +27,7 @@ This can be used, for example, as a source for a [WebRTC](/en-US/docs/Web/API/We
 
 ## Syntax
 
-```js
+```js-nolint
 captureStream()
 ```
 
@@ -48,7 +49,7 @@ for streaming over WebRTC, to allow sharing prerecorded videos with another pers
 during a video call.
 
 ```js
-document.querySelector('.playAndRecord').addEventListener('click', function() {
+document.querySelector('.playAndRecord').addEventListener('click', () => {
   const playbackElement = document.getElementById("playback");
   const captureStream = playbackElement.captureStream();
   playbackElement.play();

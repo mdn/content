@@ -14,7 +14,8 @@ tags:
   - enabled
 browser-compat: api.MediaStreamTrack.enabled
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The **`enabled`** property on the
 {{domxref("MediaStreamTrack")}} interface is a Boolean value which is
@@ -62,7 +63,7 @@ computers turns off while the track is muted in this way.
 This example demonstrates a {{domxref("Element/click_event", "click")}} event handler for a pause button.
 
 ```js
-pauseButton.onclick = function(evt) {
+pauseButton.onclick = (evt) => {
   const newState = !myAudioTrack.enabled;
 
   pauseButton.innerHTML = newState ? "&#x25B6;&#xFE0F;" : "&#x23F8;&#xFE0F;";
@@ -87,7 +88,7 @@ Finally, the new value of `enabled` is saved, making the change take effect.
 
 ## See also
 
-- [MediaStream API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaStream")}}
 - {{domxref("MediaStreamTrack")}}
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)

@@ -10,6 +10,7 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.position
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`position`** property of the {{domxref("VTTCue")}} interface represents the indentation of the cue within the line.

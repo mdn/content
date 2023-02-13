@@ -10,7 +10,8 @@ tags:
   - Web Performance API
 browser-compat: api.Performance.now
 ---
-{{APIRef("High Resolution Timing")}}
+
+{{APIRef("Performance API")}}
 
 The **`performance.now()`** method
 returns a {{domxref("DOMHighResTimeStamp")}}, measured in milliseconds.
@@ -38,7 +39,7 @@ are alleviated through other means.
 
 ## Syntax
 
-```js
+```js-nolint
 now()
 ```
 
@@ -48,7 +49,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+Returns a {{domxref("DOMHighResTimeStamp")}} measured in milliseconds.
 
 ## Examples
 
@@ -102,7 +103,7 @@ Starting with Firefox 79, high resolution timers can be used if you cross-origin
 isolate your document using the {{HTTPHeader("Cross-Origin-Opener-Policy")}} and
 {{HTTPHeader("Cross-Origin-Embedder-Policy")}} headers:
 
-```plain
+```http
 Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
@@ -122,4 +123,4 @@ of cross-origin attacks dubbed [XS-Leaks](https://github.com/xsleaks/xsleaks).
 
 ## See also
 
-- [When milliseconds are not enough: performance.now()](https://developer.chrome.com/blog/when-milliseconds-are-not-enough-performance-now/) from HTML5 Rocks.
+- [When milliseconds are not enough: performance.now()](https://developer.chrome.com/blog/when-milliseconds-are-not-enough-performance-now/)

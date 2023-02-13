@@ -1,6 +1,7 @@
 ---
 title: Math.tanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -10,50 +11,18 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Math.tanh
 ---
+
 {{JSRef}}
 
-The **`Math.tanh()`** function returns the hyperbolic tangent
-of a number, that is
+The **`Math.tanh()`** static method returns the hyperbolic tangent of a number. That is,
 
-<math display="block"><semantics><mrow><mo lspace="0em" rspace="0em">tanh</mo>
-<mi>x</mi>
-<mo>=</mo>
-<mfrac><mrow><mo lspace="0em" rspace="0em">sinh</mo>
-<mi>x</mi>
-</mrow><mrow><mo lspace="0em" rspace="0em">cosh</mo>
-<mi>x</mi>
-</mrow></mfrac><mo>=</mo>
-<mfrac><mrow><msup><mi>e</mi>
-<mi>x</mi>
-</msup><mo>-</mo>
-<msup><mi>e</mi>
-<mrow><mo>-</mo>
-<mi>x</mi>
-</mrow></msup></mrow><mrow><msup><mi>e</mi>
-<mi>x</mi>
-</msup><mo>+</mo>
-<msup><mi>e</mi>
-<mrow><mo>-</mo>
-<mi>x</mi>
-</mrow></msup></mrow></mfrac><mo>=</mo>
-<mfrac><mrow><msup><mi>e</mi>
-<mrow><mn>2</mn>
-<mi>x</mi>
-</mrow></msup><mo>-</mo>
-<mn>1</mn>
-</mrow><mrow><msup><mi>e</mi>
-<mrow><mn>2</mn>
-<mi>x</mi>
-</mrow></msup><mo>+</mo>
-<mn>1</mn>
-</mrow></mfrac></mrow><annotation encoding="TeX">\tanh x = \frac{\sinh x}{\cosh x} = \frac {e^x - e^{-x}}
-{e^x + e^{-x}} = \frac{e^{2x} - 1}{e^{2x}+1}</annotation></semantics></math>
+<math display="block"><semantics><mrow><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚝𝚊𝚗𝚑</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">tanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mo lspace="0em" rspace="0em">sinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mrow><mo lspace="0em" rspace="0em">cosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi mathvariant="normal">e</mi><mi>x</mi></msup><mo>−</mo><msup><mi mathvariant="normal">e</mi><mrow><mo>−</mo><mi>x</mi></mrow></msup></mrow><mrow><msup><mi mathvariant="normal">e</mi><mi>x</mi></msup><mo>+</mo><msup><mi mathvariant="normal">e</mi><mrow><mo>−</mo><mi>x</mi></mrow></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi mathvariant="normal">e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>−</mo><mn>1</mn></mrow><mrow><msup><mi mathvariant="normal">e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.tanh}(x)} = \tanh(x) = \frac{\sinh(x)}{\cosh(x)} = \frac{\mathrm{e}^x - \mathrm{e}^{-x}}{\mathrm{e}^x + \mathrm{e}^{-x}} = \frac{\mathrm{e}^{2x} - 1}{\mathrm{e}^{2x}+1}</annotation></semantics></math>
 
 {{EmbedInteractiveExample("pages/js/math-tanh.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Math.tanh(x)
 ```
 
@@ -64,22 +33,22 @@ Math.tanh(x)
 
 ### Return value
 
-The hyperbolic tangent of the given number.
+The hyperbolic tangent of `x`.
 
 ## Description
 
-Because `tanh()` is a static method of `Math`, you always use it
-as `Math.tanh()`, rather than as a method of a `Math` object you
-created (`Math` is not a constructor).
+Because `tanh()` is a static method of `Math`, you always use it as `Math.tanh()`, rather than as a method of a `Math` object you created (`Math` is not a constructor).
 
 ## Examples
 
 ### Using Math.tanh()
 
 ```js
-Math.tanh(0);        // 0
+Math.tanh(-Infinity); // -1
+Math.tanh(-0); // -0
+Math.tanh(0); // 0
+Math.tanh(1); // 0.7615941559557649
 Math.tanh(Infinity); // 1
-Math.tanh(1);        // 0.7615941559557649
 ```
 
 ## Specifications

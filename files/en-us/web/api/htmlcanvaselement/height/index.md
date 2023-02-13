@@ -9,6 +9,7 @@ tags:
   - Property
 browser-compat: api.HTMLCanvasElement.height
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`HTMLCanvasElement.height`** property is a

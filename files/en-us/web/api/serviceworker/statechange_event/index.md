@@ -11,6 +11,7 @@ tags:
   - statechange
 browser-compat: api.ServiceWorker.statechange_event
 ---
+
 {{APIRef("Service Workers API")}}
 
 The `statechange` event fires anytime the {{domxref("ServiceWorker.state")}} changes.
@@ -49,7 +50,7 @@ if (registration.installing) {
 
 if (serviceWorker) {
   logState(serviceWorker.state);
-  serviceWorker.addEventListener('statechange', function(e) {
+  serviceWorker.addEventListener('statechange', (e) => {
     logState(e.target.state);
   });
 }
@@ -59,9 +60,9 @@ Note that when `statechange` fires, the service worker's references may have
 changed. For example:
 
 ```js
-navigator.serviceWorker.register("/sw.js").then(function(swr) {
+navigator.serviceWorker.register("/sw.js").then((swr) => {
   swr.installing.state = "installing";
-  swr.installing.onstatechange = function() {
+  swr.installing.onstatechange = () => {
     swr.installing = null;
     // At this point, swr.waiting OR swr.active might be true. This is because the statechange
     // event gets queued, meanwhile the underlying worker may have gone into the waiting

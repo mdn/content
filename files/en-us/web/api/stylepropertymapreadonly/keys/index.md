@@ -13,6 +13,7 @@ tags:
   - keys()
 browser-compat: api.StylePropertyMapReadOnly.keys
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`StylePropertyMapReadOnly.keys()`** method returns a new
@@ -21,7 +22,7 @@ in `StylePropertyMapReadOnly`
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

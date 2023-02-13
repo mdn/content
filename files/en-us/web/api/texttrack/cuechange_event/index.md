@@ -13,6 +13,7 @@ tags:
   - track
 browser-compat: api.TextTrack.cuechange_event
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`cuechange`** event fires when a {{domxref("TextTrack")}} has changed the currently displaying cues. The event is fired on both the `TextTrack` and the {{domxref("HTMLTrackElement")}} in which it's being presented, if any.
@@ -36,8 +37,9 @@ A generic {{DOMxRef("Event")}} with no added properties.
 You can set up a listener for the `cuechange` event on a `TextTrack` using the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method:
 
 ```js
-track.addEventListener('cuechange', function () {
-  let cues = track.activeCues;  // array of current cues
+track.addEventListener('cuechange', () => {
+  const cues = track.activeCues;  // array of current cues
+  // …
 });
 ```
 

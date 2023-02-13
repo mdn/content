@@ -15,6 +15,7 @@ tags:
   - submit
 browser-compat: api.SubmitEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`SubmitEvent`** interface defines the object used to represent an {{Glossary("HTML")}} form's {{domxref("HTMLFormElement.submit_event", "submit")}} event. This event is fired at the {{HTMLElement("form")}} when the form's submit action is invoked.
@@ -26,14 +27,14 @@ The **`SubmitEvent`** interface defines the object used to represent an {{Glossa
 - {{domxref("SubmitEvent.SubmitEvent", "SubmitEvent()")}}
   - : Creates and returns a new `SubmitEvent` object whose {{domxref("Event.type", "type")}} and other options are configured as specified. Note that currently the only valid `type` for a `SubmitEvent` is `submit`.
 
-## Properties
+## Instance properties
 
 _In addition to the properties listed below, this interface inherits the properties of its parent interface, {{domxref("Event")}}._
 
 - {{domxref("SubmitEvent.submitter", "submitter")}} {{ReadOnlyInline}}
   - : An {{domxref("HTMLElement")}} object which identifies the button or other element which was invoked to trigger the form being submitted.
 
-## Methods
+## Instance methods
 
 _While `SubmitEvent` offers no methods of its own, it inherits any specified by its parent interface, {{domxref("Event")}}._
 

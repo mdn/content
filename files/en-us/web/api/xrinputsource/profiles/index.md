@@ -21,6 +21,7 @@ tags:
   - profile
 browser-compat: api.XRInputSource.profiles
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRInputSource")}} property **`profiles`** returns an array of strings, each describing a configuration profile for the input source. The profile strings are listed in order of specificity, with the most specific profile listed first.

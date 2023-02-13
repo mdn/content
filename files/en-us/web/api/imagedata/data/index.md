@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.ImageData.data
 ---
+
 {{APIRef("Canvas API")}}
 
 The readonly **`ImageData.data`** property returns a
@@ -57,7 +58,7 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const imageData = ctx.createImageData(100, 100);
 
-// Iterate through every pixel
+// Fill the array with RGBA values
 for (let i = 0; i < imageData.data.length; i += 4) {
   // Percentage in the x direction, times 255
   let x = (i % 400) / 400 * 255;

@@ -13,6 +13,7 @@ tags:
   - onCreated
 browser-compat: webextensions.api.downloads.onCreated
 ---
+
 {{AddonSidebar()}}
 
 The **`onCreated()`** event of the {{WebExtAPIRef("downloads")}} API fires when a download begins, i.e. when {{WebExtAPIRef("downloads.download()")}} is successfully invoked.
@@ -21,7 +22,7 @@ The listener is passed the {{WebExtAPIRef('downloads.DownloadItem')}} object in 
 
 ## Syntax
 
-```js
+```js-nolint
 browser.downloads.onCreated.addListener(listener)
 browser.downloads.onCreated.removeListener(listener)
 browser.downloads.onCreated.hasListener(listener)
@@ -66,10 +67,9 @@ browser.downloads.onCreated.addListener(handleCreated);
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#event-onCreated) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -96,4 +96,4 @@ browser.downloads.onCreated.addListener(handleCreated);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

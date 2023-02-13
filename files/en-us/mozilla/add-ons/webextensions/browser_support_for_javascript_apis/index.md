@@ -5,6 +5,7 @@ tags:
   - Reference
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 {{WebExtAllCompatTables}}

@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - Canvas
   - CanvasCaptureMediaStreamTrack
-  - Experimental
   - Frame Capture
   - Media Capture
   - Property
@@ -14,6 +13,7 @@ tags:
   - Web
 browser-compat: api.CanvasCaptureMediaStreamTrack.canvas
 ---
+
 {{APIRef}}
 
 The {{domxref("CanvasCaptureMediaStreamTrack")}} **`canvas`**

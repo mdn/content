@@ -1,6 +1,7 @@
 ---
 title: String.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/String/at
+page-type: javascript-instance-method
 tags:
   - String
   - JavaScript
@@ -11,6 +12,7 @@ tags:
   - at
 browser-compat: javascript.builtins.String.at
 ---
+
 {{JSRef}}
 
 The **`at()`** method takes an integer value and returns a new {{jsxref('String')}} consisting of the single UTF-16 code unit located at the specified offset. This method allows for positive and negative integers. Negative integers count back from the last string character.
@@ -19,7 +21,7 @@ The **`at()`** method takes an integer value and returns a new {{jsxref('String'
 
 ## Syntax
 
-```js
+```js-nolint
 at(index)
 ```
 
@@ -44,15 +46,13 @@ function returnLast(arr) {
   return arr.at(-1);
 }
 
-let invoiceRef = 'myinvoice01';
+let invoiceRef = "myinvoice01";
 
-console.log(returnLast(invoiceRef));
-// Logs: '1'
+console.log(returnLast(invoiceRef)); // '1'
 
-invoiceRef = 'myinvoice02';
+invoiceRef = "myinvoice02";
 
-console.log(returnLast(invoiceRef));
-// Logs: '2'
+console.log(returnLast(invoiceRef)); // '2'
 ```
 
 ### Comparing methods
@@ -60,19 +60,19 @@ console.log(returnLast(invoiceRef));
 Here we compare different ways to select the penultimate (last but one) character of a {{jsxref('String')}}. Whilst all below methods are valid, it highlights the succinctness and readability of the `at()` method.
 
 ```js
-const myString = 'Every green bus drives fast.';
+const myString = "Every green bus drives fast.";
 
 // Using length property and charAt() method
-const lengthWay = myString.charAt(myString.length-2);
-console.log(lengthWay); // Logs: 't'
+const lengthWay = myString.charAt(myString.length - 2);
+console.log(lengthWay); // 't'
 
 // Using slice() method
 const sliceWay = myString.slice(-2, -1);
-console.log(sliceWay); // Logs: 't'
+console.log(sliceWay); // 't'
 
 // Using at() method
 const atWay = myString.at(-2);
-console.log(atWay); // Logs: 't'
+console.log(atWay); // 't'
 ```
 
 ## Specifications

@@ -12,6 +12,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.filterResponseData
 ---
+
 {{AddonSidebar()}}
 
 Use this function to create a {{WebExtAPIRef("webRequest.StreamFilter")}} object for a request. The stream filter gives the web extension full control over the stream, with the ability to monitor and modify the response. It's the extension's responsibility to write and close or disconnect the stream, as the default behavior is to keep the request open without a response.
@@ -24,7 +25,7 @@ To use this API you must have the `"webRequestBlocking"` [API permission](/en-US
 
 ## Syntax
 
-```js
+```js-nolint
 let filter = browser.webRequest.filterResponseData(
   requestId       // string
 )

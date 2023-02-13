@@ -1,12 +1,14 @@
 ---
 title: vert-origin-y
 slug: Web/SVG/Attribute/vert-origin-y
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG
   - SVG Attribute
 browser-compat: svg.elements.font.vert-origin-y
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`vert-origin-y`** attribute indicates the y-coordinate in the font coordinate system of the origin of a {{Glossary("glyph")}} to be used when drawing vertically oriented text.

@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Comment.Comment
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Comment()`** constructor returns a newly created
@@ -15,9 +16,9 @@ parameter as its textual content.
 
 ## Syntax
 
-```js
-new Comment();
-new Comment(aString);
+```js-nolint
+new Comment()
+new Comment(aString)
 ```
 
 ### Parameters

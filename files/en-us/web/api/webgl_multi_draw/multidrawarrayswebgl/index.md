@@ -9,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_multi_draw.multiDrawArraysWEBGL
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_multi_draw.multiDrawArraysWEBGL()`** method of the
@@ -20,8 +21,8 @@ method.
 
 ## Syntax
 
-```js
-void ext.multiDrawArraysWEBGL(mode,
+```js-nolint
+multiDrawArraysWEBGL(mode,
     firstsList, firstsOffset,
     countsList, countsOffset,
     drawCount);

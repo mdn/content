@@ -11,13 +11,14 @@ tags:
   - Web Audio API
 browser-compat: api.PannerNode.PannerNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`PannerNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new {{domxref("PannerNode")}} object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new PannerNode(context)
 new PannerNode(context, options)
 ```
@@ -50,8 +51,8 @@ new PannerNode(context, options)
       - : The {{domxref("PannerNode.refDistance")}} you want the {{domxref("PannerNode")}} to have. The default is `1`, and negative values are not allowed.
     - `maxDistance`
       - : The {{domxref("PannerNode.maxDistance")}} you want the {{domxref("PannerNode")}} to have. The default is `10000`, and non-positive values are not allowed.
-    - `rollOffFactor`
-      - : The {{domxref("PannerNode.rollOffFactor")}} you want the {{domxref("PannerNode")}} to have. The default is `1`, and negative values are not allowed.
+    - `rolloffFactor`
+      - : The {{domxref("PannerNode.rolloffFactor")}} you want the {{domxref("PannerNode")}} to have. The default is `1`, and negative values are not allowed.
     - `coneInnerAngle`
       - : The {{domxref("PannerNode.coneInnerAngle")}} you want the {{domxref("PannerNode")}} to have (the default is `360`.)
     - `coneOuterAngle`

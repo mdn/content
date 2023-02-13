@@ -11,20 +11,21 @@ tags:
   - Reference
 browser-compat: api.CSSPseudoElement
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`CSSPseudoElement`** interface represents a pseudo-element that may be the target of an event or animated using the {{DOMxRef('Web Animations API', '', '', 'true')}}. Instances of this interface may be obtained by calling {{DOMxRef('Element.pseudo()')}}.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-- {{DOMxRef('CSSPseudoElement.element')}} {{Experimental_Inline}} {{readOnlyInline}}
+- {{DOMxRef('CSSPseudoElement.element')}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the originating/parent {{DOMxRef('Element')}} of the pseudo-element.
-- {{DOMxRef('CSSPseudoElement.type')}} {{Experimental_Inline}} {{readOnlyInline}}
+- {{DOMxRef('CSSPseudoElement.type')}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the pseudo-element selector as a string.
 
-## Methods
+## Instance methods
 
 _`CSSPseudoElement` extends {{DOMxRef('EventTarget')}}, so it inherits the following methods:_
 
@@ -42,8 +43,8 @@ _`CSSPseudoElement` extends {{DOMxRef('EventTarget')}}, so it inherits the follo
 Using pseudo-elements, most modern browsers will automatically add quotation marks around text inside a {{HTMLElement('q')}} element. (A style rule may be needed to add quotation marks in older browsers.) The example below demonstrates the basic properties of the `CSSPseudoElement` object representing the opening quotation mark.
 
 ```js
-const element = document.querySelector('q');
-const cssPseudoElement = element.pseudo('::before');
+const element = document.querySelector("q");
+const cssPseudoElement = element.pseudo("::before");
 console.log(cssPseudoElement.element); // Outputs [object HTMLQuoteElement]
 console.log(cssPseudoElement.type); // Outputs '::before'
 ```

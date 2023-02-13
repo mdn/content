@@ -7,6 +7,9 @@ tags:
   - Landing
   - Media
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
+
 The {{Glossary("HTML")}} {{HTMLElement("img")}} element lets you embed images into an HTML document, while the {{HTMLElement("picture")}} element enables [responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images). In this guide you'll find links to resources that deal with adding images to websites.
 
 ## References
@@ -35,8 +38,8 @@ These articles provide guidance on selecting and configuring image types.
 
 - [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)
   - : A guide to the various image file types commonly supported by web browsers including details about their individual use cases, capabilities, and compatibility factors. Additionally, this article provides guidance for selecting the best image file type for a given situation.
-- [Mapping the width and height attributes of media container elements to their aspect-ratio](/en-US/docs/Web/Media/images/aspect_ratio_mapping)
-  - : This changes how browsers load images so their aspect ratios are calculated by the browser early on and can later be used to correct the display size of an image before it's loaded.
+- [Including `width` and `height` attributes helps avoid jank](/en-US/docs/Learn/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)
+  - : This changes how browsers load images so their aspect ratios are calculated by the browser early on and can later be used to reserve the display size of an image before it's loaded.
 
 ## Other topics
 

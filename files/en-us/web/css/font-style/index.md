@@ -1,6 +1,7 @@
 ---
 title: font-style
 slug: Web/CSS/font-style
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts
@@ -11,6 +12,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-style
 ---
+
 {{CSSRef}}
 
 The **`font-style`** [CSS](/en-US/docs/Web/CSS) property sets whether a font should be styled with a normal, italic, or oblique face from its {{cssxref("font-family")}}.

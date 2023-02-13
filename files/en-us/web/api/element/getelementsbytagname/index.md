@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.getElementsByTagName
 ---
+
 {{ APIRef("DOM") }}
 
 The
@@ -35,7 +36,7 @@ elements that are descendants of the specified element.
 
 ## Syntax
 
-```js
+```js-nolint
 getElementsByTagName(tagName)
 ```
 
@@ -56,8 +57,8 @@ A _live_ {{domxref("HTMLCollection")}} of elements with a matching tag name, in 
 const table = document.getElementById('forecast-table');
 const cells = table.getElementsByTagName('td');
 
-for (let cell of cells) {
-  let status = cell.getAttribute('data-status');
+for (const cell of cells) {
+  const status = cell.getAttribute('data-status');
   if (status === 'open') {
     // Grab the data
   }

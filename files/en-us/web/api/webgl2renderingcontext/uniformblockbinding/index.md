@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.uniformBlockBinding
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.uniformBlockBinding()`** method
@@ -18,7 +19,7 @@ for active uniform blocks.
 
 ## Syntax
 
-```js
+```js-nolint
 uniformBlockBinding(program, uniformBlockIndex, uniformBlockBinding)
 ```
 

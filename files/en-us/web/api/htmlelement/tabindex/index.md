@@ -11,6 +11,7 @@ tags:
   - tabIndex
 browser-compat: api.HTMLElement.tabIndex
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`tabIndex`** property of the
@@ -19,10 +20,10 @@ The **`tabIndex`** property of the
 Tab order is as follows:
 
 1. Elements with a positive `tabIndex`. Elements that have identical
-    `tabIndex` values should be navigated in the order they appear. Navigation
-    proceeds from the lowest `tabIndex` to the highest `tabIndex`.
+   `tabIndex` values should be navigated in the order they appear. Navigation
+   proceeds from the lowest `tabIndex` to the highest `tabIndex`.
 2. Elements that do not support the `tabIndex` attribute or support it and
-    assign `tabIndex` to `0`, in the order they appear.
+   assign `tabIndex` to `0`, in the order they appear.
 
 Elements that are disabled do not participate in the tabbing order.
 

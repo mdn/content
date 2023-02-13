@@ -11,6 +11,7 @@ tags:
   - numberOfOutputs
 browser-compat: api.AudioNode.numberOfOutputs
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `numberOfOutputs` property of

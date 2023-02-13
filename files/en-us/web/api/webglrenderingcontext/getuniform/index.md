@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getUniform
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getUniform()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns the value of a uniform
@@ -17,7 +18,7 @@ variable at a given location.
 
 ## Syntax
 
-```js
+```js-nolint
 getUniform(program, location)
 ```
 

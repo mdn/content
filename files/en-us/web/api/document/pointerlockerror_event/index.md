@@ -10,6 +10,7 @@ tags:
   - pointerlockerror
 browser-compat: api.Document.pointerlockerror_event
 ---
+
 {{APIRef}}
 
 The `pointerlockerror` event is fired when locking the pointer failed (for technical reasons or because the permission was denied).

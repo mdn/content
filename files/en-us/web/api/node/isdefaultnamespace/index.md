@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.isDefaultNamespace
 ---
+
 {{APIRef("DOM")}}
 
 The **`isDefaultNamespace()`** method of the {{domxref("Node")}} interface
@@ -19,8 +20,8 @@ and `false` if not.
 
 ## Syntax
 
-```js
-isDefaultNamespace(namespaceURI);
+```js-nolint
+isDefaultNamespace(namespaceURI)
 ```
 
 ### Parameters
@@ -37,19 +38,22 @@ indicating if the parameter is the default namespace, or not.
 ## Example
 
 ```html
-Is "" the default namespace for &lt;output&gt;: <output>Not tested</output>.<br/>
-Is "http://www.w3.org/2000/svg" the default namespace for &lt;output&gt;: <output>Not tested</output>.<br/>
-Is "" the default namespace for &lt;svg&gt;: <output>Not tested</output>.<br/>
-Is "http://www.w3.org/2000/svg" the default namespace for &lt;svg&gt;: <output>Not tested</output>.<br/>
+Is "" the default namespace for &lt;output&gt;:
+<output>Not tested</output>.<br />
+Is "http://www.w3.org/2000/svg" the default namespace for &lt;output&gt;:
+<output>Not tested</output>.<br />
+Is "" the default namespace for &lt;svg&gt;: <output>Not tested</output>.<br />
+Is "http://www.w3.org/2000/svg" the default namespace for &lt;svg&gt;:
+<output>Not tested</output>.<br />
 <svg xmlns="http://www.w3.org/2000/svg" height="1"></svg>
 <button>Click to see the results</button>
 ```
 
 ```js
-const button = document.getElementsByTagName('button')[0];
-button.addEventListener("click", function () {
-  const aHtmlElt = document.getElementsByTagName('output')[0];
-  const aSvgElt = document.getElementsByTagName('svg')[0];
+const button = document.querySelector('button');
+button.addEventListener("click", () => {
+  const aHtmlElt = document.querySelector('output');
+  const aSvgElt = document.querySelector('svg');
 
   const result = document.getElementsByTagName('output');
   result[0].value = aHtmlElt.isDefaultNamespace(""); // true

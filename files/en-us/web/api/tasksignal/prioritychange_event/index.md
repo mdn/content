@@ -7,10 +7,10 @@ tags:
   - Reference
   - Prioritized Task Scheduling API
   - prioritychange
-  - Experimental
 browser-compat: api.TaskSignal.prioritychange_event
 ---
-{{APIRef("Prioritized Task Scheduling API")}} {{SeeCompatTable}}
+
+{{APIRef("Prioritized Task Scheduling API")}}
 
 The **`prioritychange`** event is sent to a {{domxref('TaskSignal')}} if its [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) is changed.
 

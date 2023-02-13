@@ -10,6 +10,7 @@ tags:
   - WebGL extension
 browser-compat: api.EXT_disjoint_timer_query.beginQueryEXT
 ---
+
 {{APIRef("WebGL")}}
 
 The **`EXT_disjoint_timer_query.beginQueryEXT()`** method of
@@ -17,7 +18,7 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) starts a timer query.
 
 ## Syntax
 
-```js
+```js-nolint
 beginQueryEXT(target, query)
 ```
 

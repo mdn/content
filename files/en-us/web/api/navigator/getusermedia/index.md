@@ -15,28 +15,22 @@ tags:
   - getusermedia
 browser-compat: api.Navigator.getUserMedia
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}{{deprecated_header}}
 
-The deprecated **`Navigator.getUserMedia()`** method prompts
-the user for permission to use up to one video input device (such as a camera or shared
-screen) and up to one audio input device (such as a microphone) as the source for a
-{{domxref("MediaStream")}}.
+{{APIRef("Media Capture and Streams")}}{{deprecated_header}}
 
-If permission is granted, a `MediaStream` whose video and/or audio tracks
-come from those devices is delivered to the specified success callback. If permission
-is denied, no compatible input devices exist, or any other error condition occurs, the
-error callback is executed with a {{domxref("MediaStreamError")}} object describing
-what went wrong. If the user instead doesn't make a choice at all, neither callback is
-executed.
+The deprecated **`Navigator.getUserMedia()`** method prompts the user for permission to use up to one video input device (such as a camera or shared screen) and up to one audio input device (such as a microphone) as the source for a {{domxref("MediaStream")}}.
 
-> **Note:** This is a legacy method. Please use the newer {{domxref("MediaDevices.getUserMedia",
-      "navigator.mediaDevices.getUserMedia()")}} instead. While technically not
-> deprecated, this old callback version is marked as such, since the specification
-> strongly encourages using the newer promise returning version.
+If permission is granted, a `MediaStream` whose video and/or audio tracks come from those devices is delivered to the specified success callback.
+If permission is denied, no compatible input devices exist, or any other error condition occurs, the error callback is executed with a {{domxref("MediaStreamError")}} object describing what went wrong.
+If the user instead doesn't make a choice at all, neither callback is executed.
+
+> **Note:** This is a legacy method.
+> Please use the newer {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} instead.
+> While technically not deprecated, this old callback version is marked as such, since the specification strongly encourages using the newer promise returning version.
 
 ## Syntax
 
-```js
+```js-nolint
 getUserMedia(constraints, successCallback, errorCallback)
 ```
 
@@ -46,7 +40,7 @@ getUserMedia(constraints, successCallback, errorCallback)
   - : An object specifying the types of media to
     request, along with any requirements for each type. For details, see the [constraints](/en-US/docs/Web/API/MediaDevices/getUserMedia#parameters)
     section under the modern {{domxref("MediaDevices.getUserMedia()")}} method, as well
-    as the article [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints).
+    as the article [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints).
 - `successCallback`
 
   - : A function which is invoked when the request for media access is approved. The
@@ -59,7 +53,7 @@ getUserMedia(constraints, successCallback, errorCallback)
     function successCallback(stream) {
        const video = document.querySelector('video');
        video.srcObject = stream;
-       video.onloadedmetadata = function(e) {
+       video.onloadedmetadata = (e) => {
           // Do something with the video here.
        };
     }
@@ -91,14 +85,14 @@ navigator.getUserMedia = navigator.getUserMedia ||
 
 if (navigator.getUserMedia) {
    navigator.getUserMedia({ audio: true, video: { width: 1280, height: 720 } },
-      function(stream) {
+      (stream) => {
          const video = document.querySelector('video');
          video.srcObject = stream;
-         video.onloadedmetadata = function(e) {
+         video.onloadedmetadata = (e) => {
            video.play();
          };
       },
-      function(err) {
+      (err) => {
          console.error(`The following error occurred: ${err.name}`);
       }
    );
@@ -137,7 +131,7 @@ See [permission: audio-capture](/en-US/docs/Web/Apps/Developing/App_permissions#
 
 - {{domxref("MediaDevices.getUserMedia()")}} that replaces this deprecated method.
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API) - the introductory page to the API
-- [MediaStream API](/en-US/docs/Web/API/Media_Streams_API) - the API for the
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API) - the API for the
   media stream objects
 - [Taking webcam photos](/en-US/docs/Web/API/WebRTC_API/Taking_still_photos) - a
   tutorial on using `getUserMedia() for taking photos rather than video.`

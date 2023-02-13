@@ -9,6 +9,7 @@ tags:
   - Learn
   - Topic
 ---
+
 {{LearnSidebar}}
 
 To build websites, you should know about {{Glossary('HTML')}} — the fundamental technology used to define the structure of a webpage. HTML is used to specify whether your web content should be recognized as a paragraph, list, heading, link, image, multimedia player, form, or one of many other available elements or even a new element that you define.
@@ -24,14 +25,14 @@ To build websites, you should know about {{Glossary('HTML')}} — the fundamenta
 
 ## Prerequisites
 
-Before starting this topic, you should have at least basic familiarity with using computers and using the web passively (i.e. just looking at it, consuming the content). You should have a basic work environment set up as detailed in [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software), and understand how to create and manage files, as detailed in [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files) — both are parts of our [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web) complete beginner's module.
+Before starting this topic, you should have at least basic familiarity with using computers and using the web passively (i.e., just looking at it, consuming the content). You should have a basic work environment set up as detailed in [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software), and understand how to create and manage files, as detailed in [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files) — both are parts of our [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web) complete beginner's module.
 
 It is recommended that you work through [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web) before attempting this topic. However, this isn't absolutely necessary; much of what is covered in the [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) article is also covered in our [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module, albeit in a lot more detail.
 
 After learning HTML, you can then move on to learning about more advanced topics such as:
 
-- [CSS](/en-US/docs/Learn/CSS), and how to use it to style HTML (for example alter your text size and fonts used, add borders and drop shadows, layout your page with multiple columns, add animations and other visual effects).
-- [JavaScript](/en-US/docs/Learn/JavaScript), and how to use it to add dynamic functionality to web pages (for example find your location and plot it on a map, make UI elements appear/disappear when you toggle a button, save users' data locally on their computers, and much more).
+- [CSS](/en-US/docs/Learn/CSS), and how to use it to style HTML (for example, alter your text size and fonts used, add borders and drop shadows, layout your page with multiple columns, add animations and other visual effects).
+- [JavaScript](/en-US/docs/Learn/JavaScript), and how to use it to add dynamic functionality to web pages (for example, find your location and plot it on a map, make UI elements appear/disappear when you toggle a button, save users' data locally on their computers, and much more).
 
 ## Modules
 

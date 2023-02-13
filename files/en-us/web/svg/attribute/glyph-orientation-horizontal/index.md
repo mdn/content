@@ -1,12 +1,14 @@
 ---
 title: glyph-orientation-horizontal
 slug: Web/SVG/Attribute/glyph-orientation-horizontal
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG
   - SVG Attribute
 browser-compat: svg.attributes.presentation.glyph-orientation-horizontal
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`glyph-orientation-horizontal`** attribute affects the amount that the current text position advances as each {{Glossary("glyph")}} is rendered.

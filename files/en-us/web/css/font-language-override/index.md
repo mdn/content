@@ -1,6 +1,7 @@
 ---
 title: font-language-override
 slug: Web/CSS/font-language-override
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts
@@ -11,6 +12,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-language-override
 ---
+
 {{CSSRef}}
 
 The **`font-language-override`** CSS property controls the use of language-specific glyphs in a typeface.
@@ -20,8 +22,8 @@ The **`font-language-override`** CSS property controls the use of language-speci
 font-language-override: normal;
 
 /* <string> values */
-font-language-override: "ENG";  /* Use English glyphs */
-font-language-override: "TRK";  /* Use Turkish glyphs */
+font-language-override: "ENG"; /* Use English glyphs */
+font-language-override: "TRK"; /* Use Turkish glyphs */
 
 /* Global values */
 font-language-override: inherit;
@@ -44,7 +46,7 @@ The `font-language-override` property is specified as the keyword `normal` or a 
 - `normal`
   - : Tells the browser to use font glyphs that are appropriate for the language specified by the `lang` attribute. This is the default value.
 - {{cssxref("string")}}
-  - : Tells the browser to use font glyphs that are appropriate for the language specified by the string. The string must match a language tag found in the [OpenType language system](https://docs.microsoft.com/en-us/typography/opentype/spec/languagetags). For example, "ENG" is English, and "KOR" is Korean.
+  - : Tells the browser to use font glyphs that are appropriate for the language specified by the string. The string must match a language tag found in the [OpenType language system](https://docs.microsoft.com/typography/opentype/spec/languagetags). For example, "ENG" is English, and "KOR" is Korean.
 
 ## Formal definition
 
@@ -62,7 +64,9 @@ The `font-language-override` property is specified as the keyword `normal` or a 
 
 ```html
 <p class="para1">Default language setting.</p>
-<p class="para2">This is a string with the <code>font-language-override</code> set to Danish.</p>
+<p class="para2">
+  This is a string with the <code>font-language-override</code> set to Danish.
+</p>
 ```
 
 #### CSS

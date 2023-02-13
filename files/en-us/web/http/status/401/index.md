@@ -8,6 +8,7 @@ tags:
   - Status code
 browser-compat: http.status.401
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`401 Unauthorized`** response status code indicates that the client request has not been
@@ -21,13 +22,13 @@ status code, user authentication can allow access to the resource.
 
 ## Status
 
-```
+```http
 401 Unauthorized
 ```
 
 ## Example response
 
-```
+```http
 HTTP/1.1 401 Unauthorized
 Date: Wed, 21 Oct 2015 07:28:00 GMT
 WWW-Authenticate: Basic realm="Access to staging site"

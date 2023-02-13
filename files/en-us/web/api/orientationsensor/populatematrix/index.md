@@ -15,6 +15,7 @@ tags:
   - populateMatrix()
 browser-compat: api.OrientationSensor.populateMatrix
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`populateMatrix`** method of the
@@ -31,14 +32,9 @@ where:
 - Y = Vy \* sin(θ/2)
 - Z = Vz \* sin(θ/2)
 
-If a feature policy blocks use of a feature it is because your code is inconsistent
-with the policies set on your server. This is not something that would ever be shown to
-a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation
-instructions.
-
 ## Syntax
 
-```js
+```js-nolint
 populateMatrix(targetMatrix)
 ```
 

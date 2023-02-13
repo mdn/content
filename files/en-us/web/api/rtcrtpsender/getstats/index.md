@@ -14,6 +14,7 @@ tags:
   - getStats
 browser-compat: api.RTCRtpSender.getStats
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpSender")}} method **`getStats()`**
@@ -24,7 +25,7 @@ available.
 
 ## Syntax
 
-```js
+```js-nolint
 getStats()
 ```
 
@@ -49,7 +50,7 @@ an element's {{domxref("HTMLElement/innerText", "innerText")}} to display the cu
 trip time for requests on the sender.
 
 ```js
-sender.getStats().then(function(stats) {
+sender.getStats().then((stats) => {
   document.getElementById("currentRTT").innerText =
           stats.roundTripTime;
 });

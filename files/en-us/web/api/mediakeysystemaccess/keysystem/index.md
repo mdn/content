@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - EncryptedMediaExtensions
-  - Experimental
   - MediaKeySystemAccess
   - NeedsExample
   - Property
@@ -13,7 +12,8 @@ tags:
   - keySystem
 browser-compat: api.MediaKeySystemAccess.keySystem
 ---
-{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
+
+{{APIRef("EncryptedMediaExtensions")}}
 
 The `MediaKeySystemAccess.keySystem` read-only property returns a
 string identifying the key system being used.

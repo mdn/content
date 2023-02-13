@@ -10,6 +10,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.proxy.RequestDetails
 ---
+
 {{AddonSidebar()}}
 
 Contains information about a web request. An instance of this object is passed into the {{WebExtAPIRef("proxy.onRequest")}} listener.
@@ -27,7 +28,7 @@ Values of this type are objects. They contain the following properties:
 - `fromCache`
   - : `boolean`. Indicates if this response will be fetched from disk cache.
 - `incognito`
-  - : `boolean` `true` for private browsing requests.
+  - : `boolean`. `true` for private browsing requests.
 - `method`
   - : `string`. Standard HTTP method: for example, "GET" or "POST".
 - `originUrl`

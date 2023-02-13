@@ -14,7 +14,8 @@ tags:
   - OpenGL
   - WebGL
 ---
-{{WebGLSidebar}}
+
+{{DefaultAPISidebar("WebGL")}}
 
 WebGL is a complicated API, and it's often not obvious what the recommended ways to use it are. This page tackles recommendations across the spectrum of expertise, and not only highlights dos and don'ts, but also details _why_. You can rely on this document to guide your choice of approach, and ensure you're on the right track no matter what browser or hardware your users run.
 
@@ -219,7 +220,7 @@ While we've described a pattern to allow browsers to compile and link in paralle
 Example usage:
 
 ```js
-ext = gl.getExtension('KHR_parallel_shader_compile');
+ext = gl.getExtension("KHR_parallel_shader_compile");
 gl.compileProgram(vs);
 gl.compileProgram(fs);
 gl.attachShader(prog, vs);
@@ -347,7 +348,7 @@ precision mediump float;
 | `mediump` | int11 | (-2^10, 2^10) |
 | `lowp`    | int9  | (-2^8, 2^8)   |
 
-_\*float24: sign bit, 7-bit for exponent, 16-bit for mantissa_
+_\*float24: sign bit, 7-bit for exponent, 16-bit for mantissa._
 
 ### ESSL300 minimum requirements (WebGL 2)
 
@@ -464,7 +465,7 @@ Behind the scenes in the browser:
     drawArrays()
     bindTexture(webgl_texture)
     -texImage2D(HTMLVideoElement):
-        +useProgram(_internal_tex_tranform_prog)
+        +useProgram(_internal_tex_transform_prog)
 <pipeline flush>
         +bindFramebuffer(webgl_texture._internal_framebuffer)
         +bindTexture(HTMLVideoElement._internal_video_tex)
@@ -500,7 +501,7 @@ Behind the scenes in the browser:
     …
     bindTexture(webgl_texture)
     -texImage2D(HTMLVideoElement):
-        +useProgram(_internal_tex_tranform_prog)
+        +useProgram(_internal_tex_transform_prog)
 <pipeline flush>
         +bindFramebuffer(webgl_texture._internal_framebuffer)
         +bindTexture(HTMLVideoElement._internal_video_tex)
@@ -537,11 +538,11 @@ function clientWaitAsync(gl, sync, flags, interval_ms) {
   return new Promise((resolve, reject) => {
     function test() {
       const res = gl.clientWaitSync(sync, flags, 0);
-      if (res == gl.WAIT_FAILED) {
+      if (res === gl.WAIT_FAILED) {
         reject();
         return;
       }
-      if (res == gl.TIMEOUT_EXPIRED) {
+      if (res === gl.TIMEOUT_EXPIRED) {
         setTimeout(test, interval_ms);
         return;
       }
@@ -552,8 +553,14 @@ function clientWaitAsync(gl, sync, flags, interval_ms) {
 }
 
 async function getBufferSubDataAsync(
-    gl, target, buffer, srcByteOffset, dstBuffer,
-    /* optional */ dstOffset, /* optional */ length) {
+  gl,
+  target,
+  buffer,
+  srcByteOffset,
+  dstBuffer,
+  /* optional */ dstOffset,
+  /* optional */ length
+) {
   const sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
   gl.flush();
 
@@ -594,24 +601,26 @@ Demo: [Device pixel presnap](https://kdashg.github.io/misc/webgl/device-pixel-pr
 On supporting browsers (Chromium?), `ResizeObserver` can be used with `'device-pixel-content-box'` to request a callback that includes the true device pixel size of an element. This can be used to build an async-but-accurate function:
 
 ```js
-window.getDevicePixelSize = window.getDevicePixelSize || async function(elem) {
-   await new Promise((fn_resolve) => {
+window.getDevicePixelSize =
+  window.getDevicePixelSize ||
+  (async (elem) => {
+    await new Promise((fn_resolve) => {
       const observer = new ResizeObserver((entries) => {
-         for (const cur of entries) {
-            const dev_size = cur.devicePixelContentBoxSize;
-            const ret = {
-               width: dev_size[0].inlineSize,
-               height: dev_size[0].blockSize,
-            };
-            fn_resolve(ret);
-            observer.disconnect();
-            return;
-         }
-         throw `device-pixel-content-box not observed for elem ${elem}`;
+        for (const cur of entries) {
+          const dev_size = cur.devicePixelContentBoxSize;
+          const ret = {
+            width: dev_size[0].inlineSize,
+            height: dev_size[0].blockSize,
+          };
+          fn_resolve(ret);
+          observer.disconnect();
+          return;
+        }
+        throw `device-pixel-content-box not observed for elem ${elem}`;
       });
-      observer.observe(elem, {box: 'device-pixel-content-box'});
-   });
-};
+      observer.observe(elem, { box: "device-pixel-content-box" });
+    });
+  });
 ```
 
 Please refer to [the specification](https://www.w3.org/TR/resize-observer/#resize-observer-interface) for more details.

@@ -2,11 +2,12 @@
 title: Firefox 88 for developers
 slug: Mozilla/Firefox/Releases/88
 tags:
-  - '88'
+  - "88"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 88 that will affect developers. Firefox 88 was released on April 19, 2021.

@@ -1,6 +1,7 @@
 ---
 title: <cursor>
 slug: Web/SVG/Element/cursor
+page-type: svg-element
 tags:
   - Deprecated
   - Element
@@ -9,6 +10,7 @@ tags:
   - SVG
 browser-compat: svg.elements.cursor
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 > **Note:** The CSS {{cssxref("cursor")}} property should be used instead of this element.
@@ -31,8 +33,8 @@ The PNG format is recommended because it supports the ability to define a transp
 
 ### Specific attributes
 
-- {{SVGAttr("x")}}
-- {{SVGAttr("y")}}
+- {{SVGAttr("x")}} {{Deprecated_Inline}}
+- {{SVGAttr("y")}} {{Deprecated_Inline}}
 - {{SVGAttr("xlink:href")}}
 
 ## DOM Interface

@@ -1,6 +1,7 @@
 ---
 title: Error.prototype.fileName
 slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
+page-type: javascript-instance-data-property
 tags:
   - JavaScript
   - Non-standard
@@ -8,9 +9,16 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Error.fileName
 ---
+
 {{JSRef}} {{non-standard_header}}
 
-The **`fileName`** property contains the path to the file that raised this error.
+The **`fileName`** data property of an {{jsxref("Error")}} instance contains the path to the file that raised this error.
+
+## Value
+
+A string.
+
+{{js_property_attributes(1, 0, 1)}}
 
 ## Description
 
@@ -21,7 +29,7 @@ This non-standard property contains the path to the file that raised this error.
 ### Using fileName
 
 ```js
-const e = new Error('Could not parse input');
+const e = new Error("Could not parse input");
 throw e;
 // e.fileName could look like "file:///C:/example.html"
 ```

@@ -10,6 +10,7 @@ tags:
   - revokeObjectURL
 browser-compat: api.URL.revokeObjectURL
 ---
+
 {{ApiRef("URL API")}}
 
 The **`URL.revokeObjectURL()`** static
@@ -28,14 +29,14 @@ longer.
 
 ## Syntax
 
-```js
+```js-nolint
 revokeObjectURL(objectURL)
 ```
 
 ### Parameters
 
 - `objectURL`
-  - : A string representing a object URL that was previously created by
+  - : A string representing an object URL that was previously created by
     calling {{domxref("URL.createObjectURL", "createObjectURL()") }}.
 
 ### Return value

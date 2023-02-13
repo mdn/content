@@ -1,6 +1,7 @@
 ---
 title: translateZ()
 slug: Web/CSS/transform-function/translateZ
+page-type: css-function
 tags:
   - 3D
   - CSS
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.translateZ
 ---
+
 {{CSSRef}}
 
 The **`translateZ()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) repositions an element along the z-axis in 3D space, i.e.,
@@ -126,6 +128,8 @@ Note if the `perspective()` value is less than the `translateZ()` value, such as
 further than the user's viewport. The smaller the difference between the perspective and translateZ values, the closer
 the user is to the element and the larger the translated element will seem.
 
+> **Note:** As the composition of transforms isn't commutative, the order you write the different functions is significant. In particular, in general, you want `perspective()` to be placed before `translateZ()`.
+
 ### Result
 
 {{EmbedLiveSample("Examples", 250, 250)}}
@@ -142,3 +146,4 @@ the user is to the element and the larger the translated element will seem.
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxref("translate")}}

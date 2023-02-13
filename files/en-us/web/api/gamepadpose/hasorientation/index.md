@@ -14,6 +14,7 @@ tags:
   - hasOrientation
 browser-compat: api.GamepadPose.hasOrientation
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 The **`hasOrientation`** read-only property of the {{domxref("GamepadPose")}} interface returns a boolean value stating whether the {{domxref("Gamepad")}} can track and return orientation information.

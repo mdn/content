@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.DOMRectReadOnly.y
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 The **`y`** read-only property of the **`DOMRectReadOnly`** interface represents the y coordinate of the `DOMRect`'s origin.

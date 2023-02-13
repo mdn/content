@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Range.createContextualFragment
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.createContextualFragment()`** method returns a
@@ -23,7 +24,7 @@ algorithm is invoked with `body` as the context instead.
 
 ## Syntax
 
-```js
+```js-nolint
 createContextualFragment(tagString)
 ```
 

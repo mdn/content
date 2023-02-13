@@ -14,6 +14,7 @@ tags:
   - vertex
   - vertices
 ---
+
 {{GamesSidebar}}
 
 This article explains all of the basic theory that's useful to know when you are getting started working with 3D.

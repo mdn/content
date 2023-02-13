@@ -12,6 +12,7 @@ tags:
   - commands
 browser-compat: webextensions.api.commands.update
 ---
+
 {{AddonSidebar()}}
 
 Change the description or keyboard shortcut for the given command.
@@ -20,7 +21,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 browser.commands.update(
   details // object
 );

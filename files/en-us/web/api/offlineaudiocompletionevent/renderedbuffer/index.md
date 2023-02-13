@@ -11,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.OfflineAudioCompletionEvent.renderedBuffer
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`renderedBuffer`** read-only property of the

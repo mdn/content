@@ -9,9 +9,11 @@ tags:
   - Interface
   - Non-standard
   - Reference
+  - Deprecated
 browser-compat: api.FileEntrySync
 ---
-{{APIRef("File and Directory Entries API")}} {{Non-standard_header}}
+
+{{APIRef("File and Directory Entries API")}} {{Non-standard_header}}{{Deprecated_Header}}
 
 The `FileEntrySync` interface represents a file in a file system. It lets you write content to a file.
 
@@ -41,7 +43,7 @@ To write content to file, create a FileWriter object by calling [`createWriter()
   </tbody>
 </table>
 
-## Methods
+## Instance methods
 
 ### createWriter()
 
@@ -76,15 +78,15 @@ Returns a File that represents the current state of the file that this `FileEntr
 void file ();
 ```
 
-##### Parameter
+#### Parameter
 
 None.
 
-##### Returns
+#### Returns
 
 A `File` object.
 
-##### Exceptions
+#### Exceptions
 
 This method can raise a [DOMException](/en-US/docs/Web/API/DOMException) with the following codes:
 

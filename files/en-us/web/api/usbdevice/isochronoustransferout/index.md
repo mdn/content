@@ -14,16 +14,15 @@ tags:
   - Experimental
 browser-compat: api.USBDevice.isochronousTransferOut
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`isochronousTransferOut()`** method of the
-{{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves with a
-{{domxref("USBIsochronousOutTransferResult")}} when time sensitive information has been
-transmitted to the USB device.
+{{domxref("USBDevice")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("USBIsochronousOutTransferResult")}} when time sensitive information has been transmitted from the USB device.
 
 ## Syntax
 
-```js
+```js-nolint
 isochronousTransferOut(endpointNumber, data, packetLengths)
 ```
 
@@ -38,8 +37,7 @@ isochronousTransferOut(endpointNumber, data, packetLengths)
 
 ### Return value
 
-A {{jsxref("promise")}} that resolves with a
-{{domxref("USBIsochronousOutTransferResult")}}.
+A {{jsxref("Promise")}} that resolves with a {{domxref("USBIsochronousOutTransferResult")}}.
 
 ## Specifications
 

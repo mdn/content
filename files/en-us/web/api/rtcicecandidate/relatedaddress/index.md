@@ -18,6 +18,7 @@ tags:
   - relatedAddress
 browser-compat: api.RTCIceCandidate.relatedAddress
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}** interface's read-only **`relatedAddress`** property is a

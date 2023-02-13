@@ -1,6 +1,7 @@
 ---
 title: Date.prototype.getUTCFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
+page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getUTCFullYear
 ---
+
 {{JSRef}}
 
 The **`getUTCFullYear()`** method returns the year in the
@@ -18,13 +20,13 @@ specified date according to universal time.
 
 ## Syntax
 
-```js
+```js-nolint
 getUTCFullYear()
 ```
 
 ### Return value
 
-A `number`.
+A number.
 If the `Date` object represents a valid date, an integer representing the year in the given date
 according to universal time.
 Otherwise, [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)

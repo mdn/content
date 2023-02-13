@@ -14,6 +14,7 @@ tags:
   - Houdini
 browser-compat: api.CSSSkew.CSSSkew
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSSkew()`** constructor creates a new
@@ -23,7 +24,7 @@ of the individual {{CSSXRef('transform')}} property in CSS.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSSkew(ax, ay)
 ```
 

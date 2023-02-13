@@ -1,6 +1,7 @@
 ---
 title: <xmp>
 slug: Web/HTML/Element/xmp
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -10,7 +11,7 @@ tags:
 browser-compat: html.elements.xmp
 ---
 
-{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 ## Summary
 
@@ -18,7 +19,7 @@ The **`<xmp>`** [HTML](/en-US/docs/Web/HTML) element renders text between the st
 
 > **Note:** Do not use this element.
 >
-> - It has been deprecated since HTML3.2 and was not implemented in a consistent way. It was completely removed from the language in HTML5.
+> - It has been deprecated since HTML3.2 and was not implemented in a consistent way. It was completely removed from current HTML.
 > - Use the {{HTMLElement("pre")}} element or, if semantically adequate, the {{HTMLElement("code")}} element instead. Note that you will need to escape the '`<`' character as '`&lt;`' to make sure it is not interpreted as markup.
 > - A monospaced font can also be obtained on any element, by applying an adequate [CSS](/en-US/docs/Web/CSS) style using `monospace` as the generic-font value for the {{cssxref("font-family")}} property.
 
@@ -29,6 +30,8 @@ This element has no other attributes than the [global attributes](/en-US/docs/We
 ## DOM interface
 
 This element implements the {{domxref('HTMLElement')}} interface.
+
+<!-- ## Technical summary -->
 
 ## Specifications
 
@@ -42,5 +45,3 @@ This element implements the {{domxref('HTMLElement')}} interface.
 
 - The {{HTMLElement("pre")}} and {{HTMLElement("code")}} elements to be used instead.
 - The {{HTMLElement("plaintext")}} and {{HTMLElement("listing")}} elements, similar to {{HTMLElement("xmp")}} but also obsolete.
-
-{{HTMLRef}}

@@ -9,6 +9,7 @@ tags:
   - Status code
 spec-urls: https://www.rfc-editor.org/rfc/rfc6585#section-3
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`428 Precondition Required`** response status code
@@ -22,7 +23,7 @@ response should be {{HTTPStatus(412)}} `Precondition Failed`.
 
 ## Status
 
-```
+```http
 428 Precondition Required
 ```
 

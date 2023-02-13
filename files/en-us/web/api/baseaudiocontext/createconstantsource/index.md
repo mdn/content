@@ -13,6 +13,7 @@ tags:
   - createConstantSource
 browser-compat: api.BaseAudioContext.createConstantSource
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`createConstantSource()`**
@@ -27,7 +28,7 @@ value.
 
 ## Syntax
 
-```js
+```js-nolint
 createConstantSource()
 ```
 

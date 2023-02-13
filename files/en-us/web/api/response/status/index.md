@@ -11,6 +11,7 @@ tags:
   - status
 browser-compat: api.Response.status
 ---
+
 {{APIRef("Fetch")}}
 
 The **`status`** read-only property of the {{domxref("Response")}} interface contains the [HTTP status codes](/en-US/docs/Web/HTTP/Status) of the response.
@@ -19,12 +20,12 @@ For example, `200` for success, `404` if the resource could not be found.
 
 ## Value
 
-A unsigned short number.
+An unsigned short number.
 This is one of the [HTTP response status codes](/en-US/docs/Web/HTTP/Status).
 
 ## Examples
 
-In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (see [Fetch Response live](https://mdn.github.io/fetch-examples/fetch-response/))
+In our [Fetch Response example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) (see [Fetch Response live](https://mdn.github.io/dom-examples/fetch/fetch-response/))
 we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path.
 We then fetch this request using {{domxref("fetch()")}}, extract a blob from the response using {{domxref("Response.blob")}}, create an object URL out of it using {{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.
 

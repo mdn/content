@@ -1,12 +1,14 @@
 ---
 title: dominant-baseline
 slug: Web/SVG/Attribute/dominant-baseline
+page-type: svg-attribute
 tags:
   - Reference
   - SVG
   - SVG Attribute
 browser-compat: svg.attributes.presentation.dominant-baseline
 ---
+
 {{SVGRef}}
 
 The **`dominant-baseline`** attribute specifies the dominant baseline, which is the baseline used to align the box's text and inline-level contents. It also indicates the default alignment baseline of any boxes participating in baseline alignment in the box's alignment context.
@@ -34,7 +36,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 
@@ -45,11 +49,11 @@ text {
 
 ```html
 <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-    <path d="M20,20 L180,20 M20,50 L180,50 M20,80 L180,80" stroke="grey" />
+  <path d="M20,20 L180,20 M20,50 L180,50 M20,80 L180,80" stroke="grey" />
 
-    <text dominant-baseline="auto" x="30" y="20">Auto</text>
-    <text dominant-baseline="middle" x="30" y="50">Middle</text>
-    <text dominant-baseline="hanging" x="30" y="80">Hanging</text>
+  <text dominant-baseline="auto" x="30" y="20">Auto</text>
+  <text dominant-baseline="middle" x="30" y="50">Middle</text>
+  <text dominant-baseline="hanging" x="30" y="80">Hanging</text>
 </svg>
 ```
 
@@ -81,6 +85,7 @@ text {
 </table>
 
 - `auto`
+
   - : If this property occurs on a {{SVGElement("text")}} element, then the computed value depends on the value of the {{SVGAttr("writing-mode")}} attribute.
 
     If the {{SVGAttr("writing-mode")}} is horizontal, then the value of the dominant-baseline component is `alphabetic`. Otherwise, if the {{SVGAttr("writing-mode")}} is vertical, then the value of the dominant-baseline component is `central`.
@@ -90,6 +95,7 @@ text {
     If the computed {{SVGAttr("baseline-shift")}} value actually shifts the baseline, then the baseline-table font-size component is set to the value of the {{SVGAttr("font-size")}} attribute on the element on which the `dominant-baseline` attribute occurs, otherwise the baseline-table font-size remains the same as that of the element.
 
     If there is no parent text content element, the scaled-baseline-table value is constructed as above for {{SVGElement("text")}} elements.
+
 - `use-script` {{deprecated_inline}}
   - : The dominant-baseline and the baseline-table components are set by determining the predominant script of the character data content. The {{SVGAttr("writing-mode")}}, whether horizontal or vertical, is used to select the appropriate set of baseline-tables and the dominant baseline is used to select the baseline-table that corresponds to that baseline. The baseline-table font-size component is set to the value of the {{SVGAttr("font-size")}} attribute on the element on which the `dominant-baseline` attribute occurs.
 - `no-change` {{deprecated_inline}}
@@ -118,24 +124,28 @@ text {
 ### SVG
 
 ```html
-<svg width="400" height="300" viewBox="0 0 300 300"
-    xmlns="http://www.w3.org/2000/svg">
-
+<svg
+  width="400"
+  height="300"
+  viewBox="0 0 300 300"
+  xmlns="http://www.w3.org/2000/svg">
   <!-- Materialization of anchors -->
-  <path d="M60,20 L60,270
+  <path
+    d="M60,20 L60,270
            M30,20 L400,20
            M30,70 L400,70
            M30,120 L400,120
            M30,170 L400,170
            M30,220 L400,220
-           M30,270 L400,270" stroke="grey" />
+           M30,270 L400,270"
+    stroke="grey" />
 
-    <!-- Anchors in action -->
-    <text dominant-baseline="auto" x="70" y="20">auto</text>
-    <text dominant-baseline="middle" x="70" y="70">middle</text>
-    <text dominant-baseline="hanging" x="70" y="170">hanging</text>
-    <text dominant-baseline="mathematical" x="70" y="220">mathematical</text>
-    <text dominant-baseline="text-top" x="70" y="270">text-top</text>
+  <!-- Anchors in action -->
+  <text dominant-baseline="auto" x="70" y="20">auto</text>
+  <text dominant-baseline="middle" x="70" y="70">middle</text>
+  <text dominant-baseline="hanging" x="70" y="170">hanging</text>
+  <text dominant-baseline="mathematical" x="70" y="220">mathematical</text>
+  <text dominant-baseline="text-top" x="70" y="270">text-top</text>
 
   <!-- Materialization of anchors -->
   <circle cx="60" cy="20" r="3" fill="red" />
@@ -145,11 +155,13 @@ text {
   <circle cx="60" cy="220" r="3" fill="red" />
   <circle cx="60" cy="270" r="3" fill="red" />
 
-  <style><![CDATA[
-  text {
-    font: bold 30px Verdana, Helvetica, Arial, sans-serif;
-  }
-  ]]></style>
+  <style>
+    <![CDATA[
+      text {
+        font: bold 30px Verdana, Helvetica, Arial, sans-serif;
+      }
+      ]]>
+  </style>
 </svg>
 ```
 

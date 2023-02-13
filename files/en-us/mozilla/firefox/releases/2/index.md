@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Firefox 2
 ---
+
 {{FirefoxSidebar}}
 
 ## New developer features in Firefox 2

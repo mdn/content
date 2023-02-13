@@ -14,6 +14,7 @@ tags:
   - speech
 browser-compat: api.SpeechGrammarList.length
 ---
+
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
 The **`length`** read-only property of the

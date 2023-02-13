@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Screen.availWidth
 ---
+
 {{APIRef("CSSOM View")}}
 
 The **`Screen.availWidth`** property returns the amount of

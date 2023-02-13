@@ -1,6 +1,7 @@
 ---
 title: scaleX()
 slug: Web/CSS/transform-function/scaleX
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.scaleX
 ---
+
 {{CSSRef}}
 
 The **`scaleX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that resizes an element along the
@@ -17,7 +19,7 @@ x-axis (horizontally). Its result is a {{cssxref("&lt;transform-function&gt;")}}
 {{EmbedInteractiveExample("pages/css/function-scaleX.html")}}
 
 It modifies the abscissa of each element point by a constant factor, except when the scale factor is 1, in which case
-the function is the identity transform. The scaling is not isotropic, and the angles of the element are not conserved.
+the function is the identity transform. The scaling is not isotropic, and the angles of the element are generally not conserved, except for multiples of 90 degrees.
 `scaleX(-1)` defines an [axial symmetry](https://en.wikipedia.org/wiki/Axial_symmetry), with a vertical axis passing through the origin (as specified by the {{cssxref("transform-origin")}}
 property).
 
@@ -166,5 +168,10 @@ div {
 - [`scaleY()`](/en-US/docs/Web/CSS/transform-function/scaleY)
 - [`scaleZ()`](/en-US/docs/Web/CSS/transform-function/scaleZ)
 - {{cssxref("transform")}}
+- {{cssxref("scale")}}
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("transform-origin")}}
+- Other individual transform properties:
+  - {{cssxref("translate")}}
+  - {{cssxref("rotate")}}
+  - Note: there is no `skew` property

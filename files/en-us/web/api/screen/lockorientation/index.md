@@ -12,6 +12,7 @@ tags:
   - screen
 browser-compat: api.Screen.lockOrientation
 ---
+
 {{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
 
 The **`lockOrientation()`** method of the {{DOMxRef("Screen")}}
@@ -24,7 +25,7 @@ interface locks the screen into a specified orientation.
 
 ## Syntax
 
-```js
+```js-nolint
 lockOrientation(orientation)
 ```
 
@@ -45,6 +46,7 @@ lockOrientation(orientation)
         normal position and that position is in portrait, or if the normal position of the
         device is in landscape and the device held turned by 90° clockwise. The normal
         position is device dependent.
+
     - `portrait-secondary`
       - : It represents the orientation of the screen when it is in its secondary portrait
         mode. A screen is considered in its secondary portrait mode if the device is held 180°

@@ -13,6 +13,7 @@ tags:
   - value
 browser-compat: api.CSSKeywordValue.value
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`value`** property of the
@@ -33,9 +34,9 @@ A string.
 The following example resets the CSS {{cssxref('display')}} property to its defaults.
 
 ```js
-let indicator = document.getElementById('indicator');
-indicator.attributeStyleMap.set('display', new CSSKeywordValue('initial'));
-indicator.attributeStyleMap.get('display').value // 'initial'
+let indicator = document.getElementById("indicator");
+indicator.attributeStyleMap.set("display", new CSSKeywordValue("initial"));
+indicator.attributeStyleMap.get("display").value; // 'initial'
 ```
 
 ## Specifications

@@ -6,7 +6,8 @@ tags:
 - Property
 browser-compat: api.MediaRecorder.videoBitsPerSecond
 ---
-{{SeeCompatTable}}{{APIRef("MediaStream Recording")}}
+
+{{APIRef("MediaStream Recording")}}
 
 The **`videoBitsPerSecond`** read-only
 property of the {{domxref("MediaRecorder")}} interface returns the video encoding

@@ -8,9 +8,11 @@ tags:
   - File
   - File System Access API
   - Method
+  - Experimental
 browser-compat: api.DataTransferItem.getAsFileSystemHandle
 ---
-{{securecontext_header}}{{DefaultAPISidebar("HTML Drag and Drop API")}}
+
+{{securecontext_header}}{{APIRef("HTML Drag and Drop API")}}{{SeeCompatTable}}
 
 The **`getAsFileSystemHandle()`** method of the
 {{domxref("DataTransferItem")}} interface returns a {{domxref('FileSystemFileHandle')}}
@@ -19,7 +21,7 @@ dragged item is a directory.
 
 ## Syntax
 
-```js
+```js-nolint
 getAsFileSystemHandle()
 ```
 

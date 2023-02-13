@@ -24,6 +24,7 @@ tags:
   - source
 browser-compat: api.XRInputSourceEvent.inputSource
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The {{domxref("XRInputSourceEvent")}} interface's read-only

@@ -7,7 +7,8 @@ tags:
   - Performance
   - Web Performance
 ---
-{{DefaultAPISidebar("High Resolution Time")}}
+
+{{DefaultAPISidebar("Performance API")}}
 
 A fundamental requirement of web performance is a precise and consistent definition of _time._ The {{domxref("DOMHighResTimeStamp")}} type (a `double`) is used by all performance interfaces to hold such time values. Additionally, there must be a way to create a _timestamp_ for a specific point in time; this is done with the {{domxref("Performance.now","now()")}} method.
 

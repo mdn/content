@@ -13,6 +13,7 @@ tags:
   - events
 browser-compat: api.InputEvent.data
 ---
+
 {{APIRef("UI Events")}}
 
 The **`data`** read-only property of the
@@ -35,7 +36,7 @@ property.
 ```html
 <p>Some text to copy and paste.</p>
 
-<input type="text">
+<input type="text" />
 
 <p class="result"></p>
 ```

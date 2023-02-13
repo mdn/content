@@ -1,6 +1,7 @@
 ---
 title: <number>
 slug: Web/CSS/number
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -10,6 +11,7 @@ tags:
   - Web
 browser-compat: css.types.number
 ---
+
 {{CSSRef}}
 
 The **`<number>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a number, being either an integer or a number with a fractional component.
@@ -26,7 +28,7 @@ When animated, values of the `<number>` CSS data type are interpolated as real, 
 
 ### Valid numbers
 
-```css example-good
+```plain example-good
 12          A raw <integer> is also a <number>.
 4.01        Positive fraction
 -456.8      Negative fraction
@@ -40,7 +42,7 @@ When animated, values of the `<number>` CSS data type are interpolated as real, 
 
 ### Invalid numbers
 
-```css example-bad
+```plain example-bad
 12.         Decimal points must be followed by at least one digit.
 +-12.2      Only one leading +/- is allowed.
 12.1.1      Only one decimal point is allowed.

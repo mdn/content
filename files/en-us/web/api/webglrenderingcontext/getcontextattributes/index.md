@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getContextAttributes
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getContextAttributes()`** method
@@ -18,7 +19,7 @@ parameters. Might return [`null`](/en-US/docs/Web/JavaScript/Reference/Operators
 
 ## Syntax
 
-```js
+```js-nolint
 getContextAttributes()
 ```
 

@@ -11,6 +11,7 @@ tags:
   - XRPose
 browser-compat: api.XRPose.linearVelocity
 ---
+
 {{APIRef}}
 
 The `linearVelocity` read-only property of the

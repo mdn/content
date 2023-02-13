@@ -19,6 +19,7 @@ tags:
   - stream
 browser-compat: api.RTCInboundRtpStreamStats.pliCount
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`pliCount`** property of the

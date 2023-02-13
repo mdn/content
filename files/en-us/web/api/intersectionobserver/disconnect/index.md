@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.IntersectionObserver.disconnect
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserver")}} method
@@ -20,7 +21,7 @@ for visibility changes.
 
 ## Syntax
 
-```js
+```js-nolint
 disconnect()
 ```
 

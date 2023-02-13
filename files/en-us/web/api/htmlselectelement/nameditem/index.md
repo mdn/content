@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement.namedItem
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLSelectElement.namedItem()`** method returns the
@@ -21,7 +22,7 @@ In JavaScript, using `selectElt.namedItem('value')` is equivalent to `selectElt.
 
 ## Syntax
 
-```js
+```js-nolint
 namedItem(str)
 ```
 

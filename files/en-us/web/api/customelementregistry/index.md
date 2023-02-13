@@ -10,11 +10,12 @@ tags:
   - Web Components
 browser-compat: api.CustomElementRegistry
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 The **`CustomElementRegistry`** interface provides methods for registering custom elements and querying registered elements. To get an instance of it, use the {{domxref("window.customElements")}} property.
 
-## Methods
+## Instance methods
 
 - {{domxref("CustomElementRegistry.define()")}}
   - : Defines a new [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements).
@@ -39,25 +40,28 @@ class WordCount extends HTMLParagraphElement {
     // count words in element's parent element
     const wcParent = this.parentNode;
 
-    function countWords(node){
+    function countWords(node) {
       const text = node.innerText || node.textContent;
-      return text.trim().split(/\s+/g).filter((a) => a.trim().length > 0).length;
+      return text
+        .trim()
+        .split(/\s+/g)
+        .filter((a) => a.trim().length > 0).length;
     }
 
     const count = `Words: ${countWords(wcParent)}`;
 
     // Create a shadow root
-    const shadow = this.attachShadow({mode: 'open'});
+    const shadow = this.attachShadow({ mode: "open" });
 
     // Create text node and add word count to it
-    const text = document.createElement('span');
+    const text = document.createElement("span");
     text.textContent = count;
 
     // Append it to the shadow root
     shadow.appendChild(text);
 
     // Update count when element content changes
-    setInterval(function() {
+    setInterval(() => {
       const count = `Words: ${countWords(wcParent)}`;
       text.textContent = count;
     }, 200);
@@ -65,7 +69,7 @@ class WordCount extends HTMLParagraphElement {
 }
 
 // Define the new element
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
 > **Note:** The `CustomElementRegistry` is available through the {{domxref("Window.customElements")}} property.

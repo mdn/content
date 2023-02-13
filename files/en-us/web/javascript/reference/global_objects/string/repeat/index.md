@@ -1,6 +1,7 @@
 ---
 title: String.prototype.repeat()
 slug: Web/JavaScript/Reference/Global_Objects/String/repeat
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -11,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.repeat
 ---
+
 {{JSRef}}
 
 The **`repeat()`** method constructs and returns a new string
@@ -21,7 +23,7 @@ concatenated together.
 
 ## Syntax
 
-```js
+```js-nolint
 repeat(count)
 ```
 
@@ -48,14 +50,14 @@ A new string containing the specified number of copies of the given string.
 ### Using repeat()
 
 ```js
-'abc'.repeat(-1)    // RangeError
-'abc'.repeat(0)     // ''
-'abc'.repeat(1)     // 'abc'
-'abc'.repeat(2)     // 'abcabc'
-'abc'.repeat(3.5)   // 'abcabcabc' (count will be converted to integer)
-'abc'.repeat(1/0)   // RangeError
+"abc".repeat(-1); // RangeError
+"abc".repeat(0); // ''
+"abc".repeat(1); // 'abc'
+"abc".repeat(2); // 'abcabc'
+"abc".repeat(3.5); // 'abcabcabc' (count will be converted to integer)
+"abc".repeat(1 / 0); // RangeError
 
-({ toString: () => 'abc', repeat: String.prototype.repeat }).repeat(2)
+({ toString: () => "abc", repeat: String.prototype.repeat }).repeat(2);
 // 'abcabc' (repeat() is a generic method)
 ```
 

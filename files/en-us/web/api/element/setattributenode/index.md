@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.setAttributeNode
 ---
+
 {{ APIRef("DOM") }}
 
 The **`setAttributeNode()`** method adds a new
@@ -17,7 +18,7 @@ The **`setAttributeNode()`** method adds a new
 
 ## Syntax
 
-```js
+```js-nolint
 setAttributeNode(attribute)
 ```
 

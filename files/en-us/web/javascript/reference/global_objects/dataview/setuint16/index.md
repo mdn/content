@@ -1,6 +1,7 @@
 ---
 title: DataView.prototype.setUint16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint16
+page-type: javascript-instance-method
 tags:
   - DataView
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.setUint16
 ---
+
 {{JSRef}}
 
 The **`setUint16()`** method stores an unsigned 16-bit integer
@@ -19,7 +21,7 @@ The **`setUint16()`** method stores an unsigned 16-bit integer
 
 ## Syntax
 
-```js
+```js-nolint
 setUint16(byteOffset, value)
 setUint16(byteOffset, value, littleEndian)
 ```

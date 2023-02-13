@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Document.linkColor
 ---
+
 {{APIRef("DOM")}} {{Deprecated_header}}
 
 The **`Document.linkColor`** property gets/sets the color of

@@ -1,14 +1,16 @@
 ---
 title: color
 slug: Web/CSS/@media/color
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference
   - media feature
 browser-compat: css.at-rules.media.color
 ---
+
 {{CSSRef}}
 
 The **`color`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the number of bits per color component (red, green, blue) of the output device.
@@ -26,7 +28,10 @@ See [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/A
 ### HTML
 
 ```html
-<p>This text should be black on non-color devices, red on devices with a low number of colors, and greenish on devices with a high number of colors.</p>
+<p>
+  This text should be black on non-color devices, red on devices with a low
+  number of colors, and greenish on devices with a high number of colors.
+</p>
 ```
 
 ### CSS

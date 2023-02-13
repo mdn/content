@@ -12,6 +12,7 @@ tags:
   - Window
 browser-compat: api.Window.fullScreen
 ---
+
 {{APIRef}}{{Non-standard_Header}}
 
 The **`fullScreen`** property of the `Window`

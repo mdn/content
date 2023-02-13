@@ -10,6 +10,7 @@ tags:
   - Reference
 spec-urls: https://w3c.github.io/aria/#aria-rowindex
 ---
+
 The `aria-rowindex` attribute defines an element's position with respect to the total number of rows within a table, grid, or treegrid.
 
 ## Description
@@ -24,7 +25,7 @@ The value for `aria-rowindex` is an integer greater than or equal to `1`, greate
 
 If all of the rows are loaded and in the DOM, you don't need to include `aria-rowindex` as browsers automatically calculate the index of each row. However, when only a subset of the rows are present in the DOM, `aria-rowindex` is needed to indicate each row's position with respect to the full table. If only a subset of rows are loaded, you also need to include [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) on the table ancestor, even if you don't know the total rowcount.
 
-If the table with only a subset of rows has a cell that spans more than one row, both the row and cell need to have the `aria-rowspan`  set. If a cell spans more than one row－when a cell role includes the `aria-rowspan` attribute or HTML cell has a `rowspan` attribute set to a value greater than 1－include the row's `aria-rowindex` value on the spanning cell in addition to the appropriate row spanning attribute. The value should be the row index of the row where the span starts.
+If the table with only a subset of rows has a cell that spans more than one row, both the row and cell need to have the `aria-rowspan` set. If a cell spans more than one row－when a cell role includes the `aria-rowspan` attribute or HTML cell has a `rowspan` attribute set to a value greater than 1－include the row's `aria-rowindex` value on the spanning cell in addition to the appropriate row spanning attribute. The value should be the row index of the row where the span starts.
 
 > **Note:** The `aria-rowindex` must be added to each row, but is optional on the cells, except for cells that span rows: the `aria-rowindex` attribute is required on all spanning cells.
 
@@ -55,8 +56,7 @@ The following example shows a grid with 24 rows, of which the first row and rows
     <div role="row" aria-rowindex="9">
       <span role="gridcell">Ashlyn</span>
       <span role="gridcell">Harris</span>
-      <span role="gridcell" aria-rowspan="2"
-            aria-rowindex="9">Goalkeeper</span>
+      <span role="gridcell" aria-rowspan="2" aria-rowindex="9">Goalkeeper</span>
     </div>
     <div role="row" aria-rowindex="10">
       <span role="gridcell">Alyssa</span>
@@ -66,7 +66,7 @@ The following example shows a grid with 24 rows, of which the first row and rows
 </div>
 ```
 
-Note both  `aria-rowspan` and `aria-rowindex` are present on the Goalkeeper cell, which spans two rows.
+Note both `aria-rowspan` and `aria-rowindex` are present on the Goalkeeper cell, which spans two rows.
 
 ## Values
 

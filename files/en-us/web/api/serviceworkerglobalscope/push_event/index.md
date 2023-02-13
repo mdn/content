@@ -15,6 +15,7 @@ tags:
   - messaging
 browser-compat: api.ServiceWorkerGlobalScope.push_event
 ---
+
 {{APIRef("Push API")}}
 
 The **`push`** event is sent to a service worker's global scope (represented by the {{domxref("ServiceWorkerGlobalScope")}} interface) when the service worker has received a push message.
@@ -26,22 +27,22 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('periodicsync', (event) => { });
+addEventListener('push', (event) => { });
 
-onperiodicsync = (event) => { };
+onpush = (event) => { };
 ```
 
 ## Event type
 
-An {{domxref("PushEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PushEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PushEvent")}}
 
 ## Event properties
 
-_Inherits properties from its parent, {{domxref("PushEvent")}}. Additional properties:_
+_Inherits properties from its parent, {{domxref("ExtendableEvent")}}. Additional properties:_
 
-- {{domxref("PushEvent.data")}} {{readonlyinline}}
+- {{domxref("PushEvent.data")}} {{ReadOnlyInline}}
   - : Returns a reference to a {{domxref("PushMessageData")}} object containing data sent to the {{domxref("PushSubscription")}}.
 
 ## Example

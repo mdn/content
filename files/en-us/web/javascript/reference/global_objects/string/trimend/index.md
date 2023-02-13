@@ -1,6 +1,7 @@
 ---
 title: String.prototype.trimEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method
@@ -10,16 +11,16 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.trimEnd
 ---
+
 {{JSRef}}
 
-The **`trimEnd()`** method removes whitespace from the end of a
-string. `trimRight()` is an alias of this method.
+The **`trimEnd()`** method removes whitespace from the end of a string and returns a new string, without modifying the original string. `trimRight()` is an alias of this method.
 
 {{EmbedInteractiveExample("pages/js/string-trimend.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 trimEnd()
 
 trimRight()
@@ -27,16 +28,13 @@ trimRight()
 
 ### Return value
 
-A new string representing `str` stripped of whitespace from its end (right side).
+A new string representing `str` stripped of whitespace from its end (right side). Whitespace is defined as [white space](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#white_space) characters plus [line terminators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators).
 
-If the end of `str` has no whitespace, a new string is still returned (essentially a copy of `str`), with no exception being thrown.
+If the end of `str` has no whitespace, a new string is still returned (essentially a copy of `str`).
 
 ### Aliasing
 
-For consistency with functions like {{jsxref("String.prototype.padEnd")}} the standard
-method name is `trimEnd`. However, for web compatibility reasons,
-`trimRight` remains as an alias to `trimEnd`. In some engines this
-means:
+After {{jsxref("String/trim", "trim()")}} was standardized, engines also implemented the non-standard method `trimRight`. However, for consistency with {{jsxref("String/padEnd", "padEnd()")}}, when the method got standardized, its name was chosen as `trimEnd`. For web compatibility reasons, `trimRight` remains as an alias to `trimEnd`, and they refer to the exact same function object. In some engines this means:
 
 ```js
 String.prototype.trimRight.name === "trimEnd";
@@ -46,16 +44,16 @@ String.prototype.trimRight.name === "trimEnd";
 
 ### Using trimEnd()
 
-The following example displays the lowercase string `' foo'`:
+The following example trims whitespace from the end of `str`, but not from its start.
 
 ```js
-let str = '   foo  ';
+let str = "   foo  ";
 
 console.log(str.length); // 8
 
 str = str.trimEnd();
 console.log(str.length); // 6
-console.log(str);        // '   foo'
+console.log(str); // '   foo'
 ```
 
 ## Specifications

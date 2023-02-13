@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAnchorElement.username
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.username`** property is a

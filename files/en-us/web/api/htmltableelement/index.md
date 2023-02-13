@@ -9,13 +9,14 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement`** interface provides special properties and methods (beyond the regular {{DOMxRef("HTMLElement")}} object interface it also has available to it by inheritance) for manipulating the layout and presentation of tables in an HTML document.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("HTMLElement")}}._
 
@@ -32,7 +33,7 @@ _Inherits properties from its parent, {{DOMxRef("HTMLElement")}}._
 
 ### Obsolete Properties
 
-> **Warning:** The following properties are obsolete.  You should avoid using them.
+> **Warning:** The following properties are obsolete. You should avoid using them.
 
 - {{DOMxRef("HTMLTableElement.align")}} {{deprecated_inline}}
   - : A string containing an enumerated value reflecting the {{HTMLAttrxRef("align", "table")}} attribute. It indicates the alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, and `"center"`.
@@ -51,9 +52,9 @@ _Inherits properties from its parent, {{DOMxRef("HTMLElement")}}._
 - {{DOMxRef("HTMLTableElement.summary")}} {{deprecated_inline}}
   - : A string containing a description of the purpose or the structure of the table. It reflects the obsolete {{HTMLAttrxRef("summary", "table")}} attribute.
 - {{DOMxRef("HTMLTableElement.width")}} {{deprecated_inline}}
-  - : A string containing the length in pixels or in percentage of the desired width fo the entire table. It reflects the obsolete {{HTMLAttrxRef("width", "table")}} attribute.
+  - : A string containing the length in pixels or in percentage of the desired width of the entire table. It reflects the obsolete {{HTMLAttrxRef("width", "table")}} attribute.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{DOMxRef("HTMLElement")}}_.
 

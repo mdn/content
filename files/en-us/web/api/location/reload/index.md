@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Location.reload
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`location.reload()`** method reloads the current URL, like the Refresh button.
@@ -22,7 +23,7 @@ information.
 
 ## Syntax
 
-```js
+```js-nolint
 reload()
 ```
 

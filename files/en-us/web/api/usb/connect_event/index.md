@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.USB.connect_event
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`connect`** event of the {{DOMxRef("USB")}} interface is fired whenever a paired device is connected.

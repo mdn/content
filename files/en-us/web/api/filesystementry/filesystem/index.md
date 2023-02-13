@@ -13,6 +13,7 @@ tags:
   - filesystem
 browser-compat: api.FileSystemEntry.filesystem
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The read-only **`filesystem`**

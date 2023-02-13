@@ -10,7 +10,8 @@ tags:
   - Reference
 browser-compat: api.CSSTransition.transitionProperty
 ---
-{{APIRef("Web Animations API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Animations API")}}
 
 The **`transitionProperty`** property of the
 {{domxref("CSSTransition")}} interface returns the **expanded transition property
@@ -47,7 +48,7 @@ that the transition is created for, which is `width`.
 
 ```js
 const item = document.querySelector(".box");
-item.addEventListener('transitionrun', () => {
+item.addEventListener("transitionrun", () => {
   let animations = document.querySelector(".box").getAnimations();
   console.log(animations[0].propertyName);
 });

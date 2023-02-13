@@ -13,6 +13,7 @@ tags:
   - onClicked
 browser-compat: webextensions.api.action.onClicked
 ---
+
 {{AddonSidebar()}}
 
 Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup.
@@ -23,7 +24,7 @@ To define a right-click action, use the [`contextMenus`](/en-US/docs/Mozilla/Add
 
 ## Syntax
 
-```js
+```js-nolint
 browser.action.onClicked.addListener(listener)
 browser.action.onClicked.removeListener(listener)
 browser.action.onClicked.hasListener(listener)
@@ -77,10 +78,9 @@ browser.action.onClicked.addListener((tab) => {
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#event-onClicked) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -107,4 +107,4 @@ browser.action.onClicked.addListener((tab) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

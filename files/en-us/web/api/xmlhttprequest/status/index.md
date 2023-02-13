@@ -13,6 +13,7 @@ tags:
   - status
 browser-compat: api.XMLHttpRequest.status
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The read-only **`XMLHttpRequest.status`** property returns the numerical HTTP [status code](/en-US/docs/Web/HTTP/Status) of the `XMLHttpRequest`'s response.
@@ -32,11 +33,11 @@ console.log('UNSENT: ', xhr.status);
 xhr.open('GET', '/server');
 console.log('OPENED: ', xhr.status);
 
-xhr.onprogress = function () {
+xhr.onprogress = () => {
   console.log('LOADING: ', xhr.status);
 };
 
-xhr.onload = function () {
+xhr.onload = () => {
   console.log('DONE: ', xhr.status);
 };
 

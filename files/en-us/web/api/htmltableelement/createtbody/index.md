@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.createTBody
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`createTBody()`** method of
@@ -25,7 +26,7 @@ The **`createTBody()`** method of
 
 ## Syntax
 
-```js
+```js-nolint
 createTBody()
 ```
 
@@ -41,7 +42,7 @@ None.
 
 ```js
 let mybody = mytable.createTBody();
-// Now this should be true: mybody == mytable.tBodies.item(mytable.tBodies.length - 1)
+// Now this should be true: mybody === mytable.tBodies.item(mytable.tBodies.length - 1)
 ```
 
 ## Specifications

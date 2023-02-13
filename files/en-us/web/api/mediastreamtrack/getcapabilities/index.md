@@ -12,7 +12,8 @@ tags:
   - getCapabilities
 browser-compat: api.MediaStreamTrack.getCapabilities
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The **`getCapabilities()`** method of
 the {{domxref("MediaStreamTrack")}} interface returns a
@@ -22,11 +23,11 @@ values which each constrainable property, based upon the platform and {{Glossary
 
 Once you know what the browser's capabilities are, your script can use
 {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} to ask for the
-track to be configured to match ideal or acceptable settings. See [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints) for details on how to work with constrainable properties.
+track to be configured to match ideal or acceptable settings. See [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints) for details on how to work with constrainable properties.
 
 ## Syntax
 
-```js
+```js-nolint
 getCapabilities()
 ```
 

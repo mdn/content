@@ -1,19 +1,27 @@
 ---
 title: Function.prototype.prototype
 slug: Web/JavaScript/Reference/Global_Objects/Function/prototype
+page-type: javascript-instance-data-property
 tags:
   - Function
   - JavaScript
   - Property
 spec-urls: https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-function-instances-prototype
 ---
+
 {{JSRef}}
 
-A {{jsxref("Function")}} object's **`prototype`** property is used when the function is used as a constructor with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. It will become the new object's prototype.
+The **`prototype`** data property of a {{jsxref("Function")}} instance is used when the function is used as a constructor with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. It will become the new object's prototype.
 
 > **Note:** Not all {{jsxref("Function")}} objects have the `prototype` property — see [description](#description).
 
+## Value
+
+An object.
+
 {{js_property_attributes(1, 0, 0)}}
+
+> **Note:** The `prototype` property of [classes](/en-US/docs/Web/JavaScript/Reference/Classes) is not writable.
 
 ## Description
 
@@ -36,12 +44,13 @@ function* generatorFunction() {}
 
 Instead, generator functions' `prototype` property is used when they are called _without_ `new`. The `prototype` property will become the returned [`Generator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) object's prototype.
 
+In addition, some functions may have a `prototype` but throw unconditionally when called with `new`. For example, the [`Symbol()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol) and [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) functions throw when called with `new`, because `Symbol.prototype` and `BigInt.prototype` are only intended to provide methods for the primitive values, but the wrapper objects should not be directly constructed.
+
 The following functions do not have `prototype`, and are therefore ineligible as constructors, even if a `prototype` property is later manually assigned:
 
 ```js
 const method = { foo() {} }.foo;
 const arrowFunction = () => {};
-const boundFunction = (function () {}).bind(null);
 async function asyncFunction() {}
 ```
 
@@ -52,7 +61,21 @@ class Class {}
 function fn() {}
 ```
 
-A function's `prototype` property, by default, is a plain object with one property: [`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor), which is a reference to the function itself. It is writable, non-enumerable, and configurable.
+A [bound function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) does not have a `prototype` property, but may be constructable. When it's constructed, the target function is constructed instead, and if the target function is constructable, it would return a normal instance.
+
+```js
+const boundFunction = function () {}.bind(null);
+```
+
+A function's `prototype` property, by default, is a plain object with one property: [`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor), which is a reference to the function itself. The `constructor` property is writable, non-enumerable, and configurable.
+
+If the `prototype` of a function is reassigned with something other than an {{jsxref("Object")}}, when the function is called with `new`, the returned object's prototype would be `Object.prototype` instead. (In other words, `new` ignores the `prototype` property and constructs a plain object.)
+
+```js
+function Ctor() {}
+Ctor.prototype = 3;
+console.log(Object.getPrototypeOf(new Ctor()) === Object.prototype); // true
+```
 
 ## Examples
 
@@ -83,7 +106,7 @@ Dog.prototype.species = "dog";
 console.log(new Dog("Jack").species); // "dog"
 ```
 
-This can be made more ergonomic using [static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks), which are called when the class is initialized.
+This can be made more ergonomic using [static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks), which are called when the class is initialized.
 
 ```js
 class Dog {

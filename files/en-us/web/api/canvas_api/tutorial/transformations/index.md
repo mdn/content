@@ -7,11 +7,11 @@ tags:
   - Graphics
   - Guide
   - HTML
-  - HTML5
   - Intermediate
   - Web
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
 
 Earlier in this tutorial we've learned about the [canvas grid](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) and the **coordinate space**. Until now, we only used the default grid and changed the size of the overall canvas for our needs. With transformations there are more powerful ways to translate the origin to a different position, rotate the grid and even scale it.
 
@@ -27,7 +27,25 @@ Before we look at the transformation methods, let's look at two other methods wh
 Canvas states are stored on a stack. Every time the `save()` method is called, the current drawing state is pushed onto the stack. A drawing state consists of
 
 - The transformations that have been applied (i.e. `translate`, `rotate` and `scale` – see below).
-- The current values of the following attributes: {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}, {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}, {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}}, {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}}, {{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}}, {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}}, {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}, {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}}, {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}, {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}}, {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}}, {{domxref("CanvasRenderingContext2D.font", "font")}}, {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, {{domxref("CanvasRenderingContext2D.direction", "direction")}}, {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}.
+- The current values of the following attributes:
+  - {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}
+  - {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}
+  - {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}}
+  - {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}}
+  - {{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}}
+  - {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}}
+  - {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}
+  - {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}}
+  - {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}
+  - {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}}
+  - {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}
+  - {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}}
+  - {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}}
+  - {{domxref("CanvasRenderingContext2D.font", "font")}}
+  - {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}
+  - {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}
+  - {{domxref("CanvasRenderingContext2D.direction", "direction")}}
+  - {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}.
 - The current [clipping path](/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing#clipping_paths), which we'll see in the next section.
 
 You can call the `save()` method as many times as you like. Each time the `restore()` method is called, the last saved state is popped off the stack and all saved settings are restored.
@@ -38,24 +56,24 @@ This example tries to illustrate how the stack of drawing states functions by dr
 
 ```js
 function draw() {
-  const ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById("canvas").getContext("2d");
 
-  ctx.fillRect(0, 0, 150, 150);   // Draw a rectangle with default settings
-  ctx.save();                  // Save the default state
+  ctx.fillRect(0, 0, 150, 150); // Draw a rectangle with default settings
+  ctx.save(); // Save the default state
 
-  ctx.fillStyle = '#09F';      // Make changes to the settings
+  ctx.fillStyle = "#09F"; // Make changes to the settings
   ctx.fillRect(15, 15, 120, 120); // Draw a rectangle with new settings
 
-  ctx.save();                  // Save the current state
-  ctx.fillStyle = '#FFF';      // Make changes to the settings
+  ctx.save(); // Save the current state
+  ctx.fillStyle = "#FFF"; // Make changes to the settings
   ctx.globalAlpha = 0.5;
-  ctx.fillRect(30, 30, 90, 90);   // Draw a rectangle with new settings
+  ctx.fillRect(30, 30, 90, 90); // Draw a rectangle with new settings
 
-  ctx.restore();               // Restore previous state
-  ctx.fillRect(45, 45, 60, 60);   // Draw a rectangle with restored settings
+  ctx.restore(); // Restore previous state
+  ctx.fillRect(45, 45, 60, 60); // Draw a rectangle with restored settings
 
-  ctx.restore();               // Restore original state
-  ctx.fillRect(60, 60, 30, 30);   // Draw a rectangle with restored settings
+  ctx.restore(); // Restore original state
+  ctx.fillRect(60, 60, 30, 30); // Draw a rectangle with restored settings
 }
 ```
 
@@ -82,7 +100,7 @@ The first of the transformation methods we'll look at is `translate()`. This met
 - {{domxref("CanvasRenderingContext2D.translate", "translate(x, y)")}}
   - : Moves the canvas and its origin on the grid. `x` indicates the horizontal distance to move, and `y` indicates how far to move the grid vertically.
 
-![](canvas_grid_translate.png)
+![The canvas is pushed down and to the right, or translated, from its origin point on the grid by 'x' units horizontally and 'y' units vertically.](canvas_grid_translate.png)
 
 It's a good idea to save the canvas state before doing any transformations. In most cases, it is just easier to call the `restore` method than having to do a reverse translation to return to the original state. Also if you're translating inside a loop and don't save and restore the canvas state, you might end up missing part of your drawing, because it was drawn outside the canvas edge.
 
@@ -94,7 +112,7 @@ In the `draw()` function, we call the `fillRect()` function nine times using two
 
 ```js
 function draw() {
-  const ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById("canvas").getContext("2d");
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
       ctx.save();
@@ -124,7 +142,7 @@ The second transformation method is `rotate()`. We use it to rotate the canvas a
 - {{domxref("CanvasRenderingContext2D.rotate", "rotate(angle)")}}
   - : Rotates the canvas clockwise around the current origin by the `angle` number of radians.
 
-![](canvas_grid_rotate.png)
+![The default origin point is at the top left, 0 degrees is horizontal and to the right. The rotation point starts from the origin point and goes clockwise.](canvas_grid_rotate.png)
 
 The rotation center point is always the canvas origin. To change the center point, we will need to move the canvas by using the `translate()` method.
 
@@ -136,32 +154,32 @@ In this example, we'll use the `rotate()` method to first rotate a rectangle fro
 
 ```js
 function draw() {
-  const ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById("canvas").getContext("2d");
 
   // left rectangles, rotate from canvas origin
   ctx.save();
   // blue rect
-  ctx.fillStyle = '#0095DD';
+  ctx.fillStyle = "#0095DD";
   ctx.fillRect(30, 30, 100, 100);
   ctx.rotate((Math.PI / 180) * 25);
   // grey rect
-  ctx.fillStyle = '#4D4E53';
+  ctx.fillStyle = "#4D4E53";
   ctx.fillRect(30, 30, 100, 100);
   ctx.restore();
 
   // right rectangles, rotate from rectangle center
   // draw blue rect
-  ctx.fillStyle = '#0095DD';
+  ctx.fillStyle = "#0095DD";
   ctx.fillRect(150, 30, 100, 100);
 
   ctx.translate(200, 80); // translate to rectangle center
-                          // x = x + 0.5 * width
-                          // y = y + 0.5 * height
+  // x = x + 0.5 * width
+  // y = y + 0.5 * height
   ctx.rotate((Math.PI / 180) * 25); // rotate
   ctx.translate(-200, -80); // translate back
 
   // draw grey rect
-  ctx.fillStyle = '#4D4E53';
+  ctx.fillStyle = "#4D4E53";
   ctx.fillRect(150, 30, 100, 100);
 }
 ```
@@ -195,7 +213,7 @@ In this last example, we'll draw shapes with different scaling factors.
 
 ```js
 function draw() {
-  const ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById("canvas").getContext("2d");
 
   // draw a simple rectangle, but scale it.
   ctx.save();
@@ -205,8 +223,8 @@ function draw() {
 
   // mirror horizontally
   ctx.scale(-1, 1);
-  ctx.font = '48px serif';
-  ctx.fillText('MDN', -135, 120);
+  ctx.font = "48px serif";
+  ctx.fillText("MDN", -135, 120);
 }
 ```
 
@@ -255,21 +273,21 @@ The parameters of this function are:
 
 ```js
 function draw() {
-  const ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById("canvas").getContext("2d");
 
   const sin = Math.sin(Math.PI / 6);
   const cos = Math.cos(Math.PI / 6);
   ctx.translate(100, 100);
   let c = 0;
   for (let i = 0; i <= 12; i++) {
-    c = Math.floor(255 / 12 * i);
+    c = Math.floor((255 / 12) * i);
     ctx.fillStyle = `rgb(${c}, ${c}, ${c})`;
     ctx.fillRect(0, 0, 100, 10);
     ctx.transform(cos, sin, -sin, cos, 0, 0);
   }
 
   ctx.setTransform(-1, 0, 0, 1, 100, 100);
-  ctx.fillStyle = 'rgba(255, 128, 255, 0.5)';
+  ctx.fillStyle = "rgba(255, 128, 255, 0.5)";
   ctx.fillRect(0, 50, 100, 100);
 }
 ```

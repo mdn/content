@@ -2,10 +2,11 @@
 title: Firefox 61 for developers
 slug: Mozilla/Firefox/Releases/61
 tags:
-  - '61'
+  - "61"
   - Firefox
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 61 that will affect developers. Firefox 61 was released on June 26, 2018.
@@ -74,7 +75,7 @@ _No changes._
 - {{domxref("DOMTokenList.replace()")}} now returns a boolean value to indicate whether the replacement occurred successfully, rather than void ({{bug(1444909)}}).
 - The [Fetch API](/en-US/docs/Web/API/Fetch_API)'s {{domxref("Request.credentials")}} property now defaults to `"same-origin"` per the latest revision of the specification ({{bug(1394399)}}).
 - The {{domxref("Request.destination")}} property has been implemented ({{bug(1402892)}}).
-- The {{domxref("MutationObserver")}} option dictionary, \`MutationObserverInit\`, no longer has `false` as the default value of all of its Boolean properties. Now, only `childList` and `subtree` have default values (of `false` still). The other properties have no default values ({{bug(973638)}}).
+- The {{domxref("MutationObserver")}} option dictionary, `MutationObserverInit`, no longer has `false` as the default value of all of its Boolean properties. Now, only `childList` and `subtree` have default values (of `false` still). The other properties have no default values ({{bug(973638)}}).
 - The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) method {{domxref("PaymentRequest.show()")}} now supports using a {{jsxref("Promise")}} to let the client side code provide updated payment details prior to activating the payment interface ({{bug(1441709)}}).
 
 #### DOM events

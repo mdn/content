@@ -1,12 +1,14 @@
 ---
-title: 'SyntaxError: missing formal parameter'
+title: "SyntaxError: missing formal parameter"
 slug: Web/JavaScript/Reference/Errors/Missing_formal_parameter
+page-type: javascript-error
 tags:
   - Error
   - Errors
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing formal parameter" occurs when your function
@@ -14,7 +16,7 @@ declaration is missing valid parameters.
 
 ## Message
 
-```
+```plain
 SyntaxError: missing formal parameter (Firefox)
 SyntaxError: Unexpected number '3'. Expected a parameter pattern or a ')' in parameter list. (Safari)
 SyntaxError: Unexpected string literal "x". Expected a parameter pattern or a ')' in parameter list. (Safari)
@@ -48,17 +50,17 @@ declarations fail, as they are providing values for their parameters:
 ```js example-bad
 function square(3) {
   return number * number;
-};
+}
 // SyntaxError: missing formal parameter
 
 function greet("Howdy") {
   return greeting;
-};
+}
 // SyntaxError: missing formal parameter
 
 function log({ obj: "value"}) {
   console.log(arg)
-};
+}
 // SyntaxError: missing formal parameter
 ```
 
@@ -67,15 +69,15 @@ You will need to use identifiers in function declarations:
 ```js example-good
 function square(number) {
   return number * number;
-};
+}
 
 function greet(greeting) {
   return greeting;
-};
+}
 
 function log(arg) {
-  console.log(arg)
-};
+  console.log(arg);
+}
 ```
 
 You can then call these functions with the arguments you like:
@@ -85,7 +87,7 @@ square(2); // 4
 
 greet("Howdy"); // "Howdy"
 
-log({obj: "value"}); // Object { obj: "value" }
+log({ obj: "value" }); // { obj: "value" }
 ```
 
 ## See also

@@ -1,6 +1,7 @@
 ---
 title: Exponentiation assignment (**=)
 slug: Web/JavaScript/Reference/Operators/Exponentiation_assignment
+page-type: javascript-operator
 tags:
   - Assignment operator
   - JavaScript
@@ -9,16 +10,17 @@ tags:
   - Reference
 browser-compat: javascript.operators.exponentiation_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
-The exponentiation assignment operator (`**=`) raises the value of a
+The **exponentiation assignment (`**=`)** operator raises the value of a
 variable to the power of the right operand.
 
 {{EmbedInteractiveExample("pages/js/expressions-exponentiation-assignment.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 x **= y // x = x ** y
 ```
 
@@ -27,11 +29,10 @@ x **= y // x = x ** y
 ### Using exponentiation assignment
 
 ```js
-// Assuming the following variable
-//  bar = 5
+let bar = 5;
 
-bar **= 2     // 25
-bar **= 'foo' // NaN
+bar **= 2; // 25
+bar **= "foo"; // NaN
 ```
 
 ## Specifications
@@ -44,5 +45,5 @@ bar **= 'foo' // NaN
 
 ## See also
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators)
 - [Exponentiation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)

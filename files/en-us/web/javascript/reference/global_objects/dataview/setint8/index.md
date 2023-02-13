@@ -1,6 +1,7 @@
 ---
 title: DataView.prototype.setInt8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt8
+page-type: javascript-instance-method
 tags:
   - DataView
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.setInt8
 ---
+
 {{JSRef}}
 
 The **`setInt8()`** method stores a signed 8-bit integer (byte)
@@ -18,7 +20,7 @@ value at the specified byte offset from the start of the {{jsxref("DataView")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 setInt8(byteOffset, value)
 ```
 

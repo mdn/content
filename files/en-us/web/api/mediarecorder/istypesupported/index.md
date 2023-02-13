@@ -7,7 +7,6 @@ tags:
   - Audio
   - Media
   - Media Capture
-  - Media Recorder API
   - MediaRecorder
   - Method
   - Reference
@@ -15,6 +14,7 @@ tags:
   - canRecordMimeType
 browser-compat: api.MediaRecorder.isTypeSupported
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 The
@@ -24,7 +24,7 @@ should be able to successfully record.
 
 ## Syntax
 
-```js
+```js-nolint
 isTypeSupported(mimeType)
 ```
 
@@ -47,15 +47,19 @@ specified format.
 const types = [
   "video/webm",
   "audio/webm",
-  "video/webm\;codecs=vp8",
-  "video/webm\;codecs=daala",
-  "video/webm\;codecs=h264",
-  "audio/webm\;codecs=opus",
+  "video/webm;codecs=vp8",
+  "video/webm;codecs=daala",
+  "video/webm;codecs=h264",
+  "audio/webm;codecs=opus",
   "video/mpeg",
 ];
 
 for (const type of types) {
-  console.log(`Is ${type} supported? ${MediaRecorder.isTypeSupported(type) ? "Maybe!" : "Nope :("}`);
+  console.log(
+    `Is ${type} supported? ${
+      MediaRecorder.isTypeSupported(type) ? "Maybe!" : "Nope :("
+    }`
+  );
 }
 ```
 

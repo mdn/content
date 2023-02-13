@@ -9,55 +9,64 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming.connectEnd
 ---
-{{APIRef("Resource Timing API")}}
 
-The **`connectEnd`** read-only property returns the
-{{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser finishes
-establishing the connection to the server to retrieve the resource. The timestamp value
-includes the time interval to establish the transport connection, as well as other time
-intervals such as SSL handshake and SOCKS authentication.
+{{APIRef("Performance API")}}
 
-{{AvailableInWorkers}}
+The **`connectEnd`** read-only property returns the {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser finishes establishing the connection to the server to retrieve the resource. The timestamp value includes the time interval to establish the transport connection, as well as other time intervals such as TLS handshake and [SOCKS](https://en.wikipedia.org/wiki/SOCKS) authentication.
 
 ## Value
 
-A {{domxref("DOMHighResTimeStamp")}} representing the time after a connection is
-established.
+The `connectEnd` property can have the following values:
+
+- A {{domxref("DOMHighResTimeStamp")}} representing the time after a connection is established.
+- `0` if the resource was instantaneously retrieved from a cache.
+- `0` if the resource is a cross-origin request and no {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header is used.
 
 ## Examples
 
-In the following example, the value of the `*Start` and `*End`
-properties of all "`resource`"
-{{domxref("PerformanceEntry.entryType","type")}} events are logged.
+### Measuring TCP handshake time
+
+The `connectEnd` and {{domxref("PerformanceResourceTiming.connectStart", "connectStart")}} properties can be used to measure how long it takes for the TCP handshake to happen.
 
 ```js
-function print_PerformanceEntries() {
-  // Use getEntriesByType() to just get the "resource" events
-  const p = performance.getEntriesByType("resource");
-  for (let i=0; i < p.length; i++) {
-    print_start_and_end_properties(p[i]);
-  }
-}
-function print_start_and_end_properties(perfEntry) {
-  // Print timestamps of the *start and *end properties
-  properties = ["connectStart", "connectEnd",
-                "domainLookupStart", "domainLookupEnd",
-                "fetchStart",
-                "redirectStart", "redirectEnd",
-                "requestStart",
-                "responseStart", "responseEnd",
-                "secureConnectionStart"];
+const tcp = entry.connectEnd - entry.connectStart;
+```
 
-  for (let i=0; i < properties.length; i++) {
-    // check each property
-    const value = perfEntry[properties[i]];
-    if (properties[i] in perfEntry) {
-      console.log(`… ${properties[i]} = ${value}`);
-    } else {
-      console.log(`… ${properties[i]} = NOT supported`);
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `resource` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
+
+```js
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    const tcp = entry.connectEnd - entry.connectStart;
+    if (tcp > 0) {
+      console.log(`${entry.name}: TCP handshake duration: ${tcp}ms`);
     }
+  });
+});
+
+observer.observe({ type: "resource", buffered: true });
+```
+
+Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
+
+```js
+const resources = performance.getEntriesByType("resource");
+resources.forEach((entry) => {
+  const tcp = entry.connectEnd - entry.connectStart;
+  if (tcp > 0) {
+    console.log(`${entry.name}: TCP handshake duration: ${tcp}ms`);
   }
-}
+});
+```
+
+### Cross-origin timing information
+
+If the value of the `connectEnd` property is `0`, the resource might be a cross-origin request. To allow seeing cross-origin timing information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
+
+For example, to allow `https://developer.mozilla.org` to see timing resources, the cross-origin resource should send:
+
+```http
+Timing-Allow-Origin: https://developer.mozilla.org
 ```
 
 ## Specifications
@@ -67,3 +76,7 @@ function print_start_and_end_properties(perfEntry) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{HTTPHeader("Timing-Allow-Origin")}}

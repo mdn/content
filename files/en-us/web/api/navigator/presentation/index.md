@@ -4,6 +4,7 @@ slug: Web/API/Navigator/presentation
 page-type: web-api-instance-property
 browser-compat: api.Navigator.presentation
 ---
+
 {{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Presentation API")}}
 
 The `presentation` property of {{DOMxRef("Navigator")}} serves as the entry
@@ -12,7 +13,7 @@ returns a reference to {{DOMxRef("Presentation")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 const presentation = navigator.presentation
 ```
 

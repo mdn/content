@@ -12,6 +12,7 @@ tags:
   - web console
 browser-compat: api.console.timeStamp
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 The **`console.timeStamp`** method adds a single marker to the browser's Performance tool ([Firefox](https://profiler.firefox.com/docs/#/), [Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/)). This lets you
@@ -25,7 +26,7 @@ be shown alongside the marker.
 
 ## Syntax
 
-```js
+```js-nolint
 timeStamp(label)
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Using feature queries
 slug: Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries
+page-type: guide
 tags:
   - CSS
   - Conditional CSS
@@ -8,6 +9,7 @@ tags:
   - feature queries
   - progressive enhancement
 ---
+
 {{CSSRef}}
 
 **Feature queries** are created using the CSS at-rule [@supports](/en-US/docs/Web/CSS/@supports), and are useful as they give web developers a way to test to see if a browser has support for a certain feature, and then provide CSS that will only run based on the result of that test. In this guide you will learn how to implement progressive enhancement using feature queries.

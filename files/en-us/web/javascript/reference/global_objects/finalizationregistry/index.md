@@ -1,6 +1,7 @@
 ---
 title: FinalizationRegistry
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
+page-type: javascript-class
 tags:
   - Class
   - FinalizationRegistry
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.FinalizationRegistry
 ---
+
 {{JSRef}}
 
 A **`FinalizationRegistry`** object lets you request a callback when an object is garbage-collected.
@@ -58,19 +60,7 @@ registry.register(theObject, "some value", tokenObject);
 registry.unregister(tokenObject);
 ```
 
-## Constructor
-
-- {{jsxref("FinalizationRegistry/FinalizationRegistry", "FinalizationRegistry()")}}
-  - : Creates a new `FinalizationRegistry` object.
-
-## Instance methods
-
-- {{jsxref("FinalizationRegistry.register", "FinalizationRegistry.prototype.register()")}}
-  - : Registers an object with the registry in order to get a cleanup callback when/if the object is garbage-collected.
-- {{jsxref("FinalizationRegistry.unregister", "FinalizationRegistry.prototype.unregister()")}}
-  - : Unregisters an object from the registry.
-
-## Avoid where possible
+### Avoid where possible
 
 Correct use of `FinalizationRegistry` takes careful thought, and it's best avoided if possible. It's also important to avoid relying on any specific behaviors not guaranteed by the specification. When, how, and whether garbage collection occurs is down to the implementation of any given JavaScript engine. Any behavior you observe in one engine may be different in another engine, in another version of the same engine, or even in a slightly different situation with the same version of the same engine. Garbage collection is a hard problem that JavaScript engine implementers are constantly refining and improving their solutions to.
 
@@ -85,9 +75,7 @@ Here are some specific points that the authors of the WeakRef proposal that Fina
 > - Different JavaScript engines may do these things differently, or the same engine may change its algorithms across versions.
 > - Complex factors may lead to objects being held alive for unexpected amounts of time, such as use with certain APIs.
 
-## Notes on cleanup callbacks
-
-Some notes on cleanup callbacks:
+### Notes on cleanup callbacks
 
 - Developers shouldn't rely on cleanup callbacks for essential program logic. Cleanup callbacks may be useful for reducing memory usage across the course of a program, but are unlikely to be useful otherwise.
 - A conforming JavaScript implementation, even one that does garbage collection, is not required to call cleanup callbacks. When and whether it does so is entirely down to the implementation of the JavaScript engine. When a registered object is reclaimed, any cleanup callbacks for it may be called then, or some time later, or not at all.
@@ -96,6 +84,23 @@ Some notes on cleanup callbacks:
 
   - When the JavaScript program shuts down entirely (for instance, closing a tab in a browser).
   - When the `FinalizationRegistry` instance itself is no longer reachable by JavaScript code.
+
+## Constructor
+
+- {{jsxref("FinalizationRegistry/FinalizationRegistry", "FinalizationRegistry()")}}
+  - : Creates a new `FinalizationRegistry` object.
+
+## Instance properties
+
+- `FinalizationRegistry.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"FinalizationRegistry"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+
+## Instance methods
+
+- {{jsxref("FinalizationRegistry.prototype.register()")}}
+  - : Registers an object with the registry in order to get a cleanup callback when/if the object is garbage-collected.
+- {{jsxref("FinalizationRegistry.prototype.unregister()")}}
+  - : Unregisters an object from the registry.
 
 ## Examples
 
@@ -111,7 +116,7 @@ const registry = new FinalizationRegistry((heldValue) => {
 
 ### Registering objects for cleanup
 
-Then you register any objects you want a cleanup callback for by calling the \`register\` method, passing in the object and a \*held value\* for it:
+Then you register any objects you want a cleanup callback for by calling the `register` method, passing in the object and a _held value_ for it:
 
 ```js
 registry.register(theObject, "some value");

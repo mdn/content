@@ -1,8 +1,10 @@
 ---
-title: ':nth-last-col'
+title: ":nth-last-col()"
 slug: Web/CSS/:nth-last-col
+page-type: css-pseudo-class
 browser-compat: css.selectors.nth-last-col
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`:nth-last-col()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is designed for tables and grids. It accepts the An+B notation such as used with the {{Cssxref(":nth-child")}} selector, using this to target every nth column before it, therefore counting back from the end of the set of columns. The values odd and even are also valid.
@@ -16,12 +18,14 @@ The **`:nth-last-col()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/
 
 ## Syntax
 
-The `nth-last-col` pseudo-class is specified with a single argument, which represents the pattern for matching elements.
+The `nth-last-col()` pseudo-class is specified with a single argument, which represents the pattern for matching elements. It uses `:nth-last-col(An+B)` syntax.
 
 See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
 
-```
-:nth-last-col
+```css
+:nth-last-col(An + B) {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -39,7 +43,7 @@ See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
     <td>four</td>
   </tr>
   <tr>
-  <td>one</td>
+    <td>one</td>
     <td>two</td>
     <td>three</td>
     <td>four</td>
@@ -52,11 +56,11 @@ See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
 ```css
 td {
   border: 1px solid #ccc;
-  padding: .2em;
+  padding: 0.2em;
 }
 
 /* Odd columns starting with the final column of the table */
-:nth-last-col(2n+1) {
+:nth-last-col(2n + 1) {
   background-color: pink;
 }
 ```

@@ -10,6 +10,7 @@ tags:
   - credentials
 browser-compat: api.Navigator.credentials
 ---
+
 {{securecontext_header}}{{APIRef("")}}
 
 The **`credentials`** property of the {{domxref("Navigator")}}
@@ -27,7 +28,7 @@ The {{domxref("CredentialsContainer")}} interface.
 ```js
 if ('credentials' in navigator) {
   navigator.credentials.get({password: true})
-  .then(function(creds) {
+  .then((creds) => {
     //Do something with the credentials.
   });
 } else {

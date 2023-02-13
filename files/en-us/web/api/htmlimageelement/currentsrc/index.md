@@ -13,6 +13,7 @@ tags:
   - source
 browser-compat: api.HTMLImageElement.currentSrc
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only {{domxref("HTMLImageElement")}} property
@@ -39,23 +40,25 @@ document.
 ### HTML
 
 ```html
- <img src="/files/16797/clock-demo-400px.png"
-      alt="Clock"
-      srcset="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w, /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w"
-      sizes="(max-width: 400px) 50%, 90%">
+<img
+  src="/files/16797/clock-demo-400px.png"
+  alt="Clock"
+  srcset="
+    /en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
+    /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w
+  "
+  sizes="(max-width: 400px) 50%, 90%" />
 ```
 
 ### JavaScript
 
 ```js
 const clockImage = document.querySelector("img");
-let p = document.createElement("p");
+const p = document.createElement("p");
 
-if (!clockImage.currentSrc.endsWith("200px.png")) {
-  p.innerText = "Using the 200px image.";
-} else {
-  p.innerText = "Using the 400px image!";
-}
+p.textContent = clockImage.currentSrc.endsWith("200px.png")
+  ? "Using the 400px image!"
+  : "Using the 200px image.";
 document.body.appendChild(p);
 ```
 

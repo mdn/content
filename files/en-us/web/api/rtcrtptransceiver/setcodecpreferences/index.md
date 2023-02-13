@@ -17,6 +17,7 @@ tags:
   - setCodecPreferences
 browser-compat: api.RTCRtpTransceiver.setCodecPreferences
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpTransceiver")}} method
@@ -39,7 +40,7 @@ characteristics—can be found in [Codecs used by WebRTC](/en-US/docs/Web/Media/
 
 ## Syntax
 
-```js
+```js-nolint
 setCodecPreferences(codecs)
 ```
 

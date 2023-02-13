@@ -11,6 +11,7 @@ tags:
   - onaudiostart
 browser-compat: api.SpeechRecognition.audiostart_event
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`audiostart`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when the user agent has started to capture audio for speech recognition.
@@ -36,7 +37,7 @@ You can use the `audiostart` event in an [`addEventListener`](/en-US/docs/Web/AP
 ```js
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('audiostart', function() {
+recognition.addEventListener('audiostart', () => {
   console.log('Audio capturing started');
 });
 ```
@@ -44,7 +45,7 @@ recognition.addEventListener('audiostart', function() {
 Or use the `onaudiostart` event handler property:
 
 ```js
-recognition.onaudiostart = function() {
+recognition.onaudiostart = () => {
   console.log('Audio capturing started');
 }
 ```

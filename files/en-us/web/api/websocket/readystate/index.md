@@ -10,6 +10,7 @@ tags:
   - WebSocket
 browser-compat: api.WebSocket.readyState
 ---
+
 {{APIRef("Web Sockets API")}}
 
 The **`WebSocket.readyState`** read-only property returns the

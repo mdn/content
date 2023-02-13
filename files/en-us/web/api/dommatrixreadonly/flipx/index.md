@@ -7,18 +7,19 @@ tags:
   - Reference
 browser-compat: api.DOMMatrixReadOnly.flipX
 ---
+
 {{APIRef("Geometry Interfaces")}}
 The `flipX()` method of the {{domxref("DOMMatrixReadOnly")}} interface creates a new matrix being the result of the original matrix flipped about the x-axis.
 
 ## Syntax
 
-```js
-  DOMMatrixReadOnly.flipX();
+```js-nolint
+  DOMMatrixReadOnly.flipX()
 ```
 
 ### Return value
 
-Returns a [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix) containing a new matrix being the result of the original matrix flipped about the x-axis, which is equivalent to multiplying the matrix by `DOMMatrix(-1, 0, 0, 1, 0, 0)`.  The original matrix is not modified.
+Returns a [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix) containing a new matrix being the result of the original matrix flipped about the x-axis, which is equivalent to multiplying the matrix by `DOMMatrix(-1, 0, 0, 1, 0, 0)`. The original matrix is not modified.
 
 ## Examples
 

@@ -13,6 +13,7 @@ tags:
   - setBadgeBackgroundColor
 browser-compat: webextensions.api.action.setBadgeBackgroundColor
 ---
+
 {{AddonSidebar()}}
 
 Sets the background color for the badge. Tabs without a specific badge background color will inherit the global badge background color, which defaults to `[217, 0, 0, 255]` in Firefox.
@@ -25,7 +26,7 @@ Other browsers always use a white text color, so setting a dark background may b
 
 ## Syntax
 
-```js
+```js-nolint
 browser.action.setBadgeBackgroundColor(
   details // object
 )
@@ -60,24 +61,24 @@ browser.action.setBadgeBackgroundColor(
 A background color that starts off as red, and turns green when the browser action is clicked:
 
 ```js
-browser.action.setBadgeText({text: "1234"});
-browser.action.setBadgeBackgroundColor({color: "red"});
+browser.action.setBadgeText({ text: "1234" });
+browser.action.setBadgeBackgroundColor({ color: "red" });
 
 browser.action.onClicked.addListener(() => {
-  browser.action.setBadgeBackgroundColor({color: "green"});
+  browser.action.setBadgeBackgroundColor({ color: "green" });
 });
 ```
 
 Set the badge background color only for the active tab:
 
 ```js
-browser.action.setBadgeText({text: "1234"});
-browser.action.setBadgeBackgroundColor({color: "red"});
+browser.action.setBadgeText({ text: "1234" });
+browser.action.setBadgeBackgroundColor({ color: "red" });
 
-browser.action.onClicked.addListener((tab)=> {
+browser.action.onClicked.addListener((tab) => {
   browser.action.setBadgeBackgroundColor({
     color: "green",
-    tabId: tab.id
+    tabId: tab.id,
   });
 });
 ```
@@ -91,10 +92,9 @@ browser.action.onClicked.addListener((tab)=> {
 The default color in Firefox is: `[217, 0, 0, 255]`.
 
 > **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-setBadgeBackgroundColor) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -121,4 +121,4 @@ The default color in Firefox is: `[217, 0, 0, 255]`.
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

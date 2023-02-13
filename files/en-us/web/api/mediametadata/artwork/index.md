@@ -14,7 +14,8 @@ tags:
   - artwork
 browser-compat: api.MediaMetadata.artwork
 ---
-{{SeeCompatTable}}{{APIRef("Media Session API")}}
+
+{{APIRef("Media Session API")}}
 
 The **`artwork`** property of the
 {{domxref("MediaMetaData")}} interface returns or sets an array of

@@ -13,6 +13,7 @@ tags:
   - abort
 browser-compat: api.IDBTransaction.abort
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`abort()`** method of the {{domxref("IDBTransaction")}}
@@ -26,7 +27,7 @@ their {{domxref("IDBRequest.error")}} attribute set to an `AbortError` {{domxref
 
 ## Syntax
 
-```js
+```js-nolint
 abort()
 ```
 
@@ -49,7 +50,7 @@ In the following code snippet, we open a read/write transaction on our database 
 some data to an object store. Note also the functions attached to transaction event
 handlers to report on the outcome of the transaction opening in the event of success or
 failure. At the end, we abort any activity done under the current transaction using
-`abort()`. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([View example live](https://mdn.github.io/to-do-notifications/)).
+`abort()`. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([View example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 const note = document.getElementById('notifications');
@@ -119,4 +120,4 @@ function addData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

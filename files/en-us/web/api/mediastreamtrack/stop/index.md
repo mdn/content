@@ -15,13 +15,14 @@ tags:
   - stop
 browser-compat: api.MediaStreamTrack.stop
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The **`MediaStreamTrack.stop()`** method stops the track.
 
 ## Syntax
 
-```js
+```js-nolint
 stop()
 ```
 
@@ -59,7 +60,7 @@ function stopStreamedVideo(videoElem) {
   const stream = videoElem.srcObject;
   const tracks = stream.getTracks();
 
-  tracks.forEach(function(track) {
+  tracks.forEach((track) => {
     track.stop();
   });
 

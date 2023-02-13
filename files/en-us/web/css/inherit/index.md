@@ -1,6 +1,7 @@
 ---
 title: inherit
 slug: Web/CSS/inherit
+page-type: css-keyword
 tags:
   - CSS
   - CSS Cascade
@@ -14,6 +15,7 @@ tags:
   - inherit
 browser-compat: css.types.global_keywords.inherit
 ---
+
 {{CSSRef}}
 
 The **`inherit`** CSS keyword causes the element to take the [computed value](/en-US/docs/Web/CSS/computed_value) of the property from its parent element. It can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}.
@@ -28,16 +30,22 @@ For [inherited properties](/en-US/docs/Web/CSS/inheritance#inherited_properties)
 
 ```css
 /* Make second-level headers green */
-h2 { color: green; }
+h2 {
+  color: green;
+}
 
 /* Leave those in the sidebar alone so they use their parent's color */
-#sidebar h2 { color: inherit; }
+#sidebar h2 {
+  color: inherit;
+}
 ```
 
 In this example, the `h2` elements inside the sidebar might be different colors. For example, consider one of them that would by the child of a `div` matched by the rule:
 
 ```css
-div#current { color: blue; }
+div#current {
+  color: blue;
+}
 ```
 
 Then, it would be blue.

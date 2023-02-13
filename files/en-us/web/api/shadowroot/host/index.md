@@ -11,6 +11,7 @@ tags:
   - shadow dom
 browser-compat: api.ShadowRoot.host
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`host`** read-only property of

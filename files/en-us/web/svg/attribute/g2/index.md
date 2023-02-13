@@ -1,12 +1,14 @@
 ---
 title: g2
 slug: Web/SVG/Attribute/g2
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG
   - SVG Attribute
 browser-compat: svg.elements.hkern.g2
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`g2`** attribute specifies a list of glyph names which identify a set of possible second glyphs in the kerning pair.

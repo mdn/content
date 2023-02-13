@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.deleteSampler
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.deleteSampler()`** method of the
@@ -18,7 +19,7 @@ The **`WebGL2RenderingContext.deleteSampler()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 deleteSampler(sampler)
 ```
 

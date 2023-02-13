@@ -1,12 +1,14 @@
 ---
 title: vert-adv-y
 slug: Web/SVG/Attribute/vert-adv-y
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG
   - SVG Attribute
 browser-compat: svg.elements.font.vert-adv-y
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`vert-adv-y`** attribute indicates the vertical advance after rendering a {{Glossary("glyph")}} in vertical orientation.

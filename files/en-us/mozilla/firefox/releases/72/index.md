@@ -2,11 +2,12 @@
 title: Firefox 72 for Developers
 slug: Mozilla/Firefox/Releases/72
 tags:
-  - '72'
+  - "72"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 72 that will affect developers. Firefox 72 was released on January 7, 2020.
@@ -57,7 +58,7 @@ _No changes._
 
 ### SVG
 
-_No changes_
+_No changes._
 
 ### JavaScript
 
@@ -68,6 +69,7 @@ _No changes_
 #### New APIs
 
 - {{domxref("FormDataEvent")}} and [event-based form participation](/en-US/docs/Web/API/FormData/Using_FormData_Objects#using_a_formdata_event) is now enabled by default ({{bug(1594708)}}).
+- The {{domxref("crossOriginIsolated")}} property is now supported ({{bug(1591892)}}).
 
 #### DOM
 
@@ -89,10 +91,6 @@ _No changes_
 #### DOM events
 
 - {{domxref("Notification.requestPermission()")}} and {{domxref("PushManager.subscribe()")}} can now only be called in response to a user gesture such as a [`click`](/en-US/docs/Web/API/Element/click_event) event ({{bug(1593644)}}).
-
-#### Service workers
-
-- The {{domxref("crossOriginIsolated")}} property is now supported ({{bug(1591892)}}).
 
 #### Media, Web Audio, and WebRTC
 

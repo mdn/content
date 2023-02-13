@@ -11,6 +11,7 @@ tags:
   - clearInterval
 browser-compat: api.clearInterval
 ---
+
 {{APIRef("HTML DOM")}}
 
 The global **`clearInterval()`** method cancels a timed, repeating action which
@@ -20,7 +21,7 @@ this method does nothing.
 
 ## Syntax
 
-```js
+```js-nolint
 clearInterval(intervalID)
 ```
 

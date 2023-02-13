@@ -13,6 +13,7 @@ tags:
   - output
 browser-compat: api.MediaDeviceInfo.groupId
 ---
+
 {{APIRef("Media Capture")}}
 
 The **`groupId`** readonly property of

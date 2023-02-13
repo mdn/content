@@ -1,6 +1,7 @@
 ---
 title: '<menu>: The Menu element'
 slug: Web/HTML/Element/menu
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -9,9 +10,12 @@ tags:
   - Web
 browser-compat: html.elements.menu
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 The **`<menu>`** [HTML](/en-US/docs/Web/HTML) element is described in the HTML specification as a semantic alternative to {{HTMLElement("ul")}}, but treated by browsers (and exposed through the accessibility tree) as no different than {{HTMLElement("ul")}}. It represents an unordered list of items (which are represented by {{HTMLElement("li")}} elements).
+
+{{EmbedInteractiveExample("pages/tabbed/menu.html", "tabbed-shorter")}}
 
 ## Attributes
 
@@ -39,7 +43,7 @@ In this example, a `<menu>` is used to create a toolbar for an editing applicati
 </menu>
 ```
 
-Note that this is functionally no different than:
+Note that this is functionally no different from:
 
 ```html
 <ul>
@@ -52,7 +56,8 @@ Note that this is functionally no different than:
 #### CSS
 
 ```css
-menu, ul {
+menu,
+ul {
   display: flex;
   list-style: none;
   padding: 0;
@@ -131,15 +136,15 @@ button {
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("directory")}}, {{ARIARole("group")}},
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>,
         <code
           ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role"
             >listbox</a
           ></code
-        >, {{ARIARole("menu")}}, {{ARIARole("menubar")}},
-        {{ARIARole("none")}}, {{ARIARole("presentation")}},
-        {{ARIARole("radiogroup")}}, {{ARIARole("tablist")}},
-        {{ARIARole("toolbar")}} or {{ARIARole("tree")}}
+        >, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role"><code>menubar</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role"><code>radiogroup</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role"><code>tablist</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role"><code>toolbar</code></a> or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role"><code>tree</code></a>
       </td>
     </tr>
     <tr>

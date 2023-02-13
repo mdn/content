@@ -5,14 +5,14 @@ page-type: web-api-instance-property
 tags:
   - API
   - EncryptedMediaExtensions
-  - Experimental
   - MediaKeyMessageEvent
   - Property
   - Reference
   - message
 browser-compat: api.MediaKeyMessageEvent.message
 ---
-{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
+
+{{APIRef("EncryptedMediaExtensions")}}
 
 The **`MediaKeyMessageEvent.message`** read-only property
 returns an {{jsxref("ArrayBuffer")}} with a message from the content decryption module.

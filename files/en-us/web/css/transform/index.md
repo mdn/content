@@ -1,6 +1,7 @@
 ---
 title: transform
 slug: Web/CSS/transform
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.transform
 ---
+
 {{CSSRef}}
 
 The **`transform`** [CSS](/en-US/docs/Web/CSS) property lets you rotate, scale, skew, or translate an element.
@@ -29,11 +31,11 @@ In that case, the element will act as a [containing block](/en-US/docs/Web/CSS/C
 transform: none;
 
 /* Function values */
-transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
+transform: matrix(1, 2, 3, 4, 5, 6);
 transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 transform: perspective(17px);
 transform: rotate(0.5turn);
-transform: rotate3d(1, 2.0, 3.0, 10deg);
+transform: rotate3d(1, 2, 3, 10deg);
 transform: rotateX(10deg);
 transform: rotateY(10deg);
 transform: rotateZ(10deg);
@@ -136,4 +138,5 @@ Please see [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_t
 
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
 - {{cssxref("&lt;transform-function&gt;")}} data type with all the transform functions explained.
+- Individual CSS properties: {{cssxref('translate')}}, {{cssxref('rotate')}}), and {{cssxref('scale')}} (there is no `skew` property).
 - Online tool to visualize CSS Transform functions: [CSS Transform Playground](https://css-transform.moro.es/)

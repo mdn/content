@@ -10,6 +10,7 @@ tags:
   - Window
 browser-compat: api.Window.print
 ---
+
 {{ ApiRef() }}
 
 Opens the print dialog to print the current document.
@@ -20,7 +21,7 @@ This method will block while the print dialog is open.
 
 ## Syntax
 
-```js
+```js-nolint
 print()
 ```
 

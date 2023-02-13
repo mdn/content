@@ -13,6 +13,7 @@ tags:
   - URL
 browser-compat: api.PresentationConnection.url
 ---
+
 {{SeeCompatTable}}{{DefaultAPISidebar("Presentation API")}}
 
 The **`url`** readonly property of the

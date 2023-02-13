@@ -1,6 +1,7 @@
 ---
 title: DataView.prototype.getFloat64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat64
+page-type: javascript-instance-method
 tags:
   - DataView
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.getFloat64
 ---
+
 {{JSRef}}
 
 The **`getFloat64()`** method gets a signed 64-bit float
@@ -18,7 +20,7 @@ The **`getFloat64()`** method gets a signed 64-bit float
 
 ## Syntax
 
-```js
+```js-nolint
 getFloat64(byteOffset)
 getFloat64(byteOffset, littleEndian)
 ```

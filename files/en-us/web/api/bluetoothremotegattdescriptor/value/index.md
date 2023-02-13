@@ -14,6 +14,7 @@ tags:
   - value
 browser-compat: api.BluetoothRemoteGATTDescriptor.value
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTDescriptor.value`**

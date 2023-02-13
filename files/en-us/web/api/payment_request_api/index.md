@@ -17,6 +17,7 @@ tags:
   - payment
 browser-compat: api.PaymentRequest
 ---
+
 {{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}
 
 The Payment Request API provides a consistent user experience for both merchants and users. It is not a new way for paying for things; rather, it's a way for users to select their preferred way of paying for things, and make that information available to a merchant.
@@ -71,4 +72,4 @@ You can find a complete guide in [Using the Payment Request API](/en-US/docs/Web
 - [Google Pay API PaymentRequest Tutorial](https://developers.google.com/pay/api/web/guides/paymentrequest/tutorial)
 - [Samsung Pay Web Payments Integration Guide](https://developer.samsung.com/internet/android/web-payments-integration-guide.html)
 - [W3C Payment Request API FAQ](https://github.com/w3c/payment-request-info/wiki/FAQ)
-- Feature Policy directive {{httpheader("Feature-Policy/payment", "payment")}}
+- Permissions Policy directive {{httpheader("Permissions-Policy/payment", "payment")}}

@@ -1,11 +1,13 @@
 ---
 title: restart
 slug: Web/SVG/Attribute/restart
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#RestartAttribute
 ---
+
 {{SVGRef}}
 
 The **`restart`** attribute specifies whether or not an animation can restart.
@@ -21,7 +23,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 
@@ -35,12 +39,24 @@ a {
 ```html
 <svg viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg">
   <rect y="30" width="100" height="100">
-    <animate attributeType="XML" attributeName="y" from="30" to="100"
-        dur="5s" repeatCount="1" restart="always" />
+    <animate
+      attributeType="XML"
+      attributeName="y"
+      from="30"
+      to="100"
+      dur="5s"
+      repeatCount="1"
+      restart="always" />
   </rect>
   <rect x="120" y="30" width="100" height="100">
-    <animate attributeType="XML" attributeName="y" from="30" to="100"
-        dur="5s" repeatCount="1" restart="whenNotActive"/>
+    <animate
+      attributeType="XML"
+      attributeName="y"
+      from="30"
+      to="100"
+      dur="5s"
+      repeatCount="1"
+      restart="whenNotActive" />
   </rect>
   <a id="restart"><text y="20">Restart animation</text></a>
 </svg>

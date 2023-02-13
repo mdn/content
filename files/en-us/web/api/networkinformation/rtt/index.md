@@ -13,6 +13,7 @@ tags:
   - rtt
 browser-compat: api.NetworkInformation.rtt
 ---
+
 {{apiref("Network Information API")}}{{SeeCompatTable}}
 
 The **`NetworkInformation.rtt`** read-only property returns the

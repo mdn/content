@@ -1,9 +1,9 @@
 ---
 title: Intl.ListFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
+page-type: javascript-class
 tags:
   - Class
-  - Experimental
   - Internationalization
   - Intl
   - JavaScript
@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.ListFormat
 ---
+
 {{JSRef}}
 
 The **`Intl.ListFormat`** object enables language-sensitive list formatting.
@@ -45,16 +46,26 @@ The **`Intl.ListFormat`** object enables language-sensitive list formatting.
 The following example shows how to create a List formatter using the English language.
 
 ```js
-const list = ['Motorcycle', 'Bus', 'Car'];
+const list = ["Motorcycle", "Bus", "Car"];
 
- console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).format(list));
-// > Motorcycle, Bus and Car
+console.log(
+  new Intl.ListFormat("en-GB", { style: "long", type: "conjunction" }).format(
+    list,
+  ),
+);
+// Motorcycle, Bus and Car
 
- console.log(new Intl.ListFormat('en-GB', { style: 'short', type: 'disjunction' }).format(list));
-// > Motorcycle, Bus or Car
+console.log(
+  new Intl.ListFormat("en-GB", { style: "short", type: "disjunction" }).format(
+    list,
+  ),
+);
+// Motorcycle, Bus or Car
 
- console.log(new Intl.ListFormat('en-GB', { style: 'narrow', type: 'unit' }).format(list));
-// > Motorcycle Bus Car
+console.log(
+  new Intl.ListFormat("en-GB", { style: "narrow", type: "unit" }).format(list),
+);
+// Motorcycle Bus Car
 ```
 
 ### Using formatToParts
@@ -62,8 +73,13 @@ const list = ['Motorcycle', 'Bus', 'Car'];
 The following example shows how to create a List formatter returning formatted parts
 
 ```js
-const list = ['Motorcycle', 'Bus', 'Car'];
-console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).formatToParts(list));
+const list = ["Motorcycle", "Bus", "Car"];
+console.log(
+  new Intl.ListFormat("en-GB", {
+    style: "long",
+    type: "conjunction",
+  }).formatToParts(list),
+);
 
 // [ { "type": "element", "value": "Motorcycle" },
 //   { "type": "literal", "value": ", " },

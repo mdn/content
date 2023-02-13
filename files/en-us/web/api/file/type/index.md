@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.File.type
 ---
+
 {{APIRef("File API")}}
 
 Returns the media type ([MIME](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)) of the file represented by a {{domxref("File")}} object.

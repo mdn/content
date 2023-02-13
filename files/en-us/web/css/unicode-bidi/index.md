@@ -1,6 +1,7 @@
 ---
 title: unicode-bidi
 slug: Web/CSS/unicode-bidi
+page-type: css-property
 tags:
   - BiDi
   - CSS
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.unicode-bidi
 ---
+
 {{CSSRef}}
 
 The **`unicode-bidi`** [CSS](/en-US/docs/Web/CSS) property, together with the {{cssxref("direction")}} property, determines how bidirectional text in a document is handled. For example, if a block of content contains both left-to-right and right-to-left text, the user-agent uses a complex Unicode algorithm to decide how to display the text. The `unicode-bidi` property overrides this algorithm and allows the developer to control the text embedding.
@@ -76,12 +78,8 @@ unicode-bidi: unset;
 ### HTML
 
 ```html
-<div class="bible-quote">
-  A line of text
-</div>
-<div>
-  Another line of text
-</div>
+<div class="bible-quote">A line of text</div>
+<div>Another line of text</div>
 ```
 
 ### Result

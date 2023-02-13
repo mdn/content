@@ -17,6 +17,7 @@ tags:
   - Reference
   - WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN
 ---
+
 {{APIRef("UI Events")}}{{Non-standard_header()}}
 
 **`MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN`** is a proprietary, WebKit-specific, static numeric property whose value is the minimum force necessary for a force click.
@@ -31,4 +32,4 @@ _Not part of any specification._ Apple has [a description at the Mac Developer L
 
 - {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}}
 - {{domxref("MouseEvent.webkitForce")}}
-- {{domxref("Force_Touch_events")}}
+- [Force Touch events](/en-US/docs/Web/API/Force_Touch_events)

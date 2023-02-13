@@ -1,6 +1,7 @@
 ---
 title: SVG Tutorial
 slug: Web/SVG/Tutorial
+page-type: guide
 tags:
   - Intermediate
   - NeedsContent
@@ -9,7 +10,8 @@ tags:
   - SVG
   - SVG:Tutorial
 ---
-Scalable Vector Graphics, [SVG](/en-US/docs/Web/SVG), is a W3C XML dialect to mark up graphics. It is partially implemented in Firefox, Opera, WebKit browsers, Internet Explorer and other browsers.
+
+Scalable Vector Graphics, [SVG](/en-US/docs/Web/SVG), is a W3C XML dialect to mark up graphics.
 
 This tutorial aims to explain the internals of SVG and is packed with technical details. If you just want to draw beautiful images, you might find more useful resources at [Inkscape's documentation page](https://inkscape.org/learn/). Another good introduction to SVG is provided by the W3C's [SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html).
 

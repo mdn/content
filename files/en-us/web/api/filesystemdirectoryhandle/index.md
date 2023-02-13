@@ -12,17 +12,20 @@ tags:
   - working with directories
 browser-compat: api.FileSystemDirectoryHandle
 ---
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
-The **`FileSystemDirectoryHandle`** interface of the {{domxref('File System Access API')}} provides a handle to a file system directory. The interface is accessed via the {{domxref('window.showDirectoryPicker()')}} method.
+{{securecontext_header}}{{APIRef("File System Access API")}}
+
+The **`FileSystemDirectoryHandle`** interface of the {{domxref('File System Access API')}} provides a handle to a file system directory.
+
+The interface can be accessed via the {{domxref('window.showDirectoryPicker()')}} and {{domxref('StorageManager.getDirectory()')}} methods.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("FileSystemHandle")}}._
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{DOMxRef("FileSystemHandle")}}._
 

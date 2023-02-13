@@ -1,8 +1,9 @@
 ---
 title: font-variation-settings
 slug: Web/CSS/@font-face/font-variation-settings
+page-type: css-at-rule-descriptor
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule descriptor
   - CSS
   - CSS Descriptor
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: css.at-rules.font-face.font-variation-settings
 ---
+
 {{CSSRef}}
 
 The **`font-variation-settings`** CSS descriptor allows authors to specify low-level OpenType or TrueType font variations in the {{cssxref("@font-face")}} rule.
@@ -37,10 +39,7 @@ font-variation-settings: "xhgt" 0.7;
 
 ## Formal syntax
 
-```
-normal                 |
-[ <string> <number> ]#
-```
+{{csssyntax}}
 
 ## Examples
 
@@ -48,11 +47,11 @@ normal                 |
 
 ```css
 @font-face {
-  font-family: 'OpenTypeFont';
-  src: url('open_type_font.woff2') format('woff2');
+  font-family: "OpenTypeFont";
+  src: url("open_type_font.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: 'wght' 400, 'wdth' 300;
+  font-variation-settings: "wght" 400, "wdth" 300;
 }
 ```
 
@@ -71,7 +70,6 @@ normal                 |
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
 - {{cssxref("@font-face/font-style", "font-style")}}
 - {{cssxref("@font-face/font-weight", "font-weight")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/src", "src")}}
 - {{cssxref("@font-face/unicode-range", "unicode-range")}}

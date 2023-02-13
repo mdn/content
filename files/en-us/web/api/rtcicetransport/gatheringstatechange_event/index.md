@@ -18,6 +18,7 @@ tags:
   - gatheringstatechange
 browser-compat: api.RTCIceTransport.gatheringstatechange_event
 ---
+
 {{APIRef("WebRTC")}}
 
 A **`gatheringstatechange`** event is sent to an {{domxref("RTCIceTransport")}} when its {{Glossary("ICE")}} candidate gathering state changes.

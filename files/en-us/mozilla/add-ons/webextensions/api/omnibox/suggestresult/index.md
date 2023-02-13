@@ -12,6 +12,7 @@ tags:
   - omnibox
 browser-compat: webextensions.api.omnibox.SuggestResult
 ---
+
 {{AddonSidebar()}}
 
 The **`omnibox.SuggestResult`** type defines a single suggestion that the extension can add to the address bar's drop-down list.
@@ -32,5 +33,3 @@ Values of this type are objects. They have the following properties:
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/omnibox/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

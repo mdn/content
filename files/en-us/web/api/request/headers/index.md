@@ -11,6 +11,7 @@ tags:
   - request
 browser-compat: api.Request.headers
 ---
+
 {{APIRef("Fetch")}}
 
 The **`headers`** read-only property of the

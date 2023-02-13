@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.alinkColor
 ---
+
 {{APIRef("DOM")}}{{Deprecated_header}}
 
 Returns or sets the color of an active link in the document body. A link is active

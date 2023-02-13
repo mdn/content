@@ -1,11 +1,14 @@
 ---
 title: viewTarget
 slug: Web/SVG/Attribute/viewTarget
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute
+  - Deprecated
 browser-compat: svg.elements.view.viewTarget
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`viewTarget`** attribute indicates the target object associated with the view.

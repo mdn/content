@@ -11,6 +11,7 @@ tags:
   - coneOuterAngle
 browser-compat: api.PannerNode.coneOuterAngle
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `coneOuterAngle` property of the {{ domxref("PannerNode") }} interface is a double value describing the angle, in degrees, of a cone outside of which the volume will be reduced by a constant value, defined by the {{domxref("PannerNode.coneOuterGain","coneOuterGain")}} property.

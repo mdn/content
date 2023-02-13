@@ -11,6 +11,7 @@ tags:
   - positionX
 browser-compat: api.PannerNode.positionX
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`positionX`** property of the {{ domxref("PannerNode")

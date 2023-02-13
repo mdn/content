@@ -22,6 +22,7 @@ tags:
   - width
 browser-compat: api.XRViewport.width
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRViewport")}} property

@@ -16,6 +16,7 @@ tags:
   - toneBuffer
 browser-compat: api.RTCDTMFSender.toneBuffer
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCDTMFSender")}} interface's toneBuffer property returns a string
@@ -46,7 +47,7 @@ are permitted by the DTMF standard.
   - : These characters represent the digit keys on a telephone keypad.
 - The letters A-D
   - : These characters represent the "A" through "D" keys which are part of the DTMF
-    standard but not included on most telephones. These are *not* interpreted as
+    standard but not included on most telephones. These are _not_ interpreted as
     digits. Lower-case "a"-"d" automatically gets converted to upper-case.
 - The pound/hash sign ("#") and the asterisk ("\*")
   - : These correspond to the similarly-labeled keys which are typically on the bottom row

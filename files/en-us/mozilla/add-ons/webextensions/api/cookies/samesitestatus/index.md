@@ -12,6 +12,7 @@ tags:
   - Type
   - WebExtensions
 ---
+
 {{AddonSidebar()}}
 
 The `SameSiteStatus` type of the {{WebExtAPIRef("cookies")}} API represents information about the `SameSite` state of a cookie.

@@ -12,6 +12,7 @@ tags:
   - maxValue
 browser-compat: api.AudioParam.maxValue
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`maxValue`**

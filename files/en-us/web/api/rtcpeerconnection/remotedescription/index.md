@@ -26,16 +26,15 @@ code calling {{domxref("RTCPeerConnection.setRemoteDescription()")}} in response
 
 ## Syntax
 
-```js
-const sessionDescription = peerConnection.remoteDescription;
+```js-nolint
+const sessionDescription = peerConnection.remoteDescription
 ```
 
 On a more fundamental level, the returned value is the value of
 {{domxref("RTCPeerConnection.pendingRemoteDescription")}} if that property isn't
 `null`; otherwise, the value of
 {{domxref("RTCPeerConnection.currentRemoteDescription")}} is returned. See
-{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current
-  descriptions")}} for details on this algorithm and why it's used.
+[Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) in the WebRTC Connectivity page for details on this algorithm and why it's used.
 
 ## Example
 

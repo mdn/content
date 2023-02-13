@@ -6,7 +6,8 @@ tags:
   - Tutorial
   - WebGL
 ---
-{{WebGLSidebar("Tutorial")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
+
+{{DefaultAPISidebar("WebGL")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
 
 [WebGL](/en-US/docs/Web/API/WebGL_API) enables web content to use an API based on [OpenGL ES](https://www.khronos.org/opengles/) 2.0 to perform 2D and 3D rendering in an HTML [`canvas`](/en-US/docs/Web/API/Canvas_API) in browsers that support it without the use of plug-ins.
 
@@ -14,36 +15,56 @@ WebGL programs consist of control code written in JavaScript and shader code (GL
 
 This article will introduce you to the basics of using WebGL. It's assumed that you already have an understanding of the mathematics involved in 3D graphics, and this article doesn't pretend to try to teach you 3D graphics concepts itself.
 
-The code examples in this tutorial can also be found in the [webgl-examples folder on GitHub](https://github.com/mdn/dom-examples/tree/master/webgl-examples/tutorial).
+The code examples in this tutorial can also be found in the [webgl-examples folder on GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial).
 
 It's worth noting here that this series of articles introduces WebGL itself; however, there are a number of frameworks available that encapsulate WebGL's capabilities, making it easier to build 3D applications and games, such as [THREE.js](https://threejs.org/) and [BABYLON.js](https://www.babylonjs.com/).
 
 ## Preparing to render in 3D
 
-The first thing you need in order to use WebGL for rendering is a canvas. The HTML fragment below declares a canvas that our sample will draw into.
+First, create two new files:
+
+- "index.html"
+- "webgl-demo.js"
+
+The "index.html" file should contain the following:
 
 ```html
-<body>
-  <canvas id="glCanvas" width="640" height="480"></canvas>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WebGL Demo</title>
+    <script src="webgl-demo.js" type="module" defer></script>
+  </head>
+
+  <body>
+    <canvas id="glcanvas" width="640" height="480"></canvas>
+  </body>
+</html>
 ```
+
+Note that this declares a canvas that our sample will draw into.
 
 ### Preparing the WebGL context
 
-The `main()` function in our JavaScript code, is called when our script is loaded. Its purpose is to set up the WebGL context and start rendering content.
+Add the following code to the "webgl-demo.js" file:
 
 ```js
+main();
+
 //
 // start here
 //
 function main() {
-  const canvas = document.querySelector("#glCanvas");
+  const canvas = document.querySelector("#glcanvas");
   // Initialize the GL context
   const gl = canvas.getContext("webgl");
 
   // Only continue if WebGL is available and working
   if (gl === null) {
-    alert("Unable to initialize WebGL. Your browser or machine may not support it.");
+    alert(
+      "Unable to initialize WebGL. Your browser or machine may not support it."
+    );
     return;
   }
 
@@ -52,9 +73,9 @@ function main() {
   // Clear the color buffer with specified clear color
   gl.clear(gl.COLOR_BUFFER_BIT);
 }
-
-window.onload = main;
 ```
+
+The `main()` function is called when our script is loaded. Its purpose is to set up the WebGL context and start rendering content.
 
 The first thing we do here is obtain a reference to the canvas, assigning it to a variable named `canvas`.
 
@@ -66,7 +87,7 @@ At this point, you have enough code that the WebGL context should successfully i
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample1/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/dom-examples/tree/master/webgl-examples/tutorial/sample1) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample1/)
+[View the complete code](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample1) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample1/)
 
 ## See also
 

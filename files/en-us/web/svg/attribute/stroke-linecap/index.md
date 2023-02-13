@@ -1,11 +1,13 @@
 ---
 title: stroke-linecap
 slug: Web/SVG/Attribute/stroke-linecap
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute
 browser-compat: svg.attributes.presentation.stroke-linecap
 ---
+
 {{SVGRef}}
 
 The **`stroke-linecap`** attribute is a presentation attribute defining the shape to be used at the end of open subpaths when they are stroked.
@@ -26,23 +28,23 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-
   <!-- Effect of the (default) "butt" value -->
-  <line x1="1" y1="1" x2="5" y2="1" stroke="black"
-        stroke-linecap="butt" />
+  <line x1="1" y1="1" x2="5" y2="1" stroke="black" stroke-linecap="butt" />
 
   <!-- Effect of the "round" value -->
-  <line x1="1" y1="3" x2="5" y2="3" stroke="black"
-        stroke-linecap="round" />
+  <line x1="1" y1="3" x2="5" y2="3" stroke="black" stroke-linecap="round" />
 
   <!-- Effect of the "square" value -->
-  <line x1="1" y1="5" x2="5" y2="5" stroke="black"
-        stroke-linecap="square" />
+  <line x1="1" y1="5" x2="5" y2="5" stroke="black" stroke-linecap="square" />
 
   <!--
   the following pink lines highlight the
@@ -80,19 +82,20 @@ The `butt` value indicates that the stroke for each subpath does not extend beyo
 #### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
-
   <!-- Effect of the "butt" value -->
-  <path d="M1,1 h4" stroke="black"
-        stroke-linecap="butt" />
+  <path d="M1,1 h4" stroke="black" stroke-linecap="butt" />
 
   <!-- Effect of the "butt" value on a zero length path -->
-  <path d="M3,3 h0" stroke="black"
-        stroke-linecap="butt" />
+  <path d="M3,3 h0" stroke="black" stroke-linecap="butt" />
 
   <!--
   the following pink lines highlight the
@@ -114,19 +117,20 @@ The `round` value indicates that at the end of each subpath the stroke will be e
 #### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
-
   <!-- Effect of the "round" value -->
-  <path d="M1,1 h4" stroke="black"
-        stroke-linecap="round" />
+  <path d="M1,1 h4" stroke="black" stroke-linecap="round" />
 
   <!-- Effect of the "round" value on a zero length path -->
-  <path d="M3,3 h0" stroke="black"
-        stroke-linecap="round" />
+  <path d="M3,3 h0" stroke="black" stroke-linecap="round" />
 
   <!--
   the following pink lines highlight the
@@ -148,19 +152,20 @@ The `square` value indicates that at the end of each subpath the stroke will be 
 #### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
-
   <!-- Effect of the "square" value -->
-  <path d="M1,1 h4" stroke="black"
-        stroke-linecap="square" />
+  <path d="M1,1 h4" stroke="black" stroke-linecap="square" />
 
   <!-- Effect of the "square" value on a zero length path -->
-  <path d="M3,3 h0" stroke="black"
-        stroke-linecap="square" />
+  <path d="M3,3 h0" stroke="black" stroke-linecap="square" />
 
   <!--
   the following pink lines highlight the

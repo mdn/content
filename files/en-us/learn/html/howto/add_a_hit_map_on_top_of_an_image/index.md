@@ -8,6 +8,9 @@ tags:
   - Intermediate
   - Navigation
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}
+
 Here we go over how to set up an image map, and some downsides to consider first.
 
 <table>
@@ -61,10 +64,7 @@ You insert your image [much the same way as always](/en-US/docs/Learn/HTML/Multi
 You will need a special {{htmlattrxref("usemap","img")}} attribute. Come up with a unique name, containing no spaces, for your image map. Then assign that name (preceded by a hash) as the value for the `usemap` attribute:
 
 ```html
-<img
-  src="image-map.png"
-  alt=""
-  usemap="#example-map-1" />
+<img src="image-map.png" alt="" usemap="#example-map-1" />
 ```
 
 ### Step 2: Activate your hotspots
@@ -72,20 +72,18 @@ You will need a special {{htmlattrxref("usemap","img")}} attribute. Come up with
 In this step, put all your code inside a {{htmlelement('map')}} element. `<map>` only needs one attribute, the same map {{htmlattrxref("name","map")}} as you used in your `usemap` attribute above:
 
 ```html
-<map name="example-map-1">
-
-</map>
+<map name="example-map-1"> </map>
 ```
 
 Inside the `<map>` element, we need {{htmlelement('area')}} elements. An `<area>` element corresponds to a single hotspot. To keep keyboard navigation intuitive, make sure the source order of `<area>` elements corresponds to the visual order of hotspots.
 
-`<area>` elements are empty elements, but do require four attributes:
+`<area>` elements are {{glossary("void element", "void elements")}}, but do require four attributes:
 
 - {{htmlattrxref('shape','area')}}
 
   {{htmlattrxref('coords','area')}}
 
-  - : `shape` takes one of four values: `circle`, `rect`, `poly`, and `default`. (A `default` `<area>` occupies the entire image, minus any other hotspots you've defined.) The shape you choose determines the coordinate information you'll need to provide in `coords`.
+  - : `shape` takes one of four values: `circle`, `rect`, `poly`, and `default`. (An `<area>` whose `shape` is `default` occupies the entire image, minus any other hotspots you've defined.) The shape you choose determines the coordinate information you'll need to provide in `coords`.
 
     - For a circle, provide the center's x and y coordinates, followed by the length of the radius.
     - For a rectangle, provide the x/y coordinates of the upper-left and bottom-right corners.
@@ -105,12 +103,17 @@ Inside the `<map>` element, we need {{htmlelement('area')}} elements. An `<area>
 
 ```html
 <map name="example-map-1">
-  <area shape="circle" coords="200,250,25"
-    href="page-2.html" alt="circle example" />
+  <area
+    shape="circle"
+    coords="200,250,25"
+    href="page-2.html"
+    alt="circle example" />
 
-  <area shape="rect" coords="10, 5, 20, 15"
-    href="page-3.html" alt="rectangle example" />
-
+  <area
+    shape="rect"
+    coords="10, 5, 20, 15"
+    href="page-3.html"
+    alt="rectangle example" />
 </map>
 ```
 

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Range.collapsed
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Range.collapsed`** read-only property returns a

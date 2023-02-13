@@ -1,6 +1,7 @@
 ---
 title: Intl.Locale.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
+page-type: javascript-instance-method
 tags:
   - Internationalization
   - Intl
@@ -11,11 +12,10 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.toString
 ---
+
 {{JSRef}}
 
-The
-**`Intl.Locale.prototype.toString()`** returns the
-Locale's full [locale identifier string](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier).
+The **`Intl.Locale.prototype.toString()`** method returns the Locale's full [locale identifier string](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier).
 
 {{EmbedInteractiveExample("pages/js/intl-locale-prototype-tostring.html")}}
 
@@ -23,7 +23,7 @@ Locale's full [locale identifier string](https://www.unicode.org/reports/tr35/#U
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 
@@ -48,7 +48,10 @@ JSON, or any other context where an exact string representation is useful.
 ### Using toString
 
 ```js
-let myLocale = new Intl.Locale("fr-Latn-FR", {hourCycle: "h24", calendar: "gregory"});
+const myLocale = new Intl.Locale("fr-Latn-FR", {
+  hourCycle: "h24",
+  calendar: "gregory",
+});
 console.log(myLocale.baseName); // Prints "fr-Latn-FR"
 console.log(myLocale.toString()); // Prints "fr-Latn-FR-u-ca-gregory-hc-h24"
 ```
@@ -64,4 +67,4 @@ console.log(myLocale.toString()); // Prints "fr-Latn-FR-u-ca-gregory-hc-h24"
 ## See also
 
 - {{jsxref("Intl.Locale")}}
-- {{jsxref("Intl/Locale/baseName", "Intl.Locale.baseName")}}
+- {{jsxref("Intl/Locale/baseName", "baseName")}}

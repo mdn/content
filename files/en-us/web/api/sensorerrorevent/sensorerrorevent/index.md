@@ -14,6 +14,7 @@ tags:
   - Sensors
 browser-compat: api.SensorErrorEvent.SensorErrorEvent
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`SensorErrorEvent`** constructor
@@ -22,14 +23,14 @@ errors thrown by any of the interfaces based on {{domxref('Sensor')}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new SensorErrorEvent(type, options)
 ```
 
 ### Parameters
 
 - `type`
-  - :A string with the name of the event.
+  - : A string with the name of the event.
     It is case-sensitive and browsers always set it to `error`.
 - `options`
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:

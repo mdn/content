@@ -17,7 +17,8 @@ tags:
   - end()
 browser-compat: api.XRSession.end
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`end()`** method shuts down the
 {{domxref("XRSession")}} on which it's called, returning a promise which resolves once
@@ -25,7 +26,7 @@ the session has fully shut down.
 
 ## Syntax
 
-```js
+```js-nolint
 end()
 ```
 

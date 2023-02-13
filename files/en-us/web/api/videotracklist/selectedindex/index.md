@@ -14,6 +14,7 @@ tags:
   - track
 browser-compat: api.VideoTrackList.selectedIndex
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("VideoTrackList")}}**

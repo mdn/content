@@ -10,6 +10,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.privacy
 ---
+
 {{AddonSidebar}}
 
 Access and modify various privacy-related browser settings.
@@ -33,7 +34,8 @@ To use the privacy API, you must have the "privacy" [API permission](/en-US/docs
 
 > **Note:** This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/privacy/) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -60,4 +62,4 @@ To use the privacy API, you must have the "privacy" [API permission](/en-US/docs
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

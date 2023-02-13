@@ -1,6 +1,7 @@
 ---
 title: flex-basis
 slug: Web/CSS/flex-basis
+page-type: css-property
 tags:
   - CSS
   - CSS Flexible Boxes
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.flex-basis
 ---
+
 {{CSSRef}}
 
 The **`flex-basis`** [CSS](/en-US/docs/Web/CSS) property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with {{Cssxref("box-sizing")}}.
@@ -55,7 +57,15 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 ### Values
 
 - `<'width'>`
-  - : An absolute {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}} of the parent flex container's main size property, or the keyword `auto`. Negative values are invalid. Defaults to `auto`.
+
+  - : Any of the following units:
+    - {{cssxref("&lt;length&gt;")}} sets an absolute value
+    - {{cssxref("&lt;percentage&gt;")}} sets a percentage of the width or height of a containing block's content area
+    - `auto` uses the value of the [width](https://drafts.csswg.org/css2/#the-width-property) in horizontal writing mode, and the value of the [height](https://drafts.csswg.org/css2/#the-height-property) in vertical writing mode; when the corresponding value is also `auto`, the `content` value is used instead
+    - `max-content` sets the intrinsic preferred width
+    - `min-content` sets the intrinsic minimum width
+    - `fit-content` sets the maximum possible size of a containing block's content area, bounded by the `min-content` and `max-content` values, and calculated based on the content of the current element
+
 - `content`
 
   - : Indicates automatic sizing, based on the flex item's content.
@@ -107,17 +117,17 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 }
 
 .flex {
-  background: #6AB6D8;
+  background: #6ab6d8;
   padding: 10px;
   margin-bottom: 50px;
-  border: 3px solid #2E86BB;
+  border: 3px solid #2e86bb;
   color: white;
   font-size: 14px;
   text-align: center;
   position: relative;
 }
 
-.flex:after {
+.flex::after {
   position: absolute;
   z-index: 1;
   left: 0;
@@ -132,40 +142,40 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
   flex-basis: auto;
 }
 
-.flex1:after {
-  content: 'auto';
+.flex1::after {
+  content: "auto";
 }
 
 .flex2 {
   flex-basis: max-content;
 }
 
-.flex2:after {
-  content: 'max-content';
+.flex2::after {
+  content: "max-content";
 }
 
 .flex3 {
   flex-basis: min-content;
 }
 
-.flex3:after {
-  content: 'min-content';
+.flex3::after {
+  content: "min-content";
 }
 
 .flex4 {
   flex-basis: fit-content;
 }
 
-.flex4:after {
-  content: 'fit-content';
+.flex4::after {
+  content: "fit-content";
 }
 
 .flex5 {
-   flex-basis: content;
+  flex-basis: content;
 }
 
-.flex5:after {
-  content: 'content';
+.flex5::after {
+  content: "content";
 }
 ```
 

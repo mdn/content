@@ -10,6 +10,7 @@ tags:
   - Deprecated
 browser-compat: api.NodeIterator.detach
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 The **`NodeIterator.detach()`** method is a no-op, kept for
@@ -22,7 +23,7 @@ iterates, releasing any resources used by the set and setting the iterator's sta
 
 ## Syntax
 
-```js
+```js-nolint
 detach()
 ```
 

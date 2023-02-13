@@ -12,6 +12,7 @@ tags:
   - tag
 browser-compat: api.Notification.tag
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`tag`** read-only property of the

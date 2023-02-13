@@ -7,6 +7,7 @@ tags:
   - IndexedDB
   - terminology
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 This article describes the key characteristics of IndexedDB, and introduces some essential terminology relevant to understanding the IndexedDB API.
@@ -91,7 +92,7 @@ As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to i
 
 An index is a specialized object store for looking up records in another object store, called the _referenced object store_. The index is a persistent key-value storage where the value part of its records is the key part of a record in the referenced object store. The records in an index are automatically populated whenever records in the referenced object store are inserted, updated, or deleted. Each record in an index can point to only one record in its referenced object store, but several indexes can reference the same object store. When the object store changes, all indexes that refer to the object store are automatically updated.
 
-Alternatively, you can also look up records in an object store using the [key](#key)_._
+Alternatively, you can also look up records in an object store using the [key](#key).
 
 To learn more on using indexes, see [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#using_an_index). For the reference documentation on index, see [IDBKeyRange](/en-US/docs/Web/API/IDBKeyRange).
 
@@ -182,4 +183,4 @@ With an understanding of IndexedDB's key characteristics and core terminology un
 - [Indexed Database API Specification](https://www.w3.org/TR/IndexedDB/)
 - [IndexedDB API Reference](/en-US/docs/Web/API/IndexedDB_API)
 - [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- [IndexedDB — The Store in Your Browser](https://docs.microsoft.com/en-us/previous-versions/msdn10/gg679063(v=msdn.10))
+- [IndexedDB — The Store in Your Browser](<https://docs.microsoft.com/previous-versions/msdn10/gg679063(v=msdn.10)>)

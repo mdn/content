@@ -12,6 +12,7 @@ tags:
   - shadow DOM
 browser-compat: api.HTMLSlotElement.assign
 ---
+
 {{APIRef("Shadow DOM API")}}
 
 The **`assign()`** method of the
@@ -21,7 +22,7 @@ Please note that you cannot mix declarative and imperative slot assignment. Ther
 
 ## Syntax
 
-```js
+```js-nolint
 assign(node1)
 assign(node1, node2)
 assign(node1, node2, /* … ,*/ nodeN)

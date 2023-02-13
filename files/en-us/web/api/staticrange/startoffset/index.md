@@ -14,6 +14,7 @@ tags:
   - startContainer
 browser-compat: api.StaticRange.startOffset
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`startOffset`**

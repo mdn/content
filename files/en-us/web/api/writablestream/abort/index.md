@@ -11,13 +11,14 @@ tags:
   - abort
 browser-compat: api.WritableStream.abort
 ---
+
 {{APIRef("Streams")}}
 
 The **`abort()`** method of the {{domxref("WritableStream")}} interface aborts the stream, signaling that the producer can no longer successfully write to the stream and it is to be immediately moved to an error state, with any queued writes discarded.
 
 ## Syntax
 
-```js
+```js-nolint
 abort(reason)
 ```
 

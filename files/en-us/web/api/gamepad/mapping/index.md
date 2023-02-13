@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Gamepad.mapping
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`Gamepad.mapping`** property of the

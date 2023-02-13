@@ -1,6 +1,7 @@
 ---
 title: <font-face-uri>
 slug: Web/SVG/Element/font-face-uri
+page-type: svg-element
 tags:
   - Deprecated
   - Element
@@ -10,6 +11,7 @@ tags:
   - SVG Font
 browser-compat: svg.elements.font-face-uri
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`<font-face-uri>`** [SVG](/en-US/docs/Web/SVG) element points to a remote definition of the current font.

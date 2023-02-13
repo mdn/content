@@ -1,6 +1,7 @@
 ---
 title: '<center>: The Centered Text element'
 slug: Web/HTML/Element/center
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -14,7 +15,7 @@ tags:
 browser-compat: html.elements.center
 ---
 
-{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 The **`<center>`** [HTML](/en-US/docs/Web/HTML) element is a [block-level element](/en-US/docs/Web/HTML/Block-level_elements) that displays its block-level or inline contents centered horizontally within its containing element. The container is usually, but isn't required to be, {{HTMLElement("body")}}.
 
@@ -27,27 +28,35 @@ This element implements the {{domxref("HTMLElement")}} interface.
 ## Example 1
 
 ```html
-<center>This text will be centered.
-<p>So will this paragraph.</p></center>
+<center>
+  This text will be centered.
+  <p>So will this paragraph.</p>
+</center>
 ```
 
 ## Example 2 (CSS alternative)
 
 ```html
-<div style="text-align:center">This text will be centered.
-<p>So will this paragraph.</p></div>
+<div style="text-align:center">
+  This text will be centered.
+  <p>So will this paragraph.</p>
+</div>
 ```
 
 ## Example 3 (CSS alternative)
 
 ```html
-<p style="text-align:center">This line will be centered.<br>
-And so will this line.</p>
+<p style="text-align:center">
+  This line will be centered.<br />
+  And so will this line.
+</p>
 ```
 
 ## Note
 
 Applying {{Cssxref("text-align")}}`:center` to a {{HTMLElement("div")}} or {{HTMLElement("p")}} element centers the _contents_ of those elements while leaving their overall dimensions unchanged.
+
+<!-- ## Technical summary -->
 
 ## Specifications
 
@@ -61,5 +70,3 @@ Applying {{Cssxref("text-align")}}`:center` to a {{HTMLElement("div")}} or {{HTM
 
 - {{Cssxref("text-align")}}
 - {{Cssxref("display")}}
-
-{{HTMLRef}}

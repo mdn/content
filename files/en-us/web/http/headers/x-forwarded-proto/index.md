@@ -9,6 +9,7 @@ tags:
   - Request header
   - header
 ---
+
 {{HTTPSidebar}}
 
 The **`X-Forwarded-Proto`** (XFP) header is a de-facto standard
@@ -35,7 +36,7 @@ A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} he
 
 ## Syntax
 
-```
+```http
 X-Forwarded-Proto: <protocol>
 ```
 
@@ -46,13 +47,13 @@ X-Forwarded-Proto: <protocol>
 
 ## Examples
 
-```
+```http
 X-Forwarded-Proto: https
 ```
 
 Other non-standard forms:
 
-```
+```http
 # Microsoft
 Front-End-Https: on
 

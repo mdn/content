@@ -1,6 +1,7 @@
 ---
 title: path()
 slug: Web/CSS/path
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: css.types.basic-shape.path
 ---
+
 {{CSSRef}}
 
 The **`path()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) accepts an SVG path string, and is used in [CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes) and CSS Motion Path to enable a shape to be drawn.
@@ -32,9 +34,9 @@ path([<'fill-rule'>,]?<string>)
 
 - `<'fill-rule'>`
   - : The filling rule for the interior of the path.
-      Possible values are `nonzero` or `evenodd`.
-      The default value is `nonzero`.
-      See [fill-rule](/en-US/docs/Web/SVG/Attribute/fill-rule) for more details.
+    Possible values are `nonzero` or `evenodd`.
+    The default value is `nonzero`.
+    See [fill-rule](/en-US/docs/Web/SVG/Attribute/fill-rule) for more details.
 - `<string>`
   - : The string is a [data string](/en-US/docs/Web/SVG/Attribute/d) for defining an [SVG path](/en-US/docs/Web/SVG/Element/path).
 
@@ -62,11 +64,15 @@ The "V" symbol will flip vertically when you hover over it, if `d` is supported 
 #### CSS
 
 ```css
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 
 /* This path is displayed on hover*/
 #svg_css_ex1:hover path {
-  d: path("M20,80 L50,20 L80,80")
+  d: path("M20,80 L50,20 L80,80");
 }
 ```
 
@@ -74,7 +80,7 @@ html,body,svg { height:100% }
 
 ```html
 <svg id="svg_css_ex1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
- <path fill="none" stroke="red" d="M20,20 L50,80 L80,20" />
+  <path fill="none" stroke="red" d="M20,20 L50,80 L80,20" />
 </svg>
 ```
 

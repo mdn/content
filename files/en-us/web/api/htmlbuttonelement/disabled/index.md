@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLButtonElement.disabled
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLButtonElement.disabled`** property indicates whether the control is disabled, meaning that it does not accept any clicks.

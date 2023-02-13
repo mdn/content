@@ -1,13 +1,16 @@
 ---
 title: filterRes
 slug: Web/SVG/Attribute/filterRes
+page-type: svg-attribute
 tags:
   - NeedsExample
   - SVG
   - SVG Attribute
   - SVG Filter
+  - Deprecated
 browser-compat: svg.elements.filter.filterRes
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`filterRes`** attribute indicates the width and height of the intermediate images in pixels of a filter primitive.

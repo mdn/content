@@ -1,6 +1,7 @@
 ---
 title: overflow-inline
 slug: Web/CSS/overflow-inline
+page-type: css-property
 tags:
   - CSS
   - CSS Box Model
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.overflow-inline
 ---
+
 {{CSSRef}}
 
 The **`overflow-inline`** [CSS](/en-US/docs/Web/CSS) property sets what shows when content overflows the inline start and end edges of a box. This may be nothing, a scroll bar, or the overflow content.
@@ -61,28 +63,26 @@ The `overflow-inline` property is specified as a single keyword chosen from the 
 
 ```html
 <ul>
-  <li><code>overflow-inline:hidden</code> — hides the text outside the box
-    <div id="div1">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-inline:hidden</code> — hides the text outside the box
+    <div id="div1">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
-  <li><code>overflow-inline:scroll</code> — always adds a scrollbar
-    <div id="div2">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-inline:scroll</code> — always adds a scrollbar
+    <div id="div2">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
-  <li><code>overflow-inline:visible</code> — displays the text outside the box if needed
-    <div id="div3">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-inline:visible</code> — displays the text outside the box if
+    needed
+    <div id="div3">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
-  <li><code>overflow-inline:auto</code> — on most browsers, equivalent to <code>scroll</code>
-    <div id="div4">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-inline:auto</code> — on most browsers, equivalent to
+    <code>scroll</code>
+    <div id="div4">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 </ul>
 ```
@@ -90,16 +90,27 @@ The `overflow-inline` property is specified as a single keyword chosen from the 
 #### CSS
 
 ```css
-#div1, #div2, #div3, #div4 {
+#div1,
+#div2,
+#div3,
+#div4 {
   border: 1px solid black;
-  width:  250px;
+  width: 250px;
   margin-bottom: 12px;
 }
 
-#div1 { overflow-inline: hidden;}
-#div2 { overflow-inline: scroll;}
-#div3 { overflow-inline: visible;}
-#div4 { overflow-inline: auto;}
+#div1 {
+  overflow-inline: hidden;
+}
+#div2 {
+  overflow-inline: scroll;
+}
+#div3 {
+  overflow-inline: visible;
+}
+#div4 {
+  overflow-inline: auto;
+}
 ```
 
 #### Result

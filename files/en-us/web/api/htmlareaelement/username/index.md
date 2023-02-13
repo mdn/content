@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.username
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.username`** property is a

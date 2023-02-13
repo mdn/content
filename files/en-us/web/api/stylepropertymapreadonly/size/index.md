@@ -13,6 +13,7 @@ tags:
   - size
 browser-compat: api.StylePropertyMapReadOnly.size
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`size`** read-only property of the

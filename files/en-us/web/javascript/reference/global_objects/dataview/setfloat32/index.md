@@ -1,6 +1,7 @@
 ---
 title: DataView.prototype.setFloat32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat32
+page-type: javascript-instance-method
 tags:
   - DataView
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.setFloat32
 ---
+
 {{JSRef}}
 
 The **`setFloat32()`** method stores a signed 32-bit float
@@ -18,7 +20,7 @@ The **`setFloat32()`** method stores a signed 32-bit float
 
 ## Syntax
 
-```js
+```js-nolint
 setFloat32(byteOffset, value)
 setFloat32(byteOffset, value, littleEndian)
 ```

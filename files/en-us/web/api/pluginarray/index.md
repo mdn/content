@@ -6,29 +6,30 @@ tags:
   - API
   - Add-ons
   - DOM
-  - Experimental
   - NeedsContent
   - Plugins
+  - Deprecated
 browser-compat: api.PluginArray
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The `PluginArray` interface is used to store a list of {{DOMxRef("Plugin")}} objects describing the available [plugins](/en-US/docs/Mozilla/Add-ons/Plugins); it's returned by the {{DOMxRef("Navigator.plugins", "navigator.plugins")}} property. The `PluginArray` is not a JavaScript array, but has the `length` property and supports accessing individual items using bracket notation (`plugins[2]`), as well as via `item(index)` and `namedItem("name")` methods.
 
 > **Note:** Own properties of `PluginArray` objects are no longer enumerable in the latest browser versions.
 
-## Properties
+## Instance properties
 
-- {{DOMxRef("PluginArray.length")}} {{ReadOnlyInline}}
+- {{DOMxRef("PluginArray.length")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : The number of plugins in the array.
 
-## Methods
+## Instance methods
 
-- {{DOMxRef("PluginArray.item")}}
+- {{DOMxRef("PluginArray.item")}} {{Deprecated_Inline}}
   - : Returns the {{DOMxRef("Plugin")}} at the specified index into the array.
-- {{DOMxRef("PluginArray.namedItem")}}
+- {{DOMxRef("PluginArray.namedItem")}} {{Deprecated_Inline}}
   - : Returns the {{DOMxRef("Plugin")}} with the specified name.
-- {{DOMxRef("PluginArray.refresh")}}
+- {{DOMxRef("PluginArray.refresh")}} {{Deprecated_Inline}}
   - : Refreshes all plugins on the current page, optionally reloading documents.
 
 ## Examples
@@ -50,7 +51,7 @@ for (let i = 0; i < pluginsLength; i++) {
   newRow.insertCell().textContent = navigator.plugins[i].name;
   newRow.insertCell().textContent = navigator.plugins[i].filename;
   newRow.insertCell().textContent = navigator.plugins[i].description;
-  newRow.insertCell().textContent = navigator.plugins[i].version?navigator.plugins[i].version:"";
+  newRow.insertCell().textContent = navigator.plugins[i].version ?? "";
 }
 ```
 

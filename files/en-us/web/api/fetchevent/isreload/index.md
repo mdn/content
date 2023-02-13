@@ -4,7 +4,6 @@ slug: Web/API/FetchEvent/isReload
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - FetchEvent
   - Property
   - Reference
@@ -13,9 +12,11 @@ tags:
   - Workers
   - isReload
   - Deprecated
+  - Non-standard
 browser-compat: api.FetchEvent.isReload
 ---
-{{APIRef("Service Workers API")}}{{deprecated_header}}
+
+{{APIRef("Service Workers API")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`isReload`** read-only property of the
 {{domxref("FetchEvent")}} interface returns `true` if the event was
@@ -30,8 +31,8 @@ A boolean value.
 ## Examples
 
 ```js
-self.addEventListener('fetch', function (event) {
-  event.respondWith(async function () {
+self.addEventListener('fetch', (event) => {
+  event.respondWith(async () => {
     if (event.isReload) {
       //Return something
     } else {
@@ -48,7 +49,7 @@ self.addEventListener('fetch', function (event) {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

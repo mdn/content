@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.CustomEvent.initCustomEvent
 ---
+
 {{APIRef("DOM")}}{{Deprecated_header}}
 
 The **`CustomEvent.initCustomEvent()`** method initializes a {{domxref("CustomEvent")}} object.
@@ -24,8 +25,8 @@ Once dispatched, it doesn't do anything anymore.
 
 ## Syntax
 
-```js
-event.initCustomEvent(type, canBubble, cancelable, detail);
+```js-nolint
+event.initCustomEvent(type, canBubble, cancelable, detail)
 ```
 
 ### Parameters

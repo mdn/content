@@ -2,11 +2,12 @@
 title: Firefox 71 for Developers
 slug: Mozilla/Firefox/Releases/71
 tags:
-  - '71'
+  - "71"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 71 that will affect developers. Firefox 71 was released on December 3, 2019.
@@ -46,7 +47,7 @@ This article provides information about the changes in Firefox 71 that will affe
 - Added the [subgrid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid) value from CSS Grid Level 2 to {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} ({{bug(1580894)}})
 - Added support for the {{cssxref("column-span")}} property to [Multiple-column Layout](/en-US/docs/Web/CSS/CSS_Columns) ({{bug(1426010)}})
 - Added support for the `path()` value of {{cssxref("clip-path")}} ({{bug(1488530)}})
-- Mapped the `height` and `width` HTML attributes on the {{htmlelement("img")}} element to an internal {{cssxref("aspect-ratio")}} property ({{bug(1585637)}}). [See the guide to this feature on MDN](/en-US/docs/Web/Media/images/aspect_ratio_mapping).
+- Mapped the `height` and `width` HTML attributes on the {{htmlelement("img")}} element to an internal {{cssxref("aspect-ratio")}} property ({{bug(1585637)}}). [See the guide to this feature on MDN](/en-US/docs/Learn/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images).
 
 #### Removals
 
@@ -70,7 +71,7 @@ This article provides information about the changes in Firefox 71 that will affe
 
 The [Media Session API](/en-US/docs/Web/API/Media_Session_API) is now partially implemented. This API provides a standard mechanism for your content to share with the underlying operating system information about the state of media it's playing. This includes metadata such as artist, album, and track name, as well as potentially album artwork ({{bug(1580602)}}).
 
-The API also provides a way to receive notifications when the device's media controls (such as play, pause, and seek buttons) are activated by the user. To that end, the {{domxref("MediaSession")}} interface is now partially implemented, with support for setting and fetching the currently-playing media's metadata. and for the {{domxref("MediaSession.setActionHandler", "setActionHandler()")}} method. To access the `MediaSession` API, use the {{domxref("navigator.mediaSession")}} property.
+The API also provides a way to receive notifications when the device's media controls (such as play, pause, and seek buttons) are activated by the user. To that end, the {{domxref("MediaSession")}} interface is now partially implemented, with support for setting and fetching the currently-playing media's metadata and for the {{domxref("MediaSession.setActionHandler", "setActionHandler()")}} method. To access the `MediaSession` API, use the {{domxref("navigator.mediaSession")}} property.
 
 #### DOM
 
@@ -110,7 +111,7 @@ The following non-standard {{domxref("DataTransfer")}} members have been removed
   - 404 returning `SERVER_BAD_CONTENT`
   - 403 returning `SERVER_FORBIDDEN`
   - 402 and Proxy 407 returning `SERVER_UNAUTHORIZED`
-  - Anything else above 400 returning `SERVER_FAILED`  ({{bug(1576333)}})
+  - Anything else above 400 returning `SERVER_FAILED` ({{bug(1576333)}})
 
 - {{WebExtAPIRef("downloads.download")}} now includes the optional `options` parameter property `allowHttpErrors`. When set to `true`, this `boolean` flag enables a download to continue after encountering an HTTP error. When set to `false`, a download is canceled when an HTTP error is encountered. Default value: `false`. ({{bug(1578955)}})
 

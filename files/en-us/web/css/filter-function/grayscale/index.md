@@ -1,6 +1,7 @@
 ---
 title: grayscale()
 slug: Web/CSS/filter-function/grayscale
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: css.types.filter-function.grayscale
 ---
+
 {{CSSRef}}
 
 The **`grayscale()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) converts the input image to grayscale. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
@@ -46,7 +48,8 @@ grayscale(100%)  /* Completely grayscale */
 
 ## See also
 
-- {{cssxref("&lt;filter-function&gt;")}}
+The other {{cssxref("&lt;filter-function&gt;")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
+
 - {{cssxref("filter-function/blur", "blur()")}}
 - {{cssxref("filter-function/brightness", "brightness()")}}
 - {{cssxref("filter-function/contrast", "contrast()")}}

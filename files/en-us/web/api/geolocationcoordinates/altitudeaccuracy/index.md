@@ -11,6 +11,7 @@ tags:
   - altitudeAccuracy
 browser-compat: api.GeolocationCoordinates.altitudeAccuracy
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationCoordinates.altitudeAccuracy`** read-only

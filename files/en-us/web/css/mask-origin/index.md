@@ -1,6 +1,7 @@
 ---
 title: mask-origin
 slug: Web/CSS/mask-origin
+page-type: css-property
 tags:
   - CSS
   - CSS Masking
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.mask-origin
 ---
+
 {{CSSRef}}
 
 The **`mask-origin`** [CSS](/en-US/docs/Web/CSS) property sets the origin of a mask.
@@ -56,11 +58,11 @@ One or more of the keyword values listed below, separated by commas.
   - : The position is relative to the border box.
 - `margin-box`
   - : The position is relative to the margin box.
-- `fill-box`
+- `fill-box` {{Experimental_Inline}}
   - : The position is relative to the object bounding box.
-- `stroke-box`
+- `stroke-box` {{Experimental_Inline}}
   - : The position is relative to the stroke bounding box.
-- `view-box`
+- `view-box` {{Experimental_Inline}}
   - : Uses the nearest SVG viewport as reference box. If a {{svgattr("viewBox")}} attribute is specified for the element creating the SVG viewport, the reference box is positioned at the origin of the coordinate system established by the `viewBox` attribute and the dimension of the reference box is set to the width and height values of the `viewBox` attribute.
 - `content` {{non-standard_inline}}
   - : Same as `content-box`.

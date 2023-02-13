@@ -8,6 +8,9 @@ tags:
   - nginx
   - server-side
 ---
+
+{{LearnSidebar}}
+
 MIME types describe the media type of content, either in email, or served by web servers or web applications. They are intended to help provide a hint as to how the content should be processed and displayed.
 
 Examples of MIME types:
@@ -37,7 +40,7 @@ Some web browsers, such as Internet Explorer, try to _guess_ the correct MIME ty
 
   - : If the browser ignores the reported MIME type, web administrators and authors no longer have control over how their content is to be processed.
 
-    For example, a web site oriented for web developers might wish to send certain example HTML documents as either `text/html` or `text/plain` in order to have the documents either processed and displayed as HTML or as source code. If the browser guesses the MIME type, this option is no longer available to the author.
+    For example, a website oriented for web developers might wish to send certain example HTML documents as either `text/html` or `text/plain` in order to have the documents either processed and displayed as HTML or as source code. If the browser guesses the MIME type, this option is no longer available to the author.
 
 - Security
 
@@ -116,5 +119,3 @@ Trying to instead set it with just `header('application/pdf')` won't work.
 - [Apache vs Nginx: Practical Considerations](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations)
 - [Migrate Apache .htaccess to Nginx server block](https://barryvanveen.nl/articles/56-migrate-apache-htaccess-to-nginx-server-block)
 - [Microsoft - 293336 - INFO: WebCast: MIME Type Handling in Microsoft Internet Explorer](https://mskb.pkisolutions.com/kb/293336)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

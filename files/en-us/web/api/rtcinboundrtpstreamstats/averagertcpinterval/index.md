@@ -18,6 +18,7 @@ tags:
   - rate
 browser-compat: api.RTCInboundRtpStreamStats.averageRtcpInterval
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`averageRtcpInterval`** property

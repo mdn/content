@@ -7,6 +7,7 @@ tags:
   - Gecko 12
   - Web Development
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Firefox 12 that affect developers. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.

@@ -12,11 +12,12 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.proxy.settings
 ---
+
 {{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to change the browser's proxy settings.
 
-> **Note:** The ability to change proxy settings requires private window access because proxy settings affect both private and non-private windows. Therefore, if an extension has not been granted private window permission, calls to `proxy.settings.set()` will throw an exception.
+> **Note:** Changing proxy settings requires private browsing window access because proxy settings affect private and non-private windows. Whether an extension can access private browsing windows is under user control. For details, see [Extensions in Private Browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing). Your extension can check whether it can access private browsing windows using {{WebExtAPIRef("extension.isAllowedIncognitoAccess")}}. If your extension does not have private window permission, calls to `proxy.settings.set()` throw an exception.
 
 The underlying value is an object with the properties listed below.
 

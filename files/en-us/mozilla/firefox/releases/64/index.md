@@ -2,11 +2,12 @@
 title: Firefox 64 for developers
 slug: Mozilla/Firefox/Releases/64
 tags:
-  - '64'
+  - "64"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 64 that will affect developers. Firefox 64 was released on December 11, 2018.
@@ -64,7 +65,7 @@ _No changes._
 
 - The TC39 [Well-formed JSON.stringify](https://github.com/tc39/proposal-well-formed-stringify) proposal has been implemented, to prevent {{jsxref("JSON.stringify")}} from returning ill-formed Unicode strings ({{bug(1469021)}}).
 - Proxied functions can now be passed to {{jsxref("Function.prototype.toString")}}`.call()` ({{bug(1440468)}}).
-- In the {{jsxref("WebAssembly.Global")}} constructor, if no value is specified a typed 0 value is used. This is specified by the [`DefaultValue` algorithm](https://webassembly.github.io/spec/js-api/#defaultvalue) ({{bug(1490286)}}).
+- In the [`WebAssembly.Global()`](/en-US/docs/WebAssembly/JavaScript_interface/Global) constructor, if no value is specified a typed 0 value is used. This is specified by the [`DefaultValue` algorithm](https://webassembly.github.io/spec/js-api/#defaultvalue) ({{bug(1490286)}}).
 
 ### APIs
 
@@ -101,13 +102,13 @@ _No changes._
 #### Removals
 
 - The {{domxref("Window.event")}} property, added in Firefox 63 to aid with web compat issues, has been put behind a pref (`dom.window.event.enabled`) and disabled by default in release versions for now due to other issues that have been uncovered ({{bug(1493869)}}). Note that this was actually done late in the Firefox 63 release cycle, but we are mentioning it here just in case.
-- The `LocalMediaStream` interface and its `stop()` method have been removed ({{bug(1258143)}}). This method is no longer available with the deprecation of `LocalMediaStream`. See {{SectionOnPage("/en-US/docs/Web/API/MediaStreamTrack/stop", "Stopping a video stream")}} to learn how to stop an entire stream.
+- The `LocalMediaStream` interface and its `stop()` method have been removed ({{bug(1258143)}}). This method is no longer available with the deprecation of `LocalMediaStream`. See the [Stopping a video stream](/en-US/docs/Web/API/MediaStreamTrack/stop#stopping_a_video_stream) section to learn how to stop an entire stream.
 - The `AudioStreamTrack` and `VideoStreamTrack` interfaces have been removed, as both have been deprecated for some time ({{bug(1377146)}}). Their functionality has been merged into {{domxref("MediaStreamTrack")}}; tracks are now identified by the value of their {{domxref("MediaStreamTrack.kind", "kind")}} property, such as `audio` or `video`.
 
 ### Security
 
 - The Symantec CA Distrust plan has been implemented (see {{bug(1409257)}}; see also the [Mozilla's Plan for Symantec Roots](https://groups.google.com/forum/#!topic/mozilla.dev.security.policy/FLHRT79e3XE/discussion) discussion for more details).
-- {{httpheader("Referrer-Policy")}} can now be used to govern resources fetched via stylesheets ({{bug(1330487)}}) — see {{SectionOnPage("/en-US/docs/Web/HTTP/Headers/Referrer-Policy", "Integration with CSS")}} for more information.
+- {{httpheader("Referrer-Policy")}} can now be used to govern resources fetched via stylesheets ({{bug(1330487)}}) — see [Integration with CSS](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#integration_with_css) for more information.
 
 ### Plugins
 

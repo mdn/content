@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.getUniformBlockIndex
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.getUniformBlockIndex()`** method
@@ -18,7 +19,7 @@ a uniform block within a {{domxref("WebGLProgram")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getUniformBlockIndex(program, uniformBlockName)
 ```
 

@@ -17,6 +17,7 @@ tags:
   - serializeToString
 browser-compat: api.XMLSerializer.serializeToString
 ---
+
 {{APIRef("DOM Parsing")}}
 
 The {{domxref("XMLSerializer")}} method
@@ -25,7 +26,7 @@ specified {{Glossary("DOM")}} tree in {{Glossary("XML")}} form.
 
 ## Syntax
 
-```js
+```js-nolint
 serializeToString(rootNode)
 ```
 

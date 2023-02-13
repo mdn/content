@@ -1,6 +1,7 @@
 ---
 title: Column layouts
 slug: Web/CSS/Layout_cookbook/Column_layouts
+page-type: guide
 tags:
   - CSS
   - Guide
@@ -17,6 +18,7 @@ browser-compat:
   - css.properties.flex-wrap
   - css.properties.grid-template-columns
 ---
+
 {{CSSRef}}
 
 You will often need to create a layout which has a number of columns, and CSS provides several ways to do this. Whether you use Grid, Flexbox or Multi-column layout will depend on what you are trying to achieve, and in this recipe we explore these options.

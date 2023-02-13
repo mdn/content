@@ -1,5 +1,5 @@
 ---
-title: 'aria-relevant'
+title: "aria-relevant"
 slug: Web/Accessibility/ARIA/Attributes/aria-relevant
 tags:
   - Accessibility

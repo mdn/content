@@ -1,11 +1,13 @@
 ---
 title: text-anchor
 slug: Web/SVG/Attribute/text-anchor
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute
 browser-compat: svg.attributes.presentation.text-anchor
 ---
+
 {{SVGRef}}
 
 The **`text-anchor`** attribute is used to align (start-, middle- or end-alignment) a string of pre-formatted text or auto-wrapped text where the wrapping area is determined from the {{cssxref("inline-size")}} property relative to a given point.
@@ -27,7 +29,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -35,7 +39,9 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
   <!-- Materialization of anchors -->
-  <path d="M60,15 L60,110 M30,40 L90,40 M30,75 L90,75 M30,110 L90,110" stroke="grey" />
+  <path
+    d="M60,15 L60,110 M30,40 L90,40 M30,75 L90,75 M30,110 L90,110"
+    stroke="grey" />
 
   <!-- Anchors in action -->
   <text text-anchor="start" x="60" y="40">A</text>
@@ -47,11 +53,13 @@ html, body, svg {
   <circle cx="60" cy="75" r="3" fill="red" />
   <circle cx="60" cy="110" r="3" fill="red" />
 
-  <style><![CDATA[
-  text {
-    font: bold 36px Verdana, Helvetica, Arial, sans-serif;
-  }
-  ]]></style>
+  <style>
+    <![CDATA[
+      text {
+        font: bold 36px Verdana, Helvetica, Arial, sans-serif;
+      }
+      ]]>
+  </style>
 </svg>
 ```
 

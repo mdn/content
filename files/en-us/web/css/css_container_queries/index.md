@@ -1,6 +1,7 @@
 ---
 title: CSS Container Queries
 slug: Web/CSS/CSS_Container_Queries
+page-type: guide
 tags:
   - CSS
   - CSS Containment
@@ -9,104 +10,95 @@ tags:
   - Paint
   - Responsive Design
 ---
+
 {{CSSRef}}
 
-> **Note:** This document is an explanation of an early stage specification that is attracting a lot of interest from web developers. The examples and syntax below should be seen as an explainer to an evolving specification, in order to encourage experimentation and feedback. Once the specification matures, this will be the location of the full MDN documentation for container queries. Last updated on 15 September 2021 to add details of the new properties `container-type`, `container-name`, and `container`.
+[CSS containment](/en-US/docs/Web/CSS/CSS_Containment) provides a way to isolate parts of a page and declare to the browser these parts are independent from the rest of the page in terms of styles and layout.
 
-## What problem do container queries solve?
+If you are creating [a responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design), you often use [media queries](/en-US/docs/Web/CSS/Media_Queries) to change the page layout based on the size of the {{Glossary("viewport")}}.
+It's common to group HTML elements into reusable components that have a specific layout depending on the available space in a page.
+The available space might not only depend on the size of the viewport, but also on the context where a component appears.
 
-When creating [a responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) you often use a media query to change the document layout based on the size of the viewport.
+![A media query based on the viewport's width, which is the full width of the browser, and a container query based on the width of a container context, which is the width of the container element.](container-query-diagram.png)
 
-However, many designs have common components that change layout depending on the available width of their container. This may not always relate to the size of the viewport, but instead relate to where in the layout the component is placed.
+Container queries allow us to look at a container size and apply styles to the contents based on the size of their container rather than the viewport or other device characteristics.
+If the container has less space in the surrounding context, you can hide certain elements or use smaller fonts, for example.
+The illustration below shows how the same card component can be displayed with multiple layouts using container queries:
 
-For example, the following component might be displayed in a narrow or wide column in the site layout. If there is space it displays as two columns, if not we want to display it stacked.
+![A webpage with three card components displayed in different layouts depending on their container's size.](container-query-examples.png)
 
-![Image of two card components one displayed in two columns, the other stacked](demo.jpg)
+## Using container queries
 
-It's the same component, doing the same job, however to achieve the different layouts we currently would need to identify the component in some way—perhaps by adding a class or targeting the element with a selector which looks at where it is in the document structure.
+To use container queries, you need to declare a **containment context** on an element so that the browser knows you might want to query the dimensions of this container later.
+To do this, use the {{Cssxref("container-type")}} property a value of `size`, `inline-size`, or `normal`.
+These values have the following effects:
 
-This doesn't quite achieve what media queries do for our entire layout however. Media queries give us the ability to size things based on ranges. When we add a class or target the element we decide that when the object is in the sidebar it _must_ use the stacked layout. In terms of available space however, it may well be that on large screens the object in the sidebar would have enough space to display in the side-by-side layout.
+- `size`: the query will be based on the [inline and block](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) dimensions of the container.
+  Applies layout, style, and size containment to the container.
+- `inline-size`: the query will be based on the [inline](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) dimensions of the container.
+  Applies layout, style, and inline-size containment to the element.
+- `normal`: The element is not a query container for any container size queries, but remains a query container for container style queries.
 
-It is this situation that container queries would solve. Instead of looking at the viewport size, we can look at the container size and make our layout adjustments according to the space in the container. And, it looks as if this most frequently requested of web features, is becoming a possibility.
+Take the following HTML as an example which is a card component with an image, a title, and some text:
 
-## The container queries proposal
+```html
+<div class="container">
+  <div class="card">
+    <img src="image.png" alt="Cat with two different color eyes" />
+    <h2>Card title</h2>
+    <p>Card content</p>
+  </div>
+</div>
+```
 
-The container queries specification is to become part of {{cssxref("CSS_Containment", "CSS Containment")}}. The initial CSS Containment draft defined the {{cssxref("contain")}} property to allow for performance optimizations. It provides a way for web developers to isolate parts of the DOM and declare to the browser these are independent from the rest of the document.
-
-The level 3 [draft specification](https://drafts.csswg.org/css-contain-3/) adds the `inline-size` and `block-size` keywords to `contain`.
-
-In addition the draft specification proposes some new properties:
-
-- `container-type`
-  - : Defines an element as a **query container**. Descendants can query aspects of its sizing, layout, style and state.
-- `container-name`
-  - : Specifies a list of **query container names** for `@container` rules to use to filter which query containers are targeted.
-- `container`:
-  - : A shorthand property to set both `container-type` and `container-name`.
-
-### `container-type`
-
-The `container-type` property can have the following values:
-
-- `size`
-  - : Establishes a query container for dimensional queries on the block and inline axis. Applies layout, style, and size containment to the element.
-- `inline-size`
-  - : Establishes a query container for dimensional queries on the inline axis of the container. Applies layout, style, and inline-size containment to the element.
-- `block-size`
-  - : Establishes a query container for dimensional queries on the block axis of the container. Applies layout, style, and block-size containment to the element.
-- `style`
-  - : Establishes a query container for style queries.
-- `state`
-  - : Establishes a query container for state queries.
-
-> **Note:** to understand what happens when you apply layout, style, and size containment to a box, see the documentation for {{cssxref("contain")}}.
-
-#### Single-axis containment
-
-Using `container-type: size` indicates to the browser that the size of this area is known in both dimensions.
-
-However, we don't often know how big things are in both dimensions. When we use media queries, most of the time we care about the available width (or inline size). We define columns as a percentage or fraction of the space in that dimension. Therefore, container queries can use the `container-type` property to allow size to be indicated in one dimension only. This is described as single-axis containment.
-
-The following CSS creates a container with containment on the inline axis only. The content can grow to as large as it needs to be on the block axis.
+You can create a containment context on the container `<div>` using the `container-type` property:
 
 ```css
-.sidebar {
+.container {
   container-type: inline-size;
 }
 ```
 
-### `container-type`
-
-Adding the `container-type` property with a size value creates a **containment context** on that element. This means that the browser knows we might want to query this container later. You can then write a query which looks to this containment context rather than the viewport size, in order to make layout decisions for a component.
-
-A container query is created using `@container`. This will query the nearest containment context. To cause the card to display as two columns only if the sidebar is wider than 700px, we use the following CSS:
+Once a containment context is created, you can use the {{cssxref("@container")}} at-rule to write a container query.
+The query in the following example will apply styles to elements based on the size of the nearest ancestor with a containment context.
+Specifically, this query will apply a larger font size for the card title if the container is wider than `700px`:
 
 ```css
-@container (min-width: 700px){
-  .card {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+/* Default heading styles for the card title */
+.card h2 {
+  font-size: 1em;
+}
+
+/* Container query applied if the container is larger than 700px */
+@container (min-width: 700px) {
+  .card h2 {
+    font-size: 2em;
   }
 }
 ```
 
-If other areas of the layout are also containment contexts then we can drop the component into those areas and it will respond to the relevant containment context. This makes the various components that we might create in our pattern library truly reusable, without us needing to know the context that they are in.
+If other areas of the page are also containment contexts, you can use the same component in those areas and it will respond to the relevant containment context.
+This makes reusable components a lot more flexible without needing to know specifically where they will be used each time.
 
-### `container-name`
+For more information on the syntax of container queries, see the {{cssxref("@container")}} page.
 
-The previous example allows a component to query the nearest containment context, which is likely the most common use case. Sometimes however, you might want to query another container. This is where the `container-name` property will be useful. When creating your query container with `container-type`, add the `container-name` property. This takes a {{cssxref("custom-ident")}}, in the same way that you might name a {{cssxref("grid-area")}}.
+### Naming containment contexts
+
+In the previous section, a container query applied styles based on the nearest ancestor with a containment context.
+It's possible to give a containment context a name using the {{Cssxref("container-name")}} property. Once named, the name can be used in a `@container` query so as to target a specific container.
+The following example creates a containment context with the name `sidebar`:
 
 ```css
-.sidebar {
+.container {
   container-type: inline-size;
   container-name: sidebar;
 }
 ```
 
-You can then target just that query container by adding the name to the container query:
+You can then target this containment context using the `@container` at-rule:
 
 ```css
-@container sidebar (min-width: 400px){
+@container sidebar (min-width: 700px) {
   .card {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -114,29 +106,77 @@ You can then target just that query container by adding the name to the containe
 }
 ```
 
-There are many things to be worked out, however this is the basic concept. The basic features as shown here can already be tested out in Chrome and Safari Technology Preview.
+More information on naming containment contexts is available on the {{cssxref("container-name")}} page.
 
-- Chrome: Go to `chrome://flags`, search for Container Queries and enable that flag.
-- Safari Technology Preview: Enabled by default.
+### Shorthand container syntax
 
-You can then take a look at [my demo](https://codepen.io/rachelandrew/pen/NWdaxde) showing a simple `inline-size` scenario, or [this growing collection of container queries demos](https://codepen.io/collection/XQrgJo).
+The shorthand way of declaring a containment context is to use the `container` property:
 
-## Share your feedback
+```css
+.container {
+  container: sidebar / inline-size;
+}
+```
 
-This early stage of development is the perfect time to share your feedback on the specification as it develops. Specification author Miriam Suzanne is keeping [a list of open questions](https://css.oddbird.net/rwd/query/explainer/). Issues raised against the feature can be found in [a project](https://github.com/w3c/csswg-drafts/projects/18) on the CSS Working Group GitHub. If you have thoughts on any of these questions, or want to raise something new, please do!
+For more information on this property, see the {{Cssxref("container")}} reference.
 
-It is always helpful to see use cases, particularly those that might not be solved by the current proposal. Any feedback will be very welcome and will help make the feature even better once in lands in release versions of browsers.
+### Container query length units
 
-## Alternatives to container queries
+When applying styles to a container using container queries, you can use container query length units.
+These units specify a length relative to the dimensions of a query container.
+Components that use units of length relative to their container are more flexible to use in different containers without having to recalculate concrete length values.
 
-Many container query cases can be solved, or at least partially solved, with existing technology. These solutions will remain important even as container queries make it into browsers, as fallbacks for those browsers that don't yet support the spec.
+The container query length units are:
 
-As already discussed, one solution for components that may occupy different locations, is to use a class or a selector that targets them based on document location.
+- `cqw`: 1% of a query container's width
+- `cqh`: 1% of a query container's height
+- `cqi`: 1% of a query container's inline size
+- `cqb`: 1% of a query container's block size
+- `cqmin`: The smaller value of either `cqi` or `cqb`
+- `cqmax`: The larger value of either `cqi` or `cqb`
 
-Another solution is to rely on grid or flex layout. The component used in my demo could be laid out using flexbox, which would give it some ability to display as one or two columns based on available width. You don't have the ability to make larger layout changes using this method, however in many cases you can achieve an acceptable result. As container queries become available you could maintain the grid or flex version as the fallback for non-supporting browsers.
+The following example uses the `cqi` unit to set the font size of a heading based on the inline size of the container:
+
+```css
+@container (min-width: 700px) {
+  .card h1 {
+    font-size: max(1.5em, 1.23em + 2cqi);
+  }
+}
+```
+
+For more information on these units, see the [Container query length units](/en-US/docs/Web/CSS/length#container_query_length_units) reference.
+
+## Fallbacks for container queries
+
+For browsers that don't yet support container queries, {{cssxref("grid")}} and {{cssxref("flex")}} can be used to create a similar effect for the card component used on this page.
+The following example uses a {{cssxref("grid-template-columns")}} declaration to create a two-column layout for the card component.
+
+```css
+.card {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+```
+
+If you want to use a single-column layout for devices with a smaller viewport, you can use a media query to change the grid template:
+
+```css
+@media (max-width: 700px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+}
+```
 
 ## See also
 
-- [Editor's Draft CSS Containment Level 3](https://drafts.csswg.org/css-contain-3/)
+- [Media queries](/en-US/docs/Web/CSS/Media_Queries)
+- CSS {{Cssxref("@container")}} at-rule
+- CSS {{Cssxref("contain")}} property
+- CSS {{Cssxref("container")}} shorthand property
+- CSS {{Cssxref("container-name")}} property
+- CSS {{cssxref("content-visibility")}} property
+- [Say Hello to CSS Container Queries](https://ishadeed.com/article/say-hello-to-css-container-queries/) by Ahmad Shadeed
 - [Container Queries: a Quick Start Guide](https://www.oddbird.net/2021/04/05/containerqueries/)
 - [Collection of Container Queries articles](https://github.com/sturobson/Awesome-Container-Queries)

@@ -9,18 +9,18 @@ tags:
   - Property
   - Reference
   - TaskAttributionTiming
+  - Experimental
 browser-compat: api.TaskAttributionTiming.containerId
 ---
-{{SeeCompatTable}}{{APIRef("Long Tasks")}}
 
-The **`containerId`** readonly property of the
-{{domxref("TaskAttributionTiming")}} interface returns the container's `id`
-attribute. A container is the iframe, embed or object etc. that is being implicated, on
-the whole, for a long task.
+{{APIRef("Performance API")}}{{SeeCompatTable}}
+
+The **`containerId`** readonly property of the {{domxref("TaskAttributionTiming")}} interface returns the container's `id`
+attribute. A container is the iframe, embed or object etc. that is being implicated, on the whole, for a long task.
 
 ## Value
 
-A string containing the containers `id` attribute.
+A string containing the container's [`id`](/en-US/docs/Web/HTML/Global_attributes/id) HTML content attribute.
 
 ## Specifications
 

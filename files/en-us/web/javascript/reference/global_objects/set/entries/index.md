@@ -1,6 +1,7 @@
 ---
 title: Set.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Set/entries
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - Iterator
@@ -10,6 +11,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.entries
 ---
+
 {{JSRef}}
 
 The **`entries()`** method returns a new [Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) object
@@ -24,7 +26,7 @@ returned.
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 
@@ -39,9 +41,9 @@ element in the given `Set`, in insertion order.
 
 ```js
 const mySet = new Set();
-mySet.add('foobar');
+mySet.add("foobar");
 mySet.add(1);
-mySet.add('baz');
+mySet.add("baz");
 
 const setIter = mySet.entries();
 

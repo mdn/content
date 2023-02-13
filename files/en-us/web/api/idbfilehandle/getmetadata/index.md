@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.IDBFileHandle.getMetadata
 ---
+
 {{APIRef("IndexedDB")}}{{deprecated_header}}
 
 > **Note:** The three non-standard interfaces {{domxref("IDBMutableFile")}}, {{domxref("IDBFileHandle")}}, and {{domxref("IDBFileRequest")}} are [disabled by default](#browser_compatibility).
@@ -21,7 +22,7 @@ The **`getMetadata()`** method of the {{domxref("IDBFileHandle")}} allows retrie
 
 ## Syntax
 
-```js
+```js-nolint
 getMetaData()
 getMetaData(options)
 ```
@@ -29,6 +30,7 @@ getMetaData(options)
 ### Parameters
 
 - `options` {{optional_inline}}
+
   - : An object used to request specific metadata. Each key is a boolean where
     `true` means the metadata is expected and where `false` means it
     is not expected. Note that if the key is `undefined`, it is considered as

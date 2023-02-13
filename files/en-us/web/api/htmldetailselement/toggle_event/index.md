@@ -10,6 +10,7 @@ tags:
   - toggle
 browser-compat: api.HTMLDetailsElement.toggle_event
 ---
+
 {{APIRef}}
 
 The **`toggle`** event fires when the `open`/`closed` state of a {{HtmlElement("details")}} element is toggled.
@@ -47,15 +48,18 @@ This example logs chapters that are open. Chapters are removed from the log when
   <p>Chapter summaries:</p>
   <details id="ch1">
     <summary>Chapter I</summary>
-    Philosophy reproves Boethius for the foolishness of his complaints against Fortune. Her very nature is caprice.
+    Philosophy reproves Boethius for the foolishness of his complaints against
+    Fortune. Her very nature is caprice.
   </details>
   <details id="ch2">
     <summary>Chapter II</summary>
-    Philosophy in Fortune's name replies to Boethius' reproaches, and proves that the gifts of Fortune are hers to give and to take away.
+    Philosophy in Fortune's name replies to Boethius' reproaches, and proves
+    that the gifts of Fortune are hers to give and to take away.
   </details>
   <details id="ch3">
     <summary>Chapter III</summary>
-    Boethius falls back upon his present sense of misery. Philosophy reminds him of the brilliancy of his former fortunes.
+    Boethius falls back upon his present sense of misery. Philosophy reminds him
+    of the brilliancy of his former fortunes.
   </details>
 </section>
 ```

@@ -9,13 +9,14 @@ tags:
   - Method
 browser-compat: api.Window.blur
 ---
+
 {{APIRef}}
 
 Shifts focus away from the window.
 
 ## Syntax
 
-```js
+```js-nolint
 blur()
 ```
 

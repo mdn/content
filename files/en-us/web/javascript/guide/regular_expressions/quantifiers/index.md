@@ -1,6 +1,7 @@
 ---
 title: Quantifiers
 slug: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
+page-type: guide
 tags:
   - Guide
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - quantifiers
   - regex
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 Quantifiers indicate numbers of characters or expressions to match.
@@ -17,7 +19,7 @@ Quantifiers indicate numbers of characters or expressions to match.
 
 ## Types
 
-> **Note:** In the following, *item* refers not only to singular characters, but also includes [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences).
+> **Note:** In the following, _item_ refers not only to singular characters, but also includes [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences).
 
 <table class="standard-table">
   <thead>
@@ -159,13 +161,13 @@ console.table(delicateMessage.match(wordEndingWithAs)); // [ "Spartaaaaaaa" ]
 ```js
 const singleLetterWord = /\b\w\b/g;
 const notSoLongWord = /\b\w{2,6}\b/g;
-const loooongWord = /\b\w{13,}\b/g;
+const longWord = /\b\w{13,}\b/g;
 
 const sentence = "Why do I have to learn multiplication table?";
 
 console.table(sentence.match(singleLetterWord)); // ["I"]
-console.table(sentence.match(notSoLongWord));    // [ "Why", "do", "have", "to", "learn", "table" ]
-console.table(sentence.match(loooongWord));      // ["multiplication"]
+console.table(sentence.match(notSoLongWord)); // [ "Why", "do", "have", "to", "learn", "table" ]
+console.table(sentence.match(longWord)); // ["multiplication"]
 ```
 
 ### Optional character

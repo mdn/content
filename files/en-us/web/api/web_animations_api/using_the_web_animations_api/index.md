@@ -19,6 +19,7 @@ tags:
   - reverse
   - web animations api
 ---
+
 {{DefaultAPISidebar("Web Animations")}}
 
 The Web Animations API lets us construct animations and control their playback with JavaScript. This article will start you off in the right direction with fun demos and tutorials featuring Alice in Wonderland.
@@ -28,10 +29,6 @@ The Web Animations API lets us construct animations and control their playback w
 The [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) opens the browser's animation engine to developers and manipulation by JavaScript. This API was designed to underlie implementations of both [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) and [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions), and leaves the door open to future animation effects. It is one of the most performant ways to animate on the Web, letting the browser make its own internal optimizations without hacks, coercion, or {{domxref("Window.requestAnimationFrame()")}}.
 
 With the Web Animations API, we can move interactive animations from stylesheets to JavaScript, separating presentation from behavior. We no longer need to rely on DOM-heavy techniques such as writing CSS properties and scoping classes onto elements to control playback direction. And unlike pure, declarative CSS, JavaScript also lets us dynamically set values from properties to durations. For building custom animation libraries and creating interactive animations, the Web Animations API might be the perfect tool for the job. Let's see what it can do!
-
-## Browser Support
-
-The basic Web Animations API features discussed in this article are available by default in Firefox 48+, Chrome 36+ and Safari 13.1+. There is also a [handy polyfill](https://github.com/web-animations/web-animations-js) that tests for feature support and adds it where necessary.
 
 ## Writing CSS Animations with the Web Animations API
 
@@ -187,7 +184,7 @@ nommingCake.play();
 Specifically, we want to link it to Alice's animation, so she gets bigger as the cupcake gets eaten. We can achieve this via the following function:
 
 ```js
-const growAlice = function() {
+const growAlice = () => {
 
   // Play Alice's animation.
   aliceChange.play();
@@ -216,7 +213,7 @@ In addition to pausing and playing, we can use the following Animation methods:
 Let's take a look at `playbackRate` first — a negative playbackRate will cause an animation to run in reverse. When Alice drinks from the bottle, she grows smaller. This is because the bottle changes her animation's playbackRate from 1 to -1:
 
 ```js
-const shrinkAlice = function() {
+const shrinkAlice = () => {
   aliceChange.playbackRate = -1;
   aliceChange.play();
 }
@@ -243,7 +240,7 @@ setInterval(() => {
 But urging them on by clicking or tapping causes them to speed up by multiplying their playbackRate:
 
 ```js
-const goFaster = function() {
+const goFaster = () => {
   redQueen_alice.updatePlaybackRate(redQueen_alice.playbackRate * 1.1);
 }
 
@@ -258,11 +255,9 @@ The background elements also have `playbackRate`s that are impacted when you cli
 Imagine other ways we could use playbackRate, such as improving accessibility for users with vestibular disorders by letting them slow down animations across an entire site. That's impossible to do with CSS without recalculating durations in every CSS rule, but with the Web Animations API, we could use the {{domxref("Document.getAnimations")}} method to loop over each animation on the page and halve their `playbackRate`s, like so:
 
 ```js
-document.getAnimations().forEach(
-  function (animation) {
-    animation.updatePlaybackRate(animation.playbackRate * .5);
-  }
-);
+document.getAnimations().forEach((animation) => {
+  animation.updatePlaybackRate(animation.playbackRate * 0.5);
+});
 ```
 
 With the Web Animations API, all you need to change is just one little property!
@@ -270,7 +265,12 @@ With the Web Animations API, all you need to change is just one little property!
 Another thing that's tough to do with CSS Animations alone is creating dependencies on values provided by other animations. For instance, in the Growing and Shrinking Alice game example, you might have noticed something odd about the cake's duration:
 
 ```js
-duration: aliceChange.effect.getComputedTiming().duration / 2
+document.getElementById('eat-me_sprite').animate(
+  [],
+  {
+    duration: aliceChange.effect.timing.duration / 2
+  }
+);
 ```
 
 To understand what's happening here, let's take a look at Alice's animation:
@@ -326,7 +326,7 @@ Now all three animations are linked to just one duration, which we can change ea
 We can also use the Web Animations API to figure out the animation's current time. The game ends when you run out of cake to eat or empty the bottle. Which vignette players are presented with depends on how far along Alice was in her animation, whether she grew too big and can't get in the tiny door anymore or too small and cannot reach the key to open the door. We can figure out whether she's on the large end or small end of her animation by getting her animation's [`currentTime`](/en-US/docs/Web/API/Animation/currentTime) and dividing it by her `activeDuration`:
 
 ```js
-const endGame = function() {
+const endGame = () => {
 
   // get Alice's timeline's playhead location
   const alicePlayhead = aliceChange.currentTime;
@@ -378,10 +378,9 @@ Better still, the Web Animations API also provides a [`finished`](/en-US/docs/We
 
 ## Conclusion
 
-These are the basic features of the Web Animations API, most of which are already supported across the latest release versions of Firefox, Chrome and Safari. By now you should be ready to "jump down the rabbit hole" of animating in the browser and ready to write your own animation experiments! If you're using the API and want to share, try using the #WAAPI hashtag. We will be watching and will write more tutorials to cover further features as support spreads!
+These are the basic features of the Web Animations API. By now you should be ready to "jump down the rabbit hole" of animating in the browser and ready to write your own animation experiments!
 
 ## See also
 
-- The [full suite of Alice in Wonderland demos](https://codepen.io/collection/nqNJvD) on CodePen for you to play with, fork, and share
-- [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) — a great article to read that explains more on the background of the Web Animations API, and why it is more performant than other web animation methods
-- [web-animations-js](https://github.com/web-animations/web-animations-js) — the Web Animations API polyfill
+- The [full suite of Alice in Wonderland demos](https://codepen.io/collection/nqNJvD) on CodePen for you to play with, fork, and share.
+- [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) (2016) Explains the background of the Web Animations API and why it is more performant than other web animation methods.

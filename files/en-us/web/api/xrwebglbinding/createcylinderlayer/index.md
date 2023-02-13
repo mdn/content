@@ -9,15 +9,17 @@ tags:
   - AR
   - XR
   - WebXR
+  - Experimental
 browser-compat: api.XRWebGLBinding.createCylinderLayer
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`createCylinderLayer()`** method of the {{domxref("XRWebGLBinding")}} interface returns an {{domxref("XRCylinderLayer")}} object, which is a layer that takes up a curved rectangular space in the virtual environment.
 
 ## Syntax
 
-```js
+```js-nolint
 createCylinderLayer(init)
 ```
 
@@ -33,33 +35,33 @@ createCylinderLayer(init)
       - : A {{domxref("GLenum")}} defining the data type of the color texture data. Possible values:
         - `gl.RGB`
         - `gl.RGBA`
-        Additionally, for contexts with the {{domxref("EXT_sRGB")}} extension enabled:
+          Additionally, for contexts with the {{domxref("EXT_sRGB")}} extension enabled:
         - `ext.SRGB_EXT`
         - `ext.SRGB_ALPHA_EXT`
-        Additionally, for {{domxref("WebGL2RenderingContext")}} contexts:
+          Additionally, for {{domxref("WebGL2RenderingContext")}} contexts:
         - `gl.RGBA8`
         - `gl.RGB8`
         - `gl.SRGB8`
         - `gl.RGB8_ALPHA8`
-        Additionally, for contexts with the {{domxref("WEBGL_compressed_texture_etc")}} extension enabled:
+          Additionally, for contexts with the {{domxref("WEBGL_compressed_texture_etc")}} extension enabled:
         - `ext.COMPRESSED_RGB8_ETC2`
         - `ext.COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2`
         - `ext.COMPRESSED_RGBA8_ETC2_EAC`
         - `ext.COMPRESSED_SRGB8_ETC2`
         - `ext.COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2`
         - `ext.COMPRESSED_SRGB8_ALPHA8_ETC2_EAC`
-        Additionally, for contexts with the {{domxref("WEBGL_compressed_texture_astc")}} extension enabled:
+          Additionally, for contexts with the {{domxref("WEBGL_compressed_texture_astc")}} extension enabled:
         - `All` of the formats the extension supports.
-        The default value is `gl.RGBA`.
+          The default value is `gl.RGBA`.
     - `depthFormat` {{optional_inline}}
       - : A {{domxref("GLenum")}} defining the data type of the depth texture data or `0` indicating that the layer should not provide a depth texture (in that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`).
         Possible values within {{domxref("WebGLRenderingContext")}} contexts with the {{domxref("WEBGL_depth_texture")}} extension enabled, or within {{domxref("WebGL2RenderingContext")}} contexts (no extension required):
         - `gl.DEPTH_COMPONENT`
         - `gl.DEPTH_STENCIL`
-        Additionally, for {{domxref("WebGL2RenderingContext")}} contexts:
+          Additionally, for {{domxref("WebGL2RenderingContext")}} contexts:
         - `gl.DEPTH_COMPONENT24`
         - `gl.DEPTH24_STENCIL24`
-        The default value is `gl.DEPTH_COMPONENT`.
+          The default value is `gl.DEPTH_COMPONENT`.
     - `isStatic` {{optional_inline}}
       - : A boolean that, if true, indicates you can only draw to this layer when {{domxref("XRCompositionLayer.needsRedraw", "needsRedraw")}} is `true`. The default value is `false`.
     - `layout` {{optional_inline}}
@@ -74,18 +76,18 @@ createCylinderLayer(init)
           - : A single {{domxref("XRSubImage")}} is allocated. Left eye gets the left area of the texture, right eye the right.
         - `stereo-top-bottom`
           - : A single {{domxref("XRSubImage")}} is allocated. Left eye gets the top area of the texture, right eye the bottom.
-        The default value is `mono`.
+            The default value is `mono`.
     - `mipLevels` {{optional_inline}}
       - : A number specifying desired number of mip levels. The default value is `1`.
     - `radius` {{optional_inline}}
       - : A number indicating the radius of the cylinder. Default value: `2.0`.
     - `space` **Required**
       - : An {{domxref("XRSpace")}} object defining the layer's spatial relationship with the user's physical environment.
-    - `textureType`  {{optional_inline}}
+    - `textureType` {{optional_inline}}
       - : A string defining the type of texture the layer will have. Possible values:
         - `texture`: The textures of {{domxref("XRWebGLSubImage")}} will be of type `gl.TEXTURE_2D`.
         - `texture-array`: the textures of {{domxref("XRWebGLSubImage")}} will be of type `gl.TEXTURE_2D_ARRAY` (WebGL 2 contexts only).
-        The default value is `texture`.
+          The default value is `texture`.
     - `transform` {{optional_inline}}
       - : An {{domxref("XRRigidTransform")}} object defining the offset and orientation relative to `space`.
     - `viewPixelHeight` **Required**

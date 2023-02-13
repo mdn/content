@@ -1,12 +1,14 @@
 ---
 title: arabic-form
 slug: Web/SVG/Attribute/arabic-form
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG
   - SVG Attribute
 browser-compat: svg.elements.glyph.arabic-form
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`arabic-form`** attribute indicates which of the four possible forms an Arabic glyph represents.

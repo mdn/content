@@ -12,6 +12,7 @@ tags:
   - boundingClientRect
 browser-compat: api.IntersectionObserverEntry.boundingClientRect
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's read-only

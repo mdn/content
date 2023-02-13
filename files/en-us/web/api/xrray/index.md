@@ -10,9 +10,11 @@ tags:
   - XR
   - AR
   - VR
+  - Experimental
 browser-compat: api.XRRay
 ---
-{{APIRef("WebXR Device API")}} {{secureContext_header}}
+
+{{APIRef("WebXR Device API")}} {{secureContext_header}}{{SeeCompatTable}}
 
 The **`XRRay`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) is a geometric ray described by an origin point and a direction vector.
 
@@ -20,19 +22,19 @@ The **`XRRay`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_De
 
 ## Constructor
 
-- {{domxref("XRRay.XRRay", "XRRay()")}}
+- {{domxref("XRRay.XRRay", "XRRay()")}} {{Experimental_Inline}}
   - : Creates a new `XRRay` object.
 
-## Properties
+## Instance properties
 
-- {{domxref("XRRay.direction")}} {{ReadOnlyInline}}
+- {{domxref("XRRay.direction")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{domxref("DOMPointReadOnly")}} representing the ray's 3-dimensional directional vector.
-- {{domxref("XRRay.matrix")}} {{ReadOnlyInline}}
+- {{domxref("XRRay.matrix")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A transform that can be used to position objects along the `XRRay`. This is a 4 by 4 matrix given as a 16 element {{jsxref("Float32Array")}} in column major order.
-- {{domxref("XRRay.origin")}} {{ReadOnlyInline}}
+- {{domxref("XRRay.origin")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{domxref("DOMPointReadOnly")}} representing the 3-dimensional point in space that the ray originates from, in meters.
 
-## Methods
+## Instance methods
 
 None.
 

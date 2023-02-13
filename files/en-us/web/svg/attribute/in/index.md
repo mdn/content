@@ -1,6 +1,7 @@
 ---
 title: in
 slug: Web/SVG/Attribute/in
+page-type: svg-attribute
 tags:
   - Filters
   - NeedsCompatTable
@@ -8,6 +9,7 @@ tags:
   - SVG Attribute
 spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-in
 ---
+
 {{SVGRef}}
 
 The **`in`** attribute identifies input for the given filter primitive.
@@ -85,27 +87,53 @@ You can use this attribute with the following SVG elements:
 
 ```html
 <div style="width: 420px; height: 220px;">
-<svg style="width:200px; height:200px; display: inline;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <defs>
-    <filter id="backgroundMultiply">
-      <!-- This will not work. -->
-      <feBlend in="BackgroundImage" in2="SourceGraphic" mode="multiply"/>
-    </filter>
-  </defs>
-  <image xlink:href="mdn_logo_only_color.png" x="10%" y="10%" width="80%" height="80%"/>
-  <circle cx="50%" cy="40%" r="40%" fill="#c00" style="filter:url(#backgroundMultiply);" />
-</svg>
+  <svg
+    style="width:200px; height:200px; display: inline;"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <filter id="backgroundMultiply">
+        <!-- This will not work. -->
+        <feBlend in="BackgroundImage" in2="SourceGraphic" mode="multiply" />
+      </filter>
+    </defs>
+    <image
+      xlink:href="mdn_logo_only_color.png"
+      x="10%"
+      y="10%"
+      width="80%"
+      height="80%" />
+    <circle
+      cx="50%"
+      cy="40%"
+      r="40%"
+      fill="#c00"
+      style="filter:url(#backgroundMultiply);" />
+  </svg>
 
-<svg style="width:200px; height:200px; display: inline;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <defs>
-    <filter id="imageMultiply">
-      <!-- This is a workaround. -->
-      <feImage xlink:href="mdn_logo_only_color.png" x="10%" y="10%" width="80%" height="80%"/>
-      <feBlend in2="SourceGraphic" mode="multiply"/>
-    </filter>
-  </defs>
-  <circle cx="50%" cy="40%" r="40%" fill="#c00" style="filter:url(#imageMultiply);"/>
-</svg>
+  <svg
+    style="width:200px; height:200px; display: inline;"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <filter id="imageMultiply">
+        <!-- This is a workaround. -->
+        <feImage
+          xlink:href="mdn_logo_only_color.png"
+          x="10%"
+          y="10%"
+          width="80%"
+          height="80%" />
+        <feBlend in2="SourceGraphic" mode="multiply" />
+      </filter>
+    </defs>
+    <circle
+      cx="50%"
+      cy="40%"
+      r="40%"
+      fill="#c00"
+      style="filter:url(#imageMultiply);" />
+  </svg>
 </div>
 ```
 

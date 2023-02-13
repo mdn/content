@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Releases
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 39 was released on July 2, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -42,7 +43,7 @@ Highlights:
 ### JavaScript
 
 - The [`RegExp` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) no longer throws when the first argument is a `RegExp` and the second `flags` argument is present ({{bug(1108949)}}).
-- The {{jsxref("Object.noSuchMethod", "Object.prototype.__noSuchMethod__")}} property is now deprecated and throws a console warning (see {{bug(1140428)}} and this [platform announcement](https://groups.google.com/forum/#!topic/mozilla.dev.platform/0EkHgphxUo8)).
+- The `Object.prototype.__noSuchMethod__` property is now deprecated and throws a console warning (see {{bug(1140428)}} and this [platform announcement](https://groups.google.com/forum/#!topic/mozilla.dev.platform/0EkHgphxUo8)).
 - The implementation of the {{jsxref("Proxy")}} object has been updated to comply more with the ES2015 specification:
 
   - The {{jsxref("Global_Objects/Proxy/Proxy/defineProperty", "defineProperty")}} and {{jsxref("Global_Objects/Proxy/Proxy/set", "set")}} handlers now need to explicitly return `true` to be successful, otherwise a {{jsxref("TypeError")}} exception will be thrown in strict mode ({{bug(1132522)}}).

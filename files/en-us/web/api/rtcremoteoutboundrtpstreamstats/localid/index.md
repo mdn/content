@@ -21,10 +21,11 @@ tags:
   - localId
 browser-compat: api.RTCRemoteOutboundRtpStreamStats.localId
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRemoteOutboundRtpStreamStats")}}
-dictionary's  **`localId`** property is a string which can be
+dictionary's **`localId`** property is a string which can be
 used to identify the {{domxref("RTCInboundRtpStreamStats")}} object whose
 {{domxref("RTCInboundRtpStreamStats.remoteId", "remoteId")}} matches this value.
 
@@ -135,22 +136,22 @@ appropriate HTML to the contents of the {{HTMLElement("div")}} element whose cla
 ```js
 async function networkTestStop(pc) {
   if (pc) {
-    let statsBox = document.querySelector(".stats-box");
-    let endReport = await pc.getStats();
+    const statsBox = document.querySelector(".stats-box");
+    const endReport = await pc.getStats();
 
-    for (let endRemoteOutbound of endReport.values()) {
+    for (const endRemoteOutbound of endReport.values()) {
       if (endRemoteOutbound.type === "remote-outbound-rtp") {
-        let startRemoteOutbound = startReport.get(endRemoteOutbound.id);
+        const startRemoteOutbound = startReport.get(endRemoteOutbound.id);
 
         if (startRemoteOutbound) {
-          let startInboundStats = findReportEntry(startReport, "remoteId", startRemoteOutbound.id);
-          let endInboundStats = findReportEntry(endReport, "remoteId", endRemoteOutbound.id);
+          const startInboundStats = findReportEntry(startReport, "remoteId", startRemoteOutbound.id);
+          const endInboundStats = findReportEntry(endReport, "remoteId", endRemoteOutbound.id);
 
-          let elapsedTime = (endRemoteOutbound.timestamp - startRemoteOutbound.timestamp) / 1000;    /* in seconds */
-          let packetsSent = endRemoteOutbound.packetsSent - startRemoteOutbound.packetsSent;
-          let bytesSent = endRemoteOutbound.bytesSent - startRemoteOutbound.bytesSent;
-          let framesDecoded = endInboundStats.framesDecoded - startInboundStats.framesDecoded;
-          let frameRate = framesDecoded / elapsedTime;
+          const elapsedTime = (endRemoteOutbound.timestamp - startRemoteOutbound.timestamp) / 1000;    /* in seconds */
+          const packetsSent = endRemoteOutbound.packetsSent - startRemoteOutbound.packetsSent;
+          const bytesSent = endRemoteOutbound.bytesSent - startRemoteOutbound.bytesSent;
+          const framesDecoded = endInboundStats.framesDecoded - startInboundStats.framesDecoded;
+          const frameRate = framesDecoded / elapsedTime;
 
           let timeString = "";
           if (!isNaN(elapsedTime)) {
@@ -162,13 +163,13 @@ async function networkTestStop(pc) {
             frameString = `Decoded ${framesDecoded} frames for a frame rate of ${frameRate.toFixed(2)} FPS.<br>`;
           }
 
-          let logEntry = `<div class="stats-entry"><h2>Report ID: ${endRemoteOutbound.id}</h2>` +
+          const logEntry = `<div class="stats-entry"><h2>Report ID: ${endRemoteOutbound.id}</h2>` +
                          `Remote peer sent ${packetsSent} packets ${timeString}.<br>` +
                          `${frameString}` +
                          `Data size: ${bytesSent} bytes.</div>`;
           statsBox.innerHTML += logEntry;
         } else {
-          statsBox.innerHTML += `<div class="stats-error">Unable to find initial statistics for ID ${endRemoteOutbound.id}.</div>`
+          statsBox.innerHTML += `<div class="stats-error">Unable to find initial statistics for ID ${endRemoteOutbound.id}.</div>`;
         }
       }
 
@@ -181,7 +182,7 @@ async function networkTestStop(pc) {
 Here's what's going on in the `networkTestStop()` function: after calling
 the {{domxref("RTCPeerConnection")}} method {{domxref("RTCPeerConnection.getStats",
   "getStats()")}} to get the latest statistics report for the connection and storing it in
-`endReport`,  This is an {{domxref("RTCStatsReport")}} object, which maps
+`endReport`. This is an {{domxref("RTCStatsReport")}} object, which maps
 strings to objects of the
 corresponding {{domxref("RTCStats")}}-based type.
 

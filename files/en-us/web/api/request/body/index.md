@@ -11,13 +11,14 @@ tags:
   - Request
 browser-compat: api.Request.body
 ---
+
 {{APIRef("Fetch")}}
 
 The read-only **`body`** property of the {{domxref("Request")}}
 interface contains a {{domxref("ReadableStream")}} with the body contents
 that have been added to the request. Note that a request using the
 `GET` or `HEAD` method cannot have a body
-and `null` is return in these cases.
+and `null` is returned in these cases.
 
 ## Value
 

@@ -15,6 +15,7 @@ tags:
   - collapsed
 browser-compat: api.StaticRange.collapsed
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 The **`collapsed`** read-only property

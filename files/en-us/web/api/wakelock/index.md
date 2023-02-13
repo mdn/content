@@ -11,15 +11,16 @@ tags:
   - Experimental
 browser-compat: api.WakeLock
 ---
-{{securecontext_header}} {{ ApiRef("Screen Wake Lock API") }}
+
+{{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`WakeLock`** interface of the [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) prevents device screens from dimming or locking when an application needs to keep running.
 
 The system wake lock is exposed through the global {{domxref('Navigator.wakeLock')}} property.
 
-## Methods
+## Instance methods
 
-- {{domxref("WakeLock.request", "request()")}}
+- {{domxref("WakeLock.request", "request()")}} {{Experimental_Inline}}
   - : Requests a {{domxref("WakeLockSentinel")}} object, which returns a {{jsxref("Promise")}} that resolves with a {{domxref("WakeLockSentinel")}} object.
 
 ## Examples

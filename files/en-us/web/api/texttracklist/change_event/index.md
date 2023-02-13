@@ -9,6 +9,7 @@ tags:
   - change event
 browser-compat: api.TextTrackList.change_event
 ---
+
 {{APIRef}}
 
 The **`change`** event is fired when a text track is made active or inactive, or a {{domxref('TextTrackList')}} is otherwise changed.
@@ -60,5 +61,5 @@ mediaElement.textTracks.onchange = (event) => {
 - Related events: [`addtrack`](/en-US/docs/Web/API/VideoTrackList/addtrack_event), [`removetrack`](/en-US/docs/Web/API/VideoTrackList/removetrack_event)
 - This event on [`VideoTrackList`](/en-US/docs/Web/API/VideoTrackList) targets: [`change`](/en-US/docs/Web/API/VideoTrackList/change_event)
 - This event on [`AudioTrackList`](/en-US/docs/Web/API/AudioTrackList) targets: [`change`](/en-US/docs/Web/API/AudioTrackList/change_event)
-- [Media Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)

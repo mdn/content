@@ -9,6 +9,7 @@ tags:
   - Request header
   - header
 ---
+
 {{HTTPSidebar}}
 
 The **`X-Forwarded-Host`** (XFH) header is a de-facto standard
@@ -41,7 +42,7 @@ A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} he
 
 ## Syntax
 
-```
+```http
 X-Forwarded-Host: <host>
 ```
 
@@ -52,7 +53,7 @@ X-Forwarded-Host: <host>
 
 ## Examples
 
-```
+```http
 X-Forwarded-Host: id42.example-cdn.com
 ```
 

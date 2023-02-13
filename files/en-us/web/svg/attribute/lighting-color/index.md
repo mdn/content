@@ -1,12 +1,14 @@
 ---
 title: lighting-color
 slug: Web/SVG/Attribute/lighting-color
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute
   - SVG Filter
 browser-compat: svg.attributes.presentation.lighting-color
 ---
+
 {{SVGRef}}
 
 The **`lighting-color`** attribute defines the color of the light source for lighting filter primitives.
@@ -19,7 +21,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -37,8 +41,18 @@ html, body, svg {
     </feDiffuseLighting>
   </filter>
 
-  <rect x="0" y="0" width="200" height="200" style="filter: url(#diffuseLighting1);" />
-  <rect x="0" y="0" width="200" height="200" style="filter: url(#diffuseLighting2); transform: translateX(220px);" />
+  <rect
+    x="0"
+    y="0"
+    width="200"
+    height="200"
+    style="filter: url(#diffuseLighting1);" />
+  <rect
+    x="0"
+    y="0"
+    width="200"
+    height="200"
+    style="filter: url(#diffuseLighting2); transform: translateX(220px);" />
 </svg>
 ```
 

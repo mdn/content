@@ -10,6 +10,7 @@ tags:
   - TextDecoderStream
 browser-compat: api.TextDecoderStream.writable
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`writable`** read-only property of the {{domxref("TextDecoderStream")}} interface returns a {{domxref("WritableStream")}}.

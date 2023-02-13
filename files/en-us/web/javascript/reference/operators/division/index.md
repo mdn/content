@@ -1,6 +1,7 @@
 ---
 title: Division (/)
 slug: Web/JavaScript/Reference/Operators/Division
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
@@ -8,16 +9,17 @@ tags:
   - Reference
 browser-compat: javascript.operators.division
 ---
+
 {{jsSidebar("Operators")}}
 
-The division operator (`/`) produces the quotient of its operands where the
+The **division (`/`)** operator produces the quotient of its operands where the
 left operand is the dividend and the right operand is the divisor.
 
 {{EmbedInteractiveExample("pages/js/expressions-division.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 x / y
 ```
 
@@ -26,21 +28,21 @@ x / y
 ### Basic division
 
 ```js
-1 / 2              // 0.5
+1 / 2; // 0.5
 
-Math.floor(3 / 2) // 1
+Math.floor(3 / 2); // 1
 
-1.0 / 2.0         // 0.5
+1.0 / 2.0; // 0.5
 ```
 
 ### Division by zero
 
 ```js
-2.0 / 0     // Infinity
+2.0 / 0; // Infinity
 
-2.0 / 0.0   // Infinity, because 0.0 === 0
+2.0 / 0.0; // Infinity, because 0.0 === 0
 
-2.0 / -0.0  // -Infinity
+2.0 / -0.0; // -Infinity
 ```
 
 ## Specifications

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Location.ancestorOrigins
 ---
+
 {{APIRef("Location")}}
 
 The **`ancestorOrigins`** read-only

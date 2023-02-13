@@ -1,6 +1,7 @@
 ---
-title: '@layer'
+title: "@layer"
 slug: Web/CSS/@layer
+page-type: css-at-rule
 tags:
   - At-rule
   - CSS
@@ -10,9 +11,12 @@ tags:
   - cascade
 browser-compat: css.at-rules.layer
 ---
+
 {{CSSRef}}
 
 The **`@layer`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is used to declare a cascade layer and can also be used to define the order of precedence in case of multiple cascade layers.
+
+{{EmbedInteractiveExample("pages/tabbed/at-rule-layer.html", "tabbed-standard")}}
 
 ## Syntax
 
@@ -41,11 +45,11 @@ The first way is to create a named cascade layer with the CSS rules for that lay
 ```css
 @layer utilities {
   .padding-sm {
-    padding: .5rem;
+    padding: 0.5rem;
   }
 
   .padding-lg {
-    padding: .8rem;
+    padding: 0.8rem;
   }
 }
 ```
@@ -80,10 +84,10 @@ The third way is to create a cascade layer with no name. For example:
 
 This creates an _anonymous cascade layer_. This layer functions in the same way as named layers; however, rules cannot be assigned to it later. The order of precedence for anonymous layers is the order in which layers are declared, named or not, and lower than the styles declared outside of a layer.
 
-Another way to create a cascade layer is by using {{cssxref("@import")}}. In this case, the rules would be in the imported stylesheet. Remember that the `@import` at-rule must precede all other types of rules, except the `@charset` rules.
+Another way to create a cascade layer is by using {{cssxref("@import")}}. In this case, the rules would be in the imported stylesheet. Remember that the `@import` at-rule must precede all other types of rules, except `@charset` and `@layer` rules.
 
 ```css
-@import 'theme.css' layer(utilities);
+@import "theme.css" layer(utilities);
 ```
 
 ### Nesting layers
@@ -93,7 +97,6 @@ Layers may be nested. For example:
 ```css
 @layer framework {
   @layer layout {
-
   }
 }
 ```
@@ -110,11 +113,7 @@ To append rules to the `layout` layer inside `framework`, join the two names wit
 
 ## Formal syntax
 
-```
-@layer [ <layer-name># | <layer-name>?  {
-  <stylesheet>
-} ]
-```
+{{csssyntax}}
 
 ## Examples
 
@@ -161,9 +160,11 @@ In the following example, two layers are created with no rules applied, then CSS
 #### HTML
 
 ```html
-<div class="item">I am displayed in <code>color: rebeccapurple</code>
-because the <code>special</code> layer comes after the <code>base</code> layer.
-My green border, font-size, and padding come from the <code>base</code> layer.</div>
+<div class="item">
+  I am displayed in <code>color: rebeccapurple</code> because the
+  <code>special</code> layer comes after the <code>base</code> layer. My green
+  border, font-size, and padding come from the <code>base</code> layer.
+</div>
 ```
 
 #### CSS
@@ -182,7 +183,7 @@ My green border, font-size, and padding come from the <code>base</code> layer.</
     color: green;
     border: 5px solid green;
     font-size: 1.3em;
-    padding: .5em;
+    padding: 0.5em;
   }
 }
 ```
@@ -201,4 +202,10 @@ My green border, font-size, and padding come from the <code>base</code> layer.</
 
 ## See also
 
+- [`@import`](/en-US/docs/Web/CSS/@import)
+- [The `!important` flag](/en-US/docs/Web/CSS/important)
+- [The `revert-layer` keyword](/en-US/docs/Web/CSS/revert-layer)
+- [Introducing the CSS Cascade](/en-US/docs/Web/CSS/Cascade)
+- [CSS building block: cascade and inheritance](/en-US/docs/Web/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [CSS building block: cascade layers](/en-US/docs/Web/Learn/CSS/Building_blocks/Cascade_layers)
 - [The Future of CSS: Cascade Layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/)

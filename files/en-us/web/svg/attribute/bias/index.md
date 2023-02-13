@@ -1,6 +1,7 @@
 ---
 title: bias
 slug: Web/SVG/Attribute/bias
+page-type: svg-attribute
 tags:
   - Filters
   - NeedsExample
@@ -8,6 +9,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feConvolveMatrix.bias
 ---
+
 {{SVGRef}}
 
 The **`bias`** attribute shifts the range of the filter. After applying the {{SVGAttr("kernelMatrix")}} of the {{SVGElement("feConvolveMatrix")}} element to the input image to yield a number and applied the {{SVGAttr("divisor")}} attribute, the `bias` attribute is added to each component. This allows representation of values that would otherwise be clamped to 0 or 1.

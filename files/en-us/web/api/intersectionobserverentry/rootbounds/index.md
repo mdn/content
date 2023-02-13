@@ -12,6 +12,7 @@ tags:
   - rootBounds
 browser-compat: api.IntersectionObserverEntry.rootBounds
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's

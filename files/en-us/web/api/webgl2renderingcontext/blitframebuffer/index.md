@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.blitFramebuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.blitFramebuffer()`** method of
@@ -19,7 +20,7 @@ using {{domxref("WebGLRenderingContext.bindFramebuffer()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 blitFramebuffer(srcX0, srcY0, srcX1, srcY1,
                 dstX0, dstY0, dstX1, dstY1,
                 mask, filter)

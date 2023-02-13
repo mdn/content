@@ -11,6 +11,7 @@ tags:
   - screen
 browser-compat: api.ScreenOrientation
 ---
+
 {{APIRef("Screen Orientation API")}}
 
 The **`ScreenOrientation`** interface of the [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API) provides information about the current orientation of the document.
@@ -19,7 +20,7 @@ A **`ScreenOrientation`** instance object can be retrieved using the {{domxref("
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("ScreenOrientation.type")}} {{ReadOnlyInline}}
   - : Returns the document's current orientation type, one of "portrait-primary", "portrait-secondary", "landscape-primary", or "landscape-secondary".
@@ -31,7 +32,7 @@ A **`ScreenOrientation`** instance object can be retrieved using the {{domxref("
 - {{DOMxRef("ScreenOrientation.onchange")}}
   - : The [event handler](/en-US/docs/Web/Events/Event_handlers) called whenever the screen changes orientation.
 
-## Methods
+## Instance methods
 
 - {{DOMxRef("ScreenOrientation.lock()")}}
   - : Locks the orientation of the containing document to its default orientation and returns a {{JSxRef("Promise")}}.

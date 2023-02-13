@@ -9,6 +9,7 @@ tags:
   - Property
 browser-compat: api.ProgressEvent.loaded
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The **`ProgressEvent.loaded`** read-only property is an integer

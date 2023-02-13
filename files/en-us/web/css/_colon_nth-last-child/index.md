@@ -1,6 +1,7 @@
 ---
-title: ':nth-last-child()'
+title: ":nth-last-child()"
 slug: Web/CSS/:nth-last-child
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
@@ -10,6 +11,7 @@ tags:
   - Web
 browser-compat: css.selectors.nth-last-child
 ---
+
 {{CSSRef}}
 
 The **`:nth-last-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among a group of siblings, counting from the end.
@@ -20,8 +22,10 @@ The **`:nth-last-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/doc
 
 The `nth-last-child` pseudo-class is specified with a single argument, which represents the pattern for matching elements, counting from the end.
 
-```
-:nth-last-child( <nth> [ of <complex-selector-list> ]? )
+```css-nolint
+:nth-last-child(<nth> [of <complex-selector-list>]?) {
+  /* ... */
+}
 ```
 
 ### Keyword values
@@ -34,7 +38,14 @@ The `nth-last-child` pseudo-class is specified with a single argument, which rep
 ### Functional notation
 
 - `<An+B>`
-  - : Represents elements whose numeric position in a series of siblings matches the pattern `An+B`, for every positive integer or zero value of `n`. The index of the first element, counting from the end, is `1`. The values `A` and `B` must both be {{cssxref("&lt;integer&gt;")}}s.
+
+  - : Represents elements whose numeric position in a series of siblings matches the pattern `An+B`, for every positive integer or zero value of `n`, where:
+
+    - `A` is an integer step size,
+    - `B` is an integer offset,
+    - `n` is all nonnegative integers, starting from 0.
+
+    It can be read as the `An+B`-th element of a list. The index of the first element, counting from the end, is `1`. The `A` and `B` must both have {{cssxref("&lt;integer&gt;")}} values.
 
 ## Examples
 
@@ -91,12 +102,12 @@ table {
 }
 
 /* Selects the last three elements */
-tr:nth-last-child(-n+3) {
+tr:nth-last-child(-n + 3) {
   background-color: pink;
 }
 
 /* Selects every element starting from the second to last item */
-tr:nth-last-child(n+2) {
+tr:nth-last-child(n + 2) {
   color: blue;
 }
 
@@ -137,7 +148,7 @@ A _quantity query_ styles elements depending on how many of them there are. In t
 ```css
 /* If there are at least three list items,
    style them all */
-li:nth-last-child(n+3),
+li:nth-last-child(n + 3),
 li:nth-last-child(3) ~ li {
   color: red;
 }

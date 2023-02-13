@@ -1,6 +1,7 @@
 ---
 title: DataView.prototype.setFloat64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat64
+page-type: javascript-instance-method
 tags:
   - DataView
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.setFloat64
 ---
+
 {{JSRef}}
 
 The **`setFloat64()`** method stores a signed 64-bit float
@@ -19,7 +21,7 @@ The **`setFloat64()`** method stores a signed 64-bit float
 
 ## Syntax
 
-```js
+```js-nolint
 setFloat64(byteOffset, value)
 setFloat64(byteOffset, value, littleEndian)
 ```

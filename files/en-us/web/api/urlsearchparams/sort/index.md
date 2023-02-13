@@ -10,6 +10,7 @@ tags:
   - sort
 browser-compat: api.URLSearchParams.sort
 ---
+
 {{APIRef("URL API")}}
 
 The **`URLSearchParams.sort()`** method sorts all key/value
@@ -22,7 +23,7 @@ preserved).
 
 ## Syntax
 
-```js
+```js-nolint
 sort()
 ```
 
@@ -49,7 +50,7 @@ console.log(searchParams.toString());
 
 The result is:
 
-```
+```plain
 a=2&a=1&b=3&c=4
 ```
 

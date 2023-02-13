@@ -19,6 +19,7 @@ tags:
 
 browser-compat: api.XRInputSource.hand
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only **`hand`** property of the {{domxref("XRInputSource")}} interface is a {{domxref("XRHand")}} object providing access to a hand-tracking device.
@@ -30,19 +31,18 @@ An {{domxref("XRHand")}} object or [`null`](/en-US/docs/Web/JavaScript/Reference
 ## Examples
 
 ```js
-
-navigator.xr.requestSession({optionalFeatures: ["hand-tracking"]}).then(
-  // …
-);
+navigator.xr
+  .requestSession({ optionalFeatures: ["hand-tracking"] })
+  .then(/* … */);
 
 function renderFrame(session, frame) {
-   // …
+  // …
 
-   for (inputSource of session.inputSources) {
-      if (inputSource.hand) {
-         // render a hand model, perform gesture detection, etc.
-      }
-   }
+  for (const inputSource of session.inputSources) {
+    if (inputSource.hand) {
+      // render a hand model, perform gesture detection, etc.
+    }
+  }
 }
 ```
 

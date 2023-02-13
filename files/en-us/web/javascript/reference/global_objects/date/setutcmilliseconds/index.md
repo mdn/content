@@ -1,6 +1,7 @@
 ---
 title: Date.prototype.setUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
+page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setUTCMilliseconds
 ---
+
 {{JSRef}}
 
 The **`setUTCMilliseconds()`** method sets the milliseconds for
@@ -18,7 +20,7 @@ a specified date according to universal time.
 
 ## Syntax
 
-```js
+```js-nolint
 setUTCMilliseconds(millisecondsValue)
 ```
 

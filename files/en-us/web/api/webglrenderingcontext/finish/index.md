@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.finish
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.finish()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) blocks execution until all
@@ -17,7 +18,7 @@ previously called commands are finished.
 
 ## Syntax
 
-```js
+```js-nolint
 finish()
 ```
 

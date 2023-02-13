@@ -9,8 +9,9 @@ tags:
   - Experimental
   - id
   - InterventionReportBody
-spec-urls: https://wicg.github.io/intervention-reporting/#dom-interventionreportbody-id
+browser-compat: api.InterventionReportBody.id
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`id`** read-only property of the {{domxref("InterventionReportBody")}} interface returns a string identifying the intervention that generated the report. This can be used to group reports.
@@ -24,13 +25,13 @@ A string.
 In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports, then print the value of `id` to the console.
 
 ```js
-let options = {
+const options = {
   types: ['intervention'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
-  let firstReport = reports[0];
+const observer = new ReportingObserver((reports, observer) => {
+  const firstReport = reports[0];
   console.log(firstReport.type); // intervention
   console.log(firstReport.body.id);
 }, options);
@@ -42,4 +43,4 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 ## Browser compatibility
 
-This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
+{{Compat}}

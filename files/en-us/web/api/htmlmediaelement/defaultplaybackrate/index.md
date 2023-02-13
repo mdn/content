@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.defaultPlaybackRate
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.defaultPlaybackRate`** property indicates the default playback rate for the media.

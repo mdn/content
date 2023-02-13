@@ -14,10 +14,11 @@ tags:
   - webkitdirectory
 browser-compat: api.HTMLInputElement.webkitdirectory
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The **`HTMLInputElement.webkitdirectory`** is a property
-that reflects the {{htmlattrxref("webkitdirectory", "input")}} HTML attribute
+that reflects the [`webkitdirectory`](/en-US/docs/Web/HTML/Element/input/file#webkitdirectory) HTML attribute
 and indicates that the {{HTMLElement("input")}} element should let the user select directories instead of files.
 When a directory is selected, the directory and its entire hierarchy of contents are included in the set of selected items.
 The selected file system entries can be obtained using the {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} property.
@@ -90,13 +91,11 @@ within the selected directory hierarchies is generated and displayed.
 ### JavaScript content
 
 ```js
-document.getElementById("filepicker").addEventListener("change", function(event) {
+document.getElementById("filepicker").addEventListener("change", (event) => {
   let output = document.getElementById("listing");
-  let files = event.target.files;
-
-  for (let i=0; i<files.length; i++) {
+  for (const file of event.target.files) {
     let item = document.createElement("li");
-    item.innerHTML = files[i].webkitRelativePath;
+    item.textContent = file.webkitRelativePath;
     output.appendChild(item);
   };
 }, false);

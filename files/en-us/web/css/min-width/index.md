@@ -1,6 +1,7 @@
 ---
 title: min-width
 slug: Web/CSS/min-width
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -15,6 +16,7 @@ tags:
   - width
 browser-compat: css.properties.min-width
 ---
+
 {{CSSRef}}
 
 The **`min-width`** [CSS](/en-US/docs/Web/CSS) property sets the minimum width of an element. It prevents the [used value](/en-US/docs/Web/CSS/used_value) of the {{cssxref("width")}} property from becoming smaller than the value specified for `min-width`.
@@ -73,9 +75,13 @@ min-width: unset;
 ### Setting minimum element width
 
 ```css
-table { min-width: 75%; }
+table {
+  min-width: 75%;
+}
 
-form { min-width: 0; }
+form {
+  min-width: 0;
+}
 ```
 
 ## Specifications

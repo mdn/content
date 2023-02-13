@@ -11,13 +11,14 @@ tags:
   - onAdded
 browser-compat: webextensions.api.permissions.onAdded
 ---
+
 {{AddonSidebar()}}
 
 Fired when the extension granted new permissions.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.permissions.onAdded.addListener(listener)
 browser.permissions.onAdded.removeListener(listener)
 browser.permissions.onAdded.hasListener(listener)
@@ -61,5 +62,3 @@ browser.permissions.onAdded.addListener(handleAdded);
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/permissions/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

@@ -11,6 +11,7 @@ tags:
   - request
 browser-compat: webextensions.api.permissions.request
 ---
+
 {{AddonSidebar()}}
 
 Ask for the set of permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.
@@ -27,7 +28,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let requesting = browser.permissions.request(
   permissions                // Permissions object
 )
@@ -40,7 +41,7 @@ let requesting = browser.permissions.request(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the extension was granted all the permissions listed in the `permissions` argument, or `false` otherwise.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with `true` if the extension is now granted all the permissions listed in the `permissions` argument, or `false` otherwise.
 
 ## Browser compatibility
 
@@ -56,7 +57,7 @@ const permissionsToRequest = {
   origins: ["https://developer.mozilla.org/"]
 }
 
-function requestPermissions() {
+async function requestPermissions() {
 
   function onResponse(response) {
     if (response) {
@@ -67,11 +68,10 @@ function requestPermissions() {
     return browser.permissions.getAll();
   }
 
-  browser.permissions.request(permissionsToRequest)
-    .then(onResponse)
-    .then((currentPermissions) => {
-    console.log(`Current permissions:`, currentPermissions);
-  });
+  const response = await browser.permissions.request(permissionsToRequest);
+  const currentPermissions = await onResponse(response);
+
+  console.log(`Current permissions:`, currentPermissions);
 }
 
 document.querySelector("#request").addEventListener("click", requestPermissions);
@@ -82,5 +82,3 @@ document.querySelector("#request").addEventListener("click", requestPermissions)
 > **Note:** Currently has a [bug with requesting origins](https://bugzilla.mozilla.org/show_bug.cgi?id=1411873) and [requesting permissions on the about:addons page](https://bugzilla.mozilla.org/show_bug.cgi?id=1382953).
 
 > **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/permissions/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

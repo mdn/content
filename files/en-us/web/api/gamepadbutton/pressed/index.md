@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.GamepadButton.pressed
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`GamepadButton.pressed`** property of the

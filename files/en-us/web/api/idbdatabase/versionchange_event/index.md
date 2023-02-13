@@ -9,6 +9,7 @@ tags:
   - versionchange
 browser-compat: api.IDBDatabase.versionchange_event
 ---
+
 {{APIRef("IndexedDB")}}
 
 The `versionchange` event is fired when a database structure change ([`upgradeneeded`](/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event) event send on an [`IDBOpenDBRequest`](/en-US/docs/Web/API/IDBOpenDBRequest) or [`IDBFactory.deleteDatabase`](/en-US/docs/Web/API/IDBFactory/deleteDatabase)) was requested elsewhere (most probably in

@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.HTMLFontElement.face
 ---
+
 {{deprecated_header}}{{ APIRef("HTML DOM") }}
 
 The obsolete
@@ -44,7 +45,7 @@ f.face = "arial";
 
 ## Specifications
 
-The \<font> tag is not supported in HTML5 and as a result neither is
+The `<font>` element has been deprecated and is no longer supported and, as a result, neither is
 `<font>.face`.
 
 ## Browser compatibility

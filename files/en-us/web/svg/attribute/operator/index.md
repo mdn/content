@@ -1,6 +1,7 @@
 ---
 title: operator
 slug: Web/SVG/Attribute/operator
+page-type: svg-attribute
 tags:
   - Filters
   - NeedsCompatTable
@@ -10,6 +11,7 @@ spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-femorphology-operator
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomposite-operator
 ---
+
 {{SVGRef}}
 
 The **`operator`** attribute has two meanings based on the context it's used in. Either it defines the compositing or morphing operation to be performed.
@@ -22,7 +24,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
   font: 20px Arial, Helvetica, sans-serif;
 }
@@ -31,10 +35,10 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 120 70" xmlns="http://www.w3.org/2000/svg">
   <filter id="erode">
-    <feMorphology operator="erode" radius="0.4"/>
+    <feMorphology operator="erode" radius="0.4" />
   </filter>
   <filter id="dilate">
-    <feMorphology operator="dilate" radius="0.8"/>
+    <feMorphology operator="dilate" radius="0.8" />
   </filter>
 
   <text x="0" y="15">Normal text</text>
@@ -83,6 +87,7 @@ For {{SVGElement("feComposite")}}, `operator` defines the compositing operation 
 - `lighter`
   - : This value indicates that the sum of the source graphic defined in the `in` attribute and the destination graphic defined in the `in2` attribute is displayed.
 - `arithmetic`
+
   - : This value indicates that the source graphic defined in the `in` attribute and the destination graphic defined in the `in2` attribute are combined using the following formula:
 
     `result = k1*i1*i2 + k2*i1 + k3*i2 + k4`

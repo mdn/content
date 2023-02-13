@@ -1,6 +1,7 @@
 ---
 title: Date.prototype.setYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setYear
+page-type: javascript-instance-method
 tags:
   - Date
   - Deprecated
@@ -11,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Date.setYear
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The legacy **`setYear()`** method sets the year for a specified date according to local time.
@@ -25,7 +27,7 @@ Because of those differences in behavior, you should no longer use the legacy `s
 
 ## Syntax
 
-```js
+```js-nolint
 setYear(yearValue)
 ```
 

@@ -11,6 +11,7 @@ tags:
   - web console
 browser-compat: api.console.error
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.error()`** method outputs an error message to the Web console.
@@ -19,7 +20,7 @@ The **`console.error()`** method outputs an error message to the Web console.
 
 ## Syntax
 
-```js
+```js-nolint
 error(obj1)
 error(obj1, /* …, */ objN)
 error(msg)
@@ -54,5 +55,5 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [MSDN: Using the F12 Tools Console to View Errors and Status](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85))
+- [MSDN: Using the F12 Tools Console to View Errors and Status](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)>)
 - [Chrome Developer Tools: Using the Console](https://developer.chrome.com/docs/devtools/console/api/#error)

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.PointerEvent.height
 ---
+
 {{ APIRef("Pointer Events") }}
 
 The **`height`** read-only property of the

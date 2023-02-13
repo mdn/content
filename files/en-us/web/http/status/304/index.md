@@ -8,6 +8,7 @@ tags:
   - Status code
 browser-compat: http.status.304
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`304 Not Modified`** client redirection response
@@ -28,7 +29,7 @@ headers {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}},
 
 ## Status
 
-```
+```http
 304 Not Modified
 ```
 

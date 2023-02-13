@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Event.bubbles
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`bubbles`** read-only property of the {{domxref("Event")}} interface indicates whether the event bubbles up through the DOM tree or not.

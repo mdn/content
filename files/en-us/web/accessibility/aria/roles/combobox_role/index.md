@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: combobox role'
+title: "ARIA: combobox role"
 slug: Web/Accessibility/ARIA/Roles/combobox_role
 tags:
   - Accessibility
@@ -38,7 +38,7 @@ When a combobox's popup is displayed, ensure the [`aria-controls`](/en-US/docs/W
 
 If the combobox UI includes a visible control, such as an icon, that allows the visibility of the popup to be controlled via pointer and touch events, that control should be a {{HTMLElement('button')}}, {{HTMLElement('input')}} of type `button`, or a [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role) role element with a {{HTMLattrXRef('tabindex')}} of `-1`. Doing so will allow the button to be focusable but not included in keyboard tab sequence. It must not be a descendant of the element with role `combobox`.
 
-To be keyboard accessible, keyboard support for moving focus between the `combobox` input field element and elements contained in the popup `listbox`, `tree`, `grid`, or `dialog`, must be programmed in.  One common convention is that <kbd>Down Arrow</kbd> moves focus from the input to the first focusable descendant of the popup element.
+To be keyboard accessible, keyboard support for moving focus between the `combobox` input field element and elements contained in the popup `listbox`, `tree`, `grid`, or `dialog`, must be programmed in. One common convention is that <kbd>Down Arrow</kbd> moves focus from the input to the first focusable descendant of the popup element.
 
 The [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) property can be used to identify the currently active element of the combobox popup, for instance an `option` within a popup `listbox`, for implementations where DOM focus remains on the combobox. If DOM focus does not remain on the combobox when its popup is invoked, but rather DOM focus moves into the popup, such as a dialog, then `aria-activedescendant` may not be necessary.
 
@@ -58,15 +58,19 @@ Every `combobox` must have an accessible name. If using an {{HTMLElement('input'
 ### Keyboard interactions
 
 - <kbd>Down Arrow</kbd>
+
   - : Moves focus to the next option, or to the first option if none was selected.
 
 - <kbd>Alt</kbd> + <kbd>Down Arrow</kbd> (Optional)
+
   - : If the popup is available but not displayed, displays the popup without moving focus.
 
 - <kbd>Up Arrow</kbd>
+
   - : Moves focus to the previous option. Moving focus to the first option if focus was originally on the last option.
 
 - <kbd>Alt</kbd> + <kbd>Up Arrow</kbd> (Optional)
+
   - : If the popup has focus, returns focus to the combobox, otherwise it closes the popup.
 
 - <kbd>Enter</kbd>
@@ -77,7 +81,15 @@ Every `combobox` must have an accessible name. If using an {{HTMLElement('input'
 ```html
 <label for="jokes">Pick what type of jokes you like</label>
 <div class="combo-wrap">
-  <input type="text" id="jokes" role="combobox" aria-controls="joketypes" aria-autocomplete="list" aria-expanded="false" data-active-option="item1" aria-activedescendant="">
+  <input
+    type="text"
+    id="jokes"
+    role="combobox"
+    aria-controls="joketypes"
+    aria-autocomplete="list"
+    aria-expanded="false"
+    data-active-option="item1"
+    aria-activedescendant="" />
   <span aria-hidden="true" data-trigger="multiselect"></span>
   <ul id="joketypes" role="listbox" aria-label="Jokes">
     <li class="active" role="option" id="item1">Puns</li>
@@ -111,6 +123,6 @@ Every `combobox` must have an accessible name. If using an {{HTMLElement('input'
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

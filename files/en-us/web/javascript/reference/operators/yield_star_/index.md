@@ -1,6 +1,7 @@
 ---
 title: yield*
 slug: Web/JavaScript/Reference/Operators/yield*
+page-type: javascript-operator
 tags:
   - ECMAScript 2015
   - Generators
@@ -12,9 +13,10 @@ tags:
   - Reference
 browser-compat: javascript.operators.yield_star
 ---
+
 {{jsSidebar("Operators")}}
 
-The **`yield*` expression** is used to
+The **`yield*`** operator is used to
 delegate to another {{jsxref("Statements/function*", "generator")}} or iterable
 object.
 
@@ -22,7 +24,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 yield* expression
 ```
 
@@ -74,10 +76,10 @@ of iterables (e.g., arrays, strings, or {{jsxref("Functions/arguments", "argumen
 objects).
 
 ```js
-function* g3() {
+function* g3(...args) {
   yield* [1, 2];
-  yield* '34';
-  yield* Array.from(arguments);
+  yield* "34";
+  yield* args;
 }
 
 const iterator = g3(5, 6);
@@ -91,19 +93,19 @@ console.log(iterator.next()); // {value: 6, done: false}
 console.log(iterator.next()); // {value: undefined, done: true}
 ```
 
-### The value of `yield*` expression itself
+### The value of yield\* expression itself
 
 `yield*` is an expression, not a statement—so it evaluates to a value.
 
 ```js
 function* g4() {
   yield* [1, 2, 3];
-  return 'foo';
+  return "foo";
 }
 
 function* g5() {
   const g4ReturnValue = yield* g4();
-  console.log(g4ReturnValue) // 'foo'
+  console.log(g4ReturnValue); // 'foo'
   return g4ReturnValue;
 }
 
@@ -127,5 +129,5 @@ console.log(iterator.next()); // {value: 'foo', done: true}
 
 - [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
-- {{jsxref("Operators/function*", "function* expression")}}
+- [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("Operators/yield", "yield")}}

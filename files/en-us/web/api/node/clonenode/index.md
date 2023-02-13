@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.cloneNode
 ---
+
 {{APIRef("DOM")}}
 
 The **`cloneNode()`** method of the {{domxref("Node")}} interface
@@ -33,9 +34,9 @@ To clone a node to insert into a _different_ document, use
 
 ## Syntax
 
-```js
-cloneNode();
-cloneNode(deep);
+```js-nolint
+cloneNode()
+cloneNode(deep)
 ```
 
 ### Parameters
@@ -49,7 +50,7 @@ cloneNode(deep);
     If `false`, only the node will be cloned.
     The subtree, including any text that the node contains, is not cloned.
 
-    Note that `deep` has no effect on empty elements,
+    Note that `deep` has no effect on {{glossary("void element", "void elements")}},
     such as the {{HTMLElement("img")}} and {{HTMLElement("input")}} elements.
 
 ### Return value

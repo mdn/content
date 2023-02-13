@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.deleteBuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.deleteBuffer()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) deletes a given
@@ -18,7 +19,7 @@ deleted. Normally you don't need to call this method yourself, when the buffer o
 
 ## Syntax
 
-```js
+```js-nolint
 deleteBuffer(buffer)
 ```
 

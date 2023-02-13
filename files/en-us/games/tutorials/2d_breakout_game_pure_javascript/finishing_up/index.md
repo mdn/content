@@ -10,6 +10,7 @@ tags:
   - lives
   - requestAnimationFrame
 ---
+
 {{GamesSidebar}}
 
 {{Previous("Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
@@ -23,16 +24,16 @@ There's always room for improvements in any game we write. For example, we can o
 Implementing lives is quite straightforward. Let's first add a variable to store the number of lives in the same place where we declared our other variables:
 
 ```js
-var lives = 3;
+let lives = 3;
 ```
 
 Drawing the life counter looks almost the same as drawing the score counter — add the following function to your code, below the `drawScore()` function:
 
 ```js
 function drawLives() {
-    ctx.font = "16px Arial";
-    ctx.fillStyle = "#0095DD";
-    ctx.fillText("Lives: "+lives, canvas.width-65, 20);
+  ctx.font = "16px Arial";
+  ctx.fillStyle = "#0095DD";
+  ctx.fillText(`Lives: ${lives}`, canvas.width - 65, 20);
 }
 ```
 
@@ -48,17 +49,16 @@ With this, we can add slightly more complex logic to it as given below:
 
 ```js
 lives--;
-if(!lives) {
-    alert("GAME OVER");
-    document.location.reload();
-    clearInterval(interval); // Needed for Chrome to end game
-}
-else {
-    x = canvas.width/2;
-    y = canvas.height-30;
-    dx = 2;
-    dy = -2;
-    paddleX = (canvas.width-paddleWidth)/2;
+if (!lives) {
+  alert("GAME OVER");
+  document.location.reload();
+  clearInterval(interval); // Needed for Chrome to end game
+} else {
+  x = canvas.width / 2;
+  y = canvas.height - 30;
+  dx = 2;
+  dy = -2;
+  paddleX = (canvas.width - paddleWidth) / 2;
 }
 ```
 
@@ -77,7 +77,7 @@ drawLives();
 Now let's work on something that is not connected to the game mechanics, but to the way it is being rendered. {{domxref("window.requestAnimationFrame", "requestAnimationFrame")}} helps the browser render the game better than the fixed frame rate we currently have implemented using {{domxref("setInterval()")}}. Replace the following line:
 
 ```js
-var interval = setInterval(draw, 10);
+const interval = setInterval(draw, 10);
 ```
 
 with:

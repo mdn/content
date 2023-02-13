@@ -12,6 +12,7 @@ tags:
   - shadow dom
 browser-compat: api.HTMLSlotElement.assignedElements
 ---
+
 {{APIRef("Shadow DOM API")}}
 
 The **`assignedElements()`** method of the {{domxref("HTMLSlotElement")}}
@@ -22,7 +23,7 @@ If the `flatten` option is set to `true`, it returns a sequence of both the elem
 
 ## Syntax
 
-```js
+```js-nolint
 assignedElements()
 assignedElements(options)
 ```

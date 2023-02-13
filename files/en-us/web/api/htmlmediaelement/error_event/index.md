@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.error_event
 ---
+
 {{APIRef}}
 
 The **`error`** event is fired when the resource could not be loaded due to an error (for example, a network connectivity problem).

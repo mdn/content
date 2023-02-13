@@ -10,9 +10,11 @@ tags:
   - Service Worker
   - Web Periodic Background Synchronization API
   - periodic sync
+  - Experimental
 browser-compat: api.PeriodicSyncEvent.tag
 ---
-{{DefaultAPISidebar("Periodic Background Sync")}}
+
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
 
 The **`tag`** read-only property of the
 {{domxref("PeriodicSyncEvent")}} interface returns the developer-defined identifier for

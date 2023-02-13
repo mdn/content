@@ -2,6 +2,7 @@
 title: FinalizationRegistry() constructor
 slug: >-
   Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
+page-type: javascript-constructor
 tags:
   - Constructor
   - FinalizationRegistry
@@ -9,15 +10,16 @@ tags:
   - Reference
 browser-compat: javascript.builtins.FinalizationRegistry.FinalizationRegistry
 ---
+
 {{JSRef}}
 
 The **`FinalizationRegistry`** constructor creates a {{jsxref("FinalizationRegistry")}} object that uses the given callback.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow callback function
-new FinalizationRegistry((heldValue) => { /* … */ } )
+new FinalizationRegistry((heldValue) => { /* … */ })
 
 // Callback function
 new FinalizationRegistry(callbackFn)
@@ -25,6 +27,8 @@ new FinalizationRegistry(callbackFn)
 // Inline callback function
 new FinalizationRegistry(function(heldValue) { /* … */ })
 ```
+
+> **Note:** `FinalizationRegistry()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

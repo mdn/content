@@ -12,6 +12,7 @@ tags:
   - lock
 browser-compat: api.ScreenOrientation.lock
 ---
+
 {{APIRef("Screen Orientation")}}
 
 The **`lock()`** property of the {{domxref("ScreenOrientation")}} interface locks the orientation of the containing document to the specified orientation.
@@ -21,13 +22,14 @@ If locking is supported, then it must work for all the parameter values listed b
 
 ## Syntax
 
-```js
+```js-nolint
 lock(orientation)
 ```
 
 ### Parameters
 
 - `orientation`
+
   - : An orientation lock type. One of the following:
 
     - `"any"`
@@ -47,11 +49,11 @@ lock(orientation)
     - `"portrait-secondary"`
       - : The secondary portrait orientation.
         If the natural orientation is a portrait mode, this will have an angle of 180 degrees (in other words, the device is upside down relative to its natural orientation).
-        If the natural orientation is a landscape mode, this can be either orientation as selected by the user agent: whichever was not selected for `landscape-primary`.
+        If the natural orientation is a landscape mode, this can be either orientation as selected by the user agent: whichever was not selected for `portrait-primary`.
     - `"landscape-primary"`
       - : The "primary" landscape mode.
         If the natural orientation is a landscape mode (screen width is greater than height), this will be the same as the natural orientation, and correspond to an angle of 0 degrees.
-        If the natural orientation is a portrait mode, then the user agent can choose either portrait orientation as the `landscape-primary` with an angle of either 90 or 270 degrees (`portrait-secondary` will be the other orientation and angle).
+        If the natural orientation is a portrait mode, then the user agent can choose either landscape orientation as the `landscape-primary` with an angle of either 90 or 270 degrees (`landscape-secondary` will be the other orientation and angle).
     - `"landscape-secondary"`
       - : The secondary landscape mode.
         If the natural orientation is a landscape mode, this orientation is upside down relative to the natural orientation, and will have an angle of 180 degrees.
@@ -66,9 +68,11 @@ A {{jsxref("Promise")}} that resolves after locking succeeds.
 The promise may be rejected with the following exceptions:
 
 - `NotSupportedError` {{domxref("DOMException")}}
+
   - : The user agent does not support locking the screen orientation.
 
 - `SecurityError` {{domxref("DOMException")}}
+
   - : The user-agent's pre-lock conditions are not met.
     For example, a browser may require that the top-level browsing context's `Document` is full screen.
     The promise may also be rejected with this error if the document has the sandboxed orientation lock browsing context flag set.
@@ -83,10 +87,10 @@ Note that this example will only work on mobile devices and other devices that s
 
 ```html
 <div id="example_container">
-<button id="fullscreen_button">Fullscreen</button>
-<button id="lock_button">Lock</button>
-<button id="unlock_button">Unlock</button>
-<textarea id="log" rows="7" cols="85"></textarea>
+  <button id="fullscreen_button">Fullscreen</button>
+  <button id="lock_button">Lock</button>
+  <button id="unlock_button">Unlock</button>
+  <textarea id="log" rows="7" cols="85"></textarea>
 </div>
 ```
 

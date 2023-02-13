@@ -1,6 +1,7 @@
 ---
 title: Date.prototype.setSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
+page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setSeconds
 ---
+
 {{JSRef}}
 
 The **`setSeconds()`** method sets the seconds for a specified
@@ -18,7 +20,7 @@ date according to local time.
 
 ## Syntax
 
-```js
+```js-nolint
 setSeconds(secondsValue)
 setSeconds(secondsValue, msValue)
 ```

@@ -15,11 +15,12 @@ tags:
   - conversion
 browser-compat: api.XMLSerializer
 ---
+
 {{APIRef("XMLSerializer")}}
 
 The `XMLSerializer` interface provides the {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} method to construct an XML string representing a {{Glossary("DOM")}} tree.
 
-## Methods
+## Instance methods
 
 - {{domxref("XMLSerializer.serializeToString", "serializeToString()")}}
   - : Returns the serialized subtree of a string.

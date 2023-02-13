@@ -12,7 +12,8 @@ tags:
   - Experimental
 browser-compat: api.XRRenderState.inlineVerticalFieldOfView
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`inlineVerticalFieldOfView`**
 property of the {{DOMxRef("XRRenderState")}} interface returns the default vertical

@@ -14,7 +14,8 @@ tags:
   - timeStamp
 browser-compat: api.DOMHighResTimestamp
 ---
-{{APIRef("High Resolution Time")}}
+
+{{APIRef("Performance API")}}
 
 The **`DOMHighResTimeStamp`** type is a `double` and is used to store a time value in milliseconds.
 
@@ -26,7 +27,7 @@ Further, if the device or operating system the user agent is running on doesn't 
 
 ## Reduced time precision
 
-To offer protection against timing attacks and fingerprinting, the precision of time stamps might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 20 µs in Firefox 59; in 60 it will be 2ms.
+To offer protection against timing attacks and fingerprinting, the precision of timestamps might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 20 µs in Firefox 59; in 60 it will be 2ms.
 
 ```js
 // reduced time precision (2ms) in Firefox 60
@@ -46,7 +47,7 @@ event.timeStamp;
 
 In Firefox, you can also enable `privacy.resistFingerprinting`, the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
 
-## Properties
+## Instance properties
 
 _This type has no properties. It is a double-precision floating-point value._
 
@@ -67,7 +68,7 @@ The **time origin** is a standard time which is considered to be the beginning o
 - If the script's global object is a {{domxref("WorkerGlobalScope")}} (that is, the script is running as a web worker), the time origin is the moment at which the worker was created.
 - In all other cases, the time origin is undefined.
 
-## Methods
+## Instance methods
 
 _This type has no methods._
 

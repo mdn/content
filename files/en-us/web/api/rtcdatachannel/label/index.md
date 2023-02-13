@@ -11,6 +11,7 @@ tags:
   - label
 browser-compat: api.RTCDataChannel.label
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only `RTCDataChannel` property **`label`**

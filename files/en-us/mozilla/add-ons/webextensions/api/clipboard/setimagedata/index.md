@@ -12,6 +12,7 @@ tags:
   - setImageData
 browser-compat: webextensions.api.clipboard.setImageData
 ---
+
 {{AddonSidebar()}}
 
 Copies an image to the clipboard. The image is re-encoded before it is written to the clipboard. If the image is invalid, the clipboard is not modified.
@@ -29,7 +30,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 browser.clipboard.setImageData(imageData, imageType)
 ```
 
@@ -57,9 +58,9 @@ Copy a remote image:
 // * the host permission for "https://cdn.mdn.mozilla.net/*"
 // * the API permission "clipboardWrite"
 
-fetch('https://cdn.mdn.mozilla.net/static/img/favicon144.png')
-.then((response) => response.arrayBuffer())
-.then((buffer) => browser.clipboard.setImageData(buffer, 'png'));
+fetch("https://cdn.mdn.mozilla.net/static/img/favicon144.png")
+  .then((response) => response.arrayBuffer())
+  .then((buffer) => browser.clipboard.setImageData(buffer, "png"));
 ```
 
 Copy an image that was bundled with the extension:
@@ -67,9 +68,9 @@ Copy an image that was bundled with the extension:
 ```js
 // requires the API permission "clipboardWrite"
 
-fetch(browser.runtime.getURL('image.png'))
-.then((response) => response.arrayBuffer())
-.then((buffer) => browser.clipboard.setImageData(buffer, 'png'));
+fetch(browser.runtime.getURL("image.png"))
+  .then((response) => response.arrayBuffer())
+  .then((buffer) => browser.clipboard.setImageData(buffer, "png"));
 ```
 
 {{WebExtExamples}}

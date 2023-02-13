@@ -1,6 +1,7 @@
 ---
 title: '<bdo>: The Bidirectional Text Override element'
 slug: Web/HTML/Element/bdo
+page-type: html-element
 tags:
   - BiDi
   - Bidirectional Text
@@ -22,13 +23,42 @@ tags:
 browser-compat: html.elements.bdo
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<bdo>`** [HTML](/en-US/docs/Web/HTML) element overrides the current directionality of text, so that the text within is rendered in a different direction.
 
 {{EmbedInteractiveExample("pages/tabbed/bdo.html", "tabbed-standard")}}
 
 The text's characters are drawn from the starting point in the given direction; the individual characters' orientation is not affected (so characters don't get drawn backward, for example).
+
+## Attributes
+
+This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+- {{htmlattrdef("dir")}}
+
+  - : The direction in which text should be rendered in this element's contents. Possible values are:
+
+    - `ltr`: Indicates that the text should go in a left-to-right direction.
+    - `rtl`: Indicates that the text should go in a right-to-left direction.
+
+## Examples
+
+```html
+<!-- Switch text direction -->
+<p>This text will go left to right.</p>
+<p><bdo dir="rtl">This text will go right to left.</bdo></p>
+```
+
+### Result
+
+{{EmbedLiveSample('Examples')}}
+
+## Notes
+
+The HTML 4 specification did not specify events for this element; they were added in XHTML. This is most likely an oversight.
+
+## Technical summary
 
 <table class="properties">
   <tbody>
@@ -95,34 +125,6 @@ The text's characters are drawn from the starting point in the given direction; 
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-- {{htmlattrdef("dir")}}
-
-  - : The direction in which text should be rendered in this element's contents. Possible values are:
-
-    - `ltr`: Indicates that the text should go in a left-to-right direction.
-    - `rtl`: Indicates that the text should go in a right-to-left direction.
-
-## Examples
-
-```html
-<!-- Switch text direction -->
-<p>This text will go left to right.</p>
-<p><bdo dir="rtl">This text will go right
-to left.</bdo></p>
-```
-
-### Result
-
-{{EmbedLiveSample('Examples')}}
-
-## Notes
-
-The HTML 4 specification did not specify events for this element; they were added in XHTML. This is most likely an oversight.
 
 ## Specifications
 

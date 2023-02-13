@@ -12,6 +12,7 @@ tags:
   - createDataChannel
 browser-compat: api.RTCPeerConnection.createDataChannel
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`createDataChannel()`** method
@@ -27,7 +28,7 @@ started by delivering a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "
 
 ## Syntax
 
-```js
+```js-nolint
 createDataChannel(label)
 createDataChannel(label, options)
 ```
@@ -129,10 +130,10 @@ This example shows how to create a data channel and set up handlers for the
 
 const pc = new RTCPeerConnection(options);
 const channel = pc.createDataChannel("chat");
-channel.onopen = function(event) {
+channel.onopen = (event) => {
   channel.send('Hi you!');
 }
-channel.onmessage = function(event) {
+channel.onmessage = (event) => {
   console.log(event.data);
 }
 ```
@@ -141,12 +142,12 @@ channel.onmessage = function(event) {
 // Answerer side
 
 const pc = new RTCPeerConnection(options);
-pc.ondatachannel = function(event) {
+pc.ondatachannel = (event) => {
   const channel = event.channel;
-    channel.onopen = function(event) {
+    channel.onopen = (event) => {
     channel.send('Hi back!');
   }
-  channel.onmessage = function(event) {
+  channel.onmessage = (event) => {
     console.log(event.data);
   }
 }
@@ -160,10 +161,10 @@ agreed-upon id (0 here):
 
 const pc = new RTCPeerConnection(options);
 const channel = pc.createDataChannel("chat", {negotiated: true, id: 0});
-channel.onopen = function(event) {
+channel.onopen = (event) => {
   channel.send('Hi!');
 }
-channel.onmessage = function(event) {
+channel.onmessage = (event) => {
   console.log(event.data);
 }
 ```

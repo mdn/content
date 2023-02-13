@@ -10,6 +10,7 @@ tags:
   - request
 browser-compat: api.Request.Request
 ---
+
 {{APIRef("Fetch API")}}
 
 The **`Request()`** constructor creates a new
@@ -17,7 +18,7 @@ The **`Request()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new Request(input)
 new Request(input, options)
 ```
@@ -28,8 +29,7 @@ new Request(input, options)
 
   - : Defines the resource that you wish to fetch. This can either be:
 
-    - A string containing the direct URL of the resource you want to
-      fetch.
+    - A string containing the URL of the resource you want to fetch. The URL may be relative to the base URL, which is the document's {{domxref("Node.baseURI", "baseURI")}} in a window context, or {{domxref("WorkerGlobalScope.location")}} in a worker context.
     - A {{domxref("Request")}} object, effectively creating a copy. Note the following
       behavioral updates to retain security while making the constructor less likely to
       throw exceptions:
@@ -73,24 +73,29 @@ new Request(input, options)
       - : A string specifying
         `no-referrer`, `client`, or a URL. The default is
         `about:client`.
+    - `referrerPolicy`
+      - : A string that changes how the referrer header is populated during certain actions (e.g., fetching subresources, prefetching, performing navigations).
     - `integrity`
       - : Contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity)
         value of the request (e.g.,
         `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+    - `keepalive`
+      - : A boolean that indicates whether to make a persistent connection for multiple requests/responses.
+    - `signal`
+      - : An [AbortSignal](/en-US/docs/Web/API/abortsignal) object which can be used to communicate with/abort a request.
 
-    If you construct a new `Request` from an existing `Request`, any options you set in the _init_ object for the new request replace any corresponding options set in the original `Request`. For example:
+    If you construct a new `Request` from an existing `Request`, any options you set in an _options_ argument for the new request replace any corresponding options set in the original `Request`. For example:
 
     ```js
     const oldRequest = new Request(
-      'https://github.com/mdn/content/issues/12959',
-      { headers: { 'From': 'webmaster@example.org' } },
+      "https://github.com/mdn/content/issues/12959",
+      { headers: { From: "webmaster@example.org" } }
     );
     oldRequest.headers.get("From"); // "webmaster@example.org"
-    const newRequest = new Request(
-      oldRequest,
-      { headers: { 'From': 'developer@example.org' } },
-    );
-    newRequest.headers.get('From'); // "developer@example.org"
+    const newRequest = new Request(oldRequest, {
+      headers: { From: "developer@example.org" },
+    });
+    newRequest.headers.get("From"); // "developer@example.org"
     ```
 
 ## Errors
@@ -116,7 +121,7 @@ new Request(input, options)
 
 ## Examples
 
-In our [Fetch Request example](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (see [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)) we
+In our [Fetch Request example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request) (see [Fetch Request live](https://mdn.github.io/dom-examples/fetch/fetch-request/)) we
 create a new `Request` object using the constructor, then fetch it using a
 {{domxref("fetch()")}} call. Since we are fetching an image, we run
 {{domxref("Response.blob")}} on the response to give it the proper MIME type so it will be
@@ -124,9 +129,9 @@ handled properly, then create an Object URL of it and display it in an
 {{htmlelement("img")}} element.
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest)
   .then((response) => response.blob())
@@ -136,30 +141,30 @@ fetch(myRequest)
   });
 ```
 
-In our [Fetch Request with init example](https://github.com/mdn/fetch-examples/tree/master/fetch-request-with-init) (see [Fetch Request init live](https://mdn.github.io/fetch-examples/fetch-request-with-init/)) we do the same thing except that we pass in an init object when we
+In our [Fetch Request with init example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-with-init-then-request) (see [Fetch Request init live](https://mdn.github.io/dom-examples/fetch/fetch-with-init-then-request/)) we do the same thing except that we pass in an _options_ object when we
 invoke `fetch()`:
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
 const myHeaders = new Headers();
-myHeaders.append('Content-Type', 'image/jpeg');
+myHeaders.append("Content-Type", "image/jpeg");
 
 const myOptions = {
-  method: 'GET',
+  method: "GET",
   headers: myHeaders,
-  mode: 'cors',
-  cache: 'default',
+  mode: "cors",
+  cache: "default",
 };
 
-const myRequest = new Request('flowers.jpg', myOptions);
+const myRequest = new Request("flowers.jpg", myOptions);
 
 fetch(myRequest).then((response) => {
   // ...
 });
 ```
 
-Note that you could also pass the init object into the `fetch` call to get
+Note that you could also pass `myOptions` into the `fetch` call to get
 the same effect, e.g.:
 
 ```js
@@ -168,19 +173,19 @@ fetch(myRequest, myOptions).then((response) => {
 });
 ```
 
-You can also use an object literal as `headers` in `init`.
+You can also use an object literal as `headers` in `myOptions`.
 
 ```js
 const myOptions = {
-  method: 'GET',
+  method: "GET",
   headers: {
-    'Content-Type': 'image/jpeg',
+    "Content-Type": "image/jpeg",
   },
-  mode: 'cors',
-  cache: 'default',
+  mode: "cors",
+  cache: "default",
 };
 
-const myRequest = new Request('flowers.jpg', myOptions);
+const myRequest = new Request("flowers.jpg", myOptions);
 ```
 
 You may also pass a {{domxref("Request")}} object to the `Request()`

@@ -11,6 +11,7 @@ tags:
   - Web Animations
 browser-compat: api.AnimationEvent.animationName
 ---
+
 {{APIRef("Web Animations API")}}
 
 The **`AnimationEvent.animationName`** read-only property is a

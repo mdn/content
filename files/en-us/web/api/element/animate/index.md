@@ -11,6 +11,7 @@ tags:
   - Web Animations
 browser-compat: api.Element.animate
 ---
+
 {{APIRef('Web Animations')}}
 
 The {{domxref("Element")}} interface's **`animate()`** method
@@ -23,7 +24,7 @@ object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 animate(keyframes, options)
 ```
 
@@ -40,6 +41,8 @@ animate(keyframes, options)
     - `id` {{optional_inline}}
       - : A property unique to `animate()`: a string
         with which to reference the animation.
+    - `timeline` {{optional_inline}}
+      - : A property unique to `animate()`: the {{domxref("AnimationTimeline")}} to associate with the animation. Defaults to {{domxref("Document.timeline")}}.
 
 ### Return value
 
@@ -54,13 +57,14 @@ In this example we use the `animate()` method to rotate and scale an element.
 #### HTML
 
 ```html
-<div class="newspaper">Spinning newspaper<br>causes dizziness</div>
+<div class="newspaper">Spinning newspaper<br />causes dizziness</div>
 ```
 
 #### CSS
 
 ```css
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -72,7 +76,7 @@ body {
 }
 
 .newspaper {
-  padding: .5rem;
+  padding: 0.5rem;
   text-transform: uppercase;
   text-align: center;
   background-color: white;

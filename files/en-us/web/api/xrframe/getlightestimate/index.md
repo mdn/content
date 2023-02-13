@@ -9,15 +9,17 @@ tags:
   - AR
   - XR
   - WebXR
+  - Experimental
 browser-compat: api.XRFrame.getLightEstimate
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`getLightEstimate()`** method of the {{domxref("XRFrame")}} interface returns an {{domxref("XRLightEstimate")}} object containing estimated lighting values for a given {{domxref("XRLightProbe")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getLightEstimate(lightProbe)
 ```
 

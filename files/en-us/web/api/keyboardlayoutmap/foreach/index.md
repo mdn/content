@@ -14,6 +14,7 @@ tags:
   - keyboard
 browser-compat: api.KeyboardLayoutMap.forEach
 ---
+
 {{APIRef("Keyboard API")}}{{SeeCompatTable}}
 
 The **`forEach()`** method of the
@@ -22,7 +23,7 @@ each element of the map.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 forEach((currentValue) => { /* … */ } )
 forEach((currentValue, index) => { /* … */ } )
@@ -35,7 +36,7 @@ forEach(callbackFn, thisArg)
 // Inline callback function
 forEach(function(currentValue) { /* … */ })
 forEach(function(currentValue, index) { /* … */ })
-forEach(function(currentValue, index, array){ /* … */ })
+forEach(function(currentValue, index, array) { /* … */ })
 forEach(function(currentValue, index, array) { /* … */ }, thisArg)
 ```
 
@@ -53,7 +54,7 @@ forEach(function(currentValue, index, array) { /* … */ }, thisArg)
       - : The KeyboardLayoutMap that `forEach()` is being called on.
 
 - `thisArg` {{Optional_inline}}
-  - : Value to use as **`this`** (i.e the reference
+  - : Value to use as **`this`** (i.e., the reference
     `Object`) when executing `callback`.
 
 ### Return value

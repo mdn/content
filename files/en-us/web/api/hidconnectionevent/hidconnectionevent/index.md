@@ -10,13 +10,14 @@ tags:
   - HIDConnectionEvent
 browser-compat: api.HIDConnectionEvent.HIDConnectionEvent
 ---
+
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`HIDConnectionEvent()`** constructor creates a new {{domxref("HIDConnectionEvent")}} object. Typically this constructor is not used as events are created when an input report is received.
 
 ## Syntax
 
-```js
+```js-nolint
 new HIDConnectionEvent(type, options)
 ```
 

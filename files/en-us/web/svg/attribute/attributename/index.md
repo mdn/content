@@ -1,12 +1,14 @@
 ---
 title: attributeName
 slug: Web/SVG/Attribute/attributeName
+page-type: svg-attribute
 tags:
   - NeedsCompatTable
   - SVG
   - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#AttributeNameAttribute
 ---
+
 {{SVGRef}}
 
 The **`attributeName`** attribute indicates the name of the CSS property or attribute of the target element that is going to be changed during an animation.
@@ -21,7 +23,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -29,8 +33,13 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
   <rect x="50" y="50" width="100" height="100">
-    <animate attributeType="XML" attributeName="y" from="0" to="50"
-        dur="5s" repeatCount="indefinite"/>
+    <animate
+      attributeType="XML"
+      attributeName="y"
+      from="0"
+      to="50"
+      dur="5s"
+      repeatCount="indefinite" />
   </rect>
 </svg>
 ```

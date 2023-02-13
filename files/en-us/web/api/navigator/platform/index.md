@@ -12,7 +12,8 @@ tags:
   - platform
 browser-compat: api.Navigator.platform
 ---
-{{ APIRef("HTML DOM") }}
+
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
 The **`platform`** property read-only property of the {{domxref("Navigator")}} interface returns a string identifying the platform on which the user's browser is running.
 

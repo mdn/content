@@ -2,11 +2,12 @@
 title: Firefox 78 for developers
 slug: Mozilla/Firefox/Releases/78
 tags:
-  - '78'
+  - "78"
   - Firefox
   - Mozilla
   - Releases
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 78 that will affect developers. Firefox 78 was released on June 30, 2020.

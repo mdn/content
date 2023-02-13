@@ -8,9 +8,10 @@ tags:
   - Numeric
   - Something
 ---
+
 {{WebAssemblySidebar}}
 
-The **`abs`** instructions, short for *absolute*, are used to get the absolute value of a number. That is, it returns x if x is positive, and the negation of x if x is negative.
+The **`abs`** instructions, short for _absolute_, are used to get the absolute value of a number. That is, it returns x if x is positive, and the negation of x if x is negative.
 
 {{EmbedInteractiveExample("pages/wat/abs.html", "tabbed-standard")}}
 

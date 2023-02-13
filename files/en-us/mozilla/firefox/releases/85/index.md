@@ -2,11 +2,12 @@
 title: Firefox 85 for developers
 slug: Mozilla/Firefox/Releases/85
 tags:
-  - '85'
+  - "85"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 85 that will affect developers. Firefox 85 was released on January 26, 2021.
@@ -21,7 +22,7 @@ This article provides information about the changes in Firefox 85 that will affe
 
 ### HTML
 
-- [`<link rel="preload">`](/en-US/docs/Web/HTML/Link_types/preload) is now enabled. ({{bug(1626997)}}).
+- [`<link rel="preload">`](/en-US/docs/Web/HTML/Attributes/rel/preload) is now enabled. ({{bug(1626997)}}).
 
 #### Removals
 
@@ -40,7 +41,7 @@ This article provides information about the changes in Firefox 85 that will affe
   // Old method
   let pinyin = new Intl.Collator(["zh-u-co-pinyin"]);
   // New method
-  let pinyin = new Intl.Collator("zh", {collation: "pinyin"});
+  let pinyin = new Intl.Collator("zh", { collation: "pinyin" });
   ```
 
 ### Plugins

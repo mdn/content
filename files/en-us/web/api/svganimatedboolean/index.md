@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedBoolean
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated boolean interface
@@ -49,7 +50,7 @@ The `SVGAnimatedBoolean` interface is used for attributes of type boolean which 
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 <table class="no-markdown">
   <thead>
@@ -80,7 +81,7 @@ The `SVGAnimatedBoolean` interface is used for attributes of type boolean which 
   </tbody>
 </table>
 
-## Methods
+## Instance methods
 
 The `SVGAnimatedBoolean` interface do not provide any specific methods.
 

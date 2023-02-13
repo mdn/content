@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: http.headers.Early-Data
 ---
+
 {{SeeCompatTable}}{{HTTPSidebar}}
 
 The **`Early-Data`** header is set by
@@ -35,13 +36,13 @@ request (i.e., a browser).
 
 ## Syntax
 
-```
+```http
 Early-Data: 1
 ```
 
 ## Examples
 
-```
+```http
 GET /resource HTTP/1.0
 Host: example.com
 Early-Data: 1

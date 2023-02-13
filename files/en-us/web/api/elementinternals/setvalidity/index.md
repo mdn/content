@@ -10,13 +10,14 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.setValidity
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`setValidity()`** method of the {{domxref("ElementInternals")}} interface sets the validity of the element.
 
 ## Syntax
 
-```js
+```js-nolint
 setValidity(flags)
 setValidity(flags, message)
 setValidity(flags, message, anchor)

@@ -1,6 +1,7 @@
 ---
 title: Symbol.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -9,13 +10,16 @@ tags:
   - Symbol
 browser-compat: javascript.builtins.Symbol.valueOf
 ---
+
 {{JSRef}}
 
 The **`valueOf()`** method returns the primitive value of a Symbol object.
 
+{{EmbedInteractiveExample("pages/js/symbol-prototype-valueof.html")}}
+
 ## Syntax
 
-```js
+```js-nolint
 valueOf()
 ```
 

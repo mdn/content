@@ -1,6 +1,7 @@
 ---
 title: counters()
 slug: Web/CSS/counters
+page-type: css-function
 tags:
   - CSS
   - CSS Counter
@@ -9,9 +10,14 @@ tags:
   - Reference
 browser-compat: css.types.counters
 ---
+
 {{CSSRef}}
 
 The **`counters()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) enables nested counters, returning a concatenated string representing the current values of the named counters, if there are any. The `counters()` function has two forms: `counters(name, string)` or `counters(name, string, style)`. It is generally used with [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), but can be used, theoretically, anywhere a [`<string>`](/en-US/docs/Web/CSS/string) value is supported. The generated text is the value of all counters with the given name, from outermost to innermost, separated by the specified string. The counters are rendered in the style indicated, defaulting to `decimal` if no style is specified.
+
+{{EmbedInteractiveExample("pages/tabbed/function-counters.html", "tabbed-standard")}}
+
+## Syntax
 
 ```css
 /* Simple usage  - style defaults to decimal */
@@ -22,12 +28,6 @@ counters(countername, '.', upper-roman)
 ```
 
 A [counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) has no visible effect by itself. The `counters()` function (and {{cssxref("counter", "counter()")}} function) is what makes it useful by returning developer defined content.
-
-> **Note:** The `counters()` function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental, and support for the type-or-unit parameter is sparse.
->
-> Check the [Browser compatibility table](#browser_compatibility) carefully before using this in production.
-
-## Syntax
 
 ### Values
 
@@ -51,25 +51,25 @@ A [counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) has no vi
 ```html
 <ol>
   <li>
-     <ol>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ol>
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
   </li>
   <li></li>
   <li></li>
   <li>
-     <ol>
-        <li></li>
-        <li>
-           <ol>
-              <li></li>
-              <li></li>
-              <li></li>
-           </ol>
-        </li>
-      </ol>
+    <ol>
+      <li></li>
+      <li>
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+      </li>
+    </ol>
   </li>
 </ol>
 ```
@@ -84,10 +84,14 @@ li {
   counter-increment: listCounter;
 }
 li::marker {
-   content:  counters(listCounter, '.', upper-roman) ') ';
+  content: counters(listCounter, ".", upper-roman) ") ";
 }
 li::before {
-  content:  counters(listCounter, ".") " == " counters(listCounter, ".", lower-roman) ;
+  content: counters(listCounter, ".") " == " counters(
+      listCounter,
+      ".",
+      lower-roman
+    );
 }
 ```
 
@@ -102,25 +106,25 @@ li::before {
 ```html
 <ol>
   <li>
-     <ol>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ol>
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
   </li>
   <li></li>
   <li></li>
   <li>
-     <ol>
-        <li></li>
-        <li>
-           <ol>
-              <li></li>
-              <li></li>
-              <li></li>
-           </ol>
-        </li>
-      </ol>
+    <ol>
+      <li></li>
+      <li>
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+      </li>
+    </ol>
   </li>
 </ol>
 ```
@@ -135,10 +139,14 @@ li {
   counter-increment: count;
 }
 li::marker {
-   content: counters(count, '.', upper-alpha) ') ';
+  content: counters(count, ".", upper-alpha) ") ";
 }
 li::before {
-  content: counters(count, ".", decimal-leading-zero) " == " counters(count, ".", lower-alpha);
+  content: counters(count, ".", decimal-leading-zero) " == " counters(
+      count,
+      ".",
+      lower-alpha
+    );
 }
 ```
 

@@ -11,6 +11,7 @@ tags:
   - createTextNode
 browser-compat: api.Document.createTextNode
 ---
+
 {{APIRef("DOM")}}
 
 Creates a new {{domxref("Text")}} node. This method can be used to escape HTML
@@ -18,7 +19,7 @@ characters.
 
 ## Syntax
 
-```js
+```js-nolint
 createTextNode(data)
 ```
 
@@ -36,27 +37,27 @@ A {{domxref("Text")}} node.
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>createTextNode example</title>
-<script>
-function addTextNode(text) {
-  const newtext = document.createTextNode(text);
-  const p1 = document.getElementById("p1");
+  <head>
+    <title>createTextNode example</title>
+    <script>
+      function addTextNode(text) {
+        const newtext = document.createTextNode(text);
+        const p1 = document.getElementById("p1");
 
-  p1.appendChild(newtext);
-}
-</script>
-</head>
+        p1.appendChild(newtext);
+      }
+    </script>
+  </head>
 
-<body>
-  <button onclick="addTextNode('YES! ');">YES!</button>
-  <button onclick="addTextNode('NO! ');">NO!</button>
-  <button onclick="addTextNode('WE CAN! ');">WE CAN!</button>
+  <body>
+    <button onclick="addTextNode('YES! ');">YES!</button>
+    <button onclick="addTextNode('NO! ');">NO!</button>
+    <button onclick="addTextNode('WE CAN! ');">WE CAN!</button>
 
-  <hr />
+    <hr />
 
-  <p id="p1">First line of paragraph.</p>
-</body>
+    <p id="p1">First line of paragraph.</p>
+  </body>
 </html>
 ```
 

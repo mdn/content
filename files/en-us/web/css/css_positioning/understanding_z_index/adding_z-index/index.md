@@ -1,6 +1,7 @@
 ---
 title: Using z-index
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
+page-type: guide
 tags:
   - Advanced
   - CSS
@@ -9,66 +10,56 @@ tags:
   - Understanding_CSS_z-index
   - z-index
 ---
+
 {{CSSRef}}
 
-The first part of this article, [Stacking without the z-index property](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index), explains how stacking is arranged by default. If you want to create a custom stacking order, you can use the {{cssxref("z-index")}} property on a [positioned](/en-US/docs/Web/CSS/position#types_of_positioning) element.
+The first article of this guide, [Stacking without the z-index property](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index), explains how stacking is arranged by default. If you want to create a custom stacking order, you can use the {{cssxref("z-index")}} property on a [positioned](/en-US/docs/Web/CSS/position#types_of_positioning) element.
 
-The `z-index` property can be specified with an integer value (positive, zero, or negative), which represents the position of the element along the z-axis. If you are not familiar with the z-axis, imagine the page as a stack of layers, each one having a number. Layers are rendered in numerical order, with larger numbers above smaller numbers.
+The `z-index` property can be specified with an integer value (positive, zero, or negative), which represents the position of the element along an imaginary z-axis. If you are not familiar with the term 'z-axis', imagine the page as a stack of layers, each one having a number. Layers are rendered in numerical order, with larger numbers above smaller numbers (_X_ represents an arbitrary positive integer):
 
-- bottom layer _(farthest from the observer)_
-- …
-- Layer -3
-- Layer -2
-- Layer -1
-- Layer 0 _(default rendering layer)_
-- Layer 1
-- Layer 2
-- Layer 3
-- …
-- top layer _(closest to the observer)_
+| Layer        | Description                           |
+| ------------ | ------------------------------------- |
+| Bottom layer | Farthest from the observer            |
+| Layer -X     | Layers with negative `z-index` values |
+| Layer 0      | Default rendering layer               |
+| Layer X      | Layers with positive `z-index` values |
+| Top layer    | Closest to the observer               |
 
 > **Note:**
 >
-> - When no `z-index` property is specified, elements are rendered on the default rendering layer 0 (zero).
+> - When no `z-index` property is specified, elements are rendered on the default rendering layer (Layer 0).
 > - If several elements share the same `z-index` value (i.e., they are placed on the same layer), stacking rules explained in the section [Stacking without the z-index property](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index) apply.
 
-In the following example, the layers' stacking order is rearranged using `z-index`. The `z-index` of element #5 has no effect since it is not a positioned element.
+## Example
 
-{{EmbedLiveSample("Source_code_for_the_example", 600, 400)}}
-
-## Source code for the example
+In this example, the layers' stacking order is rearranged using `z-index`. The `z-index` of DIV #5 has no effect since it is not a positioned element.
 
 ### HTML
 
 ```html
 <div id="abs1">
   <strong>DIV #1</strong>
-  <br />position: absolute;
-  <br />z-index: 5;
+  <br />position: absolute; <br />z-index: 5;
 </div>
 
 <div id="rel1">
   <strong>DIV #2</strong>
-  <br />position: relative;
-  <br />z-index: 3;
+  <br />position: relative; <br />z-index: 3;
 </div>
 
 <div id="rel2">
   <strong>DIV #3</strong>
-  <br />position: relative;
-  <br />z-index: 2;
+  <br />position: relative; <br />z-index: 2;
 </div>
 
 <div id="abs2">
   <strong>DIV #4</strong>
-  <br />position: absolute;
-  <br />z-index: 1;
+  <br />position: absolute; <br />z-index: 1;
 </div>
 
 <div id="sta1">
   <strong>DIV #5</strong>
-  <br />no positioning
-  <br />z-index: 8;
+  <br />no positioning <br />z-index: 8;
 </div>
 ```
 
@@ -136,6 +127,10 @@ strong {
   margin: 0px 50px 0px 50px;
 }
 ```
+
+## Result
+
+{{EmbedLiveSample("Example", 600, 400)}}
 
 ## See also
 

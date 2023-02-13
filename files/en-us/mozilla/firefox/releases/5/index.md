@@ -6,6 +6,7 @@ tags:
   - Firefox 5
   - Gecko 5.0
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provides links to information about the changes that affect developers in this release.
@@ -55,7 +56,7 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 ### JavaScript
 
 - Regular expressions are no longer callable as if they were functions; this change has been made in concert with the WebKit team to ensure compatibility (see {{ WebkitBug(28285) }}. This feature had existed for a long time but was never documented (at least, not here on MDC).
-- The [`Function.prototype.isGenerator()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/isGenerator) method is now supported; this lets you determine if a function is a [generator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generators.3a_a_better_way_to_build_iterators).
+- The [`Function.prototype.isGenerator()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/isGenerator) method is now supported; this lets you determine if a function is a [generator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generator_functions).
 - The following [reserved words](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) were previously only treated as reserved when in strict mode; now they're always treated as reserved: `class`, `enum`, `export`, `extends`, `import`, and `super`.
 - DOM documents created in chrome code may no longer be exposed to sandboxed scripts.
 - The JSON parser has been re-written for improved speed and compliance. This includes a fix for {{ bug("572279") }}.
@@ -68,7 +69,7 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 ### HTTP
 
 - Firefox no longer sends the `Keep-Alive` HTTP header; we weren't formatting it correctly, and it was redundant since we were also sending the {{ httpheader("Connection") }} or {{ httpheader("Proxy-Connection") }} header with the value "keep-alive" anyway.
-- The HTTP transaction model has been updated to be more intelligent about reusing connections in the persistent connection pool; instead of treating the pool as a {{ interwiki("wikipedia", "FIFO") }} queue, Necko now attempts to sort the pool with connections with the largest {{ interwiki("wikipedia", "congestion window") }} (CWND) first. This can reduce the round-trip time (RTT) of HTTP transactions by avoiding the need to grow connections' windows in many cases.
+- The HTTP transaction model has been updated to be more intelligent about reusing connections in the persistent connection pool; instead of treating the pool as a [FIFO](https://en.wikipedia.org/wiki/FIFO) queue, Necko now attempts to sort the pool with connections with the largest [congestion window](https://en.wikipedia.org/wiki/Congestion_window) (CWND) first. This can reduce the round-trip time (RTT) of HTTP transactions by avoiding the need to grow connections' windows in many cases.
 - Firefox now handles the `Content-Disposition` HTTP response header more effectively if both the `filename` and `filename*` parameters are provided; it looks through all provided names, using the `filename*` parameter if one is available, even if a `filename` parameter is included first. Previously, the first matching parameter would be used, thereby preventing a more appropriate name from being used. See {{ bug(588781) }}.
 
 ### MathML
@@ -123,7 +124,7 @@ The following interfaces were implementation details that are no longer needed:
 
 ### JavaScript API (SpiderMonkey)
 
-- [`JS_DoubleToInt32()`](/en-US/docs/SpiderMonkey/JSAPI_Reference/JS_DoubleToInt32) and [`JS_DoubleToUint32()`](/en-US/docs/SpiderMonkey/JSAPI_Reference/JS_DoubleToInt32) have been added, for converting [`jsdouble`](/en-US/docs/SpiderMonkey/JSAPI_Reference/jsdouble) values into C integers and unsigned integers.
+- [`JS_DoubleToInt32()`](/en-US/docs/SpiderMonkey/JSAPI_Reference/JS_DoubleToInt32) and [`JS_DoubleToUint32()`](/en-US/docs/SpiderMonkey/JSAPI_Reference/JS_DoubleToUint32) have been added, for converting [`jsdouble`](/en-US/docs/SpiderMonkey/JSAPI_Reference/jsdouble) values into C integers and unsigned integers.
 
 ### Build system changes
 

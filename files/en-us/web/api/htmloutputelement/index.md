@@ -9,13 +9,14 @@ tags:
   - Reference
 browser-compat: api.HTMLOutputElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLOutputElement`** interface provides properties and methods (beyond those inherited from {{domxref("HTMLElement")}}) for manipulating the layout and presentation of {{HTMLElement("output")}} elements.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -40,7 +41,7 @@ _This interface also inherits properties from its parent, {{domxref("HTMLElement
 - {{domxref("HTMLOutputElement.willValidate")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether the element is a candidate for constraint validation.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent, {{domxref("HTMLElement")}}._
 

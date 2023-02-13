@@ -17,6 +17,7 @@ tags:
   - sctpCauseCode
 browser-compat: api.RTCError.sctpCauseCode
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`sctpCauseCode`** property in an

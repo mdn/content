@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.compressedTexSubImage3D
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.compressedTexSubImage3D()`**
@@ -18,7 +19,7 @@ three-dimensional sub-rectangle for a texture image in a compressed format.
 
 ## Syntax
 
-```js
+```js-nolint
 compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, offset)
 
 compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, srcData)
@@ -38,7 +39,7 @@ compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height,
 
 - `level`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
-    level and level _n_ is the *n*th mipmap reduction level.
+    level and level _n_ is the n-th mipmap reduction level.
 - `xoffset`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the x offset within the compressed texture image.
 - `yoffset`

@@ -11,6 +11,7 @@ tags:
   - shadow dom
 browser-compat: api.ShadowRoot.mode
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`mode`** read-only property of the {{domxref("ShadowRoot")}}

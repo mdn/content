@@ -1,12 +1,14 @@
 ---
-title: 'SyntaxError: missing ; before statement'
+title: "SyntaxError: missing ; before statement"
 slug: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
+page-type: javascript-error
 tags:
   - Error
   - Errors
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing ; before statement" occurs when there is a semicolon (`;`)
@@ -16,7 +18,7 @@ You need to provide a semicolon, so that JavaScript can parse the source code co
 
 ## Message
 
-```js
+```
 SyntaxError: Expected ';' (Edge)
 SyntaxError: missing ; before statement (Firefox)
 ```
@@ -51,7 +53,7 @@ const foo = 'Tom's bar';
 
 You can use double quotes, or escape the apostrophe:
 
-```js example-good
+```js-nolint example-good
 const foo = "Tom's bar";
 // OR
 const foo = 'Tom\'s bar';
@@ -64,20 +66,20 @@ You **cannot** declare properties of an object or array with a
 
 ```js example-bad
 const obj = {};
-const obj.foo = 'hi'; // SyntaxError missing ; before statement
+const obj.foo = "hi"; // SyntaxError missing ; before statement
 
 const array = [];
-const array[0] = 'there'; // SyntaxError missing ; before statement
+const array[0] = "there"; // SyntaxError missing ; before statement
 ```
 
 Instead, omit the `var` keyword:
 
 ```js example-good
 const obj = {};
-obj.foo = 'hi';
+obj.foo = "hi";
 
 const array = [];
-array[0] = 'there';
+array[0] = "there";
 ```
 
 ### Bad keywords

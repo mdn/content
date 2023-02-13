@@ -1,6 +1,7 @@
 ---
 title: <footer>
 slug: Web/HTML/Element/footer
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -8,7 +9,8 @@ tags:
   - Reference
 browser-compat: html.elements.footer
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for its nearest ancestor [sectioning content](/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content) or [sectioning root](/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_root) element. A `<footer>` typically contains information about the author of the section, copyright data or links to related documents.
 
@@ -90,8 +92,8 @@ The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for 
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("presentation")}} or
-        {{ARIARole("none")}}
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> or
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
       </td>
     </tr>
     <tr>
@@ -115,8 +117,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ```html
 <footer>
-  Some copyright info or perhaps some author
-  info for an &lt;article&gt;?
+  Some copyright info or perhaps some author info for an &lt;article&gt;?
 </footer>
 ```
 

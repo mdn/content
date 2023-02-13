@@ -16,6 +16,7 @@ tags:
   - fromPoint
 browser-compat: api.DOMPointReadOnly.fromPoint
 ---
+
 {{APIRef("DOM")}}
 
 The static **{{domxref("DOMPointReadOnly")}}**
@@ -27,7 +28,7 @@ You can also create a new `DOMPointReadOnly` object using the
 
 ## Syntax
 
-```js
+```js-nolint
 fromPoint(sourcePoint)
 ```
 

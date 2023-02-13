@@ -14,7 +14,8 @@ tags:
   - mute
 browser-compat: api.MediaStreamTrack.mute_event
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The **`mute`** event is sent to a {{domxref("MediaStreamTrack")}} when the track's source is temporarily unable to provide media data.
 

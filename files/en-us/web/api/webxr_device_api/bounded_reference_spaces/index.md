@@ -12,6 +12,7 @@ tags:
   - XRBoundedReferenceSpace
   - space
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 Among the various reference spaces available in the WebXR set of APIs, the **`bounded-floor` reference space** is somewhat unique. Not only is it represented by a unique subclass, {{domxref("XRBoundedReferenceSpace")}}, but it's the only one which restricts movement based not upon virtual restrictions but upon limitations imposed by the real world. This article examines bounded reference spaces as represented by `XRBoundedReferenceSpace`, describing what they are and how they're used.
@@ -20,7 +21,7 @@ There are many uses for bounded reference spaces, including projects such as vir
 
 ## Introduction
 
-A bounded reference space is one which represents an XR environment in which the user is able to move around physically in the real world while being tracked by the XR hardware, with their movements being then transposed into the simulation. The boundaries established by the bounded reference space, then, represent the edges of the safely passable, tracked space in the user's real world environment that are available for their movement while in the simulation.
+A bounded reference space is one which represents an XR environment in which the user is able to move around physically in the real world while being tracked by the XR hardware, with their movements being then transposed into the simulation. The boundaries established by the bounded reference space, then, represent the edges of the safely passable, tracked space in the user's real-world environment that are available for their movement while in the simulation.
 
 ### Requirements
 
@@ -55,7 +56,7 @@ Note that the coordinates of the origin here, (0, 0), are indicative of the fact
 
 This boundary is maintained in the {{domxref("XRBoundedReferenceSpace")}} in the {{domxref("XRBoundedReferenceSpace")}} property {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}}. This property contains an array of {{domxref("DOMPointReadOnly")}} objects, each of which defines one of the points making up the space's border, moving around the room in clockwise order. Each vertex in the array has a `y` coordinate of 0 since the entire boundary is defined at floor level, extending upward to the ceiling or indefinitely. Each point's `w` is always 1 as well.
 
-The interior of the bounded area is always considered to be on the *right side* of the boundary. By listing the points in clockwise order, the boundary is placed inside the defined shape. If the points are listed counterclockwise it would suggest that the safe area lies *outside* the boundary, probably with undesirable results.
+The interior of the bounded area is always considered to be on the _right side_ of the boundary. By listing the points in clockwise order, the boundary is placed inside the defined shape. If the points are listed counterclockwise it would suggest that the safe area lies _outside_ the boundary, probably with undesirable results.
 
 You should consider including proactive checks for the user approaching the boundary. This is useful both for their safety (in case the boundary represents a physical obstacle of some nature) and to avoid possible conditions in which the accuracy is reduced near the boundaries. It's also useful because the user may be engrossed in gameplay or other activity, not realize they're approaching the boundary, and could become confused or distressed if they wander out of tracking range (especially if doing so causes them to lose a game).
 

@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Releases
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 35 was released on January 13th, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -47,7 +48,7 @@ Highlights:
   - `String(Symbol("1"))` now no longer throws a {{jsxref("TypeError")}}; instead a string (`"Symbol(1)"`) gets returned ({{bug(1058396)}}).
 
 - The various [_TypedArray_ constructors](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) now have as their `[[Prototype]]` a single function, denoted `%TypedArray%` in ES2015 (but otherwise not directly exposed). Each typed array prototype now inherits from `%TypedArray%.prototype`. (`%TypedArray%` and `%TypedArray%.prototype` inherit from [`Function.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) and [`Object.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object), respectively, so that typed array constructors and instances still have the properties found on those objects.) Typed array function properties now reside on `%TypedArray%.prototype` and work on any typed array. See [_TypedArray_](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#description) and {{bug(896116)}} for more information.
-- ES2015 semantics for [prototype mutations using object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_mutation) have been implemented ({{bug(1061853)}}).
+- ES2015 semantics for [prototype mutations using object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) have been implemented ({{bug(1061853)}}).
 
   - Now only a single member notated as `__proto__:value` will mutate the `[[Prototype]]` in the object literal syntax.
   - Method members like `__proto__() {}` will not overwrite the `[[Prototype]]` anymore.
@@ -69,7 +70,7 @@ Highlights:
 - The constructor of {{domxref("File")}} has been extended to match the specification ({{bug(1047483)}}).
 - An experimental implementation of `AbortablePromise`, a promise that can be aborted by a different entity that the one who created it, has been added. It is prefixed with `Moz` and controlled by the `dom.abortablepromise.enabled` property, defaulting to `false` ({{bug(1035060)}}).
 - The non-standard {{domxref("Navigator.mozIsLocallyAvailable")}} property has been removed ({{bug(1066826)}}).
-- The preference `network.websocket.enabled,` `true` by default, has been removed; [Websocket](/en-US/docs/Web/API/WebSockets_API) API cannot be deactivated anymore ({{bug(1091016)}}).
+- The preference `network.websocket.enabled`, `true` by default, has been removed; [Websocket](/en-US/docs/Web/API/WebSockets_API) API cannot be deactivated anymore ({{bug(1091016)}}).
 - The non-standard methods and properties of {{domxref("Crypto")}} have been removed ({{bug(1030963)}}). Only methods and properties defined in the standard WebCrypto API are left.
 - Our experimental implementation of WebGL 2.0 is going forward!
 

@@ -1,5 +1,5 @@
 ---
-title: 'CSP: object-src'
+title: "CSP: object-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/object-src
 tags:
   - CSP
@@ -13,6 +13,7 @@ tags:
   - source
 browser-compat: http.headers.Content-Security-Policy.object-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}}

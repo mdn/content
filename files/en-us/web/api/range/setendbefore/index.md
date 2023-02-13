@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.setEndBefore
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.setEndBefore()`** method sets the end position of
@@ -18,7 +19,7 @@ a `Range` relative to another {{domxref("Node")}}. The parent
 
 ## Syntax
 
-```js
+```js-nolint
 setEndBefore(referenceNode)
 ```
 

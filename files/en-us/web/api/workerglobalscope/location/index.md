@@ -11,6 +11,7 @@ tags:
   - WorkerGlobalScope
 browser-compat: api.WorkerGlobalScope.location
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`location`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.

@@ -11,6 +11,7 @@ tags:
   - Property
 browser-compat: api.Screen.availTop
 ---
+
 {{APIRef("CSSOM")}}{{Non-standard_Header}}
 
 Specifies the y-coordinate of the first pixel that is not allocated to permanent or

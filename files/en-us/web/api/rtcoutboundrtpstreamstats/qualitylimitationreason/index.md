@@ -18,6 +18,7 @@ tags:
   - stream
 browser-compat: api.RTCOutboundRtpStreamStats.qualityLimitationReason
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`qualityLimitationReason`**

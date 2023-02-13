@@ -1,6 +1,7 @@
 ---
 title: ID selectors
 slug: Web/CSS/ID_selectors
+page-type: css-selector
 tags:
   - CSS
   - Reference
@@ -8,6 +9,7 @@ tags:
   - Selectors
 browser-compat: css.selectors.id
 ---
+
 {{CSSRef}}
 
 The CSS **ID selector** matches an element based on the value of the element's [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute. In order for the element to be selected, its `id` attribute must match exactly the value given in the selector.

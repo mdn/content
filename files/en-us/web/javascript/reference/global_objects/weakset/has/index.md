@@ -1,6 +1,7 @@
 ---
 title: WeakSet.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - WeakSet
 browser-compat: javascript.builtins.WeakSet.has
 ---
+
 {{JSRef}}
 
 The **`has()`** method returns a boolean indicating whether an
@@ -18,7 +20,7 @@ object exists in a `WeakSet` or not.
 
 ## Syntax
 
-```js
+```js-nolint
 has(value)
 ```
 
@@ -42,8 +44,8 @@ const ws = new WeakSet();
 const obj = {};
 ws.add(window);
 
-ws.has(window);  // returns true
-ws.has(obj);     // returns false
+ws.has(window); // returns true
+ws.has(obj); // returns false
 ```
 
 ## Specifications

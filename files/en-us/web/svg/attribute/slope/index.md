@@ -1,12 +1,14 @@
 ---
 title: slope
 slug: Web/SVG/Attribute/slope
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG
   - SVGAttribute
 browser-compat: svg.elements.font-face.slope
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`slope`** attribute indicates the vertical stroke angle of a font.

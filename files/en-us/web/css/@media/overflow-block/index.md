@@ -1,14 +1,16 @@
 ---
 title: overflow-block
 slug: Web/CSS/@media/overflow-block
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference
   - media feature
 browser-compat: css.at-rules.media.overflow-block
 ---
+
 {{CSSRef}}
 
 The **`overflow-block`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test how the output device handles content that overflows the initial [containing block](/en-US/docs/Web/CSS/Containing_block) along the block axis.
@@ -31,7 +33,16 @@ The `overflow-block` feature is specified as a keyword value chosen from the lis
 ### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac turpis eleifend, fringilla velit ac, aliquam tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc velit erat, tempus id rutrum sed, dapibus ut urna. Integer vehicula nibh a justo imperdiet rutrum. Nam faucibus pretium orci imperdiet sollicitudin. Nunc id facilisis dui. Proin elementum et massa et feugiat. Integer rutrum ullamcorper eleifend. Proin sit amet tincidunt risus. Sed nec augue congue eros accumsan tincidunt sed eget ex.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac turpis
+  eleifend, fringilla velit ac, aliquam tellus. Vestibulum ante ipsum primis in
+  faucibus orci luctus et ultrices posuere cubilia Curae; Nunc velit erat,
+  tempus id rutrum sed, dapibus ut urna. Integer vehicula nibh a justo imperdiet
+  rutrum. Nam faucibus pretium orci imperdiet sollicitudin. Nunc id facilisis
+  dui. Proin elementum et massa et feugiat. Integer rutrum ullamcorper eleifend.
+  Proin sit amet tincidunt risus. Sed nec augue congue eros accumsan tincidunt
+  sed eget ex.
+</p>
 ```
 
 ### CSS

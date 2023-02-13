@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/at
+page-type: javascript-instance-method
 tags:
   - TypedArray
   - TypedArrays
@@ -12,6 +13,7 @@ tags:
   - at
 browser-compat: javascript.builtins.TypedArray.at
 ---
+
 {{JSRef}}
 
 The **`at()`** method takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.
@@ -22,14 +24,14 @@ This is not to suggest there is anything wrong with using the square bracket not
 
 ## Syntax
 
-```js
+```js-nolint
 at(index)
 ```
 
 ### Parameters
 
 - `index`
-  - : The index (position) of the array element to be returned. Supports relative indexing from the end of the array when passed a negative index. i.e. If a negative number is used the element returned will be found by counting back from the end of the array.
+  - : The index (position) of the array element to be returned. Supports relative indexing from the end of the array when passed a negative index; that is, if a negative number is used, the element returned will be found by counting back from the end of the array.
 
 ### Return value
 
@@ -50,7 +52,7 @@ function returnLast(arr) {
 }
 
 const lastItem = returnLast(uint8);
-console.log(lastItem); // Logs: 18
+console.log(lastItem); // 18
 ```
 
 ### Comparing methods
@@ -62,16 +64,16 @@ Here we compare different ways to select the penultimate (last but one) item of 
 const uint8 = new Uint8Array([1, 2, 4, 7, 11, 18]);
 
 // Using length property
-const lengthWay = uint8[uint8.length-2];
-console.log(lengthWay); // Logs: 11
+const lengthWay = uint8[uint8.length - 2];
+console.log(lengthWay); // 11
 
 // Using slice() method. Note an array is returned
 const sliceWay = uint8.slice(-2, -1);
-console.log(sliceWay[0]); // Logs: 11
+console.log(sliceWay[0]); // 11
 
 // Using at() method
 const atWay = uint8.at(-2);
-console.log(atWay); // Logs: 11
+console.log(atWay); // 11
 ```
 
 ## Specifications

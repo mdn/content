@@ -9,6 +9,7 @@ tags:
   - manifest.json
 browser-compat: webextensions.manifest.chrome_settings_overrides
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -188,7 +189,6 @@ This example shows how to set a search provider.
     "favicon_url": "https://www.discogs.com/favicon.ico"
   }
 }
-
 ```
 
 ## Browser compatibility

@@ -11,6 +11,7 @@ tags:
   - touch
 browser-compat: api.Touch.clientX
 ---
+
 {{ APIRef("Touch Events") }}
 
 The `Touch.clientX` read-only property returns the X coordinate of the touch
@@ -43,13 +44,13 @@ const src = document.getElementById("source");
 let clientX;
 let clientY;
 
-src.addEventListener('touchstart', function(e) {
+src.addEventListener('touchstart', (e) => {
   // Cache the client X/Y coordinates
   clientX = e.touches[0].clientX;
   clientY = e.touches[0].clientY;
 }, false);
 
-src.addEventListener('touchend', function(e) {
+src.addEventListener('touchend', (e) => {
   let deltaX;
   let deltaY;
 

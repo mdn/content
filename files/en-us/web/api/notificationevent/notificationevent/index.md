@@ -5,20 +5,20 @@ page-type: web-api-constructor
 tags:
   - API
   - Constructor
-  - Experimental
   - NotificationEvent
   - Reference
   - Service Workers
   - ServiceWorker
 browser-compat: api.NotificationEvent.NotificationEvent
 ---
+
 {{APIRef("Web Notifications")}}
 
 The **`NotificationEvent()`** constructor creates a new {{domxref("NotificationEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new NotificationEvent(type, options)
 ```
 

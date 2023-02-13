@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.origin
 ---
+
 {{APIRef("HTML DOM")}}
 
 The

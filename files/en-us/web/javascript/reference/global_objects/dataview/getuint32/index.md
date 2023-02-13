@@ -1,6 +1,7 @@
 ---
 title: DataView.prototype.getUint32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint32
+page-type: javascript-instance-method
 tags:
   - DataView
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.getUint32
 ---
+
 {{JSRef}}
 
 The **`getUint32()`** method gets an unsigned 32-bit integer
@@ -19,7 +21,7 @@ The **`getUint32()`** method gets an unsigned 32-bit integer
 
 ## Syntax
 
-```js
+```js-nolint
 getUint32(byteOffset)
 getUint32(byteOffset, littleEndian)
 ```

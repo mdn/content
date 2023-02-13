@@ -1,6 +1,7 @@
 ---
 title: Contribute a recipe
 slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
+page-type: guide
 tags:
   - CSS
   - Contribute
@@ -10,6 +11,7 @@ tags:
   - cookbook
   - recipes
 ---
+
 {{CSSRef}}
 
 If you would like to contribute an example for the Layout Cookbook, then this page explains the steps to take to have your example published.
@@ -26,13 +28,13 @@ A recipe consists of:
 2. A downloadable version of that example, also stored in the CSS Examples repo.
 3. A page in the [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) section of the site that details:
 
-    1. Requirements
-    2. The recipe
-    3. The choices made
-    4. Any useful fallbacks or alternative methods
-    5. Any accessibility concerns
-    6. Browser compatibility
-    7. Additional resources
+   1. Requirements
+   2. The recipe
+   3. The choices made
+   4. Any useful fallbacks or alternative methods
+   5. Any accessibility concerns
+   6. Browser compatibility
+   7. Additional resources
 
 ### 1. Build your pattern
 
@@ -56,7 +58,7 @@ You need to add the HTML for your component twice. First inside the section with
 
 Your editable CSS, from the second block in the head, also needs to be copied into the `playable-css` section.
 
-A simple worked example is [center.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/center.html), which is embedded on the page [Center an element](/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element). You can use this to see how to add the various bits correctly.
+A simple working example is [center.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/center.html), which is embedded on the page [Center an element](/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element). You can use this to see how to add the various bits correctly.
 
 If you have forked the repo and therefore have our CSS and JavaScript files alongside your example, if you open up your live example in the browser you should see everything working exactly as it will when included in a page.
 
@@ -76,7 +78,7 @@ Make a PR on the [CSS Examples repo](https://github.com/mdn/css-examples). This 
 
 ### 5. Create your page
 
-Once your example is merged you can create your page. You will need an MDN account to do so with [page creation permissions](/en-US/docs/MDN/Contribute/Howto/Create_and_edit_pages#getting_page_creation_permissions), and you can then create the page as a subpage of the CSS Cookbook page. [There is a template for Cookbook pages here](/en-US/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template).
+Once your example is merged you can create your page. You will need an MDN account to do so with [page creation permissions](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#getting_page_creation_permissions), and you can then create the page as a subpage of the CSS Cookbook page. [There is a template for Cookbook pages here](/en-US/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template).
 
 The template explains what should be part of each section, and you can refer to other cookbook examples for more help. If you click to edit any of those pages then you will be able to see things such as the macros used to embed compat data, and live examples.
 

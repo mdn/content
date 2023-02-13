@@ -6,9 +6,11 @@ tags:
   - NDEF
   - Reference
   - Web NFC
+  - Experimental
 browser-compat: api.NDEFRecord.data
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 The **`data`**
 property of the {{DOMxRef("NDEFRecord")}} interface returns a
@@ -16,7 +18,7 @@ property of the {{DOMxRef("NDEFRecord")}} interface returns a
 
 ## Syntax
 
-```js
+```js-nolint
 NDEFRecord.data
 ```
 
@@ -33,17 +35,17 @@ selecting a record based on its {{domxref("NDEFRecord.mediaType",
 
 ```js
 const ndef = new NDEFReader();
-  await ndef.scan();
-  ndef.onreading = (event) => {
-    const decoder = new TextDecoder();
-    for (const record of event.message.records) {
-      if (record.mediaType === "application/json") {
-        const json = JSON.parse(decoder.decode(record.data));
-        const article =/^[aeio]/i.test(json.title) ? "an" : "a";
-        console.log(`${json.name} is ${article} ${json.title}`);
-      }
+await ndef.scan();
+ndef.onreading = (event) => {
+  const decoder = new TextDecoder();
+  for (const record of event.message.records) {
+    if (record.mediaType === "application/json") {
+      const json = JSON.parse(decoder.decode(record.data));
+      const article = /^[aeio]/i.test(json.title) ? "an" : "a";
+      console.log(`${json.name} is ${article} ${json.title}`);
     }
-  };
+  }
+};
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: text-decoration-style
 slug: Web/CSS/text-decoration-style
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -10,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.text-decoration-style
 ---
+
 {{CSSRef}}
 
 The **`text-decoration-style`** [CSS](/en-US/docs/Web/CSS) property sets the style of the lines specified by {{ cssxref("text-decoration-line") }}. The style applies to all lines that are set with `text-decoration-line`.

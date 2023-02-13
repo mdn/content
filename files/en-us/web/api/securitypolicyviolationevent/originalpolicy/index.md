@@ -13,6 +13,7 @@ tags:
   - originalPolicy
 browser-compat: api.SecurityPolicyViolationEvent.originalPolicy
 ---
+
 {{HTTPSidebar}}
 
 The **`originalPolicy`** read-only property of the

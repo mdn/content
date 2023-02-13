@@ -11,6 +11,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.SecurityInfo
 ---
+
 {{AddonSidebar()}}
 
 An object describing the security properties of a particular web request. An object of this type is returned from the {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API.
@@ -65,6 +66,9 @@ Values of this type are objects. They contain the following properties:
     - "TLSv1.2"
     - "TLSv1.3"
     - "unknown" (if the version is not valid)
+
+- `secretKeyLength` {{optional_inline}}
+  - : `Number`. The length of the secret key in bits.
 
 - `signatureSchemeName` {{optional_inline}}
   - : `String`. If `state` is "secure" this describes the signature scheme used in this request.

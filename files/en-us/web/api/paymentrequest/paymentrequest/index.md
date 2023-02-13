@@ -13,6 +13,7 @@ tags:
   - payment
 browser-compat: api.PaymentRequest.PaymentRequest
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The **`PaymentRequest()`** constructor
@@ -21,7 +22,7 @@ process of generating, validating, and submitting a payment request.
 
 ## Syntax
 
-```js
+```js-nolint
 new PaymentRequest(methodData, details)
 new PaymentRequest(methodData, details, options)
 ```
@@ -113,6 +114,11 @@ new PaymentRequest(methodData, details, options)
 A new {{domxref("PaymentRequest")}} object, configured for use as configured by the
 input parameters.
 
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+
 ## Examples
 
 The following example shows minimal functionality and focuses instead on showing the
@@ -147,10 +153,10 @@ try {
   const request = new PaymentRequest(supportedInstruments, details, options);
   // Add event listeners here.
   // Call show() to trigger the browser's payment flow.
-  request.show().then(function(instrumentResponse) {
+  request.show().then((instrumentResponse) => {
     // Do something with the response from the UI.
   })
-  .catch(function(err) {
+  .catch((err) => {
     // Do something with the error from request.show().
   });
 } catch (e) {

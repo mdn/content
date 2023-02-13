@@ -1,5 +1,5 @@
 ---
-title: 'Blocked: Custom cookie permission'
+title: "Blocked: Custom cookie permission"
 slug: Web/Privacy/Storage_access_policy/Errors/CookieBlockedByPermission
 tags:
   - Cookies
@@ -8,6 +8,9 @@ tags:
   - storage access policy
   - tracking
 ---
+
+{{QuicklinksWithSubPages("Web/Privacy/Storage_access_policy/Errors")}}
+
 ## Message
 
 Firefox:

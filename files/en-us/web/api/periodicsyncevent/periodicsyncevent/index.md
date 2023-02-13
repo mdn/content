@@ -13,6 +13,7 @@ tags:
   - periodic sync
 browser-compat: api.PeriodicSyncEvent.PeriodicSyncEvent
 ---
+
 {{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
 
 The **`PeriodicSyncEvent()`** constructor
@@ -22,7 +23,7 @@ used. The browser creates these objects itself and provides them to
 
 ## Syntax
 
-```js
+```js-nolint
 new PeriodicSyncEvent(type, options)
 ```
 

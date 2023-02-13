@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/every
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -11,18 +12,19 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.every
 ---
+
 {{JSRef}}
 
 The **`every()`** method tests whether all elements in the
 typed array pass the test implemented by the provided function. This method has the same
-algorithm as {{jsxref("Array.prototype.every()")}}_._ _TypedArray_ is one
+algorithm as {{jsxref("Array.prototype.every()")}}. _TypedArray_ is one
 of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-every.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 every((element) => { /* ... */ } )
 every((element, index) => { /* ... */ } )
@@ -93,7 +95,7 @@ The following example tests whether all elements in the typed array are bigger t
 function isBigEnough(element, index, array) {
   return element >= 10;
 }
-new Uint8Array([12, 5, 8, 130, 44]).every(isBigEnough);   // false
+new Uint8Array([12, 5, 8, 130, 44]).every(isBigEnough); // false
 new Uint8Array([12, 54, 18, 130, 44]).every(isBigEnough); // true
 ```
 

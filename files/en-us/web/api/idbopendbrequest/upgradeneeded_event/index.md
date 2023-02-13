@@ -9,6 +9,7 @@ tags:
   - upgradeneeded
 browser-compat: api.IDBOpenDBRequest.upgradeneeded_event
 ---
+
 {{APIRef("IndexedDB")}}
 
 The `upgradeneeded` event is fired when an attempt was made to open a database with a version number higher than its current version.
@@ -35,9 +36,9 @@ An {{domxref("IDBVersionChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Also inherits properties from its parent, {{domxref("Event")}} interface._
 
-- {{ domxref("IDBVersionChangeEvent.oldVersion") }} {{readonlyInline}}
+- {{ domxref("IDBVersionChangeEvent.oldVersion") }} {{ReadOnlyInline}}
   - : Returns the old version of the database.
-- {{ domxref("IDBVersionChangeEvent.newVersion") }} {{readonlyInline}}
+- {{ domxref("IDBVersionChangeEvent.newVersion") }} {{ReadOnlyInline}}
   - : Returns the new version of the database.
 
 ## Examples

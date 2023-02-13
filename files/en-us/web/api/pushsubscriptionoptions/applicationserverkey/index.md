@@ -10,6 +10,7 @@ tags:
   - PushSubscriptionOptions
 browser-compat: api.PushSubscriptionOptions.applicationServerKey
 ---
+
 {{DefaultAPISidebar("Push API")}}
 
 The **`applicationServerKey`** read-only property of the {{domxref("PushSubscriptionOptions")}} interface contains the public key used by the push server.
@@ -22,10 +23,10 @@ A public key your push server uses to send messages to client apps via a push se
 
 In the example below the value of `applicationServerKey` is printed to the console.
 
-```css
-navigator.serviceWorker.ready.then(function(reg) {
-  reg.pushManager.getSubscription().then(function(subscription) {
-    let options = subscription.options;
+```js
+navigator.serviceWorker.ready.then((reg) => {
+  reg.pushManager.getSubscription().then((subscription) => {
+    const options = subscription.options;
     console.log(options.applicationServerKey); // the public key
   })
 });

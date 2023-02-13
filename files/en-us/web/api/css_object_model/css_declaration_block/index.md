@@ -10,6 +10,7 @@ tags:
   - Reference
 spec-urls: https://drafts.csswg.org/cssom/#css-declaration-blocks
 ---
+
 {{ APIRef("CSSOM") }}
 
 A **CSS declaration block** is an ordered collection of CSS properties and values. It is represented in the DOM as a {{domxref("CSSStyleDeclaration")}}.

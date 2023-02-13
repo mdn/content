@@ -1,6 +1,7 @@
 ---
 title: '<dfn>: The Definition element'
 slug: Web/HTML/Element/dfn
+page-type: html-element
 tags:
   - Definition
   - Definitions
@@ -14,70 +15,17 @@ tags:
 browser-compat: html.elements.dfn
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
-The **`<dfn>`** [HTML](/en-US/docs/Web/HTML) element is used to indicate the term being defined within the context of a definition phrase or sentence. The {{HTMLElement("p")}} element, the {{HTMLElement("dt")}}/{{HTMLElement("dd")}} pairing, or the {{HTMLElement("section")}} element which is the nearest ancestor of the `<dfn>` is considered to be the definition of the term.
+The **`<dfn>`** [HTML](/en-US/docs/Web/HTML) element is used to indicate the term being defined within the context of a definition phrase or sentence. The ancestor {{HTMLElement("p")}} element, the {{HTMLElement("dt")}}/{{HTMLElement("dd")}} pairing, or the nearest {{HTMLElement("section")}} ancestor of the `<dfn>` element, is considered to be the definition of the term.
 
 {{EmbedInteractiveExample("pages/tabbed/dfn.html", "tabbed-shorter")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >, palpable content.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >Phrasing content</a
-        >, but no {{HTMLElement("dfn")}} element must be a descendant.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>{{ARIARole("term")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>Any</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Attributes
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-In HTML5, the {{htmlattrxref("title")}} attribute has special meaning, as noted below.
+The {{htmlattrxref("title")}} attribute has special meaning, as noted below.
 
 ## Usage notes
 
@@ -136,17 +84,22 @@ To add links to the definitions, you create the link the same way you always do,
 used to indicate the term being defined within the context of a
 definition phrase or sentence.</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Graece
-donan, Latine voluptatem vocant. Confecta res esset. Duo Reges:
-constructio interrete. Scrupulum, inquam, abeunti; </p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Graece donan, Latine
+  voluptatem vocant. Confecta res esset. Duo Reges: constructio interrete.
+  Scrupulum, inquam, abeunti;
+</p>
 
-<p>Negare non possum. Dat enim intervalla et relaxat. Quonam modo?
-Equidem e Cn. Quid de Pythagora? In schola desinis. </p>
+<p>
+  Negare non possum. Dat enim intervalla et relaxat. Quonam modo? Equidem e Cn.
+  Quid de Pythagora? In schola desinis.
+</p>
 
-<p>Ubi ut eam caperet aut quando? Cur iustitia laudatur? Aperiendum
-est igitur, quid sit voluptas; Quid enim? Non est igitur voluptas
-bonum. Urgent tamen et nihil remittunt. Quid enim possumus hoc
-agere divinius? </p>
+<p>
+  Ubi ut eam caperet aut quando? Cur iustitia laudatur? Aperiendum est igitur,
+  quid sit voluptas; Quid enim? Non est igitur voluptas bonum. Urgent tamen et
+  nihil remittunt. Quid enim possumus hoc agere divinius?
+</p>
 
 <p>Because of all of that, we decided to use the
 <code><a href="#definition-dfn">&lt;dfn&gt;</a></code> element for
@@ -168,14 +121,17 @@ In some cases, you may wish to use an abbreviation for a term when defining it. 
 #### HTML
 
 ```html
-<p>The <dfn><abbr title="Hubble Space Telescope">HST</abbr></dfn>
-is among the most productive scientific instruments ever constructed.
-It has been in orbit for over 20 years, scanning the sky and
-returning data and photographs of unprecedented quality and
-detail.</p>
+<p>
+  The <dfn><abbr title="Hubble Space Telescope">HST</abbr></dfn> is among the
+  most productive scientific instruments ever constructed. It has been in orbit
+  for over 20 years, scanning the sky and returning data and photographs of
+  unprecedented quality and detail.
+</p>
 
-<p>Indeed, the <abbr title="Hubble Space Telescope">HST</abbr> has
-arguably done more to advance science than any device ever built.</p>
+<p>
+  Indeed, the <abbr title="Hubble Space Telescope">HST</abbr> has arguably done
+  more to advance science than any device ever built.
+</p>
 ```
 
 Note the `<abbr>` element nested inside the `<dfn>`. The former establishes that the term is an abbreviation ("HST") and specifies the full term ("Hubble Space Telescope") in its `title` attribute. The latter indicates that the abbreviated term represents a term being defined.
@@ -185,6 +141,61 @@ Note the `<abbr>` element nested inside the `<dfn>`. The former establishes that
 The output of the above code looks like this:
 
 {{EmbedLiveSample("Using_abbreviations_and_definitions_together", 650, 200)}}
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >Phrasing content</a
+        >, but no {{HTMLElement("dfn")}} element must be a descendant.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/term_role"><code>term</code></a></td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

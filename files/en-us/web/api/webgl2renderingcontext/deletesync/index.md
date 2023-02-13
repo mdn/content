@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.deleteSync
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.deleteSync()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) deletes a given
@@ -17,7 +18,7 @@ The **`WebGL2RenderingContext.deleteSync()`** method of the [WebGL 2 API](/en-US
 
 ## Syntax
 
-```js
+```js-nolint
 deleteSync(sync)
 ```
 

@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Document.applets
 ---
+
 {{APIRef("DOM")}} {{Deprecated_Header}}
 
 The **`applets`** property of the {{domxref("Document")}}

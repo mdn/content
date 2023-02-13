@@ -8,6 +8,7 @@ tags:
   - redirects
 browser-compat: http.status.308
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP)
@@ -27,7 +28,7 @@ incorrectly sometimes be changed to a {{HTTPMethod("GET")}} method.
 
 ## Status
 
-```
+```http
 308 Permanent Redirect
 ```
 

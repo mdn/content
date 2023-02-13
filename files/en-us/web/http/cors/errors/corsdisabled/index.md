@@ -1,5 +1,5 @@
 ---
-title: 'Reason: CORS disabled'
+title: "Reason: CORS disabled"
 slug: Web/HTTP/CORS/Errors/CORSDisabled
 tags:
   - Authentication
@@ -20,11 +20,12 @@ tags:
   - secure
   - troubleshooting
 ---
+
 {{HTTPSidebar}}
 
 ## Reason
 
-```
+```plain
 Reason: CORS disabled
 ```
 

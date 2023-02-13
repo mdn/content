@@ -8,6 +8,7 @@ tags:
   - Reference
   - Control flow
 ---
+
 {{WebAssemblySidebar}}
 
 **`return`** returns from a function.

@@ -12,6 +12,7 @@ tags:
   - wheel
 browser-compat: api.Element.wheel_event
 ---
+
 {{APIRef}}
 
 The **`wheel`** event fires when the user rotates a wheel button on a pointing device (typically a mouse).
@@ -32,7 +33,7 @@ onwheel = (event) => { };
 
 ## Event type
 
-An {{domxref("WheelEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("WheelEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("WheelEvent")}}
 

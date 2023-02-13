@@ -1,6 +1,7 @@
 ---
 title: scroll-snap-points-x
 slug: Web/CSS/scroll-snap-points-x
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -8,9 +9,11 @@ tags:
   - Deprecated
   - Reference
   - recipe:css-property
+  - Non-standard
 browser-compat: css.properties.scroll-snap-points-x
 ---
-{{CSSRef}}{{deprecated_header}}
+
+{{CSSRef}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`scroll-snap-points-x`** [CSS](/en-US/docs/Web/CSS) property defines the horizontal positioning of snap points within the content of the scroll container they are applied to.
 
@@ -42,7 +45,10 @@ scroll-snap-points-x: unset;
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+scroll-snap-points-x =
+  none | repeat( <length-percentage> )
+```
 
 ## Examples
 

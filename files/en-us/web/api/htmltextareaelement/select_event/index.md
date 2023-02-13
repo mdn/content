@@ -11,6 +11,7 @@ tags:
 browser-compat: api.HTMLTextAreaElement.select_event
 page-type: web-api-event
 ---
+
 {{APIRef}}
 
 The **`select`** event fires when some text has been selected.

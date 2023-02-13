@@ -6,15 +6,16 @@ tags:
   - API
   - CSS Typed Object Model API
   - CSSPositionValue
-  - Experimental
   - Houdini
   - Property
   - Reference
   - Deprecated
-  - 'y'
+  - Non-standard
+  - "y"
 browser-compat: api.CSSPositionValue.y
 ---
-{{deprecated_header}}{{APIRef("CSS Typed Object Model API")}}
+
+{{deprecated_header}}{{APIRef("CSS Typed Object Model API")}}{{Non-standard_header}}
 
 The **`y`** property of the
 {{domxref("CSSPositionValue")}} interface returns the item's position along the
@@ -30,10 +31,10 @@ The following example positions a container `<div>` 5 pixels from the
 top and 10 pixels from the left of the page.
 
 ```js
-let replaceEl = document.getElementById('container');
+let replaceEl = document.getElementById("container");
 let position = new CSSPositionValue(CSS.px(5), CSS.px(10));
 
-someDiv.attributeStyleMap.set('object-position', position);
+someDiv.attributeStyleMap.set("object-position", position);
 console.log(position.x.value, position.y.value);
 ```
 

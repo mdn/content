@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Navigator.appName
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 The value of the **`Navigator.appName`** property is always

@@ -14,7 +14,8 @@ tags:
   - length
 browser-compat: api.SourceBufferList.length
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+
+{{APIRef("Media Source Extensions")}}
 
 The **`length`** read-only property of the
 {{domxref("SourceBufferList")}} interface returns the number of

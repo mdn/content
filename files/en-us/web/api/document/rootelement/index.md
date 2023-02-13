@@ -13,6 +13,7 @@ tags:
   - root
 browser-compat: api.Document.rootElement
 ---
+
 {{ApiRef("DOM")}}{{Deprecated_header}}
 
 **`Document.rootElement`** returns the {{domxref("Element")}}

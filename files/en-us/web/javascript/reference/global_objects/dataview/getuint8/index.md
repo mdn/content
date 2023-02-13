@@ -1,6 +1,7 @@
 ---
 title: DataView.prototype.getUint8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint8
+page-type: javascript-instance-method
 tags:
   - DataView
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.getUint8
 ---
+
 {{JSRef}}
 
 The **`getUint8()`** method gets an unsigned 8-bit integer
@@ -19,7 +21,7 @@ The **`getUint8()`** method gets an unsigned 8-bit integer
 
 ## Syntax
 
-```js
+```js-nolint
 getUint8(byteOffset)
 ```
 

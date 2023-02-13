@@ -1,6 +1,7 @@
 ---
 title: padding-top
 slug: Web/CSS/padding-top
+page-type: css-property
 tags:
   - CSS
   - CSS Padding
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.padding-top
 ---
+
 {{CSSRef}}
 
 The **`padding-top`** [CSS](/en-US/docs/Web/CSS) property sets the height of the [padding area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#padding_area) on the top of an element.
@@ -62,8 +64,12 @@ The `padding-top` property is specified as a single value chosen from the list b
 ### Setting top padding using pixels and percentages
 
 ```css
-.content { padding-top: 5%; }
-.sidebox { padding-top: 10px; }
+.content {
+  padding-top: 5%;
+}
+.sidebox {
+  padding-top: 10px;
+}
 ```
 
 ## Specifications

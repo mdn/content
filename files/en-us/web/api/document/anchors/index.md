@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Document.anchors
 ---
+
 {{APIRef("DOM")}} {{Deprecated_Header}}
 
 The **`anchors`** read-only property of the
@@ -34,47 +35,42 @@ on the page:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<title>Test</title>
-<script>
-function init() {
-  const toc = document.getElementById("toc");
-  let i;
-  let li;
-  let newAnchor;
-  for (i = 0; i < document.anchors.length; i++) {
-    li = document.createElement("li");
-    newAnchor = document.createElement('a');
-    newAnchor.href = "#" + document.anchors[i].name;
-    newAnchor.textContent = document.anchors[i].text;
-    li.appendChild(newAnchor);
-    toc.appendChild(li);
-  }
-}
-</script>
-</head>
-<body onload="init()">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test</title>
+    <script>
+      function init() {
+        const toc = document.getElementById("toc");
+        for (const anchor of document.anchors) {
+          const li = document.createElement("li");
+          const newAnchor = document.createElement("a");
+          newAnchor.href = "#" + anchor.name;
+          newAnchor.textContent = anchor.text;
+          li.appendChild(newAnchor);
+          toc.appendChild(li);
+        }
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    <h1>Title</h1>
+    <h2><a name="contents">Contents</a></h2>
+    <ul id="toc"></ul>
 
-<h1>Title</h1>
-<h2><a name="contents">Contents</a></h2>
-<ul id="toc"></ul>
+    <h2><a name="plants">Plants</a></h2>
+    <ol>
+      <li>Apples</li>
+      <li>Oranges</li>
+      <li>Pears</li>
+    </ol>
 
-<h2><a name="plants">Plants</a></h2>
-<ol>
-  <li>Apples</li>
-  <li>Oranges</li>
-  <li>Pears</li>
-</ol>
-
-<h2><a name="veggies">Veggies</a></h2>
-<ol>
-  <li>Carrots</li>
-  <li>Celery</li>
-  <li>Beats</li>
-</ol>
-
-</body>
+    <h2><a name="veggies">Veggies</a></h2>
+    <ol>
+      <li>Carrots</li>
+      <li>Celery</li>
+      <li>Beats</li>
+    </ol>
+  </body>
 </html>
 ```
 

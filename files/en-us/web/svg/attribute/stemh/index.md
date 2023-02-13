@@ -1,12 +1,14 @@
 ---
 title: stemh
 slug: Web/SVG/Attribute/stemh
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG
   - SVG Attribute
 browser-compat: svg.elements.font-face.stemh
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`stemh`** attribute indicates the horizontal stem width of the font.

@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.buffer
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
+page-type: javascript-instance-accessor-property
 tags:
   - JavaScript
   - Property
@@ -9,6 +10,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.TypedArray.buffer
 ---
+
 {{JSRef}}
 
 The **`buffer`** accessor property represents the {{jsxref("ArrayBuffer")}} referenced by a _TypedArray_ at construction time.

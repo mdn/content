@@ -10,8 +10,10 @@ tags:
   - Reference
   - keyboard
   - unLock
+  - Experimental
 browser-compat: api.Keyboard.unlock
 ---
+
 {{APIRef("Keyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`unlock()`** method of the
@@ -20,7 +22,7 @@ The **`unlock()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 unlock()
 ```
 

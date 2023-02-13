@@ -9,9 +9,11 @@ tags:
   - Reference
   - Web Components
   - Deprecated
+  - Non-standard
 browser-compat: api.HTMLShadowElement.getDistributedNodes
 ---
-{{APIRef("Web Components")}}{{Deprecated_header}}
+
+{{APIRef("Web Components")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`HTMLShadowElement.getDistributedNodes()`** method
 returns a static {{domxref("NodeList")}} of the {{glossary("distributed nodes")}}

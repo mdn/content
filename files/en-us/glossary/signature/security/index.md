@@ -1,12 +1,13 @@
 ---
 title: Signature (security)
 slug: Glossary/Signature/Security
+page-type: glossary-definition
 tags:
   - Cryptography
-  - Glossary
   - Privacy
   - Security
 ---
+
 A **signature**, or _digital signature_, is a {{glossary("protocol")}} showing that a message is authentic.
 
 From the {{glossary("hash")}} of a given message, the **signing process** first generates a digital signature linked to the signing entity, using the entity's private {{glossary("key")}}.
@@ -22,5 +23,5 @@ Digital signatures rely on asymmetric cryptography, also known as [public-key cr
 
 ## See also
 
-- {{Interwiki("wikipedia", "Digital signature")}} on Wikipedia
+- [Digital signature](https://en.wikipedia.org/wiki/Digital_signature) on Wikipedia
 - See {{glossary("digest")}}, {{glossary("encryption")}}

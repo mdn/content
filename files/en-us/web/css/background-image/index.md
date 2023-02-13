@@ -1,6 +1,7 @@
 ---
 title: background-image
 slug: Web/CSS/background-image
+page-type: css-property
 tags:
   - CSS
   - CSS Background
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.background-image
 ---
+
 {{CSSRef}}
 
 The **`background-image`** [CSS](/en-US/docs/Web/CSS) property sets one or more background images on an element.
@@ -30,9 +32,11 @@ Each background image is specified either as the keyword `none` or as an {{cssxr
 To specify multiple background images, supply multiple values, separated by a comma:
 
 ```css
-background-image:
-  linear-gradient(to bottom, rgba(255,255,0,0.5), rgba(0,0,255,0.5)),
-  url('catfront.png');
+background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 0, 0.5),
+    rgba(0, 0, 255, 0.5)
+  ), url("catfront.png");
 
 /* Global values */
 background-image: inherit;
@@ -74,13 +78,9 @@ Note that the star image is partially transparent and is layered over the cat im
 
 ```html
 <div>
-  <p class="catsandstars">
-    This paragraph is full of cats<br />and stars.
-  </p>
+  <p class="catsandstars">This paragraph is full of cats<br />and stars.</p>
   <p>This paragraph is not.</p>
-  <p class="catsandstars">
-    Here are more cats for you.<br />Look at them!
-  </p>
+  <p class="catsandstars">Here are more cats for you.<br />Look at them!</p>
   <p>And no more.</p>
 </div>
 ```
@@ -90,20 +90,17 @@ Note that the star image is partially transparent and is layered over the cat im
 ```css
 p {
   font-size: 1.5em;
-  color: #FE7F88;
+  color: #fe7f88;
   background-image: none;
   background-color: transparent;
 }
 
 div {
-  background-image:
-      url("mdn_logo_only_color.png");
+  background-image: url("mdn_logo_only_color.png");
 }
 
 .catsandstars {
-  background-image:
-      url("startransparent.gif"),
-      url("catfront.png");
+  background-image: url("startransparent.gif"), url("catfront.png");
   background-color: transparent;
 }
 ```

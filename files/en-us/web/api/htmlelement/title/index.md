@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.title
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.title`** property

@@ -1,6 +1,7 @@
 ---
 title: padding-inline-end
 slug: Web/CSS/padding-inline-end
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property
@@ -11,6 +12,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.padding-inline-end
 ---
+
 {{CSSRef}}
 
 The **`padding-inline-end`** [CSS](/en-US/docs/Web/CSS) property defines the logical inline end padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation.
@@ -21,11 +23,11 @@ The **`padding-inline-end`** [CSS](/en-US/docs/Web/CSS) property defines the log
 
 ```css
 /* <length> values */
-padding-inline-end: 10px;     /* An absolute length */
-padding-inline-end: 1em;      /* A length relative to the text size */
+padding-inline-end: 10px; /* An absolute length */
+padding-inline-end: 1em; /* A length relative to the text size */
 
 /* <percentage> value */
-padding-inline-end: 5%;       /* A padding relative to the block container's width */
+padding-inline-end: 5%; /* A padding relative to the block container's width */
 
 /* Global values */
 padding-inline-end: inherit;
@@ -80,7 +82,7 @@ div {
 .exampleText {
   writing-mode: vertical-lr;
   padding-inline-end: 20px;
-  background-color: #C8C800;
+  background-color: #c8c800;
 }
 ```
 
@@ -98,5 +100,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - The mapped physical properties: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

@@ -8,6 +8,7 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechRecognition.end_event
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`end`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) {{domxref("SpeechRecognition")}} object is fired when the speech recognition service has disconnected.
@@ -33,7 +34,7 @@ You can use the `end` event in an [`addEventListener`](/en-US/docs/Web/API/Event
 ```js
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('end', function() {
+recognition.addEventListener('end', () => {
   console.log('Speech recognition service disconnected');
 });
 ```
@@ -41,7 +42,7 @@ recognition.addEventListener('end', function() {
 Or use the `onend` event handler property:
 
 ```js
-recognition.onend = function() {
+recognition.onend = () => {
   console.log('Speech recognition service disconnected');
 }
 ```

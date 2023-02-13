@@ -8,6 +8,7 @@ tags:
   - Read-only
 browser-compat: api.Event.target
 ---
+
 {{ApiRef("DOM")}}
 
 The read-only **`target`** property of the

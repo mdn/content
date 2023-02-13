@@ -1,6 +1,7 @@
 ---
-title: 'HTML attribute: step'
+title: "HTML attribute: step"
 slug: Web/HTML/Attributes/step
+page-type: html-attribute
 tags:
   - Attribute
   - Attributes
@@ -97,7 +98,7 @@ input:invalid {
 Then define an input with a minimum value of 7.2, omitting the step attribute, wherein it defaults to 1.
 
 ```html
-<input id="myNumber" name="myNumber" type="number" step="2" min="1.2">
+<input id="myNumber" name="myNumber" type="number" step="2" min="1.2" />
 ```
 
 Valid values include `1.2`, `3.2`, `5.2`, `7.2`, `9.2`, `11.2`, and so on. Integers and even numbers followed by .2 are not valid. As we included an invalid value, supporting browsers will show the value as invalid. The number spinner, if present, will only show valid float values of `1.2` and greater
@@ -125,7 +126,7 @@ Provide instructions to help users understand how to complete the form and use i
 - [`max`](/en-US/docs/Web/HTML/Attributes/max)
 - [`min`](/en-US/docs/Web/HTML/Attributes/min)
 - [Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
-- [Constraint validation API](/en-US/docs/Web/API/Constraint_validation)
+- [Form validation](/en-US/docs/Learn/Forms/Form_validation)
 - {{domxref('validityState.stepMismatch')}}
 - {{cssxref(':out-of-range')}}
 - {{htmlelement('input')}}

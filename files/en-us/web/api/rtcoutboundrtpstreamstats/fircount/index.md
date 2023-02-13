@@ -20,6 +20,7 @@ tags:
   - firCount
 browser-compat: api.RTCOutboundRtpStreamStats.firCount
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`firCount`** property of the

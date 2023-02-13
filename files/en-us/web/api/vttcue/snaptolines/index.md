@@ -10,6 +10,7 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.snapToLines
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`snapToLines`** property of the {{domxref("VTTCue")}} interface is a {{jsxref("Boolean")}} indicating if the {{domxref("VTTCue.line")}} property is an integer number of lines, or a percentage of the video size.

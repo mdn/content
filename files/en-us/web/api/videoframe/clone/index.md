@@ -8,15 +8,17 @@ tags:
   - Reference
   - clone
   - VideoFrame
+  - Experimental
 browser-compat: api.VideoFrame.clone
 ---
-{{DefaultAPISidebar("Web Codecs API")}}
+
+{{APIRef("Web Codecs API")}}{{SeeCompatTable}}
 
 The **`clone()`** method of the {{domxref("VideoFrame")}} interface creates a new `VideoFrame` object with reference to the same media resource as the original.
 
 ## Syntax
 
-```js
+```js-nolint
 clone()
 ```
 

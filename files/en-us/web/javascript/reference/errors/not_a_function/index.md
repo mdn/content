@@ -1,12 +1,14 @@
 ---
 title: 'TypeError: "x" is not a function'
 slug: Web/JavaScript/Reference/Errors/Not_a_function
+page-type: javascript-error
 tags:
   - Error
   - Errors
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "is not a function" occurs when there was an attempt to call a
@@ -52,14 +54,14 @@ provide a function in order to have these methods working properly:
 In this case, which happens way too often, there is a typo in the method name:
 
 ```js example-bad
-const x = document.getElementByID('foo');
+const x = document.getElementByID("foo");
 // TypeError: document.getElementByID is not a function
 ```
 
 The correct function name is `getElementById`:
 
 ```js example-good
-const x = document.getElementById('foo');
+const x = document.getElementById("foo");
 ```
 
 ### Function called on the wrong object
@@ -85,9 +87,7 @@ const numbers = [1, 4, 9];
 
 numbers.map(function (num) {
   return num * 2;
-});
-
-// Array [2, 8, 18]
+}); // [2, 8, 18]
 ```
 
 ### Function shares a name with a pre-existing property
@@ -97,16 +97,16 @@ name. Upon calling the function, the compiler thinks that the function ceases to
 
 ```js example-bad
 function Dog() {
- this.age = 11;
- this.color = "black";
- this.name = "Ralph";
- return this;
+  this.age = 11;
+  this.color = "black";
+  this.name = "Ralph";
+  return this;
 }
 
 Dog.prototype.name = function (name) {
- this.name = name;
- return this;
-}
+  this.name = name;
+  return this;
+};
 
 const myNewDog = new Dog();
 myNewDog.name("Cassidy"); //Uncaught TypeError: myNewDog.name is not a function
@@ -116,16 +116,16 @@ Use a different property name instead:
 
 ```js example-good
 function Dog() {
- this.age = 11;
- this.color = "black";
- this.dogName = "Ralph"; //Using this.dogName instead of .name
- return this;
+  this.age = 11;
+  this.color = "black";
+  this.dogName = "Ralph"; //Using this.dogName instead of .name
+  return this;
 }
 
 Dog.prototype.name = function (name) {
- this.dogName = name;
- return this;
-}
+  this.dogName = name;
+  return this;
+};
 
 const myNewDog = new Dog();
 myNewDog.name("Cassidy"); //Dog { age: 11, color: 'black', dogName: 'Cassidy' }
@@ -139,16 +139,16 @@ Using the latter will throw an error:
 
 ```js example-bad
 const sixteen = 2(3 + 5);
-alert('2 x (3 + 5) is ' + String(sixteen));
-//Uncaught TypeError: 2 is not a function
+console.log(`2 x (3 + 5) is ${sixteen}`);
+// Uncaught TypeError: 2 is not a function
 ```
 
 You can correct the code by adding a `*` operator:
 
 ```js example-good
 const sixteen = 2 * (3 + 5);
-alert('2 x (3 + 5) is ' + String(sixteen));
-//2 x (3 + 5) is 16
+console.log(`2 x (3 + 5) is ${sixteen}`);
+// 2 x (3 + 5) is 16
 ```
 
 ### Import the exported module correctly
@@ -158,7 +158,7 @@ Ensure you are importing the module correctly.
 An example helpers library (`helpers.js`)
 
 ```js
-const helpers = function () { };
+const helpers = function () {};
 
 helpers.groupBy = function (objectArray, property) {
   return objectArray.reduce((acc, obj) => {
@@ -167,7 +167,7 @@ helpers.groupBy = function (objectArray, property) {
     acc[key].push(obj);
     return acc;
   }, {});
-}
+};
 
 export default helpers;
 ```
@@ -175,7 +175,7 @@ export default helpers;
 The correct import usage (`App.js`):
 
 ```js
-import helpers from './helpers';
+import helpers from "./helpers";
 ```
 
 ## See also

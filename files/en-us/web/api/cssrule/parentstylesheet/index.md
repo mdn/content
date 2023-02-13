@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CSSRule.parentStyleSheet
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`parentStyleSheet`** property of the
@@ -23,8 +24,8 @@ A {{domxref("StyleSheet")}} object.
 ## Examples
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules.parentStyleSheet);
+const docRules = document.styleSheets[0].cssRules;
+console.log(docRules[0].parentStyleSheet == document.styleSheets[0]); // returns true
 ```
 
 ## Specifications

@@ -14,6 +14,7 @@ tags:
   - Worklet
 browser-compat: api.BaseAudioContext.audioWorklet
 ---
+
 {{ APIRef("Web Audio API") }}{{securecontext_header}}
 
 The `audioWorklet` read-only property of the

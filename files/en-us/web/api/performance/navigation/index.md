@@ -14,7 +14,8 @@ tags:
   - legacy
 browser-compat: api.Performance.navigation
 ---
-{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
+
+{{APIRef("Performance API")}}{{Deprecated_Header}}
 
 The legacy
 **`Performance.navigation`**

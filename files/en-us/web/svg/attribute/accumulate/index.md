@@ -1,6 +1,7 @@
 ---
 title: accumulate
 slug: Web/SVG/Attribute/accumulate
+page-type: svg-attribute
 tags:
   - NeedsCompatTable
   - NeedsExample
@@ -8,6 +9,7 @@ tags:
   - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#AccumulateAttribute
 ---
+
 {{SVGRef}}
 
 The **`accumulate`** attribute controls whether or not an animation is cumulative.

@@ -15,6 +15,7 @@ tags:
   - 'y'
 browser-compat: api.DOMPoint.y
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPoint`** interface's

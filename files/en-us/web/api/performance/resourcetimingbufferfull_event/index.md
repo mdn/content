@@ -1,5 +1,5 @@
 ---
-title: 'Performance: resourcetimingbufferfull event'
+title: "Performance: resourcetimingbufferfull event"
 slug: Web/API/Performance/resourcetimingbufferfull_event
 page-type: web-api-event
 tags:
@@ -12,7 +12,8 @@ tags:
   - onresourcetimingbufferfull
 browser-compat: api.Performance.resourcetimingbufferfull_event
 ---
-{{APIRef}}
+
+{{APIRef("Performance API")}}
 
 The `resourcetimingbufferfull` event is fired when the browser's [resource timing buffer](/en-US/docs/Web/API/Performance/setResourceTimingBufferSize) is full.
 
@@ -21,9 +22,9 @@ The `resourcetimingbufferfull` event is fired when the browser's [resource timin
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('resourcetimingbufferfull', (event) => { });
+addEventListener("resourcetimingbufferfull", (event) => {});
 
-onresourcetimingbufferfull = (event) => { };
+onresourcetimingbufferfull = (event) => {};
 ```
 
 ## Event type
@@ -32,27 +33,22 @@ A generic {{domxref("Event")}}.
 
 ## Examples
 
-The following example sets a callback function on the `onresourcetimingbufferfull` property.
+### Increasing size when buffer is full
+
+The following example listens for the `resourcetimingbufferfull` event and increases the buffer size using the {{domxref("Performance.setResourceTimingBufferSize", "setResourceTimingBufferSize()")}} method.
 
 ```js
-function buffer_full(event) {
-  console.log("WARNING: Resource Timing Buffer is FULL!");
-  performance.setResourceTimingBufferSize(200);
+function increaseFilledBufferSize(event) {
+  console.log(
+    "WARNING: Resource Timing Buffer is FULL! Increasing buffer size to 500."
+  );
+  performance.setResourceTimingBufferSize(500);
 }
-function init() {
-  // Set a callback if the resource buffer becomes filled
-  performance.onresourcetimingbufferfull = buffer_full;
-}
-```
 
-```html
-<body onload="init()">
-```
-
-Note that you could also set up the handler using the addEventListener() function:
-
-```js
-performance.addEventListener('resourcetimingbufferfull', buffer_full);
+performance.addEventListener(
+  "resourcetimingbufferfull",
+  increaseFilledBufferSize
+);
 ```
 
 ## Specifications
@@ -65,5 +61,5 @@ performance.addEventListener('resourcetimingbufferfull', buffer_full);
 
 ## See also
 
-- {{domxref("Performance.clearResourceTimings","Performance.clearResourceTimings()")}}
-- {{domxref("Performance.setResourceTimingBufferSize","Performance.setResourceTimingBufferSize()")}}
+- {{domxref("Performance.clearResourceTimings()")}}
+- {{domxref("Performance.setResourceTimingBufferSize()")}}

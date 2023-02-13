@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.textContent
 ---
+
 {{APIRef("DOM")}}
 
 The **`textContent`** property of the {{domxref ("Node")}}

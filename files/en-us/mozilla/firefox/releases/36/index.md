@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/36
 tags:
   - Firefox
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 36 was released on February 24th, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -41,7 +42,7 @@ Highlights:
 ### HTML
 
 - Support for [`<meta name="referrer">`](/en-US/docs/Web/HTML/Element/meta) has been added ({{bug(704320)}}).
-- In Firefox, {{HTMLElement("input")}} filters specified in the {{htmlattrxref("accept", "input")}} attribute will always be selected by default, unless there is a unknown value, that is an unknown mime type or badly formatted value in the {{htmlattrxref("accept", "input")}} attribute. Previously specified filters were only selected by default for `image/*`,`video/*` and `audio/*` values ({{bug(826185)}}).
+- In Firefox, {{HTMLElement("input")}} filters specified in the {{htmlattrxref("accept", "input")}} attribute will always be selected by default, unless there is an unknown value, that is an unknown mime type or badly formatted value in the {{htmlattrxref("accept", "input")}} attribute. Previously specified filters were only selected by default for `image/*`, `video/*` and `audio/*` values ({{bug(826185)}}).
 
 ### JavaScript
 
@@ -88,7 +89,7 @@ Highlights:
 - The non-standard `DOMRequest` interface has now a `DOMRequest.then()` method ({{bug(839838)}}).
 - The CSSOM View scroll behavior controlling methods, {{domxref("Element.scroll()")}}, {{domxref("Element.scrollTo()")}}, {{domxref("Element.scrollBy()")}}, and {{domxref("Element.scrollIntoView()")}}, have been implemented or extended ({{bug(1045754)}} and {{bug(1087559)}}).
 - Assigning to {{domxref("Element.innerHTML")}} on an {{domxref("SVGElement")}} now create elements in the SVG namespace ({{bug(886390)}}).
-- The `nsIWebBrowserPersist.saveURI()`>) method now requires 8 arguments, in an order incompatible with previous releases.
+- The `nsIWebBrowserPersist.saveURI()` method now requires 8 arguments, in an order incompatible with previous releases.
 - Support for Media Source Extensions (MSE) is activated by default in non-build releases (Nightly and Developer Edition only) ({{bug(1000686)}}). It keeps being preffed off on Beta and Release version.
 
 ### MathML
@@ -125,7 +126,10 @@ _No change._
 - Implemented global `require` function to access sdk modules anywhere ({{bug(1070927)}}), using:
 
   ```js
-  var { require } = Cu.import("resource://gre/modules/commonjs/toolkit/require.js", {});
+  var { require } = Cu.import(
+    "resource://gre/modules/commonjs/toolkit/require.js",
+    {}
+  );
   ```
 
 #### Details

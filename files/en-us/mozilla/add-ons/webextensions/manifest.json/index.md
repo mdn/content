@@ -9,6 +9,7 @@ tags:
   - manifest.json
 browser-compat: webextensions.manifest
 ---
+
 {{AddonSidebar}}
 
 > **Note:** This article describes manifest.json for web extensions. If you are looking for information about the manifest.json in PWAs, check out the [Web App Manifest](/en-US/docs/Web/Manifest) article.

@@ -6,15 +6,16 @@ tags:
   - Firefox 3
   - Firefox 3.5
 ---
+
 {{FirefoxSidebar}}
 
-Although support for color correction was introduced in Firefox 3, it was disabled by default, requiring some tinkering about in the about:config window to enable it.  Firefox 3.5 addresses the issues that caused it be disabled by default in the previous version, and now images with [International Color Consortium](https://www.color.org/index.xalter) (ICC) tagging are, by default, color corrected.
+Although support for color correction was introduced in Firefox 3, it was disabled by default, requiring some tinkering about in the about:config window to enable it. Firefox 3.5 addresses the issues that caused it be disabled by default in the previous version, and now images with [International Color Consortium](https://www.color.org/index.xalter) (ICC) tagging are, by default, color corrected.
 
 The image below is split into three sections. The top left corner shows the image as rendered by Firefox 2. The top right corner shows how the image renders in Firefox 3. The bottom shows the image rendered in Photoshop.
 
-![](iccsample.jpg)
+![A purple flower as rendered by Firefox 2, Firefox 3, and Photoshop.](iccsample.jpg)
 
-As you can see, Firefox 3 and Photoshop render the image identically, because both support the embedded color correction profile.  Firefox 2 ignores the profile, resulting in mismatched color.
+As you can see, Firefox 3 and Photoshop render the image identically, because both support the embedded color correction profile. Firefox 2 ignores the profile, resulting in mismatched color.
 
 ## Configuring color correction
 
@@ -56,7 +57,7 @@ If no path is specified for the color profile, Firefox queries the operating sys
 
 ### Specifying a default rendering intent
 
-In addition, you can choose to set the value of the `gfx.color_management.rendering_intent` preference to specify a default rendering intent.  By default, the intent specified by images is ignored, unless you specify -1 for this value.
+In addition, you can choose to set the value of the `gfx.color_management.rendering_intent` preference to specify a default rendering intent. By default, the intent specified by images is ignored, unless you specify -1 for this value.
 
 The following table lists the possible values.
 

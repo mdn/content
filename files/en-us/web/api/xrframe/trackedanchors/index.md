@@ -10,9 +10,11 @@ tags:
   - VR
   - XR
   - WebXR
+  - Experimental
 browser-compat: api.XRFrame.trackedAnchors
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`trackedAnchor`** property of the {{domxref("XRFrame")}} interface returns an {{domxref("XRAnchorSet")}} object containing all anchors still tracked in the frame.
 

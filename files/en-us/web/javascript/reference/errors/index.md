@@ -1,6 +1,7 @@
 ---
 title: JavaScript error reference
 slug: Web/JavaScript/Reference/Errors
+page-type: javascript-error
 tags:
   - Debugging
   - Errors
@@ -9,6 +10,7 @@ tags:
   - Landing page
   - exceptions
 ---
+
 {{jsSidebar("Errors")}}
 
 Below, you'll find a list of errors which are thrown by JavaScript. These errors can be a helpful debugging aid, but the reported problem isn't always immediately clear. The pages below will provide additional details about these errors. Each error is an object based upon the {{jsxref("Error")}} object, and has a `name` and a `message`.

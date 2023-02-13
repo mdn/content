@@ -1,12 +1,14 @@
 ---
 title: 'TypeError: "x" is (not) "y"'
 slug: Web/JavaScript/Reference/Errors/Unexpected_type
+page-type: javascript-error
 tags:
   - Error
   - Errors
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "_x_ is (not) _y_" occurs when there was an
@@ -50,10 +52,10 @@ const foo = null;
 foo.substring(1); // TypeError: foo is null
 
 // Certain methods might require a specific type
-const foo = {}
+const foo = {};
 Symbol.keyFor(foo); // TypeError: foo is not a symbol
 
-const foo = 'bar'
+const foo = "bar";
 Object.create(foo); // TypeError: "foo" is not an object or null
 ```
 

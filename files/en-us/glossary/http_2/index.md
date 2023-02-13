@@ -1,14 +1,15 @@
 ---
 title: HTTP/2
 slug: Glossary/HTTP_2
+page-type: glossary-definition
 tags:
-  - Glossary
   - HTTP
   - Infrastructure
   - Reference
   - Web Performance
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 **HTTP/2** is a major revision of the [HTTP network protocol](/en-US/docs/Web/HTTP/Basics_of_HTTP).
 
 The primary goals for HTTP/2 are to reduce {{glossary("latency")}} by enabling full request and response multiplexing, minimize protocol overhead via efficient compression of HTTP header fields, and add support for request prioritization and server push.
@@ -18,7 +19,7 @@ HTTP/2 does not modify the application semantics of HTTP in any way. All the cor
 ## See also
 
 - [HTTP on MDN](/en-US/docs/Web/HTTP)
-- {{interwiki("wikipedia", "HTTP/2", "HTTP/2")}} on Wikipedia
+- [HTTP/2](https://en.wikipedia.org/wiki/HTTP/2) on Wikipedia
 - [Glossary](/en-US/docs/Glossary)
 
   - {{glossary("HTTP")}}

@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.Navigator.requestMediaKeySystemAccess
 ---
+
 {{DefaultAPISidebar("Encrypted Media Extensions")}} {{securecontext_header}}
 
 The Encrypted Media Extensions API provides interfaces for controlling the playback of content which is subject to a digital restrictions management scheme.

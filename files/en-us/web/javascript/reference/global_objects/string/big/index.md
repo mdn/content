@@ -1,6 +1,7 @@
 ---
 title: String.prototype.big()
 slug: Web/JavaScript/Reference/Global_Objects/String/big
+page-type: javascript-instance-method
 tags:
   - Deprecated
   - HTML wrapper methods
@@ -12,28 +13,22 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.big
 ---
+
 {{JSRef}} {{deprecated_header}}
 
-The **`big()`** method creates a {{HTMLElement("big")}} HTML
-element that causes a string to be displayed in a big font.
+The **`big()`** method creates a string that embeds a string in a {{HTMLElement("big")}} element (`<big>str</big>`), which causes a string to be displayed in a big font.
 
-> **Note:** The \<big> element has been removed in [HTML5](/en-US/docs/Glossary/HTML5) and shouldn't be used anymore.
-> Instead web developers should use [CSS](/en-US/docs/Web/CSS) properties.
+> **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. For the case of `big()`, the `<big>` element itself has been removed in [HTML5](/en-US/docs/Glossary/HTML5) and shouldn't be used anymore. Web developers should use [CSS](/en-US/docs/Web/CSS) properties Instead.
 
 ## Syntax
 
-```js
+```js-nolint
 big()
 ```
 
 ### Return value
 
-A string containing a {{HTMLElement("big")}} HTML element.
-
-## Description
-
-The `big()` method embeds a string in a `<big>` element:
-"`<big>str</big>`".
+A string beginning with a `<big>` start tag, then the text `str`, and then a `</big>` end tag.
 
 ## Examples
 
@@ -42,19 +37,17 @@ The `big()` method embeds a string in a `<big>` element:
 The following example uses string methods to change the size of a string:
 
 ```js
-const worldString = 'Hello, world';
+const worldString = "Hello, world";
 
-console.log(worldString.small());     // <small>Hello, world</small>
-console.log(worldString.big());       // <big>Hello, world</big>
+console.log(worldString.small()); // <small>Hello, world</small>
+console.log(worldString.big()); // <big>Hello, world</big>
 console.log(worldString.fontsize(7)); // <font size="7">Hello, world</font>
 ```
 
-With the {{domxref("HTMLElement/style", "element.style")}} object you can get
-the element's `style` attribute and manipulate it more generically, for
-example:
+With the {{domxref("HTMLElement/style", "element.style")}} object you can get the element's `style` attribute and manipulate it more generically, for example:
 
 ```js
-document.getElementById('yourElemId').style.fontSize = '2em';
+document.getElementById("yourElemId").style.fontSize = "2em";
 ```
 
 ## Specifications

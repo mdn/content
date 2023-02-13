@@ -15,6 +15,7 @@ tags:
   - tagName
 browser-compat: api.Element.tagName
 ---
+
 {{ApiRef("DOM")}}
 
 The **`tagName`** read-only property

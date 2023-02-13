@@ -8,6 +8,7 @@ tags:
   - Read-only
 browser-compat: api.Attr.namespaceURI
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`namespaceURI`** property of the {{domxref("Attr")}} interface returns the namespace URI of the attribute,

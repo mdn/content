@@ -1,6 +1,7 @@
 ---
 title: <resolution>
 slug: Web/CSS/resolution
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -10,6 +11,7 @@ tags:
   - Web
 browser-compat: css.types.resolution
 ---
+
 {{CSSRef}}
 
 The **`<resolution>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types), used for describing [resolutions](/en-US/docs/Web/CSS/@media/resolution) in [media queries](/en-US/docs/Web/CSS/Media_Queries), denotes the pixel density of an output device, i.e., its resolution.
@@ -38,7 +40,9 @@ The `<resolution>` data type consists of a strictly positive {{cssxref("&lt;numb
 ### Use in a media query
 
 ```css
-@media print and (min-resolution: 300dpi) { /* … */ }
+@media print and (min-resolution: 300dpi) {
+  /* … */
+}
 ```
 
 ### Valid resolutions

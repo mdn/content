@@ -7,6 +7,7 @@ tags:
   - Reference
   - XSLT
 ---
+
 {{ XsltRef() }}
 
 The `<xsl:number>` element counts things sequentially. It can also be used to quickly format a number.

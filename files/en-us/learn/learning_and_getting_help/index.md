@@ -8,6 +8,7 @@ tags:
   - Web Development
   - getting help
 ---
+
 {{learnsidebar}}
 
 It is great that you are putting some time into learning a new set of skills, but there are good practices to employ that will make your learning more effective. There also are times when you'll get stuck and feel frustrated — even professional web developers feel like this regularly — and it pays to know about the most effective ways to try and get help so you can progress in your work. This article provides some hints and tips in both of these areas that will help you get more out of learning web development, as well as further reading so you can find out more information about each sub-topic should you wish.
@@ -25,7 +26,7 @@ It is interesting to consider that there are two main ways in which your brain l
 
 From the studies that neuroscientists have done on brain activity, we have found out that you can't really engage in both ways of learning — or thinking — at once. So which one should you choose? You might think that focused learning is better for studying, but in reality, **both** are very important.
 
-Focused thinking is great for concentrating hard on specific subjects, getting into deep problem solving, and improving your mastery of the techniques required — strengthening the neural pathways in your brain where that information is stored. It isn't however very good at getting an understanding of "the big picture", and unlocking new neural pathways when you are trying to understand new subjects or solve new problems that you haven't come across before.
+Focused thinking is great for concentrating hard on specific subjects, getting into deep problem-solving, and improving your mastery of the techniques required — strengthening the neural pathways in your brain where that information is stored. It isn't however very good at getting an understanding of "the big picture", and unlocking new neural pathways when you are trying to understand new subjects or solve new problems that you haven't come across before.
 
 For that, you need diffuse thinking. This is the opposite of focus — you let your brain wander around the wider landscape, searching around for connections you didn't have before, touching on new things (or new combinations of things) that you can then focus on later, to strengthen them and start to really understand what they mean.
 
@@ -96,8 +97,8 @@ Materials I need:
 
 Knowledge I need:
 
-- How to use HTML, CSS, JavaScript, and associated tools and best practices to build web sites and web applications (we can definitely help you with this one!).
-- How to get a domain, hosting, and use them to put a web site or application online.
+- How to use HTML, CSS, JavaScript, and associated tools and best practices to build websites and web applications (we can definitely help you with this one!).
+- How to get a domain, hosting, and use them to put a website or application online.
 - How to run a small business.
 - How to advertise my business and attract clients.
 
@@ -107,7 +108,7 @@ Estimate the time and cost of getting these things. If you'll need to work to ea
 
 #### How many hours per week do I need to dedicate?
 
-Once you know what you need to do, and how long you think it'll take you, you can start writing out a plan to follow to achieve your goal. It can be as simple as:
+Once you know what you need to do and how long you think it'll take, you can start writing out a plan to achieve your goal. It can be as simple as:
 
 "It'll take me 500 hours to learn what I need to know, and I have a year to do it. If I assume 2 weeks of holiday, I'll need to do work on this for 10 hours per week. I am free on evenings and weekends, so I'll plan my time around those."
 
@@ -136,7 +137,7 @@ It is hard to stay motivated, especially if you are trying to learn a complex sk
 - **Give yourself rewards**. It's true that _all work and no play makes Jack a dull boy_. You should try to schedule fun things to do after each learning session, which you'll only have when the learning is over and complete. If you are really into gaming, for example, there is something quite motivating about saying "no gaming tonight unless I get through my 5 hours of learning". Now all you need is willpower. Good luck!
 - **Co-learning and demoing**. This won't be an option for everyone, but if at all possible try to learn alongside others. Again, this is easier if you are doing a college course on web development, but perhaps you could convince a friend to learn along with you, or find a local meetup or skill-sharing group? It is really useful and motivating to have someone to discuss ideas with and ask for help, and you should also take time to demo your work. Those shouts of appreciation will spur you on.
 
-### Effective problem solving
+### Effective problem-solving
 
 There is no one effective way to solve all problems (and learn all things) associated with web design and development, but there are some general bits of advice that will serve you well in most cases.
 
@@ -167,7 +168,7 @@ Each of these problems doesn't seem nearly as difficult to solve as the one big 
 
 #### Learn and recognize the patterns
 
-As we said before, web design/programming is mostly about problem solving and patterns. Once you have written out what you'll need to do to solve a specific problem, you can start to figure out what technology features to use to solve it. For example, professional web developers have created lots of horizontal navigation menus, so they'll immediately start thinking of a solution like this:
+As we said before, web design/programming is mostly about problem-solving and patterns. Once you have written out what you'll need to do to solve a specific problem, you can start to figure out what technology features to use to solve it. For example, professional web developers have created lots of horizontal navigation menus, so they'll immediately start thinking of a solution like this:
 
 A nav menu is usually created from a list of links, something like:
 
@@ -264,11 +265,11 @@ We already mentioned Stack Overflow, but there are other online resources that c
 
 It is good to find a community to be part of, and you'll get a lot of respect if you try to help others answer their questions as well as asking your own. Other good examples include:
 
-- [MDN Discourse](https://discourse.mozilla.org/c/mdn/236)
+- [MDN Discourse](/en-US/docs/MDN/Community/Communication_channels#forums)
 - [Sitepoint Forums](https://www.sitepoint.com/community/)
 - [webdeveloper.com Forums](https://webdeveloper.com/)
 
-However, it also makes sense to find useful groups on social networking sites such as Twitter or Facebook. Look for groups that discuss web development subjects you are interested in and join up. Follow people on twitter you know are influential, smart, or just plain seem to share lots of useful tips.
+However, it also makes sense to find useful groups on social networking sites such as Twitter or Facebook. Look for groups that discuss web development subjects you are interested in and join up. Follow people on Twitter you know are influential, smart, or just plain seem to share lots of useful tips.
 
 ### Physical meetups
 

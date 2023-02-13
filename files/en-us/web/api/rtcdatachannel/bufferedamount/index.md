@@ -11,6 +11,7 @@ tags:
   - bufferedAmount
 browser-compat: api.RTCDataChannel.bufferedAmount
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only `RTCDataChannel` property

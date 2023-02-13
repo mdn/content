@@ -10,6 +10,7 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.positionAlign
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`positionAlign`** property of the {{domxref("VTTCue")}} interface is used to determine what {{domxref("VTTCue.position")}} is anchored to.

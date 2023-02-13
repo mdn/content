@@ -1,5 +1,5 @@
 ---
-title: 'HTMLInputElement: select event'
+title: "HTMLInputElement: select event"
 slug: Web/API/HTMLInputElement/select_event
 tags:
   - Element
@@ -11,6 +11,7 @@ tags:
 browser-compat: api.HTMLInputElement.select_event
 page-type: web-api-event
 ---
+
 {{APIRef}}
 
 The **`select`** event fires when some text has been selected.
@@ -34,7 +35,7 @@ A generic {{domxref("Event")}}.
 ### Selection logger
 
 ```html
-<input value="Try selecting some text in this element.">
+<input value="Try selecting some text in this element." />
 <p id="log"></p>
 ```
 

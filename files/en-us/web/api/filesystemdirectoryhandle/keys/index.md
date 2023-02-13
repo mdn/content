@@ -11,7 +11,8 @@ tags:
   - Method
 browser-compat: api.FileSystemDirectoryHandle.keys
 ---
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`keys()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface returns a new _array iterator_
@@ -19,8 +20,8 @@ containing the keys for each item in `FileSystemDirectoryHandle`.
 
 ## Syntax
 
-```js
-FileSystemDirectoryHandle.keys();
+```js-nolint
+FileSystemDirectoryHandle.keys()
 ```
 
 ### Parameters

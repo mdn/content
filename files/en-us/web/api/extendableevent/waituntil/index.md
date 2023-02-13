@@ -10,6 +10,7 @@ tags:
   - waitUntil
 browser-compat: api.ExtendableEvent.waitUntil
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`ExtendableEvent.waitUntil()`**
@@ -41,7 +42,7 @@ settle.
 
 ## Syntax
 
-```js
+```js-nolint
 waitUntil(promise)
 ```
 

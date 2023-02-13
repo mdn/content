@@ -1,11 +1,13 @@
 ---
 title: target
 slug: Web/SVG/Attribute/target
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute
 browser-compat: svg.elements.a.target
 ---
+
 {{SVGRef}}
 
 The **`target`** attribute should be used when there are multiple possible targets for the ending resource, such as when the parent document is embedded within an HTML or XHTML document, or is viewed with a tabbed browser. This attribute specifies the name of the browsing context (e.g., a browser tab or an (X)HTML iframe or object element) into which a document is to be opened when the link is activated:
@@ -17,7 +19,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 
@@ -67,9 +71,11 @@ text {
 </table>
 
 - `_replace` {{deprecated_inline}}
+
   - : The current SVG image is replaced by the linked content in the same rectangular area in the same frame as the current SVG image.
 
     > **Note:** This value was never well implemented, and the distinction between `_replace` and `_self` has been made redundant by changes in the HTML definition of browsing contexts. Use `_self` to replace the current SVG document.
+
 - `_self`
   - : The current SVG image is replaced by the linked content in the same browsing context as the current SVG image.
 - `_parent`

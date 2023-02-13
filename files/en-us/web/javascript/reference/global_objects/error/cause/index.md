@@ -1,23 +1,29 @@
 ---
 title: Error.prototype.cause
 slug: Web/JavaScript/Reference/Global_Objects/Error/cause
+page-type: javascript-instance-data-property
 tags:
   - JavaScript
   - Property
   - Prototype
 browser-compat: javascript.builtins.Error.cause
 ---
+
 {{JSRef}}
 
-The **`cause`** property indicates the specific original cause of an error.
+The **`cause`** data property of an {{jsxref("Error")}} instance indicates the specific original cause of the error.
 
-It is used when catching and re-throwing an error with a more-specific or useful error message in order to still have access to the the original error.
+It is used when catching and re-throwing an error with a more-specific or useful error message in order to still have access to the original error.
 
 ## Value
 
-This is the value that was passed to the [`Error()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error) in the `options.cause` argument.
+The value that was passed to the [`Error()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error) constructor in the `options.cause` argument. It may not be present.
 
-The value can be of any type. You should not make assumptions that the error you caught has an `Error` as its `cause`, in the same way that you cannot be sure the variable bound in the `catch` statement is an `Error` either. The "Providing structured data as the error cause" example below shows a case where a non-error is deliberately provided as the cause.
+{{js_property_attributes(1, 0, 1)}}
+
+## Description
+
+The value of `cause` can be of any type. You should not make assumptions that the error you caught has an `Error` as its `cause`, in the same way that you cannot be sure the variable bound in the `catch` statement is an `Error` either. The "Providing structured data as the error cause" example below shows a case where a non-error is deliberately provided as the cause.
 
 ## Examples
 
@@ -44,7 +50,7 @@ Error messages written for human consumption may be inappropriate for machine pa
 function makeRSA(p, q) {
   if (!Number.isInteger(p) || !Number.isInteger(q)) {
     throw new Error('RSA key generation requires integer inputs.', {
-      cause: { code: 'NonInteger', value: [p, q] },
+      cause: { code: 'NonInteger', values: [p, q] },
     });
   }
   if (!areCoprime(p, q)) {

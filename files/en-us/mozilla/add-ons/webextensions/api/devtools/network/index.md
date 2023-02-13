@@ -5,11 +5,13 @@ tags:
   - API
   - Add-ons
   - Extensions
+  - Property
   - Reference
   - WebExtensions
   - devtools.network
 browser-compat: webextensions.api.devtools.network
 ---
+
 {{AddonSidebar}}
 
 The `devtools.network` API lets a devtools extension get information about network requests associated with the window that the devtools are attached to (the inspected window).
@@ -36,7 +38,8 @@ Like all the `devtools` APIs, this API is only available to code running in the 
 
 > **Note:** This API is based on Chromium's [`chrome.devtools.network`](https://developer.chrome.com/docs/extensions/reference/devtools_network/) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -63,4 +66,4 @@ Like all the `devtools` APIs, this API is only available to code running in the 
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

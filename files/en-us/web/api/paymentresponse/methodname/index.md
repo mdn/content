@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - Commerce
-  - Experimental
   - Payment Request
   - Payment Request API
   - PaymentResponse
@@ -15,6 +14,7 @@ tags:
   - methodName
 browser-compat: api.PaymentResponse.methodName
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The **`methodName`** read-only
@@ -30,8 +30,7 @@ to process payments.
 A string uniquely identifying the payment handler being used to
 process the payment. This may be either a standardized identifier, or a URL used by the
 payment processor to handle payments. See
-{{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant
-  validation")}} for more information.
+how [merchant validation](/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation) works.
 
 ## Examples
 

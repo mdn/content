@@ -11,7 +11,8 @@ spec-urls:
   - https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.1
   - https://www.khronos.org/registry/webgl/extensions/EXT_disjoint_timer_query/
 ---
-{{WebGLSidebar}}
+
+{{DefaultAPISidebar("WebGL")}}
 
 The following types are used in [WebGL](/en-US/docs/Web/API/WebGL_API) interfaces.
 

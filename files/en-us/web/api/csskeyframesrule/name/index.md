@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.CSSKeyframesRule.name
 ---
+
 {{APIRef("CSSOM") }}
 
 The **`name`** property of the {{domxref("CSSKeyframeRule")}} interface gets and sets the name of the animation as used by the {{cssxref("animation-name")}} property.

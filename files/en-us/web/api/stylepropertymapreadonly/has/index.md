@@ -13,6 +13,7 @@ tags:
   - has()
 browser-compat: api.StylePropertyMapReadOnly.has
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`has()`** method of the
@@ -21,7 +22,7 @@ property is in the `StylePropertyMapReadOnly` object.
 
 ## Syntax
 
-```js
+```js-nolint
 has(property)
 ```
 

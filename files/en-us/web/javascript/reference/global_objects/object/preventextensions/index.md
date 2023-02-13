@@ -1,6 +1,7 @@
 ---
 title: Object.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
+page-type: javascript-static-method
 tags:
   - ECMAScript 5
   - JavaScript
@@ -9,9 +10,10 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object.preventExtensions
 ---
+
 {{JSRef}}
 
-The **`Object.preventExtensions()`** method prevents new
+The **`Object.preventExtensions()`** static method prevents new
 properties from ever being added to an object (i.e. prevents future extensions to the
 object). It also prevents the object's prototype from being re-assigned.
 
@@ -19,7 +21,7 @@ object). It also prevents the object's prototype from being re-assigned.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.preventExtensions(obj)
 ```
 
@@ -62,26 +64,26 @@ obj === obj2; // true
 
 // Objects are extensible by default.
 const empty = {};
-Object.isExtensible(empty); // === true
+Object.isExtensible(empty); // true
 
 // They can be made un-extensible
 Object.preventExtensions(empty);
-Object.isExtensible(empty); // === false
+Object.isExtensible(empty); // false
 
 // Object.defineProperty throws when adding
 // a new property to a non-extensible object.
 const nonExtensible = { removable: true };
 Object.preventExtensions(nonExtensible);
-Object.defineProperty(nonExtensible, 'new', {
-  value: 8675309
+Object.defineProperty(nonExtensible, "new", {
+  value: 8675309,
 }); // throws a TypeError
 
 // In strict mode, attempting to add new properties
 // to a non-extensible object throws a TypeError.
 function fail() {
-  'use strict';
+  "use strict";
   // throws a TypeError
-  nonExtensible.newProperty = 'FAIL';
+  nonExtensible.newProperty = "FAIL";
 }
 fail();
 ```
@@ -91,14 +93,12 @@ A non-extensible object's prototype is immutable:
 ```js
 const fixed = Object.preventExtensions({});
 // throws a 'TypeError'.
-fixed.__proto__ = { oh: 'hai' };
+fixed.__proto__ = { oh: "hai" };
 ```
 
-### Non-object coercion
+### Non-object argument
 
-In ES5, if the argument to this method is not an object (a primitive), then it will
-cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
-it was a non-extensible ordinary object, return it.
+In ES5, if the argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be returned as-is without any errors, since primitives are already, by definition, immutable.
 
 ```js
 Object.preventExtensions(1);

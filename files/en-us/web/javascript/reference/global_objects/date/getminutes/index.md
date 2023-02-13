@@ -1,6 +1,7 @@
 ---
 title: Date.prototype.getMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
+page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getMinutes
 ---
+
 {{JSRef}}
 
 The **`getMinutes()`** method returns the minutes in the
@@ -18,7 +20,7 @@ specified date according to local time.
 
 ## Syntax
 
-```js
+```js-nolint
 getMinutes()
 ```
 
@@ -33,11 +35,11 @@ according to local time.
 
 The second statement below assigns the value 15 to the variable `minutes`,
 based on the value of the {{jsxref("Global_Objects/Date", "Date")}} object
-`Xmas95`.
+`xmas95`.
 
 ```js
-const Xmas95 = new Date('December 25, 1995 23:15:30');
-const minutes = Xmas95.getMinutes();
+const xmas95 = new Date("December 25, 1995 23:15:30");
+const minutes = xmas95.getMinutes();
 
 console.log(minutes); // 15
 ```

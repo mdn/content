@@ -1,12 +1,14 @@
 ---
 title: Using classes
 slug: Web/JavaScript/Guide/Using_Classes
+page-type: guide
 tags:
   - Guide
   - Intermediate
   - JavaScript
   - Object
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Using_promises")}}
 
 JavaScript is a prototype-based language — an object's behaviors are specified by its own properties and its prototype's properties. However, with the addition of [classes](/en-US/docs/Web/JavaScript/Reference/Classes), the creation of hierarchies of objects and the inheritance of properties and their values are much more in line with other object-oriented languages such as Java. In this section, we will demonstrate how objects can be created from classes.
@@ -123,7 +125,7 @@ const myInstance = MyClass(); // TypeError: Class constructor MyClass cannot be 
 
 ### Class declaration hoisting
 
-Unlike function declarations, class declarations are not hoisted, which means you cannot use a class before it is declared.
+Unlike function declarations, class declarations are not [hoisted](/en-US/docs/Glossary/Hoisting) (or, in some interpretations, hoisted but with the temporal dead zone restriction), which means you cannot use a class before it is declared.
 
 ```js
 new MyClass(); // ReferenceError: Cannot access 'MyClass' before initialization
@@ -328,7 +330,7 @@ console.log(red.values[0]); // 0; It's not 255 anymore, because the H value for 
 
 The user assumption that `values` means the RGB value suddenly collapses, and it may cause their logic to break. So, if you are an implementor of a class, you would want to hide the internal data structure of your instance from your user, both to keep the API clean and to prevent the user's code from breaking when you do some "harmless refactors". In classes, this is done through [_private fields_](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields).
 
-A private field is an identifier prefixed with `#` (the hash symbol). The hash is an integral part of the field's name. In order to refer to a private field anywhere in the class, you must _declare_ it in the class body. Apart from this, a private field is pretty much equivalent to a normal property.
+A private field is an identifier prefixed with `#` (the hash symbol). The hash is an integral part of the field's name, which means a private property can never have name clash with a public property. In order to refer to a private field anywhere in the class, you must _declare_ it in the class body (you can't create a private property on the fly). Apart from this, a private field is pretty much equivalent to a normal property.
 
 ```js
 class Color {
@@ -403,7 +405,7 @@ const crimson = new Color(220, 20, 60);
 red.redDifference(crimson); // 35
 ```
 
-However, if `anotherColor` is not a Color instance, `#values` won't exist. (Even if another class has an identically named `#values` private field, it's not referring to the same thing and cannot be accessed here.) In order to check beforehand whether the field exists, we can use an [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) check.
+However, if `anotherColor` is not a Color instance, `#values` won't exist. (Even if another class has an identically named `#values` private field, it's not referring to the same thing and cannot be accessed here.) Accessing a nonexistent private property throws an error instead of returning `undefined` like normal properties do. If you don't know if a private field exists on an object and you wish to access it without using `try`/`catch` to handle the error, you can use the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator.
 
 ```js
 class Color {
@@ -422,19 +424,52 @@ class Color {
 
 > **Note:** Keep in mind that the `#` is a special identifier syntax, and you can't use the field name as if it's a string. `"#values" in anotherColor` would look for a property name literally called `"#values"`, instead of a private field.
 
-Methods can be private as well.
+There are some limitations in using private properties: the same name can't be declared twice in a single class, and they can't be deleted. Both lead to early syntax errors.
 
-```js
-class Color {
-  constructor(r, g, b) {
-    this.#myPrivateMethod();
-    this.#values = [r, g, b];
-  }
-  #myPrivateMethod() {
-    // ...
+```js example-bad
+class BadIdeas {
+  #firstName;
+  #firstName; // syntax error occurs here
+  #lastName;
+  constructor() {
+    delete this.#lastName; // also a syntax error
   }
 }
 ```
+
+Methods, [getters, and setters](#accessor_fields) can be private as well. They're useful when you have something complex that the class needs to do internally but no other part of the code should be allowed to call.
+
+For example, imagine creating [HTML custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) that should do something somewhat complicated when clicked/tapped/otherwise activated. Furthermore, the somewhat complicated things that happen when the element is clicked should be restricted to this class, because no other part of the JavaScript will (or should) ever access it.
+
+```js
+class Counter extends HTMLElement {
+  #xValue = 0;
+  constructor() {
+    super();
+    this.onclick = this.#clicked.bind(this);
+  }
+  get #x() {
+    return this.#xValue;
+  }
+  set #x(value) {
+    this.#xValue = value;
+    window.requestAnimationFrame(this.#render.bind(this));
+  }
+  #clicked() {
+    this.#x++;
+  }
+  #render() {
+    this.textContent = this.#x.toString();
+  }
+  connectedCallback() {
+    this.#render();
+  }
+}
+
+customElements.define("num-counter", Counter);
+```
+
+In this case, pretty much every field and method is private to the class. Thus, it presents an interface to the rest of the code that's essentially just like a built-in HTML element. No other part of the program has the power to affect any of the internals of `Counter`.
 
 ## Accessor fields
 
@@ -535,7 +570,7 @@ Static properties are very similar to their instance counterparts, except that:
 console.log(new Color(0, 0, 0).isValid); // undefined
 ```
 
-There is also a special construct called a [_static initialization block_](/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks), which is a block of code that runs when the class is first loaded.
+There is also a special construct called a [_static initialization block_](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks), which is a block of code that runs when the class is first loaded.
 
 ```js
 class MyClass {
@@ -585,13 +620,13 @@ class ColorWithAlpha extends Color {
     this.#alpha = a;
   }
   get alpha() {
-    return this.#values[3];
+    return this.#alpha;
   }
   set alpha(value) {
     if (value < 0 || value > 1) {
       throw new RangeError("Alpha value must be between 0 and 1");
     }
-    this.#values[3] = value;
+    this.#alpha = value;
   }
 }
 ```
@@ -617,7 +652,8 @@ Instead, our class can override it to print the color's RGB values:
 
 ```js
 class Color {
-  // ...
+  #values;
+  // …
   toString() {
     return this.#values.join(", ");
   }
@@ -630,7 +666,8 @@ Within derived classes, you can access the parent class's methods by using `supe
 
 ```js
 class ColorWithAlpha extends Color {
-  // ...
+  #alpha;
+  // …
   toString() {
     // Call the parent class's toString() and build on the return value
     return `${super.toString()}, ${this.#alpha}`;
@@ -645,7 +682,7 @@ When you use `extends`, the static methods inherit from each other as well, so y
 ```js
 class ColorWithAlpha extends Color {
   // ...
-  isValid(r, g, b, a) {
+  static isValid(r, g, b, a) {
     // Call the parent class's isValid() and build on the return value
     return super.isValid(r, g, b) && a >= 0 && a <= 1;
   }
@@ -656,7 +693,7 @@ console.log(ColorWithAlpha.isValid(255, 0, 0, -1)); // false
 
 Derived classes don't have access to the parent class's private fields — this is another key aspect to JavaScript private fields being "hard private". Private fields are scoped to the class body itself and do not grant access to _any_ outside code.
 
-```js
+```js example-bad
 class ColorWithAlpha extends Color {
   log() {
     console.log(this.#values); // SyntaxError: Private field '#values' must be declared in an enclosing class
@@ -664,7 +701,7 @@ class ColorWithAlpha extends Color {
 }
 ```
 
-A class can only extend from one class. This prevents problems in multiple inheritance like the [diamond problem](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem). However, due to the dynamic nature of JavaScript, it's still possible to achieve the effect of multiple inheritance through class composition and [mixins](/en-US/docs/Web/JavaScript/Reference/Classes#mix-ins).
+A class can only extend from one class. This prevents problems in multiple inheritance like the [diamond problem](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem). However, due to the dynamic nature of JavaScript, it's still possible to achieve the effect of multiple inheritance through class composition and [mixins](/en-US/docs/Web/JavaScript/Reference/Classes/extends#mix-ins).
 
 Instances of derived classes are also [instances of](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) the base class.
 
@@ -693,7 +730,7 @@ console.log(newDay); // 2019-06-20
 console.log(date); // 2019-06-20
 ```
 
-Mutability and internal state are important aspects of object-oriented programming, but often make code hard to reason with — because any seemingly innocent operation may have unexpected side effects and change the behavior in other parts of the program.
+Mutability and internal state are important aspects of object-oriented programming, but often make code hard to reason with — because any seemingly innocent operation may have unexpected side effects and change the behavior in other parts of the program.
 
 In order to reuse code, we usually resort to extending classes, which can create big hierarchies of inheritance patterns.
 

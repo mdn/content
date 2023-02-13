@@ -16,6 +16,7 @@ tags:
   - track
 browser-compat: api.AudioTrack.kind
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`kind`** property contains a

@@ -16,6 +16,7 @@ tags:
   - WebXR API
   - WebXR Device API
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 At a fundamental level, rendering of scenes for [WebXR](/en-US/docs/Web/API/WebXR_Device_API) presentation in either augmented reality or virtual reality contexts is performed using [WebGL](/en-US/docs/Web/API/WebGL_API), so the two APIs share much of the same design language. However, in order to provide the ability to present scenes in true 3D using XR headsets and other such equipment, WebXR has additional concepts that must be understood.
@@ -44,7 +45,7 @@ The WebGL coordinates and lengths are transformed automatically at render time t
 
 #### Angles
 
-Angles are specified using **{{interwiki("wikipedia", "radians")}}**. To convert degrees to radians, multiply the value in degrees by `π/180`. The following code snippet shows two simple functions, `degreesToRadians()` and `radiansToDegrees()`, which convert back and forth between the two units for measuring angles.
+Angles are specified using **[radians](https://en.wikipedia.org/wiki/Radians)**. To convert degrees to radians, multiply the value in degrees by `π/180`. The following code snippet shows two simple functions, `degreesToRadians()` and `radiansToDegrees()`, which convert back and forth between the two units for measuring angles.
 
 ```js
 const RADIANS_PER_DEGREE = Math.PI / 180.0;

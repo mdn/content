@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.dir
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`Document.dir`** property is a string

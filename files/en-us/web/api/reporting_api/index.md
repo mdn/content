@@ -11,16 +11,17 @@ tags:
   - Secure context
 spec-urls: https://w3c.github.io/reporting/#intro
 ---
-{{SeeCompatTable}}{{APIRef("Reporting API")}}
 
-The Reporting API provides a generic reporting mechanism for web applications to use to make reports available based on various platform features (for example [Content Security Policy](/en-US/docs/Web/HTTP/CSP), [Feature-Policy](/en-US/docs/Web/HTTP/Headers/Feature-Policy), or feature deprecation reports) in a consistent manner.
+{{SeeCompatTable}}{{DefaultAPISidebar("Reporting API")}}
+
+The Reporting API provides a generic reporting mechanism for web applications to use to make reports available based on various platform features (for example [Content Security Policy](/en-US/docs/Web/HTTP/CSP), [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy), or feature deprecation reports) in a consistent manner.
 
 ## Concepts and usage
 
-There are a number of different features and problems on the web platform that generate information useful to web developers when they are trying to fix bugs or improve their websites in other ways. Such information can include:
+There are several different features and problems on the web platform that generate information useful to web developers when they are trying to fix bugs or improve their websites in other ways. Such information can include:
 
 - [Content Security Policy](/en-US/docs/Web/HTTP/CSP) violations.
-- [Feature-Policy](/en-US/docs/Web/HTTP/Headers/Feature-Policy) violations.
+- [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) violations.
 - Deprecated feature usage (when you are using something that will stop working soon in browsers).
 - Occurrence of crashes.
 - Occurrence of user-agent interventions (when the browser blocks something your code is trying to do because it is deemed a security risk for example, or just plain annoying, like auto-playing audio).
@@ -54,40 +55,30 @@ Methods are then available on the observer to start collecting reports ({{domxre
 
 The Reporting API spec also defines a Generate Test Report [WebDriver](/en-US/docs/Web/WebDriver) extension, which allows you to simulate report generation during automation. Reports generated via WebDriver are observed by any registered `ReportObserver` objects present in the loaded website. This is not yet documented.
 
-## Reporting API interfaces
+## Interfaces
 
-- {{domxref("ReportingObserver")}}
-  - : Create `ReportingObserver` instances using its constructor, which can then be used to collect and access reports.
+- {{domxref("CSPViolationReportBody")}}
+  - : Contains details of a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) violation.
+- {{domxref("DeprecationReportBody")}}
+  - : Contains details of deprecated web platform features that a website is using.
+- {{domxref("InterventionReportBody")}}
+  - : Contains details of an intervention report, which is generated when a request made by the website has been denied by the browser; e.g. for security reasons.
 - {{domxref("Report")}}
   - : An object representing a single report.
-
-### Reporting API dictionaries
-
-- {{domxref("ReportingObserverOptions")}}
-  - : Allows options to be set in the constructor when creating a reporting observer.
-
-### Available report types
-
-The spec defines the following report types:
-
-- Deprecation report
-  - : Indicates that a WebAPI or other browser feature being used in the website is expected to stop working in a future release. Indicated by a {{domxref("Report.body")}} property with a {{domxref("DeprecationReportBody")}} return value.
-- Intervention report
-  - : Indicates that a request made by the website has been denied by the browser, e.g. for security or user annoyance reasons. Indicated by a {{domxref("Report.body")}} property with a {{domxref("InterventionReportBody")}} return value.
-- Crash report
-  - : Indicates that the website stopped running due to a browser crash. Indicated by a {{domxref("Report.body")}} property with a {{domxref("CrashReportBody")}} return value.
+- {{domxref("ReportingObserver")}}
+  - : An object that can be used to collect and access reports as they are generated.
 
 ## Examples
 
 In our [deprecation_report.html](https://mdn.github.io/dom-examples/reporting-api/deprecation_report.html) example, we create a simple reporting observer to observe usage of deprecated features on our web page:
 
 ```js
-let options = {
-  types: ['deprecation'],
-  buffered: true
-}
+const options = {
+  types: ["deprecation"],
+  buffered: true,
+};
 
-let observer = new ReportingObserver(function(reports, observer) {
+const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
 }, options);
 ```
@@ -101,16 +92,10 @@ observer.observe();
 Later on in the example we deliberately use the deprecated version of {{domxref("MediaDevices.getUserMedia()")}}:
 
 ```js
-if(navigator.mozGetUserMedia) {
-  navigator.mozGetUserMedia(
-    constraints,
-    success,
-    failure);
+if (navigator.mozGetUserMedia) {
+  navigator.mozGetUserMedia(constraints, success, failure);
 } else {
-  navigator.getUserMedia(
-    constraints,
-    success,
-    failure);
+  navigator.getUserMedia(constraints, success, failure);
 }
 ```
 
@@ -118,7 +103,7 @@ This causes a deprecation report to be generated; because of the event handler w
 
 ![image of a jolly bearded man with various stats displayed below it about a deprecated feature](reporting_api_example.png)
 
-> **Note:** If you look at the [complete source code](https://github.com/mdn/dom-examples/blob/master/reporting-api/deprecation_report.html), you'll notice that we actually call the deprecated `getUserMedia()` method twice. After the first time we call {{domxref("ReportingObserver.takeRecords()")}}, which returns the first generated report and empties the queue. Because of this, when the button is pressed only the second report is listed.
+> **Note:** If you look at the [complete source code](https://github.com/mdn/dom-examples/blob/main/reporting-api/deprecation_report.html), you'll notice that we actually call the deprecated `getUserMedia()` method twice. After the first time we call {{domxref("ReportingObserver.takeRecords()")}}, which returns the first generated report and empties the queue. Because of this, when the button is pressed only the second report is listed.
 
 ## Specifications
 
@@ -136,4 +121,4 @@ Chrome is also working on an implementation: [information about Chrome implement
 ## See also
 
 - [Content Security Policy](/en-US/docs/Web/HTTP/CSP)
-- [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy)
+- [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy)

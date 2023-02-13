@@ -1,6 +1,7 @@
 ---
 title: dir
 slug: Web/HTML/Global_attributes/dir
+page-type: html-attribute
 tags:
   - BiDi
   - Global attributes
@@ -11,7 +12,7 @@ browser-compat: html.global_attributes.dir
 
 {{HTMLSidebar("Global_attributes")}}
 
-The **`dir`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an enumerated attribute that indicates the directionality of the element's text.
+The **`dir`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute that indicates the directionality of the element's text.
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-dir.html","tabbed-standard")}}
 

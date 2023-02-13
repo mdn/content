@@ -18,6 +18,7 @@ tags:
   - rendering
 browser-compat: api.WebGLRenderingContext
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext`** interface provides an interface to the OpenGL ES 2.0 graphics rendering context for the drawing surface of an HTML {{HTMLElement("canvas")}} element.
@@ -43,7 +44,7 @@ The following properties and methods provide general information and functionali
 
 - {{domxref("WebGLRenderingContext.canvas")}}
   - : A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if it is not associated with a {{HTMLElement("canvas")}} element.
-- {{domxref("WebGLRenderingContext.commit()")}} {{experimental_inline}}
+- {{domxref("WebGLRenderingContext.commit()")}} {{Experimental_Inline}}
   - : Pushes frames back to the original {{domxref("HTMLCanvasElement")}}, if the context is not directly fixed to a specific canvas.
 - {{domxref("WebGLRenderingContext.drawingBufferWidth")}}
   - : The read-only width of the current drawing buffer. Should match the width of the canvas element associated with this context.
@@ -277,7 +278,7 @@ The following properties and methods provide general information and functionali
   - : Returns information about a vertex attribute at a given position.
 - {{domxref("WebGLRenderingContext.getVertexAttribOffset()")}}
   - : Returns the address of a given vertex attribute.
-- {{domxref("WebGLRenderingContext.uniform()", "WebGLRenderingContext.uniform[1234][fi][v]()")}}
+- [`WebGLRenderingContext.uniform[1234][fi][v]()`](/en-US/docs/Web/API/WebGLRenderingContext/uniform)
   - : Specifies a value for a uniform variable.
 - {{domxref("WebGLRenderingContext.uniformMatrix()", "WebGLRenderingContext.uniformMatrix[234]fv()")}}
   - : Specifies a matrix value for a uniform variable.
@@ -298,6 +299,13 @@ The following properties and methods provide general information and functionali
   - : Blocks execution until all previously called commands are finished.
 - {{domxref("WebGLRenderingContext.flush()")}}
   - : Empties different buffer commands, causing all commands to be executed as quickly as possible.
+
+## Color spaces
+
+- {{domxref("WebGLRenderingContext.drawingBufferColorSpace")}} {{Experimental_Inline}}
+  - : Specifies the color space of the WebGL drawing buffer.
+- {{domxref("WebGLRenderingContext.unpackColorSpace")}} {{Experimental_Inline}}
+  - : Specifies the color space to convert to when importing textures.
 
 ## Working with extensions
 

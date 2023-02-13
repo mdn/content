@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.AbstractRange.endOffset
 ---
+
 {{APIRef("DOM")}}
 
 The **`endOffset`** property of the {{domxref("AbstractRange")}} interface returns the offset into the end node of the range's end position.

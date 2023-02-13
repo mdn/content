@@ -13,19 +13,20 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.id
 ---
+
 {{AddonSidebar()}}
 
 The ID of the extension.
 
 ## Syntax
 
-```js
+```js-nolint
 let myAddonId = browser.runtime.id;
 ```
 
 ### Value
 
-A `string` representing the add-on ID. If the extension specifies an ID in its [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest.json key, `runtime.id` contains that value. Otherwise, `runtime.id`  contains the ID that was generated for the extension.
+A `string` representing the add-on ID. If the extension specifies an ID in its [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest.json key, `runtime.id` contains that value. Otherwise, `runtime.id` contains the ID that was generated for the extension.
 
 ## Browser compatibility
 
@@ -35,7 +36,8 @@ A `string` representing the add-on ID. If the extension specifies an ID in its [
 
 > **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#property-id) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -62,4 +64,4 @@ A `string` representing the add-on ID. If the extension specifies an ID in its [
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

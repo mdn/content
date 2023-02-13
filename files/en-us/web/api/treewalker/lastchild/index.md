@@ -10,16 +10,16 @@ tags:
   - TreeWalker
 browser-compat: api.TreeWalker.lastChild
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.lastChild()`** method moves the current
 {{domxref("Node")}} to the last _visible_ child of the current node, and returns
-the found child. It also moves the current node to this child. If no such child exists,
-returns `null` and the current node is not changed.
+the found child. If no such child exists, it returns `null` and the current node is not changed.
 
 ## Syntax
 
-```js
+```js-nolint
 lastChild()
 ```
 

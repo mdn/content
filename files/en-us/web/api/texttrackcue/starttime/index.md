@@ -10,13 +10,14 @@ tags:
   - TextTrackCue
 browser-compat: api.TextTrackCue.startTime
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`startTime`** property of the {{domxref("TextTrackCue")}} interface returns and sets the start time of the cue.
 
 ## Value
 
-An integer representing the start time, in seconds.
+A number representing the start time, in seconds.
 
 ## Examples
 

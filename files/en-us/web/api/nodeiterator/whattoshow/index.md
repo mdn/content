@@ -9,6 +9,7 @@ tags:
   - Property
 browser-compat: api.NodeIterator.whatToShow
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeIterator.whatToShow`** read-only property represents

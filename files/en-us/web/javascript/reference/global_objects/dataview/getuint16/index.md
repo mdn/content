@@ -1,6 +1,7 @@
 ---
 title: DataView.prototype.getUint16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint16
+page-type: javascript-instance-method
 tags:
   - DataView
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.getUint16
 ---
+
 {{JSRef}}
 
 The **`getUint16()`** method gets an unsigned 16-bit integer
@@ -19,7 +21,7 @@ The **`getUint16()`** method gets an unsigned 16-bit integer
 
 ## Syntax
 
-```js
+```js-nolint
 getUint16(byteOffset)
 getUint16(byteOffset, littleEndian)
 ```

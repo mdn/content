@@ -1,6 +1,7 @@
 ---
 title: class expression
 slug: Web/JavaScript/Reference/Operators/class
+page-type: javascript-operator
 tags:
   - Classes
   - ECMAScript 2015
@@ -11,20 +12,16 @@ tags:
   - Reference
 browser-compat: javascript.operators.class
 ---
+
 {{jsSidebar("Operators")}}
 
-The **class expression** is one way to define a
-class in ECMAScript 2015. Similar to {{jsxref("Operators/function", "function
-    expressions", "", "true")}}, class expressions can be named or unnamed. If named, the
-name of the class is local to the class body only.
-
-JavaScript classes use prototype-based inheritance.
+The **`class`** keyword can be used to define a class inside an expression. Similar to [function expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function), class expressions can be named or unnamed. If named, the name of the class is local to the class body only.
 
 {{EmbedInteractiveExample("pages/js/expressions-classexpression.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 const MyClass = class [className] [extends otherClassName] {
   // class body
 }
@@ -48,19 +45,19 @@ There are several differences between class expressions and
 
 The `constructor` method is optional. Classes generated with class
 expressions will always respond to {{jsxref("Operators/typeof", "typeof")}} with the
-value "`function`".
+value `"function"`.
 
 ```js
-'use strict';
-let Foo = class {};  // constructor property is optional
-Foo = class {};      // Re-declaration is allowed
+"use strict";
+let Foo = class {}; // constructor property is optional
+Foo = class {}; // Re-declaration is allowed
 
-typeof Foo;             // returns "function"
-typeof class {};        // returns "function"
+typeof Foo; // returns "function"
+typeof class {}; // returns "function"
 
-Foo instanceof Object;   // true
+Foo instanceof Object; // true
 Foo instanceof Function; // true
-class Foo {}            // Throws SyntaxError (class declarations do not allow re-declaration)
+class Foo {} // Throws SyntaxError (class declarations do not allow re-declaration)
 ```
 
 ## Examples
@@ -74,13 +71,13 @@ variable `Foo`.
 const Foo = class {
   constructor() {}
   bar() {
-    return 'Hello World!';
+    return "Hello World!";
   }
 };
 
 const instance = new Foo();
-instance.bar();  // "Hello World!"
-Foo.name;        // "Foo"
+instance.bar(); // "Hello World!"
+Foo.name; // "Foo"
 ```
 
 ### Named class expressions
@@ -95,11 +92,11 @@ const Foo = class NamedFoo {
   whoIsThere() {
     return NamedFoo.name;
   }
-}
+};
 const bar = new Foo();
-bar.whoIsThere();  // "NamedFoo"
-NamedFoo.name;     // ReferenceError: NamedFoo is not defined
-Foo.name;          // "NamedFoo"
+bar.whoIsThere(); // "NamedFoo"
+NamedFoo.name; // ReferenceError: NamedFoo is not defined
+Foo.name; // "NamedFoo"
 ```
 
 ## Specifications

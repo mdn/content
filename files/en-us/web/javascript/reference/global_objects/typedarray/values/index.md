@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - Iterator
@@ -11,6 +12,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.TypedArray.values
 ---
+
 {{JSRef}}
 
 The **`values()`** method returns a new _array iterator_ object that contains the values for each index in the array.
@@ -19,7 +21,7 @@ The **`values()`** method returns a new _array iterator_ object that contains th
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 

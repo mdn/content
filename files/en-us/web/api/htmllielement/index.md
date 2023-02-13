@@ -10,13 +10,14 @@ tags:
   - Reference
 browser-compat: api.HTMLLIElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLLIElement`** interface exposes specific properties and methods (beyond those defined by regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating list elements.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -25,9 +26,9 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLLIElement.value")}}
   - : A `long` indicating the ordinal position of the _list element_ inside a given {{HTMLElement("ol")}}. It reflects the {{htmlattrxref("value", "li")}} attribute of the HTML {{HTMLElement("li")}} element, and can be smaller than `0`. If the {{HTMLElement("li")}} element is not a child of an {{HTMLElement("ol")}} element, the property has no meaning.
 
-## Methods
+## Instance methods
 
-_No specific method; inherits properties from its parent, {{domxref("HTMLElement")}}._
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 ## Specifications
 

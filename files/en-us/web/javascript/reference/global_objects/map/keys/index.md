@@ -1,6 +1,7 @@
 ---
 title: Map.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Map/keys
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - Iterator
@@ -21,8 +22,8 @@ that contains the keys for each element in the `Map` object in insertion order. 
 
 ## Syntax
 
-```js
-keys();
+```js-nolint
+keys()
 ```
 
 ### Return value
@@ -43,7 +44,7 @@ const mapIter = myMap.keys();
 
 console.log(mapIter.next().value); // "0"
 console.log(mapIter.next().value); // 1
-console.log(mapIter.next().value); // Object
+console.log(mapIter.next().value); // {}
 ```
 
 ## Specifications

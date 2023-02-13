@@ -12,6 +12,7 @@ tags:
   - Property
 browser-compat: api.CSSMathMax.values
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The CSSMathMax.values read-only property of the

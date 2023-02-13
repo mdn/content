@@ -11,56 +11,69 @@ tags:
   - workerStart
 browser-compat: api.PerformanceResourceTiming.workerStart
 ---
-{{APIRef("Resource Timing API")}}
 
-The **`workerStart`** read-only property of the
-{{domxref("PerformanceResourceTiming")}} interface returns a
-{{domxref("DOMHighResTimeStamp")}} immediately before dispatching the
-{{domxref("FetchEvent")}} if a Service Worker thread is already running, or immediately
-before starting the Service Worker thread if it is not already running. If the resource
-is not intercepted by a Service Worker the property will always return 0.
+{{APIRef("Performance API")}}
 
-{{AvailableInWorkers}}
+The **`workerStart`** read-only property of the {{domxref("PerformanceResourceTiming")}} interface returns a
+{{domxref("DOMHighResTimeStamp")}} immediately before dispatching the {{domxref("FetchEvent")}} if a Service Worker thread is already running, or immediately before starting the Service Worker thread if it is not already running. If the resource is not intercepted by a Service Worker the property will always return 0.
 
 ## Value
 
-A {{domxref("DOMHighResTimeStamp")}}.
+The `workerStart` property can have the following values:
+
+- A {{domxref("DOMHighResTimeStamp")}}.
+- `0` if no service worker is used.
+- `0` if the resource is a cross-origin request and no {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header is used.
 
 ## Examples
 
-In the following example, the value of the `*Start` and `*End`
-properties of all "`resource`"
-{{domxref("PerformanceEntry.entryType","type")}} events are logged.
+### Measuring ServiceWorker processing time
+
+The `workerStart` and {{domxref("PerformanceResourceTiming.fetchStart", "fetchStart")}} properties can be used to measure the processing time of a {{domxref("ServiceWorker")}}.
 
 ```js
-function print_PerformanceEntries() {
-  // Use getEntriesByType() to just get the "resource" events
-  const p = performance.getEntriesByType("resource");
-  for (let i=0; i < p.length; i++) {
-    print_start_and_end_properties(p[i]);
-  }
-}
-function print_start_and_end_properties(perfEntry) {
-  // Print timestamps of the PerformanceEntry *start and *end properties
-  properties = ["connectStart", "connectEnd",
-                "domainLookupStart", "domainLookupEnd",
-                "fetchStart",
-                "redirectStart", "redirectEnd",
-                "requestStart",
-                "responseStart", "responseEnd",
-                "secureConnectionStart",
-                "workerStart"];
+const workerProcessingTime = entry.fetchStart - entry.workerStart;
+```
 
-  for (let i=0; i < properties.length; i++) {
-    // check each property
-    const value = perfEntry[properties[i]];
-    if (properties[i] in perfEntry) {
-      console.log(`… ${properties[i]} = ${value}`);
-    } else {
-      console.log(`… ${properties[i]} = NOT supported`);
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `resource` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
+
+```js
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    const workerProcessingTime = entry.fetchStart - entry.workerStart;
+    if (workerProcessingTime > 0) {
+      console.log(
+        `${entry.name}: Worker processing time: ${workerProcessingTime}ms`
+      );
     }
+  });
+});
+
+observer.observe({ type: "resource", buffered: true });
+```
+
+Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
+
+```js
+const resources = performance.getEntriesByType("resource");
+resources.forEach((entry) => {
+  const workerProcessingTime = entry.fetchStart - entry.workerStart;
+  if (workerProcessingTime > 0) {
+    console.log(
+      `${entry.name}: Worker processing time: ${workerProcessingTime}ms`
+    );
   }
-}
+});
+```
+
+### Cross-origin timing information
+
+If the value of the `workerStart` property is `0`, the resource might be a cross-origin request. To allow seeing cross-origin timing information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
+
+For example, to allow `https://developer.mozilla.org` to see timing resources, the cross-origin resource should send:
+
+```http
+Timing-Allow-Origin: https://developer.mozilla.org
 ```
 
 ## Specifications
@@ -70,3 +83,7 @@ function print_start_and_end_properties(perfEntry) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{HTTPHeader("Timing-Allow-Origin")}}

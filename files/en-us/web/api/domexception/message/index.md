@@ -10,6 +10,7 @@ tags:
   - message
 browser-compat: api.DOMException.message
 ---
+
 {{ APIRef("DOM") }}
 
 The **`message`** read-only property of the

@@ -10,6 +10,7 @@ tags:
   - open
 browser-compat: api.EventSource.open_event
 ---
+
 {{APIRef}}
 
 The `open` event of the {{domxref("EventSource")}} API is fired when a connection with an event source is opened.

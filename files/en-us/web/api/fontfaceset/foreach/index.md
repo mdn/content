@@ -10,13 +10,14 @@ tags:
   - FontFaceSet
 browser-compat: api.FontFaceSet.forEach
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`forEach()`** method of the {{domxref("FontFaceSet")}} interface executes a provided function for each value in the `FontFaceSet` object.
 
 ## Syntax
 
-```js
+```js-nolint
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
 ```

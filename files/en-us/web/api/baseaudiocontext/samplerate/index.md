@@ -12,6 +12,7 @@ tags:
   - sampleRate
 browser-compat: api.BaseAudioContext.sampleRate
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `sampleRate` property of the {{

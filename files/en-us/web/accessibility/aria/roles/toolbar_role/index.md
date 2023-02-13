@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: toolbar role'
+title: "ARIA: toolbar role"
 slug: Web/Accessibility/ARIA/Roles/toolbar_role
 tags:
   - Accessibility
@@ -31,6 +31,7 @@ If any of the otherwise interactive elements within the toolbar are temporarily 
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
+
   - : Elements with the role toolbar have an implicit `aria-orientation` value of horizontal.
 
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) / [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
@@ -41,12 +42,14 @@ If any of the otherwise interactive elements within the toolbar are temporarily 
 Implement focus management so the keyboard tab sequence includes one stop for the toolbar and arrow keys move focus among the controls in the toolbar.
 
 - <kbd>Tab</kbd> and <kbd>Shift + Tab</kbd>
+
   - : Move focus into and out of the toolbar. When focus moves into a toolbar:
 
     - If focus is moving into the toolbar for the first time, focus is set on the first control that is not disabled.
     - If the toolbar has previously contained focus, focus is optionally set on the control that last had focus. Otherwise, it is set on the first control that is not disabled.
 
 - <kbd>Home</kbd> (Optional)
+
   - : Moves focus to first element.
 
 - <kbd>End</kbd> (Optional)
@@ -57,6 +60,7 @@ Implement focus management so the keyboard tab sequence includes one stop for th
 Elements with the role toolbar have an implicit `aria-orientation` value of horizontal. If the toolbar indeed has this orientation, the following keyboard interactions need to be implemented:
 
 - <kbd>Left Arrow</kbd> (For a horizontal toolbar (the default)
+
   - : Moves focus to the previous control. Optionally, focus movement may wrap from the first element to the last element.
 
 - <kbd>Right Arrow</kbd> (For a horizontal toolbar (the default)
@@ -69,6 +73,7 @@ In toolbars with multiple rows of controls, allow the left and right arrows to w
 If the toolbar is vertical, ensure `aria-orientation="vertical"` is set, and the following keyboard interactions are implemented:
 
 - <kbd>Down Arrow</kbd> (For a horizontal toolbar (the default)
+
   - : Moves focus to the previous control. Optionally, focus movement may wrap from the first element to the last element.
 
 - <kbd>Up Arrow</kbd> (For a horizontal toolbar (the default)
@@ -78,7 +83,7 @@ If the toolbar is vertical, ensure `aria-orientation="vertical"` is set, and the
 
 Implement focus management so the keyboard tab sequence includes one stop for the toolbar and arrow keys move focus among the controls in the toolbar. When tabbing into the toolbar, focus returns to the control that last had focus.
 
-While the toolbar element itself does not receive focus, focus on movement into, out of, and within the toolbar has to be managed. On load, the first element in the tabbing sequence within the toolbar has `tabindex="0"` with `tabindex="-1"` set on all other focusable elements within the toolbar. Depending on the [keyboard interaction], the element receiving focus gets set to `tabindex="0"` and the element that just lost focus gets switched back to `tabindex="-1"`. Set focus, `element.focus()`, on the element that has `tabindex="0"`. This is called "roving tabindex".  A benefit of using roving tabindex to manage focus is that the browser will scroll the newly focused element into view.
+While the toolbar element itself does not receive focus, focus on movement into, out of, and within the toolbar has to be managed. On load, the first element in the tabbing sequence within the toolbar has `tabindex="0"` with `tabindex="-1"` set on all other focusable elements within the toolbar. Depending on the [keyboard interaction], the element receiving focus gets set to `tabindex="0"` and the element that just lost focus gets switched back to `tabindex="-1"`. Set focus, `element.focus()`, on the element that has `tabindex="0"`. This is called "roving tabindex". A benefit of using roving tabindex to manage focus is that the browser will scroll the newly focused element into view.
 
 If the design calls for a specific element to be focused the next time the user moves focus into the toolbar with <kbd>Tab</kbd> or <kbd>Shift + Tab</kbd>, check if that target element has `tabindex="0"` when toolbar loses focus.
 
@@ -107,6 +112,6 @@ If any of the otherwise interactive elements within the toolbar are disabled, co
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

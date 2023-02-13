@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.NodeList.item
 ---
+
 {{APIRef("DOM")}}
 
 Returns a node from a [`NodeList`](/en-US/docs/Web/API/NodeList) by index. This method
@@ -19,7 +20,7 @@ argument is provided.
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 

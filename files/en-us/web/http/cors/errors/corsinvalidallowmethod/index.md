@@ -14,11 +14,12 @@ tags:
   - console
   - troubleshooting
 ---
+
 {{HTTPSidebar}}
 
 ## Reason
 
-```
+```plain
 Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Methods'
 ```
 

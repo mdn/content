@@ -9,15 +9,17 @@ tags:
   - AR
   - XR
   - WebXR
+  - Experimental
 browser-compat: api.XRMediaBinding.createCylinderLayer
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`createCylinderLayer()`** method of the {{domxref("XRMediaBinding")}} interface returns an {{domxref("XRCylinderLayer")}} object which is a layer that takes up a curved rectangular space in the virtual environment.
 
 ## Syntax
 
-```js
+```js-nolint
 createCylinderLayer(video, options)
 ```
 
@@ -45,7 +47,7 @@ createCylinderLayer(video, options)
           - : A single {{domxref("XRSubImage")}} is allocated. Left eye gets the left area of the texture, right eye the right. This layout is designed to minimize draw calls for content that is already in stereo (for example stereo videos or images).
         - `stereo-top-bottom`
           - : A single {{domxref("XRSubImage")}} is allocated. Left eye gets the top area of the texture, right eye the bottom. This layout is designed to minimize draw calls for content that is already in stereo (for example stereo videos or images).
-        The default value is `mono`.
+            The default value is `mono`.
     - `radius` {{optional_inline}}
       - : A number indicating the radius of the cylinder. Default value `2.0`.
     - `space` **Required**

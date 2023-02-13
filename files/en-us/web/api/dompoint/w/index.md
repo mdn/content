@@ -15,6 +15,7 @@ tags:
   - perspective
 browser-compat: api.DOMPoint.w
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPoint`** interface's

@@ -11,6 +11,7 @@ tags:
   - heading
 browser-compat: api.GeolocationCoordinates.heading
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationCoordinates.heading`** read-only property is

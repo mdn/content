@@ -11,6 +11,7 @@ tags:
   - mouse lock
 browser-compat: api.Document.pointerLockElement
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`pointerLockElement`** property

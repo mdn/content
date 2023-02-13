@@ -16,9 +16,12 @@ tags:
   - paymentAddress
   - town
   - village
+  - Deprecated
+  - Non-standard
 browser-compat: api.PaymentAddress.city
 ---
-{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}}
+
+{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`city`** read-only property of
 the {{domxref('PaymentAddress')}} interface returns a string containing the city or

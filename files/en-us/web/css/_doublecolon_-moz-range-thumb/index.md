@@ -1,6 +1,7 @@
 ---
-title: '::-moz-range-thumb'
+title: "::-moz-range-thumb"
 slug: Web/CSS/::-moz-range-thumb
+page-type: css-pseudo-element
 tags:
   - CSS
   - CSS:Mozilla Extensions
@@ -10,6 +11,7 @@ tags:
   - Selector
 browser-compat: css.selectors.-moz-range-thumb
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-moz-range-thumb`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the _thumb_ (i.e., virtual knob) of an {{HTMLElement("input")}} of `type="range"`. The user can move the thumb along the input's track to alter its numerical value.
@@ -18,8 +20,10 @@ The **`::-moz-range-thumb`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 
 ## Syntax
 
-```
-::-moz-range-thumb
+```css
+::-moz-range-thumb {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -27,13 +31,13 @@ The **`::-moz-range-thumb`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 ### HTML
 
 ```html
-<input type="range" min="0" max="100" step="5" value="50"/>
+<input type="range" min="0" max="100" step="5" value="50" />
 ```
 
 ### CSS
 
 ```css
-input[type=range]::-moz-range-thumb {
+input[type="range"]::-moz-range-thumb {
   background-color: green;
 }
 ```
@@ -44,7 +48,7 @@ input[type=range]::-moz-range-thumb {
 
 A progress bar using this style might look something like this:
 
-![The thumb of the \<input type=right> styled in green](screen_shot_2015-12-04_at_13.30.08.png)
+![The thumb of the 'input type=right' styled in green](screen_shot_2015-12-04_at_13.30.08.png)
 
 ## Specifications
 

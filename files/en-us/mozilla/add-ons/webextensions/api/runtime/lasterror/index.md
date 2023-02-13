@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.lastError
 ---
+
 {{AddonSidebar()}}
 
 This value is used to report an error message from an asynchronous API, when the asynchronous API is given a callback. This is useful for extensions that are using the callback-based version of the WebExtension APIs.
@@ -30,13 +31,13 @@ If you call an asynchronous function that may set `lastError`, you are expected 
 
 ## Syntax
 
-```js
+```js-nolint
 let myError = browser.runtime.lastError;  // null or Error object
 ```
 
 ### Value
 
-An {{jsxref("Error")}} object representing the error. The {{jsxref("Error.message", "message")}} property is a `string` with a human-readable description of the error . If `lastError` has not been set, the value is `null`.
+An {{jsxref("Error")}} object representing the error. The {{jsxref("Error.message", "message")}} property is a `string` with a human-readable description of the error. If `lastError` has not been set, the value is `null`.
 
 ## Examples
 
@@ -84,10 +85,9 @@ setCookie.then(logCookie, logError);
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#property-lastError) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -114,4 +114,4 @@ setCookie.then(logCookie, logError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -20,6 +20,7 @@ tags:
   - rtc
 browser-compat: api.RTCRtpStreamStats.codecId
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpStreamStats")}} dictionary's

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.PointerEvent.PointerEvent
 ---
+
 {{APIRef("Pointer Events")}}
 
 The **`PointerEvent()`** constructor creates a new synthetic
@@ -16,7 +17,7 @@ and untrusted {{domxref("PointerEvent")}} object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new PointerEvent(type)
 new PointerEvent(type, options)
 ```

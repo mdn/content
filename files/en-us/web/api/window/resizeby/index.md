@@ -11,6 +11,7 @@ tags:
   - Window
 browser-compat: api.Window.resizeBy
 ---
+
 {{APIRef}}
 
 The **`Window.resizeBy()`** method resizes the current window
@@ -18,7 +19,7 @@ by a specified amount.
 
 ## Syntax
 
-```js
+```js-nolint
 resizeBy(xDelta, yDelta)
 ```
 

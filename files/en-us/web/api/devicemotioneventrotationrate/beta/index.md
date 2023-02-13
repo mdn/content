@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.DeviceMotionEventRotationRate.beta
 ---
+
 {{ ApiRef("Device Orientation Events") }}
 
 The **`DeviceMotionEventRotationRate.alpha`** read-only property indicates the rate of rotation around the X axis, in degrees per second.
@@ -19,7 +20,7 @@ The **`DeviceMotionEventRotationRate.alpha`** read-only property indicates the r
 ## Value
 
 A `double` indicating the rate of rotation around the X axis, in degrees per second.
-See [Accelerometer values explained](/en-US/docs/Web/Events/Detecting_device_orientation#accelerometer_values_explained) for details.
+See [Accelerometer values explained](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation#accelerometer_values_explained) for details.
 
 ## Specifications
 

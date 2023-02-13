@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.waitSync
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.waitSync()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) returns immediately, but waits on
@@ -20,7 +21,7 @@ multiple GL contexts.
 
 ## Syntax
 
-```js
+```js-nolint
 waitSync(sync, flags, timeout)
 ```
 

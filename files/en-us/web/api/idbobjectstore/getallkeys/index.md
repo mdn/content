@@ -11,6 +11,7 @@ tags:
   - Storage
 browser-compat: api.IDBObjectStore.getAllKeys
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The `getAllKeys()` method of the {{domxref("IDBObjectStore")}}
@@ -32,7 +33,7 @@ method provides a cursor if the record exists, and no cursor if it does not.
 
 ## Syntax
 
-```js
+```js-nolint
 getAllKeys()
 getAllKeys(query)
 getAllKeys(query, count)
@@ -40,17 +41,18 @@ getAllKeys(query, count)
 
 ### Parameters
 
-- *query* {{optional_inline}}
+- `query` {{optional_inline}}
   - : A value that is or resolves to an {{domxref("IDBKeyRange")}}.
-- *count* {{optional_inline}}
+- `count` {{optional_inline}}
   - : Specifies the number of values to return if more than one is found. If it is lower
     than `0` or greater than `2^32 - 1` a
     {{jsxref("TypeError")}} exception will be thrown.
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is an {{jsxref("Array")}} of the keys for all records matching the given query, up to the value of `count`, if `count` was supplied.
 
 ### Exceptions
 
@@ -79,4 +81,4 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

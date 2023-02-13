@@ -1,5 +1,5 @@
 ---
-title: 'aria-pressed'
+title: "aria-pressed"
 slug: Web/Accessibility/ARIA/Attributes/aria-pressed
 tags:
   - Accessibility

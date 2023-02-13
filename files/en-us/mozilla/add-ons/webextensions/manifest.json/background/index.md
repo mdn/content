@@ -9,6 +9,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.background
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -71,7 +72,7 @@ The `background` key is an object that must have one of these properties:
             location with the <code>&#x3C;script></code> tag (e.g.
             <code
               >&#x3C;script src =
-              "https://code.jquery.com/jquery-1.7.1.min.js"></code
+              "https://code.jquery.com/jquery-3.6.0.min.js"></code
             >), you will also have to change the
             <code
               ><a

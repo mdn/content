@@ -1,6 +1,7 @@
 ---
 title: padding-block-start
 slug: Web/CSS/padding-block-start
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property
@@ -11,6 +12,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.padding-block-start
 ---
+
 {{CSSRef}}
 
 The **`padding-block-start`** [CSS](/en-US/docs/Web/CSS) property defines the logical block start padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation.
@@ -21,11 +23,11 @@ The **`padding-block-start`** [CSS](/en-US/docs/Web/CSS) property defines the lo
 
 ```css
 /* <length> values */
-padding-block-start: 10px;      /* An absolute length */
-padding-block-start: 1em;       /* A length relative to the text size */
+padding-block-start: 10px; /* An absolute length */
+padding-block-start: 1em; /* A length relative to the text size */
 
 /* <percentage> value */
-padding-block-start: 5%;        /* A padding relative to the block container's width */
+padding-block-start: 5%; /* A padding relative to the block container's width */
 
 /* Global values */
 padding-block-start: inherit;
@@ -80,7 +82,7 @@ div {
 .exampleText {
   writing-mode: vertical-lr;
   padding-block-start: 20px;
-  background-color: #C8C800;
+  background-color: #c8c800;
 }
 ```
 
@@ -98,5 +100,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - The mapped physical properties: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

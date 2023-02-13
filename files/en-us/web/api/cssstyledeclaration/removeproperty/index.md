@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSStyleDeclaration.removeProperty
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`CSSStyleDeclaration.removeProperty()`** method interface
@@ -16,7 +17,7 @@ removes a property from a CSS style declaration object.
 
 ## Syntax
 
-```js
+```js-nolint
 removeProperty(property)
 ```
 
@@ -41,7 +42,7 @@ from a selector rule:
 
 ```js
 const declaration = document.styleSheets[0].rules[0].style;
-const oldValue = declaration.removeProperty('background-color');
+const oldValue = declaration.removeProperty("background-color");
 ```
 
 ## Specifications

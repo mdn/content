@@ -12,6 +12,7 @@ tags:
   - options_ui
 browser-compat: webextensions.manifest.options_ui
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

@@ -12,6 +12,7 @@ tags:
   - dataset
 browser-compat: api.HTMLElement.dataset
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`dataset`** read-only property
@@ -48,10 +49,10 @@ attributes in our article [_Using data attributes_](/en-US/docs/Learn/HTML/Howto
       domxref("DOMStringMap") }} entry by the following:
 
     1. Lowercase all ASCII capital letters (`A` to
-        `Z`);
+       `Z`);
     2. Remove the prefix `data-` (including the dash);
     3. For any dash (`U+002D`) followed by an ASCII lowercase letter
-        `a` to `z`, remove the dash and uppercase the letter;
+       `a` to `z`, remove the dash and uppercase the letter;
     4. Other characters (including other dashes) are left unchanged.
 
 - `camelCase` to `dash-style` conversion
@@ -60,11 +61,11 @@ attributes in our article [_Using data attributes_](/en-US/docs/Learn/HTML/Howto
     following:
 
     1. **Restriction:** Before transformation, a dash _must not_ be
-        immediately followed by an ASCII lowercase letter `a` to
-        `z`;
+       immediately followed by an ASCII lowercase letter `a` to
+       `z`;
     2. Add the `data-` prefix;
     3. Add a dash before any ASCII uppercase letter `A` to `Z`,
-        then lowercase the letter;
+       then lowercase the letter;
     4. Other characters are left unchanged.
 
 For example, a `data-abc-def` attribute corresponds to
@@ -94,7 +95,9 @@ A {{domxref("DOMStringMap")}}.
 ## Examples
 
 ```html
-<div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth>John Doe</div>
+<div id="user" data-id="1234567890" data-user="carinaanand" data-date-of-birth>
+  Carina Anand
+</div>
 ```
 
 ```js
@@ -102,22 +105,22 @@ const el = document.querySelector('#user');
 
 // el.id === 'user'
 // el.dataset.id === '1234567890'
-// el.dataset.user === 'johndoe'
+// el.dataset.user === 'carinaanand'
 // el.dataset.dateOfBirth === ''
 
 // set a data attribute
 el.dataset.dateOfBirth = '1960-10-03';
 // Result on JS: el.dataset.dateOfBirth === '1960-10-03'
-// Result on HTML: <div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth="1960-10-03">John Doe</div>
+// Result on HTML: <div id="user" data-id="1234567890" data-user="carinaanand" data-date-of-birth="1960-10-03">Carina Anand</div>
 
 delete el.dataset.dateOfBirth;
 // Result on JS: el.dataset.dateOfBirth === undefined
-// Result on HTML: <div id="user" data-id="1234567890" data-user="johndoe">John Doe</div>
+// Result on HTML: <div id="user" data-id="1234567890" data-user="carinaanand">Carina Anand</div>
 
 if (!('someDataAttr' in el.dataset)) {
   el.dataset.someDataAttr = 'mydata';
   // Result on JS: 'someDataAttr' in el.dataset === true
-  // Result on HTML: <div id="user" data-id="1234567890" data-user="johndoe" data-some-data-attr="mydata">John Doe</div>
+  // Result on HTML: <div id="user" data-id="1234567890" data-user="carinaanand" data-some-data-attr="mydata">Carina Anand</div>
 }
 ```
 

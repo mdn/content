@@ -13,11 +13,11 @@ tags:
   - Sync
   - Web Periodic Background Synchronization API
   - periodic
+  - Experimental
 browser-compat: api.PeriodicSyncManager
 ---
-{{securecontext_header}}
 
-{{DefaultAPISidebar("Periodic Background Sync")}}
+{{DefaultAPISidebar("Periodic Background Sync")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The Web Periodic Background Synchronization API provides a way to register tasks to be run in a {{domxref('Service Worker API','service worker')}} at periodic intervals with network connectivity. These tasks are referred to as periodic background sync requests.
 
@@ -44,7 +44,7 @@ As this API relies on service workers, functionality provided by this API is onl
 
 The following additions to the {{domxref('Service Worker API')}} are specified in the Periodic Background Sync specification to provide an entry point for using Periodic Background Sync.
 
-- {{domxref("ServiceWorkerRegistration.periodicSync")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerRegistration.periodicSync")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("PeriodicSyncManager")}} interface for registering tasks to run at specific intervals.
 - {{domxref("ServiceWorkerGlobalScope.periodicsync_event", "onperiodicsync")}}
   - : An event handler fired whenever a {{domxref("ServiceWorkerGlobalScope.periodicsync_event", "periodicsync")}} event occurs. This happens at timed intervals, that are specified when registering a {{domxref('PeriodicSyncManager')}}.

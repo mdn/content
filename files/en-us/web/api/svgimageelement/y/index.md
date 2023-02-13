@@ -14,6 +14,7 @@ tags:
   - 'y'
 browser-compat: api.SVGImageElement.y
 ---
+
 {{APIRef("SVG")}}
 
 The **`y`** read-only property of the

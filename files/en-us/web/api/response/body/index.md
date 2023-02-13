@@ -11,6 +11,7 @@ tags:
   - Response
 browser-compat: api.Response.body
 ---
+
 {{APIRef("Fetch")}}
 
 The **`body`** read-only property of the {{domxref("Response")}} interface is a {{domxref("ReadableStream")}} of the body contents.

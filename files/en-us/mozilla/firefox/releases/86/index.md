@@ -2,11 +2,12 @@
 title: Firefox 86 for developers
 slug: Mozilla/Firefox/Releases/86
 tags:
-  - '86'
+  - "86"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 86 that will affect developers. Firefox 86 was released on February 23, 2021.
@@ -40,10 +41,10 @@ _No changes._
 
   ```js
   // Get English currency code display names
-  let currencyNames = new Intl.DisplayNames(['en'], {type: 'currency'});
+  let currencyNames = new Intl.DisplayNames(["en"], { type: "currency" });
   // Get currency names
-  currencyNames.of('USD'); // "US Dollar"
-  currencyNames.of('EUR'); // "Euro"
+  currencyNames.of("USD"); // "US Dollar"
+  currencyNames.of("EUR"); // "Euro"
   ```
 
   For more information see {{bug(1654116)}}.

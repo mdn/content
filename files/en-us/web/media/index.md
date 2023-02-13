@@ -8,6 +8,7 @@ tags:
   - Video
   - Web
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 Over the years, the Web's ability to present, create, and manage audio, video, and other media has grown at an increasing pace. Today, there are a large number of APIs available, as well as HTML elements, DOM interfaces, and other features that make it possible to not only perform these tasks, but use media in tandem with other technologies to do truly remarkable things. This article lists the various APIs with links to documentation you may find helpful in mastering them.
@@ -31,7 +32,7 @@ These articles cover HTML features for media developers.
 
 - [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API)
   - : The Media Capabilities API lets you determine the encoding and decoding capabilities of the device your app or site is running on. This lets you make real-time decisions about what formats to use and when.
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
   - : A reference for the API which makes it possible to stream, record, and manipulate media both locally and across a network. This includes using local cameras and microphones to capture video, audio, and still images.
 - [Media Session API](/en-US/docs/Web/API/Media_Session_API)
   - : The Media Session API provides a way to customize media notifications. It does this by providing metadata for display by the user agent for the media your web app is playing. It also provides action handlers that the browser can use to access platform media keys such as hardware keys found on keyboards, headsets, remote controls, and software keys found in notification areas and on lock screens of mobile devices.

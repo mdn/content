@@ -9,19 +9,29 @@ tags:
   - Web Performance
 browser-compat: api.Performance.getEntriesByName
 ---
-{{APIRef("Performance Timeline API")}}
 
-The **`getEntriesByName()`** method returns a list of
-{{domxref("PerformanceEntry")}} objects for the given _name_ and _type_.
-The list's members (_entries_) can be created by making performance
-_marks_ or _measures_ (for example by calling the
-{{domxref("Performance.mark","mark()")}} method) at explicit points in time.
+{{APIRef("Performance API")}}
 
-{{AvailableInWorkers}}
+The **`getEntriesByName()`** method returns an array of {{domxref("PerformanceEntry")}} objects currently present in the performance timeline with the given _name_ and _type_.
+
+If you are interested in performance entries of certain types, see {{domxref("Performance.getEntriesByType", "getEntriesByType()")}}. For all performance entries, see {{domxref("Performance.getEntries", "getEntries()")}}.
+
+> **Note:** This method does not notify you about new performance entries; you will only get entries that are present in the performance timeline at the time you call this method.
+> To receive notifications about entries as they become available, use a {{domxref("PerformanceObserver")}}.
+
+The following entry types are not supported by this method at all and won't be returned even if entries for these types might exist:
+
+- `"element"` ({{domxref("PerformanceElementTiming")}})
+- `"event"` ({{domxref("PerformanceEventTiming")}})
+- `"largest-contentful-paint"` ({{domxref("LargestContentfulPaint")}})
+- `"layout-shift"` ({{domxref("LayoutShift")}})
+- `"longtask"` ({{domxref("PerformanceLongTaskTiming")}})
+
+To access entries of these types, you must use a {{domxref("PerformanceObserver")}} instead.
 
 ## Syntax
 
-```js
+```js-nolint
 getEntriesByName(name)
 getEntriesByName(name, type)
 ```
@@ -29,73 +39,28 @@ getEntriesByName(name, type)
 ### Parameters
 
 - `name`
-  - : The name of the entry to retrieve.
+  - : The name of the entries to retrieve.
 - `type` {{optional_inline}}
-  - : The type of entry to retrieve such as "`mark`". The valid entry types are
+  - : The type of entries to retrieve such as "`mark`". The valid entry types are
     listed in {{domxref("PerformanceEntry.entryType")}}.
 
 ### Return value
 
-A list of {{domxref("PerformanceEntry")}} objects that have the specified
-    `name` and `type`. If the `type` argument is not
-    specified, only the `name` will be used to determine the entries to return.
-    The items will be in chronological order based on the entries'
-    {{domxref("PerformanceEntry.startTime","startTime")}}. If no objects meet the
-    specified criteria, an empty list is returned.
+An {{jsxref("Array")}} of {{domxref("PerformanceEntry")}} objects that have the specified `name` and `type`.
+The items will be in chronological order based on the entries' {{domxref("PerformanceEntry.startTime","startTime")}}. If no objects meet the
+specified criteria, an empty array is returned.
 
 ## Examples
 
+### Logging performance markers
+
+The following example logs all {{domxref("PerformanceMark")}} objects named "`debug-mark`".
+
 ```js
-function use_PerformanceEntry_methods() {
-  console.log("PerformanceEntry tests…");
-
-  if (performance.mark === undefined) {
-    console.error("The property performance.mark is not supported.");
-    return;
-  }
-
-  // Create some performance entries via the mark() method
-  performance.mark("Begin");
-  do_work(50000);
-  performance.mark("End");
-  performance.mark("Begin");
-  do_work(100000);
-  performance.mark("End");
-  do_work(200000);
-  performance.mark("End");
-
-  // Use getEntries() to iterate through the each entry
-  let p = performance.getEntries();
-  for (let i=0; i < p.length; i++) {
-    log(`Entry[${i}]`);
-    check_PerformanceEntry(p[i]);
-  }
-
-  // Use getEntries(name, entryType) to get specific entries
-  p = performance.getEntries({name : "Begin", entryType: "mark"});
-  for (let i=0; i < p.length; i++) {
-    log(`Begin[${i}]`);
-    check_PerformanceEntry(p[i]);
-  }
-
-  // Use getEntriesByType() to get all "mark" entries
-  p = performance.getEntriesByType("mark");
-  for (let i=0; i < p.length; i++) {
-    log(`Mark only entry[${i}]:`);
-    log(`  name      = ${p[i].name}`);
-    log(`  startTime = ${p[i].startTime}`);
-    log(`  duration  = ${p[i].duration}`);
-  }
-
-  // Use getEntriesByName() to get all "mark" entries named "Begin"
-  p = performance.getEntriesByName("Begin", "mark");
-  for (let i=0; i < p.length; i++) {
-    log(`Mark and Begin entry[${i}]:`);
-    log(`  name      = ${p[i].name}`);
-    log(`  startTime = ${p[i].startTime}`);
-    log(`  duration  = ${p[i].duration}`);
-  }
-}
+const debugMarks = performance.getEntriesByName("debug-mark", "mark");
+debugMarks.forEach((entry) => {
+  console.log(`${entry.name}'s startTime: ${entry.startTime}`);
+});
 ```
 
 ## Specifications
@@ -105,3 +70,8 @@ function use_PerformanceEntry_methods() {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Performance.getEntries()")}}
+- {{domxref("Performance.getEntriesByType()")}}

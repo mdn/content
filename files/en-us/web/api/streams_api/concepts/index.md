@@ -7,6 +7,7 @@ tags:
   - Streams
   - concepts
 ---
+
 {{apiref("Streams")}}
 
 The [Streams API](/en-US/docs/Web/API/Streams_API) adds a very useful set of tools to the web platform, providing objects allowing JavaScript to programmatically access streams of data received over the network and process them as desired by the developer. Some of the concepts and terminology associated with streams might be new to you — this article explains all you need to know.
@@ -22,7 +23,7 @@ There are two types of underlying source:
 
 The data is read sequentially in small pieces called **chunks**. A chunk can be a single byte, or it can be something larger such as a [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) of a certain size. A single stream can contain chunks of different sizes and types.
 
-![](readable_streams.png)
+![Readable streams data flow](readable_streams.png)
 
 The chunks placed in a stream are said to be **enqueued** — this means they are waiting in a queue ready to be read. An **internal queue** keeps track of the chunks that have not yet been read (see the Internal queues and queuing strategies section below).
 
@@ -44,7 +45,7 @@ In JavaScript, this is achieved via the {{domxref("ReadableStream.tee()")}} meth
 
 You might do this for example in a [ServiceWorker](/en-US/docs/Web/API/Service_Worker_API) if you want to fetch a response from the server and stream it to the browser, but also stream it to the ServiceWorker cache. Since a response body cannot be consumed more than once, and a stream can't be read by more than one reader at once, you'd need two copies to do this.
 
-![](tee.png)
+![Teeing data flow](tee.png)
 
 ## Writable streams
 
@@ -73,6 +74,7 @@ There are two methods that facilitate this:
   A transform stream consists of a pair of streams: a readable stream from which data is read and a writable stream into which it is written, along with appropriate mechanisms to ensure that new data is made available to read as soon as data is written.
 
   {{domxref("TransformStream")}} is a concrete implementation of a transform stream, but any object that has the same readable stream and writable stream properties can be passed to `pipeThrough()`.
+
 - {{domxref("ReadableStream.pipeTo()")}} — pipes to a writable stream that acts as the end point of the pipe chain.
 
 The start of the pipe chain is called the **original source**, and the end is called the **ultimate sink**.
@@ -83,7 +85,7 @@ The start of the pipe chain is called the **original source**, and the end is ca
 
 An important concept in streams is **backpressure** — this is the process by which a single stream or a pipe chain regulates the speed of reading/writing. When a stream later in the chain is still busy and isn't yet ready to accept more chunks, it sends a signal backwards through the chain to tell earlier transform streams (or the original source) to slow down delivery so that you don't end up with a bottleneck anywhere.
 
-To use backpressure in a {{domxref("ReadableStream")}} , we can ask the controller for the chunk size desired by the consumer by querying the {{domxref("ReadableStreamDefaultController.desiredSize")}} property on the controller. If it is too low, our `ReadableStream` can tell its underlying source to stop sending data, and we backpressure along the stream chain.
+To use backpressure in a {{domxref("ReadableStream")}}, we can ask the controller for the chunk size desired by the consumer by querying the {{domxref("ReadableStreamDefaultController.desiredSize")}} property on the controller. If it is too low, our `ReadableStream` can tell its underlying source to stop sending data, and we backpressure along the stream chain.
 
 If later on the consumer again wants to receive data, we can use the pull method in the stream creation to tell our underlying source to feed our stream with data.
 

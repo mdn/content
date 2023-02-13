@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 tags:
   - Configuration management
 ---
+
 {{FirefoxSidebar}}
 
 Starting with Firefox 2, Firefox has support for selecting different RSS or Atom feed readers to use when you try to read a feed. This article provides information about how to add support for additional readers not supported by default.
@@ -17,9 +18,11 @@ Support for adding feed readers from the web was removed from the HTML5 spec, an
 In older versions, JavaScript code on the web can add a feed reader easily, using the {{domxref("window.navigator.registerContentHandler", "navigator.registerContentHandler()")}} function, like this:
 
 ```js
-navigator.registerContentHandler("application/vnd.mozilla.maybe.feed",
-                                 "https://www.example.com/?feed-feed=%s",
-                                 "My Feed Reader");
+navigator.registerContentHandler(
+  "application/vnd.mozilla.maybe.feed",
+  "https://www.example.com/?feed-feed=%s",
+  "My Feed Reader"
+);
 ```
 
 Note that web content is limited to adding handler URLs which have the same origin as the page performing the call.
@@ -39,9 +42,9 @@ Prior to Firefox 63, to add support for a new web-based feed reader, you would n
 
 `number` should be replaced with the next highest unique number that hasn't already been used. For example, if you want to add a new feed reader called "Easy Reader", and there are already defined content handlers with numbers 0 through 4, you should use a `number` of 5, like this:
 
-- `browser.contentHandlers.types.5.title`: Easy Reader
-- `browser.contentHandlers.types.5.type`: application/vnd.mozilla.maybe.feed
-- `browser.contentHandlers.types.5.uri`: http\://www\.theeasyreaderurl.com?feed=%s
+- `browser.contentHandlers.types.5.title`: `Easy Reader`
+- `browser.contentHandlers.types.5.type`: `application/vnd.mozilla.maybe.feed`
+- `browser.contentHandlers.types.5.uri`: `http://www.theeasyreaderurl.com?feed=%s`
 
 You can add these preferences by hand, by visiting `about:config`.
 

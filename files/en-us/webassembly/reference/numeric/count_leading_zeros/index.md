@@ -8,9 +8,10 @@ tags:
   - Numeric
   - Bitwise
 ---
+
 {{WebAssemblySidebar}}
 
-The **`clz`** instructions, short for *count leading zeros*, are used to count the amount of zeros at the start of the numbers binary representation.
+The **`clz`** instructions, short for _count leading zeros_, are used to count the amount of zeros at the start of the numbers binary representation.
 
 {{EmbedInteractiveExample("pages/wat/clz.html", "tabbed-taller")}}
 

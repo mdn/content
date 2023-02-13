@@ -11,6 +11,7 @@ tags:
   - maxRetransmits
 browser-compat: api.RTCDataChannel.maxRetransmits
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only `RTCDataChannel` property

@@ -17,6 +17,7 @@ tags:
   - startContainer
 browser-compat: api.StaticRange.startContainer
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`startContainer`**

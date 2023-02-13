@@ -1,12 +1,14 @@
 ---
 title: version
 slug: Web/SVG/Attribute/version
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG
   - SVG Attribute
 browser-compat: svg.elements.svg.version
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`version`** attribute is used to indicate what specification a SVG document conforms to. It is only allowed on the root {{SVGElement("svg")}} element. It is purely advisory and has no influence on rendering or processing.
@@ -19,7 +21,7 @@ You can use this attribute with the following SVG elements:
 
 ```html
 <svg version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="10" width="80" height="80"/>
+  <rect x="10" y="10" width="80" height="80" />
 </svg>
 ```
 

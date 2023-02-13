@@ -1,6 +1,7 @@
 ---
 title: CSS Box Model
 slug: Web/CSS/CSS_Box_Model
+page-type: css-module
 tags:
   - CSS
   - CSS Box Model
@@ -9,11 +10,12 @@ tags:
   - Reference
 spec-urls: https://drafts.csswg.org/css-box/
 ---
+
 {{CSSRef}}
 
 **CSS Box Model** is a module of CSS that defines the rectangular boxes—including their padding and margin—that are generated for elements and laid out according to the [visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model).
 
-## The Box Model
+## Box model overview
 
 A box in CSS consists of a content area, which is where any text, images, or other HTML elements are displayed. This is optionally surrounded by padding, a border, and a margin, on one or more sides. The box model describes how these elements work together to create a box as displayed by CSS. To learn more about it read [Introduction to the CSS Box Model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model).
 
@@ -36,11 +38,9 @@ The Box Model specification defines a set of keywords that refer to the edges of
 
 ## Reference
 
-### Properties
-
 > **Note:** This specification defines the physical padding and margin properties. Flow-relative properties, which relate to text direction, are defined in [Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties).
 
-#### Properties controlling the margins of a box
+### Properties for controlling the margin of a box
 
 Margins surround the border edge of a box, and provide spacing between boxes.
 
@@ -51,7 +51,7 @@ Margins surround the border edge of a box, and provide spacing between boxes.
 - {{CSSxRef("margin-top")}}
 - {{CSSxRef("margin-trim")}} {{Experimental_Inline}}
 
-#### Properties controlling the paddings of a box
+### Properties for controlling the padding for a box
 
 Padding is inserted between the content edge and border edge of a box.
 
@@ -61,7 +61,7 @@ Padding is inserted between the content edge and border edge of a box.
 - {{CSSxRef("padding-right")}}
 - {{CSSxRef("padding-top")}}
 
-#### Other properties
+### Other properties
 
 There are other properties that relate to the box model, that are defined elsewhere.
 

@@ -6,6 +6,11 @@ tags:
   - DOM
   - NeedsUpdate
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
+
 ### Overview
 
 Web applications often use JavaScript to mimic desktop widgets such as menus, tree views, rich text fields, and tab panels. These widgets are typically composed of {{ HTMLElement("div") }} and {{ HTMLElement("span") }} elements that do not, by nature, offer the same keyboard functionality that their desktop counterparts do. This document describes techniques to make JavaScript widgets accessible with the keyboard.
@@ -31,13 +36,13 @@ The following table describes `tabindex` behavior in modern browsers:
   <tbody>
     <tr>
       <td>not present</td>
-      <td>Follows the platform convention of the element (yes for form controls,links, etc.).</td>
+      <td>Follows the platform convention of the element (yes for form controls, links, etc.).</td>
       <td>Follows the platform convention of the element.</td>
     </tr>
     <tr>
       <td>Negative (i.e. <code>tabindex="-1"</code>)</td>
       <td>Yes</td>
-      <td>No; author must focus the element with <a href="/en-US/docs/Web/API/Element/focus_event"><code>focus()</code></a> in response to arrow or other key presses.</td>
+      <td>No; author must focus the element with <a href="/en-US/docs/Web/API/HTMLElement/focus"><code>focus()</code></a> in response to arrow or other key presses.</td>
     </tr>
     <tr>
       <td>Zero (i.e. <code>tabindex="0"</code>)</td>
@@ -60,15 +65,14 @@ Authors can also make a {{ HTMLElement("div") }} or {{ HTMLElement("span") }} ke
 
 #### Grouping controls
 
-For grouping widgets such as menus, tablists, grids, or tree views, the parent element should be in the tab order (`tabindex="0"`), and each descendent choice/tab/cell/row should be removed from the tab order (`tabindex="-1"`). Users should be able to navigate the descendent elements using arrow keys. (For a full description of the keyboard support that is normally expected for typical widgets, see the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices-1.1/).)
+For grouping widgets such as menus, tablists, grids, or tree views, the parent element should be in the tab order (`tabindex="0"`), and each descendant choice/tab/cell/row should be removed from the tab order (`tabindex="-1"`). Users should be able to navigate the descendant elements using arrow keys. (For a full description of the keyboard support that is normally expected for typical widgets, see the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices-1.1/).)
 
 The example below shows this technique used with a nested menu control. Once keyboard focus lands on the containing {{ HTMLElement("ul") }} element, the JavaScript developer must programmatically manage focus and respond to arrow keys. For techniques for managing focus within widgets, see "Managing focus inside groups" below.
 
-_Example 2: A menu control using tabindex to control keyboard access_
-
 ```html
 <ul id="mb1" tabindex="0">
-  <li id="mb1_menu1" tabindex="-1"> Font
+  <li id="mb1_menu1" tabindex="-1">
+    Font
     <ul id="fontMenu" title="Font" tabindex="-1">
       <li id="sans-serif" tabindex="-1">Sans-serif</li>
       <li id="serif" tabindex="-1">Serif</li>
@@ -76,14 +80,16 @@ _Example 2: A menu control using tabindex to control keyboard access_
       <li id="fantasy" tabindex="-1">Fantasy</li>
     </ul>
   </li>
-  <li id="mb1_menu2" tabindex="-1"> Style
+  <li id="mb1_menu2" tabindex="-1">
+    Style
     <ul id="styleMenu" title="Style" tabindex="-1">
       <li id="italic" tabindex="-1">Italics</li>
       <li id="bold" tabindex="-1">Bold</li>
       <li id="underline" tabindex="-1">Underlined</li>
     </ul>
   </li>
-  <li id="mb1_menu3" tabindex="-1"> Justification
+  <li id="mb1_menu3" tabindex="-1">
+    Justification
     <ul id="justificationMenu" title="Justification" tabindex="-1">
       <li id="left" tabindex="-1">Left</li>
       <li id="center" tabindex="-1">Centered</li>
@@ -133,7 +139,7 @@ Don't assume that all focus changes will come via key and mouse events: assistiv
 
 This technique involves binding a single event handler to the container widget and using the `aria-activedescendant` to track a "virtual" focus. (For more information about ARIA, see this [overview of accessible web applications and widgets](/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets).)
 
-The `aria-activedescendant` property identifies the ID of the descendent element that currently has the virtual focus. The event handler on the container must respond to key and mouse events by updating the value of `aria-activedescendant` and ensuring that the current item is styled appropriately (for example, with a border or background color).
+The `aria-activedescendant` property identifies the ID of the descendant element that currently has the virtual focus. The event handler on the container must respond to key and mouse events by updating the value of `aria-activedescendant` and ensuring that the current item is styled appropriately (for example, with a border or background color).
 
 ### General Guidelines
 
@@ -160,7 +166,7 @@ If your widget handles a key event, prevent the browser from also handling it (f
 For example:
 
 ```html
-<span tabindex="-1" onkeydown="return handleKeyDown();">
+<span tabindex="-1" onkeydown="return handleKeyDown();">…</span>
 ```
 
 If `handleKeyDown()` returns `false`, the event will be consumed, preventing the browser from performing any action based on the keystroke.

@@ -13,6 +13,7 @@ tags:
   - Workers
 browser-compat: api.WorkerNavigator.permissions
 ---
+
 {{APIRef("Web Workers API")}}{{SeeCompatTable}}
 
 The **`WorkerNavigator.permissions`** read-only property
@@ -26,7 +27,7 @@ A {{domxref("Permissions")}} object.
 ## Examples
 
 ```js
-navigator.permissions.query({name:'notifications'}).then(function(result) {
+navigator.permissions.query({name:'notifications'}).then((result) => {
   if (result.state === 'granted') {
     showNotification();
   } else if (result.state === 'prompt') {

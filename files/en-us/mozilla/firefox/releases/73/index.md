@@ -2,11 +2,12 @@
 title: Firefox 73 for developers
 slug: Mozilla/Firefox/Releases/73
 tags:
-  - '73'
+  - "73"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 73 that will affect developers. Firefox 73 was released on February 11, 2020.

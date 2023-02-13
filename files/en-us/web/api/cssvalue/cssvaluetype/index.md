@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSValue.cssValueType
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_header}}
 
 The **`cssValueType`** read-only property of the

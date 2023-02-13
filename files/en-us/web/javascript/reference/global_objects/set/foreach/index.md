@@ -1,6 +1,7 @@
 ---
 title: Set.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -10,6 +11,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.forEach
 ---
+
 {{JSRef}}
 
 The **`forEach()`** method executes a provided function once
@@ -19,7 +21,7 @@ for each value in the `Set` object, in insertion order.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 forEach(() => { /* ... */ } )
 forEach((value) => { /* ... */ } )
@@ -72,8 +74,8 @@ it is executed for values which are present but have the value `undefined`.
 
 There are no keys in `Set` objects, however, so the first two arguments are
 both **values** contained in the {{jsxref("Set")}}. This is to make it
-consistent with other `forEach()` methods for {{jsxref("Map.foreach",
-  "Map")}} and {{jsxref("Array.forEach","Array")}}.
+consistent with other `forEach()` methods for {{jsxref("Map/foreach",
+  "Map")}} and {{jsxref("Array/forEach","Array")}}.
 
 If a `thisArg` parameter is provided to `forEach()`,
 it will be passed to `callback` when invoked, for use as its
@@ -98,12 +100,12 @@ The following code logs a line for each element in a `Set` object:
 
 ```js
 function logSetElements(value1, value2, set) {
-    console.log('s[' + value1 + '] = ' + value2);
+  console.log(`s[${value1}] = ${value2}`);
 }
 
-new Set(['foo', 'bar', undefined]).forEach(logSetElements);
+new Set(["foo", "bar", undefined]).forEach(logSetElements);
 
-// logs:
+// Logs:
 // "s[foo] = foo"
 // "s[bar] = bar"
 // "s[undefined] = undefined"

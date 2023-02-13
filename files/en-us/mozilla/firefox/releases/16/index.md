@@ -2,9 +2,10 @@
 title: Firefox 16 for developers
 slug: Mozilla/Firefox/Releases/16
 tags:
-  - '2009'
+  - "2009"
   - Firefox
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 16 shipped on October 9, 2012. This article lists key changes that are useful for not only Web developers to know about, but also Firefox and Gecko developers as well as add-on developers.
@@ -56,11 +57,11 @@ Firefox 16 shipped on October 9, 2012. This article lists key changes that are u
 
 ### WebGL
 
-_No change_
+_No change._
 
 ### SVG
 
-_No change_
+_No change._
 
 ### MathML
 

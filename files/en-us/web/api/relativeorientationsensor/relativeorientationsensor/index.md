@@ -14,22 +14,18 @@ tags:
   - Sensors
 browser-compat: api.RelativeOrientationSensor.RelativeOrientationSensor
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`RelativeOrientationSensor()`**
 constructor creates a new {{domxref("RelativeOrientationSensor")}} object which
 describes the device's physical orientation.
 
-If a feature policy blocks use of a feature it is because your code is inconsistent
-with the policies set on your server. This is not something that would ever be shown
-to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation
-instructions.
-
 ## Syntax
 
-```js
-new RelativeOrientationSEnsor()
-new RelativeOrientationSEnsor(options)
+```js-nolint
+new RelativeOrientationSensor()
+new RelativeOrientationSensor(options)
 ```
 
 ### Parameters
@@ -48,6 +44,11 @@ new RelativeOrientationSEnsor(options)
     - `referenceFrame`
       - : Either `'device'` or
         `'screen'`. The default is `'device'`.
+
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ## Specifications
 

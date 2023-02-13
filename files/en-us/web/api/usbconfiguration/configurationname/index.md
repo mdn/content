@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.USBConfiguration.configurationName
 ---
+
 {{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`configurationName`** read-only property

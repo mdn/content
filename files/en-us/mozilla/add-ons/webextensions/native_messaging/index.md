@@ -4,13 +4,14 @@ slug: Mozilla/Add-ons/WebExtensions/Native_messaging
 tags:
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 **Native messaging** enables an extension to exchange messages with a native application, installed on the user's computer. The native messaging serves the extensions without additional accesses over the web.
 
 Password managers: The native application manages, stores, and encrypts passwords. Then the native application communicates with the extension to populate web forms.
 
-Native messaging also enables extensions to access resources that are not accessible through WebExtension APIs (e.g, particular hardware).
+Native messaging also enables extensions to access resources that are not accessible through WebExtension APIs (e.g., particular hardware).
 
 The native application is not installed or managed by the browser. The native application is installed, using the underlying operating system's installation machinery. Create a JSON file called the "host manifest" or "app manifest". Install the JSON file in a defined location. The app manifest file will describe how the browser can connect to the native application.
 
@@ -18,7 +19,7 @@ The extension must request the `"nativeMessaging"` [permission](/en-US/docs/Mozi
 
 After installing, the extension can exchange JSON messages with the native application. Use a set of functions in the {{WebExtAPIRef("runtime")}} API. On the native app side, messages are received using standard input (`stdin`) and sent using standard output (`stdout`).
 
-![](native-messaging.png)
+![Application flow: the native app JSON file resides on the users computer, providing resource information to the native application. The read and write functions of the native application interact with the browser extension's runtime events.](native-messaging.png)
 
 Support for native messaging in extensions is mostly compatible with Chrome, with two main differences:
 
@@ -181,7 +182,7 @@ let port = browser.runtime.connectNative("ping_pong");
 Listen for messages from the app.
 */
 port.onMessage.addListener((response) => {
-  console.log("Received: " + response);
+  console.log(`Received: ${response}`);
 });
 
 /*
@@ -212,7 +213,7 @@ Here's the example above, rewritten to use `runtime.sendNativeMessage()`:
 
 ```js
 function onResponse(response) {
-  console.log("Received " + response);
+  console.log(`Received ${response}`);
 }
 
 function onError(error) {
@@ -268,14 +269,14 @@ You can quickly get started sending and receiving messages with this NodeJS code
         // The browser will emit the size as a header of the payload,
         // if it hasn't been read yet, do it.
         // The next time we'll need to read the payload size is when all of the data
-        // of the current payload has been read (ie. data.length >= payloadSize + 4)
+        // of the current payload has been read (i.e. data.length >= payloadSize + 4)
         if (!sizeHasBeenRead()) {
             payloadSize = stringData.readUInt32LE(0);
         }
 
         // If the data we have read so far is >= to the size advertised in the header,
         // it means we have all of the data sent.
-        // We add 4 here because that's the size of the bytes that old the payloadSize
+        // We add 4 here because that's the size of the bytes that hold the payloadSize
         if (stringData.length >= (payloadSize + 4)) {
             // Remove the header
             const contentWithoutSize = stringData.slice(4, (payloadSize + 4));
@@ -309,7 +310,7 @@ Here's another example written in Python. It listens for messages from the exten
 This is the Python 2 version:
 
 ```python
-#!/usr/bin/python -u
+#!/usr/bin/env -S python2 -u
 
 # Note that running python with the `-u` flag is required on Windows,
 # in order to ensure that stdin and stdout are opened in binary, rather
@@ -330,7 +331,12 @@ def get_message():
 
 # Encode a message for transmission, given its content.
 def encode_message(message_content):
-    encoded_content = json.dumps(message_content)
+    # https://docs.python.org/3/library/json.html#basic-usage
+    # To get the most compact JSON representation, you should specify 
+    # (',', ':') to eliminate whitespace.
+    # We want the most compact representation because the browser rejects
+    # messages that exceed 1 MB.
+    encoded_content = json.dumps(message_content, separators=(',', ':'))
     encoded_length = struct.pack('=I', len(encoded_content))
     return {'length': encoded_length, 'content': encoded_content}
 
@@ -349,43 +355,46 @@ while True:
 In Python 3, the received binary data must be decoded into a string. The content to be sent back to the addon must be encoded into binary data using a struct:
 
 ```python
-#!/usr/bin/python -u
+#!/usr/bin/env -S python3 -u
 
 # Note that running python with the `-u` flag is required on Windows,
 # in order to ensure that stdin and stdout are opened in binary, rather
 # than text, mode.
 
-import json
 import sys
+import json
 import struct
 
 # Read a message from stdin and decode it.
-def get_message():
-    raw_length = sys.stdin.buffer.read(4)
-
-    if not raw_length:
+def getMessage():
+    rawLength = sys.stdin.buffer.read(4)
+    if len(rawLength) == 0:
         sys.exit(0)
-    message_length = struct.unpack('=I', raw_length)[0]
-    message = sys.stdin.buffer.read(message_length).decode("utf-8")
+    messageLength = struct.unpack('@I', rawLength)[0]
+    message = sys.stdin.buffer.read(messageLength).decode('utf-8')
     return json.loads(message)
 
-# Encode a message for transmission, given its content.
-def encode_message(message_content):
-    encoded_content = json.dumps(message_content).encode("utf-8")
-    encoded_length = struct.pack('=I', len(encoded_content))
-    #  use struct.pack("10s", bytes), to pack a string of the length of 10 characters
-    return {'length': encoded_length, 'content': struct.pack(str(len(encoded_content))+"s",encoded_content)}
+# Encode a message for transmission,
+# given its content.
+def encodeMessage(messageContent):
+    # https://docs.python.org/3/library/json.html#basic-usage
+    # To get the most compact JSON representation, you should specify 
+    # (',', ':') to eliminate whitespace.
+    # We want the most compact representation because the browser rejects # messages that exceed 1 MB.
+    encodedContent = json.dumps(messageContent, separators=(',', ':')).encode('utf-8')
+    encodedLength = struct.pack('@I', len(encodedContent))
+    return {'length': encodedLength, 'content': encodedContent}
 
-# Send an encoded message to stdout.
-def send_message(encoded_message):
-    sys.stdout.buffer.write(encoded_message['length'])
-    sys.stdout.buffer.write(encoded_message['content'])
+# Send an encoded message to stdout
+def sendMessage(encodedMessage):
+    sys.stdout.buffer.write(encodedMessage['length'])
+    sys.stdout.buffer.write(encodedMessage['content'])
     sys.stdout.buffer.flush()
 
 while True:
-    message = get_message()
-    if message == "ping":
-        send_message(encode_message("pong"))
+    receivedMessage = getMessage()
+    if receivedMessage == "ping":
+        sendMessage(encodeMessage("pong"))
 ```
 
 ## Closing the native app
@@ -395,7 +404,7 @@ If you connected to the native application using `runtime.connectNative()`, then
 To close the native application:
 
 - On \*nix systems like macOS and Linux, the browser sends `SIGTERM` to the native application, then `SIGKILL` after the application has had a chance to exit gracefully. These signals propagate to any subprocesses unless they break away into a new process group.
-- On Windows, the browser puts the native application's process into a [Job object](https://msdn.microsoft.com/library/windows/desktop/ms684161(v=vs.85).aspx) and kills the job. If the native application launches additional processes and wants them to remain open after the native application is killed, then the native application must launch the additional process with the [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/library/windows/desktop/ms684863(v=vs.85).aspx>) flag, such as by using `CreateProcess`.
+- On Windows, the browser puts the native application's process into a [Job object](<https://msdn.microsoft.com/library/windows/desktop/ms684161(v=vs.85).aspx>) and kills the job. If the native application launches additional processes and wants them to remain open after the native application is killed, then the native application must launch the additional process with the [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/library/windows/desktop/ms684863(v=vs.85).aspx>) flag, such as by using `CreateProcess`.
 
 ## Troubleshooting
 

@@ -13,6 +13,7 @@ tags:
   - fullPath
 browser-compat: api.FileSystemEntry.fullPath
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The read-only **`fullPath`** property
@@ -37,7 +38,7 @@ its full path.
 function gotFileSystem(fs) {
   let path = "";
 
-  fs.root.getFile("data.json", { create: true, exclusive: true }, function(entry) {
+  fs.root.getFile("data.json", { create: true, exclusive: true }, (entry) => {
     path = fullPath;
   }, handleError(error));
 

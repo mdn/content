@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Document.mozSetImageElement
 ---
+
 {{ ApiRef("DOM") }}{{ non-standard_header() }}
 
 The **`Document.mozSetImageElement()`** method changes the
@@ -19,7 +20,7 @@ element ID.
 
 ## Syntax
 
-```js
+```js-nolint
 mozSetImageElement(imageElementId, imageElement)
 ```
 
@@ -44,7 +45,7 @@ block is clicked by the user.
 [View this example live](https://media.prod.mdn.mozit.cloud/samples/domref/mozSetImageElement.html).
 
 ```html
-<style type="text/css">
+<style>
   #mybox {
     background-image: -moz-element(#canvasbg);
     text-align: center;

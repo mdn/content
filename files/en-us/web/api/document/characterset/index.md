@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Document.characterSet
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Document.characterSet`**

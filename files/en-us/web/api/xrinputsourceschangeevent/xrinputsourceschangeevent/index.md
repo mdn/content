@@ -22,6 +22,7 @@ tags:
   - augmented
 browser-compat: api.XRInputSourcesChangeEvent.XRInputSourcesChangeEvent
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The **`XRInputSourcesChangeEvent()`**
@@ -32,14 +33,14 @@ you by the WebXR system.
 
 ## Syntax
 
-```js
+```js-nolint
 new XRInputSourcesChangeEvent(type, options)
 ```
 
 ### Parameters
 
 - `type`
-  - :  A string with the name of the event.
+  - : A string with the name of the event.
     It is case-sensitive and browsers always set it to `inputsourceschange`.
 - `options`
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:

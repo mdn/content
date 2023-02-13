@@ -11,6 +11,7 @@ tags:
   - channelCount
 browser-compat: api.AudioNode.channelCount
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`channelCount`** property of the {{ domxref("AudioNode") }} interface represents an integer used to determine how many channels are used when [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node.

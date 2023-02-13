@@ -12,6 +12,7 @@ tags:
   - postMessage
 browser-compat: api.Window.postMessage
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`window.postMessage()`** method safely enables
@@ -31,7 +32,7 @@ receiving window is then free to [handle this event](/en-US/docs/Web/Events/Even
 
 ## Syntax
 
-```js
+```js-nolint
 postMessage(message, targetOrigin)
 postMessage(message, targetOrigin, transfer)
 ```
@@ -126,10 +127,10 @@ memory is gated behind two HTTP headers:
 
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}} with `same-origin` as value
   (protects your origin from attackers)
-- {{HTTPHeader("Cross-Origin-Embedder-Policy")}} with `require-corp` as
-  value (protects victims from your origin)
+- {{HTTPHeader("Cross-Origin-Embedder-Policy")}} with `require-corp` or
+  `credentialless` as value (protects victims from your origin)
 
-```plain
+```http
 Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
@@ -139,10 +140,14 @@ To check if cross origin isolation has been successful, you can test against the
 property available to window and worker contexts:
 
 ```js
+const myWorker = new Worker('worker.js');
+
 if (crossOriginIsolated) {
-  // Post SharedArrayBuffer
+  const buffer = new SharedArrayBuffer(16);
+  myWorker.postMessage(buffer);
 } else {
-  // Do something else
+  const buffer = new ArrayBuffer(16);
+  myWorker.postMessage(buffer);
 }
 ```
 

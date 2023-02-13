@@ -20,6 +20,7 @@ tags:
   - Polyfill
 browser-compat: api.URL
 ---
+
 {{APIRef("URL API")}}
 
 The **`URL`** interface is used to parse, construct, normalize, and encode {{glossary("URL", "URLs")}}. It works by providing properties which allow you to easily read and modify the components of a URL.
@@ -35,7 +36,7 @@ If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor
 - {{domxref("URL.URL", "URL()")}}
   - : Creates and returns a `URL` object referencing the URL specified using an absolute URL string, or a relative URL string and a base URL string.
 
-## Properties
+## Instance properties
 
 - {{domxref("URL.hash", "hash")}}
   - : A string containing a `'#'` followed by the fragment identifier of the URL.
@@ -45,7 +46,7 @@ If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor
   - : A string containing the domain of the URL.
 - {{domxref("URL.href", "href")}}
   - : A {{Glossary("stringifier")}} that returns a string containing the whole URL.
-- {{domxref("URL.origin", "origin")}} {{readonlyInline}}
+- {{domxref("URL.origin", "origin")}} {{ReadOnlyInline}}
   - : Returns a string containing the origin of the URL, that is its scheme, its domain and its port.
 - {{domxref("URL.password", "password")}}
   - : A string containing the password specified before the domain name.
@@ -57,17 +58,10 @@ If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor
   - : A string containing the protocol scheme of the URL, including the final `':'`.
 - {{domxref("URL.search", "search")}}
   - : A string indicating the URL's parameter string; if any parameters are provided, this string includes all of them, beginning with the leading `?` character.
-- {{domxref("URL.searchParams", "searchParams")}} {{readonlyInline}}
+- {{domxref("URL.searchParams", "searchParams")}} {{ReadOnlyInline}}
   - : A {{domxref("URLSearchParams")}} object which can be used to access the individual query parameters found in `search`.
 - {{domxref("URL.username","username")}}
   - : A string containing the username specified before the domain name.
-
-## Methods
-
-- {{domxref("URL.toString", "toString()")}}
-  - : Returns a string containing the whole URL. It is a synonym for {{domxref("URL.href")}}, though it can't be used to modify the value.
-- {{domxref("URL.toJSON", "toJSON()")}}
-  - : Returns a string containing the whole URL. It returns the same string as the `href` property.
 
 ## Static methods
 
@@ -75,6 +69,13 @@ If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor
   - : Returns a string containing a unique blob URL, that is a URL with `blob:` as its scheme, followed by an opaque string uniquely identifying the object in the browser.
 - {{domxref("URL.revokeObjectURL", "revokeObjectURL()")}}
   - : Revokes an object URL previously created using {{domxref("URL.createObjectURL()")}}.
+
+## Instance methods
+
+- {{domxref("URL.toString", "toString()")}}
+  - : Returns a string containing the whole URL. It is a synonym for {{domxref("URL.href")}}, though it can't be used to modify the value.
+- {{domxref("URL.toJSON", "toJSON()")}}
+  - : Returns a string containing the whole URL. It returns the same string as the `href` property.
 
 ## Usage notes
 

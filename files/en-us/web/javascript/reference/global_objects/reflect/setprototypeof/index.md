@@ -1,6 +1,7 @@
 ---
 title: Reflect.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -10,10 +11,10 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.setPrototypeOf
 ---
+
 {{JSRef}}
 
-The static
-**`Reflect.setPrototypeOf()`** method is the same method as
+The **`Reflect.setPrototypeOf()`** static method is the same method as
 {{jsxref("Object.setPrototypeOf()")}}, except for its return type. It sets the
 prototype (i.e., the internal `[[Prototype]]` property) of a specified
 object to another object or to [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), and returns `true` if
@@ -23,7 +24,7 @@ the operation was successful, or `false` otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.setPrototypeOf(target, prototype)
 ```
 
@@ -54,18 +55,18 @@ the internal `[[Prototype]]` property) of the specified object.
 ### Using Reflect.setPrototypeOf()
 
 ```js
-Reflect.setPrototypeOf({}, Object.prototype)  // true
+Reflect.setPrototypeOf({}, Object.prototype); // true
 
 // It can change an object's [[Prototype]] to null.
-Reflect.setPrototypeOf({}, null)  // true
+Reflect.setPrototypeOf({}, null); // true
 
 // Returns false if target is not extensible.
-Reflect.setPrototypeOf(Object.freeze({}), null)  // false
+Reflect.setPrototypeOf(Object.freeze({}), null); // false
 
 // Returns false if it cause a prototype chain cycle.
-let target = {}
-let proto = Object.create(target)
-Reflect.setPrototypeOf(target, proto)  // false
+const target = {};
+const proto = Object.create(target);
+Reflect.setPrototypeOf(target, proto); // false
 ```
 
 ## Specifications

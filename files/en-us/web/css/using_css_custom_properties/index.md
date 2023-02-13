@@ -1,6 +1,7 @@
 ---
 title: Using CSS custom properties (variables)
 slug: Web/CSS/Using_CSS_custom_properties
+page-type: guide
 tags:
   - CSS
   - CSS Variables
@@ -9,6 +10,7 @@ tags:
   - Web
   - cascading variables
 ---
+
 {{CSSRef}}
 
 **Custom properties** (sometimes referred to as **CSS variables** or **cascading variables**) are entities defined by CSS authors that contain specific values to be reused throughout a document. They are set using custom property notation (e.g., **`--main-color: black;`**) and are accessed using the {{cssxref("var", "var()")}} function (e.g., `color: var(--main-color);`).
@@ -93,7 +95,7 @@ We'll apply it to this HTML:
 <div>
   <div class="one">1:</div>
   <div class="two">2: Text <span class="five">5 - more text</span></div>
-  <input class="three">
+  <input class="three" />
   <textarea class="four">4: Lorem Ipsum</textarea>
 </div>
 ```
@@ -148,10 +150,10 @@ Notice the repetitive CSS in the example above. The background color is set to `
 
 ```html hidden
 <div>
-    <div class="one"></div>
-    <div class="two">Text <span class="five">- more text</span></div>
-    <input class="three">
-    <textarea class="four">Lorem Ipsum</textarea>
+  <div class="one"></div>
+  <div class="two">Text <span class="five">- more text</span></div>
+  <input class="three" />
+  <textarea class="four">Lorem Ipsum</textarea>
 </div>
 ```
 
@@ -197,7 +199,7 @@ Using the [`var()`](/en-US/docs/Web/CSS/var) function, you can define multiple *
 
 > **Note:** Fallback values aren't used to fix the browser compatibility. If the browser doesn't support CSS custom properties, the fallback value won't help. It's just a backup for the browser which supports CSS custom properties to choose a different value if the given variable isn't defined or has an invalid value.
 
-The first argument to the function is the name of the [custom property](https://www.w3.org/TR/css-variables/#custom-property) to be substituted. The second argument to the function, if provided, is a fallback value, which is used as the substitution value when the referenced [custom property](https://www.w3.org/TR/css-variables/#custom-property) is invalid. The function only accepts two parameters, assigning everything following the first comma as the second parameter. If that second parameter is invalid, such as if a comma-separated list is provided, the fallback will fail. For example:
+The first argument to the function is the name of the [custom property](https://www.w3.org/TR/css-variables/#custom-property) to be substituted. The second argument to the function, if provided, is a fallback value, which is used as the substitution value when the referenced [custom property](https://www.w3.org/TR/css-variables/#custom-property) is invalid. The function only accepts two parameters, assigning everything following the first comma as the second parameter. If that second parameter is invalid, the fallback will fail. For example:
 
 ```css
 .two {
@@ -211,7 +213,7 @@ The first argument to the function is the name of the [custom property](https://
 }
 
 .three {
-   /* Invalid: "--my-background, pink" */
+  /* Invalid: "--my-background, pink" */
   background-color: var(--my-var, --my-background, pink);
 }
 ```

@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.deleteQuery
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.deleteQuery()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) deletes a given
@@ -17,7 +18,7 @@ The **`WebGL2RenderingContext.deleteQuery()`** method of the [WebGL 2 API](/en-U
 
 ## Syntax
 
-```js
+```js-nolint
 deleteQuery(query)
 ```
 

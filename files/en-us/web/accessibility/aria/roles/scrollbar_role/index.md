@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: scrollbar role'
+title: "ARIA: scrollbar role"
 slug: Web/Accessibility/ARIA/Roles/scrollbar_role
 tags:
   - Accessibility
@@ -31,7 +31,7 @@ If you aren't currently seeing a scroll bar, it may be because your browser only
 
 It is always best to use native scroll bars. You can use the CSS {{CSSXref('overflow')}} property to ensure the appearance of native scroll bars. A [CSS scrollbar specification](https://drafts.csswg.org/css-scrollbars/) is being worked developed. Some browsers allow [styling scroll bars via prefixed pseudo-elements](/en-US/docs/Web/CSS/::-webkit-scrollbar).
 
-Because native scroll bar styling has historically been limited, you may come across a scrollbar implemented in JavaScript that you need to support and make fully accessible.  For this, you can use the `scrollbar` role to inform assistive technologies that a UI control is an interactive scrollbar.
+Because native scroll bar styling has historically been limited, you may come across a scrollbar implemented in JavaScript that you need to support and make fully accessible. For this, you can use the `scrollbar` role to inform assistive technologies that a UI control is an interactive scrollbar.
 
 An element with the `scrollbar` role is a graphical object that controls the scrolling of content within a viewing area; it is the ARIA role which indicates an element is a scroll bar. The HTML element that is most similar is the `range` {{HTMLElement('input')}} type, [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range).
 
@@ -39,7 +39,7 @@ The `scrollbar` element has two required attributes: [`aria-controls`](/en-US/do
 
 While the `aria-valuenow` is always required, the [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) and [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) properties only need to be set for the scrollbar role when the `scrollbar`'s minimum value is not 0 or the maximum value is not 100. The value of `aria-valuenow` must always be between the minimum and maximum inclusive values, or between `0` and `100` inclusive if the minimum and maximum values default to `0` and `100` respectively. `aria-valuenow` communicates how close the viewport is to the bottom of the document. Think of it like a progress bar, where the start of the document is the minimum value and the end of the document is the maximum value.
 
-A `scrollbar` represents the current value and range of possible values via the size of the scrollbar and position of the thumb with respect to the visible range of the orientation (horizontal or vertical) it controls. In other words, the `scrollbar` length (height or width) represents all the content within a viewport. The `aria-valuemin` value represents the beginning of the content and the scrollbar, the `aria-valuemax` value represents the end of the content and the end of the scrollbar. The `aria-valuenow` represents the content that is currently visible in the viewport and the current position, or value, of the movable thumb.   The `aria-valuenow` value will generally be exposed as a percentage between `aria-valuemin` and `aria-valuemax` calculated by assistive technologies.
+A `scrollbar` represents the current value and range of possible values via the size of the scrollbar and position of the thumb with respect to the visible range of the orientation (horizontal or vertical) it controls. In other words, the `scrollbar` length (height or width) represents all the content within a viewport. The `aria-valuemin` value represents the beginning of the content and the scrollbar, the `aria-valuemax` value represents the end of the content and the end of the scrollbar. The `aria-valuenow` represents the content that is currently visible in the viewport and the current position, or value, of the movable thumb. The `aria-valuenow` value will generally be exposed as a percentage between `aria-valuemin` and `aria-valuemax` calculated by assistive technologies.
 
 > **Note:** Assistive technologies generally render the value of `aria-valuenow` as a percent of a range between the value of `aria-valuemin` and `aria-valuemax`, unless [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) is set. It is recommended to set the values for `aria-valuemin`, `aria-valuemax`, and `aria-valuenow` in a manner that is appropriate for this calculation.
 
@@ -51,9 +51,9 @@ Keyboard scrolling must also be supported. When focus is within the viewport con
 
 JavaScript must be used to translate the `scrollbar` action into scrolling commands, providing the user with feedback by:
 
-  1. Visually updating the `scrollbar` element,
-  2. Scrolling the viewport's content, and
-  3. Updating the [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) property value.
+1. Visually updating the `scrollbar` element,
+2. Scrolling the viewport's content, and
+3. Updating the [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) property value.
 
 The default orientation of the `scrollbar` role is vertical. Including [`aria-orientation="vertical"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation), in this case, is optional. The orientation represents the orientation of the scrollbar and the scrolling effect on the viewing area controlled by the scrollbar. If the scrolling is left to right or right to left and not top to bottom, include `aria-orientation="horizontal"` on the element with the `scrollbar` role.
 
@@ -110,9 +110,9 @@ From the assistive technology user's perspective, the heading does not exist sin
   - : With horizontal scrolling, the content in the viewport moves left the width of one character with the thumb moving left across the scroll bar slider proportionally, until the left edge of the content abuts the left end of the viewport and the thumb is aligned on the left end of the scrollbar.
 - <kbd>Right Arrow</kbd>
   - : With horizontal scrolling, the content in the viewport moves right the width of one character with the thumb moving right across the scroll bar slider proportionally, until the right edge of the content abuts the right end of the viewport and the thumb is aligned on the right end of the scrollbar.
-- <kbd>Page Up</kbd>  and <kbd>Shift + Space</kbd>
+- <kbd>Page Up</kbd> and <kbd>Shift + Space</kbd>
   - : The content in the viewport moves up the height of one viewport with the thumb moving up the scroll bar slider proportionally, until the top of the content and scrollbar are reached.
-- <kbd>Page Down</kbd> and  <kbd>Space</kbd>
+- <kbd>Page Down</kbd> and <kbd>Space</kbd>
   - : The content in the viewport moves down the height of one viewport with the thumb moving down the scroll bar slider proportionally, until the bottom of the content and scrollbar are reached.the bottom or top of the content is in view.
 
 ## Examples
@@ -143,7 +143,7 @@ CSS could have been used to ensure the overflowing value of PI had a native scro
 ```html
 <h3 id="PI">Pi</h3>
 <p class="pi" tabindex="0" aria-labelledby="PI">
-3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679
+  3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679
 </p>
 ```
 
@@ -177,6 +177,6 @@ The above CSS means a native scroll bar will appear when the user interacts with
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

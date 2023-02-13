@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: http.headers.Alt-Svc
 ---
+
 {{HTTPSidebar}}
 
 The {{HTTPHeader("Alt-Svc")}} HTTP header allows a server to indicate that another network location (the "alternative service") can be treated as authoritative for that origin when making future requests.

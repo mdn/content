@@ -25,6 +25,7 @@ tags:
   - Method
 browser-compat: api.XRReferenceSpace.getOffsetReferenceSpace
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The {{domxref("XRReferenceSpace")}}
@@ -37,9 +38,8 @@ object returned by `getOffsetReferenceSpace()` is an
 
 In other words, when you have an object in 3D space and need to position another object
 relative to that one, you can call `getOffsetReferenceSpace()`, passing into
-it the position and orientation you want the second object to have *relative to the
-position and orientation of the object on which you
-call `getOffsetReferenceSpace()`*.
+it the position and orientation you want the second object to have
+_relative to the position and orientation of the object on which you call `getOffsetReferenceSpace()`_.
 
 Then, when drawing the scene, you can use the offset reference space to not only
 position objects relative to one another, but to apply the needed transforms to render
@@ -49,7 +49,7 @@ use this method to let the user use their mouse to pitch and yaw their viewing a
 
 ## Syntax
 
-```js
+```js-nolint
 getOffsetReferenceSpace(originOffset)
 ```
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSStyleDeclaration.setProperty
 ---
+
 {{ APIRef("CSSOM") }}
 
 The
@@ -17,7 +18,7 @@ a new value for a property on a CSS style declaration object.
 
 ## Syntax
 
-```js
+```js-nolint
 setProperty(propertyName, value)
 setProperty(propertyName, value, priority)
 ```
@@ -31,6 +32,7 @@ setProperty(propertyName, value, priority)
     as the empty string.
     > **Note:** `value` must not contain `"!important"`, that should be set using the `priority` parameter.
 - `priority` {{optional_inline}}
+
   - : A string allowing the "important" CSS priority to be set. If not
     specified, treated as the empty string. The following values are accepted:
 
@@ -53,7 +55,7 @@ If `priority` can be omitted, JavaScript has a special simpler
 syntax for setting a CSS property on a style declaration object:
 
 ```js
-style.cssPropertyName = 'value';
+style.cssPropertyName = "value";
 ```
 
 ## Examples
@@ -145,13 +147,13 @@ div button {
 ### JavaScript
 
 ```js
-const borderBtn = document.querySelector('.border');
-const bgColorBtn = document.querySelector('.bgcolor');
-const colorBtn = document.querySelector('.color');
-const box = document.querySelector('.box');
+const borderBtn = document.querySelector(".border");
+const bgColorBtn = document.querySelector(".bgcolor");
+const colorBtn = document.querySelector(".color");
+const box = document.querySelector(".box");
 
-function random(min,max) {
-  const num = Math.floor(Math.random()*(max-min)) + min;
+function random(min, max) {
+  const num = Math.floor(Math.random() * (max - min)) + min;
   return num;
 }
 
@@ -160,32 +162,28 @@ function randomColor() {
 }
 
 const stylesheet = document.styleSheets[1];
-let boxParaRule;
-
-for (let i = 0; i < stylesheet.cssRules.length; i++) {
-  if(stylesheet.cssRules[i].selectorText === '.box p') {
-    boxParaRule = stylesheet.cssRules[i];
-  }
-}
+const boxParaRule = [...stylesheet.cssRules].find(
+  (r) => r.selectorText === ".box p"
+);
 
 function setRandomBorder() {
   const newBorder = `${random(1, 50)}px solid ${randomColor()}`;
-  boxParaRule.style.setProperty('border', newBorder);
+  boxParaRule.style.setProperty("border", newBorder);
 }
 
 function setRandomBgColor() {
   const newBgColor = randomColor();
-  boxParaRule.style.setProperty('background-color', newBgColor);
+  boxParaRule.style.setProperty("background-color", newBgColor);
 }
 
 function setRandomColor() {
   const newColor = randomColor();
-  boxParaRule.style.setProperty('color', newColor);
+  boxParaRule.style.setProperty("color", newColor);
 }
 
-borderBtn.addEventListener('click', setRandomBorder);
-bgColorBtn.addEventListener('click', setRandomBgColor);
-colorBtn.addEventListener('click', setRandomColor);
+borderBtn.addEventListener("click", setRandomBorder);
+bgColorBtn.addEventListener("click", setRandomBgColor);
+colorBtn.addEventListener("click", setRandomColor);
 ```
 
 ### Result

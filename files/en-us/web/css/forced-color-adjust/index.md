@@ -1,6 +1,7 @@
 ---
 title: forced-color-adjust
 slug: Web/CSS/forced-color-adjust
+page-type: css-property
 tags:
   - Adjusting Colors
   - CSS
@@ -17,6 +18,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.forced-color-adjust
 ---
+
 {{CSSRef}}
 
 The **`forced-color-adjust`** CSS property allows authors to opt certain elements out of forced colors mode. This then restores the control of those values to CSS.
@@ -41,14 +43,12 @@ The `forced-color-adjust` property's value must be one of the following keywords
 
 - `auto`
   - : The element's colors are adjusted by the {{Glossary("user agent")}} in forced colors mode. This is the default.
-- **`none`**
+- `none`
   - : The element's colors are not automatically adjusted by the {{Glossary("user agent")}} in forced colors mode.
 
 ## Usage notes
 
 This property should only be used to makes changes that will support a user's color and contrast requirements. For example, if you become aware that the color optimizations made by the {{Glossary("user agent")}} result in a poor experience when in a high contrast or dark mode. Using this property would enable tweaking of the result in that mode to provide a better experience. **It should not be used to prevent user choices being respected**.
-
-The property is a standardized version of the [-ms-high-contrast-adjust](https://docs.microsoft.com/previous-versions/hh771863%28v%3dvs.85%29) property. The prefixed property can be used to achieve similar functionality in Internet Explorer 10 and EdgeHTML versions of Microsoft Edge.
 
 ## Formal definition
 

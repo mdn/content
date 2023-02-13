@@ -9,10 +9,11 @@ tags:
   - TreeWalker
 browser-compat: api.TreeWalker.currentNode
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.currentNode`** property represents the
-{{domxref("Node")}} on which the {{domxref("TreeWalker")}} is currently pointing at.
+{{domxref("Node")}} which the {{domxref("TreeWalker")}} is currently pointing at.
 
 ## Value
 

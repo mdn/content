@@ -1,6 +1,7 @@
 ---
 title: Intl.DateTimeFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions
+page-type: javascript-instance-method
 tags:
   - DateTimeFormat
   - Internationalization
@@ -12,6 +13,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.resolvedOptions
 ---
+
 {{JSRef}}
 
 The **`Intl.DateTimeFormat.prototype.resolvedOptions()`**
@@ -25,7 +27,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 resolvedOptions()
 ```
 
@@ -69,14 +71,14 @@ The resulting object has the following properties:
 ### Using the resolvedOptions method
 
 ```js
-const germanFakeRegion = new Intl.DateTimeFormat('de-XX', { timeZone: 'UTC' });
+const germanFakeRegion = new Intl.DateTimeFormat("de-XX", { timeZone: "UTC" });
 const usedOptions = germanFakeRegion.resolvedOptions();
 
-usedOptions.locale;          // "de"
-usedOptions.calendar;        // "gregory"
+usedOptions.locale; // "de"
+usedOptions.calendar; // "gregory"
 usedOptions.numberingSystem; // "latn"
-usedOptions.timeZone;        // "UTC"
-usedOptions.month;           // "numeric"
+usedOptions.timeZone; // "UTC"
+usedOptions.month; // "numeric"
 ```
 
 ## Specifications

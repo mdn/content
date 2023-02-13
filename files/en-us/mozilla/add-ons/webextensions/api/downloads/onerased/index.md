@@ -13,6 +13,7 @@ tags:
   - onErased
 browser-compat: webextensions.api.downloads.onErased
 ---
+
 {{AddonSidebar()}}
 
 The **`onErased()`** event of the {{WebExtAPIRef("downloads")}} API fires when a download is erased from the browser history.
@@ -21,7 +22,7 @@ The listener is passed the `downloadId` of the {{WebExtAPIRef('downloads.Downloa
 
 ## Syntax
 
-```js
+```js-nolint
 browser.downloads.onErased.addListener(listener)
 browser.downloads.onErased.removeListener(listener)
 browser.downloads.onErased.hasListener(listener)
@@ -71,10 +72,9 @@ let erasing = browser.downloads.erase({
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#event-onErased) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -101,4 +101,4 @@ let erasing = browser.downloads.erase({
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

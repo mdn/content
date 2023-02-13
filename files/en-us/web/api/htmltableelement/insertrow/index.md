@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.insertRow
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.insertRow()`** method inserts a new row
@@ -33,7 +34,7 @@ let row = specific_tbody.insertRow(index)
 
 ## Syntax
 
-```js
+```js-nolint
 insertRow()
 insertRow(index)
 ```
@@ -71,9 +72,15 @@ new row. (To be valid HTML, a `<tr>` must have at least one
 
 ```html
 <table id="my-table">
-  <tr><td>Row 1</td></tr>
-  <tr><td>Row 2</td></tr>
-  <tr><td>Row 3</td></tr>
+  <tr>
+    <td>Row 1</td>
+  </tr>
+  <tr>
+    <td>Row 2</td>
+  </tr>
+  <tr>
+    <td>Row 3</td>
+  </tr>
 </table>
 ```
 

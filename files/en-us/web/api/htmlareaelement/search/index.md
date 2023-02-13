@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.search
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.search`** property is a search

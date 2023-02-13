@@ -10,6 +10,7 @@ tags:
   - has
 browser-compat: api.URLSearchParams.has
 ---
+
 {{ApiRef("URL API")}}
 
 The **`has()`** method of the {{domxref("URLSearchParams")}}
@@ -20,7 +21,7 @@ specified name exists.
 
 ## Syntax
 
-```js
+```js-nolint
 has(name)
 ```
 

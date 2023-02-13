@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.DOMRectReadOnly.height
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 The **`height`** read-only property of the **`DOMRectReadOnly`** interface represents the height of the `DOMRect`.

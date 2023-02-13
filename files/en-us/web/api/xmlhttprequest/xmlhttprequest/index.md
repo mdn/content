@@ -15,6 +15,7 @@ tags:
   - XMLHttpRequest
 browser-compat: api.XMLHttpRequest.XMLHttpRequest
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The **`XMLHttpRequest()`** constructor
@@ -24,7 +25,7 @@ For details about how to use `XMLHttpRequest`, see [Using XMLHttpRequest](/en-US
 
 ## Syntax
 
-```js
+```js-nolint
 new XMLHttpRequest()
 ```
 
@@ -42,7 +43,7 @@ calling {{domxref("XMLHttpRequest.open", "open()")}} to initialize it before cal
 
 Firefox 16 added a non-standard parameter to the constructor that can enable anonymous
 mode (see {{Bug("692677")}}). Setting the `mozAnon` flag to `true`
-effectively resembles the [`AnonXMLHttpRequest()`](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest "see AnonXMLHttpRequest in the XMLHttpRequest specification")
+effectively resembles the [`AnonXMLHttpRequest()`](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest)
 constructor described in older versions of the XMLHttpRequest specification.
 
 ```js
@@ -57,7 +58,7 @@ const request = new XMLHttpRequest(paramsDictionary);
 
     - `mozAnon`
       - : Boolean: Setting this flag to `true` will cause the browser not to
-        expose the {{Glossary("origin")}} and [user credentials](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials "Definition of "User credentials" in the XMLHttpRequest specification.") when fetching resources. Most important, this means that
+        expose the {{Glossary("origin")}} and [user credentials](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials) when fetching resources. Most important, this means that
         {{Glossary("Cookie", "cookies")}} will not be sent unless explicitly added using
         setRequestHeader.
 

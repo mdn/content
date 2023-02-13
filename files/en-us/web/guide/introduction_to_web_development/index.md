@@ -10,6 +10,11 @@ tags:
   - JavaScript
   - Web
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
+</section>
+
 Whether you're just getting started with Web development, or are just expanding your horizons into new realms of Web awesomeness, the links here should help you get started.
 
 For another (overlapping) set of links to learning resources, see the [MDN Learning](/en-US/docs/Learn) pages.
@@ -18,10 +23,12 @@ For another (overlapping) set of links to learning resources, see the [MDN Learn
 
 ### HTML
 
-- [The basics of Hypertext Mark-up Language (HTML)](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started) — what exactly is HTML?
+- [The basics of Hypertext Markup Language (HTML)](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started) — what exactly is HTML?
 - [Basic structure of a web page](https://www.sitepoint.com/basic-structure-of-a-web-page/) — the doctype and document 'tree'
 - [HTML beginners tutorial](https://htmldog.com/guides/html/beginner/) — a tutorial and exercise that recap and take you through the basics you've learned above.
 - [HTML elements reference guide](/en-US/docs/Web/HTML/Element) — a comprehensive guide to HTML elements with details on how browsers support them
+- [Learn HTML](https://web.dev/learn/html)
+  - Provides a solid semantic HTML overview for developers, from novice to expert level HTML.
 
 ### CSS
 
@@ -45,13 +52,11 @@ For another (overlapping) set of links to learning resources, see the [MDN Learn
 - [A re-introduction to JavaScript](/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript) — a recap on the JavaScript programming language aimed at intermediate-level developers
 - [Essential JavaScript design patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/) — an introduction to essential JavaScript design patterns
 - [Introduction to object-oriented JavaScript](/en-US/docs/Learn/JavaScript/Objects) — learn about the JavaScript object model.
-- [Christian Heilmann's JavaScript best practices](https://dev.opera.com/articles/javascript-best-practices/) — learn about some of the obvious and (not so) obvious best practices when writing JavaScript.
+- [You don't know JavaScript](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/README.md)
 
 #### Advanced
 
 - [Learning advanced JavaScript](https://johnresig.com/apps/learn/) — John Resig's guide to advanced JavaScript
-- [Crockford on Advanced JavaScript](https://www.youtube.com/watch?v=DwYPG6vreJg) — a video on advanced JavaScript concepts
-- [JavaScript Garden](https://bonsaiden.github.io/JavaScript-Garden/) — documentation of the most quirky parts of JavaScript
 
 ## Resources
 
@@ -59,11 +64,5 @@ For another (overlapping) set of links to learning resources, see the [MDN Learn
   - : A reliable reference site for learning HTML, CSS and JavaScript which also mentions feature support across different browsers and known browser bugs.
 - [HTMLDog](https://htmldog.com/)
   - : An excellent and comprehensive reference site on HTML and CSS for beginners.
-- [CSSTutorial.net Beginner Tutorials](https://www.csstutorial.net/)
-  - : A broad range of useful text and video tutorials that cover the basics through to intermediate aspects of CSS.
-- [Tizag CSS Tutorials](http://www.tizag.com/cssT/)
-  - : An easy-to-follow reference for those wishing to learn CSS through short, concise tutorials.
 - [jQuery Fundamentals](http://jqfundamentals.com/)
   - : An open-source reference book featuring detailed introductions to both JavaScript and jQuery for beginners.
-- [JavaScript From Null: A Video Series](https://code.tutsplus.com/tutorials/javascript-from-null-video-series--net-8066)
-  - : A video series on JavaScript for absolute beginners looking for more 'visual'-based learning

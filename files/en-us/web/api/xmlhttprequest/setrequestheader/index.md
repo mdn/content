@@ -18,6 +18,7 @@ tags:
   - setRequestHeader
 browser-compat: api.XMLHttpRequest.setRequestHeader
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{domxref("XMLHttpRequest")}} method
@@ -34,10 +35,7 @@ If no {{HTTPHeader("Accept")}} header has been set using this, an `Accept`
 header with the type `"*/*"` is sent with the request when
 {{domxref("XMLHttpRequest.send", "send()")}} is called.
 
-For security reasons, some headers can only be controlled by the user agent. These
-headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}
-and {{Glossary("Forbidden_response_header_name", "forbidden response header names",
-  1)}}.
+For security reasons, there are several {{Glossary("Forbidden_header_name", "forbidden header names")}} whose values are controlled by the user agent. Any attempt to set a value for one of those headers from frontend JavaScript code will be ignored without warning or error.
 
 > **Note:** For your custom fields, you may encounter a "**not
 > allowed by Access-Control-Allow-Headers in preflight response**" exception
@@ -46,7 +44,7 @@ and {{Glossary("Forbidden_response_header_name", "forbidden response header name
 
 ## Syntax
 
-```js
+```js-nolint
 setRequestHeader(header, value)
 ```
 

@@ -11,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.DynamicsCompressorNode.attack
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `attack` property of the {{ domxref("DynamicsCompressorNode") }} interface is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} representing the amount of time, in seconds, required to reduce the gain by 10 dB. It defines how quickly the signal is adapted when its volume is increased.

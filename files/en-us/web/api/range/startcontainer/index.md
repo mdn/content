@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.startContainer
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.startContainer`** read-only property returns the

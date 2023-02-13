@@ -1,6 +1,7 @@
 ---
 title: SyntaxError
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError
+page-type: javascript-class
 tags:
   - Class
   - JavaScript
@@ -9,11 +10,12 @@ tags:
   - SyntaxError
 browser-compat: javascript.builtins.SyntaxError
 ---
+
 {{JSRef}}
 
 The **`SyntaxError`** object represents an error when trying to interpret syntactically invalid code. It is thrown when the JavaScript engine encounters tokens or token order that does not conform to the syntax of the language when parsing code.
 
-`SyntaxError` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker.postMessage()", "postMessage()")}}.
+`SyntaxError` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
 
 ## Constructor
 
@@ -43,7 +45,7 @@ The **`SyntaxError`** object represents an error when trying to interpret syntac
 
 ```js
 try {
-  eval('hoo bar');
+  eval("hoo bar");
 } catch (e) {
   console.error(e instanceof SyntaxError);
   console.error(e.message);
@@ -59,15 +61,15 @@ try {
 
 ```js
 try {
-  throw new SyntaxError('Hello', 'someFile.js', 10);
+  throw new SyntaxError("Hello", "someFile.js", 10);
 } catch (e) {
   console.error(e instanceof SyntaxError); // true
-  console.error(e.message);                // Hello
-  console.error(e.name);                   // SyntaxError
-  console.error(e.fileName);               // someFile.js
-  console.error(e.lineNumber);             // 10
-  console.error(e.columnNumber);           // 0
-  console.error(e.stack);                  // @debugger eval code:3:9
+  console.error(e.message); // Hello
+  console.error(e.name); // SyntaxError
+  console.error(e.fileName); // someFile.js
+  console.error(e.lineNumber); // 10
+  console.error(e.columnNumber); // 0
+  console.error(e.stack); // @debugger eval code:3:9
 }
 ```
 

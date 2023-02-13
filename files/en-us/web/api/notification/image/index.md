@@ -10,9 +10,11 @@ tags:
   - Notifications API
   - Property
   - Reference
+  - Experimental
 browser-compat: api.Notification.image
 ---
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The `image` read-only property of the
 {{domxref("Notification")}} interface contains the URL of an image to be displayed as

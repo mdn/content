@@ -1,6 +1,7 @@
 ---
 title: Date.prototype[@@toPrimitive]
 slug: Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive
+page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.@@toPrimitive
 ---
+
 {{JSRef}}
 
 The **`[@@toPrimitive]()`** method converts a `Date`
@@ -18,8 +20,8 @@ object to a primitive value.
 
 ## Syntax
 
-```js
-Date()[Symbol.toPrimitive](hint);
+```js-nolint
+Date()[Symbol.toPrimitive](hint)
 ```
 
 ### Return value
@@ -55,13 +57,13 @@ primitive value is expected.
 const testDate = new Date(1590757517834);
 // "Date Fri May 29 2020 14:05:17 GMT+0100 (British Summer Time)"
 
-testDate[Symbol.toPrimitive]('string');
+testDate[Symbol.toPrimitive]("string");
 // Returns "Date Fri May 29 2020 14:05:17 GMT+0100 (British Summer Time)"
 
-testDate[Symbol.toPrimitive]('number');
+testDate[Symbol.toPrimitive]("number");
 // Returns "1590757517834"
 
-testDate[Symbol.toPrimitive]('default');
+testDate[Symbol.toPrimitive]("default");
 // Returns "Date Fri May 29 2020 14:05:17 GMT+0100 (British Summer Time)"
 ```
 

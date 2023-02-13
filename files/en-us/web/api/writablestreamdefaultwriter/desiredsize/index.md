@@ -4,7 +4,6 @@ slug: Web/API/WritableStreamDefaultWriter/desiredSize
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - Streams
@@ -12,7 +11,8 @@ tags:
   - desiredSize
 browser-compat: api.WritableStreamDefaultWriter.desiredSize
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 The **`desiredSize`** read-only property of the
 {{domxref("WritableStreamDefaultWriter")}} interface returns the desired size required

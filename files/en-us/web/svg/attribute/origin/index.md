@@ -1,11 +1,13 @@
 ---
 title: origin
 slug: Web/SVG/Attribute/origin
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#OriginAttribute
 ---
+
 {{SVGRef}}
 
 The **`origin`** attribute specifies the origin of motion for an animation. It has no effect in SVG.

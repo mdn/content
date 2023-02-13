@@ -10,6 +10,7 @@ tags:
   - Web Storage
 browser-compat: api.Storage.removeItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 The **`removeItem()`** method of the {{domxref("Storage")}}
@@ -22,7 +23,7 @@ If there is no item associated with the given key, this method will do nothing.
 
 ## Syntax
 
-```js
+```js-nolint
 removeItem(keyName)
 ```
 
@@ -62,7 +63,7 @@ function populateStorage() {
 }
 ```
 
-> **Note:** To see this used within a real world example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> **Note:** To see this used within a real-world example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
 ## Specifications
 

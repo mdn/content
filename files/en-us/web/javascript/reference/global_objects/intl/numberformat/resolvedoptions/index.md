@@ -1,6 +1,7 @@
 ---
 title: Intl.NumberFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
+page-type: javascript-instance-method
 tags:
   - Internationalization
   - Intl
@@ -12,6 +13,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.resolvedOptions
 ---
+
 {{JSRef}}
 
 The **`Intl.NumberFormat.prototype.resolvedOptions()`** method returns a new object with properties reflecting the [locale and number formatting options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters) computed during initialization of this {{jsxref("Intl.NumberFormat")}} object.
@@ -22,7 +24,7 @@ The **`Intl.NumberFormat.prototype.resolvedOptions()`** method returns a new obj
 
 ## Syntax
 
-```js
+```js-nolint
 resolvedOptions()
 ```
 
@@ -38,17 +40,17 @@ The resulting object has the following properties:
 - `numberingSystem`
   - : The value provided for this properties in the `options` argument, if present, or the value requested using the Unicode extension key `"nu"` or filled in as a default.
 - `notation`
-  - : The value provided for this property in the `options` argument, if present, or "`standard`" filled in as a default.
+  - : The value provided for this property in the `options` argument, if present, or `"standard"` filled in as a default.
 - `compactDisplay`
-  - : The value provided for this property in the `options` argument, or "`short`" filled in as a default.
+  - : The value provided for this property in the `options` argument, or `"short"` filled in as a default.
     This property is only present if the `notation` is set to "compact".
 - `signDisplay`
-  - : The value provided for this property in the `options` argument, or "`auto`" filled in as a default.
+  - : The value provided for this property in the `options` argument, or `"auto"` filled in as a default.
 - `useGrouping`
   - : The value provided for the [useGrouping](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#usegrouping) property in the constructor `options` argument or the default value (`"auto"`).
 - `currency`, `currencyDisplay`
   - : The values provided for these properties in the `options` argument or filled in as defaults.
-    These properties are only present if `style` is "`currency`".
+    These properties are only present if `style` is `"currency"`.
 
 Only one of the following two groups of properties is included:
 
@@ -64,18 +66,18 @@ Only one of the following two groups of properties is included:
 ### Using the `resolvedOptions` method
 
 ```js
-const de = new Intl.NumberFormat('de-DE');
+const de = new Intl.NumberFormat("de-DE");
 const usedOptions = de.resolvedOptions();
 
-usedOptions.locale;                // "de-DE"
-usedOptions.numberingSystem;       // "latn"
-usedOptions.notation;              // "standard"
-usedOptions.signDisplay;           // "auto"
-usedOptions.style;                 // "decimal"
-usedOptions.minimumIntegerDigits;  // 1
+usedOptions.locale; // "de-DE"
+usedOptions.numberingSystem; // "latn"
+usedOptions.notation; // "standard"
+usedOptions.signDisplay; // "auto"
+usedOptions.style; // "decimal"
+usedOptions.minimumIntegerDigits; // 1
 usedOptions.minimumFractionDigits; // 0
 usedOptions.maximumFractionDigits; // 3
-usedOptions.useGrouping;           // true
+usedOptions.useGrouping; // true
 ```
 
 ## Specifications

@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.networkState
 ---
+
 {{APIRef("HTML DOM")}}
 
 The
@@ -34,14 +35,14 @@ still loading data.
 
 ```html
 <audio id="example" preload="auto">
- <source src="sound.ogg" type="audio/ogg" />
+  <source src="sound.ogg" type="audio/ogg" />
 </audio>
 ```
 
 ```js
 const obj = document.getElementById('example');
 
-obj.addEventListener('playing', function() {
+obj.addEventListener('playing', () => {
 
   if (obj.networkState === 2) {
     // Still loading…

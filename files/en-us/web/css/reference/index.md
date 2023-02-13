@@ -1,13 +1,15 @@
 ---
 title: CSS reference
 slug: Web/CSS/Reference
+page-type: landing-page
 tags:
   - CSS
   - Guide
   - Overview
   - Reference
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{CSSRef}}
 
 Use this **CSS reference** to browse an [alphabetical index](#index) of all of the standard [CSS](/en-US/docs/Web/CSS) properties, [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes), [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), [data types](/en-US/docs/Web/CSS/CSS_Types), [functional notations](/en-US/docs/Web/CSS/CSS_Functions) and [at-rules](/en-US/docs/Web/CSS/At-rule). You can also browse [key CSS concepts](#concepts) and a list of [selectors organized by type](#selectors). Also included is a brief [DOM-CSS / CSSOM reference](#dom-css_cssom).
@@ -23,7 +25,7 @@ style-rule ::=
     }
 ```
 
-Where :
+Where:
 
 ```css
 selectors-list ::=
@@ -56,7 +58,7 @@ As the structure of at-rules varies widely, please see [At-rule](/en-US/docs/Web
 
 ## Index
 
-> **Note:** The property names in this index do **not** include the [JavaScript names](/en-US/docs/Web/CSS/CSS_Properties_Reference) where they differ from the CSS standard names.
+> **Note:** The property names in this index do **not** include the JavaScript names which do differ from the CSS standard names.
 
 {{CSS_Ref}}
 

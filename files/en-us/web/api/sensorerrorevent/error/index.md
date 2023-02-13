@@ -14,6 +14,7 @@ tags:
   - Sensors
 browser-compat: api.SensorErrorEvent.error
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`error`** read-only property of

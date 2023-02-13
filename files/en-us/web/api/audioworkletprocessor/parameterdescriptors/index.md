@@ -11,6 +11,7 @@ tags:
   - parameterDescriptors
 browser-compat: api.AudioWorkletProcessor.parameterDescriptors
 ---
+
 {{APIRef("Web Audio API")}}{{SeeCompatTable}}
 
 The read-only **`parameterDescriptors`** property of an {{domxref("AudioWorkletProcessor")}}-derived class is a _static getter_,

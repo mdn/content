@@ -14,6 +14,7 @@ tags:
   - effects
   - shapes
 ---
+
 {{LearnSidebar}}
 
 This article acts as a box of tricks, providing an introduction to some interesting advanced styling features such as box shadows, blend modes, and filters.
@@ -52,7 +53,10 @@ Let's look at a simple example to get things started. First, some HTML:
 
 ```html
 <article class="simple">
-  <p><strong>Warning</strong>: The thermostat on the cosmic transcender has reached a critical level.</p>
+  <p>
+    <strong>Warning</strong>: The thermostat on the cosmic transcender has
+    reached a critical level.
+  </p>
 </article>
 ```
 
@@ -67,11 +71,15 @@ article {
   max-width: 500px;
   padding: 10px;
   background-color: red;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.25));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.25)
+  );
 }
 
 .simple {
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
 }
 ```
 
@@ -94,7 +102,10 @@ You can also specify multiple box shadows in a single `box-shadow` declaration, 
 
 ```html hidden
 <article class="multiple">
-  <p><strong>Warning</strong>: The thermostat on the cosmic transcender has reached a critical level.</p>
+  <p>
+    <strong>Warning</strong>: The thermostat on the cosmic transcender has
+    reached a critical level.
+  </p>
 </article>
 ```
 
@@ -107,7 +118,11 @@ article {
   max-width: 500px;
   padding: 10px;
   background-color: red;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.25));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.25)
+  );
 }
 
 .multiple {
@@ -144,19 +159,18 @@ button {
   border-radius: 10px;
   border: none;
   background-image: linear-gradient(to bottom right, #777, #ddd);
-  box-shadow: 1px 1px 1px black,
-              inset 2px 3px 5px rgba(0,0,0,0.3),
-              inset -2px -3px 5px rgba(255,255,255,0.5);
+  box-shadow: 1px 1px 1px black, inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+    inset -2px -3px 5px rgba(255, 255, 255, 0.5);
 }
 
-button:focus, button:hover {
+button:focus,
+button:hover {
   background-image: linear-gradient(to bottom right, #888, #eee);
 }
 
 button:active {
-  box-shadow: inset 2px 2px 1px black,
-              inset 2px 3px 5px rgba(0,0,0,0.3),
-              inset -2px -3px 5px rgba(255,255,255,0.5);
+  box-shadow: inset 2px 2px 1px black, inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+    inset -2px -3px 5px rgba(255, 255, 255, 0.5);
 }
 ```
 
@@ -206,10 +220,8 @@ You can find a lot more examples than are available here in our [blend-modes.htm
 Again, let's look at some examples so we can understand this better. First, {{cssxref("background-blend-mode")}} — here we'll show a couple of simple {{htmlelement("div")}}s, so you can compare the original with the blended version:
 
 ```html
-<div>
-</div>
-<div class="multiply">
-</div>
+<div></div>
+<div class="multiply"></div>
 ```
 
 Now some CSS — we are adding to the `<div>` one background image and a green background color:
@@ -241,20 +253,14 @@ Now let's look at {{cssxref("mix-blend-mode")}}. Here we'll present the same two
 ```html
 <article>
   No mix blend mode
-  <div>
-
-  </div>
-  <div>
-  </div>
+  <div></div>
+  <div></div>
 </article>
 
 <article>
   Multiply mix
-  <div class="multiply-mix">
-
-  </div>
-  <div>
-  </div>
+  <div class="multiply-mix"></div>
+  <div></div>
 </article>
 ```
 

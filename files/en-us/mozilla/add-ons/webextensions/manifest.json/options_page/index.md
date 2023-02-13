@@ -11,6 +11,7 @@ tags:
   - options_page
 browser-compat: webextensions.manifest.options_page
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

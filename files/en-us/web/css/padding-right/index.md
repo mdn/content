@@ -1,6 +1,7 @@
 ---
 title: padding-right
 slug: Web/CSS/padding-right
+page-type: css-property
 tags:
   - CSS
   - CSS Padding
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.padding-right
 ---
+
 {{CSSRef}}
 
 The **`padding-right`** [CSS](/en-US/docs/Web/CSS) property sets the width of the [padding area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#padding_area) on the right of an element.
@@ -60,8 +62,12 @@ The `padding-right` property is specified as a single value chosen from the list
 ### Setting right padding using pixels and percentages
 
 ```css
-.content { padding-right: 5%; }
-.sidebox { padding-right: 10px; }
+.content {
+  padding-right: 5%;
+}
+.sidebox {
+  padding-right: 10px;
+}
 ```
 
 ## Specifications

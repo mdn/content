@@ -2,11 +2,12 @@
 title: Firefox 95 for developers
 slug: Mozilla/Firefox/Releases/95
 tags:
-  - '95'
+  - "95"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 95 that will affect developers.
@@ -44,6 +45,8 @@ No notable changes
 ## Changes for add-on developers
 
 - Added `overrideContentColorScheme` in {{WebExtAPIRef("browserSettings")}} to provide the ability to control the preference `layout.css.prefers-color-scheme.content-override` and set pages' preferred color scheme (light or dark) independently of the browser theme ({{bug(1733461)}}).
+
+- Added `globalPrivacyControl` in {{WebExtAPIRef("privacy.network")}} to provide visibility into whether the user has enabled Global Privacy Control inside the browser. ({{bug(1670058)}}).
 
 ## Older versions
 

@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.DOMTokenList.contains
 ---
+
 {{APIRef("DOM")}}
 
 The **`contains()`** method of the {{domxref("DOMTokenList")}} interface
@@ -15,8 +16,8 @@ otherwise `false`.
 
 ## Syntax
 
-```js
-contains(token);
+```js-nolint
+contains(token)
 ```
 
 ### Parameters
@@ -48,12 +49,9 @@ Now the JavaScript:
 
 ```js
 const span = document.querySelector("span");
-const classes = span.classList;
-if (classes.contains("c")) {
-  span.textContent = "The classList contains 'c'";
-} else {
-  span.textContent = "The classList does not contain 'c'";
-}
+span.textContent = span.classList.contains("c")
+  ? "The classList contains 'c'"
+  : "The classList does not contain 'c'";
 ```
 
 The output looks like this:

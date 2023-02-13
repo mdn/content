@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.clip
 ---
+
 {{APIRef}}
 
 The
@@ -22,7 +23,7 @@ In the image below, the red outline represents a clipping region shaped like a s
 Only those parts of the checkerboard pattern that are within the clipping region get
 drawn.
 
-![](canvas_clipping_path.png)
+![Star-shaped clipping region](canvas_clipping_path.png)
 
 > **Note:** Be aware that the clipping region is only constructed from
 > shapes added to the path. It doesn't work with shape primitives drawn directly to the
@@ -32,7 +33,7 @@ drawn.
 
 ## Syntax
 
-```js
+```js-nolint
 clip()
 clip(path)
 clip(fillRule)
@@ -46,9 +47,11 @@ clip(path, fillRule)
   - : The algorithm by which to determine if a point is inside or outside the clipping
     region. Possible values:
 
-    - **`"nonzero"`**: The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule).
-      Default rule.
-    - **`"evenodd"`**: The [even-odd winding rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+    - `nonzero`
+      - : The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule).
+        Default rule.
+    - `evenodd`
+      - : The [even-odd winding rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 - `path`
   - : A {{domxref("Path2D")}} path to use as the clipping region.
@@ -76,8 +79,8 @@ the clipping region are rendered.
 The clipping region is a full circle, with its center at (100, 75), and a radius of 50.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Create circular clipping region
 ctx.beginPath();
@@ -85,9 +88,9 @@ ctx.arc(100, 75, 50, 0, Math.PI * 2);
 ctx.clip();
 
 // Draw stuff that gets clipped
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
-ctx.fillStyle = 'orange';
+ctx.fillStyle = "orange";
 ctx.fillRect(0, 0, 100, 100);
 ```
 
@@ -111,8 +114,8 @@ creates a hole where the clipping rectangles intersect; by default (with the
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Create clipping path
 let region = new Path2D();
@@ -121,7 +124,7 @@ region.rect(40, 50, 100, 50);
 ctx.clip(region, "evenodd");
 
 // Draw stuff that gets clipped
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 ```
 
@@ -146,8 +149,8 @@ representing the intersection of the circle and the square.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Create two clipping paths
 let circlePath = new Path2D();
@@ -161,7 +164,7 @@ ctx.clip(circlePath);
 ctx.clip(squarePath);
 
 // Draw stuff that gets clipped
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 ```
 

@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesis.getVoices
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`getVoices()`** method of the
@@ -22,7 +23,7 @@ current device.
 
 ## Syntax
 
-```js
+```js-nolint
 getVoices()
 ```
 
@@ -40,7 +41,7 @@ A list (array) of {{domxref("SpeechSynthesisVoice")}} objects.
 
 ```js
 function populateVoiceList() {
-  if(typeof speechSynthesis === 'undefined') {
+  if (typeof speechSynthesis === 'undefined') {
     return;
   }
 
@@ -50,7 +51,7 @@ function populateVoiceList() {
     const option = document.createElement('option');
     option.textContent = `${voices[i].name} (${voices[i].lang})`;
 
-    if(voices[i].default) {
+    if (voices[i].default) {
       option.textContent += ' — DEFAULT';
     }
 

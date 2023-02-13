@@ -1,11 +1,13 @@
 ---
 title: by
 slug: Web/SVG/Attribute/by
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute
 browser-compat: svg.elements.animateTransform.by
 ---
+
 {{SVGRef}}
 
 The **`by`** attribute specifies a relative offset value for an attribute that will be modified during an animation.
@@ -22,7 +24,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -30,7 +34,7 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <rect x="10" y="10" width="100" height="100">
-    <animate attributeName="width" fill="freeze" by="50" dur="3s"/>
+    <animate attributeName="width" fill="freeze" by="50" dur="3s" />
   </rect>
 </svg>
 ```

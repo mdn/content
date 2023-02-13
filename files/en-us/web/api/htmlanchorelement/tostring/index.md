@@ -9,6 +9,7 @@ tags:
   - Stringifier
 browser-compat: api.HTMLAnchorElement.toString
 ---
+
 {{ApiRef("URL API")}}
 
 The **`HTMLAnchorElement.toString()`** {{Glossary("stringifier")}}
@@ -17,7 +18,7 @@ version of {{domxref("HTMLAnchorElement.href")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

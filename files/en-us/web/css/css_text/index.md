@@ -1,6 +1,7 @@
 ---
 title: CSS Text
 slug: Web/CSS/CSS_Text
+page-type: css-module
 tags:
   - CSS
   - CSS Text
@@ -9,7 +10,9 @@ tags:
 spec-urls:
   - https://drafts.csswg.org/css-logical/
   - https://drafts.csswg.org/css-text/
+  - https://drafts.csswg.org/css-text-4/
 ---
+
 {{CSSRef}}
 
 **CSS Text** is a module of CSS that defines how to perform text manipulation, like line breaking, justification and alignment, white space handling, and text transformation.
@@ -19,6 +22,7 @@ spec-urls:
 ### Properties
 
 - {{cssxref("hanging-punctuation")}}
+- {{cssxref("hyphenate-limit-chars")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("letter-spacing")}}
 - {{cssxref("line-break")}}

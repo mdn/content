@@ -9,9 +9,11 @@ tags:
   - HTMLMenuItemElement
   - Interface
   - Reference
+  - Non-standard
 browser-compat: api.HTMLMenuItemElement
 ---
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`HTMLMenuItemElement`** interface provides special properties (beyond those defined on the regular {{DOMxRef("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("menuitem")}} elements.
 

@@ -12,22 +12,21 @@ tags:
   - focusin
 browser-compat: api.Element.focusin_event
 ---
+
 {{APIRef}}
 
-The **`focusin`** event fires when an element is about to receive focus. The main difference between this event and {{domxref("Element/focus_event", "focus")}} is that `focusin` bubbles while `focus` does not.
+The **`focusin`** event fires when an element has received focus, after the {{domxref("Element/focus_event", "focus")}} event. The two events differ in that `focusin` bubbles, while `focus` does not.
 
-The opposite of `focusin` is {{domxref("Element/focusout_event", "focusout")}}.
+The opposite of `focusin` is the {{domxref("Element/focusout_event", "focusout")}} event, which fires when the element has lost focus.
 
-This event is not cancelable.
+The `focusin` event is not cancelable.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
 
 ```js
 addEventListener('focusin', (event) => {});
-
-onfocusin = (event) => { };
 ```
 
 ## Event type
@@ -41,7 +40,7 @@ A {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
 _This interface also inherits properties from its parent {{domxref("UIEvent")}}, and indirectly from {{domxref("Event")}}_.
 
 - {{domxref("FocusEvent.relatedTarget")}}
-  - : An {{domxref("EventTarget")}} representing a secondary target for this event. In some cases (such as when tabbing in or out a page), this property may be set to `null` for security reasons.
+  - : The element losing focus, if any.
 
 ## Examples
 
@@ -51,8 +50,12 @@ _This interface also inherits properties from its parent {{domxref("UIEvent")}},
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input">
-  <input type="password" placeholder="password">
+  <label>Some text:
+    <input type="text" placeholder="text input" />
+  </label>
+  <label>Password:
+    <input type="password" placeholder="password" />
+  </label>
 </form>
 ```
 
@@ -77,6 +80,8 @@ form.addEventListener('focusout', (event) => {
 ## Specifications
 
 {{Specifications}}
+
+**Note:** The _UI Events_ specification describes an [order of focus events](/en-US/docs/Web/API/FocusEvent#order_of_events) that's different from what current browsers implement.
 
 ## Browser compatibility
 

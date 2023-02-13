@@ -8,6 +8,7 @@ tags:
   - Read-only
 browser-compat: api.DOMTokenList.length
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`length`** property of the {{domxref("DOMTokenList")}} interface is an `integer` representing the number

@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedEnumeration
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated enumeration interface
@@ -49,7 +50,7 @@ The `SVGAnimatedEnumeration` interface is used for attributes whose value must b
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 <table class="no-markdown">
   <thead>
@@ -80,7 +81,7 @@ The `SVGAnimatedEnumeration` interface is used for attributes whose value must b
   </tbody>
 </table>
 
-## Methods
+## Instance methods
 
 The `SVGAnimatedEnumeration` interface do not provide any specific methods.
 

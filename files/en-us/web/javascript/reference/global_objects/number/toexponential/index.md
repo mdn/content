@@ -1,6 +1,7 @@
 ---
 title: Number.prototype.toExponential()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method
@@ -9,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.toExponential
 ---
+
 {{JSRef}}
 
 The **`toExponential()`** method returns a string representing
@@ -18,7 +20,7 @@ the {{jsxref("Number")}} object in exponential notation.
 
 ## Syntax
 
-```js
+```js-nolint
 toExponential()
 toExponential(fractionDigits)
 ```
@@ -68,11 +70,11 @@ of rounding in the description of the {{jsxref("Number.prototype.toFixed",
 ```js
 const numObj = 77.1234;
 
-console.log(numObj.toExponential());  // logs 7.71234e+1
-console.log(numObj.toExponential(4)); // logs 7.7123e+1
-console.log(numObj.toExponential(2)); // logs 7.71e+1
-console.log(77.1234.toExponential()); // logs 7.71234e+1
-console.log(77 .toExponential());     // logs 7.7e+1
+console.log(numObj.toExponential()); // 7.71234e+1
+console.log(numObj.toExponential(4)); // 7.7123e+1
+console.log(numObj.toExponential(2)); // 7.71e+1
+console.log(77.1234.toExponential()); // 7.71234e+1
+console.log((77).toExponential()); // 7.7e+1
 ```
 
 ## Specifications

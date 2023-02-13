@@ -8,6 +8,7 @@ tags:
   - Success
 browser-compat: http.status.204
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`204 No Content`** success status response code
@@ -22,7 +23,7 @@ A 204 response is cacheable by default (an {{HTTPHeader("ETag")}} header is incl
 
 ## Status
 
-```
+```http
 204 No Content
 ```
 

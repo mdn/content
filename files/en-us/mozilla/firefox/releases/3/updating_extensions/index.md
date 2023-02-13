@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/3/Updating_extensions
 tags:
   - Firefox 3
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information that will be useful to developers that wish to update their extensions to work properly under Firefox 3.
@@ -155,7 +156,7 @@ _Add simple changes you had to make while updating your extension to work with F
 - Changes to `nsISupports_proxies` and possibly to threading-related interfaces need to be documented.
 - If you use XML processing instructions, such as `<?xml-stylesheet ?>` in your XUL files, be aware of the changes made in {{ Bug(319654) }}:
 
-  1. XML PIs are now added to a XUL document's DOM. This means {{ Domxref("document.firstChild") }} is no longer guaranteed to be the root element. If you need to get the root document in your script, use {{ Domxref("document.documentElement") }} instead.
+  1. XML PIs are now added to a XUL document's DOM. This means {{ Domxref("Node.firstChild", "document.firstChild") }} is no longer guaranteed to be the root element. If you need to get the root document in your script, use {{ Domxref("document.documentElement") }} instead.
   2. `<?xml-stylesheet ?>` and `<?xul-overlay ?>` processing instructions now have no effect outside the document prolog.
 
 - `window.addEventListener("load", myFunc, true)` is not fired when loading web content (browser page loads). This is due to {{ Bug(296639) }} which changes the way inner and outer windows communicate. The simple fix here is to use `gBrowser.addEventListener("load", myFunc, true)` as described [here](/en-US/docs/Code_snippets/Tabbed_browser#detecting_page_load) and works in Firefox 2 as well.

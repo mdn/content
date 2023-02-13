@@ -15,6 +15,7 @@ tags:
   - Window
 browser-compat: api.Window.scrollMaxY
 ---
+
 {{APIRef}} {{Non-standard_header}}
 
 The **`Window.scrollMaxY`** read-only property returns the

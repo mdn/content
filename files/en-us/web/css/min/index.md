@@ -1,6 +1,7 @@
 ---
 title: min()
 slug: Web/CSS/min
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -12,6 +13,7 @@ tags:
   - min
 browser-compat: css.types.min
 ---
+
 {{CSSRef}}
 
 The **`min()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) lets you set the smallest (most negative) value from a list of comma-separated expressions as the value of a CSS property value. The `min()` function can be used anywhere a {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, or {{CSSxRef("&lt;integer&gt;")}} is allowed.
@@ -56,7 +58,8 @@ Another use case for CSS functions is to set a maximum size on responsive form c
 Let's look at some CSS:
 
 ```css
-input, label {
+input,
+label {
   padding: 2px;
   box-sizing: border-box;
   display: inline-block;
@@ -76,7 +79,7 @@ Here, the form itself, along with the margin, border, and padding, will be 100% 
 ```html
 <form>
   <label for="misc">Type something:</label>
-  <input type="text" id="misc" name="misc">
+  <input type="text" id="misc" name="misc" />
 </form>
 ```
 

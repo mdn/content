@@ -13,6 +13,7 @@ tags:
   - events
 browser-compat: webextensions.api.events.UrlFilter
 ---
+
 {{AddonSidebar()}}
 
 Describes various criteria for filtering URLs. If all of the criteria specified in the filter's properties match the URL, then the filter matches. Filters are often provided to API methods in an [Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of UrlFilters. For example, [webNavigation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation) listeners can be added with a filter which is an object with a single `url` property that is an [Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of UrlFilters, e.g. `{url:[UrlFilter, UrlFilter, …]}`. If any filter within the Array of UrlFilters matches, then it is considered a match for the Array. Effectively, the criteria specified within a single filter are AND'ed together, while all of the individual filters within an Array are OR'ed.
@@ -103,10 +104,9 @@ However, note that these last two patterns will not match the last component of 
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.events`](https://developer.chrome.com/docs/extensions/reference/events/#type-UrlFilter) API. This documentation is derived from [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -133,4 +133,4 @@ However, note that these last two patterns will not match the last component of 
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

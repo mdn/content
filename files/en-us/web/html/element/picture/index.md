@@ -1,6 +1,7 @@
 ---
 title: '<picture>: The Picture element'
 slug: Web/HTML/Element/picture
+page-type: html-element
 tags:
   - Element
   - Graphics
@@ -13,7 +14,8 @@ tags:
   - picture
 browser-compat: html.elements.picture
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 The **`<picture>`** [HTML](/en-US/docs/Web/HTML) element contains zero or more {{HTMLElement("source")}} elements and one {{HTMLElement("img")}} element to offer alternative versions of an image for different display/device scenarios.
 
@@ -110,8 +112,8 @@ If the {{HTMLElement("source")}}'s media condition evaluates to `false`, the bro
 
 ```html
 <picture>
-  <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
-  <img src="mdn-logo-narrow.png" alt="MDN">
+  <source srcset="mdn-logo-wide.png" media="(min-width: 600px)" />
+  <img src="mdn-logo-narrow.png" alt="MDN" />
 </picture>
 ```
 
@@ -127,9 +129,8 @@ It is composed of a comma-separated list of image descriptors. Each image descri
 
 ```html
 <picture>
-  <source srcset="logo-768.png, logo-768-1.5x.png 1.5x">
-  <source srcset="logo-480.png, logo-480-2x.png 2x">
-  <img src="logo-320.png" alt="logo">
+  <source srcset="logo-768.png, logo-768-1.5x.png 1.5x" />
+  <img src="logo-320.png" alt="logo" />
 </picture>
 ```
 
@@ -139,9 +140,9 @@ The `type` attribute specifies a [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP
 
 ```html
 <picture>
-  <source srcset="photo.avif" type="image/avif">
-  <source srcset="photo.webp" type="image/webp">
-  <img src="photo.jpg" alt="photo">
+  <source srcset="photo.avif" type="image/avif" />
+  <source srcset="photo.webp" type="image/webp" />
+  <img src="photo.jpg" alt="photo" />
 </picture>
 ```
 

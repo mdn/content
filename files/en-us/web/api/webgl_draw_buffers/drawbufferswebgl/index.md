@@ -9,6 +9,7 @@ tags:
   - WebGL
 browser-compat: api.WEBGL_draw_buffers.drawBuffersWEBGL
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_draw_buffers.drawBuffersWEBGL()`** method is part
@@ -18,13 +19,12 @@ the draw buffers to which all fragment colors are written.
 This method is part of the {{domxref("WEBGL_draw_buffers")}} extension.
 
 > **Note:** When using {{domxref("WebGL2RenderingContext", "WebGL2")}},
-> this method is available as {{domxref("WebGL2RenderingContext.drawBuffers()",
-    "gl.drawBuffers()")}} by default and the constants are named
-> `gl.COLOR_ATTACHMENT1` etc. without the "WEBGL" suffix.
+> this method is available as {{domxref("WebGL2RenderingContext.drawBuffers()", "gl.drawBuffers()")}}
+> by default and the constants are named `gl.COLOR_ATTACHMENT1` etc. without the "WEBGL" suffix.
 
 ## Syntax
 
-```js
+```js-nolint
 drawBuffersWEBGL(buffers)
 ```
 
@@ -38,7 +38,7 @@ drawBuffersWEBGL(buffers)
     - `gl.NONE`: The fragment shader is not written to any color buffer.
     - `gl.BACK`: The fragment shader is written to the back color buffer.
     - `ext.COLOR_ATTACHMENT0_WEBGL` The fragment shader is written the
-      *n*th color attachment of the framebuffer.
+      n-th color attachment of the framebuffer.
     - `ext.COLOR_ATTACHMENT1_WEBGL`
     - `ext.COLOR_ATTACHMENT2_WEBGL`
     - `ext.COLOR_ATTACHMENT3_WEBGL`

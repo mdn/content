@@ -20,6 +20,7 @@ tags:
   - rtc
 browser-compat: api.RTCDataChannel.open_event
 ---
+
 {{APIRef("WebRTC")}}
 
 The WebRTC **`open`** event is sent to an {{domxref("RTCDataChannel")}} object's `onopen` event handler when the underlying transport used to send and receive the data channel's messages is opened or reopened.

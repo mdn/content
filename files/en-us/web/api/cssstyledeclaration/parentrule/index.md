@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSStyleDeclaration.parentRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **CSSStyleDeclaration.parentRule** read-only

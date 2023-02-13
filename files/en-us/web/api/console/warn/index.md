@@ -11,6 +11,7 @@ tags:
   - web console
 browser-compat: api.console.warn
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.warn()`** method outputs a warning message to the Web
@@ -23,7 +24,7 @@ console.
 
 ## Syntax
 
-```js
+```js-nolint
 warn(obj1)
 warn(obj1, /* …, */ objN)
 warn(msg)
@@ -57,4 +58,4 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [MSDN: Using the F12 Tools Console to View Errors and Status](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85))
+- [MSDN: Using the F12 Tools Console to View Errors and Status](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)>)

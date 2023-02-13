@@ -12,6 +12,7 @@ tags:
   - openUrlbarResultsInNewTabs
 browser-compat: webextensions.api.browserSettings.openUrlbarResultsInNewTabs
 ---
+
 {{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a boolean.
@@ -33,8 +34,9 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.openUrlbarResultsInNewTabs.set({value: true}).
-  then(logResult);
+browser.browserSettings.openUrlbarResultsInNewTabs
+  .set({ value: true })
+  .then(logResult);
 ```
 
 {{WebExtExamples}}

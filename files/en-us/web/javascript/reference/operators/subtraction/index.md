@@ -1,6 +1,7 @@
 ---
 title: Subtraction (-)
 slug: Web/JavaScript/Reference/Operators/Subtraction
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
@@ -8,32 +9,58 @@ tags:
   - Reference
 browser-compat: javascript.operators.subtraction
 ---
+
 {{jsSidebar("Operators")}}
 
-The subtraction operator (`-`) subtracts the two operands, producing their
+The **subtraction (`-`)** operator subtracts the two operands, producing their
 difference.
 
 {{EmbedInteractiveExample("pages/js/expressions-subtraction.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 x - y
 ```
+
+## Description
+
+The subtraction operator [converts both operands to numeric values](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) and carries out either number subtraction or [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) subtraction, depending on the two operands' types. If the types don't match, a {{jsxref("TypeError")}} is thrown.
 
 ## Examples
 
 ### Subtraction with numbers
 
 ```js
-5 - 3     // 2
-3 - 5     // -2
+// Number - Number -> subtraction
+5 - 3; // 2
+
+// Number - Number -> subtraction
+3 - 5; // -2
 ```
 
 ### Subtraction with non-numbers
 
 ```js
-'foo' - 3 // NaN
+// String - Number -> subtraction
+"foo" - 3; // NaN; "foo" is converted to the number NaN
+
+// Number - String -> subtraction
+5 - "3"; // 2; "3" is converted to the number 3
+```
+
+### Subtraction with BigInts
+
+```js
+// BigInt - BigInt -> subtraction
+2n - 1n; // 1n
+```
+
+You cannot mix BigInt and number operands in subtraction.
+
+```js example-bad
+2n - 1; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+2 - 1n; // TypeError: Cannot mix BigInt and other types, use explicit conversions
 ```
 
 ## Specifications

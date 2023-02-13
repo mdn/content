@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.HIDDevice.receiveFeatureReport
 ---
+
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`receiveFeatureReport()`** method of the {{domxref("HIDDevice")}} interface receives a feature report from the HID device. Feature reports are a way for HID devices and applications to exchange non-standardized HID data.
@@ -19,7 +20,7 @@ The `reportId` for each of the report formats that this device supports can be r
 
 ## Syntax
 
-```js
+```js-nolint
 receiveFeatureReport(reportId)
 ```
 

@@ -11,13 +11,15 @@ tags:
   - write
 browser-compat: api.Document.write
 ---
+
 {{ApiRef("DOM")}}
 
 > **Warning:** Use of the `document.write()` method is strongly discouraged.
 >
-> As [the HTML spec itself warns](https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#document.write()):
->> This method has very idiosyncratic behavior. In some cases, this method can affect the state of the [HTML parser](https://html.spec.whatwg.org/multipage/parsing.html#html-parser) while the parser is running, resulting in a DOM that does not correspond to the source of the document (e.g. if the string written is the string "`<plaintext>`" or "`<!--`"). In other cases, the call can clear the current page first, as if [`document.open()`](https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-document-open) had been called. In yet more cases, the method is simply ignored, or throws an exception. Users agents are [explicitly allowed to avoid executing `script` elements inserted via this method](https://html.spec.whatwg.org/multipage/parsing.html#document-written-scripts-intervention). And to make matters even worse, the exact behavior of this method can in some cases be dependent on network latency, which can lead to failures that are very hard to debug. For all these reasons, use of this method is strongly discouraged.
-> Therefore, avoid using `document.write()` — and if possible, update any existing code that is still using it.
+> As [the HTML spec itself warns](<https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#document.write()>):
+>
+> > This method has very idiosyncratic behavior. In some cases, this method can affect the state of the [HTML parser](https://html.spec.whatwg.org/multipage/parsing.html#html-parser) while the parser is running, resulting in a DOM that does not correspond to the source of the document (e.g. if the string written is the string "`<plaintext>`" or "`<!--`"). In other cases, the call can clear the current page first, as if [`document.open()`](https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-document-open) had been called. In yet more cases, the method is simply ignored, or throws an exception. Users agents are [explicitly allowed to avoid executing `script` elements inserted via this method](https://html.spec.whatwg.org/multipage/parsing.html#document-written-scripts-intervention). And to make matters even worse, the exact behavior of this method can in some cases be dependent on network latency, which can lead to failures that are very hard to debug. For all these reasons, use of this method is strongly discouraged.
+> > Therefore, avoid using `document.write()` — and if possible, update any existing code that is still using it.
 
 The **`document.write()`** method writes a string of text to a document stream opened by {{domxref("document.open()")}}.
 
@@ -25,7 +27,7 @@ The **`document.write()`** method writes a string of text to a document stream o
 
 ## Syntax
 
-```js
+```js-nolint
 write(markup)
 ```
 
@@ -41,24 +43,22 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```html
-<html>
+<html lang="en">
+  <head>
+    <title>Write example</title>
 
-<head>
-  <title>Write example</title>
+    <script>
+      function newContent() {
+        document.open();
+        document.write("<h1>Out with the old, in with the new!</h1>");
+        document.close();
+      }
+    </script>
+  </head>
 
-  <script>
-    function newContent() {
-      document.open();
-      document.write("<h1>Out with the old, in with the new!</h1>");
-      document.close();
-    }
-  </script>
-</head>
-
-<body onload="newContent();">
-  <p>Some original document content.</p>
-</body>
-
+  <body onload="newContent();">
+    <p>Some original document content.</p>
+  </body>
 </html>
 ```
 
@@ -74,7 +74,7 @@ If the `document.write()` call is embedded within an inline HTML `<script>` tag,
 
 ```html
 <script>
-  document.write("<h1>Main title</h1>")
+  document.write("<h1>Main title</h1>");
 </script>
 ```
 

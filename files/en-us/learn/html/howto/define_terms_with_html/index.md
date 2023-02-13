@@ -7,6 +7,9 @@ tags:
   - HTML
   - Learn
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}
+
 HTML provides several ways to convey description semantics, whether inline or as structured glossaries. In this article, we'll cover how to properly mark up keywords when you're defining them.
 
 <table class="standard-table">
@@ -60,7 +63,7 @@ It's best to [mark abbreviations specially](/en-US/docs/Learn/HTML/Introduction_
 ```html
 <p>
   <dfn><abbr>HTML</abbr> (hypertext markup language)</dfn>
-   is a description language used to structure documents on the web.
+  is a description language used to structure documents on the web.
 </p>
 ```
 
@@ -97,21 +100,18 @@ Here's a simple example describing kinds of food and drink:
 ```html
 <dl>
   <dt>jambalaya</dt>
-    <dd>
-      rice-based entree typically containing chicken,
-      sausage, seafood, and spices
-    </dd>
+  <dd>
+    rice-based entree typically containing chicken, sausage, seafood, and spices
+  </dd>
 
   <dt>sukiyaki</dt>
-    <dd>
-      Japanese specialty consisting of thinly sliced meat,
-      vegetables, and noodles, cooked in sake and soy sauce
-    </dd>
+  <dd>
+    Japanese specialty consisting of thinly sliced meat, vegetables, and
+    noodles, cooked in sake and soy sauce
+  </dd>
 
   <dt>chianti</dt>
-    <dd>
-      dry Italian red wine originating in Tuscany
-    </dd>
+  <dd>dry Italian red wine originating in Tuscany</dd>
 </dl>
 ```
 

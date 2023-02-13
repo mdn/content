@@ -12,6 +12,7 @@ tags:
   - Element
 browser-compat: api.Element.ariaValueNow
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaValueNow`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) attribute, which defines the current value for a range widget.
@@ -25,9 +26,12 @@ A string which contains a number.
 In this example the [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) attribute on the element with an ID of `slider` is set to "1". Using `ariaValueNow` we update the value to "2".
 
 ```html
-<div role="slider" aria-valuenow="1"
-  aria-valuemin="1" aria-valuemax="7"
-  aria-valuetext="Sunday">
+<div
+  role="slider"
+  aria-valuenow="1"
+  aria-valuemin="1"
+  aria-valuemax="7"
+  aria-valuetext="Sunday"></div>
 ```
 
 ```js

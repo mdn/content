@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.getSyncParameter
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.getSyncParameter()`** method of
@@ -18,7 +19,7 @@ information of a {{domxref("WebGLSync")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 getSyncParameter(sync, pname)
 ```
 

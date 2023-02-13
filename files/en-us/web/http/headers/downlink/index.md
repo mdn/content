@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: http.headers.downlink
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 The **`Downlink`** [Client hint](/en-US/docs/Web/HTTP/Client_hints) request header field provides the approximate bandwidth of the client's connection to the server, in Mbps.
@@ -39,7 +40,7 @@ The hint allows a server to choose what information is sent based on the network
 
 ## Syntax
 
-```
+```http
 Downlink: <number>
 ```
 
@@ -52,13 +53,13 @@ Downlink: <number>
 
 A server first needs to opt in to receive the `Downlink` header by sending the {{HTTPHeader("Accept-CH")}} response header containing `Downlink`.
 
-```
+```http
 Accept-CH: Downlink
 ```
 
 Then on subsequent requests the client might send a `Downlink` header back:
 
-```
+```http
 Downlink: 1.7
 ```
 

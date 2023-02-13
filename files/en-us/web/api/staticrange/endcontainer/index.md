@@ -13,6 +13,7 @@ tags:
   - endContainer
 browser-compat: api.StaticRange.endContainer
 ---
+
 {{APIRef("DOM
     WHATWG")}}
 

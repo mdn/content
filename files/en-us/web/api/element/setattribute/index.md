@@ -13,6 +13,7 @@ tags:
   - setAttribute
 browser-compat: api.Element.setAttribute
 ---
+
 {{APIRef("DOM")}}
 
 Sets the value of an attribute on the specified element. If
@@ -25,7 +26,7 @@ To get the current value of an attribute, use {{domxref("Element.getAttribute",
 
 ## Syntax
 
-```js
+```js-nolint
 setAttribute(name, value)
 ```
 
@@ -92,7 +93,7 @@ button.setAttribute("disabled", "");
 This demonstrates two things:
 
 - The first call to `setAttribute()` above shows changing the `name` attribute's value to "helloButton".
-  You can see this using your browser's page inspector ([Chrome](https://developer.chrome.com/docs/devtools/dom/properties/), [Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/css/inspect),
+  You can see this using your browser's page inspector ([Chrome](https://developer.chrome.com/docs/devtools/dom/properties/), [Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/css/inspect),
   [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html), [Safari](https://support.apple.com/en-us/guide/safari-developer/welcome/mac)).
 - To set the value of a Boolean attribute, such as `disabled`, you can specify any value.
   An empty string or the name of the attribute are recommended values.

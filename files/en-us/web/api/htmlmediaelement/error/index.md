@@ -15,9 +15,10 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.error
 ---
+
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMediaElement.error`** is the
+The **`HTMLMediaElement.error`** property is the
 {{domxref("MediaError")}} object for the most recent error, or `null` if
 there has not been an error. When an {{domxref("HTMLMediaElement/error_event", "error")}} event is received by the
 element, you can determine details about what happened by examining this object.
@@ -34,7 +35,7 @@ handler logs the details to console.
 
 ```js
 const videoElement = document.createElement('video');
-videoElement.onerror = function() {
+videoElement.onerror = () => {
   console.error(`Error ${videoElement.error.code}; details: ${videoElement.error.message}`);
 }
 videoElement.src = "https://example.com/bogusvideo.mp4";

@@ -12,9 +12,10 @@ tags:
   - ended
 browser-compat: api.HTMLMediaElement.ended
 ---
+
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMediaElement.ended`** indicates whether the media
+The **`HTMLMediaElement.ended`** property indicates whether the media
 element has ended playback.
 
 ## Value

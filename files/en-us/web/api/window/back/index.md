@@ -13,6 +13,7 @@ tags:
   - Window
   - back
 ---
+
 {{APIRef}}{{ Non-standard_header() }}{{deprecated_header}}
 
 The obsolete and non-standard method `back()` on the {{domxref("window")}}
@@ -23,7 +24,7 @@ Firefox-specific method and was removed in Firefox 31.
 
 ## Syntax
 
-```js
+```js-nolint
 back()
 ```
 

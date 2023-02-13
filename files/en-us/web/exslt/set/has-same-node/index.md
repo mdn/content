@@ -6,13 +6,14 @@ tags:
   - NeedsSpecTable
   - Reference
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 `set:has-same-node()` determines whether two node-sets have any nodes in common.
 
 ## Syntax
 
-```js
+```plain
 set:has-same-node(nodeSet1, nodeSet2)
 ```
 

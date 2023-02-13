@@ -6,6 +6,7 @@ tags:
   - Firefox 9
   - Gecko 9
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 9 was released for Windows on December 20, 2011. Mac and Linux version 9.0.1, which fixed a crashing bug discovered at the last minute, were released on December 21, 2011.
@@ -14,7 +15,7 @@ Firefox 9 was released for Windows on December 20, 2011. Mac and Linux version 9
 
 ### HTML
 
-- The `value` attribute of {{ HTMLElement("li") }} now can be negative as specified in HTML5. Previously negative values were converted to 0.
+- The `value` attribute of {{ HTMLElement("li") }} now can be negative. Previously negative values were converted to 0.
 - You can now [specify the start and stop time of media](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#specifying_playback_range) in the URI of the media when using {{ HTMLElement("audio") }} and {{ HTMLElement("video") }} elements.
 - {{ HTMLElement("input") }} and {{ HTMLElement("textarea") }} elements [now respect the value of the `lang` attribute](/en-US/docs/Web/HTML/Global_attributes/spellcheck#controlling_the_spellchecker_language) when invoking the spell checker.
 - Firefox on Android now lets users snap photos with their phone's camera without leaving the browser when the {{ HTMLElement("input") }} element is used with `type="file"` and `accept="image/*"`.

@@ -1,12 +1,14 @@
 ---
 title: <feOffset>
 slug: Web/SVG/Element/feOffset
+page-type: svg-element
 tags:
   - Element
   - SVG
   - SVG Filter
 browser-compat: svg.elements.feOffset
 ---
+
 {{SVGRef}}
 
 The **`<feOffset>`** SVG filter primitive allows to offset the input image. The input image as a whole is offset by the values specified in the {{SVGAttr("dx")}} and {{SVGAttr("dy")}} attributes.
@@ -47,8 +49,15 @@ This element implements the {{domxref("SVGFEOffsetElement")}} interface.
     </filter>
   </defs>
 
-  <rect x="0" y="0" width="100" height="100" stroke="black" fill="green"/>
-  <rect x="0" y="0" width="100" height="100" stroke="black" fill="green" filter="url(#offset)"/>
+  <rect x="0" y="0" width="100" height="100" stroke="black" fill="green" />
+  <rect
+    x="0"
+    y="0"
+    width="100"
+    height="100"
+    stroke="black"
+    fill="green"
+    filter="url(#offset)" />
 </svg>
 ```
 

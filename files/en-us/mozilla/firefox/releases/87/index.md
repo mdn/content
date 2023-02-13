@@ -2,11 +2,12 @@
 title: Firefox 87 for developers
 slug: Mozilla/Firefox/Releases/87
 tags:
-  - '87'
+  - "87"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 87 that will affect developers. Firefox 87 was released on March 23, 2021.

@@ -1,5 +1,5 @@
 ---
-title: 'Establishing a connection: The WebRTC perfect negotiation pattern'
+title: "Establishing a connection: The WebRTC perfect negotiation pattern"
 slug: Web/API/WebRTC_API/Perfect_negotiation
 page-type: guide
 tags:
@@ -16,7 +16,8 @@ tags:
   - WebRTC
   - WebRTC API
 ---
-{{APIRef("WebRTC")}}
+
+{{DefaultAPISidebar("WebRTC")}}
 
 This article introduces WebRTC **perfect negotiation**, describing how it works and why it's the recommended way to negotiate a WebRTC connection between peers, and provides sample code to demonstrate the technique.
 
@@ -53,7 +54,7 @@ First, the signaling channel needs to be opened and the {{domxref("RTCPeerConnec
 
 ```js
 const config = {
-  iceServers: [{ urls: "stun:stun.mystunserver.tld" }]
+  iceServers: [{ urls: "stun:stun.mystunserver.tld" }],
 };
 
 const signaler = new SignalingChannel();
@@ -69,7 +70,6 @@ const constraints = { audio: true, video: true };
 const selfVideo = document.querySelector("video.selfview");
 const remoteVideo = document.querySelector("video.remoteview");
 
-
 async function start() {
   try {
     const stream = await navigator.mediaDevices.getUserMedia(constraints);
@@ -78,7 +78,7 @@ async function start() {
       pc.addTrack(track, stream);
     }
     selfVideo.srcObject = stream;
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   }
 }
@@ -93,7 +93,7 @@ This isn't appreciably different from older WebRTC connection establishment code
 We next need to set up a handler for {{domxref("RTCPeerConnection.track_event", "track")}} events to handle inbound video and audio tracks that have been negotiated to be received by this peer connection. To do this, we implement the {{domxref("RTCPeerConnection")}}'s {{domxref("RTCPeerConnection.track_event", "ontrack")}} event handler.
 
 ```js
-pc.ontrack = ({track, streams}) => {
+pc.ontrack = ({ track, streams }) => {
   track.onunmute = () => {
     if (remoteVideo.srcObject) {
       return;
@@ -125,7 +125,7 @@ pc.onnegotiationneeded = async () => {
     makingOffer = true;
     await pc.setLocalDescription();
     signaler.send({ description: pc.localDescription });
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   } finally {
     makingOffer = false;
@@ -144,7 +144,7 @@ Once the offer has been created, set and sent (or an error occurs), `makingOffer
 Next, we need to handle the `RTCPeerConnection` event {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}}, which is how the local ICE layer passes candidates to us for delivery to the remote peer over the signaling channel.
 
 ```js
-pc.onicecandidate = ({candidate}) => signaler.send({candidate});
+pc.onicecandidate = ({ candidate }) => signaler.send({ candidate });
 ```
 
 This takes the `candidate` member of this ICE event and passes it through to the signaling channel's `send()` method to be sent over the signaling server to the remote peer.
@@ -159,8 +159,9 @@ let ignoreOffer = false;
 signaler.onmessage = async ({ data: { description, candidate } }) => {
   try {
     if (description) {
-      const offerCollision = (description.type === "offer") &&
-                             (makingOffer || pc.signalingState !== "stable");
+      const offerCollision =
+        description.type === "offer" &&
+        (makingOffer || pc.signalingState !== "stable");
 
       ignoreOffer = !polite && offerCollision;
       if (ignoreOffer) {
@@ -170,21 +171,21 @@ signaler.onmessage = async ({ data: { description, candidate } }) => {
       await pc.setRemoteDescription(description);
       if (description.type === "offer") {
         await pc.setLocalDescription();
-        signaler.send({ description: pc.localDescription })
+        signaler.send({ description: pc.localDescription });
       }
     } else if (candidate) {
       try {
         await pc.addIceCandidate(candidate);
-      } catch(err) {
+      } catch (err) {
         if (!ignoreOffer) {
           throw err;
         }
       }
     }
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   }
-}
+};
 ```
 
 Upon receiving an incoming message from the `SignalingChannel` through its `onmessage` event handler, the received JSON object is destructured to obtain the `description` or `candidate` found within. If the incoming message has a `description`, it's either an offer or an answer sent by the other peer.
@@ -223,8 +224,8 @@ Consider this {{domxref("RTCPeerConnection.negotiationneeded_event", "onnegotiat
 pc.onnegotiationneeded = async () => {
   try {
     await pc.setLocalDescription(await pc.createOffer());
-    signaler.send({description: pc.localDescription});
-  } catch(err) {
+    signaler.send({ description: pc.localDescription });
+  } catch (err) {
     console.error(err);
   }
 };
@@ -244,7 +245,7 @@ pc.onnegotiationneeded = async () => {
     makingOffer = true;
     await pc.setLocalDescription();
     signaler.send({ description: pc.localDescription });
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   } finally {
     makingOffer = false;
@@ -269,7 +270,7 @@ Doing so returns the local peer to the `stable` {{domxref("RTCPeerConnection.sig
 Using the previous API to implement incoming negotiation messages during perfect negotiation would look something like this:
 
 ```js example-bad
-signaler.onmessage = async ({data: { description, candidate }}) => {
+signaler.onmessage = async ({ data: { description, candidate } }) => {
   try {
     if (description) {
       if (description.type === "offer" && pc.signalingState !== "stable") {
@@ -278,8 +279,8 @@ signaler.onmessage = async ({data: { description, candidate }}) => {
         }
 
         await Promise.all([
-          pc.setLocalDescription({type: "rollback"}),
-          pc.setRemoteDescription(description)
+          pc.setLocalDescription({ type: "rollback" }),
+          pc.setRemoteDescription(description),
         ]);
       } else {
         await pc.setRemoteDescription(description);
@@ -292,13 +293,13 @@ signaler.onmessage = async ({data: { description, candidate }}) => {
     } else if (candidate) {
       try {
         await pc.addIceCandidate(candidate);
-      } catch(err) {
+      } catch (err) {
         if (!ignoreOffer) {
           throw err;
         }
       }
     }
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   }
 };
@@ -306,7 +307,7 @@ signaler.onmessage = async ({data: { description, candidate }}) => {
 
 Since rollback works by postponing changes until the next negotiation (which will begin immediately after the current one is finished), the polite peer needs to know when it needs to throw away a received offer if it's currently waiting for a reply to an offer it's already sent.
 
-The code checks to see if the message is an offer, and if so, if the local signaling state isn't `stable`. If it's not stable, _and_ the local peer is the polite one, we need to trigger rollback so we can replace the outgoing offer with the new incoming one. and these must both be completed before we can proceed with handling the received offer.
+The code checks to see if the message is an offer, and if so, if the local signaling state isn't `stable`. If it's not stable, _and_ the local peer is the polite one, we need to trigger rollback so we can replace the outgoing offer with the new incoming one. And these must both be completed before we can proceed with handling the received offer.
 
 Since there isn't a single "roll back and use this offer instead", performing this change on the polite peer requires two steps, executed in the context of [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all), which is used to ensure that both statements execute completely before continuing to handle the received offer. The first statement triggers rollback and the second sets the remote description to the received one, thus completing the process of replacing the previously _sent_ offer with the newly _received_ offer. The impolite peer has now become the callee instead of the caller.
 
@@ -326,8 +327,9 @@ let ignoreOffer = false;
 signaler.onmessage = async ({ data: { description, candidate } }) => {
   try {
     if (description) {
-      const offerCollision = (description.type === "offer") &&
-                             (makingOffer || pc.signalingState !== "stable");
+      const offerCollision =
+        description.type === "offer" &&
+        (makingOffer || pc.signalingState !== "stable");
 
       ignoreOffer = !polite && offerCollision;
       if (ignoreOffer) {
@@ -342,16 +344,16 @@ signaler.onmessage = async ({ data: { description, candidate } }) => {
     } else if (candidate) {
       try {
         await pc.addIceCandidate(candidate);
-      } catch(err) {
+      } catch (err) {
         if (!ignoreOffer) {
           throw err;
         }
       }
     }
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   }
-}
+};
 ```
 
 While the difference in code size is minor, and the complexity isn't reduced much either, the code is much, much more reliable. Let's take a dive into the code to see how it works now.
@@ -402,7 +404,7 @@ pc.onnegotiationneeded = async () => {
     makingOffer = true;
     await pc.setLocalDescription();
     signaler.send({ description: pc.localDescription });
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   } finally {
     makingOffer = false;

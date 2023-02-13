@@ -11,6 +11,7 @@ tags:
   - browserSettings
 browser-compat: webextensions.api.browserSettings
 ---
+
 {{AddonSidebar}}
 
 Enables an extension to modify certain global browser settings. Each property of this API is a {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object, providing the ability to modify a particular setting.

@@ -1,6 +1,7 @@
 ---
 title: border-style
 slug: Web/CSS/border-style
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Borders
@@ -9,6 +10,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.border-style
 ---
+
 {{CSSRef}}
 
 The **`border-style`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the line style for all four sides of an element's border.

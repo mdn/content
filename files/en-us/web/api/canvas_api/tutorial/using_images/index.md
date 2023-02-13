@@ -9,7 +9,8 @@ tags:
   - HTML
   - Tutorial
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
 
 Until now we have created our own [shapes](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) and [applied styles](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) to them. One of the more exciting features of {{HTMLElement("canvas")}} is the ability to use images. These can be used to do dynamic photo compositing or as backdrops of graphs, for sprites in games, and so forth. External images can be used in any format supported by the browser, such as PNG, GIF, or JPEG. You can even use the image produced by other canvas elements on the same page as the source!
 
@@ -35,7 +36,7 @@ The canvas API is able to use any of the following data types as an image source
 - {{domxref("ImageBitmap")}}
   - : A bitmap image, eventually cropped. Such type are used to extract part of an image, a _sprite_, from a larger image
 - {{domxref("OffscreenCanvas")}}
-  - : A special kind of `<canvas>` that is not displayed and is prepared without being display. Using such an image source allows to switch to it without the composition of the content to be visible to the user.
+  - : A special kind of `<canvas>` that is not displayed and is prepared without being displayed. Using such an image source allows to switch to it without the composition of the content to be visible to the user.
 - {{domxref("VideoFrame")}}
   - : An image representing one single frame of a video.
 
@@ -64,8 +65,8 @@ One of the more practical uses of this would be to use a second canvas element a
 Another option is to create new {{domxref("HTMLImageElement")}} objects in our script. To do this, you can use the convenient `Image()` constructor:
 
 ```js
-const img = new Image();   // Create new img element
-img.src = 'myImage.png'; // Set source path
+const img = new Image(); // Create new img element
+img.src = "myImage.png"; // Set source path
 ```
 
 When this script gets executed, the image starts loading.
@@ -73,11 +74,15 @@ When this script gets executed, the image starts loading.
 If you try to call `drawImage()` before the image has finished loading, it won't do anything (or, in older browsers, may even throw an exception). So you need to be sure to use the load event so you don't try this before the image has loaded:
 
 ```js
-const img = new Image();   // Create new img element
-img.addEventListener('load', function() {
-  // execute drawImage statements here
-}, false);
-img.src = 'myImage.png'; // Set source path
+const img = new Image(); // Create new img element
+img.addEventListener(
+  "load",
+  () => {
+    // execute drawImage statements here
+  },
+  false
+);
+img.src = "myImage.png"; // Set source path
 ```
 
 If you're only using one external image this can be a good approach, but once you need to track more than one we need to resort to something more clever. It's beyond the scope of this tutorial to look at image pre-loading tactics, but you should keep that in mind.
@@ -87,8 +92,9 @@ If you're only using one external image this can be a good approach, but once yo
 Another possible way to include images is via the [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
 
 ```js
-const img = new Image();   // Create new img element
-img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==';
+const img = new Image(); // Create new img element
+img.src =
+  "data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==";
 ```
 
 One advantage of data URLs is that the resulting image is available immediately without another round trip to the server. Another potential advantage is that it is also possible to encapsulate in one file all of your [CSS](/en-US/docs/Web/CSS), [JavaScript](/en-US/docs/Web/JavaScript), [HTML](/en-US/docs/Web/HTML), and images, making it more portable to other locations.
@@ -101,11 +107,11 @@ You can also use frames from a video being presented by a {{HTMLElement("video")
 
 ```js
 function getMyVideo() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
-    return document.getElementById('myvideo');
+    return document.getElementById("myvideo");
   }
 }
 ```
@@ -126,7 +132,7 @@ Once we have a reference to our source image object we can use the `drawImage()`
 In the following example, we will use an external image as the backdrop for a small line graph. Using backdrops can make your script considerably smaller because we can avoid the need for code to generate the background. In this example, we're only using one image, so I use the image object's `load` event handler to execute the drawing statements. The `drawImage()` method places the backdrop at the coordinate (0, 0), which is the top-left corner of the canvas.
 
 ```html hidden
-<html>
+<html lang="en">
   <body onload="draw();">
     <canvas id="canvas" width="180" height="150"></canvas>
   </body>
@@ -135,9 +141,9 @@ In the following example, we will use an external image as the backdrop for a sm
 
 ```js
 function draw() {
-  const ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById("canvas").getContext("2d");
   const img = new Image();
-  img.onload = function() {
+  img.onload = () => {
     ctx.drawImage(img, 0, 0);
     ctx.beginPath();
     ctx.moveTo(30, 96);
@@ -146,7 +152,7 @@ function draw() {
     ctx.lineTo(170, 15);
     ctx.stroke();
   };
-  img.src = 'backdrop.png';
+  img.src = "backdrop.png";
 }
 ```
 
@@ -168,7 +174,7 @@ In this example, we'll use an image as a wallpaper and repeat it several times o
 > **Note:** Images can become blurry when scaling up or grainy if they're scaled down too much. Scaling is probably best not done if you've got some text in it which needs to remain legible.
 
 ```html hidden
-<html>
+<html lang="en">
   <body onload="draw();">
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
@@ -177,16 +183,16 @@ In this example, we'll use an image as a wallpaper and repeat it several times o
 
 ```js
 function draw() {
-  const ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById("canvas").getContext("2d");
   const img = new Image();
-  img.onload = function() {
+  img.onload = () => {
     for (let i = 0; i < 4; i++) {
       for (let j = 0; j < 3; j++) {
         ctx.drawImage(img, j * 50, i * 38, 50, 38);
       }
     }
   };
-  img.src = 'rhino.jpg';
+  img.src = "rhino.jpg";
 }
 ```
 
@@ -203,7 +209,7 @@ The third and last variant of the `drawImage()` method has eight parameters in a
 
 To really understand what this does, it may help to look at this image:
 
-![](canvas_drawimage.jpg)
+![The rectangular source image top left coordinates are sx and sy with a width and height of sWidth and sHeight respectively. The source image is translated to the destination canvas where the top-left corner coordinates are dx and dy, maintaining its aspect ratio, with a width and height of dWidth and dHeight respectively.](canvas_drawimage.jpg)
 
 The first four parameters define the location and size of the slice on the source image. The last four parameters define the rectangle into which to draw the image on the destination canvas.
 
@@ -214,12 +220,12 @@ Slicing can be a useful tool when you want to make compositions. You could have 
 In this example, we'll use the same rhino as in the previous example, but we'll slice out its head and composite it into a picture frame. The picture frame image is a 24-bit PNG which includes a drop shadow. Because 24-bit PNG images include a full 8-bit alpha channel, unlike GIF and 8-bit PNG images, it can be placed onto any background without worrying about a matte color.
 
 ```html
-<html>
+<html lang="en">
   <body onload="draw();">
     <canvas id="canvas" width="150" height="150"></canvas>
     <div style="display:none;">
-      <img id="source" src="rhino.jpg" width="300" height="227">
-      <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
+      <img id="source" src="rhino.jpg" width="300" height="227" />
+      <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
     </div>
   </body>
 </html>
@@ -227,15 +233,24 @@ In this example, we'll use the same rhino as in the previous example, but we'll 
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
-  const ctx = canvas.getContext('2d');
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
 
   // Draw slice
-  ctx.drawImage(document.getElementById('source'),
-                33, 71, 104, 124, 21, 20, 87, 104);
+  ctx.drawImage(
+    document.getElementById("source"),
+    33,
+    71,
+    104,
+    124,
+    21,
+    20,
+    87,
+    104
+  );
 
   // Draw frame
-  ctx.drawImage(document.getElementById('frame'), 0, 0);
+  ctx.drawImage(document.getElementById("frame"), 0, 0);
 }
 ```
 
@@ -254,23 +269,23 @@ In this case, every image has a fixed width and height, as does the frame that's
 The code below should be self-explanatory. We loop through the {{domxref("document.images")}} container and add new canvas elements accordingly. Probably the only thing to note, for those not so familiar with the DOM, is the use of the {{domxref("Node.insertBefore")}} method. `insertBefore()` is a method of the parent node (a table cell) of the element (the image) before which we want to insert our new node (the canvas element).
 
 ```html
-<html>
+<html lang="en">
   <body onload="draw();">
     <table>
       <tr>
-        <td><img src="gallery_1.jpg"></td>
-        <td><img src="gallery_2.jpg"></td>
-        <td><img src="gallery_3.jpg"></td>
-        <td><img src="gallery_4.jpg"></td>
+        <td><img src="gallery_1.jpg" /></td>
+        <td><img src="gallery_2.jpg" /></td>
+        <td><img src="gallery_3.jpg" /></td>
+        <td><img src="gallery_4.jpg" /></td>
       </tr>
       <tr>
-        <td><img src="gallery_5.jpg"></td>
-        <td><img src="gallery_6.jpg"></td>
-        <td><img src="gallery_7.jpg"></td>
-        <td><img src="gallery_8.jpg"></td>
+        <td><img src="gallery_5.jpg" /></td>
+        <td><img src="gallery_6.jpg" /></td>
+        <td><img src="gallery_7.jpg" /></td>
+        <td><img src="gallery_8.jpg" /></td>
       </tr>
-     </table>
-     <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
+    </table>
+    <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
   </body>
 </html>
 ```
@@ -279,7 +294,7 @@ And here's some CSS to make things look nice:
 
 ```css
 body {
-  background: 0 -100px repeat-x url(bg_gallery.png) #4F191A;
+  background: 0 -100px repeat-x url(bg_gallery.png) #4f191a;
   margin: 10px;
 }
 
@@ -300,28 +315,25 @@ Tying it all together is the JavaScript to draw our framed images:
 
 ```js
 function draw() {
-
   // Loop through all images
-  for (let i = 0; i < document.images.length; i++) {
-
+  for (const image of document.images) {
     // Don't add a canvas for the frame image
-    if (document.images[i].getAttribute('id') !== 'frame') {
-
+    if (image.getAttribute("id") !== "frame") {
       // Create canvas element
-      canvas = document.createElement('canvas');
-      canvas.setAttribute('width', 132);
-      canvas.setAttribute('height', 150);
+      const canvas = document.createElement("canvas");
+      canvas.setAttribute("width", 132);
+      canvas.setAttribute("height", 150);
 
       // Insert before the image
-      document.images[i].parentNode.insertBefore(canvas,document.images[i]);
+      image.parentNode.insertBefore(canvas, image);
 
-      ctx = canvas.getContext('2d');
+      ctx = canvas.getContext("2d");
 
       // Draw image to canvas
-      ctx.drawImage(document.images[i], 15, 20);
+      ctx.drawImage(image, 15, 20);
 
       // Add frame
-      ctx.drawImage(document.getElementById('frame'), 0, 0);
+      ctx.drawImage(document.getElementById("frame"), 0, 0);
     }
   }
 }

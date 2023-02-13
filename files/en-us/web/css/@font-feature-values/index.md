@@ -1,6 +1,7 @@
 ---
-title: '@font-feature-values'
+title: "@font-feature-values"
 slug: Web/CSS/@font-feature-values
+page-type: css-at-rule
 tags:
   - At-rule
   - CSS
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: css.at-rules.font-feature-values
 ---
+
 {{CSSRef}}
 
 The **`@font-feature-values`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) lets you use a common name in the {{cssxref("font-variant-alternates")}} property for features activated differently in OpenType. This can help simplify your CSS when using multiple fonts.
@@ -33,9 +35,7 @@ The `@font-feature-values` at-rule may be used either at the top level of your C
 
 ## Formal syntax
 
-```
-@font-feature-values <family-name># { <declaration-list> }
-```
+{{csssyntax}}
 
 ## Examples
 

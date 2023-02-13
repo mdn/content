@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Blob.slice
 ---
+
 {{APIRef("File API")}}
 
 The {{domxref("Blob")}} interface's **`slice()`** method
@@ -18,7 +19,7 @@ the blob on which it's called.
 
 ## Syntax
 
-```js
+```js-nolint
 slice()
 slice(start)
 slice(start, end)

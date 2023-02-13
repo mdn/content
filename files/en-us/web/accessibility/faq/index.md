@@ -5,6 +5,11 @@ tags:
   - Accessibility
   - FAQ
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
+
 ## Where can I find more about accessibility?
 
 [Mozilla Accessibility Project](/en-US/docs/Web/Accessibility)

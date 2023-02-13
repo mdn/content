@@ -4,17 +4,17 @@ slug: Web/API/HTMLLinkElement/referrerPolicy
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - HTMLLinkElement
   - Property
   - Reference
 browser-compat: api.HTMLLinkElement.referrerPolicy
 ---
-{{APIRef}}{{SeeCompatTable}}
+
+{{APIRef}}
 
 The
 **`HTMLLinkElement.referrerPolicy`**
-property reflect the HTML {{htmlattrxref("referrerpolicy","link")}} attribute of the
+property reflects the HTML {{htmlattrxref("referrerpolicy","link")}} attribute of the
 {{HTMLElement("link")}} element defining which referrer is sent when fetching the
 resource.
 

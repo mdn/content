@@ -11,6 +11,7 @@ tags:
   - curve
 browser-compat: api.WaveShaperNode.curve
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `curve` property of the {{ domxref("WaveShaperNode") }} interface is a {{jsxref("Float32Array")}} of numbers describing the distortion to apply.

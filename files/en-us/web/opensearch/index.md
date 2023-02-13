@@ -10,13 +10,14 @@ tags:
   - Web
   - Web Standards
 ---
+
 {{AddonSidebar}}
 
-The **[OpenSearch description format](https://github.com/dewitt/opensearch)** lets a website describe a search engine for itself, so that a browser or other client application can use that search engine. OpenSearch is supported by (at least) Firefox, Edge, Internet Explorer, Safari, and Chrome. (See [Reference Material](#reference_material) for links to other browsers' documentation.)
+The **[OpenSearch description format](https://github.com/dewitt/opensearch)** can be used to describe the web interface of a search engine. This allows a website to describe a search engine for itself, so that a browser or other client application can use that search engine. OpenSearch is supported by (at least) Firefox, Edge, Internet Explorer, Safari, and Chrome. (See [Reference Material](#reference_material) for links to other browsers' documentation.)
 
 Firefox also supports additional features not in the OpenSearch standard, such as search suggestions and the `<SearchForm>` element. This article focuses on creating OpenSearch-compatible search plugins that support these additional Firefox features.
 
-OpenSearch description files can be advertised as described in [Autodiscovery of search plugins](#autodiscovery_of_search_plugins), and can be installed programmatically.
+OpenSearch description files can be advertised as described in [Autodiscovery of search plugins](#autodiscovery_of_search_plugins).
 
 > **Warning:** OpenSearch plugins can't be uploaded anymore on [addons.mozilla.org](https://addons.mozilla.org) (AMO). Search engine feature must use WebExtension API with [chrome settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides) in `manifest.json` file.
 
@@ -55,7 +56,7 @@ The XML file that describes a search engine follows the basic template below. Se
     <Image height="16" width="16">data:image/x-icon;base64,AAABAAEAEBAAA … DAAA=</Image>
     ```
 
-    Firefox caches the icon as a [base64](https://en.wikipedia.org/wiki/Base64) `data:` URL (search plug-ins are stored in the [profile](/en-US/docs/Mozilla/Profile_Manager)'s `searchplugins/` folder). `http:` and `https:` URLs are converted to `data:` URLs when this is done.
+    Firefox caches the icon as a [base64](https://en.wikipedia.org/wiki/Base64) `data:` URL (search plug-ins are stored in the [profile](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data)'s `searchplugins/` folder). `http:` and `https:` URLs are converted to `data:` URLs when this is done.
 
     > **Note:** For icons loaded remotely (that is, from `https://` URLs as opposed to `data:` URLs), Firefox will reject icons larger than **10 kilobytes**.
 
@@ -73,7 +74,7 @@ The XML file that describes a search engine follows the basic template below. Se
 
     For these URL types, you can use `{searchTerms}` to substitute the search terms entered by the user in the search bar or location bar. Other supported dynamic search parameters are described in [OpenSearch 1.1 parameters](https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md#opensearch-11-parameters).
 
-    For search suggestions, the `application/x-suggestions+json` URL template is used to fetch a suggestion list in [JSON](/en-US/docs/Glossary/JSON) format. For details on how to implement search suggestion support on a server, see [Supporting search suggestions in search plugins](/en-US/docs/Archive/Add-ons/Supporting_search_suggestions_in_search_plugins).
+    For search suggestions, the `application/x-suggestions+json` URL template is used to fetch a suggestion list in [JSON](/en-US/docs/Glossary/JSON) format.
 
 - moz:SearchForm
 
@@ -88,10 +89,11 @@ Web sites with search plugins can advertise them so Firefox users can easily ins
 To support autodiscovery, add a `<link>` element for each plugin to the `<head>` of your web page:
 
 ```html
-<link rel="search"
-      type="application/opensearchdescription+xml"
-      title="searchTitle"
-      href="pluginURL">
+<link
+  rel="search"
+  type="application/opensearchdescription+xml"
+  title="searchTitle"
+  href="pluginURL" />
 ```
 
 Replace the bolded items as explained below:
@@ -104,11 +106,17 @@ Replace the bolded items as explained below:
 If your site offers multiple search plugins, you can support autodiscovery for them all. For example:
 
 ```html
-<link rel="search" type="application/opensearchdescription+xml"
-      title="MySite: By Author" href="http://example.com/mysiteauthor.xml">
+<link
+  rel="search"
+  type="application/opensearchdescription+xml"
+  title="MySite: By Author"
+  href="http://example.com/mysiteauthor.xml" />
 
-<link rel="search" type="application/opensearchdescription+xml"
-      title="MySite: By Title" href="http://example.com/mysitetitle.xml">
+<link
+  rel="search"
+  type="application/opensearchdescription+xml"
+  title="MySite: By Title"
+  href="http://example.com/mysitetitle.xml" />
 ```
 
 This way, your site can offer plugins to search by author, or by title.
@@ -139,13 +147,13 @@ If there is a mistake in your Search Plugin XML, you could run into errors when 
 - You **must** include a `text/html` URL — search plugins including only Atom or [RSS](/en-US/docs/Glossary/RSS) URL types (which is valid, but Firefox doesn't support) will also generate the "could not download the search plugin" error.
 - Remotely fetched favicons must not be larger than 10KB (see {{ Bug(361923) }}).
 
-In addition, the search plugin service provides a logging mechanism that may be useful to plugin developers. Use `about:config` to set the pref '`browser.search.log`' to `true`. Then, logging information will appear in Firefox's [Error Console](/en-US/docs/Archive/Mozilla/Error_console) (Tools ➤ Error Console) when search plugins are added.
+In addition, the search plugin service provides a logging mechanism that may be useful to plugin developers. Use `about:config` to set the pref '`browser.search.log`' to `true`. Then, logging information will appear in Firefox's [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html)(Tools ➤ Browser Tools ➤ Browser Console) when search plugins are added.
 
 ## Reference Material
 
 - [OpenSearch Documentation](https://github.com/dewitt/opensearch)
 - [Safari 8.0 Release Notes: Quick Website Search](https://developer.apple.com/library/archive/releasenotes/General/WhatsNewInSafari/Articles/Safari_8_0.html)
-- [Microsoft Edge Dev Guide: Search provider discovery](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/)
+- [Microsoft Edge Dev Guide: Search provider discovery](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/)
 - [The Chromium Projects: Tab to Search](https://www.chromium.org/tab-to-search/)
 - imdb.com has a [working `osd.xml`](https://m.media-amazon.com/images/G/01/imdb/images/imdbsearch-3349468880._CB470047351_.xml)
 - [Ready2Search](https://ready.to/search/en/) - create OpenSearch plugins. [Customized Search through Ready2Search](https://ready.to/search/make/en_make_plugin.htm)

@@ -6,8 +6,9 @@ tags:
   - HTTP Status Code
   - Reference
   - Status code
-spec-urls: https://httpwg.org/specs/rfc7231.html#section-6.4.1
+spec-urls: https://httpwg.org/specs/rfc9110.html#status.300
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`300 Multiple Choices`** redirect status response
@@ -20,7 +21,7 @@ header.
 
 ## Status
 
-```
+```http
 300 Multiple Choices
 ```
 

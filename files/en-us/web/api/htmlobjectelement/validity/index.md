@@ -12,6 +12,7 @@ tags:
   - validity
 browser-compat: api.HTMLObjectElement.validity
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`validity`** read-only property of the

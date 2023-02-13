@@ -5,13 +5,14 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `element-available` function determines if an element is available and returns true or false.
 
 ### Syntax
 
-```
+```plain
 element-available( QName )
 ```
 

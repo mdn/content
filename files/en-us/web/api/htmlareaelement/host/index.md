@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.host
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.host`** property is a

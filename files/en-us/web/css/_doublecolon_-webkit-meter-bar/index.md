@@ -1,8 +1,9 @@
 ---
-title: '::-webkit-meter-bar'
+title: "::-webkit-meter-bar"
 slug: Web/CSS/::-webkit-meter-bar
+page-type: css-pseudo-element
 tags:
-  - '-webkit-meter-bar'
+  - "-webkit-meter-bar"
   - CSS
   - Non-standard
   - Pseudo-element
@@ -11,14 +12,17 @@ tags:
   - WebKit
 browser-compat: css.selectors.-webkit-meter-bar
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
-The **`::-webkit-meter-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Glossary/Pseudo-class) is a [WebKit extension](/en-US/docs/Web/CSS/WebKit_Extensions) that represents the meter bar in a {{HTMLElement("meter")}} element.
+The **`::-webkit-meter-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Glossary/Pseudo-element) is a [WebKit extension](/en-US/docs/Web/CSS/WebKit_Extensions) that represents the meter bar in a {{HTMLElement("meter")}} element. It is used for selecting and applying styles to the container meter gauge.
 
 ## Syntax
 
 ```css
-::-webkit-meter-bar
+::-webkit-meter-bar {
+  /* ... */
+}
 ```
 
 ## Specifications
@@ -37,10 +41,8 @@ Not part of any standard.
 
 ```css
 meter {
-  /* Reset the default appearance */
+  /* Reset the default appearance for -webkit- only */
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 
 meter::-webkit-meter-bar {

@@ -12,6 +12,7 @@ tags:
   - unobserve()
 browser-compat: api.ResizeObserver.unobserve
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`unobserve()`** method of the
@@ -20,7 +21,7 @@ The **`unobserve()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 unobserve(target)
 ```
 
@@ -40,12 +41,12 @@ None.
 ## Examples
 
 The following snippet is taken from the [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html)
-([see source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)) example:
+([see source](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-text.html)) example:
 
 ```js
 const resizeObserver = new ResizeObserver((entries) => {
-  for (let entry of entries) {
-    if(entry.contentBoxSize) {
+  for (const entry of entries) {
+    if (entry.contentBoxSize) {
       // Checking for chrome as using a non-standard array
       if (entry.contentBoxSize[0]) {
         h1Elem.style.fontSize = `${Math.max(1.5, entry.contentBoxSize[0].inlineSize / 200)}rem`;
@@ -65,7 +66,7 @@ const resizeObserver = new ResizeObserver((entries) => {
 resizeObserver.observe(divElem);
 
 checkbox.addEventListener('change', () => {
-  if(checkbox.checked) {
+  if (checkbox.checked) {
     resizeObserver.observe(divElem);
   } else {
     resizeObserver.unobserve(divElem);

@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.NetworkInformation.type
 ---
+
 {{apiref("Network Information API")}}{{SeeCompatTable}}
 
 The **`NetworkInformation.type`** read-only property returns
@@ -26,7 +27,7 @@ An enumerated value that is one of the following values:
 - `"bluetooth"`
 - `"cellular"`
 - `"ethernet"`
-- `"none`"
+- `"none"`
 - `"wifi"`
 - `"wimax"`
 - `"other"`

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.DOMImplementation.createDocument
 ---
+
 {{ApiRef("DOM")}}
 
 The **`DOMImplementation.createDocument()`** method creates and
@@ -17,7 +18,7 @@ returns an {{domxref("XMLDocument")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 createDocument(namespaceURI, qualifiedNameStr)
 createDocument(namespaceURI, qualifiedNameStr, documentType)
 ```

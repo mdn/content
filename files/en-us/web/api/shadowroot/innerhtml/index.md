@@ -11,6 +11,7 @@ tags:
   - shadow dom
 browser-compat: api.ShadowRoot.innerHTML
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`innerHTML`** property of the {{domxref("ShadowRoot")}}

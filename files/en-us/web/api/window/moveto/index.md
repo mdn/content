@@ -10,6 +10,7 @@ tags:
   - Window
 browser-compat: api.Window.moveTo
 ---
+
 {{APIRef}}
 
 The **`moveTo()`** method of the {{domxref("Window")}}
@@ -21,7 +22,7 @@ interface moves the current window to the specified coordinates.
 
 ## Syntax
 
-```js
+```js-nolint
 moveTo(x, y)
 ```
 

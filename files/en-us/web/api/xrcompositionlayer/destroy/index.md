@@ -10,15 +10,17 @@ tags:
   - VR
   - XR
   - WebXR
+  - Experimental
 browser-compat: api.XRCompositionLayer.destroy
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`destroy()`** method of the {{domxref("XRCompositionLayer")}} interface deletes the references to the underlying graphics library for the layer. It also sets the color textures and depth stencil texture arrays to an empty array.
 
 ## Syntax
 
-```js
+```js-nolint
 destroy()
 ```
 

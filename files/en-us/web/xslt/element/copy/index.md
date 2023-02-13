@@ -7,6 +7,7 @@ tags:
   - XSLT
   - copy
 ---
+
 {{ XsltRef() }}
 
 The `<xsl:copy>` element transfers a shallow copy (the node and any associated namespace node) of the current node to the output document. It does not copy any children or attributes of the current node.

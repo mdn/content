@@ -8,9 +8,10 @@ tags:
   - Numeric
   - Arithmetic
 ---
+
 {{WebAssemblySidebar}}
 
-The **`sub`** instructions, short for *subtraction*, are used for subtracting one number from another number, similar to the **`-`** operator in other languages.
+The **`sub`** instructions, short for _subtraction_, are used for subtracting one number from another number, similar to the **`-`** operator in other languages.
 
 {{EmbedInteractiveExample("pages/wat/sub.html", "tabbed-taller")}}
 

@@ -1,6 +1,7 @@
 ---
 title: caret-color
 slug: Web/CSS/caret-color
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -17,6 +18,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.caret-color
 ---
+
 {{CSSRef}}
 
 The **`caret-color`** CSS property sets the color of the **insertion caret**, the visible marker where the next character typed will be inserted. This is sometimes referred to as the **text input cursor**. The caret appears in elements such as {{HTMLElement("input")}} or those with the {{htmlattrxref("contenteditable")}} attribute. The caret is typically a thin vertical line that flashes to help make it more noticeable. By default, it is black, but its color can be altered with this property.
@@ -36,8 +38,8 @@ caret-color: currentcolor;
 /* <color> values */
 caret-color: red;
 caret-color: #5729e9;
-caret-color: rgb(0, 200, 0);
-caret-color: hsla(228, 4%, 24%, 0.8);
+caret-color: rgb(0 200 0);
+caret-color: hsl(228deg 4% 24% / 0.8);
 
 /* Global values */
 caret-color: inherit;
@@ -73,10 +75,11 @@ caret-color: unset;
 #### HTML
 
 ```html
-<input value="This field uses a default caret." size="64"/>
-<input class="custom" value="I have a custom caret color!" size="64"/>
-<p contenteditable class="custom">This paragraph can be
-   edited, and its caret has a custom color as well!</p>
+<input value="This field uses a default caret." size="64" />
+<input class="custom" value="I have a custom caret color!" size="64" />
+<p contenteditable class="custom">
+  This paragraph can be edited, and its caret has a custom color as well!
+</p>
 ```
 
 #### CSS
@@ -85,7 +88,7 @@ caret-color: unset;
 input {
   caret-color: auto;
   display: block;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 input.custom {

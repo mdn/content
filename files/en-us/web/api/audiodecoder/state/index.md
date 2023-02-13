@@ -8,9 +8,11 @@ tags:
   - Reference
   - state
   - AudioDecoder
+  - Experimental
 browser-compat: api.AudioDecoder.state
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`state`** read-only property of the {{domxref("AudioDecoder")}} interface returns the current state of the underlying codec.
 

@@ -10,6 +10,7 @@ tags:
   - Selection
 browser-compat: api.Selection.collapseToEnd
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.collapseToEnd()`** method collapses the
@@ -18,7 +19,7 @@ is focused and editable, the caret will blink there.
 
 ## Syntax
 
-```js
+```js-nolint
 collapseToEnd()
 ```
 

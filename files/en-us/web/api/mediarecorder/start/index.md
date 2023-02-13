@@ -8,8 +8,6 @@ tags:
   - Media
   - Media Capture
   - MediaRecorder
-  - MediaStream Recording
-  - MediaStream Recording API
   - Method
   - NeedsExample
   - Recording Media
@@ -48,14 +46,14 @@ data gathering stops. A final {{domxref("MediaRecorder.dataavailable_event", "da
 
 > **Note:** If the browser is unable to start recording or continue
 > recording, it will raise a {{domxref("DOMError")}} event, followed by a
-> {{domxref("MediaRecorder.dataavailable")}} event containing the `Blob` it
+> {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event containing the `Blob` it
 > has gathered, followed by the {{domxref("MediaRecorder/stop_event", "stop")}} event.
 
 ## Syntax
 
-```js
-start();
-start(timeslice);
+```js-nolint
+start()
+start(timeslice)
 ```
 
 ### Parameters
@@ -100,10 +98,10 @@ handler to respond to these errors.
 ## Examples
 
 ```js
-record.onclick = function() {
+record.onclick = () => {
   mediaRecorder.start();
   console.log("recorder started");
-}
+};
 ```
 
 ## Specifications
@@ -116,8 +114,8 @@ record.onclick = function() {
 
 ## See also
 
-- [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Using the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [Web Dictaphone](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder +
-  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/master/media/web-dictaphone).)
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone).)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}

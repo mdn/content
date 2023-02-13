@@ -7,15 +7,17 @@ tags:
   - Constructor
   - Reference
   - MediaStreamTrackProcessor
+  - Experimental
 browser-compat: api.MediaStreamTrackProcessor.MediaStreamTrackProcessor
 ---
-{{DefaultAPISidebar("Insertable Streams for MediaStreamTrack API")}}
+
+{{APIRef("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}
 
 The **`MediaStreamTrackProcessor()`** constructor creates a new {{domxref("MediaStreamTrackProcessor")}} object which consumes a {{domxref("MediaStreamTrack")}} object's source and generates a stream of media frames.
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaStreamTrackProcessor(options)
 ```
 

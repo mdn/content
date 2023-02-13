@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.getFragDataLocation
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.getFragDataLocation()`** method
@@ -18,7 +19,7 @@ color numbers to user-defined varying out variables.
 
 ## Syntax
 
-```js
+```js-nolint
 getFragDataLocation(program, name)
 ```
 

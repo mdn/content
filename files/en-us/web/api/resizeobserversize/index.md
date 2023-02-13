@@ -9,17 +9,18 @@ tags:
   - ResizeObserverSize
 browser-compat: api.ResizeObserverSize
 ---
+
 {{DefaultAPISidebar("Resize Observer API")}}
 
 The **`ResizeObserverSize`** interface of the {{domxref('Resize Observer API')}} is used by the {{domxref("ResizeObserverEntry")}} interface to access the box sizing properties of the element being observed.
 
 > **Note:** In [multi-column layout](/en-US/docs/Web/CSS/CSS_Columns), which is a fragmented context, the sizing returned by `ResizeObserverSize` will be the size of the first column.
 
-## Properties
+## Instance properties
 
-- {{domxref("ResizeObserverSize.blockSize")}} {{readonlyinline}}
+- {{domxref("ResizeObserverSize.blockSize")}} {{ReadOnlyInline}}
   - : The length of the observed element's border box in the block dimension. For boxes with a horizontal {{cssxref("writing-mode")}}, this is the vertical dimension, or height; if the writing-mode is vertical, this is the horizontal dimension, or width.
-- {{domxref("ResizeObserverSize.inlineSize")}} {{readonlyinline}}
+- {{domxref("ResizeObserverSize.inlineSize")}} {{ReadOnlyInline}}
   - : The length of the observed element's border box in the inline dimension. For boxes with a horizontal {{cssxref("writing-mode")}}, this is the horizontal dimension, or width; if the writing-mode is vertical, this is the vertical dimension, or height.
 
 > **Note:** For more explanation of writing modes and block and inline dimensions, read [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).

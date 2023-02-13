@@ -1,5 +1,5 @@
 ---
-title: 'aria-rowcount'
+title: "aria-rowcount"
 slug: Web/Accessibility/ARIA/Attributes/aria-rowcount
 tags:
   - Accessibility

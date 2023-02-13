@@ -8,6 +8,7 @@ tags:
   - redirects
 browser-compat: http.status.303
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`303 See Other`**
@@ -17,7 +18,7 @@ redirected page is always {{HTTPMethod("GET")}}.
 
 ## Status
 
-```
+```http
 303 See Other
 ```
 

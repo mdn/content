@@ -1,15 +1,23 @@
 ---
 title: Error.prototype.name
 slug: Web/JavaScript/Reference/Global_Objects/Error/name
+page-type: javascript-instance-data-property
 tags:
   - JavaScript
   - Property
   - Prototype
 browser-compat: javascript.builtins.Error.name
 ---
+
 {{JSRef}}
 
-The **`name`** property represents a name for the type of error. The initial value is "Error".
+The **`name`** data property of `Error.prototype` is shared by all {{jsxref("Error")}} instances. It represents the name for the type of error. For `Error.prototype.name`, the initial value is `"Error"`. Subclasses like {{jsxref("TypeError")}} and {{jsxref("SyntaxError")}} provide their own `name` properties.
+
+## Value
+
+A string. For `Error.prototype.name`, the initial value is `"Error"`.
+
+{{js_property_attributes(1, 0, 1)}}
 
 ## Description
 
@@ -20,9 +28,9 @@ By default, {{jsxref("Error")}} instances are given the name "Error". The `name`
 ### Throwing a custom error
 
 ```js
-const e = new Error('Malformed input'); // e.name is 'Error'
+const e = new Error("Malformed input"); // e.name is 'Error'
 
-e.name = 'ParseError';
+e.name = "ParseError";
 throw e;
 // e.toString() would return 'ParseError: Malformed input'
 ```

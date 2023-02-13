@@ -16,6 +16,7 @@ tags:
   - screen
 browser-compat: api.Document.exitFullscreen
 ---
+
 {{ApiRef("Fullscreen API")}}
 
 The {{domxref("Document")}} method
@@ -26,7 +27,7 @@ reverses the effects of a previous call to {{domxref("Element.requestFullscreen(
 
 ## Syntax
 
-```js
+```js-nolint
 exitFullscreen()
 ```
 
@@ -46,7 +47,7 @@ This example causes the current document to toggle in and out of a fullscreen
 presentation whenever the mouse button is clicked within it.
 
 ```js
-document.onclick = function (event) {
+document.onclick = (event) => {
   if (document.fullscreenElement) {
     document.exitFullscreen()
       .then(() => console.log("Document Exited from Full screen mode"))
@@ -58,7 +59,7 @@ document.onclick = function (event) {
 ```
 
 > **Note:** For a more complete example, see the
-> {{SectionOnPage("/en-US/docs/Web/API/Element/requestFullscreen", "Examples")}}.
+> [`Element.requestFullscreen()` examples](/en-US/docs/Web/API/Element/requestFullscreen#examples).
 
 ## Specifications
 

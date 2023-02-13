@@ -13,13 +13,14 @@ tags:
   - forEach
 browser-compat: api.CSSTransformValue.forEach
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSTransformValue.forEach()`** method executes a provided function once for each element of the `CSSTransformValue`.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 forEach((currentValue) => { /* … */ } )
 forEach((currentValue, index) => { /* … */ } )
@@ -32,7 +33,7 @@ forEach(callbackFn, thisArg)
 // Inline callback function
 forEach(function(currentValue) { /* … */ })
 forEach(function(currentValue, index) { /* … */ })
-forEach(function(currentValue, index, array){ /* … */ })
+forEach(function(currentValue, index, array) { /* … */ })
 forEach(function(currentValue, index, array) { /* … */ }, thisArg)
 ```
 
@@ -50,7 +51,7 @@ forEach(function(currentValue, index, array) { /* … */ }, thisArg)
       - : The `CSSTransformValue` that `forEach()` is being called on.
 
 - `thisArg` {{Optional_inline}}
-  - : Value to use as **`this`** (i.e the reference `Object`) when executing `callback`.
+  - : Value to use as **`this`** (i.e., the reference `Object`) when executing `callback`.
 
 ### Return value
 

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.compatMode
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Document.compatMode`** read-only property indicates

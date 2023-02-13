@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedLengthList
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated length list interface
@@ -55,7 +56,7 @@ The `SVGAnimatedLengthList` interface is used for attributes of type {{ domxref(
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 <table class="no-markdown">
   <thead>
@@ -89,7 +90,7 @@ The `SVGAnimatedLengthList` interface is used for attributes of type {{ domxref(
   </tbody>
 </table>
 
-## Methods
+## Instance methods
 
 The `SVGAnimatedLengthList` interface do not provide any specific methods.
 

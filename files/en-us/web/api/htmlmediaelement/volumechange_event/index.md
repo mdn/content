@@ -12,6 +12,7 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.volumechange_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `volumechange` event is fired when the volume has changed.

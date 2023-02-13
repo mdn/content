@@ -1,6 +1,7 @@
 ---
-title: ':nth-last-of-type()'
+title: ":nth-last-of-type()"
 slug: Web/CSS/:nth-last-of-type
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
@@ -10,6 +11,7 @@ tags:
   - Web
 browser-compat: css.selectors.nth-last-of-type
 ---
+
 {{CSSRef}}
 
 The **`:nth-last-of-type()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among siblings of the same type (tag name), counting from the end.
@@ -22,8 +24,10 @@ The `nth-last-of-type` pseudo-class is specified with a single argument, which r
 
 See {{Cssxref(":nth-last-child")}} for a more detailed explanation of its syntax.
 
-```
-:nth-last-of-type( <an-plus-b> | even | odd )
+```css-nolint
+:nth-last-of-type(<an-plus-b> | even | odd) {
+  /* ... */
+}
 ```
 
 ## Examples

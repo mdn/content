@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: meter role'
+title: "ARIA: meter role"
 slug: Web/Accessibility/ARIA/Roles/meter_role
 tags:
   - ARIA
@@ -8,6 +8,7 @@ tags:
   - Web Development
 spec-urls: https://www.w3.org/TR/wai-aria-1.2/#meter
 ---
+
 The `meter` role is used to identify an element being used as a meter.
 
 > **Note:** Where possible, it is recommended that you use a native {{HTMLElement("meter")}} element rather than the `meter` role, as native elements are more widely supported by user agents and assistive technology.
@@ -61,18 +62,14 @@ It is recommended to use a native {{HTMLElement("meter")}} element rather than t
 An example of a meter using `role="meter"`:
 
 ```html
-<div role="meter"
+<div
+  role="meter"
   aria-valuenow="90"
   aria-valuemin="0"
   aria-valuemax="100"
   aria-labelledby="cpu_usage_label">
-  <svg xmlns="http://www.w3.org/2000/svg"
-    aria-hidden="true" style="width: 90%">
-    <rect x="0"
-       y="0"
-       width="100%"
-       height="100%"
-       fill="currentcolor"></rect>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width: 90%">
+    <rect x="0" y="0" width="100%" height="100%" fill="currentcolor"></rect>
   </svg>
 </div>
 ```

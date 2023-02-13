@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Document.contentType
 ---
+
 {{APIRef}}
 
 The **`Document.contentType`** read-only property returns the

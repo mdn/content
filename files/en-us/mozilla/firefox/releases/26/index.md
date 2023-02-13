@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/26
 tags:
   - Firefox
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 26 was released on December 10, 2013. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -27,7 +28,7 @@ Firefox 26 was released on December 10, 2013. This article lists key changes tha
 
 ### JavaScript
 
-[EcmaScript 2015](/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) implementation continues!
+[ECMAScript 2015](/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) implementation continues!
 
 - The ECMAScript 2015 compliant syntax for [Generators (yield)](https://web.archive.org/web/20170126155949/http://wiki.ecmascript.org/doku.php?id=harmony:generators) has been implemented ({{bug("666399")}}).
 - Generator/Iterator results are now boxed like `{ value: foo, done: bool }` ({{bug(907744)}}).
@@ -56,7 +57,7 @@ Firefox 26 was released on December 10, 2013. This article lists key changes tha
 
 ### MathML
 
-- Inconsistent renderings of {{MathMLElement("mmultiscripts")}},  {{MathMLElement("msub")}}, {{MathMLElement("msup")}} and {{MathMLElement("msubsup")}} have been unified and the error handling of these elements has been improved ({{bug("827713")}}).
+- Inconsistent renderings of {{MathMLElement("mmultiscripts")}}, {{MathMLElement("msub")}}, {{MathMLElement("msup")}} and {{MathMLElement("msubsup")}} have been unified and the error handling of these elements has been improved ({{bug("827713")}}).
 
 ### SVG
 

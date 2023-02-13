@@ -15,6 +15,7 @@ tags:
   - submitter
 browser-compat: api.SubmitEvent.submitter
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`submitter`** property found on

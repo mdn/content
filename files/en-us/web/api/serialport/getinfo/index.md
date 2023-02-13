@@ -8,15 +8,17 @@ tags:
   - Reference
   - getInfo()
   - SerialPort
+  - Experimental
 browser-compat: api.SerialPort.getInfo
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
+
+{{SecureContext_Header}}{{APIRef("Serial API")}}{{SeeCompatTable}}
 
 The **`getInfo()`** method of the {{domxref("SerialPort")}} interface returns an object whose properties are the vendor ID and product ID of the device.
 
 ## Syntax
 
-```js
+```js-nolint
 getInfo()
 ```
 

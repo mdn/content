@@ -11,9 +11,11 @@ tags:
   - Property
   - Reference
   - vibrate
+  - Experimental
 browser-compat: api.Notification.vibrate
 ---
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The `vibrate` read-only property of the {{domxref("Notification")}}
 interface specifies a [vibration pattern](/en-US/docs/Web/API/Vibration_API#vibration_patterns)

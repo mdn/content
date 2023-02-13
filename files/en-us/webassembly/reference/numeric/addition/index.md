@@ -8,6 +8,7 @@ tags:
   - Numeric
   - Arithmetic
 ---
+
 {{WebAssemblySidebar}}
 
 The **`add`** instructions, are used for adding up two numbers, similar to the **`+`** operator in other languages.

@@ -10,13 +10,14 @@ tags:
   - SVG DOM
 browser-compat: api.SVGTextPositioningElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGTextPositioningElement`** interface is implemented by elements that support attributes that position individual text glyphs. It is inherited by {{domxref("SVGTextElement")}}, {{domxref("SVGTSpanElement")}}, {{domxref("SVGTRefElement")}} and {{domxref("SVGAltGlyphElement")}}.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGTextContentElement")}}._
 
@@ -31,7 +32,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGTextCont
 - {{domxref("SVGTextPositioningElement.rotate")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedNumberList")}} reflecting the {{SVGAttr("rotate")}} attribute of the given element.
 
-## Methods
+## Instance methods
 
 _This interface doesn't provide any specific methods, but inherits methods from its parent, {{domxref("SVGTextContentElement")}}._
 

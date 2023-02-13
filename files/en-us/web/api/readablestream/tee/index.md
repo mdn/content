@@ -11,6 +11,7 @@ tags:
   - tee
 browser-compat: api.ReadableStream.tee
 ---
+
 {{APIRef("Streams")}}
 
 The **`tee()`** method of the
@@ -46,7 +47,7 @@ will generally lock it for the duration, preventing other readers from locking i
 
 ## Syntax
 
-```js
+```js-nolint
 tee()
 ```
 

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.closePath
 ---
+
 {{APIRef}}
 
 The
@@ -24,7 +25,7 @@ the {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} or
 
 ## Syntax
 
-```js
+```js-nolint
 closePath()
 ```
 
@@ -56,14 +57,14 @@ points.
 The triangle's corners are at (20, 140), (120, 10), and (220, 140).
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
-ctx.moveTo(20, 140);   // Move pen to bottom-left corner
-ctx.lineTo(120, 10);   // Line to top corner
-ctx.lineTo(220, 140);  // Line to bottom-right corner
-ctx.closePath();       // Line to bottom-left corner
+ctx.moveTo(20, 140); // Move pen to bottom-left corner
+ctx.lineTo(120, 10); // Line to top corner
+ctx.lineTo(220, 140); // Line to bottom-right corner
+ctx.closePath(); // Line to bottom-left corner
 ctx.stroke();
 ```
 
@@ -89,8 +90,8 @@ This example draws a smiley face consisting of three disconnected sub-paths.
 The first two arcs create the face's eyes. The last arc creates the mouth.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.arc(240, 20, 40, 0, Math.PI);

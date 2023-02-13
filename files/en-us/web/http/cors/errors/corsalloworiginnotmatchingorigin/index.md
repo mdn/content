@@ -1,5 +1,5 @@
 ---
-title: 'Reason: CORS header ''Access-Control-Allow-Origin'' does not match ''xyz'''
+title: "Reason: CORS header 'Access-Control-Allow-Origin' does not match 'xyz'"
 slug: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
 tags:
   - CORS
@@ -14,11 +14,12 @@ tags:
   - console
   - troubleshooting
 ---
+
 {{HTTPSidebar}}
 
 ## Reason
 
-```
+```plain
 Reason: CORS header 'Access-Control-Allow-Origin' does not match 'xyz'
 ```
 
@@ -36,6 +37,8 @@ For example, in Apache, add a line such as the following to the server's configu
 configuration is typically found in a `.conf` file (`httpd.conf`
 and `apache.conf` are common names for these), or in an
 `.htaccess` file.
+
+> **Warning:** You must include the HTTPS or HTTP protocol as part of the origin.
 
 ```
 Header set Access-Control-Allow-Origin 'origin'

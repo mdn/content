@@ -1,6 +1,7 @@
 ---
 title: grid-row
 slug: Web/CSS/grid-row
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Grid
@@ -9,13 +10,12 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.grid-row
 ---
+
 {{CSSRef}}
 
-The **`grid-row`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) specifies a grid item's size and location within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its {{glossary("grid areas", "grid area")}}.
+The **`grid-row`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) specifies a grid item's size and location within a {{glossary("grid row")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its {{glossary("grid areas", "grid area")}}.
 
 {{EmbedInteractiveExample("pages/css/grid-row.html")}}
-
-If two \<grid-line> values are specified, the `grid-row-start` longhand is set to the value before the slash, and the `grid-row-end` longhand is set to the value after the slash.
 
 ## Constituent properties
 
@@ -55,13 +55,25 @@ grid-row: revert-layer;
 grid-row: unset;
 ```
 
+This property is specified as one or two `<grid-line>` values.
+
+If two `<grid-line>` values are given, they are separated by `/`. The `grid-row-start` longhand is set to the value before the slash, and the `grid-row-end` longhand is set to the value after the slash.
+
+Each `<grid-line>` value can be specified as:
+
+- either the `auto` keyword
+- or a `<custom-ident>` value
+- or an `<integer>` value
+- or both `<custom-ident>` and `<integer>`, separated by a space
+- or the keyword `span` together with either a `<custom-ident>` or an `<integer>` or both.
+
 ### Values
 
 - `auto`
   - : Is a keyword indicating that the property contributes nothing to the grid item's placement, indicating auto-placement, an automatic span, or a default span of `1`.
 - `<custom-ident>`
 
-  - : If there is a named line with the name '\<custom-ident>-start'/'\<custom-ident>-end', it contributes the first such line to the grid item's placement.
+  - : If there is a named line with the name `<custom-ident>-start`/`<custom-ident>-end`, it contributes the first such line to the grid item's placement.
 
     > **Note:** Named grid areas automatically generate implicit named lines of this form, so specifying `grid-row: foo;` will choose the start/end edge of that named grid area (unless another line named `foo-start`/`foo-end` was explicitly specified before it).
 
@@ -71,7 +83,7 @@ grid-row: unset;
 
   - : Contributes the nth grid line to the grid item's placement. If a negative integer is given, it instead counts in reverse, starting from the end edge of the explicit grid.
 
-    If a name is given as a \<custom-ident>, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines are assumed to have that name for the purpose of finding this position.
+    If a name is given as a `<custom-ident>`, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines are assumed to have that name for the purpose of finding this position.
 
     An {{cssxref("integer")}} value of `0` is invalid.
 
@@ -79,9 +91,9 @@ grid-row: unset;
 
   - : Contributes a grid span to the grid item's placement such that the corresponding edge of the grid item's grid area is n lines from the opposite edge.
 
-    If a name is given as a \<custom-ident>, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines on the side of the explicit grid corresponding to the search direction are assumed to have that name for the purpose of counting this span.
+    If a name is given as a `<custom-ident>`, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines on the side of the explicit grid corresponding to the search direction are assumed to have that name for the purpose of counting this span.
 
-    If the \<integer> is omitted, it defaults to `1`. Negative integers or 0 are invalid.
+    If the `<integer>` is omitted, it defaults to `1`. Negative integers or 0 are invalid.
 
 ## Formal definition
 

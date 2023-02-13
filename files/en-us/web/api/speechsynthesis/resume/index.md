@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesis.resume
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`resume()`** method of the {{domxref("SpeechSynthesis")}}
@@ -21,7 +22,7 @@ resumes it if it was already paused.
 
 ## Syntax
 
-```js
+```js-nolint
 resume()
 ```
 

@@ -14,7 +14,8 @@ tags:
   - unmute
 browser-compat: api.MediaStreamTrack.unmute_event
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The **`unmute`** event is sent to a {{domxref("MediaStreamTrack")}} when the track's source is once again able to provide media data after a period of not being able to do so.
 

@@ -2,11 +2,12 @@
 title: Firefox 69 for developers
 slug: Mozilla/Firefox/Releases/69
 tags:
-  - '69'
+  - "69"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 69 that will affect developers. Firefox 69 was released on September 3, 2019.
@@ -76,7 +77,7 @@ This article provides information about the changes in Firefox 69 that will affe
 ### JavaScript
 
 - [Public class fields](/en-US/docs/Web/JavaScript/Reference/Classes#field_declarations) are enabled by default ({{bug(1555464)}}). See also [Class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) for more information.
-- The promise rejection events [`unhandledrejection`](/en-US/docs/Web/API/Window/unhandledrejection_event) and [`rejectionhandled`](/en-US/docs/Web/API/Window/rejectionhandled_event) are now enabled by default ({{bug(1362272)}}). To learn more about how these work, see {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}.
+- The promise rejection events [`unhandledrejection`](/en-US/docs/Web/API/Window/unhandledrejection_event) and [`rejectionhandled`](/en-US/docs/Web/API/Window/rejectionhandled_event) are now enabled by default ({{bug(1362272)}}). To learn more about how these work, see [Promise rejection events](/en-US/docs/Web/JavaScript/Guide/Using_promises#promise_rejection_events).
 
 ### HTTP
 
@@ -103,7 +104,7 @@ This article provides information about the changes in Firefox 69 that will affe
 
 #### Media, Web Audio, and WebRTC
 
-- For improved user security, and in-keeping with the latest versions of the [Media Capture and Streams](/en-US/docs/Web/API/Media_Streams_API) specification, the {{domxref("navigator.mediaDevices")}} property is no longer present if the context is insecure. To use {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}, {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}, and so forth, be sure your content is loaded using {{Glossary("HTTPS")}} ({{bug(1528031)}}).
+- For improved user security, and in-keeping with the latest versions of the [Media Capture and Streams](/en-US/docs/Web/API/Media_Capture_and_Streams_API) specification, the {{domxref("navigator.mediaDevices")}} property is no longer present if the context is insecure. To use {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}, {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}, and so forth, be sure your content is loaded using {{Glossary("HTTPS")}} ({{bug(1528031)}}).
 - The Web Audio API's {{domxref("AudioParam.value")}} property now returns the actual value of the property at the current time, taking into account all scheduled or graduated value changes. Previously, Firefox only returned the most recent explicitly-set value (as through using the `value` setter) ({{bug(893020)}}).
 - We've updated {{domxref("MediaStreamAudioSourceNode")}} to use the new, lexicographical, ordering for tracks. Previously, track ordering was up to the individual browser, and could even change arbitrarily. In addition, attempting to create a `MediaStreamAudioSourceNode` using a stream that has no audio tracks now throws an `InvalidStateError` exception ({{bug(1553215)}}).
 - The {{domxref("MediaTrackSettings.facingMode", "facingMode")}}, {{domxref("MediaTrackSettings.deviceId", "deviceId")}}, and {{domxref("MediaTrackSettings.groupId", "groupId")}} settings are now included as members of the {{domxref("MediaTrackSettings")}} object returned by calls to {{domxref("MediaStreamTrack.getSettings()")}} ({{bug(1537986)}}).

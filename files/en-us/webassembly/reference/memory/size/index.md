@@ -7,6 +7,7 @@ tags:
   - Reference
   - Memory
 ---
+
 {{WebAssemblySidebar}}
 
 The **`size`** instruction, returns the amount of pages the memory instance currently has, each page is sized 64KiB.

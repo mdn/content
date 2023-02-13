@@ -1,6 +1,7 @@
 ---
 title: Logical OR assignment (||=)
 slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
@@ -9,50 +10,56 @@ tags:
   - Reference
 browser-compat: javascript.operators.logical_or_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
-The logical OR assignment (`x ||= y`) operator only assigns if
-`x` is {{Glossary("falsy")}}.
+The **logical OR assignment (`x ||= y`)** operator only assigns if `x` is {{Glossary("falsy")}}.
 
 {{EmbedInteractiveExample("pages/js/expressions-logical-or-assignment.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 expr1 ||= expr2
 ```
 
 ## Description
 
-### Short-circuit evaluation
-
-The [logical OR](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
-operator works like this:
-
-```js
-x || y;
-// returns x when x is truthy
-// returns y when x is not truthy
-```
-
-The logical OR operator short-circuits: the second operand is only evaluated if the
-first operand doesn't already determine the result.
-
-Logical OR assignment short-circuits as well, meaning it only performs an assignment if
-the logical operation would evaluate the right-hand side. In other words,
-`x ||= y` is equivalent to:
+Logical OR assignment [_short-circuits_](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#short-circuiting), meaning that `x ||= y` is equivalent to:
 
 ```js
 x || (x = y);
 ```
 
-And not equivalent to the following which would always perform an assignment:
+No assignment is performed if the left-hand side is not falsy, due to short-circuiting of the [logical OR](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR) operator. For example, the following does not throw an error, despite `x` being `const`:
 
-```js example-bad
-x = x || y;
+```js
+const x = 1;
+x ||= 2;
 ```
 
-Note that this behavior is different to mathematical and bitwise assignment operators.
+Neither would the following trigger the setter:
+
+```js
+const x = {
+  get value() {
+    return 1;
+  },
+  set value(v) {
+    console.log("Setter called");
+  },
+};
+
+x.value ||= 2;
+```
+
+In fact, if `x` is truthy, `y` is not evaluated at all.
+
+```js
+const x = 1;
+x ||= console.log("y evaluated");
+// Logs nothing
+```
 
 ## Examples
 
@@ -61,17 +68,13 @@ Note that this behavior is different to mathematical and bitwise assignment oper
 If the "lyrics" element is empty, display a default value:
 
 ```js
-document.getElementById('lyrics').textContent ||= 'No lyrics.'
+document.getElementById("lyrics").textContent ||= "No lyrics.";
 ```
 
-Here the short-circuit is especially beneficial, since the element will not be updated
-unnecessarily and won't cause unwanted side-effects such as additional parsing or
-rendering work, or loss of focus, etc.
+Here the short-circuit is especially beneficial, since the element will not be updated unnecessarily and won't cause unwanted side-effects such as additional parsing or rendering work, or loss of focus, etc.
 
-Note: Pay attention to the value returned by the API you're checking against. If an
-empty string is returned (a {{Glossary("falsy")}} value), `||=` must be used,
-otherwise you want to use the `??=` operator (for [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or
-{{jsxref("undefined")}} return values).
+Note: Pay attention to the value returned by the API you're checking against. If an empty string is returned (a {{Glossary("falsy")}} value), `||=` must be used, so that "No lyrics." is displayed instead of a blank space. However, if the API returns [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or
+{{jsxref("undefined")}} in case of blank content, [`??=`](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment) should be used instead.
 
 ## Specifications
 
@@ -84,7 +87,7 @@ otherwise you want to use the `??=` operator (for [`null`](/en-US/docs/Web/JavaS
 ## See also
 
 - [Logical OR (||)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
-- [The nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [The nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [Bitwise OR assignment (`|=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
 - {{Glossary("Truthy")}}
 - {{Glossary("Falsy")}}

@@ -14,6 +14,7 @@ tags:
   - preserveAspectRatio
 browser-compat: api.SVGImageElement.preserveAspectRatio
 ---
+
 {{APIRef("SVG")}}
 
 The **`preserveAspectRatio`** read-only

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.Document
 ---
+
 {{APIRef}}
 
 The **`Document`** constructor creates a new
@@ -18,7 +19,7 @@ an entry point into the page's content.
 
 ## Syntax
 
-```js
+```js-nolint
 new Document()
 ```
 

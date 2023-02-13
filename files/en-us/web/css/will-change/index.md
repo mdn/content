@@ -1,6 +1,7 @@
 ---
 title: will-change
 slug: Web/CSS/will-change
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -11,6 +12,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.will-change
 ---
+
 {{CSSRef}}
 
 The **`will-change`** [CSS](/en-US/docs/Web/CSS) property hints to browsers how an element is expected to change. Browsers may set up optimizations before an element is actually changed. These kinds of optimizations can increase the responsiveness of a page by doing potentially expensive work before they are actually required.
@@ -22,9 +24,9 @@ The **`will-change`** [CSS](/en-US/docs/Web/CSS) property hints to browsers how 
 will-change: auto;
 will-change: scroll-position;
 will-change: contents;
-will-change: transform;        /* Example of <custom-ident> */
-will-change: opacity;          /* Example of <custom-ident> */
-will-change: left, top;        /* Example of two <animatable-feature> */
+will-change: transform; /* Example of <custom-ident> */
+will-change: opacity; /* Example of <custom-ident> */
+will-change: left, top; /* Example of two <animatable-feature> */
 
 /* Global values */
 will-change: inherit;
@@ -83,20 +85,20 @@ It may be appropriate to include `will-change` in your style sheet for an applic
 This is an example showing how to apply the `will-change` property through scripting, which is probably what you should be doing in most cases.
 
 ```js
-var el = document.getElementById('element');
+const el = document.getElementById("element");
 
 // Set will-change when the element is hovered
-el.addEventListener('mouseenter', hintBrowser);
-el.addEventListener('animationEnd', removeHint);
+el.addEventListener("mouseenter", hintBrowser);
+el.addEventListener("animationEnd", removeHint);
 
 function hintBrowser() {
   // The optimizable properties that are going to change
   // in the animation's keyframes block
-  this.style.willChange = 'transform, opacity';
+  this.style.willChange = "transform, opacity";
 }
 
 function removeHint() {
-  this.style.willChange = 'auto';
+  this.style.willChange = "auto";
 }
 ```
 
@@ -111,3 +113,8 @@ function removeHint() {
 ## See also
 
 - {{cssxref("transform")}}
+- Individual transform properties:
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}
+  - Note: there is no individual `skew` property

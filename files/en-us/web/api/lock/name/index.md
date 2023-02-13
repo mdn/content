@@ -4,7 +4,6 @@ slug: Web/API/Lock/name
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - Web Locks API
@@ -13,7 +12,8 @@ tags:
   - name
 browser-compat: api.Lock.name
 ---
-{{SeeCompatTable}}{{APIRef("Web Locks")}}
+
+{{APIRef("Web Locks")}}
 
 The **`name`** read-only property of
 the {{domxref("Lock")}} interface returns the _name_ passed to

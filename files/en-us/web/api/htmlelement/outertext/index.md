@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.outerText
 ---
+
 {{APIRef("DOM")}}
 
 The **`outerText`** property of the {{domxref("HTMLElement")}} interface returns the same value as {{domxref("HTMLElement.innerText")}}.
@@ -42,9 +43,7 @@ Consider a page that contains the following HTML:
 `outerText` replaces the whole selected element, so the JavaScript `p.outerText = "Whole element replaced"` replaces the whole selected `p` element:
 
 ```html
-<div>
-   Whole element replaced
-</div>
+<div>Whole element replaced</div>
 ```
 
 By contrast, `p.innerText = "Content inside element replaced"` replaces the content _inside_ the selected `p` element:

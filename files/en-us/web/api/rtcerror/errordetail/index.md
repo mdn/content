@@ -22,6 +22,7 @@ tags:
   - rtc
 browser-compat: api.RTCError.errorDetail
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCError")}} interface's read-only

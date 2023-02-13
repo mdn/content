@@ -1,12 +1,14 @@
 ---
 title: Standard built-in objects
 slug: Web/JavaScript/Reference/Global_Objects
+page-type: landing-page
 tags:
   - JavaScript
   - Landing page
   - Overview
   - Reference
 ---
+
 {{JSSidebar("Objects")}}
 
 This chapter documents all of JavaScript's standard, built-in objects, including their methods and properties.
@@ -25,10 +27,10 @@ For more information about the distinction between the [DOM](/en-US/docs/Web/API
 
 These global properties return a simple value. They have no properties or methods.
 
+- {{JSxRef("globalThis")}}
 - {{JSxRef("Infinity")}}
 - {{JSxRef("NaN")}}
 - {{JSxRef("undefined")}}
-- {{JSxRef("globalThis")}}
 
 ### Function properties
 
@@ -39,18 +41,16 @@ These global functions—functions which are called globally, rather than on an 
 - {{JSxRef("Global_Objects/isNaN", "isNaN()")}}
 - {{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}
 - {{JSxRef("Global_Objects/parseInt", "parseInt()")}}
-- {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}
-- {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
 - {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}
 - {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-- **Deprecated**
-
-  - {{JSxRef("Global_Objects/escape", "escape()")}} {{Deprecated_Inline}}
-  - {{JSxRef("Global_Objects/unescape", "unescape()")}} {{Deprecated_Inline}}
+- {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}
+- {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+- {{JSxRef("Global_Objects/escape", "escape()")}} {{Deprecated_Inline}}
+- {{JSxRef("Global_Objects/unescape", "unescape()")}} {{Deprecated_Inline}}
 
 ### Fundamental objects
 
-These are the fundamental, basic objects upon which all other objects are based. This includes general objects, booleans, functions, and symbols.
+These objects represent fundamental language constructs.
 
 - {{JSxRef("Object")}}
 - {{JSxRef("Function")}}
@@ -64,12 +64,12 @@ Error objects are a special type of fundamental object. They include the basic {
 - {{JSxRef("Error")}}
 - {{JSxRef("AggregateError")}}
 - {{JSxRef("EvalError")}}
-- {{JSxRef("InternalError")}} {{Non-Standard_Inline}}
 - {{JSxRef("RangeError")}}
 - {{JSxRef("ReferenceError")}}
 - {{JSxRef("SyntaxError")}}
 - {{JSxRef("TypeError")}}
 - {{JSxRef("URIError")}}
+- {{JSxRef("InternalError")}} {{Non-Standard_Inline}}
 
 ### Numbers and dates
 
@@ -99,10 +99,10 @@ These objects represent collections of data which are ordered by an index value.
 - {{JSxRef("Uint16Array")}}
 - {{JSxRef("Int32Array")}}
 - {{JSxRef("Uint32Array")}}
-- {{JSxRef("Float32Array")}}
-- {{JSxRef("Float64Array")}}
 - {{JSxRef("BigInt64Array")}}
 - {{JSxRef("BigUint64Array")}}
+- {{JSxRef("Float32Array")}}
+- {{JSxRef("Float64Array")}}
 
 ### Keyed collections
 
@@ -119,20 +119,27 @@ These objects represent and interact with structured data buffers and data coded
 
 - {{JSxRef("ArrayBuffer")}}
 - {{JSxRef("SharedArrayBuffer")}}
-- {{JSxRef("Atomics")}}
 - {{JSxRef("DataView")}}
+- {{JSxRef("Atomics")}}
 - {{JSxRef("JSON")}}
+
+### Managing memory
+
+These objects interact with the garbage collection mechanism.
+
+- {{JSxRef("WeakRef")}}
+- {{JSxRef("FinalizationRegistry")}}
 
 ### Control abstraction objects
 
 Control abstractions can help to structure code, especially async code (without using deeply nested callbacks, for example).
 
 - {{JSxRef("Promise")}}
-- {{JSxRef("Generator")}}
 - {{JSxRef("GeneratorFunction")}}
+- {{JSxRef("AsyncGeneratorFunction")}}
+- {{JSxRef("Generator")}}
+- {{JSxRef("AsyncGenerator")}}
 - {{JSxRef("AsyncFunction")}}
-- {{JSxRef("Global_Objects/AsyncGenerator", "AsyncGenerator")}}
-- {{JSxRef("Global_Objects/AsyncGeneratorFunction", "AsyncGeneratorFunction")}}
 
 ### Reflection
 
@@ -146,19 +153,10 @@ Additions to the ECMAScript core for language-sensitive functionalities.
 - {{JSxRef("Intl")}}
 - {{JSxRef("Global_Objects/Intl/Collator", "Intl.Collator")}}
 - {{JSxRef("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{JSxRef("Global_Objects/Intl/DisplayNames", "Intl.DisplayNames")}}
 - {{JSxRef("Global_Objects/Intl/ListFormat", "Intl.ListFormat")}}
+- {{JSxRef("Global_Objects/Intl/Locale", "Intl.Locale")}}
 - {{JSxRef("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}
 - {{JSxRef("Global_Objects/Intl/PluralRules", "Intl.PluralRules")}}
 - {{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
-- {{JSxRef("Global_Objects/Intl/Locale", "Intl.Locale")}}
-
-### WebAssembly
-
-- {{JSxRef("WebAssembly")}}
-- {{JSxRef("WebAssembly.Module")}}
-- {{JSxRef("WebAssembly.Instance")}}
-- {{JSxRef("WebAssembly.Memory")}}
-- {{JSxRef("WebAssembly.Table")}}
-- {{JSxRef("WebAssembly.CompileError")}}
-- {{JSxRef("WebAssembly.LinkError")}}
-- {{JSxRef("WebAssembly.RuntimeError")}}
+- {{JSxRef("Global_Objects/Intl/Segmenter", "Intl.Segmenter")}}

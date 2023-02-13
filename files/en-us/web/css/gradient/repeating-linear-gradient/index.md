@@ -1,6 +1,7 @@
 ---
 title: repeating-linear-gradient()
 slug: Web/CSS/gradient/repeating-linear-gradient
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -13,6 +14,7 @@ tags:
   - Web
 browser-compat: css.types.image.gradient.repeating-linear-gradient
 ---
+
 {{CSSRef}}
 
 The **`repeating-linear-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) creates an image consisting of repeating linear gradients. It is similar to {{cssxref("gradient/linear-gradient", "linear-gradient()")}} and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.
@@ -81,15 +83,19 @@ body {
 
 ```css
 body {
-  background-image: repeating-linear-gradient(-45deg,
-      transparent,
-      transparent 20px,
-      black 20px,
-      black 40px);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 20px,
+    black 20px,
+    black 40px
+  );
   /* with multiple color stop lengths */
-  background-image: repeating-linear-gradient(-45deg,
-      transparent 0 20px,
-      black 20px 40px);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent 0 20px,
+    black 20px 40px
+  );
 }
 ```
 
@@ -106,10 +112,12 @@ body {
 
 ```css
 body {
-  background-image: repeating-linear-gradient(to bottom,
-      rgb(26,198,204),
-      rgb(26,198,204) 7%,
-      rgb(100,100,100) 10%);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgb(26, 198, 204),
+    rgb(26, 198, 204) 7%,
+    rgb(100, 100, 100) 10%
+  );
 }
 ```
 

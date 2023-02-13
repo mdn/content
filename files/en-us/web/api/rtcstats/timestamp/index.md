@@ -16,6 +16,7 @@ tags:
   - timeStamp
 browser-compat: api.RTCStats.timestamp
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`timestamp`** property of the

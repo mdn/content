@@ -9,6 +9,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.dns
 ---
+
 {{AddonSidebar}}
 
 Enables an extension to resolve domain names.

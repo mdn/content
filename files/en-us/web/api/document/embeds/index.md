@@ -10,6 +10,7 @@ tags:
   - Property
 browser-compat: api.Document.embeds
 ---
+
 {{ApiRef}}
 
 The **`embeds`** read-only property of the

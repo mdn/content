@@ -13,6 +13,7 @@ tags:
   - tag
 browser-compat: api.SyncEvent.tag
 ---
+
 {{SeeCompatTable}}{{APIRef("")}}
 
 The **`SyncEvent.tag`** read-only property of the

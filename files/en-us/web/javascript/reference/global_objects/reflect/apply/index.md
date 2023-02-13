@@ -1,6 +1,7 @@
 ---
 title: Reflect.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -10,16 +11,17 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.apply
 ---
+
 {{JSRef}}
 
-The static **`Reflect.apply()`** method calls a target function
+The **`Reflect.apply()`** static method calls a target function
 with arguments as specified.
 
 {{EmbedInteractiveExample("pages/js/reflect-apply.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.apply(target, thisArgument, argumentsList)
 ```
 
@@ -63,13 +65,13 @@ With `Reflect.apply()` this becomes less verbose and easier to understand.
 Reflect.apply(Math.floor, undefined, [1.75]);
 // 1;
 
-Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111])
+Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]);
 // "hello"
 
-Reflect.apply(RegExp.prototype.exec, /ab/, ['confabulation']).index
+Reflect.apply(RegExp.prototype.exec, /ab/, ["confabulation"]).index;
 // 4
 
-Reflect.apply(''.charAt, 'ponies', [3])
+Reflect.apply("".charAt, "ponies", [3]);
 // "i"
 ```
 

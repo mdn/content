@@ -7,6 +7,7 @@ tags:
   - Deprecated
 browser-compat: api.FileReaderSync.readAsBinaryString
 ---
+
 {{APIRef("File API")}}{{deprecated_header}}
 
 > **Note:** This method is deprecated in favor of {{DOMxRef("FileReaderSync.readAsArrayBuffer","readAsArrayBuffer()")}}.
@@ -15,9 +16,9 @@ The `readAsBinaryString()` method of the {{DOMxRef("FileReaderSync")}} interface
 
 ## Syntax
 
-```js
-readAsBinaryString(File);
-readAsBinaryString(Blob);
+```js-nolint
+readAsBinaryString(File)
+readAsBinaryString(Blob)
 ```
 
 ### Parameters
@@ -57,4 +58,4 @@ A string representing the input data.
 - {{DOMxRef("File")}}
 - {{DOMxRef("FileReaderSync")}}
 - {{DOMxRef("FileReader")}}
-- {{DOMxRef("BlobBuilder")}}, {{ domxref("Blob") }}
+- {{ domxref("Blob") }}

@@ -15,7 +15,8 @@ tags:
 browser-compat:
   - api.PerformanceNavigationTiming
 ---
-{{DefaultAPISidebar("Navigation Timing")}}
+
+{{DefaultAPISidebar("Performance API")}}
 
 The **Navigation Timing API** provides data that can be used to measure the performance of a web site. Unlike JavaScript-based libraries that have historically been used to collect similar information, the Navigation Timing API can be much more accurate and reliable.
 

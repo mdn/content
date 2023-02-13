@@ -14,7 +14,8 @@ browser-compat:
   - api.LockManager
   - api.Lock
 ---
-{{SeeCompatTable}}{{APIRef("Web Locks")}}{{DefaultAPISidebar}}{{securecontext_header}}
+
+{{SeeCompatTable}}{{DefaultAPISidebar("Web Locks API")}}{{securecontext_header}}
 
 The Web Locks API allows scripts running in one tab or worker to asynchronously acquire a lock, hold it while work is performed, then release it. While held, no other script executing in the same origin can acquire the same lock, which allows a web app running in multiple tabs or workers to coordinate work and the use of resources.
 
@@ -29,7 +30,7 @@ The API is used as follows:
 3. The lock is automatically released when the task completes.
 
 ```js
-navigator.locks.request('my_resource', async (lock) => {
+navigator.locks.request("my_resource", async (lock) => {
   // The lock has been acquired.
   await do_something();
   await do_something_else();
@@ -59,7 +60,7 @@ For example:
 await do_something_without_lock();
 
 // Request the lock.
-await navigator.locks.request('my_resource', async (lock) => {
+await navigator.locks.request("my_resource", async (lock) => {
   // The lock has been acquired.
   await do_something_with_lock();
   await do_something_else_with_lock();
@@ -96,9 +97,9 @@ const p = new Promise((res, rej) => {
 
 // Request the lock:
 navigator.locks.request(
-  'my_resource',
+  "my_resource",
   // Lock is acquired.
-  (lock) => p, // Now lock will be held until either resolve() or reject() is called.
+  (lock) => p // Now lock will be held until either resolve() or reject() is called.
 );
 ```
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Location.hostname
 ---
+
 {{ApiRef("URL API")}}
 
 The **`hostname`** property of the {{domxref("Location")}}

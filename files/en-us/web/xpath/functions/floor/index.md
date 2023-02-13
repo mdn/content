@@ -5,6 +5,7 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `floor` function evaluates a decimal number and returns the largest integer less than or equal to the decimal number.

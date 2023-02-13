@@ -10,13 +10,14 @@ tags:
   - TrustedTypePolicy
 browser-compat: api.TrustedTypePolicy.createScriptURL
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`createScriptURL()`** method of the {{domxref("TrustedTypePolicy")}} interface creates a {{domxref("TrustedScriptURL")}} object using a policy created by {{domxref("TrustedTypePolicyFactory.createPolicy","TrustedTypePolicyFactory.createPolicy()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 createScriptURL(input)
 createScriptURL(input, args)
 ```

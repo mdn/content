@@ -1,14 +1,15 @@
 ---
 title: DSL
 slug: Glossary/DSL
+page-type: glossary-disambiguation
 tags:
   - Disambiguation
-  - Glossary
 ---
+
 The term **DSL** can have several meanings depending on the context. It may refer to:
 
 {{GlossaryDisambiguation}}
 
 ## See also
 
-- {{Interwiki("wikipedia", "DSL_(disambiguation)", "DSL")}} on Wikipedia
+- [DSL](<https://en.wikipedia.org/wiki/DSL_(disambiguation)>) on Wikipedia

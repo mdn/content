@@ -19,6 +19,7 @@ tags:
   - upload
 browser-compat: api.XMLHttpRequest.upload
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{domxref("XMLHttpRequest")}} `upload` property returns an {{domxref("XMLHttpRequestUpload")}} object that can be observed to monitor an upload's progress.

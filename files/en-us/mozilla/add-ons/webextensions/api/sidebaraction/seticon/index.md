@@ -12,6 +12,7 @@ tags:
   - sidebarAction
 browser-compat: webextensions.api.sidebarAction.setIcon
 ---
+
 {{AddonSidebar()}}
 
 Sets the icon for the sidebar.
@@ -24,9 +25,9 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Types of icon
 
-Your extension should specify an icon for the sidebar in the [sidebar_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest key. This is called the _"manifest icon"_.
+Your extension should specify an icon for the sidebar in the [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest key. This is called the _"manifest icon"_.
 
-If you don't specify an icon in the sidebar_action key, you get the browser's default icon. This is called the _"default icon"_.
+If you don't specify an icon in the `sidebar_action` key, you get the browser's default icon. This is called the _"default icon"_.
 
 If you set a new icon using `setIcon()`, and include the `tabId` option, then the icon is set only for the given tab. This icon is called the _"tab-specific icon"_.
 
@@ -36,7 +37,7 @@ If you set a new icon using `setIcon()`, and omit both the `tabId` and `windowId
 
 ## Syntax
 
-```js
+```js-nolint
 let settingIcon = browser.sidebarAction.setIcon(
   details         // object
 )

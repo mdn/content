@@ -1,12 +1,14 @@
 ---
 title: glyph-name
 slug: Web/SVG/Attribute/glyph-name
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG
   - SVG Attribute
 browser-compat: svg.elements.glyph.glyph-name
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`glyph-name`** attribute specifies the name of a {{Glossary("glyph")}}.

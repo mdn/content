@@ -15,6 +15,7 @@ tags:
   - state
 browser-compat: api.RTCPeerConnection.signalingstatechange_event
 ---
+
 {{APIRef("WebRTC")}}
 
 A **`signalingstatechange`** event is sent to an {{domxref("RTCPeerConnection")}} to notify it that its signaling state, as indicated by the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} property, has changed.

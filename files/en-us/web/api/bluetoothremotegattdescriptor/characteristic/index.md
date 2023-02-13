@@ -14,6 +14,7 @@ tags:
   - characteristic
 browser-compat: api.BluetoothRemoteGATTDescriptor.characteristic
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTDescriptor.characteristic`**

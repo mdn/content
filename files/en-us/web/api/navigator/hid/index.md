@@ -9,14 +9,18 @@ tags:
   - WebHID API
   - Property
   - Reference
+  - Experimental
 browser-compat: api.Navigator.hid
 ---
+
 {{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`Navigator.hid`**
 read-only property returns an {{domxref("HID")}} object providing methods
 for connecting to HID devices, listing attached HID devices, and event
 handlers for connected HID devices.
+
+Where a defined [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) blocks WebHID usage, the `Navigator.hid` property will not be available.
 
 ## Value
 

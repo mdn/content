@@ -13,13 +13,14 @@ tags:
   - onChanged
 browser-compat: webextensions.api.storage.StorageArea.onChanged
 ---
+
 {{AddonSidebar()}}
 
 Fires when one or more items in a storage area change. Compared to {{WebExtAPIRef("storage.onChanged")}}, this event enables you to listen for changes in one of the storage areas: `local`, `managed`, `session`, and `sync`.
 
 ## Syntax
 
-```js
+```js-nolint
 // local can also be sync, managed, or session
 browser.storage.local.onChanged.addListener(callback)
 browser.storage.local.onChanged.removeListener(listener)
@@ -55,14 +56,12 @@ changes in the local storage.
 */
 function logStorageChange(changes) {
 
-  let changedItems = Object.keys(changes);
+  const changedItems = Object.keys(changes);
 
-  for (let item of changedItems) {
-    console.log(item + " has changed:");
-    console.log("Old value: ");
-    console.log(changes[item].oldValue);
-    console.log("New value: ");
-    console.log(changes[item].newValue);
+  for (const item of changedItems) {
+    console.log(`${item} has changed:`);
+    console.log("Old value: ", changes[item].oldValue);
+    console.log("New value: ", changes[item].newValue);
   }
 }
 
@@ -76,10 +75,9 @@ browser.storage.local.onChanged.addListener(logStorageChange);
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/#event-StorageArea-onChanged) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -106,4 +104,4 @@ browser.storage.local.onChanged.addListener(logStorageChange);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

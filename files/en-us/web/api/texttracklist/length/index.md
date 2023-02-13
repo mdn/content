@@ -15,6 +15,7 @@ tags:
   - track
 browser-compat: api.TextTrackList.length
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("TextTrackList")}}**

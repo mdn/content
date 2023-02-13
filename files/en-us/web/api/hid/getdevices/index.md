@@ -11,13 +11,14 @@ tags:
   - Experimental
 browser-compat: api.HID.getDevices
 ---
+
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`getDevices()`** method of the {{domxref("HID")}} interface gets a list of the connected HID devices that the user has previously been granted access to in response to a {{domxref("HID.requestDevice","requestDevice()")}} call.
 
 ## Syntax
 
-```js
+```js-nolint
 getDevices()
 ```
 

@@ -13,6 +13,7 @@ tags:
   - as
 browser-compat: api.HTMLLinkElement.as
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`as`** property of the {{domxref("HTMLLinkElement")}}

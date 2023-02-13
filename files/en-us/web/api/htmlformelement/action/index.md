@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.action
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement.action`** property represents the action

@@ -11,6 +11,7 @@ tags:
   - atob
 browser-compat: api.atob
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`atob()`** function decodes a
@@ -25,7 +26,7 @@ for {{domxref("btoa", "btoa()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 atob(encodedData)
 ```
 
@@ -46,7 +47,7 @@ An ASCII string containing decoded data from `encodedData`.
 ## Examples
 
 ```js
-const encodedData = btoa('Hello, world'); // encode a string
+const encodedData = btoa("Hello, world"); // encode a string
 const decodedData = atob(encodedData); // decode the string
 ```
 

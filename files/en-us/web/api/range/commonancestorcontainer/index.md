@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.commonAncestorContainer
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.commonAncestorContainer`** read-only property
@@ -40,10 +41,12 @@ triggers an animation to highlight them.
 
 ```html
 <ul>
-  <li>Strings
+  <li>
+    Strings
     <ul>
       <li>Cello</li>
-      <li>Violin
+      <li>
+        Violin
         <ul>
           <li>First Chair</li>
           <li>Second Chair</li>
@@ -51,7 +54,8 @@ triggers an animation to highlight them.
       </li>
     </ul>
   </li>
-  <li>Woodwinds
+  <li>
+    Woodwinds
     <ul>
       <li>Clarinet</li>
       <li>Oboe</li>
@@ -71,8 +75,12 @@ The `.highlight` class created below uses a set of CSS
 }
 
 @keyframes highlight {
-  from { outline: 1px solid #f00f; }
-  to   { outline: 1px solid #f000; }
+  from {
+    outline: 1px solid #f00f;
+  }
+  to {
+    outline: 1px solid #f000;
+  }
 }
 ```
 

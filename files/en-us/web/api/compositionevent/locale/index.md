@@ -9,9 +9,11 @@ tags:
   - Locale
   - Property
   - Reference
+  - Non-standard
 browser-compat: api.CompositionEvent.locale
 ---
-{{deprecated_header}}{{APIRef("UI Events")}}
+
+{{deprecated_header}}{{APIRef("UI Events")}}{{Non-standard_header}}
 
 The **`locale`** read-only property of the
 {{domxref("CompositionEvent")}} interface returns the locale of current input method

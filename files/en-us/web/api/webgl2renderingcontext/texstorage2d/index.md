@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.texStorage2D
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.texStorage2D()`** method of the
@@ -18,7 +19,7 @@ two-dimensional texture storage.
 
 ## Syntax
 
-```js
+```js-nolint
 texStorage2D(target, levels, internalformat, width, height)
 ```
 

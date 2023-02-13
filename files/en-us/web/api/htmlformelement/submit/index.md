@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.submit
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement.submit()`** method submits a given
@@ -34,7 +35,7 @@ submitted when you do it with original HTML form submit.
 
 ## Syntax
 
-```js
+```js-nolint
 submit()
 ```
 

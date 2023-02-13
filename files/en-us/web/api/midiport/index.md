@@ -9,6 +9,7 @@ tags:
   - MIDIPort
 browser-compat: api.MIDIPort
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
 The **`MIDIPort`** interface of the {{domxref('Web MIDI API','','',' ')}} represents a MIDI input or output port.
@@ -17,7 +18,7 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("MIDIPort.id")}} {{ReadOnlyInline}}
   - : Returns a string containing the unique ID of the port.
@@ -56,7 +57,7 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
     - `"pending"`
       - : The device that this `MIDIPort` represents has been opened but has subsequently disconnected .
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from {{domxref("EventTarget")}}._
 

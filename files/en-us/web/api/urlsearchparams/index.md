@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: api.URLSearchParams
 ---
+
 {{ApiRef("URL API")}}
 
 The **`URLSearchParams`** interface defines utility methods to work with the query string of a URL.
@@ -30,7 +31,7 @@ for (const [key, value] of mySearchParams.entries()) {}
 - {{domxref("URLSearchParams.URLSearchParams", 'URLSearchParams()')}}
   - : Returns a `URLSearchParams` object instance.
 
-## Methods
+## Instance methods
 
 - {{domxref("URLSearchParams.append()")}}
   - : Appends a specified key/value pair as a new search parameter.

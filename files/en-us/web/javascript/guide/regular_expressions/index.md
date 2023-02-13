@@ -1,6 +1,7 @@
 ---
 title: Regular expressions
 slug: Web/JavaScript/Guide/Regular_Expressions
+page-type: guide
 tags:
   - Guide
   - Intermediate
@@ -10,10 +11,11 @@ tags:
   - Regular Expressions
   - regex
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
 
 Regular expressions are patterns used to match character combinations in strings.
-In JavaScript, regular expressions are also objects. These patterns are used with the {{jsxref("RegExp.exec", "exec()")}} and {{jsxref("RegExp.test", "test()")}} methods of {{jsxref("RegExp")}}, and with the {{jsxref("String.match", "match()")}}, {{jsxref("String.matchAll", "matchAll()")}}, {{jsxref("String.replace", "replace()")}}, {{jsxref("String.replaceAll", "replaceAll()")}}, {{jsxref("String.search", "search()")}}, and {{jsxref("String.split", "split()")}} methods of {{jsxref("String")}}.
+In JavaScript, regular expressions are also objects. These patterns are used with the {{jsxref("RegExp/exec", "exec()")}} and {{jsxref("RegExp/test", "test()")}} methods of {{jsxref("RegExp")}}, and with the {{jsxref("String/match", "match()")}}, {{jsxref("String/matchAll", "matchAll()")}}, {{jsxref("String/replace", "replace()")}}, {{jsxref("String/replaceAll", "replaceAll()")}}, {{jsxref("String/search", "search()")}}, and {{jsxref("String/split", "split()")}} methods of {{jsxref("String")}}.
 This chapter describes JavaScript regular expressions.
 
 ## Creating a regular expression
@@ -32,7 +34,7 @@ You construct a regular expression in one of two ways:
 - Or calling the constructor function of the {{jsxref("RegExp")}} object, as follows:
 
   ```js
-  const re = new RegExp('ab+c');
+  const re = new RegExp("ab+c");
   ```
 
   Using the constructor function provides runtime compilation of the regular expression.
@@ -44,7 +46,7 @@ A regular expression pattern is composed of simple characters, such as `/abc/`, 
 The last example includes parentheses, which are used as a memory device.
 The match made with this part of the pattern is remembered for later use, as described in [Using groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences#using_groups).
 
-> **Note:** If you are already familiar with the forms of a regular expression, you may also read [the cheatsheet](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) for a quick lookup for a specific pattern/construct.
+> **Note:** If you are already familiar with the forms of a regular expression, you may also read [the cheat sheet](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) for a quick lookup for a specific pattern/construct.
 
 ### Using simple patterns
 
@@ -87,11 +89,13 @@ If you want to look at all the special characters that can be used in regular ex
   <tbody>
     <tr>
       <td>
-        <code>\</code>, <code>.</code>, <code>\cX</code>, <code>\d</code>,
-        <code>\D</code>, <code>\f</code>, <code>\n</code>, <code>\r</code>,
-        <code>\s</code>, <code>\S</code>, <code>\t</code>, <code>\v</code>,
-        <code>\w</code>, <code>\W</code>, <code>\0</code>, <code>\xhh</code>,
-        <code>\uhhhh</code>, <code>\uhhhhh</code>, <code>[\b]</code>
+        <code>[xyz]</code>, <code>[^xyz]</code>, <code>.</code>,
+        <code>\d</code>, <code>\D</code>, <code>\w</code>, <code>\W</code>,
+        <code>\s</code>, <code>\S</code>, <code>\t</code>, <code>\r</code>,
+        <code>\n</code>, <code>\v</code>, <code>\f</code>, <code>[\b]</code>,
+        <code>\0</code>, <code>\c<em>X</em></code>, <code>\x<em>hh</em></code>,
+        <code>\u<em>hhhh</em></code>, <code>\u<em>{hhhh}</em></code>,
+        <code><em>x</em>|<em>y</em></code>
       </td>
       <td>
         <p>
@@ -104,9 +108,9 @@ If you want to look at all the special characters that can be used in regular ex
     </tr>
     <tr>
       <td>
-        <code>^</code>, <code>$</code>, <code>x(?=y)</code>,
-        <code>x(?!y)</code>, <code>(?&#x3C;=y)x</code>,
-        <code>(?&#x3C;!y)x</code>, <code>\b</code>, <code>\B</code>
+        <code>^</code>, <code>$</code>, <code>\b</code>, <code>\B</code>,
+        <code>x(?=y)</code>, <code>x(?!y)</code>, <code>(?&#x3C;=y)x</code>,
+        <code>(?&#x3C;!y)x</code>
       </td>
       <td>
         <p>
@@ -119,24 +123,23 @@ If you want to look at all the special characters that can be used in regular ex
     </tr>
     <tr>
       <td>
-        <code>(x)</code>, <code>(?:x)</code>, <code>(?&#x3C;Name>x)</code>,
-        <code>x|y</code>, <code>[xyz]</code>, <code>[^xyz]</code>,
-        <code>\<em>Number</em></code>
+        <code>(<em>x</em>)</code>, <code>(?&#x3C;Name>x)</code>, <code>(?:<em>x</em>)</code>,
+        <code>\<em>n</em></code>, <code>\k&#x3C;Name></code>
       </td>
       <td>
         <p>
           <a
             href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences"
-            >Groups and ranges</a
+            >Groups and backreferences</a
           >
         </p>
       </td>
     </tr>
     <tr>
       <td>
-        <code>*</code>, <code>+</code>, <code>?</code>,
-        <code>x{<em>n</em>}</code>, <code>x{<em>n</em>,}</code>,
-        <code>x{<em>n</em>,<em>m</em>}</code>
+        <code><em>x</em>*</code>, <code><em>x</em>+</code>, <code><em>x</em>?</code>,
+        <code><em>x</em>{<em>n</em>}</code>, <code><em>x</em>{<em>n</em>,}</code>,
+        <code><em>x</em>{<em>n</em>,<em>m</em>}</code>
       </td>
       <td>
         <p>
@@ -162,7 +165,7 @@ If you want to look at all the special characters that can be used in regular ex
   </tbody>
 </table>
 
-> **Note:** [A larger cheatsheet is also available](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) (only aggregating parts of those individual articles).
+> **Note:** [A larger cheat sheet is also available](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) (only aggregating parts of those individual articles).
 
 ### Escaping
 
@@ -178,11 +181,11 @@ For instance, to match the string "C:\\" where "C" can be any letter, you'd use 
 If using the `RegExp` constructor with a string literal, remember that the backslash is an escape in string literals, so to use it in the regular expression, you need to escape it at the string literal level.
 `/a\*b/` and `new RegExp("a\\*b")` create the same expression, which searches for "a" followed by a literal "\*" followed by "b".
 
-If escape strings are not already part of your pattern you can add them using {{jsxref('String.replace')}}:
+If escape strings are not already part of your pattern you can add them using {{jsxref('String.prototype.replace()')}}:
 
 ```js
 function escapeRegExp(string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
 }
 ```
 
@@ -202,14 +205,14 @@ Regular expressions are used with the {{jsxref("RegExp")}} methods {{jsxref("Reg
 
 | Method                                          | Description                                                                                                      |
 | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("RegExp.exec", "exec()")}}             | Executes a search for a match in a string. It returns an array of information or `null` on a mismatch.           |
-| {{jsxref("RegExp.test", "test()")}}             | Tests for a match in a string. It returns `true` or `false`.                                                     |
-| {{jsxref("String.match", "match()")}}           | Returns an array containing all of the matches, including capturing groups, or `null` if no match is found.      |
-| {{jsxref("String.matchAll", "matchAll()")}}     | Returns an iterator containing all of the matches, including capturing groups.                                   |
-| {{jsxref("String.search", "search()")}}         | Tests for a match in a string. It returns the index of the match, or `-1` if the search fails.                   |
-| {{jsxref("String.replace", "replace()")}}       | Executes a search for a match in a string, and replaces the matched substring with a replacement substring.      |
-| {{jsxref("String.replaceAll", "replaceAll()")}} | Executes a search for all matches in a string, and replaces the matched substrings with a replacement substring. |
-| {{jsxref("String.split", "split()")}}           | Uses a regular expression or a fixed string to break a string into an array of substrings.                       |
+| {{jsxref("RegExp/exec", "exec()")}}             | Executes a search for a match in a string. It returns an array of information or `null` on a mismatch.           |
+| {{jsxref("RegExp/test", "test()")}}             | Tests for a match in a string. It returns `true` or `false`.                                                     |
+| {{jsxref("String/match", "match()")}}           | Returns an array containing all of the matches, including capturing groups, or `null` if no match is found.      |
+| {{jsxref("String/matchAll", "matchAll()")}}     | Returns an iterator containing all of the matches, including capturing groups.                                   |
+| {{jsxref("String/search", "search()")}}         | Tests for a match in a string. It returns the index of the match, or `-1` if the search fails.                   |
+| {{jsxref("String/replace", "replace()")}}       | Executes a search for a match in a string, and replaces the matched substring with a replacement substring.      |
+| {{jsxref("String/replaceAll", "replaceAll()")}} | Executes a search for all matches in a string, and replaces the matched substrings with a replacement substring. |
+| {{jsxref("String/split", "split()")}}           | Uses a regular expression or a fixed string to break a string into an array of substrings.                       |
 
 When you want to know whether a pattern is found in a string, use the `test()` or `search()` methods; for more information (but slower execution) use the `exec()` or `match()` methods.
 If you use `exec()` or `match()` and if the match succeeds, these methods return an array and update properties of the associated regular expression object and also of the predefined regular expression object, `RegExp`.
@@ -219,13 +222,13 @@ In the following example, the script uses the `exec()` method to find a match in
 
 ```js
 const myRe = /d(b+)d/g;
-const myArray = myRe.exec('cdbbdbsbz');
+const myArray = myRe.exec("cdbbdbsbz");
 ```
 
 If you do not need to access the properties of the regular expression, an alternative way of creating `myArray` is with this script:
 
 ```js
-const myArray = /d(b+)d/g.exec('cdbbdbsbz');
+const myArray = /d(b+)d/g.exec("cdbbdbsbz");
 // similar to 'cdbbdbsbz'.match(/d(b+)d/g); however,
 // 'cdbbdbsbz'.match(/d(b+)d/g) outputs [ "dbbd" ]
 // while /d(b+)d/g.exec('cdbbdbsbz') outputs [ 'dbbd', 'bb', index: 1, input: 'cdbbdbsbz' ]
@@ -236,8 +239,8 @@ const myArray = /d(b+)d/g.exec('cdbbdbsbz');
 If you want to construct the regular expression from a string, yet another alternative is this script:
 
 ```js
-const myRe = new RegExp('d(b+)d', 'g');
-const myArray = myRe.exec('cdbbdbsbz');
+const myRe = new RegExp("d(b+)d", "g");
+const myArray = myRe.exec("cdbbdbsbz");
 ```
 
 With these scripts, the match succeeds and returns the array and updates the properties shown in the following table.
@@ -302,7 +305,7 @@ For example, assume you have this script:
 
 ```js
 const myRe = /d(b+)d/g;
-const myArray = myRe.exec('cdbbdbsbz');
+const myArray = myRe.exec("cdbbdbsbz");
 console.log(`The value of lastIndex is ${myRe.lastIndex}`);
 
 // "The value of lastIndex is 5"
@@ -311,7 +314,7 @@ console.log(`The value of lastIndex is ${myRe.lastIndex}`);
 However, if you have this script:
 
 ```js
-const myArray = /d(b+)d/g.exec('cdbbdbsbz');
+const myArray = /d(b+)d/g.exec("cdbbdbsbz");
 console.log(`The value of lastIndex is ${/d(b+)d/g.lastIndex}`);
 
 // "The value of lastIndex is 0"
@@ -325,15 +328,15 @@ If you need to access the properties of a regular expression created with an obj
 Regular expressions have optional flags that allow for functionality like global searching and case-insensitive searching.
 These flags can be used separately or together in any order, and are included as part of the regular expression.
 
-| Flag | Description                                                                                                                              | Corresponding property                    |
-| ---- | ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
-| `d`  | Generate indices for substring matches.                                                                                                  | {{jsxref("RegExp.prototype.hasIndices")}} |
-| `g`  | Global search.                                                                                                                           | {{jsxref("RegExp.prototype.global")}}     |
-| `i`  | Case-insensitive search.                                                                                                                 | {{jsxref("RegExp.prototype.ignoreCase")}} |
-| `m`  | Multi-line search.                                                                                                                       | {{jsxref("RegExp.prototype.multiline")}}  |
-| `s`  | Allows `.` to match newline characters.                                                                                                  | {{jsxref("RegExp.prototype.dotAll")}}     |
-| `u`  | "unicode"; treat a pattern as a sequence of unicode code points.                                                                         | {{jsxref("RegExp.prototype.unicode")}}    |
-| `y`  | Perform a "sticky" search that matches starting at the current position in the target string. See {{jsxref("RegExp.sticky", "sticky")}}. | {{jsxref("RegExp.prototype.sticky")}}     |
+| Flag | Description                                                                                   | Corresponding property                        |
+| ---- | --------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| `d`  | Generate indices for substring matches.                                                       | {{jsxref("RegExp/hasIndices", "hasIndices")}} |
+| `g`  | Global search.                                                                                | {{jsxref("RegExp/global", "global")}}         |
+| `i`  | Case-insensitive search.                                                                      | {{jsxref("RegExp/ignoreCase", "ignoreCase")}} |
+| `m`  | Allows `^` and `$` to match newline characters.                                               | {{jsxref("RegExp/multiline", "multiline")}}   |
+| `s`  | Allows `.` to match newline characters.                                                       | {{jsxref("RegExp/dotAll", "dotAll")}}         |
+| `u`  | "Unicode"; treat a pattern as a sequence of Unicode code points.                              | {{jsxref("RegExp/unicode", "unicode")}}       |
+| `y`  | Perform a "sticky" search that matches starting at the current position in the target string. | {{jsxref("RegExp/sticky", "sticky")}}         |
 
 To include a flag with the regular expression, use this syntax:
 
@@ -344,7 +347,7 @@ const re = /pattern/flags;
 or
 
 ```js
-const re = new RegExp('pattern', 'flags');
+const re = new RegExp("pattern", "flags");
 ```
 
 Note that the flags are an integral part of a regular expression. They cannot be added or removed later.
@@ -353,7 +356,7 @@ For example, `re = /\w+\s/g` creates a regular expression that looks for one or 
 
 ```js
 const re = /\w+\s/g;
-const str = 'fee fi fo fum';
+const str = "fee fi fo fum";
 const myArray = str.match(re);
 console.log(myArray);
 
@@ -369,7 +372,7 @@ const re = /\w+\s/g;
 with:
 
 ```js
-const re = new RegExp('\\w+\\s', 'g');
+const re = new RegExp("\\w+\\s", "g");
 ```
 
 and get the same result.
@@ -382,7 +385,7 @@ If the `m` flag is used, `^` and `$` match at the start or end of any line withi
 {{jsxref("RegExp.prototype.exec()")}} method with the `g` flag returns each match and its position iteratively.
 
 ```js
-const str = 'fee fi fo fum';
+const str = "fee fi fo fum";
 const re = /\w+\s/g;
 
 console.log(re.exec(str)); // ["fee ", index: 0, input: "fee fi fo fum"]
@@ -404,23 +407,23 @@ The "u" flag is used to create "unicode" regular expressions; that is, regular e
 For example, the following regular expression might be used to match against an arbitrary unicode "word":
 
 ```js
-/\p{L}*/u
+/\p{L}*/u;
 ```
 
 There are a number of other differences between unicode and non-unicode regular expressions that one should be aware of:
 
 - Unicode regular expressions do not support so-called "identity escapes"; that is, patterns where an escaping backslash is not needed and effectively ignored. For example, `/\a/` is a valid regular expression matching the letter 'a', but `/\a/u` is not.
-
 - Curly brackets need to be escaped when not used as [quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers). For example, `/{/` is a valid regular expression matching the curly bracket '{', but `/{/u` is not — instead, the bracket should be escaped and `/\\{/u` should be used instead.
+- The `-` character is interpreted differently within character classes. In particular, for Unicode regular expressions, `-` is interpreted as a literal `-` (and not as part of a range) only if it appears at the start or end of the character class. For example, `/[\w-:]/` is a valid regular expression matching a word character, a `-`, or `:`, but `/[\w-:]/u` is an invalid regular expression, as `\w` to `:` is not a well-defined range of characters.
 
-- The `-` character is interpreted differently within character classes. In particular, for unicode regular expressions, `-` is interpreted as a literal `-` (and not as part of a range) only if it appears at the start or end of a pattern. For example, `/[\w-:]/` is a valid regular expression matching a word character, a `-`, or `:`, but `/\w-:/u` is an invalid regular expression, as `\w` to `:` is not a well-defined range of characters.
+Unicode regular expressions have different execution behavior as well. [`RegExp.prototype.unicode`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) contains more explanation about this.
 
 ## Examples
 
 > **Note:** Several examples are also available in:
 >
-> - The reference pages for {{jsxref("RegExp.exec", "exec()")}}, {{jsxref("RegExp.test", "test()")}}, {{jsxref("String.match", "match()")}}, {{jsxref("String.matchAll", "matchAll()")}}, {{jsxref("String.search", "search()")}}, {{jsxref("String.replace", "replace()")}}, {{jsxref("String.split", "split()")}}
-> - This guide articles': [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions), [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences), [quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers), [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
+> - The reference pages for {{jsxref("RegExp/exec", "exec()")}}, {{jsxref("RegExp/test", "test()")}}, {{jsxref("String/match", "match()")}}, {{jsxref("String/matchAll", "matchAll()")}}, {{jsxref("String/search", "search()")}}, {{jsxref("String/replace", "replace()")}}, {{jsxref("String/split", "split()")}}
+> - The guide articles: [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions), [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences), [quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers), [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
 
 ### Using special characters to verify input
 
@@ -444,11 +447,11 @@ The regular expression looks for:
 ```html
 <p>
   Enter your phone number (with area code) and then click "Check".
-  <br>
+  <br />
   The expected format is like ###-###-####.
 </p>
 <form id="form">
-  <input id="phone">
+  <input id="phone" />
   <button type="submit">Check</button>
 </form>
 <p id="output"></p>
@@ -457,23 +460,21 @@ The regular expression looks for:
 #### JavaScript
 
 ```js
-const form = document.querySelector('#form');
-const input = document.querySelector('#phone');
-const output = document.querySelector('#output');
+const form = document.querySelector("#form");
+const input = document.querySelector("#phone");
+const output = document.querySelector("#output");
 
-const re = /^(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}$/;
+const re = /^(?:\d{3}|\(\d{3}\))([-/.])\d{3}\1\d{4}$/;
 
 function testInfo(phoneInput) {
   const ok = re.exec(phoneInput.value);
 
-  if (!ok) {
-    output.textContent = `${phoneInput.value} isn't a phone number with area code!`;
-  } else {
-    output.textContent = `Thanks, your phone number is ${ok[0]}`;
-  }
+  output.textContent = ok
+    ? `Thanks, your phone number is ${ok[0]}`
+    : `${phoneInput.value} isn't a phone number with area code!`;
 }
 
-form.addEventListener('submit', (event) => {
+form.addEventListener("submit", (event) => {
   event.preventDefault();
   testInfo(input);
 });
@@ -490,7 +491,7 @@ form.addEventListener('submit', (event) => {
 - [Regex tester](https://regex101.com/)
   - : An online regex builder/debugger
 - [Regex interactive tutorial](https://regexlearn.com/)
-  - : An online interactive tutorials, Cheatsheet, & Playground.
+  - : An online interactive tutorials, Cheat sheet, & Playground.
 - [Regex visualizer](https://extendsclass.com/regex-tester.html)
   - : An online visual regex tester.
 

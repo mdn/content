@@ -1,15 +1,17 @@
 ---
 title: continue
 slug: Web/JavaScript/Reference/Statements/continue
+page-type: javascript-statement
 tags:
   - JavaScript
   - Language feature
   - Statement
 browser-compat: javascript.statements.continue
 ---
+
 {{jsSidebar("Statements")}}
 
-The **`continue` statement** terminates execution of the
+The **`continue`** statement terminates execution of the
 statements in the current iteration of the current or labeled loop, and continues
 execution of the loop with the next iteration.
 
@@ -17,8 +19,9 @@ execution of the loop with the next iteration.
 
 ## Syntax
 
-```js
-continue [label];
+```js-nolint
+continue;
+continue label;
 ```
 
 - `label` {{optional_inline}}
@@ -27,12 +30,9 @@ continue [label];
 ## Description
 
 In contrast to the {{jsxref("Statements/break", "break")}} statement,
-`continue` does not terminate the execution of the loop entirely: instead,
+`continue` does not terminate the execution of the loop entirely, but instead:
 
 - In a {{jsxref("Statements/while", "while")}} loop, it jumps back to the condition.
-
-<!---->
-
 - In a {{jsxref("Statements/for", "for")}} loop, it jumps to the update expression.
 
 The `continue` statement can include an optional label that allows the
@@ -82,19 +82,18 @@ let i = 0;
 let j = 8;
 
 checkiandj: while (i < 4) {
-  console.log('i: ' + i);
+  console.log(`i: ${i}`);
   i += 1;
 
   checkj: while (j > 4) {
-    console.log('j: ' + j);
+    console.log(`j: ${j}`);
     j -= 1;
 
-    if ((j % 2) === 0)
-      continue checkj;
-    console.log(j + ' is odd.');
+    if (j % 2 === 0) continue checkj;
+    console.log(`${j} is odd.`);
   }
-  console.log('i = ' + i);
-  console.log('j = ' + j);
+  console.log(`i = ${i}`);
+  console.log(`j = ${j}`);
 }
 ```
 

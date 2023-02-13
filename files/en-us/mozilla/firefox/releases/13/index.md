@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Gecko
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Firefox 13 that affect developers.
@@ -27,7 +28,7 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 
 ### JavaScript
 
-- Support for the ECMAScript 2015 [`for..of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) construct has been added.
+- Support for the ECMAScript 2015 [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) construct has been added.
 - Experimental support for ECMAScript 2015 [Map](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) and [Set](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) objects has been implemented.
 
 ### DOM
@@ -108,7 +109,7 @@ Starting in Firefox 13, Firefox for Windows requires at least Windows XP Service
 
 - The `nsIScreen` interface now supports controlling rotation through the new `rotation` attribute.
 - The `nsIPrefBranch2` interface has been merged into `nsIPrefBranch` ({{bug("718255")}}).
-- The new message manager wakeup service, implemented by `nsIMessageWakeupService`, has been implemented. See {{bug(591052)}}.
+- The new message manager wake-up service, implemented by `nsIMessageWakeupService`, has been implemented. See {{bug(591052)}}.
 - The aliases `MozOpacity`, `MozOutline`, `MozOutlineStyle`, `MozOutlineWidth`, `MozOutlineOffset`, and `MozOutlineColor`, all of which were removed in previous versions of Gecko, have been removed from `nsIDOMCSS2Properties`, which should have been done with the aliases were initially removed.
 - The `nsINavHistoryQueryOptions` attribute `excludeItemIfParentHasAnnotation` has been removed, along with the corresponding query operation. It existed to support livemarks, which no longer exist.
 

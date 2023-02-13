@@ -14,6 +14,7 @@ tags:
   - writeValue()
 browser-compat: api.BluetoothRemoteGATTDescriptor.writeValue
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTDescriptor.writeValue()`**
@@ -22,7 +23,7 @@ an {{jsxref("ArrayBuffer")}} and returns a {{jsxref("Promise")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 writeValue(array)
 ```
 

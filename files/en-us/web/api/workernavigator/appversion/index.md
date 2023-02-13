@@ -11,6 +11,7 @@ tags:
   - appVersion
 browser-compat: api.WorkerNavigator.appVersion
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 Returns either "`4.0`" or a string representing version information about

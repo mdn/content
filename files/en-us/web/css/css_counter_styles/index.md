@@ -1,6 +1,7 @@
 ---
 title: CSS Counter Styles
 slug: Web/CSS/CSS_Counter_Styles
+page-type: css-module
 tags:
   - CSS
   - CSS Counter Styles
@@ -13,6 +14,7 @@ browser-compat:
   - css.properties.counter-increment
   - css.properties.counter-reset
 ---
+
 {{CSSRef}}
 
 **CSS Counter Styles** is a module of CSS that lets you define your own counter styles.

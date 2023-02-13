@@ -13,6 +13,7 @@ tags:
   - speech
 browser-compat: api.SpeechGrammarList.SpeechGrammarList
 ---
+
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
 The **`SpeechGrammarList()`** constructor creates a new
@@ -20,7 +21,7 @@ The **`SpeechGrammarList()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new SpeechGrammarList()
 ```
 
@@ -30,7 +31,7 @@ None.
 
 ## Examples
 
-In our simple [Speech color changer](https://github.com/mdn/dom-examples/tree/master/web-speech-api/speech-color-changer) example, we create a new `SpeechRecognition` object
+In our simple [Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer) example, we create a new `SpeechRecognition` object
 instance using the {{domxref("SpeechRecognition.SpeechRecognition",
   "SpeechRecognition()")}} constructor, create a new {{domxref("SpeechGrammarList")}}, add
 our grammar string to it using the {{domxref("SpeechGrammarList.addFromString")}}

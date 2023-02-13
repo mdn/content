@@ -2,11 +2,12 @@
 title: Firefox 70 for developers
 slug: Mozilla/Firefox/Releases/70
 tags:
-  - '70'
+  - "70"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 70 that will affect developers. Firefox 70 was released on October 22, 2019.

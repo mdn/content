@@ -8,7 +8,6 @@ tags:
   - Constructor
   - Media
   - Media Capture
-  - Media Recorder API
   - MediaRecorder
   - Reference
   - Video
@@ -27,9 +26,9 @@ and codec configuration(s) to use by specifying [the `codecs` parameter](/en-US/
 
 ## Syntax
 
-```js
-new MediaRecorder(stream);
-new MediaRecorder(stream, options);
+```js-nolint
+new MediaRecorder(stream)
+new MediaRecorder(stream, options)
 ```
 
 ### Parameters
@@ -69,7 +68,7 @@ new MediaRecorder(stream, options);
 
     > **Note:** Video resolution, frame rate and similar settings are specified as constraints
     > when calling {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}},
-    > not here in the MediaRecorder API.
+    > not here in the MediaStream Recording API.
 
 ### Exceptions
 
@@ -88,17 +87,17 @@ if (navigator.mediaDevices.getUserMedia) {
   const constraints = { audio: true, video: true };
   const chunks = [];
 
-  const onSuccess = function(stream) {
+  const onSuccess = (stream) => {
     const options = {
-      audioBitsPerSecond : 128000,
-      videoBitsPerSecond : 2500000,
-      mimeType : 'video/mp4'
-    }
-    const mediaRecorder = new MediaRecorder(stream,options);
+      audioBitsPerSecond: 128000,
+      videoBitsPerSecond: 2500000,
+      mimeType: "video/mp4",
+    };
+    const mediaRecorder = new MediaRecorder(stream, options);
     m = mediaRecorder;
 
     // …
-  }
+  };
 }
 ```
 
@@ -112,8 +111,8 @@ if (navigator.mediaDevices.getUserMedia) {
 
 ## See also
 
-- [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Using the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [Web Dictaphone](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder +
-  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/master/media/web-dictaphone).)
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone).)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("MediaDevices.getUserMedia")}}

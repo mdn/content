@@ -1,6 +1,7 @@
 ---
 title: Date.prototype.getFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
+page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getFullYear
 ---
+
 {{JSRef}}
 
 The **`getFullYear()`** method returns the year of the
@@ -21,7 +23,7 @@ method.
 
 ## Syntax
 
-```js
+```js-nolint
 getFullYear()
 ```
 

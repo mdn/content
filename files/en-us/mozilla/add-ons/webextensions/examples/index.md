@@ -5,6 +5,7 @@ tags:
   - Interface
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 To illustrate how to use the WebExtension APIs, we maintain a repository of example extensions at <https://github.com/mdn/webextensions-examples>. This article describes how to run these examples and lists the examples along with the WebExtension APIs they demonstrate.

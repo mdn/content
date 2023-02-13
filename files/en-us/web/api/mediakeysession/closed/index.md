@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - EncryptedMediaExtensions
-  - Experimental
   - MediaKeySession
   - NeedsExample
   - Property
@@ -13,6 +12,7 @@ tags:
   - closed
 browser-compat: api.MediaKeySession.closed
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The `MediaKeySession.closed` read-only property returns a

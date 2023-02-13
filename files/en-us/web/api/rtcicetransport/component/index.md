@@ -19,6 +19,7 @@ tags:
   - component
 browser-compat: api.RTCIceTransport.component
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **{{domxref("RTCIceTransport")}}**

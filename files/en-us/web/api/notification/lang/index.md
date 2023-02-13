@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Notification.lang
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`lang`** read-only property of the

@@ -8,6 +8,7 @@ tags:
   - Read-only
 browser-compat: api.Node.ownerDocument
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`ownerDocument`** property of the {{domxref("Node")}} interface

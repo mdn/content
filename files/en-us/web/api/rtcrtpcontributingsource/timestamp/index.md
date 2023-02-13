@@ -12,6 +12,7 @@ tags:
   - timeStamp
 browser-compat: api.RTCRtpContributingSource.timestamp
 ---
+
 {{APIRef("WebRTC API")}}
 
 The read-only **`timestamp`** property

@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findLastIndex
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method
@@ -11,9 +12,10 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.findLastIndex
 ---
+
 {{JSRef}}
 
-The **`findLastIndex()`** method returns the index of the first element in a [typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) that satisfies the provided testing function.
+The **`findLastIndex()`** method iterates a [typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) in reverse order and returns the index of the first element that satisfies the provided testing function.
 If no values satisfy the testing function, -1 is returned.
 
 See also the {{jsxref("TypedArray.findLast()", "findLast()")}} method, which returns the value of the found element rather than its index.
@@ -22,7 +24,7 @@ See also the {{jsxref("TypedArray.findLast()", "findLast()")}} method, which ret
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 findLastIndex((element) => { /* ... */ } )
 findLastIndex((element, index) => { /* ... */ } )
@@ -105,10 +107,10 @@ function isPrime(element) {
 
 let uint8 = new Uint8Array([4, 6, 8, 12]);
 console.log(uint8.findLastIndex(isPrime));
-// Expected output: -1 (no primes in array)
+// -1 (no primes in array)
 uint8 = new Uint8Array([4, 5, 7, 8, 9, 11, 12]);
 console.log(uint8.findLastIndex(isPrime));
-// Expected output: 11
+// 11
 ```
 
 ## Specifications

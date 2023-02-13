@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.DOMImplementation.createDocumentType
 ---
+
 {{ ApiRef("DOM")}}
 
 The **`DOMImplementation.createDocumentType()`** method returns
@@ -20,7 +21,7 @@ into the document via methods like {{domxref("Node.insertBefore()")}} or
 
 ## Syntax
 
-```js
+```js-nolint
 createDocumentType(qualifiedNameStr, publicId, systemId)
 ```
 
@@ -36,7 +37,7 @@ createDocumentType(qualifiedNameStr, publicId, systemId)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A [`DocumentType`](/en-US/docs/Web/API/DocumentType).
 
 ## Examples
 

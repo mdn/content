@@ -2,6 +2,7 @@
 title: Comparing Reflect and Object methods
 slug: >-
   Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods
+page-type: guide
 tags:
   - Guide
   - JavaScript
@@ -10,9 +11,10 @@ tags:
   - Overview
   - Reflect
 ---
+
 {{jssidebar}}
 
-The {{jsxref("Reflect")}} object, introduced in ES2015, is a built-in object that provides methods to interface with JavaScript objects. Some of the static functions that exist on `Reflect` also correspond to methods available on {{jsxref("Object")}}, which predates ES2015. Although some of the methods appear to be similar in their behavior, there are often subtle differences between them.
+The {{jsxref("Reflect")}} object is a built-in object that provides methods to interface with JavaScript objects. Some of the static functions that exist on `Reflect` also correspond to methods available on {{jsxref("Object")}}. Although some of the methods appear to be similar in their behavior, there are often subtle differences between them.
 
 The table below details the differences between the methods available on the `Object` and `Reflect` APIs. Please note that if a method does not exist in an API, it is marked as N/A.
 
@@ -54,7 +56,7 @@ The table below details the differences between the methods available on the `Ob
         {{jsxref("Reflect.has()")}} returns <code>true</code> if the
         property exists on the object or on its prototype chain or
         <code>false</code> otherwise, similar to the
-        [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in).
+        {{jsxref("Operators/in", "in")}} operator.
         Throws a <code>TypeError</code> if the target was not
         an <code>Object</code>.
       </td>

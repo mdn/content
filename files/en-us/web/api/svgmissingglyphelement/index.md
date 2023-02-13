@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGMissingGlyphElement
 ---
+
 {{APIRef("SVG")}}{{deprecated_header}}
 
 The **`SVGMissingGlyphElement`** interface corresponds to the {{SVGElement("missing-glyph")}} elements.
@@ -18,11 +19,11 @@ Object-oriented access to the attributes of the {{SVGElement("missing-glyph")}} 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface has no properties but inherits properties from its parent, {{domxref("SVGElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface has no methods but inherits methods from its parent, {{domxref("SVGElement")}}._
 

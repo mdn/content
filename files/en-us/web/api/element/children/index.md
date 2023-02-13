@@ -11,6 +11,7 @@ tags:
   - children
 browser-compat: api.Element.children
 ---
+
 {{ APIRef("DOM") }}
 
 The read-only **`children`** property returns a live {{domxref("HTMLCollection")}}
@@ -33,8 +34,8 @@ If the element has no element children, then `children` is an empty list with a
 
 ```js
 const myElement = document.getElementById('foo');
-for (let i = 0; i < myElement.children.length; i++) {
-  console.log(myElement.children[i].tagName);
+for (const child of myElement.children) {
+  console.log(child.tagName);
 }
 ```
 

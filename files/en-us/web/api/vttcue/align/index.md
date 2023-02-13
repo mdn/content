@@ -10,6 +10,7 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.align
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`align`** property of the {{domxref("VTTCue")}} interface represents the alignment of all of the lines of text in the text box.

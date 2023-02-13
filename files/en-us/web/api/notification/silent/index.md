@@ -10,9 +10,11 @@ tags:
   - Property
   - Reference
   - silent
+  - Experimental
 browser-compat: api.Notification.silent
 ---
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`silent`** read-only property of the
 {{domxref("Notification")}} interface specifies whether the notification should be

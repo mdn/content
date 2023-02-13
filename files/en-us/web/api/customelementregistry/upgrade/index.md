@@ -12,6 +12,7 @@ tags:
   - custom elements
 browser-compat: api.CustomElementRegistry.upgrade
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 The **`upgrade()`** method of the
@@ -21,7 +22,7 @@ document.
 
 ## Syntax
 
-```js
+```js-nolint
 upgrade(root)
 ```
 
@@ -48,7 +49,7 @@ customElements.define("spider-man", SpiderMan);
 console.assert(!(el instanceof SpiderMan)); // not yet upgraded
 
 customElements.upgrade(el);
-console.assert(el instanceof SpiderMan);    // upgraded!
+console.assert(el instanceof SpiderMan); // upgraded!
 ```
 
 ## Specifications

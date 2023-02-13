@@ -4,6 +4,7 @@ slug: Web/API/SVGAltGlyphElement/format
 page-type: web-api-instance-property
 browser-compat: api.SVGAltGlyphElement.format
 ---
+
 {{APIRef("SVGAltGlyphElement")}}
 
 {{Deprecated_header}}
@@ -11,21 +12,18 @@ browser-compat: api.SVGAltGlyphElement.format
 The **`SVGAltGlyphElement.format`** property is a
 string that defines the format of the given font. It has the same
 meaning as the 'format' property of {{domxref("SVGGlyphRefElement")}} property. If the
-font is in one of the formats listed in [CSS2(\[CSS2\],
-section15.3.5)](https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#referencing), then its value is the corresponding \<string> parameter
-of the font.
+font is in one of the formats listed in [CSS2 section 15.3.5](https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#referencing), then its value is the corresponding \<string> parameter of the font.
 
 ## Syntax
 
-```js
-string = myGlyph.format;
- myGlyph.format = string;
+```js-nolint
+string = myGlyph.format
+myGlyph.format = string
 ```
 
 ### Value
 
-The format values listed below are taken from [CSS2(\[CSS2\],
-section15.3.5)](https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#referencing).
+The format values listed below are taken from [CSS2](https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#referencing).
 
 | String            | Font Format                       | Examples of common extensions |
 | ----------------- | --------------------------------- | ----------------------------- |

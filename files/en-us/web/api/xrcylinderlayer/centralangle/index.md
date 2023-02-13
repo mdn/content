@@ -11,9 +11,11 @@ tags:
   - WebXR API
   - WebXR Device API
   - XR
+  - Experimental
 browser-compat: api.XRCylinderLayer.centralAngle
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`centralAngle`** property of the {{domxref("XRCylinderLayer")}} interface represents the angle in radians of the visible section of the cylinder.
 

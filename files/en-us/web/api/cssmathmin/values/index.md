@@ -13,6 +13,7 @@ tags:
   - Read-only
 browser-compat: api.CSSMathMin.values
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The CSSMathMin.values read-only property of the

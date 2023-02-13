@@ -12,6 +12,7 @@ tags:
   - eval
 browser-compat: webextensions.api.devtools.inspectedWindow.eval
 ---
+
 {{AddonSidebar()}}
 
 Executes JavaScript in the window that the devtools are attached to.
@@ -43,7 +44,7 @@ The script gets access to a number of objects that help the injected script inte
 
 ## Syntax
 
-```js
+```js-nolint
 let evaluating = browser.devtools.inspectedWindow.eval(
   expression,       // string
   options           // object
@@ -53,7 +54,7 @@ let evaluating = browser.devtools.inspectedWindow.eval(
 ### Parameters
 
 - `expression`
-  - : `string`. The JavaScript expression to evaluate. The string must evaluate to a object that can be represented as JSON, or an exception will be thrown. For example, `expression` must not evaluate to a function.
+  - : `string`. The JavaScript expression to evaluate. The string must evaluate to an object that can be represented as JSON, or an exception will be thrown. For example, `expression` must not evaluate to a function.
 - `options` {{optional_inline}}
 
   - : `object`. Options for the function (Note that Firefox does not yet support this options), as follows:
@@ -174,10 +175,9 @@ inspectButton.addEventListener("click", () => {
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv3/devtools/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -204,4 +204,4 @@ inspectButton.addEventListener("click", () => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

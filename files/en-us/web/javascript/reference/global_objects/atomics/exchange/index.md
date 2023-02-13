@@ -1,6 +1,7 @@
 ---
 title: Atomics.exchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
+page-type: javascript-static-method
 tags:
   - Atomics
   - JavaScript
@@ -8,9 +9,10 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.exchange
 ---
+
 {{JSRef}}
 
-The static **`Atomics.exchange()`** method stores a given value
+The **`Atomics.exchange()`** static method stores a given value
 at a given position in the array and returns the old value at that position. This atomic
 operation guarantees that no other write happens between the read of the old value and
 the write of the new value.
@@ -19,7 +21,7 @@ the write of the new value.
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.exchange(typedArray, index, value)
 ```
 

@@ -9,6 +9,7 @@ tags:
   - Property
 browser-compat: api.ProgressEvent.lengthComputable
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The

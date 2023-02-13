@@ -1,6 +1,7 @@
 ---
 title: <vkern>
 slug: Web/SVG/Element/vkern
+page-type: svg-element
 tags:
   - Deprecated
   - Element
@@ -10,6 +11,7 @@ tags:
   - SVG Font
 browser-compat: svg.elements.vkern
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`<vkern>`** SVG element allows to fine-tweak the vertical distance between two glyphs in top-to-bottom fonts. This process is known as [kerning](https://en.wikipedia.org/wiki/Kerning).
@@ -26,11 +28,11 @@ The **`<vkern>`** SVG element allows to fine-tweak the vertical distance between
 
 ### Specific attributes
 
-- {{SVGAttr("u1")}}
-- {{SVGAttr("g1")}}
-- {{SVGAttr("u2")}}
-- {{SVGAttr("g2")}}
-- {{SVGAttr("k")}}
+- {{SVGAttr("u1")}} {{Deprecated_Inline}}
+- {{SVGAttr("g1")}} {{Deprecated_Inline}}
+- {{SVGAttr("u2")}} {{Deprecated_Inline}}
+- {{SVGAttr("g2")}} {{Deprecated_Inline}}
+- {{SVGAttr("k")}} {{Deprecated_Inline}}
 
 ## DOM Interface
 

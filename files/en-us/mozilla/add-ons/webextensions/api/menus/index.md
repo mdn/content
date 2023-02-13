@@ -13,6 +13,7 @@ tags:
   - menus
 browser-compat: webextensions.api.menus
 ---
+
 {{AddonSidebar}}
 
 Add items to the browser's menu system.
@@ -21,7 +22,7 @@ This API is modeled on Chrome's ["contextMenus"](https://developer.chrome.com/do
 
 Before Firefox 55 this API was also originally named `contextMenus`, and that name has been retained as an alias, so you can use `contextMenus` to write code that works in Firefox and also in other browsers.
 
-To use this API you need to have the `menus`  [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). You may also use the `contextMenus` alias instead of `menus`, but if you do, the APIs must be accessed as `browser.contextMenus` instead.
+To use this API you need to have the `menus` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). You may also use the `contextMenus` alias instead of `menus`, but if you do, the APIs must be accessed as `browser.contextMenus` instead.
 
 Except for [`menus.getTargetElement()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement), this API cannot be used from content scripts.
 
@@ -40,23 +41,23 @@ You can create four different types of menu item, based on the value of the `typ
 
 If you have created more than one context menu item or more than one tools menu item, then the items will be placed in a submenu. The submenu's parent will be labeled with the name of the extension. For example, here's an extension called "Menu demo" that's added two context menu items:
 
-![](menus-1.png)
+![Context menu with two items labeled click me, and click me too!](menus-1.png)
 
 ## Icons
 
 If you've specified icons for your extension using the ["icons" manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons), your menu item will display the specified icon next to its label. The browser will try to choose a 16x16 pixel icon for a normal display or a 32x32 pixel icon for a high-density display:
 
-![](menus-2.png)
+![Context menu with two items labeled click me, and click me too!](menus-2.png)
 
 Only for items in a submenu, you can specify custom icons by passing the `icons` option to {{WebExtAPIRef("menus.create()")}}:
 
-![](menus-3.png)
+![Context menu with two items labeled click me, and click me too!. The click me option is labeled with a green paint can icon. The click me too option is labeled with a blue paint can icon.](menus-3.png)
 
 ## Example
 
 Here's a context menu containing 4 items: a normal item, two radio items with separators on each side, and a checkbox. The radio items are given custom icons.
 
-![](menus-4.png)You could create a submenu like this using code like:
+![Context menu with four items labeled remove me, Greenify, Bluify, and uncheck me. Greenify and Bluify are radio buttons given custom icons.](menus-4.png)You could create a submenu like this using code like:
 
 ```js
 browser.menus.create({
@@ -162,7 +163,8 @@ browser.menus.create({
 >
 > This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/contextMenus/) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -189,4 +191,4 @@ browser.menus.create({
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

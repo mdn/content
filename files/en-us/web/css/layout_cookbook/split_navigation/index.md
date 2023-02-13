@@ -1,6 +1,7 @@
 ---
-title: Split Navigation
+title: Split navigation
 slug: Web/CSS/Layout_cookbook/Split_Navigation
+page-type: guide
 tags:
   - CSS
   - Guide
@@ -10,6 +11,7 @@ tags:
   - flexbox
 browser-compat: css.properties.flex
 ---
+
 {{CSSRef}}
 
 A navigation pattern where one or more elements are separated from the rest of the navigation items.

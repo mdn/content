@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.IDBFileHandle.abort
 ---
+
 {{APIRef("IndexedDB")}}{{deprecated_header}}
 
 > **Note:** The three non-standard interfaces {{domxref("IDBMutableFile")}}, {{domxref("IDBFileHandle")}}, and {{domxref("IDBFileRequest")}} are [disabled by default](#browser_compatibility).
@@ -19,8 +20,8 @@ browser-compat: api.IDBFileHandle.abort
 
 The **`abort()`** method of the {{domxref("IDBFileHandle")}} interface
 release the lock on the object, making it inactive:
- its {{domxref("IDBFileHandle.active", "active")}} property is set to `false`
- and all ongoing operations are canceled.
+its {{domxref("IDBFileHandle.active", "active")}} property is set to `false`
+and all ongoing operations are canceled.
 
 > **Warning:** When an ongoing operation is canceled, there is no rollback
 > database transaction, therefore the file can be corrupted if the
@@ -28,7 +29,7 @@ release the lock on the object, making it inactive:
 
 ## Syntax
 
-```js
+```js-nolint
 abort()
 ```
 

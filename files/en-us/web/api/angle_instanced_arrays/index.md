@@ -9,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.ANGLE_instanced_arrays
 ---
+
 {{APIRef("WebGL")}}
 
 The **`ANGLE_instanced_arrays`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and allows to draw the same object, or groups of similar objects multiple times, if they share the same vertex data, primitive count and type.
@@ -26,7 +27,7 @@ This extension exposes one new constant, which can be used in the {{domxref("Web
 - `ext.VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE`
   - : Returns a {{domxref("WebGL_API/Types", "GLint")}} describing the frequency divisor used for instanced rendering when used in the {{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}} as the `pname` parameter.
 
-## Methods
+## Instance methods
 
 This extension exposes three new methods.
 
@@ -40,16 +41,24 @@ This extension exposes three new methods.
 ## Examples
 
 The following example shows how to draw a given geometry multiple times with a single draw call.
+
 > **Warning:** The following is educational, not production level code. It should generally be avoided to construct data / buffers within the rendering loop or right before use.
 
 ```js
 // enable the extension
-const ext = gl.getExtension('ANGLE_instanced_arrays');
+const ext = gl.getExtension("ANGLE_instanced_arrays");
 
 // binding the geometry buffer as usual
 gl.bindBuffer(gl.ARRAY_BUFFER, geometryVertexBuffer);
 gl.enableVertexAttribArray(vertexPositionAttributeLocation);
-gl.vertexAttribPointer(vertexPositionAttributeLocation, 3, gl.FLOAT, false, 0, 0);
+gl.vertexAttribPointer(
+  vertexPositionAttributeLocation,
+  3,
+  gl.FLOAT,
+  false,
+  0,
+  0
+);
 
 // build position buffer
 const instancePositions = [];
@@ -65,13 +74,25 @@ const instancePositionBuffer = createWebGLBufferFromData(instancePositions);
 // binding the instance position buffer as you would with any attribute
 gl.bindBuffer(gl.ARRAY_BUFFER, instancePositionBuffer);
 gl.enableVertexAttribArray(instancePositionAttributeLocation);
-gl.vertexAttribPointer(instancePositionAttributeLocation, 3, gl.FLOAT, false, 0, 0);
+gl.vertexAttribPointer(
+  instancePositionAttributeLocation,
+  3,
+  gl.FLOAT,
+  false,
+  0,
+  0
+);
 
 // mark the attribute as instanced and advance it every single(1) instance rather than every vertex
 ext.vertexAttribDivisorANGLE(instancePositionAttributeLocation, 1);
 
 // draw geometry for each instance
-ext.drawArraysInstancedANGLE(gl.TRIANGLES, 0, numGeometryVertices, instances.length);
+ext.drawArraysInstancedANGLE(
+  gl.TRIANGLES,
+  0,
+  numGeometryVertices,
+  instances.length
+);
 ```
 
 ## Specifications

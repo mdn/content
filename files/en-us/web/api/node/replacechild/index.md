@@ -7,15 +7,15 @@ tags:
   - Reference
 browser-compat: api.Node.replaceChild
 ---
+
 {{APIRef("DOM")}}
 
-The **`replaceChild()`** method of the {{domxref("Node")}} element
-replaces a child node within the given (parent) node.
+The **`replaceChild()`** method of the {{domxref("Node")}} interface replaces a child node within the given (parent) node.
 
 ## Syntax
 
-```js
-replaceChild(newChild, oldChild);
+```js-nolint
+replaceChild(newChild, oldChild)
 ```
 
 ### Parameters
@@ -27,8 +27,8 @@ replaceChild(newChild, oldChild);
   - : The child to be replaced.
 
 > **Note:** The parameter order, _new_ before _old_, is unusual.
-[`Element.replaceWith()`](/en-US/docs/Web/API/Element/replaceWith), applying only to nodes that are elements,
-may be easier to read and use.
+> [`Element.replaceWith()`](/en-US/docs/Web/API/Element/replaceWith), applying only to nodes that are elements,
+> may be easier to read and use.
 
 ### Return value
 

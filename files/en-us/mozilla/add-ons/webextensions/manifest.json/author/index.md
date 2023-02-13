@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.author
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

@@ -1,6 +1,7 @@
 ---
 title: autocapitalize
 slug: Web/HTML/Global_attributes/autocapitalize
+page-type: html-attribute
 tags:
   - Autocapitalize
   - Global attributes
@@ -11,7 +12,7 @@ browser-compat: html.global_attributes.autocapitalize
 
 {{HTMLSidebar("Global_attributes")}}
 
-The **`autocapitalize`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an enumerated attribute that controls whether and how text input is automatically capitalized as it is entered/edited by the user.
+The **`autocapitalize`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute that controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 
 The attribute must take one of the following values:
 

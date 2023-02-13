@@ -11,6 +11,7 @@ tags:
   - altitude
 browser-compat: api.GeolocationCoordinates.altitude
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationCoordinates.altitude`** read-only property is

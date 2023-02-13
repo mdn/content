@@ -15,6 +15,7 @@ tags:
   - WebRTC API
 browser-compat: api.RTCIceCandidate.protocol
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}** interface's read-only **`protocol`** property is a string

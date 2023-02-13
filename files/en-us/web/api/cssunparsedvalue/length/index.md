@@ -14,6 +14,7 @@ tags:
   - length
 browser-compat: api.CSSUnparsedValue.length
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`length`** read-only property of the
@@ -29,7 +30,7 @@ In this example we employ the {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CS
 constructor, then query the length:
 
 ```js
-const values = new CSSUnparsedValue(['1em', '#445566', '-45px']);
+const values = new CSSUnparsedValue(["1em", "#445566", "-45px"]);
 
 console.log(values.length); // 3
 ```

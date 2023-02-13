@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method
@@ -11,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.reduceRight
 ---
+
 {{JSRef}}
 
 The **`reduceRight()`** method applies a function against an
@@ -19,9 +21,11 @@ single value. This method has the same algorithm as
 {{jsxref("Array.prototype.reduceRight()")}}. _TypedArray_ is one of the
 [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
+{{EmbedInteractiveExample("pages/js/typedarray-reduceright.html")}}
+
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 reduceRight((accumulator, currentValue) => { /* ... */ } )
 reduceRight((accumulator, currentValue, index) => { /* ... */ } )
@@ -74,7 +78,7 @@ index, and the typed array over which iteration is occurring.
 The call to the `reduceRight` callback would look something like this:
 
 ```js
-typedarray.reduceRight(function(accumulator, currentValue, index, typedarray) {
+typedarray.reduceRight((accumulator, currentValue, index, typedarray) => {
   // ...
 });
 ```
@@ -100,9 +104,7 @@ value would be returned without calling `callbackFn`.
 ### Sum up all values within an array
 
 ```js
-const total = new Uint8Array([0, 1, 2, 3]).reduceRight(function(a, b) {
-  return a + b;
-});
+const total = new Uint8Array([0, 1, 2, 3]).reduceRight((a, b) => a + b);
 // total === 6
 ```
 

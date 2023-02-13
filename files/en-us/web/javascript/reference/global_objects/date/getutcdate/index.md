@@ -1,6 +1,7 @@
 ---
 title: Date.prototype.getUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
+page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript
@@ -9,22 +10,23 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getUTCDate
 ---
+
 {{JSRef}}
 
-The **`getUTCDate()`** method returns the day of the month(from
+The **`getUTCDate()`** method returns the day of the month (from
 1 to 31) in the specified date according to universal time.
 
 {{EmbedInteractiveExample("pages/js/date-getutcdate.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 getUTCDate()
 ```
 
 ### Return value
 
-A `number`.
+A number.
 If the `Date` object represents a valid date, an integer number ranging from 1 to 31
 representing day of month for the given date, according to universal time.
 Otherwise, [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)

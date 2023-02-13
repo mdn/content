@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.USBDevice.vendorId
 ---
+
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
 The **`vendorId`** read only property of the

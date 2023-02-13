@@ -1,6 +1,7 @@
 ---
 title: polygon()
 slug: Web/CSS/basic-shape/polygon
+page-type: css-function
 tags:
   - CSS
   - CSS Data Type
@@ -11,6 +12,7 @@ tags:
   - Reference
 browser-compat: css.types.basic-shape.polygon
 ---
+
 {{CSSRef}}
 
 The **`polygon()`** [CSS](/en-US/docs/Web/CSS) function is one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Types).

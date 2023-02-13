@@ -1,11 +1,13 @@
 ---
 title: stroke-width
 slug: Web/SVG/Attribute/stroke-width
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute
 browser-compat: svg.attributes.presentation.stroke-width
 ---
+
 {{SVGRef}}
 
 The **`stroke-width`** attribute is a presentation attribute defining the width of the stroke to be applied to the shape.
@@ -28,7 +30,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -37,12 +43,10 @@ html,body,svg { height:100% }
   <circle cx="5" cy="5" r="3" stroke="green" />
 
   <!-- Stroke width as a number -->
-  <circle cx="15" cy="5" r="3" stroke="green"
-          stroke-width="3" />
+  <circle cx="15" cy="5" r="3" stroke="green" stroke-width="3" />
 
   <!-- Stroke width as a percentage -->
-  <circle cx="25" cy="5" r="3" stroke="green"
-          stroke-width="2%" />
+  <circle cx="25" cy="5" r="3" stroke="green" stroke-width="2%" />
 </svg>
 ```
 

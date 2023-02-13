@@ -16,6 +16,7 @@ tags:
   - mid
 browser-compat: api.RTCRtpTransceiver.mid
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only {{domxref("RTCRtpTransceiver")}} interface's

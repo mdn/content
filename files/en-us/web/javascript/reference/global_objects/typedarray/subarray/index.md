@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.subarray()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method
@@ -10,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.subarray
 ---
+
 {{JSRef}}
 
 The **`subarray()`** method returns a new _TypedArray_
@@ -22,7 +24,7 @@ offset is **exclusive**. _TypedArray_ is one of the
 
 ## Syntax
 
-```js
+```js-nolint
 subarray()
 subarray(begin)
 subarray(begin, end)
@@ -66,7 +68,7 @@ console.log(uint8); // Uint8Array [ 1, 2, 3, 0, 0, 0, 0, 0 ]
 
 const sub = uint8.subarray(0, 4);
 
-console.log(sub);   // Uint8Array [ 1, 2, 3, 0 ]
+console.log(sub); // Uint8Array [ 1, 2, 3, 0 ]
 ```
 
 ## Specifications

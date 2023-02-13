@@ -10,21 +10,23 @@ tags:
   - XR
   - AR
   - VR
+  - Experimental
 browser-compat: api.XRTransientInputHitTestSource
 ---
-{{APIRef("WebXR Device API")}} {{secureContext_header}}
+
+{{APIRef("WebXR Device API")}} {{secureContext_header}}{{SeeCompatTable}}
 
 The **`XRTransientInputHitTestSource`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) handles transient input hit test subscriptions. You can get an `XRTransientInputHitTestSource` object by calling the {{domxref("XRSession.requestHitTestSourceForTransientInput()")}}.
 
 This object doesn't itself contain transient input hit test results, but it is used to compute hit tests for each {{domxref("XRFrame")}} by calling {{domxref("XRFrame.getHitTestResultsForTransientInput()")}}, which returns {{domxref("XRTransientInputHitTestResult")}} objects.
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
-- {{domxref("XRTransientInputHitTestSource.cancel()")}}
+- {{domxref("XRTransientInputHitTestSource.cancel()")}} {{Experimental_Inline}}
   - : Unsubscribes from the transient input hit test.
 
 ## Examples

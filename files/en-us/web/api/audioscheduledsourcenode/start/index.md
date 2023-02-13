@@ -17,6 +17,7 @@ tags:
   - start
 browser-compat: api.AudioScheduledSourceNode.start
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `start()` method on
@@ -26,7 +27,7 @@ immediately.
 
 ## Syntax
 
-```js
+```js-nolint
 start()
 start(when)
 ```

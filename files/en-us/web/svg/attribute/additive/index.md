@@ -1,6 +1,7 @@
 ---
 title: additive
 slug: Web/SVG/Attribute/additive
+page-type: svg-attribute
 tags:
   - NeedsCompatTable
   - NeedsExample
@@ -8,6 +9,7 @@ tags:
   - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#AdditiveAttribute
 ---
+
 {{SVGRef}}
 
 The **`additive`** attribute controls whether or not an animation is additive.

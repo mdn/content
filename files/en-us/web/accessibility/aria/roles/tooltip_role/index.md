@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: tooltip role'
+title: "ARIA: tooltip role"
 slug: Web/Accessibility/ARIA/Roles/tooltip_role
 tags:
   - Accessibility
@@ -26,7 +26,7 @@ Because the tooltip itself never receives focus and is not in the tabbing order,
 
 The tooltip is not the appropriate role for the more information "i" icon, ⓘ. A tooltip is directly associated with the owning element. The ⓘ isn't 'described by' detailed information; the tool or control is.
 
-The use of the ARIA  `tooltip` role is a supplement to the normal browser tooltip behavior. An example of a native browser tooltip is the way some browsers display an element's [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on long mouse hover. One cannot activate this feature through either keyboard focus or through touch interaction, making this feature inaccessible. If the information is important enough to include as a tooltip or title, consider including it in visible text.
+The use of the ARIA `tooltip` role is a supplement to the normal browser tooltip behavior. An example of a native browser tooltip is the way some browsers display an element's [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on long mouse hover. One cannot activate this feature through either keyboard focus or through touch interaction, making this feature inaccessible. If the information is important enough to include as a tooltip or title, consider including it in visible text.
 
 Elements with the `tooltip` role should be referenced through the use of [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) before or when the tooltip is displayed. The `aria-describedby` attribute is on the owning element, not on the tooltip.
 
@@ -64,12 +64,13 @@ The tooltip should appear on focus or when the element is hovered on, without ad
 <label for="password">Password:</label>
 <input aria-describedby="passwordrules" id="password" type="password" />
 <div role="tooltip" id="passwordrules">
-  <p>
-      Password Rules:
-  </p>
+  <p>Password Rules:</p>
   <ul>
-    <li> Minimum of 8 characters</li>
-    <li> Include at least one lowercase letter, one uppercase letter, one number and one special character</li>
+    <li>Minimum of 8 characters</li>
+    <li>
+      Include at least one lowercase letter, one uppercase letter, one number
+      and one special character
+    </li>
     <li>Unique to this website</li>
   </ul>
 </div>
@@ -78,8 +79,8 @@ The tooltip should appear on focus or when the element is hovered on, without ad
 The tooltip can be instantiated with CSS. Change the class name with JavaScript to a class that hides the tooltip if the user hits the <kbd>Escape</kbd> key.
 
 ```css
-[role=tooltip],
-.hidetooltip.hidetooltip.hidetooltip + [role=tooltip] {
+[role="tooltip"],
+.hidetooltip.hidetooltip.hidetooltip + [role="tooltip"] {
   visibility: hidden;
   position: absolute;
   top: 2rem;
@@ -91,9 +92,9 @@ The tooltip can be instantiated with CSS. Change the class name with JavaScript 
 [aria-describedby]:focus {
   position: relative;
 }
-[aria-describedby]:hover + [role=tooltip],
-[aria-describedby]:focus + [role=tooltip] {
- visibility: visible;
+[aria-describedby]:hover + [role="tooltip"],
+[aria-describedby]:focus + [role="tooltip"] {
+  visibility: visible;
 }
 ```
 
@@ -121,6 +122,6 @@ Instead of using tooltips and hiding important information, consider writing cle
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

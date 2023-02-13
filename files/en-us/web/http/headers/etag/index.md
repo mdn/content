@@ -8,6 +8,7 @@ tags:
   - header
 browser-compat: http.headers.ETag
 ---
+
 {{HTTPSidebar}}
 
 The **`ETag`** (or **entity tag**) HTTP response header is an identifier for a
@@ -18,9 +19,7 @@ each other (["mid-air collisions"](#avoiding_mid-air_collisions)).
 
 If the resource at a given URL changes, a new `Etag` value _must_ be
 generated. A comparison of them can determine whether two representations of a resource
-are the same. Etags are therefore similar to fingerprints, and might also be used for
-tracking purposes by some servers. They might also be set to persist indefinitely by a
-tracking server.
+are the same.
 
 <table class="properties">
   <tbody>
@@ -37,7 +36,7 @@ tracking server.
 
 ## Syntax
 
-```
+```http
 ETag: W/"<etag_value>"
 ETag: "<etag_value>"
 ```
@@ -61,7 +60,7 @@ ETag: "<etag_value>"
 
 ## Examples
 
-```
+```http
 ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ETag: W/"0815"
 ```
@@ -74,7 +73,7 @@ can detect mid-air edit collisions.
 For example, when editing a wiki, the current wiki content may be hashed
 and put into an `Etag` header in the response:
 
-```
+```http
 ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
@@ -82,7 +81,7 @@ When saving changes to a wiki page (posting data), the {{HTTPMethod("POST")}} re
 will contain the {{HTTPHeader("If-Match")}} header containing the `ETag`
 values to check freshness against.
 
-```
+```http
 If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
@@ -96,7 +95,7 @@ unchanged. If a user visits a given URL again (that has an `ETag` set), and
 it is _stale_ (too old to be considered usable), the client will send the value
 of its `ETag` along in an {{HTTPHeader("If-None-Match")}} header field:
 
-```
+```http
 If-None-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 

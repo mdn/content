@@ -7,9 +7,11 @@ tags:
   - Reference
   - Web NFC
   - Property
+  - Experimental
 browser-compat: api.NDEFMessage.records
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 The `records` property of
 {{DOMxRef("NDEFMessage")}} interface represents a list of {{DOMxRef("NDEFRecord")}}s
@@ -38,9 +40,9 @@ ndefReaderInst.onreading = (event) => {
         // TODO: Read URL record with record data.
         break;
       default:
-        // TODO: Handle other records with record data.
-    };
-  };
+      // TODO: Handle other records with record data.
+    }
+  }
 };
 ```
 

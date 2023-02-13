@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.isTransformFeedback
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.isTransformFeedback()`** method
@@ -18,7 +19,7 @@ if the passed object is a valid {{domxref("WebGLTransformFeedback")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 isTransformFeedback(transformFeedback)
 ```
 

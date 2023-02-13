@@ -1,6 +1,7 @@
 ---
 title: Right shift (>>)
 slug: Web/JavaScript/Reference/Operators/Right_shift
+page-type: javascript-operator
 tags:
   - Bitwise operator
   - JavaScript
@@ -9,9 +10,10 @@ tags:
   - Reference
 browser-compat: javascript.operators.right_shift
 ---
+
 {{jsSidebar("Operators")}}
 
-The **right shift operator (`>>`)** returns the signed number represented by the result of performing a sign-extending shift of the binary representation of the first operand (evaluated as a [two's complement](https://en.wikipedia.org/wiki/Two's_complement) bit string) to the right by the number of bits, modulo 32, specified in the second operand. Excess bits shifted off to the right are discarded, and copies of the leftmost bit are shifted in from the left.
+The **right shift (`>>`)** operator returns the signed number represented by the result of performing a sign-extending shift of the binary representation of the first operand (evaluated as a [two's complement](https://en.wikipedia.org/wiki/Two's_complement) bit string) to the right by the number of bits, modulo 32, specified in the second operand. Excess bits shifted off to the right are discarded, and copies of the leftmost bit are shifted in from the left.
 
 The resulting binary representation is evaluated as a [two's complement](https://en.wikipedia.org/wiki/Two's_complement) bit string. So if the leftmost bit in the resulting binary representation is `1`, the resulting number is negative. Because the leftmost bit (the sign bit) of the result will always have the same value as the leftmost bit of the first operand, the sign of the resulting number is the same as the sign of the first operand, hence the name "sign-extending right shift" or "sign-filling right shift". This operation is also commonly referred to as an "arithmetic right shift".
 
@@ -19,7 +21,7 @@ The resulting binary representation is evaluated as a [two's complement](https:/
 
 ## Syntax
 
-```js
+```js-nolint
 a >> b
 ```
 
@@ -33,12 +35,12 @@ leftmost bit, the sign bit (the leftmost bit) does not change. Hence the name
 
 Consider the 32-bit binary representations of the decimal (base 10) numbers `9` and `-9`:
 
-```js
+```
      9 (base 10): 00000000000000000000000000001001 (base 2)
     -9 (base 10): 11111111111111111111111111110111 (base 2)
 ```
 
-Notice that the binary representation of the negative decimal (base 10) number `-9` is the [two's complement](https://en.wikipedia.org/wiki/Two's_complement) of the binary representation of the positive decimal (base 10) number `9`. That is, it’s calculated by inverting all the bits of `00000000000000000000000000001001` and adding `1`.
+Notice that the binary representation of the negative decimal (base 10) number `-9` is the [two's complement](https://en.wikipedia.org/wiki/Two's_complement) of the binary representation of the positive decimal (base 10) number `9`. That is, it's calculated by inverting all the bits of `00000000000000000000000000001001` and adding `1`.
 
 In both cases, the sign of the binary number is given by its leftmost bit: for the positive decimal number `9`, the leftmost bit of the binary representation is `0`, and for the negative decimal number `-9`, the leftmost bit of the binary representation is `1`.
 
@@ -46,7 +48,7 @@ Given those binary representations of the decimal (base 10) numbers `9`, and `-9
 
 `9 >> 2` yields 2:
 
-```js
+```
      9 (base 10): 00000000000000000000000000001001 (base 2)
                   --------------------------------
 9 >> 2 (base 10): 00000000000000000000000000000010 (base 2) = 2 (base 10)
@@ -56,7 +58,7 @@ Notice how two rightmost bits, `01`, have been shifted off, and two copies of th
 
 `-9 >> 2` yields `-3`:
 
-```js
+```
      -9 (base 10): 11111111111111111111111111110111 (base 2)
                    --------------------------------
 -9 >> 2 (base 10): 11111111111111111111111111111101 (base 2) = -3 (base 10)
@@ -70,12 +72,14 @@ The left operand will be converted to a 32-bit integer, which means floating poi
 
 The right operand will be converted to an unsigned 32-bit integer and then taken modulo 32, so the actual shift offset will always be a positive integer between 0 and 31, inclusive. For example, `100 >> 32` is the same as `100 >> 0` (and produces `100`) because 32 modulo 32 is 0.
 
+Right shifting any number `x` by `0` returns `x` converted to a 32-bit integer. Do not use `>> 0` to truncate numbers to integers; use [`Math.trunc()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc#using_bitwise_no-ops_to_truncate_numbers) instead.
+
 ## Examples
 
 ### Using right shift
 
 ```js
- 9 >> 2; //  2
+9 >> 2; // 2
 -9 >> 2; // -3
 ```
 
@@ -91,3 +95,4 @@ The right operand will be converted to an unsigned 32-bit integer and then taken
 
 - [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)
 - [Right shift assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)
+- [Unsigned right shift operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)

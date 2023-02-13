@@ -10,13 +10,14 @@ tags:
   - FontFaceSet
 browser-compat: api.FontFaceSet.keys
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`keys()`** method of the {{domxref("FontFaceSet")}} interface is an alias for {{domxref("FontFaceSet.values")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

@@ -12,13 +12,14 @@ tags:
   - web animations api
 browser-compat: api.KeyframeEffect.KeyframeEffect
 ---
+
 {{ APIRef("Web Animations API") }}
 
 The **`KeyframeEffect()`** constructor of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a new {{domxref("KeyframeEffect")}} object instance, and also allows you to clone an existing keyframe effect object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new KeyframeEffect(target, keyframes)
 new KeyframeEffect(target, keyframes, options)
 new KeyframeEffect(sourceKeyFrames)
@@ -43,7 +44,7 @@ The multi-argument constructor (see above) creates a completely new {{domxref("K
     - `duration` {{optional_inline}}
       - : The number of milliseconds each iteration of the animation takes to complete. Defaults to 0. Although this is technically optional, keep in mind that your animation will not run if this value is 0.
     - `easing` {{optional_inline}}
-      - : The rate of the animation's change over time. Accepts the pre-defined values `"linear"`, `"ease"`, `"ease-in"`, `"ease-out"`, and `"ease-in-out"`, or a custom `"cubic-bezier"` value like `"cubic-bezier(0.42, 0, 0.58, 1)"`. Defaults to `"linear"`.
+      - : The rate of the animation's change over time. Accepts an {{cssxref("easing-function")}}, such as `"linear"`, `"ease-in"`, `"step-end"`, or `"cubic-bezier(0.42, 0, 0.58, 1)"`. Defaults to `"linear"`.
     - `endDelay` {{optional_inline}}
       - : The number of milliseconds to delay after the end of an animation. This is primarily of use when sequencing animations based on the end time of another animation. Defaults to 0.
     - `fill` {{optional_inline}}
@@ -53,6 +54,7 @@ The multi-argument constructor (see above) creates a completely new {{domxref("K
     - `iterations` {{optional_inline}}
       - : The number of times the animation should repeat. Defaults to `1`, and can also take a value of {{jsxref("Infinity")}} to make it repeat for as long as the element exists.
     - `composite` {{optional_inline}}
+
       - : Determines how values are combined between this animation and other, separate
         animations that do not specify their own specific composite operation. Defaults to
         `replace`.
@@ -71,6 +73,8 @@ The multi-argument constructor (see above) creates a completely new {{domxref("K
       - : Determines how values build from iteration to iteration in this animation. Can be
         set to `accumulate` or `replace` (see above). Defaults
         to `replace`.
+    - `pseudoElement` {{optional_inline}}
+      - : A `string` containing a {{cssxref("pseudo-elements","pseudo-element")}} selector, such as `"::before"`. If present, the effect is applied to the selected pseudo-element of `target`, rather than to `target` itself.
 
 The single argument constructor (see above) creates a clone of an existing {{domxref("KeyframeEffect")}} object instance. Its parameter is as follows:
 

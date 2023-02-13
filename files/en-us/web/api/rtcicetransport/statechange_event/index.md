@@ -17,7 +17,8 @@ tags:
   - statechange
 browser-compat: api.RTCIceTransport.statechange_event
 ---
-{{WebRTCSidebar}}
+
+{{APIRef("WebRTC")}}
 
 A **`statechange`** event occurs when the {{domxref("RTCIceTransport")}} changes state. The {{domxref("RTCIceTransport.state", "state")}} can be used to determine how far through the process of examining, verifying, and selecting a valid candidate pair is prior to successfully connecting the two peers for WebRTC communications.
 

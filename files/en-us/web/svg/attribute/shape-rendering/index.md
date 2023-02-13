@@ -1,11 +1,13 @@
 ---
 title: shape-rendering
 slug: Web/SVG/Attribute/shape-rendering
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute
 browser-compat: svg.attributes.presentation.shape-rendering
 ---
+
 {{SVGRef}}
 
 The **`shape-rendering`** attribute provides hints to the renderer about what tradeoffs to make when rendering shapes like paths, circles, or rectangles.
@@ -25,15 +27,17 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
 
 ```html
 <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="100" shape-rendering="geometricPrecision"/>
-  <circle cx="320" cy="100" r="100" shape-rendering="crispEdges"/>
+  <circle cx="100" cy="100" r="100" shape-rendering="geometricPrecision" />
+  <circle cx="320" cy="100" r="100" shape-rendering="crispEdges" />
 </svg>
 ```
 

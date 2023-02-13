@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: api.NodeList.entries
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeList.entries()`** method returns an
@@ -19,8 +20,8 @@ contained in this object. The values are {{domxref("Node")}} objects.
 
 ## Syntax
 
-```js
-list.entries();
+```js-nolint
+entries()
 ```
 
 ### Return value
@@ -40,7 +41,7 @@ node.appendChild(kid3);
 
 const list = node.childNodes;
 
-// Using for..of
+// Using for...of
 for (const entry of list.entries()) {
   console.log(entry);
 }
@@ -48,7 +49,7 @@ for (const entry of list.entries()) {
 
 results in:
 
-```
+```plain
 Array [ 0, <p> ]
 Array [ 1, #text "hey" ]
 Array [ 2, <span> ]

@@ -1,5 +1,5 @@
 ---
-title: 'HTMLFormElement: reset event'
+title: "HTMLFormElement: reset event"
 slug: Web/API/HTMLFormElement/reset_event
 page-type: web-api-event
 tags:
@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.reset_event
 ---
+
 {{APIRef}}
 
 The **`reset`** event fires when a {{HTMLElement("form")}} is reset.
@@ -37,8 +38,8 @@ This example uses {{domxref("EventTarget.addEventListener()")}} to listen for fo
 
 ```html
 <form id="form">
-  <label>Test field: <input type="text"></label>
-  <br><br>
+  <label>Test field: <input type="text" /></label>
+  <br /><br />
   <button type="reset">Reset form</button>
 </form>
 <p id="log"></p>
@@ -48,7 +49,7 @@ This example uses {{domxref("EventTarget.addEventListener()")}} to listen for fo
 
 ```js
 function logReset(event) {
-  log.textContent = `Form reset! Time stamp: ${event.timeStamp}`;
+  log.textContent = `Form reset! Timestamp: ${event.timeStamp}`;
 }
 
 const form = document.getElementById('form');

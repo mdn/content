@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.Path2D.Path2D
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`Path2D()`** constructor returns a newly instantiated
@@ -21,7 +22,7 @@ copy), or optionally with a string consisting of [SVG path](/en-US/docs/Web/SVG/
 
 ## Syntax
 
-```js
+```js-nolint
 new Path2D()
 new Path2D(path)
 new Path2D(d)
@@ -51,7 +52,7 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 let path1 = new Path2D();
-path1.rect(10, 10, 100,100);
+path1.rect(10, 10, 100, 100);
 
 let path2 = new Path2D(path1);
 path2.moveTo(220, 60);

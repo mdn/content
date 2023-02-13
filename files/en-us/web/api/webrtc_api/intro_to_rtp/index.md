@@ -14,7 +14,8 @@ tags:
   - RTP
   - WebRTC
 ---
-{{APIRef("WebRTC")}}
+
+{{DefaultAPISidebar("WebRTC")}}
 
 The **Real-time Transport Protocol** (**RTP**), defined in {{RFC(3550)}}, is an IETF standard protocol to enable real-time connectivity for exchanging data that needs real-time priority. This article provides an overview of what RTP is and how it functions in the context of WebRTC.
 
@@ -35,7 +36,7 @@ The very fact that RTCP is defined in the same RFC as RTP is a clue as to just h
 RTP's primary benefits in terms of WebRTC include:
 
 - Generally low latency.
-- Packets are sequence-numbered and time-stamped for reassembly if they arrive out of order. This lets data sent using RTP be delivered on transports that don't guarantee ordering or even guarantee delivery at all.
+- Packets are sequence-numbered and timestamped for reassembly if they arrive out of order. This lets data sent using RTP be delivered on transports that don't guarantee ordering or even guarantee delivery at all.
 - This means RTP can be — but is not required to be — used atop {{Glossary("UDP")}} for its performance as well as its multiplexing and checksum features.
 - RTP supports multicast; while this isn't yet important for WebRTC, it's likely to matter in the future, when WebRTC is (hopefully) enhanced to support multi-user conversations.
 - RTP isn't limited to use in audiovisual communication. It can be used for any form of continuous or active data transfer, including data streaming, active badges or status display updates, or control and measurement information transport.
@@ -44,7 +45,7 @@ RTP's primary benefits in terms of WebRTC include:
 
 RTP itself doesn't provide every possible feature, which is why other protocols are also used by WebRTC. Some of the more noteworthy things RTP doesn't include:
 
-- RTP does _not_ guarantee **{{interwiki("wikipedia", "quality-of-service")}}** (**QoS**).
+- RTP does _not_ guarantee **[quality-of-service](https://en.wikipedia.org/wiki/Quality-of-service)** (**QoS**).
 - While RTP is intended for use in latency-critical scenarios, it doesn't inherently offer any features that ensure QoS. Instead, it only offers the information necessary to allow QoS to be implemented elsewhere in the stack.
 - RTP doesn't handle allocation or reservation of resources that may be needed.
 
@@ -81,7 +82,7 @@ async function enableHold(audioStream) {
     await audioTransceiver.sender.replaceTrack(audioStream.getAudioTracks()[0]);
     audioTransceiver.receiver.track.enabled = false;
     audioTransceiver.direction = "sendonly";
-  } catch(err) {
+  } catch (err) {
     /* handle the error */
   }
 }
@@ -108,7 +109,7 @@ async function holdRequested(offer) {
     await audioTransceiver.sender.replaceTrack(null);
     audioTransceiver.direction = "recvonly";
     await sendAnswer();
-  } catch(err) {
+  } catch (err) {
     /* handle the error */
   }
 }
@@ -154,7 +155,7 @@ async function holdEnded(offer, micStream) {
     await audioTransceiver.sender.replaceTrack(micStream.getAudioTracks()[0]);
     audioTransceiver.direction = "sendrecv";
     await sendAnswer();
-  } catch(err) {
+  } catch (err) {
     /* handle the error */
   }
 }

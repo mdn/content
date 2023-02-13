@@ -12,6 +12,7 @@ tags:
   - form
 browser-compat: api.HTMLObjectElement.form
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`form`** read-only property of the

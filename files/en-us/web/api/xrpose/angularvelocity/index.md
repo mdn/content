@@ -11,6 +11,7 @@ tags:
   - XRPose
 browser-compat: api.XRPose.angularVelocity
 ---
+
 {{APIRef}}
 
 The `angularVelocity` read-only property of the

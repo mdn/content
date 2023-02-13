@@ -11,9 +11,10 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement.selectedIndex
 ---
+
 {{APIRef("HTML DOM")}}
 
-The **`HTMLSelectElement.selectedIndex`** is a
+The **`HTMLSelectElement.selectedIndex`** property is a
 `long` that reflects the index of the first or last selected
 {{HTMLElement("option")}} element, depending on the value of `multiple`. The
 value `-1` indicates that no element is selected.
@@ -45,7 +46,7 @@ const selectElem = document.getElementById('select')
 const pElem = document.getElementById('p')
 
 // When a new <option> is selected
-selectElem.addEventListener('change', function() {
+selectElem.addEventListener('change', () => {
   const index = selectElem.selectedIndex;
   // Add that data to the <p>
   pElem.textContent = `selectedIndex: ${index}`;

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.body
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.body`** property represents the
@@ -18,7 +19,7 @@ The **`Document.body`** property represents the
 
 ## Value
 
-One of the followings:
+One of the following:
 
 - {{HTMLElement("body")}}
 - {{HTMLElement("frameset")}}

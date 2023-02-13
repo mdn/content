@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Text.splitText
 ---
+
 {{APIRef("DOM")}}
 
 The **`splitText()`** method of the {{domxref("Text")}} interface
@@ -26,7 +27,7 @@ method.
 
 ## Syntax
 
-```js
+```js-nolint
 newNode = textNode.splitText(offset)
 ```
 

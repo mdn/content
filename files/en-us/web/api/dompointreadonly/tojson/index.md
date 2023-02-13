@@ -16,6 +16,7 @@ tags:
   - toJSON
 browser-compat: api.DOMPointReadOnly.toJSON
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("DOMPointReadOnly")}} method
@@ -24,7 +25,7 @@ The {{domxref("DOMPointReadOnly")}} method
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

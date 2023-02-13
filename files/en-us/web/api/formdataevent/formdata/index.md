@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.FormDataEvent.formData
 ---
+
 {{APIRef("DOM")}}
 
 The `formData` read-only property of the {{domxref("FormDataEvent")}}
@@ -44,7 +45,7 @@ formElem.addEventListener('formdata', (e) => {
 
   // Get the form data from the event object
   let data = e.formData;
-  for (let value of data.values()) {
+  for (const value of data.values()) {
     console.log(value);
   }
 

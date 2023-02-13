@@ -16,11 +16,12 @@ tags:
   - console
   - troubleshooting
 ---
+
 {{HTTPSidebar}}
 
 ## Reason
 
-```
+```plain
 Reason: missing token 'xyz' in CORS header 'Access-Control-Allow-Headers' from CORS preflight channel
 ```
 

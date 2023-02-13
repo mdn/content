@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.StyleSheet.type
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`type`** property of the {{domxref("StyleSheet")}}

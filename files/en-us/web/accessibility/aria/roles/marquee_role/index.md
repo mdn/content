@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: marquee role'
+title: "ARIA: marquee role"
 slug: Web/Accessibility/ARIA/Roles/marquee_role
 tags:
   - Accessibility
@@ -21,7 +21,7 @@ The `marquee` role defines an area as a type of live region that presents non-es
 
 Elements with the role marquee have an implicit [aria-live](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) value of `off`.
 
-The marquee is required to have an accessible name.  Use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present, otherwise use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
+The marquee is required to have an accessible name. Use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present, otherwise use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -31,7 +31,7 @@ The marquee is required to have an accessible name.  Use [`aria-labelledby`](/en
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 
-  - : The `marquee` is required to have an accessible name.  Use `aria-labelledby` if a visible label is present, otherwise use `aria-label`.
+  - : The `marquee` is required to have an accessible name. Use `aria-labelledby` if a visible label is present, otherwise use `aria-label`.
 
 ## Specifications
 
@@ -49,6 +49,6 @@ The marquee is required to have an accessible name.  Use [`aria-labelledby`](/en
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

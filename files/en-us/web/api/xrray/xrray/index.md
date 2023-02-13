@@ -8,15 +8,17 @@ tags:
   - Reference
   - WebXR
   - XR
+  - Experimental
 browser-compat: api.XRRay.XRRay
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`XRRay()`** constructor creates a new {{domxref("XRRay")}} object which is a geometric ray described by an origin point and a direction vector.
 
 ## Syntax
 
-```js
+```js-nolint
 new XRRay()
 new XRRay(origin)
 new XRRay(origin, direction)
@@ -25,11 +27,11 @@ new XRRay(transform)
 
 ### Parameters
 
-- `origin` {{optional_inline}}
+- `origin` {{Optional_Inline}}
   - : A point object defining the 3-dimensional point in space that the ray originates from, in meters. All dimensions are optional, however, if provided, the origin's `w` property must be 1.0. The object is initialized to `{ x: 0.0, y: 0.0, z: 0.0, w: 1.0 }` by default.
-- `direction` {{optional_inline}}
+- `direction` {{Optional_Inline}}
   - : A vector object defining the ray's 3-dimensional directional vector. All dimensions are optional, however, if provided, the direction's `w` property must be 0.0. The object is initialized to: `{ x: 0.0, y: 0.0, z: -1.0, w: 0.0 }` by default.
-- `transform` {{optional_inline}}
+- `transform` {{Optional_Inline}}
   - : An {{domxref("XRRigidTransform")}} object representing the position and orientation of the ray.
 
 ### Return value

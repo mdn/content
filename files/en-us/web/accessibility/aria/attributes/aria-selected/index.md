@@ -10,6 +10,7 @@ tags:
   - Reference
 spec-urls: https://w3c.github.io/aria/#aria-selected
 ---
+
 The `aria-selected` attribute indicates the current "selected" state of various widgets.
 
 ## Description
@@ -53,18 +54,30 @@ In this `tablist` example, the first `tab` is selected:
 ```html
 <div class="tab-interface">
   <div role="tablist" aria-label="Sample Tabs">
-    <span role="tab" aria-selected="true" aria-controls="panel-1"
-      id="tab-1" tabindex="0">
-          First Tab
-        </span>
-    <span role="tab" aria-selected="false" aria-controls="panel-2"
-      id="tab-2" tabindex="-1">
-          Second Tab
-        </span>
-    <span role="tab" aria-selected="false" aria-controls="panel-3"
-      id="tab-3" tabindex="-1">
-          Third Tab
-        </span>
+    <span
+      role="tab"
+      aria-selected="true"
+      aria-controls="panel-1"
+      id="tab-1"
+      tabindex="0">
+      First Tab
+    </span>
+    <span
+      role="tab"
+      aria-selected="false"
+      aria-controls="panel-2"
+      id="tab-2"
+      tabindex="-1">
+      Second Tab
+    </span>
+    <span
+      role="tab"
+      aria-selected="false"
+      aria-controls="panel-3"
+      id="tab-3"
+      tabindex="-1">
+      Third Tab
+    </span>
   </div>
   <div id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
     <p>Content for the first panel</p>

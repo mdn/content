@@ -10,6 +10,7 @@ tags:
   - Selection
 browser-compat: api.Selection.getRangeAt
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.getRangeAt()`** method returns a range object
@@ -17,7 +18,7 @@ representing one of the ranges currently selected.
 
 ## Syntax
 
-```js
+```js-nolint
 getRangeAt(index)
 ```
 

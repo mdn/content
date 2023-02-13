@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Path2D.addPath
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`Path2D.addPath()`** method
@@ -19,7 +20,7 @@ of the Canvas 2D API adds one {{domxref("Path2D")}} object to another
 
 ## Syntax
 
-```js
+```js-nolint
 addPath(path)
 addPath(path, transform)
 ```

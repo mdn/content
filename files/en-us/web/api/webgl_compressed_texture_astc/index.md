@@ -10,6 +10,7 @@ tags:
   - WebGL extensions
 browser-compat: api.WEBGL_compressed_texture_astc
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_compressed_texture_astc`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes [Adaptive Scalable Texture Compression](https://en.wikipedia.org/wiki/Adaptive_Scalable_Texture_Compression) (ASTC) compressed texture formats to WebGL.
@@ -22,7 +23,7 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 >
 > This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
 
-## Methods
+## Instance methods
 
 This extension exposes one new methods.
 

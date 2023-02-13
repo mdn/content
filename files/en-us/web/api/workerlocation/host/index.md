@@ -10,6 +10,7 @@ tags:
   - WorkerLocation
 browser-compat: api.WorkerLocation.host
 ---
+
 {{ApiRef("WorkerLocation")}}
 
 The **`host`** property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.host", "host")}} part of the worker's location.

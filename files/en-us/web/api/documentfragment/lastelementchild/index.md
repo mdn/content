@@ -9,6 +9,7 @@ tags:
   - Property
 browser-compat: api.DocumentFragment.lastElementChild
 ---
+
 {{ APIRef("DOM") }}
 
 The **`DocumentFragment.lastElementChild`** read-only property

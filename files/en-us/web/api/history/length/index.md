@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.History.length
 ---
+
 {{APIRef("History API")}}
 
 The **`History.length`** read-only

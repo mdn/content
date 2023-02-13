@@ -10,6 +10,7 @@ tags:
   - Web Storage
 browser-compat: api.Storage.clear
 ---
+
 {{APIRef("Web Storage API")}}
 
 The **`clear()`** method of the {{domxref("Storage")}}
@@ -17,7 +18,7 @@ interface clears all keys stored in a given `Storage` object.
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 
@@ -44,7 +45,7 @@ function populateStorage() {
 }
 ```
 
-> **Note:** For a real world example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> **Note:** For a real-world example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
 ## Specifications
 

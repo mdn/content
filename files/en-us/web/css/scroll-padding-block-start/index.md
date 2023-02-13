@@ -1,6 +1,7 @@
 ---
 title: scroll-padding-block-start
 slug: Web/CSS/scroll-padding-block-start
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -11,6 +12,7 @@ tags:
   - scroll-padding-block-start
 browser-compat: css.properties.scroll-padding-block-start
 ---
+
 {{CSSRef}}
 
 The `scroll-padding-block-start` property defines offsets for the start edge in the block dimension of the _optimal viewing region_ of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or to put more breathing room between a targeted element and the edges of the scrollport.

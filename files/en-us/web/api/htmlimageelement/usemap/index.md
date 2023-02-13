@@ -17,6 +17,7 @@ tags:
   - useMap
 browser-compat: api.HTMLImageElement.useMap
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`useMap`** property on the
@@ -43,8 +44,12 @@ Consider a `<map>` that looks like this:
 
 ```html
 <map name="mainmenu-map">
-  <area shape="circle" coords="25, 25, 75" href="/index.html" alt="Return to home page">
-  <area shape="rect" coords="25, 25, 100, 150" href="/index.html" alt="Shop">
+  <area
+    shape="circle"
+    coords="25, 25, 75"
+    href="/index.html"
+    alt="Return to home page" />
+  <area shape="rect" coords="25, 25, 100, 150" href="/index.html" alt="Shop" />
 </map>
 ```
 
@@ -52,7 +57,7 @@ Given the image map named `mainmenu-map`, the image which uses it should
 look something like the following:
 
 ```html
-<img src="menubox.png" usemap="#mainmenu-map">
+<img src="menubox.png" usemap="#mainmenu-map" />
 ```
 
 For additional examples (including interactive ones), see the articles about the

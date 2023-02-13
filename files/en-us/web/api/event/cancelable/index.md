@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Event.cancelable
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`cancelable`** read-only property of the {{domxref("Event")}} interface indicates whether the event

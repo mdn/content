@@ -12,6 +12,7 @@ tags:
   - Event
 browser-compat: api.Sensor.error_event
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`error`** event is fired when an exception occurs on a sensor.
@@ -41,7 +42,7 @@ A {{domxref("SensorErrorEvent")}}. Inherits from {{domxref("Event")}}.
 
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
-- {{domxref('SensorErrorEvent.error', 'error')}} {{readonlyinline}}
+- {{domxref('SensorErrorEvent.error', 'error')}} {{ReadOnlyInline}}
   - : Returns the {{domxref('DOMException')}} that has been thrown.
 
 ## Examples

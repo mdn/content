@@ -12,6 +12,7 @@ tags:
   - sidebarAction
 browser-compat: webextensions.api.sidebarAction.isOpen
 ---
+
 {{AddonSidebar()}}
 
 Returns `true` if the extension's sidebar is open in a given window.
@@ -25,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingIsOpen = browser.sidebarAction.isOpen(
   details // object
 )
@@ -62,12 +63,12 @@ Check all open windows:
 
 ```js
 async function checkWindow(windowId) {
-  let result = await browser.sidebarAction.isOpen({windowId});
+  const result = await browser.sidebarAction.isOpen({ windowId });
   console.log(`window: ${windowId} status: ${result}`);
 }
 
 browser.windows.getAll().then((all) => {
-  for (let {id} of all) {
+  for (const { id } of all) {
     checkWindow(id);
   }
 });

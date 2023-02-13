@@ -1,6 +1,7 @@
 ---
 title: '<ruby>: The Ruby Annotation element'
 slug: Web/HTML/Element/ruby
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -10,7 +11,7 @@ tags:
 browser-compat: html.elements.ruby
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<ruby>`** [HTML](/en-US/docs/Web/HTML) element represents small annotations that are rendered above, below, or next to base text, usually used for showing the pronunciation of East Asian characters. It can also be used for annotating other kinds of text, but this usage is less common.
 
@@ -112,5 +113,4 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 - {{HTMLElement("rp")}}
 - {{HTMLElement("rb")}}
 - {{HTMLElement("rtc")}}
-- {{HTMLElement("rbc")}}
 - {{CSSxRef("text-transform")}}: full-size-kana

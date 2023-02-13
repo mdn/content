@@ -8,6 +8,7 @@ tags:
   - Numeric
   - Something
 ---
+
 {{WebAssemblySidebar}}
 
 The **`max`** instructions, are used for getting the higher of two numbers.

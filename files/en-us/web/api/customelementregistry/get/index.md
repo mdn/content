@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - CustomElementRegistry
-  - Experimental
   - Method
   - Reference
   - Web Components
@@ -13,6 +12,7 @@ tags:
   - get
 browser-compat: api.CustomElementRegistry.get
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 The **`get()`** method of the
@@ -21,7 +21,7 @@ previously-defined custom element.
 
 ## Syntax
 
-```js
+```js-nolint
 get(name)
 ```
 
@@ -37,18 +37,20 @@ The constructor for the named custom element, or {{jsxref("undefined")}} if ther
 ## Examples
 
 ```js
-customElements.define('my-paragraph',
+customElements.define(
+  "my-paragraph",
   class extends HTMLElement {
     constructor() {
-      let templateContent = document.getElementById('my-paragraph').content;
+      let templateContent = document.getElementById("my-paragraph").content;
       super() // returns element this scope
-        .attachShadow({mode: 'open'}) // sets AND returns this.shadowRoot
+        .attachShadow({ mode: "open" }) // sets AND returns this.shadowRoot
         .append(templateContent.cloneNode(true));
+    }
   }
-})
+);
 
 // Return a reference to the my-paragraph constructor
-let ctor = customElements.get('my-paragraph');
+let ctor = customElements.get("my-paragraph");
 ```
 
 ## Specifications

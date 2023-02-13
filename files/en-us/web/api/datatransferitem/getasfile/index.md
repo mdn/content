@@ -12,6 +12,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransferItem.getAsFile
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 If the item is a file, the **`DataTransferItem.getAsFile()`**
@@ -20,7 +21,7 @@ file, this method returns `null`.
 
 ## Syntax
 
-```js
+```js-nolint
 getAsFile()
 ```
 
@@ -48,7 +49,7 @@ function drop_handler(ev) {
    if ((data[i].kind === 'string') &&
        (data[i].type.match('^text/plain'))) {
      // This item is the target node
-     data[i].getAsString(function (s){
+     data[i].getAsString((s) => {
        ev.target.appendChild(document.getElementById(s));
      });
    } else if ((data[i].kind === 'string') &&

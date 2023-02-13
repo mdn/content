@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.method
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement.method`** property represents the

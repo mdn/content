@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Notification.body
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`body`** read-only property of the

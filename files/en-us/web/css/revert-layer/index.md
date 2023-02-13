@@ -1,15 +1,18 @@
 ---
 title: revert-layer
 slug: Web/CSS/revert-layer
+page-type: css-keyword
 tags:
   - CSS
   - CSS Value
   - Keyword
   - Reference
   - revert-layer
+  - Experimental
 browser-compat: css.types.global_keywords.revert-layer
 ---
-{{CSSRef}}
+
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`revert-layer`** CSS keyword rolls back the value of a property in a {{cssxref("@layer", "cascade layer")}} to the value of the property in a CSS rule matching the element in a previous cascade layer. The value of the property with this keyword is recalculated as if no rules were specified on the target element in the current cascade layer.
 
@@ -17,7 +20,7 @@ If there is no other cascade layer to revert to for the matching CSS rule, the p
 
 This keyword can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}.
 
-## Revert-layer vs revert
+## Revert-layer vs. revert
 
 The `revert-layer` keyword lets you rollback styles to the ones specified in previous cascade layers. All cascade layers exist in the [author origin](/en-US/docs/Glossary/Style_origin). The {{cssxref("revert")}} keyword, in comparison, lets you remove styles applied in the author origin and roll back to styles in user origin or user-agent origin.
 

@@ -18,6 +18,7 @@ tags:
   - track
 browser-compat: api.AudioTrackList.getTrackById
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **{{domxref("AudioTrackList")}}** method
@@ -28,7 +29,7 @@ you know its ID string.
 
 ## Syntax
 
-```js
+```js-nolint
 getTrackById(id)
 ```
 

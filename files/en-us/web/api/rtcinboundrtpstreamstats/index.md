@@ -14,11 +14,12 @@ tags:
   - receiver
 browser-compat: api.RTCInboundRtpStreamStats
 ---
+
 {{APIRef("WebRTC")}}
 
 The [WebRTC API](/en-US/docs/Web/API/WebRTC_API)'s **`RTCInboundRtpStreamStats`** dictionary, based upon {{domxref("RTCReceivedRtpStreamStats")}} and {{domxref("RTCStats")}}, contains statistics related to the receiving end of an RTP stream on the local end of the {{domxref("RTCPeerConnection")}}.
 
-## Properties
+## Instance properties
 
 The `RTCInboundRtpStreamStats` dictionary is based on the {{domxref("RTCReceivedRtpStreamStats")}} dictionary, whose properties are also available.
 

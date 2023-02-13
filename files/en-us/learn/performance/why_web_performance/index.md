@@ -10,6 +10,7 @@ tags:
   - Tutorial
   - Web Performance
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
 
 Web performance is all about making websites fast, including making slow processes _seem_ fast. This article provides an introduction into why web performance is important to site visitors and for your business goals.
@@ -48,12 +49,12 @@ Web performance — and its associated best practices—are vital for your websi
 As an example, consider the loading experience of CNN.com, which at the time of this writing had over 400 HTTP requests with a file size of over 22.6MB.
 
 - Imagine loading this on a desktop computer connected to a fibre optic network. This would seem relatively fast, and the file size would be largely irrelevant.
-- Imagine loading that same site using tethered mobile data on a 9 year-old iPad while commuting home on public transportation. The same site will be slow to load, possibly verging on unusable depending on cell coverage. You might give up before it finishes loading.
+- Imagine loading that same site using tethered mobile data on a nine-year-old iPad while commuting home on public transportation. The same site will be slow to load, possibly verging on unusable depending on cell coverage. You might give up before it finishes loading.
 - Imagine loading that same site on a $35 Huawei device in a rural India with limited coverage or no coverage. The site will be very slow to load—if it loads at all—with blocking scripts possibly timing out, and adverse CPU impact causing browser crashes if it does load.
 
 A 22.6 MB site could take up to 83 seconds to load on a 3G network, with [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) (meaning the site's base HTML structure) at 31.86 seconds.
 
-And it isn't just the time taken to download that is a major problem. A lot of countries still have internet connections that bill per megabyte. Our example 22.6 MB CNN.com experience would cost about 11% of the average Indian's daily wage to download. From a mobile device in Northwest Africa, it might cost two days of an average salary.  And if this site were loaded on a US carrier's international roaming plan? The costs would make anyone cry. (See [how much your site costs to download](https://whatdoesmysitecost.com/).)
+And it isn't just the time taken to download that is a major problem. A lot of countries still have internet connections that bill per megabyte. Our example 22.6 MB CNN.com experience would cost about 11% of the average Indian's daily wage to download. From a mobile device in Northwest Africa, it might cost two days of an average salary. And if this site were loaded on a US carrier's international roaming plan? The costs would make anyone cry. (See [how much your site costs to download](https://whatdoesmysitecost.com/).)
 
 ### Improve conversion rates
 
@@ -95,4 +96,5 @@ Web performance is important for accessibility and also for other website metric
 - [CSS performance features](/en-US/docs/Learn/Performance/CSS)
 - [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)
 - [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
-- [Focusing on performance](/en-US/docs/Learn/Performance/business_case_for_performance)
+- [The business case for web performance](/en-US/docs/Learn/Performance/business_case_for_performance)
+- [Web performance resources](/en-US/docs/Learn/Performance/Web_Performance_Basics)

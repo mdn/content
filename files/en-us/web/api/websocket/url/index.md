@@ -10,6 +10,7 @@ tags:
   - WebSocket
 browser-compat: api.WebSocket.url
 ---
+
 {{APIRef("Web Sockets API")}}
 
 The **`WebSocket.url`** read-only property returns the absolute

@@ -22,6 +22,7 @@ tags:
   - videoWidth
 browser-compat: api.HTMLVideoElement.videoHeight
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLVideoElement")}} interface's read-only **`videoHeight`** property indicates the [intrinsic height](#about_intrinsic_width_and_height) of the video, expressed in CSS pixels.

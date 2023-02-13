@@ -4,7 +4,6 @@ slug: Web/API/VideoPlaybackQuality/creationTime
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Media
   - Media Playback Quality
   - Media Playback Quality API
@@ -16,6 +15,7 @@ tags:
   - creationTime
 browser-compat: api.VideoPlaybackQuality.creationTime
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`creationTime`** property on the

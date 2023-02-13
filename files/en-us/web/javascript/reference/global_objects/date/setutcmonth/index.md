@@ -1,6 +1,7 @@
 ---
 title: Date.prototype.setUTCMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth
+page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setUTCMonth
 ---
+
 {{JSRef}}
 
 The **`setUTCMonth()`** method sets the month for a specified
@@ -18,7 +20,7 @@ date according to universal time.
 
 ## Syntax
 
-```js
+```js-nolint
 setUTCMonth(monthValue)
 setUTCMonth(monthValue, dayValue)
 ```

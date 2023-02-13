@@ -11,6 +11,7 @@ tags:
   - defaultValue
 browser-compat: api.AudioParam.defaultValue
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`defaultValue`**

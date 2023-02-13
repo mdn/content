@@ -8,15 +8,17 @@ tags:
   - Reference
   - flush
   - AudioDecoder
+  - Experimental
 browser-compat: api.AudioDecoder.flush
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`flush()`** method of the {{domxref("AudioDecoder")}} interface returns a Promise that resolves once all pending messages in the queue have been completed.
 
 ## Syntax
 
-```js
+```js-nolint
 flush()
 ```
 

@@ -11,6 +11,7 @@ tags:
   - distanceModel
 browser-compat: api.PannerNode.distanceModel
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `distanceModel` property of the {{ domxref("PannerNode") }} interface is an enumerated value determining which algorithm to use to reduce the volume of the audio source as it moves away from the listener.

@@ -5,9 +5,11 @@ tags:
   - Manifest
   - Web
   - shortcuts
+  - Experimental
 browser-compat: html.manifest.shortcuts
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 <table class="properties">
   <tbody>

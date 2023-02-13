@@ -12,9 +12,11 @@ tags:
   - Virtual Reality
   - WebVR
   - isPresenting
+  - Non-standard
 browser-compat: api.VRDisplay.isPresenting
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`isPresenting`** read-only property of the {{domxref("VRDisplay")}} interface returns a boolean value indicating whether the `VRDisplay` is currently having content presented through it.
 
@@ -33,9 +35,9 @@ function onVRExitPresent () {
   // we weren't presenting.)
   if (!vrDisplay.isPresenting)
     return;
-  vrDisplay.exitPresent().then(function () {
+  vrDisplay.exitPresent().then(() => {
     // Nothing to do because we're handling things in onVRPresentChange.
-  }, function (err) {
+  }, (err) => {
     let errMsg = "exitPresent failed.";
     if (err && err.message) {
       errMsg += `<br/>${err.message}`;

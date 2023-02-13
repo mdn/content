@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.initMouseEvent
 ---
+
 {{APIRef("UI Events")}}{{deprecated_header}}
 
 The **`MouseEvent.initMouseEvent()`** method initializes the
@@ -28,7 +29,7 @@ before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}.
 
 ## Syntax
 
-```js
+```js-nolint
 initMouseEvent(type, canBubble, cancelable, view,
                      detail, screenX, screenY, clientX, clientY,
                      ctrlKey, altKey, shiftKey, metaKey,
@@ -102,7 +103,7 @@ None ({{jsxref("undefined")}}).
 ```html
 <div style="background:red; width:180px; padding:10px;">
   <div id="out"></div>
-  <input type="text">
+  <input type="text" />
 </div>
 ```
 

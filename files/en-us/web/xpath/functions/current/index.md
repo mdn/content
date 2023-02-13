@@ -5,6 +5,7 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `current` function can be used to get the context node in an XSLT instruction.
@@ -37,7 +38,7 @@ In an inner expression (e.g. in square brackets), the current node is still the 
 
 ```xml
 <xsl:value-of select="current()"/>
-  ```
+```
 
 ```xml
 <xsl:value-of select="foo/bar[current() = X]"/>

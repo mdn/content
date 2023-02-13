@@ -10,13 +10,14 @@ tags:
   - Reference
 browser-compat: api.HTMLMeterElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The HTML {{HTMLElement("meter")}} elements expose the **`HTMLMeterElement`** interface, which provides special properties and methods (beyond the {{domxref("HTMLElement")}} object interface they also have available to them by inheritance) for manipulating the layout and presentation of {{HTMLElement("meter")}} elements.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Also inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -35,7 +36,7 @@ _Also inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLMeterElement.labels")}} {{ReadOnlyInline}}
   - : A {{domxref("NodeList")}} of {{HTMLElement("label")}} elements that are associated with the element.
 
-## Methods
+## Instance methods
 
 _This interface does not implement any specific methods but inherits methods from its parent, {{domxref("HTMLElement")}}._
 

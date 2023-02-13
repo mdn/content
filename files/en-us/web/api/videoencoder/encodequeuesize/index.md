@@ -8,9 +8,11 @@ tags:
   - Reference
   - encodeQueueSize
   - VideoEncoder
+  - Experimental
 browser-compat: api.VideoEncoder.encodeQueueSize
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`encodeQueueSize`** read-only property of the {{domxref("VideoEncoder")}} interface returns the number of pending encode requests in the queue.
 

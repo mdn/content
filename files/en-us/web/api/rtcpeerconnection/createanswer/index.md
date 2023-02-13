@@ -14,6 +14,7 @@ tags:
   - createAnswer
 browser-compat: api.RTCPeerConnection.createAnswer
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`createAnswer()`** method on the
@@ -27,7 +28,7 @@ the negotiation process.
 
 ## Syntax
 
-```js
+```js-nolint
 createAnswer()
 createAnswer(options)
 
@@ -86,10 +87,8 @@ to another peer across the signaling channel.
 > fulfillment handler, depend entirely on your design
 
 ```js
-pc.createAnswer().then(function(answer) {
-  return pc.setLocalDescription(answer);
-})
-.then(function() {
+pc.createAnswer().then((answer) => pc.setLocalDescription(answer))
+.then(() => {
   // Send the answer to the remote peer through the signaling server.
 })
 .catch(handleGetUserMediaError);
@@ -105,8 +104,7 @@ you see fit.
 
 {{jsxref("Promise.catch()")}} is used to trap and handle errors.
 
-See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling",
-  "Handling the invitation")}} to see the complete code, in context, from which this
+See [Handling the invitation](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling#handling_the_invitation) in our WebRTC chat example to view the complete code from which this
 snippet is derived; that will help you understand the signaling process and how answers
 work.
 

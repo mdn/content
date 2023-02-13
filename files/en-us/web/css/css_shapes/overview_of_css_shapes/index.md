@@ -1,6 +1,7 @@
 ---
-title: Overview of CSS Shapes
+title: Overview of shapes
 slug: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
+page-type: guide
 tags:
   - CSS
   - CSS Shapes
@@ -8,6 +9,7 @@ tags:
   - Overview
   - shapes
 ---
+
 {{CSSRef}}
 
 The [CSS Shapes Level 1 Specification](https://www.w3.org/TR/css-shapes/) describes geometric shapes in CSS. They are, in Level 1 of the specification, designed to be applied to floated items. This article provides an overview of what you can do with shapes.
@@ -34,9 +36,9 @@ In the following example I have an image floated left. I have then applied the `
 
 As in this level of the specification an element has to be floated in order to apply `<basic-shape>` to it; this has the side-effect of creating a simple fallback for many cases. If you do not have Shapes support in the browser, the user will see content flowing around the sides of a rectangular box as before. If they do have Shapes support then the visual display is enhanced.
 
-### Basic Shapes
+### Basic shapes
 
-The value `circle(50%)` is an example of a Basic Shape. The specification defines four `<basic-shape>` values, which are:
+The value `circle(50%)` is an example of a basic shape. The specification defines four `<basic-shape>` values, which are:
 
 - `inset()`
 - `circle()`
@@ -49,20 +51,20 @@ We have already seen how `circle()` creates a circular shape. An `ellipse()` is 
 
 In our [Guide to Basic Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes) we explore each of the possible Basic Shapes and how to create them.
 
-### Shapes from the Box Value
+### Shapes from the box value
 
-Shapes can also be created around the Box Value, therefore you could create your shape on the:
+Shapes can also be created around the box value. Therefor, you could create your shape on:
 
 - `border-box`
 - `padding-box`
 - `content-box`
 - `margin-box`
 
-In the example below you can change the value `border-box` to any of the other allowed values to see how the shape moves closer or further away from the box.
+In the example below, you can change the value `border-box` to any of the other allowed values to see how the shape moves closer or further away from the box.
 
 {{EmbedGHLiveSample("css-examples/shapes/overview/box.html", '100%', 810)}}
 
-To explore the box values in more detail see our guide covering [Shapes From Box Values](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values).
+To explore the box values in more detail, see our guide covering [Shapes from box values](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values).
 
 ### Shapes from images
 
@@ -94,7 +96,7 @@ In the example below we have added a `shape-margin` to a basic shape. Change the
 
 ## Using Generated Content as the floated item
 
-In the examples above we have used images or a visible element to define the shape, meaning that you can see the shape on the page. Instead, you might want to cause some text to flow along a non-rectangular invisible line. You can do this with Shapes, however you will still need a floated item, which you can then make invisible. That could be a redundant element inserted into the document, an empty {{htmlelement("div")}} or {{htmlelement("span")}} perhaps, but our preference is to use generated content. This means we can keep things used for styling inside the CSS.
+In the examples above, we have used images or a visible element to define the shape, meaning that you can see the shape on the page. Instead, you might want to cause some text to flow along a non-rectangular invisible line. You can do this with Shapes, however you will still need a floated item, which you can then make invisible. That could be a redundant element inserted into the document, an empty {{htmlelement("div")}} or {{htmlelement("span")}} perhaps, but our preference is to use generated content. This means we can keep things used for styling inside the CSS.
 
 In this next example, we use generated content to insert an element with height and width of 150px. We can then use Basic Shapes, Box Values or even the Alpha Channel of an image to create a shape for the text to wrap around.
 

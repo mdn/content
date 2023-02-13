@@ -1,11 +1,13 @@
 ---
 title: unicode-bidi
 slug: Web/SVG/Attribute/unicode-bidi
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute
 browser-compat: svg.attributes.presentation.unicode-bidi
 ---
+
 {{SVGRef}}
 
 The **`unicode-bidi`** attribute specifies how the accumulation of the background image is managed.

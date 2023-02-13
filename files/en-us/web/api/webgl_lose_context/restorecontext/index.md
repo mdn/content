@@ -10,6 +10,7 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_lose_context.restoreContext
 ---
+
 {{APIRef("WebGL")}}
 
 The **WEBGL_lose_context.restoreContext()** method is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and allows you to simulate
@@ -17,7 +18,7 @@ restoring the context of a {{domxref("WebGLRenderingContext")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 restoreContext()
 ```
 
@@ -46,7 +47,7 @@ event:
 const canvas = document.getElementById('canvas');
 const gl = canvas.getContext('webgl');
 
-canvas.addEventListener('webglcontextrestored', function(e) {
+canvas.addEventListener('webglcontextrestored', (e) => {
   console.log(e);
 }, false);
 

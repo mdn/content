@@ -20,6 +20,7 @@ tags:
   - responsesReceived
 browser-compat: api.RTCIceCandidatePairStats.responsesReceived
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`responsesReceived`** property

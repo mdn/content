@@ -1,11 +1,13 @@
 ---
-title: 'Warning: String.x is deprecated; use String.prototype.x instead'
+title: "Warning: String.x is deprecated; use String.prototype.x instead"
 slug: Web/JavaScript/Reference/Errors/Deprecated_String_generics
+page-type: javascript-error
 tags:
   - Error
   - JavaScript
   - Warning
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning about string generics occurs in Firefox versions prior to 68.
@@ -58,14 +60,14 @@ applied to any object.
 
 ```js example-bad
 const num = 15;
-String.replace(num, /5/, '2');
+String.replace(num, /5/, "2");
 ```
 
 ### Standard syntax
 
 ```js example-good
 const num = 15;
-String(num).replace(/5/, '2');
+String(num).replace(/5/, "2");
 ```
 
 ## See also

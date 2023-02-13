@@ -9,20 +9,24 @@ tags:
   - aria-brailleroledescription
 spec-urls: https://w3c.github.io/aria/#aria-brailleroledescription
 ---
+
 The global `aria-brailleroledescription` attribute defines a human-readable, author-localized abbreviated description for the role of an element intended to be converted into Braille.
 
 ## Description
 
-Braille is not a one-to-one transliteration of letters and numbers, but rather it includes various abbreviations, contractions, and characters that represent words (known as lolograms).
+Braille is not a one-to-one transliteration of letters and numbers, but rather it includes various abbreviations, contractions, and characters that represent words (known as logograms).
 
 Instead of converting long role descriptions to Braille, the `aria-brailleroledescription` attribute allows for providing an abbreviated version of the [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) value, which is a human-readable, author-localized description for the role of an element, for improved user experience with Braille interfaces.
 
 Basically, the value of `aria-brailleroledescription` is an abbreviated version of the `aria-roledescription` attribute to be converted into Braille.
 
 ```html
-<article aria-roledescription="slide" aria-brailleroledescription="sld" aria-labelledby="slide1heading">
+<article
+  aria-roledescription="slide"
+  aria-brailleroledescription="sld"
+  aria-labelledby="slide1heading">
   <h1 id="slide1heading">Welcome to my talk</h1>
-  <img alt="Me" src="images/me.jpg">
+  <img alt="Me" src="images/me.jpg" />
 </article>
 ```
 
@@ -72,7 +76,9 @@ Used in **ALL** roles (except [`generic`](/en-US/docs/Web/Accessibility/ARIA/Rol
 - [`Element.ariaRoleDescription`](/en-US/docs/Web/API/Element/ariaRoleDescription)
 
 <section id="Quick_links">
+
 1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 
    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
+
 </section>

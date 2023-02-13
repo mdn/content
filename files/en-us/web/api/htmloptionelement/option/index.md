@@ -13,6 +13,7 @@ tags:
   - NeedsSpecTable
 browser-compat: api.HTMLOptionElement.Option
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`Option()`** constructor creates a new
@@ -20,7 +21,7 @@ The **`Option()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new Option()
 new Option(text)
 new Option(text, value)
@@ -65,7 +66,7 @@ new Option(text, value, defaultSelected, selected)
 const s = document.getElementById('s');
 const options = [Four, Five, Six];
 
-options.forEach(function(element,key) {
+options.forEach((element,key) => {
     s[key] = new Option(element,key);
 });
 ```
@@ -84,7 +85,7 @@ options.forEach(function(element,key) {
 const s = document.getElementById('s');
 const options = [ 'zero', 'one', 'two' ];
 
-options.forEach(function(element, key) {
+options.forEach((element, key) => {
   if (element === 'zero') {
     s[key] = new Option(element, s.options.length, false, false);
   }

@@ -13,6 +13,7 @@ tags:
   - toMatrix
 browser-compat: api.CSSTransformValue.toMatrix
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`toMatrix()`** method of the
@@ -20,7 +21,7 @@ The **`toMatrix()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 toMatrix()
 ```
 

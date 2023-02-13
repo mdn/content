@@ -1,6 +1,7 @@
 ---
 title: pointer-events
 slug: Web/CSS/pointer-events
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -10,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.pointer-events
 ---
+
 {{CSSRef}}
 
 The **`pointer-events`** [CSS](/en-US/docs/Web/CSS) property sets under what circumstances (if any) a particular graphic element can become the [target](/en-US/docs/Web/API/Event/target) of pointer events.
@@ -23,13 +25,13 @@ The **`pointer-events`** [CSS](/en-US/docs/Web/CSS) property sets under what cir
 pointer-events: auto;
 pointer-events: none;
 pointer-events: visiblePainted; /* SVG only */
-pointer-events: visibleFill;    /* SVG only */
-pointer-events: visibleStroke;  /* SVG only */
-pointer-events: visible;        /* SVG only */
-pointer-events: painted;        /* SVG only */
-pointer-events: fill;           /* SVG only */
-pointer-events: stroke;         /* SVG only */
-pointer-events: all;            /* SVG only */
+pointer-events: visibleFill; /* SVG only */
+pointer-events: visibleStroke; /* SVG only */
+pointer-events: visible; /* SVG only */
+pointer-events: painted; /* SVG only */
+pointer-events: fill; /* SVG only */
+pointer-events: stroke; /* SVG only */
+pointer-events: all; /* SVG only */
 
 /* Global values */
 pointer-events: inherit;
@@ -65,7 +67,7 @@ The `pointer-events` property is specified as a single keyword chosen from the l
 - `stroke`
   - : SVG only. The element can only be the target of a pointer event when the pointer is over the perimeter (i.e., stroke) of the element. The values of the `stroke` and `visibility` properties do not affect event processing.
 - `all`
-  - : SVG only  (experimental for HTML). The element can only be the target of a pointer event when the pointer is over the interior (i.e., fill) or the perimeter (i.e., stroke) of the element. The values of the `fill`, `stroke`, and `visibility` properties do not affect event processing.
+  - : SVG only (experimental for HTML). The element can only be the target of a pointer event when the pointer is over the interior (i.e., fill) or the perimeter (i.e., stroke) of the element. The values of the `fill`, `stroke`, and `visibility` properties do not affect event processing.
 
 ## Description
 
@@ -101,7 +103,7 @@ img {
 
 ### Disabling pointer events on a single link
 
-This example disables pointer events on the link to http\://example.com.
+This example disables pointer events on the link to `http://example.com`.
 
 #### HTML
 
@@ -115,7 +117,8 @@ This example disables pointer events on the link to http\://example.com.
 #### CSS
 
 ```css
-a[href="http://example.com"] {
+a[href="http://example.com"]
+{
   pointer-events: none;
 }
 ```

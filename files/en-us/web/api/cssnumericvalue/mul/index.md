@@ -13,6 +13,7 @@ tags:
   - mul()
 browser-compat: api.CSSNumericValue.mul
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`mul()`** method of the
@@ -21,7 +22,7 @@ the supplied value.
 
 ## Syntax
 
-```js
+```js-nolint
 mul(number)
 ```
 
@@ -42,7 +43,10 @@ A {{domxref('CSSMathProduct')}}
 ## Examples
 
 ```js
-let mathSum = CSS.px("23").mul(CSS.percent("4")).mul(CSS.cm("3")).mul(CSS.in("9"));
+let mathSum = CSS.px("23")
+  .mul(CSS.percent("4"))
+  .mul(CSS.cm("3"))
+  .mul(CSS.in("9"));
 // Prints "calc(23px * 4% * 3cm * 9in)"
 console.log(mathSum.toString());
 ```

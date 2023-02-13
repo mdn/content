@@ -11,6 +11,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGTRefElement
 ---
+
 {{APIRef("SVG")}}{{deprecated_header}}
 
 The **`SVGTRefElement`** interface corresponds to the {{SVGElement("tref")}} elements.
@@ -19,11 +20,11 @@ Object-oriented access to the attributes of the {{SVGElement("tref")}} element v
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface has no properties but inherits properties from its parent, {{domxref("</em>SVGTextPositioningElement<em>")}}._
 
-## Methods
+## Instance methods
 
 _This interface has no methods but inherits methods from its parent, {{domxref("</em>SVGTextPositioningElement<em>")}}._
 

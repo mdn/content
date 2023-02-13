@@ -11,13 +11,14 @@ tags:
   - Reference
 browser-compat: api.CSSKeyframesRule.findRule
 ---
+
 {{APIRef("CSSOM") }}
 
 The **`findRule()`** method of the {{domxref("CSSKeyframeRule")}} interface finds the {{domxref("CSSKeyFrameRule")}} that matches the specified keyframe selector.
 
 ## Syntax
 
-```js
+```js-nolint
 findRule(select)
 ```
 
@@ -56,7 +57,7 @@ The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule"
 ```js
 let myRules = document.styleSheets[0].cssRules;
 let keyframes = myRules[0]; // a CSSKeyframesRule
-console.log(keyframes.findRule('to'));  // a CSSKeyframeRule object
+console.log(keyframes.findRule("to")); // a CSSKeyframeRule object
 ```
 
 ## Specifications

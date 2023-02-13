@@ -16,6 +16,7 @@ tags:
   - pageX
 browser-compat: api.MouseEvent.pageX
 ---
+
 {{APIRef("UI Events")}}
 
 The **`pageX`** read-only property of the {{domxref("MouseEvent")}} interface returns the X (horizontal) coordinate (in pixels) at which the mouse was clicked, relative to the left edge of the entire document.
@@ -28,7 +29,7 @@ Originally, this property was defined as a `long` integer. The [CSSOM View Modul
 `double` float. See the [Browser compatibility](#browser_compatibility) section for
 details.
 
-See {{SectionOnPage("/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems", "Page")}} for some additional information about coordinates specified in this fashion.
+See [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems#page) for additional information about coordinates specified in this fashion.
 
 ## Value
 
@@ -51,15 +52,9 @@ Since this example is presented in an {{HTMLElement("iframe")}}, that top-left c
 
 ```html
 <div class="box">
-  <p>
-    Move the mouse around in this box to watch its coordinates change.
-  </p>
-  <p>
-    <code>pageX</code>: <span id="x">n/a</span>
-  </p>
-  <p>
-    <code>pageY</code>: <span id="y">n/a</span>
-  </p>
+  <p>Move the mouse around in this box to watch its coordinates change.</p>
+  <p><code>pageX</code>: <span id="x">n/a</span></p>
+  <p><code>pageY</code>: <span id="y">n/a</span></p>
 </div>
 ```
 

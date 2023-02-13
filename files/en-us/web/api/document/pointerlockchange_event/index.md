@@ -10,6 +10,7 @@ tags:
   - pointerlockchange
 browser-compat: api.Document.pointerlockchange_event
 ---
+
 {{APIRef}}
 
 The `pointerlockchange` event is fired when the pointer is locked/unlocked.

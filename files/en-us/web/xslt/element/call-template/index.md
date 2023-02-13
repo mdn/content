@@ -7,6 +7,7 @@ tags:
   - XSLT
   - call-template
 ---
+
 {{ XsltRef() }}
 
 The `<xsl:call-template>` element invokes a named template.

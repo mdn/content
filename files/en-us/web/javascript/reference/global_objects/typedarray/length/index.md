@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.length
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/length
+page-type: javascript-instance-accessor-property
 tags:
   - JavaScript
   - Property
@@ -9,6 +10,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.TypedArray.length
 ---
+
 {{JSRef}}
 
 The **`length`** accessor property represents the length (in elements) of a typed array.

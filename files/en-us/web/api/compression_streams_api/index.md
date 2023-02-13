@@ -11,6 +11,7 @@ tags:
   - Overview
 browser-compat: api.CompressionStream
 ---
+
 {{DefaultAPISidebar("Compression Streams API")}}
 
 The **Compression Streams API** provides a JavaScript API for compressing and decompressing streams of data using the gzip or deflate formats.
@@ -29,14 +30,16 @@ Built in compression means that JavaScript applications will not need to include
 In this example a stream is compressed using gzip compression.
 
 ```js
-const compressedReadableStream = inputReadableStream.pipeThrough(new CompressionStream('gzip'));
+const compressedReadableStream = inputReadableStream.pipeThrough(
+  new CompressionStream("gzip")
+);
 ```
 
 In the following example a function decompresses a blob using gzip.
 
 ```js
 async function DecompressBlob(blob) {
-  const ds = new DecompressionStream('gzip');
+  const ds = new DecompressionStream("gzip");
   const decompressedStream = blob.stream().pipeThrough(ds);
   return await new Response(decompressedStream).blob();
 }

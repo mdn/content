@@ -11,17 +11,19 @@ tags:
   - Interface
   - Reference
   - Storage
+  - Non-standard
 browser-compat: api.IDBLocaleAwareKeyRange
 ---
-{{non-standard_header}}{{APIRef("IndexedDB")}}{{SeeCompatTable}}
 
-The **`IDBLocaleAwareKeyRange`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) is a Firefox-specific version of {{domxref("IDBKeyRange")}} — it functions in exactly the same fashion, and has the same properties and methods, but it is intended for use with {{domxref("IDBIndex")}} objects when the original index had a `locale` value specified upon its creation (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters)) — that is, it has [locale aware sorting](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting) enabled.
+{{APIRef("IndexedDB")}}{{SeeCompatTable}}{{Non-standard_Header}}
 
-## Methods
+The **`IDBLocaleAwareKeyRange`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) is a Firefox-specific version of {{domxref("IDBKeyRange")}} — it functions in exactly the same fashion, and has the same properties and methods, but it is intended for use with {{domxref("IDBIndex")}} objects when the original index had a `locale` value specified upon its creation (see the [`options`](/en-US/docs/Web/API/IDBObjectStore/createIndex#options) parameter to [`IDBObjectStore.createIndex()`](/en-US/docs/Web/API/IDBObjectStore/createIndex)) — that is, it has [locale aware sorting](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting) enabled.
+
+## Instance methods
 
 _This interface inherits all the methods of its parent interface, {{domxref("IDBKeyRange")}}._
 
-## Properties
+## Instance properties
 
 _This interface inherits all the properties of its parent interface, {{domxref("IDBKeyRange")}}._
 
@@ -39,9 +41,9 @@ function displayData() {
   const objectStore = transaction.objectStore('fThings');
 
   const myIndex = objectStore.index('lName');
-  myIndex.openCursor(keyRangeValue).onsuccess = function(event) {
+  myIndex.openCursor(keyRangeValue).onsuccess = (event) => {
     const cursor = event.target.result;
-    if(cursor) {
+    if (cursor) {
       const tableRow = document.createElement('tr');
       tableRow.innerHTML = `<td>${cursor.value.id}</td>`
                          + `<td>${cursor.value.lName}</td>`
@@ -77,4 +79,4 @@ Not currently part of any specification.
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

@@ -12,6 +12,7 @@ tags:
   - copy
 browser-compat: api.Element.copy_event
 ---
+
 {{APIRef}}
 
 The **`copy`** event fires when the user initiates a copy action through the browser's user interface.
@@ -39,7 +40,7 @@ A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
 To be informed when a user copies data from the webpage to their clipboard, you can add a handler to your {{domxref("Document")}} instance using {{domxref("EventTarget.addEventListener", "addEventListener()")}}, like this:
 
 ```js
-document.addEventListener("copy", function(event) {
+document.addEventListener("copy", (event) => {
   /* the session has shut down */
 });
 ```
@@ -47,7 +48,7 @@ document.addEventListener("copy", function(event) {
 Alternatively, you can use the `Document.oncopy` event handler property to establish a handler for the `copy` event:
 
 ```js
-document.oncopy = function(event) {
+document.oncopy = (event) => {
  /* the session has shut down */
 }
 ```

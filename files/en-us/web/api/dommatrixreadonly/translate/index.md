@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.DOMMatrixReadOnly.translate
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 The `translate()` method of the {{domxref("DOMMatrixReadOnly")}} interface
@@ -14,9 +15,9 @@ creates a new matrix being the result of the original matrix with a translation 
 
 ## Syntax
 
-```js
-DOMMatrix.translate(translateX, translateY);
-DOMMatrix.translate(translateX, translateY, translateZ);
+```js-nolint
+DOMMatrix.translate(translateX, translateY)
+DOMMatrix.translate(translateX, translateY, translateZ)
 ```
 
 ### Parameters

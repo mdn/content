@@ -9,9 +9,11 @@ tags:
   - Reference
   - priority
   - request
+  - Experimental
 browser-compat: api.Request.priority
 ---
-{{APIRef("Fetch")}}
+
+{{APIRef("Fetch")}}{{SeeCompatTable}}
 
 The **`priority`** read-only property of the {{domxref("Request")}}
 interface contains the hinted priority of the request relative to other

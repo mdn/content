@@ -6,8 +6,9 @@ tags:
   - Reference
   - Status code
   - Success response
-spec-urls: https://httpwg.org/specs/rfc7231.html#section-6.3.3
+spec-urls: https://httpwg.org/specs/rfc9110.html#status.202
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`202 Accepted`**
@@ -22,7 +23,7 @@ for cases where another process or server handles the request, or for batch proc
 
 ## Status
 
-```
+```http
 202 Accepted
 ```
 

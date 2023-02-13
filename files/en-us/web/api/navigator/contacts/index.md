@@ -10,9 +10,11 @@ tags:
   - Property
   - Read-only
   - contact picker
+  - Experimental
 browser-compat: api.Navigator.contacts
 ---
-{{DefaultAPISidebar("Contact Picker API")}}
+
+{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
 The **`contacts`** read-only property of the
 {{domxref("Navigator")}} interface returns a {{domxref('ContactsManager')}} interface

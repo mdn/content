@@ -18,6 +18,7 @@ tags:
   - state
 browser-compat: api.RTCIceTransport.state
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **{{domxref("RTCIceTransport")}}**
@@ -53,7 +54,7 @@ A string whose value is one of the following:
 
 ## Usage notes
 
-If an ICE restart occurs, the candidate gathering and connectivity check process is started over again; this will cause a transition from the `"connected"` state if the restart occurred while the state was `"completed"`. If the restart occurred during a transient `"disconnected"` state,  the state transitions to `"checking"`
+If an ICE restart occurs, the candidate gathering and connectivity check process is started over again; this will cause a transition from the `"connected"` state if the restart occurred while the state was `"completed"`. If the restart occurred during a transient `"disconnected"` state, the state transitions to `"checking"`
 
 ### The disconnected state
 

@@ -1,6 +1,7 @@
 ---
 title: BigInt.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
+page-type: javascript-instance-method
 tags:
   - BigInt
   - Internationalization
@@ -10,6 +11,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.BigInt.toLocaleString
 ---
+
 {{JSRef}}
 
 The **`toLocaleString()`** method returns a string with a language-sensitive representation of this BigInt. In implementations with [`Intl.NumberFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) support, this method simply calls `Intl.NumberFormat`.
@@ -18,7 +20,7 @@ The **`toLocaleString()`** method returns a string with a language-sensitive rep
 
 ## Syntax
 
-```js
+```js-nolint
 toLocaleString()
 toLocaleString(locales)
 toLocaleString(locales, options)
@@ -31,10 +33,13 @@ The `locales` and `options` parameters customize the behavior of the function an
 In implementations that support the [`Intl.NumberFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat), these parameters correspond exactly to the [`Intl.NumberFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) constructor's parameters. Implementations without `Intl.NumberFormat` support are asked to ignore both parameters, making the locale used and the form of the string returned entirely implementation-dependent.
 
 - `locales` {{optional_inline}}
+
   - : A string with a BCP 47 language tag, or an array of such strings. Corresponds to the [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#locales) parameter of the `Intl.NumberFormat()` constructor.
 
     In implementations without `Intl.NumberFormat` support, this parameter is ignored and the host's locale is usually used.
+
 - `options` {{optional_inline}}
+
   - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) parameter of the `Intl.NumberFormat()` constructor.
 
     In implementations without `Intl.NumberFormat` support, this parameter is ignored.
@@ -51,7 +56,7 @@ In implementations with `Intl.NumberFormat`, this is equivalent to `new Intl.Num
 
 When formatting large numbers of numbers, it is better to create a
 {{jsxref("Intl.NumberFormat")}} object and use the function provided by its
-{{jsxref("Intl/NumberFormat/format", "NumberFormat.format")}} property.
+{{jsxref("Intl/NumberFormat/format", "format()")}} method.
 
 ## Examples
 
@@ -63,8 +68,8 @@ with default options is returned.
 ```js
 const bigint = 3500n;
 
-bigint.toLocaleString();
-// Displays "3,500" if in U.S. English locale
+console.log(bigint.toLocaleString());
+// "3,500" if in U.S. English locale
 ```
 
 ### Using `locales`
@@ -79,24 +84,24 @@ const bigint = 123456789123456789n;
 
 // German uses period for thousands
 console.log(bigint.toLocaleString('de-DE'));
-// → 123.456.789.123.456.789
+// 123.456.789.123.456.789
 
 // Arabic in most Arabic speaking countries uses Eastern Arabic digits
 console.log(bigint.toLocaleString('ar-EG'));
-// → ١٢٣٬٤٥٦٬٧٨٩٬١٢٣٬٤٥٦٬٧٨٩
+// ١٢٣٬٤٥٦٬٧٨٩٬١٢٣٬٤٥٦٬٧٨٩
 
 // India uses thousands/lakh/crore separators
 console.log(bigint.toLocaleString('en-IN'));
-// → 1,23,45,67,89,12,34,56,789
+// 1,23,45,67,89,12,34,56,789
 
 // the nu extension key requests a numbering system, e.g. Chinese decimal
 console.log(bigint.toLocaleString('zh-Hans-CN-u-nu-hanidec'));
-// → 一二三,四五六,七八九,一二三,四五六,七八九
+// 一二三,四五六,七八九,一二三,四五六,七八九
 
 // when requesting a language that may not be supported, such as
 // Balinese, include a fallback language, in this case Indonesian
 console.log(bigint.toLocaleString(['ban', 'id']));
-// → 123.456.789.123.456.789
+// 123.456.789.123.456.789
 ```
 
 ### Using `options`
@@ -109,15 +114,15 @@ const bigint = 123456789123456789n;
 
 // request a currency format
 console.log(bigint.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
-// → 123.456.789.123.456.789,00 €
+// 123.456.789.123.456.789,00 €
 
 // the Japanese yen doesn't use a minor unit
 console.log(bigint.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))
-// → ￥123,456,789,123,456,789
+// ￥123,456,789,123,456,789
 
 // limit to three significant digits
 console.log(bigint.toLocaleString('en-IN', { maximumSignificantDigits: 3 }));
-// → 1,23,00,00,00,00,00,00,000
+// 1,23,00,00,00,00,00,00,000
 ```
 
 ## Specifications
@@ -130,4 +135,4 @@ console.log(bigint.toLocaleString('en-IN', { maximumSignificantDigits: 3 }));
 
 ## See also
 
-- {{jsxref("BigInt.toString()")}}
+- {{jsxref("BigInt.prototype.toString()")}}

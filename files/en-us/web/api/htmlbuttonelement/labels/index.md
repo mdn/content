@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLButtonElement.labels
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLButtonElement.labels`** read-only property returns a
@@ -33,10 +34,10 @@ with the `<button>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", () => {
   const button = document.getElementById("test");
-  for (let i = 0; i < button.labels.length; i++) {
-    console.log(button.labels[i].textContent); // "Label 1" and "Label 2"
+  for (const label of button.labels) {
+    console.log(label.textContent); // "Label 1" and "Label 2"
   }
 });
 ```

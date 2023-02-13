@@ -5,6 +5,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.sidebar_action
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

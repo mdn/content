@@ -23,6 +23,7 @@ tags:
   - sessions
 browser-compat: api.XRSessionEvent.session
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRSessionEvent")}} interface's

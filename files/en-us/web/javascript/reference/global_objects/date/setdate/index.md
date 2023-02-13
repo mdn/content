@@ -1,6 +1,7 @@
 ---
 title: Date.prototype.setDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setDate
+page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setDate
 ---
+
 {{JSRef}}
 
 The **`setDate()`** method changes the day of the month of a given {{jsxref("Date")}} instance, based on local time.
@@ -19,7 +21,7 @@ To instead change the day of the month for a given {{jsxref("Date")}} instance b
 
 ## Syntax
 
-```js
+```js-nolint
 setDate(dayValue)
 ```
 
@@ -46,12 +48,12 @@ If a negative number is provided for `dayValue`, the date will be set counting b
 ### Using setDate()
 
 ```js
-const theBigDay  = new Date(1962, 6, 7, 12); // noon of 1962-07-07 (7th of July 1962,  month is 0-indexed)
-const theBigDay2 = new Date(theBigDay).setDate(24);  // 1962-07-24 (24th of July 1962)
-const theBigDay3 = new Date(theBigDay).setDate(32);  // 1962-08-01 (1st of August 1962)
-const theBigDay4 = new Date(theBigDay).setDate(22);  // 1962-07-22 (22nd of July 1962)
-const theBigDay5 = new Date(theBigDay).setDate(0);   // 1962-06-30 (30th of June 1962)
-const theBigDay6 = new Date(theBigDay).setDate(98);  // 1962-10-06 (6th of October 1962)
+const theBigDay = new Date(1962, 6, 7, 12); // noon of 1962-07-07 (7th of July 1962, month is 0-indexed)
+const theBigDay2 = new Date(theBigDay).setDate(24); // 1962-07-24 (24th of July 1962)
+const theBigDay3 = new Date(theBigDay).setDate(32); // 1962-08-01 (1st of August 1962)
+const theBigDay4 = new Date(theBigDay).setDate(22); // 1962-07-22 (22nd of July 1962)
+const theBigDay5 = new Date(theBigDay).setDate(0); // 1962-06-30 (30th of June 1962)
+const theBigDay6 = new Date(theBigDay).setDate(98); // 1962-10-06 (6th of October 1962)
 const theBigDay7 = new Date(theBigDay).setDate(-50); // 1962-05-11 (11th of May 1962)
 ```
 

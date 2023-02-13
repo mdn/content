@@ -1,6 +1,7 @@
 ---
 title: Intl.PluralRules.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions
+page-type: javascript-instance-method
 tags:
   - Internationalization
   - Intl
@@ -12,15 +13,18 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.PluralRules.resolvedOptions
 ---
+
 {{JSRef}}
 
 The **`Intl.PluralRules.prototype.resolvedOptions()`** method
 returns a new object with properties reflecting the locale and plural formatting
 options computed during initialization of this {{jsxref("Intl.PluralRules")}} object.
 
+{{EmbedInteractiveExample("pages/js/intl-pluralrules-prototype-resolvedoptions.html")}}
+
 ## Syntax
 
-```js
+```js-nolint
 resolvedOptions()
 ```
 
@@ -39,9 +43,7 @@ The resulting object has the following properties:
     the key-value pairs that were requested and are supported for this locale are
     included in `locale`.
 - `pluralCategories`
-  - : An {{jsxref("Array")}} of plural categories used by the given locale, selected from
-    the list "`zero`", "`one`", "`two`",
-    "`few`", "`many`" and "`other`".
+  - : An {{jsxref("Array")}} of plural categories used by the given locale, selected from the list `"zero"`, `"one"`, `"two"`, `"few"`, `"many"` and `"other"`.
 - `type`
   - : The type used (`cardinal` or `ordinal`).
 
@@ -62,15 +64,15 @@ Only one of the following two groups of properties is included:
 ### Using the resolvedOptions() method
 
 ```js
-const de = new Intl.PluralRules('de-DE');
+const de = new Intl.PluralRules("de-DE");
 const usedOptions = de.resolvedOptions();
 
-usedOptions.locale;                // "de-DE"
+usedOptions.locale; // "de-DE"
 usedOptions.maximumFractionDigits; // 3
 usedOptions.minimumFractionDigits; // 0
-usedOptions.minimumIntegerDigits;  // 1
-usedOptions.pluralCategories;      // Array [ "one", "other" ]
-usedOptions.type;                  // "cardinal"
+usedOptions.minimumIntegerDigits; // 1
+usedOptions.pluralCategories; // [ "one", "other" ]
+usedOptions.type; // "cardinal"
 ```
 
 ## Specifications

@@ -14,6 +14,7 @@ tags:
   - uuid
 browser-compat: api.BluetoothRemoteGATTCharacteristic.uuid
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTCharacteristic.uuid`** read-only

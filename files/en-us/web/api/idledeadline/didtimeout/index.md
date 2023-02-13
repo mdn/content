@@ -15,6 +15,7 @@ tags:
   - requestIdleCallback
 browser-compat: api.IdleDeadline.didTimeout
 ---
+
 {{APIRef("Background Tasks")}}
 
 The read-only **`didTimeout`** property on the

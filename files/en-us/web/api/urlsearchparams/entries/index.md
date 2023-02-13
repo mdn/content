@@ -10,6 +10,7 @@ tags:
   - URLSearchParams
 browser-compat: api.URLSearchParams.entries
 ---
+
 {{APIRef("URL API")}}
 
 The **`entries()`** method of the
@@ -22,7 +23,7 @@ string objects.
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 
@@ -48,7 +49,7 @@ for (const [key, value] of searchParams.entries()) {
 
 The result is:
 
-```
+```plain
 key1, value1
 key2, value2
 ```

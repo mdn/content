@@ -12,6 +12,7 @@ tags:
   - data
 browser-compat: api.HTMLObjectElement.data
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`data`** property of the

@@ -1,6 +1,7 @@
 ---
 title: Bitwise XOR (^)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR
+page-type: javascript-operator
 tags:
   - Bitwise operator
   - JavaScript
@@ -9,16 +10,17 @@ tags:
   - Reference
 browser-compat: javascript.operators.bitwise_xor
 ---
+
 {{jsSidebar("Operators")}}
 
-The bitwise XOR operator (`^`) returns a `1` in each bit position
+The **bitwise XOR (`^`)** operator returns a `1` in each bit position
 for which the corresponding bits of either but not both operands are `1`s.
 
 {{EmbedInteractiveExample("pages/js/expressions-bitwise-xor.html", "shorter")}}
 
 ## Syntax
 
-```js
+```js-nolint
 a ^ b
 ```
 
@@ -29,7 +31,7 @@ and ones). Numbers with more than 32 bits get their most significant bits discar
 example, the following integer with more than 32 bits will be converted to a 32-bit
 integer:
 
-```js
+```
 Before: 11100110111110100000000000000110000000000001
 After:              10100000000000000110000000000001
 ```
@@ -49,15 +51,14 @@ The truth table for the XOR operation is:
 | 1   | 0   | 1       |
 | 1   | 1   | 0       |
 
-```js
+```
      9 (base 10) = 00000000000000000000000000001001 (base 2)
     14 (base 10) = 00000000000000000000000000001110 (base 2)
                    --------------------------------
 14 ^ 9 (base 10) = 00000000000000000000000000000111 (base 2) = 7 (base 10)
 ```
 
-Bitwise XORing any number `x` with `0` yields
-`x`.
+Bitwise XORing any number `x` with `0` returns `x` converted to a 32-bit integer. Do not use `^ 0` to truncate numbers to integers; use [`Math.trunc()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc#using_bitwise_no-ops_to_truncate_numbers) instead.
 
 ## Examples
 

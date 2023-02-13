@@ -19,6 +19,7 @@ tags:
   - sender
 browser-compat: api.RTCRtpSender.transport
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The read-only **`transport`** property of an

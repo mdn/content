@@ -10,6 +10,7 @@ tags:
   - URL API
 browser-compat: api.URL.hash
 ---
+
 {{ APIRef("URL API") }}
 
 The **`hash`** property of the

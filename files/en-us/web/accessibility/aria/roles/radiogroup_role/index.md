@@ -1,15 +1,18 @@
 ---
-title: 'aria: radiogroup role'
+title: "ARIA: radiogroup role"
 slug: web/accessibility/aria/roles/radiogroup_role
 tags:
   - accessibility
-  - aria
+  - ARIA
+  - ARIA Role
+  - Reference
   - roles
   - radiogroup
 spec-urls:
   - https://w3c.github.io/aria/#radiogroup
   - https://w3c.github.io/aria-practices/#radiobutton
 ---
+
 The `radiogroup` role is a group of `radio` buttons.
 
 ## Description
@@ -62,7 +65,7 @@ While generally moving off an a focused element brings you to the next focusable
 
 ### Required CSS features
 
-Use the  `[aria-checked="true"]` [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) to style the checked state of checked radio buttons.
+Use the `[aria-checked="true"]` [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) to style the checked state of checked radio buttons.
 
 Use CSS {{CSSXRef(':hover')}} and {{CSSXRef(':focus')}} pseudo-classes for styling visual keyboard focus and hover. The focus and hover effect should encompass both the radio button and label to make it easier to perceive which option is being chosen and to indicate that clicking either the label or button will activate the radio button.
 
@@ -72,27 +75,42 @@ The basic set up for a `radiogroup` using non-semantic ARIA roles instead of sem
 
 ```html
 <div role="radiogroup" aria-labelledby="question">
-  <div id="question">
-    Which is the best color?</div>
+  <div id="question">Which is the best color?</div>
   <div id="radioGroup">
     <p>
-      <span id="colorOption_0" tabindex="0"
-        role="radio" aria-checked="false" aria-labelledby="purple"></span>
+      <span
+        id="colorOption_0"
+        tabindex="0"
+        role="radio"
+        aria-checked="false"
+        aria-labelledby="purple"></span>
       <span id="purple">Purple</span>
     </p>
     <p>
-      <span id="colorOption_1" tabindex="-1"
-        role="radio" aria-checked="false"  aria-labelledby="aubergine"></span>
+      <span
+        id="colorOption_1"
+        tabindex="-1"
+        role="radio"
+        aria-checked="false"
+        aria-labelledby="aubergine"></span>
       <span id="aubergine">Aubergine</span>
     </p>
     <p>
-      <span id="colorOption_2" tabindex="-1"
-        role="radio" aria-checked="false" aria-labelledby="magenta"></span>
+      <span
+        id="colorOption_2"
+        tabindex="-1"
+        role="radio"
+        aria-checked="false"
+        aria-labelledby="magenta"></span>
       <span id="magenta">Magenta</span>
     </p>
     <p>
-      <span id="colorOption_3" tabindex="-1"
-        role="radio" aria-checked="false" aria-labelledby="all"></span>
+      <span
+        id="colorOption_3"
+        tabindex="-1"
+        role="radio"
+        aria-checked="false"
+        aria-labelledby="all"></span>
       <span id="all">All of the above</span>
     </p>
   </div>
@@ -105,19 +123,19 @@ This could have been written using semantic HTML, which requires no CSS or JavaS
 <fieldset>
   <legend>Which is the best color?</legend>
   <p>
-    <input name="colorOption" type="radio" id="purple">
+    <input name="colorOption" type="radio" id="purple" />
     <label for="purple">Purple</label>
   </p>
   <p>
-    <input name="colorOption" type="radio" id="aubergine">
+    <input name="colorOption" type="radio" id="aubergine" />
     <label for="aubergine">Aubergine</label>
   </p>
   <p>
-    <input name="colorOption" type="radio" id="magenta">
+    <input name="colorOption" type="radio" id="magenta" />
     <label for="magenta">Magenta</label>
   </p>
-  <li>
-    <input name="colorOption" type="radio" id="all">
+  <p>
+    <input name="colorOption" type="radio" id="all" />
     <label for="all">All of the above</label>
   </p>
 </fieldset>
@@ -138,3 +156,11 @@ In this {{HTMLElement('fieldset')}} example, while `role="radiogroup"` is not ne
 - [`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
 - [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
 - [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required)
+
+<section id="Quick_links">
+
+1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
+
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+
+</section>

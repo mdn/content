@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.pathname
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.pathname`** property is a

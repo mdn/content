@@ -15,6 +15,7 @@ tags:
   - pointer lock
 browser-compat: api.MouseEvent.movementY
 ---
+
 {{APIRef("UI Events")}}
 
 The **`movementY`** read-only property of the {{domxref("MouseEvent")}} interface provides the difference in the Y coordinate of the mouse pointer between the given event and the previous {{domxref("Element/mousemove_event", "mousemove")}} event.

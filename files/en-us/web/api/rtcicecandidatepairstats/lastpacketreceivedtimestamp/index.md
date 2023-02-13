@@ -17,6 +17,7 @@ tags:
   - timeStamp
 browser-compat: api.RTCIceCandidatePairStats.lastPacketReceivedTimestamp
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} property

@@ -1,6 +1,7 @@
 ---
 title: Character classes
 slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
+page-type: guide
 tags:
   - Guide
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - Regular Expressions
   - character classes
 ---
+
 {{JSSidebar("JavaScript Guide")}}
 
 Character classes distinguish kinds of characters such as, for example, distinguishing between letters and digits.
@@ -24,7 +26,6 @@ Character classes distinguish kinds of characters such as, for example, distingu
       <th scope="col">Meaning</th>
     </tr>
   </thead>
-  <tbody></tbody>
   <tbody>
     <tr>
       <td>
@@ -91,7 +92,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
             Matches any single character <em>except</em> line terminators:
             <code>\n</code>, <code>\r</code>, <code>\u2028</code> or
             <code>\u2029</code>. For example, <code>/.y/</code> matches "my" and
-            "ay", but not "yes", in "yes make my day".
+            "ay", but not "yes", in "yes make my day", as there is no character before "y" in "yes".
           </li>
           <li>
             Inside a character class, the dot loses its special meaning and
@@ -105,7 +106,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
           including newlines.
         </p>
         <p>
-          ES2018 added the <code>s</code> "dotAll" flag, which allows the dot to
+          The <code>s</code> "dotAll" flag allows the dot to
           also match line terminators.
         </p>
       </td>
@@ -158,10 +159,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
         <p>
           Matches a single white space character, including space, tab, form
           feed, line feed, and other Unicode spaces. Equivalent to
-          <code
-            >[
-            \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code
-          >. For example, <code>/\s\w*/</code> matches " bar" in "foo bar".
+          <code>[\f\n\r\t\v\u0020\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>. For example, <code>/\s\w*/</code> matches " bar" in "foo bar".
         </p>
       </td>
     </tr>
@@ -170,10 +168,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
       <td>
         <p>
           Matches a single character other than white space. Equivalent to
-          <code
-            >[^
-            \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code
-          >. For example, <code>/\S\w*/</code> matches "foo" in "foo bar".
+          <code>[^\f\n\r\t\v\u0020\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>. For example, <code>/\S\w*/</code> matches "foo" in "foo bar".
         </p>
       </td>
     </tr>
@@ -345,7 +340,8 @@ console.table(randomData.match(regexpFourDigits));
 ### Looking for a word (from the latin alphabet) starting with A
 
 ```js
-const aliceExcerpt = "I'm sure I'm not Ada,' she said, 'for her hair goes in such long ringlets, and mine doesn't go in ringlets at all.";
+const aliceExcerpt =
+  "I'm sure I'm not Ada,' she said, 'for her hair goes in such long ringlets, and mine doesn't go in ringlets at all.";
 const regexpWordStartingWithA = /\b[aA]\w+/g;
 // \b indicates a boundary (i.e. do not start matching in the middle of a word)
 // [aA] indicates the letter a or A
@@ -365,13 +361,14 @@ const regexpBMPWord = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
 // BMP goes through U+0000 to U+FFFF but space is U+0020
 
 console.table(nonEnglishText.match(regexpBMPWord));
-[ 'Приключения', 'Алисы', 'в', 'Стране', 'чудес' ]
+["Приключения", "Алисы", "в", "Стране", "чудес"];
 ```
 
 ### Counting vowels
 
 ```js
-const aliceExcerpt = "There was a long silence after this, and Alice could only hear whispers now and then.";
+const aliceExcerpt =
+  "There was a long silence after this, and Alice could only hear whispers now and then.";
 const regexpVowels = /[AEIOUYaeiouy]/g;
 
 console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);

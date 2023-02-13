@@ -1,6 +1,7 @@
 ---
 title: CSS Colors
 slug: Web/CSS/CSS_Colors
+page-type: css-module
 tags:
   - CSS
   - CSS Colors
@@ -13,6 +14,7 @@ tags:
   - colors
 spec-urls: https://drafts.csswg.org/css-color/
 ---
+
 {{CSSRef}}
 
 **CSS Color** is a CSS module that deals with colors, color types, color blending, opacity, and how you can apply these colors and effects to HTML content.

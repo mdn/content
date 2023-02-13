@@ -12,6 +12,7 @@ tags:
   - setBadgeTextColor
 browser-compat: webextensions.api.action.setBadgeTextColor
 ---
+
 {{AddonSidebar()}}
 
 Sets the text color for the browser action's badge. Tabs without a specific badge text color will inherit the global badge text color.
@@ -20,7 +21,7 @@ Sets the text color for the browser action's badge. Tabs without a specific badg
 
 ## Syntax
 
-```js
+```js-nolint
 browser.action.setBadgeTextColor(
   details // object
 )
@@ -55,24 +56,24 @@ browser.action.setBadgeTextColor(
 A badge text color that starts off as red, and turns green when the browser action is clicked:
 
 ```js
-browser.action.setBadgeText({text: "1234"});
-browser.action.setBadgeTextColor({color: "red"});
+browser.action.setBadgeText({ text: "1234" });
+browser.action.setBadgeTextColor({ color: "red" });
 
 browser.action.onClicked.addListener(() => {
-  browser.action.setBadgeTextColor({color: "green"});
+  browser.action.setBadgeTextColor({ color: "green" });
 });
 ```
 
 Set the badge text color only for the active tab:
 
 ```js
-browser.action.setBadgeText({text: "1234"});
-browser.action.setBadgeTextColor({color: "red"});
+browser.action.setBadgeText({ text: "1234" });
+browser.action.setBadgeTextColor({ color: "red" });
 
-browser.action.onClicked.addListener((tab)=> {
+browser.action.onClicked.addListener((tab) => {
   browser.action.setBadgeTextColor({
     color: "green",
-    tabId: tab.id
+    tabId: tab.id,
   });
 });
 ```
@@ -85,7 +86,8 @@ browser.action.onClicked.addListener((tab)=> {
 
 > **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-setBadgeBackgroundColor) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -112,4 +114,4 @@ browser.action.onClicked.addListener((tab)=> {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

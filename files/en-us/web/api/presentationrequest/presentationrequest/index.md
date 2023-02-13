@@ -11,7 +11,8 @@ tags:
   - Reference
 browser-compat: api.PresentationRequest.PresentationRequest
 ---
-{{DefaultAPISidebar("Presentation API")}}{{Non-standard_header}}
+
+{{APIRef("Presentation API")}}{{SeeCompatTable}}
 
 The **`PresentationRequest()`**
 constructor creates a new {{domxref("PresentationRequest")}} object which creates a
@@ -19,7 +20,7 @@ new PresentationRequest.
 
 ## Syntax
 
-```js
+```js-nolint
 new PresentationRequest(url)
 new PresentationRequest(urls)
 ```

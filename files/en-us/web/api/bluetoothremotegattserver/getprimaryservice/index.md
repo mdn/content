@@ -13,6 +13,7 @@ tags:
   - getPrimaryService()
 browser-compat: api.BluetoothRemoteGATTServer.getPrimaryService
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTServer.getPrimaryService()`** method
@@ -21,7 +22,7 @@ Bluetooth device for a specified {{domxref("BluetoothServiceUUID")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getPrimaryService(bluetoothServiceUUID)
 ```
 

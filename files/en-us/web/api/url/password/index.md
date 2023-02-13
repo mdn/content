@@ -11,6 +11,7 @@ tags:
   - password
 browser-compat: api.URL.password
 ---
+
 {{ApiRef("URL API")}}
 
 The **`password`** property of the {{domxref("URL")}} interface

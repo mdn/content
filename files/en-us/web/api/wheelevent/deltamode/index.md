@@ -11,6 +11,7 @@ tags:
   - WheelEvent
 browser-compat: api.WheelEvent.deltaMode
 ---
+
 {{APIRef("UI Events")}}
 
 The **`WheelEvent.deltaMode`** read-only property returns an

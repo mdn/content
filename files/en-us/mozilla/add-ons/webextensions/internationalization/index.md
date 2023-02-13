@@ -12,6 +12,7 @@ tags:
   - placeholders
   - predefined messages
 ---
+
 {{AddonSidebar}}
 
 The [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) API has a rather handy module available for internationalizing extensions — [i18n](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n). In this article we'll explore its features and provide a practical example of how it works. The i18n system for extensions built using WebExtension APIs is similar to common JavaScript libraries for i18n such as [i18n.js](http://i18njs.com/).
@@ -181,7 +182,7 @@ The first one just retrieves the `notificationTitle message` field from the avai
 }
 ```
 
-The `"placeholders"` member defines all the placeholders, and where they are retrieved from. The `"url"` placeholder specifies that its content is taken from $1, which is the first value given inside the second parameter of `getMessage()`. Since the placeholder is called `"url"`, we use `$URL$` to call it inside the actual message string (so for `"name"` you'd use `$NAME$`, etc.) If you have multiple placeholders, you can provide them inside an array that is given to {{WebExtAPIRef("i18n.getMessage()")}} as the second parameter — `[a, b, c]`will be available as`$1`, `$2`, and `$3`, and so on, inside `messages.json`.
+The `"placeholders"` member defines all the placeholders, and where they are retrieved from. The `"url"` placeholder specifies that its content is taken from $1, which is the first value given inside the second parameter of `getMessage()`. Since the placeholder is called `"url"`, we use `$URL$` to call it inside the actual message string (so for `"name"` you'd use `$NAME$`, etc.) If you have multiple placeholders, you can provide them inside an array that is given to {{WebExtAPIRef("i18n.getMessage()")}} as the second parameter — `[a, b, c]` will be available as `$1`, `$2`, and `$3`, and so on, inside `messages.json`.
 
 Let's run through an example: the original `notificationContent` message string in the `en/messages.json` file is
 
@@ -206,7 +207,7 @@ It is possible to insert your variables (`$1`, `$2`, `$3`, etc.) directly into t
 }
 ```
 
-This may seem quicker and less complex, but the other way (using `"placeholders"`) is seen as best practice. This is because having the placeholder name (e.g. `"url"`) and example helps you to remember what the placeholder is for — a week after you write your code, you'll probably forget what `$1`–`$8` refer to, but you'll be more likely to know what your placeholder names refer to.
+This may seem quicker and less complex, but the other way (using `"placeholders"`) is seen as best practice. This is because having the placeholder name (e.g. `"url"`) and example helps you to remember what the placeholder is for — a week after you write your code, you'll probably forget what `$1` – `$8` refer to, but you'll be more likely to know what your placeholder names refer to.
 
 ### Hardcoded substitution
 
@@ -305,7 +306,7 @@ The following table shows the different available predefined messages:
           the
           <a
             href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings"
-            >applications</a
+            >browser_specific_settings</a
           >
           key in manifest.json. It's the generated UUID that appears in the
           add-on's URL. This means that you can't use this value as the

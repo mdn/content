@@ -9,10 +9,11 @@ tags:
   - URLPattern
   - URL Pattern API
   - Web
+  - Experimental
 browser-compat: api.URLPattern
 ---
 
-{{DefaultAPISidebar("URL Pattern API")}}
+{{DefaultAPISidebar("URL Pattern API")}}{{SeeCompatTable}}
 
 The URL Pattern API defines a syntax that is used to create URL pattern
 matchers. These patterns can be matched against URLs or individual URL
@@ -40,7 +41,7 @@ section below.
 
 The URL Pattern API only has a single related interface:
 
-- {{domxref("URLPattern")}}
+- {{domxref("URLPattern")}} {{Experimental_Inline}}
 
 ## Pattern syntax
 
@@ -130,14 +131,14 @@ Some regex patterns do not work as you may expect:
   ```
 
   ```js
-  // with `$` in protocol
+  // with `$` in hash
   const pattern = new URLPattern({ hash: '(hash$)' });
   console.log(pattern.test('https://example.com/#hash')); // true
   console.log(pattern.test('xhttps://example.com/#otherhash')); // false
   ```
 
   ```js
-  // without `$` in protocol
+  // without `$` in hash
   const pattern = new URLPattern({ hash: '(hash)' });
   console.log(pattern.test('https://example.com/#hash')); // true
   console.log(pattern.test('xhttps://example.com/#otherhash')); // false
@@ -352,6 +353,26 @@ there are some pattern representations that parse to the same underlying
 meaning, like `foo` and `{foo}`. Such cases are normalized to the simplest form.
 In this case `{foo}` gets changed to `foo`.
 
+## Case sensitivity
+
+The URL Pattern API treats many parts of the URL as case-sensitive by default when matching. In contrast, many client-side JavaScript frameworks use case-insensitive URL matching. An `ignoreCase` option is available on the {{domxref("URLPattern.URLPattern", "URLPattern()")}} constructor to enable case-insensitive matching if desired.
+
+```js
+// Case-sensitive matching by default
+const pattern = new URLPattern('https://events.com/2022/feb/*');
+console.log(pattern.test('https://events.com/2022/feb/xc44rsz')); // true
+console.log(pattern.test('https://events.com/2022/Feb/xc44rsz')); // false
+```
+
+Setting the `ignoreCase` option to `true` in the constructor switches all matching operations to case-insensitive for the given pattern:
+
+```js
+// Case-insensitive matching
+const pattern = new URLPattern('https://events.com/2022/feb/*', { ignoreCase : true });
+console.log(pattern.test('https://events.com/2022/feb/xc44rsz')); // true
+console.log(pattern.test('https://events.com/2022/Feb/xc44rsz')); // true
+```
+
 ## Examples
 
 ### Filter on a specific URL component
@@ -380,7 +401,7 @@ console.log(pattern.test('https://example.com/foo/bar')); // true
 
 console.log(pattern.test({ hostname: 'cdn.example.com' })); // true
 
-console.log(pattern.test('custom-protocol://example.com/other/path?q=1')); // true
+console.log(pattern.test('custom-protocol://example.com/other/path?q=1')); // false
 
 // Prints `false` because the hostname component does not match
 console.log(pattern.test('https://cdn-example.com/foo/bar'));
@@ -549,7 +570,7 @@ The following example shows how groups can be given custom names which can be
 used to accessed the matched value in the result object.
 
 ```js
-// Construct a URLPattern using matching groups with custom names.  These
+// Construct a URLPattern using matching groups with custom names. These
 // names can then be later used to access the matched values in the result
 // object.
 const pattern = new URLPattern({ pathname: '/:product/:user/:action' });
@@ -610,7 +631,7 @@ const pattern2 = new URLPattern({ pathname: '/product/:action?' });
 console.log(pattern2.test({ pathname: '/product/view' })); // true
 console.log(pattern2.test({ pathname: '/product' })); // true
 
-// Wildcards can be made optional as well.  This may not seem to make sense
+// Wildcards can be made optional as well. This may not seem to make sense
 // since they already match the empty string, but it also makes the prefix
 // `/` optional in a pathname pattern.
 const pattern3 = new URLPattern({ pathname: '/product/*?' });

@@ -4,6 +4,7 @@ slug: Web/XSLT/PI_Parameters
 tags:
   - XSLT
 ---
+
 ### Overview
 
 XSLT supports the concept of passing parameters to a stylesheet when executing it. This has been possible for a while when using the [XSLTProcessor](/en-US/XSLTProcessor) in JavaScript. However when using an `<?xml-stylesheet?>` processing instruction (PI) there used to be no way to provide parameters.
@@ -37,7 +38,7 @@ The `xslt-param` PI supports 4 attributes:
 - namespace
   - : The namespace of the parameter name. No syntax checking is done on the attribute.
 - value
-  - : Contains the string value for the parameter. The value of the attribute is used as value for the parameter. The datatype will always be*string*.
+  - : Contains the string value for the parameter. The value of the attribute is used as value for the parameter. The datatype will always be _string_.
 - select
   - : An [XPath](/en-US/XPath) expression for the parameter. The value of the attribute is parsed as an XPath expression. The result of evaluating the expression is used as value for the parameter.
 

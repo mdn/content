@@ -4,7 +4,6 @@ slug: Web/API/VRFieldOfView/leftDegrees
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - VR
@@ -12,9 +11,12 @@ tags:
   - Virtual Reality
   - WebVR
   - leftDegrees
+  - Deprecated
+  - Non-standard
 browser-compat: api.VRFieldOfView.leftDegrees
 ---
-{{APIRef("WebVR API")}}{{SeeCompatTable}}{{Deprecated_header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_header}}{{Non-standard_header}}
 
 The **`leftDegrees`** read-only property of the {{domxref("VRFieldOfView")}} interface returns the number of degrees to the left that the field of view extends in.
 

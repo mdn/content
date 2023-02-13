@@ -12,6 +12,7 @@ tags:
   - get()
 browser-compat: api.StylePropertyMapReadOnly.get
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`get()`** method of the
@@ -20,7 +21,7 @@ object for the first value of the specified property.
 
 ## Syntax
 
-```js
+```js-nolint
 get(property)
 ```
 
@@ -41,7 +42,7 @@ JavaScript:
 
 ```html
 <p>
-   <a href="https://example.com">Link</a>
+  <a href="https://example.com">Link</a>
 </p>
 <dl id="results"></dl>
 ```
@@ -53,8 +54,8 @@ p {
   font-weight: bold;
 }
 a {
-   --color: red;
-   color: var(--color);
+  --color: red;
+  color: var(--color);
 }
 ```
 

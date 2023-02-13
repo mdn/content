@@ -11,6 +11,7 @@ tags:
   - cancel
 browser-compat: api.ReadableStream.cancel
 ---
+
 {{APIRef("Streams")}}
 
 The **`cancel()`** method of the
@@ -25,7 +26,7 @@ still and not completely get rid of the stream, you'd use
 
 ## Syntax
 
-```js
+```js-nolint
 cancel()
 cancel(reason)
 ```
@@ -89,8 +90,7 @@ fetch(url).then((response) => {
 
     if (matchFoundAt === -1) {
       buffer = buffer.slice(-bufferSize);
-    }
-    else if (buffer.slice(matchFoundAt + toMatch.length).length >= contextAfter) {
+    } else if (buffer.slice(matchFoundAt + toMatch.length).length >= contextAfter) {
       console.log("Here's the match:")
       console.log(buffer.slice(
         Math.max(0, matchFoundAt - contextBefore),
@@ -99,8 +99,7 @@ fetch(url).then((response) => {
       console.log("Cancelling fetch");
       reader.cancel();
       return;
-    }
-    else {
+    } else {
       console.log('Found match, but need more context…');
     }
 

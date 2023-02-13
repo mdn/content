@@ -13,6 +13,7 @@ tags:
   - isContextLost
 browser-compat: api.WebGLRenderingContext.isContextLost
 ---
+
 {{APIRef("WebGL")}}
 
 The
@@ -22,7 +23,7 @@ must be re-established before rendering can resume.
 
 ## Syntax
 
-```js
+```js-nolint
 isContextLost()
 ```
 

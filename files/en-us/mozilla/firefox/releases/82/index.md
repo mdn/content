@@ -2,11 +2,12 @@
 title: Firefox 82 for developers
 slug: Mozilla/Firefox/Releases/82
 tags:
-  - '82'
+  - "82"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 82 that will affect developers. Firefox 82 was released on October 20, 2020.
@@ -23,7 +24,7 @@ This article provides information about the changes in Firefox 82 that will affe
 ### HTML
 
 - The color picker used for [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) is now keyboard-accessible on Windows ({{bug(1526820)}}).
-- The `allow-downloads` flag for the [`<iframe sandbox>`](/en-US/docs/Web/HTML/Element/iframe) attribute is now supported  ({{bug(1656212)}}).
+- The `allow-downloads` flag for the [`<iframe sandbox>`](/en-US/docs/Web/HTML/Element/iframe) attribute is now supported ({{bug(1656212)}}).
 
 ### CSS
 

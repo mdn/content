@@ -13,6 +13,7 @@ tags:
   - value
 browser-compat: api.CSSUnitValue.value
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSUnitValue.value`** property of the
@@ -31,7 +32,7 @@ The following creates a {{domxref('CSSPositionValue')}} from individual
 ```js
 const pos = new CSSPositionValue(
   new CSSUnitValue(5, "px"),
-  new CSSUnitValue(10, "px"),
+  new CSSUnitValue(10, "px")
 );
 
 console.log(pos.x.value); // 5

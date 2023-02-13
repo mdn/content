@@ -6,6 +6,7 @@ tags:
   - Firefox 3
   - XUL
 ---
+
 {{FirefoxSidebar}}
 
 Full page zoom (or just fullZoom) is a new feature in [Firefox 3](/en-US/docs/Mozilla/Firefox/Releases/3).
@@ -30,7 +31,9 @@ You may use the fullZoom feature for a [XUL:iframe](/en-US/docs/XUL/iframe) as w
 var zoom = 1.5;
 var iframe = document.getElementById("authorFrame");
 var contViewer = iframe.docShell.contentViewer;
-var docViewer = contViewer.QueryInterface(Components.interfaces.nsIMarkupDocumentViewer);
+var docViewer = contViewer.QueryInterface(
+  Components.interfaces.nsIMarkupDocumentViewer
+);
 docViewer.fullZoom = zoom;
 ```
 

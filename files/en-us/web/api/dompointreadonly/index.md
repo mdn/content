@@ -15,6 +15,7 @@ tags:
   - Reference
 browser-compat: api.DOMPointReadOnly
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 The **`DOMPointReadOnly`** interface specifies the coordinate and perspective fields used by {{domxref("DOMPoint")}} to define a 2D or 3D point in a coordinate system.
@@ -45,15 +46,15 @@ const point = DOMPointReadOnly.fromPoint({x: 100, y: 100, z: 50, w: 1.0});
 - {{domxref("DOMPointReadOnly.DOMPointReadOnly","DOMPointReadOnly()")}}
   - : Creates a new `DOMPointReadOnly` object given the values of its coordinates and perspective. To create a point using an object, you can instead use {{domxref("DOMPointReadOnly.fromPoint()")}}.
 
-## Properties
+## Instance properties
 
-- {{domxref("DOMPointReadOnly.x")}} {{readonlyInline}}
+- {{domxref("DOMPointReadOnly.x")}} {{ReadOnlyInline}}
   - : The point's horizontal coordinate, `x`.
-- {{domxref("DOMPointReadOnly.y")}} {{readonlyInline}}
+- {{domxref("DOMPointReadOnly.y")}} {{ReadOnlyInline}}
   - : The point's vertical coordinate, `y`.
-- {{domxref("DOMPointReadOnly.z")}} {{readonlyInline}}
+- {{domxref("DOMPointReadOnly.z")}} {{ReadOnlyInline}}
   - : The point's depth coordinate, `z`.
-- {{domxref("DOMPointReadOnly.w")}} {{readonlyInline}}
+- {{domxref("DOMPointReadOnly.w")}} {{ReadOnlyInline}}
   - : The point's perspective value, `w`.
 
 ## Static methods
@@ -61,7 +62,7 @@ const point = DOMPointReadOnly.fromPoint({x: 100, y: 100, z: 50, w: 1.0});
 - {{domxref("DOMPointReadOnly.fromPoint()")}}
   - : A static method that creates a new `DOMPointReadOnly` object given the coordinates provided in the specified object.
 
-## Methods
+## Instance methods
 
 - {{domxref("DOMPointReadOnly.matrixTransform", "matrixTransform()")}}
   - : Applies a matrix transform specified as an object to the `DOMPointReadOnly` object.

@@ -33,10 +33,10 @@ channels, or `null` if SCTP negotiation hasn't happened.
 const pc = new RTCPeerConnection();
 
 const channel = pc.createDataChannel("Mydata");
-channel.onopen = function (event) {
+channel.onopen = (event) => {
   channel.send("sending a message");
 };
-channel.onmessage = function (event) {
+channel.onmessage = (event) => {
   console.log(event.data);
 };
 

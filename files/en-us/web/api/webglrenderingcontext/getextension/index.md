@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getExtension
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getExtension()`** method enables a
@@ -17,7 +18,7 @@ The **`WebGLRenderingContext.getExtension()`** method enables a
 
 ## Syntax
 
-```js
+```js-nolint
 getExtension(name)
 ```
 

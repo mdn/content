@@ -1,6 +1,7 @@
 ---
 title: '<noscript>: The Noscript element'
 slug: Web/HTML/Element/noscript
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -10,7 +11,7 @@ tags:
 browser-compat: html.elements.noscript
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<noscript>`** [HTML](/en-US/docs/Web/HTML) element defines a section of HTML to be inserted if a script type on the page is unsupported or if scripting is currently turned off in the browser.
 

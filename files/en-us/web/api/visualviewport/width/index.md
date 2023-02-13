@@ -12,6 +12,7 @@ tags:
   - width
 browser-compat: api.VisualViewport.width
 ---
+
 {{APIRef("Visual Viewport")}}
 
 The **`width`** read-only property of the

@@ -13,6 +13,7 @@ tags:
   - onblur
 browser-compat: api.Window.blur_event
 ---
+
 {{APIRef}}
 
 The **`blur`** event fires when an element has lost focus.
@@ -33,7 +34,7 @@ onblur = (event) => { };
 
 ## Event type
 
-An {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("FocusEvent")}}
 

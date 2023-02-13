@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Screen.height
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`Screen.height`** read-only property returns the height

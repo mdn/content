@@ -5,11 +5,12 @@ tags:
   - Firefox 3
   - SVG
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 3 offers improved [Scalable Vector Graphics](/en-US/docs/Web/SVG) (SVG) support over prior versions of Firefox. While these features are documented elsewhere, this article serves as a convenient list so you can easily determine which features were added in Firefox 3.
 
-- The `foreignObject` element is now supported ({{ Bug(326966) }}). See the [specification](https://www.w3.org/TR/SVG11/extend.html#ForeignObjectElement) or [this article](http://weblogs.mozillazine.org/roc/archives/2006/06/the_future_is_now.html) for details.
+- The `foreignObject` element is now supported ({{ Bug(326966) }}). See the [specification](https://www.w3.org/TR/SVG11/extend.html#ForeignObjectElement) or [this article](https://robert.ocallahan.org/2006/06/future-is-now_20.html) for details.
 - `pattern` element support ([spec](https://www.w3.org/TR/SVG11/pservers.html#PatternElement))
 - `mask` element support ([spec](https://www.w3.org/TR/SVG11/masking.html#MaskElement))
 - Support for all SVG 1.1 filters ([spec](https://www.w3.org/TR/SVG11/filters.html)):

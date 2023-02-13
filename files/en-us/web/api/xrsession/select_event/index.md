@@ -9,11 +9,15 @@ tags:
   - WebXR
   - XR
   - XRInputSourceEvent
+  - Experimental
 browser-compat: api.XRSession.select_event
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The WebXR **`select`** event is sent to an {{domxref("XRSession")}} when one of the session's input sources has completed a [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_action).
+
+The {{domxref("Element.beforexrselect_event", "beforexrselect")}} is fired before this event and can prevent this event from being raised.
 
 ## Syntax
 
@@ -95,3 +99,4 @@ xrSession.onselect = (event) => {
 ## See also
 
 - {{domxref("XRSession.selectstart_event", "selectstart")}} and {{domxref("XRSession.selectend_event", "selectend")}}
+- {{domxref("Element.beforexrselect_event", "beforexrselect")}}

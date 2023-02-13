@@ -1,11 +1,13 @@
 ---
 title: alignment-baseline
 slug: Web/SVG/Attribute/alignment-baseline
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute
 browser-compat: svg.attributes.presentation.alignment-baseline
 ---
+
 {{SVGRef}}
 
 The **`alignment-baseline`** attribute specifies how an object is aligned with respect to its parent. This property specifies which baseline of this element is to be aligned with the corresponding baseline of the parent. For example, this allows alphabetic baselines in Roman text to stay aligned across font size changes. It defaults to the baseline with the same name as the computed value of the `alignment-baseline` property.
@@ -55,9 +57,11 @@ You can use this attribute with the following SVG elements:
 - `text-bottom`
   - : Matches the bottom of the box to the top of the parent's content area.
 - `text-before-edge`
+
   - : The alignment-point of the object being aligned is aligned with the "text-before-edge" baseline of the parent text content element.
 
     > **Note:** This keyword may be mapped to `text-top`.
+
 - `middle`
   - : Aligns the vertical midpoint of the box with the baseline of the parent box plus half the x-height of the parent.
 - `central`
@@ -67,9 +71,11 @@ You can use this attribute with the following SVG elements:
 - `text-top`
   - : Matches the top of the box to the top of the parent's content area.
 - `text-after-edge`
+
   - : The alignment-point of the object being aligned is aligned with the "text-after-edge" baseline of the parent text content element.
 
     > **Note:** This keyword may be mapped to `text-bottom`.
+
 - `ideographic`
   - : Matches the box's ideographic character face under-side baseline to that of its parent.
 - `alphabetic`
@@ -90,36 +96,39 @@ SVG 2 introduces some changes to the definition of this property. In particular:
 ## Example
 
 ```html
-<svg width="300" height="120" viewBox="0 0 300 120"
-      xmlns="http://www.w3.org/2000/svg">
-
-    <!-- Materialization of anchors -->
-    <path d="M60,10 L60,110
+<svg
+  width="300"
+  height="120"
+  viewBox="0 0 300 120"
+  xmlns="http://www.w3.org/2000/svg">
+  <!-- Materialization of anchors -->
+  <path
+    d="M60,10 L60,110
               M30,10 L300,10
               M30,65 L300,65
               M30,110 L300,110
-              " stroke="grey" />
+              "
+    stroke="grey" />
 
-    <!-- Anchors in action -->
-    <text alignment-baseline="hanging"
-          x="60" y="10">A hanging</text>
+  <!-- Anchors in action -->
+  <text alignment-baseline="hanging" x="60" y="10">A hanging</text>
 
-    <text alignment-baseline="middle"
-          x="60" y="65">A middle</text>
+  <text alignment-baseline="middle" x="60" y="65">A middle</text>
 
-    <text alignment-baseline="baseline"
-          x="60" y="110">A baseline</text>
+  <text alignment-baseline="baseline" x="60" y="110">A baseline</text>
 
-    <!-- Materialization of anchors -->
-    <circle cx="60" cy="10" r="3" fill="red" />
-    <circle cx="60" cy="65" r="3" fill="red" />
-    <circle cx="60" cy="110" r="3" fill="red" />
+  <!-- Materialization of anchors -->
+  <circle cx="60" cy="10" r="3" fill="red" />
+  <circle cx="60" cy="65" r="3" fill="red" />
+  <circle cx="60" cy="110" r="3" fill="red" />
 
-<style><![CDATA[
-text{
-    font: bold 36px Verdana, Helvetica, Arial, sans-serif;
-}
-]]></style>
+  <style>
+    <![CDATA[
+      text{
+        font: bold 36px Verdana, Helvetica, Arial, sans-serif;
+      }
+    ]]>
+  </style>
 </svg>
 ```
 

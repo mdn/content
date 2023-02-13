@@ -6,6 +6,7 @@ tags:
   - NeedsSpecTable
   - Reference
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 `exsl:node-set()` returns a node-set from a result tree fragment, which is what you get when you look at the `xsl:variable` instead of its select attribute to fetch a variable's value. This lets you process the XML created within a variable to process it in multiple steps.

@@ -15,6 +15,7 @@ tags:
   - ended
 browser-compat: api.HTMLMediaElement.ended_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `ended` event is fired when playback or streaming has stopped because the end of the media was reached or because no further data is available.
@@ -98,9 +99,9 @@ video.onended = (event) => {
 - {{domxref("HTMLVideoElement")}}
 - {{HTMLElement("audio")}}
 - {{HTMLElement("video")}}
-- [Media Capture and Streams](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 
-  - [Media Capture and Streams](/en-US/docs/Web/API/Media_Streams_API)[: ended event](/en-US/docs/Web/API/MediaStreamTrack/ended_event)
+  - [Media Capture and Streams](/en-US/docs/Web/API/Media_Capture_and_Streams_API)[: ended event](/en-US/docs/Web/API/MediaStreamTrack/ended_event)
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
 

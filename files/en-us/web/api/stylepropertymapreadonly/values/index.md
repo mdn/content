@@ -13,6 +13,7 @@ tags:
   - values()
 browser-compat: api.StylePropertyMapReadOnly.values
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`StylePropertyMapReadOnly.values()`** method returns a
@@ -21,7 +22,7 @@ new _array iterator_ containing the values for each index in the
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 

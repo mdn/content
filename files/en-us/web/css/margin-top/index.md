@@ -1,6 +1,7 @@
 ---
 title: margin-top
 slug: Web/CSS/margin-top
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -8,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.margin-top
 ---
+
 {{CSSRef}}
 
 The **`margin-top`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#margin_area) on the top of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
@@ -20,9 +22,9 @@ This property has no effect on _non-[replaced](/en-US/docs/Web/CSS/Replaced_elem
 
 ```css
 /* <length> values */
-margin-top: 10px;  /* An absolute length */
-margin-top: 1em;   /* relative to the text size */
-margin-top: 5%;    /* relative to the nearest block container's width */
+margin-top: 10px; /* An absolute length */
+margin-top: 1em; /* relative to the text size */
+margin-top: 5%; /* relative to the nearest block container's width */
 
 /* Keyword values */
 margin-top: auto;
@@ -59,10 +61,18 @@ The `margin-top` property is specified as the keyword `auto`, or a `<length>`, o
 ### Setting positive and negative top margins
 
 ```css
-.content { margin-top:   5%; }
-.sidebox { margin-top: 10px; }
-.logo    { margin-top: -5px; }
-#footer  { margin-top:  1em; }
+.content {
+  margin-top: 5%;
+}
+.sidebox {
+  margin-top: 10px;
+}
+.logo {
+  margin-top: -5px;
+}
+#footer {
+  margin-top: 1em;
+}
 ```
 
 ## Specifications

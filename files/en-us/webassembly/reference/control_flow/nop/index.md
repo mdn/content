@@ -8,6 +8,7 @@ tags:
   - Reference
   - Control flow
 ---
+
 {{WebAssemblySidebar}}
 
 **`nop`** stands for no-operation. It literally does nothing.

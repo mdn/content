@@ -20,6 +20,7 @@ tags:
   - speed
 browser-compat: api.RTCIceCandidatePairStats.currentRoundTripTime
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} property
@@ -30,8 +31,8 @@ candidates.
 
 ## Syntax
 
-```js
-rtt = rtcIceCandidatePairStats.currentRoundTripTime;
+```js-nolint
+rtt = rtcIceCandidatePairStats.currentRoundTripTime
 ```
 
 ### Value

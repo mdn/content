@@ -10,9 +10,11 @@ tags:
   - Wake Lock
   - WakeLockSentinel
   - screen
+  - Experimental
 browser-compat: api.WakeLockSentinel.release
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
+
+{{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`release()`** method of the
 {{domxref("WakeLockSentinel")}} interface releases the
@@ -21,7 +23,7 @@ once the sentinel has been successfully released.
 
 ## Syntax
 
-```js
+```js-nolint
 release()
 ```
 

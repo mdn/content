@@ -12,13 +12,14 @@ tags:
   - devtools.panels
 browser-compat: webextensions.api.devtools
 ---
+
 {{AddonSidebar}}
 
 Enables extensions to interact with the browser's {{Glossary("Developer Tools")}}. You can use this API to create Developer Tools pages, interact with the window that is being inspected, inspect the page network usage.
 
 To use this API you need to have the `"devtools"` [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) specified in your [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file. This permission can not be optional.
 
-## Interfaces
+## Properties
 
 - {{WebExtAPIRef("devtools.inspectedWindow")}}
   - : Interact with the window that Developer tools are attached to (inspected window). This includes obtaining the tab ID for the inspected page, evaluate the code in the context of the inspected window, reload the page, or obtain the list of resources within the page.
@@ -32,10 +33,9 @@ To use this API you need to have the `"devtools"` [API permission](/en-US/docs/M
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv2/devtools/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -62,4 +62,4 @@ To use this API you need to have the `"devtools"` [API permission](/en-US/docs/M
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

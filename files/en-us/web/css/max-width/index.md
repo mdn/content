@@ -1,6 +1,7 @@
 ---
 title: max-width
 slug: Web/CSS/max-width
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -15,6 +16,7 @@ tags:
   - width
 browser-compat: css.properties.max-width
 ---
+
 {{CSSRef}}
 
 The **`max-width`** [CSS](/en-US/docs/Web/CSS) property sets the maximum width of an element. It prevents the [used value](/en-US/docs/Web/CSS/used_value) of the {{cssxref("width")}} property from becoming larger than the value specified by `max-width`.

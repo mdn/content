@@ -13,6 +13,7 @@ tags:
   - openPopup
 browser-compat: webextensions.api.action.openPopup
 ---
+
 {{AddonSidebar()}}
 
 Open the browser action's popup.
@@ -23,7 +24,7 @@ You can only call this function from inside the handler for a [user action](/en-
 
 ## Syntax
 
-```js
+```js-nolint
 browser.action.openPopup()
 ```
 
@@ -43,7 +44,7 @@ Open the popup when the user selects a context menu item:
 browser.menus.create({
   id: "open-popup",
   title: "open popup",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener(() => {

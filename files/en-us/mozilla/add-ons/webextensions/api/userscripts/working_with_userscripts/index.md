@@ -8,6 +8,7 @@ tags:
   - Tutorial
   - userScripts
 ---
+
 {{AddonSidebar}}
 
 By implementing userScripts, extension developers can modify how sites look and/or work to better meet user needs.
@@ -42,7 +43,7 @@ The default code included with the example allows you to load a `userScript` whi
 
 In the following image, the extension will "eat" the content of pages whose domain name ends in .org. This is the default behavior for this extension.
 
-![](userscriptexample.png)
+![User script example](userscriptexample.png)
 
 Nothing will happen until you click the **Register script** button. The button implements the user script according to the settings on this dialog. That means that you can experiment with the behavior of the script without having to implement an extensions yourself.
 
@@ -103,7 +104,7 @@ This code first initializes the params object to pass values to the [userScripts
 
 Once the script has been registered, navigate to a page whose domain name ends in .org, and you will see something like this:
 
-![](user_script_in_action.png)
+![Status message indicating that websites ending in .org have been eaten: "This page has been eaten. {"OldStoredValue:" "website address", "NewStoredValue:" "website address"}"](user_script_in_action.png)
 
 ## See also
 

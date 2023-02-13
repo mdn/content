@@ -13,6 +13,7 @@ tags:
   - Event
 browser-compat: api.ServiceWorker.error_event
 ---
+
 {{APIRef("Service Workers API")}}
 
 The `error` event fires whenever an error occurs in the service worker.

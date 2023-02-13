@@ -7,6 +7,9 @@ tags:
   - Privacy
   - redirect tracking protection
 ---
+
+{{QuicklinksWithSubPages("Web/Privacy")}}
+
 Firefox 79 includes protection against redirect tracking. This document describes how the protections work.
 
 ## Redirect tracking defined
@@ -29,8 +32,8 @@ An origin will be cleared if it fulfills the following conditions:
 2. The origin is [classified as a tracker](/en-US/docs/Web/Privacy/Storage_Access_Policy#tracking_protection_explained) in our Tracking Protection list.
 3. No origin with the same base domain (eTLD+1) has a user-interaction permission.
 
-    - This permission is granted to an origin for 45 days once a user interacts with a top-level document from that origin. "Interacting" includes scrolling.
-    - Although this permission is stored on a per-origin level, we will check whether any origin with the same base domain has it, to avoid breaking sites with subdomains and a corresponding cookie setup.
+   - This permission is granted to an origin for 45 days once a user interacts with a top-level document from that origin. "Interacting" includes scrolling.
+   - Although this permission is stored on a per-origin level, we will check whether any origin with the same base domain has it, to avoid breaking sites with subdomains and a corresponding cookie setup.
 
 ### What data is cleared?
 
@@ -72,7 +75,9 @@ Different log levels can be set via the `privacy.purge_trackers.logging.level` p
 For debugging purposes, it's easiest to trigger storage clearing by triggering the service directly via the [Browser Console command line](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html#browser-console-command-line). Note that this is different from the normal [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) you might use to debug a website, and requires the `devtools.chrome.enabled` pref to be set to `true` to use it interactively. Once you've enabled the Browser Console you can trigger storage clearing by running the following command:
 
 ```js
-await Components.classes["@mozilla.org/purge-tracker-service;1"].getService(Components.interfaces.nsIPurgeTrackerService).purgeTrackingCookieJars()
+await Components.classes["@mozilla.org/purge-tracker-service;1"]
+  .getService(Components.interfaces.nsIPurgeTrackerService)
+  .purgeTrackingCookieJars();
 ```
 
 The time until user interaction permissions expire can be set to a lower amount using the `privacy.userInteraction.expiration` pref. Note that you will have to set this pref before visiting the sites you want to test — it will not apply retroactively.

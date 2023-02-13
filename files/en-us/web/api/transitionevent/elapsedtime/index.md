@@ -5,13 +5,14 @@ page-type: web-api-instance-property
 tags:
   - API
   - CSS
-  - CSS3 Transitions
+  - CSS Transitions
   - CSSOM
   - Property
   - Reference
   - TransitionEvent
 browser-compat: api.TransitionEvent.elapsedTime
 ---
+
 {{ apiref("CSSOM") }}
 
 The **`TransitionEvent.elapsedTime`** read-only property is a

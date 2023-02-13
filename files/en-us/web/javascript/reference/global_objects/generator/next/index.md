@@ -1,6 +1,7 @@
 ---
 title: Generator.prototype.next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - Generator
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Generator.next
 ---
+
 {{JSRef}}
 
 The **`next()`** method returns an
@@ -19,7 +21,7 @@ generator.
 
 ## Syntax
 
-```js
+```js-nolint
 generatorObject.next(value)
 ```
 
@@ -73,17 +75,17 @@ In this example, `getPage` takes a list and "paginates" it into chunks of size `
 ```js
 function* getPage(list, pageSize = 1) {
   for (let index = 0; index < list.length; index += pageSize) {
-    yield list.slice(index, pageSize);
+    yield list.slice(index, index + pageSize);
   }
 }
 
 const list = [1, 2, 3, 4, 5, 6, 7, 8]
 const page = getPage(list, 3);            // Generator { }
 
-page.next();                              // Object {value: (3) [1, 2, 3], done: false}
-page.next();                              // Object {value: (3) [4, 5, 6], done: false}
-page.next();                              // Object {value: (2) [7, 8], done: false}
-page.next();                              // Object {value: undefined, done: true}
+page.next();                              // { value: [1, 2, 3], done: false }
+page.next();                              // { value: [4, 5, 6], done: false }
+page.next();                              // { value: [7, 8], done: false }
+page.next();                              // { value: undefined, done: true }
 ```
 
 ### Sending values to the generator
@@ -101,12 +103,10 @@ function* gen() {
 }
 
 const g = gen();
-g.next(1);
+g.next(1); // Returns { value: undefined, done: false }
 // No log at this step: the first value sent through `next` is lost
-// "{ value: null, done: false }"
-g.next(2);
-// 2
-// "{ value: null, done: false }"
+g.next(2); // Returns { value: undefined, done: false }
+// Logs 2
 ```
 
 ## Specifications

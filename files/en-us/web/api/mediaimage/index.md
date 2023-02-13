@@ -4,13 +4,14 @@ slug: Web/API/MediaImage
 page-type: web-api-interface
 browser-compat: api.MediaImage
 ---
+
 {{APIRef("Media Session API")}}
 
 The Media Session API's **`MediaImage`** dictionary describes the images associated with a media resource's {{domxref("MediaMetadata")}}.
 
 Its contents can be displayed by the {{Glossary("user agent")}} in appropriate contexts like in a player interface to show the current playing video or audio track.
 
-## Properties
+## Instance properties
 
 - {{domxref("MediaImage.src", "src")}}
   - : The URL from which the user agent fetches the image's data.

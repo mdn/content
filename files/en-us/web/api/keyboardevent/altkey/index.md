@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.altKey
 ---
+
 {{APIRef("UI Events")}}
 
 The **`KeyboardEvent.altKey`** read-only property is a
@@ -19,35 +20,41 @@ the event occurred.
 
 ## Value
 
-A boolean value
+A boolean value.
 
 ## Examples
 
 ```html
-<html>
-<head>
-<title>altKey example</title>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>altKey example</title>
 
-<script type="text/javascript">
+    <script>
+      function showChar(e) {
+        alert(
+          "Key KeyDown: " +
+            String.fromCharCode(e.charCode) +
+            "\n" +
+            "charCode: " +
+            e.charCode +
+            "\n" +
+            "ALT key KeyDown: " +
+            e.altKey +
+            "\n"
+        );
+      }
+    </script>
+  </head>
 
-function showChar(e){
-  alert(
-    "Key KeyDown: " + String.fromCharCode(e.charCode) + "\n"
-    + "charCode: " + e.charCode + "\n"
-    + "ALT key KeyDown: " + e.altKey + "\n"
-  );
-}
-
-</script>
-</head>
-
-<body onkeydown="showChar(event);">
-<p>
-Press any character key,
-with or without holding down the ALT key.<br />
-You can also use the SHIFT key together with the ALT key.
-</p>
-</body>
+  <body onkeydown="showChar(event);">
+    <p>
+      Press any character key, with or without holding down the ALT key.<br />
+      You can also use the SHIFT key together with the ALT key.
+    </p>
+  </body>
 </html>
 ```
 

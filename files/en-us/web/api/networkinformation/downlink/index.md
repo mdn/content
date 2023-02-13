@@ -12,6 +12,7 @@ tags:
   - downlink
 browser-compat: api.NetworkInformation.downlink
 ---
+
 {{SeeCompatTable}}{{APIRef("Network Information API")}}
 
 The **`downlink`** read-only property of the
@@ -24,7 +25,7 @@ of the underlying connection technology.
 
 ## Value
 
-A {{jsxref("double")}}.
+A number.
 
 ## Specifications
 

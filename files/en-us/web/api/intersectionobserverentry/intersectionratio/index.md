@@ -12,6 +12,7 @@ tags:
   - intersectionRatio
 browser-compat: api.IntersectionObserverEntry.intersectionRatio
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's
@@ -39,15 +40,14 @@ In this simple example, an intersection callback sets each target element's
 
 ```js
 function intersectionCallback(entries) {
-  entries.forEach(function(entry) {
+  entries.forEach((entry) => {
     entry.target.style.opacity = entry.intersectionRatio;
   });
 }
 ```
 
 To see a more concrete example, take a look at
-{{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility",
-  "Handling intersection changes")}}.
+[Handling intersection changes](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility#handling_intersection_changes).
 
 ## Specifications
 

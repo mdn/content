@@ -1,6 +1,7 @@
 ---
 title: repeating-radial-gradient()
 slug: Web/CSS/gradient/repeating-radial-gradient
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -13,6 +14,7 @@ tags:
   - Web
 browser-compat: css.types.image.gradient.repeating-radial-gradient
 ---
+
 {{CSSRef}}
 
 The **`repeating-radial-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) creates an image consisting of repeating gradients that radiate from an origin. It is similar to {{cssxref("gradient/radial-gradient", "radial-gradient()")}} and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container, similar to {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.
@@ -83,7 +85,12 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
 
 ```css
 .radial-gradient {
-  background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
+  background: repeating-radial-gradient(
+    black,
+    black 5px,
+    white 5px,
+    white 10px
+  );
 }
 ```
 
@@ -104,10 +111,18 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
 
 ```css
 .radial-gradient {
-  background: repeating-radial-gradient(ellipse farthest-corner at 20% 20%,
-      red, black 5%, blue 5%, green 10%);
-  background: repeating-radial-gradient(ellipse farthest-corner at 20% 20%,
-      red 0 5%, green 5% 10%);
+  background: repeating-radial-gradient(
+    ellipse farthest-corner at 20% 20%,
+    red,
+    black 5%,
+    blue 5%,
+    green 10%
+  );
+  background: repeating-radial-gradient(
+    ellipse farthest-corner at 20% 20%,
+    red 0 5%,
+    green 5% 10%
+  );
 }
 ```
 

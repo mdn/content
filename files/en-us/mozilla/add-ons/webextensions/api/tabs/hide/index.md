@@ -12,6 +12,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.hide
 ---
+
 {{AddonSidebar()}}
 
 Hides one or more tabs.
@@ -33,7 +34,7 @@ To use this API you must have the "tabHide" [permission](/en-US/docs/Mozilla/Add
 
 ## Syntax
 
-```js
+```js-nolint
 let hiding = browser.tabs.hide(
   tabIds          // integer or integer array
 )

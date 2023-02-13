@@ -13,6 +13,7 @@ tags:
   - Storage
 browser-compat: api.IDBRequest.error
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`error`** read-only property of the
@@ -43,18 +44,17 @@ in the exception object:
 In addition to the error codes sent to the {{ domxref("IDBRequest") }} object,
 asynchronous operations can also raise exceptions. The list describes problems that
 could occur when the request is being executed, but you might also encounter other
-problems when the request is being made. For example, if the request failed and the
-result is not available, the `InvalidStateError` exception
-is thrown.
+problems when the request is being made. For example, if the result is accessed
+while the request is not completed, the `InvalidStateError` exception is thrown.
 
 ## Examples
 
 The following example requests a given record title, `onsuccess` gets the
 associated record from the {{domxref("IDBObjectStore")}} (made available as
-`objectStoreTitleRequest.result`, updates one property of the record, and then puts the
+`objectStoreTitleRequest.result`), updates one property of the record, and then puts the
 updated record back into the object store. Also included at the bottom is an
 `onerror` function that reports what the error was if the request fails.
-For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([View the example live](https://mdn.github.io/to-do-notifications/)).
+For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 const title = "Walk dog";
@@ -62,10 +62,10 @@ const title = "Walk dog";
 // Open up a transaction as usual
 const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
 
-// Get the do-do list with the specified title
+// Get the to-do list with the specified title
 const objectStoreTitleRequest = objectStore.get(title);
 
-objectStoreTitleRequest.onsuccess = function() {
+objectStoreTitleRequest.onsuccess = () => {
   // Grab the data object returned as the result
   const data = objectStoreTitleRequest.result;
 
@@ -78,12 +78,12 @@ objectStoreTitleRequest.onsuccess = function() {
 
   // When this new request succeeds, run the displayData()
   // function again to update the display
-  updateTitleRequest.onsuccess = function() {
+  updateTitleRequest.onsuccess = () => {
     displayData();
   };
 };
 
-objectStoreTitleRequest.onerror = function() {
+objectStoreTitleRequest.onerror = () => {
   // If an error occurs with the request, log what it is
   console.log(`There has been an error with retrieving your data: ${objectStoreTitleRequest.error}`);
 };
@@ -105,4 +105,4 @@ objectStoreTitleRequest.onerror = function() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

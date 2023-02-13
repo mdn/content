@@ -21,6 +21,7 @@ tags:
   - totalRoundTripTime
 browser-compat: api.RTCIceCandidatePairStats.totalRoundTripTime
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} dictionary's

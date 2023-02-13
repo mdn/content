@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/some
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -11,18 +12,19 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.some
 ---
+
 {{JSRef}}
 
 The **`some()`** method tests whether some element in the typed
 array passes the test implemented by the provided function. This method has the same
-algorithm as {{jsxref("Array.prototype.some()")}}_._ _TypedArray_ is one
+algorithm as {{jsxref("Array.prototype.some()")}}. _TypedArray_ is one
 of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-some.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 some((element) => { /* ... */ } )
 some((element, index) => { /* ... */ } )
@@ -75,7 +77,7 @@ index of the element, and the array object being traversed.
 If a `thisArg` parameter is provided to `some`, it will be passed
 to `callbackFn` when invoked, for use as its `this` value.
 Otherwise, the value `undefined` will be passed for use as its
-`this` value.  The `this` value ultimately observable by
+`this` value. The `this` value ultimately observable by
 `callbackFn` is determined according to
 [the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 

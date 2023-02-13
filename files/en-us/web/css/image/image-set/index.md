@@ -1,6 +1,7 @@
 ---
 title: image-set()
 slug: Web/CSS/image/image-set
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -10,6 +11,7 @@ tags:
   - Web
 browser-compat: css.types.image.image-set
 ---
+
 {{CSSRef}}
 
 The **`image-set()`** [CSS](/en-US/docs/Web/CSS) [functional](/en-US/docs/Web/CSS/CSS_Functions) notation is a method of letting the browser pick the most appropriate CSS image from a given set, primarily for high pixel density screens.
@@ -62,7 +64,8 @@ There is no inbuilt fallback for `image-set()`; therefore to include a {{cssxref
   background-image: url("large-balloons.jpg");
   background-image: image-set(
     "large-balloons.avif" type("image/avif"),
-    "large-balloons.jpg" type("image/jpeg"));
+    "large-balloons.jpg" type("image/jpeg")
+  );
 }
 ```
 

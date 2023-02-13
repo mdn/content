@@ -8,9 +8,11 @@ tags:
   - Reference
   - node
   - LayoutShiftAttribution
+  - Experimental
 browser-compat: api.LayoutShiftAttribution.node
 ---
-{{APIRef("Layout Instability API")}}
+
+{{APIRef("Layout Instability API")}}{{SeeCompatTable}}
 
 The **`node`** read-only property of the {{domxref("LayoutShiftAttribution")}} interface returns a {{domxref("node")}} representing the object that has shifted.
 

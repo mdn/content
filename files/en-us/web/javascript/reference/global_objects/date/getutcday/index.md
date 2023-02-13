@@ -1,6 +1,7 @@
 ---
 title: Date.prototype.getUTCDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
+page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getUTCDay
 ---
+
 {{JSRef}}
 
 The **`getUTCDay()`** method returns the day of the week in the
@@ -18,13 +20,13 @@ specified date according to universal time, where 0 represents Sunday.
 
 ## Syntax
 
-```js
+```js-nolint
 getUTCDay()
 ```
 
 ### Return value
 
-A `number`.
+A number.
 If the `Date` object represents a valid date, an integer number corresponding to the day
 of the week for the given date, according to universal time: 0 for Sunday, 1 for Monday,
 2 for Tuesday, and so on.

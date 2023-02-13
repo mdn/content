@@ -10,6 +10,7 @@ tags:
   - WorkerLocation
 browser-compat: api.WorkerLocation.hash
 ---
+
 {{ApiRef("WorkerLocation")}}
 
 The **`hash`** property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.hash", "hash")}} part of the worker's location.

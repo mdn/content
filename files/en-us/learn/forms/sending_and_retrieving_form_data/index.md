@@ -13,6 +13,7 @@ tags:
   - Security
   - Web
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
 
 Once the form data has been validated on the client-side, it is okay to submit the form. And, since we covered validation in the previous article, we're ready to submit! This article looks at what happens when a user submits a form — where does the data go, and how do we handle it when it gets there? We also look at some of the security concerns associated with sending form data.
@@ -42,7 +43,7 @@ Once the form data has been validated on the client-side, it is okay to submit t
   </tbody>
 </table>
 
-First we'll discuss what happens to the data when a form is submitted.
+First, we'll discuss what happens to the data when a form is submitted.
 
 ## Client/server architecture
 
@@ -65,19 +66,19 @@ The {{htmlattrxref("action","form")}} attribute defines where the data gets sent
 In this example, the data is sent to an absolute URL — `https://example.com`:
 
 ```html
-<form action="https://example.com">
+<form action="https://example.com">…</form>
 ```
 
 Here, we use a relative URL — the data is sent to a different URL on the same origin:
 
 ```html
-<form action="/somewhere_else">
+<form action="/somewhere_else">…</form>
 ```
 
 When specified with no attributes, as below, the {{HTMLElement("form")}} data is sent to the same page that the form is present on:
 
 ```html
-<form>
+<form>…</form>
 ```
 
 > **Note:** It's possible to specify a URL that uses the HTTPS (secure HTTP) protocol. When you do this, the data is encrypted along with the rest of the request, even if the form itself is hosted on an insecure page accessed using HTTP. On the other hand, if the form is hosted on a secure page but you specify an insecure HTTP URL with the {{htmlattrxref("action","form")}} attribute, all browsers display a security warning to the user each time they try to send data because the data will not be encrypted.
@@ -102,11 +103,11 @@ Consider the following form:
 <form action="http://www.foo.com" method="GET">
   <div>
     <label for="say">What greeting do you want to say?</label>
-    <input name="say" id="say" value="Hi">
+    <input name="say" id="say" value="Hi" />
   </div>
   <div>
     <label for="to">Who do you want to say it to?</label>
-    <input name="to" id="to" value="Mom">
+    <input name="to" id="to" value="Mom" />
   </div>
   <div>
     <button>Send my greetings</button>
@@ -116,14 +117,16 @@ Consider the following form:
 
 Since the `GET` method has been used, you'll see the URL `www.foo.com/?say=Hi&to=Mom` appear in the browser address bar when you submit the form.
 
-![](url-parameters.png)The data is appended to the URL as a series of name/value pairs. After the URL web address has ended, we include a question mark (`?`) followed by the name/value pairs, each one separated by an ampersand (`&`). In this case we are passing two pieces of data to the server:
+![The changed url with query parameters after submitting the form with GET method with a "server not found" browser error page](url-parameters.png)
+
+The data is appended to the URL as a series of name/value pairs. After the URL web address has ended, we include a question mark (`?`) followed by the name/value pairs, each one separated by an ampersand (`&`). In this case, we are passing two pieces of data to the server:
 
 - `say`, which has a value of `Hi`
 - `to`, which has a value of `Mom`
 
 The HTTP request looks like this:
 
-```
+```http
 GET /?say=Hi&to=Mom HTTP/2.0
 Host: foo.com
 ```
@@ -140,11 +143,11 @@ Let's look at an example — this is the same form we looked at in the `GET` sec
 <form action="http://www.foo.com" method="POST">
   <div>
     <label for="say">What greeting do you want to say?</label>
-    <input name="say" id="say" value="Hi">
+    <input name="say" id="say" value="Hi" />
   </div>
   <div>
     <label for="to">Who do you want to say it to?</label>
-    <input name="to" id="to" value="Mom">
+    <input name="to" id="to" value="Mom" />
   </div>
   <div>
     <button>Send my greetings</button>
@@ -154,7 +157,7 @@ Let's look at an example — this is the same form we looked at in the `GET` sec
 
 When the form is submitted using the `POST` method, you get no data appended to the URL, and the HTTP request looks like so, with the data included in the request body instead:
 
-```
+```http
 POST / HTTP/2.0
 Host: foo.com
 Content-Type: application/x-www-form-urlencoded
@@ -179,7 +182,7 @@ HTTP requests are never displayed to the user (if you want to see them, you need
 
 You can then get the form data, as shown in the image below.
 
-![](network-monitor.png)
+![HTTP requests and response data in network monitoring tab in browser's developer tools](network-monitor.png)
 
 The only thing displayed to the user is the URL called. As we mentioned above, with a `GET` request the user will see the data in their URL bar, but with a `POST` request they won't. This can be very important for two reasons:
 
@@ -192,7 +195,7 @@ Whichever HTTP method you choose, the server receives a string that will be pars
 
 ### Example: Raw PHP
 
-[PHP](https://www.php.net/) offers some global objects to access the data. Assuming you've used the `POST` method, the following example just takes the data and displays it to the user. Of course, what you do with the data is up to you. You might display it, store it into a database, send it by email, or process it in some other way.
+[PHP](https://www.php.net/) offers some global objects to access the data. Assuming you've used the `POST` method, the following example just takes the data and displays it to the user. Of course, what you do with the data is up to you. You might display it, store it in a database, send it by email, or process it in some other way.
 
 ```php
 <?php
@@ -207,7 +210,7 @@ Whichever HTTP method you choose, the server receives a string that will be pars
 
 This example displays a page with the data we sent. You can see this in action in our example [php-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/php-example.html) file — which contains the same example form as we saw before, with a `method` of `POST` and an `action` of `php-example.php`. When it is submitted, it sends the form data to [php-example.php](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/php-example.php), which contains the PHP code seen in the above block. When this code is executed, the output in the browser is `Hi Mom`.
 
-![](php-result.png)
+![Otherwise blank web page with "hi mom", the data received in response after submitting form data to a php file with POST method](php-result.png)
 
 > **Note:** This example won't work when you load it into a browser locally — browsers cannot interpret PHP code, so when the form is submitted the browser will just offer to download the PHP file for you. To get it to work, you need to run the example through a PHP server of some kind. Good options for local PHP testing are [MAMP](https://www.mamp.info/en/downloads/) (Mac and Windows) and [AMPPS](https://ampps.com/downloads/) (Mac, Windows, Linux).
 >
@@ -236,10 +239,10 @@ if __name__ == "__main__":
 
 The two templates referenced in the above code are as follows (these need to be in a subdirectory called `templates` in the same directory as the `python-example.py` file, if you try to run the example yourself):
 
-- [form.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/form.html): The same form as we saw above in the [The POST method](#the_post_method) section but with the `action` set to `\{{ url_for('hello') }}`. This is a [Jinja2](https://jinja.pocoo.org/docs/2.9/) template, which is basically HTML but can contain calls to the Python code that is running the web server contained in curly braces. `url_for('hello')` is basically saying "redirect to `/hello` when the form is submitted".
+- [form.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/form.html): The same form as we saw above in [The POST method](#the_post_method) section but with the `action` set to `\{{ url_for('hello') }}`. This is a [Jinja](https://jinja.palletsprojects.com) template, which is basically HTML but can contain calls to the Python code that is running the web server contained in curly braces. `url_for('hello')` is basically saying "redirect to `/hello` when the form is submitted".
 - [greeting.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/greeting.html): This template just contains a line that renders the two bits of data passed to it when it is rendered. This is done via the `hello()` function seen above, which runs when the `/hello` URL is navigated to.
 
-> **Note:** Again, this code won't work if you just try to load it into a browser directly. Python works a bit differently to PHP — to run this code locally you'll need to [install Python/PIP](/en-US/docs/Learn/Server-side/Django/development_environment#installing_python_3), then install Flask using `pip3 install flask`. At this point you should be able to run the example using `python3 python-example.py`, then navigating to `localhost:5042` in your browser.
+> **Note:** Again, this code won't work if you just try to load it into a browser directly. Python works a bit differently from PHP — to run this code locally you'll need to [install Python/PIP](/en-US/docs/Learn/Server-side/Django/development_environment#installing_python_3), then install Flask using `pip3 install flask`. At this point, you should be able to run the example using `python3 python-example.py`, then navigate to `localhost:5042` in your browser.
 
 ### Other languages and frameworks
 
@@ -266,7 +269,7 @@ This attribute lets you specify the value of the `Content-Type` HTTP header incl
 If you want to send files, you need to take three extra steps:
 
 - Set the {{htmlattrxref("method","form")}} attribute to `POST` because file content can't be put inside URL parameters.
-- Set the value of {{htmlattrxref("enctype","form")}} to `multipart/form-data` because the data will be split into multiple parts, one for each file plus one for the text data included in the form body (if text is also entered into the form).
+- Set the value of {{htmlattrxref("enctype","form")}} to `multipart/form-data` because the data will be split into multiple parts, one for each file plus one for the text data included in the form body (if the text is also entered into the form).
 - Include one or more [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file) controls to allow your users to select the file(s) that will be uploaded.
 
 For example:
@@ -275,7 +278,7 @@ For example:
 <form method="post" action="https://www.foo.com" enctype="multipart/form-data">
   <div>
     <label for="file">Choose a file</label>
-    <input type="file" id="file" name="myFile">
+    <input type="file" id="file" name="myFile" />
   </div>
   <div>
     <button>Send the file</button>
@@ -289,7 +292,7 @@ For example:
 
 Each time you send data to a server, you need to consider security. HTML forms are by far the most common server attack vectors (places where attacks can occur). The problems never come from the HTML forms themselves — they come from how the server handles data.
 
-The [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security) article of our [server-side](/en-US/docs/Learn/Server-side) learning topic discusses a number of common attacks and potential defenses against them in detail. You should go and check that article out, to get an idea of what's possible.
+The [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security) article of our [server-side](/en-US/docs/Learn/Server-side) learning topic discusses several common attacks and potential defenses against them in detail. You should go and check that article out, to get an idea of what's possible.
 
 ### Be paranoid: Never trust your users
 
@@ -330,7 +333,7 @@ If you want to learn more about securing a web application, you can dig into the
 - [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
 - [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
 - [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- **Sending form data**
 
 ### Advanced Topics
 

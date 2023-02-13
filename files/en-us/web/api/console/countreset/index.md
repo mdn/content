@@ -13,6 +13,7 @@ tags:
   - web console
 browser-compat: api.console.countReset
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.countReset()`** method resets counter used with
@@ -22,7 +23,7 @@ The **`console.countReset()`** method resets counter used with
 
 ## Syntax
 
-```js
+```js-nolint
 countReset()
 countReset(label)
 ```

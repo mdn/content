@@ -10,15 +10,16 @@ tags:
   - TreeWalker
 browser-compat: api.TreeWalker.nextSibling
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.nextSibling()`** method moves the current
 {{domxref("Node")}} to its next sibling, if any, and returns the found sibling. If there
-is no such node, return `null` and the current node is not changed.
+is no such node, it returns `null` and the current node is not changed.
 
 ## Syntax
 
-```js
+```js-nolint
 nextSibling()
 ```
 

@@ -1,6 +1,7 @@
 ---
-title: 'null'
+title: "null"
 slug: Web/JavaScript/Reference/Operators/null
+page-type: javascript-language-feature
 tags:
   - JavaScript
   - Language feature
@@ -8,9 +9,10 @@ tags:
   - Primitive
 browser-compat: javascript.operators.null
 ---
+
 {{jsSidebar("Operators")}}
 
-The value `null` represents the intentional absence of any object value. It
+The **`null`** value represents the intentional absence of any object value. It
 is one of JavaScript's [primitive values](/en-US/docs/Glossary/Primitive) and
 is treated as [falsy](/en-US/docs/Glossary/Falsy) for boolean operations.
 
@@ -18,7 +20,7 @@ is treated as [falsy](/en-US/docs/Glossary/Falsy) for boolean operations.
 
 ## Syntax
 
-```js
+```js-nolint
 null
 ```
 
@@ -50,15 +52,15 @@ When checking for `null` or `undefined`, beware of the [differences between equa
 type-conversion.
 
 ```js
-typeof null          // "object" (not "null" for legacy reasons)
-typeof undefined     // "undefined"
-null === undefined   // false
-null  == undefined   // true
-null === null        // true
-null  == null        // true
-!null                // true
-isNaN(1 + null)      // false
-isNaN(1 + undefined) // true
+typeof null; // "object" (not "null" for legacy reasons)
+typeof undefined; // "undefined"
+null === undefined; // false
+null == undefined; // true
+null === null; // true
+null == null; // true
+!null; // true
+Number.isNaN(1 + null); // false
+Number.isNaN(1 + undefined); // true
 ```
 
 ## Specifications
@@ -73,4 +75,4 @@ isNaN(1 + undefined) // true
 
 - {{jsxref("undefined")}}
 - {{jsxref("NaN")}}
-- {{jsxref("Operators/void", "void operator")}}
+- {{jsxref("Operators/void", "void")}}

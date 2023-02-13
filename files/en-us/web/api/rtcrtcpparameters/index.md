@@ -16,11 +16,12 @@ tags:
   - parameters
 browser-compat: api.RTCRtcpParameters
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The **`RTCRtcpParameters`** dictionary provides parameters of an {{Glossary("RTCP")}} connection. It's used as the value of the {{domxref("RTCRtpParameters.rtcp", "rtcp")}} property of the [parameters](/en-US/docs/Web/API/RTCRtpParameters) of an {{domxref("RTCRtpSender")}} or {{domxref("RTCRtpReceiver")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("RTCRtcpParameters.cname", "cname")}}
   - : The Canonical Name (CNAME) being used by RTCP. This is used, for example, in SDES (SDP security descriptions) messages, described in {{RFC(4568)}}. This property cannot be changed once initialized.

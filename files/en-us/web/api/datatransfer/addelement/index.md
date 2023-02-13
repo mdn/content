@@ -8,11 +8,11 @@ tags:
   - Non-standard
   - Reference
   - drag and drop
+  - Experimental
 browser-compat: api.DataTransfer.addElement
 ---
-{{APIRef("HTML Drag and Drop API")}}
 
-{{Non-standard_header()}}
+{{APIRef("HTML Drag and Drop API")}}{{SeeCompatTable}}{{Non-standard_header}}
 
 The **`DataTransfer.addElement()`** method sets the drag source
 to the given element. This element will be the element to which {{domxref("HTMLElement/drag_event", "drag")}} and
@@ -23,7 +23,7 @@ dragged).
 
 ## Syntax
 
-```js
+```js-nolint
 addElement(element)
 ```
 
@@ -61,5 +61,4 @@ This method is not defined in any Web standard.
 - [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

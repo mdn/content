@@ -1,6 +1,7 @@
 ---
 title: String.prototype.bold()
 slug: Web/JavaScript/Reference/Global_Objects/String/bold
+page-type: javascript-instance-method
 tags:
   - Deprecated
   - HTML wrapper methods
@@ -12,25 +13,22 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.bold
 ---
+
 {{JSRef}} {{deprecated_header}}
 
-The **`bold()`** method creates a {{HTMLElement("b")}} HTML
-element that causes a string to be displayed as bold.
+The **`bold()`** method creates a string that embeds a string in a {{HTMLElement("b")}} element (`<b>str</b>`), which causes a string to be displayed as bold.
+
+> **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
 
 ## Syntax
 
-```js
+```js-nolint
 bold()
 ```
 
 ### Return value
 
-A string containing a {{HTMLElement("b")}} HTML element.
-
-## Description
-
-The `bold()` method embeds a string in a `<b>` element:
-"`<b>str</b>`".
+A string beginning with a `<b>` start tag, then the text `str`, and then a `</b>` end tag.
 
 ## Examples
 
@@ -39,12 +37,12 @@ The `bold()` method embeds a string in a `<b>` element:
 The following example uses deprecated string methods to change the formatting of a string:
 
 ```js
-const worldString = 'Hello, world';
+const worldString = "Hello, world";
 
-console.log(worldString.blink());   // <blink>Hello, world</blink>
-console.log(worldString.bold());    // <b>Hello, world</b>
+console.log(worldString.blink()); // <blink>Hello, world</blink>
+console.log(worldString.bold()); // <b>Hello, world</b>
 console.log(worldString.italics()); // <i>Hello, world</i>
-console.log(worldString.strike());  // <strike>Hello, world</strike>
+console.log(worldString.strike()); // <strike>Hello, world</strike>
 ```
 
 ## Specifications

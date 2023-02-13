@@ -11,6 +11,7 @@ tags:
   - scripting
 browser-compat: webextensions.api.scripting
 ---
+
 {{AddonSidebar}}
 
 Inserts JavaScript and CSS into websites. This API offers two approaches to inserting content:
@@ -20,7 +21,7 @@ Inserts JavaScript and CSS into websites. This API offers two approaches to inse
 
 > **Note:** This API is available in Manifest V3 or higher in Chrome and Firefox 101. In Safari and Firefox 102+, this API is also available in Manifest V2.
 
-This API requires the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) permission and [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the target in the tab into which JavaScript or CSS is injected.
+This API requires the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the target in the tab into which JavaScript or CSS is injected.
 
 Alternatively, you can get permission temporarily in the active tab and only in response to an explicit user action, by asking for the [`"activeTab"` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission). However, the `"scripting"` permission is still required.
 
@@ -57,5 +58,3 @@ Alternatively, you can get permission temporarily in the active tab and only in 
 {{WebExtExamples("h2")}}
 
 > **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/scripting/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

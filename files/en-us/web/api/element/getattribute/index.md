@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.getAttribute
 ---
+
 {{APIRef("DOM")}}
 
 The **`getAttribute()`** method of the
@@ -21,7 +22,7 @@ either be `null` or `""` (the empty string); see [Non-existing attributes](#non-
 
 ## Syntax
 
-```js
+```js-nolint
 getAttribute(attributeName)
 ```
 
@@ -45,7 +46,7 @@ A string containing the value of `attributeName`.
 const div1 = document.getElementById('div1');
 //=> <div id="div1">Hi Champ!</div>
 
-const exampleAttr= div1.getAttribute('id');
+const exampleAttr = div1.getAttribute('id');
 //=> "div1"
 
 const align = div1.getAttribute('align')
@@ -61,25 +62,16 @@ When called on an HTML element in a DOM flagged as an HTML document,
 
 ### Non-existing attributes
 
-Essentially all web browsers (Firefox, Internet Explorer, recent versions of Opera,
-Safari, Konqueror, and iCab, as a non-exhaustive list) return `null` when
-the specified attribute does not exist on the specified element; this is what [the current DOM specification draft](https://dom.spec.whatwg.org/#dom-element-getattribute) specifies. The old DOM 3 Core specification, on the other
-hand, says that the correct return value in this case is actually the _empty
-string_, and some DOM implementations implement this behavior. The
-implementation of `getAttribute()` in XUL (Gecko) actually follows the DOM
-3 Core specification and returns an empty string. Consequently, you should use
-{{domxref("element.hasAttribute()")}} to check for an attribute's existence prior to
-calling `getAttribute()` if it is possible that the requested attribute
-does not exist on the specified element.
+All modern web browsers return `null` when the specified attribute does not exist on the specified element.
 
 ### Retrieving nonce values
 
 For security reasons, [CSP](/en-US/docs/Web/HTTP/CSP) nonces from non-script
-sources, such as CSS selectors, and  `.getAttribute("nonce")` calls are
+sources, such as CSS selectors, and `.getAttribute("nonce")` calls are
 hidden.
 
 ```js example-bad
-let nonce =  script.getAttribute('nonce');
+let nonce = script.getAttribute('nonce');
 // returns empty string
 ```
 
@@ -87,7 +79,7 @@ Instead of retrieving the nonce from the content attribute, use the
 {{domxref("HTMLElement/nonce", "nonce")}} property:
 
 ```js
-let nonce =  script.nonce;
+let nonce = script.nonce;
 ```
 
 ## Specifications

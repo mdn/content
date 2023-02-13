@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Event.type
 ---
+
 {{APIRef}}
 
 The **`type`** read-only property of the {{domxref("Event")}}

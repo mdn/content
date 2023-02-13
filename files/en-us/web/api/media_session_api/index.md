@@ -13,6 +13,7 @@ tags:
   - Video
 browser-compat: api.MediaSession
 ---
+
 {{DefaultAPISidebar("Media Session API")}}
 
 The Media Session API provides a way to customize media notifications. It does this by providing metadata for display by the user agent for the media your web app is playing.
@@ -49,6 +50,8 @@ navigator.mediaSession.playbackState = "playing";
 
 ## Examples
 
+### Setting up action handlers for a music player
+
 The following example shows feature detection for the Media Session API. It then instantiates a metadata object for the session, and adds action handlers for the user control actions:
 
 ```js
@@ -67,22 +70,22 @@ if ('mediaSession' in navigator) {
     ]
   });
 
-  navigator.mediaSession.setActionHandler('play', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('pause', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('stop', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('seekbackward', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('seekforward', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('seekto', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('previoustrack', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('nexttrack', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('skipad', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('play', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('pause', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('stop', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('seekbackward', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('seekforward', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('seekto', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('previoustrack', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('nexttrack', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('skipad', () => { /* Code excerpted. */ });
 }
 ```
 
 Some user agents disable autoplay for media elements on mobile devices and require a user gesture to start media. The following example adds a `pointerup` event to an on-page play button, which is then used to kick off the media session code:
 
 ```js
-playButton.addEventListener('pointerup', function(event) {
+playButton.addEventListener('pointerup', (event) => {
   const audio = document.querySelector('audio');
 
   // User interacted with the page. Let's play audio!
@@ -91,6 +94,34 @@ playButton.addEventListener('pointerup', function(event) {
   .catch((error) => { console.error(error) });
 });
 ```
+
+### Using action handlers to control a slide presentation
+
+The `"previousslide"` and `"nextslide"` action handlers can be used to handle moving forward and backward through a slide presentation, for example when the user puts their presentation into a {{domxref("Picture-in-Picture API", "Picture-in-Picture", "", "nocode")}} window, and presses the browser-supplied controls for navigating through slides.
+
+```js
+try {
+  navigator.mediaSession.setActionHandler("previousslide", () => {
+    log('> User clicked "Previous Slide" icon.');
+    if (slideNumber > 1) slideNumber--;
+    updateSlide();
+  });
+} catch (error) {
+  log('Warning! The "previousslide" media session action is not supported.');
+}
+
+try {
+  navigator.mediaSession.setActionHandler("nextslide", () => {
+    log('> User clicked "Next Slide" icon.');
+    slideNumber++;
+    updateSlide();
+  });
+} catch (error) {
+  log('Warning! The "nextslide" media session action is not supported.');
+}
+```
+
+See [Presenting Slides / Media Session Sample](https://googlechrome.github.io/samples/media-session/slides.html) for a working example.
 
 ## Specifications
 

@@ -5,12 +5,13 @@ page-type: web-api-interface
 tags:
   - API
   - Channel messaging
-  - HTML5
+  - HTML
   - Interface
   - MessagePort
   - Reference
 browser-compat: api.MessagePort
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`MessagePort`** interface of the [Channel Messaging API](/en-US/docs/Web/API/Channel_Messaging_API) represents one of the two ports of a {{domxref("MessageChannel")}}, allowing messages to be sent from one port and listening out for them arriving at the other.
@@ -21,14 +22,14 @@ The **`MessagePort`** interface of the [Channel Messaging API](/en-US/docs/Web/A
 
 {{InheritanceDiagram}}
 
-## Methods
+## Instance methods
 
-_Inherits methods from its parent, {{domxref("EventTarget")}}_
+_Inherits methods from its parent, {{domxref("EventTarget")}}_.
 
 - {{domxref("MessagePort.postMessage","postMessage()")}}
   - : Sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.
 - {{domxref("MessagePort.start","start()")}}
-  - : Starts the sending of messages queued on the port (only needed when using {{domxref("EventTarget.addEventListener")}}; it is implied when using {{domxref("MessagePort.message_event", "onmessage")}}.)
+  - : Starts the sending of messages queued on the port (only needed when using {{domxref("EventTarget.addEventListener")}}; it is implied when using {{domxref("MessagePort.message_event", "onmessage")}}).
 - {{domxref("MessagePort.close","close()")}}
   - : Disconnects the port, so it is no longer active.
 
@@ -69,7 +70,7 @@ function onMessage(e) {
 }
 ```
 
-For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
+For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic) on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
 ## Specifications
 

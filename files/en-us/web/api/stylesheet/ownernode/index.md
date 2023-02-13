@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.StyleSheet.ownerNode
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`ownerNode`** property of the
@@ -29,12 +30,14 @@ A {{domxref("Node")}} object.
 
 ```html
 <html lang="en">
- <head>
-  <link rel="stylesheet" href="example.css">
- </head>
- <body>
-   <button onclick="alert(document.styleSheets[0].ownerNode)">Show example.css's ownerNode</button>
- </body>
+  <head>
+    <link rel="stylesheet" href="example.css" />
+  </head>
+  <body>
+    <button onclick="alert(document.styleSheets[0].ownerNode)">
+      Show example.css's ownerNode
+    </button>
+  </body>
 </html>
 // Displays "object HTMLLinkElement"
 ```

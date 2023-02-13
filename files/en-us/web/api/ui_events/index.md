@@ -9,6 +9,7 @@ tags:
   - UI Events
 spec-urls: https://w3c.github.io/uievents/
 ---
+
 {{DefaultAPISidebar("UI Events")}}
 
 ## Concepts and Usage
@@ -115,7 +116,6 @@ This example logs mouse events along with the X and Y coordinates at which the e
   <pre id="contents"></pre>
   <button id="clear">Clear log</button>
 </div>
-
 ```
 
 #### CSS
@@ -145,7 +145,7 @@ body {
   height: 150px;
   width: 250px;
   border: 1px solid black;
-  padding: .5rem;
+  padding: 0.5rem;
   overflow: scroll;
 }
 ```
@@ -213,7 +213,6 @@ This example logs {{domxref("Element.keydown_event", "keydown")}}, {{domxref("El
   <pre id="contents"></pre>
   <button id="clear">Clear log</button>
 </div>
-
 ```
 
 #### CSS
@@ -225,14 +224,14 @@ body {
 }
 
 #story {
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 #contents {
   height: 150px;
   width: 250px;
   border: 1px solid black;
-  padding: .5rem;
+  padding: 0.5rem;
   overflow: scroll;
 }
 ```

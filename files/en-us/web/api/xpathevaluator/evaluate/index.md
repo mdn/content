@@ -12,6 +12,7 @@ tags:
   - XPathEvaluator
 browser-compat: api.XPathEvaluator.evaluate
 ---
+
 {{APIRef("DOM XPath")}}
 
 The `evaluate()` method of the {{domxref("XPathEvaluator")}} interface
@@ -20,7 +21,7 @@ executes an XPath expression on the given node or document and returns an
 
 ## Syntax
 
-```js
+```js-nolint
 evaluate(expression, contextNode)
 evaluate(expression, contextNode, resolver)
 evaluate(expression, contextNode, resolver, type)

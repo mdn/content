@@ -6,6 +6,7 @@ tags:
   - Firefox 6
   - Gecko 6.0
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article provides links to information about the changes that affect developers in this release.
@@ -147,7 +148,7 @@ For an overview of the changes you may need to make in order to make your add-on
 - `nsINavBookmarkObserver` methods with item ID parameters now require a GUID as well.
 - `nsIPrefBranch.clearUserPref()` no longer throws an exception if the specified preference doesn't exist or has no user-set value. Instead, it does nothing.
 - The `nsIMemoryReporter` interface now provides support for indicating the kind of memory being described (mapped, heap, or other).
-- The `nsISHEntry` `stateData` attribute now returns a `nsIStructuredCloneContainer`.
+- The `stateData` attribute of `nsISHEntry` now returns a `nsIStructuredCloneContainer`.
 - `nsIURI` has a new `nsIURI.ref` attribute, which returns the reference portion (the part after the "#") of the URI. It also has new methods `nsIURI.cloneIgnoringRef()` which clones the `nsIURI` without the ref member and `nsIURI.equalsExceptRef()` which compares to another `nsIURI` ignoring the ref member.
 
 #### New interfaces

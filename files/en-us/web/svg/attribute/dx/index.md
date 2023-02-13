@@ -1,6 +1,7 @@
 ---
 title: dx
 slug: Web/SVG/Attribute/dx
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute
@@ -9,6 +10,7 @@ spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-feoffset-dx
   - https://svgwg.org/svg2-draft/text.html#TextElementDXAttribute
 ---
+
 {{SVGRef}}
 
 The **`dx`** attribute indicates a shift along the x-axis on the position of an element or its content.
@@ -26,15 +28,19 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <!-- Lines materialized the position of the glyphs -->
-  <line x1="0"  x2="100%" y1="50%" y2="50%" />
-  <line x1="10%" x2="10%" y1="0"   y2="100%" />
-  <line x1="60%" x2="60%" y1="0"   y2="100%" />
+  <line x1="0" x2="100%" y1="50%" y2="50%" />
+  <line x1="10%" x2="10%" y1="0" y2="100%" />
+  <line x1="60%" x2="60%" y1="0" y2="100%" />
 
   <!-- Some reference text -->
   <text x="10%" y="50%" fill="grey">SVG</text>
@@ -47,7 +53,7 @@ html,body,svg { height:100% }
 ```css
 line {
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 3px;
 }
 ```
@@ -192,24 +198,28 @@ If there are multiple values, `dx` defines a shift along the x-axis for each ind
 ### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <!-- Lines materialized the position of the glyphs -->
-  <line x1="0"  x2="100%" y1="25%" y2="25%" />
-  <line x1="0"  x2="100%" y1="50%" y2="50%" />
-  <line x1="0"  x2="100%" y1="75%" y2="75%" />
+  <line x1="0" x2="100%" y1="25%" y2="25%" />
+  <line x1="0" x2="100%" y1="50%" y2="50%" />
+  <line x1="0" x2="100%" y1="75%" y2="75%" />
 
-  <line x1="10%" x2="10%" y1="0"   y2="100%" />
-  <line x1="30%" x2="30%" y1="0"   y2="100%" />
-  <line x1="60%" x2="60%" y1="0"   y2="100%" />
+  <line x1="10%" x2="10%" y1="0" y2="100%" />
+  <line x1="30%" x2="30%" y1="0" y2="100%" />
+  <line x1="60%" x2="60%" y1="0" y2="100%" />
 
   <!-- Behaviors change based on the number
        of values in the attributes -->
-  <text dx="20%"       x="10%" y="25%">SVG</text>
-  <text dx="0 10%"     x="10%" y="50%">SVG</text>
+  <text dx="20%" x="10%" y="25%">SVG</text>
+  <text dx="0 10%" x="10%" y="50%">SVG</text>
   <text dx="0 10% 20%" x="10%" y="75%">SVG</text>
 </svg>
 ```
@@ -217,7 +227,7 @@ html,body,svg { height:100% }
 ```css
 line {
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 3px;
 }
 ```

@@ -14,6 +14,7 @@ tags:
   - Sensors
 browser-compat: api.GravitySensor.GravitySensor
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`GravitySensor()`**
@@ -22,7 +23,7 @@ provides on each reading the gravity applied to the device along all three axes.
 
 ## Syntax
 
-```js
+```js-nolint
 new GravitySensor()
 new GravitySensor(options)
 ```
@@ -48,9 +49,7 @@ new GravitySensor(options)
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Use of this feature was blocked by a feature policy. If a feature policy blocks use of a feature,
-    it is because your code is inconsistent with the policies set on your server.
-    This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ## Specifications
 

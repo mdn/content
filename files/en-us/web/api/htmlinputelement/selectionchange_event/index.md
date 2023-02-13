@@ -1,5 +1,5 @@
 ---
-title: 'HTMLInputElement: selectionchange event'
+title: "HTMLInputElement: selectionchange event"
 slug: Web/API/HTMLInputElement/selectionchange_event
 page-type: web-api-event
 tags:
@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.HTMLInputElement.selectionchange_event
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`selectionchange`** event of the [Selection API](/en-US/docs/Web/API/Selection) is fired when the text selection within an {{HTMLElement("input")}} element is changed.
@@ -44,7 +45,9 @@ The example below shows how to get the text selected in an {{HTMLElement("input"
 ### HTML
 
 ```html
-<div>Enter and select text here:<br><input id="mytext" rows="2" cols="20"></div>
+<div>
+  Enter and select text here:<br /><input id="mytext" rows="2" cols="20" />
+</div>
 <div>selectionStart: <span id="start"></span></div>
 <div>selectionEnd: <span id="end"></span></div>
 <div>selectionDirection: <span id="direction"></span></div>

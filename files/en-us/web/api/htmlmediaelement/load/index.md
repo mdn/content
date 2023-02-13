@@ -16,6 +16,7 @@ tags:
   - reset
 browser-compat: api.HTMLMediaElement.load
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLMediaElement")}} method
@@ -36,7 +37,7 @@ causing the changes to take effect.
 
 ## Syntax
 
-```js
+```js-nolint
 load()
 ```
 
@@ -54,9 +55,8 @@ Calling `load()` aborts all ongoing operations involving this media element,
 then begins the process of selecting and loading an appropriate media resource given the
 options specified in the {{HTMLElement("audio")}} or {{HTMLElement("video")}} element
 and its {{htmlattrxref("src", "video")}} attribute or child {{HTMLElement("source")}}
-element(s). This is described in more detail in
-{{SectionOnPage("/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content",
-  "Supporting multiple formats")}}.
+element(s). This is described in more detail in the
+[Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#using_multiple_source_formats_to_improve_compatibility) page.
 
 The process of aborting any ongoing activities will cause any outstanding
 {{jsxref("Promise")}}s returned by {{domxref("HTMLMediaElement.play", "play()")}} being

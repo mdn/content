@@ -1,5 +1,5 @@
 ---
-title: 'aria-valuemax'
+title: "aria-valuemax"
 slug: Web/Accessibility/ARIA/Attributes/aria-valuemax
 tags:
   - Accessibility
@@ -29,7 +29,13 @@ The code below shows a simple slider with a maximum value of 9.
 
 ```html
 <div id="dimesLabel">Dimes</div>
-<div role="slider" aria-valuenow="0" aria-valuemin="0" aria-valuemax="9" aria-labelledby="dimesLabel" id="dimes"></div>
+<div
+  role="slider"
+  aria-valuenow="0"
+  aria-valuemin="0"
+  aria-valuemax="9"
+  aria-labelledby="dimesLabel"
+  id="dimes"></div>
 ```
 
 ## Values
@@ -71,7 +77,7 @@ Inherited into roles:
 - [`range` role](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role)
 - [`<input type="range>` element `max` attribute](/en-US/docs/Web/HTML/Element/input/range#max)
 - [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin)
-- [`aria-aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-aria-valuenow)
+- [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow)
 
 <section id="Quick_links">
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>

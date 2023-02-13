@@ -1,6 +1,7 @@
 ---
 title: box-decoration-break
 slug: Web/CSS/box-decoration-break
+page-type: css-property
 tags:
   - CSS
   - CSS Fragmentation
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.box-decoration-break
 ---
+
 {{CSSRef}}
 
 The **`box-decoration-break`** [CSS](/en-US/docs/Web/CSS) property specifies how an element's [fragments](/en-US/docs/Web/CSS/CSS_Fragmentation) should be rendered when broken across multiple lines, columns, or pages.
@@ -67,9 +69,7 @@ An inline element that contains line breaks styled with:
 <style>
   .example {
     background: linear-gradient(to bottom right, yellow, green);
-    box-shadow:
-      8px 8px 10px 0px deeppink,
-      -5px -5px 5px 0px blue,
+    box-shadow: 8px 8px 10px 0px deeppink, -5px -5px 5px 0px blue,
       5px 5px 15px 0px yellow;
     padding: 0em 1em;
     border-radius: 16px;
@@ -80,7 +80,7 @@ An inline element that contains line breaks styled with:
   }
 </style>
 …
-<span class="example">The<br>quick<br>orange fox</span>
+<span class="example">The<br />quick<br />orange fox</span>
 ```
 
 This results in:

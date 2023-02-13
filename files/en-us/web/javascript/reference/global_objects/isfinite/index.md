@@ -1,6 +1,7 @@
 ---
 title: isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/isFinite
+page-type: javascript-function
 tags:
   - Functions
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - inFinite
 browser-compat: javascript.builtins.isFinite
 ---
+
 {{jsSidebar("Objects")}}
 
 The global **`isFinite()`** function determines whether the
@@ -19,7 +21,7 @@ number.
 
 ## Syntax
 
-```js
+```js-nolint
 isFinite(testValue)
 ```
 

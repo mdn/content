@@ -13,6 +13,7 @@ tags:
   - kind
 browser-compat: api.DataTransferItem.kind
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The read-only **`DataTransferItem.kind`** property returns a
@@ -42,7 +43,7 @@ function drop_handler(ev) {
    if ((data[i].kind === 'string') &&
        (data[i].type.match('^text/plain'))) {
      // This item is the target node
-     data[i].getAsString(function (s){
+     data[i].getAsString((s) => {
        ev.target.appendChild(document.getElementById(s));
      });
    } else if ((data[i].kind === 'string') &&
@@ -72,5 +73,4 @@ function drop_handler(ev) {
 - [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

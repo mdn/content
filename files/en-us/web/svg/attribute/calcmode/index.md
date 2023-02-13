@@ -1,6 +1,7 @@
 ---
 title: calcMode
 slug: Web/SVG/Attribute/calcMode
+page-type: svg-attribute
 tags:
   - NeedsCompatTable
   - NeedsExample
@@ -8,6 +9,7 @@ tags:
   - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#CalcModeAttribute
 ---
+
 {{SVGRef}}
 
 The **`calcMode`** attribute specifies the {{Glossary("interpolation")}} mode for the animation.

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.InputEvent.isComposing
 ---
+
 {{APIRef("UI Events")}}
 
 The **`InputEvent.isComposing`** read-only property returns a

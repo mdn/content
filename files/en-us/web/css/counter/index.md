@@ -1,6 +1,7 @@
 ---
 title: counter()
 slug: Web/CSS/counter
+page-type: css-function
 tags:
   - CSS
   - CSS Counter
@@ -9,10 +10,15 @@ tags:
   - Reference
 browser-compat: css.types.counter
 ---
+
 {{CSSRef}}
 
 The **`counter()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns a string representing the current value of the named counter, if there is one.
 It is generally used in the {{CSSxRef("content")}} property of [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), but can theoretically be used anywhere a [`<string>`](/en-US/docs/Web/CSS/string) value is supported.
+
+{{EmbedInteractiveExample("pages/tabbed/function-counter.html", "tabbed-shorter")}}
+
+## Syntax
 
 ```css
 /* Simple usage */
@@ -24,8 +30,6 @@ counter(countername, upper-roman)
 
 A [counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) has no visible effect by itself.
 The `counter()` function (and {{cssxref("counters", "counters()")}} function) is what makes it useful by returning developer defined strings (or images).
-
-## Syntax
 
 ### Values
 
@@ -62,8 +66,8 @@ li {
   counter-increment: listCounter;
 }
 li::after {
-  content: "[" counter(listCounter) "] == ["
-               counter(listCounter, upper-roman) "]";
+  content: "[" counter(listCounter) "] == [" counter(listCounter, upper-roman)
+    "]";
 }
 ```
 
@@ -71,7 +75,7 @@ li::after {
 
 {{EmbedLiveSample("default_value_compared_to_upper_Roman", "100%", 150)}}
 
-### _decimal-leading-zero_ compared to lower-alpha
+### decimal-leading-zero compared to lower-alpha
 
 #### HTML
 
@@ -93,8 +97,11 @@ li {
   counter-increment: count;
 }
 li::after {
-  content: "[" counter(count, decimal-leading-zero) "] == ["
-               counter(count, lower-alpha) "]";
+  content: "[" counter(count, decimal-leading-zero) "] == [" counter(
+      count,
+      lower-alpha
+    )
+    "]";
 }
 ```
 

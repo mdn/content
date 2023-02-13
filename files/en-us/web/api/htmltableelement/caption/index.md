@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.caption
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.caption`** property represents the

@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesis.cancel
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`cancel()`** method of the {{domxref("SpeechSynthesis")}}
@@ -22,7 +23,7 @@ If an utterance is currently being spoken, speaking will stop immediately.
 
 ## Syntax
 
-```js
+```js-nolint
 cancel()
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: CSS Grid Layout
 slug: Web/CSS/CSS_Grid_Layout
+page-type: css-module
 tags:
   - CSS
   - Grid Layout
@@ -11,6 +12,7 @@ tags:
   - Reference
 spec-urls: https://drafts.csswg.org/css-grid/
 ---
+
 {{CSSRef}}
 
 **CSS Grid Layout** excels at dividing a page into major regions or defining the relationship in terms of size, position, and layer, between parts of a control built from HTML primitives.
@@ -22,7 +24,9 @@ Like tables, grid layout enables an author to align elements into columns and ro
 The example below shows a three-column track grid with new rows created at a minimum of 100 pixels and a maximum of auto. Items have been placed onto the grid using line-based placement.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
   max-width: 940px;
   margin: 0 auto;
@@ -31,7 +35,7 @@ The example below shows a three-column track grid with new rows created at a min
 .wrapper > div {
   border: 2px solid rgb(233 171 88);
   border-radius: 5px;
-  background-color: rgba(233 171 88 / .5);
+  background-color: rgba(233 171 88 / 0.5);
   padding: 1em;
   color: #d9480f;
 }
@@ -89,7 +93,7 @@ The example below shows a three-column track grid with new rows created at a min
 
 ## Reference
 
-### CSS properties
+### Properties
 
 - {{CSSxRef("display")}}
 - {{CSSxRef("grid-template-columns")}}
@@ -114,51 +118,49 @@ The example below shows a three-column track grid with new rows created at a min
 - {{CSSxRef("align-tracks")}} {{Experimental_Inline}}
 - {{CSSxRef("justify-tracks")}} {{Experimental_Inline}}
 
-### CSS functions
+### Functions
 
 - {{CSSxRef("repeat", "repeat()")}}
 - {{CSSxRef("minmax", "minmax()")}}
 - {{CSSxRef("fit-content_function", "fit-content()")}}
 
-### CSS data types
+### Data types
 
 - {{CSSxRef("&lt;flex&gt;")}}
 
-### Glossary entries
-
-- [Grid](/en-US/docs/Glossary/Grid)
-- [Grid lines](/en-US/docs/Glossary/Grid_Lines)
-- [Grid tracks](/en-US/docs/Glossary/Grid_Tracks)
-- [Grid cell](/en-US/docs/Glossary/Grid_Cell)
-- [Grid area](/en-US/docs/Glossary/Grid_Areas)
-- [Gutters](/en-US/docs/Glossary/Gutters)
-- [Grid axis](/en-US/docs/Glossary/Grid_Axis)
-- [Grid row](/en-US/docs/Glossary/Grid_Rows)
-- [Grid column](/en-US/docs/Glossary/Grid_Column)
-
 ## Guides
 
-- [Basic concepts of Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-- [Relationship of Grid Layout to other layout methods](/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-- [Layout using line-based placement](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+- [Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [Relationship of grid layout to other layout methods](/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
 - [Grid template areas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-- [Layout using named grid lines](/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-- [Auto-placement in CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-- [Box alignment in CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-- [CSS Grid, Logical Values and Writing Modes](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)
-- [CSS Grid Layout and accessibility](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-- [Realizing common layouts using CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+- [Grid layout using line-based placement](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+- [Grid layout using named grid lines](/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
+- [Auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+- [Grids, logical values, and writing modes](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)
+- [Grid layout and accessibility](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
+- [Realizing common layouts using grids](/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
 - [Subgrid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
-- [Masonry Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) {{Experimental_Inline}}
+- [Masonry layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) {{Experimental_Inline}}
 
-## External resources
+## Specifications
 
+{{Specifications}}
+
+## See also
+
+- Glossary terms:
+  - [Grid](/en-US/docs/Glossary/Grid)
+  - [Grid lines](/en-US/docs/Glossary/Grid_Lines)
+  - [Grid tracks](/en-US/docs/Glossary/Grid_Tracks)
+  - [Grid cell](/en-US/docs/Glossary/Grid_Cell)
+  - [Grid area](/en-US/docs/Glossary/Grid_Areas)
+  - [Gutters](/en-US/docs/Glossary/Gutters)
+  - [Grid axis](/en-US/docs/Glossary/Grid_Axis)
+  - [Grid row](/en-US/docs/Glossary/Grid_Rows)
+  - [Grid column](/en-US/docs/Glossary/Grid_Column)
 - [Grid by Example](https://gridbyexample.com/) - A collection of usage examples and video tutorials
 - [CSS Grid Reference - Codrops](https://tympanus.net/codrops/css_reference/grid/)
 - [CSS Grid Inspector - Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
 - [CSS Grid Playground](https://mozilladevelopers.github.io/playground/css-grid/)
 - [CSS Grid Garden](https://cssgridgarden.com) - A game for learning CSS grid
-
-## Specifications
-
-{{Specifications}}

@@ -1,6 +1,7 @@
 ---
 title: Date.prototype.getSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
+page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getSeconds
 ---
+
 {{JSRef}}
 
 The **`getSeconds()`** method returns the seconds in the
@@ -18,7 +20,7 @@ specified date according to local time.
 
 ## Syntax
 
-```js
+```js-nolint
 getSeconds()
 ```
 
@@ -33,11 +35,11 @@ according to local time.
 
 The second statement below assigns the value 30 to the variable `seconds`,
 based on the value of the {{jsxref("Global_Objects/Date", "Date")}} object
-`Xmas95`.
+`xmas95`.
 
 ```js
-const Xmas95 = new Date('December 25, 1995 23:15:30');
-const seconds = Xmas95.getSeconds();
+const xmas95 = new Date("December 25, 1995 23:15:30");
+const seconds = xmas95.getSeconds();
 
 console.log(seconds); // 30
 ```

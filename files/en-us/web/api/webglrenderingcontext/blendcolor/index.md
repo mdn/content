@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.blendColor
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.blendColor()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) is used to set the source and
@@ -17,7 +18,7 @@ destination blending factors.
 
 ## Syntax
 
-```js
+```js-nolint
 blendColor(red, green, blue, alpha)
 ```
 

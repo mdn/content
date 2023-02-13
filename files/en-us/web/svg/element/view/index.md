@@ -1,6 +1,7 @@
 ---
 title: <view>
 slug: Web/SVG/Element/view
+page-type: svg-element
 tags:
   - Element
   - NeedsExample
@@ -8,6 +9,7 @@ tags:
   - SVG
 browser-compat: svg.elements.view
 ---
+
 {{SVGRef}}
 
 A view is a defined way to view the image, like a zoom level or a detail view.
@@ -28,8 +30,8 @@ A view is a defined way to view the image, like a zoom level or a detail view.
 
 - {{SVGAttr("viewBox")}}
 - {{SVGAttr("preserveAspectRatio")}}
-- {{SVGAttr("zoomAndPan")}}
-- {{SVGAttr("viewTarget")}}
+- {{SVGAttr("zoomAndPan")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- {{SVGAttr("viewTarget")}} {{Deprecated_Inline}}
 
 ## Example
 

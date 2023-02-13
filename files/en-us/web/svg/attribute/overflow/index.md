@@ -1,11 +1,13 @@
 ---
 title: overflow
 slug: Web/SVG/Attribute/overflow
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute
 browser-compat: svg.attributes.presentation.overflow
 ---
+
 {{SVGRef}}
 
 The **`overflow`** attribute sets what to do when an element's content is too big to fit in its block formatting context. **This feature is not widely implemented yet**.
@@ -35,14 +37,18 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
 
 ```html
 <svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg" overflow="auto">
-  <text y="20">This text is wider than the SVG, so there should be a scrollbar shown.</text>
+  <text y="20">
+    This text is wider than the SVG, so there should be a scrollbar shown.
+  </text>
 </svg>
 ```
 

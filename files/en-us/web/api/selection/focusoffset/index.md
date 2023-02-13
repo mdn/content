@@ -11,6 +11,7 @@ tags:
   - Selection
 browser-compat: api.Selection.focusOffset
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.focusOffset`** read-only property returns the

@@ -9,19 +9,20 @@ tags:
   - Reference
 browser-compat: api.HTMLSourceElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLSourceElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} object interface it also has available to it by inheritance) for manipulating {{htmlelement("source")}} elements.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLSourceElement.media")}}
   - : A string reflecting the {{ htmlattrxref("media", "source") }} HTML attribute, containing the intended type of the media resource.
-- {{domxref("HTMLSourceElement.sizes")}} {{experimental_inline}}
+- {{domxref("HTMLSourceElement.sizes")}}
   - : A string representing image sizes between breakpoints
 - {{domxref("HTMLSourceElement.src")}}
 
@@ -29,12 +30,12 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
     > **Note:** If the `src` property is updated (along with any siblings), the parent {{domxref("HTMLMediaElement")}}'s `load` method should be called when done, since `<source>` elements are not re-scanned automatically.
 
-- {{domxref("HTMLSourceElement.srcset")}} {{experimental_inline}}
+- {{domxref("HTMLSourceElement.srcset")}}
   - : A string reflecting the {{ htmlattrxref("srcset", "source") }} HTML attribute, containing a list of candidate images, separated by a comma (`',', U+002C COMMA`). A candidate image is a URL followed by a `'w'` with the width of the images, or an `'x'` followed by the pixel density.
 - {{domxref("HTMLSourceElement.type")}}
   - : A string reflecting the {{ htmlattrxref("type", "source") }} HTML attribute, containing the type of the media resource.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

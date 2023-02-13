@@ -1,6 +1,7 @@
 ---
 title: place-items
 slug: Web/CSS/place-items
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Flexible Boxes
@@ -10,6 +11,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.place-items
 ---
+
 {{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **`place-items`** [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) allows you to align items along both the block and inline directions at once (i.e. the {{CSSxRef("align-items")}} and {{CSSxRef("justify-items")}} properties) in a relevant layout system such as [Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) or [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout). If the second value is not set, the first value is also used for it.
@@ -38,8 +40,6 @@ place-items: self-start legacy;
 place-items: self-end normal;
 place-items: flex-start legacy;
 place-items: flex-end normal;
-place-items: left legacy;
-place-items: right normal;
 
 /* Baseline alignment */
 place-items: baseline normal;
@@ -162,10 +162,10 @@ select {
 ```
 
 ```js hidden
-let values = document.getElementById('values');
-let container = document.getElementById('container');
+const values = document.getElementById("values");
+const container = document.getElementById("container");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", (evt) => {
   container.style.placeItems = evt.target.value;
 });
 ```
@@ -174,13 +174,12 @@ values.addEventListener('change', function (evt) {
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   place-items: stretch; /* You can change this value by selecting another option in the list */
   background-color: #8c8c8c;
   display: flex;
 }
-
 ```
 
 #### Result
@@ -275,10 +274,10 @@ select {
 ```
 
 ```js hidden
-let values = document.getElementById('gridvalues');
-let container = document.getElementById('gridcontainer');
+const values = document.getElementById("gridvalues");
+const container = document.getElementById("gridcontainer");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", (evt) => {
   container.style.placeItems = evt.target.value;
 });
 ```
@@ -287,7 +286,7 @@ values.addEventListener('change', function (evt) {
 
 ```css
 #gridcontainer {
-  height:200px;
+  height: 200px;
   width: 240px;
   place-items: stretch; /* You can change this value by selecting another option in the list */
   background-color: #8c8c8c;
@@ -298,7 +297,6 @@ values.addEventListener('change', function (evt) {
 #gridcontainer > div {
   width: 50px;
 }
-
 ```
 
 #### Result

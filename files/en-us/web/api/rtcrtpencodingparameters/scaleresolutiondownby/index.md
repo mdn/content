@@ -22,6 +22,7 @@ tags:
   - size
 browser-compat: api.RTCRtpEncodingParameters.scaleResolutionDownBy
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpEncodingParameters")}} dictionary's
@@ -33,12 +34,12 @@ This property is only available for tracks whose {{domxref("MediaStreamTrack.kin
 
 ## Syntax
 
-```js
-rtpEncodingParameters.scaleResolutionDownBy = scalingFactor;
+```js-nolint
+rtpEncodingParameters.scaleResolutionDownBy = scalingFactor
 
 rtpEncodingParameters = {
   scaleResolutionDownBy: scalingFactor
-};
+}
 ```
 
 ### Value

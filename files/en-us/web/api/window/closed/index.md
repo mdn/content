@@ -11,6 +11,7 @@ tags:
   - Window
 browser-compat: api.Window.closed
 ---
+
 {{APIRef}}
 
 The **`Window.closed`** read-only property indicates whether

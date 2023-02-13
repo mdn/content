@@ -1,6 +1,7 @@
 ---
 title: grid-template-rows
 slug: Web/CSS/grid-template-rows
+page-type: css-property
 tags:
   - CSS
   - CSS Grid
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.grid-template-rows
 ---
+
 {{CSSRef}}
 
 The **`grid-template-rows`** CSS property defines the line names and track sizing functions of the {{glossary("grid rows", "grid rows")}}.
@@ -33,13 +35,16 @@ grid-template-rows: masonry;
 
 /* <auto-track-list> values */
 grid-template-rows: 200px repeat(auto-fill, 100px) 300px;
-grid-template-rows: minmax(100px, max-content)
-                       repeat(auto-fill, 200px) 20%;
-grid-template-rows: [linename1] 100px [linename2]
-                       repeat(auto-fit, [linename3 linename4] 300px)
-                       100px;
-grid-template-rows: [linename1 linename2] 100px
-                       repeat(auto-fit, [linename1] 300px) [linename3];
+grid-template-rows:
+  minmax(100px, max-content)
+  repeat(auto-fill, 200px) 20%;
+grid-template-rows:
+  [linename1] 100px [linename2]
+  repeat(auto-fit, [linename3 linename4] 300px)
+  100px;
+grid-template-rows:
+  [linename1 linename2] 100px
+  repeat(auto-fit, [linename1] 300px) [linename3];
 
 /* Global values */
 grid-template-rows: inherit;
@@ -64,8 +69,7 @@ This property may be specified as:
 - {{cssxref("&lt;length&gt;")}}
   - : Is a non-negative length.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : Is a non-negative {{cssxref("percentage", "&lt;percentage&gt;")}} value, relative to the block size of the grid container. If the size of the grid container depends on the size of its tracks, then the percentage must be treated as `auto`.
-    The intrinsic size contributions of the track may be adjusted to the size of the grid container, and increase the final size of the track by the minimum amount that would result in honoring the percentage.
+  - : Is a non-negative {{cssxref("percentage", "&lt;percentage&gt;")}} value, relative to the block size of the grid container. If the size of the grid container depends on the size of its tracks, then the percentage must be treated as `auto` for the purpose of calculating the intrinsic size of the grid container. It must then be resolved against the resulting grid container size for the purpose of laying out the grid and its items. The intrinsic size contributions of the track may be adjusted to the size of the grid container and may increase the final size of the track by the minimum amount that would result in honoring the percentage.
 - {{cssxref("&lt;flex_value&gt;","&lt;flex&gt;")}}
   - : Is a non-negative dimension with the unit `fr` specifying the track's flex factor. Each `<flex>`-sized track takes a share of the remaining space in proportion to its flex factor. When appearing outside a `minmax()` notation, it implies an automatic minimum (i.e. `minmax(auto, <flex>)`).
 - {{cssxref("max-content")}}

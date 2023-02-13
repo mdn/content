@@ -11,6 +11,7 @@ tags:
   - scrollBy
 browser-compat: api.Element.scrollBy
 ---
+
 {{APIRef}}
 
 The **`scrollBy()`** method of the {{domxref("Element")}}
@@ -18,7 +19,7 @@ interface scrolls an element by the given amount.
 
 ## Syntax
 
-```js
+```js-nolint
 scrollBy(x-coord, y-coord)
 scrollBy(options)
 ```

@@ -1,6 +1,7 @@
 ---
 title: height
 slug: Web/CSS/height
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -13,6 +14,7 @@ tags:
   - size
 browser-compat: css.properties.height
 ---
+
 {{CSSRef}}
 
 The **`height`** CSS property specifies the height of an element. By default, the property defines the height of the [content area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area). If {{cssxref("box-sizing")}} is set to `border-box`, however, it instead determines the height of the [border area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border_area).
@@ -27,6 +29,7 @@ The {{cssxref("min-height")}} and {{cssxref("max-height")}} properties override 
 /* <length> values */
 height: 120px;
 height: 10em;
+height: 100vh;
 
 /* <percentage> value */
 height: 75%;
@@ -89,9 +92,7 @@ Ensure that elements set with a `height` aren't truncated and/or don't obscure o
 <div id="taller">I'm 50 pixels tall.</div>
 <div id="shorter">I'm 25 pixels tall.</div>
 <div id="parent">
-  <div id="child">
-    I'm half the height of my parent.
-  </div>
+  <div id="child">I'm half the height of my parent.</div>
 </div>
 ```
 

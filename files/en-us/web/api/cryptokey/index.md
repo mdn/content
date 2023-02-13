@@ -16,13 +16,14 @@ tags:
   - Web Crypto API
 browser-compat: api.CryptoKey
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`CryptoKey`** interface of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents a cryptographic {{glossary("key")}} obtained from one of the {{domxref("SubtleCrypto")}} methods {{domxref("SubtleCrypto.generateKey", "generateKey()")}}, {{domxref("SubtleCrypto.deriveKey", "deriveKey()")}}, {{domxref("SubtleCrypto.importKey", "importKey()")}}, or {{domxref("SubtleCrypto.unwrapKey", "unwrapKey()")}}.
 
 For security reasons, the `CryptoKey` interface can only be used in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 
-## Properties
+## Instance properties
 
 - `CryptoKey.type`
 
@@ -37,7 +38,7 @@ For security reasons, the `CryptoKey` interface can only be used in a [secure co
   - : A boolean value indicating whether or not the key may be extracted using [`SubtleCrypto.exportKey()`](/en-US/docs/Web/API/SubtleCrypto/exportKey) or [`SubtleCrypto.wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/wrapKey).
 
     - `true`: The key may be extracted.
-    - `false` The key may not be extracted. [`exportKey()`](/en-US/docs/Web/API/SubtleCrypto/exportKey) or [`wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/wrapKey) will throw an exception if used to extract this key.
+    - `false`: The key may not be extracted. [`exportKey()`](/en-US/docs/Web/API/SubtleCrypto/exportKey) or [`wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/wrapKey) will throw an exception if used to extract this key.
 
 - `CryptoKey.algorithm`
 

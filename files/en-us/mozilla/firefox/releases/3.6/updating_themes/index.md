@@ -5,6 +5,7 @@ tags:
   - Firefox 3.6
   - Themes
 ---
+
 {{FirefoxSidebar}}
 
 This article intends to help theme authors update Firefox-3.5-compatible themes for Firefox 3.6 compatibility.

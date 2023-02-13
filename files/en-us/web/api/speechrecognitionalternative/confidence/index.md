@@ -4,7 +4,6 @@ slug: Web/API/SpeechRecognitionAlternative/confidence
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechRecognitionAlternative
@@ -14,7 +13,8 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionAlternative.confidence
 ---
-{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
+
+{{APIRef("Web Speech API")}}
 
 The **`confidence`** read-only property of the
 {{domxref("SpeechRecognitionResult")}} interface returns a numeric estimate of how
@@ -30,10 +30,10 @@ A number between 0 and 1.
 ## Examples
 
 This code is excerpted from our
-[Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
+[Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
-recognition.onresult = function(event) {
+recognition.onresult = (event) => {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
   // The SpeechRecognitionResultList object contains SpeechRecognitionResult objects.
   // It has a getter so it can be accessed like an array

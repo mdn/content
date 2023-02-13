@@ -13,6 +13,7 @@ tags:
   - pip
 browser-compat: api.HTMLVideoElement.leavepictureinpicture_event
 ---
+
 {{APIRef("HTMLVideoElement")}}
 
 The `leavepictureinpicture` event is fired when the {{DOMxRef("HTMLVideoElement")}} leaves picture-in-picture mode successfully.
@@ -31,7 +32,7 @@ onleavepictureinpicture = (event) => { };
 
 ## Event type
 
-An {{domxref("PictureInPictureEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PictureInPictureEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PictureInPictureEvent")}}
 
@@ -92,4 +93,4 @@ button.onclick = () => {
 ## See also
 
 - {{domxref("HTMLVideoElement")}}
-- {{domxref("Picture-in-Picture_API")}}
+- {{domxref("Picture-in-Picture_API", "Picture-in-Picture API")}}

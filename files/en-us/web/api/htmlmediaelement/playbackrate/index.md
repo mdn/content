@@ -9,6 +9,7 @@ tags:
   - Property
 browser-compat: api.HTMLMediaElement.playbackRate
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.playbackRate`** property sets the rate at which the media is being played back. This is used to implement user controls for fast forward, slow motion, and so forth. The normal playback rate is multiplied by this value to obtain the current rate, so a value of 1.0 indicates normal speed.

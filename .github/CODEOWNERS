@@ -9,7 +9,7 @@
 # ----------------------------------------------------------------------------
 # DEFAULT OWNERS
 # ----------------------------------------------------------------------------
-*    @mdn/core-dev
+*    @mdn/core-yari-content
 
 # ----------------------------------------------------------------------------
 # DEFAULT ENGLISH CONTENT OWNER(S)
@@ -61,6 +61,11 @@
 # ----------------------------------------------------------------------------
 /files/en-us/mozilla/add-ons/    @mdn/yari-content-mozilla-add-ons
 
+# ----------------------------------------------------------------------------
+# ENGLISH MATHML CONTENT OWNER(S)
+# ----------------------------------------------------------------------------
+/files/en-us/web/mathml/    @mdn/content-mathml
+
 
 # ----------------------------------------------------------------------------
 # CONTROL FILES OWNER(S)
@@ -71,7 +76,7 @@
 # ----------------------------------------------------------------------------
 /.github/     @mdn/core-dev
 /*            @mdn/core-dev
-/*.md         @mdn/core-dev @mdn/core-yari-content
+/*.md         @mdn/core-yari-content
 # These are @schalkneethling because the auto-merge GHA workflow uses my PAT and will assign me.
 # If we add another reviewer, the auto-merge will cease to be automatic.
 /package.json @schalkneethling

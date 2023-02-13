@@ -18,11 +18,12 @@ tags:
   - rejectionhandled
 browser-compat: api.Window.rejectionhandled_event
 ---
+
 {{APIRef("HTML DOM")}}
 
-The **`rejectionhandled`** event is sent to the script's global scope (usually {{domxref("window")}} but also {{domxref("Worker")}}) whenever a JavaScript {{jsxref("Promise")}} is rejected but after the promise rejection has been handled.
+The **`rejectionhandled`** event is sent to the script's global scope (usually {{domxref("window")}} but also {{domxref("Worker")}}) whenever a rejected JavaScript {{jsxref("Promise")}} is handled late, i.e. when a handler is attached to the promise after its rejection had caused an {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} event.
 
-This can be used in debugging and for general application resiliency, in tandem with the {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} event, which is sent when a promise is rejected but there is no handler for the rejection.
+This can be used in debugging and for general application resiliency, in tandem with the `unhandledrejection` event, which is sent when a promise is rejected but there is no handler for the rejection at the time.
 
 ## Syntax
 
@@ -41,9 +42,9 @@ A {{domxref("PromiseRejectionEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-- {{domxref("PromiseRejectionEvent.promise")}} {{readonlyInline}}
+- {{domxref("PromiseRejectionEvent.promise")}} {{ReadOnlyInline}}
   - : The JavaScript {{jsxref("Promise")}} that was rejected.
-- {{domxref("PromiseRejectionEvent.reason")}} {{readOnlyInline}}
+- {{domxref("PromiseRejectionEvent.reason")}} {{ReadOnlyInline}}
   - : A value or {{jsxref("Object")}} indicating why the promise was rejected, as passed to {{jsxref("Promise.reject()")}}.
 
 ## Event handler aliases
@@ -74,7 +75,7 @@ window.addEventListener("rejectionhandled", (event) => {
 
 ## See also
 
-- {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}
+- [Promise rejection events](/en-US/docs/Web/JavaScript/Guide/Using_promises#promise_rejection_events)
 - {{domxref("PromiseRejectionEvent")}}
 - {{jsxref("Promise")}}
 - {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}

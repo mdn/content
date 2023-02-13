@@ -8,6 +8,9 @@ tags:
   - Storage
   - tracking
 ---
+
+{{QuicklinksWithSubPages("Web/Privacy")}}
+
 State Partitioning is a broad effort to rework how Firefox manages client-side
 state (i.e., data stored in the browser) to mitigate the ability of websites
 to abuse state for cross-site tracking. This effort aims to
@@ -66,7 +69,7 @@ In the example below `example.com` is embedded in
 partitioned, there are three distinct storage buckets (instead of one). The
 tracker can still access storage, but since every storage bucket is
 additionally keyed under the top-level site, the data it has access to on A
-will be different than the data on B. This will prevent a tracker from storing
+will be different from the data on B. This will prevent a tracker from storing
 an identifier in their cookies when visited directly and then retrieving that
 identifier when embedded in other websites.
 
@@ -243,7 +246,7 @@ the [Site Information Panel](https://support.mozilla.org/en-US/kb/site-informati
 Setting `privacy.antitracking.enableWebcompat` to `false` will **disable** all
 ETP and State Partitioning web-compatibility features. Disabling these features
 can be useful when testing, to ensure your website is fully compatible with the
-State Partitioning mechanism in Firefox and it does not rely on temporary
+State Partitioning mechanism in Firefox, and it does not rely on temporary
 heuristics.
 
 Features disabled by the pref include:

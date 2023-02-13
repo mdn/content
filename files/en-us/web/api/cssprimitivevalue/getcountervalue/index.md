@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSPrimitiveValue.getCounterValue
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`getCounterValue()`** method of the
@@ -29,7 +30,7 @@ is raised. Modification to the corresponding style property can be achieved usin
 
 ## Syntax
 
-```js
+```js-nolint
 getCounterValue()
 ```
 

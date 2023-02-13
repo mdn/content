@@ -12,6 +12,7 @@ tags:
   - Property
 browser-compat: api.CSSNumericArray.length
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The read-only **`length`** property of the

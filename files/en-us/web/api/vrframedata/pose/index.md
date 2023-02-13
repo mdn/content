@@ -12,9 +12,11 @@ tags:
   - Virtual Reality
   - WebVR
   - pose
+  - Non-standard
 browser-compat: api.VRFrameData.pose
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`pose`** read-only property of the {{domxref("VRFrameData")}} interface returns the {{domxref("VRPose")}} of the {{domxref("VRDisplay")}} at the current {{domxref("VRFrameData.timestamp")}}.
 

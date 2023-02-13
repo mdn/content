@@ -7,6 +7,7 @@ tags:
   - Gecko
   - Gecko 14
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 14 shipped on July 17, 2012. This article lists key changes that are useful for not only Web developers to know about, but also Firefox and Gecko developers as well as add-on developers.
@@ -26,12 +27,12 @@ Firefox 14 shipped on July 17, 2012. This article lists key changes that are use
 - The {{domxref("BlobBuilder", "MozBlobBuilder")}} interface has been deprecated in favor of the constructor on {{domxref("Blob")}}. If you use `MozBlobBuilder` you'll see a warning message in the Web Console.
 - The {{domxref("Blob.Blob", "Blob()")}} constructor is now available to workers ({{bug(736686)}}).
 - Support for the [Mutation Observers](/en-US/docs/Web/API/MutationObserver) has been landed. It is designed as a replacement for the Mutation Events in DOM3, which has a number of issues regarding performance.
-- The {{domxref("HTMLImageElement")}} interface's `x` and `y` properties were removed in Gecko 7.0 {{geckoRelease("7.0")}} but restored in this release for compatibility reasons.
+- The {{domxref("HTMLImageElement")}} interface's `x` and `y` properties were removed in Firefox 7.0 but restored in this release for compatibility reasons.
 - The {{domxref("Document")}} methods `execCommandShowHelp()` and `queryCommandText()`, which never did anything, have been removed.
 - The `GeoPositionAddress` interface, an obsolete part of the [Geolocation](/en-US/docs/Web/API/Geolocation_API) API, has been removed.
 - {{domxref("Storage", "localStorage/sessionStorage")}} now correctly return `undefined` instead of `null` for undeclared keys through property access.ff
 - The {{domxref("ImageData")}} object has been implemented ({{bug(550309)}}).
-- Attributes and methods related to child nodes on {{domxref("Attr")}} interface where obsoleted ({{bug(737122)}}).
+- Attributes and methods related to child nodes on {{domxref("Attr")}} interface were obsoleted ({{bug(737122)}}).
 
 ### CSS
 

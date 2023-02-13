@@ -14,6 +14,7 @@ tags:
   - Deprecated
 browser-compat: api.HTMLTableElement.frame
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 The {{domxref("HTMLTableElement")}} interface's **`frame`**
@@ -22,7 +23,7 @@ drawn.
 
 ## Value
 
-One of the followings:
+One of the following:
 
 - `void`
   - : No sides. This is the default.

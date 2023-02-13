@@ -2,11 +2,12 @@
 title: Firefox 102 for developers
 slug: Mozilla/Firefox/Releases/102
 tags:
-  - '102'
+  - "102"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 102 that will affect developers. Firefox 102 was released on June 28, 2022.
@@ -35,6 +36,11 @@ No notable changes.
 - [Readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams) are now supported, allowing efficient zero-byte transfer of data from an underlying byte source to a consumer (bypassing the stream's internal queues).
   The new interfaces are {{domxref("ReadableStreamBYOBReader")}}, {{domxref("ReadableByteStreamController")}} and {{domxref("ReadableStreamBYOBRequest")}} ({{bug(1767342)}}).
 
+### Security
+
+- Support of the [`wasm-unsafe-eval`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_webassembly_execution) CSP policy directive has been implemented.
+  A document with a CSP that restricts scripts will no longer load and execute WebAssembly unless the CSP uses `'wasm-unsafe-eval'` or the existing `'unsafe-eval'` keyword ({{bug(1740263)}}).
+
 #### DOM
 
 - The Firefox-only property {{domxref("Window.sidebar")}} has been moved behind a preference and is planned for removal ({{bug(1768486)}}).
@@ -50,9 +56,9 @@ No notable changes.
 
 #### Marionette
 
-- Allow marionette to connect to a windowless instance of Firefox  ({{bug(1726465)}}).
-- Fixed issue where `WebDriver:Navigate` with a PageLoadStrategy of "none" returns before navigation has started  ({{bug(1754132)}}).
-- Fixed a potential race condition in `WebDriver:SwitchToWindow` when switching to a different tab  ({{bug(1749666)}}).
+- Allow marionette to connect to a windowless instance of Firefox ({{bug(1726465)}}).
+- Fixed issue where `WebDriver:Navigate` with a PageLoadStrategy of "none" returns before navigation has started ({{bug(1754132)}}).
+- Fixed a potential race condition in `WebDriver:SwitchToWindow` when switching to a different tab ({{bug(1749666)}}).
 
 ## Changes for add-on developers
 

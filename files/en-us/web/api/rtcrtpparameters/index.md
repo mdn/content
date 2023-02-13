@@ -18,6 +18,7 @@ tags:
   - parameters
 browser-compat: api.RTCRtpParameters
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The **`RTCRtpParameters`** dictionary is the basic object describing the parameters of an {{Glossary("RTP")}} transport. It is extended separately for senders and receivers in the form of the {{domxref("RTCRtpSendParameters")}} and {{domxref("RTCRtpReceiveParameters")}} dictionaries.
@@ -27,7 +28,7 @@ To obtain the parameters of a sender or receiver, call its `getParameters()` met
 - {{domxref("RTCRtpSender.getParameters", "getParameters()")}}
 - {{domxref("RTCRtpReceiver.getParameters", "getParameters()")}}
 
-## Properties
+## Instance properties
 
 - {{domxref("RTCRtpParameters.codecs", "codecs")}}
   - : An array of {{domxref("RTCRtpCodecParameters")}} objects describing the set of codecs from which the sender or receiver will choose. This parameter cannot be changed once initially set.

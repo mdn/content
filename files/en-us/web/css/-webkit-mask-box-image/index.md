@@ -1,6 +1,7 @@
 ---
-title: '-webkit-mask-box-image'
+title: "-webkit-mask-box-image"
 slug: Web/CSS/-webkit-mask-box-image
+page-type: css-property
 tags:
   - CSS
   - Layout
@@ -10,7 +11,8 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-webkit-mask-box-image
 ---
-{{ CSSRef() }} {{ Non-standard_header() }}
+
+{{CSSRef}} {{ Non-standard_header() }}
 
 `-webkit-mask-box-image` sets the mask image for an element's border box.
 
@@ -70,7 +72,7 @@ Where:
 
 ```css
 .exampleone {
-  -webkit-mask-box-image: url('mask.png');
+  -webkit-mask-box-image: url("mask.png");
 }
 ```
 
@@ -78,7 +80,7 @@ Where:
 
 ```css
 .exampletwo {
-  -webkit-mask-box-image: url('logo.png') 100 100 0 0 round round;
+  -webkit-mask-box-image: url("logo.png") 100 100 0 0 round round;
 }
 ```
 

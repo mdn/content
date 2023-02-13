@@ -9,6 +9,7 @@ tags:
   - formevent
 browser-compat: api.HTMLFormElement.formdata_event
 ---
+
 {{APIRef}}
 
 The **`formdata`** event fires after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a {{domxref("FormData.FormData", "FormData()")}} constructor.
@@ -51,8 +52,8 @@ formElem.addEventListener('submit', (e) => {
   // on form submission, prevent default
   e.preventDefault();
 
-  console.log(form.querySelector('input[name="field1"]')); // FOO
-  console.log(form.querySelector('input[name="field2"]')); // BAR
+  console.log(formElem.querySelector('input[name="field1"]')); // FOO
+  console.log(formElem.querySelector('input[name="field2"]')); // BAR
 
   // construct a FormData object, which fires the formdata event
   const formData = new FormData(formElem);

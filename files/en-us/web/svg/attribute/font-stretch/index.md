@@ -1,12 +1,14 @@
 ---
 title: font-stretch
 slug: Web/SVG/Attribute/font-stretch
+page-type: svg-attribute
 tags:
   - NeedsExample
   - SVG
   - SVG Attribute
 browser-compat: svg.attributes.presentation.font-stretch
 ---
+
 {{SVGRef}}
 
 The **`font-stretch`** attribute indicates the desired amount of condensing or expansion in the glyphs used to render the text.

@@ -11,22 +11,19 @@ tags:
   - Sensor
   - Sensor APIs
   - Sensors
+  - Experimental
 browser-compat: api.Magnetometer.Magnetometer
 ---
-{{APIRef("Sensor API")}}
+
+{{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`Magnetometer()`** constructor
 creates a new {{domxref("Magnetometer")}} object which returns information about the
 magnetic field as detected by a device's primary magnetometer sensor.
 
-If a feature policy blocks use of a feature it is because your code is inconsistent
-with the policies set on your server. This is not something that would ever be shown to
-a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation
-instructions.
-
 ## Syntax
 
-```js
+```js-nolint
 new Magnetometer()
 new Magnetometer(options)
 ```
@@ -46,6 +43,11 @@ new Magnetometer(options)
     - `referenceFrame`
       - : Either `'device'` or
         `'screen'`. The default is `'device'`.
+
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ## Specifications
 

@@ -11,9 +11,11 @@ tags:
   - WebXR API
   - WebXR Device API
   - XR
+  - Experimental
 browser-compat: api.XRCylinderLayer.aspectRatio
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`aspectRatio`** property of the {{domxref("XRCylinderLayer")}} interface represents the ratio of the visible cylinder section. It is the ratio of the width of the visible section of the cylinder divided by its height. The width is calculated by multiplying the {{domxref("XRCylinderLayer.radius", "radius")}} with the {{domxref("XRCylinderLayer.centralAngle", "centralAngle")}}.
 

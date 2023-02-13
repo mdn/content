@@ -8,9 +8,11 @@ tags:
   - Reference
   - Screen Wake Lock API
   - WakeLock
+  - Experimental
 browser-compat: api.WakeLock.request
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
+
+{{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`request()`** method of the
 {{domxref("WakeLock")}} interface returns a {{jsxref("Promise")}} that resolves with a
@@ -19,7 +21,7 @@ locking.
 
 ## Syntax
 
-```js
+```js-nolint
 request(type)
 ```
 
@@ -43,11 +45,10 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("WakeLockSentinel")}} obj
 
   - : Thrown when wake lock is not available, which can happen because:
 
-    - Document is not allowed to use screen wake lock due to screen-wake-lock
-      policy.
-    - Document is not fully active.
-    - Document is hidden.
-    - {{Glossary("User Agent")}} could not acquire platform's wake lock.
+    - Use of this feature is blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+    - The document is not fully active.
+    - The document is hidden.
+    - The {{Glossary("User Agent")}} could not acquire platform's wake lock.
 
 ## Examples
 

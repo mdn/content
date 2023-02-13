@@ -14,9 +14,11 @@ tags:
   - WebXR Device API
   - XR
   - XRCylinderLayer
+  - Experimental
 browser-compat: api.XRCylinderLayer
 ---
-{{securecontext_header}}{{APIRef("WebXR Device API")}}
+
+{{securecontext_header}}{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`XRCylinderLayer`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) is a layer that takes up a curved rectangular space in the virtual environment. Only the front of the layer is visible.
 
@@ -31,28 +33,28 @@ To present layers to the XR device, add them to the `layers` render state using 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 
-- {{domxref("XRCylinderLayer.aspectRatio")}}
+- {{domxref("XRCylinderLayer.aspectRatio")}} {{Experimental_Inline}}
   - : A number indicating the ratio of the visible cylinder section. It is the ratio of the width of the visible section of the cylinder divided by its height. The width is calculated by multiplying the `radius` with the `centralAngle`.
-- {{domxref("XRCylinderLayer.centralAngle")}}
+- {{domxref("XRCylinderLayer.centralAngle")}} {{Experimental_Inline}}
   - : A number indicating the angle in radians of the visible section of the cylinder.
-- {{domxref("XRCylinderLayer.radius")}}
+- {{domxref("XRCylinderLayer.radius")}} {{Experimental_Inline}}
   - : A number indicating the radius of the cylinder.
-- {{domxref("XRCylinderLayer.space")}}
+- {{domxref("XRCylinderLayer.space")}} {{Experimental_Inline}}
   - : An {{domxref("XRSpace")}} representing the layer's spatial relationship with the user's physical environment.
-- {{domxref("XRCylinderLayer.transform")}}
+- {{domxref("XRCylinderLayer.transform")}} {{Experimental_Inline}}
   - : An {{domxref("XRRigidTransform")}} representing the offset and orientation relative to `space`.
 
-## Methods
+## Instance methods
 
-*Inherits methods from its parents, {{domxref("XRCompositionLayer")}} and {{domxref("EventTarget")}}*.
+_Inherits methods from its parents, {{domxref("XRCompositionLayer")}} and {{domxref("EventTarget")}}_.
 
 ## Events
 
-- {{domxref("XRCylinderLayer.redraw_event", "redraw")}}
+- {{domxref("XRCylinderLayer.redraw_event", "redraw")}} {{Experimental_Inline}}
   - : Sent to the `XRCylinderLayer` object when the underlying resources of the layer are lost or when the XR Compositor can no longer reproject the layer. If this event is sent, authors should redraw the content of the layer in the next XR animation frame.
 
 ## Specifications

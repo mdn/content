@@ -11,6 +11,7 @@ tags:
   - WebAuthn
 browser-compat: api.AuthenticatorResponse.clientDataJSON
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`clientDataJSON`** property of the
@@ -26,7 +27,7 @@ child objects of `AuthenticatorResponse`, specifically
 
 An {{jsxref("ArrayBuffer")}}.
 
-## Properties
+## Instance properties
 
 After the `clientDataJSON` object is converted from an
 `ArrayBuffer` to a JavaScript object, it will have the following properties:
@@ -62,16 +63,16 @@ After the `clientDataJSON` object is converted from an
 
 ```js
 function arrayBufferToStr(buf) {
-    return String.fromCharCode.apply(null, new Uint8Array(buf));
+  return String.fromCharCode.apply(null, new Uint8Array(buf));
 }
 
 // pk is a PublicKeyCredential that is the result of a create() or get() Promise
 const clientDataStr = arrayBufferToStr(pk.clientDataJSON);
 const clientDataObj = JSON.parse(clientDataStr);
 
-console.log(clientDataObj.type);      // "webauthn.create" or "webauthn.get"
+console.log(clientDataObj.type); // "webauthn.create" or "webauthn.get"
 console.log(clientDataObj.challenge); // base64 encoded String containing the original challenge
-console.log(clientDataObj.origin);    // the window.origin
+console.log(clientDataObj.origin); // the window.origin
 ```
 
 ## Specifications

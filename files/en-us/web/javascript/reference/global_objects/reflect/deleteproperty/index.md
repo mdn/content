@@ -1,6 +1,7 @@
 ---
 title: Reflect.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -10,10 +11,10 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.deleteProperty
 ---
+
 {{JSRef}}
 
-The static
-**`Reflect.deleteProperty()`**
+The **`Reflect.deleteProperty()`** static
 method allows to delete properties. It is like the
 [`delete` operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
 as a function.
@@ -22,7 +23,7 @@ as a function.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.deleteProperty(target, propertyKey)
 ```
 
@@ -52,22 +53,22 @@ successfully deleted. It is almost identical to the non-strict
 
 ## Examples
 
-### Using `Reflect.deleteProperty()`
+### Using Reflect.deleteProperty()
 
 ```js
-let obj = { x: 1, y: 2 }
-Reflect.deleteProperty(obj, 'x')  // true
-obj                               // { y: 2 }
+const obj = { x: 1, y: 2 };
+Reflect.deleteProperty(obj, "x"); // true
+console.log(obj); // { y: 2 }
 
-let arr = [1, 2, 3, 4, 5]
-Reflect.deleteProperty(arr, '3')  // true
-arr                               // [1, 2, 3, undefined, 5]
+const arr = [1, 2, 3, 4, 5];
+Reflect.deleteProperty(arr, "3"); // true
+console.log(arr); // [1, 2, 3, undefined, 5]
 
 // Returns true if no such property exists
-Reflect.deleteProperty({}, 'foo')  // true
+Reflect.deleteProperty({}, "foo"); // true
 
 // Returns false if a property is unconfigurable
-Reflect.deleteProperty(Object.freeze({foo: 1}), 'foo')  // false
+Reflect.deleteProperty(Object.freeze({ foo: 1 }), "foo"); // false
 ```
 
 ## Specifications

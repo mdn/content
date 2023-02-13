@@ -10,13 +10,14 @@ tags:
   - TextTrackCue
 browser-compat: api.TextTrackCue.endTime
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`endTime`** property of the {{domxref("TextTrackCue")}} interface returns and sets the end time of the cue.
 
 ## Value
 
-An integer representing the end time, in seconds.
+A number representing the end time, in seconds.
 
 ## Examples
 

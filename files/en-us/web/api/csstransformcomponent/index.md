@@ -13,20 +13,21 @@ tags:
   - Reference
 browser-compat: api.CSSTransformComponent
 ---
-{{APIRef("CSS Typed OM")}}
+
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSTransformComponent`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} is part of the {{domxref('CSSTransformValue')}} interface.
 
-## Properties
+## Instance properties
 
-- {{domxref("CSSTransformComponent.is2D")}} {{ReadOnlyInline}}
+- {{domxref("CSSTransformComponent.is2D")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean indicting whether the transform is 2D or 3D.
 
-## Methods
+## Instance methods
 
-- {{domxref("CSSTransformComponent.toMatrix()")}}
+- {{domxref("CSSTransformComponent.toMatrix()")}} {{Experimental_Inline}}
   - : Returns a new {{domxref('DOMMatrix')}} object.
-- {{domxref("CSSTransformComponent.toString()")}}
+- {{domxref("CSSTransformComponent.toString()")}} {{Experimental_Inline}}
 
   - : A string in the form of a CSS {{cssxref("transform-function","Transforms function")}}.
 

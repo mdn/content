@@ -16,9 +16,12 @@ tags:
   - Telephone
   - payment
   - paymentAddress
+  - Deprecated
+  - Non-standard
 browser-compat: api.PaymentAddress.phone
 ---
-{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+
+{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The read-only **`phone`** property of the
 {{domxref('PaymentAddress')}} interface returns a string containing the telephone number

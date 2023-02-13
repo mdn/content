@@ -13,6 +13,7 @@ tags:
   - documentURI
 browser-compat: api.SecurityPolicyViolationEvent.documentURI
 ---
+
 {{HTTPSidebar}}
 
 The **`documentURI`** read-only property of the

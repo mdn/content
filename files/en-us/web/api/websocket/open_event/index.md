@@ -10,6 +10,7 @@ tags:
   - open
 browser-compat: api.WebSocket.open_event
 ---
+
 {{APIRef}}
 
 The `open` event is fired when a connection with a `WebSocket` is opened.

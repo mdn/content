@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.releasePointerCapture
 ---
+
 {{APIRef("DOM")}}
 
 The **`releasePointerCapture()`** method of the
@@ -23,7 +24,7 @@ element.
 
 ## Syntax
 
-```js
+```js-nolint
 releasePointerCapture(pointerId)
 ```
 

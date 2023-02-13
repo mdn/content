@@ -1,6 +1,7 @@
 ---
 title: break
 slug: Web/JavaScript/Reference/Statements/break
+page-type: javascript-statement
 tags:
   - JavaScript
   - Language feature
@@ -8,9 +9,10 @@ tags:
   - Statement
 browser-compat: javascript.statements.break
 ---
+
 {{jsSidebar("Statements")}}
 
-The **`break` statement** terminates the current loop,
+The **`break`** statement terminates the current loop,
 {{jsxref("Statements/switch", "switch")}}, or {{jsxref("Statements/label", "label", "", 1)}}
 statement and transfers program control to the statement following the terminated
 statement.
@@ -19,8 +21,9 @@ statement.
 
 ## Syntax
 
-```js
-break [label];
+```js-nolint
+break;
+break label;
 ```
 
 - `label` {{optional_inline}}
@@ -88,16 +91,16 @@ switch (food) {
 
 The following code uses `break` statements with labeled blocks. A
 `break` statement must be nested within any label it references. Notice that
-`inner_block` is nested within `outer_block`.
+`innerBlock` is nested within `outerBlock`.
 
 ```js
-outer_block: {
-  inner_block: {
-    console.log('1');
-    break outer_block; // breaks out of both inner_block and outer_block
-    console.log(':-('); // skipped
+outerBlock: {
+  innerBlock: {
+    console.log("1");
+    break outerBlock; // breaks out of both inner_block and outer_block
+    console.log(":-("); // skipped
   }
-  console.log('2'); // skipped
+  console.log("2"); // skipped
 }
 ```
 
@@ -105,16 +108,16 @@ outer_block: {
 
 The following code also uses `break` statements with labeled blocks, but
 generates a `SyntaxError` because its `break` statement is within
-`block_1` but references `block_2`. A `break` statement
+`block1` but references `block2`. A `break` statement
 must always be nested within any label it references.
 
-```js
-block_1: {
+```js example-bad
+block1: {
   console.log('1');
-  break block_2; // SyntaxError: label not found
+  break block2; // SyntaxError: label not found
 }
 
-block_2: {
+block2: {
   console.log('2');
 }
 ```
@@ -125,7 +128,7 @@ block_2: {
 `break` statements within functions that are nested within a loop, or labeled
 block that the `break` statements are intended to break out of.
 
-```js
+```js example-bad
 function testBreak(x) {
   let i = 0;
 
@@ -138,16 +141,16 @@ function testBreak(x) {
     i += 1;
   }
 
-return i * x;
+  return i * x;
 }
 
 testBreak(1); // SyntaxError: Illegal break statement
 ```
 
-```js
+```js example-bad
 block_1: {
   console.log('1');
-  (function() {
+  (function () {
     break block_1; // SyntaxError: Undefined label 'block_1'
   })();
 }

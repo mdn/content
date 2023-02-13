@@ -1,6 +1,7 @@
 ---
 title: '<rtc>: The Ruby Text Container element'
 slug: Web/HTML/Element/rtc
+page-type: html-element
 tags:
   - Deprecated
   - Element
@@ -14,11 +15,41 @@ tags:
 browser-compat: html.elements.rtc
 ---
 
-{{HTMLRef}}{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 The **`<rtc>`** [HTML](/en-US/docs/Web/HTML) element embraces semantic annotations of characters presented in a ruby of {{HTMLElement("rb")}} elements used inside of {{ HTMLElement("ruby") }} element. {{HTMLElement("rb")}} elements can have both pronunciation ({{HTMLElement("rt")}}) and semantic ({{HTMLElement("rtc")}}) annotations.
 
 {{EmbedInteractiveExample("pages/tabbed/rtc.html", "tabbed-standard")}}
+
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Examples
+
+```html
+<div class="info">
+  <ruby>
+    <rtc>
+      <rb>旧</rb><rt>jiù</rt>
+      <rb>金</rb><rt>jīn</rt>
+      <rb>山</rb><rt>shān</rt>
+    </rtc>
+    <rtc>San Francisco</rtc>
+  </ruby>
+</div>
+```
+
+```css hidden
+.info {
+  padding-top: 10px;
+  font-size: 36px;
+}
+```
+
+{{EmbedLiveSample("Examples", 600, 120)}}
+
+## Technical summary
 
 <table class="properties">
   <tbody>
@@ -63,34 +94,6 @@ The **`<rtc>`** [HTML](/en-US/docs/Web/HTML) element embraces semantic annotatio
   </tbody>
 </table>
 
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Examples
-
-```html
-<div class="info">
-  <ruby>
-    <rbc>
-      <rb>旧</rb><rt>jiù</rt>
-      <rb>金</rb><rt>jīn</rt>
-      <rb>山</rb><rt>shān</rt>
-    </rbc>
-    <rtc>San Francisco</rtc>
-  </ruby>
-</div>
-```
-
-```css hidden
-.info {
-  padding-top: 10px;
-  font-size: 36px;
-}
-```
-
-{{EmbedLiveSample("Examples", 600, 120)}}
-
 ## Specifications
 
 {{Specifications}}
@@ -105,4 +108,3 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 - {{HTMLElement("rp")}}
 - {{HTMLElement("rb")}}
 - {{HTMLElement("rt")}}
-- {{HTMLElement("rbc")}}
