@@ -7,7 +7,6 @@ build/
 # still need a full pass:
 /files/en-us/learn/**/*.md
 /files/en-us/mozilla/**/*.md
-/files/en-us/web/accessibility/**/*.md
 /files/en-us/web/html/**/*.md
 /files/en-us/web/javascript/**/*.md
 /files/en-us/web/mathml/**/*.md
