@@ -9,7 +9,6 @@ build/
 /files/en-us/mozilla/**/*.md
 /files/en-us/web/html/**/*.md
 /files/en-us/web/javascript/**/*.md
-/files/en-us/web/mathml/**/*.md
 /files/en-us/web/progressive_web_apps/**/*.md
 /files/en-us/web/svg/**/*.md
 /files/en-us/web/text_fragments/**/*.md
