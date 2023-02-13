@@ -8,10 +8,11 @@ tags:
   - CSS Custom Highlight API
   - Reference
   - priority
+  - Experimental
 browser-compat: api.Highlight.priority
 ---
 
-{{APIRef("CSS Custom Highlight API")}}
+{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
 
 It is possible to create {{domxref("Range")}} objects that overlap in a document.
 

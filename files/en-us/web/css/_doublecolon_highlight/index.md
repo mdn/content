@@ -7,10 +7,11 @@ tags:
   - Pseudo-element
   - Reference
   - Selector
+  - Experimental
 browser-compat: css.selectors.highlight
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`::highlight()`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to a custom highlight.
 
