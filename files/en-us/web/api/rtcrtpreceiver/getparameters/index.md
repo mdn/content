@@ -22,11 +22,7 @@ browser-compat: api.RTCRtpReceiver.getParameters
 
 {{APIRef("WebRTC API")}}
 
-The **`getParameters()`** method of
-the {{domxref("RTCRtpReceiver")}} interface returns an
-{{domxref("RTCRtpReceiveParameters")}} object describing the current configuration for
-the encoding and transmission of media on the receiver's
-{{domxref("RTCRtpReceiver.track", "track")}}.
+The **`getParameters()`** method of the {{domxref("RTCRtpReceiver")}} interface returns an {{domxref("RTCRtpReceiveParameters")}} object describing the current configuration for the encoding and transmission of media on the receiver's {{domxref("RTCRtpReceiver.track", "track")}}.
 
 ## Syntax
 
@@ -40,13 +36,11 @@ None.
 
 ### Return value
 
-An {{domxref("RTCRtpReceiveParameters")}} object indicating the current configuration
-of the receiver.
+An {{domxref("RTCRtpReceiveParameters")}} object indicating the current configuration of the receiver.
 
 ## Examples
 
-This example obtains the canonical name (CNAME) being used for {{Glossary("RTCP")}} on
-an {{domxref("RTCRtpReceiver")}}.
+This example obtains the canonical name (CNAME) being used for {{Glossary("RTCP")}} on an {{domxref("RTCRtpReceiver")}}.
 
 ```js
 function getRtcpCNAME(receiver) {
