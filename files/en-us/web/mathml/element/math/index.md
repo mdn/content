@@ -65,8 +65,8 @@ This example contains two MathML formula. The first one is rendered in its own c
         <mn>2</mn>
       </msup>
       <mn>6</mn>
-    </mfrac>
-  </math>.
+    </mfrac></math
+  >.
 </p>
 ```
 
