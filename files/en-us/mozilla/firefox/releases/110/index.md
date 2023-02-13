@@ -69,7 +69,21 @@ This article provides information about the changes in Firefox 110 that will aff
 
 #### WebDriver BiDi
 
+- Added support for the `network.beforeRequestSent` ({{bug(1790368)}}), the `network.responseStarted` ({{bug(1790370)}}), and the `network.responseCompleted` ({{bug(1790372)}}) events.
+
+- Added support for the `browsingContext.captureScreenshot` command to capture full page screenshots ({{bug(1800086)}}).
+
+- Added support for serialization and deserialization of generic platform objects ({{bug(1792524)}}), and for `NodeList` and `HTMLCollection` platform objects ({{bug(1802284)}}).
+
+- Added a `timestamp` field to the `browsingContext.domContentLoaded` and `browsingContext.load` events ({{bug(1790378)}}).
+
+- Added a `type` field to the response for `script.evaluate` and `script.callFunction` to indicate either `success` or `exception` results ({{bug(1803599)}}).
+
 #### Marionette
+
+- The cache for known nodes (element and shadow root references) has been moved from the parent to the web content process following recent WebDriver classic changes ({{bug(1692468)}}).
+
+- Improved the JSON serialization and deserialization algorithms to be compliant with the WebDriver classic specification ({{bug(1794078)}}).
 
 ## Changes for add-on developers
 
