@@ -81,7 +81,7 @@
       "impl": []
     },
     "AudioDecoder": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "AudioDestinationNode": {
@@ -89,7 +89,7 @@
       "impl": []
     },
     "AudioEncoder": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "AudioListener": {
@@ -412,7 +412,7 @@
       "inh": "ExtendableEvent",
       "impl": []
     },
-    "ContentVisibilityAutoStateChangeEvent": {
+    "ContentVisibilityAutoStateChangedEvent": {
       "inh": "Event",
       "impl": []
     },
@@ -1734,10 +1734,6 @@
     },
     "IdentityCredential": {
       "inh": "Credential",
-      "impl": []
-    },
-    "IdentityProvider": {
-      "inh": "",
       "impl": []
     },
     "IdleDeadline": {
@@ -3585,11 +3581,11 @@
       "impl": []
     },
     "VideoDecoder": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "VideoEncoder": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "VideoFrame": {
