@@ -112,8 +112,8 @@ Connection: Keep-Alive
 ```
 
 ## Status Code
-Note that both [200 and 204](https://fetch.spec.whatwg.org/#ref-for-ok-status) are permitted status codes, but some browsers do not support 204s.
-See [here](https://github.com/mdn/content/issues/23571#issue-1530045601) for more details.
+
+Both {{HTTPStatus("200")}} OK and {{HTTPStatus("204") No Content are [permitted status codes](https://fetch.spec.whatwg.org/#ref-for-ok-status), but some browsers incorrectly believe `204 No Content` applies to the resource and do not send the subsequent request to fetch it.
 
 ## Specifications
 
