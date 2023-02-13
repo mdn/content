@@ -26,8 +26,10 @@ The `:not()` pseudo-class has a number of [quirks, tricks, and unexpected result
 
 The `:not()` pseudo-class requires a comma-separated list of one or more selectors as its argument. The list must not contain another negation selector or a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements).
 
-```
-:not( <complex-selector-list> )
+```css-nolint
+:not(<complex-selector-list>) {
+  /* ... */
+}
 ```
 
 ## Description

@@ -42,7 +42,7 @@ from a selector rule:
 
 ```js
 const declaration = document.styleSheets[0].rules[0].style;
-const oldValue = declaration.removeProperty('background-color');
+const oldValue = declaration.removeProperty("background-color");
 ```
 
 ## Specifications

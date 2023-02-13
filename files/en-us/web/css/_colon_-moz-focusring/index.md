@@ -1,5 +1,5 @@
 ---
-title: ':-moz-focusring'
+title: ":-moz-focusring"
 slug: Web/CSS/:-moz-focusring
 page-type: css-pseudo-class
 tags:
@@ -27,7 +27,9 @@ The working group previously [intended to add this feature to CSS Selectors 4 or
 ## Syntax
 
 ```css
-:-moz-focusring
+:-moz-focusring {
+  /* ... */
+}
 ```
 
 ## Example

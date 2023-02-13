@@ -93,16 +93,36 @@ td {
 }
 
 /* border-top-style example classes */
-.b1 {border-top-style: none;}
-.b2 {border-top-style: hidden;}
-.b3 {border-top-style: dotted;}
-.b4 {border-top-style: dashed;}
-.b5 {border-top-style: solid;}
-.b6 {border-top-style: double;}
-.b7 {border-top-style: groove;}
-.b8 {border-top-style: ridge;}
-.b9 {border-top-style: inset;}
-.b10 {border-top-style: outset;}
+.b1 {
+  border-top-style: none;
+}
+.b2 {
+  border-top-style: hidden;
+}
+.b3 {
+  border-top-style: dotted;
+}
+.b4 {
+  border-top-style: dashed;
+}
+.b5 {
+  border-top-style: solid;
+}
+.b6 {
+  border-top-style: double;
+}
+.b7 {
+  border-top-style: groove;
+}
+.b8 {
+  border-top-style: ridge;
+}
+.b9 {
+  border-top-style: inset;
+}
+.b10 {
+  border-top-style: outset;
+}
 ```
 
 #### Result
