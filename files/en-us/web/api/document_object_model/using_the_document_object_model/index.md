@@ -97,4 +97,4 @@ Now that you are familiar with the basic concepts of the DOM, you may want to le
 
 ## See also
 
-- our [other DOM documentation](/en-US/docs/Web/API/Document_Object_Model).
+- The [Document Object Model](/en-US/docs/Web/API/Document_Object_Model) (DOM).
