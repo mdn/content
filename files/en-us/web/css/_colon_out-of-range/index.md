@@ -25,8 +25,10 @@ This pseudo-class is useful for giving the user a visual indication that a field
 
 ## Syntax
 
-```
-:out-of-range
+```css
+:out-of-range {
+  /* ... */
+}
 ```
 
 ## Examples

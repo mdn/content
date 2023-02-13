@@ -28,7 +28,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 ## Examples
 
-```html
+```html-nolint
 <math display="block">
   <mn>1</mn>
   <mspace depth="40px" height="20px" width="100px"

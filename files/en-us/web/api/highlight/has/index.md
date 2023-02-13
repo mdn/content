@@ -8,11 +8,12 @@ tags:
   - CSS Custom Highlight API
   - Reference
   - has
+  - Experimental
 browser-compat: api.Highlight.has
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prototype.has
 ---
 
-{{APIRef("CSS Custom Highlight API")}}
+{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
 
 The **`has()`** method of the {{domxref("Highlight")}} interface returns a boolean indicating whether a {{domxref("Range")}} object exists in a `Highlight` object or not.
 

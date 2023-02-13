@@ -199,7 +199,7 @@ Another `transform3d()` example, which implements an animated combined translate
 
 #### CSS
 
-```css
+```css-nolint
 html {
   width: 100%;
 }
@@ -236,27 +236,26 @@ body {
         Scales down by 10%
     */
     transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      -50,-100,0,1.1
+      1, 0, 0, 0,
+      0, 1, 0, 0,
+      0, 0, 1, 0,
+      -50, -100, 0, 1.1
     );
-
   }
   50% {
     transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      0,0,0,0.9
+      1, 0, 0, 0,
+      0, 1, 0, 0,
+      0, 0, 1, 0,
+      0, 0, 0, 0.9
     );
   }
   to {
      transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      50,100,0,1.1
+      1, 0, 0, 0,
+      0, 1, 0, 0,
+      0, 0, 1, 0,
+      50, 100, 0, 1.1
     )
   }
 }

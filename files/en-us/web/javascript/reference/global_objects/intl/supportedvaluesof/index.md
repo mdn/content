@@ -75,7 +75,7 @@ The other values are all obtained in the same way:
 
 ```js
 Intl.supportedValuesOf("collation").forEach((collation) => {
-  // "big5han", "compat", "dict", "emoji", etc.
+  // "compat", "dict", "emoji", etc.
 });
 
 Intl.supportedValuesOf("currency").forEach((currency) => {
