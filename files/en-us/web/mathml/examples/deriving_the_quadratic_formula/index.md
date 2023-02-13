@@ -1,5 +1,5 @@
 ---
-title: 'MathML: Deriving the Quadratic Formula'
+title: "MathML: Deriving the Quadratic Formula"
 slug: Web/MathML/Examples/Deriving_the_Quadratic_Formula
 tags:
   - Beginner
