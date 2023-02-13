@@ -10,24 +10,20 @@ tags:
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 110 that will affect developers. Firefox 110 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and will ship on [February 14, 2023](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 110 that will affect developers. Firefox 110 was released on February 14, 2023.
 
 ## Changes for web developers
 
-### Developer Tools
-
 ### HTML
 
-#### Removals
+No notable changes.
 
 ### CSS
 
 - Container queries and container query length units are now supported by default.
   For more information on these queries and the related units of length, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) documentation ({{bug(1809720)}}).
 - The [color-gamut media query](/en-US/docs/Web/CSS/@media/color-gamut) is now supported ({{bug(1422237)}}).
-- The [`list`](/en-US/docs/Web/HTML/Element/datalist#color_type) attribute of the `<input>` element type `color` is now supported in Windows and Linux ({{bug(960984)}}).
-
-#### Removals
+- The [`list`](/en-US/docs/Web/HTML/Element/datalist#color_type) attribute of the `<input>` element type `color` is now supported on Windows and Linux ({{bug(960984)}}).
 
 ### JavaScript
 
@@ -35,36 +31,12 @@ This article provides information about the changes in Firefox 110 that will aff
   With this addition, cloning native error stacks now works for all methods that use the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm), in both the main thread and workers.
   (See {{bug(1774866)}} for more details.)
 
-#### Removals
-
-### SVG
-
-#### Removals
-
-### HTTP
-
-#### Removals
-
-### Security
-
-#### Removals
-
 ### APIs
 
 - The `midi` permission of the [Permission API](/en-US/docs/Web/API/Permissions_API) is now supported.
   This allows the permission status for using the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) to be queried using [`navigator.permissions.query()`](/en-US/docs/Web/API/Permissions/query) ({{bug(1772166)}}).
 
 - {{domxref("ReadableStream")}} now supports [asynchronous iteration over the chunks in a stream](/en-US/docs/Web/API/ReadableStream#async_iteration) using the `for await...of` syntax ({{bug(1734244)}}).
-
-#### DOM
-
-#### Media, WebRTC, and Web Audio
-
-#### Removals
-
-### WebAssembly
-
-#### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -89,10 +61,6 @@ This article provides information about the changes in Firefox 110 that will aff
 ## Changes for add-on developers
 
 - The `defaultZoomFactor` property of {{WebExtAPIRef("tabs.ZoomSettings")}} now returns the value of the default zoom factor setting ({{bug(1772166)}})
-
-### Removals
-
-### Other
 
 ## Older versions
 
