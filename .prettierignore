@@ -3,22 +3,19 @@
 
 build/
 
-# Ignore markdown files till full pass is made on each folder
-*.md
-# The following paths have had a full pass
-!files/en-us/glossary/**/*.md
-!files/en-us/mdn/**/*.md
-!files/en-us/web/api/[a-c]*/**/*.md
-!files/en-us/web/css/**/*.md
-!files/en-us/web/events/**/*.md
-!files/en-us/web/guide/**/*.md
-!files/en-us/web/http/**/*.md
-!files/en-us/web/manifest/**/*.md
-!files/en-us/web/media/**/*.md
-!files/en-us/web/performance/**/*.md
-!files/en-us/web/privacy/**/*.md
-!files/en-us/web/security/**/*.md
-!files/en-us/web/webdriver/**/*.md
-!files/en-us/web/xml/**/*.md
-!files/en-us/web/xpath/**/*.md
-!files/en-us/web/xslt/**/*.md
+# A full pass on all Markdown files is being performed, the following folders
+# still need a full pass:
+/files/en-us/learn/**/*.md
+/files/en-us/mozilla/**/*.md
+/files/en-us/web/accessibility/**/*.md
+/files/en-us/web/html/**/*.md
+/files/en-us/web/javascript/**/*.md
+/files/en-us/web/mathml/**/*.md
+/files/en-us/web/progressive_web_apps/**/*.md
+/files/en-us/web/svg/**/*.md
+/files/en-us/web/text_fragments/**/*.md
+/files/en-us/web/web_components/**/*.md
+
+# The /web/api folder is so large, it has been divided into multiple parts
+/files/en-us/web/api/**/*.md
+!/files/en-us/web/api/[a-c]*/**/*.md
