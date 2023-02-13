@@ -61,7 +61,7 @@ curl -X OPTIONS https://example.org -i
 The response then contains an {{HTTPHeader("Allow")}} header that holds the allowed methods:
 
 ```http
-HTTP/1.1 204 No Content
+HTTP/1.1 200 No Content
 Allow: OPTIONS, GET, HEAD, POST
 Cache-Control: max-age=604800
 Date: Thu, 13 Oct 2016 11:45:00 GMT
@@ -99,7 +99,7 @@ The server now can respond if it will accept a request under these circumstances
   - : The above permissions may be cached for 86,400 seconds (1 day).
 
 ```http
-HTTP/1.1 204 No Content
+HTTP/1.1 200 No Content
 Date: Mon, 01 Dec 2008 01:15:39 GMT
 Server: Apache/2.0.61 (Unix)
 Access-Control-Allow-Origin: https://foo.example
@@ -110,6 +110,10 @@ Vary: Accept-Encoding, Origin
 Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 ```
+
+## Status Code
+
+Both {{HTTPStatus("200")}} OK and {{HTTPStatus("204")}} No Content are [permitted status codes](https://fetch.spec.whatwg.org/#ref-for-ok-status), but some browsers incorrectly believe `204 No Content` applies to the resource and do not send the subsequent request to fetch it.
 
 ## Specifications
 
