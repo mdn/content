@@ -55,14 +55,14 @@ content is ready to display.
 ```
 
 ```js
-const container = document.getElementById('menu-container');
-const placeholder = container.querySelector('.menu-placeholder');
+const container = document.getElementById("menu-container");
+const placeholder = container.querySelector(".menu-placeholder");
 // Fetch all the children of menu that are not yet defined.
-const undefinedElements = container.querySelectorAll(':not(:defined)');
+const undefinedElements = container.querySelectorAll(":not(:defined)");
 
-async function removePlaceholder(){
-  const promises = [...undefinedElements].map(
-    (button) => customElements.whenDefined(button.localName)
+async function removePlaceholder() {
+  const promises = [...undefinedElements].map((button) =>
+    customElements.whenDefined(button.localName)
   );
 
   // Wait for all the children to be upgraded
