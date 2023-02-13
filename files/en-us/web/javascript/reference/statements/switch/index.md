@@ -50,7 +50,7 @@ switch (expression) {
 
 ## Description
 
-A `switch` statement first evaluates its expression. It then looks for the first `case` clause whose expression evaluates to the same value as the result of the input expression (using the [strict comparison](/en-US/docs/Web/JavaScript/Reference/Operators), `===`) and transfers control to that clause, executing all statements following that clause.
+A `switch` statement first evaluates its expression. It then looks for the first `case` clause whose expression evaluates to the same value as the result of the input expression (using the [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) comparison) and transfers control to that clause, executing all statements following that clause.
 
 The clause values are only evaluated when necessary — if a match is already found, subsequent `case` clause values will not be evaluated, even when they will be visited by [fall-through](#breaking_and_fall-through).
 

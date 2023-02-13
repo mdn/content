@@ -58,32 +58,32 @@ The `Reflect.get` method allows you to get a property on an object. It is like t
 
 ```js
 // Object
-let obj = { x: 1, y: 2 }
-Reflect.get(obj, 'x')  // 1
+let obj = { x: 1, y: 2 };
+Reflect.get(obj, "x"); // 1
 
 // Array
-Reflect.get(['zero', 'one'], 1)  // "one"
+Reflect.get(["zero", "one"], 1); // "one"
 
 // Proxy with a get handler
-let x = {p: 1};
+let x = { p: 1 };
 
 let obj = new Proxy(x, {
   get(t, k, r) {
-    return k + 'bar'
-  }
-})
-Reflect.get(obj, 'foo')  // "foobar"
+    return k + "bar";
+  },
+});
+Reflect.get(obj, "foo"); // "foobar"
 
 //Proxy with get handler and receiver
-let x = {p: 1, foo: 2};
-let y = {foo: 3};
+let x = { p: 1, foo: 2 };
+let y = { foo: 3 };
 
 let obj = new Proxy(x, {
   get(t, prop, receiver) {
-    return receiver[prop] + 'bar'
-  }
-})
-Reflect.get(obj, 'foo', y) // "3bar"
+    return receiver[prop] + "bar";
+  },
+});
+Reflect.get(obj, "foo", y); // "3bar"
 ```
 
 ## Specifications

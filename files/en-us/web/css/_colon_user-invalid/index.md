@@ -22,8 +22,10 @@ The `:user-invalid` pseudo-class must match an {{CSSxRef(":invalid")}}, {{CSSxRe
 
 ## Syntax
 
-```
-:user-invalid
+```css
+:user-invalid {
+  /* ... */
+}
 ```
 
 ## Examples

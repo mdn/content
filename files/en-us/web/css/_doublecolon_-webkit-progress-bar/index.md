@@ -1,5 +1,5 @@
 ---
-title: '::-webkit-progress-bar'
+title: "::-webkit-progress-bar"
 slug: Web/CSS/::-webkit-progress-bar
 page-type: css-pseudo-element
 tags:
@@ -20,7 +20,9 @@ The **`::-webkit-progress-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en
 ## Syntax
 
 ```css
-::-webkit-progress-bar
+::-webkit-progress-bar {
+  /* ... */
+}
 ```
 
 ## Examples
