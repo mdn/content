@@ -1,5 +1,5 @@
 ---
-title: '::-webkit-slider-thumb'
+title: "::-webkit-slider-thumb"
 slug: Web/CSS/::-webkit-slider-thumb
 page-type: css-pseudo-element
 tags:
@@ -22,7 +22,9 @@ The **`::-webkit-slider-thumb`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo
 ## Syntax
 
 ```css
-::-webkit-slider-thumb
+::-webkit-slider-thumb {
+  /* ... */
+}
 ```
 
 ## Specifications

@@ -8,11 +8,12 @@ tags:
   - CSS Custom Highlight API
   - Reference
   - keys
+  - Experimental
 browser-compat: api.Highlight.keys
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prototype.keys
 ---
 
-{{APIRef("CSS Custom Highlight API")}}
+{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
 
 The **`keys()`** method of the {{domxref("Highlight")}} interface is an alias for the {{domxref("Highlight.values()", "values()")}} method.
 

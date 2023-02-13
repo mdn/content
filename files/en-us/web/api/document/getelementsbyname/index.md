@@ -62,18 +62,6 @@ The returned {{domxref("NodeList")}} Collection contains _all_ elements with the
 given `name`, such as {{htmlelement("meta")}}, {{htmlelement("object")}}, and
 even elements which do not support the `name` attribute at all.
 
-> **Warning:** The **getElementsByName** method works differently in IE10 and below.
-> There, `getElementsByName()` also returns elements that have an [`id` attribute](/en-US/docs/Web/HTML/Global_attributes/id) with
-> the specified value. Be careful not to use the same string as both a `name`
-> and an `id`.
-
-> **Warning:** The **getElementsByName** method works differently in IE. There,
-> `getElementsByName()` does not return all elements which may not have a
-> `name` attribute (such as `<span>`).
-
-> **Warning:** Both IE and Edge return an {{domxref("HTMLCollection")}}, not a
-> {{domxref("NodeList")}}
-
 ## Specifications
 
 {{Specifications}}
