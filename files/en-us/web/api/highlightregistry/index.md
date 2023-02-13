@@ -7,10 +7,11 @@ tags:
   - Interface
   - CSS Custom Highlight API
   - Reference
+  - Experimental
 browser-compat: api.HighlightRegistry
 ---
 
-{{APIRef("CSS Custom Highlight API")}}
+{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
 
 The **`HighlightRegistry`** interface, accessed via {{domxref("CSS.highlights")}}, is a {{jsxref("Map")}}-like object used to register {{domxref("Highlight")}} objects to be styled using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}.
 
@@ -20,30 +21,30 @@ The **`HighlightRegistry`** interface, accessed via {{domxref("CSS.highlights")}
 
 _The `HighlightRegistry` interface doesn't inherit any properties._
 
-- {{domxref("HighlightRegistry.size")}} {{ReadOnlyInline}}
+- {{domxref("HighlightRegistry.size")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the number of `Highlight` objects currently registered.
 
 ## Instance methods
 
 _The `HighlightRegistry` interface doesn't inherit any methods_.
 
-- {{domxref("HighlightRegistry.clear()")}}
+- {{domxref("HighlightRegistry.clear()")}} {{Experimental_Inline}}
   - : Remove all `Highlight` objects from the registry.
-- {{domxref("HighlightRegistry.delete()")}}
+- {{domxref("HighlightRegistry.delete()")}} {{Experimental_Inline}}
   - : Remove the named `Highlight` object from the registry.
-- {{domxref("HighlightRegistry.entries()")}}
+- {{domxref("HighlightRegistry.entries()")}} {{Experimental_Inline}}
   - : Returns a new iterator object that contains each `Highlight` object in the registry, in insertion order.
-- {{domxref("HighlightRegistry.forEach()")}}
+- {{domxref("HighlightRegistry.forEach()")}} {{Experimental_Inline}}
   - : Calls the given callback once for each `Highlight` object in the registry, in insertion order.
-- {{domxref("HighlightRegistry.get()")}}
+- {{domxref("HighlightRegistry.get()")}} {{Experimental_Inline}}
   - : Gets the named `Highlight` object from the registry.
-- {{domxref("HighlightRegistry.has()")}}
+- {{domxref("HighlightRegistry.has()")}} {{Experimental_Inline}}
   - : Returns a boolean asserting whether a `Highlight` object is present the registry or not.
-- {{domxref("HighlightRegistry.keys()")}}
+- {{domxref("HighlightRegistry.keys()")}} {{Experimental_Inline}}
   - : An alias for {{domxref("HighlightRegistry.values()")}}.
-- {{domxref("HighlightRegistry.set()")}}
+- {{domxref("HighlightRegistry.set()")}} {{Experimental_Inline}}
   - : Adds the given `Highlight` object to the registry with the given name, or updates the named `Highlight` object, if it already exists in the registry.
-- {{domxref("HighlightRegistry.values()")}}
+- {{domxref("HighlightRegistry.values()")}} {{Experimental_Inline}}
   - : Returns a new iterator object that yields the `Highlight` objects in the registry, in insertion order.
 
 ## Examples
