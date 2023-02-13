@@ -7,7 +7,6 @@ browser-compat: api.MediaList.deleteMedium
 
 {{APIRef("CSSOM")}}
 
-TOWRITE: Complete the summary paragraph
 The `deleteMedium()` method of the {{DOMxRef("MediaList")}} interface removed the media type given in parameter from the list.
 
 ## Syntax
