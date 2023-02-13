@@ -20,9 +20,9 @@ It is a proprietary event specific to WebKit.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('NameOfTheEvent', (event) => {});
+addEventListener('gesturestart', (event) => {});
 
-onNameOfTheEvent = (event) => { };
+ongesturestart = (event) => {};
 ```
 
 ## Event type

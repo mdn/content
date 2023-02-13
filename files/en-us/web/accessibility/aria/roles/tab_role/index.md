@@ -177,16 +177,16 @@ window.addEventListener("DOMContentLoaded", () => {
 
   tabList.addEventListener("keydown", (e) => {
     // Move right
-    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+    if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
       tabs[tabFocus].setAttribute("tabindex", -1);
-      if (e.key === 'ArrowRight') {
+      if (e.key === "ArrowRight") {
         tabFocus++;
         // If we're at the end, go to the start
         if (tabFocus >= tabs.length) {
           tabFocus = 0;
         }
         // Move left
-      } else if (e.key === 'ArrowLeft') {
+      } else if (e.key === "ArrowLeft") {
         tabFocus--;
         // If we're at the start, move to the end
         if (tabFocus < 0) {

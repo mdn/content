@@ -19,7 +19,9 @@ The **`::-moz-list-bullet`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 ## Syntax
 
 ```css
-li::-moz-list-bullet
+li::-moz-list-bullet {
+  /* ... */
+}
 ```
 
 ## Examples

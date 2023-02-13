@@ -39,19 +39,22 @@ When the Play button is clicked, we assemble the audio graph and start it playin
 - Otherwise the value will be a sink ID string, so we log that.
 
 ```js
-playBtn.addEventListener('click', () => {
+playBtn.addEventListener("click", () => {
   const source = audioCtx.createBufferSource();
   source.buffer = myArrayBuffer;
   source.connect(gain);
   gain.connect(audioCtx.destination);
   source.start();
 
-  if (audioCtx.sinkId === '') {
-    console.log('Audio playing on default device');
-  } else if (typeof audioCtx.sinkId === 'object' && audioCtx.sinkId.type === 'none') {
-    console.log('Audio not playing on any device');
+  if (audioCtx.sinkId === "") {
+    console.log("Audio playing on default device");
+  } else if (
+    typeof audioCtx.sinkId === "object" &&
+    audioCtx.sinkId.type === "none"
+  ) {
+    console.log("Audio not playing on any device");
   } else {
-    console.log(`Audio playing on device ${ audioCtx.sinkId }`);
+    console.log(`Audio playing on device ${audioCtx.sinkId}`);
   }
 });
 ```

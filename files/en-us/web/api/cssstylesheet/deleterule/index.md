@@ -47,7 +47,7 @@ None ({{jsxref("undefined")}}).
 This example removes the first rule from the stylesheet `myStyles`.
 
 ```js
- myStyles.deleteRule(0);
+myStyles.deleteRule(0);
 ```
 
 ## Specifications

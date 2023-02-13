@@ -1,5 +1,5 @@
 ---
-title: 'null'
+title: "null"
 slug: Web/JavaScript/Reference/Operators/null
 page-type: javascript-language-feature
 tags:
@@ -52,15 +52,15 @@ When checking for `null` or `undefined`, beware of the [differences between equa
 type-conversion.
 
 ```js
-typeof null          // "object" (not "null" for legacy reasons)
-typeof undefined     // "undefined"
-null === undefined   // false
-null  == undefined   // true
-null === null        // true
-null  == null        // true
-!null                // true
-isNaN(1 + null)      // false
-isNaN(1 + undefined) // true
+typeof null; // "object" (not "null" for legacy reasons)
+typeof undefined; // "undefined"
+null === undefined; // false
+null == undefined; // true
+null === null; // true
+null == null; // true
+!null; // true
+Number.isNaN(1 + null); // false
+Number.isNaN(1 + undefined); // true
 ```
 
 ## Specifications

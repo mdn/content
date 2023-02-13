@@ -17,7 +17,7 @@ browser-compat: api.TreeWalker.previousSibling
 
 The **`TreeWalker.previousSibling()`** method moves the current
 {{domxref("Node")}} to its previous sibling, if any, and returns the found sibling. If
-there is no such node, return `null` and the current node is not changed.
+there is no such node, it returns `null` and the current node is not changed.
 
 ## Syntax
 

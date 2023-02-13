@@ -437,7 +437,7 @@ console.log(
   new Intl.NumberFormat("en", {
     minimumIntegerDigits: 3,
     minimumFractionDigits: 4,
-  }).format(4.33)
+  }).format(4.33),
 );
 // "004.3300"
 ```
@@ -451,7 +451,7 @@ Below the value is rounded from five fractional digits (`4.33145`) to two (`4.33
 console.log(
   new Intl.NumberFormat("en", {
     maximumFractionDigits: 2,
-  }).format(4.33145)
+  }).format(4.33145),
 );
 // "4.33"
 ```
@@ -463,7 +463,7 @@ The minimum factional digits have no effect if the value already has more than 2
 console.log(
   new Intl.NumberFormat("en", {
     minimumFractionDigits: 2,
-  }).format(4.33145)
+  }).format(4.33145),
 );
 // "4.331"
 ```
@@ -480,7 +480,7 @@ You can use [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Ob
 console.log(
   new Intl.NumberFormat("en", {
     maximumFractionDigits: 2,
-  }).resolvedOptions()
+  }).resolvedOptions(),
 );
 // {
 //   …
@@ -493,11 +493,11 @@ console.log(
 console.log(
   new Intl.NumberFormat("en", {
     minimumFractionDigits: 2,
-  }).resolvedOptions()
+  }).resolvedOptions(),
 );
 // {
 //   …
-//   minimumIntegerDigits: 1, 
+//   minimumIntegerDigits: 1,
 //   minimumFractionDigits: 2,
 //   maximumFractionDigits: 3,
 //   …
@@ -517,7 +517,7 @@ Note in particular the last case: only the first digit is retained and the other
 console.log(
   new Intl.NumberFormat("en", {
     maximumSignificantDigits: 5,
-  }).format(54.33145)
+  }).format(54.33145),
 );
 // "54.331"
 
@@ -525,7 +525,7 @@ console.log(
 console.log(
   new Intl.NumberFormat("en", {
     maximumSignificantDigits: 2,
-  }).format(54.33145)
+  }).format(54.33145),
 );
 // "54"
 
@@ -533,7 +533,7 @@ console.log(
 console.log(
   new Intl.NumberFormat("en", {
     maximumSignificantDigits: 1,
-  }).format(54.33145)
+  }).format(54.33145),
 );
 // "50"
 ```
@@ -545,7 +545,7 @@ The `minimumSignificantDigits` ensures that at least the specified number of dig
 console.log(
   new Intl.NumberFormat("en", {
     minimumSignificantDigits: 10,
-  }).format(54.33145)
+  }).format(54.33145),
 );
 // "54.33145000"
 ```
@@ -569,20 +569,20 @@ The value with both is the one set with `maximumSignificantDigits`.
 console.log(
   new Intl.NumberFormat("en", {
     maximumFractionDigits: 3,
-  }).format(4.33145)
+  }).format(4.33145),
 );
 // "4.331"
 console.log(
   new Intl.NumberFormat("en", {
     maximumSignificantDigits: 2,
-  }).format(4.33145)
+  }).format(4.33145),
 );
 // "4.3"
 console.log(
   new Intl.NumberFormat("en", {
     maximumFractionDigits: 3,
     maximumSignificantDigits: 2,
-  }).format(4.33145)
+  }).format(4.33145),
 );
 // "4.3"
 ```
@@ -594,7 +594,7 @@ console.log(
   new Intl.NumberFormat("en", {
     maximumFractionDigits: 3,
     maximumSignificantDigits: 2,
-  }).resolvedOptions()
+  }).resolvedOptions(),
 );
 // {
 //   …
@@ -607,7 +607,7 @@ console.log(
   new Intl.NumberFormat("en", {
     maximumFractionDigits: 3,
     minimumSignificantDigits: 2,
-  }).resolvedOptions()
+  }).resolvedOptions(),
 );
 // {
 //   …
@@ -703,7 +703,7 @@ This is shown below: 2.23 rounded to two significant digits is truncated to 2.2 
 console.log(
   new Intl.NumberFormat("en", {
     maximumSignificantDigits: 2,
-  }).format(2.23)
+  }).format(2.23),
 );
 // "2.2"
 
@@ -711,12 +711,12 @@ console.log(
 console.log(
   new Intl.NumberFormat("en", {
     maximumSignificantDigits: 2,
-  }).format(2.25)
+  }).format(2.25),
 );
 console.log(
   new Intl.NumberFormat("en", {
     maximumSignificantDigits: 2,
-  }).format(2.28)
+  }).format(2.28),
 );
 // "2.3"
 // "2.3"
@@ -729,7 +729,7 @@ A negative number on or below the half-increment point is also rounded away from
 console.log(
   new Intl.NumberFormat("en", {
     maximumSignificantDigits: 2,
-  }).format(-2.23)
+  }).format(-2.23),
 );
 // "-2.2"
 
@@ -737,12 +737,12 @@ console.log(
 console.log(
   new Intl.NumberFormat("en", {
     maximumSignificantDigits: 2,
-  }).format(-2.25)
+  }).format(-2.25),
 );
 console.log(
   new Intl.NumberFormat("en", {
     maximumSignificantDigits: 2,
-  }).format(-2.28)
+  }).format(-2.28),
 );
 // "-2.3"
 // "-2.3"

@@ -1,9 +1,9 @@
 ---
-title: '::-webkit-meter-optimum-value'
+title: "::-webkit-meter-optimum-value"
 slug: Web/CSS/::-webkit-meter-optimum-value
 page-type: css-pseudo-element
 tags:
-  - '::-webkit-meter-optimum-value'
+  - "::-webkit-meter-optimum-value"
   - CSS
   - Non-standard
   - Pseudo-element
@@ -21,7 +21,9 @@ Green is the default color.
 ## Syntax
 
 ```css
-::-webkit-meter-optimum-value
+::-webkit-meter-optimum-value {
+  /* ... */
+}
 ```
 
 ## Specifications
