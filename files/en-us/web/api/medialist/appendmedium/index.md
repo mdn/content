@@ -26,7 +26,7 @@ None ([undefined](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 
 ## Examples
 
-The following adss the media type `print` into the
+The following adds the media type `print` into the
 `MediaList` associated with the first stylesheet applied to the current document.
 
 ```js
