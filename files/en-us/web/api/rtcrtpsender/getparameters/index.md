@@ -34,7 +34,7 @@ An object indicating the current configuration of the sender.
     Once this parameter is initially set, it cannot be changed.
 <!-- spec defines following in RTCRtpParameters -->
 - `codecs`
-  - : An array of {{domxref("RTCRtpCodecParameters")}} objects describing the set of codecs from which the sender or receiver will choose.
+  - : An array of {{domxref("RTCRtpCodecParameters")}} objects describing the set of codecs from which the sender will choose.
     This parameter cannot be changed once initially set.
 - `headerExtensions`
   - : An array of zero or more RTP header extensions, each identifying an extension supported by the sender or receiver.
