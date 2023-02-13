@@ -10,7 +10,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc5842.html#section-7.1
 
 {{HTTPSidebar}}
 
-> **Note:** The ability to _bind_ a resource to several paths is an extension to the {{Glossary("WebDAV")}} protocol (it may be recieved by web applications accessing a WebDAV server).
+> **Note:** The ability to _bind_ a resource to several paths is an extension to the {{Glossary("WebDAV")}} protocol (it may be received by web applications accessing a WebDAV server).
 > Browsers accessing web pages will never encounter this status code.
 
 The HTTP **`208 Already Reported`** response code is used in a {{HTTPStatus("207")}} (`207 Multi-Status`) response to save space and avoid conflicts.

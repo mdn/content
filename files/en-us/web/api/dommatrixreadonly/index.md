@@ -113,5 +113,4 @@ _This interface inherits methods from {{domxref("DOMMatrixReadOnly")}}._
 ## See also
 
 - The mutable matrix type, {{domxref("DOMMatrix")}}, which is based on this one.
-- {{domxref("SVGMatrix")}} and {{domxref("CSSMatrix")}}, the {{Glossary("SVG")}} and {{Glossary("CSS")}} specific types that should be getting replaced by this interface.
 - The CSS {{cssxref("transform-function", "matrix()", "#matrix()")}} and {{cssxref("transform-function", "matrix3d()", "#matrix3d()")}} functional notation that can be generated from this interface to be used in a CSS {{cssxref("transform")}}.

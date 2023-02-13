@@ -8,11 +8,12 @@ tags:
   - CSS Custom Highlight API
   - Reference
   - clear
+  - Experimental
 browser-compat: api.Highlight.clear
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prototype.clear
 ---
 
-{{APIRef("CSS Custom Highlight API")}}
+{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
 
 The **`clear()`** method of the {{domxref("Highlight")}} interface removes all the {{domxref("Range")}} objects from a `Highlight` object.
 

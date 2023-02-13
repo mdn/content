@@ -7,10 +7,11 @@ tags:
   - Constructor
   - CSS Custom Highlight API
   - Reference
+  - Experimental
 browser-compat: api.Highlight.Highlight
 ---
 
-{{APIRef("CSS Custom Highlight API")}}
+{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
 
 The **`Highlight()`** constructor returns a newly created
 {{domxref("Highlight")}} object which can hold a collection of {{domxref("Range")}} objects to be styled using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}.
