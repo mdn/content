@@ -699,7 +699,7 @@ function fibonacci(num){
 }
 ```
 
-The worker sets the property `onmessage` to a function which will receive messages sent when the worker object's `postMessage()` is called (note that this differs from defining a _function_ with that name. `var onmessage`, `let onmessage` and `function onmessage` will define global properties with those names, but they will not register the function to receive messages sent by the web page that created the worker). This performs the math and eventually returns the result back to the main thread calling `postmessage` method.
+The worker sets the property `onmessage` to a function which will receive messages sent when the worker object's `postMessage()` is called (note that this differs from defining a _function_ with that name. `var onmessage`, `let onmessage` and `function onmessage` will define global properties with those names, but they will not register the function to receive messages sent by the web page that created the worker). This performs the math and eventually returns the result back to the main thread.
 
 #### The HTML code
 
