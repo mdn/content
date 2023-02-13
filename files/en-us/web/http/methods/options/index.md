@@ -94,7 +94,7 @@ The server now can respond if it will accept a request under these circumstances
 - {{HTTPHeader("Access-Control-Allow-Methods")}}
   - : {{HTTPMethod("POST")}}, {{HTTPMethod("GET")}}, and `OPTIONS` are permitted methods for the URL. (This header is similar to the {{HTTPHeader("Allow")}} response header, but used only for [CORS](/en-US/docs/Web/HTTP/CORS).)
 - {{HTTPHeader("Access-Control-Allow-Headers")}}
-  - : Any script inspecting the response is permitted to read the values of the `X-PINGOTHER` and `Content-Type` headers.
+  - : `X-PINGOTHER` and `Content-Type` are permitted request headers for the URL.
 - {{HTTPHeader("Access-Control-Max-Age")}}
   - : The above permissions may be cached for 86,400 seconds (1 day).
 
