@@ -91,8 +91,6 @@ function change() {
 
 {{ EmbedLiveSample('A_simple_example', 800, 300) }}
 
-You can see this script as [a complete example](/en-US/docs/Web/API/Document_object_model/Using_the_document_object_model/using_the_w3c_dom_level_1_core-doctree.jpg).
-
 ## How can I learn more?
 
 Now that you are familiar with the basic concepts of the DOM, you may want to learn about the more about fundamental features of the Document API by reading [how to traverse an HTML table with JavaScript and DOM interfaces](/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces).
