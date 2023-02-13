@@ -1,6 +1,6 @@
 ---
-title: Firefox 111 for developers
-slug: Mozilla/Firefox/Releases/111
+title: Firefox 112 for developers
+slug: Mozilla/Firefox/Releases/112
 tags:
   - "112"
   - Firefox
