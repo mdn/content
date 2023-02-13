@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.SharedArrayBuffer
 
 {{JSRef}}
 
-The **`SharedArrayBuffer`** object is used to represent a generic, fixed-length raw binary data buffer, similar to the {{jsxref("ArrayBuffer")}} object, but in a way that they can be used to create views on shared memory. A `SharedArrayBuffer` is not a [Transferable Object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects), unlike an `ArrayBuffer` which is transferable.
+The **`SharedArrayBuffer`** object is used to represent a generic raw binary data buffer, similar to the {{jsxref("ArrayBuffer")}} object, but in a way that they can be used to create views on shared memory. A `SharedArrayBuffer` is not a [Transferable Object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects), unlike an `ArrayBuffer` which is transferable.
 
 ## Description
 
@@ -93,13 +93,19 @@ The WebAssembly Threads proposal also defines a new set of [atomic](https://gith
 
 - `SharedArrayBuffer.prototype[@@toStringTag]`
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"SharedArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
-- {{jsxref("SharedArrayBuffer.prototype.byteLength")}}
-  - : The size, in bytes, of the array. This is established when the array is constructed and cannot be changed. **Read only.**
+- {{jsxref("SharedArrayBuffer.prototype.byteLength")}} {{readonlyinline}}
+  - : The size, in bytes, of the array. This is established when the array is constructed and cannot be changed.
+- {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}} {{readonlyinline}} {{experimental_inline}}
+  - : The read-only maximum length the `SharedArrayBuffer` can be resized to, in bytes. This is established when the array is constructed and cannot be changed.
+- {{jsxref("SharedArrayBuffer.prototype.growable")}} {{readonlyinline}} {{experimental_inline}}
+  - : Returns `true` if the {{jsxref("SharedArrayBuffer")}} can be grown, or `false` if not.
 
 ## Instance methods
 
 - {{jsxref("SharedArrayBuffer.prototype.slice()")}}
   - : Returns a new `SharedArrayBuffer` whose contents are a copy of this `SharedArrayBuffer`'s bytes from `begin`, inclusive, up to `end`, exclusive. If either `begin` or `end` is negative, it refers to an index from the end of the array, as opposed to from the beginning.
+- {{jsxref("SharedArrayBuffer.prototype.grow()")}} {{experimental_inline}}
+  - : Grows the `SharedArrayBuffer` to the size specified in the `arg`, in bytes.
 
 ## Examples
 

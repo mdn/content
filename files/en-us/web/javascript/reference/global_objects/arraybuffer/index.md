@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.ArrayBuffer
 
 {{JSRef}}
 
-The **`ArrayBuffer`** object is used to represent a generic, fixed-length raw binary data buffer.
+The **`ArrayBuffer`** object is used to represent a generic raw binary data buffer.
 
 It is an array of bytes, often referred to in other languages as a "byte array". You cannot directly manipulate the contents of an `ArrayBuffer`; instead, you create one of the [typed array objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or a {{jsxref("DataView")}} object which represents the buffer in a specific format, and use that to read and write the contents of the buffer.
 
@@ -41,13 +41,19 @@ The [`ArrayBuffer()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayB
 
 - `ArrayBuffer.prototype[@@toStringTag]`
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"ArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
-- {{jsxref("ArrayBuffer.prototype.byteLength")}}
+- {{jsxref("ArrayBuffer.prototype.byteLength")}} {{readonlyinline}}
   - : The read-only size, in bytes, of the `ArrayBuffer`. This is established when the array is constructed and cannot be changed.
+- {{jsxref("ArrayBuffer.prototype.maxByteLength")}} {{readonlyinline}} {{experimental_inline}}
+  - : The read-only maximum length the `ArrayBuffer` can be resized to, in bytes. This is established when the array is constructed and cannot be changed.
+- {{jsxref("ArrayBuffer.prototype.resizable")}} {{readonlyinline}} {{experimental_inline}}
+  - : Returns `true` if the {{jsxref("ArrayBuffer")}} can be resized, or `false` if not.
 
 ## Instance methods
 
 - {{jsxref("ArrayBuffer.prototype.slice()")}}
   - : Returns a new `ArrayBuffer` whose contents are a copy of this `ArrayBuffer`'s bytes from `begin` (inclusive) up to `end` (exclusive). If either `begin` or `end` is negative, it refers to an index from the end of the array, as opposed to from the beginning.
+- {{jsxref("ArrayBuffer.prototype.resize()")}} {{experimental_inline}}
+  - : Resizes the `ArrayBuffer` to the size specified in the `arg`, in bytes.
 
 ## Examples
 
