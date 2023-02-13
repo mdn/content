@@ -71,118 +71,75 @@ The `filter` property is specified as `none` or one or more of the functions lis
 
 When the `filter` property values contains mutiple functions, the filters are applied in order.
 
-### Filter functions
-
-#### blur()
-
-The {{cssxref("filter-function/blur", "blur()")}} function applies a Gaussian blur to the input image.
+- {{cssxref("filter-function/blur", "blur()")}}
+  - : Applies a Gaussian blur to the input image.
 
 ```css
 filter: blur(5px)
 ```
 
-{{EmbedLiveSample('blur','100%','236px','','', 'no-codepen')}}
-
-#### brightness()
-
-The {{cssxref("filter-function/brightness", "brightness()")}} function applies a linear multiplier to the input image, making it appear more or less bright. A value of `0%` will create an image that is completely black. A value of `100%` leaves the input unchanged. Other values are linear multipliers on the effect. Values of an amount over `100%` are allowed, providing brighter results. The initial value for interpolation is `1`.
+- {{cssxref("filter-function/brightness", "brightness()")}}
+  - : Applies a linear multiplier to the input image, making it appear more or less bright. Values are linear multipliers on the effect with `0%` creating a completely black image, `100%` having no effect, and values over `100%` brightening the image.
 
 ```css
 filter: brightness(2)
 ```
 
-{{EmbedLiveSample('brightness','100%','231px','','', 'no-codepen')}}
-
-#### contrast()
-
-The {{cssxref("filter-function/contrast", "contrast()")}} function adjusts the contrast of the input image. A value of `0%` will create an image that is completely gray. A value of `100%` leaves the input unchanged. Values of an amount over `100%` are allowed, providing results with more contrast. The initial value for interpolation is `1`.
+- {{cssxref("filter-function/contrast", "contrast()")}}
+  - : Adjusts the contrast of the input image. A value of `0%` makes the image grey, `100%` has no effect, and values over `100%` creating contrast.
 
 ```css
 filter: contrast(200%)
 ```
 
-{{EmbedLiveSample('contrast','100%','203px','','', 'no-codepen')}}
-
-#### drop-shadow()
-
-The {{cssxref("filter-function/drop-shadow", "drop-shadow()")}} function applies a drop shadow effect to the input image. A drop shadow is effectively a blurred, offset version of the input image's alpha mask drawn in a particular color, composited below the image. The function accepts a parameter of type `<shadow>`, with the same values as `<text-shadow>`. The shadow syntax is similar to `<box-shadow>` (defined in [CSS Backgrounds and Borders Module Level 3](/en-us/docs/Web/CSS/CSS_Backgrounds_and_Borders)), with the exception that the `inset` keyword and `spread` parameter are not allowed.
-
-The parameters of the `<shadow>` parameter are as follows:
-
-- `offset-x` (required)
-  - : The horizontal offset for the shadow, specified as a {{cssxref("&lt;length&gt;")}} value. Negative values place the shadow to the left of the element.
-- `offset-y` (required)
-  - : The vertical offset for the shadow, specified as a {{cssxref("&lt;length&gt;")}} value. Negative values place the shadow above the element.
-- `<blur-radius>` (optional)
-  - : This is a third {{cssxref("&lt;length&gt;")}} value. If not specified, it will be `0`  and the shadow's edge will be sharp. The larger the radius, the bigger the blur. Negative values are invalid.
-- `<color>` (optional)
-  - : The {{cssxref("&lt;color&gt;")}} of the shadow. If not specified, the color used is the value of the {{cssxref("&lt;color&gt;")}} property.
+- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+  - : Applies the parameter `<shadow>` as a drop shadow, following the contours of the image. The shadow syntax is similar to `<box-shadow>` (defined in [CSS Backgrounds and Borders Module Level 3](/en-us/docs/Web/CSS/CSS_Backgrounds_and_Borders)), with the exception that the `inset` keyword and `spread` parameter are not allowed. As will all `filter` property values, any filters coming after the `drop-shadow()` are applied to the shadow.
 
 ```css
 filter: drop-shadow(16px 16px 10px black)
 ```
 
-{{EmbedLiveSample('drop-shadow','100%','400px','','', 'no-codepen')}}
-
-#### grayscale()
-
-The {{cssxref("filter-function/grayscale", "grayscale()")}} function converts the input image to grayscale. The parameter defines the proportion of the conversion. A value of `100%` is completely grayscale. The initial value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect.
+- {{cssxref("filter-function/grayscale", "grayscale()")}}
+  - : Converts the image to grayscale. A value of `100%` is completely grayscale. The initial value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect.
 
 ```css
 filter: grayscale(100%)
 ```
 
-{{EmbedLiveSample('grayscale','100%','209px','','', 'no-codepen')}}
-
-#### hue-rotate()
-
-The {{cssxref("filter-function/hue-rotate", "hue-rotate()")}} function applies a hue rotation on the input image. The value of `angle` defines the number of degrees around the color circle the input samples will be adjusted. A value of `0deg` leaves the input unchanged.
+- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
+  - : Applies a hue rotation. The `<angle>` value defines the number of degrees around the hue color circle the input samples will be adjusted. A value of `0deg` leaves the input unchanged.
 
 ```css
 filter: hue-rotate(90deg)
 ```
 
-{{EmbedLiveSample('hue-rotate','100%','221px','','', 'no-codepen')}}
-
-#### invert()
-
-The {{cssxref("filter-function/invert", "invert()")}} function inverts the samples in the input image. The parameter value defines the proportion of the conversion. A value of `100%` is completely inverted. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect.
+- {{cssxref("filter-function/invert", "invert()")}}
+  - : Inverts the samples in the input image. A value of `100%` is completely inverted. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect.
 
 ```css
 filter: invert(100%)
 ```
 
-{{EmbedLiveSample('invert','100%','407px','','', 'no-codepen')}}
-
-#### opacity()
-
-The {{cssxref("filter-function/opacity", "opacity()")}} function applies transparency. A value of `0%` is completely transparent. A value of `100%` leaves the input unchanged.
+- {{cssxref("filter-function/opacity", "opacity()")}}
+  - : Applies transparency with `0%` being completely transparent and `100%` leaving the image unchanged.
 
 ```css
 filter: opacity(50%)
 ```
 
-{{EmbedLiveSample('opacity','100%','210px','','', 'no-codepen')}}
-
-#### saturate()
-
-The {{cssxref("filter-function/saturate", "saturate()")}} function saturates the input image. A value of `0%` is completely un-saturated. A value of `100%` leaves the image unchanged. Values of amount over `100%` super saturated.
+- {{cssxref("filter-function/saturate", "saturate()")}}
+  - : Saturates the image with a value of `0%` being completely un-saturated, `100%` leaving the image unchanged and values of amount over `100%` increasing saturation.
 
 ```css
 filter: saturate(200%)
 ```
 
-{{EmbedLiveSample('saturate','100%','332px','','', 'no-codepen')}}
-
-#### sepia()
-
-The {{cssxref("filter-function/sepia", "sepia()")}} function converts the input image to sepia. A value of `100%` is completely sepia. A value of `0%` leaves the input unchanged.
+- {{cssxref("filter-function/sepia", "sepia()")}}
+  - : Converts the image to sepia with a value of `100%` being completely sepia and `0%` making no change.
 
 ```css
 filter: sepia(100%)
 ```
-
-{{EmbedLiveSample('sepia','100%','229px','','', 'no-codepen')}}
 
 ## Combining functions
 
