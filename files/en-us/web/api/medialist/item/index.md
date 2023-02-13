@@ -16,7 +16,7 @@ item(index)
 [index]
 ```
 
-> **Note:** The `[]` syntax can be used instead of the more verbose `item()` syntax.
+> **Note:** The natural bracket (`[]`) syntax can be used instead of the more verbose `item()` syntax.
 
 ### Parameters
 
@@ -27,7 +27,7 @@ item(index)
 
 A string, or `null` if there is no entry for the index.
 
-If there is no entry for the given index, and using the `[]` syntax, `undefined` is returned.
+If there is no entry for the given index, and using the bracket (`[]`) syntax, `undefined` is returned.
 
 ## Examples
 
