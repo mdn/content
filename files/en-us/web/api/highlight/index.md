@@ -7,10 +7,11 @@ tags:
   - Interface
   - CSS Custom Highlight API
   - Reference
+  - Experimental
 browser-compat: api.Highlight
 ---
 
-{{APIRef("CSS Custom Highlight API")}}
+{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
 
 The **`Highlight`** interface is used to represent a collection of {{domxref("Range")}} instances to be styled using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}.
 
@@ -22,39 +23,39 @@ A single `Highlight` object can hold one or more `Range` objects and behaves lik
 
 ## Constructor
 
-- {{domxref("Highlight.Highlight()", "Highlight()")}}
+- {{domxref("Highlight.Highlight()", "Highlight()")}} {{Experimental_Inline}}
   - : Returns a newly created `Highlight` object.
 
 ## Instance properties
 
 _The `Highlight` interface doesn't inherit any properties._
 
-- {{domxref("Highlight.priority")}}
+- {{domxref("Highlight.priority")}} {{Experimental_Inline}}
   - : A number that indicates the priority of this `Highlight` object. When multiple highlights overlap, the browser uses this priority to decide how to style the overlapping parts.
-- {{domxref("Highlight.size")}} {{ReadOnlyInline}}
+- {{domxref("Highlight.size")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the number of ranges in the `Highlight` object.
-- {{domxref("Highlight.type")}}
+- {{domxref("Highlight.type")}} {{Experimental_Inline}}
   - : An enumerated {{jsxref("String")}} used to specify the semantic meaning of the highlight. This allows assistive technologies to include this meaning when exposing the highlight to users.
 
 ## Instance methods
 
 _The `Highlight` interface doesn't inherit any methods_.
 
-- {{domxref("Highlight.add()")}}
+- {{domxref("Highlight.add()")}} {{Experimental_Inline}}
   - : Add a new range to this highlight.
-- {{domxref("Highlight.clear()")}}
+- {{domxref("Highlight.clear()")}} {{Experimental_Inline}}
   - : Remove all ranges from this highlight.
-- {{domxref("Highlight.delete()")}}
+- {{domxref("Highlight.delete()")}} {{Experimental_Inline}}
   - : Remove a range from this highlight.
-- {{domxref("Highlight.entries()")}}
+- {{domxref("Highlight.entries()")}} {{Experimental_Inline}}
   - : Returns a new iterator object that contains each range in the highlight object, in insertion order.
-- {{domxref("Highlight.forEach()")}}
+- {{domxref("Highlight.forEach()")}} {{Experimental_Inline}}
   - : Calls the given callback once for each range in the highlight object, in insertion order.
-- {{domxref("Highlight.has()")}}
+- {{domxref("Highlight.has()")}} {{Experimental_Inline}}
   - : Returns a boolean asserting whether a range is present the highlight object or not.
-- {{domxref("Highlight.keys()")}}
+- {{domxref("Highlight.keys()")}} {{Experimental_Inline}}
   - : An alias for {{domxref("Highlight.values()")}}.
-- {{domxref("Highlight.values()")}}
+- {{domxref("Highlight.values()")}} {{Experimental_Inline}}
   - : Returns a new iterator object that yields the ranges in the highlight object in insertion order.
 
 ## Examples
