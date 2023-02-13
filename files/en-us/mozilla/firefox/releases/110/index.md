@@ -53,6 +53,8 @@ This article provides information about the changes in Firefox 110 that will aff
 - The `midi` permission of the [Permission API](/en-US/docs/Web/API/Permissions_API) is now supported.
   This allows the permission status for using the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) to be queried using [`navigator.permissions.query()`](/en-US/docs/Web/API/Permissions/query) ({{bug(1772166)}}).
 
+- {{domxref("ReadableStream")}} now supports [asynchronous iteration over the chunks in a stream](/en-US/docs/Web/API/ReadableStream#async_iteration) using the `for await...of` syntax ({{bug(1734244)}}).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
