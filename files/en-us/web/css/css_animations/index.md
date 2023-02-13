@@ -8,7 +8,7 @@ tags:
   - Guide
   - Overview
   - Reference
-spec-urls: 
+spec-urls:
   - https://w3c.github.io/csswg-drafts/css-animations-2/
   - https://w3c.github.io/csswg-drafts/css-animations/
 ---

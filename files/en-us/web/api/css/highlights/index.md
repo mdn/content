@@ -8,6 +8,7 @@ tags:
   - CSS Custom Highlight API
   - Property
   - Reference
+  - Experimental
 browser-compat: api.CSS.highlights
 ---
 

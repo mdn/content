@@ -20,8 +20,10 @@ The **`:last-of-type`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/We
 
 ## Syntax
 
-```
-:last-of-type
+```css
+:last-of-type {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -88,12 +90,21 @@ This HTML example contains nested elements of different types. The CSS contains 
 ```html
 <p>This `p` is not selected.</p>
 <p>This `p` is not selected either.</p>
-<p>This `p` is last `p` element of its parent e.g. `body` selected by `p` type selector.</p>
+<p>
+  This `p` is last `p` element of its parent e.g. `body` selected by `p` type
+  selector.
+</p>
 <div class="container">
   <div class="item">This `div` is not selected.</div>
   <div class="item">This `div` is not selected either.</div>
-  <div class="item">This `div` is last `div` element of its parent `div` selected by `.container .item` class selector.</div>
-  <p class="item">This `p` is last `p` element of its parent `div` selected by `.container .item` class selector.</p>
+  <div class="item">
+    This `div` is last `div` element of its parent `div` selected by `.container
+    .item` class selector.
+  </div>
+  <p class="item">
+    This `p` is last `p` element of its parent `div` selected by `.container
+    .item` class selector.
+  </p>
 </div>
 ```
 
@@ -115,6 +126,7 @@ p:last-of-type {
 {{EmbedLiveSample('Multiple_selectors_elements', 500)}}
 
 The last `<div>` and the last `<p>` are both red and bold as the `.item:last-of-type` selects the last of every type if that last element also has the `item` class.
+
 ## Specifications
 
 {{Specifications}}

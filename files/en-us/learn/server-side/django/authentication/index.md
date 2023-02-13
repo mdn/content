@@ -566,7 +566,11 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
     paginate_by = 10
 
     def get_queryset(self):
-        return BookInstance.objects.filter(borrower=self.request.user).filter(status__exact='o').order_by('due_back')
+        return (
+            BookInstance.objects.filter(borrower=self.request.user)
+            .filter(status__exact='o')
+            .order_by('due_back')
+        )
 ```
 
 In order to restrict our query to just the `BookInstance` objects for the current user, we re-implement `get_queryset()` as shown above. Note that "o" is the stored code for "on loan" and we order by the `due_back` date so that the oldest items are displayed first.

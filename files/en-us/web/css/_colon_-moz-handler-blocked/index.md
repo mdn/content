@@ -1,5 +1,5 @@
 ---
-title: ':-moz-handler-blocked'
+title: ":-moz-handler-blocked"
 slug: Web/CSS/:-moz-handler-blocked
 page-type: css-pseudo-class
 tags:
@@ -20,7 +20,9 @@ The **`:-moz-handler-blocked`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US
 ## Syntax
 
 ```css
-:-moz-handler-blocked
+:-moz-handler-blocked {
+  /* ... */
+}
 ```
 
 ## Specifications

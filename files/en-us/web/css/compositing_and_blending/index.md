@@ -8,7 +8,7 @@ tags:
   - Guide
   - Overview
   - Reference
-spec-urls: 
+spec-urls:
   - https://drafts.fxtf.org/compositing/
   - https://www.w3.org/TR/compositing-1/
 ---
@@ -25,7 +25,7 @@ In this example, each box has a border, two striped background images, and a sol
 
 {{EmbedGHLiveSample("css-examples/modules/compositing.html", '100%', 460)}}
 
- Notice how the background, border, and the content are all impacted as a result of the blending. To see the code for this sample, [view the source on Github](https://github.com/mdn/css-examples/blob/main/modules/compositing.html).
+Notice how the background, border, and the content are all impacted as a result of the blending. To see the code for this sample, [view the source on Github](https://github.com/mdn/css-examples/blob/main/modules/compositing.html).
 
 ## Reference
 
