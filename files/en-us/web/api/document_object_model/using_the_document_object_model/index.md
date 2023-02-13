@@ -1,6 +1,6 @@
 ---
 title: Using the Document Object Model
-slug: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
+slug: /Web/API/Document_object_model/Using_the_Document_Object_Model
 page-type: guide
 tags:
   - DOM
@@ -67,7 +67,7 @@ function change() {
   const header = document.getElementsByTagName("h2").item(0);
   // The firstChild of the header is a Text node:
   header.firstChild.data = "A dynamic document";
-  
+
   // Now header is "A dynamic document".
 
   // Access the first paragraph
@@ -79,10 +79,10 @@ function change() {
 
   // Create a new Element to be the second paragraph
   const newElement = document.createElement("p");
-  
+
   // Put the text in the paragraph
   newElement.appendChild(newText);
-  
+
   // Put the paragraph on the end of the document by appending it to
   // the body (which is the parent of para)
   para.parentNode.appendChild(newElement);
