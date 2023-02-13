@@ -77,11 +77,11 @@ This article provides information about the changes in Firefox 110 that will aff
 
 - Added a `timestamp` field to the `browsingContext.domContentLoaded` and `browsingContext.load` events ({{bug(1790378)}}).
 
-- Added a `type` field to the response for `script.evaluate` and `script.callFunction` to indicate for `success` or `exception` ({{bug(1803599)}}).
+- Added a `type` field to the response for `script.evaluate` and `script.callFunction` to indicate either `success` or `exception` results ({{bug(1803599)}}).
 
 #### Marionette
 
-- The cache for known nodes (element and shadow root references) has been moved from the parent to the web content process to follow recent WebDriver classic changes ({{bug(1692468)}}).
+- The cache for known nodes (element and shadow root references) has been moved from the parent to the web content process following recent WebDriver classic changes ({{bug(1692468)}}).
 
 - Improved the JSON serialization and deserialization algorithms to be compliant with the WebDriver classic specification ({{bug(1794078)}}).
 
