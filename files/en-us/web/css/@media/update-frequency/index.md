@@ -38,7 +38,10 @@ The `update` feature is specified as a single keyword value chosen from the list
 ### HTML
 
 ```html
-<p>If this text animates for you, your browser supports `update` and you are using a fast-updating device.</p>
+<p>
+  If this text animates for you, your browser supports `update` and you are
+  using a fast-updating device.
+</p>
 ```
 
 ### CSS

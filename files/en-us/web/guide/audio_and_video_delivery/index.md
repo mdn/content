@@ -93,12 +93,12 @@ For further info see [\<video> element](/en-US/docs/Web/HTML/Element/video) and 
 ### JavaScript Audio
 
 ```js
-const myAudio = document.createElement('audio');
+const myAudio = document.createElement("audio");
 
-if (myAudio.canPlayType('audio/mpeg')) {
-  myAudio.setAttribute('src','audiofile.mp3');
-} else if (myAudio.canPlayType('audio/ogg')) {
-  myAudio.setAttribute('src','audiofile.ogg');
+if (myAudio.canPlayType("audio/mpeg")) {
+  myAudio.setAttribute("src", "audiofile.mp3");
+} else if (myAudio.canPlayType("audio/ogg")) {
+  myAudio.setAttribute("src", "audiofile.ogg");
 }
 
 myAudio.currentTime = 5;
@@ -120,12 +120,12 @@ It's also possible to feed an {{ htmlelement("audio") }} element a base64 encode
 ### JavaScript Video
 
 ```js
-const myVideo = document.createElement('video');
+const myVideo = document.createElement("video");
 
-if (myVideo.canPlayType('video/mp4')) {
-  myVideo.setAttribute('src','videofile.mp4');
-} else if (myVideo.canPlayType('video/webm')) {
-  myVideo.setAttribute('src','videofile.webm');
+if (myVideo.canPlayType("video/mp4")) {
+  myVideo.setAttribute("src", "videofile.mp4");
+} else if (myVideo.canPlayType("video/webm")) {
+  myVideo.setAttribute("src", "videofile.webm");
 }
 
 myVideo.width = 480;
@@ -144,7 +144,11 @@ let source;
 try {
   context = new AudioContext();
   request = new XMLHttpRequest();
-  request.open("GET","http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3",true);
+  request.open(
+    "GET",
+    "http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3",
+    true
+  );
   request.responseType = "arraybuffer";
 
   request.onload = () => {
@@ -158,9 +162,8 @@ try {
   };
 
   request.send();
-
 } catch (e) {
-  alert('web audio api not supported');
+  alert("web audio api not supported");
 }
 ```
 
@@ -180,17 +183,20 @@ Next, if supported connect the webcam source to the video element:
 
 ```js
 if (navigator.mediaDevices) {
-  navigator.mediaDevices.getUserMedia({ video: true, audio: false })
-  .then(function onSuccess(stream) {
-    const video = document.getElementById('webcam');
-    video.autoplay = true;
-    video.srcObject = stream;
-  })
-  .catch(function onError() {
-    alert('There has been a problem retrieving the streams - are you running on file:/// or did you disallow access?');
-  });
+  navigator.mediaDevices
+    .getUserMedia({ video: true, audio: false })
+    .then(function onSuccess(stream) {
+      const video = document.getElementById("webcam");
+      video.autoplay = true;
+      video.srcObject = stream;
+    })
+    .catch(function onError() {
+      alert(
+        "There has been a problem retrieving the streams - are you running on file:/// or did you disallow access?"
+      );
+    });
 } else {
-  alert('getUserMedia is not supported in this browser.');
+  alert("getUserMedia is not supported in this browser.");
 }
 ```
 
@@ -203,7 +209,8 @@ New standards are being rolled out to allow your browser to grab media from your
 The main mechanism is outlined below:
 
 ```js
-navigator.mediaDevices.getUserMedia({audio:true})
+navigator.mediaDevices
+  .getUserMedia({ audio: true })
   .then(function onSuccess(stream) {
     const recorder = new MediaRecorder(stream);
 
@@ -214,11 +221,11 @@ navigator.mediaDevices.getUserMedia({audio:true})
     recorder.start();
     recorder.onerror = (e) => {
       throw e.error || new Error(e.name); // e.name is FF non-spec
-    }
+    };
     recorder.onstop = (e) => {
-      const audio = document.createElement('audio');
+      const audio = document.createElement("audio");
       audio.src = window.URL.createObjectURL(new Blob(data));
-    }
+    };
     setTimeout(() => {
       rec.stop();
     }, 5000);
@@ -275,8 +282,8 @@ add a bit of JavaScript to detect events to play and pause the audio:
 
 ```js
 window.onload = () => {
-  const myAudio = document.getElementById('my-audio');
-  const myControl = document.getElementById('my-control');
+  const myAudio = document.getElementById("my-audio");
+  const myControl = document.getElementById("my-control");
 
   function switchState() {
     if (myAudio.paused) {
@@ -289,17 +296,22 @@ window.onload = () => {
   }
 
   function checkKey(e) {
-    if (e.keycode === 32) { // space bar
+    if (e.keycode === 32) {
+      // space bar
       switchState();
     }
   }
 
-  myControl.addEventListener('click', () => {
-    switchState();
-  }, false);
+  myControl.addEventListener(
+    "click",
+    () => {
+      switchState();
+    },
+    false
+  );
 
   window.addEventListener("keypress", checkKey, false);
-}
+};
 ```
 
 You can [try this example out here](https://jsbin.com/jujeladu/2/edit). For more information, see [Creating your own custom audio player](/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics#creating_your_own_custom_audio_player).
@@ -329,11 +341,11 @@ Media elements provide support for moving the current playback position to speci
 You can use the element's `seekable` property to determine the ranges of the media that are currently available for seeking to. This returns a {{ domxref("TimeRanges") }} object listing the ranges of times that you can seek to.
 
 ```js
-const mediaElement = document.querySelector('#mediaElementID');
-mediaElement.seekable.start(0);  // Returns the starting time (in seconds)
-mediaElement.seekable.end(0);    // Returns the ending time (in seconds)
+const mediaElement = document.querySelector("#mediaElementID");
+mediaElement.seekable.start(0); // Returns the starting time (in seconds)
+mediaElement.seekable.end(0); // Returns the ending time (in seconds)
 mediaElement.currentTime = 122; // Seek to 122 seconds
-mediaElement.played.end(0);      // Returns the number of seconds the browser has played
+mediaElement.played.end(0); // Returns the number of seconds the browser has played
 ```
 
 ### Specifying playback range
@@ -452,14 +464,18 @@ Another way to show the fallback content of a video, when none of the sources co
 ```
 
 ```js
-const v = document.querySelector('video');
-const sources = v.querySelectorAll('source');
+const v = document.querySelector("video");
+const sources = v.querySelectorAll("source");
 const lastsource = sources[sources.length - 1];
-lastsource.addEventListener('error', (ev) => {
-  const d = document.createElement('div');
-  d.innerHTML = v.innerHTML;
-  v.parentNode.replaceChild(d, v);
-}, false);
+lastsource.addEventListener(
+  "error",
+  (ev) => {
+    const d = document.createElement("div");
+    d.innerHTML = v.innerHTML;
+    v.parentNode.replaceChild(d, v);
+  },
+  false
+);
 ```
 
 ## Audio/Video JavaScript Libraries

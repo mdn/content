@@ -91,13 +91,12 @@ error if the variable has not been declared.
 ```js
 // x has not been declared before
 // evaluates to true without errors
-if (typeof x === 'undefined') {
+if (typeof x === "undefined") {
   // these statements execute
 }
 
 // Throws a ReferenceError
 if (x === undefined) {
-
 }
 ```
 

@@ -41,12 +41,15 @@ margin-trim: unset;
 ## Values
 
 - `none`
+
   - : Margins are not trimmed by the container.
 
 - `block`
+
   - : Margins provided to the block children where they adjoin the container's edges are trimmed to zero without affecting the margins provided to the container.
 
 - `block-start`
+
   - : Margin of the first block child with the container's edge is trimmed to zero.
 
 - `block-end`
@@ -54,9 +57,11 @@ margin-trim: unset;
   - : Margin of last block child with the container's edge is trimmed to zero.
 
 - `inline`
+
   - : Margins provided to the inline children where they adjoin the container's edges are trimmed to zero, without affecting the spacing at the beginning and end of the row.
 
 - `inline-start`
+
   - : Margin between the container's edge and the first inline child is trimmed to zero.
 
 - `inline-end`

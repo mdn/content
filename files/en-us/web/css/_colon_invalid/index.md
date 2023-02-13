@@ -22,8 +22,10 @@ This pseudo-class is useful for highlighting field errors for the user.
 
 ## Syntax
 
-```
-:invalid
+```css
+:invalid {
+  /* ... */
+}
 ```
 
 ## Examples

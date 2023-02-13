@@ -101,7 +101,7 @@ This example creates a new {{domxref("AudioContext")}} for interactive audio
 const audioCtx = new AudioContext({
   latencyHint: "interactive",
   sampleRate: 44100,
-  sinkId: "bb04fea9a8318c96de0bd..." // truncated for brevity
+  sinkId: "bb04fea9a8318c96de0bd...", // truncated for brevity
 });
 ```
 
