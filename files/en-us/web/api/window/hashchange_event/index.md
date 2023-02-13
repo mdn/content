@@ -33,7 +33,7 @@ A {{domxref("HashChangeEvent")}}. Inherits from {{domxref("Event")}}.
 ## Event properties
 
 - {{domxref("HashChangeEvent.newURL")}} {{ReadOnlyInline}}
-  - : The new URL to which the window is navigating. A {{jsxref("String")}}.
+  - : A string representing the new URL the window is navigating to.
 - {{domxref("HashChangeEvent.oldURL")}} {{ReadOnlyInline}}
   - : The previous URL from which the window was navigated. A {{jsxref("String")}}.
 
