@@ -29361,10 +29361,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/Document/msCapsLockWarningOff": {
-    "modified": "2019-03-18T21:29:49.753Z",
-    "contributors": ["mattwojo"]
-  },
   "Web/API/Document/open": {
     "modified": "2020-10-15T21:11:18.087Z",
     "contributors": [
@@ -30402,43 +30398,6 @@
       "Ruby"
     ]
   },
-  "Web/API/Document_object_model/Using_the_Document_Object_Model": {
-    "modified": "2020-12-09T01:05:18.504Z",
-    "contributors": [
-      "skkiennhtg2327",
-      "mfuji09",
-      "klu22",
-      "wbamberg",
-      "chrisdavidmills",
-      "AndreDea",
-      "teoli",
-      "jswisher",
-      "hectorsan68",
-      "jvns",
-      "ethertank",
-      "Vaibs",
-      "fferracioli",
-      "x746e",
-      "Sheppy",
-      "Nickolay",
-      "Mgjbot",
-      "BenoitL",
-      "NickolayBot",
-      "Andreas Wuest",
-      "Gor1"
-    ]
-  },
-  "Web/API/Document_object_model/Using_the_Document_Object_Model/Example": {
-    "modified": "2019-03-23T23:40:45.010Z",
-    "contributors": [
-      "mk7087",
-      "teoli",
-      "NickolayBot",
-      "Andreas Wuest",
-      "Nickolay",
-      "Gor1"
-    ]
-  },
   "Web/API/Document_Object_Model/Whitespace": {
     "modified": "2020-03-27T15:25:12.263Z",
     "contributors": [
@@ -30500,6 +30459,43 @@
       "Philip Chee",
       "mcsi",
       "asadotzler"
+    ]
+  },
+  "Web/API/Document_object_model/Using_the_Document_Object_Model": {
+    "modified": "2020-12-09T01:05:18.504Z",
+    "contributors": [
+      "skkiennhtg2327",
+      "mfuji09",
+      "klu22",
+      "wbamberg",
+      "chrisdavidmills",
+      "AndreDea",
+      "teoli",
+      "jswisher",
+      "hectorsan68",
+      "jvns",
+      "ethertank",
+      "Vaibs",
+      "fferracioli",
+      "x746e",
+      "Sheppy",
+      "Nickolay",
+      "Mgjbot",
+      "BenoitL",
+      "NickolayBot",
+      "Andreas Wuest",
+      "Gor1"
+    ]
+  },
+  "Web/API/Document_object_model/Using_the_Document_Object_Model/Example": {
+    "modified": "2019-03-23T23:40:45.010Z",
+    "contributors": [
+      "mk7087",
+      "teoli",
+      "NickolayBot",
+      "Andreas Wuest",
+      "Nickolay",
+      "Gor1"
     ]
   },
   "Web/API/DragEvent": {
@@ -37561,10 +37557,6 @@
     "modified": "2020-10-15T22:23:13.821Z",
     "contributors": ["ExE-Boss", "Sheppy"]
   },
-  "Web/API/HTMLAudioElement/msAudioCategory": {
-    "modified": "2019-03-23T22:00:50.335Z",
-    "contributors": ["ExE-Boss", "mattwojo", "erikadoyle"]
-  },
   "Web/API/HTMLBRElement": {
     "modified": "2020-10-15T21:10:49.890Z",
     "contributors": [
@@ -40254,34 +40246,6 @@
   "Web/API/HTMLMediaElement/mediaGroup": {
     "modified": "2020-10-15T21:38:11.356Z",
     "contributors": ["sideshowbarker", "fscholz", "markg"]
-  },
-  "Web/API/HTMLMediaElement/msGraphicsTrustStatus": {
-    "modified": "2019-03-18T21:32:30.054Z",
-    "contributors": ["mattwojo", "erikadoyle"]
-  },
-  "Web/API/HTMLMediaElement/msPlayToDisabled": {
-    "modified": "2019-03-18T21:32:36.239Z",
-    "contributors": ["mattwojo", "erikadoyle"]
-  },
-  "Web/API/HTMLMediaElement/msPlayToPreferredSourceURI": {
-    "modified": "2019-03-18T21:32:28.825Z",
-    "contributors": ["mattwojo", "erikadoyle"]
-  },
-  "Web/API/HTMLMediaElement/msPlayToPrimary": {
-    "modified": "2019-03-18T21:32:29.885Z",
-    "contributors": ["mattwojo", "erikadoyle"]
-  },
-  "Web/API/HTMLMediaElement/msPlayToSource": {
-    "modified": "2019-03-18T21:32:37.509Z",
-    "contributors": ["mattwojo", "erikadoyle"]
-  },
-  "Web/API/HTMLMediaElement/msRealTime": {
-    "modified": "2019-03-18T21:32:31.327Z",
-    "contributors": ["mattwojo", "erikadoyle"]
-  },
-  "Web/API/HTMLMediaElement/msSetMediaProtectionManager": {
-    "modified": "2019-03-18T21:32:19.196Z",
-    "contributors": ["mattwojo", "erikadoyle"]
   },
   "Web/API/HTMLMediaElement/muted": {
     "modified": "2020-10-15T21:38:15.940Z",

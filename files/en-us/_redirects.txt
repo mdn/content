@@ -8938,16 +8938,8 @@
 /en-US/docs/Web/API/MouseEvent/region	/en-US/docs/Web/API/MouseEvent
 /en-US/docs/Web/API/MouseEvent/which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/Web/API/MouseWheelEvent	/en-US/docs/Web/API/WheelEvent
-/en-US/docs/Web/API/MsAudioCategory	/en-US/docs/Web/API/HTMLAudioElement/msAudioCategory
 /en-US/docs/Web/API/MsExtendedCode	/en-US/docs/Web/API/MediaError/msExtendedCode
 /en-US/docs/Web/API/MsFirstPaint	/en-US/docs/Web/API/PerformanceTiming/MsFirstPaint
-/en-US/docs/Web/API/MsGraphicsTrustStatus	/en-US/docs/Web/API/HTMLMediaElement/msGraphicsTrustStatus
-/en-US/docs/Web/API/MsPlayToDisabled	/en-US/docs/Web/API/HTMLMediaElement/msPlayToDisabled
-/en-US/docs/Web/API/MsPlayToPreferredSourceUri	/en-US/docs/Web/API/HTMLMediaElement/msPlayToPreferredSourceURI
-/en-US/docs/Web/API/MsPlayToPrimary	/en-US/docs/Web/API/HTMLMediaElement/msPlayToPrimary
-/en-US/docs/Web/API/MsPlayToSource	/en-US/docs/Web/API/HTMLMediaElement/msPlayToSource
-/en-US/docs/Web/API/MsRealTime	/en-US/docs/Web/API/HTMLMediaElement/msRealTime
-/en-US/docs/Web/API/MsSetMediaProtectionManager	/en-US/docs/Web/API/HTMLMediaElement/msSetMediaProtectionManager
 /en-US/docs/Web/API/MutationObserverInit	/en-US/docs/Web/API/MutationObserver/observe
 /en-US/docs/Web/API/MutationObserverInit/attributeFilter	/en-US/docs/Web/API/MutationObserver/observe
 /en-US/docs/Web/API/MutationObserverInit/attributeOldValue	/en-US/docs/Web/API/MutationObserver/observe
@@ -10484,7 +10476,6 @@
 /en-US/docs/Web/API/mozRTCSessionDescription.type	/en-US/docs/Web/API/RTCSessionDescription/type
 /en-US/docs/Web/API/mozRTCSessionDescription/mozRTCSessionDescription	/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription
 /en-US/docs/Web/API/mozRTCSessionDescription/toJSON	/en-US/docs/Web/API/RTCSessionDescription/toJSON
-/en-US/docs/Web/API/msCapsLockWarningOff	/en-US/docs/Web/API/Document/msCapsLockWarningOff
 /en-US/docs/Web/API/msConvertURL	/en-US/docs/Web/API/Event
 /en-US/docs/Web/API/msMatchesSelector	/en-US/docs/Web/API/Element/matches
 /en-US/docs/Web/API/mute	/en-US/docs/Web/API/MediaStreamTrack/mute_event
@@ -10800,7 +10791,7 @@
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_switch_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Switch_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_textbox_role	/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role	/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role
-/en-US/docs/Web/Accessibility/ARIA/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA/forms/Basic_form_hints
+/en-US/docs/Web/Accessibility/ARIA/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/Roles/ARIA:_tabpanel_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role
 /en-US/docs/Web/Accessibility/ARIA/Roles/ARIA:_timer_role	/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role
 /en-US/docs/Web/Accessibility/ARIA/Roles/aria_timer_role	/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role
