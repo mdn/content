@@ -113,7 +113,7 @@ Connection: Keep-Alive
 
 ## Status Code
 
-Both {{HTTPStatus("200")}} OK and {{HTTPStatus("204") No Content are [permitted status codes](https://fetch.spec.whatwg.org/#ref-for-ok-status), but some browsers incorrectly believe `204 No Content` applies to the resource and do not send the subsequent request to fetch it.
+Both {{HTTPStatus("200")}} OK and {{HTTPStatus("204")}} No Content are [permitted status codes](https://fetch.spec.whatwg.org/#ref-for-ok-status), but some browsers incorrectly believe `204 No Content` applies to the resource and do not send the subsequent request to fetch it.
 
 ## Specifications
 
