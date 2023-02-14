@@ -73,7 +73,6 @@ When the `filter` property values contains mutiple functions, the filters are ap
 - {{cssxref("filter-function/blur", "blur()")}}
   - : Applies a Gaussian blur to the input image.
 
-
 ```css
 filter: blur(5px);
 ```
@@ -205,7 +204,7 @@ Filter functions are applied in order of appearance. The same filter function ca
 
 {{EmbedLiveSample('Repeating_filter_functions','100%','229px')}}
 
-The filters are applied in order meaning first drop shadow's hue is altered by the `hue-ration()` function but the second one isn't.
+The filters are applied in order. This is why the drop shadows are not the same color: the first drop shadow's hue is altered by the `hue-ration()` function but the second one is not.
 
 ## Specifications
 
