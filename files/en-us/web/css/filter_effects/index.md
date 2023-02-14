@@ -9,13 +9,12 @@ tags:
   - Overview
   - Reference
 spec-urls: 
-  - https://drafts.fxtf.org/filter-effects-2
-  - https://drafts.fxtf.org/filter-effects-1
+  - https://drafts.fxtf.org/filter-effects
 ---
 
 {{CSSRef}}
 
-The **CSS filter effects** module defines a way of processing an element's rendering before it is displayed in the document.
+The properties in the **CSS filter effects** module let you define a way of processing an element's rendering before the element is displayed in the document. Examples of such effects include blurring and changing the intensity of the color of an element.
 
 ### Filter effects in action
 
@@ -54,7 +53,7 @@ To see the code for this filter effects sample, [view the source on Github](http
 
 - {{glossary("interpolation")}} glossary term
 
-- SVG {{cssxref("color-interpolation-filters")}} property
+- {{cssxref("color-interpolation-filters")}} SVG property
 
 ## Specifications
 
