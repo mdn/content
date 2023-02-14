@@ -25,11 +25,11 @@ Think of a template as a content fragment that is being stored for subsequent us
 
 ## Attributes
 
-The only standard attributes that the `template` element supports are the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+The only standard attributes that the `<template>` element supports are the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-In Chromium-based browsers, the `template` element also supports a non-standard [`shadowroot` attribute](https://github.com/mfreed7/declarative-shadow-dom/blob/master/README.md#syntax), as part of an experimental ["Declarative Shadow DOM"](https://web.dev/declarative-shadow-dom/) proposal. In those browsers, a `template` element with the `shadowroot` attribute is detected by the HTML parser and immediately applied as the shadow root of its parent element.
+In Chromium-based browsers, the `<template>` element also supports a non-standard [`shadowrootmode` attribute](https://github.com/mfreed7/declarative-shadow-dom/blob/master/README.md#syntax), as part of an experimental ["Declarative Shadow DOM"](https://developer.chrome.com/articles/declarative-shadow-dom/) proposal. In supporting browsers, a `<template>` element with the `shadowrootmode` attribute is detected by the HTML parser and immediately applied as the shadow root of its parent element. `shadowrootmode` can take a value of `open` or `closed`; these are equivalent to the `open` and `closed` values of the {{domxref("Element.attachShadow()")}} `mode` option.
 
-Also, the {{domxref("HTMLTemplateElement")}} has a standard {{domxref("HTMLTemplateElement.content", "content")}} property (without a corresponding content/markup attribute), which is a read-only {{domxref("DocumentFragment")}} containing the DOM subtree which the template represents. Note that directly using the value of the {{domxref("HTMLTemplateElement.content", "content")}} property could lead to unexpected behavior; for details, see the [Avoiding DocumentFragment pitfall](#avoiding_documentfragment_pitfall) section below.
+Also, the corresponding {{domxref("HTMLTemplateElement")}} interface has a standard {{domxref("HTMLTemplateElement.content", "content")}} property (without an equivalent content/markup attribute), which is a read-only {{domxref("DocumentFragment")}} containing the DOM subtree which the template represents. Note that directly using the value of the {{domxref("HTMLTemplateElement.content", "content")}} property could lead to unexpected behavior; for details, see the [Avoiding DocumentFragment pitfall](#avoiding_documentfragment_pitfall) section below.
 
 ## Examples
 
