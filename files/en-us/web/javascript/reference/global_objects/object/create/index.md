@@ -134,7 +134,7 @@ By default properties are _not_ writable, enumerable or configurable.
 
 ```js
 o.p = 24; // throws in strict mode
-o.p; // 42
+o.p; // 24
 
 o.q = 12;
 for (const prop in o) {
