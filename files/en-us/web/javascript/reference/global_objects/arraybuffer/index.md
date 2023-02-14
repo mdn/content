@@ -42,18 +42,18 @@ The [`ArrayBuffer()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayB
 - `ArrayBuffer.prototype[@@toStringTag]`
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"ArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("ArrayBuffer.prototype.byteLength")}} {{readonlyinline}}
-  - : The read-only size, in bytes, of the `ArrayBuffer`. This is established when the array is constructed and cannot be changed.
+  - : The size, in bytes, of the `ArrayBuffer`. This is established when the array is constructed and cannot be changed.
 - {{jsxref("ArrayBuffer.prototype.maxByteLength")}} {{readonlyinline}} {{experimental_inline}}
-  - : The read-only maximum length the `ArrayBuffer` can be resized to, in bytes. This is established when the array is constructed and cannot be changed.
+  - : The maximum length, in bytes, that the `ArrayBuffer` can be resized to. This is established when the array is constructed and cannot be changed.
 - {{jsxref("ArrayBuffer.prototype.resizable")}} {{readonlyinline}} {{experimental_inline}}
-  - : Returns `true` if the {{jsxref("ArrayBuffer")}} can be resized, or `false` if not.
+  - : Returns `true` if the `ArrayBuffer` can be resized, or `false` if not.
 
 ## Instance methods
 
 - {{jsxref("ArrayBuffer.prototype.slice()")}}
   - : Returns a new `ArrayBuffer` whose contents are a copy of this `ArrayBuffer`'s bytes from `begin` (inclusive) up to `end` (exclusive). If either `begin` or `end` is negative, it refers to an index from the end of the array, as opposed to from the beginning.
 - {{jsxref("ArrayBuffer.prototype.resize()")}} {{experimental_inline}}
-  - : Resizes the `ArrayBuffer` to the size specified in the `arg`, in bytes.
+  - : Resizes the `ArrayBuffer` to the specified size, in bytes.
 
 ## Examples
 

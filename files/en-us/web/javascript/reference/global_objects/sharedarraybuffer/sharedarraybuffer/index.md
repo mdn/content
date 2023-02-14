@@ -45,8 +45,7 @@ new SharedArrayBuffer(length, options)
 
 ### Return value
 
-A new `SharedArrayBuffer` object of the specified size, with its {{jsxref("Global_Objects/SharedArrayBuffer.maxByteLength",
-  "maxByteLength")}} property set to the specified `maxByteLength` if one was specified. Its contents are
+A new `SharedArrayBuffer` object of the specified size, with its {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} property set to the specified `maxByteLength` if one was specified. Its contents are
 initialized to 0.
 
 ## Examples
@@ -69,15 +68,15 @@ const sab = new SharedArrayBuffer(1024);
 
 ### Creating a resizable ArrayBuffer
 
-In this example, we create a 8-byte buffer that is resizable to a max length of 16 bytes, then {{jsxref("Global_Objects/ArrayBuffer.grow", "grow()")}} it to 12bytes:
+In this example, we create an 8-byte buffer that is resizable to a max length of 16 bytes, then {{jsxref("ArrayBuffer/grow", "grow()")}} it to 12 bytes:
 
 ```js
-const buffer = new SharedArrayBuffer(8, { maxByteLength: 16 } );
+const buffer = new SharedArrayBuffer(8, { maxByteLength: 16 });
 
 buffer.grow(12);
 ```
 
-> **Note:** It is recommended that `maxByteLength` is set to the smallest value possible for your use case. and never exceeds `1073741824` (1GB), to reduce the risk of out-of-memory errors.
+> **Note:** It is recommended that `maxByteLength` is set to the smallest value possible for your use case. It should never exceed `1073741824` (1GB), to reduce the risk of out-of-memory errors.
 
 ## Specifications
 

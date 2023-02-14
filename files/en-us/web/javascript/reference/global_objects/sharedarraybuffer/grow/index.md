@@ -4,18 +4,12 @@ slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/grow
 page-type: javascript-instance-method
 tags:
   - Experimental
-  - JavaScript
-  - Method
-  - Prototype
-  - Shared Memory
-  - SharedArrayBuffer
-  - TypedArrays
 browser-compat: javascript.builtins.SharedArrayBuffer.grow
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
-The **`grow()`** method grows the `SharedArrayBuffer` to the specified size, in bytes.
+The **`grow()`** method of {{jsxref("SharedArrayBuffer")}} instances grows the `SharedArrayBuffer` to the specified size, in bytes.
 
 ## Syntax
 
@@ -30,29 +24,31 @@ grow(newLength)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+{{jsxref("undefined")}}.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown in one of the following cases:
+    - The `SharedArrayBuffer` is not growable.
+    - `newLength` is larger than the {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} of the `SharedArrayBuffer`.
+    - `newLength` is smaller than the {{jsxref("SharedArrayBuffer/byteLength", "byteLength")}} of the `SharedArrayBuffer`.
 
 ## Description
 
-The `grow()` method grows a `SharedArrayBuffer` to the size specified in the `newLength` parameter, provided it was constructed with a `maxByteLength` option specified and `newLength` is less than that value.
-
-A `TypeError` is thrown if you attempt to:
-
-- Grow a non-growable `SharedArrayBuffer`.
-- Grow a growable `SharedArrayBuffer` to a size larger than its {{jsxref("Global_Objects/SharedArrayBuffer.maxByteLength", "maxByteLength")}}.
-- Set `newLength` to a size smaller than the `SharedArrayBuffer`'s current {{jsxref("Global_Objects/SharedArrayBuffer.byteLength", "byteLength")}}.
+The `grow()` method grows a `SharedArrayBuffer` to the size specified by the `newLength` parameter, provided that the `SharedArrayBuffer` is [resizable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/growable) and the new size is less than or equal to the {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} of the `SharedArrayBuffer`.
 
 ## Examples
 
 ### Using grow()
 
-In this example, we create a 8-byte buffer that is growable to a max length of 16 bytes then check its {{jsxref("Global_Objects/SharedArrayBuffer.growable", "growable")}} property, growing it if `growable` returns `true`:
+In this example, we create a 8-byte buffer that is growable to a max length of 16 bytes, then check its {{jsxref("SharedArrayBuffer/growable", "growable")}} property, growing it if `growable` returns `true`:
 
 ```js
-const buffer = new SharedArrayBuffer(8, { maxByteLength: 16 } );
+const buffer = new SharedArrayBuffer(8, { maxByteLength: 16 });
 
-if(buffer.growable) {
-  console.log('SAB is growable!');
+if (buffer.growable) {
+  console.log("SAB is growable!");
   buffer.grow(12);
 }
 ```
@@ -68,3 +64,5 @@ if(buffer.growable) {
 ## See also
 
 - {{jsxref("SharedArrayBuffer")}}
+- {{jsxref("SharedArrayBuffer.prototype.growable")}}
+- {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}}

@@ -37,9 +37,7 @@ new ArrayBuffer(length, options)
 
 ### Return value
 
-A new `ArrayBuffer` object of the specified size, with its {{jsxref("Global_Objects/ArrayBuffer.maxByteLength",
-  "maxByteLength")}} property set to the specified `maxByteLength` if one was specified. Its contents are
-initialized to 0.
+A new `ArrayBuffer` object of the specified size, with its {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}} property set to the specified `maxByteLength` if one was specified. Its contents are initialized to 0.
 
 ### Exceptions
 
@@ -60,15 +58,15 @@ const view = new Int32Array(buffer);
 
 ### Creating a resizable ArrayBuffer
 
-In this example, we create a 8-byte buffer that is resizable to a max length of 16 bytes, then {{jsxref("Global_Objects/ArrayBuffer.resize", "resize()")}} it to 12bytes:
+In this example, we create a 8-byte buffer that is resizable to a max length of 16 bytes, then {{jsxref("ArrayBuffer/resize", "resize()")}} it to 12 bytes:
 
 ```js
-const buffer = new ArrayBuffer(8, { maxByteLength: 16 } );
+const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
 
 buffer.resize(12);
 ```
 
-> **Note:** It is recommended that `maxByteLength` is set to the smallest value possible for your use case. and never exceeds `1073741824` (1GB), to reduce the risk of out-of-memory errors.
+> **Note:** It is recommended that `maxByteLength` is set to the smallest value possible for your use case. It should never exceed `1073741824` (1GB) to reduce the risk of out-of-memory errors.
 
 ## Specifications
 

@@ -3,18 +3,13 @@ title: ArrayBuffer.prototype.resize()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resize
 page-type: javascript-instance-method
 tags:
-  - ArrayBuffer
   - Experimental
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.ArrayBuffer.resize
 ---
 
-{{JSRef}}{{seecompattable}}
+{{JSRef}}{{SeeCompatTable}}
 
-The **`resize()`** method resizes the `ArrayBuffer` to the specified size, in bytes.
+The **`resize()`** method of {{jsxref("ArrayBuffer")}} instances resizes the `ArrayBuffer` to the specified size, in bytes.
 
 {{EmbedInteractiveExample("pages/js/arraybuffer-resize.html")}}
 
@@ -31,30 +26,32 @@ resize(newLength)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+{{jsxref("undefined")}}.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown in one of the following cases:
+    - The `ArrayBuffer` is not resizable.
+    - `newLength` is larger than the {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}} of the `ArrayBuffer`.
 
 ## Description
 
-The `resize()` method resizes an `ArrayBuffer` to the size specified in the `newLength` parameter, provided it was constructed with a `maxByteLength` option specified and `newLength` is less than that value.
+The `resize()` method resizes an `ArrayBuffer` to the size specified by the `newLength` parameter, provided that the `ArrayBuffer` is [resizable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resizable) and the new size is less than or equal to the {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}} of the `ArrayBuffer`.
 
-Note that you can use `resize()` to shrink as well as grow an `ArrayBuffer` — it is permissable for `newLength` to be smaller than the `ArrayBuffer`'s current {{jsxref("Global_Objects/ArrayBuffer.byteLength", "byteLength")}}.
-
-A `TypeError` is thrown if you attempt to:
-
-- Resize a non-resizable `ArrayBuffer`.
-- Resize a resizable `ArrayBuffer` to a size larger than its {{jsxref("Global_Objects/ArrayBuffer.maxByteLength", "maxByteLength")}}.
+Note that you can use `resize()` to shrink as well as grow an `ArrayBuffer` — it is permissible for `newLength` to be smaller than the `ArrayBuffer`'s current {{jsxref("ArrayBuffer/byteLength", "byteLength")}}.
 
 ## Examples
 
 ### Using resize()
 
-In this example, we create a 8-byte buffer that is resizable to a max length of 16 bytes then check its `resizable` property, resizing it if `resizable` returns `true`:
+In this example, we create a 8-byte buffer that is resizable to a max length of 16 bytes, then check its `resizable` property, resizing it if `resizable` returns `true`:
 
 ```js
-const buffer = new ArrayBuffer(8, { maxByteLength: 16 } );
+const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
 
-if(buffer.resizable) {
-  console.log('Buffer is resizable!');
+if (buffer.resizable) {
+  console.log("Buffer is resizable!");
   buffer.resize(12);
 }
 ```
@@ -70,3 +67,5 @@ if(buffer.resizable) {
 ## See also
 
 - {{jsxref("ArrayBuffer")}}
+- {{jsxref("ArrayBuffer.prototype.resizable")}}
+- {{jsxref("ArrayBuffer.prototype.maxByteLength")}}

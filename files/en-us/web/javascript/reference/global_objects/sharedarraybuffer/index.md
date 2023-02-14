@@ -96,7 +96,7 @@ The WebAssembly Threads proposal also defines a new set of [atomic](https://gith
 - {{jsxref("SharedArrayBuffer.prototype.byteLength")}} {{readonlyinline}}
   - : The size, in bytes, of the array. This is established when the array is constructed and cannot be changed.
 - {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}} {{readonlyinline}} {{experimental_inline}}
-  - : The read-only maximum length the `SharedArrayBuffer` can be resized to, in bytes. This is established when the array is constructed and cannot be changed.
+  - : The maximum length, in bytes, the `SharedArrayBuffer` can be grown to. This is established when the array is constructed and cannot be changed.
 - {{jsxref("SharedArrayBuffer.prototype.growable")}} {{readonlyinline}} {{experimental_inline}}
   - : Returns `true` if the {{jsxref("SharedArrayBuffer")}} can be grown, or `false` if not.
 
@@ -105,7 +105,7 @@ The WebAssembly Threads proposal also defines a new set of [atomic](https://gith
 - {{jsxref("SharedArrayBuffer.prototype.slice()")}}
   - : Returns a new `SharedArrayBuffer` whose contents are a copy of this `SharedArrayBuffer`'s bytes from `begin`, inclusive, up to `end`, exclusive. If either `begin` or `end` is negative, it refers to an index from the end of the array, as opposed to from the beginning.
 - {{jsxref("SharedArrayBuffer.prototype.grow()")}} {{experimental_inline}}
-  - : Grows the `SharedArrayBuffer` to the size specified in the `arg`, in bytes.
+  - : Grows the `SharedArrayBuffer` to the specified size, in bytes.
 
 ## Examples
 
