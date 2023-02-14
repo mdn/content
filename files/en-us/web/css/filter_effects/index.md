@@ -9,7 +9,7 @@ tags:
   - Overview
   - Reference
 spec-urls: 
-  - https://drafts.fxtf.org/filter-effects
+  - https://drafts.fxtf.org/filter-effects-2/
 ---
 
 {{CSSRef}}
