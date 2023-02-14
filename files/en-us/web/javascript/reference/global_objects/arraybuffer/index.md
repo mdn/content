@@ -20,7 +20,7 @@ It is an array of bytes, often referred to in other languages as a "byte array".
 
 The [`ArrayBuffer()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer) constructor creates a new `ArrayBuffer` of the given length in bytes. You can also get an array buffer from existing data, for example, from a [Base64](/en-US/docs/Glossary/Base64) string or [from a local file](/en-US/docs/Web/API/FileReader/readAsArrayBuffer).
 
-`ArrayBuffer` is a {{glossary("Transferable objects","transferable object")}}.
+`ArrayBuffer` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 ## Constructor
 
@@ -41,11 +41,11 @@ The [`ArrayBuffer()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayB
 
 - `ArrayBuffer.prototype[@@toStringTag]`
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"ArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
-- {{jsxref("ArrayBuffer.prototype.byteLength")}} {{readonlyinline}}
+- {{jsxref("ArrayBuffer.prototype.byteLength")}}
   - : The size, in bytes, of the `ArrayBuffer`. This is established when the array is constructed and cannot be changed.
-- {{jsxref("ArrayBuffer.prototype.maxByteLength")}} {{readonlyinline}} {{experimental_inline}}
+- {{jsxref("ArrayBuffer.prototype.maxByteLength")}} {{experimental_inline}}
   - : The maximum length, in bytes, that the `ArrayBuffer` can be resized to. This is established when the array is constructed and cannot be changed.
-- {{jsxref("ArrayBuffer.prototype.resizable")}} {{readonlyinline}} {{experimental_inline}}
+- {{jsxref("ArrayBuffer.prototype.resizable")}} {{experimental_inline}}
   - : Returns `true` if the `ArrayBuffer` can be resized, or `false` if not.
 
 ## Instance methods

@@ -68,7 +68,7 @@ const sab = new SharedArrayBuffer(1024);
 
 ### Creating a resizable ArrayBuffer
 
-In this example, we create an 8-byte buffer that is resizable to a max length of 16 bytes, then {{jsxref("ArrayBuffer/grow", "grow()")}} it to 12 bytes:
+In this example, we create an 8-byte buffer that is resizable to a max length of 16 bytes, then {{jsxref("SharedArrayBuffer/grow", "grow()")}} it to 12 bytes:
 
 ```js
 const buffer = new SharedArrayBuffer(8, { maxByteLength: 16 });
