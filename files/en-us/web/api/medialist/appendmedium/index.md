@@ -7,7 +7,7 @@ browser-compat: api.MediaList.appendMedium
 
 {{APIRef("CSSOM")}}
 
-The `appendMedium()` method of the {{DomxRef("MediaList")}} interface add a media query to the list. If the media query is already in the collection, this method does nothing.
+The `appendMedium()` method of the {{DomxRef("MediaList")}} interface adds a media query to the list. If the media query is already in the collection, this method does nothing.
 
 ## Syntax
 
