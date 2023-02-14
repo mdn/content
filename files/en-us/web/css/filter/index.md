@@ -22,7 +22,7 @@ Several [functions](#functions), such as `blur() `and `contrast()`, are availabl
 ## Syntax
 
 ```css
-/* URL to SVG filter */
+/* URL */
 filter: url("filters.svg#filter-id");
 
 /* <filter-function> values */
@@ -58,7 +58,7 @@ With a function, use the following:
 filter: <filter-function> [<filter-function>]* | none;
 ```
 
-You can reference an SVG filter with a URL to an [SVG filter element](/en-US/docs/Web/SVG/Element/filter). For a reference to an SVG {{SVGElement("filter")}} element, use the following:
+You can user `url()` to reference an [SVG filter element](/en-US/docs/Web/SVG/Element/filter). For a reference to an SVG {{SVGElement("filter")}} element, use the following:
 
 ```css
 filter: url(file.svg#filter-element-id);
