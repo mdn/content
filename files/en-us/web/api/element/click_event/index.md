@@ -103,16 +103,16 @@ The {{domxref("MouseEvent")}} object passed into the event handler for `click` h
 
 ### Internet Explorer
 
-Internet Explorer 8 & 9 suffer from a bug where elements with a computed {{cssxref("background-color")}} of [`transparent`](/en-US/docs/Web/CSS/color_value#transparent_keyword) that are overlaid on top of other element(s) won't receive `click` events. Any `click` events will be fired at the underlying element(s) instead. See [this live example](https://jsfiddle.net/YUKma/show/) for a demonstration.
+Internet Explorer 8 & 9 suffer from a bug where elements with a computed {{cssxref("background-color")}} of [`transparent`](/en-US/docs/Web/CSS/named-color#transparent) that are overlaid on top of other element(s) won't receive `click` events. Any `click` events will be fired at the underlying element(s) instead. See [this live example](https://jsfiddle.net/YUKma/show/) for a demonstration.
 
 Known workarounds for this bug:
 
 - For IE9 only:
 
   - Set {{cssxref("background-color")}}`: rgba(0,0,0,0)`
-  - Set {{cssxref("opacity")}}`: 0` and an explicit {{cssxref("background-color")}} other than [`transparent`](/en-US/docs/Web/CSS/color_value#transparent_keyword)
+  - Set {{cssxref("opacity")}}`: 0` and an explicit {{cssxref("background-color")}} other than [`transparent`](/en-US/docs/Web/CSS/named-color#transparent)
 
-- For IE8 and IE9: Set `filter: alpha(opacity=0);` and an explicit {{cssxref("background-color")}} other than [`transparent`](/en-US/docs/Web/CSS/color_value#transparent_keyword)
+- For IE8 and IE9: Set `filter: alpha(opacity=0);` and an explicit {{cssxref("background-color")}} other than [`transparent`](/en-US/docs/Web/CSS/named-color#transparent)
 
 ### Safari Mobile
 

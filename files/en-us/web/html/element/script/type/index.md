@@ -22,7 +22,7 @@ The value of this attribute indicates the type of data represented by the script
 - **Attribute is not set (default), an empty string, or a JavaScript MIME type**
   - : Indicates that the script is a "classic script", containing JavaScript code.
     Authors are encouraged to omit the attribute if the script refers to JavaScript code rather than specify a MIME type.
-    JavaScript MIME types are [listed in the IANA media types specification](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types).
+    JavaScript MIME types are [listed in the IANA media types specification](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript).
 - `module`
   - : This value causes the code to be treated as a JavaScript module.
     The processing of the script contents is deferred.
