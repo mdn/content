@@ -33,7 +33,7 @@ Values of this type are strings. Possible values are:
    Scripts in this environment do not have any access to APIs that are only available to content scripts.
 
    > **Warning:** Due to the lack of isolation, the web page can detect the executed code and interfere with it.
-   > Do not use the `MAIN` world unless it is acceptable for web pages to read, access or modify the logic or data that flows through the executed code.
+   > Do not use the `MAIN` world unless it is acceptable for web pages to read, access, or modify the logic or data that flows through the executed code.
 
 ## Browser compatibility
 
