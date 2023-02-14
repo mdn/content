@@ -25,9 +25,7 @@ item(index)
 
 ### Return value
 
-A string, or `null` if there is no entry for the index.
-
-If there is no entry for the given index, and using the bracket (`[]`) syntax, `undefined` is returned.
+If the bracket (`[]`) syntax is used and there is no entry for the given index, `undefined` is returned.
 
 ## Examples
 
