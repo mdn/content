@@ -110,7 +110,7 @@ Known workarounds for this bug:
 - For IE9 only:
 
   - Set {{cssxref("background-color")}}`: rgba(0,0,0,0)`
-  - Set {{cssxref("opacity")}}`: 0` and an explicit {{cssxref("background-color")}} other than [`transparent`](/en-US/docs/Web/CSS/color_value#formal_syntax)
+  - Set {{cssxref("opacity")}}`: 0` and an explicit {{cssxref("background-color")}} other than [`transparent`](/en-US/docs/Web/CSS/named-color#transparent)
 
 - For IE8 and IE9: Set `filter: alpha(opacity=0);` and an explicit {{cssxref("background-color")}} other than [`transparent`](/en-US/docs/Web/CSS/color_value#formal_syntax)
 
