@@ -7359,9 +7359,9 @@
 /en-US/docs/Using_the_:target_selector	/en-US/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
 /en-US/docs/Using_the_Mozilla_JavaScript_interface_to_XPath	/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /en-US/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/en-US/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
-/en-US/docs/Using_the_W3C_DOM_Level_1_Core	/en-US/docs//Web/API/Document_object_model/Using_the_Document_Object_Model
-/en-US/docs/Using_the_W3C_DOM_Level_1_Core/Example	/en-US/docs//Web/API/Document_object_model/Using_the_Document_Object_Model/Example
-/en-US/docs/Using_the_W3C_DOM_Level_1_Core:Example	/en-US/docs//Web/API/Document_object_model/Using_the_Document_Object_Model/Example
+/en-US/docs/Using_the_W3C_DOM_Level_1_Core	/en-US/docs/Web/API/Document_object_model/Using_the_Document_Object_Model
+/en-US/docs/Using_the_W3C_DOM_Level_1_Core/Example	/en-US/docs/Web/API/Document_object_model/Using_the_Document_Object_Model/Example
+/en-US/docs/Using_the_W3C_DOM_Level_1_Core:Example	/en-US/docs/Web/API/Document_object_model/Using_the_Document_Object_Model/Example
 /en-US/docs/Using_the_Web_Console	https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html
 /en-US/docs/Using_the_Web_Console/Helpers	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
 /en-US/docs/Using_the_Web_Console/WebConsoleHelp	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
@@ -8029,8 +8029,8 @@
 /en-US/docs/Web/API/Document_Object_Model/Events	/en-US/docs/Learn/JavaScript/Building_blocks/Events
 /en-US/docs/Web/API/Document_Object_Model/Preface	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/en-US/docs/Web/API/Document_Object_Model/Whitespace
-/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core	/en-US/docs//Web/API/Document_object_model/Using_the_Document_Object_Model
-/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example	/en-US/docs//Web/API/Document_object_model/Using_the_Document_Object_Model/Example
+/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core	/en-US/docs/Web/API/Document_object_model/Using_the_Document_Object_Model
+/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example	/en-US/docs/Web/API/Document_object_model/Using_the_Document_Object_Model/Example
 /en-US/docs/Web/API/DoubleRange	/en-US/docs/Web/API/MediaTrackConstraints
 /en-US/docs/Web/API/DynamicsCompressorNode.attack	/en-US/docs/Web/API/DynamicsCompressorNode/attack
 /en-US/docs/Web/API/DynamicsCompressorNode.knee	/en-US/docs/Web/API/DynamicsCompressorNode/knee
