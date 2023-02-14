@@ -21,7 +21,7 @@ The following would log to the console the number of media queries stored in the
 
 ```js
 const stylesheets = document.styleSheets;
-let stylesheet = stylesheets[0];
+const stylesheet = stylesheets[0];
 console.log(stylesheet.media.length);
 ```
 
