@@ -8,7 +8,7 @@ browser-compat: api.MediaList.length
 
 {{APIRef("CSSOM")}}
 
-The read-only **`length`** property of the {{DOMxRef("MediaList")}} interface returns the number of media queries in the list
+The read-only **`length`** property of the {{DOMxRef("MediaList")}} interface returns the number of media queries in the list.
 
 ## Value
 
