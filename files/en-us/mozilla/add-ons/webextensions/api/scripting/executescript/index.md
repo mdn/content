@@ -52,7 +52,7 @@ let results = await browser.scripting.executeScript(
     - `target`
       - : {{WebExtAPIRef("scripting.InjectionTarget")}}. Details specifying the target to inject the script into.
     - `world` {{optional_inline}}
-      - : {{WebExtAPIRef("scripting.ExecutionWorld")}}. The execution environment for a script to execute within.
+      - : {{WebExtAPIRef("scripting.ExecutionWorld")}}. The execution environment for a script to execute in.
 
 ### Return value
 
