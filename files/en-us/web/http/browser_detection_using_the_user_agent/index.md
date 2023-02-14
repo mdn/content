@@ -47,10 +47,10 @@ if (navigator.userAgent.includes("Chrome")) {
   splitUpString = (str) => String(str).split(camelCaseExpression);
 } else {
   // This fallback code is much less performant, but works
-  splitUpString = (str) => str.replace(/([A-Z])/g, "z$1").split(/z(?=[A-Z])/g);
+  splitUpString = (str) => str.replace(/([A-Z])/g, "$1.").split('.');
 }
 
-console.log(splitUpString("fooBare")); // ["fooB", "are"]
+console.log(splitUpString("fooBar")); // ["fooB", "ar"]
 console.log(splitUpString("jQWhy")); // ["jQ", "W", "hy"]
 ```
 
@@ -75,7 +75,10 @@ try {
 
 const splitUpString = isLookBehindSupported
   ? (str) => String(str).split(new RegExp("(?<=[A-Z])"))
-  : (str) => str.replace(/([A-Z])/g, "z$1").split(/z(?=[A-Z])/g);
+  : (str) => str.replace(/([A-Z])/g, "$1.").split('.');
+
+console.log(splitUpString("fooBar")); // ["fooB", "ar"]
+console.log(splitUpString("jQWhy")); // ["jQ", "W", "hy"]
 ```
 
 As the above code demonstrates, there is **always** a way to test browser support without user agent sniffing. There is **never** any reason to check the user agent string for this.
