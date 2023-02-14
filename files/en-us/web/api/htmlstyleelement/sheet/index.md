@@ -13,7 +13,7 @@ An {{DOMxref("StyleSheet")}} is always associated with a {{domxref("HTMLStyleEle
 
 ## Value
 
-A {{DOMxRef("StyleSheet)}} object, or `null` if none is associated with the element.
+A {{DOMxRef("StyleSheet")}} object, or `null` if none is associated with the element.
 
 ## Examples
 

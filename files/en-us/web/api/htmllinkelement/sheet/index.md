@@ -13,7 +13,7 @@ A stylesheet is associated to an `HTMLLinkElement` if `rel="stylesheet"` is used
 
 ## Value
 
-A {{DOMxRef("StyleSheet)}} object, or `null` if none is associated with the element.
+A {{DOMxRef("StyleSheet")}} object, or `null` if none is associated with the element.
 
 ## Examples
 
