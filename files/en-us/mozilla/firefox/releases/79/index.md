@@ -78,7 +78,7 @@ See also [Firefox 79: The safe return of shared memory, new tooling, and platfor
 #### DOM
 
 - The [`FileReader`](/en-US/docs/Web/API/FileReader) interface's [`loadstart` event](/en-US/docs/Web/API/FileReader/loadstart_event) is now dispatched asynchronously, as per the spec ({{bug(1502403)}}).
-- {{domxref("CanvasPattern.setTransform()")}} now supports a {{domxref("DOMMatrix")}} object as an input parameter, as well as an {{domxref("SVGMatrix")}} object ({{bug(1565997)}}).
+- {{domxref("CanvasPattern.setTransform()")}} now supports a {{domxref("DOMMatrix")}} object as an input parameter, as well as an `SVGMatrix` object ({{bug(1565997)}}).
 
 #### Media, WebRTC, and Web Audio
 

@@ -29,8 +29,10 @@ The **`:root`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Ps
 
 ## Syntax
 
-```
-:root
+```css
+:root {
+  /* ... */
+}
 ```
 
 ## Examples

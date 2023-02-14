@@ -59,7 +59,7 @@ function handleOrientationChange(mql) {
 handleOrientationChange(mediaQueryList);
 
 // Add the callback function as a listener to the query list.
-mediaQueryList.addEventListener('change', handleOrientationChange);
+mediaQueryList.addEventListener("change", handleOrientationChange);
 ```
 
 This code creates the orientation-testing media query list, then adds an event listener to it. After defining the listener, we also call the listener directly. This makes our listener perform adjustments based on the current device orientation; otherwise, our code might assume the device is in portrait mode at startup, even if it's actually in landscape mode.
@@ -85,7 +85,7 @@ This event object also includes the {{domxref("MediaQueryListEvent.media","media
 To stop receiving notifications about changes to the value of your media query, call {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} on the `MediaQueryList`, passing it the name of the previously-defined callback function:
 
 ```js
-mediaQueryList.removeEventListener('change', handleOrientationChange);
+mediaQueryList.removeEventListener("change", handleOrientationChange);
 ```
 
 ## Browser compatibility

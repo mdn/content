@@ -38,7 +38,8 @@ content: "prefix";
 
 /* list of content values */
 content: "prefix" url("http://www.example.com/test.png");
-content: "prefix" url("http://www.example.com/test.png") "suffix" / "This is some alt text";
+content: "prefix" url("http://www.example.com/test.png") "suffix" /
+  "This is some alt text";
 
 /* <counter> values, optionally with <list-style-type> */
 content: counter(chapter_counter);
