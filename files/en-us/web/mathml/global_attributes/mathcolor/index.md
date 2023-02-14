@@ -17,7 +17,7 @@ The **`mathcolor`** [global attribute](/en-US/docs/Web/MathML/Global_attributes)
 
 ## Syntax
 
-```html
+```html-nolint
 <!-- Keyword values -->
 <math mathcolor="currentcolor">
 

@@ -35,8 +35,8 @@ new CSSUnparsedValue(members)
 ## Examples
 
 ```js
-const value = new CSSUnparsedValue(['4deg']);
-const values = new CSSUnparsedValue(['1em', '#445566', '-45px']);
+const value = new CSSUnparsedValue(["4deg"]);
+const values = new CSSUnparsedValue(["1em", "#445566", "-45px"]);
 
 console.log(value); // CSSUnparsedValue {0: "4deg", length: 1}
 console.log(values); // CSSUnparsedValue {0: "1em", 1: "#445566", 2: "-45px", length: 3}

@@ -24,8 +24,10 @@ This selector is useful, to take a common example, for highlighting an entire {{
 
 ## Syntax
 
-```
-:focus-within
+```css
+:focus-within {
+  /* ... */
+}
 ```
 
 ## Examples

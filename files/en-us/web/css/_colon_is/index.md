@@ -208,8 +208,10 @@ some-element::after {
 
 ## Syntax
 
-```
-:is( <forgiving-selector-list> )
+```css-nolint
+:is(<forgiving-selector-list>) {
+  /* ... */
+}
 ```
 
 ## Specifications

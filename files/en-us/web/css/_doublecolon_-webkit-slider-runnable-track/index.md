@@ -1,5 +1,5 @@
 ---
-title: '::-webkit-slider-runnable-track'
+title: "::-webkit-slider-runnable-track"
 slug: Web/CSS/::-webkit-slider-runnable-track
 page-type: css-pseudo-element
 tags:
@@ -23,7 +23,9 @@ The **`::-webkit-slider-runnable-track`** CSS [pseudo-element](/en-US/docs/Web/C
 ## Syntax
 
 ```css
-::-webkit-slider-runnable-track
+::-webkit-slider-runnable-track {
+  /* ... */
+}
 ```
 
 ## Specifications

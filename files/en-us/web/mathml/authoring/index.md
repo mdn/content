@@ -184,16 +184,8 @@ Instead of generating MathML expression at page load, you can instead rely on co
   </head>
   <body>
     <h1>MathML in HTML5</h1>
-
-    <p>
-      One over square root of two (inline style):
-      $\frac{1}{\sqrt{2}}$
-    </p>
-
-    <p>
-      One over square root of two (display style):
-      $$\frac{1}{\sqrt{2}}$$
-    </p>
+    <p>One over square root of two (inline style): $\frac{1}{\sqrt{2}}$</p>
+    <p>One over square root of two (display style): $$\frac{1}{\sqrt{2}}$$</p>
   </body>
 </html>
 ```
@@ -206,7 +198,7 @@ cat input.html | node TeXZilla.js streamfilter > output.html
 
 After running that command, a file `output.html` containing the following HTML output is created. The formulas delimited by dollars have been converted into MathML:
 
-```html
+```html-nolint
 <!DOCTYPE html>
 <html lang="en-US">
   <head>

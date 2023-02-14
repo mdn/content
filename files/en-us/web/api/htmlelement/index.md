@@ -40,7 +40,7 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
   - : A string, reflecting the `dir` global attribute, representing the directionality of the element. Possible values are `"ltr"`, `"rtl"`, and `"auto"`.
 - {{DOMxRef("HTMLElement.draggable")}}
   - : A boolean value indicating if the element can be dragged.
-- {{DOMxRef("HTMLElement.enterkeyhint")}}
+- {{DOMxRef("HTMLElement.enterKeyHint")}}
   - : A string defining what action label (or icon) to present for the enter key on virtual keyboards.
 - {{DOMxRef("HTMLElement.hidden")}}
   - : A string or boolean value reflecting the value of the element's [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute.
