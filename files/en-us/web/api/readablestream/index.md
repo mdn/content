@@ -71,7 +71,7 @@ To continue to use a stream after exiting the loop, pass `{ preventCancel: true 
 ```js
 for await (const chunk of stream.values({ preventCancel: true })) {
   // Do something with 'chunk'
-  return;
+  break;
 }
 // Acquire a reader for the stream and continue reading ...
 ```
