@@ -46,10 +46,10 @@ The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_
 - {{domxref("ReadableStream.tee()")}}
   - : The `tee` method [tees](https://streams.spec.whatwg.org/#tee-a-readable-stream) this readable stream, returning a two-element array containing the two resulting branches as new {{domxref("ReadableStream")}} instances. Each of those streams receives the same incoming data.
 
-## Async Iteration
+## Async iteration
 
 `ReadableStream` implements the [async iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols).
-This enables asynchronous iteration over the chunks in a stream using the [for await...of](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) syntax:
+This enables asynchronous iteration over the chunks in a stream using the [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) syntax:
 
 ```js
 const stream = new ReadableStream(getSomeSource());
@@ -60,10 +60,10 @@ for await (const chunk of stream) {
 ```
 
 The async iterator consumes the stream until it runs out of data or otherwise terminates.
-The loop can also exit early due to a `break`, `throw`, or `return`.
+The loop can also exit early due to a `break`, `throw`, or `return` statement.
 
 While iterating, the stream is locked to prevent other consumers from acquiring a reader (attempting to iterate over a stream that is already locked will throw a `TypeError`).
-This lock is released when the iterator exits the loop.
+This lock is released when the loop exits.
 
 By default, exiting the loop will also cancel the stream, so that it can no longer be used.
 To continue to use a stream after exiting the loop, pass `{ preventCancel: true }` to the stream's `values()` method:
@@ -152,9 +152,9 @@ function iteratorToStream(iterator) {
 
 This works with both async and non-async iterators.
 
-### Async iteration of stream (for-wait-of)
+### Async iteration of a stream using for await...of
 
-This example shows how you can process the `fetch()` response using a [for await...of](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) loop to iterate through the arriving chunks.
+This example shows how you can process the `fetch()` response using a [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) loop to iterate through the arriving chunks.
 
 ```js
 const response = await fetch("https://www.example.org");
