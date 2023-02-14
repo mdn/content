@@ -76,12 +76,6 @@ for await (const chunk of stream.values({ preventCancel: true })) {
 // Acquire a reader for the stream and continue reading ...
 ```
 
-Notes:
-
-- The code in the loop is only run when the next chunk arrives.
-  If code from outside the loop triggers code in the loop, such as a `break`, there may be a delay before the code in the loop is executed.
-- Polyfills are available if this feature is not [supported on your browser](#browser_compatibility): [web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill) or [sd-streams](https://github.com/stardazed/sd-streams).
-
 ## Examples
 
 ### Fetch stream
@@ -182,3 +176,4 @@ console.log(total);
 ## See also
 
 - [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/), for a basic visualization of readable, writable, and transform streams.
+- [web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill) or [sd-streams](https://github.com/stardazed/sd-streams) - polyfills
