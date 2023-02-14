@@ -2,7 +2,7 @@
 title: HTMLStyleElement.sheet
 slug: Web/API/HTMLStyleElement/sheet
 page-type: web-api-instance-property
-browser-compat: api.HTMLStylElement.sheet
+browser-compat: api.HTMLStyleElement.sheet
 ---
 {{APIRef("HTML DOM")}}
 
