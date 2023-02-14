@@ -6,9 +6,8 @@ tags:
   - CSS
   - CSS Property
   - Reference
-  - SVG
-  - SVG Filter
-  - recipe:css-property
+  - filter 
+  - filter-function
 browser-compat: css.properties.filter
 ---
 
