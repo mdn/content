@@ -1,24 +1,21 @@
 ---
-title: webRequest.ResourceType
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/ResourceType
+title: declarativeNetRequest.ResourceType
+slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/ResourceType
 tags:
   - API
   - Add-ons
   - Extensions
-  - Non-standard
   - Reference
-  - ResourceType
-  - Type
   - WebExtensions
-  - webRequest
-browser-compat: webextensions.api.webRequest.ResourceType
+  - Type
+  - declarativeNetRequest
+  - ResourceType
+browser-compat: webextensions.api.declarativeNetRequest.ResourceType
 ---
 
 {{AddonSidebar()}}
 
-This type is a string, which represents the context in which a resource was fetched in a web request.
-
-It's used to [filter](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter) the requests you listen to using the webRequest API. For example: you can listen to requests only for images, or only for scripts.
+The resource type of a request. Comparable to {{WebExtAPIRef('webRequest.ResourceType')}}.
 
 ## Type
 
@@ -62,8 +59,12 @@ Values of this type are strings. Possible values are:
   - : Documents loaded into an {{HTMLElement("iframe")}} or {{HTMLElement("frame")}} element.
 - `web_manifest`
   - : [Web App Manifests](/en-US/docs/Web/Manifest) loaded for websites that can be installed to the homescreen.
+- `webbundle`
+  - : Requests initiating a connection to a server through a Web Bundle or [packaged website](https://github.com/WICG/webpackage).
 - `websocket`
   - : Requests initiating a connection to a server through the [WebSocket API](/en-US/docs/Web/API/WebSockets_API).
+- `webtransport`
+  - : Requests initiating a connection to a server through the [WebTransport API](/en-US/docs/Web/API/WebTransport_API).
 - `xml_dtd`
   - : [DTDs](/en-US/docs/Glossary/Doctype) loaded for an XML document.
 - `xmlhttprequest`
@@ -76,10 +77,6 @@ Values of this type are strings. Possible values are:
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
-
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#type-ResourceType) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
