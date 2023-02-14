@@ -146,16 +146,14 @@ filter: sepia(100%)
 You may combine any number of functions to manipulate the rendering. The filters are applied in the order declared. The following example enhances the contrast and brightness of the image:
 
 ```css
-filter: drop-shadow(3px 3px 0 red) contrast(175%) brightness(103%) drop-shadow(-3px -3px 0 orange)
+filter: contrast(175%) brightness(103%);
 ```
-
-{{EmbedLiveSample('Combining_functions','100%','209px','','', 'no-codepen')}}
 
 ### Interpolation
 
 When animated, if both the beginning and end filters have a function list of the same length without {{cssxref("url","url()")}}, each of their filter functions is {{Glossary("interpolation", "interpolated")}} according to its specific rules.
 
-If the filter lists are of different lengths, the missing equivalent filter functions from the longer list are added to the end of the shorter list using their initial, no filter modification values, then all filter functions are interpolated according to their specific rules. If one filter is `none`, it is replaced with the filter functions list of the other one using the filter function default values, then all filter functions are interpolated according to their specific rules. Otherwise, discrete interpolation is used.
+If the filter lists are of different lengths, the missing equivalent filter functions from the longer list are added to the end of the shorter list using their initial, no filter modification values, then all filter functions are interpolated according to their specific rules. If one filter is `none`, it is replaced with the filter functions list of the other one using the effectless value of the filter function, then all filter functions are interpolated according to their specific rules. Otherwise, discrete interpolation is used.
 
 ## Formal definition
 
@@ -169,32 +167,45 @@ If the filter lists are of different lengths, the missing equivalent filter func
 
 ### Applying filter functions
 
-Examples of using the predefined functions are shown below. See each function for a specific example.
+The `filter` property is applied to the second image, greying and blurring both the image and its border.
 
 ```css
-.mydiv {
-  filter: grayscale(50%);
-}
-
-/* Gray all images by 50% and blur by 10px */
 img {
-  filter: grayscale(0.5) blur(10px);
+  border: 5px solid yellow;
+}
+/* Gray the second image by 40% and blur by 5px */
+img:nth-of-type(2) {
+  filter: grayscale(0.4) blur(5px);
 }
 ```
 
-### Applying SVG filters
+```html
+  <img src="pencil.jpg" alt="Original image is sharp">
+  <img src="pencil.jpg" alt="The mage and border are blurred and muted">
+```
 
-Examples of using the URL function with an SVG resource are as follows:
+{{EmbedLiveSample('Applying_filter_functions','100%','229px')}}
+
+### Repeating filter functions
+
+Filter functions are applied in order of appearance. The same filter function can be repeated.
 
 ```css
-.target {
-  filter: url(#c1);
-}
-
-.mydiv {
-  filter: url(commonfilters.xml#large-blur);
+#MDN-logo {
+  border: 1px solid blue;
+  filter: drop-shadow(5px 5px 0 red) 
+          hue-rotate(180deg) 
+          drop-shadow(5px 5px 0 red);
 }
 ```
+
+```html hidden
+<svg id="MDN-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 361 104.2" xml:space="preserve" role="img"><title>MDN Web Docs</title><path d="M197.6 73.2h-17.1v-5.5h3.8V51.9c0-3.7-.7-6.3-2.1-7.9-1.4-1.6-3.3-2.3-5.7-2.3-3.2 0-5.6 1.1-7.2 3.4s-2.4 4.6-2.5 6.9v15.6h6v5.5h-17.1v-5.5h3.8V51.9c0-3.8-.7-6.4-2.1-7.9-1.4-1.5-3.3-2.3-5.6-2.3-3.2 0-5.5 1.1-7.2 3.3-1.6 2.2-2.4 4.5-2.5 6.9v15.8h6.9v5.5h-20.2v-5.5h6V42.4h-6.1v-5.6h13.4v6.4c1.2-2.1 2.7-3.8 4.7-5.2 2-1.3 4.4-2 7.3-2s5.3.7 7.5 2.1c2.2 1.4 3.7 3.5 4.5 6.4 1.1-2.5 2.7-4.5 4.9-6.1s4.8-2.4 7.9-2.4c3.5 0 6.5 1.1 8.9 3.3s3.7 5.6 3.7 10.2v18.2h6.1v5.5zm42.5 0h-13.2V66c-1.2 2.2-2.8 4.1-4.9 5.6-2.1 1.6-4.8 2.4-8.3 2.4-4.8 0-8.7-1.6-11.6-4.9-2.9-3.2-4.3-7.7-4.3-13.3 0-5 1.3-9.6 4-13.7 2.6-4.1 6.9-6.2 12.8-6.2s9.8 2.2 12.3 6.5V22.7h-8.6v-5.6h15.8v50.6h6v5.5zm-13.3-16.8V52c-.1-3-1.2-5.5-3.2-7.3s-4.4-2.8-7.2-2.8c-3.6 0-6.3 1.3-8.2 3.9-1.9 2.6-2.8 5.8-2.8 9.6 0 4.1 1 7.3 3 9.5s4.5 3.3 7.4 3.3c3.2 0 5.8-1.3 7.8-3.8 2.1-2.6 3.1-5.3 3.2-8zm61.5 16.8H269v-5.5h6V51.9c0-3.7-.7-6.3-2.2-7.9-1.4-1.6-3.4-2.3-5.7-2.3-3.1 0-5.6 1-7.4 3s-2.8 4.4-2.9 7v15.9h6v5.5h-19.3v-5.5h6V42.4h-6.2v-5.6h13.6V43c2.6-4.6 6.8-6.9 12.7-6.9 3.6 0 6.7 1.1 9.2 3.3s3.7 5.6 3.7 10.2v18.2h6v5.4h-.2z" style="fill: var(--text-primary);"></path><g style="fill:blue;"><path d="M42 .2 13.4 92.3H1.7L30.2.2H42zM52.4.2v92.1H42V.2h10.4zm40.3 0L64.2 92.3H52.5L81 .2h11.7zM103.1.2v92.1H92.7V.2h10.4zM294 95h67v8.8h-67V95z"></path></g></svg>
+```
+
+{{EmbedLiveSample('Repeating_filter_functions','100%','229px')}}
+
+The filters are applied in order meaning first drop shadow's hue is altered by the `hue-ration()` function but the second one isn't.
 
 ## Specifications
 
