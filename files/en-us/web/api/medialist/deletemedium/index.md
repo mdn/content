@@ -7,7 +7,7 @@ browser-compat: api.MediaList.deleteMedium
 
 {{APIRef("CSSOM")}}
 
-The `deleteMedium()` method of the {{DOMxRef("MediaList")}} interface removed the media typquerye given in parameter from the list.
+The `deleteMedium()` method of the {{DOMxRef("MediaList")}} interface removes from this `MediaList` the given media query.
 
 ## Syntax
 
