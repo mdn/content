@@ -80,7 +80,7 @@ output {
 ```js
 const form = document.getElementById('form');
 const formData = new FormData(form);
-const outputHTML = formData
+const outputHTML = [...formData]
   .map(([key, value]) => `${key}: ${value}`)
   .join('<br>');
 const outputElement = document.getElementById('output');
