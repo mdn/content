@@ -78,28 +78,28 @@ filter: blur(5px);
 ```
 
 - {{cssxref("filter-function/brightness", "brightness()")}}
-  - : Applies a linear multiplier to the input image, making it appear more or less bright. Values are linear multipliers on the effect with `0%` creating a completely black image, `100%` having no effect, and values over `100%` brightening the image.
+  - : Applies a linear multiplier to the input image, making it appear more or less bright. Values are linear multipliers on the effect, with `0%` creating a completely black image, `100%` having no effect, and values over `100%` brightening the image.
 
 ```css
 filter: brightness(2);
 ```
 
 - {{cssxref("filter-function/contrast", "contrast()")}}
-  - : Adjusts the contrast of the input image. A value of `0%` makes the image grey, `100%` has no effect, and values over `100%` creating contrast.
+  - : Adjusts the contrast of the input image. A value of `0%` makes the image grey, `100%` has no effect, and values over `100%` creates a contrast.
 
 ```css
 filter: contrast(200%);
 ```
 
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-  - : Applies the parameter `<shadow>` as a drop shadow, following the contours of the image. The shadow syntax is similar to `<box-shadow>` (defined in [CSS Backgrounds and Borders Module Level 3](/en-us/docs/Web/CSS/CSS_Backgrounds_and_Borders)), with the exception that the `inset` keyword and `spread` parameter are not allowed. As will all `filter` property values, any filters coming after the `drop-shadow()` are applied to the shadow.
+  - : Applies the parameter `<shadow>` as a drop shadow, following the contours of the image. The shadow syntax is similar to `<box-shadow>` (defined in the [CSS backgrounds and borders module](/en-us/docs/Web/CSS/CSS_Backgrounds_and_Borders)), with the exception that the `inset` keyword and `spread` parameter are not allowed. As with all `filter` property values, any filters coming after the `drop-shadow()` are applied to the shadow.
 
 ```css
 filter: drop-shadow(16px 16px 10px black);
 ```
 
 - {{cssxref("filter-function/grayscale", "grayscale()")}}
-  - : Converts the image to grayscale. A value of `100%` is completely grayscale. The initial value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect.
+  - : Converts the image to grayscale. A value of `100%` is completely grayscale. The initial value of `0%` leaves the input unchanged. Values between `0%` and `100%` produce linear multipliers on the effect.
 
 ```css
 filter: grayscale(100%);
@@ -113,28 +113,28 @@ filter: hue-rotate(90deg);
 ```
 
 - {{cssxref("filter-function/invert", "invert()")}}
-  - : Inverts the samples in the input image. A value of `100%` is completely inverted. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect.
+  - : Inverts the samples in the input image. A value of `100%` completely inverts the image. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` have linear multipliers on the effect.
 
 ```css
 filter: invert(100%);
 ```
 
 - {{cssxref("filter-function/opacity", "opacity()")}}
-  - : Applies transparency with `0%` being completely transparent and `100%` leaving the image unchanged.
+  - : Applies transparency. `0%` makes the image completely transparent and `100%` leaves the image unchanged.
 
 ```css
 filter: opacity(50%);
 ```
 
 - {{cssxref("filter-function/saturate", "saturate()")}}
-  - : Saturates the image with a value of `0%` being completely un-saturated, `100%` leaving the image unchanged and values of amount over `100%` increasing saturation.
+  - : Saturates the image, with `0%` being completely unsaturated, `100%` leaving the image unchanged, and values of over `100%` increasing saturation.
 
 ```css
 filter: saturate(200%);
 ```
 
 - {{cssxref("filter-function/sepia", "sepia()")}}
-  - : Converts the image to sepia with a value of `100%` being completely sepia and `0%` making no change.
+  - : Converts the image to sepia, with a value of `100%` making the image completely sepia and `0%` making no change.
 
 ```css
 filter: sepia(100%);
