@@ -185,8 +185,9 @@ For greater specificity in checking types, here we present a custom `type(value)
 
 ```js
 function type(value) {
-  if (value === null) {
-    return "null";
+  if (value == null) {
+    // "null" or "undefined"
+    return String(value);
   }
   const baseType = typeof value;
   // Primitive types
@@ -216,9 +217,9 @@ function type(value) {
     return className;
   }
 
-  // At this point there's no robust way to get the type of value,
-  // so we use the base implementation.
-  return baseType;
+  // Final way to get a useful granular description of the type of value.
+  const objectType = Object.prototype.toString.call(value); // e.g. "[Object Date]"
+  return objectType.slice(8, -1); // e.g. "Date"
 }
 ```
 
