@@ -42,8 +42,8 @@ For example:
 
 ### Values
 
-- `<container-condition>`: A set of features that are evaluated against the query container.
-  The condition is evaluated when the container changes size and the styles defined in the `<stylesheet>` are applied if the condition is true.
+- `<container-condition>`: A set of features that are evaluated against the query container when the container changes size.
+  Styles defined in the `<stylesheet>` are applied if the condition is true.
   More details on the syntax are covered in the following sections.
 - `<stylesheet>`: A set of CSS declarations.
 
@@ -68,18 +68,7 @@ Logical keywords can be used to define the container condition:
   /* <stylesheet> */
 }
 
-@container (width > 400px) and (width > 800px) or (orientation: portrait) {
-  /* <stylesheet> */
-}
-```
-
-### Style container queries
-
-Container queries can also evaluate the computed style of the container element.
-The following container query checks if the {{cssxref("computed_value")}} of the container element's `color` is `blue`:
-
-```css
-@container style(color: blue) {
+@container (width > 400px) not (height > 400px) {
   /* <stylesheet> */
 }
 ```
@@ -89,7 +78,7 @@ The following container query checks if the {{cssxref("computed_value")}} of the
 A containment context can be named using the {{cssxref("container-name")}} property.
 
 ```css
-.container {
+.post {
   container-name: sidebar;
   container-type: inline-size;
 }
@@ -98,7 +87,7 @@ A containment context can be named using the {{cssxref("container-name")}} prope
 The shorthand syntax for this is to use {{cssxref("container")}} in the form `container: <name> / <type>`, for example:
 
 ```css
-.container {
+.post {
   container: sidebar / inline-size;
 }
 ```
@@ -112,6 +101,18 @@ In container queries, the {{cssxref("container-name")}} property is used to filt
 ```
 
 Details about usage and naming restrictions are described in the {{cssxref("container-name")}} page.
+
+### Style container queries
+
+Currently only size-based container queries have implementations across browsers.
+It is expected that `style()` container queries will allow checking the {{cssxref("computed_value")}} of a container in future:
+
+```css example-bad
+/* Not yet supported */
+@container style(color: blue;) {
+  /* <stylesheet> */
+}
+```
 
 ### Descriptors
 
@@ -144,12 +145,11 @@ The following descriptors can be used within the container condition:
 
 ### Basic example
 
-Given the following HTML example which is a card component with an image, a title, and some text:
+Given the following HTML example which is a card component with a title and some text:
 
 ```html
-<div class="container">
+<div class="post">
   <div class="card">
-    <img src="image.png" alt="Cat with two different color eyes" />
     <h2>Card title</h2>
     <p>Card content</p>
   </div>
@@ -159,32 +159,28 @@ Given the following HTML example which is a card component with an image, a titl
 A container context can be created using the `container-type` property:
 
 ```css
-.container {
+.post {
   container-type: inline-size;
 }
 ```
 
-The following example will apply styles to the `.card` element if it's in a container that is wider than 400px and the container's `background-color` is `blue`:
+The following example will apply styles to the `.card` element if it's in a container that is wider than 400px:
 
 ```css
-@container (min-width: 400px) and style(background-color: blue) {
+@container (min-width: 400px) {
   .card {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    font-size: 1.5em;
   }
 }
 ```
 
 ### Named container contexts
 
-Given the following HTML example which is a card component with an image, a title, and some text:
+Given the following HTML example which is a card component with a title, and some text:
 
 ```html
-<div class="container">
+<div class="post">
   <div class="card">
-    <img
-      src="image.png"
-      alt="A mostly white cat with a black heart on the forehead." />
     <h2>Card title</h2>
     <p>Card content</p>
   </div>
@@ -192,23 +188,21 @@ Given the following HTML example which is a card component with an image, a titl
 ```
 
 First create a container context using `container-type`, add the `container-name` property.
-
-> **Note:** A shorthand syntax for this declaration is described in the {{cssxref("container")}} page.
+The shorthand syntax for this declaration is described in the {{cssxref("container")}} page.
 
 ```css
-.container {
+.post {
   container-type: inline-size;
-  container-name: sidebar;
+  container-name: summary;
 }
 ```
 
 You can then target that container by adding the name to the container query:
 
 ```css
-@container sidebar (min-width: 400px) {
+@container summary (min-width: 400px) {
   .card {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    font-size: 1.5em;
   }
 }
 ```
@@ -218,11 +212,11 @@ You can then target that container by adding the name to the container query:
 It's not possible to target multiple containers in a single container query.
 It is possible to nest container queries which has the same effect.
 
-The following query evaluates to true and applies a style to child elements if the container named `card` is wider than 400px and it has an ancestor container that meets the style condition:
+The following query evaluates to true and applies a style to child elements if the container named `card` is wider than 400px and it has an ancestor container that has a width greater than 800px:
 
 ```css
-@container card (min-width: 400px) {
-  @container style(--responsive: true) {
+@container summary (min-width: 400px) {
+  @container (min-width: 800px) {
     /* <stylesheet> */
   }
 }

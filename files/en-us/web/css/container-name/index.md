@@ -36,14 +36,13 @@ container-name: <container-name>;
 
 ### Using a container name
 
-Given the following HTML example which is a card component with an image, a title, author details, and some text:
+Given the following HTML example which is a card component with a title and some text:
 
 ```html
 <div class="card">
   <div class="post-meta">
     <h2>Card title</h2>
-    <img src="image.png" alt="Cat with two different color eyes" />
-    <p>Author <a href="https://example.com">website</a> details.</p>
+    <p>My post details.</p>
   </div>
   <div class="post-excerpt">
     <p>
@@ -74,8 +73,8 @@ The following example has two container queries, one that will apply only to the
 
 ```css
 @container excerpt (min-width: 400px) {
-  a {
-    font-family: monospace;
+  p {
+    visibility: hidden;
   }
 }
 
@@ -104,12 +103,12 @@ This is useful if you want to target the same container with multiple container 
 
 ```css
 @container meta (max-width: 500px) {
-  li {
+  p {
     visibility: hidden;
   }
 }
 
-@container nav (orientation: landscape) {
+@container nav (max-height: 200px) {
   h2 {
     font-size: 1.5em;
   }
