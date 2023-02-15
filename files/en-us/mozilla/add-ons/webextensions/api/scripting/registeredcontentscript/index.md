@@ -38,7 +38,7 @@ Values of this type are objects. They contain these properties:
 - `runAt` {{optional_inline}}
   - : {{WebExtAPIRef("extensionTypes.RunAt")}}. Specifies when JavaScript files are injected into the web page. The default value is `document_idle`. In Firefox, `runAt` also affects the point where the CSS is inserted. In Chrome, `runAt` does not affect the CSS insertion point.
 - `world` {{optional_inline}}
-  - : The JavaScript world to run the script in. The default value is `ISOLATED`.
+  - : {{WebExtAPIRef("scripting.ExecutionWorld")}}. The execution environment for a script to execute in. The default value is `ISOLATED`.
 
 ## Browser compatibility
 
