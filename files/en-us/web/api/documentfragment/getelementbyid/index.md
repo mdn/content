@@ -155,5 +155,5 @@ output.append(
 
 ## See also
 
-- {{domxref("Document.getElementById")}}
+- {{domxref("Document.getElementById()")}}
 - {{domxref("DocumentFragment.querySelector()")}} and {{domxref("DocumentFragment.querySelectorAll()")}}for selectors via queries like `'div.myclass'`
