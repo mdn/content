@@ -46,6 +46,10 @@ This article provides information about the changes in Firefox 111 that affect d
 
 #### Media, WebRTC, and Web Audio
 
+- [`RTCInboundRtpStreamStats.trackIdentifier`](/en-US/docs/Web/API/RTCInboundRtpStreamStats#trackidentifier) is now supported.
+  This allows developers to associate `inbound-rtp` statistics with a particular track when using {{domxref("RTCPeerConnection.getStats()")}}.
+  (For more information see {{bug(1680606)}}.)
+
 #### Removals
 
 ### WebAssembly

@@ -84,7 +84,7 @@ browser.extension.getURL("");
 
 API permissions are specified as keywords, and each keyword names a [WebExtension API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) that the extension would like to use.
 
-The following keywords are currently available:
+These permissions are available in Manifest V2 and above unless otherwise noted:
 
 - `activeTab`
 - `alarms`
@@ -100,6 +100,9 @@ The following keywords are currently available:
 - `contextualIdentities`
 - `cookies`
 - `debugger`
+- `declarativeNetRequest`
+- `declarativeNetRequestFeedback`
+- `declarativeNetRequestWithHostAccess`
 - `dns`
 - `downloads`
 - `downloads.open`

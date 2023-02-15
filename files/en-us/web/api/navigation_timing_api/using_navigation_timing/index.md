@@ -48,7 +48,7 @@ In tandem with appropriate HTML and CSS, the result is:
 
 The values listed are for the {{HTMLElement("iframe")}} in which the sample is presented above.
 
-For a list of the available timing values you can look for in {{domxref("PerformanceTiming")}}, see the {{domxref("PerformanceTiming")}} interface's [Properties](/en-US/docs/Web/API/PerformanceTiming#properties) section.
+For a list of the available timing values you can look for in {{domxref("PerformanceTiming")}}, see the {{domxref("PerformanceTiming")}} interface's [Properties](/en-US/docs/Web/API/PerformanceTiming#instance_properties) section.
 
 ## Determining navigation type
 
