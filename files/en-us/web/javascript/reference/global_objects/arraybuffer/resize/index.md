@@ -31,9 +31,9 @@ resize(newLength)
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown in one of the following cases:
-    - The `ArrayBuffer` is not resizable.
-    - `newLength` is larger than the {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}} of the `ArrayBuffer`.
+  - : Thrown if the `ArrayBuffer` is detached or is not resizable.
+- {{jsxref("RangeError")}}
+  - : Thrown if `newLength` is larger than the {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}} of the `ArrayBuffer`.
 
 ## Description
 

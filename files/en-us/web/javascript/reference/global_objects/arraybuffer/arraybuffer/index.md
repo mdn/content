@@ -42,7 +42,9 @@ A new `ArrayBuffer` object of the specified size, with its {{jsxref("ArrayBuffer
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if the `length` or `maxByteLength` is larger than {{jsxref("Number.MAX_SAFE_INTEGER")}} (≥ 2<sup>53</sup>) or negative.
+  - : Thrown if one of the following is true:
+    - `length` or `maxByteLength` is larger than {{jsxref("Number.MAX_SAFE_INTEGER")}} (≥ 2<sup>53</sup>) or negative.
+    - `length` is larger than `maxByteLength`.
 
 ## Examples
 

@@ -29,10 +29,9 @@ grow(newLength)
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown in one of the following cases:
-    - The `SharedArrayBuffer` is not growable.
-    - `newLength` is larger than the {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} of the `SharedArrayBuffer`.
-    - `newLength` is smaller than the {{jsxref("SharedArrayBuffer/byteLength", "byteLength")}} of the `SharedArrayBuffer`.
+  - : Thrown if the `SharedArrayBuffer` is not growable.
+- {{jsxref("RangeError")}}
+  - : Thrown if `newLength` is larger than the {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} of the `SharedArrayBuffer` or smaller than the {{jsxref("SharedArrayBuffer/byteLength", "byteLength")}}.
 
 ## Description
 
