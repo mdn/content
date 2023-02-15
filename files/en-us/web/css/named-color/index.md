@@ -27,8 +27,10 @@ color: transparent;
 
 ### Value
 
+Named colors consists of standard colors, and of the `transparent` keyword.
+
 #### Standard colors
-  
+
 The following colors have a keyword associated to them:
 
 <table>
