@@ -6,20 +6,20 @@ tags:
   - CSS
   - CSS Property
   - Reference
+  - filter-functions
+  - filter
+  - backdrop-filter
   - SVG
   - SVG Filter
-  - filter-functions
-  - Example
-  - filters
-  - Guide
-  - Web
 ---
 
 {{CSSRef}}
 
-**CSS filters** are represented by the {{cssxref("&lt;filter-function&gt;")}} data type that define graphical effects that can change the appearance of an image. These effects, or functions, are used in the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.
+CSS Filters enable may visual effects that used to be reserved to costly image editing applications. The CSS {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties provides access to effects like blur or color shifting, impacting the rendering of images, backgrounds, and borders.
 
-Included in the CSS standard are several functions that achieve predefined effects. You can also reference an SVG filter with a URL to an [SVG filter element](/en-US/docs/Web/SVG/Element/filter).
+The {{cssxref("filter_effects")}} module defines the {{cssxref("&lt;filter-function&gt;")}} data type which provides 10 different graphical effects that can alter the appearance of an image as well as the ability to reference an SVG filter with a URL to an [SVG filter element](/en-US/docs/Web/SVG/Element/filter).
+
+This guide defines the 10 CSS filter functions and their SVG equivalents.
 
 ## Filter functions
 
@@ -44,39 +44,32 @@ filter: url(resources.svg#c1);
 The {{cssxref("filter-function/blur", "blur()")}} function applies a Gaussian blur to the input image. The value of `radius` defines the value of the standard deviation to the Gaussian function, or how many pixels on the screen blend into each other, so a larger value will create more blur. The initial value for interpolation is `0`. The parameter is specified as a CSS length, but does not accept percentage values.
 
 ```css
-filter: blur(5px);
+#filter {
+  filter: blur(5px);
+}
 ```
 
 ```html hidden
-<table class="standard-table">
+<table>
   <thead>
     <tr>
-      <th style="text-align: left;" scope="col">Original image</th>
-      <th style="text-align: left;" scope="col">Live example</th>
-      <th style="text-align: left;" scope="col">SVG Equivalent</th>
-      <th style="text-align: left;" scope="col">Static example</th>
+      <th>Original image</th>
+      <th>Live example</th>
+      <th>SVG Equivalent</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        <img
-          id="img1"
-          class="internal default"
-          src="test_form_2.jpeg"
-          style="width: 100%;" />
+        <img src="flag.jpg" alt="Pride flag" />
       </td>
       <td>
-        <img
-          id="img2"
-          class="internal default"
-          src="test_form_2.jpeg"
-          style="width: 100%;" />
+        <img class="filter" src="flag.jpg" alt="Pride flag" />
       </td>
       <td>
         <div class="svg-container">
           <svg
-            id="img3"
+            id="svg"
             overflow="visible"
             viewBox="0 0 212 161"
             color-interpolation-filters="sRGB">
@@ -84,67 +77,16 @@ filter: blur(5px);
               <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" />
             </filter>
             <image
-              xlink:href="test_form_2.jpeg"
+              xlink:href="flag.jpg"
               filter="url(#svgBlur)"
-              width="212px"
-              height="161px" />
+              width="220"
+              height="220" />
           </svg>
         </div>
-      </td>
-      <td>
-        <img
-          id="img4"
-          class="internal default"
-          src="test_form_2_s.jpg"
-          style="width: 100%;" />
       </td>
     </tr>
   </tbody>
 </table>
-```
-
-```css hidden
-html {
-  height: 100%;
-}
-body {
-  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida,
-    Arial, Helvetica, sans-serif;
-  color: rgb(51, 51, 51);
-  height: 100%;
-  overflow: hidden;
-}
-#img2 {
-  width: 100%;
-  height: auto;
-  filter: blur(5px);
-}
-table.standard-table {
-  border: 1px solid rgb(187, 187, 187);
-  border-collapse: collapse;
-  border-spacing: 0;
-  margin: 0 0 1.286em;
-  height: 100%;
-  width: 85%;
-}
-table.standard-table th {
-  border: 1px solid rgb(187, 187, 187);
-  padding: 0px 5px;
-  background: none repeat scroll 0% 0% rgb(238, 238, 238);
-  text-align: left;
-  font-weight: bold;
-}
-table.standard-table td {
-  padding: 5px;
-  border: 1px solid rgb(204, 204, 204);
-  text-align: left;
-  vertical-align: top;
-  width: 25%;
-  height: auto;
-}
-#img3 {
-  height: 100%;
-}
 ```
 
 ```svg
@@ -178,20 +120,19 @@ filter: brightness(2);
 ```
 
 ```html hidden
-<table class="standard-table">
+<table>
   <thead>
     <tr>
-      <th style="text-align: left;" scope="col">Original image</th>
-      <th style="text-align: left;" scope="col">Live example</th>
-      <th style="text-align: left;" scope="col">SVG Equivalent</th>
-      <th style="text-align: left;" scope="col">Static example</th>
+      <th>Original image</th>
+      <th>Live example</th>
+      <th>SVG Equivalent</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form.jpg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form.jpg" style="width: 100%;" /></td>
-      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewBox="0 0 286 217" color-interpolation-filters="sRGB">
+      <td><img src="test_form.jpg" style="width: 100%;" /></td>
+      <td><img class="filter" src="test_form.jpg" style="width: 100%;" /></td>
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="svg" viewBox="0 0 286 217" color-interpolation-filters="sRGB">
  <filter id="brightness">
     <feComponentTransfer>
         <feFuncR type="linear" slope="2"/>
@@ -199,55 +140,15 @@ filter: brightness(2);
         <feFuncB type="linear" slope="2"/>
     </feComponentTransfer>
   </filter>
-  <image xlink:href="test_form.jpg" filter="url(#brightness)" width="286px" height="217px" />
+  <image xlink:href="flag.jpg" filter="url(#brightness)" width="220" height="220" />
 </svg><div></td>
-      <td><img id="img4" class="internal default" src="test_form_s.jpg" style="width: 100%;" /></td>
-    </tr>
   </tbody>
 </table>
 ```
 
-```css hidden
-html {
-  height: 100%;
-}
-body {
-  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida,
-    Arial, Helvetica, sans-serif;
-  color: rgb(51, 51, 51);
-  height: 100%;
-  overflow: hidden;
-}
-#img2 {
-  width: 100%;
-  height: auto;
+```css
+#filter {
   filter: brightness(2);
-}
-table.standard-table {
-  border: 1px solid rgb(187, 187, 187);
-  border-collapse: collapse;
-  border-spacing: 0px;
-  margin: 0px 0px 1.286em;
-  height: 100%;
-  width: 85%;
-}
-table.standard-table th {
-  border: 1px solid rgb(187, 187, 187);
-  padding: 0px 5px;
-  background: none repeat scroll 0% 0% rgb(238, 238, 238);
-  text-align: left;
-  font-weight: bold;
-}
-table.standard-table td {
-  padding: 5px;
-  border: 1px solid rgb(204, 204, 204);
-  text-align: left;
-  vertical-align: top;
-  width: 25%;
-  height: auto;
-}
-#img3 {
-  height: 100%;
 }
 ```
 
@@ -274,20 +175,19 @@ filter: contrast(200%);
 ```
 
 ```html hidden
-<table class="standard-table">
+<table>
   <thead>
     <tr>
-      <th style="text-align: left;" scope="col">Original image</th>
-      <th style="text-align: left;" scope="col">Live example</th>
-      <th style="text-align: left;" scope="col">SVG Equivalent</th>
-      <th style="text-align: left;" scope="col">Static example</th>
+      <th>Original image</th>
+      <th>Live example</th>
+      <th>SVG Equivalent</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_3.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_3.jpeg" style="width: 100%;" /></td>
-      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewBox="0 0 240 151" color-interpolation-filters="sRGB">
+      <td><img src="flag.jpg" alt="Pride flag" /></td>
+      <td><img class="filter" src="flag.jpg" alt="Pride flag" /></td>
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="svg" viewBox="0 0 240 151" color-interpolation-filters="sRGB">
  <filter id="contrast">
     <feComponentTransfer>
       <feFuncR type="linear" slope="2" intercept="-0.5"/>
@@ -295,55 +195,17 @@ filter: contrast(200%);
       <feFuncB type="linear" slope="2" intercept="-0.5"/>
     </feComponentTransfer>
   </filter>
-  <image xlink:href="test_form_3.jpeg" filter="url(#contrast)" width="240px" height="151px" />
+  <image xlink:href="flag.jpg" filter="url(#contrast)" width="220" height="220" />
 </svg><div></td>
-      <td><img id="img4" class="internal default" src="test_form_3_s.jpg" style="width: 100%;" /></td>
+      <td><img id="img4" src="flag.jpg" alt="Pride flag" /></td>
     </tr>
   </tbody>
 </table>
 ```
 
-```css hidden
-html {
-  height: 100%;
-}
-body {
-  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida,
-    Arial, Helvetica, sans-serif;
-  color: rgb(51, 51, 51);
-  height: 100%;
-  overflow: hidden;
-}
-#img2 {
-  width: 100%;
-  height: auto;
+```css
+#filter {
   filter: contrast(200%);
-}
-table.standard-table {
-  border: 1px solid rgb(187, 187, 187);
-  border-collapse: collapse;
-  border-spacing: 0px;
-  margin: 0px 0px 1.286em;
-  width: 85%;
-  height: 100%;
-}
-table.standard-table th {
-  border: 1px solid rgb(187, 187, 187);
-  padding: 0px 5px;
-  background: none repeat scroll 0% 0% rgb(238, 238, 238);
-  text-align: left;
-  font-weight: bold;
-}
-table.standard-table td {
-  padding: 5px;
-  border: 1px solid rgb(204, 204, 204);
-  text-align: left;
-  vertical-align: top;
-  width: 25%;
-  height: auto;
-}
-#img3 {
-  height: 100%;
 }
 ```
 
@@ -382,13 +244,12 @@ filter: drop-shadow(16px 16px 10px black);
 ```
 
 ```html hidden
-<table class="standard-table">
+<table>
   <thead>
     <tr>
-      <th style="text-align: left;" scope="col">Original image</th>
-      <th style="text-align: left;" scope="col">Live example</th>
-      <th style="text-align: left;" scope="col">SVG Equivalent</th>
-      <th style="text-align: left;" scope="col">Static example</th>
+      <th>Original image</th>
+      <th>Live example</th>
+      <th>SVG Equivalent</th>
     </tr>
   </thead>
   <tbody>
@@ -396,18 +257,15 @@ filter: drop-shadow(16px 16px 10px black);
       <td>
         <img
           alt="A rectangular image of a pencil marking a multiple choice Optical Mark Recognition, or OMR, form."
-          id="img1"
-          class="internal default"
-          src="test_form_4.jpeg"
-          style="width: 100%;" />
+          src="flag.jpg"
+          alt="Pride flag" />
       </td>
       <td>
         <img
           alt="The OMR photo with a black drop shadow visible below the image and to the right. The offset and blur-radius values produce a soft, rounded shadow."
-          id="img2"
-          class="internal default"
-          src="test_form_4.jpeg"
-          style="width: 100%;" />
+          class="filter"
+          src="flag.jpg"
+          alt="Pride flag" />
       </td>
       <td>
         <div class="svg-container">
@@ -415,7 +273,7 @@ filter: drop-shadow(16px 16px 10px black);
             aria-labelledby="svg-drop-shadow-title svg-drop-shadow-desc"
             role="img"
             xmlns="http://www.w3.org/2000/svg"
-            id="img3"
+            id="svg"
             overflow="visible"
             viewBox="0 0 213 161"
             color-interpolation-filters="sRGB">
@@ -433,9 +291,9 @@ filter: drop-shadow(16px 16px 10px black);
             <defs>
               <image
                 id="MyImage"
-                xlink:href="test_form_4.jpeg"
-                width="213px"
-                height="161px" />
+                xlink:href="flag.jpg"
+                width="220"
+                height="220" />
             </defs>
             <filter
               id="drop-shadow"
@@ -455,9 +313,8 @@ filter: drop-shadow(16px 16px 10px black);
         <img
           alt="A screenshot of the OMR image with drop shadow applied to show the effect for browsers that do not support the CSS or SVG filters."
           id="img4"
-          class="internal default"
-          src="test_form_4_s.jpg"
-          style="width: 100%;" />
+          src="flag.jpg"
+          alt="Pride flag" />
       </td>
     </tr>
     <tr>
@@ -465,17 +322,15 @@ filter: drop-shadow(16px 16px 10px black);
         <img
           alt="An edited version of the original image that uses transparency to achieve an irregular shape at the bottom and add a small hole. The image also has a gradient transparency that starts on the right edge and fades towards the other side."
           id="img11"
-          class="internal default"
-          src="test_form_4_irregular-shape_opacity-gradient.png"
-          style="width: 100%;" />
+          src="flag.jpg"
+          alt="Pride flag" />
       </td>
       <td>
         <img
           alt="Image with black drop shadow applied which is visible below and to the right of the image. The shadow follows the curves of the irregularly shaped bottom and is also visible through the holes The shadow color is not fully opaque, so it displays as a dark gray over the white background of the page and is visible below most of the image, which makes it appear more gray than the original example."
           id="img12"
-          class="internal default"
-          src="test_form_4_irregular-shape_opacity-gradient.png"
-          style="width: 100%;" />
+          src="flag.jpg"
+          alt="Pride flag" />
       </td>
       <td>
         <div class="svg-container">
@@ -501,8 +356,8 @@ filter: drop-shadow(16px 16px 10px black);
               <image
                 id="MyImage2"
                 xlink:href="test_form_4_irregular-shape_opacity-gradient.png"
-                width="213px"
-                height="161px" />
+                width="220"
+                height="220" />
             </defs>
             <filter
               id="drop-shadow2"
@@ -521,70 +376,21 @@ filter: drop-shadow(16px 16px 10px black);
           </svg>
         </div>
       </td>
-      <td>
-        <img
-          alt="A screenshot of the previous example image with drop shadow applied to show the effect in browsers that do not support the CSS or SVG filters."
-          id="img14"
-          class="internal default"
-          src="test_form_4_irregular-shape_opacity-gradient_drop-shadow.png"
-          style="width: 100%;" />
-      </td>
     </tr>
   </tbody>
 </table>
 ```
 
-```css hidden
-html {
-  height: 100%;
-}
-body {
-  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida,
-    Arial, Helvetica, sans-serif;
-  color: rgb(51, 51, 51);
-  height: 100%;
-  overflow: hidden;
-}
-#img2 {
-  width: 100%;
-  height: auto;
+```css
+#filter {
   filter: drop-shadow(16px 16px 10px black);
 }
 #img12 {
-  width: 100%;
-  height: auto;
   filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
 }
-table.standard-table {
-  border: 1px solid rgb(187, 187, 187);
-  border-collapse: collapse;
-  border-spacing: 0px;
-  margin: 0px 0px 1.286em;
-  width: 85%;
-  height: 100%;
-}
+
 #irregular-shape {
   width: 64%;
-}
-table.standard-table th {
-  border: 1px solid rgb(187, 187, 187);
-  padding: 0px 5px;
-  background: none repeat scroll 0% 0% rgb(238, 238, 238);
-  text-align: left;
-  font-weight: bold;
-}
-table.standard-table td {
-  padding: 5px;
-  border: 1px solid rgb(204, 204, 204);
-  text-align: left;
-  vertical-align: top;
-  width: 25%;
-  height: auto;
-}
-#img3,
-#img13 {
-  width: 100%;
-  height: auto;
 }
 ```
 
@@ -595,24 +401,25 @@ table.standard-table td {
 The {{cssxref("filter-function/grayscale", "grayscale()")}} function converts the input image to grayscale. The value of `amount` defines the proportion of the conversion. A value of `100%` is completely grayscale. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The initial value for interpolation is `0`.
 
 ```css
-filter: grayscale(100%);
+#filter {
+  filter: grayscale(100%);
+}
 ```
 
 ```html hidden
-<table class="standard-table">
+<table>
   <thead>
     <tr>
-      <th style="text-align: left;" scope="col">Original image</th>
-      <th style="text-align: left;" scope="col">Live example</th>
-      <th style="text-align: left;" scope="col">SVG Equivalent</th>
-      <th style="text-align: left;" scope="col">Static example</th>
+      <th>Original image</th>
+      <th>Live example</th>
+      <th>SVG Equivalent</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_5.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_5.jpeg" style="width: 100%;" /></td>
-      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewBox="0 0 276 184" color-interpolation-filters="sRGB">
+      <td><img src="flag.jpg" alt="Pride flag" /></td>
+      <td><img class="filter" src="flag.jpg" alt="Pride flag" /></td>
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="svg" viewBox="0 0 276 184" color-interpolation-filters="sRGB">
  <filter id="grayscale">
     <feColorMatrix type="matrix"
                values="0.2126 0.7152 0.0722 0 0
@@ -620,56 +427,11 @@ filter: grayscale(100%);
                        0.2126 0.7152 0.0722 0 0
                        0 0 0 1 0"/>
   </filter>
-  <image xlink:href="test_form_5.jpeg" filter="url(#grayscale)" width="276px" height="184px" />
+  <image xlink:href="flag.jpg" filter="url(#grayscale)" width="220" height="220" />
 </svg><div></td>
-      <td><img id="img4" class="internal default" src="test_form_5_s.jpg" style="width: 100%;" /></td>
     </tr>
   </tbody>
 </table>
-```
-
-```css hidden
-html {
-  height: 100%;
-}
-body {
-  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida,
-    Arial, Helvetica, sans-serif;
-  color: rgb(51, 51, 51);
-  height: 100%;
-  overflow: hidden;
-}
-#img2 {
-  width: 100%;
-  height: auto;
-  filter: grayscale(100%);
-}
-table.standard-table {
-  border: 1px solid rgb(187, 187, 187);
-  border-collapse: collapse;
-  border-spacing: 0px;
-  margin: 0px 0px 1.286em;
-  width: 85%;
-  height: 100%;
-}
-table.standard-table th {
-  border: 1px solid rgb(187, 187, 187);
-  padding: 0px 5px;
-  background: none repeat scroll 0% 0% rgb(238, 238, 238);
-  text-align: left;
-  font-weight: bold;
-}
-table.standard-table td {
-  padding: 5px;
-  border: 1px solid rgb(204, 204, 204);
-  text-align: left;
-  vertical-align: top;
-  width: 25%;
-  height: auto;
-}
-#img3 {
-  height: 100%;
-}
 ```
 
 {{EmbedLiveSample('grayscale','100%','209px','','', 'no-codepen')}}
@@ -683,73 +445,33 @@ filter: hue-rotate(90deg);
 ```
 
 ```html hidden
-<table class="standard-table">
+<table>
   <thead>
     <tr>
-      <th style="text-align: left;" scope="col">Original image</th>
-      <th style="text-align: left;" scope="col">Live example</th>
-      <th style="text-align: left;" scope="col">SVG Equivalent</th>
-      <th style="text-align: left;" scope="col">Static example</th>
+      <th>Original image</th>
+      <th>Live example</th>
+      <th>SVG Equivalent</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_6.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_6.jpeg" style="width: 100%;" /></td>
-      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewBox="0 0 266 190" color-interpolation-filters="sRGB">
+      <td><img src="flag.jpg" alt="Pride flag" /></td>
+      <td><img class="filter" src="flag.jpg" alt="Pride flag" /></td>
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="svg" viewBox="0 0 266 190" color-interpolation-filters="sRGB">
  <filter id="hue-rotate">
     <feColorMatrix type="hueRotate"
                values="90"/>
   </filter>
-  <image xlink:href="test_form_6.jpeg" filter="url(#hue-rotate)" width="266px" height="190px" />
+  <image xlink:href="flag.jpg" filter="url(#hue-rotate)" width="220" height="220" />
 </svg><div></td>
-      <td><img id="img4" class="internal default" src="test_form_6_s.jpg" style="width: 100%;" /></td>
     </tr>
   </tbody>
 </table>
 ```
 
-```css hidden
-html {
-  height: 100%;
-}
-body {
-  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida,
-    Arial, Helvetica, sans-serif;
-  color: rgb(51, 51, 51);
-  height: 100%;
-  overflow: hidden;
-}
-#img2 {
-  width: 100%;
-  height: auto;
+```css
+#filter {
   filter: hue-rotate(90deg);
-}
-table.standard-table {
-  border: 1px solid rgb(187, 187, 187);
-  border-collapse: collapse;
-  border-spacing: 0px;
-  margin: 0px 0px 1.286em;
-  width: 85%;
-  height: 100%;
-}
-table.standard-table th {
-  border: 1px solid rgb(187, 187, 187);
-  padding: 0px 5px;
-  background: none repeat scroll 0% 0% rgb(238, 238, 238);
-  text-align: left;
-  font-weight: bold;
-}
-table.standard-table td {
-  padding: 5px;
-  border: 1px solid rgb(204, 204, 204);
-  text-align: left;
-  vertical-align: top;
-  width: 25%;
-  height: auto;
-}
-#img3 {
-  height: 100%;
 }
 ```
 
@@ -770,24 +492,25 @@ table.standard-table td {
 The {{cssxref("filter-function/invert", "invert()")}} function inverts the samples in the input image. The value of `amount` defines the proportion of the conversion. A value of `100%` is completely inverted. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The initial value for interpolation is `0`.
 
 ```css
-filter: invert(100%);
+#filter {
+  filter: invert(100%);
+}
 ```
 
 ```html hidden
-<table class="standard-table">
+<table>
   <thead>
     <tr>
-      <th style="text-align: left;" scope="col">Original image</th>
-      <th style="text-align: left;" scope="col">Live example</th>
-      <th style="text-align: left;" scope="col">SVG Equivalent</th>
-      <th style="text-align: left;" scope="col">Static example</th>
+      <th>Original image</th>
+      <th>Live example</th>
+      <th>SVG Equivalent</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_7.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_7.jpeg" style="width: 100%;" /></td>
-      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewBox="0 0 183 276" color-interpolation-filters="sRGB">
+      <td><img src="flag.jpg" alt="Pride flag" /></td>
+      <td><img class="filter" src="flag.jpg" alt="Pride flag" /></td>
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="svg" viewBox="0 0 183 276" color-interpolation-filters="sRGB">
  <filter id="invert">
     <feComponentTransfer>
         <feFuncR type="table" tableValues="1 0"/>
@@ -795,56 +518,11 @@ filter: invert(100%);
         <feFuncB type="table" tableValues="1 0"/>
     </feComponentTransfer>
  </filter>
- <image xlink:href="test_form_7.jpeg" filter="url(#invert)" width="183px" height="276px" />
+ <image xlink:href="flag.jpg" filter="url(#invert)" width="220" height="220" />
 </svg><div></td>
-      <td><img id="img4" class="internal default" src="test_form_7_s.jpg" style="width: 100%;" /></td>
     </tr>
   </tbody>
 </table>
-```
-
-```css hidden
-html {
-  height: 100%;
-}
-body {
-  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida,
-    Arial, Helvetica, sans-serif;
-  color: rgb(51, 51, 51);
-  height: 100%;
-  overflow: hidden;
-}
-#img2 {
-  width: 100%;
-  height: auto;
-  filter: invert(100%);
-}
-table.standard-table {
-  border: 1px solid rgb(187, 187, 187);
-  border-collapse: collapse;
-  border-spacing: 0px;
-  margin: 0px 0px 1.286em;
-  width: 85%;
-  height: 100%;
-}
-table.standard-table th {
-  border: 1px solid rgb(187, 187, 187);
-  padding: 0px 5px;
-  background: none repeat scroll 0% 0% rgb(238, 238, 238);
-  text-align: left;
-  font-weight: bold;
-}
-table.standard-table td {
-  padding: 5px;
-  border: 1px solid rgb(204, 204, 204);
-  text-align: left;
-  vertical-align: top;
-  width: 25%;
-  height: auto;
-}
-#img3 {
-  height: 100%;
-}
 ```
 
 {{EmbedLiveSample('invert','100%','407px','','', 'no-codepen')}}
@@ -853,79 +531,35 @@ table.standard-table td {
 
 The {{cssxref("filter-function/opacity", "opacity()")}} function applies transparency to the samples in the input image. The value of `amount` defines the proportion of the conversion. A value of `0%` is completely transparent. A value of `100%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. This is equivalent to multiplying the input image samples by amount. The initial value for interpolation is `1`. This function is similar to the more established {{cssxref("opacity")}} property; the difference is that with filters, some browsers provide hardware acceleration for better performance.
 
-```css
-filter: opacity(50%);
-```
-
 ```html hidden
-<table class="standard-table">
+<table>
   <thead>
     <tr>
-      <th style="text-align: left;" scope="col">Original image</th>
-      <th style="text-align: left;" scope="col">Live example</th>
-      <th style="text-align: left;" scope="col">SVG Equivalent</th>
-      <th style="text-align: left;" scope="col">Static example</th>
+      <th>Original image</th>
+      <th>Live example</th>
+      <th>SVG Equivalent</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_14.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_14.jpeg" style="width: 100%;" /></td>
-      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewBox="0 0 276 183" color-interpolation-filters="sRGB">
+      <td><img src="flag.jpg" alt="Pride flag" /></td>
+      <td><img class="filter" src="flag.jpg" alt="Pride flag" /></td>
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="svg" viewBox="0 0 276 183" color-interpolation-filters="sRGB">
  <filter id="opacity">
     <feComponentTransfer>
         <feFuncA type="table" tableValues="0 0.5">
     </feComponentTransfer>
  </filter>
- <image xlink:href="test_form_14.jpeg" filter="url(#opacity)" width="276px" height="183px" />
+ <image xlink:href="flag.jpg" filter="url(#opacity)" width="220" height="220" />
 </svg><div></td>
-      <td><img id="img4" class="internal default" src="test_form_14_s.jpg" style="width: 100%;" /></td>
     </tr>
   </tbody>
 </table>
 ```
 
-```css hidden
-html {
-  height: 100%;
-}
-body {
-  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida,
-    Arial, Helvetica, sans-serif;
-  color: rgb(51, 51, 51);
-  height: 100%;
-  overflow: hidden;
-}
-#img2 {
-  width: 100%;
-  height: auto;
+```css
+#filter {
   filter: opacity(50%);
-}
-table.standard-table {
-  border: 1px solid rgb(187, 187, 187);
-  border-collapse: collapse;
-  border-spacing: 0px;
-  margin: 0px 0px 1.286em;
-  width: 85%;
-  height: 100%;
-}
-table.standard-table th {
-  border: 1px solid rgb(187, 187, 187);
-  padding: 0px 5px;
-  background: none repeat scroll 0% 0% rgb(238, 238, 238);
-  text-align: left;
-  font-weight: bold;
-}
-table.standard-table td {
-  padding: 5px;
-  border: 1px solid rgb(204, 204, 204);
-  text-align: left;
-  vertical-align: top;
-  width: 25%;
-  height: auto;
-}
-#img3 {
-  height: 100%;
 }
 ```
 
@@ -935,78 +569,34 @@ table.standard-table td {
 
 The {{cssxref("filter-function/saturate", "saturate()")}} function saturates the input image. The value of `amount` defines the proportion of the conversion. A value of `0%` is completely un-saturated. A value of `100%` leaves the input unchanged. Other values are linear multipliers on the effect. Values of amount over `100%` are allowed, providing super-saturated results. The initial value for interpolation is `1`.
 
-```css
-filter: saturate(200%);
-```
-
 ```html hidden
-<table class="standard-table">
+<table>
   <thead>
     <tr>
-      <th style="text-align: left;" scope="col">Original image</th>
-      <th style="text-align: left;" scope="col">Live example</th>
-      <th style="text-align: left;" scope="col">SVG Equivalent</th>
-      <th style="text-align: left;" scope="col">Static example</th>
+      <th>Original image</th>
+      <th>Live example</th>
+      <th>SVG Equivalent</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_9.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_9.jpeg" style="width: 100%;" /></td>
-      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewBox="0 0 201 239" color-interpolation-filters="sRGB">
+      <td><img src="flag.jpg" alt="Pride flag" /></td>
+      <td><img class="filter" src="flag.jpg" alt="Pride flag" /></td>
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="svg" viewBox="0 0 201 239" color-interpolation-filters="sRGB">
  <filter id="saturate">
     <feColorMatrix type="saturate"
                values="2"/>
  </filter>
- <image xlink:href="test_form_9.jpeg" filter="url(#saturate)" width="201px" height="239px" />
+ <image xlink:href="flag.jpg" filter="url(#saturate)" width="220" height="220" />
 </svg><div></td>
-      <td><img id="img4" class="internal default" src="test_form_9_s.jpg" style="width: 100%;" /></td>
     </tr>
   </tbody>
 </table>
 ```
 
-```css hidden
-html {
-  height: 100%;
-}
-body {
-  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida,
-    Arial, Helvetica, sans-serif;
-  color: rgb(51, 51, 51);
-  height: 100%;
-  overflow: hidden;
-}
-#img2 {
-  width: 100%;
-  height: auto;
+```css
+#filter {
   filter: saturate(200%);
-}
-table.standard-table {
-  border: 1px solid rgb(187, 187, 187);
-  border-collapse: collapse;
-  border-spacing: 0px;
-  margin: 0px 0px 1.286em;
-  width: 85%;
-  height: 100%;
-}
-table.standard-table th {
-  border: 1px solid rgb(187, 187, 187);
-  padding: 0px 5px;
-  background: none repeat scroll 0% 0% rgb(238, 238, 238);
-  text-align: left;
-  font-weight: bold;
-}
-table.standard-table td {
-  padding: 5px;
-  border: 1px solid rgb(204, 204, 204);
-  text-align: left;
-  vertical-align: top;
-  width: 25%;
-  height: auto;
-}
-#img3 {
-  height: 100%;
 }
 ```
 
@@ -1016,81 +606,48 @@ table.standard-table td {
 
 The {{cssxref("filter-function/sepia", "sepia()")}} function converts the input image to sepia. The value of `amount` defines the proportion of the conversion. A value of `100%` is completely sepia. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The initial value for interpolation is `0`.
 
-```css
-filter: sepia(100%);
-```
-
 ```html hidden
-<table class="standard-table">
+<table>
   <thead>
     <tr>
-      <th style="text-align: left;" scope="col">Original image</th>
-      <th style="text-align: left;" scope="col">Live example</th>
-      <th style="text-align: left;" scope="col">SVG Equivalent</th>
-      <th style="text-align: left;" scope="col">Static example</th>
+      <th>Original image</th>
+      <th>Live example</th>
+      <th>SVG Equivalent</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_12.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_12.jpeg" style="width: 100%;" /></td>
-      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewBox="0 0 259 194" color-interpolation-filters="sRGB">
- <filter id="sepia">
-    <feColorMatrix type="matrix"
-               values="0.393 0.769 0.189 0 0
+      <td><img src="flag.jpg" alt="Pride flag" /></td>
+      <td><img class="filter" src="flag.jpg" alt="Pride flag" /></td>
+      <td>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          id="svg"
+          viewBox="0 0 259 194"
+          color-interpolation-filters="sRGB">
+          <filter id="sepia">
+            <feColorMatrix
+              type="matrix"
+              values="0.393 0.769 0.189 0 0
                        0.349 0.686 0.168 0 0
                        0.272 0.534 0.131 0 0
-                       0 0 0 1 0"/>
- </filter>
- <image xlink:href="test_form_12.jpeg" filter="url(#sepia)" width="259px" height="194px" />
-</svg><div></td>
-      <td><img id="img4" class="internal default" src="test_form_12_s.jpg" style="width: 100%;" /></td>
+                       0 0 0 1 0" />
+          </filter>
+          <image
+            xlink:href="flag.jpg"
+            filter="url(#sepia)"
+            width="220"
+            height="220" />
+        </svg>
+      </td>
     </tr>
   </tbody>
 </table>
 ```
 
-```css hidden
-html {
-  height: 100%;
-}
-body {
-  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida,
-    Arial, Helvetica, sans-serif;
-  color: rgb(51, 51, 51);
-  height: 100%;
-  overflow: hidden;
-}
-#img2 {
-  width: 100%;
-  height: auto;
+```css
+#filter {
   filter: sepia(100%);
-}
-table.standard-table {
-  border: 1px solid rgb(187, 187, 187);
-  border-collapse: collapse;
-  border-spacing: 0px;
-  margin: 0px 0px 1.286em;
-  width: 85%;
-  height: 100%;
-}
-table.standard-table th {
-  border: 1px solid rgb(187, 187, 187);
-  padding: 0px 5px;
-  background: none repeat scroll 0% 0% rgb(238, 238, 238);
-  text-align: left;
-  font-weight: bold;
-}
-table.standard-table td {
-  padding: 5px;
-  border: 1px solid rgb(204, 204, 204);
-  text-align: left;
-  vertical-align: top;
-  width: 25%;
-  height: auto;
-}
-#img3 {
-  height: 100%;
 }
 ```
 
@@ -1100,88 +657,30 @@ table.standard-table td {
 
 You may combine any number of functions to manipulate the rendering. The following example enhances the contrast and brightness of the image:
 
-```css
-filter: contrast(175%) brightness(103%);
-```
-
 ```html hidden
-<table class="standard-table">
+<table>
   <thead>
     <tr>
-      <th style="text-align: left;" scope="col">Original image</th>
-      <th style="text-align: left;" scope="col">Live example</th>
-      <th style="text-align: left;" scope="col">Static example</th>
+      <th>Original image</th>
+      <th>Live example</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        <img
-          id="img1"
-          class="internal default"
-          src="test_form_8.jpeg"
-          style="width: 100%;" />
+        <img src="flag.jpg" alt="Pride flag" />
       </td>
       <td>
-        <img
-          id="img2"
-          class="internal default"
-          src="test_form_8.jpeg"
-          style="width: 100%;" />
-      </td>
-      <td>
-        <img
-          id="img4"
-          class="internal default"
-          src="test_form_8_s.jpg"
-          style="width: 100%;" />
+        <img class="filter" src="flag.jpg" alt="Pride flag" />
       </td>
     </tr>
   </tbody>
 </table>
 ```
 
-```css hidden
-html {
-  height: 100%;
-}
-body {
-  font: 14px/1.286 "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", Lucida,
-    Arial, Helvetica, sans-serif;
-  color: rgb(51, 51, 51);
-  height: 100%;
-  overflow: hidden;
-}
-#img2 {
-  width: 100%;
-  height: auto;
+```css
+#filter {
   filter: contrast(175%) brightness(103%);
-}
-table.standard-table {
-  border: 1px solid rgb(187, 187, 187);
-  border-collapse: collapse;
-  border-spacing: 0px;
-  margin: 0px 0px 1.286em;
-  width: 85%;
-  height: 100%;
-}
-table.standard-table th {
-  border: 1px solid rgb(187, 187, 187);
-  padding: 0px 5px;
-  background: none repeat scroll 0% 0% rgb(238, 238, 238);
-  text-align: left;
-  font-weight: bold;
-}
-table.standard-table td {
-  padding: 5px;
-  border: 1px solid rgb(204, 204, 204);
-  text-align: left;
-  vertical-align: top;
-  width: 25%;
-  height: auto;
-}
-#img3 {
-  height: 100%;
 }
 ```
 
