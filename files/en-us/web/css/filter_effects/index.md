@@ -10,6 +10,7 @@ tags:
   - Reference
 spec-urls: 
   - https://drafts.fxtf.org/filter-effects-2/
+  - https://drafts.fxtf.org/filter-effects-1/
 ---
 
 {{CSSRef}}
