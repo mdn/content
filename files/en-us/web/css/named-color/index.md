@@ -27,126 +27,9 @@ color: transparent;
 
 ### Value
 
-#### CSS Level 1 values
-
-[CSS Level 1](https://www.w3.org/TR/CSS1/) only included 16 basic colors, called the _VGA colors_ as they were taken from the set of displayable colors on [VGA](https://en.wikipedia.org/wiki/VGA) graphics cards.
-
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Keyword</th>
-      <th scope="col">RGB hex value</th>
-      <th scope="col">Sample</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><code>black</code></td>
-      <td><code>#000000</code></td>
-      <td style="background: black"></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>silver</code></td>
-      <td><code>#c0c0c0</code></td>
-      <td style="background: silver"></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>gray</code></td>
-      <td><code>#808080</code></td>
-      <td style="background: gray"></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>white</code></td>
-      <td><code>#ffffff</code></td>
-      <td style="background: white"></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>maroon</code></td>
-      <td><code>#800000</code></td>
-      <td style="background: maroon"></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>red</code></td>
-      <td><code>#ff0000</code></td>
-      <td style="background: red"></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>purple</code></td>
-      <td><code>#800080</code></td>
-      <td style="background: purple"></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>fuchsia</code></td>
-      <td><code>#ff00ff</code></td>
-      <td style="background: fuchsia"></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>green</code></td>
-      <td><code>#008000</code></td>
-      <td style="background: green"></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>lime</code></td>
-      <td><code>#00ff00</code></td>
-      <td style="background: lime"></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>olive</code></td>
-      <td><code>#808000</code></td>
-      <td style="background: olive"></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>yellow</code></td>
-      <td><code>#ffff00</code></td>
-      <td style="background: yellow"></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>navy</code></td>
-      <td><code>#000080</code></td>
-      <td style="background: navy"></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>blue</code></td>
-      <td><code>#0000ff</code></td>
-      <td style="background: blue"></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>teal</code></td>
-      <td><code>#008080</code></td>
-      <td style="background: teal"></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>aqua</code></td>
-      <td><code>#00ffff</code></td>
-      <td style="background: aqua"></td>
-    </tr>
-  </tbody>
-</table>
-
-### CSS Level 2 values
-
-The following value is defined in [CSS Level 2](https://www.w3.org/TR/CSS2/).
-
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Keyword</th>
-      <th scope="col">RGB hex value</th>
-      <th scope="col">Sample</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><code>orange</code></td>
-      <td><code>#ffa500</code></td>
-      <td style="background: orange"></td>
-    </tr>
-  </tbody>
-</table>
-
-### CSS Level 3 values
-
-Although various colors not in the specification (mostly adapted from the X11 colors list) were supported by early browsers, it wasn't until SVG 1.0 and [CSS Colors Level 3](https://drafts.csswg.org/css-color-3/) that they were formally defined. They are called the _extended color keywords_, the _X11 colors_, or the _SVG colors_.
+#### Standard colors
+  
+The following colors have a keyword associated to them:
 
 <table>
   <thead>
@@ -166,6 +49,11 @@ Although various colors not in the specification (mostly adapted from the X11 co
       <td style="text-align: center"><code>antiquewhite</code></td>
       <td><code>#faebd7</code></td>
       <td style="background: antiquewhite"></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>aqua</code></td>
+      <td><code>#00ffff</code></td>
+      <td style="background: aqua"></td>
     </tr>
     <tr>
       <td style="text-align: center"><code>aquamarine</code></td>
@@ -188,9 +76,19 @@ Although various colors not in the specification (mostly adapted from the X11 co
       <td style="background: bisque"></td>
     </tr>
     <tr>
+      <td style="text-align: center"><code>black</code></td>
+      <td><code>#000000</code></td>
+      <td style="background: black"></td>
+    </tr>
+    <tr>
       <td style="text-align: center"><code>blanchedalmond</code></td>
       <td><code>#ffebcd</code></td>
       <td style="background: blanchedalmond"></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>blue</code></td>
+      <td><code>#0000ff</code></td>
+      <td style="background: blue"></td>
     </tr>
     <tr>
       <td style="text-align: center"><code>blueviolet</code></td>
@@ -385,6 +283,11 @@ Although various colors not in the specification (mostly adapted from the X11 co
       <td style="background: forestgreen"></td>
     </tr>
     <tr>
+      <td style="text-align: center"><code>fuchsia</code></td>
+      <td><code>#ff00ff</code></td>
+      <td style="background: fuchsia"></td>
+    </tr>
+    <tr>
       <td style="text-align: center"><code>gainsboro</code></td>
       <td><code>#dcdcdc</code></td>
       <td style="background: gainsboro"></td>
@@ -405,13 +308,23 @@ Although various colors not in the specification (mostly adapted from the X11 co
       <td style="background: goldenrod"></td>
     </tr>
     <tr>
+      <td style="text-align: center"><code>gray</code></td>
+      <td><code>#808080</code></td>
+      <td style="background: gray"></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>green</code></td>
+      <td><code>#008000</code></td>
+      <td style="background: green"></td>
+    </tr>
+    <tr>
       <td style="text-align: center"><code>greenyellow</code></td>
       <td><code>#adff2f</code></td>
       <td style="background: greenyellow"></td>
     </tr>
     <tr>
       <td style="text-align: center"><code>grey</code></td>
-      <td><code>#808080</code></td>
+      <td><code>#808080</code></td> (synonym of <code>gray</code>)
       <td style="background: grey"></td>
     </tr>
     <tr>
@@ -540,6 +453,11 @@ Although various colors not in the specification (mostly adapted from the X11 co
       <td style="background: lightyellow"></td>
     </tr>
     <tr>
+      <td style="text-align: center"><code>lime</code></td>
+      <td><code>#00ff00</code></td>
+      <td style="background: lime"></td>
+    </tr>
+    <tr>
       <td style="text-align: center"><code>limegreen</code></td>
       <td><code>#32cd32</code></td>
       <td style="background: limegreen"></td>
@@ -555,6 +473,11 @@ Although various colors not in the specification (mostly adapted from the X11 co
       </td>
       <td><code>#ff00ff</code></td>
       <td style="background: magenta"></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>maroon</code></td>
+      <td><code>#800000</code></td>
+      <td style="background: maroon"></td>
     </tr>
     <tr>
       <td style="text-align: center"><code>mediumaquamarine</code></td>
@@ -627,14 +550,29 @@ Although various colors not in the specification (mostly adapted from the X11 co
       <td style="background: navajowhite"></td>
     </tr>
     <tr>
+      <td style="text-align: center"><code>navy</code></td>
+      <td><code>#000080</code></td>
+      <td style="background: navy"></td>
+    </tr>
+    <tr>
       <td style="text-align: center"><code>oldlace</code></td>
       <td><code>#fdf5e6</code></td>
       <td style="background: oldlace"></td>
     </tr>
     <tr>
+      <td style="text-align: center"><code>olive</code></td>
+      <td><code>#808000</code></td>
+      <td style="background: olive"></td>
+    </tr>
+    <tr>
       <td style="text-align: center"><code>olivedrab</code></td>
       <td><code>#6b8e23</code></td>
       <td style="background: olivedrab"></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>orange</code></td>
+      <td><code>#ffa500</code></td>
+      <td style="background: orange"></td>
     </tr>
     <tr>
       <td style="text-align: center"><code>orangered</code></td>
@@ -697,6 +635,25 @@ Although various colors not in the specification (mostly adapted from the X11 co
       <td style="background: powderblue"></td>
     </tr>
     <tr>
+      <td style="text-align: center"><code>purple</code></td>
+      <td><code>#800080</code></td>
+      <td style="background: purple"></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">
+        <a href="https://codepen.io/trezy/post/honoring-a-great-man"
+          ><code>rebeccapurple</code></a
+        >
+      </td>
+      <td><code>#663399</code></td>
+      <td style="background: rebeccapurple"></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>red</code></td>
+      <td><code>#ff0000</code></td>
+      <td style="background: red"></td>
+    </tr>
+    <tr>
       <td style="text-align: center"><code>rosybrown</code></td>
       <td><code>#bc8f8f</code></td>
       <td style="background: rosybrown"></td>
@@ -735,6 +692,11 @@ Although various colors not in the specification (mostly adapted from the X11 co
       <td style="text-align: center"><code>sienna</code></td>
       <td><code>#a0522d</code></td>
       <td style="background: sienna"></td>
+    </tr>
+     <tr>
+      <td style="text-align: center"><code>silver</code></td>
+      <td><code>#c0c0c0</code></td>
+      <td style="background: silver"></td>
     </tr>
     <tr>
       <td style="text-align: center"><code>skyblue</code></td>
@@ -777,6 +739,11 @@ Although various colors not in the specification (mostly adapted from the X11 co
       <td style="background: tan"></td>
     </tr>
     <tr>
+      <td style="text-align: center"><code>teal</code></td>
+      <td><code>#008080</code></td>
+      <td style="background: teal"></td>
+    </tr>
+    <tr>
       <td style="text-align: center"><code>thistle</code></td>
       <td><code>#d8bfd8</code></td>
       <td style="background: thistle"></td>
@@ -806,10 +773,20 @@ Although various colors not in the specification (mostly adapted from the X11 co
       <td><code>#f5deb3</code></td>
       <td style="background: wheat"></td>
     </tr>
+     <tr>
+      <td style="text-align: center"><code>white</code></td>
+      <td><code>#ffffff</code></td>
+      <td style="background: white"></td>
+    </tr>
     <tr>
       <td style="text-align: center"><code>whitesmoke</code></td>
       <td><code>#f5f5f5</code></td>
       <td style="background: whitesmoke"></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>yellow</code></td>
+      <td><code>#ffff00</code></td>
+      <td style="background: yellow"></td>
     </tr>
     <tr>
       <td style="text-align: center"><code>yellowgreen</code></td>
@@ -820,38 +797,13 @@ Although various colors not in the specification (mostly adapted from the X11 co
   </tbody>
 </table>
 
-#### transparent
+### transparent
 
 The `transparent` keyword represents a fully transparent color. This makes the background behind the colored item completely visible. Technically, `transparent` is a shortcut for `rgba(0,0,0,0)`.
 
 To prevent unexpected behavior, such as in a {{cssxref("gradient")}}, the current CSS spec states that `transparent` should be calculated in the [alpha-premultiplied color space](https://www.w3.org/TR/css-color-4/#interpolation-alpha). However, be aware that older browsers may treat it as black with an alpha value of `0`.
 
 The `transparent` keyword wasn't a true color in CSS Level 2 (Revision 1). It was a special keyword that could be used instead of a regular `<color>` value on two CSS properties: {{Cssxref("background")}} and {{Cssxref("border")}}. It was essentially added to allow developers to override an inherited solid color. With the advent of alpha channels in CSS Colors Level 3, `transparent` was redefined as a true color. It can now be used wherever a `<color>` value can be used.
-
-### CSS Level 4 values
-
-[CSS Colors Level 4](https://drafts.csswg.org/css-color-4/) added the `rebeccapurple` keyword [to honor web pioneer Eric Meyer](https://codepen.io/trezy/post/honoring-a-great-man).
-
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Keyword</th>
-      <th scope="col">RGB hex value</th>
-      <th scope="col">Sample</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">
-        <a href="https://en.wikipedia.org/wiki/Eric_A._Meyer#Personal_life"
-          ><code>rebeccapurple</code></a
-        >
-      </td>
-      <td><code>#663399</code></td>
-      <td style="background: rebeccapurple"></td>
-    </tr>
-  </tbody>
-</table>
 
 ## Description
 
