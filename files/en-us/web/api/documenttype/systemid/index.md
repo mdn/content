@@ -6,7 +6,7 @@ browser-compat: api.DocumentType.systemId
 ---
 {{APIRef("DOM")}}
 
-The read-only **`systemId`** property of the {{domxref("DocumentType")}} returns the URL to the associated DTD.
+The read-only **`systemId`** property of the {{domxref("DocumentType")}} returns the URL of the associated DTD.
 
 For synthetic `DocumentType`, this property reflects the value given in parameter to {{domxref("DOMImplementation.createDocumentType()")}}.
 
