@@ -82,7 +82,7 @@ can be done without requiring negotiation. However, some changes may require
 negotiation and thus fail `replaceTrack`:
 
 - The new track has a resolution which is outside the bounds of the dimensions negotiated with the peer;
-  however, most browser end-points allow resolution changes.
+  however, most browser end points allow resolution changes.
 - The new track's frame rate is high enough to cause the codec's block rate to be
   exceeded.
 - The new track is a video track and its raw or pre-encoded state differs from that of
