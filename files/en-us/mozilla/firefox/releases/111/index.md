@@ -10,7 +10,7 @@ tags:
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 111 that affect developers. Firefox 111 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [March 14, 2023](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 111 that affect developers. Firefox 111 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [March 14, 2023](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
 
 ## Changes for web developers
 
@@ -45,6 +45,10 @@ This article provides information about the changes in Firefox 111 that affect d
 #### DOM
 
 #### Media, WebRTC, and Web Audio
+
+- [`RTCInboundRtpStreamStats.trackIdentifier`](/en-US/docs/Web/API/RTCInboundRtpStreamStats#trackidentifier) is now supported.
+  This allows developers to associate `inbound-rtp` statistics with a particular track when using {{domxref("RTCPeerConnection.getStats()")}}.
+  (For more information see {{bug(1680606)}}.)
 
 #### Removals
 

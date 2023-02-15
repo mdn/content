@@ -77,7 +77,7 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 > **Parent object link**
 >
 > Add a link to this new page from its parent object's _Events_ section.
-> For example [Element: wheel event](/en-US/docs/Web/API/Element/wheel_event) is linked from [`Element` > Events](/en-US/docs/Web/API/Element#events).
+> For example [Element: wheel event](/en-US/docs/Web/API/Element/wheel_event) is linked from [`Element` Events](/en-US/docs/Web/API/Element#events).
 >
 > If the parent object does not have an _Events_ section, then add one.
 > If this is a new "class" of event, then you should add link to this section of the parent from the [Event reference](/en-US/docs/Web/Events).

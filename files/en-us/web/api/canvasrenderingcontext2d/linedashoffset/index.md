@@ -40,8 +40,8 @@ dash offset of 4.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.setLineDash([4, 16]);
 
@@ -53,7 +53,7 @@ ctx.stroke();
 
 // Dashed line with offset of 4
 ctx.beginPath();
-ctx.strokeStyle = 'red';
+ctx.strokeStyle = "red";
 ctx.lineDashOffset = 4;
 ctx.moveTo(0, 100);
 ctx.lineTo(300, 100);
@@ -78,8 +78,8 @@ animating the border.
 ```
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 let offset = 0;
 
 function draw() {
