@@ -41,63 +41,60 @@ filter: url(resources.svg#c1);
 
 #### blur()
 
-The {{cssxref("filter-function/blur", "blur()")}} function applies a Gaussian blur to the input image. The value of `radius` defines the value of the standard deviation to the Gaussian function, or how many pixels on the screen blend into each other, so a larger value will create more blur. The initial value for interpolation is `0`. The parameter is specified as a CSS length, but does not accept percentage values.
+The {{cssxref("filter-function/blur", "blur()")}} function applies a Gaussian blur to the input image. The blur radius parameter value, defined as a CSS {{cssxref("&lt;length&gt;)}}, defines the value of the standard deviation to the Gaussian function, or how many pixels on the screen blend into each other, so a larger value will create more blur. The initial value for interpolation is `0`. Percentage values are invalid.
 
 ```css
-#filter {
-  filter: blur(5px);
+.filter {
+  filter: blur(3.5px);
 }
 ```
 
+```css hidden
+svg:not([height]) {
+  display: none;
+}
+```
+
+```html
+<svg role="img" aria-label="Flag">
+  <filter id="blur">
+    <feGaussianBlur stdDeviation="3.5" />
+  </filter>
+  <image xlink:href="asset/flag.jpg" filter="url(#blur)" />
+</svg>
+```
+
 ```html hidden
-<table>
+<table cellpadding="5">
   <thead>
     <tr>
-      <th>Original image</th>
       <th>Live example</th>
       <th>SVG Equivalent</th>
+      <th>Original image</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        <img src="flag.jpg" alt="Pride flag" />
-      </td>
-      <td>
         <img class="filter" src="flag.jpg" alt="Pride flag" />
       </td>
       <td>
-        <div class="svg-container">
-          <svg
-            id="svg"
-            overflow="visible"
-            viewBox="0 0 212 161"
-            color-interpolation-filters="sRGB">
-            <filter id="svgBlur" x="-5%" y="-5%" width="110%" height="110%">
-              <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" />
-            </filter>
-            <image
-              xlink:href="flag.jpg"
-              filter="url(#svgBlur)"
-              width="220"
-              height="220" />
-          </svg>
-        </div>
+        <svg id="svg" height="220" width="220" style="overflow: visible">
+          <filter id="svgBlur">
+            <feGaussianBlur stdDeviation="3.5" />
+          </filter>
+          <image xlink:href="flag.jpg" filter="url(#svgBlur)" />
+        </svg>
+      </td>
+      <td>
+        <img src="flag.jpg" alt="Pride flag" />
       </td>
     </tr>
   </tbody>
 </table>
 ```
 
-```svg
-<svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg">
-  <filter id="svgBlur" x="-5%" y="-5%" width="110%" height="110%">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
-  </filter>
-</svg>
-```
-
-{{EmbedLiveSample('blur','100%','236px','','', 'no-codepen')}}
+{{EmbedLiveSample('blur','100%','280')}}
 
 #### brightness()
 
@@ -120,7 +117,7 @@ filter: brightness(2);
 ```
 
 ```html hidden
-<table>
+<table cellpadding="5">
   <thead>
     <tr>
       <th>Original image</th>
@@ -147,7 +144,7 @@ filter: brightness(2);
 ```
 
 ```css
-#filter {
+.filter {
   filter: brightness(2);
 }
 ```
@@ -175,7 +172,7 @@ filter: contrast(200%);
 ```
 
 ```html hidden
-<table>
+<table cellpadding="5">
   <thead>
     <tr>
       <th>Original image</th>
@@ -204,7 +201,7 @@ filter: contrast(200%);
 ```
 
 ```css
-#filter {
+.filter {
   filter: contrast(200%);
 }
 ```
@@ -225,7 +222,9 @@ The {{cssxref("filter-function/drop-shadow", "drop-shadow()")}} function applies
   - : See {{cssxref("&lt;color&gt;")}} values for possible keywords and notations. If not specified, the color used depends on the browser - it is usually the value of the {{cssxref("&lt;color&gt;")}} property, but note that Safari currently paints a transparent shadow in this case.
 
 ```css
-filter: drop-shadow(16px 16px 10px black);
+.filter {
+  filter: drop-shadow(8px 9px 5px rgba(0 0 0/ 0.8));
+}
 ```
 
 ```svg
@@ -244,7 +243,7 @@ filter: drop-shadow(16px 16px 10px black);
 ```
 
 ```html hidden
-<table>
+<table cellpadding="5">
   <thead>
     <tr>
       <th>Original image</th>
@@ -255,17 +254,10 @@ filter: drop-shadow(16px 16px 10px black);
   <tbody>
     <tr>
       <td>
-        <img
-          alt="A rectangular image of a pencil marking a multiple choice Optical Mark Recognition, or OMR, form."
-          src="flag.jpg"
-          alt="Pride flag" />
+        <img src="flag.jpg" alt="Pride flag" />
       </td>
       <td>
-        <img
-          alt="The OMR photo with a black drop shadow visible below the image and to the right. The offset and blur-radius values produce a soft, rounded shadow."
-          class="filter"
-          src="flag.jpg"
-          alt="Pride flag" />
+        <img class="filter" src="flag.jpg" alt="Pride flag" />
       </td>
       <td>
         <div class="svg-container">
@@ -309,89 +301,9 @@ filter: drop-shadow(16px 16px 10px black);
           </svg>
         </div>
       </td>
-      <td>
-        <img
-          alt="A screenshot of the OMR image with drop shadow applied to show the effect for browsers that do not support the CSS or SVG filters."
-          id="img4"
-          src="flag.jpg"
-          alt="Pride flag" />
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <img
-          alt="An edited version of the original image that uses transparency to achieve an irregular shape at the bottom and add a small hole. The image also has a gradient transparency that starts on the right edge and fades towards the other side."
-          id="img11"
-          src="flag.jpg"
-          alt="Pride flag" />
-      </td>
-      <td>
-        <img
-          alt="Image with black drop shadow applied which is visible below and to the right of the image. The shadow follows the curves of the irregularly shaped bottom and is also visible through the holes The shadow color is not fully opaque, so it displays as a dark gray over the white background of the page and is visible below most of the image, which makes it appear more gray than the original example."
-          id="img12"
-          src="flag.jpg"
-          alt="Pride flag" />
-      </td>
-      <td>
-        <div class="svg-container">
-          <svg
-            aria-labelledby="svg-irregular-drop-shadow-title svg-irregular-drop-shadow-desc"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            id="img13"
-            overflow="visible"
-            viewBox="0 0 213 161"
-            color-interpolation-filters="sRGB">
-            <title id="svg-irregular-drop-shadow-title">
-              OMR photo with irregular bottom edge
-            </title>
-            <desc id="svg-irregular-drop-shadow-desc">
-              The same image as the previous two examples, but embedded within
-              an SVG element. A drop shadow has been added with a filter element
-              using a feGaussianBlur and an feOffset element. The shadow follows
-              the irregular shape of the image and is visible under the
-              transparent gradient of the image.
-            </desc>
-            <defs>
-              <image
-                id="MyImage2"
-                xlink:href="test_form_4_irregular-shape_opacity-gradient.png"
-                width="220"
-                height="220" />
-            </defs>
-            <filter
-              id="drop-shadow2"
-              x="-50%"
-              y="-50%"
-              width="200%"
-              height="200%">
-              <feOffset dx="5" dy="5.5" in="SourceAlpha" />
-              <feGaussianBlur stdDeviation="2.5" />
-              <feComponentTransfer>
-                <feFuncA type="table" tableValues="0 0.8" />
-              </feComponentTransfer>
-            </filter>
-            <use xlink:href="#MyImage2" filter="url(#drop-shadow2)" />
-            <use xlink:href="#MyImage2" />
-          </svg>
-        </div>
-      </td>
     </tr>
   </tbody>
 </table>
-```
-
-```css
-#filter {
-  filter: drop-shadow(16px 16px 10px black);
-}
-#img12 {
-  filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
-}
-
-#irregular-shape {
-  width: 64%;
-}
 ```
 
 {{EmbedLiveSample('drop-shadow','100%','400px','','', 'no-codepen')}}
@@ -401,13 +313,13 @@ filter: drop-shadow(16px 16px 10px black);
 The {{cssxref("filter-function/grayscale", "grayscale()")}} function converts the input image to grayscale. The value of `amount` defines the proportion of the conversion. A value of `100%` is completely grayscale. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The initial value for interpolation is `0`.
 
 ```css
-#filter {
+.filter {
   filter: grayscale(100%);
 }
 ```
 
 ```html hidden
-<table>
+<table cellpadding="5">
   <thead>
     <tr>
       <th>Original image</th>
@@ -445,7 +357,7 @@ filter: hue-rotate(90deg);
 ```
 
 ```html hidden
-<table>
+<table cellpadding="5">
   <thead>
     <tr>
       <th>Original image</th>
@@ -470,7 +382,7 @@ filter: hue-rotate(90deg);
 ```
 
 ```css
-#filter {
+.filter {
   filter: hue-rotate(90deg);
 }
 ```
@@ -492,13 +404,13 @@ filter: hue-rotate(90deg);
 The {{cssxref("filter-function/invert", "invert()")}} function inverts the samples in the input image. The value of `amount` defines the proportion of the conversion. A value of `100%` is completely inverted. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The initial value for interpolation is `0`.
 
 ```css
-#filter {
+.filter {
   filter: invert(100%);
 }
 ```
 
 ```html hidden
-<table>
+<table cellpadding="5">
   <thead>
     <tr>
       <th>Original image</th>
@@ -532,7 +444,7 @@ The {{cssxref("filter-function/invert", "invert()")}} function inverts the sampl
 The {{cssxref("filter-function/opacity", "opacity()")}} function applies transparency to the samples in the input image. The value of `amount` defines the proportion of the conversion. A value of `0%` is completely transparent. A value of `100%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. This is equivalent to multiplying the input image samples by amount. The initial value for interpolation is `1`. This function is similar to the more established {{cssxref("opacity")}} property; the difference is that with filters, some browsers provide hardware acceleration for better performance.
 
 ```html hidden
-<table>
+<table cellpadding="5">
   <thead>
     <tr>
       <th>Original image</th>
@@ -558,7 +470,7 @@ The {{cssxref("filter-function/opacity", "opacity()")}} function applies transpa
 ```
 
 ```css
-#filter {
+.filter {
   filter: opacity(50%);
 }
 ```
@@ -570,7 +482,7 @@ The {{cssxref("filter-function/opacity", "opacity()")}} function applies transpa
 The {{cssxref("filter-function/saturate", "saturate()")}} function saturates the input image. The value of `amount` defines the proportion of the conversion. A value of `0%` is completely un-saturated. A value of `100%` leaves the input unchanged. Other values are linear multipliers on the effect. Values of amount over `100%` are allowed, providing super-saturated results. The initial value for interpolation is `1`.
 
 ```html hidden
-<table>
+<table cellpadding="5">
   <thead>
     <tr>
       <th>Original image</th>
@@ -595,7 +507,7 @@ The {{cssxref("filter-function/saturate", "saturate()")}} function saturates the
 ```
 
 ```css
-#filter {
+.filter {
   filter: saturate(200%);
 }
 ```
@@ -607,7 +519,7 @@ The {{cssxref("filter-function/saturate", "saturate()")}} function saturates the
 The {{cssxref("filter-function/sepia", "sepia()")}} function converts the input image to sepia. The value of `amount` defines the proportion of the conversion. A value of `100%` is completely sepia. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The initial value for interpolation is `0`.
 
 ```html hidden
-<table>
+<table cellpadding="5">
   <thead>
     <tr>
       <th>Original image</th>
@@ -646,7 +558,7 @@ The {{cssxref("filter-function/sepia", "sepia()")}} function converts the input 
 ```
 
 ```css
-#filter {
+.filter {
   filter: sepia(100%);
 }
 ```
@@ -658,7 +570,7 @@ The {{cssxref("filter-function/sepia", "sepia()")}} function converts the input 
 You may combine any number of functions to manipulate the rendering. The following example enhances the contrast and brightness of the image:
 
 ```html hidden
-<table>
+<table cellpadding="5">
   <thead>
     <tr>
       <th>Original image</th>
@@ -679,7 +591,7 @@ You may combine any number of functions to manipulate the rendering. The followi
 ```
 
 ```css
-#filter {
+.filter {
   filter: contrast(175%) brightness(103%);
 }
 ```
