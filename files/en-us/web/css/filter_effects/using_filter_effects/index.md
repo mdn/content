@@ -41,7 +41,7 @@ filter: url(resources.svg#c1);
 
 #### blur()
 
-The {{cssxref("filter-function/blur", "blur()")}} function applies a Gaussian blur to the input image. The blur radius parameter value, defined as a CSS {{cssxref("&lt;length&gt;)}}, defines the value of the standard deviation to the Gaussian function, or how many pixels on the screen blend into each other, so a larger value will create more blur. The initial value for interpolation is `0`. Percentage values are invalid.
+The {{cssxref("filter-function/blur", "blur()")}} function applies a Gaussian blur to the input image. The blur radius parameter value, defined as a CSS {{cssxref("&lt;length&gt;")}}, defines the value of the standard deviation to the Gaussian function, or how many pixels on the screen blend into each other, so a larger value will create more blur. The initial value for interpolation is `0`. Percentage values are invalid.
 
 ```css
 .filter {
