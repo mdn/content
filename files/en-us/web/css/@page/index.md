@@ -35,6 +35,11 @@ The **`@page`** at-rule is a CSS at-rule used to modify different aspects of a p
   size: 11in;
   margin-top: 4in;
 }
+
+/* Targets all selectors with an page property */
+@page wide {
+  size: a4 landscape;
+}
 ```
 
 ### Descriptors
@@ -51,6 +56,13 @@ You can't change all CSS properties with **`@page`**. You can only change the ma
 The `@page` at-rule can be accessed via the CSS object model interface {{domxref("CSSPageRule")}}.
 
 > **Note:** The W3C is discussing how to handle viewport-related {{cssxref("&lt;length&gt;")}} units, `vh`, `vw`, `vmin`, and `vmax`. Meanwhile do not use them within a `@page` at-rule.
+
+### Properties
+
+The `@page` at-rule, currently, has 1 property that allows the user to assign a name to the rule.
+
+- [`page`](/en-US/docs/Web/CSS/@page/page)
+  - : Allows a selector to used an user defined **named page**
 
 ## Formal syntax
 
@@ -405,205 +417,6 @@ button.addEventListener("click", () => {
 Clicking the print button will launch a print dialog with the html sections split into individual pages.
 {{ EmbedLiveSample('Using the size property to change the page orientation', '100%', 520) }}
 
-### Named page example
-
-#### HTML
-
-There are two parts to this HTML:
-
-- The print controls
-- The content to be printed
-
-The print controls allow the user to select how the `section`s in the `article` will be printed.
-
-```html
-<!-- print options -->
-<fieldset id="printStyle">
-  <legend>How would you like to print</legend>
-  <label for="single"><input type="radio" id="single" name="type" value="single" checked />No Pages</label>
-  <label for="double"><input type="radio" id="grouped" name="type" value="grouped" />Pages with Grouped Chapters</label>
-  <label for="double"><input type="radio" id="paged" name="type" value="paged" />Chapters Paged</label>
-  <button id="print">Print</button>
-</fieldset>
-<!-- Content to be printed -->
-<article id="print-area" data-print="single">
-  <section id="toc">
-    <h2>Table of contents</h2>
-    <ul>
-      <li>Foreword</li>
-      <li>Introduction</li>
-      <li>Chapter One - named pages</li>
-      <li>Chapter Two - page orientation</li>
-      <li>Chapter Three - page margins</li>
-      <li>Conclusion</li>
-    </ul>
-  </section>
-  <section id="foreward">
-    <h2>Foreward</h2>
-    <p>This book is all about how the CSS <code>@page</code> at-rule can help with printing HTML books.</p>
-  </section>
-  <section id="introduction">
-    <h2>Introduction</h2>
-    <p>This book is a concept to show how an <em>HTML</em> document can easily be printed out in pages.</p>
-  </section>
-  <section id="chapter1" class="chapter">
-    <h2>Named pages</h2>
-    <p>Lorem ipsum</p>
-  </section>
-  <section id="chapter2" class="chapter">
-    <h2>Page Orientation</h2>
-    <p>Lorem ipsum</p>
-  </section>
-  <section id="chapter3" class="chapter">
-    <h2>Page Margins</h2>
-    <p>There are 16 page margins that can be set:</p>
-    <ul>
-      <li>@top-left-corner</li>
-      <li>@top-left</li>
-      <li>@top-middle</li>
-      <li>@top-right</li>
-      <li>@top-right-corner</li>
-      <li>@left-top</li>
-      <li>@left-middle</li>
-      <li>@left-bottom</li>
-      <li>@right-top</li>
-      <li>@right-middle</li>
-      <li>@right-bottom</li>
-      <li>@bottom-left-corner</li>
-      <li>@bottom-left</li>
-      <li>@bottom-middle</li>
-      <li>@bottom-right</li>
-      <li>@bottom-right-corner</li>
-    </ul>
-    <p>They can be used to show what appears in these parts of the margin</p>
-  </section>
-  <section id="conclusion">
-    <h2>Conclusion</h2>
-    <p>Now go ahead and write books.</p>
-  </section>
-</article>
-```
-
-#### CSS
-
-```css hidden
-fieldset {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 1rem;
-  width: fit-content;
-}
-```
-
-The first part of the CSS sets up the **named** pages, these include the size and orientaion and also some content to go in the `@top-middle` margin of the printed pages.
-
-```css
-@page toc {
-  size: a4 portrait;
-  @top-middle {
-    content: "Table of contents";
-  }
-}
-
-@page foreward {
-  size: a4 portrait;
-  @top-middle {
-    content: "Foreward";
-  }
-}
-
-@page introduction {
-  size: a4 portrait;
-  @top-middle {
-    content: "Introduction";
-  }
-}
-
-@page conclusion {
-  size: a4 portrait;
-  @top-middle {
-    content: "Conclusion";
-  }
-}
-
-@page chapter {
-  size: a4 landscape;
-  @top-middle {
-    content: "Chapter";
-  }
-}
-```
-
-The next part of the CSS specifies which CSS selectors will use which named pages when printing. As the sections with `class="chapter"` are concurrent they appear as one page, in order to split them up they are split using `break-after: page;` which splits each chapter into another page.
-
-```css
-@media print {
-  fieldset {
-    display: none;
-  }
-  section {
-    font-size: 2rem;
-    font-family: Roboto;
-  }
-  .chapter {
-    border: tomato 2px solid;
-  }
-  [data-print="grouped"] > #toc, [data-print="paged"] > #toc {
-    page: toc;
-    font-family: Courier;
-  }
-  [data-print="grouped"] >  #foreward, [data-print="paged"] > #foreward {
-    page: foreward;
-    font-family: Courier;
-  }
-  [data-print="grouped"] >  #introduction, [data-print="paged"] > #introduction {
-    page: introduction;
-    font-family: Courier;
-  }
-  [data-print="grouped"] >  #conclusion, [data-print="paged"] > #conclusion {
-    page: conclusion;
-    font-family: Courier;
-  }
-  [data-print="grouped"] > .chapter, [data-print="paged"] > .chapter {
-    page: chapter;
-  }
-  [data-print="paged"] > .chapter {
-    border: none;
-    break-after: page;
-  }
-  .chapter > ul {
-    columns: 2;
-  }
-}
-```
-
-#### JavaScript
-
-```js
-const printArea = document.querySelector("#print-area");
-const printButton = document.querySelector("#print");
-const printOption = document.querySelector("#printStyle");
-printOption.addEventListener("change", (event) => {
-  if (event.target.value === "single"){
-    printArea.dataset.print = "single"
-  } else if (event.target.value === "grouped"){
-    printArea.dataset.print = "grouped"
-  } else {
-    printArea.dataset.print = "paged"
-  }
-})
-printButton.addEventListener("click", () => {
-  window.print();
-})
-```
-
-#### Result
-
-Selecting a different print style radio input will change the output of the print dialog.
-
-{{ EmbedLiveSample('Named page example', '100%', 520) }}
-
 ### @page pseudo-class examples
 
 Please refer to the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) of `@page` for examples.
@@ -623,4 +436,6 @@ Please refer to the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
 
 ## See also
 
+- [`size`](/en-US/docs/Web/CSS/@page/size)
+- [`page`](/en-US/docs/Web/CSS/@page/page)
 - See the [\[META\] CSS Paged Media Module Level 3](https://bugzilla.mozilla.org/show_bug.cgi?id=286443) ticket in Bugzilla for tracking progress on the subject (page-based counters, etc.)
