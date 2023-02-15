@@ -20,7 +20,7 @@ An {{DOMxRef("AbortSignal")}} object.
 const controller = new AbortController();
 
 // Creatae a request we this controller's AbortSignal object
-const req = new Request('/', { signal: ctrl.signal });
+const req = new Request('/', { signal: controller.signal });
 
 // Add an event handler logging a message in case of abort
 req.signal.addEventListener("signal",  () => { console.log('abort'); }
@@ -34,7 +34,7 @@ fetch(req).catch(() => {
       console.log("Request aborted but no reason was given.");
     }
   } else {
-    console.log("Request not aborted, but terminated abnormally");
+    console.log("Request not aborted, but terminated abnormally.");
   }
 };
 
