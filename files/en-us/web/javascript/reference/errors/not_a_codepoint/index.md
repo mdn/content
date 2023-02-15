@@ -1,5 +1,5 @@
 ---
-title: 'RangeError: argument is not a valid code point'
+title: "RangeError: argument is not a valid code point"
 slug: Web/JavaScript/Reference/Errors/Not_a_codepoint
 page-type: javascript-error
 tags:
@@ -42,23 +42,23 @@ Unicode codespace; that is, the range of integers from `0` to
 ### Invalid cases
 
 ```js example-bad
-String.fromCodePoint('_');      // RangeError
+String.fromCodePoint("_"); // RangeError
 String.fromCodePoint(Infinity); // RangeError
-String.fromCodePoint(-1);       // RangeError
-String.fromCodePoint(3.14);     // RangeError
-String.fromCodePoint(3e-2);     // RangeError
-String.fromCodePoint(NaN);      // RangeError
+String.fromCodePoint(-1); // RangeError
+String.fromCodePoint(3.14); // RangeError
+String.fromCodePoint(3e-2); // RangeError
+String.fromCodePoint(NaN); // RangeError
 ```
 
 ### Valid cases
 
 ```js example-good
-String.fromCodePoint(42);       // "*"
-String.fromCodePoint(65, 90);   // "AZ"
-String.fromCodePoint(0x404);    // "\u0404"
-String.fromCodePoint(0x2F804);  // "\uD87E\uDC04"
-String.fromCodePoint(194564);   // "\uD87E\uDC04"
-String.fromCodePoint(0x1D306, 0x61, 0x1D307) // "\uD834\uDF06a\uD834\uDF07"
+String.fromCodePoint(42); // "*"
+String.fromCodePoint(65, 90); // "AZ"
+String.fromCodePoint(0x404); // 'Є' (U+0404)
+String.fromCodePoint(0x2f804); // '你' (U+2F804)
+String.fromCodePoint(194564); // '你'
+String.fromCodePoint(0x1d306, 0x61, 0x1d307); // '𝌆a𝌇'
 ```
 
 ## See also

@@ -31,7 +31,7 @@ padEnd(targetLength, padString)
 
 - `targetLength`
   - : The length of the resulting string once the current `str` has
-    been padded. If the value is lower than `str.length`, the
+    been padded. If the value is less than or equal to `str.length`, the
     current string will be returned as-is.
 - `padString` {{optional_inline}}
   - : The string to pad the current `str` with. If
@@ -70,4 +70,3 @@ A {{jsxref("String")}} of the specified `targetLength` with the
 
 - [Polyfill of `String.prototype.padEnd` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.padStart()")}}
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/string.polyfill.js)

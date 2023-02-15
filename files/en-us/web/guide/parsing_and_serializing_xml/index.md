@@ -67,11 +67,11 @@ const xhr = new XMLHttpRequest();
 
 xhr.onload = () => {
   dump(xhr.responseXML.documentElement.nodeName);
-}
+};
 
 xhr.onerror = () => {
   dump("Error while getting XML.");
-}
+};
 
 xhr.open("GET", "example.xml");
 xhr.responseType = "document";

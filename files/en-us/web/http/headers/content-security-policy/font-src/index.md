@@ -1,5 +1,5 @@
 ---
-title: 'CSP: font-src'
+title: "CSP: font-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/font-src
 tags:
   - CSP

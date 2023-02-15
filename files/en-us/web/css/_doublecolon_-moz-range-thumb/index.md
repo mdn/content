@@ -1,5 +1,5 @@
 ---
-title: '::-moz-range-thumb'
+title: "::-moz-range-thumb"
 slug: Web/CSS/::-moz-range-thumb
 page-type: css-pseudo-element
 tags:
@@ -20,8 +20,10 @@ The **`::-moz-range-thumb`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 
 ## Syntax
 
-```
-::-moz-range-thumb
+```css
+::-moz-range-thumb {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -46,7 +48,7 @@ input[type="range"]::-moz-range-thumb {
 
 A progress bar using this style might look something like this:
 
-![The thumb of the \<input type=right> styled in green](screen_shot_2015-12-04_at_13.30.08.png)
+![The thumb of the 'input type=right' styled in green](screen_shot_2015-12-04_at_13.30.08.png)
 
 ## Specifications
 

@@ -23,11 +23,11 @@ The **`padding-inline-start`** [CSS](/en-US/docs/Web/CSS) property defines the l
 
 ```css
 /* <length> values */
-padding-inline-start: 10px;   /* An absolute length */
-padding-inline-start: 1em;    /* A length relative to the text size */
+padding-inline-start: 10px; /* An absolute length */
+padding-inline-start: 1em; /* A length relative to the text size */
 
 /* <percentage> value */
-padding-inline-start: 5%;     /* A padding relative to the block container's width */
+padding-inline-start: 5%; /* A padding relative to the block container's width */
 
 /* Global values */
 padding-inline-start: inherit;

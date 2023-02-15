@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing ) after argument list'
+title: "SyntaxError: missing ) after argument list"
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 page-type: javascript-error
 tags:
@@ -38,14 +38,14 @@ argument for the `log` function to be just `"PI: "`. In that case,
 it should be terminated by a closing parenthesis.
 
 ```js example-bad
-console.log('PI: ' Math.PI);
+console.log("PI: " Math.PI);
 // SyntaxError: missing ) after argument list
 ```
 
 You can correct the `log` call by adding the `+` operator:
 
 ```js example-good
-console.log('PI: ' + Math.PI);
+console.log("PI: " + Math.PI);
 // "PI: 3.141592653589793"
 ```
 
@@ -53,13 +53,13 @@ Alternatively, you can consider using a [template literal](/en-US/docs/Web/JavaS
 
 ```js example-good
 console.log(`PI: ${Math.PI}`);
-console.log('PI: ', Math.PI);
+console.log("PI: ", Math.PI);
 ```
 
 ### Unterminated strings
 
 ```js example-bad
-console.log('"Java" + "Script" = \"' + 'Java' + 'Script\");
+console.log('"Java" + "Script" = \"' + "Java" + 'Script\");
 // SyntaxError: missing ) after argument list
 ```
 
@@ -69,7 +69,7 @@ function `console.log`. To fix this, we could put a`'` after the
 "Script" string:
 
 ```js example-good
-console.log('"Java" + "Script" = "' + 'Java' + 'Script"');
+console.log('"Java" + "Script" = "' + "Java" + 'Script"');
 // '"Java" + "Script" = "JavaScript"'
 ```
 

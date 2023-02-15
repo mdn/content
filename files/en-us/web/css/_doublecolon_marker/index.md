@@ -1,5 +1,5 @@
 ---
-title: '::marker'
+title: "::marker"
 slug: Web/CSS/::marker
 page-type: css-pseudo-element
 tags:
@@ -33,8 +33,10 @@ Only certain CSS properties can be used in a rule with `::marker` as a selector:
 
 ## Syntax
 
-```
-::marker
+```css
+::marker {
+  /* ... */
+}
 ```
 
 ## Examples

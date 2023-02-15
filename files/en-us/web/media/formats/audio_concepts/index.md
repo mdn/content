@@ -215,7 +215,7 @@ Some codecs offer special profiles which are specifically intended for particula
 
 ### Joint stereo
 
-Normally, stereo sound is represented by audio frames which contain one sample per channel. This results in audio frames which require 2⨉_sampleSize_ bits each, where _sampleSize_ is the number of bits each audio sample takes. Therefore, for a 16-bit stereo audio recording, each sample uses 2⨉16 or 32 bits of space. This is standard left/right (L/R) stereo or **simple stereo**.
+Stereo sound is typically represented by audio frames containing one sample per channel. This results in audio frames that require 2 times _sampleSize_ bits each, where _sampleSize_ is the number of bits each audio sample takes. Therefore, for a 16-bit stereo audio recording, each sample uses 2 times 16, or 32, bits of space. This is standard left/right (L/R) stereo or **simple stereo**.
 
 **Joint stereo** is a method of storing stereo audio samples in a more space-efficient manner by taking into account that usually the sound entering each ear is similar. Thus, rather than storing every bit of each channel's sample, a base amplitude and a per-channel amplitude deviation value are stored, wherein the deviation value may use fewer bits than a complete sample.
 

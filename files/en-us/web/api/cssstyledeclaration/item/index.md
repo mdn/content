@@ -49,7 +49,7 @@ const propertyName = style[index];
 ## Examples
 
 ```js
-const style = document.getElementById('div1').style;
+const style = document.getElementById("div1").style;
 const propertyName = style.item(1); // or style[1] - returns the second style listed
 ```
 

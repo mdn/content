@@ -76,7 +76,7 @@ Logical keywords can be used to define the container condition:
 ### Style container queries
 
 Container queries can also evaluate the computed style of the container element.
-The following container query checks if the {{cssxref("computed_value")}} of the the container element's `color` is `blue`:
+The following container query checks if the {{cssxref("computed_value")}} of the container element's `color` is `blue`:
 
 ```css
 @container style(color: blue) {

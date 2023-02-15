@@ -59,7 +59,7 @@ Here is the MDN logo, skewed by 10 degrees and translated by 150 pixels on the X
 
 ```html
 <img
-  style="transform: skewx(10deg) translatex(150px);
+  style="transform: skewX(10deg) translateX(150px);
             transform-origin: bottom left;"
   src="logo.png"
   alt="MDN logo" />

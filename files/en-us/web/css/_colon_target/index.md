@@ -37,8 +37,10 @@ The following element would be selected by a `:target` selector when the current
 
 ## Syntax
 
-```
-:target
+```css
+:target {
+  /* ... */
+}
 ```
 
 ## Examples

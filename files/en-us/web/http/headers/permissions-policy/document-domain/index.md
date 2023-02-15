@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: document-domain'
+title: "Permissions-Policy: document-domain"
 slug: Web/HTTP/Headers/Permissions-Policy/document-domain
 tags:
   - Directive

@@ -44,7 +44,7 @@ Because of this polymorphic implementation, `@@species` of derived subclasses wo
 
 ```js
 class SubPromise extends Promise {}
-SubPromise[Symbol.species] === Promise; // true
+SubPromise[Symbol.species] === SubPromise; // true
 ```
 
 Promise chaining methods — [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then), [`catch()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch), and [`finally()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally) — return new promise objects. They get the constructor to construct the new promise through `this.constructor[@@species]`. If `this.constructor` is `undefined`, or if `this.constructor[@@species]` is `undefined` or `null`, the default {{jsxref("Promise/Promise", "Promise()")}} constructor is used. Otherwise, the constructor returned by `this.constructor[@@species]` is used to construct the new promise object.

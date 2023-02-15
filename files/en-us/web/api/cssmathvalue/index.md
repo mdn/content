@@ -66,11 +66,11 @@ div {
 We add the JavaScript
 
 ```js
-const styleMap = document.querySelector('div').computedStyleMap();
+const styleMap = document.querySelector("div").computedStyleMap();
 
-console.log(styleMap.get('width'));                  // CSSMathSum {values: CSSNumericArray, operator: "sum"}
-console.log(styleMap.get('width').operator);         // 'sum'
-console.log(styleMap.get('width').values[1].value);  // -20
+console.log(styleMap.get("width")); // CSSMathSum {values: CSSNumericArray, operator: "sum"}
+console.log(styleMap.get("width").operator); // 'sum'
+console.log(styleMap.get("width").values[1].value); // -20
 ```
 
 {{EmbedLiveSample("Examples", 120, 300)}}

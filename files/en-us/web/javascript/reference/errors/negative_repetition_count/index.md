@@ -1,5 +1,5 @@
 ---
-title: 'RangeError: repeat count must be non-negative'
+title: "RangeError: repeat count must be non-negative"
 slug: Web/JavaScript/Reference/Errors/Negative_repetition_count
 page-type: javascript-error
 tags:
@@ -39,16 +39,16 @@ number. The range of allowed values can be described like this: \[0, +∞).
 ### Invalid cases
 
 ```js example-bad
-'abc'.repeat(-1); // RangeError
+"abc".repeat(-1); // RangeError
 ```
 
 ### Valid cases
 
 ```js example-good
-'abc'.repeat(0);    // ''
-'abc'.repeat(1);    // 'abc'
-'abc'.repeat(2);    // 'abcabc'
-'abc'.repeat(3.5);  // 'abcabcabc' (count will be converted to integer)
+"abc".repeat(0); // ''
+"abc".repeat(1); // 'abc'
+"abc".repeat(2); // 'abcabc'
+"abc".repeat(3.5); // 'abcabcabc' (count will be converted to integer)
 ```
 
 ## See also

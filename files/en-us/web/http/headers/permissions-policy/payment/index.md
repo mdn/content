@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: payment'
+title: "Permissions-Policy: payment"
 slug: Web/HTTP/Headers/Permissions-Policy/payment
 tags:
   - Directive

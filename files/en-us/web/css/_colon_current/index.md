@@ -1,9 +1,10 @@
 ---
-title: ':current'
+title: ":current"
 slug: Web/CSS/:current
 page-type: css-pseudo-class
 browser-compat: css.selectors.current
 ---
+
 {{CSSRef}}
 
 The **`:current`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector is a time-dimensional pseudo-class that represents an element or the ancestor of an element that is currently being displayed. For example, this pseudo-class can be used to represent a video that is being displayed with captions by [WebVTT](/en-US/docs/Web/API/WebVTT_API).
@@ -34,7 +35,12 @@ The **`:current`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS
 <video controls preload="metadata">
   <source src="video.mp4" type="video/mp4" />
   <source src="video.webm" type="video/webm" />
-  <track label="English" kind="subtitles" srclang="en" src="subtitles.vtt" default>
+  <track
+    label="English"
+    kind="subtitles"
+    srclang="en"
+    src="subtitles.vtt"
+    default />
 </video>
 ```
 

@@ -29,6 +29,8 @@ Alternatively, you can get permission temporarily in the active tab and only in 
 
 - {{WebExtAPIRef("scripting.ContentScriptFilter")}}
   - : Specifies the IDs of scripts to retrieve with {{WebExtAPIRef("scripting.getRegisteredContentScripts()")}} or to unregister with {{WebExtAPIRef("scripting.unregisterContentScripts()")}}.
+- {{WebExtAPIRef("scripting.ExecutionWorld")}}
+  - : Specifies the execution environment of a script injected with {{WebExtAPIRef("scripting.executeScript()")}} or registered with {{WebExtAPIRef("scripting.registerContentScripts()")}}.
 - {{WebExtAPIRef("scripting.InjectionTarget")}}
   - : Details of an injection target.
 - {{WebExtAPIRef("scripting.RegisteredContentScript")}}

@@ -63,7 +63,7 @@ This is the list of guides and pages in this section.
 
 - [Users and teams](/en-US/docs/MDN/Community/Users_teams)
 
-  - : This section provides an overview of the users and teams that are part of the MDN Wen Docs project and details what it means to be part of a team.
+  - : This section provides an overview of the users and teams that are part of the MDN Web Docs project and details what it means to be part of a team.
 
 ## Code of conduct
 

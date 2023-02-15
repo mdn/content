@@ -59,7 +59,7 @@ After deleting a rule with `deleteRule()` the `cssRules` property returns a {{do
 ```js
 let myRules = document.styleSheets[0].cssRules;
 let keyframes = myRules[0]; // a CSSKeyframesRule
-keyframes.deleteRule('to');
+keyframes.deleteRule("to");
 console.log(keyframes.cssRules); // a CSSRuleList object with one rule
 ```
 

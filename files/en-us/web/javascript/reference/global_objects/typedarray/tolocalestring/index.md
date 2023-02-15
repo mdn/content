@@ -22,6 +22,8 @@ numbers, the same algorithm as {{jsxref("Number.prototype.toLocaleString()")}} a
 for each element. _TypedArray_ is one of the
 [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
+{{EmbedInteractiveExample("pages/js/typedarray-tolocalestring.html")}}
+
 ## Syntax
 
 ```js-nolint

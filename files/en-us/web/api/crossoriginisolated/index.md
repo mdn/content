@@ -28,7 +28,7 @@ A boolean value.
 ## Examples
 
 ```js
-const myWorker = new Worker('worker.js');
+const myWorker = new Worker("worker.js");
 
 if (crossOriginIsolated) {
   const buffer = new SharedArrayBuffer(16);

@@ -59,14 +59,14 @@ for (let i = 0; i < 9; i++) {
 
 The initialization block accepts both expressions and variable declarations. However, expressions cannot use the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator unparenthesized, because that is ambiguous with a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop.
 
-```js example-bad
+```js-nolint example-bad
 for (let i = "start" in window ? window.start : 0; i < 9; i++) {
   console.log(i);
 }
 // SyntaxError: 'for-in' loop variable declaration may not have an initializer.
 ```
 
-```js example-good
+```js-nolint example-good
 // Parenthesize the whole initializer
 for (let i = ("start" in window ? window.start : 0); i < 9; i++) {
   console.log(i);

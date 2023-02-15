@@ -1,5 +1,5 @@
 ---
-title: ':-moz-locale-dir(ltr)'
+title: ":-moz-locale-dir(ltr)"
 slug: Web/CSS/:-moz-locale-dir_ltr
 page-type: css-pseudo-class
 tags:
@@ -24,7 +24,9 @@ The **`:-moz-locale-dir(ltr)`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US
 ## Syntax
 
 ```css
-:-moz-locale-dir(ltr)
+:-moz-locale-dir(ltr) {
+  /* ... */
+}
 ```
 
 ## Examples

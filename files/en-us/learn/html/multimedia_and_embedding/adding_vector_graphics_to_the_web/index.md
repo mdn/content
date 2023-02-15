@@ -161,7 +161,7 @@ You can also open up the SVG file in a text editor, copy the SVG code, and paste
 
 #### Pros
 
-- Putting your SVG inline saves an HTTP request, and therefore can reduce a bit your loading time.
+- Putting your SVG inline saves an HTTP request, and therefore can reduce your loading time a bit.
 - You can assign `class`es and `id`s to SVG elements and style them with CSS, either within the SVG or wherever you put the CSS style rules for your HTML document. In fact, you can use any [SVG presentation attribute](/en-US/docs/Web/SVG/Attribute#presentation_attributes) as a CSS property.
 - Inlining SVG is the only approach that lets you use CSS interactions (like `:focus`) and CSS animations on your SVG image (even in your regular stylesheet.)
 - You can make SVG markup into a hyperlink by wrapping it in an {{htmlelement("a")}} element.

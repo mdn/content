@@ -32,8 +32,8 @@ The example below demonstrates the relationship between
 `CSSPseudoElement.type` and {{DOMxRef('Element.pseudo()')}}:
 
 ```js
-const myElement = document.querySelector('q');
-const mySelector = '::after';
+const myElement = document.querySelector("q");
+const mySelector = "::after";
 const cssPseudoElement = myElement.pseudo(mySelector);
 const typeOfPseudoElement = cssPseudoElement.type;
 

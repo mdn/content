@@ -47,8 +47,10 @@ p {
 
 ## Syntax
 
-```
-:host-context( <compound-selector> )
+```css-nolint
+:host-context(<compound-selector>) {
+  /* ... */
+}
 ```
 
 ## Examples

@@ -1,5 +1,5 @@
 ---
-title: 'Warning: 08/09 is not a legal ECMA-262 octal constant'
+title: "Warning: 08/09 is not a legal ECMA-262 octal constant"
 slug: Web/JavaScript/Reference/Errors/Bad_octal
 page-type: javascript-error
 tags:
@@ -55,7 +55,7 @@ for more information.
 
 Use a leading zero followed by the letter "o";
 
-```js example-good
+```js-nolint example-good
 0O755;
 0o644;
 ```

@@ -11,7 +11,7 @@ tags:
 
 You'll now be ready to start turning your idea for a browser extension into reality. Before you start that journey, it's worth being aware of a few things that will help to make it a smooth one.
 
-You can find more about many of the things discussed this page on [Extension Workshop](https://extensionworkshop.com), a website dedicated to helping you write, test, publish, and distribute extensions for Firefox.
+You can find more about many of the things discussed on this page on [Extension Workshop](https://extensionworkshop.com), a website dedicated to helping you write, test, publish, and distribute extensions for Firefox.
 
 ## Your development environment
 

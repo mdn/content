@@ -43,9 +43,9 @@ Examples of expressions that can be converted to false are:
 The AND operator preserves non-Boolean values and returns them as they are:
 
 ```js
-result = '' && 'foo';  // result is assigned "" (empty string)
-result = 2 && 0;       // result is assigned 0
-result = 'foo' && 4;   // result is assigned 4
+result = "" && "foo"; // result is assigned "" (empty string)
+result = 2 && 0; // result is assigned 0
+result = "foo" && 4; // result is assigned 4
 ```
 
 Even though the `&&` operator can be used with non-Boolean operands, it is still considered a boolean operator since its return value can always be
@@ -69,11 +69,11 @@ See the example below:
 
 ```js
 function A() {
-  console.log('called A');
+  console.log("called A");
   return false;
 }
 function B() {
-  console.log('called B');
+  console.log("called B");
   return true;
 }
 
@@ -88,9 +88,9 @@ console.log(A() && B());
 The AND operator has a higher precedence than the OR operator, meaning the `&&` operator is executed before the `||` operator (see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
 
 ```js
-true || false && false // returns true
-true && (false || false) // returns false
-(2 === 3) || (4 < 0) && (1 === 1) // returns false
+true || false && false; // true
+true && (false || false); // false
+(2 === 3) || (4 < 0) && (1 === 1); // false
 ```
 
 ## Examples
@@ -101,15 +101,15 @@ The following code shows examples of the `&&` (logical AND)
 operator.
 
 ```js
-a1 = true && true // t && t returns true
-a2 = true && false // t && f returns false
-a3 = false && true // f && t returns false
-a4 = false && (3 === 4) // f && f returns false
-a5 = 'Cat' && 'Dog' // t && t returns "Dog"
-a6 = false && 'Cat' // f && t returns false
-a7 = 'Cat' && false // t && f returns false
-a8 = '' && false // f && f returns ""
-a9 = false && '' // f && f returns false
+a1 = true && true; // t && t returns true
+a2 = true && false; // t && f returns false
+a3 = false && true; // f && t returns false
+a4 = false && 3 === 4; // f && f returns false
+a5 = "Cat" && "Dog"; // t && t returns "Dog"
+a6 = false && "Cat"; // f && t returns false
+a7 = "Cat" && false; // t && f returns false
+a8 = "" && false; // f && f returns ""
+a9 = false && ""; // f && f returns false
 ```
 
 ### Conversion rules for booleans
@@ -118,13 +118,13 @@ a9 = false && '' // f && f returns false
 
 The following operation involving **booleans**:
 
-```js
+```js-nolint
 bCondition1 && bCondition2
 ```
 
 is always equal to:
 
-```js
+```js-nolint
 !(!bCondition1 || !bCondition2)
 ```
 
@@ -132,13 +132,13 @@ is always equal to:
 
 The following operation involving **booleans**:
 
-```js
+```js-nolint
 bCondition1 || bCondition2
 ```
 
 is always equal to:
 
-```js
+```js-nolint
 !(!bCondition1 && !bCondition2)
 ```
 
@@ -148,13 +148,13 @@ As logical expressions are evaluated left to right, it is always possible to rem
 
 The following composite operation involving **booleans**:
 
-```js
+```js-nolint
 bCondition1 || (bCondition2 && bCondition3)
 ```
 
 is always equal to:
 
-```js
+```js-nolint
 bCondition1 || bCondition2 && bCondition3
 ```
 

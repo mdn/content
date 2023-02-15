@@ -26,12 +26,44 @@ new DocumentTimeline(options)
 
 ### Parameters
 
-- `options`
+- `options` {{optional_inline}}
   - : An object specifying options for the new timeline. The following properties are available:
-    - `originTime`
-      - : A number that specifies the zero time for the `documentTimeline`
-        as a real number of milliseconds relative to the {{domxref("PerformanceTiming.navigationStart","navigationStart")}} time of the active document
-        for the current browsing context.
+    - `originTime` {{optional_inline}}
+      - : A `number` that specifies the zero time for the {{domxref("DocumentTimeline")}}
+        as a number of milliseconds relative to {{domxref("Performance.timeOrigin")}}.
+        Defaults to `0`.
+
+## Examples
+
+### Origin time
+
+A {{domxref("DocumentTimeline")}} with an `originTime` of zero counts time
+starting from {{domxref("Performance.timeOrigin")}}. This is the same behavior
+as {{domxref("Document.timeline")}}.
+
+```js
+const timeline = new DocumentTimeline();
+console.log(timeline.currentTime === document.timeline.currentTime); // true
+```
+
+Setting a non-zero `originTime` will offset the {{domxref("DocumentTimeline")}}
+from {{domxref("Document.timeline")}} by that amount:
+
+```js
+const offsetTimeline = new DocumentTimeline({ originTime: 500 });
+console.log(
+  document.timeline.currentTime - offsetTimeline.currentTime
+); // 500
+```
+
+A {{domxref("DocumentTimeline")}} relative to the current moment can be constructed with:
+
+```js
+const nowTimeline = new DocumentTimeline({
+  originTime: document.timeline.currentTime
+});
+console.log(nowTimeline.currentTime); // 0
+```
 
 ## Specifications
 

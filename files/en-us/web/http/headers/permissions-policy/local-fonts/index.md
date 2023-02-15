@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: local-fonts'
+title: "Permissions-Policy: local-fonts"
 slug: Web/HTTP/Headers/Permissions-Policy/local-fonts
 tags:
   - Directive

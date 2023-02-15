@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: magnetometer'
+title: "Permissions-Policy: magnetometer"
 slug: Web/HTTP/Headers/Permissions-Policy/magnetometer
 tags:
   - Directive

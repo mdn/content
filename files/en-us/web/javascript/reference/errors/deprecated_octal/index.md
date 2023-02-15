@@ -71,7 +71,7 @@ Use a leading zero followed by the letter "o" or "O":
 For octal escape sequences, you can use hexadecimal escape sequences instead:
 
 ```js example-good
-'\xA9';
+"\xA9";
 ```
 
 ## See also
