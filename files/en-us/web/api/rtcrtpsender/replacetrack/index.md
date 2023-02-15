@@ -79,7 +79,7 @@ rejection handler:
 
 Most track replacements can be done without renegotiation. In fact, even changes that seem huge
 can be done without requiring negotiation. However, some changes may require
-negotiation and thus fail replaceTrack:
+negotiation and thus fail `replaceTrack`:
 
 - The new track has a resolution which is outside the bounds of the dimensions negotiated with the peer;
   however, most browser end-points allow resolution changes.
