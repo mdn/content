@@ -36,7 +36,7 @@ postMessage(message, transfer)
 
     Transferable objects are instances of classes like {{jsxref("ArrayBuffer")}}, {{domxref("MessagePort")}} or {{domxref("ImageBitmap")}} objects that can be transferred. `null` is not an acceptable value for `transfer`.
 
-> **Note:** The parameters `options` and `transfer` can't be both used at the same time.
+> **Note:** The parameters `options` and `transfer` can't both be used at the same time.
 
 ### Return value
 
