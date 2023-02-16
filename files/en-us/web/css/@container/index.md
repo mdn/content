@@ -104,7 +104,7 @@ Details about usage and naming restrictions are described in the {{cssxref("cont
 
 ### Style container queries
 
-Currently only size-based container queries have implementations across browsers.
+Currently only size-based container queries have browser support.
 It is expected that `style()` container queries will allow checking the {{cssxref("computed_value")}} of a container in future:
 
 ```css example-bad
