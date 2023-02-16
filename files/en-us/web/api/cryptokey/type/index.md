@@ -19,7 +19,7 @@ One of the following strings: `"secret"`, `"private"`, or `"public"`.
 
 ## Examples
 
-This function veryfies a message using {{domxref("SubtleCrypto.verify()")}} and a public key given in parameter. If the key is not a public key, it always returns `"invalid"` as such verification is fundamentally unsecure.
+This function verifies a message using {{domxref("SubtleCrypto.verify()")}} and a public key given in the parameter. If the key is not a public key, it always returns `"invalid"`, as such verification is fundamentally insecure.
 
 ```js
 async function verifyMessage(publicKey) {
