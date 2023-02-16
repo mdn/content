@@ -7,7 +7,7 @@ browser-compat: api.FetchEvent.handled
 
 {{APIRef("Service Workers API")}}
 
-The **`handled`** property of the {{DOMxRef("FetchEvent")}} interface returns a promise indicatinh if the event has been handled by the fetch algorithm or not. This property allows executinh code after the browser has consumed a response, and is usually used together with the {{DOMxRef("ExtendableEvent.waitUntil", "waitUntil()")}} method.
+The **`handled`** property of the {{DOMxRef("FetchEvent")}} interface returns a promise indicating if the event has been handled by the fetch algorithm or not. This property allows executing code after the browser has consumed a response, and is usually used together with the {{DOMxRef("ExtendableEvent.waitUntil", "waitUntil()")}} method.
 
 ## Value
 
