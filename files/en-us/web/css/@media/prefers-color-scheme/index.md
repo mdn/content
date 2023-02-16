@@ -35,58 +35,25 @@ To learn more about SVGs, see the [SVG documentation](/en-US/docs/Web/SVG) and f
 
 ## Examples
 
-### Detecting a dark theme
+### Detecting a dark or light theme
 
-The elements below have an initial color theme.
-They can be further themed according to the user's color scheme preference.
+The elements below have an initial color theme. They can be further themed according to the user's color scheme preference.
+
+#### HTML
 
 ```html
-<div class="day">Day (initial)</div>
-<div class="day light-scheme">Day (changes in light scheme)</div>
-<div class="day dark-scheme">Day (changes in dark scheme)</div>
+<div class="theme-a">Theme A (default)</div>
+<div class="theme-a adaptive">Theme A (adaptive)</div>
 <br />
 
-<div class="night">Night (initial)</div>
-<div class="night light-scheme">Night (changes in light scheme)</div>
-<div class="night dark-scheme">Night (changes in dark scheme)</div>
+<div class="theme-b">Theme B (default)</div>
+<div class="theme-b adaptive">Theme B (adaptive)</div>
 ```
 
-The following CSS is used to style the elements above:
+#### CSS
 
-```css
-.day {
-  background: #eee;
-  color: black;
-}
-.night {
-  background: #333;
-  color: white;
-}
-
-@media (prefers-color-scheme: dark) {
-  .day.dark-scheme {
-    background: #333;
-    color: white;
-  }
-  .night.dark-scheme {
-    background: black;
-    color: #ddd;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .day.light-scheme {
-    background: white;
-    color: #555;
-  }
-  .night.light-scheme {
-    background: #eee;
-    color: black;
-  }
-}
-
-.day,
-.night {
+```css hidden
+div {
   display: inline-block;
   padding: 1em;
   width: 7em;
@@ -95,7 +62,39 @@ The following CSS is used to style the elements above:
 }
 ```
 
-{{EmbedLiveSample("Detecting_a_dark_theme")}}
+Theme A uses a light color scheme by default, but will switch to a dark scheme based on the media query:
+```css
+.theme-a {
+    background: #dca;
+    color: #731;
+}
+@media (prefers-color-scheme: dark) {
+  .theme-a.adaptive {
+      background: #753;
+      color: #dcb;
+  }
+}
+```
+
+Theme B uses a dark color scheme by default, but will switch to a light scheme based on the media query:
+```css
+.theme-b {
+    background: #447;
+    color: #bbd;
+}
+@media (prefers-color-scheme: light) {
+  .theme-b.adaptive {
+      background: #bcd;
+      color: #334;
+  }
+}
+```
+
+#### Result
+
+The left boxes shows Theme A and Theme B as they would appear without the `prefers-color-scheme` media query. The right boxes show the same themes, but one of them will be changed to a darker or lighter variant based on the user's active color scheme.
+
+{{EmbedLiveSample("Detecting_a_dark_or_light_theme")}}
 
 ### Color scheme inheritance
 
