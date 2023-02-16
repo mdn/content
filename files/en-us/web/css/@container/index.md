@@ -176,7 +176,7 @@ The following example will apply styles to the `.card` element if it's in a cont
 
 ### Named container contexts
 
-Given the following HTML example which is a card component with a title, and some text:
+Given the following HTML example which is a card component with a title and some text:
 
 ```html
 <div class="post">
