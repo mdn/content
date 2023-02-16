@@ -35,7 +35,7 @@ An {{domxref("Element")}} object describing the DOM element object matching the 
 ### HTML
 
 ```html
-Durian is initially the only entry of this list. The other list items have been
+Durian is initially the only entry in this list. The other list items have been
 added to a fragment, subsequently added to this unordered list:
 <ul>
   <li id="Durian">Durian</li>
