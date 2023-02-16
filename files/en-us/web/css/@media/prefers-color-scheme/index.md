@@ -64,7 +64,7 @@ div.box {
 }
 ```
 
-Theme A uses a light color scheme by default, but will switch to a dark scheme based on the media query:
+Theme A (brown) uses a light color scheme by default, but will switch to a dark scheme based on the media query:
 ```css
 .theme-a {
     background: #dca;
@@ -78,7 +78,7 @@ Theme A uses a light color scheme by default, but will switch to a dark scheme b
 }
 ```
 
-Theme B uses a dark color scheme by default, but will switch to a light scheme based on the media query:
+Theme B (blue) uses a dark color scheme by default, but will switch to a light scheme based on the media query:
 ```css
 .theme-b {
     background: #447;
