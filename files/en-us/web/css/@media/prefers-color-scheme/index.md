@@ -37,7 +37,7 @@ To learn more about SVGs, see the [SVG documentation](/en-US/docs/Web/SVG) and f
 
 ### Detecting a dark or light theme
 
-A common usage of `prefers-color-scheme` is to first use an entirely light color scheme, and then use the media query to override the colors to a darker variant if the user prefers a dark scheme. It is also common to do it the other way around.
+A common usage is to use a light color scheme by default, and then use `prefers-color-scheme: dark` to override the colors to a darker variant. It is also possible to do it the other way around.
 
 This example shows both options: Theme A uses light colors, but can be overridden to dark colors. Theme B uses dark colors, but can be overridden to light colors. In the end, if the browser supports `prefers-color-scheme`, both themes will be light or dark.
 
