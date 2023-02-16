@@ -7,7 +7,7 @@ browser-compat: api.Request.signal
 
 {{APIRef("Fetch API")}}
 
-The read-only **`signal`** property of the {{DOMxRef("Request")}} interface return the {{domxref("AbortSignal")}} associated with the request.
+The read-only **`signal`** property of the {{DOMxRef("Request")}} interface returns the {{domxref("AbortSignal")}} associated with the request.
 
 ## Value
 
