@@ -1,19 +1,13 @@
 ---
-title: Navigator.mediaCapabilities
-slug: Web/API/Navigator/mediaCapabilities
+title: WorkerNavigator.mediaCapabilities
+slug: Web/API/WorkerNavigator/mediaCapabilities
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Media Capabilities API
-  - MediaCapabilities
-  - Navigator
-browser-compat: api.Navigator.mediaCapabilities
+browser-compat: api.WorkerNavigator.mediaCapabilities
 ---
 
 {{APIRef("HTML DOM")}}
 
-The read-only **`mediaCapabilities`** property of the {{domxref("Navigator")}} interface
+The **`mediaCapabilities`** read-only property of the {{domxref("WorkerNavigator")}} interface
 returns a {{domxref("MediaCapabilities")}} object that can expose information about the
 decoding and encoding capabilities for a given format and output capabilities as defined
 by the [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API).
@@ -51,4 +45,4 @@ navigator.mediaCapabilities.decodingInfo({
 ## See also
 
 - [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API)
-- {{domxref("Navigator")}}
+- {{domxref("WorkerNavigator")}}
