@@ -59,10 +59,10 @@ The `@page` at-rule can be accessed via the CSS object model interface {{domxref
 
 ### Properties
 
-The `@page` at-rule, currently, has 1 property that allows the user to assign a name to the rule.
+The `@page` at-rule, allows the user to assign a name to the rule, which is then called in a selector using the `page` property.
 
 - [`page`](/en-US/docs/Web/CSS/@page/page)
-  - : Allows a selector to used an user defined **named page**
+  - : Allows a selector to use a user defined **named page**
 
 ## Formal syntax
 
@@ -298,7 +298,11 @@ The page-margin properties are the set of CSS properties can be set in any indiv
 
 ## Named pages
 
-It is possibly to create named pages that can then be applied using the `page` property. This allows the user to create different page print layouts, that can be applied to different sections of a document.
+Named pages allow web pages to perform per-page layout and add page-breaks in a declarative manner when printing.
+
+Named pages can be applied using the [`page`](/en-US/docs/Web/CSS/@page/page) property. This allows the user to create different page configurations for use in print layouts.
+
+An example of this can be found on the [`page`](/en-US/docs/Web/CSS/@page/page#examples) examples.
 
 ## Examples
 
