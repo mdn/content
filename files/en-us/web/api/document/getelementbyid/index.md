@@ -34,7 +34,7 @@ getElementById(id)
 ### Parameters
 
 - `id`
-  - : The ID of the element to locate. The ID is case-sensitive string which is unique within the document; only one element should have any given ID.
+  - : The ID of the element to locate. The ID is a case-sensitive string which is unique within the document; only one element should have any given ID.
 
 ### Return value
 
