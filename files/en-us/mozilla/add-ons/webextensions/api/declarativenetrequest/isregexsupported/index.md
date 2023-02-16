@@ -33,9 +33,9 @@ let count = browser.declarativeNetRequest.isRegexSupported(
     - `isCaseSensitive` {{optional_inline}}
       - : `boolean` Whether the regex specified is case sensitive. Default is `true`.
     - `regex`
-      - : `string` The regular expresson to check.
+      - : `string` The regular expression to check.
     - `requireCapturing` {{optional_inline}}
-      - : `boolean` Whether the regex specified requires capturing. Capturing is only required for redirect rules that specify a regexSubstition action. The default is false.
+      - : `boolean` Whether the regex specified requires capturing. Capturing is only required for redirect rules that specify a regexSubstitution action. The default is false.
 
 ### Return value
 
