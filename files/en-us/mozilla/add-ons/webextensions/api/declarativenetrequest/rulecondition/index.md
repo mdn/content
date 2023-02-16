@@ -30,7 +30,7 @@ Values of this type are objects. They contain these properties:
 - `initiatorDomains` {{optional_inline}}
   - : An array of `string`. The rule only matches network requests originating from this list of domains. If the list is omitted, the rule is applied to requests from all domains. An empty list is not allowed. A [canonical domain](#canonical_domain) should be used. This matches against the request initiator and not the request URL.
 - `excludedInitiatorDomains` {{optional_inline}}
-  - : An array of `string`. The rule does not match network requests originating from this list of domains. If the list is empty or omitted, no domains are excluded. This takes precedence over `initiatorDomains`. A [canonical domain](# whocanonical_domain) should be used. This matches against the request initiator and not the request URL.
+  - : An array of `string`. The rule does not match network requests originating from this list of domains. If the list is empty or omitted, no domains are excluded. This takes precedence over `initiatorDomains`. A [canonical domain](#whocanonical_domain) should be used. This matches against the request initiator and not the request URL.
 - `isUrlFilterCaseSensitive` {{optional_inline}}
   - : A `boolean`. Whether the [`urlFilter`](#urlfilter) or [`regexFilter`](#regexfilter) (whichever is specified) is case sensitive. Default is true in (older) versions of Chrome and Safari, and false in Firefox. There is consensus on defaulting to `true` across browsers in [WECG issue 269](https://github.com/w3c/webextensions/issues/269).
 - `regexFilter` {{optional_inline}}
@@ -69,7 +69,7 @@ Values of this type are objects. They contain these properties:
 
 ### Canonical domain
 
-Domains specified in `initiatorDomains`, `excludedinitiatorDomains`, `requestDomains`, or `excludedRequestDomains` should comply with the following:
+Domains specified in `initiatorDomains`, `excludedInitiatorDomains`, `requestDomains`, or `excludedRequestDomains` should comply with the following:
 
 - Sub-domains such as "a.example.com" are allowed.
 - The entries must consist of only _lowercase_ ASCII characters.
