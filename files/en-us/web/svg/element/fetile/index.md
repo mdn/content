@@ -62,7 +62,7 @@ This element implements the {{domxref("SVGFETileElement")}} interface.
 
       <!-- Without specifying a region, feTile defaults to the region
            of the filter. Without specifying an "in" parameter, the default
-           is the result of the previous primitve. So this second feTile
+           is the result of the previous primitive. So this second feTile
            will tile the entire filter region with the mascot's head. -->
       <feTile />
     </filter>

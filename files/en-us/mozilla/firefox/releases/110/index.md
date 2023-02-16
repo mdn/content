@@ -38,7 +38,7 @@ No notable changes.
 
 - {{domxref("ReadableStream")}} now supports [asynchronous iteration over the chunks in a stream](/en-US/docs/Web/API/ReadableStream#async_iteration) using the `for await...of` syntax ({{bug(1734244)}}).
 
-- WebRTC now supports sending the set of available encodings when adding a tranceiver to a peer connection, and also getting the active encoding associated with a sender.
+- WebRTC now supports sending the set of available encodings when adding a transceiver to a peer connection, and also getting the active encoding associated with a sender.
   Specifically, {{domxref("RTCPeerConnection.addTransceiver()")}} now supports using the [`sendEncodings`](/en-US/docs/Web/API/RTCPeerConnection/addTransceiver#sendencodings) option in the [`init`](/en-US/docs/Web/API/RTCPeerConnection/addTransceiver#init) parameter object, and [`RTCRtpEncodingParameters.active`](/en-US/docs/Web/API/RTCRtpEncodingParameters#active) can be used to determine whether or not the encoding is being used to send data.
   (See {{bug(1676855)}} for more details.)
 
