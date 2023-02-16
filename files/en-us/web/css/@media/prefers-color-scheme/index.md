@@ -37,23 +37,25 @@ To learn more about SVGs, see the [SVG documentation](/en-US/docs/Web/SVG) and f
 
 ### Detecting a dark or light theme
 
-The elements below have an initial color theme. They can be further themed according to the user's color scheme preference.
+A common usage of `prefers-color-scheme` is to first use an entirely light color scheme, and then use the media query to override the colors to a darker variant if the user prefers a dark scheme. It is also common to do it the other way around.
+
+This example shows both options: Theme A uses light colors, but can be overridden to dark colors. Theme B uses dark colors, but can be overridden to light colors. In the end, if the browser supports `prefers-color-scheme`, both themes will be light or dark.
 
 #### HTML
 
 ```html
-<div class="theme-a">Theme A (default)</div>
-<div class="theme-a adaptive">Theme A (adaptive)</div>
+<div class="box theme-a">Theme A (default)</div>
+<div class="box theme-a adaptive">Theme A (adaptive)</div>
 <br />
 
-<div class="theme-b">Theme B (default)</div>
-<div class="theme-b adaptive">Theme B (adaptive)</div>
+<div class="box theme-b">Theme B (default)</div>
+<div class="box theme-b adaptive">Theme B (adaptive)</div>
 ```
 
 #### CSS
 
 ```css hidden
-div {
+div.box {
   display: inline-block;
   padding: 1em;
   width: 7em;
