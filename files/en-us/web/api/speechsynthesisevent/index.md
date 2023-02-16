@@ -25,6 +25,8 @@ _The {{domxref("SpeechSynthesisEvent")}} interface also inherits properties from
 
 - {{domxref("SpeechSynthesisEvent.charIndex")}} {{ReadOnlyInline}}
   - : Returns the index position of the character in the {{domxref("SpeechSynthesisUtterance.text")}} that was being spoken when the event was triggered.
+- {{domxref("SpeechSynthesisEvent.charLength")}} {{ReadOnlayInline}}
+  - : Returns the number of characters left to be spoken after the `charIndex` position, if the speaking engine supports it. Returns 0 if the speaking engine can't provide the information.
 - {{domxref("SpeechSynthesisEvent.elapsedTime")}} {{ReadOnlyInline}}
   - : Returns the elapsed time in seconds after the {{domxref("SpeechSynthesisUtterance.text")}} started being spoken that the event was triggered at.
 - {{domxref("SpeechSynthesisEvent.name")}} {{ReadOnlyInline}}
