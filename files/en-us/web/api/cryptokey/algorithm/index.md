@@ -7,7 +7,7 @@ browser-compat: api.CryptoKey.algorithm
 
 {{APIRef("Web Crypto API")}}{{SecureContext_Header}}
 
-The read-only **`algorithm`** property of the {{DOMxRef("CryptoKey")}} interface returns an object describing the algorithm for which this key can be used and any associated extra parameters.
+The read-only **`algorithm`** property of the {{DOMxRef("CryptoKey")}} interface returns an object describing the algorithm for which this key can be used, and any associated extra parameters.
 
 The object returned depends of the algorithm used to generate the key.
 
