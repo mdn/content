@@ -19,7 +19,7 @@ An {{DOMxRef("AbortSignal")}} object.
 // Create a new abort controller
 const controller = new AbortController();
 
-// Creatae a request we this controller's AbortSignal object
+// Create a request with this controller's AbortSignal object
 const req = new Request('/', { signal: controller.signal });
 
 // Add an event handler logging a message in case of abort
