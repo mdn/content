@@ -15,7 +15,7 @@ browser-compat: api.ImageBitmap
 
 The **`ImageBitmap`** interface represents a bitmap image which can be drawn to a {{HTMLElement("canvas")}} without undue latency. It can be created from a variety of source objects using the {{domxref("createImageBitmap()")}} factory method. `ImageBitmap` provides an asynchronous and resource efficient pathway to prepare textures for rendering in WebGL.
 
-`ImageBitmap` is a {{glossary("Transferable objects","transferable object")}}.
+`ImageBitmap` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 ## Instance properties
 
