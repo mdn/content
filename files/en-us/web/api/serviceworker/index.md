@@ -36,10 +36,16 @@ _The `ServiceWorker` interface inherits properties from its parent, {{domxref("E
 
 _The `ServiceWorker` interface inherits methods from its parent, {{domxref("EventTarget")}}._
 
+- {{domxref("ServiceWorker.postMessage()")}}
+  - : Sends a message — consisting of any JavaScript object — to the service worker. The message is transmitted to the service worker using a {{domxref("ServiceWorkerGlobalScope.message_event", "message")}} event on its global scope.
+
 ## Events
 
-- {{domxref("ServiceWorker.statechange_event", "statechange")}} {{ReadOnlyInline}}
-  - : Fires anytime the {{domxref("ServiceWorker.state")}} changes.
+- {{domxref("ServiceWorker.statechange_event", "statechange")}}
+  - : Thrown anytime the {{domxref("ServiceWorker.state")}} changes.
+
+- {{domxref("ServiceWorker.error_event", "message")}}
+  - _ Thrown if an error happens inside the `ServiceWorker` object.
 
 ## Examples
 
