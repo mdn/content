@@ -44,11 +44,11 @@ This example shows both options: Theme A uses light colors, but can be overridde
 #### HTML
 
 ```html
-<div class="box theme-a">Theme A (default)</div>
+<div class="box theme-a">Theme A (initial)</div>
 <div class="box theme-a adaptive">Theme A (adaptive)</div>
 <br />
 
-<div class="box theme-b">Theme B (default)</div>
+<div class="box theme-b">Theme B (initial)</div>
 <div class="box theme-b adaptive">Theme B (adaptive)</div>
 ```
 
