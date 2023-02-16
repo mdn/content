@@ -10,7 +10,7 @@ tags:
 
 {{ XsltRef() }}
 
-The `<xsl:otherwise>` element is used to define the action that should be taken when none of the `<xsl:when>` conditions apply. It is similar to the `else` or `default` case in other programing languages.
+The `<xsl:otherwise>` element is used to define the action that should be taken when none of the `<xsl:when>` conditions apply. It is similar to the `else` or `default` case in other programming languages.
 
 ### Syntax
 
