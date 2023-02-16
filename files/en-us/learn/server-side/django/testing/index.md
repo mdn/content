@@ -571,6 +571,8 @@ This is incredibly useful for testing, because it allows us to confirm that our 
 In some cases you'll want to test a view that is restricted to just logged in users. For example our `LoanedBooksByUserListView` is very similar to our previous view but is only available to logged in users, and only displays `BookInstance` records that are borrowed by the current user, have the 'on loan' status, and are ordered "oldest first".
 
 ```python
+from django.views import generic
+from catalog.models import BookInstance
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 class LoanedBooksByUserListView(LoginRequiredMixin, generic.ListView):
