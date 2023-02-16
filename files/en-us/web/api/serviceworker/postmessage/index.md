@@ -69,7 +69,7 @@ addEventListener("message", (event) =>
 );
 ```
 
-Note that the service worker can send back messages to the main thread using the {{domxref("ServiceWorkerGlobalScope.postMessage()", "postMessage()")}} method. To receive it, the main thread needs to listen for a {{domxref("ServiceWorker.message_event", "message")}} event on the {{domxref("ServiceWorker")}} object.
+Note that the service worker can send back messages to the main thread using the {{domxref("Client.postMessage()", "postMessage()")}} method. To receive it, the main thread needs to listen for a {{domxref("ServiceWorkerContainer.message_event", "message")}} event on the {{domxref("ServiceWorkerContainer")}} object.
 
 ## Specifications
 
@@ -82,4 +82,4 @@ Note that the service worker can send back messages to the main thread using the
 ## See also
 
 - The {{domxref("ServiceWorker")}} interface it belongs to.
-- Its counterpart, the {{domxref("Client.postMessage()", "postMessage()")}} method that a service worker must use to send a message back to the associated {{domxref"ServiceWorkerContainer")}}.
+- Its counterpart, the {{domxref("Client.postMessage()", "postMessage()")}} method that a service worker must use to send a message back to the associated {{domxref("ServiceWorkerContainer")}}.
