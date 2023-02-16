@@ -45,7 +45,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - {{jsxref("SyntaxError")}}
-  - : Thrown if the `message` parameter
+  - : Thrown if the `message` parameter is not provided and `null` or `undefined` is not passed explicitly.
 
 ## Examples
 
