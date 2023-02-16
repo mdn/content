@@ -28,7 +28,7 @@ postMessage(message, transfer)
     The `message` parameter is mandatory. If the data to be passed to the worker is unimportant, `null` or `undefined` must be passed explicitly.
 
 - `options` {{optional_inline}}
-  - : An optional object containing a `transfer` field with an [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of {{Glossary("Transferable objects")}} to transfer ownership of.
+  - : An optional object containing a `transfer` field with an [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of.
 
 - `transfer` {{optional_inline}}
 
