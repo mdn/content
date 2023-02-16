@@ -23,7 +23,9 @@ const controller = new AbortController();
 const req = new Request('/', { signal: controller.signal });
 
 // Add an event handler logging a message in case of abort
-req.signal.addEventListener("signal",  () => { console.log('abort'); }
+req.signal.addEventListener("signal", () => {
+  console.log("abort");
+});
 
 // In case of abort, log the AbortSignal reason, if any
 fetch(req).catch(() => {
