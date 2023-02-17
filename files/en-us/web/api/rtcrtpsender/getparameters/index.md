@@ -69,3 +69,7 @@ function getRtpCNAME(sender) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("RTCRtpReceiver.getParameters()")}}
