@@ -15,9 +15,9 @@ tags:
 
 {{CSSRef}}
 
-CSS Filters enable may visual effects that used to be reserved to costly image editing applications. The CSS {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties provides access to effects like blur or color shifting, impacting the rendering of text, images, backgrounds, and borders, or any element on which it is applied.
+Have you ever hovered over a black and white or sepia image and the full color image came into view instantly? Have you ever encountered an image with a small blurred out section that makes the text on top more legible? These effects used to not only require costly image editing applications but could also negatively impact performance. CSS Filters enable these visual effects. The only software required is the user's browser. There are no extra HTTP requests. Additionally, if you change the width or the user increases the font in the blur example, the effect grows (or shrinks) with automatically.
 
-The [CSS filter effects](/en-us/docs/Web/CSS/filter_effects/) module defines the {{cssxref("&lt;filter-function&gt;")}} data type which provides 10 different graphical effects that can alter the appearance of an element as well as the ability to reference an SVG filter with a URL to an [SVG filter element](/en-US/docs/Web/SVG/Element/filter).
+The [CSS filter effects](/en-us/docs/Web/CSS/filter_effects/) module defines the {{cssxref("&lt;filter-function&gt;")}} data type which provides 10 different graphical effects, like blur or color shifting, that can alter the appearance of an element as well as the ability to reference an SVG filter with a filter of your own creation. The CSS {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties are used to apply these filters, impacting the rendering of text, images, backgrounds, and borders, or any element on which these properties are applied.
 
 ## Applying a filter to an image
 
@@ -39,6 +39,8 @@ There are 10 CSS filter functions. The following table lists the filter function
 | {{cssxref("filter-function/opacity", "opacity()")}}         | {{SVGElement("feComponentTransfer")}} containing {{SVGElement("feFuncA")}} with {{SVGAttr("tableValues")}}attribute                                                                                       | {{cssxref("&lt;length&gt;")}}                                      |                     |     |     |
 | {{cssxref("filter-function/saturate", "saturate()")}}       | {{SVGElement("feColorMatrix")}}                                                                                                                                                                           | {{cssxref("&lt;length&gt;")}}                                      |                     |     |     |
 | {{cssxref("filter-function/sepia", "sepia()")}}             | {{SVGElement("feColorMatrix")}}                                                                                                                                                                           | {{cssxref("&lt;length&gt;")}}                                      |                     |     |     |
+
+with a URL to an [SVG filter element](/en-US/docs/Web/SVG/Element/filter).
 
 ## Filter functions
 
