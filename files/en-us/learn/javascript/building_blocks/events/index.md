@@ -103,7 +103,7 @@ The example output is as follows. Try clicking the button:
 
 ## Using addEventListener()
 
-As we saw in the last example, objects that objects that can fire events have an {{domxref("EventTarget/addEventListener", "addEventListener()")}} method, and this is the recommended mechanism for adding event handlers.
+As we saw in the last example, objects that can fire events have an {{domxref("EventTarget/addEventListener", "addEventListener()")}} method, and this is the recommended mechanism for adding event handlers.
 
 Let's take a closer look at the code from the last example:
 
@@ -122,7 +122,7 @@ btn.addEventListener("click", () => {
 
 The HTML {{HTMLElement("button")}} element will fire an event when the user clicks the button. So it defines an `addEventListener()` function, which we are calling here. We're passing in two parameters:
 
-- the string `"click"`, to indicate that we want to listen to the click event. Buttons can fire lots of other events, such as [`"mouseover"`](/en-US/docs/Web/API/Element/mouseover_event) when the user moves their mouse over the button, or [`"keydown"`](/en-US/docs/Web/API/Element/keydown_event) when use user presses a key and the button is focused.
+- the string `"click"`, to indicate that we want to listen to the click event. Buttons can fire lots of other events, such as [`"mouseover"`](/en-US/docs/Web/API/Element/mouseover_event) when the user moves their mouse over the button, or [`"keydown"`](/en-US/docs/Web/API/Element/keydown_event) when the user presses a key and the button is focused.
 - a function to call when the event happens. In our case, the function generates a random RGB color and sets the [`background-color`](/en-US/docs/Web/CSS/background-color) of the page [`<body>`](/en-US/docs/Web/HTML/Element/body) to that color.
 
 It is fine to make the handler function a separate named function, like this:
@@ -773,8 +773,8 @@ Events are not unique to JavaScript — most programming languages have some kin
 In fact, the event model in JavaScript for web pages differs from the event model for JavaScript as it is used in other environments.
 
 For example, [Node.js](/en-US/docs/Learn/Server-side/Express_Nodejs) is a very popular JavaScript runtime that enables developers to use JavaScript to build network and server-side applications.
-The [Node.js event model](https://nodejs.org/docs/latest-v12.x/api/events.html) relies on listeners to listen for events and emitters to emit events periodically — it doesn't sound that different, but the code is quite different, making use of functions like `on()` to register an event listener, and `once()` to register an event listener that unregisters after it has run once.
-The [HTTP connect event docs](https://nodejs.org/docs/latest-v12.x/api/http.html#http_event_connect) provide a good example.
+The [Node.js event model](https://nodejs.org/api/events.html) relies on listeners to listen for events and emitters to emit events periodically — it doesn't sound that different, but the code is quite different, making use of functions like `on()` to register an event listener, and `once()` to register an event listener that unregisters after it has run once.
+The [HTTP connect event docs](https://nodejs.org/api/http.html#event-connect) provide a good example.
 
 You can also use JavaScript to build cross-browser add-ons — browser functionality enhancements — using a technology called [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).
 The event model is similar to the web events model, but a bit different — event listeners' properties are camel-cased (such as `onMessage` rather than `onmessage`), and need to be combined with the `addListener` function.
