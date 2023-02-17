@@ -131,11 +131,3 @@ Based on your requirements, you can use the browser compatibility table to check
 You made it to the end of the article! Now that you have some understanding of what CSS is, let's move on to [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started), where you can start to write some CSS yourself.
 
 {{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
-
-## In this module
-
-- [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
-- [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
-- [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-- [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
-- [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page)
