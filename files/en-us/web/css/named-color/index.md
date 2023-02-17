@@ -31,7 +31,101 @@ Named colors consists of standard colors, and of the `transparent` keyword.
 
 #### Standard colors
 
-The following colors have a keyword associated to them:
+Basic colors have standard, easy-to-remember names:
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Keyword</th>
+      <th scope="col">RGB hex value</th>
+      <th scope="col">Sample</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>black</code></td>
+      <td><code>#000000</code></td>
+      <td style="background: black"></td>
+    </tr>
+    <tr>
+      <td><code>silver</code></td>
+      <td><code>#c0c0c0</code></td>
+      <td style="background: silver"></td>
+    </tr>
+    <tr>
+      <td><code>gray</code></td>
+      <td><code>#808080</code></td>
+      <td style="background: gray"></td>
+    </tr>
+    <tr>
+      <td><code>white</code></td>
+      <td><code>#ffffff</code></td>
+      <td style="background: white"></td>
+    </tr>
+    <tr>
+      <td><code>maroon</code></td>
+      <td><code>#800000</code></td>
+      <td style="background: maroon"></td>
+    </tr>
+    <tr>
+      <td><code>red</code></td>
+      <td><code>#ff0000</code></td>
+      <td style="background: red"></td>
+    </tr>
+    <tr>
+      <td><code>purple</code></td>
+      <td><code>#800080</code></td>
+      <td style="background: purple"></td>
+    </tr>
+    <tr>
+      <td><code>fuchsia</code></td>
+      <td><code>#ff00ff</code></td>
+      <td style="background: fuchsia"></td>
+    </tr>
+    <tr>
+      <td><code>green</code></td>
+      <td><code>#008000</code></td>
+      <td style="background: green"></td>
+    </tr>
+    <tr>
+      <td><code>lime</code></td>
+      <td><code>#00ff00</code></td>
+      <td style="background: lime"></td>
+    </tr>
+    <tr>
+      <td><code>olive</code></td>
+      <td><code>#808000</code></td>
+      <td style="background: olive"></td>
+    </tr>
+    <tr>
+      <td><code>yellow</code></td>
+      <td><code>#ffff00</code></td>
+      <td style="background: yellow"></td>
+    </tr>
+    <tr>
+      <td><code>navy</code></td>
+      <td><code>#000080</code></td>
+      <td style="background: navy"></td>
+    </tr>
+    <tr>
+      <td><code>blue</code></td>
+      <td><code>#0000ff</code></td>
+      <td style="background: blue"></td>
+    </tr>
+    <tr>
+      <td><code>teal</code></td>
+      <td><code>#008080</code></td>
+      <td style="background: teal"></td>
+    </tr>
+    <tr>
+      <td><code>aqua</code></td>
+      <td><code>#00ffff</code></td>
+      <td style="background: aqua"></td>
+    </tr>
+  </tbody>
+</table>
+
+In addition to these 16 colors, about 150 other colors have a keyword associated to them:
 
 <table>
   <thead>
