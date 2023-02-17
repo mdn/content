@@ -122,7 +122,7 @@ This media container format is derived from the ISO Base Media File Format and M
 | `audio/3gp2`  | `video/3gp2`  |
 
 These MIME types are the fundamental types for the 3GP media container; other types may be used depending on the specific codec or codecs in use.
-In addition, you can [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter#iso-bmff) to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally provide details about the profile, level, and/or other codec configuration specifics.
+In addition, you can [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter#iso_base_media_file_format_mp4_quicktime_and_3gp) to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally provide details about the profile, level, and/or other codec configuration specifics.
 
 <table class="standard-table">
   <caption>
@@ -440,14 +440,14 @@ MP4 is a popular container today, as it supports several of the most-used codecs
 The original MPEG-4 Part 1 file format was introduced in 1999; the version 2 format, defined in Part 14, was added in 2003.
 The MP4 file format is derived from the [ISO base media file format](https://en.wikipedia.org/wiki/ISO_base_media_file_format), which is directly derived from the [QuickTime file format](https://en.wikipedia.org/wiki/QuickTime_File_Format) developed by [Apple](https://www.apple.com/).
 
-When specifying the MPEG-4 media type (`audio/mp4` or `video/mp4`), you can [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter#iso-bmff) to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally provide details about the profile, level, and/or other codec configuration specifics.
+When specifying the MPEG-4 media type (`audio/mp4` or `video/mp4`), you can [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter#iso_base_media_file_format_mp4_quicktime_and_3gp) to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally provide details about the profile, level, and/or other codec configuration specifics.
 
 | Audio       | Video       |
 | ----------- | ----------- |
 | `audio/mp4` | `video/mp4` |
 
 These MIME types are the fundamental types for the MPEG-4 media container; other MIME types may be used depending on the specific codec or codecs in use within the container.
-In addition, you can [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter#iso-bmff) to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally provide details about the profile, level, and/or other codec configuration specifics.
+In addition, you can [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter#iso_base_media_file_format_mp4_quicktime_and_3gp) to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally provide details about the profile, level, and/or other codec configuration specifics.
 
 <table class="standard-table">
   <caption>
@@ -587,7 +587,7 @@ You can get more information about Ogg and its codecs in the [Theora Cookbook](h
 The `application/ogg` MIME type can be used when you don't necessarily know whether the media contains audio or video.
 If at all possible, you should use one of the specific types, but fall back to `application/ogg` if you don't know the content format or formats.
 
-You can also [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter#ogg) to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally further describe the track media formats.
+You can also [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally further describe the track media formats.
 
 <table class="standard-table">
   <caption>
@@ -702,7 +702,7 @@ In addition, the QuickTime framework has been deprecated on the Mac for some tim
 The `video/quicktime` MIME type is the fundamental type for the QuickTime media container.
 It's worth noting that QuickTime (the media framework on Mac operating systems) supports a wide variety of containers and codecs, so it actually supports many other MIME types.
 
-You can [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter#iso-bmff) to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally provide details about the profile, level, and/or other codec configuration specifics.
+You can [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter#iso_base_media_file_format_mp4_quicktime_and_3gp) to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally provide details about the profile, level, and/or other codec configuration specifics.
 
 <table class="standard-table">
   <caption>

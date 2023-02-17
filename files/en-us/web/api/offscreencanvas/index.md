@@ -18,7 +18,7 @@ The computation relating to canvas animations and rendering can have a significa
 The **`OffscreenCanvas`** interface provides a canvas that can be rendered off screen, decoupling the DOM and the Canvas API so that the {{HtmlElement("canvas")}} element is no longer entirely dependent on the DOM.
 Rendering operations can also be run inside a [worker](/en-US/docs/Web/API/Web_Workers_API) context, allowing you to run some tasks in a separate thread and avoid heavy work on the main thread.
 
-`OffscreenCanvas` is a {{glossary("Transferable objects","transferable object")}}.
+`OffscreenCanvas` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 {{AvailableInWorkers}}
 
