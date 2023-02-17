@@ -49,7 +49,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-This is a basic sample where a {{domxref("ServiceWorker")}} is created and a message is immediately sent:
+In this example a {{domxref("ServiceWorker")}} is created and a message is immediately sent:
 
 ```js
 navigator.serviceWorker.register("service-worker.js");
