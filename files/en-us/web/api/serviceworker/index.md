@@ -45,7 +45,7 @@ _The `ServiceWorker` interface inherits methods from its parent, {{domxref("Even
   - : Fired when {{domxref("ServiceWorker.state")}} changes.
 
 - {{domxref("ServiceWorker.error_event", "message")}}
-  - _ Thrown if an error happens inside the `ServiceWorker` object.
+  - : Fired when an error happens inside the `ServiceWorker` object.
 
 ## Examples
 
