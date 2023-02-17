@@ -15,13 +15,15 @@ tags:
 
 {{CSSRef}}
 
-CSS Filters enable may visual effects that used to be reserved to costly image editing applications. The CSS {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties provides access to effects like blur or color shifting, impacting the rendering of images, backgrounds, and borders, or any element on which it is applied.
+CSS Filters enable may visual effects that used to be reserved to costly image editing applications. The CSS {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties provides access to effects like blur or color shifting, impacting the rendering of text, images, backgrounds, and borders, or any element on which it is applied.
 
 The [CSS filter effects](/en-us/docs/Web/CSS/filter_effects/) module defines the {{cssxref("&lt;filter-function&gt;")}} data type which provides 10 different graphical effects that can alter the appearance of an element as well as the ability to reference an SVG filter with a URL to an [SVG filter element](/en-US/docs/Web/SVG/Element/filter).
 
 ## Applying a filter to an image
 
-There are two filter properties defined in the CSS filter effects module enable applying zero, one, or more graphical effects to an element, like blur, sepia, or a drop-shadow. With `filter`, the effects are applied to the element on which the `filter` property is defined. With `backdrop-filter`, the graphical effects are applied to the content behind the element, or the element's "backgdrop.
+There are two filter properties defined in the CSS filter effects module enable applying zero, one, or more graphical effects to an element, like blur, sepia, or a drop-shadow. With `filter`, the effects are applied to the element on which the `filter` property is defined. With `backdrop-filter`, the graphical effects are applied to the area behind the element, or the element's "backdrop". The `backdrop-filter` property is often used to make foreground content more legible when the larger area upon which it located would otherwise not provide enough contrast to alw
+
+The `filter` and `backdrop-filter` properties take as their value a filter function list, containing one or more filter-functions or or the default keyword `none`.
 
 There are 10 CSS filter functions. The following table lists the filter functions, their equivalent SVG filter element, their initial interpolation, or default, value, and the function's parameter data type:
 
