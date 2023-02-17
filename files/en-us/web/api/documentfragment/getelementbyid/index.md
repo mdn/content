@@ -11,7 +11,7 @@ The **`getElementById()`** method of the {{domxref("DocumentFragment")}} returns
 
 If you need to get access to an element which doesn't have an ID, you can use {{domxref("Document.querySelector", "querySelector()")}} to find the element using any {{Glossary("CSS selector", "selector")}}.
 
-> **Note:** IDs should be unique inside a document, or a fragment of a document. If it is not the case, this method returns the first occurrence found.
+> **Note:** IDs should be unique inside a document fragment. If two or more elements in a document fragment have the same ID, this method returns the first element found.
 
 ## Syntax
 
