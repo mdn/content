@@ -145,8 +145,8 @@ Consider the following example of a card component with a title and some text:
 </div>
 ```
 
-A container context can be created using the `container-type` property, in this case using the `inline-size` value on the `.post` element.
-You can then use the `@container` at-rule to apply styles to an element with the `.card` class if the element is in a container that's narrower than `650px`.
+A container context can be created using the `container-type` property, in this case using the `inline-size` value on the `.post` class.
+You can then use the `@container` at-rule to apply styles to the element with the `.card` class in a container that's narrower than `650px`.
 
 ```js hidden
 const post = document.querySelector(".post");
