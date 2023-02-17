@@ -90,6 +90,8 @@ You can include any of the following here, but not in all browsers: check the co
 - `webNavigation`
 - `webRequest`
 - `webRequestBlocking`
+- `webRequestFilterResponse`
+- `webRequestFilterResponse.serviceWorkerScript`
 
 Note that this is a subset of the API permissions allowed in [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
 
@@ -100,6 +102,8 @@ Of this set, the following permissions are granted silently, without a user prom
 - `idle`
 - `webRequest`
 - `webRequestBlocking`
+- `webRequestFilterResponse`
+- `webRequestFilterResponse.serviceWorkerScript`
 
 ## Example
 
