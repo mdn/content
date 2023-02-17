@@ -61,7 +61,7 @@ navigator.serviceWorker.ready.then((registration) => {
 });
 ```
 
-In order to receive the message, the service worker, in `service-worker.js` has to listen to the {{domxref("ServiceWorkerGlobalScope.message_event", "event")}} on its global scope.
+In order to receive the message, the service worker, in `service-worker.js` has to listen to the {{domxref("ServiceWorkerGlobalScope.message_event", "message")}} event on its global scope.
 
 ```js
 // This must be in `service-worker.s``
