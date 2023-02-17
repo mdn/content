@@ -151,11 +151,11 @@ You can then use the `@container` at-rule to apply styles to an element with the
 ```js hidden
 const post = document.querySelector(".post");
 const span = document.createElement("span");
-span.innerHTML = ".post width: " + post.offsetWidth + "px";
+span.innerHTML = ".post width: " + post.clientWidth + "px";
 post.parentNode.insertBefore(span, post.nextSibling);
 // update on resize
 window.addEventListener("resize", () => {
-  span.innerHTML = ".post width: " + post.offsetWidth + "px";
+  span.innerHTML = ".post width: " + post.clientWidth + "px";
 });
 ```
 
