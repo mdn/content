@@ -13,9 +13,9 @@ tags:
 
 {{CSSRef}}
 
-Container queries allow us to look at an element and apply styles to the children of that element based on the size of their container.
-This is an alternative to [media queries](/en-US/docs/Web/CSS/Media_Queries) which apply styles to elements based on viewport size or other device characteristics.
-If a container has less available space in the surrounding context, you can hide certain elements or use smaller fonts, for example.
+Container queries enable you to apply styles to an element based on the size of the element's container. If, for example, a container has less space available in the surrounding context, you can hide certain elements or use smaller fonts.
+Container queries are an alternative to [media queries](/en-US/docs/Web/CSS/Media_Queries), which apply styles to elements based on viewport size or other device characteristics.
+
 
 ![A webpage with three card components displayed in different layouts depending on their container's size.](container-query.svg)
 
@@ -31,7 +31,7 @@ These values have the following effects:
   Applies layout, style, and inline-size containment to the element.
 - `normal`: The element is not a query container for any container size queries, but remains a query container for container style queries.
 
-Take the following example which is a card component for a blog post with a title and some text:
+Consider the following example of a card component for a blog post with a title and some text:
 
 ```html
 <div class="post">
@@ -50,7 +50,7 @@ You can create a containment context using the `container-type` property:
 }
 ```
 
-An {{cssxref("@container")}} at-rule allows you to write a container query.
+Next, use the {{cssxref("@container")}} at-rule to define a container query.
 The query in the following example will apply styles to elements based on the size of the nearest ancestor with a containment context.
 Specifically, this query will apply a larger font size for the card title if the container is wider than `700px`:
 
@@ -69,7 +69,7 @@ Specifically, this query will apply a larger font size for the card title if the
 ```
 
 Using container queries, the card can be reused in multiple areas of a page without needing to know specifically where it will be placed each time.
-If there is a smaller container, the card title will be smaller, and if there is a larger container with more space available, the card title will be larger.
+If the container with the card is narrower than `700px`, the font of the card title will be small, and if the card is in a container that's wider than `700px`, the font of the card title will be bigger.
 
 For more information on the syntax of container queries, see the {{cssxref("@container")}} page.
 

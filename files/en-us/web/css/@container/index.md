@@ -145,7 +145,7 @@ The following descriptors can be used within the container condition:
 
 ### Basic example
 
-Given the following HTML example which is a card component with a title and some text:
+Consider the following example of a card component with a title and some text:
 
 ```html
 <div class="post">
@@ -156,7 +156,7 @@ Given the following HTML example which is a card component with a title and some
 </div>
 ```
 
-A container context can be created using the `container-type` property:
+A container context can be created using the `container-type` property, as shown below:
 
 ```css
 .post {
@@ -164,7 +164,7 @@ A container context can be created using the `container-type` property:
 }
 ```
 
-The following example will apply styles to the `.card` element if it's in a container that is wider than 400px:
+You can then use the `@container` at-rule to apply styles to an element with the `.card` class if the element is in a container that's wider than `400px`.
 
 ```css
 @container (min-width: 400px) {
@@ -187,7 +187,7 @@ Given the following HTML example which is a card component with a title and some
 </div>
 ```
 
-First create a container context using `container-type`, add the `container-name` property.
+First, create a container context using the `container-type` and `container-name` properties.
 The shorthand syntax for this declaration is described in the {{cssxref("container")}} page.
 
 ```css
@@ -197,7 +197,7 @@ The shorthand syntax for this declaration is described in the {{cssxref("contain
 }
 ```
 
-You can then target that container by adding the name to the container query:
+Next, target that container by adding the name to the container query:
 
 ```css
 @container summary (min-width: 400px) {
@@ -212,7 +212,7 @@ You can then target that container by adding the name to the container query:
 It's not possible to target multiple containers in a single container query.
 It is possible to nest container queries which has the same effect.
 
-The following query evaluates to true and applies a style to child elements if the container named `card` is wider than 400px and it has an ancestor container that has a width greater than 800px:
+The following query evaluates to true and applies the declared style if the container named `summary` is wider than `400px` and has an ancestor container wider than `800px`:
 
 ```css
 @container summary (min-width: 400px) {
