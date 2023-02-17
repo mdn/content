@@ -1,6 +1,7 @@
 ---
 title: '<bdi>: The Bidirectional Isolate element'
 slug: Web/HTML/Element/bdi
+page-type: html-element
 tags:
   - BDI
   - BiDi
@@ -132,7 +133,7 @@ body {
 
 {{ EmbedLiveSample('Using_bdi_with_LTR_and_RTL_text','','120','','','bdi-example') }}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

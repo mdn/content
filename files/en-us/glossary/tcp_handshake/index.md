@@ -1,6 +1,7 @@
 ---
 title: TCP handshake
 slug: Glossary/TCP_handshake
+page-type: glossary-definition
 tags:
   - Networking
   - SSL

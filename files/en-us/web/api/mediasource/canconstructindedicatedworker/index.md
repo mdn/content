@@ -27,7 +27,7 @@ A boolean. Returns `true` if `MediaSource` worker support is implemented, or `fa
 ## Examples
 
 ```js
-if(MediaSource.canConstructInDedicatedWorker) {
+if (MediaSource.canConstructInDedicatedWorker) {
   // MSE is available in workers; let's do this
 }
 ```

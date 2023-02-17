@@ -1,6 +1,7 @@
 ---
 title: HTML attribute reference
 slug: Web/HTML/Attributes
+page-type: landing-page
 tags:
   - Attribute
   - Attributes
@@ -246,10 +247,9 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/checked">checked</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/input#checked">checked</a></code>
       </td>
       <td>
-        {{ HTMLElement("command") }},
         {{ HTMLElement("input") }}
       </td>
       <td>Indicates whether the element should be checked on page load.</td>
@@ -484,7 +484,6 @@ Elements in HTML have **attributes**; these are additional values that configure
       </td>
       <td>
         {{ HTMLElement("button") }},
-        {{ HTMLElement("command") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
         {{ HTMLElement("keygen") }},
@@ -729,13 +728,6 @@ Elements in HTML have **attributes**; these are additional values that configure
       </td>
       <td>{{ HTMLElement("meta") }}</td>
       <td>Defines a pragma directive.</td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/command#attr-icon">icon</a></code>
-      </td>
-      <td>{{ HTMLElement("command") }}</td>
-      <td>Specifies a picture which represents the command.</td>
     </tr>
     <tr>
       <td>
@@ -1125,13 +1117,6 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/command#attr-radiogroup">radiogroup</a></code>
-      </td>
-      <td>{{ HTMLElement("command") }}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
         <code><a href="/en-US/docs/Web/HTML/Attributes/readonly">readonly</a></code>
       </td>
       <td>
@@ -1427,7 +1412,6 @@ Elements in HTML have **attributes**; these are additional values that configure
       <td>
         {{ HTMLElement("button") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("command") }},
         {{ HTMLElement("embed") }},
         {{ HTMLElement("object") }},
         {{ HTMLElement("ol") }},

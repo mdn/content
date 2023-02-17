@@ -89,15 +89,15 @@ The `border-width` property may be specified using one, two, three, or four valu
 #### HTML
 
 ```html
-<p id="sval">one value: 6px wide border on all 4 sides</p>
-<p id="bival">
+<p id="one-value">one value: 6px wide border on all 4 sides</p>
+<p id="two-values">
   two different values: 2px wide top and bottom border, 10px wide right and left
   border
 </p>
-<p id="treval">
+<p id="three-values">
   three different values: 0.3em top, 9px bottom, and zero width right and left
 </p>
-<p id="fourval">
+<p id="four-values">
   four different values: "thin" top, "medium" right, "thick" bottom, and 1em
   left
 </p>
@@ -106,19 +106,19 @@ The `border-width` property may be specified using one, two, three, or four valu
 #### CSS
 
 ```css
-#sval {
+#one-value {
   border: ridge #ccc;
   border-width: 6px;
 }
-#bival {
+#two-values {
   border: solid red;
   border-width: 2px 10px;
 }
-#treval {
+#three-values {
   border: dotted orange;
   border-width: 0.3em 0 9px;
 }
-#fourval {
+#four-values {
   border: solid lightgreen;
   border-width: thin medium thick 1em;
 }

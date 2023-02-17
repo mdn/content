@@ -13,7 +13,7 @@ tags:
 browser-compat: api.WebTransport.createBidirectionalStream
 ---
 
-{{APIRef("WebTransport API")}}{{seecompattable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`createBidirectionalStream()`** method of the {{domxref("WebTransport")}} interface opens a bidirectional stream; it returns a {{domxref("WebTransportBidirectionalStream")}} object containing `readable` and `writable` properties, which can be used to reliably read from and write to the server.
 

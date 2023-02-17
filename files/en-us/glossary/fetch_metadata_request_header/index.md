@@ -1,6 +1,7 @@
 ---
 title: Fetch metadata request header
 slug: Glossary/Fetch_metadata_request_header
+page-type: glossary-definition
 tags:
   - Fetch Metadata Request Headers
 ---

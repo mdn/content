@@ -1,6 +1,7 @@
 ---
 title: IPv6
 slug: Glossary/IPv6
+page-type: glossary-definition
 tags:
   - IPv6
   - Infrastructure

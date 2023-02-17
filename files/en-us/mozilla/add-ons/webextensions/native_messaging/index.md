@@ -310,7 +310,7 @@ Here's another example written in Python. It listens for messages from the exten
 This is the Python 2 version:
 
 ```python
-#!/usr/bin/python -u
+#!/usr/bin/env -S python2 -u
 
 # Note that running python with the `-u` flag is required on Windows,
 # in order to ensure that stdin and stdout are opened in binary, rather
@@ -331,7 +331,12 @@ def get_message():
 
 # Encode a message for transmission, given its content.
 def encode_message(message_content):
-    encoded_content = json.dumps(message_content)
+    # https://docs.python.org/3/library/json.html#basic-usage
+    # To get the most compact JSON representation, you should specify 
+    # (',', ':') to eliminate whitespace.
+    # We want the most compact representation because the browser rejects
+    # messages that exceed 1 MB.
+    encoded_content = json.dumps(message_content, separators=(',', ':'))
     encoded_length = struct.pack('=I', len(encoded_content))
     return {'length': encoded_length, 'content': encoded_content}
 
@@ -350,43 +355,46 @@ while True:
 In Python 3, the received binary data must be decoded into a string. The content to be sent back to the addon must be encoded into binary data using a struct:
 
 ```python
-#!/usr/bin/python -u
+#!/usr/bin/env -S python3 -u
 
 # Note that running python with the `-u` flag is required on Windows,
 # in order to ensure that stdin and stdout are opened in binary, rather
 # than text, mode.
 
-import json
 import sys
+import json
 import struct
 
 # Read a message from stdin and decode it.
-def get_message():
-    raw_length = sys.stdin.buffer.read(4)
-
-    if not raw_length:
+def getMessage():
+    rawLength = sys.stdin.buffer.read(4)
+    if len(rawLength) == 0:
         sys.exit(0)
-    message_length = struct.unpack('=I', raw_length)[0]
-    message = sys.stdin.buffer.read(message_length).decode("utf-8")
+    messageLength = struct.unpack('@I', rawLength)[0]
+    message = sys.stdin.buffer.read(messageLength).decode('utf-8')
     return json.loads(message)
 
-# Encode a message for transmission, given its content.
-def encode_message(message_content):
-    encoded_content = json.dumps(message_content).encode("utf-8")
-    encoded_length = struct.pack('=I', len(encoded_content))
-    #  use struct.pack("10s", bytes), to pack a string of the length of 10 characters
-    return {'length': encoded_length, 'content': struct.pack(str(len(encoded_content))+"s",encoded_content)}
+# Encode a message for transmission,
+# given its content.
+def encodeMessage(messageContent):
+    # https://docs.python.org/3/library/json.html#basic-usage
+    # To get the most compact JSON representation, you should specify 
+    # (',', ':') to eliminate whitespace.
+    # We want the most compact representation because the browser rejects # messages that exceed 1 MB.
+    encodedContent = json.dumps(messageContent, separators=(',', ':')).encode('utf-8')
+    encodedLength = struct.pack('@I', len(encodedContent))
+    return {'length': encodedLength, 'content': encodedContent}
 
-# Send an encoded message to stdout.
-def send_message(encoded_message):
-    sys.stdout.buffer.write(encoded_message['length'])
-    sys.stdout.buffer.write(encoded_message['content'])
+# Send an encoded message to stdout
+def sendMessage(encodedMessage):
+    sys.stdout.buffer.write(encodedMessage['length'])
+    sys.stdout.buffer.write(encodedMessage['content'])
     sys.stdout.buffer.flush()
 
 while True:
-    message = get_message()
-    if message == "ping":
-        send_message(encode_message("pong"))
+    receivedMessage = getMessage()
+    if receivedMessage == "ping":
+        sendMessage(encodeMessage("pong"))
 ```
 
 ## Closing the native app

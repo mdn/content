@@ -39,8 +39,9 @@ count(query)
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is the number of records that match the given query.
 
 ### Exceptions
 
@@ -60,13 +61,13 @@ the number of records in the store using `count()` — when the success handler
 fires, we log the count value (an integer) to the console.
 
 ```js
-const transaction = db.transaction(['fThings'], 'readonly');
-const objectStore = transaction.objectStore('fThings');
+const transaction = db.transaction(["fThings"], "readonly");
+const objectStore = transaction.objectStore("fThings");
 
 const countRequest = objectStore.count();
 countRequest.onsuccess = () => {
   console.log(countRequest.result);
-}
+};
 ```
 
 ## Specifications

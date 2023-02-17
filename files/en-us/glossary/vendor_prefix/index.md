@@ -1,6 +1,7 @@
 ---
 title: Vendor Prefix
 slug: Glossary/Vendor_Prefix
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

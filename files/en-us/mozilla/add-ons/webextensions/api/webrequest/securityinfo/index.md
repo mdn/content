@@ -67,6 +67,9 @@ Values of this type are objects. They contain the following properties:
     - "TLSv1.3"
     - "unknown" (if the version is not valid)
 
+- `secretKeyLength` {{optional_inline}}
+  - : `Number`. The length of the secret key in bits.
+
 - `signatureSchemeName` {{optional_inline}}
   - : `String`. If `state` is "secure" this describes the signature scheme used in this request.
 - `state`

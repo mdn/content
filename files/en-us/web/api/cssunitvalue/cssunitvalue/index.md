@@ -40,8 +40,9 @@ individual `CSSUnitValue` constructors.
 
 ```js
 let pos = new CSSPositionValue(
-    new CSSUnitValue(5, "px"),
-    new CSSUnitValue(10, "px"));
+  new CSSUnitValue(5, "px"),
+  new CSSUnitValue(10, "px")
+);
 ```
 
 ## Specifications

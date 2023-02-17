@@ -1,6 +1,7 @@
 ---
 title: Transport Layer Security (TLS)
 slug: Glossary/TLS
+page-type: glossary-definition
 tags:
   - Cryptography
   - Infrastructure

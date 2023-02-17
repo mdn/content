@@ -134,7 +134,7 @@ This constructor does not do complete validation of the specified `candidateInfo
 
 ## See also
 
-- {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Protocols", "ICE")}}
+- [Introduction to WebRTC protocols](/en-US/docs/Web/API/WebRTC_API/Protocols#ice)
 - [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)
 - [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
 - [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)

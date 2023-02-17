@@ -9,7 +9,7 @@ tags:
   - KeyboardEvent
   - Method
   - Reference
-  - Non Standard
+  - Non-standard
 ---
 
 {{APIRef("UI Events")}}

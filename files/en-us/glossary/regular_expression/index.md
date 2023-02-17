@@ -1,6 +1,7 @@
 ---
 title: Regular expression
 slug: Glossary/Regular_expression
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Regular Expression

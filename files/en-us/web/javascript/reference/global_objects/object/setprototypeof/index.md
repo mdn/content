@@ -19,6 +19,8 @@ The **`Object.setPrototypeOf()`** method sets the prototype (i.e., the internal 
 >
 > Because this feature is a part of the language, it is still the burden on engine developers to implement that feature performantly (ideally). Until engine developers address this issue, if you are concerned about performance, you should avoid setting the `[[Prototype]]` of an object. Instead, create a new object with the desired `[[Prototype]]` using {{jsxref("Object.create()")}}.
 
+{{EmbedInteractiveExample("pages/js/object-setprototypeof.html")}}
+
 ## Syntax
 
 ```js-nolint
@@ -40,20 +42,22 @@ The specified object.
 
 - {{jsxref("TypeError")}}
   - : Thrown if one of the following conditions is met:
-    - The `obj` parameter is [non-extensible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible), or it's an [immutable prototype exotic object](https://tc39.es/ecma262/#sec-immutable-prototype-exotic-objects), such as `Object.prototype` or [`window`](/en-US/docs/Web/API/Window).
+    - The `obj` parameter is `undefined` or `null`.
+    - The `obj` parameter is [non-extensible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible), or it's an [immutable prototype exotic object](https://tc39.es/ecma262/#sec-immutable-prototype-exotic-objects), such as `Object.prototype` or [`window`](/en-US/docs/Web/API/Window). However, the error is not thrown if the new prototype is the same value as the original prototype of `obj`.
     - The `prototype` parameter is not an object or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 ## Description
 
 `Object.setPrototypeOf()` is generally considered the proper way to set the prototype of an object. You should always use it in favor of the deprecated [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) accessor.
 
-If the `obj` parameter is not an object (e.g. number, string, etc.), this method does nothing.
+If the `obj` parameter is not an object (e.g. number, string, etc.), this method does nothing — without coercing it to an object or attempting to set its prototype — and directly returns `obj` as a primitive value. If `prototype` is the same value as the prototype of `obj`, then `obj` is directly returned, without causing a `TypeError` even when `obj` has immutable prototype.
 
 For security concerns, there are certain built-in objects that are designed to have an _immutable prototype_. This prevents prototype pollution attacks, especially [proxy-related ones](https://github.com/tc39/ecma262/issues/272). The core language only specifies `Object.prototype` as an immutable prototype exotic object, whose prototype is always `null`. In browsers, [`window`](/en-US/docs/Web/API/Window) and [`location`](/en-US/docs/Web/API/Window/location) are two other very common examples.
 
 ```js
 Object.isExtensible(Object.prototype); // true; you can add more properties
 Object.setPrototypeOf(Object.prototype, {}); // TypeError: Immutable prototype object '#<Object>' cannot have their prototype set
+Object.setPrototypeOf(Object.prototype, null); // No error; the prototype of `Object.prototype` is already `null`
 ```
 
 ## Examples

@@ -41,16 +41,18 @@ let results = await browser.scripting.executeScript(
 
   - : An object describing the script to inject. It contains these properties:
 
-    - `args`
+    - `args` {{optional_inline}}
       - : An array of arguments to carry into the function. This is only valid if the `func` parameter is specified. The arguments must be JSON-serializable.
-    - `files`
+    - `files` {{optional_inline}}
       - : `array` of `string`. An array of path of the JS files to inject, relative to the extension's root directory. Exactly one of `files` and `func` must be specified.
-    - `func`
+    - `func` {{optional_inline}}
       - : `function`. A JavaScript function to inject. This function is serialized and then deserialized for injection. This means that any bound parameters and execution context are lost. Exactly one of `files` and `func` must be specified.
     - `injectImmediately` {{optional_inline}}
       - : `boolean`. Whether the injection into the target is triggered as soon as possible, but not necessarily prior to page load.
     - `target`
       - : {{WebExtAPIRef("scripting.InjectionTarget")}}. Details specifying the target to inject the script into.
+    - `world` {{optional_inline}}
+      - : {{WebExtAPIRef("scripting.ExecutionWorld")}}. The execution environment for a script to execute in.
 
 ### Return value
 
@@ -75,7 +77,7 @@ let foo='my result'; foo;
 
 Here the results array contains the string "`my result`" as an element.
 
-The result values must be [structured clonable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
+The result values must be [structured cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
 
 ## Examples
 

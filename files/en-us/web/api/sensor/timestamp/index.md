@@ -17,7 +17,7 @@ browser-compat: api.Sensor.timestamp
 {{APIRef("Sensor API")}}
 
 The **`timestamp`** read-only property
-of the {{domxref("Sensor")}} interface returns the time stamp of the latest sensor
+of the {{domxref("Sensor")}} interface returns the timestamp of the latest sensor
 reading.
 
 Because {{domxref('Sensor')}} is a base class, `timestamp` may only be read

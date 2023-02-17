@@ -222,10 +222,10 @@ This means that you have created a node of the type `TEXT_NODE` (a piece of text
 
 ### Inserting Elements with appendChild(..)
 
-So, by calling `myP.appendChild(node_element)`, you are making the element a new child of the second `<p>` element.
+So, by calling `secondParagraph.appendChild(node_element)`, you are making the element a new child of the second `<p>` element.
 
 ```js
-myP.appendChild(myTextNode);
+secondParagraph.appendChild(myTextNode);
 ```
 
 After testing this sample, note that the words hello and world are together: helloworld. So visually, when you see the HTML page it seems like the two text nodes hello and world are a single node, but remember that in the document model, there are two nodes. The second node is a new node of type `TEXT_NODE`, and it is the second child of the second `<p>` tag. The following figure shows the recently created Text Node object inside the document tree.
@@ -247,10 +247,10 @@ myBody.appendChild(myNewPTagNode);
 
 ### Removing nodes with the removeChild(..) method
 
-Nodes can be removed. The following code removes text node `myTextNode` (containing the word "world") from the second `<p>` element, `myP`.
+Nodes can be removed. The following code removes text node `myTextNode` (containing the word "world") from the second `<p>` element, `secondParagraph`.
 
 ```js
-myP.removeChild(myTextNode);
+secondParagraph.removeChild(myTextNode);
 ```
 
 Text node `myTextNode` (containing the word "world") still exists. The following code attaches `myTextNode` to the recently created `<p>` element, `myNewPTagNode`.

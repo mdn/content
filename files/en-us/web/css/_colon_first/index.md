@@ -29,8 +29,10 @@ The **`:first`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/P
 
 ## Syntax
 
-```
-:first
+```css
+:first {
+  /* ... */
+}
 ```
 
 ## Examples

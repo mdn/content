@@ -117,8 +117,6 @@
     // MD051 - Link fragments should be valid.
     // -> Disabled, as yari generates link fragments by replacing spaces with underscores, not dashes.
     "MD051": false,
-    // Incompatible with brackets in macros like MD042
-    "MD052": false,
     "search-replace": {
       "rules": [
         {

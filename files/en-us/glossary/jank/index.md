@@ -1,6 +1,7 @@
 ---
 title: Jank
 slug: Glossary/Jank
+page-type: glossary-definition
 tags:
   - Beginner
   - CodingScripting

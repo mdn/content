@@ -1,6 +1,7 @@
 ---
 title: '<samp>: The Sample Output element'
 slug: Web/HTML/Element/samp
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -97,7 +98,7 @@ The resulting output is this:
 
 {{EmbedLiveSample("Sample_output_including_user_input", 650, 120)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

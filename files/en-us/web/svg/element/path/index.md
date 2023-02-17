@@ -72,4 +72,4 @@ html,body,svg { height:100% }
 ## See also
 
 - SVG basic shapes: {{ SVGElement('circle') }}, {{ SVGElement('ellipse') }}, {{ SVGElement('line') }}, {{ SVGElement('polygon') }}, {{ SVGElement('polyline') }}, {{ SVGElement('rect') }}
-- [The MDN SVG "Getting Started" tutorial : Path](/en-US/docs/Web/SVG/Tutorial/Paths)
+- [The MDN SVG "Getting Started" tutorial: Path](/en-US/docs/Web/SVG/Tutorial/Paths)

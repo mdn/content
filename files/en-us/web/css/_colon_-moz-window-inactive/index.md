@@ -1,5 +1,5 @@
 ---
-title: ':-moz-window-inactive'
+title: ":-moz-window-inactive"
 slug: Web/CSS/:-moz-window-inactive
 page-type: css-pseudo-class
 tags:
@@ -23,7 +23,9 @@ The **`:-moz-window-inactive`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US
 ## Syntax
 
 ```css
-:-moz-window-inactive
+:-moz-window-inactive {
+  /* ... */
+}
 ```
 
 ## Examples

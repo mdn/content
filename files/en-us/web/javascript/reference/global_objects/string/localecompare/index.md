@@ -33,7 +33,7 @@ The `locales` and `options` parameters customize the behavior of the function an
 In implementations that support the [`Intl.Collator` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator), these parameters correspond exactly to the [`Intl.Collator()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator) constructor's parameters. Implementations without `Intl.Collator` support are asked to ignore both parameters, making the comparison result returned entirely implementation-dependent — it's only required to be _consistent_.
 
 - `compareString`
-  - : The string against which the `referenceStr` is compared.
+  - : The string against which the `referenceStr` is compared. All values are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), so omitting it or passing `undefined` causes `localeCompare()` to compare against the string `"undefined"`, which is rarely what you want.
 - `locales` {{optional_inline}}
 
   - : A string with a BCP 47 language tag, or an array of such strings. Corresponds to the [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#locales) parameter of the `Intl.Collator()` constructor.

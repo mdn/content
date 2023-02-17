@@ -1,6 +1,7 @@
 ---
 title: ICE
 slug: Glossary/ICE
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Networking

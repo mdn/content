@@ -12,7 +12,7 @@ tags:
 browser-compat: api.WebTransportBidirectionalStream
 ---
 
-{{APIRef("WebTransport API")}}{{seecompattable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`WebTransportBidirectionalStream`** interface of the {{domxref("WebTransport API", "WebTransport API", "", "nocode")}} represents a bidirectional stream created by a server or a client that can be used for reliable transport. Provides access to a {{domxref("ReadableStream")}} for reading incoming data, and a {{domxref("WritableStream")}} for writing outgoing data.
 
@@ -22,9 +22,9 @@ The **`WebTransportBidirectionalStream`** interface of the {{domxref("WebTranspo
 
 ## Instance properties
 
-- {{domxref("WebTransportBidirectionalStream.readable", "readable")}} {{ReadOnlyInline}}
+- {{domxref("WebTransportBidirectionalStream.readable", "readable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("ReadableStream")}} instance that can be used to read incoming data.
-- {{domxref("WebTransportBidirectionalStream.writable", "writable")}} {{ReadOnlyInline}}
+- {{domxref("WebTransportBidirectionalStream.writable", "writable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("WritableStream")}} instance that can be used to write outgoing data.
 
 ## Examples

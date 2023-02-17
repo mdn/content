@@ -1,6 +1,7 @@
 ---
 title: Table Grid Box
 slug: Glossary/Table_Grid_Box
+page-type: glossary-definition
 tags:
   - CSS
   - Tables

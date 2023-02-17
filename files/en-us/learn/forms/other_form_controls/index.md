@@ -51,7 +51,7 @@ This renders like so:
 
 The main difference between a `<textarea>` and a regular single-line text field is that users are allowed to include hard line breaks (i.e. pressing return) that will be included when the data is submitted.
 
-`<textarea>` also takes a closing tag, and any default text you want it to contain should be put between the opening and closing tags. In contrast, the {{HTMLElement("input")}} is a {{glossary("void element")}} with no closing tag — any default value is put inside the [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute.
+`<textarea>` also takes a closing tag; any default text you want it to contain should be put between the opening and closing tags. In contrast, the {{HTMLElement("input")}} is a {{glossary("void element")}} with no closing tag — any default value is put inside the [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute.
 
 Note that even though you can put anything inside a `<textarea>` element (including other HTML elements, CSS, and JavaScript), because of its nature, it is all rendered as if it was plain text content. (Using [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) on non-form controls provides an API for capturing HTML/"rich" content instead of plain text).
 
@@ -240,7 +240,7 @@ If you use this fallback, ensure the data for both the `<input>` and the `<selec
 
 According to [the HTML specification](https://html.spec.whatwg.org/multipage/input.html#attr-input-list), the {{htmlattrxref("list","input")}} attribute and the {{HTMLElement("datalist")}} element can be used with any kind of widget requiring a user input. This leads to some uses of it that might seem a little non-obvious.
 
-For example, in browsers that support `{{htmlelement("datalist")}}` on `range` input types, a small tick mark will be displayed above the range for each datalist `{{htmlelement("option")}}` value. You can see an implementation [example of this on the `<input type="range">` reference page](/en-US/docs/Web/HTML/Element/input/range#a_range_control_with_hash_marks).
+For example, in browsers that support `{{htmlelement("datalist")}}` on `range` input types, a small tick mark will be displayed above the range for each datalist `{{htmlelement("option")}}` value. You can see an implementation [example of this on the `<input type="range">` reference page](/en-US/docs/Web/HTML/Element/input/range#adding_tick_marks).
 
 And browsers that support {{htmlelement('datalist')}}s and [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) should display a customized palette of colors as the default, while still making the full color palette available.
 
@@ -315,19 +315,6 @@ As you'll have seen in the last few articles, there are many types of form contr
 Now that you have a grasp of the HTML behind the different available form controls, we'll take a look at [Styling them](/en-US/docs/Learn/Forms/Styling_web_forms).
 
 {{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
-
-## In this module
-
-- [Your first form](/en-US/docs/Learn/Forms/Your_first_form)
-- [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
-- [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
-- **Other form controls**
-- [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
-- [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### Advanced Topics
 

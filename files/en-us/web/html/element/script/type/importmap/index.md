@@ -1,6 +1,7 @@
 ---
 title: '<script type="importmap">'
 slug: Web/HTML/Element/script/type/importmap
+page-type: html-attribute-value
 tags:
   - Reference
   - Element
@@ -65,12 +66,12 @@ The import map below defines an `imports` key that has a "module specifier map" 
 
 ```html
 <script type="importmap">
-{
-  "imports": {
-    "square": "./module/shapes/square.js",
-    "circle": "https://example.com/shapes/circle.js"
+  {
+    "imports": {
+      "square": "./module/shapes/square.js",
+      "circle": "https://example.com/shapes/circle.js"
+    }
   }
-}
 </script>
 ```
 
@@ -88,12 +89,12 @@ Note that in this case the property and mapped path must both have a trailing fo
 
 ```html
 <script type="importmap">
-{
-  "imports": {
-    "shapes/": "./module/shapes/",
-    "othershapes/": "https://example.com/modules/shapes/"
+  {
+    "imports": {
+      "shapes/": "./module/shapes/",
+      "othershapes/": "https://example.com/modules/shapes/"
+    }
   }
-}
 </script>
 ```
 
@@ -114,7 +115,7 @@ They can also contain or end with path separators, or be absolute URLs, or be re
     "modules/shapes/": "./module/src/shapes/",
     "modules/square": "./module/src/other/shapes/square.js",
     "https://example.com/modules/square.js": "./module/src/other/shapes/square.js",
-    "../modules/shapes/": "/modules/shapes/",
+    "../modules/shapes/": "/modules/shapes/"
   }
 }
 ```
@@ -134,16 +135,16 @@ For example, the map below will only use the scoped map if the loading module ha
 
 ```html
 <script type="importmap">
-{
-  "imports": {
-    "square": "./module/shapes/square.js",
-  },
-  "scopes": {
-    "/modules/customshapes/": {
-      "square": "https://example.com/modules/shapes/square.js"
+  {
+    "imports": {
+      "square": "./module/shapes/square.js"
+    },
+    "scopes": {
+      "/modules/customshapes/": {
+        "square": "https://example.com/modules/shapes/square.js"
+      }
     }
   }
-}
 </script>
 ```
 
@@ -163,6 +164,7 @@ The import map must be a valid JSON object that can define at most two optional 
     This is the fallback map that is searched for matching module specifiers if no `scopes` path URLs match, or if module specifier maps in matching `scopes` paths do not contain a key that matches the module specifier.
 
     - `<module specifier map>`
+
       - : A "module specifier map" is a valid JSON object where the _keys_ are text that may be present in the module specifier when importing a module, and the corresponding _values_ are the URLs or paths that will replace this text when the module specifier is resolved to an address.
 
         The modifier specifier map JSON object has the following requirements:
@@ -174,6 +176,7 @@ The import map must be a valid JSON object that can define at most two optional 
         - The object properties' ordering is irrelevant: if multiple keys can match the module specifier, the most specific key is used (in other words, a specifier "olive/branch/" would match before "olive/").
 
 - `scopes` {{optional_inline}}
+
   - : Scopes define path-specific [module specifier maps](#module_specifier_map), allowing the choice of map to depend on the path of the code importing the module.
 
     The scopes object is a valid JSON object where each property is a `<scope key>`, which is an URL path, with a corresponding value that is a `<module specifier map>`.

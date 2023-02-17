@@ -1,6 +1,7 @@
 ---
 title: ISP
 slug: Glossary/ISP
+page-type: glossary-definition
 tags:
   - ISP
   - Internet Service Provider

@@ -378,7 +378,6 @@ To control this behavior, we can use properties from the [CSS Fragmentation](/en
 ```css
 .card {
   break-inside: avoid;
-  page-break-inside: avoid;
   background-color: rgb(207, 232, 220);
   border: 2px solid rgb(79, 185, 227);
   padding: 10px;

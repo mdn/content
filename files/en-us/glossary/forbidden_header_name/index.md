@@ -1,6 +1,7 @@
 ---
 title: Forbidden header name
 slug: Glossary/Forbidden_header_name
+page-type: glossary-definition
 tags:
   - Fetch
   - HTTP

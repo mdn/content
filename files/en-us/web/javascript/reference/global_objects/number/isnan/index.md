@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Number.isNaN
 
 {{JSRef}}
 
-The **`Number.isNaN()`** method determines whether the passed value is the number value {{jsxref("NaN")}}, and returns `false` if the input is not of the Number type. It is a more robust version of the original, global {{jsxref("isNaN()")}} function.
+The **`Number.isNaN()`** static method determines whether the passed value is the number value {{jsxref("NaN")}}, and returns `false` if the input is not of the Number type. It is a more robust version of the original, global {{jsxref("isNaN()")}} function.
 
 {{EmbedInteractiveExample("pages/js/number-isnan.html", "taller")}}
 

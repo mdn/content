@@ -32,6 +32,8 @@ Alternatively, the {{HTMLElement("meta")}} element can be used to configure a po
   content="default-src 'self'; img-src https://*; child-src 'none';" />
 ```
 
+> **Note:** Some features, such as sending CSP violation reports, are only available when using the HTTP headers.
+
 ## Threats
 
 ### Mitigating cross-site scripting
@@ -152,17 +154,17 @@ The policy specified in `Content-Security-Policy` headers is enforced while the 
 
 ## Enabling reporting
 
-By default, violation reports aren't sent. To enable violation reporting, you need to specify the {{CSP("report-uri")}} policy directive, providing at least one URI to which to deliver the reports:
+By default, violation reports aren't sent. To enable violation reporting, you need to specify the {{CSP("report-to")}} policy directive, providing at least one URI to which to deliver the reports:
 
 ```http
-Content-Security-Policy: default-src 'self'; report-uri http://reportcollector.example.com/collector.cgi
+Content-Security-Policy: default-src 'self'; report-to http://reportcollector.example.com/collector.cgi
 ```
 
 Then you need to set up your server to receive the reports; it can store or process them in whatever manner you determine is appropriate.
 
 ## Violation report syntax
 
-The report JSON object contains the following data:
+The report JSON object is sent with an `application/csp-report` {{HTTPHeader("Content-Type")}} and contains the following data:
 
 - `blocked-uri`
   - : The URI of the resource that was blocked from loading by the Content Security Policy.
@@ -183,8 +185,8 @@ The report JSON object contains the following data:
     Only applicable to `script-src*` and `style-src*` violations, when they contain the `'report-sample'`
 - `status-code`
   - : The HTTP status code of the resource on which the global object was instantiated.
-- `violated-directive`
-  - : The name of the policy section that was violated.
+- `violated-directive` {{deprecated_inline}}
+  - : The directive whose enforcement caused the violation. The `violated-directive` is a historic name for the `effective-directive` field and contains the same value.
 
 ## Sample violation report
 
@@ -192,7 +194,7 @@ Let's consider a page located at `http://example.com/signup.html`.
 It uses the following policy, disallowing everything but stylesheets from `cdn.example.com`.
 
 ```http
-Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports
+Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-to /_/csp-reports
 ```
 
 The HTML of `signup.html` looks like this:
@@ -217,11 +219,14 @@ A browser capable of enforcing CSP would send the following violation report as 
 ```json
 {
   "csp-report": {
-    "document-uri": "http://example.com/signup.html",
-    "referrer": "",
     "blocked-uri": "http://example.com/css/style.css",
-    "violated-directive": "style-src cdn.example.com",
-    "original-policy": "default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports"
+    "disposition": "report",
+    "document-uri": "http://example.com/signup.html",
+    "effective-directive": "style-src-elem",
+    "original-policy": "default-src 'none'; style-src cdn.example.com; report-to /_/csp-reports",
+    "referrer": "",
+    "status-code": 200,
+    "violated-directive": "style-src-elem"
   }
 }
 ```

@@ -24,7 +24,7 @@ browser-compat: api.PaymentRequest.merchantvalidation_event
 
 **`merchantvalidation`** events are delivered by the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to a {{domxref("PaymentRequest")}} object when a payment handler requires that the merchant requesting the purchase validate itself as permitted to use the payment handler.
 
-See {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant validation")}} for details on how the merchant validation process works.
+Learn how the [merchant validation](/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation) process works.
 
 This event is not cancelable and does not bubble.
 
@@ -83,7 +83,7 @@ request.onmerchantvalidation = (event) => {
 const response = await request.show();
 ```
 
-For more information, see {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant Validation")}}.
+For more information, see [Merchant validation](/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation).
 
 ## Browser compatibility
 
@@ -94,7 +94,7 @@ For more information, see {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_A
 - [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - `onmerchantvalidation` event handler property
-- {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant validation")}}
+- [Merchant validation](/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation)
 - {{domxref("PaymentRequest")}}
 - {{domxref("PaymentRequest.payerdetailchange_event", "payerdetailchange")}} event
 - {{domxref("PaymentRequest.paymentmethodchange_event", "paymentmethodchange")}} event

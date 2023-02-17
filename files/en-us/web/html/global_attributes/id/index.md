@@ -1,6 +1,7 @@
 ---
 title: id
 slug: Web/HTML/Global_attributes/id
+page-type: html-attribute
 tags:
   - Global attributes
   - HTML

@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.Intl.DisplayNames.supportedLocalesOf
 
 {{JSRef}}
 
-The **`Intl.DisplayNames.supportedLocalesOf()`** method returns
+The **`Intl.DisplayNames.supportedLocalesOf()`** static method returns
 an array containing those of the provided locales that are supported in display names
 without having to fall back to the runtime's default locale.
 
@@ -66,9 +66,9 @@ Balinese since most Balinese speakers also understand Indonesian, and therefore 
 the Balinese language tag as well.
 
 ```js
-const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-const options = { localeMatcher: 'lookup' };
-console.log(Intl.DisplayNames.supportedLocalesOf(locales, options).join(', '));
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
+console.log(Intl.DisplayNames.supportedLocalesOf(locales, options).join(", "));
 // "id-u-co-pinyin, de-ID"
 ```
 

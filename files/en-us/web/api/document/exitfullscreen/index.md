@@ -59,7 +59,7 @@ document.onclick = (event) => {
 ```
 
 > **Note:** For a more complete example, see the
-> {{SectionOnPage("/en-US/docs/Web/API/Element/requestFullscreen", "Examples")}}.
+> [`Element.requestFullscreen()` examples](/en-US/docs/Web/API/Element/requestFullscreen#examples).
 
 ## Specifications
 

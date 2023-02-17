@@ -15,7 +15,7 @@ browser-compat: api.Scheduler
 The **Prioritized Task Scheduling API** provides a standardized way to prioritize all tasks belonging to an application, whether they defined in a website developer's code, or in third party libraries and frameworks.
 
 The [task priorities](#task-priorities) are very coarse-grained, and are based around whether tasks block user interaction, or otherwise impact the user experience, or can run in the background.
-Developers and frameworks may implement more fine-grained prioritization schemes within the broad categories define by the API
+Developers and frameworks may implement more fine-grained prioritization schemes within the broad categories defined by the API.
 
 The API is promise-based and supports the ability to set and change task priorities, to delay tasks being added to the scheduler, to abort tasks, and to monitor for priority change and abort events.
 
@@ -107,7 +107,7 @@ There are just three priorities, which are listed below (ordered from highest to
 There are many use cases where the task priority never needs to change, while for others it does.
 For example fetching an image might change from a `background` task to `user-visible` as a carousel is scrolled into the viewing area.
 
-Task priorities can be set as static (immutable) or dynamic (modifiable) depending on the arguments passed to {{domxref('Scheduler.postTask()')}}.=
+Task priorities can be set as static (immutable) or dynamic (modifiable) depending on the arguments passed to {{domxref('Scheduler.postTask()')}}.
 
 Task priority is immutable if a value is specified in the `options.priority` argument.
 The given value will be used for the task priority and cannot be changed.
@@ -115,7 +115,7 @@ The given value will be used for the task priority and cannot be changed.
 The priority is modifiable only if a {{domxref("TaskSignal")}} is passed to the `options.signal` argument **and** `options.priority` is **not set**.
 In this case the task will take its initial priority from the `signal` priority, and the priority can subsequently be changed by calling {{domxref("TaskController.setPriority()")}} on the controller associated with the signal.
 
-If the priority is not set with `options.priority` or by passing a {{domxref("TaskSignal")}} to `options.signal` then it defaults to `user-visible` (and is by definition immutable)
+If the priority is not set with `options.priority` or by passing a {{domxref("TaskSignal")}} to `options.signal` then it defaults to `user-visible` (and is by definition immutable).
 
 Note that a task that needs to be aborted must set `options.signal` to either {{domxref("TaskSignal")}} or {{domxref("AbortSignal")}}.
 However for a task with an immutable priority, {{domxref("AbortSignal")}} more clearly indicates that the task priority cannot be changed using the signal.

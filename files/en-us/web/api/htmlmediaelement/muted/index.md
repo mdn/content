@@ -13,8 +13,8 @@ browser-compat: api.HTMLMediaElement.muted
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMediaElement.muted`** indicates whether the media
-element muted.
+The **`HTMLMediaElement.muted`** property indicates whether the media
+element is muted.
 
 ## Value
 

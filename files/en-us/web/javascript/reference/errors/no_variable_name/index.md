@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing variable name'
+title: "SyntaxError: missing variable name"
 slug: Web/JavaScript/Reference/Errors/No_variable_name
 page-type: javascript-error
 tags:
@@ -66,8 +66,8 @@ Did you remember to assign values for all your `const` variables?
 let x, y = "foo",
 const z, = "foo"
 
-const first = document.getElementById('one'),
-const second = document.getElementById('two'),
+const first = document.getElementById("one"),
+const second = document.getElementById("two"),
 
 // SyntaxError: missing variable name
 ```
@@ -75,11 +75,12 @@ const second = document.getElementById('two'),
 The fixed version:
 
 ```js example-good
-let x, y = "foo";
+let x,
+  y = "foo";
 const z = "foo";
 
-const first = document.getElementById('one');
-const second = document.getElementById('two');
+const first = document.getElementById("one");
+const second = document.getElementById("two");
 ```
 
 ### Arrays
@@ -95,7 +96,7 @@ const arr = 1,2,3,4,5;
 This would be correct:
 
 ```js example-good
-const arr = [1,2,3,4,5];
+const arr = [1, 2, 3, 4, 5];
 ```
 
 ## See also

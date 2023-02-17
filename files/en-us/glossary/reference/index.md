@@ -1,6 +1,7 @@
 ---
 title: Reference
 slug: Glossary/Reference
+page-type: glossary-definition
 tags:
   - CodingScripting
   - NeedsContent

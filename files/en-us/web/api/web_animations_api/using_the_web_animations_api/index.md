@@ -30,10 +30,6 @@ The [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) opens the brows
 
 With the Web Animations API, we can move interactive animations from stylesheets to JavaScript, separating presentation from behavior. We no longer need to rely on DOM-heavy techniques such as writing CSS properties and scoping classes onto elements to control playback direction. And unlike pure, declarative CSS, JavaScript also lets us dynamically set values from properties to durations. For building custom animation libraries and creating interactive animations, the Web Animations API might be the perfect tool for the job. Let's see what it can do!
 
-## Browser Support
-
-The basic Web Animations API features discussed in this article are available by default in Firefox 48+, Chrome 36+ and Safari 13.1+. There is also a [handy polyfill](https://github.com/web-animations/web-animations-js) that tests for feature support and adds it where necessary.
-
 ## Writing CSS Animations with the Web Animations API
 
 One of the more familiar ways to approach learning the Web Animations API is to start with something most web developers have played with before: CSS Animations. CSS Animations have a familiar syntax that breaks down nicely for demonstration purposes.
@@ -382,10 +378,9 @@ Better still, the Web Animations API also provides a [`finished`](/en-US/docs/We
 
 ## Conclusion
 
-These are the basic features of the Web Animations API, most of which are already supported across the latest release versions of Firefox, Chrome and Safari. By now you should be ready to "jump down the rabbit hole" of animating in the browser and ready to write your own animation experiments! If you're using the API and want to share, try using the #WAAPI hashtag. We will be watching and will write more tutorials to cover further features as support spreads!
+These are the basic features of the Web Animations API. By now you should be ready to "jump down the rabbit hole" of animating in the browser and ready to write your own animation experiments!
 
 ## See also
 
-- The [full suite of Alice in Wonderland demos](https://codepen.io/collection/nqNJvD) on CodePen for you to play with, fork, and share
-- [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) — a great article to read that explains more on the background of the Web Animations API, and why it is more performant than other web animation methods
-- [web-animations-js](https://github.com/web-animations/web-animations-js) — the Web Animations API polyfill
+- The [full suite of Alice in Wonderland demos](https://codepen.io/collection/nqNJvD) on CodePen for you to play with, fork, and share.
+- [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) (2016) Explains the background of the Web Animations API and why it is more performant than other web animation methods.

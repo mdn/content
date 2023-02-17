@@ -82,7 +82,7 @@ registerServiceWorker();
 
 1. The `if`-block performs a feature detection test to make sure service workers are supported before trying to register one.
 2. Next, we use the [`ServiceWorkerContainer.register()`](/en-US/docs/Web/API/ServiceWorkerContainer/register) function to register the service worker for this site. The service worker code is in a JavaScript file residing inside our app (note this is the file's URL relative to the origin, not the JS file that references it.)
-3. The `scope` parameter is optional, and can be used to specify the subset of your content that you want the service worker to control. In this case, we have specified '`'/'`, which means all content under the app's origin. If you leave it out, it will default to this value anyway, but we specified it here for illustration purposes.
+3. The `scope` parameter is optional, and can be used to specify the subset of your content that you want the service worker to control. In this case, we have specified `'/'`, which means all content under the app's origin. If you leave it out, it will default to this value anyway, but we specified it here for illustration purposes.
 
 This registers a service worker, which runs in a worker context, and therefore has no DOM access.
 
@@ -134,7 +134,7 @@ self.addEventListener("install", (event) => {
 ```
 
 1. Here we add an `install` event listener to the service worker (hence `self`), and then chain a [`ExtendableEvent.waitUntil()`](/en-US/docs/Web/API/ExtendableEvent/waitUntil) method onto the event — this ensures that the service worker will not install until the code inside `waitUntil()` has successfully occurred.
-2. Inside `addResourcesToCache()` we use the [`caches.open()`](/en-US/docs/Web/API/CacheStorage/open) method to create a new cache called `v1`, which will be version 1 of our site resources cache. Then we call a function `addAll()` on the created cache, which for its parameter takes an array of origin-relative URLs to all the resources you want to cache.
+2. Inside `addResourcesToCache()` we use the [`caches.open()`](/en-US/docs/Web/API/CacheStorage/open) method to create a new cache called `v1`, which will be version 1 of our site resources cache. Then we call a function `addAll()` on the created cache, which for its parameter takes an array of URLs to all the resources you want to cache. The URLs are relative to the worker's {{domxref("WorkerGlobalScope.location", "location", "", 1)}}.
 3. If the promise is rejected, the installation fails, and the worker won't do anything. This is OK, as you can fix your code and then try again the next time registration occurs.
 4. After a successful installation, the service worker activates. This doesn't have much of a distinct use the first time your service worker is installed/activated, but it means more when the service worker is updated (see the [Updating your service worker](#updating_your_service_worker) section later on.)
 
@@ -150,24 +150,21 @@ Now you've got your site assets cached, you need to tell service workers to do s
 
 2. You can attach a `fetch` event listener to the service worker, then call the `respondWith()` method on the event to hijack our HTTP responses and update them with your own content.
 
-    ```js
-    self.addEventListener("fetch", (event) => {
-      event
-        .respondWith
-        // custom content goes here
-        ();
-    });
-    ```
+   ```js
+   self.addEventListener("fetch", (event) => {
+     event.respondWith(/* custom content goes here */);
+   });
+   ```
 
 3. We could start by responding with the resource whose URL matches that of the network request, in each case:
 
-    ```js
-    self.addEventListener("fetch", (event) => {
-      event.respondWith(caches.match(event.request));
-    });
-    ```
+   ```js
+   self.addEventListener("fetch", (event) => {
+     event.respondWith(caches.match(event.request));
+   });
+   ```
 
-    `caches.match(event.request)` allows us to match each resource requested from the network with the equivalent resource available in the cache, if there is a matching one available. The matching is done via URL and various headers, just like with normal HTTP requests.
+   `caches.match(event.request)` allows us to match each resource requested from the network with the equivalent resource available in the cache, if there is a matching one available. The matching is done via URL and various headers, just like with normal HTTP requests.
 
 ![Fetch event diagram](sw-fetch.svg)
 
@@ -279,7 +276,7 @@ If enabled, the [navigation preload](/en-US/docs/Web/API/NavigationPreloadManage
 First the feature must be enabled during service worker activation, using [`registration.navigationPreload.enable()`](/en-US/docs/Web/API/NavigationPreloadManager/enable):
 
 ```js
-self.addEventListener('activate', (event) => {
+self.addEventListener("activate", (event) => {
   event.waitUntil(self.registration?.navigationPreload.enable());
 });
 ```
@@ -387,7 +384,7 @@ Note that in this example we download and cache the same data for the resource w
 
 If your service worker has previously been installed, but then a new version of the worker is available on refresh or page load, the new version is installed in the background, but not yet activated. It is only activated when there are no longer any pages loaded that are still using the old service worker. As soon as there are no more such pages still loaded, the new service worker activates.
 
->**Note:** It is possible to bypass this by using [`Clients.claim()`](/en-US/docs/Web/API/Clients/claim).
+> **Note:** It is possible to bypass this by using [`Clients.claim()`](/en-US/docs/Web/API/Clients/claim).
 
 You'll want to update your `install` event listener in the new service worker to something like this (notice the new version number):
 

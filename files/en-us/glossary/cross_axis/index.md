@@ -1,6 +1,7 @@
 ---
 title: Cross Axis
 slug: Glossary/Cross_Axis
+page-type: glossary-definition
 tags:
   - CSS
   - cross axis

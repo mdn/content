@@ -14,8 +14,7 @@ browser-compat: javascript.builtins.Reflect.deleteProperty
 
 {{JSRef}}
 
-The static
-**`Reflect.deleteProperty()`**
+The **`Reflect.deleteProperty()`** static
 method allows to delete properties. It is like the
 [`delete` operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
 as a function.

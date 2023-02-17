@@ -1,6 +1,7 @@
 ---
 title: ITU
 slug: Glossary/ITU
+page-type: glossary-definition
 tags:
   - ITU
   - Standardization

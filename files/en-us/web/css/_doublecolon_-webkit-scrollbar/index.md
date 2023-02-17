@@ -1,9 +1,9 @@
 ---
-title: '::-webkit-scrollbar'
+title: "::-webkit-scrollbar"
 slug: Web/CSS/::-webkit-scrollbar
 page-type: css-pseudo-element
 tags:
-  - '::-webkit-scrollbar'
+  - "::-webkit-scrollbar"
   - CSS
   - CSS Selectors
   - CSS:WebKit Extensions
@@ -99,7 +99,7 @@ You can use the following pseudo-elements to customize various parts of the scro
   Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword<br />
   And pretty tall<br />
   thing with weird scrollbars.<br />
-  Who thought scrollbars could be made weeeeird?
+  Who thought scrollbars could be made weird?
 </div>
 ```
 

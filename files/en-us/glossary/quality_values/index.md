@@ -1,6 +1,7 @@
 ---
 title: Quality values
 slug: Glossary/Quality_values
+page-type: glossary-definition
 tags:
   - WebMechanics
 ---

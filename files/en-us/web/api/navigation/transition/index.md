@@ -30,7 +30,7 @@ A {{domxref("NavigationTransition")}} object, or `null` if no navigation is curr
 
 ```js
 async function handleTransition() {
-  if(navigation.transition) {
+  if (navigation.transition) {
     showLoadingSpinner();
     await navigation.transition.finished;
     hideLoadingSpinner();

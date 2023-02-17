@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.Object.create
 
 {{JSRef}}
 
-The **`Object.create()`** method creates a new object, using an existing object as the prototype of the newly created object.
+The **`Object.create()`** static method creates a new object, using an existing object as the prototype of the newly created object.
 
 {{EmbedInteractiveExample("pages/js/object-create.html", "taller")}}
 

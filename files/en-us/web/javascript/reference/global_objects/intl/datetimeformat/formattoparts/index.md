@@ -47,9 +47,9 @@ looks like this:
 
 ```js
 [
-  { type: 'day', value: '17' },
-  { type: 'weekday', value: 'Monday' }
-]
+  { type: "day", value: "17" },
+  { type: "weekday", value: "Monday" },
+];
 ```
 
 Possible types are the following:
@@ -94,17 +94,17 @@ manipulated directly:
 ```js
 const date = Date.UTC(2012, 11, 17, 3, 0, 42);
 
-const formatter = new Intl.DateTimeFormat('en-us', {
-  weekday: 'long',
-  year: 'numeric',
-  month: 'numeric',
-  day: 'numeric',
-  hour: 'numeric',
-  minute: 'numeric',
-  second: 'numeric',
+const formatter = new Intl.DateTimeFormat("en-us", {
+  weekday: "long",
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
   fractionalSecondDigits: 3,
   hour12: true,
-  timeZone: 'UTC'
+  timeZone: "UTC",
 });
 
 formatter.format(date);
@@ -120,23 +120,23 @@ formatter.formatToParts(date);
 
 // return value:
 [
-  { type: 'weekday',   value: 'Monday' },
-  { type: 'literal',   value: ', '     },
-  { type: 'month',     value: '12'     },
-  { type: 'literal',   value: '/'      },
-  { type: 'day',       value: '17'     },
-  { type: 'literal',   value: '/'      },
-  { type: 'year',      value: '2012'   },
-  { type: 'literal',   value: ', '     },
-  { type: 'hour',      value: '3'      },
-  { type: 'literal',   value: ':'      },
-  { type: 'minute',    value: '00'     },
-  { type: 'literal',   value: ':'      },
-  { type: 'second',    value: '42'     },
-  { type: 'fractionalSecond', value: '000' },
-  { type: 'literal',   value: ' '      },
-  { type: 'dayPeriod', value: 'AM'     }
-]
+  { type: "weekday", value: "Monday" },
+  { type: "literal", value: ", " },
+  { type: "month", value: "12" },
+  { type: "literal", value: "/" },
+  { type: "day", value: "17" },
+  { type: "literal", value: "/" },
+  { type: "year", value: "2012" },
+  { type: "literal", value: ", " },
+  { type: "hour", value: "3" },
+  { type: "literal", value: ":" },
+  { type: "minute", value: "00" },
+  { type: "literal", value: ":" },
+  { type: "second", value: "42" },
+  { type: "fractionalSecond", value: "000" },
+  { type: "literal", value: " " },
+  { type: "dayPeriod", value: "AM" },
+];
 ```
 
 Now the information is available separately and it can be formatted and concatenated
@@ -147,12 +147,17 @@ a [switch statement](/en-US/docs/Web/JavaScript/Reference/Statements/switch),
 and {{jsxref("Array.prototype.join()")}}.
 
 ```js
-const dateString = formatter.formatToParts(date).map(({type, value}) => {
-  switch (type) {
-    case 'dayPeriod': return `<em>${value}</em>`;
-    default: return value;
-  }
-}).join('');
+const dateString = formatter
+  .formatToParts(date)
+  .map(({ type, value }) => {
+    switch (type) {
+      case "dayPeriod":
+        return `<em>${value}</em>`;
+      default:
+        return value;
+    }
+  })
+  .join("");
 ```
 
 This will emphasize the day period when using the `formatToParts()` method.
@@ -184,11 +189,11 @@ df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
 
 // return value
 [
-  { type: 'relatedYear', value: '2012' },
-  { type: 'literal', value: '年' },
-  { type: 'month', value: '十一月' },
-  { type: 'day', value: '4' }
-]
+  { type: "relatedYear", value: "2012" },
+  { type: "literal", value: "年" },
+  { type: "month", value: "十一月" },
+  { type: "day", value: "4" },
+];
 ```
 
 If the `year` option is not set in the bag (to any value), the result will
@@ -200,18 +205,18 @@ df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
 
 // return value
 [
-  { type: 'relatedYear', value: '2012' },
-  { type: 'literal', value: '年' },
-  { type: 'month', value: '十一月' },
-  { type: 'day', value: '4' }
-]
+  { type: "relatedYear", value: "2012" },
+  { type: "literal", value: "年" },
+  { type: "month", value: "十一月" },
+  { type: "day", value: "4" },
+];
 ```
 
 In cases where the `year` would be output, `.format()` may
 commonly present these side-by-side:
 
 ```js
-const df = new Intl.DateTimeFormat("zh-u-ca-chinese", {year: "numeric"});
+const df = new Intl.DateTimeFormat("zh-u-ca-chinese", { year: "numeric" });
 df.format(Date.UTC(2012, 11, 17, 3, 0, 42)); // 2012壬辰年
 ```
 

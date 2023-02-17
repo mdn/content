@@ -72,7 +72,7 @@ In many ways, percentages act like length units, and as we [discussed in the les
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/percent-width.html", '100%', 600)}}
 
-This is because percentages resolve against the size of the containing block. With no percentage applied our `<div>` would take up 100% of the available space, as it is a block level element. If we give it a percentage width, this becomes a percentage of the space it would normally fill.
+This is because percentages resolve against the size of the containing block. With no percentage applied, our `<div>` would take up 100% of the available space, as it is a block level element. If we give it a percentage width, this becomes a percentage of the space it would normally fill.
 
 ### Percentage margins and padding
 
@@ -134,14 +134,13 @@ In the next article, we'll take a look at how [images, media, and form elements]
 
 ## In this module
 
+- [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 - [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
 
   - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
   - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
   - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
   - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-- [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 
 - [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
 - [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

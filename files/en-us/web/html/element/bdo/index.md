@@ -1,6 +1,7 @@
 ---
 title: '<bdo>: The Bidirectional Text Override element'
 slug: Web/HTML/Element/bdo
+page-type: html-element
 tags:
   - BiDi
   - Bidirectional Text

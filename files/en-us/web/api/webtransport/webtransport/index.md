@@ -12,7 +12,7 @@ tags:
 browser-compat: api.WebTransport.WebTransport
 ---
 
-{{APIRef("WebTransport API")}}{{seecompattable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`WebTransport()`** constructor creates a new
 {{domxref("WebTransport")}} object instance.
@@ -32,7 +32,7 @@ new WebTransport(url, options)
 - `options` {{optional_inline}}
   - : An object containing the following properties:
     - `serverCertificateHashes` {{optional_inline}}
-      - : An array of `WebTransportHash` objects. If specified, it allows the website to connect to a server by authenticating the certificate against the expected certificate hash instead of using the Web public key infrastructure (PKI). This feature allows Web developers to connect to WebTransport servers that would normally find obtaining a publicly trusted certificate challenging, such as hosts that are not publically routable, or ephemeral hosts like virtual machines.
+      - : An array of `WebTransportHash` objects. If specified, it allows the website to connect to a server by authenticating the certificate against the expected certificate hash instead of using the Web public key infrastructure (PKI). This feature allows Web developers to connect to WebTransport servers that would normally find obtaining a publicly trusted certificate challenging, such as hosts that are not publicly routable, or ephemeral hosts like virtual machines.
 
 `WebTransportHash` objects contain two properties:
 

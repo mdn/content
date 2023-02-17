@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Math.trunc
 
 {{JSRef}}
 
-The **`Math.trunc()`** function returns the integer part of a number by removing any fractional digits.
+The **`Math.trunc()`** static method returns the integer part of a number by removing any fractional digits.
 
 {{EmbedInteractiveExample("pages/js/math-trunc.html")}}
 
@@ -91,7 +91,6 @@ Only use `~~` as a substitution for `Math.trunc()` when you are confident that t
 ## See also
 
 - [Polyfill of `Math.trunc` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/math.polyfill.js)
 - {{jsxref("Math.abs()")}}
 - {{jsxref("Math.ceil()")}}
 - {{jsxref("Math.floor()")}}

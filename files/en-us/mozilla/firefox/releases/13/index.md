@@ -109,7 +109,7 @@ Starting in Firefox 13, Firefox for Windows requires at least Windows XP Service
 
 - The `nsIScreen` interface now supports controlling rotation through the new `rotation` attribute.
 - The `nsIPrefBranch2` interface has been merged into `nsIPrefBranch` ({{bug("718255")}}).
-- The new message manager wakeup service, implemented by `nsIMessageWakeupService`, has been implemented. See {{bug(591052)}}.
+- The new message manager wake-up service, implemented by `nsIMessageWakeupService`, has been implemented. See {{bug(591052)}}.
 - The aliases `MozOpacity`, `MozOutline`, `MozOutlineStyle`, `MozOutlineWidth`, `MozOutlineOffset`, and `MozOutlineColor`, all of which were removed in previous versions of Gecko, have been removed from `nsIDOMCSS2Properties`, which should have been done with the aliases were initially removed.
 - The `nsINavHistoryQueryOptions` attribute `excludeItemIfParentHasAnnotation` has been removed, along with the corresponding query operation. It existed to support livemarks, which no longer exist.
 

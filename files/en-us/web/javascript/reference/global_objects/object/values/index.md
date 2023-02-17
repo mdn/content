@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Object.values
 
 {{JSRef}}
 
-The **`Object.values()`** method returns an array of a given object's own enumerable string-keyed property values.
+The **`Object.values()`** static method returns an array of a given object's own enumerable string-keyed property values.
 
 {{EmbedInteractiveExample("pages/js/object-values.html")}}
 

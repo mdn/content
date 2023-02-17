@@ -16,6 +16,8 @@ browser-compat: javascript.builtins.Array.isArray
 
 The **`Array.isArray()`** static method determines whether the passed value is an {{jsxref("Array")}}.
 
+{{EmbedInteractiveExample("pages/js/array-isarray.html")}}
+
 ## Syntax
 
 ```js-nolint
@@ -68,7 +70,7 @@ Array.isArray(new Uint8Array(32));
 Array.isArray({ __proto__: Array.prototype });
 ```
 
-### instanceof vs Array.isArray()
+### instanceof vs. Array.isArray()
 
 When checking for `Array` instance, `Array.isArray()` is preferred over `instanceof` because it works across realms.
 
@@ -96,5 +98,4 @@ arr instanceof Array; // false
 ## See also
 
 - [Polyfill of `Array.isArray` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
 - {{jsxref("Array")}}

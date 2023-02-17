@@ -27,7 +27,8 @@ A stylesheet consists of a collection of {{domxref("CSSRule")}} objects represen
 For example, one rule might be a {{domxref("CSSStyleRule")}} object containing a style such as:
 
 ```css
-h1, h2 {
+h1,
+h2 {
   font-size: 16pt;
 }
 ```

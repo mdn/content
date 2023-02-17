@@ -108,7 +108,7 @@ All built-in constructors directly construct the entire prototype chain of the n
 function BetterMap(entries) {
   // Call the base class constructor, but setting `new.target` to the subclass,
   // so that the instance created has the correct prototype chain.
-  return Reflect.construct(Map, [entries], ExtendedMap);
+  return Reflect.construct(Map, [entries], BetterMap);
 }
 
 BetterMap.prototype.upsert = function (key, actions) {

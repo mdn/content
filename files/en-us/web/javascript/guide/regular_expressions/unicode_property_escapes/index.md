@@ -91,8 +91,8 @@ mixedCharacters.match(/\p{Script=Latin}/u); // a
 // Using a short alias for the script
 mixedCharacters.match(/\p{Script=Greek}/u); // ε
 
-// Using the short name Sc for the Script property
-mixedCharacters.match(/\p{Sc=Cyrillic}/u); // Л
+// Using the short name sc for the Script property
+mixedCharacters.match(/\p{sc=Cyrillic}/u); // Л
 ```
 
 For more details, please refer to [the Unicode specification](https://unicode.org/reports/tr24/#Script) and the [Scripts table in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#table-unicode-script-values).

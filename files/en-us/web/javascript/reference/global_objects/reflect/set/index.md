@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Reflect.set
 
 {{JSRef}}
 
-The static **`Reflect.set()`** method works like setting a
+The **`Reflect.set()`** static method works like setting a
 property on an object.
 
 {{EmbedInteractiveExample("pages/js/reflect-set.html")}}

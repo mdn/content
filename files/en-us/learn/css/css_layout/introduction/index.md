@@ -378,6 +378,13 @@ p {
 }
 ```
 
+```css hidden
+.positioned {
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
+}
+```
+
 The rendered output is as follows:
 
 {{ EmbedLiveSample('Simple_positioning_example', '100%', 300) }}

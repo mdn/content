@@ -23,11 +23,11 @@ The **`padding-block-end`** [CSS](/en-US/docs/Web/CSS) property defines the logi
 
 ```css
 /* <length> values */
-padding-block-end: 10px;      /* An absolute length */
-padding-block-end: 1em;       /* A length relative to the text size */
+padding-block-end: 10px; /* An absolute length */
+padding-block-end: 1em; /* A length relative to the text size */
 
 /* <percentage> value */
-padding-block-end: 5%;        /* A padding relative to the block container's width */
+padding-block-end: 5%; /* A padding relative to the block container's width */
 
 /* Global values */
 padding-block-end: inherit;

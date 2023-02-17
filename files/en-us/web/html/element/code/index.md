@@ -1,6 +1,7 @@
 ---
 title: '<code>: The Inline Code element'
 slug: Web/HTML/Element/code
+page-type: html-element
 tags:
   - Code
   - Element

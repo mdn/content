@@ -1,6 +1,7 @@
 ---
 title: Endianness
 slug: Glossary/Endianness
+page-type: glossary-definition
 tags:
   - Coding
   - CodingScripting
@@ -16,7 +17,7 @@ Examples with the number `0x12345678` (i.e. 305 419 896 in decimal):
 
 - _little-endian_: `0x78 0x56 0x34 0x12`
 - _big-endian_: `0x12 0x34 0x56 0x78`
-- _mixed-endian_ (historic and very rare): `0x34 0x12 0x78 0x56`
+- _mixed-endian_ (historic and very rare): `0x34 0x12 0x78 0x56`<-
 
 ## See also
 

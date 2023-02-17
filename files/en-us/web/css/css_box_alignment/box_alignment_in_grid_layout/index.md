@@ -96,6 +96,5 @@ The updated properties have not yet been implemented in all browsers. Therefore,
 
 ## External Resources
 
-- [Box alignment cheatsheet](https://rachelandrew.co.uk/css/cheatsheets/box-alignment)
 - [CSS Grid, Flexbox and Box Alignment](https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/)
 - [Thoughts on partial implementations of Box Alignment](https://blogs.igalia.com/jfernandez/2017/05/03/can-i-use-css-box-alignment/)

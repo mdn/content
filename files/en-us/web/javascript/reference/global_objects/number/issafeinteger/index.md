@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Number.isSafeInteger
 
 {{JSRef}}
 
-The **`Number.isSafeInteger()`** method determines whether the provided value is a number that is a _safe integer_.
+The **`Number.isSafeInteger()`** static method determines whether the provided value is a number that is a _safe integer_.
 
 {{EmbedInteractiveExample("pages/js/number-issafeinteger.html")}}
 

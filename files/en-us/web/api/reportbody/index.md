@@ -17,7 +17,7 @@ The **`ReportBody`** interface of the {{domxref('Reporting API','','',' ')}} rep
 
 ### Reports that inherit from `ReportBody`
 
-- {{domxref("CrashReportBody")}}
+- {{domxref("CSPViolationReportBody")}}
 - {{domxref("DeprecationReportBody")}}
 - {{domxref("InterventionReportBody")}}
 
@@ -34,9 +34,9 @@ In this example we create a new {{domxref("ReportingObserver")}} to observe inte
 
 ```js
 const options = {
-  types: ['intervention'],
-  buffered: true
-}
+  types: ["intervention"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver(([firstReport], observer) => {
   console.log(firstReport.type); // intervention

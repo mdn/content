@@ -40,6 +40,10 @@ hwb(194 0% 0% / .5) /* #00c3ff with 50% opacity */
 
     `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
+### Formal syntax
+
+{{csssyntax}}
+
 ## Specifications
 
 {{Specifications}}

@@ -1,6 +1,7 @@
 ---
 title: Strict mode
-slug: Glossary/strict_mode
+slug: Glossary/Strict_mode
+page-type: glossary-definition
 tags:
   - JavaScript
   - Reference

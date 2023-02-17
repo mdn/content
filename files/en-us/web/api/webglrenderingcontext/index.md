@@ -278,7 +278,7 @@ The following properties and methods provide general information and functionali
   - : Returns information about a vertex attribute at a given position.
 - {{domxref("WebGLRenderingContext.getVertexAttribOffset()")}}
   - : Returns the address of a given vertex attribute.
-- {{domxref("WebGLRenderingContext.uniform()", "WebGLRenderingContext.uniform[1234][fi][v]()")}}
+- [`WebGLRenderingContext.uniform[1234][fi][v]()`](/en-US/docs/Web/API/WebGLRenderingContext/uniform)
   - : Specifies a value for a uniform variable.
 - {{domxref("WebGLRenderingContext.uniformMatrix()", "WebGLRenderingContext.uniformMatrix[234]fv()")}}
   - : Specifies a matrix value for a uniform variable.

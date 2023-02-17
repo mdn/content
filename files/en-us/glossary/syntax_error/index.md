@@ -1,6 +1,7 @@
 ---
 title: Syntax error
 slug: Glossary/Syntax_error
+page-type: glossary-definition
 tags:
   - CodingScripting
   - JavaScript

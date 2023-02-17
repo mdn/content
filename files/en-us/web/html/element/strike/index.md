@@ -1,6 +1,7 @@
 ---
 title: <strike>
 slug: Web/HTML/Element/strike
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -31,7 +32,7 @@ The result of this code is:
 
 {{EmbedLiveSample("Example")}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

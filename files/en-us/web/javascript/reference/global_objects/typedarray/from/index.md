@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.TypedArray.from
 
 {{JSRef}}
 
-The **`TypedArray.from()`** method creates a new
+The **`TypedArray.from()`** static method creates a new
 [typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects)
 from an array-like or iterable object. This method is nearly the same as
 {{jsxref("Array.from()")}}.
@@ -154,4 +154,3 @@ Uint8Array.from({ length: 5 }, (v, k) => k);
 - {{jsxref("TypedArray.of()")}}
 - {{jsxref("Array.from()")}}
 - {{jsxref("Array.prototype.map()")}}
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/v0.0.1/int-8-array.polyfill.js)

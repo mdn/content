@@ -34,8 +34,8 @@ environment.
 - {{DOMxRef("BluetoothDevice.watchAdvertisements()")}} {{Experimental_Inline}}
   - : A {{jsxref("Promise")}} that resolves to `undefined` or is rejected with
     an error if advertisements can't be shown for any reason.
-- {{DOMxRef("BluetoothDevice.unwatchAdvertisements()")}} {{Experimental_Inline}}
-  - : Stops watching for advertisements.
+- {{DOMxRef("BluetoothDevice.forget()")}} {{Experimental_Inline}}
+  - : Provides a way for the page to revoke access to a device the user has granted access to.
 
 ## Specifications
 

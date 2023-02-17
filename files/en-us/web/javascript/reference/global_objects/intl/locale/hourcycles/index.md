@@ -17,13 +17,15 @@ browser-compat: javascript.builtins.Intl.Locale.hourCycles
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.hourCycles`** property is an accessor property which returns a list of one or more unique hour cycle identifiers for the `Locale`.
+The **`Intl.Locale.prototype.hourCycles`** accessor property returns a list of one or more unique hour cycle identifiers for the `Locale`.
 
 ## Description
 
-There are two main types of time keeping conventions (clocks) used around the world: the 12 hour clock and the 24 hour clock. The `hourCycles` property makes it easier to access all clock types available for a particular locale. Like other additional locale data, the hour cycle type is an [extension subtag](https://www.unicode.org/reports/tr35/#u_Extension), which extends the data contained in a locale string. The hour cycle type can have several different values, which are listed in the table below.
+There are two main types of time keeping conventions (clocks) used around the world: the 12 hour clock and the 24 hour clock. The `hourCycles` property returns an array of all hour cycle types commonly used for the `Locale`, sorted in descending preference. If the `Locale` already has an [`hourCycle`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle), then the returned array contains that single value.
 
-### Valid hour cycle types
+Below is a list of supported hour cycle types.
+
+### Supported hour cycle types
 
 | Hour cycle type | Description                                                                                                    |
 | --------------- | -------------------------------------------------------------------------------------------------------------- |
@@ -34,9 +36,9 @@ There are two main types of time keeping conventions (clocks) used around the wo
 
 ## Examples
 
-### Obtaining supported calendars
+### Obtaining supported hour cycles
 
-List supported hour cycles for a given `Locale`.
+If the `Locale` object doesn't have a `hourCycle` already, the `hourCycles` property lists all commonly-used collation types for the given `Locale`. For examples of explicitly setting a `hourCycle`, see [`hourCycle` examples](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle#examples).
 
 ```js
 const arEG = new Intl.Locale("ar-EG");
@@ -59,4 +61,5 @@ console.log(jaJP.hourCycles); // ["h23"]
 ## See also
 
 - {{jsxref("Intl.Locale")}}
+- [`Intl.Locale.prototype.hourCycle`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle)
 - [Unicode Hour Cycle extension key spec](https://www.unicode.org/reports/tr35/#UnicodeHourCycleIdentifier)

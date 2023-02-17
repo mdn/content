@@ -1,6 +1,7 @@
 ---
 title: Input method editor
 slug: Glossary/Input_method_editor
+page-type: glossary-definition
 tags:
 ---
 

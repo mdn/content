@@ -1,6 +1,7 @@
 ---
 title: Fuzz testing
 slug: Glossary/Fuzzing
+page-type: glossary-definition
 tags:
   - Firefox
   - Fuzzing

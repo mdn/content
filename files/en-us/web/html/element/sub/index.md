@@ -1,6 +1,7 @@
 ---
 title: '<sub>: The Subscript element'
 slug: Web/HTML/Element/sub
+page-type: html-element
 tags:
   - Baseline
   - Element
@@ -105,7 +106,7 @@ The output:
 
 {{EmbedLiveSample("Chemical_formulas", 650, 120)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

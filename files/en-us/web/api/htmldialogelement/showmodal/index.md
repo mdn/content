@@ -41,14 +41,14 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The following example shows a simple button that, when clicked, opens a
-{{htmlelement("dialog")}} containing a form via the `showModal()` method.
-From there you can click the _Cancel_ button to close the dialog (via the
-{{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit
-button.
+### Opening a modal dialog
+
+The following example shows a button that, when clicked, opens a modal {{htmlelement("dialog")}} containing a form via the {{domxref("HTMLDialogElement.showModal()")}} function. While open, everything other than the modal dialog's contents is inert. From there you can click the _Cancel_ button to close the dialog (via the {{domxref("HTMLDialogElement.close()")}} function), or submit the form via the submit button. Selecting the cancel button closes the dialog, creating a {{domxref("HTMLDialogElement/close_event", "close")}} event, not a {{domxref("HTMLDialogElement/cancel_event", "cancel")}} event.
+
+#### HTML
 
 ```html
-<!-- Simple pop-up dialog box, containing a form -->
+<!-- pop-up dialog box, containing a form -->
 <dialog id="favDialog">
   <form method="dialog">
     <p>
@@ -70,39 +70,40 @@ button.
 <div>
   <button id="updateDetails">Update details</button>
 </div>
-
-<script>
-  (() => {
-    const updateButton = document.getElementById("updateDetails");
-    const cancelButton = document.getElementById("cancel");
-    const dialog = document.getElementById("favDialog");
-    dialog.returnValue = "favAnimal";
-
-    function openCheck(dialog) {
-      if (dialog.open) {
-        console.log("Dialog open");
-      } else {
-        console.log("Dialog closed");
-      }
-    }
-
-    // Update button opens a modal dialog
-    updateButton.addEventListener("click", () => {
-      dialog.showModal();
-      openCheck(dialog);
-    });
-
-    // Form cancel button closes the dialog box
-    cancelButton.addEventListener("click", () => {
-      dialog.close("animalNotChosen");
-      openCheck(dialog);
-    });
-  })();
-</script>
 ```
 
-> **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/main/htmldialogelement-basic/index.html)
-> ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
+#### JavaScript
+
+```js
+const updateButton = document.getElementById("updateDetails");
+const cancelButton = document.getElementById("cancel");
+const dialog = document.getElementById("favDialog");
+dialog.returnValue = "favAnimal";
+
+function openCheck(dialog) {
+  if (dialog.open) {
+    console.log("Dialog open");
+  } else {
+    console.log("Dialog closed");
+  }
+}
+
+// Update button opens a modal dialog
+updateButton.addEventListener("click", () => {
+  dialog.showModal();
+  openCheck(dialog);
+});
+
+// Form cancel button closes the dialog box
+cancelButton.addEventListener("click", () => {
+  dialog.close("animalNotChosen");
+  openCheck(dialog);
+});
+```
+
+#### Result
+
+{{EmbedLiveSample("Opening a modal dialog")}}
 
 ## Specifications
 

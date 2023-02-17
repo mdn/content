@@ -1,6 +1,7 @@
 ---
 title: HTML elements reference
 slug: Web/HTML/Element
+page-type: landing-page
 tags:
   - Basic
   - Element

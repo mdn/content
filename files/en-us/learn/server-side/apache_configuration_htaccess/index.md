@@ -268,7 +268,7 @@ Serve the following file types with the `charset` parameter set to `UTF-8` using
 
 [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) provides a way to modify incoming URL requests, dynamically, based on regular expression rules. This allows you to map arbitrary URLs onto your internal URL structure in any way you like.
 
-It supports an unlimited number of rules and an unlimited number of attached rule conditions for each rule to provide a really flexible and powerful URL manipulation mechanism. The URL manipulations can depend on various tests: server variables, environment variables, HTTP headers, time stamps, external database lookups, and various other external programs or handlers, can be used to achieve granular URL matching.
+It supports an unlimited number of rules and an unlimited number of attached rule conditions for each rule to provide a really flexible and powerful URL manipulation mechanism. The URL manipulations can depend on various tests: server variables, environment variables, HTTP headers, timestamps, external database lookups, and various other external programs or handlers, can be used to achieve granular URL matching.
 
 ### Enable mod_rewrite
 

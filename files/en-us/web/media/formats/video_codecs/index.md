@@ -1083,7 +1083,7 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
             </tr>
             <tr>
               <th scope="row">HEVC / H.265 support</th>
-              <td>No</td>
+              <td>107</td>
               <td>18</td>
               <td>No</td>
               <td>11</td>
@@ -1093,7 +1093,7 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
           </tbody>
         </table>
         <p>
-          Internet Explorer and Edge only supports HEVC on devices with a
+          Internet Explorer, Chrome, and Edge only supports HEVC on devices with a
           hardware codec.
         </p>
         <p>Mozilla will not support HEVC while it is encumbered by patents.</p>

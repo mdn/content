@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Symbol.search
 
 {{JSRef}}
 
-The **`Symbol.search`** well-known symbol specifies the method that returns the index within a string that matches the regular expression. This function is called by the {{jsxref("String.prototype.search()")}} method.
+The **`Symbol.search`** static data property represents the well-known symbol specifying the method that returns the index within a string that matches the regular expression. This function is called by the {{jsxref("String.prototype.search()")}} method.
 
 For more information, see {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}} and {{jsxref("String.prototype.search()")}}.
 

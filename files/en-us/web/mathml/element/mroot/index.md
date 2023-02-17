@@ -19,13 +19,6 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 
 ## Examples
 
-```html hidden
- <link
-   rel="stylesheet"
-   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-  />
-```
-
 ```html
 <math display="block">
   <mroot>

@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.String.fromCharCode
 
 {{JSRef}}
 
-The static **`String.fromCharCode()`** method returns a string
+The **`String.fromCharCode()`** static method returns a string
 created from the specified sequence of UTF-16 code units.
 
 {{EmbedInteractiveExample("pages/js/string-fromcharcode.html","shorter")}}

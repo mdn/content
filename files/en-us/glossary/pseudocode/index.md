@@ -1,6 +1,7 @@
 ---
 title: Pseudocode
 slug: Glossary/Pseudocode
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Pseudocode

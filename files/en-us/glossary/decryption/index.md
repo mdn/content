@@ -1,6 +1,7 @@
 ---
 title: Decryption
 slug: Glossary/Decryption
+page-type: glossary-definition
 tags:
   - Cryptography
   - Privacy

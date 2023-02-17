@@ -103,7 +103,7 @@ Starting with Firefox 79, high resolution timers can be used if you cross-origin
 isolate your document using the {{HTTPHeader("Cross-Origin-Opener-Policy")}} and
 {{HTTPHeader("Cross-Origin-Embedder-Policy")}} headers:
 
-```plain
+```http
 Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```

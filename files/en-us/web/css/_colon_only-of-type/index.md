@@ -22,8 +22,10 @@ The **`:only-of-type`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) r
 
 ## Syntax
 
-```
-:only-of-type
+```css
+:only-of-type {
+  /* ... */
+}
 ```
 
 ## Examples

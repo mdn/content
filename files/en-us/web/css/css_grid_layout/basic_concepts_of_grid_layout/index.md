@@ -616,6 +616,7 @@ If I set `box1` to `display: grid` I can give it a track definition and it too w
 .wrapper {
   border: 2px solid #f76707;
   border-radius: 5px;
+  gap: 3px;
   background-color: #fff4e6;
   display: grid;
   grid-template-columns: repeat(3, 1fr);

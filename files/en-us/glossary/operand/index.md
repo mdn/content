@@ -1,6 +1,7 @@
 ---
 title: Operand
 slug: Glossary/Operand
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

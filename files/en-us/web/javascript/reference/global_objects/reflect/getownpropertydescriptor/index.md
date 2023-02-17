@@ -14,8 +14,7 @@ browser-compat: javascript.builtins.Reflect.getOwnPropertyDescriptor
 
 {{JSRef}}
 
-The static
-**`Reflect.getOwnPropertyDescriptor()`** method is similar to
+The **`Reflect.getOwnPropertyDescriptor()`** static method is similar to
 {{jsxref("Object.getOwnPropertyDescriptor()")}}. It returns a property descriptor of
 the given property if it exists on the object, {{jsxref("undefined")}}
 otherwise.

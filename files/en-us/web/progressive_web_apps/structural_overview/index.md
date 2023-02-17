@@ -50,7 +50,7 @@ It's important to remember the PWA advantages and keep them in mind when designi
 
 - Linkable: Even though it behaves like a native app, it is still a website — you can click on the links within the page and send a URL to someone if you want to share it.
 - Progressive: Start with the "good, old basic website" and progressively add new features while remembering to detect if they are available in the browser and gracefully handle any errors that crop up if support is not available. For example, an offline mode with the help of service workers is just an extra trait that makes the website experience better, but it's still perfectly usable without it.
-- Responsive: Responsive web design also applies to progressive web apps, as both are mainly for mobile devices. There are so many varied devices with browsers — it's important to prepare your website so it works on different screen sizes, viewports or pixel densities, using technologies like the [viewport meta tag](/en-US/docs/Mozilla/Mobile/Viewport_meta_tag), [CSS media queries](/en-US/docs/Web/CSS/Media_Queries), [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), and [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout).
+- Responsive: Responsive web design also applies to progressive web apps, as both are mainly for mobile devices. There are so many varied devices with browsers — it's important to prepare your website so it works on different screen sizes, viewports or pixel densities, using technologies like the [viewport meta tag](/en-US/docs/Web/HTML/Viewport_meta_tag), [CSS media queries](/en-US/docs/Web/CSS/Media_Queries), [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), and [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout).
 
 ## Another approach: Streams
 

@@ -117,3 +117,4 @@ console.log(Array.prototype.at.call(arrayLike, -1)); // "b"
 - {{jsxref("Array.prototype.find()")}} – return a value based on a given test.
 - {{jsxref("Array.prototype.includes()")}} – test whether a value exists in the array.
 - {{jsxref("Array.prototype.indexOf()")}} – return the index of a given element.
+- [Indexed Collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)

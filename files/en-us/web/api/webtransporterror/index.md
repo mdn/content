@@ -12,7 +12,7 @@ tags:
 browser-compat: api.WebTransportError
 ---
 
-{{APIRef("WebTransport API")}}{{seecompattable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`WebTransportError`** interface of the {{domxref("WebTransport API", "WebTransport API", "", "nocode")}} represents an error related to the API, which can arise from server errors, network connection problems, or client-initiated abort operations (for example, arising from a {{domxref("WritableStream.abort()")}} call).
 
@@ -22,16 +22,16 @@ The **`WebTransportError`** interface of the {{domxref("WebTransport API", "WebT
 
 ## Constructor
 
-- {{domxref("WebTransportError.WebTransportError", "WebTransportError()")}}
+- {{domxref("WebTransportError.WebTransportError", "WebTransportError()")}} {{Experimental_Inline}}
   - : Creates a new `WebTransportError` object instance.
 
 ## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("DOMException")}}._
 
-- {{domxref("WebTransportError.source", "source")}} {{ReadOnlyInline}}
+- {{domxref("WebTransportError.source", "source")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an enumerated value indicating the source of the error—can be either `stream` or `session`.
-- {{domxref("WebTransportError.streamErrorCode", "streamErrorCode")}} {{ReadOnlyInline}}
+- {{domxref("WebTransportError.streamErrorCode", "streamErrorCode")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a number in the range 0-255 indicating the application protocol error code for this error, or `null` if one is not available.
 
 ## Examples

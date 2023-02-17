@@ -46,7 +46,7 @@ To only provide an `endMark`, you need to provide an empty `measureOptions` obje
   - : An object that may contain measure options.
 
     - `detail` {{optional_inline}}
-      - : Arbitrary metadata to be included in the measure. Defaults to `null`. Must be [structured-clonable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+      - : Arbitrary metadata to be included in the measure. Defaults to `null`. Must be [structured-cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
     - `start` {{optional_inline}}
 
       - : Timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the start time, or string that names a {{domxref("PerformanceMark")}} to use for the start time.
@@ -144,7 +144,7 @@ performance.measure("login-click", {
 });
 ```
 
-### Proving additional measurement details
+### Providing additional measurement details
 
 You can use the `details` property to provide additional information of any type. Maybe you want to record which HTML element was clicked, for example.
 

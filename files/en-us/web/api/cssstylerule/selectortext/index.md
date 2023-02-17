@@ -30,7 +30,7 @@ h1 {
 ```
 
 ```js
-let text = document.styleSheets[0].selectorText;
+let myRules = document.styleSheets[0].cssRules;
 console.log(myRules[0].selectorText); // a string containing "h1".
 ```
 

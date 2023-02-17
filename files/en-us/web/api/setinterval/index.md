@@ -221,8 +221,7 @@ Browsers may enforce even more stringent minimum values for the interval under s
 circumstances, although these should not be common. Note also that the actual amount of
 time that elapses between calls to the callback may be longer than the given
 `delay`; see
-{{SectionOnPage("/en-US/docs/Web/API/setTimeout", "Reasons for
- delays longer than specified")}} for examples.
+[Reasons for delays longer than specified](/en-US/docs/Web/API/setTimeout#reasons_for_delays_longer_than_specified) for examples.
 
 ### Ensure that execution duration is shorter than interval frequency
 

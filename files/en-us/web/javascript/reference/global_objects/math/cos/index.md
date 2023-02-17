@@ -16,7 +16,7 @@ browser-compat: javascript.builtins.Math.cos
 
 {{JSRef}}
 
-The **`Math.cos()`** function returns the cosine of a number in radians.
+The **`Math.cos()`** static method returns the cosine of a number in radians.
 
 {{EmbedInteractiveExample("pages/js/math-cos.html")}}
 

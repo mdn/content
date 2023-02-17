@@ -55,12 +55,12 @@ const foo = {};
 
 // Define the bar property
 
-foo.bar = 'moon';
+foo.bar = "moon";
 console.log(foo.bar); // "moon"
 
 // Test to be sure bar exists before accessing it
 
-if (Object.hasOwn(foo, 'bar')) {
+if (Object.hasOwn(foo, "bar")) {
   console.log(foo.bar);
 }
 ```

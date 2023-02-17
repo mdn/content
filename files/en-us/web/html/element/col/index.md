@@ -1,6 +1,7 @@
 ---
 title: '<col>: The Table Column element'
 slug: Web/HTML/Element/col
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -49,7 +50,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
 
-  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
+  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/color_value#named_colors) can also be used.
 
     To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.
 

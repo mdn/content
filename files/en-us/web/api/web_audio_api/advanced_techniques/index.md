@@ -97,7 +97,7 @@ First of all, we'll create our periodic wave. To do so, We need to pass real and
 ```js
 const wave = new PeriodicWave(audioCtx, {
   real: wavetable.real,
-  imag: wavetable.imag
+  imag: wavetable.imag,
 });
 ```
 
@@ -112,7 +112,7 @@ function playSweep(time) {
   const osc = new OscillatorNode(audioCtx, {
     frequency: 380,
     type: "custom",
-    periodicWave: wave
+    periodicWave: wave,
   });
   osc.connect(audioCtx.destination);
   osc.start(time);
@@ -188,17 +188,14 @@ function playSweep(time) {
   const osc = new OscillatorNode(audioCtx, {
     frequency: 380,
     type: "custom",
-    periodicWave: wave
+    periodicWave: wave,
   });
 
   const sweepEnv = new GainNode(audioCtx);
   sweepEnv.gain.cancelScheduledValues(time);
   sweepEnv.gain.setValueAtTime(0, time);
   sweepEnv.gain.linearRampToValueAtTime(1, time + attackTime);
-  sweepEnv.gain.linearRampToValueAtTime(
-    0,
-    time + sweepLength - releaseTime
-  );
+  sweepEnv.gain.linearRampToValueAtTime(0, time + sweepLength - releaseTime);
 
   osc.connect(sweepEnv).connect(audioCtx.destination);
   osc.start(time);
@@ -340,7 +337,7 @@ const bufferSize = audioCtx.sampleRate * noiseDuration;
 // Create an empty buffer
 const noiseBuffer = new AudioBuffer({
   length: bufferSize,
-  sampleRate: audioCtx.sampleRate
+  sampleRate: audioCtx.sampleRate,
 });
 ```
 
@@ -363,7 +360,7 @@ Now we have the audio buffer and have filled it with data; we need a node to add
 ```js
 // Create a buffer source for our created data
 const noise = new AudioBufferSourceNode(audioCtx, {
-  buffer: noiseBuffer
+  buffer: noiseBuffer,
 });
 ```
 
@@ -388,7 +385,7 @@ Wiring this up is the same as we've seen before. We create the {{domxref("Biquad
 // Filter the output
 const bandpass = new BiquadFilterNode(audioCtx, {
   type: "bandpass",
-  frequency: bandHz
+  frequency: bandHz,
 });
 
 // Connect our graph
@@ -454,7 +451,7 @@ function playNoise(time) {
   // Create an empty buffer
   const noiseBuffer = new AudioBuffer({
     length: bufferSize,
-    sampleRate: audioCtx.sampleRate
+    sampleRate: audioCtx.sampleRate,
   });
 
   // Fill the buffer with noise
@@ -465,13 +462,13 @@ function playNoise(time) {
 
   // Create a buffer source for our created data
   const noise = new AudioBufferSourceNode(audioCtx, {
-    buffer: noiseBuffer
+    buffer: noiseBuffer,
   });
 
   // Filter the output
   const bandpass = new BiquadFilterNode(audioCtx, {
     type: "bandpass",
-    frequency: bandHz
+    frequency: bandHz,
   });
 
   // Connect our graph
@@ -503,9 +500,9 @@ Let's create another `async` function to set up the sample — we can combine th
 
 ```js
 async function setupSample() {
-    const filePath = 'dtmf.mp3';
-    const sample = await getFile(audioCtx, filePath);
-    return sample;
+  const filePath = "dtmf.mp3";
+  const sample = await getFile(audioCtx, filePath);
+  return sample;
 }
 ```
 
@@ -528,7 +525,7 @@ Let's create a `playSample()` function similarly to how we did with the other so
 
 ```js
 function playSample(audioContext, audioBuffer, time) {
-  const sampleSource = new AudioBufferSourceNode(audioCtx, {
+  const sampleSource = new AudioBufferSourceNode(audioContext, {
     buffer: audioBuffer,
     playbackRate,
   });
@@ -628,7 +625,7 @@ function nextNote() {
   nextNoteTime += secondsPerBeat; // Add beat length to last beat time
 
   // Advance the beat number, wrap to zero when reaching 4
-  currentNote = (currentNote+1) % 4;
+  currentNote = (currentNote + 1) % 4;
 }
 ```
 
@@ -689,8 +686,8 @@ function draw() {
   // We only need to draw if the note has moved.
   if (lastNoteDrawn !== drawNote) {
     pads.forEach((pad) => {
-      pad.children[lastNoteDrawn*2].style.borderColor = "var(--black)";
-      pad.children[drawNote*2].style.borderColor = "var(--yellow)";
+      pad.children[lastNoteDrawn * 2].style.borderColor = "var(--black)";
+      pad.children[drawNote * 2].style.borderColor = "var(--yellow)";
     });
 
     lastNoteDrawn = drawNote;

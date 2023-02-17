@@ -1,6 +1,7 @@
 ---
 title: First paint
 slug: Glossary/First_paint
+page-type: glossary-definition
 tags:
   - Beginner
   - Performance

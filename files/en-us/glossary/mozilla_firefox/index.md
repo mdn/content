@@ -1,6 +1,7 @@
 ---
 title: Mozilla Firefox
 slug: Glossary/Mozilla_Firefox
+page-type: glossary-definition
 tags:
   - Browser
   - Firefox

@@ -1,6 +1,7 @@
 ---
 title: Grid Cell
 slug: Glossary/Grid_Cell
+page-type: glossary-definition
 tags:
   - CSS Grids
 ---

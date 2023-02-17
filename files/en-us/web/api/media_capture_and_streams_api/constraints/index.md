@@ -542,7 +542,7 @@ audioConstraintEditor.addEventListener("keydown", keyDownHandler, false);
 
 ### Show constrainable properties the browser supports
 
-The last significant piece of the puzzle: code that displays, for the user's reference, a list of the constrainable properties which their browser supports. Each property is a link to its documentation on MDN for the user's convenience. See the {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getSupportedConstraints", "Example")}} for details on how this code works.
+The last significant piece of the puzzle: code that displays, for the user's reference, a list of the constrainable properties which their browser supports. Each property is a link to its documentation on MDN for the user's convenience. See the [`MediaDevices.getSupportedConstraints()` examples](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#examples) for details on how this code works.
 
 > **Note:** Of course, there may be non-standard properties in this list, in which case you probably will find that the documentation link doesn't help much.
 

@@ -19,7 +19,7 @@ The **`deriveBits()`** method of the
 key.
 
 It takes as its arguments the base key, the derivation algorithm to use, and the length
-of the bit string to derive. It returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+of the bits to derive. It returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 which will be fulfilled with an
 [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 containing the derived bits.
@@ -79,8 +79,7 @@ The promise is rejected when one of the following exceptions are encountered:
     `deriveBits`.
 - `NotSupported` {{domxref("DOMException")}}
   - : Raised when trying to use an algorithm that is either unknown or isn't suitable for
-    derivation, or if the algorithm requested for the derived key doesn't define a key
-    length.
+    derivation.
 
 ## Supported algorithms
 

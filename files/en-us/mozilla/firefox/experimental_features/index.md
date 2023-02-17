@@ -228,6 +228,51 @@ The {{cssxref("initial-letter")}} CSS property is part of the [CSS Inline Layout
   </tbody>
 </table>
 
+### content-visibility: auto value
+
+The [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) CSS property value `auto` allows content to skip rendering if it is not [relevant to the user](/en-US/docs/Web/CSS/CSS_Containment#relevant_to_the_user).
+(See {{bug(1798485)}} for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.content-visibility.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+Note that the related {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event and associated {{domxref("ContentVisibilityAutoStateChangeEvent")}} interface were added in version 110, and are gated by the same preference.
+These can be used by application code to monitor visibility changes and stop processes related to rendering the element when the user agent is [skipping its contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents).
+(See {{bug(1791759)}} for more details.)
+
 ### Single numbers as aspect ratio in media queries
 
 Support for using a single {{cssxref("number")}} as a {{cssxref("ratio")}} when specifying the aspect ratio for a [media query](/en-US/docs/Web/CSS/Media_Queries). (See {{bug(1565562)}} for more details.)
@@ -639,48 +684,6 @@ See {{bug(1715546)}} for more details.
   </tbody>
 </table>
 
-### Container queries
-
-Container queries allow you to apply CSS styles to elements based on the size of their container as opposed to the size of the viewport or other device characteristics.
-The CSS length units `cqw`, `cqh`, `cqi`, `cqb`, `cqmin`, `cqmax` are units of length relative to the size of a query container and are supported as part of this functionality.
-For more information, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) page and the [Container query length units](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) section ({{bug(1744231)}}, {{bug(1801123)}}).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>109</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>108</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>108</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>108</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.container-queries.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### round() math function
 
 The CSS [`round()`](/en-US/docs/Web/CSS/round) function is a math function that rounds a number (or the result of an expression) based on a selected rounding strategy.
@@ -983,7 +986,7 @@ This new API provides low-level support for performing computation and graphics 
 
 #### MediaDevices.selectAudioOutput()
 
-{{domxref("MediaDevices.selectAudioOutput()")}} displays a prompt from which users can select their desired audio output. See {{bug(1699026)}}.
+{{domxref("MediaDevices.selectAudioOutput()")}} displays a prompt on desktop systems, from which users can select their desired audio output. See {{bug(1699026)}}.
 
 <table>
   <thead>
@@ -996,8 +999,8 @@ This new API provides low-level support for performing computation and graphics 
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>88</td>
-      <td>No</td>
+      <td>111</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -1522,9 +1525,12 @@ The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings
   </tbody>
 </table>
 
-#### Document property: autoplayPolicy
+#### Navigator method: getAutoplayPolicy()
 
-The {{domxref("document")}} property autoplayPolicy returns a string indicating how the browser handles requests to automatically play media (either using the {{domxref("HTMLMediaElement.autoplay", "autoplay")}} property on a media element or by attempting to trigger playback from JavaScript code. The spec for this API is still being written. The value changes over time depending on what the user is doing, their preferences, and the state of the browser in general. Potential values include `allowed` (autoplay is currently permitted), `allowed-muted` (autoplay is allowed but only with no—or muted—audio), and `disallowed` (autoplay is not allowed at this time). See {{bug(1506289)}} for more details.
+The {{domxref("navigator.getAutoplayPolicy()")}} method returns a string value indicating how the browser handles requests to automatically play media for either media elements or audio contexts.
+The possible values are: `allowed` (autoplay is currently permitted), `allowed-muted` (autoplay is allowed but only with no—or muted—audio), and `disallowed` (autoplay is not allowed at this time).
+The value can change over time for all items of a particular type, or for a particular item, depending on what the user is doing, their preferences, and the state of the browser in general.
+See {{bug(1773551)}} for more details.
 
 <table>
   <thead>
@@ -1537,27 +1543,27 @@ The {{domxref("document")}} property autoplayPolicy returns a string indicating 
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>66</td>
-      <td>No</td>
+      <td>110</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>66</td>
+      <td>110</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>66</td>
+      <td>110</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>66</td>
+      <td>110</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>dom.media.autoplay.autoplay-policy-api</code></td>
+      <td colspan="2"><code>dom.media.autoplay-policy-detection.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -1685,49 +1691,6 @@ See these bugs for details: {{bug(1556362)}}, {{bug(1556373)}}, {{bug(1556365)}}
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.webcomponents.formAssociatedCustomElement.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-#### Document and Element scrollend events
-
-The `scrollend` event indicates that the user has completed scrolling in {{domxref("Element")}} and {{domxref("Document")}} objects.
-For more information, see [Element: `scrollend` event](/en-US/docs/Web/API/Element/scrollend_event) and [Document: `scrollend` event](/en-US/docs/Web/API/Document/scrollend_event) ({{bug(1797013)}}, {{bug(1803435)}}).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>109</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>108</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>108</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>108</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td>
-        <code>apz.scrollend-event.content.enabled</code>
-      </td>
     </tr>
   </tbody>
 </table>

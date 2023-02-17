@@ -34,7 +34,7 @@ The **`Intl.RelativeTimeFormat`** object enables language-sensitive relative tim
 ## Instance methods
 
 - {{jsxref("Intl/RelativeTimeFormat/format", "Intl.RelativeTimeFormat.prototype.format()")}}
-  - : Formats a `value` and a `unit` according to the locale and formatting options of the given {{jsxref("Intl.RelativeTimeFormat")}} object.
+  - : Formats a `value` and a `unit` according to the locale and formatting options of the given `Intl.RelativeTimeFormat` object.
 - {{jsxref("Intl/RelativeTimeFormat/formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}
   - : Returns an {{jsxref("Array")}} of objects representing the relative time format in parts that can be used for custom locale-aware formatting.
 - {{jsxref("Intl/RelativeTimeFormat/resolvedOptions", "Intl.RelativeTimeFormat.prototype.resolvedOptions()")}}
@@ -64,7 +64,7 @@ rtf.format(1, "day"); // "in 1 day"
 
 ### Using formatToParts
 
-The following example shows how to create a relative time formatter returning formatted parts
+The following example shows how to create a relative time formatter returning formatted parts.
 
 ```js
 const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });

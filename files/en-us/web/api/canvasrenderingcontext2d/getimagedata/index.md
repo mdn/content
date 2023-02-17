@@ -127,7 +127,7 @@ context.fillRect(0, 0, 10, 10);
 
 // Get ImageData converted to sRGB
 const imageData = context.getImageData(0, 0, 1, 1, { colorSpace: "srgb" });
-console.log(imageData.colorSpace);  // "srgb"
+console.log(imageData.colorSpace); // "srgb"
 ```
 
 ## Specifications

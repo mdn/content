@@ -102,7 +102,7 @@ The following session features and reference spaces can be requested, either as 
 - `hand-tracking`
   - : Enable articulated hand pose information from hand-based input controllers (see {{domxref("XRHand")}} and {{domxref("XRInputSource.hand")}}).
 - `hit-test`
-  - : Enable hit testing features for performing hit tests against real world geometry.
+  - : Enable hit testing features for performing hit tests against real-world geometry.
 - `layers`
   - : Enable the ability to create various layer types (other than {{domxref("XRProjectionLayer")}}).
 - `light-estimation`

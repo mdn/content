@@ -23,6 +23,7 @@ browser-compat: path.to.feature.NameOfTheElement
 > ---
 > title: "<NameOfTheElement>: The NameOfTheElement element"
 > slug: Web/HTML/Element/NameOfTheElement
+> page-type: html-element
 > tags:
 >   - NameOfTheElement
 >   - HTML
@@ -43,6 +44,8 @@ browser-compat: path.to.feature.NameOfTheElement
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
 >     This will be formatted like `Web/HTML/Element/NameOfTheElement`, where the element name is in _lower case_.
 >     For example, the [`<video>`](/en-US/docs/Web/HTML/Element/video) element has a _slug_ of `Web/HTML/Element/video`.
+> - **page-type**
+>   - : Always `html-element`.
 > - **tags**
 >
 >   - : Always include the following tags: **HTML**, **Element**, **Reference**, the _NameOfTheElement_ (e.g. **video**).
@@ -188,9 +191,8 @@ Optionally, warn of any potential accessibility concerns that exist with using t
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        Fill in a list of ARIA roles that can be set on the element, inside
-        \{{ARIARole("nameOfRole")}} macro calls. For example
-        {{ARIARole("directory")}}.
+        Fill in a list of ARIA roles that can be set on the element; for example
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>.
       </td>
     </tr>
     <tr>

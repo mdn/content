@@ -1,6 +1,7 @@
 ---
 title: FTU
 slug: Glossary/FTU
+page-type: glossary-definition
 tags:
   - FTU
   - Firefox OS

@@ -29,7 +29,7 @@ The `type` property can have the following values:
 - `"back_forward"`
   - : Navigation is through the browser's history traversal operation.
 - `"prerender"`
-  - : Navigation is initiated by a [prerender hint](/en-US/docs/Web/HTML/Link_types/prerender).
+  - : Navigation is initiated by a [prerender hint](/en-US/docs/Web/HTML/Attributes/rel/prerender).
 
 ## Examples
 

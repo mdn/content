@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Math.ceil
 
 {{JSRef}}
 
-The **`Math.ceil()`** function always rounds up and returns the smaller integer greater than or equal to a given number.
+The **`Math.ceil()`** static method always rounds up and returns the smaller integer greater than or equal to a given number.
 
 {{EmbedInteractiveExample("pages/js/math-ceil.html")}}
 

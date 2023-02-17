@@ -274,7 +274,8 @@ console.log(JSON.stringify({ a: 1n }));
 If you do not wish to patch `BigInt.prototype`, you can use the [`replacer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#the_replacer_parameter) parameter of `JSON.stringify` to serialize BigInt values:
 
 ```js
-const replacer = (key, value) => key === "big" ? value.toString() : value;
+const replacer = (key, value) =>
+  typeof value === "bigint" ? value.toString() : value;
 
 const data = {
   number: 1,
@@ -297,6 +298,8 @@ const parsed = JSON.parse(payload, reviver);
 console.log(parsed);
 // { number: 1, big: 18014398509481982n }
 ```
+
+> **Note:** While it's possible to make the replacer of `JSON.stringify()` generic and properly serialize BigInt values for all objects, the reviver of `JSON.parse()` must be specific to the payload shape you expect, because the serialization is _lossy_: it's not possible to distinguish between a string that represents a BigInt and a normal string.
 
 ## Examples
 

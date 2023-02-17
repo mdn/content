@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat.supportedLocalesOf
 
 {{JSRef}}
 
-The **`Intl.DateTimeFormat.supportedLocalesOf()`** method
+The **`Intl.DateTimeFormat.supportedLocalesOf()`** static method
 returns an array containing those of the provided locales that are supported in date
 and time formatting without having to fall back to the runtime's default locale.
 
@@ -71,9 +71,11 @@ that Indonesian is an adequate match for Balinese since most Balinese speakers a
 understand Indonesian, and therefore return the Balinese language tag as well.
 
 ```js
-const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-const options = { localeMatcher: 'lookup' };
-console.log(Intl.DateTimeFormat.supportedLocalesOf(locales, options).join(', '));
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
+console.log(
+  Intl.DateTimeFormat.supportedLocalesOf(locales, options).join(", "),
+);
 // "id-u-co-pinyin, de-ID"
 ```
 

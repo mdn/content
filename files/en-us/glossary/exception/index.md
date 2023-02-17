@@ -1,6 +1,7 @@
 ---
 title: Exception
 slug: Glossary/Exception
+page-type: glossary-definition
 tags:
   - Beginner
   - CodingScripting

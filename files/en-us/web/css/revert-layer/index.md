@@ -20,7 +20,7 @@ If there is no other cascade layer to revert to for the matching CSS rule, the p
 
 This keyword can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}.
 
-## Revert-layer vs revert
+## Revert-layer vs. revert
 
 The `revert-layer` keyword lets you rollback styles to the ones specified in previous cascade layers. All cascade layers exist in the [author origin](/en-US/docs/Glossary/Style_origin). The {{cssxref("revert")}} keyword, in comparison, lets you remove styles applied in the author origin and roll back to styles in user origin or user-agent origin.
 

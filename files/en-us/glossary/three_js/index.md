@@ -1,6 +1,7 @@
 ---
 title: Three js
 slug: Glossary/Three_js
+page-type: glossary-definition
 tags:
   - Browser
   - CodingScripting

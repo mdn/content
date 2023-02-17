@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Intl.Segmenter.supportedLocalesOf
 
 {{JSRef}}
 
-The **`Intl.Segmenter.supportedLocalesOf()`** method returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
+The **`Intl.Segmenter.supportedLocalesOf()`** static method returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
 
 {{EmbedInteractiveExample("pages/js/intl-segmenter-supportedlocalesof.html", "shorter")}}
 
@@ -54,9 +54,9 @@ adequate match for Balinese since most Balinese speakers also understand Indones
 and therefore return the Balinese language tag as well.
 
 ```js
-const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-const options = { localeMatcher: 'lookup' };
-console.log(Intl.Segmenter.supportedLocalesOf(locales, options).join(', '));
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
+console.log(Intl.Segmenter.supportedLocalesOf(locales, options).join(", "));
 // "id-u-co-pinyin, de-ID"
 ```
 

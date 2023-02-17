@@ -1,6 +1,7 @@
 ---
 title: Modem
 slug: Glossary/Modem
+page-type: glossary-definition
 tags:
   - Infrastructure
   - Navigation

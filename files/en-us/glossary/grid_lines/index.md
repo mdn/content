@@ -1,6 +1,7 @@
 ---
 title: Grid Lines
 slug: Glossary/Grid_Lines
+page-type: glossary-definition
 tags:
   - CSS Grids
 ---

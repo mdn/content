@@ -1,6 +1,7 @@
 ---
 title: Internet
 slug: Glossary/Internet
+page-type: glossary-definition
 tags:
   - Beginner
   - Guide

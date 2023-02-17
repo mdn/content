@@ -1,6 +1,7 @@
 ---
 title: Digest
 slug: Glossary/Digest
+page-type: glossary-definition
 tags:
   - Cryptography
   - Privacy

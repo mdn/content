@@ -23,7 +23,7 @@ at least once.
 ```js-nolint
 do
   statement
-while (condition)
+while (condition);
 ```
 
 - `statement`

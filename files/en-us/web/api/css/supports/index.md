@@ -51,7 +51,9 @@ result = CSS.supports("text-decoration-style", "blink");
 result = CSS.supports("display: flex");
 result = CSS.supports("(--foo: red)");
 
-result = CSS.supports("(transform-style: preserve) or (-moz-transform-style: preserve) or (-webkit-transform-style: preserve)");
+result = CSS.supports(
+  "(transform-style: preserve) or (-moz-transform-style: preserve) or (-webkit-transform-style: preserve)"
+);
 
 // result is true or false
 ```

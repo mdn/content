@@ -1,6 +1,7 @@
 ---
 title: Gutters
 slug: Glossary/Gutters
+page-type: glossary-definition
 tags:
   - CSS Grids
 ---

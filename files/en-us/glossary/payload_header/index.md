@@ -1,6 +1,7 @@
 ---
 title: Payload header
 slug: Glossary/Payload_header
+page-type: glossary-definition
 tags:
   - Payload header
   - Headers

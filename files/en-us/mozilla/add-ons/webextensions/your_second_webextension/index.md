@@ -317,8 +317,8 @@ A common reason the `browser.tabs.executeScript()` call might fail is that you c
 
 If executing the content script is successful, we call `listenForClicks()`. This listens for clicks on the popup.
 
-- If the click was on a button with `class="beast"`, then we call `beastify()`.
 - If the click was on a button with `class="reset"`, then we call `reset()`.
+- If the click was on any other button (i.e. the beast buttons), then we call `beastify()`.
 
 The `beastify()` function does three things:
 

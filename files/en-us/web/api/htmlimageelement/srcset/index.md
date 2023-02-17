@@ -35,6 +35,8 @@ The `srcset` property, along with the {{domxref("HTMLImageElement.sizes",
 can be used together to make pages that use appropriate images for the rendering
 situation.
 
+> **Note:** If the {{htmlattrxref("srcset", "img")}} attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
+
 ## Value
 
 A string containing a comma-separated list of one or more image
@@ -78,7 +80,7 @@ provides only a URL), the candidate is assigned a default descriptor of "1x".
 This string provides versions of an image to be used at the standard pixel density
 (undescribed, assigned a default of `1x`) as well as double that pixel density (`2x`).
 
-When an image element's `srcset` contains "x" descriptors, browsers also consider the
+When an image element's `srcset` contains "x" descriptors, browsers also consider
 the URL in the {{domxref("HTMLImageElement.src", "src")}} attribute (if present) as a
 candidate, and assign it a default descriptor of `1x`.
 

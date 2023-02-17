@@ -27,7 +27,7 @@ Further, if the device or operating system the user agent is running on doesn't 
 
 ## Reduced time precision
 
-To offer protection against timing attacks and fingerprinting, the precision of time stamps might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 20 µs in Firefox 59; in 60 it will be 2ms.
+To offer protection against timing attacks and fingerprinting, the precision of timestamps might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 20 µs in Firefox 59; in 60 it will be 2ms.
 
 ```js
 // reduced time precision (2ms) in Firefox 60

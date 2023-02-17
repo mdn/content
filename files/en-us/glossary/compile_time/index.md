@@ -1,6 +1,7 @@
 ---
 title: Compile time
 slug: Glossary/Compile_time
+page-type: glossary-definition
 tags:
   - CodingScripting
   - JavaScript

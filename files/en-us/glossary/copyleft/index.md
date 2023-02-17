@@ -1,6 +1,7 @@
 ---
 title: Copyleft
 slug: Glossary/Copyleft
+page-type: glossary-definition
 tags:
   - OpenPractices
   - Remixing

@@ -197,6 +197,16 @@ When calling `tabs.remove()`:
 - **In Firefox:** When a content script makes an HTTP(S) request, you _must_ provide absolute URLs.
 - **In Chrome:** When a content script makes a request (for example, using [`fetch()`](/en-US/docs/Web/API/Fetch_API/Using_Fetch)) to a relative URL (like `/api`), it will be sent to `https://example.com/api`.
 
+#### Content script environment
+
+- **In Firefox:** The global scope of the [content script environment](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#content_script_environment) is not strictly equal to `window` ({{bug(1208775)}}). More specifically, the global scope (`globalThis`) is composed of standard JavaScript features as usual, plus `window` as the prototype of the global scope. Most DOM APIs are inherit from the page through `window`, through [Xray vision](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#xray_vision_in_firefox) to shield the content script from modifications by the web page. Content scripts may encounter JavaScript objects from its own global scope or Xray-wrapped versions from the web page.
+- **In Chrome:** The global scope is `window` and the available DOM APIs are generally independent of the web page (other than sharing the underlying DOM). Content scripts cannot directly access JavaScript objects from the web page.
+
+#### Executing code in web page from content script
+
+- **In Firefox:** {{jsxref("Global_Objects/eval", "eval")}} runs code in the context of the content script, and `window.eval` runs code in the context of the page. See [Using `eval` in content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#using_eval_in_content_scripts).
+- **In Chrome:** {{jsxref("Global_Objects/eval", "eval")}} and `window.eval` always runs code in the context of the content script, not in the context of the page.
+
 #### Sharing variables between content scripts
 
 - **In Firefox:** You cannot share variables between content scripts by assigning them to `this.{variableName}` in one script and then attempting to access them using `window.{variableName}` in another. This is a limitation created by the sandbox environment in Firefox. This limitation may be removed, see {{bug(1208775)}}.

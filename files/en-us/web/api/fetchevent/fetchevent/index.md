@@ -48,6 +48,8 @@ new FetchEvent(type, options)
       - : A string which identifies the client which is being replaced by `resultingClientId`. It defaults to `""`.
     - `resultingClientId` {{optional_inline}}
       - : A string containing the new `clientId` if the client changes as a result of the page load. It defaults to `""`
+    - `handled`
+      - : A _pending_ promise that will be fulfilled once the event has been handled.
 
 ## Return value
 

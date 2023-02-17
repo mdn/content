@@ -66,7 +66,8 @@ Besides `===`, strict equality is also used by array index-finding methods inclu
 ```js
 console.log([NaN].indexOf(NaN)); // -1
 switch (NaN) {
-  case NaN: console.log("Surprise"); // Nothing is logged
+  case NaN:
+    console.log("Surprise"); // Nothing is logged
 }
 ```
 

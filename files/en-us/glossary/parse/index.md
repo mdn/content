@@ -1,6 +1,7 @@
 ---
 title: Parse
 slug: Glossary/Parse
+page-type: glossary-definition
 tags:
   - Browser
   - CSS

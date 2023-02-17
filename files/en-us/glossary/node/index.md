@@ -1,6 +1,7 @@
 ---
 title: Node
 slug: Glossary/Node
+page-type: glossary-disambiguation
 tags:
   - Disambiguation
 ---

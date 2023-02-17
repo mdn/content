@@ -1,6 +1,7 @@
 ---
 title: '<audio>: The Embed Audio element'
 slug: Web/HTML/Element/audio
+page-type: html-element
 tags:
   - Audio
   - Element
@@ -443,7 +444,7 @@ Also it's a good practice to provide some content (such as the direct download l
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
-      <td>{{ARIARole("application")}}</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM interface</th>

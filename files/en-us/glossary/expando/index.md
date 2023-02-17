@@ -1,6 +1,7 @@
 ---
 title: Expando
 slug: Glossary/Expando
+page-type: glossary-definition
 tags:
   - CodingScripting
   - JavaScript

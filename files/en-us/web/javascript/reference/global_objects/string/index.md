@@ -31,9 +31,9 @@ with the {{jsxref("String.prototype.substring()", "substring()")}} method.
 Strings can be created as primitives, from string literals, or as objects, using the
 {{jsxref("String/String", "String()")}} constructor:
 
-```js
+```js-nolint
 const string1 = "A string primitive";
-const string2 = "Also a string primitive";
+const string2 = 'Also a string primitive';
 const string3 = `Yet another string primitive`;
 ```
 
@@ -69,8 +69,7 @@ nor configurable. (See {{jsxref("Object.defineProperty()")}} for more informatio
 
 ### Comparing strings
 
-In C, the `strcmp()` function is used for comparing strings. In JavaScript,
-you just use the [less-than and greater-than operators](/en-US/docs/Web/JavaScript/Reference/Operators):
+Use the [less-than and greater-than operators](/en-US/docs/Web/JavaScript/Reference/Operators) to compare strings:
 
 ```js
 const a = "a";

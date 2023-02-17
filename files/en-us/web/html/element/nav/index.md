@@ -1,6 +1,7 @@
 ---
 title: '<nav>: The Navigation Section element'
 slug: Web/HTML/Element/nav
+page-type: html-element
 tags:
   - Element
   - HTML

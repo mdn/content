@@ -1,6 +1,7 @@
 ---
 title: BiDi
 slug: Glossary/BiDi
+page-type: glossary-definition
 tags:
   - Accessibility
 ---

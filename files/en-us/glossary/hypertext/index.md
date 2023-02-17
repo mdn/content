@@ -1,6 +1,7 @@
 ---
 title: Hypertext
 slug: Glossary/Hypertext
+page-type: glossary-definition
 tags:
   - Web
   - WebMechanics

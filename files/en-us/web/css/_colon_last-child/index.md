@@ -20,8 +20,10 @@ The **`:last-child`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/
 
 ## Syntax
 
-```
-:last-child
+```css
+:last-child {
+  /* ... */
+}
 ```
 
 ## Examples

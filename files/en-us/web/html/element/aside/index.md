@@ -1,6 +1,7 @@
 ---
 title: '<aside>: The Aside element'
 slug: Web/HTML/Element/aside
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -48,7 +49,7 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
 
 {{EmbedLiveSample("Using_aside")}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
@@ -106,9 +107,9 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("feed")}}, {{ARIARole("none")}},
-        {{ARIARole("note")}}, {{ARIARole("presentation")}},
-        {{ARIARole("region")}}, {{ARIARole("search")}}
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role"><code>feed</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/note_role"><code>note</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/region_role"><code>region</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/search_role"><code>search</code></a>
       </td>
     </tr>
     <tr>

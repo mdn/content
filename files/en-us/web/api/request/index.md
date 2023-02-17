@@ -52,6 +52,8 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
   - : Contains the referrer of the request (e.g., `client`).
 - {{domxref("Request.referrerPolicy")}} {{ReadOnlyInline}}
   - : Contains the referrer policy of the request (e.g., `no-referrer`).
+- {{domxref("Request.signal")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("AbortSignal")}} associated with the request
 - {{domxref("Request.url")}} {{ReadOnlyInline}}
   - : Contains the URL of the request.
 

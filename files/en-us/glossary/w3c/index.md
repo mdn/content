@@ -1,6 +1,7 @@
 ---
 title: W3C
 slug: Glossary/W3C
+page-type: glossary-definition
 tags:
   - Community
   - Consortium
