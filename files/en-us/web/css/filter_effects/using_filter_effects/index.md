@@ -19,6 +19,10 @@ CSS Filters enable may visual effects that used to be reserved to costly image e
 
 The [CSS filter effects](/en-us/docs/Web/CSS/filter_effects/) module defines the {{cssxref("&lt;filter-function&gt;")}} data type which provides 10 different graphical effects that can alter the appearance of an element as well as the ability to reference an SVG filter with a URL to an [SVG filter element](/en-US/docs/Web/SVG/Element/filter).
 
+## Applying a filter to an image
+
+There are two filter properties defined in the CSS filter effects module enable applying zero, one, or more graphical effects to an element, like blur, sepia, or a drop-shadow. With `filter`, the effects are applied to the element on which the `filter` property is defined. With `backdrop-filter`, the graphical effects are applied to the content behind the element, or the element's "backgdrop.
+
 There are 10 CSS filter functions. The following table lists the filter functions, their equivalent SVG filter element, their initial interpolation, or default, value, and the function's parameter data type:
 
 | Filter function                                             | SVG element                                                                                                                                                                                               | data type                                                          | default             | min | max |
