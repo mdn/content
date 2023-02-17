@@ -11,7 +11,7 @@ tags:
 
 The **`hadRecentInput`** read-only property of the {{domxref("LayoutShift")}} interface returns `true` if {{domxref("LayoutShift.lastInputTime", "lastInputTime")}} is less than 500 milliseconds in the past.
 
-Layout shifts are only a problem if the user is not expecting them, so layout shifts that are the result of user interactions (such as a user expanding a UI element) are not included in the [Cumulative Layout Shift](/en-US/docs/Glossary/Cumulative_Layout_Shift) metric. The `hadRecentInput` property allows you to exclude these shifts.
+Layout shifts are only a problem if the user is not expecting them, so layout shifts that are the result of user interactions (such as a user expanding a UI element) are often not considered in layout shift metrics. The `hadRecentInput` property allows you to exclude these shifts.
 
 ## Value
 

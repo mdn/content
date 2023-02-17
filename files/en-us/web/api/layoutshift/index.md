@@ -91,4 +91,4 @@ observer.observe({ type: "layout-shift", buffered: true });
 ## See also
 
 - {{domxref("LayoutShiftAttribution")}}
-- {{Glossary("Cumulative Layout Shift")}}
+- [Cumulative Layout Shift (CLS)](https://web.dev/cls/)
