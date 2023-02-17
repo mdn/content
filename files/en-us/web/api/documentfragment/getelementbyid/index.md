@@ -28,7 +28,7 @@ getElementById(id)
 
 ### Return value
 
-An {{domxref("Element")}} object describing the DOM element object matching the specified ID, or `null` if no matching element was found in the document.
+An {{domxref("Element")}} object describing the DOM element object matching the specified ID, or `null` if no matching element was found in the document fragment.
 
 ## Examples
 
