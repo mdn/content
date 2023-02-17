@@ -19,22 +19,19 @@ A boolean returning `true` if {{domxref("LayoutShift.lastInputTime", "lastInputT
 
 ## Examples
 
-### Ignoring recent user input for CLS score
+### Ignoring recent user input for layout shift scores
 
 The following example shows how the `hadRecentInput` property is used to only count layout shifts without recent user input.
 
 ```js
-let cumulativeLayoutShiftScore = 0;
-
 const observer = new PerformanceObserver((list) => {
   for (const entry of list.getEntries()) {
     // Count layout shifts without recent user input only
     if (!entry.hadRecentInput) {
-      cumulativeLayoutShiftScore += entry.value;
-      console.log("Current CLS value:", cumulativeLayoutShiftScore, entry);
+      console.log("LayoutShift value:", entry.value);
       if (entry.sources) {
-        for (const { node, currentRect, previousRect } of entry.sources)
-          console.log("Shift source:", node, { currentRect, previousRect });
+        for (const { node, curRect, prevRect } of entry.sources)
+          console.log("LayoutShift source:", node, { curRect, prevRect });
       }
     }
   }

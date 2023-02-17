@@ -20,9 +20,11 @@ The `LayoutShift` interface of the [Performance API](/en-US/docs/Web/API/Perform
 
 ## Description
 
-A layout shift happens when any element that is visible in the viewport changes its position between two frames. These elements are described as being **unstable**, and contribute to a poor {{Glossary("Cumulative Layout Shift")}} (CLS) score, indicating a lack of visual stability.
+A layout shift happens when any element that is visible in the viewport changes its position between two frames. These elements are described as being **unstable**, indicating a lack of visual stability.
 
 The Layout Instability API provides a way to measure and report on these layout shifts. All tools for debugging layout shifts, including those in the browser's developer tools, use this API. The API can also be used to observe and debug layout shifts by logging the information to the console, to send the data to a server endpoint, or to web page analytics.
+
+Popular performance tools, use this API to calculate a [Cumulative Layout Shift (CLS)](https://web.dev/cls/) score.
 
 {{InheritanceDiagram}}
 
@@ -57,43 +59,25 @@ This interface also supports the following properties:
 
 ## Examples
 
-### Logging the current CLS score
+### Logging layout shift values
 
 The following example shows how to capture layout shifts and log them to the console.
 
 ```js
-let cumulativeLayoutShiftScore = 0;
-
 const observer = new PerformanceObserver((list) => {
   for (const entry of list.getEntries()) {
     // Count layout shifts without recent user input only
     if (!entry.hadRecentInput) {
-      cumulativeLayoutShiftScore += entry.value;
-      console.log("Current CLS value:", cumulativeLayoutShiftScore, entry);
+      console.log("LayoutShift value:", entry.value);
       if (entry.sources) {
         for (const { node, curRect, prevRect } of entry.sources)
-          console.log("Shift source:", node, { curRect, prevRect });
+          console.log("LayoutShift source:", node, { curRect, prevRect });
       }
     }
   }
 });
 
 observer.observe({ type: "layout-shift", buffered: true });
-```
-
-### Measuring the final CLS score
-
-The final CLS score is taken at the time of the [`visibilitychange` event](/en-US/docs/Web/API/Document/visibilitychange_event).
-
-```js
-document.addEventListener("visibilitychange", () => {
-  if (document.visibilityState === "hidden") {
-    // Force any pending records to be dispatched
-    observer.takeRecords();
-    observer.disconnect();
-    console.log("CLS:", cumulativeLayoutShiftScore);
-  }
-});
 ```
 
 ## Specifications

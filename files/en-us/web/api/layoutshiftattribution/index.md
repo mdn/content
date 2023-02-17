@@ -37,7 +37,7 @@ Instances of `LayoutShiftAttribution` are returned in an array by calling {{domx
 
 ## Examples
 
-The following example finds the element that is causing the largest layout shift, and prints that `node` to the console. For more detail on this see [Debug Web Vitals in the field](https://web.dev/debug-web-vitals-in-the-field/).
+The following example finds the element with the highest layout shift score, and logs the element in that entry with the largest size prior to the shift (`previousRect`). For more detail on this see [Debug Web Vitals in the field](https://web.dev/debug-web-vitals-in-the-field/).
 
 ```js
 function getCLSDebugTarget(entries) {
