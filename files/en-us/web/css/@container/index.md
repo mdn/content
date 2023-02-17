@@ -132,7 +132,7 @@ The following descriptors can be used within the container condition:
 
 ## Examples
 
-### Basic example
+### Setting styles based on a container's size
 
 Consider the following example of a card component with a title and some text:
 
@@ -145,23 +145,52 @@ Consider the following example of a card component with a title and some text:
 </div>
 ```
 
-A container context can be created using the `container-type` property, as shown below:
+A container context can be created using the `container-type` property, in this case using the `inline-size` value on the `.post` element.
+You can then use the `@container` at-rule to apply styles to an element with the `.card` class if the element is in a container that's narrower than `650px`.
+
+```js hidden
+const post = document.querySelector(".post");
+const span = document.createElement("span");
+span.innerHTML = ".post width: " + post.offsetWidth + "px";
+post.parentNode.insertBefore(span, post.nextSibling);
+// update on resize
+window.addEventListener("resize", () => {
+  span.innerHTML = ".post width: " + post.offsetWidth + "px";
+});
+```
+
+```css hidden
+span {
+  display: block;
+  text-align: center;
+}
+.card {
+  margin: 10px;
+  border: 2px dotted;
+  font-size: 1.5em;
+}
+.post {
+  border: 2px solid;
+}
+```
 
 ```css
+/* A container context based on inline size */
 .post {
   container-type: inline-size;
 }
-```
 
-You can then use the `@container` at-rule to apply styles to an element with the `.card` class if the element is in a container that's wider than `400px`.
-
-```css
-@container (min-width: 400px) {
+/* Apply styles if the container is narrower than 650px */
+@container (width < 650px) {
   .card {
-    font-size: 1.5em;
+    width: 50%;
+    background-color: gray;
+    font-size: 1em;
   }
 }
 ```
+
+{{EmbedLiveSample("Setting_styles_based_on_a_container's_size", "100%", 230)}}
 
 ### Named container contexts
 
