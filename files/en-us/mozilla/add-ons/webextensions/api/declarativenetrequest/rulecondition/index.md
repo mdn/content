@@ -43,7 +43,7 @@ Values of this type are objects. They contain these properties:
 - `excludedRequestDomains` {{optional_inline}}
   - : An array of `string`. The rule does not match network requests when the domains matches one from this list. If the list is empty or omitted, no domains are excluded. This takes precedence over `requestDomains`. A [canonical domain](#canonical_domain) should be used.
 - `requestMethods` {{optional_inline}}
-  - : An array of `string`. List of HTTP request methods that the rule matches. An empty list is not allowed. Specifying a `requestMethods` rule condition also excludes non-HTTP(s) requests, whereas specifying [`excludedRequestMethods`](#excludedpequestmethods) does not.
+  - : An array of `string`. List of HTTP request methods that the rule matches. An empty list is not allowed. Specifying a `requestMethods` rule condition also excludes non-HTTP(s) requests, whereas specifying [`excludedRequestMethods`](#excludedrequestmethods) does not.
 - `excludedRequestMethods` {{optional_inline}}
   - : An array of `string`. List of request methods that the rule does not match on. Only one of [`requestMethods`](#requestmethods) and `excludedRequestMethods` should be specified. If neither of them is specified, all request methods are matched.
 - `resourceTypes` {{optional_inline}}
