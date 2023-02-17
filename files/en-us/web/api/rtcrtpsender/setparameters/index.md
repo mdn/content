@@ -56,7 +56,7 @@ If an error occurs, the returned promise is rejected with the appropriate except
 
 - `InvalidModificationError` {{domxref("DOMException")}}
   - : Returned if one of the following problems is detected:
-    - The number of encodings specified in the `parameters` object's {{domxref("RTCRtpSendParameters.encodings", "encodings")}} property does not match the number of encodings currently listed for the `RTCRtpSender`.
+    - The number of encodings specified in the `parameters` object's `encodings` property does not match the number of encodings currently listed for the `RTCRtpSender`.
       You cannot change the number of encoding options after the sender has been created.
     - The order of the specified `encodings` has changed from the current list's order.
     - An attempt has been made to alter a property that cannot be changed after the sender is first created.
@@ -65,13 +65,13 @@ If an error occurs, the returned promise is rejected with the appropriate except
 - `OperationError` {{domxref("DOMException")}}
   - : Returned if an error occurs that does not match the ones specified here.
 - {{jsxref("RangeError")}}
-  - : Returned if the value specified for {{domxref("RTCRtpSendParameters.scaleResolutionDownBy", "scaleResolutionDownBy")}} is less than 1.0 — which would result in scaling up rather than down, which is not allowed; or if one or more of the specified `encodings` {{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}} values is less than 0.0.
+  - : Returned if the value specified for `scaleResolutionDownBy` option is less than 1.0 — which would result in scaling up rather than down, which is not allowed; or if one or more of the specified `encodings` {{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}} values is less than 0.0.
 
 In addition, if a WebRTC error occurs while configuring or accessing the media, an {{domxref("RTCError")}} is thrown with its {{domxref("RTCError.errorDetail", "errorDetail")}} set to `hardware-encoder-error`.
 
 ## Description
 
-It's important to keep in mind that you can't create an {{domxref("RTCRtpSendParameters")}} object yourself and expect it to work.
+It's important to keep in mind that you can't create the `parameters` object yourself and expect it to work.
 Instead, you _must_ first call {{domxref("RTCRtpSender.getParameters", "getParameters()")}}, modify the received parameters object, then pass that object into `setParameters()`.
 WebRTC uses the parameters object's `transactionId` property to ensure that when you set parameters, your changes are based on the most recent parameters rather than an out of date configuration.
 
@@ -104,7 +104,7 @@ In calling this function, you specify a sender, as well as the height you wish t
 A scaling factor for the size of the video, `scaleRatio`, is computed.
 Then the sender's current parameters are fetched using {{domxref("RTCRtpSender.getParameters", "getParameters()")}}.
 
-The parameters are then altered by changing the first {{domxref("RTCRtpSendParameters.encodings", "encodings")}} object's {{domxref("RTCRtpEncodingParameters.scaleResolutionDownBy", "scaleResolutionDownBy")}} and {{domxref("RTCRtpEncodingParameters.maxBitrate", "maxBitrate")}} to the calculated scaling factor and the specified maximum `bitrate`.
+The parameters are then altered by changing the first `encodings` object's {{domxref("RTCRtpEncodingParameters.scaleResolutionDownBy", "scaleResolutionDownBy")}} and {{domxref("RTCRtpEncodingParameters.maxBitrate", "maxBitrate")}} to the calculated scaling factor and the specified maximum `bitrate`.
 
 The changed parameters are then saved by calling the sender's `setParameters()` method.
 
