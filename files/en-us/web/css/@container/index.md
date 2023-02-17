@@ -192,7 +192,7 @@ span {
 
 {{EmbedLiveSample("Setting_styles_based_on_a_container's_size", "100%", 230)}}
 
-### Named container contexts
+### Creating named container contexts
 
 Given the following HTML example which is a card component with a title and some text:
 
