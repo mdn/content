@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - .markdownlint-cli2.jsonc
+      - .nvmrc
       - package.json
       - yarn.lock
       - .github/workflows/markdown-lint.yml

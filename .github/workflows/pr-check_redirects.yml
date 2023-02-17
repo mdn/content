@@ -5,6 +5,7 @@ on:
     branches:
       - main
     paths:
+      - .nvmrc
       - files/**
       - .github/workflows/pr-check_redirects.yml
 

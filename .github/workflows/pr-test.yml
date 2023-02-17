@@ -11,6 +11,7 @@ on:
     branches:
       - main
     paths:
+      - .nvmrc
       - ".github/workflows/pr-test.yml"
       - "files/en-us/**"
 

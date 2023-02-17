@@ -5,6 +5,7 @@ on:
     branches:
       - main
     paths:
+      - .nvmrc
       - "**/*.js"
       - "**/*.mjs"
       - .github/workflows/pr-check_javascript.yml

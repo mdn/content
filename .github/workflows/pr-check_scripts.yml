@@ -5,6 +5,7 @@ on:
     branches:
       - main
     paths:
+      - .nvmrc
       - package.json
       - yarn.lock
       - .github/workflows/pr-check_scripts.yml

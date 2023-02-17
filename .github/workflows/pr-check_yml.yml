@@ -5,6 +5,7 @@ on:
     branches:
       - main
     paths:
+      - .nvmrc
       - yarn.lock
       - "**/*.yml"
       - .github/workflows/pr-check_yml.yml
