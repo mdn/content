@@ -1,6 +1,7 @@
 ---
 title: scripting.RegisteredContentScript
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/RegisteredContentScript
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

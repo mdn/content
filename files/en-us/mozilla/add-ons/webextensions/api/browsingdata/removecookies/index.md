@@ -1,6 +1,7 @@
 ---
 title: browsingData.removeCookies()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCookies
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons
