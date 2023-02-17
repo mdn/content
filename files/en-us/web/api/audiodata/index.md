@@ -15,7 +15,7 @@ browser-compat: api.AudioData
 
 The **`AudioData`** interface of the [WebCodecs API](/en-US/docs/Web/API/WebCodecs_API) represents an audio sample.
 
-`AudioData` is a {{glossary("Transferable objects","transferable object")}}.
+`AudioData` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 ## Description
 
