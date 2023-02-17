@@ -67,7 +67,12 @@ However, content scripts get a "clean" view of the DOM. This means:
 - Content scripts cannot see JavaScript variables defined by page scripts.
 - If a page script redefines a built-in DOM property, the content script sees the original version of the property, not the redefined version.
 
-In Firefox, this behavior is called [Xray vision](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#xray_vision_in_firefox).
+As noted at ["Content script environment" at Chrome incompatibilities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#content_script_environment), the behavior differs across browsers:
+
+- In Firefox, this behavior is called [Xray vision](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#xray_vision_in_firefox).
+  Content scripts may encounter JavaScript objects from its own global scope or Xray-wrapped versions from the web page.
+
+- In Chrome this behavior is enforced through an [isolated world](https://chromium.googlesource.com/chromium/src/+/master/third_party/blink/renderer/bindings/core/v8/V8BindingDesign.md#world), which uses a fundamentally different approach.
 
 Consider a web page like this:
 

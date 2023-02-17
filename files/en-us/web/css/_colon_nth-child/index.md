@@ -24,8 +24,10 @@ Note that, in the `element:nth-child()` syntax, the child count includes childre
 
 `:nth-child()` takes a single argument that describes a pattern for matching element indices in a list of siblings. Element indices are 1-based.
 
-```
-:nth-child( <nth> [ of <complex-selector-list> ]? )
+```css-nolint
+:nth-child(<nth> [of <complex-selector-list>]?) {
+  /* ... */
+}
 ```
 
 ### Keyword values

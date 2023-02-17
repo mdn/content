@@ -44,7 +44,9 @@ None.
 ## Examples
 
 ```js
-const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 * 1024 });
+const queuingStrategy = new ByteLengthQueuingStrategy({
+  highWaterMark: 1 * 1024,
+});
 
 const readableStream = new ReadableStream(
   {

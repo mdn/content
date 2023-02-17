@@ -54,14 +54,14 @@ filter: unset;
 
 With a function, use the following:
 
-```css
-filter: <filter-function> [<filter-function>]* | none
+```css-nolint
+filter: <filter-function> [<filter-function>]* | none;
 ```
 
 For a reference to an SVG {{SVGElement("filter")}} element, use the following:
 
 ```css
-filter: url(file.svg#filter-element-id)
+filter: url(file.svg#filter-element-id);
 ```
 
 ### Interpolation
@@ -81,7 +81,7 @@ When a `filter` property has two or more functions, its results are different fr
 Takes an URI pointing to an [SVG filter](/en-US/docs/Web/SVG/Element/filter), which may be embedded in an external XML file.
 
 ```css
-filter: url(resources.svg#c1)
+filter: url(resources.svg#c1);
 ```
 
 ### Filter functions
@@ -91,7 +91,7 @@ filter: url(resources.svg#c1)
 The {{cssxref("filter-function/blur", "blur()")}} function applies a Gaussian blur to the input image. The value of `radius` defines the value of the standard deviation to the Gaussian function, or how many pixels on the screen blend into each other, so a larger value will create more blur. The initial value for interpolation is `0`. The parameter is specified as a CSS length, but does not accept percentage values.
 
 ```css
-filter: blur(5px)
+filter: blur(5px);
 ```
 
 ```html hidden
@@ -209,7 +209,7 @@ table.standard-table td {
 The {{cssxref("filter-function/brightness", "brightness()")}} function applies a linear multiplier to the input image, making it appear more or less bright. A value of `0%` will create an image that is completely black. A value of `100%` leaves the input unchanged. Other values are linear multipliers on the effect. Values of an amount over `100%` are allowed, providing brighter results. The initial value for interpolation is `1`.
 
 ```css
-filter: brightness(2)
+filter: brightness(2);
 ```
 
 ```svg
@@ -305,7 +305,7 @@ table.standard-table td {
 The {{cssxref("filter-function/contrast", "contrast()")}} function adjusts the contrast of the input image. A value of `0%` will create an image that is completely gray. A value of `100%` leaves the input unchanged. Values of an amount over `100%` are allowed, providing results with more contrast. The initial value for interpolation is `1`.
 
 ```css
-filter: contrast(200%)
+filter: contrast(200%);
 ```
 
 ```svg
@@ -410,7 +410,7 @@ The {{cssxref("filter-function/drop-shadow", "drop-shadow()")}} function applies
   - : See {{cssxref("&lt;color&gt;")}} values for possible keywords and notations. If not specified, the color used depends on the browser - it is usually the value of the {{cssxref("&lt;color&gt;")}} property, but note that Safari currently paints a transparent shadow in this case.
 
 ```css
-filter: drop-shadow(16px 16px 10px black)
+filter: drop-shadow(16px 16px 10px black);
 ```
 
 ```svg
@@ -642,7 +642,7 @@ table.standard-table td {
 The {{cssxref("filter-function/grayscale", "grayscale()")}} function converts the input image to grayscale. The value of `amount` defines the proportion of the conversion. A value of `100%` is completely grayscale. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The initial value for interpolation is `0`.
 
 ```css
-filter: grayscale(100%)
+filter: grayscale(100%);
 ```
 
 ```html hidden
@@ -726,7 +726,7 @@ table.standard-table td {
 The {{cssxref("filter-function/hue-rotate", "hue-rotate()")}} function applies a hue rotation on the input image. The value of `angle` defines the number of degrees around the color circle the input samples will be adjusted. A value of `0deg` leaves the input unchanged. The initial value for interpolation is `0`. Though there is no maximum value; the effect of values above `360deg` wraps around.
 
 ```css
-filter: hue-rotate(90deg)
+filter: hue-rotate(90deg);
 ```
 
 ```html hidden
@@ -817,7 +817,7 @@ table.standard-table td {
 The {{cssxref("filter-function/invert", "invert()")}} function inverts the samples in the input image. The value of `amount` defines the proportion of the conversion. A value of `100%` is completely inverted. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The initial value for interpolation is `0`.
 
 ```css
-filter: invert(100%)
+filter: invert(100%);
 ```
 
 ```html hidden
@@ -901,7 +901,7 @@ table.standard-table td {
 The {{cssxref("filter-function/opacity", "opacity()")}} function applies transparency to the samples in the input image. The value of `amount` defines the proportion of the conversion. A value of `0%` is completely transparent. A value of `100%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. This is equivalent to multiplying the input image samples by amount. The initial value for interpolation is `1`. This function is similar to the more established {{cssxref("opacity")}} property; the difference is that with filters, some browsers provide hardware acceleration for better performance.
 
 ```css
-filter: opacity(50%)
+filter: opacity(50%);
 ```
 
 ```html hidden
@@ -983,7 +983,7 @@ table.standard-table td {
 The {{cssxref("filter-function/saturate", "saturate()")}} function saturates the input image. The value of `amount` defines the proportion of the conversion. A value of `0%` is completely un-saturated. A value of `100%` leaves the input unchanged. Other values are linear multipliers on the effect. Values of amount over `100%` are allowed, providing super-saturated results. The initial value for interpolation is `1`.
 
 ```css
-filter: saturate(200%)
+filter: saturate(200%);
 ```
 
 ```html hidden
@@ -1064,7 +1064,7 @@ table.standard-table td {
 The {{cssxref("filter-function/sepia", "sepia()")}} function converts the input image to sepia. The value of `amount` defines the proportion of the conversion. A value of `100%` is completely sepia. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The initial value for interpolation is `0`.
 
 ```css
-filter: sepia(100%)
+filter: sepia(100%);
 ```
 
 ```html hidden
@@ -1148,7 +1148,7 @@ table.standard-table td {
 You may combine any number of functions to manipulate the rendering. The following example enhances the contrast and brightness of the image:
 
 ```css
-filter: contrast(175%) brightness(103%)
+filter: contrast(175%) brightness(103%);
 ```
 
 ```html hidden

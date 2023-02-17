@@ -56,11 +56,11 @@ to `style="display: initial"` if viewed in the [developer tools inspector](https
 ```
 
 ```js
-const keyword = new CSSKeywordValue('initial');
-const myElement = document.getElementById('myElement').attributeStyleMap;
-myElement.set('display', keyword);
+const keyword = new CSSKeywordValue("initial");
+const myElement = document.getElementById("myElement").attributeStyleMap;
+myElement.set("display", keyword);
 
-console.log(myElement.get('display').value);  // 'initial'
+console.log(myElement.get("display").value); // 'initial'
 console.dir(keyword);
 ```
 

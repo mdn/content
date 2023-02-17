@@ -1,9 +1,9 @@
 ---
-title: '::target-text'
+title: "::target-text"
 slug: Web/CSS/::target-text
 page-type: css-pseudo-element
 tags:
-  - '::target-text'
+  - "::target-text"
   - CSS
   - Pseudo-element
   - Reference
@@ -25,8 +25,10 @@ The **`::target-text`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/
 
 ## Syntax
 
-```
-::target-text
+```css
+::target-text {
+  /* ... */
+}
 ```
 
 ## Examples

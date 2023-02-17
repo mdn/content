@@ -17,7 +17,7 @@ browser-compat: api.structuredClone
 
 The global **`structuredClone()`** method creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
-The method also allows {{Glossary("transferable objects")}} in the original value to be _transferred_ rather than cloned to the new object.
+The method also allows [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) in the original value to be _transferred_ rather than cloned to the new object.
 Transferred objects are detached from the original object and attached to the new object; they are no longer accessible in the original object.
 
 ## Syntax
@@ -35,7 +35,7 @@ structuredClone(value, options)
 - `options` {{optional_inline}}
   - : An object with the following properties:
     - `transfer`
-      - : An array of {{Glossary("transferable objects")}} that will be moved rather than cloned to the returned object.
+      - : An array of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) that will be moved rather than cloned to the returned object.
 
 ### Return value
 
@@ -66,7 +66,7 @@ console.assert(clone.itself === clone); // and the circular reference is preserv
 
 ### Transferring values
 
-{{Glossary("Transferable objects")}} (only) can be transferred rather than duplicated in the cloned object, using the `transfer` property of the `options` parameter. Transferring makes the original object unusable.
+[Transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) (only) can be transferred rather than duplicated in the cloned object, using the `transfer` property of the `options` parameter. Transferring makes the original object unusable.
 
 > **Note:** A scenario where this might be useful is when asynchronously validating some data in a buffer before saving it.
 > To avoid the buffer being modified before the data is saved, you can clone the buffer and validate that data.

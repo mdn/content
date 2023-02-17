@@ -30,8 +30,8 @@ text-decoration-line: line-through;
 text-decoration-line: blink;
 
 /* Multiple keywords */
-text-decoration-line: underline overline;               /* Two decoration lines */
-text-decoration-line: overline underline line-through;  /* Multiple decoration lines */
+text-decoration-line: underline overline; /* Two decoration lines */
+text-decoration-line: overline underline line-through; /* Multiple decoration lines */
 
 /* Global values */
 text-decoration-line: inherit;

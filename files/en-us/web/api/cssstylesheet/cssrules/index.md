@@ -38,7 +38,7 @@ Individual rules within the stylesheet can then be accessed by index:
 ```js
 const ruleList = document.styleSheets[0].cssRules;
 
-for (let i=0; i < ruleList.length; i++) {
+for (let i = 0; i < ruleList.length; i++) {
   processRule(ruleList[i]);
 }
 ```

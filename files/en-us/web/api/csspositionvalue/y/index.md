@@ -11,7 +11,7 @@ tags:
   - Reference
   - Deprecated
   - Non-standard
-  - 'y'
+  - "y"
 browser-compat: api.CSSPositionValue.y
 ---
 
@@ -31,10 +31,10 @@ The following example positions a container `<div>` 5 pixels from the
 top and 10 pixels from the left of the page.
 
 ```js
-let replaceEl = document.getElementById('container');
+let replaceEl = document.getElementById("container");
 let position = new CSSPositionValue(CSS.px(5), CSS.px(10));
 
-someDiv.attributeStyleMap.set('object-position', position);
+someDiv.attributeStyleMap.set("object-position", position);
 console.log(position.x.value, position.y.value);
 ```
 

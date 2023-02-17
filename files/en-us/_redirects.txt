@@ -1635,7 +1635,7 @@
 /en-US/docs/DOM/SVGLinearGradientElement	/en-US/docs/Web/API/SVGLinearGradientElement
 /en-US/docs/DOM/SVGMPathElement	/en-US/docs/Web/API/SVGMPathElement
 /en-US/docs/DOM/SVGMaskElement	/en-US/docs/Web/API/SVGMaskElement
-/en-US/docs/DOM/SVGMatrix	/en-US/docs/Web/API/SVGMatrix
+/en-US/docs/DOM/SVGMatrix	/en-US/docs/Web/API/DOMMatrix
 /en-US/docs/DOM/SVGMissingGlyphElement	/en-US/docs/Web/API/SVGMissingGlyphElement
 /en-US/docs/DOM/SVGNumber	/en-US/docs/Web/API/SVGNumber
 /en-US/docs/DOM/SVGNumberList	/en-US/docs/Web/API/SVGNumberList
@@ -2959,7 +2959,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/SVGLinearGradientElement	/en-US/docs/Web/API/SVGLinearGradientElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGMPathElement	/en-US/docs/Web/API/SVGMPathElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGMaskElement	/en-US/docs/Web/API/SVGMaskElement
-/en-US/docs/Document_Object_Model_(DOM)/SVGMatrix	/en-US/docs/Web/API/SVGMatrix
+/en-US/docs/Document_Object_Model_(DOM)/SVGMatrix	/en-US/docs/Web/API/DOMMatrix
 /en-US/docs/Document_Object_Model_(DOM)/SVGMissingGlyphElement	/en-US/docs/Web/API/SVGMissingGlyphElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGNumber	/en-US/docs/Web/API/SVGNumber
 /en-US/docs/Document_Object_Model_(DOM)/SVGNumberList	/en-US/docs/Web/API/SVGNumberList
@@ -7359,9 +7359,9 @@
 /en-US/docs/Using_the_:target_selector	/en-US/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
 /en-US/docs/Using_the_Mozilla_JavaScript_interface_to_XPath	/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /en-US/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/en-US/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
-/en-US/docs/Using_the_W3C_DOM_Level_1_Core	/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
-/en-US/docs/Using_the_W3C_DOM_Level_1_Core/Example	/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example
-/en-US/docs/Using_the_W3C_DOM_Level_1_Core:Example	/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example
+/en-US/docs/Using_the_W3C_DOM_Level_1_Core	/en-US/docs/Web/API/Document_object_model/Using_the_Document_Object_Model
+/en-US/docs/Using_the_W3C_DOM_Level_1_Core/Example	/en-US/docs/Web/API/Document_object_model/Using_the_Document_Object_Model/Example
+/en-US/docs/Using_the_W3C_DOM_Level_1_Core:Example	/en-US/docs/Web/API/Document_object_model/Using_the_Document_Object_Model/Example
 /en-US/docs/Using_the_Web_Console	https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html
 /en-US/docs/Using_the_Web_Console/Helpers	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
 /en-US/docs/Using_the_Web_Console/WebConsoleHelp	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
@@ -7804,6 +7804,10 @@
 /en-US/docs/Web/API/ConstrainULong	/en-US/docs/Web/API/MediaTrackConstraints
 /en-US/docs/Web/API/Constraint_validation	/en-US/docs/Learn/Forms/Form_validation
 /en-US/docs/Web/API/Constraint_validation/invalid_event	/en-US/docs/Web/API/HTMLInputElement/invalid_event
+/en-US/docs/Web/API/ContentVisibilityAutoStateChangeEvent/ContentVisibilityAutoStateChangedEvent	/en-US/docs/Web/API/ContentVisibilityAutoStateChangeEvent/ContentVisibilityAutoStateChangeEvent
+/en-US/docs/Web/API/ContentVisibilityAutoStateChangedEvent	/en-US/docs/Web/API/ContentVisibilityAutoStateChangeEvent
+/en-US/docs/Web/API/ContentVisibilityAutoStateChangedEvent/ContentVisibilityAutoStateChangedEvent	/en-US/docs/Web/API/ContentVisibilityAutoStateChangeEvent/ContentVisibilityAutoStateChangeEvent
+/en-US/docs/Web/API/ContentVisibilityAutoStateChangedEvent/skipped	/en-US/docs/Web/API/ContentVisibilityAutoStateChangeEvent/skipped
 /en-US/docs/Web/API/ConvolverNode.buffer	/en-US/docs/Web/API/ConvolverNode/buffer
 /en-US/docs/Web/API/ConvolverNode.normalize	/en-US/docs/Web/API/ConvolverNode/normalize
 /en-US/docs/Web/API/CookieStore/onchange	/en-US/docs/Web/API/CookieStore/change_event
@@ -7834,14 +7838,10 @@
 /en-US/docs/Web/API/CredentialsContainer/preventSilentAccess()	/en-US/docs/Web/API/CredentialsContainer/preventSilentAccess
 /en-US/docs/Web/API/CredentialsContainer/requireUserMediation	/en-US/docs/Web/API/CredentialsContainer/preventSilentAccess
 /en-US/docs/Web/API/Crypto.subtle	/en-US/docs/Web/API/Crypto/subtle
-/en-US/docs/Web/API/CryptoKey.algorithm	/en-US/docs/Web/API/CryptoKey
-/en-US/docs/Web/API/CryptoKey.extractable	/en-US/docs/Web/API/CryptoKey
-/en-US/docs/Web/API/CryptoKey.type	/en-US/docs/Web/API/CryptoKey
-/en-US/docs/Web/API/CryptoKey.usages	/en-US/docs/Web/API/CryptoKey
-/en-US/docs/Web/API/CryptoKey/algorithm	/en-US/docs/Web/API/CryptoKey
-/en-US/docs/Web/API/CryptoKey/extractable	/en-US/docs/Web/API/CryptoKey
-/en-US/docs/Web/API/CryptoKey/type	/en-US/docs/Web/API/CryptoKey
-/en-US/docs/Web/API/CryptoKey/usages	/en-US/docs/Web/API/CryptoKey
+/en-US/docs/Web/API/CryptoKey.algorithm	/en-US/docs/Web/API/CryptoKey/algorithm
+/en-US/docs/Web/API/CryptoKey.extractable	/en-US/docs/Web/API/CryptoKey/extractable
+/en-US/docs/Web/API/CryptoKey.type	/en-US/docs/Web/API/CryptoKey/type
+/en-US/docs/Web/API/CryptoKey.usages	/en-US/docs/Web/API/CryptoKey/usages
 /en-US/docs/Web/API/Cursor	/en-US/docs/Web/API/IDBCursor
 /en-US/docs/Web/API/CustomElementRegistry/CustomElementRegistry.get()	/en-US/docs/Web/API/CustomElementRegistry/get
 /en-US/docs/Web/API/CustomEvent.CustomEvent	/en-US/docs/Web/API/CustomEvent/CustomEvent
@@ -8025,6 +8025,8 @@
 /en-US/docs/Web/API/Document_Object_Model/Events	/en-US/docs/Learn/JavaScript/Building_blocks/Events
 /en-US/docs/Web/API/Document_Object_Model/Preface	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/en-US/docs/Web/API/Document_Object_Model/Whitespace
+/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core	/en-US/docs/Web/API/Document_object_model/Using_the_Document_Object_Model
+/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example	/en-US/docs/Web/API/Document_object_model/Using_the_Document_Object_Model/Example
 /en-US/docs/Web/API/DoubleRange	/en-US/docs/Web/API/MediaTrackConstraints
 /en-US/docs/Web/API/DynamicsCompressorNode.attack	/en-US/docs/Web/API/DynamicsCompressorNode/attack
 /en-US/docs/Web/API/DynamicsCompressorNode.knee	/en-US/docs/Web/API/DynamicsCompressorNode/knee
@@ -8079,6 +8081,7 @@
 /en-US/docs/Web/API/Element/accessKey	/en-US/docs/Web/API/HTMLElement/accessKey
 /en-US/docs/Web/API/Element/attachInternals	/en-US/docs/Web/API/HTMLElement/attachInternals
 /en-US/docs/Web/API/Element/cancel_event	/en-US/docs/Web/API/HTMLDialogElement/cancel_event
+/en-US/docs/Web/API/Element/contentvisibilityautostatechanged_event	/en-US/docs/Web/API/Element/contentvisibilityautostatechange_event
 /en-US/docs/Web/API/Element/createShadowRoot	/en-US/docs/Web/API/Element/shadowRoot
 /en-US/docs/Web/API/Element/fullscreenchange	/en-US/docs/Web/API/Element/fullscreenchange_event
 /en-US/docs/Web/API/Element/mozRequestFullScreen	/en-US/docs/Web/API/Element/requestFullScreen
@@ -9529,6 +9532,7 @@
 /en-US/docs/Web/API/SVGElement/onsubmit	/en-US/docs/Web/API/HTMLFormElement/submit_event
 /en-US/docs/Web/API/SVGGeometryElement/getTotalPathLength	/en-US/docs/Web/API/SVGGeometryElement/pathLength
 /en-US/docs/Web/API/SVGGraphicsElement/SVGGraphicsElement:_cut_event	/en-US/docs/Web/API/SVGGraphicsElement/cut_event
+/en-US/docs/Web/API/SVGMatrix	/en-US/docs/Web/API/DOMMatrix
 /en-US/docs/Web/API/SVGPathElement/getPointAtLength	/en-US/docs/Web/API/SVGGeometryElement/getPointAtLength
 /en-US/docs/Web/API/SVGPathElement/getTotalLength	/en-US/docs/Web/API/SVGGeometryElement/getTotalLength
 /en-US/docs/Web/API/SVGPathElement/pathLength	/en-US/docs/Web/API/SVGGeometryElement/pathLength
@@ -11376,6 +11380,8 @@
 /en-US/docs/Web/CSS/counters()	/en-US/docs/Web/CSS/counters
 /en-US/docs/Web/CSS/cross-fade()	/en-US/docs/Web/CSS/cross-fade
 /en-US/docs/Web/CSS/default	/en-US/docs/Web/CSS/:default
+/en-US/docs/Web/CSS/display/multi-value_syntax_of_display	/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display
+/en-US/docs/Web/CSS/display/two-value_syntax_of_display	/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display
 /en-US/docs/Web/CSS/document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/document/@-moz-document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/dominant-baseline	/en-US/docs/Web/SVG/Attribute/dominant-baseline

@@ -29,10 +29,10 @@ If a new {{domxref("AudioContext")}} is created with a `sinkId` value of `{ type
 
 ```js
 audioCtx = new window.AudioContext({
-  sinkId: { type: 'none' }
+  sinkId: { type: "none" },
 });
 
-  // ...
+// ...
 
 audioCtx.sinkId;
 ```

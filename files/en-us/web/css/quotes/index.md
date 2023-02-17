@@ -27,8 +27,8 @@ quotes: none;
 quotes: auto;
 
 /* <string> values */
-quotes: "«" "»";           /* Set open-quote and close-quote to the French quotation marks */
-quotes: "«" "»" "‹" "›";   /* Set two levels of quotation marks */
+quotes: "«" "»"; /* Set open-quote and close-quote to the French quotation marks */
+quotes: "«" "»" "‹" "›"; /* Set two levels of quotation marks */
 
 /* Global values */
 quotes: inherit;

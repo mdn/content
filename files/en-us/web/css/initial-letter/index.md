@@ -24,9 +24,9 @@ The `initial-letter` CSS property sets styling for dropped, raised, and sunken i
 initial-letter: normal;
 
 /* Numeric values */
-initial-letter: 1.5;    /* Initial letter occupies 1.5 lines */
-initial-letter: 3;      /* Initial letter occupies 3 lines */
-initial-letter: 3 2;    /* Initial letter occupies 3 lines and
+initial-letter: 1.5; /* Initial letter occupies 1.5 lines */
+initial-letter: 3; /* Initial letter occupies 3 lines */
+initial-letter: 3 2; /* Initial letter occupies 3 lines and
                            sinks 2 lines */
 
 /* Global values */

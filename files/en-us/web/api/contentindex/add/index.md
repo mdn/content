@@ -95,16 +95,19 @@ function which uses the `add` method to register it with the
 ```js
 // our content
 const item = {
-  id: 'post-1',
-  url: '/posts/amet.html',
-  title: 'Amet consectetur adipisicing',
-  description: 'Repellat et quia iste possimus ducimus aliquid a aut eaque nostrum.',
-  icons: [{
-    src: '/media/dark.png',
-    sizes: '128x128',
-    type: 'image/png',
-  }],
-  category: 'article'
+  id: "post-1",
+  url: "/posts/amet.html",
+  title: "Amet consectetur adipisicing",
+  description:
+    "Repellat et quia iste possimus ducimus aliquid a aut eaque nostrum.",
+  icons: [
+    {
+      src: "/media/dark.png",
+      sizes: "128x128",
+      type: "image/png",
+    },
+  ],
+  category: "article",
 };
 
 // our asynchronous function to add indexed content
@@ -120,7 +123,7 @@ async function registerContent(data) {
   try {
     await registration.index.add(data);
   } catch (e) {
-    console.log('Failed to register content: ', e.message);
+    console.log("Failed to register content: ", e.message);
   }
 }
 ```
@@ -131,16 +134,19 @@ The `add` method can also be used within the
 ```js
 // our content
 const item = {
-  id: 'post-1',
-  url: '/posts/amet.html',
-  title: 'Amet consectetur adipisicing',
-  description: 'Repellat et quia iste possimus ducimus aliquid a aut eaque nostrum.',
-  icons: [{
-    src: '/media/dark.png',
-    sizes: '128x128',
-    type: 'image/png',
-  }],
-  category: 'article'
+  id: "post-1",
+  url: "/posts/amet.html",
+  title: "Amet consectetur adipisicing",
+  description:
+    "Repellat et quia iste possimus ducimus aliquid a aut eaque nostrum.",
+  icons: [
+    {
+      src: "/media/dark.png",
+      sizes: "128x128",
+      type: "image/png",
+    },
+  ],
+  category: "article",
 };
 
 self.registration.index.add(item);

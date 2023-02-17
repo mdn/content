@@ -23,11 +23,11 @@ The **`padding-inline-end`** [CSS](/en-US/docs/Web/CSS) property defines the log
 
 ```css
 /* <length> values */
-padding-inline-end: 10px;     /* An absolute length */
-padding-inline-end: 1em;      /* A length relative to the text size */
+padding-inline-end: 10px; /* An absolute length */
+padding-inline-end: 1em; /* A length relative to the text size */
 
 /* <percentage> value */
-padding-inline-end: 5%;       /* A padding relative to the block container's width */
+padding-inline-end: 5%; /* A padding relative to the block container's width */
 
 /* Global values */
 padding-inline-end: inherit;

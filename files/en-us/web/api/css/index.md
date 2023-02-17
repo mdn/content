@@ -41,7 +41,7 @@ _No inherited static methods_.
   - : Can be used to return a new [`CSSUnitValue`](/en-US/docs/Web/API/CSSUnitValue) with a value of the parameter number of the units of the name of the factory function method used.
 
     ```js
-    CSS.em(3) // CSSUnitValue {value: 3, unit: "em"}
+    CSS.em(3); // CSSUnitValue {value: 3, unit: "em"}
     ```
 
 ## Instance methods
