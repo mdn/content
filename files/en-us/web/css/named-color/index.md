@@ -893,6 +893,10 @@ In addition to these 16 colors, about 150 other colors have a keyword associated
   </tbody>
 </table>
 
+Initially, in [CSS Level 1](https://www.w3.org/TR/REC-CSS1/), only 16 basic colors were defined, with `orange` added in [CSS Level 2](https://www.w3.org/TR/CSS2/). Web designers found this list too short, and browser vendors added numerous names for colors based on the X11 color names. In [SVG 1.0](https://www.w3.org/TR/2001/REC-SVG-20010904/), then in [CSS Colors Level 3](https://www.w3.org/TR/css-color-3/), these names got standardized, formally defined, and uniformized (some had different spellings that are now aliases). They are called the _extended color keywords_, the _X11 colors_, or the _SVG colors_.
+
+In [CSS Colors Level 4](https://www.w3.org/TR/css-color-4/), an additional color, `rebeccapurple` was added [to honor web pioneer Eric Meyer](https://codepen.io/trezy/post/honoring-a-great-man), who suffered a terrible personal tragedy.
+
 ### transparent
 
 The `transparent` keyword represents a fully transparent color. This makes the background behind the colored item completely visible. Technically, `transparent` is a shortcut for `rgba(0,0,0,0)`.
