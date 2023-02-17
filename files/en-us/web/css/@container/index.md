@@ -42,10 +42,11 @@ For example:
 
 ### Values
 
-- `<container-condition>`: A set of features that are evaluated against the query container when the container changes size.
-  Styles defined in the `<stylesheet>` are applied if the condition is true.
-  More details on the syntax are covered in the following sections.
-- `<stylesheet>`: A set of CSS declarations.
+- `<container-condition>`
+  - : A set of features that are evaluated against the query container when the size of the container changes.
+    Styles defined in the `<stylesheet>` are applied if the condition is true.
+- `<stylesheet>`
+  - : A set of CSS declarations.
 
 ### Logical keywords in container queries
 
@@ -101,18 +102,6 @@ In container queries, the {{cssxref("container-name")}} property is used to filt
 ```
 
 Details about usage and naming restrictions are described in the {{cssxref("container-name")}} page.
-
-### Style container queries
-
-Currently only size-based container queries have browser support.
-It is expected that `style()` container queries will allow checking the {{cssxref("computed_value")}} of a container in future:
-
-```css example-bad
-/* Not yet supported */
-@container style(color: blue;) {
-  /* <stylesheet> */
-}
-```
 
 ### Descriptors
 

@@ -23,10 +23,12 @@ container: <container-name> / <container-type>;
 
 ### Values
 
-- `<container-name>`: A case-sensitive name for the containment context.
-  More details on the syntax are covered in the {{cssxref("container-name")}} property page.
-- `<container-type>`: The type of containment context.
-  More details on the syntax are covered in the {{cssxref("container-type")}} property page.
+- `<container-name>`
+  - : A case-sensitive name for the containment context.
+    More details on the syntax are covered in the {{cssxref("container-name")}} property page.
+- `<container-type>`
+  - : The type of containment context.
+    More details on the syntax are covered in the {{cssxref("container-type")}} property page.
 
 ## Example
 

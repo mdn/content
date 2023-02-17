@@ -16,7 +16,6 @@ tags:
 Container queries enable you to apply styles to an element based on the size of the element's container. If, for example, a container has less space available in the surrounding context, you can hide certain elements or use smaller fonts.
 Container queries are an alternative to [media queries](/en-US/docs/Web/CSS/Media_Queries), which apply styles to elements based on viewport size or other device characteristics.
 
-
 ![A webpage with three card components displayed in different layouts depending on their container's size.](container-query.svg)
 
 ## Using container queries
@@ -25,11 +24,14 @@ To use container queries, you need to declare a **containment context** on an el
 To do this, use the {{Cssxref("container-type")}} property a value of `size`, `inline-size`, or `normal`.
 These values have the following effects:
 
-- `size`: the query will be based on the [inline and block](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) dimensions of the container.
-  Applies layout, style, and size containment to the container.
-- `inline-size`: the query will be based on the [inline](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) dimensions of the container.
-  Applies layout, style, and inline-size containment to the element.
-- `normal`: The element is not a query container for any container size queries, but remains a query container for container style queries.
+- `size`
+  - : The query will be based on the [inline and block](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) dimensions of the container.
+    Applies layout, style, and size containment to the container.
+- `inline-size`
+  - : The query will be based on the [inline](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) dimensions of the container.
+    Applies layout, style, and inline-size containment to the element.
+- `normal`
+  - : The element is not a query container for any container size queries, but remains a query container for container style queries.
 
 Consider the following example of a card component for a blog post with a title and some text:
 
@@ -60,7 +62,7 @@ Specifically, this query will apply a larger font size for the card title if the
   font-size: 1em;
 }
 
-/* if the container is larger than 700px */
+/* If the container is larger than 700px */
 @container (min-width: 700px) {
   .card h2 {
     font-size: 2em;
