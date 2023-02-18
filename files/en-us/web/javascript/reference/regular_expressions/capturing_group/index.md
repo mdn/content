@@ -31,7 +31,7 @@ Capturing groups are numbered by the order of their opening parentheses. The fir
 - The `pN` parameters of the {{jsxref("String.prototype.replace()")}} and {{jsxref("String.prototype.replaceAll()")}} methods' `replacement` callback function
 - [Backreferences](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference) within the same pattern
 
-> **Note:** Even in `exec()`'s result array, capturing groups are accessed by numbers `1`, `2`, etc., because the `0` element is the entire match.
+> **Note:** Even in `exec()`'s result array, capturing groups are accessed by numbers `1`, `2`, etc., because the `0` element is the entire match. `\0` is not a backreference, but a [character escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape) for the NUL character.
 
 Capturing groups in the regex source code correspond to their results one-to-one. If a capturing group is not matched (for example, it belongs to an unmatched alternative in a [disjunction](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)), the corresponding result is `undefined`.
 
@@ -69,7 +69,7 @@ The `"bbb"` result from the second match is not preserved, because the third mat
 
 You can get the start and end indices of each capturing group in the input string by using the [`d`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices) flag. This creates an extra `indices` property on the array returned by `exec()`.
 
-You can optionally specify a [name](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) to a capturing group, which helps avoid pitfalls related to group positions and indexing.
+You can optionally specify a name to a capturing group, which helps avoid pitfalls related to group positions and indexing. See [Named capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) for more information.
 
 Parentheses have other purposes in different regex syntaxes. For example, they also enclose lookahead and lookbehind assertions. Because these syntaxes all start with `?`, and `?` is a [quantifier](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier) which normally cannot occur directly after `(`, this does not lead to ambiguities.
 

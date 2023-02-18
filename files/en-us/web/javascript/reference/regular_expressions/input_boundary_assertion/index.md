@@ -56,7 +56,7 @@ isImage("image.pdf"); // false
 
 ### Matching entire input
 
-Sometimes you want to make sure that your regex matches the entire input, not just a substring of the input. For example, if you are determining if a string is a valid [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) (so that when doing codegen, you can use it as an object literal property name without quoting), you can add input boundary assertions to both ends of the pattern:
+Sometimes you want to make sure that your regex matches the entire input, not just a substring of the input. For example, if you are determining if a string is a valid [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers), you can add input boundary assertions to both ends of the pattern:
 
 ```js
 function isValidIdentifier(str) {
@@ -66,7 +66,28 @@ function isValidIdentifier(str) {
 isValidIdentifier("foo"); // true
 isValidIdentifier("$1"); // true
 isValidIdentifier("1foo"); // false
-isValidIdentifier("  foo  "); // true
+isValidIdentifier("  foo  "); // false
+```
+
+This function is useful when doing codegen (generating code using code), because you can use valid identifiers differently from other string properties, such as [dot notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#dot_notation) instead of [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation):
+
+```js
+const variables = ["foo", "foo:bar", "  foo  "];
+
+function toAssignment(key) {
+  if (isValidIdentifier(key)) {
+    return `globalThis.${key} = undefined;`
+  }
+  // JSON.stringify() escapes quotes and other special characters
+  return `globalThis[${JSON.stringify(key)}] = undefined;`
+}
+
+const statements = variables.map(toAssignment).join("\n");
+
+console.log(statements);
+// globalThis.foo = undefined;
+// globalThis["foo:bar"] = undefined;
+// globalThis["  foo  "] = undefined;
 ```
 
 ## See also

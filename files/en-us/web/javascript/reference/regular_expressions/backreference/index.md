@@ -11,9 +11,10 @@ A **backreference** refers to the submatch of a previous [capturing group](/en-U
 ## Syntax
 
 ```regex
-// N is not a literal character
 \N
 ```
+
+> **Note:** `N` is not a literal character.
 
 ### Parameters
 

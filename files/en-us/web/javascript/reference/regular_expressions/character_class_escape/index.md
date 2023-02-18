@@ -16,6 +16,8 @@ A **character class escape** is an escape sequence that represents a set of char
 \w, \W
 ```
 
+> **Note:** `,` is not part of the syntax.
+
 ## Description
 
 Unlike [character escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape), character class escapes represent a predefined _set_ of characters, much like a [character class](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class). The following character classes are supported:
