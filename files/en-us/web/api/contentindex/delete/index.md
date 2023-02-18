@@ -2,17 +2,8 @@
 title: ContentIndex.delete()
 slug: Web/API/ContentIndex/delete
 page-type: web-api-instance-method
-tags:
-  - Content
-  - Content Index API
-  - Index
-  - Interface
-  - Method
-  - PWA
-  - content index
-  - content indexing
-  - delete
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContentIndex.delete
 ---
 

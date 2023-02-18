@@ -2,14 +2,6 @@
 title: ConstantSourceNode
 slug: Web/API/ConstantSourceNode
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - ConstantSourceNode
-  - Interface
-  - Media
-  - Reference
-  - Web Audio API
 browser-compat: api.ConstantSourceNode
 ---
 

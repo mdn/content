@@ -2,14 +2,6 @@
 title: CanvasRenderingContext2D.createConicGradient()
 slug: Web/API/CanvasRenderingContext2D/createConicGradient
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Gradients
-  - Conic
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.createConicGradient
 ---
 
