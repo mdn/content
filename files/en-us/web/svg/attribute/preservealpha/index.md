@@ -11,7 +11,7 @@ browser-compat: svg.elements.feConvolveMatrix.preserveAlpha
 
 {{SVGRef}}
 
-the `preserveAlpha` attribute indicates how a {{SVGElement("feConvolveMatrix")}} element handled alpha transparency.
+the `preserveAlpha` attribute indicates how a {{SVGElement("feConvolveMatrix")}} element handle alpha transparency.
 
 You can use this attribute with the following SVG elements:
 
