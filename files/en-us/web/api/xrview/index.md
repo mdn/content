@@ -2,23 +2,8 @@
 title: XRView
 slug: Web/API/XRView
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Eye
-  - Interface
-  - Orientation
-  - Position
-  - Reference
-  - VR
-  - View
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRView
-  - camera
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRView
 ---
 
