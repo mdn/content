@@ -257,17 +257,15 @@ Consider this example (again, we've included an HTML comment that shows the whit
 
 <!--
 <ul class="people-list">⏎
-
 ◦◦<li></li>⏎
-
+⏎
 ◦◦<li></li>⏎
-
+⏎
 ◦◦<li></li>⏎
-
+⏎
 ◦◦<li></li>⏎
-
+⏎
 ◦◦<li></li>⏎
-
 </ul>
 -->
 ```
