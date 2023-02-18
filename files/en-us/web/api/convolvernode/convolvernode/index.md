@@ -31,7 +31,7 @@ new ConvolverNode(context, options)
 
   - : Options are as follows:
 
-    - `audioBuffer`
+    - `buffer`
       - : A mono, stereo, or
         4-channel {{domxref("AudioBuffer")}} containing the
         (possibly multichannel) impulse response used by the `ConvolverNode`
