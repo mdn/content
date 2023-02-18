@@ -16,6 +16,7 @@ browser-compat: webextensions.api.omnibox.onDeleteSuggestion
 {{AddonSidebar()}}
 
 Fired whenever the user deletes a suggestion.
+A suggestion can be deleted when {{WebExtAPIRef("omnibox.SuggestResult","SuggestResult")}}`.deletable` is set to true.
 
 ## Syntax
 
@@ -36,20 +37,18 @@ Events have three functions:
 
 ## addListener syntax
 
-The listener function passes one parameter: a string `text`.
-
 ### Parameters
 
 - `text`
-  - : `String`. The description of the deleted suggestion.
+  - : `string`. The description of the deleted suggestion.
 
 ## Examples
 
 This example prints the deleted suggestion to the console:
 
 ```js
-function logDeletedSuggestion(deletedSuggestionInfo) {
-  console.log(`The user deleted: ${deletedSuggestionInfo.text}`);
+function logDeletedSuggestion(text) {
+  console.log(`The user deleted: ${text}`);
 }
 
 browser.omnibox.onDeleteSuggestion.addListener(logDeletedSuggestion);
