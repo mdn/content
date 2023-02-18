@@ -2,14 +2,6 @@
 title: BaseAudioContext.currentTime
 slug: Web/API/BaseAudioContext/currentTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Property
-  - Reference
-  - Web Audio API
-  - currentTime
 browser-compat: api.BaseAudioContext.currentTime
 ---
 
