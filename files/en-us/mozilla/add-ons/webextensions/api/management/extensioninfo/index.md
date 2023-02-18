@@ -1,6 +1,7 @@
 ---
 title: ExtensionInfo
 slug: Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

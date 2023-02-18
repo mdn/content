@@ -1,6 +1,7 @@
 ---
 title: permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
+page-type: webextension-manifest-key
 tags:
   - Add-ons
   - Extensions
@@ -132,6 +133,8 @@ These permissions are available in Manifest V2 and above unless otherwise noted:
 - `webNavigation`
 - `webRequest`
 - `webRequestBlocking`
+- `webRequestFilterResponse`
+- `webRequestFilterResponse.serviceWorkerScript`
 
 In most cases the permission just grants access to the API, with the following exceptions:
 

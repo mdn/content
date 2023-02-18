@@ -1,6 +1,7 @@
 ---
 title: runtime.onMessage
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons
