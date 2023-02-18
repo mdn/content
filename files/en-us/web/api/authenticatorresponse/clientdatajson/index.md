@@ -2,13 +2,6 @@
 title: AuthenticatorResponse.clientDataJSON
 slug: Web/API/AuthenticatorResponse/clientDataJSON
 page-type: web-api-instance-property
-tags:
-  - API
-  - AuthenticatorResponse
-  - Property
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 browser-compat: api.AuthenticatorResponse.clientDataJSON
 ---
 

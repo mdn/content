@@ -2,10 +2,6 @@
 title: "Animation: remove event"
 slug: Web/API/Animation/remove_event
 page-type: web-api-event
-tags:
-  - API
-  - Reference
-  - Event
 browser-compat: api.Animation.remove_event
 ---
 

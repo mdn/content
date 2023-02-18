@@ -16,7 +16,8 @@ jobs:
     runs-on: ubuntu-latest
 
     if: >
-      ${{ github.event.workflow_run.event == 'pull_request' &&
+      ${{ github.repository == 'mdn/content' &&
+      github.event.workflow_run.event == 'pull_request' &&
       github.event.workflow_run.conclusion == 'success' }}
 
     steps:

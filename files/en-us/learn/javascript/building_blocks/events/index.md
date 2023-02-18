@@ -15,7 +15,7 @@ tags:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
 
-Events are actions or occurrences that happen in the system you are programming, which the system tells you about so your code can react to them.
+Events are things that happen in the system you are programming, which the system tells you about so your code can react to them.
 
 For example, if the user clicks a button on a webpage, you might want to react to that action by displaying an information box.
 In this article, we discuss some important concepts surrounding events, and look at how they work in browsers.
@@ -43,9 +43,9 @@ This won't be an exhaustive study; just what you need to know at this stage.
   </tbody>
 </table>
 
-## A series of fortunate events
+## What is an event?
 
-As mentioned above, **events** are actions or occurrences that happen in the system you are programming — the system produces (or "fires") a signal of some kind when an event occurs, and provides a mechanism by which an action can be automatically taken (that is, some code running) when the event occurs.
+Events are things that happen in the system you are programming — the system produces (or "fires") a signal of some kind when an event occurs, and provides a mechanism by which an action can be automatically taken (that is, some code running) when the event occurs.
 Events are fired inside the browser window, and tend to be attached to a specific item that resides in it. This might be a single element, a set of elements, the HTML document loaded in the current tab, or the entire browser window.
 There are many different types of events that can occur.
 
@@ -68,10 +68,9 @@ The listener listens out for the event happening, and the handler is the code th
 
 > **Note:** Web events are not part of the core JavaScript language — they are defined as part of the APIs built into the browser.
 
-### A simple example
+### An example: handling a click event
 
-Let's look at a simple example of what we mean here.
-In the following example, we have a single {{htmlelement("button")}}, which when pressed, makes the background change to a random color:
+In the following example, we have a single {{htmlelement("button")}} in the page:
 
 ```html
 <button>Change color</button>
@@ -83,7 +82,7 @@ button {
 }
 ```
 
-The JavaScript looks like so:
+Then we have some JavaScript. We'll look at this in more detail in the next section, but for now we can just say: it adds an event handler to the button's `"click"` event, and the handler reacts to the event by setting the page background to a random color:
 
 ```js
 const btn = document.querySelector("button");
@@ -97,38 +96,16 @@ btn.addEventListener("click", () => {
   document.body.style.backgroundColor = rndCol;
 });
 ```
-
-In this code, we store a reference to the [`<button>`](/en-US/docs/Web/HTML/Element/button) element inside a constant called `btn`, using the {{domxref("Document.querySelector()")}} function.
-
-We also define a function that returns a random number.
-
-The third part of the code is where we define and register the event handler. The `<button>` element has an event called `'click'` that fires when the user clicks the button. Objects that can fire events have an {{domxref("EventTarget/addEventListener", "addEventListener()")}} method, that takes at least two arguments: the name of the event and a function to handle the event. So we call the button's `addEventListener()` method, passing in:
-
-- the string `'click'`, to indicate that we want to listen to the click event
-- a function to call when the event happens. In our case, the function generates a random RGB color and sets the page [`<body>`](/en-US/docs/Web/HTML/Element/body) [`background-color`](/en-US/docs/Web/CSS/background-color) equal to that color.
 
 The example output is as follows. Try clicking the button:
 
-{{ EmbedLiveSample('A_simple_example', '100%', 200, "", "") }}
-
-### It's not just web pages
-
-Events are not unique to JavaScript — most programming languages have some kind of event model, and the way the model works often differs from JavaScript's way.
-In fact, the event model in JavaScript for web pages differs from the event model for JavaScript as it is used in other environments.
-
-For example, [Node.js](/en-US/docs/Learn/Server-side/Express_Nodejs) is a very popular JavaScript runtime that enables developers to use JavaScript to build network and server-side applications.
-The [Node.js event model](https://nodejs.org/docs/latest-v12.x/api/events.html) relies on listeners to listen for events and emitters to emit events periodically — it doesn't sound that different, but the code is quite different, making use of functions like `on()` to register an event listener, and `once()` to register an event listener that unregisters after it has run once.
-The [HTTP connect event docs](https://nodejs.org/docs/latest-v12.x/api/http.html#http_event_connect) provide a good example.
-
-You can also use JavaScript to build cross-browser add-ons — browser functionality enhancements — using a technology called [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).
-The event model is similar to the web events model, but a bit different — event listeners' properties are camel-cased (such as `onMessage` rather than `onmessage`), and need to be combined with the `addListener` function.
-See the [`runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples) page for an example.
-
-You don't need to understand anything about other such environments at this stage in your learning; we just wanted to make it clear that events can differ in different programming environments.
+{{ EmbedLiveSample('An example: handling a click event', '100%', 200, "", "") }}
 
 ## Using addEventListener()
 
-The recommended mechanism for adding event handlers in web pages is the [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
+As we saw in the last example, objects that can fire events have an {{domxref("EventTarget/addEventListener", "addEventListener()")}} method, and this is the recommended mechanism for adding event handlers.
+
+Let's take a closer look at the code from the last example:
 
 ```js
 const btn = document.querySelector("button");
@@ -143,9 +120,10 @@ btn.addEventListener("click", () => {
 });
 ```
 
-> **Note:** You can find the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-addeventlistener.html) for this example on GitHub (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html)).
+The HTML {{HTMLElement("button")}} element will fire an event when the user clicks the button. So it defines an `addEventListener()` function, which we are calling here. We're passing in two parameters:
 
-Inside the `addEventListener()` function, we specify two parameters: the name of the event we want to register this handler for, and the code that comprises the handler function we want to run in response to it.
+- the string `"click"`, to indicate that we want to listen to the click event. Buttons can fire lots of other events, such as [`"mouseover"`](/en-US/docs/Web/API/Element/mouseover_event) when the user moves their mouse over the button, or [`"keydown"`](/en-US/docs/Web/API/Element/keydown_event) when the user presses a key and the button is focused.
+- a function to call when the event happens. In our case, the function generates a random RGB color and sets the [`background-color`](/en-US/docs/Web/CSS/background-color) of the page [`<body>`](/en-US/docs/Web/HTML/Element/body) to that color.
 
 It is fine to make the handler function a separate named function, like this:
 
@@ -786,6 +764,21 @@ The output is as follows (try clicking around on it):
 > **Note:** In this example, we're using `event.target` to get the element that was the target of the event (that is, the innermost element). If we wanted to access the element that handled this event (in this case the container) we could use `event.currentTarget`.
 
 > **Note:** See [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/useful-eventtarget.html) for the full source code; also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html) here.
+
+## It's not just web pages
+
+Events are not unique to JavaScript — most programming languages have some kind of event model, and the way the model works often differs from JavaScript's way.
+In fact, the event model in JavaScript for web pages differs from the event model for JavaScript as it is used in other environments.
+
+For example, [Node.js](/en-US/docs/Learn/Server-side/Express_Nodejs) is a very popular JavaScript runtime that enables developers to use JavaScript to build network and server-side applications.
+The [Node.js event model](https://nodejs.org/api/events.html) relies on listeners to listen for events and emitters to emit events periodically — it doesn't sound that different, but the code is quite different, making use of functions like `on()` to register an event listener, and `once()` to register an event listener that unregisters after it has run once.
+The [HTTP connect event docs](https://nodejs.org/api/http.html#event-connect) provide a good example.
+
+You can also use JavaScript to build cross-browser add-ons — browser functionality enhancements — using a technology called [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).
+The event model is similar to the web events model, but a bit different — event listeners' properties are camel-cased (such as `onMessage` rather than `onmessage`), and need to be combined with the `addListener` function.
+See the [`runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples) page for an example.
+
+You don't need to understand anything about other such environments at this stage in your learning; we just wanted to make it clear that events can differ in different programming environments.
 
 ## Test your skills!
 

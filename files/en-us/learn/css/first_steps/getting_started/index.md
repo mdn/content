@@ -153,22 +153,22 @@ So far, we have styled elements based on their HTML element names. This works as
 
 1. In your HTML document, add a [class attribute](/en-US/docs/Web/HTML/Global_attributes/class) to the second list item. Your list will now look like this:
 
-    ```html
-    <ul>
-      <li>Item one</li>
-      <li class="special">Item two</li>
-      <li>Item <em>three</em></li>
-    </ul>
-    ```
+   ```html
+   <ul>
+     <li>Item one</li>
+     <li class="special">Item two</li>
+     <li>Item <em>three</em></li>
+   </ul>
+   ```
 
 2. In your CSS, you can target the class of `special` by creating a selector that starts with a full stop character. Add the following to your CSS file:
 
-    ```css
-    .special {
-      color: orange;
-      font-weight: bold;
-    }
-    ```
+   ```css
+   .special {
+     color: orange;
+     font-weight: bold;
+   }
+   ```
 
 3. Save and refresh to see what the result is.
 
@@ -296,11 +296,3 @@ In this article, we have taken a look at a number of ways in which you can style
 In the next lesson, we'll be taking a look at [how CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured).
 
 {{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
-
-## In this module
-
-- [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
-- [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
-- [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-- [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
-- [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page)

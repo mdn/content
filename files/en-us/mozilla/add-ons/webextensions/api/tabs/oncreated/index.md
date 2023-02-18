@@ -1,6 +1,7 @@
 ---
 title: tabs.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onCreated
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

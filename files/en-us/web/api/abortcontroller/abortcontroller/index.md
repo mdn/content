@@ -2,12 +2,6 @@
 title: AbortController()
 slug: Web/API/AbortController/AbortController
 page-type: web-api-constructor
-tags:
-  - API
-  - AbortController
-  - Constructor
-  - Fetch
-  - Reference
 browser-compat: api.AbortController.AbortController
 ---
 

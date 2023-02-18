@@ -2,15 +2,6 @@
 title: Animation.startTime
 slug: Web/API/Animation/startTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - Interface
-  - Property
-  - Reference
-  - Web Animations
-  - startTime
-  - web animations api
 browser-compat: api.Animation.startTime
 ---
 

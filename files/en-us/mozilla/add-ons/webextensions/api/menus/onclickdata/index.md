@@ -1,6 +1,7 @@
 ---
 title: menus.OnClickData
 slug: Mozilla/Add-ons/WebExtensions/API/menus/OnClickData
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

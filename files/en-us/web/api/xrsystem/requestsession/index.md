@@ -2,20 +2,8 @@
 title: 'XRSystem: requestSession()'
 slug: Web/API/XRSystem/requestSession
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRSystem
-  - requestSession
+status:
+  - experimental
 browser-compat: api.XRSystem.requestSession
 ---
 

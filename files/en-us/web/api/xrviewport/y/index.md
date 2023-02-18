@@ -2,26 +2,6 @@
 title: XRViewport.y
 slug: Web/API/XRViewport/y
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Horizontal
-  - Position
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRViewport
-  - augmented
-  - origin
-  - viewport
-  - 'y'
 browser-compat: api.XRViewport.y
 ---
 
