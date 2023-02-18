@@ -2,21 +2,6 @@
 title: XMLHttpRequest.abort()
 slug: Web/API/XMLHttpRequest/abort
 page-type: web-api-instance-method
-tags:
-  - AJAX
-  - API
-  - Abort XHR
-  - Cancel XHR
-  - HTTP
-  - HttpRequest
-  - Method
-  - Reference
-  - Stop XHR
-  - XHR
-  - XMLHttpRequest
-  - abort
-  - cancel
-  - stop
 browser-compat: api.XMLHttpRequest.abort
 ---
 

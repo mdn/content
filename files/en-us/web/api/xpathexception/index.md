@@ -2,13 +2,6 @@
 title: XPathException
 slug: Web/API/XPathException
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM XPath API
-  - Exception
-  - Reference
-  - XPath
 browser-compat: api.XPathException
 ---
 
