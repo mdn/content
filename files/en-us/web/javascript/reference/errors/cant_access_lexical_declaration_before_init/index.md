@@ -46,8 +46,8 @@ At this point foo has not been initialized with a value, so accessing the variab
 ```js example-bad
 function test() {
   // Accessing the 'const' variable foo before it's declared
-  console.log(foo);       // ReferenceError: foo is not initialized
-  const foo = 33;         // 'foo' is declared and initialized here using the 'const' keyword
+  console.log(foo); // ReferenceError: foo is not initialized
+  const foo = 33; // 'foo' is declared and initialized here using the 'const' keyword
 }
 
 test();
@@ -61,7 +61,7 @@ In the following example, we correctly declare a variable using the `const` keyw
 function test() {
   // Declaring variable foo
   const foo = 33;
-  console.log(foo);    // 33
+  console.log(foo); // 33
 }
 test();
 ```

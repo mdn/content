@@ -209,11 +209,15 @@ Transitions are a great tool to make things look much smoother without having to
 Using JavaScript you can make the effect of moving the ball to a certain position happen:
 
 ```js
-const f = document.getElementById('foo');
-document.addEventListener('click', (ev) => {
-  f.style.transform = `translateY(${ev.clientY - 25}px)`;
-  f.style.transform += `translateX(${ev.clientX - 25}px)`;
-}, false);
+const f = document.getElementById("foo");
+document.addEventListener(
+  "click",
+  (ev) => {
+    f.style.transform = `translateY(${ev.clientY - 25}px)`;
+    f.style.transform += `translateX(${ev.clientX - 25}px)`;
+  },
+  false
+);
 ```
 
 With CSS you can make it smooth without any extra effort. Add a transition to the element and any change will happen smoothly:

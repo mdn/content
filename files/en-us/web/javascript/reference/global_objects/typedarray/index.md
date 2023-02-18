@@ -159,7 +159,7 @@ These methods are defined on the `TypedArray` prototype object and are thus shar
 - {{jsxref("TypedArray.prototype.find()")}}
   - : Returns the first `element` in the array that satisfies a provided testing function, or `undefined` if no appropriate element is found. See also {{jsxref("Array.prototype.find()")}}.
 - {{jsxref("TypedArray.prototype.findIndex()")}}
-  - : Returns the first index value of in the array that has an element that satisfies a provided testing function, or `-1` if no appropriate element was found. See also {{jsxref("Array.prototype.findIndex()")}}.
+  - : Returns the first index value in the array that has an element that satisfies a provided testing function, or `-1` if no appropriate element was found. See also {{jsxref("Array.prototype.findIndex()")}}.
 - {{jsxref("TypedArray.prototype.findLast()")}}
   - : Returns the value of the last element in the array that satisfies a provided testing function, or `undefined` if no appropriate element is found. See also {{jsxref("Array.prototype.findLast()")}}.
 - {{jsxref("TypedArray.prototype.findLastIndex()")}}

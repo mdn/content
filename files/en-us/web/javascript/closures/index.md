@@ -21,7 +21,7 @@ Consider the following example code:
 
 ```js
 function init() {
-  var name = 'Mozilla'; // name is a local variable created by init
+  var name = "Mozilla"; // name is a local variable created by init
   function displayName() {
     // displayName() is the inner function, that forms the closure
     console.log(name); // use variable declared in the parent function
@@ -71,7 +71,7 @@ Consider the following code example:
 
 ```js
 function makeFunc() {
-  const name = 'Mozilla';
+  const name = "Mozilla";
   function displayName() {
     console.log(name);
   }
@@ -154,9 +154,9 @@ const size16 = makeSizer(16);
 `size12`, `size14`, and `size16` are now functions that resize the body text to 12, 14, and 16 pixels, respectively. You can attach them to buttons (in this case hyperlinks) as demonstrated in the following code example.
 
 ```js
-document.getElementById('size-12').onclick = size12;
-document.getElementById('size-14').onclick = size14;
-document.getElementById('size-16').onclick = size16;
+document.getElementById("size-12").onclick = size12;
+document.getElementById("size-14").onclick = size14;
+document.getElementById("size-16").onclick = size16;
 ```
 
 ```html
@@ -328,7 +328,7 @@ let x = 5;
 export const getX = () => x;
 export const setX = (val) => {
   x = val;
-}
+};
 ```
 
 Here, the module exports a pair of getter-setter functions, which close over the module-scoped variable `x`. Even when `x` is not directly accessible from other modules, it can be read and written with the functions.
@@ -348,7 +348,7 @@ Closures can close over imported values as well, which are regarded as _live bin
 export let x = 1;
 export const setX = (val) => {
   x = val;
-}
+};
 ```
 
 ```js
@@ -380,14 +380,14 @@ Prior to the introduction of the [`let`](/en-US/docs/Web/JavaScript/Reference/St
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-    { id: 'email', help: 'Your email address' },
-    { id: 'name', help: 'Your full name' },
-    { id: 'age', help: 'Your age (you must be over 16)' },
+    { id: "email", help: "Your email address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
@@ -414,7 +414,7 @@ One solution in this case is to use more closures: in particular, to use a funct
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function makeHelpCallback(help) {
@@ -425,9 +425,9 @@ function makeHelpCallback(help) {
 
 function setupHelp() {
   var helpText = [
-    { id: 'email', help: 'Your email address' },
-    { id: 'name', help: 'Your full name' },
-    { id: 'age', help: 'Your age (you must be over 16)' },
+    { id: "email", help: "Your email address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
@@ -447,14 +447,14 @@ One other way to write the above using anonymous closures is:
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-    { id: 'email', help: 'Your email address' },
-    { id: 'name', help: 'Your full name' },
-    { id: 'age', help: 'Your age (you must be over 16)' },
+    { id: "email", help: "Your email address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
@@ -474,14 +474,14 @@ If you don't want to use more closures, you can use the [`let`](/en-US/docs/Web/
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   const helpText = [
-    { id: 'email', help: 'Your email address' },
-    { id: 'name', help: 'Your full name' },
-    { id: 'age', help: 'Your age (you must be over 16)' },
+    { id: "email", help: "Your email address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
   ];
 
   for (let i = 0; i < helpText.length; i++) {
@@ -501,14 +501,14 @@ Another alternative could be to use `forEach()` to iterate over the `helpText` a
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-    { id: 'email', help: 'Your email address' },
-    { id: 'name', help: 'Your full name' },
-    { id: 'age', help: 'Your age (you must be over 16)' },
+    { id: "email", help: "Your email address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
   ];
 
   helpText.forEach(function (text) {

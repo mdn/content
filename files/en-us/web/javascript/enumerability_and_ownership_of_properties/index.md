@@ -60,13 +60,18 @@ Note that this is not the most efficient algorithm for all cases, but useful for
 const SimplePropertyRetriever = {
   getOwnEnumerables(obj) {
     return this._getPropertyNames(obj, true, false, this._enumerable);
-      // Or could use for...in filtered with Object.hasOwn or just this: return Object.keys(obj);
+    // Or could use for...in filtered with Object.hasOwn or just this: return Object.keys(obj);
   },
   getOwnNonenumerables(obj) {
     return this._getPropertyNames(obj, true, false, this._notEnumerable);
   },
   getOwnEnumerablesAndNonenumerables(obj) {
-    return this._getPropertyNames(obj, true, false, this._enumerableAndNotEnumerable);
+    return this._getPropertyNames(
+      obj,
+      true,
+      false,
+      this._enumerableAndNotEnumerable,
+    );
     // Or just use: return Object.getOwnPropertyNames(obj);
   },
   getPrototypeEnumerables(obj) {
@@ -76,7 +81,12 @@ const SimplePropertyRetriever = {
     return this._getPropertyNames(obj, false, true, this._notEnumerable);
   },
   getPrototypeEnumerablesAndNonenumerables(obj) {
-    return this._getPropertyNames(obj, false, true, this._enumerableAndNotEnumerable);
+    return this._getPropertyNames(
+      obj,
+      false,
+      true,
+      this._enumerableAndNotEnumerable,
+    );
   },
   getOwnAndPrototypeEnumerables(obj) {
     return this._getPropertyNames(obj, true, true, this._enumerable);
@@ -86,7 +96,12 @@ const SimplePropertyRetriever = {
     return this._getPropertyNames(obj, true, true, this._notEnumerable);
   },
   getOwnAndPrototypeEnumerablesAndNonenumerables(obj) {
-    return this._getPropertyNames(obj, true, true, this._enumerableAndNotEnumerable);
+    return this._getPropertyNames(
+      obj,
+      true,
+      true,
+      this._enumerableAndNotEnumerable,
+    );
   },
   // Private static property checker callbacks
   _enumerable(obj, prop) {
@@ -116,7 +131,7 @@ const SimplePropertyRetriever = {
       obj = Object.getPrototypeOf(obj);
     } while (obj);
     return props;
-  }
+  },
 };
 ```
 

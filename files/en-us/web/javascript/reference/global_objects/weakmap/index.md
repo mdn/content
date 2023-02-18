@@ -76,7 +76,7 @@ const o2 = function () {};
 const o3 = window;
 
 wm1.set(o1, 37);
-wm1.set(o2, 'azerty');
+wm1.set(o2, "azerty");
 wm2.set(o1, o2); // a value can be anything, including an object or a function
 wm2.set(o3, undefined);
 wm2.set(wm1, wm2); // keys and values can be any objects. Even WeakMaps!
@@ -139,19 +139,19 @@ let Thing;
   const privateScope = new WeakMap();
   let counter = 0;
 
-  Thing = function() {
-    this.someProperty = 'foo';
+  Thing = function () {
+    this.someProperty = "foo";
 
     privateScope.set(this, {
       hidden: ++counter,
     });
   };
 
-  Thing.prototype.showPublic = function() {
+  Thing.prototype.showPublic = function () {
     return this.someProperty;
   };
 
-  Thing.prototype.showPrivate = function() {
+  Thing.prototype.showPrivate = function () {
     return privateScope.get(this).hidden;
   };
 }
@@ -178,7 +178,7 @@ class Thing {
   static #counter = 0;
   #hidden;
   constructor() {
-    this.someProperty = 'foo';
+    this.someProperty = "foo";
     this.#hidden = ++Thing.#counter;
   }
   showPublic() {

@@ -19,7 +19,7 @@ The **`TypedArray[@@species]`** static accessor property returns the constructor
 
 ## Syntax
 
-```js
+```js-nolint
 TypedArray[Symbol.species]
 ```
 

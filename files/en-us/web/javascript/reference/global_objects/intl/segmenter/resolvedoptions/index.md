@@ -50,7 +50,7 @@ The resulting object has the following properties:
 ### Basic usage
 
 ```js
-const spanishSegmenter = new Intl.Segmenter("es", {granularity: "sentence"});
+const spanishSegmenter = new Intl.Segmenter("es", { granularity: "sentence" });
 const options = spanishSegmenter.resolvedOptions();
 console.log(options.locale); // "es"
 console.log(options.granularity); // "sentence"

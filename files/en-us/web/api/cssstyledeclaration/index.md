@@ -58,7 +58,7 @@ A `CSSStyleDeclaration` object can be exposed using three different APIs:
 const styleObj = document.styleSheets[0].cssRules[0].style;
 console.log(styleObj.cssText);
 
-for (let i = styleObj.length; i--;) {
+for (let i = styleObj.length; i--; ) {
   const nameString = styleObj[i];
   styleObj.removeProperty(nameString);
 }

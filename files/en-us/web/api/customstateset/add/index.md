@@ -44,7 +44,7 @@ The following function adds the state `--checked` to a `CustomStateSet`.
 class MyCustomElement extends HTMLElement {
   set checked(flag) {
     if (flag) {
-      this._internals.states.add('--checked');
+      this._internals.states.add("--checked");
     }
   }
 }

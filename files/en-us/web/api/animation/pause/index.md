@@ -2,14 +2,6 @@
 title: Animation.pause()
 slug: Web/API/Animation/pause
 page-type: web-api-instance-method
-tags:
-  - Animation
-  - Method
-  - Reference
-  - Web Animations
-  - pause
-  - waapi
-  - web animations api
 browser-compat: api.Animation.pause
 ---
 

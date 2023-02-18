@@ -1,5 +1,5 @@
 ---
-title: 'TypeError: ''x'' is not iterable'
+title: "TypeError: 'x' is not iterable"
 slug: Web/JavaScript/Reference/Errors/is_not_iterable
 page-type: javascript-error
 tags:
@@ -46,7 +46,10 @@ an object implementing the [iterable protocol](/en-US/docs/Web/JavaScript/Refere
 ```js example-bad
 const myobj = { arrayOrObjProp1: {}, arrayOrObjProp2: [42] };
 
-const { arrayOrObjProp1: [value1], arrayOrObjProp2: [value2] } = myobj; // TypeError: object is not iterable
+const {
+  arrayOrObjProp1: [value1],
+  arrayOrObjProp2: [value2],
+} = myobj; // TypeError: object is not iterable
 
 console.log(value1, value2);
 ```
@@ -61,17 +64,17 @@ Therefore, you cannot use [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_an
 to iterate over the properties of an object.
 
 ```js example-bad
-const obj = { France: 'Paris', England: 'London' };
-for (const p of obj) { // TypeError: obj is not iterable
+const obj = { France: "Paris", England: "London" };
+for (const p of obj) {
   // …
-}
+} // TypeError: obj is not iterable
 ```
 
 Instead you have to use {{jsxref("Object.keys")}} or {{jsxref("Object.entries")}}, to
 iterate over the properties or entries of an object.
 
 ```js example-good
-const obj = { France: 'Paris', England: 'London' };
+const obj = { France: "Paris", England: "London" };
 // Iterate over the property names:
 for (const country of Object.keys(obj)) {
   const capital = obj[country];
@@ -86,9 +89,9 @@ for (const [country, capital] of Object.entries(obj)) {
 Another option for this use case might be to use a {{jsxref("Map")}}:
 
 ```js example-good
-const map = new Map;
-map.set('France', 'Paris');
-map.set('England', 'London');
+const map = new Map();
+map.set("France", "Paris");
+map.set("England", "London");
 // Iterate over the property names:
 for (const country of map.keys()) {
   const capital = map.get(country);
@@ -115,9 +118,9 @@ function* generate(a, b) {
   yield b;
 }
 
-for (const x of generate) { // TypeError: generate is not iterable
+for (const x of generate) {
   console.log(x);
-}
+} // TypeError: generate is not iterable
 ```
 
 When they are not called, the {{jsxref("Function")}} object corresponding to the
@@ -146,10 +149,10 @@ returns an object which is an iterator, which is to say it must have a next meth
 const myEmptyIterable = {
   [Symbol.iterator]() {
     return []; // [] is iterable, but it is not an iterator — it has no next method.
-  }
-}
+  },
+};
 
-Array.from(myEmptyIterable);  // TypeError: myEmptyIterable is not iterable
+Array.from(myEmptyIterable); // TypeError: myEmptyIterable is not iterable
 ```
 
 Here is a correct implementation:
@@ -157,11 +160,11 @@ Here is a correct implementation:
 ```js example-good
 const myEmptyIterable = {
   [Symbol.iterator]() {
-    return [][Symbol.iterator]()
-  }
-}
+    return [][Symbol.iterator]();
+  },
+};
 
-Array.from(myEmptyIterable);  // []
+Array.from(myEmptyIterable); // []
 ```
 
 ## See also

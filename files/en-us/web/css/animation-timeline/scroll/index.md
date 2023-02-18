@@ -29,11 +29,11 @@ Note that if the indicated axis does not contain a scrollbar then the animation 
 animation-timeline: scroll();
 
 /* values for both axis and scroller element */
-animation-timeline: scroll(block nearest);  /* Default */
+animation-timeline: scroll(block nearest); /* Default */
 animation-timeline: scroll(inline nearest);
 animation-timeline: scroll(vertical nearest);
 animation-timeline: scroll(horizontal nearest);
-animation-timeline: scroll(block root); 
+animation-timeline: scroll(block root);
 animation-timeline: scroll(inline root);
 animation-timeline: scroll(vertical root);
 animation-timeline: scroll(horizontal root);

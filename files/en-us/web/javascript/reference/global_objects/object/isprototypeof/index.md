@@ -63,13 +63,13 @@ const baz = new Baz();
 // foo: Foo --> Object
 // bar: Bar --> Foo --> Object
 // baz: Baz --> Bar --> Foo --> Object
-console.log(Baz.prototype.isPrototypeOf(baz));    // true
-console.log(Baz.prototype.isPrototypeOf(bar));    // false
-console.log(Baz.prototype.isPrototypeOf(foo));    // false
-console.log(Bar.prototype.isPrototypeOf(baz));    // true
-console.log(Bar.prototype.isPrototypeOf(foo));    // false
-console.log(Foo.prototype.isPrototypeOf(baz));    // true
-console.log(Foo.prototype.isPrototypeOf(bar));    // true
+console.log(Baz.prototype.isPrototypeOf(baz)); // true
+console.log(Baz.prototype.isPrototypeOf(bar)); // false
+console.log(Baz.prototype.isPrototypeOf(foo)); // false
+console.log(Bar.prototype.isPrototypeOf(baz)); // true
+console.log(Bar.prototype.isPrototypeOf(foo)); // false
+console.log(Foo.prototype.isPrototypeOf(baz)); // true
+console.log(Foo.prototype.isPrototypeOf(bar)); // true
 console.log(Object.prototype.isPrototypeOf(baz)); // true
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: '::-webkit-progress-value'
+title: "::-webkit-progress-value"
 slug: Web/CSS/::-webkit-progress-value
 page-type: css-pseudo-element
 tags:
@@ -20,7 +20,9 @@ The **`::-webkit-progress-value`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/
 ## Syntax
 
 ```css
-::-webkit-progress-value
+::-webkit-progress-value {
+  /* ... */
+}
 ```
 
 ## Examples

@@ -49,7 +49,7 @@ After appending another rule with `appendRule` the `cssRules` property returns a
 ```js
 let myRules = document.styleSheets[0].cssRules;
 let keyframes = myRules[0]; // a CSSKeyframesRule
-keyframes.appendRule('to {transform: translateX(100%);}');
+keyframes.appendRule("to {transform: translateX(100%);}");
 console.log(keyframes.cssRules); // a CSSRuleList object with two rules
 ```
 

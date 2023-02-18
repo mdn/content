@@ -50,13 +50,13 @@ The comma operator is completely different from commas used as syntactic separat
 
 In fact, although some of these places accept almost all expressions, they don't accept comma-joined expressions because that would be ambiguous with the syntactic comma separators. In this case, you must parenthesize the comma-joined expression. For example, the following is a `const` declaration that declares two variables, where the comma is not the comma operator:
 
-```js
+```js-nolint
 const a = 1, b = 2;
 ```
 
 It is different from the following, where `b = 2` is an [assignment expression](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment), not a declaration. The value of `a` is `2`, the return value of the assignment, while the value of `1` is discarded:
 
-```js
+```js-nolint
 const a = (1, b = 2);
 ```
 
@@ -110,7 +110,7 @@ This is especially useful for one-line [arrow functions](/en-US/docs/Web/JavaScr
 
 ```js
 let sum = 0;
-const squares = [1, 2, 3, 4, 5].map((x) => (sum += x, x * x));
+const squares = [1, 2, 3, 4, 5].map((x) => ((sum += x), x * x));
 console.log(squares); // [1, 4, 9, 16, 25]
 console.log(sum); // 15
 ```
@@ -119,7 +119,7 @@ console.log(sum); // 15
 
 The comma operator always returns the last expression as a _value_ instead of a _reference_. This causes some contextual information such as the [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) binding to be lost. For example, a property access returns a reference to the function, which also remembers the object that it's accessed on, so that calling the property works properly. If the method is returned from a comma expression, then the function is called as if it's a new function value, and `this` is `undefined`.
 
-```js
+```js-nolint
 const obj = {
   value: "obj",
   method() {
@@ -134,7 +134,7 @@ obj.method(); // "obj"
 
 You can enter [indirect eval](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#direct_and_indirect_eval) with this technique, because direct eval requires the function call to happen on the reference to the `eval()` function.
 
-```js
+```js-nolint
 globalThis.isDirectEval = false;
 
 {

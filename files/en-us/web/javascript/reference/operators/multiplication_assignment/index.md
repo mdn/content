@@ -32,7 +32,7 @@ x *= y // x = x * y
 let bar = 5;
 
 bar *= 2; // 10
-bar *= 'foo'; // NaN
+bar *= "foo"; // NaN
 ```
 
 ## Specifications

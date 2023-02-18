@@ -262,7 +262,7 @@ The following `<form>`:
   <label>Name: <input name="myTextField" value="Test" /></label>
   <label><input type="checkbox" name="myCheckBox" /> Check</label>
   <label>
-    Upload file: <input type="file" name="myFile" value="test.txt"/>
+    Upload file: <input type="file" name="myFile" value="test.txt" />
   </label>
   <button>Send the file</button>
 </form>

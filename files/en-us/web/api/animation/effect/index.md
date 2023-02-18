@@ -2,14 +2,6 @@
 title: Animation.effect
 slug: Web/API/Animation/effect
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - Property
-  - Reference
-  - Web Animations
-  - effect
-  - web animations api
 browser-compat: api.Animation.effect
 ---
 

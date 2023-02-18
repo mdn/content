@@ -2,12 +2,8 @@
 title: AudioEncoder
 slug: Web/API/AudioEncoder
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - AudioEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioEncoder
 ---
 

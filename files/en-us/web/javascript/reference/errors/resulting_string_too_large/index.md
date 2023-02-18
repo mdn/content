@@ -1,5 +1,5 @@
 ---
-title: 'RangeError: repeat count must be less than infinity'
+title: "RangeError: repeat count must be less than infinity"
 slug: Web/JavaScript/Reference/Errors/Resulting_string_too_large
 page-type: javascript-error
 tags:
@@ -45,17 +45,17 @@ differ in JavaScript engines. In Firefox (SpiderMonkey) the maximum string size 
 ### Invalid cases
 
 ```js example-bad
-'abc'.repeat(Infinity); // RangeError
-'a'.repeat(2**30);      // RangeError
+"abc".repeat(Infinity); // RangeError
+"a".repeat(2 ** 30); // RangeError
 ```
 
 ### Valid cases
 
 ```js example-good
-'abc'.repeat(0);    // ''
-'abc'.repeat(1);    // 'abc'
-'abc'.repeat(2);    // 'abcabc'
-'abc'.repeat(3.5);  // 'abcabcabc' (count will be converted to integer)
+"abc".repeat(0); // ''
+"abc".repeat(1); // 'abc'
+"abc".repeat(2); // 'abcabc'
+"abc".repeat(3.5); // 'abcabcabc' (count will be converted to integer)
 ```
 
 ## See also

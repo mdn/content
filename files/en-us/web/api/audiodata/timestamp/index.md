@@ -2,13 +2,8 @@
 title: AudioData.timestamp
 slug: Web/API/AudioData/timestamp
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - timestamp
-  - AudioData
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioData.timestamp
 ---
 

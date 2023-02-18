@@ -117,4 +117,3 @@ for (const entry of Array.prototype.entries.call(arrayLike)) {
 - {{jsxref("Array.prototype.some()")}}
 - [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)

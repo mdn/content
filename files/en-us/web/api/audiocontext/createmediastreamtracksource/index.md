@@ -2,20 +2,6 @@
 title: AudioContext.createMediaStreamTrackSource()
 slug: Web/API/AudioContext/createMediaStreamTrackSource
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - MediaStreamTrack
-  - MediaStreamTrackAudioSource
-  - Method
-  - Node
-  - Reference
-  - Web Audio API
-  - createMediaStreamTrackSource
-  - sound
-  - source
-  - track
 browser-compat: api.AudioContext.createMediaStreamTrackSource
 ---
 

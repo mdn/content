@@ -446,6 +446,12 @@ Also consider using the [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocom
         {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
       </td>
     </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role">spinbutton</a></code>
+      </td>
+    </tr>
   </tbody>
 </table>
 

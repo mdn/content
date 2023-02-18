@@ -73,19 +73,19 @@ The main difference is that the scope of a **`var`** variable is the entire encl
 function varTest() {
   var x = 1;
   {
-    var x = 2;  // same variable!
-    console.log(x);  // 2
+    var x = 2; // same variable!
+    console.log(x); // 2
   }
-  console.log(x);  // 2
+  console.log(x); // 2
 }
 
 function letTest() {
   let x = 1;
   {
-    let x = 2;  // different variable
-    console.log(x);  // 2
+    let x = 2; // different variable
+    console.log(x); // 2
   }
-  console.log(x);  // 1
+  console.log(x); // 1
 }
 ```
 
@@ -93,8 +93,8 @@ At the top level of programs and functions, **`let`**, unlike **`var`**, does no
 For example:
 
 ```js
-var x = 'global';
-let y = 'global';
+var x = "global";
+let y = "global";
 console.log(this.x); // "global"
 console.log(this.y); // undefined
 ```
@@ -114,7 +114,7 @@ You may encounter errors in {{jsxref("Statements/switch", "switch")}} statements
 
 ```js example-bad
 let x = 1;
-switch(x) {
+switch (x) {
   case 0:
     let foo;
     break;
@@ -130,7 +130,7 @@ A block nested inside a case clause will create a new block scoped lexical envir
 ```js
 let x = 1;
 
-switch(x) {
+switch (x) {
   case 0: {
     let foo;
     break;
@@ -156,7 +156,8 @@ This differs from {{jsxref("Statements/var", "var", "var_hoisting")}} variables,
 The code below demonstrates the different result when `let` and `var` are accessed in code before the line in which they are declared.
 
 ```js example-bad
-{ // TDZ starts at beginning of scope
+{
+  // TDZ starts at beginning of scope
   console.log(bar); // undefined
   console.log(foo); // ReferenceError
   var bar = 1;
@@ -225,12 +226,13 @@ function go(n) {
   // n here is defined!
   console.log(n); // { a: [1, 2, 3] }
 
-  for (let n of n.a) { // ReferenceError
+  for (let n of n.a) {
+    //          ^ ReferenceError
     console.log(n);
   }
 }
 
-go({a: [1, 2, 3]});
+go({ a: [1, 2, 3] });
 ```
 
 ### Other situations
@@ -246,8 +248,8 @@ if (a === 1) {
   var a = 11; // the scope is global
   let b = 22; // the scope is inside the if-block
 
-  console.log(a);  // 11
-  console.log(b);  // 22
+  console.log(a); // 11
+  console.log(b); // 22
 }
 
 console.log(a); // 11

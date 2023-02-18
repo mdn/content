@@ -2,17 +2,8 @@
 title: AmbientLightSensor.illuminance
 slug: Web/API/AmbientLightSensor/illuminance
 page-type: web-api-instance-property
-tags:
-  - API
-  - Ambient Light Level API
-  - Generic Sensor API
-  - Property
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - illuminance
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AmbientLightSensor.illuminance
 ---
 

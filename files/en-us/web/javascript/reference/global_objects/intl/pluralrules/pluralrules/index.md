@@ -108,13 +108,13 @@ useful to figure out the ordinal indicator, e.g. "1st", "2nd", "3rd", "4th", "42
 and so forth.
 
 ```js
-const pr = new Intl.PluralRules('en-US', { type: 'ordinal' });
+const pr = new Intl.PluralRules("en-US", { type: "ordinal" });
 
 const suffixes = new Map([
-  ['one',   'st'],
-  ['two',   'nd'],
-  ['few',   'rd'],
-  ['other', 'th'],
+  ["one", "st"],
+  ["two", "nd"],
+  ["few", "rd"],
+  ["other", "th"],
 ]);
 const formatOrdinals = (n) => {
   const rule = pr.select(n);
@@ -122,14 +122,14 @@ const formatOrdinals = (n) => {
   return `${n}${suffix}`;
 };
 
-formatOrdinals(0);   // '0th'
-formatOrdinals(1);   // '1st'
-formatOrdinals(2);   // '2nd'
-formatOrdinals(3);   // '3rd'
-formatOrdinals(4);   // '4th'
-formatOrdinals(11);  // '11th'
-formatOrdinals(21);  // '21st'
-formatOrdinals(42);  // '42nd'
+formatOrdinals(0); // '0th'
+formatOrdinals(1); // '1st'
+formatOrdinals(2); // '2nd'
+formatOrdinals(3); // '3rd'
+formatOrdinals(4); // '4th'
+formatOrdinals(11); // '11th'
+formatOrdinals(21); // '21st'
+formatOrdinals(42); // '42nd'
 formatOrdinals(103); // '103rd'
 ```
 

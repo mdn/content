@@ -24,7 +24,7 @@ This article provides information about the changes in Firefox 108 that will aff
 - [Trigonometric functions](/en-US/docs/Web/CSS/CSS_Functions#trigonometric_functions) are now enabled with the `layout.css.trig.enabled` preference set to `true` by default.
   This allows the use of `sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, and `atan2()` functions ({{bug(1774589)}}, {{bug(1787070)}}).
 - CSS [`<calc-constant>`](/en-US/docs/Web/CSS/calc-constant) type is implemented to allow for well-known constants such as `pi` and `e` within [math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) ({{bug(1682444)}}, {{bug(1787070)}}).
-- Container query length units are now supported via the the `layout.css.container-queries.enabled` preference, which is set to `false` by default.
+- Container query length units are now supported via the `layout.css.container-queries.enabled` preference, which is set to `false` by default.
   Setting this preference to `true` allows the use of `cqw`, `cqh`, `cqi`, `cqb`, `cqmin`, and `cqmax` units of length which are relative to the size of a query container.
   For more information on these units, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) documentation ({{bug(1744231)}}).
 - The [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji) property is now supported via the `layout.css.font-variant-emoji.enabled` preference, which is set to `false` by default. This property allows you to set a default presentation style for displaying emojis ({{bug(1461589)}}).
@@ -58,16 +58,16 @@ No notable changes
 
 #### WebDriver BiDi
 
-- Following a [change in the specification](https://github.com/w3c/webdriver-bidi/pull/259), log entry level `"warning"` was renamed to `"warn"` ({{bug(1797115)}})
-- When using `script.evaluate` and `script.callFunction` with a sandbox name equal to an empty string, the evaluation will now be done using the default realm ({{bug(1793589)}})
-- Added support for the `browsingContext.domContentLoaded` event ({{bug(1756610)}})
+- Following a [change in the specification](https://github.com/w3c/webdriver-bidi/pull/259), log entry level `"warning"` was renamed to `"warn"` ({{bug(1797115)}}).
+- When using `script.evaluate` and `script.callFunction` with a sandbox name equal to an empty string, the evaluation will now be done using the default realm ({{bug(1793589)}}).
+- Added support for the `browsingContext.domContentLoaded` event ({{bug(1756610)}}).
 
 #### Marionette
 
-- Added support for the `tiltX`, `tiltY` and `twist` properties of pointer actions for `WebDriver:PerformActions` ({{bug(1793832)}})
-- Fixed a bug where `WebDriver:GetElementText` wasn't returning the element text for pretty-printed XML ({{bug(1794099)}})
-- `HTMLDocument` is no longer serialized as a `WebElement` reference ({{bug(1793920)}})
-- `WebDriver:NewWindow` now opens a window with an `about:blank` tab instead of `about:newtab` ({{bug(1533058)}})
+- Added support for the `tiltX`, `tiltY` and `twist` properties of pointer actions for `WebDriver:PerformActions` ({{bug(1793832)}}).
+- Fixed a bug where `WebDriver:GetElementText` wasn't returning the element text for pretty-printed XML ({{bug(1794099)}}).
+- `HTMLDocument` is no longer serialized as a `WebElement` reference ({{bug(1793920)}}).
+- `WebDriver:NewWindow` now opens a window with an `about:blank` tab instead of `about:newtab` ({{bug(1533058)}}).
 
 ## Changes for add-on developers
 

@@ -29,8 +29,10 @@ The result is that if the control was valid when the user started interacting wi
 
 ## Syntax
 
-```
-:user-valid
+```css
+:user-valid {
+  /* ... */
+}
 ```
 
 ## Examples

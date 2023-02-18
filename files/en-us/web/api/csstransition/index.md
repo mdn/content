@@ -54,7 +54,7 @@ The transition in the following example changes the width of the box on hover. C
 
 ```js
 const item = document.querySelector(".box");
-item.addEventListener('transitionrun', () => {
+item.addEventListener("transitionrun", () => {
   let animations = document.querySelector(".box").getAnimations();
   console.log(animations[0]);
 });

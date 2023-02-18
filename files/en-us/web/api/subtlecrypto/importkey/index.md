@@ -48,7 +48,7 @@ importKey(format, keyData, algorithm, extractable, keyUsages)
     - For [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac):
       Pass an [`HmacImportParams`](/en-US/docs/Web/API/HmacImportParams) object.
     - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
-      [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw)):
+      [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw):
       Pass the string identifying the algorithm or an object of the form `{ "name": ALGORITHM }`, where `ALGORITHM` is the name of the algorithm.
     - For [PBKDF2](/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2): Pass the string `PBKDF2`.
     - For [HKDF](/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf): Pass the string `HKDF`.
@@ -101,7 +101,7 @@ containing the raw bytes for the key.
 You can use this format to import or export RSA or Elliptic Curve private keys.
 
 The PKCS #8 format is defined in [RFC 5208](https://datatracker.ietf.org/doc/html/rfc5208),
-using the [ASN.1 notation](https://en.wikipedia.org/wiki/Abstract_Syntax_Notation_One):
+using the [ASN.1 notation](https://en.wikipedia.org/wiki/ASN.1):
 
 ```plain
 PrivateKeyInfo ::= SEQUENCE {
@@ -146,7 +146,7 @@ See the [Examples](#examples) section for more concrete guidance.
 You can use this format to import or export RSA or Elliptic Curve public keys.
 
 `SubjectPublicKey` is defined in [RFC 5280, Section 4.1](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1) using
-the [ASN.1 notation:](https://en.wikipedia.org/wiki/Abstract_Syntax_Notation_One)
+the [ASN.1 notation](https://en.wikipedia.org/wiki/ASN.1):
 
 ```plain
 SubjectPublicKeyInfo  ::=  SEQUENCE  {
@@ -213,7 +213,7 @@ A JSON Web Key looks something like this (this is an EC private key):
 
 ### Raw import
 
-This example imports an AES key from an `ArrayBuffer` containing the bytes
+This example imports an AES key from an `ArrayBuffer` containing the raw bytes
 to use. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/import-key/raw.js)
 
 ```js

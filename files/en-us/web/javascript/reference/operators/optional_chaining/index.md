@@ -14,7 +14,7 @@ browser-compat: javascript.operators.optional_chaining
 
 {{JSSidebar("Operators")}}
 
-The **optional chaining (`?.`)** operator accesses an object's property or calls a function. If the object accessed or function called is {{jsxref("undefined")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), it returns {{jsxref("undefined")}} instead of throwing an error.
+The **optional chaining (`?.`)** operator accesses an object's property or calls a function. If the object accessed or function called using this operator is {{jsxref("undefined")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), the expression short circuits and evaluates to {{jsxref("undefined")}} instead of throwing an error.
 
 {{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html", "taller")}}
 

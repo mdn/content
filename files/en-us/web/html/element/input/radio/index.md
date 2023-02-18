@@ -337,6 +337,12 @@ Notice that when clicking on a radio button, there's a nice, smooth fade out/in 
         {{domxref("HTMLInputElement.select", "select()")}}
       </td>
     </tr>
+     <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code>
+      </td>
+    </tr>
   </tbody>
 </table>
 

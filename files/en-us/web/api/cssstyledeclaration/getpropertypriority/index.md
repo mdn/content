@@ -39,7 +39,7 @@ in a CSS selector rule:
 
 ```js
 const declaration = document.styleSheets[0].cssRules[0].style;
-const isImportant = declaration.getPropertyPriority('margin') === 'important';
+const isImportant = declaration.getPropertyPriority("margin") === "important";
 ```
 
 ## Specifications

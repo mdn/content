@@ -124,7 +124,7 @@ Without this element there would be no scrollbar, and hence no scroll timeline t
 ```css
 #stretcher {
   height: 300px;
-  width: 1200px
+  width: 1200px;
 }
 ```
 

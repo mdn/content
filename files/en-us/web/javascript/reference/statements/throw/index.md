@@ -36,10 +36,10 @@ exception, `expression` specifies the value of the exception. Each
 of the following throws an exception:
 
 ```js
-throw 'Error2'; // generates an exception with a string value
-throw 42;       // generates an exception with the value 42
-throw true;     // generates an exception with the value true
-throw new Error('Required');  // generates an error object with the message of Required
+throw "Error2"; // generates an exception with a string value
+throw 42; // generates an exception with the value 42
+throw true; // generates an exception with the value true
+throw new Error("Required"); // generates an error object with the message of Required
 ```
 
 Also note that the `throw` statement is affected by
@@ -57,16 +57,18 @@ object of type `UserException` and uses it in a `throw` statement.
 ```js
 function UserException(message) {
   this.message = message;
-  this.name = 'UserException';
+  this.name = "UserException";
 }
 function getMonthName(mo) {
   mo--; // Adjust month number for array index (1 = Jan, 12 = Dec)
-  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
-    'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const months = [
+    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+  ];
   if (months[mo] !== undefined) {
     return months[mo];
   } else {
-    throw new UserException('InvalidMonthNo');
+    throw new UserException("InvalidMonthNo");
   }
 }
 
@@ -77,7 +79,7 @@ try {
   const myMonth = 15; // 15 is out of bound to raise the exception
   monthName = getMonthName(myMonth);
 } catch (e) {
-  monthName = 'unknown';
+  monthName = "unknown";
   console.error(e.message, e.name); // pass exception object to err handler
 }
 ```
@@ -144,11 +146,11 @@ function verifyZipCode(z) {
   return z;
 }
 
-a = verifyZipCode(95060);         // returns 95060
-b = verifyZipCode(9560);          // returns -1
-c = verifyZipCode('a');           // returns -1
-d = verifyZipCode('95060');       // returns 95060
-e = verifyZipCode('95060 1234');  // returns 95060 1234
+a = verifyZipCode(95060); // 95060
+b = verifyZipCode(9560); // -1
+c = verifyZipCode("a"); // -1
+d = verifyZipCode("95060"); // 95060
+e = verifyZipCode("95060 1234"); // 95060 1234
 ```
 
 ### Rethrow an exception

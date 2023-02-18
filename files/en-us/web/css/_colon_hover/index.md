@@ -24,8 +24,10 @@ Styles defined by the `:hover` pseudo-class will be overridden by any subsequent
 
 ## Syntax
 
-```
-:hover
+```css
+:hover {
+  /* ... */
+}
 ```
 
 ## Examples

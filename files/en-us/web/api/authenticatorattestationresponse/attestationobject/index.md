@@ -2,13 +2,6 @@
 title: AuthenticatorAttestationResponse.attestationObject
 slug: Web/API/AuthenticatorAttestationResponse/attestationObject
 page-type: web-api-instance-property
-tags:
-  - API
-  - AuthenticatorAttestationResponse
-  - Property
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 browser-compat: api.AuthenticatorAttestationResponse.attestationObject
 ---
 

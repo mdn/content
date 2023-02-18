@@ -91,25 +91,26 @@ img {
 #### JavaScript
 
 ```js
-const destinationImage = document.querySelector('#destination')
-destinationImage.addEventListener('click', pasteImage);
+const destinationImage = document.querySelector("#destination");
+destinationImage.addEventListener("click", pasteImage);
 
 async function pasteImage() {
   try {
-    const permission = await navigator.permissions.query({ name: 'clipboard-read' });
-    if (permission.state === 'denied') {
-      throw new Error('Not allowed to read clipboard.');
+    const permission = await navigator.permissions.query({
+      name: "clipboard-read",
+    });
+    if (permission.state === "denied") {
+      throw new Error("Not allowed to read clipboard.");
     }
     const clipboardContents = await navigator.clipboard.read();
     for (const item of clipboardContents) {
-      if (!item.types.includes('image/png')) {
-        throw new Error('Clipboard contains non-image data.');
+      if (!item.types.includes("image/png")) {
+        throw new Error("Clipboard contains non-image data.");
       }
-      const blob = await item.getType('image/png');
+      const blob = await item.getType("image/png");
       destinationImage.src = URL.createObjectURL(blob);
     }
-  }
-  catch (error) {
+  } catch (error) {
     console.error(error.message);
   }
 }

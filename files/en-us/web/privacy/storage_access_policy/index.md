@@ -1,5 +1,5 @@
 ---
-title: 'Storage access policy: Block cookies from trackers'
+title: "Storage access policy: Block cookies from trackers"
 slug: Web/Privacy/Storage_Access_Policy
 tags:
   - Privacy

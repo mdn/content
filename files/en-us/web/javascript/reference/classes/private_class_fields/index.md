@@ -36,6 +36,11 @@ class ClassWithPrivate {
 }
 ```
 
+There are some additional syntax restrictions:
+
+- All private identifiers declared within a class must be unique. The namespace is shared between static and instance properties. The only exception is when the two declarations define a getter-setter pair.
+- The private identifier cannot be `#constructor`.
+
 ## Description
 
 Most class features have their private counterparts:

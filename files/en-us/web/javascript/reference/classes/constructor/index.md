@@ -27,6 +27,11 @@ constructor(argument0, argument1) { /* … */ }
 constructor(argument0, argument1, /* … ,*/ argumentN) { /* … */ }
 ```
 
+There are some additional syntax restrictions:
+
+- A class method called `constructor` cannot be a [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get), [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set), [async](/en-US/docs/Web/JavaScript/Reference/Statements/async_function), or [generator](/en-US/docs/Web/JavaScript/Reference/Statements/function*).
+- A class cannot have more than one `constructor` method.
+
 ## Description
 
 A constructor enables you to provide any custom initialization that must be done before any other methods can be called on an instantiated object.
@@ -166,9 +171,6 @@ console.log(new ChildClass()); // TypeError: Derived constructors may only retur
 ```
 
 If the parent class constructor returns an object, that object will be used as the `this` value on which [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) of the derived class will be defined. This trick is called ["return overriding"](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields#returning_overriding_object), which allows a derived class's fields (including [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) ones) to be defined on unrelated objects.
-
-There can be only one special method with the name `constructor` in a class.
-Having more than one occurrence of a `constructor` method in a class will throw a {{jsxref("SyntaxError")}} error. Having a getter or setter called `constructor` is also a {{jsxref("SyntaxError")}}.
 
 The `constructor` follows normal [method](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) syntax, so [parameter default values](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), etc. can all be used.
 

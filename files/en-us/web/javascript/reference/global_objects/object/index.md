@@ -39,8 +39,8 @@ const obj = {
   // you are receiving the object from external input
   propertyIsEnumerable() {
     return false;
-  }
-}
+  },
+};
 
 obj.propertyIsEnumerable("foo"); // false; unexpected result
 Object.prototype.propertyIsEnumerable.call(obj, "foo"); // true; expected result
@@ -291,8 +291,8 @@ const current = Object.prototype.valueOf;
 // Since my property "-prop-value" is cross-cutting and isn't always
 // on the same prototype chain, I want to modify Object.prototype:
 Object.prototype.valueOf = function (...args) {
-  if (Object.hasOwn(this, '-prop-value')) {
-    return this['-prop-value'];
+  if (Object.hasOwn(this, "-prop-value")) {
+    return this["-prop-value"];
   } else {
     // It doesn't look like one of my objects, so let's fall back on
     // the default behavior by reproducing the current behavior as best we can.
@@ -300,7 +300,7 @@ Object.prototype.valueOf = function (...args) {
     // Even though valueOf() doesn't take arguments, some other hook may.
     return current.apply(this, args);
   }
-}
+};
 ```
 
 > **Warning:** Modifying the `prototype` property of any built-in constructor is considered a bad practice and risks forward compatibility.

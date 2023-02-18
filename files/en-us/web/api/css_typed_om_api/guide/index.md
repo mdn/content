@@ -42,10 +42,10 @@ We add JavaScript to grab our unstyled link and return back a definition list of
 
 ```js
 // Get the element
-const myElement = document.querySelector('a');
+const myElement = document.querySelector("a");
 
 // Get the <dl> we'll be populating
-const stylesList = document.querySelector('#regurgitation');
+const stylesList = document.querySelector("#regurgitation");
 
 // Retrieve all computed styles with computedStyleMap()
 const defaultComputedStyles = myElement.computedStyleMap();
@@ -53,12 +53,12 @@ const defaultComputedStyles = myElement.computedStyleMap();
 // Iterate through the map of all the properties and values, adding a <dt> and <dd> for each
 for (const [prop, val] of defaultComputedStyles) {
   // properties
-  const cssProperty = document.createElement('dt');
+  const cssProperty = document.createElement("dt");
   cssProperty.appendChild(document.createTextNode(prop));
   stylesList.appendChild(cssProperty);
 
   // values
-  const cssValue = document.createElement('dd');
+  const cssValue = document.createElement("dd");
   cssValue.appendChild(document.createTextNode(val));
   stylesList.appendChild(cssValue);
 }
@@ -100,26 +100,26 @@ Instead of getting _all_ the properties, we create an array of properties of int
 
 ```js
 // Get the element
-const myElement = document.querySelector('a');
+const myElement = document.querySelector("a");
 
 // Get the <dl> we'll be populating
-const stylesList = document.querySelector('#regurgitation');
+const stylesList = document.querySelector("#regurgitation");
 
 // Retrieve all computed styles with computedStyleMap()
 const allComputedStyles = myElement.computedStyleMap();
 
 // Array of properties we're interested in
-const ofInterest = ['font-weight', 'border-left-color', 'color', '--color'];
+const ofInterest = ["font-weight", "border-left-color", "color", "--color"];
 
 // iterate through our properties of interest
 for (const value of ofInterest) {
   // Properties
-  const cssProperty = document.createElement('dt');
+  const cssProperty = document.createElement("dt");
   cssProperty.appendChild(document.createTextNode(value));
   stylesList.appendChild(cssProperty);
 
   // Values
-  const cssValue = document.createElement('dd');
+  const cssValue = document.createElement("dd");
   cssValue.appendChild(document.createTextNode(allComputedStyles.get(value)));
   stylesList.appendChild(cssValue);
 }
@@ -161,30 +161,38 @@ For each property of interest, we list the name of the property, use `.get(prope
 
 ```js
 // Get the element we're inspecting
-const myElement = document.querySelector('p');
+const myElement = document.querySelector("p");
 
 // Get the table we'll be populating
-const stylesTable = document.querySelector('#regurgitation');
+const stylesTable = document.querySelector("#regurgitation");
 
 // Retrieve all computed styles with computedStyleMap()
 const allComputedStyles = myElement.computedStyleMap();
 
 // Array of properties we're interested in
-const ofInterest = ['padding-top', 'margin-bottom', 'font-size', 'font-stretch',
-                    'animation-duration', 'animation-iteration-count', 'width', 'height'];
+const ofInterest = [
+  "padding-top",
+  "margin-bottom",
+  "font-size",
+  "font-stretch",
+  "animation-duration",
+  "animation-iteration-count",
+  "width",
+  "height",
+];
 
 // Iterate through our properties of interest
 for (const value of ofInterest) {
   // Create a row
-  const row = document.createElement('tr');
+  const row = document.createElement("tr");
 
   // Add the name of the property
-  const cssProperty = document.createElement('td');
+  const cssProperty = document.createElement("td");
   cssProperty.appendChild(document.createTextNode(value));
   row.appendChild(cssProperty);
 
   // Add the unitless value
-  const cssValue = document.createElement('td');
+  const cssValue = document.createElement("td");
 
   // Shrink long floats to 1 decimal point
   let propVal = allComputedStyles.get(value).value;
@@ -193,8 +201,10 @@ for (const value of ofInterest) {
   row.appendChild(cssValue);
 
   // Add the type of unit
-  const cssUnit = document.createElement('td');
-  cssUnit.appendChild(document.createTextNode(allComputedStyles.get(value).unit));
+  const cssUnit = document.createElement("td");
+  cssUnit.appendChild(
+    document.createTextNode(allComputedStyles.get(value).unit)
+  );
   row.appendChild(cssUnit);
 
   // Add the row to the table
@@ -276,37 +286,37 @@ Let's add the class to a button (a button which does nothing).
 
 ```js hidden
 // get the element
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
 // Retrieve all computed styles with computedStyleMap()
 const allComputedStyles = button.computedStyleMap();
 
 // CSSMathSum Example
-let btnWidth = allComputedStyles.get('width')
+let btnWidth = allComputedStyles.get("width");
 
 console.log(btnWidth); // CSSMathSum
 console.log(btnWidth.values); // CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, length: 2}
 console.log(btnWidth.operator); // 'sum'
 
 // CSSTransformValue
-let transform = allComputedStyles.get('transform');
+let transform = allComputedStyles.get("transform");
 
-console.log(transform);        // CSSTransformValue {0: CSSScale, 1: CSSTranslate, length: 2, is2D: true}
+console.log(transform); // CSSTransformValue {0: CSSScale, 1: CSSTranslate, length: 2, is2D: true}
 console.log(transform.length); // 1
-console.log(transform[0]);     // CSSScale {x: CSSUnitValue, y: CSSUnitValue, z: CSSUnitValue, is2D: true}
-console.log(transform[0].x);   // CSSUnitValue {value: 0.95, unit: "number"}
-console.log(transform[0].y);   // CSSUnitValue {value: 0.95, unit: "number"}
-console.log(transform[0].z);   // CSSUnitValue {value: 1, unit: "number"}
-console.log(transform.is2D);   // true
+console.log(transform[0]); // CSSScale {x: CSSUnitValue, y: CSSUnitValue, z: CSSUnitValue, is2D: true}
+console.log(transform[0].x); // CSSUnitValue {value: 0.95, unit: "number"}
+console.log(transform[0].y); // CSSUnitValue {value: 0.95, unit: "number"}
+console.log(transform[0].z); // CSSUnitValue {value: 1, unit: "number"}
+console.log(transform.is2D); // true
 
 // CSSImageValue
-let bgImage = allComputedStyles.get('background-image');
+let bgImage = allComputedStyles.get("background-image");
 
-console.log(bgImage);             // CSSImageValue
+console.log(bgImage); // CSSImageValue
 console.log(bgImage.toString()); // url("magicwand.png")
 
 // CSSUnparsedValue
-let unit = allComputedStyles.get('--unit');
+let unit = allComputedStyles.get("--unit");
 
 console.log(unit);
 
@@ -319,7 +329,7 @@ console.log(parsedUnit.value);
 We grab our `StylePropertyMapReadOnly` with the following JavaScript:
 
 ```js
-const allComputedStyles = document.querySelector('button').computedStyleMap();
+const allComputedStyles = document.querySelector("button").computedStyleMap();
 ```
 
 The following examples reference `allComputedStyles`:
@@ -330,9 +340,9 @@ The {{domxref('CSSUnparsedValue')}} represents [custom properties](/en-US/docs/W
 
 ```js
 // CSSUnparsedValue
-const unit = allComputedStyles.get('--unit');
+const unit = allComputedStyles.get("--unit");
 
-console.log(unit);    // CSSUnparsedValue {0: " 1.2rem", length: 1}
+console.log(unit); // CSSUnparsedValue {0: " 1.2rem", length: 1}
 console.log(unit[0]); // " 1.2rem"
 ```
 
@@ -340,9 +350,9 @@ When we invoke `get()`, a custom property of type `CSSUnparsedValue` is returned
 
 ```js
 const parsedUnit = CSSNumericValue.parse(unit);
-console.log(parsedUnit);        // CSSUnitValue {value: 1.2, unit: "rem"}
-console.log(parsedUnit.unit);   // "rem"
-console.log(parsedUnit.value);  // 1.2
+console.log(parsedUnit); // CSSUnitValue {value: 1.2, unit: "rem"}
+console.log(parsedUnit.unit); // "rem"
+console.log(parsedUnit.value); // 1.2
 ```
 
 ### CSSMathSum
@@ -354,11 +364,11 @@ When we `get()` the `width`, we get a [`CSSMathSum`](/en-US/docs/Web/API/CSSMath
 The value of {{domxref('CSSMathValue.operator')}} is `sum`:
 
 ```js
-const btnWidth = allComputedStyles.get('width');
+const btnWidth = allComputedStyles.get("width");
 
-console.log(btnWidth);             // CSSMathSum
-console.log(btnWidth.values);      // CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, length: 2}
-console.log(btnWidth.operator);    // 'sum'
+console.log(btnWidth); // CSSMathSum
+console.log(btnWidth.values); // CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, length: 2}
+console.log(btnWidth.operator); // 'sum'
 ```
 
 ### CSSTransformValue with CSSScale
@@ -366,15 +376,15 @@ console.log(btnWidth.operator);    // 'sum'
 The [`display: inline-block;`](/en-US/docs/Web/CSS/CSS_Display) also enables transforming. In our CSS we have `transform: scale(0.95);`, which is a {{cssxref('transform')}} function.
 
 ```js
-const transform = allComputedStyles.get('transform');
+const transform = allComputedStyles.get("transform");
 
-console.log(transform);        // CSSTransformValue {0: CSSScale, 1: CSSTranslate, length: 2, is2D: true}
+console.log(transform); // CSSTransformValue {0: CSSScale, 1: CSSTranslate, length: 2, is2D: true}
 console.log(transform.length); // 1
-console.log(transform[0]);     // CSSScale {x: CSSUnitValue, y: CSSUnitValue, z: CSSUnitValue, is2D: true}
-console.log(transform[0].x);   // CSSUnitValue {value: 0.95, unit: "number"}
-console.log(transform[0].y);   // CSSUnitValue {value: 0.95, unit: "number"}
-console.log(transform[0].z);   // CSSUnitValue {value: 1, unit: "number"}
-console.log(transform.is2D);   // true
+console.log(transform[0]); // CSSScale {x: CSSUnitValue, y: CSSUnitValue, z: CSSUnitValue, is2D: true}
+console.log(transform[0].x); // CSSUnitValue {value: 0.95, unit: "number"}
+console.log(transform[0].y); // CSSUnitValue {value: 0.95, unit: "number"}
+console.log(transform[0].z); // CSSUnitValue {value: 1, unit: "number"}
+console.log(transform.is2D); // true
 ```
 
 When we `get()` the `transform` property, we get a {{domxref('CSSTransformValue')}}. We can query the length (or number) of transform functions with the `length` property.
@@ -388,10 +398,10 @@ Had we added `translate()`, `skew()`, and `rotate()` transform functions, the le
 Our button has one background image: a magic wand.
 
 ```js
-const bgImage = allComputedStyles.get('background-image');
+const bgImage = allComputedStyles.get("background-image");
 
-console.log(bgImage);             // CSSImageValue
-console.log(bgImage.toString());  // url("magicwand.png")
+console.log(bgImage); // CSSImageValue
+console.log(bgImage.toString()); // url("magicwand.png")
 ```
 
 When we `get()` the `'background-image'`, a {{domxref('CSSImageValue')}} is returned. While we used the CSS {{cssxref('background')}} shorthand property, the inherited {{domxref('Object.prototype.toString()')}} method, shows we returned only the image, `'url("magicwand.png")'`.

@@ -1,5 +1,5 @@
 ---
-title: 'Warning: unreachable code after return statement'
+title: "Warning: unreachable code after return statement"
 slug: Web/JavaScript/Reference/Errors/Stmt_after_return
 page-type: javascript-error
 tags:
@@ -54,7 +54,7 @@ Warnings will not be shown for semicolon-less returns if these statements follow
 
 ### Invalid cases
 
-```js example-bad
+```js-nolint example-bad
 function f() {
   let x = 3;
   x += 4;
@@ -70,16 +70,16 @@ function g() {
 
 ### Valid cases
 
-```js example-good
+```js-nolint example-good
 function f() {
   let x = 3;
   x += 4;
   x -= 3;
-  return x;  // OK: return after all other statements
+  return x; // OK: return after all other statements
 }
 
 function g() {
-  return 3 + 4  // OK: semicolon-less return with expression on the same line
+  return 3 + 4 // OK: semicolon-less return with expression on the same line
 }
 ```
 

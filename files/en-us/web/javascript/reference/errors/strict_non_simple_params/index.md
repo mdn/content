@@ -11,7 +11,7 @@ tags:
 
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "`'use strict'` not allowed in function" occurs
+The JavaScript exception "`"use strict"` not allowed in function" occurs
 when a `"use strict"` directive is used at the top of a function with
 {{jsxref("Functions/Default_parameters", "default parameters", "", 1)}},
 {{jsxref("Functions/rest_parameters", "rest parameters", "", 1)}}, or
@@ -53,7 +53,7 @@ In this case, the function `sum` has default parameters `a=1` and
 ```js example-bad
 function sum(a = 1, b = 2) {
   // SyntaxError: "use strict" not allowed in function with default parameter
-  'use strict';
+  "use strict";
   return a + b;
 }
 ```
@@ -63,7 +63,7 @@ entire script or enclosing function is also okay to be in strict mode, you can m
 `"use strict"` directive outside of the function:
 
 ```js example-good
-'use strict';
+"use strict";
 function sum(a = 1, b = 2) {
   return a + b;
 }
@@ -76,7 +76,7 @@ A function expression can use yet another workaround:
 ```js example-bad
 const sum = function sum([a, b]) {
   // SyntaxError: "use strict" not allowed in function with destructuring parameter
-  'use strict';
+  "use strict";
   return a + b;
 };
 ```
@@ -84,8 +84,8 @@ const sum = function sum([a, b]) {
 This can be converted to the following expression:
 
 ```js example-good
-const sum = (function() {
-  'use strict';
+const sum = (function () {
+  "use strict";
   return function sum([a, b]) {
     return a + b;
   };
@@ -100,7 +100,7 @@ arrow function as the enclosing function:
 ```js example-bad
 const callback = (...args) => {
   // SyntaxError: "use strict" not allowed in function with rest parameter
-  'use strict';
+  "use strict";
   return this.run(args);
 };
 ```
@@ -109,7 +109,7 @@ This can be converted to the following expression:
 
 ```js example-good
 const callback = (() => {
-  'use strict';
+  "use strict";
   return (...args) => {
     return this.run(args);
   };

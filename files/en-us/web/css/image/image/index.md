@@ -91,7 +91,7 @@ ul {
 }
 ```
 
-In the left-to-right list items — those with `dir="ltr"` set on the element itself or inheriting the directionality from an ancestor or default value for the page — the image will be used as-is. List items with `dir="rtl"` set on the `<li>` or inheriting the right-to-left directionality from an ancestor, such as documents set to Arabic or Hebrew, will have the bullet display on the right, horizontally flipped, as if `transform: scalex(-1)` had been set. The text will also be displayed left-to-right.
+In the left-to-right list items — those with `dir="ltr"` set on the element itself or inheriting the directionality from an ancestor or default value for the page — the image will be used as-is. List items with `dir="rtl"` set on the `<li>` or inheriting the right-to-left directionality from an ancestor, such as documents set to Arabic or Hebrew, will have the bullet display on the right, horizontally flipped, as if `transform: scaleX(-1)` had been set. The text will also be displayed left-to-right.
 
 {{EmbedLiveSample("Directionally-sensitive_images", "100%", 200)}}
 

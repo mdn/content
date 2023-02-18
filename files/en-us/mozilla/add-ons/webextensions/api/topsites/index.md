@@ -1,6 +1,7 @@
 ---
 title: topSites
 slug: Mozilla/Add-ons/WebExtensions/API/topSites
+page-type: webextension-api
 tags:
   - API
   - Add-ons
