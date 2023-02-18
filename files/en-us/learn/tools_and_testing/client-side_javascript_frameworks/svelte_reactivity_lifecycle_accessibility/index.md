@@ -278,7 +278,7 @@ We will add one usability detail to our component. We'll disable the buttons whe
 2. Don't forget to pass the prop into `MoreActions` from inside `Todos.svelte`, where the component is called:
 
    ```html
-   <MoreActions {todos}
+   <MoreActions todos={filterTodos(filter,todos)}
        on:checkAll={(e) => checkAllTodos(e.detail)}
        on:removeCompleted={removeCompletedTodos}
      />
