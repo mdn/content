@@ -2,11 +2,6 @@
 title: Sending and Receiving Binary Data
 slug: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
 page-type: guide
-tags:
-  - AJAX
-  - FileReader
-  - MIME
-  - XMLHttpRequest
 ---
 
 The `responseType` property of the XMLHttpRequest object can be set to change the expected response type from the server. Possible values are the empty string (default), `"arraybuffer"`, `"blob"`, `"document"`, `"json"`, and `"text"`. The `response` property will contain the entity body according to `responseType`, as an `ArrayBuffer`, `Blob`, `Document`, `JSON`, or string. This is `null` if the request is not complete or was not successful.
