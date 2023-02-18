@@ -1,6 +1,7 @@
 ---
 title: action
 slug: Mozilla/Add-ons/WebExtensions/API/action
+page-type: webextension-api
 tags:
   - API
   - Add-ons

@@ -2,16 +2,6 @@
 title: AnimationPlaybackEvent.timelineTime
 slug: Web/API/AnimationPlaybackEvent/timelineTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - AnimationPlaybackEvent
-  - Attribute
-  - Property
-  - Reference
-  - timelineTime
-  - waapi
-  - web animations api
 browser-compat: api.AnimationPlaybackEvent.timelineTime
 ---
 

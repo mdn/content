@@ -2,15 +2,6 @@
 title: XMLHttpRequest.responseText
 slug: Web/API/XMLHttpRequest/responseText
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetching Text
-  - Loading Text
-  - Property
-  - Read-only
-  - Reference
-  - XMLHttpRequest
-  - responseText
 browser-compat: api.XMLHttpRequest.responseText
 ---
 

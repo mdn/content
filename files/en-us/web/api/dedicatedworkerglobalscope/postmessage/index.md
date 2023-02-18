@@ -19,7 +19,7 @@ The **`postMessage()`** method of the {{domxref("DedicatedWorkerGlobalScope")}} 
 This accepts a data parameter, which contains data to copy from the worker to the main thread.
 The data may be any value or JavaScript object handled by the [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) algorithm, which includes cyclical references.
 
-The method also accepts an optional array of {{Glossary("Transferable objects")}} to _transfer_ to the main thread;
+The method also accepts an optional array of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to _transfer_ to the main thread;
 Unlike the data parameter transferred objects are no longer usable in the worker thread.
 (Where possible, objects are transferred using a high performance zero-copy operation).
 
@@ -28,20 +28,20 @@ The main scope that spawned the worker can send back information to the thread t
 ## Syntax
 
 ```js-nolint
-postMessage(aMessage, transferList)
+postMessage(message, transferList)
 ```
 
 ### Parameters
 
-- `aMessage`
+- `message`
   - : The object to deliver to the main thread; this will be in the data field in the event delivered to the {{domxref("Worker.message_event")}}.
     This may be any value or JavaScript object handled by the [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) algorithm, which includes cyclical references.
 - `transferList` {{optional_inline}}
 
-  - : An optional ordered [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of {{Glossary("transferable objects")}} to transfer ownership of.
+  - : An optional ordered [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of.
     If the ownership of an object is transferred, it becomes unusable in the context it was sent from and it becomes available only to the main thread it was sent to.
 
-    Only {{Glossary("transferable objects")}} can be transferred.
+    Only [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) can be transferred.
 
 ### Return value
 

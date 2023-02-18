@@ -1,6 +1,7 @@
 ---
 title: browserSettings.ftpProtocolEnabled
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/ftpProtocolEnabled
+page-type: webextension-api-property
 tags:
   - API
   - Add-ons

@@ -2,14 +2,8 @@
 title: XRWebGLBinding.createEquirectLayer()
 slug: Web/API/XRWebGLBinding/createEquirectLayer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLBinding.createEquirectLayer
 ---
 

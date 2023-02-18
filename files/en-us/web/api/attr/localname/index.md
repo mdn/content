@@ -2,10 +2,6 @@
 title: Attr.localName
 slug: Web/API/Attr/localName
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Attr.localName
 ---
 

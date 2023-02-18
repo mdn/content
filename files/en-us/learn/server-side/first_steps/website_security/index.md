@@ -153,9 +153,3 @@ This article has explained the concept of web security and some of the more comm
 With this article, you've come to the end of [this module](/en-US/docs/Learn/Server-side/First_steps), covering your first steps in server-side website programming. We hope you've enjoyed learning these fundamental concepts, and you're now ready to select a Web Framework and start programming.
 
 {{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
-
-## In this module
-
-- [Introduction to the server side](/en-US/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/en-US/docs/Learn/Server-side/First_steps/Web_frameworks)

@@ -2,19 +2,8 @@
 title: XRSession.visibilityState
 slug: Web/API/XRSession/visibilityState
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRSession
-  - visibilityState
+status:
+  - experimental
 browser-compat: api.XRSession.visibilityState
 ---
 

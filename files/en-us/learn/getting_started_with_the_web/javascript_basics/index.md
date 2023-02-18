@@ -479,14 +479,3 @@ We have just scratched the surface of JavaScript. If you enjoyed playing, and wi
   - : This is an excellent resource for aspiring web developers! Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by an automated assessment. The first 40 lessons are free. The complete course is available for a small one-time payment.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
-
-## In this module
-
-- [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publishing your website](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [How the web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

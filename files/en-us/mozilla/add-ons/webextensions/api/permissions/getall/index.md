@@ -1,6 +1,7 @@
 ---
 title: permissions.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/getAll
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

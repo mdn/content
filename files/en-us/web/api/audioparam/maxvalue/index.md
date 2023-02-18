@@ -2,14 +2,6 @@
 title: AudioParam.maxValue
 slug: Web/API/AudioParam/maxValue
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - Property
-  - Reference
-  - Web Audio API
-  - maxValue
 browser-compat: api.AudioParam.maxValue
 ---
 

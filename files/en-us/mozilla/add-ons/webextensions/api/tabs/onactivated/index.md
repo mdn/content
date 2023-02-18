@@ -1,6 +1,7 @@
 ---
 title: tabs.onActivated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onActivated
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

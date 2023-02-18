@@ -2,16 +2,8 @@
 title: AudioWorkletProcessor.process()
 slug: Web/API/AudioWorkletProcessor/process
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioWorkletNode
-  - AudioWorkletProcessor
-  - Experimental
-  - Method
-  - Process
-  - Reference
-  - Web Audio API
+status:
+  - experimental
 browser-compat: api.AudioWorkletProcessor.process
 ---
 

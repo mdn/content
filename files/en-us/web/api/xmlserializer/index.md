@@ -2,17 +2,6 @@
 title: XMLSerializer
 slug: Web/API/XMLSerializer
 page-type: web-api-interface
-tags:
-  - Converting
-  - DOM Parsing
-  - Interface
-  - Parsing
-  - Reference
-  - Serialization
-  - Serializing
-  - XML
-  - XMLSerializer
-  - conversion
 browser-compat: api.XMLSerializer
 ---
 
