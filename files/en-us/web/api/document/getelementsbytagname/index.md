@@ -55,7 +55,7 @@ Clicking the buttons uses `getElementsByTagName()` to count the descendant
 paragraph elements of a particular parent (either the document itself or one of two
 nested {{HTMLElement("div")}} elements).
 
-```html
+```html-nolint
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -101,12 +101,15 @@ nested {{HTMLElement("div")}} elements).
     <p>Some outer text</p>
     <p>Some outer text</p>
 
-    <button onclick="getAllParaElems();">Show all p elements in document</button
-    ><br />
+    <button onclick="getAllParaElems();">
+      Show all p elements in document
+    </button>
+    <br />
 
     <button onclick="div1ParaElems();">
-      Show all p elements in div1 element</button
-    ><br />
+      Show all p elements in div1 element
+    </button>
+    <br />
 
     <button onclick="div2ParaElems();">
       Show all p elements in div2 element

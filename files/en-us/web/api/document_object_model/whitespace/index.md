@@ -25,7 +25,7 @@ In the case of HTML, whitespace is largely ignored — whitespace in between wor
 ```html-nolint
 <!DOCTYPE html>
 
-<h1> Hello World! </h1>
+  <h1>      Hello      World!     </h1>
 ```
 
 This source code contains a couple of line feeds after the `DOCTYPE` and a bunch of space characters before, after, and inside the `<h1>` element, but the browser doesn't seem to care at all and just shows the words "Hello World!" as if these characters didn't exist at all:
