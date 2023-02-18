@@ -2,14 +2,8 @@
 title: XRFrame.getHitTestResults()
 slug: Web/API/XRFrame/getHitTestResults
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRFrame.getHitTestResults
 ---
 

@@ -79,19 +79,3 @@ To effectively understand web performance, the issues behind it, and the major t
 That's it for now; we hope our brief overview of the web performance topic helped you to get an idea of what it is all about, and made you excited to learn more. Next up we'll look at perceived performance, and how you can use some clever techniques to make some unavoidable performance hits appear less severe to the user, or disguise them completely.
 
 {{PreviousMenuNext("Learn/Performance/why_web_performance", "Learn/Performance/Perceived_performance", "Learn/Performance")}}
-
-## In this module
-
-- [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
-- [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)
-- [How do users perceive performance?](/en-US/docs/Learn/Performance/Perceived_performance)
-- [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
-- [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
-- [Multimedia: video](/en-US/docs/Learn/Performance/video)
-- [JavaScript performance best practices](/en-US/docs/Learn/Performance/JavaScript)
-- [HTML performance features](/en-US/docs/Learn/Performance/HTML)
-- [CSS performance features](/en-US/docs/Learn/Performance/CSS)
-- [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)
-- [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
-- [The business case for web performance](/en-US/docs/Learn/Performance/business_case_for_performance)
-- [Web performance resources](/en-US/docs/Learn/Performance/Web_Performance_Basics)

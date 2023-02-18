@@ -1,6 +1,7 @@
 ---
 title: browserSettings.overrideContentColorScheme
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/overrideContentColorScheme
+page-type: webextension-api-property
 tags:
   - API
   - Add-ons

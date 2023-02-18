@@ -2,19 +2,6 @@
 title: XMLHttpRequest.response
 slug: Web/API/XMLHttpRequest/response
 page-type: web-api-instance-property
-tags:
-  - AJAX
-  - API
-  - Fetching Content
-  - Fetching Data
-  - Loading Data
-  - Property
-  - Read-only
-  - Reading Data
-  - Reference
-  - Response
-  - Server
-  - XMLHttpRequest
 browser-compat: api.XMLHttpRequest.response
 ---
 

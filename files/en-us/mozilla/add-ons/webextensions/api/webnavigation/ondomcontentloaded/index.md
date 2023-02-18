@@ -1,6 +1,7 @@
 ---
 title: webNavigation.onDOMContentLoaded
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onDOMContentLoaded
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

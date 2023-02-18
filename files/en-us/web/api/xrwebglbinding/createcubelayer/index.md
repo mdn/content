@@ -2,14 +2,8 @@
 title: XRWebGLBinding.createCubeLayer()
 slug: Web/API/XRWebGLBinding/createCubeLayer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLBinding.createCubeLayer
 ---
 

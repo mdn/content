@@ -2,27 +2,8 @@
 title: XRWebGLLayer.framebufferHeight
 slug: Web/API/XRWebGLLayer/framebufferHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Buffer
-  - Frame
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - augmented
-  - framebufferHeight
-  - height
-  - size
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer.framebufferHeight
 ---
 

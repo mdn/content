@@ -2,21 +2,6 @@
 title: XMLHttpRequest.responseXML
 slug: Web/API/XMLHttpRequest/responseXML
 page-type: web-api-instance-property
-tags:
-  - AJAX
-  - API
-  - Fetching XML
-  - Loading XML
-  - Property
-  - Read-only
-  - Reading XML
-  - Reference
-  - Transfer
-  - XML
-  - XMLHttpRequest
-  - download
-  - responseXML
-  - upload
 browser-compat: api.XMLHttpRequest.responseXML
 ---
 

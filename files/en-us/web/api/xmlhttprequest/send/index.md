@@ -2,18 +2,6 @@
 title: XMLHttpRequest.send()
 slug: Web/API/XMLHttpRequest/send
 page-type: web-api-instance-method
-tags:
-  - AJAX
-  - API
-  - HTTP request
-  - Method
-  - NeedsContent
-  - NeedsExample
-  - Reference
-  - XHR
-  - XHR Request
-  - XMLHttpRequest
-  - send
 browser-compat: api.XMLHttpRequest.send
 ---
 

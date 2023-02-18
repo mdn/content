@@ -2,26 +2,8 @@
 title: XRInputSourceArray.length
 slug: Web/API/XRInputSourceArray/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Input Sources
-  - Inputs
-  - Mixed
-  - Property
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSourceArray
-  - augmented
-  - controllers
-  - count
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRInputSourceArray.length
 ---
 

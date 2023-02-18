@@ -2,21 +2,6 @@
 title: XRSessionEvent()
 slug: Web/API/XRSessionEvent/XRSessionEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Mixed
-  - Reality
-  - Reference
-  - Session
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRSessionEvent
-  - augmented
-  - events
 browser-compat: api.XRSessionEvent.XRSessionEvent
 ---
 

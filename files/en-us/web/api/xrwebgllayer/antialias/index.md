@@ -2,27 +2,8 @@
 title: XRWebGLLayer.antialias
 slug: Web/API/XRWebGLLayer/antialias
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Drawing
-  - Graphics
-  - Quality
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - anti-aliasing
-  - antialias
-  - appearance
-  - augmented
-  - rendering
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer.antialias
 ---
 

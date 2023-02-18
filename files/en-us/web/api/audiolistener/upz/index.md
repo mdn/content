@@ -2,14 +2,6 @@
 title: AudioListener.upZ
 slug: Web/API/AudioListener/upZ
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioListener
-  - Property
-  - Reference
-  - Web Audio API
-  - upZ
 browser-compat: api.AudioListener.upZ
 ---
 

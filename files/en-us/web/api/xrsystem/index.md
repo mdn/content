@@ -2,19 +2,8 @@
 title: XRSystem
 slug: Web/API/XRSystem
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRSystem
+status:
+  - experimental
 browser-compat: api.XRSystem
 ---
 

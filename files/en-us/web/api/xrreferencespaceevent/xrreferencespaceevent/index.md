@@ -2,24 +2,6 @@
 title: XRReferenceSpaceEvent()
 slug: Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - AR
-  - Constructor
-  - Events
-  - Mixed
-  - Reality
-  - Reference
-  - Reference Space
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRReferenceSpaceEvent
-  - augmented
-  - events
 browser-compat: api.XRReferenceSpaceEvent.XRReferenceSpaceEvent
 ---
 

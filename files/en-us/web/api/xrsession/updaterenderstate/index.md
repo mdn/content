@@ -2,19 +2,8 @@
 title: XRSession.updateRenderState()
 slug: Web/API/XRSession/updateRenderState
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRSession
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRSession.updateRenderState
 ---
 

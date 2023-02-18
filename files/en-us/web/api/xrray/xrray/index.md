@@ -2,13 +2,8 @@
 title: XRRay()
 slug: Web/API/XRRay/XRRay
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - WebXR
-  - XR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRRay.XRRay
 ---
 

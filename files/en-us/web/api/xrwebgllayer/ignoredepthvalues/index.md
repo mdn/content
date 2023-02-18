@@ -2,25 +2,8 @@
 title: XRWebGLLayer.ignoreDepthValues
 slug: Web/API/XRWebGLLayer/ignoreDepthValues
 page-type: web-api-instance-property
-tags:
-  - 3D
-  - API
-  - AR
-  - Depth
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebGL
-  - WebGL API
-  - WebGL Device API
-  - XR
-  - XRWebGLLayer
-  - augmented
-  - ignoreDepthValues
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer.ignoreDepthValues
 ---
 

@@ -2,19 +2,8 @@
 title: XRSession.cancelAnimationFrame()
 slug: Web/API/XRSession/cancelAnimationFrame
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRSession
-  - cancelAnimationFrame()
+status:
+  - experimental
 browser-compat: api.XRSession.cancelAnimationFrame
 ---
 

@@ -173,12 +173,12 @@ Elements with the following [`role="…"`](/en-US/docs/Web/Accessibility/ARIA/Ro
   </tr>
   <tr>
    <td>marquee</td>
-   <td>for text which scrolls, such as a stock ticker.</td>
+   <td>Text which scrolls, such as a stock ticker.</td>
    <td></td>
   </tr>
   <tr>
    <td>timer</td>
-   <td>or any kind of timer or clock, such as a countdown timer or stopwatch readout.</td>
+   <td>Any kind of timer or clock, such as a countdown timer or stopwatch readout.</td>
    <td></td>
   </tr>
  </tbody>

@@ -2,13 +2,6 @@
 title: XPathResult.stringValue
 slug: Web/API/XPathResult/stringValue
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM XPath API
-  - Property
-  - Reference
-  - XPath
-  - XPathResult
 browser-compat: api.XPathResult.stringValue
 ---
 

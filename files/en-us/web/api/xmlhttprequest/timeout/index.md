@@ -2,15 +2,6 @@
 title: XMLHttpRequest.timeout
 slug: Web/API/XMLHttpRequest/timeout
 page-type: web-api-instance-property
-tags:
-  - AJAX
-  - Asynchronous XHR
-  - Asynchronous XMLHttpRequest
-  - Property
-  - Reference
-  - XHR
-  - XMLHttpRequest
-  - timeout
 browser-compat: api.XMLHttpRequest.timeout
 ---
 

@@ -2,13 +2,6 @@
 title: AuthenticatorAssertionResponse.userHandle
 slug: Web/API/AuthenticatorAssertionResponse/userHandle
 page-type: web-api-instance-property
-tags:
-  - API
-  - AuthenticatorAssertionResponse
-  - Property
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 browser-compat: api.AuthenticatorAssertionResponse.userHandle
 ---
 

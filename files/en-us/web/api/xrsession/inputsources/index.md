@@ -2,19 +2,8 @@
 title: XRSession.inputSources
 slug: Web/API/XRSession/inputSources
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRSession
-  - inputSources
+status:
+  - experimental
 browser-compat: api.XRSession.inputSources
 ---
 

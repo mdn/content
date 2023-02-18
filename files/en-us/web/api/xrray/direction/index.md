@@ -2,16 +2,8 @@
 title: XRRay.direction
 slug: Web/API/XRRay/direction
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR Device API
+status:
+  - experimental
 browser-compat: api.XRRay.direction
 ---
 

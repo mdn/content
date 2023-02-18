@@ -1,6 +1,7 @@
 ---
 title: webRequest.ResourceType
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/ResourceType
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons
@@ -64,8 +65,6 @@ Values of this type are strings. Possible values are:
   - : [Web App Manifests](/en-US/docs/Web/Manifest) loaded for websites that can be installed to the homescreen.
 - `websocket`
   - : Requests initiating a connection to a server through the [WebSocket API](/en-US/docs/Web/API/WebSockets_API).
-- `xbl`
-  - : [XBL](/en-US/docs/Mozilla/Tech/XBL) bindings loaded to extend the behavior of elements in a document.
 - `xml_dtd`
   - : [DTDs](/en-US/docs/Glossary/Doctype) loaded for an XML document.
 - `xmlhttprequest`

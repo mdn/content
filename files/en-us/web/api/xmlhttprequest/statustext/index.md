@@ -2,14 +2,6 @@
 title: XMLHttpRequest.statusText
 slug: Web/API/XMLHttpRequest/statusText
 page-type: web-api-instance-property
-tags:
-  - AJAX
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - XMLHttpRequest
-  - XMLHttpRequest Status
 browser-compat: api.XMLHttpRequest.statusText
 ---
 

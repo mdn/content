@@ -2,16 +2,6 @@
 title: XPathEvaluator
 slug: Web/API/XPathEvaluator
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM XPath API
-  - Document
-  - Interface
-  - Reference
-  - XML
-  - XPath
-  - XPathEvaluator
 browser-compat: api.XPathEvaluator
 ---
 

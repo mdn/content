@@ -2,17 +2,8 @@
 title: XRSession
 slug: Web/API/XRSession
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR Device API
-  - XRSession
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRSession
 ---
 

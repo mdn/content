@@ -2,19 +2,8 @@
 title: XRCubeLayer
 slug: Web/API/XRCubeLayer
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRCubeLayer
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRCubeLayer
 ---
 
