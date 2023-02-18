@@ -2,13 +2,6 @@
 title: AnimationEffect
 slug: Web/API/AnimationEffect
 page-type: web-api-interface
-tags:
-  - API
-  - Animation
-  - Interface
-  - Reference
-  - Web Animations
-  - web animations api
 browser-compat: api.AnimationEffect
 ---
 
