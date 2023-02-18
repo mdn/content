@@ -2,19 +2,6 @@
 title: AudioTrack.enabled
 slug: Web/API/AudioTrack/enabled
 page-type: web-api-instance-property
-tags:
-  - Audio
-  - AudioTrack
-  - HTML DOM
-  - Media
-  - Media Controls
-  - Media Track
-  - Property
-  - Reference
-  - Video
-  - enabled
-  - mute
-  - track
 browser-compat: api.AudioTrack.enabled
 ---
 

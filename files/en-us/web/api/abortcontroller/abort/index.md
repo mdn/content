@@ -2,13 +2,6 @@
 title: AbortController.abort()
 slug: Web/API/AbortController/abort
 page-type: web-api-instance-method
-tags:
-  - API
-  - AbortController
-  - Fetch
-  - Method
-  - Reference
-  - abort()
 browser-compat: api.AbortController.abort
 ---
 

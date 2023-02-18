@@ -2,13 +2,8 @@
 title: AudioData.copyTo()
 slug: Web/API/AudioData/copyTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - copyTo
-  - AudioData
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioData.copyTo
 ---
 
