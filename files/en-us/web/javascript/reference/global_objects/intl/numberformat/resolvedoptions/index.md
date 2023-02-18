@@ -66,18 +66,18 @@ Only one of the following two groups of properties is included:
 ### Using the `resolvedOptions` method
 
 ```js
-const de = new Intl.NumberFormat('de-DE');
+const de = new Intl.NumberFormat("de-DE");
 const usedOptions = de.resolvedOptions();
 
-usedOptions.locale;                // "de-DE"
-usedOptions.numberingSystem;       // "latn"
-usedOptions.notation;              // "standard"
-usedOptions.signDisplay;           // "auto"
-usedOptions.style;                 // "decimal"
-usedOptions.minimumIntegerDigits;  // 1
+usedOptions.locale; // "de-DE"
+usedOptions.numberingSystem; // "latn"
+usedOptions.notation; // "standard"
+usedOptions.signDisplay; // "auto"
+usedOptions.style; // "decimal"
+usedOptions.minimumIntegerDigits; // 1
 usedOptions.minimumFractionDigits; // 0
 usedOptions.maximumFractionDigits; // 3
-usedOptions.useGrouping;           // true
+usedOptions.useGrouping; // true
 ```
 
 ## Specifications

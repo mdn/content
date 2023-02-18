@@ -1,6 +1,7 @@
 ---
 title: history.getVisits()
 slug: Mozilla/Add-ons/WebExtensions/API/history/getVisits
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

@@ -62,8 +62,11 @@ The following example shows how to count words in a string using the Japanese la
 
 ```js
 const text = "吾輩は猫である。名前はたぬき。";
-const japaneseSegmenter = new Intl.Segmenter("ja-JP", {granularity: "word"});
-console.log([...japaneseSegmenter.segment(text)].filter((segment) => segment.isWordLike).length);
+const japaneseSegmenter = new Intl.Segmenter("ja-JP", { granularity: "word" });
+console.log(
+  [...japaneseSegmenter.segment(text)].filter((segment) => segment.isWordLike)
+    .length,
+);
 // 8, as the text is segmented as '吾輩'|'は'|'猫'|'で'|'ある'|'。'|'名前'|'は'|'たぬき'|'。'
 ```
 

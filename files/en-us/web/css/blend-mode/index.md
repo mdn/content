@@ -403,10 +403,10 @@ div {
 #### JavaScript
 
 ```js
-const selectElem = document.querySelector('select');
-const divElem = document.querySelector('div');
+const selectElem = document.querySelector("select");
+const divElem = document.querySelector("div");
 
-selectElem.addEventListener('change', () => {
+selectElem.addEventListener("change", () => {
   divElem.style.backgroundBlendMode = selectElem.value;
 });
 ```
@@ -425,6 +425,7 @@ selectElem.addEventListener('change', () => {
 
 ## See also
 
+- The [CSS compositing and blending](/en-US/docs/Web/CSS/Compositing_and_Blending) module that defines the `<blend-mode>` values.
 - Properties that use this data type: {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}
 
 Description to various blend modes on other website:

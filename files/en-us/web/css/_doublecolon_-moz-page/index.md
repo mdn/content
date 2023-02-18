@@ -1,5 +1,5 @@
 ---
-title: '::-moz-page'
+title: "::-moz-page"
 slug: Web/CSS/::-moz-page
 page-type: css-pseudo-element
 tags:
@@ -20,8 +20,10 @@ The **`::-moz-page`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/We
 
 ## Syntax
 
-```
-::-moz-page
+```css
+::-moz-page {
+  /* ... */
+}
 ```
 
 ## Specifications

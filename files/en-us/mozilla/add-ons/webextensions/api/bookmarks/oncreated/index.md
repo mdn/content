@@ -1,6 +1,7 @@
 ---
 title: bookmarks.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onCreated
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

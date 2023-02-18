@@ -28,3 +28,7 @@ The interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides an ob
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("RTCPeerConnection.generateCertificate()")}}

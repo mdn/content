@@ -42,7 +42,7 @@ else
 
 Multiple `if...else` statements can be nested to create an `else if` clause. Note that there is no `elseif` (in one word) keyword in JavaScript.
 
-```js
+```js-nolint
 if (condition1)
   statement1
 else if (condition2)
@@ -56,7 +56,7 @@ else
 
 To see how this works, this is how it would look if the nesting were properly indented:
 
-```js
+```js-nolint
 if (condition1)
   statement1
 else
@@ -70,7 +70,7 @@ else
 
 To execute multiple statements within a clause, use a block statement (`{ /* ... */ }`) to group those statements.
 
-```js
+```js-nolint
 if (condition) {
   statements1
 } else {
@@ -80,7 +80,7 @@ if (condition) {
 
 Not using blocks may lead to confusing behavior, especially if the code is hand-formatted. For example:
 
-```js example-bad
+```js-nolint example-bad
 function checkValue(a, b) {
   if (a === 1)
     if (b === 2)
@@ -92,7 +92,7 @@ function checkValue(a, b) {
 
 This code looks innocent — however, executing `checkValue(1, 3)` will log "a is not 1". This is because in the case of [dangling else](https://en.wikipedia.org/wiki/Dangling_else), the `else` clause will be connected to the closest `if` clause. Therefore, the code above, with proper indentation, would look like:
 
-```js
+```js-nolint
 function checkValue(a, b) {
   if (a === 1)
     if (b === 2)
@@ -120,8 +120,9 @@ Do not confuse the primitive Boolean values `true` and `false` with truthiness o
 
 ```js
 const b = new Boolean(false);
-if (b) // this condition is truthy
-  statement
+if (b) {
+  console.log("b is truthy"); // "b is truthy"
+}
 ```
 
 ## Examples
@@ -155,9 +156,9 @@ if (x > 50) {
 
 You should almost never have an `if...else` with an assignment like `x = y` as a condition:
 
-```js example-bad
+```js-nolint example-bad
 if (x = y) {
-  /* do something */
+  // do something
 }
 ```
 

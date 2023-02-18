@@ -74,7 +74,7 @@ After this, the registration steps are:
 
 After a user has registered with web authentication, they can subsequently authenticate (a.k.a. - login or sign-in) with the service. The authentication flow looks similar to the registration flow, and the illustration of actions in Figure 2 may be recognizable as being similar to the illustration of registration actions in Figure 1. The primary differences between registration and authentication are that: 1) authentication doesn't require user or relying party information; and 2) authentication creates an assertion using the previously generated key pair for the service rather than creating an attestation with the key pair that was burned into the authenticator during manufacturing. Again, the description of authentication below is a broad overview rather than getting into all the options and features of the Web Authentication API. The specific options for authenticating can be found in the {{domxref("PublicKeyCredentialRequestOptions")}} dictionary, and the resulting data can be found in the {{domxref("PublicKeyCredential")}} interface (where {{domxref("PublicKeyCredential.response")}} is the {{domxref("AuthenticatorAssertionResponse")}} interface) .
 
-![WebAuthn authentication component and dataflow diagram](<mdn_webauthn_authentication_(r1).png>)
+![WebAuthn authentication component and dataflow diagram](mdn_webauthn_authentication_r1.png)
 
 _Figure 2 - similar to Figure 1, a diagram showing the sequence of actions for a web authentication and the essential data associated with each action._
 

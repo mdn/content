@@ -62,8 +62,8 @@ const deListFormatter = new Intl.ListFormat("de-DE", { style: "short" });
 
 const usedOptions = de.resolvedOptions();
 console.log(usedOptions.locale); // "de-DE"
-console.log(usedOptions.style);  // "short"
-console.log(usedOptions.type);   // "conjunction" (the default value)
+console.log(usedOptions.style); // "short"
+console.log(usedOptions.type); // "conjunction" (the default value)
 ```
 
 ## Specifications

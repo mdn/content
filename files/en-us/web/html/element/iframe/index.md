@@ -97,26 +97,26 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : Applies extra restrictions to the content in the frame. The value of the attribute can either be empty to apply all restrictions, or space-separated tokens to lift particular restrictions:
 
+    - `allow-downloads`: Allows downloading files through an {{HTMLElement("a")}} or {{HTMLElement("area")}} element with the [download](/en-US/docs/Web/HTML/Element/a#attr-download) attribute, as well as through the navigation that leads to a download of a file. This works regardless of whether the user clicked on the link, or JS code initiated it without user interaction.
     - `allow-downloads-without-user-activation` {{experimental_inline}}: Allows for downloads to occur without a gesture from the user.
-    - `allow-downloads`: Allows for downloads to occur with a gesture from the user.
-    - `allow-forms`: Allows the resource to submit forms. If this keyword is not used, form submission is blocked.
-    - `allow-modals`: Lets the resource [open modal windows](https://html.spec.whatwg.org/multipage/origin.html#sandboxed-modals-flag).
+    - `allow-forms`: Allows the page to submit forms. If this keyword is not used, form will be displayed as normal, but submitting it will not trigger input validation, sending data to a web server or closing a dialog.
+    - `allow-modals`: Allows the page to open modal windows by {{domxref("Window.alert()")}}, {{domxref("Window.confirm()")}}, {{domxref("Window.print()")}} and {{domxref("Window.prompt()")}}, while opening a {{HTMLElement("dialog")}} is allowed regardless of this keyword. It also allows the page to receive {{domxref("BeforeUnloadEvent")}} event.
     - `allow-orientation-lock`: Lets the resource [lock the screen orientation](/en-US/docs/Web/API/Screen/lockOrientation).
-    - `allow-pointer-lock`: Lets the resource use the [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API).
-    - `allow-popups`: Allows popups (such as `window.open()`, `target="_blank"`, or `showModalDialog()`). If this keyword is not used, the popup will silently fail to open.
-    - `allow-popups-to-escape-sandbox`: Lets the sandboxed document open new windows without those windows inheriting the sandboxing. For example, this can safely sandbox an advertisement without forcing the same restrictions upon the page the ad links to.
-    - `allow-presentation`: Lets the resource start a [presentation session](/en-US/docs/Web/API/PresentationRequest).
+    - `allow-pointer-lock`: Allows the page to use the [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API).
+    - `allow-popups`: Allows popups (like from {{domxref("Window.open()")}}, `target="_blank"`, {{domxref("Window.showModalDialog()")}}). If this keyword is not used, that functionality will silently fail.
+    - `allow-popups-to-escape-sandbox`: Allows a sandboxed document to open new windows without forcing the sandboxing flags upon them. This will allow, for example, a third-party advertisement to be safely sandboxed without forcing the same restrictions upon the page the ad links to.
+    - `allow-presentation`: Allows embedders to have control over whether an iframe can start a [presentation session](/en-US/docs/Web/API/PresentationRequest).
     - `allow-same-origin`: If this token is not used, the resource is treated as being from a special origin that always fails the {{Glossary("same-origin policy")}} (potentially preventing access to [data storage/cookies](/en-US/docs/Web/Security/Same-origin_policy#cross-origin_data_storage_access) and some JavaScript APIs).
-    - `allow-scripts`: Lets the resource run scripts (but not create popup windows).
+    - `allow-scripts`: Allows the page to run scripts (but not create pop-up windows). If this keyword is not used, this operation is not allowed.
     - `allow-storage-access-by-user-activation` {{experimental_inline}}: Lets the resource request access to the parent's storage capabilities with the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
     - `allow-top-navigation`: Lets the resource navigate the top-level browsing context (the one named `_top`).
     - `allow-top-navigation-by-user-activation`: Lets the resource navigate the top-level browsing context, but only if initiated by a user gesture.
+    - `allow-top-navigation-to-custom-protocols`: Allows navigations to non-`http` protocols built into browser or [registered by a website](/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers). This feature is also activated by `allow-popups` or `allow-top-navigation` keyword.
 
     > **Note:**
     >
     > - When the embedded document has the same origin as the embedding page, it is **strongly discouraged** to use both `allow-scripts` and `allow-same-origin`, as that lets the embedded document remove the `sandbox` attribute — making it no more secure than not using the `sandbox` attribute at all.
     > - Sandboxing is useless if the attacker can display content outside a sandboxed `iframe` — such as if the viewer opens the frame in a new tab. Such content should be also served from a _separate origin_ to limit potential damage.
-    > - The `sandbox` attribute is unsupported in Internet Explorer 9 and earlier.
 
 - {{htmlattrdef("src")}}
   - : The URL of the page to embed. Use a value of `about:blank` to embed an empty page that conforms to the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy#inherited_origins). Also note that programmatically removing an `<iframe>`'s src attribute (e.g. via {{domxref("Element.removeAttribute()")}}) causes `about:blank` to be loaded in the frame in Firefox (from version 65), Chromium-based browsers, and Safari/iOS.

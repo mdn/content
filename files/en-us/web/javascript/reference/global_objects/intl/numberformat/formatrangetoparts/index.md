@@ -49,8 +49,8 @@ The structure of the returned looks like this:
   { type: "literal", value: "-", source: "shared" },
   { type: "integer", value: "5", source: "endRange" },
   { type: "literal", value: " ", source: "shared" },
-  { type: "currency", value: "€", source: "shared" }
-]
+  { type: "currency", value: "€", source: "shared" },
+];
 ```
 
 Possible values for the `type` property include:
@@ -106,9 +106,9 @@ Possible values for the `source` property include:
 const startRange = 3500;
 const endRange = 9500;
 
-const formatter = new Intl.NumberFormat('de-DE', {
-  style: 'currency',
-  currency: 'EUR'
+const formatter = new Intl.NumberFormat("de-DE", {
+  style: "currency",
+  currency: "EUR",
 });
 
 console.log(formatter.formatRange(startRange, endRange));
@@ -136,7 +136,7 @@ console.log(formatter.formatRangeToParts(startRange, endRange));
   { type: "fraction", value: "00", source: "endRange" },
   { type: "literal", value: " ", source: "shared" },
   { type: "currency", value: "€", source: "shared" },
-]
+];
 ```
 
 ## Specifications

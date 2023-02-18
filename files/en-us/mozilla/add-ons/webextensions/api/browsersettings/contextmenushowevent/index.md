@@ -1,6 +1,7 @@
 ---
 title: browserSettings.contextMenuShowEvent
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/contextMenuShowEvent
+page-type: webextension-api-property
 tags:
   - API
   - Add-ons

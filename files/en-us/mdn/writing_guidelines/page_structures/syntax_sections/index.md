@@ -96,7 +96,7 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
 
 ##### Formal syntax
 
-Formal syntax notation (using [BNF](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form)) should not be used in the Syntax section — instead use the expanded multiple-line format [described above](#multiple_lines).
+Formal syntax notation (using [BNF](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form)) should not be used in the Syntax section — instead use the expanded multiple-line format [described above](multiple_linesoptional_parameters).
 
 While the formal notation provides a concise mechanism for describing complex syntax, it is not familiar to many developers, and can _conflict_ with valid syntax for particular programming languages. For example, "`[ ]`" indicates both an "optional parameter" and a JavaScript {{jsxref("Array")}}. You can see this in the formal syntax for {{jsxref("Array.prototype.slice()")}} below:
 
@@ -234,7 +234,7 @@ The last section, "Formal syntax", is automatically generated from the data incl
 
 The only complication arises from making sure the data you need is present. The [properties.json](https://github.com/mdn/data/blob/main/css/properties.json) file needs to contain an entry for the property you are documenting, and the [types.json](https://github.com/mdn/data/blob/main/css/types.json) file needs to contain an entry for all of the value types used in the property's value.
 
-You need to do this by forking the [MDN data repo](https://github.com/mdn/data), cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can [find more details about using Git here](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#preparing_to_add_the_data).
+You need to do this by forking the [MDN data repo](https://github.com/mdn/data), cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can [find more details about using Git here](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
 
 ### Selectors
 
@@ -244,7 +244,7 @@ This block is automatically generated from the data included in the [MDN data re
 
 The only complication arises from making sure the data you need is present. The [selectors.json](https://github.com/mdn/data/blob/main/css/selectors.json) file needs to contain an entry for the selector you are documenting.
 
-You need to do this by forking the [MDN data repo](https://github.com/mdn/data), cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can [find more details about using Git here](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#preparing_to_add_the_data).
+You need to do this by forking the [MDN data repo](https://github.com/mdn/data), cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can [find more details about using Git here](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
 
 ## HTML reference syntax
 

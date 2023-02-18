@@ -1,6 +1,7 @@
 ---
 title: runtime.onBrowserUpdateAvailable
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onBrowserUpdateAvailable
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

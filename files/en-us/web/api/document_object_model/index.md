@@ -202,7 +202,6 @@ Here are the DOM APIs for data types used in the definitions of SVG properties a
 - {{DOMxRef("SVGElementInstanceList")}}
 - {{DOMxRef("SVGLength")}}
 - {{DOMxRef("SVGLengthList")}}
-- {{DOMxRef("SVGMatrix")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGNameList")}}
 - {{DOMxRef("SVGNumber")}}
 - {{DOMxRef("SVGNumberList")}}

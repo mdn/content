@@ -114,4 +114,3 @@ console.log(Array.prototype.flat.call(arrayLike));
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("Array.prototype.concat()")}}
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)

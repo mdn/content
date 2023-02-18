@@ -59,7 +59,7 @@ This code snippet is taken from the [classes sample](https://github.com/GoogleCh
 ```js
 class Rectangle {
   constructor(height, width) {
-    this.name = 'Rectangle';
+    this.name = "Rectangle";
     this.height = height;
     this.width = width;
   }
@@ -84,7 +84,7 @@ class Square extends Rectangle {
 
     // Note: In derived classes, super() must be called before you
     // can use 'this'. Leaving this out will cause a reference error.
-    this.name = 'Square';
+    this.name = "Square";
   }
 }
 ```
@@ -96,7 +96,7 @@ You are also able to call super on [static](/en-US/docs/Web/JavaScript/Reference
 ```js
 class Rectangle {
   static logNbSides() {
-    return 'I have 4 sides';
+    return "I have 4 sides";
   }
 }
 
@@ -164,15 +164,15 @@ Super can also be used in the [object initializer](/en-US/docs/Web/JavaScript/Re
 ```js
 const obj1 = {
   method1() {
-    console.log('method 1');
-  }
-}
+    console.log("method 1");
+  },
+};
 
 const obj2 = {
   method2() {
     super.method1();
-  }
-}
+  },
+};
 
 Object.setPrototypeOf(obj2, obj1);
 obj2.method2(); // Logs "method 1"
@@ -226,16 +226,28 @@ Only resetting the entire inheritance chain will change the reference of `super`
 
 ```js
 class Base {
-  baseGetX() { return 1; }
-  static staticBaseGetX() { return 3; }
+  baseGetX() {
+    return 1;
+  }
+  static staticBaseGetX() {
+    return 3;
+  }
 }
 class AnotherBase {
-  baseGetX() { return 2; }
-  static staticBaseGetX() { return 4; }
+  baseGetX() {
+    return 2;
+  }
+  static staticBaseGetX() {
+    return 4;
+  }
 }
 class Extended extends Base {
-  getX() { return super.baseGetX(); }
-  static staticGetX() { return super.staticBaseGetX(); }
+  getX() {
+    return super.baseGetX();
+  }
+  static staticGetX() {
+    return super.staticBaseGetX();
+  }
 }
 
 const e = new Extended();
@@ -305,7 +317,7 @@ However, `super.x = 1` still consults the property descriptor of the prototype o
 class X {
   constructor() {
     // Create a non-writable property
-    Object.defineProperty(this, 'prop', {
+    Object.defineProperty(this, "prop", {
       configurable: true,
       writable: false,
       value: 1,
@@ -318,7 +330,7 @@ class Y extends X {
     super();
   }
   foo() {
-    super.prop = 2;   // Cannot overwrite the value.
+    super.prop = 2; // Cannot overwrite the value.
   }
 }
 

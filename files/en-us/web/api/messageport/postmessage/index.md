@@ -32,7 +32,7 @@ postMessage(message, transferList)
   - : The message you want to send through the channel. This can be of any basic data
     type. Multiple data items can be sent as an array.
 - `transferList` {{optional_inline}}
-  - : {{Glossary("Transferable Objects")}} to be transferred — these objects have their
+  - : [Transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to be transferred — these objects have their
     ownership transferred to the receiving browsing context, so are no longer usable by
     the sending browsing context.
 

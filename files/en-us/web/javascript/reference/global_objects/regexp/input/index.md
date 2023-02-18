@@ -26,7 +26,7 @@ The value of `input` updates whenever a `RegExp` (but not a `RegExp` subclass) i
 
 ## Examples
 
-### Using input and $_
+### Using input and $\_
 
 ```js
 const re = /hi/g;

@@ -32,7 +32,7 @@ x %= y // x = x % y
 let bar = 5;
 
 bar %= 2; // 1
-bar %= 'foo'; // NaN
+bar %= "foo"; // NaN
 bar %= 0; // NaN
 ```
 

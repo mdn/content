@@ -33,12 +33,18 @@ None (`undefined`).
 ## Examples
 
 ```js
-self.addEventListener("canmakepayment", e => {
-  e.respondWith(new Promise((resolve, reject) => {
-    someAppSpecificLogic()
-    .then(result => { resolve(result); })
-    .catch(error => { reject(error); });
-  }));
+self.addEventListener("canmakepayment", (e) => {
+  e.respondWith(
+    new Promise((resolve, reject) => {
+      someAppSpecificLogic()
+        .then((result) => {
+          resolve(result);
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    })
+  );
 });
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: 'Blocked: All storage access requests'
+title: "Blocked: All storage access requests"
 slug: Web/Privacy/Storage_access_policy/Errors/CookieBlockedAll
 tags:
   - Cookies

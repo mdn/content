@@ -16,7 +16,7 @@ browser-compat: api.WritableStream
 The **`WritableStream`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides a standard abstraction for writing streaming data to a destination, known as a sink.
 This object comes with built-in backpressure and queuing.
 
-`WritableStream` is a {{glossary("Transferable objects","transferable object")}}.
+`WritableStream` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 ## Constructor
 

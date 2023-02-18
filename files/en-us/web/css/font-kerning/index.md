@@ -87,11 +87,11 @@ div {
 #### JavaScript
 
 ```js
-const input  = document.getElementById('input');
-const kern   = document.getElementById('kern');
-const nokern = document.getElementById('nokern');
+const input = document.getElementById("input");
+const kern = document.getElementById("kern");
+const nokern = document.getElementById("nokern");
 
-input.addEventListener('keyup', () => {
+input.addEventListener("keyup", () => {
   kern.textContent = input.value; /* Update content */
   nokern.textContent = input.value;
 });

@@ -1,6 +1,7 @@
 ---
 title: webRequest.onHeadersReceived
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onHeadersReceived
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

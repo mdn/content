@@ -37,7 +37,7 @@ The grouping operator consists of a pair of parentheses around an expression tha
 
 Evaluating addition and subtraction before multiplication and division.
 
-```js
+```js-nolint
 const a = 1;
 const b = 2;
 const c = 3;

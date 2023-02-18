@@ -57,7 +57,7 @@ The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule"
 ```js
 let myRules = document.styleSheets[0].cssRules;
 let keyframes = myRules[0]; // a CSSKeyframesRule
-console.log(keyframes.findRule('to'));  // a CSSKeyframeRule object
+console.log(keyframes.findRule("to")); // a CSSKeyframeRule object
 ```
 
 ## Specifications

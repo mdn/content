@@ -43,7 +43,10 @@ A {{domxref('CSSMathSum')}}
 ## Examples
 
 ```js
-let mathSum = CSS.px("23").sum(CSS.percent("4")).sum(CSS.cm("3")).sum(CSS.in("9"));
+let mathSum = CSS.px("23")
+  .sum(CSS.percent("4"))
+  .sum(CSS.cm("3"))
+  .sum(CSS.in("9"));
 // Prints "calc(23px - 4% - 3cm - 9in)"
 console.log(mathSum.toString());
 ```

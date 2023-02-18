@@ -19,7 +19,7 @@ CSS properties can be categorized in two types:
 - **inherited properties**, which by default are set to the [computed value](/en-US/docs/Web/CSS/computed_value) of the parent element
 - **non-inherited properties**, which by default are set to [initial value](/en-US/docs/Web/CSS/initial_value) of the property
 
-Refer to [any CSS property](/en-US/docs/Web/CSS/Reference#keyword_index) definition to see whether a specific property inherits by default ("Inherited: yes") or not ("Inherited: no").
+Refer to [any CSS property](/en-US/docs/Web/CSS/Reference#index) definition to see whether a specific property inherits by default ("Inherited: yes") or not ("Inherited: no").
 
 ## Inherited properties
 
