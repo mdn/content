@@ -364,14 +364,13 @@ A common practice is to include icons on links to provide more of an indicator a
 
 Let's look at some HTML and CSS that will give us the effect we want. First, some simple HTML to style:
 
-```html
+```html-nolint
 <p>
   For more information on the weather, visit our <a href="#">weather page</a>,
   look at <a href="https://en.wikipedia.org/">weather on Wikipedia</a>, or check
   out
   <a href="https://www.nationalgeographic.org/topics/resource-library-weather/">
-    weather on National Geographic</a
-  >.
+    weather on National Geographic</a>.
 </p>
 ```
 

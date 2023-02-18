@@ -307,12 +307,11 @@ The content of the {{htmlattrxref("cite","blockquote")}} attribute sounds useful
 
 There is a {{htmlelement("cite")}} element, but this is meant to contain the title of the resource being quoted, e.g. the name of the book. There is no reason, however, why you couldn't link the text inside `<cite>` to the quote source in some way:
 
-```html
+```html-nolint
 <p>
   According to the
   <a href="/en-US/docs/Web/HTML/Element/blockquote">
-    <cite>MDN blockquote page</cite></a
-  >:
+    <cite>MDN blockquote page</cite></a>:
 </p>
 
 <blockquote
@@ -329,8 +328,7 @@ There is a {{htmlelement("cite")}} element, but this is meant to contain the tit
   <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
     intended for short quotations that don't require paragraph breaks.
   </q>
-  — <a href="/en-US/docs/Web/HTML/Element/q"><cite>MDN q page</cite></a
-  >.
+  — <a href="/en-US/docs/Web/HTML/Element/q"><cite>MDN q page</cite></a>.
 </p>
 ```
 

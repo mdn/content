@@ -81,15 +81,14 @@ I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/en-US/).
 Another attribute you may want to add to your links is `title`.
 The title contains additional information about the link, such as which kind of information the page contains, or things to be aware of on the website.
 
-```html
+```html-nolint
 <p>
   I'm creating a link to
   <a
     href="https://www.mozilla.org/en-US/"
     title="The best place to find more information about Mozilla's
           mission and how to contribute">
-    the Mozilla homepage</a
-  >.
+    the Mozilla homepage</a>.
 </p>
 ```
 

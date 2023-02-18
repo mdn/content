@@ -841,12 +841,8 @@ In HTML we use the {{htmlelement("strong")}} (strong importance) element to mark
 
 You can nest strong and emphasis inside one another if desired:
 
-```html
-<p>
-  This liquid is <strong>highly toxic</strong> — if you drink it,
-  <strong>you may <em>die</em></strong
-  >.
-</p>
+```html-nolint
+<p>This liquid is <strong>highly toxic</strong> — if you drink it, <strong>you may <em>die</em></strong>.</p>
 ```
 
 ### Active learning: Let's be important
