@@ -2,15 +2,6 @@
 title: 'Element: keydown event'
 slug: Web/API/Element/keydown_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Element
-  - Event
-  - KeyboardEvent
-  - Reference
-  - keyboard
-  - keydown
 browser-compat: api.Element.keydown_event
 ---
 

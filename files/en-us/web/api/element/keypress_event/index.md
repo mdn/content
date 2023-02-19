@@ -2,13 +2,8 @@
 title: 'Element: keypress event'
 slug: Web/API/Element/keypress_event
 page-type: web-api-event
-tags:
-  - API
-  - Element
-  - Event
-  - Reference
-  - keypress
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Element.keypress_event
 ---
 

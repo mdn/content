@@ -2,13 +2,6 @@
 title: Element.slot
 slug: Web/API/Element/slot
 page-type: web-api-instance-property
-tags:
-  - API
-  - Element
-  - Property
-  - Reference
-  - shadow DOM
-  - slot
 browser-compat: api.Element.slot
 ---
 

@@ -2,9 +2,6 @@
 title: 'Element: compositionend event'
 slug: Web/API/Element/compositionend_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
 browser-compat: api.Element.compositionend_event
 ---
 

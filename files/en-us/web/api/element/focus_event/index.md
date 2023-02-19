@@ -2,14 +2,6 @@
 title: 'Element: focus event'
 slug: Web/API/Element/focus_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Element
-  - Event
-  - Focus
-  - FocusEvent
-  - Reference
 browser-compat: api.Element.focus_event
 ---
 
