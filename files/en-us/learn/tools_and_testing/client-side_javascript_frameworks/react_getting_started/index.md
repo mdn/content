@@ -468,7 +468,7 @@ function App(props) {
 ```
 
 When you save, the app should now greet you with "Hello, Clarice!". If you return to `index.js`, edit the value of `subject`, and save, your text will change.
-Note that if you wanted to leave in the `Hello` line throughout this change, you could also have updated the JSX variable to {props.subject}.
+Note that if you wanted to leave in the `Hello` line throughout this change, you could also have updated the JSX variable to `{props.subject}`.
 
 ## Summary
 
