@@ -2,13 +2,8 @@
 title: VideoFrame.displayWidth
 slug: Web/API/VideoFrame/displayWidth
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - displayWidth
-  - VideoFrame
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoFrame.displayWidth
 ---
 

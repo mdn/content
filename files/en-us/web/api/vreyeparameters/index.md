@@ -2,16 +2,9 @@
 title: VREyeParameters
 slug: Web/API/VREyeParameters
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Landing
-  - Reference
-  - VR
-  - VREyeParameters
-  - Virtual Reality
-  - WebVR
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VREyeParameters
 ---
 
