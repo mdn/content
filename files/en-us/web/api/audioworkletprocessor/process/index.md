@@ -4,7 +4,7 @@ slug: Web/API/AudioWorkletProcessor/process
 page-type: web-api-instance-method
 status:
   - experimental
-browser-compat: api.AudioWorkletProcessor.process
+spec-urls: https://webaudio.github.io/web-audio-api/#process
 ---
 
 {{APIRef("Web Audio API")}}
@@ -192,7 +192,7 @@ class WhiteNoiseProcessor extends AudioWorkletProcessor {
 
 ## Browser compatibility
 
-{{Compat}}
+This is not a method provided by browsers, but a callback method that must be written in client code.
 
 ## See also
 
