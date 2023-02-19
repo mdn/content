@@ -2,9 +2,6 @@
 title: ContentVisibilityAutoStateChangeEvent
 slug: Web/API/ContentVisibilityAutoStateChangeEvent
 page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
 browser-compat: api.ContentVisibilityAutoStateChangeEvent
 ---
 
