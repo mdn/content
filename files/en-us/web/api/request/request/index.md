@@ -2,12 +2,6 @@
 title: Request()
 slug: Web/API/Request/Request
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Fetch
-  - Reference
-  - request
 browser-compat: api.Request.Request
 ---
 

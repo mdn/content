@@ -2,11 +2,6 @@
 title: RadioNodeList.value
 slug: Web/API/RadioNodeList/value
 page-type: web-api-instance-property
-tags:
-  - HTML DOM
-  - Property
-  - RadioNodeList
-  - Reference
 browser-compat: api.RadioNodeList.value
 ---
 
