@@ -2,19 +2,8 @@
 title: NavigationHistoryEntry.getState()
 slug: Web/API/NavigationHistoryEntry/getState
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - getState
-  - History
-  - Method
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Reference
-  - Scroll
-  - transition
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationHistoryEntry.getState
 ---
 

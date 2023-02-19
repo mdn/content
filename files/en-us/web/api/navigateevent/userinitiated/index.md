@@ -2,20 +2,8 @@
 title: NavigateEvent.userInitiated
 slug: Web/API/NavigateEvent/userInitiated
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - History
-  - Navigate
-  - NavigateEvent
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
-  - userInitiated
+status:
+  - experimental
 browser-compat: api.NavigateEvent.userInitiated
 ---
 
