@@ -2,18 +2,8 @@
 title: PresentationConnection.state
 slug: Web/API/PresentationConnection/state
 page-type: web-api-instance-property
-tags:
-  - API
-  - NeedsBrowserCompatibility
-  - NeedsContent
-  - NeedsMarkupWork
-  - Presentation
-  - Presentation API
-  - PresentationConnection
-  - Property
-  - Reference
-  - state
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PresentationConnection.state
 ---
 

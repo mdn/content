@@ -2,11 +2,6 @@
 title: performance.clearMeasures()
 slug: Web/API/Performance/clearMeasures
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
 browser-compat: api.Performance.clearMeasures
 ---
 

@@ -2,13 +2,6 @@
 title: PannerNode.positionX
 slug: Web/API/PannerNode/positionX
 page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - positionX
 browser-compat: api.PannerNode.positionX
 ---
 

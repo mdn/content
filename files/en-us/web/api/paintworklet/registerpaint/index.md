@@ -2,17 +2,6 @@
 title: PaintWorkletGlobalScope.registerPaint()
 slug: Web/API/PaintWorklet/registerPaint
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS
-  - CSS Paint API
-  - Houdini
-  - Painting
-  - Method
-  - Reference
-  - Worklet
-  - paintWorklet
-  - registerPaint
 browser-compat: api.PaintWorkletGlobalScope.registerPaint
 ---
 

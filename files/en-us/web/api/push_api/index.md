@@ -2,14 +2,8 @@
 title: Push API
 slug: Web/API/Push_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - Landing
-  - Notifications
-  - Push
-  - Reference
-  - Service Workers
+status:
+  - experimental
 browser-compat:
   - api.PushEvent
   - api.PushMessageData

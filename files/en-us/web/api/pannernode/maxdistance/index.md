@@ -2,13 +2,6 @@
 title: PannerNode.maxDistance
 slug: Web/API/PannerNode/maxDistance
 page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - maxDistance
 browser-compat: api.PannerNode.maxDistance
 ---
 
