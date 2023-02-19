@@ -2,14 +2,6 @@
 title: Window.postMessage()
 slug: Web/API/Window/postMessage
 page-type: web-api-instance-method
-tags:
-  - API
-  - Cross-origin Communication
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
-  - postMessage
 browser-compat: api.Window.postMessage
 ---
 

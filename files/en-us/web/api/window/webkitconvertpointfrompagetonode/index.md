@@ -2,16 +2,8 @@
 title: Window.convertPointFromPageToNode()
 slug: Web/API/Window/webkitConvertPointFromPageToNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Non-standard
-  - Point
-  - Reference
-  - Safari
-  - WebKit
-  - Window
-  - convertPointFromPageToNode
+status:
+  - non-standard
 browser-compat: api.Window.convertPointFromPageToNode
 ---
 
