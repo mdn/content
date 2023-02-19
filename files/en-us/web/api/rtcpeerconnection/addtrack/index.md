@@ -2,17 +2,6 @@
 title: RTCPeerConnection.addTrack()
 slug: Web/API/RTCPeerConnection/addTrack
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Media
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - Tracks
-  - Video
-  - WebRTC
-  - addTrack
 browser-compat: api.RTCPeerConnection.addTrack
 ---
 

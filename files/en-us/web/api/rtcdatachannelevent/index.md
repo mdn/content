@@ -2,13 +2,6 @@
 title: RTCDataChannelEvent
 slug: Web/API/RTCDataChannelEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - RTCDataChannelEvent
-  - Reference
-  - WebRTC
-  - datachannel
 browser-compat: api.RTCDataChannelEvent
 ---
 

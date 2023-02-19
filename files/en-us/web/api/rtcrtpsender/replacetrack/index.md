@@ -2,19 +2,6 @@
 title: RTCRtpSender.replaceTrack()
 slug: Web/API/RTCRtpSender/replaceTrack
 page-type: web-api-instance-method
-tags:
-  - Audio
-  - Media
-  - Method
-  - RTCRtpSender
-  - RTP
-  - Reference
-  - Video
-  - WebRTC
-  - WebRTC API
-  - replace
-  - replaceTrack
-  - track
 browser-compat: api.RTCRtpSender.replaceTrack
 ---
 
