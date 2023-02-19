@@ -9,7 +9,7 @@ browser-compat: api.CSSVariableReferenceValue
 
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 
-The **`CSSVariableReferenceValue`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} allows you to create a custom name for a built-in CSS value. This object functionality is sometimes called a "CSS variable" and serves the same purpose as the {{cssxref('var()')}} function. The custom name must begin with two dashes.
+The **`CSSVariableReferenceValue`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} allows you to create a custom name for a built-in CSS value. This object functionality is sometimes called a "CSS variable" and serves the same purpose as the {{cssxref("var", "var()")}} function. The custom name must begin with two dashes.
 
 ## Constructor
 

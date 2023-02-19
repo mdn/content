@@ -11,7 +11,7 @@ The CSS Painting API — part of the [CSS Houdini](/en-US/docs/Web/Guide/Houdini
 
 ## Concepts and usage
 
-Essentially, the CSS Painting API contains functionality allowing developers to create custom values for {{cssxref('paint()', 'paint()')}}, a CSS [`<image>`](/en-US/docs/Web/CSS/image) function. You can then apply these values to properties like {{cssxref("background-image")}} to set complex custom backgrounds on an element.
+Essentially, the CSS Painting API contains functionality allowing developers to create custom values for {{cssxref('paint', 'paint()')}}, a CSS [`<image>`](/en-US/docs/Web/CSS/image) function. You can then apply these values to properties like {{cssxref("background-image")}} to set complex custom backgrounds on an element.
 
 For example:
 

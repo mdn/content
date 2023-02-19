@@ -11,7 +11,7 @@ browser-compat: api.CSSMathMin.CSSMathMin
 
 The **`CSSMathMin()`** constructor creates a
 new {{domxref("CSSMathMin")}} object which represents the CSS
-{{CSSXref('min()','min()')}} function.
+{{CSSXref('min','min()')}} function.
 
 ## Syntax
 
