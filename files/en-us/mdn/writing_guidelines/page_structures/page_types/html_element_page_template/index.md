@@ -43,9 +43,7 @@ browser-compat: path.to.feature.NameOfTheElement
 > - **page-type**
 >   - : Always `html-element`.
 > - **status**
->
 >   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete), **non-standard** (if not on a standards track).
->
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `html.elements.NameOfTheElement` with the query string for the element in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
