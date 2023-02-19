@@ -131,15 +131,3 @@ If you would like your work assessed, or are stuck and want to ask for help:
    - A link to the actual task or assessment page, so we can find the question you want help with.
 
 {{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
-
-## In this module
-
-- [What is JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/en-US/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/en-US/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator)

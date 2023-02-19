@@ -408,13 +408,3 @@ Congratulations, you've reached the end of our first JS objects article — you 
 In the next article we'll look at **prototypes**, which is the fundamental way that JavaScript lets an object inherit properties from other objects.
 
 {{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
-
-## In this module
-
-- **Object basics**
-- [Object prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Object-oriented programming concepts](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming)
-- [Classes in JavaScript](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- [Working with JSON data](/en-US/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/en-US/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)
