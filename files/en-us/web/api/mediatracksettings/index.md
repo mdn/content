@@ -2,19 +2,6 @@
 title: MediaTrackSettings
 slug: Web/API/MediaTrackSettings
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Constraints
-  - Dictionary
-  - Interface
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - NeedsExample
-  - Reference
-  - Video
 browser-compat: api.MediaTrackSettings
 ---
 

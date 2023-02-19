@@ -2,17 +2,6 @@
 title: MediaSource
 slug: Web/API/MediaSource
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Extensions
-  - Interface
-  - MSE
-  - Media
-  - MediaSource
-  - MediaSource Extensions
-  - Reference
-  - Video
 browser-compat: api.MediaSource
 ---
 

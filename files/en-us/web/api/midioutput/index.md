@@ -2,11 +2,6 @@
 title: MIDIOutput
 slug: Web/API/MIDIOutput
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - MIDIOutput
 browser-compat: api.MIDIOutput
 ---
 
