@@ -2,16 +2,6 @@
 title: SpeechRecognitionResultList.item()
 slug: Web/API/SpeechRecognitionResultList/item
 page-type: web-api-instance-method
-tags:
-  - API
-  - Getter
-  - Method
-  - Reference
-  - SpeechRecognitionResultList
-  - Web Speech API
-  - item
-  - recognition
-  - speech
 browser-compat: api.SpeechRecognitionResultList.item
 ---
 

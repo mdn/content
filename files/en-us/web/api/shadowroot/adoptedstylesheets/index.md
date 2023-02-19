@@ -1,13 +1,6 @@
 ---
 title: ShadowRoot.adoptedStyleSheets
 slug: Web/API/ShadowRoot/adoptedStyleSheets
-tags:
-  - API
-  - ShadowRoot
-  - Property
-  - Reference
-  - Stylesheets
-  - adoptedStyleSheets
 page-type: web-api-instance-property
 browser-compat: api.ShadowRoot.adoptedStyleSheets
 ---

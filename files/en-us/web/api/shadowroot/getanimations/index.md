@@ -2,20 +2,6 @@
 title: ShadowRoot.getAnimations()
 slug: Web/API/ShadowRoot/getAnimations
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animation
-  - CSS
-  - CSS Animations
-  - CSS Transitions
-  - ShadowRoot
-  - Method
-  - Reference
-  - Transitions
-  - Web Animations
-  - getAnimations
-  - waapi
-  - web animations api
 browser-compat: api.ShadowRoot.getAnimations
 ---
 

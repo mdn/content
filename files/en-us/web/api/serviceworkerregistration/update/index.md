@@ -2,13 +2,6 @@
 title: ServiceWorkerRegistration.update()
 slug: Web/API/ServiceWorkerRegistration/update
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorkerRegistration
-  - Update
 browser-compat: api.ServiceWorkerRegistration.update
 ---
 

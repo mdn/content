@@ -2,14 +2,6 @@
 title: SpeechSynthesisEvent
 slug: Web/API/SpeechSynthesisEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - SpeechSynthesisEvent
-  - Web Speech API
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesisEvent
 ---
 
