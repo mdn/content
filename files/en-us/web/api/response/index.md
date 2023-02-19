@@ -2,13 +2,6 @@
 title: Response
 slug: Web/API/Response
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - Interface
-  - Reference
-  - Response
 browser-compat: api.Response
 ---
 

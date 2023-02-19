@@ -2,14 +2,6 @@
 title: Request
 slug: Web/API/Request
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - Interface
-  - Networking
-  - Reference
-  - request
 browser-compat: api.Request
 ---
 
