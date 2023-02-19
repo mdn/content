@@ -13,18 +13,16 @@ The **`CSSTransition`** interface of the {{domxref('Web Animations API','','',' 
 
 ## Instance properties
 
-Inherits properties from its ancestor {{domxref("Animation")}} and adds {{domxref("transitionProperty")}}.
+_This interface inherits properties from its parent, {{domxref("Animation")}}._
 
 - {{domxref("CSSTransition.transitionProperty")}} {{ReadOnlyInline}}
   - : Returns the transition CSS property name as a string.
 
-### Event handlers
-
-No specific event handlers; inherits methods from its ancestor {{domxref("Animation")}}.
-
 ## Instance methods
 
-No specific methods; inherits methods from its ancestor {{domxref("Animation")}}.
+_This interface inherits methods from its parent, {{domxref("Animation")}}._
+
+No specific methods.
 
 ## Examples
 
