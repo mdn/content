@@ -2,14 +2,6 @@
 title: IDBFactory.databases()
 slug: Web/API/IDBFactory/databases
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBFactory
-  - Method
-  - Reference
-  - Storage
-  - databases
 browser-compat: api.IDBFactory.databases
 ---
 

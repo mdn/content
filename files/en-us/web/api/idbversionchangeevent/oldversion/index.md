@@ -2,15 +2,6 @@
 title: IDBVersionChangeEvent.oldVersion
 slug: Web/API/IDBVersionChangeEvent/oldVersion
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBVersionChangeEvent
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - oldVersion
 browser-compat: api.IDBVersionChangeEvent.oldVersion
 ---
 
