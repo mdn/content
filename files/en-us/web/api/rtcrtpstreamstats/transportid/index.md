@@ -2,18 +2,6 @@
 title: RTCRtpStreamStats.transportId
 slug: Web/API/RTCRtpStreamStats/transportId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - RTCRtpStreamStats
-  - RTP
-  - Reference
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - id
-  - rtc
-  - transportID
 browser-compat: api.RTCRtpStreamStats.transportId
 ---
 

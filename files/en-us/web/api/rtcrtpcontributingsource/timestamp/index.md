@@ -2,14 +2,6 @@
 title: RTCRtpContributingSource.timestamp
 slug: Web/API/RTCRtpContributingSource/timestamp
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Property
-  - RTCRtpContributingSource
-  - Reference
-  - WebRTC
-  - timeStamp
 browser-compat: api.RTCRtpContributingSource.timestamp
 ---
 

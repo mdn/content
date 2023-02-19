@@ -2,22 +2,6 @@
 title: RTCOutboundRtpStreamStats.firCount
 slug: Web/API/RTCOutboundRtpStreamStats/firCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - FIR
-  - Frames
-  - Media
-  - Property
-  - RTCOutboundRtpStreamStats
-  - RTP
-  - Reference
-  - Skipped Frames
-  - Statistics
-  - Stats
-  - Video
-  - WebRTC
-  - WebRTC API
-  - firCount
 browser-compat: api.RTCOutboundRtpStreamStats.firCount
 ---
 

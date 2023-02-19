@@ -2,22 +2,6 @@
 title: RTCRtpSendParameters.encodings
 slug: Web/API/RTCRtpSendParameters/encodings
 page-type: web-api-instance-property
-tags:
-  - API
-  - Codec
-  - Configuration
-  - Media
-  - RTCRtpSendParameters
-  - RTCRtpSender
-  - RTP
-  - Reference
-  - Settings
-  - WebRTC
-  - WebRTC API
-  - encodings
-  - parameters
-  - rtc
-  - sender
 browser-compat: api.RTCRtpSendParameters.encodings
 ---
 
