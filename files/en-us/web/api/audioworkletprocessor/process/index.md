@@ -192,7 +192,7 @@ class WhiteNoiseProcessor extends AudioWorkletProcessor {
 
 ## Browser compatibility
 
-This is not a method provided by the browsers, but a callback method that must be written in the client code.
+This is not a method provided by browsers, but a callback method that must be written in client code.
 
 ## See also
 
