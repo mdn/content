@@ -11,7 +11,7 @@ browser-compat: svg.elements.feConvolveMatrix.preserveAlpha
 
 {{SVGRef}}
 
-the `preserveAlpha` attribute indicates how a {{SVGElement("feConvolveMatrix")}} element handle alpha transparency.
+the `preserveAlpha` attribute indicates how a {{SVGElement("feConvolveMatrix")}} element handles alpha transparency.
 
 You can use this attribute with the following SVG elements:
 
@@ -73,9 +73,9 @@ svg {
 </table>
 
 - `true`
-  - : This value indicates that the convolution will only apply to the color channels. In this case, the filter will temporarily unpremultiply the color component values and apply the kernel.
+  - : This value indicates that the convolution is applied only to the color channels. In this case, the filter temporarily removes alpha premultiplication from the color component values, applies the kernel, and then reapplies alpha premultiplication as a final step.
 - `false`
-  - : This value indicates that the convolution will apply to all channels, including the alpha channel.
+  - : This value indicates that the convolution is applied to all channels, including the alpha channel.
 
 ## Specifications
 
