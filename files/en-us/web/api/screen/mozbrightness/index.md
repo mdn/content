@@ -2,12 +2,9 @@
 title: Screen.mozBrightness
 slug: Web/API/Screen/mozBrightness
 page-type: web-api-instance-property
-tags:
-  - API
-  - API:Mozilla Extensions
-  - Deprecated
-  - Non-standard
-  - Property
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Screen.mozBrightness
 ---
 
