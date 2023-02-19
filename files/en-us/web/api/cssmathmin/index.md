@@ -2,14 +2,8 @@
 title: CSSMathMin
 slug: Web/API/CSSMathMin
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathMin
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Interface
+status:
+  - experimental
 browser-compat: api.CSSMathMin
 ---
 

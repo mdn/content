@@ -2,21 +2,6 @@
 title: CSSStyleSheet.ownerRule
 slug: Web/API/CSSStyleSheet/ownerRule
 page-type: web-api-instance-property
-tags:
-  - "@import"
-  - API
-  - CSS
-  - CSSOM
-  - CSSOM API
-  - CSSStyleSheet
-  - Layout
-  - Object Model
-  - Property
-  - Read-only
-  - Reference
-  - StyleSheet
-  - import
-  - ownerRule
 browser-compat: api.CSSStyleSheet.ownerRule
 ---
 

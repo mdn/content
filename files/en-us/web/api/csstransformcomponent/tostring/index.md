@@ -2,15 +2,8 @@
 title: CSSTransformComponent.toString()
 slug: Web/API/CSSTransformComponent/toString
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS
-  - CSS Typed Object Model
-  - CSSTransformComponent
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSTransformComponent.toString
 ---
 

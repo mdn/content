@@ -2,16 +2,8 @@
 title: CSSRotate.y
 slug: Web/API/CSSRotate/y
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS
-  - CSS Typed Object Model API
-  - CSSRotate
-  - CSSTransformComponent
-  - CSSTransformValue
-  - Experimental
-  - Houdini
-  - Property
+status:
+  - experimental
 browser-compat: api.CSSRotate.y
 ---
 

@@ -2,15 +2,8 @@
 title: CSSTransformValue.entries()
 slug: Web/API/CSSTransformValue/entries
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSTransformValue
-  - Entries
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSTransformValue.entries
 ---
 

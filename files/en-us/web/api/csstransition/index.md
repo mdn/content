@@ -2,12 +2,6 @@
 title: CSSTransition
 slug: Web/API/CSSTransition
 page-type: web-api-interface
-tags:
-  - API
-  - Animation
-  - CSSTransition
-  - Interface
-  - Reference
 browser-compat: api.CSSTransition
 ---
 
