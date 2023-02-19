@@ -143,10 +143,6 @@ if (crossOriginIsolated) {
 }
 ```
 
-See also {{jsxref("Global_Objects/SharedArrayBuffer/Planned_changes", "Planned changes
-  to shared memory", "", 1)}} which is starting to roll out to browsers (Firefox 79, for
-example).
-
 ## Examples
 
 ```js
