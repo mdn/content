@@ -2,13 +2,6 @@
 title: ConvolverNode.normalize
 slug: Web/API/ConvolverNode/normalize
 page-type: web-api-instance-property
-tags:
-  - API
-  - ConvolverNode
-  - Property
-  - Reference
-  - Web Audio API
-  - parent
 browser-compat: api.ConvolverNode.normalize
 ---
 

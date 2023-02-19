@@ -2,9 +2,6 @@
 title: CharacterData.after()
 slug: Web/API/CharacterData/after
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.CharacterData.after
 ---
 
