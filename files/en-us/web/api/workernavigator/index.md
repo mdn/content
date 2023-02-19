@@ -2,14 +2,6 @@
 title: WorkerNavigator
 slug: Web/API/WorkerNavigator
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-  - Web Workers
-  - WorkerNavigator
-  - Workers
 browser-compat: api.WorkerNavigator
 ---
 
