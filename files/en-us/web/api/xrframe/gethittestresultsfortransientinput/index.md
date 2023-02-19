@@ -62,6 +62,6 @@ function onXRFrame(time, xrFrame) {
 
 ## See also
 
-- {{domxref("XRTransientInputHitResult")}}
+- {{domxref("XRTransientInputHitTestResult")}}
 - {{domxref("XRTransientInputHitTestSource")}}
 - {{domxref("XRRay")}}
