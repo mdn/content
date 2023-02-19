@@ -2,14 +2,6 @@
 title: PushSubscription
 slug: Web/API/PushSubscription
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Push
-  - Push API
-  - PushSubscription
-  - Reference
-  - Service Workers
 browser-compat: api.PushSubscription
 ---
 

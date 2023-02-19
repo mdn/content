@@ -2,14 +2,6 @@
 title: PushEvent()
 slug: Web/API/PushEvent/PushEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Push
-  - Push API
-  - PushEvent
-  - Reference
-  - Service Workers
 browser-compat: api.PushEvent.PushEvent
 ---
 

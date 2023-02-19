@@ -2,14 +2,6 @@
 title: PaymentRequestUpdateEvent()
 slug: Web/API/PaymentRequestUpdateEvent/PaymentRequestUpdateEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Payment Request
-  - Payment Request API
-  - PaymentRequestUpdateEvent
-  - Reference
-  - Secure context
 browser-compat: api.PaymentRequestUpdateEvent.PaymentRequestUpdateEvent
 ---
 
