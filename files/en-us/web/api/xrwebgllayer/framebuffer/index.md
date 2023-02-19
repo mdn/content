@@ -2,24 +2,8 @@
 title: XRWebGLLayer.framebuffer
 slug: Web/API/XRWebGLLayer/framebuffer
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Buffer
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - augmented
-  - framebuffer
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer.framebuffer
 ---
 

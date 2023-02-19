@@ -1,6 +1,7 @@
 ---
 title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
+page-type: landing-page
 tags:
   - Add-ons
   - Extensions

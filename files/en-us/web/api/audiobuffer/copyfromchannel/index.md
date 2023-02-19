@@ -2,20 +2,6 @@
 title: AudioBuffer.copyFromChannel()
 slug: Web/API/AudioBuffer/copyFromChannel
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioBuffer
-  - Copying
-  - Frames
-  - Method
-  - Reference
-  - Samples
-  - Web Audio
-  - Web Audio API
-  - copy
-  - copyFromChannel
-  - sound
 browser-compat: api.AudioBuffer.copyFromChannel
 ---
 

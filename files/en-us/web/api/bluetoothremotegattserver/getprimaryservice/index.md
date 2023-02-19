@@ -2,15 +2,8 @@
 title: BluetoothRemoteGATTServer.getPrimaryService()
 slug: Web/API/BluetoothRemoteGATTServer/getPrimaryService
 page-type: web-api-instance-method
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTServer
-  - Experimental
-  - Method
-  - Reference
-  - Web Bluetooth API
-  - getPrimaryService()
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTServer.getPrimaryService
 ---
 

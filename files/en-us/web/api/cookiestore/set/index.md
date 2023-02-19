@@ -2,13 +2,8 @@
 title: CookieStore.set()
 slug: Web/API/CookieStore/set
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - set()
-  - CookieStore
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CookieStore.set
 ---
 

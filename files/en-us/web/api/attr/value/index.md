@@ -2,9 +2,6 @@
 title: Attr.value
 slug: Web/API/Attr/value
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
 browser-compat: api.Attr.value
 ---
 

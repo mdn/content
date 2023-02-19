@@ -2,14 +2,8 @@
 title: XRWebGLBinding.createCylinderLayer()
 slug: Web/API/XRWebGLBinding/createCylinderLayer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLBinding.createCylinderLayer
 ---
 

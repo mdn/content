@@ -30,6 +30,8 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
 - {{domxref("FetchEvent.clientId")}} {{ReadOnlyInline}}
   - : The {{domxref("Client.id", "id")}} of the same-origin {{domxref("Client", "client")}} that initiated the fetch.
+- {{domxref("FetchEvent.handled")}} {{ReadOnlyInline}}
+  - : A promise that is pending while the event has not been handled, and fulfilled once it has.
 - {{domxref("FetchEvent.preloadResponse")}} {{ReadOnlyInline}}
   - : A {{jsxref("Promise")}} for a {{domxref("Response")}}, or `undefined` if this fetch is not a navigation, or [navigation preload](/en-US/docs/Web/API/NavigationPreloadManager) is not enabled.
 - {{domxref("FetchEvent.replacesClientId")}} {{ReadOnlyInline}}

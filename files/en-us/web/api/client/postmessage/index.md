@@ -2,15 +2,6 @@
 title: Client.postMessage()
 slug: Web/API/Client/postMessage
 page-type: web-api-instance-method
-tags:
-  - API
-  - Client
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - postMessage
 browser-compat: api.Client.postMessage
 ---
 

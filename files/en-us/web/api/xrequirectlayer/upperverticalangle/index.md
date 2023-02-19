@@ -2,16 +2,8 @@
 title: XREquirectLayer.upperVerticalAngle
 slug: Web/API/XREquirectLayer/upperVerticalAngle
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XREquirectLayer.upperVerticalAngle
 ---
 

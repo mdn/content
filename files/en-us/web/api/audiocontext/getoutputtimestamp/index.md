@@ -2,15 +2,6 @@
 title: AudioContext.getOutputTimestamp()
 slug: Web/API/AudioContext/getOutputTimestamp
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - getOutputTimestamp
-  - sound
 browser-compat: api.AudioContext.getOutputTimestamp
 ---
 

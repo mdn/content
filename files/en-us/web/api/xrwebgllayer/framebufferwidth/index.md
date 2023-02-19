@@ -2,26 +2,8 @@
 title: XRWebGLLayer.framebufferWidth
 slug: Web/API/XRWebGLLayer/framebufferWidth
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Buffer
-  - Frame
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - augmented
-  - framebufferWidth
-  - width
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer.framebufferWidth
 ---
 

@@ -15,7 +15,7 @@ browser-compat: api.Worker.postMessage
 
 {{APIRef("Web Workers API")}}
 
-The **`postMessage()`** method of the {{domxref("Worker")}} interface sends a message to the worker's inner scope. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) algorithm, which includes cyclical references.
+The **`postMessage()`** method of the {{domxref("Worker")}} interface sends a message to the worker. The first parameter is the data to send to the worker. The data may be any JavaScript object that can be handled by the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
 The {{domxref("Worker")}} `postMessage()` method delegates to the {{domxref("MessagePort")}} {{domxref("MessagePort.postMessage", "postMessage()")}} method, which adds a task on the event loop corresponding to the receiving {{domxref("MessagePort")}}.
 
@@ -38,7 +38,7 @@ postMessage(message, transfer)
 
 - `transfer` {{optional_inline}}
 
-  - : An optional [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of {{Glossary("Transferable Objects")}} to transfer ownership of. If the ownership of an object is transferred, it becomes unusable in the context it was sent from and becomes available only to the worker it was sent to.
+  - : An optional [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects)to transfer ownership of. If the ownership of an object is transferred, it becomes unusable in the context it was sent from and becomes available only to the worker it was sent to.
 
     Transferable objects are instances of classes like {{jsxref("ArrayBuffer")}}, {{domxref("MessagePort")}} or {{domxref("ImageBitmap")}} objects that can be transferred. `null` is not an acceptable value for `transfer`.
 

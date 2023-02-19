@@ -2,14 +2,6 @@
 title: AudioBufferSourceNode
 slug: Web/API/AudioBufferSourceNode
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - AudioBufferSourceNode
-  - Interface
-  - Media
-  - Reference
-  - Web Audio API
 browser-compat: api.AudioBufferSourceNode
 ---
 
