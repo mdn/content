@@ -2,14 +2,6 @@
 title: Worker.postMessage()
 slug: Web/API/Worker/postMessage
 page-type: web-api-instance-method
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Reference
-  - Web Workers
-  - Worker
-  - postMessage
 browser-compat: api.Worker.postMessage
 ---
 
