@@ -67,7 +67,3 @@ console.log(styleObj.cssText);
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [CSS Properties Reference](/en-US/docs/Web/CSS/CSS_Properties_Reference)
