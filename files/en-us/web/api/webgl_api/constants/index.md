@@ -2,11 +2,6 @@
 title: WebGL constants
 slug: Web/API/WebGL_API/Constants
 page-type: guide
-tags:
-  - API
-  - Reference
-  - WebGL
-  - constants
 spec-urls:
   - https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14
   - https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7

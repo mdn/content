@@ -2,15 +2,6 @@
 title: Basic scissoring
 slug: Web/API/WebGL_API/By_example/Basic_scissoring
 page-type: guide
-tags:
-  - Beginner
-  - Example
-  - Graphics
-  - Learn
-  - Scissoring
-  - Tutorial
-  - WebGL
-  - scissor
 ---
 
 {{PreviousNext("Learn/WebGL/By_example/Color_masking","Learn/WebGL/By_example/Canvas_size_and_WebGL")}}
