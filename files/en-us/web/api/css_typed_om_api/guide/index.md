@@ -399,13 +399,13 @@ console.log(bgImage); // CSSImageValue
 console.log(bgImage.toString()); // url("magicwand.png")
 ```
 
-When we `get()` the `'background-image'`, a {{domxref('CSSImageValue')}} is returned. While we used the CSS {{cssxref('background')}} shorthand property, the inherited {{domxref('Object.prototype.toString()')}} method, shows we returned only the image, `'url("magicwand.png")'`.
+When we `get()` the `'background-image'`, a {{domxref('CSSImageValue')}} is returned. While we used the CSS {{cssxref('background')}} shorthand property, the inherited {{jsxref("Object/toString", "Object.prototype.toString()")}} method, shows we returned only the image, `'url("magicwand.png")'`.
 
 Notice that the value returned is the absolute path to the image — this is returned even if the original `url()` value was relative. Had the background image been a gradient or multiple background images, `.get('background-image')` would have returned a `CSSStyleValue`. The `CSSImageValue` is returned only if there is a single image, and only if that single image declaration is a URL.
 
 ### Summary
 
-This should get you started with understanding the CSS Typed OM. Take a look at all the [CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide) interfaces to learn more.
+This should get you started with understanding the CSS Typed OM. Take a look at all the [CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API) interfaces to learn more.
 
 ## See also
 
