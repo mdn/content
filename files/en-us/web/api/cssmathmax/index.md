@@ -2,14 +2,8 @@
 title: CSSMathMax
 slug: Web/API/CSSMathMax
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathMax
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Interface
+status:
+  - experimental
 browser-compat: api.CSSMathMax
 ---
 

@@ -2,13 +2,6 @@
 title: CSSKeyframeRule.style
 slug: Web/API/CSSkeyframeRule/style
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSKeyframeRule
-  - CSS Animations
-  - Property
-  - Reference
 browser-compat: api.CSSKeyframeRule.style
 ---
 

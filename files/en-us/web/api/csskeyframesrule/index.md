@@ -2,12 +2,6 @@
 title: CSSKeyframesRule
 slug: Web/API/CSSKeyframesRule
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Animations
-  - CSSOM
-  - Interface
-  - Reference
 browser-compat: api.CSSKeyframesRule
 ---
 

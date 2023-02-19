@@ -2,11 +2,6 @@
 title: CSSMediaRule
 slug: Web/API/CSSMediaRule
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM
-  - Interface
-  - Reference
 browser-compat: api.CSSMediaRule
 ---
 

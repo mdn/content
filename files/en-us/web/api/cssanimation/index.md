@@ -2,12 +2,6 @@
 title: CSSAnimation
 slug: Web/API/CSSAnimation
 page-type: web-api-interface
-tags:
-  - API
-  - Animation
-  - CSSAnimation
-  - Interface
-  - Reference
 browser-compat: api.CSSAnimation
 ---
 
