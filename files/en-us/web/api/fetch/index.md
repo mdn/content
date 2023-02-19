@@ -2,14 +2,6 @@
 title: fetch()
 slug: Web/API/fetch
 page-type: web-api-global-function
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - GlobalFetch
-  - Method
-  - Reference
-  - request
 browser-compat: api.fetch
 ---
 
