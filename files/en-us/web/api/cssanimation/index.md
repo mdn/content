@@ -22,7 +22,6 @@ _This interface inherits properties from its parent, {{domxref("Animation")}}._
 
 _This interface inherits methods from its parent, {{domxref("Animation")}}._
 
-No specific method}.
 
 ## Examples
 
