@@ -2,13 +2,8 @@
 title: Window.ondragdrop
 slug: Web/API/Window/ondragdrop
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Deprecated
-  - Property
-  - Window
-  - ondragdrop
+status:
+  - deprecated
 ---
 
 {{ APIRef() }}{{deprecated_header}}{{non-standard_header}}

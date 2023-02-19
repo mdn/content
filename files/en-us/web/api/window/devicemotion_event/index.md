@@ -2,11 +2,6 @@
 title: 'Window: devicemotion event'
 slug: Web/API/Window/devicemotion_event
 page-type: web-api-event
-tags:
-  - API
-  - Device Orientation API
-  - Sensors
-  - events
 browser-compat: api.Window.devicemotion_event
 ---
 

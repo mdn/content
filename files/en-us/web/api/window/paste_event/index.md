@@ -2,13 +2,6 @@
 title: 'Window: paste event'
 slug: Web/API/Window/paste_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - Web
-  - Window
-  - paste
 browser-compat: api.Element.paste_event
 ---
 

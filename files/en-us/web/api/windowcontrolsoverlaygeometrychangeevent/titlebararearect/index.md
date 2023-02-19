@@ -2,11 +2,8 @@
 title: WindowControlsOverlayGeometryChangeEvent.titlebarAreaRect
 slug: Web/API/WindowControlsOverlayGeometryChangeEvent/titlebarAreaRect
 page-type: web-api-instance-property
-tags:
-  - API
-  - WindowControlsOverlayGeometryChangeEvent
-  - Property
-  - Experimental
+status:
+  - experimental
 browser-compat: api.WindowControlsOverlayGeometryChangeEvent.titlebarAreaRect
 ---
 

@@ -2,14 +2,6 @@
 title: 'Window: pagehide event'
 slug: Web/API/Window/pagehide_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - History
-  - Navigation
-  - Reference
-  - Window
-  - pagehide
 browser-compat: api.Window.pagehide_event
 ---
 
