@@ -2,14 +2,8 @@
 title: 'HTMLInputElement: search event'
 slug: Web/API/HTMLInputElement/search_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - HTMLInputElement
-  - Non-standard
-  - Reference
-  - Search
-  - Web
+status:
+  - non-standard
 browser-compat: api.HTMLInputElement.search_event
 ---
 

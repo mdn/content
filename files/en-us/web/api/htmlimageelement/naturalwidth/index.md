@@ -2,18 +2,6 @@
 title: HTMLImageElement.naturalWidth
 slug: Web/API/HTMLImageElement/naturalWidth
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Intrinsic Width
-  - Intrinsic size
-  - Property
-  - Reference
-  - naturalWidth
-  - size
-  - width
 browser-compat: api.HTMLImageElement.naturalWidth
 ---
 

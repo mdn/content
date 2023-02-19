@@ -2,12 +2,6 @@
 title: HTMLCollection.namedItem()
 slug: Web/API/HTMLCollection/namedItem
 page-type: web-api-instance-method
-tags:
-  - API
-  - Element Lists
-  - HTMLCollection
-  - Method
-  - Reference
 browser-compat: api.HTMLCollection.namedItem
 ---
 

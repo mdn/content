@@ -2,14 +2,9 @@
 title: HTMLContentElement.getDistributedNodes()
 slug: Web/API/HTMLContentElement/getDistributedNodes
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - Web Components
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.HTMLContentElement.getDistributedNodes
 ---
 
