@@ -2,14 +2,8 @@
 title: URL Pattern API
 slug: Web/API/URL_Pattern_API
 page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - URL
-  - URLPattern
-  - URL Pattern API
-  - Web
-  - Experimental
+status:
+  - experimental
 browser-compat: api.URLPattern
 ---
 

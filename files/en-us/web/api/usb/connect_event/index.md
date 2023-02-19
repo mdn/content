@@ -2,13 +2,8 @@
 title: 'USB: connect event'
 slug: Web/API/USB/connect_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - USB
-  - WebUSB
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USB.connect_event
 ---
 
