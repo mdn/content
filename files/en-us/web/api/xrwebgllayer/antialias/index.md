@@ -37,7 +37,7 @@ method.
 Since this is a read-only property, you can set the anti-aliasing mode only when
 initially creating the `XRWebGLLayer`, by specifying the `antialias`
 property in the {{domxref("XRWebGLLayer.XRWebGLLayer", "XRWebGLLayer()")}}
-constructor's `layerInit` configuration object.
+constructor's `options` configuration object.
 
 ## Examples
 
@@ -67,4 +67,3 @@ if (!glLayer.antialias) {
 ## See also
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
-- {{domxref("WebGLLayerInit")}}
