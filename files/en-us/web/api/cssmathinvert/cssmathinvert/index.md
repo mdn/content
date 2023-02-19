@@ -11,7 +11,7 @@ browser-compat: api.CSSMathInvert.CSSMathInvert
 
 The **`CSSMathInvert()`** constructor creates a
 new {{domxref("CSSMathInvert")}} object which represents a CSS
-{{CSSXref('calc()','calc()')}} used as `calc(1 / value)`
+{{CSSXref('calc','calc()')}} used as `calc(1 / value)`
 
 ## Syntax
 

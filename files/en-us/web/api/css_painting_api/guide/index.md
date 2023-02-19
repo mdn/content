@@ -11,7 +11,7 @@ To programmatically create an image used by a CSS stylesheet we need to work thr
 
 1. Define a paint worklet using the [`registerPaint()`](/en-US/docs/Web/API/PaintWorklet/registerPaint) function
 2. Register the worklet
-3. Include the `{{cssxref('image/paint()','paint()')}}` CSS function
+3. Include the `{{cssxref("image/paint","paint()")}}` CSS function
 
 To elaborate over these steps, we're going to start by creating a half-highlight background, like on this header:
 
