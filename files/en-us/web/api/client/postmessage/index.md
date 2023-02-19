@@ -25,7 +25,7 @@ postMessage(message, transferables)
 - `message`
   - : The message to send to the client. This can be any [structured-cloneable type](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 - `transferables` {{optional_inline}}
-  - : A sequence of objects that are [transferred](/en-US/docs/Web/API/Transferable) with the message. The
+  - : A sequence of objects that are [transferred](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) with the message. The
     ownership of these objects is given to the destination side and they are no longer
     usable on the sending side.
 
