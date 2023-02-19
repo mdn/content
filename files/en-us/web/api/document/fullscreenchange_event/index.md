@@ -2,13 +2,6 @@
 title: "Document: fullscreenchange event"
 slug: Web/API/Document/fullscreenchange_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Fullscreen API
-  - Reference
-  - fullscreen
-  - fullscreenchange
 browser-compat: api.Document.fullscreenchange_event
 ---
 

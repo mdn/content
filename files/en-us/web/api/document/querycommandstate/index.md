@@ -2,12 +2,9 @@
 title: Document.queryCommandState()
 slug: Web/API/Document/queryCommandState
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Reference
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Document.queryCommandState
 ---
 

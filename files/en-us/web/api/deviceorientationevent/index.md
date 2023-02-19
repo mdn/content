@@ -2,11 +2,6 @@
 title: DeviceOrientationEvent
 slug: Web/API/DeviceOrientationEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Device Orientation API
-  - Interface
-  - Reference
 browser-compat: api.DeviceOrientationEvent
 ---
 

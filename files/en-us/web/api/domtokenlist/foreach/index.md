@@ -2,9 +2,6 @@
 title: DOMTokenList.forEach()
 slug: Web/API/DOMTokenList/forEach
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.DOMTokenList.forEach
 ---
 

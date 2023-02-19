@@ -2,13 +2,6 @@
 title: Document.createProcessingInstruction()
 slug: Web/API/Document/createProcessingInstruction
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - createProcessInstruction
 browser-compat: api.Document.createProcessingInstruction
 ---
 

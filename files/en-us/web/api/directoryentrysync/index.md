@@ -2,15 +2,9 @@
 title: DirectoryEntrySync
 slug: Web/API/DirectoryEntrySync
 page-type: web-api-interface
-tags:
-  - API
-  - File API
-  - File and Directory Entries API
-  - Offline
-  - Reference
-  - filesystem
-  - Non-standard
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.DirectoryEntrySync
 ---
 

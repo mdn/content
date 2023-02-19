@@ -2,16 +2,6 @@
 title: Document.exitPictureInPicture()
 slug: Web/API/Document/exitPictureInPicture
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Reference
-  - Video
-  - pip
 browser-compat: api.Document.exitPictureInPicture
 ---
 

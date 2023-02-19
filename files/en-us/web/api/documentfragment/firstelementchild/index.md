@@ -2,11 +2,6 @@
 title: DocumentFragment.firstElementChild
 slug: Web/API/DocumentFragment/firstElementChild
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Element
-  - Property
 browser-compat: api.DocumentFragment.firstElementChild
 ---
 

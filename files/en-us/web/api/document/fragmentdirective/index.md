@@ -2,11 +2,8 @@
 title: Document.fragmentDirective
 slug: Web/API/Document/fragmentDirective
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
+status:
+  - experimental
 browser-compat: api.Document.fragmentDirective
 ---
 

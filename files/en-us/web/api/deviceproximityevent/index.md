@@ -2,13 +2,9 @@
 title: DeviceProximityEvent
 slug: Web/API/DeviceProximityEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Proximity Events
-  - Reference
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.DeviceProximityEvent
 ---
 

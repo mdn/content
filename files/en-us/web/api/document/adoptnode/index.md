@@ -2,15 +2,6 @@
 title: Document.adoptNode()
 slug: Web/API/Document/adoptNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - NeedsExample
-  - NeedsSpecTable
-  - NeedsUpdate
-  - Reference
 browser-compat: api.Document.adoptNode
 ---
 

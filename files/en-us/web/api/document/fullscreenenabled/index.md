@@ -2,17 +2,6 @@
 title: Document.fullscreenEnabled
 slug: Web/API/Document/fullscreenEnabled
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - Fullscreen
-  - Fullscreen API
-  - Property
-  - Read-only
-  - Reference
-  - fullscreen
-  - fullscreenEnabled
-  - screen
 browser-compat: api.Document.fullscreenEnabled
 ---
 

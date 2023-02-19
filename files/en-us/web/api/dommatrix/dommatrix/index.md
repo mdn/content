@@ -2,13 +2,6 @@
 title: DOMMatrix()
 slug: Web/API/DOMMatrix/DOMMatrix
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Geometry
-  - Geometry Interfaces
-  - Reference
-  - matrix
 browser-compat: api.DOMMatrix.DOMMatrix
 ---
 

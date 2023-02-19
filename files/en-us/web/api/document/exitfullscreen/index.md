@@ -2,18 +2,6 @@
 title: Document.exitFullscreen()
 slug: Web/API/Document/exitFullscreen
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Full
-  - Fullscreen
-  - Fullscreen API
-  - Method
-  - Reference
-  - exitFullscreen
-  - fullscreen
-  - screen
 browser-compat: api.Document.exitFullscreen
 ---
 

@@ -2,13 +2,6 @@
 title: Document.lastModified
 slug: Web/API/Document/lastModified
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - NeedsSpecTable
-  - Property
-  - Reference
 browser-compat: api.Document.lastModified
 ---
 

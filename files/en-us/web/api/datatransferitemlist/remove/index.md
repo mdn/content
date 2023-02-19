@@ -2,15 +2,6 @@
 title: DataTransferItemList.remove()
 slug: Web/API/DataTransferItemList/remove
 page-type: web-api-instance-method
-tags:
-  - API
-  - DataTransferItemList
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Method
-  - Reference
-  - drag and drop
-  - remove
 browser-compat: api.DataTransferItemList.remove
 ---
 

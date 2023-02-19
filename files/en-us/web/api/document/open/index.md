@@ -2,13 +2,6 @@
 title: Document.open()
 slug: Web/API/Document/open
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - open
 browser-compat: api.Document.open
 ---
 

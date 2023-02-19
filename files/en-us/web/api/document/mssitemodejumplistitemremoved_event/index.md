@@ -2,9 +2,8 @@
 title: 'Document: mssitemodejumplistitemremoved event'
 slug: Web/API/Document/mssitemodejumplistitemremoved_event
 page-type: web-api-event
-tags:
-  - Non-standard
-  - Event
+status:
+  - non-standard
 ---
 
 {{APIRef("DOM")}}

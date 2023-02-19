@@ -2,14 +2,6 @@
 title: DedicatedWorkerGlobalScope.name
 slug: Web/API/DedicatedWorkerGlobalScope/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DedicatedWorkerGlobalScope
-  - Property
-  - Reference
-  - Worker
-  - name
 browser-compat: api.DedicatedWorkerGlobalScope.name
 ---
 

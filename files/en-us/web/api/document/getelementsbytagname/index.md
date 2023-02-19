@@ -2,11 +2,6 @@
 title: Document.getElementsByTagName()
 slug: Web/API/Document/getElementsByTagName
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
 browser-compat: api.Document.getElementsByTagName
 ---
 

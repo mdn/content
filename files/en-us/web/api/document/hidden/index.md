@@ -2,14 +2,6 @@
 title: Document.hidden
 slug: Web/API/Document/hidden
 page-type: web-api-instance-property
-tags:
-  - DOM
-  - Document
-  - Page Visibility API
-  - Property
-  - Read-only
-  - Reference
-  - Web
 browser-compat: api.Document.hidden
 ---
 

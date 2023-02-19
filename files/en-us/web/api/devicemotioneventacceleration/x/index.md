@@ -2,11 +2,6 @@
 title: 'DeviceMotionEventAcceleration: x'
 slug: Web/API/DeviceMotionEventAcceleration/x
 page-type: web-api-instance-property
-tags:
-  - API
-  - DeviceAcceleration
-  - Property
-  - Reference
 browser-compat: api.DeviceMotionEventAcceleration.x
 ---
 

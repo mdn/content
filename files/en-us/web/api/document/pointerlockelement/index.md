@@ -2,13 +2,6 @@
 title: Document.pointerLockElement
 slug: Web/API/Document/pointerLockElement
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Reference
-  - mouse lock
 browser-compat: api.Document.pointerLockElement
 ---
 

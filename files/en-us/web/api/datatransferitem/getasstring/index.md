@@ -2,15 +2,6 @@
 title: DataTransferItem.getAsString()
 slug: Web/API/DataTransferItem/getAsString
 page-type: web-api-instance-method
-tags:
-  - API
-  - DataTransferItem
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Method
-  - Reference
-  - drag and drop
-  - getAsString
 browser-compat: api.DataTransferItem.getAsString
 ---
 

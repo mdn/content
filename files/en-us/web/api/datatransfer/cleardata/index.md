@@ -2,14 +2,6 @@
 title: DataTransfer.clearData()
 slug: Web/API/DataTransfer/clearData
 page-type: web-api-instance-method
-tags:
-  - API
-  - DataTransfer
-  - HTML DOM
-  - Method
-  - Reference
-  - clearData
-  - drag and drop
 browser-compat: api.DataTransfer.clearData
 ---
 

@@ -2,17 +2,9 @@
 title: Document.lastStyleSheetSet
 slug: Web/API/Document/lastStyleSheetSet
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - DOM
-  - Document
-  - Property
-  - Reference
-  - Stylesheets
-  - lastStyleSheetSet
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Document.lastStyleSheetSet
 ---
 

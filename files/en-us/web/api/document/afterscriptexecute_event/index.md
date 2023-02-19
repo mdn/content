@@ -2,13 +2,8 @@
 title: 'Document: afterscriptexecute event'
 slug: Web/API/Document/afterscriptexecute_event
 page-type: web-api-event
-tags:
- - Document
- - afterscriptexecute
- - API
- - Event
- - Reference
- - Non-standard
+status:
+  - non-standard
 browser-compat: api.Document.afterscriptexecute_event
 ---
 

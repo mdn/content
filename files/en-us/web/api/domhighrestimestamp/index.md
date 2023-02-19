@@ -1,17 +1,6 @@
 ---
 title: DOMHighResTimeStamp
 slug: Web/API/DOMHighResTimeStamp
-tags:
-  - API
-  - DOMHighResTimeStamp
-  - High Resolution Time
-  - Milliseconds
-  - Performance
-  - Reference
-  - Time
-  - Type
-  - speed
-  - timeStamp
 browser-compat: api.DOMHighResTimestamp
 ---
 

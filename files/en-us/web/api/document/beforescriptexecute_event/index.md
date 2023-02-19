@@ -2,13 +2,8 @@
 title: 'Document: beforescriptexecute event'
 slug: Web/API/Document/beforescriptexecute_event
 page-type: web-api-event
-tags:
- - Document
- - beforescriptexecute
- - API
- - Event
- - Reference
- - Non-standard
+status:
+  - non-standard
 browser-compat: api.Document.beforescriptexecute_event
 ---
 

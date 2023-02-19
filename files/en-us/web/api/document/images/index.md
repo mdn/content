@@ -2,13 +2,6 @@
 title: Document.images
 slug: Web/API/Document/images
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Images
-  - Property
-  - Reference
 browser-compat: api.Document.images
 ---
 

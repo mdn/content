@@ -2,12 +2,6 @@
 title: 'DedicatedWorkerGlobalScope: messageerror event'
 slug: Web/API/DedicatedWorkerGlobalScope/messageerror_event
 page-type: web-api-event
-tags:
-  - API
-  - DedicatedWorkerGlobalScope
-  - Event
-  - Reference
-  - messageerror
 browser-compat: api.DedicatedWorkerGlobalScope.messageerror_event
 ---
 
