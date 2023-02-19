@@ -2,17 +2,9 @@
 title: VRDisplayEvent.display
 slug: Web/API/VRDisplayEvent/display
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplayEvent
-  - Virtual Reality
-  - WebVR
-  - display
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplayEvent.display
 ---
 

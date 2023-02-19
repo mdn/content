@@ -2,18 +2,9 @@
 title: VRDisplay
 slug: Web/API/VRDisplay
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - Media
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay
 ---
 
