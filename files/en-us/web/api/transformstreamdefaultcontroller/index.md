@@ -2,11 +2,6 @@
 title: TransformStreamDefaultController
 slug: Web/API/TransformStreamDefaultController
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - TransformStreamDefaultController
 browser-compat: api.TransformStreamDefaultController
 ---
 
