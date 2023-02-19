@@ -2,17 +2,6 @@
 title: Signaling and video calling
 slug: Web/API/WebRTC_API/Signaling_and_video_calling
 page-type: guide
-tags:
-  - API
-  - Audio
-  - Calling
-  - Example
-  - Guide
-  - Media
-  - Signaling
-  - Tutorial
-  - Video
-  - WebRTC
 ---
 
 {{DefaultAPISidebar("WebRTC")}}

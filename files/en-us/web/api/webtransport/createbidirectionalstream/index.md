@@ -2,14 +2,8 @@
 title: WebTransport.createBidirectionalStream()
 slug: Web/API/WebTransport/createBidirectionalStream
 page-type: web-api-instance-method
-tags:
-  - API
-  - createBidirectionalStream
-  - Experimental
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransport.createBidirectionalStream
 ---
 
