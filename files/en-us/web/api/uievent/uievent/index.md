@@ -2,11 +2,6 @@
 title: UIEvent()
 slug: Web/API/UIEvent/UIEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - UIEvent
 browser-compat: api.UIEvent.UIEvent
 ---
 
