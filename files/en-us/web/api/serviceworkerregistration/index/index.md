@@ -2,17 +2,8 @@
 title: ServiceWorkerRegistration.index
 slug: Web/API/ServiceWorkerRegistration/index
 page-type: web-api-instance-property
-tags:
-  - Content
-  - Content Index API
-  - Index
-  - PWA
-  - Property
-  - ServiceWorker
-  - ServiceWorkerRegistration
-  - content index
-  - content indexing
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ServiceWorkerRegistration.index
 ---
 

@@ -2,12 +2,6 @@
 title: HTMLInputElement.showPicker()
 slug: Web/API/HTMLInputElement/showPicker
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - Method
-  - Reference
 browser-compat: api.HTMLInputElement.showPicker
 ---
 

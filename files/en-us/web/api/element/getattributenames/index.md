@@ -2,13 +2,6 @@
 title: Element.getAttributeNames()
 slug: Web/API/Element/getAttributeNames
 page-type: web-api-instance-method
-tags:
-  - API
-  - Attribute
-  - DOM
-  - Element
-  - Method
-  - getAttributeNames
 browser-compat: api.Element.getAttributeNames
 ---
 

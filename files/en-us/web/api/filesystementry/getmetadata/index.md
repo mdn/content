@@ -2,16 +2,9 @@
 title: FileSystemEntry.getMetadata()
 slug: Web/API/FileSystemEntry/getMetadata
 page-type: web-api-instance-method
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemEntry
-  - Files
-  - Method
-  - Non-standard
-  - Reference
-  - getMetadata
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.FileSystemEntry.getMetadata
 ---
 

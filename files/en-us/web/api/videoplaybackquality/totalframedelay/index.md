@@ -2,16 +2,9 @@
 title: VideoPlaybackQuality.totalFrameDelay
 slug: Web/API/VideoPlaybackQuality/totalFrameDelay
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media Source Extensions
-  - Deprecated
-  - Property
-  - Reference
-  - Video
-  - VideoPlaybackQuality
-  - totalFrameDelay
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VideoPlaybackQuality.totalFrameDelay
 ---
 

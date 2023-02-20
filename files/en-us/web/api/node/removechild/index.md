@@ -2,9 +2,6 @@
 title: Node.removeChild()
 slug: Web/API/Node/removeChild
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Node.removeChild
 ---
 

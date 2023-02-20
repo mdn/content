@@ -2,13 +2,6 @@
 title: Performance.timeOrigin
 slug: Web/API/Performance/timeOrigin
 page-type: web-api-instance-property
-tags:
-  - API
-  - High Resolution Time API
-  - Performance
-  - Property
-  - Reference
-  - timeOrigin
 browser-compat: api.Performance.timeOrigin
 ---
 

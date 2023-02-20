@@ -2,14 +2,8 @@
 title: PresentationReceiver
 slug: Web/API/PresentationReceiver
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Presentation
-  - Presentation API
-  - PresentationReceiver
-  - Reference
+status:
+  - experimental
 browser-compat: api.PresentationReceiver
 ---
 

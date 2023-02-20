@@ -2,14 +2,9 @@
 title: IDBMutableFile
 slug: Web/API/IDBMutableFile
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Files
-  - Reference
-  - Interface
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.IDBMutableFile
 ---
 

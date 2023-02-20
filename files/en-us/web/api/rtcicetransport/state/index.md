@@ -2,20 +2,6 @@
 title: RTCIceTransport.state
 slug: Web/API/RTCIceTransport/state
 page-type: web-api-instance-property
-tags:
-  - API
-  - Enumerated Type
-  - Enumeration
-  - ICE
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Transport
-  - Type
-  - WebRTC
-  - WebRTC API
-  - state
 browser-compat: api.RTCIceTransport.state
 ---
 

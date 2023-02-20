@@ -2,12 +2,6 @@
 title: RTCDataChannel.bufferedAmountLowThreshold
 slug: Web/API/RTCDataChannel/bufferedAmountLowThreshold
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - bufferedAmountLowThreshold
 browser-compat: api.RTCDataChannel.bufferedAmountLowThreshold
 ---
 

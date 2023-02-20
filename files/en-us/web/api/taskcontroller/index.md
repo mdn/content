@@ -2,11 +2,6 @@
 title: TaskController
 slug: Web/API/TaskController
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - TaskController
 browser-compat: api.TaskController
 ---
 

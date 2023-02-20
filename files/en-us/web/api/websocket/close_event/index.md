@@ -2,14 +2,6 @@
 title: 'WebSocket: close event'
 slug: Web/API/WebSocket/close_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - Web
-  - WebSocket
-  - close
-  - events
 browser-compat: api.WebSocket.close_event
 ---
 

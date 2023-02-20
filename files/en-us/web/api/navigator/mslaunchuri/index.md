@@ -2,13 +2,8 @@
 title: Navigator.msLaunchUri()
 slug: Web/API/Navigator/msLaunchUri
 page-type: web-api-instance-method
-tags:
-  - API
-  - API:Microsoft Extensions
-  - MSLaunchUri
-  - Method
-  - Non-standard
-  - Reference
+status:
+  - non-standard
 ---
 
 {{APIRef("Microsoft Extensions")}}{{Non-standard_header}}

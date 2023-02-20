@@ -2,13 +2,6 @@
 title: 'HTMLMediaElement: error event'
 slug: Web/API/HTMLMediaElement/error_event
 page-type: web-api-event
-tags:
-  - API
-  - Error
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Web
 browser-compat: api.HTMLMediaElement.error_event
 ---
 

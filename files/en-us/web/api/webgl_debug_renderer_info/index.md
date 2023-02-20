@@ -2,11 +2,6 @@
 title: WEBGL_debug_renderer_info
 slug: Web/API/WEBGL_debug_renderer_info
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.WEBGL_debug_renderer_info
 ---
 

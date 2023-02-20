@@ -2,17 +2,6 @@
 title: HTMLImageElement.height
 slug: Web/API/HTMLImageElement/height
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Property
-  - Reference
-  - dimensions
-  - height
-  - size
 browser-compat: api.HTMLImageElement.height
 ---
 

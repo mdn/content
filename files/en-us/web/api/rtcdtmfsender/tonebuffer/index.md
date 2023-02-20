@@ -2,18 +2,6 @@
 title: RTCDTMFSender.toneBuffer
 slug: Web/API/RTCDTMFSender/toneBuffer
 page-type: web-api-instance-property
-tags:
-  - Audio
-  - DTMF
-  - Media
-  - Property
-  - RTCDTMFSender
-  - Reference
-  - Telephony
-  - Touch-tone
-  - WebRTC
-  - WebRTC API
-  - toneBuffer
 browser-compat: api.RTCDTMFSender.toneBuffer
 ---
 

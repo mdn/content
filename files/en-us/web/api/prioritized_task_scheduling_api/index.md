@@ -2,11 +2,6 @@
 title: Prioritized Task Scheduling API
 slug: Web/API/Prioritized_Task_Scheduling_API
 page-type: web-api-overview
-tags:
-  - API
-  - Prioritized Task Scheduling API
-  - Reference
-  - Landing
 browser-compat: api.Scheduler
 ---
 

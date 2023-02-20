@@ -2,13 +2,6 @@
 title: OscillatorNode
 slug: Web/API/OscillatorNode
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Media
-  - OscillatorNode
-  - Reference
-  - Web Audio API
 browser-compat: api.OscillatorNode
 ---
 

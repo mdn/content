@@ -2,17 +2,6 @@
 title: BaseAudioContext.createGain()
 slug: Web/API/BaseAudioContext/createGain
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Volume Control
-  - Web Audio API
-  - createGain
-  - sound
 browser-compat: api.BaseAudioContext.createGain
 ---
 

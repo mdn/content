@@ -2,18 +2,6 @@
 title: ReadableStream
 slug: Web/API/ReadableStream
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - Files
-  - HTTP
-  - Interface
-  - Networking
-  - ReadableStream
-  - Reference
-  - Streams
-  - data
 browser-compat: api.ReadableStream
 ---
 

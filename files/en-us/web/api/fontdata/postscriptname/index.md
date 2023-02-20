@@ -2,12 +2,8 @@
 title: FontData.postscriptName
 slug: Web/API/FontData/postscriptName
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - postscriptName
-  - Experimental
+status:
+  - experimental
 browser-compat: api.FontData.postscriptName
 ---
 

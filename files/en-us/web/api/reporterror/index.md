@@ -2,12 +2,6 @@
 title: reportError()
 slug: Web/API/reportError
 page-type: web-api-global-function
-tags:
-  - API
-  - Method
-  - Reference
-  - Global
-  - Errors
 browser-compat: api.reportError
 ---
 

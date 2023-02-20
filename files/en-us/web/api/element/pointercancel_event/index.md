@@ -1,15 +1,6 @@
 ---
 title: 'Element: pointercancel event'
 slug: Web/API/Element/pointercancel_event
-tags:
-  - Event
-  - HTML DOM
-  - Element
-  - Pointer Events
-  - PointerEvent
-  - Reference
-  - pointercancel
-  - user input
 browser-compat: api.Element.pointercancel_event
 page-type: web-api-event
 ---

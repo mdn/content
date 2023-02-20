@@ -2,12 +2,6 @@
 title: SVGUnitTypes
 slug: Web/API/SVGUnitTypes
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGUnitTypes
 ---
 

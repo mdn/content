@@ -9,7 +9,7 @@ browser-compat: api.Animation.startTime
 
 The **`Animation.startTime`** property of the {{domxref("Animation")}} interface is a double-precision floating-point value which indicates the scheduled time when an animation's playback should begin.
 
-An animation's **start time** is the time value of its {{domxref("timeline", "DocumentTimeline")}} when its target {{domxref("KeyframeEffect")}} is scheduled to begin playback. An animation's **start time** is initially unresolved (meaning that it's `null` because it has no value).
+An animation's **start time** is the time value of its {{domxref("DocumentTimeline","timeline")}} when its target {{domxref("KeyframeEffect")}} is scheduled to begin playback. An animation's **start time** is initially unresolved (meaning that it's `null` because it has no value).
 
 ## Value
 

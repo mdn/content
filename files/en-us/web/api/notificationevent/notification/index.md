@@ -2,14 +2,6 @@
 title: NotificationEvent.notification
 slug: Web/API/NotificationEvent/notification
 page-type: web-api-instance-property
-tags:
-  - API
-  - NotificationEvent
-  - Notifications
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
 browser-compat: api.NotificationEvent.notification
 ---
 

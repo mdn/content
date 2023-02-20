@@ -2,12 +2,6 @@
 title: 'EventSource: message event'
 slug: Web/API/EventSource/message_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - EventSource
-  - Reference
-  - message
 browser-compat: api.EventSource.message_event
 ---
 

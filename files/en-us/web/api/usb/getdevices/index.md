@@ -2,15 +2,8 @@
 title: USB.getDevices()
 slug: Web/API/USB/getDevices
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - WebUSB
-  - WebUSB API
-  - getDevices()
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USB.getDevices
 ---
 

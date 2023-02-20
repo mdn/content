@@ -2,14 +2,6 @@
 title: IntersectionObserverEntry.isIntersecting
 slug: Web/API/IntersectionObserverEntry/isIntersecting
 page-type: web-api-instance-property
-tags:
-  - API
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserverEntry
-  - Property
-  - Reference
-  - isIntersecting
 browser-compat: api.IntersectionObserverEntry.isIntersecting
 ---
 

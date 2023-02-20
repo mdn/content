@@ -2,13 +2,6 @@
 title: Element.attributes
 slug: Web/API/Element/attributes
 page-type: web-api-instance-property
-tags:
-  - API
-  - Attributes
-  - DOM
-  - Element
-  - Property
-  - Reference
 browser-compat: api.Element.attributes
 ---
 

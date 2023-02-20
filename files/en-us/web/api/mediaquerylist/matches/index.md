@@ -2,17 +2,6 @@
 title: MediaQueryList.matches
 slug: Web/API/MediaQueryList/matches
 page-type: web-api-instance-property
-tags:
-  - API
-  - Adaptive Design
-  - CSSOM
-  - CSSOM View
-  - DOM
-  - Media Queries
-  - MediaQueryList
-  - Property
-  - Reference
-  - matches
 browser-compat: api.MediaQueryList.matches
 ---
 

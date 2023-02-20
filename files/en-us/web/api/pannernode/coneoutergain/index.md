@@ -2,13 +2,6 @@
 title: PannerNode.coneOuterGain
 slug: Web/API/PannerNode/coneOuterGain
 page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - coneOuterGain
 browser-compat: api.PannerNode.coneOuterGain
 ---
 

@@ -2,17 +2,6 @@
 title: MediaTrackConstraints.width
 slug: Web/API/MediaTrackConstraints/width
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams
-  - Media Streams API
-  - MediaTrackConstraints
-  - Property
-  - Reference
-  - WebRTC
-  - width
 browser-compat: api.MediaTrackConstraints.width
 ---
 

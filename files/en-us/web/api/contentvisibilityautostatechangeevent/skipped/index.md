@@ -2,19 +2,6 @@
 title: ContentVisibilityAutoStateChangeEvent.skipped
 slug: Web/API/ContentVisibilityAutoStateChangeEvent/skipped
 page-type: web-api-instance-property
-tags:
-  - API
-  - ContentVisibilityAutoStateChangeEvent
-  - content-visibility
-  - CSS
-  - CSS Containment
-  - Layout
-  - Paint
-  - Property
-  - Reference
-  - skipped
-  - Style
-  - Web
 browser-compat: api.ContentVisibilityAutoStateChangeEvent.skipped
 ---
 

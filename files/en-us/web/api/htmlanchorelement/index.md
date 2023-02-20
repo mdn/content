@@ -2,11 +2,6 @@
 title: HTMLAnchorElement
 slug: Web/API/HTMLAnchorElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLAnchorElement
 ---
 

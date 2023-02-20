@@ -2,12 +2,8 @@
 title: FontData.fullName
 slug: Web/API/FontData/fullName
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - fullName
-  - Experimental
+status:
+  - experimental
 browser-compat: api.FontData.fullName
 ---
 

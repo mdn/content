@@ -2,11 +2,6 @@
 title: RTCDataChannelEvent()
 slug: Web/API/RTCDataChannelEvent/RTCDataChannelEvent
 page-type: web-api-constructor
-tags:
-  - Constructor
-  - RTCDataChannelEvent
-  - Reference
-  - WebRTC
 browser-compat: api.RTCDataChannelEvent.RTCDataChannelEvent
 ---
 

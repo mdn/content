@@ -2,16 +2,6 @@
 title: 'HTMLElement: dragend event'
 slug: Web/API/HTMLElement/dragend_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - HTMLElement
-  - DragEvent
-  - Event
-  - Reference
-  - Web
-  - drag and drop
-  - dragend
 browser-compat: api.HTMLElement.dragend_event
 ---
 

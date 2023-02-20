@@ -2,12 +2,6 @@
 title: HTMLElement.contentEditable
 slug: Web/API/HTMLElement/contentEditable
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Property
-  - Reference
 browser-compat: api.HTMLElement.contentEditable
 ---
 

@@ -2,13 +2,6 @@
 title: ValidityState.badInput
 slug: Web/API/ValidityState/badInput
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints API
-  - HTML DOM
-  - Property
-  - Read-only
-  - ValidityState
 browser-compat: api.ValidityState.badInput
 ---
 

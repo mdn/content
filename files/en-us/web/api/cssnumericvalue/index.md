@@ -2,14 +2,8 @@
 title: CSSNumericValue
 slug: Web/API/CSSNumericValue
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Interface
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSNumericValue
 ---
 

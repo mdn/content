@@ -2,13 +2,8 @@
 title: EyeDropper
 slug: Web/API/EyeDropper
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - EyeDropper
-  - Interface
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.EyeDropper
 ---
 

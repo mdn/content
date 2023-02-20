@@ -2,12 +2,6 @@
 title: HTMLOptionElement
 slug: Web/API/HTMLOptionElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsNewLayout
-  - Reference
 browser-compat: api.HTMLOptionElement
 ---
 

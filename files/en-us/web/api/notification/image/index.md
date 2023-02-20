@@ -2,15 +2,8 @@
 title: Notification.image
 slug: Web/API/Notification/image
 page-type: web-api-instance-property
-tags:
-  - API
-  - Image
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Notification.image
 ---
 

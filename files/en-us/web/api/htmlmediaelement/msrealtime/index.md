@@ -2,10 +2,8 @@
 title: HTMLMediaElement.msRealTime
 slug: Web/API/HTMLMediaElement/msRealTime
 page-type: web-api-instance-property
-tags:
-  - msRealTime
-  - Non-standard
-  - Property
+status:
+  - non-standard
 ---
 
 {{APIRef("HTML DOM")}}

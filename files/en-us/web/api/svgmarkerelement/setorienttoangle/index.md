@@ -2,12 +2,6 @@
 title: SVGMarkerElement.setOrientToAngle()
 slug: Web/API/SVGMarkerElement/setOrientToAngle
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - setOrientToAngle
-  - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.setOrientToAngle
 ---
 

@@ -2,12 +2,6 @@
 title: Document.dir
 slug: Web/API/Document/dir
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
 browser-compat: api.Document.dir
 ---
 
