@@ -2,12 +2,7 @@
 title: View Transitions API
 slug: Web/API/View_Transitions_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - Landing
-  - Overview
-  - Reference
+status: experimental
 browser-compat:
   - api.Document.startViewTransitions()
 ---

@@ -2,11 +2,7 @@
 title: ViewTransition.finished
 slug: Web/API/ViewTransition/finished
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Read-only
+status: experimental
 browser-compat: api.ViewTransition.finished
 ---
 

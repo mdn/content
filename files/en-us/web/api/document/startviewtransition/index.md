@@ -2,11 +2,7 @@
 title: Document.startViewTransition()
 slug: Web/API/Document/startViewTransition
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
+status: experimental
 browser-compat: api.Document.startViewTransition
 ---
 
@@ -50,7 +46,7 @@ function updateView(e) {
   document.startViewTransition(() => displayNewImage());
 
   function displayNewImage() {
-    const mainSrc = `${e.target.src.split('_th.jpg')[0]}.jpg`;
+    const mainSrc = `${e.target.src.split("_th.jpg")[0]}.jpg`;
     galleryImg.src = mainSrc;
     galleryCaption.textContent = e.target.alt;
   }

@@ -2,11 +2,7 @@
 title: ViewTransition.skipTransition()
 slug: Web/API/ViewTransition/skipTransition
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
+status: experimental
 browser-compat: api.ViewTransition.skipTransition
 ---
 

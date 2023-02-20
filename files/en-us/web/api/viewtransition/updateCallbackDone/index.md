@@ -2,11 +2,7 @@
 title: ViewTransition.updateCallbackDone
 slug: Web/API/ViewTransition/updateCallbackDone
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Read-only
+status: experimental
 browser-compat: api.ViewTransition.updateCallbackDone
 ---
 
