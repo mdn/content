@@ -2,15 +2,6 @@
 title: DataTransferItemList.clear()
 slug: Web/API/DataTransferItemList/clear
 page-type: web-api-instance-method
-tags:
-  - API
-  - DataTransferItemList
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Method
-  - Reference
-  - clear
-  - drag and drop
 browser-compat: api.DataTransferItemList.clear
 ---
 

@@ -2,9 +2,6 @@
 title: Using WebGL extensions
 slug: Web/API/WebGL_API/Using_Extensions
 page-type: guide
-tags:
-  - Advanced
-  - WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}}

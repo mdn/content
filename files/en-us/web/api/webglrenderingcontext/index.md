@@ -2,20 +2,6 @@
 title: WebGLRenderingContext
 slug: Web/API/WebGLRenderingContext
 page-type: web-api-interface
-tags:
-  - 2D
-  - 3D
-  - API
-  - Canvas
-  - Context
-  - Drawing
-  - GL
-  - Graphics
-  - Interface
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-  - rendering
 browser-compat: api.WebGLRenderingContext
 ---
 

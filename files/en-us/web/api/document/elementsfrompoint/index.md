@@ -2,12 +2,6 @@
 title: Document.elementsFromPoint()
 slug: Web/API/Document/elementsFromPoint
 page-type: web-api-instance-method
-tags:
-  - API
-  - Document
-  - Method
-  - Reference
-  - elementsFromPoint
 browser-compat: api.Document.elementsFromPoint
 ---
 

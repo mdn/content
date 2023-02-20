@@ -2,15 +2,6 @@
 title: "RTCDTMFSender: tonechange event"
 slug: Web/API/RTCDTMFSender/tonechange_event
 page-type: web-api-event
-tags:
-  - DTMF
-  - RTCDTMFSender
-  - Reference
-  - Touch-tone
-  - WebRTC
-  - WebRTC API
-  - Event
-  - tonechange
 browser-compat: api.RTCDTMFSender.tonechange_event
 ---
 

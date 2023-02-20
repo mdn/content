@@ -1,6 +1,7 @@
 ---
 title: omnibox.onInputChanged
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputChanged
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

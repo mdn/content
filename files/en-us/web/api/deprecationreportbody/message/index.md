@@ -2,13 +2,8 @@
 title: DeprecationReportBody.message
 slug: Web/API/DeprecationReportBody/message
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
-  - message
-  - DeprecationReportBody
+status:
+  - experimental
 browser-compat: api.DeprecationReportBody.message
 ---
 

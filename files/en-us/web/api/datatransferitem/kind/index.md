@@ -2,15 +2,6 @@
 title: DataTransferItem.kind
 slug: Web/API/DataTransferItem/kind
 page-type: web-api-instance-property
-tags:
-  - API
-  - DataTransferItem
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Property
-  - Reference
-  - drag and drop
-  - kind
 browser-compat: api.DataTransferItem.kind
 ---
 

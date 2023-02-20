@@ -1,6 +1,7 @@
 ---
 title: windows
 slug: Mozilla/Add-ons/WebExtensions/API/windows
+page-type: webextension-api
 tags:
   - API
   - Add-ons

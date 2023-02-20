@@ -2,17 +2,6 @@
 title: HTMLTableElement.rows
 slug: Web/API/HTMLTableElement/rows
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - NeedsBrowserCompatibility
-  - NeedsSpecTable
-  - Property
-  - Read-only
-  - Reference
-  - Table Rows
-  - rows
 browser-compat: api.HTMLTableElement.rows
 ---
 

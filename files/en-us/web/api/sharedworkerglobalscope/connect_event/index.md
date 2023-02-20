@@ -2,13 +2,6 @@
 title: 'SharedWorkerGlobalScope: connect event'
 slug: Web/API/SharedWorkerGlobalScope/connect_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - SharedWorkerGlobalScope
-  - connect
-  - events
 browser-compat: api.SharedWorkerGlobalScope.connect_event
 ---
 

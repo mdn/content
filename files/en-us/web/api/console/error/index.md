@@ -2,13 +2,6 @@
 title: console.error()
 slug: Web/API/console/error
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Web Development
-  - web console
 browser-compat: api.console.error
 ---
 

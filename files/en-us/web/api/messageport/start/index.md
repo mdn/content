@@ -2,13 +2,6 @@
 title: MessagePort.start()
 slug: Web/API/MessagePort/start
 page-type: web-api-instance-method
-tags:
-  - API
-  - Channel messaging
-  - MessagePort
-  - Method
-  - Reference
-  - start
 browser-compat: api.MessagePort.start
 ---
 

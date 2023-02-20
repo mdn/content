@@ -2,19 +2,6 @@
 title: DataTransferItemList.length
 slug: Web/API/DataTransferItemList/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - DataTransferItemList
-  - Dragged Items
-  - Drop Items
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Item List
-  - Property
-  - Read-only
-  - Reference
-  - drag and drop
-  - length
 browser-compat: api.DataTransferItemList.length
 ---
 

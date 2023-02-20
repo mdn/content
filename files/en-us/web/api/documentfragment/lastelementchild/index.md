@@ -2,11 +2,6 @@
 title: DocumentFragment.lastElementChild
 slug: Web/API/DocumentFragment/lastElementChild
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Element
-  - Property
 browser-compat: api.DocumentFragment.lastElementChild
 ---
 

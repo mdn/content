@@ -2,14 +2,6 @@
 title: ResizeObserver.observe()
 slug: Web/API/ResizeObserver/observe
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Resize Observer API
-  - ResizeObserver
-  - observe()
-  - observers
 browser-compat: api.ResizeObserver.observe
 ---
 

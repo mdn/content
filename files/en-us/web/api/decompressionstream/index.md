@@ -2,11 +2,6 @@
 title: DecompressionStream
 slug: Web/API/DecompressionStream
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - DecompressionStream
 browser-compat: api.DecompressionStream
 ---
 

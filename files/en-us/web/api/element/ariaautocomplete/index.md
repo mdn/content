@@ -2,14 +2,6 @@
 title: Element.ariaAutoComplete
 slug: Web/API/Element/ariaAutoComplete
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaAutoComplete
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaAutoComplete
 ---
 

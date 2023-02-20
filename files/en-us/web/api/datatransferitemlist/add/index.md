@@ -2,15 +2,6 @@
 title: DataTransferItemList.add()
 slug: Web/API/DataTransferItemList/add
 page-type: web-api-instance-method
-tags:
-  - API
-  - Add
-  - DataTransferItemList
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Method
-  - Reference
-  - drag and drop
 browser-compat: api.DataTransferItemList.add
 ---
 

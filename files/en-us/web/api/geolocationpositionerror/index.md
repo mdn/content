@@ -2,12 +2,6 @@
 title: GeolocationPositionError
 slug: Web/API/GeolocationPositionError
 page-type: web-api-interface
-tags:
-  - API
-  - Geolocation API
-  - GeolocationPositionError
-  - Interface
-  - Secure context
 browser-compat: api.GeolocationPositionError
 ---
 

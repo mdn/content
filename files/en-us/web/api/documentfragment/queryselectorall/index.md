@@ -2,12 +2,6 @@
 title: DocumentFragment.querySelectorAll()
 slug: Web/API/DocumentFragment/querySelectorAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DocumentFragment
-  - Method
-  - Reference
 browser-compat: api.DocumentFragment.querySelectorAll
 ---
 

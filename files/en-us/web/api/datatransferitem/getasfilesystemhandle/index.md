@@ -2,13 +2,8 @@
 title: DataTransferItem.getAsFileSystemHandle()
 slug: Web/API/DataTransferItem/getAsFileSystemHandle
 page-type: web-api-instance-method
-tags:
-  - DataTransferItem
-  - Directory
-  - File
-  - File System Access API
-  - Method
-  - Experimental
+status:
+  - experimental
 browser-compat: api.DataTransferItem.getAsFileSystemHandle
 ---
 

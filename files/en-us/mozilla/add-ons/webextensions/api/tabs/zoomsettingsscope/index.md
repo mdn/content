@@ -1,6 +1,7 @@
 ---
 title: tabs.ZoomSettingsScope
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettingsScope
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

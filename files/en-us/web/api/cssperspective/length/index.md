@@ -2,15 +2,8 @@
 title: CSSPerspective.length
 slug: Web/API/CSSPerspective/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSPerspective
-  - CSSTransformComponent
-  - CSSTransformValue
-  - Experimental
-  - Houdini
-  - Property
+status:
+  - experimental
 browser-compat: api.CSSPerspective.length
 ---
 

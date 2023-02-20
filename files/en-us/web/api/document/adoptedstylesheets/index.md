@@ -1,13 +1,6 @@
 ---
 title: Document.adoptedStyleSheets
 slug: Web/API/Document/adoptedStyleSheets
-tags:
-  - API
-  - Document
-  - Property
-  - Reference
-  - Stylesheets
-  - adoptedStyleSheets
 page-type: web-api-instance-property
 browser-compat: api.Document.adoptedStyleSheets
 ---

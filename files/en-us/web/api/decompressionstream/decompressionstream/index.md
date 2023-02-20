@@ -2,11 +2,6 @@
 title: DecompressionStream()
 slug: Web/API/DecompressionStream/DecompressionStream
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - DecompressionStream
 browser-compat: api.DecompressionStream.DecompressionStream
 ---
 

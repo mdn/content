@@ -2,12 +2,6 @@
 title: 'SVGElement: load event'
 slug: Web/API/SVGElement/load_event
 page-type: web-api-event
-tags:
-  - API
-  - Reference
-  - SVGElement
-  - events
-  - load
 browser-compat: api.SVGElement.load_event
 ---
 

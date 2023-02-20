@@ -2,10 +2,8 @@
 title: XMLHttpRequest.msCachingEnabled()
 slug: Web/API/XMLHttpRequest/msCachingEnabled
 page-type: api-instance-method
-tags:
-  - msCachingEnabled
-  - Method
-  - Non-standard
+status:
+  - non-standard
 ---
 
 {{APIRef("HTML DOM")}}

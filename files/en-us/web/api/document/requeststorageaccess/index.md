@@ -2,14 +2,6 @@
 title: Document.requestStorageAccess()
 slug: Web/API/Document/requestStorageAccess
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - Storage Access API
-  - requestStorageAccess
 browser-compat: api.Document.requestStorageAccess
 ---
 

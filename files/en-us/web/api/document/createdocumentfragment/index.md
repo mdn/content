@@ -2,13 +2,6 @@
 title: Document.createDocumentFragment()
 slug: Web/API/Document/createDocumentFragment
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - createDocumentFragment
 browser-compat: api.Document.createDocumentFragment
 ---
 

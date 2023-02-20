@@ -2,15 +2,8 @@
 title: MediaStream Image Capture API
 slug: Web/API/MediaStream_Image_Capture_API
 page-type: web-api-overview
-tags:
-  - API
-  - Image
-  - MediaStream
-  - MediaStream Image Capture API
-  - Overview
-  - Reference
-  - Video
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ImageCapture
 ---
 

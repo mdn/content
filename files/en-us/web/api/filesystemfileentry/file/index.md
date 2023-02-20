@@ -2,14 +2,6 @@
 title: FileSystemFileEntry.file()
 slug: Web/API/FileSystemFileEntry/file
 page-type: web-api-instance-method
-tags:
-  - API
-  - File
-  - File and Directory Entries API
-  - FileSystemFileEntry
-  - Files
-  - Method
-  - Reference
 browser-compat: api.FileSystemFileEntry.file
 ---
 

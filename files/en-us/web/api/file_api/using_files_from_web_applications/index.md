@@ -2,8 +2,6 @@
 title: Using files from web applications
 slug: Web/API/File_API/Using_files_from_web_applications
 page-type: guide
-tags:
-  - File API
 ---
 
 {{APIRef("File API")}}

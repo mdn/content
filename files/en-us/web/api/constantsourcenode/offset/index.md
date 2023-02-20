@@ -2,14 +2,6 @@
 title: ConstantSourceNode.offset
 slug: Web/API/ConstantSourceNode/offset
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - ConstantSourceNode
-  - Media
-  - Property
-  - Read-only
-  - Web Audio API
 browser-compat: api.ConstantSourceNode.offset
 ---
 

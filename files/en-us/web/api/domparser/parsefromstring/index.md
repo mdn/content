@@ -2,10 +2,6 @@
 title: DOMParser.parseFromString()
 slug: Web/API/DOMParser/parseFromString
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
 browser-compat: api.DOMParser.parseFromString
 ---
 

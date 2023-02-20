@@ -2,9 +2,6 @@
 title: DOMMatrixReadOnly.scale()
 slug: Web/API/DOMMatrixReadOnly/scale
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.DOMMatrixReadOnly.scale
 ---
 

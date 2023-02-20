@@ -2,13 +2,8 @@
 title: Highlight.forEach()
 slug: Web/API/Highlight/forEach
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - CSS Custom Highlight API
-  - Reference
-  - forEach
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Highlight.forEach
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prototype.foreach
 ---

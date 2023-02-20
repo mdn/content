@@ -2,18 +2,6 @@
 title: DOMPoint
 slug: Web/API/DOMPoint
 page-type: web-api-interface
-tags:
-  - API
-  - Coordinate
-  - Coordinates
-  - DOM
-  - DOMPoint
-  - Geometry
-  - Geometry Interfaces
-  - Interface
-  - Point
-  - Reference
-  - VR
 browser-compat: api.DOMPoint
 ---
 

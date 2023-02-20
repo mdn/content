@@ -2,23 +2,6 @@
 title: RTCRtpCodecParameters
 slug: Web/API/RTCRtpCodecParameters
 page-type: web-api-interface
-tags:
-  - API
-  - Codec Configuration
-  - Codec Parameters
-  - Codec Preferences
-  - Dictionary
-  - Interface
-  - Media
-  - RTCRtpCodecParameters
-  - RTCRtpReceiver
-  - RTCRtpSender
-  - RTCRtpTransceiver
-  - RTP
-  - Reference
-  - SDP
-  - WebRTC
-  - setCodecPreferences
 ---
 
 {{APIRef("WebRTC")}}

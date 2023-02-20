@@ -2,15 +2,6 @@
 title: FileSystem.root
 slug: Web/API/FileSystem/root
 page-type: web-api-instance-property
-tags:
-  - API
-  - File and Directory Entries API
-  - Files
-  - NeedsExample
-  - Property
-  - Reference
-  - filesystem
-  - root
 browser-compat: api.FileSystem.root
 ---
 

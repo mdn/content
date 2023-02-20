@@ -58,7 +58,7 @@ When creating an API, remember that async iterables are designed to represent so
 
 ### Built-in async iterables
 
-There are currently no built-in JavaScript objects that have the `[Symbol.asyncIterator]` key set by default. However, WHATWG Streams are set to be the first built-in object to be async iterable, with `[Symbol.asyncIterator]` recently landing in the spec.
+[`ReadableStream`](/en-US/docs/Web/API/ReadableStream) is the only built-in JavaScript object that has the `Symbol.asyncIterator` method set by default at the time of writing.
 
 ## Specifications
 

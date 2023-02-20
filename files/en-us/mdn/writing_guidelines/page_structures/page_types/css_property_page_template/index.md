@@ -2,9 +2,6 @@
 title: CSS property page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 browser-compat: css.properties.NameOfTheProperty
 ---
 
@@ -24,13 +21,10 @@ browser-compat: css.properties.NameOfTheProperty
 > title: NameOfTheProperty
 > slug: Web/CSS/NameOfTheProperty
 > page-type: css-property OR css-shorthand-property
-> tags:
->   - CSS
->   - Reference
->   - CSS Property
->   - NameOfTheProperty
->   - Experimental
->   - Deprecated
+> status:
+>   - experimental
+>   - deprecated
+>   - non-standard
 > browser-compat: css.properties.NameOfTheProperty
 > ---
 > ```
@@ -43,16 +37,8 @@ browser-compat: css.properties.NameOfTheProperty
 >     For example, the [`background-color`](/en-US/docs/Web/CSS/background-color) property slug is `Web/CSS/background-color`.
 > - **page-type**
 >   - : The `page-type` key for CSS properties is `css-shorthand-property` for shorthand properties; otherwise it is `css-property`. For example, the `page-type` value for the [animation](/en-US/docs/Web/CSS/animation) property is `css-shorthand-property` but for the [animation-delay](/en-US/docs/Web/CSS/animation-delay) property, it is `css-property`.
-> - **tags**
->
->   - : Always include the following tags: **CSS**, **Reference**, **CSS Property**, _NameOfTheProperty_ (e.g., **background-color**).
->
->     Include the following tags as appropriate:
->
->     - Category of property: **Layout**, **Graphics**, **CSS Background**, **CSS Colors**, or other tags as appropriate
->     - Technology status: [**Experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)) or [**Deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete))
->     - Others: Any other terms related to the technology that people might search for
->
+> - **status**
+>   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete), **non-standard** (if not on a standards track).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value <code>css.properties.NameOfTheProperty</code> with the query string for the property in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).

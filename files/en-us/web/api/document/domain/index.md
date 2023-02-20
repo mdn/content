@@ -2,13 +2,8 @@
 title: Document.domain
 slug: Web/API/Document/domain
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Document.domain
 ---
 

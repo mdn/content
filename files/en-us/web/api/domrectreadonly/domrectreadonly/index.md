@@ -2,13 +2,6 @@
 title: DOMRectReadOnly()
 slug: Web/API/DOMRectReadOnly/DOMRectReadOnly
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM
-  - DOMRectReadOnly
-  - Geometry
-  - Reference
 browser-compat: api.DOMRectReadOnly.DOMRectReadOnly
 ---
 

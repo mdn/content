@@ -2,13 +2,8 @@
 title: Document.mozSetImageElement()
 slug: Web/API/Document/mozSetImageElement
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - Non-standard
-  - Reference
+status:
+  - non-standard
 browser-compat: api.Document.mozSetImageElement
 ---
 

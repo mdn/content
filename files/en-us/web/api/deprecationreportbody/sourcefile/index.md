@@ -2,13 +2,8 @@
 title: DeprecationReportBody.sourceFile
 slug: Web/API/DeprecationReportBody/sourceFile
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
-  - sourceFile
-  - DeprecationReportBody
+status:
+  - experimental
 browser-compat: api.DeprecationReportBody.sourceFile
 ---
 

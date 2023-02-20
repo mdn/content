@@ -2,13 +2,8 @@
 title: ContactsManager
 slug: Web/API/ContactsManager
 page-type: web-api-interface
-tags:
-  - Contact Picker API
-  - Contacts
-  - Interface
-  - PWA
-  - contact picker
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContactsManager
 ---
 

@@ -2,10 +2,6 @@
 title: SVGAnimatedLength
 slug: Web/API/SVGAnimatedLength
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - SVG
 browser-compat: api.SVGAnimatedLength
 ---
 

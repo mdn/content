@@ -2,12 +2,6 @@
 title: Document.createTreeWalker()
 slug: Web/API/Document/createTreeWalker
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Document
-  - Method
 browser-compat: api.Document.createTreeWalker
 ---
 

@@ -2,15 +2,6 @@
 title: IDBCursor.continue()
 slug: Web/API/IDBCursor/continue
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - continue
 browser-compat: api.IDBCursor.continue
 ---
 

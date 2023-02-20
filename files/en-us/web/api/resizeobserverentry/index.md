@@ -2,16 +2,6 @@
 title: ResizeObserverEntry
 slug: Web/API/ResizeObserverEntry
 page-type: web-api-interface
-tags:
-  - API
-  - Bounding Box
-  - Interface
-  - Reference
-  - Resize Observer API
-  - ResizeObserver
-  - ResizeObserverEntry
-  - content box
-  - observers
 browser-compat: api.ResizeObserverEntry
 ---
 

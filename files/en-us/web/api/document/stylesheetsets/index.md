@@ -2,15 +2,9 @@
 title: Document.styleSheetSets
 slug: Web/API/Document/styleSheetSets
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - DOM
-  - Property
-  - Reference
-  - Stylesheets
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Document.styleSheetSets
 ---
 

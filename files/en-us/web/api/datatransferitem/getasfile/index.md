@@ -2,14 +2,6 @@
 title: DataTransferItem.getAsFile()
 slug: Web/API/DataTransferItem/getAsFile
 page-type: web-api-instance-method
-tags:
-  - API
-  - DataTransferItem
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Method
-  - Reference
-  - drag and drop
 browser-compat: api.DataTransferItem.getAsFile
 ---
 

@@ -2,20 +2,6 @@
 title: 'RTCDtlsTransport: error event'
 slug: Web/API/RTCDtlsTransport/error_event
 page-type: web-api-event
-tags:
-  - API
-  - Connection
-  - DTLS
-  - Error
-  - Networking
-  - RTCDtlsTransport
-  - Reference
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - events
-  - Event
 browser-compat: api.RTCDtlsTransport.error_event
 ---
 

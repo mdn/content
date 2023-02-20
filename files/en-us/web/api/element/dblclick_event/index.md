@@ -2,20 +2,6 @@
 title: 'Element: dblclick event'
 slug: Web/API/Element/dblclick_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Double Click
-  - Double-Click
-  - Element
-  - Event
-  - Input
-  - Interface
-  - MouseEvent
-  - Reference
-  - button
-  - dblclick
-  - mouse
 browser-compat: api.Element.dblclick_event
 ---
 

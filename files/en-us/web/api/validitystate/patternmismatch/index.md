@@ -2,12 +2,6 @@
 title: ValidityState.patternMismatch
 slug: Web/API/ValidityState/patternMismatch
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraint Validation API
-  - DOM
-  - Property
-  - Reference
 browser-compat: api.ValidityState.patternMismatch
 ---
 

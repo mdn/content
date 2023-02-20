@@ -2,15 +2,6 @@
 title: Document Object Model (DOM)
 slug: Web/API/Document_Object_Model
 page-type: web-api-overview
-tags:
-  - API
-  - DOM
-  - Document
-  - Document Object Model
-  - Guide
-  - Overview
-  - Reference
-  - Web
 spec-urls: https://dom.spec.whatwg.org/
 ---
 

@@ -2,19 +2,6 @@
 title: RTCRtpReceiveParameters
 slug: Web/API/RTCRtpReceiveParameters
 page-type: web-api-interface
-tags:
-  - API
-  - Configuration
-  - Dictionary
-  - Media
-  - Options
-  - RTCRtpReceiveParameters
-  - RTP
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - parameters
 browser-compat: api.RTCRtpReceiveParameters
 ---
 

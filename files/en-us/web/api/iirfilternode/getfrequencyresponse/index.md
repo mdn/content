@@ -2,15 +2,6 @@
 title: IIRFilterNode.getFrequencyResponse()
 slug: Web/API/IIRFilterNode/getFrequencyResponse
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - IIRFilterNode
-  - Method
-  - Reference
-  - Web Audio API
-  - filter
-  - getFrequencyResponse
 browser-compat: api.IIRFilterNode.getFrequencyResponse
 ---
 

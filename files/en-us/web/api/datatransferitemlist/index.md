@@ -2,14 +2,6 @@
 title: DataTransferItemList
 slug: Web/API/DataTransferItemList
 page-type: web-api-interface
-tags:
-  - API
-  - DataTransferItemList
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Interface
-  - Reference
-  - drag and drop
 browser-compat: api.DataTransferItemList
 ---
 

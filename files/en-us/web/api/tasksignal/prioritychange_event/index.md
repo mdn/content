@@ -2,11 +2,6 @@
 title: 'TaskSignal: prioritychange event'
 slug: Web/API/TaskSignal/prioritychange_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Prioritized Task Scheduling API
-  - prioritychange
 browser-compat: api.TaskSignal.prioritychange_event
 ---
 

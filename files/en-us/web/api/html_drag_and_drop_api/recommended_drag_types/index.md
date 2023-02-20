@@ -2,9 +2,6 @@
 title: Recommended Drag Types
 slug: Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
 page-type: guide
-tags:
-  - Guide
-  - drag and drop
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}

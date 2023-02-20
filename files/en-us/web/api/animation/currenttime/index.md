@@ -2,14 +2,6 @@
 title: Animation.currentTime
 slug: Web/API/Animation/currentTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - Animations
-  - Property
-  - Reference
-  - Web Animations
-  - web animations api
 browser-compat: api.Animation.currentTime
 ---
 

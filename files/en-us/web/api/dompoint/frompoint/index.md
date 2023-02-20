@@ -2,19 +2,6 @@
 title: DOMPoint.fromPoint()
 slug: Web/API/DOMPoint/fromPoint
 page-type: web-api-static-method
-tags:
-  - API
-  - Coordinates
-  - DOM
-  - DOMPoint
-  - Geometry
-  - Geometry Interfaces
-  - Method
-  - Point
-  - Reference
-  - Static
-  - Static Method
-  - fromPoint
 browser-compat: api.DOMPoint.fromPoint
 ---
 

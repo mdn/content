@@ -2,16 +2,6 @@
 title: GravitySensor()
 slug: Web/API/GravitySensor/GravitySensor
 page-type: web-api-constructor
-tags:
-  - API
-  - Accelerometer
-  - Constructor
-  - Generic Sensor API
-  - GravitySensor
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
 browser-compat: api.GravitySensor.GravitySensor
 ---
 

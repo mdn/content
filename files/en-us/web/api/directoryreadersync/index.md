@@ -2,11 +2,9 @@
 title: DirectoryReaderSync
 slug: Web/API/DirectoryReaderSync
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - Non-standard
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.DirectoryReaderSync
 ---
 

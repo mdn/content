@@ -2,12 +2,6 @@
 title: SVGMPathElement
 slug: Web/API/SVGMPathElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGMPathElement
 ---
 

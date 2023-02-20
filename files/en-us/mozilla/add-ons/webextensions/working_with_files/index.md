@@ -1,6 +1,7 @@
 ---
 title: Working with files
 slug: Mozilla/Add-ons/WebExtensions/Working_with_files
+page-type: guide
 tags:
   - Guide
   - WebExtensions

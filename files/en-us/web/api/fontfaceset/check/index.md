@@ -2,13 +2,6 @@
 title: FontFaceSet.check()
 slug: Web/API/FontFaceSet/check
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Font Loading API
-  - CSSOM
-  - FontFaceSet
-  - Method
-  - Reference
 browser-compat: api.FontFaceSet.check
 ---
 

@@ -2,15 +2,6 @@
 title: Element.innerHTML
 slug: Web/API/Element/innerHTML
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Parsing
-  - Element
-  - Parsing HTML
-  - Property
-  - Reference
-  - innerHTML
 browser-compat: api.Element.innerHTML
 ---
 

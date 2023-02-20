@@ -1,14 +1,6 @@
 ---
 title: 'Element: transitionend event'
 slug: Web/API/Element/transitionend_event
-tags:
-  - CSS Transitions
-  - Event
-  - HTML DOM
-  - Element
-  - Reference
-  - TransitionEvent
-  - transitionend
 browser-compat: api.Element.transitionend_event
 page-type: web-api-event
 ---

@@ -2,15 +2,6 @@
 title: Document.cookie
 slug: Web/API/Document/cookie
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - JS
-  - NeedsMarkupWork
-  - Reference
-  - Storage
-  - cookie
 browser-compat: api.Document.cookie
 ---
 

@@ -2,14 +2,8 @@
 title: "HTMLInputElement: selectionchange event"
 slug: Web/API/HTMLInputElement/selectionchange_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - Selection
-  - Selection API
-  - selectionchange
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HTMLInputElement.selectionchange_event
 ---
 

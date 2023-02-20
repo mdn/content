@@ -2,12 +2,6 @@
 title: Document.createNodeIterator()
 slug: Web/API/Document/createNodeIterator
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Gecko
-  - MakeBrowserAgnostic
-  - Method
 browser-compat: api.Document.createNodeIterator
 ---
 
