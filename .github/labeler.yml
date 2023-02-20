@@ -1,0 +1,52 @@
+Content:Accessibility:
+  - files/en-us/web/accessibility/**/*
+Content:CSS:
+  - files/en-us/web/css/**/*
+Content:DevTools:
+  - files/en-us/tools/**/*
+Content:Glossary:
+  - files/en-us/glossary/**/*
+Content:HTML:
+  - files/en-us/web/html/**/*
+Content:HTTP:
+  - files/en-us/web/http/**/*
+Content:JS:
+  - files/en-us/web/javascript/**/*
+Content:MathML:
+  - files/en-us/web/mathml/**/*
+Content:Media:
+  - files/en-us/web/media/**/*
+Content:SVG:
+  - files/en-us/web/svg/**/*
+Content:wasm:
+  - files/en-us/webassembly/**/*
+Content:WebAPI:
+  - files/en-us/web/api/**/*
+Content:WebDriver:
+  - files/en-us/web/webdriver/**/*
+Content:WebExt:
+  - files/en-us/mozilla/add-ons/webextensions/**/*
+Content:Learn:
+  - files/en-us/learn/**/*
+  - files/en-us/web/guide/**/*
+  - files/en-us/web/tutorials/**/*
+Content:Other:
+  - files/en-us/games/**/*
+  - files/en-us/mdn/**/*
+  - files/en-us/mozilla/**/*
+  - files/en-us/plugins/**/*
+  - files/en-us/related/**/*
+  - files/en-us/tools/**/*
+  - files/en-us/web/demos/**/*
+  - files/en-us/web/events/**/*
+  - files/en-us/web/exslt/**/*
+  - files/en-us/web/manifest/**/*
+  - files/en-us/web/opensearch/**/*
+  - files/en-us/web/performance/**/*
+  - files/en-us/web/privacy/**/*
+  - files/en-us/web/progressive_web_apps/**/*
+  - files/en-us/web/security/**/*
+  - files/en-us/web/web_components/**/*
+  - files/en-us/web/xml/**/*
+  - files/en-us/web/xpath/**/*
+  - files/en-us/web/xslt/**/*

@@ -1,0 +1,10 @@
+name: "Lock old issues and pull requests"
+on:
+  schedule:
+    - cron: "49 11,23 * * *"
+
+jobs:
+  lock:
+    uses: mdn/workflows/.github/workflows/lock-closed.yml@main
+    with:
+      target-repo: "mdn/content"

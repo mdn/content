@@ -1,9 +1,22 @@
-<!-- Please provide the following information to help us review this PR: -->
+<!-- 🙌 Thanks for contributing to MDN Web Docs. Adding details below will help us to merge your PR faster. -->
 
-> What was wrong/why is this fix needed? (quick summary only)
+### Description
 
-> MDN URL of main page changed
+<!-- ✍️ Summarize your changes in one or two sentences -->
 
-> Issue number (if there is an associated issue)
+### Motivation
 
-> Anything else that could help us review it
+<!-- ❓ Why are you making these changes and how do they help readers? -->
+
+### Additional details
+
+<!-- 🔗 Link to release notes, vendor docs, bug trackers, source control, or other places providing more context -->
+
+### Related issues and pull requests
+
+<!-- 🔨 If this fully resolves a GitHub issue, use "Fixes #123" -->
+<!-- 👉 Highlight related pull requests using "Relates to #123" -->
+<!-- ❗ If another pull request should be merged first, use "**Depends on:** #123" -->
+
+
+<!-- 👷‍♀️ After submitting, go to the "Checks" tab of your PR for the build status -->

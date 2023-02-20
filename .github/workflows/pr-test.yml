@@ -8,58 +8,48 @@ name: PR Test
 
 on:
   pull_request:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/pr-test.yml"
+      - "files/en-us/**"
 
 jobs:
   tests:
     runs-on: ubuntu-latest
+    env:
+      BASE_SHA: ${{ github.event.pull_request.base.sha }}
+      HEAD_SHA: ${{ github.event.pull_request.head.sha }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2.1.4
+        uses: actions/setup-node@v3
         with:
-          node-version: "12"
-
-      - name: Cache node_modules
-        uses: actions/cache@v2.1.4
-        id: cached-node_modules
-        with:
-          path: |
-            node_modules
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          node-version: 18
+          cache: yarn
 
       - name: Install all yarn packages
-        if: steps.cached-node_modules.outputs.cache-hit != 'true'
         run: |
           yarn --frozen-lockfile
 
-      - name: Config git core.quotePath
+      - name: Get changed files
         run: |
-          # If you don't do this, the get-diff-action won't be able to
-          # notice files that contain non-ascii characters.
-          # I.e.
-          #
-          #    ▶ git status
-          #    Changes not staged for commit:
-          #    ...
-          #   modified:   "files/en-us/glossary/b\303\251zier_curve/index.html"
-          #
-          # But after you set `core.quotePath` you get:
-          #
-          #    ▶ git status
-          #    Changes not staged for commit:
-          #    ...
-          #   modified:   "files/en-us/glossary/bézier_curve/index.html"
-          #
-          # Now, this gets used by the `git diff ...` inside get-diff-action.
-          git config --global core.quotePath false
+          # Use the GitHub API to get the list of changed files
+          # documenation: https://docs.github.com/rest/commits/commits#compare-two-commits
+          DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }} \
+            --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
 
-      - uses: technote-space/get-diff-action@v4.1.1
-        id: git_diff_content
-        with:
-          PATTERNS: files/**/*.html
-          SET_ENV_NAME: GIT_DIFF_CONTENT
+          # filter out files that are not markdown files
+          GIT_DIFF_CONTENT=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(md)$" | xargs)
+          echo "GIT_DIFF_CONTENT=${GIT_DIFF_CONTENT}" >> $GITHUB_ENV
+
+          # filter out files that are not attachments
+          GIT_DIFF_FILES=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(png|jpeg|jpg|gif|svg|webp)$" | xargs)
+          echo "GIT_DIFF_FILES=${GIT_DIFF_FILES}" >> $GITHUB_ENV
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build changed content
         if: ${{ env.GIT_DIFF_CONTENT }}
@@ -68,7 +58,7 @@ jobs:
 
           # This is so that if there's a single 'unsafe_html' flaw, it
           # completely fails the build.
-          # But all other flaws should be 'warn' so that we can include
+          # But all other flaws should be 'warn', so that we can include
           # information about the flaws when we analyze the built PR.
           BUILD_FLAW_LEVELS: "unsafe_html: error, *:warn"
 
@@ -90,7 +80,7 @@ jobs:
           # where there are interesting cookies, it's a safe choice.
           BUILD_LIVE_SAMPLES_BASE_URL: ""
 
-          # In these builds we never care for or need the ability to sign in.
+          # In these builds, we never care for or need the ability to sign in.
           # This environment variable will disable that functionality entirely.
           REACT_APP_DISABLE_AUTH: true
 
@@ -110,11 +100,11 @@ jobs:
           # Save the PR number into the build
           echo ${{ github.event.number }} > build/NR
 
-          # Save the raw diff blob and store that inside the ./build/
+          # Download the raw diff blob and store that inside the ./build/
           # directory.
           # The purpose of this is for the PR Review Companion to later
           # be able to use this raw diff file for the benefit of analyzing.
-          git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} > build/DIFF
+          wget https://github.com/${{ github.repository }}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }}.diff -O build/DIFF
 
       - name: Merge static assets with built documents
         if: ${{ env.GIT_DIFF_CONTENT }}
@@ -136,17 +126,11 @@ jobs:
           echo "After..."
           du -sh build
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         if: ${{ env.GIT_DIFF_CONTENT }}
         with:
           name: build
           path: build/
-
-      - uses: technote-space/get-diff-action@v4.1.1
-        with:
-          PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
-          ABSOLUTE: true
-          SET_ENV_NAME: GIT_DIFF_FILES
 
       - name: Check changed files
         if: ${{ env.GIT_DIFF_FILES }}
@@ -155,15 +139,3 @@ jobs:
 
           export CONTENT_ROOT=$(pwd)/files
           yarn filecheck ${{ env.GIT_DIFF_FILES }}
-
-      - uses: technote-space/get-diff-action@v4.1.1
-        id: git_diff_redirects
-        with:
-          PATTERNS: files/**/_redirects.txt
-          SET_ENV_NAME: GIT_DIFF_REDIRECTS
-
-      - name: Validate redirects
-        if: ${{ env.GIT_DIFF_REDIRECTS }}
-        run: |
-          echo ${{ env.GIT_DIFF_REDIRECTS }}
-          yarn content validate-redirects
