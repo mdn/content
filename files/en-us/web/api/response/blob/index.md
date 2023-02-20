@@ -2,13 +2,6 @@
 title: Response.blob()
 slug: Web/API/Response/blob
 page-type: web-api-instance-method
-tags:
-  - API
-  - Blob
-  - Fetch
-  - Method
-  - Reference
-  - Response
 browser-compat: api.Response.blob
 ---
 

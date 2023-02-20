@@ -2,12 +2,6 @@
 title: Web MIDI API
 slug: Web/API/Web_MIDI_API
 page-type: web-api-overview
-tags:
-  - API
-  - MIDI
-  - Overview
-  - Reference
-  - Web MIDI API
 spec-urls: https://webaudio.github.io/web-midi-api/
 browser-compat:
   - api.Navigator.requestMIDIAccess

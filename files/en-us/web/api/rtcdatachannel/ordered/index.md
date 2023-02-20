@@ -2,13 +2,6 @@
 title: RTCDataChannel.ordered
 slug: Web/API/RTCDataChannel/ordered
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCDataChannel
-  - Read-only
-  - Reference
-  - WebRTC
-  - ordered
 browser-compat: api.RTCDataChannel.ordered
 ---
 

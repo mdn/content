@@ -2,13 +2,8 @@
 title: VideoFrame.codedHeight
 slug: Web/API/VideoFrame/codedHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - codedHeight
-  - VideoFrame
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoFrame.codedHeight
 ---
 

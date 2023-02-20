@@ -2,12 +2,6 @@
 title: RTCPeerConnectionIceEvent
 slug: Web/API/RTCPeerConnectionIceEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - RTCIceCandidateEvent
-  - Reference
-  - WebRTC
 browser-compat: api.RTCPeerConnectionIceEvent
 ---
 

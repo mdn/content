@@ -2,14 +2,8 @@
 title: ReportingObserver.observe()
 slug: Web/API/ReportingObserver/observe
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - Reporting API
-  - ReportingObserver
-  - observe
+status:
+  - experimental
 browser-compat: api.ReportingObserver.observe
 ---
 

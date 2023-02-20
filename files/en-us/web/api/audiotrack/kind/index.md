@@ -2,18 +2,6 @@
 title: AudioTrack.kind
 slug: Web/API/AudioTrack/kind
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Audio Track
-  - AudioTrack
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - id
-  - track
 browser-compat: api.AudioTrack.kind
 ---
 

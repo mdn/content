@@ -2,13 +2,6 @@
 title: ReadableStream.pipeThrough()
 slug: Web/API/ReadableStream/pipeThrough
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStream
-  - Reference
-  - Streams
-  - pipeThrough
 browser-compat: api.ReadableStream.pipeThrough
 ---
 

@@ -2,13 +2,6 @@
 title: Response.type
 slug: Web/API/Response/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - Response
-  - Type
 browser-compat: api.Response.type
 ---
 

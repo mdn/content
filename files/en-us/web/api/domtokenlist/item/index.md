@@ -2,9 +2,6 @@
 title: DOMTokenList.item()
 slug: Web/API/DOMTokenList/item
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.DOMTokenList.item
 ---
 
@@ -56,7 +53,7 @@ Now the JavaScript:
 ```js
 const span = document.querySelector("span");
 const classes = span.classList;
-const item = classes.item(classes.length-1);
+const item = classes.item(classes.length - 1);
 span.textContent = item;
 ```
 

@@ -2,23 +2,8 @@
 title: CSSStyleSheet.removeRule()
 slug: Web/API/CSSStyleSheet/removeRule
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - CSSOM API
-  - CSSStyleSheet
-  - Layout
-  - Method
-  - Object Model
-  - Reference
-  - Rule
-  - StyleSheet
-  - delete
-  - legacy
-  - remove
-  - removeRule
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSStyleSheet.removeRule
 ---
 

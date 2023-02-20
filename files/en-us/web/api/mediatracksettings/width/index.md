@@ -2,18 +2,6 @@
 title: MediaTrackSettings.width
 slug: Web/API/MediaTrackSettings/width
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Reference
-  - Settings
-  - Video
-  - WebRTC
-  - width
 browser-compat: api.MediaTrackSettings.width
 ---
 

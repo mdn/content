@@ -2,15 +2,6 @@
 title: Battery Status API
 slug: Web/API/Battery_Status_API
 page-type: web-api-overview
-tags:
-  - API
-  - Apps
-  - Battery
-  - Battery API
-  - Battery Status API
-  - Guide
-  - Mobile
-  - Overview
 browser-compat: api.BatteryManager
 ---
 

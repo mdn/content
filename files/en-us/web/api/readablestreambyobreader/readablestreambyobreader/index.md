@@ -2,12 +2,6 @@
 title: ReadableStreamBYOBReader()
 slug: Web/API/ReadableStreamBYOBReader/ReadableStreamBYOBReader
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - ReadableStreamBYOBReader
-  - Reference
-  - Streams
 browser-compat: api.ReadableStreamBYOBReader.ReadableStreamBYOBReader
 ---
 

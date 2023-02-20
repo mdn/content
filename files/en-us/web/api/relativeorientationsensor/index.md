@@ -2,17 +2,6 @@
 title: RelativeOrientationSensor
 slug: Web/API/RelativeOrientationSensor
 page-type: web-api-interface
-tags:
-  - API
-  - Generic Sensor API
-  - Interface
-  - Orientation Sensor API
-  - OrientationSensor
-  - Reference
-  - RelativeOrientationSensor
-  - Sensor
-  - Sensor APIs
-  - Sensors
 browser-compat: api.RelativeOrientationSensor
 ---
 

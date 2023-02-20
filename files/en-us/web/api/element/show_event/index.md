@@ -2,13 +2,9 @@
 title: 'Element: show event'
 slug: Web/API/Element/show_event
 page-type: web-api-event
-tags:
-  - API
-  - Deprecated
-  - Event
-  - Reference
-  - show
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Element.show_event
 ---
 

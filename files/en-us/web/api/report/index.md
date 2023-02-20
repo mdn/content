@@ -2,13 +2,8 @@
 title: Report
 slug: Web/API/Report
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - Report
-  - Reporting API
+status:
+  - experimental
 browser-compat: api.Report
 ---
 

@@ -2,14 +2,8 @@
 title: Web Locks API
 slug: Web/API/Web_Locks_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - LockManager
-  - Overview
-  - Reference
-  - Web Locks API
-  - lock
+status:
+  - experimental
 browser-compat:
   - api.LockManager
   - api.Lock

@@ -2,14 +2,6 @@
 title: BiquadFilterNode()
 slug: Web/API/BiquadFilterNode/BiquadFilterNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - BiquadFilterNode
-  - Constructor
-  - Media
-  - Reference
-  - Web Audio API
 browser-compat: api.BiquadFilterNode.BiquadFilterNode
 ---
 

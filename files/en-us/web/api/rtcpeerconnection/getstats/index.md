@@ -2,21 +2,6 @@
 title: RTCPeerConnection.getStats()
 slug: Web/API/RTCPeerConnection/getStats
 page-type: web-api-instance-method
-tags:
-  - API
-  - Connection
-  - Method
-  - RTCPeerConnection
-  - RTCStats
-  - RTCStatsReport
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - WebRTC Stats
-  - getStats
-  - rtc
 browser-compat: api.RTCPeerConnection.getStats
 ---
 

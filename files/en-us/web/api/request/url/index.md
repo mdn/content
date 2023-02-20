@@ -2,13 +2,6 @@
 title: Request.url
 slug: Web/API/Request/url
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - URL
-  - request
 browser-compat: api.Request.url
 ---
 

@@ -2,13 +2,6 @@
 title: RTCIceServer.credential
 slug: Web/API/RTCIceServer/credential
 page-type: web-api-instance-property
-tags:
-  - Credential
-  - Property
-  - RTCIceServer
-  - Reference
-  - TURN
-  - WebRTC
 browser-compat: api.RTCIceServer.credential
 ---
 

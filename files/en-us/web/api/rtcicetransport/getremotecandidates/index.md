@@ -2,20 +2,6 @@
 title: RTCIceTransport.getRemoteCandidates()
 slug: Web/API/RTCIceTransport/getRemoteCandidates
 page-type: web-api-instance-method
-tags:
-  - API
-  - Candidates
-  - Connectivity
-  - ICE
-  - Negotiation
-  - Method
-  - RTCIceTransport
-  - Reference
-  - Remote
-  - WebRTC
-  - WebRTC API
-  - getRemoteCandidates
-  - rtc
 browser-compat: api.RTCIceTransport.getRemoteCandidates
 ---
 

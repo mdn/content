@@ -2,13 +2,6 @@
 title: Response.arrayBuffer()
 slug: Web/API/Response/arrayBuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - ArrayBuffer
-  - Fetch
-  - Method
-  - Reference
-  - Response
 browser-compat: api.Response.arrayBuffer
 ---
 

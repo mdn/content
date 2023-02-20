@@ -2,16 +2,6 @@
 title: MediaSource.activeSourceBuffers
 slug: Web/API/MediaSource/activeSourceBuffers
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - MSE
-  - MediaSource
-  - MediaSourceExtensions
-  - Property
-  - Reference
-  - Video
-  - activeSourceBuffers
 browser-compat: api.MediaSource.activeSourceBuffers
 ---
 

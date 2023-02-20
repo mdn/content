@@ -2,13 +2,6 @@
 title: ReadableStream.locked
 slug: Web/API/ReadableStream/locked
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - ReadableStream
-  - Reference
-  - Streams
-  - locked
 browser-compat: api.ReadableStream.locked
 ---
 

@@ -2,18 +2,6 @@
 title: RTCDataChannel.send()
 slug: Web/API/RTCDataChannel/send
 page-type: web-api-instance-method
-tags:
-  - API
-  - Communication
-  - Data Transfer
-  - Method
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - datachannel
-  - send
 browser-compat: api.RTCDataChannel.send
 ---
 

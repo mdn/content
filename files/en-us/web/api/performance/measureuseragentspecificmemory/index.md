@@ -2,12 +2,8 @@
 title: performance.measureUserAgentSpecificMemory()
 slug: Web/API/Performance/measureUserAgentSpecificMemory
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Performance.measureUserAgentSpecificMemory
 ---
 

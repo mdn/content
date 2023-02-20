@@ -2,13 +2,8 @@
 title: VideoEncoder.reset()
 slug: Web/API/VideoEncoder/reset
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - reset
-  - VideoEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoEncoder.reset
 ---
 

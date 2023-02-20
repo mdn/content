@@ -2,15 +2,6 @@
 title: IDBObjectStore.transaction
 slug: Web/API/IDBObjectStore/transaction
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBObjectStorage
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - transaction
 browser-compat: api.IDBObjectStore.transaction
 ---
 

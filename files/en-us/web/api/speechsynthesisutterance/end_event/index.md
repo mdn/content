@@ -2,10 +2,6 @@
 title: 'SpeechSynthesisUtterance: end event'
 slug: Web/API/SpeechSynthesisUtterance/end_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Web Speech API
 browser-compat: api.SpeechSynthesisUtterance.end_event
 ---
 

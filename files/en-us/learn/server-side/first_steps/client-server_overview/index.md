@@ -307,9 +307,3 @@ At this point you should have a good overview of the operations that server-side
 In a following module we'll help you choose the best Web Framework for your first site.
 
 {{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
-
-## In this module
-
-- [Introduction to the server side](/en-US/docs/Learn/Server-side/First_steps/Introduction)
-- [Server-side web frameworks](/en-US/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)

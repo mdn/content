@@ -2,13 +2,6 @@
 title: Response.json()
 slug: Web/API/Response/json
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch
-  - JSON
-  - Method
-  - Reference
-  - Response
 browser-compat: api.Response.json
 ---
 

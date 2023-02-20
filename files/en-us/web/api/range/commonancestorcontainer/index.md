@@ -2,11 +2,6 @@
 title: Range.commonAncestorContainer
 slug: Web/API/Range/commonAncestorContainer
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Range
 browser-compat: api.Range.commonAncestorContainer
 ---
 

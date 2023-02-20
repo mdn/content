@@ -2,19 +2,6 @@
 title: RTCIceCandidate.tcpType
 slug: Web/API/RTCIceCandidate/tcpType
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - ICE
-  - Media
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - Property
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - tcpType
 browser-compat: api.RTCIceCandidate.tcpType
 ---
 

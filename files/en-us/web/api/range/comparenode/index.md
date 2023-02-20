@@ -2,16 +2,9 @@
 title: Range.compareNode()
 slug: Web/API/Range/compareNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - Non-standard
-  - Deprecated
-  - Range
-  - Reference
-  - compareNode
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Range.compareNode
 ---
 

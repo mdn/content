@@ -2,13 +2,6 @@
 title: ReadableStreamBYOBReader.closed
 slug: Web/API/ReadableStreamBYOBReader/closed
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - ReadableStreamBYOBReader
-  - Reference
-  - Streams
-  - closed
 browser-compat: api.ReadableStreamBYOBReader.closed
 ---
 

@@ -2,15 +2,6 @@
 title: RTCPeerConnection.createOffer()
 slug: Web/API/RTCPeerConnection/createOffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Media
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - SDP
-  - WebRTC
-  - createOffer
 browser-compat: api.RTCPeerConnection.createOffer
 ---
 

@@ -2,13 +2,6 @@
 title: ReadableStreamBYOBReader.releaseLock()
 slug: Web/API/ReadableStreamBYOBReader/releaseLock
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStreamBYOBReader
-  - Reference
-  - Streams
-  - releaseLock
 browser-compat: api.ReadableStreamBYOBReader.releaseLock
 ---
 

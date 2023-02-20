@@ -2,11 +2,6 @@
 title: MutationRecord.attributeNamespace
 slug: Web/API/MutationRecord/attributeNamespace
 page-type: web-api-instance-property
-tags:
-  - attributeNamespace
-  - MutationRecord
-  - Property
-  - Reference
 browser-compat: api.MutationRecord.attributeNamespace
 ---
 

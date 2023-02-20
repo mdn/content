@@ -2,15 +2,6 @@
 title: Hello GLSL
 slug: Web/API/WebGL_API/By_example/Hello_GLSL
 page-type: guide
-tags:
-  - Beginner
-  - Example
-  - GLSL
-  - Graphics
-  - Learn
-  - Shaders
-  - Tutorial
-  - WebGL
 ---
 
 {{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}

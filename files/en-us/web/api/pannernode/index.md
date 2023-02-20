@@ -2,12 +2,6 @@
 title: PannerNode
 slug: Web/API/PannerNode
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - PannerNode
-  - Reference
-  - Web Audio API
 browser-compat: api.PannerNode
 ---
 

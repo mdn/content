@@ -2,13 +2,8 @@
 title: ReportingObserver.takeRecords()
 slug: Web/API/ReportingObserver/takeRecords
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - Reporting API
-  - ReportingObserver
+status:
+  - experimental
 browser-compat: api.ReportingObserver.takeRecords
 ---
 

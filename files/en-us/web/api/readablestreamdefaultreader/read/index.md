@@ -2,13 +2,6 @@
 title: ReadableStreamDefaultReader.read()
 slug: Web/API/ReadableStreamDefaultReader/read
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
-  - read
 browser-compat: api.ReadableStreamDefaultReader.read
 ---
 

@@ -2,20 +2,9 @@
 title: RTCIceCandidatePairStats.writable
 slug: Web/API/RTCIceCandidatePairStats/writable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - ICE
-  - Deprecated
-  - Property
-  - RTCIceCandidatePairStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - writable
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.RTCIceCandidatePairStats.writable
 ---
 

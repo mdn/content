@@ -2,13 +2,6 @@
 title: Response.status
 slug: Web/API/Response/status
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - Response
-  - status
 browser-compat: api.Response.status
 ---
 

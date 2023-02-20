@@ -2,16 +2,6 @@
 title: ResizeObserverEntry.contentRect
 slug: Web/API/ResizeObserverEntry/contentRect
 page-type: web-api-instance-property
-tags:
-  - API
-  - Bounding Box
-  - Property
-  - Reference
-  - Resize Observer API
-  - ResizeObserver
-  - ResizeObserverEntry
-  - content box
-  - observers
 browser-compat: api.ResizeObserverEntry.contentRect
 ---
 

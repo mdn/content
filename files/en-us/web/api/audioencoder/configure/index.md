@@ -2,13 +2,8 @@
 title: AudioEncoder.configure()
 slug: Web/API/AudioEncoder/configure
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - configure
-  - AudioEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioEncoder.configure
 ---
 

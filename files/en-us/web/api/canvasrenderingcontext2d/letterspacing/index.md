@@ -2,13 +2,8 @@
 title: CanvasRenderingContext2D.letterSpacing
 slug: Web/API/CanvasRenderingContext2D/letterSpacing
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CanvasRenderingContext2D.letterSpacing
 ---
 

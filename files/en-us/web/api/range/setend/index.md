@@ -2,15 +2,6 @@
 title: Range.setEnd()
 slug: Web/API/Range/setEnd
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM API
-  - End
-  - Method
-  - Range
-  - Reference
-  - setEnd
 browser-compat: api.Range.setEnd
 ---
 

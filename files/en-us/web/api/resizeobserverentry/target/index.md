@@ -2,17 +2,6 @@
 title: ResizeObserverEntry.target
 slug: Web/API/ResizeObserverEntry/target
 page-type: web-api-instance-property
-tags:
-  - API
-  - Bounding Box
-  - Property
-  - Reference
-  - Resize Observer API
-  - ResizeObserver
-  - ResizeObserverEntry
-  - content box
-  - observers
-  - target
 browser-compat: api.ResizeObserverEntry.target
 ---
 

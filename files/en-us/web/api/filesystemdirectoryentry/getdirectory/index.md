@@ -2,14 +2,6 @@
 title: FileSystemDirectoryEntry.getDirectory()
 slug: Web/API/FileSystemDirectoryEntry/getDirectory
 page-type: web-api-instance-method
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemDirectoryEntry
-  - Files
-  - Method
-  - Reference
-  - getDirectory
 browser-compat: api.FileSystemDirectoryEntry.getDirectory
 ---
 

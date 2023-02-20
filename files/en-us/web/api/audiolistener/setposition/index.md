@@ -2,14 +2,8 @@
 title: AudioListener.setPosition()
 slug: Web/API/AudioListener/setPosition
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioListener
-  - Deprecated
-  - Method
-  - Reference
-  - Web Audio API
-  - setPosition
+status:
+  - deprecated
 browser-compat: api.AudioListener.setPosition
 ---
 

@@ -2,10 +2,6 @@
 title: Node.childNodes
 slug: Web/API/Node/childNodes
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Node.childNodes
 ---
 

@@ -2,14 +2,6 @@
 title: RTCDtlsTransport
 slug: Web/API/RTCDtlsTransport
 page-type: web-api-interface
-tags:
-  - API
-  - Draft
-  - Interface
-  - NeedsContent
-  - NeedsExample
-  - RTCDtlsTransport
-  - Reference
 browser-compat: api.RTCDtlsTransport
 ---
 

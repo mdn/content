@@ -2,24 +2,6 @@
 title: Key values for keyboard events
 slug: Web/API/UI_Events/Keyboard_event_key_values
 page-type: guide
-tags:
-  - Characters
-  - DOM
-  - Key Codes
-  - Key Values
-  - KeyboardEvent
-  - Keycodes
-  - Keypad
-  - Keystrokes
-  - Meta
-  - Meta Keys
-  - Modifier Keys
-  - Modifiers
-  - Reference
-  - UI Events
-  - events
-  - keyboard
-  - keys
 ---
 
 {{DefaultAPISidebar("UI Events")}}

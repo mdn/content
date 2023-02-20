@@ -15,7 +15,7 @@ The **`<mmultiscripts>`** [MathML](/en-US/docs/Web/MathML) element is used to at
 
 MathML uses the syntax below, that is a base expression, followed by an arbitrary number of postsubscript-postsuperscript pairs (attached in the given order) optionally followed by an `<mprescripts>` and an arbitrary number of presubscript-presuperscript pairs (attached in the given order). In addition, empty `<mrow>` elements can be used to represent absent scripts.
 
-```html
+```html-nolint
 <mmultiscripts>
   base
   postsubscript1 postsuperscript1
@@ -49,7 +49,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 Children after the `<mprescripts/>` element are placed as pre-scripts (before the base expression):
 
-```html
+```html-nolint
 <math display="block">
   <mmultiscripts>
     <mi>X</mi>      <!-- base expression -->
@@ -68,7 +68,7 @@ Children after the `<mprescripts/>` element are placed as pre-scripts (before th
 
 Empty `<mrow>` elements can be used to represent absent scripts:
 
-```html
+```html-nolint
 <math display="block">
   <mmultiscripts>
     <mi>X</mi>      <!-- base expression -->

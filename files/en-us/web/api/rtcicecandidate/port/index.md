@@ -2,19 +2,6 @@
 title: RTCIceCandidate.port
 slug: Web/API/RTCIceCandidate/port
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - ICE
-  - Networking
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - port
 browser-compat: api.RTCIceCandidate.port
 ---
 

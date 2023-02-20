@@ -2,13 +2,6 @@
 title: PannerNode.refDistance
 slug: Web/API/PannerNode/refDistance
 page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - refDistance
 browser-compat: api.PannerNode.refDistance
 ---
 

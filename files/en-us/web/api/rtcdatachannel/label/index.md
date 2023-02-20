@@ -2,13 +2,6 @@
 title: RTCDataChannel.label
 slug: Web/API/RTCDataChannel/label
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCDataChannel
-  - Read-only
-  - Reference
-  - WebRTC
-  - label
 browser-compat: api.RTCDataChannel.label
 ---
 

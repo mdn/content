@@ -2,13 +2,6 @@
 title: ReadableStreamDefaultReader
 slug: Web/API/ReadableStreamDefaultReader
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Interface
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
 browser-compat: api.ReadableStreamDefaultReader
 ---
 

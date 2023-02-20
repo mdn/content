@@ -2,15 +2,8 @@
 title: HTMLMediaElement.sinkId
 slug: Web/API/HTMLMediaElement/sinkId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Experimental
-  - Extensions
-  - HTMLMediaElement
-  - Media
-  - Property
-  - Reference
+status:
+  - experimental
 browser-compat: api.HTMLMediaElement.sinkId
 ---
 

@@ -2,16 +2,6 @@
 title: RTCPeerConnection.removeTrack()
 slug: Web/API/RTCPeerConnection/removeTrack
 page-type: web-api-instance-method
-tags:
-  - Audio
-  - Media
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - Tracks
-  - Video
-  - WebRTC
-  - removeTrack
 browser-compat: api.RTCPeerConnection.removeTrack
 ---
 

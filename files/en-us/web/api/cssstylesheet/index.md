@@ -2,17 +2,6 @@
 title: CSSStyleSheet
 slug: Web/API/CSSStyleSheet
 page-type: web-api-interface
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - CSSOM API
-  - CSSStyleSheet
-  - Interface
-  - Layout
-  - Object Model
-  - Reference
-  - StyleSheet
 browser-compat: api.CSSStyleSheet
 ---
 

@@ -2,13 +2,6 @@
 title: ReadableStreamBYOBReader.cancel()
 slug: Web/API/ReadableStreamBYOBReader/cancel
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStreamBYOBReader
-  - Reference
-  - Streams
-  - cancel
 browser-compat: api.ReadableStreamBYOBReader.cancel
 ---
 

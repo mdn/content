@@ -2,13 +2,6 @@
 title: RTCDTMFToneChangeEvent
 slug: Web/API/RTCDTMFToneChangeEvent
 page-type: web-api-interface
-tags:
-  - DTMF
-  - Reference
-  - Touch-tone
-  - WebRTC
-  - WebRTC API
-  - events
 browser-compat: api.RTCDTMFToneChangeEvent
 ---
 

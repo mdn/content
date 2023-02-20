@@ -2,13 +2,6 @@
 title: PerformanceObserver.supportedEntryTypes
 slug: Web/API/PerformanceObserver/supportedEntryTypes
 page-type: web-api-static-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
-  - PerformanceObserver
-  - supportedEntryTypes
 browser-compat: api.PerformanceObserver.supportedEntryTypes
 ---
 

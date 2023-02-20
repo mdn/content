@@ -2,19 +2,6 @@
 title: RTCIceCandidate.usernameFragment
 slug: Web/API/RTCIceCandidate/usernameFragment
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - NeedsExample
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - ufrag
-  - usernameFragment
 browser-compat: api.RTCIceCandidate.usernameFragment
 ---
 

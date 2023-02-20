@@ -2,15 +2,6 @@
 title: 'Element: touchstart event'
 slug: Web/API/Element/touchstart_event
 page-type: web-api-event
-tags:
-  - Event
-  - Touch Events
-  - TouchEvent
-  - UI
-  - UI Events
-  - UX
-  - touch
-  - touchstart
 browser-compat: api.Element.touchstart_event
 ---
 

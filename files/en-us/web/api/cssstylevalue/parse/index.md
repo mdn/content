@@ -2,15 +2,8 @@
 title: CSSStyleValue.parse()
 slug: Web/API/CSSStyleValue/parse
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSStyleValue
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - parse()
+status:
+  - experimental
 browser-compat: api.CSSStyleValue.parse
 ---
 

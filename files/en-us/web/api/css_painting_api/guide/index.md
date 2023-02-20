@@ -2,12 +2,6 @@
 title: Using the CSS Painting API
 slug: Web/API/CSS_Painting_API/Guide
 page-type: guide
-tags:
-  - CSS
-  - CSS Paint API
-  - Canvas
-  - Houdini
-  - Learn
 ---
 
 {{DefaultAPISidebar("CSS Painting API")}}
@@ -17,7 +11,7 @@ To programmatically create an image used by a CSS stylesheet we need to work thr
 
 1. Define a paint worklet using the [`registerPaint()`](/en-US/docs/Web/API/PaintWorklet/registerPaint) function
 2. Register the worklet
-3. Include the `{{cssxref('image/paint()','paint()')}}` CSS function
+3. Include the `{{cssxref("image/paint","paint()")}}` CSS function
 
 To elaborate over these steps, we're going to start by creating a half-highlight background, like on this header:
 
@@ -211,7 +205,7 @@ registerPaint(
 );
 ```
 
-The three parameters of the `paint()` function include the drawing context, paint size and properties. To be able to access properties, we include the static `inputProperties()` method, which provides live access to CSS properties, including regular properties and [custom properties](/en-US/docs/Web/CSS/CSS_Variables), and returns an [`array`](/en-US/docs/Glossary/array) of property names. We'll take a look at `inputArguments` in the last section.
+The three parameters of the `paint()` function include the drawing context, paint size and properties. To be able to access properties, we include the static `inputProperties()` method, which provides live access to CSS properties, including regular properties and [custom properties](/en-US/docs/Web/CSS/CSS_Variables), and returns an {{jsxref("Array", "array")}} of property names. We'll take a look at `inputArguments` in the last section.
 
 Let's create a list of items with a background image that rotates between three different colors and three widths.
 

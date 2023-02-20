@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.deleteShader()
 slug: Web/API/WebGLRenderingContext/deleteShader
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.deleteShader
 ---
 

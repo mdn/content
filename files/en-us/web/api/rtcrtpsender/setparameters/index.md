@@ -2,20 +2,6 @@
 title: RTCRtpSender.setParameters()
 slug: Web/API/RTCRtpSender/setParameters
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Codec
-  - Encoding
-  - Method
-  - RTCRtpSender
-  - Reference
-  - Video
-  - WebRTC
-  - WebRTC API
-  - parameters
-  - sender
-  - setParameters
 browser-compat: api.RTCRtpSender.setParameters
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: devtools.inspectedWindow.eval()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

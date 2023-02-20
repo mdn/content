@@ -2,13 +2,6 @@
 title: Request.mode
 slug: Web/API/Request/mode
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - mode
-  - request
 browser-compat: api.Request.mode
 ---
 

@@ -2,17 +2,9 @@
 title: VRPose.angularAcceleration
 slug: Web/API/VRPose/angularAcceleration
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRPose
-  - Virtual Reality
-  - WebVR
-  - angularAcceleration
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRPose.angularAcceleration
 ---
 

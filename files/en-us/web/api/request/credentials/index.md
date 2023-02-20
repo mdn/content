@@ -2,16 +2,6 @@
 title: Request.credentials
 slug: Web/API/Request/credentials
 page-type: web-api-instance-property
-tags:
-  - API
-  - Cookies
-  - Fetch
-  - Networking
-  - Property
-  - Reference
-  - Security
-  - credentials
-  - request
 browser-compat: api.Request.credentials
 ---
 

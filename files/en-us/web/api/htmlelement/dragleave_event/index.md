@@ -2,16 +2,6 @@
 title: 'HTMLElement: dragleave event'
 slug: Web/API/HTMLElement/dragleave_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - HTMLElement
-  - DragEvent
-  - Event
-  - Reference
-  - Web
-  - drag and drop
-  - dragleave
 browser-compat: api.HTMLElement.dragleave_event
 ---
 

@@ -2,25 +2,6 @@
 title: RTCRtpStreamStats.qpSum
 slug: Web/API/RTCRtpStreamStats/qpSum
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Parameter
-  - Property
-  - QP
-  - Quantization
-  - Quantization Parameter
-  - RTCRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - Video
-  - WebRTC
-  - WebRTC API
-  - compression
-  - qpSum
-  - rtc
 browser-compat: api.RTCRtpStreamStats.qpSum
 ---
 

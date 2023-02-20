@@ -2,14 +2,6 @@
 title: RTCPeerConnection.createDataChannel()
 slug: Web/API/RTCPeerConnection/createDataChannel
 page-type: web-api-instance-method
-tags:
-  - API
-  - Media
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
-  - createDataChannel
 browser-compat: api.RTCPeerConnection.createDataChannel
 ---
 

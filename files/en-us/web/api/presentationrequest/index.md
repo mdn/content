@@ -2,13 +2,8 @@
 title: PresentationRequest
 slug: Web/API/PresentationRequest
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Presentation API
-  - PresentationRequest
-  - Reference
+status:
+  - experimental
 browser-compat: api.PresentationRequest
 ---
 

@@ -2,17 +2,6 @@
 title: RTCTrackEvent
 slug: Web/API/RTCTrackEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Media
-  - RTCTrackEvent
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - events
-  - rtc
-  - track
 browser-compat: api.RTCTrackEvent
 ---
 

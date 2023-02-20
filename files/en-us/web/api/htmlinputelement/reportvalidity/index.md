@@ -2,15 +2,6 @@
 title: HTMLInputElement.reportValidity()
 slug: Web/API/HTMLInputElement/reportValidity
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - Method
-  - NeedsExample
-  - Reference
-  - reportValidity
-  - reportValidity()
 browser-compat: api.HTMLInputElement.reportValidity
 ---
 

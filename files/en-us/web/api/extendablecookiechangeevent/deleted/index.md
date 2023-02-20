@@ -2,12 +2,6 @@
 title: ExtendableCookieChangeEvent.deleted
 slug: Web/API/ExtendableCookieChangeEvent/deleted
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - deleted
-  - ExtendableCookieChangeEvent
 browser-compat: api.ExtendableCookieChangeEvent.deleted
 ---
 

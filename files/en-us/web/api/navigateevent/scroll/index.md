@@ -2,18 +2,8 @@
 title: NavigateEvent.scroll()
 slug: Web/API/NavigateEvent/scroll
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - History
-  - Method
-  - NavigateEvent
-  - Navigation
-  - Navigation API
-  - Reference
-  - Scroll
-  - transition
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigateEvent.scroll
 ---
 

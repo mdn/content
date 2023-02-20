@@ -2,12 +2,6 @@
 title: RTCIceServers.urls
 slug: Web/API/RTCIceServer/urls
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCIceServer
-  - Reference
-  - WebRTC
-  - urls
 browser-compat: api.RTCIceServer.urls
 ---
 

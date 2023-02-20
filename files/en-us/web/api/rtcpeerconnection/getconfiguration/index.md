@@ -2,12 +2,6 @@
 title: RTCPeerConnection.getConfiguration()
 slug: Web/API/RTCPeerConnection/getConfiguration
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebRTC
-  - getConfiguration
 browser-compat: api.RTCPeerConnection.getConfiguration
 ---
 

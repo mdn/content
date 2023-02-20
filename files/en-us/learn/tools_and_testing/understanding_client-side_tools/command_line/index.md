@@ -486,11 +486,3 @@ Note that some of the above suggestions may need installing using npm, like we d
 That brings us to the end of our brief tour of the terminal/command line. Next up we'll be looking in more detail at package managers, and what we can do with them.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
-
-## In this module
-
-- [Client-side tooling overview](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)
-- **Command line crash course**
-- [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)
-- [Introducing a complete toolchain](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain)
-- [Deploying our app](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment)

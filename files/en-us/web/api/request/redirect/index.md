@@ -2,13 +2,6 @@
 title: Request.redirect
 slug: Web/API/Request/redirect
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Redirect
-  - Reference
-  - request
 browser-compat: api.Request.redirect
 ---
 

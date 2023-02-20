@@ -356,13 +356,3 @@ It is not always easy to make multimedia accessible. If for example, you are dea
 You can however make sure that such an app has good enough color contrast and clear presentation so it is perceivable to those with low vision/color blindness, and also make it keyboard accessible. Remember that accessibility is about doing as much as you can, rather than striving for 100% accessibility all the time, which is often impossible.
 
 {{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
-
-## In this module
-
-- [What is accessibility?](/en-US/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/en-US/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/en-US/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting)

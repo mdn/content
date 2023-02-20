@@ -2,15 +2,8 @@
 title: WakeLockSentinel.release()
 slug: Web/API/WakeLockSentinel/release
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Screen Wake Lock API
-  - Wake Lock
-  - WakeLockSentinel
-  - screen
-  - Experimental
+status:
+  - experimental
 browser-compat: api.WakeLockSentinel.release
 ---
 

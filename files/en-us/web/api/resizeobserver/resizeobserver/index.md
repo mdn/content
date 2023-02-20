@@ -2,13 +2,6 @@
 title: ResizeObserver()
 slug: Web/API/ResizeObserver/ResizeObserver
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - Resize Observer API
-  - ResizeObserver
-  - observers
 browser-compat: api.ResizeObserver.ResizeObserver
 ---
 

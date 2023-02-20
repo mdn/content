@@ -2,14 +2,8 @@
 title: Report.type
 slug: Web/API/Report/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - Report
-  - Reporting API
-  - Type
+status:
+  - experimental
 browser-compat: api.Report.type
 ---
 

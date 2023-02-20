@@ -2,16 +2,6 @@
 title: RTCPeerConnection.currentLocalDescription
 slug: Web/API/RTCPeerConnection/currentLocalDescription
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - currentLocalConnection
 browser-compat: api.RTCPeerConnection.currentLocalDescription
 ---
 

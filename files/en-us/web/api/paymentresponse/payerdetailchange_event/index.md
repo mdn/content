@@ -2,19 +2,9 @@
 title: 'PaymentResponse: payerdetailchange event'
 slug: Web/API/PaymentResponse/payerdetailchange_event
 page-type: web-api-event
-tags:
-  - Commerce
-  - Payment Request API
-  - PaymentResponse
-  - Reference
-  - Response
-  - Validation
-  - Event
-  - payerdetail
-  - payment
-  - validate
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentResponse.payerdetailchange_event
 ---
 

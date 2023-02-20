@@ -2,26 +2,6 @@
 title: 'Spaces and reference spaces: Spatial tracking in WebXR'
 slug: Web/API/WebXR_Device_API/Spatial_tracking
 page-type: guide
-tags:
-  - 3D
-  - API
-  - AR
-  - Guide
-  - Motion
-  - NeedsContent
-  - NeedsExample
-  - Orientation
-  - Poses
-  - Position
-  - Spaces
-  - Spatial tracking
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - movement
-  - tracking
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}

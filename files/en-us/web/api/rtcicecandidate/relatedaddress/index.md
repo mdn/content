@@ -2,20 +2,6 @@
 title: RTCIceCandidate.relatedAddress
 slug: Web/API/RTCIceCandidate/relatedAddress
 page-type: web-api-instance-property
-tags:
-  - API
-  - Address
-  - IP
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - STUN
-  - TURN
-  - WebRTC
-  - WebRTC API
-  - relatedAddress
 browser-compat: api.RTCIceCandidate.relatedAddress
 ---
 

@@ -2,12 +2,6 @@
 title: AnalyserNode
 slug: Web/API/AnalyserNode
 page-type: web-api-interface
-tags:
-  - API
-  - AnalyserNode
-  - Interface
-  - Reference
-  - Web Audio API
 browser-compat: api.AnalyserNode
 ---
 

@@ -2,13 +2,6 @@
 title: ReadableStreamDefaultController.close()
 slug: Web/API/ReadableStreamDefaultController/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStreamDefaultController
-  - Reference
-  - Streams
-  - close
 browser-compat: api.ReadableStreamDefaultController.close
 ---
 

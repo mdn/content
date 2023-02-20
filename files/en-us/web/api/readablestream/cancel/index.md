@@ -2,13 +2,6 @@
 title: ReadableStream.cancel()
 slug: Web/API/ReadableStream/cancel
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStream
-  - Reference
-  - Streams
-  - cancel
 browser-compat: api.ReadableStream.cancel
 ---
 

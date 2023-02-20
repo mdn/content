@@ -2,11 +2,6 @@
 title: Range.extractContents()
 slug: Web/API/Range/extractContents
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
 browser-compat: api.Range.extractContents
 ---
 

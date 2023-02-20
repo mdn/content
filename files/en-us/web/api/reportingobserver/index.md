@@ -2,13 +2,8 @@
 title: ReportingObserver
 slug: Web/API/ReportingObserver
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - Reporting API
-  - ReportingObserver
+status:
+  - experimental
 browser-compat: api.ReportingObserver
 ---
 

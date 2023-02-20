@@ -2,12 +2,8 @@
 title: HighlightRegistry
 slug: Web/API/HighlightRegistry
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - CSS Custom Highlight API
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HighlightRegistry
 ---
 

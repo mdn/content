@@ -2,19 +2,6 @@
 title: RTCPeerConnection.setRemoteDescription()
 slug: Web/API/RTCPeerConnection/setRemoteDescription
 page-type: web-api-instance-method
-tags:
-  - API
-  - ICE
-  - Method
-  - Negotiation
-  - Offer
-  - RTCPeerConnection
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - answer
-  - setRemoteDescription
 browser-compat: api.RTCPeerConnection.setRemoteDescription
 ---
 

@@ -2,20 +2,6 @@
 title: RTCIceCandidate.address
 slug: Web/API/RTCIceCandidate/address
 page-type: web-api-instance-property
-tags:
-  - API
-  - Address
-  - Candidate
-  - ICE
-  - IP
-  - Networking
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCIceCandidate.address
 ---
 

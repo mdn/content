@@ -2,12 +2,6 @@
 title: RTCIceServer.username
 slug: Web/API/RTCIceServer/username
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCIceServer
-  - Reference
-  - WebRTC
-  - username
 browser-compat: api.RTCIceServer.username
 ---
 

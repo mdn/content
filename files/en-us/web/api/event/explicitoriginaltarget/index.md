@@ -2,11 +2,8 @@
 title: Event.explicitOriginalTarget
 slug: Web/API/Event/explicitOriginalTarget
 page-type: web-api-instance-property
-tags:
-  - Non-standard
-  - Property
-  - Read-only
-  - Reference
+status:
+  - non-standard
 browser-compat: api.Event.explicitOriginalTarget
 ---
 

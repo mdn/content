@@ -2,17 +2,6 @@
 title: RTCPeerConnectionIceEvent.candidate
 slug: Web/API/RTCPeerConnectionIceEvent/candidate
 page-type: web-api-instance-property
-tags:
-  - Candidate
-  - Negotiation
-  - Networking
-  - Property
-  - RTCPeerConnectionIceEvent
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - rtc
 browser-compat: api.RTCPeerConnectionIceEvent.candidate
 ---
 

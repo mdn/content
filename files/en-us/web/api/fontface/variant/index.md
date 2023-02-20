@@ -2,15 +2,6 @@
 title: FontFace.variant
 slug: Web/API/FontFace/variant
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Font Loading API
-  - CSSOM
-  - FontFace
-  - Fonts
-  - Property
-  - Reference
-  - variant
 browser-compat: api.FontFace.variant
 ---
 

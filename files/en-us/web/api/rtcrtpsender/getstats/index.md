@@ -2,16 +2,6 @@
 title: RTCRtpSender.getStats()
 slug: Web/API/RTCRtpSender/getStats
 page-type: web-api-instance-method
-tags:
-  - API
-  - Media
-  - Method
-  - RTCRtpSender
-  - Reference
-  - WebRTC
-  - WebRTC Statistics
-  - WebRTC Statistics API
-  - getStats
 browser-compat: api.RTCRtpSender.getStats
 ---
 

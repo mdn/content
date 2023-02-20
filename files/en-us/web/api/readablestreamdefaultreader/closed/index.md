@@ -2,13 +2,6 @@
 title: ReadableStreamDefaultReader.closed
 slug: Web/API/ReadableStreamDefaultReader/closed
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
-  - closed
 browser-compat: api.ReadableStreamDefaultReader.closed
 ---
 
