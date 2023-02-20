@@ -17,6 +17,8 @@ The **`ReferenceError`** object represents an error when a variable that doesn't
 
 `ReferenceError` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
 
+`ReferenceError` is a subclass of {{jsxref("Error")}}.
+
 ## Constructor
 
 - {{jsxref("Global_Objects/ReferenceError/ReferenceError", "ReferenceError()")}}
@@ -24,20 +26,16 @@ The **`ReferenceError`** object represents an error when a variable that doesn't
 
 ## Instance properties
 
-- {{jsxref("Error.prototype.message", "ReferenceError.prototype.message")}}
-  - : Error message. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.name", "ReferenceError.prototype.name")}}
-  - : Error name. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.cause", "ReferenceError.prototype.cause")}}
-  - : Error cause. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "ReferenceError.prototype.fileName")}} {{non-standard_inline}}
-  - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "ReferenceError.prototype.lineNumber")}} {{non-standard_inline}}
-  - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "ReferenceError.prototype.columnNumber")}} {{non-standard_inline}}
-  - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "ReferenceError.prototype.stack")}} {{non-standard_inline}}
-  - : Stack trace. Inherited from {{jsxref("Error")}}.
+_Also inherits instance properties from its parent {{jsxref("Error")}}_.
+
+These properties are defined on `ReferenceError.prototype` and shared by all `ReferenceError` instances.
+
+- {{jsxref("Error/name", "ReferenceError.prototype.name")}}
+  - : Represents the name for the type of error. For `ReferenceError.prototype.name`, the initial value is `"ReferenceError"`.
+
+## Instance methods
+
+_Inherits instance methods from its parent {{jsxref("Error")}}_.
 
 ## Examples
 
