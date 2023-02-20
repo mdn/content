@@ -27,19 +27,15 @@ In these reference articles, you'll find the fundamental information you'll need
 
 - {{domxref("CanvasCaptureMediaStreamTrack")}}
 - {{domxref("InputDeviceInfo")}}
-- {{domxref("MediaDeviceKind")}}
 - {{domxref("MediaDeviceInfo")}}
 - {{domxref("MediaDevices")}}
 - {{domxref("MediaStream")}}
 - {{domxref("MediaStreamEvent")}}
 - {{domxref("MediaStreamTrack")}}
 - {{domxref("MediaStreamTrackEvent")}}
-- {{domxref("MediaTrackCapabilities")}}
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaTrackSettings")}}
 - {{domxref("MediaTrackSupportedConstraints")}}
-- {{domxref("NavigatorUserMedia")}}
-- {{domxref("NavigatorUserMediaError")}}
 - {{domxref("OverconstrainedError")}}
 - {{domxref("URL")}}
 
