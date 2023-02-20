@@ -77,6 +77,11 @@ new Request(input, options)
       - : A boolean that indicates whether to make a persistent connection for multiple requests/responses.
     - `signal`
       - : An [AbortSignal](/en-US/docs/Web/API/abortsignal) object which can be used to communicate with/abort a request.
+    - `priority`
+      - : Specifies the priority of the fetch request relative to other requests of the same type. Must be one of the following strings:
+        - `high`: A high priority fetch request relative to other requests of the same type.
+        - `low`: A low priority fetch request relative to other requests of the same type.
+        - `auto`: Automatically determine the priority of the fetch request relative to other requests of the same type (default).
 
     If you construct a new `Request` from an existing `Request`, any options you set in an _options_ argument for the new request replace any corresponding options set in the original `Request`. For example:
 
