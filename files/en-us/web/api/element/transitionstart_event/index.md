@@ -1,14 +1,6 @@
 ---
 title: 'Element: transitionstart event'
 slug: Web/API/Element/transitionstart_event
-tags:
-  - CSS Transitions
-  - Event
-  - HTML DOM
-  - Element
-  - Reference
-  - TransitionEvent
-  - transitionstart
 browser-compat: api.Element.transitionstart_event
 page-type: web-api-event
 ---

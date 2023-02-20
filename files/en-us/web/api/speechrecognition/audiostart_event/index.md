@@ -2,13 +2,6 @@
 title: 'SpeechRecognition: audiostart event'
 slug: Web/API/SpeechRecognition/audiostart_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - audiostart
-  - onaudiostart
 browser-compat: api.SpeechRecognition.audiostart_event
 ---
 

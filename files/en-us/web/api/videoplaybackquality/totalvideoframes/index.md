@@ -2,20 +2,6 @@
 title: VideoPlaybackQuality.totalVideoFrames
 slug: Web/API/VideoPlaybackQuality/totalVideoFrames
 page-type: web-api-instance-property
-tags:
-  - API
-  - Frames
-  - HTML DOM
-  - Media
-  - Media Playback Quality
-  - Media Playback Quality API
-  - Playback
-  - Property
-  - Quality
-  - Reference
-  - Video
-  - VideoPlaybackQuality
-  - totalVideoFrames
 browser-compat: api.VideoPlaybackQuality.totalVideoFrames
 ---
 

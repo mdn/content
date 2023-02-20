@@ -2,11 +2,6 @@
 title: HTMLAnchorElement.port
 slug: Web/API/HTMLAnchorElement/port
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - Property
-  - Reference
 browser-compat: api.HTMLAnchorElement.port
 ---
 

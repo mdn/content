@@ -2,16 +2,8 @@
 title: ImageCapture.track
 slug: Web/API/ImageCapture/track
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Image
-  - ImageCapture
-  - Media
-  - MediaStream Image Capture
-  - Property
-  - Read-only
-  - Reference
+status:
+  - experimental
 browser-compat: api.ImageCapture.track
 ---
 

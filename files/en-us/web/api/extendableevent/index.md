@@ -2,15 +2,6 @@
 title: ExtendableEvent
 slug: Web/API/ExtendableEvent
 page-type: web-api-interface
-tags:
-  - API
-  - ExtendableEvent
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - Workers
 browser-compat: api.ExtendableEvent
 ---
 

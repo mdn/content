@@ -2,12 +2,6 @@
 title: Element.setAttributeNode()
 slug: Web/API/Element/setAttributeNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
 browser-compat: api.Element.setAttributeNode
 ---
 

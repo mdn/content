@@ -2,12 +2,6 @@
 title: FormData.getAll()
 slug: Web/API/FormData/getAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - FormData
-  - Method
-  - Reference
-  - XMLHttpRequest
 browser-compat: api.FormData.getAll
 ---
 

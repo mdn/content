@@ -2,17 +2,9 @@
 title: 'Element: mousewheel event'
 slug: Web/API/Element/mousewheel_event
 page-type: web-api-event
-tags:
-  - DOM
-  - Deprecated
-  - Event
-  - Interface
-  - Non-standard
-  - UI
-  - mouse
-  - mousewheel
-  - scrolling
-  - wheel
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Element.mousewheel_event
 ---
 

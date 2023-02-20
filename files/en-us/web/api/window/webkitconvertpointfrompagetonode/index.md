@@ -1,18 +1,10 @@
 ---
-title: Window.convertPointFromPageToNode()
+title: Window.webkitConvertPointFromPageToNode()
 slug: Web/API/Window/webkitConvertPointFromPageToNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Non-standard
-  - Point
-  - Reference
-  - Safari
-  - WebKit
-  - Window
-  - convertPointFromPageToNode
-browser-compat: api.Window.convertPointFromPageToNode
+status:
+  - non-standard
+browser-compat: api.Window.webkitConvertPointFromPageToNode
 ---
 
 {{APIRef}}
@@ -20,7 +12,7 @@ browser-compat: api.Window.convertPointFromPageToNode
 {{Non-standard_header}}
 
 Given a {{domxref("WebKitPoint")}} specified in the page's coordinate system, the
-{{domxref("Window")}} method **`convertPointFromPageToNode()`**
+{{domxref("Window")}} method **`webkitConvertPointFromPageToNode()`**
 returns a `Point` object specifying the same location in the coordinate
 system of the specified DOM {{domxref("Node")}}.
 

@@ -2,14 +2,6 @@
 title: 'Notification: click event'
 slug: Web/API/Notification/click_event
 page-type: web-api-event
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Event
-  - Reference
-  - click
 browser-compat: api.Notification.click_event
 ---
 

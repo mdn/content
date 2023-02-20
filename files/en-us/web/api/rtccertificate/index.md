@@ -2,13 +2,6 @@
 title: RTCCertificate
 slug: Web/API/RTCCertificate
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - RTCCertificate
-  - Reference
-  - WebRTC
-  - real-time communications
 browser-compat: api.RTCCertificate
 ---
 
@@ -28,3 +21,7 @@ The interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides an ob
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("RTCPeerConnection.generateCertificate()")}}

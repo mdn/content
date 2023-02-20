@@ -2,14 +2,8 @@
 title: WorkerNavigator.platform
 slug: Web/API/WorkerNavigator/platform
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - WorkerNavigator
-  - Property
-  - Reference
-  - platform
+status:
+  - deprecated
 browser-compat: api.WorkerNavigator.platform
 ---
 

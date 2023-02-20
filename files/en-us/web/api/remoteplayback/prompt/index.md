@@ -2,12 +2,6 @@
 title: RemotePlayback.prompt()
 slug: Web/API/RemotePlayback/prompt
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - prompt
-  - RemotePlayback
 browser-compat: api.RemotePlayback.prompt
 ---
 

@@ -2,14 +2,6 @@
 title: ElementInternals.ariaExpanded
 slug: Web/API/ElementInternals/ariaExpanded
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaExpanded
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaExpanded
 ---
 

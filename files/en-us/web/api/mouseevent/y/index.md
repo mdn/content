@@ -2,11 +2,6 @@
 title: MouseEvent.y
 slug: Web/API/MouseEvent/y
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Reference
 browser-compat: api.MouseEvent.y
 ---
 

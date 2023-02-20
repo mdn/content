@@ -1,6 +1,7 @@
 ---
 title: webRequest.StreamFilter.status
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/status
+page-type: webextension-api-property
 tags:
   - API
   - Add-ons

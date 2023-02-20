@@ -2,12 +2,8 @@
 title: BackgroundFetchUpdateUIEvent()
 slug: Web/API/BackgroundFetchUpdateUIEvent/BackgroundFetchUpdateUIEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - BackgroundFetchUpdateUIEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BackgroundFetchUpdateUIEvent.BackgroundFetchUpdateUIEvent
 ---
 

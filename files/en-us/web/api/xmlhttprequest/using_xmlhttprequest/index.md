@@ -2,16 +2,6 @@
 title: Using XMLHttpRequest
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 page-type: guide
-tags:
-  - Advanced
-  - DOM
-  - Guide
-  - HTTP
-  - MakeBrowserAgnostic
-  - Tutorial
-  - XHR
-  - XML
-  - XMLHttpRequest
 browser-compat: api.XMLHttpRequest
 ---
 

@@ -2,17 +2,9 @@
 title: VRDisplay.getFrameData()
 slug: Web/API/VRDisplay/getFrameData
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - getFrameData
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.getFrameData
 ---
 

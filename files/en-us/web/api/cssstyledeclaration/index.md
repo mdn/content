@@ -2,12 +2,6 @@
 title: CSSStyleDeclaration
 slug: Web/API/CSSStyleDeclaration
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM
-  - CSSRule
-  - Interface
-  - Reference
 browser-compat: api.CSSStyleDeclaration
 ---
 
@@ -73,7 +67,3 @@ console.log(styleObj.cssText);
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [CSS Properties Reference](/en-US/docs/Web/CSS/CSS_Properties_Reference)

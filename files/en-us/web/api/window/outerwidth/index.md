@@ -2,12 +2,6 @@
 title: Window.outerWidth
 slug: Web/API/Window/outerWidth
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsContent
-  - Property
-  - Reference
 browser-compat: api.Window.outerWidth
 ---
 

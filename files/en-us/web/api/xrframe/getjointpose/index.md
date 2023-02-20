@@ -2,20 +2,8 @@
 title: XRFrame.getJointPose()
 slug: Web/API/XRFrame/getJointPose
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Interface
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRFrame
-  - getJointPose
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRFrame.getJointPose
 ---
 

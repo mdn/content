@@ -2,14 +2,6 @@
 title: Element.ariaColCount
 slug: Web/API/Element/ariaColCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaColCount
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaColCount
 ---
 

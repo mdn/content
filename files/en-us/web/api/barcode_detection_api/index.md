@@ -2,14 +2,8 @@
 title: Barcode Detection API
 slug: Web/API/Barcode_Detection_API
 page-type: web-api-overview
-tags:
-  - API
-  - Landing
-  - Overview
-  - barcode
-  - barcode detection
-  - shape detection
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BarcodeDetector
 ---
 

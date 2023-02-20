@@ -2,16 +2,8 @@
 title: BluetoothRemoteGATTDescriptor.value
 slug: Web/API/BluetoothRemoteGATTDescriptor/value
 page-type: web-api-instance-property
-tags:
-  - API
-  - Bluetooth
-  - BluetoothGattDescriptor
-  - BluetoothRemoteGATTDescriptor
-  - Experimental
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - value
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTDescriptor.value
 ---
 

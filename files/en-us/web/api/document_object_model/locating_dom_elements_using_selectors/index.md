@@ -2,10 +2,6 @@
 title: Locating DOM elements using selectors
 slug: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 page-type: guide
-tags:
-  - Beginner
-  - DOM
-  - NeedsBeginnerUpdate
 ---
 
 {{DefaultAPISidebar("DOM")}}

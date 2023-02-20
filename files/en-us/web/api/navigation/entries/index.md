@@ -2,19 +2,8 @@
 title: Navigation.entries()
 slug: Web/API/Navigation/entries
 page-type: web-api-instance-method
-tags:
-  - API
-  - entries
-  - Experimental
-  - History
-  - Method
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Reference
-  - Scroll
-  - transition
-  - Traversal
+status:
+  - experimental
 browser-compat: api.Navigation.entries
 ---
 

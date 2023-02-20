@@ -2,12 +2,6 @@
 title: 'MediaKeySession: keystatuseschange event'
 slug: Web/API/MediaKeySession/keystatuseschange_event
 page-type: web-api-event
-tags:
-  - keystatuseschange
-  - API
-  - Event
-  - Reference
-  - MediaKeySession
 browser-compat: api.MediaKeySession.keystatuseschange_event
 ---
 

@@ -2,18 +2,6 @@
 title: BlobEvent
 slug: Web/API/BlobEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Blob
-  - Interface
-  - Media
-  - MediaStream Recording
-  - MediaStream Recording API
-  - Recording Media
-  - Reference
-  - Video
-  - events
 browser-compat: api.BlobEvent
 ---
 

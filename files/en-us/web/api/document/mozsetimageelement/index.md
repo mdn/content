@@ -2,13 +2,8 @@
 title: Document.mozSetImageElement()
 slug: Web/API/Document/mozSetImageElement
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - Non-standard
-  - Reference
+status:
+  - non-standard
 browser-compat: api.Document.mozSetImageElement
 ---
 
@@ -66,7 +61,7 @@ function clicked() {
   canvas.setAttribute("width", 100);
   canvas.setAttribute("height", 100);
 
-  const ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext("2d");
   ctx.fillStyle = `#${c.toString(16)}0000`;
   ctx.fillRect(25, 25, 75, 75);
 

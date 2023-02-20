@@ -2,12 +2,9 @@
 title: Proximity Events
 slug: Web/API/Proximity_Events
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - Proximity Events
-  - Reference
-  - Deprecated
+status:
+  - deprecated
+  - experimental
 ---
 
 {{DefaultAPISidebar("Proximity Events")}}{{Deprecated_Header}}

@@ -2,21 +2,6 @@
 title: XRJointPose.radius
 slug: Web/API/XRJointPose/radius
 page-type: web-api-instance-property
-tags:
-  - API
-  - Controller
-  - Hand
-  - Input
-  - Property
-  - Read-only
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRJointPose
-
 browser-compat: api.XRJointPose.radius
 ---
 

@@ -2,24 +2,6 @@
 title: RTCRtpReceiver.getCapabilities() static function
 slug: Web/API/RTCRtpReceiver/getCapabilities
 page-type: web-api-static-method
-tags:
-  - API
-  - Audio
-  - Codecs
-  - Compatibility
-  - Media
-  - Method
-  - Negotiation
-  - RTCRtpReceiver
-  - Reference
-  - Static
-  - Static Function
-  - Video
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - capabilities
-  - getCapabilities
 browser-compat: api.RTCRtpReceiver.getCapabilities
 ---
 

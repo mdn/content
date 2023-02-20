@@ -2,13 +2,6 @@
 title: PannerNode()
 slug: Web/API/PannerNode/PannerNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Constructor
-  - PannerNode
-  - Reference
-  - Web Audio API
 browser-compat: api.PannerNode.PannerNode
 ---
 

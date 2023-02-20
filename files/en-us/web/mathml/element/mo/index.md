@@ -44,7 +44,7 @@ In addition to the [global MathML attributes](/en-US/docs/Web/MathML/Global_attr
 
 ## Examples
 
-```html
+```html-nolint
 <math display="block">
   <mrow>
     <mn>5</mn>

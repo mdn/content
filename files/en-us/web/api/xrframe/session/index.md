@@ -2,20 +2,8 @@
 title: XRFrame.session
 slug: Web/API/XRFrame/session
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Property
-  - Reference
-  - Session
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRFrame
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRFrame.session
 ---
 

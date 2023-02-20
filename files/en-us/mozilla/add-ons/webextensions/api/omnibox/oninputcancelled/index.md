@@ -1,6 +1,7 @@
 ---
 title: omnibox.onInputCancelled
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputCancelled
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

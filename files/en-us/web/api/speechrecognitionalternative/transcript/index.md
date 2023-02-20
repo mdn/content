@@ -2,15 +2,6 @@
 title: SpeechRecognitionAlternative.transcript
 slug: Web/API/SpeechRecognitionAlternative/transcript
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechRecognitionAlternative
-  - Web Speech API
-  - recognition
-  - speech
-  - transcript
 browser-compat: api.SpeechRecognitionAlternative.transcript
 ---
 

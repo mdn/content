@@ -2,10 +2,6 @@
 title: "Animation: cancel event"
 slug: Web/API/Animation/cancel_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
 browser-compat: api.Animation.cancel_event
 ---
 

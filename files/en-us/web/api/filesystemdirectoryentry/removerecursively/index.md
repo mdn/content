@@ -2,16 +2,9 @@
 title: FileSystemDirectoryEntry.removeRecursively()
 slug: Web/API/FileSystemDirectoryEntry/removeRecursively
 page-type: web-api-instance-method
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemDirectoryEntry
-  - Files
-  - Method
-  - Non-standard
-  - Reference
-  - removeRecursively
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.FileSystemDirectoryEntry.removeRecursively
 ---
 

@@ -2,13 +2,6 @@
 title: HTMLTableElement.insertRow()
 slug: Web/API/HTMLTableElement/insertRow
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - Method
-  - NeedsMobileBrowserCompatibility
-  - Reference
 browser-compat: api.HTMLTableElement.insertRow
 ---
 

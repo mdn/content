@@ -2,14 +2,6 @@
 title: Window.getSelection()
 slug: Web/API/Window/getSelection
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Selection
-  - Selection API
-  - Window
 browser-compat: api.Window.getSelection
 ---
 
