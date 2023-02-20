@@ -2,12 +2,8 @@
 title: FontData.blob()
 slug: Web/API/FontData/blob
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - blob
-  - Experimental
+status:
+  - experimental
 browser-compat: api.FontData.blob
 ---
 

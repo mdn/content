@@ -2,12 +2,8 @@
 title: CaptureController
 slug: Web/API/CaptureController
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - CaptureController
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CaptureController
 ---
 

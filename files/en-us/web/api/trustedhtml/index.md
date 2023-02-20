@@ -2,11 +2,6 @@
 title: TrustedHTML
 slug: Web/API/TrustedHTML
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - TrustedHTML
 browser-compat: api.TrustedHTML
 ---
 

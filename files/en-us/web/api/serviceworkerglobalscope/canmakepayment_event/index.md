@@ -2,13 +2,8 @@
 title: "ServiceWorkerGlobalScope: canmakepayment event"
 slug: Web/API/ServiceWorkerGlobalScope/canmakepayment_event
 page-type: web-api-event
-tags:
-  - API
-  - canmakepayment
-  - Event
-  - Experimental
-  - Property
-  - Reference
+status:
+  - experimental
 browser-compat: api.ServiceWorkerGlobalScope.canmakepayment_event
 ---
 

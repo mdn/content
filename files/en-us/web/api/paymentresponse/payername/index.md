@@ -2,16 +2,9 @@
 title: PaymentRequest.payerName
 slug: Web/API/PaymentResponse/payerName
 page-type: web-api-instance-property
-tags:
-  - API
-  - Payment Request
-  - Payment Request API
-  - PaymentResponse
-  - Property
-  - Reference
-  - Secure context
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentResponse.payerName
 ---
 

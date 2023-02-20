@@ -2,12 +2,6 @@
 title: TextTrackCue.endTime
 slug: Web/API/TextTrackCue/endTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - endTime
-  - TextTrackCue
 browser-compat: api.TextTrackCue.endTime
 ---
 

@@ -2,13 +2,8 @@
 title: AudioDecoder.decodeQueueSize
 slug: Web/API/AudioDecoder/decodeQueueSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - decodeQueueSize
-  - AudioDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioDecoder.decodeQueueSize
 ---
 

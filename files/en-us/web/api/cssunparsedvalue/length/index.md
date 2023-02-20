@@ -2,16 +2,8 @@
 title: CSSUnparsedValue.length
 slug: Web/API/CSSUnparsedValue/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnparsedValue
-  - Experimental
-  - Houdini
-  - NeedsExample
-  - Property
-  - Reference
-  - length
+status:
+  - experimental
 browser-compat: api.CSSUnparsedValue.length
 ---
 

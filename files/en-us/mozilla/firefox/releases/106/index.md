@@ -19,8 +19,6 @@ This article provides information about the changes in Firefox 106 that will aff
 - The {{HTMLElement("source")}} element now supports [`height`](/en-US/docs/Web/HTML/Element/source#attr-height) & [`width`](/en-US/docs/Web/HTML/Element/source#attr-width) attributes when it is a child of a {{HTMLElement("picture")}} element.
   This functionality is an experimental feature enabled using the `dom.picture_source_dimension_attributes.enabled` preference ({{bug(1694741)}}).
 
-#### Removals
-
 ### MathML
 
 - The [`<semantics>`](/en-US/docs/Web/MathML/Element/semantics) and [`<maction>`](/en-US/docs/Web/MathML/Element/maction) MathML elements now only render the first child element by default ({{bug(1588733)}}).
@@ -30,19 +28,17 @@ This article provides information about the changes in Firefox 106 that will aff
 - The [@supports](/en-US/docs/Web/CSS/@supports) at-rule now supports the `font-tech()` and `font-format()` functions.
   These functions can be used to test whether a browser supports a given font technology or format and CSS styles can be applied based on the result ({{bug(1786493)}}).
 
-#### Removals
-
 ### JavaScript
 
-#### Removals
+No notable changes.
 
 ### HTTP
 
-#### Removals
+No notable changes.
 
 ### Security
 
-#### Removals
+No notable changes.
 
 ### APIs
 
@@ -51,13 +47,9 @@ This article provides information about the changes in Firefox 106 that will aff
 - The [`HTMLMetaElement.media`](/en-US/docs/Web/API/HTMLMetaElement/media) property is now supported. This property enables you to set different theme colors based on `media` values (e.g. `max-width: 600px`).
   Meta elements with `media` properties allow the browser to use the `content` value in conjunction with `theme-color` to set the page or UI colors for a given media query ({{bug(1706179)}}).
 
-#### Media, WebRTC, and Web Audio
-
-#### Removals
-
 ### WebAssembly
 
-#### Removals
+No notable changes.
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -83,10 +75,6 @@ This article provides information about the changes in Firefox 106 that will aff
 
 - The ability to set the [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) manifest key property `"persistent"` to `false` for Manifest V2 (to make a background page non-persistent) is now available by default.
 - The `object-src` directive in the `"content_security_policy"` manifest key is now optional ({{bug(1766881)}}). See [object-src directive](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy#object-src_directive) on the `"content_security_policy"` manifest key page for more details.
-
-### Removals
-
-### Other
 
 ## Older versions
 

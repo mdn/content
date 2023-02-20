@@ -2,11 +2,6 @@
 title: TaskController.setPriority()
 slug: Web/API/TaskController/setPriority
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - setPriority
 browser-compat: api.TaskController.setPriority
 ---
 

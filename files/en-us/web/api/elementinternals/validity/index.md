@@ -2,12 +2,6 @@
 title: ElementInternals.validity
 slug: Web/API/ElementInternals/validity
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - validity
-  - ElementInternals
 browser-compat: api.ElementInternals.validity
 ---
 

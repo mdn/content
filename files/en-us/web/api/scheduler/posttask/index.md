@@ -2,11 +2,6 @@
 title: Scheduler.postTask()
 slug: Web/API/Scheduler/postTask
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
-  - Scheduler
-  - API
 browser-compat: api.Scheduler.postTask
 ---
 

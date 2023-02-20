@@ -2,14 +2,6 @@
 title: TextTrackCueList.length
 slug: Web/API/TextTrackCueList/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - length
-  - TextTrackCueList
-  - WebVTT
-  - Media
 browser-compat: api.TextTrackCueList.length
 ---
 

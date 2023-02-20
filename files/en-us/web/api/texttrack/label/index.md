@@ -2,12 +2,6 @@
 title: TextTrack.label
 slug: Web/API/TextTrack/label
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - label
-  - TextTrack
 browser-compat: api.TextTrack.label
 ---
 

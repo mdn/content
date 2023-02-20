@@ -2,11 +2,8 @@
 title: CaptureController()
 slug: Web/API/CaptureController/CaptureController
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Reference
+status:
+  - experimental
 browser-compat: api.CaptureController.setFocusBehavior
 ---
 

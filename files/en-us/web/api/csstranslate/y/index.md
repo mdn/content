@@ -2,15 +2,8 @@
 title: CSSTranslate.y
 slug: Web/API/CSSTranslate/y
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSTransformComponent
-  - CSSTransformValue
-  - CSSTranslate
-  - Experimental
-  - Houdini
-  - Property
+status:
+  - experimental
 browser-compat: api.CSSTranslate.y
 ---
 

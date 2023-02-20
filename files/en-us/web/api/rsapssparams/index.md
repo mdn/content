@@ -2,12 +2,6 @@
 title: RsaPssParams
 slug: Web/API/RsaPssParams
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - Reference
-  - RsaPssParams
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-RsaPssParams
 ---
 

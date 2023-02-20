@@ -1,6 +1,7 @@
 ---
 title: sessions.forgetClosedWindow()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/forgetClosedWindow
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

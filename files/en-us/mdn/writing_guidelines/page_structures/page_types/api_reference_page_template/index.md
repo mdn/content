@@ -21,10 +21,10 @@ The page front matter in the pages on MDN Web Docs comprises of the YAML headers
 > title: NameOfTheInterface
 > slug: Web/API/NameOfTheInterface
 > page-type: web-api-interface
-> tags:
->   - Experimental
->   - Deprecated
->   - Non-standard
+> status:
+>   - experimental
+>   - deprecated
+>   - non-standard
 > browser-compat: path.to.feature.NameOfTheInterface
 > ---
 > ```
@@ -35,8 +35,8 @@ The page front matter in the pages on MDN Web Docs comprises of the YAML headers
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/API/NameOfTheParentInterface`. For example, [Request](/en-US/docs/Web/API/Request) slug is "Web/API/Request".
 > - **page-type**
 >   - : The `page-type` key for Web/API interfaces is always `web-api-interface`.
-> - **tags**
->   - : Include (appropriate) technology status tags: **Experimental** (if [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** if not on a standards track.
+> - **status**
+>   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete), **non-standard** (if not on a standards track).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `path.to.feature.NameOfTheMethod` with the query string for the method in the [Browser compat data repo](https://github.com/mdn/browser-compat-data). The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).

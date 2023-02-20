@@ -2,12 +2,6 @@
 title: PerformanceEntry
 slug: Web/API/PerformanceEntry
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - PerformanceEntry
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceEntry
 ---
 

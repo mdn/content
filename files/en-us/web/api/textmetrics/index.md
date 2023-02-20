@@ -2,11 +2,6 @@
 title: TextMetrics
 slug: Web/API/TextMetrics
 page-type: web-api-interface
-tags:
-  - API
-  - Canvas
-  - Reference
-  - TextMetrics
 browser-compat: api.TextMetrics
 ---
 

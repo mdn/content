@@ -2,14 +2,6 @@
 title: ElementInternals.ariaDescription
 slug: Web/API/ElementInternals/ariaDescription
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaDescription
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaDescription
 ---
 

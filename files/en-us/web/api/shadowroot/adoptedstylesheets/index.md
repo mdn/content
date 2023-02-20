@@ -1,13 +1,6 @@
 ---
 title: ShadowRoot.adoptedStyleSheets
 slug: Web/API/ShadowRoot/adoptedStyleSheets
-tags:
-  - API
-  - ShadowRoot
-  - Property
-  - Reference
-  - Stylesheets
-  - adoptedStyleSheets
 page-type: web-api-instance-property
 browser-compat: api.ShadowRoot.adoptedStyleSheets
 ---
@@ -72,7 +65,7 @@ This is demonstrated for our shadow root object below using spread-syntax:
 
 ```js
 const extraSheet = new CSSStyleSheet();
-sheet.replaceSync('p { color: green; }');
+extraSheet.replaceSync('p { color: green; }');
 
 // Combine the existing sheets and new one
 shadow.adoptedStyleSheets = [...document.adoptedStyleSheets, extraSheet];

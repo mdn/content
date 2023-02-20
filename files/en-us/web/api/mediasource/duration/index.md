@@ -2,16 +2,6 @@
 title: MediaSource.duration
 slug: Web/API/MediaSource/duration
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Property
-  - Reference
-  - Video
-  - duration
 browser-compat: api.MediaSource.duration
 ---
 

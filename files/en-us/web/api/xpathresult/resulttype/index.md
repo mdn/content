@@ -2,13 +2,6 @@
 title: XPathResult.resultType
 slug: Web/API/XPathResult/resultType
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM XPath API
-  - Property
-  - Reference
-  - XPath
-  - XPathResult
 browser-compat: api.XPathResult.resultType
 ---
 

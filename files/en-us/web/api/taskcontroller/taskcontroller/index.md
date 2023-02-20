@@ -2,11 +2,6 @@
 title: TaskController()
 slug: Web/API/TaskController/TaskController
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - TaskController
 browser-compat: api.TaskController.TaskController
 ---
 

@@ -2,14 +2,8 @@
 title: "VideoEncoder: dequeue event"
 slug: Web/API/VideoEncoder/dequeue_event
 page-type: web-api-event
-tags:
-  - API
-  - Property
-  - Reference
-  - Event
-  - ondequeue
-  - VideoEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoEncoder.dequeue_event
 ---
 

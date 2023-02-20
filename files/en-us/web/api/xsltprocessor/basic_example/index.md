@@ -2,9 +2,6 @@
 title: XSLT Basic Example
 slug: Web/API/XSLTProcessor/Basic_Example
 page-type: guide
-tags:
-  - XSLT
-  - Example
 ---
 
 This first example demonstrates the basics of setting up an XSLT transformation in a browser.

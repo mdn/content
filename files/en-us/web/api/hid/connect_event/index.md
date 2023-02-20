@@ -2,12 +2,8 @@
 title: "HID: connect event"
 slug: Web/API/HID/connect_event
 page-type: web-api-event
-tags:
-  - API
-  - Reference
-  - Event
-  - HID
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HID.connect_event
 ---
 

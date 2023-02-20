@@ -2,14 +2,6 @@
 title: PushMessageData.json()
 slug: Web/API/PushMessageData/json
 page-type: web-api-instance-method
-tags:
-  - API
-  - JSON
-  - Method
-  - Push
-  - PushMessageData
-  - Reference
-  - Service Workers
 browser-compat: api.PushMessageData.json
 ---
 

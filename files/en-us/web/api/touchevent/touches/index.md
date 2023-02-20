@@ -2,16 +2,6 @@
 title: TouchEvent.touches
 slug: Web/API/TouchEvent/touches
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Mobile
-  - Property
-  - Read-only
-  - Reference
-  - TouchEvent
-  - touch
 browser-compat: api.TouchEvent.touches
 ---
 

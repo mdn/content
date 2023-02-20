@@ -2,12 +2,6 @@
 title: TrustedHTML.toJSON()
 slug: Web/API/TrustedHTML/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - toJSON
-  - TrustedHTML
 browser-compat: api.TrustedHTML.toJSON
 ---
 

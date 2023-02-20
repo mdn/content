@@ -2,13 +2,6 @@
 title: HTMLLabelElement.htmlFor
 slug: Web/API/HTMLLabelElement/htmlFor
 page-type: web-api-instance-property
-tags:
-  - Forms
-  - HTML DOM
-  - HTMLLabelElement
-  - Reference
-  - htmlFor
-  - Property
 browser-compat: api.HTMLLabelElement.htmlFor
 ---
 

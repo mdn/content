@@ -2,11 +2,6 @@
 title: ANGLE_instanced_arrays
 slug: Web/API/ANGLE_instanced_arrays
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.ANGLE_instanced_arrays
 ---
 

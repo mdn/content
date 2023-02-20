@@ -2,11 +2,8 @@
 title: 'HTMLCanvasElement: contextlost event'
 slug: Web/API/HTMLCanvasElement/contextlost_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Canvas
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HTMLCanvasElement.contextlost_event
 ---
 

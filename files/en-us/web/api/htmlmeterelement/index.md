@@ -2,12 +2,6 @@
 title: HTMLMeterElement
 slug: Web/API/HTMLMeterElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTMLMeterElement
-  - Interface
-  - Reference
 browser-compat: api.HTMLMeterElement
 ---
 

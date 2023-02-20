@@ -2,14 +2,6 @@
 title: Touch.identifier
 slug: Web/API/Touch/identifier
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Identifier
-  - Property
-  - Read-only
-  - Reference
-  - touch
 browser-compat: api.Touch.identifier
 ---
 

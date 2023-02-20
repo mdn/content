@@ -2,14 +2,6 @@
 title: Touch events
 slug: Web/API/Touch_events
 page-type: web-api-overview
-tags:
-  - Advanced
-  - DOM
-  - Event
-  - Guide
-  - Mobile
-  - Overview
-  - touch
 browser-compat: api.Touch
 ---
 

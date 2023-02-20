@@ -2,17 +2,6 @@
 title: XRInputSource.gamepad
 slug: Web/API/XRInputSource/gamepad
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Property
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRInputSource
 browser-compat: api.XRInputSource.gamepad
 ---
 

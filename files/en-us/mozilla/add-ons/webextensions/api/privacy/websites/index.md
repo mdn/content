@@ -1,6 +1,7 @@
 ---
 title: privacy.websites
 slug: Mozilla/Add-ons/WebExtensions/API/privacy/websites
+page-type: webextension-api-property
 tags:
   - API
   - Add-ons

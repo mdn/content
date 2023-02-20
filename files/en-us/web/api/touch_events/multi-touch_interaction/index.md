@@ -2,10 +2,6 @@
 title: Multi-touch interaction
 slug: Web/API/Touch_events/Multi-touch_interaction
 page-type: guide
-tags:
-  - Guide
-  - TouchEvent
-  - touch
 ---
 
 {{DefaultAPISidebar("Touch Events")}}

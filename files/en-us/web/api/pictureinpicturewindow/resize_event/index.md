@@ -2,14 +2,6 @@
 title: 'PictureInPictureWindow: resize event'
 slug: Web/API/PictureInPictureWindow/resize_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Video
-  - pip
-  - resize
 browser-compat: api.PictureInPictureWindow.resize_event
 ---
 

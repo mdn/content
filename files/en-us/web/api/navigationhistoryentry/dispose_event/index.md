@@ -2,21 +2,8 @@
 title: "NavigationHistoryEntry: dispose event"
 slug: Web/API/NavigationHistoryEntry/dispose_event
 page-type: web-api-event
-tags:
-  - API
-  - dispose
-  - Event
-  - Experimental
-  - History
-  - Navigate
-  - navigateerror
-  - Navigation
-  - Navigation API
-  - Property
-  - Reference
-  - Scroll
-  - Traversal
-  - updateCurrentEntry
+status:
+  - experimental
 browser-compat: api.NavigationHistoryEntry.dispose_event
 ---
 

@@ -2,14 +2,6 @@
 title: TextTrackCueList.getCueById()
 slug: Web/API/TextTrackCueList/getCueById
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - getCueById()
-  - TextTrackCueList
-  - WebVTT
-  - Media
 browser-compat: api.TextTrackCueList.getCueById
 ---
 

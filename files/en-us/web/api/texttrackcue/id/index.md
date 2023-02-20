@@ -2,12 +2,6 @@
 title: TextTrackCue.id
 slug: Web/API/TextTrackCue/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - id
-  - TextTrackCue
 browser-compat: api.TextTrackCue.id
 ---
 

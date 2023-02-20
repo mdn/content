@@ -2,18 +2,6 @@
 title: GeolocationCoordinates.longitude
 slug: Web/API/GeolocationCoordinates/longitude
 page-type: web-api-instance-property
-tags:
-  - API
-  - GPS
-  - Geolocation
-  - Geolocation API
-  - GeolocationCoordinates
-  - Global Positioning System
-  - Property
-  - Read-only
-  - Reference
-  - Secure context
-  - longitude
 browser-compat: api.GeolocationCoordinates.longitude
 ---
 

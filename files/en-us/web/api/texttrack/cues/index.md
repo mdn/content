@@ -2,12 +2,6 @@
 title: TextTrack.cues
 slug: Web/API/TextTrack/cues
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - cues
-  - TextTrack
 browser-compat: api.TextTrack.cues
 ---
 

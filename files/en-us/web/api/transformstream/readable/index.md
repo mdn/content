@@ -2,12 +2,6 @@
 title: TransformStream.readable
 slug: Web/API/TransformStream/readable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - readable
-  - TransformStream
 browser-compat: api.TransformStream.readable
 ---
 

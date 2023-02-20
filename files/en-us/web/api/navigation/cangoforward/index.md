@@ -2,19 +2,8 @@
 title: Navigation.canGoForward
 slug: Web/API/Navigation/canGoForward
 page-type: web-api-instance-property
-tags:
-  - API
-  - canGoForward
-  - Experimental
-  - History
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.Navigation.canGoForward
 ---
 

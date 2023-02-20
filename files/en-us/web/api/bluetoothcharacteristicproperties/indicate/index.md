@@ -2,16 +2,8 @@
 title: BluetoothCharacteristicProperties.indicate
 slug: Web/API/BluetoothCharacteristicProperties/indicate
 page-type: web-api-instance-property
-tags:
-  - API
-  - Bluetooth
-  - BluetoothCharacteristicProperties
-  - Experimental
-  - NeedsExample
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - indicate
+status:
+  - experimental
 browser-compat: api.BluetoothCharacteristicProperties.indicate
 ---
 

@@ -2,13 +2,8 @@
 title: VideoEncoder.flush()
 slug: Web/API/VideoEncoder/flush
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - flush
-  - VideoEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoEncoder.flush
 ---
 

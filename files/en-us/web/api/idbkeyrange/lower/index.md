@@ -2,15 +2,6 @@
 title: IDBKeyRange.lower
 slug: Web/API/IDBKeyRange/lower
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBKeyRange
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - lower
 browser-compat: api.IDBKeyRange.lower
 ---
 

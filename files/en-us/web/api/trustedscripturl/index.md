@@ -2,11 +2,6 @@
 title: TrustedScriptURL
 slug: Web/API/TrustedScriptURL
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - TrustedScriptURL
 browser-compat: api.TrustedScriptURL
 ---
 

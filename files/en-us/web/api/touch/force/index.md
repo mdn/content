@@ -2,11 +2,6 @@
 title: Touch.force
 slug: Web/API/Touch/force
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - touch
 browser-compat: api.Touch.force
 ---
 

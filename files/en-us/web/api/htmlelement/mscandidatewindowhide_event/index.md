@@ -2,9 +2,8 @@
 title: 'HTMLElement: mscandidatewindowhide event'
 slug: Web/API/HTMLElement/mscandidatewindowhide_event
 page-type: web-api-event
-tags:
-  - Non-standard
-  - Event
+status:
+  - non-standard
 ---
 
 {{APIRef("HTML DOM")}}

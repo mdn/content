@@ -2,14 +2,6 @@
 title: 'HTMLElement: beforeinput event'
 slug: Web/API/HTMLElement/beforeinput_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - HTML DOM
-  - HTMLElement
-  - InputEvent
-  - Reference
-  - beforeinput
 browser-compat: api.HTMLElement.beforeinput_event
 ---
 

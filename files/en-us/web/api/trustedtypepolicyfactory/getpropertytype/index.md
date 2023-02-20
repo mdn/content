@@ -2,12 +2,6 @@
 title: TrustedTypePolicyFactory.getPropertyType()
 slug: Web/API/TrustedTypePolicyFactory/getPropertyType
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - getPropertyType
-  - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.getPropertyType
 ---
 

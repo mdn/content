@@ -2,18 +2,6 @@
 title: Capabilities, constraints, and settings
 slug: Web/API/Media_Capture_and_Streams_API/Constraints
 page-type: guide
-tags:
-  - Advanced
-  - Audio
-  - Constraints
-  - Example
-  - Guide
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - Settings
-  - Video
-  - WebRTC
 browser-compat: api.MediaDevices.getSupportedConstraints
 ---
 

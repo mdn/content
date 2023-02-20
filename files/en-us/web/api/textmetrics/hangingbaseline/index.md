@@ -2,12 +2,8 @@
 title: TextMetrics.hangingBaseline
 slug: Web/API/TextMetrics/hangingBaseline
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - TextMetrics
+status:
+  - experimental
 browser-compat: api.TextMetrics.hangingBaseline
 ---
 

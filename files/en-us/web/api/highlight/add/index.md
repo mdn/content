@@ -2,13 +2,8 @@
 title: Highlight.add()
 slug: Web/API/Highlight/add
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - CSS Custom Highlight API
-  - Reference
-  - add
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Highlight.add
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prototype.add
 ---

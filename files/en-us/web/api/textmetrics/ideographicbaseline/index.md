@@ -2,12 +2,8 @@
 title: TextMetrics.ideographicBaseline
 slug: Web/API/TextMetrics/ideographicBaseline
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - TextMetrics
+status:
+  - experimental
 browser-compat: api.TextMetrics.ideographicBaseline
 ---
 

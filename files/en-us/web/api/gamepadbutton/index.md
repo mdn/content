@@ -2,11 +2,6 @@
 title: GamepadButton
 slug: Web/API/GamepadButton
 page-type: web-api-interface
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - Reference
 browser-compat: api.GamepadButton
 ---
 

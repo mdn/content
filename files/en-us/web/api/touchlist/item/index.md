@@ -2,15 +2,6 @@
 title: TouchList.item()
 slug: Web/API/TouchList/item
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - Mobile
-  - Reference
-  - TouchList
-  - touch
 browser-compat: api.TouchList.item
 ---
 

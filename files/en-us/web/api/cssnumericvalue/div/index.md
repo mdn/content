@@ -2,15 +2,8 @@
 title: CSSNumericValue.div()
 slug: Web/API/CSSNumericValue/div
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - div()
+status:
+  - experimental
 browser-compat: api.CSSNumericValue.div
 ---
 

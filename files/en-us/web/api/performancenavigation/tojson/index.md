@@ -2,12 +2,8 @@
 title: PerformanceNavigation.toJSON()
 slug: Web/API/PerformanceNavigation/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.PerformanceNavigation.toJSON
 ---
 
