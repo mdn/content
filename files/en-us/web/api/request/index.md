@@ -2,14 +2,6 @@
 title: Request
 slug: Web/API/Request
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - Interface
-  - Networking
-  - Reference
-  - request
 browser-compat: api.Request
 ---
 
@@ -52,6 +44,8 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
   - : Contains the referrer of the request (e.g., `client`).
 - {{domxref("Request.referrerPolicy")}} {{ReadOnlyInline}}
   - : Contains the referrer policy of the request (e.g., `no-referrer`).
+- {{domxref("Request.signal")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("AbortSignal")}} associated with the request
 - {{domxref("Request.url")}} {{ReadOnlyInline}}
   - : Contains the URL of the request.
 

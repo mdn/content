@@ -2,13 +2,6 @@
 title: ReadableStreamDefaultController.desiredSize
 slug: Web/API/ReadableStreamDefaultController/desiredSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - ReadableStreamDefaultController
-  - Reference
-  - Streams
-  - desiredSize
 browser-compat: api.ReadableStreamDefaultController.desiredSize
 ---
 

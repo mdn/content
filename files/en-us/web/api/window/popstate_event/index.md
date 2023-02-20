@@ -2,18 +2,6 @@
 title: 'Window: popstate event'
 slug: Web/API/Window/popstate_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - HTML DOM
-  - History
-  - History API
-  - Location
-  - Navigation
-  - Reference
-  - URL
-  - Window
-  - popstate
 browser-compat: api.Window.popstate_event
 ---
 

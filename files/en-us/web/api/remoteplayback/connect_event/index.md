@@ -2,12 +2,6 @@
 title: 'RemotePlayback: connect event'
 slug: Web/API/RemotePlayback/connect_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - onconnect
-  - RemotePlayback
 browser-compat: api.RemotePlayback.connect_event
 ---
 

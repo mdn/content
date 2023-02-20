@@ -2,12 +2,6 @@
 title: CanvasRenderingContext2D.arcTo()
 slug: Web/API/CanvasRenderingContext2D/arcTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.arcTo
 ---
 
@@ -67,12 +61,12 @@ out. In other words, the arc is tangential to both segments.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Tangential lines
 ctx.beginPath();
-ctx.strokeStyle = 'gray';
+ctx.strokeStyle = "gray";
 ctx.moveTo(200, 20);
 ctx.lineTo(200, 130);
 ctx.lineTo(50, 20);
@@ -80,23 +74,23 @@ ctx.stroke();
 
 // Arc
 ctx.beginPath();
-ctx.strokeStyle = 'black';
+ctx.strokeStyle = "black";
 ctx.lineWidth = 5;
 ctx.moveTo(200, 20);
-ctx.arcTo(200,130, 50,20, 40);
+ctx.arcTo(200, 130, 50, 20, 40);
 ctx.stroke();
 
 // Start point
 ctx.beginPath();
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.arc(200, 20, 5, 0, 2 * Math.PI);
 ctx.fill();
 
 // Control points
 ctx.beginPath();
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 ctx.arc(200, 130, 5, 0, 2 * Math.PI); // Control point one
-ctx.arc(50, 20, 5, 0, 2 * Math.PI);   // Control point two
+ctx.arc(50, 20, 5, 0, 2 * Math.PI); // Control point two
 ctx.fill();
 ```
 
@@ -127,16 +121,16 @@ that the arc's second control point and the point specified by `lineTo()` are
 the same, which produces a totally smooth corner.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const p0 = { x: 230, y: 20  }
-const p1 = { x: 90,  y: 130 }
-const p2 = { x: 20,  y: 20  }
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const p0 = { x: 230, y: 20 };
+const p1 = { x: 90, y: 130 };
+const p2 = { x: 20, y: 20 };
 
 const labelPoint = (p) => {
   const offset = 15;
   ctx.fillText(`(${p.x},${p.y})`, p.x + offset, p.y + offset);
-}
+};
 
 ctx.beginPath();
 ctx.moveTo(p0.x, p0.y);
@@ -170,12 +164,12 @@ arc to fit entirely below the starting point.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.moveTo(180, 90);
-ctx.arcTo(180,130, 110,130, 130);
+ctx.arcTo(180, 130, 110, 130, 130);
 ctx.lineTo(110, 130);
 ctx.stroke();
 ```
@@ -203,12 +197,12 @@ arc changes.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx    = canvas.getContext('2d');
-let radius   = 100;
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+let radius = 100;
 
-const controlOut = document.getElementById('radius-output');
-const control    = document.getElementById('radius');
+const controlOut = document.getElementById("radius-output");
+const control = document.getElementById("radius");
 control.oninput = () => {
   controlOut.textContent = radius = control.value;
 };
@@ -230,7 +224,7 @@ function labelPoint(p, offset, i = 0) {
 
 function drawPoints(points) {
   points.forEach((p, i) => {
-    labelPoint(p, { x: 0, y: -20 }, i)
+    labelPoint(p, { x: 0, y: -20 }, i);
   });
 }
 

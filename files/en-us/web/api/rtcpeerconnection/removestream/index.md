@@ -2,15 +2,9 @@
 title: RTCPeerConnection.removeStream()
 slug: Web/API/RTCPeerConnection/removeStream
 page-type: web-api-instance-method
-tags:
-  - Deprecated
-  - Media
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
-  - removeStream
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.RTCPeerConnection.removeStream
 ---
 

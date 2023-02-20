@@ -3,10 +3,8 @@ title: ContentVisibilityAutoStateChangeEvent()
 slug: >-
   Web/API/ContentVisibilityAutoStateChangeEvent/ContentVisibilityAutoStateChangeEvent
 page-type: web-api-constructor
-tags:
-  - Constructor
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: >-
   api.ContentVisibilityAutoStateChangeEvent.ContentVisibilityAutoStateChangeEvent
 ---
@@ -35,7 +33,7 @@ new ContentVisibilityAutoStateChangeEvent(type, options)
 A developer would not use this constructor manually. A new `ContentVisibilityAutoStateChangeEvent` object is constructed when a handler is invoked as a result of the {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event firing.
 
 ```js
-canvasElem.addEventListener('contentvisibilityautostatechange', event => {
+canvasElem.addEventListener("contentvisibilityautostatechange", (event) => {
   // …
 });
 ```

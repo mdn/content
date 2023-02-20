@@ -2,24 +2,6 @@
 title: RTCIceCandidatePairStats
 slug: Web/API/RTCIceCandidatePairStats
 page-type: web-api-interface
-tags:
-  - API
-  - Candidate
-  - Candidate Pair
-  - Connection
-  - Connectivity
-  - Dictionary
-  - ICE
-  - Media
-  - Networking
-  - Pair
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - candidate-pair
-  - rtc
 browser-compat: api.RTCIceCandidatePairStats
 ---
 

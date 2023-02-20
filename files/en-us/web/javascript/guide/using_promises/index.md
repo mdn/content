@@ -426,7 +426,7 @@ Lastly, we will look into the more technical details, about when the registered 
 
 In the callback-based API, when and how the callback gets called depends on the API implementor. For example, the callback may be called synchronously or asynchronously:
 
-```js
+```js example-bad
 function doSomething(callback) {
   if (Math.random() > 0.5) {
     callback();
@@ -436,7 +436,7 @@ function doSomething(callback) {
 }
 ```
 
-This leads to [the state of Zalgo](https://blog.izs.me/2013/08/designing-apis-for-asynchrony/), because it makes side effects hard to analyze:
+The above design is strongly discouraged because it leads to the so-called "state of Zalgo". In the context of designing asynchronous APIs, this means a callback is called synchronously in some cases but asynchronously in other cases, creating ambiguity for the caller. For further background, see the article [Designing APIs for Asynchrony](https://blog.izs.me/2013/08/designing-apis-for-asynchrony/), where the term was first formally presented. This API design makes side effects hard to analyze:
 
 ```js
 let value = 1;

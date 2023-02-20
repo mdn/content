@@ -61,10 +61,6 @@ The new {{DOMxRef("Element")}}.
   - : `http://www.w3.org/2000/svg`
 - [MathML](/en-US/docs/Web/MathML)
   - : `http://www.w3.org/1998/Math/MathML`
-- [XUL](/en-US/docs/Mozilla/Tech/XUL) {{Non-standard_Inline}}
-  - : `http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul`
-- [XBL](/en-US/docs/Mozilla/Tech/XBL) {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : `http://www.mozilla.org/xbl`
 
 ## Examples
 

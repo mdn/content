@@ -2,14 +2,6 @@
 title: AnimationEffect.updateTiming()
 slug: Web/API/AnimationEffect/updateTiming
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animation
-  - Method
-  - Reference
-  - Web Animations
-  - waapi
-  - web animations api
 browser-compat: api.AnimationEffect.updateTiming
 ---
 

@@ -8,11 +8,12 @@ tags:
   - CSS Custom Highlight API
   - Reference
   - keys
+  - Experimental
 browser-compat: api.HighlightRegistry.keys
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.keys
 ---
 
-{{APIRef("CSS Custom Highlight API")}}
+{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
 
 The **`keys()`** method of the {{domxref("HighlightRegistry")}} interface returns a new [Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that contains the keys for each `Highlight` object in the `HighlightRegistry` object in insertion order.
 

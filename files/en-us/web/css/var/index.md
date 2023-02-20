@@ -36,6 +36,7 @@ The first argument to the function is the name of the custom property to be subs
 - `<custom-property-name>`
   - : A custom property's name represented by an identifier that starts with two dashes. Custom properties are solely for use by authors and users; CSS will never give them a meaning beyond what is presented here.
 - `<declaration-value>`
+
   - : The custom property's fallback value, which is used in case the custom property is invalid in the used context. This value may contain any character except some characters with special meaning like newlines, unmatched closing brackets, i.e. `)`, `]`, or `}`, top-level semicolons, or exclamation marks. The fallback value can itself be a custom property using the `var()` syntax.
 
     > **Note:** `var(--a,)` is valid, specifying that if the `--a` custom property is invalid or missing, the `var()` should be replaced with nothing.
@@ -137,10 +138,8 @@ The background color of the HTML body will be pink in this case even though the 
 ```css
 /* In the component's style: */
 .component .header {
-  color: var(
-    --header-color,
-    blue
-  );
+  /* header-color isn't set, and so remains blue, the fallback value */
+  color: var(--header-color, blue);
 }
 
 .component .text {

@@ -2,24 +2,10 @@
 title: ContentVisibilityAutoStateChangeEvent.skipped
 slug: Web/API/ContentVisibilityAutoStateChangeEvent/skipped
 page-type: web-api-instance-property
-tags:
-  - API
-  - ContentVisibilityAutoStateChangeEvent
-  - content-visibility
-  - CSS
-  - CSS Containment
-  - Layout
-  - Paint
-  - Property
-  - Reference
-  - skipped
-  - Style
-  - Web
-  - Experimental
 browser-compat: api.ContentVisibilityAutoStateChangeEvent.skipped
 ---
 
-{{APIRef("CSS Containment")}}{{SeeCompatTable}}
+{{APIRef("CSS Containment")}}
 
 The `skipped` read-only property of the {{ domxref("ContentVisibilityAutoStateChangeEvent") }} interface returns `true` if the user agent [skips the element's contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents), or `false` otherwise.
 
@@ -30,9 +16,9 @@ A boolean. Returns `true` if the user agent skips the element's contents, or `fa
 ## Examples
 
 ```js
-const canvasElem = document.querySelector('canvas');
+const canvasElem = document.querySelector("canvas");
 
-canvasElem.addEventListener('contentvisibilityautostatechange', stateChanged);
+canvasElem.addEventListener("contentvisibilityautostatechange", stateChanged);
 canvasElem.style.contentVisibility = "auto";
 
 function stateChanged(event) {

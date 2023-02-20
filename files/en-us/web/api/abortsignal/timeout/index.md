@@ -2,12 +2,6 @@
 title: AbortSignal.timeout()
 slug: Web/API/AbortSignal/timeout
 page-type: web-api-static-method
-tags:
-  - API
-  - AbortSignal
-  - Method
-  - Reference
-  - timeout
 browser-compat: api.AbortSignal.timeout
 ---
 

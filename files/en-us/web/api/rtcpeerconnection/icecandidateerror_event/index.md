@@ -2,22 +2,6 @@
 title: 'RTCPeerConnection: icecandidateerror event'
 slug: Web/API/RTCPeerConnection/icecandidateerror_event
 page-type: web-api-event
-tags:
-  - API
-  - Connection
-  - Connectivity
-  - Event
-  - Failure
-  - ICE
-  - Networking
-  - RTCPeerConnection
-  - Reference
-  - STUN
-  - TURN
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - icecandidateerror
 browser-compat: api.RTCPeerConnection.icecandidateerror_event
 ---
 

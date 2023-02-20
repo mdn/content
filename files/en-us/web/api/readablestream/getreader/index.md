@@ -2,13 +2,6 @@
 title: ReadableStream.getReader()
 slug: Web/API/ReadableStream/getReader
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStream
-  - Reference
-  - Streams
-  - getReader
 browser-compat: api.ReadableStream.getReader
 ---
 

@@ -2,13 +2,6 @@
 title: CredentialsContainer.create()
 slug: Web/API/CredentialsContainer/create
 page-type: web-api-instance-method
-tags:
-  - API
-  - Credential Management API
-  - CredentialsContainer
-  - Method
-  - Reference
-  - credential management
 browser-compat: api.CredentialsContainer.create
 ---
 

@@ -2,15 +2,8 @@
 title: CSSUnitValue.value
 slug: Web/API/CSSUnitValue/value
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnitValue
-  - Experimental
-  - Houdini
-  - Property
-  - Reference
-  - value
+status:
+  - experimental
 browser-compat: api.CSSUnitValue.value
 ---
 
@@ -32,7 +25,7 @@ The following creates a {{domxref('CSSPositionValue')}} from individual
 ```js
 const pos = new CSSPositionValue(
   new CSSUnitValue(5, "px"),
-  new CSSUnitValue(10, "px"),
+  new CSSUnitValue(10, "px")
 );
 
 console.log(pos.x.value); // 5

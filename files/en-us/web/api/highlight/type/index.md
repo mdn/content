@@ -8,10 +8,11 @@ tags:
   - CSS Custom Highlight API
   - Reference
   - type
+  - Experimental
 browser-compat: api.Highlight.type
 ---
 
-{{APIRef("CSS Custom Highlight API")}}
+{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
 
 The `type` property of the {{domxref("Highlight")}} interface is an enumerated {{jsxref("String")}} used to specify the meaning of the highlight. This allows assistive technologies, such as screen readers, to include this meaning when exposing the highlight to users.
 

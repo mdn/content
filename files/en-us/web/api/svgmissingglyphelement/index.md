@@ -2,12 +2,8 @@
 title: SVGMissingGlyphElement
 slug: Web/API/SVGMissingGlyphElement
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Reference
-  - SVG
-  - SVG DOM
+status:
+  - deprecated
 browser-compat: api.SVGMissingGlyphElement
 ---
 

@@ -30,7 +30,7 @@ src: url(path/to/svgFont.svg#example); /* Fragment identifying font */
 src: local(font); /* Unquoted name */
 src: local(some font); /* Name containing space */
 src: local("font"); /* Quoted name */
-src: local('some font'); /* Single-quoted name containing a space */
+src: local("some font"); /* Single-quoted name containing a space */
 
 /* <tech(<font-tech>)> values */
 src: url(path/to/fontCOLRv1.otf) tech(color-COLRv1);
@@ -64,6 +64,7 @@ src: url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1), url("trick
   - : An optional declaration that follows the `url()` value that provides a hint for the user agent on the font technology.
     The value for `tech()` may be one of the keywords described in [Font technologies](#font-technologies).
 - `local(<font-face-name>)`
+
   - : Specifies the font name should the font be available on the user's device.
     Enclosing the font name in quotes is optional.
 

@@ -2,13 +2,8 @@
 title: PresentationConnectionAvailableEvent()
 slug: Web/API/PresentationConnectionAvailableEvent/PresentationConnectionAvailableEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Presentation API
-  - PresentationConnectionAvailableEvent
-  - Reference
+status:
+  - experimental
 browser-compat: api.PresentationConnectionAvailableEvent.PresentationConnectionAvailableEvent
 ---
 

@@ -2,18 +2,6 @@
 title: RTCPeerConnection.addIceCandidate()
 slug: Web/API/RTCPeerConnection/addIceCandidate
 page-type: web-api-instance-method
-tags:
-  - API
-  - ICE
-  - Media
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - SDP
-  - Web
-  - WebRTC
-  - WebRTC API
-  - addIceCandidate
 browser-compat: api.RTCPeerConnection.addIceCandidate
 ---
 

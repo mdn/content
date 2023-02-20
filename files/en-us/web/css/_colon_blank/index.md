@@ -25,8 +25,10 @@ The **`:blank`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/P
 
 ## Syntax
 
-```
-:blank
+```css
+:blank {
+  /* ... */
+}
 ```
 
 ## Examples

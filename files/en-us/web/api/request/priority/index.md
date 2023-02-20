@@ -2,14 +2,8 @@
 title: Request.priority
 slug: Web/API/Request/priority
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - priority
-  - request
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Request.priority
 ---
 
