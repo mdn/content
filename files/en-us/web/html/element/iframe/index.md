@@ -58,17 +58,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : A [Content Security Policy](/en-US/docs/Web/HTTP/CSP) enforced for the embedded resource. See {{domxref("HTMLIFrameElement.csp")}} for details.
 
-- {{htmlattrdef("fetchpriority")}} {{Experimental_Inline}}
-
-  - : Provides a hint of the relative priority to use when fetching the iframe document. Allowed values:
-
-    - `high`
-      - : Signals a high-priority fetch relative to other iframe documents.
-    - `low`
-      - : Signals a low-priority fetch relative to other iframe documents.
-    - `auto`
-      - : Default: Signals automatic determination of fetch priority relative to other iframe documents.
-
 - {{htmlattrdef("height")}}
   - : The height of the frame in CSS pixels. Default is `150`.
 - {{htmlattrdef("loading")}} {{experimental_inline}}

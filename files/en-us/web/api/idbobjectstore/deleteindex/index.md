@@ -2,15 +2,6 @@
 title: IDBObjectStore.deleteIndex()
 slug: Web/API/IDBObjectStore/deleteIndex
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBObjectStore
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - deleteIndex
 browser-compat: api.IDBObjectStore.deleteIndex
 ---
 

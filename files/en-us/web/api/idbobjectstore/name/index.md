@@ -2,15 +2,6 @@
 title: IDBObjectStore.name
 slug: Web/API/IDBObjectStore/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBObjectStore
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - name
 browser-compat: api.IDBObjectStore.name
 ---
 

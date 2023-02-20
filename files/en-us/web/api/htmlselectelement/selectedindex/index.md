@@ -2,13 +2,6 @@
 title: HTMLSelectElement.selectedIndex
 slug: Web/API/HTMLSelectElement/selectedIndex
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTML forms
-  - HTMLSelectElement
-  - Property
-  - Reference
 browser-compat: api.HTMLSelectElement.selectedIndex
 ---
 

@@ -2,15 +2,6 @@
 title: FileSystemEntry.isFile
 slug: Web/API/FileSystemEntry/isFile
 page-type: web-api-instance-property
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemEntry
-  - Files
-  - Offline
-  - Property
-  - Reference
-  - isFile
 browser-compat: api.FileSystemEntry.isFile
 ---
 

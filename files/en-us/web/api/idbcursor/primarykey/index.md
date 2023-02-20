@@ -2,15 +2,6 @@
 title: IDBCursor.primaryKey
 slug: Web/API/IDBCursor/primaryKey
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - primaryKey
 browser-compat: api.IDBCursor.primaryKey
 ---
 

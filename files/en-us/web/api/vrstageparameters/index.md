@@ -2,16 +2,9 @@
 title: VRStageParameters
 slug: Web/API/VRStageParameters
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Interface
-  - Reference
-  - VR
-  - VRStageParameters
-  - Virtual Reality
-  - WebVR
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRStageParameters
 ---
 

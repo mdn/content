@@ -2,16 +2,8 @@
 title: BluetoothCharacteristicProperties.authenticatedSignedWrites
 slug: Web/API/BluetoothCharacteristicProperties/authenticatedSignedWrites
 page-type: web-api-instance-property
-tags:
-  - API
-  - Bluetooth
-  - BluetoothCharacteristicProperties
-  - Experimental
-  - NeedsExample
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - authenticatedSignedWrites
+status:
+  - experimental
 browser-compat: api.BluetoothCharacteristicProperties.authenticatedSignedWrites
 ---
 

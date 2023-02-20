@@ -2,13 +2,8 @@
 title: IdleDetector.userState
 slug: Web/API/IdleDetector/userState
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - userState
-  - IdleDetector
-  - Experimental
+status:
+  - experimental
 browser-compat: api.IdleDetector.userState
 ---
 

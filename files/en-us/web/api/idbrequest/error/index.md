@@ -2,15 +2,6 @@
 title: IDBRequest.error
 slug: Web/API/IDBRequest/error
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - Error
-  - IDBRequest
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
 browser-compat: api.IDBRequest.error
 ---
 

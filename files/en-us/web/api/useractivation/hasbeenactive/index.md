@@ -2,11 +2,8 @@
 title: UserActivation.hasBeenActive
 slug: Web/API/UserActivation/hasBeenActive
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.UserActivation.hasBeenActive
 ---
 

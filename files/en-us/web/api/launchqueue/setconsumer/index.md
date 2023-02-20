@@ -2,12 +2,8 @@
 title: LaunchQueue.setConsumer()
 slug: Web/API/LaunchQueue/setConsumer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - setConsumer
+status:
+  - experimental
 browser-compat: api.LaunchQueue.setConsumer
 ---
 

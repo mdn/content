@@ -2,15 +2,6 @@
 title: IDBIndex.keyPath
 slug: Web/API/IDBIndex/keyPath
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBIndex
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - keyPath
 browser-compat: api.IDBIndex.keyPath
 ---
 

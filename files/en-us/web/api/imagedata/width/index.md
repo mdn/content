@@ -2,12 +2,6 @@
 title: ImageData.width
 slug: Web/API/ImageData/width
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - ImageData
-  - Property
-  - Reference
 browser-compat: api.ImageData.width
 ---
 

@@ -2,13 +2,8 @@
 title: ImageDecoder.decode()
 slug: Web/API/ImageDecoder/decode
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - decode
-  - ImageDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ImageDecoder.decode
 ---
 

@@ -2,10 +2,6 @@
 title: Node.nodeName
 slug: Web/API/Node/nodeName
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.Node.nodeName
 ---
 

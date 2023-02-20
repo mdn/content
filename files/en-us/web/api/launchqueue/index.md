@@ -2,12 +2,8 @@
 title: LaunchQueue
 slug: Web/API/LaunchQueue
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - LaunchQueue
-  - Reference
+status:
+  - experimental
 browser-compat: api.LaunchQueue
 ---
 

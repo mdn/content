@@ -2,12 +2,6 @@
 title: TextTrackCue.track
 slug: Web/API/TextTrackCue/track
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - track
-  - TextTrackCue
 browser-compat: api.TextTrackCue.track
 ---
 

@@ -2,24 +2,6 @@
 title: XRViewport
 slug: Web/API/XRViewport
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Graphics
-  - Interface
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebGL
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRViewport
-  - augmented
-  - render
-  - viewport
 browser-compat: api.XRViewport
 ---
 

@@ -2,16 +2,6 @@
 title: HTMLAudioElement
 slug: Web/API/HTMLAudioElement
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - HTML
-  - HTML DOM
-  - HTMLAudioElement
-  - Interface
-  - Media
-  - Reference
-  - sound
 browser-compat: api.HTMLAudioElement
 ---
 

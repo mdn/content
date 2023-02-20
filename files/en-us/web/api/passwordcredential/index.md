@@ -2,14 +2,8 @@
 title: PasswordCredential
 slug: Web/API/PasswordCredential
 page-type: web-api-interface
-tags:
-  - API
-  - Credential Management API
-  - Interface
-  - PasswordCredential
-  - Reference
-  - credential management
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PasswordCredential
 ---
 

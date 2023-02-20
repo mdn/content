@@ -2,9 +2,8 @@
 title: InputDeviceCapabilities.firesTouchEvents
 slug: Web/API/InputDeviceCapabilities/firesTouchEvents
 page-type: web-api-instance-property
-tags:
-  - needsTags
-  - Experimental
+status:
+  - experimental
 browser-compat: api.InputDeviceCapabilities.firesTouchEvents
 ---
 

@@ -643,13 +643,3 @@ You've reached the end of this article, but can you remember the most important 
 You should now be well-versed in writing accessible HTML for most occasions. Our WAI-ARIA basics article will help to fill gaps in this knowledge, but this article has taken care of the basics. Next up we'll explore CSS and JavaScript, and how accessibility is affected by their good or bad use.
 
 {{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
-
-## In this module
-
-- [What is accessibility?](/en-US/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/en-US/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/en-US/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting)

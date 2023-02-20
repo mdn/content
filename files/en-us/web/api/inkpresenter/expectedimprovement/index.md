@@ -2,14 +2,8 @@
 title: InkPresenter.expectedImprovement
 slug: Web/API/InkPresenter/expectedImprovement
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Ink
-  - Inking
-  - Latency
-  - Property
-  - expectedImprovement
+status:
+  - experimental
 browser-compat: api.InkPresenter.expectedImprovement
 ---
 

@@ -2,15 +2,6 @@
 title: IDBIndex.multiEntry
 slug: Web/API/IDBIndex/multiEntry
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBIndex
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - multiEntry
 browser-compat: api.IDBIndex.multiEntry
 ---
 

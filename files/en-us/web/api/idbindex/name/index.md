@@ -2,15 +2,6 @@
 title: IDBIndex.name
 slug: Web/API/IDBIndex/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBIndex
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - name
 browser-compat: api.IDBIndex.name
 ---
 

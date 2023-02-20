@@ -2,16 +2,8 @@
 title: Window.updateCommands()
 slug: Web/API/Window/updateCommands
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
-  - XUL command nodes
-  - sCommandName
-  - updateCommands
-  - Non-standard
+status:
+  - non-standard
 browser-compat: api.Window.updateCommands
 ---
 

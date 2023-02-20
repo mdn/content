@@ -2,16 +2,9 @@
 title: IDBLocaleAwareKeyRange
 slug: Web/API/IDBLocaleAwareKeyRange
 page-type: web-api-interface
-tags:
-  - API
-  - Database
-  - Experimental
-  - IDBKeyRange
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
-  - Non-standard
+status:
+  - experimental
+  - non-standard
 browser-compat: api.IDBLocaleAwareKeyRange
 ---
 

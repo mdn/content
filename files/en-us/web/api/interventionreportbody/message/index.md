@@ -2,13 +2,8 @@
 title: InterventionReportBody.message
 slug: Web/API/InterventionReportBody/message
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
-  - message
-  - InterventionReportBody
+status:
+  - experimental
 browser-compat: api.InterventionReportBody.message
 ---
 

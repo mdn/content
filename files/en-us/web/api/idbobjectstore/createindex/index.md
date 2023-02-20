@@ -2,15 +2,6 @@
 title: IDBObjectStore.createIndex()
 slug: Web/API/IDBObjectStore/createIndex
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBObjectStore
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - createIndex
 browser-compat: api.IDBObjectStore.createIndex
 ---
 

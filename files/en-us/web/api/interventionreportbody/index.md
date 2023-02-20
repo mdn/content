@@ -2,13 +2,8 @@
 title: InterventionReportBody
 slug: Web/API/InterventionReportBody
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - InterventionReportBody
-  - Reference
-  - Reporting API
+status:
+  - experimental
 browser-compat: api.InterventionReportBody
 ---
 

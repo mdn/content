@@ -2,13 +2,8 @@
 title: Ink.requestPresenter()
 slug: Web/API/Ink/requestPresenter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Ink
-  - Inking
-  - Latency
-  - Method
+status:
+  - experimental
 browser-compat: api.Ink.requestPresenter
 ---
 

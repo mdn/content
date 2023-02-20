@@ -2,12 +2,6 @@
 title: CSSRuleList.item()
 slug: Web/API/CSSRuleList/item
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - item
-  - CSSRuleList
 browser-compat: api.CSSRuleList.item
 ---
 

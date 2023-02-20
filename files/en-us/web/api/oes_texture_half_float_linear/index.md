@@ -2,11 +2,6 @@
 title: OES_texture_half_float_linear
 slug: Web/API/OES_texture_half_float_linear
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.OES_texture_half_float_linear
 ---
 

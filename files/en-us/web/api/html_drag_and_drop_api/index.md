@@ -2,14 +2,6 @@
 title: HTML Drag and Drop API
 slug: Web/API/HTML_Drag_and_Drop_API
 page-type: web-api-overview
-tags:
-  - Advanced
-  - Guide
-  - HTML
-  - Overview
-  - XUL
-  - drag and drop
-  - events
 spec-urls: https://html.spec.whatwg.org/multipage/#dnd
 ---
 

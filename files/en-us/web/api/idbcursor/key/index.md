@@ -2,15 +2,6 @@
 title: IDBCursor.key
 slug: Web/API/IDBCursor/key
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Key
-  - Property
-  - Reference
-  - Storage
 browser-compat: api.IDBCursor.key
 ---
 

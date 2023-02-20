@@ -2,15 +2,6 @@
 title: BaseAudioContext.createStereoPanner()
 slug: Web/API/BaseAudioContext/createStereoPanner
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Media
-  - Method
-  - Reference
-  - Web Audio API
-  - createStereoPanner
 browser-compat: api.BaseAudioContext.createStereoPanner
 ---
 

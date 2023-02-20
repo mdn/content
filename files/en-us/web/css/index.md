@@ -1,18 +1,7 @@
 ---
 title: "CSS: Cascading Style Sheets"
 slug: Web/CSS
-tags:
-  - CSS
-  - Cascading Style Sheets
-  - Design
-  - Guide
-  - Landing
-  - Layout
-  - Reference
-  - Style Sheets
-  - Styles
-  - Stylesheets
-  - "l10n:priority"
+page-type: landing-page
 ---
 
 {{CSSRef}}

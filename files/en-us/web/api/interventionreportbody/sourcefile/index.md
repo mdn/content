@@ -2,13 +2,8 @@
 title: InterventionReportBody.sourceFile
 slug: Web/API/InterventionReportBody/sourceFile
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
-  - sourceFile
-  - InterventionReportBody
+status:
+  - experimental
 browser-compat: api.InterventionReportBody.sourceFile
 ---
 

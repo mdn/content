@@ -2,12 +2,6 @@
 title: location.replace()
 slug: Web/API/Location/replace
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Location
-  - Method
-  - Reference
 browser-compat: api.Location.replace
 ---
 

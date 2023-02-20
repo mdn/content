@@ -2,16 +2,8 @@
 title: ImageCapture.takePhoto()
 slug: Web/API/ImageCapture/takePhoto
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Image
-  - ImageCapture
-  - Media
-  - MediaStream Image Capture
-  - Method
-  - Reference
-  - takePhoto
+status:
+  - experimental
 browser-compat: api.ImageCapture.takePhoto
 ---
 

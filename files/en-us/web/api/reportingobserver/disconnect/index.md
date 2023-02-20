@@ -2,13 +2,8 @@
 title: ReportingObserver.disconnect()
 slug: Web/API/ReportingObserver/disconnect
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - Reporting API
-  - ReportingObserver
+status:
+  - experimental
 browser-compat: api.ReportingObserver.disconnect
 ---
 

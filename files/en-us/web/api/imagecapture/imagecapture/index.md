@@ -2,16 +2,8 @@
 title: ImageCapture() constructor
 slug: Web/API/ImageCapture/ImageCapture
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Image
-  - Image Capture
-  - ImageCapture
-  - Media
-  - MediaStream Image Capture API
-  - Reference
+status:
+  - experimental
 browser-compat: api.ImageCapture.ImageCapture
 ---
 

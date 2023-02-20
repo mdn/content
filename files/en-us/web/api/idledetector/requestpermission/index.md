@@ -2,13 +2,8 @@
 title: IdleDetector.requestPermission()
 slug: Web/API/IdleDetector/requestPermission
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - requestPermission
-  - IdleDetector
-  - Experimental
+status:
+  - experimental
 browser-compat: api.IdleDetector.requestPermission
 ---
 

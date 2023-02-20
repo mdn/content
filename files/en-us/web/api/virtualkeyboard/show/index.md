@@ -2,13 +2,8 @@
 title: VirtualKeyboard.show()
 slug: Web/API/VirtualKeyboard/show
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - VirtualKeyboard
-  - show
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VirtualKeyboard.show
 ---
 

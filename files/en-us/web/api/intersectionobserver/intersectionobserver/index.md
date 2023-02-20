@@ -2,14 +2,6 @@
 title: IntersectionObserver()
 slug: Web/API/IntersectionObserver/IntersectionObserver
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Intersection Observer API
-  - IntersectionObserver
-  - Reference
-  - Visibility
-  - Visible
 browser-compat: api.IntersectionObserver.IntersectionObserver
 ---
 

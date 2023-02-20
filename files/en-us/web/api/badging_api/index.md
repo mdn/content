@@ -2,12 +2,8 @@
 title: Badging API
 slug: Web/API/Badging_API
 page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - Reference
-  - Badging API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Navigator.setAppBadge
 ---
 

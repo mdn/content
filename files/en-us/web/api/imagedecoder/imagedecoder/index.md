@@ -2,12 +2,8 @@
 title: ImageDecoder()
 slug: Web/API/ImageDecoder/ImageDecoder
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - ImageDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ImageDecoder.ImageDecoder
 ---
 

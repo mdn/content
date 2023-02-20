@@ -1,6 +1,7 @@
 ---
 title: developer
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/developer
+page-type: webextension-manifest-key
 tags:
   - Add-ons
   - Extensions

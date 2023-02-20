@@ -2,18 +2,9 @@
 title: InstallEvent
 slug: Web/API/InstallEvent
 page-type: web-api-interface
-tags:
-  - API
-  - InstallEvent
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - Workers
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.InstallEvent
 ---
 

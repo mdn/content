@@ -2,12 +2,8 @@
 title: EncodedVideoChunk
 slug: Web/API/EncodedVideoChunk
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - EncodedVideoChunk
-  - Experimental
+status:
+  - experimental
 browser-compat: api.EncodedVideoChunk
 ---
 

@@ -2,20 +2,6 @@
 title: 'Element: error event'
 slug: Web/API/Element/error_event
 page-type: web-api-event
-tags:
-  - Audio
-  - DOM
-  - Element
-  - Error Handling
-  - Errors
-  - Event
-  - Media
-  - Reference
-  - UI
-  - UI Events
-  - UIEvent
-  - Video
-  - Web
 browser-compat: api.Element.error_event
 ---
 

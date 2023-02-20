@@ -2,13 +2,6 @@
 title: KHR_parallel_shader_compile
 slug: Web/API/KHR_parallel_shader_compile
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - Shader
-  - WebGL
-  - WebGL extension
-  - parallel shader compile
 browser-compat: api.KHR_parallel_shader_compile
 ---
 

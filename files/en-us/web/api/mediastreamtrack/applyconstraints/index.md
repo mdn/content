@@ -2,14 +2,6 @@
 title: MediaStreamTrack.applyConstraints()
 slug: Web/API/MediaStreamTrack/applyConstraints
 page-type: web-api-instance-method
-tags:
-  - API
-  - Constraints
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaStreamTrack
-  - Method
-  - applyConstraints
 browser-compat: api.MediaStreamTrack.applyConstraints
 ---
 

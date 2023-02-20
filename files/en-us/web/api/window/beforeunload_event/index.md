@@ -2,10 +2,6 @@
 title: 'Window: beforeunload event'
 slug: Web/API/Window/beforeunload_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Window
 browser-compat: api.Window.beforeunload_event
 ---
 

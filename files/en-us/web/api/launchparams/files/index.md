@@ -2,13 +2,8 @@
 title: LaunchParams.files
 slug: Web/API/LaunchParams/files
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Read-only
-  - Reference
-  - files
+status:
+  - experimental
 browser-compat: api.LaunchParams.files
 ---
 

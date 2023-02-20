@@ -2,12 +2,8 @@
 title: FontData.family
 slug: Web/API/FontData/family
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - family
-  - Experimental
+status:
+  - experimental
 browser-compat: api.FontData.family
 ---
 

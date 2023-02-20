@@ -2,13 +2,6 @@
 title: PublicKeyCredential.getClientExtensionResults()
 slug: Web/API/PublicKeyCredential/getClientExtensionResults
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - PublicKeyCredential
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 browser-compat: api.PublicKeyCredential.getClientExtensionResults
 ---
 

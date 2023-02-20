@@ -2,11 +2,6 @@
 title: location.hostname
 slug: Web/API/Location/hostname
 page-type: web-api-instance-property
-tags:
-  - API
-  - Location
-  - Property
-  - Reference
 browser-compat: api.Location.hostname
 ---
 

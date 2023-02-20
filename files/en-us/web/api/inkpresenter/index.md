@@ -2,16 +2,8 @@
 title: InkPresenter
 slug: Web/API/InkPresenter
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Ink
-  - Inking
-  - InkPresenter
-  - Interface
-  - Landing
-  - Latency
-  - Overview
+status:
+  - experimental
 browser-compat: api.InkPresenter
 ---
 

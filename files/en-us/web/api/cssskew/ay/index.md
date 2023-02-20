@@ -2,15 +2,8 @@
 title: CSSSkew.ay
 slug: Web/API/CSSSkew/ay
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSSkew
-  - CSSTransformComponent
-  - CSSTransformValue
-  - Experimental
-  - Houdini
-  - Property
+status:
+  - experimental
 browser-compat: api.CSSSkew.ay
 ---
 

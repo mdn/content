@@ -2,13 +2,8 @@
 title: VideoFrame.codedWidth
 slug: Web/API/VideoFrame/codedWidth
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - codedWidth
-  - VideoFrame
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoFrame.codedWidth
 ---
 

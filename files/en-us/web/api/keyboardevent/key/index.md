@@ -2,14 +2,6 @@
 title: KeyboardEvent.key
 slug: Web/API/KeyboardEvent/key
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
-  - UI Events
 browser-compat: api.KeyboardEvent.key
 ---
 

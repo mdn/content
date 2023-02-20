@@ -2,13 +2,8 @@
 title: CustomStateSet.values()
 slug: Web/API/CustomStateSet/values
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - values
-  - CustomStateSet
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CustomStateSet.values
 ---
 

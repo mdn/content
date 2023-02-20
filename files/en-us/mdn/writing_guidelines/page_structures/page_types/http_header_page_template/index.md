@@ -2,9 +2,6 @@
 title: HTTP header page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 browser-compat: path.to.feature.NameOfTheHeader
 ---
 
@@ -23,15 +20,10 @@ browser-compat: path.to.feature.NameOfTheHeader
 > ---
 > title: NameOfTheHeader
 > slug: Web/HTTP/Headers/NameOfTheHeader
-> tags:
->   - NameOfTheHeader
->   - HTTP
->   - HTTP Header
->   - Request header
->   - Response header
->   - Reference
->   - Experimental
->   - Deprecated
+> status:
+>   - experimental
+>   - deprecated
+>   - non-standard
 > browser-compat: path.to.feature.NameOfTheHeader
 > ---
 > ```
@@ -40,16 +32,8 @@ browser-compat: path.to.feature.NameOfTheHeader
 >   - : Title heading displayed at top of page. Format as _NameOfTheHeader_. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) header has a _title_ of `Cache-Control`.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/HTTP/Headers/NameOfTheHeader`. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) slug is `Web/HTTP/Headers/Cache-Control`.
-> - **tags**
->
->   - : Always include the following tags: **HTTP**, **Reference**, **HTTP Header**, _NameOfTheHeader_ (e.g. **Cache-Control**).
->
->     Include the following tags as appropriate:
->
->     - Type of request/response: **Response header**, **Request header**, **Representation header**, **Payload header**, **Client hint**
->     - Header status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)).
->     - Any other tags that represent terms people might search for related to the technology. For example the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) header includes the tag **Caching**.
->
+> - **status**
+>   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete), **non-standard** (if not on a standards track).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value <code>path.to.feature.NameOfTheHeader</code> with the query string for the header in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).

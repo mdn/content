@@ -2,12 +2,8 @@
 title: Local Font Access API
 slug: Web/API/Local_Font_Access_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - Landing
-  - Overview
-  - Reference
+status:
+  - experimental
 browser-compat:
   - api.Window.queryLocalFonts
 ---

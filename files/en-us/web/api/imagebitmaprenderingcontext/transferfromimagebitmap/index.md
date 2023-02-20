@@ -2,13 +2,6 @@
 title: ImageBitmapRenderingContext.transferFromImageBitmap()
 slug: Web/API/ImageBitmapRenderingContext/transferFromImageBitmap
 page-type: web-api-instance-method
-tags:
-  - API
-  - ImageBitmapRenderingContext
-  - Method
-  - OffscreenCanvas
-  - Reference
-  - transferFromImageBitmap
 browser-compat: api.ImageBitmapRenderingContext.transferFromImageBitmap
 ---
 

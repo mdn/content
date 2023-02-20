@@ -2,14 +2,8 @@
 title: Ink API
 slug: Web/API/Ink_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - Ink
-  - Inking
-  - Landing
-  - Latency
-  - Overview
+status:
+  - experimental
 browser-compat: api.Ink
 ---
 

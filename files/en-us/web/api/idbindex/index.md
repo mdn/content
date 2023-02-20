@@ -2,14 +2,6 @@
 title: IDBIndex
 slug: Web/API/IDBIndex
 page-type: web-api-interface
-tags:
-  - API
-  - Database
-  - IDBIndex
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
 browser-compat: api.IDBIndex
 ---
 

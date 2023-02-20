@@ -2,12 +2,6 @@
 title: ImageData.data
 slug: Web/API/ImageData/data
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - ImageData
-  - Property
-  - Reference
 browser-compat: api.ImageData.data
 ---
 

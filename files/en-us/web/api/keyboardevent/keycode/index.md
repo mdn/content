@@ -2,16 +2,8 @@
 title: KeyboardEvent.keyCode
 slug: Web/API/KeyboardEvent/keyCode
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Deprecated
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
-  - keyCode
+status:
+  - deprecated
 browser-compat: api.KeyboardEvent.keyCode
 ---
 

@@ -2,15 +2,6 @@
 title: IDBDatabase.name
 slug: Web/API/IDBDatabase/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - name
 browser-compat: api.IDBDatabase.name
 ---
 

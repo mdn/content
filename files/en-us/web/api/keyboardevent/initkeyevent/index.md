@@ -2,14 +2,9 @@
 title: KeyboardEvent.initKeyEvent()
 slug: Web/API/KeyboardEvent/initKeyEvent
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - KeyboardEvent
-  - Method
-  - Reference
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 ---
 
 {{APIRef("UI Events")}}

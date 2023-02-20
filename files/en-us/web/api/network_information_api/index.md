@@ -2,12 +2,8 @@
 title: Network Information API
 slug: Web/API/Network_Information_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - Network Information API
-  - Reference
-  - WebAPI
+status:
+  - experimental
 browser-compat:
   - api.NetworkInformation
   - api.Navigator.connection

@@ -2,12 +2,6 @@
 title: ValidityState
 slug: Web/API/ValidityState
 page-type: web-api-interface
-tags:
-  - API
-  - Constraint Validation API
-  - Forms
-  - HTML DOM
-  - Interface
 browser-compat: api.ValidityState
 ---
 

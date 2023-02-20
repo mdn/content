@@ -2,15 +2,6 @@
 title: IDBCursor.source
 slug: Web/API/IDBCursor/source
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - source
 browser-compat: api.IDBCursor.source
 ---
 

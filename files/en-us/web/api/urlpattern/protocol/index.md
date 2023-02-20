@@ -2,13 +2,8 @@
 title: URLPattern.protocol
 slug: Web/API/URLPattern/protocol
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - URLPattern
-  - URL Pattern API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.URLPattern.protocol
 ---
 

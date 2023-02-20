@@ -2,17 +2,8 @@
 title: ImageCapture.getPhotoSettings()
 slug: Web/API/ImageCapture/getPhotoSettings
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Image
-  - Image Capture
-  - ImageCapture
-  - Media
-  - MediaStream Image Capture API
-  - Method
-  - Reference
-  - getPhotoSettings
+status:
+  - experimental
 browser-compat: api.ImageCapture.getPhotoSettings
 ---
 

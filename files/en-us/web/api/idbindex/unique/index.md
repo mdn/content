@@ -2,15 +2,6 @@
 title: IDBIndex.unique
 slug: Web/API/IDBIndex/unique
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBIndex
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - unique
 browser-compat: api.IDBIndex.unique
 ---
 

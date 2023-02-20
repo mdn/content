@@ -2,15 +2,6 @@
 title: Using IndexedDB
 slug: Web/API/IndexedDB_API/Using_IndexedDB
 page-type: guide
-tags:
-  - API
-  - Advanced
-  - Database
-  - Guide
-  - IndexedDB
-  - Storage
-  - Tutorial
-  - jsstore
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}

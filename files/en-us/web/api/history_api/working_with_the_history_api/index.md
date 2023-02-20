@@ -2,11 +2,6 @@
 title: Working with the History API
 slug: Web/API/History_API/Working_with_the_History_API
 page-type: guide
-tags:
-  - Advanced
-  - DOM
-  - History API
-  - History API Tutorial
 ---
 
 {{DefaultAPISidebar("History API")}}

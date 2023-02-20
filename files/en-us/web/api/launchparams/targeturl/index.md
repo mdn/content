@@ -2,13 +2,8 @@
 title: LaunchParams.targetURL
 slug: Web/API/LaunchParams/targetURL
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Read-only
-  - Reference
-  - targetURL
+status:
+  - experimental
 browser-compat: api.LaunchParams.targetURL
 ---
 

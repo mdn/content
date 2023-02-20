@@ -2,14 +2,8 @@
 title: InkPresenter.updateInkTrailStartPoint()
 slug: Web/API/InkPresenter/updateInkTrailStartPoint
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Ink
-  - Inking
-  - Latency
-  - Method
-  - updateInkTrailStartPoint
+status:
+  - experimental
 browser-compat: api.InkPresenter.updateInkTrailStartPoint
 ---
 
