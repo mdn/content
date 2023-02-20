@@ -2,15 +2,6 @@
 title: HTMLImageElement.naturalHeight
 slug: Web/API/HTMLImageElement/naturalHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLImageElement
-  - Intrinsic Height
-  - Reference
-  - Property
-  - Vertical
-  - naturalHeight
-  - size
 browser-compat: api.HTMLImageElement.naturalHeight
 ---
 

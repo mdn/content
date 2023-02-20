@@ -2,13 +2,6 @@
 title: IDBCursor
 slug: Web/API/IDBCursor
 page-type: web-api-interface
-tags:
-  - API
-  - IDBCursor
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
 browser-compat: api.IDBCursor
 ---
 

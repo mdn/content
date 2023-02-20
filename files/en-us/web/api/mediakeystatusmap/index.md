@@ -2,12 +2,6 @@
 title: MediaKeyStatusMap
 slug: Web/API/MediaKeyStatusMap
 page-type: web-api-interface
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - MediaKeyStatusMap
-  - NeedsContent
-  - Reference
 browser-compat: api.MediaKeyStatusMap
 ---
 

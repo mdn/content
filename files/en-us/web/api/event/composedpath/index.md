@@ -2,10 +2,6 @@
 title: Event.composedPath()
 slug: Web/API/Event/composedPath
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
-  - Web Components
 browser-compat: api.Event.composedPath
 ---
 

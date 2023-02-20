@@ -2,16 +2,6 @@
 title: 'Element: mouseleave event'
 slug: Web/API/Element/mouseleave_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Element
-  - Event
-  - MouseEvent
-  - Reference
-  - mouse
-  - mouseleave
-  - move
 browser-compat: api.Element.mouseleave_event
 ---
 

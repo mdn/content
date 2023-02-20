@@ -2,11 +2,6 @@
 title: Element.childElementCount
 slug: Web/API/Element/childElementCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Reference
 browser-compat: api.Element.childElementCount
 ---
 

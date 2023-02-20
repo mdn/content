@@ -2,14 +2,8 @@
 title: MediaDevices.selectAudioOutput()
 slug: Web/API/MediaDevices/selectAudioOutput
 page-type: web-api-instance-method
-tags:
-  - API
-  - MediaDevices
-  - Method
-  - Reference
-  - WebRTC
-  - selectAudioOutput
-  - Experimental
+status:
+  - experimental
 browser-compat: api.MediaDevices.selectAudioOutput
 ---
 

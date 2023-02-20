@@ -2,13 +2,6 @@
 title: HTMLDialogElement.returnValue
 slug: Web/API/HTMLDialogElement/returnValue
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLDialogElement
-  - Property
-  - Reference
-  - returnValue
 browser-compat: api.HTMLDialogElement.returnValue
 ---
 

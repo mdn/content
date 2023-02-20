@@ -2,21 +2,6 @@
 title: MediaTrackSupportedConstraints.logicalSurface
 slug: Web/API/MediaTrackSupportedConstraints/logicalSurface
 page-type: web-api-instance-property
-tags:
-  - API
-  - Capture
-  - Logical
-  - Media
-  - Media Capture and Streams
-  - Media Capture and Streams API
-  - Reference
-  - Screen Capture
-  - Screen Capture API
-  - Sharing
-  - Surface
-  - Video
-  - display
-  - screen
 browser-compat: api.MediaTrackSupportedConstraints.logicalSurface
 ---
 

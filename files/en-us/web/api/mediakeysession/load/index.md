@@ -2,14 +2,6 @@
 title: MediaKeySession.load()
 slug: Web/API/MediaKeySession/load
 page-type: web-api-instance-method
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - MediaKeySession
-  - Method
-  - NeedsExample
-  - Reference
-  - load
 browser-compat: api.MediaKeySession.load
 ---
 

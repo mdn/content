@@ -2,17 +2,6 @@
 title: Element.tagName
 slug: Web/API/Element/tagName
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Element
-  - Gecko
-  - NeedsBrowserCompatibility
-  - Property
-  - Read-only
-  - Reference
-  - tagName
 browser-compat: api.Element.tagName
 ---
 

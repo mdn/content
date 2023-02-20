@@ -1,15 +1,6 @@
 ---
 title: 'Element: transitionrun event'
 slug: Web/API/Element/transitionrun_event
-tags:
-  - CSS Transitions
-  - Event
-  - HTML DOM
-  - Element
-  - Reference
-  - Transitions
-  - Web
-  - transitionrun
 browser-compat: api.Element.transitionrun_event
 page-type: web-api-event
 ---

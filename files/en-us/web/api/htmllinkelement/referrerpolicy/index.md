@@ -2,11 +2,6 @@
 title: HTMLLinkElement.referrerPolicy
 slug: Web/API/HTMLLinkElement/referrerPolicy
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLLinkElement
-  - Property
-  - Reference
 browser-compat: api.HTMLLinkElement.referrerPolicy
 ---
 

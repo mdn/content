@@ -2,11 +2,6 @@
 title: Drag operations
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 page-type: guide
-tags:
-  - Advanced
-  - Guide
-  - HTML
-  - drag and drop
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
