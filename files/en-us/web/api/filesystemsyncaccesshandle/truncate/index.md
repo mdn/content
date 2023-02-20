@@ -2,15 +2,6 @@
 title: FileSystemSyncAccessHandle.truncate()
 slug: Web/API/FileSystemSyncAccessHandle/truncate
 page-type: web-api-instance-method
-tags:
-  - truncate
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemSyncAccessHandle
-  - Method
-  - stream
-  - working with files
 browser-compat: api.FileSystemSyncAccessHandle.truncate
 ---
 

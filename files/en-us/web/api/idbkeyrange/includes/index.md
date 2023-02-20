@@ -2,15 +2,6 @@
 title: IDBKeyRange.includes()
 slug: Web/API/IDBKeyRange/includes
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBKeyRange
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - includes
 browser-compat: api.IDBKeyRange.includes
 ---
 

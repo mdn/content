@@ -2,14 +2,6 @@
 title: ElementInternals.ariaColSpan
 slug: Web/API/ElementInternals/ariaColSpan
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaColSpan
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaColSpan
 ---
 

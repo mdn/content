@@ -2,12 +2,6 @@
 title: File.webkitRelativePath
 slug: Web/API/File/webkitRelativePath
 page-type: web-api-instance-property
-tags:
-  - API
-  - File API
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.File.webkitRelativePath
 ---
 

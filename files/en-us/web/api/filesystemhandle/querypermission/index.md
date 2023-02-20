@@ -2,13 +2,8 @@
 title: FileSystemHandle.queryPermission()
 slug: Web/API/FileSystemHandle/queryPermission
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemHandle
-  - Method
-  - Experimental
+status:
+  - experimental
 browser-compat: api.FileSystemHandle.queryPermission
 ---
 

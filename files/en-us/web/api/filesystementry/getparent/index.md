@@ -2,14 +2,6 @@
 title: FileSystemEntry.getParent()
 slug: Web/API/FileSystemEntry/getParent
 page-type: web-api-instance-method
-tags:
-  - API
-  - File and Directory Entry API
-  - FileSystemEntry
-  - Files
-  - Method
-  - Reference
-  - getParent
 browser-compat: api.FileSystemEntry.getParent
 ---
 

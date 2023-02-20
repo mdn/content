@@ -2,12 +2,6 @@
 title: FormData()
 slug: Web/API/FormData/FormData
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - FormData
-  - Reference
-  - XMLHttpRequest
 browser-compat: api.FormData.FormData
 ---
 

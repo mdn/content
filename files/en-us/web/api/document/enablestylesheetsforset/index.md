@@ -2,16 +2,9 @@
 title: Document.enableStyleSheetsForSet()
 slug: Web/API/Document/enableStyleSheetsForSet
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - DOM
-  - Method
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Reference
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Document.enableStyleSheetsForSet
 ---
 

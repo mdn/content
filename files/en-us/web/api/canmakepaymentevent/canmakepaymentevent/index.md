@@ -2,12 +2,8 @@
 title: CanMakePaymentEvent()
 slug: Web/API/CanMakePaymentEvent/CanMakePaymentEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - CanMakePaymentEvent
-  - Constructor
-  - Experimental
-  - Reference
+status:
+  - experimental
 browser-compat: api.CanMakePaymentEvent.CanMakePaymentEvent
 ---
 

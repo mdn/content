@@ -2,11 +2,8 @@
 title: FontData
 slug: Web/API/FontData
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
+status:
+  - experimental
 browser-compat: api.FontData
 ---
 

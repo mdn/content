@@ -2,10 +2,8 @@
 title: XMLHttpRequest.msCaching
 slug: Web/API/XMLHttpRequest/msCaching
 page-type: api-instance-property
-tags:
-  - msCaching
-  - Non-standard
-  - Property
+status:
+  - non-standard
 ---
 
 {{APIRef("XMLHttpRequest")}}

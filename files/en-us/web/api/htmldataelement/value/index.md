@@ -2,14 +2,6 @@
 title: HTMLDataElement.value
 slug: Web/API/HTMLDataElement/value
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLDataElement
-  - Property
-  - Reference
-  - data
-  - value
 browser-compat: api.HTMLDataElement.value
 ---
 

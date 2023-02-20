@@ -2,14 +2,6 @@
 title: FileReader.readAsDataURL()
 slug: Web/API/FileReader/readAsDataURL
 page-type: web-api-instance-method
-tags:
-  - API
-  - Base 64
-  - File API
-  - FileReader
-  - Files
-  - Method
-  - Reference
 browser-compat: api.FileReader.readAsDataURL
 ---
 

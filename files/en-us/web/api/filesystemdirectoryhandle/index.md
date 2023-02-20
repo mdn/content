@@ -2,14 +2,6 @@
 title: FileSystemDirectoryHandle
 slug: Web/API/FileSystemDirectoryHandle
 page-type: web-api-interface
-tags:
-  - Directories
-  - Directory
-  - File System Access API
-  - FileSystemDirectoryHandle
-  - Files
-  - Interface
-  - working with directories
 browser-compat: api.FileSystemDirectoryHandle
 ---
 

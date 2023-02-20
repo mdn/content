@@ -2,14 +2,6 @@
 title: FileSystemFileHandle.createSyncAccessHandle()
 slug: Web/API/FileSystemFileHandle/createSyncAccessHandle
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemFileHandle
-  - Method
-  - createSyncAccessHandle
-  - working with files
 browser-compat: api.FileSystemFileHandle.createSyncAccessHandle
 ---
 

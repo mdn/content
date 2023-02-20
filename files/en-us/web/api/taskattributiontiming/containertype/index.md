@@ -2,14 +2,8 @@
 title: TaskAttributionTiming.containerType
 slug: Web/API/TaskAttributionTiming/containerType
 page-type: web-api-instance-property
-tags:
-  - API
-  - Long Tasks API
-  - Performance
-  - Property
-  - Reference
-  - TaskAttributionTiming
-  - Experimental
+status:
+  - experimental
 browser-compat: api.TaskAttributionTiming.containerType
 ---
 

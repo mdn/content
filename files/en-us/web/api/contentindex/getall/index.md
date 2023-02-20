@@ -2,16 +2,8 @@
 title: ContentIndex.getAll()
 slug: Web/API/ContentIndex/getAll
 page-type: web-api-instance-method
-tags:
-  - Content
-  - Content Index API
-  - Index
-  - Interface
-  - Method
-  - PWA
-  - content indexing
-  - getAll
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContentIndex.getAll
 ---
 

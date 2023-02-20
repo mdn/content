@@ -1,13 +1,6 @@
 ---
 title: 'Element: lostpointercapture event'
 slug: Web/API/Element/lostpointercapture_event
-tags:
-  - Event
-  - HTML DOM
-  - Element
-  - NeedsSpecTable
-  - PointerEvent
-  - Reference
 browser-compat: api.Element.lostpointercapture_event
 page-type: web-api-event
 ---

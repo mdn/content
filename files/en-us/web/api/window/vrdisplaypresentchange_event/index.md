@@ -2,13 +2,9 @@
 title: 'Window: vrdisplaypresentchange event'
 slug: Web/API/Window/vrdisplaypresentchange_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - WebVR
-  - Deprecated
-  - vrdisplaypresentchange
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Window.vrdisplaypresentchange_event
 ---
 

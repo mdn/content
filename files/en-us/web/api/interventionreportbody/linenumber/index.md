@@ -2,13 +2,8 @@
 title: InterventionReportBody.lineNumber
 slug: Web/API/InterventionReportBody/lineNumber
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
-  - lineNumber
-  - InterventionReportBody
+status:
+  - experimental
 browser-compat: api.InterventionReportBody.lineNumber
 ---
 

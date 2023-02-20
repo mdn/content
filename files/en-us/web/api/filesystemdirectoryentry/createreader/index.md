@@ -2,14 +2,6 @@
 title: FileSystemDirectoryEntry.createReader()
 slug: Web/API/FileSystemDirectoryEntry/createReader
 page-type: web-api-instance-method
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemDirectoryEntry
-  - Files
-  - Method
-  - Reference
-  - createReader
 browser-compat: api.FileSystemDirectoryEntry.createReader
 ---
 

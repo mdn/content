@@ -2,15 +2,6 @@
 title: StaticRange.endContainer
 slug: Web/API/StaticRange/endContainer
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM API
-  - Property
-  - Reference
-  - Static Range API
-  - StaticRange
-  - endContainer
 browser-compat: api.StaticRange.endContainer
 ---
 

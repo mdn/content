@@ -2,18 +2,6 @@
 title: PaymentMethodChangeEvent.methodDetails
 slug: Web/API/PaymentMethodChangeEvent/methodDetails
 page-type: web-api-instance-property
-tags:
-  - API
-  - Commerce
-  - Payment Method
-  - Payment Request
-  - Payment Request API
-  - PaymentMethodChangeEvent
-  - Property
-  - Reference
-  - methodDetails
-  - payment
-  - paymentmethodchange
 browser-compat: api.PaymentMethodChangeEvent.methodDetails
 ---
 

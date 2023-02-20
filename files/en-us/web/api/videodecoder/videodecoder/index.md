@@ -2,12 +2,8 @@
 title: VideoDecoder()
 slug: Web/API/VideoDecoder/VideoDecoder
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - VideoDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoDecoder.VideoDecoder
 ---
 

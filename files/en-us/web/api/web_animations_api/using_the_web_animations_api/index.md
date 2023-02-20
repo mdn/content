@@ -2,22 +2,6 @@
 title: Using the Web Animations API
 slug: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 page-type: guide
-tags:
-  - Alice
-  - Animations
-  - Beginner
-  - CSS
-  - Guide
-  - JavaScript
-  - Timing
-  - Tutorial
-  - animate
-  - duration
-  - keyframes
-  - pause
-  - play
-  - reverse
-  - web animations api
 ---
 
 {{DefaultAPISidebar("Web Animations")}}

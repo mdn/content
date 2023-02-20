@@ -2,12 +2,8 @@
 title: FeaturePolicy.getAllowlistForFeature()
 slug: Web/API/FeaturePolicy/getAllowlistForFeature
 page-type: web-api-instance-method
-tags:
-  - API
-  - Feature Policy
-  - Permissions-Policy
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.FeaturePolicy.getAllowlistForFeature
 ---
 

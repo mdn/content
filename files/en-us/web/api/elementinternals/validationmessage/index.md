@@ -2,12 +2,6 @@
 title: ElementInternals.validationMessage
 slug: Web/API/ElementInternals/validationMessage
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - validationMessage
-  - ElementInternals
 browser-compat: api.ElementInternals.validationMessage
 ---
 

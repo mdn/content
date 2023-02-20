@@ -2,12 +2,6 @@
 title: FormDataEvent
 slug: Web/API/FormDataEvent
 page-type: web-api-interface
-tags:
-  - API
-  - FormDataEvent
-  - Forms
-  - Landing
-  - Reference
 browser-compat: api.FormDataEvent
 ---
 

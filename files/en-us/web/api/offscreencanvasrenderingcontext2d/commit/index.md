@@ -2,12 +2,6 @@
 title: OffscreenCanvasRenderingContext2D.commit()
 slug: Web/API/OffscreenCanvasRenderingContext2D/commit
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - OffscreenCanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.OffscreenCanvasRenderingContext2D.commit
 ---
 

@@ -2,13 +2,8 @@
 title: Highlight.entries()
 slug: Web/API/Highlight/entries
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - CSS Custom Highlight API
-  - Reference
-  - entries
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Highlight.entries
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prototype.entries
 ---

@@ -2,13 +2,6 @@
 title: FileSystemFileHandle
 slug: Web/API/FileSystemFileHandle
 page-type: web-api-interface
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemFileHandle
-  - Interface
-  - working with files
 browser-compat: api.FileSystemFileHandle
 ---
 

@@ -2,15 +2,6 @@
 title: Window.frames
 slug: Web/API/Window/frames
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - NeedsContent
-  - NeedsUpdate
-  - Property
-  - Reference
-  - Window
 browser-compat: api.Window.frames
 ---
 

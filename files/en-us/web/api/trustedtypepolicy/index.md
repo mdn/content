@@ -2,11 +2,6 @@
 title: TrustedTypePolicy
 slug: Web/API/TrustedTypePolicy
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - TrustedTypePolicy
 browser-compat: api.TrustedTypePolicy
 ---
 

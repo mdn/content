@@ -2,14 +2,6 @@
 title: FileSystemEntry.name
 slug: Web/API/FileSystemEntry/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemEntry
-  - Offline
-  - Property
-  - Reference
-  - name
 browser-compat: api.FileSystemEntry.name
 ---
 

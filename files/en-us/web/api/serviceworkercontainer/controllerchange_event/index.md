@@ -2,15 +2,6 @@
 title: 'ServiceWorkerContainer: controllerchange event'
 slug: Web/API/ServiceWorkerContainer/controllerchange_event
 page-type: web-api-event
-tags:
-  - API
-  - Interface
-  - Event
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - ServiceWorkerContainer
-  - controllerchange
 browser-compat: api.ServiceWorkerContainer.controllerchange_event
 ---
 

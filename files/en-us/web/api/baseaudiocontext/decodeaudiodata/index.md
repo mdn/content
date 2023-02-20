@@ -2,15 +2,6 @@
 title: BaseAudioContext.decodeAudioData()
 slug: Web/API/BaseAudioContext/decodeAudioData
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - decodeAudioData
 browser-compat: api.BaseAudioContext.decodeAudioData
 ---
 

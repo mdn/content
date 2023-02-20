@@ -2,12 +2,6 @@
 title: MIDIPort.manufacturer
 slug: Web/API/MIDIPort/manufacturer
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - manufacturer
-  - MIDIPort
 browser-compat: api.MIDIPort.manufacturer
 ---
 

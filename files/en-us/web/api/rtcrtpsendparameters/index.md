@@ -2,23 +2,6 @@
 title: RTCRtpSendParameters
 slug: Web/API/RTCRtpSendParameters
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Codec
-  - Dictionary
-  - Encoding
-  - Media
-  - RTCRtpSendParameters
-  - RTCRtpSender
-  - RTP
-  - Reference
-  - Settings
-  - Video
-  - WebRTC
-  - WebRTC API
-  - parameters
-  - sender
 browser-compat: api.RTCRtpSendParameters
 ---
 

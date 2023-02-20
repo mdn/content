@@ -2,13 +2,6 @@
 title: StereoPannerNode.pan
 slug: Web/API/StereoPannerNode/pan
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - StereoPannerNode
-  - Web Audio API
 browser-compat: api.StereoPannerNode.pan
 ---
 

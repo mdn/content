@@ -2,12 +2,6 @@
 title: CountQueuingStrategy()
 slug: Web/API/CountQueuingStrategy/CountQueuingStrategy
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - CountQueuingStrategy
-  - Reference
-  - Streams
 browser-compat: api.CountQueuingStrategy.CountQueuingStrategy
 ---
 

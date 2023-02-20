@@ -2,11 +2,8 @@
 title: FragmentDirective
 slug: Web/API/FragmentDirective
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
+status:
+  - experimental
 browser-compat: api.FragmentDirective
 ---
 

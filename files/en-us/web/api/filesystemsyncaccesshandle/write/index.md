@@ -2,15 +2,6 @@
 title: FileSystemSyncAccessHandle.write()
 slug: Web/API/FileSystemSyncAccessHandle/write
 page-type: web-api-instance-method
-tags:
-  - write
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemSyncAccessHandle
-  - Method
-  - stream
-  - working with files
 browser-compat: api.FileSystemSyncAccessHandle.write
 ---
 

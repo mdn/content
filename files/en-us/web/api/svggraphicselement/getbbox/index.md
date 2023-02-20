@@ -2,13 +2,6 @@
 title: SVGGraphicsElement.getBBox()
 slug: Web/API/SVGGraphicsElement/getBBox
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SVG
-  - SVG DOM
-  - SVGGraphicsElement
 browser-compat: api.SVGGraphicsElement.getBBox
 ---
 

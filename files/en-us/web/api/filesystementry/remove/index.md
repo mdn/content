@@ -2,17 +2,9 @@
 title: FileSystemEntry.remove()
 slug: Web/API/FileSystemEntry/remove
 page-type: web-api-instance-method
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemEntry
-  - Files
-  - Method
-  - Non-standard
-  - Reference
-  - delete
-  - remove
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.FileSystemEntry.remove
 ---
 

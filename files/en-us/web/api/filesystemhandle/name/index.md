@@ -2,13 +2,6 @@
 title: FileSystemHandle.name
 slug: Web/API/FileSystemHandle/name
 page-type: web-api-instance-property
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemHandle
-  - Property
-  - Read-only
 browser-compat: api.FileSystemHandle.name
 ---
 

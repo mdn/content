@@ -2,14 +2,8 @@
 title: MouseEvent.initMouseEvent()
 slug: Web/API/MouseEvent/initMouseEvent
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Deprecated
-  - Method
-  - MouseEvent
-  - Reference
+status:
+  - deprecated
 browser-compat: api.MouseEvent.initMouseEvent
 ---
 

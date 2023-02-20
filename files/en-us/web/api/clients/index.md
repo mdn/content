@@ -2,15 +2,6 @@
 title: Clients
 slug: Web/API/Clients
 page-type: web-api-interface
-tags:
-  - API
-  - Clients
-  - Interface
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - Workers
 browser-compat: api.Clients
 ---
 

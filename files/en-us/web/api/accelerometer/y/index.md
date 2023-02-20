@@ -2,18 +2,8 @@
 title: Accelerometer.y
 slug: Web/API/Accelerometer/y
 page-type: web-api-instance-property
-tags:
-  - API
-  - Accelerometer
-  - Accelerometer API
-  - Generic Sensor API
-  - Property
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - Experimental
-  - "y"
+status:
+  - experimental
 browser-compat: api.Accelerometer.y
 ---
 

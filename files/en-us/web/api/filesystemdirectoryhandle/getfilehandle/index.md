@@ -2,12 +2,6 @@
 title: FileSystemDirectoryHandle.getFileHandle()
 slug: Web/API/FileSystemDirectoryHandle/getFileHandle
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemDirectoryHandle
-  - Method
 browser-compat: api.FileSystemDirectoryHandle.getFileHandle
 ---
 

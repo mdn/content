@@ -986,7 +986,7 @@ This new API provides low-level support for performing computation and graphics 
 
 #### MediaDevices.selectAudioOutput()
 
-{{domxref("MediaDevices.selectAudioOutput()")}} displays a prompt from which users can select their desired audio output. See {{bug(1699026)}}.
+{{domxref("MediaDevices.selectAudioOutput()")}} displays a prompt on desktop systems, from which users can select their desired audio output. See {{bug(1699026)}}.
 
 <table>
   <thead>
@@ -999,8 +999,8 @@ This new API provides low-level support for performing computation and graphics 
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>88</td>
-      <td>No</td>
+      <td>111</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -1824,50 +1824,6 @@ Note that since locking the screen orientation isn't typically supported on desk
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.screenorientation.allow-lock</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### File System Access API
-
-#### StorageManager.getDirectory()
-
-The {{domxref("StorageManager.getDirectory()")}} method, obtained using `navigator.storage.getDirectory()` in a worker or the main thread, provides access to files stored in the [origin private file system](/en-US/docs/Web/API/File_System_Access_API#origin_private_file_system).
-This data is origin-specific: permission prompts are not required to access files, and clearing data for the site/origin deletes the storage.
-See {{bug(1785123)}} for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version changed</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>110</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>97</td>
-      <td>No.</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.fs.enabled</code></td>
     </tr>
   </tbody>
 </table>

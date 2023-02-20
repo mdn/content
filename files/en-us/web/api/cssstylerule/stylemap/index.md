@@ -2,13 +2,6 @@
 title: CSSStyleRule.styleMap
 slug: Web/API/CSSStyleRule/styleMap
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSStyleRule
-  - Reference
-  - Houdini
-  - Property
 browser-compat: api.CSSStyleRule.styleMap
 ---
 

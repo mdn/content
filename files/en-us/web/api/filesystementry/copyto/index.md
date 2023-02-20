@@ -2,16 +2,9 @@
 title: FileSystemEntry.copyTo()
 slug: Web/API/FileSystemEntry/copyTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - File and Directory Entries APIs
-  - FileSystemEntry
-  - Files
-  - Method
-  - Non-standard
-  - Reference
-  - copyTo
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.FileSystemEntry.copyTo
 ---
 

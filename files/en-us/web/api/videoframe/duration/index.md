@@ -2,13 +2,8 @@
 title: VideoFrame.duration
 slug: Web/API/VideoFrame/duration
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - duration
-  - VideoFrame
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoFrame.duration
 ---
 

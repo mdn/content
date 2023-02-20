@@ -2,14 +2,9 @@
 title: FileSystemHandle.remove()
 slug: Web/API/FileSystemHandle/remove
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemHandle
-  - Method
-  - Experimental
-  - Non-standard
+status:
+  - experimental
+  - non-standard
 browser-compat: api.FileSystemHandle.remove
 ---
 

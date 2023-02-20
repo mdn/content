@@ -2,15 +2,6 @@
 title: FileSystemSyncAccessHandle.flush()
 slug: Web/API/FileSystemSyncAccessHandle/flush
 page-type: web-api-instance-method
-tags:
-  - flush
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemSyncAccessHandle
-  - Method
-  - stream
-  - working with files
 browser-compat: api.FileSystemSyncAccessHandle.flush
 ---
 

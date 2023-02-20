@@ -2,14 +2,6 @@
 title: FileReader.result
 slug: Web/API/FileReader/result
 page-type: web-api-instance-property
-tags:
-  - API
-  - File API
-  - FileReader
-  - Files
-  - Property
-  - Reference
-  - result
 browser-compat: api.FileReader.result
 ---
 

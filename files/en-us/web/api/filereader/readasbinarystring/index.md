@@ -2,12 +2,6 @@
 title: FileReader.readAsBinaryString()
 slug: Web/API/FileReader/readAsBinaryString
 page-type: web-api-instance-method
-tags:
-  - API
-  - File API
-  - Files
-  - Method
-  - Reference
 browser-compat: api.FileReader.readAsBinaryString
 ---
 

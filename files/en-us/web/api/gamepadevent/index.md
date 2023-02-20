@@ -2,12 +2,6 @@
 title: GamepadEvent
 slug: Web/API/GamepadEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - Interface
-  - Reference
 browser-compat: api.GamepadEvent
 ---
 

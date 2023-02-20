@@ -2,13 +2,6 @@
 title: FileSystemSyncAccessHandle
 slug: Web/API/FileSystemSyncAccessHandle
 page-type: web-api-interface
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemSyncAccessHandle
-  - Interface
-  - working with files
 browser-compat: api.FileSystemSyncAccessHandle
 ---
 

@@ -2,21 +2,6 @@
 title: Fullscreen API
 slug: Web/API/Fullscreen_API
 page-type: web-api-overview
-tags:
-  - API
-  - DOM
-  - Full
-  - fullscreen
-  - Fullscreen API
-  - Games
-  - Graphics
-  - Guide
-  - Intermediate
-  - Overview
-  - Reference
-  - View
-  - fullscreen
-  - screen
 browser-compat:
   - api.Document.fullscreen
   - api.Document.fullscreenElement

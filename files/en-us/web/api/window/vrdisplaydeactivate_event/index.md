@@ -2,13 +2,9 @@
 title: 'Window: vrdisplaydeactivate event'
 slug: Web/API/Window/vrdisplaydeactivate_event
 page-type: web-api-event
-tags:
-  - Reference
-  - WebVR
-  - Event
-  - Deprecated
-  - vrdisplaydeactivate
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Window.vrdisplaydeactivate_event
 ---
 

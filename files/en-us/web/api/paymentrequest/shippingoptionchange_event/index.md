@@ -2,20 +2,9 @@
 title: 'PaymentRequest: shippingoptionchange event'
 slug: Web/API/PaymentRequest/shippingoptionchange_event
 page-type: web-api-event
-tags:
-  - API
-  - Commerce
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Reference
-  - Shipping
-  - Event
-  - onshippingoptionchange
-  - payment
-  - shippingoptionchange
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentRequest.shippingoptionchange_event
 ---
 

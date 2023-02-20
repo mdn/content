@@ -2,14 +2,6 @@
 title: FontFace
 slug: Web/API/FontFace
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Font Loading API
-  - CSSOM
-  - FontFace
-  - Fonts
-  - Interface
-  - Reference
 browser-compat: api.FontFace
 ---
 

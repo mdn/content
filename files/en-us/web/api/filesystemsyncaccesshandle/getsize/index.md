@@ -2,15 +2,6 @@
 title: FileSystemSyncAccessHandle.getSize()
 slug: Web/API/FileSystemSyncAccessHandle/getSize
 page-type: web-api-instance-method
-tags:
-  - getSize
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemSyncAccessHandle
-  - Method
-  - stream
-  - working with files
 browser-compat: api.FileSystemSyncAccessHandle.getSize
 ---
 

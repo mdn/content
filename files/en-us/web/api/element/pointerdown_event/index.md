@@ -1,12 +1,6 @@
 ---
 title: 'Element: pointerdown event'
 slug: Web/API/Element/pointerdown_event
-tags:
-  - Event
-  - HTML DOM
-  - Element
-  - PointerEvent
-  - Reference
 browser-compat: api.Element.pointerdown_event
 page-type: web-api-event
 ---

@@ -2,14 +2,6 @@
 title: Animation.playState
 slug: Web/API/Animation/playState
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - Property
-  - Reference
-  - Web Animations
-  - playState
-  - web animations api
 browser-compat: api.Animation.playState
 ---
 

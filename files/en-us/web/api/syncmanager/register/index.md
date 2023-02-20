@@ -2,14 +2,8 @@
 title: SyncManager.register()
 slug: Web/API/SyncManager/register
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - ServiceWorker
-  - SyncManager
-  - register
+status:
+  - experimental
 browser-compat: api.SyncManager.register
 ---
 

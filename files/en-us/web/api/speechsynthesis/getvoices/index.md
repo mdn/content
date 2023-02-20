@@ -2,15 +2,6 @@
 title: SpeechSynthesis.getVoices()
 slug: Web/API/SpeechSynthesis/getVoices
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SpeechSynthesis
-  - Web Speech API
-  - getVoices
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesis.getVoices
 ---
 

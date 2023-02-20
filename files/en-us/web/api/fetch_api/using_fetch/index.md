@@ -2,16 +2,6 @@
 title: Using the Fetch API
 slug: Web/API/Fetch_API/Using_Fetch
 page-type: guide
-tags:
-  - API
-  - BODY
-  - Fetch
-  - Guide
-  - HTTP
-  - Promise
-  - Response
-  - fetch POST & string body
-  - request
 browser-compat: api.fetch
 ---
 
@@ -95,7 +85,7 @@ fetch("https://example.com", {
 
 > **Note:** `Access-Control-Allow-Origin` is prohibited from using a wildcard for requests with `credentials: 'include'`. In such cases, the exact origin must be provided; even if you are using a CORS unblocker extension, the requests will still fail.
 
-> **Note:** Browsers should not send credentials in _preflight requests_ irrespective of this setting. For more information see: [CORS > Requests with credentials](/en-US/docs/Web/HTTP/CORS#requests_with_credentials).
+> **Note:** Browsers should not send credentials in _preflight requests_ irrespective of this setting. For more information see: [CORS Requests with credentials](/en-US/docs/Web/HTTP/CORS#requests_with_credentials).
 
 If you only want to send credentials if the request URL is on the same origin as the calling script, add `credentials: 'same-origin'`.
 

@@ -2,12 +2,6 @@
 title: Touch.screenX
 slug: Web/API/Touch/screenX
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Mobile
-  - Property
-  - touch
 browser-compat: api.Touch.screenX
 ---
 

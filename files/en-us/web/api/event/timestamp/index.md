@@ -2,10 +2,6 @@
 title: Event.timeStamp
 slug: Web/API/Event/timeStamp
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Event.timeStamp
 ---
 

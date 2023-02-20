@@ -2,15 +2,6 @@
 title: FileSystemEntry.fullPath
 slug: Web/API/FileSystemEntry/fullPath
 page-type: web-api-instance-property
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemEntry
-  - Files
-  - Offline
-  - Property
-  - Reference
-  - fullPath
 browser-compat: api.FileSystemEntry.fullPath
 ---
 

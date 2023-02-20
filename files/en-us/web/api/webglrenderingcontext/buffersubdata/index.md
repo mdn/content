@@ -2,13 +2,6 @@
 title: WebGLRenderingContext.bufferSubData()
 slug: Web/API/WebGLRenderingContext/bufferSubData
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-  - bufferSubData
 browser-compat: api.WebGLRenderingContext.bufferSubData
 ---
 

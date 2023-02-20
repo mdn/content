@@ -2,10 +2,6 @@
 title: File API
 slug: Web/API/File_API
 page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - Reference
 spec-urls: https://w3c.github.io/FileAPI/
 ---
 

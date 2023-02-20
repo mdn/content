@@ -2,16 +2,8 @@
 title: Notification.requireInteraction
 slug: Web/API/Notification/requireInteraction
 page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - Web
-  - requireInteraction
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Notification.requireInteraction
 ---
 

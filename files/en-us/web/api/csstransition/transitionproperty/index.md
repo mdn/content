@@ -2,12 +2,6 @@
 title: CSSTransition.transitionProperty
 slug: Web/API/CSSTransition/transitionProperty
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - CSSTransition
-  - Property
-  - Reference
 browser-compat: api.CSSTransition.transitionProperty
 ---
 

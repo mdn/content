@@ -2,17 +2,9 @@
 title: File.lastModifiedDate
 slug: Web/API/File/lastModifiedDate
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - File
-  - File API
-  - Files
-  - Property
-  - Read-only
-  - Reference
-  - lastModifiedDate
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.File.lastModifiedDate
 ---
 

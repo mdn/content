@@ -2,14 +2,6 @@
 title: FileSystemHandle.kind
 slug: Web/API/FileSystemHandle/kind
 page-type: web-api-instance-property
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemHandle
-  - Property
-  - Read-only
-  - handle
 browser-compat: api.FileSystemHandle.kind
 ---
 

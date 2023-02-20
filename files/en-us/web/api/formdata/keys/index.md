@@ -2,13 +2,6 @@
 title: FormData.keys()
 slug: Web/API/FormData/keys
 page-type: web-api-instance-method
-tags:
-  - API
-  - FormData
-  - Iterator
-  - Method
-  - Reference
-  - XMLHttpRequest
 browser-compat: api.FormData.keys
 ---
 

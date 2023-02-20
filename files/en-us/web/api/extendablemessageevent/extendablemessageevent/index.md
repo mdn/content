@@ -2,12 +2,6 @@
 title: ExtendableMessageEvent()
 slug: Web/API/ExtendableMessageEvent/ExtendableMessageEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - ExtendableMessageEvent
-  - Reference
-  - Service Workers
 browser-compat: api.ExtendableMessageEvent.ExtendableMessageEvent
 ---
 

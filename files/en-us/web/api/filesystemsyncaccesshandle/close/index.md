@@ -2,15 +2,6 @@
 title: FileSystemSyncAccessHandle.close()
 slug: Web/API/FileSystemSyncAccessHandle/close
 page-type: web-api-instance-method
-tags:
-  - close
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemSyncAccessHandle
-  - Method
-  - stream
-  - working with files
 browser-compat: api.FileSystemSyncAccessHandle.close
 ---
 

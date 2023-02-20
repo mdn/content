@@ -2,12 +2,6 @@
 title: File.type
 slug: Web/API/File/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - File API
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.File.type
 ---
 

@@ -2,14 +2,6 @@
 title: Using FormData Objects
 slug: Web/API/FormData/Using_FormData_Objects
 page-type: guide
-tags:
-  - AJAX
-  - Blob
-  - File
-  - FormData
-  - Forms
-  - XHR
-  - XMLHttpRequest
 ---
 
 {{APIRef("XMLHttpRequest")}}

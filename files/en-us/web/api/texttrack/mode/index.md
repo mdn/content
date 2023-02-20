@@ -2,14 +2,6 @@
 title: TextTrack.mode
 slug: Web/API/TextTrack/mode
 page-type: web-api-instance-property
-tags:
-  - Accessibility
-  - NeedsExample
-  - Property
-  - TextTrack
-  - Web
-  - WebVTT
-  - mode
 browser-compat: api.TextTrack.mode
 ---
 

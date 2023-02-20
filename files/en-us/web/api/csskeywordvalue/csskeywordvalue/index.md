@@ -2,14 +2,8 @@
 title: CSSKeywordValue()
 slug: Web/API/CSSKeywordValue/CSSKeywordValue
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSKeywordValue
-  - Constructor
-  - Experimental
-  - Houdini
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSKeywordValue.CSSKeywordValue
 ---
 
