@@ -38,7 +38,7 @@ When a browser executes this code, it should display a prompt to the user, askin
 
 > **Note:** The URL template supplied when registering **must** be of the same domain as the webpage attempting to perform the registration or the registration will fail. For example, `http://example.com/homepage.html` can register a protocol handler for `http://example.com/handle_mailto/%s`, but not for `http://example.org/handle_mailto/%s`.
 
-Registering the same protocol handler more than once will pop up a different notification, indicating that the protocol handler is already registered. Therefore, it is a good idea to guard your call to register the protocol handler with a check to see if it is already registered, such as in the example below.
+Registering the same protocol handler more than once will pop up a different notification, indicating that the protocol handler is already registered.
 
 ### Example
 
