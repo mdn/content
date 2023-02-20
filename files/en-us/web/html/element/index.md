@@ -2,13 +2,6 @@
 title: HTML elements reference
 slug: Web/HTML/Element
 page-type: landing-page
-tags:
-  - Basic
-  - Element
-  - HTML
-  - Reference
-  - Web
-  - "l10n:priority"
 ---
 
 {{HTMLSidebar("HTML_Elements")}}
@@ -40,9 +33,9 @@ Metadata contains information about the page. This includes information about st
 
 ## Sectioning root
 
-| Element                 | Description                                                                                    |
-| ----------------------- | ---------------------------------------------------------------------------------------------- |
-| {{HTMLElement("body")}} | represents the content of an HTML document. There can be only one sunch element in a document. |
+| Element                 | Description                                                                                   |
+| ----------------------- | --------------------------------------------------------------------------------------------- |
+| {{HTMLElement("body")}} | represents the content of an HTML document. There can be only one such element in a document. |
 
 ## Content sectioning
 

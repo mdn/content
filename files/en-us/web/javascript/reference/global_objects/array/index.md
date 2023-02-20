@@ -274,10 +274,15 @@ f("a", "b"); // 'a+b'
 
 ## Instance properties
 
-- {{jsxref("Array.prototype.length")}}
-  - : Reflects the number of elements in an array.
+These properties are defined on `Array.prototype` and shared by all `Array` instances.
+
 - {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
   - : Contains property names that were not included in the ECMAScript standard prior to the ES2015 version and that are ignored for [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement-binding purposes.
+
+These properties are own properties of each `Array` instance.
+
+- {{jsxref("Array/length", "length")}}
+  - : Reflects the number of elements in an array.
 
 ## Instance methods
 

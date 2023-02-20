@@ -2,11 +2,6 @@
 title: Document.createCDATASection()
 slug: Web/API/Document/createCDATASection
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
 browser-compat: api.Document.createCDATASection
 ---
 

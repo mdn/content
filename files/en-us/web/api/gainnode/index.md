@@ -2,12 +2,6 @@
 title: GainNode
 slug: Web/API/GainNode
 page-type: web-api-interface
-tags:
-  - API
-  - GainNode
-  - Interface
-  - Reference
-  - Web Audio API
 browser-compat: api.GainNode
 ---
 

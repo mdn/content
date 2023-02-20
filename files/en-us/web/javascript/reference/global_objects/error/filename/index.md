@@ -1,5 +1,5 @@
 ---
-title: Error.prototype.fileName
+title: "Error: fileName"
 slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
 page-type: javascript-instance-data-property
 tags:

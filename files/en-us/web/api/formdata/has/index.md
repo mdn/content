@@ -2,12 +2,6 @@
 title: FormData.has()
 slug: Web/API/FormData/has
 page-type: web-api-instance-method
-tags:
-  - API
-  - FormData
-  - Method
-  - Reference
-  - XMLHttpRequest
 browser-compat: api.FormData.has
 ---
 

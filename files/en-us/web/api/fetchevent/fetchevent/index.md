@@ -2,16 +2,6 @@
 title: FetchEvent()
 slug: Web/API/FetchEvent/FetchEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Communication
-  - Constructor
-  - Fetch
-  - FetchEvent
-  - Networking
-  - Reference
-  - Service Workers
-  - ServiceWorker
 browser-compat: api.FetchEvent.FetchEvent
 ---
 

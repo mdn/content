@@ -45,12 +45,23 @@ None ({{jsxref("undefined")}}).
 
 ## Logging objects
 
-Don't use `console.log(obj)`, use
-`console.log(JSON.parse(JSON.stringify(obj)))`.
+Information about an object is lazily retrieved. This means that the log message shows the content of an object at the time when it's first viewed, not when it was logged. For example:
 
-This way you are sure you are seeing the value of `obj` at the moment you
-log it. Otherwise, many browsers provide a live view that constantly updates as values
-change. This may not be what you want.
+```js
+const obj = {};
+console.log(obj);
+obj.prop = 123;
+```
+
+This will output `{}`. However, if you expand the object's details, you will see `prop: 123`.
+
+If you are going to mutate your object and you want to prevent the logged information from being updated, you can [deep-clone](/en-US/docs/Glossary/Deep_copy) the object before logging it. A common way is to {{jsxref("JSON.stringify()")}} and then {{jsxref("JSON.parse()")}} it:
+
+```js
+console.log(JSON.parse(JSON.stringify(obj)));
+```
+
+There are other alternatives that work in browsers, such as [`structuredClone()`](/en-US/docs/Web/API/structuredClone), which are more effective at cloning different types of objects.
 
 ## Specifications
 

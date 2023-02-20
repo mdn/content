@@ -2,14 +2,8 @@
 title: Document.applets
 slug: Web/API/Document/applets
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - NeedsMarkupWork
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.Document.applets
 ---
 
