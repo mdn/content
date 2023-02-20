@@ -2,12 +2,6 @@
 title: 'EventSource: open event'
 slug: Web/API/EventSource/open_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - EventSource
-  - Reference
-  - open
 browser-compat: api.EventSource.open_event
 ---
 

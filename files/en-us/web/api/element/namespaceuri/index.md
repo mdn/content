@@ -2,13 +2,6 @@
 title: Element.namespaceURI
 slug: Web/API/Element/namespaceURI
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - Property
-  - Reference
 browser-compat: api.Element.namespaceURI
 ---
 
