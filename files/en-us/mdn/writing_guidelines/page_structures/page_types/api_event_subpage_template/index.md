@@ -24,10 +24,10 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 > title: "NameOfTheParentInterface: NameOfTheEvent event"
 > slug: Web/API/NameOfTheParentInterface/NameOfTheEventHandler_event
 > page-type: web-api-event
-> tags:
->   - Experimental
->   - Deprecated
->   - Non-standard
+> status:
+>   - experimental
+>   - deprecated
+>   - non-standard
 > browser-compat: path.to.feature.NameOfTheEvent_event
 > ---
 > ```
@@ -41,8 +41,8 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 >     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheEventHandler_event`.
 > - **page-type**
 >   - : The `page-type` key for Web/API events is always `web-api-event`.
-> - **tags**
->   - : Include (appropriate) technology status tags: **Experimental** (if [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** if not on a standards track.
+> - **status**
+>   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete), **non-standard** (if not on a standards track).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `path.to.feature.NameOfTheEvent_event` with the query string for the event in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
