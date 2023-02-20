@@ -2,16 +2,8 @@
 title: PeriodicSyncEvent
 slug: Web/API/PeriodicSyncEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Background Sync
-  - Interface
-  - Offline
-  - PeriodicSyncEvent
-  - Reference
-  - ServiceWorker
-  - Workers
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PeriodicSyncEvent
 ---
 

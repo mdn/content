@@ -2,13 +2,6 @@
 title: Using the Web Storage API
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 page-type: guide
-tags:
-  - API
-  - Guide
-  - Storage
-  - Web Storage API
-  - localStorage
-  - sessionStorage
 browser-compat:
   - api.Window.localStorage
   - api.Window.sessionStorage

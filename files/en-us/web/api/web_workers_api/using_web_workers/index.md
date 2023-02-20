@@ -2,14 +2,6 @@
 title: Using Web Workers
 slug: Web/API/Web_Workers_API/Using_web_workers
 page-type: guide
-tags:
-  - Advanced
-  - Firefox
-  - Guide
-  - HTML
-  - JavaScript
-  - WebWorkers
-  - Workers
 spec-urls: https://html.spec.whatwg.org/multipage/#workers
 ---
 

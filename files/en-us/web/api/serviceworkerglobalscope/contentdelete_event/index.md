@@ -2,14 +2,8 @@
 title: 'ServiceWorkerGlobalScope: contentdelete event'
 slug: Web/API/ServiceWorkerGlobalScope/contentdelete_event
 page-type: web-api-event
-tags:
-  - Content Index API
-  - ServiceWorkerGlobalScope
-  - content indexing
-  - contentdelete
-  - delete
-  - event
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ServiceWorkerGlobalScope.contentdelete_event
 ---
 

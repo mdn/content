@@ -18,12 +18,6 @@ returns a {{domxref("MediaCapabilities")}} object that can expose information ab
 decoding and encoding capabilities for a given format and output capabilities as defined
 by the [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API).
 
-## Syntax
-
-```js-nolint
-mediaCapabilitiesObj = globalObj.navigator.mediaCapabilities
-```
-
 ## Value
 
 A {{domxref("MediaCapabilities")}} object.

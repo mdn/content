@@ -2,12 +2,6 @@
 title: PushManager.getSubscription()
 slug: Web/API/PushManager/getSubscription
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - PushManager
-  - Reference
-  - Service Workers
 browser-compat: api.PushManager.getSubscription
 ---
 

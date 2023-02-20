@@ -325,7 +325,7 @@ const taskList = props.tasks.map((task) => (
 
 ## Componentizing the rest of the app
 
-Now that we've got our most important component sorted out, we can turn the rest of our app into components. Remembering that components are either obvious pieces of UI, or reused pieces of UI, or both, we can make two more components:
+Now that we've got our most important component sorted out, we can turn the rest of our app into components. Remembering that components are either obvious pieces of UI, reused pieces of UI, or both, we can make two more components:
 
 - `<Form/>`
 - `<FilterButton/>`

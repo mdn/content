@@ -2,12 +2,6 @@
 title: RTCPeerConnection.connectionState
 slug: Web/API/RTCPeerConnection/connectionState
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
-  - connectionState
 browser-compat: api.RTCPeerConnection.connectionState
 ---
 

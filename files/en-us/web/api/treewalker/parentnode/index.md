@@ -2,12 +2,6 @@
 title: TreeWalker.parentNode()
 slug: Web/API/TreeWalker/parentNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - TreeWalker
 browser-compat: api.TreeWalker.parentNode
 ---
 

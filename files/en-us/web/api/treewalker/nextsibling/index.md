@@ -2,12 +2,6 @@
 title: TreeWalker.nextSibling()
 slug: Web/API/TreeWalker/nextSibling
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - TreeWalker
 browser-compat: api.TreeWalker.nextSibling
 ---
 

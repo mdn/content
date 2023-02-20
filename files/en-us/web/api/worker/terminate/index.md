@@ -2,13 +2,6 @@
 title: Worker.terminate()
 slug: Web/API/Worker/terminate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Workers
-  - Worker
-  - terminate
 browser-compat: api.Worker.terminate
 ---
 

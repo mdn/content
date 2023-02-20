@@ -2,11 +2,6 @@
 title: TransformStream
 slug: Web/API/TransformStream
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - Streams API
 browser-compat: api.TransformStream
 ---
 

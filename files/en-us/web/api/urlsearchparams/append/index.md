@@ -2,12 +2,6 @@
 title: URLSearchParams.append()
 slug: Web/API/URLSearchParams/append
 page-type: web-api-instance-method
-tags:
-  - API
-  - Append
-  - Method
-  - URL API
-  - URLSearchParams
 browser-compat: api.URLSearchParams.append
 ---
 

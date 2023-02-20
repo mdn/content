@@ -2,13 +2,8 @@
 title: SVGStyleElement.type
 slug: Web/API/SVGStyleElement/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SVG
-  - SVG DOM
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.SVGStyleElement.type
 ---
 

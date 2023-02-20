@@ -2,14 +2,8 @@
 title: RTCSessionDescription()
 slug: Web/API/RTCSessionDescription/RTCSessionDescription
 page-type: web-api-constructor
-tags:
-  - Constructor
-  - Deprecated
-  - Media
-  - RTCSessionDescription
-  - Reference
-  - SDP
-  - WebRTC
+status:
+  - deprecated
 browser-compat: api.RTCSessionDescription.RTCSessionDescription
 ---
 

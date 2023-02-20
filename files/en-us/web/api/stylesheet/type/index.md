@@ -2,12 +2,6 @@
 title: StyleSheet.type
 slug: Web/API/StyleSheet/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - NeedsSpecTable
-  - Property
-  - Reference
 browser-compat: api.StyleSheet.type
 ---
 

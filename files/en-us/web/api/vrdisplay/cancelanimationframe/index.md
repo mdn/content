@@ -2,17 +2,9 @@
 title: VRDisplay.cancelAnimationFrame()
 slug: Web/API/VRDisplay/cancelAnimationFrame
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - cancelAnimationFrame()
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.cancelAnimationFrame
 ---
 

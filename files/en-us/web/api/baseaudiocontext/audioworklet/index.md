@@ -2,16 +2,6 @@
 title: BaseAudioContext.audioWorklet
 slug: Web/API/BaseAudioContext/audioWorklet
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - AudioWorklet
-  - BaseAudioContext
-  - Property
-  - Reference
-  - Web Audio API
-  - Worklet
 browser-compat: api.BaseAudioContext.audioWorklet
 ---
 

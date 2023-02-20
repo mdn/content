@@ -2,14 +2,6 @@
 title: ServiceWorker
 slug: Web/API/ServiceWorker
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - Workers
 browser-compat: api.ServiceWorker
 ---
 

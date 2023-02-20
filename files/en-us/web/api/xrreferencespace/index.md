@@ -2,25 +2,6 @@
 title: XRReferenceSpace
 slug: Web/API/XRReferenceSpace
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Distances
-  - Interface
-  - Mixed Reality
-  - Offsets
-  - Reference
-  - Spaces
-  - VR
-  - Virtual Reality
-  - WebXR API
-  - WebXR Device API
-  - WebXR\
-  - XR
-  - XRReferenceSpace
-  - matrix
-  - transform
 browser-compat: api.XRReferenceSpace
 ---
 

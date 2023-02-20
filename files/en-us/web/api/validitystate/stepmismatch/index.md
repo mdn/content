@@ -2,12 +2,6 @@
 title: ValidityState.stepMismatch
 slug: Web/API/ValidityState/stepMismatch
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraint Validation API
-  - DOM
-  - Property
-  - Reference
 browser-compat: api.ValidityState.stepMismatch
 ---
 

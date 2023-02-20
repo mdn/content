@@ -2,15 +2,6 @@
 title: SpeechSynthesisVoice.default
 slug: Web/API/SpeechSynthesisVoice/default
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechSynthesisVoice
-  - Web Speech API
-  - default
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesisVoice.default
 ---
 

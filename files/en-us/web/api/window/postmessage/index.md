@@ -2,14 +2,6 @@
 title: Window.postMessage()
 slug: Web/API/Window/postMessage
 page-type: web-api-instance-method
-tags:
-  - API
-  - Cross-origin Communication
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
-  - postMessage
 browser-compat: api.Window.postMessage
 ---
 
@@ -150,10 +142,6 @@ if (crossOriginIsolated) {
   myWorker.postMessage(buffer);
 }
 ```
-
-See also {{jsxref("Global_Objects/SharedArrayBuffer/Planned_changes", "Planned changes
-  to shared memory", "", 1)}} which is starting to roll out to browsers (Firefox 79, for
-example).
 
 ## Examples
 

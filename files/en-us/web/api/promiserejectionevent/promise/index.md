@@ -2,17 +2,6 @@
 title: PromiseRejectionEvent.promise
 slug: Web/API/PromiseRejectionEvent/promise
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - JavaScript
-  - Promise
-  - Promise Rejection Events
-  - PromiseRejectionEvent
-  - Promises
-  - Property
-  - Reference
-  - events
 browser-compat: api.PromiseRejectionEvent.promise
 ---
 

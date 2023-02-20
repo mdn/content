@@ -2,15 +2,8 @@
 title: XRTransientInputHitTestSource
 slug: Web/API/XRTransientInputHitTestSource
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - WebXR
-  - XR
-  - AR
-  - VR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRTransientInputHitTestSource
 ---
 

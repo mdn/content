@@ -2,13 +2,8 @@
 title: VideoFrame.format
 slug: Web/API/VideoFrame/format
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - format
-  - VideoFrame
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoFrame.format
 ---
 
