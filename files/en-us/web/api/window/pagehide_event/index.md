@@ -69,7 +69,7 @@ window.addEventListener("pagehide", (event) => {
 }, false);
 ```
 
-This can also be written using the {{domxref("Window.onpagehide", "onpagehide")}} event handler property on the {{domxref("Window")}}:
+This can also be written using the `onpagehide` event handler property on the {{domxref("Window")}}:
 
 ```js
 window.onpagehide = (event) => {
