@@ -3,7 +3,7 @@ title: LayoutShift.value
 slug: Web/API/LayoutShift/value
 page-type: web-api-instance-property
 browser-compat: api.LayoutShift.value
-tags:
+status:
   - experimental
 ---
 

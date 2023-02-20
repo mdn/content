@@ -2,12 +2,8 @@
 title: LayoutShift.toJSON()
 slug: Web/API/LayoutShift/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance,
-  - Experimental
+status:
+  - experimental
 browser-compat: api.LayoutShift.toJSON
 ---
 

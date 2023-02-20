@@ -3,7 +3,7 @@ title: LayoutShift.lastInputTime
 slug: Web/API/LayoutShift/lastInputTime
 page-type: web-api-instance-property
 browser-compat: api.LayoutShift.lastInputTime
-tags:
+status:
   - experimental
 ---
 
