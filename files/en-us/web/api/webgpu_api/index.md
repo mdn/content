@@ -538,7 +538,7 @@ You can find more information about WebGPU error handling in the explainer — s
 - {{domxref("HTMLCanvasElement.getContext()")}}
   - : xxx
 - {{domxref("Navigator.gpu")}} / {{domxref("WorkerNavigator.gpu")}}
-  - : xxx
+  - : The entry point for the API — returns the {{domxref("GPU")}} object for the current context.
 
 ## Examples
 
