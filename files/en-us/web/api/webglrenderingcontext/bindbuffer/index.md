@@ -31,17 +31,17 @@ bindBuffer(target, buffer)
         When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
         the following values are available additionally:
 
-      - `gl.COPY_READ_BUFFER`: Buffer for copying from one buffer object
-        to another.
-      - `gl.COPY_WRITE_BUFFER`: Buffer for copying from one buffer object
-        to another.
-      - `gl.TRANSFORM_FEEDBACK_BUFFER`: Buffer for transform feedback
-        operations.
-      - `gl.UNIFORM_BUFFER`: Buffer used for storing uniform blocks.
-      - `gl.PIXEL_PACK_BUFFER`: Buffer used for pixel transfer
-        operations.
-      - `gl.PIXEL_UNPACK_BUFFER`: Buffer used for pixel transfer
-        operations.
+    - `gl.COPY_READ_BUFFER`: Buffer for copying from one buffer object
+      to another.
+    - `gl.COPY_WRITE_BUFFER`: Buffer for copying from one buffer object
+      to another.
+    - `gl.TRANSFORM_FEEDBACK_BUFFER`: Buffer for transform feedback
+      operations.
+    - `gl.UNIFORM_BUFFER`: Buffer used for storing uniform blocks.
+    - `gl.PIXEL_PACK_BUFFER`: Buffer used for pixel transfer
+      operations.
+    - `gl.PIXEL_UNPACK_BUFFER`: Buffer used for pixel transfer
+      operations.
 
 - `buffer`
   - : A {{domxref("WebGLBuffer")}} to bind.
