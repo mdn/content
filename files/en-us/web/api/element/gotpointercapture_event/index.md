@@ -1,13 +1,6 @@
 ---
 title: 'Element: gotpointercapture event'
 slug: Web/API/Element/gotpointercapture_event
-tags:
-  - Event
-  - HTML DOM
-  - Element
-  - NeedsSpecTable
-  - PointerEvent
-  - Reference
 browser-compat: api.Element.gotpointercapture_event
 page-type: web-api-event
 ---

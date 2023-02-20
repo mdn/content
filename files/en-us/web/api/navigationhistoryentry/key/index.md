@@ -2,19 +2,8 @@
 title: NavigationHistoryEntry.key
 slug: Web/API/NavigationHistoryEntry/key
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - History
-  - key
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationHistoryEntry.key
 ---
 

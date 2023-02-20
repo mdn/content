@@ -2,14 +2,6 @@
 title: MIDIConnectionEvent
 slug: Web/API/MIDIConnectionEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Draft
-  - Interface
-  - MIDI
-  - MIDIConnectionEvent
-  - Reference
-  - Web MIDI API
 browser-compat: api.MIDIConnectionEvent
 ---
 

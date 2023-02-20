@@ -2,14 +2,8 @@
 title: Navigator.ink
 slug: Web/API/Navigator/ink
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Ink
-  - Inking
-  - Latency
-  - Navigator
-  - Property
+status:
+  - experimental
 browser-compat: api.Navigator.ink
 ---
 

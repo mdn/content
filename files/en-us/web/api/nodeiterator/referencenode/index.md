@@ -2,11 +2,6 @@
 title: NodeIterator.referenceNode
 slug: Web/API/NodeIterator/referenceNode
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - NodeIterator
-  - Property
 browser-compat: api.NodeIterator.referenceNode
 ---
 

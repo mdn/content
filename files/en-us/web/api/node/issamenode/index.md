@@ -2,9 +2,6 @@
 title: Node.isSameNode()
 slug: Web/API/Node/isSameNode
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Node.isSameNode
 ---
 

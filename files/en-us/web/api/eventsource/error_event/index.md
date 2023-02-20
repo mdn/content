@@ -2,12 +2,6 @@
 title: 'EventSource: error event'
 slug: Web/API/EventSource/error_event
 page-type: web-api-event
-tags:
-  - API
-  - Error
-  - Event
-  - EventSource
-  - Reference
 browser-compat: api.EventSource.error_event
 ---
 

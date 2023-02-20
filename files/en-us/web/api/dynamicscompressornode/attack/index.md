@@ -2,13 +2,6 @@
 title: DynamicsCompressorNode.attack
 slug: Web/API/DynamicsCompressorNode/attack
 page-type: web-api-instance-property
-tags:
-  - API
-  - Attack
-  - DynamicsCompressorNode
-  - Property
-  - Reference
-  - Web Audio API
 browser-compat: api.DynamicsCompressorNode.attack
 ---
 

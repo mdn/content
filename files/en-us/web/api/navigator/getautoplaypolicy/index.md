@@ -2,9 +2,8 @@
 title: Navigator.getAutoplayPolicy()
 slug: Web/API/Navigator/getAutoplayPolicy
 page-type: web-api-instance-method
-tags:
+status:
   - experimental
-  - Experimental
 browser-compat: api.Navigator.getAutoplayPolicy
 ---
 

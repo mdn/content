@@ -2,11 +2,6 @@
 title: 'Window: languagechange event'
 slug: Web/API/Window/languagechange_event
 page-type: web-api-event
-tags:
-  - Event
-  - HTML DOM
-  - Reference
-  - Window
 browser-compat: api.Window.languagechange_event
 ---
 

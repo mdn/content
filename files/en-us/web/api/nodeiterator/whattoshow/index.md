@@ -2,11 +2,6 @@
 title: NodeIterator.whatToShow
 slug: Web/API/NodeIterator/whatToShow
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - NodeIterator
-  - Property
 browser-compat: api.NodeIterator.whatToShow
 ---
 

@@ -2,13 +2,8 @@
 title: ImageDecoder.completed
 slug: Web/API/ImageDecoder/completed
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - completed
-  - ImageDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ImageDecoder.completed
 ---
 

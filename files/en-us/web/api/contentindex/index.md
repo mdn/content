@@ -2,14 +2,8 @@
 title: ContentIndex
 slug: Web/API/ContentIndex
 page-type: web-api-interface
-tags:
-  - Content
-  - Index
-  - Interface
-  - PWA
-  - content index
-  - content indexing
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContentIndex
 ---
 

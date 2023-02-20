@@ -2,20 +2,8 @@
 title: NavigateEvent.navigationType
 slug: Web/API/NavigateEvent/navigationType
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - History
-  - Navigate
-  - NavigateEvent
-  - Navigation
-  - Navigation API
-  - navigationType
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigateEvent.navigationType
 ---
 

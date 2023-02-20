@@ -2,9 +2,6 @@
 title: Event
 slug: Web/API/Event
 page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
 browser-compat: api.Event
 ---
 

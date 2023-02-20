@@ -2,18 +2,8 @@
 title: Navigation API
 slug: Web/API/Navigation_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - History
-  - Landing
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Overview
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat:
   - api.Navigation
   - api.NavigateEvent

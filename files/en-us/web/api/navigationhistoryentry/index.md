@@ -2,18 +2,8 @@
 title: NavigationHistoryEntry
 slug: Web/API/NavigationHistoryEntry
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - History
-  - Interface
-  - Landing
-  - Navigate
-  - NavigationHistoryEntry
-  - Navigation API
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationHistoryEntry
 ---
 

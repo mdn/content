@@ -2,16 +2,6 @@
 title: SourceBuffer.timestampOffset
 slug: Web/API/SourceBuffer/timestampOffset
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBuffer
-  - Video
-  - timestampOffset
 browser-compat: api.SourceBuffer.timestampOffset
 ---
 

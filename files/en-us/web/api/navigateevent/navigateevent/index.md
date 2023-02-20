@@ -2,18 +2,8 @@
 title: NavigateEvent()
 slug: Web/API/NavigateEvent/NavigateEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - History
-  - Navigate
-  - NavigateEvent
-  - Navigation
-  - Navigation API
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigateEvent.NavigateEvent
 ---
 

@@ -2,15 +2,9 @@
 title: FileSystemSync
 slug: Web/API/FileSystemSync
 page-type: web-api-interface
-tags:
-  - API
-  - File API
-  - File and Directory Entries API
-  - Files
-  - Offline
-  - filesystem
-  - Non-standard
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.FileSystemSync
 ---
 

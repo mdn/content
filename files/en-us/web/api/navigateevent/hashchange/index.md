@@ -2,20 +2,8 @@
 title: NavigateEvent.hashChange
 slug: Web/API/NavigateEvent/hashChange
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - hashChange
-  - History
-  - Navigate
-  - NavigateEvent
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigateEvent.hashChange
 ---
 

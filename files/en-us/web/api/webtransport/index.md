@@ -2,13 +2,8 @@
 title: WebTransport
 slug: Web/API/WebTransport
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransport
 ---
 

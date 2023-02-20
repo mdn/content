@@ -2,12 +2,8 @@
 title: NavigatorUAData
 slug: Web/API/NavigatorUAData
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - NavigatorUAData
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NavigatorUAData
 ---
 

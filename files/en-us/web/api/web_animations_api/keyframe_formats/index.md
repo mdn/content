@@ -2,15 +2,6 @@
 title: Keyframe Formats
 slug: Web/API/Web_Animations_API/Keyframe_Formats
 page-type: guide
-tags:
-  - API
-  - Animation
-  - KeyframeEffect()
-  - Reference
-  - animate()
-  - setKeyframes()
-  - waapi
-  - web animations api
 browser-compat: api.Element.animate
 ---
 

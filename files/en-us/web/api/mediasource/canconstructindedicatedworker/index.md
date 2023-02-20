@@ -2,15 +2,8 @@
 title: MediaSource.canConstructInDedicatedWorker
 slug: Web/API/MediaSource/canConstructInDedicatedWorker
 page-type: web-api-static-property
-tags:
-  - API
-  - canConstructInDedicatedWorker
-  - Experimental
-  - Media Source Extensions
-  - MediaSource
-  - Property
-  - Static Property
-  - Reference
+status:
+  - experimental
 browser-compat: api.MediaSource.canConstructInDedicatedWorker
 ---
 

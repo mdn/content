@@ -2,16 +2,6 @@
 title: Image()
 slug: Web/API/HTMLImageElement/Image
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image()
-  - Reference
-  - img
 browser-compat: api.HTMLImageElement.Image
 ---
 

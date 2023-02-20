@@ -2,14 +2,9 @@
 title: IDBFileRequest
 slug: Web/API/IDBFileRequest
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Files
-  - Interface
-  - Reference
-  - Non-standard
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.IDBFileRequest
 ---
 

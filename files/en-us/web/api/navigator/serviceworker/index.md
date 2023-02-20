@@ -2,14 +2,6 @@
 title: Navigator.serviceWorker
 slug: Web/API/Navigator/serviceWorker
 page-type: web-api-instance-property
-tags:
-  - API
-  - Navigator
-  - Property
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
 browser-compat: api.Navigator.serviceWorker
 ---
 

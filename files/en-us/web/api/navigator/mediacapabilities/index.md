@@ -2,12 +2,6 @@
 title: Navigator.mediaCapabilities
 slug: Web/API/Navigator/mediaCapabilities
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Media Capabilities API
-  - MediaCapabilities
-  - Navigator
 browser-compat: api.Navigator.mediaCapabilities
 ---
 
@@ -17,12 +11,6 @@ The **`Navigator.mediaCapabilities`** read-only property
 returns a {{domxref("MediaCapabilities")}} object that can expose information about the
 decoding and encoding capabilities for a given format and output capabilities as defined
 by the [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API).
-
-## Syntax
-
-```js-nolint
-mediaCapabilitiesObj = globalObj.navigator.mediaCapabilities
-```
 
 ## Value
 

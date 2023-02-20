@@ -2,9 +2,6 @@
 title: Node.isDefaultNamespace()
 slug: Web/API/Node/isDefaultNamespace
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Node.isDefaultNamespace
 ---
 

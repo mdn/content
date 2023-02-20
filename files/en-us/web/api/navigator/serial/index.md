@@ -2,13 +2,8 @@
 title: Navigator.serial
 slug: Web/API/Navigator/serial
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - serial
-  - Navigator
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Navigator.serial
 ---
 

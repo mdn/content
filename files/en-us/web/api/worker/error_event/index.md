@@ -2,15 +2,6 @@
 title: 'Worker: error event'
 slug: Web/API/Worker/error_event
 page-type: web-api-event
-tags:
-  - API
-  - Worker
-  - EventHandler
-  - Event
-  - Reference
-  - Web Workers
-  - Workers
-  - onerror
 browser-compat: api.Worker.error_event
 ---
 

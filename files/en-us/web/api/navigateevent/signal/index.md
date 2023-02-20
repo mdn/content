@@ -2,20 +2,8 @@
 title: NavigateEvent.signal
 slug: Web/API/NavigateEvent/signal
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - History
-  - Navigate
-  - NavigateEvent
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - signal
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigateEvent.signal
 ---
 

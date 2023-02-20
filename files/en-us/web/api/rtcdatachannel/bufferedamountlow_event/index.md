@@ -2,21 +2,6 @@
 title: 'RTCDataChannel: bufferedamountlow event'
 slug: Web/API/RTCDataChannel/bufferedamountlow_event
 page-type: web-api-event
-tags:
-  - API
-  - Buffer
-  - Communication
-  - Media
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - bufferedamountlow
-  - data
-  - events
-  - Event
-  - rtc
 browser-compat: api.RTCDataChannel.bufferedamountlow_event
 ---
 

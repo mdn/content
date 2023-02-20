@@ -24,14 +24,10 @@ browser-compat: path.to.feature.NameOfTheElement
 > title: "<NameOfTheElement>: The NameOfTheElement element"
 > slug: Web/HTML/Element/NameOfTheElement
 > page-type: html-element
-> tags:
->   - NameOfTheElement
->   - HTML
->   - Element
->   - Reference
->   - Experimental
->   - Deprecated
->   - Non-standard
+> status:
+>   - experimental
+>   - deprecated
+>   - non-standard
 > browser-compat: html.elements.NameOfTheElement
 > ---
 > ```
@@ -46,16 +42,8 @@ browser-compat: path.to.feature.NameOfTheElement
 >     For example, the [`<video>`](/en-US/docs/Web/HTML/Element/video) element has a _slug_ of `Web/HTML/Element/video`.
 > - **page-type**
 >   - : Always `html-element`.
-> - **tags**
->
->   - : Always include the following tags: **HTML**, **Element**, **Reference**, the _NameOfTheElement_ (e.g. **video**).
->
->     Include the following tags as appropriate:
->
->     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** (if it isn't on a standards track).
->     - Any other tags that represent possible search terms for the element.
->       For example, the [`<video>`](/en-US/docs/Web/HTML/Element/video) element includes the tags: **HTML Video**, **Multimedia**, **Media Player**, **Movie Playback**, etc.
->
+> - **status**
+>   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete), **non-standard** (if not on a standards track).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `html.elements.NameOfTheElement` with the query string for the element in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).

@@ -2,12 +2,6 @@
 title: Navigator.permissions
 slug: Web/API/Navigator/permissions
 page-type: web-api-instance-property
-tags:
-  - API
-  - Navigator
-  - Permissions
-  - Property
-  - Reference
 browser-compat: api.Navigator.permissions
 ---
 

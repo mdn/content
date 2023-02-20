@@ -2,12 +2,8 @@
 title: WebUSB API
 slug: Web/API/WebUSB_API
 page-type: web-api-overview
-tags:
-  - API
-  - Web USB
-  - Overview
-  - Reference
-  - Experimental
+status:
+  - experimental
 spec-urls: https://wicg.github.io/webusb/
 ---
 

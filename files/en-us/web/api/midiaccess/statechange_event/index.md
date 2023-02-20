@@ -2,13 +2,6 @@
 title: 'MIDIAccess: statechange event'
 slug: Web/API/MIDIAccess/statechange_event
 page-type: web-api-event
-tags:
-  - statechange
-  - API
-  - Event
-  - Reference
-  - MIDIAccess
-  - Secure context
 browser-compat: api.MIDIAccess.statechange_event
 ---
 

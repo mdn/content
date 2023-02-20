@@ -2,13 +2,6 @@
 title: HTMLSelectElement.setCustomValidity()
 slug: Web/API/HTMLSelectElement/setCustomValidity
 page-type: web-api-instance-method
-tags:
-  - API
-  - Constrain Validation API
-  - HTML DOM
-  - HTMLSelectElement
-  - Method
-  - Reference
 browser-compat: api.HTMLSelectElement.setCustomValidity
 ---
 

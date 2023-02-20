@@ -2,13 +2,6 @@
 title: NavigationPreloadManager.disable()
 slug: Web/API/NavigationPreloadManager/disable
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Offline
-  - Service Workers
-  - NavigationPreloadManager
 browser-compat: api.NavigationPreloadManager.disable
 ---
 

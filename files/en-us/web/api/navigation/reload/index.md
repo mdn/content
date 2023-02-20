@@ -2,19 +2,8 @@
 title: Navigation.reload()
 slug: Web/API/Navigation/reload
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - History
-  - Method
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Reference
-  - reload
-  - Scroll
-  - transition
-  - Traversal
+status:
+  - experimental
 browser-compat: api.Navigation.reload
 ---
 

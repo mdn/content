@@ -2,16 +2,6 @@
 title: Navigator.sendBeacon()
 slug: Web/API/Navigator/sendBeacon
 page-type: web-api-instance-method
-tags:
-  - API
-  - Beacon
-  - Method
-  - Navigator
-  - NeedsExample
-  - Networking
-  - Reference
-  - Web Performance
-  - sendBeacon
 browser-compat: api.Navigator.sendBeacon
 ---
 

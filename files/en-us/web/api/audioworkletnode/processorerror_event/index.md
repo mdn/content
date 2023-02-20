@@ -2,15 +2,6 @@
 title: "AudioWorkletNode: processorerror event"
 slug: Web/API/AudioWorkletNode/processorerror_event
 page-type: web-api-event
-tags:
-  - API
-  - Audio
-  - AudioWorkletNode
-  - AudioWorkletProcessor
-  - Event
-  - Reference
-  - Web Audio API
-  - onprocessorerror
 browser-compat: api.AudioWorkletNode.processorerror_event
 ---
 

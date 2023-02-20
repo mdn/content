@@ -2,11 +2,6 @@
 title: NodeIterator.pointerBeforeReferenceNode
 slug: Web/API/NodeIterator/pointerBeforeReferenceNode
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - NodeIterator
-  - Property
 browser-compat: api.NodeIterator.pointerBeforeReferenceNode
 ---
 

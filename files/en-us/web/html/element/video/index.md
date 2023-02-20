@@ -2,22 +2,6 @@
 title: "<video>: The Video Embed element"
 slug: Web/HTML/Element/video
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML Video
-  - HTML Video Player
-  - HTML embedded content
-  - Media
-  - Movie Playback
-  - Movies
-  - Multimedia
-  - Playing Movies
-  - Playing Video
-  - Reference
-  - Showing Video
-  - Video
-  - Web
 browser-compat: html.elements.video
 ---
 

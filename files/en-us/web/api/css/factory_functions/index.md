@@ -2,13 +2,6 @@
 title: CSS numeric factory functions
 slug: Web/API/CSS/factory_functions
 page-type: web-api-static-method
-tags:
-  - API
-  - CSS
-  - CSS API
-  - Houdini
-  - Reference
-  - factory function
 browser-compat: api.CSS
 ---
 

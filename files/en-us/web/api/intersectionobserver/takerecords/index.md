@@ -2,15 +2,6 @@
 title: IntersectionObserver.takeRecords()
 slug: Web/API/IntersectionObserver/takeRecords
 page-type: web-api-instance-method
-tags:
-  - API
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserver
-  - Method
-  - NeedsExample
-  - Reference
-  - takeRecords
 browser-compat: api.IntersectionObserver.takeRecords
 ---
 

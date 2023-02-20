@@ -2,13 +2,6 @@
 title: RTCIceServer
 slug: Web/API/RTCIceServer
 page-type: web-api-interface
-tags:
-  - Authentication
-  - Configuration
-  - Dictionary
-  - ICE
-  - RTCIceServer
-  - WebRTC
 browser-compat: api.RTCIceServer
 ---
 

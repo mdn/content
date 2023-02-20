@@ -2,18 +2,6 @@
 title: Navigator.clipboard
 slug: Web/API/Navigator/clipboard
 page-type: web-api-instance-property
-tags:
-  - API
-  - Clip
-  - Clipboard
-  - Cut
-  - Navigator
-  - Pasteboard
-  - Property
-  - Read-only
-  - Reference
-  - copy
-  - paste
 browser-compat: api.Navigator.clipboard
 ---
 

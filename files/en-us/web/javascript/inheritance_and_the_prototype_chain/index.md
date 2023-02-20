@@ -141,7 +141,7 @@ console.log(child.method()); // 5
 
 ## Constructors
 
-The power of prototypes is that we can reuse a set of properties if they should be present on every instance — especially for methods. Suppose we are to create a series of boxes, where each box is an object that contains a value which can be accessed through a `getValue` function. A naïve implementation would be:
+The power of prototypes is that we can reuse a set of properties if they should be present on every instance — especially for methods. Suppose we are to create a series of boxes, where each box is an object that contains a value which can be accessed through a `getValue` function. A naive implementation would be:
 
 ```js-nolint
 const boxes = [

@@ -2,14 +2,8 @@
 title: Plugin
 slug: Web/API/Plugin
 page-type: web-api-interface
-tags:
-  - API
-  - Add-ons
-  - DOM
-  - NeedsContent
-  - Plug-in
-  - Plugins
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Plugin
 ---
 

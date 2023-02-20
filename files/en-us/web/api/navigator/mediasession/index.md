@@ -2,20 +2,6 @@
 title: Navigator.mediaSession
 slug: Web/API/Navigator/mediaSession
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Device
-  - Media
-  - Media Session API
-  - MediaSession
-  - Navigator
-  - Property
-  - Read-only
-  - Reference
-  - UX
-  - Video
-  - metadata
 browser-compat: api.Navigator.mediaSession
 ---
 

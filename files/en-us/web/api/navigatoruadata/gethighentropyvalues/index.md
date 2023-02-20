@@ -2,13 +2,8 @@
 title: NavigatorUAData.getHighEntropyValues()
 slug: Web/API/NavigatorUAData/getHighEntropyValues
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - getHighEntropyValues
-  - NavigatorUAData
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NavigatorUAData.getHighEntropyValues
 ---
 

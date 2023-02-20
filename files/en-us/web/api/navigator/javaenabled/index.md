@@ -2,12 +2,8 @@
 title: Navigator.javaEnabled()
 slug: Web/API/Navigator/javaEnabled
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Navigator
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Navigator.javaEnabled
 ---
 

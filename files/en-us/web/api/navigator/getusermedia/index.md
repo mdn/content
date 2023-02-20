@@ -2,17 +2,8 @@
 title: Navigator.getUserMedia()
 slug: Web/API/Navigator/getUserMedia
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - Method
-  - Navigator
-  - Reference
-  - WebRTC
-  - getusermedia
+status:
+  - deprecated
 browser-compat: api.Navigator.getUserMedia
 ---
 

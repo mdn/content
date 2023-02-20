@@ -2,12 +2,8 @@
 title: LaunchParams
 slug: Web/API/LaunchParams
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - LaunchParams
-  - Reference
+status:
+  - experimental
 browser-compat: api.LaunchParams
 ---
 

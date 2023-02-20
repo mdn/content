@@ -2,18 +2,8 @@
 title: NavigationDestination
 slug: Web/API/NavigationDestination
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - History
-  - Interface
-  - Landing
-  - Navigate
-  - NavigationDestination
-  - Navigation API
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationDestination
 ---
 

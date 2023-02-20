@@ -2,15 +2,6 @@
 title: SecurityPolicyViolationEvent.columnNumber
 slug: Web/API/SecurityPolicyViolationEvent/columnNumber
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSP
-  - HTTP
-  - Property
-  - Reference
-  - Security
-  - SecurityPolicyViolationEvent
-  - columnNumber
 browser-compat: api.SecurityPolicyViolationEvent.columnNumber
 ---
 

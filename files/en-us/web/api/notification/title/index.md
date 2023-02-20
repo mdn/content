@@ -2,14 +2,6 @@
 title: Notification.title
 slug: Web/API/Notification/title
 page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - Title
 browser-compat: api.Notification.title
 ---
 

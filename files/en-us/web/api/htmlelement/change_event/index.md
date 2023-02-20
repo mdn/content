@@ -2,14 +2,6 @@
 title: 'HTMLElement: change event'
 slug: Web/API/HTMLElement/change_event
 page-type: web-api-event
-tags:
-  - Change
-  - Event
-  - HTML
-  - HTML DOM
-  - HTMLElement
-  - Reference
-  - Web
 browser-compat: api.HTMLElement.change_event
 ---
 

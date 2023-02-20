@@ -2,12 +2,6 @@
 title: File and Directory Entries API
 slug: Web/API/File_and_Directory_Entries_API
 page-type: web-api-overview
-tags:
-  - API
-  - File and Directory Entries API
-  - Files
-  - Overview
-  - Reference
 browser-compat: api.FileSystem
 ---
 

@@ -2,11 +2,6 @@
 title: CSSStyleDeclaration.removeProperty()
 slug: Web/API/CSSStyleDeclaration/removeProperty
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - Method
-  - Reference
 browser-compat: api.CSSStyleDeclaration.removeProperty
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: downloads.StringDelta
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/StringDelta
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

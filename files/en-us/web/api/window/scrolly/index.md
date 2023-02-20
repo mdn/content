@@ -2,14 +2,6 @@
 title: Window.scrollY
 slug: Web/API/Window/scrollY
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Window
-  - scrollY
 browser-compat: api.Window.scrollY
 ---
 

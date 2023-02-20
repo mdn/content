@@ -2,20 +2,8 @@
 title: "Navigation: navigatesuccess event"
 slug: Web/API/Navigation/navigatesuccess_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Experimental
-  - History
-  - Navigate
-  - navigatesuccess
-  - Navigation
-  - Navigation API
-  - Property
-  - Reference
-  - Scroll
-  - Traversal
-  - updateCurrentEntry
+status:
+  - experimental
 browser-compat: api.Navigation.navigatesuccess_event
 ---
 

@@ -2,12 +2,6 @@
 title: Navigator.userAgent
 slug: Web/API/Navigator/userAgent
 page-type: web-api-instance-property
-tags:
-  - API
-  - Navigator
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.Navigator.userAgent
 ---
 

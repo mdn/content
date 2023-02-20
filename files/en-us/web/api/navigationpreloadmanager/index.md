@@ -2,14 +2,6 @@
 title: NavigationPreloadManager
 slug: Web/API/NavigationPreloadManager
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Navigation
-  - NavigationPreloadManager
-  - Offline
-  - Reference
-  - Service Workers
 browser-compat: api.NavigationPreloadManager
 ---
 

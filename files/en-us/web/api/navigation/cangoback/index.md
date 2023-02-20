@@ -2,19 +2,8 @@
 title: Navigation.canGoBack
 slug: Web/API/Navigation/canGoBack
 page-type: web-api-instance-property
-tags:
-  - API
-  - canGoBack
-  - Experimental
-  - History
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.Navigation.canGoBack
 ---
 

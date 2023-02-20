@@ -2,12 +2,6 @@
 title: HTMLElement.offsetParent
 slug: Web/API/HTMLElement/offsetParent
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.HTMLElement.offsetParent
 ---
 

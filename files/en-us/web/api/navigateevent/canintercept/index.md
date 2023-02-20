@@ -2,20 +2,8 @@
 title: NavigateEvent.canIntercept
 slug: Web/API/NavigateEvent/canIntercept
 page-type: web-api-instance-property
-tags:
-  - API
-  - canIntercept
-  - Experimental
-  - History
-  - Navigate
-  - NavigateEvent
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigateEvent.canIntercept
 ---
 

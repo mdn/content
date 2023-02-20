@@ -2,15 +2,8 @@
 title: Navigator.deviceMemory
 slug: Web/API/Navigator/deviceMemory
 page-type: web-api-instance-property
-tags:
-  - API
-  - Device Memory API
-  - Navigator
-  - Property
-  - Reference
-  - deviceMemory
-  - memory
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Navigator.deviceMemory
 ---
 

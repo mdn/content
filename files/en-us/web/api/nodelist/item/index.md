@@ -2,12 +2,6 @@
 title: NodeList.item()
 slug: Web/API/NodeList/item
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - NodeList
-  - Reference
 browser-compat: api.NodeList.item
 ---
 

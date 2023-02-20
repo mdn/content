@@ -2,15 +2,6 @@
 title: SpeechRecognition.start()
 slug: Web/API/SpeechRecognition/start
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - recognition
-  - speech
-  - start
 browser-compat: api.SpeechRecognition.start
 ---
 

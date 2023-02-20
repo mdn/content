@@ -2,19 +2,8 @@
 title: NavigateEvent.intercept()
 slug: Web/API/NavigateEvent/intercept
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - History
-  - intercept
-  - Method
-  - NavigateEvent
-  - Navigation
-  - Navigation API
-  - Reference
-  - Scroll
-  - transition
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigateEvent.intercept
 ---
 

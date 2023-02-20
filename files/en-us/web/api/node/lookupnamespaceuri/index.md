@@ -2,9 +2,6 @@
 title: Node.lookupNamespaceURI()
 slug: Web/API/Node/lookupNamespaceURI
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Node.lookupNamespaceURI
 ---
 

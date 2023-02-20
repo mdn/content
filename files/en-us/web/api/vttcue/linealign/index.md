@@ -2,12 +2,6 @@
 title: VTTCue.lineAlign
 slug: Web/API/VTTCue/lineAlign
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - lineAlign
-  - VTTCue
 browser-compat: api.VTTCue.lineAlign
 ---
 

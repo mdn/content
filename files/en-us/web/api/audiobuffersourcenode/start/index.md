@@ -2,16 +2,6 @@
 title: AudioBufferSourceNode.start()
 slug: Web/API/AudioBufferSourceNode/start
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioBufferSourceNode
-  - Media
-  - Method
-  - Reference
-  - Web Audio API
-  - sound
-  - start
 browser-compat: api.AudioBufferSourceNode.start
 ---
 

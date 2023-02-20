@@ -2,11 +2,6 @@
 title: NodeList
 slug: Web/API/NodeList
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - NodeList
 browser-compat: api.NodeList
 ---
 

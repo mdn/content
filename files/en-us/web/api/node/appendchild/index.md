@@ -2,9 +2,6 @@
 title: Node.appendChild()
 slug: Web/API/Node/appendChild
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Node.appendChild
 ---
 

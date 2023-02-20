@@ -2,13 +2,6 @@
 title: Notification.lang
 slug: Web/API/Notification/lang
 page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
 browser-compat: api.Notification.lang
 ---
 

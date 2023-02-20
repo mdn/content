@@ -2,15 +2,8 @@
 title: Notification.timestamp
 slug: Web/API/Notification/timestamp
 page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - timeStamp
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Notification.timestamp
 ---
 

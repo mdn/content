@@ -2,18 +2,6 @@
 title: History.pushState()
 slug: Web/API/History/pushState
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - History
-  - History API
-  - Location
-  - Method
-  - Reference
-  - Session
-  - URL
-  - Web
-  - pushState
 browser-compat: api.History.pushState
 ---
 

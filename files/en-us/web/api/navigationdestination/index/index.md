@@ -2,19 +2,8 @@
 title: NavigationDestination.index
 slug: Web/API/NavigationDestination/index
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - History
-  - index
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationDestination.index
 ---
 

@@ -2,13 +2,8 @@
 title: Bluetooth
 slug: Web/API/Bluetooth
 page-type: web-api-interface
-tags:
-  - API
-  - Bluetooth
-  - Experimental
-  - Interface
-  - Reference
-  - Web Bluetooth API
+status:
+  - experimental
 browser-compat: api.Bluetooth
 ---
 

@@ -2,12 +2,6 @@
 title: VTTCue.align
 slug: Web/API/VTTCue/align
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - align
-  - VTTCue
 browser-compat: api.VTTCue.align
 ---
 
