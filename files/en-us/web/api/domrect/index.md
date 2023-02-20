@@ -9,7 +9,7 @@ browser-compat: api.DOMRect
 
 A **`DOMRect`** describes the size and position of a rectangle.
 
-The type of box represented by the `DOMRect` is specified by the method or property that returned it. For example, {{domxref("Range.getBoundingClientRect()"}} specifies the rectangle that bounds the content of the range using such objects.
+The type of box represented by the `DOMRect` is specified by the method or property that returned it. For example, {{domxref("Range.getBoundingClientRect()")}} specifies the rectangle that bounds the content of the range using such objects.
 
 It inherits from its parent, {{domxref("DOMRectReadOnly")}}.
 
