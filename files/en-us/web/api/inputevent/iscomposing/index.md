@@ -2,12 +2,6 @@
 title: InputEvent.isComposing
 slug: Web/API/InputEvent/isComposing
 page-type: web-api-instance-property
-tags:
-  - API
-  - InputEvent
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.InputEvent.isComposing
 ---
 

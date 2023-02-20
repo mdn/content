@@ -2,15 +2,6 @@
 title: HTMLElement.hidden
 slug: Web/API/HTMLElement/hidden
 page-type: web-api-instance-property
-tags:
-  - API
-  - Attribute
-  - Element
-  - HTML
-  - HTML element
-  - Property
-  - Reference
-  - hidden
 browser-compat: api.HTMLElement.hidden
 ---
 
