@@ -36,8 +36,6 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
   - : Contains the request's method (`GET`, `POST`, etc.)
 - {{domxref("Request.mode")}} {{ReadOnlyInline}}
   - : Contains the mode of the request (e.g., `cors`, `no-cors`, `same-origin`, `navigate`.)
-- {{domxref("Request.priority")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Contains the request's priority hint (e.g., `high`, `low`, `auto`).
 - {{domxref("Request.redirect")}} {{ReadOnlyInline}}
   - : Contains the mode for how redirects are handled. It may be one of `follow`, `error`, or `manual`.
 - {{domxref("Request.referrer")}} {{ReadOnlyInline}}

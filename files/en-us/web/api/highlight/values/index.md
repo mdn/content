@@ -2,13 +2,8 @@
 title: Highlight.values()
 slug: Web/API/Highlight/values
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - CSS Custom Highlight API
-  - Reference
-  - values
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Highlight.values
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prototype.values
 ---

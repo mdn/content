@@ -2,16 +2,6 @@
 title: Element.scrollIntoView()
 slug: Web/API/Element/scrollIntoView
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM Views
-  - DOM
-  - Element
-  - Method
-  - Reference
-  - View
-  - scrollIntoView
-  - scrolling
 browser-compat: api.Element.scrollIntoView
 ---
 

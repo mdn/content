@@ -2,14 +2,6 @@
 title: Element.insertAdjacentText()
 slug: Web/API/Element/insertAdjacentText
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Gecko
-  - Method
-  - Reference
-  - insertAdjacentText
 browser-compat: api.Element.insertAdjacentText
 ---
 

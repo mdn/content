@@ -2,12 +2,6 @@
 title: MediaStreamTrackEvent()
 slug: Web/API/MediaStreamTrackEvent/MediaStreamTrackEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Media Streams API
-  - MediaStreamTrackEvent
-  - Reference
 browser-compat: api.MediaStreamTrackEvent.MediaStreamTrackEvent
 ---
 

@@ -2,18 +2,6 @@
 title: MouseEvent.pageX
 slug: Web/API/MouseEvent/pageX
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - DOM
-  - Mouse Events
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
-  - UI Events
-  - events
-  - pageX
 browser-compat: api.MouseEvent.pageX
 ---
 

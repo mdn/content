@@ -2,19 +2,8 @@
 title: MediaSession.setCameraActive()
 slug: Web/API/MediaSession/setCameraActive
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Session API
-  - MediaSession
-  - Method
-  - Reference
-  - UX
-  - Video
-  - setActionHandler
-  - setCameraActive
-  - Experimental
+status:
+  - experimental
 browser-compat: api.MediaSession.setCameraActive
 ---
 

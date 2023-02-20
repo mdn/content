@@ -2,14 +2,9 @@
 title: IDBMutableFile.name
 slug: Web/API/IDBMutableFile/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Files
-  - Property
-  - Reference
-  - WebAPI
-  - Non-standard
+status:
   - deprecated
+  - non-standard
 browser-compat: api.IDBMutableFile.name
 ---
 

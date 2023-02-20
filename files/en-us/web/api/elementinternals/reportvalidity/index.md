@@ -2,12 +2,6 @@
 title: ElementInternals.reportValidity()
 slug: Web/API/ElementInternals/reportValidity
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - reportValidity
-  - ElementInternals
 browser-compat: api.ElementInternals.reportValidity
 ---
 

@@ -2,12 +2,6 @@
 title: MediaList
 slug: Web/API/MediaList
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM
-  - Interface
-  - MediaList
-  - Reference
 browser-compat: api.MediaList
 ---
 

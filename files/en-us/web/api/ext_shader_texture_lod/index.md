@@ -2,11 +2,6 @@
 title: EXT_shader_texture_lod
 slug: Web/API/EXT_shader_texture_lod
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extensions
 browser-compat: api.EXT_shader_texture_lod
 ---
 

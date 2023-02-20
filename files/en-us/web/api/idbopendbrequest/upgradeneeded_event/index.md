@@ -2,11 +2,6 @@
 title: 'IDBOpenDBRequest: upgradeneeded event'
 slug: Web/API/IDBOpenDBRequest/upgradeneeded_event
 page-type: web-api-event
-tags:
-  - Event
-  - IDBOpenDBRequest
-  - Reference
-  - upgradeneeded
 browser-compat: api.IDBOpenDBRequest.upgradeneeded_event
 ---
 

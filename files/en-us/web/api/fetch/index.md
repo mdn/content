@@ -124,6 +124,11 @@ fetch(resource, options)
     - `signal`
       - : An {{domxref("AbortSignal")}} object instance; allows you to communicate with a
         fetch request and abort it if desired via an {{domxref("AbortController")}}.
+    - `priority`
+      - : Specifies the priority of the fetch request relative to other requests of the same type. Must be one of the following strings:
+        - `high`: A high priority fetch request relative to other requests of the same type.
+        - `low`: A low priority fetch request relative to other requests of the same type.
+        - `auto`: Automatically determine the priority of the fetch request relative to other requests of the same type (default).
 
 ### Return value
 

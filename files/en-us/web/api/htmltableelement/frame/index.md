@@ -2,16 +2,8 @@
 title: HTMLTableElement.frame
 slug: Web/API/HTMLTableElement/frame
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - NeedsBrowserCompatibility
-  - NeedsSpecTable
-  - Property
-  - Reference
-  - Tables
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLTableElement.frame
 ---
 
