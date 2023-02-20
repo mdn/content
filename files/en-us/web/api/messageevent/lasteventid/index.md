@@ -2,14 +2,6 @@
 title: MessageEvent.lastEventId
 slug: Web/API/MessageEvent/lastEventId
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - MessageEvent
-  - Property
-  - Reference
-  - lastEventID
-  - messaging
 browser-compat: api.MessageEvent.lastEventId
 ---
 
