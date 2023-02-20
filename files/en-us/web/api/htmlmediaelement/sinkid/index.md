@@ -24,6 +24,12 @@ This ID should be one of the {{domxref("MediaDeviceInfo.deviceId")}} values retu
 
 A string.
 
+## Security requirements
+
+Access to the property is subject to the following constraints:
+
+- The property must be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+
 ## Specifications
 
 {{Specifications}}

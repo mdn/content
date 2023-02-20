@@ -39,6 +39,12 @@ Also note that if a [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissio
 
 If enumeration fails, the promise is rejected.
 
+## Security requirements
+
+Access to the API is subject to the following constraints:
+
+- The method must be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+
 ## Examples
 
 Here's an example of using `enumerateDevices()`. It outputs a list of the [device IDs](/en-US/docs/Web/API/MediaDeviceInfo/deviceId), with their labels if available.
