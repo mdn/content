@@ -26,7 +26,7 @@ This might trigger, for example, pausing or unpausing playback.
 
 ## Interfaces
 
-### Extensions to other interfaces
+### Extensions to interfaces
 
 The Audio Output Devices API extends the following APIs, adding the listed features:
 
