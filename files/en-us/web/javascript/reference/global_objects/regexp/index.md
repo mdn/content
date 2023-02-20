@@ -123,6 +123,8 @@ Note that several of the {{JSxRef("RegExp")}} properties have both long and shor
 
 ## Instance properties
 
+These properties are defined on `RegExp.prototype` and shared by all `RegExp` instances.
+
 - {{JSxRef("RegExp.prototype.flags")}}
   - : A string that contains the flags of the `RegExp` object.
 - {{JSxRef("RegExp.prototype.dotAll")}}
@@ -141,7 +143,10 @@ Note that several of the {{JSxRef("RegExp")}} properties have both long and shor
   - : Whether or not the search is sticky.
 - {{JSxRef("RegExp.prototype.unicode")}}
   - : Whether or not Unicode features are enabled.
-- {{jsxref("RegExp.prototype.lastIndex")}}
+
+These properties are own properties of each `RegExp` instance.
+
+- {{jsxref("RegExp/lastIndex", "lastIndex")}}
   - : The index at which to start the next match.
 
 ## Instance methods
