@@ -1,13 +1,9 @@
-name: "Pull request labeler"
+name: "Pull Request Labeler"
 on:
-  pull_request:
-    branches:
-      - main
+  - pull_request_target
 
 jobs:
   triage:
-    # do not run on forks
-    if: github.repository == 'mdn/content'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/labeler@v4
