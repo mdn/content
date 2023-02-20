@@ -20,9 +20,9 @@ This event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('fullscreenchange', (event) => { });
+addEventListener("fullscreenchange", (event) => {});
 
-onfullscreenchange = (event) => { };
+onfullscreenchange = (event) => {};
 ```
 
 ## Event type
@@ -51,30 +51,34 @@ What that means to the example code is that, if an element is currently in fulls
 ### JavaScript
 
 ```js
-function fullscreenchanged (event) {
+function fullscreenchanged(event) {
   // document.fullscreenElement will point to the element that
   // is in fullscreen mode if there is one. If there isn't one,
   // the value of the property is null.
   if (document.fullscreenElement) {
-    console.log(`Element: ${document.fullscreenElement.id} entered fullscreen mode.`);
+    console.log(
+      `Element: ${document.fullscreenElement.id} entered fullscreen mode.`
+    );
   } else {
-    console.log('Leaving fullscreen mode.');
+    console.log("Leaving fullscreen mode.");
   }
 }
 
-document.addEventListener('fullscreenchange', fullscreenchanged);
+document.addEventListener("fullscreenchange", fullscreenchanged);
 // or
 document.onfullscreenchange = fullscreenchanged;
 
 // When the toggle button is clicked, enter/exit fullscreen
-document.getElementById('toggle-fullscreen').addEventListener('click', (event) => {
-  if (document.fullscreenElement) {
-    // exitFullscreen is only available on the Document object.
-    document.exitFullscreen();
-  } else {
-    el.requestFullscreen();
-  }
-});
+document
+  .getElementById("toggle-fullscreen")
+  .addEventListener("click", (event) => {
+    if (document.fullscreenElement) {
+      // exitFullscreen is only available on the Document object.
+      document.exitFullscreen();
+    } else {
+      el.requestFullscreen();
+    }
+  });
 ```
 
 ## Specifications

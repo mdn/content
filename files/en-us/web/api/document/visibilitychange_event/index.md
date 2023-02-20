@@ -1,5 +1,5 @@
 ---
-title: 'Document: visibilitychange event'
+title: "Document: visibilitychange event"
 slug: Web/API/Document/visibilitychange_event
 page-type: web-api-event
 browser-compat: api.Document.visibilitychange_event
@@ -16,9 +16,9 @@ The event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('visibilitychange', (event) => { });
+addEventListener("visibilitychange", (event) => {});
 
-onvisibilitychange = (event) => { };
+onvisibilitychange = (event) => {};
 ```
 
 ## Event type
@@ -41,7 +41,7 @@ This example begins playing a music track when the document becomes visible, and
 
 ```js
 document.addEventListener("visibilitychange", () => {
-  if (document.visibilityState === 'visible') {
+  if (document.visibilityState === "visible") {
     backgroundMusic.play();
   } else {
     backgroundMusic.pause();
@@ -56,8 +56,8 @@ API:
 
 ```js
 document.onvisibilitychange = () => {
-  if (document.visibilityState === 'hidden') {
-    navigator.sendBeacon('/log', analyticsData);
+  if (document.visibilityState === "hidden") {
+    navigator.sendBeacon("/log", analyticsData);
   }
 };
 ```

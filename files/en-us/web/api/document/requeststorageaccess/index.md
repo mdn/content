@@ -34,8 +34,12 @@ When the promise gets resolved, the resolve handler will run as if a user gestur
 
 ```js
 document.requestStorageAccess().then(
-  () => { console.log('access granted') },
-  () => { console.log('access denied') }
+  () => {
+    console.log("access granted");
+  },
+  () => {
+    console.log("access denied");
+  }
 );
 ```
 

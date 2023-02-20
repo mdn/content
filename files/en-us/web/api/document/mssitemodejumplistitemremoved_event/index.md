@@ -1,5 +1,5 @@
 ---
-title: 'Document: mssitemodejumplistitemremoved event'
+title: "Document: mssitemodejumplistitemremoved event"
 slug: Web/API/Document/mssitemodejumplistitemremoved_event
 page-type: web-api-event
 status:
@@ -21,9 +21,9 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('mssitemodejumplistitemremoved', (event) => { })
+addEventListener("mssitemodejumplistitemremoved", (event) => {});
 
-onmssitemodejumplistitemremoved = (event) => { }
+onmssitemodejumplistitemremoved = (event) => {};
 ```
 
 ## Event type

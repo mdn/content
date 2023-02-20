@@ -47,11 +47,11 @@ Inside the handler a calculation is done from which a result message is created;
 
 ```js
 onmessage = (e) => {
-  console.log('Message received from main script');
+  console.log("Message received from main script");
   const workerResult = `Result: ${e.data[0] * e.data[1]}`;
-  console.log('Posting message back to main script');
+  console.log("Posting message back to main script");
   postMessage(workerResult);
-}
+};
 ```
 
 In the main script, `onmessage` would have to be called on a `Worker object`, whereas inside the worker script you just need `onmessage` because the worker is effectively the global scope ({{domxref("DedicatedWorkerGlobalScope")}}).

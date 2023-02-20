@@ -1,5 +1,5 @@
 ---
-title: 'Document: copy event'
+title: "Document: copy event"
 slug: Web/API/Document/copy_event
 page-type: web-api-event
 browser-compat: api.Element.copy_event
@@ -16,9 +16,9 @@ The original target for this event is the {{domxref("Element")}} that was the in
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('copy', (event) => { });
+addEventListener("copy", (event) => {});
 
-oncopy = (event) => { };
+oncopy = (event) => {};
 ```
 
 ## Event type
@@ -41,8 +41,8 @@ Alternatively, you can use the `Document.oncopy` event handler property to estab
 
 ```js
 document.oncopy = (event) => {
- /* the session has shut down */
-}
+  /* the session has shut down */
+};
 ```
 
 ## Specifications

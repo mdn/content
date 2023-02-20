@@ -38,9 +38,9 @@ After calling this method, `importedNode` and
 ## Examples
 
 ```js
-const iframe = document.querySelector('iframe');
-const iframeImages = iframe.contentDocument.querySelectorAll('img');
-const newParent = document.getElementById('images');
+const iframe = document.querySelector("iframe");
+const iframeImages = iframe.contentDocument.querySelectorAll("img");
+const newParent = document.getElementById("images");
 
 iframeImages.forEach((imgEl) => {
   newParent.appendChild(document.adoptNode(imgEl));

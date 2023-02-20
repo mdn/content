@@ -40,7 +40,7 @@ This example returns a list of all `div` elements within the
 "`alert`":
 
 ```js
-const matches = documentfrag.querySelectorAll('div.note, div.alert');
+const matches = documentfrag.querySelectorAll("div.note, div.alert");
 ```
 
 ## Specifications

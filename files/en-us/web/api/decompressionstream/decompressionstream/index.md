@@ -35,7 +35,7 @@ new DecompressionStream(format)
 In this example a blob is decompressed using gzip compression.
 
 ```js
-const ds = new DecompressionStream('gzip');
+const ds = new DecompressionStream("gzip");
 const decompressedStream = blob.stream().pipeThrough(ds);
 ```
 

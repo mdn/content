@@ -27,9 +27,8 @@ The style sheet set that was most recently set. If the current style sheet set h
 let lastSheetSet = document.lastStyleSheetSet;
 
 if (!lastSheetSet) {
-  lastSheetSet = 'Style sheet not yet changed';
-}
-else {
+  lastSheetSet = "Style sheet not yet changed";
+} else {
   console.log(`The last style sheet set is: ${lastSheetSet}`);
 }
 ```

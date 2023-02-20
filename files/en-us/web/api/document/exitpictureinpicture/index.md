@@ -37,13 +37,14 @@ mouse button is clicked within it.
 ```js
 document.onclick = (event) => {
   if (document.pictureInPictureElement) {
-    document.exitPictureInPicture()
+    document
+      .exitPictureInPicture()
       .then(() => console.log("Document Exited from Picture-in-Picture mode"))
-      .catch((err) => console.error(err))
+      .catch((err) => console.error(err));
   } else {
     video.requestPictureInPicture();
   }
-}
+};
 ```
 
 Note that if you want to track which video on your page is currently playing in picture-in-picture mode, you should listen to the `enterpictureinpicture` and `exitpictureinpicture` events on the {{DOMxRef("HTMLVideoElement")}} element(s) in question. Alternatively, you can check whether {{DOMxRef("Document.pictureInPictureElement")}} refers to the current {{DOMxRef("HTMLVideoElement")}} element.

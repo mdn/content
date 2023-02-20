@@ -37,13 +37,14 @@ presentation whenever the mouse button is clicked within it.
 ```js
 document.onclick = (event) => {
   if (document.fullscreenElement) {
-    document.exitFullscreen()
+    document
+      .exitFullscreen()
       .then(() => console.log("Document Exited from Full screen mode"))
-      .catch((err) => console.error(err))
+      .catch((err) => console.error(err));
   } else {
     document.documentElement.requestFullscreen();
   }
-}
+};
 ```
 
 > **Note:** For a more complete example, see the

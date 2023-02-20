@@ -25,7 +25,7 @@ This example looks to see if the page has any {{HTMLElement("script")}} elements
 let scripts = document.scripts;
 
 if (scripts.length) {
-  alert('This page has scripts!');
+  alert("This page has scripts!");
 }
 ```
 

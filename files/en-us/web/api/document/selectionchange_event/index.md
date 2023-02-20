@@ -1,5 +1,5 @@
 ---
-title: 'Document: selectionchange event'
+title: "Document: selectionchange event"
 slug: Web/API/Document/selectionchange_event
 page-type: web-api-event
 browser-compat: api.Document.selectionchange_event
@@ -20,9 +20,9 @@ The event can be handled by adding an event listener for `selectionchange` or us
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('selectionchange', (event) => {});
+addEventListener("selectionchange", (event) => {});
 
-onselectionchange = (event) => { };
+onselectionchange = (event) => {};
 ```
 
 ## Event type
@@ -33,7 +33,7 @@ A generic {{domxref("Event")}}.
 
 ```js
 // addEventListener version
-document.addEventListener('selectionchange', () => {
+document.addEventListener("selectionchange", () => {
   console.log(document.getSelection());
 });
 

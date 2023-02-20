@@ -51,7 +51,7 @@ const classes = span.classList;
 
 const result = classes.replace("c", "z");
 
-span.textContent = result ? classes : 'token not replaced successfully';
+span.textContent = result ? classes : "token not replaced successfully";
 ```
 
 The output looks like this:

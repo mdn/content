@@ -1,5 +1,5 @@
 ---
-title: 'DedicatedWorkerGlobalScope: messageerror event'
+title: "DedicatedWorkerGlobalScope: messageerror event"
 slug: Web/API/DedicatedWorkerGlobalScope/messageerror_event
 page-type: web-api-event
 browser-compat: api.DedicatedWorkerGlobalScope.messageerror_event
@@ -16,9 +16,9 @@ This event is not cancellable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('messageerror', (event) => { });
+addEventListener("messageerror", (event) => {});
 
-onmessageerror = (event) => { };
+onmessageerror = (event) => {};
 ```
 
 ## Event type
@@ -49,9 +49,9 @@ Listen for `messageerror` using [`addEventListener()`](/en-US/docs/Web/API/Event
 ```js
 // worker.js
 
-self.addEventListener('messageerror', (event) => {
-    self.postMessage('Error receiving message');
-    console.error(event);
+self.addEventListener("messageerror", (event) => {
+  self.postMessage("Error receiving message");
+  console.error(event);
 });
 ```
 
@@ -61,8 +61,8 @@ The same, but using the `onmessageerror` event handler property:
 // worker.js
 
 self.onmessageerror = (event) => {
-    self.postMessage('Error receiving message');
-    console.error(event);
+  self.postMessage("Error receiving message");
+  console.error(event);
 };
 ```
 

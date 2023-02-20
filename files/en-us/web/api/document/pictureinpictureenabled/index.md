@@ -36,7 +36,7 @@ function requestPictureInPicture() {
   if (document.pictureInPictureEnabled) {
     videoElement.requestPictureInPicture();
   } else {
-    console.log('Your browser cannot use picture-in-picture right now');
+    console.log("Your browser cannot use picture-in-picture right now");
   }
 }
 ```

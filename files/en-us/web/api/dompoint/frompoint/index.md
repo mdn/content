@@ -64,7 +64,7 @@ use for {{domxref("DOMPointReadOnly.x", "x")}} and {{domxref("DOMPointReadOnly.y
 values (0 and 1 respectively).
 
 ```js
-const center = DOMPoint.fromPoint({x: 75, y: -50, z: -55, w: 0.25});
+const center = DOMPoint.fromPoint({ x: 75, y: -50, z: -55, w: 0.25 });
 ```
 
 ## Specifications

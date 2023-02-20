@@ -18,7 +18,7 @@ A {{domxref("WritableStream")}}.
 The following example returns a {{domxref("WritableStream")}} from a `DecompressionStream`.
 
 ```js
-let stream = new DecompressionStream('gzip');
+let stream = new DecompressionStream("gzip");
 console.log(stream.writeable); //a WritableStream
 ```
 

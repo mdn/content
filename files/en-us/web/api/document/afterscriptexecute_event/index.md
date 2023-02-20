@@ -1,5 +1,5 @@
 ---
-title: 'Document: afterscriptexecute event'
+title: "Document: afterscriptexecute event"
 slug: Web/API/Document/afterscriptexecute_event
 page-type: web-api-event
 status:
@@ -16,9 +16,9 @@ The `afterscriptexecute` event fires when a static {{HTMLElement("script")}} ele
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('afterscriptexecute', (event) => { });
+addEventListener("afterscriptexecute", (event) => {});
 
-onafterscriptexecute = (event) => { };
+onafterscriptexecute = (event) => {};
 ```
 
 ## Event type
@@ -32,7 +32,7 @@ function finished(e) {
   logMessage(`Finished script with ID: ${e.target.id}`);
 }
 
-document.addEventListener('afterscriptexecute', finished, true);
+document.addEventListener("afterscriptexecute", finished, true);
 // or
 document.onafterscriptexecute = finished;
 ```

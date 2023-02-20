@@ -18,7 +18,7 @@ A {{domxref("ReadableStream")}}.
 The following example returns a {{domxref("ReadableStream")}} from a `DecompressionStream`.
 
 ```js
-let stream = new DecompressionStream('gzip');
+let stream = new DecompressionStream("gzip");
 console.log(stream.readable); //a ReadableStream
 ```
 

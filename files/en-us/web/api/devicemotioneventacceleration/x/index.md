@@ -1,5 +1,5 @@
 ---
-title: 'DeviceMotionEventAcceleration: x'
+title: "DeviceMotionEventAcceleration: x"
 slug: Web/API/DeviceMotionEventAcceleration/x
 page-type: web-api-instance-property
 browser-compat: api.DeviceMotionEventAcceleration.x

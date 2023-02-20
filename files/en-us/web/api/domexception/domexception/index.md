@@ -45,15 +45,15 @@ In this example, pressing the button causes a custom `DOMException` to be thrown
 ### JavaScript
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
 button.onclick = () => {
-    try {
-        throw new DOMException("Custom DOM Exception Triggered.");
-    } catch (error) {
-        document.querySelector("#output").textContent = `Error: ${error.message}`;
-    }
-}
+  try {
+    throw new DOMException("Custom DOM Exception Triggered.");
+  } catch (error) {
+    document.querySelector("#output").textContent = `Error: ${error.message}`;
+  }
+};
 ```
 
 ### Result

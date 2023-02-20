@@ -1,5 +1,5 @@
 ---
-title: 'Document: fullscreenerror event'
+title: "Document: fullscreenerror event"
 slug: Web/API/Document/fullscreenerror_event
 page-type: web-api-event
 browser-compat: api.Document.fullscreenerror_event
@@ -20,9 +20,9 @@ This event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('fullscreenerror', (event) => { });
+addEventListener("fullscreenerror", (event) => {});
 
-onfullscreenerror = (event) => { };
+onfullscreenerror = (event) => {};
 ```
 
 ## Event type
@@ -32,14 +32,14 @@ A generic {{domxref("Event")}}.
 ## Examples
 
 ```js
-const requestor = document.querySelector('div');
+const requestor = document.querySelector("div");
 
 function handleError(event) {
-  console.error('an error occurred changing into fullscreen');
+  console.error("an error occurred changing into fullscreen");
   console.log(event);
-};
+}
 
-document.addEventListener('fullscreenerror', handleError);
+document.addEventListener("fullscreenerror", handleError);
 // or
 document.onfullscreenerror = handleError;
 

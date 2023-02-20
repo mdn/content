@@ -69,13 +69,17 @@ array.
 const treeWalker = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_ELEMENT,
-  { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
+  {
+    acceptNode(node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  }
 );
 
 const nodeList = [];
 let currentNode = treeWalker.currentNode;
 
-while(currentNode) {
+while (currentNode) {
   nodeList.push(currentNode);
   currentNode = treeWalker.nextNode();
 }

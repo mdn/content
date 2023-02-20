@@ -43,7 +43,7 @@ In this basic example, the first element in the {{domxref("DocumentFragment")}} 
 the class "`myclass`" is returned:
 
 ```js
-const el = documentfragment.querySelector('.myclass');
+const el = documentfragment.querySelector(".myclass");
 ```
 
 ### CSS syntax and the method's argument
