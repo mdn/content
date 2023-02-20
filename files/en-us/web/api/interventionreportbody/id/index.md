@@ -2,13 +2,8 @@
 title: InterventionReportBody.id
 slug: Web/API/InterventionReportBody/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
-  - id
-  - InterventionReportBody
+status:
+  - experimental
 browser-compat: api.InterventionReportBody.id
 ---
 

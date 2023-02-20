@@ -1,5 +1,5 @@
 ---
-title: ':-moz-drag-over'
+title: ":-moz-drag-over"
 slug: Web/CSS/:-moz-drag-over
 page-type: css-pseudo-class
 tags:
@@ -22,7 +22,9 @@ The **`:-moz-drag-over`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/
 ## Syntax
 
 ```css
-:-moz-drag-over
+:-moz-drag-over {
+  /* ... */
+}
 ```
 
 ## Examples

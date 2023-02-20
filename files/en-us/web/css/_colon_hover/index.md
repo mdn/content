@@ -2,13 +2,6 @@
 title: ":hover"
 slug: Web/CSS/:hover
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.hover
 ---
 
@@ -24,8 +17,10 @@ Styles defined by the `:hover` pseudo-class will be overridden by any subsequent
 
 ## Syntax
 
-```
-:hover
+```css
+:hover {
+  /* ... */
+}
 ```
 
 ## Examples

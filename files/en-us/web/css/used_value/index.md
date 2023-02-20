@@ -67,7 +67,7 @@ div {
 ```js
 function updateUsedWidth(id) {
   const div = document.getElementById(id);
-  const par = div.querySelector('.show-used-width');
+  const par = div.querySelector(".show-used-width");
   const wid = window.getComputedStyle(div)["width"];
   par.textContent = `Used width: ${wid}.`;
 }
@@ -79,7 +79,7 @@ function updateAllUsedWidths() {
 }
 
 updateAllUsedWidths();
-window.addEventListener('resize', updateAllUsedWidths);
+window.addEventListener("resize", updateAllUsedWidths);
 ```
 
 ### Result

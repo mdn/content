@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.getVertexAttrib()
 slug: Web/API/WebGLRenderingContext/getVertexAttrib
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getVertexAttrib
 ---
 

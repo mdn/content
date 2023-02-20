@@ -2,16 +2,8 @@
 title: CSSVariableReferenceValue.fallback
 slug: Web/API/CSSVariableReferenceValue/fallback
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSVariableReferenceValue
-  - Houdini
-  - NeedsExample
-  - Property
-  - Reference
-  - fallback
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CSSVariableReferenceValue.fallback
 ---
 

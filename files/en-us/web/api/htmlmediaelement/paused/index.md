@@ -2,12 +2,6 @@
 title: HTMLMediaElement.paused
 slug: Web/API/HTMLMediaElement/paused
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Read-only
 browser-compat: api.HTMLMediaElement.paused
 ---
 

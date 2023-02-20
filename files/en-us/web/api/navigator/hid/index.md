@@ -2,14 +2,8 @@
 title: Navigator.hid
 slug: Web/API/Navigator/hid
 page-type: web-api-instance-property
-tags:
-  - API
-  - Advanced
-  - WebHID
-  - WebHID API
-  - Property
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Navigator.hid
 ---
 

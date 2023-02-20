@@ -2,13 +2,8 @@
 title: SVGAnimateColorElement
 slug: Web/API/SVGAnimateColorElement
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
+status:
+  - deprecated
 browser-compat: api.SVGAnimateColorElement
 ---
 

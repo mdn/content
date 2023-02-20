@@ -2,14 +2,8 @@
 title: PannerNode.setPosition()
 slug: Web/API/PannerNode/setPosition
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - PannerNode
-  - Reference
-  - Web Audio API
-  - setPosition
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.PannerNode.setPosition
 ---
 

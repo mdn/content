@@ -2,13 +2,6 @@
 title: Document.createElement()
 slug: Web/API/Document/createElement
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - createElement
 browser-compat: api.Document.createElement
 ---
 

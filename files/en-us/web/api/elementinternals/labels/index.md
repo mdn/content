@@ -2,12 +2,6 @@
 title: ElementInternals.labels
 slug: Web/API/ElementInternals/labels
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - labels
-  - ElementInternals
 browser-compat: api.ElementInternals.labels
 ---
 

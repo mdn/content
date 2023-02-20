@@ -2,16 +2,9 @@
 title: VRPose
 slug: Web/API/VRPose
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Landing
-  - Reference
-  - VR
-  - VRPose
-  - Virtual Reality
-  - WebVR
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRPose
 ---
 

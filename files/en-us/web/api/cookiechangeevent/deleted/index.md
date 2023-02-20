@@ -2,13 +2,8 @@
 title: CookieChangeEvent.deleted
 slug: Web/API/CookieChangeEvent/deleted
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - deleted
-  - CookieChangeEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CookieChangeEvent.deleted
 ---
 

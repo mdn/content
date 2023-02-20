@@ -2,19 +2,6 @@
 title: 'Element: mouseup event'
 slug: Web/API/Element/mouseup_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Event
-  - Interface
-  - MouseEvent
-  - Reference
-  - Release
-  - UI
-  - Up
-  - button
-  - mouse
-  - mouseup
 browser-compat: api.Element.mouseup_event
 ---
 

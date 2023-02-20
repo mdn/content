@@ -2,16 +2,6 @@
 title: LinearAccelerationSensor()
 slug: Web/API/LinearAccelerationSensor/LinearAccelerationSensor
 page-type: web-api-constructor
-tags:
-  - API
-  - Accelerometer
-  - Constructor
-  - Generic Sensor API
-  - LinearAccelerationSensor
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
 browser-compat: api.LinearAccelerationSensor.LinearAccelerationSensor
 ---
 

@@ -1,9 +1,9 @@
 ---
-title: ':-moz-locale-dir(rtl)'
+title: ":-moz-locale-dir(rtl)"
 slug: Web/CSS/:-moz-locale-dir_rtl
 page-type: css-pseudo-class
 tags:
-  - ':-moz-locale-dir'
+  - ":-moz-locale-dir"
   - CSS
   - CSS:Mozilla Extensions
   - Localization
@@ -27,7 +27,9 @@ The **`:-moz-locale-dir(rtl)`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US
 ## Syntax
 
 ```css
-:-moz-locale-dir(rtl)
+:-moz-locale-dir(rtl) {
+  /* ... */
+}
 ```
 
 ## Examples

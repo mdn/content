@@ -2,17 +2,6 @@
 title: CSSStyleSheet
 slug: Web/API/CSSStyleSheet
 page-type: web-api-interface
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - CSSOM API
-  - CSSStyleSheet
-  - Interface
-  - Layout
-  - Object Model
-  - Reference
-  - StyleSheet
 browser-compat: api.CSSStyleSheet
 ---
 
@@ -27,7 +16,8 @@ A stylesheet consists of a collection of {{domxref("CSSRule")}} objects represen
 For example, one rule might be a {{domxref("CSSStyleRule")}} object containing a style such as:
 
 ```css
-h1, h2 {
+h1,
+h2 {
   font-size: 16pt;
 }
 ```

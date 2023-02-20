@@ -2,16 +2,6 @@
 title: RTCPeerConnection.currentRemoteDescription
 slug: Web/API/RTCPeerConnection/currentRemoteDescription
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - currentRemoteDescription
 browser-compat: api.RTCPeerConnection.currentRemoteDescription
 ---
 

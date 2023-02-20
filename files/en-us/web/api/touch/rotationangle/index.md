@@ -2,12 +2,6 @@
 title: Touch.rotationAngle
 slug: Web/API/Touch/rotationAngle
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Mobile
-  - Property
-  - touch
 browser-compat: api.Touch.rotationAngle
 ---
 

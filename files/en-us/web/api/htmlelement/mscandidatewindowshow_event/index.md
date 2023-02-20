@@ -2,9 +2,8 @@
 title: 'HTMLElement: mscandidatewindowshow event'
 slug: Web/API/HTMLElement/mscandidatewindowshow_event
 page-type: web-api-event
-tags:
-  - Non-standard
-  - Event
+status:
+  - non-standard
 ---
 
 {{APIRef("HTML DOM")}}

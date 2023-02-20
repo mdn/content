@@ -2,17 +2,6 @@
 title: 'Element: mousemove event'
 slug: Web/API/Element/mousemove_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Event
-  - Interface
-  - MouseEvent
-  - Reference
-  - mouse
-  - mousemove
-  - move
-  - pointer
 browser-compat: api.Element.mousemove_event
 ---
 

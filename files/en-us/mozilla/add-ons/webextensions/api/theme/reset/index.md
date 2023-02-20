@@ -1,6 +1,7 @@
 ---
 title: theme.reset()
 slug: Mozilla/Add-ons/WebExtensions/API/theme/reset
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

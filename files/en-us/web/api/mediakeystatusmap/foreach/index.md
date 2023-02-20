@@ -2,13 +2,6 @@
 title: MediaKeyStatusMap.forEach()
 slug: Web/API/MediaKeyStatusMap/forEach
 page-type: web-api-instance-method
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - MediaKeyStatusMap
-  - Method
-  - Reference
-  - forEach()
 browser-compat: api.MediaKeyStatusMap.forEach
 ---
 

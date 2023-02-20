@@ -2,14 +2,6 @@
 title: WindowClient.navigate()
 slug: Web/API/WindowClient/navigate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Client
-  - Method
-  - Navigate
-  - Reference
-  - Service Workers
-  - WindowClient
 browser-compat: api.WindowClient.navigate
 ---
 

@@ -2,14 +2,6 @@
 title: Navigator
 slug: Web/API/Navigator
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - Navigator
-  - Reference
-  - Web
-  - Web Performance
 browser-compat: api.Navigator
 ---
 

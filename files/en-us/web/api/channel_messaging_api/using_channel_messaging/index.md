@@ -2,13 +2,6 @@
 title: Using channel messaging
 slug: Web/API/Channel_Messaging_API/Using_channel_messaging
 page-type: guide
-tags:
-  - API
-  - Channel messaging
-  - HTML
-  - MessageChannel
-  - MessagePort
-  - Tutorial
 browser-compat:
   - api.MessageChannel
   - api.MessagePort
@@ -45,10 +38,10 @@ We'll be focusing on the latter example in this article, which looks like:
 In the main page of the demo, we have a simple form with a text input for entering messages to be sent to an {{htmlelement("iframe")}}. We also have a paragraph which we will use later on to display confirmation messages that we will receive back from the {{htmlelement("iframe")}}.
 
 ```js
-const input = document.getElementById('message-input');
-const output = document.getElementById('message-output');
-const button = document.querySelector('button');
-const iframe = document.querySelector('iframe');
+const input = document.getElementById("message-input");
+const output = document.getElementById("message-output");
+const button = document.querySelector("button");
+const iframe = document.querySelector("iframe");
 
 const channel = new MessageChannel();
 const port1 = channel.port1;
@@ -58,13 +51,13 @@ iframe.addEventListener("load", onLoad);
 
 function onLoad() {
   // Listen for button clicks
-  button.addEventListener('click', onClick);
+  button.addEventListener("click", onClick);
 
   // Listen for messages on port1
   port1.onmessage = onMessage;
 
   // Transfer port2 to the iframe
-  iframe.contentWindow.postMessage('init', '*', [channel.port2]);
+  iframe.contentWindow.postMessage("init", "*", [channel.port2]);
 }
 
 // Post a message on port1 when the button is clicked
@@ -76,7 +69,7 @@ function onClick(e) {
 // Handle messages received on port1
 function onMessage(e) {
   output.innerHTML = e.data;
-  input.value = '';
+  input.value = "";
 }
 ```
 
@@ -97,11 +90,11 @@ When our button is clicked, we prevent the form from submitting as normal and th
 In the {{HTMLElement("iframe")}} elements, we have the following JavaScript:
 
 ```js
-const list = document.querySelector('ul');
+const list = document.querySelector("ul");
 let port2;
 
 // Listen for the initial port transfer message
-window.addEventListener('message', initPort);
+window.addEventListener("message", initPort);
 
 // Setup the transferred port
 function initPort(e) {
@@ -111,7 +104,7 @@ function initPort(e) {
 
 // Handle messages received on port2
 function onMessage(e) {
-  const listItem = document.createElement('li');
+  const listItem = document.createElement("li");
   listItem.textContent = e.data;
   list.appendChild(listItem);
   port2.postMessage(`Message received by IFrame: "${e.data}"`);
@@ -132,7 +125,7 @@ Returning to the main page, let's now look at the `onmessage` handler function.
 // Handle messages received on port1
 function onMessage(e) {
   output.innerHTML = e.data;
-  input.value = '';
+  input.value = "";
 }
 ```
 

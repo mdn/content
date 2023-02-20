@@ -2,10 +2,6 @@
 title: Event.currentTarget
 slug: Web/API/Event/currentTarget
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.Event.currentTarget
 ---
 

@@ -2,15 +2,8 @@
 title: BluetoothDevice.name
 slug: Web/API/BluetoothDevice/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Bluetooth
-  - BluetoothDevice
-  - Experimental
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - name
+status:
+  - experimental
 browser-compat: api.BluetoothDevice.name
 ---
 

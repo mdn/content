@@ -2,15 +2,8 @@
 title: MediaQueryList.removeListener()
 slug: Web/API/MediaQueryList/removeListener
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Media Queries
-  - MediaQueryList
-  - Method
-  - Reference
-  - removeListener
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.MediaQueryList.removeListener
 ---
 

@@ -137,8 +137,8 @@ For example, [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) is
 "use strict";
 
 // Assignment to a non-writable global
-var undefined = 5; // TypeError
-var Infinity = 5; // TypeError
+undefined = 5; // TypeError
+Infinity = 5; // TypeError
 
 // Assignment to a non-writable property
 const obj1 = {};

@@ -2,21 +2,9 @@
 title: 'PaymentRequest: shippingaddresschange event'
 slug: Web/API/PaymentRequest/shippingaddresschange_event
 page-type: web-api-event
-tags:
-  - API
-  - Address
-  - Commerce
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - PaymentRequestUpdateEvent
-  - Reference
-  - Shipping
-  - Event
-  - payment
-  - shippingaddresschange
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentRequest.shippingaddresschange_event
 ---
 

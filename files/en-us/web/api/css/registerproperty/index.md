@@ -2,11 +2,8 @@
 title: CSS.registerProperty()
 slug: Web/API/CSS/RegisterProperty
 page-type: web-api-static-method
-tags:
-  - CSS
-  - Houdini
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CSS.registerProperty
 ---
 
@@ -68,10 +65,10 @@ default value, and have it not inherit its value:
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 

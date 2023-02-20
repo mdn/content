@@ -2,19 +2,6 @@
 title: RTCPeerConnection.restartIce()
 slug: Web/API/RTCPeerConnection/restartIce
 page-type: web-api-instance-method
-tags:
-  - API
-  - ICE
-  - ICE Restarts
-  - Media
-  - Method
-  - Negotiation
-  - RTCPeerConnection
-  - Reference
-  - Signaling
-  - WebRTC
-  - WebRTC API
-  - restartIce
 browser-compat: api.RTCPeerConnection.restartIce
 ---
 

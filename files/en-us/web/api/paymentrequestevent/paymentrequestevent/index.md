@@ -2,14 +2,8 @@
 title: PaymentRequestEvent()
 slug: Web/API/PaymentRequestEvent/PaymentRequestEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Payment Request API
-  - PaymentRequestEvent
-  - Reference
-  - Experimental
-  - payment
+status:
+  - experimental
 browser-compat: api.PaymentRequestEvent.PaymentRequestEvent
 ---
 

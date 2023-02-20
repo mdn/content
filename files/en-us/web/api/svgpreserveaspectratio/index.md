@@ -2,11 +2,6 @@
 title: SVGPreserveAspectRatio
 slug: Web/API/SVGPreserveAspectRatio
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGPreserveAspectRatio
 ---
 

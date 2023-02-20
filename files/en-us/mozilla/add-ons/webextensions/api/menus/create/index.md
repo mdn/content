@@ -1,6 +1,7 @@
 ---
 title: menus.create()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/create
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

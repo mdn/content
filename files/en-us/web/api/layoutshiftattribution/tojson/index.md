@@ -2,13 +2,8 @@
 title: LayoutShiftAttribution.toJSON()
 slug: Web/API/LayoutShiftAttribution/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - toJSON
-  - LayoutShiftAttribution
-  - Experimental
+status:
+  - experimental
 browser-compat: api.LayoutShiftAttribution.toJSON
 ---
 

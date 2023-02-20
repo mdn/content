@@ -2,12 +2,6 @@
 title: Headers.delete()
 slug: Web/API/Headers/delete
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch
-  - Method
-  - Reference
-  - delete
 browser-compat: api.Headers.delete
 ---
 

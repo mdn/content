@@ -91,7 +91,7 @@ The following three lines of CSS are equivalent:
 ```css
 background: none;
 background: transparent;
-background: repeat scroll 0% 0%/auto padding-box border-box none transparent;
+background: repeat scroll 0% 0% / auto padding-box border-box none transparent;
 ```
 
 ## Accessibility concerns

@@ -84,6 +84,8 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
   - : Defines the host to which the cookie will be sent.
 
+    Only the current domain can be set as the value, or a domain of a higher order, unless it is a public suffix. Setting the domain will make the cookie available to it, as well as to all its subdomains.
+
     If omitted, this attribute defaults to the host of the current document URL, not including subdomains.
 
     Contrary to earlier specifications, leading dots in domain names (`.example.com`) are ignored.

@@ -1,5 +1,5 @@
 ---
-title: '::-webkit-progress-inner-element'
+title: "::-webkit-progress-inner-element"
 slug: Web/CSS/::-webkit-progress-inner-element
 page-type: css-pseudo-element
 tags:
@@ -20,7 +20,9 @@ The **`::-webkit-progress-inner-element`** [CSS](/en-US/docs/Web/CSS) [pseudo-el
 ## Syntax
 
 ```css
-::-webkit-progress-inner-element
+::-webkit-progress-inner-element {
+  /* ... */
+}
 ```
 
 ## Examples

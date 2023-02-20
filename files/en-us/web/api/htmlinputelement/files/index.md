@@ -2,13 +2,6 @@
 title: HTMLInputElement.files
 slug: Web/API/HTMLInputElement/files
 page-type: web-api-instance-property
-tags:
-  - API
-  - Files
-  - HTML DOM
-  - HTMLInputElement
-  - Property
-  - Reference
 browser-compat: api.HTMLInputElement.files
 ---
 

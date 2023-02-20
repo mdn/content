@@ -2,13 +2,6 @@
 title: DynamicsCompressorNode.ratio
 slug: Web/API/DynamicsCompressorNode/ratio
 page-type: web-api-instance-property
-tags:
-  - API
-  - DynamicsCompressorNode
-  - Property
-  - Reference
-  - Web Audio API
-  - ratio
 browser-compat: api.DynamicsCompressorNode.ratio
 ---
 

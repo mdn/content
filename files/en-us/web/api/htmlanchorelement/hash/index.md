@@ -2,11 +2,6 @@
 title: HTMLAnchorElement.hash
 slug: Web/API/HTMLAnchorElement/hash
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - Property
-  - Reference
 browser-compat: api.HTMLAnchorElement.hash
 ---
 

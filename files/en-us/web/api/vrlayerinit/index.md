@@ -2,16 +2,8 @@
 title: VRLayerInit
 slug: Web/API/VRLayerInit
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - Deprecated
-  - Interface
-  - Reference
-  - VR
-  - VRLayerInit
-  - Virtual Reality
-  - WebVR
+status:
+  - deprecated
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}

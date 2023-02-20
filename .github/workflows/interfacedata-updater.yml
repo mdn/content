@@ -30,7 +30,7 @@ jobs:
 
       - name: Extract data from webref
         working-directory: mdn-content
-        run: node scripts/update-interface-data.mjs ../webref/
+        run: node scripts/update-interface-data.js ../webref/
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v4

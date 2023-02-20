@@ -20,8 +20,10 @@ The **`:first-of-type`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/W
 
 ## Syntax
 
-```
-:first-of-type
+```css
+:first-of-type {
+  /* ... */
+}
 ```
 
 ## Examples

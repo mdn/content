@@ -2,11 +2,6 @@
 title: TransformStream
 slug: Web/API/TransformStream
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - Streams API
 browser-compat: api.TransformStream
 ---
 
@@ -20,7 +15,7 @@ For example, it might be used to decode (or encode) video frames, decompress dat
 A transformation algorithm may be provided as an optional argument to the object constructor.
 If not supplied, data is not modified when piped through the stream.
 
-`TransformStream` is a {{glossary("Transferable objects","transferable object")}}.
+`TransformStream` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 ## Constructor
 

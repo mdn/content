@@ -2,16 +2,6 @@
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
 page-type: web-api-interface
-tags:
-  - AJAX
-  - API
-  - Communication
-  - HTTP
-  - Interface
-  - Reference
-  - Web
-  - XHR
-  - XMLHttpRequest
 browser-compat: api.XMLHttpRequest
 ---
 

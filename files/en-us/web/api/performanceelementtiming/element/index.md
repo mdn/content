@@ -2,13 +2,8 @@
 title: PerformanceElementTiming.element
 slug: Web/API/PerformanceElementTiming/element
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - element
-  - PerformanceElementTiming
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PerformanceElementTiming.element
 ---
 

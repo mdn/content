@@ -2,19 +2,9 @@
 title: 'Element: MozMousePixelScroll event'
 slug: Web/API/Element/MozMousePixelScroll_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Event
-  - Firefox
-  - Mouse Wheel
-  - MozMousePixelScroll
-  - Mozilla
-  - Non-standard
-  - Reference
-  - mouse
-  - wheel
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Element.MozMousePixelScroll_event
 ---
 

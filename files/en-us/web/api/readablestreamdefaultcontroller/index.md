@@ -2,13 +2,6 @@
 title: ReadableStreamDefaultController
 slug: Web/API/ReadableStreamDefaultController
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Interface
-  - ReadableStreamDefaultController
-  - Reference
-  - Streams
 browser-compat: api.ReadableStreamDefaultController
 ---
 

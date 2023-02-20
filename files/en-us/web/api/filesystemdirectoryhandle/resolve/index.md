@@ -2,12 +2,6 @@
 title: FileSystemDirectoryHandle.resolve()
 slug: Web/API/FileSystemDirectoryHandle/resolve
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemDirectoryHandle
-  - Method
 browser-compat: api.FileSystemDirectoryHandle.resolve
 ---
 

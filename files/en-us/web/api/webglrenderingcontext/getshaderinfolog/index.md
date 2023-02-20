@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.getShaderInfoLog()
 slug: Web/API/WebGLRenderingContext/getShaderInfoLog
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getShaderInfoLog
 ---
 

@@ -2,13 +2,8 @@
 title: EncodedVideoChunk.type
 slug: Web/API/EncodedVideoChunk/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - type
-  - EncodedVideoChunk
-  - Experimental
+status:
+  - experimental
 browser-compat: api.EncodedVideoChunk.type
 ---
 

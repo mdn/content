@@ -2,20 +2,6 @@
 title: RTCIceTransport.getLocalCandidates()
 slug: Web/API/RTCIceTransport/getLocalCandidates
 page-type: web-api-instance-method
-tags:
-  - API
-  - Candidates
-  - Connectivity
-  - ICE
-  - Method
-  - Negotiation
-  - RTCIceTransport
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - getLocalCandidates
-  - rtc
 browser-compat: api.RTCIceTransport.getLocalCandidates
 ---
 

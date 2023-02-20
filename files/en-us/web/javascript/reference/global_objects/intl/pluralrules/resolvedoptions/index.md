@@ -64,15 +64,15 @@ Only one of the following two groups of properties is included:
 ### Using the resolvedOptions() method
 
 ```js
-const de = new Intl.PluralRules('de-DE');
+const de = new Intl.PluralRules("de-DE");
 const usedOptions = de.resolvedOptions();
 
-usedOptions.locale;                // "de-DE"
+usedOptions.locale; // "de-DE"
 usedOptions.maximumFractionDigits; // 3
 usedOptions.minimumFractionDigits; // 0
-usedOptions.minimumIntegerDigits;  // 1
-usedOptions.pluralCategories;      // [ "one", "other" ]
-usedOptions.type;                  // "cardinal"
+usedOptions.minimumIntegerDigits; // 1
+usedOptions.pluralCategories; // [ "one", "other" ]
+usedOptions.type; // "cardinal"
 ```
 
 ## Specifications

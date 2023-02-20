@@ -2,12 +2,6 @@
 title: TransformStream.writable
 slug: Web/API/TransformStream/writable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - writable
-  - TransformStream
 browser-compat: api.TransformStream.writable
 ---
 

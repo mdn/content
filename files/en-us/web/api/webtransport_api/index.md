@@ -2,13 +2,8 @@
 title: WebTransport API
 slug: Web/API/WebTransport_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - Landing
-  - Overview
-  - Reference
-  - WebTransport API
+status:
+  - experimental
 browser-compat:
   - api.WebTransport
 ---

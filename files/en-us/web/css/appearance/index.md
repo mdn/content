@@ -3,8 +3,8 @@ title: appearance
 slug: Web/CSS/appearance
 page-type: css-property
 tags:
-  - '-moz-appearance'
-  - '-webkit-appearance'
+  - "-moz-appearance"
+  - "-webkit-appearance"
   - CSS
   - CSS Basic User Interface
   - CSS Property

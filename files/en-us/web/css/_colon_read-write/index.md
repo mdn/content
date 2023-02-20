@@ -21,8 +21,10 @@ The **`:read-write`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/
 
 ## Syntax
 
-```
-:read-write
+```css
+:read-write {
+  /* ... */
+}
 ```
 
 ## Examples

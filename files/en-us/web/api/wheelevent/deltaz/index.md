@@ -2,14 +2,6 @@
 title: WheelEvent.deltaZ
 slug: Web/API/WheelEvent/deltaZ
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Interface
-  - Property
-  - Read-only
-  - Reference
-  - WheelEvent
 browser-compat: api.WheelEvent.deltaZ
 ---
 

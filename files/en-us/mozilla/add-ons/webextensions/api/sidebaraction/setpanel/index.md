@@ -1,6 +1,7 @@
 ---
 title: sidebarAction.setPanel()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

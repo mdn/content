@@ -2,15 +2,6 @@
 title: CSSPropertyRule.inherits
 slug: Web/API/CSSPropertyRule/inherits
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS
-  - CSS Properties and Values API
-  - CSSPropertyRule
-  - Houdini
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.CSSPropertyRule.inherits
 ---
 
@@ -28,7 +19,7 @@ This stylesheet contains a single {{cssxref("@property")}} rule. The first {{dom
 
 ```css
 @property --property-name {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }

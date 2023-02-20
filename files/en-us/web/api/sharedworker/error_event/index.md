@@ -2,15 +2,6 @@
 title: 'SharedWorker: error event'
 slug: Web/API/SharedWorker/error_event
 page-type: web-api-event
-tags:
-  - API
-  - SharedWorker
-  - EventHandler
-  - Property
-  - Reference
-  - Web Workers
-  - Workers
-  - onerror
 browser-compat: api.SharedWorker.error_event
 ---
 

@@ -2,10 +2,8 @@
 title: 'Element: gesturestart event'
 slug: Web/API/Element/gesturestart_event
 page-type: web-api-event
-tags:
-  - Event
-  - Non-standard
-  - Reference
+status:
+  - non-standard
 browser-compat: api.Element.gesturestart_event
 ---
 
@@ -22,7 +20,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 ```js
 addEventListener('gesturestart', (event) => {});
 
-onNameOfTheEvent = (event) => { };
+ongesturestart = (event) => {};
 ```
 
 ## Event type

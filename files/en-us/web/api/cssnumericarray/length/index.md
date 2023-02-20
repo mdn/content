@@ -2,14 +2,8 @@
 title: CSSNumericArray.length
 slug: Web/API/CSSNumericArray/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSNumericArray
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Property
+status:
+  - experimental
 browser-compat: api.CSSNumericArray.length
 ---
 

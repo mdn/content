@@ -2,16 +2,8 @@
 title: USBConfiguration()
 slug: Web/API/USBConfiguration/USBConfiguration
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - NeedsE
-  - Reference
-  - USB
-  - USBConfiguration
-  - WebUSB
-  - WebUSB API
+status:
+  - experimental
 browser-compat: api.USBConfiguration.USBConfiguration
 ---
 

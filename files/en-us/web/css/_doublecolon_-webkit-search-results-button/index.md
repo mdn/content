@@ -1,5 +1,5 @@
 ---
-title: '::-webkit-search-results-button'
+title: "::-webkit-search-results-button"
 slug: Web/CSS/::-webkit-search-results-button
 page-type: css-pseudo-element
 tags:
@@ -19,7 +19,9 @@ The **`::-webkit-search-results-button`** CSS [pseudo-element](/en-US/docs/Web/C
 ## Syntax
 
 ```css
- selector::-webkit-search-results-button
+selector::-webkit-search-results-button {
+  /* ... */
+}
 ```
 
 ## Specifications

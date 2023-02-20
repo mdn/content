@@ -346,19 +346,6 @@ You now have all the knowledge you'll need to properly structure your web forms.
 
 {{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
 
-## In this module
-
-- [Your first form](/en-US/docs/Learn/Forms/Your_first_form)
-- **How to structure a web form**
-- [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
-- [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
-- [Other form controls](/en-US/docs/Learn/Forms/Other_form_controls)
-- [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
-- [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
 ### Advanced Topics
 
 - [How to build custom form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls)

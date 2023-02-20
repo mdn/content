@@ -23,11 +23,11 @@ The **`padding-block-start`** [CSS](/en-US/docs/Web/CSS) property defines the lo
 
 ```css
 /* <length> values */
-padding-block-start: 10px;      /* An absolute length */
-padding-block-start: 1em;       /* A length relative to the text size */
+padding-block-start: 10px; /* An absolute length */
+padding-block-start: 1em; /* A length relative to the text size */
 
 /* <percentage> value */
-padding-block-start: 5%;        /* A padding relative to the block container's width */
+padding-block-start: 5%; /* A padding relative to the block container's width */
 
 /* Global values */
 padding-block-start: inherit;

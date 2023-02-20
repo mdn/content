@@ -2,15 +2,8 @@
 title: CSSNumericValue.sub()
 slug: Web/API/CSSNumericValue/sub
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - sub()
+status:
+  - experimental
 browser-compat: api.CSSNumericValue.sub
 ---
 
@@ -43,7 +36,10 @@ A {{domxref('CSSMathSum')}}
 ## Examples
 
 ```js
-let mathSum = CSS.px("23").sum(CSS.percent("4")).sum(CSS.cm("3")).sum(CSS.in("9"));
+let mathSum = CSS.px("23")
+  .sum(CSS.percent("4"))
+  .sum(CSS.cm("3"))
+  .sum(CSS.in("9"));
 // Prints "calc(23px - 4% - 3cm - 9in)"
 console.log(mathSum.toString());
 ```

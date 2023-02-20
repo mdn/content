@@ -2,15 +2,6 @@
 title: PushMessageData.text()
 slug: Web/API/PushMessageData/text
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Plain text
-  - Push
-  - PushMessageData
-  - Reference
-  - Service Workers
-  - Text
 browser-compat: api.PushMessageData.text
 ---
 

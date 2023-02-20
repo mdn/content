@@ -2,13 +2,8 @@
 title: AudioEncoder.flush()
 slug: Web/API/AudioEncoder/flush
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - flush
-  - AudioEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioEncoder.flush
 ---
 
