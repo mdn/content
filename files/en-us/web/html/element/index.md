@@ -2,13 +2,6 @@
 title: HTML elements reference
 slug: Web/HTML/Element
 page-type: landing-page
-tags:
-  - Basic
-  - Element
-  - HTML
-  - Reference
-  - Web
-  - "l10n:priority"
 ---
 
 {{HTMLSidebar("HTML_Elements")}}
