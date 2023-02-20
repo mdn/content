@@ -30,9 +30,9 @@ msLaunchUri(uri, successCallback, noHandlerCallback)
 - `uri`
   - : A string specifying the URL containing including the protocol of the document or resource to be displayed.
 - `successCallback` {{optional_inline}}
-  - : A function without parameter to be executed if the protocol handler is present.
+  - : A function without any parameters to be executed if the protocol handler is present.
 - `noHandlerCallback` {{optional_inline}}
-  - : A function without parameter to be executed if the protocol handler is _not_ present.
+  - : A function without any parameters to be executed if the protocol handler is _not_ present.
 
 ### Return value
 
