@@ -2,13 +2,6 @@
 title: Response.headers
 slug: Web/API/Response/headers
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Headers
-  - Property
-  - Reference
-  - Response
 browser-compat: api.Response.headers
 ---
 

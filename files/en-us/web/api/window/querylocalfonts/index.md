@@ -2,12 +2,8 @@
 title: window.queryLocalFonts()
 slug: Web/API/Window/queryLocalFonts
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - queryLocalFonts
+status:
+  - experimental
 browser-compat: api.Window.queryLocalFonts
 ---
 

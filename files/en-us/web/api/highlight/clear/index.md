@@ -2,13 +2,8 @@
 title: Highlight.clear()
 slug: Web/API/Highlight/clear
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - CSS Custom Highlight API
-  - Reference
-  - clear
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Highlight.clear
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prototype.clear
 ---

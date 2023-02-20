@@ -2,13 +2,8 @@
 title: VideoEncoder.encodeQueueSize
 slug: Web/API/VideoEncoder/encodeQueueSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - encodeQueueSize
-  - VideoEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoEncoder.encodeQueueSize
 ---
 

@@ -2,14 +2,6 @@
 title: WorkerNavigator
 slug: Web/API/WorkerNavigator
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-  - Web Workers
-  - WorkerNavigator
-  - Workers
 browser-compat: api.WorkerNavigator
 ---
 
@@ -37,6 +29,8 @@ _The `WorkerNavigator` interface doesn't inherit any property._
   - : Returns an array of strings representing the languages known to the user, by order of preference.
 - {{DOMxRef("WorkerNavigator.locks")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef("LockManager")}} object which provides methods for requesting a new {{DOMxRef('Lock')}} object and querying for an existing `Lock` object.
+- {{DOMxRef("WorkerNavigator.mediaCapabilities")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("MediaCapabilities")}} object that can expose information about the decoding and encoding capabilities for a given format and output capabilities.
 - {{DOMxRef("WorkerNavigator.onLine")}} {{ReadOnlyInline}}
   - : Returns a boolean value indicating whether the browser is online.
 - {{DOMxRef("WorkerNavigator.permissions")}} {{Experimental_Inline}} {{ReadOnlyInline}}

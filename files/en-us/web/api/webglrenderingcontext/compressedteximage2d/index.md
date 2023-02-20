@@ -2,14 +2,6 @@
 title: WebGLRenderingContext.compressedTexImage[23]D()
 slug: Web/API/WebGLRenderingContext/compressedTexImage2D
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Textures
-  - WebGL
-  - WebGL extension
-  - WebGLRenderingContext
 browser-compat:
   - api.WebGLRenderingContext.compressedTexImage2D
   - api.WebGL2RenderingContext.compressedTexImage3D

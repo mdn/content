@@ -2,11 +2,6 @@
 title: CSSStyleDeclaration.parentRule
 slug: Web/API/CSSStyleDeclaration/parentRule
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - Property
-  - Reference
 browser-compat: api.CSSStyleDeclaration.parentRule
 ---
 

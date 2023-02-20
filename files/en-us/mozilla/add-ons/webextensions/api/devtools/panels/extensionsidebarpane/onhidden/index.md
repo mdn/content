@@ -2,6 +2,7 @@
 title: devtools.panels.ExtensionSidebarPane.onHidden
 slug: >-
   Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onHidden
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

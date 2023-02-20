@@ -24,10 +24,10 @@ browser-compat: path.to.feature.NameOfTheProperty
 > title: NameOfTheParentInterface.NameOfTheProperty
 > slug: Web/API/NameOfTheParentInterface/NameOfTheProperty
 > page-type: web-api-instance-property OR web-api-static-property
-> tags:
->   - Experimental
->   - Deprecated
->   - Non-standard
+> status:
+>   - experimental
+>   - deprecated
+>   - non-standard
 > browser-compat: path.to.feature.NameOfTheProperty
 > ---
 > ```
@@ -41,8 +41,8 @@ browser-compat: path.to.feature.NameOfTheProperty
 >     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheProperty`.
 > - **page-type**
 >   - : The `page-type` key for Web/API properties is either `web-api-instance-property` (for instance properties) or `web-api-static-property` (for static properties).
-> - **tags**
->   - : Include (appropriate) technology status tags: **Experimental** (if [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** if not on a standards track.
+> - **status**
+>   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete), **non-standard** (if not on a standards track).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `path.to.feature.NameOfTheProperty` with the query string for the property in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).

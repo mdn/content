@@ -2,12 +2,6 @@
 title: location.assign()
 slug: Web/API/Location/assign
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Location
-  - Method
-  - Reference
 browser-compat: api.Location.assign
 ---
 

@@ -2,12 +2,6 @@
 title: CSSStyleSheet.replace()
 slug: Web/API/CSSStyleSheet/replace
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - replace
-  - CSSStyleSheet
 browser-compat: api.CSSStyleSheet.replace
 ---
 

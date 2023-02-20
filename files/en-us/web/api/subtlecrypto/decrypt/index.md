@@ -2,13 +2,6 @@
 title: SubtleCrypto.decrypt()
 slug: Web/API/SubtleCrypto/decrypt
 page-type: web-api-instance-method
-tags:
-  - API
-  - Decrypt
-  - Method
-  - Reference
-  - SubtleCrypto
-  - Web Crypto API
 browser-compat: api.SubtleCrypto.decrypt
 ---
 

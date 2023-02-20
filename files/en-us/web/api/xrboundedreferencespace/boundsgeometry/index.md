@@ -2,27 +2,8 @@
 title: XRBoundedReferenceSpace.boundsGeometry
 slug: Web/API/XRBoundedReferenceSpace/boundsGeometry
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Boundary
-  - Edges
-  - Geometry
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRBoundedReferenceSpace
-  - augmented
-  - boundsGeometry
-  - space
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRBoundedReferenceSpace.boundsGeometry
 ---
 

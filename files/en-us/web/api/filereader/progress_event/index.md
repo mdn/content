@@ -2,14 +2,6 @@
 title: 'FileReader: progress event'
 slug: Web/API/FileReader/progress_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - FileReader
-  - ProgressEvent
-  - Reference
-  - Web
-  - progress
 browser-compat: api.FileReader.progress_event
 ---
 

@@ -2,11 +2,6 @@
 title: TaskSignal.priority
 slug: Web/API/TaskSignal/priority
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - priority
 browser-compat: api.TaskSignal.priority
 ---
 

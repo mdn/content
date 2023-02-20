@@ -2,15 +2,8 @@
 title: CSSRotate()
 slug: Web/API/CSSRotate/CSSRotate
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS Types Object Model API
-  - CSSRotate
-  - CSSTransformComponent
-  - CSSTransformValue
-  - Constructor
-  - Experimental
-  - Houdini
+status:
+  - experimental
 browser-compat: api.CSSRotate.CSSRotate
 ---
 

@@ -2,13 +2,8 @@
 title: PerformanceLongTaskTiming
 slug: Web/API/PerformanceLongTaskTiming
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Long Tasks API
-  - PerformanceLongTaskTiming
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PerformanceLongTaskTiming
 ---
 

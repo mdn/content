@@ -2,11 +2,6 @@
 title: location.protocol
 slug: Web/API/Location/protocol
 page-type: web-api-instance-property
-tags:
-  - API
-  - Location
-  - Property
-  - Reference
 browser-compat: api.Location.protocol
 ---
 

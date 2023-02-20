@@ -2,17 +2,8 @@
 title: BluetoothCharacteristicProperties.reliableWrite
 slug: Web/API/BluetoothCharacteristicProperties/reliableWrite
 page-type: web-api-instance-property
-tags:
-  - API
-  - Bluetooth
-  - BluetoothCharacteristicProperties
-  - Experimental
-  - Interface
-  - NeedsExample
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - reliableWrite
+status:
+  - experimental
 browser-compat: api.BluetoothCharacteristicProperties.reliableWrite
 ---
 

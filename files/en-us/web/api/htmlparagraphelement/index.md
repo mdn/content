@@ -2,11 +2,6 @@
 title: HTMLParagraphElement
 slug: Web/API/HTMLParagraphElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLParagraphElement
 ---
 

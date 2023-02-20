@@ -2,10 +2,6 @@
 title: Performance API
 slug: Web/API/Performance_API
 page-type: web-api-overview
-tags:
-  - Overview
-  - Performance
-  - Web Performance
 spec-urls:
   - https://wicg.github.io/element-timing/
   - https://w3c.github.io/event-timing/

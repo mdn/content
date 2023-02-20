@@ -2,12 +2,6 @@
 title: SVGStyleElement.title
 slug: Web/API/SVGStyleElement/title
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGStyleElement.title
 ---
 

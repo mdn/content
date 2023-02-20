@@ -2,19 +2,9 @@
 title: MediaTrackSettings.volume
 slug: Web/API/MediaTrackSettings/volume
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Reference
-  - Volume
-  - WebRTC
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.MediaTrackSettings.volume
 ---
 

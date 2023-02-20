@@ -2,11 +2,6 @@
 title: EXT_texture_norm16
 slug: Web/API/EXT_texture_norm16
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.EXT_texture_norm16
 ---
 

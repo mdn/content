@@ -2,13 +2,8 @@
 title: SerialPort.getSignals()
 slug: Web/API/SerialPort/getSignals
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - getSignals()
-  - SerialPort
-  - Experimental
+status:
+  - experimental
 browser-compat: api.SerialPort.getSignals
 ---
 

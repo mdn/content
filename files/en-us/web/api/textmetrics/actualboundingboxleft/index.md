@@ -2,11 +2,6 @@
 title: TextMetrics.actualBoundingBoxLeft
 slug: Web/API/TextMetrics/actualBoundingBoxLeft
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - TextMetrics
 browser-compat: api.TextMetrics.actualBoundingBoxLeft
 ---
 

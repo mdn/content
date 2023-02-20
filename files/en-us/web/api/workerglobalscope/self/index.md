@@ -2,13 +2,6 @@
 title: WorkerGlobalScope.self
 slug: Web/API/WorkerGlobalScope/self
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Workers
-  - WorkerGlobalScope
-  - self
 browser-compat: api.WorkerGlobalScope.self
 ---
 

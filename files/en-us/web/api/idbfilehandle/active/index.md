@@ -2,14 +2,9 @@
 title: IDBFileHandle.active
 slug: Web/API/IDBFileHandle/active
 page-type: web-api-instance-property
-tags:
-  - API
-  - Files
-  - Property
-  - Reference
-  - WebAPI
-  - Non-standard
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.IDBFileHandle.abort
 ---
 

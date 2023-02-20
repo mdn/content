@@ -2,16 +2,6 @@
 title: 'MediaStreamTrack: unmute event'
 slug: Web/API/MediaStreamTrack/unmute_event
 page-type: web-api-event
-tags:
-  - Audio
-  - Event
-  - Media
-  - Media Capture and Streams
-  - Media Streams
-  - MediaStreamTrack
-  - Reference
-  - Video
-  - unmute
 browser-compat: api.MediaStreamTrack.unmute_event
 ---
 

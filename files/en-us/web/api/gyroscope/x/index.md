@@ -2,16 +2,6 @@
 title: Gyroscope.x
 slug: Web/API/Gyroscope/x
 page-type: web-api-instance-property
-tags:
-  - API
-  - Generic Sensor API
-  - Gyroscope
-  - Property
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - x
 browser-compat: api.Gyroscope.x
 ---
 

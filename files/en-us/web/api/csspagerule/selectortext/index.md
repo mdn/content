@@ -2,12 +2,6 @@
 title: CSSPageRule.selectorText
 slug: Web/API/CSSPageRule/selectorText
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - Property
-  - Reference
-  - CSSPageRule
 browser-compat: api.CSSPageRule.selectorText
 ---
 

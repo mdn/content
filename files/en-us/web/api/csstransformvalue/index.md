@@ -2,15 +2,8 @@
 title: CSSTransformValue
 slug: Web/API/CSSTransformValue
 page-type: web-api-interface
-tags:
-  - API
-  - CSS
-  - CSS Typed Object Model API
-  - CSSTransformValue
-  - Experimental
-  - Houdini
-  - Interface
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSTransformValue
 ---
 

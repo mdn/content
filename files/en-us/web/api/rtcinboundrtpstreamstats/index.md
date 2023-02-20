@@ -2,16 +2,6 @@
 title: RTCInboundRtpStreamStats
 slug: Web/API/RTCInboundRtpStreamStats
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - RTCInboundRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - local
-  - receiver
 browser-compat: api.RTCInboundRtpStreamStats
 ---
 

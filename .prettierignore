@@ -1,4 +1,4 @@
-# .prettierignore uses .gitignore syntax
+# This .prettierignore file uses .gitignore syntax
 # see https://prettier.io/docs/en/ignore.html#ignoring-files-prettierignore
 
 build/
@@ -16,4 +16,4 @@ build/
 
 # The /web/api folder is so large, it has been divided into multiple parts
 /files/en-us/web/api/**/*.md
-!/files/en-us/web/api/[a-c]*/**/*.md
+!/files/en-us/web/api/[a-d]*/**/*.md

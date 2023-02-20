@@ -2,14 +2,8 @@
 title: PasswordCredential()
 slug: Web/API/PasswordCredential/PasswordCredential
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Credential Management API
-  - PasswordCredential
-  - Reference
-  - credential management
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PasswordCredential.PasswordCredential
 ---
 

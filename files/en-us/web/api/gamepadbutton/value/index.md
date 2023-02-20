@@ -2,12 +2,6 @@
 title: GamepadButton.value
 slug: Web/API/GamepadButton/value
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - Property
-  - Reference
 browser-compat: api.GamepadButton.value
 ---
 

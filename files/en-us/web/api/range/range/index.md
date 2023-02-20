@@ -2,13 +2,6 @@
 title: Range()
 slug: Web/API/Range/Range
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM
-  - DOM Reference
-  - Range
-  - Reference
 browser-compat: api.Range.Range
 ---
 

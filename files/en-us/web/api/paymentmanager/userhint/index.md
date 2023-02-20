@@ -2,12 +2,8 @@
 title: PaymentManager.userHint
 slug: Web/API/PaymentManager/userHint
 page-type: web-api-instance-property
-tags:
-  - API
-  - userHint
-  - Experimental
-  - Property
-  - Reference
+status:
+  - experimental
 browser-compat: api.PaymentManager.userHint
 ---
 

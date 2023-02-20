@@ -1,13 +1,6 @@
 ---
 title: 'Element: pointerenter event'
 slug: Web/API/Element/pointerenter_event
-tags:
-  - Event
-  - HTML DOM
-  - Element
-  - NeedsSpecTable
-  - PointerEvent
-  - Reference
 browser-compat: api.Element.pointerenter_event
 page-type: web-api-event
 ---

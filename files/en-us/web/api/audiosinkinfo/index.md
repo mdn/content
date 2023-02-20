@@ -2,13 +2,8 @@
 title: AudioSinkInfo
 slug: Web/API/AudioSinkInfo
 page-type: web-api-interface
-tags:
-  - API
-  - AudioSinkInfo
-  - Experimental
-  - Interface
-  - Landing
-  - Reference
+status:
+  - experimental
 browser-compat: api.AudioSinkInfo
 ---
 

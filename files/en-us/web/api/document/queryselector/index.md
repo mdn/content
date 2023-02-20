@@ -2,17 +2,6 @@
 title: Document.querySelector()
 slug: Web/API/Document/querySelector
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Selectors
-  - DOM
-  - DOM Elements
-  - Document
-  - Method
-  - Reference
-  - Selector API
-  - Selectors
-  - querySelector
 browser-compat: api.Document.querySelector
 ---
 
@@ -118,7 +107,9 @@ const el = document.querySelector("div.user-panel.main input[name='login']");
 As all CSS selector strings are valid, you can also negate selectors:
 
 ```js
-const el = document.querySelector("div.user-panel:not(.main) input[name='login']");
+const el = document.querySelector(
+  "div.user-panel:not(.main) input[name='login']"
+);
 ```
 
 This will select an input with a parent div with the `user-panel` class but

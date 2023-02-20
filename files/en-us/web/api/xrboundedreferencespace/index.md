@@ -2,21 +2,8 @@
 title: XRBoundedReferenceSpace
 slug: Web/API/XRBoundedReferenceSpace
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Boundary
-  - Interface
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRBoundedReferenceSpace
-  - augmented
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRBoundedReferenceSpace
 ---
 

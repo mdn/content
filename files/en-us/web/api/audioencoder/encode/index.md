@@ -2,13 +2,8 @@
 title: AudioEncoder.encode()
 slug: Web/API/AudioEncoder/encode
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - encode
-  - AudioEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioEncoder.encode
 ---
 

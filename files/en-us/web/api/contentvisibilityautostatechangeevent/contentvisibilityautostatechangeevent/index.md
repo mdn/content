@@ -3,10 +3,8 @@ title: ContentVisibilityAutoStateChangeEvent()
 slug: >-
   Web/API/ContentVisibilityAutoStateChangeEvent/ContentVisibilityAutoStateChangeEvent
 page-type: web-api-constructor
-tags:
-  - Constructor
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: >-
   api.ContentVisibilityAutoStateChangeEvent.ContentVisibilityAutoStateChangeEvent
 ---

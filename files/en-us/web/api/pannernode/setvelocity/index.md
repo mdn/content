@@ -2,16 +2,8 @@
 title: PannerNode.setVelocity()
 slug: Web/API/PannerNode/setVelocity
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Deprecated
-  - Doppler Effect
-  - Method
-  - PannerNode
-  - Reference
-  - Web Audio API
-  - setVelocity
+status:
+  - deprecated
 browser-compat: api.PannerNode.setVelocity
 ---
 

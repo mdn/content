@@ -2,22 +2,8 @@
 title: 'Element: webkitmouseforcechanged event'
 slug: Web/API/Element/webkitmouseforcechanged_event
 page-type: web-api-event
-tags:
-  - Event
-  - Force Touch
-  - MouseEvent
-  - NeedsExample
-  - Non-standard
-  - Reference
-  - Safari
-  - Trackpad
-  - UI
-  - Web
-  - WebKit
-  - apple
-  - mouse
-  - touch
-  - webkitmouseforcechanged
+status:
+  - non-standard
 browser-compat: api.Element.webkitmouseforcechanged_event
 ---
 

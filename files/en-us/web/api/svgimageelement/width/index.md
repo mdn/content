@@ -2,16 +2,6 @@
 title: SVGImageElement.width
 slug: Web/API/SVGImageElement/width
 page-type: web-api-instance-property
-tags:
-  - API
-  - Image
-  - NeedsExample
-  - Property
-  - Reference
-  - SVG
-  - SVG DOM
-  - SVGImageElement
-  - width
 browser-compat: api.SVGImageElement.width
 ---
 

@@ -2,18 +2,6 @@
 title: URL API
 slug: Web/API/URL_API
 page-type: web-api-overview
-tags:
-  - API
-  - Address
-  - Domain
-  - Forms
-  - Host
-  - IP
-  - Overview
-  - URL
-  - URL API
-  - Web
-  - hostname
 browser-compat: api.URL
 ---
 

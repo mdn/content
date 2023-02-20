@@ -2,13 +2,6 @@
 title: PerformanceObserver.observe()
 slug: Web/API/PerformanceObserver/observe
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Performance
-  - PerformanceObserver
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceObserver.observe
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: downloads.FilenameConflictAction
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/FilenameConflictAction
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

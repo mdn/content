@@ -1,6 +1,7 @@
 ---
 title: Internationalization
 slug: Mozilla/Add-ons/WebExtensions/Internationalization
+page-type: guide
 tags:
   - Article
   - Guide

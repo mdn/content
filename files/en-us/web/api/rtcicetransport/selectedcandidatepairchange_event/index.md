@@ -2,19 +2,6 @@
 title: 'RTCIceTransport: selectedcandidatepairchange event'
 slug: Web/API/RTCIceTransport/selectedcandidatepairchange_event
 page-type: web-api-event
-tags:
-  - Connectivity
-  - ICE
-  - Negotiation
-  - RTCIceCandidate
-  - RTCIceTransport
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - events
-  - onselectedcandidatepairchange
-  - selectedcandidatepairchange
 browser-compat: api.RTCIceTransport.selectedcandidatepairchange_event
 ---
 

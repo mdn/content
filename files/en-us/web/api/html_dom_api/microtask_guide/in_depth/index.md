@@ -2,15 +2,6 @@
 title: 'In depth: Microtasks and the JavaScript runtime environment'
 slug: Web/API/HTML_DOM_API/Microtask_guide/In_depth
 page-type: guide
-tags:
-  - API
-  - Advanced
-  - Guide
-  - JavaScript
-  - Microtasks
-  - asynchronous
-  - queueMicrotask
-  - runtime
 ---
 
 {{APIRef("HTML DOM")}}

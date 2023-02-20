@@ -2,12 +2,6 @@
 title: ImageBitmap.close()
 slug: Web/API/ImageBitmap/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - ImageBitmap
-  - Method
-  - OffscreenCanvas
-  - Reference
 browser-compat: api.ImageBitmap.close
 ---
 

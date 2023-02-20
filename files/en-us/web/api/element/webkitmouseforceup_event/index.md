@@ -2,24 +2,8 @@
 title: 'Element: webkitmouseforceup event'
 slug: Web/API/Element/webkitmouseforceup_event
 page-type: web-api-event
-tags:
-  - Element
-  - Event
-  - Force Touch
-  - MouseEvent
-  - NeedsCompatTable
-  - NeedsExample
-  - Non-standard
-  - Reference
-  - Safari
-  - Trackpad
-  - UI
-  - Web
-  - WebKit
-  - apple
-  - mouse
-  - touch
-  - webkitmouseforceup
+status:
+  - non-standard
 browser-compat: api.Element.webkitmouseforceup_event
 ---
 

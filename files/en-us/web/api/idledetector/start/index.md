@@ -2,13 +2,8 @@
 title: IdleDetector.start()
 slug: Web/API/IdleDetector/start
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - start
-  - IdleDetector
-  - Experimental
+status:
+  - experimental
 browser-compat: api.IdleDetector.start
 ---
 

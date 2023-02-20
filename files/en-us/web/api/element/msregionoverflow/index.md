@@ -2,12 +2,8 @@
 title: Element.msRegionOverflow
 slug: Web/API/Element/msRegionOverflow
 page-type: web-api-instance-property
-tags:
-  - Internet Explorer
-  - msRegionOverflow
-  - Non-standard
-  - Property
-  - Read-only
+status:
+  - non-standard
 ---
 
 {{APIRef("DOM")}}
