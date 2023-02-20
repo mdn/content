@@ -3,8 +3,7 @@
 # to upload all the files that were built to our Dev environment.
 # This way, if the tests passed, you'll be able to review the built
 # pages on a public URL.
-
-name: PR Test
+name: PR test
 
 on:
   pull_request:
@@ -16,6 +15,8 @@ on:
 
 jobs:
   tests:
+    # do not run on forks
+    if: github.repository == 'mdn/content'
     runs-on: ubuntu-latest
     env:
       BASE_SHA: ${{ github.event.pull_request.base.sha }}
@@ -37,7 +38,7 @@ jobs:
       - name: Get changed files
         run: |
           # Use the GitHub API to get the list of changed files
-          # documenation: https://docs.github.com/rest/commits/commits#compare-two-commits
+          # documentation: https://docs.github.com/rest/commits/commits#compare-two-commits
           DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }} \
             --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
 
