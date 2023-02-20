@@ -21,8 +21,8 @@ They are grouped by function to help you find what you have in mind easily. An a
 
 ## Main root
 
-| Element                 | Description                                                                                                                                                          |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Element                 | Description                                                                                                                                                           |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{HTMLElement("html")}} | Represents the root (top-level element) of an HTML document, so it is also referred to as the _root element_. All other elements must be descendants of this element. |
 
 ## Document metadata
