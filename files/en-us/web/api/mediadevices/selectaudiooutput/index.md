@@ -57,7 +57,7 @@ Access to the API is subject to the following constraints:
 - [Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
   The user has to interact with the page or a UI element for this feature to work.
 - Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Feature_Policy).
-- The user must explicitly grant permission to use the audio output device though a user-agent specific mechanism, or have previously granted permission.
+- The user must explicitly grant permission to use the audio output device through a user-agent specific mechanism, or have previously granted permission.
   Note that if access is denied by a permission policy it cannot be granted by a user permission.
 
 The permission status can be queried using the [Permissions API](/en-US/docs/Web/API/Permissions_API) method [`navigator.permissions.query()`](/en-US/docs/Web/API/Permissions/query), passing a permission descriptor with the `speaker-selection` permission.

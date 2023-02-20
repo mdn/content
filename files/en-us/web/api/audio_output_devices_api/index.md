@@ -35,7 +35,7 @@ The Audio Output Devices API extends the following APIs, adding the listed featu
 - [`HTMLMediaElement.setSinkId()`](/en-US/docs/Web/API/HTMLMediaElement/setSinkId)
   - : This method sets the ID of the audio device to use for output, which will be used if permitted.
 - [`HTMLMediaElement.sinkId`](/en-US/docs/Web/API/HTMLMediaElement/sinkId)
-  - : This property returns the unique ID of the audio device being used for output, or an empty string the default user agent device is being used.
+  - : This property returns the unique ID of the audio device being used for output, or an empty string if the default user agent device is being used.
 
 ## Security requirements
 
@@ -45,10 +45,10 @@ Access to [`MediaDevices.selectAudioOutput()`](/en-US/docs/Web/API/MediaDevices/
 - Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Feature_Policy).
 - [Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
   The user has to interact with the page or a UI element for this feature to work.
-- The user must explicitly grant permission to use the audio output device though a user-agent specific mechanism, or have previously granted permission.
+- The user must explicitly grant permission to use the audio output device through a user-agent specific mechanism, or have previously granted permission.
   Note that if access is denied by a permission policy it cannot be granted by a user permission.
 
-User permission to set the output device is also implicitly granted if the user has already granted permission to use a media input device in the same group, using [`MediaDevices.getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia))
+User permission to set the output device is also implicitly granted if the user has already granted permission to use a media input device in the same group, using [`MediaDevices.getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia).
 
 Other methods/properties also require a secure context and the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) permission policy.
 
