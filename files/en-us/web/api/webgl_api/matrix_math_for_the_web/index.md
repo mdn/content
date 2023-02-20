@@ -169,9 +169,7 @@ A really easy way to start using a matrix is to use the CSS {{cssxref("transform
 </div>
 ```
 
-Finally, for each of the examples, we will generate a 4×4 matrix, then update the `<div>`'s style to have a transform applied to it, set to a `matrix3d`.
-
-> **Note:** Bear in mind that even though the matrix is made up of 4 rows and 4 columns, it collapses into a single line of 16 values. Matrices are always stored in one-dimensional lists in JavaScript.
+Finally, for each example, we will generate a 4×4 matrix, then update the `<div>`'s style to have a transform applied to it, set to a `matrix3d`. Bear in mind that even though the matrix is made up of 4 rows and 4 columns, it collapses into a single line of 16 values. Matrices are always stored in one-dimensional lists in JavaScript.
 
 ```js
 // Create the matrix3d style property from a matrix array
