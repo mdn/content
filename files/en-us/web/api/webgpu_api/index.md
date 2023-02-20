@@ -2,12 +2,7 @@
 title: WebGPU API
 slug: Web/API/WebGPU_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - Landing
-  - Overview
-  - Reference
+status: experimental
 browser-compat:
   - api.GPU
 ---
