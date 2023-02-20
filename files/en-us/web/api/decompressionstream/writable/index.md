@@ -2,12 +2,6 @@
 title: DecompressionStream.writable
 slug: Web/API/DecompressionStream/writable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - writable
-  - DecompressionStream
 browser-compat: api.DecompressionStream.writable
 ---
 

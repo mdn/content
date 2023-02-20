@@ -2,9 +2,6 @@
 title: DOMMatrixReadOnly.translate()
 slug: Web/API/DOMMatrixReadOnly/translate
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.DOMMatrixReadOnly.translate
 ---
 

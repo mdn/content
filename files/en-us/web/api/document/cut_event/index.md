@@ -2,14 +2,6 @@
 title: 'Document: cut event'
 slug: Web/API/Document/cut_event
 page-type: web-api-event
-tags:
-  - API
-  - Clipboard API
-  - Document
-  - Event
-  - Reference
-  - Web
-  - cut
 browser-compat: api.Element.cut_event
 ---
 

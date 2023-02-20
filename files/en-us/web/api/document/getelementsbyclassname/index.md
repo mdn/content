@@ -2,14 +2,6 @@
 title: Document.getElementsByClassName()
 slug: Web/API/Document/getElementsByClassName
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Element Methods
-  - Gecko
-  - HTML
-  - Method
-  - Reference
 browser-compat: api.Document.getElementsByClassName
 ---
 

@@ -2,10 +2,8 @@
 title: 'Document: msthumbnailclick event'
 slug: Web/API/Document/msthumbnailclick_event
 page-type: web-api-event
-tags:
-  - msthumbnailclick
-  - Event
-  - Non-standard
+status:
+  - non-standard
 ---
 
 {{APIRef("DOM")}}

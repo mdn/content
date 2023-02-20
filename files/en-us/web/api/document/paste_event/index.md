@@ -2,14 +2,6 @@
 title: 'Document: paste event'
 slug: Web/API/Document/paste_event
 page-type: web-api-event
-tags:
-  - API
-  - Clipboard API
-  - Document
-  - Event
-  - Reference
-  - Web
-  - paste
 browser-compat: api.Element.paste_event
 ---
 

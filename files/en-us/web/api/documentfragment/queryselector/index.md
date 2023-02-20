@@ -2,12 +2,6 @@
 title: DocumentFragment.querySelector()
 slug: Web/API/DocumentFragment/querySelector
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DocumentFragment
-  - Method
-  - Reference
 browser-compat: api.DocumentFragment.querySelector
 ---
 

@@ -2,16 +2,6 @@
 title: DataTransferItem.webkitGetAsEntry()
 slug: Web/API/DataTransferItem/webkitGetAsEntry
 page-type: web-api-instance-method
-tags:
-  - API
-  - DataTransferItem
-  - File and Directory Entries API
-  - Files
-  - Method
-  - Offline
-  - Reference
-  - drag and drop
-  - getAsEntry
 browser-compat: api.DataTransferItem.webkitGetAsEntry
 ---
 

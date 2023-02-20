@@ -2,13 +2,8 @@
 title: DeprecationReportBody
 slug: Web/API/DeprecationReportBody
 page-type: web-api-interface
-tags:
-  - API
-  - DeprecationReportBody
-  - Experimental
-  - Interface
-  - Reference
-  - Reporting API
+status:
+  - experimental
 browser-compat: api.DeprecationReportBody
 ---
 

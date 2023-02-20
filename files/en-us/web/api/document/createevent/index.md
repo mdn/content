@@ -2,11 +2,6 @@
 title: Document.createEvent()
 slug: Web/API/Document/createEvent
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
 browser-compat: api.Document.createEvent
 ---
 

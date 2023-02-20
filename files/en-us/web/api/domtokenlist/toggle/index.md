@@ -2,9 +2,6 @@
 title: DOMTokenList.toggle()
 slug: Web/API/DOMTokenList/toggle
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.DOMTokenList.toggle
 ---
 

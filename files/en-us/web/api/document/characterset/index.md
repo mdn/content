@@ -2,13 +2,6 @@
 title: Document.characterSet
 slug: Web/API/Document/characterSet
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.Document.characterSet
 ---
 

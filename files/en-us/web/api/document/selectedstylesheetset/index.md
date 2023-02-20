@@ -2,15 +2,9 @@
 title: Document.selectedStyleSheetSet
 slug: Web/API/Document/selectedStyleSheetSet
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - DOM
-  - Property
-  - Reference
-  - Stylesheets
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Document.selectedStyleSheetSet
 ---
 

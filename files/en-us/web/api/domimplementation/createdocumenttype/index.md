@@ -2,12 +2,6 @@
 title: DOMImplementation.createDocumentType()
 slug: Web/API/DOMImplementation/createDocumentType
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOMImplementation
-  - Method
-  - Reference
 browser-compat: api.DOMImplementation.createDocumentType
 ---
 

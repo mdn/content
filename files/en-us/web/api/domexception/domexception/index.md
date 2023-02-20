@@ -2,12 +2,6 @@
 title: DOMException()
 slug: Web/API/DOMException/DOMException
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOMException
-  - Reference
-  - Polyfill
 browser-compat: api.DOMException.DOMException
 ---
 

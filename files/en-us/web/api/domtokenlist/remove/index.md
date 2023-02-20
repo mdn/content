@@ -2,13 +2,6 @@
 title: DOMTokenList.remove()
 slug: Web/API/DOMTokenList/remove
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOMTokenList
-  - Method
-  - Reference
-  - remove
 browser-compat: api.DOMTokenList.remove
 ---
 

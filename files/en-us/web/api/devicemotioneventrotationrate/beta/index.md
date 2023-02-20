@@ -2,14 +2,6 @@
 title: 'DeviceMotionEventRotationRate: beta'
 slug: Web/API/DeviceMotionEventRotationRate/beta
 page-type: web-api-instance-property
-tags:
-  - API
-  - Device Orientation
-  - Property
-  - Mobile
-  - Motion
-  - Orientation
-  - Reference
 browser-compat: api.DeviceMotionEventRotationRate.beta
 ---
 

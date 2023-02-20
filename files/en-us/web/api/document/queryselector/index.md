@@ -2,17 +2,6 @@
 title: Document.querySelector()
 slug: Web/API/Document/querySelector
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Selectors
-  - DOM
-  - DOM Elements
-  - Document
-  - Method
-  - Reference
-  - Selector API
-  - Selectors
-  - querySelector
 browser-compat: api.Document.querySelector
 ---
 

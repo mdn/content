@@ -2,13 +2,6 @@
 title: DocumentFragment
 slug: Web/API/DocumentFragment
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DocumentFragment
-  - Interface
-  - Reference
-  - Web Components
 browser-compat: api.DocumentFragment
 ---
 

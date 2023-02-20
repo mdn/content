@@ -2,13 +2,6 @@
 title: Document.documentElement
 slug: Web/API/Document/documentElement
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Reference
-  - root
 browser-compat: api.Document.documentElement
 ---
 

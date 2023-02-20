@@ -2,15 +2,6 @@
 title: DataTransferItem.type
 slug: Web/API/DataTransferItem/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - DataTransferItem
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Property
-  - Reference
-  - Type
-  - drag and drop
 browser-compat: api.DataTransferItem.type
 ---
 

@@ -2,16 +2,6 @@
 title: Document.getElementById()
 slug: Web/API/Document/getElementById
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Elements
-  - Method
-  - Reference
-  - Web
-  - getElementById
-  - id
 browser-compat: api.Document.getElementById
 ---
 

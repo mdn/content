@@ -2,13 +2,6 @@
 title: DedicatedWorkerGlobalScope.postMessage()
 slug: Web/API/DedicatedWorkerGlobalScope/postMessage
 page-type: web-api-instance-method
-tags:
-  - API
-  - DedicatedWorkerGlobalScope
-  - Method
-  - Reference
-  - Web Workers
-  - postMessage
 browser-compat: api.DedicatedWorkerGlobalScope.postMessage
 ---
 

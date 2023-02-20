@@ -2,14 +2,8 @@
 title: Document.linkColor
 slug: Web/API/Document/linkColor
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - NeedsSpecTable
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.Document.linkColor
 ---
 

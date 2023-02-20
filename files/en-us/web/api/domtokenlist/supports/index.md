@@ -2,9 +2,6 @@
 title: DOMTokenList.supports()
 slug: Web/API/DOMTokenList/supports
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.DOMTokenList.supports
 ---
 

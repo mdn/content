@@ -2,13 +2,8 @@
 title: DeprecationReportBody.id
 slug: Web/API/DeprecationReportBody/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - id
-  - Experimental
-  - DeprecationReportBody
+status:
+  - experimental
 browser-compat: api.DeprecationReportBody.id
 ---
 

@@ -2,17 +2,6 @@
 title: Document.fullscreenElement
 slug: Web/API/Document/fullscreenElement
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - Fullscreen
-  - Fullscreen API
-  - Graphics
-  - Property
-  - Read-only
-  - Reference
-  - fullscreenElement
-  - screen
 browser-compat: api.Document.fullscreenElement
 ---
 

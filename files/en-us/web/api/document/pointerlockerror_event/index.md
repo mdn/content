@@ -2,12 +2,6 @@
 title: 'Document: pointerlockerror event'
 slug: Web/API/Document/pointerlockerror_event
 page-type: web-api-event
-tags:
-  - Document
-  - Event
-  - Reference
-  - Web
-  - pointerlockerror
 browser-compat: api.Document.pointerlockerror_event
 ---
 
