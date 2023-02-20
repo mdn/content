@@ -47,7 +47,7 @@ const matrix = new DOMMatrix([
   -Math.sin(angle) * scaleY,
   Math.cos(angle) * scaleY,
   translateX,
-  translateY
+  translateY,
 ]);
 const transformedPoint = point.matrixTransform(matrix);
 ```

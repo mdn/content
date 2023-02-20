@@ -51,7 +51,7 @@ The copied `importedNode` in the scope of the importing document.
 ## Examples
 
 ```js
-const iframe  = document.querySelector("iframe");
+const iframe = document.querySelector("iframe");
 const oldNode = iframe.contentWindow.document.getElementById("myNode");
 const newNode = document.importNode(oldNode, true);
 document.getElementById("container").appendChild(newNode);

@@ -35,7 +35,7 @@ This example looks through the list of images and finds one whose name is
 
 ```js
 for (const image of document.images) {
-  if (image.src === 'banner.gif') {
+  if (image.src === "banner.gif") {
     console.log("Found the banner");
   }
 }

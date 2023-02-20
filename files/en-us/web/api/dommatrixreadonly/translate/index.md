@@ -56,7 +56,9 @@ applied to the blue square as a `transform`. The red square is left in place.
 ```js
 const matrix = new DOMMatrixReadOnly().translate(25, 25);
 
-document.querySelector('#transformed').setAttribute('transform', matrix.toString());
+document
+  .querySelector("#transformed")
+  .setAttribute("transform", matrix.toString());
 ```
 
 {{ EmbedLiveSample('Examples', '250', '250',

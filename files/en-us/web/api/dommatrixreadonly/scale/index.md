@@ -93,8 +93,12 @@ if (browserExpectsSixParamScale) {
   scaledMatrixWithOrigin = matrix.scale(0.5, 0.5, 1, 25, 25, 0);
 }
 
-document.querySelector('#transformed').setAttribute('transform', scaledMatrix.toString());
-document.querySelector('#transformedOrigin').setAttribute('transform', scaledMatrixWithOrigin.toString());
+document
+  .querySelector("#transformed")
+  .setAttribute("transform", scaledMatrix.toString());
+document
+  .querySelector("#transformedOrigin")
+  .setAttribute("transform", scaledMatrixWithOrigin.toString());
 ```
 
 {{ EmbedLiveSample('Examples', '250', '250',

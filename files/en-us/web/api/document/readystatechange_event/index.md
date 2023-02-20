@@ -16,9 +16,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('readystatechange', (event) => { });
+addEventListener("readystatechange", (event) => {});
 
-onreadystatechange = (event) => { };
+onreadystatechange = (event) => {};
 ```
 
 ## Event type
@@ -83,26 +83,26 @@ button {
 #### JavaScript
 
 ```js
-const log = document.querySelector('.event-log-contents');
-const reload = document.querySelector('#reload');
+const log = document.querySelector(".event-log-contents");
+const reload = document.querySelector("#reload");
 
-reload.addEventListener('click', () => {
-  log.textContent ='';
+reload.addEventListener("click", () => {
+  log.textContent = "";
   setTimeout(() => {
-      window.location.reload(true);
+    window.location.reload(true);
   }, 200);
 });
 
-window.addEventListener('load', (event) => {
-    log.textContent = `${log.textContent}load\n`;
+window.addEventListener("load", (event) => {
+  log.textContent = `${log.textContent}load\n`;
 });
 
-document.addEventListener('readystatechange', (event) => {
-    log.textContent = `${log.textContent}readystate: ${document.readyState}\n`;
+document.addEventListener("readystatechange", (event) => {
+  log.textContent = `${log.textContent}readystate: ${document.readyState}\n`;
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    log.textContent = `${log.textContent}DOMContentLoaded\n`;
+document.addEventListener("DOMContentLoaded", (event) => {
+  log.textContent = `${log.textContent}DOMContentLoaded\n`;
 });
 ```
 

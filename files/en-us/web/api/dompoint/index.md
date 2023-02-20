@@ -54,9 +54,17 @@ function onXRFrame(time, xrFrame) {
     let position = viewerPose.transform.position;
     let orientation = viewerPose.transform.orientation;
 
-    console.log(`XR Viewer Position: {x: ${roundToTwo(position.x)}, y: ${roundToTwo(position.y)}, z: ${roundToTwo(position.z)}`);
+    console.log(
+      `XR Viewer Position: {x: ${roundToTwo(position.x)}, y: ${roundToTwo(
+        position.y
+      )}, z: ${roundToTwo(position.z)}`
+    );
 
-    console.log(`XR Viewer Orientation: {x: ${roundToTwo(orientation.x)}, y: ${roundToTwo(orientation.y)}, z: ${roundToTwo(orientation.z)}, w: ${roundToTwo(orientation.w)}`);
+    console.log(
+      `XR Viewer Orientation: {x: ${roundToTwo(orientation.x)}, y: ${roundToTwo(
+        orientation.y
+      )}, z: ${roundToTwo(orientation.z)}, w: ${roundToTwo(orientation.w)}`
+    );
   }
 }
 ```

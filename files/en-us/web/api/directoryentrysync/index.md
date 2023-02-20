@@ -24,13 +24,13 @@ If you want to create subdirectories, you have to create each child directory in
 The `getFile()` method returns a `FileEntrySync`, which represents a file in the file system. The following creates an empty file called `logs.txt` in the root directory.
 
 ```js
-const fileEntry = fs.root.getFile('logs.txt', {create: true});
+const fileEntry = fs.root.getFile("logs.txt", { create: true });
 ```
 
 The `getDirectory()` method returns a `DirectoryEntrySync`, which represents a file in the file system. The following creates a new directory called `project_dir` in the root directory.
 
 ```js
-const dirEntry = fs.root.getDirectory('project_dir', {create: true});
+const dirEntry = fs.root.getDirectory("project_dir", { create: true });
 ```
 
 ## Method overview
@@ -49,7 +49,7 @@ Creates a new `DirectoryReaderSync` to read entries from this directory.
 #### Syntax
 
 ```js
-createReader()
+createReader();
 ```
 
 ##### Returns

@@ -21,7 +21,7 @@ An {{domxref("Element")}} that is the last child `Element` of the object, or `nu
 let fragment = new DocumentFragment();
 fragment.lastElementChild; // null
 
-let paragraph = document.createElement('p');
+let paragraph = document.createElement("p");
 fragment.appendChild(paragraph);
 
 fragment.lastElementChild; // <p>

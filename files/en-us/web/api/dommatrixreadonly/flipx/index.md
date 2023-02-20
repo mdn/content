@@ -38,10 +38,10 @@ The JavaScript first creates an identity matrix, then uses the `flipX()` method 
 #### JavaScript
 
 ```js
-const flipped = document.getElementById('flipped');
+const flipped = document.getElementById("flipped");
 const matrix = new DOMMatrixReadOnly();
 const flippedMatrix = matrix.flipX();
-flipped.setAttribute('transform', flippedMatrix.toString());
+flipped.setAttribute("transform", flippedMatrix.toString());
 ```
 
 #### Result

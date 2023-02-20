@@ -1,5 +1,5 @@
 ---
-title: 'DeviceMotionEventRotationRate: beta'
+title: "DeviceMotionEventRotationRate: beta"
 slug: Web/API/DeviceMotionEventRotationRate/beta
 page-type: web-api-instance-property
 browser-compat: api.DeviceMotionEventRotationRate.beta

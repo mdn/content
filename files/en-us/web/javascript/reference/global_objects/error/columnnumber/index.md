@@ -1,5 +1,5 @@
 ---
-title: Error.prototype.columnNumber
+title: "Error: columnNumber"
 slug: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
 page-type: javascript-instance-data-property
 tags:

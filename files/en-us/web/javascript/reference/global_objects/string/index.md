@@ -283,7 +283,9 @@ You must be careful which level of characters you are iterating on. For example,
 
 ## Instance properties
 
-- {{jsxref("String.prototype.length")}}
+These properties are own properties of each `String` instance.
+
+- {{jsxref("String/length", "length")}}
   - : Reflects the `length` of the string. Read-only.
 
 ## Instance methods

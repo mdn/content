@@ -22,13 +22,13 @@ Given an {{HTMLElement("ul")}} (list) element with the ID "sheetList", you can p
 it with the names of all the available style sheet sets with code like this:
 
 ```js
-const list = document.getElementById('sheetList');
+const list = document.getElementById("sheetList");
 const sheets = document.styleSheetSets;
 
-list.textContent = '';
+list.textContent = "";
 
 for (const sheet of sheets) {
-  const item = document.createElement('li');
+  const item = document.createElement("li");
   item.textContent = sheet;
   list.appendChild(item);
 }

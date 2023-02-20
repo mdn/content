@@ -34,7 +34,7 @@ new DOMRectReadOnly(x, y, width, height)
 To create a new `DOMPoint`, you could run a line of code like so:
 
 ```js
-const myDOMRect = new DOMRectReadOnly(0, 0, 100, 100)
+const myDOMRect = new DOMRectReadOnly(0, 0, 100, 100);
 // running 'myDOMRect' in the console would then return
 // DOMRect { x: 0, y: 0, width: 100, height: 100, top: 0, right: 100, bottom: 100, left: 0 }
 ```

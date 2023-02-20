@@ -22,6 +22,8 @@ Note that `GeneratorFunction` is _not_ a global object. It can be obtained with 
 const GeneratorFunction = function* () {}.constructor;
 ```
 
+`GeneratorFunction` is a subclass of {{jsxref("Function")}}.
+
 {{EmbedInteractiveExample("pages/js/functionasterisk-function.html", "taller")}}
 
 ## Constructor

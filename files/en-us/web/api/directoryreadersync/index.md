@@ -40,7 +40,7 @@ worker.onmessage = (e) => {
   });
 };
 
-worker.postMessage({cmd: "list"});
+worker.postMessage({ cmd: "list" });
 ```
 
 The following is `worker.js` code that gets the contents of the directory.
@@ -87,7 +87,7 @@ self.onmessage = (e) => {
 
     getAllEntries(fs.root.createReader());
 
-    self.postMessage({entries: paths});
+    self.postMessage({ entries: paths });
   } catch (e) {
     onError(e);
   }

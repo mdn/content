@@ -1,5 +1,5 @@
 ---
-title: 'Document: msthumbnailclick event'
+title: "Document: msthumbnailclick event"
 slug: Web/API/Document/msthumbnailclick_event
 page-type: web-api-event
 status:
@@ -44,11 +44,10 @@ Pointer to an IHTMLEventObj interface for the current event.
 ## Example
 
 ```js
-function thumbnailClickHandler(evt)
-{
-    alert(`Clicked button: ${evt.buttonID}`);
+function thumbnailClickHandler(evt) {
+  alert(`Clicked button: ${evt.buttonID}`);
 }
-document.addEventListener('msthumbnailclick', thumbnailClickHandler);
+document.addEventListener("msthumbnailclick", thumbnailClickHandler);
 ```
 
 ## Example 2
@@ -62,7 +61,7 @@ window.external.msSiteModeClearIconOverlay();
 
 // pinned icons on your taskbar can be instructed to trigger specific events on your site from the taskbar
 // add an event
-handlerdocument.addEventListener('msthumbnailclick', onButtonClicked, false);
+handlerdocument.addEventListener("msthumbnailclick", onButtonClicked, false);
 
 // add the buttons
 const btnPlay = window.external.msSiteModeAddThumbBarButton(iconUri, toolTip);
@@ -72,10 +71,12 @@ window.external.msSiteModeShowThumbBar();
 
 // call a JavaScript function when the button is pressed
 function onButtonClicked(e) {
-   switch (e.buttonID) {
-     case btnPlay: play();
-     break;}
- }
+  switch (e.buttonID) {
+    case btnPlay:
+      play();
+      break;
+  }
+}
 ```
 
 ## See also

@@ -53,10 +53,12 @@ Now the JavaScript:
 const span = document.querySelector("span");
 const classes = span.classList;
 
-span.addEventListener('click', () => {
+span.addEventListener("click", () => {
   const result = classes.toggle("c");
-  span.textContent = `'c' ${result ? "added" : "removed"}; classList is now "${classes}".`;
-})
+  span.textContent = `'c' ${
+    result ? "added" : "removed"
+  }; classList is now "${classes}".`;
+});
 ```
 
 The output looks like this and it will change each time you click on the text:

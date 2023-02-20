@@ -40,7 +40,7 @@ None ({{jsxref("undefined")}}).
 let docType = document.implementation.createDocumentType("html", "", "");
 let myDoc = document.implementation.createDocument("", "", docType);
 
-docType.after(document.createElement('html'));
+docType.after(document.createElement("html"));
 
 myDoc.childNodes;
 // NodeList [<!DOCTYPE html>, <html>]

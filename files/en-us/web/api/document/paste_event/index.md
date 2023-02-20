@@ -1,5 +1,5 @@
 ---
-title: 'Document: paste event'
+title: "Document: paste event"
 slug: Web/API/Document/paste_event
 page-type: web-api-event
 browser-compat: api.Element.paste_event
@@ -16,9 +16,9 @@ The original target for this event is the {{domxref("Element")}} that was the in
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('paste', (event) => { });
+addEventListener("paste", (event) => {});
 
-onpaste = (event) => { };
+onpaste = (event) => {};
 ```
 
 ## Event type
@@ -41,8 +41,8 @@ Alternatively, you can use the `Document.onpaste` event handler property to esta
 
 ```js
 document.onpaste = (event) => {
- /* the session has shut down */
-}
+  /* the session has shut down */
+};
 ```
 
 ## Specifications
