@@ -2,23 +2,6 @@
 title: MutationObserver.disconnect()
 slug: Web/API/MutationObserver/disconnect
 page-type: web-api-instance-method
-tags:
-  - API
-  - Changes
-  - DOM
-  - DOM Changes
-  - DOM Reference
-  - DOM Tree
-  - Disconnect
-  - Method
-  - Mutation Observer
-  - Mutation Observer API
-  - MutationObserver
-  - Observing
-  - Reference
-  - Watching
-  - mutation
-  - stop
 browser-compat: api.MutationObserver.disconnect
 ---
 

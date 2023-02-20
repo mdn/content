@@ -2,14 +2,6 @@
 title: MessageChannel.port2
 slug: Web/API/MessageChannel/port2
 page-type: web-api-instance-property
-tags:
-  - API
-  - Channel messaging
-  - HTML
-  - MessageChannel
-  - Property
-  - Reference
-  - port2
 browser-compat: api.MessageChannel.port2
 ---
 

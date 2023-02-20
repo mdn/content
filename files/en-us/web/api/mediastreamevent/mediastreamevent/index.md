@@ -2,13 +2,9 @@
 title: MediaStreamEvent()
 slug: Web/API/MediaStreamEvent/MediaStreamEvent
 page-type: web-api-constructor
-tags:
-  - Constructor
-  - Deprecated
-  - Non-standard
-  - MediaStreamEvent
-  - Reference
-  - WebRTC
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.MediaStreamEvent.MediaStreamEvent
 ---
 

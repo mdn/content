@@ -2,14 +2,6 @@
 title: MIDIInput
 slug: Web/API/MIDIInput
 page-type: web-api-interface
-tags:
-  - API
-  - Draft
-  - Interface
-  - MIDIInput
-  - NeedsExample
-  - Reference
-  - Web MIDI API
 browser-compat: api.MIDIInput
 ---
 

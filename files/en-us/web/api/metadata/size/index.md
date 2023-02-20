@@ -2,17 +2,9 @@
 title: Metadata.size
 slug: Web/API/Metadata/size
 page-type: web-api-instance-property
-tags:
-  - API
-  - File and Directory Entries API
-  - Files
-  - Non-standard
-  - Offline
-  - Property
-  - Reference
-  - metadata
-  - size
-  - Experimental
+status:
+  - experimental
+  - non-standard
 browser-compat: api.Metadata.size
 ---
 

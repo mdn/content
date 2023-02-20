@@ -2,14 +2,9 @@
 title: MediaStreamTrackGenerator.writable
 slug: Web/API/MediaStreamTrackGenerator/writable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - writable
-  - MediaStreamTrackGenerator
-  - Experimental
-  - Non-standard
+status:
+  - experimental
+  - non-standard
 browser-compat: api.MediaStreamTrackGenerator.writable
 ---
 

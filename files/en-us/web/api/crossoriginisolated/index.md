@@ -2,11 +2,6 @@
 title: crossOriginIsolated
 slug: Web/API/crossOriginIsolated
 page-type: web-api-global-property
-tags:
-  - API
-  - Property
-  - Reference
-  - crossOriginIsolated
 browser-compat: api.crossOriginIsolated
 ---
 

@@ -2,11 +2,6 @@
 title: TaskSignal
 slug: Web/API/TaskSignal
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - TaskSignal
 browser-compat: api.TaskSignal
 ---
 

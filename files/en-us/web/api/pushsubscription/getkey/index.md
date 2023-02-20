@@ -2,15 +2,6 @@
 title: PushSubscription.getKey()
 slug: Web/API/PushSubscription/getKey
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Push
-  - Push API
-  - PushSubscription
-  - Reference
-  - Service Workers
-  - getKey
 browser-compat: api.PushSubscription.getKey
 ---
 

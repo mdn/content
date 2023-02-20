@@ -2,19 +2,8 @@
 title: XRRenderState.depthFar
 slug: Web/API/XRRenderState/depthFar
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - depthFar
+status:
+  - experimental
 browser-compat: api.XRRenderState.depthFar
 ---
 

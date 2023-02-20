@@ -1,6 +1,7 @@
 ---
 title: tabs.onMoved
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onMoved
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

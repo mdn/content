@@ -2,13 +2,6 @@
 title: GeolocationCoordinates.altitude
 slug: Web/API/GeolocationCoordinates/altitude
 page-type: web-api-instance-property
-tags:
-  - API
-  - Geolocation API
-  - GeolocationCoordinates
-  - Property
-  - Secure context
-  - altitude
 browser-compat: api.GeolocationCoordinates.altitude
 ---
 

@@ -2,10 +2,6 @@
 title: 'SpeechRecognition: speechend event'
 slug: Web/API/SpeechRecognition/speechend_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Web Speech API
 browser-compat: api.SpeechRecognition.speechend_event
 ---
 

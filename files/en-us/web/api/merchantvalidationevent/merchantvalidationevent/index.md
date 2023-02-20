@@ -2,18 +2,8 @@
 title: MerchantValidationEvent()
 slug: Web/API/MerchantValidationEvent/MerchantValidationEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Commerce
-  - Constructor
-  - Merchant Validation
-  - MerchantValidationEvent
-  - Merchants
-  - Payment Request API
-  - Payment Requests
-  - Payments
-  - Deprecated
-  - Reference
+status:
+  - deprecated
 browser-compat: api.MerchantValidationEvent.MerchantValidationEvent
 ---
 

@@ -2,15 +2,6 @@
 title: MediaSession
 slug: Web/API/MediaSession
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - Media
-  - Media Session API
-  - MediaSession
-  - Reference
-  - Video
 browser-compat: api.MediaSession
 ---
 

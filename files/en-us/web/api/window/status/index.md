@@ -2,15 +2,8 @@
 title: Window.status
 slug: Web/API/Window/status
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - NeedsSpecTable
-  - Property
-  - Reference
-  - Window
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Window.status
 ---
 

@@ -2,17 +2,6 @@
 title: MediaTrackSupportedConstraints.groupId
 slug: Web/API/MediaTrackSupportedConstraints/groupId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - Web
-  - WebRTC
-  - groupId
 browser-compat: api.MediaTrackSupportedConstraints.groupId
 ---
 

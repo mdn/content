@@ -2,12 +2,6 @@
 title: VTTCue.size
 slug: Web/API/VTTCue/size
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - size
-  - VTTCue
 browser-compat: api.VTTCue.size
 ---
 

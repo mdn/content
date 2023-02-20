@@ -2,12 +2,6 @@
 title: WEBGL_debug_shaders.getTranslatedShaderSource()
 slug: Web/API/WEBGL_debug_shaders/getTranslatedShaderSource
 page-type: webgl-extension-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.WEBGL_debug_shaders.getTranslatedShaderSource
 ---
 

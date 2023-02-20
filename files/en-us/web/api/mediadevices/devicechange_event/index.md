@@ -2,16 +2,6 @@
 title: "MediaDevices: devicechange event"
 slug: Web/API/MediaDevices/devicechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaDevices
-  - Reference
-  - Video
-  - Event
 browser-compat: api.MediaDevices.devicechange_event
 ---
 

@@ -2,20 +2,6 @@
 title: MediaDevices.getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Capture
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaDevices
-  - Method
-  - Photos
-  - Reference
-  - Video
-  - WebRTC
-  - getusermedia
 browser-compat: api.MediaDevices.getUserMedia
 ---
 

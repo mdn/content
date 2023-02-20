@@ -2,14 +2,6 @@
 title: MessageEvent.origin
 slug: Web/API/MessageEvent/origin
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - MessageEvent
-  - Property
-  - Reference
-  - messaging
-  - origin
 browser-compat: api.MessageEvent.origin
 ---
 

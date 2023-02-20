@@ -2,18 +2,6 @@
 title: MutationObserver()
 slug: Web/API/MutationObserver/MutationObserver
 page-type: web-api-constructor
-tags:
-  - API
-  - Changes
-  - Constructor
-  - DOM
-  - DOM Changes
-  - DOM Reference
-  - DOM Tree
-  - Mutation Observer API
-  - MutationObserver
-  - Observing
-  - Reference
 browser-compat: api.MutationObserver.MutationObserver
 ---
 

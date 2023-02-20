@@ -2,13 +2,9 @@
 title: MediaStreamTrackGenerator
 slug: Web/API/MediaStreamTrackGenerator
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - MediaStreamTrackGenerator
-  - Experimental
-  - Non-standard
+status:
+  - experimental
+  - non-standard
 browser-compat: api.MediaStreamTrackGenerator
 ---
 

@@ -2,16 +2,6 @@
 title: Recording a media element
 slug: Web/API/MediaStream_Recording_API/Recording_a_media_element
 page-type: guide
-tags:
-  - API
-  - Audio
-  - Example
-  - Guide
-  - Media
-  - Media Recording
-  - MediaStream Recording
-  - Tutorial
-  - Video
 ---
 
 {{DefaultAPISidebar("MediaStream Recording")}}

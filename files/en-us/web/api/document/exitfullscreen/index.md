@@ -2,18 +2,6 @@
 title: Document.exitFullscreen()
 slug: Web/API/Document/exitFullscreen
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Full
-  - Fullscreen
-  - Fullscreen API
-  - Method
-  - Reference
-  - exitFullscreen
-  - fullscreen
-  - screen
 browser-compat: api.Document.exitFullscreen
 ---
 
@@ -49,13 +37,14 @@ presentation whenever the mouse button is clicked within it.
 ```js
 document.onclick = (event) => {
   if (document.fullscreenElement) {
-    document.exitFullscreen()
+    document
+      .exitFullscreen()
       .then(() => console.log("Document Exited from Full screen mode"))
-      .catch((err) => console.error(err))
+      .catch((err) => console.error(err));
   } else {
     document.documentElement.requestFullscreen();
   }
-}
+};
 ```
 
 > **Note:** For a more complete example, see the

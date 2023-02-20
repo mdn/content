@@ -2,15 +2,6 @@
 title: MediaMetadata
 slug: Web/API/MediaMetadata
 page-type: web-api-interface
-tags:
-  - Audio
-  - Interface
-  - Media
-  - Media Session API
-  - MediaMetadata
-  - MediaSession
-  - Reference
-  - Video
 browser-compat: api.MediaMetadata
 ---
 

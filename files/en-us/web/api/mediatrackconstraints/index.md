@@ -2,21 +2,6 @@
 title: MediaTrackConstraints
 slug: Web/API/MediaTrackConstraints
 page-type: web-api-interface
-tags:
-  - API
-  - Constraints
-  - Dictionary
-  - Interface
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - Reference
-  - Screen Sharing
-  - Screen Sharing API
-  - Sharing
-  - WebRTC
-  - screen
 browser-compat: api.MediaTrackConstraints
 ---
 

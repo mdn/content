@@ -2,13 +2,6 @@
 title: Request.json()
 slug: Web/API/Request/json
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch
-  - JSON
-  - Method
-  - Reference
-  - Request
 browser-compat: api.Request.json
 ---
 

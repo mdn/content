@@ -2,12 +2,8 @@
 title: Highlight
 slug: Web/API/Highlight
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - CSS Custom Highlight API
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Highlight
 ---
 

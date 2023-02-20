@@ -2,13 +2,6 @@
 title: AnimationEvent.animationName
 slug: Web/API/AnimationEvent/animationName
 page-type: web-api-instance-property
-tags:
-  - API
-  - AnimationEvent
-  - CSSOM
-  - Property
-  - Reference
-  - Web Animations
 browser-compat: api.AnimationEvent.animationName
 ---
 

@@ -2,17 +2,6 @@
 title: MediaSource.addSourceBuffer()
 slug: Web/API/MediaSource/addSourceBuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media
-  - Media Source Extensions
-  - MediaSource
-  - Method
-  - Reference
-  - Video
-  - addSourceBuffer
 browser-compat: api.MediaSource.addSourceBuffer
 ---
 

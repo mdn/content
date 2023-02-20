@@ -2,12 +2,6 @@
 title: MIDIAccess.inputs
 slug: Web/API/MIDIAccess/inputs
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - inputs
-  - MIDIAccess
 browser-compat: api.MIDIAccess.inputs
 ---
 

@@ -2,13 +2,6 @@
 title: 'Window: beforeinstallprompt event'
 slug: Web/API/Window/beforeinstallprompt_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Manifest
-  - Reference
-  - Window
-  - beforeinstallprompt
 browser-compat: api.Window.beforeinstallprompt_event
 ---
 

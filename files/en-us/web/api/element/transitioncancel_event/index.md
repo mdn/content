@@ -1,14 +1,6 @@
 ---
 title: 'Element: transitioncancel event'
 slug: Web/API/Element/transitioncancel_event
-tags:
-  - CSS Transitions
-  - Event
-  - HTML DOM
-  - Element
-  - Reference
-  - TransitionEvent
-  - transitioncancel
 browser-compat: api.Element.transitioncancel_event
 page-type: web-api-event
 ---

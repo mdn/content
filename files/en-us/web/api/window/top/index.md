@@ -2,14 +2,6 @@
 title: Window.top
 slug: Web/API/Window/top
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Window
 browser-compat: api.Window.top
 ---
 

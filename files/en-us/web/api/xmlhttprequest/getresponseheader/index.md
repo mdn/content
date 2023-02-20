@@ -2,19 +2,6 @@
 title: XMLHttpRequest.getResponseHeader()
 slug: Web/API/XMLHttpRequest/getResponseHeader
 page-type: web-api-instance-method
-tags:
-  - API
-  - Examine Header
-  - Get Header
-  - HTTP
-  - HTTP Header
-  - Headers
-  - Method
-  - Reference
-  - XHR
-  - XHR Header
-  - XMLHttpRequest
-  - getResponseHeader
 browser-compat: api.XMLHttpRequest.getResponseHeader
 ---
 

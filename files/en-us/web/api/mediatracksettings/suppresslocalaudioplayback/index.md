@@ -2,12 +2,8 @@
 title: MediaTrackSettings.suppressLocalAudioPlayback
 slug: Web/API/MediaTrackSettings/suppressLocalAudioPlayback
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - suppressLocalAudioPlayback
+status:
+  - experimental
 browser-compat: api.MediaTrackSettings.suppressLocalAudioPlayback
 ---
 

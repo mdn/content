@@ -2,15 +2,6 @@
 title: SpeechRecognitionResult.length
 slug: Web/API/SpeechRecognitionResult/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechRecognitionResult
-  - Web Speech API
-  - length
-  - recognition
-  - speech
 browser-compat: api.SpeechRecognitionResult.length
 ---
 

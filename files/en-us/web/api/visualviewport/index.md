@@ -2,13 +2,6 @@
 title: VisualViewport
 slug: Web/API/VisualViewport
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - Visual Viewport API
-  - VisualViewport
-  - viewport
 browser-compat: api.VisualViewport
 ---
 

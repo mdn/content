@@ -2,16 +2,6 @@
 title: MediaMetadata.artist
 slug: Web/API/MediaMetadata/artist
 page-type: web-api-instance-property
-tags:
-  - Audio
-  - Media
-  - Media Session API
-  - MediaMetadata
-  - Property
-  - Reference
-  - Video
-  - artist
-  - Property
 browser-compat: api.MediaMetadata.artist
 ---
 

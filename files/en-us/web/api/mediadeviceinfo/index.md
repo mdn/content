@@ -2,18 +2,6 @@
 title: MediaDeviceInfo
 slug: Web/API/MediaDeviceInfo
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - Media
-  - Media Device Info
-  - Media Devices
-  - MediaDevicesInfo
-  - Reference
-  - Video
-  - WebRTC
-  - WebRTC API
 browser-compat: api.MediaDeviceInfo
 ---
 

@@ -2,13 +2,8 @@
 title: CookieStore.get()
 slug: Web/API/CookieStore/get
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - get()
-  - CookieStore
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CookieStore.get
 ---
 

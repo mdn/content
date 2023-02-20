@@ -2,13 +2,8 @@
 title: BarcodeDetector.getSupportedFormats()
 slug: Web/API/BarcodeDetector/getSupportedFormats
 page-type: web-api-static-method
-tags:
-  - Barcode Detection API
-  - BarcodeDetector
-  - Method
-  - barcode
-  - shape detection
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BarcodeDetector.getSupportedFormats
 ---
 

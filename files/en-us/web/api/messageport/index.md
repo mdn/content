@@ -2,13 +2,6 @@
 title: MessagePort
 slug: Web/API/MessagePort
 page-type: web-api-interface
-tags:
-  - API
-  - Channel messaging
-  - HTML
-  - Interface
-  - MessagePort
-  - Reference
 browser-compat: api.MessagePort
 ---
 
@@ -16,7 +9,7 @@ browser-compat: api.MessagePort
 
 The **`MessagePort`** interface of the [Channel Messaging API](/en-US/docs/Web/API/Channel_Messaging_API) represents one of the two ports of a {{domxref("MessageChannel")}}, allowing messages to be sent from one port and listening out for them arriving at the other.
 
-`MessagePort` is a {{glossary("Transferable objects","transferable object")}}.
+`MessagePort` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 {{AvailableInWorkers}}
 

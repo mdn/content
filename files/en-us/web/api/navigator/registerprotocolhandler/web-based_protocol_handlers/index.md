@@ -2,10 +2,6 @@
 title: Web-based protocol handlers
 slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 page-type: guide
-tags:
-  - Advanced
-  - HTML
-  - Web-Based Protocol Handlers
 ---
 
 ## Background

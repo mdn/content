@@ -2,15 +2,8 @@
 title: MediaQueryList.addListener()
 slug: Web/API/MediaQueryList/addListener
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Media Queries
-  - MediaQueryList
-  - Method
-  - Reference
-  - addListener
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.MediaQueryList.addListener
 ---
 

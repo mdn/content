@@ -2,13 +2,6 @@
 title: MessageChannel
 slug: Web/API/MessageChannel
 page-type: web-api-interface
-tags:
-  - API
-  - Channel Messaging API
-  - Interface
-  - MessageChannel
-  - Reference
-  - web messaging
 browser-compat: api.MessageChannel
 ---
 

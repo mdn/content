@@ -2,16 +2,6 @@
 title: MediaStream.removeTrack()
 slug: Web/API/MediaStream/removeTrack
 page-type: web-api-instance-method
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaStream
-  - Method
-  - Reference
-  - stream
-  - track
 browser-compat: api.MediaStream.removeTrack
 ---
 

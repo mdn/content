@@ -2,13 +2,8 @@
 title: ImageDecoder.isTypeSupported()
 slug: Web/API/ImageDecoder/isTypeSupported
 page-type: web-api-static-method
-tags:
-  - API
-  - Method
-  - Reference
-  - isTypeSupported
-  - ImageDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ImageDecoder.isTypeSupported
 ---
 

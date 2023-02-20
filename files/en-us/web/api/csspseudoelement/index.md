@@ -2,13 +2,8 @@
 title: CSSPseudoElement
 slug: Web/API/CSSPseudoElement
 page-type: web-api-interface
-tags:
-  - API
-  - CSSPseudoElement
-  - Element
-  - Experimental
-  - Interface
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSPseudoElement
 ---
 

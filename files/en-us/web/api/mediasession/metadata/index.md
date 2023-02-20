@@ -2,15 +2,6 @@
 title: MediaSession.metadata
 slug: Web/API/MediaSession/metadata
 page-type: web-api-instance-property
-tags:
-  - Audio
-  - Media
-  - Media Session API
-  - MediaSession
-  - Property
-  - Reference
-  - Video
-  - metadata
 browser-compat: api.MediaSession.metadata
 ---
 

@@ -2,16 +2,6 @@
 title: MediaMetadata.title
 slug: Web/API/MediaMetadata/title
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Session API
-  - MediaMetadata
-  - Property
-  - Reference
-  - Title
-  - Video
 browser-compat: api.MediaMetadata.title
 ---
 

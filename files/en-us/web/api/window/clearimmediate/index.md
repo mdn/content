@@ -2,12 +2,6 @@
 title: Window.clearImmediate()
 slug: Web/API/Window/clearImmediate
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Window
-  - Polyfill
 browser-compat: api.Window.clearImmediate
 ---
 

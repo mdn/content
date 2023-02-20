@@ -2,13 +2,6 @@
 title: MIDIMessageEvent
 slug: Web/API/MIDIMessageEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - MIDI
-  - MIDIMessageEvent
-  - Reference
-  - Web MIDI API
 browser-compat: api.MIDIMessageEvent
 ---
 

@@ -2,12 +2,6 @@
 title: MIDIAccess.sysexEnabled
 slug: Web/API/MIDIAccess/sysexEnabled
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - sysexEnabled
-  - MIDIAccess
 browser-compat: api.MIDIAccess.sysexEnabled
 ---
 

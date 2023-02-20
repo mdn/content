@@ -2,15 +2,6 @@
 title: MessageEvent
 slug: Web/API/MessageEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Channels
-  - Interface
-  - Reference
-  - WebSockets
-  - Window
-  - Workers
-  - messaging
 browser-compat: api.MessageEvent
 ---
 

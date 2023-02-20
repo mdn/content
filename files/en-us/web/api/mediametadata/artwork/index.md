@@ -2,16 +2,6 @@
 title: MediaMetadata.artwork
 slug: Web/API/MediaMetadata/artwork
 page-type: web-api-instance-property
-tags:
-  - Audio
-  - Media
-  - Media Session API
-  - MediaMetadata
-  - MediaSession
-  - Property
-  - Reference
-  - Video
-  - artwork
 browser-compat: api.MediaMetadata.artwork
 ---
 

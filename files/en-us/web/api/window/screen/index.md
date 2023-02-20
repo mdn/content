@@ -2,12 +2,6 @@
 title: Window.screen
 slug: Web/API/Window/screen
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - HTML DOM
-  - Property
-  - Window
 browser-compat: api.Window.screen
 ---
 

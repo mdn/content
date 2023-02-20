@@ -2,15 +2,6 @@
 title: InputEvent.data
 slug: Web/API/InputEvent/data
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM Events
-  - Input
-  - InputEvent
-  - Property
-  - Reference
-  - data
-  - events
 browser-compat: api.InputEvent.data
 ---
 

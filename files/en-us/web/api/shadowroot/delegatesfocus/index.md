@@ -2,14 +2,6 @@
 title: ShadowRoot.delegatesFocus
 slug: Web/API/ShadowRoot/delegatesFocus
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ShadowRoot
-  - Web Components
-  - delegatesFocus
-  - shadow dom
 browser-compat: api.ShadowRoot.delegatesFocus
 ---
 

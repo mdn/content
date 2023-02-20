@@ -2,14 +2,6 @@
 title: Animation.finished
 slug: Web/API/Animation/finished
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - Property
-  - Reference
-  - Web Animations
-  - finished
-  - web animations api
 browser-compat: api.Animation.finished
 ---
 

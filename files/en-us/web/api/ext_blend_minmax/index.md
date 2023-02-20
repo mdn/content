@@ -2,11 +2,6 @@
 title: EXT_blend_minmax
 slug: Web/API/EXT_blend_minmax
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.EXT_blend_minmax
 ---
 

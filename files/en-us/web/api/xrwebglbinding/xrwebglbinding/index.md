@@ -2,13 +2,8 @@
 title: XRWebGLBinding()
 slug: Web/API/XRWebGLBinding/XRWebGLBinding
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - WebXR
-  - XR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLBinding.XRWebGLBinding
 ---
 

@@ -2,20 +2,6 @@
 title: RTCIceTransport.getSelectedCandidatePair()
 slug: Web/API/RTCIceTransport/getSelectedCandidatePair
 page-type: web-api-instance-method
-tags:
-  - API
-  - Candidates
-  - Connectivity
-  - Gathering
-  - ICE
-  - Method
-  - Negotiation
-  - Pair
-  - RTCIceTransport
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - getSelectedCandidatePair
 browser-compat: api.RTCIceTransport.getSelectedCandidatePair
 ---
 

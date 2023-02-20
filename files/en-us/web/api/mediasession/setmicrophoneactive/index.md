@@ -2,19 +2,8 @@
 title: MediaSession.setMicrophoneActive()
 slug: Web/API/MediaSession/setMicrophoneActive
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Session API
-  - MediaSession
-  - Method
-  - Reference
-  - UX
-  - Video
-  - setActionHandler
-  - setMicrophoneActive
-  - Experimental
+status:
+  - experimental
 browser-compat: api.MediaSession.setMicrophoneActive
 ---
 

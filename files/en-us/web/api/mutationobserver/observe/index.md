@@ -2,21 +2,6 @@
 title: MutationObserver.observe()
 slug: Web/API/MutationObserver/observe
 page-type: web-api-instance-method
-tags:
-  - API
-  - Attribute Changes
-  - Changes
-  - DOM
-  - DOM Changes
-  - DOM WHATWG
-  - Element Changes
-  - Method
-  - Mutation Observer
-  - Mutation Observer API
-  - MutationObserver
-  - Node Changes
-  - Reference
-  - observe
 browser-compat: api.MutationObserver.observe
 ---
 

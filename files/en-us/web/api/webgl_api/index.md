@@ -2,18 +2,6 @@
 title: "WebGL: 2D and 3D graphics for the web"
 slug: Web/API/WebGL_API
 page-type: web-api-overview
-tags:
-  - 3D
-  - 3D Graphics
-  - API
-  - Advanced
-  - Graphics
-  - JavaScript
-  - Media
-  - Overview
-  - Reference
-  - WebGL
-  - WebGL API
 browser-compat:
   - api.WebGLRenderingContext
   - api.WebGL2RenderingContext

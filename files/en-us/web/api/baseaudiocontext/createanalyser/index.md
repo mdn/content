@@ -2,14 +2,6 @@
 title: BaseAudioContext.createAnalyser()
 slug: Web/API/BaseAudioContext/createAnalyser
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createAnalyser
 browser-compat: api.BaseAudioContext.createAnalyser
 ---
 

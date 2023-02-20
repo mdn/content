@@ -2,15 +2,8 @@
 title: MediaSource.handle
 slug: Web/API/MediaSource/handle
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - handle
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Property
-  - Reference
+status:
+  - experimental
 browser-compat: api.MediaSource.handle
 ---
 

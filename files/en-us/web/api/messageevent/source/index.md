@@ -2,14 +2,6 @@
 title: MessageEvent.source
 slug: Web/API/MessageEvent/source
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - MessageEvent
-  - Property
-  - Reference
-  - messaging
-  - source
 browser-compat: api.MessageEvent.source
 ---
 

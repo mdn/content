@@ -2,8 +2,6 @@
 title: 'HTMLCanvasElement: webglcontextrestored event'
 slug: Web/API/HTMLCanvasElement/webglcontextrestored_event
 page-type: web-api-event
-tags:
-  - WebGL
 browser-compat: api.HTMLCanvasElement.webglcontextrestored_event
 ---
 

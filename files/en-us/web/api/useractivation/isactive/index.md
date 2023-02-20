@@ -2,11 +2,8 @@
 title: UserActivation.isActive
 slug: Web/API/UserActivation/isActive
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.UserActivation.isActive
 ---
 

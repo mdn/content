@@ -2,13 +2,6 @@
 title: MediaQueryListEvent
 slug: Web/API/MediaQueryListEvent
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM View
-  - Interface
-  - Media Queries
-  - MediaQueryListEvent
-  - Reference
 browser-compat: api.MediaQueryListEvent
 ---
 

@@ -2,14 +2,6 @@
 title: MouseEvent.clientY
 slug: Web/API/MouseEvent/clientY
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - DOM Events
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.MouseEvent.clientY
 ---
 

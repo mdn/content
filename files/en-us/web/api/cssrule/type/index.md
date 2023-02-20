@@ -2,13 +2,8 @@
 title: CSSRule.type
 slug: Web/API/CSSRule/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - Property
-  - Reference
-  - Read-only
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSRule.type
 ---
 

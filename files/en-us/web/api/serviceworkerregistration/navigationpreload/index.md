@@ -2,12 +2,6 @@
 title: ServiceWorkerRegistration.navigationPreload
 slug: Web/API/ServiceWorkerRegistration/navigationPreload
 page-type: web-api-instance-property
-tags:
-  - API
-  - NavigationPreloadManager
-  - Property
-  - Service Workers
-  - Workers
 browser-compat: api.ServiceWorkerRegistration.navigationPreload
 ---
 

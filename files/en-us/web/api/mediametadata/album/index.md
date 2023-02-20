@@ -2,11 +2,6 @@
 title: MediaMetadata.album
 slug: Web/API/MediaMetadata/album
 page-type: web-api-instance-property
-tags:
-  - API
-  - MediaMetadata
-  - Property
-  - Reference
 browser-compat: api.MediaMetadata.album
 ---
 

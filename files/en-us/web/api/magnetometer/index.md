@@ -2,16 +2,8 @@
 title: Magnetometer
 slug: Web/API/Magnetometer
 page-type: web-api-interface
-tags:
-  - API
-  - Generic Sensor API
-  - Interface
-  - Magnetometer
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Magnetometer
 ---
 

@@ -2,17 +2,9 @@
 title: Metadata.modificationTime
 slug: Web/API/Metadata/modificationTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - File and Directory Entries API
-  - Files
-  - Non-standard
-  - Offline
-  - Property
-  - Reference
-  - metadata
-  - modificationTime
-  - Experimental
+status:
+  - experimental
+  - non-standard
 browser-compat: api.Metadata.modificationTime
 ---
 
