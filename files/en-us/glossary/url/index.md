@@ -16,5 +16,5 @@ URLs can also be used for file transfer ({{Glossary("FTP")}}), emails ({{Glossar
 ## See also
 
 - [URL](https://en.wikipedia.org/wiki/URL) on Wikipedia
-- [Understanding URLs and their structure](/en-US/docs/Learn/Common_questions/What_is_a_URL)
+- [Understanding URLs and their structure](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 - The syntax of URLs is defined in the [URL Living Standard](https://url.spec.whatwg.org/)

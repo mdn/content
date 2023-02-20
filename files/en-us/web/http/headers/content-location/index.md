@@ -43,8 +43,8 @@ Content-Location: <url>
 ## Directives
 
 - \<url>
-  - : A [relative](/en-US/docs/Learn/Common_questions/What_is_a_URL#examples_of_relative_urls)
-    (to the request URL) or [absolute](/en-US/docs/Learn/Common_questions/What_is_a_URL#examples_of_absolute_urls)
+  - : A [relative](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#examples_of_relative_urls)
+    (to the request URL) or [absolute](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#examples_of_absolute_urls)
     URL.
 
 ## Examples
