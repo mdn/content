@@ -53,6 +53,5 @@ params.append('foo', 4);
 
 ## See also
 
-- Other URL-related interfaces: {{domxref("URL")}},
-  {{domxref("HTMLHyperlinkElementUtils")}}.
+- {{domxref("URL")}}
 - [Google Developers: Easy URL manipulation with URLSearchParams](https://developer.chrome.com/blog/urlsearchparams/)
