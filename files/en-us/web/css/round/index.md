@@ -18,7 +18,7 @@ browser-compat: css.types.round
 
 The **`round()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns a rounded number based on a selected rounding strategy.
 
-The function should be used with [custom CSS property](/en-US/docs/Web/CSS/--*) for either (or both) of the rounding value or interval; if these have fixed values then there is no need to use the `round()` method.
+Authors should use a [custom CSS property](/en-US/docs/Web/CSS/--*) (e.g., `--my-property`) for the rounding value, interval, or both; using the `round()` function is redundant if these have known values.
 
 ## Syntax
 
@@ -83,9 +83,9 @@ The value of `valueToRound`, rounded to the nearest lower or higher integer mult
 
 ### Round positive values
 
-This example demonstrate how the `round()` function rounding strategies work for positive values.
+This example demonstrates how the `round()` function's rounding strategies work for positive values.
 
-The `round()` values is used to set the height of four boxes (of five).
+Of the five boxes below, the `round()` function is used to set the height of the last four.
 The value to be rounded is between 100 px and 125 px in each case, and the rounding value is 25px in all cases.
 The height of the boxes is therefore either rounded up to 125 px or down to 100 px.
 
@@ -127,8 +127,8 @@ div.box {
 }
 ```
 
-The first `div` from the left doesn't have an specific CSS, so will have the default height of 100 px.
-The CSS for `div` two, three and four are shown below, which round, up, down, and to-zero respectively.
+The first `div` from the left isn't targeted with specific CSS rules, so it will have a default height of 100px.
+The CSS for `div` two, three, and four is shown below, which round, up, down, and to-zero, respectively.
 
 ```css
 div.box-2 {
