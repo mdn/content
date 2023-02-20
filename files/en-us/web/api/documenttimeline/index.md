@@ -2,16 +2,6 @@
 title: DocumentTimeline
 slug: Web/API/DocumentTimeline
 page-type: web-api-interface
-tags:
-  - API
-  - Animation
-  - AnimationTimeline
-  - DocumentTimeline
-  - Interface
-  - Reference
-  - Web Animations
-  - waapi
-  - web animations api
 browser-compat: api.DocumentTimeline
 ---
 

@@ -2,12 +2,6 @@
 title: Using the Payment Request API
 slug: Web/API/Payment_Request_API/Using_the_Payment_Request_API
 page-type: guide
-tags:
-  - Demos
-  - Examples
-  - Guide
-  - Payment Request API
-  - PaymentRequest
 ---
 
 {{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}

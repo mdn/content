@@ -2,15 +2,8 @@
 title: CSSPerspective()
 slug: Web/API/CSSPerspective/CSSPerspective
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSPerspective
-  - CSSTransformComponent
-  - CSSTransformValue
-  - Constructor
-  - Experimental
-  - Houdini
+status:
+  - experimental
 browser-compat: api.CSSPerspective.CSSPerspective
 ---
 

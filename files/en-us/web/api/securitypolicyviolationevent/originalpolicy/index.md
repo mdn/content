@@ -2,15 +2,6 @@
 title: SecurityPolicyViolationEvent.originalPolicy
 slug: Web/API/SecurityPolicyViolationEvent/originalPolicy
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSP
-  - HTTP
-  - Property
-  - Reference
-  - Security
-  - SecurityPolicyViolationEvent
-  - originalPolicy
 browser-compat: api.SecurityPolicyViolationEvent.originalPolicy
 ---
 

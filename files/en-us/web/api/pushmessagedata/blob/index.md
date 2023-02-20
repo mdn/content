@@ -2,14 +2,6 @@
 title: PushMessageData.blob()
 slug: Web/API/PushMessageData/blob
 page-type: web-api-instance-method
-tags:
-  - API
-  - Blob
-  - Method
-  - Push
-  - PushMessageData
-  - Reference
-  - Service Workers
 browser-compat: api.PushMessageData.blob
 ---
 

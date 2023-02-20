@@ -2,12 +2,6 @@
 title: "@media"
 slug: Web/CSS/@media
 page-type: css-at-rule
-tags:
-  - "@media"
-  - At-rule
-  - CSS
-  - Conditional
-  - Reference
 browser-compat: css.at-rules.media
 ---
 

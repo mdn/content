@@ -2,17 +2,6 @@
 title: AnimationTimeline.currentTime
 slug: Web/API/AnimationTimeline/currentTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - AnimationTimeline
-  - Property
-  - Read-only
-  - Reference
-  - Web Animations
-  - currentTime
-  - waapi
-  - web animations api
 browser-compat: api.AnimationTimeline.currentTime
 ---
 

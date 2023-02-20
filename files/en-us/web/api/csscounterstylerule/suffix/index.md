@@ -2,12 +2,6 @@
 title: CSSCounterStyleRule.suffix
 slug: Web/API/CSSCounterStyleRule/suffix
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - suffix
-  - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.suffix
 ---
 

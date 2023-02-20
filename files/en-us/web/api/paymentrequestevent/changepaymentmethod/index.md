@@ -2,15 +2,8 @@
 title: PaymentRequestEvent.changePaymentMethod()
 slug: Web/API/PaymentRequestEvent/changePaymentMethod
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Payment Request API
-  - PaymentRequestEvent
-  - Reference
-  - changePaymentMethod()
-  - payment
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PaymentRequestEvent.changePaymentMethod
 ---
 

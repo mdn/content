@@ -2,17 +2,9 @@
 title: PaymentResponse.shippingAddress
 slug: Web/API/PaymentResponse/shippingAddress
 page-type: web-api-instance-property
-tags:
-  - API
-  - Payment Request
-  - Payment Request API
-  - PaymentResponse
-  - Property
-  - Reference
-  - Secure context
-  - shippingAddress
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentResponse.shippingAddress
 ---
 

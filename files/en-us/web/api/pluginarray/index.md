@@ -2,13 +2,8 @@
 title: PluginArray
 slug: Web/API/PluginArray
 page-type: web-api-interface
-tags:
-  - API
-  - Add-ons
-  - DOM
-  - NeedsContent
-  - Plugins
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.PluginArray
 ---
 

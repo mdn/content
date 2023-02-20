@@ -56,9 +56,7 @@ Both pieces of text have their default black color. The "good" `<div>` has a lig
 ### Good Contrast
 
 ```html
-<div class="good">
-  Good contrast
-</div>
+<div class="good">Good contrast</div>
 ```
 
 ```css
@@ -74,7 +72,7 @@ div {
 }
 
 .good {
-background-color: #fae6fa;
+  background-color: #fae6fa;
 }
 ```
 
@@ -85,9 +83,7 @@ The "bad" `<div>` on the other hand has a very dark purple background, which mak
 ### Bad Contrast
 
 ```html
-<div class="bad">
-  Bad contrast
-</div>
+<div class="bad">Bad contrast</div>
 ```
 
 ```css
@@ -103,7 +99,7 @@ div {
 }
 
 .bad {
-background-color: #400064;
+  background-color: #400064;
 }
 ```
 

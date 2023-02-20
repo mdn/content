@@ -2,15 +2,6 @@
 title: PaymentResponse.details
 slug: Web/API/PaymentResponse/details
 page-type: web-api-instance-property
-tags:
-  - API
-  - Payment Request
-  - Payment Request API
-  - PaymentResponse
-  - Property
-  - Reference
-  - Secure context
-  - details
 browser-compat: api.PaymentResponse.details
 ---
 

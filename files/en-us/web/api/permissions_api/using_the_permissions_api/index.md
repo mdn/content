@@ -2,12 +2,8 @@
 title: Using the Permissions API
 slug: Web/API/Permissions_API/Using_the_Permissions_API
 page-type: guide
-tags:
-  - API
-  - Experimental
-  - Geolocation
-  - Guide
-  - Permissions
+status:
+  - experimental
 ---
 
 {{DefaultAPISidebar("Permissions API")}}

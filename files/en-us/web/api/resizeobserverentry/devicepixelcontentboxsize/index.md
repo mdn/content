@@ -2,13 +2,6 @@
 title: ResizeObserverEntry.devicePixelContentBoxSize
 slug: Web/API/ResizeObserverEntry/devicePixelContentBoxSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Resize Observer API
-  - ResizeObserverEntry
-  - devicePixelContentBoxSize
 browser-compat: api.ResizeObserverEntry.devicePixelContentBoxSize
 ---
 

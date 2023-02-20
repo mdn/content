@@ -2,13 +2,6 @@
 title: URL.toString()
 slug: Web/API/URL/toString
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Stringifier
-  - URL
-  - URL API
 browser-compat: api.URL.toString
 ---
 

@@ -2,17 +2,6 @@
 title: PaymentRequest.show()
 slug: Web/API/PaymentRequest/show
 page-type: web-api-instance-method
-tags:
-  - API
-  - Commerce
-  - Method
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Payments
-  - Reference
-  - Secure context
-  - show
 browser-compat: api.PaymentRequest.show
 ---
 

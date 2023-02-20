@@ -2,15 +2,6 @@
 title: PermissionStatus.name
 slug: Web/API/PermissionStatus/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Event Handler
-  - PermissionStatus
-  - Permissions
-  - Permissions API
-  - Property
-  - Reference
-  - status
 browser-compat: api.PermissionStatus.name
 ---
 

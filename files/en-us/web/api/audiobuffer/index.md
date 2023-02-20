@@ -2,12 +2,6 @@
 title: AudioBuffer
 slug: Web/API/AudioBuffer
 page-type: web-api-interface
-tags:
-  - API
-  - AudioBuffer
-  - Interface
-  - Reference
-  - Web Audio API
 browser-compat: api.AudioBuffer
 ---
 

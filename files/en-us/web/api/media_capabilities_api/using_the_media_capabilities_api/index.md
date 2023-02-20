@@ -2,16 +2,6 @@
 title: Using the Media Capabilities API
 slug: Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API
 page-type: guide
-tags:
-  - API
-  - Audio
-  - Guide
-  - Intermediate
-  - Media
-  - Media Capabilities
-  - Media Capabilities API
-  - Video
-  - capabilities
 browser-compat: api.MediaCapabilities
 ---
 

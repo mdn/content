@@ -2,13 +2,8 @@
 title: BackgroundFetchRegistration.failureReason
 slug: Web/API/BackgroundFetchRegistration/failureReason
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - failureReason
-  - BackgroundFetchRegistration
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRegistration.failureReason
 ---
 

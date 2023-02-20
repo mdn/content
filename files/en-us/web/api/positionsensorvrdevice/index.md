@@ -2,16 +2,9 @@
 title: PositionSensorVRDevice
 slug: Web/API/PositionSensorVRDevice
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Deprecated
-  - PositionSensorVRDevice
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PositionSensorVRDevice
 ---
 

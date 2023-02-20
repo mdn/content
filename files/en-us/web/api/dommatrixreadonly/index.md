@@ -2,9 +2,6 @@
 title: DOMMatrixReadOnly
 slug: Web/API/DOMMatrixReadOnly
 page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
 browser-compat: api.DOMMatrixReadOnly
 ---
 

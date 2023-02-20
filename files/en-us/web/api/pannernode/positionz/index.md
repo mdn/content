@@ -2,13 +2,6 @@
 title: PannerNode.positionZ
 slug: Web/API/PannerNode/positionZ
 page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - positionZ
 browser-compat: api.PannerNode.positionZ
 ---
 

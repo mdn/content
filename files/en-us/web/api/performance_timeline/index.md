@@ -2,10 +2,6 @@
 title: Performance Timeline API
 slug: Web/API/Performance_Timeline
 page-type: web-api-overview
-tags:
-  - Guide
-  - Overview
-  - Web Performance
 spec-urls: https://w3c.github.io/performance-timeline/
 ---
 

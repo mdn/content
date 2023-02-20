@@ -2,13 +2,8 @@
 title: VideoFrame.allocationSize()
 slug: Web/API/VideoFrame/allocationSize
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - allocationSize
-  - VideoFrame
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoFrame.allocationSize
 ---
 

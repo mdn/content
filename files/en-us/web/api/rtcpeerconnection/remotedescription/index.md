@@ -2,13 +2,6 @@
 title: RTCPeerConnection.remoteDescription
 slug: Web/API/RTCPeerConnection/remoteDescription
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - WebRTC
-  - remoteDescription
 browser-compat: api.RTCPeerConnection.remoteDescription
 ---
 

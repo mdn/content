@@ -2,11 +2,6 @@
 title: TimeEvent
 slug: Web/API/TimeEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - NeedsMarkupWork
-  - SVG
 ---
 
 {{APIRef("SVG")}}

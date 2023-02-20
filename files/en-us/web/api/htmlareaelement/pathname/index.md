@@ -2,11 +2,6 @@
 title: HTMLAreaElement.pathname
 slug: Web/API/HTMLAreaElement/pathname
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - Property
-  - Reference
 browser-compat: api.HTMLAreaElement.pathname
 ---
 

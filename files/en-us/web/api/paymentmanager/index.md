@@ -2,13 +2,8 @@
 title: PaymentManager
 slug: Web/API/PaymentManager
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Landing
-  - PaymentManager
-  - Reference
+status:
+  - experimental
 browser-compat: api.PaymentManager
 ---
 

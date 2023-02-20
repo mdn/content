@@ -2,11 +2,6 @@
 title: Vibration API
 slug: Web/API/Vibration_API
 page-type: web-api-overview
-tags:
-  - API
-  - Beginner
-  - Mobile
-  - Vibration
 browser-compat: api.Navigator.vibrate
 ---
 

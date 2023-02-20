@@ -2,16 +2,8 @@
 title: SpeechGrammarList.addFromString()
 slug: Web/API/SpeechGrammarList/addFromString
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - SpeechGrammarList
-  - Web Speech
-  - addFromString
-  - recognition
-  - speech
+status:
+  - experimental
 browser-compat: api.SpeechGrammarList.addFromString
 ---
 

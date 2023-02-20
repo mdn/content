@@ -2,12 +2,6 @@
 title: WebGL2RenderingContext.copyBufferSubData()
 slug: Web/API/WebGL2RenderingContext/copyBufferSubData
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.copyBufferSubData
 ---
 

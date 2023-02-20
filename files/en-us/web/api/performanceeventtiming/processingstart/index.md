@@ -2,11 +2,6 @@
 title: PerformanceEventTiming.processingStart
 slug: Web/API/PerformanceEventTiming/processingStart
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceEventTiming.processingStart
 ---
 

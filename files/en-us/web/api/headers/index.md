@@ -2,13 +2,6 @@
 title: Headers
 slug: Web/API/Headers
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - Headers
-  - Interface
-  - Reference
 browser-compat: api.Headers
 ---
 

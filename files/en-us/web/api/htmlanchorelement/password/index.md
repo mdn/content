@@ -2,10 +2,6 @@
 title: HTMLAnchorElement.password
 slug: Web/API/HTMLAnchorElement/password
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - Property
 browser-compat: api.HTMLAnchorElement.password
 ---
 

@@ -2,9 +2,6 @@
 title: EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.EventTarget.removeEventListener
 ---
 

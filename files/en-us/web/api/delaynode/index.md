@@ -2,13 +2,6 @@
 title: DelayNode
 slug: Web/API/DelayNode
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - DelayNode
-  - Interface
-  - Reference
-  - Web Audio API
 browser-compat: api.DelayNode
 ---
 

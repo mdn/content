@@ -2,12 +2,6 @@
 title: "Element: scroll event"
 slug: Web/API/Element/scroll_event
 page-type: web-api-event
-tags:
-  - API
-  - Element
-  - Event
-  - Reference
-  - Scroll
 browser-compat: api.Element.scroll_event
 ---
 

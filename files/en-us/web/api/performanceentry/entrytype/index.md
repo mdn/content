@@ -2,12 +2,6 @@
 title: PerformanceEntry.entryType
 slug: Web/API/PerformanceEntry/entryType
 page-type: web-api-instance-property
-tags:
-  - API
-  - PerformanceEntry
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceEntry.entryType
 ---
 

@@ -2,12 +2,6 @@
 title: Permissions
 slug: Web/API/Permissions
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Permissions
-  - Permissions API
-  - Reference
 browser-compat: api.Permissions
 ---
 

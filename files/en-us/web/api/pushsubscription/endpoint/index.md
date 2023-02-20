@@ -2,15 +2,6 @@
 title: PushSubscription.endpoint
 slug: Web/API/PushSubscription/endpoint
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Push
-  - Push API
-  - PushSubscription
-  - Reference
-  - Service Workers
-  - endPoint
 browser-compat: api.PushSubscription.endpoint
 ---
 

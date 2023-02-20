@@ -2,13 +2,6 @@
 title: PublicKeyCredentialRequestOptions
 slug: Web/API/PublicKeyCredentialRequestOptions
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - PublicKeyCredentialRequestOptions
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 spec-urls: https://w3c.github.io/webauthn/#dictdef-publickeycredentialrequestoptions
 ---
 

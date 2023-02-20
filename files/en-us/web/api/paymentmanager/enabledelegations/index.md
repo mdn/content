@@ -2,13 +2,9 @@
 title: PaymentManager.enableDelegations()
 slug: Web/API/PaymentManager/enableDelegations
 page-type: web-api-instance-method
-tags:
-  - API
-  - enableDelegations
-  - Experimental
-  - Method
-  - Reference
-  - Non-standard
+status:
+  - experimental
+  - non-standard
 browser-compat: api.PaymentManager.enableDelegations
 ---
 

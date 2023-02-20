@@ -2,13 +2,8 @@
 title: Payment Handler API
 slug: Web/API/Payment_Handler_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - Landing
-  - Overview
-  - Payment Handler API
-  - Reference
+status:
+  - experimental
 browser-compat: api.PaymentRequestEvent
 ---
 

@@ -2,11 +2,6 @@
 title: Permissions.query()
 slug: Web/API/Permissions/query
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Permissions
-  - Reference
 browser-compat: api.Permissions.query
 ---
 

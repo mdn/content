@@ -2,13 +2,6 @@
 title: PaymentRequest.abort()
 slug: Web/API/PaymentRequest/abort
 page-type: web-api-instance-method
-tags:
-  - API
-  - Payment Request API
-  - PaymentRequest
-  - Reference
-  - Secure context
-  - abort
 browser-compat: api.PaymentRequest.abort
 ---
 

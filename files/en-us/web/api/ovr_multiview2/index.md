@@ -2,10 +2,6 @@
 title: OVR_multiview2
 slug: Web/API/OVR_multiview2
 page-type: webgl-extension
-tags:
-  - API
-  - WebGL
-  - WebGL extensions
 browser-compat: api.OVR_multiview2
 ---
 

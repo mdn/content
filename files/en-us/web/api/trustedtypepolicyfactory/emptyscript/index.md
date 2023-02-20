@@ -2,12 +2,6 @@
 title: TrustedTypePolicyFactory.emptyScript
 slug: Web/API/TrustedTypePolicyFactory/emptyScript
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - emptyScript
-  - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.emptyScript
 ---
 

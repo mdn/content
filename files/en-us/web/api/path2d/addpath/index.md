@@ -2,13 +2,6 @@
 title: Path2D.addPath()
 slug: Web/API/Path2D/addPath
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - Method
-  - Path2D
-  - Path2D.addPath
-  - Reference
 browser-compat: api.Path2D.addPath
 ---
 

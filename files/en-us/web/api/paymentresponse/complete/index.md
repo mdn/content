@@ -2,15 +2,6 @@
 title: PaymentResponse.complete()
 slug: Web/API/PaymentResponse/complete
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Payment Request
-  - Payment Request API
-  - PaymentResponse
-  - Reference
-  - Secure context
-  - complete
 browser-compat: api.PaymentResponse.complete
 ---
 

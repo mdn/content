@@ -2,15 +2,8 @@
 title: PeriodicSyncManager.unregister()
 slug: Web/API/PeriodicSyncManager/unregister
 page-type: web-api-instance-method
-tags:
-  - Background Sync
-  - Method
-  - Offline
-  - PWA
-  - PeriodicSyncManager
-  - Service Worker
-  - Web Periodic Background Synchronization API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PeriodicSyncManager.unregister
 ---
 

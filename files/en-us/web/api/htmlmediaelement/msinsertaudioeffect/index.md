@@ -2,13 +2,8 @@
 title: HTMLMediaElement.msInsertAudioEffect()
 slug: Web/API/HTMLMediaElement/msInsertAudioEffect
 page-type: web-api-instance-method
-tags:
-  - API
-  - API:Microsoft Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - msInsertAudioEffect
+status:
+  - non-standard
 ---
 
 {{APIRef("HTML DOM")}}{{Non-standard_Header}}

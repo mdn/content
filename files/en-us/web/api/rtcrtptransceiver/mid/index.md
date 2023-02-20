@@ -2,18 +2,6 @@
 title: RTCRtpTransceiver.mid
 slug: Web/API/RTCRtpTransceiver/mid
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Media ID
-  - Property
-  - RTCRtpTransceiver
-  - RTP
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - mid
 browser-compat: api.RTCRtpTransceiver.mid
 ---
 

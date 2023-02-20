@@ -2,17 +2,6 @@
 title: WebRTC API
 slug: Web/API/WebRTC_API
 page-type: web-api-overview
-tags:
-  - API
-  - Audio
-  - Conferencing
-  - Landing
-  - Media
-  - Networking
-  - Video
-  - WebRTC
-  - WebRTC API
-  - streaming
 spec-urls:
   - https://w3c.github.io/webrtc-pc/
   - https://w3c.github.io/mediacapture-main/

@@ -2,16 +2,8 @@
 title: PeriodicSyncManager
 slug: Web/API/PeriodicSyncManager
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Offline
-  - PWA
-  - Periodic Background Synchronization
-  - PeriodicSyncManager
-  - Reference
-  - ServiceWorker
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PeriodicSyncManager
 ---
 

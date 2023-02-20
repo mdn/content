@@ -2,16 +2,6 @@
 title: VideoTrackList.selectedIndex
 slug: Web/API/VideoTrackList/selectedIndex
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - VideoTrackList
-  - track
 browser-compat: api.VideoTrackList.selectedIndex
 ---
 

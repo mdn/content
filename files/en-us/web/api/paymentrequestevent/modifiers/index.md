@@ -2,13 +2,8 @@
 title: PaymentRequestEvent.modifiers
 slug: Web/API/PaymentRequestEvent/modifiers
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Payment Request API
-  - PaymentRequestEvent
-  - Reference
+status:
+  - experimental
 browser-compat: api.PaymentRequestEvent.modifiers
 ---
 

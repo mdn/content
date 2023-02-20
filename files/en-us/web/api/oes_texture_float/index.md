@@ -2,11 +2,6 @@
 title: OES_texture_float
 slug: Web/API/OES_texture_float
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.OES_texture_float
 ---
 

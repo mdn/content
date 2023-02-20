@@ -2,12 +2,6 @@
 title: ImageData.colorSpace
 slug: Web/API/ImageData/colorSpace
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - ImageData
-  - Property
-  - Reference
 browser-compat: api.ImageData.colorSpace
 ---
 

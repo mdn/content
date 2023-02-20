@@ -2,11 +2,6 @@
 title: AnimationEvent
 slug: Web/API/AnimationEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - Web Animations
 browser-compat: api.AnimationEvent
 ---
 

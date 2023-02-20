@@ -2,11 +2,6 @@
 title: PointerEvent()
 slug: Web/API/PointerEvent/PointerEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - PointerEvent
-  - Reference
 browser-compat: api.PointerEvent.PointerEvent
 ---
 

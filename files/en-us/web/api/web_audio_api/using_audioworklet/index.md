@@ -2,18 +2,6 @@
 title: Background audio processing using AudioWorklet
 slug: Web/API/Web_Audio_API/Using_AudioWorklet
 page-type: guide
-tags:
-  - API
-  - Audio
-  - AudioWorklet
-  - Background
-  - Examples
-  - Guide
-  - Processing
-  - Web Audio
-  - Web Audio API
-  - WebAudio API
-  - sound
 ---
 
 {{DefaultAPISidebar("Web Audio API")}}

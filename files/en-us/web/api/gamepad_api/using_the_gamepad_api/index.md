@@ -2,12 +2,6 @@
 title: Using the Gamepad API
 slug: Web/API/Gamepad_API/Using_the_Gamepad_API
 page-type: guide
-tags:
-  - API
-  - Advanced
-  - Gamepad API
-  - Games
-  - Guide
 browser-compat: api.Gamepad
 ---
 

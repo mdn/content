@@ -2,13 +2,6 @@
 title: Pointer Lock API
 slug: Web/API/Pointer_Lock_API
 page-type: web-api-overview
-tags:
-  - API
-  - Advanced
-  - Games
-  - Reference
-  - mouse lock
-  - pointer lock
 browser-compat: api.Element.requestPointerLock
 ---
 

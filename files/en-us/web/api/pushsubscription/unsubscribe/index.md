@@ -2,15 +2,6 @@
 title: PushSubscription.unsubscribe()
 slug: Web/API/PushSubscription/unsubscribe
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Push
-  - Push API
-  - PushSubscription
-  - Reference
-  - Service Workers
-  - unsubscribe
 browser-compat: api.PushSubscription.unsubscribe
 ---
 

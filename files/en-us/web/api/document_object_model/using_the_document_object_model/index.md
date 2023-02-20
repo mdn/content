@@ -2,8 +2,6 @@
 title: Using the Document Object Model
 slug: Web/API/Document_object_model/Using_the_Document_Object_Model
 page-type: guide
-tags:
-  - DOM
 ---
 
 {{DefaultAPISidebar("DOM")}}

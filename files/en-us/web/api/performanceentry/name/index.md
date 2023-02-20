@@ -2,11 +2,6 @@
 title: PerformanceEntry.name
 slug: Web/API/PerformanceEntry/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceEntry.name
 ---
 

@@ -2,14 +2,8 @@
 title: SyncManager.getTags()
 slug: Web/API/SyncManager/getTags
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - ServiceWorker
-  - SyncManager
-  - getTags
+status:
+  - experimental
 browser-compat: api.SyncManager.getTags
 ---
 

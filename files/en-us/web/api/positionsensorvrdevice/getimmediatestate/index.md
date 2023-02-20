@@ -2,16 +2,9 @@
 title: PositionSensorVRDevice.getImmediateState()
 slug: Web/API/PositionSensorVRDevice/getImmediateState
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Deprecated
-  - PositionSensorVRDevice
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PositionSensorVRDevice.getImmediateState
 ---
 

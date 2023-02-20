@@ -2,12 +2,8 @@
 title: 'Element: MSManipulationStateChanged event'
 slug: Web/API/Element/MSManipulationStateChanged_event
 page-type: web-api-event
-tags:
-  - Event
-  - Event:Microsoft Extensions
-  - MSManipulationStateChanged
-  - Non-standard
-  - Reference
+status:
+  - non-standard
 browser-compat: api.Element.MSManipulationStateChanged_event
 ---
 

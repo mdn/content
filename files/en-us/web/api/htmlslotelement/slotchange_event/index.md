@@ -2,13 +2,6 @@
 title: 'HTMLSlotElement: slotchange event'
 slug: Web/API/HTMLSlotElement/slotchange_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Web Components
-  - events
-  - shadow dom
-  - slotchange
 browser-compat: api.HTMLSlotElement.slotchange_event
 ---
 

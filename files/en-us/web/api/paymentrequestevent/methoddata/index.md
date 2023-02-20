@@ -2,13 +2,8 @@
 title: PaymentRequestEvent.methodData
 slug: Web/API/PaymentRequestEvent/methodData
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Payment Request API
-  - PaymentRequestEvent
-  - Reference
+status:
+  - experimental
 browser-compat: api.PaymentRequestEvent.methodData
 ---
 

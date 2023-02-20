@@ -2,16 +2,8 @@
 title: PeriodicSyncManager.getTags()
 slug: Web/API/PeriodicSyncManager/getTags
 page-type: web-api-instance-method
-tags:
-  - Background Sync
-  - Method
-  - Offline
-  - PWA
-  - PeriodicSyncManager
-  - Service Worker
-  - Web Periodic Background Synchronization API
-  - periodic sync
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PeriodicSyncManager.getTags
 ---
 

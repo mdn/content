@@ -2,22 +2,6 @@
 title: 'HTMLMediaElement: pause event'
 slug: Web/API/HTMLMediaElement/pause_event
 page-type: web-api-event
-tags:
-  - Audio
-  - Event
-  - HTML
-  - HTMLMediaElement
-  - Media
-  - Media Events
-  - Pausing
-  - Pausing Media
-  - Pausing Speech
-  - Speech Events
-  - Video
-  - Web Speech API
-  - Web Speech Events
-  - pause
-  - speech
 browser-compat: api.HTMLMediaElement.pause_event
 ---
 

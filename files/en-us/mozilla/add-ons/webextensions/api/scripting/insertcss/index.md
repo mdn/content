@@ -1,6 +1,7 @@
 ---
 title: scripting.insertCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/insertCSS
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

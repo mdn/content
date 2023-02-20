@@ -2,13 +2,6 @@
 title: GeolocationPosition.timestamp
 slug: Web/API/GeolocationPosition/timestamp
 page-type: web-api-instance-property
-tags:
-  - API
-  - Geolocation API
-  - GeolocationPosition
-  - Property
-  - Secure context
-  - timeStamp
 browser-compat: api.GeolocationPosition.timestamp
 ---
 

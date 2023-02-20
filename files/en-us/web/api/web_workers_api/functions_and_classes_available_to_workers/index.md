@@ -2,9 +2,6 @@
 title: Functions and classes available to Web Workers
 slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 page-type: guide
-tags:
-  - Reference
-  - Web
 ---
 
 {{DefaultAPISidebar("Web Workers API") }}

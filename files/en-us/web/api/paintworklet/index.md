@@ -2,16 +2,6 @@
 title: PaintWorklet
 slug: Web/API/PaintWorklet
 page-type: web-api-interface
-tags:
-  - API
-  - CSS
-  - CSS Paint API
-  - Houdini
-  - Interface
-  - Painting
-  - Reference
-  - Worklet
-  - paintWorklet
 browser-compat: api.PaintWorkletGlobalScope
 ---
 

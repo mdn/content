@@ -2,15 +2,8 @@
 title: PeriodicSyncManager.register()
 slug: Web/API/PeriodicSyncManager/register
 page-type: web-api-instance-method
-tags:
-  - Background Sync
-  - Method
-  - Offline
-  - PWA
-  - PeriodicSyncManager
-  - Service Worker
-  - Web Periodic Background Synchronization API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PeriodicSyncManager.register
 ---
 

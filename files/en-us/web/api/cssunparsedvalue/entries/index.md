@@ -2,17 +2,8 @@
 title: CSSUnparsedValue.entries()
 slug: Web/API/CSSUnparsedValue/entries
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnparsedValue
-  - Constructor
-  - Entries
-  - Experimental
-  - Houdini
-  - Method
-  - NeedsExample
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSUnparsedValue.entries
 ---
 

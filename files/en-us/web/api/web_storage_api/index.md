@@ -2,14 +2,6 @@
 title: Web Storage API
 slug: Web/API/Web_Storage_API
 page-type: web-api-overview
-tags:
-  - API
-  - Reference
-  - Storage
-  - Web Storage
-  - Web Storage API
-  - localStorage
-  - sessionStorage
 browser-compat:
   - api.Window.localStorage
   - api.Window.sessionStorage

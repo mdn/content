@@ -2,17 +2,9 @@
 title: PositionSensorVRDevice.resetSensor()
 slug: Web/API/PositionSensorVRDevice/resetSensor
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Deprecated
-  - PositionSensorVRDevice
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
-  - resetSensor
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PositionSensorVRDevice.resetSensor
 ---
 

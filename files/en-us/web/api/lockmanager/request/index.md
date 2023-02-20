@@ -2,13 +2,6 @@
 title: LockManager.request()
 slug: Web/API/LockManager/request
 page-type: web-api-instance-method
-tags:
-  - API
-  - LockManager
-  - Method
-  - Reference
-  - Web Locks API
-  - request()
 browser-compat: api.LockManager.request
 ---
 

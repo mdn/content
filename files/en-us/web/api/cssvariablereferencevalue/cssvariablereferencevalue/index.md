@@ -2,15 +2,8 @@
 title: CSSVariableReferenceValue()
 slug: Web/API/CSSVariableReferenceValue/CSSVariableReferenceValue
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSVariableReferenceValue
-  - Constructor
-  - Houdini
-  - NeedsExample
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CSSVariableReferenceValue.CSSVariableReferenceValue
 ---
 

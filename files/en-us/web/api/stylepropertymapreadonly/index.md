@@ -2,14 +2,8 @@
 title: StylePropertyMapReadOnly
 slug: Web/API/StylePropertyMapReadOnly
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Typed Object Model API
-  - Experimental
-  - Houdini
-  - Interface
-  - Reference
-  - StylePropertyMapReadOnly
+status:
+  - experimental
 browser-compat: api.StylePropertyMapReadOnly
 ---
 

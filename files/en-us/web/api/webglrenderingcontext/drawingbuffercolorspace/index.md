@@ -2,13 +2,8 @@
 title: WebGLRenderingContext.drawingBufferColorSpace
 slug: Web/API/WebGLRenderingContext/drawingBufferColorSpace
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-  - Experimental
+status:
+  - experimental
 browser-compat: api.WebGLRenderingContext.drawingBufferColorSpace
 ---
 

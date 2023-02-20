@@ -2,13 +2,6 @@
 title: OfflineAudioContext.startRendering()
 slug: Web/API/OfflineAudioContext/startRendering
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - OfflineAudioContext
-  - Reference
-  - Web Audio API
-  - startRendering
 browser-compat: api.OfflineAudioContext.startRendering
 ---
 

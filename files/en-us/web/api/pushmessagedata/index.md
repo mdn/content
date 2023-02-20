@@ -2,14 +2,6 @@
 title: PushMessageData
 slug: Web/API/PushMessageData
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Push
-  - Push API
-  - PushMessageData
-  - Reference
-  - Service Workers
 browser-compat: api.PushMessageData
 ---
 

@@ -2,26 +2,8 @@
 title: 'XRSession: selectstart event'
 slug: Web/API/XRSession/selectstart_event
 page-type: web-api-event
-tags:
-  - API
-  - AR
-  - Event
-  - Input Sources
-  - Inputs
-  - Mixed
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRSession
-  - augmented
-  - controllers
-  - selectstart
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRSession.selectstart_event
 ---
 

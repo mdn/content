@@ -2,15 +2,6 @@
 title: TouchList.length
 slug: Web/API/TouchList/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Mobile
-  - Property
-  - Reference
-  - TouchList
-  - touch
 browser-compat: api.TouchList.length
 ---
 

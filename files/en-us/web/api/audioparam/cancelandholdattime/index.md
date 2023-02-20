@@ -2,15 +2,6 @@
 title: AudioParam.cancelAndHoldAtTime()
 slug: Web/API/AudioParam/cancelAndHoldAtTime
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - Method
-  - Reference
-  - Web Audio API
-  - cancelAndHoldAtTime
-  - cancelValuesAndHoldAtTime
 browser-compat: api.AudioParam.cancelAndHoldAtTime
 ---
 

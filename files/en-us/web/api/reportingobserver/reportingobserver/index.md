@@ -2,13 +2,8 @@
 title: ReportingObserver()
 slug: Web/API/ReportingObserver/ReportingObserver
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Reference
-  - Reporting API
-  - ReportingObserver
+status:
+  - experimental
 browser-compat: api.ReportingObserver.ReportingObserver
 ---
 

@@ -2,22 +2,8 @@
 title: 'Element: webkitmouseforcewillbegin event'
 slug: Web/API/Element/webkitmouseforcewillbegin_event
 page-type: web-api-event
-tags:
-  - API
-  - Element
-  - Event
-  - Force Touch
-  - Input
-  - MouseEvent
-  - NeedsExample
-  - Non-standard
-  - Reference
-  - UI
-  - Web
-  - WebKit
-  - apple
-  - macOS
-  - webkitmouseforcewillbegin
+status:
+  - non-standard
 browser-compat: api.Element.webkitmouseforcewillbegin_event
 ---
 

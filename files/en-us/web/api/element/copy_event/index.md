@@ -2,13 +2,6 @@
 title: 'Element: copy event'
 slug: Web/API/Element/copy_event
 page-type: web-api-event
-tags:
-  - API
-  - Clipboard API
-  - Element
-  - Event
-  - Reference
-  - Web
 browser-compat: api.Element.copy_event
 ---
 

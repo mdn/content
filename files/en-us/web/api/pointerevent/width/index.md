@@ -2,13 +2,6 @@
 title: PointerEvent.width
 slug: Web/API/PointerEvent/width
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
 browser-compat: api.PointerEvent.width
 ---
 

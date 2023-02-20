@@ -2,21 +2,12 @@
 title: TouchEvent.metaKey
 slug: Web/API/TouchEvent/metaKey
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Mobile
-  - Property
-  - TouchEvent
-  - touch
 browser-compat: api.TouchEvent.metaKey
 ---
 
 {{ APIRef("Touch Events") }}
 
-## Summary
-
-A boolean value indicating whether or not the <kbd>Meta</kbd> key is enabled when the touch event is created. If this key is enabled, the attribute's value is `true`. Otherwise, it is `false`.
+The read-only **`metaKey`** property of the {{domxref("TouchEvent")}} interface returns a boolean value indicating whether or not the <kbd>Meta</kbd> key is enabled when the touch event is created. If this key is enabled, the attribute's value is `true`. Otherwise, it is `false`.
 
 This property is {{ReadOnlyInline}}.
 

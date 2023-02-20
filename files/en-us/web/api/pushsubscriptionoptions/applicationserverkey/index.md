@@ -2,12 +2,6 @@
 title: PushSubscriptionOptions.applicationServerKey
 slug: Web/API/PushSubscriptionOptions/applicationServerKey
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - applicationServerKey
-  - PushSubscriptionOptions
 browser-compat: api.PushSubscriptionOptions.applicationServerKey
 ---
 

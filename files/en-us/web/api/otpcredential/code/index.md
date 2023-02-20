@@ -2,13 +2,8 @@
 title: OTPCredential.code
 slug: Web/API/OTPCredential/code
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - code
-  - OTPCredential
-  - Experimental
+status:
+  - experimental
 browser-compat: api.OTPCredential.code
 ---
 

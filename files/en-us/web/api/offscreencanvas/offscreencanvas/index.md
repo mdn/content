@@ -2,13 +2,6 @@
 title: OffscreenCanvas()
 slug: Web/API/OffscreenCanvas/OffscreenCanvas
 page-type: web-api-constructor
-tags:
-  - API
-  - Canvas
-  - Constructor
-  - OffscreenCanvas
-  - Reference
-  - WebGL
 browser-compat: api.OffscreenCanvas.OffscreenCanvas
 ---
 

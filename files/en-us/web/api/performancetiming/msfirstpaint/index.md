@@ -2,10 +2,8 @@
 title: PerformanceTiming.msFirstPaint
 slug: Web/API/PerformanceTiming/MsFirstPaint
 page-type: web-api-instance-property
-tags:
-  - msFirstPaint
-  - Property
-  - Non-standard
+status:
+  - non-standard
 ---
 
 {{APIRef("Performance API API")}}
