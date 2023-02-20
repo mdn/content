@@ -2,14 +2,6 @@
 title: ElementInternals.ariaReadOnly
 slug: Web/API/ElementInternals/ariaReadOnly
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaReadOnly
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaReadOnly
 ---
 

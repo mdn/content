@@ -2,13 +2,6 @@
 title: HTMLAnchorElement.relList
 slug: Web/API/HTMLAnchorElement/relList
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLAnchorElement
-  - Property
-  - Reference
-  - relList
 browser-compat: api.HTMLAnchorElement.relList
 ---
 

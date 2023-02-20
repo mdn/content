@@ -2,12 +2,6 @@
 title: VTTCue.vertical
 slug: Web/API/VTTCue/vertical
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - vertical
-  - VTTCue
 browser-compat: api.VTTCue.vertical
 ---
 

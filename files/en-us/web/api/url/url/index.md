@@ -2,13 +2,6 @@
 title: URL()
 slug: Web/API/URL/URL
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - URL
-  - URL API
-  - Polyfill
 browser-compat: api.URL.URL
 ---
 

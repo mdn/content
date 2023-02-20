@@ -2,14 +2,6 @@
 title: URL.origin
 slug: Web/API/URL/origin
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - URL
-  - URL API
-  - origin
 browser-compat: api.URL.origin
 ---
 

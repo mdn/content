@@ -2,13 +2,6 @@
 title: XSLTProcessor
 slug: Web/API/XSLTProcessor
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Reference
-  - XSLT
-  - Interface
 browser-compat: api.XSLTProcessor
 ---
 

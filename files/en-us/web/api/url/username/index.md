@@ -2,13 +2,6 @@
 title: URL.username
 slug: Web/API/URL/username
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-  - username
 browser-compat: api.URL.username
 ---
 

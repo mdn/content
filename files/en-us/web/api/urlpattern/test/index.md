@@ -2,14 +2,8 @@
 title: URLPattern.test()
 slug: Web/API/URLPattern/test
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - URLPattern
-  - URL Pattern API
-  - Polyfill
-  - Experimental
+status:
+  - experimental
 browser-compat: api.URLPattern.test
 ---
 

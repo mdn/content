@@ -2,10 +2,6 @@
 title: VTTCue
 slug: Web/API/VTTCue
 page-type: web-api-interface
-tags:
-  - VTTCue
-  - text track
-  - vtt
 browser-compat: api.VTTCue
 ---
 

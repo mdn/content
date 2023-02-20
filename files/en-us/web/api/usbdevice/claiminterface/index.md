@@ -2,16 +2,8 @@
 title: USBDevice.claimInterface()
 slug: Web/API/USBDevice/claimInterface
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - claimInterface
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.claimInterface
 ---
 

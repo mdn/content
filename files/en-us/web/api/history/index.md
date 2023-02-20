@@ -2,12 +2,6 @@
 title: History
 slug: Web/API/History
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - History API
-  - Interface
-  - Web
 browser-compat: api.History
 ---
 

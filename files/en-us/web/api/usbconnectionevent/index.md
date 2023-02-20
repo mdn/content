@@ -2,12 +2,8 @@
 title: USBConnectionEvent
 slug: Web/API/USBConnectionEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - USBConnectionEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBConnectionEvent
 ---
 

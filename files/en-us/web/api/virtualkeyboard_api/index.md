@@ -2,12 +2,8 @@
 title: VirtualKeyboard API
 slug: Web/API/VirtualKeyboard_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - VirtualKeyboard API
-  - Overview
-  - Reference
+status:
+  - experimental
 browser-compat:
   - api.VirtualKeyboard
 ---

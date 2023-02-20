@@ -2,13 +2,8 @@
 title: LargestContentfulPaint.element
 slug: Web/API/LargestContentfulPaint/element
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - element
-  - LargestContentfulPaint
-  - Experimental
+status:
+  - experimental
 browser-compat: api.LargestContentfulPaint.element
 ---
 

@@ -2,12 +2,6 @@
 title: HTMLMetaElement.httpEquiv
 slug: Web/API/HTMLMetaElement/httpEquiv
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMetaElement
-  - Property
-  - Reference
 browser-compat: api.HTMLMetaElement.httpEquiv
 ---
 

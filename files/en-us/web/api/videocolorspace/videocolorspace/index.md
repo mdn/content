@@ -2,12 +2,8 @@
 title: VideoColorSpace()
 slug: Web/API/VideoColorSpace/VideoColorSpace
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - VideoColorSpace
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoColorSpace.VideoColorSpace
 ---
 

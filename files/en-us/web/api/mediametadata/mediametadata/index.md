@@ -2,16 +2,6 @@
 title: MediaMetadata()
 slug: Web/API/MediaMetadata/MediaMetadata
 page-type: web-api-constructor
-tags:
-  - Audio
-  - Media
-  - Media Session API
-  - MediaMetadata
-  - MediaSession
-  - Property
-  - Reference
-  - Video
-  - artwork
 browser-compat: api.MediaMetadata.MediaMetadata
 ---
 

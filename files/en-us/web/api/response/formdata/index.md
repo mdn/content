@@ -2,15 +2,6 @@
 title: Response.formData()
 slug: Web/API/Response/formData
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - FormData
-  - Method
-  - NeedsExample
-  - Reference
-  - Response
 browser-compat: api.Response.formData
 ---
 

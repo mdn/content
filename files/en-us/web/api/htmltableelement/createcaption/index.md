@@ -2,13 +2,6 @@
 title: HTMLTableElement.createCaption()
 slug: Web/API/HTMLTableElement/createCaption
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - Method
-  - NeedsSpecTable
-  - Reference
 browser-compat: api.HTMLTableElement.createCaption
 ---
 

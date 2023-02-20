@@ -2,12 +2,6 @@
 title: VideoColorSpace.fullRange
 slug: Web/API/VideoColorSpace/fullRange
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - fullRange
-  - VideoColorSpace
 browser-compat: api.VideoColorSpace.fullRange
 ---
 

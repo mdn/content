@@ -2,14 +2,6 @@
 title: ElementInternals.ariaPosInSet
 slug: Web/API/ElementInternals/ariaPosInSet
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaPosInSet
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaPosInSet
 ---
 

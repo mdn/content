@@ -2,15 +2,6 @@
 title: VideoTrack
 slug: Web/API/VideoTrack
 page-type: web-api-interface
-tags:
-  - HTML
-  - HTML DOM
-  - Interface
-  - Media
-  - Reference
-  - Video
-  - VideoTrack
-  - track
 browser-compat: api.VideoTrack
 ---
 

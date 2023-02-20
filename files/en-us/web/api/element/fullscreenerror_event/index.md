@@ -2,13 +2,6 @@
 title: 'Element: fullscreenerror event'
 slug: Web/API/Element/fullscreenerror_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Fullscreen API
-  - Reference
-  - fullscreen
-  - fullscreenerror
 browser-compat: api.Element.fullscreenerror_event
 ---
 

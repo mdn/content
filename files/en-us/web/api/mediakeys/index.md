@@ -2,16 +2,6 @@
 title: MediaKeys
 slug: Web/API/MediaKeys
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - EncryptedMediaExtensions
-  - Interface
-  - Media
-  - MediaKeys
-  - NeedsExample
-  - Reference
-  - Video
 browser-compat: api.MediaKeys
 ---
 

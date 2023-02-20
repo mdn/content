@@ -2,16 +2,8 @@
 title: Window.find()
 slug: Web/API/Window/find
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - NeedsCompatTable
-  - NeedsContent
-  - Non-standard
-  - Reference
-  - Window
-  - find
+status:
+  - non-standard
 browser-compat: api.Window.find
 ---
 

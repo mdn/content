@@ -2,12 +2,6 @@
 title: VideoColorSpace.transfer
 slug: Web/API/VideoColorSpace/transfer
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - transfer
-  - VideoColorSpace
 browser-compat: api.VideoColorSpace.transfer
 ---
 

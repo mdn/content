@@ -2,13 +2,6 @@
 title: 'WebSocket: error event'
 slug: Web/API/WebSocket/error_event
 page-type: web-api-event
-tags:
-  - API
-  - Error
-  - Event
-  - Reference
-  - Web
-  - WebSocket
 browser-compat: api.WebSocket.error_event
 ---
 

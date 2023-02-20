@@ -2,11 +2,8 @@
 title: Attr.specified
 slug: Web/API/Attr/specified
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Attr.specified
 ---
 

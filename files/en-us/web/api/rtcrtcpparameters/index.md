@@ -2,18 +2,6 @@
 title: RTCRtcpParameters
 slug: Web/API/RTCRtcpParameters
 page-type: web-api-interface
-tags:
-  - API
-  - Configuration
-  - Dictionary
-  - Media
-  - Options
-  - RTCP
-  - RTCRtcpParameters
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - parameters
 browser-compat: api.RTCRtcpParameters
 ---
 

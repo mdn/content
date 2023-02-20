@@ -2,14 +2,6 @@
 title: IDBKeyRange
 slug: Web/API/IDBKeyRange
 page-type: web-api-interface
-tags:
-  - API
-  - Database
-  - IDBKeyRange
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
 browser-compat: api.IDBKeyRange
 ---
 

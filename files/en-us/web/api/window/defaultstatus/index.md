@@ -2,17 +2,8 @@
 title: Window.defaultStatus
 slug: Web/API/Window/defaultStatus
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsCompatTable
-  - NeedsExample
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Deprecated
-  - Property
-  - Reference
-  - Window
+status:
+  - deprecated
 ---
 
 {{APIRef()}}{{deprecated_header}}

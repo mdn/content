@@ -2,13 +2,6 @@
 title: Clearing by clicking
 slug: Web/API/WebGL_API/By_example/Clearing_by_clicking
 page-type: guide
-tags:
-  - Beginner
-  - Example
-  - Graphics
-  - Learn
-  - Tutorial
-  - WebGL
 ---
 
 {{PreviousNext("Learn/WebGL/By_example/Clearing_with_colors","Learn/WebGL/By_example/Simple_color_animation")}}

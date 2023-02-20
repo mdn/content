@@ -512,11 +512,3 @@ The CSS includes the styling for the container and the links it contains.
 We hope this article has provided you with all you'll need to know about links — for now! The final article in our Styling text module details how to use [custom fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts) on your websites (or web fonts, as they are better known).
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
-
-## In this module
-
-- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Styling lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Styling links](/en-US/docs/Learn/CSS/Styling_text/Styling_links)
-- [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Typesetting a community school homepage](/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

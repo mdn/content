@@ -2,12 +2,6 @@
 title: TrustedTypePolicyFactory.isScript()
 slug: Web/API/TrustedTypePolicyFactory/isScript
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - isScript
-  - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.isScript
 ---
 

@@ -2,17 +2,9 @@
 title: VRDisplay.requestAnimationFrame()
 slug: Web/API/VRDisplay/requestAnimationFrame
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - requestAnimationFrame()
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.requestAnimationFrame
 ---
 

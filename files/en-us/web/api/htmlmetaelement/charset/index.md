@@ -2,12 +2,6 @@
 title: HTMLMetaElement.charset
 slug: Web/API/HTMLMetaElement/charset
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMetaElement
-  - Property
-  - Reference
 ---
 
 {{APIRef("HTML DOM")}}

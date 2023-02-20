@@ -2,17 +2,6 @@
 title: 'RTCPeerConnection: signalingstatechange event'
 slug: Web/API/RTCPeerConnection/signalingstatechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Media
-  - Reference
-  - Signaling
-  - WebRTC
-  - WebRTC API
-  - signalingState
-  - signalingstatechange
-  - state
 browser-compat: api.RTCPeerConnection.signalingstatechange_event
 ---
 

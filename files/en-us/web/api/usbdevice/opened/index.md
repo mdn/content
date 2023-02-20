@@ -2,16 +2,8 @@
 title: USBDevice.opened
 slug: Web/API/USBDevice/opened
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - opened
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.opened
 ---
 

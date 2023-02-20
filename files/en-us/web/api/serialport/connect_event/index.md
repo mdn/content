@@ -2,12 +2,8 @@
 title: 'SerialPort: connect event'
 slug: Web/API/SerialPort/connect_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - SerialPort
-  - Experimental
+status:
+  - experimental
 browser-compat: api.SerialPort.connect_event
 ---
 

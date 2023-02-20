@@ -2,15 +2,6 @@
 title: ChannelSplitterNode
 slug: Web/API/ChannelSplitterNode
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - ChannelSplitterNode
-  - Interface
-  - Reference
-  - Splitter
-  - Web Audio
-  - Web Audio API
 browser-compat: api.ChannelSplitterNode
 ---
 

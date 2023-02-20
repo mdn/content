@@ -1,6 +1,7 @@
 ---
 title: webNavigation
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
+page-type: webextension-api
 tags:
   - API
   - Add-ons

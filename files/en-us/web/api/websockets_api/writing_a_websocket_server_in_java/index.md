@@ -2,12 +2,6 @@
 title: Writing a WebSocket server in Java
 slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 page-type: guide
-tags:
-  - HTML
-  - Handshaking
-  - NeedsMarkupWork
-  - Tutorial
-  - WebSockets
 ---
 
 {{DefaultAPISidebar("Websockets API")}}

@@ -2,12 +2,6 @@
 title: VTTCue.positionAlign
 slug: Web/API/VTTCue/positionAlign
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - positionAlign
-  - VTTCue
 browser-compat: api.VTTCue.positionAlign
 ---
 

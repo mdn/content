@@ -2,17 +2,9 @@
 title: VRStageParameters.sizeY
 slug: Web/API/VRStageParameters/sizeY
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRStageParameters
-  - Virtual Reality
-  - WebVR
-  - sizeY
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRStageParameters.sizeY
 ---
 

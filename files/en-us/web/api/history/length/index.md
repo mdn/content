@@ -2,14 +2,6 @@
 title: History.length
 slug: Web/API/History/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - History
-  - History API
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.History.length
 ---
 

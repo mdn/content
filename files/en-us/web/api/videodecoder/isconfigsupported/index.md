@@ -2,13 +2,8 @@
 title: VideoDecoder.isConfigSupported()
 slug: Web/API/VideoDecoder/isConfigSupported
 page-type: web-api-static-method
-tags:
-  - API
-  - Method
-  - Reference
-  - isConfigSupported
-  - VideoDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoDecoder.isConfigSupported
 ---
 

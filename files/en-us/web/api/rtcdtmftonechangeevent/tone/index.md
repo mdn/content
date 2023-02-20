@@ -2,15 +2,6 @@
 title: RTCDTMFToneChangeEvent.tone
 slug: Web/API/RTCDTMFToneChangeEvent/tone
 page-type: web-api-instance-property
-tags:
-  - Media
-  - Property
-  - RTCDTMFToneChangeEvent
-  - Reference
-  - Touch
-  - WebRTC
-  - WebRTC API
-  - tone
 browser-compat: api.RTCDTMFToneChangeEvent.tone
 ---
 

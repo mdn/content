@@ -2,13 +2,8 @@
 title: VideoFrame.colorSpace
 slug: Web/API/VideoFrame/colorSpace
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - colorSpace
-  - VideoFrame
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoFrame.colorSpace
 ---
 

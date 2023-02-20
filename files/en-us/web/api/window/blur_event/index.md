@@ -2,15 +2,6 @@
 title: 'Window: blur event'
 slug: Web/API/Window/blur_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - FocusEvent
-  - Reference
-  - Web
-  - Window
-  - blur
-  - onblur
 browser-compat: api.Window.blur_event
 ---
 

@@ -2,12 +2,6 @@
 title: HTMLElement.outerText
 slug: Web/API/HTMLElement/outerText
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Property
-  - Reference
 browser-compat: api.HTMLElement.outerText
 ---
 

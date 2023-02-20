@@ -2,12 +2,6 @@
 title: VTTCue.position
 slug: Web/API/VTTCue/position
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - position
-  - VTTCue
 browser-compat: api.VTTCue.position
 ---
 

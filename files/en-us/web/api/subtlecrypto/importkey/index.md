@@ -2,13 +2,6 @@
 title: SubtleCrypto.importKey()
 slug: Web/API/SubtleCrypto/importKey
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SubtleCrypto
-  - Web Crypto API
-  - importKey
 browser-compat: api.SubtleCrypto.importKey
 ---
 

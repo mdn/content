@@ -2,16 +2,8 @@
 title: PerformanceTiming.connectStart
 slug: Web/API/PerformanceTiming/connectStart
 page-type: web-api-instance-property
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - HTML
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Read-only
-  - legacy
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming.connectStart
 ---
 

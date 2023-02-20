@@ -2,14 +2,6 @@
 title: PushSubscription.expirationTime
 slug: Web/API/PushSubscription/expirationTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Push API
-  - PushManager
-  - PushSubscription
-  - Reference
-  - Service Worker
 browser-compat: api.PushSubscription.expirationTime
 ---
 

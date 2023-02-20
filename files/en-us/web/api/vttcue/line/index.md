@@ -2,12 +2,6 @@
 title: VTTCue.line
 slug: Web/API/VTTCue/line
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - line
-  - VTTCue
 browser-compat: api.VTTCue.line
 ---
 

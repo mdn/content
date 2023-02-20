@@ -2,15 +2,6 @@
 title: IDBTransaction.objectStoreNames
 slug: Web/API/IDBTransaction/ObjectStoreNames
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBTransaction
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - db
 browser-compat: api.IDBTransaction.objectStoreNames
 ---
 

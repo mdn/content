@@ -2,12 +2,8 @@
 title: VideoFrame
 slug: Web/API/VideoFrame
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - VideoFrame
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoFrame
 ---
 
@@ -15,7 +11,7 @@ browser-compat: api.VideoFrame
 
 The **`VideoFrame`** interface of the [Web Codecs API](/en-US/docs/Web/API/WebCodecs_API) represents a frame of a video.
 
-`VideoFrame` is a {{glossary("Transferable objects","transferable object")}}.
+`VideoFrame` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 ## Description
 

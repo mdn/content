@@ -2,13 +2,6 @@
 title: WorkerNavigator.storage
 slug: Web/API/WorkerNavigator/storage
 page-type: web-api-instance-property
-tags:
-  - API
-  - Navigator
-  - Property
-  - Reference
-  - Secure context
-  - Storage
 browser-compat: api.WorkerNavigator.storage
 ---
 

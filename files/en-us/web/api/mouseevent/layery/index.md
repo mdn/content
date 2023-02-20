@@ -2,14 +2,8 @@
 title: MouseEvent.layerY
 slug: Web/API/MouseEvent/layerY
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Read-only
-  - Reference
-  - MouseEvent
-  - Non-standard
+status:
+  - non-standard
 browser-compat: api.MouseEvent.layerY
 ---
 

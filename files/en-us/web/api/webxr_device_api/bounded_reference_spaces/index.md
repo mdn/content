@@ -2,15 +2,6 @@
 title: Using bounded reference spaces
 slug: Web/API/WebXR_Device_API/Bounded_reference_spaces
 page-type: guide
-tags:
-  - 3D
-  - Graphics
-  - Guide
-  - Reference Space
-  - WebXR
-  - WebXR Device API
-  - XRBoundedReferenceSpace
-  - space
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}

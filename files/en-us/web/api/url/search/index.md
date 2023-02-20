@@ -2,12 +2,6 @@
 title: URL.search
 slug: Web/API/URL/search
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
 browser-compat: api.URL.search
 ---
 

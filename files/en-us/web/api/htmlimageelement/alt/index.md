@@ -2,19 +2,6 @@
 title: HTMLImageElement.alt
 slug: Web/API/HTMLImageElement/alt
 page-type: web-api-instance-property
-tags:
-  - API
-  - Element
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Property
-  - Reference
-  - Text
-  - alt
-  - alternate
-  - fallback
 browser-compat: api.HTMLImageElement.alt
 ---
 

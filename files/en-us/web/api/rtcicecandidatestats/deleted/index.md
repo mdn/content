@@ -2,15 +2,6 @@
 title: RTCIceCandidateStats.deleted
 slug: Web/API/RTCIceCandidateStats/deleted
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - Property
-  - RTCIceCandidateStats
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - deleted
 browser-compat: api.RTCIceCandidateStats.deleted
 ---
 

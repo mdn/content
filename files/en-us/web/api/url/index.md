@@ -2,22 +2,6 @@
 title: URL
 slug: Web/API/URL
 page-type: web-api-interface
-tags:
-  - API
-  - Address
-  - Domain
-  - Interface
-  - Location
-  - Networking
-  - Reference
-  - URI
-  - URL
-  - URL API
-  - Web
-  - hostname
-  - href
-  - origin
-  - Polyfill
 browser-compat: api.URL
 ---
 

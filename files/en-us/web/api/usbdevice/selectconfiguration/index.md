@@ -2,16 +2,8 @@
 title: USBDevice.selectConfiguration()
 slug: Web/API/USBDevice/selectConfiguration
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - selectConfiguration
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.selectConfiguration
 ---
 

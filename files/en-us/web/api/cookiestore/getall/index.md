@@ -2,13 +2,8 @@
 title: CookieStore.getAll()
 slug: Web/API/CookieStore/getAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - getAll()
-  - CookieStore
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CookieStore.getAll
 ---
 

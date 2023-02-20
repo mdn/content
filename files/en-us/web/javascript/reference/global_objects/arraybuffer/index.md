@@ -20,7 +20,7 @@ It is an array of bytes, often referred to in other languages as a "byte array".
 
 The [`ArrayBuffer()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer) constructor creates a new `ArrayBuffer` of the given length in bytes. You can also get an array buffer from existing data, for example, from a [Base64](/en-US/docs/Glossary/Base64) string or [from a local file](/en-US/docs/Web/API/FileReader/readAsArrayBuffer).
 
-`ArrayBuffer` is a {{glossary("Transferable objects","transferable object")}}.
+`ArrayBuffer` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 ## Constructor
 

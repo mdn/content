@@ -2,9 +2,6 @@
 title: DOMMatrixReadOnly.flipX()
 slug: Web/API/DOMMatrixReadOnly/flipX
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.DOMMatrixReadOnly.flipX
 ---
 
@@ -41,10 +38,10 @@ The JavaScript first creates an identity matrix, then uses the `flipX()` method 
 #### JavaScript
 
 ```js
-const flipped = document.getElementById('flipped');
+const flipped = document.getElementById("flipped");
 const matrix = new DOMMatrixReadOnly();
 const flippedMatrix = matrix.flipX();
-flipped.setAttribute('transform', flippedMatrix.toString());
+flipped.setAttribute("transform", flippedMatrix.toString());
 ```
 
 #### Result

@@ -2,15 +2,8 @@
 title: PeriodicSyncEvent.tag
 slug: Web/API/PeriodicSyncEvent/tag
 page-type: web-api-instance-property
-tags:
-  - Offline
-  - PWA
-  - PeriodicSyncEvent
-  - Property
-  - Service Worker
-  - Web Periodic Background Synchronization API
-  - periodic sync
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PeriodicSyncEvent.tag
 ---
 

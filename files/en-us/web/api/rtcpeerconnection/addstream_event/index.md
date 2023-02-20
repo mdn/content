@@ -2,19 +2,9 @@
 title: 'RTCPeerConnection: addstream event'
 slug: Web/API/RTCPeerConnection/addstream_event
 page-type: web-api-event
-tags:
-  - Event
-  - Media
-  - MediaStream
-  - Deprecated
-  - RTCPeerConnection
-  - Reference
-  - Streams
-  - WebRTC
-  - WebRTC API
-  - addStream
-  - events
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.RTCPeerConnection.addstream_event
 ---
 

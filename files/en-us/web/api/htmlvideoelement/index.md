@@ -2,13 +2,6 @@
 title: HTMLVideoElement
 slug: Web/API/HTMLVideoElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTMLVideoElement
-  - Interface
-  - Reference
-  - Video
 browser-compat: api.HTMLVideoElement
 ---
 

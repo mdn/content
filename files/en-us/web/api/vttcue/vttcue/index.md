@@ -2,17 +2,6 @@
 title: VTTCue()
 slug: Web/API/VTTCue/VTTCue
 page-type: web-api-constructor
-tags:
-  - API
-  - Accessibility
-  - Constructor
-  - Reference
-  - VTTCue
-  - WebVTT
-  - WebVTT API
-  - a11y
-  - captions
-  - vtt
 browser-compat: api.VTTCue.VTTCue
 ---
 

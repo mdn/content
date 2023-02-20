@@ -2,14 +2,6 @@
 title: Element.ariaLabel
 slug: Web/API/Element/ariaLabel
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaLabel
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaLabel
 ---
 

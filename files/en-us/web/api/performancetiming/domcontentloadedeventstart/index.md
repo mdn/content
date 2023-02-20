@@ -2,16 +2,8 @@
 title: PerformanceTiming.domContentLoadedEventStart
 slug: Web/API/PerformanceTiming/domContentLoadedEventStart
 page-type: web-api-instance-property
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Read-only
-  - domContentLoadedEventStart
-  - legacy
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming.domContentLoadedEventStart
 ---
 

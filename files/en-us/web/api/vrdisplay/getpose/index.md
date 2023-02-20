@@ -2,17 +2,9 @@
 title: VRDisplay.getPose()
 slug: Web/API/VRDisplay/getPose
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - getPose()
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.getPose
 ---
 
