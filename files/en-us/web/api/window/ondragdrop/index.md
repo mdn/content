@@ -18,7 +18,7 @@ An event handler for drag and drop events sent to the window.
 
 The event handler function to be registered.
 
-The `window.ondragdrop` property and the `ondragdrop` attribute are not implemented in [Gecko](/en-US/Gecko) ({{ Bug(112288) }}), you have to use `addEventListener`. See [addEventListener](/en-US/docs/Web/API/EventTarget/addEventListener) for details.
+The `window.ondragdrop` property and the `ondragdrop` attribute are not implemented in Firefox ({{ Bug(112288) }}), you have to use `addEventListener`. See [addEventListener](/en-US/docs/Web/API/EventTarget/addEventListener) for details.
 
 ## Examples
 
