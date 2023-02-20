@@ -2,19 +2,6 @@
 title: Navigator.requestMediaKeySystemAccess()
 slug: Web/API/Navigator/requestMediaKeySystemAccess
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - DOM Reference
-  - EME
-  - Encrypted Media Extensions
-  - Encrypted Media Extensions API
-  - HTML DOM
-  - Method
-  - Navigator
-  - Reference
-  - Video
-  - requestMediaKeySystemAccess
 browser-compat: api.Navigator.requestMediaKeySystemAccess
 ---
 

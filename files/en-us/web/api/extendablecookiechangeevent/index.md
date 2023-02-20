@@ -2,11 +2,6 @@
 title: ExtendableCookieChangeEvent
 slug: Web/API/ExtendableCookieChangeEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - ExtendableCookieChangeEvent
 browser-compat: api.ExtendableCookieChangeEvent
 ---
 

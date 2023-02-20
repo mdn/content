@@ -2,13 +2,8 @@
 title: AudioData.sampleRate
 slug: Web/API/AudioData/sampleRate
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - sampleRate
-  - AudioData
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioData.sampleRate
 ---
 

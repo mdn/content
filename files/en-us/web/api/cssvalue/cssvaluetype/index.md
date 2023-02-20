@@ -2,14 +2,8 @@
 title: CSSValue.cssValueType
 slug: Web/API/CSSValue/cssValueType
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSValue
-  - Property
-  - Read-only
-  - Reference
-  - cssValueType
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSValue.cssValueType
 ---
 

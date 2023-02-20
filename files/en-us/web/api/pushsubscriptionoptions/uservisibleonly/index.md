@@ -2,12 +2,6 @@
 title: PushSubscriptionOptions.userVisibleOnly
 slug: Web/API/PushSubscriptionOptions/userVisibleOnly
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - userVisibleOnly
-  - PushSubscriptionOptions
 browser-compat: api.PushSubscriptionOptions.userVisibleOnly
 ---
 

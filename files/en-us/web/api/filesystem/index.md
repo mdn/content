@@ -2,13 +2,6 @@
 title: FileSystem
 slug: Web/API/FileSystem
 page-type: web-api-interface
-tags:
-  - API
-  - File API
-  - File and Directory Entries API
-  - Interface
-  - Offline
-  - filesystem
 browser-compat: api.FileSystem
 ---
 

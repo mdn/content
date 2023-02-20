@@ -2,12 +2,6 @@
 title: EXT_disjoint_timer_query.isQueryEXT()
 slug: Web/API/EXT_disjoint_timer_query/isQueryEXT
 page-type: webgl-extension-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.EXT_disjoint_timer_query.isQueryEXT
 ---
 

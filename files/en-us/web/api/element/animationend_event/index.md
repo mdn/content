@@ -1,15 +1,6 @@
 ---
 title: "Element: animationend event"
 slug: Web/API/Element/animationend_event
-tags:
-  - API
-  - Animation
-  - AnimationEvent
-  - CSS Animations
-  - Event
-  - Element
-  - Reference
-  - animationend
 browser-compat: api.Element.animationend_event
 page-type: web-api-event
 ---

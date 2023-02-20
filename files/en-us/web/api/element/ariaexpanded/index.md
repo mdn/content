@@ -2,14 +2,6 @@
 title: Element.ariaExpanded
 slug: Web/API/Element/ariaExpanded
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaExpanded
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaExpanded
 ---
 

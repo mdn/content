@@ -2,13 +2,6 @@
 title: Element.shadowRoot
 slug: Web/API/Element/shadowRoot
 page-type: web-api-instance-property
-tags:
-  - API
-  - Element
-  - Property
-  - Reference
-  - ShadowRoot
-  - shadow DOM
 browser-compat: api.Element.shadowRoot
 ---
 

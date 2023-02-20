@@ -2,14 +2,6 @@
 title: Animation
 slug: Web/API/Animation
 page-type: web-api-interface
-tags:
-  - API
-  - Animations
-  - Interface
-  - Reference
-  - Web Animations
-  - waapi
-  - web animations api
 browser-compat: api.Animation
 ---
 

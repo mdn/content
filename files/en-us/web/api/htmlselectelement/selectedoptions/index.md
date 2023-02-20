@@ -2,17 +2,6 @@
 title: HTMLSelectElement.selectedOptions
 slug: Web/API/HTMLSelectElement/selectedOptions
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Options
-  - Property
-  - Read-only
-  - Reference
-  - Select
-  - Web
-  - selectedOptions
 browser-compat: api.HTMLSelectElement.selectedOptions
 ---
 

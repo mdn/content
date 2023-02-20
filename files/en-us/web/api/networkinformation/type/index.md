@@ -2,14 +2,8 @@
 title: NetworkInformation.type
 slug: Web/API/NetworkInformation/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Network Information API
-  - NetworkInformation
-  - Property
-  - Read-only
-  - Reference
+status:
+  - experimental
 browser-compat: api.NetworkInformation.type
 ---
 

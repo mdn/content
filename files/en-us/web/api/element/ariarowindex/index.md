@@ -2,14 +2,6 @@
 title: Element.ariaRowIndex
 slug: Web/API/Element/ariaRowIndex
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaRowIndex
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaRowIndex
 ---
 

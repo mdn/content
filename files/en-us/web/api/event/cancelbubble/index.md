@@ -2,10 +2,8 @@
 title: Event.cancelBubble
 slug: Web/API/Event/cancelBubble
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Event.cancelBubble
 ---
 

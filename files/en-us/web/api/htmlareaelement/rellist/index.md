@@ -2,12 +2,6 @@
 title: HTMLAreaElement.relList
 slug: Web/API/HTMLAreaElement/relList
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLAreaElement
-  - Property
-  - Reference
 browser-compat: api.HTMLAreaElement.relList
 ---
 

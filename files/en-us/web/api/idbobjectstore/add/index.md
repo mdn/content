@@ -2,14 +2,6 @@
 title: IDBObjectStore.add()
 slug: Web/API/IDBObjectStore/add
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBObjectStore
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
 browser-compat: api.IDBObjectStore.add
 ---
 

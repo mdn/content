@@ -2,14 +2,6 @@
 title: Element.ariaRoleDescription
 slug: Web/API/Element/ariaRoleDescription
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaRoleDescription
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaRoleDescription
 ---
 

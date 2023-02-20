@@ -2,13 +2,8 @@
 title: VideoDecoder.decode()
 slug: Web/API/VideoDecoder/decode
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - decode
-  - VideoDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoDecoder.decode
 ---
 

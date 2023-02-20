@@ -2,18 +2,6 @@
 title: EXT_float_blend
 slug: Web/API/EXT_float_blend
 page-type: webgl-extension
-tags:
-  - 32-bit
-  - API
-  - Blending
-  - Draw Buffer
-  - EXT_float_blend
-  - Floating-Point
-  - Reference
-  - WebGL
-  - WebGL extension
-  - WebGL extensions
-  - float
 browser-compat: api.EXT_float_blend
 ---
 

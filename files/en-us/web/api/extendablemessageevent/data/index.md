@@ -2,13 +2,6 @@
 title: ExtendableMessageEvent.data
 slug: Web/API/ExtendableMessageEvent/data
 page-type: web-api-instance-property
-tags:
-  - API
-  - ExtendableMessageEvent
-  - Property
-  - Reference
-  - Service Workers
-  - data
 browser-compat: api.ExtendableMessageEvent.data
 ---
 

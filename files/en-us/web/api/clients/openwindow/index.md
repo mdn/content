@@ -2,14 +2,6 @@
 title: Clients.openWindow()
 slug: Web/API/Clients/openWindow
 page-type: web-api-instance-method
-tags:
-  - API
-  - Clients
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - openWindow
 browser-compat: api.Clients.openWindow
 ---
 

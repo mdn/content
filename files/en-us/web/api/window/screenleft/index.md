@@ -2,14 +2,6 @@
 title: Window.screenLeft
 slug: Web/API/Window/screenLeft
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Read-only
-  - Reference
-  - Window
-  - screenLeft
 browser-compat: api.Window.screenLeft
 ---
 

@@ -2,20 +2,6 @@
 title: 'RTCPeerConnection: icegatheringstatechange event'
 slug: Web/API/RTCPeerConnection/icegatheringstatechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Connection
-  - Connectivity
-  - Gathering
-  - ICE
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - events
-  - Event
-  - icegatheringstatechange
-  - state
 browser-compat: api.RTCPeerConnection.icegatheringstatechange_event
 ---
 

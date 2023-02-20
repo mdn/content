@@ -2,12 +2,6 @@
 title: Navigator.maxTouchPoints
 slug: Web/API/Navigator/maxTouchPoints
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Navigator
-  - Property
-  - Reference
 browser-compat: api.Navigator.maxTouchPoints
 ---
 

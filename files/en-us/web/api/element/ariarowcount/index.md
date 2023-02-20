@@ -2,14 +2,6 @@
 title: Element.ariaRowCount
 slug: Web/API/Element/ariaRowCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaRowCount
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaRowCount
 ---
 

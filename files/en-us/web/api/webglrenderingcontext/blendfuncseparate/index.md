@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.blendFuncSeparate()
 slug: Web/API/WebGLRenderingContext/blendFuncSeparate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.blendFuncSeparate
 ---
 

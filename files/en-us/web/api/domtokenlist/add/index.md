@@ -2,9 +2,6 @@
 title: DOMTokenList.add()
 slug: Web/API/DOMTokenList/add
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.DOMTokenList.add
 ---
 

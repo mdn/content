@@ -2,15 +2,9 @@
 title: 'IDBFileRequest: progress event'
 slug: Web/API/IDBFileRequest/progress_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Files
-  - Event
-  - Reference
-  - WebAPI
-  - Non-standard
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.IDBFileRequest.progress_event
 ---
 

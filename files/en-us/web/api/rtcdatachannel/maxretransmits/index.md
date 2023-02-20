@@ -2,13 +2,6 @@
 title: RTCDataChannel.maxRetransmits
 slug: Web/API/RTCDataChannel/maxRetransmits
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCDataChannel
-  - Read-only
-  - Reference
-  - WebRTC
-  - maxRetransmits
 browser-compat: api.RTCDataChannel.maxRetransmits
 ---
 

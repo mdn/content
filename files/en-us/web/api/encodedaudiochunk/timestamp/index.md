@@ -2,13 +2,8 @@
 title: EncodedAudioChunk.timestamp
 slug: Web/API/EncodedAudioChunk/timestamp
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - timestamp
-  - EncodedAudioChunk
-  - Experimental
+status:
+  - experimental
 browser-compat: api.EncodedAudioChunk.timestamp
 ---
 

@@ -2,18 +2,6 @@
 title: CryptoKey
 slug: Web/API/CryptoKey
 page-type: web-api-interface
-tags:
-  - API
-  - Code
-  - CryptoKey
-  - Cryptography
-  - Encoding
-  - Encryption
-  - Interface
-  - Privacy
-  - Reference
-  - Security
-  - Web Crypto API
 browser-compat: api.CryptoKey
 ---
 
@@ -25,42 +13,21 @@ For security reasons, the `CryptoKey` interface can only be used in a [secure co
 
 ## Instance properties
 
-- `CryptoKey.type`
+- {{domxref("CryptoKey.type")}} {{ReadOnlyInline}}
 
-  - : String which may take one of the following values:
+  - : The type of key the object represents. It may take one of the following values: `"secret"`, `"private"` or `"public"`.
 
-    - `"secret"`: This key is a secret key for use with a {{Glossary("Symmetric-key cryptography", "symmetric algorithm")}}.
-    - `"private"`: This key is the private half of an {{Glossary("Public-key cryptography", "asymmetric algorithm's")}} [`CryptoKeyPair`](/en-US/docs/Web/API/CryptoKeyPair).
-    - `"public"`: This key is the public half of an {{Glossary("Public-key cryptography", "asymmetric algorithm's")}} [`CryptoKeyPair`](/en-US/docs/Web/API/CryptoKeyPair).
-
-- `CryptoKey.extractable`
+- {{domxref("CryptoKey.extractable")}} {{ReadOnlyInline}}
 
   - : A boolean value indicating whether or not the key may be extracted using [`SubtleCrypto.exportKey()`](/en-US/docs/Web/API/SubtleCrypto/exportKey) or [`SubtleCrypto.wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/wrapKey).
 
-    - `true`: The key may be extracted.
-    - `false`: The key may not be extracted. [`exportKey()`](/en-US/docs/Web/API/SubtleCrypto/exportKey) or [`wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/wrapKey) will throw an exception if used to extract this key.
-
-- `CryptoKey.algorithm`
+- {{domxref("CryptoKey.algorithm")}} {{ReadOnlyInline}}
 
   - : An object describing the algorithm for which this key can be used and any associated extra parameters.
 
-    - [`AesKeyGenParams`](/en-US/docs/Web/API/AesKeyGenParams) if the algorithm is any of the AES variants.
-    - [`RsaHashedKeyGenParams`](/en-US/docs/Web/API/RsaHashedKeyGenParams) if the algorithm is any of the RSA variants.
-    - [`EcKeyGenParams`](/en-US/docs/Web/API/EcKeyGenParams) if the algorithm is any of the EC variants.
-    - [`HmacKeyGenParams`](/en-US/docs/Web/API/HmacKeyGenParams) if the algorithm is HMAC.
+- {{domxref("CryptoKey.usages")}} {{ReadOnlyInline}}
 
-- `CryptoKey.usages`
-
-  - : An {{jsxref("Array")}} of strings, indicating what can be done with the key. Possible values for array elements are:
-
-    - `"encrypt"`: The key may be used to {{domxref("SubtleCrypto.encrypt()", "encrypt")}} messages.
-    - `"decrypt"`: The key may be used to {{domxref("SubtleCrypto.decrypt()", "decrypt")}} messages.
-    - `"sign"`: The key may be used to {{domxref("SubtleCrypto.sign()", "sign")}} messages.
-    - `"verify"`: The key may be used to {{domxref("SubtleCrypto.verify()", "verify")}} signatures.
-    - `"deriveKey"`: The key may be used in {{domxref("SubtleCrypto.deriveKey()", "deriving a new key")}}.
-    - `"deriveBits"`: The key may be used in {{domxref("SubtleCrypto.deriveBits()", "deriving bits")}}.
-    - `"wrapKey"`: The key may be used to {{domxref("SubtleCrypto.wrapKey()", "wrap a key")}}.
-    - `"unwrapKey"`: The key may be used to {{domxref("SubtleCrypto.unwrapKey()", "unwrap a key")}}.
+  - : An {{jsxref("Array")}} of strings, indicating what can be done with the key. Possible values for array elements are `"encrypt"`, `"decrypt"`, `"sign"`, `"verify"`, `"deriveKey"`, `"deriveBits"`, `"wrapKey"`, and `"unwrapKey"`.
 
 ## Examples
 

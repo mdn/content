@@ -2,9 +2,6 @@
 title: EventTarget()
 slug: Web/API/EventTarget/EventTarget
 page-type: web-api-constructor
-tags:
-  - Constructor
-  - Reference
 browser-compat: api.EventTarget.EventTarget
 ---
 

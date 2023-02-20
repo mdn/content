@@ -2,15 +2,6 @@
 title: SpeechRecognition.lang
 slug: Web/API/SpeechRecognition/lang
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - lang
-  - recognition
-  - speech
 browser-compat: api.SpeechRecognition.lang
 ---
 

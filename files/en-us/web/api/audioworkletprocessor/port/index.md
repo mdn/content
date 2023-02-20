@@ -2,13 +2,6 @@
 title: AudioWorkletProcessor.port
 slug: Web/API/AudioWorkletProcessor/port
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioWorkletProcessor
-  - Property
-  - Reference
-  - Web Audio API
 browser-compat: api.AudioWorkletProcessor.port
 ---
 

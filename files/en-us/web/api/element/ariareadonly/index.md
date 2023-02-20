@@ -2,14 +2,6 @@
 title: Element.ariaReadOnly
 slug: Web/API/Element/ariaReadOnly
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaReadOnly
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaReadOnly
 ---
 

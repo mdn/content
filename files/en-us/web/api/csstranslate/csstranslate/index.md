@@ -2,15 +2,8 @@
 title: CSSTranslate()
 slug: Web/API/CSSTranslate/CSSTranslate
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSTransformComponent
-  - CSSTransformValue
-  - CSSTranslate
-  - Constructor
-  - Experimental
-  - Houdini
+status:
+  - experimental
 browser-compat: api.CSSTranslate.CSSTranslate
 ---
 

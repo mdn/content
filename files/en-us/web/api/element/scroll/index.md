@@ -2,12 +2,6 @@
 title: Element.scroll()
 slug: Web/API/Element/scroll
 page-type: web-api-instance-method
-tags:
-  - API
-  - Element
-  - Method
-  - Reference
-  - Scroll
 browser-compat: api.Element.scroll
 ---
 

@@ -1,14 +1,6 @@
 ---
 title: "Element: animationstart event"
 slug: Web/API/Element/animationstart_event
-tags:
-  - API
-  - Animation
-  - AnimationEvent
-  - CSS Animations
-  - Event
-  - Element
-  - Reference
 browser-compat: api.Element.animationstart_event
 page-type: web-api-event
 ---

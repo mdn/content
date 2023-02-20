@@ -2,12 +2,6 @@
 title: TrustedScriptURL.toString()
 slug: Web/API/TrustedScriptURL/toString
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - toString
-  - TrustedScriptURL
 browser-compat: api.TrustedScriptURL.toString
 ---
 

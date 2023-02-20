@@ -2,13 +2,8 @@
 title: EncodedAudioChunk.copyTo()
 slug: Web/API/EncodedAudioChunk/copyTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - copyTo
-  - EncodedAudioChunk
-  - Experimental
+status:
+  - experimental
 browser-compat: api.EncodedAudioChunk.copyTo
 ---
 

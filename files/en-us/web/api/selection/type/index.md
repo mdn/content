@@ -2,12 +2,6 @@
 title: Selection.type
 slug: Web/API/Selection/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Selection
-  - Type
 browser-compat: api.Selection.type
 ---
 

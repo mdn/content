@@ -2,13 +2,6 @@
 title: Performance
 slug: Web/API/Performance
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Navigation Timing
-  - Performance
-  - Reference
-  - Web Performance
 browser-compat: api.Performance
 ---
 

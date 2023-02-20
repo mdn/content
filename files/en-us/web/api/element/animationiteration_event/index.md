@@ -1,14 +1,6 @@
 ---
 title: "Element: animationiteration event"
 slug: Web/API/Element/animationiteration_event
-tags:
-  - API
-  - Animation
-  - AnimationEvent
-  - CSS Animations
-  - Event
-  - Element
-  - Reference
 browser-compat: api.Element.animationiteration_event
 page-type: web-api-event
 ---

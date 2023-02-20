@@ -2,10 +2,6 @@
 title: Node.isConnected
 slug: Web/API/Node/isConnected
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Node.isConnected
 ---
 

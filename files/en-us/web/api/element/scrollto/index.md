@@ -2,12 +2,6 @@
 title: Element.scrollTo()
 slug: Web/API/Element/scrollTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - Element
-  - Method
-  - Reference
-  - scrollTo
 browser-compat: api.Element.scrollTo
 ---
 

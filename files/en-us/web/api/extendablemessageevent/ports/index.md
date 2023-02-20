@@ -2,13 +2,6 @@
 title: ExtendableMessageEvent.ports
 slug: Web/API/ExtendableMessageEvent/ports
 page-type: web-api-instance-property
-tags:
-  - API
-  - ExtendableMessageEvent
-  - Property
-  - Reference
-  - Service Workers
-  - ports
 browser-compat: api.ExtendableMessageEvent.ports
 ---
 

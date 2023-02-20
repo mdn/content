@@ -2,14 +2,8 @@
 title: WebTransport.incomingUnidirectionalStreams
 slug: Web/API/WebTransport/incomingUnidirectionalStreams
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - incomingUnidirectionalStreams
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransport.incomingUnidirectionalStreams
 ---
 

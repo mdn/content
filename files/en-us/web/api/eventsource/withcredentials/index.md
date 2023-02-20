@@ -2,13 +2,6 @@
 title: EventSource.withCredentials
 slug: Web/API/EventSource/withCredentials
 page-type: web-api-instance-property
-tags:
-  - API
-  - EventSource
-  - Property
-  - Reference
-  - Server-sent events
-  - withCredentials
 browser-compat: api.EventSource.withCredentials
 ---
 

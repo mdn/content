@@ -2,14 +2,6 @@
 title: Element.matches()
 slug: Web/API/Element/matches
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Selector
-  - DOM
-  - Element
-  - Method
-  - Reference
-  - Selector
 browser-compat: api.Element.matches
 ---
 

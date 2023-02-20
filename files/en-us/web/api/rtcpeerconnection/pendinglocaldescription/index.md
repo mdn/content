@@ -2,16 +2,6 @@
 title: RTCPeerConnection.pendingLocalDescription
 slug: Web/API/RTCPeerConnection/pendingLocalDescription
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - pendingLocalDescription
 browser-compat: api.RTCPeerConnection.pendingLocalDescription
 ---
 

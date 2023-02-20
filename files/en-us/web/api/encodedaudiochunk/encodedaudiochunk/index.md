@@ -2,12 +2,8 @@
 title: EncodedAudioChunk()
 slug: Web/API/EncodedAudioChunk/EncodedAudioChunk
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - EncodedAudioChunk
-  - Experimental
+status:
+  - experimental
 browser-compat: api.EncodedAudioChunk.EncodedAudioChunk
 ---
 

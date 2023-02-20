@@ -2,21 +2,6 @@
 title: 'RTCPeerConnection: iceconnectionstatechange event'
 slug: Web/API/RTCPeerConnection/iceconnectionstatechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Connection
-  - Connectivity
-  - Disconnect
-  - ICE
-  - Media
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - events
-  - Event
-  - iceConnectionState
-  - iceconnectionstatechange
 browser-compat: api.RTCPeerConnection.iceconnectionstatechange_event
 ---
 

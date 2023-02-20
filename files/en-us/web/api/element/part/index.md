@@ -2,12 +2,6 @@
 title: Element.part
 slug: Web/API/Element/part
 page-type: web-api-instance-property
-tags:
-  - API
-  - Element
-  - Property
-  - Reference
-  - part
 browser-compat: api.Element.part
 ---
 

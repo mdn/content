@@ -2,10 +2,6 @@
 title: Event.type
 slug: Web/API/Event/type
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.Event.type
 ---
 

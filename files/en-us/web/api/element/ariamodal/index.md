@@ -2,14 +2,6 @@
 title: Element.ariaModal
 slug: Web/API/Element/ariaModal
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaModal
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaModal
 ---
 

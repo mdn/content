@@ -2,14 +2,6 @@
 title: Element.requestPointerLock()
 slug: Web/API/Element/requestPointerLock
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - NeedsExample
-  - PointerEvent
-  - Reference
-  - mouse lock
 browser-compat: api.Element.requestPointerLock
 ---
 

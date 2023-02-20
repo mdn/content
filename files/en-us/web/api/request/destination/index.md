@@ -2,19 +2,6 @@
 title: Request.destination
 slug: Web/API/Request/destination
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - Files
-  - Loading
-  - Networking
-  - Property
-  - Read-only
-  - Reference
-  - data
-  - destination
-  - request
 browser-compat: api.Request.destination
 ---
 

@@ -2,14 +2,6 @@
 title: HTMLObjectElement.willValidate
 slug: Web/API/HTMLObjectElement/willValidate
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - NeedsExample
-  - Property
-  - Reference
-  - willValidate
 browser-compat: api.HTMLObjectElement.willValidate
 ---
 

@@ -2,14 +2,6 @@
 title: Element.ariaValueMax
 slug: Web/API/Element/ariaValueMax
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaValueMax
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaValueMax
 ---
 

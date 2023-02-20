@@ -1,6 +1,7 @@
 ---
 title: runtime.onSuspendCanceled
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onSuspendCanceled
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

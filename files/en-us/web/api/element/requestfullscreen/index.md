@@ -2,20 +2,6 @@
 title: Element.requestFullscreen()
 slug: Web/API/Element/requestFullscreen
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Full
-  - Fullscreen API
-  - Graphics
-  - Method
-  - Reference
-  - Video
-  - full screen
-  - fullscreen
-  - requestFullscreen
-  - screen
 browser-compat: api.Element.requestFullscreen
 ---
 

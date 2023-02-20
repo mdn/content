@@ -2,17 +2,6 @@
 title: PaintWorkletGlobalScope.registerPaint()
 slug: Web/API/PaintWorklet/registerPaint
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS
-  - CSS Paint API
-  - Houdini
-  - Painting
-  - Method
-  - Reference
-  - Worklet
-  - paintWorklet
-  - registerPaint
 browser-compat: api.PaintWorkletGlobalScope.registerPaint
 ---
 
@@ -89,7 +78,7 @@ the `CSS.paintWorklet.addModule()` method:
 </script>
 ```
 
-You can then use the `{{cssxref('paint()', 'paint()')}}` CSS function in your
+You can then use the `{{cssxref('image/paint', 'paint()')}}` CSS function in your
 CSS anywhere an `{{cssxref('&lt;image&gt;')}}` value is valid.
 
 ```css

@@ -2,12 +2,6 @@
 title: OffscreenCanvas.getContext()
 slug: Web/API/OffscreenCanvas/getContext
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - Method
-  - OffscreenCanvas
-  - Reference
 browser-compat: api.OffscreenCanvas.getContext
 ---
 

@@ -2,14 +2,6 @@
 title: Element.ariaMultiLine
 slug: Web/API/Element/ariaMultiLine
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaMultiline
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaMultiLine
 ---
 

@@ -2,14 +2,6 @@
 title: 'Sensor: error event'
 slug: Web/API/Sensor/error_event
 page-type: web-api-event
-tags:
-  - API
-  - Generic Sensor API
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - Event
 browser-compat: api.Sensor.error_event
 ---
 

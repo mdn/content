@@ -2,14 +2,6 @@
 title: ElementInternals.ariaHasPopup
 slug: Web/API/ElementInternals/ariaHasPopup
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaHasPopup
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaHasPopup
 ---
 

@@ -2,13 +2,6 @@
 title: AnalyserNode.fftSize
 slug: Web/API/AnalyserNode/fftSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - AnalyserNode
-  - Property
-  - Reference
-  - Web Audio API
-  - fftSize
 browser-compat: api.AnalyserNode.fftSize
 ---
 

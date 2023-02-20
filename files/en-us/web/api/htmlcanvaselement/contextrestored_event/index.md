@@ -2,11 +2,8 @@
 title: 'HTMLCanvasElement: contextrestored event'
 slug: Web/API/HTMLCanvasElement/contextrestored_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Canvas
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HTMLCanvasElement.contextrestored_event
 ---
 

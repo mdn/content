@@ -2,13 +2,6 @@
 title: Element.releasePointerCapture()
 slug: Web/API/Element/releasePointerCapture
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - PointerEvent
-  - Reference
 browser-compat: api.Element.releasePointerCapture
 ---
 

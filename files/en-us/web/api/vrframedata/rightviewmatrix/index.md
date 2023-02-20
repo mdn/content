@@ -2,17 +2,9 @@
 title: VRFrameData.rightViewMatrix
 slug: Web/API/VRFrameData/rightViewMatrix
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRFrameData
-  - Virtual Reality
-  - WebVR
-  - rightViewMatrix
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRFrameData.rightViewMatrix
 ---
 

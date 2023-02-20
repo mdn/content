@@ -2,15 +2,8 @@
 title: Element.ariaRelevant
 slug: Web/API/Element/ariaRelevant
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaRelevant
-  - AriaAttributes
-  - AriaMixin
-  - Element
-  - Non-standard
+status:
+  - non-standard
 browser-compat: api.Element.ariaRelevant
 ---
 

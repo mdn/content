@@ -2,13 +2,8 @@
 title: AudioData.format
 slug: Web/API/AudioData/format
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - format
-  - AudioData
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioData.format
 ---
 

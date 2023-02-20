@@ -2,15 +2,6 @@
 title: 'HTMLVideoElement: leavepictureinpicture event'
 slug: Web/API/HTMLVideoElement/leavepictureinpicture_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Interface
-  - Media
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Video
-  - pip
 browser-compat: api.HTMLVideoElement.leavepictureinpicture_event
 ---
 

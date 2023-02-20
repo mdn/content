@@ -2,13 +2,6 @@
 title: Element.getElementsByClassName()
 slug: Web/API/Element/getElementsByClassName
 page-type: web-api-instance-method
-tags:
-  - API
-  - Classes
-  - Element
-  - Method
-  - Reference
-  - getElementsByClassName
 browser-compat: api.Element.getElementsByClassName
 ---
 

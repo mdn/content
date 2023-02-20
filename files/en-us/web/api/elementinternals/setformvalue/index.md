@@ -2,12 +2,6 @@
 title: ElementInternals.setFormValue()
 slug: Web/API/ElementInternals/setFormValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - setFormValue
-  - ElementInternals
 browser-compat: api.ElementInternals.setFormValue
 ---
 

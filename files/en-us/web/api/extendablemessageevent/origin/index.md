@@ -2,13 +2,6 @@
 title: ExtendableMessageEvent.origin
 slug: Web/API/ExtendableMessageEvent/origin
 page-type: web-api-instance-property
-tags:
-  - API
-  - ExtendableMessageEvent
-  - Property
-  - Reference
-  - Service Workers
-  - origin
 browser-compat: api.ExtendableMessageEvent.origin
 ---
 

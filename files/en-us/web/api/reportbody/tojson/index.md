@@ -2,13 +2,8 @@
 title: ReportBody.toJSON()
 slug: Web/API/ReportBody/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Experimental
-  - toJSON
-  - ReportBody
+status:
+  - experimental
 browser-compat: api.ReportBody.toJSON
 ---
 

@@ -2,15 +2,8 @@
 title: CSSTransformComponent.toMatrix()
 slug: Web/API/CSSTransformComponent/toMatrix
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSTransformComponent
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - toMatrix
+status:
+  - experimental
 browser-compat: api.CSSTransformComponent.toMatrix
 ---
 

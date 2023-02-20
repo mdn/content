@@ -2,12 +2,8 @@
 title: Element.setHTML()
 slug: Web/API/Element/setHTML
 page-type: web-api-instance-method
-tags:
-  - HTML Sanitizer API
-  - Method
-  - Element.setHTML
-  - setHTML
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Element.setHTML
 ---
 

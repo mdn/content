@@ -2,14 +2,6 @@
 title: 'FileReader: abort event'
 slug: Web/API/FileReader/abort_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - FileReader
-  - ProgressEvent
-  - Reference
-  - Web
-  - abort
 browser-compat: api.FileReader.abort_event
 ---
 

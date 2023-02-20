@@ -2,12 +2,6 @@
 title: ElementInternals.checkValidity()
 slug: Web/API/ElementInternals/checkValidity
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - checkValidity
-  - ElementInternals
 browser-compat: api.ElementInternals.checkValidity
 ---
 
