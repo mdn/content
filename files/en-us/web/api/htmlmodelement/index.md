@@ -2,11 +2,6 @@
 title: HTMLModElement
 slug: Web/API/HTMLModElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLModElement
 ---
 

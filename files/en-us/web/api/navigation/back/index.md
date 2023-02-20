@@ -2,19 +2,8 @@
 title: Navigation.back()
 slug: Web/API/Navigation/back
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - back
-  - History
-  - Method
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Reference
-  - Scroll
-  - transition
-  - Traversal
+status:
+  - experimental
 browser-compat: api.Navigation.back
 ---
 

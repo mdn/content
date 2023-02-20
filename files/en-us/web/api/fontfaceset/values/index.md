@@ -2,12 +2,6 @@
 title: FontFaceSet.values()
 slug: Web/API/FontFaceSet/values
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - values
-  - FontFaceSet
 browser-compat: api.FontFaceSet.values
 ---
 

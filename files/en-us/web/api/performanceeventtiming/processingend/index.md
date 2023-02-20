@@ -2,11 +2,6 @@
 title: PerformanceEventTiming.processingEnd
 slug: Web/API/PerformanceEventTiming/processingEnd
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceEventTiming.processingEnd
 ---
 

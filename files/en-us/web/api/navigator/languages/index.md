@@ -2,13 +2,6 @@
 title: Navigator.languages
 slug: Web/API/Navigator/languages
 page-type: web-api-instance-property
-tags:
-  - API
-  - Navigator
-  - Property
-  - Read-only
-  - Reference
-  - languages
 browser-compat: api.Navigator.languages
 ---
 

@@ -2,14 +2,6 @@
 title: MediaStream.getTracks()
 slug: Web/API/MediaStream/getTracks
 page-type: web-api-instance-method
-tags:
-  - API
-  - Media Streams API
-  - MediaStream
-  - MediaStreamTrack
-  - Method
-  - Reference
-  - getTracks
 browser-compat: api.MediaStream.getTracks
 ---
 

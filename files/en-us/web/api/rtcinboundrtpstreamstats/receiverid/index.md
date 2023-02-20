@@ -2,22 +2,6 @@
 title: RTCInboundRtpStreamStats.receiverId
 slug: Web/API/RTCInboundRtpStreamStats/receiverId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media
-  - Property
-  - RTCInboundRtpStreamStats
-  - RTP
-  - RTP Receiver
-  - Reference
-  - Statistics
-  - Stats
-  - Video
-  - WebRTC
-  - WebRTC API
-  - receiver
-  - receiverId
 browser-compat: api.RTCInboundRtpStreamStats.receiverId
 ---
 

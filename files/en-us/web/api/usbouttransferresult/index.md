@@ -2,16 +2,8 @@
 title: USBOutTransferResult
 slug: Web/API/USBOutTransferResult
 page-type: web-api-interface
-tags:
-  - API
-  - CSSUnparsedValue
-  - Experimental
-  - Interface
-  - NeedsExample
-  - Reference
-  - USBOutTransferResult
-  - WebUSB
-  - WebUSB API
+status:
+  - experimental
 browser-compat: api.USBOutTransferResult
 ---
 

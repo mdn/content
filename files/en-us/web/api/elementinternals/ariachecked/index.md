@@ -2,14 +2,6 @@
 title: ElementInternals.ariaChecked
 slug: Web/API/ElementInternals/ariaChecked
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaChecked
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaChecked
 ---
 

@@ -2,18 +2,6 @@
 title: AudioContext()
 slug: Web/API/AudioContext/AudioContext
 page-type: web-api-constructor
-tags:
-  - Audio
-  - Audio Context
-  - Audio Graph
-  - AudioContext
-  - Constructor
-  - Context
-  - Media
-  - Media Graph
-  - Reference
-  - Web Audio
-  - Web Audio API
 browser-compat: api.AudioContext.AudioContext
 ---
 

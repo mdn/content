@@ -2,13 +2,6 @@
 title: EventSource.url
 slug: Web/API/EventSource/url
 page-type: web-api-instance-property
-tags:
-  - API
-  - EventSource
-  - Property
-  - Reference
-  - Server-sent events
-  - URL
 browser-compat: api.EventSource.url
 ---
 

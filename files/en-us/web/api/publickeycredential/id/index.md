@@ -2,14 +2,6 @@
 title: PublicKeyCredential.id
 slug: Web/API/PublicKeyCredential/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - Credential Management API
-  - Property
-  - PublicKeyCredential
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 browser-compat: api.PublicKeyCredential.id
 ---
 

@@ -2,18 +2,6 @@
 title: 'Element: mouseenter event'
 slug: Web/API/Element/mouseenter_event
 page-type: web-api-event
-tags:
-  - API
-  - Cursor
-  - DOM
-  - Element
-  - Event
-  - Interface
-  - MouseEvent
-  - Reference
-  - mouse
-  - mouseenter
-  - pointer
 browser-compat: api.Element.mouseenter_event
 ---
 

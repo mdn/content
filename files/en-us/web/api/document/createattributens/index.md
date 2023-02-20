@@ -2,11 +2,6 @@
 title: Document.createAttributeNS()
 slug: Web/API/Document/createAttributeNS
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
 browser-compat: api.Document.createAttributeNS
 ---
 

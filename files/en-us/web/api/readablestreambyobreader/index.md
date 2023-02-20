@@ -2,13 +2,6 @@
 title: ReadableStreamBYOBReader
 slug: Web/API/ReadableStreamBYOBReader
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Interface
-  - ReadableStreamBYOBReader
-  - Reference
-  - Streams
 browser-compat: api.ReadableStreamBYOBReader
 ---
 

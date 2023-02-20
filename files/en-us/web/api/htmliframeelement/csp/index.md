@@ -2,15 +2,8 @@
 title: HTMLIFrameElement.csp
 slug: Web/API/HTMLIFrameElement/csp
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSP
-  - Content Security Policy
-  - HTML DOM
-  - HTMLIFrameElement
-  - Property
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HTMLIFrameElement.csp
 ---
 

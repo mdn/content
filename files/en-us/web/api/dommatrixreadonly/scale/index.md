@@ -2,9 +2,6 @@
 title: DOMMatrixReadOnly.scale()
 slug: Web/API/DOMMatrixReadOnly/scale
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.DOMMatrixReadOnly.scale
 ---
 
@@ -96,8 +93,12 @@ if (browserExpectsSixParamScale) {
   scaledMatrixWithOrigin = matrix.scale(0.5, 0.5, 1, 25, 25, 0);
 }
 
-document.querySelector('#transformed').setAttribute('transform', scaledMatrix.toString());
-document.querySelector('#transformedOrigin').setAttribute('transform', scaledMatrixWithOrigin.toString());
+document
+  .querySelector("#transformed")
+  .setAttribute("transform", scaledMatrix.toString());
+document
+  .querySelector("#transformedOrigin")
+  .setAttribute("transform", scaledMatrixWithOrigin.toString());
 ```
 
 {{ EmbedLiveSample('Examples', '250', '250',

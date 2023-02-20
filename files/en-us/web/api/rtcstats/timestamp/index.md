@@ -2,18 +2,6 @@
 title: RTCStats.timestamp
 slug: Web/API/RTCStats/timestamp
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - RTCStats
-  - Reference
-  - Statistics
-  - Stats
-  - Time
-  - WebRTC
-  - WebRTC API
-  - rtc
-  - timeStamp
 browser-compat: api.RTCStats.timestamp
 ---
 

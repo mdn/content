@@ -2,13 +2,6 @@
 title: SVGGeometryElement.isPointInFill()
 slug: Web/API/SVGGeometryElement/isPointInFill
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGGeometryElement.isPointInFill
 ---
 

@@ -2,8 +2,6 @@
 title: 'MediaStream: addtrack event'
 slug: Web/API/MediaStream/addtrack_event
 page-type: web-api-event
-tags:
-  - Event
 browser-compat: api.MediaStream.addtrack_event
 ---
 

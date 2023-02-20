@@ -2,12 +2,6 @@
 title: FontFace.ascentOverride
 slug: Web/API/FontFace/ascentOverride
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ascentOverride
-  - FontFace
 browser-compat: api.FontFace.ascentOverride
 ---
 

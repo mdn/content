@@ -2,12 +2,6 @@
 title: HTMLLinkElement
 slug: Web/API/HTMLLinkElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTMLLinkElement
-  - Interface
-  - Reference
 browser-compat: api.HTMLLinkElement
 ---
 

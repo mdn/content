@@ -2,18 +2,6 @@
 title: The WebSocket API (WebSockets)
 slug: Web/API/WebSockets_API
 page-type: web-api-overview
-tags:
-  - API
-  - Client
-  - Communication
-  - Overview
-  - Server
-  - Two-Way
-  - WebSocket
-  - WebSocket API
-  - WebSockets
-  - data
-  - interactive
 browser-compat: api.WebSocket
 ---
 

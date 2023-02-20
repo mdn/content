@@ -1,6 +1,7 @@
 ---
 title: scripting
 slug: Mozilla/Add-ons/WebExtensions/API/scripting
+page-type: webextension-api
 tags:
   - API
   - Add-ons

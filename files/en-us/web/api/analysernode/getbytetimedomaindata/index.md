@@ -2,12 +2,6 @@
 title: AnalyserNode.getByteTimeDomainData()
 slug: Web/API/AnalyserNode/getByteTimeDomainData
 page-type: web-api-instance-method
-tags:
-  - API
-  - AnalyserNode
-  - Method
-  - Reference
-  - Web Audio API
 browser-compat: api.AnalyserNode.getByteTimeDomainData
 ---
 

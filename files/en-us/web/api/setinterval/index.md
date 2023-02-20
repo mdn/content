@@ -2,18 +2,6 @@
 title: setInterval()
 slug: Web/API/setInterval
 page-type: web-api-global-function
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Intervals
-  - JavaScript timers
-  - MakeBrowserAgnostic
-  - Method
-  - NeedsMarkupWork
-  - Timers
-  - setInterval
-  - Polyfill
 browser-compat: api.setInterval
 ---
 

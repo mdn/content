@@ -2,23 +2,8 @@
 title: MerchantValidationEvent.methodName
 slug: Web/API/MerchantValidationEvent/methodName
 page-type: web-api-instance-property
-tags:
-  - API
-  - Commerce
-  - Identifier
-  - Merchant
-  - MerchantValidationEvent
-  - NeedsExample
-  - Payment Method
-  - Payment Method Identifier
-  - Payment Request
-  - Payment Request API
-  - Property
-  - Reference
-  - Validation
-  - methodName
-  - payment
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.MerchantValidationEvent.methodName
 ---
 

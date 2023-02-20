@@ -2,12 +2,6 @@
 title: 'Element: compositionstart event'
 slug: Web/API/Element/compositionstart_event
 page-type: web-api-event
-tags:
-  - Element
-  - Event
-  - Input method
-  - Reference
-  - compositionstart
 browser-compat: api.Element.compositionstart_event
 ---
 

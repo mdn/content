@@ -2,12 +2,8 @@
 title: FontData.style
 slug: Web/API/FontData/style
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - style
-  - Experimental
+status:
+  - experimental
 browser-compat: api.FontData.style
 ---
 

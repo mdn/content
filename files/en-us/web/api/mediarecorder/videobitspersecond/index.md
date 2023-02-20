@@ -2,8 +2,6 @@
 title: MediaRecorder.videoBitsPerSecond
 slug: Web/API/MediaRecorder/videoBitsPerSecond
 page-type: web-api-instance-property
-tags:
-- Property
 browser-compat: api.MediaRecorder.videoBitsPerSecond
 ---
 

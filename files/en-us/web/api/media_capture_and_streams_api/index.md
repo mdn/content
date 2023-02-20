@@ -1,14 +1,6 @@
 ---
 title: Media Capture and Streams API (Media Stream)
 slug: Web/API/Media_Capture_and_Streams_API
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - Overview
-  - Video
 browser-compat: api.MediaStream
 page-type: web-api-overview
 ---

@@ -2,14 +2,6 @@
 title: Window.setImmediate()
 slug: Web/API/Window/setImmediate
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
-  - setImmediate
-  - Polyfill
 browser-compat: api.Window.setImmediate
 ---
 

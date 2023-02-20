@@ -2,12 +2,6 @@
 title: 'MediaKeySession: message event'
 slug: Web/API/MediaKeySession/message_event
 page-type: web-api-event
-tags:
-  - message
-  - API
-  - Event
-  - Reference
-  - MediaKeySession
 browser-compat: api.MediaKeySession.message_event
 ---
 

@@ -2,13 +2,8 @@
 title: AudioEncoder.isConfigSupported()
 slug: Web/API/AudioEncoder/isConfigSupported
 page-type: web-api-static-method
-tags:
-  - API
-  - Method
-  - Reference
-  - isConfigSupported
-  - AudioEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioEncoder.isConfigSupported
 ---
 

@@ -2,14 +2,6 @@
 title: AudioListener.forwardZ
 slug: Web/API/AudioListener/forwardZ
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioListener
-  - Property
-  - Reference
-  - Web Audio API
-  - forwardZ
 browser-compat: api.AudioListener.forwardZ
 ---
 

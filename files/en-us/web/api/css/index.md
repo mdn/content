@@ -2,12 +2,6 @@
 title: CSS
 slug: Web/API/CSS
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM
-  - Interface
-  - Painting
-  - Reference
 browser-compat: api.CSS
 ---
 

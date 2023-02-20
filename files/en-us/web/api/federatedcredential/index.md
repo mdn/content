@@ -2,14 +2,8 @@
 title: FederatedCredential
 slug: Web/API/FederatedCredential
 page-type: web-api-interface
-tags:
-  - API
-  - Credential Management API
-  - FederatedCredential
-  - Interface
-  - Reference
-  - credential management
-  - Experimental
+status:
+  - experimental
 browser-compat: api.FederatedCredential
 ---
 

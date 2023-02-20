@@ -2,18 +2,6 @@
 title: XMLHttpRequest.responseType
 slug: Web/API/XMLHttpRequest/responseType
 page-type: web-api-instance-property
-tags:
-  - AJAX
-  - API
-  - HTTP
-  - HTTP Response
-  - HTTP Response Type
-  - Property
-  - Reference
-  - Response
-  - XHR
-  - XMLHttpRequest
-  - responseType
 browser-compat: api.XMLHttpRequest.responseType
 ---
 

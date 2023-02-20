@@ -2,13 +2,6 @@
 title: createImageBitmap()
 slug: Web/API/createImageBitmap
 page-type: web-api-global-function
-tags:
-  - API
-  - Canvas
-  - DOM
-  - Method
-  - Reference
-  - createImageBitmap
 browser-compat: api.createImageBitmap
 ---
 

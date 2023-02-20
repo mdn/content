@@ -2,12 +2,6 @@
 title: Document.embeds
 slug: Web/API/Document/embeds
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - NeedsExample
-  - Property
 browser-compat: api.Document.embeds
 ---
 

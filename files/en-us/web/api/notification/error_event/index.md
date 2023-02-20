@@ -2,14 +2,6 @@
 title: 'Notification: error event'
 slug: Web/API/Notification/error_event
 page-type: web-api-event
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Event
-  - Reference
-  - error
 browser-compat: api.Notification.error_event
 ---
 

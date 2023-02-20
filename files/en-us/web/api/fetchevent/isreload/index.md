@@ -2,17 +2,9 @@
 title: FetchEvent.isReload
 slug: Web/API/FetchEvent/isReload
 page-type: web-api-instance-property
-tags:
-  - API
-  - FetchEvent
-  - Property
-  - Reference
-  - Service
-  - Service Workers
-  - Workers
-  - isReload
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.FetchEvent.isReload
 ---
 

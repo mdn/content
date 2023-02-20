@@ -2,11 +2,6 @@
 title: XMLHttpRequest.readyState
 slug: Web/API/XMLHttpRequest/readyState
 page-type: web-api-instance-property
-tags:
-  - AJAX
-  - Property
-  - Reference
-  - XMLHttpRequest
 browser-compat: api.XMLHttpRequest.readyState
 ---
 

@@ -2,11 +2,6 @@
 title: CSSStyleDeclaration.cssFloat
 slug: Web/API/CSSStyleDeclaration/cssFloat
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSStyleDeclaration
-  - Reference
 browser-compat: api.CSSStyleDeclaration.cssFloat
 ---
 

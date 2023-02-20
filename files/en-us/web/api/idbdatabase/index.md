@@ -2,17 +2,6 @@
 title: IDBDatabase
 slug: Web/API/IDBDatabase
 page-type: web-api-interface
-tags:
-  - API
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
-  - accessing data
-  - asynchronous access
-  - transactions
 browser-compat: api.IDBDatabase
 ---
 

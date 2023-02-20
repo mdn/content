@@ -2,12 +2,6 @@
 title: ByteLengthQueuingStrategy
 slug: Web/API/ByteLengthQueuingStrategy
 page-type: web-api-interface
-tags:
-  - API
-  - ByteLengthQueuingStrategy
-  - Interface
-  - Reference
-  - Streams
 browser-compat: api.ByteLengthQueuingStrategy
 ---
 

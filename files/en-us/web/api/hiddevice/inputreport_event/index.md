@@ -2,13 +2,8 @@
 title: 'HIDDevice: inputreport event'
 slug: Web/API/HIDDevice/inputreport_event
 page-type: web-api-event
-tags:
-  - API
-  - Property
-  - Reference
-  - oninputreport
-  - HIDDevice
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDDevice.inputreport_event
 ---
 

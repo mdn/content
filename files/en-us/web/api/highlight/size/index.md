@@ -2,13 +2,8 @@
 title: Highlight.size
 slug: Web/API/Highlight/size
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - CSS Custom Highlight API
-  - Reference
-  - size
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Highlight.size
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-get-set.prototype.size
 ---
