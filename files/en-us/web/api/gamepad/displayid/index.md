@@ -20,7 +20,7 @@ A Gamepad is considered to be associated with a {{domxref("VRDisplay")}} if it r
 
 ## Value
 
-A number representing the associated {{domxref("VRDisplay.displayId")}}. If the number is 0, then the gamepad is not associated with a VR display.
+A number representing the associated `VRDisplay.displayId`. If the number is 0, then the gamepad is not associated with a VR display.
 
 ## Examples
 
