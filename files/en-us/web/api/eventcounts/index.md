@@ -2,11 +2,6 @@
 title: EventCounts
 slug: Web/API/EventCounts
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - Interface
-  - Maplike
 browser-compat: api.EventCounts
 ---
 

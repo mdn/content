@@ -2,18 +2,6 @@
 title: MediaTrackSettings.channelCount
 slug: Web/API/MediaTrackSettings/channelCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Reference
-  - Settings
-  - WebRTC
-  - channelCount
 browser-compat: api.MediaTrackSettings.channelCount
 ---
 

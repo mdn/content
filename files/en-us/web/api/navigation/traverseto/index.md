@@ -2,19 +2,8 @@
 title: Navigation.traverseTo()
 slug: Web/API/Navigation/traverseTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - History
-  - Method
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Reference
-  - Scroll
-  - transition
-  - Traversal
-  - traverseTo
+status:
+  - experimental
 browser-compat: api.Navigation.traverseTo
 ---
 

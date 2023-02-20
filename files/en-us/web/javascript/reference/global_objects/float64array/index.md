@@ -16,6 +16,8 @@ browser-compat: javascript.builtins.Float64Array
 
 The **`Float64Array`** typed array represents an array of 64-bit floating point numbers (corresponding to the C `double` data type) in the platform byte order. If control over byte order is needed, use {{jsxref("DataView")}} instead. The contents are initialized to `0`. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
 
+`Float64Array` is a subclass of the hidden {{jsxref("TypedArray")}} class.
+
 ## Constructor
 
 - [`Float64Array()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array/Float64Array)

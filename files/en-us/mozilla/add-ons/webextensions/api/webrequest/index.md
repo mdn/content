@@ -1,6 +1,7 @@
 ---
 title: webRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest
+page-type: webextension-api
 tags:
   - API
   - Add-ons

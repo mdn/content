@@ -2,13 +2,6 @@
 title: DynamicsCompressorNode.reduction
 slug: Web/API/DynamicsCompressorNode/reduction
 page-type: web-api-instance-property
-tags:
-  - API
-  - DynamicsCompressorNode
-  - Property
-  - Reference
-  - Web Audio API
-  - reduction
 browser-compat: api.DynamicsCompressorNode.reduction
 ---
 

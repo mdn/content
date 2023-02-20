@@ -2,16 +2,9 @@
 title: PositionSensorVRDevice.getState()
 slug: Web/API/PositionSensorVRDevice/getState
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Deprecated
-  - PositionSensorVRDevice
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PositionSensorVRDevice.getState
 ---
 

@@ -2,13 +2,6 @@
 title: 'WorkerGlobalScope: online event'
 slug: Web/API/WorkerGlobalScope/online_event
 page-type: web-api-instance-event
-tags:
-  - API
-  - Event
-  - Reference
-  - Web Workers
-  - WorkerGlobalScope
-  - online
 browser-compat: api.WorkerGlobalScope.online_event
 ---
 

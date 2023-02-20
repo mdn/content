@@ -2,14 +2,8 @@
 title: 'Window: orientationchange event'
 slug: Web/API/Window/orientationchange_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - Sensors
-  - Window
-  - orientationchange
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Window.orientationchange_event
 ---
 

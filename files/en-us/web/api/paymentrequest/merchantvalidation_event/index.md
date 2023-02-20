@@ -2,21 +2,8 @@
 title: 'PaymentRequest: merchantvalidation event'
 slug: Web/API/PaymentRequest/merchantvalidation_event
 page-type: web-api-event
-tags:
-  - API
-  - Commerce
-  - Merchant
-  - Payment Handler
-  - Payment Request
-  - Payment Request API
-  - Reference
-  - Sales
-  - Validation
-  - Web
-  - Event
-  - merchantvalidation
-  - payment
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.PaymentRequest.merchantvalidation_event
 ---
 

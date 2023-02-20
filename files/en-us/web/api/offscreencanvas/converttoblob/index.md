@@ -2,12 +2,6 @@
 title: OffscreenCanvas.convertToBlob()
 slug: Web/API/OffscreenCanvas/convertToBlob
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - Method
-  - OffscreenCanvas
-  - Reference
 browser-compat: api.OffscreenCanvas.convertToBlob
 ---
 

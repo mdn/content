@@ -2,12 +2,8 @@
 title: CanMakePaymentEvent.respondWith()
 slug: Web/API/CanMakePaymentEvent/respondWith
 page-type: web-api-instance-method
-tags:
-  - API
-  - respondWith
-  - Experimental
-  - Method
-  - Reference
+status:
+  - experimental
 browser-compat: api.CanMakePaymentEvent.respondWith
 ---
 

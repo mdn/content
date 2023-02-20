@@ -2,16 +2,8 @@
 title: console.profileEnd()
 slug: Web/API/console/profileEnd
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Non-standard
-  - Reference
-  - Web Development
-  - profileEnd
-  - web console
+status:
+  - non-standard
 browser-compat: api.console.profileEnd
 ---
 

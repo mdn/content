@@ -2,11 +2,6 @@
 title: DeviceOrientationEvent
 slug: Web/API/DeviceOrientationEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Device Orientation API
-  - Interface
-  - Reference
 browser-compat: api.DeviceOrientationEvent
 ---
 
@@ -38,7 +33,7 @@ The **`DeviceOrientationEvent`** object provides web developers with information
 ## Example
 
 ```js
-window.addEventListener('deviceorientation', (event) => {
+window.addEventListener("deviceorientation", (event) => {
   console.log(`${event.alpha} : ${event.beta} : ${event.gamma}`);
 });
 ```

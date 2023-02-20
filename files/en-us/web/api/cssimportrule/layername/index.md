@@ -2,14 +2,6 @@
 title: CSSImportRule.layerName
 slug: Web/API/CSSImportRule/layerName
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - Property
-  - Reference
-  - CSSImportRule
-  - Cascade layers
-  - Read-only
 browser-compat: api.CSSImportRule.layerName
 ---
 

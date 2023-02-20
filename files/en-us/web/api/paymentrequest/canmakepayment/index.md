@@ -2,15 +2,6 @@
 title: PaymentRequest.canMakePayment()
 slug: Web/API/PaymentRequest/canMakePayment
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Reference
-  - Secure context
-  - canMakePayment
 browser-compat: api.PaymentRequest.canMakePayment
 ---
 

@@ -2,20 +2,6 @@
 title: VideoPlaybackQuality.droppedVideoFrames
 slug: Web/API/VideoPlaybackQuality/droppedVideoFrames
 page-type: web-api-instance-property
-tags:
-  - API
-  - Data Loss
-  - Frames
-  - Media
-  - Media Playback Quality
-  - Media Playback Quality API
-  - Playback
-  - Property
-  - Quality
-  - Reference
-  - Video
-  - VideoPlaybackQuality
-  - droppedVideoFrames
 browser-compat: api.VideoPlaybackQuality.droppedVideoFrames
 ---
 

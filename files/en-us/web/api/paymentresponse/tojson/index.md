@@ -2,11 +2,6 @@
 title: PaymentResponse.toJSON()
 slug: Web/API/PaymentResponse/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
 browser-compat: api.PaymentResponse.toJSON
 ---
 

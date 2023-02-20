@@ -2,14 +2,8 @@
 title: Element.msZoomTo()
 slug: Web/API/Element/msZoomTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - API:Microsoft Extensions
-  - Method
-  - Microsoft
-  - Non-standard
-  - Reference
-  - msZoomTo
+status:
+  - non-standard
 ---
 
 {{APIRef("Microsoft Extensions")}}{{Non-standard_header}}

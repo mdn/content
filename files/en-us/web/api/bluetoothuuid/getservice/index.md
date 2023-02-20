@@ -2,13 +2,8 @@
 title: BluetoothUUID.getService()
 slug: Web/API/BluetoothUUID/getService
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - getService
-  - Experimental
-  - BluetoothUUID
+status:
+  - experimental
 browser-compat: api.BluetoothUUID.getService
 ---
 

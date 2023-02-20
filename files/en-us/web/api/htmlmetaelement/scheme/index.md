@@ -2,13 +2,8 @@
 title: HTMLMetaElement.scheme
 slug: Web/API/HTMLMetaElement/scheme
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - HTMLMetaElement
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.HTMLMetaElement.scheme
 ---
 

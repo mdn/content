@@ -2,14 +2,8 @@
 title: Navigator.setAppBadge()
 slug: Web/API/Navigator/setAppBadge
 page-type: web-api-instance-method
-tags:
-  - API
-  - Badging API
-  - Method
-  - Reference
-  - setAppBadge
-  - Navigator
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Navigator.setAppBadge
 ---
 

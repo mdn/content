@@ -2,13 +2,6 @@
 title: EventSource.readyState
 slug: Web/API/EventSource/readyState
 page-type: web-api-instance-property
-tags:
-  - API
-  - EventSource
-  - Property
-  - Reference
-  - Server-sent events
-  - readyState
 browser-compat: api.EventSource.readyState
 ---
 

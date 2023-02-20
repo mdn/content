@@ -2,17 +2,6 @@
 title: RTCDataChannel.negotiated
 slug: Web/API/RTCDataChannel/negotiated
 page-type: web-api-instance-property
-tags:
-  - Networking
-  - Property
-  - RTCDataChannel
-  - Read-only
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - data
-  - datachannel
-  - negotiated
 browser-compat: api.RTCDataChannel.negotiated
 ---
 

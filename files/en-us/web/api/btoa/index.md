@@ -2,13 +2,6 @@
 title: btoa()
 slug: Web/API/btoa
 page-type: web-api-global-function
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Polyfill
-  - Web
 browser-compat: api.btoa
 ---
 

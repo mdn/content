@@ -2,11 +2,6 @@
 title: Media Capabilities API
 slug: Web/API/Media_Capabilities_API
 page-type: web-api-overview
-tags:
-  - API
-  - Media Capabilities
-  - Overview
-  - Reference
 browser-compat: api.MediaCapabilities
 ---
 

@@ -2,14 +2,8 @@
 title: BluetoothDevice.id
 slug: Web/API/BluetoothDevice/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - BluetoothDevice
-  - Experimental
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - id
+status:
+  - experimental
 browser-compat: api.BluetoothDevice.id
 ---
 

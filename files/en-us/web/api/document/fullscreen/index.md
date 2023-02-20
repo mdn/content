@@ -2,17 +2,8 @@
 title: Document.fullscreen
 slug: Web/API/Document/fullscreen
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Document
-  - Fullscreen
-  - Fullscreen API
-  - Property
-  - Read-only
-  - Reference
-  - fullscreen
-  - screen
+status:
+  - deprecated
 browser-compat: api.Document.fullscreen
 ---
 

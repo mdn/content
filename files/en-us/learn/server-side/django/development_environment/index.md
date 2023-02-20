@@ -423,21 +423,3 @@ In the testing section you also briefly saw how we can create a new Django websi
 - [How to install Django on Windows](https://docs.djangoproject.com/en/4.0/howto/windows/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
-- **Setting up a Django development environment**
-- [Django Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/en-US/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/en-US/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)

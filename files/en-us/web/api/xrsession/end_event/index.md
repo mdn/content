@@ -2,14 +2,8 @@
 title: 'XRSession: end event'
 slug: Web/API/XRSession/end_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - WebXR
-  - XR
-  - XRSession
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRSession.end_event
 ---
 

@@ -22,7 +22,7 @@ There are three types of content categories:
 
 > **Note:** A more detailed discussion of these content categories and their comparative functionalities is beyond the scope of this article; for that, you may wish to read the [relevant portions of the HTML specification](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content).
 
-[![A Venn diagram showing how the various content categories interrelate. The following sections explain these relationships in text.](content_categories_venn.png)](/en-US/docs/Web/Guide/HTML/Content_categories/content_categories_venn.png)
+[![A Venn diagram showing how the various content categories interrelate. The following sections explain these relationships in text.](content_categories_venn.png)](/en-US/docs/Web/HTML/Content_categories/content_categories_venn.png)
 
 ## Main content categories
 

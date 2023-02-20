@@ -2,21 +2,6 @@
 title: MediaSession.setPositionState()
 slug: Web/API/MediaSession/setPositionState
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Session API
-  - MediaSession
-  - Method
-  - Playback
-  - Position
-  - Reference
-  - Session
-  - Video
-  - rate
-  - setPositionState
-  - speed
 browser-compat: api.MediaSession.setPositionState
 ---
 

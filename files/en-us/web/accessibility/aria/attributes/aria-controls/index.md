@@ -59,10 +59,20 @@ In this tabs example, each tab controls one tabpanel:
   <div id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
     <p>Content for the first panel</p>
   </div>
-  <div id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" class="display-none">
+  <div
+    id="panel-2"
+    role="tabpanel"
+    tabindex="0"
+    aria-labelledby="tab-2"
+    class="display-none">
     <p>Content for the second panel</p>
   </div>
-  <div id="panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" class="display-none">
+  <div
+    id="panel-3"
+    role="tabpanel"
+    tabindex="0"
+    aria-labelledby="tab-3"
+    class="display-none">
     <p>Content for the third panel</p>
   </div>
 </div>

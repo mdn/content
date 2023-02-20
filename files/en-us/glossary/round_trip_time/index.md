@@ -29,5 +29,5 @@ In the above example, the average round trip time is shown on the final line as 
 
 ## See also
 
-- [Time to First Byte (TTFB)](/en-US/docs/Glossary/time_to_first_byte)
+- [Time to First Byte (TTFB)](/en-US/docs/Glossary/Time_to_first_byte)
 - [Latency](/en-US/docs/Glossary/Latency)

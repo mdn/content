@@ -2,12 +2,6 @@
 title: CanvasRenderingContext2D.shadowOffsetX
 slug: Web/API/CanvasRenderingContext2D/shadowOffsetX
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.shadowOffsetX
 ---
 

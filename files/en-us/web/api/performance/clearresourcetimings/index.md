@@ -2,11 +2,6 @@
 title: performance.clearResourceTimings()
 slug: Web/API/Performance/clearResourceTimings
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
 browser-compat: api.Performance.clearResourceTimings
 ---
 

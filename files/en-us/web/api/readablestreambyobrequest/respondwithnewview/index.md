@@ -2,13 +2,6 @@
 title: ReadableStreamBYOBRequest.respondWithNewView()
 slug: Web/API/ReadableStreamBYOBRequest/respondWithNewView
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStreamBYOBRequest
-  - Reference
-  - Streams
-  - respondWithNewView
 browser-compat: api.ReadableStreamBYOBRequest.respondWithNewView
 ---
 

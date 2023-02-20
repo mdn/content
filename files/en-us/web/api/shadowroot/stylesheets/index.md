@@ -2,12 +2,6 @@
 title: ShadowRoot.styleSheets
 slug: Web/API/ShadowRoot/styleSheets
 page-type: web-api-instance-property
-tags:
-  - API
-  - ShadowRoot
-  - Property
-  - Reference
-  - Stylesheets
 browser-compat: api.ShadowRoot.styleSheets
 ---
 

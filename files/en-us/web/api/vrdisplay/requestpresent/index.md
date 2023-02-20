@@ -2,17 +2,9 @@
 title: VRDisplay.requestPresent()
 slug: Web/API/VRDisplay/requestPresent
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Display
-  - WebVR
-  - requestPresent()
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.requestPresent
 ---
 

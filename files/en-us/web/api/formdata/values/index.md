@@ -2,13 +2,6 @@
 title: FormData.values()
 slug: Web/API/FormData/values
 page-type: web-api-instance-method
-tags:
-  - API
-  - FormData
-  - Iterator
-  - Method
-  - Reference
-  - XMLHttpRequest
 browser-compat: api.FormData.values
 ---
 

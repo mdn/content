@@ -2,14 +2,6 @@
 title: IndexedDB API
 slug: Web/API/IndexedDB_API
 page-type: web-api-overview
-tags:
-  - API
-  - Advanced
-  - Database
-  - IndexedDB
-  - Landing
-  - Reference
-  - Storage
 spec-urls: https://w3c.github.io/IndexedDB/
 ---
 

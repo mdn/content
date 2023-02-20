@@ -2,19 +2,6 @@
 title: The HTML DOM API
 slug: Web/API/HTML_DOM_API
 page-type: web-api-overview
-tags:
-  - API
-  - Beginner
-  - DOM
-  - Documents
-  - Elements
-  - HTML DOM
-  - HTML DOM API
-  - Nodes
-  - Overview
-  - Web
-  - Windows
-  - hierarchy
 browser-compat: api.HTMLElement
 ---
 

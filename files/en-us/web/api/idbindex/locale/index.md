@@ -2,17 +2,9 @@
 title: IDBIndex.locale
 slug: Web/API/IDBIndex/locale
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - Experimental
-  - IDBIndex
-  - IndexedDB
-  - Locale
-  - Property
-  - Reference
-  - Storage
-  - Non-standard
+status:
+  - experimental
+  - non-standard
 browser-compat: api.IDBIndex.locale
 ---
 
