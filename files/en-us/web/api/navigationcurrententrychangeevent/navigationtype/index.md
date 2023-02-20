@@ -2,19 +2,8 @@
 title: NavigationCurrentEntryChangeEvent.navigationType
 slug: Web/API/NavigationCurrentEntryChangeEvent/navigationType
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - History
-  - Navigate
-  - Navigation
-  - Navigation API
-  - navigationType
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationCurrentEntryChangeEvent.navigationType
 ---
 

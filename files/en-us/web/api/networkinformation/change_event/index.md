@@ -2,14 +2,8 @@
 title: 'NetworkInformation: change event'
 slug: Web/API/NetworkInformation/change_event
 page-type: web-api-event
-tags:
-  - API
-  - Event Handler
-  - Experimental
-  - Network Information API
-  - NetworkInformation
-  - Event
-  - Reference
+status:
+  - experimental
 browser-compat: api.NetworkInformation.change_event
 ---
 
