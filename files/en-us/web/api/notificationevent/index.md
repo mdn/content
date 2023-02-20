@@ -2,14 +2,6 @@
 title: NotificationEvent
 slug: Web/API/NotificationEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - NotificationEvent
-  - Notifications
-  - Reference
-  - Service Workers
-  - ServiceWorker
 browser-compat: api.NotificationEvent
 ---
 

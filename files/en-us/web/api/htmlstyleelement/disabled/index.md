@@ -2,12 +2,6 @@
 title: HTMLStyleElement.disabled
 slug: Web/API/HTMLStyleElement/disabled
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLStyleElement
-  - Property
-  - Reference
 browser-compat: api.HTMLStyleElement.disabled
 ---
 

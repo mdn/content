@@ -2,12 +2,8 @@
 title: "HID: disconnect event"
 slug: Web/API/HID/disconnect_event
 page-type: web-api-event
-tags:
-  - API
-  - Reference
-  - Event
-  - HID
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HID.disconnect_event
 ---
 

@@ -2,12 +2,6 @@
 title: URLSearchParams.append()
 slug: Web/API/URLSearchParams/append
 page-type: web-api-instance-method
-tags:
-  - API
-  - Append
-  - Method
-  - URL API
-  - URLSearchParams
 browser-compat: api.URLSearchParams.append
 ---
 
@@ -59,6 +53,5 @@ params.append('foo', 4);
 
 ## See also
 
-- Other URL-related interfaces: {{domxref("URL")}},
-  {{domxref("HTMLHyperlinkElementUtils")}}.
+- {{domxref("URL")}}
 - [Google Developers: Easy URL manipulation with URLSearchParams](https://developer.chrome.com/blog/urlsearchparams/)

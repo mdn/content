@@ -2,13 +2,8 @@
 title: HTMLTableElement.cellPadding
 slug: Web/API/HTMLTableElement/cellPadding
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsSpecTable
-  - Property
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLTableElement.cellPadding
 ---
 

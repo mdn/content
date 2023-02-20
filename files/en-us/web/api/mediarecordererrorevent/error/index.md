@@ -2,17 +2,9 @@
 title: MediaRecorderErrorEvent.error
 slug: Web/API/MediaRecorderErrorEvent/error
 page-type: web-api-instance-property
-tags:
-  - API
-  - Error
-  - Error Handling
-  - MediaRecordingErrorEvent
-  - MediaStream Recording
-  - MediaStream Recording API
-  - Property
-  - Reference
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.MediaRecorderErrorEvent.error
 ---
 

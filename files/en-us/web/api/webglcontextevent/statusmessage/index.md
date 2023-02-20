@@ -2,13 +2,6 @@
 title: WebGLContextEvent.statusMessage
 slug: Web/API/WebGLContextEvent/statusMessage
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - WebGL
-  - WebGLContextEvent
 browser-compat: api.WebGLContextEvent.statusMessage
 ---
 

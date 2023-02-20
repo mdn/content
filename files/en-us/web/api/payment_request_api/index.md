@@ -2,19 +2,6 @@
 title: Payment Request API
 slug: Web/API/Payment_Request_API
 page-type: web-api-overview
-tags:
-  - API
-  - Commerce
-  - Credit Card
-  - Intermediate
-  - Landing
-  - NeedsContent
-  - Overview
-  - Payment Request
-  - Payment Request API
-  - Reference
-  - Secure context
-  - payment
 browser-compat: api.PaymentRequest
 ---
 

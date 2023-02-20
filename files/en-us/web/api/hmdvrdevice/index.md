@@ -2,16 +2,9 @@
 title: HMDVRDevice
 slug: Web/API/HMDVRDevice
 page-type: web-api-interface
-tags:
-  - API
-  - HMDVRDevice
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.HMDVRDevice
 ---
 

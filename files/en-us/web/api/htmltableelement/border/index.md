@@ -2,13 +2,8 @@
 title: HTMLTableElement.border
 slug: Web/API/HTMLTableElement/border
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - NeedsSpecTable
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.HTMLTableElement.border
 ---
 

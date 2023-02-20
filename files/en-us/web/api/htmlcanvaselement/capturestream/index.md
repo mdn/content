@@ -2,17 +2,6 @@
 title: HTMLCanvasElement.captureStream()
 slug: Web/API/HTMLCanvasElement/captureStream
 page-type: web-api-instance-method
-tags:
-  - Canvas
-  - Frame Capture
-  - HTMLCanvasElement
-  - Interface
-  - Media
-  - Media Capture DOM Elements
-  - Method
-  - Reference
-  - Web
-  - captureStream
 browser-compat: api.HTMLCanvasElement.captureStream
 ---
 

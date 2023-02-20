@@ -1,6 +1,7 @@
 ---
 title: tabs.goForward()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/goForward
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

@@ -2,13 +2,6 @@
 title: HTMLFormElement.name
 slug: Web/API/HTMLFormElement/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLFormElement
-  - NeedsSpecTable
-  - Property
-  - Reference
 browser-compat: api.HTMLFormElement.name
 ---
 

@@ -2,12 +2,6 @@
 title: HTMLElement.title
 slug: Web/API/HTMLElement/title
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Property
-  - Reference
 browser-compat: api.HTMLElement.title
 ---
 

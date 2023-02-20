@@ -2,16 +2,9 @@
 title: HMDVRDevice.getEyeParameters()
 slug: Web/API/HMDVRDevice/getEyeParameters
 page-type: web-api-instance-method
-tags:
-  - API
-  - HMDVRDevice
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.HMDVRDevice.getEyeParameters
 ---
 

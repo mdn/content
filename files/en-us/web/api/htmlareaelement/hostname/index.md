@@ -2,11 +2,6 @@
 title: HTMLAreaElement.hostname
 slug: Web/API/HTMLAreaElement/hostname
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - Property
-  - Reference
 browser-compat: api.HTMLAreaElement.hostname
 ---
 

@@ -2,15 +2,6 @@
 title: 'Element: blur event'
 slug: Web/API/Element/blur_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Element
-  - Event
-  - FocusEvent
-  - Reference
-  - blur
-  - onblur
 browser-compat: api.Element.blur_event
 ---
 

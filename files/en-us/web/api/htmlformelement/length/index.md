@@ -2,14 +2,6 @@
 title: HTMLFormElement.length
 slug: Web/API/HTMLFormElement/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLFormElement
-  - NeedsSpecTable
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.HTMLFormElement.length
 ---
 

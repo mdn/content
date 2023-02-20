@@ -2,10 +2,6 @@
 title: File drag and drop
 slug: Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
 page-type: guide
-tags:
-  - Guide
-  - drag and drop
-  - drop zone
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}

@@ -2,13 +2,8 @@
 title: HIDConnectionEvent.device
 slug: Web/API/HIDConnectionEvent/device
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - device
-  - HIDConnectionEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDConnectionEvent.device
 ---
 

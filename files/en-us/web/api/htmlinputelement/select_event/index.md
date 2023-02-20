@@ -1,13 +1,6 @@
 ---
 title: "HTMLInputElement: select event"
 slug: Web/API/HTMLInputElement/select_event
-tags:
-  - Element
-  - Event
-  - Event Handler
-  - NeedsCompatTable
-  - Reference
-  - UIEvent
 browser-compat: api.HTMLInputElement.select_event
 page-type: web-api-event
 ---

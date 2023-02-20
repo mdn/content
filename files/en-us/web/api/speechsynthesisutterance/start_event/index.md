@@ -2,10 +2,6 @@
 title: 'SpeechSynthesisUtterance: start event'
 slug: Web/API/SpeechSynthesisUtterance/start_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Web Speech API
 browser-compat: api.SpeechSynthesisUtterance.start_event
 ---
 

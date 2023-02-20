@@ -2,13 +2,8 @@
 title: HIDDevice.sendReport()
 slug: Web/API/HIDDevice/sendReport
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - sendReport
-  - HIDDevice
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDDevice.sendReport
 ---
 

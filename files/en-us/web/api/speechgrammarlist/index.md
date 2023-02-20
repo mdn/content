@@ -2,15 +2,8 @@
 title: SpeechGrammarList
 slug: Web/API/SpeechGrammarList
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - SpeechGrammarList
-  - Web Speech API
-  - recognition
-  - speech
+status:
+  - experimental
 browser-compat: api.SpeechGrammarList
 ---
 

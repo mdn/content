@@ -2,17 +2,6 @@
 title: HTMLImageElement
 slug: Web/API/HTMLImageElement
 page-type: web-api-interface
-tags:
-  - API
-  - Element
-  - Graphic
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Interface
-  - Reference
-  - img
-  - picture
 browser-compat: api.HTMLImageElement
 ---
 

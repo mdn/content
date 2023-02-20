@@ -2,12 +2,6 @@
 title: RsaOaepParams
 slug: Web/API/RsaOaepParams
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - Reference
-  - RsaOaepParams
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-RsaOaepParams
 ---
 

@@ -2,19 +2,8 @@
 title: Navigation.forward()
 slug: Web/API/Navigation/forward
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - forward
-  - History
-  - Method
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Reference
-  - Scroll
-  - transition
-  - Traversal
+status:
+  - experimental
 browser-compat: api.Navigation.forward
 ---
 

@@ -2,24 +2,6 @@
 title: HTMLVideoElement.videoHeight
 slug: Web/API/HTMLVideoElement/videoHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLVideoElement
-  - Intrinsic Height
-  - Intrinsic Width
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - Video Dimensions
-  - dimension
-  - height
-  - size
-  - videoHeight
-  - videoWidth
 browser-compat: api.HTMLVideoElement.videoHeight
 ---
 

@@ -2,10 +2,8 @@
 title: HTMLMediaElement.msPlayToSource
 slug: Web/API/HTMLMediaElement/msPlayToSource
 page-type: web-api-instance-property
-tags:
-  - msPlayToSource
-  - Non-standard
-  - Property
+status:
+  - non-standard
 ---
 
 {{APIRef("HTML DOM")}}

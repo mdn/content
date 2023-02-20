@@ -2,13 +2,6 @@
 title: ReadableStreamBYOBRequest.respond()
 slug: Web/API/ReadableStreamBYOBRequest/respond
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStreamBYOBRequest
-  - Reference
-  - Streams
-  - respond
 browser-compat: api.ReadableStreamBYOBRequest.respond
 ---
 

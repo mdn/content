@@ -2,13 +2,6 @@
 title: "HTMLMediaElement: progress event"
 slug: Web/API/HTMLMediaElement/progress_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Web
-  - progress
 browser-compat: api.HTMLMediaElement.progress_event
 ---
 

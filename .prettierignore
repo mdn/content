@@ -1,4 +1,4 @@
-# .prettierignore uses .gitignore syntax
+# This .prettierignore file uses .gitignore syntax
 # see https://prettier.io/docs/en/ignore.html#ignoring-files-prettierignore
 
 build/
@@ -7,10 +7,8 @@ build/
 # still need a full pass:
 /files/en-us/learn/**/*.md
 /files/en-us/mozilla/**/*.md
-/files/en-us/web/accessibility/**/*.md
 /files/en-us/web/html/**/*.md
 /files/en-us/web/javascript/**/*.md
-/files/en-us/web/mathml/**/*.md
 /files/en-us/web/progressive_web_apps/**/*.md
 /files/en-us/web/svg/**/*.md
 /files/en-us/web/text_fragments/**/*.md
@@ -18,5 +16,5 @@ build/
 
 # The /web/api folder is so large, it has been divided into multiple parts
 /files/en-us/web/api/**/*.md
-!/files/en-us/web/api/[a-c]*/**/*.md
+!/files/en-us/web/api/[a-d]*/**/*.md
 !/files/en-us/web/api/h*/**/*.md

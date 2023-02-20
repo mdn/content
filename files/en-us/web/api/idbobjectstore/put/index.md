@@ -2,15 +2,6 @@
 title: IDBObjectStore.put()
 slug: Web/API/IDBObjectStore/put
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBObjectStore
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - put
 browser-compat: api.IDBObjectStore.put
 ---
 

@@ -2,15 +2,8 @@
 title: NetworkInformation.rtt
 slug: Web/API/NetworkInformation/rtt
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Network Information API
-  - NetworkInformation
-  - Property
-  - Read-only
-  - Reference
-  - rtt
+status:
+  - experimental
 browser-compat: api.NetworkInformation.rtt
 ---
 

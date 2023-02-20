@@ -2,13 +2,6 @@
 title: HTMLScriptElement.supports()
 slug: Web/API/HTMLScriptElement/supports
 page-type: web-api-static-method
-tags:
-  - API
-  - HTMLScriptElement
-  - Method
-  - Reference
-  - supports
-  - Feature detection
 browser-compat: api.HTMLScriptElement.supports
 ---
 

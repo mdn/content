@@ -2,18 +2,6 @@
 title: Payment processing concepts
 slug: Web/API/Payment_Request_API/Concepts
 page-type: guide
-tags:
-  - API
-  - Apple Pay
-  - Commerce
-  - Guide
-  - Intermediate
-  - Payee
-  - Payer
-  - Payment Handler
-  - Payment Method
-  - Payment Request API
-  - Payments
 spec-urls:
   - https://w3c.github.io/payment-request/
   - https://w3c.github.io/payment-method-id/

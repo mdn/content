@@ -2,14 +2,6 @@
 title: Element.ariaPosInSet
 slug: Web/API/Element/ariaPosInSet
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaPosInSet
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaPosInSet
 ---
 

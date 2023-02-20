@@ -2,15 +2,8 @@
 title: HTMLTableElement.align
 slug: Web/API/HTMLTableElement/align
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - HTMLTableElement
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.HTMLTableElement.align
 ---
 

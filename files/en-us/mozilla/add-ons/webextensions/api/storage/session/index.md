@@ -1,6 +1,7 @@
 ---
 title: storage.session
 slug: Mozilla/Add-ons/WebExtensions/API/storage/session
+page-type: webextension-api-property
 tags:
   - API
   - Add-ons

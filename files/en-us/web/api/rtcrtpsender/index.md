@@ -2,21 +2,6 @@
 title: RTCRtpSender
 slug: Web/API/RTCRtpSender
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - DTLS
-  - DTMF
-  - Interface
-  - Media
-  - NeedsExample
-  - RTCRtpSender
-  - RTP
-  - Reference
-  - Video
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
 browser-compat: api.RTCRtpSender
 ---
 

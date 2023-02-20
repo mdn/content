@@ -2,17 +2,6 @@
 title: Using WebRTC data channels
 slug: Web/API/WebRTC_API/Using_data_channels
 page-type: guide
-tags:
-  - Communications
-  - Data Transfer
-  - Draft
-  - Guide
-  - NeedsContent
-  - Networking
-  - RTCDataChannel
-  - WebRTC
-  - WebRTC API
-  - buffering
 ---
 
 {{DefaultAPISidebar("WebRTC")}}

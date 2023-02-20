@@ -2,13 +2,6 @@
 title: HTMLDetailsElement
 slug: Web/API/HTMLDetailsElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLDetailsElement
-  - Interface
-  - Reference
 browser-compat: api.HTMLDetailsElement
 ---
 

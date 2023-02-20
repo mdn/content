@@ -2,12 +2,6 @@
 title: HTMLTableRowElement.insertCell()
 slug: Web/API/HTMLTableRowElement/insertCell
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableRowElement
-  - Method
-  - Reference
 browser-compat: api.HTMLTableRowElement.insertCell
 ---
 

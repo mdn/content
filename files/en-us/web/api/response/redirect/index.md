@@ -2,13 +2,6 @@
 title: Response.redirect()
 slug: Web/API/Response/redirect
 page-type: web-api-static-method
-tags:
-  - API
-  - Fetch
-  - Method
-  - Redirect
-  - Reference
-  - Response
 browser-compat: api.Response.redirect
 ---
 

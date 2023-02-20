@@ -2,14 +2,9 @@
 title: HTMLCanvasElement.mozOpaque
 slug: Web/API/HTMLCanvasElement/mozOpaque
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - Deprecated
-  - HTMLCanvasElement
-  - Non-standard
-  - Property
-  - Reference
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.HTMLCanvasElement.mozOpaque
 ---
 

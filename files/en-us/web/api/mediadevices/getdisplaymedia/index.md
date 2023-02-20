@@ -2,21 +2,6 @@
 title: MediaDevices.getDisplayMedia()
 slug: Web/API/MediaDevices/getDisplayMedia
 page-type: web-api-instance-method
-tags:
-  - API
-  - Capture
-  - Conference
-  - Media
-  - MediaDevices
-  - Method
-  - Reference
-  - Screen Capture
-  - Screen Capture API
-  - Sharing
-  - Video
-  - display
-  - getDisplayMedia
-  - screen
 browser-compat: api.MediaDevices.getDisplayMedia
 ---
 

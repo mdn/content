@@ -2,12 +2,6 @@
 title: HTMLSelectElement
 slug: Web/API/HTMLSelectElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Interface
-  - Reference
 browser-compat: api.HTMLSelectElement
 ---
 

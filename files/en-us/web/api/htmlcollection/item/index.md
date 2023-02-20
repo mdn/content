@@ -2,13 +2,6 @@
 title: HTMLCollection.item()
 slug: Web/API/HTMLCollection/item
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLCollection
-  - Method
-  - Reference
-  - item
 browser-compat: api.HTMLCollection.item
 ---
 

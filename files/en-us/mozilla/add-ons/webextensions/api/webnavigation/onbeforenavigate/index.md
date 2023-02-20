@@ -1,6 +1,7 @@
 ---
 title: webNavigation.onBeforeNavigate
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onBeforeNavigate
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

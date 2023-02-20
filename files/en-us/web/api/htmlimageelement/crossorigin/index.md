@@ -2,18 +2,6 @@
 title: HTMLImageElement.crossOrigin
 slug: Web/API/HTMLImageElement/crossOrigin
 page-type: web-api-instance-property
-tags:
-  - API
-  - CORS
-  - Cross-Origin
-  - Crossorigin
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Property
-  - Reference
-  - Security
-  - origin
 browser-compat: api.HTMLImageElement.crossOrigin
 ---
 

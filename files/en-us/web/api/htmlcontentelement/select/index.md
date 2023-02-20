@@ -2,14 +2,9 @@
 title: HTMLContentElement.select
 slug: Web/API/HTMLContentElement/select
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - Web Components
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.HTMLContentElement.select
 ---
 

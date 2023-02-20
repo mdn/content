@@ -2,20 +2,6 @@
 title: HTMLMediaElement.currentTime
 slug: Web/API/HTMLMediaElement/currentTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Property
-  - Time
-  - Video
-  - Web
-  - currentTime
-  - offset
-  - seconds
-  - seek
 browser-compat: api.HTMLMediaElement.currentTime
 ---
 

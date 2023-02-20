@@ -2,14 +2,8 @@
 title: "HTMLTextAreaElement: selectionchange event"
 slug: Web/API/HTMLTextAreaElement/selectionchange_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - Selection
-  - Selection API
-  - selectionchange
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HTMLTextAreaElement.selectionchange_event
 ---
 

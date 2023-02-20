@@ -2,12 +2,6 @@
 title: Headers.keys()
 slug: Web/API/Headers/keys
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch API
-  - Headers
-  - Method
-  - Reference
 browser-compat: api.Headers.keys
 ---
 

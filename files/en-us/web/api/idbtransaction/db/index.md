@@ -2,15 +2,6 @@
 title: IDBTransaction.db
 slug: Web/API/IDBTransaction/db
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBTransaction
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - db
 browser-compat: api.IDBTransaction.db
 ---
 

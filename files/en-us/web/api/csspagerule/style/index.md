@@ -2,13 +2,6 @@
 title: CSSPageRule.style
 slug: Web/API/CSSPageRule/style
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - Property
-  - Reference
-  - CSSPageRule
-  - Read-only
 browser-compat: api.CSSPageRule.style
 ---
 

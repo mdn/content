@@ -2,13 +2,8 @@
 title: HID.getDevices()
 slug: Web/API/HID/getDevices
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - getDevices
-  - HID
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HID.getDevices
 ---
 

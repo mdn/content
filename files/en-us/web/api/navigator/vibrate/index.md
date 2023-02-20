@@ -2,12 +2,6 @@
 title: Navigator.vibrate()
 slug: Web/API/Navigator/vibrate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Navigator
-  - Reference
-  - Vibration API
 browser-compat: api.Navigator.vibrate
 ---
 

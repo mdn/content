@@ -2,13 +2,6 @@
 title: HTMLInputElement.select()
 slug: Web/API/HTMLInputElement/select
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - Method
-  - NeedsCompatTable
-  - Reference
 browser-compat: api.HTMLInputElement.select
 ---
 

@@ -2,12 +2,6 @@
 title: Selection.selectAllChildren()
 slug: Web/API/Selection/selectAllChildren
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
 browser-compat: api.Selection.selectAllChildren
 ---
 

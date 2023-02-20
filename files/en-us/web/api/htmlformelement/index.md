@@ -2,15 +2,6 @@
 title: HTMLFormElement
 slug: Web/API/HTMLFormElement
 page-type: web-api-interface
-tags:
-  - API
-  - Form Element
-  - Forms
-  - HTML DOM
-  - HTML forms
-  - HTMLFormElement
-  - Interface
-  - Reference
 browser-compat: api.HTMLFormElement
 ---
 

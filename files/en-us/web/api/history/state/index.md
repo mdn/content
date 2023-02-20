@@ -2,13 +2,6 @@
 title: History.state
 slug: Web/API/History/state
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - History
-  - History API
-  - Property
-  - Reference
 browser-compat: api.History.state
 ---
 

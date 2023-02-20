@@ -2,15 +2,8 @@
 title: XRView.recommendedViewportScale
 slug: Web/API/XRView/recommendedViewportScale
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - AR
-  - VR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRView.recommendedViewportScale
 ---
 

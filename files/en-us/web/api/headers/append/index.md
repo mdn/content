@@ -2,12 +2,6 @@
 title: Headers.append()
 slug: Web/API/Headers/append
 page-type: web-api-instance-method
-tags:
-  - API
-  - Append
-  - Fetch
-  - Method
-  - Reference
 browser-compat: api.Headers.append
 ---
 

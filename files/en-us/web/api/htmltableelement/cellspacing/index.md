@@ -2,15 +2,8 @@
 title: HTMLTableElement.cellSpacing
 slug: Web/API/HTMLTableElement/cellSpacing
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - NeedsSpecTable
-  - Property
-  - Reference
-  - cellSpacing
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLTableElement.cellSpacing
 ---
 

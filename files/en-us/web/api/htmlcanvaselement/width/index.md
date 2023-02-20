@@ -2,11 +2,6 @@
 title: HTMLCanvasElement.width
 slug: Web/API/HTMLCanvasElement/width
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - HTMLCanvasElement
-  - Property
 browser-compat: api.HTMLCanvasElement.width
 ---
 

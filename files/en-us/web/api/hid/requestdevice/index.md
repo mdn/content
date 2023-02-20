@@ -2,13 +2,8 @@
 title: HID.requestDevice()
 slug: Web/API/HID/requestDevice
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - requestDevice
-  - HID
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HID.requestDevice
 ---
 

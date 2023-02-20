@@ -2,12 +2,6 @@
 title: HTMLSlotElement
 slug: Web/API/HTMLSlotElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTMLSlotElement
-  - Interface
-  - Reference
-  - shadow dom
 browser-compat: api.HTMLSlotElement
 ---
 

@@ -2,13 +2,8 @@
 title: HIDDevice.productName
 slug: Web/API/HIDDevice/productName
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - productName
-  - HIDDevice
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDDevice.productName
 ---
 

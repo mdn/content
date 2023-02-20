@@ -2,11 +2,6 @@
 title: HTMLInputElement.disabled
 slug: Web/API/HTMLInputElement/disabled
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - Property
 browser-compat: api.HTMLInputElement.disabled
 ---
 

@@ -2,13 +2,6 @@
 title: HTMLMediaElement.buffered
 slug: Web/API/HTMLMediaElement/buffered
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Read-only
-  - Web
 browser-compat: api.HTMLMediaElement.buffered
 ---
 

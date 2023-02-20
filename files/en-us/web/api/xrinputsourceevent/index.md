@@ -2,27 +2,6 @@
 title: XRInputSourceEvent
 slug: Web/API/XRInputSourceEvent
 page-type: web-api-interface
-tags:
-  - 3D
-  - API
-  - AR
-  - Graphics
-  - Input Sources
-  - Inputs
-  - Interface
-  - Mixed
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSourceEvent
-  - augmented
-  - controllers
-  - events
 browser-compat: api.XRInputSourceEvent
 ---
 

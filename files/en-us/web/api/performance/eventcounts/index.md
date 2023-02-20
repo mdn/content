@@ -3,8 +3,6 @@ title: Performance.eventCounts
 slug: Web/API/Performance/eventCounts
 page-type: web-api-instance-property
 browser-compat: api.Performance.eventCounts
-tags: 
-  - Property
 ---
 
 {{APIRef("Performance API")}}

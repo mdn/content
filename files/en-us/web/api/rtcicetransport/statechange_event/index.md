@@ -2,19 +2,6 @@
 title: 'RTCIceTransport: statechange event'
 slug: Web/API/RTCIceTransport/statechange_event
 page-type: web-api-event
-tags:
-  - ICE
-  - Negotiation
-  - RTCIceTransport
-  - Reference
-  - SDP
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - events
-  - rtc
-  - state
-  - statechange
 browser-compat: api.RTCIceTransport.statechange_event
 ---
 

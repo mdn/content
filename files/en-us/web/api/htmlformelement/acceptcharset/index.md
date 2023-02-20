@@ -2,14 +2,6 @@
 title: HTMLFormElement.acceptCharset
 slug: Web/API/HTMLFormElement/acceptCharset
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLFormElement
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Reference
 browser-compat: api.HTMLFormElement.acceptCharset
 ---
 

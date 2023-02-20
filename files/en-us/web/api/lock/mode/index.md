@@ -2,13 +2,6 @@
 title: Locks.mode
 slug: Web/API/Lock/mode
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Locks API
-  - lock
-  - mode
 browser-compat: api.Lock.mode
 ---
 

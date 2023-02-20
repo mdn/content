@@ -2,13 +2,6 @@
 title: HTMLInputElement.stepDown()
 slug: Web/API/HTMLInputElement/stepDown
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - Method
-  - Reference
-  - Text Field Selection API
 browser-compat: api.HTMLInputElement.stepDown
 ---
 

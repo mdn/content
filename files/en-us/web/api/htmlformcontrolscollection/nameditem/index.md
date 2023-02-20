@@ -2,12 +2,6 @@
 title: HTMLFormControlsCollection.namedItem()
 slug: Web/API/HTMLFormControlsCollection/namedItem
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLFormControlsCollection
-  - Method
-  - Reference
 browser-compat: api.HTMLFormControlsCollection.namedItem
 ---
 

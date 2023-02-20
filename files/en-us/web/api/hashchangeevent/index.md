@@ -2,14 +2,6 @@
 title: HashChangeEvent
 slug: Web/API/HashChangeEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Event
-  - HTML
-  - HashChange
-  - Interface
-  - Reference
-  - events
 browser-compat: api.HashChangeEvent
 ---
 

@@ -2,14 +2,6 @@
 title: HTMLElement.isContentEditable
 slug: Web/API/HTMLElement/isContentEditable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Editing
-  - HTML DOM
-  - HTMLElement
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.HTMLElement.isContentEditable
 ---
 

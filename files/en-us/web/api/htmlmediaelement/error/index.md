@@ -2,17 +2,6 @@
 title: HTMLMediaElement.error
 slug: Web/API/HTMLMediaElement/error
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - Web
 browser-compat: api.HTMLMediaElement.error
 ---
 

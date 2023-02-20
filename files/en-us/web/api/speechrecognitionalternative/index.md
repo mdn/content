@@ -2,14 +2,6 @@
 title: SpeechRecognitionAlternative
 slug: Web/API/SpeechRecognitionAlternative
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - SpeechRecognitionAlternative
-  - Web Speech API
-  - recognition
-  - speech
 browser-compat: api.SpeechRecognitionAlternative
 ---
 

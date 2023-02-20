@@ -2,13 +2,6 @@
 title: HTMLDialogElement.open
 slug: Web/API/HTMLDialogElement/open
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLDialogElement
-  - Property
-  - Reference
-  - open
 browser-compat: api.HTMLDialogElement.open
 ---
 
