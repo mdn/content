@@ -2,14 +2,8 @@
 title: URL Pattern API
 slug: Web/API/URL_Pattern_API
 page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - URL
-  - URLPattern
-  - URL Pattern API
-  - Web
-  - Experimental
+status:
+  - experimental
 browser-compat: api.URLPattern
 ---
 
@@ -131,14 +125,14 @@ Some regex patterns do not work as you may expect:
   ```
 
   ```js
-  // with `$` in protocol
+  // with `$` in hash
   const pattern = new URLPattern({ hash: '(hash$)' });
   console.log(pattern.test('https://example.com/#hash')); // true
   console.log(pattern.test('xhttps://example.com/#otherhash')); // false
   ```
 
   ```js
-  // without `$` in protocol
+  // without `$` in hash
   const pattern = new URLPattern({ hash: '(hash)' });
   console.log(pattern.test('https://example.com/#hash')); // true
   console.log(pattern.test('xhttps://example.com/#otherhash')); // false
@@ -352,6 +346,26 @@ paths like `/foo/./bar/` are collapsed to just `/foo/bar`, etc. In addition,
 there are some pattern representations that parse to the same underlying
 meaning, like `foo` and `{foo}`. Such cases are normalized to the simplest form.
 In this case `{foo}` gets changed to `foo`.
+
+## Case sensitivity
+
+The URL Pattern API treats many parts of the URL as case-sensitive by default when matching. In contrast, many client-side JavaScript frameworks use case-insensitive URL matching. An `ignoreCase` option is available on the {{domxref("URLPattern.URLPattern", "URLPattern()")}} constructor to enable case-insensitive matching if desired.
+
+```js
+// Case-sensitive matching by default
+const pattern = new URLPattern('https://events.com/2022/feb/*');
+console.log(pattern.test('https://events.com/2022/feb/xc44rsz')); // true
+console.log(pattern.test('https://events.com/2022/Feb/xc44rsz')); // false
+```
+
+Setting the `ignoreCase` option to `true` in the constructor switches all matching operations to case-insensitive for the given pattern:
+
+```js
+// Case-insensitive matching
+const pattern = new URLPattern('https://events.com/2022/feb/*', { ignoreCase : true });
+console.log(pattern.test('https://events.com/2022/feb/xc44rsz')); // true
+console.log(pattern.test('https://events.com/2022/Feb/xc44rsz')); // true
+```
 
 ## Examples
 

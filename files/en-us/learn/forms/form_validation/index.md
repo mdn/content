@@ -89,7 +89,7 @@ We've seen many of these earlier in the course, but to recap:
 - [`required`](/en-US/docs/Web/HTML/Attributes/required): Specifies whether a form field needs to be filled in before the form can be submitted.
 - [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength) and [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength): Specifies the minimum and maximum length of textual data (strings).
 - [`min`](/en-US/docs/Web/HTML/Attributes/min) and [`max`](/en-US/docs/Web/HTML/Attributes/max): Specifies the minimum and maximum values of numerical input types.
-- `type`: Specifies whether the data needs to be a number, an email address, or some other specific preset type.
+- [`type`](/en-US/docs/Web/HTML/Element/input#input_types): Specifies whether the data needs to be a number, an email address, or some other specific preset type.
 - [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern): Specifies a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) that defines a pattern the entered data needs to follow.
 
 If the data entered in a form field follows all of the rules specified by the above attributes, it is considered valid.
@@ -355,7 +355,7 @@ First, some HTML:
     </datalist>
   </p>
   <p>
-    <label for="t2">What's your e-mail address?</label>
+    <label for="t2">What's your email address?</label>
     <input type="email" id="t2" name="email">
   </p>
   <p>
@@ -464,7 +464,7 @@ We'll start with some simple HTML (feel free to put this in a blank HTML file; u
 ```html
 <form>
   <label for="mail">
-    I would like you to provide me with an e-mail address:
+    I would like you to provide me with an email address:
   </label>
   <input type="email" id="mail" name="mail" />
   <button>Submit</button>
@@ -478,8 +478,7 @@ const email = document.getElementById("mail");
 
 email.addEventListener("input", (event) => {
   if (email.validity.typeMismatch) {
-    email.setCustomValidity("I am expecting an e-mail address!");
-    email.reportValidity();
+    email.setCustomValidity("I am expecting an email address!");
   } else {
     email.setCustomValidity("");
   }
@@ -488,9 +487,9 @@ email.addEventListener("input", (event) => {
 
 Here we store a reference to the email input, then add an event listener to it that runs the contained code each time the value inside the input is changed.
 
-Inside the contained code, we check whether the email input's `validity.typeMismatch` property returns `true`, meaning that the contained value doesn't match the pattern for a well-formed email address. If so, we call the {{domxref("HTMLInputElement.setCustomValidity()","setCustomValidity()")}} method with a custom message which is displayed by calling {{domxref("HTMLInputElement.reportValidity","reportValidity()")}}. This renders the input invalid, so that when you try to submit the form, submission fails and the custom error message is displayed.
+Inside the contained code, we check whether the email input's `validity.typeMismatch` property returns `true`, meaning that the contained value doesn't match the pattern for a well-formed email address. If so, we call the {{domxref("HTMLInputElement.setCustomValidity()","setCustomValidity()")}} method with a custom message. This renders the input invalid, so that when you try to submit the form, submission fails and the custom error message is displayed.
 
-If the `validity.typeMismatch` property returns `false`, we call the `setCustomValidity()` method an empty string. This renders the input valid, so the form will submit.
+If the `validity.typeMismatch` property returns `false`, we call the `setCustomValidity()` method with an empty string. This renders the input valid, so the form will submit.
 
 You can try it out below:
 
@@ -621,11 +620,11 @@ function showError() {
   if (email.validity.valueMissing) {
     // If the field is empty,
     // display the following error message.
-    emailError.textContent = "You need to enter an e-mail address.";
+    emailError.textContent = "You need to enter an email address.";
   } else if (email.validity.typeMismatch) {
     // If the field doesn't contain an email address,
     // display the following error message.
-    emailError.textContent = "Entered value needs to be an e-mail address.";
+    emailError.textContent = "Entered value needs to be an email address.";
   } else if (email.validity.tooShort) {
     // If the data is too short,
     // display the following error message.
@@ -768,7 +767,7 @@ const emailRegExp =
 // explicitly set the valid/invalid class on our email field
 window.addEventListener("load", () => {
   // Here, we test if the field is empty (remember, the field is not required)
-  // If it is not, we check if its content is a well-formed e-mail address.
+  // If it is not, we check if its content is a well-formed email address.
   const isValid = email.value.length === 0 || emailRegExp.test(email.value);
   email.className = isValid ? "valid" : "invalid";
 });
@@ -792,7 +791,7 @@ form.addEventListener("submit", (event) => {
   const isValid = email.value.length === 0 || emailRegExp.test(email.value);
   if (!isValid) {
     email.className = "invalid";
-    error.textContent = "I expect an e-mail, darling!";
+    error.textContent = "I expect an email, darling!";
     error.className = "error active";
   } else {
     email.className = "valid";
@@ -825,19 +824,6 @@ Once you have checked that the form is filled out correctly, the form can be sub
 We'll cover [sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data) next.
 
 {{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
-
-## In this module
-
-- [Your first form](/en-US/docs/Learn/Forms/Your_first_form)
-- [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
-- [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
-- [Other form controls](/en-US/docs/Learn/Forms/Other_form_controls)
-- [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
-- [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### Advanced Topics
 

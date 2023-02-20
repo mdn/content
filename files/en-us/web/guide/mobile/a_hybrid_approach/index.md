@@ -7,6 +7,8 @@ tags:
   - Web Development
 ---
 
+{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Mobile")}}
+
 Silver bullets are hard to find in web development — you're more likely to come across strategies that make the best use of a variety of techniques given the circumstances. This brings us to our third approach, which aims to avoid some of the shortcomings the separate sites and [responsive design](/en-US/docs/Web/Progressive_web_apps) approaches by combining them.
 
 This hybrid approach centers around breaking down mobile development into its [three goals](/en-US/docs/Web/Guide/Mobile/Mobile-friendliness), and then applying the best techniques available to tackle each goal individually. This article presents one potential combination of techniques as an example here, but different combinations will be appropriate under different circumstances. The most important concept to remember is that server-side and client-side techniques can be combined to fit your situation.

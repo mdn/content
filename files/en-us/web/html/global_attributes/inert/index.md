@@ -1,6 +1,7 @@
 ---
 title: inert
 slug: Web/HTML/Global_attributes/inert
+page-type: html-attribute
 tags:
   - Attribute
   - Global attributes
@@ -16,7 +17,7 @@ browser-compat: html.global_attributes.inert
 
 {{HTMLSidebar("Global_attributes")}}
 
-The **`inert`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is a Boolean attribute indicating that the browser will ignore the element. With the `inert` attribute, all of the element's flat tree descendants (such as modal {{htmlelement('dialog')}}s) that don't otherwise escape inertness are ignored. The `inert` attribute also makes the browser ignore input events sent by the user, including focus-related events and events from assistive technologies.
+The **`inert`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is a Boolean attribute indicating that the browser will ignore the element. With the `inert` attribute, all of the element's flat tree descendants (such as modal {{htmlelement("dialog")}}s) that don't otherwise escape inertness are ignored. The `inert` attribute also makes the browser ignore input events sent by the user, including focus-related events and events from assistive technologies.
 
 Specifically, `inert` does the following:
 
@@ -52,6 +53,6 @@ While providing visual and non-visual cues about content inertness, also remembe
 
 ## See also
 
-- HTML {{HTMLElement('dialog')}} element
+- HTML {{HTMLElement("dialog")}} element
 - [Introducing inert](https://developer.chrome.com/articles/inert/)
 - [The "inert" attribute is finally coming to the web](https://www.stefanjudis.com/blog/the-inert-attribute-is-finally-coming-to-the-web/)

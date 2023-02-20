@@ -1,6 +1,7 @@
 ---
 title: Object.prototype.__defineSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
+page-type: javascript-instance-method
 tags:
   - Deprecated
   - JavaScript

@@ -1,6 +1,7 @@
 ---
 title: cy
 slug: Web/SVG/Attribute/cy
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

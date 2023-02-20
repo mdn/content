@@ -1,6 +1,7 @@
 ---
 title: Array.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
+page-type: javascript-instance-method
 tags:
   - Array
   - ECMAScript 2015

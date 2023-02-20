@@ -1,6 +1,7 @@
 ---
 title: Global variable
 slug: Glossary/Global_variable
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

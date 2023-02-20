@@ -2,26 +2,6 @@
 title: XRInputSourcesChangeEvent.removed
 slug: Web/API/XRInputSourcesChangeEvent/removed
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Input Sources
-  - Inputs
-  - Mixed
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSourcesChangeEvent
-  - augmented
-  - controllers
-  - removed
 browser-compat: api.XRInputSourcesChangeEvent.removed
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Intl.Collator() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
+page-type: javascript-constructor
 tags:
   - Collator
   - Constructor
@@ -52,19 +53,19 @@ Intl.Collator(locales, options)
 
       - : Variant collations for certain locales. Possible values include:
 
-        - `big5han` (Chinese; not available in Chrome or Edge)
+        - `big5han` (Chinese; do not use; not available in Firefox, Chrome or Edge)
         - `compat` (Arabic)
         - `dict` (Sinhala)
         - `direct` (deprecated, do not use)
         - `ducet` (not available, do not use)
         - `emoji` (root)
         - `eor` (root)
-        - `gb2312` (Chinese; not available in Chrome or Edge)
+        - `gb2312` (Chinese; do not use; not available in Chrome or Edge)
         - `phonebk` (German)
         - `phonetic` (Lingala)
         - `pinyin` (Chinese)
-        - `reformed` (Swedish; do not specify explicitly as this is the default for Swedish)
-        - `searchjl` (Korean; do not use for sorting)
+        - `reformed` (formerly Swedish; do not specify explicitly as this was the old name for the default for Swedish)
+        - `searchjl` (Korean; do not use as this is for searching rather than sorting, and the API covers only sorting)
         - `stroke` (Chinese)
         - `trad`
         - `unihan` (Chinese, Japanese, and Korean; not available in Chrome or Edge)
@@ -125,49 +126,43 @@ Intl.Collator(locales, options)
       - : Whether numeric collation should be used, such that "1" < "2" <
         "10". Possible values are `true` and `false`; the
         default is `false`.
-
-        > **Note:** This option can also be set through the `kn` Unicode
-        > extension key; if both are provided, this `options`
-        > property takes precedence.
+        This option can also be set through the `kn` Unicode
+        extension key; if both are provided, this `options`
+        property takes precedence.
 
     - `caseFirst`
 
       - : Whether upper case or lower case should sort first. Possible values are
-        `"upper"`, `"lower"`, or `"false"` (use
-        the locale's default). This option can be set through an
-        `options` property or through a Unicode extension
-        key; if both are provided, the `options` property
-        takes precedence.
-
-        > **Note:** This option can also be set through the `kf` Unicode
-        > extension key; if both are provided, this `options`
-        > property takes precedence.
+        `"upper"`, `"lower"`, or `"false"` (use the locale's default).
+        This option can also be set through the `kf` Unicode
+        extension key; if both are provided, this `options`
+        property takes precedence.
 
     - `collation`
 
       - : Variant collations for certain locales. Possible values include:
 
-        - `big5han` (Chinese; not available in Chrome or Edge)
+        - `big5han` (Chinese; do not use; not available in Firefox, Chrome or Edge)
         - `compat` (Arabic)
         - `dict` (Sinhala)
         - `direct` (deprecated, do not use)
         - `ducet` (not available, do not use)
         - `emoji` (root)
         - `eor` (root)
-        - `gb2312` (Chinese; not available in Chrome or Edge)
+        - `gb2312` (Chinese; do not use; not available in Chrome or Edge)
         - `phonebk` (German)
         - `phonetic` (Lingala)
         - `pinyin` (Chinese)
-        - `reformed` (Swedish; do not specify explicitly as this is the default for Swedish)
-        - `searchjl` (Korean; do not use for sorting)
+        - `reformed` (formerly Swedish; do not specify explicitly as this was the old name for the default for Swedish)
+        - `searchjl` (Korean; do not use as this is for searching rather than sorting, and the API covers only sorting)
         - `stroke` (Chinese)
         - `trad`
         - `unihan` (Chinese, Japanese, and Korean; not available in Chrome or Edge)
         - `zhuyin` (Chinese)
 
-        > **Note:** This option can also be set through the `co` Unicode
-        > extension key; if both are provided, this `options`
-        > property takes precedence.
+        This option can also be set through the `co` Unicode
+        extension key; if both are provided, this `options`
+        property takes precedence.
 
 ## Examples
 

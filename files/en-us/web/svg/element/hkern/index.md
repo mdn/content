@@ -1,6 +1,7 @@
 ---
 title: <hkern>
 slug: Web/SVG/Element/hkern
+page-type: svg-element
 tags:
   - Deprecated
   - Element

@@ -2,13 +2,8 @@
 title: VideoEncoder.state
 slug: Web/API/VideoEncoder/state
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - state
-  - VideoEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoEncoder.state
 ---
 

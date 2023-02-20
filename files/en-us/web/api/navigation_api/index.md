@@ -38,7 +38,7 @@ The `NavigationEvent` object also provides two methods:
 - {{domxref("NavigateEvent.intercept", "intercept()")}} takes as an argument a callback handler function returning a promise. It allows you to control what happens when the navigation is initiated. For example, in the case of an SPA, it can be used to load relevant new content into the UI based on the path of the URL navigated to.
 - {{domxref("NavigateEvent.scroll", "scroll()")}} allows you to manually initiate the browser's scroll behavior (e.g. to a fragment identifier in the URL), if it makes sense for your code, rather than waiting for the browser to handle it automatically.
 
-Once a navigation is initiated, and your `intercept()` handler is called, a {{domxref("NavigationTransition")}} object instance is created (accessible via {{domxref("Navigation.transition")}}), which can be used used to track the process of the ongoing navigation.
+Once a navigation is initiated, and your `intercept()` handler is called, a {{domxref("NavigationTransition")}} object instance is created (accessible via {{domxref("Navigation.transition")}}), which can be used to track the process of the ongoing navigation.
 
 > **Note:** In this context "transition" refers to the transition between one history entry and another. It isn't related to CSS transitions.
 

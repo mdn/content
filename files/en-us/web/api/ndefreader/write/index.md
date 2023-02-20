@@ -11,7 +11,7 @@ tags:
 browser-compat: api.NDEFReader.write
 ---
 
-{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 The `write()` method of the {{DOMxRef("NDEFReader")}} interface attempts to write an NDEF message to a tag and returns a {{jsxref("Promise")}} that either resolves when a message has been written to the tag or rejects if a hardware or permission error is encountered. This method triggers a permission prompt if the "nfc" permission has not been previously granted.
 
@@ -101,13 +101,14 @@ The following example shows how to write a string to an NFC tag and process any 
 
 ```js
 const ndef = new NDEFReader();
-ndef.write(
-  "Hello World"
-).then(() => {
-  console.log("Message written.");
-}).catch((error) => {
-  console.log(`Write failed :-( try again: ${error}.`);
-});
+ndef
+  .write("Hello World")
+  .then(() => {
+    console.log("Message written.");
+  })
+  .catch((error) => {
+    console.log(`Write failed :-( try again: ${error}.`);
+  });
 ```
 
 ### Write a URL
@@ -118,11 +119,11 @@ The following example shows how to write a record object (described above) to an
 const ndef = new NDEFReader();
 try {
   await ndef.write({
-    records: [{ recordType: "url", data: "http://example.com/" }]
+    records: [{ recordType: "url", data: "http://example.com/" }],
   });
 } catch {
   console.log("Write failed :-( try again.");
-};
+}
 ```
 
 ### Scheduling a write with a timeout
@@ -139,9 +140,13 @@ function write(data, { timeout } = {}) {
     ctlr.signal.onabort = () => reject("Time is up, bailing out!");
     setTimeout(() => ctlr.abort(), timeout);
 
-    ndef.addEventListener("reading", (event) => {
-      ndef.write(data, { signal: ctlr.signal }).then(resolve, reject);
-    }, { once: true });
+    ndef.addEventListener(
+      "reading",
+      (event) => {
+        ndef.write(data, { signal: ctlr.signal }).then(resolve, reject);
+      },
+      { once: true }
+    );
   });
 }
 

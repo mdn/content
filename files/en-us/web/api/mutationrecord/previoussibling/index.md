@@ -24,7 +24,7 @@ The value is `null` if there are no added or removed nodes, or if the node is th
 
 ### Log the previous sibling of a mutation
 
-This adds a node every time you click the button. Then the observer logs the `textContent` of the `previousSibling` of the added node. The first time this is `null` because the target didn't have any children to begin with (so now it has only the most recently added node), but after this it logs the node after (the `previousSibling` of) the one we just added.
+This adds a node every time you click the button. Then the observer logs the `textContent` of the `previousSibling` of the added node.
 
 #### HTML
 
@@ -33,14 +33,13 @@ This adds a node every time you click the button. Then the observer logs the `te
 <button id="reset">Reset</button>
 
 <pre id="log" class="log">Previous sibling of added node:</pre>
-<pre id="counter" class="log">Node count: 0</pre>
-<div id="target"></div>
+<div id="target"><p>Node #0</p></div>
 ```
 
 ```css hidden
 .log {
   border: 1px dotted black;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 ```
 
@@ -49,7 +48,6 @@ This adds a node every time you click the button. Then the observer logs the `te
 ```js
 const addNodes = document.querySelector("#add-nodes");
 const reset = document.querySelector("#reset");
-const counter = document.querySelector("#counter");
 const target = document.querySelector("#target");
 let nodeNumber = 1;
 
@@ -66,7 +64,6 @@ function logPreviousSibling(records) {
   for (const record of records) {
     if (record.type === "childList") {
       for (const newNode of record.addedNodes) {
-        counter.textContent = `Node count: ${target.children.length}`;
         log.textContent = `Previous sibling of added node: ${newNode.previousSibling?.textContent}`;
       }
     }
@@ -74,7 +71,7 @@ function logPreviousSibling(records) {
 }
 
 const observer = new MutationObserver(logPreviousSibling);
-observer.observe(target, {childList: true});
+observer.observe(target, { childList: true });
 ```
 
 #### Result

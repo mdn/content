@@ -1,6 +1,7 @@
 ---
 title: DataView.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
+page-type: javascript-instance-accessor-property
 tags:
   - DataView
   - JavaScript

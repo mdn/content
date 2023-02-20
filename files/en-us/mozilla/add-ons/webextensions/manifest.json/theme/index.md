@@ -1,6 +1,7 @@
 ---
 title: theme
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme
+page-type: webextension-manifest-key
 tags:
   - Add-ons
   - Browser
@@ -248,7 +249,7 @@ All these properties can be specified as either a string containing any valid [C
 > In Firefox for Android colors can be specified using:
 >
 > - full hexadecimal notation, that is #RRGGBB only. _alpha_ and shortened syntax, as in #RGB\[A], are not supported.
-> - [Functional notation](/en-US/docs/Web/CSS/color_value#syntax_2) (RGB arrays) for themes targeting Firefox 68.2 or later.
+> - [Functional notation](/en-US/docs/Web/CSS/color_value#rgb_syntax_variations) (RGB arrays) for themes targeting Firefox 68.2 or later.
 >
 > Colors for Firefox for Android themes cannot be specified using color names.
 
@@ -851,7 +852,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are darker grey with icons and text in white. Inside the selected tab a animated loading indicator is red." src="theme-tab_loading.gif" /></p>
+        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are darker grey with icons and text in white. Inside the selected tab an animated loading indicator is red." src="theme-tab_loading.gif" /></p>
       </td>
     </tr>
     <tr>

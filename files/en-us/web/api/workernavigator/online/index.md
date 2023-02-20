@@ -2,13 +2,6 @@
 title: WorkerNavigator.onLine
 slug: Web/API/WorkerNavigator/onLine
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM Reference
-  - WorkerNavigator
-  - Online
-  - Property
-  - Reference
 browser-compat: api.WorkerNavigator.onLine
 ---
 

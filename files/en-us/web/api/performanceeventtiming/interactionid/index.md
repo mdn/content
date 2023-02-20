@@ -2,12 +2,8 @@
 title: PerformanceEventTiming.interactionId
 slug: Web/API/PerformanceEventTiming/interactionId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PerformanceEventTiming.interactionId
 ---
 

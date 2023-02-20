@@ -10,7 +10,7 @@ tags:
 browser-compat: api.NDEFRecord.toRecords
 ---
 
-{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 The **`toRecords()`**
 method of the {{DOMxRef("NDEFRecord")}} interface converts

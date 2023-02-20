@@ -2,15 +2,8 @@
 title: CSSStyleValue.parseAll()
 slug: Web/API/CSSStyleValue/parseAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSStyleValue
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - parseAll()
+status:
+  - experimental
 browser-compat: api.CSSStyleValue.parseAll
 ---
 
@@ -31,7 +24,7 @@ parseAll(property, value)
 
 - `property`
   - : A CSS property to set.
-- `cssText`
+- `value`
   - : A comma-separated string containing one or more values that apply to the provided
     property.
 

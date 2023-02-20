@@ -1,6 +1,7 @@
 ---
 title: Default parameters
 slug: Web/JavaScript/Reference/Functions/Default_parameters
+page-type: javascript-language-feature
 tags:
   - ECMAScript 2015
   - Functions

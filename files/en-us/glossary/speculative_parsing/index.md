@@ -1,6 +1,7 @@
 ---
 title: Speculative parsing
-slug: Glossary/speculative_parsing
+slug: Glossary/Speculative_parsing
+page-type: glossary-definition
 tags:
   - Advanced
   - HTML

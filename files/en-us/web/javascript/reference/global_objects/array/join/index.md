@@ -1,6 +1,7 @@
 ---
 title: Array.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
+page-type: javascript-instance-method
 tags:
   - Array
   - JavaScript

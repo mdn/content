@@ -24,7 +24,7 @@ f32.const -2.7
 ;; round to the nearest integer
 f32.nearest
 
-;; the top item on the stack will now be -2
+;; the top item on the stack will now be -3
 ```
 
 | Instruction   | Binary opcode |

@@ -1,6 +1,7 @@
 ---
 title: Symbol.toPrimitive
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
+page-type: javascript-static-data-property
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -11,11 +12,15 @@ browser-compat: javascript.builtins.Symbol.toPrimitive
 
 {{JSRef}}
 
-The **`Symbol.toPrimitive`** well-known symbol specifies a method that accepts a preferred type and returns a primitive representation of an object. It is called in priority by all [type coercion](/en-US/docs/Web/JavaScript/Data_structures#type_coercion) algorithms.
+The **`Symbol.toPrimitive`** static data property represents the well-known symbol specifying the method that accepts a preferred type and returns a primitive representation of an object. It is called in priority by all [type coercion](/en-US/docs/Web/JavaScript/Data_structures#type_coercion) algorithms.
 
 {{EmbedInteractiveExample("pages/js/symbol-toprimitive.html")}}
 
-{{js_property_attributes(0,0,0)}}
+## Value
+
+The well-known symbol `@@toPrimitive`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 

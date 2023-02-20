@@ -1,6 +1,7 @@
 ---
 title: '<optgroup>: The Option Group element'
 slug: Web/HTML/Element/optgroup
+page-type: html-element
 tags:
   - Element
   - Forms
@@ -16,47 +17,6 @@ browser-compat: html.elements.optgroup
 The **`<optgroup>`** [HTML](/en-US/docs/Web/HTML) element creates a grouping of options within a {{HTMLElement("select")}} element.
 
 {{EmbedInteractiveExample("pages/tabbed/optgroup.html", "tabbed-standard")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>None.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>Zero or more {{HTMLElement("option")}} elements.</td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>
-        The start tag is mandatory. The end tag is optional if this element is
-        immediately followed by another <code>&#x3C;optgroup></code> element, or
-        if the parent element has no more content.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>A {{HTMLElement("select")}} element.</td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>{{ARIARole("group")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>No <code>role</code> permitted</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLOptGroupElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 > **Note:** Optgroup elements may not be nested.
 
@@ -91,6 +51,49 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ### Result
 
 {{EmbedLiveSample("Examples")}}
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>Zero or more {{HTMLElement("option")}} elements.</td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>
+        The start tag is mandatory. The end tag is optional if this element is
+        immediately followed by another <code>&#x3C;optgroup></code> element, or
+        if the parent element has no more content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>A {{HTMLElement("select")}} element.</td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a></td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLOptGroupElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

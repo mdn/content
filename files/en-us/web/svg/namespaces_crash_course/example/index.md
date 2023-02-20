@@ -1,6 +1,7 @@
 ---
 title: Example
 slug: Web/SVG/Namespaces_Crash_Course/Example
+page-type: guide
 tags:
   - SVG
   - XML

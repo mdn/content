@@ -2,12 +2,6 @@
 title: Storage.removeItem()
 slug: Web/API/Storage/removeItem
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Storage
-  - Web Storage
 browser-compat: api.Storage.removeItem
 ---
 
@@ -63,7 +57,7 @@ function populateStorage() {
 }
 ```
 
-> **Note:** To see this used within a real world example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> **Note:** To see this used within a real-world example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
 ## Specifications
 

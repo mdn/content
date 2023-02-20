@@ -56,7 +56,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 - Support for the obsolete {{HTMLElement("spacer")}} element, which was absent in all other browsers, has been removed.
 - The {{HTMLElement("isindex")}} element, when created by calling {{domxref("document.createElement()")}}, is now created as a simple element with no properties or methods.
 - Gecko now supports calling `click()` on {{HTMLElement("input")}} elements to open the file picker. See the [example](/en-US/docs/Web/API/File/Using_files_from_web_applications#using_hidden_file_input_elements_using_the_click_method) in the article [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications).
-- The {{HTMLElement("input")}} element supports a new [`mozactionhint`](/en-US/docs/Web/HTML/Element/input#mozactionhint) attribute, which lets you specify the label for the enter key on virtual keyboards.
+- The {{HTMLElement("input")}} element supports a new `mozactionhint` attribute, which lets you specify the label for the enter key on virtual keyboards.
 - {{HTMLElement("script")}} elements inside {{HTMLElement("iframe")}}, {{HTMLElement("noembed")}}, and {{HTMLElement("noframes")}} elements now get executed, which they weren't in previous versions of Firefox. This is in compliance with the specification, and matches the behavior of other browsers.
 
 ### CSS
@@ -287,7 +287,7 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 - [FormData](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#using_formdata_objects) support for XMLHttpRequest.
 - The {{domxref("element.isContentEditable")}} property has been implemented.
 - The {{domxref("document.currentScript")}} property lets you determine which {{HTMLElement("script")}} element's script is currently executing. The new {{domxref("element.onbeforescriptexecute")}} and {{domxref("element.onafterscriptexecute")}} events are fired before and after a script element executes.
-- Added the [`mozSourceNode`](/en-US/docs/Web/API/DataTransfer#mozsourcenode) property to the [`DragTransfer`](/en-US/docs/Web/API/DataTransfer) object.
+- Added the `mozSourceNode` property to the [`DragTransfer`](/en-US/docs/Web/API/DataTransfer) object.
 - Added the [`selection.modify()`](/en-US/docs/Web/API/Selection/modify) method to the {{domxref("Selection")}} object; this lets you easily alter the current text selection or cursor position in a browser window.
 - Support for the `window.directories` object and the `directories` feature for {{domxref("window.open")}}, which are not supported in any other browser, has been removed. Use `personalbar` instead. {{Bug(474058)}}
 - The {{domxref("event.mozInputSource")}} property has been added to DOM user interface events; this non-standard property lets you determine the type of device that generated an event.

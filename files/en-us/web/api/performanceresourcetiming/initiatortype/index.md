@@ -2,17 +2,12 @@
 title: PerformanceResourceTiming.initiatorType
 slug: Web/API/PerformanceResourceTiming/initiatorType
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming.initiatorType
 ---
 
 {{APIRef("Performance API")}}
 
-The **`initiatorType`** read-only property is a string representing the way a resource was initiated to be fetched.
+The **`initiatorType`** read-only property is a string representing web platform feature that initiated the resource load.
 
 > **Note:** This property does not represent the type of content fetched. A `.css` file can be fetched using a {{HTMLElement("link")}} element leading to an `initiatorType` of `link`. When loading images using `background: url()` in a CSS file, the `initiatorType` will be `css` and not `img`.
 
@@ -34,8 +29,6 @@ The `initiatorType` property can have the following values, or `other` if none o
   - : If the request was initiated by an {{HTMLElement("embed")}} element's `src` attribute.
 - `fetch`
   - : If the request was initiated by a {{domxref("fetch()")}} method.
-- `font`
-  - : If the request was initiated by a {{cssxref("@font-face")}} at rule.
 - `frame`
   - : If the request was initiated by loading a {{HTMLElement("frame")}} element.
 - `iframe`
@@ -71,7 +64,7 @@ The `initiatorType` property can have the following values, or `other` if none o
 
 The `initiatorType` property can be used to get specific resource timing entries only. For example, only those that were initiated by {{HTMLElement("script")}} elements.
 
-Using a {{domxref("PerformanceObserver")}}:
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `resource` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
 
 ```js
 const observer = new PerformanceObserver((list) => {
@@ -84,7 +77,7 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({ type: "resource", buffered: true });
 ```
 
-Or using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
+Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
 
 ```js
 const scripts = performance.getEntriesByType("resource").filter((entry) => {

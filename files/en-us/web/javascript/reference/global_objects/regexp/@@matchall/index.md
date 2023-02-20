@@ -1,6 +1,7 @@
 ---
 title: RegExp.prototype[@@matchAll]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method

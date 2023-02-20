@@ -1,6 +1,7 @@
 ---
 title: Python
 slug: Glossary/Python
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Language

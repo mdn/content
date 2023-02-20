@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleString
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -20,6 +21,8 @@ by a locale-specific string (such as a comma ","). This method has the same algo
 numbers, the same algorithm as {{jsxref("Number.prototype.toLocaleString()")}} applies
 for each element. _TypedArray_ is one of the
 [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
+
+{{EmbedInteractiveExample("pages/js/typedarray-tolocalestring.html")}}
 
 ## Syntax
 

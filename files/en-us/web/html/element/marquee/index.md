@@ -1,6 +1,7 @@
 ---
 title: '<marquee>: The Marquee element'
 slug: Web/HTML/Element/marquee
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -11,18 +12,9 @@ tags:
 browser-compat: html.elements.marquee
 ---
 
-{{Deprecated_Header}}
+{{HTMLSidebar}}{{Deprecated_Header}}
 
 The **`<marquee>`** [HTML](/en-US/docs/Web/HTML) element is used to insert a scrolling area of text. You can control what happens when the text reaches the edges of its content area using its attributes.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{DOMxRef("HTMLMarqueeElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Attributes
 
@@ -83,6 +75,17 @@ The **`<marquee>`** [HTML](/en-US/docs/Web/HTML) element is used to insert a scr
 ```
 
 {{EmbedLiveSample("Examples", 600, 450)}}
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{DOMxRef("HTMLMarqueeElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

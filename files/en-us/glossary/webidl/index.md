@@ -1,6 +1,7 @@
 ---
 title: WebIDL
 slug: Glossary/WebIDL
+page-type: glossary-definition
 tags:
   - CodingScripting
   - WebIDL

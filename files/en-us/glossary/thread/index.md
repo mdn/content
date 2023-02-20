@@ -1,6 +1,7 @@
 ---
 title: Thread
 slug: Glossary/Thread
+page-type: glossary-definition
 tags:
   - Thread
   - asynchronous

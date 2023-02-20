@@ -53,9 +53,6 @@ In addition to the properties listed below, `MediaStreamTrack` has constrainable
     - `"live"` which indicates that an input is connected and does its best-effort in providing real-time data. In that case, the output of data can be switched on or off using the {{domxref("MediaStreamTrack.enabled", "enabled")}} attribute.
     - `"ended"` which indicates that the input is not giving any more data and will never provide new data.
 
-- {{domxref("MediaStreamTrack.remote")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Returns a Boolean with a value of `true` if the track is sourced by a {{domxref("RTCPeerConnection")}}, `false` otherwise.
-
 ## Instance methods
 
 - {{domxref("MediaStreamTrack.applyConstraints()")}}

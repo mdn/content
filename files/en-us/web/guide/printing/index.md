@@ -9,6 +9,10 @@ tags:
   - printing
 ---
 
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
+</section>
+
 There may be times in which your website or application would like to improve the user's experience when printing content. There are a number of possible scenarios:
 
 - You wish to adjust layout to take advantage of the size and shape of the paper.
@@ -27,6 +31,21 @@ Add the following to your {{HTMLElement("head")}} tag.
 ```
 
 ## Using media queries to improve layout
+
+You can use the CSS {{cssxref("@media")}} at-rule to set a different appearance for your webpage when it is printed on paper and when it is displayed on the screen. The `print` option sets the styles that will be used when the content is printed.
+
+Add this at the end of your stylesheet. Note that specificity and precedence rules still apply:
+
+```css
+@media print {
+  /* All your print styles go here */
+  #header,
+  #footer,
+  #nav {
+    display: none !important;
+  }
+}
+```
 
 ## Detecting print requests
 

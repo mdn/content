@@ -69,7 +69,7 @@ To get access to a database, call [`open()`](/en-US/docs/Web/API/IDBFactory/open
 - {{domxref("IDBKeyRange")}}
   - : Defines a key range that can be used to retrieve data from a database in a certain range.
 - {{domxref("IDBLocaleAwareKeyRange")}} {{Non-standard_inline}}
-  - : Defines a key range that can be used to retrieve data from a database in a certain range, sorted according to the rules of the locale specified for a certain index (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).). This interface isn't part of the 2.0 specification.
+  - : Defines a key range that can be used to retrieve data from a database in a certain range, sorted according to the rules of the locale specified for a certain index (see the [`options`](/en-US/docs/Web/API/IDBObjectStore/createIndex#options) parameter to [`IDBObjectStore.createIndex()`](/en-US/docs/Web/API/IDBObjectStore/createIndex).) This interface isn't part of the 2.0 specification.
 
 ### Custom event interfaces
 

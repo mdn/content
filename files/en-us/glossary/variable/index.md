@@ -1,6 +1,7 @@
 ---
 title: Variable
 slug: Glossary/Variable
+page-type: glossary-definition
 tags:
   - CodingScripting
   - JavaScript

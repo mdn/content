@@ -1,6 +1,7 @@
 ---
 title: Your second extension
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
+page-type: guide
 tags:
   - WebExtensions
 ---
@@ -27,7 +28,7 @@ To implement this, we will:
 
 You could visualize the overall structure of the extension like this:
 
-![](untitled-1.png)
+![The manifest.json file includes icons, browser actions, including popups, and web accessible resources. The choose beast javascript popup resource calls in the beastify script.](untitled-1.png)
 
 It's a simple extension, but shows many of the basic concepts of the WebExtensions API:
 
@@ -276,7 +277,7 @@ function listenForClicks() {
      * Get the active tab,
      * then call "beastify()" or "reset()" as appropriate.
      */
-    if (e.target.type = "reset") {
+    if (e.target.type === "reset") {
       browser.tabs
         .query({ active: true, currentWindow: true })
         .then(reset)
@@ -317,8 +318,8 @@ A common reason the `browser.tabs.executeScript()` call might fail is that you c
 
 If executing the content script is successful, we call `listenForClicks()`. This listens for clicks on the popup.
 
-- If the click was on a button with `class="beast"`, then we call `beastify()`.
 - If the click was on a button with `class="reset"`, then we call `reset()`.
+- If the click was on any other button (i.e. the beast buttons), then we call `beastify()`.
 
 The `beastify()` function does three things:
 

@@ -81,7 +81,7 @@
       "impl": []
     },
     "AudioDecoder": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "AudioDestinationNode": {
@@ -89,7 +89,7 @@
       "impl": []
     },
     "AudioEncoder": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "AudioListener": {
@@ -940,10 +940,6 @@
       "inh": "",
       "impl": []
     },
-    "EXT_clip_cull_distance": {
-      "inh": "",
-      "impl": []
-    },
     "EXT_color_buffer_float": {
       "inh": "",
       "impl": []
@@ -1270,6 +1266,10 @@
     },
     "GPUOutOfMemoryError": {
       "inh": "GPUError",
+      "impl": []
+    },
+    "GPUPipelineError": {
+      "inh": "DOMException",
       "impl": []
     },
     "GPUPipelineLayout": {
@@ -1736,10 +1736,6 @@
       "inh": "Credential",
       "impl": []
     },
-    "IdentityProvider": {
-      "inh": "",
-      "impl": []
-    },
     "IdleDeadline": {
       "inh": "",
       "impl": []
@@ -1801,10 +1797,6 @@
       "impl": []
     },
     "Instance": {
-      "inh": "",
-      "impl": []
-    },
-    "InteractionCounts": {
       "inh": "",
       "impl": []
     },
@@ -2080,6 +2072,10 @@
       "inh": "",
       "impl": []
     },
+    "MLActivation": {
+      "inh": "",
+      "impl": []
+    },
     "MLCommandEncoder": {
       "inh": "",
       "impl": []
@@ -2097,10 +2093,6 @@
       "impl": []
     },
     "MLOperand": {
-      "inh": "",
-      "impl": []
-    },
-    "MLOperator": {
       "inh": "",
       "impl": []
     },
@@ -2313,10 +2305,6 @@
       "impl": []
     },
     "Path2D": {
-      "inh": "",
-      "impl": []
-    },
-    "PaymentInstruments": {
       "inh": "",
       "impl": []
     },
@@ -3444,6 +3432,10 @@
       "inh": "",
       "impl": []
     },
+    "ToggleEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "Touch": {
       "inh": "",
       "impl": []
@@ -3589,11 +3581,11 @@
       "impl": []
     },
     "VideoDecoder": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "VideoEncoder": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "VideoFrame": {
@@ -3656,6 +3648,10 @@
       "inh": "",
       "impl": []
     },
+    "WEBGL_clip_cull_distance": {
+      "inh": "",
+      "impl": []
+    },
     "WEBGL_color_buffer_float": {
       "inh": "",
       "impl": []
@@ -3713,6 +3709,10 @@
       "impl": []
     },
     "WEBGL_multi_draw_instanced_base_vertex_base_instance": {
+      "inh": "",
+      "impl": []
+    },
+    "WEBGL_provoking_vertex": {
       "inh": "",
       "impl": []
     },

@@ -1,6 +1,7 @@
 ---
 title: '<dd>: The Description Details element'
 slug: Web/HTML/Element/dd
+page-type: html-element
 tags:
   - Definition
   - Description Details
@@ -20,6 +21,19 @@ browser-compat: html.elements.dd
 The **`<dd>`** [HTML](/en-US/docs/Web/HTML) element provides the description, definition, or value for the preceding term ({{HTMLElement("dt")}}) in a description list ({{HTMLElement("dl")}}).
 
 {{EmbedInteractiveExample("pages/tabbed/dd.html", "tabbed-standard")}}
+
+## Attributes
+
+This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+- {{htmlattrdef("nowrap")}} {{Non-standard_inline}} {{Deprecated_Inline}}
+  - : If the value of this attribute is set to `yes`, the definition text will not wrap. The default value is `no`.
+
+## Examples
+
+For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web/HTML/Element/dl#examples).
+
+## Technical summary
 
 <table class="properties">
   <tbody>
@@ -60,7 +74,7 @@ The **`<dd>`** [HTML](/en-US/docs/Web/HTML) element provides the description, de
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td>{{ARIARole("definition")}}</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role"><code>definition</code></a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
@@ -72,17 +86,6 @@ The **`<dd>`** [HTML](/en-US/docs/Web/HTML) element provides the description, de
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-- {{htmlattrdef("nowrap")}} {{Non-standard_inline}} {{Deprecated_Inline}}
-  - : If the value of this attribute is set to `yes`, the definition text will not wrap. The default value is `no`.
-
-## Examples
-
-For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web/HTML/Element/dl#examples).
 
 ## Specifications
 

@@ -2,11 +2,6 @@
 title: CSSStyleDeclaration.length
 slug: Web/API/CSSStyleDeclaration/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - Property
-  - Reference
 browser-compat: api.CSSStyleDeclaration.length
 ---
 
@@ -33,7 +28,7 @@ The following gets the number of explicitly set styles on the following HTML ele
 JavaScript code:
 
 ```js
-const myDiv = document.getElementById('div1');
+const myDiv = document.getElementById("div1");
 const divStyle = myDiv.style;
 const len = divStyle.length; // 6
 ```

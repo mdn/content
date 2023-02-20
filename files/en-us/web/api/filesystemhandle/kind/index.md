@@ -13,7 +13,7 @@ tags:
 browser-compat: api.FileSystemHandle.kind
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`kind`** read-only property of the
 {{domxref("FileSystemHandle")}} interface returns the type of entry. This is

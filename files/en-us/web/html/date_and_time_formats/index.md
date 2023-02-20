@@ -1,6 +1,7 @@
 ---
 title: Date and time formats used in HTML
 slug: Web/HTML/Date_and_time_formats
+page-type: guide
 tags:
   - Date
   - Element

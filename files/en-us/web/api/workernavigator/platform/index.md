@@ -2,14 +2,8 @@
 title: WorkerNavigator.platform
 slug: Web/API/WorkerNavigator/platform
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - WorkerNavigator
-  - Property
-  - Reference
-  - platform
+status:
+  - deprecated
 browser-compat: api.WorkerNavigator.platform
 ---
 
@@ -26,7 +20,7 @@ an empty string if the browser declines to (or is unable to) identify the platfo
 `platform` is a string that must be an empty string or a string representing
 the platform on which the browser is executing.
 
-For example: "`MacIntel`", "`Win32`", "`FreeBSD i386`", "`WebTV OS`"
+For example: "`MacIntel`", "`Win32`", "`FreeBSD i386`", "`WebTV OS`".
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: Instance
 slug: Glossary/Instance
+page-type: glossary-definition
 tags:
   - Beginner
   - CodingScripting

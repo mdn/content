@@ -1,6 +1,7 @@
 ---
 title: OpenSSL
 slug: Glossary/OpenSSL
+page-type: glossary-definition
 tags:
   - Security
 ---

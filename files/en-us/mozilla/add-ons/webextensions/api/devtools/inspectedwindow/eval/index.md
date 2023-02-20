@@ -1,6 +1,7 @@
 ---
 title: devtools.inspectedWindow.eval()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons
@@ -54,7 +55,7 @@ let evaluating = browser.devtools.inspectedWindow.eval(
 ### Parameters
 
 - `expression`
-  - : `string`. The JavaScript expression to evaluate. The string must evaluate to a object that can be represented as JSON, or an exception will be thrown. For example, `expression` must not evaluate to a function.
+  - : `string`. The JavaScript expression to evaluate. The string must evaluate to an object that can be represented as JSON, or an exception will be thrown. For example, `expression` must not evaluate to a function.
 - `options` {{optional_inline}}
 
   - : `object`. Options for the function (Note that Firefox does not yet support this options), as follows:
@@ -175,8 +176,6 @@ inspectButton.addEventListener("click", () => {
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv3/devtools/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

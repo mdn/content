@@ -1,6 +1,7 @@
 ---
 title: '<blink>: The Blinking Text element'
 slug: Web/HTML/Element/blink
+page-type: html-element
 tags:
   - Blink
   - Element

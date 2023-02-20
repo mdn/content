@@ -1,6 +1,7 @@
 ---
 title: Math.round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/round
+page-type: javascript-static-method
 tags:
   - JavaScript
   - Math
@@ -12,7 +13,7 @@ browser-compat: javascript.builtins.Math.round
 
 {{JSRef}}
 
-The **`Math.round()`** function returns the value of a number rounded to the nearest integer.
+The **`Math.round()`** static method returns the value of a number rounded to the nearest integer.
 
 {{EmbedInteractiveExample("pages/js/math-round.html")}}
 

@@ -19,7 +19,7 @@ browser-compat: api.IDBRequest.source
 The **`source`** read-only property of the
 {{domxref("IDBRequest")}} interface returns the source of the request, such as an
 Index or an object store. If no source exists (such as when calling
-{{domxref("indexedDB.open")}}), it returns null.
+{{domxref("IDBFactory.open")}}), it returns null.
 
 {{AvailableInWorkers}}
 

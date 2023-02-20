@@ -1,6 +1,7 @@
 ---
 title: action
 slug: Mozilla/Add-ons/WebExtensions/API/action
+page-type: webextension-api
 tags:
   - API
   - Add-ons
@@ -84,8 +85,6 @@ With the `action` API, you can:
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -1,6 +1,7 @@
 ---
 title: '<li>: The List Item element'
 slug: Web/HTML/Element/li
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -14,72 +15,6 @@ browser-compat: html.elements.li
 The **`<li>`** [HTML](/en-US/docs/Web/HTML) element is used to represent an item in a list. It must be contained in a parent element: an ordered list ({{HTMLElement("ol")}}), an unordered list ({{HTMLElement("ul")}}), or a menu ({{HTMLElement("menu")}}). In menus and unordered lists, list items are usually displayed using bullet points. In ordered lists, they are usually displayed with an ascending counter on the left, such as a number or letter.
 
 {{EmbedInteractiveExample("pages/tabbed/li.html", "tabbed-shorter")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>None.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>
-        The end tag can be omitted if the list item is immediately followed by
-        another {{HTMLElement("li")}} element, or if there is no more
-        content in its parent element.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        An {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, or
-        {{HTMLElement("menu")}} element. Though not a conforming usage,
-        the obsolete {{HTMLElement("dir")}} can also be a parent.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Listitem_role"
-            >listitem</a
-          ></code
-        >
-        when child of an
-        <code><a href="/en-US/docs/Web/HTML/Element/ol">ol</a></code
-        >, <code><a href="/en-US/docs/Web/HTML/Element/ul">ul</a></code> or
-        <code><a href="/en-US/docs/Web/HTML/Element/menu">menu</a></code>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>
-        {{ARIARole("menuitem")}},
-        {{ARIARole("menuitemcheckbox")}},
-        {{ARIARole("menuitemradio")}}, {{ARIARole("option")}},
-        {{ARIARole("none")}}, {{ARIARole("presentation")}},
-        {{ARIARole("radio")}}, {{ARIARole("separator")}},
-        {{ARIARole("tab")}}, {{ARIARole("treeitem")}}
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLLIElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Attributes
 
@@ -140,6 +75,74 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
 ```
 
 {{EmbedLiveSample("Unordered_list")}}
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>
+        The end tag can be omitted if the list item is immediately followed by
+        another {{HTMLElement("li")}} element, or if there is no more
+        content in its parent element.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        An {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, or
+        {{HTMLElement("menu")}} element. Though not a conforming usage,
+        the obsolete {{HTMLElement("dir")}} can also be a parent.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Listitem_role"
+            >listitem</a
+          ></code
+        >
+        when child of an
+        <code><a href="/en-US/docs/Web/HTML/Element/ol">ol</a></code
+        >, <code><a href="/en-US/docs/Web/HTML/Element/ul">ul</a></code> or
+        <code><a href="/en-US/docs/Web/HTML/Element/menu">menu</a></code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role"><code>separator</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLLIElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/find
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript

@@ -1,6 +1,7 @@
 ---
 title: Function
 slug: Glossary/Function
+page-type: glossary-definition
 tags:
   - CodingScripting
   - IIFE

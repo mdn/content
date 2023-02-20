@@ -1,6 +1,7 @@
 ---
 title: Protocol
 slug: Glossary/Protocol
+page-type: glossary-definition
 tags:
   - Infrastructure
   - Protocols

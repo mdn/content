@@ -34,7 +34,7 @@ onnavigate = (event) => {};
 
 ## Event type
 
-An {{domxref("NavigateEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("NavigateEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("NavigateEvent")}}
 

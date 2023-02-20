@@ -1,6 +1,7 @@
 ---
 title: SCM
 slug: Glossary/SCM
+page-type: glossary-definition
 tags:
   - CodingScripting
   - SCM

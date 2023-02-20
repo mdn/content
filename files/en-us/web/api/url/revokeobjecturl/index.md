@@ -2,12 +2,6 @@
 title: URL.revokeObjectURL()
 slug: Web/API/URL/revokeObjectURL
 page-type: web-api-static-method
-tags:
-  - API
-  - Method
-  - URL
-  - URL API
-  - revokeObjectURL
 browser-compat: api.URL.revokeObjectURL
 ---
 
@@ -36,7 +30,7 @@ revokeObjectURL(objectURL)
 ### Parameters
 
 - `objectURL`
-  - : A string representing a object URL that was previously created by
+  - : A string representing an object URL that was previously created by
     calling {{domxref("URL.createObjectURL", "createObjectURL()") }}.
 
 ### Return value

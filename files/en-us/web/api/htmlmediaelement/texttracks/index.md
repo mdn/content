@@ -38,7 +38,7 @@ the media element, the list's contents change dynamically. Once you have a refer
 the list, you can monitor it for changes to detect when new text tracks are added or
 existing ones removed.
 
-See {{SectionOnPage("/en-US/docs/Web/API/TextTrackList", "Event handlers")}} to learn
+See [TextTrackList events](/en-US/docs/Web/API/TextTrackList#events) to learn
 more about watching for changes to a media element's track list.
 
 ## Value

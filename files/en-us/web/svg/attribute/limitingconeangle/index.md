@@ -1,6 +1,7 @@
 ---
 title: limitingConeAngle
 slug: Web/SVG/Attribute/limitingConeAngle
+page-type: svg-attribute
 tags:
   - Filters
   - SVG

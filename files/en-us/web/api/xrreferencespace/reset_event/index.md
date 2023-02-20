@@ -2,22 +2,6 @@
 title: 'XRReferenceSpace: reset event'
 slug: Web/API/XRReferenceSpace/reset_event
 page-type: web-api-event
-tags:
-  - API
-  - AR
-  - Event
-  - Graphics
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRReferenceSpace
-  - augmented
-  - reset
 browser-compat: api.XRReferenceSpace.reset_event
 ---
 

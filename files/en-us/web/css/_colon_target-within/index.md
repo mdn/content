@@ -18,8 +18,10 @@ div:target-within {
 
 ## Syntax
 
-```
-:target-within
+```css
+:target-within {
+  /* ... */
+}
 ```
 
 ## Examples

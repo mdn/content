@@ -7,7 +7,6 @@ tags:
   - Audio
   - Media
   - Media Capture
-  - Media Recorder API
   - MediaRecorder
   - Method
   - Reference
@@ -56,7 +55,11 @@ const types = [
 ];
 
 for (const type of types) {
-  console.log(`Is ${type} supported? ${MediaRecorder.isTypeSupported(type) ? "Maybe!" : "Nope :("}`);
+  console.log(
+    `Is ${type} supported? ${
+      MediaRecorder.isTypeSupported(type) ? "Maybe!" : "Nope :("
+    }`
+  );
 }
 ```
 

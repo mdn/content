@@ -1,6 +1,7 @@
 ---
 title: NNTP
 slug: Glossary/NNTP
+page-type: glossary-definition
 tags:
   - Infrastructure
 ---

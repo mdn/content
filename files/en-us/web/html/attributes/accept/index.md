@@ -1,6 +1,7 @@
 ---
 title: 'HTML attribute: accept'
 slug: Web/HTML/Attributes/accept
+page-type: html-attribute
 tags:
   - Accept
   - Attribute

@@ -1,6 +1,7 @@
 ---
 title: Int16Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array
+page-type: javascript-constructor
 tags:
   - Constructor
   - JavaScript

@@ -1,6 +1,7 @@
 ---
 title: P2P
 slug: Glossary/P2P
+page-type: glossary-definition
 tags:
   - Infrastructure
   - Networking

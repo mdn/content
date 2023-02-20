@@ -1,6 +1,7 @@
 ---
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
+page-type: javascript-class
 tags:
   - Array
   - Class
@@ -410,7 +411,7 @@ fruits[1]; // Banana
 // less than the length of the array.
 fruits[fruits.length - 1]; // Banana
 
-// Using a index number larger than the array's length
+// Using an index number larger than the array's length
 // returns 'undefined'.
 fruits[99]; // undefined
 ```
@@ -660,7 +661,7 @@ All built-in array-copy operations ([spread syntax](/en-US/docs/Web/JavaScript/R
 const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
 ```
 
-You can also create deep copies using the [`structuredClone()`](/en-US/docs/Web/API/structuredClone) method, which has the advantage of allowing {{Glossary("transferable objects")}} in the source to be _transferred_ to the new copy, rather than just cloned.
+You can also create deep copies using the [`structuredClone()`](/en-US/docs/Web/API/structuredClone) method, which has the advantage of allowing [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) in the source to be _transferred_ to the new copy, rather than just cloned.
 
 Finally, it's important to understand that assigning an existing array to a new variable doesn't create a copy of either the array or its elements. Instead the new variable is just a reference, or alias, to the original array; that is, the original array's name and the new variable name are just two names for the exact same object (and so will always evaluate as [strictly equivalent](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using)). Therefore, if you make any changes at all either to the value of the original array or to the value of the new variable, the other will change, too:
 
@@ -695,7 +696,7 @@ const inventory = [
 
 To use `group()`, you supply a callback function that is called with the current element, and optionally the current index and array, and returns a string indicating the group of the element.
 
-The code below uses a arrow function to return the `type` of each array element (this uses [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_properties_from_objects_passed_as_a_function_parameter) to unpack the `type` element from the passed object).
+The code below uses an arrow function to return the `type` of each array element (this uses [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_properties_from_objects_passed_as_a_function_parameter) to unpack the `type` element from the passed object).
 The result is an object that has properties named after the unique strings returned by the callback.
 Each property is assigned an array containing the elements in the group.
 

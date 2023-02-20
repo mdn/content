@@ -1,6 +1,7 @@
 ---
 title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
+page-type: javascript-class
 tags:
   - Class
   - ECMAScript 2015
@@ -11,7 +12,7 @@ browser-compat: javascript.builtins.Proxy
 
 {{JSRef}}
 
-The `Proxy` object enables you to create a proxy for another object, which can intercept and redefine fundamental operations for that object.
+The **`Proxy`** object enables you to create a proxy for another object, which can intercept and redefine fundamental operations for that object.
 
 ## Description
 
@@ -327,7 +328,7 @@ const view = new Proxy(
       // Indicate success
       return true;
     },
-  }
+  },
 );
 
 const item1 = document.getElementById("item-1");
@@ -386,7 +387,7 @@ const products = new Proxy(
       // Indicate success
       return true;
     },
-  }
+  },
 );
 
 console.log(products.browsers);
@@ -461,7 +462,7 @@ const products = new Proxy(
 
       return undefined;
     },
-  }
+  },
 );
 
 console.log(products[0]); // { name: 'Firefox', type: 'browser' }

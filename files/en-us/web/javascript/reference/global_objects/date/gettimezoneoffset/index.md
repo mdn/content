@@ -1,6 +1,7 @@
 ---
 title: Date.prototype.getTimezoneOffset()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
+page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript

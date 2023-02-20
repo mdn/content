@@ -1,6 +1,7 @@
 ---
 title: Normative
 slug: Glossary/Normative
+page-type: glossary-definition
 tags:
   - Infrastructure
   - Specification

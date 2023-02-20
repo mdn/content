@@ -42,7 +42,7 @@ browser-compat: css.properties.NameOfTheProperty
 >   - : The `slug` value is the end of the URL path after `https://developer.mozilla.org/en-US/docs/`. This will be formatted like `Web/CSS/NameOfTheProperty`.
 >     For example, the [`background-color`](/en-US/docs/Web/CSS/background-color) property slug is `Web/CSS/background-color`.
 > - **page-type**
->   - : The `page-type` key for CSS properties is `css-shorthand-property` for shorthand properties; otherwise it is `css-property`. For example, the `page-type` value for the [animation](/en-US/docs/Web/CSS/animation) property is `css-shorthand-property` but for the the [animation-delay](/en-US/docs/Web/CSS/animation-delay) property, it is `css-property`.
+>   - : The `page-type` key for CSS properties is `css-shorthand-property` for shorthand properties; otherwise it is `css-property`. For example, the `page-type` value for the [animation](/en-US/docs/Web/CSS/animation) property is `css-shorthand-property` but for the [animation-delay](/en-US/docs/Web/CSS/animation-delay) property, it is `css-property`.
 > - **tags**
 >
 >   - : Always include the following tags: **CSS**, **Reference**, **CSS Property**, _NameOfTheProperty_ (e.g., **background-color**).

@@ -89,4 +89,4 @@ button.onclick = () => {
 ## See also
 
 - {{domxref("HTMLVideoElement")}}
-- {{domxref("Picture-in-Picture_API")}}
+- {{domxref("Picture-in-Picture_API", "Picture-in-Picture API")}}

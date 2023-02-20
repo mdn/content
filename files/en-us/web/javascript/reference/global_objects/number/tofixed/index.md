@@ -1,6 +1,7 @@
 ---
 title: Number.prototype.toFixed()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method

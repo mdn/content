@@ -2,17 +2,6 @@
 title: 'ServiceWorkerGlobalScope: push event'
 slug: Web/API/ServiceWorkerGlobalScope/push_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Notifications
-  - Push
-  - Push API
-  - PushEvent
-  - Reference
-  - Service Workers
-  - ServiceWorkerGlobalScope
-  - messaging
 browser-compat: api.ServiceWorkerGlobalScope.push_event
 ---
 

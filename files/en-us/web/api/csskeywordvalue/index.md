@@ -2,14 +2,8 @@
 title: CSSKeywordValue
 slug: Web/API/CSSKeywordValue
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSKeywordValue
-  - Experimental
-  - Houdini
-  - Interface
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSKeywordValue
 ---
 
@@ -53,10 +47,10 @@ The following example resets the CSS {{cssxref('display')}} property to its defa
 ```
 
 ```js
-let myElement = document.getElementById('myElement').attributeStyleMap;
-    myElement.set('display', new CSSKeywordValue('initial'));
+let myElement = document.getElementById("myElement").attributeStyleMap;
+myElement.set("display", new CSSKeywordValue("initial"));
 
-console.log(myElement.get('display').value);  // 'initial'
+console.log(myElement.get("display").value); // 'initial'
 ```
 
 {{EmbedLiveSample("Examples", 120, 120)}}

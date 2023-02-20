@@ -1,6 +1,7 @@
 ---
 title: Attribute
 slug: Glossary/Attribute
+page-type: glossary-definition
 tags:
   - CodingScripting
   - HTML

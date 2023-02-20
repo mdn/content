@@ -183,12 +183,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
         <tr style="cursor: no-drop">
           <td><code>no-drop</code></td>
           <td>
-            <img
-              alt="pointer icon and a not allowed icon"
-              class="lwrap"
-              src="no-drop.gif"
-              style="float: left"
-            />
+            <img src="no-drop.gif" alt="pointer icon and a not allowed icon" />
           </td>
           <td>
             An item may not be dropped at the current location.<br />{{bug("275173")}}:
@@ -231,7 +226,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
         </tr>
         <tr style="cursor: row-resize">
           <td><code>row-resize</code></td>
-          <td><img src="row-resize.gif" "alt="Two narrow parallel horizontal lines with a small arrow pointing up and another pointing down" /></td>
+          <td><img src="row-resize.gif" alt="two narrow parallel horizontal lines with a small arrow pointing up and another pointing down" /></td>
           <td>
             The item/row can be resized vertically.
             Often rendered as arrows pointing up and down with a horizontal bar separating them.

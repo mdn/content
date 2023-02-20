@@ -1,6 +1,7 @@
 ---
 title: Static typing
 slug: Glossary/Static_typing
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Type

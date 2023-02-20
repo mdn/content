@@ -47,7 +47,7 @@ Lastly, an application may want to style the drop target element to visually ind
 }
 ```
 
-> **Note:** `dragstart` and `dragend` events are not fired when dragging a file into the browser from the OS.
+> **Note:** {{domxref("HTMLElement/dragstart_event", "dragstart")}} and {{domxref("HTMLElement/dragend_event", "dragend")}} events are not fired when dragging a file into the browser from the OS. To detect when OS files are dragged into the browser, use {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {{domxref("HTMLElement/dragleave_event", "dragleave")}}.
 
 ## Process the drop
 

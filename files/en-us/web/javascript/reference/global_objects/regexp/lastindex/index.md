@@ -1,6 +1,7 @@
 ---
-title: 'RegExp: lastIndex'
+title: "RegExp: lastIndex"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
+page-type: javascript-instance-data-property
 tags:
   - JavaScript
   - Property
@@ -12,11 +13,15 @@ browser-compat: javascript.builtins.RegExp.lastIndex
 
 {{JSRef}}
 
-**`lastIndex`** is a read/write integer property of {{jsXref("RegExp")}} instances that specifies the index at which to start the next match.
+The **`lastIndex`** data property of a {{jsxref("RegExp")}} instance specifies the index at which to start the next match.
 
-Note that `lastIndex` is not a property of the {{jsXref("RegExp")}} prototype but is instead only exposed from {{jsXref("RegExp")}} instances.
+{{EmbedInteractiveExample("pages/js/regexp-lastindex.html")}}
 
-{{EmbedInteractiveExample("pages/js/regexp-lastindex.html")}}{{js_property_attributes(1, 0, 0)}}
+## Value
+
+A non-negative integer.
+
+{{js_property_attributes(1, 0, 0)}}
 
 ## Description
 

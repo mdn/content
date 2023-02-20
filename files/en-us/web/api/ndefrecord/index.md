@@ -10,7 +10,7 @@ tags:
 browser-compat: api.NDEFRecord
 ---
 
-{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 The **`NDEFRecord`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_API) provides data that can be read from, or written to, compatible NFC devices, e.g. NFC tags supporting NDEF.
 

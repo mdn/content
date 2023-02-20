@@ -1,6 +1,7 @@
 ---
 title: Intl.Locale.prototype.region
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/region
+page-type: javascript-instance-accessor-property
 tags:
   - Internationalization
   - Intl

@@ -1,6 +1,7 @@
 ---
 title: Intl.ListFormat() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat
+page-type: javascript-constructor
 tags:
   - Constructor
   - Internationalization
@@ -72,8 +73,8 @@ const list = ["Motorcycle", "Bus", "Car"];
 
 console.log(
   new Intl.ListFormat("en-GB", { style: "long", type: "conjunction" }).format(
-    list
-  )
+    list,
+  ),
 );
 // Motorcycle, Bus and Car
 
@@ -85,43 +86,43 @@ console.log(new Intl.ListFormat("en-US", { style: "long" }).format(list));
 
 console.log(
   new Intl.ListFormat("en-GB", { style: "short", type: "conjunction" }).format(
-    list
-  )
+    list,
+  ),
 );
 // Motorcycle, Bus and Car
 
 console.log(
   new Intl.ListFormat("en-US", { style: "short", type: "conjunction" }).format(
-    list
-  )
+    list,
+  ),
 );
 // Motorcycle, Bus, & Car
 
 console.log(
   new Intl.ListFormat("en-GB", { style: "narrow", type: "conjunction" }).format(
-    list
-  )
+    list,
+  ),
 );
 // Motorcycle, Bus, Car
 
 console.log(
   new Intl.ListFormat("en-GB", { style: "long", type: "disjunction" }).format(
-    list
-  )
+    list,
+  ),
 );
 // Motorcycle, Bus or Car
 
 console.log(
   new Intl.ListFormat("en-GB", { style: "short", type: "disjunction" }).format(
-    list
-  )
+    list,
+  ),
 );
 // Motorcycle, Bus or Car
 
 console.log(
   new Intl.ListFormat("en-GB", { style: "narrow", type: "disjunction" }).format(
-    list
-  )
+    list,
+  ),
 );
 // Motorcycle, Bus or Car
 
@@ -129,7 +130,7 @@ console.log(new Intl.ListFormat("en-US", { style: "narrow" }).format(list));
 // Motorcycle, Bus, Car
 
 console.log(
-  new Intl.ListFormat("en-GB", { style: "narrow", type: "unit" }).format(list)
+  new Intl.ListFormat("en-GB", { style: "narrow", type: "unit" }).format(list),
 );
 // Motorcycle Bus Car
 
@@ -138,7 +139,7 @@ console.log(
     "30 degrees",
     "15 minutes",
     "50 seconds",
-  ])
+  ]),
 );
 // 30 degrees, 15 minutes, and 50 seconds
 
@@ -147,7 +148,7 @@ console.log(
     "30 degrees",
     "15 minutes",
     "50 seconds",
-  ])
+  ]),
 );
 // 30 degrees, 15 minutes, 50 seconds
 
@@ -156,7 +157,7 @@ console.log(
     "30°",
     "15′",
     "50″",
-  ])
+  ]),
 );
 // 30° 15′ 50″
 ```

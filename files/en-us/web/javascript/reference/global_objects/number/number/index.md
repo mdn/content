@@ -1,6 +1,7 @@
 ---
 title: Number() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Number/Number
+page-type: javascript-constructor
 tags:
   - Constructor
   - JavaScript

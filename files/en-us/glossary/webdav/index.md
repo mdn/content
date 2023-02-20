@@ -1,6 +1,7 @@
 ---
 title: WebDAV
 slug: Glossary/WebDAV
+page-type: glossary-definition
 tags:
   - Infrastructure
 ---

@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method

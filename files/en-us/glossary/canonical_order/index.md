@@ -1,6 +1,7 @@
 ---
 title: Canonical order
 slug: Glossary/Canonical_order
+page-type: glossary-definition
 tags:
   - Canonical order
   - CodingScripting

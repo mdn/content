@@ -1,6 +1,7 @@
 ---
 title: Float64Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Float64Array/Float64Array
+page-type: javascript-constructor
 tags:
   - Constructor
   - JavaScript

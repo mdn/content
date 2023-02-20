@@ -203,14 +203,18 @@ A listener for the {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {
 
 If you want to allow a drop, you must prevent the default behavior by cancelling both the `dragenter` and `dragover` events. You can do this by calling their {{domxref("Event.preventDefault","preventDefault()")}} methods:
 
-```js
-const draggableElement = document.querySelector('p[draggable="true"]');
+```html
+<div id="drop-target">You can drag and then drop a draggable item here</div>
+```
 
-draggableElement.addEventListener("dragenter", (event) => {
+```js
+const dropElement = document.getElementById("drop-target");
+
+dropElement.addEventListener("dragenter", (event) => {
   event.preventDefault();
 });
 
-draggableElement.addEventListener("dragover", (event) => {
+dropElement.addEventListener("dragover", (event) => {
   event.preventDefault();
 });
 ```

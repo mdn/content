@@ -1,6 +1,7 @@
 ---
 title: UDP (User Datagram Protocol)
 slug: Glossary/UDP
+page-type: glossary-definition
 tags:
   - Infrastructure
   - Networking

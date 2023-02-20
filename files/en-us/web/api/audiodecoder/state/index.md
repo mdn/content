@@ -2,13 +2,8 @@
 title: AudioDecoder.state
 slug: Web/API/AudioDecoder/state
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - state
-  - AudioDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioDecoder.state
 ---
 

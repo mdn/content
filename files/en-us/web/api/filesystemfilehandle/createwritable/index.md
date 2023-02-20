@@ -13,7 +13,7 @@ tags:
 browser-compat: api.FileSystemFileHandle.createWritable
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`createWritable()`** method of the
 {{domxref("FileSystemFileHandle")}} interface creates

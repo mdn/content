@@ -1,6 +1,7 @@
 ---
 title: x-ms-acceleratorkey
 slug: Web/HTML/Global_attributes/x-ms-acceleratorkey
+page-type: html-attribute
 tags:
   - Attribute
   - HTML

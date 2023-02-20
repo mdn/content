@@ -1,6 +1,7 @@
 ---
 title: Quaternion
 slug: Glossary/Quaternion
+page-type: glossary-definition
 tags:
   - Definition
   - Orientation

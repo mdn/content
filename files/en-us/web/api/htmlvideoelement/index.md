@@ -14,7 +14,7 @@ browser-compat: api.HTMLVideoElement
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLVideoElement`** interface provides special properties and methods for manipulating video objects. It also inherits properties and methods of {{domxref("HTMLMediaElement")}} and {{domxref("HTMLElement")}}.
+Implemented by the {{HTMLElement("video")}} element, the **`HTMLVideoElement`** interface provides special properties and methods for manipulating video objects. It also inherits properties and methods of {{domxref("HTMLMediaElement")}} and {{domxref("HTMLElement")}}.
 
 The list of [supported media formats](/en-US/docs/Web/Media/Formats) varies from one browser to the other. You should either provide your video in a single format that all the relevant browsers supports, or provide multiple video sources in enough different formats that all the browsers you need to support are covered.
 
@@ -53,21 +53,6 @@ _Inherits properties from its ancestor interfaces, {{domxref("HTMLMediaElement")
   - : Returns an `double` with the time which the last painted video frame was late by, in seconds.
 - {{domxref("HTMLVideoElement.mozHasAudio")}} {{Non-standard_Inline}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns a boolean indicating if there is some audio associated with the video.
-
-### Microsoft Extensions
-
-- {{DOMxRef("HTMLVideoElement.msFrameStep()")}} {{Non-standard_Inline}}
-  - : Steps the video by one frame forward or one frame backward.
-- {{DOMxRef("HTMLVideoElement.msHorizontalMirror")}} {{Non-standard_Inline}}
-  - : Gets or sets whether a video element is flipped horizontally in the display.
-- {{DOMxRef("HTMLVideoElement.msInsertVideoEffect()")}} {{Non-standard_Inline}}
-  - : Inserts the specified video effect into the media pipeline.
-- {{DOMxRef("HTMLVideoElement.msIsLayoutOptimalForPlayback")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
-  - : Indicates whether the video can be rendered more efficiently.
-- {{DOMxRef("HTMLVideoElement.msIsStereo3D")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
-  - : Determines whether the system considers the loaded video source to be stereo 3-D or not. Value set to true indicates source is stereo 3D.
-- {{DOMxRef("HTMLVideoElement.msZoom")}} {{Non-standard_Inline}}
-  - : Controls whether the video frame is trimmed to fit the video display.
 
 ## Instance methods
 

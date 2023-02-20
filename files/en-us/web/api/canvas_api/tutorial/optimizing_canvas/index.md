@@ -2,15 +2,9 @@
 title: Optimizing canvas
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 page-type: guide
-tags:
-  - Advanced
-  - Canvas
-  - Graphics
-  - HTML
-  - Tutorial
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}
 
 The {{HTMLElement("canvas")}} element is one of the most widely used tools for rendering 2D graphics on the web. However, when websites and apps push the Canvas API to its limits, performance begins to suffer. This article provides suggestions for optimizing your use of the canvas element to ensure that your graphics perform well.
 
@@ -23,11 +17,11 @@ The following is a collection of tips to improve canvas performance.
 If you find yourself repeating some of the same drawing operations on each animation frame, consider offloading them to an offscreen canvas. You can then render the offscreen image to your primary canvas as often as needed, without unnecessarily repeating the steps needed to generate it in the first place.
 
 ```js
-myCanvas.offscreenCanvas = document.createElement('canvas');
+myCanvas.offscreenCanvas = document.createElement("canvas");
 myCanvas.offscreenCanvas.width = myCanvas.width;
 myCanvas.offscreenCanvas.height = myCanvas.height;
 
-myCanvas.getContext('2d').drawImage(myCanvas.offScreenCanvas, 0, 0);
+myCanvas.getContext("2d").drawImage(myCanvas.offScreenCanvas, 0, 0);
 ```
 
 ### Avoid floating-point coordinates and use integers instead
@@ -95,7 +89,7 @@ const scaleY = window.innerHeight / canvas.height;
 const scaleToFit = Math.min(scaleX, scaleY);
 const scaleToCover = Math.max(scaleX, scaleY);
 
-stage.style.transformOrigin = '0 0'; //scale from top left
+stage.style.transformOrigin = "0 0"; //scale from top left
 stage.style.transform = `scale(${scaleToFit})`;
 ```
 
@@ -104,7 +98,7 @@ stage.style.transform = `scale(${scaleToFit})`;
 If your application uses canvas and doesn't need a transparent backdrop, set the `alpha` option to `false` when creating a drawing context with {{domxref("HTMLCanvasElement.getContext()")}}. This information can be used internally by the browser to optimize rendering.
 
 ```js
-const ctx = canvas.getContext('2d', { alpha: false });
+const ctx = canvas.getContext("2d", { alpha: false });
 ```
 
 ### Scaling for high resolution displays

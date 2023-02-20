@@ -1,6 +1,7 @@
 ---
 title: SyntaxError
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError
+page-type: javascript-class
 tags:
   - Class
   - JavaScript

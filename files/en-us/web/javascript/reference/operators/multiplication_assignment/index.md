@@ -1,6 +1,7 @@
 ---
 title: Multiplication assignment (*=)
 slug: Web/JavaScript/Reference/Operators/Multiplication_assignment
+page-type: javascript-operator
 tags:
   - Assignment operator
   - JavaScript
@@ -31,7 +32,7 @@ x *= y // x = x * y
 let bar = 5;
 
 bar *= 2; // 10
-bar *= 'foo'; // NaN
+bar *= "foo"; // NaN
 ```
 
 ## Specifications

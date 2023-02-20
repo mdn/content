@@ -9,7 +9,7 @@ browser-compat: api.Window.gamepaddisconnected_event
 
 The `gamepaddisconnected` event is fired when the browser detects that a gamepad has been disconnected.
 
-The event will not fire if disallowed by the document's {{httpheader('Feature-Policy/gamepad','gamepad')}} [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy).
+The event will not fire if disallowed by the document's {{httpheader('Permissions-Policy/gamepad','gamepad')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 This event is not cancelable and does not bubble.
 

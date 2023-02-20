@@ -31,7 +31,7 @@ In this example, an [munder](/en-US/docs/Web/MathML/Element/munder) element is u
 
 ## Syntax
 
-```html
+```html-nolint
 <math displaystyle="true"></math>
 <math displaystyle="false"></math>
 ```

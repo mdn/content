@@ -1,6 +1,7 @@
 ---
 title: DSL
 slug: Glossary/DSL
+page-type: glossary-disambiguation
 tags:
   - Disambiguation
 ---

@@ -1,6 +1,7 @@
 ---
 title: Scope
 slug: Glossary/Scope
+page-type: glossary-definition
 tags:
   - CodingScripting
   - JavaScript

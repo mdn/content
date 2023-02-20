@@ -69,6 +69,7 @@ _No changes._
 #### New APIs
 
 - {{domxref("FormDataEvent")}} and [event-based form participation](/en-US/docs/Web/API/FormData/Using_FormData_Objects#using_a_formdata_event) is now enabled by default ({{bug(1594708)}}).
+- The {{domxref("crossOriginIsolated")}} property is now supported ({{bug(1591892)}}).
 
 #### DOM
 
@@ -90,10 +91,6 @@ _No changes._
 #### DOM events
 
 - {{domxref("Notification.requestPermission()")}} and {{domxref("PushManager.subscribe()")}} can now only be called in response to a user gesture such as a [`click`](/en-US/docs/Web/API/Element/click_event) event ({{bug(1593644)}}).
-
-#### Service workers
-
-- The {{domxref("crossOriginIsolated")}} property is now supported ({{bug(1591892)}}).
 
 #### Media, Web Audio, and WebRTC
 

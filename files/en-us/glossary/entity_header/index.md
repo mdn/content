@@ -1,6 +1,7 @@
 ---
 title: Entity header
 slug: Glossary/Entity_header
+page-type: glossary-definition
 tags:
   - WebMechanics
 ---

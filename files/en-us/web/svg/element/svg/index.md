@@ -1,6 +1,7 @@
 ---
 title: <svg>
 slug: Web/SVG/Element/svg
+page-type: svg-element
 tags:
   - Element
   - Reference
@@ -41,7 +42,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 150, '100%')}}
+{{EmbedLiveSample('Example', 300, 100)}}
 
 ## Attributes
 

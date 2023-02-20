@@ -2,18 +2,6 @@
 title: 'RTCPeerConnection: track event'
 slug: Web/API/RTCPeerConnection/track_event
 page-type: web-api-event
-tags:
-  - DOM
-  - DOM Event Reference
-  - Event Reference
-  - Media
-  - MediaStreamTrack
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - events
-  - Event
-  - track
 browser-compat: api.RTCPeerConnection.track_event
 ---
 
@@ -21,7 +9,7 @@ browser-compat: api.RTCPeerConnection.track_event
 
 The **`track`** event is sent to the `ontrack` event handler on {{domxref("RTCPeerConnection")}}s after a new track has been added to an {{domxref("RTCRtpReceiver")}} which is part of the connection.
 
-By the time this event is delivered, the new track has been fully added to the peer connection. See {{SectionOnPage("/en-US/docs/Web/API/RTCTrackEvent", "Track event types")}} for details.
+By the time this event is delivered, the new track has been fully added to the peer connection. See [Track event types](/en-US/docs/Web/API/RTCTrackEvent#track_event_types) for details.
 
 This event is not cancellable and does not bubble.
 

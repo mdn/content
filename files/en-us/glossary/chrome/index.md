@@ -1,6 +1,7 @@
 ---
 title: Chrome
 slug: Glossary/Chrome
+page-type: glossary-definition
 tags:
   - Browser
   - Chrome

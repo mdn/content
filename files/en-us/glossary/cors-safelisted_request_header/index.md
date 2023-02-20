@@ -1,6 +1,7 @@
 ---
 title: CORS-safelisted request header
 slug: Glossary/CORS-safelisted_request_header
+page-type: glossary-definition
 tags:
   - CORS
   - Fetch

@@ -1,6 +1,7 @@
 ---
 title: Nullish value
 slug: Glossary/Nullish
+page-type: glossary-definition
 tags:
   - JavaScript
   - "Null"

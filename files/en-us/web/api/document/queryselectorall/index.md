@@ -117,47 +117,6 @@ highlightedItems.forEach((userItem) => {
 });
 ```
 
-## User notes
-
-`querySelectorAll()` behaves differently than most common JavaScript DOM
-libraries, which might lead to unexpected results.
-
-### HTML
-
-Consider this HTML, with its three nested {{HTMLElement("div")}} blocks.
-
-```html
-<div class="outer">
-  <div class="select">
-    <div class="inner"></div>
-  </div>
-</div>
-```
-
-### JavaScript
-
-```js
-const select = document.querySelector('.select');
-const inner = select.querySelectorAll('.outer .inner');
-inner.length; // 1, not 0!
-```
-
-In this example, when selecting `.outer .inner` in the context of the
-`<div>` with the class `select`, the element with the class
-`.inner` is still found, even though `.outer` is not a descendant
-of the base element on which the search is performed (`.select`). By default,
-`querySelectorAll()` only verifies that the last element in the selector is
-within the search scope.
-
-The {{cssxref(":scope")}} pseudo-class restores the expected behavior, only matching
-selectors on descendants of the base element:
-
-```js
-const select = document.querySelector('.select');
-const inner = select.querySelectorAll(':scope .outer .inner');
-inner.length; // 0
-```
-
 ## Specifications
 
 {{Specifications}}

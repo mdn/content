@@ -2,13 +2,6 @@
 title: console.clear()
 slug: Web/API/console/clear
 page-type: web-api-instance-method
-tags:
-  - API
-  - Debugging
-  - Method
-  - Reference
-  - console
-  - web console
 browser-compat: api.console.clear
 ---
 

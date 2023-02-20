@@ -1,6 +1,7 @@
 ---
 title: dir
 slug: Web/HTML/Global_attributes/dir
+page-type: html-attribute
 tags:
   - BiDi
   - Global attributes

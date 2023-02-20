@@ -1,6 +1,7 @@
 ---
 title: IRC
 slug: Glossary/IRC
+page-type: glossary-definition
 tags:
   - Infrastructure
   - Internet Relay Chat

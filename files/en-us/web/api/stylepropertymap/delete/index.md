@@ -2,15 +2,8 @@
 title: StylePropertyMap.delete()
 slug: Web/API/StylePropertyMap/delete
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - Houdini
-  - Method
-  - Reference
-  - StylePropertyMap
-  - delete()
-  - Experimental
+status:
+  - experimental
 browser-compat: api.StylePropertyMap.delete
 ---
 

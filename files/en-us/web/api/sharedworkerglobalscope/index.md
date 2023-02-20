@@ -2,12 +2,6 @@
 title: SharedWorkerGlobalScope
 slug: Web/API/SharedWorkerGlobalScope
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - SharedWorkerGlobalScope
-  - Web Workers
 browser-compat: api.SharedWorkerGlobalScope
 ---
 
@@ -23,8 +17,6 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
 
 - {{domxref("SharedWorkerGlobalScope.name")}} {{ReadOnlyInline}}
   - : The name that the {{domxref("SharedWorker")}} was (optionally) given when it was created using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. This is mainly useful for debugging purposes.
-- {{domxref("SharedWorkerGlobalScope.applicationCache")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : This property returns the {{domxref("ApplicationCache")}} object for the worker.
 
 ### Instance properties inherited from WorkerGlobalScope
 

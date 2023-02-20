@@ -1,6 +1,7 @@
 ---
 title: is
 slug: Web/HTML/Global_attributes/is
+page-type: html-attribute
 tags:
   - Global attributes
   - HTML

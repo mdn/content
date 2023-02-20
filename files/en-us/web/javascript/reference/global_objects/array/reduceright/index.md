@@ -1,6 +1,7 @@
 ---
 title: Array.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
+page-type: javascript-instance-method
 tags:
   - Array
   - ECMAScript 5

@@ -2,13 +2,6 @@
 title: XMLHttpRequestEventTarget
 slug: Web/API/XMLHttpRequestEventTarget
 page-type: web-api-interface
-tags:
-  - AJAX
-  - API
-  - NeedsBrowserCompatibility
-  - NeedsContent
-  - Reference
-  - XMLHttpRequest
 browser-compat: api.XMLHttpRequestEventTarget
 ---
 

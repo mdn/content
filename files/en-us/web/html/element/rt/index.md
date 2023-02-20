@@ -1,6 +1,7 @@
 ---
 title: '<rt>: The Ruby Text element'
 slug: Web/HTML/Element/rt
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -19,6 +20,35 @@ The **`<rt>`** [HTML](/en-US/docs/Web/HTML) element specifies the ruby text comp
 {{EmbedInteractiveExample("pages/tabbed/rt.html", "tabbed-shorter")}}
 
 See the article about the {{HTMLElement("ruby")}} element for more examples.
+
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Examples
+
+### Using ruby annotations
+
+This simple example provides Romaji transliteration for the kanji characters within the {{HTMLElement("ruby")}} element:
+
+```html
+<ruby>
+  漢 <rt>Kan</rt>
+  字 <rt>ji</rt>
+</ruby>
+```
+
+```css hidden
+body {
+  font-size: 22px;
+}
+```
+
+The output looks like this in your browser:
+
+{{EmbedLiveSample("Using_ruby_annotations", 600, 60)}}
+
+## Technical summary
 
 <table class="properties">
   <tbody>
@@ -69,33 +99,6 @@ See the article about the {{HTMLElement("ruby")}} element for more examples.
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Examples
-
-### Using ruby annotations
-
-This simple example provides Romaji transliteration for the kanji characters within the {{HTMLElement("ruby")}} element:
-
-```html
-<ruby>
-  漢 <rt>Kan</rt>
-  字 <rt>ji</rt>
-</ruby>
-```
-
-```css hidden
-body {
-  font-size: 22px;
-}
-```
-
-The output looks like this in your browser:
-
-{{EmbedLiveSample("Using_ruby_annotations", 600, 60)}}
 
 ## Specifications
 

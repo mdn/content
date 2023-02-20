@@ -1,6 +1,7 @@
 ---
 title: requiredFeatures
 slug: Web/SVG/Attribute/requiredFeatures
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

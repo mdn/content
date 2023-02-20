@@ -212,7 +212,7 @@ Also, pay attention not to use a simple regular expression on the BrowserName, u
 | ------------------------------- | ----------------------- | ------------------------------ |
 | Firefox                         | `Firefox/xyz`           | `Seamonkey/xyz`                |
 | Seamonkey                       | `Seamonkey/xyz`         |                                |
-| Chrome                          | `Chrome/xyz`            | `Chromium/xyz`                 |
+| Chrome                          | `Chrome/xyz`            | `Chromium/xyz` or `Edg.*/xyz`  |
 | Chromium                        | `Chromium/xyz`          |                                |
 | Safari                          | `Safari/xyz`            | `Chrome/xyz` or `Chromium/xyz` |
 | Opera 15+ (Blink-based engine)  | `OPR/xyz`               |                                |

@@ -44,7 +44,7 @@ _No changes._
 
 ### HTTP
 
-- Firefox now accepts non-standard [`Content-Disposition`](/en-US/docs/Web/HTTP/Headers/Content-Disposition) headers with a unquoted filename containing spaces ({{bug(1440677)}}).
+- Firefox now accepts non-standard [`Content-Disposition`](/en-US/docs/Web/HTTP/Headers/Content-Disposition) headers with an unquoted filename containing spaces ({{bug(1440677)}}).
 - Firefox now supports the HTTP [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy) header's [`web-share`](/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share) directive, which can be used to restrict access to the [Web Share API](/en-US/docs/Web/API/Navigator/share) to trusted origins. Note that Firefox does not support the Web Share API itself, at time of writing ({{bug(1653199)}}).
 
 ### APIs

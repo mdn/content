@@ -1,6 +1,7 @@
 ---
 title: Media
 slug: Glossary/Media
+page-type: glossary-disambiguation
 tags:
   - Disambiguation
 ---

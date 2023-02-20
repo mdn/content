@@ -1,6 +1,7 @@
 ---
 title: String.prototype.sup()
 slug: Web/JavaScript/Reference/Global_Objects/String/sup
+page-type: javascript-instance-method
 tags:
   - Deprecated
   - HTML wrapper methods

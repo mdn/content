@@ -1,5 +1,5 @@
 ---
-title: 'CSP: script-src-attr'
+title: "CSP: script-src-attr"
 slug: Web/HTTP/Headers/Content-Security-Policy/script-src-attr
 tags:
   - CSP

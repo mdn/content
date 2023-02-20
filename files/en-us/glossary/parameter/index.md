@@ -1,6 +1,7 @@
 ---
 title: Parameter
 slug: Glossary/Parameter
+page-type: glossary-definition
 tags:
   - CodingScripting
   - JavaScript

@@ -1,6 +1,7 @@
 ---
 title: Array.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
+page-type: javascript-instance-method
 tags:
   - Array
   - JavaScript

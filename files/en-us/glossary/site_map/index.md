@@ -1,6 +1,7 @@
 ---
 title: Site map
 slug: Glossary/Site_map
+page-type: glossary-definition
 tags:
   - Accessibility
   - Search

@@ -1,5 +1,5 @@
 ---
-title: 'CSP: style-src-elem'
+title: "CSP: style-src-elem"
 slug: Web/HTTP/Headers/Content-Security-Policy/style-src-elem
 tags:
   - CSP

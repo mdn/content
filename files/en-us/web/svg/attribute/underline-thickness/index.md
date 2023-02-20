@@ -1,6 +1,7 @@
 ---
 title: underline-thickness
 slug: Web/SVG/Attribute/underline-thickness
+page-type: svg-attribute
 tags:
   - Attribute
   - Reference

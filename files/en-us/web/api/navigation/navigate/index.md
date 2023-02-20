@@ -36,7 +36,7 @@ navigate(url, options)
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
     - `state`
-      - : Developer-defined information to be stored in the associated {{domxref("NavigationHistoryEntry")}} once the navigation is complete, retrievable via {{domxref("NavigationHistoryEntry.getState", "getState()")}}. This can be any data type. You might, for example, wish to store a page visit count for analytics purposes, or store UI state details so the view can be shown exactly as the user last left it. Any data stored in `state` must be [structured-clonable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+      - : Developer-defined information to be stored in the associated {{domxref("NavigationHistoryEntry")}} once the navigation is complete, retrievable via {{domxref("NavigationHistoryEntry.getState", "getState()")}}. This can be any data type. You might, for example, wish to store a page visit count for analytics purposes, or store UI state details so the view can be shown exactly as the user last left it. Any data stored in `state` must be [structured-cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
     - `info`
       - : Developer-defined information to be passed along to the {{domxref("Navigation/navigate_event", "navigate")}} event, made available in {{domxref("NavigateEvent.info")}}. This can be any data type. You might, for example, wish to display newly-navigated content with a different animation depending on how it was navigated to (swipe left, swipe right, or go home). A string indicating which animation to use could be passed in as `info`.
     - `history`
@@ -59,7 +59,7 @@ Either one of these promises rejects if the navigation has failed for some reaso
 ### Exceptions
 
 - `DataCloneError` {{domxref("DOMException")}}
-  - : Thrown if the `state` parameter had values included in it that are not structured-clonable.
+  - : Thrown if the `state` parameter had values included in it that are not structured-cloneable.
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if the `url` parameter is not a valid URL.
 - `NotSupportedError` {{domxref("DOMException")}}

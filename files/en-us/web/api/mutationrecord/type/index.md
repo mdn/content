@@ -40,14 +40,14 @@ You'll notice the when you add a node, the `type` is `childList`, and when you c
 
 <button id="reset">Reset</button>
 
-<pre id= "log">Mutation type:</pre>
-<div id= "target"></div>
+<pre id="log">Mutation type:</pre>
+<div id="target"><p>Node #0</p></div>
 ```
 
 ```css hidden
 #log {
   border: 1px dotted black;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .blue {
@@ -55,7 +55,7 @@ You'll notice the when you add a node, the `type` is `childList`, and when you c
 }
 
 .red {
- color: red;
+  color: red;
 }
 ```
 
@@ -71,7 +71,7 @@ let nodeNumber = 1;
 
 addNodes.addEventListener("click", () => {
   const newPara = document.createElement("p");
-  newPara.textContent = `Node number: ${nodeNumber}`;
+  newPara.textContent = `Node #${nodeNumber}`;
   nodeNumber++;
   target.appendChild(newPara);
 });
@@ -93,7 +93,7 @@ function logMutationType(records) {
 }
 
 const observer = new MutationObserver(logMutationType);
-observer.observe(target, {childList: true, attributes: true, subtree: true});
+observer.observe(target, { childList: true, attributes: true, subtree: true });
 ```
 
 #### Result

@@ -42,7 +42,7 @@ Highlights:
 ### HTML
 
 - Support for [`<meta name="referrer">`](/en-US/docs/Web/HTML/Element/meta) has been added ({{bug(704320)}}).
-- In Firefox, {{HTMLElement("input")}} filters specified in the {{htmlattrxref("accept", "input")}} attribute will always be selected by default, unless there is a unknown value, that is an unknown mime type or badly formatted value in the {{htmlattrxref("accept", "input")}} attribute. Previously specified filters were only selected by default for `image/*`, `video/*` and `audio/*` values ({{bug(826185)}}).
+- In Firefox, {{HTMLElement("input")}} filters specified in the {{htmlattrxref("accept", "input")}} attribute will always be selected by default, unless there is an unknown value, that is an unknown mime type or badly formatted value in the {{htmlattrxref("accept", "input")}} attribute. Previously specified filters were only selected by default for `image/*`, `video/*` and `audio/*` values ({{bug(826185)}}).
 
 ### JavaScript
 

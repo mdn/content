@@ -1,6 +1,7 @@
 ---
 title: attributeType
 slug: Web/SVG/Attribute/attributeType
+page-type: svg-attribute
 tags:
   - Deprecated
   - NeedsCompatTable

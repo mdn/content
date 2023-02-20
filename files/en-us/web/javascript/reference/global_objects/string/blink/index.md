@@ -1,6 +1,7 @@
 ---
 title: String.prototype.blink()
 slug: Web/JavaScript/Reference/Global_Objects/String/blink
+page-type: javascript-instance-method
 tags:
   - Deprecated
   - HTML wrapper methods

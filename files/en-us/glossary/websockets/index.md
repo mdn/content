@@ -1,6 +1,7 @@
 ---
 title: WebSockets
 slug: Glossary/WebSockets
+page-type: glossary-definition
 tags:
   - Connection
   - Infrastructure

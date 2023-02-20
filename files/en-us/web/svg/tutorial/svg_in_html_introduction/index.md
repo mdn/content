@@ -1,6 +1,7 @@
 ---
 title: SVG In HTML Introduction
 slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
+page-type: guide
 tags:
   - Beginner
   - SVG

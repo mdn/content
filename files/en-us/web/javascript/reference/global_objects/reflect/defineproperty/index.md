@@ -1,6 +1,7 @@
 ---
 title: Reflect.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -13,7 +14,7 @@ browser-compat: javascript.builtins.Reflect.defineProperty
 
 {{JSRef}}
 
-The static **`Reflect.defineProperty()`** method is like
+The **`Reflect.defineProperty()`** static method is like
 {{jsxref("Object.defineProperty()")}} but returns a {{jsxref("Boolean")}}.
 
 {{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}

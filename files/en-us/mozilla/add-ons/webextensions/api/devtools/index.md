@@ -1,6 +1,7 @@
 ---
 title: devtools
 slug: Mozilla/Add-ons/WebExtensions/API/devtools
+page-type: webextension-api
 tags:
   - API
   - Add-ons
@@ -33,8 +34,6 @@ To use this API you need to have the `"devtools"` [API permission](/en-US/docs/M
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv2/devtools/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -1,6 +1,7 @@
 ---
 title: Hyperlink
 slug: Glossary/Hyperlink
+page-type: glossary-definition
 tags:
   - CodingScripting
   - HTML

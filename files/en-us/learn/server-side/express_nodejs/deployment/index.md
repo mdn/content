@@ -78,7 +78,7 @@ Some of the things to consider when choosing a host:
 - Level of support for scaling horizontally (adding more machines) and vertically (upgrading to more powerful machines) and the costs of doing so.
 - The locations that the supplier has data centers, and hence where access is likely to be fastest.
 - The host's historical uptime and downtime performance.
-- Tools provided for managing the site — are they easy to use and are they secure (e.g. SFTP vs FTP).
+- Tools provided for managing the site — are they easy to use and are they secure (e.g. SFTP vs. FTP).
 - Inbuilt frameworks for monitoring your server.
 - Known limitations. Some hosts will deliberately block certain services (e.g. email). Others offer only a certain number of hours of "live time" in some price tiers, or only offer a small amount of storage.
 - Additional benefits. Some providers will offer free domain names and support for SSL certificates that you would otherwise have to pay for.
@@ -166,7 +166,7 @@ const catalogRouter = require("./routes/catalog"); // Import routes for "catalog
 const compression = require("compression");
 
 // Create the Express application object
-const app = express();
+var app = express();
 
 // …
 
@@ -201,7 +201,7 @@ const compression = require("compression");
 const helmet = require("helmet");
 
 // Create the Express application object
-const app = express();
+var app = express();
 
 app.use(helmet());
 // …
@@ -251,7 +251,7 @@ For example, if the application includes the file **package-lock.json** Railway 
 Having installed all the dependencies, Railway will look for scripts named "build" and "start" in the package file, and use these to build and run the code.
 
 > **Note:** Railway uses [Nixpacks](https://nixpacks.com/docs/) to recognize various web application frameworks written in different programming languages.
-> You don't need to know anything else for this tutorial, but you can find out more about options for deploying node applications in [Nixpacks > Node](https://nixpacks.com/docs/providers/node).
+> You don't need to know anything else for this tutorial, but you can find out more about options for deploying node applications in [Nixpacks Node](https://nixpacks.com/docs/providers/node).
 
 Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.app/develop/variables).
 For example, an application that uses a database must get the address using a variable.
@@ -379,13 +379,13 @@ Open **package.json**, and add this information as an **engines > node** section
   "name": "express-locallibrary-tutorial",
   "version": "0.0.0",
   "engines": {
-    "node": "16.17.1"
+    "node": ">=16.17.1"
   },
   "private": true,
   // …
 ```
 
-Note that are other ways to provision the node version on Railway, but we're using **package.json** because this approach is widely supported by many services.
+Note that there are other ways to provision the node version on Railway, but we're using **package.json** because this approach is widely supported by many services.
 Note also that Railway will not necessarily use the precise version of node that you specify.
 Where possible it will use a version that has the same major version number.
 
@@ -393,11 +393,12 @@ Where possible it will use a version that has the same major version number.
 
 So far in this tutorial, we've used a single database that is hard-coded into **app.js**. Normally we'd like to be able to have a different database for production and development, so next we'll modify the LocalLibrary website to get the database URI from the OS environment (if it has been defined), and otherwise use our development database.
 
-Open **app.js** and find the line that sets the MongoDB connection variable. It will look something like this:
+Open **app.js** and find the line that sets the MongoDB connection variable.
+It will look something like this:
 
 ```js
 const mongoDB =
-  "mongodb+srv://your_user:your_password@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true";
+  "mongodb+srv://your_user_name:your_password@cluster0.lz91hw2.mongodb.net/local_library?retryWrites=true&w=majority";
 ```
 
 Replace the line with the following code that uses `process.env.MONGODB_URI` to get the connection string from an environment variable named `MONGODB_URI` if has been set (use your own database URL instead of the placeholder below.)
@@ -405,7 +406,7 @@ Replace the line with the following code that uses `process.env.MONGODB_URI` to 
 ```js
 // Set up mongoose connection
 const dev_db_url =
-  "mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true";
+  "mongodb+srv://your_user_name:your_password@cluster0.lz91hw2.mongodb.net/local_library?retryWrites=true&w=majority";
 const mongoDB = process.env.MONGODB_URI || dev_db_url;
 ```
 
@@ -539,7 +540,7 @@ Then press the **Add** button.
 The local library application is now setup and configured for production use.
 You can add data through the website interface and it should work in the same way that it did during development (though with less debug information exposed for invalid pages).
 
-> **Note:** If you just want to add some data for testing you might use the `populatedb` script (with your MongoDB production database URL) as discussed in the section [Express Tutorial Part 3: Using a Database (with Mongoose) > Testing — create some items](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#testing_%E2%80%94_create_some_items).
+> **Note:** If you just want to add some data for testing you might use the `populatedb` script (with your MongoDB production database URL) as discussed in the section [Express Tutorial Part 3: Using a Database (with Mongoose) Testing — create some items](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#testing_%E2%80%94_create_some_items).
 
 ### Install the client
 
@@ -591,15 +592,3 @@ That's the end of this tutorial on setting up Express apps in production, and al
   - [Limits](https://devcenter.heroku.com/articles/limits) (Heroku docs)
 
 {{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
-
-## In this module
-
-- [Express/Node introduction](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-- **Express Tutorial Part 7: Deploying to production**

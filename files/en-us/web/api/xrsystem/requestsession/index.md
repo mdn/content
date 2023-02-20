@@ -2,20 +2,8 @@
 title: 'XRSystem: requestSession()'
 slug: Web/API/XRSystem/requestSession
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRSystem
-  - requestSession
+status:
+  - experimental
 browser-compat: api.XRSystem.requestSession
 ---
 
@@ -85,8 +73,7 @@ following:
     specified `sessionMode`; this can also be thrown if any of the
     _required_ options are unsupported.
 - `SecurityError` {{domxref("DOMException")}}
-  - : Returned if permission to enter the specified XR mode is denied. This can happen for a number
-    of reasons, which are covered in more detail in [Permissions and security](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security).
+  - : Returned if permission to enter the specified XR mode is denied. This can happen for several reasons, which are covered in more detail in [Permissions and security](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security).
 
 ## Session features
 
@@ -103,7 +90,7 @@ The following session features and reference spaces can be requested, either as 
 - `hand-tracking`
   - : Enable articulated hand pose information from hand-based input controllers (see {{domxref("XRHand")}} and {{domxref("XRInputSource.hand")}}).
 - `hit-test`
-  - : Enable hit testing features for performing hit tests against real world geometry.
+  - : Enable hit testing features for performing hit tests against real-world geometry.
 - `layers`
   - : Enable the ability to create various layer types (other than {{domxref("XRProjectionLayer")}}).
 - `light-estimation`
@@ -121,18 +108,18 @@ The following session features and reference spaces can be requested, either as 
 
 ## Security
 
-Several session features and the various reference spaces have minimum security and privacy requirements, like asking for user consent and/or requiring the {{HTTPHeader("Feature-Policy")}}: [`xr-spatial-tracking`](/en-US/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking) directive to be set. See also [Permissions and security](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security) for more details.
+Several session features and the various reference spaces have minimum security and privacy requirements, like asking for user consent and/or requiring the {{HTTPHeader("Permissions-Policy")}}: [`xr-spatial-tracking`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/xr-spatial-tracking) directive to be set. See also [Permissions and security](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security) for more details.
 
-| Session feature | User consent requirement            | Feature policy requirement |
-| --------------- | ----------------------------------- | -------------------------- |
-| `bounded-floor` | Always required                     | `xr-spatial-tracking`      |
-| `depth-sensing` | —                                   | `xr-spatial-tracking`      |
-| `hand-tracking` | Always required                     | —                          |
-| `hit-test`      | —                                   | `xr-spatial-tracking`      |
-| `local`         | Always required for inline sessions | `xr-spatial-tracking`      |
-| `local-floor`   | Always required                     | `xr-spatial-tracking`      |
-| `unbounded`     | Always required                     | `xr-spatial-tracking`      |
-| `viewer`        | Always required                     | —                          |
+| Session feature | User consent requirement            | Permissions policy requirement |
+| --------------- | ----------------------------------- | --------------------------     |
+| `bounded-floor` | Always required                     | `xr-spatial-tracking`          |
+| `depth-sensing` | —                                   | `xr-spatial-tracking`          |
+| `hand-tracking` | Always required                     | —                              |
+| `hit-test`      | —                                   | `xr-spatial-tracking`          |
+| `local`         | Always required for inline sessions | `xr-spatial-tracking`          |
+| `local-floor`   | Always required                     | `xr-spatial-tracking`          |
+| `unbounded`     | Always required                     | `xr-spatial-tracking`          |
+| `viewer`        | Always required                     | —                              |
 
 See also [transient user activation](/en-US/docs/Web/Security/User_activation).
 

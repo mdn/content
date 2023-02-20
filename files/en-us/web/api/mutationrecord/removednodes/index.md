@@ -20,11 +20,11 @@ A {{domxref("NodeList")}} containing the nodes removed from the target of the mu
 
 ## Examples
 
-### Update when removing a node
+### Observing removed nodes
 
-In the following example, there are two buttons: one to add new nodes to a target node, and one to remove them. A {{domxref("MutationObserver")}} is used to observe the target node for changes; when a change is detected, the observer calls a function, `logNewNodes`.
+In the following example, there are two buttons: one to add new nodes to a target node, and one to remove them. A {{domxref("MutationObserver")}} is used to observe the target node for changes; when a change is detected, the observer calls a function, `logRemovedNodes()`.
 
-The function checks that the MutationRecord's `type` is `childList`, which means that the target node's children have changed. If the type is `childlist` the function updates the total number of nodes that have been removed. However, note that clicking the "Add a node" button will not increment the total number of removed nodes, because in this case `record.removedNodes` will have a length of `0`.
+The `logRemovedNodes()` function checks that the MutationRecord's `type` is `childList`, which means that the target node's children have changed. If the type is `childlist` the function updates the total number of nodes that have been removed. However, note that clicking the "Add a node" button will not increment the total number of removed nodes, because in this case `record.removedNodes` will have a length of `0`.
 
 #### HTML
 
@@ -34,13 +34,13 @@ The function checks that the MutationRecord's `type` is `childList`, which means
 <button id="reset">Reset</button>
 
 <pre id="counter">Total removed nodes: 0</pre>
-<div id= "target"></div>
+<div id="target"></div>
 ```
 
 ```css hidden
 #counter {
   border: 1px dotted black;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 ```
 
@@ -69,7 +69,7 @@ removeNodes.addEventListener("click", () => {
 
 reset.addEventListener("click", () => self.location.reload());
 
-function logNewNodes(records) {
+function logRemovedNodes(records) {
   for (const record of records) {
     // Check if the childlist of the target node has been mutated
     if (record.type === "childList") {
@@ -80,13 +80,13 @@ function logNewNodes(records) {
   }
 }
 
-const observer = new MutationObserver(logNewNodes);
+const observer = new MutationObserver(logRemovedNodes);
 observer.observe(target, { childList: true });
 ```
 
 #### Result
 
-{{EmbedLiveSample("Update when Removing a Node")}}
+{{EmbedLiveSample("Observing removed nodes")}}
 
 ## Specifications
 

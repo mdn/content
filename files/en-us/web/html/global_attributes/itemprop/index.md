@@ -1,6 +1,7 @@
 ---
 title: itemprop
 slug: Web/HTML/Global_attributes/itemprop
+page-type: html-attribute
 tags:
   - Attribute
   - Global attribute

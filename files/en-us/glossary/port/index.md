@@ -1,6 +1,7 @@
 ---
 title: Port
 slug: Glossary/Port
+page-type: glossary-definition
 tags:
   - Intro
   - Security

@@ -1,6 +1,7 @@
 ---
 title: IMAP
 slug: Glossary/IMAP
+page-type: glossary-definition
 tags:
   - Beginner
   - Infrastructure

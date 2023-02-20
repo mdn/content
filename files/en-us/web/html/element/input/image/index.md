@@ -1,6 +1,7 @@
 ---
 title: <input type="image">
 slug: Web/HTML/Element/input/image
+page-type: html-element
 tags:
   - Element
   - Form Image
@@ -22,45 +23,6 @@ browser-compat: html.elements.input.type_image
 {{HTMLElement("input")}} elements of type **`image`** are used to create graphical submit buttons, i.e. submit buttons that take the form of an image rather than text.
 
 {{EmbedInteractiveExample("pages/tabbed/input-image.html", "tabbed-standard")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
-      <td>None — the <code>value</code> attribute should not be specified.</td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>None.</td>
-    </tr>
-    <tr>
-      <td><strong>Supported common attributes</strong></td>
-      <td>
-        <a href="/en-US/docs/Web/HTML/Element/input#alt"><code>alt</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#src"><code>src</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#width"><code>width</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#height"><code>height</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#formaction"><code>formaction</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#formenctype"><code>formenctype</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#formmethod"><code>formmethod</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#formmethod"><code>formnovalidate</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#formtarget"><code>formtarget</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td>None.</td>
-    </tr>
-    <tr>
-      <td><strong>DOM interface</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>None.</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Value
 
@@ -222,7 +184,7 @@ When you submit a form using a button created with `<input type="image">`, two e
 
 When you click on the image to submit the form, you'll see the data appended to the URL as parameters, for example `?x=52&y=55`. If the image input has a [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute, then keep in mind that the specified name is prefixed on every attribute, so if the `name` is `position`, then the returned coordinates would be formatted in the URL as `?position.x=52&position.y=55`. This, of course, applies to all other attributes as well.
 
-These are the X and Y coordinates of the image that the mouse clicked on to submit the form, where (0,0) is the top-left of the image. These can be used when the position the image was clicked on is significant, for example you might have a map that when clicked, sends the coordinates that were clicked to the server. The server-side code then works out what location was clicked on, and returns information about places nearby.
+These are the X and Y coordinates of the image that the mouse clicked on to submit the form, where (0,0) is the top-left of the image and the default in case submission happens without a click on the image. These can be used when the position the image was clicked on is significant, for example you might have a map that when clicked, sends the coordinates that were clicked to the server. The server-side code then works out what location was clicked on, and returns information about places nearby.
 
 In our above example, we could write server-side code that works out what color was clicked on by the coordinates submitted, and keeps a tally of the favorite colors people voted for.
 
@@ -333,6 +295,51 @@ label {
 
 Here, `object-position` is configured to draw the image in the top-right corner of the element, while `object-fit` is set to `contain`, which indicates that the image should be drawn at the largest size that will fit within the element's box without altering its aspect ratio. Note the visible grey background of the element still visible in the area not covered by the image.
 
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>None — the <code>value</code> attribute should not be specified.</td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Element/input#alt"><code>alt</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#src"><code>src</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#width"><code>width</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#height"><code>height</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#formaction"><code>formaction</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#formenctype"><code>formenctype</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#formmethod"><code>formmethod</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#formmethod"><code>formnovalidate</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#formtarget"><code>formtarget</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>None.</td>
+    </tr>
+     <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
+    </tr>
+  </tbody>
+</table>
+
 ## Specifications
 
 {{Specifications}}
@@ -344,5 +351,6 @@ Here, `object-position` is configured to draw the image in the top-right corner 
 ## See also
 
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
+- The HTML {{HTMLElement("img")}} element
 - Positioning and sizing the image within the `<input>` element's frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
 - [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -1,6 +1,7 @@
 ---
 title: exponent
 slug: Web/SVG/Attribute/exponent
+page-type: svg-attribute
 tags:
   - NeedsCompatTable
   - SVG

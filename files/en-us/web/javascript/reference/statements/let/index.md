@@ -1,6 +1,7 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
+page-type: javascript-statement
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -21,7 +22,11 @@ The **`let`** declaration declares a block-scoped local variable, optionally ini
 ## Syntax
 
 ```js-nolint
-let name1 [= value1] [, name2 [= value2]] [, ..., nameN [= valueN]
+let name1;
+let name1 = value1;
+let name1 = value1, name2 = value2;
+let name1, name2 = value2;
+let name1 = value1, name2, /* …, */ nameN = valueN;
 ```
 
 ### Parameters
@@ -68,19 +73,19 @@ The main difference is that the scope of a **`var`** variable is the entire encl
 function varTest() {
   var x = 1;
   {
-    var x = 2;  // same variable!
-    console.log(x);  // 2
+    var x = 2; // same variable!
+    console.log(x); // 2
   }
-  console.log(x);  // 2
+  console.log(x); // 2
 }
 
 function letTest() {
   let x = 1;
   {
-    let x = 2;  // different variable
-    console.log(x);  // 2
+    let x = 2; // different variable
+    console.log(x); // 2
   }
-  console.log(x);  // 1
+  console.log(x); // 1
 }
 ```
 
@@ -88,8 +93,8 @@ At the top level of programs and functions, **`let`**, unlike **`var`**, does no
 For example:
 
 ```js
-var x = 'global';
-let y = 'global';
+var x = "global";
+let y = "global";
 console.log(this.x); // "global"
 console.log(this.y); // undefined
 ```
@@ -109,7 +114,7 @@ You may encounter errors in {{jsxref("Statements/switch", "switch")}} statements
 
 ```js example-bad
 let x = 1;
-switch(x) {
+switch (x) {
   case 0:
     let foo;
     break;
@@ -120,12 +125,12 @@ switch(x) {
 }
 ```
 
-However, it's important to point out that a block nested inside a case clause will create a new block scoped lexical environment, which will not produce the redeclaration errors shown above.
+A block nested inside a case clause will create a new block scoped lexical environment, avoiding the redeclaration errors shown above.
 
 ```js
 let x = 1;
 
-switch(x) {
+switch (x) {
   case 0: {
     let foo;
     break;
@@ -136,6 +141,8 @@ switch(x) {
   }
 }
 ```
+
+If you're experimenting in a REPL, such as the Firefox web console (**Tools** > **Web Developer** > **Web Console**), and you run two `let` declarations with the same name in two separate inputs, you may get the same re-declaration error. See further discussion of this issue in {{bug(1580891)}}. The Chrome console allows `let` re-declarations between different REPL inputs.
 
 ### Temporal dead zone (TDZ)
 
@@ -149,7 +156,8 @@ This differs from {{jsxref("Statements/var", "var", "var_hoisting")}} variables,
 The code below demonstrates the different result when `let` and `var` are accessed in code before the line in which they are declared.
 
 ```js example-bad
-{ // TDZ starts at beginning of scope
+{
+  // TDZ starts at beginning of scope
   console.log(bar); // undefined
   console.log(foo); // ReferenceError
   var bar = 1;
@@ -218,12 +226,13 @@ function go(n) {
   // n here is defined!
   console.log(n); // { a: [1, 2, 3] }
 
-  for (let n of n.a) { // ReferenceError
+  for (let n of n.a) {
+    //          ^ ReferenceError
     console.log(n);
   }
 }
 
-go({a: [1, 2, 3]});
+go({ a: [1, 2, 3] });
 ```
 
 ### Other situations
@@ -239,8 +248,8 @@ if (a === 1) {
   var a = 11; // the scope is global
   let b = 22; // the scope is inside the if-block
 
-  console.log(a);  // 11
-  console.log(b);  // 22
+  console.log(a); // 11
+  console.log(b); // 22
 }
 
 console.log(a); // 11

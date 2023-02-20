@@ -1,6 +1,7 @@
 ---
 title: function* expression
 slug: Web/JavaScript/Reference/Operators/function*
+page-type: javascript-operator
 tags:
   - ECMAScript 2015
   - Function

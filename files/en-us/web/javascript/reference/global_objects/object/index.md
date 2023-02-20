@@ -1,6 +1,7 @@
 ---
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
+page-type: javascript-class
 tags:
   - Class
   - JavaScript
@@ -38,8 +39,8 @@ const obj = {
   // you are receiving the object from external input
   propertyIsEnumerable() {
     return false;
-  }
-}
+  },
+};
 
 obj.propertyIsEnumerable("foo"); // false; unexpected result
 Object.prototype.propertyIsEnumerable.call(obj, "foo"); // true; expected result
@@ -149,6 +150,8 @@ JavaScript also has built-in APIs that produce `null`-prototype objects, especia
 - [`Array.prototype[@@unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables) (all `@@unscopables` objects should have `null`-prototype)
 - [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)
 - Module namespace objects, obtained through [`import * as ns from "module";`](/en-US/docs/Web/JavaScript/Reference/Statements/import#namespace_import) or [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import)
+
+The term "`null`-prototype object" often also includes any object without `Object.prototype` in its prototype chain. Such objects can be created with [`extends null`](/en-US/docs/Web/JavaScript/Reference/Classes/extends#extending_null) when using classes.
 
 ### Object coercion
 
@@ -288,8 +291,8 @@ const current = Object.prototype.valueOf;
 // Since my property "-prop-value" is cross-cutting and isn't always
 // on the same prototype chain, I want to modify Object.prototype:
 Object.prototype.valueOf = function (...args) {
-  if (Object.hasOwn(this, '-prop-value')) {
-    return this['-prop-value'];
+  if (Object.hasOwn(this, "-prop-value")) {
+    return this["-prop-value"];
   } else {
     // It doesn't look like one of my objects, so let's fall back on
     // the default behavior by reproducing the current behavior as best we can.
@@ -297,7 +300,7 @@ Object.prototype.valueOf = function (...args) {
     // Even though valueOf() doesn't take arguments, some other hook may.
     return current.apply(this, args);
   }
-}
+};
 ```
 
 > **Warning:** Modifying the `prototype` property of any built-in constructor is considered a bad practice and risks forward compatibility.

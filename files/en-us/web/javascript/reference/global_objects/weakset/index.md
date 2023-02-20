@@ -1,6 +1,7 @@
 ---
 title: WeakSet
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet
+page-type: javascript-class
 tags:
   - Class
   - ECMAScript 2015
@@ -45,6 +46,7 @@ function execRecursively(fn, subject, _refs = new WeakSet()) {
     for (const key in subject) {
       execRecursively(fn, subject[key], _refs);
     }
+    _refs.delete(subject);
   }
 }
 

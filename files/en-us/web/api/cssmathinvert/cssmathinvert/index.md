@@ -2,14 +2,8 @@
 title: CSSMathInvert()
 slug: Web/API/CSSMathInvert/CSSMathInvert
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathInvert
-  - CSSNumericValue
-  - Constructor
-  - Experimental
-  - Houdini
+status:
+  - experimental
 browser-compat: api.CSSMathInvert.CSSMathInvert
 ---
 
@@ -17,7 +11,7 @@ browser-compat: api.CSSMathInvert.CSSMathInvert
 
 The **`CSSMathInvert()`** constructor creates a
 new {{domxref("CSSMathInvert")}} object which represents a CSS
-{{CSSXref('calc()','calc()')}} used as `calc(1 / value)`
+{{CSSXref('calc','calc()')}} used as `calc(1 / value)`
 
 ## Syntax
 

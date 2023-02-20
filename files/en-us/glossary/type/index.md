@@ -1,6 +1,7 @@
 ---
 title: Type
 slug: Glossary/Type
+page-type: glossary-definition
 tags:
   - CodingScripting
   - JavaScript

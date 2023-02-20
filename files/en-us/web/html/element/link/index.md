@@ -1,6 +1,7 @@
 ---
-title: '<link>: The External Resource Link element'
+title: "<link>: The External Resource Link element"
 slug: Web/HTML/Element/link
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -26,8 +27,7 @@ To link an external stylesheet, you'd include a `<link>` element inside your {{H
 <link href="main.css" rel="stylesheet" />
 ```
 
-This simple example provides the path to the stylesheet inside an `href` attribute, and a `rel` attribute with a value of `stylesheet`. The `rel` stands for "relationship", and is probably one of the key features of the `<link>` element — the value denotes how the item being linked to is related to the containing document.
-As you'll see from our [Link types](/en-US/docs/Web/HTML/Link_types) reference, there are many kinds of relationship.
+This simple example provides the path to the stylesheet inside an `href` attribute, and a [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute with a value of `stylesheet`. The `rel` stands for "relationship", and is one of the key features of the `<link>` element — the value denotes how the item being linked to is related to the containing document.
 
 There are a number of other common types you'll come across. For example, a link to the site's favicon:
 
@@ -69,7 +69,7 @@ Some interesting new performance and security features have been added to the `<
   crossorigin="anonymous" />
 ```
 
-A `rel` value of `preload` indicates that the browser should preload this resource (see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Link_types/preload) for more details), with the `as` attribute indicating the specific class of content being fetched.
+A `rel` value of `preload` indicates that the browser should preload this resource (see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Attributes/rel/preload) for more details), with the `as` attribute indicating the specific class of content being fetched.
 The `crossorigin` attribute indicates whether the resource should be fetched with a {{Glossary("CORS")}} request.
 
 Other usage notes:
@@ -247,7 +247,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins.
 
 - {{HTMLAttrDef("rel")}}
-  - : This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of [link type values](/en-US/docs/Web/HTML/Link_types).
+  - : This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of [link type values](/en-US/docs/Web/HTML/Attributes/rel).
 - {{HTMLAttrDef("sizes")}} {{Experimental_Inline}}
 
   - : This attribute defines the sizes of the icons for visual media contained in the resource.
@@ -268,6 +268,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     The value of the attribute should be a MIME type such as **text/html**, **text/css**, and so on.
     The common use of this attribute is to define the type of stylesheet being referenced (such as **text/css**), but given that CSS is the only stylesheet language used on the web, not only is it possible to omit the `type` attribute, but is actually now recommended practice.
     It is also used on `rel="preload"` link types, to make sure the browser only downloads file types that it supports.
+- {{HTMLAttrDef("blocking")}}
+  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of an external resource. The operations that are to be blocked must be a space-separated list of blocking attributes listed below.
+    - `render`: The rendering of content on the screen is blocked.
 
 ### Non-standard attributes
 
@@ -294,9 +297,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : The value of this attribute shows the relationship of the current document to the linked document, as defined by the {{HTMLAttrxRef("href", "link")}} attribute.
     The attribute thus defines the reverse relationship compared to the value of the `rel` attribute.
-    [Link type values](/en-US/docs/Web/HTML/Link_types) for the attribute are similar to the possible values for {{HTMLAttrxRef("rel", "link")}}.
+    [Link type values](/en-US/docs/Web/HTML/Attributes/rel) for the attribute are similar to the possible values for {{HTMLAttrxRef("rel", "link")}}.
 
-    > **Note:** Instead of `rev`, you should use the {{HTMLAttrxRef("rel", "link")}} attribute with the opposite [link type value](/en-US/docs/Web/HTML/Link_types).
+    > **Note:** Instead of `rev`, you should use the {{HTMLAttrxRef("rel", "link")}} attribute with the opposite [link type value](/en-US/docs/Web/HTML/Attributes/rel).
     > For example, to establish the reverse link for `made`, specify `author`. Also, this attribute doesn't stand for "revision" and must not be used with a version number, even though many sites misuse it in this way.
 
 ## Examples
@@ -387,7 +390,16 @@ You can determine when a style sheet has been loaded by watching for a `load` ev
 
 ### Preload examples
 
-You can find a number of `<link rel="preload">` examples in [Preloading content with `rel="preload"`](/en-US/docs/Web/HTML/Link_types/preload).
+You can find a number of `<link rel="preload">` examples in [Preloading content with `rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload).
+
+### Blocking rendering till a resource is fetched
+
+You can include `render` token inside a `blocking` attribute;
+the rendering of the page will be blocked till the resource is fetched. For example:
+
+```html
+<link blocking="render" href="critical-font.woff2" as="font" />
+```
 
 ## Technical summary
 
@@ -424,7 +436,7 @@ You can find a number of `<link rel="preload">` examples in [Preloading content 
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td>{{ARIARole("link")}} with <code>href</code> attribute</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> with <code>href</code> attribute</td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>

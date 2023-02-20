@@ -2,23 +2,6 @@
 title: RTCRtpSendParameters
 slug: Web/API/RTCRtpSendParameters
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Codec
-  - Dictionary
-  - Encoding
-  - Media
-  - RTCRtpSendParameters
-  - RTCRtpSender
-  - RTP
-  - Reference
-  - Settings
-  - Video
-  - WebRTC
-  - WebRTC API
-  - parameters
-  - sender
 browser-compat: api.RTCRtpSendParameters
 ---
 
@@ -39,8 +22,6 @@ _In addition to the properties below, `RTCRtpSendParameters` inherits the proper
 
 - {{domxref("RTCRtpSendParameters.degradationPreference", "degradationPreference")}} {{deprecated_inline}}
   - : Specifies the preferred way the WebRTC layer should handle optimizing bandwidth against quality in constrained-bandwidth situations; the possible values are `maintain-framerate`, `maintain-resolution`, or `balanced`. The default value is `balanced`.
-- {{domxref("RTCRtpSendParameters,priority", "priority")}} {{deprecated_inline}}
-  - : A string that indicates the encoding's priority. It is one of: `very-low`, `low`, `medium`, or `high`. The default value is `low`.
 
 ## Specifications
 

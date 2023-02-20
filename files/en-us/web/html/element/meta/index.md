@@ -1,6 +1,7 @@
 ---
 title: '<meta>: The metadata element'
 slug: Web/HTML/Element/meta
+page-type: html-element
 tags:
   - Document
   - Element

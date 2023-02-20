@@ -1,6 +1,7 @@
 ---
 title: Int8Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Int8Array/Int8Array
+page-type: javascript-constructor
 tags:
   - Constructor
   - JavaScript

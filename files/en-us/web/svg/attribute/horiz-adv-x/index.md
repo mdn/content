@@ -1,6 +1,7 @@
 ---
 title: horiz-adv-x
 slug: Web/SVG/Attribute/horiz-adv-x
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG

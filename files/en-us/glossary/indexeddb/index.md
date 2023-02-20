@@ -1,6 +1,7 @@
 ---
 title: IndexedDB
 slug: Glossary/IndexedDB
+page-type: glossary-definition
 tags:
   - API
   - CodingScripting

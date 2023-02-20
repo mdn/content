@@ -1,6 +1,7 @@
 ---
 title: Object.fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
+page-type: javascript-static-method
 tags:
   - JavaScript
   - Method
@@ -12,7 +13,7 @@ browser-compat: javascript.builtins.Object.fromEntries
 
 {{JSRef}}
 
-The **`Object.fromEntries()`** method transforms a list of key-value pairs into an object.
+The **`Object.fromEntries()`** static method transforms a list of key-value pairs into an object.
 
 {{EmbedInteractiveExample("pages/js/object-fromentries.html")}}
 

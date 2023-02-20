@@ -26,7 +26,7 @@ As the web has evolved, we have come to see huge increases in the number and siz
 Between 2011 and 2019, the median resource weight increased from **\~100KB** to **\~400KB** for desktop and **\~50KB** to **\~350KB** for mobile. While Image size has increased from **\~250KB** to **\~900KB** on desktop and **\~100KB** to **\~850KB** on mobile.
 
 One of the methods we can use to tackle this problem is to shorten the [Critical Rendering Path](/en-US/docs/Web/Performance/Critical_rendering_path) length by lazy loading resources that are not critical for the first render to happen.
-A practical example would be when, you land on the home page of an e-commerce site which has a link to a cart page/section and all its resources (JS, CSS, images…) are downloaded **only** when the user navigates to that cart page.
+A practical example would be when you land on the home page of an e-commerce site with a link to a cart page/section, and none of the cart page's resources (such as JavaScript, CSS, and images) are downloaded **until** you navigate there.
 
 ## Strategies
 
@@ -63,7 +63,7 @@ By default, font requests are delayed until the render tree is constructed, whic
 
 It is possible to override the default behavior and preload web font resources using `<link rel="preload">`, the [CSS font-display property](/en-US/docs/Web/CSS/@font-face/font-display), and the [Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API).
 
-See also: [Element Link](/en-US/docs/Web/HTML/Element/link)
+See also: [Element Link](/en-US/docs/Web/HTML/Element/link).
 
 ### Images and iframes
 
@@ -83,7 +83,7 @@ You can determine if a given image has finished loading by examining the value o
 
 **Polyfill**
 Include this polyfill to provide support for older and currently incompatible browsers:
-[loading-attribute-polyfill](https://github.com/mfranzke/loading-attribute-polyfill)
+[loading-attribute-polyfill](https://github.com/mfranzke/loading-attribute-polyfill).
 
 **Intersection Observer API**
 [Intersection Observers](/en-US/docs/Web/API/IntersectionObserver) allow the user to know when an observed element enters or exits the browser's viewport.

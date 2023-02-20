@@ -10,6 +10,10 @@ tags:
   - Web
 ---
 
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
+</section>
+
 Houdini is a set of low-level APIs that exposes parts of the CSS engine,
 giving developers the power to extend CSS by hooking into the styling and layout process of a browser's rendering engine.
 Houdini is a group of APIs that give developers direct access to the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) (CSSOM),
@@ -37,7 +41,7 @@ requiring a single line of JavaScript to import configurable components:
 no pre-processors, post-processors or JavaScript frameworks needed.
 
 ```js
-CSS.paintWorklet.addModule('csscomponent.js');
+CSS.paintWorklet.addModule("csscomponent.js");
 ```
 
 This added module contains {{domxref("PaintWorklet.registerPaint")}} functions,
@@ -57,9 +61,9 @@ In the following example the `paint()` function is passed a worklet called `myCo
 
 ```css
 li {
-    background-image: paint(myComponent, stroke, 10px);
-    --highlights: blue;
-    --lowlights: green;
+  background-image: paint(myComponent, stroke, 10px);
+  --highlights: blue;
+  --lowlights: green;
 }
 ```
 

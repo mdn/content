@@ -1,6 +1,7 @@
 ---
 title: 'Error: Permission denied to access property "x"'
 slug: Web/JavaScript/Reference/Errors/Property_access_denied
+page-type: javascript-error
 tags:
   - Error
   - Errors

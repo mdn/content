@@ -2,13 +2,6 @@
 title: PushManager.subscribe()
 slug: Web/API/PushManager/subscribe
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - PushManager
-  - Reference
-  - WebAPI
-  - subscribe
 browser-compat: api.PushManager.subscribe
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Digital certificate
 slug: Glossary/Digital_certificate
+page-type: glossary-definition
 tags:
   - Cryptography
   - Security

@@ -1,6 +1,7 @@
 ---
 title: <circle>
 slug: Web/SVG/Element/circle
+page-type: svg-element
 tags:
   - Circle
   - Element

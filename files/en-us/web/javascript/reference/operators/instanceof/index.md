@@ -1,6 +1,7 @@
 ---
 title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature

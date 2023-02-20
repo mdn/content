@@ -1,6 +1,7 @@
 ---
 title: '<dt>: The Description Term element'
 slug: Web/HTML/Element/dt
+page-type: html-element
 tags:
   - Definition
   - Description list
@@ -23,6 +24,16 @@ The **`<dt>`** [HTML](/en-US/docs/Web/HTML) element specifies a term in a descri
 The subsequent {{HTMLElement("dd")}} (**Description Details**) element provides the definition or other related text associated with the term specified using `<dt>`.
 
 {{EmbedInteractiveExample("pages/tabbed/dt.html", "tabbed-standard")}}
+
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Examples
+
+For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web/HTML/Element/dl#examples).
+
+## Technical summary
 
 <table class="properties">
   <tbody>
@@ -66,7 +77,7 @@ The subsequent {{HTMLElement("dd")}} (**Description Details**) element provides 
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td>{{ARIARole("term")}}</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/term_role"><code>term</code></a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
@@ -88,14 +99,6 @@ The subsequent {{HTMLElement("dd")}} (**Description Details**) element provides 
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Examples
-
-For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web/HTML/Element/dl#examples).
 
 ## Specifications
 

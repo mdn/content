@@ -1,6 +1,7 @@
 ---
 title: BigInt64Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array/BigInt64Array
+page-type: javascript-constructor
 tags:
   - BigInt
   - Constructor

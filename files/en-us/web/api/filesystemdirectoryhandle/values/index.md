@@ -12,7 +12,7 @@ tags:
 browser-compat: api.FileSystemDirectoryHandle.values
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`values()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface returns a new _array iterator_

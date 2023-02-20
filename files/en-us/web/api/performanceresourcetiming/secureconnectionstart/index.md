@@ -2,11 +2,6 @@
 title: PerformanceResourceTiming.secureConnectionStart
 slug: Web/API/PerformanceResourceTiming/secureConnectionStart
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming.secureConnectionStart
 ---
 
@@ -25,22 +20,22 @@ The `secureConnectionStart` property can have the following values:
 
 ## Examples
 
-### Measuring SSL negotiation time
+### Measuring TLS negotiation time
 
-The `secureConnectionStart` and {{domxref("PerformanceResourceTiming.requestStart", "requestStart")}} properties can be used to measure how long it takes for the SSL negotiation to happen.
+The `secureConnectionStart` and {{domxref("PerformanceResourceTiming.requestStart", "requestStart")}} properties can be used to measure how long it takes for the TLS negotiation to happen.
 
 ```js
-const ssl = entry.requestStart - entry.secureConnectionStart;
+const tls = entry.requestStart - entry.secureConnectionStart;
 ```
 
-Using a {{domxref("PerformanceObserver")}}:
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `resource` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
 
 ```js
 const observer = new PerformanceObserver((list) => {
   list.getEntries().forEach((entry) => {
-    const ssl = entry.requestStart - entry.secureConnectionStart;
-    if (ssl > 0) {
-      console.log(`${entry.name}: SSL negotiation duration: ${ssl}ms`);
+    const tls = entry.requestStart - entry.secureConnectionStart;
+    if (tls > 0) {
+      console.log(`${entry.name}: TLS negotiation duration: ${tls}ms`);
     }
   });
 });
@@ -48,14 +43,14 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({ type: "resource", buffered: true });
 ```
 
-Or using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
+Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
 
 ```js
 const resources = performance.getEntriesByType("resource");
 resources.forEach((entry) => {
-  const ssl = entry.requestStart - entry.secureConnectionStart;
-  if (ssl > 0) {
-    console.log(`${entry.name}: SSL negotiation duration: ${ssl}ms`);
+  const tls = entry.requestStart - entry.secureConnectionStart;
+  if (tls > 0) {
+    console.log(`${entry.name}: TLS negotiation duration: ${tls}ms`);
   }
 });
 ```

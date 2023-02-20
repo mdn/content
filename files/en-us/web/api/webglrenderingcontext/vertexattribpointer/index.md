@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.vertexAttribPointer()
 slug: Web/API/WebGLRenderingContext/vertexAttribPointer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.vertexAttribPointer
 ---
 
@@ -88,7 +82,7 @@ None ({{jsxref("undefined")}}).
   the ARRAY_BUFFER target.
 - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, a
   `gl.INVALID_OPERATION` error is thrown if this vertex attribute is defined
-  as a integer in the vertex shader (e.g. `uvec4` or `ivec4`,
+  as an integer in the vertex shader (e.g. `uvec4` or `ivec4`,
   instead of `vec4`).
 
 ## Description

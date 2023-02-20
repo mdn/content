@@ -1,6 +1,7 @@
 ---
 title: Mobile First
 slug: Glossary/Mobile_First
+page-type: glossary-definition
 tags:
   - Design
   - Layout

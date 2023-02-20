@@ -40,8 +40,9 @@ delete(key)
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired. The `request.result` attribute is set to undefined.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is `undefined`.
 
 ### Exceptions
 
@@ -78,7 +79,7 @@ the app loads.
 ```js
 function deleteItem(event) {
   // retrieve the name of the task we want to delete
-  let dataTask = event.target.getAttribute('data-task');
+  let dataTask = event.target.getAttribute("data-task");
 
   // open a database transaction and delete the task, finding it by the name we retrieved above
   let transaction = db.transaction(["toDoList"], "readwrite");
@@ -90,7 +91,7 @@ function deleteItem(event) {
     event.target.parentNode.parentNode.removeChild(event.target.parentNode);
     note.innerHTML += `<li>Task "${dataTask}" deleted.</li>`;
   };
-};
+}
 ```
 
 ## Specifications

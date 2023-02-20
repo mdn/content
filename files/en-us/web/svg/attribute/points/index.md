@@ -1,6 +1,7 @@
 ---
 title: points
 slug: Web/SVG/Attribute/points
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

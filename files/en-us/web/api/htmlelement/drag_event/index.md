@@ -135,7 +135,6 @@ target.addEventListener("drop", (event) => {
   // move dragged element to the selected drop target
   if (event.target.classList.contains("dropzone")) {
     event.target.classList.remove("dragover");
-    dragged.parentNode.removeChild(dragged);
     event.target.appendChild(dragged);
   }
 });

@@ -1,6 +1,7 @@
 ---
 title: identity.launchWebAuthFlow
 slug: Mozilla/Add-ons/WebExtensions/API/identity/launchWebAuthFlow
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons
@@ -106,5 +107,3 @@ function getAccessToken() {
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`identity`](https://developer.chrome.com/docs/extensions/reference/identity/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

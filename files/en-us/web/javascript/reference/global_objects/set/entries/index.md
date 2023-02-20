@@ -1,6 +1,7 @@
 ---
 title: Set.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Set/entries
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - Iterator

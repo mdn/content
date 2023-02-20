@@ -1,6 +1,7 @@
 ---
 title: OWASP
 slug: Glossary/OWASP
+page-type: glossary-definition
 tags:
   - Security
 ---

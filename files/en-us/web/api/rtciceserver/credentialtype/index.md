@@ -2,20 +2,9 @@
 title: RTCIceServer.credentialType
 slug: Web/API/RTCIceServer/credentialType
 page-type: web-api-instance-property
-tags:
-  - Authentication
-  - ICE
-  - OAuth
-  - Property
-  - RTCIceServer
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - credentialType
-  - credentials
-  - password
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.RTCIceServer.credentialType
 ---
 

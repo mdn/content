@@ -11,7 +11,7 @@ tags:
 browser-compat: api.NDEFRecord.encoding
 ---
 
-{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 The **`encoding`**
 property of the {{DOMxRef("NDEFRecord")}} interface returns the encoding of

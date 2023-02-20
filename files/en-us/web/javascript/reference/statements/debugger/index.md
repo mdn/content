@@ -1,6 +1,7 @@
 ---
 title: debugger
 slug: Web/JavaScript/Reference/Statements/debugger
+page-type: javascript-statement
 tags:
   - JavaScript
   - Language feature

@@ -1,6 +1,7 @@
 ---
 title: Layout viewport
 slug: Glossary/Layout_viewport
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Layout

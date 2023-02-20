@@ -281,7 +281,7 @@ This calls the [`stop()`](#stopping_the_input_stream) function we covered earlie
 
 When put all together with the rest of the HTML and the CSS not shown above, it looks and works like this:
 
-{{ EmbedLiveSample('Example_of_recording_a_media_element', 600, 440, "", "", "", "camera;microphone") }}
+{{ EmbedLiveSample('Example_of_recording_a_media_element', 600, 440) }}
 
 You can {{LiveSampleLink("Example_of_recording_a_media_element", "view the full demo here")}}, and use your browsers developer tools to inspect the page and look at all the code, including the parts hidden above because they aren't critical to the explanation of how the APIs are being used.
 

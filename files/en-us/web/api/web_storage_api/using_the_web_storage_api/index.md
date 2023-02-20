@@ -2,13 +2,6 @@
 title: Using the Web Storage API
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 page-type: guide
-tags:
-  - API
-  - Guide
-  - Storage
-  - Web Storage API
-  - localStorage
-  - sessionStorage
 browser-compat:
   - api.Window.localStorage
   - api.Window.sessionStorage
@@ -208,8 +201,6 @@ Web Storage also provides a couple of simple methods to remove data. We don't us
 ## Browser compatibility
 
 {{Compat}}
-
-All browsers have varying capacity levels for both localStorage and sessionStorage. Here is a [detailed rundown of all the storage capacities for various browsers](http://dev-test.nemikor.com/web-storage/support-test/).
 
 ## See also
 

@@ -2,16 +2,6 @@
 title: setTimeout()
 slug: Web/API/setTimeout
 page-type: web-api-global-function
-tags:
-  - API
-  - HTML DOM
-  - Intervals
-  - JavaScript timers
-  - Method
-  - Reference
-  - Timers
-  - setTimeout
-  - Polyfill
 browser-compat: api.setTimeout
 ---
 

@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: 18
           cache: yarn
 
       - name: Install all yarn packages
@@ -39,6 +39,7 @@ jobs:
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
           body: |
             All issues auto-fixed
+          token: ${{ secrets.AUTOMERGE_TOKEN }}
 
       - name: Create PR with notice on unfixed issues
         if: failure()
@@ -51,3 +52,4 @@ jobs:
           body: |
             Auto-fix was run, but additional issues found.
             Please review the run log: https://github.com/mdn/content/actions/runs/${{ github.run_id }}
+          token: ${{ secrets.AUTOMERGE_TOKEN }}

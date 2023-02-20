@@ -1,6 +1,7 @@
 ---
 title: from
 slug: Web/SVG/Attribute/From
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

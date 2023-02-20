@@ -1,6 +1,7 @@
 ---
 title: SharedArrayBuffer.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method
@@ -13,7 +14,7 @@ browser-compat: javascript.builtins.SharedArrayBuffer.slice
 
 {{JSRef}}
 
-The **`SharedArrayBuffer.prototype.slice()`** method returns a
+The **`slice()`** method of a {{jsxref("SharedArrayBuffer")}} instance returns a
 new {{jsxref("SharedArrayBuffer")}} whose contents are a copy of this
 `SharedArrayBuffer`'s bytes from begin, inclusive, up to end, exclusive. If
 either begin or end is negative, it refers to an index from the end of the array, as

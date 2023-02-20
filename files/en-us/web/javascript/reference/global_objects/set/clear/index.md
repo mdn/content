@@ -1,6 +1,7 @@
 ---
 title: Set.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Set/clear
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript

@@ -1,6 +1,7 @@
 ---
 title: x-ms-format-detection
 slug: Web/HTML/Global_attributes/x-ms-format-detection
+page-type: html-attribute
 tags:
   - Attribute
   - HTML

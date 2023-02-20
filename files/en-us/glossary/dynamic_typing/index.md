@@ -1,6 +1,7 @@
 ---
 title: Dynamic typing
 slug: Glossary/Dynamic_typing
+page-type: glossary-definition
 tags:
   - CodingScripting
   - ProgrammingLanguage

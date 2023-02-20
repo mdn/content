@@ -1,6 +1,7 @@
 ---
 title: Intl.ListFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions
+page-type: javascript-instance-method
 tags:
   - Internationalization
   - Intl
@@ -61,8 +62,8 @@ const deListFormatter = new Intl.ListFormat("de-DE", { style: "short" });
 
 const usedOptions = de.resolvedOptions();
 console.log(usedOptions.locale); // "de-DE"
-console.log(usedOptions.style);  // "short"
-console.log(usedOptions.type);   // "conjunction" (the default value)
+console.log(usedOptions.style); // "short"
+console.log(usedOptions.type); // "conjunction" (the default value)
 ```
 
 ## Specifications

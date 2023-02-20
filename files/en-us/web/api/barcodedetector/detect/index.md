@@ -2,13 +2,8 @@
 title: BarcodeDetector.detect()
 slug: Web/API/BarcodeDetector/detect
 page-type: web-api-instance-method
-tags:
-  - Barcode Detection API
-  - BarcodeDetector
-  - Method
-  - barcode
-  - shape detection
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BarcodeDetector.detect
 ---
 

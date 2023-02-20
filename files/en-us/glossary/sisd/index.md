@@ -1,6 +1,7 @@
 ---
 title: SISD
 slug: Glossary/SISD
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

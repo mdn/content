@@ -1,6 +1,7 @@
 ---
 title: sidebarAction.ImageDataType
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/ImageDataType
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons
@@ -28,8 +29,6 @@ An [`ImageData`](/en-US/docs/Web/API/ImageData) object.
 {{WebExtExamples}}
 
 > **Note:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

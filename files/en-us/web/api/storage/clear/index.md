@@ -2,12 +2,6 @@
 title: Storage.clear()
 slug: Web/API/Storage/clear
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Storage
-  - Web Storage
 browser-compat: api.Storage.clear
 ---
 
@@ -45,7 +39,7 @@ function populateStorage() {
 }
 ```
 
-> **Note:** For a real world example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> **Note:** For a real-world example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
 ## Specifications
 

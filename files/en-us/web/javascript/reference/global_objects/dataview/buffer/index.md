@@ -1,6 +1,7 @@
 ---
 title: DataView.prototype.buffer
 slug: Web/JavaScript/Reference/Global_Objects/DataView/buffer
+page-type: javascript-instance-accessor-property
 tags:
   - DataView
   - JavaScript

@@ -1,6 +1,7 @@
 ---
 title: Multiplication (*)
 slug: Web/JavaScript/Reference/Operators/Multiplication
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
@@ -26,21 +27,21 @@ x * y
 ### Multiplication using numbers
 
 ```js
- 2 * 2      // 4
--2 * 2     // -4
+2 * 2; // 4
+-2 * 2; // -4
 ```
 
 ### Multiplication with Infinity
 
 ```js
-Infinity * 0         // NaN
-Infinity * Infinity  // Infinity
+Infinity * 0; // NaN
+Infinity * Infinity; // Infinity
 ```
 
 ### Multiplication with non-numbers
 
 ```js
-'foo' * 2 // NaN
+"foo" * 2; // NaN
 ```
 
 ## Specifications

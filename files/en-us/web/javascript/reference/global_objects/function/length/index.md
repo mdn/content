@@ -1,6 +1,7 @@
 ---
 title: Function.prototype.length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
+page-type: javascript-instance-data-property
 tags:
   - Function
   - JavaScript
@@ -10,9 +11,15 @@ browser-compat: javascript.builtins.Function.length
 
 {{JSRef}}
 
-A {{jsxref("Function")}} object's **`length`** property indicates the number of parameters expected by the function.
+The **`length`** data property of a {{jsxref("Function")}} instance indicates the number of parameters expected by the function.
 
-{{EmbedInteractiveExample("pages/js/function-length.html")}}{{js_property_attributes(0,0,1)}}
+{{EmbedInteractiveExample("pages/js/function-length.html")}}
+
+## Value
+
+A number.
+
+{{js_property_attributes(0, 0, 1)}}
 
 ## Description
 

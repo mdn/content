@@ -2,14 +2,6 @@
 title: CustomElementRegistry.whenDefined()
 slug: Web/API/CustomElementRegistry/whenDefined
 page-type: web-api-instance-method
-tags:
-  - API
-  - CustomElementRegistry
-  - Method
-  - Reference
-  - Web Components
-  - custom elements
-  - whenDefined
 browser-compat: api.CustomElementRegistry.whenDefined
 ---
 
@@ -34,7 +26,7 @@ whenDefined(name)
 
 A {{jsxref("Promise")}} that fulfills with the [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements)'s constructor when a custom element becomes defined with the given name. If a custom element has already been defined with the name, the promise will immediately fulfill.
 
-The promise is rejected with a `SyntaxError` {{domxref("DOMException")}} if the name is not a [valid custom element name](<(https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)>).
+The promise is rejected with a `SyntaxError` {{domxref("DOMException")}} if the name is not a [valid custom element name](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name).
 
 ## Examples
 
@@ -55,14 +47,14 @@ content is ready to display.
 ```
 
 ```js
-const container = document.getElementById('menu-container');
-const placeholder = container.querySelector('.menu-placeholder');
+const container = document.getElementById("menu-container");
+const placeholder = container.querySelector(".menu-placeholder");
 // Fetch all the children of menu that are not yet defined.
-const undefinedElements = container.querySelectorAll(':not(:defined)');
+const undefinedElements = container.querySelectorAll(":not(:defined)");
 
-async function removePlaceholder(){
-  const promises = [...undefinedElements].map(
-    (button) => customElements.whenDefined(button.localName)
+async function removePlaceholder() {
+  const promises = [...undefinedElements].map((button) =>
+    customElements.whenDefined(button.localName)
   );
 
   // Wait for all the children to be upgraded

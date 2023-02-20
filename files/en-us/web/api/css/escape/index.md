@@ -2,14 +2,6 @@
 title: CSS.escape()
 slug: Web/API/CSS/escape
 page-type: web-api-static-method
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - Method
-  - Reference
-  - Static
-  - escape()
 browser-compat: api.CSS.escape
 ---
 
@@ -38,12 +30,12 @@ The escaped string.
 
 ### Basic results
 
-```js
-CSS.escape(".foo#bar")        // "\.foo\#bar"
-CSS.escape("()[]{}")          // "\(\)\[\]\\{\\}"
-CSS.escape('--a')             // "--a"
-CSS.escape(0)                 // "\30 ", the Unicode code point of '0' is 30
-CSS.escape('\0')              // "\ufffd", the Unicode REPLACEMENT CHARACTER
+```js-nolint
+CSS.escape(".foo#bar"); // "\.foo\#bar"
+CSS.escape("()[]{}"); // "\(\)\[\]\\{\\}"
+CSS.escape('--a'); // "--a"
+CSS.escape(0); // "\30 ", the Unicode code point of '0' is 30
+CSS.escape('\0'); // "\ufffd", the Unicode REPLACEMENT CHARACTER
 ```
 
 ### In context uses

@@ -88,7 +88,7 @@ The Gecko part of the user agent string changed. The build date (which hadn't be
 - `nsIScriptSecurityManager`
   - : The `checkLoadURIStr()` and `checkLoadURI()` methods have been removed ({{bug("327244")}}).
 - `nsIRefreshURI`
-  - : The `setupRefreshURIFromHeader()` method has a added `principal` parameter ({{bug("327244")}}).
+  - : The `setupRefreshURIFromHeader()` method has a `principal` parameter added ({{bug("327244")}}).
 
 #### New interfaces
 

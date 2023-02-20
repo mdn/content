@@ -46,7 +46,7 @@ The **`OscillatorNode`** interface represents a periodic waveform, such as a sin
 ## Constructor
 
 - {{domxref("OscillatorNode.OscillatorNode", "OscillatorNode()")}}
-  - : Creates a new instance of an `OscillatorNode` object, optionally providing an object specifying default values for the node's [properties](#properties). As an alternative, you can use the {{domxref("BaseAudioContext.createOscillator()")}} factory method; see [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
+  - : Creates a new instance of an `OscillatorNode` object, optionally providing an object specifying default values for the node's [properties](#instance_properties). As an alternative, you can use the {{domxref("BaseAudioContext.createOscillator()")}} factory method; see [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
 ## Instance properties
 

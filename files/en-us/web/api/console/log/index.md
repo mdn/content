@@ -2,17 +2,6 @@
 title: console.log()
 slug: Web/API/console/log
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - HTML-tree
-  - Method
-  - Reference
-  - Web Development
-  - console.log()
-  - difference
-  - web console
 browser-compat: api.console.log
 ---
 

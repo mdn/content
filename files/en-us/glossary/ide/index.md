@@ -1,6 +1,7 @@
 ---
 title: IDE
 slug: Glossary/IDE
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

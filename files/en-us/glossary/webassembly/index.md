@@ -1,6 +1,7 @@
 ---
 title: WebAssembly
 slug: Glossary/WebAssembly
+page-type: glossary-definition
 tags:
   - Infrastructure
 ---

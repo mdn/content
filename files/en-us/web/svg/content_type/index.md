@@ -1,6 +1,7 @@
 ---
 title: Content type
 slug: Web/SVG/Content_type
+page-type: guide
 tags:
   - NeedsTechnicalReview
   - SVG

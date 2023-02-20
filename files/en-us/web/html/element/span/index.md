@@ -1,6 +1,7 @@
 ---
 title: '<span>: The Content Span element'
 slug: Web/HTML/Element/span
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -16,6 +17,50 @@ browser-compat: html.elements.span
 The **`<span>`** [HTML](/en-US/docs/Web/HTML) element is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the {{htmlattrxref("class")}} or {{htmlattrxref("id")}} attributes), or because they share attribute values, such as {{htmlattrxref("lang")}}. It should be used only when no other semantic element is appropriate. `<span>` is very much like a {{HTMLElement("div")}} element, but {{HTMLElement("div")}} is a [block-level element](/en-US/docs/Web/HTML/Block-level_elements) whereas a `<span>` is an [inline element](/en-US/docs/Web/HTML/Inline_elements).
 
 {{EmbedInteractiveExample("pages/tabbed/span.html", "tabbed-shorter")}}
+
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Example
+
+### Example 1
+
+#### HTML
+
+```html
+<p><span>Some text</span></p>
+```
+
+#### Result
+
+{{EmbedLiveSample('Example_1')}}
+
+### Example 2
+
+#### HTML
+
+```html
+<li>
+  <span>
+    <a href="portfolio.html" target="_blank">See my portfolio</a>
+  </span>
+</li>
+```
+
+#### CSS
+
+```css
+li span {
+  background: gold;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Example_2')}}
+
+## Technical summary
 
 <table class="properties">
   <tbody>
@@ -78,48 +123,6 @@ The **`<span>`** [HTML](/en-US/docs/Web/HTML) element is a generic inline contai
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Example
-
-### Example 1
-
-#### HTML
-
-```html
-<p><span>Some text</span></p>
-```
-
-#### Result
-
-{{EmbedLiveSample('Example_1')}}
-
-### Example 2
-
-#### HTML
-
-```html
-<li>
-  <span>
-    <a href="portfolio.html" target="_blank">See my portfolio</a>
-  </span>
-</li>
-```
-
-#### CSS
-
-```css
-li span {
-  background: gold;
-}
-```
-
-#### Result
-
-{{EmbedLiveSample('Example_2')}}
 
 ## Specifications
 

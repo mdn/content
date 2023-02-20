@@ -1,6 +1,7 @@
 ---
 title: Memory management
 slug: Web/JavaScript/Memory_Management
+page-type: guide
 tags:
   - Garbage collection
   - Guide
@@ -47,9 +48,13 @@ function f(a) {
 } // allocates a function (which is a callable object)
 
 // function expressions also allocate an object
-someElement.addEventListener("click", () => {
-  someElement.style.backgroundColor = "blue";
-}, false);
+someElement.addEventListener(
+  "click",
+  () => {
+    someElement.style.backgroundColor = "blue";
+  },
+  false,
+);
 ```
 
 #### Allocation via function calls
@@ -166,11 +171,11 @@ This algorithm is an improvement over the previous one since an object having ze
 
 Currently, all modern engines ship a mark-and-sweep garbage collector. All improvements made in the field of JavaScript garbage collection (generational/incremental/concurrent/parallel garbage collection) over the last few years are implementation improvements of this algorithm, but not improvements over the garbage collection algorithm itself nor its reduction of the definition of when "an object is no longer needed".
 
-The immediate benefit of this approach is that cycles is no longer a problem. In the first example above, after the function call returns, the two objects are no longer referenced by any resource that is reachable from the global object. Consequently, they will be found unreachable by the garbage collector and have their allocated memory reclaimed.
+The immediate benefit of this approach is that cycles are no longer a problem. In the first example above, after the function call returns, the two objects are no longer referenced by any resource that is reachable from the global object. Consequently, they will be found unreachable by the garbage collector and have their allocated memory reclaimed.
 
 However, the inability to manually control garbage collection remains. There are times when it would be convenient to manually decide when and what memory is released. In order to release the memory of an object, it needs to be made explicitly unreachable. It is also not possible to programmatically trigger garbage collection in JavaScript — and will likely never be within the core language, although engines may expose APIs behind opt-in flags.
 
-## Configuring engine memory model
+## Configuring an engine's memory model
 
 JavaScript engines typically offer flags that expose the memory model. For example, Node.js offers additional options and tools that expose the underlying V8 mechanisms for configuring and debugging memory issues. This configuration may not be available in browsers, and even less so for web pages (via HTTP headers, etc.).
 
