@@ -23,6 +23,8 @@ A `TypeError` may be thrown when:
 
 `TypeError` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
 
+`TypeError` is a subclass of {{jsxref("Error")}}.
+
 ## Constructor
 
 - {{jsxref("Global_Objects/TypeError/TypeError", "TypeError()")}}
@@ -30,20 +32,16 @@ A `TypeError` may be thrown when:
 
 ## Instance properties
 
-- {{jsxref("Error.prototype.message", "TypeError.prototype.message")}}
-  - : Error message. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.name", "TypeError.prototype.name")}}
-  - : Error name. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.cause", "TypeError.prototype.cause")}}
-  - : Error cause. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "TypeError.prototype.fileName")}} {{non-standard_inline}}
-  - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "TypeError.prototype.lineNumber")}} {{non-standard_inline}}
-  - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "TypeError.prototype.columnNumber")}} {{non-standard_inline}}
-  - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "TypeError.prototype.stack")}} {{non-standard_inline}}
-  - : Stack trace. Inherited from {{jsxref("Error")}}.
+_Also inherits instance properties from its parent {{jsxref("Error")}}_.
+
+These properties are defined on `TypeError.prototype` and shared by all `TypeError` instances.
+
+- {{jsxref("Error/name", "TypeError.prototype.name")}}
+  - : Represents the name for the type of error. For `TypeError.prototype.name`, the initial value is `"TypeError"`.
+
+## Instance methods
+
+_Inherits instance methods from its parent {{jsxref("Error")}}_.
 
 ## Examples
 
