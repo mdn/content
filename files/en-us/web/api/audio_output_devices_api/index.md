@@ -20,6 +20,10 @@ This API allows applications to provide this same functionality from within a we
 Setting a particular audio output device requires explicit user permission, as the user may be in a location where playing audio is not appropriate through some output devices.
 For more information see [Security requirements](#security-requirements) below.
 
+Audio devices may arbitrarily connect and disconnect.
+Applications that wish to react to this kind of change can listen to the [`devicechange` event](/en-US/docs/Web/API/MediaDevices/devicechange_event) and use [`enumerateDevices()`](/en-US/docs/Web/API/MediaDevices/enumerateDevices) to determine if `sinkId` is present in the returned devices.
+This might trigger, for example, pausing or unpausing playback.
+
 ## Interfaces
 
 ### Extensions to other interfaces
