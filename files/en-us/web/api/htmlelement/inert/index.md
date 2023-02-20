@@ -2,8 +2,6 @@
 title: HTMLElement.inert
 slug: Web/API/HTMLElement/inert
 page-type: web-api-instance-property
-- DOM
-- Property
 browser-compat: api.HTMLElement.inert
 ---
 
