@@ -2,12 +2,6 @@
 title: File.lastModified
 slug: Web/API/File/lastModified
 page-type: web-api-instance-property
-tags:
-  - API
-  - File API
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.File.lastModified
 ---
 
