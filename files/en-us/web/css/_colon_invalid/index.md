@@ -2,13 +2,6 @@
 title: ":invalid"
 slug: Web/CSS/:invalid
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.invalid
 ---
 

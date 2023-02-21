@@ -2,18 +2,8 @@
 title: ":-moz-locale-dir(rtl)"
 slug: Web/CSS/:-moz-locale-dir_rtl
 page-type: css-pseudo-class
-tags:
-  - ":-moz-locale-dir"
-  - CSS
-  - CSS:Mozilla Extensions
-  - Localization
-  - NeedsCompatTable
-  - NeedsExample
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Right-to-left
-  - Selector
+status:
+  - non-standard
 ---
 
 {{CSSRef}}{{Non-standard_header}}

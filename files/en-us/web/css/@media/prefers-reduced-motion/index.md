@@ -2,13 +2,6 @@
 title: prefers-reduced-motion
 slug: Web/CSS/@media/prefers-reduced-motion
 page-type: css-media-feature
-tags:
-  - "@media"
-  - Accessibility
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
 browser-compat: css.at-rules.media.prefers-reduced-motion
 ---
 
