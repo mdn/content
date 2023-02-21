@@ -342,13 +342,13 @@ Normal styles declared inside layers receive the lowest priority and are sorted 
 
 Next up are any styles declared outside of layers. The styles in `C.css` were not imported into a layer and will override any conflicting styles from `firstLayer` and `secondLayer`. Normal styles not declared in a layer always have higher precedence than normal-importance layered styles.
 
-Inline styles are declared using the [`style` attribute](/en-US/docs/Web/HTML/Global_attributes/style). Normal styles declared in this way will take precedence over normal styles found in the unlayered and layered style sheets (`firstLayer – A.css`, `secondLayer – B.css`, `C.css`). 
+Inline styles are declared using the [`style` attribute](/en-US/docs/Web/HTML/Global_attributes/style). Normal styles declared in this way will take precedence over normal styles found in the unlayered and layered style sheets (`firstLayer – A.css`, `secondLayer – B.css`, `C.css`).
 
 Animating styles have higher precedence than all normal styles, including inline normal styles.
 
 Important styles (`!important`) take precedence over any styles previously mentioned on our list. They are sorted in reverse order of normal styles. Any important styles declared outside of a layer have less precedence than those declared within a layer. Important styles found within layers are also sorted in order of layer creation. For important styles, the last created layer has the lowest precedence, and the first created layer has the highest precedence among declared. layers.
 
-Inline important styles again have higher precedence than important styles declared elsewhere. 
+Inline important styles again have higher precedence than important styles declared elsewhere.
 
 Transitioning styles have the highest precedence. When a normal property value is being transitioned, it takes precedence over all other property value declarations, even inline important styles; but only while transitioning.
 
