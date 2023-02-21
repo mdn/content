@@ -148,6 +148,8 @@ Most of the internal methods are straightforward in what they do. The only two t
 - {{jsxref("Global_Objects/Proxy/Proxy", "Proxy()")}}
   - : Creates a new `Proxy` object.
 
+> **Note:** There's no `Proxy.prototype` property, so `Proxy` instances do not have any special properties or methods.
+
 ## Static methods
 
 - {{jsxref("Proxy.revocable()")}}

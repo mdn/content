@@ -221,8 +221,10 @@ Unlike [conversion to primitives](/en-US/docs/Web/JavaScript/Data_structures#pri
 
 ## Instance properties
 
+These properties are defined on `Object.prototype` and shared by all `Object` instances.
+
 - {{jsxref("Object.prototype.constructor")}}
-  - : Specifies the function that creates an object's prototype.
+  - : The constructor function that created the instance object. For plain `Object` instances, the initial value is the {{jsxref("Object/Object", "Object")}} constructor. Instances of other constructors each inherit the `constructor` property from their respective `Constructor.prototype` object.
 - [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{Deprecated_Inline}}
   - : Points to the object which was used as prototype when the object was instantiated.
 

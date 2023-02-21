@@ -143,6 +143,13 @@ When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Nu
 - {{jsxref("Number.parseInt()")}}
   - : This is the same as the global {{jsxref("parseInt", "parseInt()")}} function.
 
+## Instance properties
+
+These properties are defined on `Number.prototype` and shared by all `Number` instances.
+
+- {{jsxref("Object/constructor", "Number.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Number` instances, the initial value is the {{jsxref("Number/Number", "Number")}} constructor.
+
 ## Instance methods
 
 - {{jsxref("Number.prototype.toExponential()")}}

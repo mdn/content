@@ -85,14 +85,18 @@ The WebAssembly Threads proposal also defines a new set of [atomic](https://gith
 
 ## Instance properties
 
-- `SharedArrayBuffer.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"SharedArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+These properties are defined on `SharedArrayBuffer.prototype` and shared by all `SharedArrayBuffer` instances.
+
 - {{jsxref("SharedArrayBuffer.prototype.byteLength")}}
   - : The size, in bytes, of the array. This is established when the array is constructed and can be changed using the {{jsxref("SharedArrayBuffer.prototype.grow()")}} method.
 - {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}} {{experimental_inline}}
-  - : The read-only maximum length, in bytes, the `SharedArrayBuffer` can be grown to. This is established when the array is constructed and cannot be changed.
+  - : The read-only maximum length, in bytes, that the `SharedArrayBuffer` can be grown to. This is established when the array is constructed and cannot be changed.
 - {{jsxref("SharedArrayBuffer.prototype.growable")}} {{experimental_inline}}
-  - : Read-only. Returns `true` if the {{jsxref("SharedArrayBuffer")}} can be grown, or `false` if not.
+  - : Read-only. Returns `true` if the `SharedArrayBuffer` can be grown, or `false` if not.
+- {{jsxref("Object/constructor", "SharedArrayBuffer.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `SharedArrayBuffer` instances, the initial value is the {{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer")}} constructor.
+- `SharedArrayBuffer.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"SharedArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

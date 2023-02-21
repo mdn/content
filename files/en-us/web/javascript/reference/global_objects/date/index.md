@@ -47,6 +47,13 @@ In addition to methods to read and alter individual components of the local date
 - {{jsxref("Date.UTC()")}}
   - : Accepts the same parameters as the longest form of the constructor (i.e. 2 to 7) and returns the number of milliseconds since January 1, 1970, 00:00:00 UTC, with leap seconds ignored.
 
+## Instance properties
+
+These properties are defined on `Date.prototype` and shared by all `Date` instances.
+
+- {{jsxref("Object/constructor", "Date.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Date` instances, the initial value is the {{jsxref("Date/Date", "Date")}} constructor.
+
 ## Instance methods
 
 - {{jsxref("Date.prototype.getDate()")}}

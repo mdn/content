@@ -54,6 +54,8 @@ Besides the generic `Error` constructor, there are other core error constructors
 
 These properties are defined on `Error.prototype` and shared by all `Error` instances.
 
+- {{jsxref("Object/constructor", "Error.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Error` instances, the initial value is the {{jsxref("Error/Error", "Error")}} constructor.
 - {{jsxref("Error.prototype.name")}}
   - : Represents the name for the type of error. For `Error.prototype.name`, the initial value is `"Error"`. Subclasses like {{jsxref("TypeError")}} and {{jsxref("SyntaxError")}} provide their own `name` properties.
 - {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}

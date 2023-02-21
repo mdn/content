@@ -30,6 +30,8 @@ _Also inherits instance properties from its parent {{jsxref("Error")}}_.
 
 These properties are defined on `TypeError.prototype` and shared by all `TypeError` instances.
 
+- {{jsxref("Object/constructor", "TypeError.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `TypeError` instances, the initial value is the {{jsxref("TypeError/TypeError", "TypeError")}} constructor.
 - {{jsxref("Error/name", "TypeError.prototype.name")}}
   - : Represents the name for the type of error. For `TypeError.prototype.name`, the initial value is `"TypeError"`.
 
