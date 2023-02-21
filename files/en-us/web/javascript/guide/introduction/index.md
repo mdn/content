@@ -2,12 +2,6 @@
 title: Introduction
 slug: Web/JavaScript/Guide/Introduction
 page-type: guide
-tags:
-  - Beginner
-  - Guide
-  - Introduction
-  - JavaScript
-  - "l10n:priority"
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
