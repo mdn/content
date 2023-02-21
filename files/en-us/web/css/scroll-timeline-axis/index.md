@@ -12,10 +12,10 @@ browser-compat: css.properties.scroll-timeline-axis
 The **`scroll-timeline-axis`** [CSS](/en-US/docs/Web/CSS) property can be used to specify the scrollbar that will be used to provide the timeline for a scroll-timeline animation.
 
 A scroll-timeline animation is one in which the animation progress is determined by a scrollbar position rather than time, or some other dimension.
-The [`scroll-timeline-name`](/en-US/docs/Web/CSS/scroll-timeline-axis) property defines a name that can be used to identify an element as the source of a scroll-timeline; the `scroll-timeline-axis` is used to indicate whether the horizontal or vertical scrollbar in that element provides the timeline.
+The [`scroll-timeline-name`](/en-US/docs/Web/CSS/scroll-timeline-name) property defines a name that can be used to identify an element as the source of a scroll-timeline; the `scroll-timeline-axis` is used to indicate whether the horizontal or vertical scrollbar in that element provides the timeline.
 Note that if the element does not display a scrollbar in the axis dimension, then no timeline will be created.
 
-The `scroll-timeline-axis` (and `scroll-timeline-name`) property can also be set using the [`scroll-timeline`](/en-US/docs/Web/CSS/scroll-timeline-name) shorthand property.
+The `scroll-timeline-axis` (and `scroll-timeline-name`) property can also be set using the [`scroll-timeline`](/en-US/docs/Web/CSS/scroll-timeline) shorthand property.
 
 ## Syntax
 
@@ -139,6 +139,5 @@ Scroll the horizontal bar at the bottom to see the animation.
 
 ## See also
 
-- [`scroll-timeline-name`](/en-US/docs/Web/CSS/scroll-timeline-axis)
 - [`scroll-timeline`](/en-US/docs/Web/CSS/scroll-timeline)
 - [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline)
