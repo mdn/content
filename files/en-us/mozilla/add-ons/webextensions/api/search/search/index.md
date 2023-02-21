@@ -17,7 +17,7 @@ browser-compat: webextensions.api.search.search
 
 Perform a search using the search engine specified or the default search engine if no search engine is specified.
 
-The results are displayed in the current tab, a new tab, or a new window according to the `disposition` property or in the tab specified in the `tabId` property. If neither is specified, the results display in the current tab.
+The results are displayed in the current tab, a new tab, or a new window according to the `disposition` property or in the tab specified in the `tabId` property. If neither is specified, the results display in a new tab.
 
 To use this function, your extension must have the `"search"` [manifest permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
@@ -38,7 +38,7 @@ browser.search.search(
   - : `object`. An object with the following properties:
 
     - `disposition` {{optional_inline}}
-      - : `string`. The location where the search results are displayed. Valid values are `CURRENT_TAB`, `NEW_TAB`, and `NEW_WINDOW`. Defaults to `CURRENT_TAB`. Cannot be specified with `tabId`.
+      - : `string`. The location where the search results are displayed. Valid values are `CURRENT_TAB`, `NEW_TAB`, and `NEW_WINDOW`. Defaults to `NEW_TAB`. Cannot be specified with `tabId`.
     - `engine` {{optional_inline}}
       - : `string`. The name of the search engine. If the search engine name doesn't exist, the function throws an error. If this property is omitted, the default search engine is used.
     - `query`
