@@ -2,13 +2,6 @@
 title: mix-blend-mode
 slug: Web/CSS/mix-blend-mode
 page-type: css-property
-tags:
-  - Blending
-  - CSS
-  - CSS Property
-  - Compositing
-  - Compositing and Blending
-  - recipe:css-property
 browser-compat: css.properties.mix-blend-mode
 ---
 

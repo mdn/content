@@ -2,13 +2,8 @@
 title: Microsoft CSS extensions
 slug: Web/CSS/Microsoft_Extensions
 page-type: landing-page
-tags:
-  - CSS
-  - CSS:Microsoft Extensions
-  - Guide
-  - Non-standard
-  - Overview
-  - Reference
+status:
+  - non-standard
 ---
 
 {{CSSRef}}

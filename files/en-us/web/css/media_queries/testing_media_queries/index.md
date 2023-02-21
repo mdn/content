@@ -2,17 +2,6 @@
 title: Testing media queries programmatically
 slug: Web/CSS/Media_Queries/Testing_media_queries
 page-type: guide
-tags:
-  - Advanced
-  - CSS
-  - DOM
-  - Guide
-  - JavaScript
-  - Media Queries
-  - MediaQueryList
-  - Responsive Design
-  - Web
-  - matchMedia
 browser-compat: api.MediaQueryList
 ---
 
