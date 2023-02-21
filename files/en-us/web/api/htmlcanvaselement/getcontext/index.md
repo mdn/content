@@ -41,6 +41,9 @@ getContext(contextType, contextAttributes)
       object representing a three-dimensional rendering context. This context is only
       available on browsers that implement [WebGL](/en-US/docs/Web/API/WebGL_API)
       version 2 (OpenGL ES 3.0). {{experimental_inline}}
+    - `"webgpu"`, which will create a
+      {{domxref("GPUCanvasContext")}} object representing a three-dimensional
+      rendering context for GPU render pipelines. This context is only available on browsers that implement [WebGPU](/en-US/docs/Web/API/WebGPU_API).
     - `"bitmaprenderer"` which will create an
       {{domxref("ImageBitmapRenderingContext")}} which only provides functionality to
       replace the content of the canvas with a given {{domxref("ImageBitmap")}}.
@@ -139,6 +142,10 @@ getContext(contextType, contextAttributes)
         {{domxref("WebGLRenderingContext.makeXRCompatible()")}} method the moment you
         intend to start an XR session.
 
+    WebGPU context attributes:
+
+    - The WebGPU specification does not define any specific context attributes for `getContext()`. Instead, it provides configuration options via the {{domxref("GPUCanvasContext.configure()")}} method.
+
 ### Return value
 
 A rendering context which is either a
@@ -146,7 +153,8 @@ A rendering context which is either a
 - {{domxref("CanvasRenderingContext2D")}} for `"2d"`,
 - {{domxref("WebGLRenderingContext")}} for `"webgl"` and
   `"experimental-webgl"`,
-- {{domxref("WebGL2RenderingContext")}} for `"webgl2"` or
+- {{domxref("WebGL2RenderingContext")}} for `"webgl2"`
+- {{domxref("GPUCanvasContext")}} for `"webgpu"` or
 - {{domxref("ImageBitmapRenderingContext")}} for `"bitmaprenderer"`.
 
 If the `contextType` doesn't match a possible drawing context, or differs
@@ -188,3 +196,4 @@ Now you have the [2D rendering context](/en-US/docs/Web/API/CanvasRenderingConte
   {{domxref("WebGLRenderingContext")}} and {{domxref("WebGL2RenderingContext")}} and
   {{domxref("ImageBitmapRenderingContext")}}.
 - Available color spaces: [sRGB color space](https://en.wikipedia.org/wiki/SRGB) and [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
+- The [WebGPU API](/en-US/docs/Web/API/WebGPU_API)

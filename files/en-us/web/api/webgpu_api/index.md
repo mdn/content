@@ -475,7 +475,7 @@ You can find more information about WebGPU error handling in the explainer — s
 - {{domxref("GPUBuffer")}}
   - : xxx
 - {{domxref("GPUCanvasContext")}}
-  - : xxx
+  - : Represents the WebGPU rendering context of a {{htmlelement("canvas")}} element, returned via a {{domxref("HTMLCanvasElement.getContext()")}} call with a `contextType` of `webgpu`.
 - {{domxref("GPUCommandBuffer")}}
   - : xxx
 - {{domxref("GPUCommandEncoder")}}
@@ -535,8 +535,8 @@ You can find more information about WebGPU error handling in the explainer — s
 
 ## Extensions to other interfaces
 
-- {{domxref("HTMLCanvasElement.getContext()")}}
-  - : xxx
+- {{domxref("HTMLCanvasElement.getContext()")}} — the `webgpu` `contextType`
+  - : Invoking `getContext()` with the `webgpu` `contextType` returns a {{domxref("GPUCanvasContext")}} object instance, which can then be configured with {{domxref("GPUCanvasContext.configure()")}}.
 - {{domxref("Navigator.gpu")}} / {{domxref("WorkerNavigator.gpu")}}
   - : The entry point for the API — returns the {{domxref("GPU")}} object for the current context.
 

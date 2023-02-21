@@ -27,6 +27,8 @@ _Doesn't inherit any properties._
   - : Returns the amount of device memory in gigabytes. This value is an approximation given by rounding to the nearest power of 2 and dividing that number by 1024.
 - {{domxref("Navigator.geolocation")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Geolocation")}} object allowing accessing the location of the device.
+- {{domxref("Navigator.gpu")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns the {{domxref("GPU")}} object for the current browsing context. The entry point for the {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}}.
 - {{domxref("Navigator.hid")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an {{domxref("HID")}} object providing methods
     for connecting to HID devices, listing attached HID devices, and event
