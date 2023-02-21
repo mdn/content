@@ -2,13 +2,6 @@
 title: Uint32Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint32Array
 page-type: javascript-class
-tags:
-  - Class
-  - Uint32Array
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.Uint32Array
 ---
 
