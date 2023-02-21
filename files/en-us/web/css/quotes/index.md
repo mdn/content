@@ -2,14 +2,6 @@
 title: quotes
 slug: Web/CSS/quotes
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Generated Content
-  - Layout
-  - Reference
-  - Web
-  - recipe:css-property
 browser-compat: css.properties.quotes
 ---
 
