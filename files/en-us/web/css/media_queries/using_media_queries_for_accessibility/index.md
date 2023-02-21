@@ -2,12 +2,6 @@
 title: Using media queries for accessibility
 slug: Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility
 page-type: guide
-tags:
-  - "@media"
-  - Accessibility
-  - Animation
-  - CSS
-  - Guide
 ---
 
 [**Media Queries**](/en-US/docs/Web/CSS/@media/) can be used to help users with disabilities better experience your website.

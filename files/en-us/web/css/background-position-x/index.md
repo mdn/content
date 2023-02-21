@@ -2,12 +2,6 @@
 title: background-position-x
 slug: Web/CSS/background-position-x
 page-type: css-property
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.background-position-x
 ---
 

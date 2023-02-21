@@ -2,13 +2,6 @@
 title: ":optional"
 slug: Web/CSS/:optional
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.optional
 ---
 

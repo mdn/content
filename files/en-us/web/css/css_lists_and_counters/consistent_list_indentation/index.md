@@ -2,10 +2,6 @@
 title: Consistent list indentation
 slug: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - NeedsUpdate
 ---
 
 {{CSSRef}}

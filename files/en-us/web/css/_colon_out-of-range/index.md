@@ -2,14 +2,6 @@
 title: ":out-of-range"
 slug: Web/CSS/:out-of-range
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Selectors
-  - UI Selector
 browser-compat: css.selectors.out-of-range
 ---
 

@@ -2,11 +2,6 @@
 title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
 page-type: javascript-class
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Proxy
 browser-compat: javascript.builtins.Proxy
 ---
 

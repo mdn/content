@@ -2,13 +2,6 @@
 title: CSS Logical Properties and Values
 slug: Web/CSS/CSS_Logical_Properties
 page-type: css-module
-tags:
-  - CSS
-  - CSS Logical Properties
-  - Guide
-  - Landing
-  - Overview
-  - Reference
 spec-urls: https://drafts.csswg.org/css-logical/
 ---
 

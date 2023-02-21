@@ -2,13 +2,6 @@
 title: ":valid"
 slug: Web/CSS/:valid
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.valid
 ---
 

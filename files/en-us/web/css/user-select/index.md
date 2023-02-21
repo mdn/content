@@ -2,14 +2,6 @@
 title: user-select
 slug: Web/CSS/user-select
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Property
-  - Reference
-  - Selection
-  - recipe:css-property
-  - user-select
 browser-compat: css.properties.user-select
 ---
 

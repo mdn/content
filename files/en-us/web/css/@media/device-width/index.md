@@ -2,13 +2,8 @@
 title: device-width
 slug: Web/CSS/@media/device-width
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Deprecated
-  - Media Queries
-  - Reference
-  - media feature
+status:
+  - deprecated
 browser-compat: css.at-rules.media.device-width
 ---
 

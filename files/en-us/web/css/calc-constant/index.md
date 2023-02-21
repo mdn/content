@@ -2,13 +2,6 @@
 title: <calc-constant>
 slug: Web/CSS/calc-constant
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
 browser-compat: css.types.calc-constant
 ---
 

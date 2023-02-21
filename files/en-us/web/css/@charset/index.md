@@ -2,12 +2,6 @@
 title: "@charset"
 slug: Web/CSS/@charset
 page-type: css-at-rule
-tags:
-  - At-rule
-  - CSS
-  - Layout
-  - Reference
-  - Web
 browser-compat: css.at-rules.charset
 ---
 

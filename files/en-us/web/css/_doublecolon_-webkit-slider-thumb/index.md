@@ -2,16 +2,8 @@
 title: "::-webkit-slider-thumb"
 slug: Web/CSS/::-webkit-slider-thumb
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - NeedsBrowserCompatibility
-  - NeedsCompatTable
-  - NeedsExample
-  - NeedsMobileBrowserCompatibility
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-webkit-slider-thumb
 ---
 

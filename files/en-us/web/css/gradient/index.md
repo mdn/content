@@ -2,14 +2,6 @@
 title: <gradient>
 slug: Web/CSS/gradient
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Images
-  - Data Type
-  - Graphics
-  - Layout
-  - Reference
 browser-compat: css.types.image.gradient
 ---
 
