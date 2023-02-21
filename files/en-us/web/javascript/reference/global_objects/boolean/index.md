@@ -2,11 +2,6 @@
 title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
 page-type: javascript-class
-tags:
-  - Boolean
-  - Class
-  - JavaScript
-  - Reference
 browser-compat: javascript.builtins.Boolean
 ---
 

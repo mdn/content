@@ -2,13 +2,6 @@
 title: Int16Array
 slug: Web/JavaScript/Reference/Global_Objects/Int16Array
 page-type: javascript-class
-tags:
-  - Class
-  - Int16Array
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.Int16Array
 ---
 

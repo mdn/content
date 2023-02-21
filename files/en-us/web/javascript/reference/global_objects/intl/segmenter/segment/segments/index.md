@@ -2,12 +2,6 @@
 title: Segments
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments
 page-type: javascript-class
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
 browser-compat: javascript.builtins.Intl.Segments
 ---
 
