@@ -35,11 +35,11 @@ The [`ArrayBuffer()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayB
 - `ArrayBuffer.prototype[@@toStringTag]`
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"ArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("ArrayBuffer.prototype.byteLength")}}
-  - : The size, in bytes, of the `ArrayBuffer`. This is established when the array is constructed and cannot be changed.
+  - : The size, in bytes, of the `ArrayBuffer`. This is established when the array is constructed and can be changed using the {{jsxref("ArrayBuffer.prototype.resize()")}} method.
 - {{jsxref("ArrayBuffer.prototype.maxByteLength")}} {{experimental_inline}}
-  - : The maximum length, in bytes, that the `ArrayBuffer` can be resized to. This is established when the array is constructed and cannot be changed.
+  - : The read-only maximum length, in bytes, that the `ArrayBuffer` can be resized to. This is established when the array is constructed and cannot be changed.
 - {{jsxref("ArrayBuffer.prototype.resizable")}} {{experimental_inline}}
-  - : Returns `true` if the `ArrayBuffer` can be resized, or `false` if not.
+  - : Read-only. Returns `true` if the `ArrayBuffer` can be resized, or `false` if not.
 
 ## Instance methods
 
