@@ -2,16 +2,6 @@
 title: content-visibility
 slug: Web/CSS/content-visibility
 page-type: css-property
-tags:
-  - CSS
-  - CSS Containment
-  - CSS Property
-  - Layout
-  - Paint
-  - Reference
-  - Style
-  - Visibility
-  - Web
 browser-compat: css.properties.content-visibility
 ---
 
