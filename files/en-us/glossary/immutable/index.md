@@ -2,8 +2,6 @@
 title: Immutable
 slug: Glossary/Immutable
 page-type: glossary-definition
-tags:
-  - CodingScripting
 ---
 
 An immutable value is one whose content cannot be changed without creating an entirely new value.

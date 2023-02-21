@@ -2,11 +2,6 @@
 title: Transport Layer Security (TLS)
 slug: Glossary/TLS
 page-type: glossary-definition
-tags:
-  - Cryptography
-  - Infrastructure
-  - Security
-  - Web Performance
 ---
 
 **Transport Layer Security (TLS)**, formerly known as {{Glossary("SSL", "Secure Sockets Layer (SSL)")}}, is a {{Glossary("protocol")}} used by applications to communicate securely across a network, preventing tampering with and eavesdropping on email, web browsing, messaging, and other protocols. Both SSL and TLS are client / server protocols that ensure communication privacy by using cryptographic protocols to provide security over a network. When a server and client communicate using TLS, it ensures that no third party can eavesdrop or tamper with any message.

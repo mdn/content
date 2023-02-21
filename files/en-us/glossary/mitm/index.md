@@ -2,8 +2,6 @@
 title: MitM
 slug: Glossary/MitM
 page-type: glossary-definition
-tags:
-  - Security
 ---
 
 A **manipulator-in-the-middle attack** (MitM) intercepts a communication between two systems. For example, a Wi-Fi router can be compromised.

@@ -2,16 +2,6 @@
 title: Base64
 slug: Glossary/Base64
 page-type: glossary-definition
-tags:
-  - Advanced
-  - Base64
-  - JavaScript
-  - Typed Arrays
-  - URI
-  - URL
-  - Unicode Problem
-  - atob()
-  - btoa()
 ---
 
 **Base64** is a group of similar [binary-to-text encoding](https://en.wikipedia.org/wiki/Binary-to-text_encoding) schemes that represent binary data in an ASCII string format by translating it into a radix-64 representation. The term _Base64_ originates from a specific [MIME content transfer encoding](https://en.wikipedia.org/wiki/MIME#Content-Transfer-Encoding).
