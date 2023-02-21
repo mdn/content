@@ -2,14 +2,6 @@
 title: class expression
 slug: Web/JavaScript/Reference/Operators/class
 page-type: javascript-operator
-tags:
-  - Classes
-  - ECMAScript 2015
-  - Expression
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.class
 ---
 
