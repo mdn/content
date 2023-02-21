@@ -144,7 +144,7 @@ filter: contrast(175%) brightness(103%);
 
 ### Interpolation
 
-When animated, if both the beginning and end filters have a function list of the same length without {{cssxref("url","url()")}} in the same order, each of their filter functions is {{Glossary("interpolation", "interpolated")}} according to its specific rules.
+When animated, if both the beginning and end filters have a function list of the same length without {{cssxref("url","url()")}} in the same order, each of their filter functions is {{Glossary("interpolation", "interpolated")}} according to the filter function's specific rules.
 
 If the filter lists are of different lengths, the missing equivalent filter functions from the longer list are added to the end of the shorter list using their initial, no filter modification values, then all filter functions are interpolated according to their specific rules. Otherwise, discrete interpolation is used.
 
