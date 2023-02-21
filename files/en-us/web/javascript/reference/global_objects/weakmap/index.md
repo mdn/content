@@ -228,7 +228,7 @@ const buttons = document.querySelectorAll(".button");
 const clicked = new WeakMap();
 buttons.forEach((button) => {
   clicked.set(button, false);
-  buttons.addEventListener("click", () => {
+  button.addEventListener("click", () => {
     clicked.set(button, true);
     const currentButtons = [...document.querySelectorAll(".button")];
     if (currentButtons.every((button) => clicked.get(button))) {
