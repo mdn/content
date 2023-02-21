@@ -2,14 +2,6 @@
 title: export
 slug: Web/JavaScript/Reference/Statements/export
 page-type: javascript-statement
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Modules
-  - Reference
-  - Statement
-  - export
 browser-compat: javascript.statements.export
 ---
 
