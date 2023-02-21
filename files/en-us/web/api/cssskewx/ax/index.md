@@ -2,15 +2,8 @@
 title: CSSSkewX.ax
 slug: Web/API/CSSSkewX/ax
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSSkewX
-  - CSSTransformComponent
-  - CSSTransformValue
-  - Experimental
-  - Houdini
-  - Property
+status:
+  - experimental
 browser-compat: api.CSSSkewX.ax
 ---
 

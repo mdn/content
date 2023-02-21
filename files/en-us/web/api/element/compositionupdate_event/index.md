@@ -2,9 +2,6 @@
 title: 'Element: compositionupdate event'
 slug: Web/API/Element/compositionupdate_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
 browser-compat: api.Element.compositionupdate_event
 ---
 

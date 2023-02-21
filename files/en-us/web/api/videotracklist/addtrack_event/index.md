@@ -2,11 +2,6 @@
 title: 'VideoTrackList: addtrack event'
 slug: Web/API/VideoTrackList/addtrack_event
 page-type: web-api-event
-tags:
-  - API
-  - Reference
-  - events
-  - Event
 browser-compat: api.VideoTrackList.addtrack_event
 ---
 

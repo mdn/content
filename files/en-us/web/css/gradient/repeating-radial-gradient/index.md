@@ -2,16 +2,6 @@
 title: repeating-radial-gradient()
 slug: Web/CSS/gradient/repeating-radial-gradient
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - Function
-  - Gradients
-  - Graphics
-  - Layout
-  - Reference
-  - Web
 browser-compat: css.types.image.gradient.repeating-radial-gradient
 ---
 

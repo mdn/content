@@ -2,12 +2,6 @@
 title: Document.body
 slug: Web/API/Document/body
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
 browser-compat: api.Document.body
 ---
 

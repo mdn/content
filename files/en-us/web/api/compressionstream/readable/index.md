@@ -2,12 +2,6 @@
 title: CompressionStream.readable
 slug: Web/API/CompressionStream/readable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - readable
-  - CompressionStream
 browser-compat: api.CompressionStream.readable
 ---
 

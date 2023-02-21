@@ -2,15 +2,6 @@
 title: SecurityPolicyViolationEvent.effectiveDirective
 slug: Web/API/SecurityPolicyViolationEvent/effectiveDirective
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSP
-  - HTTP
-  - Property
-  - Reference
-  - Security
-  - SecurityPolicyViolationEvent
-  - effectiveDirective
 browser-compat: api.SecurityPolicyViolationEvent.effectiveDirective
 ---
 

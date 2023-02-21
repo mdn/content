@@ -2,13 +2,8 @@
 title: VideoDecoder.decodeQueueSize
 slug: Web/API/VideoDecoder/decodeQueueSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - decodeQueueSize
-  - VideoDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoDecoder.decodeQueueSize
 ---
 

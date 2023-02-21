@@ -2,11 +2,6 @@
 title: CSS Declaration
 slug: Web/API/CSS_Object_Model/CSS_Declaration
 page-type: guide
-tags:
-  - CSS
-  - CSS Object Model
-  - CSS Declaration
-  - Reference
 spec-urls: https://drafts.csswg.org/cssom/#css-declarations
 ---
 

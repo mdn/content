@@ -2,19 +2,14 @@
 title: Uint8ClampedArray
 slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 page-type: javascript-class
-tags:
-  - Class
-  - Uint8ClampedArray
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.Uint8ClampedArray
 ---
 
 {{JSRef}}
 
 The **`Uint8ClampedArray`** typed array represents an array of 8-bit unsigned integers clamped to 0-255; if you specified a value that is out of the range of \[0,255], 0 or 255 will be set instead; if you specify a non-integer, the nearest integer will be set. The contents are initialized to `0`. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
+
+`Uint8ClampedArray` is a subclass of the hidden {{jsxref("TypedArray")}} class.
 
 ## Constructor
 

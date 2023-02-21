@@ -2,17 +2,9 @@
 title: VRDisplayCapabilities.maxLayers
 slug: Web/API/VRDisplayCapabilities/maxLayers
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplayCapabilities
-  - Virtual Reality
-  - WebVR
-  - maxLayers
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplayCapabilities.maxLayers
 ---
 

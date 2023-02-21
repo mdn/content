@@ -2,15 +2,6 @@
 title: FileSystemSyncAccessHandle.read()
 slug: Web/API/FileSystemSyncAccessHandle/read
 page-type: web-api-instance-method
-tags:
-  - read
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemSyncAccessHandle
-  - Method
-  - stream
-  - working with files
 browser-compat: api.FileSystemSyncAccessHandle.read
 ---
 

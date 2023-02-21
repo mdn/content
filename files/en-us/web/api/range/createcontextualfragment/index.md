@@ -2,13 +2,6 @@
 title: Range.createContextualFragment()
 slug: Web/API/Range/createContextualFragment
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - Range
-  - Reference
 browser-compat: api.Range.createContextualFragment
 ---
 

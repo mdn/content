@@ -2,13 +2,6 @@
 title: isolation
 slug: Web/CSS/isolation
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Compositing and Blending
-  - NeedsContent
-  - isolation
-  - recipe:css-property
 browser-compat: css.properties.isolation
 ---
 

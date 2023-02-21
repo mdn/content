@@ -2,15 +2,8 @@
 title: CSSNumericValue.sub()
 slug: Web/API/CSSNumericValue/sub
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - sub()
+status:
+  - experimental
 browser-compat: api.CSSNumericValue.sub
 ---
 

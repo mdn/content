@@ -2,12 +2,6 @@
 title: Document.getSelection()
 slug: Web/API/Document/getSelection
 page-type: web-api-instance-method
-tags:
-  - API
-  - Document
-  - Method
-  - Reference
-  - getSelection
 browser-compat: api.Document.getSelection
 ---
 

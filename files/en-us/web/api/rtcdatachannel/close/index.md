@@ -2,17 +2,6 @@
 title: RTCDataChannel.close()
 slug: Web/API/RTCDataChannel/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Communication
-  - Data Transfer
-  - Method
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - close
 browser-compat: api.RTCDataChannel.close
 ---
 

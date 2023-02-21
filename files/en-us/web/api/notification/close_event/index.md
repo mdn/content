@@ -2,14 +2,6 @@
 title: 'Notification: close event'
 slug: Web/API/Notification/close_event
 page-type: web-api-event
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Event
-  - Reference
-  - close
 browser-compat: api.Notification.close_event
 ---
 

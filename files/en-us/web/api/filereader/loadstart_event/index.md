@@ -2,13 +2,6 @@
 title: 'FileReader: loadstart event'
 slug: Web/API/FileReader/loadstart_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - FileReader
-  - ProgressEvent
-  - Web
-  - loadstart
 browser-compat: api.FileReader.loadstart_event
 ---
 

@@ -2,15 +2,8 @@
 title: log()
 slug: Web/CSS/log
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Math
-  - Reference
-  - Web
-  - log
-  - Experimental
+status:
+  - experimental
 browser-compat: css.types.log
 ---
 

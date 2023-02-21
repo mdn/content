@@ -2,19 +2,6 @@
 title: RTCRtpEncodingParameters
 slug: Web/API/RTCRtpEncodingParameters
 page-type: web-api-interface
-tags:
-  - API
-  - Codec
-  - Codec Configuration
-  - Dictionary
-  - Encoding
-  - RTCRtpEncodingParameters
-  - RTP
-  - Reference
-  - Settings
-  - WebRTC
-  - WebRTC API
-  - parameters
 browser-compat: api.RTCRtpEncodingParameters
 ---
 

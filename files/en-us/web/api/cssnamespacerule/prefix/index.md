@@ -2,13 +2,6 @@
 title: CSSNamespaceRule.prefix
 slug: Web/API/CSSNamespaceRule/prefix
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSNamespaceRule
-  - CSSOM
-  - Property
-  - Reference
-  - prefix
 browser-compat: api.CSSNamespaceRule.prefix
 ---
 

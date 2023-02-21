@@ -2,12 +2,6 @@
 title: HTMLTableRowElement.rowIndex
 slug: Web/API/HTMLTableRowElement/rowIndex
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsSpecTable
-  - Property
-  - Reference
 browser-compat: api.HTMLTableRowElement.rowIndex
 ---
 

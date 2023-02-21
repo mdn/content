@@ -2,19 +2,8 @@
 title: Navigation.updateCurrentEntry()
 slug: Web/API/Navigation/updateCurrentEntry
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - History
-  - Method
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Reference
-  - reload
-  - Scroll
-  - Traversal
-  - updateCurrentEntry
+status:
+  - experimental
 browser-compat: api.Navigation.updateCurrentEntry
 ---
 

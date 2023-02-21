@@ -2,14 +2,6 @@
 title: Navigator.registerProtocolHandler()
 slug: Web/API/Navigator/registerProtocolHandler
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Navigator
-  - Reference
-  - Web-Based Protocol Handlers
-  - registerProtocolHandler
 browser-compat: api.Navigator.registerProtocolHandler
 ---
 

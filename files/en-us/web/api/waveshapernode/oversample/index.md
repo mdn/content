@@ -2,13 +2,6 @@
 title: WaveShaperNode.oversample
 slug: Web/API/WaveShaperNode/oversample
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - WaveShaperNode
-  - Web Audio API
-  - oversample
 browser-compat: api.WaveShaperNode.oversample
 ---
 

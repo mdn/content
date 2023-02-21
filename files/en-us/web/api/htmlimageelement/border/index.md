@@ -2,17 +2,8 @@
 title: HTMLImageElement.border
 slug: Web/API/HTMLImageElement/border
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Property
-  - Reference
-  - border
-  - img
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLImageElement.border
 ---
 

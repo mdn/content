@@ -2,12 +2,6 @@
 title: HTMLLinkElement.rel
 slug: Web/API/HTMLLinkElement/rel
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLLinkElement
-  - Property
-  - Reference
 browser-compat: api.HTMLLinkElement.rel
 ---
 

@@ -2,14 +2,6 @@
 title: isSecureContext
 slug: Web/API/isSecureContext
 page-type: web-api-global-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - Web
-  - Workers
-  - isSecureContext
 browser-compat: api.isSecureContext
 ---
 

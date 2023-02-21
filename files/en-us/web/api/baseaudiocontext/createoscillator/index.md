@@ -2,14 +2,6 @@
 title: BaseAudioContext.createOscillator()
 slug: Web/API/BaseAudioContext/createOscillator
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createOscillator
 browser-compat: api.BaseAudioContext.createOscillator
 ---
 

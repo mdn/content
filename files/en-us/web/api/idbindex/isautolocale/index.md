@@ -2,17 +2,9 @@
 title: IDBIndex.isAutoLocale
 slug: Web/API/IDBIndex/isAutoLocale
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - Experimental
-  - IDBIndex
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - isAutoLocale
-  - Non-standard
+status:
+  - experimental
+  - non-standard
 browser-compat: api.IDBIndex.isAutoLocale
 ---
 

@@ -2,13 +2,6 @@
 title: RTCDataChannel.id
 slug: Web/API/RTCDataChannel/id
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCDataChannel
-  - Read-only
-  - Reference
-  - WebRTC
-  - id
 browser-compat: api.RTCDataChannel.id
 ---
 

@@ -2,13 +2,8 @@
 title: HighlightRegistry.keys()
 slug: Web/API/HighlightRegistry/keys
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - CSS Custom Highlight API
-  - Reference
-  - keys
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HighlightRegistry.keys
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.keys
 ---

@@ -2,13 +2,6 @@
 title: ServiceWorkerContainer.ready
 slug: Web/API/ServiceWorkerContainer/ready
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Service worker API
-  - ServiceWorker
-  - ServiceWorkerContainer
 browser-compat: api.ServiceWorkerContainer.ready
 ---
 

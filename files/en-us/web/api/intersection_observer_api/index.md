@@ -2,16 +2,6 @@
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
 page-type: web-api-overview
-tags:
-  - API
-  - Clipping
-  - Intersection
-  - Intersection Observer API
-  - IntersectionObserver
-  - Overview
-  - Performance
-  - Reference
-  - Web
 browser-compat: api.IntersectionObserver
 ---
 

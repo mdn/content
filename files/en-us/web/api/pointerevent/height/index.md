@@ -2,13 +2,6 @@
 title: PointerEvent.height
 slug: Web/API/PointerEvent/height
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
 browser-compat: api.PointerEvent.height
 ---
 

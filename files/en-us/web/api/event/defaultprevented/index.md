@@ -2,9 +2,6 @@
 title: Event.defaultPrevented
 slug: Web/API/Event/defaultPrevented
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Read-only
 browser-compat: api.Event.defaultPrevented
 ---
 

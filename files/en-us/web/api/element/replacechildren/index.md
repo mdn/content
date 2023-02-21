@@ -2,14 +2,6 @@
 title: Element.replaceChildren()
 slug: Web/API/Element/replaceChildren
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Element
-  - Reference
-  - replaceChildren
 browser-compat: api.Element.replaceChildren
 ---
 

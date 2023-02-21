@@ -2,15 +2,6 @@
 title: CSSPropertyRule.syntax
 slug: Web/API/CSSPropertyRule/syntax
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS
-  - CSS Properties and Values API
-  - CSSPropertyRule
-  - Houdini
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.CSSPropertyRule.syntax
 ---
 

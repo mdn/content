@@ -2,11 +2,6 @@
 title: MIDIMessageEvent()
 slug: Web/API/MIDIMessageEvent/MIDIMessageEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - MIDIMessageEvent
 browser-compat: api.MIDIMessageEvent.MIDIMessageEvent
 ---
 

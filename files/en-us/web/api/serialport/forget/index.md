@@ -2,13 +2,8 @@
 title: SerialPort.forget()
 slug: Web/API/SerialPort/forget
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - forget
-  - SerialPort
-  - Experimental
+status:
+  - experimental
 browser-compat: api.SerialPort.forget
 ---
 

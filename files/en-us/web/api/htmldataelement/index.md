@@ -2,13 +2,6 @@
 title: HTMLDataElement
 slug: Web/API/HTMLDataElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTMLDataElement
-  - Interface
-  - Reference
-  - data
 browser-compat: api.HTMLDataElement
 ---
 

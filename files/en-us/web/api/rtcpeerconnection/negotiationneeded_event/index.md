@@ -2,18 +2,6 @@
 title: 'RTCPeerConnection: negotiationneeded event'
 slug: Web/API/RTCPeerConnection/negotiationneeded_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Negotiation
-  - RTCPeerConnection
-  - Reference
-  - SDP
-  - Signaling
-  - WebRTC
-  - WebRTC API
-  - negotiationneeded
-  - rtc
 browser-compat: api.RTCPeerConnection.negotiationneeded_event
 ---
 

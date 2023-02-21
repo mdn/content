@@ -2,12 +2,6 @@
 title: font
 slug: Web/CSS/font
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.font
 ---
 

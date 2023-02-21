@@ -2,13 +2,8 @@
 title: HighlightRegistry.size
 slug: Web/API/HighlightRegistry/size
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - CSS Custom Highlight API
-  - Reference
-  - size
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HighlightRegistry.size
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-get-map.prototype.size
 ---

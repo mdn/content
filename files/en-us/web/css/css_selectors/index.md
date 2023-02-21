@@ -2,12 +2,6 @@
 title: CSS selectors
 slug: Web/CSS/CSS_Selectors
 page-type: landing-page
-tags:
-  - CSS
-  - Guide
-  - Overview
-  - Reference
-  - Selectors
 spec-urls: https://drafts.csswg.org/selectors/
 ---
 

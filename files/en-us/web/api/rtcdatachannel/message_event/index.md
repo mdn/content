@@ -2,21 +2,6 @@
 title: 'RTCDataChannel: message event'
 slug: Web/API/RTCDataChannel/message_event
 page-type: web-api-event
-tags:
-  - API
-  - Data Channel
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - channel
-  - data
-  - events
-  - message
-  - messaging
-  - Event
-  - rtc
 browser-compat: api.RTCDataChannel.message_event
 ---
 

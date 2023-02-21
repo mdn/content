@@ -2,12 +2,8 @@
 title: VideoFrame
 slug: Web/API/VideoFrame
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - VideoFrame
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoFrame
 ---
 

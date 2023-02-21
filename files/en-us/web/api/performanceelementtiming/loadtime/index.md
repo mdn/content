@@ -2,13 +2,8 @@
 title: PerformanceElementTiming.loadTime
 slug: Web/API/PerformanceElementTiming/loadTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - loadTime
-  - PerformanceElementTimingnull
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PerformanceElementTiming.loadTime
 ---
 
