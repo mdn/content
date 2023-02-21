@@ -65,6 +65,7 @@ div.box {
 ```
 
 Theme A (brown) uses a light color scheme by default, but will switch to a dark scheme based on the media query:
+
 ```css
 .theme-a {
     background: #dca;
