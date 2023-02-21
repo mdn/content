@@ -2,12 +2,6 @@
 title: CSS reference
 slug: Web/CSS/Reference
 page-type: landing-page
-tags:
-  - CSS
-  - Guide
-  - Overview
-  - Reference
-  - "l10n:priority"
 ---
 
 {{CSSRef}}

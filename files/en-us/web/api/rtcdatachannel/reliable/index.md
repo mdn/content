@@ -2,14 +2,9 @@
 title: RTCDataChannel.reliable
 slug: Web/API/RTCDataChannel/reliable
 page-type: web-api-instance-property
-tags:
-  - Deprecated
-  - Non-standard
-  - Property
-  - RTCDataChannel
-  - Read-only
-  - WebRTC
-  - reliable
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.RTCDataChannel.reliable
 ---
 

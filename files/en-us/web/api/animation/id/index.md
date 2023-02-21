@@ -2,13 +2,6 @@
 title: Animation.id
 slug: Web/API/Animation/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - Property
-  - Reference
-  - id
-  - web animations api
 browser-compat: api.Animation.id
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: bookmarks.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

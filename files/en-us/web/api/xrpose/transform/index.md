@@ -2,21 +2,6 @@
 title: XRPose.transform
 slug: Web/API/XRPose/transform
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Orientation
-  - Position
-  - Property
-  - Read-only
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRPose
-  - transform
 browser-compat: api.XRPose.transform
 ---
 

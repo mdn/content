@@ -2,14 +2,6 @@
 title: Geolocation.getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
 page-type: web-api-instance-method
-tags:
-  - API
-  - Geolocation
-  - Geolocation API
-  - Method
-  - Reference
-  - Secure context
-  - getCurrentPosition
 browser-compat: api.Geolocation.getCurrentPosition
 ---
 

@@ -2,12 +2,6 @@
 title: TransformStreamDefaultController.error()
 slug: Web/API/TransformStreamDefaultController/error
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - error
-  - TransformStreamDefaultController
 browser-compat: api.TransformStreamDefaultController.error
 ---
 

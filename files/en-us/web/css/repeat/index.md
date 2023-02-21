@@ -2,14 +2,6 @@
 title: repeat()
 slug: Web/CSS/repeat
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Grid
-  - Function
-  - Layout
-  - Reference
-  - Web
 browser-compat: css.properties.grid-template-columns.repeat
 ---
 
@@ -88,10 +80,10 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
 - `<fixed-size>`
   - : One of the following forms:
     - a {{cssxref("&lt;length-percentage&gt;")}} value
-    - a {{cssxref("minmax()")}} function with:
+    - a {{cssxref("minmax", "minmax()")}} function with:
       - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value
       - `max` given as one of a {{cssxref("&lt;length-percentage&gt;")}} value, a {{cssxref("&lt;flex&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
-    - a {{cssxref("minmax()")}} function with:
+    - a {{cssxref("minmax", "minmax()")}} function with:
       - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
       - `max` given as a {{cssxref("&lt;length-percentage&gt;")}} value.
 - {{cssxref("&lt;flex&gt;")}}
@@ -105,7 +97,7 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
 - `<track-size>`
   - : One of the following forms:
     - a {{cssxref("&lt;length-percentage&gt;")}} value, a {{cssxref("&lt;flex&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
-    - a {{cssxref("minmax()")}} function with:
+    - a {{cssxref("minmax", "minmax()")}} function with:
       - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
       - `max` given as a {{cssxref("&lt;length-percentage&gt;")}} value, a {{cssxref("&lt;flex&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
     - a {{cssxref("fit-content()")}} function, passed a {{cssxref("&lt;length-percentage&gt;")}} value.

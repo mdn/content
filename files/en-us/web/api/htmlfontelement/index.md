@@ -2,12 +2,8 @@
 title: HTMLFontElement
 slug: Web/API/HTMLFontElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLFontElement
 ---
 

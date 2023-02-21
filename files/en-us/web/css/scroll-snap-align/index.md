@@ -2,14 +2,6 @@
 title: scroll-snap-align
 slug: Web/CSS/scroll-snap-align
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Web
-  - Example
-  - NeedsLiveSample
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.scroll-snap-align
 ---
 

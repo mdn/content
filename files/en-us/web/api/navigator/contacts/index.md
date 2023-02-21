@@ -2,15 +2,8 @@
 title: Navigator.contacts
 slug: Web/API/Navigator/contacts
 page-type: web-api-instance-property
-tags:
-  - Contact Picker API
-  - Contacts
-  - Navigator
-  - PWA
-  - Property
-  - Read-only
-  - contact picker
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Navigator.contacts
 ---
 

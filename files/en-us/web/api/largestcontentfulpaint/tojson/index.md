@@ -2,13 +2,8 @@
 title: LargestContentfulPaint.toJSON()
 slug: Web/API/LargestContentfulPaint/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - toJSON
-  - LargestContentfulPaint
-  - Experimental
+status:
+  - experimental
 browser-compat: api.LargestContentfulPaint.toJSON
 ---
 

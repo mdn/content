@@ -2,12 +2,6 @@
 title: min-content
 slug: Web/CSS/min-content
 page-type: css-keyword
-tags:
-  - CSS
-  - Keyword
-  - Reference
-  - min-content
-  - sizing
 browser-compat: css.properties.width.min-content
 ---
 

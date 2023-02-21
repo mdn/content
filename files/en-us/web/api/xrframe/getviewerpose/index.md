@@ -2,21 +2,8 @@
 title: XRFrame.getViewerPose()
 slug: Web/API/XRFrame/getViewerPose
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRFrame
-  - getViewerPose
-  - pose
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRFrame.getViewerPose
 ---
 

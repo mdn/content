@@ -2,21 +2,6 @@
 title: RTCRtpReceiver.getParameters()
 slug: Web/API/RTCRtpReceiver/getParameters
 page-type: web-api-instance-method
-tags:
-  - API
-  - Configuration
-  - Media
-  - Method
-  - Options
-  - RTCRtpReceiver
-  - RTP
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - getParameters
-  - parameters
-  - rtc
 browser-compat: api.RTCRtpReceiver.getParameters
 ---
 

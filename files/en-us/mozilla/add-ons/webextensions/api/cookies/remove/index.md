@@ -1,6 +1,7 @@
 ---
 title: cookies.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/remove
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

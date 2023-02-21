@@ -2,15 +2,6 @@
 title: MediaDeviceInfo.groupId
 slug: Web/API/MediaDeviceInfo/groupId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Device
-  - Input
-  - Media
-  - MediaDevicesInfo
-  - Property
-  - groupId
-  - output
 browser-compat: api.MediaDeviceInfo.groupId
 ---
 

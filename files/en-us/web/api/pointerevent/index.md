@@ -2,14 +2,6 @@
 title: PointerEvent
 slug: Web/API/PointerEvent
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - Pointer Events
-  - PointerEvent
-  - Reference
-  - events
 browser-compat: api.PointerEvent
 ---
 

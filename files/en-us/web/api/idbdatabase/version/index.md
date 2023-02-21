@@ -2,15 +2,6 @@
 title: IDBDatabase.version
 slug: Web/API/IDBDatabase/version
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - version
 browser-compat: api.IDBDatabase.version
 ---
 

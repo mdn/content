@@ -2,12 +2,6 @@
 title: EventSource()
 slug: Web/API/EventSource/EventSource
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - EventSource
-  - Reference
-  - Server-sent events
 browser-compat: api.EventSource.EventSource
 ---
 

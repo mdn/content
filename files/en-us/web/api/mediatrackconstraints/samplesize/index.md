@@ -2,17 +2,6 @@
 title: MediaTrackConstraints.sampleSize
 slug: Web/API/MediaTrackConstraints/sampleSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - Property
-  - Reference
-  - WebRTC
-  - sampleSize
 browser-compat: api.MediaTrackConstraints.sampleSize
 ---
 

@@ -2,15 +2,9 @@
 title: CSSPositionValue
 slug: Web/API/CSSPositionValue
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSPositionValue
-  - Houdini
-  - Interface
-  - Reference
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.CSSPositionValue
 ---
 

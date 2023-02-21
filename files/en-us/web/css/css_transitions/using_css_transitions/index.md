@@ -2,11 +2,6 @@
 title: Using CSS transitions
 slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
 page-type: guide
-tags:
-  - Advanced
-  - CSS
-  - CSS Transitions
-  - Guide
 spec-urls: https://drafts.csswg.org/css-transitions/
 ---
 

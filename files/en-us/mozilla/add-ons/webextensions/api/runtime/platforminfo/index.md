@@ -1,6 +1,7 @@
 ---
 title: runtime.PlatformInfo
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformInfo
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

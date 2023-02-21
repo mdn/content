@@ -2,13 +2,6 @@
 title: CloseEvent
 slug: Web/API/CloseEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - Web
-  - WebSocket
-  - WebSockets
 browser-compat: api.CloseEvent
 ---
 

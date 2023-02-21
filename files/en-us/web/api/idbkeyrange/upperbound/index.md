@@ -2,15 +2,6 @@
 title: IDBKeyRange.upperBound()
 slug: Web/API/IDBKeyRange/upperBound
 page-type: web-api-static-method
-tags:
-  - API
-  - Database
-  - IDBKeyRange
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - upperBound
 browser-compat: api.IDBKeyRange.upperBound
 ---
 

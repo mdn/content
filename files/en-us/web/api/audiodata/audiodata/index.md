@@ -2,12 +2,8 @@
 title: AudioData()
 slug: Web/API/AudioData/AudioData
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - AudioData
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioData.AudioData
 ---
 

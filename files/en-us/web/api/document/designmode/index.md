@@ -2,15 +2,6 @@
 title: Document.designMode
 slug: Web/API/Document/designMode
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - NeedsContent
-  - NeedsSpecTable
-  - Property
-  - Reference
-  - editor
 browser-compat: api.Document.designMode
 ---
 

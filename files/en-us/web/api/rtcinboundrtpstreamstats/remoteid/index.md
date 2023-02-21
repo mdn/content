@@ -2,23 +2,6 @@
 title: RTCInboundRtpStreamStats.remoteId
 slug: Web/API/RTCInboundRtpStreamStats/remoteId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Property
-  - RTCInboundRtpStreamStats
-  - RTCRtpSender
-  - RTP
-  - Reference
-  - Remote
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - id
-  - remoteId
-  - sender
-  - stream
 browser-compat: api.RTCInboundRtpStreamStats.remoteId
 ---
 

@@ -2,16 +2,6 @@
 title: FileSystemDirectoryEntry
 slug: Web/API/FileSystemDirectoryEntry
 page-type: web-api-interface
-tags:
-  - API
-  - File API
-  - File and Directory Entries API
-  - FileSystemDirectoryEntry
-  - Files
-  - Interface
-  - NeedsMarkupWork
-  - Offline
-  - Reference
 browser-compat: api.FileSystemDirectoryEntry
 ---
 

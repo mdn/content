@@ -2,14 +2,6 @@
 title: mask-border-mode
 slug: Web/CSS/mask-border-mode
 page-type: css-property
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - NeedsContent
-  - NeedsExample
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.mask-border-mode
 ---
 

@@ -2,17 +2,8 @@
 title: AmbientLightSensor
 slug: Web/API/AmbientLightSensor
 page-type: web-api-interface
-tags:
-  - API
-  - Ambient Light Sensor API
-  - AmbientLightSensor
-  - Generic Sensor API
-  - Interface
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AmbientLightSensor
 ---
 

@@ -2,10 +2,8 @@
 title: 'Element: MSGestureStart event'
 slug: Web/API/Element/MSGestureStart_event
 page-type: web-api-event
-tags:
-  - Event
-  - Non-standard
-  - Reference
+status:
+  - non-standard
 browser-compat: api.Element.MSGestureStart_event
 ---
 

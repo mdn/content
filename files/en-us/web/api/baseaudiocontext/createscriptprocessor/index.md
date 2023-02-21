@@ -2,15 +2,8 @@
 title: BaseAudioContext.createScriptProcessor()
 slug: Web/API/BaseAudioContext/createScriptProcessor
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createScriptProcessor
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.BaseAudioContext.createScriptProcessor
 ---
 

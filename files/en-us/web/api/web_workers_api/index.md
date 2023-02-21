@@ -2,11 +2,6 @@
 title: Web Workers API
 slug: Web/API/Web_Workers_API
 page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - Reference
-  - Web Workers
 spec-urls: https://html.spec.whatwg.org/multipage/workers.html#workers
 ---
 

@@ -126,7 +126,8 @@ The HTML in the file `index.html` creates the structure of the app. The parts th
         <a href="http://2017.js13kgames.com">js13kGames 2017</a> competition.
         You can
         <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">
-          fork js13kPWA on GitHub</a>
+          fork js13kPWA on GitHub</a
+        >
         to check its source code.
       </p>
       <button id="notifications">Request dummy notifications</button>
@@ -169,19 +170,20 @@ const template = `<article>
   <li><span>More:</span> <a href='http://js13kgames.com/entries/SLUG'>js13kgames.com/entries/SLUG</a></li>
   </ul>
 </article>`;
-let content = '';
+let content = "";
 for (let i = 0; i < games.length; i++) {
-  let entry = template.replace(/POS/g, (i + 1))
+  let entry = template
+    .replace(/POS/g, i + 1)
     .replace(/SLUG/g, games[i].slug)
     .replace(/NAME/g, games[i].name)
     .replace(/AUTHOR/g, games[i].author)
     .replace(/TWITTER/g, games[i].twitter)
     .replace(/WEBSITE/g, games[i].website)
     .replace(/GITHUB/g, games[i].github);
-  entry = entry.replace('<a href=\'http:///\'></a>', '-');
+  entry = entry.replace("<a href='http:///'></a>", "-");
   content += entry;
 }
-document.getElementById('content').innerHTML = content;
+document.getElementById("content").innerHTML = content;
 ```
 
 Then it registers a [service worker](/en-US/docs/Web/API/Service_Worker_API):
@@ -195,13 +197,13 @@ if ("serviceWorker" in navigator) {
 After that, the app adds a handler for clicks on a button whose ID is `notifications`; this handler requests permission to send notifications to the user, then generates and sends a random notification.
 
 ```js
-const button = document.getElementById('notifications');
-button.addEventListener('click', () => {
-    Notification.requestPermission().then((result) => {
-        if (result === 'granted') {
-            randomNotification();
-        }
-    });
+const button = document.getElementById("notifications");
+button.addEventListener("click", () => {
+  Notification.requestPermission().then((result) => {
+    if (result === "granted") {
+      randomNotification();
+    }
+  });
 });
 ```
 
@@ -233,30 +235,30 @@ self.importScripts("data/games.js");
 Then it creates a list of all the files that the service worker needs to cache. This list includes both app shell and content files:
 
 ```js
-const cacheName = 'js13kPWA-v1';
+const cacheName = "js13kPWA-v1";
 const appShellFiles = [
-    '/pwa-examples/js13kpwa/',
-    '/pwa-examples/js13kpwa/index.html',
-    '/pwa-examples/js13kpwa/app.js',
-    '/pwa-examples/js13kpwa/style.css',
-    '/pwa-examples/js13kpwa/fonts/graduate.eot',
-    '/pwa-examples/js13kpwa/fonts/graduate.ttf',
-    '/pwa-examples/js13kpwa/fonts/graduate.woff',
-    '/pwa-examples/js13kpwa/favicon.ico',
-    '/pwa-examples/js13kpwa/img/js13kgames.png',
-    '/pwa-examples/js13kpwa/img/bg.png',
-    '/pwa-examples/js13kpwa/icons/icon-32.png',
-    '/pwa-examples/js13kpwa/icons/icon-64.png',
-    '/pwa-examples/js13kpwa/icons/icon-96.png',
-    '/pwa-examples/js13kpwa/icons/icon-128.png',
-    '/pwa-examples/js13kpwa/icons/icon-168.png',
-    '/pwa-examples/js13kpwa/icons/icon-192.png',
-    '/pwa-examples/js13kpwa/icons/icon-256.png',
-    '/pwa-examples/js13kpwa/icons/icon-512.png',
+  "/pwa-examples/js13kpwa/",
+  "/pwa-examples/js13kpwa/index.html",
+  "/pwa-examples/js13kpwa/app.js",
+  "/pwa-examples/js13kpwa/style.css",
+  "/pwa-examples/js13kpwa/fonts/graduate.eot",
+  "/pwa-examples/js13kpwa/fonts/graduate.ttf",
+  "/pwa-examples/js13kpwa/fonts/graduate.woff",
+  "/pwa-examples/js13kpwa/favicon.ico",
+  "/pwa-examples/js13kpwa/img/js13kgames.png",
+  "/pwa-examples/js13kpwa/img/bg.png",
+  "/pwa-examples/js13kpwa/icons/icon-32.png",
+  "/pwa-examples/js13kpwa/icons/icon-64.png",
+  "/pwa-examples/js13kpwa/icons/icon-96.png",
+  "/pwa-examples/js13kpwa/icons/icon-128.png",
+  "/pwa-examples/js13kpwa/icons/icon-168.png",
+  "/pwa-examples/js13kpwa/icons/icon-192.png",
+  "/pwa-examples/js13kpwa/icons/icon-256.png",
+  "/pwa-examples/js13kpwa/icons/icon-512.png",
 ];
 const gamesImages = [];
 for (let i = 0; i < games.length; i++) {
-    gamesImages.push(`data/img/${games[i].slug}.jpg`);
+  gamesImages.push(`data/img/${games[i].slug}.jpg`);
 }
 const contentToCache = appShellFiles.concat(gamesImages);
 ```
@@ -264,30 +266,36 @@ const contentToCache = appShellFiles.concat(gamesImages);
 With the file list prepared, it's time to install the service worker itself. The service worker will actually handle caching all the listed files.
 
 ```js
-self.addEventListener('install', (e) => {
-  console.log('[Service Worker] Install');
-  e.waitUntil((async () => {
-    const cache = await caches.open(cacheName);
-    console.log('[Service Worker] Caching all: app shell and content');
-    await cache.addAll(contentToCache);
-  })());
+self.addEventListener("install", (e) => {
+  console.log("[Service Worker] Install");
+  e.waitUntil(
+    (async () => {
+      const cache = await caches.open(cacheName);
+      console.log("[Service Worker] Caching all: app shell and content");
+      await cache.addAll(contentToCache);
+    })()
+  );
 });
 ```
 
 With that done, we implement the service worker's [fetch event](/en-US/docs/Web/API/FetchEvent) handler; its job is to return the contents of the specified file, either from the cache or by loading it over the network (caching it upon doing so):
 
 ```js
-self.addEventListener('fetch', (e) => {
-  e.respondWith((async () => {
-    const r = await caches.match(e.request);
-    console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
-    if (r) { return r; }
-    const response = await fetch(e.request);
-    const cache = await caches.open(cacheName);
-    console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
-    cache.put(e.request, response.clone());
-    return response;
-  })());
+self.addEventListener("fetch", (e) => {
+  e.respondWith(
+    (async () => {
+      const r = await caches.match(e.request);
+      console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
+      if (r) {
+        return r;
+      }
+      const response = await fetch(e.request);
+      const cache = await caches.open(cacheName);
+      console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
+      cache.put(e.request, response.clone());
+      return response;
+    })()
+  );
 });
 ```
 
@@ -298,30 +306,30 @@ The games data for this app example is provided in a JavaScript source file call
 ```js
 const games = [
   {
-    slug: 'lost-in-cyberspace',
-    name: 'Lost in Cyberspace',
-    author: 'Zosia and Bartek',
-    twitter: 'bartaz',
-    website: '',
-    github: 'github.com/bartaz/lost-in-cyberspace'
+    slug: "lost-in-cyberspace",
+    name: "Lost in Cyberspace",
+    author: "Zosia and Bartek",
+    twitter: "bartaz",
+    website: "",
+    github: "github.com/bartaz/lost-in-cyberspace",
   },
   {
-    slug: 'vernissage',
-    name: 'Vernissage',
-    author: 'Platane',
-    twitter: 'platane_',
-    website: 'github.com/Platane',
-    github: 'github.com/Platane/js13k-2017'
+    slug: "vernissage",
+    name: "Vernissage",
+    author: "Platane",
+    twitter: "platane_",
+    website: "github.com/Platane",
+    github: "github.com/Platane/js13k-2017",
   },
   // ...
   {
-    slug: 'emma-3d',
-    name: 'Emma-3D',
-    author: 'Prateek Roushan',
-    twitter: '',
-    website: '',
-    github: 'github.com/coderprateek/Emma-3D'
-  }
+    slug: "emma-3d",
+    name: "Emma-3D",
+    author: "Prateek Roushan",
+    twitter: "",
+    website: "",
+    github: "github.com/coderprateek/Emma-3D",
+  },
 ];
 ```
 

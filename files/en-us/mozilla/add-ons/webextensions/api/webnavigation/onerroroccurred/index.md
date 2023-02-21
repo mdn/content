@@ -1,6 +1,7 @@
 ---
 title: webNavigation.onErrorOccurred
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onErrorOccurred
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

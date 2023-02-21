@@ -2,11 +2,6 @@
 title: margin-right
 slug: Web/CSS/margin-right
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.margin-right
 ---
 

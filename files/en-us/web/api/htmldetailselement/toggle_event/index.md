@@ -2,12 +2,6 @@
 title: 'HTMLDetailsElement: toggle event'
 slug: Web/API/HTMLDetailsElement/toggle_event
 page-type: web-api-event
-tags:
-  - Event
-  - HTMLDetailsElement
-  - Reference
-  - details
-  - toggle
 browser-compat: api.HTMLDetailsElement.toggle_event
 ---
 

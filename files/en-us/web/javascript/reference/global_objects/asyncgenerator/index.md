@@ -2,14 +2,6 @@
 title: AsyncGenerator
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator
 page-type: javascript-class
-tags:
-  - Class
-  - ECMAScript 2018
-  - Generator
-  - JavaScript
-  - Async Generator
-  - Async Iterator
-  - Reference
 browser-compat: javascript.builtins.AsyncGenerator
 ---
 

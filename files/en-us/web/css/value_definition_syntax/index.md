@@ -2,11 +2,6 @@
 title: Value definition syntax
 slug: Web/CSS/Value_definition_syntax
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Reference
-  - Syntax
 spec-urls: https://drafts.csswg.org/css-values/#value-defs
 ---
 

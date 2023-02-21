@@ -1,6 +1,7 @@
 ---
 title: runtime.PlatformOs
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformOs
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

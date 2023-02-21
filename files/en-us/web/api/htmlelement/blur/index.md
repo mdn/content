@@ -2,12 +2,6 @@
 title: HTMLElement.blur()
 slug: Web/API/HTMLElement/blur
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Method
-  - Reference
 browser-compat: api.HTMLElement.blur
 ---
 

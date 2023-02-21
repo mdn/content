@@ -2,18 +2,8 @@
 title: PerformanceTiming
 slug: Web/API/PerformanceTiming
 page-type: web-api-interface
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Interface
-  - Navigation Timing
-  - Navigation Timing API
-  - Optimization
-  - Performance
-  - Reference
-  - Timing
-  - legacy
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming
 ---
 

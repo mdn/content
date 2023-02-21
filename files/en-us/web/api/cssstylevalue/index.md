@@ -2,14 +2,8 @@
 title: CSSStyleValue
 slug: Web/API/CSSStyleValue
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSStyleValue
-  - Experimental
-  - Houdini
-  - Interface
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSStyleValue
 ---
 

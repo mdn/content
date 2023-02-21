@@ -2,19 +2,14 @@
 title: Uint8Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array
 page-type: javascript-class
-tags:
-  - Class
-  - Uint8Array
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.Uint8Array
 ---
 
 {{JSRef}}
 
 The **`Uint8Array`** typed array represents an array of 8-bit unsigned integers. The contents are initialized to `0`. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
+
+`Uint8Array` is a subclass of the hidden {{jsxref("TypedArray")}} class.
 
 ## Constructor
 

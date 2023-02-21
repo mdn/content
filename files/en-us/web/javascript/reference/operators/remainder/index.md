@@ -2,11 +2,6 @@
 title: Remainder (%)
 slug: Web/JavaScript/Reference/Operators/Remainder
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.remainder
 ---
 

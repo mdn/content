@@ -2,13 +2,6 @@
 title: text-transform
 slug: Web/CSS/text-transform
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Reference
-  - Text
-  - recipe:css-property
 browser-compat: css.properties.text-transform
 ---
 

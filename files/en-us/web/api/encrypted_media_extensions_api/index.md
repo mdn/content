@@ -2,15 +2,6 @@
 title: Encrypted Media Extensions API
 slug: Web/API/Encrypted_Media_Extensions_API
 page-type: web-api-overview
-tags:
-  - API
-  - EME
-  - Encrypted Media Extensions
-  - Encrypted Media Extensions API
-  - EncryptedMediaExtensions
-  - NeedsContent
-  - Overview
-  - Reference
 browser-compat: api.Navigator.requestMediaKeySystemAccess
 ---
 

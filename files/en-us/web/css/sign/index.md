@@ -2,15 +2,8 @@
 title: sign()
 slug: Web/CSS/sign
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Layout
-  - Reference
-  - Web
-  - sign
-  - Experimental
+status:
+  - experimental
 browser-compat: css.types.sign
 ---
 

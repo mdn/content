@@ -2,14 +2,6 @@
 title: Intl.NumberFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
 page-type: javascript-static-method
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - NumberFormat
-  - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.supportedLocalesOf
 ---
 

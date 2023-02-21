@@ -2,13 +2,8 @@
 title: CSSPseudoElement.type
 slug: Web/API/CSSPseudoElement/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSPseudoElement
-  - Experimental
-  - Property
-  - Reference
-  - Type
+status:
+  - experimental
 browser-compat: api.CSSPseudoElement.type
 ---
 
