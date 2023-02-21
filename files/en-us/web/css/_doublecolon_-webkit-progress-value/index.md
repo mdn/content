@@ -2,12 +2,8 @@
 title: "::-webkit-progress-value"
 slug: Web/CSS/::-webkit-progress-value
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-webkit-progress-value
 ---
 

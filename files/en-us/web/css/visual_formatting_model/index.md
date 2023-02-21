@@ -2,12 +2,6 @@
 title: Visual formatting model
 slug: Web/CSS/Visual_formatting_model
 page-type: guide
-tags:
-  - CSS
-  - CSS Box Model
-  - Guide
-  - Reference
-  - visual formatting model
 ---
 
 {{CSSRef}}

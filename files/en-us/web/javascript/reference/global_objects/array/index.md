@@ -269,6 +269,8 @@ f("a", "b"); // 'a+b'
 
 These properties are defined on `Array.prototype` and shared by all `Array` instances.
 
+- {{jsxref("Object/constructor", "Array.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Array` instances, the initial value is the {{jsxref("Array/Array", "Array")}} constructor.
 - {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
   - : Contains property names that were not included in the ECMAScript standard prior to the ES2015 version and that are ignored for [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement-binding purposes.
 

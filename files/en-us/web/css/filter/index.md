@@ -2,13 +2,6 @@
 title: filter
 slug: Web/CSS/filter
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - SVG
-  - SVG Filter
-  - recipe:css-property
 browser-compat: css.properties.filter
 ---
 

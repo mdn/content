@@ -2,13 +2,6 @@
 title: Quantifiers
 slug: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
 page-type: guide
-tags:
-  - Guide
-  - JavaScript
-  - Reference
-  - Regular Expressions
-  - quantifiers
-  - regex
 ---
 
 {{jsSidebar("JavaScript Guide")}}

@@ -2,15 +2,6 @@
 title: "-webkit-transform-3d"
 slug: Web/CSS/@media/-webkit-transform-3d
 page-type: css-media-feature
-tags:
-  - "-webkit-transform-3d"
-  - 3D
-  - "@media"
-  - CSS
-  - Reference
-  - WebKit
-  - media feature
-  - transform
 browser-compat: css.at-rules.media.-webkit-transform-3d
 ---
 

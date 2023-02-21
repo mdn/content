@@ -34,6 +34,14 @@ asyncGen.next()
 
 ## Instance properties
 
+These properties are defined on `AsyncGenerator.prototype` and shared by all `AsyncGenerator` instances.
+
+- {{jsxref("Object/constructor", "AsyncGenerator.prototype.constructor")}}
+
+  - : The constructor function that created the instance object. For `AsyncGenerator` instances, the initial value is [`AsyncGeneratorFunction.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction).
+
+    > **Note:** `AsyncGenerator` objects do not store a reference to the async generator function that created them.
+
 - `AsyncGenerator.prototype[@@toStringTag]`
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"AsyncGenerator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 

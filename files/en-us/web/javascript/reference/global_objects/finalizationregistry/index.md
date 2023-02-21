@@ -87,6 +87,10 @@ Here are some specific points that the authors of the WeakRef proposal that Fina
 
 ## Instance properties
 
+These properties are defined on `FinalizationRegistry.prototype` and shared by all `FinalizationRegistry` instances.
+
+- {{jsxref("Object/constructor", "FinalizationRegistry.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `FinalizationRegistry` instances, the initial value is the {{jsxref("FinalizationRegistry/FinalizationRegistry", "FinalizationRegistry")}} constructor.
 - `FinalizationRegistry.prototype[@@toStringTag]`
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"FinalizationRegistry"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 

@@ -4,11 +4,6 @@ title: >-
   deprecated
 slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
 ---
 
 {{jsSidebar("Errors")}}

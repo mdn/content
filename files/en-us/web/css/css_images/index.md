@@ -2,12 +2,6 @@
 title: CSS Images
 slug: Web/CSS/CSS_Images
 page-type: css-module
-tags:
-  - CSS
-  - CSS Images
-  - Guide
-  - Overview
-  - Reference
 spec-urls:
   - https://drafts.csswg.org/css-images/
   - https://compat.spec.whatwg.org/#css-%3Cimage%3E-type

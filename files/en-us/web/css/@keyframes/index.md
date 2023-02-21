@@ -2,11 +2,6 @@
 title: "@keyframes"
 slug: Web/CSS/@keyframes
 page-type: css-at-rule
-tags:
-  - Animations
-  - At-rule
-  - CSS
-  - Reference
 browser-compat: css.at-rules.keyframes
 ---
 

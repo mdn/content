@@ -116,18 +116,20 @@ These methods are defined on the `TypedArray` constructor object and are thus sh
 
 ## Instance properties
 
-These properties are all [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get) defined on the `TypedArray` prototype object and are thus read-only and shared by all `TypedArray` subclass instances.
+These properties are defined on the `TypedArray` prototype object and shared by all `TypedArray` subclass instances.
 
-- `TypedArray.prototype[@@toStringTag]`
-  - : The initial value of a typed array's [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the same string as its [name](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name). This property is used in {{jsxref("Object.prototype.toString()")}}. However, because `TypedArray` also has its own [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString) method, this property is not used unless you call [`Object.prototype.toString.call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) with a typed array as `thisArg`.
 - {{jsxref("TypedArray.prototype.buffer")}}
   - : Returns the {{jsxref("ArrayBuffer")}} referenced by the typed array.
 - {{jsxref("TypedArray.prototype.byteLength")}}
   - : Returns the length (in bytes) of the typed array.
 - {{jsxref("TypedArray.prototype.byteOffset")}}
   - : Returns the offset (in bytes) of the typed array from the start of its {{jsxref("ArrayBuffer")}}.
+- {{jsxref("Object/constructor", "TypedArray.prototype.constructor")}}
+  - : The constructor function that created the instance object. `TypedArray.prototype.constructor` is the hidden `TypedArray` constructor function, but each typed array subclass also defines its own `constructor` property.
 - {{jsxref("TypedArray.prototype.length")}}
   - : Returns the number of elements held in the typed array.
+- `TypedArray.prototype[@@toStringTag]`
+  - : The initial value of the [`TypedArray.prototype[@@toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is a getter that returns the same string as the typed array's [name](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name). It returns `undefined` if the `this` value is not one of the typed array subclasses. This property is used in {{jsxref("Object.prototype.toString()")}}. However, because `TypedArray` also has its own [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString) method, this property is not used unless you call [`Object.prototype.toString.call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) with a typed array as `thisArg`.
 
 All `TypedArray` subclasses also have the following instance properties:
 
