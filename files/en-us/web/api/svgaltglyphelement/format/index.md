@@ -5,7 +5,7 @@ page-type: web-api-instance-property
 browser-compat: api.SVGAltGlyphElement.format
 ---
 
-{{APIRef("SVGAltGlyphElement")}}
+{{APIRef("SVGAltGlyphElement")}}{{Deprecated_Header}}
 
 {{Deprecated_header}}
 

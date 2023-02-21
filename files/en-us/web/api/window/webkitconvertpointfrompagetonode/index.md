@@ -7,7 +7,7 @@ status:
 browser-compat: api.Window.webkitConvertPointFromPageToNode
 ---
 
-{{APIRef}}
+{{APIRef}}{{Deprecated_Header}}{{Non-standard_header}}
 
 {{Non-standard_header}}
 
