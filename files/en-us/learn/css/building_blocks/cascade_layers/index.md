@@ -325,26 +325,26 @@ The order of layers determines their order of precedence. Therefore, the order o
 @import url(C.css);
 ```
 
-The above '.css' creates two named layers and one unnamed layer. Let’s assume that the three files (‘A.css’, ‘B.css’, and ‘C.css’) do not contain any additional layers within them. The following list shows where styles declared inside and outside of these files will be sorted from least (1) precedence to highest (10).
+The above code creates two named layers and one unnamed layer. Let’s assume that the three files (`A.css`, `B.css`, and `C.css`) do not contain any additional layers within them. The following list shows where styles declared inside and outside of these files will be sorted from least (1) precedence to highest (10).
 
-1.	firstLayer normal styles (A.css)
-2.	secondLayer normal styles (B.css)
-3.	unlayered normal styles (C.css)
+1.	firstLayer normal styles (`A.css`)
+2.	secondLayer normal styles (`B.css`)
+3.	unlayered normal styles (`C.css`)
 4.	inline normal styles
 5.	animating styles
-6.	unlayered important styles (C.css)
-7.	secondLayer important styles (B.css)
-8.	firstLayer important styles (A.css)
+6.	unlayered important styles (`C.css`)
+7.	secondLayer important styles (`B.css`)
+8.	firstLayer important styles (`A.css`)
 9.	inline important styles
 10.	transitioning styles
 
-Normal styles declared inside layers receive the lowest priority and are sorted by the order in which the layers were created. The first created layer has lowest precedence, and the layer created last has highest precedence amongst layers. Normal styles declared within ‘firstLayer’ will be overridden by any subsequent stylings on the list if any conflicts exist.
+Normal styles declared inside layers receive the lowest priority and are sorted by the order in which the layers were created. The first created layer has lowest precedence, and the layer created last has highest precedence amongst layers. Normal styles declared within `firstLayer` will be overridden by any subsequent stylings on the list if any conflicts exist.
 
-Next up are any stylings declared outside of layers. The stylings in ‘C.css’ were not imported to a layer and will override any conflicting styles from ‘firstLayer’ and ‘secondLayer’.
+Next up are any stylings declared outside of layers. The stylings in `C.css` were not imported to a layer and will override any conflicting styles from `firstLayer` and `secondLayer`.
 
-Inline styles are declared using the [`style` attribute](/en-US/docs/Web/HTML/Global_attributes/style). Normal styles declared in this way will take precedence over normal styles found in the unlayered and layered style sheets (‘firstLayer – A.css’, ‘secondLayer – B.css’, ‘C.css’). Animating styles have higher precedence than inline normal styles.    
+Inline styles are declared using the [`style` attribute](/en-US/docs/Web/HTML/Global_attributes/style). Normal styles declared in this way will take precedence over normal styles found in the unlayered and layered style sheets (`firstLayer – A.css`, `secondLayer – B.css`, `C.css`). Animating styles have higher precedence than inline normal styles.    
 
-Important styles (‘!important’) take precedence over any styles previously mentioned on our list. They are sorted inversely from normal styles. Any unlayered important styles have less precedence those declared within the layers. Important styles found within layers are, again, sorted in order of creation. For important styles, the last created layer has lowest precedence, and the first created layer has highest precedence amongst layers.
+Important styles (`!important`) take precedence over any styles previously mentioned on our list. They are sorted inversely from normal styles. Any unlayered important styles have less precedence those declared within the layers. Important styles found within layers are, again, sorted in order of creation. For important styles, the last created layer has lowest precedence, and the first created layer has highest precedence amongst layers.
 
 Inline important styles again have higher precedence than important styles declared elsewhere, and transitioning styles have the highest precedence. 
 
