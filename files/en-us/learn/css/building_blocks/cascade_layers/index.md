@@ -340,7 +340,7 @@ The above code creates two named layers and one unnamed layer. Let us assume tha
 
 Normal styles declared inside layers receive the lowest priority and are sorted by the order in which the layers were created. Normal styles in the first created layer have the lowest precedence, and normal styles in the layer created last have the highest precedence among the layers. In other words, normal styles declared within `firstLayer` will be overridden by any subsequent stylings on the list if any conflicts exist.
 
-Next up are any stylings declared outside of layers. The stylings in `C.css` were not imported to a layer and will override any conflicting styles from `firstLayer` and `secondLayer`.
+Next up are any styles declared outside of layers. The styles in `C.css` were not imported into a layer and will override any conflicting styles from `firstLayer` and `secondLayer`. Normal styles not declared in a layer always have higher precedence than normal-importance layered styles.
 
 Inline styles are declared using the [`style` attribute](/en-US/docs/Web/HTML/Global_attributes/style). Normal styles declared in this way will take precedence over normal styles found in the unlayered and layered style sheets (`firstLayer – A.css`, `secondLayer – B.css`, `C.css`). Animating styles have higher precedence than inline normal styles.
 
