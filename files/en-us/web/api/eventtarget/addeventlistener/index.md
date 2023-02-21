@@ -124,7 +124,7 @@ For example, an event handler callback that can be used to handle both
 function eventHandler(event) {
   if (event.type === "fullscreenchange") {
     /* handle a full screen toggle */
-  } /* fullscreenerror */ else {
+  } else {
     /* handle a full screen toggle error */
   }
 }
