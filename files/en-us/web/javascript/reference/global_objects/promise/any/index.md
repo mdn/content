@@ -2,12 +2,6 @@
 title: Promise.any()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/any
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Method
-  - Promise
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Promise.any
 ---
 
