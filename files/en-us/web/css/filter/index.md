@@ -100,7 +100,7 @@ filter: grayscale(100%);
 ```
 
 - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-  - : Applies a hue rotation. The `<angle>` value defines the number of degrees around the hue color circle the input samples will be adjusted. A value of `0deg` leaves the input unchanged.
+  - : Applies a hue rotation. The `<angle>` value defines the number of degrees around the hue color circle at which the input samples will be adjusted. A value of `0deg` leaves the input unchanged.
 
 ```css
 filter: hue-rotate(90deg);
